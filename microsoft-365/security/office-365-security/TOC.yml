@@ -11,21 +11,17 @@
         - name: Trinvis trusselsbeskyttelse i Defender for Office 365
           href: protection-stack-microsoft-defender-for-office365.md
         - name: Prøv Defender for Office 365
-          href: try-microsoft-defender-for-office-365.md
+          items:
+            - name: Prøv Defender for Office 365
+              href: try-microsoft-defender-for-office-365.md
+            - name: Strategiplan til prøveversion af Defender for Office 365
+              href: trial-playbook-defender-for-office-365.md
         - name: Nyheder i Defender for Office 365
           href: whats-new-in-defender-for-office-365.md
         - name: Defender for Office 365 på Microsoft 365 Defender-portalen
           href: ../defender/microsoft-365-security-center-mdo.md
-        - name: Exchange Online Protection
-          items:
-            - name: Oversigt over Exchange Online Protection
-              href: exchange-online-protection-overview.md
-            - name: Mailflow i EOP
-              href: mail-flow-in-eop.md
-            - name: Karantæne
-              href: quarantine-email-messages.md
-        - name: 'Sikre vedhæftede filer i SharePoint, OneDrive og Microsoft Teams'
-          href: turn-on-mdo-for-spo-odb-and-teams.md
+        - name: Oversigt over Exchange Online Protection
+          href: exchange-online-protection-overview.md
         - name: Oversigt over Microsoft 365 Defender-portalen
           href: ../defender/microsoft-365-defender.md
         - name: Siden Mailenhed
@@ -38,20 +34,6 @@
           href: email-analysis-investigations.md
         - name: Afhjælpningshandlinger
           href: air-remediation-actions.md
-        - name: Beskyttelse mod malware
-          href: anti-malware-protection.md
-        - name: Beskyttelse mod spam
-          href: anti-spam-protection.md
-        - name: Beskyttelse mod phishing
-          href: anti-phishing-protection.md
-        - name: Beskyttelse mod forfalskning
-          href: anti-spoofing-protection.md
-        - name: Sikre vedhæftede filer i Defender for Office 365
-          href: safe-attachments.md
-        - name: Sikre links i Defender for Office 365
-          href: safe-links.md
-        - name: Beskyttelse mod udgående spam
-          href: outbound-spam-controls.md
         - name: Oversigt over sikkerhedsdashboard
           href: security-dashboard.md
         - name: Sådan fungerer trusselsundersøgelse og -svar
@@ -64,66 +46,130 @@
           href: protect-against-threats.md
         - name: Integrer Defender for Office 365 med Defender for Endpoint
           href: integrate-office-365-ti-with-mde.md
-        - name: Tilladelser på Microsoft 365 Defender-portalen
-          href: permissions-microsoft-365-security-center.md
-        - name: Tilladelser i Security & Compliance Center
-          href: permissions-in-the-security-and-compliance-center.md
+        - name: Tilladelser
+          items:
+            - name: Tilladelser på Microsoft 365 Defender-portalen
+              href: permissions-microsoft-365-security-center.md
+            - name: Tilladelser i Security & Compliance Center
+              href: permissions-in-the-security-and-compliance-center.md
+            - name: Giv brugerne adgang til Security & Compliance Center
+              href: grant-access-to-the-security-and-compliance-center.md
         - name: SIEM-serverintegration
           href: siem-server-integration.md
         - name: SIEM-integration med Defender for Office 365
           href: siem-integration-with-office-365-ti.md
         - name: Sikker som standard
           href: secure-by-default.md
-        - name: Konfigurer politikker for antiphishing i Defender for Office 365
-          href: configure-mdo-anti-phishing-policies.md
-        - name: Konfigurer politikker for antiphishing i EOP
-          href: configure-anti-phishing-policies-eop.md
-        - name: Konfigurer politikker for antimalware
-          href: configure-anti-malware-policies.md
-        - name: Konfigurer politikker for antispam
+        - name: Beskyttelse mod malware
           items:
+            - name: Beskyttelse mod malware
+              href: anti-malware-protection.md
+            - name: Konfigurer politikker for antimalware
+              href: configure-anti-malware-policies.md
+            - name: Virusidentifikation i SharePoint Online
+              href: virus-detection-in-spo.md
+        - name: Beskyttelse mod spam
+          items:
+            - name: Beskyttelse mod spam
+              href: anti-spam-protection.md
             - name: Konfigurer politikker for antispam
               href: configure-your-spam-filter-policies.md
             - name: Indstillinger for ASF (Avanceret spamfilter)
               href: advanced-spam-filtering-asf-options.md
-        - name: Konfigurer EOP til at levere spam til mapper med uønsket mail i hybrid
-          href: /exchange/standalone-eop/configure-eop-spam-protection-hybrid
-        - name: Konfigurer indstillinger for uønsket mail i Exchange Online-postkasser
-          href: configure-junk-email-settings-on-exo-mailboxes.md
-        - name: Konfigurer filtrering af forbindelse
-          href: configure-the-connection-filter-policy.md
-        - name: Konfigurer globale indstillinger for Sikre links i Defender for Office 365
-          href: configure-global-settings-for-safe-links.md
-        - name: Konfigurer filtrering af udgående spam
-          href: configure-the-outbound-spam-policy.md
-        - name: Konfigurer og gennemse prioritetskonti
-          href: configure-review-priority-account.md
-        - name: Opret lister over blokerede afsendere
-          href: Create-block-sender-lists-in-office-365.md
-        - name: Opret lister over sikre afsendere
-          href: Create-safe-sender-lists-in-office-365.md
+            - name: Hvad er forskellen mellem uønsket mail og massemail?
+              href: what-s-the-difference-between-junk-email-and-bulk-email.md
+            - name: Tillidsniveau for spam (SCL)
+              href: spam-confidence-levels.md
+            - name: Niveau for masseklager (BCL)
+              href: bulk-complaint-level-values.md
+            - name: Backscatter i Exchange Online Protection
+              href: backscatter-messages-and-eop.md
+            - name: Regler for mailflow (transportregler)
+              items:
+                - name: Regler for mailflow (transportregler)
+                  href: /exchange/security-and-compliance/mail-flow-rules/mail-flow-rules
+                - name: Brug regler for mailflow til at blokere meddelelser med eksekverbare vedhæftede filer
+                  href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-block-executable-attachments
+                - name: Brug regler for mailflow til at filtrere masseforsendelser
+                  href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-filter-bulk-mail
+                - name: Brug regler for mailflow til at angive SCL i meddelelser
+                  href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl
+            - name: Konfigurer indstillinger for uønsket mail i Exchange Online-postkasser
+              href: configure-junk-email-settings-on-exo-mailboxes.md
+            - name: Konfigurer filtrering af forbindelse
+              href: configure-the-connection-filter-policy.md
+            - name: Beskyttelse mod udgående spam
+              items:
+                - name: Beskyttelse mod udgående spam
+                  href: outbound-spam-controls.md
+                - name: Konfigurer filtrering af udgående spam
+                  href: configure-the-outbound-spam-policy.md
+                - name: Kontrollér automatisk videresendelse af eksterne mails
+                  href: external-email-forwarding.md
+                - name: Udgående leveringspuljer
+                  href: high-risk-delivery-pool-for-outbound-messages.md
+        - name: Beskyttelse mod phishing
+          items:
+            - name: Beskyttelse mod phishing
+              href: anti-phishing-protection.md
+            - name: Beskyttelse mod forfalskning
+              href: anti-spoofing-protection.md
+            - name: Politikker for antiphishing
+              href: set-up-anti-phishing-policies.md
+            - name: Konfigurer politikker for antiphishing i EOP
+              href: configure-anti-phishing-policies-eop.md
+            - name: Konfigurer politikker for antiphishing i Defender for Office 365
+              href: configure-mdo-anti-phishing-policies.md
+            - name: Sådan validerer Office 365 Fra-adressen for at forhindre phishing
+              href: how-office-365-validates-the-from-address.md
+        - name: Omgående automatisk flytning (ZAP)
+          href: zero-hour-auto-purge.md
+        - name: Sådan kombineres politikker og beskyttelser
+          href: how-policies-and-protections-are-combined.md
+        - name: Sikre vedhæftede filer i Defender for Office 365
+          items:
+            - name: Sikre vedhæftede filer i Defender for Office 365
+              href: safe-attachments.md
+            - name: Konfigurer politikker for Sikre vedhæftede filer i Defender for Office 365
+              href: set-up-safe-attachments-policies.md
+            - name: 'Sikre vedhæftede filer i SharePoint, OneDrive og Microsoft Teams'
+              href: mdo-for-spo-odb-and-teams.md
+            - name: 'Aktiver Sikre vedhæftede filer i SharePoint, OneDrive og Microsoft Teams'
+              href: turn-on-mdo-for-spo-odb-and-teams.md
+            - name: Sikre dokumenter i A5 eller E5 Sikkerhed
+              href: safe-docs.md
+        - name: Sikre links i Defender for Office 365
+          items:
+            - name: Sikre links i Defender for Office 365
+              href: safe-links.md
+            - name: Konfigurer politikker for Sikre links i Defender for Office 365
+              href: set-up-safe-links-policies.md
+            - name: Konfigurer globale indstillinger for Sikre links i Defender for Office 365
+              href: configure-global-settings-for-safe-links.md
+        - name: Brugertags i Defender for Office 365
+          items:
+            - name: Brugertags i Defender for Office 365
+              href: user-tags.md
+            - name: Konfigurer og gennemse prioritetskonti
+              href: configure-review-priority-account.md
         - name: Mailgodkendelse
-          href: email-validation-and-authentication.md
-        - name: Giv brugerne adgang til Security & Compliance Center
-          href: grant-access-to-the-security-and-compliance-center.md
-        - name: Sikre dokumenter i Defender for Office 365
-          href: safe-docs.md
-        - name: Konfigurer politikker for Sikre links i Defender for Office 365
-          href: set-up-safe-links-policies.md
-        - name: Konfigurer politikker for Sikre vedhæftede filer i Defender for Office 365
-          href: set-up-safe-attachments-policies.md
-        - name: Konfigurer SPF for at forhindre forfalskning
-          href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
+          items:
+            - name: Mailgodkendelse
+              href: email-validation-and-authentication.md
+            - name: Brug DKIM til at validere udgående mail
+              href: use-dkim-to-validate-outbound-email.md
+            - name: Understøttelse af validering af DKIM-signerede meddelelser
+              href: support-for-validation-of-dkim-signed-messages.md
+            - name: Brug DMARC til at validere mail
+              href: use-dmarc-to-validate-email.md
+            - name: Konfigurer SPF for at forhindre forfalskning
+              href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
+            - name: Sådan bruger Microsoft 365 SPF til at forhindre forfalskning
+              href: how-office-365-uses-spf-to-prevent-spoofing.md
+        - name: Mailflow i EOP
+          href: mail-flow-in-eop.md
         - name: Politikker for brugerindsendelser
           href: user-submission.md
-        - name: Brugertags i Defender for Office 365
-          href: user-tags.md
-        - name: 'Aktiver Sikre vedhæftede filer i SharePoint, OneDrive og Microsoft Teams'
-          href: turn-on-mdo-for-spo-odb-and-teams.md
-        - name: Brug DKIM til at validere udgående mail
-          href: use-dkim-to-validate-outbound-email.md
-        - name: Brug DMARC til at validere mail
-          href: use-dmarc-to-validate-email.md
         - name: Tilføj understøttelse af anonym indgående mail via IPv6
           href: support-for-anonymous-inbound-email-messages-over-ipv6.md
         - name: Installér Application Guard til Office
@@ -184,18 +230,14 @@
               href: manage-tenant-allows.md
             - name: Rediger og fjern poster på listen over tilladte/blokerede lejer
               href: modify-remove-entries-tenant-allow-block.md
+        - name: Opret lister over blokerede afsendere
+          href: Create-block-sender-lists-in-office-365.md
+        - name: Opret lister over sikre afsendere
+          href: Create-safe-sender-lists-in-office-365.md
         - name: Meddelelsessporing
           href: message-trace-scc.md
-        - name: Brug regler for mailflow til at blokere meddelelser med eksekverbare vedhæftede filer
-          href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-block-executable-attachments
-        - name: Brug regler for mailflow til at filtrere masseforsendelser
-          href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-filter-bulk-mail
-        - name: Brug regler for mailflow til at angive SCL i meddelelser
-          href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl
-        - name: Omgående automatisk tømning (OAT) – beskyttelse mod spam og malware
-          href: zero-hour-auto-purge.md
-        - name: Kontrollér automatisk videresendelse af eksterne mails
-          href: external-email-forwarding.md
+        - name: Overvåg for lækager af personlige oplysninger
+          href: monitor-for-leaks-of-personal-data.md
     - name: Registrer
       items:
         - name: Trusselsoversigt til Defender for Office 365
@@ -210,10 +252,6 @@
           href: threat-trackers.md
         - name: Underretningspolitikker
           href: ../../compliance/alert-policies.md
-        - name: Smarte rapporter og indsigt i Security & Compliance Center
-          href: reports-and-insights-in-security-and-compliance.md
-        - name: Regler for mailflow (transportregler)
-          href: /exchange/security-and-compliance/mail-flow-rules/mail-flow-rules
         - name: Kør en rapport over administratorrollegruppe
           href: /exchange/security-and-compliance/exchange-auditing-reports/search-role-group-changes
     - name: Undersøg
@@ -248,6 +286,8 @@
               href: view-reports-for-mdo.md
             - name: Få vist mailflowrapporter i Security & Compliance Center
               href: view-mail-flow-reports.md
+            - name: Smarte rapporter og indsigt i Security & Compliance Center
+              href: reports-and-insights-in-security-and-compliance.md
         - name: Indsigt i mailflow i Security & Compliance Center
           items:
             - name: Indsigt i mailflow i Security & Compliance Center
@@ -320,14 +360,20 @@
           href: air-review-approve-pending-completed-actions.md
         - name: Finjuster beskyttelse mod phishing
           href: tuning-anti-phishing.md
-        - name: Find og frigiv meddelelser i karantæne som en bruger
-          href: find-and-release-quarantined-messages-as-a-user.md
-        - name: Administrer meddelelser og filer i karantæne som en administrator
-          href: manage-quarantined-messages-and-files.md
-        - name: Karantænepolitik
-          href: quarantine-policies.md
-        - name: Frigiv meddelelser i karantæne fra delte postkasser
-          href: view-and-release-quarantined-messages-from-shared-mailboxes.md
+        - name: Karantæne
+          items:
+            - name: Karantæne
+              href: quarantine-email-messages.md
+            - name: Administrer meddelelser og filer i karantæne som en administrator
+              href: manage-quarantined-messages-and-files.md
+            - name: Find og frigiv meddelelser i karantæne som en bruger
+              href: find-and-release-quarantined-messages-as-a-user.md
+            - name: Karantænepolitik
+              href: quarantine-policies.md
+            - name: Frigiv meddelelser i karantæne fra delte postkasser
+              href: view-and-release-quarantined-messages-from-shared-mailboxes.md
+            - name: Karantænemeddelelser
+              href: use-spam-notifications-to-release-and-report-quarantined-messages.md
         - name: Brug slettelseportalen til at fjerne dig selv fra listen over blokerede afsendere
           href: use-the-delist-portal-to-remove-yourself-from-the-office-365-blocked-senders-lis.md
     - name: Ofte stillede spørgsmål
@@ -354,24 +400,8 @@
           href: help-and-support-for-eop.md
         - name: 'Fejlfinding af mails, der er sendt til Microsoft 365'
           href: troubleshooting-mail-sent-to-office-365.md
-        - name: Sådan bruger Microsoft 365 SPF til at forhindre forfalskning
-          href: how-office-365-uses-spf-to-prevent-spoofing.md
-        - name: Sådan validerer Office 365 Fra-adressen for at forhindre phishing
-          href: how-office-365-validates-the-from-address.md
-        - name: Sådan kombineres politikker og beskyttelser
-          href: how-policies-and-protections-are-combined.md
         - name: Meddelelsesoverskrift for antispammeddelelser
           href: anti-spam-message-headers.md
-        - name: Politikker for antiphishing
-          href: set-up-anti-phishing-policies.md
-        - name: Backscatter i Exchange Online Protection
-          href: backscatter-messages-and-eop.md
-        - name: Niveau for masseklager (BCL)
-          href: bulk-complaint-level-values.md
-        - name: Karantænemeddelelser
-          href: use-spam-notifications-to-release-and-report-quarantined-messages.md
-        - name: Udgående leveringspuljer
-          href: high-risk-delivery-pool-for-outbound-messages.md
         - name: Mailflowintelligens i Exchange Online Protection
           href: mail-flow-intelligence-in-office-365.md
         - name: 'Reference: Politikker, fremgangsmåder og retningslinjer'
@@ -380,14 +410,8 @@
           href: sending-mail-to-office-365.md
         - name: Tjenester til ikke-kunder
           href: services-for-non-customers.md
-        - name: Tillidsniveau for spam (SCL)
-          href: spam-confidence-levels.md
-        - name: Understøttelse af validering af DKIM-signerede meddelelser
-          href: support-for-validation-of-dkim-signed-messages.md
-        - name: Virusidentifikation i SharePoint Online
-          href: virus-detection-in-spo.md
-        - name: Hvad er forskellen mellem uønsket mail og massemail?
-          href: what-s-the-difference-between-junk-email-and-bulk-email.md
+        - name: Konfigurer EOP til at levere spam til mapper med uønsket mail i hybrid
+          href: /exchange/standalone-eop/configure-eop-spam-protection-hybrid
     - name: Microsoft 365 Defender-dokumenter
       items:
         - name: Microsoft 365 Defender
