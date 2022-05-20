@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Konfigurer følsomhedsmærkater til kryptering, der beskytter dine data ved at begrænse adgang og brug.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 14be99abd0a31a8141f5f66a205a9cd0e17391af
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: f2a9f399e447e7b483e664da2e0bf7575b9f55d8
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469442"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599227"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
 
@@ -69,14 +69,14 @@ Før du kan bruge kryptering, skal du muligvis udføre nogle konfigurationsopgav
 
 - Konfigurer Exchange til Azure Information Protection
     
-    Exchange behøver ikke at være konfigureret til Azure Information Protection, før brugerne kan anvende mærkater i Outlook for at kryptere deres mails. Men indtil Exchange er konfigureret til Azure Information Protection, får du ikke den fulde funktionalitet ved at bruge Azure Rights Management beskyttelse med Exchange.
+    Exchange behøver ikke at være konfigureret til Azure Information Protection, før brugerne kan anvende mærkater i Outlook til at kryptere deres mails. Men indtil Exchange er konfigureret til Azure Information Protection, får du ikke den fulde funktionalitet ved at bruge Azure Rights Management beskyttelse med Exchange.
     
-    Brugerne kan f.eks. ikke få vist krypterede mails på mobiltelefoner eller med Outlook på internettet krypterede mails kan ikke indekseres til søgning, og du kan ikke konfigurere Exchange Online DLP til Rights Management beskyttelse. 
+    Brugerne kan f.eks. ikke få vist krypterede mails på mobiltelefoner eller med Outlook på internettet, krypterede mails kan ikke indekseres til søgning, og du kan ikke konfigurere Exchange Online DLP til Rights Management beskyttelse. 
     
-    Se følgende for at sikre, at Exchange kan understøtte disse yderligere scenarier:
+    Sådan sikrer du, at Exchange kan understøtte disse yderligere scenarier:
     
     - Du kan finde Exchange Online i vejledningen til [Exchange Online: IRM-konfiguration](/azure/information-protection/configure-office365#exchangeonline-irm-configuration).
-    - Hvis du vil Exchange i det lokale miljø, skal du installere [RMS-connectoren og konfigurere dine Exchange servere](/azure/information-protection/deploy-rms-connector). 
+    - Hvis du vil Exchange i det lokale miljø, skal du installere [RMS-connectoren og konfigurere dine Exchange servere](/azure/information-protection/deploy-rms-connector).
 
 ## <a name="how-to-configure-a-label-for-encryption"></a>Sådan konfigurerer du en mærkat til kryptering
 
@@ -122,14 +122,14 @@ I følgende tabel identificeres det, hvad der sker med eksisterende kryptering, 
 
 <sup>\*</sup>Understøttes kun af Azure Information Protection unified labeling-klienten
 
-I de tilfælde, hvor den nye mærkatkryptering anvendes, eller den oprindelige kryptering fjernes, sker dette kun, hvis den bruger, der anvender mærkaten, har en brugsrettighed eller rolle, der understøtter denne handling:
+I de tilfælde, hvor den nye mærkatkryptering anvendes, eller den oprindelige kryptering fjernes, sker dette kun, hvis den bruger, der anvender mærkaten, har en brugsrettighed eller -rolle, der understøtter denne handling:
 
 - [Brugsrettigheden](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) Eksportér eller Fuld kontrol.
 - Rollen som [Rights Management udsteder eller Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) eller [superbruger](/azure/information-protection/configure-super-users).
 
 Hvis brugeren ikke har en af disse rettigheder eller roller, kan mærkaten ikke anvendes, og den oprindelige kryptering bevares. Brugeren får vist følgende meddelelse: **Du har ikke tilladelse til at foretage denne ændring af følsomhedsmærkaten. Kontakt ejeren af indholdet.**
 
-Den person, der anvender Videresend ikke på en mail, kan f.eks. genmærke tråden for at erstatte krypteringen eller fjerne den, fordi de er den Rights Management ejer af mailen. Men med undtagelse af superbrugere kan modtagere af denne mail ikke genmærke den, fordi de ikke har de nødvendige brugsrettigheder.
+Den person, der anvender Videresend ikke på en mail, kan f.eks. genmærke tråden for at erstatte krypteringen eller fjerne den, fordi det er den Rights Management ejer af mailen. Men med undtagelse af superbrugere kan modtagere af denne mail ikke genmærke den, fordi de ikke har de påkrævede brugsrettigheder.
 
 #### <a name="email-attachments-for-encrypted-email-messages"></a>Vedhæftede filer i mails for krypterede mails
 
@@ -146,7 +146,7 @@ Når du vælger **Konfigurer krypteringsindstillinger** på siden **Kryptering**
 
 Hvis du f.eks. har en følsomhedsmærkat med navnet **Meget fortroligt** , der anvendes på dit mest følsomme indhold, kan det være en god idé at beslutte, hvem der får hvilken type tilladelser til det pågældende indhold.
 
-Hvis du har en følsomhedsmærkat med navnet **Forretningskontrakter**, og din organisations arbejdsproces kræver, at dine personer samarbejder om dette indhold med forskellige personer på ad hoc-basis, kan det være en god idé at give brugerne tilladelse til at beslutte, hvem der får tilladelser, når de tildeler mærkaten. Denne fleksibilitet hjælper både brugernes produktivitet og reducerer anmodningerne til dine administratorer om at opdatere eller oprette nye følsomhedsmærkater for at håndtere bestemte scenarier.
+Hvis du har en følsomhedsmærkat med navnet **Forretningskontrakter**, og din organisations arbejdsproces kræver, at dine personer samarbejder om dette indhold med andre personer på en ikke-planlagt basis, kan det være en god idé at give dine brugere tilladelse til at beslutte, hvem der får tilladelser, når de tildeler mærkaten. Denne fleksibilitet hjælper både brugernes produktivitet og reducerer anmodningerne til dine administratorer om at opdatere eller oprette nye følsomhedsmærkater for at håndtere bestemte scenarier.
 
 Vælg, om du vil tildele tilladelser nu, eller lade brugerne tildele tilladelser:
 
@@ -156,13 +156,22 @@ Vælg, om du vil tildele tilladelser nu, eller lade brugerne tildele tilladelser
 
 Brug følgende indstillinger til at styre, hvem der har adgang til mail eller dokumenter, som denne mærkat anvendes på. Du kan:
 
-- **Tillad, at adgangen til markeret indhold udløber** enten på en bestemt dato eller efter et bestemt antal dage, efter at mærkaten er anvendt. Efter dette tidspunkt kan brugerne ikke åbne det mærkede element. Hvis du angiver en dato, træder den fra midnat på denne dato i din aktuelle tidszone. Bemærk, at nogle mailklienter muligvis ikke gennemtvinger udløb og viser mails efter deres udløbsdato på grund af deres cachelagringsmekanismer.
+- **Tillad, at adgangen til markeret indhold udløber** enten på en bestemt dato eller efter et bestemt antal dage, efter at mærkaten er anvendt. Efter dette tidspunkt kan brugerne ikke åbne det mærkede element. Hvis du angiver en dato, træder den i kraft midnat på den pågældende dato i din aktuelle tidszone. Nogle mailklienter gennemtvinger muligvis ikke udløb og viser mails efter deres udløbsdato på grund af deres cachelagringsmekanismer.
 
-- **Tillad offlineadgang** aldrig, altid eller i et bestemt antal dage, efter at etiketten er anvendt. Hvis du begrænser offlineadgang til aldrig eller et antal dage, når denne grænse nås, skal brugerne godkendes igen, og deres adgang logføres. Du kan finde flere oplysninger i næste afsnit om Rights Management bruge licensen.
+- **Tillad offlineadgang** aldrig, altid eller i et bestemt antal dage, efter at etiketten er anvendt. Brug denne indstilling til at afbalancere de sikkerhedskrav, du har, så brugerne kan åbne krypteret indhold, når de ikke har en internetforbindelse. Hvis du begrænser offlineadgang til aldrig eller et antal dage, når denne grænse nås, skal brugerne godkendes igen, og deres adgang logføres. Du kan få flere oplysninger om, hvordan denne proces fungerer, i følgende afsnit om [Rights Management bruge licensen](#rights-management-use-license-for-offline-access).
 
 Indstillinger til adgangskontrol af krypteret indhold:
 
 ![Indstillinger for administratordefinerede tilladelser.](../media/sensitivity-encryption-settings-for-admin-defined-permissions.png)
+
+Anbefalinger for indstillingerne for udløbs- og offlineadgang:
+
+|Indstilling|Anbefalet indstilling|
+|-------|----------------|-------------------|
+|**Brugeradgang til indhold udløber**|**Aldrig** medmindre indholdet har et bestemt tidsbundet krav.|
+|**Tillad offlineadgang**|Afhænger af indholdets følsomhed:<br /><br />- **Kun i et antal dage** =  **7** for følsomme forretningsdata, der kan forårsage skade på virksomheden, hvis de deles med uautoriserede personer. Denne henstilling udgør et afbalanceret kompromis mellem fleksibilitet og sikkerhed. Eksempler omfatter kontrakter, sikkerhedsrapporter, prognoseoversigter og salgskontodata.<br /><br />- **Aldrig** for meget følsomme forretningsdata, der ville forårsage skade på virksomheden, hvis de blev delt med uautoriserede personer. Denne anbefaling prioriterer sikkerhed frem for fleksibilitet og sikrer, at hvis du fjerner en eller flere brugeres adgang til dokumentet, kan de ikke åbne det. Eksempler omfatter medarbejder- og kundeoplysninger, adgangskoder, kildekode og forhånds annoncerede regnskaber. <br /><br />- **Altid** for mindre følsomt indhold, hvor det ikke betyder noget, om brugerne kan fortsætte med at åbne krypteret indhold i op til 30 dage (eller lejerens konfigurerede licensperiode), efter deres adgang er fjernet, og de tidligere har åbnet det krypterede indhold.|
+
+Det er kun etiketter, der er konfigureret til at tildele tilladelser, der nu understøtter forskellige værdier for offlineadgang. Mærkater, der giver brugerne mulighed for automatisk at bruge lejerens Rights Management bruge licensperioden. Det kan f.eks. være mærkater, der er konfigureret for Videresend ikke, Kryptér kun og bede brugerne om at angive deres egne tilladelser. Standardværdien for denne indstilling er 30 dage.
 
 ### <a name="rights-management-use-license-for-offline-access"></a>Rights Management bruge en licens til offlineadgang
 
@@ -171,7 +180,7 @@ Indstillinger til adgangskontrol af krypteret indhold:
 
 Når en bruger åbner et dokument eller en mail, der er beskyttet af kryptering fra Azure Rights Management-tjenesten, tildeles brugeren en Azure Rights Management brugerlicens til det pågældende indhold. Denne brugslicens er et certifikat, der indeholder brugerens brugsrettigheder til dokumentet eller mailen og den krypteringsnøgle, der blev brugt til at kryptere indholdet. Brugslicensen indeholder også en udløbsdato, hvis den er angivet, og hvor lang tid brugslicensen er gyldig.
 
-Hvis der ikke er angivet en udløbsdato, er standardlicensens gyldighedsperiode for brug 30 dage for en lejer. I varigheden af brugslicensen bliver brugeren ikke godkendt eller godkendt igen for indholdet. Denne proces gør det muligt for brugeren at fortsætte med at åbne det beskyttede dokument eller den beskyttede mail uden en internetforbindelse. Når gyldighedsperioden for brugslicensen udløber, skal brugeren godkendes og godkendes igen, næste gang brugeren tilgår det beskyttede dokument eller den beskyttede mail.
+Hvis der ikke er angivet en udløbsdato, er standardlicensens gyldighedsperiode for brug 30 dage for en lejer. I varigheden af brugslicensen godkendes eller autoriseres brugeren ikke for indholdet igen. Denne proces gør det muligt for brugeren at fortsætte med at åbne det beskyttede dokument eller den beskyttede mail uden en internetforbindelse. Når gyldighedsperioden for brugslicensen udløber, skal brugeren godkendes og godkendes igen, næste gang brugeren tilgår det beskyttede dokument eller den beskyttede mail.
 
 Ud over at godkende igen evalueres krypteringsindstillingerne og brugergruppemedlemskabet igen. Det betyder, at brugerne kan opleve forskellige adgangsresultater for det samme dokument eller den samme mail, hvis der er ændringer i krypteringsindstillingerne eller gruppemedlemskabet, fra da de sidst fik adgang til indholdet.
 
@@ -197,7 +206,7 @@ Når du tildeler tilladelser, kan du vælge:
 
 - Alle godkendte brugere. Sørg for at forstå [kravene og begrænsningerne](#requirements-and-limitations-for-add-any-authenticated-users) for denne indstilling, før du vælger den.
 
-- En bestemt bruger- eller mailaktiveret sikkerhedsgruppe, distributionsgruppe eller Microsoft 365 gruppe ([tidligere Office 365 gruppe](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) i Azure AD. Den Microsoft 365 gruppe kan have statisk eller [dynamisk medlemskab](/azure/active-directory/users-groups-roles/groups-create-rule). Bemærk, at du ikke kan bruge en [dynamisk distributionsgruppe fra Exchange](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups), fordi denne gruppetype ikke er synkroniseret til Azure AD, og du kan ikke bruge en sikkerhedsgruppe, der ikke er mailaktiveret.
+- En bestemt bruger- eller mailaktiveret sikkerhedsgruppe, distributionsgruppe eller Microsoft 365 gruppe i Azure AD. Den Microsoft 365 gruppe kan have statisk eller [dynamisk medlemskab](/azure/active-directory/users-groups-roles/groups-create-rule). Du kan ikke bruge en [dynamisk distributionsgruppe fra Exchange](/Exchange/recipients/dynamic-distribution-groups/dynamic-distribution-groups), fordi denne gruppetype ikke er synkroniseret til Azure AD. Du kan heller ikke bruge en sikkerhedsgruppe, der ikke er mailaktiveret.
     
     Selvom du kan angive grupper, der indeholder mailkontakter, som en praktisk metode til at give adgang til flere personer uden for din organisation, er der i øjeblikket et kendt problem med denne konfiguration. Du kan få flere oplysninger under [Mailkontakter i grupper har periodisk adgang til krypteret indhold](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content).
 
@@ -303,7 +312,7 @@ Når en bruger anvender en følsomhedsmærkat i Outlook, der giver vedkommende m
 
 Når en af disse indstillinger anvendes på en mail, krypteres mailen, og modtagerne skal godkendes. Modtagerne har derefter automatisk begrænsede brugsrettigheder:
 
-- **Videresend ikke**: Modtagerne kan ikke videresende mailen, udskrive den eller kopiere den. I Outlook klient er knappen Videresend f.eks. ikke tilgængelig, menuindstillingerne Gem som og Udskriv er ikke tilgængelige, og du kan ikke tilføje eller ændre modtagere i boksene Til, Cc eller Bcc.
+- **Videresend ikke**: Modtagerne kan ikke videresende mailen, udskrive den eller kopiere den fra den. I Outlook klient er knappen Videresend f.eks. ikke tilgængelig, menuindstillingerne Gem som og Udskriv er ikke tilgængelige, og du kan ikke tilføje eller ændre modtagere i boksene Til, Cc eller Bcc.
     
     Du kan få flere oplysninger om, hvordan denne indstilling fungerer, under [Indstillingen Videresend ikke for mails](/azure/information-protection/configure-usage-rights#do-not-forward-option-for-emails).
 
@@ -311,11 +320,11 @@ Når en af disse indstillinger anvendes på en mail, krypteres mailen, og modtag
     
     Du kan få flere oplysninger om, hvordan denne indstilling fungerer, under [Indstillingen Kun kryptering for mails](/azure/information-protection/configure-usage-rights#encrypt-only-option-for-emails).
 
-Ukrypterede Office dokumenter, der er knyttet til mailen, nedarver automatisk de samme begrænsninger. For Videresend ikke er de anvendelsesrettigheder, der er anvendt på disse dokumenter, Rediger indhold, Rediger. Gem; Vis, Åbn, Læs; og Tillad makroer. Hvis brugeren ønsker forskellige brugsrettigheder til en vedhæftet fil, eller hvis den vedhæftede fil ikke er et Office dokument, der understøtter denne nedarvede beskyttelse, skal brugeren kryptere filen, før den vedhæftes til mailen.
+Ukrypterede Office dokumenter, der er knyttet til mailen, nedarver automatisk de samme begrænsninger. For Videresend ikke er de anvendelsesrettigheder, der er anvendt på disse dokumenter, Rediger indhold, Rediger. Gem; Vis, Åbn, Læs; og Tillad makroer. Hvis brugeren ønsker forskellige brugsrettigheder til en vedhæftet fil, eller hvis den vedhæftede fil ikke er et Office dokument, der understøtter denne nedarvede beskyttelse, skal brugeren kryptere filen, før den vedhæftes i mailen.
 
 ### <a name="word-powerpoint-and-excel-permissions"></a>Word-, PowerPoint- og Excel-tilladelser
 
-Når en bruger anvender en følsomhedsmærkat i Word, PowerPoint og Excel, så vedkommende kan tildele tilladelser til et dokument, bliver vedkommende bedt om at angive sit valg af brugere og tilladelser, når krypteringen anvendes.
+Når en bruger anvender en følsomhedsmærkat i Word, PowerPoint og Excel, så vedkommende kan tildele tilladelser til et dokument, bliver brugeren bedt om at angive sit valg af brugere og tilladelser til krypteringen.
 
 Med Azure Information Protection Unified-mærkatklienten kan brugerne f.eks.:[](sensitivity-labels-coauthoring.md)
 
@@ -325,7 +334,7 @@ Med Azure Information Protection Unified-mærkatklienten kan brugerne f.eks.:[](
 
 ![Indstillinger, som brugeren kan beskytte med brugerdefinerede tilladelser.](../media/sensitivity-aip-custom-permissions-dialog.png)
 
-For indbygget mærkning og for Azure Information Protection Unified [Labeling-klienten, når samtidig redigering er aktiveret](sensitivity-labels-coauthoring.md), får brugerne vist den samme dialogboks, som hvis de valgte følgende:
+I forbindelse med indbygget mærkning og For Azure Information Protection Unified [Labeling-klienten, når samtidig redigering er aktiveret](sensitivity-labels-coauthoring.md), får brugerne vist den samme dialogboks, som hvis de valgte følgende indstillinger:
 
 - Windows: Fanen **Filer** > **InfoProtect** >  **DocumentRestrict** >  **AccessRestricted Access** > 
 
@@ -344,7 +353,7 @@ For hvert af de følgende eksempler skal du udføre konfigurationen fra siden **
 
 Denne etiket vises kun i Outlook og Outlook på internettet, og du skal bruge Exchange Online. Instruer brugerne i at vælge denne mærkat, når de har brug for at sende en krypteret mail til personer, der bruger en Gmail-konto (eller en anden mailkonto uden for din organisation).
 
-Dine brugere skriver Gmail-mailadressen i feltet **Til** .  Derefter vælger de etiketten, og indstillingen Videresend ikke føjes automatisk til mailen. Resultatet er, at modtagerne ikke kan videresende mailen, udskrive den, kopiere den eller gemme mailen uden for postkassen ved hjælp af indstillingen **Gem som** .
+Dine brugere skriver Gmail-mailadressen i feltet **Til** .  Derefter vælger de etiketten, og indstillingen Videresend ikke føjes automatisk til mailen. Resultatet er, at modtagerne ikke kan videresende mailen eller udskrive den, kopiere fra den eller gemme mailen uden for deres postkasse ved hjælp af indstillingen **Gem som** .
 
 1. På siden **Kryptering** : For **Tildel tilladelser nu eller lad brugerne bestemme?** vælg **Lad brugere tildele tilladelser, når de anvender mærkaten**.
 

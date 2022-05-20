@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: b1a364fc6053483a05d0ea055000b863b31a94cf
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: fc641845907e157e555e70104b2fcb472ad496af
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438021"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599271"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -67,7 +67,7 @@ Der er to forskellige metoder til automatisk anvendelse af en følsomhedsmærkat
     - Maksimalt 25.000 automatisk navngivne filer i din lejer pr. dag.
     - Der kan maksimalt angives 100 politikker for automatisk mærkning pr. lejer, som hver især er målrettet til op til 100 websteder (SharePoint eller OneDrive), når de er angivet individuelt. Du kan også angive alle websteder, og denne konfiguration er undtaget fra maksimum 100 websteder.
     - Eksisterende værdier for ændret, ændret af og datoen ændres ikke som følge af politikker for automatisk mærkning – både for simuleringstilstand, og når der anvendes mærkater.
-    - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den konto, der senest ændrede filen. Hvis denne konto ikke længere er i Azure Active Directory, anvendes mærkaten ikke, fordi disse værdier ikke kan angives.
+    - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den konto, der senest ændrede filen.
 
     Specifik til automatisk mærkning af Exchange:
     

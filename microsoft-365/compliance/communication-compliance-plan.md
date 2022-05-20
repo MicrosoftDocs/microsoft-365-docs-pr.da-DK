@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: bda0874ef829495b162beae09fde1c4efcb03c85
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 22e5ed11c97ed00449cb62439e105bd1e6dc78e7
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971555"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599541"
 ---
 # <a name="plan-for-communication-compliance"></a>Plan for kommunikationsoverholdelse
 
@@ -32,14 +32,16 @@ ms.locfileid: "64971555"
 
 Før du går i gang med [overholdelse af angivne standarder for kommunikation](communication-compliance.md) i din organisation, er der vigtige planlægningsaktiviteter og overvejelser, der bør gennemgås af dine it- og overholdelsesadministrationsteams. En grundig forståelse og planlægning af udrulningen på følgende områder hjælper med at sikre, at implementering og brug af funktioner til kommunikation med overholdelse af angivne standarder går problemfrit og er i overensstemmelse med bedste praksis for løsningen.
 
+Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere overholdelse af angivne standarder og risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
+
 > [!IMPORTANT]
 > Kommunikationsoverholdelse er i øjeblikket tilgængelig i lejere, der hostes i geografiske områder og lande, der understøttes af Azure-tjenesteafhængigheder. Hvis du vil kontrollere, at overholdelse af angivne standarder for kommunikation understøttes for din organisation, skal du se [Tilgængelighed af Azure-afhængighed efter land/område](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="transitioning-from-supervision-in-office-365"></a>Overgang fra overvågning i Office 365
 
-For organisationer, der bruger overvågningspolitikker i Office 365, skal du straks planlægge at overgå til politikker for overholdelse af kommunikation i Microsoft Purview og have brug for at forstå disse vigtige punkter:
+For organisationer, der bruger overvågningspolitikker i Office 365, bør du straks planlægge at overgå til politikker for overholdelse af kommunikation i Microsoft Purview og har brug for at forstå disse vigtige punkter:
 
-- Tilsynsløsningen i Office 365 er blevet fuldt erstattet af løsningen til kommunikationsoverholdelse i Microsoft Purview. Vi anbefaler, at du opretter nye politikker i overholdelse af angivne standarder for kommunikation, der har de samme indstillinger som eksisterende overvågningspolitikker, for at bruge de nye undersøgelses- og afhjælpningsforbedringer.
+- Tilsynsløsningen i Office 365 er blevet fuldt erstattet af kommunikationsoverholdelsesløsningen i Microsoft Purview. Vi anbefaler, at du opretter nye politikker i overholdelse af angivne standarder for kommunikation, der har de samme indstillinger som eksisterende overvågningspolitikker, for at bruge de nye undersøgelses- og afhjælpningsforbedringer.
 - Meddelelser, der er gemt under overvågning i Office 365 politikforekomster, kan ikke flyttes eller deles i kommunikation med overholdelse af angivne standarder.
 - For organisationer med begge løsninger, der bruges side om side under overgangsprocessen, skal politikker, der bruges i hver løsning, have entydige politiknavne. Grupper og brugerdefinerede nøgleordsordbøger kan deles mellem løsninger i en overgangsperiode.
 
@@ -60,17 +62,17 @@ Identificer de relevante interessenter i din organisation for at samarbejde om a
 
 ### <a name="permissions"></a>Tilladelser
 
-Vælg dedikerede interessenter for at overvåge og gennemse beskeder og sager med jævne mellemrum på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/). Sørg for, at du forstår, hvordan du tildeler brugere og interessenter til forskellige rollegrupper for kommunikation med overholdelse af angivne standarder i din organisation.
+Vælg dedikerede interessenter for at overvåge og gennemse beskeder og sager regelmæssigt i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/). Sørg for, at du forstår, hvordan du tildeler brugere og interessenter til forskellige rollegrupper for kommunikation med overholdelse af angivne standarder i din organisation.
 
 > [!IMPORTANT]
 > Når du har konfigureret dine rollegrupper, kan det tage op til 30 minutter, før rollegruppens tilladelser gælder for tildelte brugere på tværs af organisationen.
 
-Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser til at administrere funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil gøre **Overholdelse af kommunikation** tilgængelig som en menuindstilling på Microsoft Purview-overholdelsesportalen og fortsætte med disse konfigurationstrin, skal du være tildelt en af følgende roller eller rollegrupper:
+Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser til at administrere funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil gøre **Overholdelse af kommunikation** tilgængelig som en menuindstilling i Microsoft Purview-compliance-portal og fortsætte med disse konfigurationstrin, skal du være tildelt en af følgende roller eller rollegrupper:
 
 - Azure Active Directory [*rolle som global administrator*](/azure/active-directory/roles/permissions-reference#global-administrator)
 - rollen Azure Active Directory [*overholdelsesadministrator*](/azure/active-directory/roles/permissions-reference#compliance-administrator)
-- Rollegruppe for Microsoft Purview-overholdelsesportal [*til organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
-- Rollegruppe for Microsoft [*Purview-overholdelsesportalen Overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
+- Microsoft Purview-compliance-portal [*rollegruppe for organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
+- rollegruppe for Microsoft Purview-compliance-portal [*overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
 - *Rollegruppe for kommunikation med overholdelse af angivne standarder*
 - Rollegruppe *for administrator af kommunikationsoverholdelse*
 
@@ -78,8 +80,8 @@ Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluder
 
 - Azure Active Directory *global administrator*
 - Azure Active Directory *overholdelsesadministrator*
-- Microsoft Purview Compliance Portal *Organisationsadministration*
-- Microsoft Purview Compliance Portal *Compliance Administrator*
+- Microsoft Purview-compliance-portal *organisationsstyring*
+- Microsoft Purview-compliance-portal *overholdelsesadministrator*
 
 > [!IMPORTANT]
 > Sørg for, at du altid har mindst én bruger i rollegrupperne *Kommunikationsoverholdelse* eller *Administrator af kommunikationsoverholdelse* (afhængigt af den indstilling, du vælger), så konfigurationen af kommunikationsoverholdelse ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader din organisation.

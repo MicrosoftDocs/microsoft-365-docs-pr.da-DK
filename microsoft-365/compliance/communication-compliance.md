@@ -21,21 +21,21 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: bd7ab3040b261fb7c664d92b73a069cc8ba6e3b5
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 09135faa505aa2d5b95003cc7321a38a0eaddaf3
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997312"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599205"
 ---
 # <a name="learn-about-communication-compliance"></a>Få mere at vide om kommunikationsoverholdelse
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview gratis løsninger?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview Communication Compliance er en insiderrisikoløsning, der hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. Foruddefinerede og brugerdefinerede politikker giver dig mulighed for at scanne intern og ekstern kommunikation for politikkampe, så de kan undersøges af udpegede korrekturlæsere. Korrekturlæsere kan undersøge scannede mails, Microsoft Teams, Yammer eller tredjepartskommunikation i din organisation og udføre relevante handlinger for at sikre, at de overholder organisationens meddelelsesstandarder.
+Microsoft Purview Kommunikationsoverholdelse er en insiderrisikoløsning, der hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. Foruddefinerede og brugerdefinerede politikker giver dig mulighed for at scanne intern og ekstern kommunikation for politikkampe, så de kan undersøges af udpegede korrekturlæsere. Korrekturlæsere kan undersøge scannede mails, Microsoft Teams, Yammer eller tredjepartskommunikation i din organisation og udføre relevante handlinger for at sikre, at de overholder organisationens meddelelsesstandarder.
 
 Politikker for kommunikation med overholdelse af angivne standarder i Microsoft 365 hjælpe dig med at overvinde mange moderne udfordringer, der er forbundet med overholdelse af angivne standarder og intern og ekstern kommunikation, herunder:
 
@@ -44,6 +44,8 @@ Politikker for kommunikation med overholdelse af angivne standarder i Microsoft 
 - Håndhævelse af lovgivningen og risikoen for bøder
 
 Derudover kan der være en adskillelse af opgaver mellem it-administratorer og dit team til administration af overholdelse af angivne standarder. Overholdelse af angivne standarder for kommunikation understøtter adskillelsen mellem konfiguration af politikker og undersøgelse og gennemgang af meddelelser. It-gruppen for din organisation kan f.eks. være ansvarlig for at konfigurere rolletilladelser til kommunikation med overholdelse af angivne standarder, grupper og politikker, og efterforskere og korrekturlæsere kan være ansvarlige for handlinger til meddelelsestriage, gennemsyn og afhjælpning.
+
+Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere overholdelse af angivne standarder og risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
 Du kan se de seneste Ignite-præsentationer for overholdelse af angivne standarder for kommunikation i følgende videoer:
 
@@ -117,7 +119,7 @@ Nye interaktive dashboards til beskeder, politikkampe, handlinger og tendenser h
 
 - **Proaktive intelligente beskeder**: Beskeder om politikkampe, der kræver øjeblikkelig opmærksomhed, omfatter nye dashboards for ventende elementer sorteret efter alvorsgrad og nye automatiske mailmeddelelser, der sendes til udpegede korrekturlæsere.
 - **Interaktive dashboards**: Nye dashboards viser politikforekomster, ventende og løste handlinger og tendenser for brugere og politik.
-- **Overvågningsunderstøttelse**: En komplet log over politik- og korrekturaktiviteter eksporteres nemt fra Microsoft Purview-overholdelsesportalen for at hjælpe med at understøtte anmodninger om revision af gennemsyn.
+- **Understøttelse af overvågning**: En komplet log over politik- og gennemgangsaktiviteter eksporteres nemt fra Microsoft Purview-compliance-portal for at hjælpe med at understøtte anmodninger om revision af korrektur.
 
 ## <a name="integration-with-microsoft-365-services"></a>Integration med Microsoft 365-tjenester
 
@@ -146,7 +148,7 @@ I dette arbejdsprocestrin identificerer du dine krav til overholdelse af angivne
 >[!IMPORTANT]
 >Globale administratorer har som standard ikke adgang til funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil aktivere tilladelser til funktioner til kommunikationoverholdelse, skal du se [Gør kommunikationsoverholdelse tilgængelig i din organisation](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance).
 
-Du kan vælge mellem følgende politikskabeloner på Microsoft Purview-overholdelsesportalen:
+Du kan vælge mellem følgende politikskabeloner i Microsoft Purview-compliance-portal:
 
 - **Overvåg upassende tekst**: Brug denne skabelon til hurtigt at oprette en politik, der bruger indbyggede klassificeringer til automatisk at registrere tekst i meddelelser, der kan betragtes som upassende, stødende eller stødende.
 - **Overvåg for upassende billeder**: Brug denne skabelon til hurtigt at oprette en politik, der bruger indbyggede klassificeringer til automatisk at registrere indhold, der indeholder voksne og racybilleder, som kan betragtes som upassende i din organisation.
@@ -161,9 +163,9 @@ Du kan vælge mellem følgende politikskabeloner på Microsoft Purview-overholde
 
 ### <a name="investigate"></a>Undersøg
 
-I dette trin ser du nærmere på de problemer, der registreres som matchende politikker for kommunikation med overholdelse af angivne standarder. Dette trin indeholder følgende handlinger, der er tilgængelige på Microsoft Purview-overholdelsesportalen:
+I dette trin ser du nærmere på de problemer, der registreres som matchende politikker for kommunikation med overholdelse af angivne standarder. Dette trin indeholder følgende handlinger, der er tilgængelige i Microsoft Purview-compliance-portal:
 
-- **Beskeder**: Når en meddelelse svarer til en politikbetingelse, genereres der automatisk en besked. For hver besked kan du se status, alvorsgrad, den registrerede tid, og om der er tildelt en eDiscovery-sag (Premium) og dens status. Nye beskeder vises på startsiden for kommunikation med overholdelse af angivne standarder og på siden **Beskeder** og vises i rækkefølge efter alvorsgrad.
+- **Beskeder**: Når en meddelelse svarer til en politikbetingelse, genereres der automatisk en besked. For hver besked kan du se status, alvorsgrad, registreret tid, og om en eDiscovery-sag (Premium) er tildelt, og dens status. Nye beskeder vises på startsiden for kommunikation med overholdelse af angivne standarder og på siden **Beskeder** og vises i rækkefølge efter alvorsgrad.
 - **Problemadministration**: For hver besked kan du udføre undersøgelseshandlinger for at hjælpe med at løse det problem, der er registreret i meddelelsen.
 - **Dokumentgennemsyn**: Under undersøgelsen af et problem kan du bruge flere visninger af meddelelsen til at evaluere det registrerede problem korrekt. Visningerne omfatter en samtaleoversigt, kun tekst og detaljerede visninger af kommunikationssamtalen.
 - **Gennemse brugeraktivitetshistorik**: Få vist oversigten over aktiviteter i brugermeddelelser og afhjælpningshandlinger, f.eks. tidligere meddelelser og eskaleringer, for politikkampe.
@@ -179,7 +181,7 @@ Det næste trin er at løse problemer med kommunikation med overholdelse af angi
 - **Eskaler til en anden korrekturlæser**: Nogle gange har den første reviewer af et problem brug for input fra andre korrekturlæsere for at hjælpe med at løse hændelsen. Du kan nemt eskalere meddelelsesproblemer til korrekturlæsere i andre områder af organisationen som en del af løsningsprocessen.
 - **Rapportér som fejlklassificeret**: Meddelelser, der er registreret forkert som match af politikker for overholdelse af angivne standarder, vil undertiden gå videre til gennemsynsprocessen. Du kan markere disse typer beskeder som forkert klassificerede, sende feedback til Microsoft om fejlklassificeringen for at hjælpe med at forbedre globale klassificeringer og automatisk løse problemet.
 - **Fjern meddelelse i Teams (prøveversion)**: Upassende meddelelser kan blive fjernet fra visning i Microsoft Teams kanaler eller personlige chatbeskeder og gruppechatmeddelelser. Upassende meddelelser, der fjernes, erstattes af en meddelelse om, at meddelelsen er blevet fjernet for en politikovertrædelse.
-- **Eskaler til undersøgelse**: I de alvorligste situationer kan det være nødvendigt at dele oplysninger om overholdelse af angivne standarder for kommunikation med andre korrekturlæsere i din organisation. Kommunikationsoverholdelse er tæt integreret med andre Microsoft Purview-funktioner for at hjælpe dig med løsning af risici fra ende til anden. Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery(Premium)-sager, skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **Eskaler til undersøgelse**: I de alvorligste situationer kan det være nødvendigt at dele oplysninger om overholdelse af angivne standarder for kommunikation med andre korrekturlæsere i din organisation. Kommunikationsoverholdelse er tæt integreret med andre Microsoft Purview funktioner for at hjælpe dig med løsning af risici fra ende til anden. Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Du kan få mere at vide om eDiscovery-sager (Premium) under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 
 ### <a name="monitor"></a>Skærm
 

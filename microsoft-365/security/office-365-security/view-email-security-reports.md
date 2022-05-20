@@ -2,7 +2,7 @@
 title: Få vist sikkerhedsrapporter for mail
 f1.keywords:
 - NOCSH
-ms.author: chrisda
+ms.author: chrisdadrop
 author: chrisda
 manager: dansimp
 ms.date: ''
@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 476807a03954475470a976113a2faa926862c008
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 8b4b520675c5c8a89324791e560e8176db1cb9b2
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535940"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599337"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -60,7 +60,7 @@ De Exchange Online Protection (EOP) og Microsoft Defender for Office 365 rapport
 |**Pengeskab meddelelsesdispositionsrapport for vedhæftede filer** <p> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|Juni 2021|
 |**Malware, der er registreret i mailrapport** <p> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Juni 2021|
 |**Rapport over registrering af spam** <p> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailspam \>](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <p> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Oktober 2021|
-|Get-AdvancedThreatProtectionDocumentReport <p> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <p> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|TBA|Maj 2022|
+|Get-AdvancedThreatProtectionDocumentReport <p> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <p> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|MC343433|Maj 2022|
 |**rapport over Exchange transportregel** <p> [Hent-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[Exchange rapport over transportregel i EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <p> [Hent-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|April 2022|
 |Get-MailTrafficTopReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <p> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <p> **Bemærk**! Der er ingen erstatning for krypteringsrapporteringsfunktionerne i Get-MailTrafficTopReport.|MC315742|April 2022|
 

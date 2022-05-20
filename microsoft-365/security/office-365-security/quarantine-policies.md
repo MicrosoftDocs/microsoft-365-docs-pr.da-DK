@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2f24592460daa4f476e969069d0c1b7636f6a23e
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: e591330137f2f2fd92ef05f64f5368cca533fc48
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285538"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599315"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitik
 
@@ -53,7 +53,7 @@ De individuelle karantænepolitiktilladelser, der findes i de forudindstillede t
 Standardpolitikkerne for karantæne, deres tilknyttede tilladelsesgrupper, og om karantænemeddelelser er aktiveret, er beskrevet i følgende tabel:
 
 |Standard karantænepolitik|Tilladelsesgruppe brugt|Er karantænemeddelelser aktiveret?|
-|---|---|---|
+|---|:---:|:---:|
 |AdminOnlyAccessPolicy|Ingen adgang|Nej|
 |DefaultFullAccessPolicy|Fuld adgang|Nej|
 |NotificationEnabledPolicy<sup>\*</sup>|Fuld adgang|Ja|

@@ -3,7 +3,7 @@ title: Andre slutpunkter, der ikke er inkluderet i Office 365 IP-adresse og URL-
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 05/18/2022
+ms.date: 05/19/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: ''
 description: 'Oversigt: Den nye slutpunktswebtjeneste indeholder ikke nogle få slutpunkter til bestemte scenarier.'
 hideEdit: true
-ms.openlocfilehash: bebffa1cb03a85ffd5ab7519095f38b7ae5cf985
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: 01fbd54ed5addb8552c59e2be8de76961e613968
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587342"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599161"
 ---
 # <a name="other-endpoints-not-included-in-the-office-365-ip-address-and-url-web-service"></a>Andre slutpunkter, der ikke er inkluderet i Office 365 IP-adresse og URL-webtjeneste
 
@@ -54,7 +54,7 @@ Bortset fra DNS er disse instanser alle valgfrie for de fleste kunder, medmindre
 |3|**Azure AD Forbind (indstillingen w/SSO)** <p> WinRM & ekstern PowerShell|Kunde-STS-miljø (AD FS Server og AD FS Proxy) \| TCP-porte 80 & 443|Indgående servertrafik|
 |4|**STS** , f.eks. AD FS-proxyserver(er) (kun for kunder, der er medlem af organisationsnetværket)|Kunde-STS -porte (f.eks. AD FS-proxy) \| TCP 443- eller TCP 49443 w/ClientTLS|Indgående servertrafik|
 |5|**[Exchange Online Unified Messaging/SBC-integration](/exchange/voice-mail-unified-messaging/telephone-system-integration-with-um/configuration-notes-for-session-border-controllers)**|Tovejs mellem sessionens kantcontroller i det lokale miljø og \*.um.outlook.com|Udgående servertrafik|
-|6|**Overflytning af postkasse**<p>Når overflytningen af postkassen startes fra [Exchange Hybrid](/exchange/exchange-deployment-assistant) i det lokale miljø til Office 365, opretter Office 365 forbindelse til den publicerede Exchange EWS-server (EWS)/Mailbox Replication Services (MRS). Hvis du har brug for de NAT-IP-adresser, der bruges af Exchange Online servere til at begrænse indgående forbindelser fra bestemte kilde-IP-områder, vises de i [Office 365 URL-adresse & IP-områder](urls-and-ip-address-ranges.md) under tjenesteområdet "Exchange Online". <p> Det skal sikres, at adgang til publicerede EWS-slutpunkter som OWA ikke påvirkes ved at sikre, at FRU-proxyen fortolkes som et separat FQDN og en offentlig IP-adresse, før tcp 443-forbindelser begrænses fra bestemte IP-kildeområder.|Kunde i det lokale miljø EWS/MRS-proxy <br> TCP-port 443|Indgående servertrafik|
+|6|**Overflytning af postkasse**<p>Når overflytningen af postkassen startes fra [Exchange Hybrid](/exchange/exchange-deployment-assistant) i det lokale miljø til Office 365, opretter Office 365 forbindelse til den publicerede Exchange EWS-server (EWS)/Mailbox Replication Services (MRS). Hvis du kun har brug for at tillade indgående forbindelser fra bestemte kilde-IP-områder, skal du oprette en tilladelsesregel for de IP-adresser, der er angivet i tabellen **Exchange Online** i [Office 365 URL-adresse & IP-områder](urls-and-ip-address-ranges.md). <p> Hvis du vil sikre dig, at forbindelsen til publicerede EWS-slutpunkter (f.eks. OWA) ikke er blokeret, skal du sørge for, at FRU-proxyen omsættes til et separat FQDN og en offentlig IP-adresse, før du begrænser forbindelser.|Kunde i det lokale miljø EWS/MRS-proxy <br> TCP-port 443|Indgående servertrafik|
 |7|**[Exchange Hybride](/exchange/exchange-deployment-assistant) funktioner til sameksistens**, f.eks. deling af ledig/optaget tid.|Kundeserver Exchange det lokale miljø|Indgående servertrafik|
 |8|**[Exchange hybridproxygodkendelse](/exchange/exchange-deployment-assistant)**|Kunde i det lokale miljø STS|Indgående servertrafik|
 |9|Bruges til at konfigurere [Exchange Hybrid](/exchange/exchange-deployment-assistant) ved hjælp af **[guiden Exchange Hybridkonfiguration](/exchange/hybrid-configuration-wizard)** <p> Bemærk! Disse slutpunkter kræves kun for at konfigurere Exchange hybrid|domains.live.com på TCP-portene 80 & 443, kræves kun til guiden Hybridkonfiguration Exchange 2010 SP3 <p> GCC High, DoD IP-adresser: 40.118.209.192/32; 168.62.190.41/32 <p> & GCC på verdensplan: \*.store.core.windows.net; asl.configure.office.com; tds.configure.office.com; mshybridservice.trafficmanager.net ; <br> aka.ms/hybridwizard; <br> \*shcwreleaseprod.blob.core.windows.net/shcw/;|Udgående servertrafik|

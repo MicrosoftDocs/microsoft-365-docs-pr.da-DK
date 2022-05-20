@@ -17,18 +17,18 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 48fbef36720d295dabbf640944e64900633f1fe2
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: d43bcfd16a2ab2b1927ae4da0f894db114003cbe
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363054"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599563"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Antivirus
@@ -332,6 +332,9 @@ Afhængigheder: MDAV, Cloud Protection
 Denne regel registrerer mistænkelige egenskaber i et sløret script.
 
 Script tilsløring er en almindelig teknik, som både malware forfattere og legitime applikationer bruger til at skjule intellektuel ejendom eller reducere script indlæsningstider. Malware forfattere bruger også tilsløring til at gøre skadelig kode sværere at læse, hvilket forhindrer tæt kontrol af mennesker og sikkerhedssoftware.
+
+> [!IMPORTANT]
+> På grund af det høje antal falske positiver registrerer denne regel i øjeblikket ikke PowerShell-scripts. dette er en midlertidig løsning. Reglen opdateres og begynder snart at omlægge PowerShell-scripts.
 
 Intune navn:`Obfuscated js/vbs/ps/macro code`
 

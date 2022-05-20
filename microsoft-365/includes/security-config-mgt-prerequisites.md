@@ -4,12 +4,12 @@ description: inkluder fil
 author: mjcaparas
 ms.service: microsoft-365-enterprise
 ms.author: macapara
-ms.openlocfilehash: a836865906de594436b27c44ebf65ba3ed99c96e
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 3da0554f55e25f765702fa0d0fbf169ba2e66438
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188188"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65601611"
 ---
 ## <a name="prerequisites"></a>Forudsætninger
 
@@ -30,10 +30,10 @@ Når en enhed onboarder til Microsoft Defender for Endpoint:
 
 Når en enhed, der er domænetilsluttet, opretter et tillidsforhold til Azure Active Directory, kaldes dette scenarie et *Hybrid-Azure Active Directory Join-scenarie*. Sikkerhedsadministrationen for Microsoft Defender for Endpoint understøtter fuldt ud dette scenarie med følgende krav:
 
-- Azure Active Directory Forbind (AAD Forbind) skal synkroniseres med den lejer, der bruges fra Microsoft Defender for Endpoint
-- Hybrid Azure Active Directory joinforbindelse skal konfigureres i dit miljø (enten via samling eller AAD Forbind synkroniser)
-- AAD Forbind Synkronisering skal inkludere enhedsobjekterne *i området* for synkronisering med Azure Active Directory (når det er nødvendigt for at deltage)
-- AAD Forbind regler for synkronisering skal ændres for Server 2012 R2 (når der kræves understøttelse af Server 2012 R2)
+- Azure Active Directory Forbind (AAD-Forbind) skal synkroniseres med den lejer, der bruges fra Microsoft Defender for Endpoint
+- Hybrid Azure Active Directory joinforbindelse skal konfigureres i dit miljø (enten via samling eller AAD-Forbind synkronisering)
+- AAD-Forbind synkronisering skal inkludere enhedsobjekterne *i området* for synkronisering med Azure Active Directory (når det er nødvendigt til joinforbindelse)
+- AAD-Forbind regler for synkronisering skal ændres for Server 2012 R2 (når der kræves understøttelse af Server 2012 R2)
 - Alle enheder skal registreres i Azure Active Directory for den lejer, der er vært for Microsoft Defender for Endpoint. Scenarier på tværs af lejere understøttes ikke. 
 
 ### <a name="connectivity-requirements"></a>Forbindelseskrav
@@ -44,12 +44,15 @@ Enheder skal have adgang til følgende slutpunkter:
 - `login.microsoftonline.com`- For Azure AD registrering.
 - `*.dm.microsoft.com` – Brugen af jokertegn understøtter cloudtjenestens slutpunkter, der bruges til tilmelding, indtjekning og rapportering, og som kan ændres, efterhånden som tjenesten skaleres.
 
+> [!Note]
+> Hvis organisationens brugere kontrollerer SSL (Secure Socket Layer), skal slutpunkterne udelukkes fra inspektionen.
+
 ### <a name="supported-platforms"></a>Understøttede platforme
 
 Politikker for Microsoft Defender for Endpoint sikkerhedsadministration understøttes for følgende enhedsplatforme:
 
-- Windows 10 Pro/Enterprise (med [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
-- Windows 11 Pro/virksomhed
+- Windows 10 Professional/Enterprise (med [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
+- Windows 11 Professional/Enterprise
 - Windows Server 2012 R2 med [Microsoft Defender for Down-Level-enheder](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 med [Microsoft Defender for Down-Level-enheder](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (med [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
@@ -90,19 +93,22 @@ Microsoft Endpoint Manager indeholder flere metoder og politiktyper til administ
 
 Når dine behov for enhedsbeskyttelse rækker ud over administration af Defender for Endpoint, skal du se [Oversigt over enhedsbeskyttelse](/mem/intune/protect/device-protect) for at få mere at vide om yderligere funktioner, der leveres af Microsoft Endpoint Manager for at hjælpe med at beskytte enheder, herunder *enhedsoverholdelse*, *administrerede apps*, *politikker til beskyttelse af apps* og integration med tredjepartsoverholdelse og partnere til *forsvar af mobiltrusler*.
 
-Følgende tabel kan hjælpe dig med at forstå, hvilke politikker der kan konfigurere MDE-indstillinger, der understøttes af enheder, der administreres af de forskellige scenarier. Når du installerer en politik, der understøttes for både *MDE-sikkerhedskonfiguration* og *Microsoft Endpoint Manager*, kan en enkelt forekomst af denne politik behandles af enheder, der kun kører MDE, og enheder, der administreres af enten Intune eller Configuration Manager.
+Følgende tabel kan hjælpe dig med at forstå, hvilke politikker der kan konfigurere MDE-indstillinger, der understøttes af enheder, der administreres af de forskellige scenarier. Når du installerer en politik, der understøttes for både *MDE-sikkerhedskonfiguration* og *Microsoft Endpoint Manager*, kan en enkelt forekomst af denne politik behandles af enheder, der kun kører Microsoft Defender for Endpoint, og enheder, der administreres af enten Intune eller Configuration Manager.
 
-| Microsoft Endpoint Manager  | Arbejdsbyrde | Konfiguration af MDE-sikkerhed  |  Microsoft Endpoint Manager |
+| Microsoft Endpoint Manager  | Arbejdsbyrde |Politik| Konfiguration af MDE-sikkerhed  |  Microsoft Endpoint Manager |
 |----------------|----------------|-------------------|------------|
-| Slutpunktssikkerhed    | Antivirus                   | ![Understøttes](../media/green-check.png)  | ![Understøttes](../media/green-check.png)  |
-|                      | Diskkryptering   |           | ![Understøttes](../media/green-check.png)  |
-|                      | Firewall (profil og regler)                | ![Understøttes](../media/green-check.png) | ![Understøttes](../media/green-check.png)  |
-|                      | Slutpunktsregistrering og -svar        | ![Understøttes](../media/green-check.png) | ![Understøttes](../media/green-check.png)  |
-|                      | Reduktion af angrebsoverfladen    |           | ![Understøttes](../media/green-check.png)  |
-|                      | Kontobeskyttelse       |       | ![Understøttes](../media/green-check.png)  |
-|                      | Enhedsoverholdelse     |   | ![Understøttes](../media/green-check.png)  |
-|                      | Betinget adgang    |   | ![Understøttes](../media/green-check.png)  |
-|                      | Grundlæggende sikkerhedslinjer      |   | ![Understøttes](../media/green-check.png)  |
+| Slutpunktssikkerhed    | Antivirus   |     Antivirus           | ![Understøttes](../media/green-check.png)  | ![Understøttes](../media/green-check.png)  |
+|                      | Antivirus   |   Antivirusudeladelser   | ![Understøttes](../media/green-check.png)  | ![Understøttes](../media/green-check.png)  |
+|                      | Antivirus   | Windows Sikkerhed oplevelse |                        | ![Understøttes](../media/green-check.png)  |
+|                      | Diskkryptering   |     Alle |      | ![Understøttes](../media/green-check.png)  |
+|                      | Firewall   | Firewall              | ![Understøttes](../media/green-check.png) | ![Understøttes](../media/green-check.png)  |
+|                      | Firewall | Firewallregler                | ![Understøttes](../media/green-check.png) | ![Understøttes](../media/green-check.png)  |
+|                      | Slutpunktsregistrering og -svar   | Slutpunktsregistrering og -svar | ![Understøttes](../media/green-check.png) | ![Understøttes](../media/green-check.png)  |
+|                      | Reduktion af angrebsoverfladen    |   Alle |          | ![Understøttes](../media/green-check.png)  |
+|                      | Kontobeskyttelse       |    Alle |     | ![Understøttes](../media/green-check.png)  |
+|                      | Enhedsoverholdelse     |   Alle |  | ![Understøttes](../media/green-check.png)  |
+|                      | Betinget adgang    |   Alle |  | ![Understøttes](../media/green-check.png)  |
+|                      | Sikkerhedsbaselines      |  Alle |   | ![Understøttes](../media/green-check.png)  |
 
 **Sikkerhedspolitikker for slutpunkter** er dedikerede grupper af indstillinger, der er beregnet til brug af sikkerhedsadministratorer, som fokuserer på at beskytte enheder i din organisation.
 
@@ -120,24 +126,28 @@ Hvis du vil understøtte Microsoft Defender for Endpoint administration af sikke
 1. Log på [Microsoft 365 Defender portal,](https://security.microsoft.com/) og gå til **Indstillinger** >  **EndpointsConfiguration** >  **ManagementEnforcement** >  Scope, og aktivér platformene til administration af sikkerhedsindstillinger:
 
    :::image type="content" source="../media/security-settings-mgt.png" alt-text="Aktivér administration af Microsoft Defender for Endpoint indstillinger i Defender-konsollen.":::
+    
+1. Konfigurer indstillinger for pilottilstand og Configuration Manager autoritet, så de passer til organisationens behov:
 
-    >[!NOTE]
-    >Hvis du vil styre omfanget af slutpunkter, der administreres via administration af MDE-indstillinger, kan du overveje at bruge **pilottilstand**.
+   :::image type="content" source="../media/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Konfigurer pilottilstand for administration af slutpunktsindstillinger på portalen Microsoft 365 Defender.":::
+   
+  > [!TIP]
+  > Brug pilottilstand og de korrekte enhedskoder til at teste og validere udrulningen på et lille antal enheder. Uden at bruge pilottilstand tilmeldes alle enheder, der er omfattet af det konfigurerede område, automatisk.
 
-2. Sørg for, at de relevante brugere har tilladelse til at administrere sikkerhedsindstillinger for slutpunkter i Microsoft Endpoint Manager eller tildele disse tilladelser ved at konfigurere en rolle på Defender-portalen. Gå til **Indstillinger** >  **RolesTilføj** >  element:
+1. Sørg for, at de relevante brugere har tilladelse til at administrere sikkerhedsindstillinger for slutpunkter i Microsoft Endpoint Manager eller tildele disse tilladelser ved at konfigurere en rolle på Defender-portalen. Gå til **Indstillinger** >  **RolesTilføj** >  element:
 
    :::image type="content" source="../media/add-role-in-mde.png" alt-text="Opret en ny rolle på Defender-portalen.":::
 
    > [!TIP]
    > Du kan ændre eksisterende roller og tilføje de nødvendige tilladelser i forhold til at oprette yderligere roller i Microsoft Defender for Endpoint
 
-3. Når du konfigurerer rollen, skal du tilføje brugere og sørge for at vælge **Administrer sikkerhedsindstillinger for slutpunkter i Microsoft Endpoint Manager**:
+1. Når du konfigurerer rollen, skal du tilføje brugere og sørge for at vælge **Administrer sikkerhedsindstillinger for slutpunkter i Microsoft Endpoint Manager**:
 
    :::image type="content" source="../media/add-role.png" alt-text="Tildel brugere tilladelser til at administrere indstillinger.":::
 
-4. Log på [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Log på [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-5. Vælg **Slutpunktssikkerhed** >  **Microsoft Defender for Endpoint**, og angiv **Tillad, at Microsoft Defender for Endpoint gennemtvinger Endpoint Security Configurations (prøveversion)** til **Til**.
+1. Vælg **Slutpunktssikkerhed** >  **Microsoft Defender for Endpoint**, og angiv **Tillad, at Microsoft Defender for Endpoint gennemtvinger Endpoint Security Configurations (prøveversion)** til **Til**.
 
    :::image type="content" source="../media/enable-mde-settings-management-mem.png" alt-text="Aktivér administration af Microsoft Defender for Endpoint-indstillinger i Microsoft Endpoint Manager Administration.":::
 
@@ -153,7 +163,9 @@ Microsoft Defender for Endpoint understøtter flere muligheder for at onboarde e
 
 
 ## <a name="co-existence-with-microsoft-endpoint-configuration-manager"></a>Samk Microsoft Endpoint Configuration Manager
-I nogle miljøer kan det være en idé at bruge Sikkerhedsadministration til Microsoft Defender sammen med Configuration Manager. Dette er muligt ved at deaktivere **indstillingerne for Administrer sikkerhed ved hjælp af Configuration Manager** på **siden Indstillinger** (Indstillinger > slutpunkter > konfigurationsstyring > håndhævelsesomfang):
+I nogle miljøer kan det være en idé at bruge Sikkerhedsadministration til Microsoft Defender for Endpoint med [Configuration Manager lejertilknyt.](/mem/configmgr/tenant-attach/endpoint-security-get-started) Hvis du bruger begge dele, skal du styre politikken via en enkelt kanal, da brug af mere end én kanal opretter muligheden for konflikter og uønskede resultater.
+
+Hvis du vil understøtte dette, skal du konfigurere *indstillingerne for Administrer sikkerhed ved hjælp af Configuration Manager* til *Fra*.  Log på [Microsoft 365 Defender-portalen](https://security.microsoft.com/), og gå til **Indstillinger** >  **EndpointsConfiguration** >  **ManagementEnforcement** >  Scope:
 
 :::image type="content" source="../media/manage-security-settings-cfg-mgr.png" alt-text="Administrer sikkerhedsindstillinger ved hjælp af Configuration Manager indstilling.":::
 
@@ -210,7 +222,7 @@ Når du har oprettet en eller flere Azure AD grupper, der indeholder enheder, de
 
    - Som politik for firewallregler skal du vælge:
      - Platform: **Windows 10, Windows 11 og Windows Server (prøveversion)**
-     - Profil: **Microsoft Defender Firewall-regler (prøveversion)**
+     - Profil: **Microsoft Defender Firewall regler (prøveversion)**
 
    - For Politikken Registrering af slutpunkt og Svar skal du vælge:
      - Platform: **Windows 10, Windows 11 og Windows Server (prøveversion)**

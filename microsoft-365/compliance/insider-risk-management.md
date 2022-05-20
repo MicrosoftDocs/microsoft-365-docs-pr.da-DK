@@ -1,6 +1,6 @@
 ---
 title: Få mere at vide om styring af insider-risiko
-description: Få mere at vide om, hvordan du hjælper med at minimere risikoen i din organisation med styring af insiderrisiko i Microsoft Purview.
+description: Få mere at vide om, hvordan du minimerer risikoen i din organisation med styring af insiderrisiko i Microsoft Purview.
 keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
 ms.localizationpriority: medium
 ms.service: O365-seccomp
@@ -15,21 +15,23 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 69c24b9d26fb16936064d9099f0866ce60d16d2c
-ms.sourcegitcommit: caedcf7f16eed23596487d97c375d4bc4c8f3566
+ms.openlocfilehash: 86a56ec16f81eaa6b61a452829e65251b673cb78
+ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64997026"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65599249"
 ---
 # <a name="learn-about-insider-risk-management"></a>Få mere at vide om styring af insider-risiko
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu ved [hjælp af prøveversionshubben for Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview gratis løsninger?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview Insider Risk Management er en løsning til overholdelse af angivne standarder, der hjælper med at minimere interne risici ved at gøre det muligt for dig at registrere, undersøge og reagere på skadelige og utilsigtede aktiviteter i din organisation. Politikker for insiderrisiko giver dig mulighed for at definere de typer risici, der skal identificeres og registreres i din organisation, herunder at reagere på sager og eskalere sager til Microsoft eDiscovery (Premium), hvis det er nødvendigt. Risikoanalytikere i din organisation kan hurtigt udføre de nødvendige handlinger for at sikre, at brugerne overholder organisationens standarder for overholdelse af angivne standarder.
+Microsoft Purview Styring af insider-risiko er en løsning til overholdelse af angivne standarder, der hjælper med at minimere interne risici ved at gøre det muligt for dig at registrere, undersøge og reagere på skadelige og utilsigtede aktiviteter i din organisation. Politikker for insiderrisiko giver dig mulighed for at definere de typer risici, der skal identificeres og registreres i din organisation, herunder at reagere på sager og eskalere sager til Microsoft eDiscovery (Premium), hvis det er nødvendigt. Risikoanalytikere i din organisation kan hurtigt udføre de nødvendige handlinger for at sikre, at brugerne overholder organisationens standarder for overholdelse af angivne standarder.
+
+Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
 Se videoerne nedenfor for at få mere at vide om, hvordan styring af insiderrisiko kan hjælpe din organisation med at forhindre, registrere og indeholde risici, samtidig med at du prioriterer organisationens værdier, kultur og brugeroplevelse:
 <br>
@@ -64,7 +66,7 @@ Insiderrisikostyring er centreret omkring følgende principper:
 
 - **Gennemsigtighed**: Balancer brugerbeskyttelse af personlige oplysninger i forhold til organisationens risiko med arkitekturen for beskyttelse af personlige oplysninger.
 - **Konfigurerbar**: Konfigurerbare politikker baseret på branche-, geografiske og forretningsgrupper.
-- **Integreret**: Integreret arbejdsproces på tværs af Microsoft Purview-løsninger.
+- **Integreret**: Integreret arbejdsproces på tværs af Microsoft Purview løsninger.
 - **Handlingsklar**: Giver indsigt til aktivering af korrekturlæsermeddelelser, dataundersøgelser og brugerundersøgelser.
 
 ## <a name="identifying-potential-risks-with-analytics"></a>Identificering af potentielle risici med analyse
@@ -143,9 +145,9 @@ Derudover giver den nye [overvågningslog (prøveversion)](insider-risk-manageme
 
 Når sager er undersøgt, kan korrekturlæsere hurtigt løse sagen eller samarbejde med andre risikoparter i din organisation. Hvis brugerne utilsigtet eller utilsigtet overtræder politikbetingelserne, kan der sendes en enkel påmindelse til brugeren fra skabeloner til meddelelser, som du kan tilpasse til din organisation. Disse meddelelser kan fungere som enkle påmindelser eller kan dirigere brugeren til oplæring af genopfriskning eller vejledning for at hjælpe med at forhindre fremtidig risikabel adfærd. Du kan få flere oplysninger under [Skabeloner til insiderrisikostyring](insider-risk-management-notices.md).
 
-I de mere alvorlige situationer kan det være nødvendigt at dele oplysninger om sager om insiderrisikostyring med andre korrekturlæsere eller -tjenester i din organisation. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med løsning af risici fra ende til anden.
+I de mere alvorlige situationer kan det være nødvendigt at dele oplysninger om sager om insiderrisikostyring med andre korrekturlæsere eller -tjenester i din organisation. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview løsninger for at hjælpe dig med løsning af risici fra ende til anden.
 
-- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery(Premium)-sager, skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Du kan få mere at vide om eDiscovery-sager (Premium) under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 - **Office 365 integration af API'er til administration (prøveversion)**: Styring af insiderrisiko understøtter eksport af beskedoplysninger til SIEM-tjenester (Security Information Information and Event Management) via API'erne til administration af Office 365. Hvis du har adgang til beskedoplysninger på platformen, så de passer bedst til din organisations risikoprocesser, får du større fleksibilitet i forhold til, hvordan du reagerer på risikoaktiviteter. Hvis du vil vide mere om eksport af beskedoplysninger med API'er til administration af Office 365, skal du se [Eksportér beskeder](insider-risk-management-settings.md#export-alerts).
 
 > [!NOTE]
