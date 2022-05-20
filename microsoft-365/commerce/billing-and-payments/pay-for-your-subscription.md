@@ -22,18 +22,18 @@ ms.custom:
 - AdminSurgePortfolio
 - business_assist
 - AdminTemplateSet
-ms.date: 10/28/2021
-ms.openlocfilehash: fb6948c59505eaa3316dab73708658f7b31c43e7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 05/18/2022
+ms.openlocfilehash: d116fe2b9fb2b0b0b96ec44107d486edca19ff04
+ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588273"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "65587418"
 ---
 # <a name="how-to-pay-for-your-subscription"></a>Sådan betaler du for dit abonnement
 
 > [!IMPORTANT]
-> Fra og med den 26. januar 2021 understøttes nye bankkonti ikke længere for kunder i Belgien, Frankrig, Italien, Luxembourg, Portugal, Spanien og USA. Hvis du er en eksisterende kunde i et af disse lande, kan du fortsætte med at betale for dit abonnement med en eksisterende bankkonto, og du kan føje nye abonnementer til det, men kun så længe bankkontoen er i god stand.
+> Fra og med den 26. januar 2021 understøttes nye bankkonti ikke længere for kunder i Belgien, Frankrig, Italien, Luxembourg, Portugal, Spanien og USA. Hvis du er en eksisterende kunde i et af disse lande, kan du fortsætte med at betale for dit abonnement med en eksisterende bankkonto, der har et godt omdømme. Du kan dog ikke føje nye abonnementer til bankkontoen.
 
 Du kan bruge et kredit- eller debetkort eller en bankkonto til at betale for dit abonnement. I nogle tilfælde kan du betale via faktura ved hjælp af check eller elektronisk pengeoverførsel. Hvis du har en faktureringsprofil, er dine muligheder en smule anderledes. Du kan få mere at vide under [Sådan betaler du for dit abonnement med en faktureringsprofil](pay-for-subscription-billing-profile.md). Hvis du ikke er sikker på, om din konto har en faktureringsprofil, skal du se [Forstå faktureringsprofiler](manage-billing-profiles.md).
 
@@ -45,7 +45,7 @@ Du kan bruge et kredit- eller debetkort eller en bankkonto til at betale for dit
 ## <a name="before-you-begin"></a>Før du begynder
 
 - Du skal være global administrator eller faktureringsadministrator for at udføre de trin, der er beskrevet i denne artikel. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
-- Den betalingsmetode, du vælger under betaling, er den betalingsmetode, vi bruger til alle fremtidige faktureringsperioder. Du kan ændre det når som helst.
+- Den betalingsmetode, du vælger under udtjekning, er den betalingsmetode, vi bruger til alle fremtidige faktureringsperioder. Du kan ændre det når som helst.
 
 ## <a name="paying-by-credit-or-debit-card-or-bank-account"></a>Betaling med kredit- eller debetkort eller bankkonto
 
@@ -86,7 +86,7 @@ Hvis du ikke har tilføjet den betalingsmetode, der bruges til at betale for abo
 
 ## <a name="where-do-i-send-my-check-or-eft-payment"></a>Hvor skal jeg sende min check eller elektroniske pengeoverførsel til?
 
-[Tjek din faktura](view-your-bill-or-invoice.md) for betalingsinstruktioner for dit land eller område. Hvis du ikke er sikker på, hvor meget du skylder, kan du tjekke din regning og faktureringsoversigt online på fanen **Fakturaer** på siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Fakturaer og betalinger</a>.
+[Tjek din faktura](view-your-bill-or-invoice.md) for betalingsinstrukser for dit land eller område. Hvis du ikke er sikker på, hvor meget du skylder, kan du tjekke din regning og faktureringsoversigt online under fanen **Fakturaer** på siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2102895" target="_blank">Fakturaer og betalinger</a>.
 
 > [!NOTE]
 > - Betaling med check er kun tilgængelig i nogle få lande.
