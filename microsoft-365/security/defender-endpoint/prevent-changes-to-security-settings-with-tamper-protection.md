@@ -17,22 +17,22 @@ ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
 ms.technology: mde
-ms.date: 04/07/2022
+ms.date: 05/20/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 6bd334802319b897de7a8fd8fbb61a490dddcffe
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 7ac72d88975231bb76f6e097a80f372a8ffac535
+ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416304"
+ms.lasthandoff: 05/21/2022
+ms.locfileid: "65626959"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Beskyt sikkerhedsindstillinger med manipulationsbeskyttelse
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -54,7 +54,6 @@ Tamperbeskyttelse er tilgængelig for enheder, der kører en af følgende versio
 > [!NOTE]
 > Tamper-beskyttelse i Windows Server 2012 R2 er tilgængelig til enheder, der er onboardet ved hjælp af den moderne unified løsningspakke. Du kan få flere oplysninger under [Onboard Windows-servere til tjenesten Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
 
-
 ## <a name="overview"></a>Oversigt
 
 Under nogle former for cyberangreb forsøger dårlige aktører at deaktivere sikkerhedsfunktioner, f.eks. antivirusbeskyttelse, på dine maskiner. Dårlige aktører vil gerne deaktivere dine sikkerhedsfunktioner for at få lettere adgang til dine data, installere malware eller på anden måde udnytte dine data, identitet og enheder. Ændringsbeskyttelse hjælper med at forhindre, at denne type ting sker. Med manipulationsbeskyttelse forhindres ondsindede apps i at træffe handlinger som f.eks.:
@@ -62,7 +61,7 @@ Under nogle former for cyberangreb forsøger dårlige aktører at deaktivere sik
 - Deaktivering af beskyttelse mod virus og trusler
 - Deaktivering af beskyttelse i realtid
 - Deaktivering af overvågning af funktionsmåde
-- Deaktivering af antivirus (f.eks. IOfficeAntivirus (IOAV))
+- Deaktivering af antivirusbeskyttelse, f.eks. IOfficeAntivirus (IOAV)
 - Deaktivering af skybaseret beskyttelse
 - Fjerner sikkerhedsintelligensopdateringer
 - Deaktivering af automatiske handlinger på registrerede trusler
@@ -236,15 +235,11 @@ Manipulationsforsøg indikerer typisk større cyberangreb. Forkerte aktører for
 
 Når der registreres et forsøg på manipulation, udløses der en besked på [Microsoft 365 Defender-portalen](/microsoft-365/security/defender-endpoint/portal-overview) ([https://security.microsoft.com](https://security.microsoft.com)).
 
-:::image type="content" source="images/tamperattemptalert.png" alt-text="Portalen Microsoft 365 Defender" lightbox="images/tamperattemptalert.png":::
-
 Ved hjælp af [slutpunktsregistrering og -svar](overview-endpoint-detection-response.md) og [avancerede jagtfunktioner](advanced-hunting-overview.md) i Microsoft Defender for Endpoint kan dit sikkerhedsteam undersøge og løse sådanne forsøg.
 
 ## <a name="review-your-security-recommendations"></a>Gennemse dine sikkerhedsanbefalinger
 
 Manipulationsbeskyttelse kan integreres med [threat & funktionaliteten til administration af sårbarheder](next-gen-threat-and-vuln-mgt.md) . [Sikkerhedsanbefalinger](tvm-security-recommendation.md) omfatter sikring af, at beskyttelse mod manipulation er slået til. Du kan f.eks. søge efter *ændring*. I resultaterne kan du vælge **Slå Tamper Protection** til for at få mere at vide og slå den til.
-
-:::image type="content" source="images/tamperprotectsecurityrecos.png" alt-text="Aktivering af manipulationsbeskyttelse på Microsoft Defender Security Center-portalen" lightbox="images/tamperprotectsecurityrecos.png":::
 
 Hvis du vil vide mere om administration af trussel & sårbarheder, skal [du se Dashboardindsigt – Håndtering af trusler og sikkerhedsrisici](tvm-dashboard-insights.md#dashboard-insights---threat-and-vulnerability-management).
 
@@ -278,13 +273,15 @@ Hvis du er en organisation, der bruger [Microsoft Defender for Endpoint](/micros
 
 ### <a name="how-does-configuring-tamper-protection-in-intune-affect-how-i-manage-microsoft-defender-antivirus-with-group-policy"></a>Hvordan påvirker konfiguration af beskyttelse mod ændring i Intune, hvordan jeg administrerer Microsoft Defender Antivirus med Gruppepolitik?
 
-Gruppepolitik gælder ikke for beskyttelse mod ændring. Ændringer af Microsoft Defender Antivirus indstillinger ignoreres, når beskyttelse mod ændring er slået til.
+Hvis du i øjeblikket bruger Intune til at konfigurere og administrere beskyttelse mod ændring, skal du fortsætte med at bruge Intune. 
+
+Gruppepolitik gælder ikke for beskyttelse mod ændring. Ændringer af Microsoft Defender Antivirus indstillinger, der bruger Gruppepolitik, ignoreres, når ændringsbeskyttelse er slået til, eller når beskyttelse mod ændring er konfigureret med Intune.
 
 ### <a name="if-we-use-microsoft-intune-to-configure-tamper-protection-does-it-apply-only-to-the-entire-organization"></a>Hvis vi bruger Microsoft Intune til at konfigurere beskyttelse mod manipulation, gælder den så kun for hele organisationen?
 
 Du har fleksibilitet til at konfigurere beskyttelse mod ændring med Intune. Du kan målrette hele organisationen eller vælge bestemte enheder og brugergrupper.
 
-### <a name="can-i-configure-tamper-protection-with-microsoft-endpoint-configuration-manager"></a>Kan jeg konfigurere Tamper Protection med Microsoft Endpoint Configuration Manager?
+### <a name="can-i-configure-tamper-protection-with-microsoft-endpoint-configuration-manager"></a>Kan jeg konfigurere manipulationsbeskyttelse med Microsoft Endpoint Configuration Manager?
 
 Hvis du bruger lejertilknyt, kan du bruge Microsoft Endpoint Configuration Manager. Se følgende ressourcer:
 
@@ -294,10 +291,6 @@ Hvis du bruger lejertilknyt, kan du bruge Microsoft Endpoint Configuration Manag
 ### <a name="i-have-the-windows-e3-enrollment-can-i-use-configuring-tamper-protection-in-intune"></a>Jeg har den Windows E3 tilmelding. Kan jeg konfigurere beskyttelse mod manipulation i Intune?
 
 I øjeblikket er konfiguration af beskyttelse mod manipulation i Intune kun tilgængelig for kunder, der har [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
-
-### <a name="what-happens-if-i-try-to-change-microsoft-defender-for-endpoint-settings-in-intune-microsoft-endpoint-configuration-manager-and-windows-management-instrumentation-when-tamper-protection-is-enabled-on-a-device"></a>Hvad sker der, hvis jeg forsøger at ændre indstillingerne for Microsoft Defender for Endpoint i Intune, Microsoft Endpoint Configuration Manager og Windows management instrumentation, når Tamper Protection er aktiveret på en enhed?
-
-Du kan ikke ændre de funktioner, der er beskyttet af manipulationsbeskyttelse. sådanne ændringsanmodninger ignoreres.
 
 ### <a name="im-an-enterprise-customer-can-local-admins-change-tamper-protection-on-their-devices"></a>Jeg er virksomhedskunde. Kan lokale administratorer ændre beskyttelse mod manipulation på deres enheder?
 
@@ -318,7 +311,7 @@ Dit team af sikkerhedshandlinger kan også bruge jagtforespørgsler, f.eks. føl
 [Vis oplysninger om forsøg på manipulation](#view-information-about-tampering-attempts).
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
@@ -333,4 +326,4 @@ Dit team af sikkerhedshandlinger kan også bruge jagtforespørgsler, f.eks. føl
 - [Få et overblik over Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint)
 - [Bedre sammen: Microsoft Defender Antivirus og Microsoft Defender for Endpoint](why-use-microsoft-defender-antivirus.md)
 - [Aktivér fejlfindingstilstand](enable-troubleshooting-mode.md)
-- [Fejlfindingstilstandsscenarier](troubleshooting-mode-scenarios.md)
+- [Scenarier for fejlfindingstilstand](troubleshooting-mode-scenarios.md)

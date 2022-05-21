@@ -19,14 +19,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Klassificerere, der kan oplæres, kan genkende forskellige typer indhold til mærkning eller politikanvendelse ved at give dem positive og negative eksempler at se på.
-ms.openlocfilehash: 7da6c9ef6e26d25bb40cade4832abb7b73a4b095
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a95c74894fd1ab3f9e3f9dd1f398d60afdc597d0
+ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759871"
+ms.lasthandoff: 05/21/2022
+ms.locfileid: "65625793"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Få mere at vide om trænbare klassificeringer
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Klassificering og mærkning af indhold, så det kan beskyttes og håndteres korrekt, er starttidspunktet for disciplinen information protection. Microsoft 365 har tre måder at klassificere indhold på.
 
@@ -43,7 +45,7 @@ Denne kategori af klassificeringsmekanismer omfatter søgning efter indhold ved 
 - Genkender et element, fordi det er en variation i en skabelon [(udskrivning af dokumentfinger)](document-fingerprinting.md).
 - Brug af tilstedeværelsen af nøjagtige strenge [nøjagtigt datamatch](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types).
 
-Følsomheds- og opbevaringsmærkater kan derefter anvendes automatisk for at gøre indholdet tilgængeligt til brug i [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md) og [automatisk anvende politikker for opbevaringsmærkater](apply-retention-labels-automatically.md).
+Følsomheds- og opbevaringsmærkater kan derefter anvendes automatisk for at gøre indholdet tilgængeligt til brug i [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md) og [anvend automatisk politik for opbevaringsmærkater](apply-retention-labels-automatically.md).
 
 ## <a name="classifiers"></a>Klassificeringer
 
@@ -74,27 +76,49 @@ Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 > [!CAUTION]
 > Vi udfaser den prækvalificerede klassificering af **stødende sprog** , fordi den har produceret et højt antal falske positiver. Brug den ikke, og hvis du bruger den i øjeblikket, skal du fjerne dine forretningsprocesser fra den. Vi anbefaler, at du bruger de forududdannede klassificeringer **threat**, **profanity** og **chikane** i stedet.
 
+- **Aftaler**: Registrerer indhold, der er relateret til juridiske aftaler, f.eks. aftaler om hemmeligholdelse, arbejdserklæringer, låne- og leasingaftaler, ansættelses- og konkurrenceklausuler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
+
 - **CV'er**: registrerer dokumenter, .pdf, .rtf, .txt elementer, der er tekstregnskaber for en ansøgers personlige, uddannelsesmæssige, faglige kvalifikationer, erhvervserfaring og andre personligt identificerende oplysninger
+
 - **Kildekode**: Registrerer elementer, der indeholder et sæt instruktioner og sætninger, der er skrevet i de øverste 25 anvendte computerprogrammeringssprog på GitHub: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script. Registrerer indhold i .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData-, .rds-, .rb-, .scala-, .sc-, .sh- og .swift-filer.
+
+- **Kundeklager**: Klassificeringen af kundeklager registrerer feedback og klager over din organisations produkter eller tjenester. Denne klassificering kan hjælpe dig med at opfylde lovmæssige krav til registrering og behandling af klager, f.eks. forbrugerfinansieringsbureauet og fødevare- og drugadministrationskravene. Det registreres, at indhold i .msg og .eml kun overholder kommunikation, .docx, .pdf, .txt, .rtf, .jpg, .jpeg, .png, .gif, .bmp, .svg-filer.
+
+- **Diskrimination**: Registrerer eksplicit diskriminerende sprog og er følsom over for diskriminerende sprog mod de afrikanske amerikanske/sorte samfund sammenlignet med andre samfund.
+
+- **Finance**: Registrerer indhold i kategorierne virksomhedsfinansiering, regnskab, økonomi, bankvirksomhed og investering. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
+
+- **Chikane**: Registrerer en bestemt kategori af krænkende sprogtekstelementer, der er relateret til stødende adfærd, der er målrettet til en eller flere personer, baseret på følgende træk: race, etnicitet, religion, national oprindelse, køn, seksuel orientering, alder, handicap. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
+
+- **Sundhedspleje**: Registrerer indhold i aspekter af sundheds- og sundhedsadministration, f.eks. sundhedsydelser, diagnosticering, behandling, krav osv. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
+
+- **HR**: Registrerer indhold i personalerelaterede kategorier af rekruttering, interview, ansættelse, uddannelse, evaluering, advarsel og opsigelse. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
+
+- **IP**: Registrerer indhold i kategorier relateret til immaterielle rettigheder, f.eks. forretningshemmeligheder og lignende fortrolige oplysninger. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
+
+- **It**: Registrerer indhold i kategorierne Information Technology og Cybersecurity, f.eks. netværksindstillinger, informationssikkerhed, hardware og software. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
+
+- **Juridiske anliggender**: Registrerer indhold i kategorier relateret til juridiske anliggender, f.eks. procesførelse, juridiske processer, juridiske forpligtelser, juridisk terminologi, lovgivning og lovgivning. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
+
+- **Indkøb**: Registrerer indhold i kategorier af bud, anførselstegn, køb og betaling for levering af varer og tjenester. Registrerer indhold i filer af typen .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla.
+
+- **Bandeord**: Registrerer en bestemt kategori af stødende sprogtekstelementer, der indeholder udtryk, der gør de fleste til grin.
+
+- **CV'er**: registrerer dokumenter, .pdf, .rtf, .txt elementer, der er tekstregnskaber for en ansøgers personlige, uddannelsesmæssige, faglige kvalifikationer, erhvervserfaring og andre personligt identificerende oplysninger
+
+- **Kildekode**: Registrerer elementer, der indeholder et sæt instruktioner og sætninger, der er skrevet i de øverste 25 anvendte computerprogrammeringssprog på GitHub: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script.
 
 > [!NOTE]
 > Kildekode oplæres til at registrere, når størstedelen af teksten er kildekode. Den registrerer ikke kildekodetekst, der er afbrudt med almindelig tekst.
 
-- **Aftaler**: Registrerer indhold, der er relateret til juridiske aftaler, f.eks. aftaler om hemmeligholdelse, arbejdserklæringer, låne- og leasingaftaler, ansættelses- og konkurrenceklausuler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
-- **Diskrimination**: Registrerer eksplicit diskriminerende sprog og er følsom over for diskriminerende sprog mod de afrikanske amerikanske/sorte samfund sammenlignet med andre samfund.
-- **Finance**: Registrerer indhold i kategorierne virksomhedsfinansiering, regnskab, økonomi, bankvirksomhed og investering. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
-- **Chikane**: Registrerer en bestemt kategori af krænkende sprogtekstelementer, der er relateret til stødende adfærd, der er målrettet til en eller flere personer, baseret på følgende træk: race, etnicitet, religion, national oprindelse, køn, seksuel orientering, alder, handicap. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
-- **Sundhedspleje**: Registrerer indhold i aspekter af sundheds- og sundhedsadministration, f.eks. sundhedsydelser, diagnosticering, behandling, krav osv. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
-- **HR**: Registrerer indhold i personalerelaterede kategorier af rekruttering, interview, ansættelse, uddannelse, evaluering, advarsel og opsigelse. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
-- **IP**: Registrerer indhold i kategorier relateret til immaterielle rettigheder, f.eks. forretningshemmeligheder og lignende fortrolige oplysninger. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
-- **It**: Registrerer indhold i kategorierne Information Technology og Cybersecurity, f.eks. netværksindstillinger, informationssikkerhed, hardware og software. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla filer.
-- **Juridiske anliggender**: Registrerer indhold i kategorier relateret til juridiske anliggender, f.eks. procesførelse, juridiske processer, juridiske forpligtelser, juridisk terminologi, lovgivning og lovgivning. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
-- **Indkøb**: Registrerer indhold i kategorier af bud, anførselstegn, køb og betaling for levering af varer og tjenester. Registrerer indhold i filer af typen .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla.
+- **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
+
+- **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom.
 - **Bandeord**: Registrerer en bestemt kategori af stødende sprogtekstelementer, der indeholder udtryk, der gør de fleste til grin. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
 - **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
 - **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
 
-Disse vises i visningen **Microsoft 365 Overholdelsescenter** >  **Dataklassificeringstrænede** >  klassificeringer med statussen `Ready to use`.
+Disse vises i visningen **Microsoft Purview-compliance-portal** >  **Dataklassificeringstrænede** >  klassificeringer med statussen `Ready to use`.
 
 ![classifiers-pre-trained-classifiers.](../media/classifiers-ready-to-use-classifiers.png)
 

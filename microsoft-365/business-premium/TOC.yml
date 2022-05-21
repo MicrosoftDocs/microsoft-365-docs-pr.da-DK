@@ -78,7 +78,7 @@
           href: m365bp-onboard-devices-mdb.md
         - name: Beskyt Windows-enheder
           items:
-            - name: Indstillinger for beskyttelse til Windows 10-enheder
+            - name: Indstillinger for beskyttelse til Windows-enheder
               href: m365bp-protection-settings-for-windows-10-devices.md
             - name: Beskyt Windows-enheder
               href: m365bp-secure-windows-devices.md
@@ -107,9 +107,9 @@
     - name: Fjern brugere
       href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Fjern data fra enheder
-      href: ../business/remove-company-data.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+      href: m365bp-remove-company-data.md
     - name: Nulstil enheder til fabriksindstillingerne
-      href: ../business/reset-devices-to-factory-settings.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+      href: m365bp-reset-devices-to-factory-settings.md
 - name: Reference
   items:
     - name: Ordliste over ord
@@ -128,7 +128,7 @@
           href: m365bp-create-and-edit-autopilot-devices.md
     - name: Indstillinger for appbeskyttelse til Android og iOS
       href: m365bp-app-protection-settings-for-android-and-ios.md
-    - name: Knyt beskyttelsesfunktioner til InTune-indstillinger
+    - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
       href: m365bp-map-protection-features-to-intune-settings.md
     - name: Konfigurer Overholdelsesstyring
       href: m365bp-set-up-compliance.md
