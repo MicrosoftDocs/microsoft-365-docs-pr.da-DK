@@ -15,12 +15,12 @@ ms.collection:
 ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 description: Få mere at vide om, hvordan Microsoft Defender Antivirus beskytter dine Windows enheder mod softwaretrusler, f.eks. virus, malware og spyware.
-ms.openlocfilehash: 47f6af2b91eed8096a685f8d3281f16fdc677331
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 796edb343745e19267f901b736ca19217b0e4f01
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466300"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65620922"
 ---
 # <a name="overview-of-threat-protection-by-microsoft-defender-antivirus"></a>Oversigt over trusselsbeskyttelse fra Microsoft Defender Antivirus
 
@@ -73,7 +73,7 @@ Når der registreres trusler af Microsoft Defender Antivirus, sker følgende tin
 
 I de fleste tilfælde behøver brugerne ikke at foretage sig yderligere. Så snart der registreres en skadelig fil eller et program på en enhed, blokerer Microsoft Defender Antivirus den og forhindrer den i at køre. Desuden føjes nyligt registrerede trusler til antivirus- og antimalwareprogrammet, så andre enheder og brugere også er beskyttet.  
 
-Hvis der er en handling, som en bruger skal udføre, f.eks. godkendelse af fjernelsen af en skadelig fil, kan vedkommende se det i den meddelelse, vedkommende modtager. Hvis du vil vide mere om de handlinger, Microsoft Defender Antivirus udfører på en brugers vegne, eller hvilke handlinger brugerne skal udføre, skal du se [Beskyttelsesoversigt](https://support.microsoft.com/office/f1e5fd95-09b4-46d1-b8c7-1059a1e09708). Hvis du vil vide mere om, hvordan du administrerer trusselsregistreringer som it-professionel/administrator, skal du se [Gennemse registrerede trusler og udføre handlinger](review-threats-take-action.md).
+Hvis der er en handling, som en bruger skal udføre, f.eks. godkendelse af fjernelsen af en skadelig fil, kan vedkommende se det i den meddelelse, vedkommende modtager. Hvis du vil vide mere om de handlinger, Microsoft Defender Antivirus udfører på en brugers vegne, eller hvilke handlinger brugerne skal udføre, skal du se [Beskyttelsesoversigt](https://support.microsoft.com/office/f1e5fd95-09b4-46d1-b8c7-1059a1e09708). Hvis du vil vide mere om, hvordan du administrerer trusselsregistreringer som it-professionel/administrator, skal du se [Gennemse registrerede trusler og udføre handlinger](../../business-premium/m365bp-review-threats-take-action.md).
 
 Hvis du vil vide mere om forskellige trusler, skal du besøge <a href="https://www.microsoft.com/wdsi/threats" target="_blank">webstedet Microsoft Sikkerhedsviden Trusler</a>, hvor du kan udføre følgende handlinger: 
 

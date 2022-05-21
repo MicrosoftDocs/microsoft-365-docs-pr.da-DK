@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 24a95c8ed6d7d1cdd15b15b53434414e44b7881f
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 6bf97490d60740b47420d352f7fb537e675678ae
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417924"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621133"
 ---
 # <a name="protect-your-network"></a>Beskyt dit netværk
 
@@ -52,6 +52,9 @@ Netværksbeskyttelse udvider beskyttelsen i [webbeskyttelse](web-protection-over
 
 > [!NOTE]
 > Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
+
+Se denne video for at få mere at vide om, hvordan Netværksbeskyttelse hjælper med at reducere angrebsoverfladen på dine enheder fra phishing-svindel, udnyttelser og andet skadeligt indhold.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4r4yZ]
 
 ## <a name="requirements-for-network-protection"></a>Krav til netværksbeskyttelse
 
@@ -148,7 +151,7 @@ En bruger besøger et websted:
 
 ### <a name="network-protection-c2-detection-and-remediation"></a>Netværksbeskyttelse: C2-registrering og -afhjælpning
 
-I sin oprindelige form er ransomware en råvaretrussel, forudprogrammeret og fokuseret på begrænsede, specifikke resultater (for eksempel kryptering af en computer). Dog, ransomware har udviklet sig til en sofistikeret trussel, der er menneskelig drevet, adaptiv, og fokuserede på større skala og mere udbredte resultater; som at opbevare en hel organisations aktiver eller data som løsesum.
+I sin oprindelige form er ransomware en råvaretrussel, forudprogrammeret og fokuseret på begrænsede, specifikke resultater (for eksempel kryptering af en computer). Dog, ransomware har udviklet sig til en sofistikeret trussel, der er menneskeligt drevne, adaptive, og fokuserede på større skala og mere udbredte resultater; som at opbevare en hel organisations aktiver eller data som løsesum.
 
 Understøttelse af kommando og kontrol (C2) er en vigtig del af denne ransomware-udvikling og er det, der gør det muligt for disse angreb at tilpasse sig det miljø, de er målrettet mod. At bryde linket til kommando- og kontrolinfrastrukturen betyder at stoppe et angrebs forløb til næste fase.
 

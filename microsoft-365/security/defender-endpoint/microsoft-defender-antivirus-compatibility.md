@@ -14,16 +14,15 @@ ms.custom: nextgen
 ms.reviewer: mkaminska, pahuijbr
 manager: dansimp
 ms.technology: mde
-ms.date: 04/19/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 3bae6326fca5cefc921cb24b1a16180da2a2f52f
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5a38ed6fbdcebf54dcd8bc34458733b5edefb850
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415123"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623148"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
@@ -34,8 +33,6 @@ ms.locfileid: "65415123"
 
 **Platforme**
 - Windows
-
-[!include[Prerelease information](../../includes/prerelease.md)]
 
 Microsoft Defender Antivirus installeres automatisk på slutpunkter, der kører følgende versioner af Windows:
 
@@ -206,7 +203,7 @@ I tabellen i dette afsnit beskrives forskellige tilstande, som du kan se med Mic
  |  Deaktiveret <br/><br/> Eller <br/><br/> Afinstalleret  |  Når Microsoft Defender Antivirus er deaktiveret eller fjernet, bruges den ikke som antivirusprogram. Filer scannes ikke, og trusler afhjælpes ikke. <br/><br/> Deaktivering eller fjernelse af Microsoft Defender Antivirus anbefales ikke generelt. Hvis det er muligt, skal du beholde Microsoft Defender Antivirus i passiv tilstand, hvis du bruger en ikke-Microsoft-antimalware-/antivirusløsning. <br/><br/> I tilfælde, hvor Microsoft Defender Antivirus deaktiveres automatisk, kan det aktiveres igen automatisk, hvis det antivirus-/antimalwareprodukt, der ikke er Fra Microsoft, udløber eller på anden måde stopper med at yde beskyttelse i realtid mod virus, malware eller andre trusler. Den automatiske genaktivering af Microsoft Defender Antivirus hjælper med at sikre, at antivirusbeskyttelsen bevares på dine slutpunkter. <br/><br/> Du kan også bruge [begrænset periodisk scanning](limited-periodic-scanning-microsoft-defender-antivirus.md), som fungerer sammen med Microsoft Defender Antivirus-programmet til jævnligt at kontrollere, om der er trusler, hvis du bruger en antivirusapp, der ikke er fra Microsoft.  | 
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)
@@ -218,6 +215,5 @@ I tabellen i dette afsnit beskrives forskellige tilstande, som du kan se med Mic
 ## <a name="see-also"></a>Se også
 
 - [Microsoft Defender Antivirus på Windows klienter](microsoft-defender-antivirus-in-windows-10.md)
-- [Microsoft Defender Antivirus på Windows server](microsoft-defender-antivirus-on-windows-server.md)
 - [EDR i bloktilstand](edr-in-block-mode.md)
 - [Få mere at vide om forebyggelse af datatab ved slutpunkt](/microsoft-365/compliance/endpoint-dlp-learn-about)

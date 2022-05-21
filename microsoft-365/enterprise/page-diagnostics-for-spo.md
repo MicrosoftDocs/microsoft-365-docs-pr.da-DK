@@ -19,12 +19,12 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: Brug værktøjet Sidediagnosticering til SharePoint til at analysere SharePoint moderne portal online og klassiske udgivelsessider i forhold til et foruddefineret sæt ydeevnekriterier.
-ms.openlocfilehash: b39b547754acc6f12c750192af2986e9b4e54150
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a4d2c0f6d298578290d9f7daf850c4744e2f8dff
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095658"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621838"
 ---
 # <a name="use-the-page-diagnostics-for-sharepoint-tool"></a>Brug sidediagnosticering til SharePoint værktøj
 
@@ -42,12 +42,12 @@ Værktøjet Sidediagnosticering til SharePoint er en browserudvidelse til det ny
 
 Værktøjet genererer en rapport for hver analyseret side, der viser, hvordan siden klarer sig i forhold til et foruddefineret sæt regler, og viser detaljerede oplysninger, når resultaterne for en test falder uden for den oprindelige værdi. SharePoint Online-administratorer og -designere kan bruge værktøjet til at foretage fejlfinding af problemer med ydeevnen og til at sikre, at nye sider optimeres inden publicering.
 
-Værktøjet Sidediagnosticering er udviklet til kun at analysere SharePoint webstedssider og ikke systemsider som *f.eks. allitems.aspx* eller *sharepoint.aspx*. Hvis du forsøger at køre værktøjet på en systemside eller en anden side, der ikke findes på webstedet, får du vist en fejlmeddelelse, der fortæller, at værktøjet ikke kan køres for den pågældende type side.
+Værktøjet Sidediagnosticering er udviklet til kun at analysere SharePoint webstedssider og ikke systemsider som *f.eks. allitems.aspx* eller *sharepoint.aspx*. Hvis du forsøger at køre værktøjet på en systemside eller på en anden side, der ikke findes på webstedet, får du vist en fejlmeddelelse, der fortæller, at værktøjet ikke kan køres for den pågældende type side.
 
 > [!div class="mx-imgBorder"]
 > ![Skal køre på en SharePoint side.](../media/page-diagnostics-for-spo/pagediag-Error-StartPage.png)
 
-Dette er ikke en fejl i værktøjet, da der ikke er nogen værdi i vurderingen af biblioteker eller systemsider. Naviger til en SharePoint webstedsside for at bruge værktøjet. Hvis denne fejl opstår på en SharePoint side, skal du kontrollere mastersiden for at sikre, at de SharePoint metamærker ikke er blevet fjernet.
+Dette er ikke en fejl i værktøjet, da der ikke er nogen værdi i at vurdere biblioteker eller systemsider. Naviger til en SharePoint webstedsside for at bruge værktøjet. Hvis denne fejl opstår på en SharePoint side, skal du kontrollere mastersiden for at sikre, at de SharePoint metamærker ikke er blevet fjernet.
 
 Hvis du vil give feedback om værktøjet, skal du vælge ellipsen i øverste højre hjørne af værktøjet og derefter vælge [Giv feedback](https://go.microsoft.com/fwlink/?linkid=874109).
 
@@ -72,7 +72,7 @@ Installationsproceduren i dette afsnit fungerer for både Chrome- og Microsoft E
 1. Hvis du vil bruge værktøjet i tilstanden Incognito eller InPrivate, skal du følge proceduren for din browser:
     1. I Microsoft Edge skal du gå til **Udvidelser** eller skrive _edge://extensions_ på URL-adresselinjen og vælge **Detaljer** for udvidelsen. I indstillingerne for udvidelsen skal du markere afkrydsningsfeltet **tillad i InPrivate**.
     1. I Chrome skal du navigere til **Udvidelser** eller skrive _chrome://extensions_ på URL-adresselinjen og vælge **Detaljer** for udvidelsen. I indstillingerne for udvidelsen skal du vælge skyderen for **Tillad i Incognito**.
-1. Gå til SharePoint webstedsside på SharePoint Online, som du vil gennemse. Vi har tilladt "forsinkelse af indlæsning" af elementer på sider; Værktøjet stopper derfor ikke automatisk (dette er tilsigtet for at imødekomme alle scenarier for sideindlæsning). Hvis du vil stoppe samlingen, skal du vælge **Stop**. Sørg for, at sideindlæsningen er fuldført, før du stopper dataindsamlingen, ellers registrerer du kun en delvis sporing.
+1. Gå til SharePoint webstedsside på SharePoint Online, som du vil gennemse. Vi har tilladt "forsinkelse af indlæsning" af elementer på sider. derfor stopper værktøjet ikke automatisk (dette er tilsigtet for at imødekomme alle scenarier for sideindlæsning). Hvis du vil stoppe samlingen, skal du vælge **Stop**. Sørg for, at sideindlæsningen er fuldført, før du stopper dataindsamlingen, ellers registrerer du kun en delvis sporing.
 1. Klik på knappen på udvidelsens værktøjslinje ![Sidediagnosticering for SharePoint logo.](../media/page-diagnostics-for-spo/pagediag-icon32.png) for at indlæse værktøjet, og du får vist følgende pop op-vindue til udvidelse:
 
     ![Pop op til Værktøjet Sidediagnosticering.](../media/page-diagnostics-for-spo/pagediag-Landing.png)
@@ -90,10 +90,10 @@ Vælg **Start** for at begynde at indsamle data til analyse.
     > [!div class="mx-imgBorder"]
     > ![Oplysninger om sidediagnosticering.](../media/page-diagnostics-for-spo/pagediag-details.PNG)
 
-   - **CorrelationID** er et vigtigt element, når du arbejder med Microsoft Support, da det giver dem mulighed for at indsamle yderligere diagnosticeringsdata til den specifikke side.
+   - **CorrelationID** er et vigtigt element, når du arbejder med Microsoft Support, da det giver dem mulighed for at indsamle flere diagnosticeringsdata til den specifikke side.
    - **SPRequestDuration** er den tid, det tager SharePoint at behandle siden. Strukturel navigation, store billeder, mange API-kald kan alle bidrage til længere varigheder.
    - **SPIISLatency** er den tid i millisekunder, det tager for SharePoint Online at indlæse siden. Denne værdi omfatter ikke den tid, det tager webprogrammet at svare.
-   - **Sideindlæsningstid** er den samlede tid, der registreres af siden fra tidspunktet for anmodningen til det tidspunkt, hvor svaret blev modtaget og gengivet i browseren. Denne værdi påvirkes af en række faktorer, herunder netværksventetid, computerens ydeevne og den tid, det tager for browseren at indlæse siden.
+   - **Sideindlæsningstid** er den samlede tid, der registreres af siden fra tidspunktet for anmodningen til det tidspunkt, hvor svaret blev modtaget og gengivet i browseren. Denne værdi påvirkes af forskellige faktorer, herunder netværksventetid, computerens ydeevne og den tid, det tager for browseren at indlæse siden.
    - **Sidens URL-adresse** (Uniform Resource Locator) er webadressen på den aktuelle side.
 
 1. Under fanen [**Diagnosticeringstest**](#how-to-use-the-diagnostic-tests-tab) vises analyseresultaterne i tre kategorier. **Der kræves ingen handling**, **forbedringsmuligheder** og **opmærksomhed kræves**. Hvert testresultat repræsenteres af et element i en af disse kategorier som beskrevet i følgende tabel:
@@ -117,7 +117,7 @@ Testresultater, der vises i kategorierne **Forbedringsmuligheder** eller **Opmæ
 
 Oplysningerne under fanen Diagnosticeringstest fortæller dig ikke, hvordan du designer sider, men fremhæver faktorer, der kan påvirke sidens ydeevne. Nogle sidefunktioner og -tilpasninger har en uundgåelig indvirkning på sidens ydeevne og bør gennemgås for potentiel afhjælpning eller udeladelse fra siden, hvis deres indvirkning er betydelig.
 
-Røde eller gule resultater kan også angive webdele, der opdaterer data for ofte. Virksomhedsnyheder opdateres f.eks. ikke hvert sekund, men brugerdefinerede webdele bygges ofte til at hente de seneste nyheder hvert sekund i stedet for at implementere cachelagringselementer, der kan forbedre den overordnede brugeroplevelse. Vær opmærksom på, når du medtager webdele på en side, at der ofte er enkle måder at reducere deres påvirkning af ydeevnen på ved at evaluere værdien af hver tilgængelig parameter for at sikre, at den er angivet korrekt til det tilsigtede formål.
+Røde eller gule resultater kan også angive webdele, der opdaterer data for ofte. Virksomhedsnyheder opdateres f.eks. ikke hvert sekund, men brugerdefinerede webdele bygges ofte til at hente de seneste nyheder hvert sekund i stedet for at implementere cachelagringselementer, der kan forbedre den overordnede brugeroplevelse. Vær opmærksom på, når du medtager webdele på en side, at der ofte er enkle måder at reducere deres påvirkning af ydeevnen på ved at evaluere værdien af hver tilgængelig parameter for at sikre, at den er indstillet korrekt til det tilsigtede formål.
 
 >[!NOTE]
 >Klassiske teamwebsteder, hvor publiceringsfunktionen ikke er aktiveret, kan ikke bruge CDN'er. Når du kører værktøjet på disse websteder, forventes den CDN test at mislykkes og kan ignoreres, men alle de resterende test er gældende. Den ekstra funktionalitet i SharePoint publiceringsfunktion kan øge indlæsningstiden for sider, så den bør ikke aktiveres udelukkende for at tillade CDN funktionalitet.
@@ -146,7 +146,7 @@ Fanen **Netværkssporing** indeholder detaljerede oplysninger om begge anmodning
    > [!div class="mx-imgBorder"]
    > ![Aktivér eksport til HAR.](../media/page-diagnostics-for-spo/pagediag-submithar.png)
 
-Det skal aktiveres, før du klikker på Start, hvilket derefter aktiverer fejlfindingstilstand i din browser. Den genererer en HTTP-arkivfil (HAR), som derefter kan tilgås via fanen "Netværkssporing". Klik på "Eksportér til HAR", så downloader den filen til din computer, og du kan derefter dele den i overensstemmelse hermed. Filen kan åbnes i en række fejlfindingsværktøjer, f.eks. F12 Developer Tools og Fiddler.
+Det skal aktiveres, før du klikker på Start, hvilket derefter aktiverer fejlfindingstilstand i din browser. Den genererer en HTTP-arkivfil (HAR), som derefter kan tilgås via fanen "Netværkssporing". Klik på "Eksportér til HAR", så downloader den filen til din computer, og du kan derefter dele den i overensstemmelse hermed. Filen kan åbnes i forskellige fejlfindingsværktøjer, f.eks. F12 Developer Tools og Fiddler.
 
 > [!div class="mx-imgBorder"]
 > ![Netværkssporing.](../media/page-diagnostics-for-spo/pagediag-networktracehar.png)

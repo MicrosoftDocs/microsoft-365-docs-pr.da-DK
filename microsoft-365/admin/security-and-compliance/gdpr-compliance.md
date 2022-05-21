@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 211c5c90-9719-4d73-9ad9-1925bb80f5f6
 description: Få mere at vide om, hvordan Microsoft 365 for virksomheder kan hjælpe dig med processen med den generelle forordning om databeskyttelse (GDPR).
-ms.openlocfilehash: 28f39b8aaf715c9f95f89fe30ae0cfc077327eda
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: f616ed65879427c377333981841006b2b50b3515
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469508"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621265"
 ---
 # <a name="gdpr-simplified-a-guide-for-your-small-business"></a>GDPR forenklet: En vejledning til din lille virksomhed
 
@@ -32,7 +32,7 @@ ms.locfileid: "65469508"
   
 Den generelle forordning om databeskyttelse (GDPR) er en EU-forordning, der giver mandat til, hvordan en organisation skal håndtere personlige data. Hvis din virksomhed sælger til, leverer tjenester til eller beskæftiger borgere i EU, vil [GDPR](https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-does-general-data-protection-regulation-gdpr-govern_en) påvirke dig. 
 
-Som administrator af mindre virksomheder spørger du sandsynligvis dig selv "hvordan kommer jeg i gang"? Dette kan især være tilfældet, hvis din virksomhed ikke håndterer personlige data som en kerneforretningsaktivitet, eller hvis GDPR er helt ny for dig.
+Som administrator af mindre virksomheder spørger du dig selv sikkert "hvordan kommer jeg i gang"? Dette kan især være tilfældet, hvis din virksomhed ikke håndterer personlige data som en kerneforretningsaktivitet, eller hvis GDPR er helt nyt for dig.
 
 Du kan komme i gang ved at gennemgå denne artikel, som har til formål at hjælpe dig med at forstå, hvad GDPR er, hvorfor den opstod, og hvordan Microsoft 365 for virksomheder kan hjælpe din organisation med at overholde GDPR.
 
@@ -73,7 +73,7 @@ GDPR fastlægger de registreredes rettigheder, hvilket betyder, at kunder, medar
     
 - **Bed om at slette data:** Også kendt som "retten til sletning" giver denne ret en person mulighed for at anmode om, at alle deres personlige data, som en virksomhed har indsamlet, slettes på tværs af alle systemer, der bruger den eller deler den. 
     
-- **Anmodning om begrænset behandling:** En person kan bede dig undertrykke eller begrænse vedkommendes data. Den kan dog kun anvendes under visse omstændigheder. 
+- **Anmodning om begrænset behandling:** En person kan bede dig undertrykke eller begrænse vedkommendes data. Det gælder dog kun under visse omstændigheder. 
     
 - **Har dataportabilitet:** En person kan bede om, at deres data overføres til en anden virksomhed. 
     
@@ -94,13 +94,14 @@ En god måde for en mindre virksomhed at komme i gang med GDPR på er ved at sik
 
 ### <a name="step-1-know-the-personal-data-that-you-collect-and-use-within-your-business-and-the-reasons-you-need-it"></a>Trin 1: Kend de personlige data, du indsamler og bruger i din virksomhed, og årsagerne til, at du har brug for dem
 
-Som mindre virksomhed er et af de første skridt, du bør tage, at lave en oversigt over de personlige data, du indsamler og bruger i din virksomhed, og hvorfor det er nødvendigt. Dette omfatter data om både dine medarbejdere og dine kunder.
+Som mindre virksomhed bør du som et af de første skridt gøre en oversigt over de personlige data, du indsamler og bruger i din virksomhed, og hvorfor de er nødvendige. Dette omfatter data om både dine medarbejdere og dine kunder.
 
 Du kan f.eks. have brug for din medarbejders personlige data baseret på ansættelseskontrakten og af juridiske årsager (f.eks. rapportering af skatter og afgifter til Internal Revenue Service).
 
 Som et andet eksempel kan du administrere lister over individuelle kunder for at sende dem meddelelser om særtilbud, hvis de har givet samtykke til dette.
 
 #### <a name="microsoft-365-features-that-can-help"></a>Microsoft 365 funktioner, der kan hjælpe
+
 [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) kan hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger i din virksomhed. Du kan bruge klassificeringer, der kan oplæres, til at identificere og navngive dokumenttyper, der indeholder personlige data. 
 
 ### <a name="step-2-inform-your-customers-employees-and-other-individuals-when-you-need-to-collect-their-personal-data"></a>Trin 2: Informér dine kunder, medarbejdere og andre personer, når du har brug for at indsamle deres personlige data
@@ -165,7 +166,7 @@ Hvis du underkontraktbehandler personoplysninger til en anden virksomhed, skal d
 
 ### <a name="step-7-assign-someone-to-oversee-personal-data-protection"></a>Trin 7: Tildel en person til at styre beskyttelse af personlige oplysninger
  
-Organisationer skal muligvis udpege en <b>databeskyttelsesansvarlig (DPO)</b> for bedre at beskytte personlige data. Du behøver dog muligvis ikke at udpege en databeskyttelsesansvarlig, hvis behandlingen af personlige data ikke er en kernedel af din virksomhed, eller hvis du er en mindre virksomhed. Hvis din virksomhed f.eks. kun indsamler data om dine kunder til levering hjemme, skal du ikke være nødt til at udpege en DPO. Selvom du har brug for at gøre brug af en DPO, kan disse opgaver blive tildelt en eksisterende medarbejder ud over hans/hendes andre opgaver. Eller du kan vælge at ansætte en ekstern konsulent til denne opgave efter behov.
+Organisationer skal muligvis udpege en <b>databeskyttelsesansvarlig (DPO)</b> for bedre at beskytte personlige data. Du behøver dog muligvis ikke at udpege en databeskyttelsesansvarlig, hvis behandling af personlige oplysninger ikke er en kernedel af din virksomhed, eller hvis du er en mindre virksomhed. Hvis din virksomhed f.eks. kun indsamler data om dine kunder til levering hjemme, skal du ikke være nødt til at udpege en DPO. Selvom du har brug for at gøre brug af en DPO, kan disse opgaver blive tildelt en eksisterende medarbejder ud over hans/hendes andre opgaver. Eller du kan vælge at ansætte en ekstern konsulent til denne opgave efter behov.
 
 Du behøver normalt ikke at udføre en [vurdering af indvirkningen på databeskyttelse](https://gdpr.eu/article-35-impact-assessment/). Dette er forbeholdt virksomheder, der udgør en større risiko for personoplysninger (f.eks. hvis de foretager en omfattende overvågning af et offentligt tilgængeligt område, f.eks. videoovervågning).
 

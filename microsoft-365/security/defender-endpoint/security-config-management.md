@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 9c195f5656db1b7bc971087665a83df32bace7c6
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 7e9e074e4aeaadf041a70baed1d741ea95a9f792
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188176"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622605"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-configuration-settings-on-devices-with-microsoft-endpoint-manager"></a>Administrer konfigurationsindstillinger for Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager
 
@@ -35,7 +35,7 @@ ms.locfileid: "65188176"
 
 
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 
 Sikkerhedsadministration for Microsoft Defender for Endpoint er en funktion for enheder, der ikke administreres af en Microsoft Endpoint Manager, enten Microsoft Intune eller Microsoft Endpoint Configuration Manager, hvis du vil modtage sikkerhedskonfigurationer til Microsoft Defender direkte fra Endpoint Manager.
@@ -43,7 +43,8 @@ Sikkerhedsadministration for Microsoft Defender for Endpoint er en funktion for 
 
 Du kan få flere oplysninger om Administration af sikkerhedskonfiguration, herunder forudsætninger, understøttede platforme og meget mere, under [Administrer Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager](/mem/intune/protect/mde-security-integration).
 
-
+Se denne video for at få mere at vide om, hvordan du bruger Microsoft Endpoint Manager til at administrere sikkerhedskonfiguration for Microsoft Defender for Endpoint.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qLVq]
 
 [!INCLUDE [Prerequisites](../../includes/security-config-mgt-prerequisites.md)]
 

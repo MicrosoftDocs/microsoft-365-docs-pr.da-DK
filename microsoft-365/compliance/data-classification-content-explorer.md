@@ -19,18 +19,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Med Indholdsoversigt kan du få vist elementer, der er forsynet med mærkater i det oprindelige miljø.
-ms.openlocfilehash: 0a3b036a60d3ec24533056b38ff1e68be9875aa0
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: fdc67df9819054eedbe84ce647d77177039cd4a8
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761367"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623281"
 ---
 # <a name="get-started-with-content-explorer"></a>Kom i gang med Indholdsviser
 
-Med indholdsoversigten til dataklassificering kan du oprindeligt få vist de elementer, der er opsummeret på oversigtssiden.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-![skjult skærmbillede i indholdsoversigt.](../media/data-classification-content-explorer-1.png)
+Med Indholdsoversigt kan du oprindeligt få vist de elementer, der er opsummeret på oversigtssiden.
 
 ## <a name="prerequisites"></a>Forudsætninger
 
@@ -51,7 +51,7 @@ Hvis du vil have adgang til fanen indholdsoversigt, skal en konto tildeles medle
 > Medlemskab af disse rollegrupper giver dig ikke mulighed for at få vist listen over elementer i Indholdsoversigt eller at få vist indholdet af elementerne i Indholdsoversigt.
 
 > [!IMPORTANT]
-> Det er kun globale administratorer, der kan administrere eller tildele tilladelser til andre brugere i Overholdelsescenter. Du kan finde flere oplysninger under [Giv brugere adgang til Security & Compliance Center](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+> Det er kun globale administratorer, der kan administrere eller tildele tilladelser til andre brugere på overholdelsesportalen. Du kan få flere oplysninger [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md).
 > 
 ### <a name="required-permissions-to-access-items-in-content-explorer"></a>Påkrævede tilladelser til at få adgang til elementer i Indholdsoversigt
 
@@ -60,7 +60,7 @@ Adgangen til Indholdsoversigt er meget begrænset, fordi du kan læse indholdet 
 > [!IMPORTANT]
 > Disse tilladelser tilsidesætter tilladelser, der er tildelt elementerne lokalt, hvilket gør det muligt at få vist indholdet. 
 
-Der er to roller, der giver adgang til indholdsoversigten, og den tildeles ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">Microsoft 365 Overholdelsescenter</a>:
+Der er to roller, der giver adgang til indholdsoversigten, og den tildeles ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">Microsoft Purview-compliance-portal</a>:
 
 - **Listefremviser til Indholdsoversigt**: Medlemskab i denne rollegruppe giver dig mulighed for at se hvert element og dets placering i listevisning. Rollen `data classification list viewer` er tildelt denne rollegruppe på forhånd.
 
@@ -76,14 +76,14 @@ En global administrator kan tildele den nødvendige listefremviser til Indholdso
 
 Der er roller og rollegrupper som prøveversion, som du kan teste for at finjustere dine adgangskontrolelementer.
 
-Her er en liste over Microsoft Information Protection (MIP) roller, der er i prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Her er en liste over relevante roller, der findes som prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
 - Information Protection administrator
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
 
-Her er en liste over MIP-rollegrupper, der findes som prøveversion. Du kan få mere at vide under [Rollegrupper i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
+Her er en liste over relevante rollegrupper, der findes som prøveversion. Du kan få mere at vide under [Rollegrupper i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
 
 - Information Protection
 - Information Protection administratorer
@@ -111,14 +111,14 @@ En [opbevaringsmærkat](retention.md) giver dig mulighed for at definere, hvor l
 
 ### <a name="how-to-use-content-explorer"></a>Sådan bruger du Indholdsoversigt
 
-1. Åbn **Microsoft 365 Overholdelsescenter**  >  **DataklassificeringIndholdsoversigt** > .
+1. Åbn **Microsoft Purview-compliance-portal**  >  **DataklassificeringIndholdoversigt** > .
 2. Hvis du kender navnet på etiketten eller typen af følsomme oplysninger, kan du skrive det i filterfeltet.
 3. Du kan også søge efter elementet ved at udvide mærkattypen og vælge etiketten på listen.
 4. Vælg en placering under **Alle placeringer,** og analysér mappestrukturen ned til elementet.
 5. Dobbeltklik for at åbne elementet oprindeligt i Indholdsoversigt.
 
 ### <a name="export"></a>eksportér
-**Eksportkontrolelementet** opretter en .csv fil, der indeholder en liste over det, der vises i ruden **Alle placeringer**.
+**Eksportkontrolelementet** opretter en .csv fil, der indeholder en liste over, hvad rudens fokus er.
 
 ![eksportkontrol af dataklassificering.](../media/data_classification_export_control.png)
 
@@ -126,9 +126,9 @@ En [opbevaringsmærkat](retention.md) giver dig mulighed for at definere, hvor l
 > [!NOTE]
 > Det kan tage op til *syv dage* , før optællinger opdateres i Indholdsoversigt.
 
-### <a name="search"></a>Søg
+### <a name="filter"></a>Filter
 
-Når du foretager detailudledning på en placering, f.eks. en Exchange eller en Teams mappe eller et SharePoint eller OneDrive websted, vises **søgeværktøjet**.
+Når du foretager detailudledning på en placering, f.eks. en Exchange eller en Teams mappe eller et SharePoint eller OneDrive websted, **vises filterværktøjet**.
 
 ![søgeværktøjet indholdsoversigt.](../media/data_classification_search_tool.png)
 
@@ -154,4 +154,4 @@ Du kan søge på:
 - [Få mere at vide om følsomhedsmærkater](sensitivity-labels.md)
 - [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md)
 - [Objekt af typen følsomme oplysninger definitions.md](sensitive-information-type-entity-definitions.md)
-- [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
+- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md)

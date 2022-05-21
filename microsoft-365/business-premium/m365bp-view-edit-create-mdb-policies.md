@@ -7,7 +7,7 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 05/10/2022
+ms.date: 05/20/2022
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 7cbb9c71e56242d15506c2c1e46f1120021928fa
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5a01c2f045ea797aa61f3028f2a0a4ef4e260fe6
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415964"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623186"
 ---
 # <a name="view-and-edit-device-protection-policies"></a>Få vist og rediger politikker for beskyttelse af enheder
 
@@ -30,7 +30,7 @@ I Microsoft 365 Business Premium konfigureres sikkerhedsindstillingerne for admi
 **I denne vejledning beskrives det, hvordan du**:
 
 - Få et overblik over dine standardpolitikker
-- Arbejd med enhedspolitikker i Defender Security Center, Administration og InTune.
+- Arbejd med enhedspolitikker i Defender Security Center, Administration og Intune.
 
 ## <a name="about-the-default-device-protection-policies"></a>Om standardpolitikker for enhedsbeskyttelse
 
@@ -40,7 +40,7 @@ Microsoft 365 Business Premium indeholder to primære typer politikker til besky
 
 - **Firewallpolitikker**, der bestemmer, hvilken netværkstrafik der må overføres til og fra organisationens enheder.
 
-Disse politikker er en del af Microsoft Defender til virksomheder, der er inkluderet i dit abonnement på Microsoft 365 Business Premium. Der gives oplysninger om, hvordan du arbejder med politikker i Microsoft Defender Security Center, samt hvordan du arbejder med politikker i Administration og InTune.
+Disse politikker er en del af Microsoft Defender til virksomheder, der er inkluderet i dit abonnement på Microsoft 365 Business Premium. Der gives oplysninger om, hvordan du arbejder med politikker i Microsoft Defender Security Center, og hvordan du arbejder med politikker i Administration og Intune.
 
 ## <a name="working-with-device-polices-in-the-microsoft-defender-security-center"></a>Arbejde med enhedspoliti i Microsoft Defender Security Center
 
@@ -157,13 +157,13 @@ Sådan får du vist og administrerer politikker:
   
    ![Siden Administrer enheder.](../media/devicesmanage.png)
 
-## <a name="working-with-device-policies-in-intune"></a>Arbejde med enhedspolitikker i InTune
+## <a name="working-with-device-policies-in-intune"></a>Arbejde med enhedspolitikker i Intune
 
-Brug følgende oplysninger til at oprette og administrere enhedspolitikker i InTune, der udføres via Slutpunktssikkerhed i Microsoft Endpoint Manager Administration.
+Brug følgende oplysninger til at oprette og administrere enhedspolitikker i Intune, der udføres via Slutpunktssikkerhed i Microsoft Endpoint Manager Administration.
 
 ### <a name="create-duplicate-and-edit-policies"></a>Opret, dupliker og rediger politikker
 
-Sådan opretter du en politik i InTune
+Sådan opretter du en politik i Intune
 
 1. Log på Microsoft Endpoint Manager Administration.
 
@@ -201,7 +201,7 @@ Sådan opretter du en politik i InTune
 
 1. På siden Gennemse + opret skal du vælge **Opret**, når du er færdig. Den nye profil vises på listen, når du vælger politiktypen for den profil, du har oprettet.
 
-Sådan duplikerer dupliker en politik i InTune:
+Sådan duplikerer du en politik i Intune:
 
 1. Log på Microsoft Endpoint Manager Administration.
 
@@ -235,7 +235,7 @@ Uanset politikmetoden kan administration af den samme indstilling på den samme 
 
 ## <a name="see-also"></a>Se også
 
-[Administrer slutpunktssikkerhed i Microsoft InTune](/mem/intune/protect/endpoint-security)
+[Administrer slutpunktssikkerhed i Microsoft Intune](/mem/Intune/protect/endpoint-security)
 
 [Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../admin/security-and-compliance/secure-your-business-data.md)
 

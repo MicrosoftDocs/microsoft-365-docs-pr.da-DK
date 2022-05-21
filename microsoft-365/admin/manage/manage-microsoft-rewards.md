@@ -16,29 +16,29 @@ ms.custom:
 search.appverid:
 - MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: Brugere, der har personlige Microsoft-konti, kan optjene Microsoft Rewards-point i forbindelse med deres arbejdssøgninger, hvis funktionen Link AAD Rewards er aktiveret.
-ms.openlocfilehash: f31571c81ee511b081344d4bf8d50560229193e6
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+description: Brugere, der har personlige Microsoft-konti, kan optjene Microsoft Rewards-point i forbindelse med deres arbejdssøgninger, hvis funktionen Link AAD med Belønninger er aktiveret.
+ms.openlocfilehash: 6376d3f416adaf6945b339f28708accf46775e2b
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63592778"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621383"
 ---
 # <a name="manage-microsoft-rewards"></a>Administrer Microsoft Rewards
 
-Brugere, der har personlige Microsoft-konti, kan optjene [Microsoft Rewards-point](https://www.microsoft.com/rewards) i forbindelse med deres arbejdssøgninger, hvis funktionen *Link Microsoft Azure Active Directory (Azure AD) med Rewards* er aktiveret.
+Brugere, der har personlige Microsoft-konti, kan optjene [Microsoft Rewards-point](https://www.microsoft.com/rewards) med deres arbejdssøgninger, hvis funktionen *Link Microsoft Azure Active Directory (Azure AD) med Belønninger* er aktiveret.
 
-Medmindre brugeren fravælger denne funktion, bliver deres personlige Microsoft-konto knyttet til deres Azure AD-konto på arbejdspladsen. Microsoft Rewards modtager og logger oplysninger om, at der er foretaget en søgning, men modtager ikke nogen oplysninger om indholdet af søgningen. Indholdet af forespørgsler fra din organisation deles ikke med Microsoft Rewards som en del af denne funktion.
+Medmindre brugeren fravælger denne funktion, vil vedkommendes personlige Microsoft-konto være knyttet til vedkommendes arbejdsplads Azure AD konto. Microsoft Rewards modtager og logfører oplysninger om, at der er foretaget en søgning, men som ikke modtager oplysninger om indholdet af søgningen. Indholdet af forespørgsler fra din organisation deles ikke med Microsoft Rewards som en del af denne funktion.
 
-For administratorer af uddannelsesorganisationer med mindreårige børn kræves der en forældres Microsoft-konto, for at barnet kan deltage i Microsoft Rewards. Forældrekontoen knyttes ikke til den studerendes organisationskonto. Du kan finde flere oplysninger om Microsoft-konti til børn under [Forældresamtykke og Microsoft-børnekonti](https://support.microsoft.com/account-billing/c6951746-8ee5-8461-0809-fbd755cd902e).
+For administratorer af uddannelsesinstitutioner med mindre børn kræves der en Microsoft-konto til forældre, for at barnet kan deltage i Microsoft Rewards. Forældrekontoen knyttes ikke til den studerendes organisationskonto. Du kan få flere oplysninger om Microsoft-konti til børn under [Forældresamtykke og Microsoft-børnekonti](https://support.microsoft.com/account-billing/c6951746-8ee5-8461-0809-fbd755cd902e).
 
-Denne funktion er ikke tilgængelig for brugere i det offentlige. Administratorer skal sikre, at deres organisations overholdelsespolitikker tillader brug af personlige Microsoft Rewards-konti med arbejdssøgninger.
+Denne funktion er ikke tilgængelig for brugere af offentlige myndigheder. Administratorer skal sikre, at deres organisations politikker for overholdelse af angivne standarder tillader brugen af personlige Microsoft Rewards-konti med arbejdssøgninger.
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Konfigurer Microsoft Søg](/microsoftsearch/setup-microsoft-search) (artikel)
 
-[De 12 vigtigste opgaver for sikkerhedsteams til at understøtte arbejdet hjemmefra](../../security/top-security-tasks-for-remote-work.md) (artikel)
+[Top 12-opgaver til sikkerhedsteams, der understøtter arbejde hjemmefra](../../security/top-security-tasks-for-remote-work.md) (artikel)
 
 [Nyheder i Microsoft 365](https://support.microsoft.com/office/what-s-new-in-microsoft-365-95c8d81d-08ba-42c1-914f-bca4603e1426) (artikel)
 

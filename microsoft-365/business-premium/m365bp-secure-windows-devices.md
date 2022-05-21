@@ -1,5 +1,5 @@
 ---
-title: Sikker Windows enheder
+title: Beskyt Windows-enheder
 f1.keywords:
 - CSH
 ms.author: deniseb
@@ -28,14 +28,14 @@ search.appverid:
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
 description: Få mere at vide om, hvordan du konfigurerer indstillingerne for standardenhedspolitikken, som alle Windows enheder modtager, når de logger på deres arbejds- eller skolekonto.
-ms.openlocfilehash: e912ab639e5457d3c89155da4d3621399502267f
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: a88aad90d9ca55c5a5abeb17345179c2defdbd4e
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319898"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621342"
 ---
-# <a name="secure-windows-devices"></a>Sikker Windows enheder
+# <a name="secure-windows-devices"></a>Beskyt Windows-enheder
 
 Målet her er at konfigurere indstillinger, der er en del af standardenhedspolitikken for Windows 10 eller 11. Alle brugere, der opretter forbindelse til en Windows enhed, herunder mobilenheder og pc'er ved at logge på med deres arbejdskonto, modtager automatisk disse indstillinger. Vi anbefaler, at du accepterer standardpolitikken under konfigurationen og tilføjer politikker senere, som er målrettet bestemte grupper af brugere.
   
@@ -45,11 +45,11 @@ Alle indstillinger er som standard **Slået til**. Følgende indstillinger er ti
 
 |Indstilling  <br/> |Beskrivelse  <br/> |
 |:-----|:-----|
-|Hjælp med at beskytte pc'er mod virus og andre trusler ved hjælp af Windows Defender Antivirus  <br/> |Kræver, at Windows Defender Antivirus er slået til for at beskytte pc'er mod farerne ved at have forbindelse til internettet.  <br/> |
+|Hjælp med at beskytte pc'er mod virus og andre trusler ved hjælp af Microsoft Defender Antivirus  <br/> |Kræver, at Microsoft Defender Antivirus er slået til for at beskytte pc'er mod farerne ved at have forbindelse til internettet.  <br/> |
 |Hjælp med at beskytte pc'er mod webbaserede trusler i Microsoft Edge  <br/> |Slår indstillinger i Edge til, der hjælper med at beskytte brugere mod skadelige websteder og downloads.  <br/> |
 |Hjælp med at beskytte filer og mapper på pc'er mod uautoriseret adgang med BitLocker  <br/> |BitLocker beskytter data ved at kryptere computerens harddiske og beskytte mod eksponering af data, hvis en computer mistes eller bliver stjålet. Du kan få flere oplysninger under [Ofte stillede spørgsmål om BitLocker](/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions).  <br/> |
 |Slå enhedsskærmen fra, når den er inaktiv i så lang tid  <br/> |Sikrer, at firmadata er beskyttet, hvis en bruger er inaktiv. En bruger arbejder muligvis på et offentligt sted, f.eks. en café, og træder væk eller bliver distraheret et øjeblik, så enheden er sårbar over for tilfældige blik. Med denne indstilling kan du styre, hvor længe brugeren må være inaktiv, før skærmen lukkes.  <br/> |
 
 ## <a name="next-objective"></a>Næste mål
 
-[Administrer Windows enheder](m365bp-manage-windows-devices.md)
+[Administrer Windows-enheder](m365bp-manage-windows-devices.md)

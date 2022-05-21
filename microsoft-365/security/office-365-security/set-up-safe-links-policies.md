@@ -19,12 +19,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette Pengeskab Links-politikker og globale indstillinger for Pengeskab links i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 867d055c44ba0d0ae0b7b763bc556a06f16e5cd8
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 1d60be56f8dad960ca3f15484276324421c00426
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847077"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623014"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365
 
@@ -47,7 +47,7 @@ Du kan også bruge procedurerne i denne artikel til at oprette Pengeskab linkspo
 >
 > Du kan konfigurere de globale indstillinger for beskyttelse af Pengeskab links **uden for** Pengeskab Links-politikker. Du kan finde instruktioner under [Konfigurer globale indstillinger for Pengeskab Links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
 >
-> Administratorer bør overveje de forskellige konfigurationsindstillinger for Pengeskab Links. En af de tilgængelige indstillinger er at inkludere brugeridentificerbare oplysninger i Pengeskab Links. Denne funktion gør det muligt for sikkerhedshandlinger (SecOps)-teams at undersøge potentielle bruger kompromitterer, foretager korrigerende handlinger og begrænser dyre brud.
+> Administratorer bør overveje de forskellige konfigurationsindstillinger for Pengeskab Links. En af de tilgængelige indstillinger er at inkludere brugeridentificerbare oplysninger i Pengeskab Links. Denne funktion gør det muligt for sikkerhedshandlinger (SecOps)-teams at undersøge potentielle bruger kompromitterer, foretage korrigerende handlinger og begrænse dyre brud.
 
 Du kan konfigurere politikker for Pengeskab links på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til berettigede Microsoft 365 organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser, men med Microsoft Defender for Office 365 abonnementer på tilføjelsesprogrammer).
 
@@ -78,7 +78,7 @@ I Exchange Online PowerShell eller enkeltstående EOP PowerShell kan du administ
 
   > [!NOTE]
   >
-  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   . – Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for politikker for Pengeskab links [under Pengeskab Politikindstillinger for links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
@@ -125,6 +125,10 @@ Når du opretter en brugerdefineret politik for Pengeskab links på Microsoft 36
        - **Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres**: Vælg denne indstilling for at vente på, at scanningen af URL-adresser i realtid fuldføres, før meddelelsen leveres.
      - **Anvend Pengeskab Links til mails, der er sendt i organisationen**: Vælg denne indstilling for at anvende politikken Pengeskab Links på meddelelser mellem interne afsendere og interne modtagere.
    - **Vælg handlingen for ukendte eller potentielt skadelige URL-adresser i Microsoft Teams**: Vælg **Til** for at aktivere beskyttelse af Pengeskab links for links i Teams. Bemærk, at det kan tage op til 24 timer, før denne indstilling træder i kraft.
+
+     > [!NOTE]
+     > Pengeskab Links-beskyttelse for Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
+
    - **Spor bruger clicks**: Lad denne indstilling være markeret for at aktivere sporing af brugerens klik på URL-adresser i mails.
    - **Lad brugerne klikke sig videre til den oprindelige URL-adresse**: Fjern markeringen i denne indstilling for at forhindre brugere i at klikke sig videre til den oprindelige URL-adresse på [advarselssider](safe-links.md#warning-pages-from-safe-links).
    - **Omskriv ikke følgende URL-adresser**: Giver adgang til de angivne URL-adresser, der ellers ville blive blokeret af Pengeskab Links.

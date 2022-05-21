@@ -22,12 +22,12 @@ ms.collection:
 - M365-security-compliance
 - Ent_O365
 description: Denne artikel kan hjælpe dig med at foretage fejlfinding af Office 365 problemer med ydeevnen og endda løse nogle af de mest almindelige problemer.
-ms.openlocfilehash: 7380d6beb89cdd128ccf86f47e1e3c236aabda77
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bb6033461d7b902ce0fad6e2c3b7b3e8f593951c
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100561"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623035"
 ---
 # <a name="performance-troubleshooting-plan-for-office-365"></a>Plan for fejlfinding af ydeevnen for Office 365
 
@@ -43,7 +43,7 @@ Denne handlingsplan indeholder to dele. en forberedelsesfase og en logføringsfa
 
 ### <a name="prepare-the-client-computer"></a>Forbered klientcomputeren
 
-- Find en klientcomputer, der kan genskabe problemet med ydeevnen. Denne computer bruges i forbindelse med fejlfinding.
+- Find en klientcomputer, der kan genskabe problemet med ydeevnen. Denne computer bruges under fejlfinding.
 - Skriv de trin ned, der medfører, at problemet med ydeevnen opstår, så du er klar, når det kommer til test.
 - Installér værktøjer til indsamling og optagelse af oplysninger:
   - Installér [Netmon 3.4](https://www.microsoft.com/download/details.aspx?id=4865) (eller brug et tilsvarende værktøj til netværkssporing).
@@ -57,7 +57,7 @@ Denne handlingsplan indeholder to dele. en forberedelsesfase og en logføringsfa
 - Start din Netmon-registrering (eller værktøjet til netværkssporing).
 - Ryd DNS-cachen på klientcomputeren fra kommandolinjen ved at skrive ipconfig /flushdns.
 - Start en ny browsersession, og slå HTTPWatch til.
-- Valgfrit: Hvis du tester Exchange Online, skal du køre værktøjet Effektivitetsanalyse Exchange Client fra Office 365 administrationskonsollen.
+- Valgfrit: Hvis du tester Exchange Online, skal du køre værktøjet Exchange Client Effektivitetsanalyse fra Office 365 administrationskonsollen.
 - Genskab de nøjagtige trin, der forårsager problemet med ydeevnen.
 - Stop din Netmon eller andre værktøjs sporing.
 - Kør en sporingsrute til dit Office 365-abonnement på kommandolinjen ved at skrive følgende kommando og derefter trykke på ENTER:
@@ -73,7 +73,7 @@ Hvis du ikke er bekendt med at køre de værktøjer, der er nævnt i denne artik
 
 ### <a name="flush-the-dns-cache-first"></a>Ryd FØRST DNS-cachen
 
-Hvorfor? Når du rydder DNS-cachen ud, starter du dine test med en ren tavle. Når du rydder cachen, nulstiller du indholdet af DNS-fortolkeren til de mest opdaterede poster. Husk, at en tømning ikke fjerner HOSTs-filposter. Hvis du bruger MANGE VÆRTS-filposter, skal du kopiere posterne ud til en fil i en anden mappe og derefter tømme HOST-filen.
+Hvorfor? Når du rydder DNS-cachen ud, starter du dine test med en ren tavle. Når du rydder cachen, nulstiller du indholdet af DNS-fortolkeren til de mest opdaterede poster. Husk, at en rydning ikke fjerner VÆRTS-filposter. Hvis du bruger MANGE VÆRTS-filposter, skal du kopiere posterne ud til en fil i en anden mappe og derefter tømme HOST-filen.
 
 #### <a name="flush-your-dns-resolver-cache"></a>Ryd din DNS-resolvercache
 
@@ -133,7 +133,7 @@ Dette skærmbillede er fra Professional-versionen af HTTPWatch. Du kan åbne spo
 
 ## <a name="problem-steps-recorder"></a>Optager til problemtrin
 
-Trinoptager eller PSR.exe giver dig mulighed for at registrere problemer, efterhånden som de opstår. Det er et meget nyttigt værktøj og meget enkelt at køre.
+Trinoptager eller PSR.exe giver dig mulighed for at registrere problemer, efterhånden som de opstår. Det er et meget nyttigt værktøj og nemt at køre.
 
 ### <a name="run-problem-steps-recorder-psrexe-to-record-your-work"></a>Kør Optager til problemtrin (PSR.exe) for at registrere dit arbejde
 
@@ -153,7 +153,7 @@ Dato og klokkeslæt registreres for dig. Dette linker din PSR til din Netmon-spo
 
 Det er ikke muligt at lære alt om fejlfinding af netværk og ydeevne, som nogen har brug for at vide via en artikel. At blive god til ydeevne kræver erfaring og viden om, hvordan dit netværk fungerer og som regel fungerer. Men det er muligt at runde en liste over de mest almindelige problemer op og vise, hvordan værktøjer kan gøre det nemmere for dig at fjerne de mest almindelige problemer.
 
-Hvis du vil have flere færdigheder til at læse netværkssporinger til dine Office 365 websteder, er der ingen bedre lærer end at oprette spor af sidebelastninger regelmæssigt og få erfaring med at læse dem. Når du f.eks. har en chance, skal du indlæse en Office 365 tjeneste og spore processen. Filtrer sporingen for DNS-trafik, eller søg i FrameData efter navnet på den tjeneste, du har gennemset. Scan sporingen for at få en idé om de trin, der opstår, når tjenesten indlæses. Dette vil hjælpe dig med at lære, hvordan normal sidebelastning skal se ud, og i tilfælde af fejlfinding, især omkring ydeevne, kan sammenligning af gode og dårlige spor lære dig meget.
+Hvis du vil hente færdigheder, der læser netværkssporinger for dine Office 365 websteder, er der ingen bedre lærer end at oprette spor af sidebelastninger regelmæssigt og få erfaring med at læse dem. Når du f.eks. har en chance, skal du indlæse en Office 365 tjeneste og spore processen. Filtrer sporingen for DNS-trafik, eller søg i FrameData efter navnet på den tjeneste, du har gennemset. Scan sporingen for at få en idé om de trin, der opstår, når tjenesten indlæses. Dette vil hjælpe dig med at lære, hvordan normal sidebelastning skal se ud, og i tilfælde af fejlfinding, især omkring ydeevne, kan sammenligning af gode og dårlige spor lære dig meget.
 
 Netmon bruger Microsoft Intellisense i feltet Vis filter. Intellisense eller intelligent kodefuldførelse er det trick, hvor du skriver i en periode, og alle tilgængelige indstillinger vises i en rulleliste. Hvis du f.eks. er bekymret for TCP-vinduesskalering, kan du finde vej til et filter (f.eks.  `.protocol.tcp.window < 100`) på denne måde.
 
@@ -167,7 +167,7 @@ Trafik mellem din klient og Office 365 rejser via TLS, hvilket betyder, at selve
 
 - Kend værdien af IPv4- eller IPv6-adressen på klientcomputeren. Du kan hente dette fra kommandoprompten ved at skrive **IPConfig** og derefter trykke på ENTER. Hvis du kender denne adresse, kan du hurtigt se, om trafikken i sporingen direkte involverer din klientcomputer. Hvis der er en kendt proxy, ping det og få sin IP-adresse samt.
 
-- Ryd din DNS-resolvercache, og luk alle browsere, hvis det er muligt, undtagen den, hvor du kører dine test. Hvis du f.eks. ikke kan gøre dette, hvis support bruger et browserbaseret værktøj til at se klientcomputerens skrivebord, skal du være forberedt på at filtrere din sporing.
+- Ryd din DNS-resolvercache, og luk alle browsere undtagen den, hvor du kører dine test, hvis det er muligt. Hvis du f.eks. ikke kan gøre dette, hvis support bruger et browserbaseret værktøj til at se klientcomputerens skrivebord, skal du være forberedt på at filtrere din sporing.
 
 - Find den Office 365 tjeneste, du bruger, i en optaget sporing. Hvis du aldrig eller sjældent har set din trafik før, er dette et nyttigt skridt i forhold til at adskille problemet med ydeevnen fra andre netværksstøj. Der er et par måder at gøre dette på. Direkte før din test kan du bruge _ping_ eller _PsPing_ mod URL-adressen til den specifikke tjeneste (`ping outlook.office365.com` eller `psping -4 microsoft-my.sharepoint.com:443`, f.eks. ). Du kan også nemt finde den ping eller PsPing i en Netmon-sporing (ved dens procesnavn). Det vil give dig et sted at begynde at lede.
 
@@ -184,19 +184,19 @@ Bliv fortrolig med din trafik, og få mere at vide om, hvordan du finder de oply
 
 Hvis du tager Office 365 Outlook Online som eksempel, starter trafikken noget i stil med dette:
 
-- DNS-standardforespørgsel og DNS-svar for outlook.office365.com med matchende QueryID'er. Det er vigtigt at bemærke tidsforskydningen for denne turn-around, samt hvor i verden Office 365 Global DNS sender anmodningen om navnefortsættelse. Ideelt set, så lokalt som muligt, snarere end halvvejs over hele verden.
+- DNS-standardforespørgsel og DNS-svar for outlook.office365.com med matchende QueryID'er. Det er vigtigt at bemærke tidsforskydningen for denne turn-around, og hvor i verden Office 365 Global DNS sender anmodningen om navnefortsættelse. Ideelt set, så lokalt som muligt, snarere end halvvejs over hele verden.
 
 - En HTTP GET-anmodning, hvis statusrapport er flyttet permanent (301)
 
 - RWS-trafik, herunder RWS-Forbind-anmodninger og Forbind svar. (Dette er Remote Winsock, der opretter en forbindelse for dig).
 
-- En TCP SYN- og TCP SYN/ACK-samtale. Mange af indstillingerne i denne samtale påvirker din ydeevne.
+- En TCP SYN- og TCP SYN/ACK-samtale. Mange indstillinger i denne samtale påvirker din ydeevne.
 
-- Derefter en række TLS:TLS-trafik, som er det sted, hvor TLS-håndtryk og TLS-certifikatsamtaler finder sted. Husk, at dataene er krypteret via SSL/TLS.
+- Derefter en række TLS:TLS-trafik, som er stedet, hvor TLS-håndtryk og TLS-certifikatsamtaler finder sted. Husk, at dataene er krypteret via SSL/TLS.
 
-Alle dele af trafikken er vigtige og forbundne, men små dele af sporingen indeholder oplysninger, der er særligt vigtige med hensyn til fejlfinding af ydeevnen, så vi vil fokusere på disse områder. Da vi har gjort nok Office 365 fejlfinding af ydeevnen hos Microsoft for at kompilere en Top Ti-liste over almindelige problemer, vil vi også fokusere på disse problemer, og hvordan du bruger de værktøjer, vi skal bruge til at rodfæste dem ud næste.
+Alle dele af trafikken er vigtige og forbundne, men små dele af sporingen indeholder oplysninger, der er vigtige for fejlfinding af ydeevnen, så vi vil fokusere på disse områder. Da vi har gjort nok Office 365 fejlfinding af ydeevnen hos Microsoft for at kompilere en Top Ti-liste over almindelige problemer, vil vi også fokusere på disse problemer, og hvordan du bruger de værktøjer, vi skal bruge til at rodfæste dem ud næste.
 
-Hvis du ikke har installeret dem alle klar, bruger matrixen nedenfor flere værktøjer. Hvor det er muligt. Der leveres links til installationspunkterne. Listen indeholder almindelige værktøjer til netværkssporing, f.eks [. Netmon](https://www.microsoft.com/download/details.aspx?id=4865) og [Wireshark](https://www.wireshark.org/), men brug et hvilket som helst sporingsværktøj, du er fortrolig med, og som du er vant til at filtrere netværkstrafik i. Når du tester, skal du huske:
+Hvis du ikke allerede har installeret dem, bruger matrixen nedenfor flere værktøjer, hvor det nogensinde er muligt. Der leveres links til installationspunkterne. Listen indeholder almindelige værktøjer til netværkssporing, f.eks. [Netmon](https://www.microsoft.com/download/details.aspx?id=4865) og [Wireshark](https://www.wireshark.org/), men brug et hvilket som helst sporingsværktøj, du er fortrolig med, og som du er vant til at filtrere netværkstrafik i. Når du tester, skal du huske:
 
 - *Luk dine browsere, og test med kun én browser kørende*  – dette reducerer den samlede trafik, du registrerer. Det giver en mindre travl spor.
 - *Ryd din DNS-resolvercache på klientcomputeren*  – Dette giver dig en ren tavle, når du begynder at tage din registrering, for at få en renere sporing.
@@ -230,7 +230,7 @@ Hvis du vil se den Windows skaleringsværdi, der bruges af din netværksforbinde
 
 Historisk set er de fleste perimeternetværk konfigureret til midlertidige forbindelser, hvilket betyder, at inaktive forbindelser generelt afbrydes. Inaktive TCP-sessioner kan afbrydes af proxyer og firewalls på mere end 100 til 300 sekunder. Dette er problematisk for Outlook Online, fordi det opretter og bruger langsigtede forbindelser, uanset om de er inaktive eller ej.
 
-Når forbindelser afbrydes af proxy- eller firewallenheder, informeres klienten ikke, og et forsøg på at bruge Outlook Online betyder, at en klientcomputer gentagne gange vil forsøge at genoplive forbindelsen, før der foretages en ny. Du kan muligvis se, at produktet hænger, bliver bedt om det, eller at ydeevnen er langsom ved sideindlæsning.
+Når forbindelser afbrydes af proxy- eller firewallenheder, informeres klienten ikke, og et forsøg på at bruge Outlook Online betyder, at en klientcomputer gentagne gange vil forsøge at genoplive forbindelsen, før den foretager en ny. Du kan muligvis se, at produktet hænger, bliver bedt om det, eller at ydeevnen er langsom ved sideindlæsning.
 
 #### <a name="tools"></a>Værktøjer
 
@@ -265,7 +265,7 @@ Har du brug for at måle hastigheden af din forbindelse eller internetudbyderens
 
 #### <a name="what-to-look-for"></a>Hvad skal du søge efter?
 
-Hvis du vil spore ventetid i en sporing, kan du drage fordel af at have registreret klientcomputerens IP-adresse og DNS-serverens IP-adresse i Office 365. Dette er med henblik på nemmere sporingsfiltrering. Hvis du opretter forbindelse via en proxy, skal du bruge din klientcomputers IP-adresse, proxy-/udgående IP-adresse og den Office 365 DNS-IP-adresse for at gøre arbejdet nemmere.
+Hvis du vil spore ventetid i en sporing, kan du drage fordel af at have registreret klientcomputerens IP-adresse og DNS-serverens IP-adresse i Office 365. Dette er for at lette sporingsfiltrering. Hvis du opretter forbindelse via en proxy, skal du bruge din klientcomputers IP-adresse, proxy-/udgående IP-adresse og den Office 365 DNS-IP-adresse for at gøre arbejdet nemmere.
 
 En pinganmodning, der sendes til outlook.office365.com, fortæller dig navnet på det datacenter, der modtager anmodningen, selvom ping  *muligvis*  ikke kan oprette forbindelse for at sende de på hinanden følgende ICMP-pakker med varemærket. Hvis du bruger PsPing (et gratis værktøj til download), og specifikke havnen (443) og måske til at bruge IPv4 (-4) vil du få en gennemsnitlig rundtur-tid for pakker sendt. Dette fungerer for andre URL-adresser i Office 365-tjenester, f.eks`psping -4 yourSite.sharepoint.com:443`. . Faktisk kan du angive et antal pings for at få et større eksempel for dit gennemsnit, prøv noget i stil med `psping -4 -n 20 yourSite-my.sharepoint.com:443`.
 
@@ -458,7 +458,7 @@ Find den forbindelse i sporingen, som du er interesseret i at se, enten ved at s
 
 ### <a name="dns-geolocation"></a>DNS Geolocation
 
-Hvor i verden Office 365 forsøger at løse dine DNS-opkald påvirker din forbindelseshastighed.
+Hvor i verden Office 365 forsøger at løse dit DNS-opkald, påvirker din forbindelseshastighed.
 
 Når det første DNS-opslag er fuldført i Outlook Online, bruges placeringen af den pågældende DNS til at oprette forbindelse til dit nærmeste datacenter. Du får forbindelse til en Outlook Online CAS-server, som bruger backbone-netværket til at oprette forbindelse til det datacenter (dC), hvor dine data er gemt. Det her er hurtigere.
 

@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få mere at vide om, hvordan du sikrer Windows 10 pc'er, når du har konfigureret Microsoft 365 Business Premium.
-ms.openlocfilehash: 4800a5906fcb10f7debb5b627ffe81a1dd910d49
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d0f2842c69127893e512822a8d91dfd37a4a0e48
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095240"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622918"
 ---
 # <a name="secure-windows-10-computers"></a>Beskyt Windows 10-computere
 
@@ -70,4 +70,4 @@ Når du har konfigureret enhedsbeskyttelse i Microsoft 365 Business, skal du fø
 
 5. Vælg **Anvend indstillinger**.
 
-    Disse indstillinger gælder for alle brugere i din organisation. Hvis du vil konfigurere forskellige politikker for forskellige sikkerhedsgrupper, skal du se [Angiv indstillinger for enhedsbeskyttelse for Windows 10 pc'er](../../business-premium/m365bp-protection-settings-for-windows-10-pcs.md).
+    Disse indstillinger gælder for alle brugere i din organisation. Hvis du vil konfigurere forskellige politikker for forskellige sikkerhedsgrupper, skal du se [Angiv indstillinger for enhedsbeskyttelse for Windows 10 pc'er](../../business-premium/m365bp-protection-settings-for-windows-10-devices.md).

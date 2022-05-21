@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 984df48edf4ba75569286618086d8be9ab684b60
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: 73107fd82a77be730d894b057d1b9b1795fb242b
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243046"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621072"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (prøveversion)
 
@@ -59,7 +59,7 @@ Hvis du vil hente lejer-id'et for et abonnement, [skal du](https://go.microsoft.
 
 ### <a name="prepare-the-target-destination-tenant-by-creating-the-migration-application-and-secret"></a>Forbered destinationslejer (destinationslejer) ved at oprette overførselsprogrammet og hemmeligheden
 
-1. Log på din Azure AD-portal (<https://portal.azure.com>) med dine legitimationsoplysninger som lejeradministrator for destinationen
+1. Log på din Azure AD-portal (<https://portal.azure.com>) med legitimationsoplysningerne for din destinationslejeradministrator
 
    ![Azure Logon](../media/tenant-to-tenant-mailbox-move/74f26681e12df3308c7823ee7d527587.png)
 
@@ -147,13 +147,10 @@ Hvis du vil hente lejer-id'et for et abonnement, [skal du](https://go.microsoft.
    ```powershell
 
    # Enable customization if tenant is dehydrated
-     $dehydrated=Get-OrganizationConfig | fl isdehydrated
-     if ($dehydrated -eq $true) {Enable-OrganizationCustomization}
-
+   $dehydrated=Get-OrganizationConfig | fl isdehydrated
+   if ($dehydrated -eq $true) {Enable-OrganizationCustomization}
    $AppId = "[guid copied from the migrations app]"
-
    $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $AppId, (ConvertTo-SecureString -String "[this is your secret password you saved in the previous steps]" -AsPlainText -Force)
-
    New-MigrationEndpoint -RemoteServer outlook.office.com -RemoteTenant "sourcetenant.onmicrosoft.com" -Credentials $Credential -ExchangeRemoteMove:$true -Name "[the name of your migration endpoint]" -ApplicationId $AppId
    ```
 
@@ -540,7 +537,7 @@ Overførsel på tværs af lejere overfører kun postkassedata og intet andet. De
 
 **Kan jeg have de samme mærkater i destinationslejer, som du havde i kildelejer, enten som det eneste sæt mærkater eller et ekstra sæt mærkater for de migrerede brugere, afhængigt af justeringen mellem organisationerne.**
 
-Da overflytninger på tværs af lejere ikke eksporterer mærkater, og det er ikke muligt at dele mærkater mellem lejere, kan du kun opnå dette ved at genskabe mærkaterne i destinationslejeren.
+Da overflytninger på tværs af lejere ikke eksporterer mærkater, og det er ikke muligt at dele mærkater mellem lejere, kan du kun opnå dette ved at oprette mærkaterne i destinationslejeren igen.
 
 **Støtter du flytning af Microsoft 365-grupper?**
 

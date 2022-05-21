@@ -12,12 +12,12 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Cisco Jabber DataParser-connector til at importere og arkivere Cisco Jabber-data i Microsoft 365.
-ms.openlocfilehash: 3e7bcd9a85293d1516da8070fa39e2545d4fbc22
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 3cc3fc0642b40bfd16f7e8b42fa3d68a98e7bca9
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319954"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622167"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-data"></a>Konfigurer en connector til arkivering af Cisco Jabber-data
 
@@ -35,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 1. Din organisation arbejder sammen med 17a-4 om at konfigurere Cisco Jabber DataParser.
 
-2. Cisco Jabber-elementer indsamles regelmæssigt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
+2. Cisco Jabber-elementer indsamles jævnligt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
 3. Cisco Jabber DataParser-connectoren, som du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
 

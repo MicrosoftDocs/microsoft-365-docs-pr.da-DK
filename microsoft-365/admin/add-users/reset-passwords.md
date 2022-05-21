@@ -30,12 +30,12 @@ search.appverid:
 - GEA150
 ms.assetid: 7a5d073b-7fae-4aa5-8f96-9ecd041aba9c
 description: Log på med din Microsoft 365 administratorkonto for at nulstille adgangskoder for brugere, når du har et abonnement på Microsoft 365 til virksomheder.
-ms.openlocfilehash: 0ce656355b83077809c7082a1bf0d34e8a5439cd
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 4c2c4bc1409a49b0f0bb26217fd349348331e95b
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436245"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65620949"
 ---
 # <a name="reset-passwords-in-microsoft-365-for-business"></a>Nulstil adgangskoder i Microsoft 365 til virksomheder
 
@@ -49,7 +49,7 @@ I denne artikel forklares det, hvordan du nulstiller adgangskoder til dig selv o
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Denne artikel er til personer, der angiver en politik for udløb af adgangskode for en virksomhed, skole eller nonprofitorganisation. Hvis du vil fuldføre disse trin, skal du logge på med din Microsoft 365 administratorkonto. [Hvad er en administratorkonto?] (Oversigt over Microsoft 365 Administration](.. /admin-overview/admin-center-overview.md).
+Denne artikel er til personer, der angiver en politik for udløb af adgangskode for en virksomhed, skole eller nonprofitorganisation. Hvis du vil fuldføre disse trin, skal du logge på med din Microsoft 365 administratorkonto. [Oversigt i Microsoft 365 Administration](../admin-overview/admin-center-overview.md).
 
 Du skal være [global administrator eller adgangskodeadministrator](about-admin-roles.md) for at kunne udføre disse trin.
 

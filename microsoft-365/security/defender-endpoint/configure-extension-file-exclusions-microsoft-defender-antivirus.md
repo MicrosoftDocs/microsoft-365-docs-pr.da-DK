@@ -14,18 +14,18 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 034a12d1f1354ac63778d142d1bc09848e2f9911
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 864d67aeaa84713b1b2126b017fadacd0e43dc7a
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419896"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622992"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurer og valider udeladelser baseret på filtypenavn og mappeplacering
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -38,7 +38,7 @@ Du kan definere udeladelser for Microsoft Defender Antivirus, der gælder for [p
 - [Udeladelser for filer, der åbnes af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
 
 > [!IMPORTANT]
-> Microsoft Defender Antivirus undtagelser gælder ikke for andre funktioner i Microsoft Defender for Endpoint, herunder [slutpunktsregistrering og -svar ( Slutpunktsregistrering og -svar)](/microsoft-365/security/defender-endpoint/overview-endpoint-detection-response), [ASR-regler (attack surface reduction)](/microsoft-365/security/defender-endpoint/attack-surface-reduction) og [kontrolleret mappeadgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig udløse Slutpunktsregistrering og -svar beskeder og andre registreringer.
+> Microsoft Defender Antivirus undtagelser gælder ikke for andre Microsoft Defender for Endpoint funktioner, f.eks[. regler for reduktion af angrebsoverflader og](/microsoft-365/security/defender-endpoint/attack-surface-reduction) [kontrolleret mappeadgang](/microsoft-365/security/defender-endpoint/controlled-folders). Filer, som du udelader ved hjælp af de metoder, der er beskrevet i denne artikel, kan stadig udløse Slutpunktsregistrering og -svar beskeder og andre registreringer.
 > Hvis du vil udelade filer bredt, skal du føje dem til Microsoft Defender for Endpoint [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators).
 
 ## <a name="before-you-begin"></a>Før du begynder
@@ -104,7 +104,7 @@ Se [Sådan opretter og installerer du antimalwarepolitikker: Indstillinger for u
 
 1. Åbn [administrationskonsollen Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) Gruppepolitik, højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg **Rediger**.
 
-2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
+2. I **Gruppepolitik Management Editor** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
 3. Udvid træet for at **Windows komponenter** \> **Windows Defender Antivirus** \> **Udeladelser**.
 
@@ -379,7 +379,7 @@ Hvis du ikke har internetadgang, kan du oprette din egen EICAR-testfil ved at sk
 Du kan også kopiere strengen til en tom tekstfil og forsøge at gemme den med filnavnet eller i den mappe, du forsøger at udelade.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

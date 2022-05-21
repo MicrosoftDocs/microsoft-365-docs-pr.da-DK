@@ -18,18 +18,18 @@ search.appverid:
 - BCS160
 ms.assetid: 073433ca-3511-4db9-b173-7a2edca57691
 description: 'Oversigt: Beskriver overvejelser i forbindelse med netværkskapacitet, WAN-acceleratorer og enheder til justering af belastning, der bruges til at oprette forbindelse til Office 365.'
-ms.openlocfilehash: 58c4225d9d381dabedfa86d81ced7f5922932058
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3b79e73f292ecf1db38a90364db3d2e475723158
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100319"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622816"
 ---
 # <a name="plan-for-network-devices-that-connect-to-office-365-services"></a>Planlæg for netværksenheder, der opretter forbindelse til Office 365 tjenester
 
 *Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
   
-Noget netværkshardware kan have begrænsninger på antallet af samtidige sessioner, der understøttes. For organisationer med mere end 2.000 brugere anbefaler vi, at de overvåger deres netværksenheder for at sikre, at de er i stand til at håndtere den ekstra Office 365 tjenestetrafik. SNMP-overvågningssoftware (Simple Network Management Protocol) kan hjælpe dig med at gøre dette.
+Noget netværkshardware kan have begrænsninger på antallet af samtidige sessioner, der understøttes. For organisationer, der har mere end 2.000 brugere, anbefaler vi, at de overvåger deres netværksenheder for at sikre, at de er i stand til at håndtere den ekstra Office 365 tjenestetrafik. SNMP-overvågningssoftware (Simple Network Management Protocol) kan hjælpe dig med at gøre dette.
 
 Denne artikel er en del af [Netværksplanlægning og justering af ydeevnen for Office 365](./network-planning-and-performance.md).
 

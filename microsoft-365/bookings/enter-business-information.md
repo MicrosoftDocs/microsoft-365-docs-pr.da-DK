@@ -8,13 +8,13 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
-description: Følg disse instruktioner for at oprette siden Om os, herunder firmanavn, adresse, telefonnummer, URL-adresse til websted, logo og åbningstider i Microsoft Bookings.
-ms.openlocfilehash: e15379a414182672bd7a0372ea5c55ffbc482b62
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Følg disse instruktioner for at oprette siden Om os med firmanavn, adresse, telefonnummer, URL-adresse til websted, logo og åbningstider i Microsoft Bookings.
+ms.openlocfilehash: 5b80de4d94010a7e13b58289d6f63da13384d57d
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469597"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622525"
 ---
 # <a name="enter-your-business-information-in-microsoft-bookings"></a>Angiv dine forretningsoplysninger i Microsoft Bookings
 
@@ -62,7 +62,7 @@ Du skal muligvis blokere en del af hver dag eller uge for at få medarbejdermød
 
 Du har f.eks. personalemøder hver torsdag fra kl. 14.00 til 02.30 og vil gerne blokere denne tid, så alle dine medarbejdere kan deltage. Sådan gør du:
 
-1. På siden Firmaoplysninger under Åbningstider skal du vælge et start- og sluttidspunkt for torsdage. I dette eksempel angiver vi kl. 8:00 til 13:00
+1. På siden Firmaoplysninger under Åbningstider skal du vælge et start- og sluttidspunkt for torsdage. I dette eksempel angiver vi 8:00 om dagen. til 13:00
 
 1. Vælg **+** at oprette en ny række for torsdag.
 

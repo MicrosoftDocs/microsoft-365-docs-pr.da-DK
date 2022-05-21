@@ -1,5 +1,5 @@
 ---
-title: Konfigurer onlinemøder
+title: Konfigurer onlinemøder i Microsoft Business Premium
 f1.keywords:
 - NOCSH
 ms.author: twerner
@@ -24,13 +24,13 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Konfigurer onlinemøder med Microsoft Teams.
-ms.openlocfilehash: 367d344aac8d85a68875f7f51685f59310277c27
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Konfigurer onlinemøder med Microsoft Teams i Microsoft Business Premium.
+ms.openlocfilehash: 01e5d2aa1b556653742a22c1628100044cb29ff2
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417726"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623543"
 ---
 # <a name="set-up-meetings"></a>Konfigurer møder
 

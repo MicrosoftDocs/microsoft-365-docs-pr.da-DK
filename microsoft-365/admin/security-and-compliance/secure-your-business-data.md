@@ -28,12 +28,12 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: Beskyt din virksomheds mail og dine data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: 18de5e6f0d859095f38972b0fae66c1312bf4099
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 994223ff7f8f3da9d4d8b75056327214dfc310b0
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093655"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622796"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>Bedste praksis for sikring af Microsoft 365 for virksomheder
 
@@ -54,7 +54,7 @@ Hvis du vil vide mere om en af funktionerne i serviceplanen, skal du klikke på 
 
 |Opgave|Microsoft 365 Business Standard|Microsoft 365 Business Premium|
 |---|---|---|
-[Beskyt mod mistede eller stjålne adgangskoder](#set-up-multifactor-authentication) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
+[Beskyt mod mistede eller stjålne adgangskoder](#set-up-multi-factor-authentication) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
 [Oplær dine brugere](#train-your-users) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) |
 [Brug dedikerede administratorkonti](#use-dedicated-admin-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) | 
 [Beskyt mod malware](#protect-against-malware) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(beskyttelse af mail) | ![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png) <br/>(øget beskyttelse af mail og enheder) |
@@ -72,7 +72,7 @@ Det er vigtigt, at du kontrollerer din [Microsoft 365 Secure Score](../../securi
 
 ![Skærmbillede af Microsoft Secure Score.](../../media/secure-score.png)
 
-## <a name="set-up-multifactor-authentication"></a>Konfigurer multifaktorgodkendelse
+## <a name="set-up-multi-factor-authentication"></a>Konfigurer multifaktorgodkendelse
 
 Beskyt mod mistede eller stjålne adgangskoder ved hjælp af multifaktorgodkendelse (MFA). Når multifaktorgodkendelse er konfigureret, kræver det, at brugerne bruger en kode på deres telefon til at logge på Microsoft 365. Dette ekstra skridt kan forhindre hackere i at overtage, hvis de kender din adgangskode. 
 

@@ -1,5 +1,5 @@
 ---
-title: Opret et SharePoint kommunikationswebsted
+title: Opret et SharePoint kommunikationswebsted i Teams til Microsoft 365 Business Premium
 f1.keywords:
 - NOCSH
 ms.author: samanro
@@ -23,15 +23,15 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få mere at vide om, hvorfor og hvordan du opretter et SharePoint kommunikationswebsted for din kampagne eller virksomhed med Microsoft 365, og beskyt teamet mod cyberangreb og angreb mod malware og andre trusler på grund af forkert fildeling.
-ms.openlocfilehash: 72794c9aac0f1409675af0e3fa40c8cd1881f73a
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Få mere at vide om, hvorfor og hvordan du opretter et SharePoint kommunikationswebsted for din kampagne eller virksomhed med Microsoft 365 Business Premium, og beskyt teamet mod cyberangreb og angreb mod malware og andre trusler på grund af forkert fildeling.
+ms.openlocfilehash: 4c8fa8a197a7fb6014833dc9701aa7f354c2e5a0
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319522"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623421"
 ---
-# <a name="create-a-communications-site-in-sharepoint"></a>Opret et kommunikationswebsted i SharePoint
+# <a name="create-a-communications-site"></a>Opret et kommunikationswebsted
 
 En god måde at kommunikere prioriteter, dele strategidokumenter og fremhæve kommende begivenheder på er ved at bruge et kommunikationswebsted i SharePoint, og det er det, denne mission handler om. Kommunikationswebsteder er til deling af ting bredt på tværs af hele virksomheden eller kampagne &mdash; , det er dit interne strategiwebsted og taktisk rum. 
 

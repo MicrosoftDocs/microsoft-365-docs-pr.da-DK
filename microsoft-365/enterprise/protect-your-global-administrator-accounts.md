@@ -22,12 +22,12 @@ f1.keywords:
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
 description: Denne artikel indeholder oplysninger om beskyttelse af privilegeret adgang til din Microsoft 365 lejer.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 34e4665067640ec625501b15c12c1c2e80d5ffb4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b9719908fcbe8aa453ac07788ee7771a39242d4e
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095592"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622561"
 ---
 # <a name="step-2-protect-your-microsoft-365-privileged-accounts"></a>Trin 2. Beskyt dine Microsoft 365 privilegerede konti
 
@@ -49,20 +49,20 @@ Microsoft leverer funktioner, der kan hjælpe med at beskytte din organisation, 
 
 ## <a name="1-create-dedicated-privileged-cloud-based-user-accounts-and-use-them-only-when-necessary"></a>1. Opret dedikerede, privilegerede, skybaserede brugerkonti, og brug dem kun, når det er nødvendigt
 
-I stedet for at bruge daglige brugerkonti, der er blevet tildelt administratorroller, skal du oprette dedikerede brugerkonti, der har administratorrollerne i Azure AD. 
+I stedet for at bruge daglige brugerkonti, der er blevet tildelt administratorroller, kan du oprette dedikerede brugerkonti, der har administratorrollerne i Azure AD. 
 
 Fra nu af logger du kun på med de dedikerede privilegerede konti for opgaver, der kræver administratorrettigheder. Alle andre Microsoft 365 administration skal udføres ved at tildele andre administrationsroller til brugerkonti.
   
 > [!NOTE]
 > Dette kræver yderligere trin for at logge af som din daglige brugerkonto og logge på med en dedikeret administratorkonto. Men det skal kun gøres lejlighedsvis i forbindelse med administratorhandlinger. Overvej at gendanne dit Microsoft 365 abonnement efter brud på en administratorkonto kræver mange flere trin.
 
-Du skal også oprette [akutadgangskonti](/azure/active-directory/roles/security-emergency-access) for at forhindre, at azure AD låses utilsigtet.
+Du skal også oprette [akutadgangskonti](/azure/active-directory/roles/security-emergency-access) for at forhindre, at du ved et uheld låses ude af Azure AD.
 
-Du kan beskytte dine privilegerede konti yderligere med Azure AD Privileged Identity Management (PIM) til tildeling efter behov af administratorroller efter behov. 
+Du kan beskytte dine privilegerede konti yderligere med Azure AD Privileged Identity Management (PIM) til tildeling af administratorroller efter behov. 
  
 ## <a name="2-configure-multi-factor-authentication-for-your-dedicated-microsoft-365-privileged-accounts"></a>2. Konfigurer multifaktorgodkendelse for dine dedikerede Microsoft 365 privilegerede konti
 
-Multifaktorgodkendelse kræver yderligere oplysninger ud over kontonavnet og adgangskoden. Microsoft 365 understøtter disse yderligere kontrolmetoder:
+Multifaktorgodkendelse kræver yderligere oplysninger ud over kontonavnet og adgangskoden. Microsoft 365 understøtter disse ekstra kontrolmetoder:
   
 - Appen Microsoft Authenticator
 - Et telefonopkald
@@ -78,9 +78,9 @@ Multifaktorgodkendelse kræver yderligere oplysninger ud over kontonavnet og adg
 
 Hvis du er en lille virksomhed, der kun bruger brugerkonti, der kun er gemt i cloudmiljøet (identitetsmodellen kun i cloudmiljøet), skal du [konfigurere MFA](/office365/admin/security-and-compliance/set-up-multi-factor-authentication) til at konfigurere MFA ved hjælp af et telefonopkald eller en bekræftelseskode for en sms, der er sendt til en smartphone for hver dedikeret privilegeret konto.
     
-Hvis du er en større organisation, der bruger en Microsoft 365 hybrididentitetsmodel, har du flere kontrolmuligheder. Hvis du allerede har sikkerhedsinfrastrukturen til en stærkere sekundær godkendelsesmetode, skal du [konfigurere MFA](../admin/security-and-compliance/set-up-multi-factor-authentication.md) og konfigurere hver dedikeret privilegeret konto for den relevante kontrolmetode.
+Hvis du er en større organisation, der bruger en Microsoft 365 hybrid identitetsmodel, har du flere kontrolmuligheder. Hvis du allerede har sikkerhedsinfrastrukturen til en stærkere sekundær godkendelsesmetode, skal du [konfigurere MFA](../admin/security-and-compliance/set-up-multi-factor-authentication.md) og konfigurere hver dedikeret privilegeret konto for den relevante kontrolmetode.
   
-Hvis sikkerhedsinfrastrukturen for den ønskede stærkere kontrolmetode ikke er på plads og fungerer for Microsoft 365 MFA, anbefaler vi på det kraftigste, at du konfigurerer dedikerede privilegerede konti med MFA ved hjælp af Microsoft Authenticator-appen, et telefonopkald eller en bekræftelseskode til en sms, der sendes til en smart telefon for dine privilegerede konti som en midlertidig sikkerhedsforanstaltning. Lad ikke dine dedikerede privilegerede konti være uden den ekstra beskyttelse, der leveres af MFA.
+Hvis sikkerhedsinfrastrukturen for den ønskede stærkere bekræftelsesmetode ikke er på plads og fungerer for Microsoft 365 MFA, anbefaler vi på det kraftigste, at du konfigurerer dedikerede privilegerede konti med MFA ved hjælp af Microsoft Authenticator-appen, et telefonopkald eller en bekræftelseskode for tekstmeddelelser, der sendes til en smart telefon for dine privilegerede konti som en midlertidig sikkerhedsforanstaltning. Behold ikke dine dedikerede privilegerede konti uden den ekstra beskyttelse, der leveres af MFA.
   
 Du kan få flere oplysninger under [MFA for Microsoft 365](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md).
   
@@ -101,11 +101,11 @@ Hvis du vil sikre, at udførelsen af yderst privilegerede opgaver er så sikker 
   
 Du kan finde oplysninger om, hvordan du konfigurerer en PAW, under [https://aka.ms/cyberpaw](/security/compass/privileged-access-devices).
 
-Hvis du vil aktivere Azure PIM for dine Azure AD-lejer- og administratorkonti, skal du se [trinnene til konfiguration af PIM](/azure/active-directory/active-directory-privileged-identity-management-configure).
+Hvis du vil aktivere Azure PIM for dine Azure AD lejer- og administratorkonti, skal du se [trinnene til konfiguration af PIM](/azure/active-directory/active-directory-privileged-identity-management-configure).
 
 Hvis du vil udvikle en omfattende køreplan for at sikre privilegeret adgang mod cyberangreb, skal du se [Sikring af privilegeret adgang til hybrid- og cloudinstallationer i Azure AD](/azure/active-directory/admin-roles-best-practices).
 
-### <a name="azure-ad-privileged-identity-management"></a>Azure AD-Privileged Identity Management
+### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
 
 I stedet for at få tildelt en administratorrolle permanent til dine privilegerede konti kan du bruge Azure AD PIM til at aktivere tildeling efter behov af administratorrollen efter behov.
   
@@ -117,7 +117,7 @@ PIM fås med Azure Active Directory Premium P2, som følger med Microsoft 365 E5
   
 Du kan finde flere oplysninger under:
 
-- [Azure AD-Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure).
+- [Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure).
 - [Sikring af privilegeret adgang til hybrid- og cloudinstallationer i Azure AD](/azure/active-directory/roles/security-planning)
   
 
@@ -125,7 +125,7 @@ Du kan finde flere oplysninger under:
 
 Privilegeret adgangsstyring aktiveres ved at konfigurere politikker, der angiver just-in-time-adgang for opgavebaserede aktiviteter i din lejer. Det kan hjælpe med at beskytte din organisation mod brud, der kan bruge eksisterende privilegerede administratorkonti med stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan f.eks. konfigurere en politik for privilegeret adgangsstyring, der kræver eksplicit godkendelse for at få adgang til og ændre indstillingerne for organisationspostkasser i din lejer.
 
-I dette trin skal du aktivere privilegeret adgangsstyring i din lejer og konfigurere privilegerede adgangspolitikker, der giver yderligere sikkerhed for opgavebaseret adgang til data og konfigurationsindstillinger for din organisation. Der er tre grundlæggende trin til at komme i gang med privilegeret adgang i din organisation:
+I dette trin skal du aktivere privilegeret adgangsstyring i din lejer og konfigurere privilegerede adgangspolitikker, der giver ekstra sikkerhed for opgavebaseret adgang til data og konfigurationsindstillinger for din organisation. Der er tre grundlæggende trin til at komme i gang med privilegeret adgang i din organisation:
 
 - Oprettelse af en godkenders gruppe
 - Aktivering af privilegeret adgang

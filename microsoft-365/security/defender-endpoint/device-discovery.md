@@ -20,12 +20,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 53a23751fd53b05b51bf1125dcca98c23f4ba73c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 68503556a1d2f3330e47fe601a303363a3f28896
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418242"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623241"
 ---
 # <a name="device-discovery-overview"></a>Oversigt over enhedssøgning
 
@@ -48,9 +48,8 @@ Ukendte og ikke-administrerede enheder medfører betydelige risici for dit netv�
 - Onboarde ikke-administrerede slutpunkter til tjenesten, hvilket øger sikkerhedens synlighed på dem.
 - Reducer angrebsoverfladen ved at identificere og vurdere sikkerhedsrisici og registrere konfigurationshuller.
 
-Se denne video for at få et hurtigt overblik over, hvordan enhedsregistrering:
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWORdQ]
+Se denne video for at få et hurtigt overblik over, hvordan du vurderer og onboarder ikke-administrerede enheder, som Microsoft Defender for Endpoint opdaget.
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4RwQz]
 
 I forbindelse med denne funktion findes der en sikkerhedsanbefaling til onboarding af enheder til Microsoft Defender for Endpoint som en del af den eksisterende Håndtering af trusler og sikkerhedsrisici oplevelse.
 
@@ -115,13 +114,13 @@ Søg efter "SSH"-relaterede sikkerhedsanbefalinger for at finde SSH-sikkerhedsri
 
 ## <a name="use-advanced-hunting-on-discovered-devices"></a>Brug avanceret jagt på registrerede enheder
 
-Du kan bruge avancerede jagtforespørgsler til at få indsigt på registrerede enheder. Find oplysninger om registrerede enheder i tabellen DeviceInfo eller netværksrelaterede oplysninger om disse enheder i tabellen DeviceNetworkInfo.
+Du kan bruge avancerede jagtforespørgsler til at få indsigt på registrerede enheder. Du kan finde oplysninger om registrerede enheder i tabellen DeviceInfo eller netværksrelaterede oplysninger om disse enheder i tabellen DeviceNetworkInfo.
 
 :::image type="content" source="images/f48ba1779eddee9872f167453c24e5c9.png" alt-text="Siden Avanceret jagt, hvor forespørgsler kan bruges" lightbox="images/f48ba1779eddee9872f167453c24e5c9.png":::
 
 ### <a name="query-discovered-devices-details"></a>Oplysninger om fundne enheder for forespørgsler
 
-Kør denne forespørgsel i tabellen DeviceInfo for at returnere alle registrerede enheder sammen med flest oplysninger om hver enhed:
+Kør denne forespørgsel i tabellen DeviceInfo for at returnere alle registrerede enheder sammen med de nyeste oplysninger for hver enhed:
 
 ```query
 DeviceInfo

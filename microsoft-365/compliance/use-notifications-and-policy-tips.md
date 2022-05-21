@@ -22,20 +22,22 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab) for at give en bruger besked om, at vedkommende arbejder med indhold, der er i konflikt med en DLP-politik.
-ms.openlocfilehash: cab4332324ec8d83b201823c98b952995e12962d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: ce6665227b62ea5937229696fa65b69e7cfb894a
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760487"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623227"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>Send mailmeddelelser, og vis politiktip til DLP-politikker
 
-Du kan bruge en DLP-politik (forebyggelse af datatab) til at identificere, overvåge og beskytte følsomme oplysninger på tværs af Office 365. Du vil gerne have, at personer i din organisation, der arbejder med disse følsomme oplysninger, forbliver kompatible med dine DLP-politikker, men du vil ikke forhindre dem unødvendigt i at få deres arbejde fra hånden. Det er her, mailmeddelelser og politiktips kan hjælpe.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Du kan bruge en DLP-politik (forebyggelse af datatab) Microsoft Purview til at identificere, overvåge og beskytte følsomme oplysninger på tværs af Office 365. Du vil gerne have, at personer i din organisation, der arbejder med disse følsomme oplysninger, forbliver kompatible med dine DLP-politikker, men du vil ikke forhindre dem unødvendigt i at få deres arbejde fra hånden. Det er her, mailmeddelelser og politiktips kan hjælpe.
 
 ![Meddelelseslinjen viser politiktip i Excel 2016](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
-Når du opretter en DLP-politik i Overholdelsescenter, kan du konfigurere brugermeddelelser til:
+Når du opretter en DLP-politik, kan du konfigurere brugermeddelelserne til:
 
 - Send en mail til de personer, du vælger, som beskriver problemet.
 
@@ -53,13 +55,13 @@ Når du opretter en DLP-politik, kan du aktivere **brugermeddelelser**. Når bru
 
 1. Gå til [https://(https://compliance.microsoft.com/permissions](https://(https://compliance.microsoft.com/permissions).
 
-2. Log på med din arbejds- eller skolekonto. Du er nu i Security &amp; Compliance Center.
+2. Log på med din arbejds- eller skolekonto.
 
-3. I Security &amp; Compliance Center \> forlod navigationen \> **Politik til** \> **forebyggelse af** \> datatab **+ Opret en politik**.
+3. I den Microsoft Purview-compliance-portal \> venstre navigationspolitik \> **Politik til** \> **forebyggelse af** \> datatab **+ Opret en politik**.
 
     ![Opret en politikknap.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
 
-4. Vælg den DLP-politikskabelon, der beskytter de typer følsomme oplysninger, du skal bruge \> **Næste**.
+4. Vælg den DLP-politikskabelon, der beskytter de typer følsomme oplysninger, du vil beskytte \> **Næste**.
 
     Hvis du vil starte med en tom skabelon, skal du vælge **Brugerdefineret** \> **politik** \> **Næste**.
 
@@ -135,7 +137,7 @@ For hver regel i en DLP-politik kan du konfigurere politiktip til:
 
 - Tillad, at personen tilsidesætter DLP-politikken. Du kan eventuelt:
 
-  - Kræv, at personen angiver en forretningsberettigelse for tilsidesættelse af politikken. Disse oplysninger logføres, og du kan få dem vist i DLP-rapporterne i sektionen **Rapporter** i Security &amp; Compliance Center.
+  - Kræv, at personen angiver en forretningsberettigelse for tilsidesættelse af politikken. Disse oplysninger logføres, og du kan se dem i DLP-rapporterne i sektionen **Rapporter** på portalen.
 
   - Tillad, at personen rapporterer en falsk positiv værdi, og tilsidesæt DLP-politikken. Disse oplysninger logføres også til rapportering, så du kan bruge falske positiver til at finjustere dine regler.
 
@@ -229,7 +231,7 @@ Hvis politiktips er konfigureret til at tillade tilsidesættelse, kan du vælge 
 
 ![Dialogboksen Med politiktip, hvor du kan tilsidesætte politiktip.](../media/f97e836c-04bd-44b4-aec6-ed9526ea31f8.png)
 
-Bemærk, at når du føjer følsomme oplysninger til en mail, kan der være ventetid mellem det tidspunkt, hvor de følsomme oplysninger tilføjes, og hvornår politiktip vises. Når mails krypteres med Office OME (Message Encryption), og den politik, der bruges til at registrere dem, bruger politiktip til registrering af krypteringsbetingelse, vises ikke.
+Bemærk, at når du føjer følsomme oplysninger til en mail, kan der være ventetid mellem det tidspunkt, hvor de følsomme oplysninger tilføjes, og hvornår politiktip vises. Når mails krypteres med Microsoft Purview-meddelelseskryptering, og den politik, der bruges til at registrere dem, bruger politiktip til registrering af krypteringstilstand, vises ikke.
 
 ### <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions"></a>Outlook 2013 og nyere understøtter kun visning af politiktips for nogle betingelser
 
@@ -240,13 +242,13 @@ I øjeblikket understøtter Outlook 2013 og nyere kun politiktips for disse beti
 
 Bemærk, at undtagelser betragtes som betingelser, og alle disse betingelser fungerer i Outlook, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Men visning af politiktip til brugere understøttes endnu ikke. Outlook understøtter heller ikke visning af politiktip til en DLP-politik, der anvendes på en dynamisk distributionsgruppe.
 
-### <a name="policy-tips-in-the-exchange-admin-center-vs-the-security-amp-compliance-center"></a>Tip til politikker i Exchange Administration i forhold til Security &amp; Compliance Center
+### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Tip til politikker i Exchange Administration i forhold til portalen Microsoft Purview overholdelse
 
-Politiktips kan enten fungere med DLP-politikker og regler for mailflow, der er oprettet i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, eller med DLP-politikker, der er oprettet i Security &amp; Compliance Center, men ikke begge dele. Det skyldes, at disse politikker er gemt forskellige steder, men politiktip kan kun hentes fra en enkelt placering.
+Politiktips kan enten fungere med DLP-politikker og regler for mailflow, der er oprettet i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, eller med DLP-politikker, der er oprettet i overholdelsesportalen, men ikke begge dele. Det skyldes, at disse politikker er gemt forskellige steder, men politiktip kan kun hentes fra en enkelt placering.
 
-Hvis du har konfigureret politiktips i Exchange Administration, vises de politiktip, du konfigurerer i Security &amp; Compliance Center, ikke for brugere i Outlook på internettet og Outlook 2013 og nyere, før du deaktiverer tipene i Exchange Administration. Dette sikrer, at dine aktuelle Exchange regler for mailflow (også kaldet transportregler) fortsat fungerer, indtil du vælger at skifte til Security &amp; Compliance Center.
+Hvis du har konfigureret politiktips i Exchange Administration, vises de politiktips, du konfigurerer på overholdelsesportalen, ikke for brugere i Outlook på internettet og Outlook 2013 og nyere, før du deaktiverer tipene i Exchange Administration. Dette sikrer, at dine aktuelle regler for Exchange mailflow (også kaldet transportregler) fortsat fungerer, indtil du vælger at skifte til overholdelsesportalen.
 
-Bemærk, at selvom politiktips kun kan hente fra en enkelt placering, sendes der altid mailmeddelelser, selvom du bruger DLP-politikker i både Security &amp; Compliance Center og Exchange Administration.
+Bemærk, at selvom politiktips kun kan hentes fra en enkelt placering, sendes der altid mailmeddelelser, selvom du bruger DLP-politikker i både overholdelsesportalen og Exchange Administration.
 
 ### <a name="default-text-for-policy-tips-in-email"></a>Standardtekst for politiktip i mail
 

@@ -28,12 +28,12 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Få mere at vide om Pengeskab Links-beskyttelse i Defender for Office 365 til at beskytte en organisation mod phishing og andre angreb, der bruger skadelige URL-adresser. Find Teams Pengeskab Links, og se grafik af meddelelser om Pengeskab links.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 0aef211b91ef406926720f8c50e4af457d07eaab
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 46ea33c872782845a8d9697a9abbddcef22e94fb
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535102"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623472"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Pengeskab Links i Microsoft Defender for Office 365
 
@@ -62,6 +62,9 @@ Pengeskab Links-beskyttelse er tilgængelig på følgende placeringer:
 - **Microsoft Teams**: Pengeskab linksbeskyttelse for links i Teams samtaler, gruppechats eller fra kanaler styres også af Pengeskab Links-politikker.
 
   Du kan få flere oplysninger om Pengeskab Links-beskyttelse i Teams i afsnittet [Pengeskab links til Microsoft Teams](#safe-links-settings-for-microsoft-teams) senere i denne artikel.
+
+  > [!NOTE]
+  > Pengeskab Links-beskyttelse for Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
 
 - **Office 365 apps**: Pengeskab Links-beskyttelse for Office 365 apps er tilgængelig i understøttede skrivebords-, mobil- og webapps. Du **kan konfigurere** Pengeskab Links-beskyttelse for Office 365 apps i den globale indstilling, der er **uden for** Pengeskab Links-politikker. Du kan finde en vejledning under [Konfigurer globale indstillinger for Pengeskab Links-indstillinger i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
 
@@ -163,6 +166,8 @@ Du aktiverer eller deaktiverer Pengeskab Links-beskyttelse for Microsoft Teams i
 
 > [!NOTE]
 > Når du slår Pengeskab Links-beskyttelse til eller fra for Teams, kan det tage op til 24 timer, før ændringen træder i kraft.
+>
+> Pengeskab Links-beskyttelse for Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
 
 Følgende indstillinger i Pengeskab linkspolitikker, der gælder for links i mails, gælder også for links i Teams:
 

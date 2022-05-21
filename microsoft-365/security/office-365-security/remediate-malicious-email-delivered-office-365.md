@@ -14,14 +14,14 @@ search.appverid: MET150
 description: Trusselsafhjælpning
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 98b425c39cd12aea55714e9ade192e2e770b26cd
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: d584ce10f4e119ec4fe8aa2991c6cac0edd5377c
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714835"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621896"
 ---
-# <a name="remediate-malicious-email-delivered-in-office-365"></a>Afhjælp skadelige mails, der er leveret i Office 365
+# <a name="remediate-malicious-email-delivered-in-office-365"></a>Afhjælp skadelig mail leveret i Office 365
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
@@ -55,7 +55,7 @@ Når mails er valgt via Stifinder, kan du starte afhjælpningen ved at udføre d
 
 - Direkte godkendelse: Når handlinger som *f.eks. flytning til indbakke*, *flytning til uønsket* post, *flytning til slettede elementer*, *blød sletning* eller *hård sletning* vælges af sikkerhedsafdelingen, der har de nødvendige tilladelser, og de næste trin i afhjælpningen følges, begynder afhjælpningsprocessen at udføre den valgte handling.
 > [!NOTE]
->Da afhjælpningen bliver sparket i gang, genererer den en advarsel og en undersøgelse parallelt. Der vises en besked i beskedkøen med navnet "Administrativ handling sendt af en administrator", hvilket tyder på, at sikkerhedsafdelingen har udført afhjælpning af en enhed. Der vises oplysninger som f.eks. navnet på den person, der udførte handlingen, understøttende undersøgelseslink, tid osv. Det fungerer rigtig godt at vide, hver gang en hård handling som afhjælpning udføres på enheder. Alle disse handlinger kan udføres under fanen **Handlinger & Indsendelser** \> **HandlingscenterHistorie**  ->  (offentlig prøveversion).
+> Da afhjælpningen bliver sparket i gang, genererer den en advarsel og en undersøgelse parallelt. Der vises en besked i beskedkøen med navnet "Administrativ handling sendt af en administrator", hvilket tyder på, at sikkerhedsafdelingen har udført afhjælpning af en enhed. Der vises oplysninger som f.eks. navnet på den person, der udførte handlingen, understøttende undersøgelseslink, tid osv. Det fungerer rigtig godt at vide, hver gang en hård handling som afhjælpning udføres på enheder. Alle disse handlinger kan spores under fanen **Handlinger & Indsendelser** \> **Action** **CenterHistory**  ->  (offentlig prøveversion).
 
 - Totrinsgodkendelse: En handling af typen "Føj til afhjælpning" kan udføres af administratorer, der ikke har de nødvendige tilladelser, eller som skal vente med at udføre handlingen. I dette tilfælde føjes de målrettede mails til en afhjælpningsobjektbeholder. Der kræves godkendelse, før afhjælpningen udføres.
 

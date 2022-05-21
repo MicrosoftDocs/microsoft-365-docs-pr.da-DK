@@ -13,12 +13,12 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Integrer Microsoft Teams møder med lærred
-ms.openlocfilehash: a81b8c7da014ba4ded9e4a2e3cfd6b38509ae2db
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: cbb24972dba7fafe60cb460e514a0fede64a08fb
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599607"
+ms.locfileid: "65621467"
 ---
 # <a name="use-microsoft-teams-meetings-with-canvas"></a>Brug Microsoft Teams-møder med lærred
 
@@ -95,6 +95,6 @@ Som lærredsadministrator skal du tilføje LTI-appen Microsoft Teams møder i di
 
 ## <a name="enable-for-canvas-courses"></a>Aktivér for lærredskurser
 
-Hvis du vil bruge LTI i et kursus, skal en underviser i canvaskurset aktivere synkronisering af integrationer. Hvert kursus skal være aktiveret af en instruktør, for at der kan oprettes en tilsvarende Teams. Der er ingen global mekanisme til Teams oprettelse. Dette er designet af forsigtighed for at forhindre, at der oprettes uønskede Teams.
+Hvis du vil bruge LTI i et kursus, skal en underviser i canvaskurset aktivere synkronisering af integrationer. Hvert kursus skal aktiveres af en instruktør, for at der kan oprettes en tilsvarende Teams. Der er ingen global mekanisme til oprettelse af Teams. Dette er designet af forsigtighed for at forhindre, at der oprettes uønskede Teams.
 
 Se dokumentationen til [undervisere](https://support.microsoft.com/topic/use-microsoft-teams-classes-in-your-lms-preview-ac6a1e34-32f7-45e6-b83e-094185a1e78a#ID0EBD=Instructure_Canvas) for at få oplysninger om aktivering af LTI for hvert kursus og fuldførelse af integrationskonfigurationen.

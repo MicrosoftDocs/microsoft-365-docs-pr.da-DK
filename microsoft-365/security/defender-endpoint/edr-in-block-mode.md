@@ -18,12 +18,12 @@ ms.custom:
 ms.date: 04/04/2022
 ms.collection: m365-security-compliance
 ms.technology: mde
-ms.openlocfilehash: 5a9441a41db2dfbe53bfb280152c038e9dbc383e
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: c8b3016517393b473bcae664a6044098e04ebf6d
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789838"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65623593"
 ---
 # <a name="endpoint-detection-and-response-edr-in-block-mode"></a>Registrering af slutpunkt og svar (Slutpunktsregistrering og -svar) i bloktilstand
 
@@ -35,7 +35,7 @@ ms.locfileid: "64789838"
 **Platforme**
 - Windows
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="what-is-edr-in-block-mode"></a>Hvad er Slutpunktsregistrering og -svar i blokeringstilstand?
 
@@ -56,6 +56,9 @@ Slutpunktsregistrering og -svar i bloktilstand er integreret med [trussel & hån
 
 > [!TIP]
 > Hvis du vil have den bedste beskyttelse, skal du sørge for at **[udrulle Microsoft Defender for Endpoint grundlinjer](configure-machines-security-baseline.md)**.
+
+Se denne video for at få mere at vide om, hvorfor og hvordan du aktiverer slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar) i bloktilstand, aktiverer adfærdsblokering og indeslutning i alle faser fra før sikkerhedsbrud til efter sikkerhedsbrud. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4HjW2]
 
 ## <a name="what-happens-when-something-is-detected"></a>Hvad sker der, når der registreres noget?
 
@@ -100,8 +103,8 @@ I følgende tabel vises kravene til Slutpunktsregistrering og -svar i bloktilsta
 |Microsoft Defender for Endpoint|Enheder skal være onboardet til Defender for Endpoint. Se følgende artikler: <br/>- [Minimumskrav til Microsoft Defender for Endpoint](minimum-requirements.md)<br/>- [Onboarde enheder, og konfigurer Microsoft Defender for Endpoint funktioner](onboard-configure.md)<br/>- [Onboarde Windows-servere til Defender for Endpoint-tjenesten](configure-server-endpoints.md)<br/>- [Ny Windows Server 2012 R2- og 2016-funktionalitet i den moderne samlede løsning (prøveversion)](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) |
 |Microsoft Defender Antivirus|Enheder skal have Microsoft Defender Antivirus installeret og køre i enten aktiv eller passiv tilstand. [Bekræft Microsoft Defender Antivirus er i aktiv eller passiv tilstand](#how-do-i-confirm-microsoft-defender-antivirus-is-in-active-or-passive-mode).|
 |Skybaseret beskyttelse|Microsoft Defender Antivirus skal konfigureres, så [skybaseret beskyttelse er aktiveret](enable-cloud-protection-microsoft-defender-antivirus.md).|
-|Microsoft Defender Antivirus platform|Enheder skal være opdateret. Hvis du vil bekræfte dette, skal du køre [Get-MpComputerStatus-cmdlet'en](/powershell/module/defender/get-mpcomputerstatus) som administrator ved hjælp af PowerShell. På linjen **AMProductVersion** kan du se **4.18.2001.10** eller nyere. <p> Du kan få mere at vide under [Administrer Microsoft Defender Antivirus opdateringer og anvende grundlinjer](manage-updates-baselines-microsoft-defender-antivirus.md).|
-|Microsoft Defender Antivirus-program|Enheder skal være opdateret. Hvis du vil bekræfte dette, skal du køre [Get-MpComputerStatus-cmdlet'en](/powershell/module/defender/get-mpcomputerstatus) som administrator ved hjælp af PowerShell. På linjen **AMEngineVersion** kan du se **1.1.16700.2** eller nyere. <p> Du kan få mere at vide under [Administrer Microsoft Defender Antivirus opdateringer og anvende grundlinjer](manage-updates-baselines-microsoft-defender-antivirus.md).|
+|Microsoft Defender Antivirus platform|Enheder skal være opdateret. Hvis du vil bekræfte dette, skal du køre [Get-MpComputerStatus-cmdlet'en](/powershell/module/defender/get-mpcomputerstatus) som administrator ved hjælp af PowerShell. På linjen **AMProductVersion** kan du se **4.18.2001.10** eller nyere. <p> Du kan få mere at vide under [Administrer opdateringer til Microsoft Defender Antivirus og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md).|
+|Microsoft Defender Antivirus-program|Enheder skal være opdateret. Hvis du vil bekræfte dette, skal du køre [Get-MpComputerStatus-cmdlet'en](/powershell/module/defender/get-mpcomputerstatus) som administrator ved hjælp af PowerShell. På linjen **AMEngineVersion** kan du se **1.1.16700.2** eller nyere. <p> Du kan få mere at vide under [Administrer opdateringer til Microsoft Defender Antivirus og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md).|
 
 (<a id="fn1">1</a>) Se [Understøttes Slutpunktsregistrering og -svar i bloktilstand på Windows Server 2016 og Windows Server 2012 R2?](#is-edr-in-block-mode-supported-on-windows-server-2016-and-windows-server-2012-r2)
 
@@ -156,7 +159,7 @@ Du kan bruge PowerShell til at bekræfte, at Slutpunktsregistrering og -svar i b
 
 1. Vælg menuen Start, begynd at skrive `PowerShell`, og åbn derefter Windows PowerShell i resultaterne.
 
-2. Skriv `Get-MPComputerStatus|select AMRunningMode`.
+2. Type `Get-MPComputerStatus|select AMRunningMode`.
 
 3. Bekræft, `EDR Block Mode`at resultatet vises.
 

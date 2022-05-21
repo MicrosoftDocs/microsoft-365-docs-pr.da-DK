@@ -17,13 +17,13 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: 'Et krav til alle Microsoft Purview-Information Protection-løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: e35d6e317abc3fb32bb11a6bdf937f303212fc23
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+description: 'Et krav til alle Microsoft Purview Information Protection løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
+ms.openlocfilehash: 99b2b50ed00f470443956ff30ebb4940bbe1024d
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302348"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622375"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
@@ -31,7 +31,7 @@ ms.locfileid: "65302348"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Alle Microsoft Purview-Information Protection-løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
+Alle Microsoft Purview Information Protection løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
 Først skal du oprette og konfigurere de følsomhedsmærkater, du vil gøre tilgængelige for apps og andre tjenester. De mærkater, du vil have, at brugerne skal se og anvende fra Office apps.
 
@@ -43,9 +43,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
 ## <a name="create-and-configure-sensitivity-labels"></a>Opret og konfigurer følsomhedsmærkater
 
-1. Vælg **LøsningerInformationsbeskyttelse**  >  på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/)
-    
-    Hvis du ikke kan se denne indstilling med det samme, skal du først vælge **Vis alle**.
+1. Vælg **LøsningerInformationsbeskyttelseLabels** >  >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
 
 2. På siden **Etiketter** skal du vælge **+ Opret en mærkat** for at starte den nye konfiguration af følsomhedsmærkat: 
     
@@ -62,7 +60,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
     - Hvis **Grupper & websteder** er valgt, kan du konfigurere indstillinger, der gælder for Microsoft 365 grupper, og websteder for Teams og SharePoint. Hvis denne indstilling ikke er valgt, får du vist den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge for grupper og webstedet.
 
-    Du kan få oplysninger om området **Skematiserede dataaktiver** under [Mærk automatisk dit indhold i Microsoft Purview-dataoversigt](/azure/purview/create-sensitivity-label).
+    Du kan få oplysninger om området **Skematiserede dataaktiver** under [Mærk automatisk dit indhold i Microsoft Purview dataoversigt](/azure/purview/create-sensitivity-label).
 
 4. Følg konfigurationsprompterne for mærkatindstillingerne.
 
@@ -128,11 +126,9 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
 ## <a name="publish-sensitivity-labels-by-creating-a-label-policy"></a>Publicer følsomhedsmærkater ved at oprette en mærkatpolitik
 
-1. Vælg **LøsningerInformationsbeskyttelse**  >  på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/)
-    
-    Hvis du ikke kan se denne indstilling med det samme, skal du først vælge **Vis alle**.
+1. Vælg **SolutionsInformation** >  **protectionLabel-politikker** >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
 
-2. Vælg fanen **Mærkatpolitikker** , og **vælg derefter Publicer etiket** for at starte konfigurationen **af politikken Opret** :
+2. På siden **Mærkatpolitikker** skal du vælge **Publicer etiket** for at starte konfigurationen **af politikken Opret** :
     
     ![Publicer navne.](../media/publish-sensitivity-labels-full.png)
     
@@ -152,7 +148,7 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
     Du kan finde flere oplysninger om disse indstillinger under [Hvad mærkatpolitikker kan gøre](sensitivity-labels.md#what-label-policies-can-do) ud fra oversigtsoplysningerne og bruge hjælpen i brugergrænsefladen til individuelle indstillinger.
 
-    For mærkater, der er konfigureret til **Microsoft Purview Data Map-aktiver (prøveversion)**: Disse mærkater har ingen tilknyttede politikindstillinger.
+    For mærkater, der er konfigureret til **Microsoft Purview dataoversigtsaktiver (prøveversion)**: Disse mærkater har ingen tilknyttede politikindstillinger.
 
 6. Gentag disse trin, hvis du har brug for forskellige politikindstillinger for forskellige brugere eller områder. Du vil f.eks. have flere mærkater for en gruppe brugere eller et andet standardnavn for et undersæt af brugere. Eller hvis du har konfigureret mærkater til at have forskellige områder.
 

@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist tilstanden for lejertjenesten.
-ms.openlocfilehash: 8ad96c77f14148fefd6d00cd51af093cd081d857
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 3db5085ac4226b3f2800cd46f3542dcb79b311d2
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187816"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65621016"
 ---
 # <a name="view-tenant-service-health-in-microsoft-365-lighthouse"></a>Få vist lejerens tjenestetilstand i Microsoft 365 Fyrtårn
 

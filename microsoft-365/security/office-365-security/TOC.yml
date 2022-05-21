@@ -364,9 +364,9 @@
           items:
             - name: Karantæne
               href: quarantine-email-messages.md
-            - name: Administrer meddelelser og filer i karantæne som en administrator
+            - name: Administratorkarantæne
               href: manage-quarantined-messages-and-files.md
-            - name: Find og frigiv meddelelser i karantæne som en bruger
+            - name: Slutbrugerkarantæne
               href: find-and-release-quarantined-messages-as-a-user.md
             - name: Karantænepolitik
               href: quarantine-policies.md
