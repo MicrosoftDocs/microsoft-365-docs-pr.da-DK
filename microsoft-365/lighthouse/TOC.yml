@@ -58,6 +58,8 @@
       href: m365-lighthouse-win365-page-overview.md
     - name: Klargør en Windows 365 Cloud-pc igen
       href: m365-lighthouse-reprovision-cloudpc.md
+    - name: Få vist en enterprise Cloud PC med mislykket netværksforbindelse
+      href: m365-lighthouse-view-failed-network-connections.md
 - name: Administrer trusler
   items:
     - name: Oversigt over siden Trusselsadministration

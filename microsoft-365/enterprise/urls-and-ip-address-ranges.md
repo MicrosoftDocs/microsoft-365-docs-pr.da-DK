@@ -3,7 +3,7 @@ title: Office 365-URL-adresser og IP-adresseintervaller
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/28/2022
+ms.date: 05/20/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -22,14 +22,14 @@ search.appverid:
 - MOM160
 - BCS160
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
-description: 'Oversigt: Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal være tilgængelige for kunder, der bruger Office 365-planer, herunder Government Community Cloud (GCC).'
+description: 'Regering: Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal være tilgængelige for kunder, der bruger Office 365-abonnementer, herunder GCC (Government Community Cloud).'
 hideEdit: true
-ms.openlocfilehash: 80e4c14652303d1f04e697f73153b0f013b987cd
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 70f43a78ef0a3cb58c0ac9dc98cd7e03a56fcdff
+ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217326"
+ms.lasthandoff: 05/20/2022
+ms.locfileid: "65622060"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365-URL-adresser og IP-adresseintervaller
 
@@ -42,7 +42,7 @@ Office 365 kræver forbindelse til internettet. Nedenstående slutpunkter skal v
 |**Senest opdateret:** 28/04/2022 – ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** alle påkrævede og valgfrie destinationer på én [JSON-formateret](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) liste.|**Brug:** vores proxy [PAC-filer](managing-office-365-endpoints.md#pacfiles)|
 |
 
-Start med [Administration af Office 365-slutpunkter](managing-office-365-endpoints.md) for at forstå vores anbefalinger til administration af netværksforbindelse ved hjælp af disse data. Slutpunktsdata opdateres efter behov i begyndelsen af hver måned med nye IP-adresser og URL-adresser, der er publiceret 30 dage før, de er aktive. Dette giver kunder, der endnu ikke har automatiserede opdateringer, mulighed for at fuldføre deres processer, før der kræves ny forbindelse. Slutpunkter kan også opdateres i løbet af måneden, hvis det er nødvendigt for at håndtere supporteskaleringer, sikkerhedshændelser eller andre øjeblikkelige driftskrav. De data, der vises på denne side nedenfor, er alle genereret fra de REST-baserede webtjenester. Hvis du bruger et script eller en netværksenhed til at få adgang til disse data, skal du gå direkte til den [Webtjeneste](microsoft-365-ip-web-service.md).
+Start med [Administration af Office 365-slutpunkter](managing-office-365-endpoints.md) for at forstå vores anbefalinger til administration af netværksforbindelse ved hjælp af disse data. Slutpunktsdata opdateres efter behov i begyndelsen af hver måned med nye IP-adresser og URL-adresser, der er publiceret 30 dage før, de er aktive. Denne kadence giver kunder, der endnu ikke har automatiserede opdateringer, mulighed for at fuldføre deres processer, før der kræves ny forbindelse. Slutpunkter kan også opdateres i løbet af måneden, hvis det er nødvendigt for at håndtere supporteskaleringer, sikkerhedshændelser eller andre øjeblikkelige driftskrav. De data, der vises på denne side nedenfor, er alle genereret fra de REST-baserede webtjenester. Hvis du bruger et script eller en netværksenhed til at få adgang til disse data, skal du gå direkte til [Webtjenesten](microsoft-365-ip-web-service.md).
 
 Slutpunktsdata nedenfor viser krav til forbindelse fra en brugers computer til Office 365. Du kan finde flere oplysninger om IP-adresser, der bruges til netværksforbindelser fra Microsoft til et kundenetværk, også kaldet hybride eller indgående netværksforbindelser, under [Flere slutpunkter](additional-office365-ip-addresses-and-urls.md) for at få flere oplysninger.
 
@@ -52,9 +52,13 @@ De viste datakolonner er:
 
 - **ID**: Rækkens id-nummer, også kaldet et slutpunktssæt. Dette id er det samme som det, der returneres af webtjenesten for slutpunktssættet.
 
-- **Kategori**: Viser, om slutpunktssættet er kategoriseret som "Optimer", "Tillad" eller "Standard". Du kan læse om disse kategorier og vejledning til administration af dem i [Nye kategorier af Office 365-slutpunkter](microsoft-365-network-connectivity-principles.md#new-office-365-endpoint-categories). Denne kolonne viser også, hvilke slutpunktssæt der kræves for at have netværksforbindelse. For slutpunktssæt, der ikke er nødvendige for at have netværksforbindelse, angiver vi noter i dette felt for at angive, hvilken funktionalitet der mangler, hvis slutpunktssættet blokeres. Hvis du udelader et helt tjenesteområde, kræver de angivne slutpunktssæt ikke forbindelse.
+- **Kategori**: Viser, om slutpunktssættet er kategoriseret som **Optimer**, **Tillad**, eller **Standard**. Denne kolonne viser også, hvilke slutpunktssæt der kræves for at have netværksforbindelse. For slutpunktssæt, der ikke er nødvendige for at have netværksforbindelse, angiver vi noter i dette felt for at angive, hvilken funktionalitet der mangler, hvis slutpunktssættet blokeres. Hvis du udelader et helt tjenesteområde, kræver de angivne slutpunktssæt ikke forbindelse.
 
-- **ER**: Dette er **Ja**, hvis slutpunktssættet understøttes over Azure ExpressRoute med Office 365-rutepræfikser. BGP-community'et, der indeholder de viste rutepræfikser, justeres i forhold til det angivne tjenesteområde. Når ER er **NEJ**, betyder det, at ExpressRoute ikke understøttes for dette slutpunktssæt. Det må dog ikke antages, at der ikke annonceres nogen ruter for et slutpunktssæt, hvor ER er **Nej**.
+   Du kan læse om disse kategorier og vejledning til deres administration i [Nye kategorier af Office 365-slutpunkter](microsoft-365-network-connectivity-principles.md#new-office-365-endpoint-categories).
+
+- **ER**: Dette er **Ja**, hvis slutpunktssættet understøttes over Azure ExpressRoute med Office 365-rutepræfikser. BGP-community'et, der indeholder de viste rutepræfikser, justeres i forhold til det angivne tjenesteområde. Når ER er **NEJ**, betyder det, at ExpressRoute ikke understøttes for dette slutpunktssæt.
+
+   Nogle ruter kan annonceres i mere end ét BGP-community, hvilket gør det muligt for slutpunkter inden for et bestemt IP-område at gennemgå ER-kredsløbet, men de understøttes stadig ikke. I alle tilfælde skal værdien af et givet slutpunktssæts ER-kolonne respekteres. Du kan få mere at vide om BGP-communities under [Brug af BGP-communities i ExpressRoute til Office 365-scenarier](bgp-communities-in-expressroute.md#key-planning-considerations-to-using-bgp-communities).
 
 - **Adresser**: Viser FQDN'er eller jokertegn for domænenavne og IP-adresseområder for slutpunktssættet. Bemærk, at et IP-adresseområde er i CIDR-format og kan indeholde mange individuelle IP-adresser i det angivne netværk.
 
