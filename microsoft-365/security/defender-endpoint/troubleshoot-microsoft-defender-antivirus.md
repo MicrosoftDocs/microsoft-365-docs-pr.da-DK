@@ -15,12 +15,12 @@ ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 52105373f0bc6bb70f6433eba4dacb4580a0f804
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 9008fe0d6a4c46d544e4d806c3a15b24c53f2f10
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416710"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637982"
 ---
 # <a name="review-event-logs-and-error-codes-to-troubleshoot-issues-with-microsoft-defender-antivirus"></a>Gennemse hændelseslogge og fejlkoder for at foretage fejlfinding af problemer med Microsoft Defender Antivirus
 
@@ -2731,7 +2731,7 @@ Denne fejl angiver, at der kan være et problem med dit sikkerhedsprodukt.
 </tr><tr><td>Opløsning</td><td>
 <ol>
 <li>Opdater definitionerne. Enten:<ol>
-<li>Klik på knappen <b>Opdater definitioner</b> under fanen <b>Opdater</b> i Microsoft Defender Antivirus. <img src="images/defender-updatedefs2.png" alt="Update definitions in Microsoft Defender Antivirus"/>Eller
+<li>Hent dine opdateringer til security intelligence i Windows Sikkerhed-appen. <img src="images/defender-updatedefs2.png" alt="Update definitions in Microsoft Defender Antivirus"/>Eller
 </li>
 <li>Download de nyeste definitioner fra <a href="https://aka.ms/wdsi">Microsoft Sikkerhedsviden websted</a>.
 Bemærk! Størrelsen på definitionsfilen, der downloades fra webstedet, kan overstige 60 MB og bør ikke bruges som en langsigtet løsning til opdatering af definitioner.
@@ -3202,7 +3202,7 @@ Dette er en intern fejl. Det kan være udløst, når en scanning ikke kan fuldf�
 </table>
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

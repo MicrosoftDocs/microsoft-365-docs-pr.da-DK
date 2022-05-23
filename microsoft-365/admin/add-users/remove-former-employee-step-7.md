@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Når du har gemt og fået adgang til alle en tidligere medarbejders brugerdata, kan du slette den tidligere medarbejders konto i Microsoft 365 Administration.
-ms.openlocfilehash: d6e53dd8d14add9383e3eff9d3c1d90a5087ec45
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 5a1929ef1a5ff26ee0e84993f0a7cabb5ebc4617
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436259"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636168"
 ---
 # <a name="step-7---delete-a-former-employees-user-account"></a>Trin 7 – Slet en tidligere medarbejders brugerkonto
 
@@ -43,7 +43,7 @@ Når du har gemt og fået adgang til alle den tidligere medarbejders brugerdata,
 2. Vælg navnet på den medarbejder, du vil slette.
 3. Vælg **Slet bruger** under brugerens navn. Vælg de ønskede indstillinger for denne bruger, og vælg derefter **Slet bruger**. Hvis du allerede har givet en anden bruger adgang til denne brugers mail og OneDrive, behøver du ikke at gøre det igen her.
 
-Når du sletter en bruger, bliver kontoen inaktiv i ca. 30 dage. Indtil da skal du gendanne kontoen, før den slettes permanent.
+Når du sletter en bruger, bliver kontoen inaktiv i ca. 30 dage. Du har indtil da til at gendanne kontoen, før den slettes permanent.
 
 ## <a name="watch-delete-a-former-employees-user-account"></a>Se: Slet en tidligere medarbejders brugerkonto
 
@@ -70,8 +70,8 @@ Her er oplysninger om, hvordan du får en medarbejder ud af mail (Exchange).
 |Det kan du gøre|Sådan gør du det|
 |:-----|:-----|
 |Afslut en session (f.eks. Outlook på internettet, Outlook, Exchange aktiv synkronisering osv.), og tving til at åbne en ny session|Nulstil adgangskode|
-|Afslut en session, og bloker adgang til fremtidige sessioner (for alle protokoller)|Deaktiver kontoen. F.eks. (i Exchange Administration eller ved hjælp af PowerShell): <p>  `Set-Mailbox user@contoso.com -AccountDisabled:$true`|
-|Afslut sessionen for en bestemt protokol (f.eks. ActiveSync)|Deaktiver protokollen. F.eks. (i Exchange Administration eller ved hjælp af PowerShell): <p>  `Set-CASMailbox user@contoso.com -ActiveSyncEnabled:$false`|
+|Afslut en session, og bloker adgang til fremtidige sessioner (for alle protokoller)|Deaktiver kontoen. I Exchange Administration eller ved hjælp af PowerShell: <p>  `Set-Mailbox user@contoso.com -AccountDisabled:$true`|
+|Afslut sessionen for en bestemt protokol (f.eks. ActiveSync)|Deaktiver protokollen. I Exchange Administration eller ved hjælp af PowerShell: <p>  `Set-CASMailbox user@contoso.com -ActiveSyncEnabled:$false`|
 |
 
 Ovenstående handlinger kan udføres tre steder:

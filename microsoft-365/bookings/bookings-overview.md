@@ -9,19 +9,16 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 47403d64-a067-4754-9ae9-00157244c27d
 description: En oversigt over Microsoft Bookings-appen, som omfatter en webbaseret bookingkalender og integreres med Outlook for at optimere medarbejdernes kalender og give dine kunder fleksibilitet til at booke aftaler.
-ms.openlocfilehash: 6cb20104e9fa51023b6a828cfd70291cd0797037
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 02ae9cc4e9b101025a424acaff3a82de7afeef59
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64822666"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637599"
 ---
 # <a name="microsoft-bookings"></a>Microsoft Bookings
 
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
-
-Microsoft Bookings gør det nemt at planlægge og administrere aftaler. Bookings inkluderer en webbaseret bookingkalender og integreres med Outlook for at optimere medarbejdernes kalender og give dine kunder fleksibilitet til at booke en tid, der fungerer bedst for dem. Tekstbeskeder via mail og sms reducerer antallet af beskeder, der ikke vises, og forbedrer kundetilfredsheden. Din organisation sparer tid med en reduktion i gentagne planlægningsopgaver. Med indbygget fleksibilitet og tilpasningsdygtighed kan Bookings designes, så de passer til situationen og behovene i mange forskellige dele af en organisation.
+Microsoft Bookings gør det nemt at planlægge og administrere aftaler. Bookings inkluderer en webbaseret bookingkalender og integreres med Outlook for at optimere medarbejdernes kalender og give dine kunder fleksibilitet til at booke en tid, der fungerer bedst for dem. Mail- og SMS tekstmeddelelser reducerer antallet af beskeder, der ikke vises, og forbedrer kundetilfredsheden. Din organisation sparer tid med en reduktion i gentagne planlægningsopgaver. Med indbygget fleksibilitet og tilpasningsdygtighed kan Bookings designes, så de passer til situationen og behovene i mange forskellige dele af en organisation.
 
 > [!NOTE]
 > Den Bookings kalender er en postkasse i Exchange Online.

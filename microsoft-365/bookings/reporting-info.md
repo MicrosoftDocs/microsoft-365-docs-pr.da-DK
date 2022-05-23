@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Få mere at vide om, hvordan du kan se en 4-måneders visning af din Bookings aktivitet
-ms.openlocfilehash: 8f6ddcdc7320013698b1ba9f0ad2f5b1cd1e2e22
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: c39515852d0a45adfb3faeb5efaf510ee2c27236
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023717"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637202"
 ---
 # <a name="reporting-info-for-bookings"></a>Rapporteringsoplysninger om Bookings
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Du kan nu se en fire måneders visning af din Bookings kalender i en TSV-fil. I TSV-filen vises der fire måneders data, men du kan vælge forskellige fire måneder i løbet af et år.
 
@@ -61,6 +58,7 @@ Den forbedrede rapport indeholder nu følgende felter.
 - **Valuta**   Valutatype, der er angivet for en virksomhed.
 - **Cc-deltagere**   De modtagere, der modtager mailmeddelelser om en booking. Dette kan angives fra appen Teams, når du opretter en reservation.
 - **Antal tilmeldte deltagere**   Hvor mange kunder reserverede en gruppebookingtjeneste.
-- **Tekstbeskeder er aktiveret**   Om kunderne kan modtage sms-relaterede meddelelser.
+- **Tekstbeskeder er aktiveret**   Om kunder kan modtage SMS tekstrelaterede meddelelser.
 - **Brugerdefinerede felter**   Alle spørgsmål og svar, der er relateret til en enkelt booking, kombineres i dette felt.
 - **Booking-id**   Dette er nyttigt for at identificere de samme bookinger af en gruppetjeneste.
+- **Sporingsdata**   Spor målepunkterne for de kampagne-id'er, du bruger i dine marketingkampagner.

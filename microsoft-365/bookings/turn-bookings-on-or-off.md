@@ -10,21 +10,16 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Få mere at vide om, hvordan du får adgang til Microsoft Bookings i Microsoft 365.
-ms.openlocfilehash: e088250a24078d735b6751ff8cbcc55e2fdceaaa
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 98c6ae99bceada7649dc823ca88669ae0081fc10
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217458"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637290"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Slå Microsoft Bookings til eller fra
 
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
-
-Denne artikel er til administratorer. 
-
-Bookings kan slås til eller fra for hele organisationen eller for bestemte brugere. Når du slår Bookings til for brugerne, kan de oprette en Bookings side, oprette en kalender og give andre mulighed for at booke tid hos dem.
+Bookings kan slås til eller fra for hele organisationen eller for bestemte brugere. Når du slår Bookings til for brugerne, kan de oprette en Bookings side, oprette en kalender og give andre mulighed for at booke tid hos dem. Denne artikel henvender sig til ejere og administratorer, der administrerer Bookings for deres organisationer.
 
 > [!NOTE]
 > De administratorkontrolelementer, der er beskrevet i disse afsnit, er ikke tilgængelige for Office 365 drevet af 21Vianet -kunder (Kina).

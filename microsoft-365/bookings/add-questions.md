@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: fd6b7587-5055-4bcd-83a4-13bd4929bfff
 description: Hvis du har brug for at stille spørgsmål til kunderne, når de bestiller en aftale hos dig online, kan du tilføje brugerdefinerede spørgsmål og påkrævede spørgsmål på bookingsiden.
-ms.openlocfilehash: 9830dfaa9ac1964e74eb16321d061e096aad1bab
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: d42f883f3d58882ec5a2e8e8e2bbe7baf7ed3232
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64714609"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637687"
 ---
 # <a name="add-custom-and-required-questions-to-the-booking-page"></a>Føj brugerdefinerede og obligatoriske spørgsmål til bookingsiden
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Bookings kan du oprette spørgsmål, som dine kunder kan stille, når de bestiller aftaler. Du kan også vælge, hvilke spørgsmål der kræves.
 

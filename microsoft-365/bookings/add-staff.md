@@ -8,17 +8,14 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Brug denne side til at oprette din personaleliste og til at administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse.
-ms.openlocfilehash: b6ceee7c4464daf050f6e6626628c9cb3d94960f
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: d5e35ae301acc785803b0c5374b4bc50bbf499e0
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285450"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637224"
 ---
 # <a name="add-staff-to-bookings"></a>Føj medarbejdere til Bookings
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 På siden Personale i Bookings kan du oprette din personaleliste og administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse. Du kan også angive arbejdstimer for hver medarbejder herfra.
 

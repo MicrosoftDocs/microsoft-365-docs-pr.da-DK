@@ -19,12 +19,12 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om funktionen nye tildelinger.
 ms.date: 05/12/2022
-ms.openlocfilehash: c251d653aa95fa489a2482ae0c9ef80c9851fc4b
-ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
+ms.openlocfilehash: 60c2fdcd451f5926cbda84d8e5236176314bd3f5
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65403310"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636080"
 ---
 # <a name="allotment-basics"></a>Grundlæggende om tildeling
 
@@ -54,4 +54,4 @@ Du skal være global administrator eller licensadministrator for at komme i gang
 
 ## <a name="getting-started"></a>Introduktion
 
-Funktionen tildelinger er kun tilgængelig i en privat prøveversion til et lille antal kunder. Hvis du er interesseret i at deltage, skal du udfylde denne formular: [https://aka.ms/allotment-pilot-signup](https://aka.ms/allotment-pilot-signup).
+Funktionen Tildelinger er kun tilgængelig i en privat prøveversion til nogle få kunder. Hvis du er interesseret i at deltage, skal du udfylde denne formular: [https://aka.ms/allotment-pilot-signup](https://aka.ms/allotment-pilot-signup).

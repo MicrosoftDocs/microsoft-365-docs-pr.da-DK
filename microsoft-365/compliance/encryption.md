@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 description: Med Office 365 krypteres dit indhold som inaktivt og under overførsel med den stærkeste kryptering, de protokoller og teknologier, der er tilgængelige. Få et overblik over kryptering i Office 365.
-ms.openlocfilehash: 5f866931eba3078074b47c9cc8c5ed310489b9bb
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 5b7b0f9fecbcbb6150eb56e19757c954aeb3e812
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319259"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637467"
 ---
 # <a name="encryption"></a>Kryptering
 
@@ -57,7 +57,7 @@ Med Office 365 arbejder flere lag og typer kryptering sammen for at sikre dine d
 |:-----|:-----|:-----|
 |Filer på en enhed. Disse filer kan omfatte mails, der er gemt i en mappe, Office dokumenter, der er gemt på en computer, tablet eller telefon, eller data, der er gemt i Microsoft-cloudmiljøet.  <br/> |BitLocker i Microsoft-datacentre. BitLocker kan også bruges på klientcomputere, f.eks. Windows computere og tablets  <br/> Distributed Key Manager (DKM) i Microsoft-datacentre  <br/> Kundenøgle til Microsoft 365  <br/> |[Windows IT Center: BitLocker](/windows/device-security/bitlocker/bitlocker-overview) <br/> [Microsoft Center for sikkerhed og rettighedsadministration: Kryptering](https://www.microsoft.com/TrustCenter/Security/Encryption) <br/> [Serie af cloudsikkerhedskontroller: Kryptering af restdata](https://blogs.microsoft.com/microsoftsecure/2015/09/10/cloud-security-controls-series-encrypting-data-at-rest) <br/> [Sådan beskytter Exchange Online dine mailhemmeligheder](exchange-online-secures-email-secrets.md) <br/> [Tjenestekryptering med kundenøgle](customer-key-overview.md) <br/> |
 |Filer, der er under overførsel mellem brugere. Disse filer kan omfatte Office dokumenter eller SharePoint listeelementer, der deles mellem brugere.  <br/> |TLS for filer under overførsel  <br/> |[Datakryptering i OneDrive for Business og SharePoint Online](data-encryption-in-odb-and-spo.md) <br/> [Skype for Business Online: Sikkerhed og arkivering](/office365/servicedescriptions/skype-for-business-online-service-description/skype-for-business-online-features) <br/> |
-|Mail under overførsel mellem modtagere. Denne mail indeholder mail, der hostes af Exchange Online.  <br/> |Microsoft Purview-meddelelseskryptering med Azure Rights Management, S/MIME og TLS til overførsel af mail  <br/> |[essage-kryptering](ome.md) <br/> [Mailkryptering i Office 365](email-encryption.md) <br/> [Sådan anvender Exchange Online-brugere TLS til at sikre deres mailforbindelser i Office 365](exchange-online-uses-tls-to-secure-email-connections.md) <br/> |
+|Mail under overførsel mellem modtagere. Denne mail indeholder mail, der hostes af Exchange Online.  <br/> |Microsoft Purview-meddelelseskryptering med Azure Rights Management, S/MIME og TLS til overførsel af mail  <br/> |[Meddelelsekryptering](ome.md) <br/> [Mailkryptering i Office 365](email-encryption.md) <br/> [Sådan anvender Exchange Online-brugere TLS til at sikre deres mailforbindelser i Office 365](exchange-online-uses-tls-to-secure-email-connections.md) <br/> |
 |Chats, meddelelser og filer under overførsel mellem modtagere ved hjælp af Microsoft Teams. <br/> |Teams bruger TLS og MTLS til at kryptere chatbeskeder. Medietrafik krypteres ved hjælp af Secure RTP (SRTP). Teams bruger FIPS-kompatible algoritmer (Federal Information Processing Standard) til krypteringsnøgleudveksling. <br/> |[Kryptering af Teams](/microsoftteams/teams-security-guide#encryption-for-teams) <br/> |
 
 ## <a name="what-if-i-need-more-control-over-encryption-to-meet-security-and-compliance-requirements"></a>Hvad gør jeg, hvis jeg har brug for mere kontrol over kryptering for at opfylde kravene til sikkerhed og overholdelse af angivne standarder?

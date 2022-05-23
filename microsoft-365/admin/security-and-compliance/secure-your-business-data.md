@@ -28,12 +28,12 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: Beskyt din virksomheds mail og dine data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: 994223ff7f8f3da9d4d8b75056327214dfc310b0
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 47e9d935cdf6b44d9ba45cd57d8eb3efeabdf0a3
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622796"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637665"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>Bedste praksis for sikring af Microsoft 365 for virksomheder
 

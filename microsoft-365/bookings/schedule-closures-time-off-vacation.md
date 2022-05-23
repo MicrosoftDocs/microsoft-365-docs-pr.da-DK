@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: e3c0a4ee-e3d8-4fbe-bd8f-16d1c712d1f4
 description: Planlæg kontorets åbningstider og medarbejders fritid i Bookings-kalenderen, så medarbejderne er markeret som utilgængelige for bookinger i løbet af de angivne tidspunkter.
-ms.openlocfilehash: 32f1d930daf44d000a1dbf03eded3f05fbb976eb
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 52b2b8ea912cb876dd2d6e8b8efcdcc3bb90ce1f
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468388"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637445"
 ---
 # <a name="schedule-bookings-business-closures-time-off-and-vacation-time"></a>Planlæg Bookings forretningslukninger, fridage og ferietid
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Nogle gange vil du lukke din virksomhed til ferier eller teambegivenheder, eller dine medarbejdere skal have fri, når de er syge, på ferie eller utilgængelige af andre årsager. Du kan planlægge fridage fra Microsoft Bookings kalender, og medarbejderen vil ikke være tilgængelig for bookinger i løbet af det angivne tidspunkt. Når virksomheden genåbner, eller medarbejderne vender tilbage til arbejdet, vises alle på bookingsiden i henhold til deres fastsatte arbejdstid.
 

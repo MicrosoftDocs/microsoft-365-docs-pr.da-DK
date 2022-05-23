@@ -17,12 +17,12 @@ ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
 description: Med Microsoft 365 Administration kan du administrere nogle Microsoft Intune roller, der knyttes til forretningsfunktioner og giver tilladelser til at udføre bestemte opgaver.
-ms.openlocfilehash: efff2d426d40103369126c082fcb8d7be44e031c
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 61c73ea49b132dee12839112bdc08624a750989f
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436751"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636256"
 ---
 # <a name="intune-admin-roles-in-the-microsoft-365-admin-center"></a>Intune administratorroller i Microsoft 365 Administration
 
@@ -47,11 +47,11 @@ I Microsoft 365 Administration kan du gå til **Roller** og derefter vælge en h
 
 ## <a name="delegated-administration-for-microsoft-partners"></a>Stedfortræderadministration til Microsoft-partnere
 
-Hvis du arbejder med en Microsoft-partner, kan du tildele vedkommende administratorroller. De kan til gengæld tildele brugere i din virksomhed - eller deres firma - administratorroller. Det kan du eksempelvis gøre brug af, hvis de konfigurerer og administrerer din online-organisation for dig.
+Hvis du arbejder med en Microsoft-partner, kan du tildele vedkommende administratorroller. De kan til gengæld tildele brugere i din virksomhed - eller deres firma - administratorroller. Det kan f.eks. være, at de skal gøre det, hvis de konfigurerer og administrerer din onlineorganisation for dig.
   
 En partner kan tildele disse roller: 
   
-- Fuld administration, som har rettigheder, der svarer til en global administrator, med undtagelse af administration af multifaktorgodkendelse via Partnercenter.
+- Fuld administration, som har rettigheder, der svarer til en global administrator, bortset fra administration af multifaktorgodkendelse via Partnercenter.
 
 - Begrænset administration, som har rettigheder, der svarer til en helpdesk-administrator.
 

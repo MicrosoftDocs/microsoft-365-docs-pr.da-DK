@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Instruktioner til angivelse af oplysninger om servicetilbud, herunder tjenestenavn, beskrivelse, placering, varighed og priser. Du kan også mærke de medarbejdere, der er kvalificerede til at levere tjenesten.
-ms.openlocfilehash: 818d0d84e78907047df41e30f0ded62fc16c6ce4
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 0c302e8d84274fa2df8eea27362407ded4a468e3
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023761"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637775"
 ---
 # <a name="define-your-service-offerings-in-bookings"></a>Definer dine servicetilbud i Bookings
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Når du definerer dine servicetilbud i Microsoft Bookings, angiver du et tjenestenavn, en beskrivelse, en placering (vælg, om du vil mødes personligt eller have et onlinemøde), varighed, standardpåmindelser til kunder og medarbejdere, interne noter om tjenesten og priser. Du kan også mærke de medarbejdere, der er kvalificerede til at levere tjenesten. Derefter, når kunderne kommer til din virksomheds hjemmeside for at bestille en aftale, kan de se præcis, hvilke typer af aftaler er tilgængelige, vælge den person, de ønsker at levere tjenesten, og hvor meget deres service vil koste.
 
@@ -105,13 +102,13 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
    :::image type="content" source="media/bookings-additional-info.jpg" alt-text="Yderligere oplysninger i en Bookings mail.":::
 
-9. **Aktivér sms-beskeder for din kunde** Hvis indstillingen er valgt, sendes der sms-beskeder til kunden, men kun hvis de tilmelder sig.
+9. **Aktivér sms-beskeder for din kunde** Hvis indstillingen er valgt, sendes SMS meddelelser til kunden, men kun, hvis de tilmelder sig.
 
    - Tilvalgsfelt for manuel booking og Self-Service side:
 
      :::image type="content" source="media/bookings-opt-In-boc.jpg" alt-text="Feltet tilvalg i Bookings.":::
 
-   - Sms-meddelelser ser ud på følgende måde (bemærk, at sms-meddelelser i øjeblikket kun er tilgængelige i Nordamerika):
+   - Sms-meddelelser ser ud på følgende måde (bemærk, at SMS meddelelser i øjeblikket kun er tilgængelige i Nordamerika):
 
      :::image type="content" source="media/bookings-text-notifications.jpg" alt-text="En tekstmeddelelse fra Bookings.":::
 

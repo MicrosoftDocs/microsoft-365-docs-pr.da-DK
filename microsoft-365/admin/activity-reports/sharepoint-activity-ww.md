@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få rapporten over SharePoint aktivitetsforbrug for at få mere at vide om SharePoint brugerfilinteraktioner med licens, antallet af delte filer og lagerudnyttelse.
-ms.openlocfilehash: ecd44aad4e2bc1236ade623ad2723945e6422e7b
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 52aaaf3d9eef59c582977ee7b7c04ded44233c59
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467224"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636498"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---sharepoint-activity"></a>Microsoft 365 rapporter i Administration – SharePoint aktivitet
 
@@ -33,7 +33,7 @@ Som Microsoft 365 administrator viser dashboardet Rapporter aktivitetsoversigten
   
 Du kan f.eks. forstå aktiviteten for alle brugere, der er licenseret til at bruge SharePoint ved at se på deres interaktion med filer. Det hjælper dig også med at forstå det samarbejdsniveau, der foregår, ved at se på antallet af filer, der deles.
   
-## <a name="how-do-i-get-to-the-to-the-sharepoint-activity-report"></a>Hvordan gør jeg gå til aktivitetsrapporten for SharePoint?
+## <a name="how-do-i-get-to-the-sharepoint-activity-report"></a>Hvordan gør jeg du gå til aktivitetsrapporten for SharePoint?
 
 1. I Administration skal du gå til siden **Rapportanvendelse**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank"></a> 
 2. På startsiden for dashboardet skal du klikke på knappen **Vis mere** på kortet SharePoint.

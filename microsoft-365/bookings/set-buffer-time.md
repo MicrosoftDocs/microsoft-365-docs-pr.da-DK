@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 271f43e4-b8f7-4d63-8059-b5747679bb7e
 description: Angiv buffertid før eller efter en aftale i Microsoft Bookings for at give tid til oprydning eller nulstilling af udstyr.
-ms.openlocfilehash: 0a27cc287ed7999f1ba1cc1b017c2f54e126c0b9
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 49e58d53cec466c824a40281e3199f1544e74744
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022377"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637577"
 ---
 # <a name="set-buffer-time-in-microsoft-bookings"></a>Angiv buffertid i Microsoft Bookings
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Nogle af dine aftaler kan kræve tid før eller efter, at du mødes med kunden for at konfigurere, rydde op eller nulstille dit værelse og udstyr. Eller hvis du er på vej mellem kundeaftaler, skal du muligvis bruge tid til at sikre, at du og dit team kan rejse mellem aftaler uden at få kunden til at vente.
 

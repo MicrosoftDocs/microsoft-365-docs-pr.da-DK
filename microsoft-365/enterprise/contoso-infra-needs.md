@@ -14,12 +14,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Forstå den grundlæggende struktur i Contosos it-infrastruktur i det lokale miljø, og hvordan virksomhedens forretningsmæssige behov imødekommes af Microsoft 365 for virksomheden.
-ms.openlocfilehash: 5dc47898aa0499bc4b62d22d37689d872116a9e7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 793c867d47d76a03efad707d8447e04538c8ebb8
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101353"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637489"
 ---
 # <a name="contoso-it-infrastructure-and-business-needs"></a>Contoso It-infrastruktur og forretningsbehov
 
@@ -93,7 +93,7 @@ Contosos forretningsbehov falder i fem hovedkategorier:
 
   Reducer vedligeholdelses- og supportomkostninger, og øg ydeevnen for fjernadgangsløsning ved at flytte ressourcer, der ofte tilgås, til cloudmiljøet.
 
-- Giver bedre forbindelse og lavere omkostninger ved B2B-transaktioner (business-to-susiness)
+- Giver bedre forbindelse og lavere omkostninger ved B2B-transaktioner (business-to-business)
 
   Erstat et aldrende og dyrt partner-ekstranet med en cloudbaseret løsning, der bruger godkendelse i organisationsnetværket.
 
@@ -121,7 +121,7 @@ Contoso-it-afdelingen bestemte følgende tilknytning af forretningsbehov for at 
 |  | Øg produktiviteten for fjernarbejdere og mobile arbejdstagere | Microsoft 365 arbejdsbelastninger og cloudbaserede data |
 |  | Øg kreativiteten og innovationen | Windows Ink, Cortana på arbejde, PowerPoint |
 | Sikkerhed |  |  |
-|  | Administration af identitet & adgang | Dedikerede globale administratorkonti med Azure AD Multi-Factor Authentication (MFA) og Azure AD Privileged Identity Management (PIM) <br> MFA for alle brugerkonti <br> Betinget adgang <br> Sikkerhedslæser <br> Windows Hello <br> Windows Credential Guard |
+|  | Administration af identitet & adgang | Dedikerede globale administratorkonti med Azure AD MFA (Multi-Factor Authentication) og PIM (Azure AD Privileged Identity Management) <br> MFA for alle brugerkonti <br> Betinget adgang <br> Sikkerhedslæser <br> Windows Hello <br> Windows Credential Guard |
 |  | Trusselsbeskyttelse | Advanced Threat Analytics <br> Windows Defender <br> Defender for Office 365 <br> Microsoft Defender for Office 365 <br> Microsoft 365 trusselsundersøgelse og -reaktion <br> |
 |  | Beskyttelse af oplysninger | Azure Information Protection <br> Forebyggelse af datatab (DLP) <br> Windows Information Protection (IGVA) <br> Microsoft Defender for Cloud Apps <br> Microsoft Intune |
 |  | Sikkerhedsadministration | Microsoft Defender for Cloud  <br> Windows Defender Security Center |

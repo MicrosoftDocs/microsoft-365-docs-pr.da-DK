@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 03cdc163c1f560462fa12f18d4e6101665d766de
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 2b88e6413bb8ef520c3049f63cca60703a509be3
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64788144"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637907"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Aktivér regler for reduktion af angrebsoverflade
 
@@ -38,7 +38,7 @@ ms.locfileid: "64788144"
 - Windows
 
 > [!TIP]
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 [Regler for reduktion af angrebsoverflader](attack-surface-reduction.md) (ASR-regler) hjælper med at forhindre handlinger, som malware ofte misbruger for at kompromittere enheder og netværk.
 
@@ -71,9 +71,6 @@ Hver ASR-regel indeholder en af fire indstillinger:
 - **Overvågning**: Evaluer, hvordan ASR-reglen vil påvirke din organisation, hvis den er aktiveret
 - **Advarsel**! Aktivér ASR-reglen, men tillad, at slutbrugeren tilsidesætter blokken
 
-> [!IMPORTANT]
-> Advarselstilstand understøttes i øjeblikket ikke for tre ASR-regler, når du konfigurerer ASR-regler i Microsoft Endpoint Manager (MEM). Du kan få mere at vide under [Sager, hvor advarselstilstand ikke understøttes](attack-surface-reduction.md#cases-where-warn-mode-is-not-supported).
-
 Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende licens-SKU) for at drage fordel af de avancerede overvågnings- og rapporteringsfunktioner, der er tilgængelige i [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender for Endpoint). Men hvis du har en anden licens, f.eks. Windows Professional eller Windows E3, der ikke indeholder avancerede overvågnings- og rapporteringsfunktioner, kan du udvikle dine egne overvågnings- og rapporteringsværktøjer oven på de hændelser, der genereres på hvert slutpunkt, når ASR-regler udløses (f.eks. Videresending af hændelse).
 
 > [!TIP]
@@ -82,7 +79,7 @@ Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende l
 Du kan aktivere regler for reduktion af angrebsoverfladen ved hjælp af en af disse metoder:
 
 - [Microsoft Intune](#intune)
-- [Mobil Enhedshåndtering (MDM)](#mdm)
+- [Administration af mobilenheder (MDM)](#mdm)
 - [Microsoft Endpoint Configuration Manager](#microsoft-endpoint-configuration-manager)
 - [Gruppepolitik](#group-policy)
 - [PowerShell](#powershell)
@@ -271,9 +268,9 @@ Eksempel:
 
 ### <a name="microsoft-endpoint-configuration-manager"></a>Microsoft Endpoint Configuration Manager
 
-1. I Microsoft Endpoint Configuration Manager skal du gå til **Assets and Compliance** \> **Endpoint Protection** \> **Windows Defender Exploit Guard**.
+1. I Microsoft Endpoint Konfigurationsstyring skal du gå til **Assets and Compliance**\>**Endpoint Protection**\>**Windows Defender Exploit Guard**.
 
-2. Vælg **Start** \> **Opret Exploit Guard-politik**.
+2. Vælg **Home** \> **Opret Exploit Guard-politik**.
 
 3. Angiv et navn og en beskrivelse, vælg **Reduktion af angrebsoverflade**, og vælg **Næste**.
 

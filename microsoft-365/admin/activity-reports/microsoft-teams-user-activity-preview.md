@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får Microsoft Teams brugeraktivitetsrapport og får indsigt i Teams-aktiviteten i din organisation.
-ms.openlocfilehash: 691c6999e97350184fbe72e28f2b380dcf7b41d9
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: adf9952f27c5605c54f6fa31710b44519cf8684c
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467542"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636542"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 rapporter i Administration – Microsoft Teams brugeraktivitet
 

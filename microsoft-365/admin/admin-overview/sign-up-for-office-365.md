@@ -29,12 +29,12 @@ search.appverid:
 ROBOTS: NOINDEX
 description: Forstå, hvad du har brug for at vide om de nyeste versioner af Office-programmerne, før du gennemgår tilmeldingsprocessen for Office 365.
 ms.date: 03/17/2021
-ms.openlocfilehash: 015f99a2f0b6f9fcd17592e399bccf044313f993
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 185931ba308ae547355cb21a2935bb6f9097c8b7
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436113"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636212"
 ---
 # <a name="how-to-sign-up---admin-help"></a>Sådan tilmelder du dig – Hjælp til administratorer
 
@@ -88,7 +88,7 @@ Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonn
 
 - **Adresse og kontaktoplysninger for dit abonnement:**
 
-  - **Land** , hvor tjenesterne skal bruges. Du **kan ikke** ændre landet senere, selv under tilmeldingsprocessen. Du skal genstarte guiden til tilmelding.
+  - **Land** , hvor tjenesterne skal bruges. Du **kan ikke** ændre landet senere, selv under tilmeldingsprocessen. Du skal genstarte tilmeldingsguiden.
 
   - **E-mail** og **telefonnummer** , så vi kan kontakte dig, hvis det er nødvendigt om dit abonnement. Hvis du f.eks. glemmer din adgangskode, vil vi bruge disse oplysninger til at sende dig en midlertidig. Vi sender også dine faktureringsoplysninger til den mailadresse, du angiver.
 

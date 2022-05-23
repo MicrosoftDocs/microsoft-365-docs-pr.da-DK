@@ -22,24 +22,24 @@ search.appverid:
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
 description: Få mere at vide om, hvad du skal gøre, hvis du har et domæne, der ikke kan distribueres, og som er knyttet til dine lokale brugerkonti, før du synkroniserer dem med din Microsoft 365 lejer.
-ms.openlocfilehash: 7c0fd93f327305477908fba0cfb495fa73205ebe
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9d720b42b345e85031a4fa34b9c1353f868765f1
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096364"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637885"
 ---
 # <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>Forbered et domæne, der ikke kan routes, til katalogsynkronisering
 
-Når du synkroniserer din lokale mappe med Microsoft 365, skal du have et bekræftet domæne i Azure Active Directory (Azure AD). Kun de UPN'er (User Principal Names), der er knyttet til AD DS-domænet (Active Directory i det lokale miljø Domain Services), synkroniseres. Alle UPN'er, der indeholder et domæne, der ikke kan distribueres, f.eks. ".local" (f.eks. billa@contoso.local), synkroniseres med et .onmicrosoft.com-domæne (f.eks. billa@contoso.onmicrosoft.com). 
+Når du synkroniserer mappen i det lokale miljø med Microsoft 365, skal du have et bekræftet domæne i Azure Active Directory (Azure AD). Kun de UPN'er (User Principal Names), der er knyttet til AD DS-domænet (Active Directory i det lokale miljø Domain Services), synkroniseres. Alle UPN'er, der indeholder et domæne, der ikke kan distribueres, f.eks. ".local" (f.eks. billa@contoso.local), synkroniseres med et .onmicrosoft.com-domæne (f.eks. billa@contoso.onmicrosoft.com). 
 
 Hvis du i øjeblikket bruger et ".local"-domæne til dine brugerkonti i AD DS, anbefales det, at du ændrer dem til at bruge et bekræftet domæne, f.eks. billa@contoso.com, for at synkronisere korrekt med dit Microsoft 365 domæne.
   
 ## <a name="what-if-i-only-have-a-local-on-premises-domain"></a>Hvad gør jeg, hvis jeg kun har et ".local"-domæne i det lokale miljø?
 
-Du kan bruge Azure AD Forbind til at synkronisere din AD DS til Azure AD-lejeren for din Microsoft 365 lejer. Du kan få flere oplysninger under [Integration af dine identiteter i det lokale miljø med Azure AD](/azure/architecture/reference-architectures/identity/azure-ad).
+Du kan bruge Azure AD Forbind til at synkronisere din AD DS til den Azure AD lejer for din Microsoft 365 lejer. Du kan få flere oplysninger under [Integration af dine identiteter i det lokale miljø med Azure AD](/azure/architecture/reference-architectures/identity/azure-ad).
   
-Azure AD Forbind synkroniserer dine brugeres UPN og adgangskode, så brugerne kan logge på med de samme legitimationsoplysninger, som de bruger i det lokale miljø. Azure AD Forbind synkroniserer dog kun brugere til domæner, der er bekræftet af Microsoft 365. Det betyder, at domænet også bekræftes af Azure AD, fordi Microsoft 365 identiteter administreres af Azure AD. Med andre ord skal domænet være et gyldigt internetdomæne (f.eks. .com, .org, .net, .us). Hvis din interne AD DS kun bruger et domæne, der ikke kan distribueres (f.eks. ".local"), kan det muligvis ikke matche det bekræftede domæne, du har til din Microsoft 365 lejer. Du kan løse dette problem ved enten at ændre dit primære domæne i AD DS i det lokale miljø eller ved at tilføje et eller flere UPN-suffikser.
+Azure AD Forbind synkroniserer brugernes UPN og adgangskode, så brugerne kan logge på med de samme legitimationsoplysninger, som de bruger i det lokale miljø. Men Azure AD Forbind synkroniserer kun brugere til domæner, der er bekræftet af Microsoft 365. Det betyder, at domænet også bekræftes af Azure AD, fordi Microsoft 365 identiteter administreres af Azure AD. Med andre ord skal domænet være et gyldigt internetdomæne (f.eks. .com, .org, .net, .us). Hvis din interne AD DS kun bruger et domæne, der ikke kan distribueres (f.eks. ".local"), kan det muligvis ikke matche det bekræftede domæne, du har til din Microsoft 365 lejer. Du kan løse dette problem ved enten at ændre dit primære domæne i AD DS i det lokale miljø eller ved at tilføje et eller flere UPN-suffikser.
   
 ### <a name="change-your-primary-domain"></a>Skift dit primære domæne
 
@@ -51,7 +51,7 @@ Du kan løse problemet ".local" ved at registrere nyt UPN-suffiks eller suffiks 
   
 Når du har opdateret UPN'erne til at bruge det bekræftede domæne, er du klar til at synkronisere AD DS i det lokale miljø med Microsoft 365.
   
-#### <a name="step-1-add-the-new-upn-suffix"></a>Trin 1: Tilføj det nye UPN-suffiks**
+#### <a name="step-1-add-the-new-upn-suffix"></a>Trin 1: Tilføj det nye UPN-suffiks
   
 1. På AD DS-domænecontrolleren skal du i Serveradministrator vælge **Funktioner** \> **Active Directory-domæner og -tillidsforhold**.
     

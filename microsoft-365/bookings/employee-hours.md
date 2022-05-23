@@ -8,18 +8,15 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
-description: Angiv medarbejdernes arbejdstimer og tilgængelighed i Microsoft Bookings.
-ms.openlocfilehash: ce248e964552b8e1258dbad999f865874ef898e2
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+description: Angiv medarbejdernes arbejdstid og tilgængelighed i Microsoft Bookings.
+ms.openlocfilehash: 19b5a186c66659777a0dbe3444c0e43c4142ff36
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023321"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637246"
 ---
-# <a name="employee-working-hours-in-microsoft-bookings"></a>Medarbejdernes arbejdstid i Microsoft Bookings
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
+# <a name="employee-working-hours-in-microsoft-bookings"></a>Angiv medarbejderes arbejdstid i Microsoft Bookings
 
 Indstilling af medarbejdernes arbejdstid sikrer, at deres tilgængelighed vises nøjagtigt, når dine kunder forsøger at booke dem. Arbejdstiderne for hver af dine medarbejdere svarer som standard til de åbningstider, du har oprettet i Microsoft Bookings-appen. Se afsnittet "Angiv dine åbningstider" i [Angiv forretningsoplysninger](enter-business-information.md).
 

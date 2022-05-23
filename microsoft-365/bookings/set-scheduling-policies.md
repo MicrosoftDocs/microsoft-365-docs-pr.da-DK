@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4b2c84ec-64d3-4027-af4c-40f69e7b37c9
 description: Få mere at vide om, hvordan du angiver planlægningspolitikker for din virksomhed. Planlægningspolitikker omfatter længden af aftaler samt acceptable kundeemne- og annulleringstider.
-ms.openlocfilehash: f4b19af8bd0c9a91ea7fea3fd7b2a8feb4285dcd
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 39d6ab31d7bfda8f2686ed232402c1b98e6a56db
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468366"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637533"
 ---
 # <a name="set-your-microsoft-bookings-scheduling-policies"></a>Angiv dine Microsoft Bookings planlægningspolitikker
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Ikke alle aftaler er ens. Nogle tager kun nogle få minutter, mens andre kan tage timer eller mere. I Microsoft Bookings er det på bookingsiden, hvor du angiver planlægningspolitikkerne for din virksomhed. Planlægningspolitikker omfatter længden af aftaler, acceptable kundeemne- og annulleringstider og automatiske meddelelser om bookingændringer. Der kan tilføjes yderligere tilpasning for hver tjeneste på siden Tjenester med yderligere indstillinger for varighed og politikker, der kun gælder for den pågældende tjeneste.
 

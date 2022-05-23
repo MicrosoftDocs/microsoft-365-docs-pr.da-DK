@@ -16,12 +16,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: Forbind til din Microsoft 365 lejer ved hjælp af PowerShell, så Microsoft 365 kan udføre administrationsopgaver fra kommandolinjen.
-ms.openlocfilehash: a69fa6885e254e0c15cd65833a4f8368ec239c4f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 24596a2781a8b2176908d6e5d3a6c5bd74b0260a
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174815"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637423"
 ---
 # <a name="connect-to-microsoft-365-with-powershell"></a>Opret forbindelse til Microsoft 365 med PowerShell
 
@@ -43,6 +43,8 @@ I øjeblikket erstatter modulet Azure Active Directory PowerShell til Graph ikke
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
+>[!NOTE]
+> Det Azure Active Directory modul erstattes af Microsoft Graph PowerShell SDK. Du kan bruge Microsoft Graph PowerShell SDK til at få adgang til alle Microsoft Graph API'er. Du kan få flere oplysninger under [Kom i gang med Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 
 **Operativsystem**
 
@@ -206,11 +208,6 @@ Du skal bruge et aktivt Azure-abonnement til din organisation, der er knyttet ti
 Du kan få flere oplysninger under [Azure Cloud Shell](/azure/cloud-shell/overview).
 
 
-## <a name="get-started-with-the-microsoft-graph-powershell-sdk"></a>Kom i gang med Microsoft Graph PowerShell SDK
-
-Du kan bruge Microsoft Graph PowerShell SDK til at få adgang til alle Microsoft Graph API'er.
-
-Du kan få flere oplysninger under [Kom i gang med Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started?view=graph-powershell-beta)
 
 ## <a name="see-also"></a>Se også
 

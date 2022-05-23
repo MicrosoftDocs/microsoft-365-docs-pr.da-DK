@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 116d7a84-a7a0-4911-a1e9-debb2cca7c43
 description: Skift farvetemaet for din bookingside i appen Microsoft Bookings.
-ms.openlocfilehash: bd6c3fc601800cdfca93e9e1a6adc494df1bd67e
-ms.sourcegitcommit: dd5fc139affb4cba4089cbdb2c478968b680699a
+ms.openlocfilehash: 1c00f87f3447b7002bf647086ee60c756662803d
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64747164"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637797"
 ---
 # <a name="customize-and-publish-your-booking-page"></a>Tilpas og publicer din bookingside
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Bookingsiden er stedet, hvor du konfigurerer, hvordan din eksterne bookingside vil se ud. Når du har tilpasset og publiceret din bookingside, vil folk bruge den til at booke aftaler med dig.
 

@@ -28,12 +28,12 @@ search.appverid:
 ms.assetid: 8f0454b2-f51a-4d9c-bcde-2c48e41621c6
 description: Få mere at vide om, hvordan du konfigurerer multifaktorgodkendelse for din organisation.
 monikerRange: o365-worldwide
-ms.openlocfilehash: c37e9126b7cf06929ca9c97533cddf19d1b71f6e
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: faac2f052b7c184a967f916cca433dfaef6866c7
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468958"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637334"
 ---
 # <a name="set-up-multifactor-authentication-for-microsoft-365"></a>Konfigurer multifaktorgodkendelse for Microsoft 365
 
@@ -106,7 +106,7 @@ Du kan finde flere oplysninger om Azure AD P1 og P2 [under Azure Active Director
 
 ### <a name="turn-on-modern-authentication-for-your-organization"></a>Slå moderne godkendelse til for din organisation
 
-For de fleste abonnementer er moderne godkendelse automatisk slået til, men hvis du har købt dit abonnement før august 2017, er det sandsynligt, at du bliver nødt til at aktivere moderne godkendelse for at få funktioner som Multifactor Authentication til at fungere i Windows klienter som Outlook.
+For de fleste abonnementer er moderne godkendelse automatisk slået til, men hvis du har købt dit abonnement før august 2017, er det sandsynligt, at du skal aktivere moderne godkendelse for at få funktioner som Multifactor Authentication til at fungere i Windows klienter som Outlook.
 
 
 1. Vælg **Indstillinger** \> **Organisationsindstillinger** i venstre navigationsrude i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.

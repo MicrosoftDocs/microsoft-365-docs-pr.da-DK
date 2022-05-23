@@ -14,12 +14,12 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Prøv disse trin for at spore problemer med grundlæggende mobilitet og sikkerhed
-ms.openlocfilehash: c8c4fe674ff3a803659223a004e304a5779a83d7
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 1b1b7d67eb07c67c320554c1d64701983da30e15
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780715"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636058"
 ---
 # <a name="troubleshoot-basic-mobility-and-security"></a>Foretag fejlfinding af Grundlæggende mobilitet og sikkerhed
 

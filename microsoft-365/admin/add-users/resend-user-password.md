@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 ms.assetid: 9b838071-94aa-4b8e-8d84-d17ece1ee951
 description: 'Send meddelelsesmailen igen til en ny bruger i Microsoft 365 ved at nulstille brugerens adgangskode, hvis brugeren ikke fik den oprindelige mail med den nye adgangskode. '
-ms.openlocfilehash: 540b419d3f6452d6ca93e9e9424a1a28c0ecdfea
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: b6b8aab70cb48bb288485d52efd3a958c4df0888
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436289"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636146"
 ---
 # <a name="resend-a-microsoft-365-users-password---admin-help"></a>Send en Microsoft 365 brugers adgangskode igen – hjælp til administratorer
 

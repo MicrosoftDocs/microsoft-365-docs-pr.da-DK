@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 03a9acc9-f29c-456b-9fb2-0f49474b2708
 description: Følg disse instruktioner for at oprette en aftale og tildele en medarbejder via appen Microsoft Bookings.
-ms.openlocfilehash: 488b390c6446693ffa6bf63dce9c84920a629f0b
-ms.sourcegitcommit: 4d6a8e9d69a421d6c293b2485a8aa5e806b71616
+ms.openlocfilehash: 8b7c54a9d8f06ba2f5618ad77049b87a2c212edb
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65182667"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637819"
 ---
 # <a name="create-a-manual-booking"></a>Opret en manuel booking
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Bookings kan planlægges og bemandes på to forskellige måder. Den første måde er af kunden ved hjælp af en separat bookingside eller en integreret bookingside, som du føjer til dit websted. Den anden måde er, at du eller en af dine medarbejdere indtaster bookingerne manuelt, f.eks. når en kunde ringer til en aftale. I denne artikel beskrives det manuelle scenarie.
 

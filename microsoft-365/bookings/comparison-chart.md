@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: d586eb28-b752-4c46-bf92-00a0c5ad781d
 description: Et sammenligningsdiagram, der viser funktionsforskellene mellem Bookings webapp og Bookings Teams-appen.
-ms.openlocfilehash: 190278e662ff596d681aa8d0160de3c706089593
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 8ceaddf1d7cd8124ab8e4d1e0cd2f19c5779cb1b
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023739"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637268"
 ---
 # <a name="comparison-chart-bookings-web-app-vs-bookings-teams-app"></a>Sammenligningsdiagram: Bookings webapp vs. Bookings Teams app
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 Appen Bookings i Teams gør det muligt for planlæggere at håndtere deres hovedopgaver og ændre nogle indstillinger. Bookings web indeholder dog avancerede funktioner og indstillinger, der endnu ikke er tilgængelige i Teams-appen.
 

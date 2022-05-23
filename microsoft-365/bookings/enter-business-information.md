@@ -9,17 +9,14 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 828a17db-956a-401e-bb62-d153b6dffd53
 description: Følg disse instruktioner for at oprette siden Om os med firmanavn, adresse, telefonnummer, URL-adresse til websted, logo og åbningstider i Microsoft Bookings.
-ms.openlocfilehash: 5b80de4d94010a7e13b58289d6f63da13384d57d
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 1c1b50215b1e81c0bb3af936ba00e1beefa7965c
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622525"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65637753"
 ---
 # <a name="enter-your-business-information-in-microsoft-bookings"></a>Angiv dine forretningsoplysninger i Microsoft Bookings
-
-> [!NOTE]
-> Denne artikel hjælper dig med at interagere med den nyeste version af Microsoft Bookings. Tidligere versioner udgår i de kommende måneder.
 
 I Microsoft Bookings indeholder siden Firmaoplysninger i webappen alle de oplysninger, du typisk finder på siden "Om os" for en virksomhed. Disse oplysninger omfatter et relevant navn, adresse, telefonnummer, URL-adresse til websted, URL-adresse til beskyttelse af personlige oplysninger, logo og åbningstider.
 
