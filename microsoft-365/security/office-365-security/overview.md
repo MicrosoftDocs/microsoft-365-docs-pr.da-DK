@@ -16,14 +16,16 @@ ms.collection:
 description: Sikkerhed i Office 365, fra Exchange Online Protection til Defender for Office 365 Plan 1 og 2, Standard vs. Strenge sikkerhedskonfigurationer og meget mere. Forstå, hvad du har, og hvordan du sikrer dine egenskaber.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a9f480575c712488a17dc7e9e91320edc11d0e50
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 62a8d298c9b3e47acb9ba9af5782624646487677
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64835903"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647771"
 ---
 # <a name="microsoft-defender-for-office-365-security-overview"></a>Sikkerhedsoversigt for Microsoft Defender for Office 365
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -61,7 +63,7 @@ Selvom hver af disse tjenester fremhæver et mål blandt Beskyt, Registrer, Unde
 
 Kernen i Office 365-sikkerhed er Exchange Online Protection-beskyttelse. Microsoft Defender for Office 365 P1 indeholder Exchange Online Protection. Defender for Office 365 P2 indeholder P1 og Exchange Online Protection. Strukturen er kumulativ. Det er derfor, at når du konfigurerer dette produkt, skal du starte med Exchange Online Protection og arbejde mod Defender for Office 365.
 
-Selvom konfiguration af mailgodkendelse finder sted i offentlig DNS, er det vigtigt at konfigurere denne funktion for at hjælpe med at beskytte mod forfalskning. *Hvis du har EOP,****skal du [konfigurere mailgodkendelse](email-validation-and-authentication.md)***.
+Selvom konfiguration af mailgodkendelse finder sted i offentlig DNS, er det vigtigt at konfigurere denne funktion for at hjælpe med at beskytte mod forfalskning. *Hvis du har EOP,* ***bør du [konfigurere mailgodkendelse](email-validation-and-authentication.md)***.
 
 Hvis du har en Office 365 E3 eller derunder, har du EOP, men med mulighed for at købe enkeltstående Defender for Office 365 P1 via opgradering. Hvis du har Office 365 E5, har du allerede Defender for Office 365 P2.
 
@@ -115,7 +117,7 @@ I Microsoft Defender for Office 365 P2 kaldes det primære jagtværktøj **Truss
 Du kan få mere at vide om Microsoft Defender for Office 365 P1 og P2 ved at **[gå til denne artikel](defender-for-office-365.md)**.
 
 > [!TIP]
-> Exchange Online Protection og Microsoft Defender for Office 365 er også forskellige, når det gælder slutbrugere. I Exchange Online Protection og Defender for Office 365 P1 er fokus *opmærksomhed*, og derfor omfatter disse to tjenester Outlook-tilføjelsesprogrammet *Rapportér meddelelse* så brugerne kan rapportere mails, de finder mistænkelige, til yderligere analyse. <p> I Defender for Office 365 P2 (som indeholder alt i Exchange Online Protection og P1) skifter fokus til *yderligere træning* til slutbrugere, så Security Operations Center har adgang til et effektivt *Threat Simulator* -værktøj og de målepunkter, som slutbrugerne får.
+> EOP og Microsoft Defender til Office 365 er også forskellige, når det kommer til slutbrugere. I Exchange Online Protection og Defender for Office 365 P1 er fokus *opmærksomhed*, og derfor omfatter disse to tjenester Outlook-tilføjelsesprogrammet *Rapportér meddelelse* så brugerne kan rapportere mails, de finder mistænkelige, til yderligere analyse.<p> I Defender for Office 365 P2 (som indeholder alt i Exchange Online Protection og P1) skifter fokus til *yderligere træning* til slutbrugere, så Security Operations Center har adgang til et effektivt *Threat Simulator* -værktøj og de målepunkter, som slutbrugerne får.
 
 ## <a name="microsoft-defender-for-office-365-plan-1-vs-plan-2-cheat-sheet"></a>Oversigtsark til Microsoft Defender for Office 365 Plan 1 vs. Plan 2
 
