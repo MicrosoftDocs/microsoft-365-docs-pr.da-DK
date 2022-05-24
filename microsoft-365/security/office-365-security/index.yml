@@ -14,12 +14,12 @@ metadata:
   ms.author: macapara
   ms.date: 04/13/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 531e7466c831bef63d29bf7c33ad7bd9de9c3587
-  ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+  ms.openlocfilehash: e459898b8289d667550849551a50ca7b1588be1e
+  ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/07/2022
-  ms.locfileid: "64705159"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65648277"
 landingContent:
 - title: Defender for Office 365 og Exchange Online Protection
   linkLists:
@@ -83,8 +83,8 @@ landingContent:
       url: /exchange/security-and-compliance/mail-flow-rules/mail-flow-rules
     - text: Trusselssporinger
       url: threat-trackers.md
-    - text: Smarte rapporter og indsigt i Security & Compliance Center
-      url: reports-and-insights-in-security-and-compliance.md
+    - text: Rapporter om mailsikkerhed på Microsoft 365 Defender-portalen
+      url: view-email-security-reports.md
 - title: Undersøg
   linkLists:
   - linkListType: overview

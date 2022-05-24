@@ -26,12 +26,12 @@ search.appverid:
 - MOE150
 ms.assetid: da585eea-f576-4f55-a1e0-87090b6aaa9d
 description: Få mere at vide om administratorroller, f.eks. tjenesteadministratorrollen, som knyttes til bestemte forretningsfunktioner og giver tilladelser til at udføre bestemte opgaver i Administration.
-ms.openlocfilehash: e56399e5e3e83146df9d1bdad09cf7a6c216c8de
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: bef4328146c62d19257ca50d33004ce7d1185fe1
+ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467114"
+ms.lasthandoff: 05/23/2022
+ms.locfileid: "65636234"
 ---
 # <a name="about-admin-roles-in-the-microsoft-365-admin-center"></a>Om administratorroller i Microsoft 365 Administration
 
@@ -67,7 +67,7 @@ Da administratorer har adgang til følsomme data og filer, anbefaler vi, at du f
 | :------------------- | :------------------- |
 | Du bør have 2 til 4 globale administratorer  | Da det kun er en anden global administrator, der kan nulstille en global administrators adgangskode, anbefaler vi, at du har mindst 2 globale administratorer i din organisation i tilfælde af kontospærring. Men den globale administrator har næsten ubegrænset adgang til din organisations indstillinger og de fleste af dataene, så vi anbefaler også, at du ikke har mere end 4 globale administratorer, fordi det kan udgøre en sikkerhedsrisiko. |
 | Tildel rollen *mindst tilladende*    | Tildeling af den *mindst tilladende* rolle betyder, at administratorer kun får den adgang, de skal bruge for at få arbejdet udført. Hvis du f.eks. vil have nogen til at nulstille medarbejderadgangskoder, bør du ikke tildele den ubegrænsede globale administratorrolle, du bør tildele en begrænset administratorrolle, f.eks. adgangskodeadministrator eller helpdeskadministrator.  Dette hjælper med at beskytte dine data.                 |
-| Kræv multifaktorgodkendelse for administratorer                  |    Det er faktisk en god ide at kræve multifaktorgodkendelse for alle dine brugere, men administratorer bør være påkrævet at skulle bruge multifaktorgodkendelse til at logge på. Multifaktorgodkendelse får brugerne til at angive en anden identifikationsmetode for at bekræfte, at de er den, de udgiver sig for. Administratorer kan få adgang til en lang række kunde- og medarbejderdata, og hvis du kræver multifaktorgodkendelse, selvom administratorens adgangskode bliver kompromitteret, er adgangskoden ubrugelig uden den anden form for identifikation.  <br><br>Når du slår multifaktorgodkendelse til, skal brugeren angive en alternativ mailadresse og et alternativt telefonnummer til genoprettelse af kontoen, næste gang brugeren logger på.  <br> [Konfigurer multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md)          |
+| Kræv multifaktorgodkendelse for administratorer                  |    Det er faktisk en god ide at kræve multifaktorgodkendelse for alle dine brugere, men administratorer bør være påkrævet at skulle bruge multifaktorgodkendelse til at logge på. Multifaktorgodkendelse får brugerne til at angive en anden identifikationsmetode for at bekræfte, at de er den, de udgiver sig for. Administratorer kan få adgang til meget kunde- og medarbejderdata, og hvis du kræver multifaktorgodkendelse, selvom administratorens adgangskode bliver kompromitteret, er adgangskoden ubrugelig uden den anden form for identifikation.  <br><br>Når du slår multifaktorgodkendelse til, skal brugeren angive en alternativ mailadresse og et alternativt telefonnummer til genoprettelse af kontoen, næste gang brugeren logger på.  <br> [Konfigurer multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md)          |
 
 Hvis du får en meddelelse i Administration, der fortæller dig, at du ikke har tilladelse til at redigere en indstilling eller side, skyldes det, at du er tildelt en rolle, der ikke har denne tilladelse.
 
