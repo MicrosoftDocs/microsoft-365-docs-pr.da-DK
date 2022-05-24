@@ -17,14 +17,20 @@ ms.collection:
 - m365initiative-defender-office365
 ms.custom: ''
 description: Microsoft Defender for Office 365 E5- og P1- og P2-kunder kan nu få en 360-graders visning af hver mail med mailenhedssiden.
-ms.openlocfilehash: c2dfd4016f756073407e7d1c22034031c60a901f
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 79863916cab3b859a0b24de9dc5eb9b4f324a3f9
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131080"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648761"
 ---
 # <a name="the-email-entity-page"></a>Siden Mailenhed
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Gælder for:**
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 **I denne artikel:**
 - [Få adgang til mailobjektsiden](#reach-the-email-entity-page)

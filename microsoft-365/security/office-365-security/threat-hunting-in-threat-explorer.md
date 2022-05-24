@@ -17,14 +17,20 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: efeaf3fadfed0032da90db15a6bb57f5a1fc822a
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 2c99bc2ce004156320ec8f53f6b956f7989ee056
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418012"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648817"
 ---
 # <a name="threat-hunting-in-threat-explorer-for-microsoft-defender-for-office-365"></a>Trusselsjagt i Threat Explorer efter Microsoft Defender for Office 365
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Gælder for:**
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 I denne artikel:
 
@@ -217,7 +223,7 @@ Der vises navne og GUID'er for de transportregler, der er anvendt på meddelelse
 >
 > - kun Exchange Online – forebyggelse af datatab: Alle
 > - kun Exchange Online – O365SupportViewConfig: Alle
-> - Microsoft Azure Active Directory eller Exchange Online – Sikkerhedsadministrator: Alle
+> - Microsoft Azure Active Directory eller Exchange Online – Sikkerheds Administration: Alle
 > - Azure Active Directory eller Exchange Online – Sikkerhedslæser: Alle
 > - kun Exchange Online – transportregler: alle
 > - kun Exchange Online – View-Only konfiguration: Alle

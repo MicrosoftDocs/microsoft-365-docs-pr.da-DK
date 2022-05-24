@@ -15,42 +15,40 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratoren kan lære, hvordan du konfigurerer understøttelse af anonym indgående mail fra IPv6-kilder Exchange Online og Exchange Online Protection.
+description: Administration kan få mere at vide om, hvordan du konfigurerer understøttelse af anonyme indgående mails fra IPv6-kilder i Exchange Online og Exchange Online Protection.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 78b2e653aa284e34af2315ac696d7390dce71884
-ms.sourcegitcommit: 0ee2dabe402d44fecb6856af98a2ef7720d25189
+ms.openlocfilehash: 093ab458e8894105536e1c3dd46d2c911de440fd
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/09/2021
-ms.locfileid: "63589565"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649093"
 ---
-# <a name="add-support-for-anonymous-inbound-email-over-ipv6-in-microsoft-365"></a>Tilføj understøttelse af anonym indgående mail over IPv6 Microsoft 365
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+# <a name="add-support-for-anonymous-inbound-email-over-ipv6-in-microsoft-365"></a>Tilføj understøttelse af anonym indgående mail via IPv6 i Microsoft 365
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft 365 organisationer med Exchange Online-postkasser og enkeltstående Exchange Online Protection (EOP)-organisationer uden Exchange Online-postkasser understøtter anonym indgående mail via IPv6. IPv6-kildemailserveren skal opfylde begge følgende krav:
+Microsoft 365 organisationer med Exchange Online postkasser og enkeltstående Exchange Online Protection organisationer (EOP) uden Exchange Online postkasser understøtter anonyme indgående mails via IPv6. Kilde-IPv6-mailserveren skal opfylde begge følgende krav:
 
-- IPv6-kildeadressen skal have en gyldig POST (reverse DNS lookup), der gør det muligt for destinationen at finde domænenavnet fra IPv6-adressen.
+- IPv6-kildens adresse skal have en gyldig post med omvendt DNS-opslag (PTR), der gør det muligt for destinationen at finde domænenavnet fra IPv6-adressen.
 
-- Afsenderen skal bestå enten SPF-bekræftelse (defineret i [RFC 7208](https://tools.ietf.org/html/rfc7208)) eller [DKIM-godkendelse](http://dkim.org/) (defineret i [RFC 6376](https://www.rfc-editor.org/rfc/rfc6376.txt)).
+- Afsenderen skal bestå enten SPF-bekræftelse (defineret i [RFC 7208](https://tools.ietf.org/html/rfc7208)) eller [DKIM-bekræftelse](http://dkim.org/) (defineret i [RFC 6376](https://www.rfc-editor.org/rfc/rfc6376.txt)).
 
-Før din organisation kan modtage anonym indgående mail via IPv6, skal en administrator kontakte Microsoft Support og bede om det. Du kan finde instruktioner om, hvordan du åbner en supportanmodning, [under Kontakt support for virksomhedsprodukter – hjælp til administratorer](../../admin/get-help-support.md).
+Før din organisation kan modtage anonym indgående mail via IPv6, skal en administrator kontakte Microsoft Support og bede om det. Du kan finde oplysninger om, hvordan du åbner en supportanmodning, under [Kontakt support til forretningsprodukter – Administration Hjælp](../../admin/get-help-support.md).
 
-Når anonym indgående IPv6-meddelelsessupport er aktiveret i din organisation, gennemgår meddelelsen den normale filtrering af meddelelser, der leveres af tjenesten.
+Når anonym indgående IPv6-meddelelsesunderstøttelse er aktiveret i din organisation, gennemgår meddelelsen den normale meddelelsesfiltrering, der leveres af tjenesten.
 
 ## <a name="troubleshooting"></a>Fejlfinding
 
-- Hvis kildemailserveren ikke har en IPv6-omvendt DNS-opslagspost, afvises meddelelserne med følgende fejl:
+- Hvis kildemailserveren ikke har en omvendt DNS-opslagspost i IPv6, afvises meddelelserne med følgende fejl:
 
-  > 450 4.7.25-tjenesten er ikke tilgængelig og sender IPv6-adresse [2a01:111:f200:2004::240] skal have omvendt DNS-post.
+  > 450 4.7.25 Tjenesten er ikke tilgængelig, og IPv6-adressen [2a01:111:f200:2004::240] skal have omvendt DNS-post.
 
-- Hvis afsenderen ikke passerer SPF- eller DKIM-validering, afvises meddelelserne med følgende fejl:
+- Hvis afsenderen ikke består SPF- eller DKIM-valideringen, afvises meddelelserne med følgende fejl:
 
   > 450 4.7.26 Tjenesten er ikke tilgængelig, meddelelse sendt via IPv6 [2a01:111:f200:2004::240] skal bestå enten SPF- eller DKIM-validering.
 

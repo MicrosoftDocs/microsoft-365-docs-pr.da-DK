@@ -17,14 +17,20 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de identificerer bestemte grupper af brugere med brugerkoder i Microsoft Defender for Office 365 Plan 2. Kodefiltrering er tilgængelig på tværs af beskeder, rapporter og undersøgelser i Microsoft Defender for Office 365 for hurtigt at identificere de mærkede brugere.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e7b9584b41ded7edd28fb1501ee4e5c3a1febd74
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 3d4f5b82e09c9a58e891fa6fcba009ac490c0cb1
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286400"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647463"
 ---
 # <a name="user-tags-in-microsoft-defender-for-office-365"></a>Brugerkoder i Microsoft Defender for Office 365
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Gælder for:**
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Brugerkoder er id'er for bestemte grupper af brugere i [Microsoft Defender for Office 365](defender-for-office-365.md). Der er to typer brugerkoder:
 
@@ -47,7 +53,7 @@ Når du har anvendt systemkoder eller brugerdefinerede mærker på brugere, kan 
 - [Rapport over de vigtigste afsendere og modtagere](view-email-security-reports.md#top-senders-and-recipients-report)
 - [Simulering af angreb](attack-simulation-training.md#target-users)
 - [Kampagnevisninger](campaigns.md)
-- [Administrator- og brugerindsendelser](admin-submission.md)
+- [Administration og brugerindsendelser](admin-submission.md)
 - [Karantæne](quarantine.md)
 - For prioritetskonti kan du bruge [rapporten Mailproblemer for prioritetskonti](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report) i Exchange Administration (EAC).
 
@@ -61,7 +67,7 @@ Hvis du vil se, hvordan brugerkoder er en del af strategien for at beskytte brug
 
 - Du skal have tildelt tilladelser på Microsoft 365 Defender-portalen, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil oprette, redigere og slette brugerdefinerede brugerkoder, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
-  - Hvis du vil tilføje og fjerne medlemmer fra systemmærket Prioritetskonto, skal du være medlem af **sikkerhedsadministratoren** og **Exchange administratorrollegrupperne**.
+  - Hvis du vil tilføje og fjerne medlemmer fra systemkoden Prioritetskonto, skal du være medlem af **sikkerhedsadministratoren** og **Exchange Administration** rollegrupper.
   - Hvis du vil tilføje og fjerne medlemmer fra eksisterende brugerdefinerede brugerkoder, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
   - Hvis du vil have skrivebeskyttet adgang til brugerkoder, skal du være medlem af rollegrupperne **Global læser**, **Sikkerhedsoperator** eller **Sikkerhedslæser** .
 

@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du aktiverer eller deaktiverer arkivpostkasser for at understøtte organisationens krav til meddelelsesopbevaring, eDiscovery og venteposition.
-ms.openlocfilehash: fac57f8b352edc62db344ec600d3063e960f5a6f
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: ba5fdf252fe379798b1126d59affb12bb3725306
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393316"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647231"
 ---
 # <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Aktivér arkivpostkasser i Microsoft Purview-compliance-portal
 
@@ -55,11 +55,10 @@ Hvis du ikke kan se siden **Arkiv** i Microsoft Purview-compliance-portal, skal 
    > [!NOTE]
    > På siden **Arkiv** vises maksimalt 500 brugere. Brug søgefeltet, hvis du ikke kan se navnet på den ønskede bruger med det samme.
 
-3. På listen over postkasser skal du vælge den bruger, der skal aktivere brugerens postkasse til arkiv, og derefter vælge indstillingen **Aktivér arkiv** :
-
+3. På listen over postkasser skal du vælge brugeren for at aktivere sin postkasse til arkiv og derefter vælge indstillingen **Aktivér arkiv** :
+    
    ![Aktivér arkivindstillingen for en valgt bruger.](../media/enable-archive-option.png)
-
-
+    
    Der vises en advarsel om, at hvis du aktiverer arkivpostkassen, flyttes elementer i brugerens postkasse, der er ældre end den arkiveringspolitik, der er tildelt postkassen, til den nye arkivpostkasse. Standardarkivpolitikken, der er en del af den opbevaringspolitik, der er tildelt Exchange Online postkasser, flytter elementer til arkivpostkassen to år efter den dato, hvor elementet blev leveret til postkassen eller oprettet af brugeren. Du kan finde flere oplysninger under [Få mere at vide om arkivpostkasser](archive-mailboxes.md).
 
 5. Vælg **Aktivér** for at bekræfte.

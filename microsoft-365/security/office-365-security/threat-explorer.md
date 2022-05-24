@@ -20,14 +20,16 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6992af4483bedfe418610b752d2195a8d22f30d3
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 0920439345b026879b86ad3b2ce104d3ea8174d1
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974317"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649425"
 ---
 # <a name="threat-explorer-and-real-time-detections"></a>Trusselsoversigt og registreringer i realtid
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -172,7 +174,7 @@ I øjeblikket vises leveringsplaceringen i mailgitteret og mail-pop op-vinduet. 
 
 ### <a name="additional-actions"></a>Yderligere handlinger
 
-Der blev anvendt *yderligere handlinger* efter levering af mailen. De kan omfatte *ZAP*, *manuel afhjælpning* (handling, der udføres af en administrator, f.eks. blød sletning), *Dynamisk levering* og *oparbejdet* (for en mail, der blev registreret med tilbagevirkende kraft som god).
+Der blev anvendt *yderligere handlinger* efter levering af mailen. De kan omfatte *ZAP*, *manuel afhjælpning* (handling, der udføres af en Administration f.eks. blød sletning), *Dynamisk levering* og *oparbejdet* (for en mail, der blev registreret med tilbagevirkende kraft som god).
 
 > [!NOTE]
 > Som en del af de ventende ændringer forsvinder værdien "Fjernet af ZAP", der aktuelt vises i filteret Leveringshandling. Du kan søge efter alle mails med ZAP-forsøget via **Yderligere handlinger**.
@@ -289,7 +291,7 @@ Du kan se både GUID og navnet på de transportregler, der er anvendt på meddel
 >
 > - Kun EXO – forebyggelse af datatab: Alle
 > - Kun EXO – O365SupportViewConfig: Alle
-> - Microsoft Azure Active Directory eller EXO – Sikkerhedsadministrator: Alle
+> - Microsoft Azure Active Directory eller EXO – Sikkerheds Administration: Alle
 > - AAD eller EXO – Sikkerhedslæser: Alle
 > - Kun EXO – Transportregler: Alle
 > - Kun EXO – View-Only konfiguration: Alle

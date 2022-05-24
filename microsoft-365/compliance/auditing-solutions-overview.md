@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du overvåger brugeres og administratorers aktiviteter i din Microsoft 365 organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d7c6ba3e63e50370579f6db89a919ec8a2dafd8f
-ms.sourcegitcommit: f645e0e9db74b25663cd9ddec7e3824d6ffc57f7
+ms.openlocfilehash: 5e4dab263a85730f893adadab0d3fa5709d17861
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65444239"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649381"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Overvågning af løsninger i Microsoft Purview
 
@@ -100,14 +100,14 @@ I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Ov
 
 ### <a name="audit-standard"></a>Overvågning (standard)
 
-- Microsoft Purview Business Basic-abonnement
-- abonnement på Microsoft Purview Apps for Business
-- Microsoft Purview Enterprise E3-abonnement
-- Microsoft Purview business-Premium
-- Microsoft Purview Education A3-abonnement
-- G3-abonnement Microsoft Purview offentlige myndigheder
-- G1-abonnement til Microsoft Purview offentlige myndigheder
-- Microsoft Purview Frontline F1- eller F3-abonnement eller tilføjelsesprogrammet F5 Security
+- Microsoft Business Basic-abonnement
+- abonnement på Microsoft 365 Apps til virksomheder
+- Microsoft 365 Enterprise E3-abonnement
+- Microsoft 365 Business Premium
+- Microsoft 365 Education A3-abonnement
+- G3-abonnement til Microsoft 365 offentlige myndigheder
+- G1-abonnement for Microsoft 365 offentlige myndigheder
+- Microsoft 365 Frontline F1- eller F3-abonnement eller tilføjelsesprogrammet F5 Security
 - Office 365 Enterprise E3-abonnement
 - Office 365 Enterprise E1-abonnement
 - Office 365 Education A1-abonnement
@@ -158,7 +158,7 @@ Hvis din organisation har et abonnement, der understøtter Overvågning (Premium
   
    - Aktivering af appen/serviceplanen for overvågning (Premium) skal være for disse brugere.
   
-   - Aktivering af overvågning af vigtige hændelser og derefter aktivere overvågning (Premium)ing af app/service-planen for disse brugere.
+   - Aktivering af overvågning af vigtige hændelser og derefter aktivering af appen/serviceplanen for overvågning (Premium) for disse brugere.
 
 2. Aktivér, at overvågningshændelser (Premium) logføres, når brugerne udfører søgninger i Exchange Online og SharePoint Online.
 

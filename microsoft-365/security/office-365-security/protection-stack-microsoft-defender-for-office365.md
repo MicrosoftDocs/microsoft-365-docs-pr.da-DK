@@ -1,5 +1,5 @@
 ---
-title: Stak med trinvis trusselsbeskyttelse i Microsoft Defender for Office 365
+title: Trinvis trusselsbeskyttelsesstak i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: tracyp
@@ -10,134 +10,140 @@ ms.reviewer: gigarrub
 audience: ITPro
 ms.topic: conceptual
 ms.localizationpriority: medium
-description: Følg stien til en indgående meddelelse gennem trusselsfiltreringsstakken i Microsoft Defender for Office 365.
+description: Følg stien til en indgående meddelelse via trusselsfiltreringsstakken i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e7be5c66e0ca3841a8bc4fd76555feaeafb1bd17
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 4548beaf8d3071006114a65fd95c16b06e8a875d
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469025"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648167"
 ---
 # <a name="step-by-step-threat-protection-in-microsoft-defender-for-office-365"></a>Trinvis trusselsbeskyttelse i Microsoft Defender for Office 365
 
-Stakken Microsoft Defender for Office 365 beskyttelse eller filtrering kan opdeles i 4 faser, som i denne artikel. Generelt gennemgår indgående mails alle disse faser før levering, men den faktiske sti, som mails tager, er underlagt en organisations Defender for Office 365 konfiguration.
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Gælder for:**
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
+
+Den Microsoft Defender for Office 365 beskyttelse eller filtreringsstak kan opdeles i fire faser, som i denne artikel. Generelt passerer indgående mails alle disse faser før levering, men den faktiske sti, som mailen bruger, er underlagt en organisations Defender for Office 365 konfiguration.
 
 > [!TIP]
-> Hold dig klar til slutningen af denne artikel for at få *en* samlet grafik af alle 4 faser Defender for Office 365 beskyttelse!
+> Hold øje indtil slutningen af denne artikel for en *samlet* grafik af alle 4 faser af Defender for Office 365 beskyttelse!
 
 ## <a name="phase-1---edge-protection"></a>Fase 1 – Edge Protection
 
-Desværre er Edge-blokke, der tidligere *var kritiske* , nu relativt simple for en dårlig løsning. Over tid blokeres mindre trafik her, men den forbliver en vigtig del af stakken.  
+Desværre er Edge-blokke, der engang var *kritiske* , nu relativt enkle for dårlige aktører at overvinde. Med tiden blokeres mindre trafik her, men det er stadig en vigtig del af stakken.  
 
-Edge-blokke er designet til at være automatiske. I tilfælde af falsk positiv får afsendere besked om, hvordan problemet skal håndteres. Forbindelser fra partnere, der er tillid til, med begrænset ry kan sikre leverance, eller midlertidige tilsidesættelser kan sættes på plads, når du onboarder nye slutpunkter.
+Edge-blokke er designet til at være automatiske. I tilfælde af falske positive, vil afsendere blive underrettet og fortalte, hvordan de skal løse deres problem. Forbindelser fra partnere, der er tillid til, med begrænset omdømme kan sikre leveringsdygtighed, eller der kan indføres midlertidige tilsidesættelser, når nye slutpunkter onboardes.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png" alt-text="Fase 1-filtrering i Defender for Office 365" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png" alt-text="Filtreringen fase 1 i Defender for Office 365" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase1.png":::
 
-1. **Netværksbegrænsning beskytter** Office 365-infrastruktur og kunder fra DOS-angreb (Denial of Service) ved at begrænse antallet af meddelelser, der kan sendes af et bestemt sæt infrastruktur.
+1. **Netværksbegrænsning** beskytter Office 365 infrastruktur og kunder mod DOS-angreb (Denial of Service) ved at begrænse antallet af meddelelser, der kan sendes af et bestemt sæt infrastruktur.
 
-2. **IP-omdømme og begrænsning blokerer meddelelser** , der sendes fra kendte dårlige forbindelses-IP-adresser. Hvis en bestemt IP sender mange meddelelser i en kort tidsperiode, bliver de begrænser.
+2. **IP-omdømme og begrænsning** blokerer meddelelser, der sendes fra kendte forkerte forbindelse til IP-adresser. Hvis en bestemt IP-adresse sender mange meddelelser inden for kort tid, begrænses de.
 
-3. **Domæneomseelse** blokerer alle meddelelser, der sendes fra et kendt dårligt domæne.
+3. **Domæneomdømme** blokerer alle meddelelser, der sendes fra et kendt ugyldigt domæne.
 
-4. **Mappebaseret kantfiltrering** blokerer forsøg på at indsamle en organisations mappeoplysninger via SMTP.
+4. **Katalogbaserede kantfiltreringsblokke** forsøger at hente en organisations mappeoplysninger via SMTP.
 
-5. **Backscatter-registrering** forhindrer en organisation i at blive angreb via ugyldige rapporter om manglende levering ( NDR'er).
+5. **Registrering af backscatter** forhindrer, at en organisation angribes via ugyldige rapporter om manglende levering.
 
-6. **Udvidet filtrering for forbindelser bevarer godkendelsesoplysninger**, selv når trafikken passerer gennem en anden enhed, før den når Office 365. Dette forbedrer filtrering af staknøjagtighed, herunder heuristisk klyngedannelse, antispoofing og læringsmodeller til antiphishing-maskiner, selv når det er i komplekse eller hybride routingscenarier.
+6. **Forbedret filtrering af connectorer** bevarer godkendelsesoplysninger, selvom trafikken passerer gennem en anden enhed, før den når Office 365. Dette forbedrer nøjagtigheden af filtreringsstakken, herunder heuristisk klyngedannelse, anti-spoofing og modeller til anti-phishing-maskinel indlæring, selv i komplekse eller hybride routingscenarier.
 
 ## <a name="phase-2---sender-intelligence"></a>Fase 2 – Afsenderintelligens
 
-Funktioner i afsenderintelligens er afgørende for at modtage spam, masse, efterligning og uautoriserede spoof-meddelelser og også faktor til registrering af phish. De fleste af disse funktioner kan konfigureres enkeltvis.
+Funktioner i afsenderintelligens er vigtige for at fange spam, masse, repræsentation og uautoriseret spoof-meddelelser og også faktor i phish-registrering. De fleste af disse funktioner kan konfigureres individuelt.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png" alt-text="Fase 2 af filtrering i Defender for Office 365 er Afsender-intelligens" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png" alt-text="Fase 2 af filtrering i Defender for Office 365 er Sender intelligence" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase2.png":::
 
-1. **Udløsere og påmindelser** om registrering af konto kompromitteres, når en konto har unormal adfærd, hvilket er i overensstemmelse med kompromis. I nogle tilfælde er brugerkontoen blokeret og forhindret i at sende yderligere mails, før problemet er løst af en organisations sikkerhedsteam.
+1. Udløsere og beskeder til **registrering af kompromitterede** konti udløses, når en konto har unormal funktionsmåde, der er i overensstemmelse med kompromitteret adfærd. I nogle tilfælde er brugerkontoen blokeret og forhindret i at sende yderligere mails, indtil problemet er løst af en organisations sikkerhedsteam.
 
-2. **Mailgodkendelse** omfatter både kundekonfigurerede metoder og metoder, der er konfigureret i skyen, med henblik på at sikre, at afsendere er godkendt, autentiske mailere. Disse metoder modstå spoofing.
-    - **SPF kan** afvise mails, der er baseret på DNS TXT-poster, som viser IP-adresser og servere, der har tilladelse til at sende mails på organisationens vegne.
+2. **Mailgodkendelse** omfatter både kundekonfigurerede metoder og metoder, der er konfigureret i cloudmiljøet, med det formål at sikre, at afsendere er godkendte, autentiske mailere. Disse metoder modstå spoofing.
+    - **SPF** kan afvise mails, der er baseret på DNS TXT-poster, der viser IP-adresser og servere, som må sende mails på organisationens vegne.
     - **DKIM** leverer en krypteret signatur, der godkender afsenderen.
     - **DMARC** gør det muligt for administratorer at markere SPF og DKIM som påkrævet i deres domæne og gennemtvinger justering mellem resultaterne af disse to teknologier.
-    - **ARC** er ikke kundekonfigureret, men bygger på DMARC til at arbejde med videresendelse i adresselister, mens der optages en godkendelseskæde.
+    - **ARC** er ikke kundekonfigureret, men bygger på DMARC til at arbejde med videresendelse på adresselister, mens der registreres en godkendelseskæde.
 
-3. **Efterlignet** intelligens kan filtrere dem, der har tilladelse til at 'spoof' (dvs. dem, der sender mails på vegne af en anden konto eller videresendelse for en adresseliste) fra ondsindede afsendere, der efterligner organisatoriske eller kendte eksterne domæner. Det adskiller legitime "på vegne af" mails fra afsendere, der forfalsker at levere spam- og phishingmeddelelser.
+3. **Spoof intelligence** er i stand til at filtrere dem, der har tilladelse til at 'spoof' (dvs. dem, der sender mail på vegne af en anden konto eller videresender for en adresseliste) fra ondsindede afsendere, der efterligner organisatoriske eller kendte eksterne domæner. Det adskiller legitime "på vegne af" mail fra afsendere, der spoof til at levere spam og phishing-meddelelser.
 
-    **Intra-org spoof intelligence** registrerer og blokerer spoof forsøg fra et domæne i organisationen.
+    **Intern spoof intelligence** registrerer og blokerer spoof-forsøg fra et domæne i organisationen.
 
-4. **Efterlignet intelligens på tværs af domæner** registrerer og blokerer spoof forsøg fra et domæne uden for organisationen.
+4. **Spoof intelligence på tværs af domæner** registrerer og blokerer spoof-forsøg fra et domæne uden for organisationen.
 
-5. **Massefiltrering giver** administratorer mulighed for at konfigurere et BCL (Bulk Confidence Level), der angiver, om meddelelsen blev sendt fra en masseafsender. Administratorer kan bruge masseskyderen i antispampolitikken til at beslutte, hvilket niveau af massemail der skal behandles som spam.
+5. **Massefiltrering** gør det muligt for administratorer at konfigurere et massetillidsniveau (BCL), der angiver, om meddelelsen blev sendt fra en massesender. Administratorer kan bruge masseskyderen i Antispam-politikken til at beslutte, hvilket niveau af massemails der skal behandles som spam.
 
-6. **Postkasseintelligens** lærer af standardbrugerens mailfunktionsmåder. Den udnytter en brugers kommunikationsgraf til at registrere, når en afsender kun ser ud til at være en person, som brugeren normalt kommunikerer med, men faktisk er skadelig. Denne metode registrerer efterligning.
+6. **Postkasseintelligens** lærer fra standardfunktionsmåder for brugermail. Den udnytter en brugers kommunikationsgraf til at registrere, hvornår en afsender kun ser ud til at være en person, som brugeren normalt kommunikerer med, men faktisk er ondsindet. Denne metode registrerer repræsentation.
 
-7. **Postkasse intelligence-repræsentation aktiverer** eller deaktiverer udvidede repræsentationsresultater baseret på hver brugers individuelle afsenderkort. Når denne funktion er aktiveret, hjælper den med at identificere efterligning.
+7. **Repræsentation af postkasseintelligens** aktiverer eller deaktiverer forbedrede repræsentationsresultater baseret på hver brugers individuelle afsenderkort. Når funktionen er aktiveret, hjælper den med at identificere repræsentation.
 
-8. **Bruger efterligning giver** en administrator mulighed for at oprette en liste over mål med høj værdi, der sandsynligvis vil blive udgivet som efterligning. Hvis der modtages en mail, hvor afsenderen kun ser ud til at have samme navn og adresse som den beskyttede konto med høj værdi, markeres eller mærkes mailen. (For eksempel *trα cye@contoso.com* for *tracye@contoso.com*).
+8. **Bruger repræsentering** gør det muligt for en administrator at oprette en liste over mål med høje værdier, der sandsynligvis repræsenteres. Hvis der modtages en mail, hvor afsenderen kun ser ud til at have samme navn og adresse som den beskyttede konto med høj værdi, markeres eller mærkes mailen. (f.eks *. trα cye@contoso.com* for *tracye@contoso.com*).
 
-9. **Domænereligation** registrerer domæner, der ligner modtagerens domæne, og som forsøger at ligne et internt domæne. Denne efterligning tracye@liw *α re.com* f.eks *. tracye@litware.com*.
+9. **Domænerepræsentation** registrerer domæner, der ligner modtagerens domæne, og som forsøger at ligne et internt domæne. Denne repræsentation *tracye@liw α re.com* f.eks. for *tracye@litware.com*.
 
-## <a name="phase-3---content-filtering"></a>Fase 3 – Indholdsfiltrering
+## <a name="phase-3---content-filtering"></a>Fase 3 – indholdsfiltrering
 
-I denne fase begynder filtreringsstakken at håndtere det specifikke indhold i mailen, herunder dens links og vedhæftede filer.
+I denne fase begynder filtreringsstakken at håndtere det specifikke indhold af mailen, herunder links og vedhæftede filer.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="Fase-3-filtrering i MDO er Filtrering af indhold" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="Fase 3-filtrering i MDO er indholdsfiltrering" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png":::
 
-1. **Transportregler** (også kaldet regler for mailflow eller Exchange-transportregler) giver en administrator mulighed for at udføre en lang række handlinger, når en lige så lang række betingelser er opfyldt for en meddelelse. Alle meddelelser, der flyder gennem din organisation, evalueres i forhold til de aktiverede regler for mailflow/transport.
+1. **Transportregler** (også kaldet regler for mailflow eller Exchange transportregler) gør det muligt for en administrator at udføre en lang række handlinger, når en meddelelse opfylder en lige så lang række betingelser. Alle meddelelser, der sendes gennem din organisation, evalueres i forhold til de aktiverede regler for mailflow/transport.
 
-2. **Microsoft Defender Antivirus** og to *tredjeparts antivirusprogrammer bruges til at* registrere al kendt malware i vedhæftede filer.
+2. **Microsoft Defender Antivirus** og to *antivirusprogrammer fra tredjepart* bruges til at registrere al kendt malware i vedhæftede filer.
 
-3. Antivirusprogrammer (AV) bruges også til at skrive alle vedhæftede filer i sand tekst, så blokering af type  kan blokere alle vedhæftede filer af typer, som administratoren angiver.
+3. Antivirusprogrammer (AV) bruges også til true-type alle vedhæftede filer, så **typeblokering** kan blokere alle vedhæftede filer af typer, som administratoren angiver.
 
-4. Når Microsoft Defender for Office 365 registrerer en ondsindet vedhæftet fil, føjes filens hash og en hash med det aktive indhold til det Exchange Online Protection (EOP)-omdømme. **Blokering af vedhæftede** filers omdømme blokerer denne fil på tværs Office 365 alle slutpunkter og slutpunkter via MSAV-skyopkald.
+4. Når Microsoft Defender for Office 365 registrerer en skadelig vedhæftet fil, føjes filens hash og hash for dens aktive indhold til Exchange Online Protection (EOP)-omdømme. **Blokering af omdømme for vedhæftede filer** blokerer filen på tværs af alle Office 365 og på slutpunkter via MSAV-skykald.
 
-5. **Heuristisk klyngedannelse kan** afgøre, at en fil er mistænkelig baseret på leverings heuristics. Når der findes en mistænkelig vedhæftet fil, afbrydes hele kampagnen midlertidigt, og filen sandkasse. Hvis filen bliver fundet skadelig, blokeres hele kampagnen.
+5. **Heuristisk klyngedannelse** kan fastslå, at en fil er mistænkelig baseret på leverings-heuristik. Når der findes en mistænkelig vedhæftet fil, afbrydes hele kampagnen midlertidigt, og filen er sandkasse. Hvis filen er skadelig, blokeres hele kampagnen.
 
-6. **Modeller til maskinel** indlæring fungerer på sidehovedet, brødteksten og URL-adresserne for en meddelelse til at registrere forsøg på phishing.
+6. **Modeller til maskinel indlæring** fungerer på headeren, brødtekstindholdet og URL-adresserne i en meddelelse for at registrere phishingforsøg.
 
-7. Microsoft bruger en bestemmelse af omdømme som følge af sandkasse af URL-adresser samt URL-omdømme fra tredjepartsfeeds, der er blokeret for **URL-adresser**, til at blokere enhver meddelelse med en kendt ondsindet URL-adresse.
+7. Microsoft bruger bestemmelse af omdømme fra SANDKASSE FOR URL-adresser samt URL-omdømme fra tredjepartsfeeds i **URL-omdømme, der blokerer** for meddelelser med en kendt skadelig URL-adresse.
 
-8. **Indholds heuristics** kan registrere mistænkelige meddelelser baseret på struktur og ordfrekvens i meddelelsens brødtekst ved hjælp af maskinlæringsmodeller.
+8. **Indholds-heuristik** kan registrere mistænkelige meddelelser baseret på struktur og ordhyppighed i meddelelsens brødtekst ved hjælp af modeller til maskinel indlæring.
 
-9. **Pengeskab vedhæftede** filer sandkasser alle vedhæftede filer til Defender for Office 365 kunder ved hjælp af dynamisk analyse til at registrere trusler, der aldrig har været set før.
+9. **Pengeskab sandkasser til vedhæftede filer** for Defender for Office 365 kunder ved hjælp af dynamisk analyse til at registrere trusler, der aldrig før er set.
 
-10. **Sammenkædet indholdsdeonation** behandler alle URL-adresser, der linker til en fil i en mail, som en vedhæftet fil, asynkront sandkasse af filen på leveringstidspunktet.
+10. **Detonation af sammenkædet indhold** behandler alle URL-adresser, der linker til en fil i en mail, som en vedhæftet fil, som asynkront sandboxing af filen på leveringstidspunktet.
 
-11. **URL-detonation** sker, når en opstrøms antiphishing-teknologi finder en meddelelse eller URL-adresse, der er mistænkelig. URL-detonation-sandkasser URL-adresserne i meddelelsen på leveringstidspunktet.
+11. **URL-detonation** sker, når upstream anti-phishing-teknologi finder en meddelelse eller URL-adresse for at være mistænkelig. URL-detonationssandkasser angiver URL-adresserne i meddelelsen på leveringstidspunktet.
 
-## <a name="phase-4---post-delivery-protection"></a>Fase 4 – Beskyttelse efter levering
+## <a name="phase-4---post-delivery-protection"></a>Fase 4 – beskyttelse efter levering
 
-Det sidste trin finder sted efter levering af mail eller filer, hvor du handler på mail, som findes i forskellige postkasser, filer og links, der vises i klienter som Microsoft Teams.
+Den sidste fase finder sted efter mail eller fillevering, der handler på mail, der er i forskellige postkasser og filer og links, der vises i klienter som Microsoft Teams.
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Fase 4-filtrering i Defender for Office 365 efter leveringsbeskyttelse" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Fase 4-filtrering i Defender for Office 365 er beskyttelse efter levering" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png":::
 
-1. **Pengeskab Links** Defender for Office 365 du kan altid klikke på. Hver webadresse i hver meddelelse ombrudt til at pege på Microsoft Pengeskab Links-servere. Når der klikkes på en URL-adresse, kontrolleres den ud fra det seneste ry, før brugeren omdirigeres til destinationswebstedet. URL-adressen er asynkront sandkasse for at opdatere dens omdømme.
+1. **Pengeskab Links** er Defender for Office 365 beskyttelsestid for klik. Alle URL-adresser i hver meddelelse ombrydes, så de peger på Microsoft Pengeskab Links-servere. Når der klikkes på en URL-adresse, kontrolleres den i forhold til det seneste omdømme, før brugeren omdirigeres til destinationswebstedet. URL-adressen er asynkront sandkasse for at opdatere dens omdømme.
 
-2. **Automatisk tømning (ZAP) uden time for phishing** registrerer og neutraliserer med tilbagevirkende kraft skadelige phishingmeddelelser, der allerede er blevet leveret til Exchange Online postkasser.
+2. **Zap (automatisk fjernelse på nul timer) for phishing** med tilbagevirkende kraft registrerer og neutraliserer skadelige phishing-meddelelser, der allerede er blevet leveret til Exchange Online postkasser.
 
-3. **ZAP til malware** registrerer og neutraler ondsindede malwaremeddelelser, der allerede er blevet leveret til Exchange Online postkasser.
+3. **ZAP for malware** med tilbagevirkende kraft registrerer og neutraliserer meddelelser om skadelig malware, der allerede er blevet leveret til Exchange Online postkasser.
 
-4. **ZAP til spam** registrerer og neutralerer skadelige spammeddelelser, der allerede er blevet leveret til Exchange Online-postkasser.
+4. **ZAP for spam** med tilbagevirkende kraft registrerer og neutraliserer skadelige spammeddelelser, der allerede er blevet leveret til Exchange Online postkasser.
 
-5. **Kampagnevisninger** giver administratorer mulighed for at få et overblik over et angreb, hurtigere og mere fuldstændigt, end et hvilket som helst team kan uden automatisering. Microsoft udnytter de enorme mængder antiphishing-, antispam- og antimalwaredata på tværs af hele tjenesten for at identificere kampagner og gør det derefter muligt for administratorer at undersøge dem fra start til slut, herunder mål, indvirkninger og flow, som også er tilgængelige i en opslaget kampagne, der kan downloades.
+5. **Kampagnevisninger** giver administratorer mulighed for at se det store billede af et angreb hurtigere og mere fuldstændigt, end et hvilket som helst team kunne uden automatisering. Microsoft udnytter de store mængder data om anti-phishing, anti-spam og antimalware på tværs af hele tjenesten til at hjælpe med at identificere kampagner og giver derefter administratorer mulighed for at undersøge dem fra start til slut, herunder mål, virkninger og flow, som også er tilgængelige i en kampagneskrivning, der kan downloades.
 
-6. **Tilføjelsesprogrammet Rapportmeddelelse** giver brugerne mulighed for nemt at rapportere falske positive (gode mails, der fejlagtigt er markeret som *dårlige) eller* falske negativer (dårlig mail markeret som *god) til* Microsoft til yderligere analyse.
+6. **Tilføjelsesprogrammer til rapportmeddelelse** gør det nemt for brugerne at rapportere falske positiver (god mail, der ved en fejl er markeret som *dårlige*) eller falske negativer (dårlig mail markeret som *god*) til Microsoft for yderligere analyse.
 
-7. **Pengeskab Links til Office-klienter** tilbyder den samme beskyttelse med tid til klik Pengeskab Links indbygget i Office-klienter som Word, PowerPoint og Excel.
+7. **Pengeskab Links til Office-klienter** tilbyder den samme Pengeskab Link-tid til klik-beskyttelse i Office klienter, f.eks. Word, PowerPoint og Excel.
 
-8. **Beskyttelse af OneDrive, SharePoint og Teams** giver den samme Pengeskab beskyttelse til vedhæftede filer mod skadelige filer indbygget i OneDrive, SharePoint og Microsoft Teams.
+8. **Beskyttelse af OneDrive, SharePoint og Teams** giver den samme Pengeskab beskyttelse mod vedhæftede filer, indbygget i OneDrive, SharePoint og Microsoft Teams.
 
-9. Når en URL-adresse, der peger på en fil, er  valgt efter levering, viser sammenkædet indholdsdeonation en advarselsside, indtil sandkassen af filen er fuldført, og URL-adressen findes som sikker.
+9. Når en URL-adresse, der peger på en fil, vælges efter levering, viser **detonation af sammenkædet indhold** en advarselsside, indtil sandkassen for filen er fuldført, og URL-adressen er sikker.
 
-## <a name="the-filtering-stack-diagram"></a>Filterstablingsdiagrammet
+## <a name="the-filtering-stack-diagram"></a>Filtreringsstakdiagrammet
 
-Det endelige diagram (som med alle dele af diagrammet, der skriver det) kan ændres uden problemer, efterhånden *som produktet vokser og udvikles*. Bogmærke denne side, og brug **feedbackindstillingen** , som du finder nederst, hvis du skal spørge efter opdateringer. For dine poster er dette stakken med alle faser i rækkefølge:
+Det endelige diagram (som med alle dele af diagrammet, der udgør det) *kan ændres, efterhånden som produktet vokser og udvikler sig*. Bogmærke denne side, og brug den **feedbackindstilling** , du finder nederst, hvis du har brug for at spørge efter opdateringer. For dine poster er dette stakken med alle faserne i rækkefølge:
 
-:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png" alt-text="Alle faserne af filtrering i Defender for Office 365 rækkefølge, fra 1 til 4" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png":::
+:::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png" alt-text="Alle faserne i filtrering i Defender for Office 365 i rækkefølge fra 1 til 4" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase5.png":::
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Skal du konfigurere Microsoft Defender for Office 365 ***lige nu** _? Brug denne stak, _now* med [denne trinvise vejledning til at](protect-against-threats.md) begynde at beskytte din organisation.
+Har du brug for at konfigurere Microsoft Defender for Office 365 ***lige nu** _? Brug denne stak, _now*, med [denne trinvise](protect-against-threats.md) vejledning til at begynde at beskytte din organisation.
 
-*Særlige tak fra MSFTTracyP og docs-skriveteamet til Giulian Garruba for dette indhold*.
+*En særlig tak fra MSFTTracyP og dokumentationsskrivningsteamet til Giulian Garruba for dette indhold*.

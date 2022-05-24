@@ -19,16 +19,14 @@ ms.custom:
 description: Få mere at vide som gæste afsender, hvordan kan du øge muligheden for at levere mail til brugere i Microsoft 365. Få også mere at vide om, hvordan du rapporterer uønsket mail & phishing-forsøg som gæst.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c6d0f594da174236ce03ab0fd9b2af045f57f9f0
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 94bd79493a56bd288d21be255915b046b2bb0178
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535896"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649181"
 ---
 # <a name="sending-mail-to-microsoft-365"></a>Sender mail til Microsoft 365
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 Disse artikler hjælper eksterne afsendere med at forbedre deres omdømme og øge deres mulighed for at levere mail til brugere på Microsoft 365. De indeholder også nogle oplysninger om, hvordan du kan rapportere forsøg på uønsket mail og phishing, selvom du ikke selv er Microsoft 365 bruger.
 

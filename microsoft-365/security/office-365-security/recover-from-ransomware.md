@@ -1,5 +1,5 @@
 ---
-title: Gendan efter et ransomware-angreb
+title: Genopret efter et ransonmware-angreb
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -16,16 +16,14 @@ ms.collection:
 description: Microsoft 365 administratorer kan lære at komme sig efter et ransomware-angreb.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8e5e942bb39097fffa955d5bb9c3b8a72212d0cc
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 328457e37ea6ae351abb2c5d5f0089246145b32c
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "64730835"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648651"
 ---
 # <a name="recover-from-a-ransomware-attack-in-microsoft-365"></a>Gendan efter et ransomware-angreb i Microsoft 365
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -169,8 +167,8 @@ Microsoft Azure:
 
 - [Azure Defenses for Ransomware Attack](https://azure.microsoft.com/resources/azure-defenses-for-ransomware-attack/)
 - [Maksimer Ransomware Robusthed med Azure og Microsoft 365](https://azure.microsoft.com/resources/maximize-ransomware-resiliency-with-azure-and-microsoft-365/)
-- [Sikkerhedskopierings- og gendannelsesplan for beskyttelse mod ransomware](/security/compass/backup-plan-to-protect-against-ransomware)
-- [Hjælp med at beskytte mod ransomware med Microsoft Azure backup](https://www.youtube.com/watch?v=VhLOr2_1MCg) (26 minutters video)
+- [Backup og gendannelsesplan for at beskytte mod ransomware](/security/compass/backup-plan-to-protect-against-ransomware)
+- [Hjælp med at beskytte mod ransomware med Microsoft Azure Backup](https://www.youtube.com/watch?v=VhLOr2_1MCg) (26 minutters video)
 - [Gendannelse efter kompromitteret systemisk identitet](/azure/security/fundamentals/recover-from-identity-compromise)
 - [Avanceret registrering af angreb i fleretages i Microsoft Sentinel](/azure/sentinel/fusion#ransomware)
 - [Fusion Detection for Ransomware i Microsoft Sentinel](https://techcommunity.microsoft.com/t5/azure-sentinel/what-s-new-fusion-detection-for-ransomware/ba-p/2621373)

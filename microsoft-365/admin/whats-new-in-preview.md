@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Microsoft 365 Administration – få mere at vide om de funktioner, der blev tilføjet i denne måned.
-ms.openlocfilehash: 42c2d1dcf6b778504f1d4786c6fbcc2ce38f9724
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4c730a72252d24145d7555f2684244a2a6531dd2
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099507"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649159"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Nyheder i Microsoft 365 Administration
 
@@ -45,11 +45,39 @@ Og hvis du gerne vil vide, hvad der er nyt med andre Microsoft-cloudtjenester:
 - [Nyheder i Azure Active Directory](/azure/active-directory/fundamentals/whats-new)
 - [Nyheder i Exchange Administration](/Exchange/whats-new)
 - [Nyheder i Microsoft Intune](/mem/intune/fundamentals/whats-new)
-- [Nyheder på Microsoft Purview-overholdelsesportalen](/Office365/SecurityCompliance/whats-new)
+- [Nyheder i Microsoft Purview-compliance-portal](/Office365/SecurityCompliance/whats-new)
 - [Nyheder i Microsoft 365 Defender](../security/mtp/whats-new.md)
 - [Nyheder i SharePoint Administration](/sharepoint/what-s-new-in-admin-center)
 - [Office opdateringer](/OfficeUpdates/)
 - [Sådan kontrollerer du Windows udgivelsestilstand](/windows/deployment/update/check-release-health)
+
+## <a name="may-2022"></a>Maj 2022
+
+<!-- ### Role based access controls (RBAC)
+
+There are new Azure AD built-in roles in the Microsoft 365 admin center. Give admins only the access they need to manage Virtual Visits.
+
+There are also 4 new roles in the Microsoft 365 admin center centered around management of custom security attributes. These roles are available for everyone to use in the Role assignments node under Roles.
+
+For more information about Azure AD built-in roles, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+
+**Virtual Visits Administrator**   Manage and share Virtual Visits information and metrics from admin centers or the Virtual Visits app.
+
+**Attribute Assignment Administrator**   Assign custom security attribute keys and values to supported Azure AD objects.
+
+**Attribute Assignment Reader**   Reads custom security attribute keys and values for supported Azure AD objects.
+
+**Attribute Definition Administrator**   Define and manage the definition of custom security attributes.
+
+**Attribute Definition Reader**   Reads the definition of custom security attributes. -->
+
+### <a name="quick-assist"></a>Lynhjælp
+
+Vi har flyttet Lynhjælp til Windows Store for at forbedre appens ydeevne og sikkerhed. Appen Windows Lynhjælp giver dig og dine slutbrugere mulighed for at modtage eller give pc-hjælp via en fjernforbindelse.
+
+Med den nye Lynhjælp Store app kan du se en betydelig forbedring af tiderne for generering af adgangskode og en reduktion af programfejl.
+
+Du kan finde flere oplysninger under [Løs pc-problemer via en fjernforbindelse](https://support.microsoft.com/windows/solve-pc-problems-over-a-remote-connection-b077e31a-16f4-2529-1a47-21f6a9040bf3), og [installér Lynhjælp](https://support.microsoft.com/windows/install-quick-assist-c17479b7-a49d-4d12-938c-dbfb97c88bca)
 
 ## <a name="april-2022"></a>April 2022
 
@@ -153,7 +181,7 @@ Få mere at vide på [Microsofts NPS-produktfeedback og indsigt for din organisa
 
 ### <a name="microsoft-365-admin-center-video-training"></a>Microsoft 365 Administration videotræning
 
-Vi har opdateret vores Microsoft 365 Administration videotræning. Gå til siden [Med administratoruddannelsesvideobibliotek](admin-video-library.yml) for at få mere at vide om, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed.
+Vi har opdateret vores Microsoft 365 Administration videotræning. Gå til siden [Administration videobibliotek for at](admin-video-library.yml) få mere at vide om, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed.
 
 :::image type="content" source="../media/admin-library-vid-training.png" alt-text="Skærmbillede: Viser biblioteket til videotræning i Administration":::
 
@@ -194,62 +222,3 @@ Vi har føjet et par nye kategorier til søgefunktionen.
 - Du kan nu finde forenklede konfigurationsoplevelser via global søgning. Dette kan hjælpe dig og dit team med hurtigt at komme i gang med, hvordan du bruger nye funktioner. Søg f.eks. efter **angiv adgangskode til aldrig at udløbe**.
 
 Hvis du vil vide mere om søgning i Administration, skal du se [Søg i Microsoft 365 Administration](manage/search-in-the-mac.md).
-
-## <a name="may-2021"></a>Maj 2021
-
-### <a name="admin-mobile-app"></a>Mobilappen Administration
-
-### <a name="keep-track-of-support-ticket-updates-using-the-admin-mobile-app"></a>Hold styr på opdateringer af supportanmodninger ved hjælp af mobilappen Administrator
-
-For alle de serviceanmodninger, der er oprettet i din lejer, kan du nu holde styr på billetstatussen, få vist oplysninger om billetten og angive/anmode om yderligere oplysninger ved at tilføje noter & vedhæftede filer.
-
-:::image type="content" source="../media/Keep-track-support-ticket-updates2.PNG" alt-text="Skærmbillede: Spor opdateringer af supportanmodninger":::
-
-### <a name="stay-on-top-of-all-the-major-updates-to-the-app-and-your-microsoft-365-subscription"></a>Hold dig opdateret om alle de store opdateringer til appen og dit Microsoft 365 abonnement
-
-- Hold dig opdateret om alle de store opdateringer til dit Microsoft 365 abonnement via Pushmeddelelser i Meddelelsescenter (nu aktiveret som standard).
-
-- Hold styr på de nyeste funktioner, der er tilgængelige i appen, ved hjælp af afsnittet **Nyheder** . Gå til **Indstillinger** >  **Hvad er nyt?**
-
-:::image type="content" source="../media/Stay-on-top-of-updates.PNG" alt-text="Skærmbillede: Spor større opdateringer og funktioner":::
-
-## <a name="april-2021"></a>I april 2021
-
-### <a name="admin-mobile-app"></a>Mobilappen Administration
-
-### <a name="manage-licenses-and-bills-from-the-admin-mobile-app"></a>Administrer licenser og regninger fra mobilappen Administrator
-
-- Du kan nu få vist alle tilgængelige og tildelte licenser til dine abonnementer. Du kan også tildele eller fjerne licenser til brugere og tilføje eller fjerne licenser.
-- Du kan nu få vist detaljerede fakturaer i appen.
-- Disse opdateringer er tilgængelige på både [Android-](https://go.microsoft.com/fwlink/p/?linkid=2159786) og [iOS-enheder](https://go.microsoft.com/fwlink/p/?linkid=2159787) .
-
-:::image type="content" source="../media/assign-license-mobile-app2.png" alt-text="Skærmbillede: Siden Tildel licens til administratormobilapp":::
-:::image type="content" source="../media/license-screen-mobile-app2.png" alt-text="Skærmbillede: Skærmen Administrator af mobilapp med brugere og deres licenser":::
-:::image type="content" source="../media/invoice-summary-mobile-app.png" alt-text="Skærmbillede: Siden Med oversigt over faktura i mobilappen til administration":::
-
-### <a name="updated-message-center-feed-in-the-admin-mobile-app"></a>Opdateret feed til Meddelelsescenter i administrationsmobilappen
-
-- Du har nu en mere fleksibel læseoplevelse i Meddelelsescenter-feedet. Du har nu mulighed for at filtrere meddelelser baseret på tjenesten eller mærker og markere meddelelser som favoritter. Der er også tilføjet massehandlinger til markering af meddelelser som læst, ulæst eller arkiveret.
-- Disse opdateringer er tilgængelige på både [Android-](https://go.microsoft.com/fwlink/p/?linkid=2159786) og [iOS-enheder](https://go.microsoft.com/fwlink/p/?linkid=2159787) .
-
-:::image type="content" source="../media/mc-feed-mobile-app.png" alt-text="Skærmbillede: Siden Meddelelsescenter for administration af mobilapps":::
-
-## <a name="ignite-2021-march"></a>Ignite 2021 (marts)
-
-Velkommen til Microsoft Ignite. Vi håber, at du kunne deltage i nogle af vores sessioner: [Microsoft Ignite 2021](https://myignite.microsoft.com/sessions). Her er nogle af de ting, vi talte om på Ignite.
-> [!NOTE]
-> Ikke alle funktioner vil være tilgængelige for alle med det samme. Hvis du ikke kan se de nye funktioner, [kan du tilmelde dig Målrettet udgivelse](manage/release-options-in-office-365.md).
-
-### <a name="message-center"></a>Meddelelsescenter
-
-Vi har moderniseret Meddelelsescenter for at hjælpe dig med at finde relevante meddelelser og tilføjet en mere fleksibel læseoplevelse. Vi har tilføjet en ny **kolonne af typen Tjeneste** for at hjælpe dig med at scanne, hvilken tjeneste en meddelelse gælder for, og filtrere meddelelser efter tjeneste og andre metadata. Du kan markere en meddelelse som favorit til opfølgning, vælge, hvilke kolonner der skal vises på meddelelseslisten, og navigere mellem meddelelser med knapperne Tilbage og Næste. Vi har også forbedret processen for at gøre det nemmere at give feedback på meddelelser i Meddelelsescenter.
-
-:::image type="content" source="../media/message-center.png" alt-text="Skærmbillede: Startsiden for Meddelelsescenter, der viser indbakke og meddelelser":::
-
-Du kan få mere at vide om de nye funktioner i [Meddelelsescenter](manage/message-center.md).
-
-### <a name="whats-new-features"></a>Nyheder
-
-Vi har foretaget forbedringer af, hvordan du får vist funktionerne "Nyheder" for brugerne i Office apps. Du kan nu se det omfattende indhold i ruden Nyheder, som dine brugere kan se. Du kan også få mere at vide om funktionen, før du beslutter dig for at fortælle dine brugere om funktionen. Du kan finde flere oplysninger i [Administrer, hvilke Office funktioner der vises i Nyheder](manage/show-hide-new-features.md).
-
-:::image type="content" source="../media/power-bi-whats-new2.png" alt-text="Skærmbillede: Office apps siden Nyheder, der viser forbedringer af Power BI":::

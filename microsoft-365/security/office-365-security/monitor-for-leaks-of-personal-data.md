@@ -1,5 +1,5 @@
 ---
-title: Overvåg for lækager af personlige data
+title: Overvåg for lækager af personlige oplysninger
 f1.keywords:
 - NOCSH
 ms.author: bcarter
@@ -19,16 +19,14 @@ search.appverid:
 description: Få mere at vide om tre værktøjer, du kan bruge til at overvåge for lækager af personlige data.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 13b8aa5699c3d4031a364ceaf62b70e6b7236fda
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 6c5b765b4eb4cbf49d31ee5ddb06fb0afe69c667
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972975"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649259"
 ---
-# <a name="monitor-for-leaks-of-personal-data"></a>Overvåg for lækager af personlige data
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+# <a name="monitor-for-leaks-of-personal-data"></a>Overvåg for lækager af personlige oplysninger
 
 Der er mange værktøjer, der kan bruges til at overvåge brugen og transporten af personlige data. I dette emne beskrives tre værktøjer, der fungerer godt.
 
@@ -36,9 +34,9 @@ Der er mange værktøjer, der kan bruges til at overvåge brugen og transporten 
 
 I illustrationen:
 
-- Start med Microsoft Purview-rapporter om forebyggelse af datatab for at overvåge personlige data i SharePoint Online, OneDrive for Business og mail under overførsel. Disse rapporter giver den største detaljeniveau til overvågning af personlige data. Disse rapporter omfatter dog ikke alle tjenester i Office 365.
+- Start med Microsoft Purview rapporter om forebyggelse af datatab til overvågning af personlige data i SharePoint Online, OneDrive for Business og mail under overførsel. Disse rapporter giver den største detaljeniveau til overvågning af personlige data. Disse rapporter omfatter dog ikke alle tjenester i Office 365.
 
-- Derefter skal du bruge politikker for beskeder og overvågningsloggen til at overvåge aktiviteter på tværs af tjenester. Konfigurer løbende overvågning, eller søg i overvågningsloggen for at undersøge en hændelse. Overvågningsloggen fungerer på tværs af tjenester – Sway, Power BI, eDiscovery, Dynamics 365, Power Automate, Microsoft Teams, administratoraktivitet, OneDrive for Business, SharePoint Online, mail under overførsel og inaktive postkasser. Skype samtaler er inkluderet i inaktive postkasser.
+- Derefter skal du bruge politikker for beskeder og overvågningsloggen til at overvåge aktiviteter på tværs af tjenester. Konfigurer løbende overvågning, eller søg i overvågningsloggen for at undersøge en hændelse. Overvågningsloggen fungerer på tværs af tjenester – Sway, Power BI, eDiscovery, Dynamics 365, Power Automate, Microsoft Teams, Administration aktivitet, OneDrive for Business, SharePoint Online, mail i transit og hvilepostkasser. Skype samtaler er inkluderet i inaktive postkasser.
 
 - Til sidst skal du bruge Microsoft Defender for Cloud Apps til at overvåge filer med følsomme data i andre SaaS-providere. Kommer snart er muligheden for at bruge følsomme oplysningstyper og samlede mærkater på tværs af Azure Information Protection og Office med Defender for Cloud Apps. Du kan konfigurere politikker, der gælder for alle dine SaaS-apps eller specifikke apps (f.eks. Box). Defender for Cloud Apps registrerer ikke filer i Exchange Online, herunder filer, der er knyttet til mail.
 
@@ -57,7 +55,7 @@ Du kan bruge DLP-rapporterne til at:
 
 Derudover kan du bruge DLP-rapporter til at finjustere dine DLP-politikker, når du kører dem i testtilstand.
 
-DLP-rapporter findes på Microsoft Purview-overholdelsesportalen. Gå til afsnittet **Rapporter** \> **Organisationsdata** for at finde **DLP-politikforekomster**, **DLP-hændelser** og **falske DLP-positiver og tilsidesættelser af** rapporter.
+DLP-rapporter findes i Microsoft Purview-compliance-portal. Gå til afsnittet **Rapporter** \> **Organisationsdata** for at finde **DLP-politikforekomster**, **DLP-hændelser** og **falske DLP-positiver og tilsidesættelser af** rapporter.
 
 Du kan få flere oplysninger under [Få vist rapporter til forebyggelse af datatab](../../compliance/view-the-dlp-reports.md).
 
@@ -67,9 +65,9 @@ Du kan få flere oplysninger under [Få vist rapporter til forebyggelse af datat
 
 Overvågningsloggen indeholder hændelser fra Exchange Online, SharePoint Online, OneDrive for Business, Azure Active Directory, Microsoft Teams, Power BI, Sway og andre tjenester.
 
-Portalen Microsoft 365 Defender og Microsoft Purview-overholdelsesportalen indeholder to måder at overvåge og rapportere i forhold til overvågningsloggen:
+På Microsoft 365 Defender-portalen og Microsoft Purview-compliance-portal kan du overvåge og rapportere i overvågningsloggen på to måder:
 
-- Konfigurer politikker for beskeder, få vist beskeder og overvåg tendenser – Brug værktøjerne til beskedpolitik og dashboard til beskeder enten på portalen Microsoft 365 Defender eller i Microsoft Purview-overholdelsesportalen.
+- Konfigurer politikker for beskeder, få vist beskeder, og overvåg tendenser – Brug værktøjerne til beskedpolitik og dashboard til beskeder enten på portalen Microsoft 365 Defender eller i Microsoft Purview-compliance-portal.
 - Søg direkte i overvågningsloggen: Søg efter alle hændelser i et angivet dato-raseri. Du kan også filtrere resultaterne på baggrund af bestemte kriterier, f.eks. den bruger, der udførte handlingen, handlingen eller destinationsobjektet.
 
 Teams for overholdelse af angivne standarder for oplysninger og sikkerhedsteams kan bruge disse værktøjer til proaktivt at gennemse aktiviteter, der udføres af både slutbrugere og administratorer på tværs af tjenester. Automatiske beskeder kan konfigureres til at sende mailmeddelelser, når visse aktiviteter finder sted i bestemte grupper af websteder – f.eks. når indhold deles fra websteder, der er kendt for at indeholde GDPR-relaterede oplysninger. Dette giver disse teams mulighed for at følge op på brugerne for at sikre, at virksomhedens sikkerhedspolitikker følges, eller for at tilbyde yderligere oplæring.

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 385b139390192d172b3bbbcbefd5efc2b793d4ab
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: c58c447a4aed08af48576b461a638c1cd43aca83
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173501"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649237"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Nyheder i Microsoft Defender for Endpoint på Linux
 
@@ -28,6 +28,15 @@ ms.locfileid: "65173501"
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+
+## <a name="1016880-30122042168800"></a>101.68.80 (30.122042.16880.0)
+
+- Tilføjet understøttelse af kerneversion `2.6.32-754.47.1.el6.x86_64` , når du kører på RHEL 6
+- På RHEL 6 kan produktet nu installeres på enheder, der kører UEK (Unbreakable Enterprise Kernel)
+- Løste et problem, hvor procesnavnet nogle gange blev vist forkert, som `unknown` da det kørte `mdatp diagnostic real-time-protection-statistics`
+- Løste en fejl, hvor produktet nogle gange fejlagtigt registrerede filer i karantænemappen
+- Løste et problem, hvor `mdatp` kommandolinjeværktøjet ikke fungerede, da `/opt` det blev tilsluttet som et blødt link
+- Forbedringer af ydeevnen & fejlrettelser
 
 ## <a name="1016577-30122032165770"></a>101.65.77 (30.122032.16577.0)
 

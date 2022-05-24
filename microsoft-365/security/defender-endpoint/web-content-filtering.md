@@ -15,16 +15,14 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 2e86aa7fc8ed304327ab2c07ec487789ad966fc7
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 29a221e60484431722be4e7104efb5b37a0408bc
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535442"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648563"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
@@ -56,7 +54,7 @@ Før du afprøver denne funktion, skal du sikre dig, at du opfylder de krav, der
 
 | Krav | Beskrivelse |
 |:---|:---|
-| Abonnement | Dit abonnement skal indeholde en af følgende:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 E5 Sikkerhed<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 eller Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [Microsoft Defender til virksomheder](../defender-business/mdb-overview.md) |
+| Abonnement | Dit abonnement skal indeholde en af følgende:<br/>- [Windows 10/11 Enterprise E5](/windows/deployment/deploy-enterprise-licenses)<br/>- [Microsoft 365 E5](https://www.microsoft.com/microsoft-365/enterprise/e5?activetab=pivot%3aoverviewtab)<br/>- Microsoft 365 E5 Sikkerhed<br/>- [Microsoft 365 E3](https://www.microsoft.com/microsoft-365/enterprise/e3?activetab=pivot%3aoverviewtab)<br/>- [Microsoft Defender for Endpoint Plan 1 eller Plan 2](../defender/eval-defender-endpoint-overview.md)<br/>- [Microsoft Defender til virksomheder](../defender-business/mdb-overview.md)<br/>- [Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium)|
 | Portaladgang | Du skal have adgang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. |
 | Operativsystem | Organisationens enheder skal køre et af følgende operativsystemer med de [nyeste antivirus-/antimalwareopdateringer](manage-updates-baselines-microsoft-defender-antivirus.md): <br/>- Windows 11<br/>- Windows 10 jubilæumsopdatering (version 1607) eller nyere |
 | Relateret beskyttelse | [Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) og [netværksbeskyttelse](network-protection.md) skal være aktiveret på organisationens enheder. |
@@ -177,7 +175,7 @@ Hvis du vil tilføje en ny politik, skal du følge disse trin:
 4. Angiv politikområdet. Vælg enhedsgrupperne for at angive, hvor politikken skal anvendes. Det er kun enheder i de valgte enhedsgrupper, der forhindres i at få adgang til websteder i de valgte kategorier.
 
    > [!IMPORTANT]
-   > Hvis du bruger Defender for Business, anvendes din politik for filtrering af webindhold som standard for alle brugere. Der gælder ikke et bestemt udsnit.
+   > Hvis du bruger enten Microsoft 365 Business Premium eller Defender for Business, anvendes din politik for filtrering af webindhold som standard for alle brugere. Der gælder ikke et bestemt udsnit.
 
 5. Gennemse oversigten, og gem politikken. Det kan tage op til to timer, før opdateringen af politikken gælder for de valgte enheder.
 
@@ -188,7 +186,7 @@ Hvis du vil tilføje en ny politik, skal du følge disse trin:
 
 ## <a name="end-user-experience"></a>Slutbrugeroplevelse
 
-Blokeringsoplevelsen for tredjepartsunderstøttede browsere leveres af Network Protection, som giver en meddelelse på systemniveau, der giver brugeren besked om en blokeret forbindelse. Hvis du vil have en mere brugervenlig oplevelse i browseren, kan du overveje at bruge Microsoft Edge.
+Blokeringsoplevelsen for tredjepartsunderstøttede browsere leveres af netværksbeskyttelse, som giver en meddelelse på systemniveau, der giver brugeren besked om en blokeret forbindelse. Hvis du vil have en mere brugervenlig oplevelse i browseren, kan du overveje at bruge Microsoft Edge.
 
 ### <a name="allow-specific-websites"></a>Tillad bestemte websteder
 
@@ -204,7 +202,7 @@ Følg disse trin for at definere en brugerdefineret indikator:
 
 ### <a name="dispute-categories"></a>Konfliktkategorier
 
-Hvis du støder på et domæne, der er forkert kategoriseret, kan du bestride kategorien direkte fra portalen.
+Hvis du støder på et domæne, der er forkert kategoriseret, kan du bestride kategorien direkte fra Microsoft 365 Defender portalen.
 
 Hvis du vil bestride kategorien for et domæne, skal du gå til **Rapporter** \> **Web protection** \> **Web Content Filtering Details** \> **Domains**. På fanen Domæner i rapporter til filtrering af webindhold kan du se en ellipse ud for hvert af domænerne. Peg på denne ellipse, og vælg **Bestridelseskategori**.
 
@@ -252,9 +250,11 @@ Brug filteret for tidsinterval øverst til venstre på siden til at vælge en ti
 
 Kun Microsoft Edge understøttes, hvis enhedens operativsystemkonfiguration er Server (**cmd** \> **Systeminfo** \> **OS Configuration**). Netværksbeskyttelse understøttes kun i tilstanden Undersøg på serverenheder, som er ansvarlig for at beskytte trafik på tværs af understøttede tredjepartsbrowsere.
 
-Det er kun Microsoft Edge, der understøttes, og Network Protection understøttes ikke på Windows 10 Azure Virtual Desktop-værter med flere sessioner.
+Det er kun Microsoft Edge, der understøttes, og netværksbeskyttelse understøttes ikke på Windows 10 Azure Virtual Desktop-værter med flere sessioner.
 
-Network Protection understøtter i øjeblikket ikke SSL-inspektion, hvilket kan resultere i, at nogle websteder tillades af filtrering af webindhold, som normalt ville blive blokeret. Websteder vil blive tilladt på grund af manglende synlighed i krypteret trafik, efter at TLS-håndtrykket har fundet sted, og en manglende evne til at fortolke visse omdirigeringer.  Dette omfatter omdirigeringer fra nogle webbaserede maillogonsider til postkassesiden. Som en accepteret løsning kan du oprette en brugerdefineret blokeringsindikator for logonsiden for at sikre, at ingen brugere kan få adgang til webstedet. Vær opmærksom på, at dette kan blokere deres adgang til andre tjenester, der er knyttet til det samme websted. 
+Netværksbeskyttelse understøtter i øjeblikket ikke SSL-inspektion, hvilket kan resultere i, at nogle websteder tillades af filtrering af webindhold, som normalt ville blive blokeret. Websteder vil blive tilladt på grund af manglende synlighed i krypteret trafik, efter at TLS-håndtrykket har fundet sted, og en manglende evne til at fortolke visse omdirigeringer.  Dette omfatter omdirigeringer fra nogle webbaserede maillogonsider til postkassesiden. Som en accepteret løsning kan du oprette en brugerdefineret blokeringsindikator for logonsiden for at sikre, at ingen brugere kan få adgang til webstedet. Vær opmærksom på, at dette kan blokere deres adgang til andre tjenester, der er knyttet til det samme websted. 
+
+Hvis du bruger Microsoft 365 Business Premium eller Microsoft Defender til virksomheder, kan du definere én politik for filtrering af webindhold for dit miljø. Denne politik gælder som standard for alle brugere.
 
 ## <a name="see-also"></a>Se også
 

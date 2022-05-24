@@ -1,5 +1,5 @@
 ---
-title: Overvejelser i forbindelse med implementering af angrebssimulering og ofte stillede spørgsmål
+title: Ofte stillede spørgsmål og overvejelser i forbindelse med udrulning af kursus i angrebssimulering
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -15,171 +15,176 @@ ms.assetid: ''
 ms.collection: m365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om overvejelser i forbindelse med installation og ofte stillede spørgsmål om simulering af angreb og kurser i Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2-organisationer.
+description: Administratorer kan få mere at vide om overvejelser i forbindelse med udrulning og ofte stillede spørgsmål om simulering af angreb og oplæring i Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2-organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 57b4d684e52fd51a2ece279cc7322389a953a17c
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 4145dcd073ec97c43ac64eecdbd25c48612a9b83
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64467791"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65649015"
 ---
-# <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Overvejelser i forbindelse med implementering af angrebssimulering og ofte stillede spørgsmål
+# <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Ofte stillede spørgsmål og overvejelser i forbindelse med udrulning af kursus i angrebssimulering
 
-Kursus i simulering af angreb gør det muligt for Microsoft 365 E5- eller Microsoft Defender for Office 365 Plan 2-organisationer at måle og administrere sociale risici ved at tillade oprettelse og administration af phishing-simulering, der drives af virkelige phishing-nyttedata. Hyper-målrettet uddannelse, leveret i partnerskab med Novanova-sikkerhed, hjælper med at forbedre viden og ændre medarbejdernes adfærd.
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-Du kan finde flere oplysninger om at komme i gang med at bruge angrebssimuleringskursus [i Kom i gang med at bruge simulering af angreb](attack-simulation-training-get-started.md).
+**Gælder for**
+- [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
-Mens hele simuleringsoprettelses- og planlægningsoplevelsen er designet til at være frit flydende og uden problemer, kræver kørsel af simulering på en virksomhedsskala ofte planlægning. Denne artikel er med til at tage hånd om specifikke udfordringer, som vi ser, når vores kunder kører simulering i deres egne miljøer.
+Oplæring i simulering af angreb gør det muligt for Microsoft 365 E5- eller Microsoft Defender for Office 365 Plan 2-organisationer at måle og administrere risici inden for social engineering ved at tillade oprettelse og administration af phishing-simuleringer, der er drevet af den virkelige verden, de-våbeniserede phishing-nyttedata. Hyper-målrettet træning, der leveres i partnerskab med Terranova security, hjælper med at forbedre viden og ændre medarbejdernes adfærd.
+
+Du kan finde flere oplysninger om at komme i gang med oplæringen af simulering af angreb under [Kom i gang med at bruge træningen til simulering af angreb](attack-simulation-training-get-started.md).
+
+Mens hele simuleringsoprettelses- og planlægningsoplevelsen er designet til at være fristrøms- og friktionsfri, kræver det ofte planlægning at køre simuleringer i virksomhedsskala. Denne artikel hjælper med at håndtere specifikke udfordringer, som vi ser, når vores kunder kører simuleringer i deres egne miljøer.
 
 ## <a name="issues-with-end-user-experiences"></a>Problemer med slutbrugeroplevelser
 
-### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>URL-adresser til phishing-simulering blokeret af Google Pengeskab browsing
+### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>URL-adresser til phishing-simulering blokeret af Google Pengeskab Browsing
 
-En URL-rytjeneste kan identificere en eller flere af de URL-adresser, der bruges af angrebssimuleringstræning, som usikre. Google Pengeskab i Google Chrome blokerer nogle af de simulerede phishing-URL-adresser med en meddelelse om **, at webstedet er vil være vildledende**. Vi arbejder med mange leverandører af URL-omdømme til altid at tillade vores SIM-webadresser, men vi har ikke altid fuld dækning.
+En TJENESTE til URL-omdømme identificerer muligvis en eller flere af de URL-adresser, der bruges af oplæringen i simulering af angreb som usikre. Google Pengeskab browsing i Google Chrome blokerer nogle af de simulerede phishing-URL-adresser med en **meddelelse om vildledende websted forude**. Selvom vi arbejder med mange leverandører af URL-omdømme for altid at tillade vores simulerings-URL-adresser, har vi ikke altid fuld dækning.
 
 :::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Advarsel om vildledende websted i Google Chrome" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
 Bemærk, at dette problem ikke påvirker Microsoft Edge.
 
-Som en del af planlægningsfasen skal du sørge for at kontrollere tilgængeligheden af URL-adressen i dine understøttede webbrowsere, før du bruger URL-adressen i en phishingkampagne. Hvis URL-adresserne er blokeret af Google Pengeskab browsing, skal du følge denne [vejledning](https://support.google.com/chrome/a/answer/7532419) fra Google for at tillade adgang til URL-adresserne.
+Som en del af planlægningsfasen skal du kontrollere tilgængeligheden af URL-adressen i dine understøttede webbrowsere, før du bruger URL-adressen i en phishing-kampagne. Hvis URL-adresserne er blokeret af Google Pengeskab Browsing, [skal du følge denne vejledning](https://support.google.com/chrome/a/answer/7532419) fra Google for at give adgang til URL-adresserne.
 
-Se Kom i [gang med at bruge simulering af angreb](attack-simulation-training-get-started.md) for listen over URL-adresser, der aktuelt bruges af simuleringskurser til angreb.
+Se [Oplæring i at komme i gang med at bruge simulering af angreb](attack-simulation-training-get-started.md) for at få vist en liste over URL-adresser, der i øjeblikket bruges af træningen til simulering af angreb.
 
-### <a name="phishing-simulation-and-admin-urls-blocked-by-network-proxy-solutions-and-filter-drivers"></a>Phishing-simulering og administratorwebadresser blokeret af netværksproxyløsninger og filtreringsdrivere
+### <a name="phishing-simulation-and-admin-urls-blocked-by-network-proxy-solutions-and-filter-drivers"></a>Phishingsimulerings- og administrator-URL-adresser, der er blokeret af netværksproxyløsninger og filterdrivere
 
-Både URL-adresser til phishing-simulering og administratorwebadresser kan blive blokeret eller afbrudt af dine mellemliggende sikkerhedsenheder eller filtre. Eksempel:
+Både URL-adresser til phishing-simulering og administrator-URL-adresser kan blive blokeret eller droppet af dine mellemliggende sikkerhedsenheder eller filtre. Eksempel:
 
 - Firewalls
 - WAF-løsninger (Web Application Firewall)
-- Tredjepartsfilterdrivere (f.eks. filtre i kernetilstand)
+- Filterdrivere fra tredjepart (f.eks. kernetilstandsfiltre)
 
-Vi har oplevet, at få kunder blev blokeret i dette lag, men det sker. Hvis du støder på problemer, kan du overveje at konfigurere følgende URL-adresser til at tilsidesætte scanning fra dine sikkerhedsenheder eller filtre efter behov:
+Selvom vi har set få kunder blive blokeret på dette lag, sker det. Hvis du støder på problemer, kan du overveje at konfigurere følgende URL-adresser for at omgå scanning fra dine sikkerhedsenheder eller filtre efter behov:
 
-- De simulerede phishing-URL-adresser som beskrevet i Kom i [gang med at bruge simulering af angreb](attack-simulation-training-get-started.md).
+- De simulerede phishing-URL-adresser som beskrevet i [Kom i gang med at bruge oplæring i simulering af angreb](attack-simulation-training-get-started.md).
 - <https://security.microsoft.com/attacksimulator>
 - <https://security.microsoft.com/attacksimulationreport>
 - <https://security.microsoft.com/trainingassignments>
 
 ### <a name="simulation-messages-not-delivered-to-all-targeted-users"></a>Simuleringsmeddelelser leveres ikke til alle målrettede brugere
 
-Det er muligt, at antallet af brugere, der faktisk modtager simuleringsmails, er mindre end antallet af brugere, der blev målrettet af simulering. Følgende typer af brugere udelades som en del af målvalideringen:
+Det er muligt, at antallet af brugere, der rent faktisk modtager simuleringsmails, er mindre end antallet af brugere, der blev målrettet af simuleringen. Følgende typer brugere udelades som en del af målvalideringen:
 
-- Ugyldig modtagermailadresser.
+- Ugyldige modtagermailadresser.
 - Gæstebrugere.
 - Brugere, der ikke længere er aktive i Azure Active Directory (Azure AD).
 
-Kun gyldige, ikke-gæstebrugere med en gyldig postkasse medtages i simuleringerne. Hvis du bruger distributionsgrupper eller mailaktiverede sikkerhedsgrupper til at målrette brugere, kan du bruge cmdlet'en [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) [i Exchange Online PowerShell til](/powershell/exchange/connect-to-exchange-online-powershell) at få vist og validere distributionsgruppemedlemmer.
+Det er kun gyldige brugere, der ikke er gæstebrugere med en gyldig postkasse, der medtages i simuleringer. Hvis du bruger distributionsgrupper eller mailaktiverede sikkerhedsgrupper til målbrugere, kan du bruge cmdlet'en [Get-DistributionGroupMember](/powershell/module/exchange/get-distributiongroupmember) i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) til at få vist og validere medlemmer af distributionsgruppen.
 
-## <a name="issues-with-attack-simulation-training-reporting"></a>Problemer med rapportering af angrebssimulering
+## <a name="issues-with-attack-simulation-training-reporting"></a>Problemer med oplæringsrapportering af simulering af angreb
 
-### <a name="attack-simulation-training-reports-do-not-contain-any-activity-details"></a>Træningsrapporter for angrebssimulering indeholder ingen aktivitetsoplysninger
+### <a name="attack-simulation-training-reports-do-not-contain-any-activity-details"></a>Oplæringsrapporter om simulering af angreb indeholder ingen aktivitetsoplysninger
 
-Kursus om angrebssimulering leveres med omfattende, brugbar indsigt, der holder dig informeret om status for trusselsparathed for dine medarbejdere. Hvis træningsrapporter for angrebssimulering ikke er udfyldt med data, skal du kontrollere, at søgning i overvågningsloggen er aktiveret i din organisation (den er slået til som standard).
+Træning i simulering af angreb leveres med omfattende indsigt, der kan handles på, og som holder dig informeret om dine medarbejderes trusselsparathed. Hvis oplæringsrapporter om simulering af angreb ikke udfyldes med data, skal du kontrollere, at søgning i overvågningsloggen er slået til i din organisation (den er som standard slået til).
 
-Søgning i overvågningsloggen er påkrævet af kursus i simulering af angreb, så hændelser kan registreres, optages og læses tilbage. Hvis du deaktiverer søgning i overvågningsloggen, har det følgende konsekvenser for kursus i angrebssimulering:
+Søgning i overvågningslog er påkrævet ved oplæring af simulering af angreb, så hændelser kan registreres, registreres og læses tilbage. Deaktivering af søgning i overvågningslog har følgende konsekvenser for oplæringen af simulering af angreb:
 
-- Rapporteringsdata er ikke tilgængelige på tværs af alle rapporter. Rapporterne vil blive vist som tomme.
-- Uddannelsestildelinger blokeres, fordi data ikke er tilgængelige.
+- Rapporteringsdata er ikke tilgængelige på tværs af alle rapporter. Rapporterne vil se tomme ud.
+- Oplæringsopgaver er blokeret, fordi data ikke er tilgængelige.
 
-Hvis du vil aktivere søgning i overvågningsloggen, skal [du se Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
+Hvis du vil slå søgning i overvågningslog til, skal du se [Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
 
 > [!NOTE]
-> Oplysninger om tom aktivitet kan også skyldes, at der ikke tildeles E5-licenser til brugere. Kontrollér, at der er tildelt mindst én E5-licens til en aktiv bruger for at sikre, at rapporteringshændelser registreres og optages.
+> Tomme aktivitetsoplysninger kan også skyldes, at der ikke tildeles E5-licenser til brugerne. Bekræft, at mindst én E5-licens er tildelt en aktiv bruger for at sikre, at rapporteringshændelser registreres og registreres.
 
 ### <a name="simulation-reports-are-not-updated-immediately"></a>Simuleringsrapporter opdateres ikke med det samme
 
-Detaljerede simuleringsrapporter opdateres ikke, umiddelbart efter du starter en kampagne. Bare rolig; denne funktionsmåde forventes.
+Detaljerede simuleringsrapporter opdateres ikke umiddelbart efter, at du har startet en kampagne. Bare rolig. denne funktionsmåde forventes.
 
-Hver enkelt simuleringskampagne har en livscyklus. Når simulering blev oprettet, er simulering i **tilstanden** Planlagt. Når simulering starter, skiftes der til **statussen I** gang. Når den er fuldført, skiftes simuleringsovergange **til tilstanden** Fuldført.
+Alle simuleringskampagner har en livscyklus. Når simuleringen oprettes første gang, er den i tilstanden **Planlagt** . Når simuleringen starter, skifter den til tilstanden **I gang** . Når det er fuldført, overgår simuleringstilstanden til tilstanden **Fuldført** .
 
-Mens en simulering er **i den planlagte** tilstand, vil simuleringsrapporterne for det meste være tomme. I dette trin er simuleringsprogrammet i gang med at løse brugerens mailadresser, udvide distributionsgrupper, fjerne gæstebrugere fra listen osv.:
+Mens en simulering er i tilstanden **Planlagt** , er simuleringsrapporterne for det meste tomme. I denne fase løser simuleringsprogrammet mailadresserne for destinationsbrugeren, udvider distributionsgrupper, fjerner gæstebrugere fra listen osv.:
 
-:::image type="content" source="../../media/attack-sim-training-faq-scheduled-state.png" alt-text="Simuleringsoplysninger, der viser simulering i den planlagte tilstand" lightbox="../../media/attack-sim-training-faq-scheduled-state.png":::
+:::image type="content" source="../../media/attack-sim-training-faq-scheduled-state.png" alt-text="Simuleringsoplysninger, der viser simuleringen i tilstanden Planlagt" lightbox="../../media/attack-sim-training-faq-scheduled-state.png":::
 
-Når simuleringen går **ind i fasen** I gang, vil du bemærke oplysninger, der begynder at gå ind i rapporteringen:
+Når simuleringen går ind i fasen **I gang** , vil du bemærke, at oplysninger begynder at sive ind i rapporteringen:
 
-:::image type="content" source="../../media/attack-sim-training-faq-in-progress-state.png" alt-text="Simuleringsdetaljer, der viser simulering i statussen I gang" lightbox="../../media/attack-sim-training-faq-in-progress-state.png":::
+:::image type="content" source="../../media/attack-sim-training-faq-in-progress-state.png" alt-text="Simuleringsoplysninger, der viser simuleringen i tilstanden I gang" lightbox="../../media/attack-sim-training-faq-in-progress-state.png":::
 
-Det kan tage op til 30 minutter, før de enkelte simuleringsrapporter opdateres efter overgangen **til den igangværende** tilstand. Rapportdataene fortsætter med at opbygge, indtil simulering når **tilstanden Fuldført** . Rapporteringsopdateringer sker med følgende intervaller:
+Det kan tage op til 30 minutter, før de enkelte simuleringsrapporter opdateres efter overgangen til tilstanden **I gang** . Rapportdataene fortsætter med at blive oprettet, indtil simuleringen når tilstanden **Fuldført** . Rapporteringsopdateringer forekommer med følgende intervaller:
 
 - Hvert 10. minut i de første 60 minutter.
 - Hvert 15. minut efter 60 minutter indtil 2 dage.
-- Hver 30. minut efter 2 dage indtil 7 dage.
-- Hver 60. minut efter 7 dage.
+- Hvert 30. minut efter 2 dage indtil 7 dage.
+- Hvert 60. minut efter 7 dage.
 
-Widgets på **siden Oversigt** giver et hurtigt øjebliksbillede af din organisations simuleringsbaserede sikkerhedsoverholdelse over tid. Da disse widgets afspejler din overordnede sikkerhed og rejse over tid, opdateres de, når hver simuleringskampagne er gennemført.
+Widgets på siden **Oversigt** giver et hurtigt øjebliksbillede af din organisations simuleringsbaserede sikkerhedsholdning over tid. Da disse widgets afspejler din overordnede sikkerhedsholdning og din rejse over tid, opdateres de, når hver simuleringskampagne er fuldført.
 
 > [!NOTE]
 > Du kan bruge indstillingen **Eksportér** på de forskellige rapporteringssider til at udtrække data.
 
-### <a name="messages-reported-as-phishing-by-users-arent-appearing-in-simulation-reports"></a>Meddelelser, der rapporteres som phishing af brugere, vises ikke i simuleringsrapporter
+### <a name="messages-reported-as-phishing-by-users-arent-appearing-in-simulation-reports"></a>Meddelelser, der er rapporteret som phishing af brugere, vises ikke i simuleringsrapporter
 
-Simuleringsrapporter i angrebskursus giver oplysninger om brugeraktivitet. Eksempel:
+Simuleringsrapporter i Oplæring af angrebssimulator indeholder oplysninger om brugeraktivitet. Eksempel:
 
-- Brugere, der klikkede på linket i meddelelsen.
-- Brugere, der har opgivet deres legitimationsoplysninger.
+- Brugere, der har klikket på linket i meddelelsen.
+- Brugere, der opgav deres legitimationsoplysninger.
 - Brugere, der har rapporteret meddelelsen som phishing.
 
-Hvis meddelelser, som brugere rapporterede som phishing, ikke registreres i simuleringsrapporter for angrebssimulering, kan der være en Exchange-regel for mailflow (også kaldet en transportregel), der blokerer leveringen af de rapporterede meddelelser til Microsoft. Kontrollér, at regler for mailflow ikke blokerer levering til følgende mailadresser:
+Hvis meddelelser, som brugere har rapporteret som phishing, ikke registreres i simuleringsrapporter om simulering af angrebssimulering, kan der være en regel for Exchange mailflow (også kendt som en transportregel), der blokerer leveringen af de rapporterede meddelelser til Microsoft. Kontrollér, at alle regler for mailflow ikke blokerer levering til følgende mailadresser:
 
 - junk@office365.microsoft.com
 - abuse@messaging.microsoft.com
 - phish@office365.microsoft.com
-- not\_ junk@office365.microsoft.com
+- - Nej\_ junk@office365.microsoft.com
 
 ## <a name="other-frequently-asked-questions"></a>Andre ofte stillede spørgsmål
 
-### <a name="q-what-is-the-recommended-method-to-target-users-for-simulation-campaigns"></a>Sp: Hvad er den anbefalede metode til at målrette brugere mod simulering af kampagner?
+### <a name="q-what-is-the-recommended-method-to-target-users-for-simulation-campaigns"></a>Spørgsmål: Hvad er den anbefalede metode til at målrette brugere til simuleringskampagner?
 
-A: Der findes flere forskellige muligheder for målbrugere:
+Svar: Der er flere tilgængelige indstillinger for målbrugere:
 
 - Medtag alle brugere (i øjeblikket tilgængelige for organisationer med mindre end 40.000 brugere).
 - Vælg bestemte brugere.
 - Vælg brugere fra en CSV-fil (én mailadresse pr. linje).
-- Azure AD - gruppebaseret målretning.
+- Azure AD gruppebaseret målretning.
 
-Vi har fundet ud af, at kampagner, hvor de målrettede brugere identificeres af Azure AD-grupper, generelt er nemmere at administrere.
+Vi har opdaget, at kampagner, hvor de målrettede brugere identificeres af Azure AD grupper, generelt er nemmere at administrere.
 
-### <a name="q-are-there-any-limits-in-targeting-users-while-importing-from-a-csv-or-adding-users"></a>Sp: Er der nogen begrænsninger i målretning af brugere, når de importerer fra en CSV-fil eller tilføjer brugere?
+### <a name="q-are-there-any-limits-in-targeting-users-while-importing-from-a-csv-or-adding-users"></a>Spørgsmål: Er der nogen begrænsninger for målretning mod brugere, når du importerer fra en CSV eller tilføjer brugere?
 
-A: Grænsen for at importere modtagere fra en CSV-fil eller føje individuelle modtagere til en simulering er 40.000.
+Svar: Grænsen for import af modtagere fra en CSV-fil eller tilføjelse af individuelle modtagere til en simulering er 40.000.
 
-En modtager kan være en individuel bruger eller en gruppe. En gruppe kan indeholde hundred- eller tusindvis af modtagere, så en faktisk grænse er ikke sat på antallet af individuelle brugere.
+En modtager kan være en individuel bruger eller en gruppe. En gruppe kan indeholde hundred- eller tusindvis af modtagere, så der er ikke en faktisk grænse for antallet af individuelle brugere.
 
-Det kan være besværligt at administrere en stor CSV-fil eller tilføje mange individuelle modtagere. Brug af Azure AD-grupper forenkler den overordnede administration af simulering.
+Det kan være besværligt at administrere en stor CSV-fil eller tilføje mange individuelle modtagere. Brug af Azure AD grupper forenkler den overordnede administration af simuleringen.
 
-### <a name="q-does-microsoft-provide-payloads-in-other-languages"></a>Sp: Leverer Microsoft nyttedata på andre sprog?
+### <a name="q-does-microsoft-provide-payloads-in-other-languages"></a>Spørgsmål: Leverer Microsoft nyttedata på andre sprog?
 
-A: I øjeblikket er der mere end 40 oversatte nyttedata tilgængelige på mere end 10 sprog: kinesisk (forenklet), kinesisk (traditionelt), engelsk, fransk, tysk, italiensk, japansk, koreansk, portugisisk, russisk, spansk og hollandsk. Vi har bemærket, at enhver direkte oversættelse eller maskinoversættelse af eksisterende nyttedata til andre sprog vil føre til unøjagtigheder og reduceret relevans.
+Svar: Der er i øjeblikket mere end 40 lokaliserede nyttedata tilgængelige på mere end 10 sprog: kinesisk (forenklet), kinesisk (traditionelt), engelsk, fransk, tysk, italiensk, japansk, koreansk, portugisisk, russisk, spansk og hollandsk. Vi har bemærket, at enhver direkte oversættelse eller maskinoversættelse af eksisterende nyttedata til andre sprog vil føre til unøjagtigheder og reduceret relevans.
 
-Når det er sagt, kan du oprette din egen nyttedata på et sprog efter eget valg ved hjælp af den brugerdefinerede oprettelsesoplevelse af nyttedata. Vi anbefaler også på det kraftigste, at du høster eksisterende nyttedata, der blev brugt til at målrette brugerne i en bestemt geografi. Med andre ord, lad hackere lokalisere indholdet for dig.
+Når det er sagt, kan du oprette din egen nyttedata på det sprog, du vælger, ved hjælp af den brugerdefinerede brugeroplevelse til oprettelse af nyttedata. Vi anbefaler også på det kraftigste, at du høster eksisterende nyttedata, der blev brugt til at målrette brugere i et bestemt geografisk område. Med andre ord skal du lade angriberne lokalisere indholdet for dig.
 
-### <a name="q-how-can-i-switch-to-other-languages-for-my-admin-portal-and-training-experience"></a>Sp: Hvordan kan jeg skifte til andre sprog for min administrationsportal og kursusoplevelse?
+### <a name="q-how-can-i-switch-to-other-languages-for-my-admin-portal-and-training-experience"></a>Spørgsmål: Hvordan kan jeg skifte til andre sprog for min administrationsportal og uddannelse?
 
-A: I Microsoft 365 eller Office 365 er sprogkonfiguration specifik og centraliseret for hver brugerkonto. Du kan finde en vejledning til, hvordan du ændrer din sprogindstilling, under Skift [visningssprog og tidszone i Microsoft 365 for Business](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
+Svar: I Microsoft 365 eller Office 365 er sprogkonfigurationen specifik og centraliseret for hver brugerkonto. Du kan finde oplysninger om, hvordan du ændrer sprogindstillingen, [under Skift visningssprog og tidszone i Microsoft 365 for Business](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
 
-Bemærk, at det kan tage op til 30 minutter at synkronisere konfigurationen på tværs af alle tjenester.
+Bemærk, at det kan tage op til 30 minutter at synkronisere konfigurationsændringen på tværs af alle tjenester.
 
-### <a name="q-can-i-trigger-a-test-simulation-to-understand-what-it-looks-like-prior-to-launching-a-full-fledged-campaign"></a>Sp: Kan jeg udløse en testsimulering for at forstå, hvordan den ser ud, før jeg starter en fuldgyldig kampagne?
+### <a name="q-can-i-trigger-a-test-simulation-to-understand-what-it-looks-like-prior-to-launching-a-full-fledged-campaign"></a>Spørgsmål: Kan jeg udløse en testsimulering for at forstå, hvordan det ser ud, før jeg lancerer en færdig kampagne?
 
-A: Ja, det kan du! På den sidste side **i Simulering** af simulering i guiden til at oprette en ny simulering er der mulighed for **at Sende en test**. Denne indstilling sender en eksempel på phishing-simuleringsmeddelelse til den bruger, der er logget på i øjeblikket. Når du har valideret phishingmeddelelsen i din indbakke, kan du indsende simulering.
+Svar: Ja, det kan du! På den allernyste side **med simulering af gennemsyn** i guiden til oprettelse af en ny simulering er der mulighed for at **sende en test**. Denne indstilling sender en eksempel på phishing-simulering til den bruger, der i øjeblikket er logget på. Når du har valideret phishing-meddelelsen i din indbakke, kan du sende simuleringen.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Knappen Send en test på simuleringssiden Gennemse" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-review-simulation.png" alt-text="Knappen Send en test på siden Gennemse simulering" lightbox="../../media/attack-sim-training-simulations-review-simulation.png":::
 
-### <a name="q-can-i-target-users-that-belong-to-a-different-tenant-as-part-of-the-same-simulation-campaign"></a>Sp: Kan jeg målrette brugere, der tilhører en anden lejer som en del af den samme simuleringskampagne?
+### <a name="q-can-i-target-users-that-belong-to-a-different-tenant-as-part-of-the-same-simulation-campaign"></a>Spørgsmål: Kan jeg målrette brugere, der tilhører en anden lejer, som en del af den samme simuleringskampagne?
 
-Sv.: Nej. I øjeblikket understøttes simuleringer ikke på tværs af lejere. Kontrollér, at alle dine målrettede brugere er i samme lejer. Alle brugere på tværs af lejere eller gæstebrugere vil blive udelukket fra simuleringskampagnen.
+Sv.: Nej. Simuleringer på tværs af lejere understøttes ikke i øjeblikket. Bekræft, at alle dine målrettede brugere er i den samme lejer. Alle brugere på tværs af lejere eller gæstebrugere vil blive udelukket fra simuleringskampagnen.
 
-### <a name="q-how-does-region-aware-delivery-work"></a>Sp: Hvordan fungerer områdeafhængig levering?
+### <a name="q-how-does-region-aware-delivery-work"></a>Spørgsmål: Hvordan fungerer levering, der er opmærksom på området?
 
-A: Områdeafhængig levering bruger timezone-attributten for den målrettede brugers postkasse og logikken "ikke før" til at bestemme, hvornår meddelelsen skal leveres. Overvej f.eks. følgende scenarie:
+Svar: Levering, der er opmærksom på områder, bruger attributten TimeZone for den målrettede brugers postkasse og logikken "ikke før" til at bestemme, hvornår meddelelsen skal leveres. Overvej f.eks. følgende scenarie:
 
-- Kl. 07:00 i tidszonen i Pacific (UTC-8) opretter og planlægger en kampagne, der starter kl. 9:00 på samme dag.
-- UserA er i den østlig tidszone (UTC-5).
-- UserB er også i Pacific-tidszonen.
+- Kl. 07:00 i Pacific-tidszonen (UTC-8) opretter og planlægger en kampagne til at starte kl. 9:00 samme dag.
+- UserA er i tidszonen Eastern (UTC-5).
+- UserB er også i tidszonen Pacific.
 
-Kl. 9:00 på samme dag sendes simuleringsmeddelelsen til BrugerB. Med områdeafhængig levering sendes meddelelsen ikke til UserA på samme dag, fordi tidspunktet for 9:00 Pacific time er 12:00 Eastern time. I stedet sendes meddelelsen til UserA kl. 9:00 Østlig tid den følgende dag.
+Kl. 9:00 samme dag sendes simuleringsmeddelelsen til UserB. Med områdeorienteret levering sendes meddelelsen ikke til BrugerA samme dag, fordi kl. 9:00 Pacific time er kl. 12:00 Eastern time. Meddelelsen sendes i stedet til UserA kl. 9:00 Eastern time den følgende dag.
 
-Så under den indledende kørsel af en kampagne, hvor områdespecifik levering er aktiveret, kan det se ud som om, simuleringsmeddelelsen kun blev sendt til brugere i en bestemt tidszone. Men efterhånden som tiden går, og flere brugere kommer ind i området, øges de målrettede brugere.
+Så i den indledende kørsel af en kampagne med områdeorienteret levering aktiveret kan det se ud til, at simuleringsmeddelelsen kun blev sendt til brugere i en bestemt tidszone. Men efterhånden som tiden går, og flere brugere kommer i omfang, øges de målrettede brugere.

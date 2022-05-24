@@ -17,14 +17,20 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e591330137f2f2fd92ef05f64f5368cca533fc48
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: ef3fc69cf07f4b643e12bab96a73b68627e07203
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599315"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648233"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitik
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
+
+**Gælder for:**
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 Karantænepolitikker (tidligere kaldet _karantænetags_) i Exchange Online Protection (EOP) og Microsoft Defender for Office 365 gør det muligt for administratorer at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne baseret på, hvorfor meddelelsen blev sat i karantæne.
 

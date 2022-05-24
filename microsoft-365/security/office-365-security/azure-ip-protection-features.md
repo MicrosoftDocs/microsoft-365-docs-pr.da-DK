@@ -19,16 +19,14 @@ ms.custom:
 description: I denne artikel forklares de ændringer, der udrulles til beskyttelsesfunktionerne i Azure Information Protection
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dbfc21b879745567c9273c79356ff60e498d95ff
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 38dd1accf4641d6dfe3f66574b1072e2500cb914
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130818"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647815"
 ---
 # <a name="protection-features-in-azure-information-protection-rolling-out-to-existing-tenants"></a>Beskyttelsesfunktioner i Azure Information Protection udrulning til eksisterende lejere
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
@@ -65,11 +63,11 @@ Hvis din organisation har købt en berettiget Office 365 licens, påvirkes din l
 
 ## <a name="can-i-use-azure-information-protection-with-active-directory-rights-management-services-ad-rms"></a>Kan jeg bruge Azure Information Protection med Active Directory Rights Management-tjenester (AD RMS)?
 
-Nej. Dette er ikke et understøttet installationsscenarie. Uden at tage de ekstra fravalgstrin kan nogle computere muligvis begynde at bruge Azure Rights Management-tjenesten automatisk og også oprette forbindelse til AD RMS-klyngen. Dette scenarie understøttes ikke og har upålidelige resultater, så det er vigtigt, at du fravælger denne ændring inden for de næste 30 dage, før vi udruller disse nye funktioner. Du kan få oplysninger om, hvordan du fravælger, under "Jeg bruger AD RMS, hvordan fravælger jeg?" senere i denne artikel. Hvis du foretrækker at overføre, skal du se [Overførsel fra AD RMS til Azure Information Protection.](/azure/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms)
+Nej. Dette er ikke et understøttet installationsscenarie. Uden at tage de ekstra fravalgstrin kan nogle computere automatisk begynde at bruge Azure Rights Management-tjenesten og også oprette forbindelse til AD RMS-klyngen. Dette scenarie understøttes ikke og har upålidelige resultater, så det er vigtigt, at du fravælger denne ændring inden for de næste 30 dage, før vi udruller disse nye funktioner. Du kan få oplysninger om, hvordan du fravælger, under "Jeg bruger AD RMS, hvordan fravælger jeg?" senere i denne artikel. Hvis du foretrækker at overføre, skal du se [Overførsel fra AD RMS til Azure Information Protection.](/azure/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms)
 
 ## <a name="how-do-i-know-if-im-using-ad-rms"></a>Hvordan gør jeg vide, om jeg bruger AD RMS?
 
-Brug disse instruktioner fra [Forberedelse af miljøet til Azure Rights Management, når du også har Active Directory Rights Management-tjenester (AD RMS)](/azure/information-protection/deploy-use/prepare-environment-adrms) for at kontrollere, om du har installeret AD RMS:
+Brug disse instruktioner fra [Forberedelse af miljøet til Azure Rights Management når du også har Active Directory Rights Management-tjenester (AD RMS)](/azure/information-protection/deploy-use/prepare-environment-adrms) for at kontrollere, om du har installeret AD RMS:
 
 1. Selvom det er valgfrit, publicerer de fleste AD RMS-installationer tjenesteforbindelsespunktet (SCP) til Active Directory, så domænecomputere kan finde AD RMS-klyngen.
 

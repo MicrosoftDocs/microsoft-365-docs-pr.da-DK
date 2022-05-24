@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 5f04933d54bf02732fea34df25b25e3996e23932
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 825605f932b3732ba27af7ec95160f34959356b0
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705077"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648321"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Microsoft Defender for Endpoint på Linux
 
@@ -132,6 +132,7 @@ Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i
        - 2.6.32 754.39.1.el6.x86_64
        - 2.6.32 754.41.2.el6.x86_64
        - 2.6.32-754.43.1.el6.x86_64
+       - 2.6.32-754.47.1.el6.x86_64
        - 2.6.32 754.6.3.el6.x86_64
        - 2.6.32-754.9.1.el6.x86_64
 

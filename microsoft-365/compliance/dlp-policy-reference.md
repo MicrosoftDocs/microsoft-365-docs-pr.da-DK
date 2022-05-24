@@ -19,16 +19,18 @@ ms.collection:
 recommendations: false
 description: DLP-politikkomponent og konfigurationsreference
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 169fb93f7343fd038af9e7b8ae789dabc871c6aa
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 1ad00a36f48849ca110a598f92c5536ef7b21843
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64713993"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648602"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
-Politikker til forebyggelse af datatab (DLP) har mange komponenter, der skal konfigureres. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview Forebyggelse af datatab politikker (DLP) har mange komponenter at konfigurere. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
 
 ## <a name="policy-templates"></a>Politikskabeloner 
 
@@ -108,8 +110,8 @@ En DLP-politik kan finde og beskytte elementer, der indeholder følsomme oplysni
 |OneDrive for Business konti| konto eller distributionsgruppe |data-at-rest </br> data i brug|Nej|
 |Teams chat- og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
 |Microsoft Defender for Cloud Apps   | forekomst af cloudapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til cloudapps, der ikke er fra Microsoft](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
-|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at vide om Microsoft 365 forebyggelse af datatab i Slutpunkt](endpoint-dlp-learn-about.md#learn-about-microsoft-365-endpoint-data-loss-prevention) </br>- [Kom i gang med forebyggelse af datatab i Slutpunkt](endpoint-dlp-getting-started.md#get-started-with-endpoint-data-loss-prevention) </br>- [Konfigurer indstillingerne for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
-|Lagre i det lokale miljø (filshares og SharePoint)    |Repository         | data-at-rest         | - [Få mere at vide om Microsoft 365 forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-learn.md#learn-about-the-microsoft-365-data-loss-prevention-on-premises-scanner) </br> - [Kom i gang med forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
+|Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at vide om forebyggelse af datatab for Slutpunkt](endpoint-dlp-learn-about.md) </br>- [Kom i gang med forebyggelse af datatab i Slutpunkt](endpoint-dlp-getting-started.md) </br>- [Konfigurer indstillingerne for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
+|Lagre i det lokale miljø (filshares og SharePoint)    |Repository         | data-at-rest         | - [Få mere at vide om forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-learn.md) </br> - [Kom i gang med forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
 |PowerBI| Arbejdsområder | data i brug | Nej|
 
 Hvis du vælger at inkludere bestemte distributionsgrupper i Exchange, begrænses DLP-politikken kun til medlemmerne af den pågældende gruppe. På samme måde udelukker udeladelse af en distributionsgruppe alle medlemmer af den pågældende distributionsgruppe fra politikevaluering. Du kan vælge at tilpasse en politik til medlemmer af distributionslister, dynamiske distributionsgrupper og sikkerhedsgrupper. En DLP-politik kan ikke indeholde mere end 50 sådanne medtagelser og udeladelser.
@@ -539,7 +541,7 @@ Konfigurationsindstillinger for brugermeddelelser og politiktip varierer afhæng
 
 Du kan aktivere/deaktivere brugermeddelelser for forskellige Microsoft-apps. [Se reference til tip til forebyggelse af datatab](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
 
-- Du kan aktivere/deaktivere **Giv brugere i Office 365-tjenesten besked** med et politiktip.
+- Du kan aktivere/deaktivere meddelelser med et politiktip.
     - mailmeddelelser til den bruger, der har sendt, delt eller senest ændret indholdet ELLER
     - giv bestemte personer besked
 
@@ -646,7 +648,7 @@ https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-configure-view-ale
 
 Når en regel matches, kan du sende en hændelsesrapport til din overholdelsesansvarlige (eller alle personer, du vælger) med oplysninger om hændelsen. Rapporten indeholder oplysninger om det element, der blev matchet, det faktiske indhold, der matchede reglen, og navnet på den person, der senest ændrede indholdet. I forbindelse med mails inkluderer rapporten også den oprindelige meddelelse, der svarer til en DLP-politik, som en vedhæftet fil.
 
-DLP sender oplysninger om hændelser til andre Microsoft 365 tjenester til beskyttelse af oplysninger, [f.eks. styring af insiderrisiko i Microsoft 365](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365). Hvis du vil have oplysninger om hændelser til styring af insiderrisiko, skal du angive alvorsgraden af **hændelsesrapporterne** til **Høj**.
+DLP sender hændelsesoplysninger til andre Microsoft Purview information protection-tjenester, f.eks[. styring af insiderrisiko](insider-risk-management.md). Hvis du vil have oplysninger om hændelser til styring af insiderrisiko, skal du angive alvorsgraden af **hændelsesrapporterne** til **Høj**.
 
 <!--![Page for configuring incident reports](../media/31c6da0e-981c-415e-91bf-d94ca391a893.png)-->
 

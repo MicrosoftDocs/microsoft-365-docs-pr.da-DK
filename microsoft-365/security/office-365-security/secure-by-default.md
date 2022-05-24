@@ -17,17 +17,16 @@ ms.collection:
 description: Få mere at vide om indstillingen Sikker som standard i Exchange Online Protection (EOP)
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 09395775cc5ecbd420dc7197664401c01c24d6c3
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ab5fa5e9c769d68589b722e8fdc9976fa616e6ac
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664210"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648123"
 ---
 # <a name="secure-by-default-in-office-365"></a>Sikker som standard i Office 365
 
-[!INCLUDE [Prerelease information](../includes/prerelease.md)]
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -80,4 +79,4 @@ Du bør kun overveje at bruge tilsidesættelser i følgende scenarier:
 - Phishing-simuleringer: Simulerede angreb kan hjælpe dig med at identificere sårbare brugere, før et reelt angreb påvirker din organisation. Hvis du vil forhindre, at phishing-simuleringsmeddelelser filtreres, skal du se [Konfigurer phishing-simuleringer fra tredjepart i den avancerede leveringspolitik](/microsoft-365/security/office-365-security/configure-advanced-delivery#use-the-microsoft-365-defender-portal-to-configure-third-party-phishing-simulations-in-the-advanced-delivery-policy).
 - Sikkerheds-/SecOps-postkasser: Dedikerede postkasser, der bruges af sikkerhedsteams til at hente ufiltrerede meddelelser (både gode og dårlige). Teams kan derefter gennemse for at se, om de indeholder skadeligt indhold. Du kan få flere oplysninger under [Konfigurer SecOps-postkasser i politikken for avanceret levering](/microsoft-365/security/office-365-security/configure-advanced-delivery#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 - Tredjepartsfiltre: Sikker gælder som standard kun, når MX-posten for dit domæne er angivet til Exchange Online Protection (contoso.mail.protection.outlook.com). Hvis den er indstillet til en anden tjeneste eller enhed, er det muligt at tilsidesætte Secure som standard med en [transportregel](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl) for at omgå al spamfiltrering. Når Microsoft registrerer meddelelser som Phish med høj genkendelsessikkerhed med denne regel på plads, leveres de stadig til indbakken. 
-- Falske positiver: Det kan være en god idé midlertidigt at tillade visse meddelelser, der stadig analyseres af Microsoft [via administratorindsendelser](admin-submission.md). Som med alle tilsidesættelser anbefales det, at de er midlertidige.
+- Falske positiver: Det kan være en god idé midlertidigt at tillade visse meddelelser, der stadig analyseres af Microsoft [via Administration indsendelser](admin-submission.md). Som med alle tilsidesættelser anbefales det, at de er midlertidige.

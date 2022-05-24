@@ -1,5 +1,5 @@
 ---
-title: Spamtillidsniveau
+title: Niveau for spamsikkerhed
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,42 +16,40 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om det tillidsniveau til spam, der anvendes til meddelelser i Exchange Online Protection (EOP).
+description: Administratorer kan få mere at vide om det niveau for spamsikkerhed, der blev anvendt på meddelelser i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7783eb0655a6e3b0457a45057b920c87388e4c05
-ms.sourcegitcommit: b3530441288b2bc44342e00e9025a49721796903
+ms.openlocfilehash: 8febc1d0e0c4fd98b33fb0016beee89a30802241
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/20/2022
-ms.locfileid: "63682917"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647903"
 ---
-# <a name="spam-confidence-level-scl-in-eop"></a>SCL (Spam confidence level) i EOP
+# <a name="spam-confidence-level-scl-in-eop"></a>Niveau for spamsikkerhed (SCL) i EOP
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser, går indgående meddelelser gennem spamfiltrering i EOP og tildeles en spamscore. Denne score er knyttet til et individuelt niveau for spamtillid (SCL), der føjes til meddelelsen i en X-header. En højere SCL angiver, at der er større sandsynlighed for, at en meddelelse er spam. EOP reagerer på meddelelsen baseret på SCL'en.
 
-I Microsoft 365 med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online-postkasser, bliver indgående meddelelser sendt via spamfiltrering i EOP og får tildelt en spamscore. Denne score er knyttet til et individuelt SCL-niveau (spam confidence level), som føjes til meddelelsen i et X-brevhoved. En højere SCL angiver, at en meddelelse er mere tilbøjelig til at være spam. EOP tager handling på meddelelsen baseret på SCL.
-
-Hvad SCL betyder, og hvad standardhandlingerne, der er foretaget på meddelelser, er beskrevet i følgende tabel. Du kan finde flere oplysninger om handlinger, du kan udføre på meddelelser baseret på vurdering af spamfiltrering, under Konfigurer [politikker for uønsket post i EOP](configure-your-spam-filter-policies.md).
+Hvad SCL betyder, og de standardhandlinger, der udføres på meddelelser, er beskrevet i følgende tabel. Du kan få flere oplysninger om de handlinger, du kan foretage på meddelelser, der er baseret på domsafsigelsen om spamfiltrering, [under Konfigurer politikker mod spam i EOP](configure-your-spam-filter-policies.md).
 
 |SCL|Definition|Standardhandling|
 |:---:|---|---|
-|-1|Meddelelsen ignorerede spamfiltrering. Meddelelsen er f.eks. fra en afsender, der er tillid til, er blevet sendt til en modtager, der er tillid til, eller er fra en mailkildeserver på listen over tilladte IP-adresser. Få mere at vide under [Opret lister over afsendere, der er tillid til i EOP](create-safe-sender-lists-in-office-365.md).|Levering af meddelelsen til modtagernes indbakke.|
-|0, 1|Spamfiltrering fandt, at meddelelsen ikke var spam.|Levering af meddelelsen til modtagernes indbakke.|
-|5, 6|Spamfiltrering har markeret meddelelsen som **spam**|Levering af meddelelsen til modtagernes mappe med uønsket mail.|
-|9|Spamfiltrering markerede meddelelsen som Spam **med høj fortrolighed**|Levering af meddelelsen til modtagernes mappe med uønsket mail.|
+|-1|Meddelelsen sprang over filtrering af spam. Meddelelsen er f.eks. fra en afsender, der er tillid til, blev sendt til en sikker modtager eller er fra en mailkildeserver på listen over tilladte IP-adresser. Du kan få flere oplysninger under [Opret lister over sikre afsendere i EOP](create-safe-sender-lists-in-office-365.md).|Send meddelelsen til modtagernes indbakke.|
+|0, 1|Filtrering af spam bestemte, at meddelelsen ikke var spam.|Send meddelelsen til modtagernes indbakke.|
+|5, 6|Filtrering af spam markerede meddelelsen som **spam**|Levér meddelelsen til modtagernes mappe med uønsket mail.|
+|9|Filtrering af spam markerede meddelelsen som **spam med høj genkendelsessikkerhed**|Levér meddelelsen til modtagernes mappe med uønsket mail.|
 
-Du vil bemærke, at SCL 2, 3, 4, 7 og 8 ikke bruges til spamfiltrering.
+Du vil bemærke, at SCL 2, 3, 4, 7 og 8 ikke bruges af spamfiltrering.
 
-Du kan bruge regler for mailflow (også kaldet transportregler) til at stemple SCL på meddelelser. Hvis du bruger en regel for mailflow til at angive SCL, udløser værdierne 5 eller 6 spamfiltreringshandlingen for **spam**, og værdierne 7, 8 eller 9 udløser spamfiltreringshandlingen **for Spam** med høj sikkerhed. Få mere at vide under [Brug regler for mailflow til at angive tillidsniveauet for spam i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+Du kan bruge regler for mailflow (også kaldet transportregler) til at stemple SCL'en på meddelelser. Hvis du bruger en regel for mailflow til at angive SCL'en, udløser værdierne 5 eller 6 filtreringshandlingen for **spam**, og værdierne 7, 8 eller 9 udløser spamfiltreringshandlingen for **spam med høj genkendelsessikkerhed**. Du kan få flere oplysninger under [Brug regler for mailflow til at angive niveauet for spamsikkerhed i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-Ligesom SCL identificerer masseforsendelsesniveauet (BCL) forkerte massemails (også kaldet _grå mail_). En højere BCL indikerer, at en massemailmeddelelse er mere tilbøjelig til at generere klager (og derfor er mere tilbøjelig til at være spam). Du skal konfigurere BCL-grænseværdien i antispampolitikker. Få mere at vide under Konfigurer [antispam-politikker i EOP](configure-your-spam-filter-policies.md), niveauet for masseklager [(BCL) i EOP)](bulk-complaint-level-values.md) og Hvad er forskellen på uønsket mail og massemails [?](what-s-the-difference-between-junk-email-and-bulk-email.md).
+Ligesom med SCL identificerer bulkklageniveauet (BCL) dårlig massemail (også kendt som _grå mail_). En højere BCL angiver, at der er større sandsynlighed for, at en massemailmeddelelse genererer klager (og er derfor mere tilbøjelige til at være spam). Du kan konfigurere grænsen for BCL i politikker til bekæmpelse af spam. Du kan få flere oplysninger under [Konfigurer politikker for uønsket mail i EOP](configure-your-spam-filter-policies.md), [BCL (Bulk complaint level) i EOP)](bulk-complaint-level-values.md) og [Hvad er forskellen mellem uønsket mail og massemail?](what-s-the-difference-between-junk-email-and-bulk-email.md)
 
 ****
 
-![Det korte ikon for LinkedIn Learning.](../../media/eac8a413-9498-4220-8544-1e37d1aaea13.png) **Er du ny Microsoft 365?** Find gratis videokurser til **Microsoft 365 og it-fagfolk** gennem LinkedIn Learning.
+![Det korte ikon for LinkedIn-Learning.](../../media/eac8a413-9498-4220-8544-1e37d1aaea13.png) **Er du ny Microsoft 365?** Se gratis videokurser for **Microsoft 365 administratorer og it-teknikere**, som LinkedIn Learning har bragt til dig.

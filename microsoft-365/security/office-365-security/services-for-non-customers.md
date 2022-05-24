@@ -17,16 +17,14 @@ ms.collection:
 description: For at hjælpe med at opretholde brugernes tillid til brugen af mail har Microsoft indført forskellige politikker og teknologier for at hjælpe med at beskytte vores brugere.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 80eff003ec75eba68d1b194fe83d216fa2d013c0
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: ff526dc317935651d28843b36bb529edf4ceb006
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974185"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648673"
 ---
 # <a name="services-for-non-customers-sending-mail-to-microsoft-365"></a>Tjenester til ikke-kunder, der sender mail til Microsoft 365
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 Misbrug af mail, uønsket mail og falske mails (phishing) belaster fortsat hele e-mailøkosystemet. For at hjælpe med at opretholde brugernes tillid til brugen af mail har Microsoft indført forskellige politikker og teknologier for at hjælpe med at beskytte vores brugere. Microsoft forstår dog, at legitime mails ikke bør påvirkes negativt. Derfor har vi etableret en pakke af tjenester, der hjælper afsendere med at forbedre deres mulighed for at levere mail til Microsoft 365 brugere ved proaktivt at administrere deres sendeomdømme.
 

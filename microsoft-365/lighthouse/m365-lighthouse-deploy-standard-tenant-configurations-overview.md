@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du bruger grundlinjer til at udrulle standard lejerkonfigurationer.
-ms.openlocfilehash: a12abd14064559ec92fc735bd90c1f8d58d24cb1
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 11b8c5ad9adafa4cd6afb6bb4cd19861118e447c
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023299"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647683"
 ---
 # <a name="overview-of-using-microsoft-365-lighthouse-baselines-to-deploy-standard-tenant-configurations"></a>Oversigt over brug af Microsoft 365 baselines for fyrtårne til installation af standardlejerkonfigurationer 
 
@@ -41,11 +41,12 @@ Konfigurationer af fyrtårnsgrundlinje er designet til at sikre, at alle adminis
 |--|--|
 | Kræv MFA for administratorer | En politik for betinget adgang, der kræver multifaktorgodkendelse for alle administratorer. Det er påkrævet til alle cloudprogrammer. Du kan få flere oplysninger om denne oprindelige plan under [Betinget adgang: Kræv MFA for alle administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa).|
 | Kræv MFA for slutbrugere | En politik for betinget adgang, der kræver multifaktorgodkendelse for alle brugere.  Det er påkrævet til alle cloudprogrammer. Du kan få flere oplysninger om denne oprindelige plan under [Betinget adgang: Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa). |
-| Bloker ældre godkendelse | En politik for betinget adgang til at blokere ældre klientgodkendelse. Du kan få flere oplysninger om denne baseline under [Bloker ældre godkendelse til Azure AD med betinget adgang](/azure/active-directory/conditional-access/block-legacy-authentication).|
+| Bloker ældre godkendelse | En politik for betinget adgang til at blokere ældre klientgodkendelse. Du kan få flere oplysninger om denne oprindelige plan under [Bloker ældre godkendelse for at Azure AD med betinget adgang](/azure/active-directory/conditional-access/block-legacy-authentication).|
 | Konfigurer tilmelding af enhed | Enhedsregistrering, så dine lejerenheder kan tilmelde sig Microsoft Endpoint Manager. Dette gøres ved at konfigurere automatisk tilmelding mellem Azure Active Directory og Microsoft Endpoint Manager. Du kan få flere oplysninger om denne grundlinje under [Konfigurer tilmelding til Windows enheder](/mem/intune/enrollment/windows-enroll). |
+| Konfigurer Exchange Online Protection og Microsoft Defender for Office 365 | En politik, der anvender anbefalede politikker for anti-spam, anti-malware, anti-phishing, sikre links og politikker for sikker vedhæftede filer til dine lejere Exchange Online postkasser. |
 | Konfigurer Microsoft Defender Antivirus til Windows 10 og nyere | En enhedskonfigurationsprofil for Windows enheder med forudkonfigurerede indstillinger for Microsoft Defender Antivirus. Du kan få flere oplysninger om denne oprindelige plan [under Konfigurer Microsoft Defender for Endpoint i Intune](/mem/intune/protect/advanced-threat-protection-configure).|
-| Konfigurer Microsoft Defender Firewall til Windows 10 og nyere | En firewallpolitik, der hjælper med at beskytte enheder ved at forhindre uønsket og uautoriseret netværkstrafik. Du kan få flere oplysninger om denne oprindelige plan under [Bedste praksis for konfiguration af Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
-| Konfigurer en politik for enhedsoverholdelse for Windows 10 og nyere | En Windows enhedspolitik med forudkonfigurerede indstillinger, der opfylder de grundlæggende krav til overholdelse af angivne standarder. Du kan få flere oplysninger om denne baseline under [Betinget adgang: Kræv kompatibel eller hybrid azure AD-tilsluttet enhed](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |
+| Konfigurer Microsoft Defender Firewall til Windows 10 og nyere | En firewallpolitik, der hjælper med at beskytte enheder ved at forhindre uønsket og uautoriseret netværkstrafik. Du kan få flere oplysninger om denne oprindelige plan under [Bedste fremgangsmåder til konfiguration af Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).  |
+| Konfigurer en politik for enhedsoverholdelse for Windows 10 og nyere | En Windows enhedspolitik med forudkonfigurerede indstillinger, der opfylder de grundlæggende krav til overholdelse af angivne standarder. Du kan få flere oplysninger om denne grundlinje under [Betinget adgang: Kræv kompatibel eller hybrid Azure AD tilsluttet enhed](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). |
 
 ## <a name="deployment-plans"></a>Udrulningsplaner
 

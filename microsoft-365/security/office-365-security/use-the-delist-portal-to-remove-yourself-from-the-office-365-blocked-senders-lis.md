@@ -20,16 +20,14 @@ ms.custom:
 description: I denne artikel får du mere at vide om, hvordan du bruger fralisten til at fjerne dig selv fra listen over Microsoft 365 blokerede afsendere. Dette er det bedste svar på adresse 5.7.511 Fejl, der blev nægtet adgang til.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 43637f8eb72d078223236f78b45034218e34bcbc
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 83822faaf1c667524dd88fc1bba400c10fa30ac3
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971126"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65647727"
 ---
 # <a name="use-the-delist-portal-to-remove-yourself-from-the-blocked-senders-list-and-address-57511-access-denied-errors"></a>Brug fralisteportalen til at fjerne dig selv fra listen over blokerede afsendere og adressen 5.7.511 Fejl om adgang nægtet
-
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)

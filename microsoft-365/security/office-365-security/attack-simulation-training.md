@@ -13,14 +13,16 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de simulerer phishingangreb og oplærer deres brugere i forebyggelse af phishing ved hjælp af oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 94e002adf3fcdefcb3d2483f4f32ce7b10be8dab
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 55810d65c33796a617421f0796191335821bde98
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077644"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648883"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Simuler et phishing-angreb med oplæring i simulering af angreb i Defender for Office 365
+
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for** [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 

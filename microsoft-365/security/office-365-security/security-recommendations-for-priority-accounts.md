@@ -1,5 +1,5 @@
 ---
-title: Sikkerhedsanbefalinger for prioritetskonti i Microsoft 365, prioritetskonti, prioritetskonti i Office 365, prioritetskonti Microsoft 365
+title: Sikkerhedsanbefalinger for prioritetskonti i Microsoft 365, prioritetskonti, prioritetskonti i Office 365, prioritetskonti i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -18,106 +18,112 @@ ms.collection:
 - m365solution-overview
 - m365solution-protecthve
 ms.custom: ''
-description: Administratorer kan lære, hvordan de hæver sikkerhedsindstillingerne og bruger rapporter, beskeder og undersøgelser til prioritetskonti i deres Microsoft 365 organisationer.
+description: Administratorer kan få mere at vide om, hvordan de hæver sikkerhedsindstillingerne og bruger rapporter, beskeder og undersøgelser til prioriterede konti i deres Microsoft 365 organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c997f38e06444aab8ff6de550759959eb8f71d9f
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 50d51bf2861d1ef1b9e4d9694fc9469fc5ec7406
+ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64470763"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65648629"
 ---
 # <a name="security-recommendations-for-priority-accounts-in-microsoft-365"></a>Sikkerhedsanbefalinger for prioritetskonti i Microsoft 365
 
-Ikke alle brugerkonti har adgang til de samme firmaoplysninger. Nogle konti har adgang til følsomme oplysninger, f.eks. finansielle data, oplysninger om produktudvikling, partneradgang til vigtige buildsystemer og meget mere. Hvis de kompromitteres, udgør konti, der har adgang til meget fortrolige oplysninger, en alvorlig trussel. Vi kalder disse typer konti for _prioritetskonti_. Prioritetskonti omfatter (men er ikke begrænset til) COS, CISOs, CFOs, infrastrukturadministratorkonti, opbygge systemkonti og meget mere.
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-For hackere er almindelige phishing-angreb, der viser et tilfældigt net for almindelige eller ukendte brugere, ineffektiv. Derimod er phishing-phishing _eller_ _whaling-angreb_ , der målrettes efter prioritet, meget berigende for hackere. Prioritetskonti kræver således stærkere end almindelig beskyttelse for at forhindre, at kontoen bliver kompromitteret.
+**Gælder for:**
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Microsoft 365 og Microsoft Defender for Office 365 indeholder adskillige vigtige funktioner, som giver yderligere lag af sikkerhed til dine prioritetskonti. I denne artikel beskrives disse funktioner, og hvordan de bruges.
+Det er ikke alle brugerkonti, der har adgang til de samme firmaoplysninger. Nogle konti har adgang til følsomme oplysninger, f.eks. finansielle data, produktudviklingsoplysninger, partneradgang til kritiske buildsystemer m.m. Hvis de kompromitteres, udgør konti, der har adgang til meget fortrolige oplysninger, en alvorlig trussel. Vi kalder disse typer konti _prioritetskonti_. Prioritetskonti omfatter (men er ikke begrænset til) administrerende direktører, SNG'er, CFO'er, infrastrukturadministratorkonti, oprettelse af systemkonti med mere.
 
-:::image type="content" source="../../media/security-recommendations-for-priority-users.png" alt-text="Oversigten over sikkerhedsanbefalinger i ikonform" lightbox="../../media/security-recommendations-for-priority-users.png":::
+For hackere er almindelige phishingangreb, der kaster et tilfældigt net til almindelige eller ukendte brugere, ineffektive. På den anden side er _spyd phishing_ - eller _hvalfangstangreb_ , der er rettet mod prioriterede konti, meget givende for angribere. Derfor kræver prioritetskonti stærkere end almindelig beskyttelse for at forhindre, at kontoen kompromitteres.
 
-|Opgave|Alle Office 365 Enterprise-planer|Microsoft 365 E3|Microsoft 365 E5|
+Microsoft 365 og Microsoft Defender for Office 365 indeholder flere vigtige funktioner, der giver yderligere sikkerhedslag for dine prioritetskonti. I denne artikel beskrives disse funktioner, og hvordan du bruger dem.
+
+:::image type="content" source="../../media/security-recommendations-for-priority-users.png" alt-text="Oversigten over sikkerhedsanbefalinger i ikonformat" lightbox="../../media/security-recommendations-for-priority-users.png":::
+
+|Opgave|Alle Office 365 Enterprise planer|Microsoft 365 E3|Microsoft 365 E5|
 |---|:---:|:---:|:---:|
-|[Øg sikkerheden for logon på prioritetskonti](#increase-sign-in-security-for-priority-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|[Brug faste, forudindstillede sikkerhedspolitikker til prioritetskonti](#use-strict-preset-security-policies-for-priority-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|[Anvend brugermærker på prioritetskonti](#apply-user-tags-to-priority-accounts)|||![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|[Overvåge prioritetskonti i beskeder, rapporter og registreringer](#monitor-priority-accounts-in-alerts-reports-and-detections)|||![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
-|[Oplære brugere](#train-users)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|[Forøg logonsikkerhed for prioritetskonti](#increase-sign-in-security-for-priority-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|[Brug strenge forudindstillede sikkerhedspolitikker for prioritetskonti](#use-strict-preset-security-policies-for-priority-accounts)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|[Anvend brugerkoder på prioritetskonti](#apply-user-tags-to-priority-accounts)|||![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|[Overvåg prioritetskonti i beskeder, rapporter og registreringer](#monitor-priority-accounts-in-alerts-reports-and-detections)|||![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
+|[Oplær brugere](#train-users)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
 > [!NOTE]
-> Du kan finde oplysninger om _beskyttelse af privilegerede_ konti (administratorkonti) [i dette emne](/azure/architecture/framework/security/critical-impact-accounts).
+> Du kan finde oplysninger om sikring af _privilegerede konti_ (administratorkonti) i [dette emne](/azure/architecture/framework/security/critical-impact-accounts).
 
-## <a name="increase-sign-in-security-for-priority-accounts"></a>Øg sikkerheden for logon på prioritetskonti
+## <a name="increase-sign-in-security-for-priority-accounts"></a>Forøg logonsikkerhed for prioritetskonti
 
-Prioritetskonti kræver øget logonsikkerhed. Du kan øge deres logonsikkerhed ved at kræve Multi-Factor Authentication (MFA) og deaktivere ældre godkendelsesprotokoller.
+Prioritetskonti kræver øget logonsikkerhed. Du kan øge deres logonsikkerhed ved at kræve multifaktorgodkendelse (MFA) og deaktivere ældre godkendelsesprotokoller.
 
-Du kan finde en vejledning [under Trin 1. Øg sikkerheden for logon for eksterne medarbejdere med MFA](../../solutions/empower-people-to-work-remotely-secure-sign-in.md). Selvom denne artikel handler om eksterne medarbejdere, gælder de samme begreber for prioritetsbrugere.
+Du kan finde instruktioner under [Trin 1. Øg logonsikkerheden for fjernarbejdere med MFA](../../solutions/empower-people-to-work-remotely-secure-sign-in.md). Selvom denne artikel handler om fjernarbejdere, gælder de samme begreber for prioriterede brugere.
 
-**Bemærk**! Vi anbefaler på det kraftigste, at du globalt deaktiverer ældre godkendelsesprotokoller for alle brugere med prioritet, som beskrevet i den forrige artikel. Hvis dine forretningskrav forhindrer dig i at gøre dette, Exchange Online følgende kontrolelementer for at begrænse omfanget af ældre godkendelsesprotokoller:
+**Bemærk**! Vi anbefaler på det kraftigste, at du globalt deaktiverer ældre godkendelsesprotokoller for alle prioriterede brugere, som beskrevet i forrige artikel. Hvis dine forretningskrav forhindrer dig i at gøre det, indeholder Exchange Online følgende kontrolelementer for at begrænse omfanget af ældre godkendelsesprotokoller:
 
-- Du kan bruge [](/exchange/clients-and-mobile-in-exchange-online/disable-basic-authentication-in-exchange-online) godkendelsespolitikker og [](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) klientadgangsregler i Exchange Online til at blokere eller tillade grundlæggende godkendelse og ældre godkendelsesprotokoller som POP3, IMAP4 og godkendt SMTP for bestemte brugere.
+- Du kan bruge [godkendelsespolitikker](/exchange/clients-and-mobile-in-exchange-online/disable-basic-authentication-in-exchange-online) og [regler for klientadgang](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules) i Exchange Online til at blokere eller tillade basisgodkendelse og ældre godkendelsesprotokoller, f.eks. POP3, IMAP4 og godkendt SMTP for bestemte brugere.
 
-- Du kan deaktivere adgang til POP3 og IMAP4 for individuelle postkasser. Du kan deaktivere godkendt SMTP på organisationsniveau og aktivere den i bestemte postkasser, hvor den stadig skal bruges. Du kan finde instruktioner i følgende artikler:
-  - [Aktivere eller deaktivere pop3- eller IMAP4-adgang for en bruger](/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access)
-  - [Aktivere eller deaktivere godkendt SMTP-klientindsendelse (SMTP AUTH)](/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission)
+- Du kan deaktivere adgang til POP3 og IMAP4 i individuelle postkasser. Du kan deaktivere godkendt SMTP på organisationsniveau og aktivere det i bestemte postkasser, der stadig kræver det. Du kan finde instruktioner i følgende artikler:
+  - [Aktivér eller deaktiver pop3- eller IMAP4-adgang for en bruger](/exchange/clients-and-mobile-in-exchange-online/pop3-and-imap4/enable-or-disable-pop3-or-imap4-access)
+  - [Aktivér eller deaktiver godkendt afsendelse af KLIENT-SMTP (SMTP AUTH)](/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission)
 
-Det er også værd at bemærke, at grundlæggende godkendelse er ved at blive frarådet i Exchange Online til Exchange Web Services (EWS), Exchange ActiveSync, POP3, IMAP4 og Remote PowerShell. Du kan finde flere oplysninger i dette [blogindlæg](https://developer.microsoft.com/office/blogs/deferred-end-of-support-date-for-basic-authentication-in-exchange-online/).
+Det er også værd at bemærke, at basisgodkendelse frarådes i Exchange Online for Exchange Web Services (EWS), Exchange ActiveSync, POP3, IMAP4 og ekstern PowerShell. Du kan finde flere oplysninger i dette [blogindlæg](https://developer.microsoft.com/office/blogs/deferred-end-of-support-date-for-basic-authentication-in-exchange-online/).
 
-## <a name="use-strict-preset-security-policies-for-priority-accounts"></a>Brug faste, forudindstillede sikkerhedspolitikker til prioritetskonti
+## <a name="use-strict-preset-security-policies-for-priority-accounts"></a>Brug strenge forudindstillede sikkerhedspolitikker for prioritetskonti
 
-Prioritetsbrugere kræver strengere handlinger for de forskellige beskyttelser, der er tilgængelige i Exchange Online Protection (EOP) og Defender for Office 365.
+Prioriterede brugere kræver strengere handlinger for de forskellige beskyttelser, der er tilgængelige i Exchange Online Protection (EOP) og Defender for Office 365.
 
-I stedet for at levere meddelelser, der er klassificeret som spam, til mappen Uønsket mail, skal du f.eks. sætte de samme meddelelser i karantæne, hvis de er beregnet til prioritetskonti.
+I stedet for f.eks. at levere meddelelser, der er klassificeret som spam, til mappen Uønsket mail, skal du sætte de samme meddelelser i karantæne, hvis de er beregnet til prioriterede konti.
 
-Du kan implementere denne restriktive fremgangsmåde for prioritetskonti ved hjælp af profilen Streng i forudindstillede sikkerhedspolitikker.
+Du kan implementere denne strenge tilgang for prioritetskonti ved hjælp af profilen Strict i forudindstillede sikkerhedspolitikker.
 
-Forudindstillede sikkerhedspolitikker er et praktisk og centralt sted at anvende vores anbefalede strenge politikindstillinger for alle beskyttelser i EOP og Defender for Office 365. Få mere at vide under [Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
+Forudindstillede sikkerhedspolitikker er en praktisk og central placering, hvor du kan anvende vores anbefalede Strenge politikindstillinger for al beskyttelse i EOP og Defender for Office 365. Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 
-Hvis du vil have mere at vide om, hvordan indstillingerne For restriktiv politik adskiller sig fra standard- og standardpolitikindstillingerne, skal du se Anbefalede indstillinger [for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+Du kan finde oplysninger om, hvordan politikindstillingerne Strict adskiller sig fra standard- og Standard-politikindstillingerne, under [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
 
-## <a name="apply-user-tags-to-priority-accounts"></a>Anvend brugermærker på prioritetskonti
+## <a name="apply-user-tags-to-priority-accounts"></a>Anvend brugerkoder på prioritetskonti
 
-Brugermærker i Microsoft Defender for Office 365 Plan 2 (som en del af Microsoft 365 E5 eller et tilføjelsesabonnement) er en metode til hurtigt at identificere og klassificere bestemte brugere eller grupper af brugere i rapporter og hændelsesundersøgelse.
+Brugertags i Microsoft Defender for Office 365 Plan 2 (som en del af Microsoft 365 E5 eller et tilføjelsesprogram) er en metode til hurtigt at identificere og klassificere bestemte brugere eller grupper af brugere i rapporter og efterforskninger af hændelser.
 
-**Prioritetskonti** er en type indbygget brugerkode (kaldet et _systemmærke_), som du kan bruge til at identificere hændelser og beskeder, der involverer prioritetskonti. Du kan finde flere oplysninger **om prioritetskonti** [under Administrere og overvåge prioritetskonti](../../admin/setup/priority-accounts.md).
+**Prioritetskonti** er en type indbygget brugerkode (kendt som et _systemmærke_), som du kan bruge til at identificere hændelser og beskeder, der omfatter prioritetskonti. Du kan få flere oplysninger om **prioritetskonti** under [Administrer og overvåg prioritetskonti](../../admin/setup/priority-accounts.md).
 
-Du kan også oprette brugerdefinerede mærker til yderligere at identificere og klassificere dine prioritetskonti. Du kan få mere at vide [under Brugermærker](user-tags.md). Du kan administrere **prioritetskonti** (systemmærker) i samme grænseflade som brugerdefinerede brugermærker.
+Du kan også oprette brugerdefinerede mærker for yderligere at identificere og klassificere dine prioritetskonti. Du kan få flere oplysninger under [Brugerkoder](user-tags.md). Du kan administrere **prioritetskonti** (systemkoder) i den samme grænseflade som brugerdefinerede brugerkoder.
 
-## <a name="monitor-priority-accounts-in-alerts-reports-and-detections"></a>Overvåge prioritetskonti i beskeder, rapporter og registreringer
+## <a name="monitor-priority-accounts-in-alerts-reports-and-detections"></a>Overvåg prioritetskonti i beskeder, rapporter og registreringer
 
-Når du sikrer og mærker dine prioritetsbrugere, kan du bruge de tilgængelige rapporter, beskeder og undersøgelser i EOP og Defender for Office 365 til hurtigt at identificere hændelser eller registreringer, der involverer prioritetskonti. De funktioner, der understøtter brugermærker, er beskrevet i følgende tabel.
+Når du har beskyttet og mærket dine prioriterede brugere, kan du bruge de tilgængelige rapporter, beskeder og undersøgelser i EOP og Defender for Office 365 til hurtigt at identificere hændelser eller registreringer, der involverer prioritetskonti. De funktioner, der understøtter brugerkoder, er beskrevet i følgende tabel.
 
 |Funktion|Beskrivelse|
 |---|---|
-|Beskeder|Brugermærkerne for de berørte brugere er synlige og tilgængelige som filtre **på siden Beskeder** i Microsoft 365 Defender portal. Du kan få mere at vide [under Få vist beskeder](../../compliance/alert-policies.md#viewing-alerts).|
-|Stifinder <p> Registreringer i realtid|I **Stifinder** (Defender for Office 365 Plan 2) eller registreringer i realtid (Defender for Office 365 Plan 1) er brugermærker synlige i visningen Mailgitter og pop **op-vinduet** Mailoplysninger. Brugermærker er også tilgængelige som en egenskab, der kan filtreres. Du kan få mere at vide  [under Mærker i Stifinder](threat-explorer.md#tags-in-threat-explorer).|
-|Kampagnevisninger|Brugermærker er en af mange filtrerbare egenskaber i Kampagnevisninger i Microsoft Defender for Office 365 Plan 2. Du kan finde flere oplysninger i [Kampagnevisninger](campaigns.md).|
-|Statusrapport over trusselsbeskyttelse|I stort set alle visninger og detaljetabeller i **statusrapporten for trusselsbeskyttelse** kan du filtrere resultaterne efter **prioritetskonti**. Du kan få mere at vide [under Statusrapport for trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report).|
-|Mailproblemer for prioritetskonti-rapport|Rapporten **Mailproblemer for prioritetskonti** i Exchange Administration (EAC) indeholder oplysninger om ikke-leveret og forsinkede meddelelser for **prioritetskonti**. Få mere at vide under [Mailproblemer for prioritetskonti-rapport](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report).|
+|Beskeder|De berørte brugeres brugerkoder er synlige og tilgængelige som filtre på siden **Beskeder** på portalen Microsoft 365 Defender. Du kan få flere oplysninger under [Visning af beskeder](../../compliance/alert-policies.md#viewing-alerts).|
+|Explorer <p> Registreringer i realtid|I **Stifinder** (Defender for Office 365 Plan 2) eller **registreringer i realtid** (Defender for Office 365 Plan 1) er brugerkoder synlige i gittervisningen Mail og pop op-vinduet Mailoplysninger. Brugerkoder er også tilgængelige som en egenskab, der kan filtreres. Du kan få flere oplysninger  [under Mærker i Stifinder](threat-explorer.md#tags-in-threat-explorer).|
+|Kampagnevisninger|Brugerkoder er en af mange egenskaber, der kan filtreres, i kampagnevisninger i Microsoft Defender for Office 365 Plan 2. Du kan få flere oplysninger under [Kampagnevisninger](campaigns.md).|
+|Statusrapport om trusselsbeskyttelse|I stort set alle visnings- og detaljetabeller i **rapporten Over trusselsbeskyttelsesstatus** kan du filtrere resultaterne efter **prioriterede konti**. Du kan få flere oplysninger under [Rapport over status for trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report).|
+|Rapport over mailproblemer for prioritetskonti|Rapporten **Mailproblemer for prioritetskonti** i Exchange Administration (EAC) indeholder oplysninger om ikke-leverede og forsinkede meddelelser for **prioritetskonti**. Du kan få flere oplysninger i [Rapporten Mailproblemer for prioritetskonti](/exchange/monitoring/mail-flow-reports/mfr-email-issues-for-priority-accounts-report).|
 
-## <a name="train-users"></a>Oplære brugere
+## <a name="train-users"></a>Oplær brugere
 
-Kursus brugere med prioritetskonti kan hjælpe med at spare disse brugere og dit sikkerhedsteam meget tid og frustration. Erfarne brugere er mindre tilbøjelige til at åbne vedhæftede filer eller klikke på links i tvivlsomme mails, og de er mere tilbøjelige til at undgå mistænkelige websteder.
+Oplæring af brugere med prioritetskonti kan hjælpe med at spare disse brugere og dit sikkerhedsteam meget tid og frustration. Kyndige brugere er mindre tilbøjelige til at åbne vedhæftede filer eller klikke på links i tvivlsomme mails, og de er mere tilbøjelige til at undgå mistænkelige websteder.
 
-The Harvard The School [Cybersecurity Campaign Handbook giver](https://www.belfercenter.org/CyberPlaybook) fremragende vejledning til oprettelse af en stærk kultur for sikkerhedskultur i din organisation, herunder uddannelse af brugere til at identificere phishing-angreb.
+Harvard Kennedy School [Cybersecurity Campaign Handbook](https://www.belfercenter.org/CyberPlaybook) giver fremragende vejledning til at etablere en stærk kultur af sikkerhedsbevidsthed i din organisation, herunder træning af brugere til at identificere phishing-angreb.
 
-Microsoft 365 indeholder følgende ressourcer, som kan hjælpe med at informere brugerne i organisationen:
+Microsoft 365 indeholder følgende ressourcer, der kan hjælpe med at informere brugerne i din organisation:
 
 |Koncept|Ressourcer|Beskrivelse|
 |---|---|---|
-|Microsoft 365|[Brugerdefinerbare læringsstier](/office365/customlearning/)|Disse ressourcer kan hjælpe dig med at sammensætte kurser til brugere i organisationen.|
-|Microsoft 365 sikkerhed|[Learning modul: Beskyt din organisation med indbygget, intelligent sikkerhed Microsoft 365](/learn/modules/security-with-microsoft-365)|Dette modul gør det muligt for dig at beskrive, Microsoft 365 sikkerhedsfunktioner fungerer sammen, og til at fordele ved disse sikkerhedsfunktioner.|
-|Multifaktorgodkendelse|[Totrinsbekræftelse: Hvad er den ekstra bekræftelsesside?](/azure/active-directory/user-help/multi-factor-authentication-end-user-first-time)|Denne artikel hjælper slutbrugere med at forstå, hvad multifaktorgodkendelse er, og hvorfor den bruges i din organisation.|
-|Kursus i angrebssimulering|[Kom i gang med at bruge simuleringskursus til angreb](attack-simulation-training-get-started.md)|Kursus i angrebssimulering Microsoft Defender for Office 365 Plan 2 giver administrator mulighed for at konfigurere, starte og spore simulerede phishingangreb mod bestemte grupper af brugere.|
+|Microsoft 365|[Læringsforløb, der kan tilpasses](/office365/customlearning/)|Disse ressourcer kan hjælpe dig med at sammensætte kurser for brugere i din organisation.|
+|Microsoft 365-sikkerhed|[Learning modul: Beskyt din organisation med indbygget intelligent sikkerhed fra Microsoft 365](/learn/modules/security-with-microsoft-365)|I dette modul kan du beskrive, hvordan Microsoft 365 sikkerhedsfunktioner arbejder sammen og formulere fordelene ved disse sikkerhedsfunktioner.|
+|Multifaktorgodkendelse|[Totrinsbekræftelse: Hvad er den ekstra bekræftelsesside?](/azure/active-directory/user-help/multi-factor-authentication-end-user-first-time)|Denne artikel hjælper slutbrugerne med at forstå, hvad multifaktorgodkendelse er, og hvorfor den bruges i din organisation.|
+|Oplæring i angrebssimulering|[Kom i gang med at bruge kursus i angrebssimulering](attack-simulation-training-get-started.md)|Oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2 gør det muligt for administratoren at konfigurere, starte og spore simulerede phishing-angreb mod bestemte grupper af brugere.|
 
-Desuden anbefaler Microsoft, at brugerne gør de handlinger, der er beskrevet i denne artikel: [Beskyt din konto og dine enheder mod hackere og malware](https://support.microsoft.com/office/066d6216-a56b-4f90-9af3-b3a1e9a327d6). Disse handlinger omfatter:
+Derudover anbefaler Microsoft, at brugerne foretager de handlinger, der er beskrevet i denne artikel: [Beskyt din konto og dine enheder mod hackere og malware](https://support.microsoft.com/office/066d6216-a56b-4f90-9af3-b3a1e9a327d6). Disse handlinger omfatter:
 
 - Brug af stærke adgangskoder
 - Beskyttelse af enheder
-- Aktivering af sikkerhedsfunktioner på Windows og Mac-pc'er (for enheder, der ikke er administrerede)
+- Aktivering af sikkerhedsfunktioner på Windows- og Mac-pc'er (til ikke-administrerede enheder)
 
 ## <a name="see-also"></a>Se også
 
-[Vi annoncerer Beskyttelse af prioritetskonto i Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/announcing-priority-account-protection-in-microsoft-defender-for/ba-p/1696385)
+[Meddelelse om prioritetskontobeskyttelse i Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/announcing-priority-account-protection-in-microsoft-defender-for/ba-p/1696385)
