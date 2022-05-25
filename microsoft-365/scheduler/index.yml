@@ -12,12 +12,12 @@ metadata:
   manager: serdars
   audience: Admin
   ms.date: 04/23/2021
-  ms.openlocfilehash: 1a0bacdaf7630c6385b1dbbf37fd5a4eb50d77aa
-  ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+  ms.openlocfilehash: bb6cba252eec44efa0d46bd9454d7cd6ba98ff00
+  ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/18/2022
-  ms.locfileid: "65468344"
+  ms.lasthandoff: 05/25/2022
+  ms.locfileid: "65669776"
 additionalContent:
   sections:
   - items:
@@ -36,6 +36,9 @@ additionalContent:
     - title: Planlæg dynamiske tilbagevendende møder
       summary: Få mere at vide om planlægning af dynamiske tilbagevendende møder.
       url: scheduler-recurring-meetings.md
+    - title: Indstillinger
+      summary: Få mere at vide om, hvordan du justerer planlægningsindstillingerne.
+      url: scheduler-preferences.md
     - title: Ofte stillede spørgsmål om Planlægger
       summary: Ofte stillede spørgsmål og svar i Planlægger til Microsoft 365.
       url: scheduler-faqs.md
