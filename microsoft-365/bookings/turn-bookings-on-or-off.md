@@ -10,12 +10,12 @@ ms.custom: admindeeplinkMAC
 ms.localizationpriority: medium
 ms.assetid: 5382dc07-aaa5-45c9-8767-502333b214ce
 description: Få mere at vide om, hvordan du får adgang til Microsoft Bookings i Microsoft 365.
-ms.openlocfilehash: 98c6ae99bceada7649dc823ca88669ae0081fc10
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: ecd0e970d1e672a7c40bb1876f84d4e55a7dbff0
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637290"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663530"
 ---
 # <a name="turn-microsoft-bookings-on-or-off"></a>Slå Microsoft Bookings til eller fra
 
@@ -87,7 +87,7 @@ Du kan deaktivere Bookings for individuelle brugere.
 
 ## <a name="allow-only-selected-users-to-create-bookings-calendars"></a>Tillad kun valgte brugere at oprette Bookings kalendere
 
-Ved hjælp af politikbegrænsninger kan du begrænse brugere med licens, så de ikke kan oprette Bookings kalendere. Du skal først aktivere Bookings for hele organisationen. Alle brugere i organisationen har Bookings licenser, men kun dem, der er inkluderet i politikken, kan oprette Bookings kalendere og have fuld kontrol over, hvem der har adgang til de kalendere, de opretter.
+Ved hjælp af politikbegrænsninger kan du begrænse brugere med licens, så de ikke kan oprette Bookings kalendere. Alle brugere i organisationen har Bookings licenser, men kun dem, der er inkluderet i politikken, kan oprette Bookings kalendere og have fuld kontrol over, hvem der har adgang til de kalendere, de opretter.
 
 Brugere, der er inkluderet i denne politik, kan oprette nye Bookings kalendere og kan føjes som personale i en hvilken som helst kapacitet (herunder administratorrollen) til eksisterende Bookings kalendere. Brugere, der ikke er inkluderet i denne politik, kan ikke oprette nye Bookings kalendere og modtager en fejlmeddelelse, hvis de forsøger at gøre det.
 

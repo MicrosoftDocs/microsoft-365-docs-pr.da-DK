@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8bfa08a92a011d32cdc30e2f68052715b4075fdf
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: a70602f9b482196ee949a8f9922f2979b04b3ff4
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665508"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669292"
 ---
 # <a name="take-response-actions-on-a-file"></a>Udfør svarhandlinger på en fil
 
@@ -28,12 +28,12 @@ ms.locfileid: "64665508"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
+- [Microsoft Defender for Endpoint Plan 1](/microsoft-365/security/defender-endpoint/defender-endpoint-plan-1)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-responddile-abovefoldlink)
 
 Reagere hurtigt på registrerede angreb ved at stoppe og quarantinere filer eller blokere en fil. Når du har foretaget en handling på filer, kan du kontrollere aktivitetsoplysningerne i Løsningscenter.
 
@@ -151,7 +151,7 @@ Som standard skal du kunne downloade filer, der er i karantæne.
 
 ### <a name="download-quarantined-files"></a>Download filer, der er sat i karantæne
 
-Filer, der er sat i karantæne af Microsoft Defender Antivirus eller dit sikkerhedsteam, gemmes på en kompatibel måde i henhold til [dine eksempelkonfigurationer for indsendelse](enable-cloud-protection-microsoft-defender-antivirus.md). Dit sikkerhedsteam kan downloade filerne direkte fra filens detaljeside via knappen "Download fil". **Denne prøveversionsfunktion er som standard slået til**.
+Filer, der er sat i karantæne af Microsoft Defender Antivirus eller dit sikkerhedsteam, gemmes på en kompatibel måde i henhold til [dine eksempelkonfigurationer for indsendelse](enable-cloud-protection-microsoft-defender-antivirus.md). Dit sikkerhedsteam kan downloade filerne direkte fra filens detaljeside via knappen "Download fil". **Denne funktion er som standard slået til**.
 
 Placeringen afhænger af din organisations geoindstillinger (enten EU, Storbritannien eller USA). En karantænefil indsamles kun én gang pr. organisation. Få mere at vide om Microsofts databeskyttelse fra Service Trust Portal på https://aka.ms/STP.
 

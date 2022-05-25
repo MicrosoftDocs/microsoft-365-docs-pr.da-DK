@@ -1,7 +1,7 @@
 ---
-title: Angiv administreret serviceudbyder sikkerhedsadgang (MSSP)
-description: Få mere at vide om ændringer Microsoft Defender Security Center til Microsoft 365 Defender portalen
-keywords: Introduktion til Microsoft 365 Defender-portalen, Microsoft Defender for Office 365, Microsoft Defender for Endpoint, MDO, MDE, enkelt rude med glas, konvergeret portal, sikkerhedsportal, defender security portal
+title: Angiv mssp-adgang (managed security service provider)
+description: Få mere at vide om ændringer fra Microsoft Defender Security Center til Microsoft 365 Defender-portalen
+keywords: Introduktion til Microsoft 365 Defender-portalen, Microsoft Defender for Office 365, Microsoft Defender for Endpoint, MDO, MDE, enkelt glasrude, konvergeret portal, sikkerhedsportal, defender security portal
 ms.prod: microsoft-365-enterprise
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -17,14 +17,14 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-ms.openlocfilehash: f0148a8bfe18c7636e95ceae7b268cc70b2e58ed
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 3b3f438555be507d046f99838596a6672714e0ad
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500405"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670218"
 ---
-# <a name="provide-managed-security-service-provider-mssp-access"></a>Angiv administreret serviceudbyder sikkerhedsadgang (MSSP) 
+# <a name="provide-managed-security-service-provider-mssp-access"></a>Angiv mssp-adgang (managed security service provider) 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -35,81 +35,81 @@ ms.locfileid: "64500405"
 - [Microsoft 365 Defender](microsoft-365-defender.md)
 - [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, skal du gøre følgende:
+Hvis du vil implementere en delegeret adgangsløsning med flere lejere, skal du benytte følgende fremgangsmåde:
 
-1. [Aktivér rollebaseret adgangskontrol](/windows/security/threat-protection/microsoft-defender-atp/rbac) for Defender til slutpunkt via Microsoft 365 Defender, og opret forbindelse til Azure Active Directory (Azure AD).
+1. Aktivér [rollebaseret adgangskontrol](/microsoft-365/security/defender-endpoint/rbac) for Defender for Endpoint via Microsoft 365 Defender-portalen, og opret forbindelse til Azure Active Directory (Azure AD)-grupper.
 
-2. Konfigurer [adgangspakker til styring](/azure/active-directory/governance/identity-governance-overview) af adgang til anmodning om og klargøring af adgang.
+2. Konfigurer [rettighedsstyring for eksterne brugere](/azure/active-directory/governance/entitlement-management-external-users) i Azure AD Identitetsstyring for at aktivere adgangsanmodninger og klargøring.
 
-3. Administrer adgangsanmodninger og - [revisioner i Microsoft Myaccess](/azure/active-directory/governance/entitlement-management-request-approve).
+3. Administrer adgangsanmodninger og overvågninger i [Microsoft Myaccess](/azure/active-directory/governance/entitlement-management-request-approve).
 
-## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal"></a>Aktivere rollebaserede adgangskontrolelementer Microsoft Defender for Endpoint i Microsoft 365 Defender portal
+## <a name="enable-role-based-access-controls-in-microsoft-defender-for-endpoint-in-microsoft-365-defender-portal"></a>Aktivér rollebaserede adgangskontrolelementer i Microsoft Defender for Endpoint på Microsoft 365 Defender portal
 
-1. **Opret adgangsgrupper for MSSP-ressourcer i AAD: Grupper**
+1. **Opret adgangsgrupper for MSSP-ressourcer i Customer AAD: Grupper**
 
-    Disse grupper sammenkædes med de roller, du opretter i Defender til slutpunkt i Microsoft 365 Defender portal. Det gør du ved at oprette tre grupper i kundens AD-lejer. I vores eksempel på en fremgangsmåde opretter vi følgende grupper:
+    Disse grupper knyttes til de roller, du opretter i Defender for Endpoint på Microsoft 365 Defender portal. Det gør du ved at oprette tre grupper i kundens AD-lejer. I vores eksempeltilgang opretter vi følgende grupper:
 
     - Niveau 1-analytiker
     - Niveau 2-analytiker
-    - GODKENDERE fra MSSP-analytikere  
+    - MSSP-analytikere  
 
-2. Opret Defender til slutpunktsroller for relevante adgangsniveauer i Customer Defender for Endpoint i Microsoft 365 Defender-portalroller og -grupper.
+2. Opret Defender for Endpoint-roller for relevante adgangsniveauer i Customer Defender for Endpoint i Microsoft 365 Defender portalroller og -grupper.
 
-    Hvis du vil aktivere RBAC i kundeportalen til Microsoft 365 Defender, skal du åbne **tilladelsesroller > slutpunkter & grupper >** Roller med en brugerkonto med globale administrator- eller sikkerhedsadministratorrettigheder.
+    Hvis du vil aktivere RBAC i kundeportalen Microsoft 365 Defender, skal du få adgang til **tilladelser > slutpunktsroller & grupper > roller** med en brugerkonto med rettigheder som global administrator eller sikkerhedsadministrator.
 
-    :::image type="content" source="../../media/mssp-access.png" alt-text="Oplysninger om MSSP-adgang i Microsoft 365 Defender-portalen" lightbox="../../media/mssp-access.png":::
+    :::image type="content" source="../../media/mssp-access.png" alt-text="Oplysningerne om MSSP-adgangen på Microsoft 365 Defender-portalen" lightbox="../../media/mssp-access.png":::
 
-    Opret derefter RBAC-roller, så de opfylder behovet for MSSP SOC-niveau. Sammenkæd disse roller med de oprettede brugergrupper via "Tildelte brugergrupper".
+    Opret derefter RBAC-roller for at opfylde MSSP SOC-niveaubehov. Sammensæt disse roller med de oprettede brugergrupper via "Tildelte brugergrupper".
 
     To mulige roller:
 
     - **Niveau 1-analytikere** <br>
-      Udfør alle handlinger med undtagelse af direkte svar og administrer sikkerhedsindstillinger.
+      Udfør alle handlinger undtagen direkte svar og administrer sikkerhedsindstillinger.
 
     - **Niveau 2-analytikere** <br>
-      Niveau 1-funktioner med tilføjelsen til [live-svar](/windows/security/threat-protection/microsoft-defender-atp/live-response)
+      Niveau 1-funktioner med tilføjelsen til [live-svar](/microsoft-365/security/defender-endpoint/live-response).
 
-    Få mere at vide under [Brug rollebaseret adgangskontrol](/windows/security/threat-protection/microsoft-defender-atp/rbac).
+    Du kan få flere oplysninger under [Administrer portaladgang ved hjælp af rollebaseret adgangskontrol](/microsoft-365/security/defender-endpoint/rbac).
 
-## <a name="configure-governance-access-packages"></a>Konfigurere adgangspakker til styring
+## <a name="configure-governance-access-packages"></a>Konfigurer adgangspakker til styring
 
-1. **Tilføj MSSP som forbundet organisation i AAD: Styring af identitet**
+1. **Tilføj MSSP som forbundet organisation i Customer AAD: Identity Governance**
 
-    Hvis du tilføjer MSSP som en forbundet organisation, giver det MSSP mulighed for at anmode om og få adgangs klargjort. 
+    Tilføjelse af MSSP'en som en forbundet organisation gør det muligt for MSSP at anmode om og få klargjort adgang. 
 
-    Det gør du ved i kundens AD-lejer at få adgang til identitetsstyring: Forbundet organisation. Tilføj en ny organisation, og søg efter din MSSP-analytikerlejer via lejer-id eller domæne. Vi anbefaler, at du opretter en separat AD-lejer til dine MSSP-analytikere.
+    Det gør du ved at få adgang til Identitetsstyring i kundens AD-lejer: Forbundet organisation. Tilføj en ny organisation, og søg efter din MSSP-analytikerlejer via lejer-id eller domæne. Vi anbefaler, at du opretter en separat AD-lejer til dine MSSP-analytikere.
 
-2. **Opret et ressourcekatalog i Kundekatalog AAD: Styring af identitet**
+2. **Opret et ressourcekatalog i Kunde-AAD: Identitetsstyring**
 
     Ressourcekataloger er en logisk samling af adgangspakker, der er oprettet i kundens AD-lejer.
 
-    Det gør du ved i kundens AD-lejer at få adgang til styring af identitet: kataloger og tilføje **Nyt katalog**. I vores eksempel kalder vi det **MSSP Accesses**.
+    Det gør du ved at få adgang til Identitetsstyring i kundens AD-lejer: Kataloger og tilføje **Nyt katalog**. I vores eksempel kalder vi det **MSSP Accesses**.
 
-    :::image type="content" source="../../media/goverance-catalog.png" alt-text="Et nyt katalog i Microsoft 365 Defender portalen" lightbox="../../media/goverance-catalog.png":::
+    :::image type="content" source="../../media/goverance-catalog.png" alt-text="Et nyt katalog på Microsoft 365 Defender-portalen" lightbox="../../media/goverance-catalog.png":::
 
 
-    Få mere at vide under [Opret et katalog med ressourcer](/azure/active-directory/governance/entitlement-management-catalog-create).
+    Du kan finde flere oplysninger under [Opret et katalog over ressourcer](/azure/active-directory/governance/entitlement-management-catalog-create).
 
-3. **Opret adgangspakker til MSSP-ressourcer AAD: Styring af identitet**
+3. **Opret adgangspakker til MSSP-ressourcer Customer AAD: Identity Governance**
 
-    Access-pakker er en samling af rettigheder og adgange, som en anmoder vil få tildelt efter godkendelse. 
+    Adgangspakker er den samling af rettigheder og adgange, som en anmoder tildeles ved godkendelse. 
 
-    Det gør du ved i kundens AD-lejer at få adgang til identitetsstyring: Adgangspakker og tilføje **ny adgangspakke**. Opret en adgangspakke til MSSP-godkendere og hvert analytikerniveau. Følgende niveau 1-analytikerkonfiguration opretter f.eks. en adgangspakke, som:
+    Det gør du ved at få adgang til identitetsstyring i kundens AD-lejer: Adgangspakker og tilføje **ny adgangspakke**. Opret en adgangspakke til MSSP-godkenderne og hvert analytikerniveau. Følgende niveau 1-analytikerkonfiguration opretter f.eks. en adgangspakke, der:
 
-    - Kræver, at du er medlem af **AD-gruppens MSSP-analytikergodkendere** for at godkende nye anmodninger
-    - Har årlige adgangsvurderinger, hvor SOC-analytikere kan anmode om en adgangsudvidelse
+    - Kræver, at et medlem af AD-gruppen **MSSP-analytikergodkendere godkendere** for at godkende nye anmodninger
+    - Har årlige adgangsgennemgange, hvor SOC-analytikerne kan anmode om en adgangsudvidelse
     - Brugere i MSSP SOC-lejeren kan kun anmode om det
     - Access udløber automatisk efter 365 dage
 
-    :::image type="content" source="../../media/new-access-package.png" alt-text="Oplysninger om en ny adgangspakke i Microsoft 365 Defender-portalen" lightbox="../../media/new-access-package.png":::
+    :::image type="content" source="../../media/new-access-package.png" alt-text="Oplysningerne om en ny adgangspakke på Microsoft 365 Defender-portalen" lightbox="../../media/new-access-package.png":::
 
-    Få mere at vide under [Opret en ny adgangspakke](/azure/active-directory/governance/entitlement-management-access-package-create).
+    Du kan få flere oplysninger under [Opret en ny adgangspakke](/azure/active-directory/governance/entitlement-management-access-package-create).
 
-4. **Giv adgangsanmodningslink til MSSP-ressourcer fra AAD: Styring af identitet**
+4. **Angiv et link til anmodning om adgang til MSSP-ressourcer fra Customer AAD: Identity Governance**
 
-    Linket til min Access-portal bruges af MSSP SOC-analytikere til at anmode om adgang via de adgangspakker, der oprettes. Linket er robust, hvilket betyder, at det samme link kan bruges over tid til nye analytikere. Analytikeranmodningen går ind i en kø til godkendelse af **MSSP-analytikergodkenderne**.
+    Linket Til My Access-portalen bruges af MSSP SOC-analytikere til at anmode om adgang via de oprettede adgangspakker. Linket er holdbart, hvilket betyder, at det samme link kan bruges over tid for nye analytikere. Analytikeranmodningen sættes i kø til godkendelse af **MSSP-analytikergodkendere**.
 
-    :::image type="content" source="../../media/access-properties.png" alt-text="Adgangsegenskaberne i Microsoft 365 Defender portalen" lightbox="../../media/access-properties.png":::
+    :::image type="content" source="../../media/access-properties.png" alt-text="Adgangsegenskaberne på Microsoft 365 Defender-portalen" lightbox="../../media/access-properties.png":::
 
     Linket er placeret på oversigtssiden for hver adgangspakke.
 
@@ -117,17 +117,17 @@ Hvis du vil implementere en løsning med stedfortræderadgang for flere lejere, 
 
 1. Gennemse og godkend adgangsanmodninger i Kunde og/eller MSSP myaccess.
 
-    Anmodninger om adgang administreres i kunden My Access af medlemmer af gruppen MSSP-analytikergodkendere.
+    Anmodninger om adgang administreres i kunden My Access af medlemmer af gruppen MSSP Analyst Approvers.
 
     Det gør du ved at få adgang til kundens myaccess ved hjælp af: `https://myaccess.microsoft.com/@<Customer Domain>`.
 
     Eksempel: `https://myaccess.microsoft.com/@M365x440XXX.onmicrosoft.com#/`
 
-2. Godkend eller afvis anmodninger **Godkendelser** i brugergrænsefladen.
+2. Godkend eller afvis anmodninger i afsnittet **Godkendelser** i brugergrænsefladen.
 
-     På dette tidspunkt er analytikeradgang blevet klargjort, og hver enkelt analytiker bør kunne få adgang til kundens Microsoft 365 Defender portal:
+     På dette tidspunkt er der klargjort analytikeradgang, og hver analytiker bør kunne få adgang til kundens Microsoft 365 Defender portal:
 
     `https://security.microsoft.com/?tid=<CustomerTenantId>` med de tilladelser og roller, de blev tildelt.
 
 > [!IMPORTANT]
-> Delegeret adgang til Microsoft Defender for Endpoint i Microsoft 365 Defender-portalen giver i øjeblikket adgang til en enkelt lejer pr. browservindue.
+> Uddelegeret adgang til Microsoft Defender for Endpoint i Microsoft 365 Defender portalen giver i øjeblikket adgang til en enkelt lejer pr. browservindue.

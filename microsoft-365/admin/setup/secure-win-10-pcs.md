@@ -25,18 +25,18 @@ search.appverid:
 - BCS160
 - MET150
 description: Få mere at vide om, hvordan du sikrer Windows 10 pc'er, når du har konfigureret Microsoft 365 Business Premium.
-ms.openlocfilehash: d0f2842c69127893e512822a8d91dfd37a4a0e48
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 872fce9124f6a27dd884ed9d740baa9d195d8f95
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622918"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663442"
 ---
 # <a name="secure-windows-10-computers"></a>Beskyt Windows 10-computere
 
 Denne artikel gælder for Microsoft 365 Business Premium.
 
-Når du har [konfigureret](business-set-up.md) Microsoft 365 Business Premium, er det tid til at beskytte de Windows 10 computere i din organisation mod tyveri og skadelige trusler som virus og malware.
+Når du har [konfigureret](/microsoft-365/business-premium/m365bp-setup) Microsoft 365 Business Premium, er det tid til at beskytte de Windows 10 computere i din organisation mod tyveri og skadelige trusler som virus og malware.
 
 ## <a name="watch-secure-your-windows-10-pcs"></a>Se med: Beskyt dine Windows 10 pc'er
 

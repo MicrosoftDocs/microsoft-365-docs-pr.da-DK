@@ -16,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Få mere at vide om, hvor du kan få adgang til Windows og Office Deployment Lab Kit.
-ms.openlocfilehash: e90a52a23c6c79a3293d381c0503480abc90c2d7
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: 2324501927b39d860b8f2b06e36a85585fa8d4be
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463159"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669205"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows- og Office 365-installationslaboratoriesæt
 
@@ -97,9 +97,15 @@ Detaljerede laboratorievejledninger fører dig gennem flere installations- og ad
 - Bitlocker
 - Microsoft Defender Antivirus
 - Windows Hello til virksomheder
+- Windows Defender Credential Guard       
+- Microsoft Defender Application Guard     
+- Windows Defender Exploit Guard             
+- Windows Defender programkontrolelement   
+- Microsoft Defender for Endpoint 
+
 
 > [!NOTE]
-> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Det Windows 10 laboratorie udløber den 11. august 2022. Det Windows 11 laboratorie udløber den 7. august 2022. Nye versioner udgives før udløb.
+> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Evalueringssoftwaren i disse laboratorier udløber 90-120 dage efter aktiveringen. Nye versioner af laboratorierne udgives i august 2022. 
 
 ## <a name="additional-guidance"></a>Yderligere vejledning
 

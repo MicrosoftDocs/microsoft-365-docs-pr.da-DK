@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab) for at give en bruger besked om, at vedkommende arbejder med indhold, der er i konflikt med en DLP-politik.
-ms.openlocfilehash: ce6665227b62ea5937229696fa65b69e7cfb894a
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: af3dd2181c5bd8865f02755ba4d17f1feb0514d2
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623227"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669534"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>Send mailmeddelelser, og vis politiktip til DLP-politikker
 
@@ -97,7 +97,10 @@ For hver regel i en DLP-politik kan du:
 - Tilpas den tekst, der er inkluderet i meddelelsen, ved hjælp af HTML eller tokens. Se afsnittet nedenfor for at få flere oplysninger.
 
 > [!NOTE]
-> Mailmeddelelser kan kun sendes til individuelle modtagere – ikke grupper eller distributionslister. Det er kun nyt indhold, der udløser en mailmeddelelse. Redigering af eksisterende indhold udløser politiktip, men ikke en mailmeddelelse.
+>
+> - Mailmeddelelser kan kun sendes til individuelle modtagere, ikke grupper eller distributionslister.
+> - Det er kun nyt indhold, der udløser en mailmeddelelse. Hvis du redigerer eksisterende indhold, udløses politiktip, men ikke mailmeddelelser.
+> - Eksterne afsendere modtager ikke meddelelser. Meddelelser sendes kun til interne brugere.
 
 ![Indstillinger for mailbeskeder.](../media/4e7b9500-2a78-44e6-9067-09f4bfd50301.png)
 

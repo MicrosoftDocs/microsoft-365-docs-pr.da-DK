@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 8319cd07fb1a648e4aa20bc3a29535a2f4916f6b
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 08a85610d7790924e5e702f9d0a4133f391c4bde
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286378"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669270"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365-produktivitetsillustrationer
 
@@ -64,7 +64,7 @@ Dette sæt illustrationer bruger en af de mest regulerede industrier, finansiell
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Microsoft Purview Information Protection og Microsoft Purview Forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
+|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Beskyttelse af oplysninger og forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
 
 
 ## <a name="security-and-information-protection-for-multi-region-organizations"></a>Sikkerhed og Information Protection for organisationer med flere områder

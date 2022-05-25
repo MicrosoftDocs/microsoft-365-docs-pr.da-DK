@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: e47fc4630e83cb79a591f1c4fd4fc7421746a15e
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: b5fb9fabad337570744dbd94b76c39d446431cf6
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587386"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663486"
 ---
 # <a name="get-microsoft-defender-for-business"></a>Hent Microsoft Defender til virksomheder
 
@@ -50,7 +50,7 @@ Hvis du har tilmeldt dig en prøveversion, kan du [aktivere din prøveversion og
 
 ## <a name="get-microsoft-365-business-premium"></a>Få Microsoft 365 Business Premium
 
-*Fra den 1. marts 2022 udrulles Defender for Business som en del af Microsoft 365 Business Premium*. 
+*Pr. 1. marts 2022 er Defender for Business inkluderet i Microsoft 365 Business Premium*. 
 
 1. Besøg [siden Microsoft 365 Business Premium produkt](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot%3aoverviewtab).
 
@@ -85,7 +85,7 @@ Når du modtager din acceptmail, kan du aktivere dit prøveabonnement på følge
    | Scenario | Procedure |
    |:---|:---|
    | Du konfigurerer et Microsoft 365 abonnement første gang. | Vælg **Gå til automatiseret konfiguration,** og fuldfør følgende trin:<ol><li>Du skal enten installere dine Office apps nu eller vælge **Fortsæt** for at springe dette trin over. Du kan installere dine Office apps senere.</li><li>Hvis din virksomhed har et domæne, kan du tilføje det nu (denne indstilling anbefales). Alternativt kan du vælge at bruge dit standarddomæne `.onmicrosoft.com` lige nu.</li><li>Tilføj brugere, og tildel licenser. Hver bruger, du angiver, tildeles automatisk en licens. Se [Tilføj brugere, og tildel licenser på samme tid](mdb-add-users.md).</li></ol> |
-   | Du føjer en prøveversion til en eksisterende Microsoft 365 lejer. | <ol><li>Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.</li><li>Vælg **BrugereAktive** >  brugere i navigationsruden. Gennemse listen over brugere. </li><li>Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md).</li></ol> |
+   | Du føjer en prøveversion til en eksisterende Microsoft 365 lejer. | <ol><li>Gå til Microsoft 365 Administration ([https://admin.microsoft.com/](https://admin.microsoft.com/)), og log på.</li><li>Vælg **Brugere** > **Aktive brugere** i navigationsruden. Gennemse listen over brugere. </li><li>Hvis du vil tildele licenser, skal du følge vejledningen i [Tildel licenser til brugere](../../admin/manage/assign-licenses-to-users.md).</li></ol> |
 
 ## <a name="two-portals-for-setup"></a>To portaler til konfiguration
 

@@ -13,12 +13,12 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Opret og begrader opgaver, byg og organiser kursusindhold, og samarbejd om filer i realtid med den nye Microsoft OneDrive Learning Tools Interoperability App for Canvas.
-ms.openlocfilehash: 8a4e3a1fc1b1d19bed093d5e72bf66e1afb2f591
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 62df03d18081cf9c48e5b153ed7a3cfe6ee27901
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285560"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663398"
 ---
 # <a name="integrate-microsoft-onedrive-lti-with-canvas"></a>Integrer Microsoft OneDrive LTI med lærred
 
@@ -44,7 +44,7 @@ Integration af Microsoft OneDrive LTI med lærred er en proces med to trin. Det 
 > Den person, der udfører denne integration, skal være administrator af lærredet og administrator af den Microsoft 365 lejer.
 
 1. Log på <a href="https://onedrivelti.microsoft.com/admin" target="_blank">Microsoft OneDrive LTI-registreringsportalen</a>
-2. Vælg knappen **Administratorsamtykke** , og acceptér tilladelserne.
+2. Vælg knappen **Administration Samtykke**, og acceptér tilladelserne.
 
    > [!CAUTION]
    > Hvis dette trin ikke udføres, giver følgende trin dig en fejl, og du kan ikke udføre dette trin i en time, når du har fået fejlen.
@@ -71,17 +71,21 @@ Integration af Microsoft OneDrive LTI med lærred er en proces med to trin. Det 
     >
     > Du kan få flere oplysninger om, hvordan undervisere kan ændre deres links til kursusnavigation, [under Hvordan gør jeg administrere links til kursusnavigation?](https://community.canvaslms.com/t5/Instructor-Guide/How-do-I-manage-Course-Navigation-links/ta-p/1020)
 
-7. Gem nøglen, så bliver den tilgængelig i lærredet i tilstanden **Fra** . Slå nøglen **til** , og kopiér den nøgle, der er angivet i kolonnen **Detaljer** , som skal bruges i næste trin.
+7. Udvid derefter rullelisten **Yderligere indstillinger** , og angiv **Niveauet for beskyttelse af personlige oplysninger** til **Offentlig**. 
+  
+   Hvis du angiver **Niveauet for beskyttelse af personlige oplysninger** til **Offentlig** , kan kursusmedlemmernes navne vises for andre medlemmer i samarbejde.
+
+8. Gem nøglen, så bliver den tilgængelig i lærredet i tilstanden **Fra** . Slå nøglen **til** , og kopiér den nøgle, der er angivet i kolonnen **Detaljer** , som skal bruges i næste trin.
 
    :::image type="content" source="media/OneDrive-LTI-19.png" alt-text="Lærredssiden med nøglen angivet i en anden tilstand. Den skal aktiveres, og nøglen skal kopieres fra detaljekolonnen på denne side.":::
 
-8. Vend tilbage til Microsoft OneDrive LTI-registreringsportalen, og indsæt nøglen i feltet **Lærredsklient-id**. Vælg **Næste** , når du er klar.
+9. Vend tilbage til Microsoft OneDrive LTI-registreringsportalen, og indsæt nøglen i feltet **Lærredsklient-id**. Vælg **Næste** , når du er klar.
 
    :::image type="content" source="media/OneDrive-LTI-20.png" alt-text="LTI-lejerregistreringssiden, der viser JSON-teksten og tekstfeltet, som nøglen skal kopieres til.":::
 
-9. Gennemse og gem dine ændringer. Der vises en meddelelse ved vellykket registrering.
+10. Gennemse og gem dine ændringer. Der vises en meddelelse ved vellykket registrering.
 
-10. Dine registreringsoplysninger kan også gennemses ved at vælge knappen **Vis LTI-lejere** på startsiden.
+11. Dine registreringsoplysninger kan også gennemses ved at vælge knappen **Vis LTI-lejere** på startsiden.
 
 Fremtidige udgivelser kan kræve yderligere administratorsamtykke. I disse tilfælde skal du kun gentage trin 1 og 2.
 

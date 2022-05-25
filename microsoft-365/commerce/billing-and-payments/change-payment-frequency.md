@@ -1,5 +1,5 @@
 ---
-title: Ændre din faktureringsfrekvens
+title: Skift din faktureringshyppighed
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -20,26 +20,26 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid: MET150
 description: Få mere at vide om, hvordan du ændrer, hvor ofte du faktureres for dit virksomhedsabonnement.
-ms.date: 04/02/2021
-ms.openlocfilehash: dcb3d20d12dec8451481626538f759aef627a221
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 05/24/2022
+ms.openlocfilehash: 366d35b81d5c7ea84d5f9cd471ea4f6b7feac984
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589296"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669227"
 ---
-# <a name="change-your-billing-frequency"></a>Ændre din faktureringsfrekvens
+# <a name="change-your-billing-frequency"></a>Skift din faktureringshyppighed
 
-Når du køber et abonnement, vælger du månedlig eller årlig fakturering. Hvis du vil ændre, hvor ofte du faktureres for et abonnement, skal du følge disse trin.
+Når du køber et abonnement, vælger du en faktureringshyppighed. Hvis du vil ændre, hvor ofte du faktureres for et abonnement, skal du følge disse trin.
 
-1. I Administration skal du gå til **siden Fakturering**\> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">dine</a> produkter.
-2. Vælg **det abonnement** , du vil ændre, under fanen Produkter.
-3. På siden med abonnementsoplysninger skal du i **sektionen Abonnements- og betalingsindstillinger** vælge **Rediger faktureringsfrekvens**.
-4. I **ruden Rediger faktureringsfrekvens** skal du vælge indstillingen for, hvor ofte du vil faktureres, og derefter vælge **Rediger**.
+1. I Administration skal du gå til siden **Fakturering**\> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+2. På fanen **Produkter** skal du vælge det abonnement, du vil ændre.
+3. På siden med abonnementsoplysninger skal du i afsnittet **Indstillinger for abonnement og betaling** vælge **Rediger faktureringshyppighed**.
+4. I ruden **Rediger faktureringshyppighed** skal du vælge indstillingen for, hvor ofte du vil faktureres, og derefter vælge **Skift**.
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Få vist din regning eller faktura](../../commerce/billing-and-payments/view-your-bill-or-invoice.md) (artikel)\
+[Se din regning eller faktura](../../commerce/billing-and-payments/view-your-bill-or-invoice.md) (artikel)\
 [Betaling for dit abonnement](../../commerce/billing-and-payments/pay-for-your-subscription.md) (artikel)\
-[Få mere at vide om, hvordan du finder og får vist din regning](view-your-bill-or-invoice.md) eller faktura (artikel)\
-[Ændre dine faktureringsadresser](change-your-billing-addresses.md) (artikel)
+[Få mere at vide om, hvordan du finder og får vist din faktura (](view-your-bill-or-invoice.md) artikel)\
+[Skift dine faktureringsadresser](change-your-billing-addresses.md) (artikel)

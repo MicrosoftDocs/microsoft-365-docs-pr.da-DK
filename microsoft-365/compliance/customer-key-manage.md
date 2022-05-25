@@ -12,12 +12,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Når du har konfigureret Kundenøgle, kan du få mere at vide om, hvordan du administrerer den ved at gendanne AKV-nøgler og administrere tilladelser samt oprette og tildele politikker for datakryptering.
-ms.openlocfilehash: 9d7a926018a23c62d2ea21283ad6852d979cc6bb
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: a1fab2694be866acd6035af90929b5ab690da031
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535420"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663464"
 ---
 # <a name="manage-customer-key"></a>Administrer kundenøgle
 
@@ -43,9 +43,9 @@ Følg disse trin for at oprette en dep med flere arbejdsbelastninger:
 
    - *PolicyName* er det navn, du vil bruge til politikken. Navne må ikke indeholde mellemrum. Det kan f.eks. være Contoso_Global.
 
-   - *KeyVaultURI1* er URI'en for den første nøgle i politikken. For eksempel <https://contosoWestUSvault1.vault.azure.net/keys/Key_01>.
+   - *KeyVaultURI1* er URI'en for den første nøgle i politikken. Det kunne f.eks. være <https://contosoWestUSvault1.vault.azure.net/keys/Key_01>.
 
-   - *KeyVaultURI2* er URI'en for den anden nøgle i politikken. For eksempel <https://contosoCentralUSvault1.vault.azure.net/keys/Key_02>. Adskil de to URI'er med et komma og et mellemrum.
+   - *KeyVaultURI2* er URI'en for den anden nøgle i politikken. Det kunne f.eks. være <https://contosoCentralUSvault1.vault.azure.net/keys/Key_02>. Adskil de to URI'er med et komma og et mellemrum.
 
    - *Politikbeskrivelse* er en brugervenlig beskrivelse af politikken, der hjælper dig med at huske, hvad politikken er beregnet til. Du kan medtage mellemrum i beskrivelsen. For eksempel "Rodpolitik for flere arbejdsbelastninger for alle brugere i lejeren".
 
@@ -95,9 +95,9 @@ Følg disse trin for at oprette en forhindring af dataforbrug, der skal bruges s
 
    - *Politikbeskrivelse* er en brugervenlig beskrivelse af politikken, der hjælper dig med at huske, hvad politikken er beregnet til. Du kan medtage mellemrum i beskrivelsen. Det kan f.eks. være "Rodnøgle til postkasser i USA og dets områder".
 
-   - *KeyVaultURI1* er URI'en for den første nøgle i politikken. For eksempel <https://contoso_EastUSvault01.vault.azure.net/keys/USA_key_01>.
+   - *KeyVaultURI1* er URI'en for den første nøgle i politikken. Det kunne f.eks. være <https://contoso_EastUSvault01.vault.azure.net/keys/USA_key_01>.
 
-   - *KeyVaultURI2* er URI'en for den anden nøgle i politikken. For eksempel <https://contoso_EastUS2vault01.vault.azure.net/keys/USA_Key_02>. Adskil de to URI'er med et komma og et mellemrum.
+   - *KeyVaultURI2* er URI'en for den anden nøgle i politikken. Det kunne f.eks. være <https://contoso_EastUS2vault01.vault.azure.net/keys/USA_Key_02>. Adskil de to URI'er med et komma og et mellemrum.
 
    Eksempel:
   
@@ -105,7 +105,7 @@ Følg disse trin for at oprette en forhindring af dataforbrug, der skal bruges s
    New-DataEncryptionPolicy -Name USA_mailboxes -Description "Root key for mailboxes in USA and its territories" -AzureKeyIDs https://contoso_EastUSvault02.vault.azure.net/keys/USA_key_01, https://contoso_CentralUSvault02.vault.azure.net/keys/USA_Key_02
    ```
 
-Du kan finde detaljerede oplysninger om syntaks og parametre under [New-DataEncryptionPolicy](/powershell/module/exchange/new-data-encryptionpolicy).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-DataEncryptionPolicy](/powershell/module/exchange/new-dataencryptionpolicy).
 
 ### <a name="assign-a-dep-to-a-mailbox"></a>Tildel en deaktivering af data til en postkasse
 

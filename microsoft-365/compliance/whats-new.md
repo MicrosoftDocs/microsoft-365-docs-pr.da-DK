@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt skiftende overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 4af9cb3073e4fa150a2683c2dd2f125336ef01b8
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 20a8a96146b7f65ef3f8ccec4f099b91d74822a0
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363108"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670096"
 ---
 # <a name="whats-new-in-microsoft-purview"></a>Nyheder i Microsoft Purview
 
@@ -139,7 +139,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 | Privilegeret adgangsstyring i Microsoft 365 | Microsoft Purview-Privileged Access Management | Privilegeret adgangsstyring hjælper med at beskytte din organisation mod brud og hjælper med at overholde bedste praksis for overholdelse af angivne standarder ved at begrænse stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan få mere at vide [under Microsoft Purview Privilegeret adgangsstyring](privileged-access-management-solution-overview.md). |
 | Microsoft-dataforbindelser | Microsoft Purview dataconnectors | Microsoft 365 gør det muligt for administratorer at bruge dataconnectors til at importere og arkivere ikke-Microsoft-data fra sociale medieplatforme, chatplatforme og platforme til dokumentsamarbejde til postkasser i din Microsoft 365 organisation. Du kan få mere at vide under [Microsoft Purview dataconnectors](compliance-extensibility.md). |
 | Microsoft 365 Avanceret eDiscovery <br><br> Microsoft 365 Core eDiscovery | Microsoft Purview eDiscovery (Premium) <br><br> Microsoft Purview eDiscovery (Standard) | Elektronisk registrering eller eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i juridiske sager. Du kan få mere at vide [under Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md) og [Microsoft Purview eDiscovery (Standard)](get-started-core-ediscovery.md). |
-| Microsoft 365-overholdelsescenter | Microsoft Purview-overholdelsesportal | Administrationsportal til adgang til løsninger og løsningskatalog i Microsoft 365 E5 Overholdelse-pakken. Du kan få mere at vide under [Microsoft Purview-compliance-portal](microsoft-365-compliance-center.md). |
+| Microsoft 365-overholdelsescenter | Microsoft Purview-overholdelsesportal | Administration portal for at få adgang til løsninger og løsningskataloget i Microsoft 365 E5 Overholdelse-pakken. Du kan få mere at vide under [Microsoft Purview-compliance-portal](microsoft-365-compliance-center.md). |
 
 ## <a name="march-2022"></a>Marts 2022
 
@@ -151,7 +151,7 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 
 - [Arbejde med forbedringshandlinger](compliance-manager-improvement-actions.md), [Kom i gang med Overholdelsesstyring](compliance-manager-setup.md) – yderligere oplysninger om flere forbedringshandlinger, der automatisk kan overvåges og testes ("løbende vurdering af overholdelse af angivne standarder"); Dette omfatter nye evner til at overordnet teststatus for en handling i forhold til en anden handling.
 
-### <a name="data-classification"></a>Dataklassificering
+### <a name="data-classification"></a>Klassificering af data
 
 - [Kom i gang med Indholdsoversigt](data-classification-content-explorer.md) – Teams tilføjede vejledning, pegede licensafsnittet på tjenestebeskrivelser.
 
@@ -168,15 +168,15 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 - [Konfigurer indstillinger for forebyggelse af datatab for slutpunkter](dlp-configure-endpoint-settings.md) – nyt til offentlig prøveversion af begrænsede appgrupper.
 - [Reference til politik til forebyggelse af datatab](dlp-policy-reference.md) – opdateret til offentlig prøveversion af begrænsede appgrupper.
 - [Kom i gang med forebyggelse af datatab for Power BI](dlp-powerbi-get-started.md) – nyt til offentlig prøveversion.
+- 
+### <a name="information-protection"></a>Beskyttelse af oplysninger
 
+- [Understøttelse af produktbemærkninger med dobbeltbytetegnsæt](mip-dbcs-relnotes.md) – tilføjet vejledning til macOS.
+- 
 ### <a name="insider-risk-management"></a>Styring af insider-risiko
 
 - [Kom i gang med styring af insiderrisiko](insider-risk-management-configure.md) – tilføjede nye opgaver i vejledningen Anbefalede handlinger.
 - [Kom i gang med indstillinger for styring af insiderrisiko](insider-risk-management-settings.md) – nye opdateringer af funktioner til meddelelser og mailbeskeder, nye opdateringer til analysemeddelelser.
-
-### <a name="microsoft-information-protection"></a>Microsoft Information Protection
-
-- [Understøttelse af produktbemærkninger med dobbeltbytetegnsæt](mip-dbcs-relnotes.md) – tilføjet vejledning til macOS.
 
 ### <a name="microsoft-priva"></a>Microsoft Priva
 

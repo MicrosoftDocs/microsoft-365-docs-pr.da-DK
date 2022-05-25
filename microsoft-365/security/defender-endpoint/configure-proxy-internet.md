@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 787da143bdbbc2d21610ba14d0fe7c955e4e976d
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 1faff638c9b33b933277dc74248c2d7daa43331c
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823373"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669666"
 ---
 # <a name="configure-device-proxy-and-internet-connectivity-settings"></a>Konfigurer indstillingerne for enhedsproxy og internetforbindelse
 
@@ -33,7 +33,7 @@ ms.locfileid: "64823373"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 Defender for Endpoint-sensoren kræver, at Microsoft Windows HTTP (WinHTTP) rapporterer sensordata og kommunikerer med Defender for Endpoint-tjenesten. Den integrerede Defender for Endpoint-sensor kører i systemkontekst ved hjælp af LocalSystem-kontoen. Sensoren bruger Microsoft Windows HTTP Services (WinHTTP) til at aktivere kommunikation med Cloudtjenesten Defender for Endpoint.
 
@@ -152,7 +152,7 @@ Brug netsh til at konfigurere en statisk proxy for hele systemet.
 
 2. Angiv følgende kommando, og tryk på **Enter**:
 
-   ```PowerShell
+   ```command prompt
    netsh winhttp set proxy <proxy>:<port>
    ```
 
@@ -160,7 +160,7 @@ Brug netsh til at konfigurere en statisk proxy for hele systemet.
 
 Hvis du vil nulstille winhttp-proxyen, skal du angive følgende kommando og trykke på **Enter**:
 
-```PowerShell
+```command prompt
 netsh winhttp reset proxy
 ```
 
@@ -249,13 +249,13 @@ Kontrollér, at proxykonfigurationen er fuldført. WinHTTP kan derefter finde og
 
 4. Angiv følgende kommando, og tryk på **Enter**:
 
-    ```PowerShell
+    ```command prompt
     HardDrivePath\MDEClientAnalyzer.cmd
     ```
 
     Erstat *HardDrivePath* med den sti, hvor værktøjet MDEClientAnalyzer blev downloadet. Eksempel:
 
-    ```PowerShell
+    ```command prompt
     C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd
     ```
 

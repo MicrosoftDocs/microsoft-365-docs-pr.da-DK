@@ -12,5 +12,7 @@
       href: scheduler-using.md
     - name: Planlægning af tilbagevendende møder
       href: scheduler-recurring-meetings.md
+    - name: Brug Planlægger til Microsoft 365-indstillinger
+      href: scheduler-preferences.md
     - name: Ofte stillede spørgsmål om Scheduler til Microsoft 365
       href: scheduler-faqs.md

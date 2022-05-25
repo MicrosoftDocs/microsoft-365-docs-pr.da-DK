@@ -21,21 +21,21 @@ search.appverid:
 - MED150
 ms.assetid: 18be3b98-34ae-47be-9337-ab6c3fb372ac
 description: I denne artikel kan du få mere at vide om, hvordan du kontrollerer status for katalogsynkronisering i Office 365.
-ms.openlocfilehash: 8f21985f8db3539e8dd1a839cc6cb499a425feeb
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 28376a63ab035490bdfeafb294eed9d993db54d9
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095548"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669644"
 ---
 # <a name="view-directory-synchronization-status-in-microsoft-365"></a>Vis status for katalogsynkronisering i Microsoft 365
 
-Hvis du har integreret dit Active Directory i det lokale miljø Domænetjenester (AD DS) med Azure Active Directory (Azure AD) ved at synkronisere dit lokale miljø med Microsoft 365, kan du også kontrollere status for synkroniseringen.
+Hvis du har integreret AD DS (Active Directory i det lokale miljø Domain Services) med Azure Active Directory (Azure AD) ved at synkronisere dit lokale miljø med Microsoft 365, kan du også kontrollere status for synkroniseringen.
   
 ## <a name="view-directory-synchronization-status"></a>Vis status for katalogsynkronisering
 
 - Log på [Microsoft 365 Administration](https://admin.microsoft.com), og vælg **DirSync-status** på startsiden.
-- Du kan også gå til **Brugere** \> **Aktive brugere**, og på siden **Aktive brugere** skal du vælge Synkronisering af **Flere** \> **mapper**. I ruden **Katalogsynkronisering** skal du vælge **Gå til DirSync-administration**.
+- Du kan også gå til **Brugere** \> **Aktive brugere**, og på siden **Aktive brugere** skal du vælge **synkroniseringen** **Elipse** \> Directory. I ruden **Katalogsynkronisering** skal du vælge **Gå til DirSync-administration**.
 
 ## <a name="information-on-the-manage-directory-synchronization-page"></a>Oplysninger på siden Administrer katalogsynkronisering
 
@@ -57,14 +57,14 @@ Hvis der er problemer med katalogsynkroniseringen, vises fejlene også på denne
 
 ## <a name="monitor-synchronization-health"></a>Overvåg synkroniseringstilstand
 
-I dette afsnit skal du installere en Azure AD Forbind Health agent på hver af dine AD DS-domænecontrollere i det lokale miljø for at overvåge din identitetsinfrastruktur og de synkroniseringstjenester, der leveres af Azure AD Forbind. Overvågningsoplysningerne er tilgængelige på en Azure AD Forbind Health-portal, hvor du kan få vist beskeder, overvågning af ydeevnen, forbrugsanalyse og andre oplysninger.
+I dette afsnit skal du installere en Azure AD Forbind tilstandsagent på hver af dine AD DS-domænecontrollere i det lokale miljø for at overvåge din identitetsinfrastruktur og de synkroniseringstjenester, der leveres af Azure AD Forbind. Overvågningsoplysningerne er tilgængelige på en Azure AD Forbind Tilstandsportal, hvor du kan få vist beskeder, ydelsesovervågning, forbrugsanalyse og andre oplysninger.
 
-Den vigtigste designbeslutning for, hvordan du bruger Azure AD Forbind Health, er baseret på, hvordan du bruger Azure AD-Forbind:
+Den vigtigste designbeslutning for, hvordan du bruger Azure AD Forbind Health, er baseret på, hvordan du bruger Azure AD Forbind:
 
-- Hvis du bruger indstillingen **for administreret godkendelse**, skal du starte med [Brug af Azure AD Forbind Health med synkronisering](/azure/active-directory/connect-health/active-directory-aadconnect-health-sync) for at forstå og konfigurere Azure AD Forbind Health.
-- Hvis du kun synkroniserer navnene på konti og grupper ved hjælp af **sammenkædet godkendelse** med Active Directory Federation Services (AD FS), skal du starte med [Brug af Azure AD Forbind Health med AD FS](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs) for at forstå og konfigurere Azure AD Forbind Health.
+- Hvis du bruger indstillingen **for administreret godkendelse**, skal du starte med [Brug Azure AD Forbind Tilstand med synkronisering](/azure/active-directory/connect-health/active-directory-aadconnect-health-sync) for at forstå og konfigurere Azure AD Forbind Tilstand.
+- Hvis du kun synkroniserer navnene på konti og grupper ved hjælp af **godkendelse i organisationsnetværket** med ad FS (Active Directory Federation Services), skal du starte med [Brug Azure AD Forbind tilstand med AD FS](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs) for at forstå og konfigurere Azure AD Forbind Sundhed.
 
 Når du er færdig, har du:
 
-- Azure AD Forbind Tilstandsagent, der er installeret på dine lokale identitetsudbyderservere.
-- Azure AD Forbind Health Portal, der viser den aktuelle tilstand for infrastrukturen i det lokale miljø og synkroniseringsaktiviteter med Azure AD-lejeren for dit Microsoft 365 abonnement.
+- Den Azure AD Forbind tilstandsagent, der er installeret på dine lokale identitetsudbyderservere.
+- Portalen Azure AD Forbind tilstand, der viser den aktuelle tilstand for infrastrukturen i det lokale miljø og synkroniseringsaktiviteterne med den Azure AD lejer for dit Microsoft 365 abonnement.

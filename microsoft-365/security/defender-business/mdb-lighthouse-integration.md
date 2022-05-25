@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 6dcc0ad7d03031ed0cc41aadeba901eff666943b
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: d7681be9f1103fbf21b7f3f89b74fc6d9d32f809
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174207"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663640"
 ---
 # <a name="microsoft-365-lighthouse-and-microsoft-defender-for-business"></a>Microsoft 365 Fyrtårn og Microsoft Defender til virksomheder
 
@@ -31,9 +31,6 @@ Hvis du er en Microsoft Cloud Solution Provider (CSP), og du har [Microsoft 365 
 :::image type="content" source="media/lighthouse-incidents.png" alt-text="skærmbillede af listen over hændelser i Microsoft 365 Fyrtårn":::
 
 Hvis du vil have adgang til listen over hændelser, skal du i Microsoft 365 Lighthouse på startsiden finde kortet **Sikkerhedshændelser** og derefter vælge **Vis alle hændelser**.
-
-> [!IMPORTANT]
-> Funktionerne udrulles stadig. Hvis du endnu ikke har disse funktioner, bør du snart have dem.
 
 ## <a name="learn-more-about-microsoft-365-lighthouse"></a>Få mere at vide om Microsoft 365 Fyrtårn
 

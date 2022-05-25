@@ -16,23 +16,23 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ed4b69aae3a29478a2b8bfb98d8ab605e5af28a8
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 4a81f125f9f32a5b4bdafd6d4656699fa17caa82
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188652"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669964"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-ios"></a>Udrul Microsoft Defender for Endpoint på iOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 I dette emne beskrives, hvordan du installerer Defender for Endpoint på iOS på Intune-firmaportal tilmeldte enheder. Du kan få flere oplysninger om Intune enhedsregistrering under [Tilmeld iOS-/iPadOS-enheder i Intune](/mem/intune/enrollment/ios-enroll).
 
@@ -51,10 +51,10 @@ Installer Defender for Endpoint på iOS via Intune-firmaportal.
 
 ### <a name="add-ios-store-app"></a>Tilføj iOS Store-app
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **AppsiOS** -> **/iPadOSAddiOS** ->  ->  **Store-appen** og klikke på **Vælg**.
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Apps** -> **iOS/iPadOS** -> **Tilføj** -> **iOS Store-app** og klikke på **Vælg**.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/ios-deploy-1.png" alt-text="Fanen Tilføj programmer i Microsoft Endpoint Manager Administration" lightbox="images/ios-deploy-1.png":::
+    > :::image type="content" source="images/ios-deploy-1.png" alt-text="Fanen Tilføj programmer i Microsoft Endpoint Manager Administration Center" lightbox="images/ios-deploy-1.png":::
 
 1. Klik på **Søg i App Store** på siden **Tilføj app**, og skriv **Microsoft Defender for Endpoint** i søgelinjen. Klik på *Microsoft Defender for Endpoint* i afsnittet søgeresultater, og klik på **Vælg**.
 
@@ -66,7 +66,7 @@ Installer Defender for Endpoint på iOS via Intune-firmaportal.
     > Den valgte brugergruppe skal bestå af Intune tilmeldte brugere.
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="images/ios-deploy-2.png" alt-text="Fanen Tilføj gruppe i Microsoft Endpoint Manager Administration" lightbox="images/ios-deploy-2.png":::
+    > :::image type="content" source="images/ios-deploy-2.png" alt-text="Fanen Tilføj gruppe i Microsoft Endpoint Manager Administration Center" lightbox="images/ios-deploy-2.png":::
 
 1. I afsnittet *Gennemse + Opret* skal du kontrollere, at alle de angivne oplysninger er korrekte, og derefter vælge **Opret**. Om et øjeblik skal Defender for Endpoint-appen oprettes, og der vises en meddelelse i øverste højre hjørne af siden.
 
@@ -89,7 +89,7 @@ Konfigurer derefter overvåget tilstand for Defender for Endpoint-app via en App
 1. Log på [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431), og gå til **Apps** \> **Appkonfigurationspolitikker** \> **Tilføj**. Vælg **Administrerede enheder**.
 
     > [!div class="mx-imgBorder"]
-    > ![Billede af Microsoft Endpoint Manager Administration4.](images/ios-deploy-4.png)
+    > ![Billede af Microsoft Endpoint Manager Administration Center4.](images/ios-deploy-4.png)
 
 1. På siden *Opret appkonfigurationspolitik* skal du angive følgende oplysninger:
     - Politiknavn
@@ -97,7 +97,7 @@ Konfigurer derefter overvåget tilstand for Defender for Endpoint-app via en App
     - Målrettet app: Vælg **Microsoft Defender for Endpoint** på listen
 
     > [!div class="mx-imgBorder"]
-    > ![Billede af Microsoft Endpoint Manager Administration5.](images/ios-deploy-5.png)
+    > ![Billede af Microsoft Endpoint Manager Administration Center5.](images/ios-deploy-5.png)
 
 1. På det næste skærmbillede skal du vælge **Brug konfigurationsdesigner** som format. Angiv følgende egenskab:
     - Konfigurationsnøgle: issupervised
@@ -105,7 +105,7 @@ Konfigurer derefter overvåget tilstand for Defender for Endpoint-app via en App
     - Konfigurationsværdi: {{issupervised}}
 
     > [!div class="mx-imgBorder"]
-    > ![Billede af Microsoft Endpoint Manager Administration6.](images/ios-deploy-6.png)
+    > ![Billede af Microsoft Endpoint Manager Administration Center6.](images/ios-deploy-6.png)
 
 1. Vælg **Næste** for at åbne siden **Områdekoder** . Områdekoder er valgfri. Vælg **Næste** for at fortsætte.
 
@@ -120,10 +120,10 @@ Konfigurer derefter overvåget tilstand for Defender for Endpoint-app via en App
 1. Derefter skal du installere en brugerdefineret profil på overvågede iOS-enheder. Dette er til forbedrede funktioner til anti-phishing. Følg nedenstående trin:
 
     - Download konfigurationsprofilen fra [https://aka.ms/mdeiosprofilesupervised](https://aka.ms/mdeiosprofilesupervised)
-    - Naviger til **DevicesiOS** -> **/iPadOSConfiguration** ->  **profilesOpret profil** -> 
+    - Gå til **Enheder** -> **iOS/iPadOS-konfigurationsprofiler** ->  -> **Opret profil**
 
     > [!div class="mx-imgBorder"]
-    > ![Billede af Microsoft Endpoint Manager Administration7.](images/ios-deploy-7.png)
+    > ![Billede af Microsoft Endpoint Manager Administration Center7.](images/ios-deploy-7.png)
     
     - Angiv et navn på profilen. Når du bliver bedt om at importere en konfigurationsprofilfil, skal du vælge den fil, der er downloadet fra det forrige trin.
     - I afsnittet **Tildeling** skal du vælge den enhedsgruppe, du vil anvende denne profil på. Dette bør som bedste praksis anvendes på alle administrerede iOS-enheder. Vælg **Næste**.
@@ -141,7 +141,7 @@ Administratorer kan konfigurere automatisk konfiguration af VPN-profilen. Dette 
 
 Dette trin forenkler onboardingprocessen ved at konfigurere VPN-profilen. Hvis du vil have en oplevelse uden berøring eller lydløs onboarding, skal du se næste afsnit: [Zero-touch onboard](#zero-touch-onboarding-of-microsoft-defender-for-endpoint).
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **EnhederKonfigurationsprofilerOpret** ->  ->  **profil**.
+1. I [Administration af Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Enhedskonfigurationsprofiler** ->  ->  **Opret profil**.
 1. Vælg **Platform** som **iOS/iPadOS** og **Profiltype** som **VPN**. Klik på **Opret**.
 1. Skriv et navn til profilen, og klik på **Næste**.
 1. Vælg **Brugerdefineret VPN** som forbindelsestype, og angiv følgende i afsnittet **Basis-VPN** :
@@ -152,7 +152,7 @@ Dette trin forenkler onboardingprocessen ved at konfigurere VPN-profilen. Hvis d
     - VPN-id = com.microsoft.scmx
     - I nøgleværdipar skal du angive nøglen **AutoOnboard** og angive værdien til **Sand**.
     - Type af automatisk VPN = On-demand VPN
-    - Klik på **Tilføj** for **Regler efter behov,** og vælg **Jeg vil gøre følgende = Etabler VPN**, **jeg vil begrænse til = Alle domæner**.
+    - Vælg **Tilføj** for **Regler efter behov,** og vælg **Jeg vil gøre følgende = Forbind VPN**, **jeg vil begrænse til = Alle domæner**.
 
     :::image type="content" source="images/ios-deploy-8.png" alt-text="Fanen Konfigurationsindstillinger for VPN-profil" lightbox="images/ios-deploy-8.png":::
 
@@ -168,7 +168,7 @@ Dette trin forenkler onboardingprocessen ved at konfigurere VPN-profilen. Hvis d
 
 Administratorer kan konfigurere Microsoft Defender for Endpoint til at installere og aktivere uovervåget. I dette flow opretter administratoren en installationsprofil, og brugeren får ganske enkelt besked om installationen. Defender for Endpoint installeres automatisk, uden at brugeren skal åbne appen. Følg nedenstående trin for at konfigurere zero-touch eller uovervåget installation af Defender for Endpoint på tilmeldte iOS-enheder:
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **EnhederKonfigurationsprofilerOpret** >  >  **profil**.
+1. I [Administration af Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Enhedskonfigurationsprofiler** >  >  **Opret profil**.
 1. Vælg **Platform** som **iOS/iPadOS** og **Profiltype** som **VPN**. Vælg **Opret**.
 1. Skriv et navn til profilen, og vælg **Næste**.
 1. Vælg **Brugerdefineret VPN** som forbindelsestype, og angiv følgende i afsnittet **Basis-VPN** :
@@ -179,7 +179,7 @@ Administratorer kan konfigurere Microsoft Defender for Endpoint til at installer
     - VPN-id = com.microsoft.scmx
     - I nøgleværdipar skal du angive nøglen **SilentOnboard** og angive værdien til **True**.
     - Type af automatisk VPN = On-demand VPN
-    - Vælg **Tilføj** for **Regler efter behov,** og vælg **Jeg vil gøre følgende = Etabler VPN**, **jeg vil begrænse til = Alle domæner**.
+    - Vælg **Tilføj** for **Regler efter behov,** og vælg **Jeg vil gøre følgende = Forbind VPN**, **jeg vil begrænse til = Alle domæner**.
 
     :::image type="content" source="images/ios-deploy-9.png" alt-text="Siden Konfiguration af VPN-profil" lightbox="images/ios-deploy-9.png":::
 

@@ -20,13 +20,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Få mere at vide om faktureringskonti, og hvordan de bruges til at administrere kontoindstillinger, fakturaer, betalingsmetoder og køb.
-ms.date: 03/17/2021
-ms.openlocfilehash: 45f9e9d9a174094badaae8087803fbdb3eec3f3b
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.date: 05/24/2022
+ms.openlocfilehash: 0c1dd2048cbe38ecca162f361f3f0bdbc6c3861f
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731389"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670052"
 ---
 # <a name="understand-billing-accounts"></a>Forstå faktureringskonti
 
@@ -76,7 +76,8 @@ Du kan give andre adgang til faktureringskontoen i <a href="https://go.microsoft
 - Læser &mdash; **af faktureringskonto** Kan få vist konti.
 
 > [!Note]
-> Faktureringskontoroller gælder kun for faktureringskonti og gælder ikke for andre Microsoft 365 Administration scenarier.
+> - Faktureringskontoroller gælder kun for faktureringskonti og gælder ikke for andre Microsoft 365 Administration scenarier.
+> - For faktureringskonti, der oprettes i Microsoft 365 tilmelding, tildeles nye administratorer af Global, Fakturering og Global Reader automatisk særskilte adgangsniveauer. Du kan administrere denne adgang fra siden **Faktureringskonti** >  ved udtrykkeligt at fjerne disse brugere fra afsnittet om rolletildeling nederst på siden.
 
 ## <a name="related-content"></a>Relateret indhold
 

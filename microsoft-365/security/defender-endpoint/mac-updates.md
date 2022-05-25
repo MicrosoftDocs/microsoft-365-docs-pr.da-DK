@@ -1,7 +1,7 @@
 ---
-title: Installér opdateringer til Microsoft Defender for Endpoint på Mac
-description: Styr opdateringer til Microsoft Defender for Endpoint på Mac i virksomhedsmiljøer.
-keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, opdateringer, installér
+title: Installer opdateringer til Microsoft Defender for Endpoint på Mac
+description: Kontrollér opdateringer til Microsoft Defender for Endpoint på Mac i virksomhedsmiljøer.
+keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, updates, deploy
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,14 +15,14 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 0b9ddf9693a242b3b8c466cfa1616b62c5eb73b9
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 4612c7ca68ab0b55fa2a2f28821cb5baef6ff6e9
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64469289"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669336"
 ---
-# <a name="deploy-updates-for-microsoft-defender-for-endpoint-on-macos"></a>Installér opdateringer til Microsoft Defender for Endpoint på macOS
+# <a name="deploy-updates-for-microsoft-defender-for-endpoint-on-macos"></a>Installer opdateringer til Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -30,64 +30,65 @@ ms.locfileid: "64469289"
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint på macOS](microsoft-defender-endpoint-mac.md)
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne Microsoft Defender for Endpoint? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Microsoft udgiver jævnligt softwareopdateringer for at forbedre ydeevnen, sikkerheden og levere nye funktioner.
 
-Hvis du Microsoft Defender for Endpoint opdateringer på macOS, bruges et program med navnet Microsoft AutoUpdate (MAU). Som standard søger MAU automatisk efter opdateringer dagligt, men du kan ændre det til ugentligt, månedligt eller manuelt.
+Hvis du vil opdatere Microsoft Defender for Endpoint på macOS, bruges et program med navnet Microsoft Automatiske opdateringer (MAU). MAU søger som standard automatisk efter opdateringer dagligt, men du kan ændre dette til ugentligt, månedligt eller manuelt.
 
 :::image type="content" source="images/MDATP-34-MAU.png" alt-text="MAU" lightbox="images/MDATP-34-MAU.png":::
 
-Hvis du beslutter dig for at installere opdateringer ved hjælp af dine softwaredistributionsværktøjer, skal du konfigurere MAU til manuelt at søge efter softwareopdateringer. Du kan installere indstillinger for at konfigurere, hvordan og hvornår MAU søger efter opdateringer til Mac-computere i organisationen.
+Hvis du beslutter at installere opdateringer ved hjælp af dine softwaredistributionsværktøjer, skal du konfigurere MAU til manuelt at søge efter softwareopdateringer. Du kan udrulle indstillinger for at konfigurere, hvordan og hvornår MAU søger efter opdateringer til Macs i din organisation.
 
 ## <a name="use-msupdate"></a>Brug msupdate
 
-MAU indeholder et kommandolinjeværktøj kaldet *msupdate*, som er udviklet til it-administratorer, så de har mere præcis kontrol over, hvornår der anvendes opdateringer. Du kan finde en vejledning til, hvordan du bruger dette værktøj[, Office til Mac ved hjælp af msupdate](/deployoffice/mac/update-office-for-mac-using-msupdate).
+MAU indeholder et kommandolinjeværktøj, *der kaldes msupdate*, som er udviklet til it-administratorer, så de har mere præcis kontrol over, hvornår der anvendes opdateringer. Du kan finde instruktioner til, hvordan du bruger dette værktøj, i [Opdater Office til Mac ved hjælp af msupdate](/deployoffice/mac/update-office-for-mac-using-msupdate).
 
-I MAU er programidentifikatoren for Microsoft Defender for Endpoint på macOS *WDAV00*. For at downloade og installere de seneste opdateringer til Microsoft Defender for Endpoint på macOS skal du udføre følgende kommando fra et Terminal-vindue:
+I MAU er program-id'et for Microsoft Defender for Endpoint på macOS *WDAV00*. Hvis du vil hente og installere de nyeste opdateringer til Microsoft Defender for Endpoint på macOS, skal du udføre følgende kommando fra et terminalvindue:
 
 ```dos
+cd /Library/Application\ Support/Microsoft/MAU2.0/Microsoft\ AutoUpdate.app/Contents/MacOS
 ./msupdate --install --apps wdav00
 ```
 
 ## <a name="set-preferences-for-microsoft-autoupdate"></a>Angiv indstillinger for Microsoft Automatiske opdateringer
 
-I dette afsnit beskrives de mest almindelige indstillinger, der kan bruges til at konfigurere MAU. Disse indstillinger kan installeres som en konfigurationsprofil via den administrationskonsol, din virksomhed bruger. Et eksempel på en konfigurationsprofil vises i de følgende afsnit.
+I dette afsnit beskrives de mest almindelige indstillinger, der kan bruges til at konfigurere MAU. Disse indstillinger kan installeres som en konfigurationsprofil via den administrationskonsol, som din virksomhed bruger. Der vises et eksempel på en konfigurationsprofil i følgende afsnit.
 
 ### <a name="set-the-channel-name"></a>Angiv kanalnavnet
 
-Kanalen bestemmer typen og hyppigheden af opdateringer, der tilbydes via MAU. Enheder i `Beta` kan prøve nye funktioner før enheder i `Preview` og `Current`.
+Kanalen bestemmer typen og hyppigheden af opdateringer, der tilbydes via MAU. Enheder i `Beta` kan afprøve nye funktioner, før enheder i `Preview` og `Current`.
 
 Kanalen `Current` indeholder den mest stabile version af produktet.
 
 > [!IMPORTANT]
-> Før version 4.29 af Microsoft Automatiske opdateringer havde kanaler forskellige navne:
+> Før Microsoft Automatiske opdateringer version 4.29 havde kanaler forskellige navne:
 >
 > - `Beta` blev navngivet `InsiderFast` (Insider Fast)
 > - `Preview` blev navngivet `External` (Insider Slow)
 > - `Current` blev navngivet `Production`
 
 > [!TIP]
-> For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, at du konfigurerer visse enheder i virksomheden til eller `Beta` `Preview`.
+> Hvis du vil have forhåndsvist nye funktioner og give tidlig feedback, anbefales det, at du konfigurerer nogle enheder i virksomheden til `Beta` eller `Preview`.
 
 <br>
 
 ****
 
-|Sektion|Værdi|
+|Afsnit|Værdi|
 |---|---|
 |**Domæne**|`com.microsoft.autoupdate2`|
 |**Tast**|ChannelName|
 |**Datatype**|String|
-|**Mulige værdier**|Beta <p> Eksempel <p> Aktuel|
+|**Mulige værdier**|Beta <p> Preview <p> Nuværende|
 |||
 
 > [!WARNING]
-> Denne indstilling ændrer kanalen for alle programmer, der opdateres via Microsoft Automatiske opdateringer. Hvis du kun vil ændre kanalen for Microsoft Defender for Endpoint i macOS, skal du udføre følgende kommando efter at have erstattet `[channel-name]` med den ønskede kanal:
+> Denne indstilling ændrer kanalen for alle programmer, der opdateres via Microsoft Automatiske opdateringer. Hvis du kun vil ændre kanalen for Microsoft Defender for Endpoint på macOS, skal du udføre følgende kommando, når du har erstattet `[channel-name]` med den ønskede kanal:
 >
 > ```bash
 > defaults write com.microsoft.autoupdate2 Applications -dict-add "/Applications/Microsoft Defender.app" " { 'Application ID' = 'WDAV00' ; 'App Domain' = 'com.microsoft.wdav' ; LCID = 1033 ; ChannelName = '[channel-name]' ; }"
@@ -101,16 +102,16 @@ Rediger, hvor ofte MAU søger efter opdateringer.
 
 ****
 
-|Sektion|Værdi|
+|Afsnit|Værdi|
 |---|---|
 |**Domæne**|`com.microsoft.autoupdate2`|
 |**Tast**|UpdateCheckFrequency|
 |**Datatype**|Heltal|
-|**Standardværdi**|720 (minutter)|
+|**Standardværdien**|720 (minutter)|
 |**Kommenter**|Denne værdi er angivet i minutter.|
 |||
 
-### <a name="change-how-mau-interacts-with-updates"></a>Ændre måden MAU interagerer med opdateringer på
+### <a name="change-how-mau-interacts-with-updates"></a>Rediger, hvordan MAU interagerer med opdateringer
 
 Rediger, hvordan MAU søger efter opdateringer.
 
@@ -118,24 +119,24 @@ Rediger, hvordan MAU søger efter opdateringer.
 
 ****
 
-|Sektion|Værdi|
+|Afsnit|Værdi|
 |---|---|
 |**Domæne**|`com.microsoft.autoupdate2`|
 |**Tast**|HowToCheck|
 |**Datatype**|String|
-|**Mulige værdier**|Manuel <p> AutomaticCheck <p> AutomaticDownload|
-|**Kommenter**|Bemærk, at AutomaticDownload automatisk downloader og installerer automatisk, hvis det er muligt.|
+|**Mulige værdier**|Manuel <p> Automatisk kontrol <p> Automatiskdownload|
+|**Kommenter**|Bemærk, at AutomaticDownload downloader og installerer uovervåget, hvis det er muligt.|
 |||
 
-### <a name="change-whether-the-check-for-updates-button-is-enabled"></a>Ændre, om knappen "Søg efter opdateringer" er aktiveret
+### <a name="change-whether-the-check-for-updates-button-is-enabled"></a>Rediger, om knappen "Søg efter opdateringer" er aktiveret
 
-Rediger, om lokale brugere skal kunne klikke på indstillingen "Søg efter opdateringer" i brugergrænsefladen Microsoft Automatiske opdateringer.
+Rediger, om lokale brugere skal kunne klikke på indstillingen "Søg efter opdateringer" i brugergrænsefladen i Microsoft Automatiske opdateringer.
 
 <br>
 
 ****
 
-|Sektion|Værdi|
+|Afsnit|Værdi|
 |---|---|
 |**Domæne**|`com.microsoft.autoupdate2`|
 |**Tast**|EnableCheckForUpdatesButton|
@@ -143,31 +144,31 @@ Rediger, om lokale brugere skal kunne klikke på indstillingen "Søg efter opdat
 |**Mulige værdier**|Sand (standard) <p> Falsk|
 |||
 
-### <a name="disable-insider-checkbox"></a>Afkrydsningsfeltet Deaktiver Insider
+### <a name="disable-insider-checkbox"></a>Deaktiver Insider-afkrydsningsfelt
 
-Indstillet til sand for at gøre "Deltag Office Insider Program..." ikke tilgængeligt/nedtonet for brugere.
+Angiv til true for at gøre "Join the Office Insider Program..." ikke er tilgængeligt/nedtonet for brugerne.
 
 <br>
 
 ****
 
-|Sektion|Værdi|
+|Afsnit|Værdi|
 |---|---|
 |**Domæne**|`com.microsoft.autoupdate2`|
 |**Tast**|DisableInsiderCheckbox|
 |**Datatype**|Boolesk |
-|**Mulige værdier**|Falsk (standard) <p> Sand|
+|**Mulige værdier**|Falsk (standard) <p> Sandt|
 |||
 
 ### <a name="limit-the-telemetry-that-is-sent-from-mau"></a>Begræns den telemetri, der sendes fra MAU
 
-Indstillet til falsk for at sende minimale heartbeat-data, ingen anvendelse af programmet og ingen miljødetaljer.
+Indstillet til falsk for at sende minimal impulsdata, ingen programanvendelse og ingen miljøoplysninger.
 
 <br>
 
 ****
 
-|Sektion|Værdi|
+|Afsnit|Værdi|
 |---|---|
 |**Domæne**|`com.microsoft.autoupdate2`|
 |**Tast**|SendAllTelemetryEnabled|
@@ -180,15 +181,15 @@ Indstillet til falsk for at sende minimale heartbeat-data, ingen anvendelse af p
 Følgende konfigurationsprofil bruges til at:
 
 - Placer enheden i produktionskanalen
-- Hent og installér opdateringer automatisk
+- Download og installér automatisk opdateringer
 - Aktivér knappen "Søg efter opdateringer" i brugergrænsefladen
 - Tillad brugere på enheden at tilmelde sig Insider-kanalerne
 
 > [!WARNING]
-> Nedenstående konfiguration er en eksempelkonfiguration og bør ikke bruges i produktion uden korrekt gennemgang af indstillinger og skræddersy af konfigurationer.
+> Nedenstående konfiguration er et eksempel på konfiguration og bør ikke bruges i produktion uden korrekt gennemgang af indstillinger og skræddersy af konfigurationer.
 
 > [!TIP]
-> For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, at du konfigurerer visse enheder i virksomheden til eller `Beta` `Preview`.
+> Hvis du vil have forhåndsvist nye funktioner og give tidlig feedback, anbefales det, at du konfigurerer nogle enheder i virksomheden til `Beta` eller `Preview`.
 
 ### <a name="jamf"></a>JAMF
 
@@ -273,10 +274,10 @@ Følgende konfigurationsprofil bruges til at:
 </plist>
 ```
 
-Hvis du vil konfigurere MAU, kan du installere denne konfigurationsprofil fra det administrationsværktøj, din virksomhed bruger:
+Hvis du vil konfigurere MAU, kan du installere denne konfigurationsprofil fra det administrationsværktøj, som din virksomhed bruger:
 
-- Fra SYLF skal du uploade denne konfigurationsprofil og angive Præferencedomænet *til com.microsoft.autoupdate2*.
-- Fra Intune skal du uploade denne konfigurationsprofil og angive navnet på den brugerdefinerede konfigurationsprofil *til com.microsoft.autoupdate2*.
+- Fra JAMF skal du uploade denne konfigurationsprofil og angive præferencedomænet til *com.microsoft.autoupdate2*.
+- Fra Intune skal du uploade denne konfigurationsprofil og angive navnet på den brugerdefinerede konfigurationsprofil til *com.microsoft.autoupdate2*.
 
 ## <a name="resources"></a>Ressourcer
 

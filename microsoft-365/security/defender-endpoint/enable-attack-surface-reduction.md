@@ -19,12 +19,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 2b88e6413bb8ef520c3049f63cca60703a509be3
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 04eee4c44e0cf2b712ecab84b18837d7b3705cef
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637907"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65669798"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Aktivér regler for reduktion af angrebsoverflade
 
@@ -48,13 +48,15 @@ Reduktion af angrebsoverfladen på tværs af Windows versioner
 
 Du kan angive regler for reduktion af angrebsoverfladen for enheder, der kører en af følgende versioner af Windows:
 
+- [Windows 11 Pro](/windows/whats-new/windows-11-overview)
+- [Windows 11 Enterprise](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise)
 - Windows 10 Pro[, version 1709](/windows/whats-new/whats-new-windows-10-version-1709) eller nyere
 - Windows 10 Enterprise, [version 1709](/windows/whats-new/whats-new-windows-10-version-1709) eller nyere
 - Windows Server, [version 1803 (halvårlig kanal)](/windows-server/get-started/whats-new-in-windows-server-1803) eller nyere
-- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
-- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
 - [Windows Server 2012 R2](/windows/win32/srvnodes/what-s-new-for-windows-server-2012-r2)
-- Windows Server 2022
+- [Windows Server 2016](/windows-server/get-started/whats-new-in-windows-server-2016)
+- [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
+- [Windows Server 2022](/windows-server/get-started/whats-new-in-windows-server-2022)
 
 Hvis du vil bruge hele funktionssættet med regler for reduktion af angrebsoverfladen, skal du bruge:
 
@@ -107,8 +109,8 @@ ASR-regler understøtter miljøvariabler og jokertegn. Du kan få oplysninger om
 2. Regler for reduktion af angrebsoverfladen for MEM-administrerede enheder understøtter nu funktionsmåde for sammenlægning af indstillinger fra forskellige politikker for at oprette en overordnet politik for hver enhed. Det er kun de indstillinger, der ikke er i konflikt, der flettes, mens de indstillinger, der er i konflikt, ikke føjes til undersættet af regler. Tidligere hvis to politikker indeholdt konflikter for en enkelt indstilling, var begge politikker markeret som værende i konflikt, og ingen indstillinger fra nogen af profilerne ville blive installeret. Funktionsmåden for fletning af regler for reduktion af angrebsoverfladen er som følger:
    - Regler for reduktion af angrebsoverfladen fra følgende profiler evalueres for hver enhed, som reglerne gælder for:
      - Enheder > konfigurationspolitik > profil til beskyttelse af slutpunkter > **Microsoft Defender Exploit Guard** >  [Nedskæring af surface](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).
-     - Slutpunktsikkerhed > Politik  >  for **reduktion af angrebsoverfladenRegler** for [reduktion af angrebsoverflade](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).
-     - Slutpunktssikkerhed > Sikkerhedsgrundlinjer > **Microsoft Defender ATP BaselineAttack** >  [Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).
+     - Slutpunktsikkerhed > Regler  >  for **reduktion af angrebsoverfladen** Regler for [reduktion af angrebsoverflade](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).
+     - Slutpunktssikkerhed > Grundlæggende sikkerhedslinjer > **Microsoft Defender ATP Baseline** > [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).
    - Indstillinger, der ikke har konflikter, føjes til en delmængde af politikken for enheden.
    - Når to eller flere politikker har modstridende indstillinger, føjes de modstridende indstillinger ikke til den kombinerede politik, mens indstillinger, der ikke er i konflikt, føjes til den politik for supersæt, der gælder for en enhed.
    - Det er kun konfigurationerne for modstridende indstillinger, der holdes tilbage.

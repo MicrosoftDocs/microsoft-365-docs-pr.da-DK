@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: 971617311ce8d2443f90a1792339d4f0927ade3e
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: d7ee7588d9c73a6146b770cfcf135a8eeb44f72f
+ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174734"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "65663420"
 ---
 # <a name="compare-security-features-in-microsoft-365-plans-for-small-and-medium-sized-businesses"></a>Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder
 
@@ -77,7 +77,7 @@ Defender for Business giver små og mellemstore virksomheder professionelle funk
 |[Understøttelse på tværs af platforme](../defender-endpoint/minimum-requirements.md) <br/>(Windows, macOS, iOS og Android OS)|Ja <sup>[[6](#fn6)]</sup>|Ja|Ja|
 |[Microsoft Threat Experts](../defender-endpoint/microsoft-threat-experts.md)|Nej|Nej|Ja|
 |Partner-API'er|Ja|Ja|Ja|
-|[integration af Microsoft 365 fyrtårn](../../lighthouse/m365-lighthouse-overview.md) <br/>(Til visning af sikkerhedshændelser på tværs af kundelejere)|Ja|Nej|Nej|
+|[integration af Microsoft 365 fyrtårn](../../lighthouse/m365-lighthouse-overview.md) <br/>(Til visning af sikkerhedshændelser på tværs af kundelejere)|Ja |Ja <sup>[[7](#fn7)]</sup>|Ja <sup>[[7](#fn7)]</sup>|
 
 (<a id="fn1">1</a>) Onboard og administrer enheder på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller med Microsoft Intune, der administreres i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)).
 
@@ -94,6 +94,8 @@ Defender for Business giver små og mellemstore virksomheder professionelle funk
 (<a id="fn5">5</a>) I Defender for Business er trusselsanalyser optimeret til små og mellemstore virksomheder.
 
 (<a id="fn6">6</a>) Se [Onboard enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md).
+
+(<a id="fn7">7</a>) Muligheden for at få vist hændelser på tværs af lejere ved hjælp af Defender for Endpoint er ny!
 
 ## <a name="next-steps"></a>Næste trin
 

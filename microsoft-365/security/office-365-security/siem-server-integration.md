@@ -18,12 +18,12 @@ ms.custom:
 description: Få et overblik over SIEM-serverintegration (Security Information and Event Management) med dine Microsoft 365 cloudtjenester og -programmer
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 978319cca91322c7eb737d89cbfc167574f14093
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: ffb457a378539691627eff3ad24b24ef782705c1
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "64731411"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670196"
 ---
 # <a name="security-information-and-event-management-siem-server-integration-with-microsoft-365-services-and-applications"></a>Integration af SIEM-server (Security Information and Event Management) med Microsoft 365 tjenester og programmer
 
@@ -32,7 +32,7 @@ ms.locfileid: "64731411"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 ## <a name="summary"></a>Oversigt
 
@@ -61,7 +61,7 @@ En SIEM-server kan modtage data fra en lang række Microsoft 365 tjenester og pr
 |[Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)|Logintegration|[SIEM-integration med Microsoft Defender for Cloud Apps](/cloud-app-security/siem)|
 
 > [!TIP]
-> Se [nærmere på Microsoft Sentinel](/azure/sentinel/overview). Microsoft Sentinel leveres med connectors til Microsoft-løsninger. Disse connectors er tilgængelige "klar til brug" og sikrer integration i realtid. Du kan bruge Microsoft Sentinel sammen med dine Microsoft 365 Defender løsninger og Microsoft 365-tjenester, herunder Office 365, Azure AD, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps og meget mere.
+> Se [nærmere på Microsoft Sentinel](/azure/sentinel/overview). Microsoft Sentinel leveres med connectors til Microsoft-løsninger. Disse connectors er tilgængelige "klar til brug" og sikrer integration i realtid. Du kan bruge Microsoft Sentinel sammen med dine Microsoft 365 Defender løsninger og Microsoft 365 tjenester, herunder Office 365, Azure AD, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps og meget mere.
 
 ### <a name="audit-logging-must-be-turned-on"></a>Overvågningslogføring skal være slået til
 
@@ -69,6 +69,22 @@ Sørg for, at overvågningslogføring er slået til, før du konfigurerer SIEM-s
 
 - Du kan se SharePoint Online, OneDrive for Business og Azure Active Directory under [Slå overvågning til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
 - Du kan få Exchange Online under [Administrer overvågning af postkasser](../../compliance/enable-mailbox-auditing.md).
+
+## <a name="integration-steps-if-your-siem-is-microsoft-sentinel"></a>Integrationstrin, hvis din SIEM er Microsoft Sentinel
+
+Sørg for, at din aktuelle plan tillader Microsoft Sentinel-integration (du har f.eks. Microsoft Defender for Office 365 Plan 2 eller nyere), og at din konto i Microsoft Defender for Office 365 eller Microsoft 365 Defender er en *Sikkerhedskonto Administrator*. Til sidst skal du sørge for, at du har *skriverettigheder i Microsoft Sentinel*.
+
+1. Gå til Microsoft Sentinel.
+1. I navigationen til venstre for **skærmens Configuration** > **Data-connectors**.
+1. **Søg efter** Microsoft 365 Defender, og vælg **connectoren Microsoft 365 Defender (prøveversion).**
+1. Vælg **Åbn forbindelsesside** til højre på skærmen.
+1. Vælg **Forbind hændelser & beskeder** under **Konfiguration** >
+    1. Deaktiver alle Microsoft-regler for oprettelse af hændelser for de produkter, der er valgt i øjeblikket.
+1. Rul til **Microsoft Defender for Office 365** i sektionen **Forbind hændelser** på siden.
+
+Bemærk, at du kan vælge tabeller fra *et hvilket som helst andet Microsoft Defender-produkt* , som du finder nyttigt og relevant, når du fuldfører det sidste trin (nedenfor).
+
+7. Vælg **EmailEvents**, **EmailUrlInfo**, **EmailAttachmentInfo** og **EmailPostDeliveryEvents** > og **Anvend ændringer**.
 
 ## <a name="more-resources"></a>Flere ressourcer
 

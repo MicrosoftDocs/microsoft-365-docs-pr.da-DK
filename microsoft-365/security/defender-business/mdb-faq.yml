@@ -16,12 +16,12 @@ metadata:
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 67205e2c326c34bdcaac7e36042797c9f261b547
-  ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+  ms.openlocfilehash: 8f9b3abe8b2e4eb6182496635f01b71c001f7b7d
+  ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/17/2022
-  ms.locfileid: "65437497"
+  ms.lasthandoff: 05/24/2022
+  ms.locfileid: "65663662"
 title: Microsoft Defender til virksomheder – Ofte stillede spørgsmål og svar
 summary: >
   Brug denne artikel til at få svar på spørgsmål, du kan have om Defender for Business.
@@ -54,7 +54,7 @@ sections:
     answer: >
       Defender for Business indeholder i øjeblikket et sæt API'er, der understøtter robust brugerdefineret rapportering og en Power BI connector. Du kan planlægge et PowerShell-script for at generere chefoversigter, der er formateret i HTML, og sende disse oversigter via mail. Se [oplysninger om API-reference](/microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners).
   - question: Jeg er Microsoft-partner. Kan jeg administrere flere lejere fra ét kontrolpanel, eller skal jeg logge på hver lejer enkeltvist?
-    answer: "Defender for Business er aktiveret i Microsoft 365 Lighthouse til understøttelse af flere lejere i en enkelt konsol ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)). \n \nI øjeblikket giver en hændelseskø med flere lejere dig en visning på tværs af lejere af hændelser, der kræver opmærksomhed. Konfiguration og onboarding udføres dog i kundens lejer ved hjælp af dine partnerlegitimationsoplysninger. \n\nFunktionerne udrulles stadig, og der er planlagt flere integrationsscenarier.\n\nDu kan få mere at vide under [Oversigt over Microsoft 365 Fyrtårn](/microsoft-365/lighthouse/m365-lighthouse-overview).\n"
+    answer: "Defender for Business er aktiveret i Microsoft 365 Lighthouse til understøttelse af flere lejere i en enkelt konsol ([https://lighthouse.microsoft.com](https://lighthouse.microsoft.com)). \n\nDu kan få mere at vide under [Oversigt over Microsoft 365 Fyrtårn](/microsoft-365/lighthouse/m365-lighthouse-overview).\n"
   - question: Hvordan gør jeg konfigurere regler og egenskaber for reduktion af angrebsoverfladen i Defender for Business?
     answer: >
       Forenklet konfiguration af regler og funktioner til reduktion af angrebsoverfladen via Defender for Business på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) understøttes ikke endnu. Hvis du har Microsoft Intune, kan du bruge Microsoft Endpoint Manager Administration til at konfigurere dine politikker til reduktion af angrebsoverfladen. Se [Politik for reduktion af angrebsoverfladen for at få oplysninger om sikkerhed for slutpunkter i Intune](/mem/intune/protect/endpoint-security-asr-policy).
