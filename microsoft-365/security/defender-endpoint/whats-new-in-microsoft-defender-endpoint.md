@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 615a68d7725e180e512674909f490e27d3da6771
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 282834b0c582690ff53c8361440bce21fc2d4d0b
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468794"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679270"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Nyheder i Microsoft Defender for Endpoint
 
@@ -63,6 +63,7 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 ## <a name="may-2022"></a>Maj 2022
 - [Ændringsbeskyttelse af macOS (prøveversion)](tamperprotection-macos.md)<br>Ændringsbeskyttelse hjælper med at forhindre uautoriseret fjernelse af Microsoft Defender for Endpoint på macOS.
 
+- [Tilføj domænecontrollerenheder – forbedring af evalueringslaboratorium (prøveversion)](evaluation-lab.md#add-a-domain-controller-preview)<br>Tilføj en domænecontroller for at køre komplekse scenarier, f.eks. tværgående flytning og angreb på fleretage på tværs af flere enheder.
 
 ## <a name="april-2022"></a>April 2022
 - [Opdateret onboarding og funktionsparitet for Windows Server 2012 R2 og Windows Server 2016)](configure-server-endpoints.md)<br/> Den nye samlede løsningspakke er nu offentlig tilgængelig og gør det nemmere at onboarde servere ved at fjerne afhængigheder og installationstrin. Desuden leveres denne samlede løsningspakke med mange nye funktionsforbedringer.

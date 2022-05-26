@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 description: Få den nyeste hardwarebaserede isolation. Undgå aktuelle og nye angreb, f.eks. udnyttelser eller skadelige links, fra at forstyrre medarbejdernes produktivitet og virksomhedens sikkerhed.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 98d23a814ac2af8d9dedc4f163923e67c9ca7dc2
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 17743c3aecc50724309ab17c9bcaf2ab10d8ab9b
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973239"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678980"
 ---
 # <a name="application-guard-for-office-for-admins"></a>Application Guard til Office for administratorer
 
@@ -48,10 +48,14 @@ Hvis du vil vide mere om Office opdatere kanaler, skal du se [Oversigt over opda
 
 ### <a name="licensing-requirements"></a>Licenskrav
 
-* Microsoft 365 E5 eller Microsoft 365 E5 Sikkerhed
+* Microsoft 365 E5 Sikkerhed
+* Microsoft 365 A5 for fakultetsansatte
+* Microsoft 365 A5 til studerende
 
 > [!NOTE]
 > Microsoft 365 Apps for enterprise med delt computeraktivering eller enhedsbaserede licenser har ikke adgang til Application Guard for Office.
+>
+> Pengeskab Dokumenter licensplaner giver adgang til Application Guard for Office. Du kan få flere oplysninger [under Pengeskab Dokumenter i Microsoft 365 E5/A5](/microsoft-365/security/office-365-security/safe-docs).
 
 ## <a name="deploy-application-guard-for-office"></a>Installer Application Guard for Office
 
@@ -69,7 +73,7 @@ Hvis du vil vide mere om Office opdatere kanaler, skal du se [Oversigt over opda
    Enable-WindowsOptionalFeature -online -FeatureName Windows-Defender-ApplicationGuard
    ```
 
-3. Søg efter **Microsoft Defender Application Guard i administreret tilstand**, en gruppepolitik i **ComputerkonfigurationAdministrative\\ skabeloner\\ Windows Komponenter\\ Microsoft Defender Application Guard**. Aktivér denne politik ved at angive værdien under Indstillinger som **2** eller **3**, og vælg derefter **OK** eller **Anvend**.
+3. Søg efter **Microsoft Defender Application Guard i administreret tilstand**, en gruppepolitik i **Computerkonfiguration\\Administrative skabeloner\\ Windows Komponenter\\ Microsoft Defender Application Guard**. Aktivér denne politik ved at angive værdien under Indstillinger som **2** eller **3**, og vælg derefter **OK** eller **Anvend**.
 
    :::image type="content" source="../../media/ag04-deploy.png" alt-text="Muligheden for at aktivere ag i administreret tilstand" lightbox="../../media/ag04-deploy.png":::
 

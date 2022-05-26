@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a5c6cd7b4fde3545f77cdece31f3693f74ca4444
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: e5f60e37765e562f0c1508778182f1f506773bff
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669314"
+ms.locfileid: "65679236"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Microsoft Defender for Endpoint på Linux
 
@@ -83,9 +83,9 @@ Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i
 
 - Understøttede Linux-serverdistributioner og x64-versioner (AMD64/EM64T) og x86_64 versioner:
 
-  - Red Hat Enterprise Linux 6.7 eller nyere
-  - Red Hat Enterprise Linux 7.2 eller nyere
-  - Red Hat Enterprise Linux 8.x
+  - Red Hat Enterprise Linux 6.7 eller nyere (prøveversion)
+  - Red Hat Enterprise Linux 7.2 eller nyere 
+  - Red Hat Enterprise Linux 8.x 
   - CentOS 6,7 eller nyere 
   - CentOS 7,2 eller nyere
   - Ubuntu 16.04 LTS eller højere LTS
@@ -98,6 +98,9 @@ Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i
 
     > [!NOTE]
     > Distributioner og versioner, der ikke udtrykkeligt er angivet, understøttes ikke (også selvom de er afledt af de officielt understøttede distributioner).
+
+
+
 
 - Liste over understøttede kerneversioner
   - Minimumkerneversion 3.10.0-327 (for alle de understøttede Linux-distributioner, der er nævnt ovenfor undtagen Red Hat Enterprise Linux 6 og CentOS 6)

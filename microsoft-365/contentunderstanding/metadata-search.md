@@ -12,51 +12,48 @@ ms.collection:
 - enabler-strategic
 - m365initiative-syntex
 ms.localizationpriority: high
-description: Lær at bruge avanceret metadatasøgning og søge efter brugerdefinerede webstedskolonner for at finde elementer i SharePoint ved hjælp af SharePoint Syntex.
-ms.openlocfilehash: f010c6944fdcb05fcfe2c254274249b2dcabe99e
-ms.sourcegitcommit: 33bc25167812b31c51cf096c728e3a5854e94f1c
+description: Få mere at vide om, hvordan du bruger avanceret metadatasøgning og søgning efter brugerdefinerede webstedskolonner til at finde elementer i SharePoint dokumentbiblioteker ved hjælp af SharePoint Syntex.
+ms.openlocfilehash: 50b9ef7ff6fe7942266ec59f8d5ad81e0dfbecd4
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "64595351"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679565"
 ---
 # <a name="search-for-metadata-in-document-libraries-in-microsoft-sharepoint-syntex"></a>Søg efter metadata i dokumentbiblioteker i Microsoft SharePoint Syntex
 
-Funktionen avanceret søgning efter metadata i SharePoint Syntex gør det muligt at udføre bestemte metadatabaserede forespørgsler på SharePoint dokumentbiblioteker. Du kan gøre det hurtigere og mere præcise forespørgsler baseret på specifikke kolonneværdier for metadata i stedet for blot at søge efter nøgleord.
+Funktionen til søgning efter avancerede metadata i SharePoint Syntex giver dig mulighed for at udføre specifikke metadatabaserede forespørgsler på SharePoint dokumentbiblioteker. Du kan foretage hurtigere og mere præcise forespørgsler baseret på specifikke kolonneværdier for metadata i stedet for blot at søge efter nøgleord.
 
-Avanceret søgning efter metadata gør det muligt at bruge de metadata, der er knyttet til et dokument, til at finde filen SharePoint et dokumentbibliotek. Denne funktion er især nyttig, når du har en bestemt oplysning, du vil søge efter, f.eks. hvornår et dokument sidst blev ændret, en bestemt person, der er knyttet til en fil, eller en bestemt filtype.
+Avanceret metadatasøgning giver dig mulighed for at bruge de metadata, der er knyttet til et dokument, til at finde filen i et SharePoint dokumentbibliotek. Denne funktion er især nyttig, når du har en bestemt oplysning, du vil søge efter, f.eks. hvornår et dokument senest blev ændret, en bestemt person, der er knyttet til en fil, eller en bestemt filtype.
 
 > [!NOTE]
 > Denne funktion er kun tilgængelig for brugere, der har licens til SharePoint Syntex. 
 
-## <a name="to-use-advanced-metadata-search"></a>Sådan bruges avanceret metadatasøgning
+## <a name="to-use-advanced-metadata-search"></a>Sådan bruger du avanceret metadatasøgning
 
-1. Vælg søgeikonet metadata (skærmbillede ![af metadatasøgeikonet) i feltet Søg i dette bibliotek SharePoint et dokumentbibliotek.](../media/content-understanding/metadata-search-icon.png)
+1. Vælg søgeikonet for metadata i et SharePoint dokumentbibliotek i feltet **Søg i dette bibliotek** (![skærmbillede af søgeikonet for metadata).](../media/content-understanding/metadata-search-icon.png)
 
     ![Skærmbillede af en side i et dokumentbibliotek, der viser søgefeltet med søgeikonet for metadata fremhævet.](../media/content-understanding/metadata-search-box.png)
 
-2. Skriv teksten i søgeruden metadata, eller vælg den parameter, du vil søge efter, i et eller flere af søgefelterne.
+2. I søgeruden for metadata skal du skrive teksten eller vælge den parameter, du vil finde, i et eller flere af søgefelterne.
 
-    ![Skærmbillede af en side i et dokumentbibliotek, der viser søgeruden metadata.](../media/content-understanding/metadata-search-pane.png)
+    ![Skærmbillede af en side i et dokumentbibliotek, der viser søgeruden for metadata.](../media/content-understanding/metadata-search-pane.png)
 
-   Følgende metadatasøgefelter er i øjeblikket tilgængelige. Der tilføjes flere felter i fremtiden.
+   Følgende søgefelter for metadata er tilgængelige i øjeblikket. Der tilføjes flere felter fremover.
 
-   |Felt    |Brug dette felt til at  |
+   |Feltet    |Brug dette felt til  |
    |---------|---------|
-   |Nøgleord |Søg efter et strengmatch i metadata eller i hele teksten i et dokument. |
-   |Filnavn     |Søg i **kolonnen** Navn i biblioteket.          |
-   |Personer   |Søg efter match på personer i en vilkårlig kolonne i biblioteket.   |
-   |Ændringsdato |Søg efter det valgte datointerval **i kolonnen** Ændret i biblioteket.         |
+   |Søgeord |Søg efter et strengmatch i metadata eller i fuld tekst i et dokument. |
+   |Filnavn     |Søg i kolonnen **Name** i biblioteket.          |
+   |Mennesker   |Søg efter et match på personer i en hvilken som helst kolonne i biblioteket.   |
+   |Dato for ændring |Søg efter det valgte datointerval i kolonnen **Ændret** i biblioteket.         |
    |Filtype     |Søg efter den valgte filtype (f.eks. Word-dokument eller PDF).        |
-   |Indholdstype  |Søg efter den valgte indholdstype. Denne indstilling vises kun, hvis der er anvendt en ikke-standardindholdstype på biblioteket. Standardindholdstyper er *dokument* og *mappe*.        |
+   |Indholdstype  |Søg efter den valgte indholdstype. Denne indstilling vises kun, hvis der anvendes en indholdstype, der ikke er standard, på biblioteket. Standardindholdstyper er *dokument* og *mappe*.        |
 
-3. Du kan også søge efter brugerdefinerede webstedskolonner, der findes i den aktuelle biblioteksvisning. Dette er især nyttigt, hvis der kører en model på biblioteket, fordi metadataudtrækene automatisk udfylder oplysninger i webstedskolonner.  
+3. Du kan også søge efter brugerdefinerede webstedskolonner, der findes i den aktuelle biblioteksvisning. Dette er især nyttigt, hvis du har en model, der kører på biblioteket, fordi metadataudtrækningerne automatisk udfylder oplysninger i webstedskolonner.  
 
-    Hvis du vil føje en brugerdefineret webstedskolonne til søgningen, skal du vælge Tilføj flere indstillinger og derefter vælge navnet på webstedskolonnen.
+    Hvis du vil føje en brugerdefineret webstedskolonne til din søgning, skal du vælge **Tilføj flere indstillinger** og derefter vælge navnet på webstedskolonnen.
 
-    ![Skærmbillede af menuen Tilføj flere indstillinger i søgeruden metadata.](../media/content-understanding/metadata-search-add-more-options.png)
+    ![Skærmbillede af menuen Tilføj flere indstillinger i søgeruden for metadata.](../media/content-understanding/metadata-search-add-more-options.png)
 
-    > [!NOTE]
-    > I øjeblikket er muligheden for at tilføje administrerede metadatafelter eller felter med flere tekstlinjer ikke tilgængelig. 
-
-4. Vælg **Søg**. De dokumenter, der svarer til din metadatasøgning, vises på resultatsiden. 
+4. Vælg **Søg**. De dokumenter, der matcher din metadatasøgning, vises på resultatsiden. 

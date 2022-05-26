@@ -28,12 +28,12 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: Beskyt din virksomheds mail og dine data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: 47e9d935cdf6b44d9ba45cd57d8eb3efeabdf0a3
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: ca159d8d2adda033b1786355c1505cb4d66b625a
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637665"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679642"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>Bedste praksis for sikring af Microsoft 365 for virksomheder
 
@@ -89,7 +89,7 @@ Aktivér eller deaktiver sikkerhedsstandarder i ruden **Egenskaber** for Azure A
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) med globale administratorlegitimationsoplysninger.
 
-2. Vælg **Vis alle** i venstre navigationsrude, og vælg **Azure Active Directory** under **Administration**.
+2. Vælg **Vis alle** i venstre navigationsrude, og vælg **Azure Active Directory** under **Administration centre**.
 
 3. Vælg **Azure Active Directory** >  **Egenskaber** i **Azure Active Directory Administration**.
 
@@ -352,5 +352,5 @@ Du kan få mere at vide i følgende ressourcer:
 ## <a name="related-content"></a>Relateret indhold
 
 [Multifaktorgodkendelse for Microsoft 365](multi-factor-authentication-microsoft-365.md) (artikel)\
-[Administrer og overvåg prioritetskonti](../setup/priority-accounts.md) (artikel)\
+[Administrer og overvåg prioritetskonti](/microsoft-365/security/office-365-security/configure-review-priority-account) (artikel)\
 [Microsoft 365 rapporter i Administration](../activity-reports/activity-reports.md) (video)

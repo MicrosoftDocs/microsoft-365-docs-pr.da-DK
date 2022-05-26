@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Microsoft 365 Administration – få mere at vide om de funktioner, der blev tilføjet i denne måned.
-ms.openlocfilehash: 4c730a72252d24145d7555f2684244a2a6531dd2
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 198832f09f6b219579f128b7104ecf3ae2fa3446
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649159"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679346"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Nyheder i Microsoft 365 Administration
 
@@ -38,7 +38,7 @@ ms.locfileid: "65649159"
 
 ::: moniker-end
 
-Vi føjer løbende nye funktioner til [Microsoft 365 Administration](Oversigt over Microsoft 365 Administration](admin-overview/admin-center-overview.md), løse problemer, vi lærer om, og foretage ændringer baseret på din feedback. Se nedenfor for at se, hvad der er tilgængeligt for dig i dag. Nogle funktioner udrulles med forskellige hastigheder til vores kunder. Hvis du endnu ikke kan se en funktion, [kan du prøve at føje dig selv til målrettet udgivelse](manage/release-options-in-office-365.md).
+Vi føjer løbende nye funktioner til [Microsoft 365 Administration](Oversigt over Microsoft 365 Administration](admin-overview/admin-center-overview.md), løse problemer, vi lærer om, og foretage ændringer baseret på din feedback. Nogle funktioner udrulles med forskellige hastigheder til vores kunder. Hvis du endnu ikke kan se en funktion, [kan du prøve at føje dig selv til målrettet udgivelse](manage/release-options-in-office-365.md).
 
 Og hvis du gerne vil vide, hvad der er nyt med andre Microsoft-cloudtjenester:
 
@@ -53,23 +53,23 @@ Og hvis du gerne vil vide, hvad der er nyt med andre Microsoft-cloudtjenester:
 
 ## <a name="may-2022"></a>Maj 2022
 
-<!-- ### Role based access controls (RBAC)
+### <a name="role-based-access-controls-rbac"></a>Rollebaseret adgangskontrol (RBAC)
 
-There are new Azure AD built-in roles in the Microsoft 365 admin center. Give admins only the access they need to manage Virtual Visits.
+Der er fire nye roller i Microsoft 365 Administration til administration af brugerdefinerede sikkerhedsattributter. Disse roller er tilgængelige, så alle kan bruge i Microsoft 365 Administration under **Roller**.
 
-There are also 4 new roles in the Microsoft 365 admin center centered around management of custom security attributes. These roles are available for everyone to use in the Role assignments node under Roles.
+- **Administrator af attributtildeling**   Tildel brugerdefinerede sikkerhedsattributnøgler og -værdier til understøttede Azure AD objekter.
 
-For more information about Azure AD built-in roles, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+- **Attributtildelingslæser**   Læser brugerdefinerede sikkerhedsattributnøgler og -værdier for understøttede Azure AD objekter.
 
-**Virtual Visits Administrator**   Manage and share Virtual Visits information and metrics from admin centers or the Virtual Visits app.
+- **Attributdefinitionsadministrator**   Definer og administrer definitionen af brugerdefinerede sikkerhedsattributter.
 
-**Attribute Assignment Administrator**   Assign custom security attribute keys and values to supported Azure AD objects.
+- **Attributdefinitionslæser**   Læser definitionen af brugerdefinerede sikkerhedsattributter.
 
-**Attribute Assignment Reader**   Reads custom security attribute keys and values for supported Azure AD objects.
+Der er også en ny rolle, der giver dig mulighed for kun at give administratorer den adgang, de har brug for til at administrere virtuelle besøg.
 
-**Attribute Definition Administrator**   Define and manage the definition of custom security attributes.
+- **Administrator af virtuelle besøg**   Administrer og del oplysninger og målepunkter for virtuelle besøg fra administrationscentre eller appen Virtuelle besøg.
 
-**Attribute Definition Reader**   Reads the definition of custom security attributes. -->
+Du kan få flere oplysninger om disse roller [under Azure AD indbyggede roller](/azure/active-directory/roles/permissions-reference).
 
 ### <a name="quick-assist"></a>Lynhjælp
 
@@ -85,7 +85,7 @@ Du kan finde flere oplysninger under [Løs pc-problemer via en fjernforbindelse]
 
 NPS-undersøgelsesindsigt er et AI-drevet dashboard, der er tilgængeligt i Microsoft 365 Administration.
 
-I Administration skal du gå til **HealthProduct** >  **feedbackNPS** >  **survey insights**.
+I Administration skal du gå til Feedback **på tilstand Produktfeedback** >  >  **NPS-undersøgelsesindsigt**.
 
 Denne funktion hjælper administratorer som dig med at få handlingsvenlig indsigt, der er afledt af Microsoft NPS-undersøgelser, som dine brugere har svaret på. Få mere at vide på [Microsofts NPS-produktfeedback og indsigt for din organisation](manage/manage-feedback-product-insights.md).
 
@@ -152,7 +152,7 @@ Hvis du vil i gang med at bruge Microsoft 365 Fyrtårn, skal [du se Tilmeld dig 
 
 Du kan nu få vist NPS-undersøgelsesdata og indsigt fra dine brugere i Microsoft 365 Administration. Med denne nye funktion kan du få handlingsrettet indsigt fra NPS-undersøgelsessvar fra dine slutbrugere og opnå glæde hos slutbrugere i højere grad ved at løse eventuelle problemer og problemer.
 
-I Administration skal du gå til **HealthProduct** >  **feedbackNPS** >  **survey insights**.
+I Administration skal du gå til Feedback **på tilstand Produktfeedback** >  >  **NPS-undersøgelsesindsigt**.
 
 :::image type="content" source="../media/feedback-whatsnew.png" alt-text="Skærmbillede: Visning af siden Feedback i Microsoft 365 Administration":::
 
@@ -209,7 +209,7 @@ Vi har også tilføjet to nye felter, **Alvorsgrad** og **Lukket dato** i tabell
 
 :::image type="content" source="../media/SuppInsight-date-sev.PNG" alt-text="Skærmbillede: Tabel, der viser sortering af supportanmodninger efter alvorsgrad og dato.":::
 
-Hvis du vil se disse opdateringer i <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 Administration</a>, skal du gå til **SupportView** >  **Service-anmodninger** i venstre navigationsrude.
+Hvis du vil tjekke disse opdateringer ud i <a href="https://go.microsoft.com/fwlink/p/?linkid=2166757" target="_blank">Microsoft 365 Administration</a>, skal du gå til **Support** > **Vis tjenesteanmodninger** i venstre navigationsrude.
 
 ## <a name="june-2021"></a>Juni 2021
 

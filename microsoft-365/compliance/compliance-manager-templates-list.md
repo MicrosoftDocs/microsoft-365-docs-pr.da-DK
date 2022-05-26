@@ -1,5 +1,5 @@
 ---
-title: Liste over skabeloner i Microsoft Purview Compliance Manager
+title: liste over skabeloner Microsoft Purview Overholdelsesstyring
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,13 +16,13 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview Compliance Manager indeholder skabeloner til oprettelse af vurderinger, der er i overensstemmelse med nationale, regionale og branchemæssige bestemmelser, standarder og love.
-ms.openlocfilehash: cc07d7aa6fc385fc1066f35c8d20bbe7e2152b93
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+description: Microsoft Purview Overholdelsesstyring indeholder skabeloner til oprettelse af vurderinger, der er i overensstemmelse med nationale, regionale og brancheregler, standarder og love.
+ms.openlocfilehash: 1ee28bc4ef79e6565086ba087055b8e00a0fe034
+ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971489"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65692777"
 ---
 # <a name="compliance-manager-templates-list"></a>Liste over skabeloner til Overholdelsesstyring
 
@@ -35,7 +35,7 @@ ms.locfileid: "64971489"
 
 ## <a name="overview"></a>Oversigt
 
-[Microsoft Purview Compliance Manager](compliance-manager.md) indeholder et omfattende sæt skabeloner til oprettelse af vurderinger. Disse skabeloner kan hjælpe din organisation med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af data.
+[Microsoft Purview Overholdelsesstyring](compliance-manager.md) indeholder et omfattende sæt skabeloner til oprettelse af vurderinger. Disse skabeloner kan hjælpe din organisation med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af data.
 
 Skabeloner føjes til Overholdelsesstyring, efterhånden som nye love og bestemmelser bliver vedtaget. Overholdelsesstyring opdaterer også sine skabeloner, når de underliggende love eller bestemmelser ændres. Få mere at vide om, hvordan [du gennemser og accepterer opdateringer](compliance-manager-assessments.md#accept-updates-to-assessments).
 
@@ -397,6 +397,7 @@ De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 - Nigerias forordning om databeskyttelse  
 - Oman - Elektronisk transaktionsret  
 - Qatar Cloud Security Policy
+- Qatar National Information Assurance (NIA)
 - Rumænien – lov om databeskyttelse 190/2018  
 - Rusland – forbundslov 149-FZ om information, informationsteknologi og informationssikkerhed
 - [Den Russiske Føderations forbundslov vedrørende personoplysninger](/compliance/regulatory/offering-russia-data-localization)  
@@ -407,11 +408,12 @@ De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 - Slovakiets lov om beskyttelse af personoplysninger  
 - Spanien – Nation Security Framework  
 - Schweiz – den føderale lov om databeskyttelse (FADP)  
-- Tyrkiet – KVKK-beskyttelse af personoplysninger 6698  
+- Tyrkiet – KVKK-beskyttelse af personoplysninger 6698
 - UAE – Forbundsdekret lov om bekæmpelse af cyberforbrydelser  
 - UAE – Forbundslov om elektroniske transaktioner og handel
 - UAE – Forbundslov nr. 2 af 2019 om brug af informations- og kommunikationsteknologi (IKT) på sundhedsområder  
-- UAE – NESA Information Assurance Standards  
+- UAE – NESA Information Assurance Standards
+- Lov om beskyttelse af personlige oplysninger for De Forenede Arabiske Emirater
 - UAE Regulatory Policy TRA – Tingenes internet  
 - De Forenede Arabiske Emiraters lovdekret, der regulerer telekommunikationssektoren  
 - Uganda – loven om databeskyttelse og beskyttelse af personlige oplysninger  

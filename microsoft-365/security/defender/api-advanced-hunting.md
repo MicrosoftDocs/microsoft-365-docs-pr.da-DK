@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: d01cdacc40b58eb940b2773606221b4fdbe18728
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: e485bcf400dbaf36c63e3a0ed8677c9bf7c8f23a
+ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64823184"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65692755"
 ---
 # <a name="microsoft-365-defender-advanced-hunting-api"></a>api til avanceret jagt Microsoft 365 Defender
 
@@ -39,7 +39,7 @@ ms.locfileid: "64823184"
 > [!IMPORTANT]
 > Nogle oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-[Avanceret jagt](advanced-hunting-overview.md) er et værktøj til trusselsjagt, der bruger [særligt konstruerede forespørgsler](advanced-hunting-query-language.md) til at undersøge de seneste 30 dages hændelsesdata i Microsoft 365 Defender. Du kan bruge avancerede jagtforespørgsler til at inspicere usædvanlig aktivitet, registrere mulige trusler og endda reagere på angreb. Den avancerede jagt-API giver dig mulighed for at sende en programatisk forespørgsel om hændelsesdata.
+[Avanceret jagt](advanced-hunting-overview.md) er et værktøj til trusselsjagt, der bruger [særligt konstruerede forespørgsler](advanced-hunting-query-language.md) til at undersøge de seneste 30 dages hændelsesdata i Microsoft 365 Defender. Du kan bruge avancerede jagtforespørgsler til at inspicere usædvanlig aktivitet, registrere mulige trusler og endda reagere på angreb. Den avancerede jagt-API giver dig mulighed for programmeringsmæssigt at forespørge om hændelsesdata.
 
 ## <a name="quotas-and-resource-allocation"></a>Kvoter og ressourceallokering
 
@@ -53,11 +53,11 @@ Følgende betingelser er relateret til alle forespørgsler.
 6. En `429` HTTP-svarkode angiver, at du har nået en kvote, enten efter antal anmodninger, der er sendt, eller af den tildelte kørselstid. Læs svarteksten for at forstå den grænse, du har nået. 
 
 > [!NOTE]
-> Alle kvotaer, der er angivet ovenfor (f.eks. 15 opkald pr. min.), er pr. lejerstørrelse. Disse kvoter er minimum.
+> Alle kvotaer, der er angivet ovenfor (f.eks. 15 opkald pr. min.), er hele lejeren. Disse kvoter er minimum.
 
 ## <a name="permissions"></a>Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde API'en for avanceret jagt. Hvis du vil vide mere, herunder hvordan du vælger tilladelser, skal du se [Få adgang til API'er til beskyttelse af Microsoft 365 Defender](api-access.md)
+En af følgende tilladelser er påkrævet for at kalde API'en for avanceret jagt. Hvis du vil vide mere, herunder hvordan du vælger tilladelser, skal du se [Få adgang til API'erne til Microsoft 365 Defender Protection](api-access.md).
 
 Tilladelsestype | Tilladelse | Vist navn for tilladelse
 -|-|-
@@ -78,7 +78,7 @@ POST https://api.security.microsoft.com/api/advancedhunting/run
 
 ## <a name="request-headers"></a>Anmodningsheadere
 
-Header | Værdi
+Sidehoved | Værdi
 -|-
 Tilladelse | Ihændehaver {token} **Bemærk! påkrævet**
 Indholdstype | program/json
@@ -89,7 +89,7 @@ Angiv følgende parametre for et JSON-objekt i anmodningens brødtekst:
 
 Parameter | Type | Beskrivelse
 -|-|-
-Forespørgsel | Tekst | Den forespørgsel, der skal køres. **Bemærk! påkrævet**
+Forespørgsel | Tekst | Den forespørgsel, der skal køres. **(påkrævet)**
 
 ## <a name="response"></a>Svar
 

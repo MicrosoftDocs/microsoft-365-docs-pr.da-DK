@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Administratorer kan få mere at vide om, hvordan de opretter automatiserede simuleringer, der indeholder bestemte teknikker og nyttedata, der startes, når de angivne betingelser er opfyldt i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: b80d73f6efe398465eecea9967c4bd8d929a51a2
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: ded6a77e72e71a676c0cc05ffdc3be53e3fbada1
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649403"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678849"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Simuleringsautomatiseringer til oplæring af simulering af angreb
 
@@ -29,11 +29,11 @@ Du kan finde oplysninger om, hvordan du kommer i gang, om oplæring i simulering
 
 Benyt følgende fremgangsmåde for at oprette en automatisering af simulering:
 
-1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com/>skal du gå til fanen **Mail & samarbejde** \> Oplæring \> i **simulering af angreb** **Simulationsautomatiseringer**.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com/>skal du gå til **Mail & samarbejde** \> **Oplæring** \> i simulering af angreb **Automatiseringer Automatiseringer** \> **Automatiseringer af simulering**.
 
-   Hvis du vil gå direkte til fanen **Simuleringsautomatiseringer** , skal du bruge <https://security.microsoft.com/attacksimulator?viewid=simulationautomation>.
+   Hvis du vil gå direkte til fanen **Automatiseringer** , skal du bruge <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
-2. Vælg ![Opret **automatiseringsikon under fanen Simuleringsautomatiseringer**.](../../media/m365-cc-sc-create-icon.png) **Opret automatisering**.
+2. Vælg ![Opret **automatiseringsikon under Simuleringsautomatiseringer**.](../../media/m365-cc-sc-create-icon.png) **Opret automatisering**.
 
    :::image type="content" source="../../media/attack-sim-training-sim-automations-create.png" alt-text="Knappen Opret simulering på fanen Simuleringsautomatiseringer i Oplæring af simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-sim-automations-create.png":::
 
@@ -339,7 +339,7 @@ På denne side vises følgende meddelelser og deres konfigurerede sprog:
 - **Microsofts standardmeddelelse om oplæringstildeling**
 - Alle brugerdefinerede meddelelser om oplæringstildeling, som du tidligere har oprettet.
 
-  Disse meddelelser er også tilgængelige på fanen **Slutbrugermeddelelser** under Oplæring i simulering af angreb på <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>. **Microsofts standardmeddelelse om oplæringstildeling** er tilgængelig på fanen **Globale meddelelser** . Meddelelser om brugerdefinerede oplæringstildelinger er tilgængelige under fanen **Lejermeddelelser** . Du kan få flere oplysninger under [Slutbrugermeddelelser om oplæring i simulering af angreb](attack-simulation-training-end-user-notifications.md).
+  Disse meddelelser er også tilgængelige i **Meddelelser fra slutbrugere** på fanen **Simuleringsindholdsbibliotek** i Oplæring i simulering af angreb på <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>. **Microsofts standardmeddelelse om oplæringstildeling** er tilgængelig på fanen **Globale meddelelser** . Meddelelser om brugerdefinerede oplæringstildelinger er tilgængelige under fanen **Lejermeddelelser** . Du kan få flere oplysninger under [Slutbrugermeddelelser om oplæring i simulering af angreb](attack-simulation-training-end-user-notifications.md).
 
 Du kan vælge en eksisterende meddelelse om oplæringstildeling eller oprette en ny meddelelse, der skal bruges:
 
@@ -374,7 +374,7 @@ Meddelelsessiden **Påmindelse om oplæring** er kun tilgængelig, hvis du har v
   - **Besked om påmindelse om standardtræning fra Microsoft**
   - Alle brugerdefinerede påmindelsesmeddelelser om oplæring, som du tidligere har oprettet.
 
-    Disse meddelelser er også tilgængelige på fanen **Slutbrugermeddelelser** under Oplæring i simulering af angreb på <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>. **Påmindelsesmeddelelse om Microsofts standardtræning** er tilgængelig på fanen **Globale meddelelser** . Påmindelsesmeddelelser om brugerdefineret oplæring er tilgængelige under fanen **Lejermeddelelser** . Du kan få flere oplysninger under [Slutbrugermeddelelser om oplæring i simulering af angreb](attack-simulation-training-end-user-notifications.md).
+    Disse meddelelser er også tilgængelige i **Meddelelser fra slutbrugere** på fanen **Simuleringsindholdsbibliotek** i Oplæring i simulering af angreb på <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>. **Påmindelsesmeddelelse om Microsofts standardtræning** er tilgængelig på fanen **Globale meddelelser** . Påmindelsesmeddelelser om brugerdefineret oplæring er tilgængelige under fanen **Lejermeddelelser** . Du kan få flere oplysninger under [Slutbrugermeddelelser om oplæring i simulering af angreb](attack-simulation-training-end-user-notifications.md).
 
   Du kan vælge en eksisterende påmindelse om oplæring eller oprette en ny meddelelse, der skal bruges:
 
@@ -411,7 +411,7 @@ Meddelelsessiden **Positiv forstærkning** er kun tilgængelig, hvis du har valg
   - **Microsofts standardmeddelelse om positiv forstærkning**
   - Alle brugerdefinerede meddelelser om positiv forstærkning, som du tidligere har oprettet.
 
-    Disse meddelelser er også tilgængelige på fanen **Slutbrugermeddelelser** under Oplæring i simulering af angreb på <https://security.microsoft.com/attacksimulator?viewid=endUserNotification>. **Microsofts standardmeddelelse om positiv forstærkning** er tilgængelig på fanen **Globale meddelelser** . Brugerdefinerede meddelelser om positiv forstærkning er tilgængelige på fanen **Lejermeddelelser** . Du kan få flere oplysninger under [Slutbrugermeddelelser om oplæring i simulering af angreb](attack-simulation-training-end-user-notifications.md).
+    Disse meddelelser er også tilgængelige i **Meddelelser fra slutbrugere** på fanen **Simuleringsindholdsbibliotek** i Oplæring i simulering af angreb på <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>. **Microsofts standardmeddelelse om positiv forstærkning** er tilgængelig på fanen **Globale meddelelser** . Brugerdefinerede meddelelser om positiv forstærkning er tilgængelige på fanen **Lejermeddelelser** . Du kan få flere oplysninger under [Slutbrugermeddelelser om oplæring i simulering af angreb](attack-simulation-training-end-user-notifications.md).
 
   Du kan vælge en eksisterende meddelelse om positiv forstærkning eller oprette en ny meddelelse, der skal bruges:
 

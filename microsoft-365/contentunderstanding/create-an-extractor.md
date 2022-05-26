@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du opretter en udtrækningsmaskine i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 5be59cc7b99d64ceceb08bc400eeb0c44e3de1a8
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 5bfca45442386c15fb8418e306a5631795204c5f
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535476"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65679608"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Opret en udtrækningsmaskine i Microsoft SharePoint Syntex
 
@@ -42,12 +42,12 @@ Du skal oprette en udtrækningsenhed for hver enhed i det dokument, du vil udtr�
 
 2. På skærmen **New entity extractor** skal du skrive navnet på udtrækningsenheden i feltet **Nyt udtræksnavn** . Navngiv den f.eks. **Tjenestens startdato** , hvis du vil udtrække tjenestens startdato fra hvert kontraktfornyelsesdokument. Du kan også vælge at genbruge en tidligere oprettet kolonne (f.eks. en administreret metadatakolonne).
 
-    Kolonnetypen er som standard **Enkelt tekstlinje**. Hvis du vil ændre kolonnetypen, skal du vælge **Avancerede** **indstillingerKolonnetype** >  og derefter vælge den type, du vil bruge.
+    Kolonnetypen er som standard **Enkelt tekstlinje**. Hvis du vil ændre kolonnetypen, skal du vælge **Avancerede indstillinger** > **Kolonnetype** og derefter vælge den type, du vil bruge.
 
     ![Skærmbillede af delen Avancerede indstillinger i panelet Udtræk af ny enhed, der viser indstillingen Kolonnetype.](../media/content-understanding/advanced-settings-column-type.png)
 
     > [!NOTE]
-    > For uddrage med kolonnetypen **Enkelt tekstlinje** er den maksimale tegngrænse 255. Alle tegn, du skriver, som overskrider grænsen, afkortes.
+    > For uddrage med kolonnetypen **Enkelt tekstlinje** er den maksimale tegngrænse 255. Alle tegn, du vælger, som overskrider grænsen, afkortes. Hvis du vil vælge mere end 255 tegn, skal du vælge kolonnetypen **Flere tekstlinjer** , når du opretter udtrækningen.
 
 3. Når du er færdig, skal du vælge **Opret**.
 

@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 description: 'Fjern en licens fra en delt postkasse for at tildele den til en anden bruger eller returnere licensen, så du ikke betaler for den. '
 ms.date: 04/22/2022
-ms.openlocfilehash: 4445163281e403505612066285192b31adc44979
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 5248c7fdb807a91ab2a9a7dfd44bdb375eb7d0f0
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091913"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678914"
 ---
 # <a name="remove-a-license-from-a-shared-mailbox"></a>Fjern en licens fra en delt postkasse
 
@@ -41,7 +41,6 @@ Delte postkasser kræver normalt ikke en licens. Følg disse instruktioner for a
 > - Den delte postkasse har mere end 50 GB lagerplads i brug.
 > - Den delte postkasse bruger lokal arkivering.
 > - Den delte postkasse er sat i venteposition for tvister.
-> - Den delte postkasse har fået tildelt en Microsoft 365 Defender licens.
 > 
 > Du kan finde en trinvis vejledning i, hvordan du tildeler licenser, under [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users). 
 

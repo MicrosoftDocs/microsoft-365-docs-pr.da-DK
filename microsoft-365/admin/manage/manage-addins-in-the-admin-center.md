@@ -23,18 +23,18 @@ search.appverid:
 - MOE150
 ms.assetid: 737e8c86-be63-44d7-bf02-492fa7cd9c3f
 description: Få mere at vide om, hvordan du bruger centraliserede tilføjelsesprogrammer til at installere tilføjelsesprogrammer til brugere og grupper i din organisation.
-ms.openlocfilehash: ec972cd8ce837ae21384bc3b97513bd1263a7d84
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 96bbdf5d4d9e4f1697fa0b85f902d8d758d356fa
+ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435429"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65678958"
 ---
 # <a name="manage-add-ins-in-the-microsoft-365-admin-center"></a>Administrer tilføjelsesprogrammer i Microsoft 365 Administration
 
 Office tilføjelsesprogrammer hjælper dig med at tilpasse dine dokumenter og strømline den måde, du får adgang til oplysninger på internettet på. Se [Begynd at bruge dit Office-tilføjelsesprogram](https://support.microsoft.com/office/82e665c4-6700-4b56-a3f3-ef5441996862). 
 
-Når en administrator har installeret tilføjelsesprogrammer for brugere i en organisation, kan administratoren slå tilføjelsesprogrammer fra eller til, redigere, slette og administrere adgang til tilføjelsesprogrammer.
+Når en global administrator eller exchange-administrator installerer tilføjelsesprogrammer for brugere i en organisation, kan de slå tilføjelsesprogrammer fra eller til, redigere, slette og administrere adgang til tilføjelsesprogrammer.
 
 Du kan få flere oplysninger om installation af tilføjelsesprogrammer fra Administration under [Udrul tilføjelsesprogrammer i Administration](./manage-deployment-of-add-ins.md).
   
@@ -44,9 +44,9 @@ Et tilføjelsesprogram kan være i tilstanden **Til** eller **Fra** .
   
 | Staten | Sådan opstår tilstanden | Indvirkning |
 |:-----|:-----|:-----|
-|**Aktive**  <br/> |Administratoren har uploadet tilføjelsesprogrammet og tildelt det til brugere eller grupper.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, kan se det i de relevante klienter.  <br/> |
-|**Slukket**  <br/> |Administratoren har deaktiveret tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> Hvis tilføjelsesprogrammets tilstand ændres til Aktiv, har brugerne og grupperne adgang til det igen.  <br/> |
-|**Slettet**  <br/> |Administratoren slettede tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> |
+|**Aktive**  <br/> |Administration uploadet tilføjelsesprogrammet og tildelt det til brugere eller grupper.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, kan se det i de relevante klienter.  <br/> |
+|**Slukket**  <br/> |Administration slået tilføjelsesprogrammet fra.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> Hvis tilføjelsesprogrammets tilstand ændres til Aktiv, har brugerne og grupperne adgang til det igen.  <br/> |
+|**Slettet**  <br/> |Administration slettede tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> |
    
 Overvej at slette et tilføjelsesprogram, hvis ingen bruger det længere. Hvis du f.eks. deaktiverer et tilføjelsesprogram, kan det give mening, hvis et tilføjelsesprogram kun bruges på bestemte tidspunkter af året.
 
@@ -142,11 +142,11 @@ Hvis det installerede tilføjelsesprogram ikke understøtter tilføjelsesprogram
 
 1. Vælg **Indsæt \> Mine tilføjelsesprogrammer**. 
     
-2. Vælg fanen **Administreret administrator** i vinduet Office tilføjelsesprogrammer. 
+2. Vælg fanen **Administration Administreret** i vinduet Office tilføjelsesprogrammer. 
     
 3. Dobbeltklik på det tilføjelsesprogram, du installerede tidligere (i dette eksempel **Citater**).
 
-    ![Fanen Administreret af administratorer på siden Office tilføjelsesprogrammer.](../../media/fd36ba81-9882-40f0-9fce-74f991aa97d5.png)
+    ![Administration fanen Administreret på siden Office tilføjelsesprogrammer.](../../media/fd36ba81-9882-40f0-9fce-74f991aa97d5.png)
   
 ### <a name="in-outlook"></a>I Outlook
 
@@ -154,7 +154,7 @@ Hvis det installerede tilføjelsesprogram ikke understøtter tilføjelsesprogram
 
     ![knappen Store i Outlook.](../../media/getaddinsicon.png)
   
-2. Vælg **Administratoradministrer** i venstre navigationsrude. 
+2. Vælg **Administration administreret** i venstre navigationsrude. 
 
 ## <a name="related-content"></a>Relateret indhold
 
