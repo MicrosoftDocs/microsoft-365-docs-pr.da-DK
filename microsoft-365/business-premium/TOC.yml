@@ -96,6 +96,8 @@
       href: m365bp-security-incident-management.md
     - name: Gennemse sikkerhedsanbefalinger
       href: ../security/defender-business/mdb-view-tvm-dashboard.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
+    - name: 'Gennemse trusler, der er registreret på enheder'
+      href: m365bp-review-threats-take-action.md
     - name: Gennemse afhjælpningshandlinger på enheder
       href: m365bp-review-remediation-actions-devices.md
     - name: Besvar en kompromitteret mailkonto

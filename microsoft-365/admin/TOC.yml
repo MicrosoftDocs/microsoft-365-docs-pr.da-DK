@@ -14,13 +14,7 @@
         - name: Planlæg din konfiguration af Microsoft 365 til virksomheder
           href: setup/plan-your-setup.md
         - name: Tilmeld dig Microsoft 365 Business Premium
-          items:
-            - name: Tilmeld dig
-              href: ../business/sign-up.md
-            - name: Konfigurer Microsoft 365 Business Premium med konfigurationsguiden
-              href: ../business/set-up.md
-            - name: Microsoft 365 Business Premium (video)
-              href: admin-overview/what-is-microsoft-365.md
+          href: ../business-premium/index.md
         - name: Tilmeld dig Microsoft 365 Business Standard
           items:
             - name: Tilmeld dig Microsoft 365 Business Standard
@@ -352,8 +346,6 @@
           href: manage/idle-session-timeout-web-apps.md
         - name: Aktivér moderne godkendelse for Office 2013
           href: security-and-compliance/enable-modern-authentication.md
-        - name: Forudsætninger for databeskyttelse
-          href: /microsoft-365/business-premium/m365bp-pre-requisites-for-data-protection
         - name: Trusler registreret af Microsoft Defender Antivirus
           href: /microsoft-365/business-premium/m365bp-review-threats-take-action
         - name: Konfigurer funktioner til overholdelse af angivne standarder
@@ -366,29 +358,7 @@
       items:
         - name: Metoder til beskyttelse af enheds- og appdata
           href: devices/choose-device-security.md
-        - name: Microsoft Intune-dokumentation
-          href: /mem/intune/
-        - name: Få vist og rediger politikker og enheder
-          href: /microsoft-365/business-premium/m365bp-view-policies-and-devices
-        - name: Fjern virksomhedsdata
-          href: /microsoft-365/business-premium/m365bp-remove-company-data
-        - name: Nulstil enheder til fabriksindstillingerne
-          href: devices/reset-devices-to-factory-settings.md
-        - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
-          href: /microsoft-365/business-premium/m365bp-map-protection-features-to-intune-settings
-        - name: Enhedens tilstande
-          href: devices/device-states.md
-        - name: Indstillinger for appbeskyttelse til Windows 10-pc'er
-          href: devices/protection-settings-for-windows-10-devices.md
         - name: Valider indstillinger på Android eller iOS
-        - name: Autopilot
-          items:
-            - name: Opret og rediger AutoPilot-profiler
-              href: /microsoft-365/business-premium/m365bp-create-and-edit-autopilot-profiles
-            - name: Opret og rediger AutoPilot-enheder
-              href: devices/create-and-edit-autopilot-devices.md
-        - name: Microsoft 365 for enterprise-dokumentation
-          href: ../enterprise/index.yml
         - name: Basic Mobility og Security
           items:
             - name: Oversigt over Basic Mobility og Security

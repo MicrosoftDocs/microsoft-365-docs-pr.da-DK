@@ -21,13 +21,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Få mere at vide om, hvordan du fortolker gebyrer, fakturering og betalingsoplysninger på din faktura eller faktura for Microsoft 365 til virksomheder.
-ms.date: 03/04/2022
-ms.openlocfilehash: e8a27dbdab3f49412f78d0ef7dcb533266d5f4f4
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 05/24/2022
+ms.openlocfilehash: 594ad923c186410ad17085425fc0702d1a245ef9
+ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588272"
+ms.lasthandoff: 05/25/2022
+ms.locfileid: "65670240"
 ---
 # <a name="understand-your-bill-or-invoice-for-microsoft-365-for-business"></a>Forstå din regning eller faktura for Microsoft 365 til virksomheder
 
@@ -38,9 +38,7 @@ Din regning eller faktura indeholder en oversigt over gebyrer for dit abonnement
 
 ## <a name="how-often-and-when-am-i-billed"></a>Hvor ofte og hvornår faktureres jeg?
 
-Afhængigt af den faktureringshyppighed, du valgte, da du købte dit abonnement, modtager du en faktura enten månedligt eller årligt. Hvis du vælger årlig fakturering, modtager du kun én faktura om året, medmindre aktivitet for dit abonnement tilføjer et nyt gebyr eller en kredit.
-
-Den tid, der er gået siden sidste fakturadato, kaldes *Faktureringsperioden* og er på side et af fakturaen. Dette tidspunkt repræsenterer det datointerval, hvor den aktuelle faktura tilskrives gebyrer. Hvis du har foretaget en ændring af dit abonnement uden for dette datointerval, f.eks. tilføjelse eller fjernelse af licenser, vises de tilknyttede gebyrer på fakturaen for den næste faktureringsperiode.
+Afhængigt af den faktureringshyppighed, du valgte, da du købte dit abonnement, modtager du en faktura enten månedligt, kvartalsvist, halvårligt eller årligt. Den tid, der er gået siden sidste fakturadato, kaldes *Faktureringsperioden* og er på side et af fakturaen. Dette tidspunkt repræsenterer det datointerval, hvor den aktuelle faktura tilskrives gebyrer. Hvis du har foretaget en ændring af dit abonnement uden for dette datointerval, f.eks. tilføjelse eller fjernelse af licenser, vises de tilknyttede gebyrer på fakturaen for den næste faktureringsperiode.
 
 Fra og med side to i fakturaen kan du se gebyrerne grupperet efter deres *Serviceperiode*. Tjenesteperioden er det datointerval, hvor du faktureres for at bruge tjenesten.
 
