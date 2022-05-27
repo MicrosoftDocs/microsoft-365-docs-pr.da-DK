@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Microsoft Teams.
-ms.openlocfilehash: 68e69f198dfd79c1da210cd8d87144471d83abb7
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: cadff304744fcf06c6717b0709b719e05f8ddfb6
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285962"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754328"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Få mere at vide om opbevaring for Microsoft Teams
 
@@ -71,7 +71,7 @@ Andre postkassetyper, f.eks. RoomMailbox, der bruges til Teams mødelokaler, und
 
 Teams bruger en Azure-drevet chattjeneste som det primære lager for alle meddelelser (chats og kanalmeddelelser). Hvis du har brug for at slette Teams meddelelser af hensyn til overholdelse af angivne standarder, kan opbevaringspolitikker for Teams slette meddelelser efter en angivet periode baseret på, hvornår de blev oprettet. Meddelelser slettes derefter permanent fra både de Exchange postkasser, hvor de er gemt til overholdelse af angivne standarder, og fra det primære lager, der bruges af den underliggende Azure-drevne chattjeneste. Du kan få flere oplysninger om den underliggende arkitektur [under Sikkerhed og overholdelse af angivne standarder i Microsoft Teams](/MicrosoftTeams/security-compliance-overview) og specifikt afsnittet [Information Protection arkitektur](/MicrosoftTeams/security-compliance-overview#information-protection-architecture).
 
-Selvom disse data fra Teams chats og kanalmeddelelser gemmes i postkasser, skal du konfigurere en opbevaringspolitik for **de Teams kanalmeddelelser** og **Teams chatplaceringer**. Teams chats og kanalmeddelelser er ikke inkluderet i opbevaringspolitikker, der er konfigureret til Exchange bruger- eller gruppepostkasser. På samme måde påvirker opbevaringspolitikker for Teams ikke andre mailelementer, der er gemt i postkasser.
+Selvom disse data fra Teams chats og kanalmeddelelser gemmes i postkasser, skal du konfigurere en opbevaringspolitik for **de Teams kanalmeddelelser** og **Teams chatplaceringer**. Teams chats og kanalmeddelelser er ikke inkluderet i opbevaringspolitikker, der er konfigureret for Exchange bruger- eller gruppepostkasser. På samme måde påvirker opbevaringspolitikker for Teams ikke andre mailelementer, der er gemt i postkasser.
 
 Hvis en bruger føjes til en chat, overføres der en kopi af alle meddelelser, der deles med brugeren, til deres postkasse. Den oprettede dato for disse meddelelser ændres ikke for den nye bruger og forbliver den samme for alle brugere.
 
@@ -83,7 +83,7 @@ Når en opbevaringspolitik er konfigureret for chat- og kanalmeddelelser, evalue
 Meddelelser forbliver i mappen SubstrateHolds i mindst 1 dag, og hvis de er berettiget til sletning, sletter timerjobbet dem permanent, næste gang det køres.
 
 > [!IMPORTANT]
-> På grund [af det første opbevaringsprincip](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Teams chat- og kanalmeddelelser gemmes i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid, hvis postkassen påvirkes af en anden opbevaringspolitik (herunder politikker, der anvendes på Exchange  placering), procesførelse, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
+> På grund [af det første opbevaringsprincip](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Teams chat- og kanalmeddelelser gemmes i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden opbevaringspolitik for samme placering, Procesførelseshold, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
 >
 > Selvom postkassen er inkluderet i en relevant venteposition, vil Teams chat- og kanalmeddelelser, der er blevet slettet, ikke længere være synlige i den Teams app, men vil fortsat kunne findes i eDiscovery.
 
@@ -97,7 +97,7 @@ For de to stier i diagrammet:
 
 1. **Hvis en chat- eller kanalmeddelelse redigeres eller slettes** af en bruger i løbet af opbevaringsperioden, kopieres den oprindelige meddelelse (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Meddelelsen gemmes der i mindst 1 dag. Når opbevaringsperioden udløber, slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
 
-2. **Hvis en chat- eller kanalmeddelelse ikke slettes** af en bruger og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager typisk mellem 1-7 dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, gemmes den der i mindst én dag, og derefter slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage). 
+2. **Hvis en chat- eller kanalmeddelelse ikke slettes** af en bruger og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager typisk mellem 1-7 dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, gemmes den der i mindst 1 dag, og derefter slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage). 
 
 > [!NOTE]
 > Meddelelser, der er gemt i postkasser, herunder skjulte mapper, kan søges i af eDiscovery-værktøjer. Indtil meddelelser slettes permanent fra mappen SubstrateHolds, kan der stadig søges i dem af eDiscovery-værktøjer.
@@ -131,7 +131,7 @@ Brug følgende eksempler til at se, hvordan de processer og tidsindstillinger, d
 - [Eksempel 2: Bevar i 30 dage, og slet derefter](#example-2-retain-for-30-days-and-then-delete)
 - [Eksempel 3: Slet kun efter 1 dag](#example-3-delete-only-after-1-day)
 
-For alle eksempler, der henviser til permanent sletning på grund [af principperne for opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), afbrydes denne handling midlertidigt, hvis meddelelsen er underlagt en anden opbevaringspolitik for at bevare elementet, eller hvis det er underlagt eDiscovery-bevarelse.
+For alle eksempler, der refererer til permanent sletning på grund [af principperne for opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), afbrydes denne handling midlertidigt, hvis meddelelsen er underlagt en anden opbevaringspolitik for at bevare elementet, eller hvis det er i eDiscovery-venteposition.
 
 ##### <a name="example-1-retain-only-for-7-years"></a>Eksempel 1: Bevar kun i 7 år
 
@@ -200,7 +200,7 @@ Impromptu- og planlagte mødemeddelelser gemmes på samme måde som gruppechatbe
 
 Når eksterne brugere er inkluderet i et møde, som organisationen er vært for:
 
-- Hvis en ekstern bruger tilmelder sig ved hjælp af en gæstekonto i din lejer, gemmes meddelelser fra mødet både i dine brugeres postkasse og i en skyggepostkasse, der er tildelt gæstekontoen. Opbevaringspolitikker understøttes dog ikke for skyggepostkasser, selvom de kan rapporteres som inkluderet i en opbevaringspolitik for hele placeringen (også kaldet en "politik for hele organisationen").
+- Hvis en ekstern bruger tilmelder sig ved hjælp af en gæstekonto i din lejer, gemmes meddelelser fra mødet både i dine brugeres postkasse og i en skyggepostkasse, der er tildelt gæstekontoen. Opbevaringspolitikker understøttes dog ikke for skyggepostkasser, selvom de kan rapporteres som inkluderet i en opbevaringspolitik for hele placeringen (nogle gange kendt som en "politik for hele organisationen").
 
 - Hvis en ekstern bruger tilmelder sig ved hjælp af en konto fra en anden Microsoft 365 organisation, kan dine opbevaringspolitikker ikke slette meddelelser for denne bruger, fordi de er gemt i den pågældende brugers postkasse i en anden lejer. I forbindelse med det samme møde kan dine opbevaringspolitikker slette meddelelser for dine brugere.
 

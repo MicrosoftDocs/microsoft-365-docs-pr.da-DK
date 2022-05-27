@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 099ba7abe53be6269c1d01c0d39d9e5cfbe3557d
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+ms.openlocfilehash: 0ca9a951ffd561113a806341d25bc1f0661732cc
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "64731686"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739943"
 ---
 # <a name="hunt-for-threats-across-devices-emails-apps-and-identities"></a>Jagt efter trusler på tværs af enheder, mails, apps og identiteter
 
@@ -82,7 +82,10 @@ SenderFromAddress, RecipientEmailAddress, AccountDisplayName, JobTitle,
 Department, City, Country
 ```
 
+Se denne [korte video](https://www.youtube.com/watch?v=8qZx7Pp5XgM) for at få mere at vide om, hvordan du kan bruge Kusto Query Language til at joinforbinde tabeller.  
+
 ### <a name="get-device-information"></a>Hent enhedsoplysninger
+
 Det [avancerede jagtskema](advanced-hunting-schema-tables.md) indeholder omfattende enhedsoplysninger i forskellige tabeller. [Tabellen DeviceInfo](advanced-hunting-deviceinfo-table.md) indeholder f.eks. omfattende enhedsoplysninger baseret på hændelsesdata, der aggregeres regelmæssigt. Denne forespørgsel bruger tabellen `DeviceInfo` til at kontrollere, om en potentielt kompromitteret bruger (`<account-name>`) er logget på en hvilken som helst enhed, og viser derefter de beskeder, der er blevet udløst på disse enheder.
 
 >[!Tip]
@@ -152,9 +155,9 @@ DeviceInfo
 ```
 
 
-### <a name="example-query-for-macos-devices"></a>Eksempelforespørgsel til macOS-enheder
+### <a name="example-query-for-macos-devices"></a>Eksempelforespørgsel på macOS enheder
 
-Brug følgende eksempelforespørgsel for at se alle enheder, der kører macOS med en version, der er ældre end Catalina.
+Brug følgende eksempelforespørgsel til at se alle enheder, der kører macOS med en version, der er ældre end Catalina.
 
 ```kusto
 DeviceInfo
@@ -188,6 +191,7 @@ DeviceInfo
 ## <a name="hunting-scenarios"></a>Jagtscenarier
 
 ### <a name="list-logon-activities-of-users-that-received-emails-that-were-not-zapped-successfully"></a>Liste over logonaktiviteter for brugere, der har modtaget mails, som ikke blev zapped korrekt
+
 [Zap (automatisk fjernelse) på nul timer](../office-365-security/zero-hour-auto-purge.md) adresserer ondsindede mails, efter de er blevet modtaget. Hvis ZAP mislykkes, kan skadelig kode i sidste ende køre på enheden og efterlade konti kompromitteret. Denne forespørgsel kontrollerer, om der er logonaktivitet foretaget af modtagerne af mails, der ikke blev håndteret korrekt af ZAP.
 
 ```kusto
@@ -205,6 +209,7 @@ LogonTime = Timestamp, AccountDisplayName, Application, Protocol, DeviceName, Lo
 ```
 
 ### <a name="get-logon-attempts-by-domain-accounts-targeted-by-credential-theft"></a>Få logonforsøg efter domænekonti, der er målrettet efter identitetstyveri af legitimationsoplysninger
+
 Denne forespørgsel identificerer først alle beskeder om adgang til legitimationsoplysninger i tabellen `AlertInfo` . Den fletter eller joinforbinder `AlertEvidence` derefter tabellen, som den fortolker for navnene på de målrettede konti og filtre kun for domænetilsluttede konti. Til sidst kontrollerer den tabellen `IdentityLogonEvents` for at få alle logonaktiviteter fra de domænetilsluttede målrettede konti.
 
 ```kusto
@@ -225,6 +230,7 @@ AlertInfo
 ```
 
 ### <a name="check-if-files-from-a-known-malicious-sender-are-on-your-devices"></a>Kontrollér, om filer fra en kendt ondsindet afsender findes på dine enheder
+
 Hvis du kender en mailadresse, der sender skadelige filer (`MaliciousSender@example.com`), kan du køre denne forespørgsel for at afgøre, om der findes filer fra denne afsender på dine enheder. Du kan f.eks. bruge denne forespørgsel til at identificere enheder, der er påvirket af en malwaredistributionskampagne.
 
 ```kusto
@@ -241,6 +247,7 @@ DeviceFileEvents
 ```
 
 ### <a name="review-logon-attempts-after-receipt-of-malicious-emails"></a>Gennemse logonforsøg efter modtagelse af skadelige mails
+
 Denne forespørgsel finder de 10 seneste logon, der er udført af mailmodtagere inden for 30 minutter, efter at de har modtaget kendte skadelige mails. Du kan bruge denne forespørgsel til at kontrollere, om kontiene for mailmodtagerne er blevet kompromitteret.
 
 ```kusto
@@ -261,6 +268,7 @@ IdentityLogonEvents
 ```
 
 ### <a name="review-powershell-activities-after-receipt-of-emails-from-known-malicious-sender"></a>Gennemse PowerShell-aktiviteter efter modtagelse af mails fra kendt ondsindet afsender
+
 Ondsindede mails indeholder ofte dokumenter og andre særligt udformede vedhæftede filer, der kører PowerShell-kommandoer for at levere yderligere nyttedata. Hvis du er opmærksom på mails, der kommer fra en kendt ondsindet afsender (`MaliciousSender@example.com`), kan du bruge denne forespørgsel til at få vist og gennemse PowerShell-aktiviteter, der fandt sted inden for 30 minutter, efter at der blev modtaget en mail fra afsenderen.  
 
 ```kusto
@@ -283,6 +291,7 @@ DeviceProcessEvents
 ```
 
 ## <a name="related-topics"></a>Relaterede emner
+
 - [Oversigt over avanceret jagt](advanced-hunting-overview.md)
 - [Få mere at vide om forespørgselssproget](advanced-hunting-query-language.md)
 - [Arbejd med forespørgselsresultater](advanced-hunting-query-results.md)

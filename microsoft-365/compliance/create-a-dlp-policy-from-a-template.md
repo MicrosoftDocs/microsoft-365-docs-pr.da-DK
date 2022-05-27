@@ -20,16 +20,18 @@ ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkCOMPLIANCE
 description: I denne artikel får du mere at vide om, hvordan du opretter DLP-politikker ved hjælp af en af de skabeloner, der er inkluderet i Office 365.
-ms.openlocfilehash: 3617e1f067f4b29470feedcf7381b41a400887f9
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 952a552210b00061717c24db5de5e5a47b84d72b
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759097"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754670"
 ---
 # <a name="create-a-dlp-policy-from-a-template"></a>Opret en DLP-politik ud fra en skabelon
 
-Den nemmeste og mest almindelige måde at komme i gang med DLP-politikker på er at bruge en af skabelonerne i Microsoft 365 Compliance Center. Du kan bruge en af disse skabeloner, som den er, eller tilpasse reglerne, så de opfylder organisationens specifikke krav til overholdelse af angivne standarder.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Den nemmeste og mest almindelige måde at komme i gang med DLP-politikker på er at bruge en af de skabeloner, der er inkluderet i Microsoft Purview-compliance-portal. Du kan bruge en af disse skabeloner, som den er, eller tilpasse reglerne, så de opfylder organisationens specifikke krav til overholdelse af angivne standarder.
 
 Microsoft 365 indeholder over 40 brugsklare skabeloner, der kan hjælpe dig med at opfylde en lang række almindelige lovgivnings- og forretningspolitiske behov. Se; [Politikskabeloner](dlp-policy-reference.md#policy-templates) for en komplet liste. 
 
@@ -43,7 +45,7 @@ Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have t
   
 1. Opret en gruppe i Microsoft 365, og føj overholdelsesansvarlige til den.
     
-2. Opret en rollegruppe på siden **Tilladelser** i Security &amp; Compliance Center. 
+2. Opret en rollegruppe på siden **Tilladelser** i Microsoft Purview-compliance-portal. 
 
 3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **DLP Compliance Management**.
     
@@ -51,7 +53,7 @@ Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have t
 
 Brug rollen **Vis kun DLP-overholdelsesstyring** til at oprette en rollegruppe med skrivebeskyttede rettigheder til DLP-politikker og DLP-rapporter.
 
-Du kan få flere oplysninger under [Giv brugere adgang til Office 365 Compliance Center](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+Du kan få flere oplysninger [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal).
   
 Disse tilladelser kræves for at oprette og anvende en DLP-politik for ikke at gennemtvinge politikker.
 
@@ -59,14 +61,14 @@ Disse tilladelser kræves for at oprette og anvende en DLP-politik for ikke at g
 
 Der er roller og rollegrupper som prøveversion, som du kan teste for at finjustere dine adgangskontrolelementer.
 
-Her er en liste over Microsoft Information Protection (MIP) roller, der er i prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
+Her er en liste over relevante roller, der findes som prøveversion. Du kan få mere at vide om dem [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal).
 
-- Information Protection administrator
+- Information Protection Administration
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
 
-Her er en liste over MIP-rollegrupper, der findes som prøveversion. Du kan få mere at vide om under [Rollegrupper i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center)
+Her er en liste over relevante rollegrupper, der findes som prøveversion. Du kan få mere at vide om under [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal)
 
 - Information Protection
 - Information Protection administratorer
@@ -76,9 +78,9 @@ Her er en liste over MIP-rollegrupper, der findes som prøveversion. Du kan få 
 
 ### <a name="create-the-dlp-policy-from-a-template"></a>Opret DLP-politikken ud fra en skabelon
 
-1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
+1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
-2. I Overholdelsescenter \> til venstre **navigationsløsninger** \> \> **Politikker til** \> **forebyggelse af** \> datatab **+ Opret politik**.
+2. I den Microsoft Purview-compliance-portal \> venstre navigationsrude \> **Løsninger** \> **Politikker til** \> **forebyggelse af** \> datatab **+ Opret politik**.
 
     ![Opret en politikknap.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
           
@@ -205,7 +207,7 @@ In this example, you'll create a DLP policy that identifies U.S. PII data, which
 
 ## View the status of a DLP policy
 
-At any time, you can view the status of your DLP policies on the **Policy** page in the **Data loss prevention** section of the Security &amp; Compliance Center. Here you can find important information, such as whether a policy was successfully enabled or disabled, or whether the policy is in test mode.
+At any time, you can view the status of your DLP policies on the **Policy** page in the **Data loss prevention** section of the Microsoft Purview compliance portal. Here you can find important information, such as whether a policy was successfully enabled or disabled, or whether the policy is in test mode.
 
 Here are the different statuses and what they mean.
 

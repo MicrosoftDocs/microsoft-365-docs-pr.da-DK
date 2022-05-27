@@ -19,16 +19,18 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om de grundlæggende trin til oprettelse af en nøgleordsordbog i Office 365 Security & Compliance Center.
-ms.openlocfilehash: 64e431b5d2ef01e85eff55f39f4436786f45664b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: ceb410d09d9869d87681128f2c6e7b45cd8363cb
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758591"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753666"
 ---
 # <a name="create-a-keyword-dictionary"></a>Opret en ordbog over nøgleord
 
-Forebyggelse af datatab (DLP) kan identificere, overvåge og beskytte dine følsomme elementer. Identificering af følsomme elementer kræver nogle gange, at du søger efter nøgleord, især når du identificerer generisk indhold (f.eks. sundhedsrelateret kommunikation) eller upassende eller eksplicit sprog. Selvom du kan oprette nøgleordslister i følsomme oplysningstyper, er nøgleordslister begrænset og kræver ændring af XML for at oprette eller redigere dem. Søgeordsordbøger giver en enklere administration af nøgleord og i meget større skala, der understøtter op til 1 MB ord (efter komprimering) i ordbogen og understøtter ethvert sprog. Lejergrænsen er også 1 MB efter komprimering. 1 MB postkomprimeringsgrænse betyder, at alle ordbøger, der kombineres på tværs af en lejer, kan have næsten 1 million tegn.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Microsoft Purview Forebyggelse af datatab (DLP) kan identificere, overvåge og beskytte dine følsomme elementer. Identificering af følsomme elementer kræver nogle gange, at du søger efter nøgleord, især når du identificerer generisk indhold (f.eks. sundhedsrelateret kommunikation) eller upassende eller eksplicit sprog. Selvom du kan oprette nøgleordslister i følsomme oplysningstyper, er nøgleordslister begrænset og kræver ændring af XML for at oprette eller redigere dem. Søgeordsordbøger giver en enklere administration af nøgleord og i meget større skala, der understøtter op til 1 MB ord (efter komprimering) i ordbogen og understøtter ethvert sprog. Lejergrænsen er også 1 MB efter komprimering. 1 MB postkomprimeringsgrænse betyder, at alle ordbøger, der kombineres på tværs af en lejer, kan have næsten 1 million tegn.
 
 ## <a name="keyword-dictionary-limits"></a>Nøgleordsordbogsgrænser
 
@@ -74,7 +76,7 @@ Remove-Item $rawFile
 
 Nøgleordene til din ordbog kan stamme fra forskellige kilder, oftest fra en fil (f.eks. en .csv eller .txt liste), der er importeret i tjenesten eller af PowerShell-cmdlet'en, fra en liste, du angiver direkte i PowerShell-cmdlet'en eller fra en eksisterende ordbog. Når du opretter en nøgleordsordbog, skal du følge de samme kernetrin:
 
-1. Brug *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a> eller opret forbindelse til **&amp; Security Compliance Center PowerShell**.
+1. Brug *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal,</a> eller opret forbindelse til **Microsoft Purview-compliance-portal PowerShell**.
 
 2. **Definer eller indlæs dine nøgleord fra den ønskede kilde**. Guiden og cmdlet'en accepterer begge en kommasepareret liste over nøgleord for at oprette en brugerdefineret nøgleordsordbog, så dette trin varierer en smule, afhængigt af hvor dine nøgleord kommer fra. Når de er indlæst, kodes de og konverteres til en bytematrix, før de importeres.
 
@@ -84,7 +86,7 @@ Nøgleordene til din ordbog kan stamme fra forskellige kilder, oftest fra en fil
 
 Brug følgende trin til at oprette og importere nøgleord for en brugerordbog:
 
-1. Forbind til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
+1. Forbind til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
 2. Naviger til **klassificeringer > typer følsomme oplysninger**.
 

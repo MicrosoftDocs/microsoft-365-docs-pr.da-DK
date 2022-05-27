@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: 0140f704-6614-49bb-aa6c-89b75dcd7f1f
 description: Brug disse oplysninger til at få mere at vide om, hvordan Office 365 bruger CDN'er (Content Delivery Networks) til at forbedre ydeevnen.
-ms.openlocfilehash: b2809a524088b3cb53e415d3d83d1f8a02b27dc1
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a2ed395ba400e09b87777c381e140a38e32d9210
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092729"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754792"
 ---
 # <a name="content-delivery-networks-cdns"></a>Netværk til levering af indhold (CDN'er)
 
@@ -79,7 +79,7 @@ Selvom du ikke er en del af Office 365 CDN, kan du bruge disse CDN'er i din Offi
 ### <a name="azure-cdn"></a>Azure CDN
 
 >[!NOTE]
->Fra og med 3. kvartal 2020 begynder SharePoint Online at cachelagring af videoer på Azure CDN for at understøtte forbedret videoafspilning og pålidelighed. Populære videoer streames fra det CDN slutpunkt, der er tættest på brugeren. Disse data forbliver inden for Microsoft Purview-grænsen. Dette er en gratis tjeneste for alle lejere, og det kræver ikke nogen kundehandling at konfigurere.
+>Fra og med 3. kvartal 2020 begynder SharePoint Online at cachelagring af videoer på Azure CDN for at understøtte forbedret videoafspilning og pålidelighed. Populære videoer streames fra det CDN slutpunkt, der er tættest på brugeren. Disse data forbliver inden for den Microsoft Purview grænse. Dette er en gratis tjeneste for alle lejere, og det kræver ikke nogen kundehandling at konfigurere.
 
 Du kan bruge **Azure CDN** til at udrulle din egen CDN forekomst til hosting af brugerdefinerede webdele, biblioteker og andre ressourceaktiver, hvilket giver dig mulighed for at anvende adgangsnøgler på dit CDN lager og udøve større kontrol over din CDN konfiguration. Brug af Azure CDN er ikke gratis og kræver et Azure-abonnement.
 
@@ -113,7 +113,7 @@ Uanset hvad CDN du konfigurerer for din Office 365 lejer, er den grundlæggende 
 
     b. Hvis dataene allerede er cachelagret i en _privat_ oprindelse, kontrollerer CDN-tjenesten din Office 365 brugerkontos tilladelser til oprindelsen. Hvis du har tilladelser, genererer SharePoint Online dynamisk en brugerdefineret URL-adresse, der består af stien til aktivet i CDN og to adgangstokens, og returnerer den brugerdefinerede URL-adresse til klienten. Din klient downloader derefter dataene direkte fra den nærmeste CDN placering til klienten ved hjælp af den brugerdefinerede URL-adresse.
 
-3. Hvis dataene ikke cachelagres på CDN, anmoder den CDN node om dataene fra Office 365 og cachelagrer derefter dataene i en periode, efter at klienten har downloadet dataene.
+3. Hvis dataene ikke cachelagres på CDN, anmoder den CDN node om dataene fra Office 365 og cachelagrer derefter dataene til tiden, efter at klienten har downloadet dataene.
 
 Den CDN finder ud af det nærmeste datacenter til brugerens browser og downloader de ønskede data derfra ved hjælp af omdirigering. CDN omdirigering er hurtig og kan spare brugerne en masse downloadtid.
 
@@ -137,7 +137,7 @@ De CDN'er, der bruges af Office 365 kan altid ændres, og i mange tilfælde er d
 
 Der er mange faktorer involveret i måling af specifikke forskelle i ydeevnen mellem data, der downloades direkte fra Office 365, og data, der downloades fra en bestemt CDN, f.eks. din placering i forhold til din lejer og det nærmeste CDN slutpunkt, antallet af aktiver på en side, der betjenes af CDN, og midlertidige ændringer i netværksventetid og båndbredde. En simpel A/B-test kan dog hjælpe med at vise forskellen i downloadtiden for en bestemt fil.
 
-Følgende skærmbilleder illustrerer forskellen i downloadhastigheden mellem den oprindelige filplacering i Office 365 og den samme fil, der hostes på [Microsoft Ajax-Content Delivery Network](/aspnet/ajax/cdn/overview). Disse skærmbilleder er fra fanen **Netværk** i Udviklerværktøjer i Internet Explorer 11. Disse skærmbilleder viser ventetiden på det populære bibliotek jQuery. Hvis du vil have vist denne skærm, skal du trykke på **F12** i Internet Explorer og vælge fanen **Netværk** , der er symboliseret med et Wi-Fi-ikon.
+Følgende skærmbilleder illustrerer forskellen i downloadhastigheden mellem den oprindelige filplacering i Office 365 og den samme fil, der hostes på [Microsoft Ajax-Content Delivery Network](/aspnet/ajax/cdn/overview). Disse skærmbilleder er fra fanen **Netværk** i Udviklerværktøjer i Internet Explorer 11. Disse skærmbilleder viser ventetiden på det populære bibliotek jQuery. Hvis du vil have vist denne skærm, skal du trykke på **F12** i Internet Explorer og vælge fanen **Netværk** , som er symboliseret med et ikon for Wi-Fi.
   
 ![Skærmbillede af F12 Network.](../media/930541fd-af9b-434a-ae18-7bda867be128.png)
   
@@ -166,7 +166,7 @@ Du kan finde detaljerede oplysninger om beskyttelse af personlige oplysninger og
 
 ## <a name="how-can-i-secure-my-network-with-all-these-3rd-party-services"></a>Hvordan kan jeg sikre mit netværk med alle disse tredjepartstjenester?
 
-Brug af et omfattende sæt partnertjenester gør det muligt for Office 365 at skalere og opfylde tilgængelighedskravene samt forbedre brugeroplevelsen, når du bruger Office 365. Tredjepartstjenesterne Office 365 udnytter, omfatter både lister over tilbagekaldte certifikater, f.eks. crl.microsoft.com eller sa.symcb.com, og CDN'er, f.eks. r3.res.outlook.com. Hvert CDN FQDN, der genereres af Office 365, er et brugerdefineret FQDN til Office 365. Hvis du sendes til et FQDN på anmodning af Office 365 kan du være sikker på, at den CDN udbyder styrer FQDN og det underliggende indhold på den pågældende placering.
+Brug af et omfattende sæt partnertjenester gør det muligt for Office 365 at skalere og opfylde tilgængelighedskravene og forbedre brugeroplevelsen, når du bruger Office 365. Tredjepartstjenesterne Office 365 udnytter, omfatter både lister over tilbagekaldte certifikater, f.eks. crl.microsoft.com eller sa.symcb.com, og CDN'er, f.eks. r3.res.outlook.com. Hvert CDN FQDN, der genereres af Office 365, er et brugerdefineret FQDN til Office 365. Hvis du sendes til et FQDN på anmodning af Office 365, kan du være sikker på, at den CDN udbyder styrer FQDN og det underliggende indhold på den pågældende placering.
   
 For kunder, der ønsker at adskille anmodninger, der er beregnet til et Microsoft- eller Office 365-datacenter, fra anmodninger, der er beregnet til en tredjepart, har vi udarbejdet en vejledning i [administration af Office 365 slutpunkter](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a).
 
@@ -180,15 +180,15 @@ Du kan også bruge [Office 365 IP-adresse og URL-webtjeneste](microsoft-365-ip-w
 
 Vi er hele tiden på udkig efter nye måder at understøtte vores kunders behov på, og vi undersøger i øjeblikket brugen af cachelagringsproxyløsninger og andre lokale CDN løsninger.
 
-Selvom det ikke er en del af Office 365 CDN, kan du også bruge **Azure CDN** til at hoste brugerdefinerede webdele, biblioteker og andre ressourceaktiver, hvilket giver dig mulighed for at anvende adgangsnøgler til dit CDN lager og udøve større kontrol over din CDN konfiguration. Brug af Azure CDN er ikke gratis og kræver et Azure-abonnement. Du kan få flere oplysninger om, hvordan du konfigurerer en Azure CDN instans, i [Hurtig start: Integrer en Azure Storage-konto med Azure CDN](/azure/cdn/cdn-create-a-storage-account-with-cdn).
+Selvom det ikke er en del af Office 365 CDN, kan du også bruge **Azure CDN** til at hoste brugerdefinerede webdele, biblioteker og andre ressourceaktiver, hvilket giver dig mulighed for at anvende adgangsnøgler på dit CDN lager og udøve større kontrol over din CDN konfiguration. Brug af Azure CDN er ikke gratis og kræver et Azure-abonnement. Du kan få flere oplysninger om, hvordan du konfigurerer en Azure CDN instans, i [Hurtig start: Integrer en Azure Storage-konto med Azure CDN](/azure/cdn/cdn-create-a-storage-account-with-cdn).
 
 ## <a name="im-using-azure-expressroute-for-office-365-does-that-change-things"></a>Jeg bruger Azure ExpressRoute til Office 365. Ændrer det noget?
 
-[Azure ExpressRoute til Office 365](azure-expressroute.md) giver en dedikeret forbindelse til Office 365 infrastruktur, der er adskilt fra det offentlige internet. Det betyder, at klienterne stadig skal oprette forbindelse via forbindelser, der ikke er ExpressRoute, for at oprette forbindelse til CDN'er og anden Microsoft-infrastruktur, som ikke udtrykkeligt er inkluderet på listen over tjenester, der understøttes af ExpressRoute. Du kan finde flere oplysninger om, hvordan du distribuerer specifik trafik, f.eks. anmodninger, der er beregnet til CDN'er, [i Office 365 administration af netværkstrafik](routing-with-expressroute.md).
+[Azure ExpressRoute til Office 365](azure-expressroute.md) giver en dedikeret forbindelse til Office 365 infrastruktur, der er adskilt fra det offentlige internet. Det betyder, at klienterne stadig skal oprette forbindelse via ikke-ExpressRoute-forbindelser for at oprette forbindelse til CDN'er og anden Microsoft-infrastruktur, der ikke udtrykkeligt er inkluderet på listen over tjenester, der understøttes af ExpressRoute. Du kan få flere oplysninger om, hvordan du dirigerer specifik trafik, f.eks. anmodninger, der er beregnet til CDN'er, [under Office 365 administration af netværkstrafik](routing-with-expressroute.md).
 
 ## <a name="can-i-use-cdns-with-sharepoint-server-on-premises"></a>Kan jeg bruge CDN'er med SharePoint Server i det lokale miljø?
 
-Brug af CDN'er giver kun mening i en SharePoint Online-kontekst og bør undgås med SharePoint Server. Det skyldes, at alle fordelene omkring geografisk placering ikke er sande, hvis serveren er placeret i det lokale miljø eller geografisk tæt på alligevel. Hvis der er netværksforbindelse til de servere, hvor det er hostet, kan webstedet desuden bruges uden en internetforbindelse og kan derfor ikke hente de CDN filer. Ellers skal du bruge en CDN hvis der er en tilgængelig og stabil til det bibliotek og filer, du har brug for til dit websted.
+Brug af CDN'er giver kun mening i en SharePoint Online-kontekst og bør undgås med SharePoint Server. Dette skyldes, at alle fordelene omkring geografisk placering ikke er sande, hvis serveren er placeret i det lokale miljø eller geografisk tæt alligevel. Hvis der er netværksforbindelse til de servere, hvor det er hostet, kan webstedet desuden bruges uden en internetforbindelse og kan derfor ikke hente de CDN filer. Ellers skal du bruge en CDN hvis der er en tilgængelig og stabil til det bibliotek og filer, du har brug for til dit websted.
   
 Her er et kort link, du kan bruge til at vende tilbage: [https://aka.ms/o365cdns]()
   

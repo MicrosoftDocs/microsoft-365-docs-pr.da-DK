@@ -22,18 +22,18 @@ search.appverid:
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
 description: Få mere at vide om, hvordan du bruger Azure ExpressRoute med Office 365 og planlægger projektet til netværksimplementering, hvis du udruller med det.
-ms.openlocfilehash: bbb53913ede8a51d5e6d9bf6e39386cd3e8de304
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1350bf73fdddd2141a2df1cbcec5edebeacf7ad4
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096848"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754284"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Azure ExpressRoute til Office 365
 
 *Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Få mere at vide om, hvordan Azure ExpressRoute bruges sammen med Office 365, og hvordan du planlægger det netværksimplementeringsprojekt, der kræves, hvis du udruller Azure ExpressRoute til brug med Office 365. Infrastruktur- og platformstjenester, der kører i Azure, vil ofte drage fordel af at tage højde for netværksarkitektur og overvejelser om ydeevne. Vi anbefaler ExpressRoute til Azure i disse tilfælde. Software as a Service-tilbud som Office 365 og Dynamics 365 er udviklet til at kunne tilgås sikkert og pålideligt via internettet. Du kan læse om internetydeevne og -sikkerhed, og hvornår du måske overvejer Azure ExpressRoute til Office 365 i artiklen [Vurdering af Office 365 netværksforbindelse](assessing-network-connectivity.md).
+Få mere at vide om, hvordan Azure ExpressRoute bruges sammen med Office 365, og hvordan du planlægger det netværksimplementeringsprojekt, der kræves, hvis du udruller Azure ExpressRoute til brug sammen med Office 365. Infrastruktur- og platformstjenester, der kører i Azure, vil ofte drage fordel af at tage højde for netværksarkitektur og overvejelser om ydeevne. Vi anbefaler ExpressRoute til Azure i disse tilfælde. Software as a Service-tilbud som Office 365 og Dynamics 365 er udviklet til at kunne tilgås sikkert og pålideligt via internettet. Du kan læse om internetydeevne og -sikkerhed, og hvornår du måske overvejer Azure ExpressRoute til Office 365 i artiklen [Vurdering af Office 365 netværksforbindelse](assessing-network-connectivity.md).
 
 > [!NOTE]
 > Microsoft Defender for Endpoint leverer ikke integration med Azure ExpressRoute. Selvom dette ikke forhindrer kunderne i at definere ExpressRoute-regler, der muliggør forbindelse fra et privat netværk til Microsoft Defender for Endpoint cloudtjenester, er det op til kunden at vedligeholde regler, efterhånden som tjenesten eller cloudinfrastrukturen udvikler sig.
@@ -47,11 +47,11 @@ Ud over internetforbindelsen kan du vælge at dirigere et undersæt af deres Off
 
 Uanset om du har et eksisterende MPLS WAN, kan ExpressRoute føjes til din netværksarkitektur på en af tre måder. via en understøttet udbyder af samplacering af cloududveksling, en Ethernet-point-to-point-forbindelsesprovider eller via en MPLS-forbindelsesudbyder. Se, hvilke [udbydere der er tilgængelige i dit område](/azure/expressroute/expressroute-locations). Den direkte ExpressRoute-forbindelse muliggør forbindelse til de programmer, der er beskrevet i [Hvilke Office 365 tjenester er inkluderet](azure-expressroute.md#BKMK_WhatDoIGet) nedenfor. Netværkstrafik for alle andre programmer og tjenester vil fortsætte med at krydse internettet.
 
-Se følgende netværksdiagram på højt niveau, der viser en typisk Office 365 kunde, der opretter forbindelse til Microsofts datacentre via internettet for at få adgang til alle Microsoft-programmer, f.eks. Office 365, Windows Update og TechNet. Kunder bruger en lignende netværkssti, uanset om de opretter forbindelse fra et lokalt netværk eller fra en uafhængig internetforbindelse.
+Overvej følgende netværksdiagram på højt niveau, som viser en typisk Office 365 kunde, der opretter forbindelse til Microsofts datacentre via internettet for at få adgang til alle Microsoft-programmer, f.eks. Office 365, Windows Update og TechNet. Kunder bruger en lignende netværkssti, uanset om de opretter forbindelse fra et lokalt netværk eller fra en uafhængig internetforbindelse.
 
 ![Office 365 netværksforbindelse.](../media/9d8bc622-4a38-4a3b-a0f3-68657712d460.png)
 
-Se nu det opdaterede diagram, der viser en Office 365 kunde, der bruger både internettet og ExpressRoute til at oprette forbindelse til Office 365. Bemærk, at nogle forbindelser, f.eks. Offentlig DNS og Content Delivery Network noder, stadig kræver den offentlige internetforbindelse. Bemærk også, at kundens brugere, der ikke er placeret i deres bygning med forbindelse til ExpressRoute, opretter forbindelse via internettet.
+Se nu det opdaterede diagram, der viser en Office 365 kunde, der bruger både internettet og ExpressRoute til at oprette forbindelse til Office 365. Bemærk, at nogle forbindelser, f.eks. Offentlig DNS og Content Delivery Network noder, stadig kræver den offentlige internetforbindelse. Bemærk også, at kundens brugere, der ikke er placeret i deres Bygning med ExpressRoute-forbindelse, opretter forbindelse via internettet.
 
 ![Office 365 forbindelse til ExpressRoute.](../media/251788c4-0937-4584-9b2c-df08e11611fc.png)
 
@@ -65,11 +65,11 @@ I følgende tabel vises de Office 365 tjenester, der understøttes via ExpressRo
 | Inkluderede programmer |
 |:-----|
 |Exchange Online <sup>1</sup> <br/> Exchange Online Protection <sup>1</sup> <br/> Delve <sup>1</sup> <br/> |
-|Skype for Business <sup>Online1</sup> <br/> Microsoft Teams <sup>1</sup> <br/> |
-|SharePoint <sup>Online1</sup> <br/> OneDrive for Business <sup>1</sup> <br/> Project Online <sup>1</sup> <br/> |
-|Portal og <sup>delt1</sup> <br/> Azure Active Directory (Azure AD) <sup>1</sup> <br/> Azure AD Forbind <sup>1</sup> <br/> Office <sup>1</sup> <br/> |
+|Skype for Business Online<sup>1</sup> <br/> Microsoft Teams <sup>1</sup> <br/> |
+|SharePoint Online<sup>1</sup> <br/> OneDrive for Business <sup>1</sup> <br/> Project Online <sup>1</sup> <br/> |
+|Portal og delt<sup>1</sup> <br/> Azure Active Directory (Azure AD) <sup>1</sup> <br/> Azure AD Forbind <sup>1</sup> <br/> Office <sup>1</sup> <br/> |
 
-<sup>1</sup> Alle disse programmer har krav til internetforbindelse, der ikke understøttes via ExpressRoute. Du kan finde flere oplysninger i [artiklen om Office 365 slutpunkter](./urls-and-ip-address-ranges.md).
+<sup>1</sup> Hvert af disse programmer har krav til internetforbindelse, der ikke understøttes via ExpressRoute. Du kan finde flere oplysninger i [artiklen om Office 365 slutpunkter](./urls-and-ip-address-ranges.md).
 
 De tjenester, der ikke er inkluderet i ExpressRoute til Office 365, er Microsoft 365 Apps for enterprise klientoverførsler, logon på identitetsudbyder i det lokale miljø og Office 365 (drevet af 21 Vianet)-tjenesten i Kina.
 
@@ -79,11 +79,11 @@ Implementering af ExpressRoute kræver involvering af netværks- og programejere
 
 1. Fuld forståelse af behovet ExpressRoute opfylder i din Office 365 forbindelse planlægning. Forstå, hvilke programmer der bruger internettet eller ExpressRoute, og planlæg fuldt ud dine behov for netværkskapacitet, sikkerhed og høj tilgængelighed i forbindelse med brug af både internet og ExpressRoute til Office 365 trafik.
 
-2. Bestem udgangs- og peeringplaceringerne for både internet- og ExpressRoute-trafik1.<sup></sup>
+2. Bestem udgangs- og peeringplaceringerne for både internet- og ExpressRoute-trafik<sup>1</sup>.
 
 3. Fastlæg den kapacitet, der kræves på internettet og ExpressRoute-forbindelser.
 
-4. Har en plan for implementering af sikkerhedskontroller og andre standard <sup>perimeterkontroller1</sup>.
+4. Har en plan for implementering af sikkerhed og andre standard perimeterkontroller<sup>1</sup>.
 
 5. Have en gyldig Microsoft Azure konto for at abonnere på ExpressRoute.
 

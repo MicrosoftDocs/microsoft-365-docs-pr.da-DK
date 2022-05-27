@@ -18,12 +18,12 @@ search.appverid:
 - MET150
 hideEdit: true
 description: Forstå det maksimale antal politikker og elementer pr. politik for opbevaringspolitikker og politikker for opbevaringsmærkater
-ms.openlocfilehash: bb94043f68d46f98f005853cde03da048495e10f
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: a0246fef2ae72dd2b0b176f82bb42559d405eaa5
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285352"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754030"
 ---
 # <a name="limits-for-retention-policies-and-retention-label-policies"></a>Grænser for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -59,7 +59,7 @@ Selvom opbevaringspolitikker for Microsoft Teams og Yammer bruger postkasser til
 
 ## <a name="maximums-for-adaptive-policy-scopes"></a>Maksimum for tilpassede politikområder
 
-Der er ingen grænse for antallet af [adaptive politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention) , som du kan føje til en politik for opbevaring, men der er nogle maksimumgrænser for forespørgslen, der definerer hvert adaptive omfang:
+Der er ingen grænse for antallet af [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention) , som du kan føje til en politik for opbevaring, men der er nogle maksimumgrænser for forespørgslen, der definerer hvert adaptive omfang:
 
 - Strenglængde for attribut- eller egenskabsværdier: 200
 - Antal attributter eller egenskaber uden en gruppe eller inden for en gruppe: 10
@@ -98,7 +98,7 @@ Følgende eksempler er til statiske områder og giver nogle designløsninger, n�
 
 Exchange eksempel:
 
-- **Krav**: I en organisation, der har over 40.000 brugerpostkasser, skal de fleste brugere have deres mail opbevaret i 7 år, men et undersæt af identificerede brugere (425) skal beholde deres mail i kun 5 år.
+- **Krav**: I en organisation, der har over 40.000 brugerpostkasser, skal de fleste brugere have deres mail opbevaret i syv år, men et undersæt af identificerede brugere (425) skal beholde deres mail i kun fem år.
 
 - **Løsning**: Opret én opbevaringspolitik for Exchange mail med en opbevaringsperiode på 7 år, og udelad undersættet af brugere. Opret derefter endnu en opbevaringspolitik for Exchange mail med en opbevaringsperiode på 5 år, og medtag undersættet af brugere.
 
@@ -108,7 +108,7 @@ Exchange eksempel:
 
 SharePoint eksempel:
 
-- **Krav**: En organisation har flere tusinde SharePoint websteder, men kun 2.000 websteder kræver en opbevaringsperiode på 10 år, og 8.000 websteder kræver en opbevaringsperiode på 4 år.
+- **Krav**: En organisation har flere tusinde SharePoint websteder, men kun 2.000 websteder kræver en opbevaringsperiode på 10 år, og 8.000 websteder kræver en opbevaringsperiode på fire år.
 
 - **Løsning**: Opret 20 opbevaringspolitikker for SharePoint med en opbevaringsperiode på 10 år, der omfatter 100 specifikke websteder, og opret 80 opbevaringspolitikker for SharePoint med en opbevaringsperiode på 4 år, der omfatter 100 specifikke websteder.
 

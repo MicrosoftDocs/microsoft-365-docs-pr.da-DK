@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Administratorer kan få mere at vide om, hvordan de opretter automatiserede simuleringer, der indeholder bestemte teknikker og nyttedata, der startes, når de angivne betingelser er opfyldt i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: ded6a77e72e71a676c0cc05ffdc3be53e3fbada1
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 32730dfa36b0140bda246137b4cf6706b3472da7
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65678849"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739665"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Simuleringsautomatiseringer til oplæring af simulering af angreb
 
@@ -31,7 +31,7 @@ Benyt følgende fremgangsmåde for at oprette en automatisering af simulering:
 
 1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com/>skal du gå til **Mail & samarbejde** \> **Oplæring** \> i simulering af angreb **Automatiseringer Automatiseringer** \> **Automatiseringer af simulering**.
 
-   Hvis du vil gå direkte til fanen **Automatiseringer** , skal du bruge <https://security.microsoft.com/attacksimulator?viewid=automations>.
+   Hvis du vil gå direkte til fanen **Automatiseringer** , hvor du kan vælge **Simuleringsautomatiseringer**, skal du bruge <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
 2. Vælg ![Opret **automatiseringsikon under Simuleringsautomatiseringer**.](../../media/m365-cc-sc-create-icon.png) **Opret automatisering**.
 
@@ -311,7 +311,7 @@ På siden **Vælg slutbrugermeddelelse** skal du vælge mellem følgende meddele
       - **Levér, når kampagnen slutter**
       - **Levér under kampagnen**
     - **Handlinger**: Hvis du klikker på ikonet ![Vis.](../../media/m365-cc-sc-view-icon.png) **Ikonet Vis** , siden **Gennemse meddelelse** vises med følgende oplysninger:
-      - **Fanen Eksempel** : Få vist meddelelsesmeddelelsen.
+      - **Fanen Eksempel** : Få vist meddelelsesmeddelelsen, som brugerne kan se den.
         - Hvis du vil have vist meddelelsen på forskellige sprog, skal du bruge feltet **Vælg sprog** .
         - Brug feltet **Vælg nyttedata til eksempelvisning** til at vælge meddelelsesmeddelelsen til simuleringer, der indeholder flere nyttedata.
       - Fanen **Detaljer**: Få vist detaljer om meddelelsen:

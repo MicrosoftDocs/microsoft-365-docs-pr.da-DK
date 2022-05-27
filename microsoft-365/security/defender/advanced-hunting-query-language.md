@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: b9bca10cf946a7e812064f07cc3be6fa658edf39
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 724e6c0b0e0a9854df6c87977cacbf1e1a69bfbe
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217392"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739994"
 ---
 # <a name="learn-the-advanced-hunting-query-language"></a>Få mere at vide om det avancerede forespørgselssprog for jagt
 
@@ -33,6 +33,7 @@ ms.locfileid: "65217392"
 
 
 **Gælder for:**
+
 - Microsoft 365 Defender
 - Microsoft Defender for Endpoint
 
@@ -71,6 +72,7 @@ FileName, ProcessCommandLine, RemoteIP, RemoteUrl, RemotePort, RemoteIPType
 **[Kør denne forespørgsel i avanceret jagt](https://security.microsoft.com/hunting?query=H4sIAAAAAAAEAI2TW0sCURSF93PQfxh8Moisp956yYIgQtLoMaYczJpbzkkTpN_et_dcdPQkcpjbmrXXWftyetKTQG5lKqmMpeB9IJksJJKZDOWdZ8wKeP5wvcm3OLgZbMXmXCmIxjnYIfcAVgYvRi8w3TnfsXEDGAG47pCCZXyP5ViO4KeNbt-Up-hEuJmB6lvButnY8XSL-cDl0M2I-GwxVX8Fe2H5zMzHiKjEVB0eEsnBrszfBIWuXOLrxCJ7VqEBfM3DWUYTkNKrv1p5y3X0jwetemzOQ_NSVuuXZ1c6aNTKRaN8VvWhY9n7OS-o6J5r7mYeQypdEKc1m1qfiqpjCSuspsDntt2J61bEvTlXls5AgQfFl5bHM_gr_BhO2RF1rztoBv2tWahrso_TtzkL93KGMGZVr2pe7eWR-xeZl91f_113UOsx3nDR4Y9j5R6kaCq8ajr_YWfFeedsd27L7it-Z6dAZyxsJq1d9-2ZOSzK3y2NVd8-zUPjtZaJnYsIH4Md7AmdeAcd2Cl1XoURc5PzXlfU8U9P54WcswL6t_TW9Q__qX-xygQAAA&runQuery=true&timeRangeId=week)**
 
 ### <a name="describe-the-query-and-specify-the-tables-to-search"></a>Beskriv forespørgslen, og angiv de tabeller, der skal søges i
+
 Der er føjet en kort kommentar til starten af forespørgslen for at beskrive, hvad den er beregnet til. Denne kommentar hjælper, hvis du senere beslutter at gemme forespørgslen og dele den med andre i din organisation. 
 
 ```kusto
@@ -82,7 +84,9 @@ Selve forespørgslen starter typisk med et tabelnavn efterfulgt af flere element
 ```kusto
 union DeviceProcessEvents, DeviceNetworkEvents
 ```
+
 ### <a name="set-the-time-range"></a>Angiv tidsinterval
+
 Det første pipe-element er et tidsfilter, der er beregnet til de forrige syv dage. Hvis du begrænser tidsintervallen, hjælper det med at sikre, at forespørgslerne fungerer godt, returnerer resultater, der kan administreres, og at der ikke opstår timeout.
 
 ```kusto
@@ -90,6 +94,7 @@ Det første pipe-element er et tidsfilter, der er beregnet til de forrige syv da
 ```
 
 ### <a name="check-specific-processes"></a>Kontrollér bestemte processer
+
 Tidsintervallet efterfølges straks af en søgning efter procesfilnavne, der repræsenterer PowerShell-programmet.
 
 ```kusto
@@ -98,6 +103,7 @@ Tidsintervallet efterfølges straks af en søgning efter procesfilnavne, der rep
 ```
 
 ### <a name="search-for-specific-command-strings"></a>Søg efter bestemte kommandostrenge
+
 Derefter søger forespørgslen efter strenge i kommandolinjer, der typisk bruges til at downloade filer ved hjælp af PowerShell.
 
 ```kusto
@@ -113,6 +119,7 @@ Derefter søger forespørgslen efter strenge i kommandolinjer, der typisk bruges
 ```
 
 ### <a name="customize-result-columns-and-length"></a>Tilpas resultatkolonner og -længde 
+
 Nu, hvor din forespørgsel tydeligt identificerer de data, du vil finde, kan du definere, hvordan resultaterne skal se ud. `project` returnerer bestemte kolonner og `top` begrænser antallet af resultater. Disse operatorer er med til at sikre, at resultaterne er velformateret og forholdsvis store og nemme at behandle.
 
 ```kusto
@@ -125,6 +132,8 @@ Vælg **Kør forespørgsel** for at se resultaterne.
 
 >[!TIP]
 >Du kan få vist forespørgselsresultater som diagrammer og hurtigt justere filtre. Du kan få vejledning ved [at læse om at arbejde med forespørgselsresultater](advanced-hunting-query-results.md)
+
+Se denne [korte video](https://www.youtube.com/watch?v=8qZx7Pp5XgM) for at få mere at vide om, hvordan du kan bruge Kusto Query Language til at joinforbinde tabeller.
 
 ## <a name="learn-common-query-operators"></a>Få mere at vide om almindelige forespørgselsoperatorer
 
@@ -160,12 +169,14 @@ Avanceret jagt understøtter Kusto-datatyper, herunder følgende almindelige typ
 Du kan få mere at vide om disse datatyper ved at [læse om Kusto-skalardatatyper](/azure/data-explorer/kusto/query/scalar-data-types/).
 
 ## <a name="get-help-as-you-write-queries"></a>Få hjælp, når du skriver forespørgsler
+
 Benyt følgende funktionalitet til at skrive forespørgsler hurtigere:
 - **Autosuggest** – når du skriver forespørgsler, kommer avanceret jagt med forslag fra IntelliSense. 
 - **Skematræ –** en skemarepræsentation, der indeholder listen over tabeller og deres kolonner, er angivet ud for dit arbejdsområde. Du kan få flere oplysninger ved at holde markøren over et element. Dobbeltklik på et element for at indsætte det i forespørgselseditoren.
 - **[Skemareference](advanced-hunting-schema-tables.md#get-schema-information-in-the-security-center)** – reference i portalen med tabel- og kolonnebeskrivelser samt understøttede hændelsestyper (`ActionType` værdier) og eksempelforespørgsler
 
 ## <a name="work-with-multiple-queries-in-the-editor"></a>Arbejd med flere forespørgsler i editoren
+
 Du kan bruge forespørgselseditoren til at eksperimentere med flere forespørgsler. Sådan bruger du flere forespørgsler:
 
 - Adskil hver forespørgsel med en tom linje.
@@ -201,6 +212,7 @@ Du kan få flere oplysninger om Kusto-forespørgselssprog og understøttede [ope
 >Nogle tabeller i denne artikel er muligvis ikke tilgængelige i Microsoft Defender for Endpoint. [Slå Microsoft 365 Defender](m365d-enable.md) til for at jagte trusler ved hjælp af flere datakilder. Du kan flytte dine avancerede arbejdsprocesser for jagt fra Microsoft Defender for Endpoint til Microsoft 365 Defender ved at følge trinnene i [Overfør avancerede jagtforespørgsler fra Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## <a name="related-topics"></a>Relaterede emner
+
 - [Oversigt over avanceret jagt](advanced-hunting-overview.md)
 - [Arbejd med forespørgselsresultater](advanced-hunting-query-results.md)
 - [Brug delte forespørgsler](advanced-hunting-shared-queries.md)

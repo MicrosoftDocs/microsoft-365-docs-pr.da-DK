@@ -19,16 +19,16 @@ search.appverid:
 - MET150
 ms.assetid: c7edb02a-fdab-4f91-9a20-cba01dad28ef
 description: Få mere at vide om, hvordan du bruger gengivelser og sprites til at forbedre billedydeevnen på dine SharePoint online klassiske udgivelseswebsteder.
-ms.openlocfilehash: d309d2c0d725988ec9958d96ae812b760e8a16e4
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 39d0e4c26339ecf70c922636f82dcef82dd4b13e
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095702"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754416"
 ---
 # <a name="image-optimization-for-sharepoint-online-classic-publishing-sites"></a>Billedoptimering for SharePoint klassiske udgivelseswebsteder online
 
-Indlæsningshastigheden for en webside afhænger af den kombinerede størrelse af alle de komponenter, der kræves for at gengive siden, herunder billeder, HTML, JavaScript og CSS. Billeder er en fantastisk måde at gøre dit websted mere tiltalende på, men deres størrelse kan påvirke ydeevnen. Ved at optimere dine billeder med komprimering og tilpasning af størrelsen og ved hjælp af sprites kan du forskyde effekten af meget store billeder. Ved hjælp af SharePoint billedgengivelser kan du uploade et enkelt stort billede og få vist dele af billedet, så det kan genbruges i stedet for genindlæses.
+Indlæsningshastigheden for en webside afhænger af den kombinerede størrelse af alle de komponenter, der kræves for at gengive siden, herunder billeder, HTML, JavaScript og CSS. Billeder er en fantastisk måde at gøre dit websted mere tiltalende på, men deres størrelse kan påvirke ydeevnen. Ved at optimere dine billeder med komprimering og tilpasning af størrelsen og ved hjælp af sprites kan du forskyde effekten af store billeder. Ved hjælp af SharePoint billedgengivelser kan du uploade et enkelt stort billede og få vist dele af billedet, så det kan genbruges i stedet for genindlæses.
 
 >[!NOTE]
 >Dette emne gælder for SharePoint online klassiske udgivelseswebsteder og ikke moderne portalwebsteder. Du kan finde oplysninger om billedoptimering på SharePoint online moderne [portalwebsteder under Optimer billeder på SharePoint Online moderne portalsider](modern-image-optimization.md).
@@ -44,11 +44,11 @@ Hvad er beskrevet her:
 - Billedoptimering
 - SharePoint billedgengivelser
    
-Dette kan øge ydeevnen, fordi du kun downloader ét billede i stedet for flere og derefter cachelagrer og genbruger billedet. Selvom billedet ikke forbliver cachelagret ved at have et enkelt billede i stedet for flere billeder, reducerer denne metode det samlede antal HTTP-anmodninger til serveren, hvilket reducerer indlæsningstiden for sider. Dette er virkelig en form for billed bundling. Dette er en meget nyttig teknik, hvis billederne ikke ændres meget ofte, f.eks. ikoner, som vist i det SharePoint eksempel, der er angivet ovenfor. Du kan bruge [Web Essentials](https://vswebessentials.com/), der er et communitybaseret tredjepartsprojekt med åben kildekode, til nemt at opnå dette i Microsoft Visual Studio. Du kan få flere oplysninger under [Minification and bundling in SharePoint Online](./minification-and-bundling-in-sharepoint-online.md).
+Dette kan øge ydeevnen, fordi du kun downloader ét billede i stedet for flere og derefter cachelagrer og genbruger billedet. Selvom billedet ikke forbliver cachelagret ved at have et enkelt billede i stedet for flere billeder, reducerer denne metode det samlede antal HTTP-anmodninger til serveren, hvilket reducerer sideindlæsningstiden. Dette er virkelig en form for billed bundling. Dette er en nyttig teknik, hvis billederne ikke ændres ofte, f.eks. ikoner, som vist i det SharePoint eksempel, der er angivet ovenfor. Du kan se, hvordan du nemt kan bruge [Web Essentials](https://vswebessentials.com/), der er et communitybaseret tredjepartsprojekt med åben kildekode, til at opnå dette i Microsoft Visual Studio. Du kan få flere oplysninger under [Minification and bundling in SharePoint Online](./minification-and-bundling-in-sharepoint-online.md).
   
 ## <a name="using-image-compression-and-optimization-to-speed-up-page-loading"></a>Brug af billedkomprimering og -optimering til at fremskynde sideindlæsning
 
-Billedkomprimering og -optimering handler om at reducere filstørrelsen på de billeder, du bruger på dit websted. Den bedste teknik til at reducere størrelsen på et billede er ofte at tilpasse størrelsen på billedet til de maksimale dimensioner, som det kan ses på webstedet. Der er ingen mening i at have et billede større end det nogensinde vil blive set. At sikre, at billeder har de korrekte dimensioner ved hjælp af en billededitor, er en hurtig og nem måde at reducere størrelsen på din side på.
+Billedkomprimering og -optimering handler om at reducere filstørrelsen på de billeder, du bruger på dit websted. Den bedste teknik til at reducere størrelsen på et billede er ofte at tilpasse størrelsen på billedet til de maksimale dimensioner, som det kan ses på webstedet. Der er ingen mening i at have et billede større end det nogensinde vil blive vist. At sikre, at billeder har de korrekte dimensioner ved hjælp af en billededitor, er en hurtig og nem måde at reducere størrelsen på din side på.
   
 Når billederne har den rigtige størrelse, er det næste trin at optimere komprimeringen af disse billeder. Der findes forskellige værktøjer til komprimering og optimering, herunder Photo Gallery og tredjepartsværktøjer. Nøglen til komprimering er at reducere filstørrelsen så meget som muligt uden at miste nogen mærkbar kvalitet for slutbrugerne. Sørg for at teste dine komprimerede filer på en high-definition-skærm for at sikre, at de stadig ser godt ud.
   
@@ -71,7 +71,7 @@ Trinnene er relativt enkle, men hvis billederne skal bruge gengivelserne, skal g
 
 3. Vælg ikonet **Indstillinger**.
 
-4. På siden **Websted Indstillinger** kan du i afsnittet **Udseende** se de indbyggede billedgengivelser.
+4. På siden **Site Indstillinger** i afsnittet **Udseende og funktionalitet** kan du se de indbyggede billedgengivelser.
 
     Du kan bruge de køreklare gengivelser eller vælge **Billedgengivelser** for at oprette en ny.
 

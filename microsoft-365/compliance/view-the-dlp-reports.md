@@ -1,5 +1,5 @@
 ---
-title: Få vist rapporter til forebyggelse af datatab
+title: Få vist rapporterne til forebyggelse af datatab
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -18,87 +18,89 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Brug DLP-rapporterne i Office 365 til at få vist antallet af DLP-politik match, tilsidesættelser eller falske positive og se, om de er mest populære over tid.
-ms.openlocfilehash: cbf03a4d981d4b37bd22db8fa08c728b77318ddf
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+description: Brug DLP-rapporterne i Office 365 til at få vist antallet af DLP-politikforekomster, -tilsidesættelser eller falske positiver, og se, om de er opad- eller nedadgående over tid.
+ms.openlocfilehash: 01064662e0af82ec98837c8518172bcfeffbaa96
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63589156"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753534"
 ---
-# <a name="view-the-reports-for-data-loss-prevention"></a>Få vist rapporter til forebyggelse af datatab
+# <a name="view-the-reports-for-data-loss-prevention"></a>Få vist rapporterne til forebyggelse af datatab
 
-Når du har oprettet dine politikker til forebyggelse af datatab (DLP), skal du kontrollere, at de virker efter hensigten, og hjælpe dig med at overholde reglerne. Med DLP-rapporterne i Security &amp; Compliance Center kan du hurtigt få vist:
-  
-- **DLP-politik matches** Denne rapport viser antallet af DLP-politik match over tid. Du kan filtrere rapporten efter dato, placering, politik eller handling. Du kan bruge denne rapport til at: 
-    
-  - Finjuster eller tilpas dine DLP-politikker, mens du kører dem i testtilstand. Du kan få vist den bestemte regel, der matcher indholdet.
-    
-  - Fokuser på bestemte tidsperioder, og forstå årsagerne til stigninger i spidsbelastninger og tendenser.
-    
-  - Opdag forretningsprocesser, der overtræder din organisations DLP-politikker.
-    
-  - Forstå eventuelle forretningsmæssige konsekvenser af DLP-politikkerne ved at se, hvilke handlinger der anvendes på indhold.
-    
-  - Kontrollér overholdelse af en bestemt DLP-politik ved at vise eventuelle matches for den pågældende politik.
-    
-  - Få vist en liste over de mest populære brugere og gentage brugere, der bidrager til hændelser i organisationen.
-    
-  - Få vist en liste over de vigtigste typer af følsomme oplysninger i organisationen.
-    
-- **DLP-hændelser** Denne rapport viser også politik match over tid, f.eks. rapporten om match af politik. Men rapporten med match til politikken viser match på et regelniveau. Hvis en mail f.eks. matcher tre forskellige regler, viser politikken tre forskellige linjeelementer. I modsætning hertil viser hændelsesrapporten matches på et elementniveau; Hvis en mail f.eks. matcher tre forskellige regler, viser hændelsesrapporten et enkelt linjeelement for det pågældende indholdselement. 
-    
-  Da antallet af rapporter sammenlægges på en anden måde, er rapporten over politikoverensstemmelse bedre til at identificere match med bestemte regler og finjustere DLP-politikker. Rapporten over hændelser er bedre til at identificere bestemte dele af indhold, der er problematisk for dine DLP-politikker.
-    
-- **Falske DLP-positive og -tilsidesættelser** Hvis din DLP-politik tillader brugere at tilsidesætte den eller rapportere en falsk positiv, viser denne rapport antallet af sådanne forekomster over tid. Du kan filtrere rapporten efter dato, placering eller politik. Du kan bruge denne rapport til at: 
-    
-  - Finjuster eller finjuster dine DLP-politikker ved at se, hvilke politikker der har et stort antal falske positive.
-    
-  - Få vist begrundelserne, som er indsendt af brugere, når de løser et politiktip ved at tilsidesætte politikken.
-    
-  - Find ud af, hvor DLP-politikker er i konflikt med gyldige forretningsprocesser ved at foretage et stort antal brugertilsidesættelser.
-    
-Alle DLP-rapporter kan vise data fra den seneste fire måneders periode. Det kan tage op til 24 timer, før de nyeste data vises i rapporterne.
-  
-Du kan finde disse rapporter i Dashboard for Security &amp; Compliance **Center-rapporter** \> \>.
-  
-![Rapport over DLP-politik match.](../media/117d20c9-d379-403f-ad68-1f5cd6c4e5cf.png)
-  
-## <a name="view-the-justification-submitted-by-a-user-for-an-override"></a>Få vist den begrundelse, der er indsendt af en bruger for en tilsidesættelse
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Hvis din DLP-politik tillader brugere at tilsidesætte den, kan du bruge rapporten falsk positiv og tilsidesætte til at få vist den tekst, der er indsendt af brugere, i politiktip.
+Når du har oprettet dine politikker til forebyggelse af datatab (DLP) Microsoft Purview, skal du bekræfte, at de fungerer, som du havde tænkt dig, og hjælpe dig med at overholde angivne standarder. Med DLP-rapporterne i Microsoft Purview-compliance-portal kan du hurtigt få vist:
   
-![Justeringsfelt i detaljer for rapporten DLP falsk positiv og tilsidesæt.](../media/e11e3126-026d-4e77-a16d-74a0686d1fa3.png)
-  
-## <a name="take-action-on-insights-and-recommendations"></a>Tag skridtet videre med viden og anbefalinger
-
-Rapporter kan vise indsigt og anbefalinger, hvor du kan klikke på det røde advarselsikon for at få vist detaljer om potentielle problemer og gøre noget ved det.
-  
-![Klik på et Insights-ikon for at se detaljer og handlinger, du skal udføre.](../media/51782036-7299-4960-8175-75c2b1637159.png)
-  
-## <a name="permissions-for-dlp-reports"></a>Tilladelser for DLP-rapporter
-
-Hvis du vil have vist DLP-rapporter & Security & Compliance Center, skal du have tildelt:
-
-- **Sikkerhedslæserrolle** <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">i Exchange Administration</a>. Som standard er denne rolle tildelt rollegrupperne Organisationsadministration og Sikkerhedslæser i Exchange Administration.
-
-- **Kun visningsstyring af DLP-overholdelse** i sikkerheds- & Overholdelsescenter. Denne rolle er som standard tildelt rollegrupperne Overholdelsesadministrator, Organisationsadministration, Sikkerhedsadministrator og Sikkerhedslæser i Sikkerhedscenter & Overholdelsescenter.
-
-- **Rollen Kun visningsmodtagere** <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">i Exchange Administration</a>. Som standard er denne rolle tildelt rollegrupperne Styring af overholdelse, Organisationsadministration og View-Only Organisationsadministration i Exchange Administration.
-
-## <a name="find-the-cmdlets-for-the-dlp-reports"></a>Find cmdlet'er til DLP-rapporterne
-
-Hvis du vil bruge de fleste af cmdlet'er til Security &amp; Compliance Center, skal du:
-  
-1. [Forbind til sikkerhed &amp; Overholdelsescenter ved hjælp af Remote PowerShell](/powershell/exchange/connect-to-scc-powershell)
+- **DLP-politikforekomster** Denne rapport viser antallet af DLP-politikforekomster over tid. Du kan filtrere rapporten efter dato, placering, politik eller handling. Du kan bruge denne rapport til at: 
     
-2. Brug en af disse [Security &amp; Compliance Center-cmdlet'er](/powershell/exchange/exchange-online-powershell)
+  - Tilpas eller afgræns dine DLP-politikker, når du kører dem i testtilstand. Du kan få vist den specifikke regel, der matcher indholdet.
     
-Men DLP-rapporter skal trække data fra Office 365, herunder Exchange Online. Af denne grund er cmdlet'er til DLP-rapporterne tilgængelige i Exchange Online Powershell – ikke i Security &amp; Compliance Center Powershell. For at bruge cmdlet'er til DLP-rapporterne skal du derfor:
+  - Fokuser på specifikke tidsperioder, og forstå årsagerne til stigninger og tendenser.
+    
+  - Find forretningsprocesser, der overtræder organisationens DLP-politikker.
+    
+  - Forstå enhver forretningsvirkning af DLP-politikkerne ved at se, hvilke handlinger der anvendes på indhold.
+    
+  - Kontrollér overholdelse af en bestemt DLP-politik ved at vise eventuelle match for den pågældende politik.
+    
+  - Få vist en liste over de mest populære brugere, og gentag brugere, der bidrager til hændelser i din organisation.
+    
+  - Få vist en liste over de vigtigste typer følsomme oplysninger i din organisation.
+    
+- **DLP-hændelser** Denne rapport viser også politikforekomster over tid, ligesom politikken matcher rapporten. Politikken stemmer dog overens med, at rapporten viser matches på regelniveau. Hvis en mail f.eks. matchede tre forskellige regler, viser rapporten, der stemmer overens med politikken, tre forskellige linjeelementer. Rapporten over hændelser viser derimod matches på elementniveau. Hvis en mail f.eks. matchede tre forskellige regler, viser hændelsesrapporten et enkelt linjeelement for den pågældende del af indholdet. 
+    
+  Da antallet af rapporter aggregeres forskelligt, er rapporten med politikker bedre til at identificere overensstemmelser med bestemte regler og finjustere DLP-politikker. Hændelsesrapporten er bedre til at identificere bestemte indholdsdele, der er problematiske for dine DLP-politikker.
+    
+- **DLP-falske positiver og tilsidesættelser** Hvis din DLP-politik giver brugerne mulighed for at tilsidesætte den eller rapportere en falsk positiv, viser denne rapport en optælling af sådanne forekomster over tid. Du kan filtrere rapporten efter dato, placering eller politik. Du kan bruge denne rapport til at: 
+    
+  - Tilpas eller forfin dine DLP-politikker ved at se, hvilke politikker der medfører et højt antal falske positiver.
+    
+  - Få vist de begrundelser, som brugerne har sendt, når de løser et politiktip, ved at tilsidesætte politikken.
+    
+  - Find ud af, hvor DLP-politikker er i konflikt med gyldige forretningsprocesser ved at pådrage sig et stort antal brugertilsidesættelser.
+    
+Alle DLP-rapporter kan vise data fra den seneste firemåneders tidsperiode. Det kan tage op til 24 timer, før de nyeste data vises i rapporterne.
   
-1. [Forbind at Exchange Online ved hjælp af Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+Du kan finde disse rapporter i **dashboardet** Microsoft Purview-compliance-portal \> **rapporter**\>.
+  
+![DLP-politik stemmer overens med rapporten.](../media/117d20c9-d379-403f-ad68-1f5cd6c4e5cf.png)
+  
+## <a name="view-the-justification-submitted-by-a-user-for-an-override"></a>Få vist den begrundelse, der er sendt af en bruger for en tilsidesættelse
+
+Hvis din DLP-politik giver brugerne mulighed for at tilsidesætte den, kan du bruge rapporten falsk positiv og tilsidesættelse til at få vist den tekst, der er sendt af brugerne, i politiktip.
+  
+![Berettigelsesfelt i detaljer om DLP-rapporten falsk positiv og tilsidesættelse af rapport.](../media/e11e3126-026d-4e77-a16d-74a0686d1fa3.png)
+  
+## <a name="take-action-on-insights-and-recommendations"></a>Udfør en handling på baggrund af indsigt og anbefalinger
+
+Rapporter kan vise indsigt og anbefalinger, hvor du kan klikke på det røde advarselsikon for at få vist detaljer om potentielle problemer og udføre en eventuel afhjælpningshandling.
+  
+![Klik på et indsigtsikon for at få vist detaljer og handlinger, der skal udføres.](../media/51782036-7299-4960-8175-75c2b1637159.png)
+  
+## <a name="permissions-for-dlp-reports"></a>Tilladelser til DLP-rapporter
+
+Hvis du vil have vist DLP-rapporter i Security & Compliance Center, skal du være tildelt:
+
+- **Rollen Sikkerhedslæser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Sikkerhedslæser i Exchange Administration.
+
+- **Vis kun rollen DLP Compliance Management** i Security & Compliance Center. Denne rolle tildeles som standard rollegrupperne Overholdelsesadministrator, Organisationsadministration, Sikkerhedsadministrator og Sikkerhedslæser i Security & Compliance Center.
+
+- **Rollen Kun visningsmodtagere** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Denne rolle er som standard tildelt rollegrupperne Overholdelsesstyring, Organisationsadministration og View-Only Organisationsadministration i Exchange Administration.
+
+## <a name="find-the-cmdlets-for-the-dlp-reports"></a>Find cmdlet'erne til DLP-rapporterne
+
+Hvis du vil bruge de fleste cmdlet'er til Microsoft Purview-compliance-portal, skal du:
+  
+1. [Forbind til Microsoft Purview-compliance-portal ved hjælp af Ekstern PowerShell](/powershell/exchange/connect-to-scc-powershell)
     
-2. Brug en af disse cmdlet'er til DLP-rapporterne:
+2. Brug en af disse [cmdlet'er til Security &amp; Compliance Center](/powershell/exchange/exchange-online-powershell)
+    
+DLP-rapporter skal dog hente data fra hele Office 365, herunder Exchange Online. Derfor er cmdlet'erne til DLP-rapporterne tilgængelige i Exchange Online Powershell – ikke i Microsoft Purview-compliance-portal Powershell. Hvis du vil bruge cmdlet'erne til DLP-rapporterne, skal du derfor:
+  
+1. [Forbind til Exchange Online ved hjælp af PowerShell-fjernadgang](/powershell/exchange/connect-to-exchange-online-powershell)
+    
+2. Brug en af disse cmdlet'er til DLP-rapporter:
     
       - [Get-DlpDetectionsReport](/powershell/module/exchange/get-dlpdetectionsreport)
     

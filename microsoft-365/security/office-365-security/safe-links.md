@@ -28,16 +28,16 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Få mere at vide om Pengeskab Links-beskyttelse i Defender for Office 365 til at beskytte en organisation mod phishing og andre angreb, der bruger skadelige URL-adresser. Find Teams Pengeskab Links, og se grafik af meddelelser om Pengeskab links.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 46ea33c872782845a8d9697a9abbddcef22e94fb
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 4b518095404f22631533cbf7eff744a62a9c7bd1
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623472"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739887"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Pengeskab Links i Microsoft Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -47,6 +47,9 @@ ms.locfileid: "65623472"
 > Denne artikel er beregnet til erhvervskunder, der har [Microsoft Defender for Office 365](defender-for-office-365.md). Hvis du bruger Outlook.com, Microsoft 365 Family eller Microsoft 365 Personal, og du leder efter oplysninger om Safelinks i Outlook, skal du se [Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
 Pengeskab Links er en funktion i [Defender for Office 365](defender-for-office-365.md), der leverer URL-scanning og -omskrivning af indgående mails i et mailflow og bekræftelse af URL-adresser og links i mails og andre placeringer. Pengeskab Scanning af links finder sted i tillæg til de almindelige [anti-spam](anti-spam-protection.md) og [anti-malware](anti-malware-protection.md) i indgående mails i Exchange Online Protection (EOP). Pengeskab Scanning af links kan hjælpe med at beskytte din organisation mod skadelige links, der bruges i phishing og andre angreb.
+
+Se denne korte video om, hvordan du beskytter mod skadelige links med Pengeskab Links i Microsoft Defender for Office 365.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGzjb]
 
 Pengeskab Links-beskyttelse er tilgængelig på følgende placeringer:
 

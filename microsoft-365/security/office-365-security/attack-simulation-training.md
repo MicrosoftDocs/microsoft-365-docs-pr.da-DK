@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de simulerer phishingangreb og oplærer deres brugere i forebyggelse af phishing ved hjælp af oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 647ea6188e1bd7867e823bbfbb6341255e82960d
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 08d86488f9575aad995752ca331b3cbbb31d07fe
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679456"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739643"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Simuler et phishing-angreb med oplæring i simulering af angreb i Defender for Office 365
 
@@ -319,7 +319,7 @@ På siden **Vælg slutbrugermeddelelse** skal du vælge mellem følgende meddele
       - **Levér, når kampagnen slutter**
       - **Levér under kampagnen**
     - **Handlinger**: Hvis du klikker på ikonet ![Vis.](../../media/m365-cc-sc-view-icon.png) **Ikonet Vis** , siden **Gennemse meddelelse** vises med følgende oplysninger:
-      - **Fanen Eksempel** : Få vist meddelelsesmeddelelsen.
+      - **Fanen Eksempel** : Få vist meddelelsesmeddelelsen, som brugerne kan se den.
         - Hvis du vil have vist meddelelsen på forskellige sprog, skal du bruge feltet **Vælg sprog** .
         - Brug feltet **Vælg nyttedata til eksempelvisning** til at vælge meddelelsesmeddelelsen til simuleringer, der indeholder flere nyttedata.
       - Fanen **Detaljer**: Få vist detaljer om meddelelsen:

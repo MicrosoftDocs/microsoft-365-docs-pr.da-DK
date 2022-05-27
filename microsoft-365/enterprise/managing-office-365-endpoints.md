@@ -19,16 +19,16 @@ ms.custom:
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: Få mere at vide om, hvordan du administrerer Office 365 slutpunkter, så de fungerer sammen med netværksarkitekturen i din virksomhed.
-ms.openlocfilehash: 68b778ac695c0b37b55dfe84414f72551d10ce68
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: c32b44365a8c926e398e4441b6b50905ea77147d
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587462"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753820"
 ---
 # <a name="managing-office-365-endpoints"></a>Administrere Office 365-slutpunkter
 
-De fleste virksomhedsorganisationer, der har flere kontorplaceringer og et WAN, der opretter forbindelse, skal konfigureres for Office 365 netværksforbindelse. Du kan optimere dit netværk ved at sende alle Office 365 netværksanmodninger, der er tillid til, direkte via firewallen og omgå al yderligere kontrol eller behandling på pakkeniveau. Dette reducerer ventetiden og kravene til perimeterkapaciteten. Identificering af Office 365 netværkstrafik er det første skridt til at sikre optimal ydeevne for dine brugere. Du kan få flere oplysninger [under principper for Office 365 netværksforbindelser](microsoft-365-network-connectivity-principles.md).
+De fleste virksomhedsorganisationer, der har flere kontorplaceringer og et WAN, der opretter forbindelse, skal konfigureres for Office 365 netværksforbindelse. Du kan optimere dit netværk ved at sende alle Office 365 netværksanmodninger, der er tillid til, direkte gennem firewallen og omgå al ekstra kontrol eller behandling på pakkeniveau. Dette reducerer ventetiden og kravene til perimeterkapaciteten. Identificering af Office 365 netværkstrafik er det første skridt til at sikre optimal ydeevne for dine brugere. Du kan få flere oplysninger [under principper for Office 365 netværksforbindelser](microsoft-365-network-connectivity-principles.md).
 
 Microsoft anbefaler, at du får adgang til Office 365 netværksslutpunkter og igangværende ændringer af dem ved hjælp af [Office 365 IP-adresse og URL-webtjeneste](microsoft-365-ip-web-service.md).
 
@@ -99,15 +99,15 @@ Hvis du gør dette manuelt, skal du hente kategoridataene Optimer og Tillad slut
 <a name="bkmk_changes"> </a>
 ## <a name="change-management-for-office-365-ip-addresses-and-urls"></a>Ændringsstyring for Office 365 IP-adresser og URL-adresser
 
-Ud over at vælge en passende konfiguration til netværksperimeteren er det vigtigt, at du anvender en proces til administration af ændringer for Office 365 slutpunkter. Disse slutpunkter ændres regelmæssigt, og hvis du ikke administrerer ændringerne, kan du ende med at få brugere blokeret eller med dårlig ydeevne, når en ny IP-adresse eller URL-adresse er tilføjet.
+Ud over at vælge en passende konfiguration for din netværksperimeter er det vigtigt, at du anvender en proces til administration af ændringer for Office 365 slutpunkter. Disse slutpunkter ændres regelmæssigt, og hvis du ikke administrerer ændringerne, kan du ende med at få brugere blokeret eller med dårlig ydeevne, når en ny IP-adresse eller URL-adresse er tilføjet.
 
 Ændringer af Office 365 IP-adresser og URL-adresser udgives normalt nær den sidste dag i hver måned. Nogle gange udgives en ændring uden for denne tidsplan på grund af driftsmæssige, support- eller sikkerhedskrav.
 
-Når der publiceres en ændring, der kræver, at du handler, fordi der er tilføjet en IP-adresse eller URL-adresse, bør du forvente at modtage 30 dages varsel fra det tidspunkt, hvor vi publicerer ændringen, indtil der er en Office 365 tjeneste på det pågældende slutpunkt. Dette afspejles som ikrafttrædelsesdatoen. Selvom vi tilstræber denne meddelelsesperiode, er det muligvis ikke altid muligt på grund af driftsmæssige, support- eller sikkerhedskrav. Ændringer, der ikke kræver øjeblikkelig handling for at bevare forbindelsen, f.eks. fjernede IP-adresser eller URL-adresser eller mindre væsentlige ændringer, omfatter ikke forhåndsmeddelelse. I disse tilfælde angives der ingen ikrafttrædelsesdato. Uanset hvilken meddelelse der er angivet, angiver vi den forventede aktive tjenestedato for hver ændring.
+Når der publiceres en ændring, der kræver, at du handler, fordi der er tilføjet en IP-adresse eller URL-adresse, bør du forvente at modtage 30 dages varsel fra det tidspunkt, hvor vi publicerer ændringen, indtil der er en Office 365 tjeneste på det pågældende slutpunkt. Dette afspejles som ikrafttrædelsesdatoen. Selvom vi tilstræber denne meddelelsesperiode, er det muligvis ikke altid muligt på grund af driftsmæssige, support- eller sikkerhedskrav. Ændringer, der ikke kræver øjeblikkelig handling for at opretholde forbindelsen, f.eks. fjernede IP-adresser eller URL-adresser eller mindre betydelige ændringer, omfatter ikke forhåndsmeddelelse. I disse tilfælde angives der ingen ikrafttrædelsesdato. Uanset hvilken meddelelse der er angivet, angiver vi den forventede aktive tjenestedato for hver ændring.
 
 ### <a name="change-notification-using-the-web-service"></a>Skift meddelelse ved hjælp af webtjenesten
 
-Du kan bruge Office 365 IP-adresse og URL-webtjeneste til at få besked om ændringer. Vi anbefaler, at du kalder webmetoden **/version** én gang i timen for at kontrollere versionen af de slutpunkter, du bruger til at oprette forbindelse til Office 365. Hvis denne version ændres sammenlignet med den version, du har i brug, skal du hente de nyeste slutpunktsdata fra webmetoden **/endpoints** og eventuelt hente forskellene fra webmetoden **/changes** . Det er ikke nødvendigt at kalde **webmetoderne /endpoints** eller **/changes** , hvis der ikke er foretaget nogen ændring af den version, du har fundet.
+Du kan bruge Office 365 IP-adresse og URL-webtjeneste til at få besked om ændringer. Vi anbefaler, at du kalder webmetoden **/version** én gang i timen for at kontrollere versionen af de slutpunkter, du bruger til at oprette forbindelse til Office 365. Hvis denne version ændres sammenlignet med den version, du har i brug, skal du hente de nyeste slutpunktsdata fra webmetoden **/endpoints** og eventuelt hente forskellene fra webmetoden **/changes** . Det er ikke nødvendigt at kalde **webmetoderne /endpoints** eller **/changes** , hvis der ikke har været nogen ændring af den version, du har fundet.
 
 Du kan finde flere oplysninger [under Office 365 IP-adresse og URL-webtjeneste](microsoft-365-ip-web-service.md).
 
@@ -143,13 +143,13 @@ Med over 2500 ISP-peering-relationer globalt og 70 punkters tilstedeværelse bø
 <a name="bkmk_MissingIP"> </a>
 ### <a name="i-see-network-requests-to-ip-addresses-not-on-the-published-list-do-i-need-to-provide-access-to-them"></a>Jeg kan se netværksanmodninger til IP-adresser, der ikke er på den publicerede liste. Skal jeg give adgang til dem?
 
-Vi angiver kun IP-adresser for de Office 365 servere, du skal distribuere direkte til. Dette er ikke en omfattende liste over alle de IP-adresser, du får vist netværksanmodninger for. Du får vist netværksanmodninger til Microsoft og ip-adresser, der ejes, ikke er publiceret af tredjepart. Disse IP-adresser genereres eller administreres dynamisk på en måde, der forhindrer rettidig varsel, når de ændres. Hvis din firewall ikke kan tillade adgang baseret på FQDN'er for disse netværksanmodninger, skal du bruge en PAC- eller WPAD-fil til at administrere anmodningerne.
+Vi angiver kun IP-adresser for de Office 365 servere, du skal distribuere direkte til. Dette er ikke en omfattende liste over alle de IP-adresser, du får vist netværksanmodninger for. Du får vist netværksanmodninger til Microsoft og tredjepartsejede, ikke-publicerede IP-adresser. Disse IP-adresser genereres eller administreres dynamisk på en måde, der forhindrer rettidig varsel, når de ændres. Hvis din firewall ikke kan tillade adgang baseret på FQDN'er for disse netværksanmodninger, skal du bruge en PAC- eller WPAD-fil til at administrere anmodningerne.
   
 Se en IP-adresse, der er knyttet til Office 365, som du vil have flere oplysninger om?
   
 1. Kontrollér, om IP-adressen er inkluderet i et større udgivet område ved hjælp af en CIDR-beregner, f.eks. disse for [IPv4](https://www.ipaddressguide.com/cidr) eller [IPv6](https://www.ipaddressguide.com/ipv6-cidr). 40.96.0.0/13 inkluderer f.eks. IP-adressen 40.103.0.1, selvom 40.96 ikke stemmer overens med 40.103.
 2. Se, om en partner ejer IP-adressen med en [whois-forespørgsel](https://dnsquery.org/). Hvis microsoft ejes, kan det være en intern partner. Mange partnernetværksslutpunkter er angivet som hører til _standardkategorien_ , hvor IP-adresser ikke publiceres.
-3. IP-adressen må ikke være en del af Office 365 eller en afhængighed. Office 365 publicering af netværksslutpunkter omfatter ikke alle Microsoft-netværksslutpunkter.
+3. IP-adressen må ikke være en del af Office 365 eller en afhængighed. Office 365 publicering af netværksslutpunkter indeholder ikke alle Microsoft-netværksslutpunkter.
 4. Kontrollér certifikatet. Med en browser kan du oprette forbindelse til IP-adressen ved hjælp  *af HTTPS://\<IP_ADDRESS\>* og kontrollere de domæner, der er angivet på certifikatet, for at forstå, hvilke domæner der er knyttet til IP-adressen. Hvis det er en Microsoft-ejet IP-adresse og ikke er på listen over Office 365 IP-adresser, er det sandsynligt, at IP-adressen er knyttet til en Microsoft-CDN, f.eks *. MSOCDN.NET* eller et andet Microsoft-domæne uden publicerede IP-oplysninger. Hvis du finder domænet på certifikatet er et, hvor vi hævder at angive IP-adressen, skal du fortælle os det.
 
 <a name="bkmk_cname"> </a>
@@ -161,7 +161,7 @@ Klientcomputere skal bruge en DNS A- eller AAAA-post, der indeholder en eller fl
 serviceA.office.com -> CNAME: serviceA.domainA.com -> CNAME: serviceA.domainB.com -> A: IP_1
 ```
 
-Disse CNAME-omdirigeringer er en normal del af DNS og er gennemsigtige for klientcomputeren og gennemsigtige for proxyservere. De bruges til belastningsjustering, netværk til levering af indhold, høj tilgængelighed og afhjælpning af tjenestehændelser. Microsoft publicerer ikke de mellemliggende CNAME-poster, de kan ændres når som helst, og du skal ikke konfigurere dem som tilladt på proxyserveren.
+Disse CNAME-omdirigeringer er en normal del af DNS og er gennemsigtige for klientcomputeren og gennemsigtige for proxyservere. De bruges til belastningsjustering, netværk til levering af indhold, høj tilgængelighed og afhjælpning af tjenestehændelser. Microsoft publicerer ikke de mellemliggende CNAME-poster, de kan ændres når som helst, og du skal ikke konfigurere dem som tilladt på din proxyserver.
 
 En proxyserver validerer den oprindelige URL-adresse, som i ovenstående eksempel er serviceA.office.com, og denne URL-adresse medtages i Office 365 publicering. Proxyserveren anmoder om DNS-opløsning for den pågældende URL-adresse til en IP-adresse og modtager IP_1 igen. Den validerer ikke de mellemliggende CNAME-omdirigeringsposter.
 
@@ -211,12 +211,13 @@ Hvis du forsøger at bruge Office 365 og finder tredjepartstjenester, der ikke e
 <a name="bkmk_consumer"> </a>
 ### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>Hvordan gør jeg blokere adgangen til Microsofts forbrugertjenester?
 
-Funktionen med lejerbegrænsninger understøtter nu blokering af brugen af alle Microsoft-forbrugerprogrammer (MSA-apps), f.eks. OneDrive, Hotmail og Xbox.com. Dette bruger en separat overskrift til login.live.com slutpunkt. Du kan finde flere oplysninger under [Brug lejerbegrænsninger til at administrere adgang til SaaS-cloudprogrammer](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
+Funktionen med lejerbegrænsninger understøtter nu blokering af brugen af alle Microsoft-forbrugerprogrammer (MSA-apps), f.eks. OneDrive, Hotmail og Xbox.com. Dette bruger en separat overskrift til login.live.com slutpunkt. Du kan få flere oplysninger under [Brug lejerbegrænsninger til at administrere adgang til SaaS-cloudprogrammer](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
 
 <a name="bkmk_IPOnlyFirewall"> </a>
+
 ### <a name="my-firewall-requires-ip-addresses-and-cannot-process-urls-how-do-i-configure-it-for-office-365"></a>Min firewall kræver IP-adresser og kan ikke behandle URL-adresser. Hvordan gør jeg konfigurere den til Office 365?
 
-Office 365 indeholder ikke IP-adresser på alle nødvendige netværksslutpunkter. Nogle er kun angivet som URL-adresser og er kategoriseret som standard. URL-adresser i standardkategorien, der kræves, skal tillades via en proxyserver. Hvis du ikke har en proxyserver, kan du se, hvordan du har konfigureret webanmodninger for URL-adresser, som brugerne skriver i adresselinjen i en webbrowser. Brugeren angiver heller ikke en IP-adresse. De Office 365 standardkategori-URL-adresser, der ikke indeholder IP-adresser, skal konfigureres på samme måde.
+Office 365 angiver ikke IP-adresser på alle nødvendige netværksslutpunkter. Nogle er kun angivet som URL-adresser og er kategoriseret som standard. URL-adresser i standardkategorien, der kræves, skal tillades via en proxyserver. Hvis du ikke har en proxyserver, kan du se, hvordan du har konfigureret webanmodninger for URL-adresser, som brugerne skriver i adresselinjen i en webbrowser. Brugeren angiver heller ikke en IP-adresse. De Office 365 standardkategori-URL-adresser, der ikke indeholder IP-adresser, skal konfigureres på samme måde.
 
 ## <a name="related-topics"></a>Relaterede emner
 

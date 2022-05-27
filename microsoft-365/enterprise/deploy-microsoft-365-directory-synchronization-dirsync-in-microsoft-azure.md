@@ -19,19 +19,19 @@ ms.custom:
 - Ent_Solutions
 - seo-marvel-apr2020
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
-description: Få mere at vide om, hvordan du udruller Azure AD-Forbind på en virtuel maskine i Azure for at synkronisere konti mellem din lokale mappe og Azure AD-lejeren.
-ms.openlocfilehash: 077fe85307b5c64c5ece9d710a3ad171d04a21da
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du udruller Azure AD Forbind på en virtuel maskine i Azure for at synkronisere konti mellem din lokale mappe og den Azure AD lejer.
+ms.openlocfilehash: e04a3a4e681ab50b767670cfd419d29cd95556e7
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092155"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753380"
 ---
 # <a name="deploy-microsoft-365-directory-synchronization-in-microsoft-azure"></a>Installér synkronisering af Microsoft 365 adresseliste i Microsoft Azure
 
-Azure Active Directory (Azure AD) Forbind (tidligere kaldet værktøjet Katalogsynkronisering, Værktøjet Mappesynkronisering eller værktøjet DirSync.exe) er et program, som du installerer på en domænetilsluttet server for at synkronisere ad-brugernes Active Directory i det lokale miljø Domænetjenester til Azure AD-lejeren for din Microsoft 365 abonnement. Microsoft 365 bruger Azure AD til katalogtjenesten. Dit Microsoft 365-abonnement omfatter en Azure AD-lejer. Denne lejer kan også bruges til administration af din organisations identiteter med andre cloudarbejdsbelastninger, herunder andre SaaS-programmer og apps i Azure.
+Azure Active Directory (Azure AD) Forbind (tidligere kaldet værktøjet Katalogsynkronisering, Værktøjet Mappesynkronisering eller DirSync.exe værktøj) er et program, som du installerer på en domænetilsluttet server for at synkronisere AD DS (Active Directory i det lokale miljø Domain Services) brugere til den Azure AD lejer i dit Microsoft 365 abonnement. Microsoft 365 bruger Azure AD til katalogtjenesten. Dit Microsoft 365-abonnement indeholder en Azure AD lejer. Denne lejer kan også bruges til administration af din organisations identiteter med andre cloudarbejdsbelastninger, herunder andre SaaS-programmer og apps i Azure.
 
-Du kan installere Azure AD-Forbind på en lokal server, men du kan også installere det på en virtuel maskine i Azure af følgende årsager:
+Du kan installere Azure AD Forbind på en server i det lokale miljø, men du kan også installere den på en virtuel maskine i Azure af følgende årsager:
   
 - Du kan klargøre og konfigurere skybaserede servere hurtigere, hvilket gør tjenesterne tilgængelige for dine brugere hurtigere.
 - Azure tilbyder bedre tilgængelighed af websteder med en mindre indsats.
@@ -40,21 +40,21 @@ Du kan installere Azure AD-Forbind på en lokal server, men du kan også install
 Denne løsning kræver forbindelse mellem dit lokale netværk og dit virtuelle Azure-netværk. Du kan få flere oplysninger under [Forbind et lokalt netværk til et Microsoft Azure virtuelt netværk](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md). 
   
 > [!NOTE]
-> I denne artikel beskrives synkronisering af et enkelt domæne i en enkelt skov. Azure AD Forbind synkroniserer alle AD DS-domæner i active directory-området med Microsoft 365. Hvis du har flere Active Directory-områder, der skal synkroniseres med Microsoft 365, skal du se [Synkroniser mappe med flere områder med enkelt Sign-On scenarie](/azure/active-directory/hybrid/whatis-hybrid-identity). 
+> I denne artikel beskrives synkronisering af et enkelt domæne i en enkelt skov. Azure AD Forbind synkroniserer alle AD DS-domæner i Active Directory-området med Microsoft 365. Hvis du har flere Active Directory-områder, der skal synkroniseres med Microsoft 365, skal du se [Synkroniser mappe med flere områder med enkelt Sign-On scenarie](/azure/active-directory/hybrid/whatis-hybrid-identity). 
   
 ## <a name="overview-of-deploying-microsoft-365-directory-synchronization-in-azure"></a>Oversigt over installation af Microsoft 365 katalogsynkronisering i Azure
 
-I følgende diagram vises Azure AD-Forbind, der kører på en virtuel maskine i Azure (mappesynkroniseringsserveren), der synkroniserer et AD DS-område i det lokale miljø til et Microsoft 365 abonnement.
+I følgende diagram vises Azure AD Forbind, der kører på en virtuel maskine i Azure (mappesynkroniseringsserveren), der synkroniserer et AD DS-område i det lokale miljø til et Microsoft 365-abonnement.
   
-![Azure AD Forbind værktøj på en virtuel maskine i Azure, der synkroniserer konti i det lokale miljø til Azure AD-lejeren for et Microsoft 365 abonnement med trafikflow.](../media/CP-DirSyncOverview.png)
+![Azure AD Forbind værktøj på en virtuel maskine i Azure, der synkroniserer konti i det lokale miljø til den Azure AD lejer for et Microsoft 365 abonnement med trafikflow.](../media/CP-DirSyncOverview.png)
   
 I diagrammet er der to netværk, der er forbundet via en websted til websted-VPN- eller ExpressRoute-forbindelse. Der er et netværk i det lokale miljø, hvor AD DS-domænecontrollere er placeret, og der er et virtuelt Azure-netværk med en katalogsynkroniseringsserver, som er en virtuel maskine, der kører [Azure AD Forbind](https://www.microsoft.com/download/details.aspx?id=47594). Der er to primære trafikflow, der stammer fra katalogsynkroniseringsserveren:
   
 -  Azure AD Forbind forespørger en domænecontroller på netværket i det lokale miljø om ændringer af konti og adgangskoder.
--  Azure AD Forbind sender ændringerne af konti og adgangskoder til Azure AD-forekomsten af dit Microsoft 365-abonnement. Da katalogsynkroniseringsserveren er i en udvidet del af dit lokale netværk, sendes disse ændringer via proxyserveren for det lokale netværk.
+-  Azure AD Forbind sender ændringerne af konti og adgangskoder til den Azure AD forekomst af dit Microsoft 365 abonnement. Da katalogsynkroniseringsserveren er i en udvidet del af dit lokale netværk, sendes disse ændringer via proxyserveren for det lokale netværk.
     
 > [!NOTE]
-> Denne løsning beskriver synkronisering af et enkelt Active Directory-domæne i et enkelt Active Directory-område. Azure AD Forbind synkroniserer alle Active Directory-domæner i dit Active Directory-område med Microsoft 365. Hvis du har flere Active Directory-områder, der skal synkroniseres med Microsoft 365, skal du se [Synkroniser mappe med flere områder med enkelt Sign-On scenarie](/azure/active-directory/hybrid/whatis-hybrid-identity). 
+> Denne løsning beskriver synkronisering af et enkelt Active Directory-domæne i et enkelt Active Directory-område. Azure AD Forbind synkroniserer alle Active Directory-domæner i Active Directory-området med Microsoft 365. Hvis du har flere Active Directory-områder, der skal synkroniseres med Microsoft 365, skal du se [Synkroniser mappe med flere områder med enkelt Sign-On scenarie](/azure/active-directory/hybrid/whatis-hybrid-identity). 
   
 Der er to overordnede trin, når du installerer denne løsning:
   
@@ -62,16 +62,16 @@ Der er to overordnede trin, når du installerer denne løsning:
     
 2. Installér [Azure AD Forbind](https://www.microsoft.com/download/details.aspx?id=47594) på en domænetilsluttet virtuel maskine i Azure, og synkroniser derefter AD DS i det lokale miljø for at Microsoft 365. Dette omfatter:
     
-    Oprettelse af en Azure Virtual Machine til kørsel af Azure AD-Forbind.
+    Oprettelse af en Virtuel Azure-maskine til kørsel af Azure AD Forbind.
     
-    Installation og konfiguration af [Azure AD-Forbind](https://www.microsoft.com/download/details.aspx?id=47594).
+    Installation og konfiguration af [Azure AD Forbind](https://www.microsoft.com/download/details.aspx?id=47594).
     
-    Konfiguration af Azure AD Forbind kræver legitimationsoplysningerne (brugernavn og adgangskode) for en Azure AD-administratorkonto og en AD DS-virksomhedsadministratorkonto. Azure AD Forbind kører med det samme og løbende for at synkronisere AD DS-området i det lokale miljø for at Microsoft 365.
+    Konfiguration af Azure AD Forbind kræver legitimationsoplysningerne (brugernavn og adgangskode) for en Azure AD administratorkonto og en AD DS-virksomhedsadministratorkonto. Azure AD Forbind kører med det samme og løbende for at synkronisere AD DS-skoven i det lokale miljø til Microsoft 365.
     
 Før du installerer denne løsning i produktion, kan du bruge instruktionerne i [Den simulerede virksomhedsbasiskonfiguration](simulated-ent-base-configuration-microsoft-365-enterprise.md) til at konfigurere denne konfiguration som blåstempling, til demonstrationer eller til eksperimentering.
   
 > [!IMPORTANT]
-> Når konfigurationen af Azure AD Forbind er fuldført, gemmes legitimationsoplysningerne for AD DS-virksomhedsadministratoren ikke. 
+> Når Azure AD Forbind konfiguration er fuldført, gemmes legitimationsoplysningerne for AD DS-virksomhedsadministratoren ikke. 
   
 > [!NOTE]
 > I denne løsning beskrives synkronisering af en enkelt AD DS-skov for at Microsoft 365. Topologien, der er beskrevet i denne artikel, repræsenterer kun én måde at implementere denne løsning på. Organisationens topologi kan variere afhængigt af dine entydige netværkskrav og sikkerhedsovervejelser. 
@@ -89,21 +89,21 @@ Før du begynder, skal du gennemse følgende forudsætninger for denne løsning:
     
 - Hav et Microsoft 365 abonnement, der indeholder Active Directory-integrationsfunktionen. Du kan få oplysninger om Microsoft 365 abonnementer på [siden Microsoft 365 abonnement](https://products.office.com/compare-all-microsoft-office-products?tab=2).
     
-- Klargør en Azure Virtual Machine, der kører Azure AD-Forbind for at synkronisere AD DS-skoven i det lokale miljø med Microsoft 365.
+- Klargør en Azure Virtual Machine, der kører Azure AD Forbind for at synkronisere AD DS-skoven i det lokale miljø med Microsoft 365.
     
-    Du skal have legitimationsoplysningerne (navne og adgangskoder) for en AD DS-virksomhedsadministratorkonto og en Azure AD-administratorkonto.
+    Du skal have legitimationsoplysningerne (navne og adgangskoder) for en AD DS-virksomhedsadministratorkonto og en Azure AD administratorkonto.
     
 ### <a name="solution-architecture-design-assumptions"></a>Antagelser i forbindelse med løsningsarkitekturdesign
 
 På følgende liste beskrives de designvalg, der er foretaget for denne løsning.
   
-- Denne løsning bruger et enkelt virtuelt Azure-netværk med en VPN-forbindelse fra websted til websted. Det virtuelle Azure-netværk er vært for et enkelt undernet, der har én server, nemlig den mappesynkroniseringsserver, der kører Azure AD Forbind. 
+- Denne løsning bruger et enkelt virtuelt Azure-netværk med en VPN-forbindelse fra websted til websted. Det virtuelle Azure-netværk hoster et enkelt undernet, der har én server, nemlig den mappesynkroniseringsserver, der kører Azure AD Forbind. 
     
 - På netværket i det lokale miljø findes der en domænecontroller og DNS-servere.
     
 - Azure AD Forbind udfører synkronisering af adgangskodehash i stedet for enkeltlogon. Du behøver ikke at udrulle en AD FS-infrastruktur (Active Directory Federation Services). Hvis du vil vide mere om synkronisering af adgangskodehash og indstillinger for enkeltlogon, skal [du se Vælge den rette godkendelsesmetode til din Azure Active Directory hybrididentitetsløsning](/azure/active-directory/hybrid/choose-ad-authn).
     
-Der er flere designvalg, som du kan overveje, når du installerer denne løsning i dit miljø. Disse omfatter følgende:
+Der er andre designvalg, som du kan overveje, når du installerer denne løsning i dit miljø. Disse omfatter følgende:
   
 - Hvis der er eksisterende DNS-servere i et eksisterende virtuelt Azure-netværk, skal du afgøre, om din mappesynkroniseringsserver skal bruge dem til navneopløsning i stedet for DNS-servere på netværket i det lokale miljø.
     
@@ -111,13 +111,13 @@ Der er flere designvalg, som du kan overveje, når du installerer denne løsning
     
 ## <a name="deployment-roadmap"></a>Oversigt over udrulning
 
-Udrulning af Azure AD-Forbind på en virtuel maskine i Azure består af tre faser:
+Udrulning af Azure AD Forbind på en virtuel maskine i Azure består af tre faser:
   
 - Fase 1: Opret og konfigurer det virtuelle Azure-netværk
     
 - Fase 2: Opret og konfigurer den virtuelle Azure-maskine
     
-- Fase 3: Installér og konfigurer Azure AD-Forbind
+- Fase 3: Installér og konfigurer Azure AD Forbind
     
 Efter udrulningen skal du også tildele placeringer og licenser til de nye brugerkonti i Microsoft 365.
 
@@ -146,7 +146,7 @@ Kontrollér, at katalogsynkroniseringsserveren bruger DNS korrekt, ved at kontro
   
 Brug vejledningen i [Forbind til den virtuelle maskine, og log på](/azure/virtual-machines/windows/connect-logon) for at oprette forbindelse til katalogsynkroniseringsserveren med en forbindelse til Fjernskrivebord. Når du er logget på, skal du slutte den virtuelle maskine til AD DS-domænet i det lokale miljø.
   
-Hvis Azure AD-Forbind skal have adgang til internetressourcer, skal du konfigurere katalogsynkroniseringsserveren til at bruge proxyserveren på netværket i det lokale miljø. Du skal kontakte netværksadministratoren for at få yderligere konfigurationstrin at udføre.
+Hvis Azure AD Forbind skal have adgang til internetressourcer, skal du konfigurere katalogsynkroniseringsserveren til at bruge proxyserveren på netværket i det lokale miljø. Du skal kontakte netværksadministratoren for at få yderligere konfigurationstrin at udføre.
   
 Dette er din resulterende konfiguration.
   
@@ -154,7 +154,7 @@ Dette er din resulterende konfiguration.
   
 I denne figur vises den virtuelle maskine til katalogsynkroniseringsserver på det virtuelle Azure-netværk på tværs af det lokale miljø.
   
-### <a name="phase-3-install-and-configure-azure-ad-connect"></a>Fase 3: Installér og konfigurer Azure AD-Forbind
+### <a name="phase-3-install-and-configure-azure-ad-connect"></a>Fase 3: Installér og konfigurer Azure AD Forbind
 
 Fuldfør følgende procedure:
   
@@ -169,15 +169,15 @@ Dette er din resulterende konfiguration.
   
 ![Fase 3 af katalogsynkroniseringsserveren for Microsoft 365, der hostes i Azure.](../media/3f692b62-b77c-4877-abee-83c7edffa922.png)
   
-I denne figur vises katalogsynkroniseringsserveren med Azure AD-Forbind i det virtuelle Azure-netværk på tværs af det lokale miljø.
+I denne figur vises katalogsynkroniseringsserveren med Azure AD Forbind i det virtuelle Azure-netværk på tværs af det lokale miljø.
   
 ### <a name="assign-locations-and-licenses-to-users-in-microsoft-365"></a>Tildel placeringer og licenser til brugere i Microsoft 365
 
-Azure AD Forbind føjer konti til dit Microsoft 365-abonnement fra AD DS i det lokale miljø, men for at brugerne kan logge på Microsoft 365 og bruge dets tjenester, skal kontiene konfigureres med en placering og licenser. Brug disse trin til at tilføje placeringen og aktivere licenser for de relevante brugerkonti:
+Azure AD Forbind føjer konti til dit Microsoft 365-abonnement fra AD DS i det lokale miljø, men for at brugerne kan logge på Microsoft 365 og bruge deres tjenester, skal kontiene konfigureres med en placering og licenser. Brug disse trin til at tilføje placeringen og aktivere licenser for de relevante brugerkonti:
   
-1. Log på [Microsoft 365 Administration](https://admin.microsoft.com), og klik derefter på **Administrator**.
+1. Log på [Microsoft 365 Administration](https://admin.microsoft.com), og klik derefter på **Administration**.
     
-2. Klik på <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**BrugereAktive**</a> >  brugere i venstre navigationsrude.
+2. Klik på **Aktive** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**brugere**</a> i venstre navigationsrude.
 3. På listen over brugerkonti skal du markere afkrydsningsfeltet ud for den bruger, du vil aktivere.
     
 4. Klik på **Rediger** for **produktlicenser på brugerens** side.
@@ -194,6 +194,6 @@ Azure AD Forbind føjer konti til dit Microsoft 365-abonnement fra AD DS i det l
   
 [Forbind et lokalt netværk til et Microsoft Azure virtuelt netværk](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 
-[Download Azure AD-Forbind](https://www.microsoft.com/download/details.aspx?id=47594)
+[Download Azure AD Forbind](https://www.microsoft.com/download/details.aspx?id=47594)
   
 [Konfigurer katalogsynkronisering for Microsoft 365](set-up-directory-synchronization.md)

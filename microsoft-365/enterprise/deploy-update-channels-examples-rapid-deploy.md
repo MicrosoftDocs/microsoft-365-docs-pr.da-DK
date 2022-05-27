@@ -15,12 +15,12 @@ ms.collection:
 - M365-subscription-management
 ms.custom: ''
 description: Den måde, en organisation udruller den seneste version på, bruger kanaler til Windows 10 og Microsoft 365 apps.
-ms.openlocfilehash: 6f52bc8fc55fe94361961585aacae1f48c4fbce5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 43cd5deed9801de6ff044781bebf9d96cdac7c12
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092133"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754704"
 ---
 # <a name="example-of-broad-deployment-for-the-latest-releases"></a>Eksempel på bred udrulning for de nyeste udgivelser
 
@@ -65,7 +65,7 @@ Se [Windows 10 udrulning](/windows/deployment/) for at få flere oplysninger om 
 
 | Fase | Kanal | Udrulningsgruppe |
 |:-------|:-------|:-----|
-| Pilot |  **Udgivelseskanal til eksempelvisning**  <ul><li>Formål: Installation af funktionsopdateringer til it-medarbejdere og tidlige adoptører til validering på repræsentative enheder og konfigurationer (sprog, tredjepartsapps). </li><li> Tilstand: Fuldt kompatibelt og understøttet for kommercielle kunder, og det tæller ikke med i dine supportaftaler. </li></ul> | **Win10ReleasePreviewChannel** (eksempelnavn) <br><br> Medlemmer er grupper, der indeholder: <ul><li> Windows entusiaster på tværs af afdelinger og steder </li><li> Medarbejdere med konfigurationer, der skal valideres </li><li> It-administratorer og it-installationspersonale </li><li> Skift ledere </li><li> Interne uddannelsespersonale </li></ul> |
+| Pilot |  **Udgivelseskanal til eksempelvisning**  <ul><li>Formål: Installation af funktionsopdateringer til it-medarbejdere og tidlige adoptører til validering på repræsentative enheder og konfigurationer (sprog, tredjepartsapps). </li><li> Tilstand: Fuldt kompatibel og understøttet for kommercielle kunder, og det tæller ikke i forhold til dine supportaftaler. </li></ul> | **Win10ReleasePreviewChannel** (eksempelnavn) <br><br> Medlemmer er grupper, der indeholder: <ul><li> Windows entusiaster på tværs af afdelinger og steder </li><li> Medarbejdere med konfigurationer, der skal valideres </li><li> It-administratorer og it-installationspersonale </li><li> Skift ledere </li><li> Interne uddannelsespersonale </li></ul> |
 | Produktion |  **Halvårlig kanal**  <ul><li>Formål: Bred udrulning af de nyeste funktionsopdateringer til resten af organisationen. </li><li> Tilstand: Fuldt kompatibel og understøttet. </li></ul> | **Win10SemiAnnualChannel** (eksempelnavn) <br><br> Medlemmer er alle brugere, der ikke er i gruppen Win10ReleasePreviewChannel. |
 ||||
 
@@ -89,7 +89,7 @@ Se [Microsoft 365 Apps udrulning](/deployoffice/plan-office-365-proplus) for at 
 
 | Fase | Kanal | Udrulningsgruppe |
 |:-------|:-------|:-----|
-| Pilot |  **Aktuel kanal (prøveversion)** <ul><li> Formål: {giv en gruppe repræsentative brugere et smugkig på nye Microsoft 365 Apps funktioner} Udrulning af funktionsopdateringer, så snart de testes med brugere af den aktuelle kanal (prøveversion) og er klar til produktion. </li><li> Tilstand: Fuldt kompatibel og understøttet.</li><li> Hvor ofte: Opdaterer 2-3 gange hver måned. </li></ul> | **AppsCurrentChannelPreview** (eksempelnavn) <br><br> Medlemmer er grupper, der indeholder: <ul><li> Office apps-entusiaster på tværs af afdelinger og steder </li><li> Medarbejdere med konfigurationer, der skal valideres </li><li> It-administratorer og it-installationspersonale </li><li> Skift ledere </li><li> Interne uddannelsespersonale </li></ul>|
+| Pilot |  **Aktuel kanal (prøveversion)** <ul><li> Formål: {Giv en gruppe repræsentative brugere et smugkig på nye Microsoft 365 Apps funktioner} Udrulning af funktionsopdateringer, så snart de testes med brugere af den aktuelle kanal (prøveversion) og er klar til produktion. </li><li> Tilstand: Fuldt kompatibel og understøttet.</li><li> Hvor ofte: Opdaterer 2-3 gange hver måned. </li></ul> | **AppsCurrentChannelPreview** (eksempelnavn) <br><br> Medlemmer er grupper, der indeholder: <ul><li> Office apps-entusiaster på tværs af afdelinger og steder </li><li> Medarbejdere med konfigurationer, der skal valideres </li><li> It-administratorer og it-installationspersonale </li><li> Skift ledere </li><li> Interne uddannelsespersonale </li></ul>|
 | Produktion | **Aktuel kanal** <ul><li> Formål: Bred udrulning af de nyeste funktionsopdateringer til resten af organisationen. </li><li> Tilstand: Fuldt kompatibel og understøttet. </li></ul> |  **AppsCurrentChannel** (eksempelnavn) <br><br> Medlemmer er alle brugere, der ikke er i gruppen AppsCurrentChannelPreview. |
 |||
 

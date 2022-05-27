@@ -17,18 +17,18 @@ search.appverid:
 - SPO160
 - MET150
 description: I denne artikel beskrives det, hvordan du kan planlægge din portalstart i SharePoint Online, og hvilke trin du skal udføre for at få en vellykket start
-ms.openlocfilehash: 088416537317a6728e1c5533767badf309de7634
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f04738900a25a2e74e24d6bf0f05b5bd6c7865f4
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097464"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753920"
 ---
 # <a name="planning-your-portal-launch-roll-out-plan-in-sharepoint-online"></a>Planlægning af udrulningsplanen for portalen i SharePoint Online
 
 En portal er et SharePoint websted på intranettet, hvor mange brugere af webstedet bruger indhold på webstedet. Store organisationer kan have flere portaler. Det kan f.eks. være en firmaportal og en HR-portal. Portaler har typisk relativt få personer, der opretter og opretter webstedet og dets indhold. De fleste besøgende på portalen læser og bruger kun indholdet.
 
-I denne artikel beskrives det, hvordan du planlægger udrulningen og udrulningsplanen for SharePoint Online. Den indeholder også metoder, der skal følges, da traditionel belastningstest ikke er tilladt på SharePoint Online. SharePoint Online er en cloudtjeneste, og belastningsfunktionerne, tilstanden og den overordnede balance for belastningen i tjenesten administreres af Microsoft.
+I denne artikel beskrives det, hvordan du planlægger udrulningen og udrulningsplanen for SharePoint Online. Den indeholder også metoder, du kan følge, da traditionel belastningstest ikke er tilladt på SharePoint Online. SharePoint Online er en cloudtjeneste, og belastningsfunktionerne, tilstanden og den overordnede balance for belastningen i tjenesten administreres af Microsoft.
 
 For at hjælpe med at oprette en vellykket portal skal du følge de grundlæggende principper, fremgangsmåder og anbefalinger, der er beskrevet i [Oprettelse, start og vedligeholdelse af en sund portal](/sharepoint/portal-health)
 

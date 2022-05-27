@@ -28,12 +28,12 @@ search.appverid:
 ms.assetid: 8f0454b2-f51a-4d9c-bcde-2c48e41621c6
 description: Få mere at vide om, hvordan du konfigurerer multifaktorgodkendelse for din organisation.
 monikerRange: o365-worldwide
-ms.openlocfilehash: faac2f052b7c184a967f916cca433dfaef6866c7
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 6879a49bf0868081fed6ad8171138ce7001783c4
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637334"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739909"
 ---
 # <a name="set-up-multifactor-authentication-for-microsoft-365"></a>Konfigurer multifaktorgodkendelse for Microsoft 365
 
@@ -50,7 +50,7 @@ Multifaktorgodkendelse betyder, at du og dine medarbejdere skal angive mere end 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MuO3?autoplay=false]
 
 1. Gå til Microsoft 365 Administration på <a href="https://admin.microsoft.com/ " target="_blank">https://admin.microsoft.com</a>.
-1. Vælg **Vis alle**, og vælg derefter **Azure Active Directory Administration**.
+1. Vælg **Vis alle**, og vælg derefter **Azure Active Directory Administration Center**.
 1. Vælg **Azure Active Directory**, **Egenskaber**, **Administrer sikkerhedsstandarder**.
 1. Under **Aktivér sikkerhedsstandarder** skal du vælge **Ja** og derefter **Gem**.
 
@@ -78,7 +78,7 @@ Hvis dit abonnement er nyt, er sikkerhedsstandarder muligvis allerede slået til
 Du aktiverer eller deaktiverer sikkerhedsstandarder i ruden **Egenskaber** for Azure Active Directory (Azure AD) i Azure Portal.
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) med globale administratorlegitimationsoplysninger.
-2. Vælg **Vis alle** i venstre navigationsrude, og vælg **Azure Active Directory** under **Administration**.
+2. Vælg **Vis alle** i venstre navigationsrude, og vælg **Azure Active Directory** under **Administration centre**.
 3. Vælg **Azure Active Directory** \> **Egenskaber** i **Azure Active Directory Administration**.
 4. Nederst på siden skal du vælge **Administrer sikkerhedsstandarder**.
 5. Vælg **Ja** for at aktivere sikkerhedsstandarder eller **Nej** for at deaktivere sikkerhedsstandarder, og vælg derefter **Gem**.
@@ -122,6 +122,8 @@ For de fleste abonnementer er moderne godkendelse automatisk slået til, men hvi
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Konfigurer multifaktorgodkendelse](set-up-multi-factor-authentication.md) (video)
+[Konfigurer multifaktorgodkendelse](set-up-multi-factor-authentication.md) (video)\
 
-[Slå multifaktorgodkendelse til for din telefon](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14)
+[Slå multifaktorgodkendelse til for din telefon](https://support.microsoft.com/office/ace1d096-61e5-449b-a875-58eb3d74de14) (artikel)\
+
+[Sikkerhedsstandarder og multifaktorgodkendelse](/microsoft-365/business-premium/m365bp-conditional-access) (artikel)

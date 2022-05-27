@@ -1,7 +1,7 @@
 ---
 title: Undersøg insiderrisikostyringsaktiviteter
-description: Få mere at vide om undersøgelse af insiderrisikostyringsaktiviteter i Microsoft 365
-keywords: Microsoft 365, insiderrisiko, risikostyring, overholdelse af angivne standarder
+description: Få mere at vide om undersøgelse af insiderrisikostyringsaktiviteter i Microsoft Purview
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,14 +13,16 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: b53b67433bea08e20b082f555c26d41edce55daa
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: a808e2d52692c44364e542cb8cd9e7a2b0c57cac
+ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783331"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65759862"
 ---
 # <a name="investigate-insider-risk-management-activities"></a>Undersøg insiderrisikostyringsaktiviteter
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Undersøgelse af risikable brugeraktiviteter er et vigtigt første skridt til at minimere insiderrisici for din organisation. Disse risici kan være aktiviteter, der genererer beskeder fra politikker for styring af insiderrisiko eller risici fra aktiviteter, der registreres af politikker, men ikke straks opretter en insiderrisikostyringsbesked til brugerne. Du kan undersøge disse typer aktiviteter ved hjælp af **brugeraktivitetsrapporterne (prøveversion)** eller med **dashboardet Besked**.
 
@@ -105,7 +107,7 @@ Det kan hjælpe med at spare tid for analytikere og efterforskere til straks at 
 
 Hvis du vil afvise en insiderrisikobesked, skal du udføre følgende trin:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
 2. På **dashboardet Beskeder** skal du vælge den besked (eller de beskeder) med statussen *Behovsgennemgang* , som du vil afvise.
 3. Vælg **Afvis beskeder** på kommandolinjen Beskeder.
 4. I detaljeruden **Afvis beskeder** kan du gennemse de bruger- og politikoplysninger, der er knyttet til de valgte beskeder.
@@ -115,7 +117,7 @@ Hvis du vil afvise en insiderrisikobesked, skal du udføre følgende trin:
 
 Hvis du vil triage en insiderrisikobesked, skal du udføre følgende trin:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
 2. Vælg den besked, du vil triage, på **dashboardet Beskeder**.
 3. På siden **Beskedoplysninger** kan du gennemse oplysninger om beskeden. Du kan bekræfte beskeden og oprette en ny sag, bekræfte beskeden og føje den til en eksisterende sag eller afvise beskeden. Denne side indeholder også den aktuelle status for beskeden og alvorsgraden af beskedrisikoen angivet som Høj, Mellem eller Lav. Alvorsgraden kan stige eller falde over tid, hvis beskeden ikke er triaged.
 
@@ -168,7 +170,7 @@ Diagrammet **Brugeraktivitet** er et af de mest effektive værktøjer til intern
     - **Risikokategori**: Filtrer aktiviteter efter følgende risikokategorier: *Aktiviteter med risikoscores > 15 (medmindre i en sekvens)* og *sekvensaktiviteter*.
     - **Aktivitetstype**: Filtrer aktiviteter efter følgende typer: *Adgang*, *Sletning*, *Samling*, *Eksfiltration*, *Infiltration*, *Obfuscation* og *Security*.
     - **Sortér efter**: Vis tidslinjeaktiviteter efter *Dato for indtraf* eller *Risikoscore*.
-4. **Risikosekvens (prøveversion)**: Den kronologiske rækkefølge af risikable aktiviteter er et vigtigt aspekt af risikoundersøgelsen, og identificering af disse relaterede aktiviteter er en vigtig del af evalueringen af den overordnede risiko for din organisation. Vigtige aktiviteter, der er relateret, vises med forbindelseslinjer for at fremhæve, at disse aktiviteter er knyttet til et større risikoområde. Denne visning af aktiviteter kan hjælpe efterforskerne med bogstaveligt talt at "forbinde prikkerne" for risikoaktiviteter, der kunne være blevet betragtet som isolerede eller engangshændelser. Vælg en boble i sekvensen for at få vist oplysninger om alle de tilknyttede risikoaktiviteter. Detaljer omfatter:
+4. **Risikosekvens**: Den kronologiske rækkefølge af risikable aktiviteter er et vigtigt aspekt af risikoundersøgelsen, og identificering af disse relaterede aktiviteter er en vigtig del af evalueringen af den overordnede risiko for din organisation. Vigtige aktiviteter, der er relateret, vises med forbindelseslinjer for at fremhæve, at disse aktiviteter er knyttet til et større risikoområde. Denne visning af aktiviteter kan hjælpe efterforskerne med bogstaveligt talt at "forbinde prikkerne" for risikoaktiviteter, der kunne være blevet betragtet som isolerede eller engangshændelser. Vælg en boble i sekvensen for at få vist oplysninger om alle de tilknyttede risikoaktiviteter. Detaljer omfatter:
 
     - **Navnet på** sekvensen.
     - **Dato** eller **datointerval** for sekvensen.
@@ -207,7 +209,7 @@ Brug filtrene Aktivitetsområde og Risikoindsigt til at få vist og sortere akti
 
 Hvis du vil bruge **Aktivitetsoversigt**, skal du udføre følgende trin:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
 2. Vælg den besked, du vil triage, på **dashboardet Beskeder**.
 3. I **detaljeruden Beskeder** skal du vælge **Åbn udvidet visning**.
 4. Vælg fanen **Aktivitetsoversigt** på siden for den valgte besked.
@@ -225,9 +227,9 @@ Når du vælger en aktivitets hændelser på aktivitetstidslinjen, stemmer antal
 
 Når beskeden gennemses og behandles, kan du oprette en ny sag for at undersøge risikoaktiviteten yderligere. Følg disse trin for at oprette en sag for en besked:
 
-1. I [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Beskeder**.
 2. På **dashboardet Beskeder** skal du vælge den besked, du vil bekræfte og oprette en ny sag for.
-3. I **ruden Beskedoplysninger** skal du vælge **HandlingerBekræft** >  **beskeder & oprette sag**.
+3. I **ruden Beskedoplysninger** skal du vælge **Handlinger** > **Bekræft beskeder & oprette sag**.
 4. I dialogboksen **Bekræft besked, og opret insiderrisikosag** skal du angive et navn til sagen, vælge brugere, der skal tilføjes som bidragydere, og tilføje kommentarer efter behov. Kommentarer føjes automatisk til sagen som en sagsnote.
 5. Vælg **Opret sag** for at oprette en ny sag, eller vælg **Annuller** for at lukke dialogboksen uden at oprette en sag.
 
@@ -274,4 +276,4 @@ Moderne brugere på arbejdspladsen har ofte en lang række ansvarsområder og kr
 
 - **Fokusanalytiker og efterforsker indsats på den højeste risiko beskeder først**. Afhængigt af dine politikker kan du registrere aktiviteter og generere beskeder med varierende grader af potentiel indvirkning på din risikomitigeringsindsats. [Filtrer beskeder](insider-risk-management-activities.md#filter-alerts-on-the-alert-dashboard) efter alvorsgrad, og prioriter vigtige beskeder med *høj alvorsgrad* .
 - **Tildel brugere som analytikere og efterforskere**. Det er en vigtig del af gennemgangsprocessen for insiderrisikobeskeder, at den rette bruger er tildelt de korrekte roller. Sørg for, at du har tildelt de relevante brugere til rollegrupperne *Insider Risk Management Analysts* og *Insider Risk Management Investigators* .  
-- **Brug automatiserede insiderrisikofunktioner til at finde de højeste risikoaktiviteter**. [Sekvensregistrering](insider-risk-management-policies.md#sequence-detection-preview) af insiderrisikostyring og [akkumulerede funktioner til registrering af eksfiltration](insider-risk-management-policies.md#cumulative-exfiltration-detection-preview) kan hjælpe dig med hurtigt at finde sværere at finde risici i din organisation. Overvej at finjustere [boostere for din risikoscore](insider-risk-management-settings.md#indicators), [undtagelser for filtyper](insider-risk-management-settings.md#file-type-exclusions), [domæner](insider-risk-management-settings.md#domains) og [minimumindstillingerne for indikatortærskel](insider-risk-management-settings.md#indicator-level-settings-preview) for dine politikker.
+- **Brug automatiserede insiderrisikofunktioner til at finde de højeste risikoaktiviteter**. [Sekvensregistrering](insider-risk-management-policies.md#sequence-detection) af insiderrisikostyring og [akkumulerede funktioner til registrering af eksfiltration](insider-risk-management-policies.md#cumulative-exfiltration-detection-preview) kan hjælpe dig med hurtigt at finde sværere at finde risici i din organisation. Overvej at finjustere [boostere for din risikoscore](insider-risk-management-settings.md#indicators), [undtagelser for filtyper](insider-risk-management-settings.md#file-type-exclusions), [domæner](insider-risk-management-settings.md#domains) og [minimumindstillingerne for indikatortærskel](insider-risk-management-settings.md#indicator-level-settings-preview) for dine politikker.

@@ -25,12 +25,12 @@ search.appverid:
 ms.assetid: 043807b2-21db-4d5c-b430-c8a6dee0e6ba
 ROBOTS: NOINDEX, NOFOLLOW
 description: Multifaktorgodkendelse (MFA) bruger både en adgangskode, som skal være stærk, og en yderligere kontrolmetode.
-ms.openlocfilehash: e7d32776edb0f8fa6eaa4019f394870a6346e1d2
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: f939b187fc81381dae4959fdf14280bc839dadb0
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637643"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739865"
 ---
 # <a name="multifactor-authentication-for-microsoft-365"></a>Multifaktorgodkendelse for Microsoft 365
 
@@ -62,7 +62,7 @@ Disse måder er baseret på din Microsoft 365 plan.
 |Plan|Anbefaling|Kundetype|
 |---|---|---|
 |Alle Microsoft 365 planer|Brug sikkerhedsstandarder, som kræver MFA for alle brugerkonti. <p> Du kan også konfigurere MFA pr. bruger for individuelle brugerkonti, men det anbefales ikke.|Mindre virksomheder|
-|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> Azure Active Directory (Azure AD) Premium P1-licenser|Brug politikker for betinget adgang til at kræve MFA for brugerkonti, der er baseret på gruppemedlemskab, apps eller andre kriterier.|Små virksomheder til virksomheder|
+|Microsoft 365 Business Premium <p> Microsoft 365 E3 <p> Azure Active Directory (Azure AD) Premium P1-licenser|Brug [sikkerhedsstandarder eller politikker for betinget adgang](/microsoft-365/business-premium/m365bp-conditional-access) til at kræve MFA for brugerkonti, der er baseret på gruppemedlemskab, apps eller andre kriterier.|Små virksomheder til virksomheder|
 |Microsoft 365 E5 <p> Azure AD Premium P2-licenser|Brug Azure AD Identity Protection til at kræve MFA baseret på kriterier for logonrisiko.|Enterprise|
 ||||
 

@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter brugerdefinerede nyttedata til oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 24655986cd8c30bec4495477a63d692fd1ebb2d2
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 8ee202f66d2e9f4fdbf3eba1a1548abd1c3b5524
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679324"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739831"
 ---
 # <a name="create-custom-payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Opret brugerdefinerede nyttedata til oplæring i simulering af angreb i Defender for Office 365
 
@@ -30,7 +30,7 @@ I oplæringen af simulering af angreb er en _nyttedata_ den phishing-mail og de 
 
 I denne artikel beskrives det, hvordan du opretter dine egne nyttedata i oplæringen af simulering af angreb. Du kan oprette brugerdefinerede nyttedata på følgende placeringer:
 
-- **Nyttedata**: På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & træning til simulering af angrebssimuleringsindholdsbiblioteksfaner** \>  \>  \>. Hvis du vil gå direkte til fanen **Simuleringsindholdsbibliotek** , skal du bruge <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>.
+- **Nyttedata**: På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & træning til simulering af angrebssimuleringsindholdsbiblioteksfaner** \>  \>  \>. Hvis du vil gå direkte til fanen **Simuleringsindholdsbibliotek** , hvor du kan vælge **Nyttedata**, skal du bruge <https://security.microsoft.com/attacksimulator?viewid=simulationcontentlibrary>.
 - Under oprettelse af simulering: Du kan oprette brugerdefinerede nyttedata på siden **Vælg en nyttedata** (den tredje side) i guiden til oprettelse af simulering. Du kan få flere oplysninger under [Simuler et phishing-angreb i Defender for Office 365](attack-simulation-training.md).
 
 Du kan finde oplysninger om, hvordan du kommer i gang, om oplæring i simulering af angreb under [Kom i gang med at bruge oplæring i simulering af angreb](attack-simulation-training-get-started.md).

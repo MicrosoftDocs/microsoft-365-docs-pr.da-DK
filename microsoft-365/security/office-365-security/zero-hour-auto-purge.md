@@ -1,5 +1,5 @@
 ---
-title: Automatisk tømning uden time i Microsoft Defender for Office 365
+title: Automatisk udrensning på nul timer i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -19,116 +19,120 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Automatisk tømning (ZAP) med tilbagevirkende kraft flytter leveret meddelelser i en Exchange Online-postkasse til mappen uønsket mail eller karantæne, der findes at være spam, phishing eller indeholder malware efter levering.
+description: Automatisk tømning på nul time (ZAP) flytter leverede meddelelser med tilbagevirkende kraft i en Exchange Online postkasse til mappen Uønsket mail eller karantæne, der anses for at være spam, phishing eller indeholder malware efter levering.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a48f5eb1d45af16ab275c16d2965dc9a578d9312
-ms.sourcegitcommit: bae72428d229827cba4c807d9cd362417afbcccb
+ms.openlocfilehash: bd9bb3f231e42c625c87669417210281d1d5a3df
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "63587518"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739455"
 ---
-# <a name="zero-hour-auto-purge-zap-in-exchange-online"></a>Automatisk tømning (ZAP) i nul timer i Exchange Online
+# <a name="zero-hour-auto-purge-zap-in-exchange-online"></a>Automatisk udrensning (ZAP) på nul timer i Exchange Online
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
-- [Microsoft Defender til Office 365 plan 1 og plan 2](defender-for-office-365.md)
+- [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
-## <a name="zero-hour-auto-purge-zap-basics"></a>Grundlæggende om automatisk tømning (ZAP) uden time
+## <a name="zero-hour-auto-purge-zap-basics"></a>Grundlæggende oplysninger om automatisk fjernelse på nul timer (ZAP)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online er automatisk tømning (ZAP) uden time en funktion til beskyttelse af mail, som med tilbagevirkende kraft registrerer og neutraliserer skadelige phishing-, spam- eller malwaremeddelelser, der allerede er blevet leveret til Exchange Online-postkasser.
+I Microsoft 365 organisationer med postkasser i Exchange Online er ZAP (automatisk fjernelse på nul timer) en funktion til mailbeskyttelse, der med tilbagevirkende kraft registrerer og neutraliserer skadelige phishing-, spam- eller malwaremeddelelser, der allerede er blevet leveret til Exchange Online postkasser.
 
-ZAP fungerer ikke i enkeltstående Exchange Online Protection (EOP),-miljøer, der beskytter lokale Exchange postkasser.
+ZAP fungerer ikke i enkeltstående Exchange Online Protection-miljøer (EOP), der beskytter Exchange postkasser i det lokale miljø.
 
 ## <a name="how-zap-works"></a>Sådan fungerer ZAP
 
-Signaturer til spam og malware opdateres dagligt i tjenesten i realtid. Brugerne kan dog stadig modtage skadelige meddelelser af en række forskellige årsager, herunder hvis indhold er standardiseret, efter det er blevet leveret til brugerne. ZAP løser dette problem ved kontinuerligt at overvåge opdateringer af spam- og malwaresignaturerne i tjenesten. ZAP kan finde og fjerne meddelelser, der allerede findes i en brugers postkasse.
+Spam og malware signaturer opdateres i tjenesten i realtid på daglig basis. Brugerne kan dog stadig modtage ondsindede meddelelser af en række forskellige årsager, herunder hvis indhold er våben, efter at de er blevet leveret til brugerne. ZAP løser dette problem ved løbende at overvåge opdateringer af spam- og malwaresignaturer i tjenesten. ZAP kan finde og fjerne meddelelser, der allerede findes i en brugers postkasse.
 
-ZAP-handlingen er problemfri for brugeren; de får ikke besked, hvis en meddelelse registreres og flyttes.
+ZAP-handlingen er problemfri for brugeren. de får ikke besked, hvis en meddelelse registreres og flyttes.
 
-[Pengeskab afsenderlister](create-safe-sender-lists-in-office-365.md), regler for mailflow (også kaldet transportregler), indbakkeregler eller ekstra filtre tilsidesætter ZAP. Ligesom det, der sker i mailflowet, betyder det, at selvom tjenesten bestemmer, at den leveres meddelelse har brug for ZAP, reageres meddelelsen ikke på grund af konfigurationen af afsendere, der er tillid til. Dette er en anden grund til at være forsigtig med at konfigurere meddelelser til at tilsidesætte filtrering.
+[Pengeskab afsenderlister](create-safe-sender-lists-in-office-365.md), regler for mailflow (også kaldet transportregler), indbakkeregler eller yderligere filtre har forrang over ZAP. På samme måde som med det, der sker i et mailflow, betyder det, at selvom tjenesten bestemmer, at den leverede meddelelse har brug for ZAP, reageres meddelelsen ikke på grund af konfigurationen af sikre afsendere. Dette er en anden grund til at være forsigtig med at konfigurere meddelelser for at omgå filtrering.
 
-### <a name="zero-hour-auto-purge-zap-for-malware"></a>Nul-timers automatisk tømning (ZAP) for malware
+Se denne korte video for at få mere at vide om, hvordan ZAP i Microsoft Defender for Office 365 automatisk registrerer og neutraliserer trusler i en mail. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGrLg]
 
-For **læste eller ulæste meddelelser** , der indeholder malware efter levering, sætter ZAP den meddelelse i karantæne, der indeholder den vedhæftede malware. Som standard er det kun administratorer, der kan få vist og administrere malwaremeddelelser i karantæne. Men administratorer kan oprette og bruge karantænepolitikker  til at definere, hvad brugerne har tilladelse til at gøre i meddelelser, der er sat i karantæne som malware. Du kan få mere at vide under [Karantænepolitikker](quarantine-policies.md).
+### <a name="zero-hour-auto-purge-zap-for-malware"></a>Nultimers automatisk fjernelse (ZAP) for malware
 
-ZAP er som standard aktiveret for malware i antimalwarepolitikker. Få mere at vide under [Konfigurer antimalwarepolitikker i EOP](configure-anti-malware-policies.md).
+For **læste eller ulæste meddelelser** , der efter levering viser sig at indeholde malware, sætter ZAP den meddelelse, der indeholder den vedhæftede malware, i karantæne. Som standard er det kun administratorer, der kan få vist og administrere karantænelagrede malwaremeddelelser. Men administratorer kan oprette og bruge _karantænepolitikker_ til at definere, hvad brugerne har tilladelse til at gøre med meddelelser, der er sat i karantæne som malware. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-### <a name="zero-hour-auto-purge-zap-for-phishing"></a>Nul-timers automatisk tømning (ZAP) for phishing
+ZAP til malware er som standard aktiveret i politikker for antimalware. Du kan få flere oplysninger under [Konfigurer politikker for antimalware i EOP](configure-anti-malware-policies.md).
 
-For **læste eller ulæste** meddelelser, der identificeres som phishing efter levering, afhænger ZAP-resultatet af den handling, der er konfigureret til en phishing-mailfiltreringkonstering med den gældende antispampolitik. De tilgængelige filtreringskriteriehandlinger for phishing og deres mulige ZAP-resultater er beskrevet på følgende liste:
+### <a name="zero-hour-auto-purge-zap-for-phishing"></a>Automatisk fjernelse (ZAP) på nul timer for phishing
 
-- **Tilføj X-brevhoved**, **forudindstillet** emnelinje med **tekst,** Omdiriger meddelelse til **mailadresse, Slet** meddelelse: ZAP gør ingen handling på meddelelsen.
+For **læste eller ulæste meddelelser** , der identificeres som phishing efter levering, afhænger ZAP-resultatet af den handling, der er konfigureret for en dom for filtrering af **phishing-mails** i den relevante politik for anti-spam. De tilgængelige filtreringshandlinger for phishing og deres mulige ZAP-resultater er beskrevet på følgende liste:
 
-- **Flyt meddelelsen til uønsket mail**: ZAP flytter meddelelsen til mappen Uønsket mail. Du kan finde flere oplysninger [i Konfigurere indstillinger for uønsket mail Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
+- **Tilføj X-Header**, **Forudindstillet emnelinje med tekst**, **Omdiriger meddelelse til mailadresse**, **Slet meddelelse**: ZAP udfører ingen handling på meddelelsen.
+
+- **Flyt meddelelsen til uønsket mail**: ZAP flytter meddelelsen til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
 
 - **Karantænemeddelelse**: ZAP sætter meddelelsen i karantæne.
 
-Som standard er ZAP til phishing aktiveret i antispampolitikker, og standardhandlingen for filtrering af **phishing-mail** er karantænemeddelelse **, hvilket** betyder, at ZAP til phishingkarantæne får meddelelsen som standard.
+ZAP til phishing er som standard aktiveret i politikker til bekæmpelse af spam, og standardhandlingen for dommen til filtrering af **phishing-mail** er **Karantænemeddelelse**, hvilket betyder, at ZAP til phishing sætter meddelelsen i karantæne som standard.
 
-Du kan finde flere oplysninger om konfigurering af spamfiltrering under [Konfigurer politikker for uønsket post Microsoft 365](configure-your-spam-filter-policies.md).
+Du kan få flere oplysninger om konfiguration af dommene om filtrering af spam under [Konfigurer politikker mod spam i Microsoft 365](configure-your-spam-filter-policies.md).
 
-### <a name="zero-hour-auto-purge-zap-for-high-confidence-phishing"></a>Nul-timers automatisk tømning (ZAP) for phishing med høj sikkerhed
+### <a name="zero-hour-auto-purge-zap-for-high-confidence-phishing"></a>Zap (automatisk tøm på nul time) for phishing med høj genkendelsessikkerhed
 
-For **læste eller ulæste meddelelser** , der er identificeret som phishing med høj tillid efter levering, sætter ZAP meddelelsen i karantæne. Som standard er det kun administratorer, der kan få vist og administrere phish-meddelelser, der er sat i karantæne. Men administratorer kan oprette og bruge karantænepolitikker  til at definere, hvad brugerne har tilladelse til at gøre på meddelelser, der er sat i karantæne, som phishing med høj tillid. Få mere at vide under [Karantænepolitikker](quarantine-policies.md)
+I forbindelse med **læste eller ulæste meddelelser** , der identificeres som phishing med høj sikkerhed efter levering, sætter ZAP meddelelsen i karantæne. Som standard er det kun administratorer, der kan få vist og administrere meddelelser med høj genkendelsessikkerhed i karantæne. Men administratorer kan oprette og bruge _karantænepolitikker_ til at definere, hvad brugerne har tilladelse til at gøre med meddelelser, der er sat i karantæne som phishing med høj tillid. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md)
 
-ZAP for phish er aktiveret som standard. Du kan finde flere oplysninger [under Sikkerhed som standard i Office 365](secure-by-default.md).
+ZAP for phish med høj genkendelsessikkerhed er som standard aktiveret. Du kan få flere oplysninger under [Sikker som standard i Office 365](secure-by-default.md).
 
-### <a name="zero-hour-auto-purge-zap-for-spam"></a>Nul-timers automatisk tømning (ZAP) for spam
+### <a name="zero-hour-auto-purge-zap-for-spam"></a>Automatisk udrensning (ZAP) på nul timer for spam
 
-For **ulæste** meddelelser, der identificeres som spam efter levering, afhænger ZAP-resultatet af den handling, der er konfigureret til spamfiltreringkonfigurering med den gældende antispampolitik. De tilgængelige filtreringskriteriehandlinger for spam og deres mulige ZAP-resultater er beskrevet på følgende liste:
+For **ulæste meddelelser**, der identificeres som spam efter levering, afhænger ZAP-resultatet af den handling, der er konfigureret til spamfiltreringssagen i den gældende politik for spam. De tilgængelige filtreringshandlinger for spam og deres mulige ZAP-resultater er beskrevet på følgende liste:
 
-- **Tilføj X-brevhoved**, **forudindstillet** emnelinje med **tekst,** Omdiriger meddelelse til **mailadresse, Slet** meddelelse: ZAP gør ingen handling på meddelelsen.
+- **Tilføj X-Header**, **Forudindstillet emnelinje med tekst**, **Omdiriger meddelelse til mailadresse**, **Slet meddelelse**: ZAP udfører ingen handling på meddelelsen.
 
-- **Flyt meddelelsen til uønsket mail**: ZAP flytter meddelelsen til mappen Uønsket mail. Du kan finde flere oplysninger [i Konfigurere indstillinger for uønsket mail Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
+- **Flyt meddelelsen til uønsket mail**: ZAP flytter meddelelsen til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
 
-- **Karantænemeddelelse**: ZAP sætter meddelelsen i karantæne. Slutbrugere kan som standard få vist og administrere meddelelser, der er i spamkarantæne, hvor de er modtager. Men administratorer kan oprette og bruge karantænepolitikker  til at definere, hvad brugerne har tilladelse til at gøre i meddelelser, der er sat i karantæne som spam. Få mere at vide under [Karantænepolitikker](quarantine-policies.md)
+- **Karantænemeddelelse**: ZAP sætter meddelelsen i karantæne. Slutbrugere kan som standard få vist og administrere spam-karantænemeddelelser, hvor de er modtager. Men administratorer kan oprette og bruge _karantænepolitikker_ til at definere, hvad brugerne har tilladelse til at gøre med meddelelser, der er sat i karantæne som spam. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md)
 
-Spam-ZAP er som standard aktiveret i antispampolitikker, og standardhandlingen for  spamfiltrering er Flyt meddelelsen til mappen Uønsket **mail, hvilket** betyder, at spam  ZAP som standard flytter ulæste meddelelser til mappen Uønsket mail.
+Som standard er ZAP for spam aktiveret i politikker til bekæmpelse af spam, og standardhandlingen for dom for filtrering af **spam** er **Flyt meddelelse til mappen Uønsket mail**, hvilket betyder, at SPAM ZAP flytter **ulæste** meddelelser til mappen Uønsket mail som standard.
 
-Du kan finde flere oplysninger om konfigurering af spamfiltrering under [Konfigurer politikker for uønsket post Microsoft 365](configure-your-spam-filter-policies.md).
+Du kan få flere oplysninger om konfiguration af dommene om filtrering af spam under [Konfigurer politikker mod spam i Microsoft 365](configure-your-spam-filter-policies.md).
 
-### <a name="zero-hour-auto-purge-zap-considerations-for-microsoft-defender-for-office-365"></a>Overvejelser om automatisk tømning uden time (ZAP) for Microsoft Defender Office 365
+### <a name="zero-hour-auto-purge-zap-considerations-for-microsoft-defender-for-office-365"></a>Zap-overvejelser (automatisk sletning) på nul timer for Microsoft Defender for Office 365
 
-ZAP sætter ikke meddelelser i karantæne, der er i gang med dynamisk [](safe-attachments.md#dynamic-delivery-in-safe-attachments-policies) levering i Pengeskab Scanning af politik for vedhæftede filer, eller hvor EOP-malwarefiltrering allerede har erstattet den vedhæftede fil med **malware alert Text.txt-filen**. Hvis der modtages et phishing- eller spamsignal for disse typer meddelelser, og filtreringen i antispampolitikken er indstillet til at gøre noget ved meddelelsen (Flyt til Uønsket, Omdiriger, Slet eller Karantæne), vil ZAP som standard være indstillet til en handling med "Flyt til uønsket".
+ZAP sætter ikke meddelelser i karantæne, der er i gang med [dynamisk levering](safe-attachments.md#dynamic-delivery-in-safe-attachments-policies) i Pengeskab scanning af politikken vedhæftede filer, eller hvor EOP-malwarefiltrering allerede har erstattet den vedhæftede fil med Malware **Alert Text.txt-filen**. Hvis der modtages et phishing- eller spamsignal for disse typer meddelelser, og den filtrerende dom i politikken for bekæmpelse af spam er indstillet til at udføre en handling på meddelelsen (Flyt til uønsket, Omdirigering, Slet eller Karantæne), vil ZAP som standard bruge handlingen 'Flyt til uønsket'.
 
 ## <a name="how-to-see-if-zap-moved-your-message"></a>Sådan kan du se, om ZAP har flyttet din meddelelse
 
 Hvis du vil finde ud af, om ZAP har flyttet din meddelelse, har du følgende muligheder:
 
-- **Antal meddelelser**: Brug visningen [Mailflow i statusrapporten Mailflow](view-email-security-reports.md#mailflow-view-for-the-mailflow-status-report) for at se antallet af meddelelser, som er blevet påvirket af ZAP, for det angivne datointerval.
-- **Meddelelsesdetaljer**: [Brug Trusselsstifinder (](threat-explorer.md)og registreringer i realtid)  til at filtrere Alle mailhændelser efter værdien **ZAP** for **kolonnen Yderligere** handling.
+- **Antal meddelelser**: Brug [visningen Mailflow i statusrapporten Mailflow](view-email-security-reports.md#mailflow-view-for-the-mailflow-status-report) til at se antallet af ZAP-berørte meddelelser for det angivne datointerval.
+- **Meddelelsesoplysninger**: Brug [Threat Explorer (og registreringer i realtid)](threat-explorer.md) til at filtrere **alle mailhændelser** efter værdien **ZAP** for kolonnen **Ekstra handling** .
 
-**Bemærk**: ZAP er ikke logget på Exchange i postkassens overvågningslog som en systemhandling.
+> [!NOTE]
+> ZAP logføres ikke i overvågningslogfilerne for Exchange postkasse som en systemhandling.
 
-## <a name="zero-hour-auto-purge-zap-faq"></a>Ofte stillede spørgsmål om automatisk tømning (ZAP) uden time
+## <a name="zero-hour-auto-purge-zap-faq"></a>Ofte stillede spørgsmål om automatisk fjernelse på nul timer (ZAP)
 
-### <a name="what-happens-if-a-legitimate-message-is-moved-to-the-junk-email-folder"></a>Hvad sker der, hvis en legitim meddelelse flyttes til mappen Uønsket mail?
+### <a name="what-happens-if-a-legitimate-message-is-moved-to-the-junk-email-folder"></a>Hvad sker der, hvis en gyldig meddelelse flyttes til mappen Uønsket mail?
 
-Du skal følge den normale rapporteringsproces for [falske positive](report-junk-email-messages-to-microsoft.md). Den eneste grund til, at meddelelsen blev flyttet fra indbakken til mappen Uønsket mail, vil være, at tjenesten har besluttet, at meddelelsen er spam eller skadelig.
+Du skal følge den normale rapporteringsproces for [falske positiver](report-junk-email-messages-to-microsoft.md). Den eneste årsag til, at meddelelsen flyttes fra indbakken til mappen Uønsket mail, er, at tjenesten har registreret, at meddelelsen er spam eller skadelig.
 
 ### <a name="what-if-i-use-the-quarantine-folder-instead-of-the-junk-mail-folder"></a>Hvad gør jeg, hvis jeg bruger mappen Karantæne i stedet for mappen Uønsket mail?
 
-ZAP vil handle på en meddelelse, der er baseret på konfigurationen af dine antispampolitikker, som beskrevet tidligere i denne artikel.
+ZAP reagerer på en meddelelse, der er baseret på konfigurationen af dine anti-spam-politikker, som beskrevet tidligere i denne artikel.
 
-### <a name="what-if-im-using-safe-senders-mail-flow-rules-or-allowedblocked-sender-lists"></a>Hvad gør jeg, hvis jeg bruger afsendere, der er tillid til, regler for mailflow eller lister over tilladte/blokerede afsendere?
+### <a name="what-if-im-using-safe-senders-mail-flow-rules-or-allowedblocked-sender-lists"></a>Hvad gør jeg, hvis jeg bruger sikre afsendere, regler for mailflow eller lister over tilladte/blokerede afsendere?
 
-Pengeskab afsendere, regler for mailflow eller blokere og tillade, at organisationsindstillinger har forrang. Disse meddelelser er ikke medtaget i ZAP, da tjenesten gør det, du har konfigureret den til at gøre. Dette er en anden grund til at være forsigtig med at konfigurere meddelelser til at tilsidesætte filtrering.
+Pengeskab afsendere, regler for mailflow eller bloker og tillad, at organisationens indstillinger har forrang. Disse meddelelser er udelukket fra ZAP, da tjenesten gør, hvad du har konfigureret den til at gøre. Dette er en anden grund til at være forsigtig med at konfigurere meddelelser for at omgå filtrering.
 
-### <a name="what-are-the-licensing-requirements-for-zero-hour-auto-purge-zap-to-work"></a>Hvad skal licenskrav for automatisk TØM (Zero-hour tømning) fungere?
+### <a name="what-are-the-licensing-requirements-for-zero-hour-auto-purge-zap-to-work"></a>Hvad er licenskravene for automatisk fjernelse på nul timer (ZAP) til at fungere?
 
-Der er ingen begrænsninger på licenser. ZAP fungerer på alle postkasser, der hostes Exchange online. ZAP fungerer ikke i enkeltstående Exchange Online Protection (EOP),-miljøer, der beskytter lokale Exchange postkasser.
+Der er ingen begrænsninger på licenser. ZAP fungerer på alle postkasser, der hostes på Exchange online. ZAP fungerer ikke i enkeltstående Exchange Online Protection-miljøer (EOP), der beskytter Exchange postkasser i det lokale miljø.
 
-### <a name="what-if-a-message-is-moved-to-another-folder-eg-inbox-rules"></a>Hvad nu, hvis en meddelelse flyttes til en anden mappe (f.eks. indbakkeregler)?
+### <a name="what-if-a-message-is-moved-to-another-folder-eg-inbox-rules"></a>Hvad sker der, hvis en meddelelse flyttes til en anden mappe (f.eks. indbakkeregler)?
 
-Automatisk tømning uden time fungerer stadig, så længe meddelelsen ikke er blevet slettet, eller så længe den samme eller stærkere handling ikke allerede er anvendt. Hvis f.eks. antiphishing-politikken er indstillet til karantæne, og meddelelsen allerede findes i uønsket mail, vil ZAP tage skridt til at sætte meddelelsen i karantæne.
+Automatisk fjernelse på nul timer fungerer stadig, så længe meddelelsen ikke er slettet, eller hvis den samme eller stærkere handling ikke allerede er anvendt. Hvis politikken til bekæmpelse af phishing f.eks. er indstillet til at sætte meddelelsen i karantæne, og meddelelsen allerede findes i uønsket mail, vil ZAP udføre en handling for at sætte meddelelsen i karantæne.
 
 ### <a name="how-does-zap-affect-mailboxes-on-hold"></a>Hvordan påvirker ZAP postkasser i venteposition?
 
-Nul-timers automatisk tømning sætter meddelelser i karantæne fra postkasser, der er sat i venteposition. ZAP kan flytte meddelelser til mappen Uønsket mail baseret på den handling, der er konfigureret til spam eller phishingkonkonfigurerede i antispampolitikker.
+Automatisk fjernelse på nul timer vil sætte meddelelser fra postkasser i venteposition i karantæne. ZAP kan flytte meddelelser til mappen Uønsket mail baseret på den handling, der er konfigureret til en spam- eller phishing-dom i politikker til bekæmpelse af spam.
 
-Du kan finde flere oplysninger om Exchange Online i [Direkte venteposition og retslig venteposition i Exchange Online](/Exchange/security-and-compliance/in-place-and-litigation-holds).
+Du kan få flere oplysninger om ventepositioner i Exchange Online under [Bevarelse på stedet og bevarelse af procesførelse i Exchange Online](/Exchange/security-and-compliance/in-place-and-litigation-holds).

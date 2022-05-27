@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-mar2020
 ms.assetid: 59414438-99f5-488b-975c-5023f2254369
 description: I denne artikel lærer du, hvordan du opretter, tester og finjusterer en DLP-politik i henhold til dine organisatoriske behov.
-ms.openlocfilehash: 5508ce96e1309122e9c4c5139941eb41f6906e82
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 605288d5ee2839cc2f3ec225e551f0ba3e65bfcc
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637731"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753986"
 ---
 # <a name="create-test-and-tune-a-dlp-policy"></a>Opret, test og finjuster en DLP-politik
 
@@ -44,7 +44,7 @@ Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have t
   
 1. Opret en gruppe i Microsoft 365, og føj overholdelsesansvarlige til den.
     
-2. Opret en rollegruppe på siden **Tilladelser** i Security &amp; Compliance Center. 
+2. Opret en rollegruppe på siden **Tilladelser** i Microsoft Purview-compliance-portal. 
 
 3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **DLP Compliance Management**.
     
@@ -62,7 +62,7 @@ Der er roller og rollegrupper som prøveversion, som du kan teste for at finjust
 
 Her er en liste over relevante roller, der findes som prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection administrator
+- Information Protection Administration
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
@@ -94,7 +94,7 @@ Se [Objektdefinitioner for følsomme oplysninger,](sensitive-information-type-en
 
 Når risikoen for datalækage ikke er helt indlysende, er det svært at se, præcis hvor du skal starte med at implementere DLP. Heldigvis kan DLP-politikker køres i "testtilstand", så du kan måle deres effektivitet og nøjagtighed, før du slår dem til.
 
-DLP-politikker for Exchange Online kan administreres via Exchange Administration. Men du kan konfigurere DLP-politikker for alle arbejdsbelastninger via Microsoft Purview-compliance-portal, så det er det, jeg skal bruge til demonstrationer i denne artikel. I Microsoft Purview-compliance-portal finder du DLP-politikkerne under **Forebyggelse af** >  **datatabPolitik**. Vælg **Opret en politik** for at starte.
+DLP-politikker for Exchange Online kan administreres via Exchange Administration. Men du kan konfigurere DLP-politikker for alle arbejdsbelastninger via Microsoft Purview-compliance-portal, så det er det, jeg skal bruge til demonstrationer i denne artikel. I Microsoft Purview-compliance-portal finder du DLP-politikkerne under **Politik til** **forebyggelse af** >  datatab. Vælg **Opret en politik** for at starte.
 
 Microsoft 365 indeholder en række [DLP-politikskabeloner](what-the-dlp-policy-templates-include.md), som du kan bruge til at oprette politikker. Lad os sige, at du er en australsk virksomhed. Du kan filtrere skabelonerne i Australien og vælge Økonomi, Medicinsk og Sundhed og Beskyttelse af personlige oplysninger.
 

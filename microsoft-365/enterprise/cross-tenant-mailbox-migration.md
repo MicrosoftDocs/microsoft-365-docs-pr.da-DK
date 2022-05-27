@@ -16,12 +16,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 3832cd64ce66e667cced13c41bc34c28d575b373
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: b2d66fce2b1eeffa4500c01a07f271b5b1a96ab7
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637511"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754770"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (prøveversion)
 
@@ -29,7 +29,7 @@ Normalt har du under fusioner eller frasalg brug for muligheden for at flytte di
 
 Administratorer kan bruge den New-MigrationBatch cmdlet, der er tilgængelig via administrationsrollen Flyt postkasser, til at udføre flytninger på tværs af lejere.
 
-De brugere, der migrerer, skal være til stede i destinationslejeren Exchange Online systemet som MailUsers, markeret med specifikke attributter for at aktivere flytninger på tværs af lejere. Systemet vil ikke kunne flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer.
+De brugere, der migrerer, skal være til stede i destinationslejeren Exchange Online systemet som MailUsers, markeret med specifikke attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer.
 
 Når flytningerne er fuldført, konverteres kildebrugerpostkassen til en MailUser, og destinationsadressen (vist som ExternalEmailAddress i Exchange) stemples med distributionsadressen til destinationslejeren. Denne proces efterlader den ældre MailUser i kildelejer og giver mulighed for sameksistens og postdistribution. Når forretningsprocesser tillader det, kan kildelejer fjerne kildemailbrugeren eller konvertere dem til en mailkontakt.
 
@@ -114,7 +114,7 @@ Hvis du vil hente lejer-id'et for et abonnement, [skal du](https://go.microsoft.
       > [!NOTE]
       > Dette er den adgangskode, der bruges, når du opretter dit overførselsslutpunkt. Det er ekstremt vigtigt, at du kopierer denne adgangskode til udklipsholderen og eller kopierer denne adgangskode for at sikre/skjule adgangskoden. Dette er den eneste gang, du vil kunne se denne adgangskode! Hvis du på en eller anden måde mister den eller har brug for at nulstille den, kan du logge på vores Azure Portal igen, gå til Appregistreringer, finde din overførselsapp, vælge Hemmeligheder & certifikater og oprette en ny hemmelighed for din app.
 
-19. Nu, hvor du har oprettet overførselsprogrammet og -hemmeligheden, skal du give dit samtykke til programmet. Hvis du vil give dit samtykke til programmet, skal du gå tilbage til landingssiden for Azure Active Directory, klikke på Virksomhedsprogrammer i den venstre navigationsrude, finde din overførselsapp, du har oprettet, vælge den og vælge Tilladelser i venstre navigationsrude.
+19. Nu, hvor du har oprettet overførselsprogrammet og hemmeligheden, skal du give samtykke til programmet. Hvis du vil give dit samtykke til programmet, skal du gå tilbage til landingssiden for Azure Active Directory, klikke på Virksomhedsprogrammer i den venstre navigationsrude, finde din overførselsapp, du har oprettet, vælge den og vælge Tilladelser i venstre navigationsrude.
 
 20. Klik på knappen Tildel administratorsamtykke til [din lejer].
 
@@ -228,7 +228,7 @@ Hvis der kræves en postkasse for at flytte tilbage til den oprindelige kildelej
 
 ## <a name="prepare-target-user-objects-for-migration"></a>Forbered destinationsbrugerobjekter til overførsel
 
-De brugere, der migrerer, skal være til stede i destinationslejeren og Exchange Online system (som MailUsers), der er markeret med bestemte attributter for at aktivere flytninger på tværs af lejere. Systemet vil ikke kunne flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer. I følgende afsnit er der oplysninger om kravene til MailUser-objektet for destinationslejer.
+De brugere, der migrerer, skal være til stede i destinationslejeren og Exchange Online system (som MailUsers), der er markeret med bestemte attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer. I følgende afsnit er der oplysninger om kravene til MailUser-objektet for destinationslejer.
 
 ### <a name="prerequisites-for-target-user-objects"></a>Forudsætninger for destinationsbrugerobjekter
 

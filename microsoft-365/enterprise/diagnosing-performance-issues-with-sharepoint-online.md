@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 ms.assetid: 3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86
 description: I denne artikel kan du se, hvordan du kan diagnosticere almindelige problemer med dit SharePoint Online-websted ved hjælp af Udviklerværktøjer i Internet Explorer.
-ms.openlocfilehash: 274c819df7ffcb7cc18191bdd1c7fa0d4fa40290
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 041619991fdbdcb3e953fe2a06fd63dff0e9201f
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096518"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753798"
 ---
 # <a name="diagnosing-performance-issues-with-sharepoint-online"></a>Diagnosticering af problemer med ydeevnen med SharePoint Online
 
@@ -65,11 +65,11 @@ Tryk på **F12** for at få vist udviklerværktøjerne, og klik derefter på iko
   
 ![Skærmbillede af F12 udviklerværktøjer wi-fi-ikon.](../media/27acacbb-5688-459a-aa2f-5c8c5f17b76e.png)
   
-Tryk på den grønne afspilningsknap under fanen **Netværk** for at indlæse en side. Værktøjet returnerer alle de filer, som browseren anmoder om, for at få den side, du bad om. Følgende skærmbillede viser en sådan liste.
+Tryk på den grønne afspilningsknap under fanen **Netværk** for at indlæse en side. Værktøjet returnerer alle de filer, som browseren anmoder om, for at få den side, du bad om. På følgende skærmbillede kan du se en sådan liste.
   
 ![Skærmbillede af listen over filer, der er returneret med en sideanmodning.](../media/247a9422-76da-4b0c-bed3-ce77b05e4560.png)
   
-Du kan også se downloadtiderne for filerne i højre side som vist i dette skærmbillede.
+Du kan også se downloadtiderne for filerne i højre side som vist på dette skærmbillede.
   
 ![Diagram, der viser den tid, det tager at indlæse de ønskede sider fra SharePoint.](../media/d71ad1fa-9018-4fae-82eb-c1838e7db0ff.png)
   
@@ -83,7 +83,7 @@ Den bedste måde at bestemme dit websteds ydeevne på er ved at konfigurere en h
 ## <a name="viewing-sharepoint-response-header-information"></a>Visning SharePoint oplysninger i svarheaderen
 <a name="F12ToolInfo"> </a>
 
-I SharePoint Online kan du få adgang til de oplysninger, der sendes tilbage til browseren i svarheaderen for hver fil. Den mest nyttige værdi til diagnosticering af problemer med ydeevnen er **SPRequestDuration**, som viser den mængde tid, som anmodningen tog på den server, der skulle behandles. Dette kan hjælpe med at afgøre, om anmodningen er meget tung og ressourcekrævende. Dette er den bedste indsigt, du har i, hvor meget arbejde serveren gør for at tjene siden.
+I SharePoint Online kan du få adgang til de oplysninger, der sendes tilbage til browseren i svarheaderen for hver fil. Den mest nyttige værdi til diagnosticering af problemer med ydeevnen er **SPRequestDuration**, som viser den mængde tid, som anmodningen tog på den server, der skulle behandles. Dette kan hjælpe med at afgøre, om anmodningen er tung og ressourcekrævende. Dette er den bedste indsigt, du har i, hvor meget arbejde serveren gør for at tjene siden.
 
 ### <a name="to-view-sharepoint-response-header-information"></a>Sådan får du vist SharePoint oplysninger i svarheaderen
   
@@ -102,8 +102,8 @@ I SharePoint Online kan du få adgang til de oplysninger, der sendes tilbage til
 ## <a name="whats-causing-performance-issues-in-sharepoint-online"></a>Hvad forårsager problemer med ydeevnen i SharePoint Online?
 <a name="F12ToolInfo"> </a>
 
-I artiklen [Navigationsindstillinger for SharePoint Online](navigation-options-for-sharepoint-online.md) vises et eksempel på brug af værdien SPRequestDuration til at fastslå, at den komplicerede strukturelle navigation medførte, at siden tog lang tid at behandle på serveren. Ved at tage en værdi for et grundlæggende websted (uden tilpasning) er det muligt at afgøre, om en given fil tager lang tid at indlæse. Det eksempel, der bruges i [navigationsindstillinger for SharePoint Online](navigation-options-for-sharepoint-online.md), er den primære .aspx-fil. Filen indeholder de fleste af de ASP.NET kode, der kører for sideindlæsningen. Afhængigt af den webstedsskabelon, du bruger, kan det være start.aspx, home.aspx, default.aspx eller et andet navn, hvis du tilpasser startsiden. Hvis dette tal er betydeligt højere end dit oprindelige websted, er det en god indikation af, at der foregår noget komplekst på din side, som forårsager problemer med ydeevnen.
+I artiklen [Navigationsindstillinger for SharePoint Online](navigation-options-for-sharepoint-online.md) vises et eksempel på brug af værdien SPRequestDuration til at fastslå, at den komplicerede strukturelle navigation medførte, at siden tog lang tid at behandle på serveren. Ved at tage en værdi for et grundlæggende websted (uden tilpasning) er det muligt at afgøre, om en given fil tager lang tid at indlæse. Det eksempel, der bruges i [navigationsindstillinger for SharePoint Online](navigation-options-for-sharepoint-online.md), er den primære .aspx-fil. Filen indeholder de fleste af de ASP.NET kode, der kører for sideindlæsningen. Afhængigt af den webstedsskabelon, du bruger, kan det være start.aspx, home.aspx, default.aspx eller et andet navn, hvis du tilpasser startsiden. Hvis dette tal er betydeligt højere end dit oprindelige websted, er det en god indikation af, at der er noget komplekst på din side, der forårsager problemer med ydeevnen.
   
 Når du har identificeret et problem, der er specifikt for dit websted, anbefales det, at du finder ud af, hvad der forårsager dårlig ydeevne, ved at fjerne alle mulige årsager, f.eks. sidetilpasninger, og derefter føje dem tilbage til webstedet én efter én. Når du har fjernet nok tilpasninger, som siden klarer sig godt, kan du tilføje specifikke tilpasninger én efter én igen.
   
-Hvis du f.eks. har en meget kompleks navigation, kan du prøve at ændre navigationen, så der ikke vises underwebsteder, og derefter kontrollere udviklerværktøjerne for at se, om det gør en forskel. Eller hvis du har en stor mængde indholdsopløftninger, kan du prøve at fjerne dem fra din side og se, om det forbedrer noget. Hvis du fjerner alle de mulige årsager og tilføjer dem i ét ad gangen, kan du nemt identificere, hvilke funktioner der er det største problem, og derefter arbejde hen imod en løsning.
+Hvis du f.eks. har en kompleks navigation, kan du prøve at ændre navigationen, så den ikke viser underordnede websteder, og derefter kontrollere udviklerværktøjerne for at se, om det gør en forskel. Eller hvis du har en stor mængde indholdsopløftninger, kan du prøve at fjerne dem fra din side og se, om det forbedrer noget. Hvis du fjerner alle de mulige årsager og tilføjer dem i ét ad gangen, kan du nemt identificere, hvilke funktioner der er det største problem, og derefter arbejde hen imod en løsning.

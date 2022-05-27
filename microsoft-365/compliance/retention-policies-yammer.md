@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Yammer.
-ms.openlocfilehash: e90d83cb4b71600f4dbf8b16790454f523ce6c13
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: c479b7b08fd74b957a8ef7d23147758948459dc8
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286466"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754306"
 ---
 # <a name="learn-about-retention-for-yammer"></a>Få mere at vide om opbevaring for Yammer
 
@@ -57,7 +57,7 @@ Brug dette afsnit til at forstå, hvordan kravene til overholdelse af angivne st
 
 Du kan bruge en opbevaringspolitik til at gemme data fra communitymeddelelser og brugermeddelelser i Yammer og slette disse meddelelser. I baggrunden bruges Exchange postkasser til at gemme data, der er kopieret fra disse meddelelser. Data fra Yammer brugermeddelelser gemmes i en skjult mappe i postkassen for hver bruger, der er inkluderet i brugermeddelelsen, og en lignende skjult mappe i en gruppepostkasse bruges til communitymeddelelser.
 
-Kopier af communitymeddelelser kan også gemmes i den skjulte mappe med brugerpostkasser, når de @nævner brugere eller giver brugeren besked om et svar. Selvom disse meddelelser stammer fra en communitymeddelelse, vil en opbevaringspolitik for Yammer brugermeddelelser ofte indeholde kopier af communitymeddelelser. Brugermeddelelser er derfor ikke begrænset til private meddelelser.
+Kopier af communitymeddelelser kan også gemmes i den skjulte mappe med brugerpostkasser, når de @nævner brugere eller giver brugeren besked om et svar. Selvom disse meddelelser stammer fra en communitymeddelelse, vil en opbevaringspolitik for Yammer brugermeddelelser ofte indeholde kopier af communitymeddelelser. Det betyder, at brugermeddelelser ikke er begrænset til private meddelelser.
 
 Disse skjulte mapper er ikke designet til at være direkte tilgængelige for brugere eller administratorer, men i stedet gemme data, som overholdelsesadministratorer kan søge efter med eDiscovery-værktøjer.
 
@@ -66,10 +66,10 @@ Selvom de gemmes i Exchange, medtages Yammer meddelelser kun i en opbevaringspol
 > [!NOTE]
 > Hvis en bruger er inkluderet i en aktiv opbevaringspolitik, der bevarer Yammer data, og du sletter en postkasse for en bruger, der er inkluderet i denne politik, for at bevare de Yammer data, konverteres postkassen til en [inaktiv postkasse](inactive-mailboxes-in-office-365.md). Hvis du ikke har brug for at gemme denne Yammer data for brugeren, skal du udelade brugerkontoen fra opbevaringspolitikken, før du sletter brugerens postkasse.
 
-Når en opbevaringspolitik er konfigureret for Yammer meddelelser, evaluerer et timerjob fra tjenesten Exchange jævnligt elementer i den skjulte mappe, hvor disse Yammer meddelelser gemmes. Det tager op til syv dage at køre timerjobbet. Når disse elementer har udløbet deres opbevaringsperiode, flyttes de til mappen SubstrateHolds – en skjult mappe, der findes i alle bruger- eller gruppepostkasser, hvor de kan gemme "blød slettede" elementer, før de slettes permanent.
+Når en opbevaringspolitik er konfigureret for Yammer meddelelser, evaluerer et timerjob fra tjenesten Exchange jævnligt elementer i den skjulte mappe, hvor disse Yammer meddelelser gemmes. Det tager op til syv dage at køre timerjobbet. Når disse elementer har udløbet deres opbevaringsperiode, flyttes de til mappen SubstrateHolds – en skjult mappe, der er i alle bruger- eller gruppepostkasser, hvor de kan gemme "blød slettede" elementer, før de slettes permanent.
 
 > [!IMPORTANT]
-> På grund af det [første opbevaringsprincip](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Yammer meddelelser gemmes i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid, hvis postkassen påvirkes af en anden opbevaringspolitik (herunder politikker, der anvendes på Exchange  placering), procesførelse, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
+> På grund [af det første princip om opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Yammer meddelelser er gemt i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden opbevaringspolitik for samme placering, procesførelseshold, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
 >
 > Selvom postkassen er inkluderet i en relevant venteposition, vil Yammer meddelelser, der er blevet slettet, ikke længere være synlige i Yammer, men vil fortsat kunne findes med eDiscovery.
 
@@ -83,7 +83,7 @@ For de to stier i diagrammet:
 
 1. **Hvis en Yammer meddelelse redigeres eller slettes** af brugeren i opbevaringsperioden, kopieres den oprindelige meddelelse straks (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Meddelelsen gemmes der, indtil opbevaringsperioden udløber, og derefter slettes meddelelsen straks permanent.
 
-2. **Hvis en Yammer meddelelse ikke slettes**, og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager op til syv dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, slettes den derefter med det samme permanent. 
+2. **Hvis en Yammer meddelelse ikke slettes**, og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager op til syv dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, slettes den straks permanent. 
 
 > [!NOTE]
 > Der kan søges i meddelelser i mappen SubstrateHolds af eDiscovery-værktøjer. Indtil meddelelser slettes permanent (i mappen SubstrateHolds), kan der stadig søges i dem af eDiscovery-værktøjer.
@@ -110,7 +110,7 @@ Brug følgende eksempler til at se, hvordan de processer og tidsindstillinger, d
 - [Eksempel 2: Bevar i 30 dage, og slet derefter](#example-2-retain-for-30-days-and-then-delete)
 - [Eksempel 3: Slet kun efter 1 dag](#example-3-delete-only-after-1-day)
 
-For alle eksempler, der henviser til permanent sletning på grund [af principperne for opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), afbrydes denne handling midlertidigt, hvis meddelelsen er underlagt en anden opbevaringspolitik for at bevare elementet, eller hvis det er underlagt eDiscovery-bevarelse.
+For alle eksempler, der refererer til permanent sletning på grund [af principperne for opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), afbrydes denne handling midlertidigt, hvis meddelelsen er underlagt en anden opbevaringspolitik for at bevare elementet, eller hvis det er i eDiscovery-venteposition.
 
 ##### <a name="example-1-retain-only-for-7-years"></a>Eksempel 1: Bevar kun i 7 år
 

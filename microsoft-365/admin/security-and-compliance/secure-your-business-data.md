@@ -28,12 +28,12 @@ search.appverid:
 - MOE150
 ms.assetid: de2da300-dbb6-4725-bb12-b85a9d296e75
 description: Beskyt din virksomheds mail og dine data mod cybertrusler, herunder ransomware, phishing og skadelige vedhæftede filer.
-ms.openlocfilehash: ca159d8d2adda033b1786355c1505cb4d66b625a
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 44acc5b7b76d1ae355db88e9773982e1d1e1b4d2
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679642"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739499"
 ---
 # <a name="best-practices-for-securing-microsoft-365-for-business"></a>Bedste praksis for sikring af Microsoft 365 for virksomheder
 
@@ -352,5 +352,7 @@ Du kan få mere at vide i følgende ressourcer:
 ## <a name="related-content"></a>Relateret indhold
 
 [Multifaktorgodkendelse for Microsoft 365](multi-factor-authentication-microsoft-365.md) (artikel)\
-[Administrer og overvåg prioritetskonti](/microsoft-365/security/office-365-security/configure-review-priority-account) (artikel)\
-[Microsoft 365 rapporter i Administration](../activity-reports/activity-reports.md) (video)
+[Administrer og overvåg prioritetskonti](../setup/priority-accounts.md) (artikel)\
+[Microsoft 365 rapporter i Administration](../activity-reports/activity-reports.md) (video)\
+[Microsoft 365 Business Premium — cybersikkerhed for små virksomheder](/microsoft-365/business-premium/) (artikel)\
+

@@ -1,7 +1,7 @@
 ---
 title: Oversigt over Microsoft 365 Defender API'er
 description: Få mere at vide om de tilgængelige API'er i Microsoft 365 Defender
-keywords: API, API'er, oversigt, hændelse, hændelser, trusselssøgning, Microsoft 365 Defender
+keywords: api, apis, oversigt, hændelse, hændelser, trusselsjagt, Microsoft 365 Defender
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: ec4a497fd0ee428fbc664ae064ec95f74fcdce85
-ms.sourcegitcommit: 6f3bc00a5cf25c48c61eb3835ac069e9f41dc4db
+ms.openlocfilehash: c2a340c2ad147e32082a50e326a2e0c7e11718c2
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/24/2022
-ms.locfileid: "63591975"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739599"
 ---
 # <a name="overview-of-microsoft-365-defender-apis"></a>Oversigt over Microsoft 365 Defender API'er
 
@@ -37,35 +37,38 @@ ms.locfileid: "63591975"
 - Microsoft 365 Defender
 
 > [!IMPORTANT]
-> Nogle oplysninger relaterer til foreløbige produkter, som kan ændres væsentligt, før det frigives kommercielt. Microsoft påser ingen garantier, udtrykkelige eller underforståede, med hensyn til de oplysninger, du har angivet her.
+> Nogle oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-Microsoft 365 Defender er bygget oven på en integrationsklar platform.
+Microsoft 365 Defender er bygget oven på en platform, der er klar til integration.
 
-Brug den Microsoft 365 Defender API'er til at automatisere arbejdsprocesser baseret på den delte hændelse og avancerede søgetabeller.
+Brug Microsoft 365 Defender API'er til at automatisere arbejdsprocesser baseret på den delte hændelse og avancerede jagttabeller.
 
-- **[Samlet kø til hændelser](api-incident.md)** – Fokuser på det, der er vigtigt, ved at gruppere det fulde angrebsomfang og alle på hinanden følgende aktiver under hændelses-API'en.
+- **[Kø for kombinerede hændelser](api-incident.md)** – Fokuser på, hvad der er vigtigt, ved at gruppere det fulde angrebsomfang og alle påvirkede aktiver samlet under hændelses-API'en.
 
-- På tværs af **[produkttrusler](api-advanced-hunting.md)** – Udnyt dit sikkerhedsteams organisatoriske viden til at lede efter tegn på kompromis ved at oprette dine egne brugerdefinerede forespørgsler for at udnytte rå data, der er indsamlet på tværs af flere beskyttelsesprodukter.
+- **[Jagt på trusler på tværs af produkter](api-advanced-hunting.md)** – Udnyt dit sikkerhedsteams organisationsviden til at søge efter tegn på kompromis ved at oprette dine egne brugerdefinerede forespørgsler for at sidestille rådata, der indsamles på tværs af flere beskyttelsesprodukter.
 
-- **[Hændelsesstreaming-API](streaming-api.md)** – Send begivenheder og beskeder i realtid i en enkelt datastrøm, mens de opstår.
+- **[API til hændelsesstreaming](streaming-api.md)** – Send hændelser i realtid og beskeder i en enkelt datastream, efterhånden som de opstår.
 
-Sammen med disse Microsoft 365 Defender-specifikke API'er fremviser hver af vores andre sikkerhedsprodukter yderligere API'er, der kan hjælpe dig med at udnytte deres unikke egenskaber.[](api-articles.md)
+Sammen med disse Microsoft 365 Defender-specifikke API'er fremviser hvert af vores andre sikkerhedsprodukter [yderligere API'er](api-articles.md) for at hjælpe dig med at drage fordel af deres unikke funktioner.
 
 > [!NOTE]
-> Overgangen til den samlede portal bør ikke påvirke PowerBi-dashboards, der er baseret på Microsoft Defender til slutpunkt-API'er. Du kan fortsætte med at arbejde med de eksisterende API'er uanset den interaktive portalovergang.
+> Overgangen til den samlede portal må ikke påvirke PowerBi-dashboards, der er baseret på Microsoft Defender for Endpoint API'er. Du kan fortsætte med at arbejde med de eksisterende API'er uanset den interaktive portalovergang.
+
+Se denne korte video for at få mere at vide om, hvordan du kan bruge Microsoft 365 Defender til at automatisere arbejdsprocesser og integrere apps.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4d73M?rel=0]
 
 ## <a name="learn-more"></a>Lær mere
 
-| **Forstå, hvordan du får adgang til API'er** |
+| **Forstå, hvordan du får adgang til API'erne** |
 |-|
-| [Få mere at vide om API-kvoter og licenser](api-terms.md) |
-| [Få adgang til Microsoft 365 Defender API'er](api-access.md) |
+| [Få mere at vide om API-kvoter og -licenser](api-terms.md) |
+| [Få adgang til de Microsoft 365 Defender API'er](api-access.md) |
 | **Byg apps** |
-| [Opret en "Hej verden"-app](api-hello-world.md) |
-| [Oprette en app til at få adgang Microsoft 365 Defender API'er på vegne af en bruger](api-create-app-user-context.md) |
-| [Opret en app for at få adgang Microsoft 365 Defender uden en bruger](api-create-app-web.md) |
-| [Opret en app med partneradgang til flere lejere til Microsoft 365 Defender API'er](api-partner-access.md) |
-| **Fejlfinding og vedligeholdelse af dine apps** |
-| [Forstå API-fejlkoder](api-error-codes.md) |
+| [Opret en 'Hello world'-app](api-hello-world.md) |
+| [Opret en app for at få adgang til Microsoft 365 Defender API'er på vegne af en bruger](api-create-app-user-context.md) |
+| [Opret en app for at få adgang til Microsoft 365 Defender uden en bruger](api-create-app-web.md) |
+| [Opret en app med partneradgang med flere lejere til Microsoft 365 Defender API'er](api-partner-access.md) |
+| **Foretag fejlfinding af og vedligehold dine apps** |
+| [Om API-fejlkoder](api-error-codes.md) |
 | [Administrer hemmeligheder i dine apps med Azure Key Vault](/learn/modules/manage-secrets-with-azure-key-vault/) |
-| [Implementer OAuth 2.0-godkendelse til bruger logon](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code) |
+| [Implementer OAuth 2.0-godkendelse for brugerlogon](/azure/active-directory/develop/active-directory-v2-protocols-oauth-code) |

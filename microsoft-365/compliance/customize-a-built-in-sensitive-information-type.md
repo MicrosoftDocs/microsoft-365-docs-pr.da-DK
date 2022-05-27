@@ -1,5 +1,5 @@
 ---
-title: Tilpasse en indbygget følsom oplysningstype
+title: Tilpas en indbygget type af følsomme oplysninger
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,54 +17,56 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du opretter en brugerdefineret type af følsomme oplysninger, der gør det muligt at bruge regler, der opfylder din organisations behov.
-ms.openlocfilehash: 8393da8e2b2607692983010783d9ae110f268f4c
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Få mere at vide om, hvordan du opretter en brugerdefineret type følsomme oplysninger, der giver dig mulighed for at bruge regler, der opfylder organisationens behov.
+ms.openlocfilehash: f0ebc1bb4b13f9e31ca1a8a1967fce007105cfe6
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63587272"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753886"
 ---
-# <a name="customize-a-built-in-sensitive-information-type"></a>Tilpasse en indbygget følsom oplysningstype
+# <a name="customize-a-built-in-sensitive-information-type"></a>Tilpas en indbygget type af følsomme oplysninger
 
-Når du søger efter følsomme oplysninger i indhold, skal du beskrive oplysningerne i det, der kaldes en *regel*. Forebyggelse af datatab (DLP) indeholder regler for de mest almindelige typer af følsomme oplysninger, som du kan bruge med det samme. Hvis du vil bruge disse regler, skal du medtage dem i en politik. Det kan være, at du vil justere disse indbyggede regler, så de opfylder din organisations specifikke behov, og det kan du gøre ved at oprette en brugerdefineret type af følsomme oplysninger. I dette emne kan du se, hvordan du kan tilpasse XML-filen, der indeholder den eksisterende regelsamling, til at registrere en bredere række potentielle kreditkortoplysninger.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Du kan tage dette eksempel og anvende det på andre indbyggede typer af følsomme oplysninger. Du kan finde en liste over standardtyper for følsomme oplysninger og XML-definitioner [i Enhedsdefinitioner for følsomme oplysninger.](sensitive-information-type-entity-definitions.md).
+Når du søger efter følsomme oplysninger i indhold, skal du beskrive disse oplysninger i det, der kaldes en *regel*. Microsoft Purview Forebyggelse af datatab (DLP) indeholder regler for de mest almindelige typer følsomme oplysninger, som du kan bruge med det samme. Hvis du vil bruge disse regler, skal du inkludere dem i en politik. Det kan være, at du vil justere disse indbyggede regler, så de opfylder organisationens specifikke behov, og det kan du gøre ved at oprette en brugerdefineret type følsomme oplysninger. I dette emne kan du se, hvordan du tilpasser den XML-fil, der indeholder den eksisterende regelsamling, for at registrere et større udvalg af potentielle kreditkortoplysninger.
 
-## <a name="export-the-xml-file-of-the-current-rules"></a>Eksportere XML-filen med de aktuelle regler
+Du kan tage dette eksempel og anvende det på andre indbyggede typer følsomme oplysninger. Du kan se en liste over standardtyper for følsomme oplysninger og XML-definitioner under [Objektdefinitioner for følsomme oplysninger.](sensitive-information-type-entity-definitions.md)
 
-Hvis du vil eksportere XML'en, skal [du oprette forbindelse til Security and Compliance Center via Remote PowerShell](/powershell/exchange/connect-to-scc-powershell).
+## <a name="export-the-xml-file-of-the-current-rules"></a>Eksportér XML-filen for de aktuelle regler
 
-1. I PowerShell skal du skrive følgende for at få vist din organisations regler på skærmen. Hvis du ikke har oprettet din egen, får du kun vist de indbyggede standardregler med navnet "Microsoft Rule Package".
+Hvis du vil eksportere XML-koden, skal du [oprette forbindelse til Security and Compliance Center via Remote PowerShell.](/powershell/exchange/connect-to-scc-powershell)
+
+1. I PowerShell skal du skrive følgende for at få vist organisationens regler på skærmen. Hvis du ikke har oprettet dine egne, kan du kun se de indbyggede standardregler, der er forsynet med mærkaten "Microsoft Rule Package".
 
    ```powershell
    Get-DlpSensitiveInformationTypeRulePackage
    ```
 
-2. Store din organisations regler i en variabel ved at skrive følgende. Når du gemmer noget i en variabel, bliver det nemt tilgængeligt senere i et format, der fungerer med PowerShell-fjernkommandoer.
+2. Store organisationens regler i en variabel ved at skrive følgende. Lagring af noget i en variabel gør det let tilgængeligt senere i et format, der fungerer til fjernkommandoer i PowerShell.
 
    ```powershell
    $ruleCollections = Get-DlpSensitiveInformationTypeRulePackage
    ```
 
-3. Lav en formateret XML-fil med alle dataene ved at skrive følgende.
+3. Opret en formateret XML-fil med alle disse data ved at skrive følgende.
 
    ```powershell
    [System.IO.File]::WriteAllBytes('C:\custompath\exportedRules.xml', $ruleCollections.SerializedClassificationRuleCollection)
    ```
 
    > [!IMPORTANT]
-   > Sørg for at bruge den filplacering, hvor regelpakken rent faktisk er gemt. `C:\custompath\` er en pladsholder.
+   > Sørg for at bruge den filplacering, hvor regelpakken faktisk er gemt. `C:\custompath\` er en pladsholder.
 
-## <a name="find-the-rule-that-you-want-to-modify-in-the-xml"></a>Finde den regel, du vil ændre i XML
+## <a name="find-the-rule-that-you-want-to-modify-in-the-xml"></a>Find den regel, du vil ændre, i XML-filen
 
-Cmdlet'erne ovenfor eksporterede hele samlingen *af regler*, hvilket omfatter de standardregler, vi angiver. Derefter skal du søge specifikt efter den kreditkortnummerregel, du vil ændre.
+Cmdlet'erne ovenfor eksporterede hele *regelsamlingen*, som indeholder de standardregler, vi angiver. Derefter skal du kigge specifikt efter den kreditkortnummerregel, du vil ændre.
 
-1. Brug en teksteditor til at åbne XML-filen, du eksporterede i forrige afsnit.
+1. Brug en teksteditor til at åbne den XML-fil, du eksporterede i forrige afsnit.
 
-2. Rul ned til mærket `<Rules>` , som er starten af den sektion, der indeholder DLP-reglerne. Da denne XML-fil indeholder oplysningerne for hele regelsamlingen, indeholder den andre oplysninger øverst, som du skal rulle forbi for at komme til reglerne.
+2. Rul ned til `<Rules>` mærket, som er starten på den sektion, der indeholder DLP-reglerne. Da denne XML-fil indeholder oplysningerne for hele regelsamlingen, indeholder den andre oplysninger øverst, som du skal rulle forbi for at få adgang til reglerne.
 
-3. Se efter *Func_credit_card* for at finde definitionen af reglen Kreditkortnummer. I XML-koden må regelnavne ikke indeholde mellemrum, så mellemrummene erstattes normalt med understregningstegn, og regelnavne er nogle gange forkortet. Et eksempel på dette er den amerikanske cpr-regel, der er forkortet _SSN_. XML-reglen Kreditkortnummer skal ligne følgende kodeeksempel.
+3. Søg efter *Func_credit_card* for at finde definitionen af reglen Kreditkortnummer. I XML må regelnavne ikke indeholde mellemrum, så mellemrummene erstattes normalt med understregningstegn, og regelnavne forkortes nogle gange. Et eksempel på dette er den amerikanske cpr-nummerregel, som forkortes _SSN_. XML-koden kreditkortnummer skal ligne følgende kodeeksempel.
 
    ```xml
    <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085"
@@ -80,13 +82,13 @@ Cmdlet'erne ovenfor eksporterede hele samlingen *af regler*, hvilket omfatter de
        </Entity>
    ```
 
-Nu hvor du har placeret definitionen af kreditkortnummer i XML-koden, kan du tilpasse reglens XML, så den opfylder dine behov. Du kan finde en opdatering af XML-definitionerne [i Ordliste](#term-glossary) til sidst i dette emne.
+Nu, hvor du har fundet definitionen af reglen Kreditkortnummer i XML-koden, kan du tilpasse reglens XML, så den opfylder dine behov. Hvis du vil have en opdatering af XML-definitioner, skal du se [ordlisten](#term-glossary) i slutningen af dette emne.
 
-## <a name="modify-the-xml-and-create-a-new-sensitive-information-type"></a>Redigere XML og oprette en ny type af følsomme oplysninger
+## <a name="modify-the-xml-and-create-a-new-sensitive-information-type"></a>Rediger XML-koden, og opret en ny type følsomme oplysninger
 
-Først skal du oprette en ny type af følsomme oplysninger, da du ikke kan ændre standardreglerne direkte. Du kan gøre en lang række forskellige ting med brugerdefinerede typer af følsomme oplysninger, som er beskrevet i Opret en brugerdefineret type af følsomme oplysninger i [Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md). I dette eksempel holder vi det enkelt og fjerner kun bekræftende beviser og føjer nøgleord til kreditkortnummerreglen.
+Først skal du oprette en ny type følsomme oplysninger, fordi du ikke kan ændre standardreglerne direkte. Du kan gøre en lang række ting med brugerdefinerede typer følsomme oplysninger, som er beskrevet i [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md). I dette eksempel holder vi det enkelt og fjerner kun bekræftende beviser og føjer nøgleord til reglen Kreditkortnummer.
 
-Alle XML-regeldefinitioner er baseret på følgende generelle skabelon. Du skal kopiere og indsætte XML'en til definition af kreditkortnummer i skabelonen, redigere nogle værdier (bemærk ". . ." i følgende eksempel), og derefter overføre den ændrede XML som en ny regel, der kan bruges i politikker.
+Alle definitioner af XML-regler er baseret på følgende generelle skabelon. Du skal kopiere og indsætte XML-koden til definitionen af kreditkortnummer i skabelonen, redigere nogle værdier (bemærk ". . ." pladsholdere i følgende eksempel), og upload derefter den ændrede XML som en ny regel, der kan bruges i politikker.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -115,7 +117,7 @@ Alle XML-regeldefinitioner er baseret på følgende generelle skabelon. Du skal 
 </RulePackage>
 ```
 
-Nu har du noget, der ligner følgende XML. Da regelpakker og regler identificeres af deres entydige GUID'er, skal du oprette to GUID'er: én for regelpakken og én til at erstatte GUID'et for kreditkortnummerreglen. GUID'et for enheds-id'et i følgende kodeprøve er eksemplet for vores indbyggede regeldefinition, som du skal erstatte med en ny. Der er flere måder at oprette GUID'er på, men du kan nemt gøre det i PowerShell ved at skrive **[guid]::NewGuid()**.
+Nu har du noget, der ligner følgende XML. Da regelpakker og regler identificeres af deres entydige GUID'er, skal du generere to GUID'er: én for regelpakken og én for at erstatte GUID'et for reglen for kreditkortnummer. GUID'et for enheds-id'et i følgende kodeeksempel er det samme som for vores indbyggede regeldefinition, som du skal erstatte med en ny. Der er flere måder at generere GUID'er på, men du kan nemt gøre det i PowerShell ved at skrive **[guid]::NewGuid()**.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -155,9 +157,9 @@ Nu har du noget, der ligner følgende XML. Da regelpakker og regler identificere
 </RulePackage>
 ```
 
-## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Fjern bekræftelseskravet fra en følsom oplysningstype
+## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Fjern det bekræftede beviskrav fra en type følsomme oplysninger
 
-Nu hvor du har en ny type af følsomme oplysninger, som du kan overføre til Security &amp; Compliance Center, er næste trin at gøre reglen mere specifik. Rediger reglen, så den kun søger efter et 16-cifret tal, der består kontrolsummet, men ikke kræver yderligere (bekræftende) beviser, f.eks. nøgleord. For at gøre dette skal du fjerne den del af XML, der søger efter bekræftende beviser. Bekræftende beviser er meget nyttige til at reducere falske positive. I dette tilfælde er der normalt visse nøgleord eller en udløbsdato i nærheden af kreditkortnummeret. Hvis du fjerner dette bevis, `confidenceLevel`skal du også justere, hvor sikker du er på, at du har fundet et kreditkortnummer, ved at sænke , hvilket er 85 i eksemplet.
+Nu, hvor du har en ny type følsomme oplysninger, som du kan uploade til Microsoft Purview-compliance-portal, er det næste trin at gøre reglen mere specifik. Rediger reglen, så den kun søger efter et 16-cifret tal, der består kontrolsummen, men som ikke kræver yderligere (bekræftende) beviser, f.eks. nøgleord. Hvis du vil gøre dette, skal du fjerne den del af XML, der søger efter bekræftende beviser. Korrative beviser er meget nyttige til at reducere falske positiver. I dette tilfælde er der normalt visse nøgleord eller en udløbsdato i nærheden af kreditkortnummeret. Hvis du fjerner disse beviser, skal du også justere, hvor sikker du er på, at du har fundet et kreditkortnummer ved at `confidenceLevel`sænke , hvilket er 85 i eksemplet.
 
 ```xml
 <Entity id="db80b3da-0056-436e-b0ca-1f4cf7080d1f" patternsProximity="300"
@@ -167,9 +169,9 @@ Nu hvor du har en ny type af følsomme oplysninger, som du kan overføre til Sec
     </Entity>
 ```
 
-## <a name="look-for-keywords-that-are-specific-to-your-organization"></a>Se efter nøgleord, der er specifikke for din organisation
+## <a name="look-for-keywords-that-are-specific-to-your-organization"></a>Søg efter nøgleord, der er specifikke for din organisation
 
-Det kan være en ide at kræve bekræftende beviser, men ønsker forskellige eller yderligere nøgleord, og måske vil du ændre, hvor du skal lede efter beviserne. Du kan justere for `patternsProximity` at udvide eller formindske vinduet for bekræftende beviser omkring det 16-cifrede tal. Hvis du vil tilføje dine egne nøgleord, skal du definere en nøgleordsliste og henvise til den i din regel. Følgende XML tilføjer nøgleordene "firmakort" og "Contoso-kort", så alle meddelelser, der indeholder disse udtryk inden for 150 tegn af et kreditkortnummer, identificeres som et kreditkortnummer.
+Du vil måske kræve bekræftende beviser, men ønsker forskellige eller yderligere nøgleord, og måske vil du ændre, hvor du skal lede efter disse beviser. Du kan justere `patternsProximity` for at udvide eller formindske vinduet for at få bekræftet beviser omkring det 16-cifrede tal. Hvis du vil tilføje dine egne nøgleord, skal du definere en nøgleordsliste og referere til den i din regel. Følgende XML tilføjer nøgleordene "firmakort" og "Contoso-kort", så alle meddelelser, der indeholder disse udtryk inden for 150 tegn fra et kreditkortnummer, identificeres som et kreditkortnummer.
 
 ```xml
 <Rules>
@@ -195,11 +197,11 @@ Det kan være en ide at kræve bekræftende beviser, men ønsker forskellige ell
     </Keyword>
 ```
 
-## <a name="upload-your-rule"></a>Upload din regel
+## <a name="upload-your-rule"></a>Upload reglen
 
-Hvis du vil overføre reglen, skal du gøre følgende.
+Hvis du vil uploade din regel, skal du gøre følgende.
 
-1. Gem den som en .xml med Unicode-kodning. Dette er vigtigt, fordi reglen ikke fungerer, hvis filen gemmes med en anden kodning.
+1. Gem den som en .xml fil med Unicode-kodning. Dette er vigtigt, da reglen ikke fungerer, hvis filen gemmes med en anden kodning.
 
 2. [Forbind til Security and Compliance Center via Remote PowerShell.](/powershell/exchange/connect-to-scc-powershell)
 
@@ -210,40 +212,40 @@ Hvis du vil overføre reglen, skal du gøre følgende.
    ```
 
    > [!IMPORTANT]
-   > Sørg for at bruge den filplacering, hvor regelpakken rent faktisk er gemt. `C:\custompath\` er en pladsholder.
+   > Sørg for at bruge den filplacering, hvor regelpakken faktisk er gemt. `C:\custompath\` er en pladsholder.
 
-4. Skriv Y for at bekræfte, og tryk derefter på **Enter**.
+4. Du kan bekræfte ved at skrive Y og derefter trykke på **Enter**.
 
-5. Kontrollér, at den nye regel er blevet overført og dens viste navn ved at skrive:
+5. Bekræft, at den nye regel blev overført, og dens viste navn ved at skrive:
 
    ```powershell
    Get-DlpSensitiveInformationType
    ```
 
-For at begynde at bruge den nye regel til at registrere følsomme oplysninger skal du føje reglen til en DLP-politik. Du kan få mere at vide om, hvordan du føjer reglen til en politik, [under Opret en DLP-politik ud fra en skabelon](create-a-dlp-policy-from-a-template.md).
+Hvis du vil bruge den nye regel til at registrere følsomme oplysninger, skal du føje reglen til en DLP-politik. Hvis du vil vide mere om, hvordan du føjer reglen til en politik, skal du se [Opret en DLP-politik ud fra en skabelon](create-a-dlp-policy-from-a-template.md).
 
 ## <a name="term-glossary"></a>Ordliste
 
-Dette er definitionerne for de udtryk, du stødte på under denne procedure.
+Dette er definitionerne for de ord, du oplevede under denne procedure.
 
 <br>
 
 ****
 
-|Ord|Definition|
+|Udtrykket|Definition|
 |---|---|
-|Enhed|Enheder er det, vi kalder følsomme oplysningstyper, f.eks kreditkortnumre. Hver enhed har et entydigt GUID som dets id. Hvis du kopierer et GUID og søger efter det i XML, kan du finde XML-regeldefinitionen og alle de oversatte oversættelser af den pågældende XML-regel. Du kan også finde denne definition ved at finde GUID'et til oversættelsen og derefter søge efter det pågældende GUID.|
-|Funktioner|XML-filreferencerne `Func_credit_card`, som er en funktion i kompileret kode. Funktioner bruges til at køre komplekse regexes og kontrollere, at kontrolsum svarer til vores indbyggede regler.) Da dette sker i koden, vises nogle af variablerne ikke i XML-filen.|
-|IdMatch|Dette er den identifikator, som mønsteret forsøger at matche – f.eks. et kreditkortnummer.|
-|Lister over nøgleord|XML-filen henviser også til `keyword_cc_verification` og `keyword_cc_name`, som er lister med nøgleord, hvorfra vi leder efter match i `patternsProximity` til enheden. Disse vises ikke i øjeblikket i XML-format.|
-|Mønster|Mønsteret indeholder listen over, hvad den følsomme type leder efter. Dette omfatter nøgleord, regexes og interne funktioner, som udfører opgaver som bekræftelse af kontrolsum. Typer af følsomme oplysninger kan have flere mønstre med entydige tillidsmønstre. Dette er nyttigt, når du opretter en følsom oplysningstype, der returnerer en høj grad af tillid, hvis der findes bekræftende beviser, og en lavere grad af tillid, hvis der kun er få eller ingen bekræftende beviser.|
-|MønstertillidssikkerhedNiveau|Dette er tillidsniveauet til, at DLP-programmet fandt et match. Dette tillidsniveau er knyttet til et match for mønsteret, hvis mønsteret krav er opfyldt. Dette er den tillidsforanstaltning, du bør overveje, Exchange regler for mailflow (også kaldet transportregler).|
-|PatternsProximity|Når vi finder ud af, hvad der ligner et mønster for kreditkortnummer, `patternsProximity` er afstanden omkring det tal, hvor vi skal lede efter bekræftende beviser.|
-|recommendedConfidence|Dette er tillidsniveauet, vi anbefaler til denne regel. Den anbefalede tillid gælder for enheder og affiniteter. For enheder evalueres dette tal aldrig i forhold til `confidenceLevel` mønsteret. Det er blot et forslag, der kan hjælpe dig med at vælge et tillidsniveau, hvis du vil anvende et. For affiniteter skal mønsteret `confidenceLevel` være `recommendedConfidence` højere end tallet, for at en regelhandling for mailflow kan aktiveres. Det `recommendedConfidence` er standardtillidsniveauet, der bruges i regler for mailflow, der aktiverer en handling. Hvis du vil, kan du manuelt ændre reglen for mailflow, så den aktiveres på basis af mønsteret's tillidsniveau, i stedet.|
+|Enhed|Objekter er, hvad vi kalder typer af følsomme oplysninger, f.eks. kreditkortnumre. Hvert objekt har et entydigt GUID som id. Hvis du kopierer et GUID og søger efter det i XML, kan du finde definitionen af XML-reglen og alle lokaliserede oversættelser af den pågældende XML-regel. Du kan også finde denne definition ved at finde GUID'et til oversættelsen og derefter søge efter det pågældende GUID.|
+|Funktioner|XML-filen henviser til `Func_credit_card`, som er en funktion i kompileret kode. Funktioner bruges til at køre komplekse regexes og kontrollere, at kontrolsummen stemmer overens med vores indbyggede regler. Da dette sker i koden, vises nogle af variablerne ikke i XML-filen.|
+|IdMatch|Dette er det id, som mønsteret skal forsøge at matche – f.eks. et kreditkortnummer.|
+|Nøgleordslister|XML-filen henviser også til `keyword_cc_verification` og `keyword_cc_name`, som er lister over nøgleord, som vi søger efter match fra i `patternsProximity` for objektet . Disse vises i øjeblikket ikke i XML-koden.|
+|Mønster|Mønsteret indeholder en liste over, hvad den følsomme type søger efter. Dette omfatter nøgleord, regexes og interne funktioner, der udfører opgaver som f.eks. at kontrollere kontrolsummene. Følsomme informationstyper kan have flere mønstre med entydige konfidenser. Dette er nyttigt, når du opretter en følsom informationstype, der returnerer en høj tillid, hvis der findes bekræftende beviser, og en lavere tillid, hvis der findes lidt eller ingen bekræftende beviser.|
+|Mønster konfidensniveau|Dette er graden af tillid til, at DLP-programmet fandt et match. Dette konfidensniveau er knyttet til et match for mønsteret, hvis mønsterets krav er opfyldt. Dette er den tillidsmåling, du bør overveje, når du bruger Exchange regler for mailflow (også kaldet transportregler).|
+|patternsProximity|Når vi finder, hvad der ligner et kreditkortnummer mønster, `patternsProximity` er nærhed omkring det tal, hvor vi vil søge bekræftende beviser.|
+|recommendedConfidence|Dette er det tillidsniveau, vi anbefaler til denne regel. Den anbefalede tillid gælder for objekter og tilhørsforhold. For objekter evalueres dette tal aldrig i forhold til `confidenceLevel` mønsteret for . Det er blot et forslag, der kan hjælpe dig med at vælge et tillidsniveau, hvis du vil anvende et. I forbindelse `confidenceLevel` med tilhørsforhold skal mønsteret være højere end antallet for `recommendedConfidence` en regelhandling i et mailflow, der skal aktiveres. `recommendedConfidence` er det standardsikkerhedsniveau, der bruges i regler for mailflow, der aktiverer en handling. Hvis du vil, kan du manuelt ændre den regel for mailflowet, der skal aktiveres, på baggrund af mønsterets konfidensniveau i stedet.|
 |
 
-## <a name="for-more-information"></a>Du kan finde flere oplysninger
+## <a name="for-more-information"></a>Du kan få flere oplysninger
 
-- [Enhedsdefinitioner for følsomme oplysningstyper](sensitive-information-type-entity-definitions.md)
-- [Oprette en brugerdefineret type af følsomme oplysninger](create-a-custom-sensitive-information-type.md)
+- [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
+- [Opret en brugerdefineret type følsomme oplysninger](create-a-custom-sensitive-information-type.md)
 - [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)

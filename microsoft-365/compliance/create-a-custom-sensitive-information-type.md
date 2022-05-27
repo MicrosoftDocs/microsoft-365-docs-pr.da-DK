@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du opretter, redigerer, fjerner og tester brugerdefinerede typer følsomme oplysninger i Overholdelsescenter.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ff6a66b092d433fcfde7723f252fea679c2a3050
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 0d93259cfe76419e253c450c4cd5ed7f03f3b85c
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759820"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753497"
 ---
 # <a name="create-custom-sensitive-information-types-in-the-compliance-center"></a>Opret brugerdefinerede typer følsomme oplysninger i Overholdelsescenter
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvis de forudkonfigurerede typer af følsomme oplysninger ikke opfylder dine behov, kan du oprette dine egne brugerdefinerede typer følsomme oplysninger, som du definerer fuldt ud, eller du kan kopiere en af de forudkonfigurerede og redigere den.
 
@@ -45,9 +47,9 @@ Der er to måder at oprette en ny type følsomme oplysninger på:
   - [Funktioner for type af følsomme oplysninger](sit-functions.md)
   - [tillidsniveauer](sensitive-information-type-learn-about.md#more-on-confidence-levels)
 
-- Du skal have tilladelser som global administrator eller overholdelsesadministrator for at oprette, teste og installere en brugerdefineret type følsomme oplysninger via brugergrænsefladen. Se [Om administratorroller](/office365/admin/add-users/about-admin-roles) i Office 365.
+- Organisationen skal have et abonnement, f.eks. Office 365 Enterprise, der omfatter Microsoft Purview Forebyggelse af datatab (DLP). Se [Meddelelsespolitik og OverholdelsestjenesteBeskrivelse](/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc). 
 
-- Din organisation skal have et abonnement, f.eks. Office 365 Enterprise, der omfatter DLP (Forebyggelse af datatab). Se [Meddelelsespolitik og OverholdelsestjenesteBeskrivelse](/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc).
+- Din organisation skal have et abonnement, f.eks. Office 365 Enterprise, der omfatter forebyggelse af datatab (DLP). Se [Meddelelsespolitik og OverholdelsestjenesteBeskrivelse](/office365/servicedescriptions/exchange-online-protection-service-description/messaging-policy-and-compliance-servicedesc).
 
 > [!IMPORTANT]
 > Microsoft Customer Service & Support kan ikke hjælpe med at oprette brugerdefinerede klassificeringer eller regulære udtryksmønstre. Supportteknikere kan yde begrænset support til funktionen, f.eks. ved at levere eksempler på mønstre for regulære udtryk til testformål eller hjælpe med fejlfinding af et eksisterende mønster for regulære udtryk, der ikke udløses som forventet, men som ikke kan give forsikringer om, at enhver brugerdefineret udvikling, der matcher indhold, vil opfylde dine krav eller forpligtelser.
@@ -104,7 +106,7 @@ Brug denne procedure til at oprette en ny type følsomme oplysninger, der er bas
 
 Du kan også oprette brugerdefinerede typer følsomme oplysninger ved hjælp af PowerShell og funktionerne Exact Data Match. Du kan få mere at vide om disse metoder under:
 
-- [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [Opret en brugerdefineret type følsomme oplysninger i Microsoft Purview PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 - [Få mere at vide om nøjagtigt datamatch baseret på typer af følsomme oplysninger](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
 
 1. I Overholdelsescenter skal du gå til **Dataklassificering** \> **Typer af følsomme oplysninger** og vælge den type følsomme oplysninger, du vil kopiere.
@@ -170,7 +172,7 @@ Optællingsgrænsen for SIT-forekomster gælder, når SIT'er bruges i disse løs
 
 - DLP-politikker
 - Information Protection
-- Styring af oplysninger
+- Administration af datalivscyklus
 - Kommunikation med overholdelse af angivne standarder
 - Datastyring
 - Microsoft Defender for Cloud Apps

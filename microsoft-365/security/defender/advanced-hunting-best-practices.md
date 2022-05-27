@@ -1,7 +1,7 @@
 ---
-title: Avancerede bedste fremgangsmåder til forespørgsel på Microsoft 365 Defender
-description: Få mere at vide om, hvordan du konstruerer hurtige, effektive og fejlfri trusselsforespørgsler med avanceret jagt
-keywords: avanceret jagt, trusselssøgning, cybertrusler på jagt, Microsoft 365 Defender, microsoft 365, m365, søg, forespørgsel, telemetri, skema, kusto, undgå timeout, kommandolinjer, proces-id, optimer, bedste praksis, parse, deltag, opsummer
+title: Avancerede bedste praksisser for jagtforespørgslen i Microsoft 365 Defender
+description: Få mere at vide om, hvordan du konstruerer forespørgsler om hurtig, effektiv og fejlfri trusselsjagt med avanceret jagt
+keywords: avanceret jagt, trusselsjagt, cybertrusselsjagt, Microsoft 365 Defender, microsoft 365, m365, søgning, forespørgsel, telemetri, skema, kusto, undgå timeout, kommandolinjer, proces-id, optimere, bedste praksis, fortolke, joinforbinde, opsummere
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,14 +18,14 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: d797fb8843bdf5d29e9af43cac152461eb379e5f
-ms.sourcegitcommit: 4af23696ff8b44872330202fe5dbfd2a69d9ddbf
+ms.openlocfilehash: 505308bec005811e174b90cde9e872532ccacdfe
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/30/2021
-ms.locfileid: "63591188"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739477"
 ---
-# <a name="advanced-hunting-query-best-practices"></a>Bedste fremgangsmåder for avanceret forespørgselsforespørgsel
+# <a name="advanced-hunting-query-best-practices"></a>Avancerede bedste praksisser for jagtforespørgslen
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -33,21 +33,21 @@ ms.locfileid: "63591188"
 **Gælder for:**
 - Microsoft 365 Defender
 
-Anvend disse anbefalinger for at få resultater hurtigere og undgå timeouts, mens du kører komplekse forespørgsler. Du kan finde flere vejledninger til forbedring af ydeevnen for forespørgsler ved at læse [Bedste fremgangsmåder for Kusto-forespørgsler](/azure/kusto/query/best-practices).
+Anvend disse anbefalinger for at opnå resultater hurtigere og undgå timeout under kørsel af komplekse forespørgsler. Hvis du vil have mere hjælp til at forbedre ydeevnen af forespørgsler, skal du læse [Bedste praksis for Kusto-forespørgsler](/azure/kusto/query/best-practices).
 
-## <a name="understand-cpu-resource-quotas"></a>Forstå CPU-ressourcekvoter
-Afhængigt af størrelsen har hver lejer adgang til en bestemt mængde CPU-ressourcer, der er allokeret til at køre avancerede forespørgselsforespørgsler. Du kan få detaljerede oplysninger om forskellige forbrugsparametre ved [at læse om avancerede kvote- og forbrugsparametre](advanced-hunting-limits.md).
+## <a name="understand-cpu-resource-quotas"></a>Forstå kvoter for CPU-ressourcer
+Afhængigt af størrelsen har hver lejer adgang til en bestemt mængde CPU-ressourcer, der er allokeret til kørsel af avancerede jagtforespørgsler. Du kan finde detaljerede oplysninger om forskellige forbrugsparametre ved [at læse om avancerede jagtkvoter og forbrugsparametre](advanced-hunting-limits.md).
 
-Når du har kørt forespørgslen, kan du se eksekveringstiden og dets ressourceforbrug (Lav, Mellem, Høj). Høj angiver, at forespørgslen tog flere ressourcer at køre og kunne forbedres for at returnere resultater mere effektivt.
+Når du har kørt din forespørgsel, kan du se udførelsestiden og dens ressourceforbrug (Lav, Mellem, Høj). High angiver, at forespørgslen tog flere ressourcer at køre og kunne forbedres for at returnere resultater mere effektivt.
 
-:::image type="content" source="../../media/resource-usage.png" alt-text="Forespørgselsdetaljerne under fanen **Resultater** i Microsoft 365 Defender portal" lightbox="../../media/resource-usage.png":::
+:::image type="content" source="../../media/resource-usage.png" alt-text="Forespørgselsdetaljerne under fanen **Resultater** på Microsoft 365 Defender-portalen" lightbox="../../media/resource-usage.png":::
 
-Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug og anvende optimeringsvejledningen i denne artikel for at minimere afbrydelser, der opstår som følge af, at kvoter eller brugsparametre overskrides.
+Kunder, der kører flere forespørgsler regelmæssigt, bør spore forbruget og anvende optimeringsvejledningen i denne artikel for at minimere afbrydelse som følge af overskridelse af kvoter eller forbrugsparametre.
 
-## <a name="general-optimization-tips"></a>Generelle tip til optimering
+## <a name="general-optimization-tips"></a>Generelle optimeringstip
 
-- **Tilpas størrelsen på nye forespørgsler** – Hvis du har mistanke om, at en forespørgsel vil returnere et stort resultatsæt, skal du først vurdere det ved hjælp af [antalsoperatoren](/azure/data-explorer/kusto/query/countoperator). Brug [begrænsning eller](/azure/data-explorer/kusto/query/limitoperator) dens synonym `take` for at undgå store resultatsæt.
-- Anvend filtre tidligt – Anvend tidsfiltre og andre filtre for at reducere datasættet, især før du bruger transformations- og parsingfunktioner som f.eks. understreng[()](/azure/data-explorer/kusto/query/substringfunction), [erstat()](/azure/data-explorer/kusto/query/replacefunction), [trim()](/azure/data-explorer/kusto/query/trimfunction), [toupper()](/azure/data-explorer/kusto/query/toupperfunction) eller [parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction). I eksemplet nedenfor bruges fortolkningsfunktionen [extractjson(),](/azure/data-explorer/kusto/query/extractjsonfunction) når filtreringsoperatorer har reduceret antallet af poster.
+- **Tilpas størrelsen på nye forespørgsler** – Hvis du har mistanke om, at en forespørgsel returnerer et stort resultatsæt, skal du først vurdere det ved hjælp af [optællingsoperatoren](/azure/data-explorer/kusto/query/countoperator). Brug [grænse](/azure/data-explorer/kusto/query/limitoperator) eller synonymet `take` for at undgå store resultatsæt.
+- **Anvend filtre tidligt** – Anvend tidsfiltre og andre filtre for at reducere datasættet, især før du bruger transformations- og fortolkningsfunktioner, f.eks [. understreng()](/azure/data-explorer/kusto/query/substringfunction), [erstat()](/azure/data-explorer/kusto/query/replacefunction), [trim()](/azure/data-explorer/kusto/query/trimfunction), [toupper()](/azure/data-explorer/kusto/query/toupperfunction)eller [parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction). I eksemplet nedenfor bruges fortolkningsfunktionen [extractjson(),](/azure/data-explorer/kusto/query/extractjsonfunction) når filtreringsoperatorer har reduceret antallet af poster.
 
     ```kusto
     DeviceEvents
@@ -57,20 +57,20 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | extend DriveLetter = extractjson("$.DriveLetter", AdditionalFields)
      ```
 
-- **Har beats indeholder** – Brug operatoren i stedet for at undgå at søge unødvendigt på `has` understrenge i ord `contains`. [Få mere at vide om strengoperatorer](/azure/data-explorer/kusto/query/datatypes-string-operators)
-- **Se i bestemte kolonner –** Se i en bestemt kolonne i stedet for at køre fuld tekstsøgninger på tværs af alle kolonner. Brug ikke til at `*` markere alle kolonner.
-- **Der er brug for hastighedsbaseret brug** af store og små bogstaver til at tage hensyn til store og små bogstaver – søgninger med store og små bogstaver er mere specifikke og generelt mere præcise. Navnene på strengoperatorer [med store og små bogstaver](/azure/data-explorer/kusto/query/datatypes-string-operators), f.eks`contains_cs`. `has_cs` og , slutter generelt med `_cs`. Du kan også bruge operatoren til at svare til store og små bogstaver i stedet `==` for `=~`.
-- **Fortolkning, udtræk** ikke – når det er muligt, skal du bruge [parseoperatoren](/azure/data-explorer/kusto/query/parseoperator) eller en fortolkningsfunktion som [f.eks. parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction). Undgå strengoperatoren `matches regex` eller [funktionen Extract(](/azure/data-explorer/kusto/query/extractfunction)), som begge bruger regulære udtryk. Reservere brugen af regulære udtryk til mere komplekse scenarier. [Læs mere om fortolkningsfunktioner](#parse-strings)
-- **Filtrer tabeller ikke udtryk –** Filtrer ikke på en beregnet kolonne, hvis du kan filtrere på en tabelkolonne.
-- **Ingen tretegnsudtryk** – Undgå at sammenligne eller filtrere med ord med tre tegn eller færre. Disse udtryk indekseres ikke, og det vil kræve flere ressourcer at matche dem.
-- **Project selektivt – Gør** det nemmere at forstå resultaterne ved kun at projicere de kolonner, du skal bruge. Hvis du projicere bestemte kolonner, før du [kører joinforbindelse](/azure/data-explorer/kusto/query/joinoperator) eller lignende handlinger, kan det også forbedre ydeevnen.
+- **Har beats indeholder**. Hvis du vil undgå unødvendigt at søge efter understrenge i ord, skal du bruge operatoren `has` i stedet for `contains`. [Få mere at vide om strengoperatorer](/azure/data-explorer/kusto/query/datatypes-string-operators)
+- **Søg i bestemte kolonner** – Søg i en bestemt kolonne i stedet for at køre fuldtekstsøgninger på tværs af alle kolonner. Brug ikke `*` til at kontrollere alle kolonner.
+- **Forskel på store og små bogstaver i forbindelse med hastighed** – Søgninger med forskel på store og små bogstaver er mere specifikke og generelt mere udførligt. Navne på [strengoperatorer](/azure/data-explorer/kusto/query/datatypes-string-operators) med forskel på store og små bogstaver, f.eks `has_cs` . og `contains_cs`, slutter normalt med `_cs`. Du kan også bruge operatoren `==` equals i stedet for `=~`.
+- **Opspar, udtræk ikke** – Når det er muligt, skal du bruge [fortolkningsoperatoren](/azure/data-explorer/kusto/query/parseoperator) eller en fortolkningsfunktion, [f.eks. parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction). `matches regex` Undgå strengoperatoren eller [funktionen extract(),](/azure/data-explorer/kusto/query/extractfunction) som begge bruger regulært udtryk. Forbeholder dig brugen af regulære udtryk til mere komplekse scenarier. [Læs mere om fortolkningsfunktioner](#parse-strings)
+- **Filtrer tabeller ikke udtryk – Filtrer** ikke efter en beregnet kolonne, hvis du kan filtrere på en tabelkolonne.
+- **Ingen ord med tre tegn** – undgå at sammenligne eller filtrere ved hjælp af ord med tre tegn eller færre. Disse ord er ikke indekseret, og matchning af dem kræver flere ressourcer.
+- **Project selektivt** – gør dine resultater nemmere at forstå ved kun at projektere de kolonner, du har brug for. Projektering af bestemte kolonner, før der køres [joinforbindelser](/azure/data-explorer/kusto/query/joinoperator) eller lignende handlinger, hjælper også med at forbedre ydeevnen.
 
-## <a name="optimize-the-join-operator"></a>Optimere operatoren `join`
-[Joinoperatoren](/azure/data-explorer/kusto/query/joinoperator) fletter rækker fra to tabeller ved at matche værdier i angivne kolonner. Anvend disse tip for at optimere forespørgsler, der bruger denne operator.
+## <a name="optimize-the-join-operator"></a>Optimer operatoren `join`
+[Joinoperatoren](/azure/data-explorer/kusto/query/joinoperator) fletter rækker fra to tabeller ved at matche værdier i angivne kolonner. Anvend disse tip til at optimere forespørgsler, der bruger denne operator.
 
-- **Mindre tabel til venstre –** Operatoren `join` matcher poster i tabellen i venstre side af joinsætningen til poster i højre side. Ved at have den mindre tabel til venstre skal færre poster matches, hvilket gør forespørgslen hurtigere.
+- **Mindre tabel til venstre** – operatoren `join` matcher poster i tabellen i venstre side af joinsætningen med poster til højre. Når den mindre tabel er til venstre, skal der matches færre poster, så forespørgslen bliver hurtigere.
 
-    I tabellen nedenfor reducerer vi den venstre tabel `DeviceLogonEvents` , så den kun dækker tre specifikke enheder, før de sluttes til den `IdentityLogonEvents` med konto-SID'er.
+    I nedenstående tabel reducerer vi den venstre tabel `DeviceLogonEvents` , så den kun dækker tre specifikke enheder, før den forbindes med `IdentityLogonEvents` konto-SID'er.
 
     ```kusto
     DeviceLogonEvents
@@ -83,9 +83,9 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     on AccountSid
     ```
 
-- **Brug indre join-smag** – Standard [join-smagen](/azure/data-explorer/kusto/query/joinoperator#join-flavors) eller [innerunique-join](/azure/data-explorer/kusto/query/joinoperator?pivots=azuredataexplorer#innerunique-join-flavor) dedubleerer rækker i venstre tabel med join-tasten, før du returnerer en række for hvert match til den højre tabel. Hvis den venstre tabel har flere rækker med samme værdi for `join` nøglen, bliver disse rækker dedubleret, så der efterlades en enkelt tilfældig række for hver entydige værdi.
+- **Brug den indre joinforbindelsessmag** – [standardjoinsmagen](/azure/data-explorer/kusto/query/joinoperator#join-flavors) eller den [innerunique-joinforbindelse](/azure/data-explorer/kusto/query/joinoperator?pivots=azuredataexplorer#innerunique-join-flavor) deduplikerer rækker i venstre tabel ved joinnøglen, før der returneres en række for hver forekomst af den højre tabel. Hvis den venstre tabel indeholder flere rækker med den samme værdi for `join` nøglen, deduplikeres disse rækker for at efterlade en enkelt tilfældig række for hver entydige værdi.
 
-    Denne standardfunktionsmåde kan indeholde vigtige oplysninger fra den venstre tabel, som kan give nyttig indsigt. For eksempel viser nedenstående forespørgsel kun én mail, der indeholder en bestemt vedhæftet fil, selvom den samme vedhæftede fil blev sendt ved hjælp af flere mails:
+    Denne standardfunktionsmåde kan udelade vigtige oplysninger fra den venstre tabel, som kan give nyttig indsigt. Forespørgslen nedenfor viser f.eks. kun én mail, der indeholder en bestemt vedhæftet fil, selvom den samme vedhæftede fil blev sendt ved hjælp af flere mails:
 
     ```kusto
     EmailAttachmentInfo
@@ -94,7 +94,7 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | join (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256
     ```
 
-    For at løse denne begrænsning anvender vi [indre join-smag](/azure/data-explorer/kusto/query/joinoperator?pivots=azuredataexplorer#inner-join-flavor) `kind=inner` ved at angive, at alle rækker i den venstre tabel skal vises med matchende værdier i højre side:
+    For at løse denne begrænsning anvender vi [den indre joinforbindelsessmag](/azure/data-explorer/kusto/query/joinoperator?pivots=azuredataexplorer#inner-join-flavor) ved at angive `kind=inner` , at alle rækker i tabellen til venstre skal vises med tilsvarende værdier til højre:
 
     ```kusto
     EmailAttachmentInfo
@@ -102,7 +102,7 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | where Subject == "Document Attachment" and FileName == "Document.pdf"
     | join kind=inner (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256
     ```
-- **Sammenlæg poster fra en tidsperiode – Når** der undersøger sikkerhedshændelser, leder analytikere efter relaterede hændelser, der forekommer omkring den samme tidsperiode. At anvende den samme fremgangsmåde, når du `join` også bruger fordelsydeevne ved at reducere antallet af poster, der skal kontrolleres.
+- **Joinforbind poster fra et tidsvindue** – Når analytikere undersøger sikkerhedshændelser, søger de efter relaterede hændelser, der forekommer omkring samme tidsperiode. Anvendelse af den samme tilgang, når du bruger `join` , gavner også ydeevnen ved at reducere antallet af poster, der skal kontrolleres.
 
     Forespørgslen nedenfor kontrollerer, om der er logonhændelser inden for 30 minutter efter modtagelse af en skadelig fil:
 
@@ -118,7 +118,7 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     ) on AccountName
     | where (LogonTime - EmailReceivedTime) between (0min .. 30min)
     ```
-- **Anvend tidsfiltre** på begge sider – Selvom du ikke undersøger en bestemt periode, `join` kan du reducere antallet af poster for at kontrollere og forbedre ydeevnen ved at anvende tidsfiltre både i venstre og højre tabel. Forespørgslen nedenfor gælder for `Timestamp > ago(1h)` begge tabeller, så den kun joinforbindelse poster fra den seneste time:
+- **Anvend tidsfiltre på begge sider** – Selvom du ikke undersøger et bestemt tidsvindue, kan anvendelse af tidsfiltre på både venstre og højre tabeller reducere antallet af poster for at kontrollere og forbedre `join` ydeevnen. Forespørgslen nedenfor gælder for `Timestamp > ago(1h)` begge tabeller, så den kun joinforbinder poster fra den seneste time:
 
     ```kusto
     EmailAttachmentInfo
@@ -127,9 +127,9 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | join kind=inner (DeviceFileEvents | where Timestamp > ago(1h)) on SHA256
     ```
 
-- **Brug tip til ydeevnen – Brug** tip `join` sammen med operatoren til at instruere backend'en om at fordele belastningen, når du kører ressourcekrævende handlinger. [Få mere at vide om jointip](/azure/data-explorer/kusto/query/joinoperator#join-hints)
+- **Brug tip til ydeevne** – Brug tip med operatoren `join` til at instruere backend til at distribuere belastningen, når der køres ressourcetunge handlinger. [Få mere at vide om jointip](/azure/data-explorer/kusto/query/joinoperator#join-hints)
 
-    Bland f.eks **[](/azure/data-explorer/kusto/query/shufflequery)**. hjælper med at forbedre ydeevnen for forespørgsler, når du sætter tabeller sammen ved hjælp af en nøgle med høj kardinalitet – `AccountObjectId` en nøgle med mange entydige værdier– f.eks. i forespørgslen nedenfor:
+    **[Shuffle-tip hjælper](/azure/data-explorer/kusto/query/shufflequery)** f.eks. med at forbedre forespørgslens ydeevne, når tabeller forbindes ved hjælp af en nøgle med høj kardinalitet – en nøgle med mange entydige værdier – f.eks`AccountObjectId`. i forespørgslen nedenfor:
 
     ```kusto
     IdentityInfo
@@ -141,7 +141,7 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     on AccountObjectId
     ```
 
-    **[Udsendelsestippet](/azure/data-explorer/kusto/query/broadcastjoin)** hjælper, når tabellen til venstre er lille (op til 100.000 poster), og den højre tabel er meget stor. For eksempel forsøger forespørgslen nedenfor at deltage i et par mails, der har bestemte emner med _alle meddelelser_ , der indeholder links i `EmailUrlInfo` tabellen:
+    **[Udsendelsestip hjælper](/azure/data-explorer/kusto/query/broadcastjoin)**, når den venstre tabel er lille (op til 100.000 poster), og den højre tabel er meget stor. Forespørgslen nedenfor forsøger f.eks. at joinforbinde et par mails, der har specifikke emner med _alle_ meddelelser, der indeholder links i tabellen `EmailUrlInfo` :
 
     ```kusto
     EmailEvents
@@ -149,26 +149,26 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | join hint.strategy = broadcast EmailUrlInfo on NetworkMessageId
     ```
 
-## <a name="optimize-the-summarize-operator"></a>Optimere operatoren `summarize`
-[Summeringsoperatoren](/azure/data-explorer/kusto/query/summarizeoperator) aggregerer indholdet af en tabel. Anvend disse tip for at optimere forespørgsler, der bruger denne operator.
+## <a name="optimize-the-summarize-operator"></a>Optimer operatoren `summarize`
+[Opsummeringsoperatoren](/azure/data-explorer/kusto/query/summarizeoperator) samler indholdet af en tabel. Anvend disse tip til at optimere forespørgsler, der bruger denne operator.
 
-- **Find særskilte værdier –** generelt kan det bruges til `summarize` at finde særskilte værdier, der kan gentages. Det kan være unødvendigt at bruge det til at sammenlægge kolonner, der ikke har gentagne værdier.
+- **Find entydige værdier** – Generelt kan du bruge `summarize` til at finde entydige værdier, der kan gentages. Det kan være unødvendigt at bruge det til at aggregere kolonner, der ikke har gentagne værdier.
 
-    Selvom en enkelt mail kan være en del af flere hændelser,  `summarize` er eksemplet nedenfor ikke en effektiv brug af, fordi et netværksmeddelelses-id for en enkelt mail altid leveres med en entydig afsenderadresse.
+    Selvom en enkelt mail kan være en del af flere hændelser, er eksemplet nedenfor _ikke_ en effektiv brug af `summarize` , fordi et netværksmeddelelses-id for en individuel mail altid leveres med en entydig afsenderadresse.
 
     ```kusto
     EmailEvents
     | where Timestamp > ago(1h)
     | summarize by NetworkMessageId, SenderFromAddress
     ```
-    Operatoren `summarize` kan nemt erstattes med `project`, hvilket potentielt giver de samme resultater, mens der forbruges færre ressourcer:
+    Operatoren `summarize` kan nemt erstattes med , som potentielt giver de samme resultater, samtidig med `project`at der bruges færre ressourcer:
 
     ```kusto
     EmailEvents
     | where Timestamp > ago(1h)
     | project NetworkMessageId, SenderFromAddress
     ```
-    Det følgende eksempel er en mere effektiv `summarize` brug af, fordi der kan være flere forskellige forekomster af en afsenderadresse, der sender mails til den samme modtageradresse. Sådanne kombinationer er mindre forskellige og vil sandsynligvis have dubletter.
+    Følgende eksempel er en mere effektiv brug af `summarize` , fordi der kan være flere forskellige forekomster af en afsenderadresse, der sender mail til den samme modtageradresse. Disse kombinationer er mindre entydige og vil sandsynligvis have dubletter.
 
     ```kusto
     EmailEvents
@@ -176,9 +176,9 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | summarize by SenderFromAddress, RecipientEmailAddress
     ```
 
-- **Bland forespørgslen – mens** det `summarize` bedst bruges i kolonner med gentagne værdier, kan de samme kolonner _også have høj_ kardinalitet eller et stort antal entydige værdier. Ligesom operatoren `join` kan du [](/azure/data-explorer/kusto/query/shufflequery) `summarize` også anvende omkredsen med til at fordele behandlingsbelastningen og potentielt forbedre ydeevnen, når du arbejder på kolonner med høj kardinalitet.
+- **Bland forespørgslen** – Selvom `summarize` den bedst bruges i kolonner med gentagne værdier, kan de samme kolonner også have _høj kardinalitet_ eller et stort antal entydige værdier. Ligesom operatoren `join` kan du også anvende [shuffle-tip](/azure/data-explorer/kusto/query/shufflequery) til `summarize` at distribuere behandlingsbelastningen og muligvis forbedre ydeevnen, når du arbejder på kolonner med høj kardinalitet.
 
-    Forespørgslen nedenfor bruger til at `summarize` tælle forskellige modtagermailadresser, som kan køre i hundreder af tusinder i store organisationer. For at forbedre ydeevnen indeholder den `hint.shufflekey`:
+    Forespørgslen nedenfor bruger `summarize` til at tælle særskilt modtagermailadresse, som kan køre i hundredtusindvis i store organisationer. For at forbedre ydeevnen omfatter `hint.shufflekey`den :
 
     ```kusto
     EmailEvents
@@ -186,15 +186,17 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør registrere forbrug o
     | summarize hint.shufflekey = RecipientEmailAddress count() by Subject, RecipientEmailAddress
     ```
 
+Se denne [korte video](https://www.youtube.com/watch?v=ceYvRuPp5D8) for at få mere at vide om, hvordan du kan optimere Kusto-forespørgselssproget.  
+
 ## <a name="query-scenarios"></a>Forespørgselsscenarier
 
 ### <a name="identify-unique-processes-with-process-ids"></a>Identificer entydige processer med proces-id'er
 
-Proces-id'er (PID'er) genbruges i Windows og genbruges til nye processer. De kan ikke selv fungere som entydige identifikatorer for bestemte processer.
+Proces-id'er genbruges i Windows og genbruges til nye processer. De kan ikke alene fungere som entydige identifikatorer for bestemte processer.
 
-For at få et entydig identifier til en proces på en bestemt computer skal du bruge proces-id'et sammen med tidspunktet for oprettelse af processen. Når du joinforbindelse eller opsummerer data om processer, skal du medtage kolonner til computer-id'et (`DeviceId`enten eller ), proces-id'et ( `InitiatingProcessId``ProcessId` eller ) og procesoprettelsesstiden (`ProcessCreationTime` eller `InitiatingProcessCreationTime`)`DeviceName`
+Hvis du vil hente et entydigt id for en proces på en bestemt computer, skal du bruge proces-id'et sammen med processens oprettelsestid. Når du joinforbinder eller opsummerer data om processer, skal du inkludere kolonner for computer-id'et (enten `DeviceId` eller `DeviceName`), proces-id'et (`ProcessId` eller `InitiatingProcessId`) og tidspunktet for oprettelse af processen (`ProcessCreationTime` eller `InitiatingProcessCreationTime`)
 
-I følgende eksempel finder forespørgslen processer, der har adgang til mere end 10 IP-adresser over port 445 (SMB), muligvis scanning for filshares.
+Følgende eksempelforespørgsel finder processer, der har adgang til mere end 10 IP-adresser via port 445 (SMB), og som muligvis søger efter filshares.
 
 Eksempelforespørgsel:
 
@@ -205,20 +207,20 @@ DeviceNetworkEvents
 | where RemoteIPCount > 10
 ```
 
-Forespørgslen opsummeres ved begge, og `InitiatingProcessId` så `InitiatingProcessCreationTime` den ser på en enkelt proces uden at blande flere processer med det samme proces-id.
+Forespørgslen opsummeres af begge `InitiatingProcessId` , så `InitiatingProcessCreationTime` den ser på en enkelt proces uden at blande flere processer med det samme proces-id.
 
 ### <a name="query-command-lines"></a>Forespørgselskommandolinjer
-Der er mange måder at oprette en kommandolinje på for at udføre en opgave. En hacker kan f.eks. referere til en billedfil uden en sti, uden filtypenavn, ved hjælp af miljøvariabler eller med anførselstegn. Hackeren kan også ændre rækkefølgen af parametre eller tilføje flere anførselstegn og mellemrum.
+Der er mange måder at oprette en kommandolinje på for at udføre en opgave. En hacker kan f.eks. referere til en billedfil uden en sti, uden et filtypenavn, ved hjælp af miljøvariabler eller med anførselstegn. Hackeren kan også ændre rækkefølgen af parametre eller tilføje flere anførselstegn og mellemrum.
 
-Hvis du vil oprette mere robuste forespørgsler omkring kommandolinjer, skal du anvende følgende fremgangsmåder:
+Hvis du vil oprette mere holdbare forespørgsler omkring kommandolinjer, skal du anvende følgende fremgangsmåder:
 
-- Identificer de kendte processer (f.eks *.net.exe* eller *psexec.exe*) ved at matche på felterne med filnavne i stedet for at filtrere på selve kommandolinjen.
-- Fortolke kommandolinjesnit ved hjælp af parse_command_line [()](/azure/data-explorer/kusto/query/parse-command-line)
-- Når du forespørger efter kommandolinjeargumenter, skal du ikke se efter et nøjagtigt match for flere ikke-relaterede argumenter i en bestemt rækkefølge. Brug i stedet regulære udtryk, eller brug flere separate indeholder operatorer.
-- Brug store og små bogstaver til ikke at tage hensyn til matches. Du kan f.eks `=~`. bruge `in~`, og `contains` i stedet for `==`, `in`og `contains_cs`.
-- For at reducere teknikker til fjernelse af kommandolinjen bør du overveje at fjerne anførselstegn, erstatte kommaer med mellemrum og erstatte flere efterfølgende mellemrum med et enkelt mellemrum. Der er mere komplekse obskønationsteknikker, der kræver andre metoder, men disse finjusteringer kan hjælpe med at håndtere almindelige teknikker.
+- Identificer de kendte processer (f.eks *.net.exe* eller *psexec.exe*) ved at matche felterne med filnavne i stedet for at filtrere på selve kommandolinjen.
+- Fortolk kommandolinjesektioner ved hjælp af [funktionen parse_command_line()](/azure/data-explorer/kusto/query/parse-command-line)
+- Når du forespørger efter kommandolinjeargumenter, skal du ikke søge efter et nøjagtigt match på flere ikke-relaterede argumenter i en bestemt rækkefølge. Brug i stedet regulære udtryk, eller brug flere separate indeholder operatorer.
+- Brug match, hvor der ikke skelnes mellem store og små bogstaver. Brug f.eks. `=~`, `in~`og `contains` i stedet for `==`, `in`og `contains_cs`.
+- Hvis du vil afhjælpe teknikker til tilsløring af kommandolinjer, kan du overveje at fjerne anførselstegn, erstatte kommaer med mellemrum og erstatte flere efter hinanden følgende mellemrum med et enkelt mellemrum. Der er mere komplekse tilsløringsteknikker, der kræver andre metoder, men disse justeringer kan hjælpe med at løse almindelige.
 
-Følgende eksempler viser forskellige måder at konstruere en forespørgsel på, der søger efter filennet.exe *at* stoppe firewalltjenesten "MpsSvc":
+Følgende eksempler viser forskellige måder at konstruere en forespørgsel, der søger efter filen *net.exe* til at stoppe firewalltjenesten "MpsSvc":
 
 ```kusto
 // Non-durable query - do not use
@@ -237,8 +239,8 @@ DeviceProcessEvents
 | where CanonicalCommandLine contains "stop" and CanonicalCommandLine contains "MpsSvc"
 ```
 
-### <a name="ingest-data-from-external-sources"></a>Ngest data from external sources
-Hvis du vil inkorporere lange lister eller store tabeller i din forespørgsel, skal du bruge [den eksterne dataoperator](/azure/data-explorer/kusto/query/externaldata-operator) til at ingeste data fra en angivet URI. Du kan hente data fra filer i TXT, CSV, JSON eller [andre formater](/azure/data-explorer/ingestion-supported-formats). Eksemplet nedenfor viser, hvordan du kan udnytte den omfattende liste over malware SHA-256-hashes, der leveres af MalwareBazaar (abuse.ch) til at kontrollere vedhæftede filer i mails:
+### <a name="ingest-data-from-external-sources"></a>Indfødning af data fra eksterne kilder
+Hvis du vil inkorporere lange lister eller store tabeller i din forespørgsel, skal du bruge [operatoren externaldata](/azure/data-explorer/kusto/query/externaldata-operator) til at indtage data fra en angivet URI. Du kan hente data fra filer i TXT-, CSV-, JSON- eller [andre formater](/azure/data-explorer/ingestion-supported-formats). Nedenstående eksempel viser, hvordan du kan bruge den omfattende liste over malware SHA-256-hashen leveret af MalwareBazaar (abuse.ch) til at kontrollere vedhæftede filer på mails:
 
 ```kusto
 let abuse_sha256 = (externaldata(sha256_hash: string)
@@ -254,25 +256,25 @@ abuse_sha256
 SHA256,ThreatTypes,DetectionMethods
 ```
 
-### <a name="parse-strings"></a>Fortolke strenge
-Der findes forskellige funktioner, du kan bruge til effektivt at håndtere strenge, der skal fortolkes eller konverteres.
+### <a name="parse-strings"></a>Fortolkningsstrenge
+Der er forskellige funktioner, som du kan bruge til effektivt at håndtere strenge, der skal analyseres eller konverteres.
 
-| String | Funktion | Brugseksememem |
+| String | Funktion | Eksempel på anvendelse |
 |--|--|--|
-| Kommandolinjer | [parse_command_line()](/azure/data-explorer/kusto/query/parse-command-line) | Udtræk kommandoen og alle argumenter. |
-| Stier | [parse_path()](/azure/data-explorer/kusto/query/parsepathfunction) | Udtræk sektionerne i en fil- eller mappesti. |
-| Versionsnumre | [parse_version()](/azure/data-explorer/kusto/query/parse-versionfunction) | Dekonstruer et versionsnummer med op til fire sektioner og op til otte tegn pr. sektion. Brug fortolkede data til at sammenligne versionens alder. |
-| IPv4-adresser | [parse_ipv4()](/azure/data-explorer/kusto/query/parse-ipv4function) | Konvertér en IPv4-adresse til et langt heltal. Hvis du vil sammenligne IPv4-adresser uden at konvertere dem, [skal ipv4_compare()](/azure/data-explorer/kusto/query/ipv4-comparefunction). |
-| IPv6-adresser | [parse_ipv6()](/azure/data-explorer/kusto/query/parse-ipv6function)  | Konvertér en IPv4- eller IPv6-adresse til den ved canonical IPv6-notation. For at sammenligne IPv6-adresser skal [du ipv6_compare()](/azure/data-explorer/kusto/query/ipv6-comparefunction). |
+| Kommandolinjer | [parse_command_line()](/azure/data-explorer/kusto/query/parse-command-line) | Udpak kommandoen og alle argumenter. |
+| Stier | [parse_path()](/azure/data-explorer/kusto/query/parsepathfunction) | Udpak sektionerne i en fil- eller mappesti. |
+| Versionsnumre | [parse_version()](/azure/data-explorer/kusto/query/parse-versionfunction) | Dekonstruer et versionsnummer med op til fire sektioner og op til otte tegn pr. sektion. Brug de analyserede data til at sammenligne versionens alder. |
+| IPv4-adresser | [parse_ipv4()](/azure/data-explorer/kusto/query/parse-ipv4function) | Konvertér en IPv4-adresse til et langt heltal. Hvis du vil sammenligne IPv4-adresser uden at konvertere dem, skal du bruge [ipv4_compare()](/azure/data-explorer/kusto/query/ipv4-comparefunction). |
+| IPv6-adresser | [parse_ipv6()](/azure/data-explorer/kusto/query/parse-ipv6function)  | Konvertér en IPv4- eller IPv6-adresse til den kanoniske IPv6-notation. Hvis du vil sammenligne IPv6-adresser, skal [du bruge ipv6_compare()](/azure/data-explorer/kusto/query/ipv6-comparefunction). |
 
-Du kan få mere at vide om alle understøttede fortolkningsfunktioner [ved at læse om Kusto-strengfunktioner](/azure/data-explorer/kusto/query/scalarfunctions#string-functions).
+Hvis du vil vide mere om alle understøttede fortolkningsfunktioner, kan [du læse om Kusto-strengfunktioner](/azure/data-explorer/kusto/query/scalarfunctions#string-functions).
 
 >[!NOTE]
->Nogle tabeller i denne artikel er muligvis ikke tilgængelige i Microsoft Defender til slutpunkt. [Slå en Microsoft 365 Defender til](m365d-enable.md) for at lede efter trusler ved hjælp af flere datakilder. Du kan flytte dine avancerede arbejdsprocesser på jagt fra Microsoft Defender for Endpoint til Microsoft 365 Defender ved at følge trinnene i Overfør avancerede [forespørgselsforespørgsler fra Microsoft Defender til slutpunkt](advanced-hunting-migrate-from-mde.md).
+>Nogle tabeller i denne artikel er muligvis ikke tilgængelige i Microsoft Defender for Endpoint. [Slå Microsoft 365 Defender](m365d-enable.md) til for at jagte trusler ved hjælp af flere datakilder. Du kan flytte dine avancerede arbejdsprocesser for jagt fra Microsoft Defender for Endpoint til Microsoft 365 Defender ved at følge trinnene i [Overfør avancerede jagtforespørgsler fra Microsoft Defender for Endpoint](advanced-hunting-migrate-from-mde.md).
 
 ## <a name="related-topics"></a>Relaterede emner
-- [Kusto-forespørgselssprogdokumentation](/azure/data-explorer/kusto/query/)
+- [Dokumentation til Kusto-forespørgselssprog](/azure/data-explorer/kusto/query/)
 - [Kvoter og brugsparametre](advanced-hunting-limits.md)
 - [Håndter avancerede jagtfejl](advanced-hunting-errors.md)
-- [Avanceret jagtoversigt](advanced-hunting-overview.md)
-- [Lær forespørgselssproget](advanced-hunting-query-language.md)
+- [Oversigt over avanceret jagt](advanced-hunting-overview.md)
+- [Få mere at vide om forespørgselssproget](advanced-hunting-query-language.md)

@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: fd043ae1ebabcb8162ed96b973c9392bae5fd2a1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 40e0285f185d112fa508d871e0ccd70c2a09120e
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64944431"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739411"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg underretninger i Microsoft 365 Defender
 
@@ -37,7 +37,7 @@ ms.locfileid: "64944431"
 - Microsoft 365 Defender
 
 >[!Note]
->I denne artikel beskrives sikkerhedsbeskeder i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende mailmeddelelser til dig selv eller andre administratorer, når brugerne udfører bestemte aktiviteter i Microsoft 365. Du kan få flere oplysninger under [Opret aktivitetsbeskeder – Microsoft Purview-| Microsoft Docs](../../compliance/create-activity-alerts.md).
+>I denne artikel beskrives sikkerhedsbeskeder i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende mailmeddelelser til dig selv eller andre administratorer, når brugerne udfører bestemte aktiviteter i Microsoft 365. Du kan få flere oplysninger under [Opret aktivitetsbeskeder – Microsoft Purview | Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Beskeder er grundlaget for alle hændelser og angiver forekomsten af skadelige eller mistænkelige hændelser i dit miljø. Beskeder er typisk en del af et bredere angreb og giver fingerpeg om en hændelse.
 
@@ -67,7 +67,7 @@ Du kan filtrere beskeder i henhold til disse kriterier:
 
 Du skal have en af følgende roller for at få adgang til Microsoft Defender for Office 365 beskeder:
 
-- For globale Azure Active Directory (Azure AD)-roller:
+- For globale Azure Active Directory (Azure AD) roller:
 
    - Global administrator
 
@@ -206,9 +206,8 @@ Hvis du vil oprette automatiseringen, skal du bruge et API-token, før du kan op
 
 ### <a name="create-an-automated-flow"></a>Opret et automatiseret flow
 
-Du kan finde den detaljerede trinvise proces i videoen [her](https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn).
-
-I denne video beskrives det også, hvordan du opretter forbindelse mellem Power Automate og Defender for Cloud Apps.
+Se denne korte video for at få mere at vide om, hvordan automatisering fungerer effektivt for at oprette en problemfri arbejdsproces, og hvordan du opretter forbindelse Power Automate til Defender for Cloud Apps. 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn]
 
 ## <a name="next-steps"></a>Næste trin
 

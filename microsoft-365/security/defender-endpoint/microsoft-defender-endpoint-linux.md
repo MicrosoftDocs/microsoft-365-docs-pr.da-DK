@@ -17,12 +17,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: e5f60e37765e562f0c1508778182f1f506773bff
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 9207e0ad186f6a5dc5219e1a24c6ccdd8ee23fcd
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679236"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754096"
 ---
 # <a name="microsoft-defender-for-endpoint-on-linux"></a>Microsoft Defender for Endpoint på Linux
 
@@ -79,14 +79,21 @@ Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i
 > [!NOTE]
 > Det understøttes ikke at installere Microsoft Defender for Endpoint på andre placeringer end standardinstallationsstien. 
 
+> [!NOTE]
+> Microsoft Defender for Endpoint på Linux opretter en "mdatp"-bruger med tilfældigt UID og GID. Hvis du vil styre UID og GID, skal du oprette en "mdatp"-bruger før installationen ved hjælp af shellindstillingen "/usr/sbin/nologin".
+> For eksempel: `mdatp:x:UID:GID::/home/mdatp:/usr/sbin/nologin`.
+
 ### <a name="system-requirements"></a>Systemkrav
+
+> [!NOTE]
+> Understøttelse af Red Hat Enterprise Linux og CentOS 6.7+ til 6.10+ fås som prøveversion.
 
 - Understøttede Linux-serverdistributioner og x64-versioner (AMD64/EM64T) og x86_64 versioner:
 
   - Red Hat Enterprise Linux 6.7 eller nyere (prøveversion)
-  - Red Hat Enterprise Linux 7.2 eller nyere 
-  - Red Hat Enterprise Linux 8.x 
-  - CentOS 6,7 eller nyere 
+  - Red Hat Enterprise Linux 7.2 eller nyere
+  - Red Hat Enterprise Linux 8.x
+  - CentOS 6,7 eller nyere (prøveversion)
   - CentOS 7,2 eller nyere
   - Ubuntu 16.04 LTS eller højere LTS
   - Debian 9 eller nyere
@@ -103,13 +110,16 @@ Hvis du oplever installationsfejl, kan du se [Fejlfinding af installationsfejl i
 
 
 - Liste over understøttede kerneversioner
-  - Minimumkerneversion 3.10.0-327 (for alle de understøttede Linux-distributioner, der er nævnt ovenfor undtagen Red Hat Enterprise Linux 6 og CentOS 6)
+  > [!NOTE]
+  > Microsoft Defender for Endpoint på RHEL/CentOS – 6,7 til 6,10 er en kernebaseret løsning. Du skal bekræfte, at kernen understøttes, før du opdaterer til den nyere kerneversion. Se listen nedenfor for at se en liste over understøttede kerner.
+  > Microsoft Defender for Endpoint implementering for alle andre understøttede distributioner og versioner er kerneversionagnostisk. Med minimalt krav om, at kerneversionen skal være på eller over 3.10.0-327.
+
   - Kerneindstillingen `fanotify` skal være aktiveret
   - Red Hat Enterprise Linux 6 og CentOS 6:
     - For 6.7: 2.6.32-573.*
     - For 6.8: 2.6.32-642.*
     - For 6.9: 2.6.32-696.* (undtagen 2.6.32-696.el6.x86_64)
-    - For 6.10: 2.6.32.754.2.1.el6.x86_64 til 2.6.32-754.43.1:
+    - For 6.10: 2.6.32.754.2.1.el6.x86_64 til 2.6.32-754.47.1:
     
        - 2.6.32-754.10.1.el6.x86_64
        - 2.6.32-754.11.1.el6.x86_64

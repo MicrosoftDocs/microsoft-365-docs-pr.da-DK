@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: e4468915-15e1-4530-9361-cd18ce82e231
 description: Få mere at vide om, hvordan du administrerer ExpressRoute for Office 365, herunder almindelige områder, der skal konfigureres, f.eks. præfiksfiltrering, sikkerhed og overholdelse af angivne standarder.
-ms.openlocfilehash: a601c047a7b8e19f02a728d00708689c795d5a64
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 493a7c0ca14d05a2b84763b9e9485f828574a930
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098312"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753864"
 ---
 # <a name="managing-expressroute-for-office-365-connectivity"></a>Administration af ExpressRoute for Office 365 forbindelse
 
@@ -39,13 +39,13 @@ Microsoft anbefaler, at kunderne accepterer alle BGP-ruter som annonceret fra Mi
   
 Hvis du har brug for yderligere validering af ruteejerskabet på tværs af den offentlige peering for ExpressRoute, kan du kontrollere de annoncerede ruter i forhold til listen over alle IPv4- og IPv6-IP-præfikser, der repræsenterer [Microsofts offentlige IP-intervaller](https://www.microsoft.com/download/details.aspx?id=53602). Disse intervaller dækker hele Microsoft-adresseområdet og ændres sjældent, hvilket giver et pålideligt sæt intervaller, der kan filtreres mod, hvilket også giver yderligere beskyttelse til kunder, der er bekymrede for, at ikke-Microsoft-ejede ruter lækker ind i deres miljø. Hvis der er en ændring, foretages den den 1. i måneden, og versionsnummeret **i detaljesektionen** på siden ændres, hver gang filen opdateres.
   
-Der er en række grunde til at undgå at bruge [Office 365 URL-adresser og IP-adresseintervaller](./urls-and-ip-address-ranges.md) til at generere præfiksfilterlister. Herunder følgende:
+Der er mange grunde til at undgå at bruge [Office 365 URL-adresser og IP-adresseområder](./urls-and-ip-address-ranges.md) til at generere præfiksfilterlister. Herunder følgende:
   
 - De Office 365 IP-præfikser gennemgår ofte mange ændringer.
 
 - De Office 365 URL-adresser og IP-adresseområder er designet til at administrere lister over tilladte firewalls og proxyinfrastruktur og ikke routing.
 
-- De Office 365 URL-adresser og IP-adresseområder dækker ikke andre Microsoft-tjenester, der kan være inden for området for dine ExpressRoute-forbindelser.
+- De Office 365 URL-adresser og IP-adresseområder dækker ikke andre Microsoft-tjenester, der kan være i området for dine ExpressRoute-forbindelser.
 
 |**Mulighed**|**Kompleksitet**|**Skift kontrolelement**|
 |:-----|:-----|:-----|
@@ -59,7 +59,7 @@ Uanset hvordan du administrerer BGP-ruteannoncer, der kommer fra Microsoft, får
   
 ### <a name="security"></a>Sikkerhed
 
-Microsoft anbefaler, at du vedligeholder dine egne netværks- og sikkerhedsperimeterkontroller for forbindelser, der går til og fra offentlige ExpressRoute- og Microsoft-peering, som omfatter forbindelser til og fra Office 365 tjenester. Sikkerhedskontroller skal være på plads for netværksanmodninger, der rejser udgående fra dit netværk til Microsofts netværk samt indgående fra Microsofts netværk til dit netværk.
+Microsoft anbefaler, at du vedligeholder dine egne netværks- og sikkerhedsperimeterkontroller for forbindelser, der går til og fra offentlige ExpressRoute- og Microsoft-peering, som omfatter forbindelser til og fra Office 365 tjenester. Sikkerhedskontroller skal være på plads for netværksanmodninger, der rejser udgående fra dit netværk til Microsofts netværk og indgående fra Microsofts netværk til dit netværk.
   
 #### <a name="outbound-from-customer-to-microsoft"></a>Udgående fra kunde til Microsoft
   
@@ -86,7 +86,7 @@ Der er flere valgfrie scenarier, der kræver, at Microsoft starter forbindelser 
 
 - Mail fra en Exchange Online lejer til en vært i det lokale miljø.
 
-- SharePoint onlinemail sendes fra SharePoint Online til en vært i det lokale miljø.
+- SharePoint Onlinemail, der er sendt fra SharePoint Online til en vært i det lokale miljø.
 
 - [SharePoint hybridsøgning i organisationsnetværket](/SharePoint/hybrid/display-hybrid-federated-search-results-in-sharepoint-online).
 

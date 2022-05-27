@@ -26,12 +26,12 @@ ms.custom:
 - intro-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 45e63c489093c147895c467c3471f16a8bb99918
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: c454a21b6ad696b84e3b04e20b42fd1d1a0a8b19
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368325"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739533"
 ---
 # <a name="microsoft-365-defender"></a>Microsoft 365 Defender
 
@@ -128,6 +128,9 @@ Hvis du har brug for oplysninger om, hvad der er ændret fra Office 365 Security
 
 > [!NOTE]
 > Den Microsoft 365 Defender portal bruger og gennemtvinger eksisterende rollebaseret adgang og flytter hver enkelt sikkerhedsmodel til den samlede portal. Hver konvergerede arbejdsbelastning har sin egen rollebaserede adgang. De roller, der allerede findes i produkterne, konvergeres automatisk til Microsoft 365 Defender-portalen. Microsoft Defender for Cloud Apps håndterer dog stadig sine egne roller og tilladelser.
+
+Se denne korte video for at få mere at vide om den nye samlede portal i Microsoft 365 Defender.  
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBKau]
 
 ### <a name="what-to-expect"></a>Hvad kan du forvente?
 

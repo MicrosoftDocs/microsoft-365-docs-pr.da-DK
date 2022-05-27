@@ -16,13 +16,13 @@ ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-description: I denne artikel skal du bruge de ressourcer, der kan hjælpe dig med at overføre dine organisationsdata til Microsoft 365.
-ms.openlocfilehash: d0cf1aa5e744dc545f5a037b63f7cc1981f0e23c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: I denne artikel finder du de ressourcer, der kan hjælpe dig med at overføre dine organisationsdata til Microsoft 365.
+ms.openlocfilehash: 97846f3a35fdc415b172cbc5670739ca10204b70
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096408"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753424"
 ---
 # <a name="migrate-your-organization-data-to-microsoft-365-enterprise"></a>Overfør dine organisationsdata til Microsoft 365 Enterprise
 
@@ -30,7 +30,7 @@ ms.locfileid: "65096408"
 
 Vores [grundlæggende opsætningsvejledning](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa) hjælper dig med at få alle til at bruge dine Microsoft 365 tjenester og programmer på kortest mulig tid. Dette springer hybridscenarierne over og de mere avancerede metoder til overførsel til Microsoft 365. 
   
-Hvis du vil have hjælp til at få Microsoft 365 konfigureret, [FastTrack](https://fasttrack.microsoft.com/office) er den nemmeste måde at installere Microsoft 365 på, kan du også logge på og bruge [installationsvejledningerne til Microsoft 365 tjenester](setup-guides-for-microsoft-365.md).
+Hvis du vil have hjælp til at få Microsoft 365 konfiguration, [er FastTrack](https://fasttrack.microsoft.com/office) den nemmeste måde at installere Microsoft 365 på, og du kan også logge på og bruge [installationsvejledningerne til Microsoft 365 tjenester](setup-guides-for-microsoft-365.md).
 
 ## <a name="migrate-email-to-microsoft-365"></a>Overfør mail til Microsoft 365
 - Overfør med Exchange Hybrid ved hjælp af [Exchange Deployment Assistant](https://technet.microsoft.com/exdeploy2013). (Administrator)

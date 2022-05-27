@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Administratorer kan få mere at vide om, hvordan de bruger automatiseringer af nyttedata (høst af nyttedata) til at indsamle og starte automatiserede simuleringer til oplæring af simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 7fb3b0bbad5bbec8044a94da1943b0bd25eba865
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 862547884f9a7697382affda734af0f323c86c4a
+ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679368"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "65739555"
 ---
 # <a name="payload-automations-for-attack-simulation-training"></a>Automatiseringer af nyttedata til oplæring af simulering af angreb
 
@@ -31,7 +31,7 @@ Benyt følgende fremgangsmåde for at oprette en automatisering af nyttedata:
 
 1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com/>skal du gå til **Mail & samarbejde** \> **Oplæring af** \> simulering af angreb **Automatiseringer** \> **Nyttedataautomatiseringer**.
 
-   Hvis du vil gå direkte til fanen **Automatiseringer** , skal du bruge <https://security.microsoft.com/attacksimulator?viewid=automations>.
+   Hvis du vil gå direkte til fanen **Automatiseringer** , hvor du kan vælge **Nyttedataautomatiseringer**, skal du bruge <https://security.microsoft.com/attacksimulator?viewid=automations>.
 
 2. I **Payload Automations** skal du vælge ![Opret automatiseringsikon.](../../media/m365-cc-sc-create-icon.png) **Opret automatisering**.
 

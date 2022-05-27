@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du kan finde flere oplysninger om, hvordan dine modeller til dokumentforståelse og formularbehandling klarer sig.
-ms.openlocfilehash: e9586bbbd8510611747b81424f1fbe494f212cc5
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 830a56ab4dd0145f1385d628405ee4287de19595
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64916177"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754748"
 ---
 # <a name="analyze-how-your-models-are-used-in-microsoft-sharepoint-syntex"></a>Analysér, hvordan dine modeller bruges i Microsoft SharePoint Syntex
 
@@ -41,9 +41,9 @@ Dit SharePoint Syntex indholdscenter giver dig modelanvendelsesanalyser, så du 
 
 I SharePoint Syntex oprettes standardindholdscenteret under konfigurationen. Der kan også oprettes flere indholdscentre efter behov. Afdelinger kan f.eks. oprette deres egne indholdscentre for at oprette og administrere deres modeller. 
 
-Med hensyn til modelanvendelsesanalyse skal du være opmærksom på, at:
+Med hensyn til brugsanalyse af modellen skal du være opmærksom på, at:
 
-- Dit standardindholdscenter viser modelanvendelsesanalyser for alle indholdscentre og modeller i din organisation, herunder dem, der er oprettet i yderligere indholdscentre. Dette giver indholdsadministratorer og andre interessenter en central portal til administration og tilsyn med indholdscentrene og -modellerne på tværs af virksomheden.  
+- Dit standardindholdscenter viser modelanvendelsesanalyser for alle indholdscentre og modeller i din organisation, herunder dem, der er oprettet i andre indholdscentre. Dette giver indholdsadministratorer og andre interessenter en central portal til administration og tilsyn med indholdscentrene og -modellerne på tværs af virksomheden.  
 - Andre indholdscentre viser kun modelanvendelsesanalyser for de modeller, der blev oprettet i dem. Dette giver indholdsadministratorer indsigt i forbrugsdata for kun de modeller, de arbejder med.
 
 
@@ -80,8 +80,8 @@ Hver model på listen over modelanvendelser viser forbrugsdataene:
 ## <a name="see-also"></a>Se også
 [Opret en klassificering](create-a-classifier.md)
 
-[Opret en udtrækningsmaskine](create-an-extractor.md)
+[Opret en udtrækningsfunktion](create-an-extractor.md)
 
 [Oversigt over dokumentforståelse](document-understanding-overview.md)
 
-[Opret en formularbehandlingsmodel](create-a-form-processing-model.md)  
+[Opret en model for formularbehandling](create-a-form-processing-model.md)  

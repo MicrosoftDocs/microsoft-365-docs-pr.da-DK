@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
 description: Få mere at vide om, hvordan du reducerer indlæsningstiden for SharePoint Online-sider ved at bruge JavaScript til at forsinke indlæsning af billeder og ikke-essentiel JavaScript.
-ms.openlocfilehash: af75b3ede1136894bea0a7f4c00cc9498d194fe3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8252e169e36dc6976a7be0b4815915ee72283eff
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101287"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65754726"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>Udskyd indlæsning af billeder og JavaScript i SharePoint Online
 

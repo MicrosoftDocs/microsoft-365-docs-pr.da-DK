@@ -1,6 +1,6 @@
 ---
-title: Rapporter over ordlager
-description: Få mere at vide om, hvordan du rapporterer om aktivitet i ordlageret
+title: Ordbank rapport
+description: Få mere at vide om, hvordan du rapporterer om aktivitet i ordbanken
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: serdars
@@ -13,36 +13,36 @@ ms.collection:
 - m365initiative-viva-topics
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: high
-ms.openlocfilehash: 6daffa44356136615dc002b01bd7da5c575fe1fd
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: dfb4841ac80b1018ec1839a6fa36ec36c4ba298b
+ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63591467"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "65753964"
 ---
-# <a name="term-store-reports"></a>Rapporter over ordlager
+# <a name="term-store-reports"></a>Ordbank rapport
 
-Du kan få adgang <a href="https://go.microsoft.com/fwlink/?linkid=2185073" target="_blank">til rapporter for</a> ordlager SharePoint Administration. Denne funktion kræver en [SharePoint Syntex](index.md) licens.
+Du kan få adgang til rapporter for <a href="https://go.microsoft.com/fwlink/?linkid=2185073" target="_blank">Ordbank</a> i SharePoint Administration. Denne funktion kræver en [SharePoint Syntex](index.md) licens.
 
-**Udvid Rapporter**, og klik derefter på **Indholdstjenester**.
+Udvid **Rapporter**, og klik derefter på **Indholdstjenester**.
 
 Følgende rapporter er tilgængelige:
 
-### <a name="term-store-operations"></a>Handlinger for ordlager
+### <a name="term-store-operations"></a>Ordbankhandlinger
 
-Få vist de vigtigste handlinger, der har fundet sted i ordlageret i en periode på 15 dage, og se en tendens med daglige mængder i den pågældende periode. Dette er nyttigt, når du vil forstå ændringernes art i ordlageret på et højt niveau og identificere uventede tendenser i mængden af handlinger. 
+Få vist de vigtigste handlinger, der har fundet sted i din ordbank i en 15-dages periode, og se en tendens i de daglige mængder i den pågældende periode. Dette er nyttigt, når du vil forstå arten af ændringer i ordbanken på et højt niveau og identificere eventuelle uventede tendenser i mængden af handlinger. 
 
-### <a name="term-store-composition"></a>Sammensætning af ordbevaring
+### <a name="term-store-composition"></a>Ordbankens sammensætning
 
-Få vist fordelingen af ordtyper mellem almindelige administrerede ord og virksomhedsnøgleord. Flyt flere nøgleord til administrerede ord, hvis det ønskes. Dette er nyttigt, når du vil identificere, om brugerne aktivt bruger nøgleord. Du kan gennemgå dem for at identificere potentielle kandidater efter administrerede ord.
+Få vist fordelingen af ordtyper mellem almindelige administrerede ord og virksomhedsnøgleord. Flyt flere nøgleord til administrerede ord, hvis det er nødvendigt. Dette er nyttigt, når du vil identificere, om dine brugere aktivt bruger nøgleord. Du kan gennemse dem for at identificere potentielle kandidater til administrerede vilkår.
 
 ### <a name="open-and-closed-term-sets"></a>Åbne og lukkede ordsæt
 
-Få vist fordelingen af åbne og lukkede ordsæt. Dette er nyttigt, hvis du vil forstå, hvor mange ordsæt der giver brugerne mulighed for at tilføje ord. Du kan konvertere dem til lukket, hvis du ønsker det, f.eks. hvis mængden vokser uventet. 
+Få vist distributionen af åbne og lukkede ordsæt. Dette er nyttigt, hvis du vil forstå, hvor mange ordsæt der tillader brugere at tilføje ord. Du kan konvertere dem til lukket, hvis det er nødvendigt, f.eks. hvis mængderne vokser uventet. 
 
 ### <a name="terms-without-synonyms"></a>Ord uden synonymer
 
-Få vist antallet af ord i hvert af de tilføjede arbejdssprog, der ikke har defineret synonymer. Dette er nyttigt for at identificere sprog, hvor du vil definere synonymer. Synonymer gør det lettere for slutbrugerne at gøre sig tvetydige og finde de rigtige ord til at mærke deres indhold.
+Få vist antallet af ord i hvert af de tilføjede arbejdssprog, hvor der ikke er defineret synonymer. Dette er nyttigt for at hjælpe med at identificere sprog, hvor du vil definere synonymer. Synonymer hjælper slutbrugere med at skelne og finde de korrekte ord til at mærke deres indhold.
 
 ## <a name="see-also"></a>Se også
 
