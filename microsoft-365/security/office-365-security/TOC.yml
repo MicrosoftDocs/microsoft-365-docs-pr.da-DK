@@ -156,16 +156,18 @@
           items:
             - name: Mailgodkendelse
               href: email-validation-and-authentication.md
+            - name: Konfigurer SPF for at forhindre forfalskning
+              href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
+            - name: Sådan bruger Microsoft 365 SPF til at forhindre forfalskning
+              href: how-office-365-uses-spf-to-prevent-spoofing.md
             - name: Brug DKIM til at validere udgående mail
               href: use-dkim-to-validate-outbound-email.md
             - name: Understøttelse af validering af DKIM-signerede meddelelser
               href: support-for-validation-of-dkim-signed-messages.md
             - name: Brug DMARC til at validere mail
               href: use-dmarc-to-validate-email.md
-            - name: Konfigurer SPF for at forhindre forfalskning
-              href: set-up-spf-in-office-365-to-help-prevent-spoofing.md
-            - name: Sådan bruger Microsoft 365 SPF til at forhindre forfalskning
-              href: how-office-365-uses-spf-to-prevent-spoofing.md
+            - name: 'Brug ARC-afsendere, der er tillid til, til legitime enheder og tjenester mellem afsender og modtager'
+              href: use-arc-exceptions-to-mark-trusted-arc-senders.md
         - name: Mailflow i EOP
           href: mail-flow-in-eop.md
         - name: Politikker for brugerindsendelser
@@ -394,6 +396,8 @@
           href: quarantine-faq.yml
     - name: Reference
       items:
+        - name: Defender for Office 365-dataopbevaring
+          href: mdo-data-retention.md
         - name: Sikkerhedsoversigt
           href: security-roadmap.md
         - name: Hjælp og support til Exchange Online Protection

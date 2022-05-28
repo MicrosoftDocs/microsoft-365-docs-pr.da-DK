@@ -23,12 +23,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du aktiverer eller deaktiverer arkivpostkasser for at understøtte organisationens krav til opbevaring af meddelelser, eDiscovery og venteposition.
-ms.openlocfilehash: ba5fdf252fe379798b1126d59affb12bb3725306
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: f95da36b48389bba2bd640825071dbff5c6ddb3d
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647231"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772418"
 ---
 # <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Aktivér arkivpostkasser i Microsoft Purview-overholdelsesportalen
 
@@ -124,6 +124,10 @@ Der åbnes en pop op-side i Microsoft 365 Administration. Angiv mailadressen på
 
 > [!NOTE]
 > Du skal være global Microsoft 365-administrator for at kunne bruge diagnosticeringskontrol af arkivpostkassen. Denne funktion er heller ikke tilgængelig i Microsoft 365 Government-skyer, Microsoft 365 drevet af 21Vianet eller Microsoft 365 Tyskland.
+
+## <a name="instructions-for-end-users"></a>Vejledning for slutbrugere
+
+Forklar brugerne, hvordan deres arkivpostkasse fungerer, og hvordan de kan interagere med den i Outlook på Windows, macOS og internettet. Den mest effektive dokumentation tilpasses til din organisation. Men hvis du vil have grundlæggende instruktioner, skal du se [Administrer maillager med onlinearkivpostkasser](https://prod.support.services.microsoft.com/en-us/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ## <a name="next-steps"></a>Næste trin
 
