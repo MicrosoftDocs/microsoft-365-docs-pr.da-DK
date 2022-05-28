@@ -17,12 +17,12 @@ ms.custom:
 search.appverid: ''
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du planlægger, tilmelder dig og kører et prøvepilotprogram til SharePoint Syntex i din organisation.
-ms.openlocfilehash: ccbf1208d5c655171825b5a96f3a78b25ea3bbf2
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 5081c3877e005d1e014ad7520beeffd657a31f67
+ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754438"
+ms.locfileid: "65759796"
 ---
 # <a name="run-a-trial-of-microsoft-sharepoint-syntex"></a>Kør en prøveversion af Microsoft SharePoint Syntex
 
@@ -72,7 +72,7 @@ Planlægning og forretningsengagement er afgørende for at maksimere værdien af
 - Hav en klar forståelse af formålet med alle udtrukne metadata. f.eks. visning af formatering eller automatisering ved hjælp af Power Automate. Selvom SharePoint Syntex fokuserer på at klassificere dokumenter og udtrække metadata, er den værdi, der skal kvantificeres, hvad disse metadata muliggør.
 - Være baseret på et defineret sæt data. f.eks. specifikke SharePoint websteder eller biblioteker. En almindelig misforståelse af SharePoint Syntex er, at generelle modeller kan anvendes på tværs af alt organisationsindhold. En mere præcis visning er, at modeller er udviklet til at hjælpe med at løse specifikke forretningsproblemer på målrettede placeringer.
 
-Alle disse use cases passer muligvis ikke til SharePoint Syntex. Målet med en kvalitetsprøveperiode er ikke at bevise, at SharePoint Syntex passer til alle scenarierne. Prøveversionen bør i stedet hjælpe dig med bedre at forstå værdien af produktet.
+Alle disse use cases passer muligvis ikke til SharePoint Syntex. Målet med en kvalitetsprøveperiode er ikke at bevise, at SharePoint Syntex passer til alle scenarierne. Prøveversionen bør i stedet hjælpe dig med bedre at forstå produktets værdi.
 
 For hver af de planlagte use cases skal du identificere brugere, der er eksperter i det relaterede indhold eller den relaterede proces. Oprettelsen af SharePoint Syntex modeller fokuserer på domæneeksperter i indholdet i stedet for på it-fagfolk eller udviklerressourcer.
 
@@ -88,7 +88,7 @@ Når prøveversionen er aktiveret, kan du oprette modeller og behandle filer. Se
 
 ## <a name="during-a-trial"></a>Under en prøveversion
 
-Prøveperioder er begrænsede, så det er bedst først at fokusere på, om SharePoint Syntex modeller kan klassificere dokumenter og udtrække metadata for de definerede use cases. Når prøveperioden er ovre, kan du evaluere, hvordan metadataene kan udnyttes.
+Prøveperioder er begrænsede, så det er bedst først at fokusere på, om SharePoint Syntex modeller kan klassificere dokumenter og udtrække metadata for de definerede use cases. Når prøveperioden er ovre, kan du evaluere, hvordan metadataene kan bruges.
 
 ## <a name="after-a-trial"></a>Efter en prøveversion
 
@@ -113,3 +113,5 @@ Hvis du ikke køber licenser efter prøveversionen:
 ## <a name="see-also"></a>Se også
 
 [Kom i gang med at indføre SharePoint Syntex](adoption-getstarted.md)
+
+[Scenarier og use cases for SharePoint Syntex](adoption-scenarios.md)
