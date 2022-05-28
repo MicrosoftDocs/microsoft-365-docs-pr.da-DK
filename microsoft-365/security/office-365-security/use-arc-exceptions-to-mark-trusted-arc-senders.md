@@ -18,12 +18,12 @@ ms.custom:
 description: Godkendt modtaget kæde (ARC) er mailgodkendelse, der forsøger at bevare godkendelsesresultater på tværs af enheder og eventuelle indirekte mailflows, der kommer mellem afsenderen og modtageren. Her kan du se, hvordan du kan gøre undtagelser for dine ARC-afsendere, der er tillid til.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 625dd27ff59fca6a0e156bd65296e407e22005a6
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: 6b3057350f8b1a652a08da8c878a47e191af04d0
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663889"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772339"
 ---
 # <a name="make-a-list-of-trusted-arc-senders-to-trust-legitimate-indirect-mailflows"></a>Opret en liste over ARC-afsendere, der er tillid til, for at have tillid til *legitime* indirekte mailflow
 
@@ -35,22 +35,20 @@ ms.locfileid: "65663889"
 
 E-mail godkendelse mekanismer som [SPF](set-up-spf-in-office-365-to-help-prevent-spoofing.md), [DKIM](use-dkim-to-validate-outbound-email.md), [DMARC](use-dmarc-to-validate-email.md) bruges til at bekræfte afsendere af e-mails for *sikkerheden* af e-mail modtagere, men nogle legitime tjenester kan foretage ændringer i e-mailen mellem afsender og modtager. **I Microsoft 365 Defender hjælper ARC med at reducere leveringsfejl i SPF, DKIM og DMARC på grund af *legitime* indirekte mailflows.**
 
-## <a name="authenticated-received-chain-arc-for-legitimate-indirect-mailflows-in-microsoft-365-defender-for-office"></a>Godkendt modtaget kæde (ARC) til *legitime* indirekte mailflow i Microsoft 365 Defender til Office
+## <a name="authenticated-received-chain-arc-in-microsoft-365-defender-for-office"></a>Godkendt modtaget kæde (ARC) i Microsoft 365 Defender til Office
 
-Adresselister og tjenester, der filtrerer eller videresender mails, er en velkendt og normal funktion i en organisations mailflow. Men mail videresending overtræder SPF. Tjenester kan også overtræde DKIM-e-mail-godkendelse ved at ændre mailheadere, tilføje f.eks. oplysninger om virusscanning eller fjerne vedhæftede filer. En af disse godkendelsesmetoder til mail kan medføre, at DMARC ikke kan overføres.
+Tjenester, der ændrer indhold under transport af meddelelsen før levering til din organisation, kan gøre DKIM-mailsignaturen ugyldig og påvirke godkendelsen af meddelelsen. Når disse mellemliggende tjenester udfører sådanne handlinger, kan de bruge ARC til at angive oplysninger om den oprindelige godkendelse, før ændringerne fandt sted, hvilket din organisation derefter kan have tillid til som en hjælp til godkendelse af meddelelsen.  
 
-Planlagte mailflowindgreb fra legitime tjenester kaldes ofte *indirekte mailflow* og kan *ved et uheld* få meddelelser til at mislykke e-mail-godkendelse, når de passerer gennem (hop til) den næste enhed eller tjeneste på vej til modtageren.
-
-**Arc-sealere, der er tillid til, gør det muligt for administratorer at føje en liste over *pålidelige* formidlere til portalen Microsoft 365 Defender.** Arc-sealere, der er tillid til, gør det muligt for Microsoft at overholde ARC-signaturer fra pålidelige mellemled, hvilket forhindrer, at disse legitime meddelelser mislykkes i godkendelseskæden.
+**Arc-sealere, der er tillid til, gør det muligt for administratorer at føje en liste over *pålidelige* formidlere til portalen Microsoft 365 Defender.** Arc-sealere, der er tillid til, gør det muligt for Microsoft at overholde ARC-signaturer fra disse pålidelige mellemled, hvilket forhindrer, at disse legitime meddelelser mislykkes i godkendelseskæden.
 
 > [!NOTE]
-> ***ARC-sealers, der er tillid til, er en administratoroprettet liste over alle domæner, hvis processer resulterer i indirekte mailflow, og som har implementeret ARC-forsegling.*** Når en mail dirigeres til Office 365 igennem, og ARC rustent mellemled i Office 365 lejer, validerer Microsoft ARC-signaturen og kan på baggrund af ARC-resultaterne overholde de angivne godkendelsesoplysninger.
+> ***Arc-sealers, der er tillid til, er en administratoroprettet liste over mellemliggende domæner, der har implementeret ARC-forsegling.*** Når en mail distribueres til Office 365, og ARC har tillid til den Office 365 lejer, validerer Microsoft ARC-signaturen og kan på baggrund af ARC-resultaterne overholde de angivne godkendelsesoplysninger.
 
 ## <a name="when-to-use-trusted-arc-sealers"></a>Hvornår skal du bruge arc-sealere, der er tillid til?
 
-Der kræves kun en liste over ARC-sealere, der er tillid til, hvor enheder og servere intervenerer i en organisations mailflow og:
+Der kræves kun en liste over arc-sealere, der er tillid til, hvor mellemled er en del af en organisations mailflow, og:
 
-1. Kan ændre mailheaderen eller andet mailindhold.
+1. Kan ændre mailheaderen eller mailindholdet.
 2. Godkendelse kan mislykkes af andre årsager (f.eks. ved at fjerne vedhæftede filer).
  
 Ved at tilføje en ARC-sealer, der er tillid til, validerer og har Office 365 tillid til de godkendelsesresultater, som sealer leverer til din lejer i Office 365.
@@ -73,7 +71,7 @@ Arc-beseglingsprogrammer, der er tillid til, på Microsoft 365 Defender portalen
 
 ## <a name="steps-to-validate-your-trusted-arc-sealer"></a>Trin til at validere din ARC-sealer, du har tillid til
 
-Hvis der er et ARC-forsegling fra en tredjepart, før meddelelsen når Microsoft 365 Defender, **skal du kontrollere overskrifterne, når mailen er modtaget, og se de seneste ARC-headere**.
+Hvis der er et ARC-forsegling fra en tredjepart, før meddelelsen når Microsoft 365 Defender, **skal du kontrollere overskrifterne, når mailen er modtaget, og få vist de seneste ARC-headere**.
 
 I den sidste ***ARC-Authentication-Results header** _skal du kontrollere, om ARC-validering er angivet som _*pass**.
 
@@ -86,12 +84,12 @@ Se godkendelsesmetoderne for mail i slutningen af denne headerblok for at se oda
 ``
 ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
 40.107.65.78) smtp.rcpttodomain=microsoft.com
-smtp.mailfrom=o365e5test083.onmicrosoft.com; dmarc=bestguesspass action=none
-header.from=o365e5test083.onmicrosoft.com; dkim=none (message not signed);
+smtp.mailfrom=sampledoamin.onmicrosoft.com; dmarc=bestguesspass action=none
+header.from=sampledoamin.onmicrosoft.com; dkim=none (message not signed);
 arc=pass (0 oda=1 ltdi=1
-spf=[1,1,smtp.mailfrom=o365e5test083.onmicrosoft.com]
-dkim=[1,1,header.d=o365e5test083.onmicrosoft.com]
-dmarc=[1,1,header.from=o365e5test083.onmicrosoft.com])
+spf=[1,1,smtp.mailfrom=sampledoamin.onmicrosoft.com]
+dkim=[1,1,header.d=sampledoamin.onmicrosoft.com]
+dmarc=[1,1,header.from=sampledoamin.onmicrosoft.com])
 ``
 
 Hvis du vil kontrollere, om ARC-resultatet blev brugt til at tilsidesætte en DMARC-fejl, skal du søge efter *compauth-resultat* og en *årsag til kode(130)* i headeren.
@@ -138,7 +136,7 @@ Disse diagrammer kontrasterer mailflowhandlinger med og uden en ARC-sealer, der 
 
 Her kan du se den samme organisation **, når du har udnyttet muligheden for at oprette en ARC-sealer, der er tillid til.**
 
-:::image type="content" source="../../media/m365d-indirect-traffic-flow-with-trusted-arc-sealer.PNG" alt-text="I den anden grafik havde Contoso-virksomheden oprettet en liste over arc-sealere, der var tillid til. Den samme bruger sender endnu en mail fra contoso.com til fabrikam.com. Den tjeneste fra tredjepart, der hyres af Contoso, ændrer afsenderens IP-adresse i mailens overskrift. Men denne gang har tjenesten implementeret ARC-forsegling, og fordi lejeradministratoren allerede har føjet domænet for tredjeparten til arc-sealere, der er tillid til, accepteres ændringen. SPF mislykkes for den nye IP-adresse. DKIM mislykkes på grund af indholdsændringen. DMARC mislykkes på grund af tidligere fejl. men ARC genkender ændringerne, udsteder et gennemløb og accepterer ændringer. Spoof modtager også et adgangskort. Meddelelsen sendes til Indbakke.":::
+:::image type="content" source="../../media/m365d-indirect-traffic-flow-with-trusted-arc-sealer.PNG" alt-text="I den anden grafik havde Contoso-virksomheden oprettet en liste over arc-sealere, der var tillid til. Den samme bruger sender endnu en mail fra contoso.com til fabrikam.com. Den tjeneste fra tredjepart, der hyres af Contoso, ændrer afsenderens IP-adresse i mailens overskrift. Men denne gang har tjenesten implementeret ARC-forsegling, og fordi lejeradministratoren allerede har føjet domænet for tredjeparten til arc-sealere, der er tillid til, accepteres ændringen. SPF mislykkes for den nye IP-adresse. DKIM mislykkes på grund af ændringen af indholdet. DMARC mislykkes på grund af tidligere fejl. Men ARC genkender ændringerne, udsteder et gennemløb og accepterer ændringerne. Spoof modtager også et adgangskort. Meddelelsen sendes til Indbakke.":::
 
 ## <a name="next-steps-after-you-set-up-arc-for-microsoft-365-defender-for-office"></a>Næste trin: Når du har konfigureret ARC til Microsoft 365 Defender for Office
 

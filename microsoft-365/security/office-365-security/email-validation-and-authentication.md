@@ -19,16 +19,16 @@ ms.localizationpriority: high
 description: Administratorer kan få mere at vide om, hvordan EOP bruger mailgodkendelse (SPF, DKIM og DMARC) til at forhindre spoofing, phishing og spam.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5368be5bbecde45d341a737a283a7461a2302dc4
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 2b0a1f1bec76a8dd22bc04502ea7ca09f2c7af66
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973371"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772768"
 ---
 # <a name="email-authentication-in-eop"></a>Mailgodkendelse i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -166,7 +166,11 @@ Når du er kommet i gang med en FALLBACK-politik for `?all`SPF, kan du gradvist 
 
 Du kan også bruge [indsigt i spoof intelligence](learn-about-spoof-intelligence.md) og [lejerens tilladelses-/blokliste](tenant-allow-block-list.md) til at give afsendere tilladelse til at sende ikke-godkendte meddelelser til din organisation.
 
-For eksterne domæner er den spoofede bruger domænet i fra-adressen, mens den afsendende infrastruktur enten er kildens IP-adresse (opdelt i /24 CIDR-områder) eller organisationsdomænet for den omvendte DNS -post (PTR).
+For eksterne domæner er den spoofede bruger domænet i fra-adressen, mens den afsendende infrastruktur er en af følgende værdier:
+
+- Kildens IP-adresse (opdelt i /24 CIDR-intervaller)
+- Organisationsdomænet for den omvendte DNS-post (PTR).
+- Et bekræftet DKIM-domæne.
 
 ### <a name="create-an-allow-entry-for-the-senderrecipient-pair"></a>Opret en tilladelsesindtastning for afsender-/modtagerparret
 

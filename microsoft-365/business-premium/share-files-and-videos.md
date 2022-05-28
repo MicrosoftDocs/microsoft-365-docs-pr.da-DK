@@ -25,16 +25,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Del filer og videoer i din kampagne med Microsoft Teams og SharePoint. Microsoft 365 Business Premium inkluderer Teams hvilket er en fantastisk måde at dele filer og videoer på på en sikker måde.
-ms.openlocfilehash: b678bf1bf44b63e80ac4b8d0ea6dfc760eb510a8
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 354722f92b34081c318c818d94e9ca5c95074aa7
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622358"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772352"
 ---
 # <a name="share-files-and-videos-in-a-safe-environment"></a>Del filer og videoer i et sikkert miljø
 
-En anden ting, du skal være opmærksom på, er at sikre, at alle medlemmer af organisationen styrer, hvem der kan få vist og redigere filer, og at de er gemt på et sikkert sted med de korrekte tilladelser anvendt. Microsoft 365 Business Premium brugere kan bruge Microsoft Teams til at gemme filer og derefter dele filerne enten i eller uden for virksomheden, praksis eller kampagne. Du kan også sende et Sharepoint-link. Hvis du sender et link i stedet for en vedhæftet fil, ved du, hvem der får vist og redigerer filerne, og de kan ikke vises eller ændres uden tilladelse.
+En anden ting, du skal være opmærksom på, er at sikre, at alle medlemmer af organisationen styrer, hvem der kan få vist og redigere filer, og at de er gemt på et sikkert sted med de korrekte tilladelser anvendt. Microsoft 365 Business Premium brugere kan bruge Microsoft Teams til at gemme filer og derefter dele filerne enten i eller uden for virksomheden, praksis eller kampagne. Du kan også sende et SharePoint link. Hvis du sender et link i stedet for en vedhæftet fil, ved du, hvem der får vist og redigerer filerne, og de kan ikke vises eller ændres uden tilladelse.
 
 ![Diagram over et Microsoft Teams vindue, der viser fanen Filer og linket Hent i menuen.](../media/m365-democracy-teams-sharefiles.png)
 

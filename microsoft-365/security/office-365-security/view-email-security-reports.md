@@ -20,16 +20,16 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6e57b797ab0b5d5eee90315ae9c3459fcba0a02c
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 614cdd62e5884eff0f91b1c0d1f9946a1c8ce891
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621685"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772298"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -392,7 +392,7 @@ På siden **Spoof-registreringer** er ikonet ![Opret tidsplan.](../../media/m365
 
 ## <a name="submissions-report"></a>Rapport over indsendelser
 
-Rapporten **Indsendelser** viser oplysninger om elementer, som administratorer har rapporteret til Microsoft til analyse. Du kan få flere oplysninger under [Brug indsendelse af administratorer til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+Rapporten **Indsendelser** viser oplysninger om elementer, som administratorer har rapporteret til Microsoft til analyse. Du kan få flere oplysninger under [Brug Administration Indsendelse til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
 Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **Indsendelser** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne <https://security.microsoft.com/adminSubmissionReport>. Hvis du vil gå til [administratorindsendelser på Microsoft 365 Defender-portalen](admin-submission.md), skal du klikke på **Gå til Indsendelser**. Administratorer kan få vist rapporten de sidste 30 dage.
 
@@ -619,7 +619,7 @@ I visningen **Vis data efter mailmalware \>** og **diagramopdeling efter registr
 - **Omdømme for fildeonation**<sup>\*</sup>: Alt skadeligt filomdømme, der genereres af Defender for Office 365 detonationer.
 - **Filomdømme**
 - **Antimalwareprogram**<sup>\*</sup>: Registrering fra antimalwareprogrammer.
-- **Filtype for antimalwarepolitik**: Dette er mails, der er filtreret ud på grund af den type skadelig fil, der er identificeret i meddelelsen.
+- **Filtype for politik til bekæmpelse af skadelig** software: Mailmeddelelser filtreres automatisk på grund af den filtype, der er identificeret i meddelelsen (almindelig filtrering af vedhæftede filer).
 - **Skadeligt omdømme for URL-adresse**<sup>\*</sup>
 - **URL-detonation**<sup>\*</sup>
 - **URL-detonationsomdømme**<sup>\*</sup>
@@ -660,7 +660,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
-På **sidenThreat-status for beskyttelse** skal du klikke på ![ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ![ikonet Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om rapport](#request-report)** og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Eksportknapper](#export-report)** er tilgængelige.
+På siden **Status for trusselsbeskyttelse** er ikonet ![Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ![ikonet Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om rapport](#request-report)** og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Eksportknapper](#export-report)** er tilgængelige.
 
 ### <a name="chart-breakdown-by-policy-type"></a>Diagramopdeling efter politiktype
 

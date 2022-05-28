@@ -37,12 +37,12 @@ search.appverid:
 - OSU160
 ms.assetid: ba124775-d5c0-4d68-b88d-8458ad4c3717
 description: Support til SharePoint Server 2007 ophører i oktober 2017. I denne artikel kan du få mere at vide om dine muligheder for opgradering, overførsel og support.
-ms.openlocfilehash: 260949f73fbb4530436484e70ca39d4e2f99bbcf
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7f98e3652e2836a0c4193efbe33147fd09ced01e
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098224"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65771947"
 ---
 # <a name="sharepoint-server-2007-end-of-support-roadmap"></a>køreplan for ophør af support til SharePoint Server 2007
 
@@ -119,9 +119,9 @@ Du kan ikke overføre direkte fra SharePoint 2007 til SharePoint Online. Din fly
 |**Online pro**|**Online con**|
 |:-----|:-----|
 |Microsoft leverer SPO-hardware og al hardwareadministration.  <br/> |Tilgængelige funktioner kan variere mellem SharePoint Server i det lokale miljø og SPO.  <br/> |
-|Du er SharePoint-administrator eller global administrator af dit abonnement og kan tildele administratorer til SPO-websteder.  <br/> |Nogle handlinger, der er tilgængelige for en farmadministrator i SharePoint Server i det lokale miljø, findes ikke eller er ikke nødvendigvis inkluderet i rollen SharePoint administrator i Microsoft 365.  <br/> |
+|Du er SharePoint administrator eller global administrator af dit abonnement og kan tildele administratorer til SPO-websteder.  <br/> |Nogle handlinger, der er tilgængelige for en farmadministrator i SharePoint Server i det lokale miljø, findes ikke eller er ikke nødvendigvis inkluderet i rollen SharePoint administrator i Microsoft 365.  <br/> |
 |Microsoft anvender programrettelser, rettelser og opdateringer på underliggende hardware og software. <br/> |Da der ikke er adgang til det underliggende filsystem i tjenesten, er tilpasningen begrænset.  <br/> |
-|Microsoft publicerer [serviceniveauaftaler](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) og bevæger sig hurtigt for at løse hændelser på tjenesteniveau. <br/> |Sikkerhedskopiering og gendannelse og andre gendannelsesindstillinger automatiseres af tjenesten i SharePoint Online. Sikkerhedskopier overskrives, hvis de ikke bruges. <br/> |
+|Microsoft publicerer [serviceniveauaftaler](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) og bevæger sig hurtigt for at løse hændelser på tjenesteniveau. <br/> |Backup og gendannelse og andre gendannelsesmuligheder automatiseres af tjenesten i SharePoint Online. Sikkerhedskopier overskrives, hvis de ikke bruges. <br/> |
 |Sikkerhedstest og justering af serverydeevne udføres løbende i tjenesten af Microsoft. <br/> |Ændringer af brugergrænsefladen og andre SharePoint funktioner installeres af tjenesten og skal muligvis slås til eller fra. <br/> |
 |Microsoft 365 overholder mange branchestandarder: [Microsofts tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home).  <br/> |[FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) er begrænset hjælp til migrering.  <br/> Meget af opgraderingen vil være manuel eller via SPO Migration API, der er beskrevet i [SharePoint Online and OneDrive Migration Content Roadmap](/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets).  <br/> |
 |Microsoft Support-teknikere og datacentermedarbejdere har ikke ubegrænset administratoradgang til dit abonnement. <br/> |Der kan være ekstra omkostninger, hvis hardwaren skal opgraderes for at understøtte den nyere version af SharePoint, eller hvis der kræves en sekundær farm til opgraderingen.  <br/> |

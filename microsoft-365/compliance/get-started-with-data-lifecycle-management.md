@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at begynde at styre din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle præskriptive retningslinjer for at komme i gang.
-ms.openlocfilehash: 0d9545a04b94b75ee1b9429d7db75b39e90b06ef
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 95ce0286d5ec45b5dabcbd2447bd52821f547caf
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286840"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772724"
 ---
 # <a name="get-started-with-data-lifecycle-management"></a>Kom i gang med administration af datalivscyklus
 
@@ -43,7 +43,7 @@ Er du klar til at begynde at styre din organisations data ved at bevare det indh
     
     Hvis det er nødvendigt, [kan du oprette og anvende opbevaringsmærkater for dine undtagelser](create-retention-labels-information-governance.md).
 
-3. **Aktivér arkivering af postkasser** for at give brugere ekstra lagerplads på postkasser: [Aktivér arkivpostkasser på Microsoft Purview-overholdelsesportalen](enable-archive-mailboxes.md)
+3. **Aktivér arkivering af postkasser** for at give brugerne ekstra lagerplads i postkassen: [Aktivér arkivpostkasser i Microsoft Purview-compliance-portal](enable-archive-mailboxes.md)
     
     Hvis det er nødvendigt for at understøtte arkivpostkasser:
     
@@ -59,7 +59,7 @@ Er du klar til at begynde at styre din organisations data ved at bevare det indh
 
 En række forskellige abonnementer understøtter funktioner til administration af datalivscyklus.
 
-Hvis du vil se indstillingerne for licensering af dine brugere, så de kan drage fordel af Microsoft Purview-funktioner, skal du se [Microsoft 365 licensvejledning for at få oplysninger om sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Du kan se de funktioner, der er angivet på denne side, i afsnittet [Administration af Microsoft Purview-datalivscyklus](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management) og relateret [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få licenskrav til funktioner.
+Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft Purview funktioner, skal du se [vejledningen til Microsoft 365 licenser for at få hjælp til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Du kan se de funktioner, der er angivet på denne side, i afsnittet [Administration af Microsoft Purview-datalivscyklus](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management) og relateret [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få oplysninger om licenskrav på funktionsniveau.
 
 ## <a name="permissions"></a>Tilladelser
 
@@ -69,11 +69,11 @@ Hvis du vil have tilladelse til at administrere postkasser til arkivering, inakt
 
 ### <a name="permissions-for-retention-policies-and-retention-labels"></a>Tilladelser til opbevaringspolitikker og opbevaringsmærkater
 
-Medlemmer af dit overholdelsesteam, der skal oprette og administrere opbevaringspolitikker og opbevaringsmærkater, skal have tilladelser til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>. Lejeradministratoren (global administrator) har som standard adgang til denne placering og kan give overholdelsesansvarlige og andre personer adgang uden at give dem alle tilladelserne for en lejeradministrator. Hvis du vil tildele tilladelser til denne begrænsede administration, anbefaler vi, at du føjer brugere til rollegruppen **Administrator af overholdelse** .
+Medlemmer af dit overholdelsesteam, der skal oprette og administrere opbevaringspolitikker og opbevaringsmærkater, skal have tilladelser til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>. Lejeradministratoren (global administrator) har som standard adgang til denne placering og kan give overholdelsesansvarlige og andre personer adgang uden at give dem alle tilladelserne for en lejeradministrator. Hvis du vil tildele tilladelser til denne begrænsede administration, anbefaler vi, at du føjer brugere til rollegruppen **Administrator af overholdelse** .
 
 Hvis du vil bruge denne standardrolle, kan du oprette en ny rollegruppe og føje rollen **Opbevaringsstyring** til denne gruppe. Hvis du vil have en skrivebeskyttet rolle, skal du bruge **Visnings kun opbevaringsstyring**. 
 
-Du kan finde oplysninger om, hvordan du føjer brugere til standardrollerne eller opretter dine egne rollegrupper, [under Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md).
+Du kan finde oplysninger om, hvordan du føjer brugere til standardrollerne eller opretter dine egne rollegrupper, [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md).
 
 Disse tilladelser kræves kun for at oprette, konfigurere og anvende opbevaringspolitikker og opbevaringsmærkater. Den person, der konfigurerer disse politikker og mærkater, kræver ikke adgang til indholdet.
 
@@ -84,7 +84,7 @@ Brug følgende tabel til at hjælpe dig med at knytte dine forretningskrav til d
 |Jeg vil...|Dokumentation|
 |----------------|---------------|
 |Gem eller slet data effektivt for Microsoft 365-tjenester: <br />- Exchange  <br />- SharePoint  <br />- OneDrive  <br />- Microsoft 365-grupper <br />- Teams <br />- Yammer <br />- Skype for Business |[Opret og konfigurer opbevaringspolitikker](create-retention-policies.md)|
-|Giv brugerne ekstra postkasselager |[Aktivér arkivpostkasser på Microsoft Purview-overholdelsesportalen](enable-archive-mailboxes.md)|
+|Giv brugerne ekstra postkasselager |[Aktivér arkivpostkasser i Microsoft Purview-overholdelsesportalen](enable-archive-mailboxes.md)|
 |Bevar postkassedata, når medarbejdere forlader organisationen |[Opret og administrer inaktive postkasser](create-and-manage-inactive-mailboxes.md)|
 |Upload postkassedata fra PST-filer |[Brug netværksupload til at importere PST-filer](use-network-upload-to-import-pst-files.md)|
 
@@ -95,7 +95,7 @@ Hvis du har et scenarie, der kræver dataadministration af individuelle elemente
 
 Se følgende afsnit for at få oplysninger om slutbrugerdokumentation til understøttelse af Microsoft 365 opbevaring.
 
-De funktioner til administration af datalivscyklus, der understøtter administration af postkasser (arkivering, inaktive postkasser og import), kræver normalt ikke dokumentation fra slutbrugeren.
+Funktionerne til administration af datalivscyklus for inaktive postkasser og import af PST-filer kræver ikke slutbrugerdokumentation, da det kun er administratorhandlinger. Hvis du vil hjælpe brugerne med at forstå og interagere med deres arkivpostkasser i Outlook, når du har aktiveret denne funktion, skal du se [Administrer maillager med onlinearkivpostkasser](https://prod.support.services.microsoft.com/en-us/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ### <a name="end-user-documentation-for-retention-and-deletion"></a>Slutbrugerdokumentation til opbevaring og sletning
 

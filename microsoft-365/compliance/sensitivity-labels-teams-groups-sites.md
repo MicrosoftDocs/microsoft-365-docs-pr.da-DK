@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at beskytte indhold på SharePoint og Microsoft Teams websteder og Microsoft 365 grupper.
-ms.openlocfilehash: 56b6d53d56c8f9fb16e900271b8d6a4c152f6440
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 125be09f9d3d9a519e1985a37c0880e3f2465245
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437999"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772670"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsmærkater til at beskytte indhold på Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
@@ -189,7 +189,7 @@ Du kan finde flere oplysninger og instruktioner [under Brug følsomhedsmærkater
 > [!NOTE]
 > Denne etiketindstilling er i øjeblikket en prøveversion.
 
-En anden avanceret PowerShell-indstilling, som du kan konfigurere for, at følsomhedsmærkaten skal anvendes på et SharePoint websted, er **MembersCanShare**. Denne indstilling er den tilsvarende konfiguration, som du kan angive fra SharePoint Administration > **WebstedstilladelserWebstedsdelingÆndring** >  > **, hvordan medlemmer kan** **deleDelingstilladelser** > . 
+En anden avanceret PowerShell-indstilling, som du kan konfigurere for, at følsomhedsmærkaten skal anvendes på et SharePoint websted, er **MembersCanShare**. Denne indstilling er den tilsvarende konfiguration, som du kan angive fra SharePoint Administration > **Webstedstilladelser Webstedsdeling** >  > **Rediger, hvordan medlemmer kan dele** > **delingstilladelser**. 
 
 De tre indstillinger er angivet med de tilsvarende værdier for den avancerede PowerShell-indstilling **MembersCanShare**:
 
@@ -361,7 +361,7 @@ Når du bruger administrationscentre, der understøtter følsomhedsmærkater, me
 
 Følgende apps og tjenester understøtter følsomhedsmærkater, der er konfigureret for websteder og gruppeindstillinger:
 
-- Administrationscentre:
+- Administration centre:
 
   - SharePoint Administration
   - Teams Administration
@@ -379,7 +379,7 @@ Følgende apps og tjenester understøtter følsomhedsmærkater, der er konfigure
 
 Følgende apps og tjenester understøtter i øjeblikket ikke følsomhedsmærkater, der er konfigureret for websteder og gruppeindstillinger:
 
-- Administrationscentre:
+- Administration centre:
 
   - Exchange Administration
 
@@ -389,6 +389,7 @@ Følgende apps og tjenester understøtter i øjeblikket ikke følsomhedsmærkate
   - Yammer
   - Project
   - Power BI
+  - Mine apps portal
 
 ## <a name="classic-azure-ad-group-classification"></a>Klassisk Azure AD gruppeklassificering
 

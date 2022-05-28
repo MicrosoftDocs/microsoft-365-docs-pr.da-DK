@@ -19,12 +19,12 @@ ms.custom:
 description: Få mere at vide om, hvordan du opdaterer en DNS-post (Domain Name Service), så den bruger SPF (Sender Policy Framework) sammen med dit brugerdefinerede domæne i Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d29175c471e076b1f69e1edb6da3c005d3857f8f
-ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
+ms.openlocfilehash: 33e4a6d3644f7a3aab8992130b2b92e09dd665af
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/21/2022
-ms.locfileid: "65626035"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772396"
 ---
 # <a name="set-up-spf-to-help-prevent-spoofing"></a>Konfigurer SPF for at forhindre forfalskning
 
@@ -152,5 +152,7 @@ I forbindelse med avancerede eksempler kan du se en mere detaljeret beskrivelse 
 [**DMARC-mailgodkendelsens**](use-dmarc-to-validate-email.md) mål er at sikre, at SPF- og DKIM-oplysningerne stemmer overens med Fra-adressen.
 
  Du kan finde avancerede eksempler og en mere detaljeret beskrivelse af understøttet SPF-syntaks [under Sådan fungerer SPF for at forhindre spoofing og phishing i Office 365](how-office-365-uses-spf-to-prevent-spoofing.md#HowSPFWorks).
+
+[Brug ARC-afsendere, der er tillid til, til legitime mailflow](/microsoft-365/security/office-365-security/use-arc-exceptions-to-mark-trusted-arc-senders?view=o365-21vianet&branch=tracyp_emailauth)
 
 *Vælg 'Denne side' under 'Feedback', hvis du har feedback på denne dokumentation.*

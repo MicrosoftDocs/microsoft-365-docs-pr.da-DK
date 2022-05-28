@@ -18,12 +18,12 @@ ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
 description: Når du ikke længere har brug for at bevare indholdet af en Microsoft 365 inaktiv postkasse, kan du slette den inaktive postkasse permanent.
-ms.openlocfilehash: b1a828b2248be7eed583141e13a3badef948b32e
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 640a118a2fc277b05edc181e19008836027dc468
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438438"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772374"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Slet en inaktiv postkasse
 
@@ -50,7 +50,7 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af
 
 Som tidligere nævnt kan en politik for procesførelse, In-Place venteposition eller opbevaring være placeret i en inaktiv postkasse. Det første trin er at identificere ventepositionerne i en inaktiv postkasse.
   
-[Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) og derefter køre følgende kommando for at få vist oplysninger om venteposition for alle inaktive postkasser i din organisation.
+[Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)og derefter køre følgende kommando for at få vist oplysninger om venteposition for alle inaktive postkasser i din organisation.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds
@@ -94,7 +94,7 @@ Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -Litigatio
   
 ### <a name="remove-an-inactive-mailbox-from-a-retention-policy"></a>Fjern en inaktiv postkasse fra en opbevaringspolitik
 
-Proceduren til fjernelse af en inaktiv postkasse fra en opbevaringspolitik for Microsoft 365 afhænger af, om den opbevaringspolitik, der er tildelt den inaktive postkasse, er eksplicit for hele organisationen. på den type opbevaringspolitik, der er tildelt den inaktive postkasse.
+Proceduren for fjernelse af en inaktiv postkasse fra en opbevaringspolitik for Microsoft 365 afhænger af, om den opbevaringspolitik, der er tildelt den inaktive postkasse, er organisationsbaseret eller eksplicit:
 
 - Opbevaringspolitikker for hele organisationen, der er tildelt alle postkasser i organisationen. Brug **Cmdlet'en Get-OrganizationConfig** i Exchange Online PowerShell til at få oplysninger om opbevaringspolitikker for hele organisationen.
 

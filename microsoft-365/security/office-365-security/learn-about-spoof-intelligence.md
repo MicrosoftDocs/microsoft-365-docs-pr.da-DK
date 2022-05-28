@@ -20,16 +20,16 @@ ms.custom:
 description: Administratorer kan få mere at vide om spoof intelligence-indsigt i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c147396ff47f924d7dd4b2ebd3a0cac106de94b2
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: fc09bb008586b26649e31f409fa3be8114c6d2b6
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144689"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772070"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>Spoof intelligence-indsigt i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -115,6 +115,7 @@ På siden **Spoof intelligence-indsigt** , der vises, når du klikker på **Vis 
 - **Sender infrastruktur**: Også kendt som _infrastrukturen_. Den afsendende infrastruktur vil være en af følgende værdier:
   - Domænet, der blev fundet i et omvendt DNS-opslag (PTR-post) for kildemailserverens IP-adresse.
   - Hvis kildens IP-adresse ikke har nogen PTR-post, identificeres den afsendende infrastruktur som \<source IP\>/24 (f.eks. 192.168.100.100/24).
+  - Et bekræftet DKIM-domæne.
 - **Antal meddelelser**: Antallet af meddelelser fra kombinationen af det spoofede domæne _og_ den sendende infrastruktur til din organisation inden for de sidste 7 dage.
 - **Sidst set**: Den sidste dato, hvor der blev modtaget en meddelelse fra den afsendelsesinfrastruktur, der indeholder det spoofede domæne.
 - **Spoof-type**: En af følgende værdier:
@@ -147,7 +148,7 @@ Når du vælger et element på listen, vises der et pop op-vindue med detaljer, 
 
 ### <a name="about-allowed-spoofed-senders"></a>Om tilladte spoofed-afsendere
 
-En tilladt spoofed afsender i indsigt i spoof intelligence eller en blokeret spoofed afsender, som du manuelt har ændret til **Tillad at spoof** , tillader kun meddelelser fra kombinationen af det spoofed domæne *og* den afsendende infrastruktur. Det tillader ikke mail fra det spoofed domæne fra nogen kilde, og det tillader heller ikke mail fra den afsendende infrastruktur for et domæne.
+En tilladt spoofed afsender i indsigt i spoof intelligence eller en blokeret spoofed afsender, som du manuelt har ændret til **Tillad at spoof** , tillader kun meddelelser fra kombinationen af det spoofed domæne _og_ den afsendende infrastruktur. Det tillader ikke mail fra det spoofed domæne fra nogen kilde, og det tillader heller ikke mail fra den afsendende infrastruktur for et domæne.
 
 Følgende spoofed afsender har f.eks. tilladelse til at spoof:
 

@@ -19,16 +19,16 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette Pengeskab Links-politikker og globale indstillinger for Pengeskab links i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1d60be56f8dad960ca3f15484276324421c00426
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 969e3f3bb3b139a21cd2d84b4a0bd698a74b5107
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623014"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772440"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -304,6 +304,20 @@ I dette eksempel oprettes en regel for sikre links med navnet Contoso All med f�
 New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs contoso.com
 ```
 
+I dette eksempel oprettes en regel for sikre links, der ligner det forrige eksempel, men i dette eksempel gælder reglen for modtagere i alle accepterede domæner i organisationen.
+
+```powershell
+New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
+```
+
+I dette eksempel oprettes en regel for sikre links, der ligner de tidligere eksempler, men i dette eksempel gælder reglen for modtagere på de domæner, der er angivet i en .csv fil.
+
+```powershell
+$Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+$SLDomains = $Data.Domains
+New-SafeLinksRule -Name "Contoso All" -SafeLinksPolicy "Contoso All" -RecipientDomainIs $SLDomains
+```
+
 Du kan finde detaljerede oplysninger om syntaks og parametre under [New-SafeLinksRule](/powershell/module/exchange/new-safelinksrule).
 
 ### <a name="use-powershell-to-view-safe-links-policies"></a>Brug PowerShell til at få vist politikker for sikre links
@@ -389,6 +403,20 @@ Hvis du vil ændre en regel for sikre links, skal du bruge denne syntaks:
 
 ```PowerShell
 Set-SafeLinksRule -Identity "<RuleName>" <Settings>
+```
+
+I dette eksempel føjes alle accepterede domæner i organisationen som en betingelse til reglen for sikre links med navnet Contoso All.
+
+```powershell
+Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs (Get-AcceptedDomain).Name
+```
+
+I dette eksempel føjes domæner fra den angivne .csv som en betingelse til reglen for sikre links med navnet Contoso All.
+
+```powershell
+$Data = Import-Csv -Path "C:\Data\SafeLinksDomains.csv"
+$SLDomains = $Data.Domains
+Set-SafeLinksRule -Identity "Contoso All" -RecipientDomainIs $SLDomains
 ```
 
 Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-SafeLinksRule](/powershell/module/exchange/set-safelinksrule).

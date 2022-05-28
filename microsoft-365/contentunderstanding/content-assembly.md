@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du automatisk opretter dokumenter og andet indhold ved hjælp af en moderne skabelon i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 83ef526504073ae739a82c599663a3d284aaf51c
-ms.sourcegitcommit: 5eff41a350a01e18d9cdd572c9d8ff99d6c9563a
+ms.openlocfilehash: 2ec87a1255e7bd53e03e05c53d9cfbb8e6c77be1
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64836214"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772484"
 ---
 # <a name="create-documents-using-content-assembly-in-microsoft-sharepoint-syntex"></a>Opret dokumenter ved hjælp af indholdsassembly i Microsoft SharePoint Syntex
 
@@ -33,7 +33,7 @@ Med indholdsassemblyen kan du bruge et eksisterende dokument til at oprette en *
 
 Følg disse trin for at oprette en moderne skabelon.
 
-1. Vælg **NyOpret** >  **moderne skabelon** i et SharePoint-dokumentbibliotek.
+1. Vælg **Ny** > **opret moderne skabelon** i et SharePoint dokumentbibliotek.
 
    ![Skærmbillede af dokumentbiblioteket med indstillingen Opret moderne skabelon fremhævet.](../media/content-understanding/content-assembly-create-template-1.png)
 
@@ -132,15 +132,15 @@ På panelet **Alle pladsholdere** :
 
 Du kan oprette lige så mange pladsholdere, som du mener, er nødvendige. Når du er færdig, kan du vælge at gemme skabelonen som en kladde eller publicere skabelonen.
 
-   - **Gem kladde** – gemmer skabelonen som en kladde, og du kan få adgang til den senere. Du kan få vist, redigere eller publicere gemte kladder i afsnittet **Moderne skabeloner** ved at vælge **NyRedigering** >  **ny i** dokumentbiblioteket.
+   - **Gem kladde** – gemmer skabelonen som en kladde, og du kan få adgang til den senere. Du kan få vist, redigere eller publicere gemte kladder i sektionen **Moderne skabeloner** ved at vælge **Ny** > **menu Rediger ny** i dokumentbiblioteket.
  
-   - **Publicer** – publicerer skabelonen, der skal bruges af andre brugere i organisationen til at oprette dokumenter. Du kan få vist, redigere eller annullere publicering af *publicerede* skabeloner i afsnittet **Moderne skabeloner** ved at vælge **NyRedigering** >  **ny i** dokumentbiblioteket. 
+   - **Publicer** – publicerer skabelonen, der skal bruges af andre brugere i organisationen til at oprette dokumenter. Du kan få vist, redigere eller annullere publicering af *publicerede* skabeloner i afsnittet **Moderne skabeloner** ved at vælge **Ny** > **menu Rediger ny** i dokumentbiblioteket. 
 
 ## <a name="edit-a-modern-template"></a>Rediger en moderne skabelon
 
 Hvis du har brug for at redigere en eksisterende skabelon eller slette eller annullere publiceringen af en skabelon, skal du følge disse trin.
 
-1. Vælg **NyMenuen** >  **Ny i** et SharePoint-dokumentbibliotek.
+1. Vælg **Ny** > **menu Rediger ny i** et SharePoint dokumentbibliotek.
 
    ![Skærmbillede af dokumentbiblioteket med menuindstillingen Rediger ny fremhævet.](../media/content-understanding/content-assembly-edit-template-1.png)
 
@@ -162,7 +162,7 @@ Hvis du har brug for at redigere en eksisterende skabelon eller slette eller ann
 
 Du kan bruge en *publiceret* moderne skabelon til hurtigt at oprette lignende dokumenter uden at skulle starte fra bunden. Følg disse trin for at oprette et dokument ved hjælp af en publiceret skabelon:
 
-1. Vælg **Ny** i et SharePoint-dokumentbibliotek, og vælg derefter den moderne skabelon, du vil bruge.
+1. Vælg **Ny** i et SharePoint dokumentbibliotek, og vælg derefter den moderne skabelon, du vil bruge.
 
    ![Skærmbillede af dokumentbiblioteket, der viser de moderne skabelonvalg i menuen Ny.](../media/content-understanding/content-assembly-create-document-1.png)
 

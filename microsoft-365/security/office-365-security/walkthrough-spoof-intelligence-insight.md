@@ -21,12 +21,12 @@ ms.custom:
 ms.technology: mdo
 ms.prod: m365-security
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f827046dc9a103e73eb6fb79ba161e523e2b2690
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 66253ed6deab0f41cac3a4ff732201e20d100e98
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649347"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65771991"
 ---
 # <a name="manage-spoofed-senders-using-the-spoof-intelligence-policy-and-spoof-intelligence-insight-in-eop"></a>Administrer spoofed afsendere ved hjælp af spoof intelligence-politikken og indsigt i spoof intelligence i EOP
 
@@ -98,7 +98,7 @@ Hvis du vil konfigurere tilladte og blokerede afsendere i spoof intelligence, sk
    ```
 
 2. Rediger CSV-filen for at tilføje eller ændre følgende værdier:
-   - **Afsender** (domæne i kildeserverens PTR-post eller IP/24-adresse)
+   - **Afsender** (domæne i kildeserverens PTR-post, IP/24-adresse eller bekræftet DKIM-domæne)
    - **SpoofedUser**: En af følgende værdier:
      - Den interne brugers mailadresse.
      - Den eksterne brugers maildomæne.

@@ -20,12 +20,12 @@ f1.keywords:
 - NOCSH
 description: Find oplysninger og ressourcer, der skal opgraderes fra SharePoint 2010 og SharePoint Server 2010. Support til begge ophører den 13. april 2021.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: be25dd1260c378146d292e6487329065a3020ac8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4ed6cf873442d4fd48cdbf9562e6067fd238384e
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077400"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772746"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>Opgradering fra SharePoint 2010
 
@@ -112,9 +112,9 @@ Hvis du opgraderer til SharePoint Server 2013 eller SharePoint Server 2016 og be
 |SharePoint Online-fordel|SharePoint Online ulempe|
 |---|---|
 |Microsoft leverer SPO-hardware og al hardwareadministration.|Tilgængelige funktioner kan variere mellem SharePoint Server i det lokale miljø og SPO.|
-|Du er SharePoint-administrator eller global administrator af dit abonnement og kan tildele administratorer til SPO-websteder.|Nogle handlinger, der er tilgængelige for en farmadministrator i SharePoint Server i det lokale miljø, findes ikke (eller er ikke nødvendige) i rollen SharePoint administrator i Microsoft 365. Men SharePoint administration, administration af gruppe af websteder og ejerskab af websteder er lokale for din organisation.|
+|Du er SharePoint administrator eller global administrator af dit abonnement og kan tildele administratorer til SPO-websteder.|Nogle handlinger, der er tilgængelige for en farmadministrator i SharePoint Server i det lokale miljø, findes ikke (eller er ikke nødvendige) i rollen SharePoint administrator i Microsoft 365. Men SharePoint administration, administration af gruppe af websteder og ejerskab af websteder er lokale for din organisation.|
 |Microsoft anvender programrettelser, rettelser og opdateringer på underliggende hardware og software, herunder SQL servere, som SharePoint Online kører på.|Da der ikke er adgang til det underliggende filsystem i tjenesten, er tilpasningen begrænset.|
-|Microsoft publicerer [serviceniveauaftaler](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) og bevæger sig hurtigt for at løse hændelser på tjenesteniveau.|Sikkerhedskopiering og gendannelse og andre gendannelsesindstillinger automatiseres af tjenesten i SharePoint Online. Sikkerhedskopier overskrives, hvis de ikke bruges.|
+|Microsoft publicerer [serviceniveauaftaler](/office365/servicedescriptions/office-365-platform-service-description/service-level-agreement) og bevæger sig hurtigt for at løse hændelser på tjenesteniveau.|Backup og gendannelse og andre gendannelsesmuligheder automatiseres af tjenesten i SharePoint Online. Sikkerhedskopier overskrives, hvis de ikke bruges.|
 |Sikkerhedstest og justering af serverens ydeevne udføres løbende i tjenesten af Microsoft.|Ændringer af brugergrænsefladen og andre SharePoint funktioner installeres af tjenesten og skal muligvis slås til eller fra.|
 |Microsoft 365 overholder mange branchestandarder: [Microsofts tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home).|[FastTrack](https://go.microsoft.com/fwlink/?linkid=518597) er begrænset hjælp til migrering.  <br/> Meget af opgraderingen vil være manuel eller via SPO Migration API, der er beskrevet i [SharePoint Online and OneDrive Migration Content Roadmap](/sharepointmigration/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets).|
 |Microsoft Support-teknikere og medarbejdere i datacentre har ikke ubegrænset administratoradgang til dit abonnement.|Der kan være ekstra omkostninger, hvis hardwareinfrastrukturen skal opgraderes for at understøtte den nyere version af SharePoint, eller hvis en sekundær farm er påkrævet til opgradering.|

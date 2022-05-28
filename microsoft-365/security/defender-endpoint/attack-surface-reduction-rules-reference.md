@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: d43bcfd16a2ab2b1927ae4da0f894db114003cbe
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: d719c83c8a6cc27ff682c17928c694184e3e94d6
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599563"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772506"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
@@ -56,9 +56,9 @@ I følgende tabel vises de understøttede operativsystemer til regler, der i øj
 >
 > Medmindre andet er angivet, er minimum Windows&nbsp; 10 build version 1709 (RS3, build 16299) eller nyere. Det mindste Windows&nbsp; Server-build er version 1809 eller nyere.
 >
-> Regler for reduktion af angrebsoverfladen i Windows&nbsp; Server2012R2&nbsp;&nbsp; og Windows&nbsp; Server2016&nbsp; er tilgængelige for enheder, der er onboardet ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+> Regler for reduktion af angrebsoverfladen i Windows&nbsp; Server&nbsp;2012&nbsp;R2 og Windows&nbsp; Server&nbsp;2016 er tilgængelige for enheder, der er onboardet ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Regelnavn| &nbsp;Windows 11 <br>Og<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>Og<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012R2&nbsp;<sup> [[1, 2](#fn1)]<sup></sup> |
+| Regelnavn| &nbsp;Windows 11 <br>Og<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>Og<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig kanal) eller nyere | Y | Y |
 | [Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y <br> version 1809 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
@@ -79,7 +79,7 @@ I følgende tabel vises de understøttede operativsystemer til regler, der i øj
 
 (<a id="fn1">1</a>) Refererer til den moderne samlede løsning til Windows Server 2012 og 2016. Du kan finde flere oplysninger under [Onboard Windows Servers til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
 
-(<a id="fn1">2</a>) For Windows&nbsp; Server 2016 og Windows&nbsp; Server 2012R2&nbsp; er den version af Microsoft Endpoint Configuration Manager, der som minimum kræves, version 2111.
+(<a id="fn1">2</a>) For Windows&nbsp; Server 2016 og Windows&nbsp; Server 2012&nbsp;R2 er den mindste version af Microsoft Endpoint Configuration Manager version 2111.
 
 (<a id="fn1">3</a>) Version og buildnummer gælder kun for Windows&nbsp; 10.
 
@@ -330,6 +330,9 @@ Afhængigheder: MDAV, Cloud Protection
 ### <a name="block-execution-of-potentially-obfuscated-scripts"></a>Bloker udførelse af potentielt slørede scripts
 
 Denne regel registrerer mistænkelige egenskaber i et sløret script.
+  
+> [!IMPORTANT]
+> PowerShell-scripts er midlertidigt udelukket fra reglen "Bloker udførelse af potentielt slørede scripts" på grund af de store problemer med den fælles FP, der tidligere er opstået.
 
 Script tilsløring er en almindelig teknik, som både malware forfattere og legitime applikationer bruger til at skjule intellektuel ejendom eller reducere script indlæsningstider. Malware forfattere bruger også tilsløring til at gøre skadelig kode sværere at læse, hvilket forhindrer tæt kontrol af mennesker og sikkerhedssoftware.
 

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: ec7743c2e72016c606decb1346bdd558e40ae412
-ms.sourcegitcommit: 4cd8be7c22d29100478dce225dce3bcdce52644d
+ms.openlocfilehash: d4bb28255a809737b44324fdcccfc456c6a73dfb
+ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65302112"
+ms.lasthandoff: 05/28/2022
+ms.locfileid: "65772618"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -85,7 +85,7 @@ Før du konfigurerer dit tilpassede område, skal du bruge det forrige afsnit ti
 
 Specifikt for SharePoint websteder kan der være behov for yderligere SharePoint konfiguration, hvis du planlægger at bruge [brugerdefinerede webstedsegenskaber](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/using-custom-sharepoint-site-properties-to-apply-microsoft-365/ba-p/3133970).
 
-1. Gå til en af følgende placeringer på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/):
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/) skal du navigere til en af følgende placeringer:
     
     - Hvis du bruger løsningen til datastyring:
         - **Løsninger** >  **Datastyring** >  Fanen **Tilpassede områder** > + **Opret område**
@@ -445,9 +445,9 @@ Med disse sammenkædede indstillinger kan brugerne slette elementet fra deres ap
 
 Indstillingen til genmærkning i slutningen af opbevaringsperioden har to konfigurationsstier, når du opretter en opbevaringsmærkat:
 
-- Hvis du først har brug for at bevare indhold med den primære etiket (mest almindelige): På siden **Definer etiketindstillinger** skal du vælge **Bevar elementer på ubestemt tid eller for en bestemt periode** og angive opbevaringsperioden. Vælg derefter **Skift mærkatVælg** >  **en etiket** på siden **Vælg, hvad der sker efter opbevaringsperioden**.
+- Hvis du først har brug for at bevare indhold med den primære etiket (mest almindelige): På siden **Definer etiketindstillinger** skal du vælge **Bevar elementer på ubestemt tid eller for en bestemt periode** og angive opbevaringsperioden. På siden **Vælg, hvad der sker efter opbevaringsperioden** skal du derefter vælge **Skift mærkat** > **Vælg en erstatningsmærkat**.
 
-- Hvis du ikke behøver at bevare indholdet med den primære etiket i første omgang: På siden **Definer etiketindstillinger** skal du vælge **Gennemtving handlinger efter en bestemt periode**, angive opbevaringsperioden og derefter vælge **Skift mærkatVælg** >  **en etiket**.
+- Hvis du ikke behøver først at bevare indhold med den primære etiket: På siden **Definer etiketindstillinger** skal du vælge **Gennemtving handlinger efter en bestemt periode**, angive opbevaringsperioden og derefter vælge **Skift mærkat** > **Vælg en erstatningsmærkat**.
 
 I begge tilfælde skal erstatningsmærkaten allerede oprettes, men den skal ikke medtages i en eksisterende mærkatpolitik.
 
@@ -491,7 +491,7 @@ Nogle indstillinger kan ikke ændres, når en politik for opbevaring er oprettet
 
 Hvis du redigerer en opbevaringspolitik, og elementer allerede er underlagt de oprindelige indstillinger i din opbevaringspolitik, anvendes dine opdaterede indstillinger automatisk på disse elementer ud over elementer, der er nyligt identificeret.
 
-Normalt er denne opdatering forholdsvis hurtig, men kan tage flere dage. Når politikreplikeringen på tværs af dine Microsoft 365 placeringer er fuldført, kan du se status for opbevaringspolitikken i Microsoft Purview-overholdelsesportalen ændres fra **Til (Afventer)** til **Til (udført)**.
+Normalt er denne opdatering forholdsvis hurtig, men kan tage flere dage. Når politikreplikeringen på tværs af dine Microsoft 365 placeringer er fuldført, kan du se status for opbevaringspolitikken i Microsoft Purview-compliance-portal ændres fra **Til (Afventer)** til **Til (udført)**.
 
 ## <a name="locking-the-policy-to-prevent-changes"></a>Låsning af politikken for at forhindre ændringer
 
