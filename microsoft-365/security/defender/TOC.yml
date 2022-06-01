@@ -332,6 +332,12 @@
           items:
             - name: Oversigt
               href: defenderexpertsforhuntingprev.md
+        - name: Ransomware-strategiplaner
+          items:
+            - name: Registrering af menneskestyrede ransomware-angreb med Microsoft 365 Defender
+              href: playbook-detecting-ransomware-m365-defender.md
+            - name: Reaktion på ransomware-angreb
+              href: playbook-responding-ransomware-m365-defender.md
     - name: Vejledning til sikkerhedshandlinger
       items:
         - name: Oversigt
