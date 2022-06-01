@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: ad69d525ac8cf105761286c59e8bce54d446ae8f
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 043ee6cac3a7aa7408d949b4455fd90f7f6a66d0
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599585"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810916"
 ---
 # <a name="plan-for-insider-risk-management"></a>Plan for styring af insider-risiko
 
@@ -33,6 +33,8 @@ Se videoen nedenfor for at få mere at vide om, hvordan arbejdsprocessen for sty
 <br>
 
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4OUXB]
+
+Se [Microsoft Mechanics-videoen](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) om, hvordan styring af insiderrisiko og overholdelse af kommunikation fungerer sammen for at minimere datarisici fra brugere i din organisation.
 
 ## <a name="work-with-stakeholders-in-your-organization"></a>Arbejd med interessenter i din organisation
 
@@ -57,7 +59,7 @@ Afhængigt af hvordan du vil administrere politikker og beskeder for styring af 
 
 Du skal vælge mellem disse indstillinger for rollegrupper og løsningshandlinger, når du arbejder med styring af insiderrisiko:
 
-|**Handlinger**|**Styring af insiderrisiko**|**Administrator af styring af insiderrisiko**|**Analytikere af styring af insider-risiko**|**Undersøgere af styring af insider-risiko**|**Auditører for styring af insiderrisiko**|
+|**Handlinger**|**Styring af insiderrisiko**|**Styring af insiderrisiko Administration**|**Analytikere af styring af insider-risiko**|**Undersøgere af styring af insider-risiko**|**Auditører for styring af insiderrisiko**|
 |:----------|:--------------------------|:--------------------------------|:-----------------------------------|:----------------------------------------|:-----------------------------------|
 | Konfigurer politikker og indstillinger | Ja | Ja | Nej | Nej | Nej |
 | Få adgang til indsigt i analyse | Ja | Ja | Ja | Nej | Nej |
@@ -68,9 +70,9 @@ Du skal vælge mellem disse indstillinger for rollegrupper og løsningshandlinge
 | Vis & eksport af overvågningslogge | Ja | Nej | Nej | Nej | Ja |
 
 >[!IMPORTANT]
->Sørg for, at du altid har mindst én bruger i rollegrupperne *Insider Risk Management* eller *Insider Risk Management (* afhængigt af den indstilling, du vælger), så konfigurationen af insiderrisikostyring ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader organisationen.
+>Sørg for, at du altid har mindst én bruger i *Insider Risk Management* eller *Insider Risk Management Administration* rollegrupper (afhængigt af den indstilling, du vælger), så konfigurationen af styring af insiderrisiko ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader organisationen.
 
-Medlemmer af følgende roller kan tildele brugere til rollegrupper for styring af insiderrisiko og have de samme løsningstilladelser som i rollegruppen *Administration af insiderrisikostyring* :
+Medlemmer af følgende roller kan tildele brugere til insiderrisikostyringsrollegrupper og have de samme løsningstilladelser som i rollegruppen *Insider Risk Management Administration*:
 
 - Azure Active Directory *global administrator*
 - Azure Active Directory *overholdelsesadministrator*

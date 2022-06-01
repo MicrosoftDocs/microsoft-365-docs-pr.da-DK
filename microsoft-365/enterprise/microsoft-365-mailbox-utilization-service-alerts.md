@@ -18,36 +18,36 @@ ms.custom:
 - admindeeplinkEXCHANGE
 f1.keywords:
 - NOCSH
-description: Brug tjenestebeskeder for postkasseudnyttelse til at overvåge postkasser i venteposition, der når kvoten for postkassen.
-ms.openlocfilehash: fdc87e92aa6614d78347984cfa09bf75edc131e5
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+description: Brug tjenestevarsler for postkasseudnyttelse til at overvåge postkasser i venteposition, der når kvoten for postkassen.
+ms.openlocfilehash: 22583cbc6c6495d07caa3f920eeacb6bcd1d7536
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935297"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810544"
 ---
-# <a name="service-alerts-for-mailbox-utilization-in-exchange-online-monitoring"></a>Tjenestebeskeder om udnyttelse af postkasser i Exchange Online overvågning
+# <a name="service-advisories-for-mailbox-utilization-in-exchange-online-monitoring"></a>Tjenestemeddelelser om udnyttelse af postkasser i Exchange Online overvågning
 
-Vi har udgivet en ny Exchange Online tjenestebesked, der informerer dig om postkasser, der er i venteposition, og som risikerer at nå eller overskride deres kvote. Disse tjenestebeskeder giver synlighed over antallet af postkasser i din organisation, der kan kræve administratorinput.
+Vi har udgivet en ny Exchange Online servicemeddelelser, der informerer dig om postkasser, der er i venteposition, og som risikerer at nå eller overskride deres kvote. Disse tjenestemeddelelser giver synlighed over antallet af postkasser i din organisation, der kan kræve administratorinput.
 
-Disse tjenestebeskeder vises i Microsoft 365 Administration. Hvis du vil have vist disse tjenestebeskeder, skal <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**du**</a> >  gå til **Tilstand** >  Tjenestetilstand **Exchange Online** og derefter klikke på fanen **Aktive problemer**. Her er et eksempel på en tjenestebesked om udnyttelse af postkasser.
+Disse tjenestemeddelelser vises i Microsoft 365 Administration. Hvis du vil have vist disse tjenestemeddelelser, skal <a href="https://go.microsoft.com/fwlink/p/?linkid=842900" target="_blank">**du**</a> >  gå til **Tilstand** >  Tjenestetilstand **Exchange Online** og derefter klikke på fanen **Aktive problemer**. Her er et eksempel på en meddelelse om udnyttelse af postkasser.
 
 :::image type="content" alt-text="Tjenestebesked om postkasseudnyttelse." source="../media/MailboxUtilizationServiceAlert.png" lightbox="../media/MailboxUtilizationServiceAlert.png":::
 
-Hvis du vil have vist en liste over postkasser, der nærmer sig deres lagerkvote (kaldet *rapporten over postkasseforbrug*), skal du klikke på det fremhævede link på følgende skærmbillede. Dette link vises i tjenestebeskeden.
+Hvis du vil have vist en liste over postkasser, der nærmer sig deres lagerkvote (kaldet *rapporten over postkasseforbrug*), skal du klikke på det fremhævede link på følgende skærmbillede. Dette link vises i tjenestemeddelelsen.
 
 :::image type="content" alt-text="Link til rapport over postkasseforbrug." source="../media/LinkToMailboxUsageReport.png" lightbox="../media/LinkToMailboxUsageReport.png":::
 
 Alternativt kan den direkte URL-adresse til rapporten over postkassens brug være <https://admin.microsoft.com/Adminportal/Home?source=applauncher#/reportsUsage/MailboxUsage>.
 
-## <a name="what-do-these-service-alerts-indicate"></a>Hvad angiver disse tjenestebeskeder?
+## <a name="what-do-these-service-advisories-indicate"></a>Hvad indikerer disse servicemeddelelser?
 
-Tjenestebeskederne om udnyttelse af postkasser informerer administratorer om postkasser i venteposition, der nærmer sig kvoten for postkasselageret. Den type ventepositioner, der kan placeres i postkasser, omfatter litigation-ventepositioner, eDiscovery-ventepositioner og Microsoft 365 opbevaringspolitikker (der er konfigureret til at bevare data). Når en postkasse er i venteposition, kan brugere (eller automatiserede processer) ikke permanent fjerne data fra deres postkasse. Administratorer skal i stedet konfigurere MRM-opbevaringspolitikker i Exchange Online (indbygget i organisationens politikker for overholdelse af angivne standarder i forbindelse med dataopbevaring) for at flytte data fra en brugers primære postkasse til deres arkivpostkasse. Hvis en postkasse i venteposition ikke når en kritisk tilstand eller en advarselstilstand, skal administratorer [aktivere arkivpostkasser](../compliance/enable-archive-mailboxes.md) og [aktivere automatisk udvidelse af arkivering](../compliance/enable-autoexpanding-archiving.md) og derefter sikre, at opbevaringsperioden for den arkivpolitik, der er tildelt postkassen (der flytter mail fra den primære postkasse til arkivpostkassen), er kort nok. Hvis der ikke gøres noget for at løse de kvotaproblemer, der identificeres af beskeder om anvendelse af postkasser, kan brugerne muligvis ikke sende eller modtage mails eller mødeinviteringer.
+Tjenestevarsler for udnyttelse af postkasser informerer administratorer om postkasser i venteposition, der nærmer sig kvoten for postkasselageret. Den type ventepositioner, der kan placeres i postkasser, omfatter litigation-ventepositioner, eDiscovery-ventepositioner og Microsoft 365 opbevaringspolitikker (der er konfigureret til at bevare data). Når en postkasse er i venteposition, kan brugere (eller automatiserede processer) ikke permanent fjerne data fra deres postkasse. Administratorer skal i stedet konfigurere MRM-opbevaringspolitikker i Exchange Online (indbygget i organisationens politikker for overholdelse af angivne standarder i forbindelse med dataopbevaring) for at flytte data fra en brugers primære postkasse til deres arkivpostkasse. Hvis en postkasse i venteposition ikke når en kritisk tilstand eller en advarselstilstand, skal administratorer [aktivere arkivpostkasser](../compliance/enable-archive-mailboxes.md) og [aktivere automatisk udvidelse af arkivering](../compliance/enable-autoexpanding-archiving.md) og derefter sikre, at opbevaringsperioden for den arkivpolitik, der er tildelt postkassen (der flytter mail fra den primære postkasse til arkivpostkassen), er kort nok. Hvis der ikke gøres noget for at løse de kvotaproblemer, der identificeres af meddelelsen om anvendelse af postkassen, kan brugerne muligvis ikke sende eller modtage mails eller mødeinviteringer.
 
-En tjenestebesked om udnyttelse af postkasser indeholder tabeller over antallet af postkasser, der nærmer sig deres kvote. I følgende afsnit beskrives oplysningerne i disse tabeller, og de handlinger, som administratorer kan udføre for at sikre, at disse postkasser ikke overskrider deres kvote.
+En tjenestemeddelelse til udnyttelse af postkasser indeholder tabeller over antallet af postkasser, der nærmer sig deres kvote. I følgende afsnit beskrives oplysningerne i disse tabeller, og de handlinger, som administratorer kan udføre for at sikre, at disse postkasser ikke overskrider deres kvote.
 
 > [!NOTE]
-> Tjenestebeskeder indeholder beskrivelser af postkassens kvotaegenskaber, der vises i kolonnerne i tabellerne, der er beskrevet i følgende afsnit.
+> Tjenestemeddelelser indeholder beskrivelser af kvotaegenskaberne for postkassen, der vises i kolonnerne i tabellerne, der er beskrevet i følgende afsnit.
 
 ### <a name="mailboxes-on-hold-without-an-archive"></a>Postkasser i venteposition uden et arkiv
 
@@ -80,7 +80,7 @@ Administratorer skal også sørge for, at en MRM-arkivpolitik, der flytter eleme
 
 ### <a name="mrm-retention-policies-in-your-organization"></a>MRM-opbevaringspolitikker i din organisation
 
-Tjenestebeskeder om udnyttelse af postkasser kan også indeholde en tabel med oplysninger om MRM-opbevaringspolitikkerne i din organisation, og om de postkasser, der er en opbevaringspolitik, har en arkivpostkasse eller ej. Du kan få flere oplysninger om opbevaringspolitikker under [Opbevaringskoder og opbevaringspolitikker i Exchange Online](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies).
+Tjenestevarsler til udnyttelse af postkasser kan også indeholde en tabel med oplysninger om MRM-opbevaringspolitikkerne i din organisation, og om de postkasser, der er en opbevaringspolitik, har en arkivpostkasse eller ej. Du kan få flere oplysninger om opbevaringspolitikker under [Opbevaringskoder og opbevaringspolitikker i Exchange Online](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies).
 
 | RetentionPolicyGuid | Postkassetype | HasMoveDumpsterToArchiveTag | HasMovePrimaryToArchiveTag | HasPersonalArchiveTag |  Postkasser |
 |:--------------|:--------------|:---------------|:---------------|:---------------|:--------------- |
@@ -113,12 +113,12 @@ På følgende liste beskrives hver kolonne i den forrige tabel.
 
 - **Postkasser**: Angiver antallet af postkasser (dem med eller uden et arkiv, som er angivet i kolonnen **MailboxType** ), som opbevaringspolitikken er tildelt til.
 
-## <a name="how-often-will-i-see-these-service-alerts"></a>Hvor ofte får jeg vist disse tjenestebeskeder?
+## <a name="how-often-will-i-see-these-service-advisories"></a>Hvor ofte får jeg vist disse tjenestemeddelelser?
 
-Hvis du ikke gør noget for at løse kvoteproblemerne, kan du forvente at se denne type tjenestebesked hver fjerde dag. Efterfølgende tjenestebeskeder kan indeholde højere antal postkasser for andre postkasser, der nærmer sig deres kvote. Hvis du foretager en handling for at løse kvotaproblemer, vil denne tjenestebesked kun blive vist, når der identificeres en anden postkasse med kvoteproblemer.
+Hvis du ikke gør noget for at løse kvoteproblemerne, kan du forvente at se denne type servicemeddelelse hver syvende dag. Efterfølgende tjenestemeddelelser kan indeholde højere antal postkasser for andre postkasser, der nærmer sig deres kvote. Hvis du foretager en handling for at løse kvoteproblemer, sker denne tjenestemeddelelse kun, når der identificeres en anden postkasse med kvoteproblemer.
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Du kan finde oplysninger om fejlfinding og løsning af problemer med arkivpostkasser under [Fejlfinding af Microsoft Purview](/office365/troubleshoot/microsoft-365-compliance-welcome).
+- Du kan finde oplysninger om fejlfinding og løsning af problemer med arkivpostkasser [under Microsoft Purview fejlfinding](/office365/troubleshoot/microsoft-365-compliance-welcome).
 
 - Hvis du vil have hjælp til at identificere de ventepositioner, der er placeret i en postkasse, skal [du se Sådan identificerer du den type venteposition, der er placeret i en postkasse](../compliance/identify-a-hold-on-an-exchange-online-mailbox.md).

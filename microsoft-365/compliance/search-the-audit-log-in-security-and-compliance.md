@@ -21,12 +21,12 @@ description: Brug Microsoft Purview-compliance-portal til at søge i den samlede
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 70bb6383b67392da1766d3ca8d1ef0806d105bb1
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 9d556facba3fa1a9c1dbafbfe2b2cb519f1b362d
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465970"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810960"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
@@ -145,7 +145,7 @@ Her er processen til søgning i overvågningsloggen i Microsoft 365.
 
 ### <a name="step-1-run-an-audit-log-search"></a>Trin 1: Kør en søgning i overvågningsloggen
 
-1. Gå til , <https://compliance.microsoft.com> og log på.
+1. Gå til <https://compliance.microsoft.com>, og log på.
 
     > [!TIP]
     > Brug en privat browsersession (ikke en almindelig session) til at få adgang til overholdelsesportalen, da det forhindrer, at de legitimationsoplysninger, du i øjeblikket er logget på med, bruges. Tryk på **CTRL+SKIFT+N** for at åbne en InPrivate-browsingsession i Microsoft Edge eller en privat browsersession i Google Chrome (kaldet et inkognitovindue).
@@ -232,7 +232,7 @@ Du kan eksportere resultaterne af en søgning i overvågningsloggen til en komma
 
 1. Kør en søgning i overvågningsloggen, og rediger derefter søgekriterierne, indtil du har de ønskede resultater.
 
-2. Klik på **EksportérDownload** >  **alle resultater** på siden med søgeresultater.
+2. Klik på **Eksportér** > **Download alle resultater** på siden med søgeresultater.
 
    Alle poster fra overvågningsloggen, der opfylder søgekriterierne, eksporteres til en CSV-fil. Rådata fra overvågningsloggen gemmes i en CSV-fil. Yderligere oplysninger fra posten i overvågningsloggen er inkluderet i en kolonne med navnet **AuditData** i CSV.
 
@@ -473,7 +473,7 @@ Nej. Hændelsen kan være logført som et resultat af forudhentning af browseren
 
 Både hændelserne FilePreviewed og FileAccessed angiver, at en brugers opkald førte til en læsning af filen (eller en læsning af en miniaturegengivelse af filen). Selvom disse hændelser er beregnet til at være i overensstemmelse med hensigten med prøveversionen i forhold til adgangsformål, er forskellen mellem begivenheder ikke en garanti for brugerens hensigt.
 
-#### <a name="the-appsharepoint-user-in-audit-records"></a>Appsharepoint-brugeren\@ i overvågningsposter
+#### <a name="the-appsharepoint-user-in-audit-records"></a>App-sharepoint-brugeren\@i overvågningsposter
 
 I overvågningsposter for nogle filaktiviteter (og andre SharePoint-relaterede aktiviteter) kan du bemærke, at den bruger, der udførte aktiviteten (identificeret i felterne Bruger og UserId), er app@sharepoint. Dette angiver, at den "bruger", der udførte aktiviteten, var et program. I dette tilfælde blev programmet tildelt tilladelser i SharePoint til at udføre handlinger for hele organisationen (f.eks. søge på et SharePoint websted eller en OneDrive konto) på vegne af en bruger, administrator eller tjeneste. Denne proces med at give tilladelser til et program kaldes *SharePoint kun programadgang*. Dette angiver, at den godkendelse, der blev præsenteret for SharePoint til at udføre en handling, blev foretaget af et program i stedet for en bruger. Det er derfor, at den app@sharepoint bruger identificeres i visse overvågningsposter. Du kan få flere oplysninger under [Tildel adgang ved hjælp af SharePoint kun program](/sharepoint/dev/solution-guidance/security-apponly-azureacs).
 
@@ -491,7 +491,7 @@ I disse og andre scenarier vil du også bemærke, at flere overvågningsposter m
 
 ### <a name="folder-activities"></a>Mappeaktiviteter
 
-I følgende tabel beskrives mappeaktiviteterne i SharePoint Online og OneDrive for Business. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [AppSharePoint-brugeren\@ i overvågningsposter](#the-appsharepoint-user-in-audit-records).
+I følgende tabel beskrives mappeaktiviteterne i SharePoint Online og OneDrive for Business. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [Brugeren af app-sharepoint\@i overvågningsposter](#the-appsharepoint-user-in-audit-records).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -507,7 +507,7 @@ I følgende tabel beskrives mappeaktiviteterne i SharePoint Online og OneDrive f
 
 ### <a name="sharepoint-list-activities"></a>SharePoint listeaktiviteter
 
-I følgende tabel beskrives aktiviteter, der er relateret til, når brugerne interagerer med lister og listeelementer i SharePoint Online. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [AppSharePoint-brugeren\@ i overvågningsposter](#the-appsharepoint-user-in-audit-records).
+I følgende tabel beskrives aktiviteter, der er relateret til, når brugerne interagerer med lister og listeelementer i SharePoint Online. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [Brugeren af app-sharepoint\@i overvågningsposter](#the-appsharepoint-user-in-audit-records).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -582,7 +582,7 @@ I følgende tabel vises en liste over aktiviteter til synkronisering af filer i 
 
 ### <a name="site-permissions-activities"></a>Aktiviteter for webstedstilladelser
 
-I følgende tabel vises hændelser, der er relateret til tildeling af tilladelser i SharePoint og brug af grupper til at give (og tilbagekalde) adgang til websteder. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [AppSharePoint-brugeren\@ i overvågningsposter](#the-appsharepoint-user-in-audit-records).
+I følgende tabel vises hændelser, der er relateret til tildeling af tilladelser i SharePoint og brug af grupper til at give (og tilbagekalde) adgang til websteder. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [Brugeren af app-sharepoint\@i overvågningsposter](#the-appsharepoint-user-in-audit-records).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -605,7 +605,7 @@ I følgende tabel vises hændelser, der er relateret til tildeling af tilladelse
 
 ### <a name="site-administration-activities"></a>Webstedsadministrationsaktiviteter
 
-I følgende tabel vises hændelser, der stammer fra administrationsopgaver for websteder i SharePoint Online. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [AppSharePoint-brugeren\@ i overvågningsposter](#the-appsharepoint-user-in-audit-records).
+I følgende tabel vises hændelser, der stammer fra administrationsopgaver for websteder i SharePoint Online. Som tidligere forklaret angiver overvågningsposter for nogle SharePoint aktiviteter, at den app@sharepoint bruger udførte aktiviteten på vegne af den bruger eller administrator, der startede handlingen. Du kan finde flere oplysninger under [Brugeren af app-sharepoint\@i overvågningsposter](#the-appsharepoint-user-in-audit-records).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -805,9 +805,9 @@ Workplace Analytics giver indsigt i, hvordan grupper samarbejder på tværs af d
 |Slettede resultat|DeletedResult|Analytiker slettede et forespørgselsresultat.|
 |Downloadet rapport|DownloadedReport|Analytiker downloadede en fil med forespørgselsresultatet.|
 |Udført forespørgsel|ExecutedQuery|Analytiker kørte en forespørgsel.|
-|Opdaterede indstillingen for dataadgang|UpdatedDataAccessSetting|Administratoren opdaterede indstillingerne for dataadgang.|
-|Opdateret indstilling for beskyttelse af personlige oplysninger|UpdatedPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger. f.eks. minimumgruppestørrelse.|
-|Overførte organisationsdata|UploadedOrgData|Administratoren har uploadet en organisationsdatafil.|
+|Opdaterede indstillingen for dataadgang|UpdatedDataAccessSetting|Administration opdaterede indstillinger for dataadgang.|
+|Opdateret indstilling for beskyttelse af personlige oplysninger|UpdatedPrivacySetting|Administration opdaterede indstillinger for beskyttelse af personlige oplysninger, f.eks. minimumgruppestørrelse.|
+|Overførte organisationsdata|UploadedOrgData|Administration overførte organisationsdatafil.|
 |Bruger, der er logget på<sup>*</sup>| UserLoggedIn |En bruger er logget på sin Microsoft 365 brugerkonto.|
 |Brugeren er logget af<sup>*</sup>| UserLoggedOff |En bruger loggede af sin Microsoft 365 brugerkonto.
 |Set udforsk|ViewedExplore|Analytiker fik vist visualiseringer under en eller flere udforsk sidefaner.|
@@ -930,7 +930,7 @@ Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder,
 |Vist svar|VisRespons|Formularejeren får et bestemt svar. <br><br>Property ResponseId:string og Property ResponderId:string angiver, hvilket resultat der vises. <br><br>For en anonym responder vil egenskaben ResponderId være null.|
 |Link til oprettet oversigt|HentSummaryLink|Formularejeren opretter link til oversigtsresultater for at dele resultater.|
 |Link til slettet oversigt|Sletsumelink|Formularejeren sletter linket med oversigtsresultater.|
-|Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned af administratoren <br/>- Blokeringen af administratoren er fjernet <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
+|Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned med Administration <br/>- Administration blokeret <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
 |Opdateret bruger phishing-status|UpdateUserPhishingStatus|Denne hændelse logføres, hver gang værdien for brugerens sikkerhedsstatus blev ændret. Værdien af brugerstatussen i overvågningsposten **bekræftes som Phisher** , da brugeren oprettede en phishing-formular, der blev fjernet af Microsoft Online-sikkerhedsteamet. Hvis en administrator fjerner blokeringen af brugeren, angives værdien af brugerens status til **Nulstil som normal bruger**.|
 |Invitation til sendte formularer Pro|Invitation til proinvitation|Brugeren klikker for at aktivere en Pro prøveversion.|
 |Opdateret formularindstilling<sup>*</sup> |UpdateFormSetting|Formularejeren opdaterer en eller flere formularindstillinger. <br><br>Property FormSettingName:string angiver opdaterede følsomme indstillingers navn. Property NewFormSettings:string angiver opdaterede indstillingers navn og nye værdi. Property thankYouMessageContainsLink:boolean angiver, at den opdaterede takkemeddelelse indeholder et URL-link.|
@@ -1015,8 +1015,8 @@ I følgende tabel vises de aktiviteter i Briefing-mail, der er logført i Micros
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:----|:-----|:-----|
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administratoren opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administratoren opdaterer indstillingerne for beskyttelse af personlige oplysninger for Briefing-mail.
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administration opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administration opdaterer indstillingerne for beskyttelse af personlige oplysninger for briefingmail.
 
 ### <a name="myanalytics-activities"></a>MyAnalytics-aktiviteter
 
@@ -1024,8 +1024,8 @@ I følgende tabel vises de aktiviteter i MyAnalytics, der er logført i Microsof
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administratoren opdaterer indstillinger på organisationsniveau for MyAnalytics. |
-|Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administratoren opdaterer brugerindstillingerne for MyAnalytics.|
+|Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administration opdaterer indstillinger på organisationsniveau for MyAnalytics. |
+|Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administration opdaterer brugerindstillingerne for MyAnalytics.|
 
 ### <a name="information-barriers-activities"></a>Aktiviteter inden for informationsbarrierer
 
@@ -1064,7 +1064,7 @@ I følgende tabel vises de aktiviteter for forbrugsrapporter, der er logført i 
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger for forbrugsrapporter. |
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administration opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapporter. |
 
 ### <a name="exchange-admin-audit-log"></a>Exchange administratorens overvågningslog
 
@@ -1130,7 +1130,13 @@ Ja. API'en til administration af Office 365 bruges til at hente overvågningslog
 
 **Er der andre måder at hente overvågningslogge på end ved hjælp af portalen til sikkerhed og overholdelse eller API'en til Office 365-administrationsaktivitet?**
 
-Nej. Dette er de eneste to måder at hente data fra overvågningstjeneste på.
+Ja, du kan hente overvågningslogge ved hjælp af følgende metoder:
+
+- [API'en til administration af Office 365](/office/office-365-management-api/office-365-management-activity-api-reference).
+
+- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) i Microsoft Purview-compliance-portal.
+
+- Cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell.
 
 **Skal jeg aktivere overvågning individuelt for hver tjeneste, som jeg vil registrere overvågningslogge for?**
 

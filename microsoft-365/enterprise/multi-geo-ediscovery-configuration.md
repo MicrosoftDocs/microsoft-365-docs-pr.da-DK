@@ -13,12 +13,12 @@ ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 ms.collection: Strat_SP_gtc
 description: Få mere at vide om, hvordan du bruger parameteren Region til at konfigurere eDiscovery til brug på satellitplaceringer i Microsoft 365 Multi-Geo.
-ms.openlocfilehash: a220e68e6dbe010f2eab6876dc2813dcd84d5d6d
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 088d6cf861e70185162a74c0b2d9b029849125de
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130927"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810588"
 ---
 # <a name="microsoft-365-multi-geo-ediscovery-configuration"></a>Microsoft 365 Multi-Geo eDiscovery-konfiguration
 
@@ -26,7 +26,7 @@ ms.locfileid: "65130927"
 
 Uden eDiscovery-funktioner (Premium) kan en eDiscovery-administrator eller administrator af en multi-geo-lejer kun udføre eDiscovery på den centrale placering af lejeren. For at understøtte muligheden for at udføre eDiscovery for satellitplaceringer er der en ny filterparameter for overholdelse af angivne standarder med navnet "Område" tilgængelig via PowerShell. Denne parameter kan bruges af lejere, hvis centrale placering er i Nordamerika, Europa eller Asien og Stillehavsområdet. eDiscovery (Premium) anbefales til lejere, hvis centrale placering ikke er i Nordamerika, Europa eller Asien og Stillehavsområdet, og som har brug for at udføre eDiscovery på tværs af geografiske satellitplaceringer.
 
-Den Microsoft 365 globale administrator skal tildele eDiscovery Manager-tilladelser for at give andre tilladelse til at udføre eDiscovery og tildele en "Område"-parameter i deres relevante overholdelsessikkerhedsfilter for at angive området til udførelse af eDiscovery som satellitplacering, ellers udføres der ingen eDiscovery for satellitplaceringen. Der understøttes kun ét "Område"-sikkerhedsfilter pr. bruger, så alle områder skal være inden for det samme sikkerhedsfilter.
+Den Microsoft 365 globale administrator skal tildele eDiscovery Manager-tilladelser for at give andre tilladelse til at udføre eDiscovery og tildele en "Område"-parameter i deres relevante overholdelsessikkerhedsfilter for at angive området til udførelse af eDiscovery som satellitplacering, ellers udføres der ingen eDiscovery for satellitplaceringen. Der understøttes kun ét "Område"-sikkerhedsfilter pr. bruger.
 
 Når rollen eDiscovery Manager eller Administrator er angivet for en bestemt satellitplacering, kan eDiscovery Manager eller Administrator kun udføre eDiscovery-søgehandlinger på de SharePoint websteder og OneDrive websteder, der er placeret på denne satellitplacering. Hvis en eDiscovery-administrator forsøger at søge SharePoint eller OneDrive websteder uden for den angivne satellitplacering, returneres der ingen resultater. Når eDiscovery Manager eller Administrator for en satellitplacering udløser en eksport, eksporteres data også til Azure-forekomsten af det pågældende område. Dette hjælper organisationer med at overholde angivne standarder ved ikke at tillade, at indhold eksporteres på tværs af kontrollerede grænser.
 

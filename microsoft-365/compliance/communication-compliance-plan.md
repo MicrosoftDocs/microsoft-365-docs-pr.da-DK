@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 22e5ed11c97ed00449cb62439e105bd1e6dc78e7
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 2f9d3ae0bc7a07d515b80d7e98140e91d29db342
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599541"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810806"
 ---
 # <a name="plan-for-communication-compliance"></a>Plan for kommunikationsoverholdelse
 
@@ -33,6 +33,8 @@ ms.locfileid: "65599541"
 Før du går i gang med [overholdelse af angivne standarder for kommunikation](communication-compliance.md) i din organisation, er der vigtige planlægningsaktiviteter og overvejelser, der bør gennemgås af dine it- og overholdelsesadministrationsteams. En grundig forståelse og planlægning af udrulningen på følgende områder hjælper med at sikre, at implementering og brug af funktioner til kommunikation med overholdelse af angivne standarder går problemfrit og er i overensstemmelse med bedste praksis for løsningen.
 
 Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere overholdelse af angivne standarder og risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
+
+Du kan også se [Microsoft Mechanics-videoen](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) om, hvordan insiderrisikostyring og kommunikation med overholdelse af angivne standarder arbejder sammen for at hjælpe med at minimere datarisici fra brugere i din organisation.
 
 > [!IMPORTANT]
 > Kommunikationsoverholdelse er i øjeblikket tilgængelig i lejere, der hostes i geografiske områder og lande, der understøttes af Azure-tjenesteafhængigheder. Hvis du vil kontrollere, at overholdelse af angivne standarder for kommunikation understøttes for din organisation, skal du se [Tilgængelighed af Azure-afhængighed efter land/område](/troubleshoot/azure/general/dependency-availability-by-country).
@@ -74,9 +76,9 @@ Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser t
 - Microsoft Purview-compliance-portal [*rollegruppe for organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
 - rollegruppe for Microsoft Purview-compliance-portal [*overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
 - *Rollegruppe for kommunikation med overholdelse af angivne standarder*
-- Rollegruppe *for administrator af kommunikationsoverholdelse*
+- Administration rollegruppe for *kommunikationoverholdelse*
 
-Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluderet i rollegruppen *Administration af kommunikationsoverholdelse* :
+Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluderet i rollegruppen *Kommunikationsoverholdelse Administration*:
 
 - Azure Active Directory *global administrator*
 - Azure Active Directory *overholdelsesadministrator*
@@ -84,7 +86,7 @@ Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluder
 - Microsoft Purview-compliance-portal *overholdelsesadministrator*
 
 > [!IMPORTANT]
-> Sørg for, at du altid har mindst én bruger i rollegrupperne *Kommunikationsoverholdelse* eller *Administrator af kommunikationsoverholdelse* (afhængigt af den indstilling, du vælger), så konfigurationen af kommunikationsoverholdelse ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader din organisation.
+> Sørg for, at du altid har mindst én bruger i rollegrupperne *Communication Compliance* eller *Communication Compliance Administration* (afhængigt af den indstilling, du vælger), så konfigurationen af kommunikationsoverholdelse ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader din organisation.
 
 Afhængigt af hvordan du vil administrere politikker og beskeder om overholdelse af kommunikation, skal du tildele brugere til bestemte rollegrupper for at administrere forskellige sæt funktioner til kommunikation med overholdelse af angivne standarder. Du har mulighed for at tildele brugere med forskellige overholdelsesansvar til bestemte rollegrupper for at administrere forskellige områder af funktioner til kommunikation med overholdelse af angivne standarder. Du kan også vælge at tildele alle brugerkonti for udpegede administratorer, analytikere, efterforskere og seere til rollegruppen *Kommunikationsoverholdelse* . Brug en enkelt rollegruppe eller flere rollegrupper, så de passer bedst til dine krav til administration af overholdelse.
 
@@ -93,7 +95,7 @@ Vælg mellem disse indstillinger for løsningsrollegruppen, når du konfigurerer
 |**Rolle**|**Rolletilladelser**|
 |:-----|:-----|
 | **Kommunikation med overholdelse af angivne standarder** | Brug denne rollegruppe til at administrere overholdelse af kommunikation for din organisation i en enkelt gruppe. Ved at tilføje alle brugerkonti for udpegede administratorer, analytikere, efterforskere og seere kan du konfigurere tilladelser til kommunikation med overholdelse af angivne standarder i en enkelt gruppe. Denne rollegruppe indeholder alle tilladelser til kommunikation med overholdelse af angivne standarder. Denne konfiguration er den nemmeste måde hurtigt at komme i gang med overholdelse af angivne standarder for kommunikation på, og den er velegnet til organisationer, der ikke har brug for separate tilladelser, der er defineret for separate grupper af brugere. Brugere, der opretter politikker som administrator af kommunikationsoverholdelse, skal have deres postkasse hostet på Exchange Online. |
-| **Administrator af kommunikation med overholdelse af angivne standarder** | Brug denne rollegruppe til først at konfigurere overholdelse af kommunikation og senere til at adskille administratorer af kommunikation med overholdelse af angivne standarder i en defineret gruppe. Brugere, der er tildelt denne rollegruppe, kan oprette, læse, opdatere og slette politikker for kommunikation med overholdelse af angivne standarder, globale indstillinger og tildelinger af rollegrupper. Brugere, der er tildelt denne rollegruppe, kan ikke få vist meddelelsesbeskeder. Brugere, der opretter politikker som administrator af kommunikationsoverholdelse, skal have deres postkasse hostet på Exchange Online. |
+| **Administration for overholdelse af angivne standarder for kommunikation** | Brug denne rollegruppe til først at konfigurere overholdelse af kommunikation og senere til at adskille administratorer af kommunikation med overholdelse af angivne standarder i en defineret gruppe. Brugere, der er tildelt denne rollegruppe, kan oprette, læse, opdatere og slette politikker for kommunikation med overholdelse af angivne standarder, globale indstillinger og tildelinger af rollegrupper. Brugere, der er tildelt denne rollegruppe, kan ikke få vist meddelelsesbeskeder. Brugere, der opretter politikker som administrator af kommunikationsoverholdelse, skal have deres postkasse hostet på Exchange Online. |
 | **Kommunikationsoverholdelsesanalytiker** | Brug denne gruppe til at tildele tilladelser til brugere, der fungerer som analytikere af kommunikation med overholdelse af angivne standarder. Brugere, der er tildelt til denne rollegruppe, kan få vist politikker, hvor de er tildelt som korrekturlæsere, få vist meddelelsesmetadata (ikke meddelelsesindhold), eskalere til yderligere korrekturlæsere eller sende meddelelser til brugere. Analytikere kan ikke løse ventende beskeder. |
 | **Efterforsker af kommunikation med overholdelse af angivne standarder** | Brug denne gruppe til at tildele tilladelser til brugere, der fungerer som undersøgere af kommunikation med overholdelse af angivne standarder. Brugere, der er tildelt denne rollegruppe, kan få vist metadata og indhold, eskalere til yderligere korrekturlæsere, eskalere til en eDiscovery-sag (Premium), sende meddelelser til brugere og løse beskeden. |
 | **Meddelelsesoverholdelsesfremviser** | Brug denne gruppe til at tildele tilladelser til brugere, der skal administrere kommunikationsrapporter. Brugere, der er tildelt denne rollegruppe, kan få adgang til alle rapporteringswidgets på startsiden for kommunikation med overholdelse af angivne standarder og kan få vist alle rapporter om kommunikation med overholdelse af angivne standarder. |

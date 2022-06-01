@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 67ae082e61c3322c28031b2d20e99f4070389dd2
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: ce42709349e5d7464e1809df248c8055bdfaab30
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243024"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810982"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender for Endpoint for US Government-kunder
 
@@ -117,7 +117,7 @@ Windows 8 Pro (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](image
 Windows 7 SP1 Enterprise (legacy) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows 7 SP1 Pro (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Linux|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-Macos|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
+macOS|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Android|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
 Ios|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
 |
@@ -195,7 +195,11 @@ Dette er de kendte huller:
 |Netværksregistrering|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
 |Rapporter: Enhedskontrol, Enhedstilstand, Firewall|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
 |Filtrering af webindhold|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
-  
+|Microsoft Secure Score|![Ja](images/svg/check-yes.svg) <sup>1</sup>|![Nej](images/svg/check-no.svg) Understøttes ikke|![Nej](images/svg/check-no.svg) Understøttes ikke|  
+
+> [!NOTE]
+> <sup>1</sup> Selvom Microsoft Secure Score er tilgængelig for GCC kunder, er der nogle sikkerhedsanbefalinger, der ikke er tilgængelige.
+
 
 Disse er de funktioner og kendte huller i [Mobile Threat Defense (Microsoft Defender for Endpoint på Android & iOS)](mtd.md):
 
@@ -212,5 +216,3 @@ Disse er de funktioner og kendte huller i [Mobile Threat Defense (Microsoft Defe
 |Understøttelse af MAM|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
 |Kontrolelementer til beskyttelse af personlige oplysninger|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
 |Trussels- og sårbarhedsstyring (TVM)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
-  
-

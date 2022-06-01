@@ -21,12 +21,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 09135faa505aa2d5b95003cc7321a38a0eaddaf3
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 36d3ca7d820d31843df535eddd6c253d0c1f951e
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599205"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810938"
 ---
 # <a name="learn-about-communication-compliance"></a>Få mere at vide om kommunikationsoverholdelse
 
@@ -57,6 +57,8 @@ Du kan se de seneste Ignite-præsentationer for overholdelse af angivne standard
 Hvis du vil have et hurtigt overblik over overholdelse af angivne standarder for kommunikation, skal du se videoen [Registrer chikane på arbejdspladsen, og besvar kommunikation med overholdelse af angivne standarder](https://youtu.be/z33ji7a7Zho) på [Kanalen Microsoft Mechanics](https://www.youtube.com/user/OfficeGarageSeries).
 
 Tjek, hvordan [TD Securities bruger kommunikation overholdelse af kommunikation](https://customers.microsoft.com/story/1391545301764211731-td-securities-banking-capital-markets-compliance) til at løse deres lovgivningsmæssige forpligtelser og opfylde deres sikkerhed og stabilitet behov.
+
+Se [Microsoft Mechanics-videoen](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) om, hvordan styring af insiderrisiko og overholdelse af kommunikation fungerer sammen for at minimere datarisici fra brugere i din organisation.
 
 Hvis du vil holde dig ajour med de seneste opdateringer af kommunikationsoverholdelse, skal du vælge **Nyheder** i [overholdelse af kommunikation](https://compliance.microsoft.com/) for din organisation.
 

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Yammer.
-ms.openlocfilehash: c479b7b08fd74b957a8ef7d23147758948459dc8
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 25a746fcd5fe5dfd0e17edf08c9e7d3f722ce676
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754306"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810566"
 ---
 # <a name="learn-about-retention-for-yammer"></a>Få mere at vide om opbevaring for Yammer
 
@@ -69,7 +69,7 @@ Selvom de gemmes i Exchange, medtages Yammer meddelelser kun i en opbevaringspol
 Når en opbevaringspolitik er konfigureret for Yammer meddelelser, evaluerer et timerjob fra tjenesten Exchange jævnligt elementer i den skjulte mappe, hvor disse Yammer meddelelser gemmes. Det tager op til syv dage at køre timerjobbet. Når disse elementer har udløbet deres opbevaringsperiode, flyttes de til mappen SubstrateHolds – en skjult mappe, der er i alle bruger- eller gruppepostkasser, hvor de kan gemme "blød slettede" elementer, før de slettes permanent.
 
 > [!IMPORTANT]
-> På grund [af det første princip om opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Yammer meddelelser er gemt i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden opbevaringspolitik for samme placering, procesførelseshold, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
+> På grund [af det første princip om opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Yammer meddelelser er gemt i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden Yammer opbevaringspolitik for samme placering, Procesførelsesposition, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
 >
 > Selvom postkassen er inkluderet i en relevant venteposition, vil Yammer meddelelser, der er blevet slettet, ikke længere være synlige i Yammer, men vil fortsat kunne findes med eDiscovery.
 
@@ -86,7 +86,14 @@ For de to stier i diagrammet:
 2. **Hvis en Yammer meddelelse ikke slettes**, og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager op til syv dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, slettes den straks permanent. 
 
 > [!NOTE]
-> Der kan søges i meddelelser i mappen SubstrateHolds af eDiscovery-værktøjer. Indtil meddelelser slettes permanent (i mappen SubstrateHolds), kan der stadig søges i dem af eDiscovery-værktøjer.
+> Der kan søges i meddelelser i mappen SubstrateHolds af eDiscovery-værktøjer. Indtil meddelelser slettes permanent fra mappen SubstrateHolds, kan der stadig søges i dem af eDiscovery-værktøjer.
+
+Når opbevaringsperioden udløber og flytter en meddelelse til mappen SubstrateHolds, kommunikeres der en slettehandling til den Yammer tjeneste, som derefter videresender den samme handling til Yammer klientappen. Forsinkelser i denne kommunikation eller cachelagring kan forklare, hvorfor brugerne i en kort periode fortsat kan se disse meddelelser i deres Yammer app.
+
+I dette scenarie, hvor Yammer-tjenesten modtager en slettekommando på grund af en opbevaringspolitik, slettes den tilsvarende meddelelse i Yammer-appen for alle brugere i samtalen. Nogle af disse brugere kan være fra en anden organisation, have en opbevaringspolitik med en længere opbevaringsperiode eller ingen opbevaringspolitik tildelt dem. For disse brugere gemmes kopier af meddelelserne stadig i deres postkasser og forbliver søgbare efter eDiscovery, indtil meddelelserne slettes permanent af en anden opbevaringspolitik.
+
+> [!IMPORTANT]
+> Meddelelser, der er synlige i Yammer-appen, er ikke en nøjagtig afspejling af, om de bevares eller slettes permanent i forbindelse med overholdelseskrav.
 
 Når opbevaringspolitikken er bevar eller kun sletter, er indholdets stier variationer af bevarelse og sletning.
 
@@ -173,7 +180,7 @@ På nuværende tidspunkt understøttes Azure B2B-gæstebrugere ikke.
 
 ## <a name="when-a-user-leaves-the-organization"></a>Når en bruger forlader organisationen 
 
-Hvis en bruger forlader organisationen, og vedkommendes Microsoft 365 konto slettes, gemmes de Yammer brugermeddelelser, der skal opbevares, i en inaktiv postkasse. Disse meddelelser forbliver underlagt en hvilken som helst opbevaringspolitik, der blev placeret på brugeren, før postkassen blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan få flere oplysninger under [Inaktive postkasser i Exchange Online](inactive-mailboxes-in-office-365.md). 
+Hvis en bruger forlader organisationen, og vedkommendes Microsoft 365 konto slettes, gemmes de Yammer brugermeddelelser, der skal opbevares, i en inaktiv postkasse. Disse meddelelser forbliver underlagt en hvilken som helst opbevaringspolitik, der blev placeret på brugeren, før postkassen blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan finde flere oplysninger under [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md).
 
 Hvis brugeren har gemt filer i Yammer, skal du se det [tilsvarende afsnit](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) for SharePoint og OneDrive.
 

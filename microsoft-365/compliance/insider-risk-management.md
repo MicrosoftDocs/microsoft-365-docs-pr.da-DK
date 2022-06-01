@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 86a56ec16f81eaa6b61a452829e65251b673cb78
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 9b2897a242f7dbbf9af9c9f3b639c0b91623fa25
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599249"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65810610"
 ---
 # <a name="learn-about-insider-risk-management"></a>Få mere at vide om styring af insider-risiko
 
@@ -43,6 +43,8 @@ Se videoerne nedenfor for at få mere at vide om, hvordan styring af insiderrisi
 
 **Arbejdsproces til styring af insiderrisiko**:
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4OUXB]
+
+Se [Microsoft Mechanics-videoen](https://www.youtube.com/watch?v=Ynkfu8OF0wQ) om, hvordan styring af insiderrisiko og overholdelse af kommunikation fungerer sammen for at minimere datarisici fra brugere i din organisation.
 
 > [!IMPORTANT]
 > Styring af insiderrisiko er i øjeblikket tilgængelig i lejere, der hostes i geografiske områder og lande, der understøttes af Azure-tjenesteafhængigheder. Hvis du vil bekræfte, at styring af insiderrisiko understøttes for din organisation, skal du se [Tilgængelighed af Azure-afhængighed efter land/område](/troubleshoot/azure/general/dependency-availability-by-country).

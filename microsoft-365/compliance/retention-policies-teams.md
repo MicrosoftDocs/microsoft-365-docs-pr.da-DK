@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Microsoft Teams.
-ms.openlocfilehash: cadff304744fcf06c6717b0709b719e05f8ddfb6
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: f289b8da5a4b21214887fd6429e977e434a9cd0b
+ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754328"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "65811016"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Få mere at vide om opbevaring for Microsoft Teams
 
@@ -83,7 +83,7 @@ Når en opbevaringspolitik er konfigureret for chat- og kanalmeddelelser, evalue
 Meddelelser forbliver i mappen SubstrateHolds i mindst 1 dag, og hvis de er berettiget til sletning, sletter timerjobbet dem permanent, næste gang det køres.
 
 > [!IMPORTANT]
-> På grund [af det første opbevaringsprincip](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Teams chat- og kanalmeddelelser gemmes i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden opbevaringspolitik for samme placering, Procesførelseshold, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
+> På grund [af det første princip om opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Teams chat- og kanalmeddelelser gemmes i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden Teams opbevaringspolitik for samme placering, procestidsposition, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen til juridiske eller undersøgelsesmæssige formål  Grunde.
 >
 > Selvom postkassen er inkluderet i en relevant venteposition, vil Teams chat- og kanalmeddelelser, der er blevet slettet, ikke længere være synlige i den Teams app, men vil fortsat kunne findes i eDiscovery.
 
@@ -206,7 +206,7 @@ Når eksterne brugere er inkluderet i et møde, som organisationen er vært for:
 
 ## <a name="when-a-user-leaves-the-organization"></a>Når en bruger forlader organisationen 
 
-Hvis en bruger, der har en postkasse i Exchange Online forlader organisationen, og vedkommendes Microsoft 365 konto slettes, gemmes de chatbeskeder, der er underlagt opbevaring, i en inaktiv postkasse. Chatbeskederne forbliver underlagt en hvilken som helst opbevaringspolitik, der blev placeret på brugeren, før brugerens postkasse blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan få flere oplysninger under [Inaktive postkasser i Exchange Online](inactive-mailboxes-in-office-365.md). 
+Hvis en bruger, der har en postkasse i Exchange Online forlader organisationen, og vedkommendes Microsoft 365 konto slettes, gemmes de chatbeskeder, der er underlagt opbevaring, i en inaktiv postkasse. Chatbeskederne forbliver underlagt en hvilken som helst opbevaringspolitik, der blev placeret på brugeren, før brugerens postkasse blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan finde flere oplysninger under [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md). 
 
 Hvis brugeren har gemt filer i Teams, skal du se det [tilsvarende afsnit](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) for SharePoint og OneDrive.
 
