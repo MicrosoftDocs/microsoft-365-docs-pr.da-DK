@@ -1,5 +1,7 @@
 - name: Microsoft 365 Lighthouse
   items:
+    - name: Nyheder i Microsoft 365 Lighthouse
+      href: m365-lighthouse-whats-new.md
     - name: Oversigt over Microsoft 365 Lighthouse
       href: m365-lighthouse-overview.md
     - name: Krav til Microsoft 365 Lighthouse

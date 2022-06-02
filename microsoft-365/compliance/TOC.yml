@@ -561,7 +561,7 @@
               href: view-the-dlp-reports.md
             - name: 'Opret en forespørgsel for at finde følsomme data, der er gemt på websteder'
               href: form-a-query-to-find-sensitive-data-stored-on-sites.md
-            - name: Sådan fungerer DLP mellem Security & Compliance Center og Exchange Administration
+            - name: Sådan fungerer DLP mellem Microsoft Purview-compliance-portal og Exchange Administration
               href: how-dlp-works-between-admin-centers.md
             - name: Konfigurer og få vist beskeder om DLP-politikker (prøveversion)
               href: dlp-configure-view-alerts-policies.md

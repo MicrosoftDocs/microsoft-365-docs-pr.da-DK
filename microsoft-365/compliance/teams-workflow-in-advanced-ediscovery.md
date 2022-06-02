@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du bevarer, indsamler, gennemser og eksporterer indhold fra Microsoft Teams i eDiscovery (Premium).
-ms.openlocfilehash: 46fe8491533f6d2fa6954eab76758213eaa7d30d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 754be254c4301fae9fdfff5edee3593e1333eb6c
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65414860"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839684"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>eDiscovery-arbejdsgangen (Premium) til indhold i Microsoft Teams
 
@@ -27,11 +27,13 @@ ms.locfileid: "65414860"
 
 Denne artikel indeholder en række omfattende procedurer, retningslinjer og bedste praksis for brug af Microsoft Purview eDiscovery (Premium), så du kan bevare, indsamle, gennemgå og eksportere indhold fra Microsoft Teams. Målet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsgang for indhold i Teams.
 
-Der er fem kategorier af indhold i Teams, som du kan indsamle og behandle ved hjælp af eDiscovery (Premium):
+Der er seks kategorier af indhold i Teams, som du kan indsamle og behandle ved hjælp af eDiscovery (Premium):
 
 - **Teams 1:1-chatsamtaler**. Chatmeddelelser, indlæg og vedhæftede filer, der deles i en Teams-samtale mellem to personer.  Teams 1:1-chatsamtaler kaldes også for *samtaler*.
 
 - **Teams: Gruppechat**. Chatmeddelelser, indlæg og vedhæftede filer, der deles i en Teams-samtale mellem tre eller flere personer. Kaldes også for *1:N* chatsamtaler eller *gruppesamtaler*.
+
+- **Teams-reaktioner**. Reaktioner anvendes på chatmeddelelser, indlæg og vedhæftede filer i en Teams-samtale.
 
 - **Teams-kanaler**. Chatmeddelelser, indlæg, svar og vedhæftede filer, der deles i en standardkanal i Teams.
 
@@ -47,6 +49,7 @@ En forudsætning for at kunne administrere Teams-indhold i eDiscovery (Premium) 
 |---|---|---|
 |Teams 1:1-chatsamtaler|Meddelelser i 1:1-chatsamtaler gemmes i Exchange Online-postkassen for alle chatdeltagere.|Filer, der deles i en 1:1-chatsamtaler, gemmes på OneDrive for Business-kontoen for personen, der delte filen.|
 |Teams: Gruppechats|Meddelelser i gruppechats gemmes i Exchange Online-postkassen for alle chatdeltagere.|Filer, der deles i gruppechats, gemmes på OneDrive for Business-kontoen for personen, der delte filen.|
+|Teams-reaktioner|Meddelelser i gruppechats gemmes i Exchange Online-postkassen for alle chatdeltagere.|Filer, der deles i gruppechats, gemmes på OneDrive for Business-kontoen for personen, der delte filen.|
 |Teams-kanaler|Alle kanalbeskeder og -indlæg gemmes i den Exchange Online-postkasse, der er knyttet til teamet.|Filer, der deles i en kanal, gemmes på det SharePoint Online-websted, der er knyttet til teamet.|
 |Private kanaler|Meddelelser, der sendes i en privat kanal, gemmes i Exchange Online-postkasserne hos alle medlemmer af den private kanal.|Filer, der deles i en privat kanal, gemmes i et dedikeret SharePoint Online-websted, der er tilknyttet den private kanal.|
 |Delte kanaler|Meddelelser, der sendes i en delt kanal, gemmes i en systempostkasse, der er tilknyttet den delte kanal. <sup>1</sup>|Filer, der deles i en delt kanal, gemmes i et dedikeret SharePoint Online-websted, der er tilknyttet den delte kanal.|
