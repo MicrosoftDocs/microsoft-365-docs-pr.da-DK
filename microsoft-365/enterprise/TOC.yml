@@ -154,12 +154,10 @@
             - name: Exchange Online-overvågning
               href: microsoft-365-exchange-monitoring.md
               items:
-                - name: Tjenestebeskeder om udnyttelse af postkasse
+                - name: Tjenestevarsler om udnyttelse af postkasse
                   href: microsoft-365-mailbox-utilization-service-alerts.md
-                - name: Servicebeskeder om MRS-kildeforsinkelser
+                - name: Tjenestevarsler om MRS-kildeforsinkelser
                   href: microsoft-365-mrs-source-delays-service-alerts.md
-                - name: Tjenestebeskeder for meddelelser i kø til eksterne modtagere
-                  href: microsoft-365-external-recipient-service-alerts.md
             - name: Overvågning af Microsoft 365 apps
               href: microsoft-365-apps-monitoring.md
             - name: Microsoft 365 Teams-overvågning

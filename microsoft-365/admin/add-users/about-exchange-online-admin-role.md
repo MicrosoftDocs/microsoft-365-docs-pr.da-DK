@@ -1,5 +1,5 @@
 ---
-title: Om Exchange Online administratorrollen
+title: Om rollen Exchange administrator
 f1.keywords:
 - NOCSH
 ms.author: efrene
@@ -21,23 +21,24 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 097ae285-c4af-4319-9770-e2559d66e4c8
-description: Exchange Online administratorer administrerer dine organisationsmails og -postkasser og gendanner f.eks. slettede elementer i en brugers postkasse.
-ms.openlocfilehash: 048a435a515c4f88eb688a2cfaf13006e859741c
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Exchange administratorer administrere din organisations mail og postkasser og f.eks. gendanne slettede elementer i en brugers postkasse.
+ms.openlocfilehash: 375e2d6a1bf08ab310da28233deaf5dbbbae9be7
+ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467092"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65842251"
 ---
-# <a name="about-the-exchange-online-admin-role"></a>Om Exchange Online administratorrollen
+# <a name="about-the-exchange-administrator-role"></a>Om rollen Exchange administrator
 
 Du kan hjælpe dig med at administrere Microsoft 365 ved at [tildele](assign-admin-roles.md) brugere tilladelser til at administrere organisationens mail og postkasser fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Det gør du ved at tildele dem rollen Exchange administrator.
   
- **Tip**! Når du tildeler en person rollen Exchange administrator, skal du også tildele vedkommende rollen Tjenesteadministrator. På denne måde kan de se vigtige oplysninger i Microsoft 365 Administration, f.eks. tilstanden for den Exchange Online tjeneste og ændre og frigive meddelelser.
+> [!TIP]
+> Når du tildeler en person rollen Exchange administrator, anbefaler vi, at du tildeler vedkommende rollen Tjenestesupportadministrator. På denne måde kan de se vigtige oplysninger i Microsoft 365 Administration, f.eks. tilstanden for den Exchange Online tjeneste og ændre og frigive meddelelser.
 
 Her er nogle af de vigtigste opgaver, som brugerne kan udføre, når de tildeles rollen Exchange administrator:
   
-- [Gendan slettede elementer i en brugerpostkasse – Hjælp til administratorer](/Exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages)
+- [Gendan slettede elementer i en brugerpostkasse – Administration Hjælp](/Exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages)
 
 - [Konfigurer en politik for arkiv og sletning for postkasser i din organisation](../../compliance/set-up-an-archive-and-deletion-policy-for-mailboxes.md).
 

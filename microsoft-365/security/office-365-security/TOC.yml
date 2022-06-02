@@ -204,7 +204,7 @@
               href: attack-simulation-training-get-started.md
             - name: Simuler et phishingangreb med kursus i angrebssimulering
               href: attack-simulation-training.md
-            - name: Opret brugerdefinerede nyttedata til kursus i angrebssimulering
+            - name: Oplæring i nyttedata til angrebssimulering
               href: attack-simulation-training-payloads.md
             - name: Simuleringsautomatiseringer i kursus i angrebssimulering
               href: attack-simulation-training-simulation-automations.md
@@ -394,6 +394,30 @@
           href: anti-spoofing-protection-faq.yml
         - name: Ofte stillede spørgsmål om karantæne
           href: quarantine-faq.yml
+    - name: Trinvise vejledninger
+      items:
+        - name: '(Falske negativer) Sådan håndteres skadelige mails, der leveres til modtagere ved hjælp af Microsoft Defender for Office 365'
+          href: step-by-step-guides/how-to-handle-false-negatives-in-microsoft-defender-for-office-365.md
+        - name: '(Falske positiver) Sådan håndterer du legitime mails, der blokeres fra at blive leveret ved hjælp af Microsoft Defender for Office 365'
+          href: step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md
+        - name: Sådan konfigureres karantænetilladelser og -politikker
+          href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
+        - name: 'Sikring af, at du altid har de optimale sikkerhedskontroller med forudindstillede sikkerhedspolitikker'
+          href: step-by-step-guides/ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md
+        - name: Sådan kører du angrebssimuleringer for dit team
+          href: step-by-step-guides/how-to-run-attack-simulations-for-your-team.md
+        - name: Sådan konfigurerer du automatiserede angreb og træning i angrebssimuleringskurser
+          href: step-by-step-guides/how-to-setup-attack-simulation-training-for-automated-attacks-and-training.md
+        - name: Optimer og ret sikkerhedspolitikker med konfigurationsanalyse
+          href: step-by-step-guides/optimize-and-correct-security-policies-with-configuration-analyzer.md
+        - name: Beskyt din c-suite med prioritetskontobeskyttelse
+          href: step-by-step-guides/protect-your-c-suite-with-priority-account-protection.md
+        - name: 'Søg efter mails, og afhjælp trusler ved hjælp af Threat Explorer i Microsoft 365 Defender'
+          href: step-by-step-guides/search-for-emails-and-remediate-threats.md
+        - name: Opret forbindelse mellem Microsoft Defender for Office 365 og Microsoft Sentinel
+          href: step-by-step-guides/connect-microsoft-defender-for-office-365-to-microsoft-sentinel.md
+        - name: Sådan prioriterer og administrerer du automatiserede undersøgelser og svar (AIR)
+          href: step-by-step-guides/how-to-prioritize-and-manage-automated-investigations-and-response-air.md
     - name: Reference
       items:
         - name: Defender for Office 365-dataopbevaring

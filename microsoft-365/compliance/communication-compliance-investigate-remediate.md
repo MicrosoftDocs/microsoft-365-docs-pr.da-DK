@@ -20,26 +20,26 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 7f1afe62dcb7dabf55b48985354653b9418d0561
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 0d9806d795b434c305869d8409518c462123dbdc
+ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971621"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65842285"
 ---
 # <a name="investigate-and-remediate-communication-compliance-alerts"></a>Undersøg og afhjælp underretninger om kommunikationsoverholdelse
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du har konfigureret politikkerne for overholdelse af angivne standarder for kommunikation, modtager du beskeder på Microsoft Purview-overholdelsesportalen for meddelelsesproblemer, der opfylder dine politikbetingelser. Følg vejledningen i arbejdsprocessen her for at undersøge og løse problemer med beskeder.
+Når du har konfigureret politikkerne for overholdelse af angivne standarder for kommunikation, modtager du beskeder i Microsoft Purview-compliance-portal om meddelelsesproblemer, der opfylder dine politikbetingelser. Følg vejledningen i arbejdsprocessen her for at undersøge og løse problemer med beskeder.
 
 ## <a name="investigate-alerts"></a>Undersøg beskeder
 
-Det første trin til at undersøge problemer, der er registreret af dine politikker, er at gennemse beskeder om kommunikation med overholdelse af angivne standarder på Microsoft Purview-overholdelsesportalen. Der er flere områder i løsningsområdet til kommunikation med overholdelse af angivne standarder, der kan hjælpe dig med hurtigt at undersøge beskeder, afhængigt af hvordan du foretrækker at få vist gruppering af beskeder:
+Det første trin til at undersøge problemer, der registreres af dine politikker, er at gennemse beskeder om kommunikation med overholdelse af angivne standarder i Microsoft Purview-compliance-portal. Der er flere områder i løsningsområdet til kommunikation med overholdelse af angivne standarder, der kan hjælpe dig med hurtigt at undersøge beskeder, afhængigt af hvordan du foretrækker at få vist gruppering af beskeder:
 
-- **Siden Politik for kommunikation med overholdelse af regler og standarder**: Når du logger på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation, skal du vælge **Meddelelsesoverholdelse** for at få vist siden **Politik** for kommunikationoverholdelse. På denne side vises politikker for overholdelse af angivne standarder for kommunikation, der er konfigureret for din Microsoft 365 organisation, og links til anbefalede politikskabeloner. Hver politik på listen indeholder antallet af beskeder, der skal gennemses, antallet af eskalerede og løste elementer, status for politikken og dato og klokkeslæt for den sidste politikscanning. Når du vælger en politik, vises alle ventende beskeder om matches til politikken, vælg en bestemt besked for at starte siden med politikoplysninger og for at starte afhjælpningshandlinger.
-- **Beskeder**: Naviger til **Overholdelse af** **kommunikationAlerts** >  for at få vist de sidste 30 dages beskeder grupperet efter politikforekomster. Denne visning giver dig mulighed for hurtigt at se, hvilke kommunikationspolitikker der genererer de fleste beskeder sorteret efter alvorsgrad. Hvis du vil starte afhjælpningshandlinger, skal du vælge den politik, der er knyttet til beskeden, for at starte siden **Politikoplysninger** . På siden **Politikoplysninger** kan du gennemse en oversigt over aktiviteterne på siden **Oversigt** , gennemse og reagere på beskeder på siden **Ventende** eller gennemse oversigten over lukkede beskeder på siden **Løst** .
-- **Rapporter**: Naviger til **Kommunikation med overholdelse af angivne standarderRapporter** >  for at få vist **widgets** til rapporten om overholdelse af kommunikation. Hver widget indeholder en oversigt over aktiviteter og status for overholdelse af angivne standarder for kommunikation, herunder adgang til dybere indsigt i politikforekomster og afhjælpningshandlinger.
+- **Side med politik for overholdelse af kommunikation**: Når du logger på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation, skal du vælge **Meddelelsesoverholdelse** for at få vist siden **Politik** for kommunikationoverholdelse. På denne side vises politikker for overholdelse af angivne standarder for kommunikation, der er konfigureret for din Microsoft 365 organisation, og links til anbefalede politikskabeloner. Hver politik på listen indeholder antallet af beskeder, der skal gennemses, antallet af eskalerede og løste elementer, status for politikken og dato og klokkeslæt for den sidste politikscanning. Når du vælger en politik, vises alle ventende beskeder om matches til politikken, vælg en bestemt besked for at starte siden med politikoplysninger og for at starte afhjælpningshandlinger.
+- **Beskeder**: Naviger til **Kommunikation med overholdelse af angivne standarder** > **Beskeder** for at få vist de seneste 30 dages beskeder grupperet efter politikforekomster. Denne visning giver dig mulighed for hurtigt at se, hvilke kommunikationspolitikker der genererer de fleste beskeder sorteret efter alvorsgrad. Hvis du vil starte afhjælpningshandlinger, skal du vælge den politik, der er knyttet til beskeden, for at starte siden **Politikoplysninger** . På siden **Politikoplysninger** kan du gennemse en oversigt over aktiviteterne på siden **Oversigt** , gennemse og reagere på beskeder på siden **Ventende** eller gennemse oversigten over lukkede beskeder på siden **Løst** .
+- **Rapporter**: Naviger til **Rapporter om** **overholdelse af kommunikation** >  for at få vist widgets til rapporter om overholdelse af kommunikation. Hver widget indeholder en oversigt over aktiviteter og status for overholdelse af angivne standarder for kommunikation, herunder adgang til dybere indsigt i politikforekomster og afhjælpningshandlinger.
 
 ### <a name="using-filters"></a>Brug af filtre
 
@@ -72,9 +72,9 @@ I følgende tabel beskrives filterdetaljer:
 
 #### <a name="to-configure-a-filter"></a>Sådan konfigurerer du et filter
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 
-2. På Microsoft Purview-overholdelsesportalen skal du gå til **Kommunikation med overholdelse**.
+2. I Microsoft Purview-compliance-portal skal du gå til **Kommunikation med overholdelse af angivne standarder**.
 
 3. Vælg fanen **Politikker,** og vælg derefter en politik til undersøgelse. Dobbeltklik for at åbne siden **Politik** .
 
@@ -96,9 +96,9 @@ Politikker for kommunikation med overholdelse af angivne standarder scanner og f
 
 #### <a name="to-remediate-duplicates"></a>Sådan afhjælpes dubletter
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 
-2. På Microsoft Purview-overholdelsesportalen skal du gå til **Kommunikation med overholdelse**.
+2. I Microsoft Purview-compliance-portal skal du gå til **Kommunikation med overholdelse af angivne standarder**.
 
 3. Vælg fanen **Politikker,** og vælg derefter en politik til undersøgelse. Dobbeltklik for at åbne siden **Politik** .
 
@@ -147,7 +147,7 @@ Nu, hvor du har gennemset oplysningerne i meddelelsen for beskeden, kan du vælg
 - **Notify**: Du kan bruge kontrolelementet **Notify** til at tildele en brugerdefineret meddelelsesskabelon til beskeden og til at sende en advarsel til brugeren. Vælg den relevante meddelelsesskabelon, der er konfigureret i området **Indstillinger for kommunikation med overholdelse af angivne standarder** , og vælg **Send** for at sende en påmindelse til den bruger, der sendte meddelelsen, og for at løse problemet.
 - **Eskaler**: Ved hjælp af kontrolelementet **Eskaler** kan du vælge, hvem i organisationen der skal gennemse meddelelsen. Vælg på en liste over korrekturlæsere, der er konfigureret i politikken for kommunikation med overholdelse af angivne standarder, for at sende en mail med anmodning om yderligere gennemgang af meddelelsesbeskeden. Den valgte korrekturlæser kan bruge et link i mailmeddelelsen til at gå direkte til elementer, der eskaleres til dem til gennemsyn.
 - **Eskaler til undersøgelse**: Ved hjælp af kontrolelementet **Eskaler til undersøgelse** kan du oprette en ny [eDiscovery-sag (Premium)](overview-ediscovery-20.md) for en enkelt eller flere meddelelser. Du skal angive et navn og noter til den nye sag, og den bruger, der har sendt den meddelelse, der stemmer overens med politikken, tildeles automatisk som sagsvagt. Du behøver ikke yderligere tilladelser til at administrere sagen. Oprettelse af en sag løser ikke eller opretter ikke et nyt mærke for meddelelsen. Du kan vælge i alt 100 meddelelser, når du opretter en eDiscovery-sag (Premium) under afhjælpningsprocessen. Meddelelser i alle kommunikationskanaler, der overvåges af overholdelse af angivne standarder for kommunikation, understøttes. Du kan f.eks. vælge 50 Microsoft Teams chats, 25 Exchange Online mails og 25 Yammer meddelelser, når du åbner en ny eDiscovery-sag (Premium) for en bruger.
-- **Fjern meddelelse i Teams**: Ved hjælp af kontrolelementet **Fjern meddelelse i Teams** kan du blokere upassende meddelelser og indhold, der er identificeret i beskeder, fra Microsoft Teams kanaler og 1:1 og gruppechats. Fjernede meddelelser og indhold erstattes af et politiktip, der forklarer, at den er blokeret, og den politik, der gælder for fjernelsen af den. Modtagerne får vist et link i politiktippen for at få mere at vide om den relevante politik og korrekturprocessen. Afsenderen modtager et politiktip til den blokerede meddelelse og det blokerede indhold, men kan gennemse oplysningerne om den blokerede meddelelse og det blokerede indhold for at se konteksten vedrørende fjernelsen.
+- **Fjern meddelelse i Teams**: Ved hjælp af kontrolelementet **Fjern meddelelse i Teams** kan du blokere upassende meddelelser og indhold, der er identificeret i beskeder, fra Microsoft Teams kanaler og 1:1 og gruppechats. Dette omfatter Teams chatbeskeder, der rapporteres af brugere, og chatbeskeder, der er registreret ved hjælp af politikker for maskinel indlæring og klassificeringsbaseret kommunikation. Fjernede meddelelser og indhold erstattes af et politiktip, der forklarer, at den er blokeret, og den politik, der gælder for fjernelsen af den. Modtagerne får vist et link i politiktippen for at få mere at vide om den relevante politik og korrekturprocessen. Afsenderen modtager et politiktip til den blokerede meddelelse og det blokerede indhold, men kan gennemse oplysningerne om den blokerede meddelelse og det blokerede indhold for at se konteksten vedrørende fjernelsen.
 
     ![Fjern en meddelelse fra Microsoft Teams.](../media/communication-compliance-remove-teams-message.png)
 
@@ -159,7 +159,7 @@ Meddelelsesdetaljer kan eksporteres eller downloades, hvis du har brug for at ar
 
 [Microsoft Power Automate](/power-automate/getting-started) er en arbejdsprocestjeneste, der automatiserer handlinger på tværs af programmer og tjenester. Ved hjælp af flow fra skabeloner eller oprettet manuelt kan du automatisere almindelige opgaver, der er knyttet til disse programmer og tjenester. Når du aktiverer Power Automate flow for overholdelse af angivne standarder for kommunikation, kan du automatisere vigtige opgaver for beskeder og brugere. Du kan konfigurere Power Automate flow for at give ledere besked, når brugerne har beskeder om kommunikation med overholdelse af angivne standarder og andre programmer.
 
-Kunder med Microsoft 365 abonnementer, der indeholder overholdelse af angivne standarder for kommunikation, behøver ikke yderligere Power Automate licenser for at bruge den anbefalede skabelon til standardoverholdelse af kommunikation Power Automate. Standardskabelonen kan tilpasses for at understøtte din organisation og dække kernescenarier for kommunikation med overholdelse af angivne standarder. Hvis du vælger at bruge Premium Power Automate-funktioner i disse skabeloner, oprette en brugerdefineret skabelon ved hjælp af Microsoft Purview-connectoren eller bruge Power Automate skabeloner til andre overholdelsesområder i Microsoft Purview, skal du muligvis bruge yderligere Power Automate licenser.
+Kunder med Microsoft 365 abonnementer, der indeholder overholdelse af angivne standarder for kommunikation, behøver ikke yderligere Power Automate licenser for at bruge den anbefalede skabelon til standardoverholdelse af kommunikation Power Automate. Standardskabelonen kan tilpasses for at understøtte din organisation og dække kernescenarier for kommunikation med overholdelse af angivne standarder. Hvis du vælger at bruge Premium Power Automate-funktioner i disse skabeloner, oprette en brugerdefineret skabelon ved hjælp af Microsoft Purview-connectoren eller bruge Power Automate skabeloner til andre overholdelsesområder i Microsoft Purview, kan du få brug for yderligere Power Automate  Licenser.
 
 > [!IMPORTANT]
 > Modtager du en meddelelse om yderligere licensvalidering, når du tester Power Automate flow? Din organisation har muligvis endnu ikke modtaget tjenesteopdateringer til denne prøveversionsfunktion. Opdateringer udrulles, og alle organisationer med Microsoft 365 abonnementer, der omfatter overholdelse af kommunikation, skal have licensunderstøttelse for flow, der er oprettet ud fra de anbefalede Power Automate skabeloner senest den 30. oktober 2020.
@@ -179,7 +179,7 @@ Hvis du vil oprette et Power Automate flow fra en anbefalet standardskabelon, sk
 
 Udfør følgende trin for at oprette et Power Automate flow fra en standardskabelon:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Kommunikation med overholdelse** >  **politikker** og vælge politikken med den besked, du vil gennemse.
+1. I [Microsoft Purview-compliance-portal skal](https://compliance.microsoft.com) du gå til **Politikker** for **overholdelse af kommunikation** >  og vælge politikken med den besked, du vil gennemse.
 2. Vælg fanen **Ventende** i politikken, og vælg en ventende besked.
 3. Vælg **Power Automate** i menuen med beskedhandlinger.
 4. På siden **Power Automate** skal du vælge en standardskabelon i afsnittet **Skabeloner til kommunikation med overholdelse af angivne standarder, som du kan synes godt om** på siden.
@@ -196,7 +196,7 @@ Som standard er Power Automate flow, der er oprettet af en bruger, kun tilgænge
 Hvis du vil dele et Power Automate flow, skal du være medlem af mindst én rollegruppe for kommunikation med overholdelse af angivne standarder.
 Fuldfør følgende trin for at dele et Power Automate flow:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Kommunikation med overholdelse** >  **politikker** og vælge politikken med den besked, du vil gennemse.
+1. I [Microsoft Purview-compliance-portal skal](https://compliance.microsoft.com) du gå til **Politikker** for **overholdelse af kommunikation** >  og vælge politikken med den besked, du vil gennemse.
 2. Vælg fanen **Ventende** i politikken, og vælg en ventende besked.
 3. Vælg **Power Automate** i menuen med beskedhandlinger.
 4. På siden **Power Automate flow** skal du vælge fanen **Mine flows** eller **Teamflows**.
@@ -210,11 +210,11 @@ Hvis du har brug for at redigere et flow, skal du bruge kontrolelementet **Power
 
 Udfør følgende trin for at redigere et Power Automate flow:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Kommunikation med overholdelse** >  **politikker** og vælge politikken med den besked, du vil gennemse.
+1. I [Microsoft Purview-compliance-portal skal](https://compliance.microsoft.com) du gå til **Politikker** for **overholdelse af kommunikation** >  og vælge politikken med den besked, du vil gennemse.
 2. Vælg fanen **Ventende** i politikken, og vælg en ventende besked.
 3. Vælg **Power Automate** i menuen med beskedhandlinger.
 4. Vælg flow, der skal redigeres, på siden **Power Automate flow**. Vælg **Rediger** i flowkontrolmenuen.
-5. Vælg **ellipsen** >  **Indstillinger** for at ændre en indstilling for en flowkomponent eller **ellipsenSlet** >  for at slette en flowkomponent.
+5. Vælg **ellipsen** >  **Indstillinger** hvis du vil ændre indstillingen for en flowkomponent eller **ellipsen** > **Slet** for at slette en flowkomponent.
 6. Vælg **Gem** og derefter **Luk** for at fuldføre redigeringen af flowet.
 
 #### <a name="delete-a-power-automate-flow"></a>Slet et Power Automate flow
@@ -223,7 +223,7 @@ Hvis du har brug for at slette et flow, skal du bruge kontrolelementet **Power A
 
 Fuldfør følgende trin for at slette et Power Automate flow:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Kommunikation med overholdelse** >  **politikker** og vælge politikken med den besked, du vil gennemse.
+1. I [Microsoft Purview-compliance-portal skal](https://compliance.microsoft.com) du gå til **Politikker** for **overholdelse af kommunikation** >  og vælge politikken med den besked, du vil gennemse.
 2. Vælg fanen **Ventende** i politikken, og vælg en ventende besked.
 3. Vælg **Power Automate** i menuen med beskedhandlinger.
 4. Vælg flow, der skal slettes, på siden **Power Automate flow**. Vælg **Slet** i menuen for flowkontrolelementet.
@@ -269,8 +269,8 @@ Når meddelelser er løst, fjernes de fra fanevisningen **Ventende** og vises i 
 
 Fuldfør følgende trin for at løse uløste meddelelser:
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en bruger, der er tildelt *rollegrupperne Communication Compliance Analyst* eller *Communication Compliance Investigator* i din Microsoft 365 organisation.
-2. På Microsoft Purview-overholdelsesportalen skal du gå til **Kommunikation med overholdelse**.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en bruger, der er tildelt rollegrupperne *Kommunikationsoverholdelsesanalytiker* eller *Communication Compliance Investigator* i din Microsoft 365 organisation.
+2. I Microsoft Purview-compliance-portal skal du gå til **Kommunikation med overholdelse af angivne standarder**.
 3. Vælg fanen **Politikker,** og vælg derefter en politik, der indeholder den løste besked, og dobbeltklik for at åbne siden **Politik** .
 4. Vælg fanen **Løst** på siden **Politik**.
 5. Under fanen **Løst** skal du vælge en eller flere meddelelser for at flytte tilbage til *Ventende*.
