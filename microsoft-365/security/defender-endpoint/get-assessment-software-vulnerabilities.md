@@ -1,7 +1,7 @@
 ---
-title: Eksportér vurdering af softwarerisici pr. enhed
-description: API-svaret er pr. enhed og indeholder sårbar software, der er installeret på dine eksponerede enheder og kendte sårbarheder i disse softwareprodukter. Denne tabel indeholder også oplysninger om operativsystem, CVE-id'er og alvorlighedsoplysninger om sikkerhedsrisikoen.
-keywords: api, apis, eksportvurdering, pr. enhedsvurdering, rapport over sikkerhedsrisiko, vurdering af sikkerhedsrisiko, rapport over sikkerhedsrisiko på enheder, sikker konfigurationsvurdering, sikker konfigurationsrapport, vurdering af softwarerisici, rapport over sikkerhedsrisiko, rapport over sikkerhedsrisiko på computer,
+title: Eksportér vurdering af softwaresårbarheder pr. enhed
+description: API-svaret er pr. enhed og indeholder sårbar software, der er installeret på dine eksponerede enheder og eventuelle kendte sikkerhedsrisici i disse softwareprodukter. Denne tabel indeholder også oplysninger om operativsystem, CVE-id'er og oplysninger om sårbarhedens alvorsgrad.
+keywords: api, apis, eksportvurdering, vurdering pr. enhed, vurderingsrapport for sårbarheder, vurdering af enhedens sårbarhed, rapport over enhedssårbarhed, vurdering af sikker konfiguration, sikkerhedskonfigurationsrapport, vurdering af softwaresårbarheder, rapport over softwaresårbarheder, rapport over sårbarheder efter maskine,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,67 +15,68 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 5d10b96e1d5abfe1c9e9a87b9800dafba081c961
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 86d2b0b09748a83c9b73430c4c6e371ca2e37f31
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63599426"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65838969"
 ---
-# <a name="export-software-vulnerabilities-assessment-per-device"></a>Eksportér vurdering af softwarerisici pr. enhed
+# <a name="export-software-vulnerabilities-assessment-per-device"></a>Eksportér vurdering af softwaresårbarheder pr. enhed
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Returnerer alle kendte softwarerisici og deres oplysninger for alle enheder på én gang.
+Returnerer alle kendte softwaresårbarheder og deres oplysninger for alle enheder på enhedsbasis.
 
-Forskellige API-opkald får forskellige typer data. Da mængden af data kan være stor, er der to måder, det kan hentes på:
+Forskellige API-kald henter forskellige typer data. Da mængden af data kan være stor, er der to måder, den kan hentes på:
 
-1. [JSON-svar til vurdering af **eksport af softwarerisici**](#1-export-software-vulnerabilities-assessment-json-response)  API'en trækker alle data i organisationen som Json-svar. Denne metode er bedst til _små organisationer med mindre end 100 K-enheder_. Svaret er pagineret, så du kan bruge \@feltet odata.nextLink fra svaret til at hente de næste resultater.
+1. [**JSON-svar** til vurdering af softwaresårbarheder](#1-export-software-vulnerabilities-assessment-json-response)  API'en henter alle data i din organisation som Json-svar. Denne metode er bedst til _små organisationer med mindre end 100.000 enheder_. Svaret er sideinddelt, så du kan bruge feltet \@odata.nextLink fra svaret til at hente de næste resultater.
 
-2. [Eksportér vurdering af softwarerisici **via filer**](#2-export-software-vulnerabilities-assessment-via-files) Denne API-løsning gør det muligt at trække større mængder data hurtigere og mere pålideligt. Via-filer anbefales til store organisationer med mere end 100 K-enheder. Denne API henter alle data i organisationen som downloadfiler. Svaret indeholder URL-adresser til at hente alle data fra Azure Storage. Denne API gør det muligt at hente alle dine data fra Azure Storage som følger:
-   - Ring til API'en for at få en liste over downloadede URL-adresser med alle organisationens data.
-   - Download alle filerne ved hjælp af URL-adresserne til overførslen, og bearbejde dataene, som du ønsker.
+2. [Eksportér vurdering af softwaresårbarheder **via filer**](#2-export-software-vulnerabilities-assessment-via-files) Denne API-løsning gør det muligt at trække større mængder data hurtigere og mere pålideligt. Via-filer anbefales til store organisationer med mere end 100.000 enheder. Denne API henter alle data i din organisation som downloadfiler. Svaret indeholder URL-adresser til download af alle data fra Azure Storage. Denne API giver dig mulighed for at downloade alle dine data fra Azure Storage på følgende måde:
+   - Kald API'en for at få en liste over URL-adresser til download med alle dine organisationsdata.
+   - Download alle filerne ved hjælp af URL-adresserne til download, og behandl dataene, som du vil.
 
-3. [JSON-svar til vurdering af sårbarheder **ved eksport af deltasoftware**](#3-delta-export-software-vulnerabilities-assessment-json-response)  Returnerer en tabel med et element for hver entydige kombination af: DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId og EventTimestamp.
-API'en trækker data i organisationen som Json-svar. Svaret er pagineret, så du kan bruge feltet @odata.nextLink fra svaret til at hente de næste resultater.
+3. [**JSON-svar på JSON-vurdering** af sårbarheder i forbindelse med deltaeksportsoftware](#3-delta-export-software-vulnerabilities-assessment-json-response)  Returnerer en tabel med en post for hver entydige kombination af: DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId og EventTimestamp.
+API'en henter data i din organisation som Json-svar. Svaret er sideinddelt, så du kan bruge feltet @odata.nextLink fra svaret til at hente de næste resultater.
 
-   Den fulde "vurdering af softwarerisici (JSON-svar)" bruges til at få et helt øjebliksbillede af din organisations softwarerisici efter enhed. Men deltaeksport-API-opkaldet bruges til kun at hente de ændringer, der er sket mellem en valgt dato og den aktuelle dato ("delta"-API-opkaldet). I stedet for at eksportere en stor mængde data hver gang, får du kun specifikke oplysninger om nye, rettede og opdaterede sårbarheder. DELTA-eksport-JSON-svar-API-kald kan også bruges til at beregne forskellige KPI'er, f.eks. "hvor mange sårbarheder blev rettet?" eller "hvor mange nye sårbarheder blev føjet til min organisation?"
+   Den fulde "vurdering af softwaresårbarheder (JSON-svar)" bruges til at få et helt snapshot af vurderingen af softwaresårbarheder for din organisation efter enhed. Api-kaldet til deltaeksport bruges dog kun til at hente de ændringer, der er foretaget mellem en valgt dato og dags dato (API-kaldet "delta"). I stedet for at få en fuld eksport med en stor mængde data hver gang får du kun specifikke oplysninger om nye, faste og opdaterede sikkerhedsrisici. Delta export JSON-svar-API-kald kan også bruges til at beregne forskellige KPI'er, f.eks. "hvor mange sikkerhedsrisici blev løst?" eller "hvor mange nye sikkerhedsrisici blev føjet til min organisation?"
 
-   Da DELTA-eksport-JSON-svar-API-opkald til softwarerisici kun returnerer data for et målrettet datointerval, betragtes det ikke som _en fuld eksport_.
+   Da deltaeksport-JSON-svar-API-kaldet for softwaresårbarheder kun returnerer data for et bestemt datointerval, anses det ikke for at være en _fuld eksport_.
 
-Data, der indsamles (ved hjælp _af enten Json-svar_ _eller via filer_), er det aktuelle øjebliksbillede af den aktuelle tilstand. Det indeholder ikke historiske data. For at indsamle historiske data skal kunderne gemme dataene i deres egne datalagringer.
+Data, der indsamles (ved hjælp af enten _Json-svar_ eller _via filer_), er det aktuelle snapshot af den aktuelle tilstand. Den indeholder ikke historiske data. For at indsamle historiske data skal kunderne gemme dataene i deres egne datalagre.
 
 > [!NOTE]
-> Medmindre andet er angivet, er alle de angivne **_eksportmetoder fuld eksport_** **_og efter_** enhed (også kaldet **_pr. enhed_**).
+> Medmindre andet er angivet, er alle angivne eksportvurderingsmetoder **_fuld eksport_** og **_efter enhed_** (også kaldet **_pr. enhed_**).
 
-## <a name="1-export-software-vulnerabilities-assessment-json-response"></a>1. Eksportér vurdering af softwarerisici (JSON-svar)
+## <a name="1-export-software-vulnerabilities-assessment-json-response"></a>1. Eksportér vurdering af softwaresårbarheder (JSON-svar)
 
-### <a name="11-api-method-description"></a>Beskrivelse af 1.1 API-metode
+### <a name="11-api-method-description"></a>Beskrivelse af API-metoden 1.1
 
-Dette API-svar indeholder alle data for installeret software pr. enhed. Returnerer en tabel med et element for hver entydige kombination af DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID.
+Dette API-svar indeholder alle data fra installeret software pr. enhed. Returnerer en tabel med en post for hver entydige kombination af DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID.
 
-#### <a name="111-limitations"></a>Begrænsninger 1.1.1
+#### <a name="111-limitations"></a>1.1.1 Begrænsninger
 
 - Den maksimale sidestørrelse er 200.000.
-- Satsbegrænsninger for denne API er 30 opkald i minuttet og 1000 opkald pr. time.
+- Hastighedsbegrænsninger for denne API er 30 kald pr. minut og 1.000 opkald pr. time.
 
 ### <a name="12-permissions"></a>1.2 Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er for at få flere oplysninger.](apis-intro.md)
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er for at få flere oplysninger.](apis-intro.md)
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 ---|---|---
-Program|Vulnerability.Read.All|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
-Delegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
+Program|Vulnerability.Read.All|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
+Uddelegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
 
-### <a name="13-url"></a>1.3 URL
+### <a name="13-url"></a>1.3 URL-adresse
 
 ```http
 GET /api/machines/SoftwareVulnerabilitiesByMachine
@@ -83,16 +84,16 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 ### <a name="14-parameters"></a>1.4 Parametre
 
-- pageSize (standard = 50.000): Antal resultater som svar.
-- $top: Det antal resultater, der skal returneres (returnerer ikke @odata.nextLink, og træk derfor ikke alle dataene).
+- pageSize (standard = 50.000): Antal resultater i svar.
+- $top: Antallet af resultater, der skal returneres (returnerer ikke @odata.nextLink og trækker derfor ikke alle dataene).
 
 ### <a name="15-properties"></a>1.5 Egenskaber
 
 > [!NOTE]
 >
 > - Hver post er ca. 1 KB data. Du skal tage højde for dette, når du vælger den korrekte pageSize-parameter for dig.
-> - Nogle ekstra kolonner kan returneres i svaret. Disse kolonner er midlertidige og kan fjernes. Brug kun de dokumenterede kolonner.
-> - De egenskaber, der er defineret i følgende tabel, vises alfabetisk efter egenskabs-id. Når du kører denne API, returneres outputtet ikke nødvendigvis i samme rækkefølge, som er angivet i denne tabel.
+> - Nogle yderligere kolonner kan blive returneret i svaret. Disse kolonner er midlertidige og kan blive fjernet. Brug kun de dokumenterede kolonner.
+> - De egenskaber, der er defineret i følgende tabel, vises alfabetisk efter egenskabs-id. Når du kører denne API, returneres det resulterende output ikke nødvendigvis i den samme rækkefølge, som er angivet i denne tabel.
 
 <br>
 
@@ -100,25 +101,25 @@ GET /api/machines/SoftwareVulnerabilitiesByMachine
 
 Egenskab (id)|Datatype|Beskrivelse|Eksempel på en returneret værdi
 :---|:---|:---|:---
-CveId|String|Entydigt id, der er tildelt sikkerhedssikkerhedsrisikoen i CVE-systemet (Common Vulnerabilities and Exposures).|CVE-2020-15992
-CvssScore|String|CVSS-scoren for CVE'en.|6.2
-DeviceId|String|Entydigt id for enheden i tjenesten.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
-DeviceName|String|Enhedens fulde domænenavn.|johnlaptop.europe.contoso.com
-DiskPaths|Matrixstreng\[\]|Disk bevis for, at produktet er installeret på enheden.|[ "C:\Programmer (x86)\Microsoft\Silverlight\Application\silverlight.exe" ]
-ExploitabilityLevel|String|Udnyttelsesniveauet for denne risiko (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
-FirstSeenTimestamp|String|Første gang CVE'en for dette produkt blev set på enheden.|2020-11-03 10:13:34.8476880
+CveId|String|Entydigt id, der er tildelt sikkerhedssårbarheden under CVE-systemet (Common Vulnerabilities and Exposures).|CVE-2020-15992
+CvssScore|String|CVSS-scoren for CVE.|6.2
+Deviceid|String|Entydigt id for enheden i tjenesten.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
+DeviceName|String|Fuldt domænenavn (FQDN) for enheden.|johnlaptop.europe.contoso.com
+DiskPaths|Matrixstreng\[\]|Disk, der beviser, at produktet er installeret på enheden.|[ "C:\Programmer (x86)\Microsoft\Silverlight\Application\silverlight.exe" ]
+Udnyttelsesniveau|String|Udnyttelsesniveauet for denne sårbarhed (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit
+FirstSeenTimestamp|String|Første gang CVE for dette produkt blev set på enheden.|2020-11-03 10:13:34.8476880
 Id|String|Entydigt id for posten.|123ABG55_573AG&mnp!
 LastSeenTimestamp|String|Sidste gang CVE blev set på enheden.|2020-11-03 10:13:34.8476880
-OSPlatform|String|Platform for operativsystemet, der kører på enheden. Denne egenskab angiver bestemte operativsystemer med variationer inden for den samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11
-RbacGroupName|String|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, bliver værdien "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere
-AnbefalingReference|String|En reference til det anbefalings-id, der er relateret til denne software.|va-_-microsoft-_-silverlight
-RecommendedSecurityUpdate (valgfrit)|String|Navn eller beskrivelse af den sikkerhedsopdatering, softwareleverandøren har leveret for at løse sikkerhedsrisikoen.|Sikkerhedsopdateringer for april 2020
-RecommendedSecurityUpdateId (valgfrit)|String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator til den tilsvarende vejledning eller videnbaseartikler (KB)|4550961
-Registreringsdatabasestier|Matrixstreng\[\]|Registreringsdatabasen beviser, at produktet er installeret på enheden.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight" ]
+OSPlatform|String|Platform for det operativsystem, der kører på enheden. Denne egenskab angiver specifikke operativsystemer med variationer inden for samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11
+RbacGroupName|String|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, vil værdien være "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere
+Reference til anbefaling|String|En reference til det anbefalings-id, der er relateret til denne software.|va _--microsoft-_-silverlight
+RecommendedSecurityUpdate (valgfrit)|String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.|Sikkerhedsopdateringer fra april 2020
+RecommendedSecurityUpdateId (valgfrit)|String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator for de tilsvarende artikler om vejledning eller videnbase (KB)|4550961
+RegistryPaths|Matrixstreng\[\]|Registreringsdatabase beviser, at produktet er installeret på enheden.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight" ]
 SoftwareName|String|Navnet på softwareproduktet.|Chrome
 SoftwareVendor|String|Navnet på softwareleverandøren.|Google
 SoftwareVersion|String|Softwareproduktets versionsnummer.|81.0.4044.138
-VulnerabilitySeverityLevel|String|Alvorsniveau tildelt sikkerhedsrisikoen baseret på CVSS-scoren og dynamiske faktorer, der påvirkes af trusselsbilledet.|Mellem
+VulnerabilitySeverityLevel|String|Alvorsgradsniveau, der er tildelt sikkerhedssårbarheden baseret på CVSS-scoren og dynamiske faktorer, der påvirkes af trusselslandskabet.|Medium
 |
 
 ### <a name="16-examples"></a>1.6 Eksempler
@@ -129,7 +130,7 @@ VulnerabilitySeverityLevel|String|Alvorsniveau tildelt sikkerhedsrisikoen basere
 GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitiesByMachine?pageSize=5
 ```
 
-#### <a name="162-response-example"></a>1.6.2 Eksempel på svar
+#### <a name="162-response-example"></a>1.6.2 Svareksempel
 
 ```json
 {
@@ -261,26 +262,26 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
 }
 ```
 
-## <a name="2-export-software-vulnerabilities-assessment-via-files"></a>2. Eksportér vurdering af softwarerisici (via filer)
+## <a name="2-export-software-vulnerabilities-assessment-via-files"></a>2. Eksportér vurdering af softwaresårbarheder (via filer)
 
-### <a name="21-api-method-description"></a>Beskrivelse af 2.1 API-metoden
+### <a name="21-api-method-description"></a>2.1 Beskrivelse af API-metode
 
-Dette API-svar indeholder alle data for installeret software pr. enhed. Returnerer en tabel med et element for hver entydige kombination af DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID.
+Dette API-svar indeholder alle data fra installeret software pr. enhed. Returnerer en tabel med en post for hver entydige kombination af DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CVEID.
 
-#### <a name="212-limitations"></a>Begrænsninger 2.1.2
+#### <a name="212-limitations"></a>2.1.2 Begrænsninger
 
-Begrænsningerne for denne API er 5 opkald i minuttet og 20 opkald pr. time.
+Hastighedsbegrænsninger for denne API er 5 kald pr. minut og 20 opkald pr. time.
 
 ### <a name="22-permissions"></a>2.2 Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er for at få flere oplysninger](apis-intro.md).
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er for at få flere oplysninger](apis-intro.md).
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 ---|---|---
-Program|Vulnerability.Read.All|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
-Delegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
+Program|Vulnerability.Read.All|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
+Uddelegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
 
-### <a name="23-url"></a>2.3 URL
+### <a name="23-url"></a>2.3 URL-adresse
 
 ```http
 GET /api/machines/SoftwareVulnerabilitiesExport
@@ -288,18 +289,18 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 ### <a name="24-parameters"></a>2.4 Parametre
 
-- sasValidHours: Det antal timer, de hentede URL-adresser er gyldige i (maksimalt 24 timer).
+- sasValidHours: Det antal timer, som URL-adresserne til download er gyldige i (højst 24 timer).
 
 ### <a name="25-properties"></a>2.5 Egenskaber
 
 > [!NOTE]
 >
-> - Filerne er gzip komprimerede filer & multiline Json-format.
-> - URL-adresserne til download er kun gyldige i tre timer. Ellers kan du bruge parameteren.
-> - Du kan sikre dig, at du downloader fra det samme Azure-område, som dine data er placeret i, for at få den maksimale downloadhastighed.
+> - Filerne er gzip-komprimerede & i Json-format med flere streger.
+> - URL-adresserne til download er kun gyldige i 3 timer. Ellers kan du bruge parameteren .
+> - Hvis du vil have maksimal downloadhastighed for dine data, kan du sikre dig, at du downloader fra det samme Azure-område, som dine data er placeret i.
 >
-> - Hver post er ca. 1KB data. Du skal tage højde for dette, når du vælger den korrekte pageSize-parameter for dig.
-> - Nogle ekstra kolonner kan returneres i svaret. Disse kolonner er midlertidige og kan fjernes. Brug kun de dokumenterede kolonner.
+> - Hver post er ca. 1 KB data. Du skal tage højde for dette, når du vælger den korrekte pageSize-parameter for dig.
+> - Nogle yderligere kolonner kan blive returneret i svaret. Disse kolonner er midlertidige og kan blive fjernet. Brug kun de dokumenterede kolonner.
 
 <br>
 
@@ -307,8 +308,8 @@ GET /api/machines/SoftwareVulnerabilitiesExport
 
 Egenskab (id)|Datatype|Beskrivelse|Eksempel på en returneret værdi
 :---|:---|:---|:---
-Eksportér filer|matrixstreng\[\]|En liste over DOWNLOAD URL-adresser til filer, der indeholder det aktuelle øjebliksbillede af organisationen.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
-GeneratedTime|String|Det tidspunkt, hvor eksporten blev oprettet.|2021-05-20T08:00:00Z
+Eksportér filer|matrixstreng\[\]|En liste over URL-adresser til hentning af filer, der indeholder det aktuelle snapshot af organisationen.|["https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+GeneratedTime|String|Det tidspunkt, hvor eksporten blev genereret.|2021-05-20T08:00:00Z
 |
 
 ### <a name="26-examples"></a>2.6 Eksempler
@@ -319,7 +320,7 @@ GeneratedTime|String|Det tidspunkt, hvor eksporten blev oprettet.|2021-05-20T08:
 GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabilitiesExport
 ```
 
-#### <a name="262-response-example"></a>2.6.2 Eksempel på svar
+#### <a name="262-response-example"></a>2.6.2 Svareksempel
 
 ```json
 {
@@ -333,31 +334,31 @@ GET https://api-us.securitycenter.contoso.com/api/machines/SoftwareVulnerabiliti
 }
 ```
 
-## <a name="3-delta-export-software-vulnerabilities-assessment-json-response"></a>3. Vurdering af sårbarheder ved eksport af deltasoftware (JSON-svar)
+## <a name="3-delta-export-software-vulnerabilities-assessment-json-response"></a>3. Vurdering af sårbarheder i forbindelse med deltaeksport af software (JSON-svar)
 
-### <a name="31-api-method-description"></a>Beskrivelse af 3.1 API-metoden
+### <a name="31-api-method-description"></a>Beskrivelse af API-metoden 3.1
 
-Returnerer en tabel med et element for hver entydige kombination af DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId. API'en trækker data i organisationen som Json-svar. Svaret er pagineret, så du kan bruge feltet @odata.nextLink fra svaret til at hente de næste resultater. I modsætning til den fulde vurdering af softwarerisici (JSON-svar) (der bruges til at få et helt øjebliksbillede af din organisations vurdering af softwarerisici efter enhed), bruges DELTA-svar-API-opkaldet fra deltaeksporten til kun at hente de ændringer, der er sket mellem en valgt dato og den aktuelle dato ("delta"API-opkaldet). I stedet for at eksportere en stor mængde data hver gang, får du kun specifikke oplysninger om nye, rettede og opdaterede sårbarheder. DELTA-eksport-JSON-svar-API-kald kan også bruges til at beregne forskellige KPI'er, f.eks. "hvor mange sårbarheder blev rettet?" eller "hvor mange nye sårbarheder blev føjet til min organisation?"
+Returnerer en tabel med en post for hver entydige kombination af DeviceId, SoftwareVendor, SoftwareName, SoftwareVersion, CveId. API'en henter data i din organisation som Json-svar. Svaret er sideinddelt, så du kan bruge feltet @odata.nextLink fra svaret til at hente de næste resultater. I modsætning til vurderingen af sikkerhedsrisici i hele softwaren (JSON-svar) (som bruges til at få et helt snapshot af vurderingen af softwaresårbarheder for din organisation efter enhed) bruges deltaeksport-JSON-svar-API-kaldet til kun at hente de ændringer, der er sket mellem en valgt dato og den aktuelle dato (API-kaldet "delta"). I stedet for at få en fuld eksport med en stor mængde data hver gang får du kun specifikke oplysninger om nye, faste og opdaterede sikkerhedsrisici. Delta export JSON-svar-API-kald kan også bruges til at beregne forskellige KPI'er, f.eks. "hvor mange sikkerhedsrisici blev løst?" eller "hvor mange nye sikkerhedsrisici blev føjet til min organisation?"
 
 > [!NOTE]
-> Det anbefales kraftigt, at du bruger enheds-API-opkaldsvurderingen for fulde vurdering af softwarerisici i forbindelse med eksport af software mindst én gang om ugen, og disse ekstra sårbarheder i forbindelse med eksportsoftware ændres efter enhed (delta) API-opkald alle de andre ugedage. Til forskel fra de andre JSON-svar-API'er til Bedømmelser er "deltaeksporten" ikke en fuld eksport. Deltaeksporten indeholder kun de ændringer, der er sket mellem en valgt dato og dags dato ("delta"-API-opkaldet).
+> Det anbefales på det kraftigste, at du bruger vurderingen af sårbarheder i forbindelse med eksport af software ved hjælp af enheds-API-kald mindst én gang om ugen, og denne ekstra eksportsoftwares sårbarheder ændres efter enhedens (delta)API-kald til alle de andre dage i ugen. I modsætning til de andre JSON-svar-API'er til vurderinger er "deltaeksport" ikke en fuld eksport. Delta-eksporten omfatter kun de ændringer, der er sket mellem en valgt dato og dags dato (API-kaldet "delta").
 
-#### <a name="311-limitations"></a>Begrænsninger 3.1.1
+#### <a name="311-limitations"></a>3.1.1 Begrænsninger
 
 - Den maksimale sidestørrelse er 200.000.
 - Parameteren sinceTime har maksimalt 14 dage.
-- Satsbegrænsninger for denne API er 30 opkald i minuttet og 1000 opkald pr. time.
+- Hastighedsbegrænsninger for denne API er 30 kald pr. minut og 1.000 opkald pr. time.
 
 ### <a name="32-permissions"></a>3.2 Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er for at få flere oplysninger.](apis-intro.md)
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er for at få flere oplysninger.](apis-intro.md)
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 ---|---|---
-Program|Vulnerability.Read.All|"Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko"
-Delegeret (arbejds- eller skolekonto)|Vulnerability.Read|"Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko"
+Program|Vulnerability.Read.All|'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring'
+Uddelegeret (arbejds- eller skolekonto)|Vulnerability.Read|'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring'
 
-### <a name="33-url"></a>3.3 URL
+### <a name="33-url"></a>3.3 URL-adresse
 
 ```http
 GET /api/machines/SoftwareVulnerabilityChangesByMachine
@@ -366,17 +367,17 @@ GET /api/machines/SoftwareVulnerabilityChangesByMachine
 ### <a name="34-parameters"></a>3.4 Parametre
 
 - sinceTime (påkrævet): Dataene mellem et valgt tidspunkt og i dag.
-- pageSize (standard = 50.000): antal resultater som svar.
-- $top: antal resultater, der skal returneres (returnerer ikke @odata.nextLink, og træk derfor ikke alle dataene).
+- pageSize (standard = 50.000): antal resultater i svar.
+- $top: Antallet af resultater, der skal returneres (returnerer ikke @odata.nextLink, og trækker derfor ikke alle dataene).
 
 ### <a name="35-properties"></a>3.5 Egenskaber
 
-Hver returnerede post indeholder alle data fra enheds-API'ens fulde vurdering af softwarerisici samt yderligere to felter:  _**EventTimestamp**_ og _**Status**_.
+Hver returnerede post indeholder alle data fra vurderingen af sårbarheder i forbindelse med fuld eksport af software efter enheds-API samt yderligere to felter:  _**EventTimestamp**_ og _**Status**_.
 
 > [!NOTE]
 >
-> - Nogle ekstra kolonner kan returneres i svaret. Disse kolonner er midlertidige og kan fjernes, så du skal kun bruge de dokumenterede kolonner.
-> - De egenskaber, der er defineret i følgende tabel, vises alfabetisk efter egenskabs-id. Når du kører denne API, returneres outputtet ikke nødvendigvis i samme rækkefølge, som er angivet i denne tabel.
+> - Nogle yderligere kolonner kan blive returneret i svaret. Disse kolonner er midlertidige og kan blive fjernet, så brug kun de dokumenterede kolonner.
+> - De egenskaber, der er defineret i følgende tabel, vises alfabetisk efter egenskabs-id. Når du kører denne API, returneres det resulterende output ikke nødvendigvis i den samme rækkefølge, som er angivet i denne tabel.
 
 <br>
 
@@ -384,38 +385,38 @@ Hver returnerede post indeholder alle data fra enheds-API'ens fulde vurdering af
 
 Egenskab (id)|Datatype|Beskrivelse|Eksempel på returneret værdi
 :---|:---|:---|:---
-CveId |String|Entydigt id, der er tildelt sikkerhedssikkerhedsrisikoen i CVE-systemet (Common Vulnerabilities and Exposures).|CVE-2020-15992  
-CvssScore|String|CVSS-scoren for CVE'en.|6.2  
-DeviceId|String|Entydigt id for enheden i tjenesten.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1  
-DeviceName|String|Enhedens fulde domænenavn.|johnlaptop.europe.contoso.com  
-DiskPaths|Matrix[streng]|Disk bevis for, at produktet er installeret på enheden.|["C:\Program Files (x86)\Microsoft\Silverlight\Application\silverlight.exe"]  
-EventTimestamp|String|Det tidspunkt, hvor denne deltabegivenhed blev fundet.|2021-01-11T11:06:08.291Z
-ExploitabilityLevel|String|Udnyttelsesniveauet for denne risiko (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit  
-FirstSeenTimestamp|String|Første gang CVE'en for dette produkt blev set på enheden.|2020-11-03 10:13:34.8476880  
+CveId |String|Entydigt id, der er tildelt sikkerhedssårbarheden under CVE-systemet (Common Vulnerabilities and Exposures).|CVE-2020-15992  
+CvssScore|String|CVSS-scoren for CVE.|6.2  
+Deviceid|String|Entydigt id for enheden i tjenesten.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1  
+DeviceName|String|Fuldt domænenavn (FQDN) for enheden.|johnlaptop.europe.contoso.com  
+DiskPaths|Matrix[streng]|Disk, der beviser, at produktet er installeret på enheden.|["C:\Programmer (x86)\Microsoft\Silverlight\Application\silverlight.exe"]  
+EventTimestamp|String|Det tidspunkt, hvor denne delta-hændelse blev fundet.|2021-01-11T11:06:08.291Z
+Udnyttelsesniveau|String|Udnyttelsesniveauet for denne sårbarhed (NoExploit, ExploitIsPublic, ExploitIsVerified, ExploitIsInKit)|ExploitIsInKit  
+FirstSeenTimestamp|String|Første gang CVE for dette produkt blev set på enheden.|2020-11-03 10:13:34.8476880  
 Id|String|Entydigt id for posten.|123ABG55_573AG&mnp!  
 LastSeenTimestamp|String|Sidste gang CVE blev set på enheden.|2020-11-03 10:13:34.8476880  
-OSPlatform|String|Platform for det operativsystem, der kører på enheden. specifikke operativsystemer med variationer inden for den samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11 
-RbacGroupName|String|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, bliver værdien "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere  
-AnbefalingReference|streng|En reference til det anbefalings-id, der er relateret til denne software.|va--microsoft--silverlight  
-RecommendedSecurityUpdate |String|Navn eller beskrivelse af den sikkerhedsopdatering, softwareleverandøren har leveret for at løse sikkerhedsrisikoen.|Sikkerhedsopdateringer for april 2020  
-RecommendedSecurityUpdateId |String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator til den tilsvarende vejledning eller videnbaseartikler (KB)|4550961  
-Registreringsdatabasestier |Matrix[streng]|Registreringsdatabasen beviser, at produktet er installeret på enheden.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome" ]  
+OSPlatform|String|Platform for det operativsystem, der kører på enheden; specifikke operativsystemer med variationer inden for samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11 
+RbacGroupName|String|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, vil værdien være "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere  
+Reference til anbefaling|Streng|En reference til det anbefalings-id, der er relateret til denne software.|va--microsoft--silverlight  
+RecommendedSecurityUpdate |String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.|Sikkerhedsopdateringer fra april 2020  
+RecommendedSecurityUpdateId |String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator for de tilsvarende artikler om vejledning eller videnbase (KB)|4550961  
+RegistryPaths |Matrix[streng]|Registreringsdatabase beviser, at produktet er installeret på enheden.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome" ]  
 SoftwareName|String|Navnet på softwareproduktet.|Chrome  
 SoftwareVendor|String|Navnet på softwareleverandøren.|Google  
 SoftwareVersion|String|Softwareproduktets versionsnummer.|81.0.4044.138  
-Status|String|**Ny** (for en ny sikkerhedsrisiko, der introduceres på en **enhed) (** 1) Rettet (hvis denne sikkerhedsrisiko ikke findes længere på enheden, hvilket betyder, at den er løst). (2) **Opdateret** (hvis en sikkerhedsrisiko på en enhed er ændret. De mulige ændringer er: CVSS-score, udnyttelsesniveau, alvorsniveau, DiskPaths, Registreringsdatabasestier, RecommendedSecurityUpdate). |Rettet
-VulnerabilitySeverityLevel|String|Alvorsniveau, der er tildelt sikkerhedsrisikoen. Det er baseret på CVSS-scoren og dynamiske faktorer, der påvirkes af trusselsbilledet.|Mellem
+Status|String|**Ny** (for en ny sårbarhed, der introduceres på en enhed) (1) **Fast** (hvis denne sårbarhed ikke længere findes på enheden, hvilket betyder, at den blev afhjælpet). (2) **Opdateret** (hvis en sikkerhedsrisiko på en enhed er blevet ændret. De mulige ændringer er: CVSS-score, udnyttelsesniveau, alvorsgradsniveau, DiskPaths, RegistryPaths, RecommendedSecurityUpdate). |Fast
+VulnerabilitySeverityLevel|String|Alvorsgradsniveau, der er tildelt til sikkerhedsrisikoen. Den er baseret på CVSS-scoren og dynamiske faktorer, der påvirkes af trusselslandskabet.|Medium
 |
 
-#### <a name="clarifications"></a>Afklaring
+#### <a name="clarifications"></a>Præciseringer
 
-- Hvis softwaren blev opdateret fra version 1.0 til version 2.0, og begge versioner er tilgængelige for CVE-A, modtager du to separate begivenheder:
-   1. Rettet: CVE-A på version 1.0 blev rettet.
+- Hvis softwaren blev opdateret fra version 1.0 til version 2.0, og begge versioner er eksponeret for CVE-A, modtager du to separate hændelser:
+   1. Løst: CVE-A på version 1.0 blev rettet.
    1. Ny: CVE-A på version 2.0 blev tilføjet.
 
-- Hvis en bestemt sikkerhedsrisiko (f.eks. CVE-A) først blev set på et bestemt tidspunkt (f.eks. 10. januar) på software med version 1.0, og et par dage senere denne software blev opdateret til version 2.0, som også eksponeres for den samme CVE-A, modtager du disse to adskilte begivenheder:
-   1. Rettet: CVE-X, FirstSeenTimestamp 10. januar, version 1,0.
-   1. Nyt: CVE-X, FirstSeenTimestamp 10. januar, version 2.0.
+- Hvis en bestemt sårbarhed (f.eks. CVE-A) først blev set på et bestemt tidspunkt (f.eks. 10. januar) på software med version 1.0, og et par dage senere blev softwaren opdateret til version 2.0, som også blev eksponeret for samme CVE-A, modtager du disse to adskilte hændelser:
+   1. Løst: CVE-X, FirstSeenTimestamp 10. januar, version 1,0.
+   1. Ny: CVE-X, FirstSeenTimestamp 10. januar, version 2.0.
 
 ### <a name="36-examples"></a>3.6 Eksempler
 
@@ -425,7 +426,7 @@ VulnerabilitySeverityLevel|String|Alvorsniveau, der er tildelt sikkerhedsrisikoe
 GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityChangesByMachine?pageSize=5&sinceTime=2021-05-19T18%3A35%3A49.924Z
 ```
 
-#### <a name="362-response-example"></a>3.6.2 Eksempel på svar
+#### <a name="362-response-example"></a>3.6.2 Svareksempel
 
 ```json
 {
@@ -579,11 +580,11 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 
 ## <a name="see-also"></a>Se også
 
-- [Eksportere vurderingsmetoder og egenskaber pr. enhed](get-assessment-methods-properties.md)
-- [Eksportér sikker konfigurationsvurdering pr. enhed](get-assessment-secure-config.md)
+- [Eksportér vurderingsmetoder og -egenskaber pr. enhed](get-assessment-methods-properties.md)
+- [Eksportér vurdering af sikker konfiguration pr. enhed](get-assessment-secure-config.md)
 - [Eksportér vurdering af softwarelager pr. enhed](get-assessment-software-inventory.md)
 
 Andre relaterede
 
-- [Risikobaserede & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
-- [Sårbarheder i din organisation](tvm-weaknesses.md)
+- [Risikobaseret trussel & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
+- [Sikkerhedsrisici i din organisation](tvm-weaknesses.md)

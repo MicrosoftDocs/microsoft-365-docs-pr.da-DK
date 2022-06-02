@@ -1,5 +1,5 @@
 ---
-title: Besked- og beskedpolitikker i Microsoft Purview Compliance Manager
+title: Microsoft Purview politikker for overholdelse af regler og standarder
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,15 +17,15 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du opretter beskeder for aktiviteter i Microsoft Purview Compliance Manager, der kan påvirke din score for overholdelse af angivne standarder.
-ms.openlocfilehash: 32ab22f47d35d64fa72dcc4898f5fff06d20c13c
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+description: Få mere at vide om, hvordan du opretter beskeder for aktiviteter i Microsoft Purview Overholdelsesstyring, der kan påvirke din score for overholdelse af angivne standarder.
+ms.openlocfilehash: c69e56c693a2994a93b1faccfe6f69fa317d8390
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231731"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839443"
 ---
-# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Besked- og beskedpolitikker i Microsoft Purview Compliance Manager
+# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Microsoft Purview politikker for overholdelse af regler og standarder
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -67,19 +67,19 @@ Hvis du vil i gang med at arbejde med beskeder, skal [du se Visning og administr
 
 I nedenstående tabel beskrives, hvilke brugere der kan oprette og redigere beskeder og beskedpolitikker baseret på deres rolletype. Ud over at have rollen Overholdelsesadministrator skal brugerne også have en Azure AD rolle på følgende måde:
 
-- Rollen **Sikkerhedslæser** i Azure AD til visning af beskeder og beskedpolitikker
-- Rollen **Sikkerhedsadministrator** i Azure AD til oprettelse eller opdatering af beskedpolitikker
+- Sådan får du vist beskeder og politikker for beskeder: rollen **Sikkerhedslæser** i Azure AD
+- Sådan opretter eller opdaterer du politikker for beskeder: rollen **Overholdelsesadministrator**, **Administrator af overholdelsesdata**, **Sikkerhedsadministrator** eller **Sikkerhedsoperator** i Azure AD
  
-Få mere at vide om [Azure-roller på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#azure-roles-in-the-compliance-portal).
+Få mere at vide om [Azure-roller i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#azure-roles-in-the-compliance-portal).
 
 
 | Rolle | Kan oprette og redigere politikker | Beskeder kan redigeres | 
 | :------------- | :-------------: | :------------: |
 | **Administration af Overholdelsesstyring**| Ja  | Ja | 
 | **Vurdering af overholdelsesstyring**| Ja | Ja | 
-| **Bidrag til Overholdelsesstyring**| Ja | Ja | 
-| **Global administrator**| Ja | Ja  | 
+| **Bidragyder til Overholdelsesstyring**| Ja | Ja | 
 | **Læser til Overholdelsesstyring**| Nej | Nej | 
+| **Global administrator**| Ja | Ja | 
 
 Få mere at vide om, hvordan [du angiver brugertilladelser og tildeler roller til Overholdelsesstyring](compliance-manager-setup.md#set-user-permissions-and-assign-roles).
 
@@ -105,7 +105,7 @@ Her er indstillingerne for standardpolitikken:
 
 - Alvorsgraden for disse beskeder er **mellem**.
 
-- Den globale administrator for din organisation er standardmodtageren af beskedmeddelelser.
+- Den globale Administration for din organisation er standardmodtageren af beskeder.
 
 - Du kan tilføje flere modtagere af beskeder ved at følge disse trin:
     - Find **standardbeskedpolitikken for Overholdelsesstyring** på siden **Politikker for beskeder**.

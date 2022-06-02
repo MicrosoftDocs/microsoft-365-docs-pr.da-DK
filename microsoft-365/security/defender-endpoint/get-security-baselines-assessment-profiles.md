@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 301b586249268148ba005b193438937a1c55e46f
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 69f660fb355d5b93c538b92ed45b37c6cec61b9a
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417625"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840114"
 ---
 # <a name="list-all-security-baselines-assessment-profiles"></a>Vis alle vurderingsprofiler for sikkerhedsgrundlinjer
 
@@ -29,7 +29,7 @@ ms.locfileid: "65417625"
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
-- [Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender – Opdater](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender? [Tilmeld dig en gratis prøveversion.- Opdater](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-portaloverview-abovefoldlink)

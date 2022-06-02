@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 84304d120f5822d91adc99c86e2c22c0cfb6790c
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 02017a614544cfb10eb43d375212fc7e37124ad3
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789915"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840381"
 ---
 # <a name="protect-important-folders-with-controlled-folder-access"></a>Beskyt vigtige mapper med kontrolleret mappeadgang
 
@@ -38,7 +38,7 @@ ms.locfileid: "64789915"
 - Windows
 
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 ## <a name="what-is-controlled-folder-access"></a>Hvad er kontrolleret mappeadgang?
 
@@ -77,6 +77,8 @@ Kontrolleret mappeadgang understøttes i følgende versioner af Windows:
 
 - [Windows 10, version 1709](/windows/whats-new/whats-new-windows-10-version-1709) og nyere
 - Windows 11
+- Windows 2012 R2
+- Windows 2016
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - Windows Server 2022
 
@@ -145,7 +147,7 @@ I følgende tabel vises hændelser, der er relateret til kontrolleret mappeadgan
 Du kan bruge appen Windows Sikkerhed til at få vist listen over mapper, der er beskyttet af kontrolleret mappeadgang.
 
 1. Åbn appen Windows Sikkerhed på din Windows 10- eller Windows 11-enhed.
-2. Vælg **Virus & trusselsbeskyttelse**.
+2. Vælg **Virus- og trusselsbeskyttelse**.
 3. Under **Ransomware-beskyttelse** skal du vælge **Administrer ransomware-beskyttelse**.
 4. Hvis kontrolleret mappeadgang er slået fra, skal du aktivere den. Vælg **beskyttede mapper**.
 5. Udfør et af følgende trin:

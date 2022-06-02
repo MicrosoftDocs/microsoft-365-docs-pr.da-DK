@@ -1,7 +1,7 @@
 ---
 title: Få sikkerhedsanbefalinger
-description: Henter en samling af sikkerhedsanbefalinger, der er relateret til et bestemt enheds-id.
-keywords: apis, graph api, understøttede API'er, hent, liste, fil, oplysninger, sikkerhedsanbefaling pr. enhed, trussel & håndtering af sikkerhedsrisici API, Microsoft Defender til Endpoint tvm api
+description: Henter en samling sikkerhedsanbefalinger, der er relateret til et givent enheds-id.
+keywords: apis, graf api, understøttede API'er, hent, liste, fil, oplysninger, sikkerhedsanbefaling pr. enhed, trussel & håndtering af sikkerhedsrisici api, Microsoft Defender for Endpoint tvm-api
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,21 +15,23 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6441610fb9c1ebdee823badce2bd2c5439142cf3
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: ebe07abd4e7f87e7abfe4d4a8ccd131e20dc4958
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63597559"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839706"
 ---
 # <a name="get-security-recommendations"></a>Få sikkerhedsanbefalinger
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:** 
-- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
+
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -37,16 +39,16 @@ ms.locfileid: "63597559"
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
-Henter en samling af sikkerhedsanbefalinger, der er relateret til et bestemt enheds-id.
+Henter en samling sikkerhedsanbefalinger, der er relateret til et givent enheds-id.
 
 ## <a name="permissions"></a>Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er](apis-intro.md)
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er](apis-intro.md)
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 :---|:---|:---
-Program|SecurityRecommendation.Read.All|"Læs oplysninger om sikkerhed i forbindelse med trussels- og sikkerhedsrisiko"
-Delegeret (arbejds- eller skolekonto)|SecurityRecommendation.Read|"Læs oplysninger om sikkerhed i forbindelse med trussels- og sikkerhedsrisiko"
+Program|SecurityRecommendation.Read.All|'Læs oplysninger om sikkerhedsanbefafaling for trussels- og sårbarhedsstyring'
+Uddelegeret (arbejds- eller skolekonto)|SecurityRecommendation.Read|'Læs oplysninger om sikkerhedsanbefafaling for trussels- og sårbarhedsstyring'
 
 ## <a name="http-request"></a>HTTP-anmodning
 
@@ -54,13 +56,13 @@ Delegeret (arbejds- eller skolekonto)|SecurityRecommendation.Read|"Læs oplysnin
 GET /api/machines/{machineId}/recommendations
 ```
 
-## <a name="request-headers"></a>Anmod om brevhoveder
+## <a name="request-headers"></a>Anmodningsheadere
 
 Navn|Type|Beskrivelse
 :---|:---|:---
-Godkendelse|String|Bearer {token}. **Påkrævet**.
+Tilladelse|String|Ihændehaver {token}. **Påkrævet**.
 
-## <a name="request-body"></a>Anmodningstekst
+## <a name="request-body"></a>Brødtekst i anmodning
 
 Tom
 
@@ -78,7 +80,7 @@ Her er et eksempel på anmodningen.
 GET https://api.securitycenter.microsoft.com/api/machines/ac233fa6208e1579620bf44207c4006ed7cc4501/recommendations
 ```
 
-### <a name="response-example"></a>Eksempel på svar
+### <a name="response-example"></a>Svareksempel
 
 Her er et eksempel på svaret.
 
@@ -114,5 +116,5 @@ Her er et eksempel på svaret.
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Risikobaseret administration af & af sikkerhedsrisici](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Anbefaling om sikkerhed & sikkerhed mod trusler](/microsoft-365/security/defender-endpoint/tvm-security-recommendation)
+- [Risikobaseret administration af trussel & sårbarhed](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Sikkerhedsanbefaling for trussel & sårbarhed](/microsoft-365/security/defender-endpoint/tvm-security-recommendation)

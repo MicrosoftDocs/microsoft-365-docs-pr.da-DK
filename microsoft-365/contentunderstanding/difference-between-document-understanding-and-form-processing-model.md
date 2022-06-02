@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om vigtige forskelle mellem en model til dokumentforståelse og en formularbehandlingsmodel.
-ms.openlocfilehash: 571516a7112e3f145d9e3ca392ad3488a33b4887
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 8856eade8e271c3b07ec61775c1f462e4b13bcff
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947819"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839869"
 ---
 # <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem modeller til dokumentforståelse og formularbehandling 
 
@@ -34,7 +34,7 @@ Du kan bruge to brugerdefinerede modeltyper:
 Selvom begge modeller generelt bruges til samme formål, påvirker de nøgleforskelle, der er angivet nedenfor, hvilke du kan bruge.
 
 > [!NOTE]
-> Se [SharePoint Syntex: Introduktionsvejledning](./adoption-getstarted.md) for at få flere oplysninger om formularbehandling og eksempler på scenarieforståelse.
+> Du kan få flere oplysninger om formularbehandling og scenarieeksempler i Introduktion [til implementering af SharePoint Syntex](./adoption-getstarted.md).
 
 ## <a name="structured-versus-unstructured-and-semi-structured-content"></a>Struktureret i forhold til ustruktureret og semi-struktureret indhold
 
@@ -68,23 +68,23 @@ Du kan anvende modeller til dokumentforståelse til SharePoint dokumentbibliotek
 
 Formularbehandlingsmodeller kan i øjeblikket kun anvendes på det SharePoint dokumentbibliotek, du har oprettet dem ud fra. Dette giver brugere med licens adgang til webstedet mulighed for at oprette en formularbehandlingsmodel. Bemærk, at en administrator skal aktivere formularbehandling på et SharePoint dokumentbibliotek, for at det er tilgængeligt for brugere med licens.
 
-## <a name="comparison-of-forms-processing-and-document-understanding"></a>Sammenligning af formularbehandling og dokumentforståelse
+## <a name="comparison-of-form-processing-and-document-understanding"></a>Sammenligning af formularbehandling og dokumentforståelse
 
 Brug følgende tabel til at forstå, hvornår du skal bruge formularbehandling, og hvornår du skal bruge dokumentforståelse.
 
 | Funktion | Formularbehandling | Dokumentforståelse |
 | ------- | ------- | ------- |
-| Modeltype – hvornår skal hver enkelt bruges? | Bruges til semi-strukturerede filformater, f.eks. PDF-filer til formularindhold, f.eks. fakturaer eller indkøbsordrer, hvor layoutet og formateringen er den samme.  | Bruges til semi-strukturerede filformater – f.eks. Office dokumenter, hvor der er forskelle i layoutet, men stadig lignende oplysninger, der skal udtrækkes. |
+| Modeltype – hvornår skal hver enkelt bruges? | Strukturerede og semi-strukturerede filformater, f.eks. PDF-filer til formularindhold, f.eks. fakturaer eller indkøbsordrer, hvor layoutet og formateringen er den samme.  | Ustrukturerede eller semi-strukturerede filformater, f.eks. Office dokumenter, hvor der er forskelle i layoutet, men stadig skal udtrække lignende oplysninger. |
 | Oprettelse af model | Model, der er oprettet i AI Builder med problemfri adgang fra SharePoint dokumentbibliotek.| Model, der er oprettet i SharePoint på et nyt websted, indholdscenteret. |
 | Klassificeringstype| Settable classifier bruges til at give et fingerpeg til systemet om, hvilke data der skal udtrækkes.| Klassificering, der kan oplæres, med valgfrie udtrækninger ved hjælp af maskinundervisning til at tildele dokumentplacering for, hvilke data der skal udtrækkes.|
 | Steder | Oplært i et enkelt dokumentbibliotek.| Kan anvendes på flere biblioteker.|
 | Understøttede filtyper| Oplær på PDF-, JPG-, PNG-format, i alt 50 MB og 500 sider.| Oplær på 5-10 PDF-, Office- eller mailfiler, herunder negative eksempler.<br>Office filer afkortes med 64.000 tegn. OCR-scannede filer er begrænset til 20 sider.|
 | Integrer med administrerede metadata | Nej | Ja, ved at udtrække enheder, der refererer til et konfigureret felt for administrerede metadata.|
-| Funktionsintegration med Overholdelse med Microsoft Purview-Information Protection | Angiv publicerede opbevaringsmærkater.<br>Angiv følsomhedsmærkater kommer. | Angiv publicerede opbevaringsmærkater.<br>Angiv publicerede følsomhedsmærkater. |
+| Integration af funktioner til overholdelse af angivne standarder med Microsoft Purview Information Protection | Angiv publicerede opbevaringsmærkater.<br>Angiv følsomhedsmærkater kommer. | Angiv publicerede opbevaringsmærkater.<br>Angiv publicerede følsomhedsmærkater. |
 | Understøttede områder| Formularbehandling er afhængig af Power Platform. Du kan få oplysninger om global tilgængelighed for Power Platform og AI Builder under [Tilgængelighed af Power Platform](https://dynamics.microsoft.com/geographic-availability/). | Tilgængelig i alle områder.|
-| Transaktionsomkostninger | Bruger AI Builder-kreditter.<br>Kreditter kan købes i batches på 1 mio.<br>Kreditter på 1 mio. er inkluderet, når der købes mere end 300 SharePoint Syntex licenser.<br>Kreditter på 1 mio. tillader behandling af 2.000 filsider.<br>| NIELSEN |
+| Transaktionsomkostninger | Bruger AI Builder-kreditter.<br>3,5K kreditter er inkluderet for hver SharePoint Syntex licens pr. måned.<br>Kreditter på 1 mio. tillader behandling af 2.000 filsider.<br>| Ikke relevant |
 | Kapacitet | Bruger Power Platform-standardmiljøet (brugerdefinerede miljøer med understøttet Dataverse-database). | Har ikke kapacitetsbegrænsninger.|
-| Understøttede sprog| Understøttelse af sprog for mere [end 73 sprog](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support). | Modeller fungerer på alle latinske alfabetsprog. Ud over engelsk: tysk, svensk, fransk, spansk, italiensk og portugisisk.|
+| Understøttede sprog| Understøttelse af sprog for mere end [73 sprog](/power-platform-release-plan/2021wave2/ai-builder/form-processing-new-language-support). | Modeller fungerer på alle latinske alfabetsprog. Ud over engelsk: tysk, svensk, fransk, spansk, italiensk og portugisisk.|
 
 
 ## <a name="see-also"></a>Se også

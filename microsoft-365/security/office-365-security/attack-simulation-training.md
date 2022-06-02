@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de simulerer phishingangreb og oplærer deres brugere i forebyggelse af phishing ved hjælp af oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 08d86488f9575aad995752ca331b3cbbb31d07fe
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 8f6ef692885277368c7ca1c194116a4455f52b31
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739643"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839749"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Simuler et phishing-angreb med oplæring i simulering af angreb i Defender for Office 365
 
@@ -123,7 +123,7 @@ Hvis du vælger en nyttedata på listen, vises oplysninger om nyttedataene i et 
 
 Hvis du vælger en nyttedata på listen ved at klikke på navnet, skal du klikke på ikonet ![Send en test nyttedata.](../../media/m365-cc-sc-create-icon.png) **Send en testknap** vises på hovedsiden, hvor du kan sende en kopi af nyttedatamailen til dig selv (den bruger, der aktuelt er logget på) til inspektion.
 
-Hvis du vil oprette din egen nyttedata, skal du klikke på ![Opret et nyttedataikon.](../../media/m365-cc-sc-create-icon.png) **Opret en nyttedata**. Du kan få flere oplysninger under [Opret brugerdefinerede nyttedata til oplæring af simulering af angreb](attack-simulation-training-payloads.md).
+Hvis du vil oprette din egen nyttedata, skal du klikke på ![Opret et nyttedataikon.](../../media/m365-cc-sc-create-icon.png) **Opret en nyttedata**. Du kan få flere oplysninger under [Opret brugerdefinerede nyttedata til oplæring af simulering af angreb](attack-simulation-training-payloads.md#create-payloads).
 
 Klik på **Næste**, når du er færdig.
 

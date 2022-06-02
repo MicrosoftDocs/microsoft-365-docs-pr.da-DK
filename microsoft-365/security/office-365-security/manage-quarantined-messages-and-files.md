@@ -19,16 +19,16 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan de får vist og administrerer karantænemeddelelser for alle brugere i Exchange Online Protection (EOP). Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere filer i karantæne i SharePoint Online, OneDrive for Business og Microsoft Teams.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: df123916f5f15a8651ba8ad8dcbae95598afbfa8
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 3bd239231cc49684f8b07fb73f33265c9463bad4
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418056"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839793"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>Administrer karantænemeddelelser og filer som administrator i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -195,7 +195,7 @@ Når du har valgt en karantænemeddelelse på listen, er følgende handlinger ti
 
   - Du kan ikke frigive en meddelelse til den samme modtager mere end én gang.
   - Det er kun modtagere, der ikke har modtaget meddelelsen, der vises på listen over potentielle modtagere.
-  - Det er kun medlemmer af rollegruppen **Sikkerhedsadministratorer** , der kan se og bruge **Send meddelelsen til Microsoft for at forbedre registreringen (falsk positiv)** og **Tillad meddelelser som disse** indstillinger. 
+  - Det er kun medlemmer af rollegruppen **Sikkerhedsadministratorer** , der kan se og bruge **Send meddelelsen til Microsoft for at forbedre registreringen (falsk positiv)** og **Tillad meddelelser som disse** indstillinger.
 
 - ![Ikonet Del mail.](../../media/m365-cc-sc-share-email-icon.png) **Del mail**: I det pop op-vindue, der vises, skal du tilføje en eller flere modtagere for at modtage en kopi af meddelelsen. Når du er færdig, skal du klikke på **Del**.
 

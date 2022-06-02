@@ -20,16 +20,16 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan de bruger oplæring i simulering af angreb til at køre simulerede phishing- og adgangskodeangreb i deres Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2-organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 255d0f40cd360f2b4b3e5084f84989bdbe643319
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 79c8db9a088484a56e559ab4c3e33d68ebf33380
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415612"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840139"
 ---
 # <a name="get-started-using-attack-simulation-training-in-defender-for-office-365"></a>Kom i gang med at bruge oplæring i simulering af angreb i Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for** [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
 
@@ -121,7 +121,7 @@ Hvis du vil have en trinvis vejledning i, hvordan du opretter og sender en ny si
 
 ### <a name="create-a-payload"></a>Opret en nyttedata
 
-Hvis du vil have en trinvis vejledning i, hvordan du opretter en nyttedata til brug i en simulering, skal du se [Opret en brugerdefineret nyttedata til oplæring i simulering af angreb](attack-simulation-training-payloads.md).
+Hvis du vil have en trinvis vejledning i, hvordan du opretter en nyttedata til brug i en simulering, skal du se [Opret en brugerdefineret nyttedata til oplæring i simulering af angreb](attack-simulation-training-payloads.md#create-payloads).
 
 ### <a name="gaining-insights"></a>Få indsigt
 

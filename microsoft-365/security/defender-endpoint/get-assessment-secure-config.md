@@ -1,7 +1,7 @@
 ---
-title: Eksportér sikker konfigurationsvurdering pr. enhed
-description: Returnerer en post for hver entydige kombination af DeviceId, ConfigurationId.
-keywords: api, apis, eksportvurdering, pr. enhedsvurdering, rapport over sikkerhedsrisiko, vurdering af sikkerhedsrisiko, rapport over sikkerhedsrisiko på enheder, sikker konfigurationsvurdering, sikker konfigurationsrapport, vurdering af softwarerisici, rapport over sikkerhedsrisiko, rapport over sikkerhedsrisiko på computer,
+title: Eksportér vurdering af sikker konfiguration pr. enhed
+description: Returnerer en post for hver entydige kombination af DeviceId og ConfigurationId.
+keywords: api, apis, eksportvurdering, vurdering pr. enhed, vurderingsrapport for sårbarheder, vurdering af enhedens sårbarhed, rapport over enhedssårbarhed, vurdering af sikker konfiguration, sikkerhedskonfigurationsrapport, vurdering af softwaresårbarheder, rapport over softwaresårbarheder, rapport over sårbarheder efter maskine,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,63 +15,64 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 2fc9870871641bb7239a6dcdcdf9f54334726384
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 6d706dc8552490b7705cc23fca4751f810211d47
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63599428"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839279"
 ---
-# <a name="export-secure-configuration-assessment-per-device"></a>Eksportér sikker konfigurationsvurdering pr. enhed
+# <a name="export-secure-configuration-assessment-per-device"></a>Eksportér vurdering af sikker konfiguration pr. enhed
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 Returnerer alle konfigurationer og deres status pr. enhed.
 
-Der er forskellige API-opkald for at få forskellige typer data. Da mængden af data kan være stor, er der to måder, det kan hentes på:
+Der er forskellige API-kald til at hente forskellige typer data. Da mængden af data kan være stor, er der to måder, den kan hentes på:
 
-- [Eksportér **JSON-svar til sikker konfigurationsvurdering**](#1-export-secure-configuration-assessment-json-response): API'en trækker alle data i organisationen som Json-svar. Denne metode er bedst til _små organisationer med mindre end 100 K-enheder_. Svaret er pagineret, så du kan bruge \@feltet odata.nextLink fra svaret til at hente de næste resultater.
+- [**JSON-svar til** vurdering af sikker konfiguration](#1-export-secure-configuration-assessment-json-response): API'en henter alle data i din organisation som Json-svar. Denne metode er bedst til _små organisationer med mindre end 100.000 enheder_. Svaret er sideinddelt, så du kan bruge feltet \@odata.nextLink fra svaret til at hente de næste resultater.
 
-- [Eksportér sikker **konfigurationsvurdering via filer**](#2-export-secure-configuration-assessment-via-files): Denne API-løsning gør det muligt at trække større mængder data hurtigere og mere pålideligt. Derfor anbefales det til store organisationer med mere end 100 K-enheder. Denne API henter alle data i organisationen som downloadfiler. Svaret indeholder URL-adresser til at hente alle data fra Azure Storage. Denne API gør det muligt at hente alle dine data fra Azure Storage som følger:
+- [Eksportér vurdering af sikker konfiguration **via filer**](#2-export-secure-configuration-assessment-via-files): Denne API-løsning gør det muligt at trække større mængder data hurtigere og mere pålideligt. Derfor anbefales det til store organisationer med mere end 100-K enheder. Denne API henter alle data i din organisation som downloadfiler. Svaret indeholder URL-adresser til download af alle data fra Azure Storage. Denne API giver dig mulighed for at downloade alle dine data fra Azure Storage på følgende måde:
 
-  - Ring til API'en for at få en liste over downloadede URL-adresser med alle organisationens data.
+  - Kald API'en for at få en liste over URL-adresser til download med alle dine organisationsdata.
 
-  - Download alle filerne ved hjælp af URL-adresserne til overførslen, og bearbejde dataene, som du ønsker.
+  - Download alle filerne ved hjælp af URL-adresserne til download, og behandl dataene, som du vil.
 
-Data, der indsamles (ved hjælp af _enten JSON-svar_ eller _via_ filer), er det aktuelle øjebliksbillede af den aktuelle tilstand og indeholder ikke historiske data. For at indsamle historiske data skal kunderne gemme dataene i deres egne datalagringer.
+Data, der indsamles (ved hjælp af enten _JSON-svar_ eller _via filer_), er det aktuelle snapshot af den aktuelle tilstand og indeholder ikke historiske data. For at kunne indsamle historiske data skal kunderne gemme dataene i deres egne datalagre.
 
 > [!NOTE]
-> Medmindre andet er angivet, er alle de angivne **_eksportmetoder fuld eksport_** **_og efter_** enhed (også kaldet **_pr. enhed_**).
+> Medmindre andet er angivet, er alle angivne eksportvurderingsmetoder **_fuld eksport_** og **_efter enhed_** (også kaldet **_pr. enhed_**).
 
 ## <a name="1-export-secure-configuration-assessment-json-response"></a>1. Eksportér vurdering af sikker konfiguration (JSON-svar)
 
-### <a name="11-api-method-description"></a>Beskrivelse af 1.1 API-metode
+### <a name="11-api-method-description"></a>Beskrivelse af API-metoden 1.1
 
-Dette API-svar indeholder Secure Configuration Assessment på dine eksponerede enheder og returnerer en post for hver unik kombination af DeviceId, ConfigurationId.
+Dette API-svar indeholder Secure Configuration Assessment på dine eksponerede enheder og returnerer en post for hver entydige kombination af DeviceId, ConfigurationId.
 
-#### <a name="111-limitations"></a>Begrænsninger 1.1.1
+#### <a name="111-limitations"></a>1.1.1 Begrænsninger
 
 - Den maksimale sidestørrelse er 200.000.
 
-- Satsbegrænsninger for denne API er 30 opkald i minuttet og 1000 opkald pr. time.
+- Hastighedsbegrænsninger for denne API er 30 kald pr. minut og 1.000 opkald pr. time.
 
 ### <a name="12-permissions"></a>1.2 Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er for at få flere](apis-intro.md) oplysninger.
+En af følgende tilladelser er påkrævet for at kalde denne API. Hvis du vil vide mere, herunder hvordan du vælger tilladelser, skal du se [Brug Microsoft Defender for Endpoint API'er](apis-intro.md) for at få flere oplysninger.
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 ---|---|---
-Program|Vulnerability.Read.All|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
-Delegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
+Program|Vulnerability.Read.All|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
+Uddelegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
 
-### <a name="13-url"></a>1.3 URL
+### <a name="13-url"></a>1.3 URL-adresse
 
 ```http
 GET /api/machines/SecureConfigurationsAssessmentByMachine
@@ -80,14 +81,14 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 ### <a name="14-parameters"></a>1.4 Parametre
 
 - pageSize \(default = 50.000\): Antal resultater i svar.
-- \$top: Det antal resultater, der returneres \(, returnerer ikke \@odata.nextLink og trækker derfor ikke alle dataene\).
+- \$top: Antallet af resultater, der skal returneres \(, returnerer \@ikke odata.nextLink og trækker derfor ikke alle dataene\).
 
 ### <a name="15-properties"></a>1.5 Egenskaber
 
 > [!NOTE]
 >
-> - De egenskaber, der er defineret i følgende tabel, vises alfabetisk efter egenskabs-id. Når du kører denne API, returneres outputtet ikke nødvendigvis i samme rækkefølge, som er angivet i denne tabel.
-> - Nogle ekstra kolonner kan returneres i svaret. Disse kolonner er midlertidige og kan fjernes. Brug kun de dokumenterede kolonner.
+> - De egenskaber, der er defineret i følgende tabel, vises alfabetisk efter egenskabs-id. Når du kører denne API, returneres det resulterende output ikke nødvendigvis i den samme rækkefølge, som er angivet i denne tabel.
+> - Nogle yderligere kolonner kan blive returneret i svaret. Disse kolonner er midlertidige og kan blive fjernet. Brug kun de dokumenterede kolonner.
 
 <br>
 
@@ -95,20 +96,20 @@ GET /api/machines/SecureConfigurationsAssessmentByMachine
 
 Egenskab (id)|Datatype|Beskrivelse|Eksempel på en returneret værdi
 ---|---|---|---
-ConfigurationCategory|streng|Kategori eller gruppering, som konfigurationen tilhører: Program, OPERATIVSYSTEM, Netværk, Konti, Sikkerhedskontrolelementer|Sikkerhedskontrolelementer
-ConfigurationId|streng|Entydigt id for en bestemt konfiguration|scid-10000
-ConfigurationImpact|streng|Klassificeret effekt af konfigurationen på det overordnede konfigurationsresultat (1-10)|9
-ConfigurationName|streng|Visningsnavn for konfigurationen|Onboard-enheder til Microsoft Defender til Slutpunkt
-ConfigurationSubcategory|streng|Underkategori eller undergruppering, som konfigurationen tilhører. I mange tilfælde beskrives specifikke funktioner.|Onboard-enheder
-DeviceId|streng|Entydigt id for enheden i tjenesten.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
-DeviceName|streng|Enhedens fulde domænenavn.|johnlaptop.europe.contoso.com
-IsApplicable|bool|Angiver, om konfigurationen eller politikken er gældende|sand
-IsCompliant|bool|Angiver, om konfigurationen eller politikken er konfigureret korrekt|falsk
-IsExpectedUserImpact|bool|Angiver, om der vil være brugerpåvirkning, hvis konfigurationen anvendes|sand
-OSPlatform|streng|Platform for operativsystemet, der kører på enheden. Dette angiver bestemte operativsystemer, herunder variationer inden for den samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11
-RbacGroupName|streng|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, bliver værdien "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere
-AnbefalingReference|streng|En reference til det anbefalings-id, der er relateret til denne software.|sca-_-scid-20000
-Tidsstempel|streng|Sidste gang konfigurationen blev set på enheden|2020-11-03 10:13:34.8476880
+ConfigurationCategory|Streng|Kategori eller gruppering, som konfigurationen tilhører: Application, OS, Network, Accounts, Security controls|Sikkerhedskontroller
+Konfigurations-id|Streng|Entydigt id for en bestemt konfiguration|scid-10000
+Konfigurationseffekt|Streng|Vurdering af konfigurationens indvirkning på den overordnede konfigurationsscore (1-10)|9
+Konfigurationsnavn|Streng|Vist navn på konfigurationen|Om bord på enheder til Microsoft Defender for Endpoint
+ConfigurationSubcategory|Streng|Den underkategori eller undergruppe, som konfigurationen tilhører. I mange tilfælde beskrives specifikke egenskaber eller funktioner.|Indbyggede enheder
+Deviceid|Streng|Entydigt id for enheden i tjenesten.|9eaf3a8b5962e0e6b1af9ec756664a9b823df2d1
+DeviceName|Streng|Fuldt domænenavn (FQDN) for enheden.|johnlaptop.europe.contoso.com
+Kan anvendes|Bool|Angiver, om konfigurationen eller politikken er relevant|Sandt
+Overholder|Bool|Angiver, om konfigurationen eller politikken er konfigureret korrekt|Falsk
+IsExpectedUserImpact|Bool|Angiver, om der vil være brugerpåvirkning, hvis konfigurationen anvendes|Sandt
+OSPlatform|Streng|Platform for det operativsystem, der kører på enheden. Dette angiver specifikke operativsystemer, herunder variationer inden for den samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11
+RbacGroupName|Streng|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, vil værdien være "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere
+Reference til anbefaling|Streng|En reference til det anbefalings-id, der er relateret til denne software.|sca-_-scid-20000
+Tidsstempel|Streng|Sidste gang konfigurationen blev set på enheden|2020-11-03 10:13:34.8476880
 |
 
 ### <a name="16-examples"></a>1.6 Eksempler
@@ -119,7 +120,7 @@ Tidsstempel|streng|Sidste gang konfigurationen blev set på enheden|2020-11-03 1
 GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentByMachine?pageSize=5
 ```
 
-#### <a name="162-response-example"></a>1.6.2 Eksempel på svar
+#### <a name="162-response-example"></a>1.6.2 Svareksempel
 
 ```json
 {
@@ -217,24 +218,24 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
 
 ## <a name="2-export-secure-configuration-assessment-via-files"></a>2. Eksportér vurdering af sikker konfiguration (via filer)
 
-### <a name="21-api-method-description"></a>Beskrivelse af 2.1 API-metoden
+### <a name="21-api-method-description"></a>2.1 Beskrivelse af API-metode
 
-Dette API-svar indeholder Secure Configuration Assessment på dine eksponerede enheder og returnerer en post for hver unik kombination af DeviceId, ConfigurationId.
+Dette API-svar indeholder Secure Configuration Assessment på dine eksponerede enheder og returnerer en post for hver entydige kombination af DeviceId, ConfigurationId.
 
-#### <a name="212-limitations"></a>Begrænsninger 2.1.2
+#### <a name="212-limitations"></a>2.1.2 Begrænsninger
 
-Begrænsningerne for denne API er 5 opkald i minuttet og 20 opkald pr. time.
+Hastighedsbegrænsninger for denne API er 5 kald pr. minut og 20 opkald pr. time.
 
 ### <a name="22-permissions"></a>2.2 Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er for at få flere oplysninger.](apis-intro.md)
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er for at få flere oplysninger.](apis-intro.md)
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 ---|---|---
-Program|Vulnerability.Read.All|\'Læs "Håndtering af trusler og sikkerhedsrisici" oplysninger om sikkerhedsrisiko\'
-Delegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs "Håndtering af trusler og sikkerhedsrisici" oplysninger om sikkerhedsrisiko\'
+Program|Vulnerability.Read.All|\'Læs oplysninger om "Håndtering af trusler og sikkerhedsrisici"-sårbarheder\'
+Uddelegeret (arbejds- eller skolekonto)|Vulnerability.Read|\'Læs oplysninger om "Håndtering af trusler og sikkerhedsrisici"-sårbarheder\'
 
-### <a name="23-url"></a>2.3 URL
+### <a name="23-url"></a>2.3 URL-adresse
 
 ```http
 GET /api/machines/SecureConfigurationsAssessmentExport
@@ -242,15 +243,15 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 
 ### <a name="parameters"></a>Parametre
 
-- sasValidHours: Det antal timer, de hentede URL-adresser er gyldige i (maksimalt 24 timer).
+- sasValidHours: Det antal timer, som URL-adresserne til download er gyldige i (højst 24 timer).
 
 ### <a name="25-properties"></a>2.5 Egenskaber
 
 > [!NOTE]
 >
-> - Filerne er gzip komprimerede filer & multiline Json-format.
-> - URL-adresserne til download er kun gyldige i tre timer. Ellers kan du bruge parameteren.
-> - Du kan sikre dig, at du downloader fra det samme Azure-område, som dine data er placeret i, for at få den maksimale downloadhastighed.
+> - Filerne er gzip-komprimerede & i Json-format med flere streger.
+> - URL-adresserne til download er kun gyldige i 3 timer. Ellers kan du bruge parameteren .
+> - Hvis du vil have den maksimale downloadhastighed for dine data, kan du sikre dig, at du downloader fra det samme Azure-område, hvor dine data er placeret.
 
 <br>
 
@@ -258,8 +259,8 @@ GET /api/machines/SecureConfigurationsAssessmentExport
 
 Egenskab (id)|Datatype|Beskrivelse|Eksempel på en returneret værdi
 ---|---|---|---
-Eksportér filer|matrixstreng\[\]|En liste over URL-adresser til download af filer, der indeholder det aktuelle øjebliksbillede af organisationen|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
-GeneratedTime|streng|Det tidspunkt, hvor eksporten blev oprettet.|2021-05-20T08:00:00Z
+Eksportér filer|matrixstreng\[\]|En liste over URL-adresser til hentning af filer, der indeholder det aktuelle snapshot af organisationen|["Https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...1", "https://tvmexportstrstgeus.blob.core.windows.net/tvm-export...2"]
+GeneratedTime|Streng|Det tidspunkt, hvor eksporten blev genereret.|2021-05-20T08:00:00Z
 |
 
 ### <a name="26-examples"></a>2.6 Eksempler
@@ -270,7 +271,7 @@ GeneratedTime|streng|Det tidspunkt, hvor eksporten blev oprettet.|2021-05-20T08:
 GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAssessmentExport
 ```
 
-#### <a name="262-response-example"></a>2.6.2 Eksempel på svar
+#### <a name="262-response-example"></a>2.6.2 Svareksempel
 
 ```json
 {
@@ -286,11 +287,11 @@ GET https://api.securitycenter.microsoft.com/api/machines/SecureConfigurationsAs
 
 ## <a name="see-also"></a>Se også
 
-- [Eksportere vurderingsmetoder og egenskaber pr. enhed](get-assessment-methods-properties.md)
+- [Eksportér vurderingsmetoder og -egenskaber pr. enhed](get-assessment-methods-properties.md)
 - [Eksportér vurdering af softwarelager pr. enhed](get-assessment-software-inventory.md)
-- [Eksportér vurdering af softwarerisici pr. enhed](get-assessment-software-vulnerabilities.md)
+- [Eksportér vurdering af softwaresårbarheder pr. enhed](get-assessment-software-vulnerabilities.md)
 
 Andre relaterede
 
-- [Risikobaserede & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
-- [Sårbarheder i din organisation](tvm-weaknesses.md)
+- [Risikobaseret trussel & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
+- [Sikkerhedsrisici i din organisation](tvm-weaknesses.md)

@@ -1,7 +1,7 @@
 ---
-title: Vis alle afhjælpningsaktiviteter
+title: Angiv alle afhjælpningsaktiviteter
 description: Returnerer oplysninger om alle afhjælpningsaktiviteter.
-keywords: API'er, afhjælpning, afhjælpnings-API, hent, afhjælpningsopgaver, al afhjælpning,
+keywords: apis, afhjælpning, afhjælpnings-API, hent, afhjælpningsopgaver, al afhjælpning,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,23 +15,24 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 3e387c8fb6ca9f1aca756ef2ab0b4c0684033370
-ms.sourcegitcommit: dd6514ae173f1c821d4ec25298145df6cb232e2e
+ms.openlocfilehash: 74f0d1986cb9b2551c9eabc217b23789ae8e6f6b
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "63592184"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65838975"
 ---
-# <a name="list-all-remediation-activities"></a>Vis alle afhjælpningsaktiviteter
+# <a name="list-all-remediation-activities"></a>Angiv alle afhjælpningsaktiviteter
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!Include[Prerelease information](../../includes/prerelease.md)]
 
@@ -45,55 +46,55 @@ Returnerer oplysninger om alle afhjælpningsaktiviteter.
 
 [Få mere at vide om afhjælpningsaktiviteter](tvm-remediation.md).
 
-**URL-adresse:** GET: /api/remediationTasks
-<br>[Understøtter OData V4-forespørgsler](https://www.odata.org/documentation/).
+**URL:** GET: /api/remediationTasks
+<br>Understøtter [OData V4-forespørgsler](https://www.odata.org/documentation/).
 <br>OData-understøttede operatorer:
 <br>```$filter``` på:  ```createdon``` og ```status``` egenskaber.
-<br>```$top``` med en maks. værdi på 10.000.
+<br>```$top``` med en maksimumværdi på 10.000.
 <br>```$skip```.
-<br>Se eksempler på [OData-forespørgsler med Microsoft Defender til slutpunkt](exposed-apis-odata-samples.md).
+<br>Se eksempler på [OData-forespørgsler med Microsoft Defender for Endpoint](exposed-apis-odata-samples.md).
 
 ## <a name="permissions"></a>Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er for at få flere oplysninger.](apis-intro.md)
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er for at få flere oplysninger.](apis-intro.md)
 
-Tilladelsestype|Tilladelse|Visningsnavn for tilladelse
+Tilladelsestype|Tilladelse|Vist navn for tilladelse
 :---|:---|:---
-Program|RemediationTasks.Read.All|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
-Delegeret (arbejds- eller skolekonto)|RemediationTask.Read|\'Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko\'
+Program|RemediationTasks.Read.All|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
+Uddelegeret (arbejds- eller skolekonto)|RemediationTask.Read|\'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring\'
 
 ## <a name="properties"></a>Egenskaber
 
 Egenskab (id)|Datatype|Beskrivelse|Eksempel på en returneret værdi
 :---|:---|:---|:---
-Kategori|String|Kategori af afhjælpningsaktiviteten (Software/sikkerhedskonfiguration)|Software
-completerEmail|String|Hvis afhjælpningsaktiviteten blev fuldført manuelt af en person, indeholder denne kolonne deres mail|Null
-completerId|String|Hvis afhjælpningsaktiviteten blev fuldført manuelt af en person, indeholder denne kolonne deres objekt-id|Null
-completionMethod|String|En afhjælpningsaktivitet kan udføres "automatisk" (hvis alle enhederne er rettet) eller "manuelt" af en person, der vælger "markér som fuldført".|Automatisk
-createdOn|DateTime|Tidspunktet for denne afhjælpningsaktivitet blev oprettet|2021-01-12T18:54:11.5499478Z
-Beskrivelse|String|Beskrivelse af denne afhjælpningsaktivitet|Opdater Microsoft Silverlight til en nyere version for at afhjælpe kendte sårbarheder, der påvirker dine enheder.
-dueOn|DateTime|Forfaldsdato, som opretteren har angivet for denne afhjælpningsaktivitet|2021-01-13T00:00:00Z
+Kategori|String|Kategori for afhjælpningsaktiviteten (software-/sikkerhedskonfiguration)|Software
+completerEmail|String|Hvis afhjælpningsaktiviteten blev udført manuelt af en person, indeholder denne kolonne deres mail|Null
+completerId|String|Hvis afhjælpningsaktiviteten blev udført manuelt af en person, indeholder denne kolonne sit objekt-id|Null
+completionMethod|String|En afhjælpningsaktivitet kan fuldføres "automatisk" (hvis alle enhederne er repareret) eller "manuelt" af en person, der vælger "Markér som fuldført"|Automatisk
+oprettet til|Datetime|Det tidspunkt, hvor denne afhjælpningsaktivitet blev oprettet|2021-01-12T18:54:11.5499478Z
+Beskrivelse|String|Beskrivelse af denne afhjælpningsaktivitet|Opdater Microsoft Silverlight til en nyere version for at afhjælpe kendte sikkerhedsrisici, der påvirker dine enheder.
+forfalder til|Datetime|Forfaldsdato, som forfatteren har angivet for denne afhjælpningsaktivitet|2021-01-13T00:00:00Z
 fixedDevices|.|Antallet af enheder, der er blevet rettet|2
-Id|String|Id for denne afhjælpningsaktivitet|097d9735-5479-4899-b1b7-77398899df92
+ID|String|Id for denne afhjælpningsaktivitet|097d9735-5479-4899-b1b7-77398899df92
 nameId|String|Relateret produktnavn|Microsoft Silverlight
-Prioritet|String|Prioritet, som forfatteren har angivet for denne afhjælpningsaktivitet (Høj\Mellem\Lav)|Høj
-productId|String|Relateret produkt-id|microsoft-_-silverlight
-productivityImpactRemediationType|String|Der kan kun anmodes om nogle få konfigurationsændringer for enheder, der ikke påvirker brugere. Denne værdi angiver valget mellem "alle eksponerede enheder" eller "kun enheder uden brugerpåvirkning".|AllExposedAssets
+Prioritet|String|Prioritet, som opretteren har angivet for denne afhjælpningsaktivitet (Høj\Mellem\Lav)|Høj
+Instruktion|String|Relateret produkt-id|microsoft-_-silverlight
+produktivitetImpactRemediationType|String|Der kan kun anmodes om nogle få konfigurationsændringer for enheder, der ikke påvirker brugerne. Denne værdi angiver valget mellem "alle eksponerede enheder" eller "kun enheder uden brugerpåvirkning".|AlleEksponeredeassets
 rbacGroupNames|String|Relaterede enhedsgruppenavne|[ "Windows Servers", "Windows 11", "Windows 10" ]
-recommendedProgram|String|Anbefalet program at opgradere til|Null
-anbefaletVenlighed|String|Anbefalet leverandør at opgradere til|Null
-recommendedVersion|String|Anbefalet version at opdatere/opgradere til|Null
-relatedComponent|String|Relateret komponent i denne afhjælpningsaktivitet (svarende til den relaterede komponent for en sikkerhedsanbefaling)|Microsoft Silverlight
-requesterEmail|String|Opretter-mailadresse|globaladmin@UserName.contoso.com
-requesterId|String|Creator-objekt-id|r647211f-2e16-43f2-a480-16ar3a2a796r
-anmoderNoter|String|De noter (gratis tekst), som forfatteren har tilføjet til denne afhjælpningsaktivitet|Null
+anbefalet program|String|Anbefalet program til opgradering til|Null
+recommendedVendor|String|Anbefalet leverandør, der skal opgraderes til|Null
+recommendedVersion|String|Anbefalet version til opdatering/opgradering til|Null
+relatedComponent|String|Relateret komponent til denne afhjælpningsaktivitet (svarer til den relaterede komponent til en sikkerhedsanbefaling)|Microsoft Silverlight
+requesterEmail|String|Opretterens mailadresse|globaladmin@UserName.contoso.com
+requesterId|String|Opretterobjekt-id|r647211f-2e16-43f2-a480-16ar3a2a796r
+requesterNotes|String|De noter (fri tekst), som forfatteren har tilføjet til denne afhjælpningsaktivitet|Null
 Scid|String|SCID for den relaterede sikkerhedsanbefaling|Null
-Status|String|Aktivitetsstatus for afhjælpning (aktiv/fuldført)|Aktiv
-statusLastModifiedOn|DateTime|Dato for opdatering af statusfeltet|2021-01-12T18:54:11.5499487Z
-targetDevices|Lang|Antal blotlagte enheder, som denne afhjælpning gælder for|43
+Status|String|Status for afhjælpningsaktivitet (aktiv/fuldført)|Aktive
+statusLastModifiedOn|Datetime|Dato for opdatering af statusfeltet|2021-01-12T18:54:11.5499487Z
+targetDevices|Lang|Antal eksponerede enheder, som denne afhjælpning gælder for|43
 Titel|String|Titlen på denne afhjælpningsaktivitet|Opdater Microsoft Silverlight
 Type|String|Afhjælpningstype|Opdater
-vendorId|String|Relateret leverandørnavn|Microsoft
+vendorId|String|Navn på relateret leverandør|Microsoft
 
 ## <a name="example"></a>Eksempel
 
@@ -103,7 +104,7 @@ vendorId|String|Relateret leverandørnavn|Microsoft
 GET https://api-luna.securitycenter.windows.com/api/remediationtasks/
 ```
 
-### <a name="response-example"></a>Eksempel på svar
+### <a name="response-example"></a>Svareksempel
 
 ```json
 {
@@ -148,8 +149,8 @@ GET https://api-luna.securitycenter.windows.com/api/remediationtasks/
 
 ## <a name="see-also"></a>Se også
 
-- [Afhjælpningsmetoder og egenskaber](get-remediation-methods-properties.md)
+- [Metoder og egenskaber til afhjælpning](get-remediation-methods-properties.md)
 - [Få én afhjælpningsaktivitet efter id](get-remediation-one-activity.md)
-- [Vis blotsatte enheder for én afhjælpningsaktivitet](get-remediation-exposed-devices-activities.md)
-- [Risikobaserede & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
-- [Sårbarheder i din organisation](tvm-weaknesses.md)
+- [Angiv eksponerede enheder for én afhjælpningsaktivitet](get-remediation-exposed-devices-activities.md)
+- [Risikobaseret trussel & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
+- [Sikkerhedsrisici i din organisation](tvm-weaknesses.md)

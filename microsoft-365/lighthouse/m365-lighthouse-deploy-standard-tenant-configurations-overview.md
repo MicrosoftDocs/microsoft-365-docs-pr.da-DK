@@ -16,12 +16,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du bruger grundlinjer til at udrulle standard lejerkonfigurationer.
-ms.openlocfilehash: 11b8c5ad9adafa4cd6afb6bb4cd19861118e447c
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 7cdae46105ad225a284bf0ffa8860ad36ffb8691
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647683"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839837"
 ---
 # <a name="overview-of-using-microsoft-365-lighthouse-baselines-to-deploy-standard-tenant-configurations"></a>Oversigt over brug af Microsoft 365 baselines for fyrtårne til installation af standardlejerkonfigurationer 
 
@@ -31,7 +31,7 @@ Du kan få vist standardgrundlinjen og dens installationstrin inde fra Lighthous
 
 ## <a name="lighthouse-baseline"></a>Grundlinje for fyrtårn
 
-Konfigurationer af fyrtårnsgrundlinje er designet til at sikre, at alle administrerede lejere er sikre og kompatible. Vælg **Oprindelige planer** i navigationsruden til venstre for at få vist den standardgrundlinje, der gælder for alle lejere.  Hvis du vil have vist de installationstrin, der er inkluderet i standardgrundlinjen, skal du vælge **Vis oprindelig plan** for at åbne siden med standardgrundlinjen. Vælg et af installationstrinnene for at få vist installationsdetaljer og brugerpåvirkning.
+Konfigurationer af fyrtårnsgrundlinje er designet til at sikre, at alle administrerede lejere er sikre og kompatible. Vælg **Oprindelige planer** i navigationsruden til venstre for at få vist den standardgrundlinje, der gælder for alle lejere.  Hvis du vil have vist de installationstrin, der er inkluderet i standardgrundlinjen, skal du vælge **Vis oprindelig plan** for at åbne siden **Standardgrundlinje** . Vælg et af installationstrinnene for at få vist installationsdetaljer og brugerpåvirkning.
 
 :::image type="content" source="../media/m365-lighthouse-deploy-baselines/default-baseline-page.png" alt-text="Skærmbillede af siden Standardgrundlinje.":::
 

@@ -18,16 +18,16 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b73144b678140cd30917b4fd687663ff0a455a3
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: f09054a4ee57ce7105a7b2daffc65be5b91dc8f6
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144789"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839662"
 ---
 # <a name="user-reported-message-settings"></a>Indstillinger for brugerrapporterede meddelelser
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -40,7 +40,7 @@ I Microsoft 365 organisationer med Exchange Online postkasser kan du angive, at 
 - [Tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md)
 - [Rapporteringsværktøjer fra tredjepart](#third-party-reporting-tools)
 
-Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i stedet for direkte til Microsoft giver dine administratorer mulighed for selektivt og manuelt at rapportere meddelelser til Microsoft ved hjælp af [indsendelse af administratorer](admin-submission.md). Disse indstillinger var tidligere kendt som politikken Brugerindsendelser.
+Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i stedet for direkte til Microsoft giver dine administratorer mulighed for selektivt og manuelt at rapportere meddelelser til Microsoft ved hjælp [af Administration indsendelse](admin-submission.md). Disse indstillinger var tidligere kendt som politikken Brugerindsendelser.
 
   > [!NOTE]
   > Hvis rapportering er blevet [deaktiveret i Outlook på internettet](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md#disable-or-enable-junk-email-reporting-in-outlook-on-the-web), tilsidesætter aktivering af brugerrapporterede meddelelser denne indstilling og giver brugerne mulighed for at rapportere meddelelser i Outlook på internettet igen.
@@ -49,17 +49,15 @@ Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i st
 
 Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så brugerrapporterede meddelelser går til din brugerdefinerede postkasse:
 
-- Spring spamfiltrering over på den brugerdefinerede postkasse ved at oprette en regel for exchange-mailflow for at angive tillidsniveauet for spam. Se [Brug EAC til at oprette en regel for mailflow, der angiver SCL'en for en meddelelse](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl#use-the-eac-to-create-a-mail-flow-rule-that-sets-the-scl-of-a-message) for at angive SCL'en til **Omgå spamfiltrering**.
+- [Identificer den brugerdefinerede postkasse som en SecOps-postkasse i politikken for avanceret levering](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
 
-- [Opret en politik til antimalware](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) , der indeholder den brugerdefinerede postkasse, hvor automatisk fjernelse på nul timer (ZAP) for malware er slået fra (afsnittet **Beskyttelsesindstillinger** Aktivér \> **automatisk tøm på nul timer for malware** er ikke valgt).
-
-- [Opret en politik til bekæmpelse af spam](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies), der indeholder den brugerdefinerede postkasse, hvor ZAP til spam og ZAP til phishing er slået fra (sektionen \>**Automatisk sletning på nul timer** **aktiveret automatisk sletning på nul timer** er ikke valgt).
+- [Opret en politik for antimalware](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) for den brugerdefinerede postkasse, hvor zap(automatisk fjernelse på nul timer) for malware er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér automatisk fjernelse på nul timer for malware** er ikke valgt).
 
 Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de brugere, der rapporterer meddelelser:
 
-- [Opret en politik for Pengeskab links](set-up-safe-links-policies.md), der indeholder den brugerdefinerede postkasse, hvor scanning af Pengeskab links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelser** fra \> **).**
+- [Opret en politik for Pengeskab links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanning af Pengeskab links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelserne** fra \> **).**
 
-- [Opret en politik for vedhæftede filer Pengeskab](set-up-safe-attachments-policies.md), der indeholder den brugerdefinerede postkasse, hvor scanning af vedhæftede filer Pengeskab er slået fra (**Pengeskab afsnittet Ukendt malwaresvar for** \> vedhæftede filer **er slået fra**).
+- [Opret en politik for vedhæftede filer Pengeskab](set-up-safe-attachments-policies.md) for den brugerdefinerede postkasse, hvor scanning af vedhæftede filer Pengeskab er slået fra (**Pengeskab afsnittet Ukendt malwaresvar i vedhæftede** \> filer **er slået fra**).
 
 Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger, kan du bruge procedurerne i denne artikel til at konfigurere postkassen til brugerindsendelser.
 

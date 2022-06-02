@@ -1,7 +1,7 @@
 ---
-title: Få opdagede sårbarheder
-description: Henter en samling af opdagede sårbarheder, der er relateret til et bestemt enheds-id.
-keywords: apis, graph api, understøttede API'er, hent, liste, fil, oplysninger, opdaget sårbarheder, trussel & håndtering af sikkerhedsrisici API, Microsoft Defender til Endpoint tvm api
+title: Få fundne sikkerhedsrisici
+description: Henter en samling af registrerede sikkerhedsrisici, der er relateret til et givent enheds-id.
+keywords: apis, graf api, understøttede API'er, hent, liste, fil, oplysninger, registrerede sårbarheder, trussel & håndtering af sikkerhedsrisici API, Microsoft Defender for Endpoint tvm-api
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,41 +15,43 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 282c9b33efbb261e4d8cb0180cda0f3bc7e03584
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 6b3271637b1b275fe26d07975d0592bf1e7ae672
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63603106"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840469"
 ---
-# <a name="get-discovered-vulnerabilities"></a>Få opdagede sårbarheder
+# <a name="get-discovered-vulnerabilities"></a>Få fundne sikkerhedsrisici
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
+
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
 [!include[Improve request performance](../../includes/improve-request-performance.md)]
 
 ## <a name="api-description"></a>API-beskrivelse
-Henter en samling af opdagede sårbarheder, der er relateret til et bestemt enheds-id.
+Henter en samling af registrerede sikkerhedsrisici, der er relateret til et givent enheds-id.
 
 ## <a name="limitations"></a>Begrænsninger
-1. Satsbegrænsninger for denne API er 50 opkald i minuttet og 1500 opkald pr. time.
+1. Hastighedsbegrænsninger for denne API er 50 opkald pr. minut og 1500 opkald pr. time.
 
 ## <a name="permissions"></a>Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender til endpoint-API'er](apis-intro.md)
+En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Brug Microsoft Defender for Endpoint API'er](apis-intro.md)
 
-Tilladelsestype | Tilladelse | Visningsnavn for tilladelse
+Tilladelsestype | Tilladelse | Vist navn for tilladelse
 :---|:---|:---
-Program |Vulnerability.Read.All | "Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko"
-Delegeret (arbejds- eller skolekonto) | Vulnerability.Read | "Læs oplysninger om sikkerhedsrisiko og sikkerhedsrisiko"
+Program |Vulnerability.Read.All | 'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring'
+Uddelegeret (arbejds- eller skolekonto) | Vulnerability.Read | 'Læs oplysninger om sårbarheder i forbindelse med trussels- og sårbarhedsstyring'
 
 ## <a name="http-request"></a>HTTP-anmodning
 
@@ -57,23 +59,23 @@ Delegeret (arbejds- eller skolekonto) | Vulnerability.Read | "Læs oplysninger o
 GET /api/machines/{machineId}/vulnerabilities
 ```
 
-## <a name="request-headers"></a>Anmod om brevhoveder
+## <a name="request-headers"></a>Anmodningsheadere
 
 Navn|Type|Beskrivelse
 :---|:---|:---
-Godkendelse | String | Bearer {token}. **Påkrævet**.
+Tilladelse | String | Ihændehaver {token}. **Påkrævet**.
 
-## <a name="request-body"></a>Anmodningstekst
+## <a name="request-body"></a>Brødtekst i anmodning
 
 Tom
 
 ## <a name="response"></a>Svar
 
-Hvis det lykkes, returnerer denne metode 200 OK med de opdagede oplysninger om sikkerhedsrisikoen i brødteksten.
+Hvis det lykkes, returnerer denne metode 200 OK med de fundne oplysninger om sårbarheder i brødteksten.
 
 ## <a name="example"></a>Eksempel
 
-### <a name="request"></a>Anmod
+### <a name="request"></a>Anmodning
 
 Her er et eksempel på anmodningen.
 
@@ -110,5 +112,5 @@ Her er et eksempel på svaret.
 
 ## <a name="see-also"></a>Se også
 
-- [Risikobaseret administration af & af sikkerhedsrisici](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
-- [Sårbarheder i din organisation](/microsoft-365/security/defender-endpoint/tvm-weaknesses)
+- [Risikobaseret administration af trussel & sårbarhed](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)
+- [Sikkerhedsrisici i din organisation](/microsoft-365/security/defender-endpoint/tvm-weaknesses)

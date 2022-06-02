@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: fc641845907e157e555e70104b2fcb472ad496af
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 9998f71d275d28f10fc950b978cc13ce7fd3c335
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599271"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65840425"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -268,7 +268,7 @@ Sørg for, at du er opmærksom på forudsætningerne, før du konfigurerer polit
   - Det er ligegyldigt, om mærkatindstillingen for automatisk mærkning i Office apps er slået til eller fra, fordi denne etiketindstilling supplerer politikker for automatisk mærkning, som forklaret i indledningen.
   - Hvis de navne, du vil bruge til automatisk mærkning, er konfigureret til at bruge visuelle markeringer (sidehoveder, sidefødder, vandmærker), skal du være opmærksom på, at disse ikke anvendes på dokumenter.
   - Hvis mærkaterne anvender [kryptering](encryption-sensitivity-labels.md):
-    - Når politikken for automatisk mærkning indeholder placeringer for SharePoint eller OneDrive, skal mærkaten konfigureres for indstillingen **Tildel tilladelser nu**.
+    - Når politikken for automatisk mærkning indeholder placeringer for SharePoint eller OneDrive, skal mærkaten konfigureres for indstillingen **Tildel tilladelser nu**, og **Brugeradgang til indhold udløber** skal være angivet til **Aldrig**.
     - Når politikken for automatisk mærkning kun er til Exchange, kan mærkaten konfigureres for enten **Tildel tilladelser nu** eller **Lad brugere tildele tilladelser** (for indstillingerne Videresend ikke eller Encrypt-Only).
 
 ### <a name="learn-about-simulation-mode"></a>Få mere at vide om simuleringstilstand
@@ -377,7 +377,7 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
 
 11. På **oversigtssiden** : Gennemse konfigurationen af politikken for automatisk mærkning, foretag de nødvendige ændringer, og fuldfør konfigurationen.
 
-Nu kan du på siden **Information** **ProtectionAuto-labeling** >  se din politik for automatisk mærkning i afsnittet **Simulering** eller **Fra**, afhængigt af om du har valgt at køre den i simuleringstilstand eller ej. Vælg din politik for at få vist detaljer om konfigurationen og status (f.eks. **kører politiksimulering stadig**). For politikker i simuleringstilstand skal du vælge fanen **Matchende elementer** for at se, hvilke mails eller dokumenter der opfylder de angivne regler.
+Nu kan du på siden **Information Protection** > **Auto-labeling** se din politik for automatisk mærkning i afsnittet **Simulering** eller **Fra** , afhængigt af om du har valgt at køre den i simuleringstilstand eller ej. Vælg din politik for at få vist detaljer om konfigurationen og status (f.eks. **kører politiksimulering stadig**). For politikker i simuleringstilstand skal du vælge fanen **Matchende elementer** for at se, hvilke mails eller dokumenter der opfylder de angivne regler.
 
 Du kan ændre din politik direkte fra denne grænseflade:
 

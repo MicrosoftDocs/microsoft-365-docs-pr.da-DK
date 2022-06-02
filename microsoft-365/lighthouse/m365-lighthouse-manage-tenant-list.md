@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer din lejerliste.
-ms.openlocfilehash: bdd92f066f0b94c545b102b96eedb7e08c10ed96
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: deba0800ee422982e7379d7797d23a977602bbb9
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188322"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839771"
 ---
 # <a name="manage-your-tenant-list-in-microsoft-365-lighthouse"></a>Administrer din lejerliste i Microsoft 365 Fyrtårn
 

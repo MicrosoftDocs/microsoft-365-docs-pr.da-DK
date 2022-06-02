@@ -23,12 +23,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Log på Microsoft 365. Beskyt din virksomhed, praksis eller kampagne mod cybersikkerhedstrusler mod mail, data og kommunikation.
-ms.openlocfilehash: 4203abe638c15978ac4acd753fdeb6a83ba5920d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c0decc886b30ba63d67e7927c0655e1980a47a57
+ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099845"
+ms.lasthandoff: 06/02/2022
+ms.locfileid: "65839574"
 ---
 # <a name="sign-in-to-microsoft-365-business-premium"></a>Log på Microsoft 365 Business Premium
 
@@ -40,7 +40,7 @@ Hvis du har tilmeldt dig Microsoft 365 til kampagner (eller Microsoft 365 Busine
 
 2. Gå til Microsoft 365 Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>i browseren.
 
-3. Skriv dit brugernavn og din adgangskode. Vælg **Log på**.
+3. Skriv dit brugernavn og din adgangskode, og vælg derefter **Log på**.
 
 4. Find **eksempelvisningen** i kontrolelementet øverst til højre på siden. Vælg **Vis eksempel på** , så du kan bruge alle de kontrolelementer, der er beskrevet i [Bump up-beskyttelse for din kampagne](m365-campaigns-security-overview.md).
 
@@ -48,7 +48,7 @@ Hvis du har tilmeldt dig Microsoft 365 til kampagner (eller Microsoft 365 Busine
 
 Brugere, der er føjet til dit Microsoft 365 til abonnementet på kampagner (eller Microsoft 365 Business Premium), kan logge på ved at følge disse trin:
 
-1. Gå til <a href="https://office.com" target="_blank">https://Office.com</a>.
+1. Gå til <a href="https://office.com" target="_blank">https://office.com</a>.
 
 2. Log på med brugernavnet og adgangskoden til kontoen. Brugerne får disse oplysninger i den mail, de skulle have modtaget, da de blev tilføjet som brugere. Hvis de ikke kan finde mailen, kan [du se Jeg delte en invitation via mail, men brugeren modtog ikke mailen](../admin/simplified-signup/admin-invite-business-standard.md#i-shared-an-email-invite-but-the-user-didnt-receive-the-email).
 
