@@ -22,12 +22,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab) for at give en bruger besked om, at vedkommende arbejder med indhold, der er i konflikt med en DLP-politik.
-ms.openlocfilehash: af3dd2181c5bd8865f02755ba4d17f1feb0514d2
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 13387890ca1096115c5c933627ae674aaad15581
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669534"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863624"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>Send mailmeddelelser, og vis politiktip til DLP-politikker
 
@@ -53,7 +53,7 @@ Når du opretter en DLP-politik, kan du konfigurere brugermeddelelserne til:
 
 Når du opretter en DLP-politik, kan du aktivere **brugermeddelelser**. Når brugermeddelelser er aktiveret, sender Microsoft 365 både mailmeddelelser og politiktips. Du kan tilpasse, hvem meddelelsesmails sendes til, mailteksten og teksten til politiktip.
 
-1. Gå til [https://(https://compliance.microsoft.com/permissions](https://(https://compliance.microsoft.com/permissions).
+1. Gå til [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/permissions).
 
 2. Log på med din arbejds- eller skolekonto.
 
@@ -243,7 +243,10 @@ I øjeblikket understøtter Outlook 2013 og nyere kun politiktips for disse beti
 - Indholdet indeholder
 - Indholdet er delt
 
-Bemærk, at undtagelser betragtes som betingelser, og alle disse betingelser fungerer i Outlook, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Men visning af politiktip til brugere understøttes endnu ikke. Outlook understøtter heller ikke visning af politiktip til en DLP-politik, der anvendes på en dynamisk distributionsgruppe.
+Bemærk, at undtagelser betragtes som betingelser, og alle disse betingelser fungerer i Outlook, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Men visning af politiktip til brugere understøttes endnu ikke. 
+
+> [!NOTE]
+> Outlook understøtter ikke visning af politiktips til en DLP-politik, der anvendes på en dynamisk distributionsgruppe eller sikkerhedsgrupper, der ikke er mailaktiveret. 
 
 ### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Tip til politikker i Exchange Administration i forhold til portalen Microsoft Purview overholdelse
 

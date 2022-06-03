@@ -16,12 +16,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der gælder for eDiscovery-løsningen (Premium) i Microsoft 365.
-ms.openlocfilehash: 0c288b1d30fa668446421db547e2595f3385cbb7
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 3b52b36ebdaca429b37cf5784281d22d4dd4be74
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839298"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864454"
 ---
 # <a name="limits-in-ediscovery-premium"></a>Grænser i eDiscovery (Premium)
 
@@ -33,17 +33,17 @@ I denne artikel beskrives grænserne i Microsoft Purview eDiscovery-løsning (Pr
 
 I følgende tabel vises grænserne for sager og gennemsynssæt i eDiscovery (Premium).
 
-|Beskrivelse af grænse|Grænse|
-|---|---|
-|Det samlede antal dokumenter, der kan føjes til en sag (for alle korrektursæt i en sag).|Op til 40 millioner (nyt sagsformat)|
-|Samlet filstørrelse pr. indlæsningssæt. Dette omfatter indlæsning af ikke-Office 365 i et korrektursæt.|Op til 1 TB (nyt stort format)|
-|Den samlede mængde data, der indlæses i alle korrektursæt i organisationen pr. dag.<br/>|2 TB|
-|Maksimalt antal indlæsningssæt pr. case.|200|
-|Maksimalt antal korrektursæt pr. sag.|20|
-|Maksimalt antal mærkegrupper pr. sag.|1,000|
-|Maksimalt antal entydige mærker pr. sag.|1.000<sup>1</sup>|
-|Det maksimale antal samtidige job i din organisation, der kan føjes indhold til et korrektursæt. Disse job hedder **Føj data til et korrektursæt** og vises i en sag under fanen **Job** .|10<sup>2</sup>|
-|Det maksimale antal samtidige job, der skal føjes indhold til et gennemsynssæt pr. bruger. Disse job hedder **Føj data til et korrektursæt** og vises i en sag under fanen **Job** .|3|
+|Beskrivelse af grænse|Klassisk sagsgrænse|Grænse for nye sager|
+|---|---|---|
+|Det samlede antal dokumenter, der kan føjes til en sag (for alle korrektursæt i en sag).|3 millioner|40 millioner|
+|Samlet filstørrelse pr. indlæsningssæt. Dette omfatter indlæsning af ikke-Office 365 i et korrektursæt.|300 GB|1 TB|
+|Den samlede mængde data, der indlæses i alle korrektursæt i organisationen pr. dag.<br/>|2 TB|2 TB|
+|Maksimalt antal indlæsningssæt pr. case.|200|200|
+|Maksimalt antal korrektursæt pr. sag.|20|20|
+|Maksimalt antal mærkegrupper pr. sag.|1,000|1,000|
+|Maksimalt antal entydige mærker pr. sag.|1.000<sup>1</sup>|1.000<sup>1</sup>|
+|Det maksimale antal samtidige job i din organisation, der kan føjes indhold til et korrektursæt. Disse job hedder **Føj data til et korrektursæt** og vises i en sag under fanen **Job** .|10<sup>2</sup>|10<sup>2</sup>|
+|Det maksimale antal samtidige job, der skal føjes indhold til et gennemsynssæt pr. bruger. Disse job hedder **Føj data til et korrektursæt** og vises i en sag under fanen **Job** .|3|3|
 
 ## <a name="hold-limits"></a>Grænser for venteposition
 

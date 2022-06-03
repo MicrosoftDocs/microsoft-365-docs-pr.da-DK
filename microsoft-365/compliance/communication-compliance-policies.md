@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 8418683577ffe3bf63fe7fe3bf4aff2ef55007f5
-ms.sourcegitcommit: c33af120921d3c4fb5c362dac3e74f0ab3d1e58d
+ms.openlocfilehash: 44b177d0215acaa2e637aacda22db3eb16ee7168
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65249625"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864512"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
 
@@ -35,7 +35,7 @@ ms.locfileid: "65249625"
 > [!IMPORTANT]
 > Brug af PowerShell til at oprette og administrere politikker for kommunikation med overholdelse af angivne standarder understøttes ikke. Hvis du vil oprette og administrere disse politikker, skal du bruge kontrolelementerne til administration af politikker i [kommunikationsoverholdelsesløsningen](https://compliance.microsoft.com/supervisoryreview).
 
-Du opretter politikker for overholdelse af kommunikation for Microsoft 365 organisationer på Microsoft Purview-overholdelsesportalen. Politikker for kommunikation med overholdelse af angivne standarder definerer, hvilken kommunikation og hvilke brugere der skal gennemses i din organisation, definerer, hvilke brugerdefinerede betingelser kommunikationen skal opfylde, og angiver, hvem der skal udføre korrekturer. Brugere, der er tildelt rollen *Administrator af kommunikationsoverholdelse* , kan konfigurere politikker, og alle, der har denne rolle tildelt, kan få adgang til siden **Kommunikation med overholdelse af angivne standarder** og globale indstillinger på Microsoft Purview-overholdelsesportalen. Hvis det er nødvendigt, kan du eksportere oversigten over ændringer til en politik til en .csv (kommaseparerede værdier), der også indeholder status for beskeder, der afventer gennemsyn, eskalerede elementer og løste elementer. Politikker kan ikke omdøbes og kan slettes, når der ikke længere er brug for dem.
+Du kan oprette politikker for overholdelse af angivne standarder for kommunikation for Microsoft 365 organisationer i Microsoft Purview-compliance-portal. Politikker for kommunikation med overholdelse af angivne standarder definerer, hvilken kommunikation og hvilke brugere der skal gennemses i din organisation, definerer, hvilke brugerdefinerede betingelser kommunikationen skal opfylde, og angiver, hvem der skal udføre korrekturer. Brugere, der har fået tildelt *rollen Kommunikationsoverholdelse Administration* kan konfigurere politikker, og alle, der har denne rolle tildelt, kan få adgang til siden **Kommunikation med overholdelse af angivne standarder** og globale indstillinger i Microsoft Purview-compliance-portal. Hvis det er nødvendigt, kan du eksportere oversigten over ændringer til en politik til en .csv (kommaseparerede værdier), der også indeholder status for beskeder, der afventer gennemsyn, eskalerede elementer og løste elementer. Politikker kan ikke omdøbes og kan slettes, når der ikke længere er brug for dem.
 
 ## <a name="policy-templates"></a>Politikskabeloner
 
@@ -53,7 +53,7 @@ Kommunikation scannes hver 24. time fra det tidspunkt, hvor politikkerne oprette
 
 ## <a name="pause-a-policy-preview"></a>Afbryd en politik midlertidigt (prøveversion)
 
-Når du har oprettet en politik for overholdelse af angivne standarder for kommunikation, kan politikken være midlertidigt afbrudt, hvis det er nødvendigt. Afbrydelse af en politik kan bruges til at teste eller foretage fejlfinding af politikforekomster eller til at optimere politikbetingelser. I stedet for at slette en politik under disse omstændigheder bevarer midlertidig afbrydelse af en politik også eksisterende politikbeskeder og meddelelser i forbindelse med igangværende undersøgelser og anmeldelser. Hvis en politik afbrydes midlertidigt, forhindres kontrol og oprettelse af beskeder for alle de betingelser for brugermeddelelser, der er defineret i politikken, for det tidspunkt, hvor politikken afbrydes midlertidigt. Hvis du vil afbryde en politik midlertidigt eller genstarte den, skal brugerne være medlem af rollegruppen *Administrator af kommunikationsoverholdelse* .
+Når du har oprettet en politik for overholdelse af angivne standarder for kommunikation, kan politikken være midlertidigt afbrudt, hvis det er nødvendigt. Afbrydelse af en politik kan bruges til at teste eller foretage fejlfinding af politikforekomster eller til at optimere politikbetingelser. I stedet for at slette en politik under disse omstændigheder bevarer midlertidig afbrydelse af en politik også eksisterende politikbeskeder og meddelelser i forbindelse med igangværende undersøgelser og anmeldelser. Hvis en politik afbrydes midlertidigt, forhindres kontrol og oprettelse af beskeder for alle de betingelser for brugermeddelelser, der er defineret i politikken, for det tidspunkt, hvor politikken afbrydes midlertidigt. Hvis du vil afbryde eller genstarte en politik, skal brugerne være medlem af rollegruppen *Kommunikationsoverholdelse Administration*.
 
 Hvis du vil afbryde en politik midlertidigt, skal du gå til siden **Politik** , vælge en politik og derefter vælge **Afbryd politik midlertidigt** på værktøjslinjen Handlinger. I ruden **Afbryd politik midlertidigt** skal du bekræfte, at du vil afbryde politikken midlertidigt ved at vælge **Afbryd midlertidigt**. I nogle tilfælde kan det tage op til 24 timer, før en politik afbrydes midlertidigt. Når politikken er midlertidigt afbrudt, oprettes der ikke beskeder om meddelelser, der stemmer overens med politikken. Meddelelser, der er knyttet til beskeder, som blev oprettet, før politikken blev afbrudt midlertidigt, forbliver dog tilgængelige til undersøgelse, gennemgang og afhjælpning.
 
@@ -76,12 +76,12 @@ For organisationer med eksisterende politikker for overholdelse af kommunikation
 - **Registrer og gennemse upassende meddelelser for forskellige grupper af brugere**: Nogle organisationer foretrækker måske at oprette flere politikker med den samme konfiguration, men omfatter forskellige brugere i området og forskellige korrekturlæsere for hver politik.
 - **Lignende politikker med små ændringer**: For politikker med komplekse konfigurationer eller betingelser kan det spare tid at oprette en ny politik ud fra en lignende politik.
 
-Hvis du vil kopiere en politik, skal brugerne være medlem af rollegrupperne *Kommunikationsoverholdelse* eller *Administrator af kommunikationsoverholdelse* . Når en ny politik er oprettet ud fra en eksisterende politik, kan det tage op til 24 timer at få vist meddelelser, der svarer til den nye politikkonfiguration.
+Hvis du vil kopiere en politik, skal brugerne være medlem af rollegrupperne *Overholdelse af kommunikation* eller *Kommunikationsoverholdelse Administration*. Når en ny politik er oprettet ud fra en eksisterende politik, kan det tage op til 24 timer at få vist meddelelser, der svarer til den nye politikkonfiguration.
 
 Hvis du vil kopiere en politik og oprette en ny politik, skal du fuldføre følgende trin:
 
 1. Vælg den politik, du vil kopiere.
-2. Vælg **Knappen Kopiér politikkommandolinje** på kommandolinjen, eller vælg **Kopiér politik** i handlingsmenuen for politikken.
+2. Vælg **knappen Kopiér politikkommandolinje** på kommandolinjen, eller vælg **Kopiér politik** i handlingsmenuen for politikken.
 3. I ruden **Kopiér politik** kan du acceptere standardnavnet for politikken i feltet **Politiknavn** eller omdøbe politikken. Politiknavnet for den nye politik må ikke være det samme som en eksisterende aktiv eller deaktiveret politik. Udfyld feltet **Beskrivelse** efter behov.
 4. Hvis du ikke har brug for yderligere tilpasning af politikken, skal du vælge **Kopiér politik** for at fuldføre processen. Hvis du har brug for at opdatere konfigurationen af den nye politik, skal du vælge **Tilpas politik**. Dette starter guiden Politik for at hjælpe dig med at opdatere og tilpasse den nye politik.
 
@@ -102,24 +102,24 @@ Under korrekturprocessen kan korrekturlæsere af overholdelse af angivne standar
 
 ![Politik for brugerrapporterede meddelelser om kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-user-reported-messages-policy.png)
 
-Brugerrapporterede meddelelser fra Teams chats er de eneste meddelelser, der behandles af politikken for brugerrapporterede meddelelser, og kun de tildelte korrekturlæsere for politikken kan ændres. Alle andre politikegenskaber kan ikke redigeres. Når politikken oprettes, er de første korrekturlæsere, der er tildelt politikken, alle medlemmer af rollegruppen *Administratorer af kommunikationsoverholdelse* (hvis de udfyldes med mindst én bruger) eller alle medlemmer af organisationens *rollegruppe Global administrator* . Politikopretteren er en tilfældigt valgt bruger fra rollegruppen *Administratorer af kommunikationsoverholdelse* (hvis den udfyldes med mindst én bruger) eller en tilfældigt valgt bruger fra din organisations *rollegruppe Global administrator* .  
+Brugerrapporterede meddelelser fra Teams chats er de eneste meddelelser, der behandles af politikken for brugerrapporterede meddelelser, og kun de tildelte korrekturlæsere for politikken kan ændres. Alle andre politikegenskaber kan ikke redigeres. Når politikken oprettes, er de første korrekturlæsere, der er tildelt politikken, alle medlemmer af rollegruppen *Administratorer af kommunikationsoverholdelse* (hvis de udfyldes med mindst én bruger) eller alle medlemmer af organisationens *globale Administration* rollegruppe . Politikopretteren er en tilfældigt valgt bruger fra rollegruppen *Administratorer af kommunikationsoverholdelse* (hvis den udfyldes med mindst én bruger) eller en tilfældigt valgt bruger fra din organisations *rollegruppe Global Administration*.  
 
 Administratorer skal straks tildele brugerdefinerede korrekturlæsere til denne politik efter behov for din organisation. Dette kan omfatte korrekturlæsere, f.eks. overholdelsesansvarlige, risikoansvarlige eller medlemmer af hr-afdelingen. Hvis du vil tilpasse korrekturlæserne for chatmeddelelser, der er sendt som brugerrapporterede meddelelser, skal du udføre følgende trin:
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 2. Gå til **Kommunikation med overholdelse af angivne standarder på portalen for overholdelse af angivne standarder**.
 3. Under fanen **Politik** skal du vælge politikken *Brugerrapporterede meddelelser* og vælge **Rediger**.
 4. I ruden **Overvåg for brugerrapporterede meddelelser** skal du tildele validatorer til politikken. Korrekturlæsere skal have postkasser, der hostes på Exchange Online. Når validatorer føjes til en politik, modtager de automatisk en mail, der giver dem besked om tildelingen til politikken og indeholder links til oplysninger om korrekturprocessen.
 5. Vælg **Gem**.
 
-Indstillingen *Rapportér et problem* er aktiveret som standard og kan styres via Teams meddelelsespolitikker i [Teams Administration](/microsoftteams/manage-teams-in-modern-portal). Brugere i din organisation får automatisk den globale politik, medmindre du opretter og tildeler en brugerdefineret politik. Rediger indstillingerne i den globale politik, eller opret og tildel en eller flere brugerdefinerede politikker for at aktivere eller deaktivere indstillingen *Rapportér et problem* . Du kan få mere at vide under [Administrer meddelelsespolitikker i Teams](/microsoftteams/messaging-policies-in-teams).  
+Indstillingen *Rapportér et problem* er aktiveret som standard og kan styres via Teams meddelelsespolitikker i [Teams Administration Center](/microsoftteams/manage-teams-in-modern-portal). Brugere i din organisation får automatisk den globale politik, medmindre du opretter og tildeler en brugerdefineret politik. Rediger indstillingerne i den globale politik, eller opret og tildel en eller flere brugerdefinerede politikker for at aktivere eller deaktivere indstillingen *Rapportér et problem* . Du kan få mere at vide under [Administrer meddelelsespolitikker i Teams](/microsoftteams/messaging-policies-in-teams).  
 
 >[!IMPORTANT]
->Hvis du bruger PowerShell til at aktivere eller deaktivere indstillingen **Slutbrugerrapportering** i Teams Administration, skal du bruge [Microsoft Teams cmdlet'er modulversion 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) eller nyere.
+>Hvis du bruger PowerShell til at aktivere eller deaktivere indstillingen **Slutbrugerrapportering** i Teams Administration Center, skal du bruge [Microsoft Teams cmdlet'er modul version 4.2.0](/MicrosoftTeams/teams-powershell-release-notes) eller nyere.
 
 ## <a name="storage-limit-notification-preview"></a>Storage meddelelse om grænse (prøveversion)
 
-Hver politik for overholdelse af angivne standarder for kommunikation har en lagergrænse på 100 GB eller 1 million meddelelser, alt efter hvad der nås først. Efterhånden som politikken nærmer sig disse grænser, sendes der automatisk meddelelsesmails til brugere, der er tildelt rollegrupperne *Kommunikationsoverholdelse* eller *Administrator af kommunikationsoverholdelse* . Meddelelser sendes, når lagerstørrelsen eller antallet af meddelelser når 80, 90 og 95 % af grænsen. Når politikgrænsen er nået, deaktiveres politikken automatisk, og politikken stopper behandlingen af meddelelser for beskeder.
+Hver politik for overholdelse af angivne standarder for kommunikation har en lagergrænse på 100 GB eller 1 million meddelelser, alt efter hvad der nås først. Efterhånden som politikken nærmer sig disse grænser, sendes der automatisk meddelelsesmails til brugere, der er tildelt *til Administration* rollegrupperne *Kommunikationsoverholdelse eller Kommunikationsoverholdelse*. Meddelelser sendes, når lagerstørrelsen eller antallet af meddelelser når 80, 90 og 95 % af grænsen. Når politikgrænsen er nået, deaktiveres politikken automatisk, og politikken stopper behandlingen af meddelelser for beskeder.
 
 >[!IMPORTANT]
 >Hvis en politik deaktiveres, fordi du når lager- og meddelelsesgrænserne, skal du evaluere, hvordan du administrerer den deaktiverede politik. Hvis du sletter politikken, slettes alle meddelelser, tilknyttede vedhæftede filer og meddelelsesbeskeder permanent. Hvis du har brug for at vedligeholde disse elementer til fremtidig brug, skal du ikke slette den deaktiverede politik.
@@ -146,7 +146,7 @@ Som standard vises betingelsen **Retning er** , og den kan ikke fjernes. Indstil
 
 ### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
 
-Du har mulighed for at inkludere følsomme informationstyper som en del af politikken for overholdelse af angivne standarder for kommunikation. Følsomme oplysningstyper er enten foruddefinerede eller brugerdefinerede datatyper, der kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre og meget mere. Som en del af [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md) kan konfigurationen af følsomme oplysninger bruge mønstre, tegn nærhed, tillidsniveauer og endda brugerdefinerede datatyper til at identificere og markere indhold, der kan være følsomt. Standardtyperne for følsomme oplysninger er:
+Du har mulighed for at inkludere følsomme informationstyper som en del af politikken for overholdelse af angivne standarder for kommunikation. Følsomme oplysningstyper er enten foruddefinerede eller brugerdefinerede datatyper, der kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre og meget mere. Som en del af [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md) kan konfigurationen af følsomme oplysninger bruge mønstre, tegn nærhed, tillidsniveauer og endda brugerdefinerede datatyper til at identificere og markere indhold, der kan være følsomt. Standardtyperne for følsomme oplysninger er:
 
 - Finansielle
 - Medicinsk og sundhed
@@ -164,7 +164,7 @@ Konfigurer brugerordbøger med nøgleord (eller leksikoner) for at give enkel ad
 
 ### <a name="classifiers"></a>Klassificeringer
 
-Indbyggede og globale klassificeringer scanner sendte eller modtagne meddelelser på tværs af alle kommunikationskanaler i din organisation for forskellige typer problemer med overholdelse af angivne standarder. Klassificeringer bruger en kombination af kunstig intelligens og nøgleord til at identificere sprog i meddelelser, der kan være i strid med politikker til bekæmpelse af chikane. Indbyggede klassificeringer understøtter i øjeblikket identifikation af nøgleord på flere sprog:
+[Indbyggede og globale klassificeringer](/microsoft-365/compliance/classifier-learn-about) scanner sendte eller modtagne meddelelser på tværs af alle kommunikationskanaler i din organisation for forskellige typer problemer med overholdelse af angivne standarder. Klassificeringer bruger en kombination af kunstig intelligens og nøgleord til at identificere sprog i meddelelser, der kan være i strid med politikker til bekæmpelse af chikane. Indbyggede klassificeringer understøtter i øjeblikket identifikation af nøgleord på flere sprog:
 
 - Arabisk
 - Kinesisk (forenklet)
@@ -182,11 +182,12 @@ Indbyggede og globale klassificeringer scanner sendte eller modtagne meddelelser
 Indbyggede klassificeringer, der kan oplæres i kommunikation, og globale klassificeringer scanner kommunikation for vilkår, billeder og synspunkter for følgende typer sprog og indhold:
 
 - **Voksne billeder**: Scanner efter billeder, der er seksuelt eksplicitte i naturen.
+- **Kundeklager**: Scanner for feedback og klager, der er foretaget om din organisations produkter eller tjenester.
 - **Diskrimination**: Scanner efter eksplicit diskriminerende sprog og er særligt følsom over for diskriminerende sprog mod de afrikanske amerikanske/sorte samfund sammenlignet med andre samfund.
 - **Gory-billeder**: Scanner efter billeder, der viser vold og gore.
+- **Chikane**: Scans for offensiv adfærd rettet mod mennesker vedrørende race, farve, religion, national oprindelse.
 - **Bandeord**: Scanner efter profane udtryk, der gør de fleste til grin.
 - **Racy-billeder**: Scanner efter billeder, der er seksuelt suggestive i naturen, men som indeholder mindre eksplicit indhold end billeder, der anses for Voksne.
-- **Målrettet chikane**: Scans for stødende adfærd rettet mod personer vedrørende race, farve, religion, national oprindelse.
 - **Trussel**: Scanner efter trusler for at begå vold eller fysisk skade på en person eller ejendom.
 
 Billedklassificeringerne *Voksen*, *Racy* og *Gory* scanner filer i formaterne .jpeg, .png, .gif og .bmp. Størrelsen på billedfiler skal være mindre end 4 MB (megabyte), og billedernes dimensioner skal være større end 50 x 50 pixel og større end 50 KB, for at billedet kan kvalificeres til evaluering. Billedidentifikation understøttes for Exchange Online mails og Microsoft Teams kanaler og chats.
@@ -195,8 +196,6 @@ De indbyggede og globale klassificeringer giver ikke en udtømmende liste over b
 
 > [!NOTE]
 > Politikker, der bruger klassificeringer, undersøger og evaluerer meddelelser med et ordantal på seks eller flere. Meddelelser, der indeholder mindre end seks ord, evalueres ikke i politikker ved hjælp af klassificeringer. For at identificere og reagere på kortere meddelelser, der indeholder upassende indhold, anbefaler vi, at du inkluderer en brugerdefineret nøgleordsordbog til overvågning af politikker for kommunikation med overholdelse af angivne standarder for denne type indhold.
-
-Du kan finde oplysninger om klassificeringer, der kan oplæres, under [Introduktion til klassificeringer, der kan oplæres](classifier-get-started-with.md).
 
 ### <a name="optical-character-recognition-ocr"></a>Optisk tegngenkendelse (OCR)
 
@@ -279,15 +278,15 @@ I forbindelse med politikker for kommunikation med overholdelse af regler og sta
 > [!NOTE]
 > Tærskel for beskedpolitik for udløserindstillinger for aktiviteter understøtter en minimumværdi på 3 eller højere for politikker for kommunikation med overholdelse af angivne standarder.
 
-Du kan ændre standardindstillingerne for udløsere for antallet af aktiviteter, perioden for aktiviteterne og for bestemte brugere i beskedpolitikker på siden **Beskedpolitikker** på Microsoft Purview-overholdelsesportalen.
+Du kan ændre standardindstillingerne for udløsere for antallet af aktiviteter, periode for aktiviteterne og for bestemte brugere i beskedpolitikker på siden **Politikker for beskeder** i Microsoft Purview-compliance-portal.
 
 ### <a name="change-the-severity-level-for-an-alert-policy"></a>Skift alvorsgradsniveauet for en beskedpolitik
 
 Hvis du vil ændre det alvorsgradsniveau, der er tildelt i en beskedpolitik for en bestemt politik for overholdelse af angivne standarder for kommunikation, skal du udføre følgende trin:
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365 organisation.
 
-2. Gå til **Politikker** på Microsoft Purview-overholdelsesportalen.
+2. I Microsoft Purview-compliance-portal skal du gå til **Politikker**.
 
 3. Vælg **Office 365 besked** på siden **Politikker** for at åbne siden **Politikker for beskeder**.
 

@@ -19,12 +19,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du overvåger brugeres og administratorers aktiviteter i din Microsoft 365 organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5e4dab263a85730f893adadab0d3fa5709d17861
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 8ceaea2b888c144fb5c6bc34d9d7788ab595b56b
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649381"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864578"
 ---
 # <a name="auditing-solutions-in-microsoft-purview"></a>Overvågning af løsninger i Microsoft Purview
 
@@ -101,6 +101,7 @@ I følgende afsnit identificeres licenskravene for Overvågning (Standard) og Ov
 ### <a name="audit-standard"></a>Overvågning (standard)
 
 - Microsoft Business Basic-abonnement
+- Microsoft Business Standard-abonnement
 - abonnement på Microsoft 365 Apps til virksomheder
 - Microsoft 365 Enterprise E3-abonnement
 - Microsoft 365 Business Premium

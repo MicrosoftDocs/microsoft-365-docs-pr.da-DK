@@ -26,12 +26,12 @@ search.appverid:
 - MOE150
 ms.assetid: 871a246d-3acd-4bba-948e-5de8be0544c9
 description: Opret en delt postkasse for at gøre det muligt for flere brugere i din virksomhed at dele ansvaret for at læse og besvare mails, der sendes til én adresse.
-ms.openlocfilehash: 38e7e1c1371c83fd5b55105bbd91485e2b6c26a3
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 444be08a2083bf184d61ee206dfaa8ab53657b0b
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64915945"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864556"
 ---
 # <a name="create-a-shared-mailbox"></a>Opret en delt postkasse 
 
@@ -92,6 +92,9 @@ Du kan bruge følgende tilladelser med en delt postkasse:
 - **Send som**: Tilladelsen Send som gør det muligt for en bruger at repræsentere den delte postkasse, når der sendes mail. Hvis Katerina f.eks. logger på den delte postkasse Marketingafdeling og sender en mail, vil det se ud som marketingafdelingen har sendt mailen.
 
 - **Send på vegne**: Tilladelsen Send på vegne giver en bruger mulighed for at sende mail på vegne af den delte postkasse. Hvis John f.eks. logger på den delte postkasse Reception Building 32 og sender en mail, ser det ud til, at mailen blev sendt af "John på vegne af Receptionsbygning 32". Du kan ikke bruge EAC til at give Send på vegne-tilladelser. Du skal bruge **Set-Mailbox-cmdlet'en** med parameteren _GrantSendonBehalf_ .
+
+> [!NOTE]
+> Tilladelserne **Send som** og **Send på vegne** fungerer ikke i skrivebordsklienten Outlook, hvor parameteren *HiddenFromAddressListsEnabled* for postkassen er angivet til **Sand**, da de kræver, at postkassen er synlig i Outlook via den globale adresseliste.
 
 ### <a name="use-the-eac-to-edit-shared-mailbox-delegation"></a>Brug EAC til at redigere delegering af delt postkasse
 

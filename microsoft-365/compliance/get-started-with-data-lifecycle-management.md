@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at begynde at styre din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle præskriptive retningslinjer for at komme i gang.
-ms.openlocfilehash: 95ce0286d5ec45b5dabcbd2447bd52821f547caf
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 6fe80e32096fc4394ba15786ef378f4b7997af2b
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772724"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864447"
 ---
 # <a name="get-started-with-data-lifecycle-management"></a>Kom i gang med administration af datalivscyklus
 
@@ -95,7 +95,7 @@ Hvis du har et scenarie, der kræver dataadministration af individuelle elemente
 
 Se følgende afsnit for at få oplysninger om slutbrugerdokumentation til understøttelse af Microsoft 365 opbevaring.
 
-Funktionerne til administration af datalivscyklus for inaktive postkasser og import af PST-filer kræver ikke slutbrugerdokumentation, da det kun er administratorhandlinger. Hvis du vil hjælpe brugerne med at forstå og interagere med deres arkivpostkasser i Outlook, når du har aktiveret denne funktion, skal du se [Administrer maillager med onlinearkivpostkasser](https://prod.support.services.microsoft.com/en-us/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
+Funktionerne til administration af datalivscyklus for inaktive postkasser og import af PST-filer kræver ikke slutbrugerdokumentation, da det kun er administratorhandlinger. Hvis du vil hjælpe brugerne med at forstå og interagere med deres arkivpostkasser i Outlook, når du har aktiveret denne funktion, skal du se [Administrer maillager med onlinearkivpostkasser](https://support.microsoft.com/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ### <a name="end-user-documentation-for-retention-and-deletion"></a>Slutbrugerdokumentation til opbevaring og sletning
 

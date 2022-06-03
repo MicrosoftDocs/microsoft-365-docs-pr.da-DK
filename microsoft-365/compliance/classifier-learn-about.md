@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Klassificerere, der kan oplæres, kan genkende forskellige typer indhold til mærkning eller politikanvendelse ved at give dem positive og negative eksempler at se på.
-ms.openlocfilehash: a95c74894fd1ab3f9e3f9dd1f398d60afdc597d0
-ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
+ms.openlocfilehash: f99e9e66f1dae9459f28ba59ca9f197d78ab8bad
+ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/21/2022
-ms.locfileid: "65625793"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65864534"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Få mere at vide om trænbare klassificeringer
 
@@ -73,9 +73,6 @@ Følsomhedsmærkater kan bruge klassificeringer som betingelser. Se [Anvend auto
 
 Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 
-> [!CAUTION]
-> Vi udfaser den prækvalificerede klassificering af **stødende sprog** , fordi den har produceret et højt antal falske positiver. Brug den ikke, og hvis du bruger den i øjeblikket, skal du fjerne dine forretningsprocesser fra den. Vi anbefaler, at du bruger de forududdannede klassificeringer **threat**, **profanity** og **chikane** i stedet.
-
 - **Aftaler**: Registrerer indhold, der er relateret til juridiske aftaler, f.eks. aftaler om hemmeligholdelse, arbejdserklæringer, låne- og leasingaftaler, ansættelses- og konkurrenceklausuler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
 
 - **CV'er**: registrerer dokumenter, .pdf, .rtf, .txt elementer, der er tekstregnskaber for en ansøgers personlige, uddannelsesmæssige, faglige kvalifikationer, erhvervserfaring og andre personligt identificerende oplysninger
@@ -108,8 +105,8 @@ Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 
 - **Kildekode**: Registrerer elementer, der indeholder et sæt instruktioner og sætninger, der er skrevet i de øverste 25 anvendte computerprogrammeringssprog på GitHub: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script.
 
-> [!NOTE]
-> Kildekode oplæres til at registrere, når størstedelen af teksten er kildekode. Den registrerer ikke kildekodetekst, der er afbrudt med almindelig tekst.
+    > [!NOTE]
+    > Kildekode oplæres til at registrere, når størstedelen af teksten er kildekode. Den registrerer ikke kildekodetekst, der er afbrudt med almindelig tekst.
 
 - **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
 
@@ -118,7 +115,7 @@ Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 - **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
 - **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
 
-Disse vises i visningen **Microsoft Purview-compliance-portal** >  **Dataklassificeringstrænede** >  klassificeringer med statussen `Ready to use`.
+Disse vises i visningen **Microsoft Purview-compliance-portal** >  **Dataklassificeringsklasse** > **med** statussen `Ready to use`.
 
 ![classifiers-pre-trained-classifiers.](../media/classifiers-ready-to-use-classifiers.png)
 
@@ -127,11 +124,15 @@ Disse vises i visningen **Microsoft Purview-compliance-portal** >  **Dataklassif
 
 Forudoplærte klassificeringer kan scanne indhold på disse sprog:
 
+- Arabisk
 - Kinesisk (forenklet)
+- Kinesisk (traditionelt)
+- Dutch
 - English
 - French
 - German
 - Italian
+- Korean
 - Japanese
 - Portugisisk
 - Spanish
