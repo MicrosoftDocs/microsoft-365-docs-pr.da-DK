@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 1faff638c9b33b933277dc74248c2d7daa43331c
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 049fd7b7bcec0ebdc4690cd666bdb99ced5bf504
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669666"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873484"
 ---
 # <a name="configure-device-proxy-and-internet-connectivity-settings"></a>Konfigurer indstillingerne for enhedsproxy og internetforbindelse
 
@@ -176,7 +176,7 @@ Følgende regneark, der kan downloades, viser de tjenester og deres tilknyttede 
 
 |Regneark med domæneliste| Beskrivelse|
 |---|---|
-|Microsoft Defender for Endpoint URL-adresseliste til kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OPERATIVSYSTEM til kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+|Microsoft Defender for Endpoint URL-adresseliste til kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OPERATIVSYSTEM til kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx) <p> Bemærk, at Microsoft Defender for Endpoint Plan 1 og Plan 2 deler de samme URL-adresser til proxytjenesten.
 | Microsoft Defender for Endpoint URL-adresseliste for Gov/GCC/DoD | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 Hvis en proxy eller firewall har HTTPS-scanning (SSL-inspektion) aktiveret, skal du udelade de domæner, der er angivet i ovenstående tabel, fra HTTPS-scanning.

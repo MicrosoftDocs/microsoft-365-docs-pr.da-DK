@@ -1,7 +1,7 @@
 ---
 title: Eksempler på kommandoen Direkte svar
-description: Få mere at vide om at køre grundlæggende eller avancerede live svarkommandoer for Microsoft Defender til slutpunkt, og se eksempler på, hvordan de bruges.
-keywords: eksempel, kommando, cli, remote, shell, forbindelse, live, svar, realtid, kommando, script, remediate, hunt, export, log, drop, download, file
+description: Få mere at vide om, hvordan du kører grundlæggende eller avancerede kommandoer til direkte svar for Microsoft Defender for Endpoint, og se eksempler på, hvordan de bruges.
+keywords: eksempel, kommando, cli, ekstern, shell, forbindelse, live, svar, realtid, kommando, script, afhjælpe, jage, eksport, log, slip, download, fil
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 325146ba7ed40e27c50eaca490c70d3988b1198f
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 77a1bd5c9234b7a38266be55825726e683557eb4
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63599285"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872374"
 ---
 # <a name="live-response-command-examples"></a>Eksempler på kommandoen Direkte svar
 
@@ -30,11 +30,11 @@ ms.locfileid: "63599285"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Defender til Slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-Få mere at vide om almindelige kommandoer, der bruges i livesvar, og se eksempler på, hvordan de typisk bruges.
+Få mere at vide om almindelige kommandoer, der bruges i direkte svar, og se eksempler på, hvordan de typisk bruges.
 
-Afhængigt af din rolle kan du køre grundlæggende eller avancerede live svarkommandoer. Du kan finde flere oplysninger om grundlæggende og avancerede kommandoer i [Undersøg enheder på enheder, der bruger live svar](live-response.md).
+Afhængigt af den rolle du har, kan du køre grundlæggende eller avancerede kommandoer til livebesvaring. Du kan få flere oplysninger om grundlæggende og avancerede kommandoer under [Undersøg enheder på enheder, der bruger live-svar](live-response.md).
 
 ## `analyze`
 
@@ -110,16 +110,16 @@ getfile c:\Users\user\Desktop\work.txt -auto
 
 > [!NOTE]
 >
-> Følgende filtyper *kan ikke* downloades ved hjælp af denne kommando inde fra Live Response:
+> Følgende filtyper *kan ikke* hentes ved hjælp af denne kommando fra Live Response:
 >
-> - [Genpare punktfiler](/windows/desktop/fileio/reparse-points/)
-> - [Sparre filer](/windows/desktop/fileio/sparse-files/)
+> - [Genfortolkning af punktfiler](/windows-hardware/drivers/ifs/reparse-points)
+> - [Sparsomme filer](/windows-server/administration/windows-commands/fsutil-sparse)
 > - Tomme filer
-> - Virtuelle filer eller filer, der ikke er fuldt ud til stede lokalt
+> - Virtuelle filer eller filer, der ikke findes fuldt ud lokalt
 >
-> Disse filtyper *understøttes* af [PowerShell](/powershell/scripting/overview).
+> Disse *filtyper understøttes* af [PowerShell](/powershell/scripting/overview).
 >
-> Brug PowerShell som alternativ, hvis du har problemer med at bruge denne kommando inde fra Live Response.
+> Brug PowerShell som et alternativ, hvis du har problemer med at bruge denne kommando fra Live Response.
 
 ## `library`
 
@@ -221,8 +221,8 @@ run get-process-by-name.ps1 -parameters "-processName Registry"
 
 > [!NOTE]
 >
-> Hvis du bruger kommandoer, der kører længe, f.eks **. "kør**" eller "**getfile**", kan det være en ide at bruge symbolet "**&**" i slutningen af kommandoen for at udføre denne handling i baggrunden.
-> Dette giver dig mulighed for at fortsætte med at undersøge maskinen og vende tilbage til baggrundskommandoen, når du er færdig med at bruge den grundlæggende "**fg**["-kommando](live-response.md#basic-commands).
+> I forbindelse med langvarige kommandoer, f.eks. '**run**' eller '**getfile**', kan du bruge symbolet '**&**' i slutningen af kommandoen til at udføre denne handling i baggrunden.
+> Dette giver dig mulighed for at fortsætte med at undersøge computeren og vende tilbage til baggrundskommandoen, når du er færdig med at bruge [den grundlæggende "](live-response.md#basic-commands)**fg**"-kommando.
 
 ## `scheduledtask`
 

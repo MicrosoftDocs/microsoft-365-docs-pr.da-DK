@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 0cd1e0aa999200814639f24401bf019774ca1d43
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: 8ca88340ae90889c0e45c5905863373d930949b2
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825206"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872956"
 ---
 # <a name="onboard-previous-versions-of-windows"></a>Onboard tidligere versioner af Windows
 
@@ -37,7 +37,7 @@ ms.locfileid: "64825206"
 - Windows 8.1 Enterprise
 - Windows Server 2008 R2 SP1
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-downlevel-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-downlevel-abovefoldlink)
 
 Defender for Endpoint udvider understøttelsen til at omfatte operativsystemer på et tidligere niveau, hvilket giver avancerede funktioner til registrering af angreb og undersøgelse af understøttede Windows versioner.
 
@@ -49,7 +49,7 @@ Hvis du vil føje Windows klientslutpunkter til Defender for Endpoint, skal du g
 For Windows Server 2008 R2 SP1 har du mulighed for [at onboarde via Microsoft Defender for Cloud](#onboard-windows-servers-through-microsoft-defender-for-cloud).
 
 > [!NOTE]
-> Der kræves en separat serverlicens til Defender for Endpoint pr. node for at kunne onboarde en Windows server via Microsoft Monitoring Agent (mulighed 1). Alternativt kræves der en Licens til Microsoft Defender til servere pr. node for at onboarde en Windows server via Microsoft Defender for Cloud (mulighed 2), se [Understøttede funktioner, der er tilgængelige i Microsoft Defender for Cloud](/azure/security-center/security-center-services).
+> Der kræves en separat serverlicens til Defender for Endpoint pr. node for at kunne onboarde en Windows server via Microsoft Monitoring Agent (mulighed 1). Alternativt kræves der en Licens til Microsoft Defender til servere pr. node for at onboarde en Windows server via Microsoft Defender for Cloud (mulighed 2), se [Understøttede funktioner, der er tilgængelige i Microsoft Defender for Cloud](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
 
 > [!TIP]
 > Når du har onboardet enheden, kan du vælge at køre en registreringstest for at bekræfte, at den er onboardet korrekt til tjenesten. Du kan finde flere oplysninger under [Kør en registreringstest på et nyligt onboardet Defender for Endpoint-slutpunkt](run-detection-test.md).
@@ -132,7 +132,7 @@ Når du er færdig, kan du se onboardede Windows servere på portalen inden for 
 
 ## <a name="onboard-windows-servers-through-microsoft-defender-for-cloud"></a>Onboarde Windows servere via Microsoft Defender for Cloud
 
-1. Vælg **Indstillinger** >  **Device managementOnboarding** >  i Microsoft 365 Defender **navigationsrude**.
+1. Vælg Indstillinger **Device Management** >  Onboarding **i** >  Microsoft 365 Defender **navigationsrude**.
 
 2. Vælg **Windows Server 2008 R2 SP1** som operativsystem.
 
@@ -200,7 +200,7 @@ Følg trinnene i [Kør en registreringstest på en nyligt onboardet enhed](run-d
     Download opdateringer til Windows Server 2008 R2 x64
     
     .NET Framework 3.5.1 (KB315418)<br>
-    [Til Windows Server 2008 R2 x64](https://download.microsoft.com/download/6/8/0/680ee424-358c-4fdf-a0de-b45dee07b711/windows6.1-kb3154518-x64.msu)
+    [Til Windows Server 2008 R2 x64](/iis/install/installing-iis-7/install-windows-server-2008-and-windows-server-2008-r2)
     
     >[!NOTE]
     > I denne artikel antages det, at du bruger x64-baserede servere (MMA Agent .exe x64 Ny SHA-2-kompatibel version).

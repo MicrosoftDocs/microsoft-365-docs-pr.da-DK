@@ -21,16 +21,16 @@ ms.custom:
 description: I dette emne gennemgås den anbefalede konfiguration af lejerindstillinger, der påvirker sikkerheden i dit Microsoft 365 miljø.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 30b46bd541f233430506766eabc2d667fad52c22
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a1a9b7e6a006eb63078f237ce1078d6aa825fa14
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097288"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872355"
 ---
 # <a name="configure-your-microsoft-365-tenant-for-increased-security"></a>Konfigurer din Microsoft 365 lejer for at øge sikkerheden
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -101,7 +101,7 @@ Sørg for at besøge disse to områder i Azure Active Directory for at fuldføre
 
 Hvis din organisation omfatter kontorer med sikker netværksadgang, skal du føje de IP-adresseområder, der er tillid til, til Azure Active Directory som navngivne placeringer. Denne funktion hjælper med at reducere antallet af rapporterede falske positiver for logonrisikohændelser.
 
-Se: [Navngivne placeringer i Azure Active Directory](/azure/active-directory/active-directory-named-locations)
+Se: [Navngivne placeringer i Azure Active Directory](/azure/active-directory/conditional-access/location-condition)
 
 ### <a name="block-apps-that-dont-support-modern-authentication"></a>Bloker apps, der ikke understøtter moderne godkendelse
 

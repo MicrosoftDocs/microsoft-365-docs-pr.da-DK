@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: e5bf4e09224961d9a6cb0f0dc076b672fd20aabc
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+ms.openlocfilehash: 78cb81b1a0da9f0d1965dab7c209067a4e8d02e6
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368171"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874168"
 ---
 # <a name="device-inventory"></a>Enhedslager
 
@@ -28,12 +28,12 @@ ms.locfileid: "65368171"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- [Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender](../defender-vulnerability-management/index.yml)
+- [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-machinesview-abovefoldlink)
 
 **Enhedsoversigten** viser en liste over de enheder på netværket, hvor der blev genereret beskeder. Som standard viser køen enheder, der er set inden for de sidste 30 dage.
 
@@ -70,7 +70,7 @@ Under den Microsoft Defender for Endpoint onboardingproces udfyldes enheder, der
 
 ## <a name="navigate-to-the-device-inventory-page"></a>Gå til siden Enhedslager
 
-Få adgang til enhedens lagerside ved at vælge **Enhedslager** i **navigationsmenuen Slutpunkter** på [Microsoft 365 Defender portalen](/defender/microsoft-365-security-center-mde).
+Få adgang til enhedens lagerside ved at vælge **Enhedslager** i **navigationsmenuen Slutpunkter** på [Microsoft 365 Defender portalen](/microsoft-365/security/defender-business/mdb-get-started).
 
 ## <a name="device-inventory-overview"></a>Oversigt over enhedslager
 

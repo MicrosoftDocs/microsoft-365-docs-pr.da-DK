@@ -10,17 +10,17 @@ ms.topic: article
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 01/27/2022
+ms.date: 06/02/2022
 ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 9008fe0d6a4c46d544e4d806c3a15b24c53f2f10
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 1a82f1fb6759bd3cfeaa5bc24154e7e030d08355
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637982"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872381"
 ---
 # <a name="review-event-logs-and-error-codes-to-troubleshoot-issues-with-microsoft-defender-antivirus"></a>Gennemse hændelseslogge og fejlkoder for at foretage fejlfinding af problemer med Microsoft Defender Antivirus
 
@@ -44,7 +44,6 @@ Listen over tabeller:
 
 > [!TIP]
 > Du kan også besøge webstedet for Microsoft Defender for Endpoint demo på [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at bekræfte, at følgende funktioner fungerer:
->
 > - Skybaseret beskyttelse
 > - Hurtig læring (herunder Blok ved første øjekast)
 > - Potentielt uønsket programblokering
@@ -109,7 +108,7 @@ Beskrivelse:
 </ul>
 </dt>
 <dt>Scan ressourcer: &lt; Ressourcer (f.eks. filer/mapper/BHO), der blev scannet.&gt;</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; Bruger&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Bruger&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -150,8 +149,8 @@ Beskrivelse:
 <li>Kundescanning</li>
 </ul>
 </dt>
-<dt>Bruger: &lt; Domænelt&gt;\&; UserScan&gt;</dt> 
-<dt>Tid: &lt;Varigheden af en scanning.&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Tidspunkt for brugerscanning&gt;</dt>
+<dt>: &lt;Varigheden af en scanning.&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -192,8 +191,8 @@ Beskrivelse:
 <li>Kundescanning</li>
 </ul>
 </dt>
-<dt>Bruger: &lt; Domænelt&gt;&amp;; UserScan&gt;</dt> 
-<dt>Tid: &lt;Varigheden af en scanning.&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;&amp;lt; Tidspunkt for brugerscanning&gt;</dt>
+<dt>: &lt;Varigheden af en scanning.&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -234,7 +233,7 @@ Beskrivelse:
 <li>Kundescanning</li>
 </ul>
 </dt>
-<dt>Bruger: &lt;Domainlt&gt;\&; Bruger&gt;</dt>
+<dt>Bruger: &lt;Domæne&gt;\&lt; Bruger&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -275,7 +274,7 @@ Beskrivelse:
 <li>Kundescanning</li>
 </ul>
 </dt>
-<dt>Bruger: &lt;Domainlt&gt;\&; Bruger&gt;</dt>
+<dt>Bruger: &lt;Domæne&gt;\&lt; Bruger&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -316,8 +315,8 @@ Beskrivelse:
 <li>Kundescanning</li>
 </ul>
 </dt>
-<dt>Bruger: &lt; Domænelt&gt;\&; UserError&gt;</dt> 
-<dt>Code: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Bruger: &lt; Domæne&gt;\&lt; Brugerfejlkode&gt;</dt>
+<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 </dl>
 </td>
@@ -332,7 +331,7 @@ Sådan foretager du fejlfinding af denne hændelse:
 <ol>
 <li>Kør scanningen igen.</li>
 <li>Hvis det mislykkes på samme måde, skal du gå til <a href="https://go.microsoft.com/fwlink/?LinkId=215163">webstedet Microsoft Support</a> og angive fejlnummeret <b>i søgefeltet</b> for at søge efter fejlkoden.</li>
-<li>Kontakt <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+<li>Kontakt <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </li>
 </ol>
 </td>
@@ -362,8 +361,8 @@ Beskrivelse:
 <td >
 Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -372,8 +371,8 @@ Brug nedenstående links til at få flere oplysninger:
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiDetection&gt;</dt>
-<dt> Origin: &lt;Registreringsoprindelse&gt;, f.eks.:<ul>
+<dt>Sti: &lt; Registrering af filsti&gt;</dt>
+<dt>: &lt;Registreringsoprindelse&gt;, f.eks.:<ul>
 <li>Unknown</li>
 <li>Lokal computer</li>
 <li>Netværksshare</li>
@@ -399,12 +398,12 @@ Brug nedenstående links til at få flere oplysninger:
 <li>Elam (Early Launch Antimalware). Dette omfatter malware, der registreres af startsekvensen</li>
 <li>Fjern attestation</li>
 </ul>AMSI (Antimalware Scan Interface). Bruges primært til at beskytte scripts (PowerShell, VBS), selvom det også kan aktiveres af tredjeparter.
-UACStatus</dt>
-<dt>: &lt;StatusUser&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Navn: &lt;Proces i PIDSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+Status for brugerkontokontrol</dt>
+<dt>: &lt;Statusbruger&gt;</dt>
+<dt>: &lt;Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Proces i PID-signaturversionen&gt;</dt>
+<dt>: &lt;Version af definitionsversionsprogram&gt;</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -433,9 +432,9 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har taget skridt til at beskytte denne maskine mod malware eller anden potentielt uønsket software. Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Bruger: &lt; Domænelt&gt;\&; Brugernavn&gt;</dt>
-<dt>: &lt;Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Trusselsnavn-id&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -454,9 +453,9 @@ Microsoft Defender Antivirus har taget skridt til at beskytte denne maskine mod 
 <li>Blok: Ressourcen blev blokeret fra at køre</li>
 </ul>
 </dt>
-<dt>Status: &lt; StatusSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Status: &lt; Statussignaturversion&gt;</dt>
+<dt>: &lt;Version af definitionsprogram&gt;</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -485,9 +484,9 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus er stødt på en fejl, når der udføres handlinger på malware eller anden potentielt uønsket software. Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Bruger: &lt; Domænelt&gt;\&; Brugernavn&gt;</dt>
-<dt>: &lt;Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Trusselsnavn-id&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -496,8 +495,8 @@ Microsoft Defender Antivirus er stødt på en fejl, når der udføres handlinger
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiHandling&gt;</dt>
-<dt>: &lt;Handling&gt;, f.eks.:<ul>
+<dt>Sti: &lt; Filsti&gt;</dt>
+<dt>Handling: &lt;Handling&gt;, f.eks.:<ul>
 <li>Rens: Ressourcen blev renset</li>
 <li>Karantæne: Ressourcen er sat i karantæne</li>
 <li>Fjern: Ressourcen blev slettet</li>
@@ -509,9 +508,9 @@ Microsoft Defender Antivirus er stødt på en fejl, når der udføres handlinger
 </dt>
 <dt>Fejlkode: &lt; Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
 <dt>Fejlbeskrivelse: &lt;Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Status: &lt; StatusSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Status: &lt; Statussignaturversion&gt;</dt>
+<dt>: &lt;Definitionsversion&gt;</dt>
+<dt>Programversion: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -540,8 +539,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har gendannet et element fra karantæne. Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -550,10 +549,10 @@ Microsoft Defender Antivirus har gendannet et element fra karantæne. Brug neden
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiBruger&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Sti: &lt; Filsti&gt;</dt>
+<dt>Bruger: &lt;Domæne&gt;\&lt; Version af brugersignatur&gt;</dt>
+<dt>: &lt;Version af definitionsmotor&gt;</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -582,8 +581,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har fundet en fejl under forsøg på at gendanne et element fra karantæne. Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -592,12 +591,12 @@ Microsoft Defender Antivirus har fundet en fejl under forsøg på at gendanne et
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiBruger&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserError&gt;</dt> 
-<dt>Code: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
+<dt>Sti: &lt; Filsti&gt;</dt>
+<dt>Bruger: &lt;Domæne&gt;\&lt; Brugerfejlkode&gt;</dt>
+<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
 <dt>Fejlbeskrivelse: &lt;Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Signaturversion: &lt; &gt;Version</dt>
+<dt>af definitionsmotor: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -626,8 +625,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har slettet et element fra karantænen.<br/>Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -636,10 +635,10 @@ Microsoft Defender Antivirus har slettet et element fra karantænen.<br/>Brug ne
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiBruger&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Sti: &lt; Filsti&gt;</dt>
+<dt>Bruger: &lt;Domæne&gt;\&lt; Version af brugersignatur&gt;</dt>
+<dt>: &lt;Version af definitionsmotor&gt;</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -669,8 +668,8 @@ Beskrivelse:
 Microsoft Defender Antivirus har fundet en fejl under forsøg på at slette et element fra karantæne.
 Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -679,12 +678,12 @@ Brug nedenstående links til at få flere oplysninger:
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiBruger&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserError&gt;</dt> 
-<dt>Code: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
+<dt>Sti: &lt; Filsti&gt;</dt>
+<dt>Bruger: &lt;Domæne&gt;\&lt; Brugerfejlkode&gt;</dt>
+<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
 <dt>Fejlbeskrivelse: &lt;Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Signaturversion: &lt; &gt;Version</dt>
+<dt>af definitionsmotor: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -714,7 +713,7 @@ Beskrivelse:
 Microsoft Defender Antivirus har fjernet malwarehistorikken og anden potentielt uønsket software.
 <dl>
 <dt>Klokkeslæt: Det tidspunkt, hvor hændelsen indtraf, f.eks. når historikken fjernes. Denne parameter bruges ikke i trusselshændelser, så der ikke er nogen forvirring om, hvorvidt det er afhjælpningstid eller infektionstid. For dem kalder vi dem specifikt som Handlingstid eller Registreringstid.</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; Bruger&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Bruger&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -744,8 +743,8 @@ Beskrivelse:
 Microsoft Defender Antivirus er stødt på en fejl under forsøg på at fjerne historikken for malware og anden potentielt uønsket software.
 <dl>
 <dt>Klokkeslæt: Det tidspunkt, hvor hændelsen indtraf, f.eks. når historikken fjernes. Denne parameter bruges ikke i trusselshændelser, så der ikke er nogen forvirring om, hvorvidt det er afhjælpningstid eller infektionstid. For dem kalder vi dem specifikt som Handlingstid eller Registreringstid.</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; UserError&gt;</dt> 
-<dt>Code: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Brugerfejlkode&gt;</dt>
+<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier. </dt>
 <dt>Fejlbeskrivelse: &lt;Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 </dl>
 </td>
@@ -775,8 +774,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har registreret en mistænkelig funktionsmåde.<br/>Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -785,8 +784,8 @@ Microsoft Defender Antivirus har registreret en mistænkelig funktionsmåde.<br/
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiDetection&gt;</dt>
-<dt> Origin: &lt;Registreringsoprindelse&gt;, f.eks.:
+<dt>Sti: &lt; Registrering af filsti&gt;</dt>
+<dt>: &lt;Registreringsoprindelse&gt;, f.eks.:
 <ul>
 <li>Unknown</li>
 <li>Lokal computer</li>
@@ -813,14 +812,14 @@ Microsoft Defender Antivirus har registreret en mistænkelig funktionsmåde.<br/
 <li>Elam (Early Launch Antimalware). Dette omfatter malware, der registreres af startsekvensen</li>
 <li>Fjern attestation</li>
 </ul>AMSI (Antimalware Scan Interface). Bruges primært til at beskytte scripts (PowerShell, VBS), selvom det også kan aktiveres af tredjeparter.
-UACStatus</dt>
-<dt>: &lt;StatusUser&gt;</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess-navn&gt;</dt>
-<dt>: &lt;Behandl i PIDSignature-id'et&gt;</dt>
+Status for brugerkontokontrol</dt>
+<dt>: &lt;Statusbruger&gt;</dt>
+<dt>: &lt;Domæne&gt;\&lt; Navn på brugerproces&gt;</dt>
+<dt>: &lt;Proces i id'et for PID-signaturen&gt;</dt>
 <dt>: Optælling med matchende alvorsgrad.</dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram versionFidelity&gt;</dt> 
-<dt>Label:</dt>
+<dt>Signaturversion: &lt; Versionsprogramversion af definition&gt;</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt>
+<dt>Fidelity Label:</dt>
 <dt>Target File Name: &lt;Filnavn&gt; Navnet på filen.</dt>
 </dl>
 </td>
@@ -850,8 +849,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har registreret malware eller anden potentielt uønsket software.<br/>Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -860,8 +859,8 @@ Microsoft Defender Antivirus har registreret malware eller anden potentielt uøn
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiDetection&gt;</dt>
-<dt> Origin: &lt;Registreringsoprindelse&gt;, f.eks.:
+<dt>Sti: &lt; Registrering af filsti&gt;</dt>
+<dt>: &lt;Registreringsoprindelse&gt;, f.eks.:
 <ul>
 <li>Unknown</li>
 <li>Lokal computer</li>
@@ -888,11 +887,11 @@ Microsoft Defender Antivirus har registreret malware eller anden potentielt uøn
 <li>Elam (Early Launch Antimalware). Dette omfatter malware, der registreres af startsekvensen</li>
 <li>Fjern attestation</li>
 </ul>AMSI (Antimalware Scan Interface). Bruges primært til at beskytte scripts (PowerShell, VBS), selvom det også kan aktiveres af tredjeparter.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; UserProcess&gt;</dt> 
-<dt>Navn: &lt;Proces i PIDSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+UAC-bruger</dt>
+<dt>: &lt;Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Proces i PID-signaturversionen&gt;</dt>
+<dt>: &lt;Version af definitionsversionsprogram&gt;</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -929,8 +928,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har taget skridt til at beskytte denne maskine mod malware eller anden potentielt uønsket software.<br/>Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -939,8 +938,8 @@ Microsoft Defender Antivirus har taget skridt til at beskytte denne maskine mod 
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiDetection&gt;</dt>
-<dt> Origin: &lt;Registreringsoprindelse&gt;, f.eks.:
+<dt>Sti: &lt; Registrering af filsti&gt;</dt>
+<dt>: &lt;Registreringsoprindelse&gt;, f.eks.:
 <ul>
 <li>Unknown</li>
 <li>Lokal computer</li>
@@ -967,9 +966,9 @@ Microsoft Defender Antivirus har taget skridt til at beskytte denne maskine mod 
 <li>Elam (Early Launch Antimalware). Dette omfatter malware, der registreres af startsekvensen</li>
 <li>Fjern attestation</li>
 </ul>AMSI (Antimalware Scan Interface). Bruges primært til at beskytte scripts (PowerShell, VBS), selvom det også kan aktiveres af tredjeparter.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; Navn på brugerproces&gt;</dt>
-<dt>: &lt;Proces i PIDAction&gt;</dt>
+UAC-bruger</dt>
+<dt>: &lt;Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Proces i PID-handlingen&gt;</dt>
 <dt>: &lt;Handling&gt;, f.eks.:<ul>
 <li>Rens: Ressourcen blev renset</li>
 <li>Karantæne: Ressourcen er sat i karantæne</li>
@@ -980,11 +979,11 @@ UACUser</dt>
 <li>Blok: Ressourcen blev blokeret fra at køre</li>
 </ul>
 </dt>
-<dt>Handlingsstatus: &lt; Beskrivelse af yderligere handlingerFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Handlingsstatus: &lt; Beskrivelse af yderligere handlinger&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt> BEMÆRK! Når Microsoft Defender Antivirus, Microsoft Security Essentials, Værktøj til fjernelse af skadelig software eller System Center Endpoint Protection registrerer en malware, gendanner den følgende systemindstillinger og tjenester, som malwaren kan have ændret:<ul>
+<dt>Signaturversion: &lt; Versionsprogramversion&gt;af definition</dt>
+<dt>: &lt;antimalwareprogram version&gt;</dt> BEMÆRK! Når Microsoft Defender Antivirus, Microsoft Security Essentials, Værktøj til fjernelse af skadelig software eller System Center Endpoint Protection registrerer en malware, gendanner den følgende systemindstillinger og tjenester, som malwaren kan have ændret:<ul>
 <li>Standardindstilling for Internet Explorer eller Microsoft Edge</li>
 <li>Indstillinger for bruger Access Control</li>
 <li>Chrome-indstillinger</li>
@@ -1051,8 +1050,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus er stødt på en ikke-kritisk fejl, når der udføres handlinger på malware eller anden potentielt uønsket software.<br/>Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -1061,8 +1060,8 @@ Microsoft Defender Antivirus er stødt på en ikke-kritisk fejl, når der udfør
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiDetection&gt;</dt>
-<dt> Origin: &lt;Registreringsoprindelse&gt;, f.eks.:
+<dt>Sti: &lt; Registrering af filsti&gt;</dt>
+<dt>: &lt;Registreringsoprindelse&gt;, f.eks.:
 <ul>
 <li>Unknown</li>
 <li>Lokal computer</li>
@@ -1089,9 +1088,9 @@ Microsoft Defender Antivirus er stødt på en ikke-kritisk fejl, når der udfør
 <li>Elam (Early Launch Antimalware). Dette omfatter malware, der registreres af startsekvensen</li>
 <li>Fjern attestation</li>
 </ul>AMSI (Antimalware Scan Interface). Bruges primært til at beskytte scripts (PowerShell, VBS), selvom det også kan aktiveres af tredjeparter.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; Navn på brugerproces&gt;</dt>
-<dt>: &lt;Proces i PIDAction&gt;</dt>
+UAC-bruger</dt>
+<dt>: &lt;Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Proces i PID-handlingen&gt;</dt>
 <dt>: &lt;Handling&gt;, f.eks.:<ul>
 <li>Rens: Ressourcen blev renset</li>
 <li>Karantæne: Ressourcen er sat i karantæne</li>
@@ -1102,11 +1101,11 @@ UACUser</dt>
 <li>Blok: Ressourcen blev blokeret fra at køre</li>
 </ul>
 </dt>
-<dt>Handlingsstatus: &lt; Beskrivelse af yderligere handlingerFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Handlingsstatus: &lt; Beskrivelse af yderligere handlinger&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Signaturversion: &lt; &gt;Version</dt>
+<dt>af definitionsmotor: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1143,8 +1142,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus er stødt på en alvorlig fejl, når der udføres handlinger på malware eller anden potentielt uønsket software.<br/>Brug nedenstående links til at få flere oplysninger:
 <dl>
-<dt>Navn: &lt; Threat nameID&gt;</dt>
-<dt>: &lt;Threat IDSeverity&gt;</dt>
+<dt>Navn: &lt; Id for trusselsnavn&gt;</dt>
+<dt>: &lt;Alvorsgrad af trussels-id&gt;</dt>
 <dt>: &lt;Alvorsgrad&gt;, f.eks.:<ul>
 <li>Lav</li>
 <li>Moderat</li>
@@ -1153,8 +1152,8 @@ Microsoft Defender Antivirus er stødt på en alvorlig fejl, når der udføres h
 </ul>
 </dt>
 <dt>Kategori: &lt; Kategoribeskrivelse&gt;, f.eks. enhver trussels- eller malwaretype.</dt> 
-<dt>Sti: &lt; FilstiDetection&gt;</dt>
-<dt> Origin: &lt;Registreringsoprindelse&gt;, f.eks.:
+<dt>Sti: &lt; Registrering af filsti&gt;</dt>
+<dt>: &lt;Registreringsoprindelse&gt;, f.eks.:
 <ul>
 <li>Unknown</li>
 <li>Lokal computer</li>
@@ -1181,9 +1180,9 @@ Microsoft Defender Antivirus er stødt på en alvorlig fejl, når der udføres h
 <li>Elam (Early Launch Antimalware). Dette omfatter malware, der registreres af startsekvensen</li>
 <li>Fjern attestation</li>
 </ul>AMSI (Antimalware Scan Interface). Bruges primært til at beskytte scripts (PowerShell, VBS), selvom det også kan aktiveres af tredjeparter.
-UACUser</dt>
-<dt>: &lt;Domainlt&gt;\&; Navn på brugerproces&gt;</dt>
-<dt>: &lt;Proces i PIDAction&gt;</dt>
+UAC-bruger</dt>
+<dt>: &lt;Domæne&gt;\&lt; Brugernavn&gt;</dt>
+<dt>: &lt;Proces i PID-handlingen&gt;</dt>
 <dt>: &lt;Handling&gt;, f.eks.:<ul>
 <li>Rens: Ressourcen blev renset</li>
 <li>Karantæne: Ressourcen er sat i karantæne</li>
@@ -1194,11 +1193,11 @@ UACUser</dt>
 <li>Blok: Ressourcen blev blokeret fra at køre</li>
 </ul>
 </dt>
-<dt>Handlingsstatus: &lt; Beskrivelse af yderligere handlingerFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Handlingsstatus: &lt; Beskrivelse af yderligere handlinger&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Signaturversion: &lt; &gt;Version</dt>
+<dt>af definitionsmotor: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1250,7 +1249,7 @@ Kontrollér, at brugeren har tilladelse til at få adgang til de nødvendige res
 Hvis denne hændelse fortsætter:<ol>
 <li>Kør scanningen igen.</li>
 <li>Hvis det mislykkes på samme måde, skal du gå til <a href="https://go.microsoft.com/fwlink/?LinkId=215163">webstedet Microsoft Support</a> og angive fejlnummeret <b>i søgefeltet</b> for at søge efter fejlkoden.</li>
-<li>Kontakt <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+<li>Kontakt <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </li>
 </ol>
 </td>
@@ -1280,9 +1279,9 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus klient kører i en tilstand, der er i orden.
 <dl>
-<dt>Aktuel platformversion: &lt; Aktuel platformversionThreat&gt;</dt> 
-<dt>Ressourcesti: &lt;PathHashes&gt;</dt>
-<dt>: &lt;Hashes&gt;</dt>
+<dt>Aktuel platformversion: &lt; Aktuel platformversion&gt;</dt>
+<dt>Threat Resource Path: &lt;Path&gt;</dt>
+<dt>Hashes: &lt;Hashes&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1319,23 +1318,23 @@ Beskrivelse:
 Adgang til styrede mapper har blokeret en proces, der ikke er tillid til, fra potentielt at ændre disksektorer.
 <br/> Du kan få flere oplysninger om hændelsesposten i følgende:
 <dl>
-<dt>EventID: &lt; EventID&gt;, f.eks.: 1127Version</dt>
-<dt>: &lt;Version&gt;, for eksempel:</dt> 
-<dt>0Level: &lt;Level&gt;, for eksempel: win:WarningTimeCreated</dt>
-<dt>: &lt;SystemTime&gt;, tidspunkt hvor hændelsen blev oprettetEventRecordID</dt>
-<dt>: &lt;EventRecordID&gt;, indeksnummer for hændelsen i hændelsesloggenExecution</dt> 
-<dt>ProcessID: &lt;Execution ProcessID&gt;, proces, der genererede hændelsenChannel</dt>
-<dt>: &lt;Hændelseskanal&gt;, f.eks.: Microsoft- Windows-Windows Defender/OperationalComputer</dt>
-<dt>: &lt;ComputernavnSikkerhed&gt;</dt> 
-<dt>Bruger-id: &lt;Sikkerhedsbruger-idProduktnavn&gt;</dt>
-<dt>: &lt;Produktnavn&gt;, f.eks.: Microsoft Defender Antivirus</dt> 
-<dt>Produktversion: &lt;ProduktversionRegistreringstid&gt;</dt>
+<dt>EventID: &lt; EventID&gt;, for eksempel: 1127</dt>
+<dt>Version: &lt;Version&gt;, for eksempel: 0</dt>
+<dt>Niveau: &lt;Niveau&gt;, for eksempel: win:Warning</dt>
+<dt>TimeCreated: &lt;SystemTime&gt;, tidspunkt, hvor hændelsen blev oprettet</dt>
+<dt>EventRecordID: &lt;EventRecordID&gt;, indeksnummer for hændelsen i hændelsesloggen</dt>
+<dt>Execution ProcessID: &lt;Execution ProcessID&gt;, proces, der genererede hændelseskanalen</dt>
+<dt>: &lt;Hændelseskanal&gt;, f.eks.: Microsoft- Windows-Windows Defender/</dt>
+<dt>driftscomputer: &lt;Computernavn&gt;</dt>
+<dt>Sikkerhedsbruger-id: &lt;Sikkerhedsbruger-id&gt;</dt>
+<dt>produktnavn: &lt;Produktnavn&gt;, f.eks.: Microsoft Defender Antivirus</dt> 
+<dt>Produktversion: &lt;Registreringstid for produktversion&gt;</dt>
 <dt>: &lt;Registreringstid&gt;, hvor CFA blokerede en procesbruger, der ikke er tillid til</dt>
-<dt>: &lt;Domainlt&gt;\&; UserPath&gt;</dt>
-<dt>: &lt;Enhedsnavn&gt;, navn på den enhed eller disk, som en proces, der ikke er tillid til, blev åbnet for modifikationProcesnavn</dt>
-<dt>: &lt;Processti&gt;, navnet på processtien, som CFA blokerede fra at få adgang til enheden eller disken til ændringSecurity</dt> 
-<dt>Intelligence Version: &lt;Security Intelligence versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>: &lt;Domæne&gt;\&lt; Brugersti&gt;</dt>
+<dt>: &lt;Enhedsnavn&gt;, navn på den enhed eller disk, som en proces, der ikke er tillid til, blev åbnet for</dt>
+<dt>ændringsprocesnavn: &lt;Processti&gt;, det processtinavn, som CFA blokerede for adgang til enheden eller disken til ændring</dt>
+<dt>af Security Intelligence Version: &lt;Sikkerhedsintelligensversion&gt;</dt>
+<dt>Programversion: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1372,9 +1371,9 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus klient kører i en tilstand, der er i orden.
 <dl>
-<dt>Platformversion: &lt; Aktuel platformversionSignature&gt;</dt> 
-<dt>Version: &lt;Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram version&gt;</dt>
+<dt>Platformversion: &lt; Aktuel platformversion&gt;</dt>
+<dt>Signaturversion: &lt;Definitionsversion&gt;</dt>
+<dt>Programversion: &lt;antimalwareprogram version&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1412,28 +1411,28 @@ Beskrivelse:
 <td >
 Tilstandsrapport for antivirusklient.
 <dl>
-<dt>Platformversion: &lt; Aktuel platformversionEngine&gt;</dt> 
-<dt>Version: &lt;antimalwareprogram versionNetwork&gt;</dt> 
-<dt>Realtime Inspection engine version: &lt;Network Realtime Inspection engine versionAntivirus&gt;</dt> 
-<dt>signaturversion: &lt;Antivirus signaturversionAntispyware&gt;</dt> 
-<dt>signaturversion: &lt;Antispyware signaturversionNetwork&gt;</dt> 
-<dt>Signaturversion for realtidskontrol: &lt; Netværk RealtidskontrolsignaturversionRTP-tilstand&gt;</dt>
-<dt>: &lt;Realtidsbeskyttelsestilstand&gt; (aktiveret eller deaktiveret)</dt>
-<dt>OA-tilstand: &lt;Ved Adgangstilstand&gt; (aktiveret eller deaktiveret)</dt>
-<dt>IOAV-tilstand: &lt;IE-downloads og Outlook tilstanden&gt; Express Attachments (Enabled eller Disabled)</dt>
+<dt>Platformversion: &lt; Aktuel platformversion&gt;</dt>
+<dt>Programversion: &lt;antimalwareprogram version&gt;</dt>
+<dt>Network Realtime Inspection engine version: &lt;Network Realtime Inspection engine version&gt;</dt>
+<dt>Antivirus signaturversion: &lt;Antivirus signaturversion&gt;</dt>
+<dt>Antispyware signaturversion: &lt;Antispyware signaturversion&gt;</dt>
+<dt>Network Realtime Inspection signaturversion: &lt; Tilstand for netværksovervågningssignaturversion&gt;</dt>
+<dt>RTP: &lt;Tilstand for beskyttelse i&gt; realtid (aktiveret eller deaktiveret)</dt>
+<dt>OA-tilstand: &lt;Ved adgangstilstand&gt; (aktiveret eller deaktiveret)</dt>
+<dt>IOAV-tilstand: &lt;IE-downloads og Outlook tilstanden&gt; Express Attachments (Enabled or Disabled)</dt>
 <dt>BM-tilstand: Tilstand for &lt;overvågning af&gt; funktionsmåde (aktiveret eller deaktiveret)</dt>
-<dt>Antivirussignaturalder: &lt;Alder på antivirussignatur&gt;  (i dage)</dt> 
+<dt>Alder af antivirussignatur: &lt;Alder&gt; på antivirussignatur  (i dage)</dt> 
 <dt>Alder for antispywaresignatur: &lt; Antispywaresignaturalder&gt; (i dage)</dt>
 <dt>Sidste hurtigscanningsalder: &lt;Sidste hurtig scanningsalder&gt; (i dage)</dt>
 <dt>Sidste fulde scanningsalder: &lt;Sidste fulde scanningsalder&gt; (i dage)</dt>
-<dt>Oprettelsestid for antivirussignatur: ?&lt; Oprettelse af antivirussignatur timeAntispyware&gt;</dt> 
-<dt>tidspunktet for oprettelse af signatur: ?&lt; Oprettelse af antispywaresignatursidste&gt;</dt> 
-<dt>starttidspunkt for hurtig scanning: ?&lt; Starttidspunkt&gt; for seneste hurtig</dt> 
-<dt>scanningSidste sluttidspunkt for hurtig scanning: ?&lt; Sidste sluttidspunkt&gt; for hurtig scanningSidste</dt> 
-<dt>hurtigsøgningskilde: &lt;Seneste hurtigsøgningskilde&gt; (0 = scanningen blev ikke kørt, 1 = brugeren startede, 2 = systemet startede)</dt>
-<dt>Sidste starttidspunkt for fuld scanning: ?&lt; Sidste fulde scanningsstarttidspunktSidste&gt;</dt> 
-<dt>fulde scanningssluttidspunkt: ?&lt; Sidste fulde scanningssluttidSidste&gt;</dt> 
-<dt>fulde scanningskilde: &lt;Seneste komplette scanningskilde&gt; (0 = scanningen blev ikke kørt, 1 = brugerinitieret, 2 = systeminitieret)</dt>
+<dt>Oprettelsestid for antivirussignatur: ?&lt; Oprettelsestidspunkt&gt;for antivirussignatur</dt>
+<dt>Tid til oprettelse af Antispyware-signatur: ?&lt; Tidspunkt for oprettelse af&gt;antispywaresignatur</dt>
+<dt>sidste starttidspunkt for hurtig scanning: ?&lt; Sidste starttidspunkt&gt;for hurtig</dt>
+<dt>scanning Sidste sluttidspunkt for hurtig scanning: ?&lt; Sidste hurtig scanningssluttidspunkt&gt;</dt>
+<dt>Sidste hurtigsøgningskilde: &lt;Seneste hurtigsøgningskilde&gt; (0 = scanningen blev ikke kørt, 1 = brugeren startede, 2 = systemet startede)</dt>
+<dt>Sidste starttidspunkt for fuld scanning: ?&lt; Seneste fulde scanningsstarttidspunkt&gt;</dt>
+<dt>Sidste fulde scanningssluttidspunkt: ?&lt; Sidste fulde scanningssluttidspunkt&gt;</dt>
+<dt>Sidste fulde scanningskilde: &lt;Seneste fulde scanningskilde&gt; (0 = scanningen blev ikke kørt, 1 = brugerinitieret, 2 = systemet er startet)</dt>
 <dt>Produktstatus: Til intern fejlfinding
 </dl>
 </td>
@@ -1464,9 +1463,9 @@ Beskrivelse:
 <td >
 Antivirussignaturversionen er blevet opdateret.
 <dl>
-<dt>Aktuel signaturversion: &lt; Aktuel signaturversionPrevious&gt;</dt> 
-<dt>Signaturversion: &lt;Tidligere signaturversionSignature&gt;</dt>
-<dt> Type: &lt;Signaturtype&gt;, f.eks.: <ul>
+<dt>Aktuel signaturversion: &lt; Aktuel signaturversion&gt;</dt>
+<dt>Forrige signaturversion: &lt;Forrige signaturversion&gt;</dt>
+<dt>Signaturtype: &lt;Signaturtype&gt;, f.eks.: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
@@ -1474,9 +1473,9 @@ Antivirussignaturversionen er blevet opdateret.
 </ul>
 </dt>
 <dt>Opdateringstype: &lt; Opdateringstype&gt;, enten Fuld eller Delta.</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; UserCurrent&gt;</dt> 
-<dt>Engine Version: &lt;Aktuel programversionPrevious&gt;</dt> 
-<dt>Engine Version: &lt;Tidligere programversion&gt;</dt>
+<dt>Bruger: &lt; Domæne&gt;\&lt; Aktuel programversion for bruger&gt;</dt>
+<dt>: &lt;Aktuel programversion&gt;</dt>
+<dt>Tidligere programversion: &lt;Tidligere programversion&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1513,9 +1512,9 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har fundet en fejl under forsøg på at opdatere signaturer.
 <dl>
-<dt>Ny version af security intelligence: &lt; Nyt versionsnummerPrevious&gt;</dt> 
-<dt>security intelligence-version: &lt;Forrige versionOpdateringskilde&gt;</dt>
-<dt>: &lt;Opdateringskilde&gt;, f.eks.:
+<dt>Ny version af security intelligence: &lt; Nyt versionsnummer&gt;</dt>
+<dt>Forrige sikkerhedsintelligensversion: &lt;Forrige version&gt;</dt>
+<dt>Opdateringskilde: &lt;Opdateringskilde&gt;, f.eks.:
 <ul>
 <li>Mappe til opdatering af sikkerhedsintelligens</li>
 <li>Intern sikkerhedsintelligensopdateringsserver</li>
@@ -1540,10 +1539,10 @@ Microsoft Defender Antivirus har fundet en fejl under forsøg på at opdatere si
 </ul>
 </dt>
 <dt>Opdateringstype: &lt; Opdateringstype&gt;, enten Fuld eller Delta.</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; UserCurrent&gt;</dt> 
-<dt>Engine Version: &lt;Aktuel programversionPrevious&gt;</dt> 
-<dt>Programversion: &lt;Tidligere programversionFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Bruger: &lt; Domæne&gt;\&lt; Aktuel programversion for bruger&gt;</dt>
+<dt>: &lt;Aktuel programversion&gt;</dt>
+<dt>Tidligere programversion: &lt;Tidligere programversion&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 </dl>
 </td>
@@ -1558,7 +1557,7 @@ Sådan foretager du fejlfinding af denne hændelse:
 <ol>
 <li><a href="manage-updates-baselines-microsoft-defender-antivirus.md" data-raw-source="[Update definitions](manage-updates-baselines-microsoft-defender-antivirus.md)">Opdater definitioner</a> , og gennemtving en scanning direkte på slutpunktet.</li>
 <li>Gennemse posterne i filen %Windir%\WindowsUpdate.log for at få flere oplysninger om denne fejl.</li>
-<li>Kontakt <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+<li>Kontakt <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </li>
 </ol>
 </td>
@@ -1588,10 +1587,10 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus programversion er blevet opdateret.
 <dl>
-<dt>Aktuel programversion: &lt; Aktuel programversionPrevious&gt;</dt> 
-<dt>Engine Version: &lt;Tidligere programversionEngine&gt;</dt> 
-<dt>Type: &lt;Programtype&gt;, enten antimalwareprogram eller Network Inspection System-program.</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; Bruger&gt;</dt>
+<dt>Aktuel programversion: &lt; Aktuel programversion&gt;</dt>
+<dt>Forrige programversion: &lt;Tidligere programversion&gt;</dt>
+<dt>Programtype: &lt;Programtype&gt;, enten antimalwareprogram eller Network Inspection System-program.</dt> 
+<dt>Bruger: &lt; Domæne&gt;\&lt; Bruger&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1629,10 +1628,10 @@ Beskrivelse:
 Microsoft Defender Antivirus stødte på en fejl under forsøg på at opdatere programmet.
 <dl>
 <dt>Ny programversion:</dt>
-<dt>Tidligere programversion: &lt;Tidligere programversionEnginetype&gt;</dt>
-<dt>: &lt;Programtype&gt;, enten antimalwareprogram eller Network Inspection System-program.</dt> 
-<dt>Bruger: &lt; Domænelt&gt;\&; UserError&gt;</dt> 
-<dt>Code: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Forrige programversion: &lt;Tidligere programversion&gt;</dt>
+<dt>Programtype: &lt;Programtype&gt;, enten antimalwareprogram eller Network Inspection System-program.</dt> 
+<dt>Bruger: &lt; Domæne&gt;\&lt; Brugerfejlkode&gt;</dt>
+<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 </dl>
 </td>
@@ -1646,7 +1645,7 @@ Den Microsoft Defender Antivirus klientopdatering mislykkedes. Denne hændelse o
 Sådan foretager du fejlfinding af denne hændelse:
 <ol>
 <li><a href="manage-updates-baselines-microsoft-defender-antivirus.md" data-raw-source="[Update definitions](manage-updates-baselines-microsoft-defender-antivirus.md)">Opdater definitioner</a> , og gennemtving en scanning direkte på slutpunktet.</li>
-<li>Kontakt <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+<li>Kontakt <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </li>
 </ol>
 </td>
@@ -1679,8 +1678,8 @@ Microsoft Defender Antivirus har registreret en fejl under forsøg på at indlæ
 <dt>Signaturer Forsøgt:</dt>
 <dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt> 
-<dt>Signaturversion: &lt; Definition versionEngine&gt;</dt> 
-<dt>Version: &lt;Antimalware-programversion&gt;</dt>
+<dt>Signaturversion: &lt; Definitionsversion&gt;</dt>
+<dt>Programversion: &lt;Antimalware-programversion&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -1696,7 +1695,7 @@ Sådan foretager du fejlfinding af denne hændelse:
 <li>Download de nyeste definitioner fra <a href="https://aka.ms/wdsi">Microsoft Sikkerhedsviden websted</a>.
 Bemærk! Størrelsen på definitionsfilen, der downloades fra webstedet, kan overstige 60 MB og bør ikke bruges som en langsigtet løsning til opdatering af definitioner.
 </li>
-<li>Kontakt <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+<li>Kontakt <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </li>
 </ol>
 </td>
@@ -1755,8 +1754,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus har fundet en fejl under forsøg på at opdatere platformen.
 <dl>
-<dt>Aktuel platformversion: &lt; Aktuel platformversionFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Aktuel platformversion: &lt; Aktuel platformversion&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 </dl>
 </td>
@@ -1815,16 +1814,16 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus brugte <i>Dynamic Signature Service</i> til at hente yderligere signaturer for at beskytte computeren.
 <dl>
-<dt>Aktuel signaturversion: &lt; Aktuel signaturversionSignature&gt;</dt>
-<dt> Type: &lt;Signaturtype&gt;, f.eks.: <ul>
+<dt>Aktuel signaturversion: &lt; Aktuel signaturversion&gt;</dt>
+<dt>Signaturtype: &lt;Signaturtype&gt;, f.eks.: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
 <li>Netværksinspektionssystem</li>
 </ul>
 </dt>
-<dt>Aktuel programversion: &lt; Aktuel programversionDynamisk&gt;</dt>
-<dt> signaturtype: &lt;Dynamisk signaturtype&gt;, f.eks.:
+<dt>Aktuel programversion: &lt; Aktuel programversion&gt;</dt>
+<dt>Dynamisk signaturtype: &lt;Dynamisk signaturtype&gt;, f.eks.:
 <ul>
 <li>Version</li>
 <li>Tidsstempel</li>
@@ -1832,10 +1831,10 @@ Microsoft Defender Antivirus brugte <i>Dynamic Signature Service</i> til at hent
 <li>Varighed</li>
 </ul>
 </dt>
-<dt>Sti til fastholdelse: &lt; PathDynamic&gt;</dt> 
-<dt>Signature Version: &lt;VersionsnummerDynamic&gt;</dt> 
-<dt>Signature Compilation Timestamp: &lt;TimestampPersistence&gt;</dt>
-<dt> Limit Type: &lt;Persistens limit type&gt;, for eksempel:
+<dt>Sti til fastholdelse: &lt; Sti&gt;</dt>
+<dt>Dynamisk signaturversion: &lt;Versionsnummeret&gt;</dt>
+<dt>Tidsstempel for dynamisk signaturkompilering: &lt;Tidsstempelgrænsetype&gt;</dt>
+<dt>: &lt;Grænsetype&gt; for vedvarende tid, f.eks.:
 <ul>
 <li>VDM-version</li>
 <li>Tidsstempel</li>
@@ -1871,16 +1870,16 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus brugte <i>tjenesten Dynamic Signature</i> til at kassere forældede signaturer.
 <dl>
-<dt>Aktuel signaturversion: &lt; Aktuel signaturversionSignature&gt;</dt>
-<dt> Type: &lt;Signaturtype&gt;, f.eks.: <ul>
+<dt>Aktuel signaturversion: &lt; Aktuel signaturversion&gt;</dt>
+<dt>Signaturtype: &lt;Signaturtype&gt;, f.eks.: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
 <li>Netværksinspektionssystem</li>
 </ul>
 </dt>
-<dt>Aktuel programversion: &lt; Aktuel programversionDynamisk&gt;</dt>
-<dt> signaturtype: &lt;Dynamisk signaturtype&gt;, f.eks.:
+<dt>Aktuel programversion: &lt; Aktuel programversion&gt;</dt>
+<dt>Dynamisk signaturtype: &lt;Dynamisk signaturtype&gt;, f.eks.:
 <ul>
 <li>Version</li>
 <li>Tidsstempel</li>
@@ -1888,11 +1887,11 @@ Microsoft Defender Antivirus brugte <i>tjenesten Dynamic Signature</i> til at ka
 <li>Varighed</li>
 </ul>
 </dt>
-<dt>Sti til fastholdelse: &lt; PathDynamic&gt;</dt> 
-<dt>Signaturversion: &lt;VersionsnummerTidsstempel&gt;</dt> for 
-<dt>signaturkompilering: &lt;TidsstempelRemoval&gt;</dt> 
-<dt>Reason:</dt>
-<dt>Persistence Limit Type: &lt;Persistens limit type&gt;, f.eks.:
+<dt>Sti til fastholdelse: &lt; Sti&gt;</dt>
+<dt>Dynamisk signaturversion: &lt;Versionsnummer&gt;</dt>
+<dt>Tidsstempel for dynamisk signaturkompilering: &lt;Årsag til fjernelse af tidsstempel&gt;</dt>
+<dt>:</dt>
+<dt> Grænsetype for vedvarendehed: &lt;Grænsetype&gt; for vedvarende tid, f.eks.:
 <ul>
 <li>VDM-version</li>
 <li>Tidsstempel</li>
@@ -1936,16 +1935,16 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus stødte på en fejl under forsøg på at bruge <i>tjenesten Dynamic Signature</i>.
 <dl>
-<dt>Aktuel signaturversion: &lt; Aktuel signaturversionSignature&gt;</dt>
-<dt> Type: &lt;Signaturtype&gt;, f.eks.: <ul>
+<dt>Aktuel signaturversion: &lt; Aktuel signaturversion&gt;</dt>
+<dt>Signaturtype: &lt;Signaturtype&gt;, f.eks.: <ul>
 <li>Antivirus</li>
 <li>Antispyware</li>
 <li>Antimalware</li>
 <li>Netværksinspektionssystem</li>
 </ul>
 </dt>
-<dt>Aktuel programversion: &lt; Aktuel programversionFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Aktuel programversion: &lt; Aktuel programversion&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode, der er knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 <dt> Dynamisk signaturtype: &lt;Dynamisk signaturtype&gt;, f.eks.:
 <ul>
@@ -1955,10 +1954,10 @@ Microsoft Defender Antivirus stødte på en fejl under forsøg på at bruge <i>t
 <li>Varighed</li>
 </ul>
 </dt>
-<dt>Sti til fastholdelse: &lt; PathDynamic&gt;</dt> 
-<dt>Signature Version: &lt;VersionsnummerDynamic&gt;</dt> 
-<dt>Signature Compilation Timestamp: &lt;TimestampPersistence&gt;</dt>
-<dt> Limit Type: &lt;Persistens limit type&gt;, for eksempel:
+<dt>Sti til fastholdelse: &lt; Sti&gt;</dt>
+<dt>Dynamisk signaturversion: &lt;Versionsnummeret&gt;</dt>
+<dt>Tidsstempel for dynamisk signaturkompilering: &lt;Tidsstempelgrænsetype&gt;</dt>
+<dt>: &lt;Grænsetype&gt; for vedvarende tid, f.eks.:
 <ul>
 <li>VDM-version</li>
 <li>Tidsstempel</li>
@@ -2032,8 +2031,8 @@ Beskrivelse:
 Microsoft Defender Antivirus downloadet en ren fil.
 <dl>
 <dt>Filnavn: &lt; Filnavn&gt; Navnet på filen.</dt> 
-<dt>Aktuel signaturversion: &lt; Aktuel signaturversionAktuel&gt;</dt> 
-<dt>programversion: &lt;Aktuel programversion&gt;</dt>
+<dt>Aktuel signaturversion: &lt; Aktuel signaturversion&gt;</dt>
+<dt>Aktuel programversion: &lt;Aktuel programversion&gt;</dt>
 </dl>
 </td>
 </tr>
@@ -2063,9 +2062,9 @@ Beskrivelse:
 Microsoft Defender Antivirus stødte på en fejl under forsøg på at hente en ren fil.
 <dl>
 <dt>Filnavn: &lt; Filnavn&gt; Navnet på filen.</dt> 
-<dt>Aktuel signaturversion: &lt; Aktuel signaturversionAktuel&gt;</dt> 
-<dt>programversion: &lt;Aktuel programversionFejlkode&gt;</dt>
-<dt>: &lt;Fejlkode&gt; Resultatkode knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
+<dt>Aktuel signaturversion: &lt; Aktuel signaturversion Aktuel programversion&gt;</dt>
+<dt>: &lt;Aktuel programversion&gt;</dt>
+<dt>Fejlkode: &lt;Fejlkode&gt; Resultatkode knyttet til trusselsstatus. STANDARD HRESULT-værdier.</dt> 
 <dt>Fejlbeskrivelse: &lt; Fejlbeskrivelse&gt; Beskrivelse af fejlen. </dt>
 </dl>
 </td>
@@ -2304,7 +2303,7 @@ Microsoft Defender Antivirus Realtidsbeskyttelse har genstartet en funktion. Det
 Brugerhandling:
 </td>
 <td >
-Funktionen til beskyttelse i realtid er genstartet. Hvis denne hændelse sker igen, skal du kontakte <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+Funktionen til beskyttelse i realtid er genstartet. Hvis denne hændelse sker igen, skal du kontakte <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </td>
 </tr>
 <tr>
@@ -2451,8 +2450,8 @@ Beskrivelse:
 <td >
 Microsoft Defender Antivirus program er blevet afbrudt pga. en uventet fejl.
 <dl>
-<dt>Fejltype: &lt; Fejltype&gt;, f.eks.: Nedbruds- eller</dt> 
-<dt>HangException-kode: &lt;FejlkodeKilde&gt;</dt>
+<dt>Fejltype: &lt; Fejltype&gt;, f.eks.: Undtagelseskode for nedbrud eller låsning</dt>
+<dt>: &lt;Fejlkoderessource&gt;</dt>
 <dt>: &lt;Ressource&gt;</dt>
 </dl>
 </td>
@@ -2469,7 +2468,7 @@ Sådan foretager du fejlfinding af denne hændelse:<ol>
 </li>
 </ul>
 </li>
-<li>Hvis det mislykkes på samme måde, kan du slå fejlkoden op ved at få adgang til <a href="https://go.microsoft.com/fwlink/?LinkId=215163">Microsoft Support-webstedet</a>  og angive fejlnummeret i <b>søgefeltet</b> og kontakte <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.</li>
+<li>Hvis det mislykkes på samme måde, kan du slå fejlkoden op ved at få adgang til <a href="https://go.microsoft.com/fwlink/?LinkId=215163">Microsoft Support-webstedet</a>  og angive fejlnummeret i <b>søgefeltet</b> og kontakte <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.</li>
 </ol>
 </td>
 </tr>
@@ -2483,7 +2482,7 @@ Sådan foretager du fejlfinding af denne hændelse:
 <ol>
 <li>Kør scanningen igen.</li>
 <li>Hvis det mislykkes på samme måde, skal du gå til <a href="https://go.microsoft.com/fwlink/?LinkId=215163">webstedet Microsoft Support</a> og angive fejlnummeret <b>i søgefeltet</b> for at søge efter fejlkoden.</li>
-<li>Kontakt <a href="https://go.microsoft.com/fwlink/?LinkId=215491">Microsoft Teknisk Support</a>.
+<li>Kontakt <a href="/microsoft-365/admin/get-help-support">Microsoft Teknisk Support</a>.
 </li>
 </ol>
 </td>

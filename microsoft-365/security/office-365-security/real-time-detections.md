@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e7f3109048f3a4931d25029df3db9a3c217d6354
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 510064136db8ed374c27ac8039ef78214945e002
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647419"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873826"
 ---
 # <a name="explorer-and-real-time-detections"></a>Explorer- og realtidsregistreringer
 
@@ -170,7 +170,7 @@ Hvis du vil have vist og bruge registreringer i Stifinder *eller* realtid, skal 
 Du kan få mere at vide om roller og tilladelser i følgende artikler:
 
 - [Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md)
-- [Tilladelser i Exchange Online](/e/exchange/permissions-exo/permissions-exo)
+- [Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo)
 
 ## <a name="more-information"></a>Flere oplysninger
 

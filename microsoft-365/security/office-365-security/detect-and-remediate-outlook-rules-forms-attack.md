@@ -18,16 +18,16 @@ description: Få mere at vide om, hvordan du genkender og afhjælper Outlook reg
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 10cbb57018cb0e7c30282ca2c89b6a8dab812e24
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 268e50059ad1b128e583a5be383788b545fa6190
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131102"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874090"
 ---
 # <a name="detect-and-remediate-outlook-rules-and-custom-forms-injections-attacks"></a>Registrer og afhjælp Outlook regler og angreb på brugerdefinerede formularer
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Resumé** Få mere at vide om, hvordan du genkender og afhjælper de Outlook regler og brugerdefinerede formularinjektionsangreb i Office 365.
 
@@ -205,7 +205,7 @@ Den bedste måde at beskytte dine brugerkonti og især dine administratorkonti p
 
   - **Usædvanlig repræsenteret aktivitet (efter bruger)**: Denne politik profilerer dit miljø og udløser beskeder, når brugerne udfører flere repræsenterede aktiviteter i en enkelt session med hensyn til den lærte baseline, hvilket kan indikere et forsøg på brud.
 
-- Brug et værktøj som [Office 365 Secure Score](https://securescore.office.com/) til at administrere sikkerhedskonfigurationer og -funktionsmåder for konti.
+- Brug et værktøj som [Office 365 Secure Score](/microsoft-365/security/defender/microsoft-secure-score) til at administrere sikkerhedskonfigurationer og -funktionsmåder for konti.
 
 ### <a name="second-keep-your-outlook-clients-current"></a>For det andet: Hold dine Outlook klienter opdaterede
 

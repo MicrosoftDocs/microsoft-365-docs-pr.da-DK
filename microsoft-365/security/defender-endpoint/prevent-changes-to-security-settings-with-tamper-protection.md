@@ -17,16 +17,15 @@ ms.custom:
 - nextgen
 - admindeeplinkDEFENDER
 ms.technology: mde
-ms.date: 05/20/2022
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 7ac72d88975231bb76f6e097a80f372a8ffac535
-ms.sourcegitcommit: c4924bcad6648fae279076cafa505fae1194924a
+ms.openlocfilehash: 36aa48f26e60e2c3afb034a218c3356e27d75ffd
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/21/2022
-ms.locfileid: "65626959"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873352"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Beskyt sikkerhedsindstillinger med manipulationsbeskyttelse
 
@@ -154,7 +153,7 @@ Hvis din organisation bruger Microsoft Endpoint Manager (MEM), kan du slå ændr
 - Dine enheder skal [være onboardet til Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboarding).
 - Du skal have tildelt de nødvendige [tilladelser](/microsoft-365/security/defender-endpoint/assign-portal-access) , f.eks. global administrator, sikkerhedsadministrator eller sikkerhedshandlinger.
 - Din organisation bruger [Microsoft Endpoint Manager til at administrere enheder](/mem/endpoint-manager-getting-started). (Microsoft Endpoint Manager(MEM)-licenser er påkrævet. MEM indgår i Microsoft 365 E3/E5, Enterprise Mobility + Security E3/E5, Microsoft 365 Business Premium, Microsoft 365 F1/F3, Microsoft 365  Government G3/G5 og tilsvarende uddannelseslicenser.)
-- Dine Windows enheder skal køre Windows 11 eller Windows 10 [1709](/windows/release-health/status-windows-10-1709), [1803](/windows/release-health/status-windows-10-1803), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) eller nyere. (Du kan få flere oplysninger om udgivelser [under Windows 10 udgivelsesoplysninger](/windows/release-health/release-information)).
+- Dine Windows enheder skal køre Windows 11 eller Windows 10 [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) eller nyere. (Du kan få flere oplysninger om udgivelser [under Windows 10 udgivelsesoplysninger](/windows/release-health/release-information)).
 - Du skal bruge Windows sikkerhed, hvor [security intelligence](https://www.microsoft.com/wdsi/definitions) er opdateret til version 1.287.60.0 (eller nyere).
 - Dine enheder skal bruge platformversion 4.18.1906.3 (eller nyere) og version 4.18.1906.3 (eller nyere) og antimalwaremotorversion `1.1.15500.X` (eller nyere). ([Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md)).
 
@@ -200,8 +199,7 @@ Se følgende ressourcer:
 
 > [!NOTE]
 > Ændringsbeskyttelse blokerer forsøg på at ændre Microsoft Defender Antivirus indstillinger via registreringsdatabasen.
->
-> Hvis du vil sikre, at ændringsbeskyttelse ikke forstyrrer ikke-Microsoft-sikkerhedsprodukter eller virksomhedsinstallationsscripts, der ændrer disse indstillinger, skal du gå til **Windows Sikkerhed** og opdatere **Sikkerhedsintelligens** til version 1.287.60.0 eller nyere. (Se [Opdateringer til sikkerhedsintelligens](https://www.microsoft.com/wdsi/definitions)). Når du har foretaget denne opdatering, beskytter beskyttelse mod ændring fortsat dine indstillinger i registreringsdatabasen, og logge forsøger at ændre dem uden at returnere fejl.
+> Hvis du vil sikre, at ændringsbeskyttelse ikke forstyrrer ikke-Microsoft-sikkerhedsprodukter eller virksomhedsinstallationsscripts, der ændrer disse indstillinger, skal du gå til **Windows Sikkerhed** og opdatere **Sikkerhedsintelligens** til version 1.287.60.0 eller nyere. (Se [Opdateringer til sikkerhedsintelligens](https://www.microsoft.com/wdsi/definitions)). Når du har foretaget denne opdatering, fortsætter beskyttelse mod ændring for at beskytte dine indstillinger i registreringsdatabasen, og logge forsøger at ændre dem uden at returnere fejl.
 
 Hvis du er privat bruger, eller hvis du ikke er underlagt indstillinger, der administreres af et sikkerhedsteam, kan du bruge appen Windows Sikkerhed til at administrere beskyttelse mod ændring. Du skal have de nødvendige administratortilladelser på enheden for at ændre sikkerhedsindstillingerne, f.eks. ændring af beskyttelse.
 
@@ -249,7 +247,7 @@ Hvis du vil vide mere om administration af trussel & sårbarheder, skal [du se D
 
 - Windows 11
 - Windows 11 Enterprise flere sessioner
-- Windows 10 OS [1709](/windows/release-health/status-windows-10-1709), [1803](/windows/release-health/status-windows-10-1803), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) eller nyere sammen med [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
+- Windows 10 OS [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) eller nyere sammen med [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
 - Windows 10 Enterprise flere sessioner
   
 Hvis du bruger Configuration Manager version 2006 med lejertilknyttelse, kan ændringsbeskyttelse udvides til Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 og Windows Server 2022. Se [Lejertilknyt: Opret og installér politikken for slutpunktssikkerhed Antivirus fra Administration (prøveversion)](/mem/configmgr/tenant-attach/deploy-antivirus-policy).

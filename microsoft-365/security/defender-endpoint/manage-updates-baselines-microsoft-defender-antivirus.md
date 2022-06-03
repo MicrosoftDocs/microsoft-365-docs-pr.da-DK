@@ -18,12 +18,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: d2ad08c91d8c28163eccf239f9a7266b15a44927
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: ef9793a1bcbf09f6b7a1640d9213522cdb741891
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418330"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872264"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer
 
@@ -31,7 +31,7 @@ ms.locfileid: "65418330"
 > Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering. Se [Månedlige platform- og programversioner](#monthly-platform-and-engine-versions) (i denne artikel).
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1 og 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1 og 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
 **Platforme**
@@ -297,7 +297,7 @@ Ingen kendte problemer
 
 ### <a name="whats-new"></a>Nyheder
 - Understøttelse af enhedskontrol tilføjet for Windows bærbare enheder
-- Beskyttelse af potentielt uønskede programmer (PUA) er som standard slået til for forbrugere (se [Potentielt uønskede apps blokeres som standard](https://support.microsoft.com/windows/potentially-unwanted-apps-will-be-blocked-by-default-b9f53cb9-7f1e-40bb-8c6b-a17e0ab6289e))
+- PUA-beskyttelse (potentielt uønskede programmer) er som standard slået til for forbrugere (se [Bloker potentielt uønskede programmer med Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)).
 - Planlagte scanninger for Gruppepolitik objektadministrerede systemer overholder den brugerkonfigurerede scanningstid
 - Forbedringer af funktionsovervågningsprogrammet
 
@@ -459,7 +459,7 @@ Ingen kendte problemer
 
 ### <a name="whats-new"></a>Nyheder
 
-- Der kræves administratortilladelser for at gendanne filer i karantæne
+- Administration tilladelser er påkrævet for at gendanne filer i karantæne
 - XML-formaterede hændelser understøttes nu
 - Understøttelse af CSP til at ignorere udeladelsesfletninger
 - Nye administrationsgrænseflader til:
@@ -1032,7 +1032,7 @@ Du kan få flere oplysninger under [Microsoft Defender-opdatering til Windows af
 | [Microsoft Defender for Endpoint opdatering til Slutpunktsregistrering og -svar sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | Du kan opdatere den Slutpunktsregistrering og -svar sensor (MsSense.exe), der er inkluderet i den nye Microsoft Defender for Endpoint samlede løsningspakke, der blev udgivet i 2021.   |
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

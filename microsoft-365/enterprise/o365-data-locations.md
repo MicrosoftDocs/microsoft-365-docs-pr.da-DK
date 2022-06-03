@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 dataplaceringer
-ms.author: deanw
-author: dmwmsft
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
+ms.date: 06/02/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,110 +18,142 @@ ms.custom:
 - admindeeplinkMAC
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: Find ud af, hvor dine Microsoft 365 kundedata gemmes over hele verden
-ms.openlocfilehash: 19741da49baf6890fbc0a7570190df1676990e9e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 07d137c6eda243a1ffa33b486d7cdbea5b37f9d9
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090789"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874053"
 ---
 # <a name="where-your-microsoft-365-customer-data-is-stored"></a>Hvor dine Microsoft 365 kundedata er gemt
 
 I nedenstående tabeller kan du se, hvor kundedata gemmes inaktive for Microsoft 365 tjenester på tværs af alle Microsofts globale cloudplaceringer. Udvid placeringen af dit faktureringsadresseland for at finde ud af, hvor kundedata for hver tjeneste skal gemmes.
 
-Hvis din virksomhed er placeret i DEN Europæiske Union, kan du finde flere oplysninger [under Dataplaceringer for Den Europæiske Union](EU-data-storage-locations.md) . 
+Hvis din virksomhed er placeret i DEN Europæiske Union, kan du finde flere oplysninger [under Dataplaceringer for Den Europæiske Union](EU-data-storage-locations.md) .
 
-Kunder skal få vist lejerspecifikke oplysninger om dataplacering i dit Microsoft 365 Administration i **Indstillinger** >  Ellerg-indstillingerFanenOrganiseringsprofilDataplacering > <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank"></a> > . Hvis du [har anmodet om at flytte til en ny Geo](request-your-data-move.md), viser oplysningerne om dataplaceringen i Microsoft 365 Administration muligvis kun din nye Geo, selvom nogle data midlertidigt gemmes i din tidligere Geo under overgangen. 
+Kunder skal få vist lejerspecifikke oplysninger om dataplacering i dit Microsoft 365 Administration i **Indstillinger** >  **Ellerg-indstillinger** >  fanen  > <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**OrganisationsprofilDataplacering**</a>. Hvis du [har anmodet om at flytte til en ny Geo](request-your-data-move.md), viser oplysningerne om dataplaceringen i Microsoft 365 Administration muligvis kun din nye Geo, selvom nogle data midlertidigt gemmes i din tidligere Geo under overgangen.
 
 Nye Microsoft 365 lejere er som standard Geo baseret på landet for den transaktion, der er knyttet til den pågældende lejers første abonnement.
 
 Du kan finde oplysninger om de kontraktlige forpligtelser til opbevaring af inaktive kundedata i [DPA (Microsoft Products and Services Data Protection Addendum).](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA)
 
-Hvis du vil have Azure Active Directory dataplaceringer, skal du gå [til AAD dataoversigt](https://go.microsoft.com/fwlink/p/?linkid=2092972).
+Hvis du vil have Azure Active Directory dataplaceringer, skal du besøge [AAD-datakort](https://go.microsoft.com/fwlink/p/?linkid=2092972).
 
 Hvis kundens faktureringsadresse er uden for Europa, og kunden har et Office 365 Education abonnement, kan Microsoft klargøre kundens Office 365 lejer i, overføre kundedata til og gemme kundedata inaktive overalt i Europa eller Nordamerika uanset kundens faktureringsadresse.  Hvis kundens faktureringsadresse er i Europa, og kunden har et Office 365 Education abonnement, kan Microsoft klargøre kundens Office 365 lejer i, overføre kundedata til og gemme kundedata som inaktive overalt i EU uanset hvor i EU kunden er.
-
-
-
 
 ## <a name="faq"></a>Ofte stillede spørgsmål
 
 ### <a name="how-does-microsoft-define-data"></a>Hvordan definerer Microsoft data?
+<details><summary>Klik for at udvide</summary>
 
 Gennemse vores [definitioner for at få vist forskellige typer data](https://go.microsoft.com/fwlink/p/?linkid=864390) i Microsoft Center for sikkerhed og rettighedsadministration. I [sikkerhedsvilkårene for beskyttelse af personlige oplysninger &](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all) indgås der kontraktmæssige forpligtelser vedrørende kundedata/dine data. Vi henviser til kernekundedata som de kundedata, der er forpligtet til kun at blive gemt som inaktive i dit område i henhold til [sikkerhedsvilkårene for beskyttelse af personlige oplysninger &](https://www.microsoft.com/licensing/terms/product/PrivacyandSecurityTerms/all).
 
+</details>
+
 ### <a name="where-are-the-exact-addresses-of-the-data-centers"></a>Hvor er de nøjagtige adresser på datacentrene?
+
+<details><summary>Klik for at udvide</summary>
 
 Microsoft oplyser ikke de nøjagtige adresser på sine datacentre. Vi har etableret denne politik for at hjælpe med at sikre vores datacenterfaciliteter.  Men vi angiver byplaceringer. Se [DataCenter-placeringer](o365-data-locations.md#data-center-locations) for at få mere at vide.
 
+</details>
+
 ### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>Har placeringen af dine kundedata direkte indflydelse på dine slutbrugeres oplevelse?
+<details><summary>Klik for at udvide</summary>
 
 Ydeevnen for Microsoft 365 er ikke blot proportional med en brugers afstand til datacenterplaceringer. Microsofts fortsatte investeringer i dets globale cloudnetværk, globale cloudinfrastruktur og arkitekturen for Microsoft 365-tjenester hjælper med at give brugerne en enkeltstående og ensartet oplevelse, uafhængigt af hvor kundedata gemmes som inaktive data. Hvis dine brugere oplever problemer med ydeevnen, bør du foretage dybdegående fejlfinding af disse. Microsoft har udgivet en vejledning til Microsoft 365 kunder til at planlægge og optimere slutbrugerens ydeevne på [webstedet Office Support](./network-planning-and-performance.md).
 
-### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Hvordan hjælper Microsoft mig med at overholde mine nationale, regionale og branchespecifikke bestemmelser?
+</details>
 
-For at hjælpe dig med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af enkeltpersoners data tilbyder Microsoft 365 det mest omfattende sæt af tilbud om overholdelse af angivne standarder for alle globale cloudproduktivitetsudbydere. Gennemse [vores tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home) og flere oplysninger i afsnittet [Microsoft Purview](https://go.microsoft.com/fwlink/p/?linkid=862317) på Microsoft Trust Center. Visse Microsoft 365 planer tilbyder også yderligere løsninger til overholdelse af angivne standarder, der kan hjælpe dig med at administrere dine data, overholde juridiske og lovmæssige krav og overvåge de handlinger, der udføres på dine data.
+### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Hvordan hjælper Microsoft mig med at overholde mine nationale, regionale og branchespecifikke bestemmelser?
+<details><summary>Klik for at udvide</summary>
+
+For at hjælpe dig med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af enkeltpersoners data tilbyder Microsoft 365 det mest omfattende sæt af tilbud om overholdelse af angivne standarder for alle globale cloudproduktivitetsudbydere. Gennemse [vores tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home), og få flere oplysninger i afsnittet [Microsoft Purview](https://go.microsoft.com/fwlink/p/?linkid=862317) i Microsoft Trust Center. Visse Microsoft 365 planer tilbyder også yderligere løsninger til overholdelse af angivne standarder, der kan hjælpe dig med at administrere dine data, overholde juridiske og lovmæssige krav og overvåge de handlinger, der udføres på dine data.
+
+</details>
 
 ### <a name="who-can-access-your-data-and-according-to-what-rules"></a>Who kan få adgang til dine data og efter hvilke regler?
+<details><summary>Klik for at udvide</summary>
 
  Microsoft implementerer stærke foranstaltninger for at hjælpe med at beskytte dine kundedata mod upassende adgang eller brug af uautoriserede personer. Dette omfatter begrænsning af Microsoft-medarbejderes og underleverandørers adgang og nøje definition af krav til besvarelse af offentlige anmodninger om kundedata. Du kan dog til enhver tid og af en hvilken som helst grund få adgang til dine egne kundedata. Du kan finde flere oplysninger i [Microsoft Center for sikkerhed og rettighedsadministration](https://go.microsoft.com/fwlink/p/?linkid=864392).
 
+</details>
+
 ### <a name="does-microsoft-access-your-data"></a>Har Microsoft adgang til dine data?
+<details><summary>Klik for at udvide</summary>
 
 Microsoft automatiserer de fleste Microsoft 365 handlinger og begrænser bevidst sin egen adgang til kundedata. Dette hjælper os med at administrere Microsoft 365 i stor skala og håndtere risikoen for interne trusler mod kundedata. Som standard har Microsoft-teknikere ingen stående administrative rettigheder og ingen stående adgang til kundedata i Microsoft 365. En Microsoft-tekniker kan have begrænset og logført adgang til kundedata i et begrænset tidsrum, men kun når det er nødvendigt i forbindelse med normale servicehandlinger, og kun når den er godkendt af et medlem af den øverste ledelse hos Microsoft (og, for kunder, der har licens til funktionen Kundelåskasse, af kunden).
 
+</details>
+
 ### <a name="how-does-microsoft-secure-your-data"></a>Hvordan sikrer Microsoft dine data?
+<details><summary>Klik for at udvide</summary>
 
 Microsoft har robuste politikker, kontrolelementer og systemer, der er indbygget i Microsoft 365 for at hjælpe med at beskytte dine oplysninger. Gennemse [afsnittet Microsoft 365 sikkerhed](https://go.microsoft.com/fwlink/p/?linkid=864393) i Microsoft Center for sikkerhed og rettighedsadministration for at få mere at vide.
 
+</details>
+
 ### <a name="does-microsoft-365-encrypt-your-data"></a>Krypterer Microsoft 365 dine data?
+<details><summary>Klik for at udvide</summary>
 
 Microsoft 365 bruger teknologier på tjenestesiden, der krypterer inaktive og midlertidige kundedata under overførsel. I forbindelse med inaktive kundedata bruger Microsoft 365 kryptering på diskenhedsniveau og filniveau. I forbindelse med kundedata under overførsel bruger Microsoft 365 flere krypteringsteknologier til kommunikation mellem datacentre og mellem klienter og servere, f.eks. TLS (Transport Layer Security) og IPsec (Internet Protocol Security). Microsoft 365 indeholder også kundeadministrerede krypteringsfunktioner.
 
+</details>
+
 ### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>Hvor kan jeg finde oplysninger om dataopbevaring for Microsoft Azure?
+<details><summary>Klik for at udvide</summary>
 
 Gennemse siden [Produkter, der er tilgængelige efter område](https://go.microsoft.com/fwlink/p/?linkid=2093451) for at finde oplysninger om dataopbevaring for Microsoft Azure.
 
-### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Hvad er Multi-Geo-funktioner i Microsoft 365?
+</details>
 
-[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) giver kunderne mulighed for at tildele inaktive kernekundedata til vores tilgængelige placeringer i Microsoft 365 cloudmiljøet.   
+### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Hvad er Multi-Geo-funktioner i Microsoft 365?
+<details><summary>Klik for at udvide</summary>
+
+[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) giver kunderne mulighed for at tildele inaktive kernekundedata til vores tilgængelige placeringer i Microsoft 365 cloudmiljøet.
+
+</details>  
 
 ### <a name="what-services-support-multi-geo"></a>Hvilke tjenester understøtter Multi-Geo?
+<details><summary>Klik for at udvide</summary>
 
 [Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) er tilgængelig til Exchange Online, OneDrive for Business, SharePoint Online og Teams.
 
+</details>
+
 ### <a name="why-do-i-see-my-microsoft-365-service-requests-for-my-data-at-rest-connecting-to-servers-in-countries-outside-of-my-region"></a>Hvorfor kan jeg se mine Microsoft 365 serviceanmodninger for mine data som inaktive forbindelse til servere i lande uden for mit område?
+<details><summary>Klik for at udvide</summary>
 
 Nogle gange kan en kundeanmodning håndteres af servere i et andet område end det sted, hvor dine data er gemt som inaktive. Dette kan ske, når beslutninger om netværksrouting vælger en anden server til behandling af anmodningen, men i disse tilfælde flyttes dine data ikke til en ny inaktiv placering.
 
-### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Hvad er undtagelserne for Intune dataplaceringer?
+</details>
 
-Microsoft gemmer ikke Intune inaktive kundedata uden for det angivne Geo. undtagen, hvis:
+### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Hvad er undtagelserne for Intune dataplaceringer?
+<details><summary>Klik for at udvide</summary>
+
+Microsoft gemmer ikke Intune kundedata inaktivt uden for den angivne geografiske placering, medmindre:
 
 - Det er nødvendigt for Microsoft at yde kundesupport, foretage fejlfinding af tjenesten eller overholde juridiske krav.
 - Kunden konfigurerer en konto for at aktivere sådan lagring af kundedata, herunder ved hjælp af følgende:
-
   - Funktioner, der er udviklet til at fungere globalt, f.eks. Content Delivery Network (CDN), som leverer en global cachelagringstjeneste og gemmer kundedata på grænseplaceringer over hele verden.
-
-  - Azure Active Directory (Azure AD), som kan gemme katalogdata globalt. Dette gælder ikke for Azure AD-udrulninger i USA (hvor Azure AD-data kun gemmes i USA) eller i Europa (hvor Azure AD-data er gemt i Europa eller USA).
-   
+  - Azure Active Directory (Azure AD), som kan gemme katalogdata globalt. Dette gælder ikke for Azure AD installationer i USA (hvor Azure AD data kun gemmes i USA) eller i Europa (hvor Azure AD data er gemt i Europa eller USA).
   - Prøveversion, beta eller andre foreløbige tjenester, som typisk gemmer kundedata i USA, men som kan gemme dem globalt.
 
-Uanset hvad styrer eller begrænser Microsoft ikke geoen, hvorfra kunder eller deres slutbrugere kan få adgang til kundedata. På samme måde, hvor kundedata i andre tjenester efterfølgende integreres i Intune, gemmes de oprindelige kundedata fortsat under forbehold af den anden tjenestes egne Geo-forpligtelser (hvis nogen). Kun kopien af de kundedata, der er integreret i Intune, gemmes i det angivne Geo for Intune.  
+Uanset hvad styrer eller begrænser Microsoft ikke geoen, hvorfra kunder eller deres slutbrugere kan få adgang til kundedata. På samme måde, hvor kundedata i andre tjenester efterfølgende integreres i Intune, gemmes de oprindelige kundedata fortsat under forbehold af den anden tjenestes egne Geo-forpligtelser (hvis nogen). Kun kopien af de kundedata, der er integreret i Intune, gemmes i det angivne Geo for Intune.
+
+</details>
 
 ### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Hvad er overvejelserne i forbindelse med Microsoft Viva dataplaceringer?
+<details><summary>Klik for at udvide</summary>
 
 - Viva Connections
-
-  - Data til dashboard-, ressource- og skrivebordsappen gemmes i SharePoint Online. 
-  
-  - Feedet indeholder indhold fra SharePoint Online (nyheder), Stream (gemt inaktivt i SharePoint Online) og Yammer (gemt inaktivt i Yammer).  
-  
+  - Data til dashboard-, ressource- og skrivebordsappen gemmes i SharePoint Online.
+  - Feedet indeholder indhold fra SharePoint Online (nyheder), Stream (gemt inaktivt i SharePoint Online) og Yammer (gemt inaktivt i Yammer).
 - Viva Insights
-
   - Dataopbevaring for den personlige app er baseret på brugerens postkasseplacering.
-  
   - Dataområdet for Leder/Leder og Avanceret bestemmes af lejerens primære område, ikke individuelle brugere.
+
+</details>
 
 ## <a name="data-center-locations"></a>Datacenterplaceringer
 
@@ -128,7 +161,7 @@ I nedenstående tabel defineres dataplaceringen for forskellige tjenester. Når 
 
 ### <a name="data-center-geographies"></a>Geografiske datacentre
 
-Følgende globale geografiske områder kan gemme hviledata. De placeringer, hvor kundedata kan gemmes, kan ændres. 
+Følgende globale geografiske områder kan gemme hviledata. De placeringer, hvor kundedata kan gemmes, kan ændres.
 
 | Globale geografiske områder | Placeringer, hvor kundedata kan gemmes |
 | --- | --- |
@@ -184,7 +217,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -212,7 +245,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -240,7 +273,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -268,7 +301,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -296,7 +329,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -324,7 +357,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -352,7 +385,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -380,7 +413,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -408,7 +441,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -436,7 +469,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -464,7 +497,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -492,7 +525,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -520,7 +553,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -548,7 +581,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Australien |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Australien |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -576,7 +609,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -604,7 +637,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -632,7 +665,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -660,7 +693,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -688,7 +721,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -716,11 +749,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="belarus"></a>Hviderusland
 <details><summary>Klik for at udvide</summary><p>
@@ -745,7 +777,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -773,7 +805,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -801,7 +833,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -829,7 +861,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -857,7 +889,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -885,7 +917,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -913,7 +945,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -941,7 +973,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -969,7 +1001,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -997,7 +1029,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1025,7 +1057,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1053,7 +1085,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Brasilien |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Brasilien |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1081,7 +1113,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1109,7 +1141,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1137,7 +1169,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1165,7 +1197,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1193,7 +1225,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1221,7 +1253,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1249,7 +1281,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1277,7 +1309,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1305,7 +1337,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Canada |
 | Viva Learning | USA |
 | Viva Insights - Personlig | Canada |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1333,7 +1365,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1361,7 +1393,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1389,7 +1421,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1417,7 +1449,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1445,7 +1477,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1473,7 +1505,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1501,7 +1533,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1529,7 +1561,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1557,7 +1589,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1585,11 +1617,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="congo-brazzaville"></a>Congo (Brazzaville)
 <details><summary>Klik for at udvide</summary><p>
@@ -1614,11 +1645,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="congo-kinshasa"></a>Congo, (Kinshasa)
 <details><summary>Klik for at udvide</summary><p>
@@ -1643,11 +1673,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="cook-islands"></a>Cookøerne
 <details><summary>Klik for at udvide</summary><p>
@@ -1672,7 +1701,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1700,7 +1729,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1728,7 +1757,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1756,7 +1785,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1784,7 +1813,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1812,7 +1841,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1840,7 +1869,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1868,7 +1897,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1896,7 +1925,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1924,7 +1953,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1952,7 +1981,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -1980,7 +2009,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2008,7 +2037,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2036,7 +2065,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2064,7 +2093,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2092,7 +2121,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2120,7 +2149,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2148,7 +2177,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2176,7 +2205,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2204,7 +2233,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2232,7 +2261,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2260,7 +2289,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Australien |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Australien |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2288,7 +2317,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2316,7 +2345,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Frankrig |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Frankrig |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2344,7 +2373,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2372,7 +2401,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2400,7 +2429,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2428,7 +2457,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2456,7 +2485,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2484,7 +2513,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2512,7 +2541,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Tyskland |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Tyskland |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2540,7 +2569,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2568,7 +2597,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2596,11 +2625,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="greenland"></a>Grønland
 <details><summary>Klik for at udvide</summary><p>
@@ -2625,7 +2653,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2653,7 +2681,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2681,7 +2709,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2709,7 +2737,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2737,7 +2765,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2765,7 +2793,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2793,7 +2821,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2821,7 +2849,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2849,7 +2877,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2877,7 +2905,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2905,7 +2933,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2933,7 +2961,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2961,7 +2989,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -2989,7 +3017,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3017,7 +3045,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3045,7 +3073,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3073,11 +3101,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="india"></a>Indien
 <details><summary>Klik for at udvide</summary><p>
@@ -3102,7 +3129,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Indien |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Indien |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3130,7 +3157,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3158,7 +3185,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3186,7 +3213,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3214,7 +3241,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3242,7 +3269,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3270,7 +3297,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3298,7 +3325,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3326,7 +3353,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Japan |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Japan |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3354,7 +3381,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3382,7 +3409,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3410,7 +3437,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3438,7 +3465,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3466,7 +3493,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3494,7 +3521,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Sydkorea |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Sydkorea |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3522,7 +3549,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3550,7 +3577,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3578,7 +3605,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3606,7 +3633,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3634,7 +3661,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3662,11 +3689,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="lesotho"></a>Lesotho
 <details><summary>Klik for at udvide</summary><p>
@@ -3691,11 +3717,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="liberia"></a>Liberia
 <details><summary>Klik for at udvide</summary><p>
@@ -3720,7 +3745,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3748,11 +3773,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="liechtenstein"></a>Liechtenstein
 <details><summary>Klik for at udvide</summary><p>
@@ -3777,7 +3801,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Schweiz |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Schweiz |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3805,7 +3829,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3833,7 +3857,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3861,7 +3885,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3889,7 +3913,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3917,7 +3941,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3945,7 +3969,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -3973,7 +3997,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4001,7 +4025,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4029,7 +4053,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4057,7 +4081,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4085,7 +4109,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4113,7 +4137,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4141,7 +4165,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4169,7 +4193,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4197,7 +4221,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4225,7 +4249,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4253,7 +4277,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4281,7 +4305,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4309,7 +4333,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4337,7 +4361,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4365,7 +4389,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4393,7 +4417,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4421,7 +4445,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4449,11 +4473,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="nepal"></a>Nepal
 <details><summary>Klik for at udvide</summary><p>
@@ -4478,11 +4501,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="netherlands"></a>Nederlandene
 <details><summary>Klik for at udvide</summary><p>
@@ -4507,7 +4529,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4535,11 +4557,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="new-caledonia"></a>Ny Kaledonien
 <details><summary>Klik for at udvide</summary><p>
@@ -4564,7 +4585,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4592,7 +4613,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Australien |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Australien |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4620,7 +4641,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4648,7 +4669,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4676,7 +4697,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4704,7 +4725,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4732,7 +4753,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4760,7 +4781,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4788,7 +4809,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Norge |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Norge |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 
@@ -4817,7 +4838,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4845,7 +4866,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4873,7 +4894,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4901,7 +4922,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4929,7 +4950,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4957,7 +4978,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -4985,7 +5006,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5013,7 +5034,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5041,7 +5062,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5069,7 +5090,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5097,7 +5118,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5125,7 +5146,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5153,7 +5174,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5181,7 +5202,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5209,7 +5230,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5237,7 +5258,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5265,7 +5286,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5273,7 +5294,6 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 ## <a name="russian-federation"></a>Rusland
 <details><summary>Klik for at udvide</summary><p>
 
-
 | Tjeneste | Placering |
 | --- | --- |
 | Exchange Online | Global geografi 1 – EMEA |
@@ -5294,7 +5314,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5302,7 +5322,6 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 ## <a name="rwanda"></a>Rwanda
 <details><summary>Klik for at udvide</summary><p>
 
-
 | Tjeneste | Placering |
 | --- | --- |
 | Exchange Online | Global geografi 1 – EMEA |
@@ -5323,7 +5342,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5331,7 +5350,6 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 ## <a name="saint-helena"></a>Saint Helena
 <details><summary>Klik for at udvide</summary><p>
 
-
 | Tjeneste | Placering |
 | --- | --- |
 | Exchange Online | Global geografi 1 – EMEA |
@@ -5352,7 +5370,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5380,7 +5398,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5408,7 +5426,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5436,7 +5454,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5464,7 +5482,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5492,7 +5510,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5520,7 +5538,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5548,7 +5566,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5572,13 +5590,13 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Stream | Global geografi 1 – EMEA |
 | Whiteboard | USA |
 | Former | Global geografi 1 – EMEA |
-| Viva Connections | Global geografi 1 – EMEA |
-| Viva Topics | Global geografi 1 – EMEA |
+| Viva-forbindelser | Global geografi 1 – EMEA |
+| Viva-emner | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
-| Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
-| Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
-| Viva Insights – avanceret | USA |
+| Viva Insights – Personlig | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
+| Viva Insights – Kun leder/leder med HR-data fra tredjepart | USA |
+| Viva Insights – Avanceret | USA |
 </p></details>
 
 ## <a name="sao-tome-and-principe"></a>São Tomé og Príncipe
@@ -5600,13 +5618,13 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Stream | Global geografi 1 – EMEA |
 | Whiteboard | USA |
 | Former | Global geografi 1 – EMEA |
-| Viva Connections | Global geografi 1 – EMEA |
-| Viva Topics | Global geografi 1 – EMEA |
+| Viva-forbindelser | Global geografi 1 – EMEA |
+| Viva-emner | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
-| Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
-| Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
-| Viva Insights – avanceret | USA |
+| Viva Insights – Personlig | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
+| Viva Insights – Kun leder/leder med HR-data fra tredjepart | USA |
+| Viva Insights – Avanceret | USA |
 </p></details>
 
 ## <a name="saudi-arabia"></a>Saudi-Arabien
@@ -5628,11 +5646,11 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Stream | Global geografi 1 – EMEA |
 | Whiteboard | USA |
 | Former | Global geografi 1 – EMEA |
-| Viva Connections | Global geografi 1 – EMEA |
+| Viva-forbindelser | Global geografi 1 – EMEA |
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5660,7 +5678,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5688,7 +5706,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5716,7 +5734,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5744,7 +5762,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5772,7 +5790,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5800,7 +5818,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5828,7 +5846,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5856,7 +5874,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5884,14 +5902,13 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
 
 ## <a name="somalia"></a>Somalia
 <details><summary>Klik for at udvide</summary><p>
-
 
 | Tjeneste | Placering |
 | --- | --- |
@@ -5913,7 +5930,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5941,7 +5958,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Sydafrika |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Sydafrika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
  </p></details>
@@ -5969,7 +5986,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -5997,7 +6014,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Eu |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Eu |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6025,7 +6042,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6053,7 +6070,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6081,7 +6098,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6109,7 +6126,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6137,7 +6154,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Sverige |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Sverige |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6165,7 +6182,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Schweiz |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Schweiz |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6193,7 +6210,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6221,7 +6238,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6249,7 +6266,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6277,7 +6294,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6305,7 +6322,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6333,7 +6350,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6361,7 +6378,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6389,7 +6406,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6417,7 +6434,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6445,7 +6462,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6473,7 +6490,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6501,7 +6518,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6529,7 +6546,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6557,7 +6574,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6585,7 +6602,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6613,7 +6630,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6641,7 +6658,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6669,7 +6686,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | De Forenede Arabiske Emirater |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | De Forenede Arabiske Emirater |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
  </p></details>
@@ -6697,7 +6714,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Storbritannien |
 | Viva Learning | Eu |
 | Viva Insights - Personlig | Storbritannien |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Eu |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Eu |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6725,7 +6742,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6753,7 +6770,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geography 3 – Nord- og Sydamerika |
 | Viva Learning | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights - Personlig | Global Geography 3 – Nord- og Sydamerika |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geography 3 – Nord- og Sydamerika |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geography 3 – Nord- og Sydamerika |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6781,7 +6798,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6809,7 +6826,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6837,7 +6854,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6864,11 +6881,10 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | USA |
 | Viva Learning | USA |
 | Viva Insights - Personlig | USA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | USA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | USA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
-
 
 ## <a name="vietnam"></a>Vietnam
 <details><summary>Klik for at udvide</summary><p>
@@ -6893,7 +6909,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6921,7 +6937,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Learning | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights - Personlig | Global Geografi 2 – Asien og Stillehavsområdet |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global Geografi 2 – Asien og Stillehavsområdet |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global Geografi 2 – Asien og Stillehavsområdet |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6949,7 +6965,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -6977,7 +6993,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -7005,7 +7021,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>
@@ -7033,7 +7049,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |
-| Viva Insights – kun organisationsdata for leder/leder AAD | Global geografi 1 – EMEA |
+| Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
 | Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
 | Viva Insights – avanceret | USA |
 </p></details>

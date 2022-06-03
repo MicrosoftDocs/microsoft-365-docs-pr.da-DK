@@ -16,12 +16,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 369c6a198035418a5c16e2a72d84c8dcfc88be2f
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 3452f36068facc92885047184f7e00828f569cbc
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666432"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873000"
 ---
 # <a name="troubleshoot-performance-issues-for-microsoft-defender-for-endpoint-on-linux"></a>Fejlfinding af problemer med ydeevnen for Microsoft Defender for Endpoint på Linux
 
@@ -32,7 +32,7 @@ ms.locfileid: "64666432"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 Dette dokument indeholder instruktioner om, hvordan du begrænser ydeevneproblemer, der er relateret til Defender for Endpoint på Linux, ved hjælp af de tilgængelige diagnosticeringsværktøjer for at kunne forstå og afhjælpe den eksisterende ressourcemangel og de processer, der gør systemet til sådanne situationer. Problemer med ydeevnen skyldes hovedsageligt flaskehalse i et eller flere delsystemer til hardware, afhængigt af ressourceudnyttelsens profil i systemet. Nogle gange er programmer følsomme over for disk-I/O-ressourcer og kan have brug for mere CPU-kapacitet, og nogle gange er nogle konfigurationer ikke bæredygtige, og de kan udløse for mange nye processer og åbne for mange filbeskrivelser.
 
@@ -190,7 +190,7 @@ MDECA (Microsoft Defender for Endpoint Client Analyzer) kan indsamle sporings-, 
    ![Billede af eksempel på kommandolinje.](images/4ca188f6c457e335abe3c9ad3eddda26.png)
 
 > [!NOTE]
-> - Analysen kræver 'lxml' for at producere resultatoutputtet. Hvis den ikke er installeret, forsøger analysefunktionen at hente den fra det officielle lager til Python-pakker nedenfor: <https://files.pythonhosted.org/packages/\*/lxml\*.whl>
+> - Analysen kræver 'lxml' for at producere resultatoutputtet. Hvis den ikke er installeret, forsøger analysefunktionen at hente den fra det officielle lager til Python-pakker nedenfor: <https://pypi.org/search/?q=lxml>
 > 
 > - Desuden kræver værktøjet i øjeblikket, at Python version 3 eller nyere er installeret.
 >
@@ -243,9 +243,9 @@ MDECA (Microsoft Defender for Endpoint Client Analyzer) kan indsamle sporings-, 
 
   Beskrivelse: Yderligere XML-fil, der bruges af analysefunktionen, når HTML-rapporten bygges.
 
-- Auditd_info.txt
+- Audited_info.txt
 
-  Beskrivelse: Oplysninger om overvåget tjeneste og relaterede komponenter til [Linux](/windows/security/threat-protection/microsoft-defender-atp/linux-support-events) OS
+  Beskrivelse: oplysninger om overvåget tjeneste og relaterede komponenter til [Linux](/microsoft-365/security/defender-endpoint/linux-resources) OS
 
 - perf_benchmark.tar.gz
 

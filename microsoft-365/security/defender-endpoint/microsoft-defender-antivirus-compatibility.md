@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 5a38ed6fbdcebf54dcd8bc34458733b5edefb850
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 2000d10918c7e351c7e4bedfe8281b6a011cca9d
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623148"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872418"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
@@ -49,7 +49,7 @@ I denne artikel beskrives det, hvad der sker med Microsoft Defender Antivirus og
 > [!IMPORTANT]
 > - Microsoft Defender Antivirus er tilgængelig på enheder, der kører Windows 10 og 11, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 eller nyere og Windows Server 2016. 
 > - Microsoft Defender Antivirus fås også på Windows Server 2012 R2, når den onboardes ved hjælp af den [moderne, samlede løsning](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
-> - På Windows 8.1 tilbydes antivirusbeskyttelse på virksomhedsniveau som [System Center Endpoint Protection](/tidligere-versioner/system-center/system-center-2012-R2/hh508760(v=technet.10), som administreres via Microsoft Endpoint Configuration Manager.
+> - På Windows 8.1 tilbydes antivirusbeskyttelse på virksomhedsniveau som [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)), som administreres via Microsoft Endpoint Configuration Manager.
 > - Windows Defender tilbydes også til [forbrugerenheder på Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), selvom Windows Defender ikke leverer administration på virksomhedsniveau.
 
 ## <a name="antivirus-protection-without-defender-for-endpoint"></a>Antivirusbeskyttelse uden Defender for Endpoint
@@ -65,8 +65,8 @@ I følgende tabel opsummeres det, hvad du kan forvente:
 |:---|:---|:---|
 |Windows 10 <br/> Windows 11|Microsoft Defender Antivirus|Aktiv tilstand|
 |Windows 10 <br/> Windows 11|En ikke-Microsoft-antivirus-/antimalwareløsning|Deaktiveret tilstand (sker automatisk)|
-|Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, version 1803 eller nyere <br/> Windows Server 2016 |Microsoft Defender Antivirus|Aktiv tilstand|
-|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803 eller nyere <br/> Windows Server 2016  |En ikke-Microsoft-antivirus-/antimalwareløsning|Deaktiveret (indstillet manuelt) <sup>[[1](#fn1)]</sup>|
+|Windows Server 2022 <br/> Windows Server 2019<br/> Windows Server, version 1803 eller nyere <br/> Windows Server 2016 <br/> Windows Server 2012 R2 |Microsoft Defender Antivirus|Aktiv tilstand|
+|Windows Server 2022<br/>Windows Server 2019<br/>Windows Server, version 1803 eller nyere <br/> Windows Server 2016 |En ikke-Microsoft-antivirus-/antimalwareløsning|Deaktiveret (indstillet manuelt) <sup>[[1](#fn1)]</sup>|
 
 (<a id="fn1">1</a>) Hvis du kører et antivirusprogram, der ikke er fra Microsoft, på Windows Server, kan du fjerne Microsoft Defender Antivirus for at forhindre konflikt. Hvis enheden er onboardet til Microsoft Defender for Endpoint, kan du bruge Microsoft Defender Antivirus i passiv tilstand (se nedenfor).
 

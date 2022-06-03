@@ -1,7 +1,7 @@
 ---
-title: Upload til det direkte svarbibliotek
-description: Få mere at vide om, hvordan du overfører en fil til live svarbiblioteket.
-keywords: API'er, graph api, understøttede API'er, upload til bibliotek
+title: Upload filer til biblioteket med livebesvaring
+description: Få mere at vide om, hvordan du uploader en fil til biblioteket med live-svar.
+keywords: apis, graf-API, understøttede API'er, upload til bibliotek
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -20,23 +20,23 @@ ms.collection:
 ms.topic: reference
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 84ec7e361cccdc886650b0710f738a4315c4db8d
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+ms.openlocfilehash: 8e0bc9ca78a7e0baad7c07e73790215618aff9ab
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63705595"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873731"
 ---
-#  <a name="upload-files-to-the-live-response-library"></a>Upload til det direkte svarbibliotek  
+#  <a name="upload-files-to-the-live-response-library"></a>Upload filer til biblioteket med livebesvaring  
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender til Slutpunkt](https://go.microsoft.com/fwlink/p/?linkid=2146631)
+- [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)
 
 [!include[Prerelease information](../../includes/prerelease.md)]
 
->Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
+>Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://www.microsoft.com/microsoft-365/windows/microsoft-defender-atp?ocid=docs-wdatp-exposedapis-abovefoldlink) 
 
 [!include[Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 
@@ -44,23 +44,23 @@ ms.locfileid: "63705595"
 
 ## <a name="api-description"></a>API-beskrivelse
 
-Upload til live svarbibliotek.
+Upload fil til biblioteket med live-svar.
 
 ## <a name="limitations"></a>Begrænsninger
 
-1.  Begrænsning på filstørrelse er 20 MB.
+1.  Begrænsning af filmaks. størrelse er 20 MB.
 
-2.  Satsbegrænsninger for denne API er 100 opkald pr. minut og 1500 opkald pr. time.
+2.  Hastighedsbegrænsninger for denne API er 100 opkald pr. minut og 1500 opkald pr. time.
 
 ## <a name="permissions"></a>Tilladelser
 
-En af følgende tilladelser er påkrævet for at kalde denne API. Du kan få mere at vide, herunder hvordan du vælger tilladelser, under [Introduktion](apis-intro.md).
+En af følgende tilladelser er påkrævet for at kalde denne API. Hvis du vil vide mere, herunder hvordan du vælger tilladelser, skal du se [Kom i gang](apis-intro.md).
 
 
-| Tilladelsestype                    | Tilladelse     | Visningsnavn for tilladelse        |
+| Tilladelsestype                    | Tilladelse     | Vist navn for tilladelse        |
 |------------------------------------|----------------|--------------------------------|
-| Program                        | Library.Manage | Administrer live svarbibliotek |
-| Delegeret (arbejds- eller skolekonto) | Library.Manage | Administrer live svarbibliotek |
+| Program                        | Library.Manage | Administrer bibliotek med live-svar |
+| Uddelegeret (arbejds- eller skolekonto) | Library.Manage | Administrer bibliotek med live-svar |
 
 ## <a name="http-request"></a>HTTP-anmodning
 
@@ -70,38 +70,38 @@ Upload
 POST https://api.securitycenter.microsoft.com/api/libraryfiles
 ```
 
-## <a name="request-headers"></a>Anmod om brevhoveder
+## <a name="request-headers"></a>Anmodningsheadere
 
 |  Navn   |    Type    |       Beskrivelse                         |
 |-----------------|--------|--------------------------------|
-| Godkendelse   | String | Bearer\<token>. Påkrævet.      |
-| Indholdstype    | streng | multipart/form-data. Påkrævet. |
+| Tilladelse   | String | Ihændehaver\<token>. Kræves.      |
+| Indholdstype    | Streng | flerparts-/formulardata. Kræves. |
 
-## <a name="request-body"></a>Anmodningstekst
+## <a name="request-body"></a>Brødtekst i anmodning
 
-I brødteksten til anmodningen skal du angive et formulardataobjekt med følgende parametre:
+Angiv følgende parametre for et formulardataobjekt i anmodningens brødtekst:
 
 | Parameter         |     Type         |       Beskrivelse                                        |
 |-----------------------|--------------|------------------------------------------------------------|
-| Filer                  | Filindhold | Den fil, der skal uploades til Live Response Library. Påkrævet |
+| Filer                  | Filindhold | Den fil, der skal overføres til biblioteket med live-svar. Kræves |
 | Beskrivelse           | String       | Beskrivelse af filen.                                  |
-| ParametersDescription | String       | (Valgfrit) Parametre, der kræves, for at scriptet kan køres. Standardværdien er en tom streng.                |
-| OverrideIfExists      | Boolesk       | (Valgfrit) Om filen skal tilsidesættes, hvis den allerede findes. Standardværdien er en tom streng.          |
+| ParametersDescription | String       | (Valgfrit) Parametre, der kræves, for at scriptet kan køre. Standardværdien er en tom streng.                |
+| OverrideIfExists      | Boolesk       | (Valgfrit) Angiver, om filen skal tilsidesættes, hvis den allerede findes. Standardværdien er en tom streng.          |
 
 
 
 ## <a name="response"></a>Svar
 
--   Hvis det lykkes, returnerer denne metode 200 - OK-svarkode og den overførte enhed til Live Response-biblioteket i svarteksten.
+-   Hvis det lykkes, returnerer denne metode 200 – OK-svarkode og det overførte live response-biblioteksobjekt i svarets brødtekst.
 
--   Hvis det ikke lykkes: Denne metode returnerer 400 - Dårlig anmodning.  
-    Dårlig anmodning angiver normalt forkert brødtekst.
+-   Hvis det ikke lykkes: Denne metode returnerer 400 – ugyldig anmodning.  
+    Forkert anmodning angiver normalt forkert brødtekst.
 
 ## <a name="example"></a>Eksempel
 
-Anmod
+Anmodning
 
-Her er et eksempel på anmodningen med krøllede.
+Her er et eksempel på anmodningen ved hjælp af curl.
 
 ```CURL
 curl -X POST https://api.securitycenter.microsoft.com/api/libraryfiles -H
@@ -113,4 +113,4 @@ description"
 
 ## <a name="related-topic"></a>Relateret emne
 
--  [Kør live-svar](run-live-response.md) 
+-  [Kør Direkte svar](run-live-response.md) 

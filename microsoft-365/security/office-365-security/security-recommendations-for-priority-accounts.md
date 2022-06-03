@@ -21,12 +21,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de hæver sikkerhedsindstillingerne og bruger rapporter, beskeder og undersøgelser til prioriterede konti i deres Microsoft 365 organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 50d51bf2861d1ef1b9e4d9694fc9469fc5ec7406
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 99e4726af1226e044715d33e92a176c9292b49ab
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648629"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873374"
 ---
 # <a name="security-recommendations-for-priority-accounts-in-microsoft-365"></a>Sikkerhedsanbefalinger for prioritetskonti i Microsoft 365
 
@@ -53,7 +53,7 @@ Microsoft 365 og Microsoft Defender for Office 365 indeholder flere vigtige funk
 |[Oplær brugere](#train-users)|![Inkluderet.](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet](../../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
 > [!NOTE]
-> Du kan finde oplysninger om sikring af _privilegerede konti_ (administratorkonti) i [dette emne](/azure/architecture/framework/security/critical-impact-accounts).
+> Du kan finde oplysninger om sikring af _privilegerede konti_ (administratorkonti) i [dette emne](/security/compass/critical-impact-accounts).
 
 ## <a name="increase-sign-in-security-for-priority-accounts"></a>Forøg logonsikkerhed for prioritetskonti
 

@@ -17,19 +17,19 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 83da2034a04da85849383700204174110ceffa57
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 6df00016658ee8afb703c15b95a969169ab80b41
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188520"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872330"
 ---
 # <a name="microsoft-defender-for-endpoint---mobile-threat-defense"></a>Microsoft Defender for Endpoint – Mobile Threat Defense
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -111,7 +111,7 @@ Dette hjælper med at reducere potentielle problemer, der kan opstå, når tjene
 
 - Enheder vises på listen over enheders lager: Når onboarding af Defender for Endpoint på mobilenheden er fuldført, skal du kontrollere, at enheden er angivet i enhedsoversigten i [sikkerhedskonsollen](https://security.microsoft.com).
 
-- Kør en test til registrering af malware på en Android-enhed: Installér en hvilken som helst testvirusapp fra Google Play Store, og kontrollér, at den registreres af Microsoft Defender for Endpoint. Her er et eksempel på en app, der kan bruges til denne test: [Test virus](https://play.google.com/store/apps/details?id=com.androidantivirus.testvirus). Bemærk, at det kun er arbejdsprofilen, der understøttes på Android Enterprise med en arbejdsprofil.
+- Kør en test til registrering af malware på en Android-enhed: Installér en hvilken som helst testvirusapp fra Google Play Store, og kontrollér, at den registreres af Microsoft Defender for Endpoint. Her er et eksempel på en app, der kan bruges til denne test: [Test virus](https://play.google.com/store/apps/details?id=com.antivirus&hl=en_US&gl=US). Bemærk, at det kun er arbejdsprofilen, der understøttes på Android Enterprise med en arbejdsprofil.
 
 - Kør en phishing-test: Gå til , https://smartscreentestratings2.net og bekræft, at den blokeres af Microsoft Defender for Endpoint. Bemærk, at det kun er arbejdsprofilen, der understøttes på Android Enterprise med en arbejdsprofil.
 

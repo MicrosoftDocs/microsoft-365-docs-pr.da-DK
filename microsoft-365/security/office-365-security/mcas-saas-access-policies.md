@@ -15,37 +15,37 @@ ms.collection:
 - M365-identity-device-management
 - M365-security-compliance
 ms.prod: m365-security
-ms.openlocfilehash: a53666c58c8a9cc5793d160c428bc96ea322b274
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 8386b01da6d0db5703d74d96f4e22de18b1f7d70
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945533"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873616"
 ---
 # <a name="recommended-microsoft-defender-for-cloud-apps-policies-for-saas-apps"></a>Anbefalede Microsoft Defender for Cloud Apps politikker for SaaS-apps
 
-Microsoft Defender for Cloud Apps bygger på politikker for betinget adgang i Azure AD for at muliggøre overvågning og kontrol i realtid af detaljerede handlinger med SaaS-apps, f.eks. blokering af downloads, uploads, kopiering og indsættelse og udskrivning. Denne funktion føjer sikkerhed til sessioner, der medfører en indbygget risiko, f.eks. når virksomhedsressourcer tilgås fra ikke-administrerede enheder eller af gæstebrugere.
+Microsoft Defender for Cloud Apps bygger på Azure AD politikker for betinget adgang, der gør det muligt at overvåge og styre detaljerede handlinger med SaaS-apps i realtid, f.eks. blokering af downloads, uploads, kopiering og indsættelse og udskrivning. Denne funktion føjer sikkerhed til sessioner, der medfører en indbygget risiko, f.eks. når virksomhedsressourcer tilgås fra ikke-administrerede enheder eller af gæstebrugere.
 
-Defender for Cloud Apps kan også integreres oprindeligt med Microsoft Purview Information Protection, hvilket giver mulighed for indholdsinspektion i realtid for at finde følsomme data, der er baseret på følsomme informationstyper og følsomhedsmærkater, og for at udføre de nødvendige handlinger.
+Defender for Cloud Apps kan også integreres oprindeligt med Microsoft Purview Information Protection, hvilket giver indholdsinspektion i realtid, så du kan finde følsomme data, der er baseret på følsomme informationstyper og følsomhedsmærkater, og foretage de nødvendige handlinger.
 
 Denne vejledning indeholder anbefalinger til disse scenarier:
 
 - Overfør SaaS-apps til it-administration
 - Juster beskyttelse for bestemte SaaS-apps
-- Konfigurer Microsoft Purview DLP (forebyggelse af datatab) for at hjælpe med at overholde databeskyttelsesreglerne
+- Konfigurer Microsoft Purview forebyggelse af datatab (DLP) for at hjælpe med at overholde databeskyttelsesreglerne
 
 ## <a name="bring-saas-apps-into-it-management"></a>Overfør SaaS-apps til it-administration
 
-Det første trin i brugen af Defender for Cloud Apps til at administrere SaaS-apps er at finde disse og derefter føje dem til din Azure AD-lejer. Hvis du har brug for hjælp til at finde, skal du se [Find og administrer SaaS-apps i dit netværk](/cloud-app-security/tutorial-shadow-it). Når du har opdaget apps, [kan du føje disse til din Azure AD-lejer](/azure/active-directory/manage-apps/add-application-portal).
+Det første trin i brugen af Defender for Cloud Apps til at administrere SaaS-apps er at finde disse og derefter føje dem til din Azure AD lejer. Hvis du har brug for hjælp til at finde, skal du se [Find og administrer SaaS-apps i dit netværk](/cloud-app-security/tutorial-shadow-it). Når du har opdaget apps, kan du [føje disse til din Azure AD lejer](/azure/active-directory/manage-apps/add-application-portal).
 
 Du kan begynde at administrere disse ved at gøre følgende:
 
-1. Først skal du i Azure AD oprette en ny politik for betinget adgang og konfigurere den til "Brug appkontrol med betinget adgang". Dette omdirigerer anmodningen til Defender for Cloud Apps. Du kan oprette én politik og føje alle SaaS-apps til denne politik.
+1. I Azure AD skal du først oprette en ny politik for betinget adgang og konfigurere den til "Brug appkontrol med betinget adgang". Dette omdirigerer anmodningen til Defender for Cloud Apps. Du kan oprette én politik og føje alle SaaS-apps til denne politik.
 1. Derefter skal du oprette sessionspolitikker i Defender for Cloud Apps. Opret én politik for hvert kontrolelement, du vil anvende.
 
-Tilladelser til SaaS-apps er typisk baseret på virksomhedens behov for adgang til appen. Disse tilladelser kan være meget dynamiske. Brug af Defender for Cloud Apps-politikker sikrer beskyttelse af appdata, uanset om brugerne er tildelt en Azure AD-gruppe, der er knyttet til startpunkt, virksomhed eller specialiseret sikkerhedsbeskyttelse.
+Tilladelser til SaaS-apps er typisk baseret på virksomhedens behov for adgang til appen. Disse tilladelser kan være meget dynamiske. Brug af Defender for Cloud Apps-politikker sikrer beskyttelse af appdata, uanset om brugerne er tildelt til en Azure AD gruppe, der er knyttet til startpunkt, virksomhed eller specialiseret sikkerhedsbeskyttelse.
 
-For at beskytte data på tværs af din samling af SaaS-apps illustrerer følgende diagram den nødvendige politik for betinget adgang i Azure AD samt de foreslåede politikker, du kan oprette i Defender for Cloud Apps. I dette eksempel gælder de politikker, der er oprettet i Defender for Cloud Apps, for alle De SaaS-apps, du administrerer. Disse er designet til at anvende relevante kontrolelementer baseret på, om enheder administreres, samt følsomhedsmærkater, der allerede er anvendt på filer.
+For at beskytte data på tværs af din samling af SaaS-apps viser følgende diagram de nødvendige Azure AD politik for betinget adgang samt foreslåede politikker, du kan oprette i Defender for Cloud Apps. I dette eksempel gælder de politikker, der er oprettet i Defender for Cloud Apps, for alle De SaaS-apps, du administrerer. Disse er designet til at anvende relevante kontrolelementer baseret på, om enheder administreres, samt følsomhedsmærkater, der allerede er anvendt på filer.
 
 :::image type="content" source="../../media/microsoft-365-policies-configurations/mcas-manage-saas-apps-2.png" alt-text="Politikkerne for administration af SaaS-apps i Defender for Cloud Apps" lightbox="../../media/microsoft-365-policies-configurations/mcas-manage-saas-apps-2.png":::
 
@@ -107,4 +107,4 @@ Følgende illustration og tabel indeholder flere eksempler på politikker, der k
 
 ## <a name="next-steps"></a>Næste trin
 
-Du kan få flere oplysninger om brug af Defender for Cloud Apps [i dokumentationen til Microsoft Defender for Cloud Apps](//cloud-app-security/).
+Du kan få flere oplysninger om brug af Defender for Cloud Apps [i dokumentationen til Microsoft Defender for Cloud Apps](/defender-cloud-apps/).

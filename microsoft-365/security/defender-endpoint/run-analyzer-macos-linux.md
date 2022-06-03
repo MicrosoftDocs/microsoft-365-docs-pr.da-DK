@@ -1,6 +1,6 @@
 ---
-title: Kør klientanalyse på macOS eller Linux
-description: Lær, hvordan du kører Microsoft Defender for Endpoint Client Analyzer på macOS eller Linux
+title: Kør klientanalysen på macOS eller Linux
+description: Få mere at vide om, hvordan du kører Microsoft Defender for Endpoint-klientanalysen på macOS eller Linux
 keywords: klientanalyse, fejlfinding af sensor, analyse, mdeanalyzer, macos, linux, mdeanalyzer
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,38 +16,38 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: d56cbb48697c4804aa493d945ff81c52e12f86c5
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 9e3b52f5e16a2294cc504791928f10a96e5e54c7
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64470081"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872758"
 ---
-# <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalyse på macOS og Linux
+# <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalysen på macOS og Linux
 
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-## <a name="running-the-analyzer-through-gui-scenario"></a>Kørsel af analyseanalyse gennem scenariet GUI
+## <a name="running-the-analyzer-through-gui-scenario"></a>Kørsel af analysefunktionen via ET GUI-scenarie
 
-1. Download [værktøjet XMDE Client Analyzer på](https://aka.ms/XMDEClientAnalyzer) den macOS- eller Linux-computer, du skal undersøge.
+1. Download værktøjet [XMDE-klientanalyse](https://aka.ms/XMDEClientAnalyzer) til den macOS- eller Linux-maskine, du skal undersøge.
 
    > [!NOTE]
-   > Den aktuelle SHA256-hash for "XMDEClientAnalyzer.zip", som downloades fra ovenstående link, er: 'A9BF065DE3F2608A309BC4F5295548BB9931F107BF2F01DC42A789C5527C1308'.
+   > Den aktuelle SHA256-hash for 'XMDEClientAnalyzer.zip', der downloades fra ovenstående link, er: 'A9BF065DE3F2608A309BC4F5295548BB9931F107BF2F01DC42A789C5527C1308'.
 
-2. Udtræk indholdet XMDEClientAnalyzer.zip på maskinen.
+2. Udpak indholdet af XMDEClientAnalyzer.zip på maskinen.
 
 3. Åbn en terminalsession, skift mappe til den udtrukne placering, og kør:
 
    `./mde_support_tool.sh -d`
 
    > [!NOTE]
-   > Hvis scriptet på Linux ikke har tilladelse til at udføre, skal du først køre:
+   > Hvis scriptet ikke har tilladelse til at udføre på Linux, skal du først køre:
    >
    > `chmod a+x mde_support_tool.sh`
 
-## <a name="running-the-analyzer-using-a-terminal-or-ssh-scenario"></a>Kørsel af analysatoren ved hjælp af en terminal eller et SSH-scenarie
+## <a name="running-the-analyzer-using-a-terminal-or-ssh-scenario"></a>Kørsel af analysefunktionen ved hjælp af en terminal eller et SSH-scenarie
 
 Åbn en terminal eller SSH på den relevante computer, og kør følgende kommandoer:
 
@@ -59,78 +59,78 @@ ms.locfileid: "64470081"
 
 4. `chmod +x mde_support_tool.sh`
 
-3. Kør som ikke-rodbaseret brug for at installere påkrævede rør og lxml-komponenter: `./mde_support_tool.sh`
+3. Kør som ikke-rodanvendelse for at installere de påkrævede pip- og lxml-komponenter: `./mde_support_tool.sh`
 
-4. Hvis du vil indsamle den faktiske diagnosticeringspakke og generere resultatarkivfilen, skal du køre igen som rod: `./mde_support_tool.sh -d`
+4. Sådan indsamles den faktiske diagnosticeringspakke, og resultatarkivfilen køres igen som rod: `./mde_support_tool.sh -d`
 
 > [!NOTE]
-> - Til Linux kræver analyseeren 'lxml' for at producere resultatet. Hvis det ikke er installeret, forsøger analyseator at hente det fra det officielle lager til python-pakker nedenfor: <https://files.pythonhosted.org/packages/\*/lxml\*.whl>
+> - For Linux kræver analysefunktionen 'lxml' for at producere resultatoutputtet. Hvis den ikke er installeret, forsøger analysefunktionen at hente den fra det officielle lager til Python-pakker nedenfor: <https://pypi.org/search/?q=lxml>
 > 
 > - Desuden kræver værktøjet i øjeblikket, at Python version 3 eller nyere er installeret.
 >
-> - Hvis du kører på en computer, der ikke kan bruge Python 3 eller hente lxml-komponenten, kan du downloade en binær baseret version af analyseprogrammet, der ikke har nogen af kravene: [Binær XMDE-klientanalyse](https://aka.ms/XMDEClientAnalyzerBinary)
+> - Hvis du kører på en computer, der ikke kan bruge Python 3 eller hente lxml-komponenten, kan du downloade en binær version af analysefunktionen, der ikke har nogen af kravene: [Binær XMDE-klientanalyse](https://aka.ms/XMDEClientAnalyzerBinary)
 >
-> - Hvis din enhed er bag en proxy, kan du blot overføre proxyserveren som en miljøvariabel til scriptet mde_support_tool.sh. For eksempel: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`
+> - Hvis enheden er bag en proxy, kan du blot overføre proxyserveren som en miljøvariabel til mde_support_tool.sh-scriptet. For eksempel: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`
 
 Eksempel:
 
-:::image type="content" source="images/4ca188f6c457e335abe3c9ad3eddda26.png" alt-text="Eksempel på kommandolinje" lightbox="images/4ca188f6c457e335abe3c9ad3eddda26.png":::
+:::image type="content" source="images/4ca188f6c457e335abe3c9ad3eddda26.png" alt-text="Kommandolinjeeksempel" lightbox="images/4ca188f6c457e335abe3c9ad3eddda26.png":::
 
 Yderligere hjælp til syntaks:
 
 **-h** \# Hjælp<br>
 \# Vis Hjælp-meddelelse
 
-**ydeevne** \# Ydeevne<br>
-\# Indsamler omfattende sporing til analyse af et ydelsesproblem, der kan genskabes efter behov. Bruges `--length=<seconds>` til at angive varigheden af benchmarken.
+**Ydeevne** \# Ydeevne<br>
+\# Indsamler omfattende sporing til analyse af et problem med ydeevnen, der kan genskabes efter behov. Bruges `--length=<seconds>` til at angive varigheden af benchmarket.
 
 **-o** \# Output<br>
-\# Angiv destinationsstien for resultatfilen
+\# Angiv destinationsstien til resultatfilen
 
 **-nz** \# No-Zip<br>
-\# Hvis den er indstillet, oprettes der en mappe i stedet for en resulterende arkivfil
+\# Hvis den er angivet, oprettes der en mappe i stedet for en arkivfil, der oprettes.
 
-**-f** \# Gennemtving<br>
-\# Overskrive, hvis der allerede findes output i destinationsstien
+**-f** \# Kraft<br>
+\# Overskriv, hvis der allerede findes output i destinationsstien
 
 ## <a name="result-package-contents-on-macos-and-linux"></a>Resultatpakkeindhold på macOS og Linux
 
 - report.html
 
-  Beskrivelse: Den primære HTML-outputfil, der indeholder de fund og den vejledning, som analysescriptet kører på computeren, kan producere.
+  Beskrivelse: Den primære HTML-outputfil, der indeholder de resultater og den vejledning, som analysescriptet, der kører på computeren, kan producere.
 
 - mde_diagnostic.zip
 
-  Beskrivelse: Samme diagnostiske output, der genereres, når du *kører mdatp Diagnostic Create* på enten [macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-resources#collecting-diagnostic-information)
+  Beskrivelse: Samme diagnosticeringsoutput, der genereres, når der køres *oprettelse af mdatp-diagnosticering* på begge [macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-resources#collecting-diagnostic-information)
 
-  eller
+  Eller
 
   [Linux](/windows/security/threat-protection/microsoft-defender-atp/linux-resources#collect-diagnostic-information)
 
 - mde.xml
 
-  Beskrivelse: XML-output, der genereres under kørsel og bruges til at opbygge HTML-rapportfilen.
+  Beskrivelse: XML-output, der genereres under kørsel, og som bruges til at oprette HTML-rapportfilen.
 
 - Processes_information.txt
 
-  Beskrivelse: indeholder oplysninger om de kørende Microsoft Defender for Endpoint relaterede processer i systemet.
+  Beskrivelse: Indeholder oplysninger om de kørende Microsoft Defender for Endpoint relaterede processer på systemet.
 
 - Log.txt
 
-  Beskrivelse: indeholder de samme logfiler, der er skrevet på skærmen under dataindsamlingen.
+  Beskrivelse: Indeholder de samme logmeddelelser, der er skrevet på skærmen under dataindsamlingen.
 
 - Health.txt
 
-  Beskrivelse: Det samme grundlæggende tilstandsoutput, der vises, når du *kører kommandoen mdatp-tilstand* .
+  Beskrivelse: Det samme grundlæggende tilstandsoutput, der vises, når du kører *mdatp-tilstandskommandoen* .
 
 - Events.xml
 
-  Beskrivelse: Yderligere XML-fil, der bruges af analysefilen, når HTML-rapporten opbygges.
+  Beskrivelse: Yderligere XML-fil, der bruges af analysefunktionen, når HTML-rapporten bygges.
 
-- Auditd_info.txt
+- Audited_info.txt
 
-  Beskrivelse: Detaljer om overvåget tjeneste og relaterede komponenter til [Linux](/windows/security/threat-protection/microsoft-defender-atp/linux-support-events) OS
+  Beskrivelse: oplysninger om overvåget tjeneste og relaterede komponenter til [Linux](/microsoft-365/security/defender-endpoint/linux-resources) OS
 
 - perf_benchmark.tar.gz
 
-  Beskrivelse: Ydeevnetestrapporterne. Du får kun vist dette, hvis du bruger performanceparameteren.
+  Beskrivelse: Testrapporter for ydeevne. Du kan kun se dette, hvis du bruger parameteren performance.

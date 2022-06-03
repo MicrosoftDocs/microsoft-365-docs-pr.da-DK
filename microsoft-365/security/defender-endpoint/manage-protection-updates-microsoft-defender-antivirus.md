@@ -15,12 +15,12 @@ manager: dansimp
 ms.custom: nextgen
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 9af3694f530660ead6f10008e1642990a20cc0a6
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: b01a9315e143a3fb49cedef84e1f7b9e505441d5
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416612"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873330"
 ---
 # <a name="manage-the-sources-for-microsoft-defender-antivirus-protection-updates"></a>Administrer kilderne til Microsoft Defender Antivirus beskyttelsesopdateringer
 
@@ -29,7 +29,7 @@ ms.locfileid: "65416612"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -68,7 +68,7 @@ Der er fem steder, hvor du kan angive, hvor et slutpunkt skal hente opdateringer
 - [Windows Server Update Service](/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus) <sup>[[1](#fn1)]<sup></sup>  
 - [Microsoft Endpoint Configuration Manager](/configmgr/core/servers/manage/updates)
 - [Netværksfilshare](#unc-share)
-- [Sikkerhedsintelligensopdateringer til Microsoft Defender Antivirus og anden antimalware](https://www.microsoft.com/wdsi/defenderupdates) <sup>fra Microsoft [[2](#fn1)]<sup></sup>
+- [Sikkerhedsintelligensopdateringer til Microsoft Defender Antivirus og anden antimalware](/microsoft-365/security/defender-endpoint/manage-protection-update-schedule-microsoft-defender-antivirus) <sup>fra Microsoft [[2](#fn1)]<sup></sup>
 
 (<a id="fn1">1</a>) Intune intern definitionsopdateringsserver – Hvis du bruger SCCM/SUP til at hente definitionsopdateringer til Microsoft Defender Antivirus og har brug for at få adgang til Windows Update på blokerede klientenheder, kan du skifte til medadministration og aflaste arbejdsbelastningen for beskyttelse af slutpunkter for at Intune. I den antimalwarepolitik, der er konfigureret i Intune er der en mulighed for 'intern definitionsopdateringsserver', som kan konfigureres til at bruge WSUS i det lokale miljø som opdateringskilde. Dette hjælper dig med at styre, hvilke opdateringer fra den officielle WU-server der godkendes til virksomheden, og hjælper også med at proxy- og gemme netværkstrafik til det officielle Windows UPdates-netværk.
 
@@ -83,12 +83,10 @@ Sikkerhedsintelligensopdateringer leveres også flere gange om dagen, men denne 
 
 > [!IMPORTANT]
 > Hvis du har angivet [opdateringer af Microsoft Security Intelligence-siden](https://www.microsoft.com/security/portal/definitions/adl.aspx) som reservekilde efter Windows Server Update Service eller Microsoft Update, downloades opdateringer kun fra opdateringer til sikkerhedsintelligens og platform, når den aktuelle opdatering anses for at være forældet. (Som standard er det syv dage i træk, hvor opdateringer fra Windows Server Update Service eller Microsoft Update-tjenester ikke kan anvendes).
-> Du kan dog [angive antallet af dage, før beskyttelse rapporteres som forældet](/windows/threat-protection/microsoft-defender-antivirus/manage-outdated-endpoints-microsoft-defender-antivirus#set-the-number-of-days-before-protection-is-reported-as-out-of-date).<p>
+> Du kan dog [angive antallet af dage, før beskyttelse rapporteres som forældet](/microsoft-365/security/defender-endpoint/manage-outdated-endpoints-microsoft-defender-antivirus).<p>
 > Fra mandag den 21. oktober 2019 underskrives sikkerhedsintelligensopdateringer og platformopdateringer udelukkende af SHA-2. Enheder skal opdateres for at understøtte SHA-2 for at få de nyeste opdateringer til sikkerhedsintelligens og platformopdateringer. Du kan få mere at vide under [Supportkrav til sha-2-signering af kode i 2019 for Windows og WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 Hver kilde har typiske scenarier, der afhænger af, hvordan dit netværk er konfigureret, ud over hvor ofte de publicerer opdateringer, som beskrevet i følgende tabel:
-
-<br/><br/>
 
 |Placering|Eksempelscenarie|
 |---|---|
@@ -287,7 +285,7 @@ Konfigurer et netværksfilshare (UNC/tilknyttet drev) for at downloade sikkerhed
     > Tilføj ikke mappen x64 (eller x86) i stien. Den mpcmdrun.exe proces tilføjer den automatisk.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

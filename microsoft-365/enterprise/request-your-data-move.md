@@ -1,9 +1,9 @@
 ---
 title: Sådan anmoder du om flytning af dine data
-ms.author: andyber
-author: andybergen
+ms.author: kvice
+author: kelleyvice-msft
 manager: scotv
-ms.date: 12/10/2019
+ms.date: 06/02/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ f1.keywords:
 - NOCSH
 description: Eksisterende Office 365 kunder skal indsende en anmodning inden fristen for deres land for at få flyttet deres Microsoft 365-tjenester til deres nye geografiske område.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 023262910f55da0e1145cc02f339debf4dffdcd5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 492e7680524728a136d5aa5530285e50b47f2935
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096298"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65874146"
 ---
 # <a name="how-to-request-your-data-move"></a>Sådan anmoder du om flytning af dine data
 
@@ -75,7 +75,7 @@ Fra og med januar 2020 kan kunder i berettigede Office 365 lande tilmelde sig mi
 
 [Flytning af kernedata til nye Office 365 geos for datacentre](moving-data-to-new-datacenter-geos.md)
 
-[Generelle ofte stillede spørgsmål om dataflytning](data-move-faq.yml)
+[Generelle ofte stillede spørgsmål om dataflytning](data-move-faq.md)
 
 [Nyt datacenter-geos til Microsoft Dynamics CRM Online](/power-platform/admin/new-datacenter-regions)
   

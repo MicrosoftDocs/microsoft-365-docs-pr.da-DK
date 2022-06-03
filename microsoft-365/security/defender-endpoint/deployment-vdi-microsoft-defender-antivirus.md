@@ -10,17 +10,16 @@ ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 03/18/2022
 ms.reviewer: jesquive
 manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 690ec028b3013bf00e28547ff440c7804b4d0f64
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 8cb3dcec3690ae3a4433bfffee53dc99842c0028
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416414"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872308"
 ---
 # <a name="deployment-guide-for-microsoft-defender-antivirus-in-a-virtual-desktop-infrastructure-vdi-environment"></a>Udrulningsvejledning til Microsoft Defender Antivirus i et VDI-miljø (Virtual Desktop Infrastructure)
 
@@ -36,7 +35,7 @@ Ud over standardkonfigurationer i det lokale miljø eller hardwarekonfiguratione
 
 Du kan få flere oplysninger om Microsoft Fjernskrivebord-tjenester og VDI-support under [Dokumentation til Azure Virtual Desktop](/azure/virtual-desktop).
 
-For Azure-baserede virtuelle maskiner skal du se [Installér Endpoint Protection i Microsoft Defender for Cloud](/azure/security-center/security-center-install-endpoint-protection).
+For Azure-baserede virtuelle maskiner skal du se [Installér Endpoint Protection i Microsoft Defender for Cloud](/azure/defender-for-cloud/endpoint-protection-recommendations-technical).
 
 Med muligheden for nemt at udrulle opdateringer til VM'er, der kører i VM'er, har vi forkortet denne vejledning for at fokusere på, hvordan du hurtigt og nemt kan få opdateringer på dine maskiner. Du behøver ikke længere at oprette og forsegle gyldne billeder regelmæssigt, da opdateringer udvides til deres komponentbits på værtsserveren og derefter downloades direkte til vm'en, når den er slået til.
 
@@ -268,7 +267,7 @@ Udeladelser kan tilføjes, fjernes eller tilpasses, så de passer til dine behov
 Du kan få flere oplysninger under [Konfigurer Microsoft Defender Antivirus udeladelser på Windows Server](configure-exclusions-microsoft-defender-antivirus.md).
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

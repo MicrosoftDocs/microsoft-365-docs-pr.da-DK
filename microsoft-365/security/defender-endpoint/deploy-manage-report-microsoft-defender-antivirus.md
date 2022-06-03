@@ -11,17 +11,16 @@ ms.topic: conceptual
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
-ms.date: 10/18/2018
 ms.reviewer: ''
 manager: dansimp
 ms.technology: mde
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 049c7a772c4c8dcf986efd310e4613423f33dcc9
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 778b12e1096c5ecfdb960955b52624c65b492d54
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419126"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872671"
 ---
 # <a name="deploy-manage-and-report-on-microsoft-defender-antivirus"></a>Udrul, administrer og rapportér på Microsoft Defender Antivirus
 
@@ -30,7 +29,7 @@ ms.locfileid: "65419126"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus 
 
@@ -58,7 +57,7 @@ Microsoft Endpoint Manager ([1](#fn1))|Brug systemrollen [Endpoint Protection pu
 Gruppepolitik og Active Directory (domænetilsluttet)|Brug et Gruppepolitik objekt til at installere konfigurationsændringer og sikre, at Microsoft Defender Antivirus er aktiveret.|Brug Gruppepolitik objekter til [Konfigurer opdateringsindstillinger for Microsoft Defender Antivirus][] og [Konfigurer Windows Defender funktioner][]|Slutpunktsrapportering er ikke tilgængelig med Gruppepolitik. Du kan oprette en liste over [Gruppepolitikker for at bestemme, om der ikke anvendes nogen indstillinger eller politikker][]
 PowerShell|Udrul med Gruppepolitik, Microsoft Endpoint Configuration Manager eller manuelt på individuelle slutpunkter.|Brug de [Set-MpPreference] og [Update-MpSignature]-cmdlet'er, der er tilgængelige i Defender-modulet.|Brug de relevante [Get-cmdlet'er, der er tilgængelige i Defender-modulet][]
 Windows forvaltningsinstrumentering|Udrul med Gruppepolitik, Microsoft Endpoint Configuration Manager eller manuelt på individuelle slutpunkter.|Brug metoden [Set for MSFT_MpPreference class][] og metoden [Update for MSFT_MpSignature class][]|Brug klassen [MSFT_MpComputerStatus][] og metoden get for tilknyttede klasser i [Windows Defender WMIv2 Provider][]
-Microsoft Azure|Udrul Microsoft Antimalware til Azure i [Azure Portal ved hjælp af Visual Studio konfiguration af virtuelle maskiner eller ved hjælp af Azure PowerShell cmdlet'er](/azure/security/azure-security-antimalware#antimalware-deployment-scenarios). Du kan også [installere Endpoint Protection i Microsoft Defender for Cloud*](/azure/security-center/security-center-install-endpoint-protection)|Konfigurer [Microsoft Antimalware til Virtual Machines og Cloud Services med Azure PowerShell cmdlet'er](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets), eller [brug kodeeksempler](https://gallery.technet.microsoft.com/Antimalware-For-Azure-5ce70efe)|Brug [Microsoft Antimalware til Virtual Machines og Cloud Services med Azure PowerShell-cmdlet'er](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets) for at aktivere overvågning. Du kan også gennemse forbrugsrapporter i Azure Active Directory for at finde mistænkelig aktivitet, herunder rapporten [Muligvis inficerede enheder][], og konfigurere et SIEM-værktøj til at rapportere om [Microsoft Defender Antivirus hændelser][] og tilføje værktøjet som en app i AAD.
+Microsoft Azure|Udrul Microsoft Antimalware til Azure i [Azure Portal ved hjælp af Visual Studio konfiguration af virtuelle maskiner eller ved hjælp af Azure PowerShell cmdlet'er](/azure/security/azure-security-antimalware#antimalware-deployment-scenarios). Du kan også [installere Endpoint Protection i Microsoft Defender for Cloud*](/azure/defender-for-cloud/endpoint-protection-recommendations-technical)|Konfigurer [Microsoft Antimalware til Virtual Machines og Cloud Services med Azure PowerShell cmdlet'er](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets), eller [brug kodeeksempler](https://gallery.technet.microsoft.com/Antimalware-For-Azure-5ce70efe)|Brug [Microsoft Antimalware til Virtual Machines og Cloud Services med Azure PowerShell-cmdlet'er](/azure/security/azure-security-antimalware#enable-and-configure-antimalware-using-powershell-cmdlets) for at aktivere overvågning. Du kan også gennemse forbrugsrapporter i Azure Active Directory for at finde mistænkelig aktivitet, herunder rapporten [Muligvis inficerede enheder][], og konfigurere et SIEM-værktøj til at rapportere om [Microsoft Defender Antivirus hændelser][] og tilføje værktøjet som en app i AAD.
 
 1. <span id="fn1" />Tilgængeligheden af nogle funktioner og funktioner, især relateret til skybaseret beskyttelse, varierer mellem Microsoft Endpoint Manager (Current Branch) og System Center 2012 Configuration Manager. I dette bibliotek har vi fokuseret på Windows 10, Windows 11, Windows Server 2016 og Microsoft Endpoint Manager (Aktuel forgrening). Se [Brug microsoft cloudbaseret beskyttelse i Microsoft Defender Antivirus](cloud-protection-microsoft-defender-antivirus.md) for at få en tabel, der beskriver de største forskelle. [(Vend tilbage til tabel)](#ref2)
 
@@ -68,14 +67,14 @@ Microsoft Azure|Udrul Microsoft Antimalware til Azure i [Azure Portal ved hjælp
 
 ## <a name="in-this-section"></a>I dette afsnit
 
-Emne | Beskrivelse
+Artikel | Beskrivelse
 ---|---
 [Udrul og aktivér Microsoft Defender Antivirus beskyttelse](deploy-microsoft-defender-antivirus.md) | Selvom klienten er installeret som en kernedel af Windows 10 eller Windows 11, og den traditionelle installation ikke gælder, skal du stadig aktivere klienten på dine slutpunkter med Microsoft Endpoint Configuration Manager, Microsoft Intune eller Gruppepolitik Objekter.
 [Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md) | Der er to dele til opdatering af Microsoft Defender Antivirus: opdatering af klienten på slutpunkter (produktopdateringer) og opdatering af Sikkerhedsintelligens (beskyttelsesopdateringer). Du kan opdatere Security Intelligence på flere måder ved hjælp af Microsoft Endpoint Configuration Manager, Gruppepolitik, PowerShell og WMI.
 [Overvåg og rapportér om Microsoft Defender Antivirus beskyttelse](report-monitor-microsoft-defender-antivirus.md) | Du kan bruge Microsoft Intune, Microsoft Endpoint Configuration Manager, tilføjelsesprogrammet Opdateringsoverholdelse til Microsoft Operations Management Suite eller et SIEM-tredjepartsprodukt (ved at bruge Windows hændelseslogge) til at overvåge beskyttelsesstatus og oprette rapporter om beskyttelse af slutpunkter.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

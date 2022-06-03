@@ -7,7 +7,6 @@ ms.author: deniseb
 manager: dansimp
 audience: ITPro
 ms.topic: overview
-ms.date: 01/19/2022
 ms.prod: m365-security
 ms.technology: mdep1
 ms.localizationpriority: medium
@@ -17,18 +16,18 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-overview
-ms.openlocfilehash: 774d54aee080fbe3d6f5576fb29c85d887717b70
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ace1eae6ab668a34e4ceff676b9edf01196521dd
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663506"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872714"
 ---
 # <a name="overview-of-microsoft-defender-for-endpoint-plan-1"></a>Oversigt over Microsoft Defender for Endpoint Plan 1
 
 **Gælder for**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der er udviklet til at hjælpe organisationer som dine med at forhindre, registrere, undersøge og reagere på avancerede trusler. Det glæder os at kunne meddele, at Defender for Endpoint nu er tilgængelig i to planer: 
 
@@ -58,7 +57,7 @@ Defender for Endpoint Plan 1 indeholder følgende funktioner:
 - **[Manuelle svarhandlinger](#manual-response-actions)**, f.eks. afsendelse af en fil til karantæne, som dit sikkerhedsteam kan udføre på enheder eller filer, når der registreres trusler
 - **[Reduktion af angrebsoverfladen](#attack-surface-reduction)** , der hærder enheder, forhindrer nuldagsangreb og giver detaljeret kontrol over adgang til slutpunkter og funktionsmåder
 - **[Centraliseret konfiguration og administration](#centralized-management)** med Microsoft 365 Defender-portalen og integration med Microsoft Endpoint Manager
-- **[Beskyttelse af en række platforme](#cross-platform-support)**, herunder Windows, macOS, iOS og Android-enheder
+- **[Beskyttelse af en række platforme](#cross-platform-support)**, herunder Windows, macOS, iOS- og Android-enheder
 
 Følgende afsnit indeholder flere oplysninger om disse egenskaber. 
 
@@ -149,7 +148,7 @@ Med beskyttelse af netværksfirewall kan du angive regler, der bestemmer, hvilke
 - Beskyttelse af følsomme data og immaterielle rettigheder
 - Udvid din sikkerhedsinvestering
 
-Du kan få mere at vide [under Windows Defender Firewall med avanceret sikkerhed](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
+Du kan få mere at vide under [Windows Defender Firewall med avanceret sikkerhed](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
 
 ### <a name="application-control"></a>Programkontrolelement
 
@@ -193,7 +192,10 @@ De fleste organisationer bruger forskellige enheder og operativsystemer. Defende
 - Windows 7 (ESU påkrævet)
 - Windows 8.1
 - Windows 10, version 1709 eller nyere
-- macOS: 11.5 (Big Sur), 10.15.7 (Catalina) eller 10.14.6 (Mojave)
+- Windows 10 Enterprise
+- Windows 10 Enterprise LTSC 2016 (eller nyere)](/windows/whats-new/ltsc/)
+- Windows 10 Enterprise IoT
+- macOS (de tre seneste udgivelser understøttes)
 - Ios
 - Android OS
 

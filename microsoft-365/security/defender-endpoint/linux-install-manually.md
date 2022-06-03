@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b467d87f16900375ca2db2f8478bf001780c9059
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: a9d16cb82354bcb44e817de3207cb49de66dbf91
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130335"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873044"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Udrul Microsoft Defender for Endpoint på Linux manuelt
 
@@ -32,7 +32,7 @@ ms.locfileid: "65130335"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
 
 I denne artikel beskrives det, hvordan du installerer Microsoft Defender for Endpoint på Linux manuelt. En vellykket installation kræver fuldførelse af alle følgende opgaver:
@@ -84,8 +84,8 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
     |Distro & version|Pakke|
     |---|---|
     |Til RHEL/Centos/Oracle 8.0-8.5|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
-    |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |<https://packages.microsoft.com/config/rhel/7/[channel].repo>|
-    |For RHEL/Centos 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|
+    |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |</azure/cognitive-services/speech-service/how-to-configure-rhel-centos-7>|
+    <!--|For RHEL/Centos 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|-->
     |Til Fedora 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
     |Til Fedora 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
 
@@ -323,12 +323,12 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 
     ```Output
     Archive:  WindowsDefenderATPOnboardingPackage.zip
-    inflating: MicrosoftDefenderATPOnboardingLinuxServer.sh
+    inflating: MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
 
 ## <a name="client-configuration"></a>Klientkonfiguration
 
-1. Kopiér MicrosoftDefenderATPOnboardingLinuxServer.sh til destinationsenheden.
+1. Kopiér MicrosoftDefenderATPOnboardingLinuxServer.py til destinationsenheden.
 
     > [!NOTE]
     > Indledningsvist er klientenheden ikke knyttet til en organisation, og attributten *orgId* er tom.
@@ -337,10 +337,21 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
     mdatp health --field org_id
     ```
 
-2. Kør MicrosoftDefenderATPOnboardingLinuxServer.sh.
+2. Kør MicrosoftDefenderATPOnboardingLinuxServer.py.
+
+    > [!NOTE]
+    > Hvis du vil køre denne kommando, skal du have `python`  eller `python3` installeret på enheden, afhængigt af disto og versionen. Hvis det er nødvendigt, skal du se [Trinvis vejledning til installation af Python på Linux](https://opensource.com/article/20/4/install-python-linux).
+    
+    Hvis du kører RHEL 8.x eller Ubuntu 20.04 eller nyere, skal du bruge `python3`.
 
     ```bash
-    sudo bash MicrosoftDefenderATPOnboardingLinuxServer.sh
+    sudo python3 MicrosoftDefenderATPOnboardingLinuxServer.py
+    ```
+
+    I resten af distributioner og versioner skal du bruge `python`.
+    
+    ```bash
+    sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
     
 3. Bekræft, at enheden nu er knyttet til din organisation, og rapporterer et gyldigt organisations-id:

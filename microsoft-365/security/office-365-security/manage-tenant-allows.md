@@ -16,16 +16,16 @@ ms.collection:
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer tillad på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f1dffb7fd6b13fc1999e51666717dc464e694d0c
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 64b5576015f279efec4c469e18a0ace652b90918
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188105"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873396"
 ---
 # <a name="add-allows-in-the-tenant-allowblock-list"></a>Tilføj tilladte på listen over tilladte/blokerede lejere
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -138,7 +138,7 @@ Tillad filer på siden **Indsendelser** i Microsoft 365 Defender.
 
 ## <a name="add-spoofed-sender-allow-entries-using-powershell"></a>Tilføj tilladte poster for spoofed afsender ved hjælp af PowerShell
 
-Hvis du vil tilføje spoofede afsenderposter på listen over tilladte/blokerede lejere i [Exchange Online PowerShell](/exchange/connect-to-exchange-online-powershell), skal du bruge følgende syntaks:
+Hvis du vil tilføje spoofede afsenderposter på listen over tilladte/blokerede lejere i [Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell), skal du bruge følgende syntaks:
 
 ```powershell
 New-TenantAllowBlockListSpoofItems -SpoofedUser <Domain | EmailAddress | *> -SendingInfrastructure <Domain | IPAddress/24> -SpoofType <External | Internal> -Action <Allow | Block>

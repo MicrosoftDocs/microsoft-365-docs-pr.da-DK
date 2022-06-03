@@ -14,12 +14,12 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 864d67aeaa84713b1b2126b017fadacd0e43dc7a
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 7b1614738b17d7f3cf78a6bfabb84f85196d42ff
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622992"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873242"
 ---
 # <a name="configure-and-validate-exclusions-based-on-file-extension-and-folder-location"></a>Konfigurer og valider udeladelser baseret på filtypenavn og mappeplacering
 
@@ -109,6 +109,7 @@ Se [Sådan opretter og installerer du antimalwarepolitikker: Indstillinger for u
 3. Udvid træet for at **Windows komponenter** \> **Windows Defender Antivirus** \> **Udeladelser**.
 
 4. Åbn indstillingen **Stiudeladelser** til redigering, og tilføj dine udeladelser.
+
     1. Angiv indstillingen til **Aktiveret**.
     2. Under afsnittet **Indstillinger** skal du vælge **Vis**.
     3. Angiv hver mappe på sin egen linje under kolonnen **Værdinavn** .
@@ -118,6 +119,7 @@ Se [Sådan opretter og installerer du antimalwarepolitikker: Indstillinger for u
 5. Vælg **OK**.
 
 6. Åbn indstillingen **Filtypenavneudeladelser** til redigering, og tilføj dine udeladelser.
+
     1. Angiv indstillingen til **Aktiveret**.
     2. Under afsnittet **Indstillinger** skal du vælge **Vis**.
     3. Angiv hvert filtypenavn på sin egen linje under kolonnen **Værdinavn** .
@@ -192,7 +194,6 @@ Du kan bruge stjernen `*`, spørgsmålstegnet `?`eller miljøvariabler (f.eks. `
 
 > [!IMPORTANT]
 > Der er vigtige begrænsninger og forbrugsscenarier for disse jokertegn:
->
 > - Brug af miljøvariabler er begrænset til computervariabler og dem, der gælder for processer, der kører som en NT AUTHORITY\SYSTEM-konto.
 > - Du kan højst bruge seks jokertegn pr. post.
 > - Du kan ikke bruge et jokertegn i stedet for et drevbogstav.
@@ -200,8 +201,6 @@ Du kan bruge stjernen `*`, spørgsmålstegnet `?`eller miljøvariabler (f.eks. `
 > - I øjeblikket understøtter Microsoft Endpoint Configuration Manager ikke jokertegn (f.eks. `*` eller `?`).
     
 I følgende tabel beskrives, hvordan jokertegnene kan bruges, og der vises nogle eksempler.
-
-<br/><br/>
 
 |Wildcard|Eksempler|
 |---|---|
@@ -211,9 +210,7 @@ I følgende tabel beskrives, hvordan jokertegnene kan bruges, og der vises nogle
 
 > [!IMPORTANT]
 > Hvis du blander et argument for filudeladelse med et mappeudeladelsesargument, stopper reglerne ved filargumentet i den tilsvarende mappe og søger ikke efter filforekomster i nogen undermapper.
->
 > Du kan f.eks. udelade alle filer, der starter med "dato" i mapperne `c:\data\final\marked` og `c:\data\review\marked` ved hjælp af regelargumentet `c:\data\*\marked\date*`.
->
 > Dette argument stemmer dog ikke overens med nogen filer i undermapper under `c:\data\final\marked` eller `c:\data\review\marked`.
 
 <a id="review"></a>
@@ -289,7 +286,7 @@ I følgende tabel vises og beskrives miljøvariabler for systemkontoen.
 
 Du kan hente elementerne på listen over undtagelser ved hjælp af en af følgende metoder:
 
-- [Intune](/intune/deploy-use/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
+- [Intune](/mem/intune/fundamentals/deployment-guide-intune-setup)
 - [Microsoft Endpoint Configuration Manager](/configmgr/protect/deploy-use/endpoint-antimalware-policies)
 - [MpCmdRun](command-line-arguments-microsoft-defender-antivirus.md)
 - [PowerShell](/powershell/module/defender)
@@ -297,7 +294,6 @@ Du kan hente elementerne på listen over undtagelser ved hjælp af en af følgen
 
 > [!IMPORTANT]
 > Ændringer af listen over udeladelser, der er foretaget med Gruppepolitik **, vises** på listerne i [Windows Sikkerhed-appen](microsoft-defender-security-center-antivirus.md).
->
 > Ændringer, der er foretaget i Windows Sikkerhed-appen, **vises ikke** på Gruppepolitik-listerne.
 
 Hvis du bruger PowerShell, kan du hente listen på to måder:

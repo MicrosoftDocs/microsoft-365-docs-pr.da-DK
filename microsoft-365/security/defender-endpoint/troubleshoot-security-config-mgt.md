@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: 958c58fab875ce86b0a3290450e2cf17c4b75a44
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 4f309c98b7278dbeb062deacf49553b7e73f58da
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320491"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873782"
 ---
 # <a name="troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint"></a>Foretag fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration for Microsoft Defender for Endpoint
 
@@ -50,7 +50,7 @@ Hvis du vil registrere enheder til Azure Active Directory, skal du sikre dig fø
 
 - Computere kan godkende med domænecontrolleren
 - Computere har adgang til følgende Microsoft-ressourcer fra organisationens netværk:
-  - https://enterpriseregistration.windows.net
+  - /windows/iot/iot-enterprise/commercialization/licensing
   - https://login.microsoftonline.com
   - https://device.login.microsoftonline.com
 - Azure AD forbindelse er konfigureret til at synkronisere computerobjekterne. Computer-O'er er som standard i Azure AD oprette forbindelse til synkroniseringsomfang. Hvis computerobjekterne tilhører bestemte organisationsenheder, skal du konfigurere DE, der skal synkroniseres i Azure AD Forbind. Hvis du vil vide mere om, hvordan du synkroniserer computerobjekter ved hjælp af Azure AD Forbind, skal du se [Filtrering baseret på organisationsenhed](/azure/active-directory/hybrid/how-to-connect-sync-configure-filtering#organizational-unitbased-filtering).
@@ -121,7 +121,7 @@ I følgende tabel vises en liste over fejl og retninger for, hvad du skal prøve
 |Fejlkode|Status for tilmelding|Administratorhandlinger|
 |---|---|---|
 |`5-7`, `9`, `11-12`, `26-33`|Generel fejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration. Dette kan skyldes, at enheden ikke opfylder [forudsætningerne for Microsoft Defender for Endpoint administrationskanal](security-config-management.md). Kørsel af [klientanalysen](https://aka.ms/BetaMDEAnalyzer) på enheden kan hjælpe med at identificere rodårsagen til problemet. Hvis dette ikke hjælper, skal du kontakte support.|
-| `8`, `44` | Microsoft Endpoint Manager konfigurationsproblem | Enheden blev onboardet til Microsoft Defender for Endpoint. Microsoft Endpoint Manager er dog ikke konfigureret via Administration for at tillade Microsoft Defender for Endpoint sikkerhedskonfiguration. Sørg for, at den [Microsoft Endpoint Manager lejer er konfigureret, og at funktionen er slået til](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management).|
+| `8`, `44` | Microsoft Endpoint Manager konfigurationsproblem | Enheden blev onboardet til Microsoft Defender for Endpoint. Microsoft Endpoint Manager er dog ikke konfigureret via Administration Center for at tillade Microsoft Defender for Endpoint sikkerhedskonfiguration. Sørg for, at den [Microsoft Endpoint Manager lejer er konfigureret, og at funktionen er slået til](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management).|
 |`13-14`,`20`,`24`,`25`|Forbindelsesproblem|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, som kan skyldes et forbindelsesproblem. Kontrollér, at [slutpunkterne Azure Active Directory og Microsoft Endpoint Manager](security-config-management.md#connectivity-requirements) er åbnet i firewallen.|
 |`10`,`42`|Generel hybridjoinforbindelsesfejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, og operativsystemet kunne ikke udføre hybridjoinforbindelse. Brug [Foretag fejlfinding af hybride Azure Active Directory-joinforbundne enheder](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) til fejlfinding af fejl i hybridjoinforbindelse på OS-niveau.|
 |`15`|Lejeruoverensstemmelse|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, fordi dit Microsoft Defender for Endpoint lejer-id ikke stemmer overens med dit Azure Active Directory lejer-id. Sørg for, at det Azure Active Directory lejer-id fra din Defender for Endpoint-lejer stemmer overens med lejer-id'et i SCP-posten for dit domæne. Du kan finde flere oplysninger [ved at foretage fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md).|

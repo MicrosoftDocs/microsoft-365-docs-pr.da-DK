@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de identificerer bestemte grupper af brugere med brugerkoder i Microsoft Defender for Office 365 Plan 2. Kodefiltrering er tilgængelig på tværs af beskeder, rapporter og undersøgelser i Microsoft Defender for Office 365 for hurtigt at identificere de mærkede brugere.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3d4f5b82e09c9a58e891fa6fcba009ac490c0cb1
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 24509489259a368fb35773603e3708a265f8ed76
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647463"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873264"
 ---
 # <a name="user-tags-in-microsoft-defender-for-office-365"></a>Brugerkoder i Microsoft Defender for Office 365
 
@@ -81,7 +81,7 @@ Hvis du vil se, hvordan brugerkoder er en del af strategien for at beskytte brug
 
 - Du kan også administrere og overvåge prioritetskonti i Microsoft 365 Administration. Du kan finde instruktioner under [Administrer og overvåg prioritetskonti](../../admin/setup/priority-accounts.md).
 
-- Du kan finde oplysninger om sikring af _privilegerede konti_ (administratorkonti) i [dette emne](/azure/architecture/framework/security/critical-impact-accounts).
+- Du kan finde oplysninger om sikring af _privilegerede konti_ (administratorkonti) i [dette emne](/security/compass/critical-impact-accounts).
 
 ## <a name="use-the-microsoft-365-defender-portal-to-create-user-tags"></a>Brug Microsoft 365 Defender-portalen til at oprette brugerkoder
 

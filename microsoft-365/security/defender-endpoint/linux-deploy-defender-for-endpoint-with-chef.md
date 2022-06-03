@@ -1,7 +1,7 @@
 ---
-title: Sådan installeres Defender til Slutpunkt på Linux med Chef
-description: Få mere at vide om, hvordan du installerer Defender til Slutpunkt på Linux med Chef
-keywords: microsoft, defender, atp, linux, scans, antivirus, microsoft defender til slutpunkt (linux)
+title: Sådan installerer du Defender for Endpoint på Linux med chef
+description: Få mere at vide om, hvordan du installerer Defender for Endpoint på Linux med Chef
+keywords: microsoft, defender, atp, linux, scans, antivirus, microsoft defender for endpoint (linux)
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,44 +14,44 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 799fc4d163b120b4197b6cd044efe4740e4a3cc7
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: 8f610821b6c0bef7694d6ce8acd256f59f761f06
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63597903"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65872917"
 ---
-# <a name="deploy-defender-for-endpoint-on-linux-with-chef"></a>Deploy Defender for Endpoint på Linux med Chef
+# <a name="deploy-defender-for-endpoint-on-linux-with-chef"></a>Udrul Defender for Endpoint på Linux med Chef
 
 **Gælder for:**
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Før du begynder: Installer udpakke, hvis den ikke allerede er installeret.
+Før du begynder: Installer udpakket, hvis det ikke allerede er installeret.
 
-Chef-komponenterne er allerede installeret, og der findes et Chef-lager (chef generate repo \<reponame\>) for at gemme den kogebog, der skal bruges til at installere til Defender til slutpunkt på Chef-administrerede Linux-servere.
+Chef-komponenterne er allerede installeret, og der findes et cheflager (chef generér lager \<reponame\>) til lagring af den kogebog, der skal bruges til at udrulle til Defender for Endpoint på Chef-administrerede Linux-servere.
 
-Du kan oprette en ny kogebog i dit eksisterende lager ved at køre følgende kommando inde fra mappen kogebøger, der findes i dit køkkenlager:
+Du kan oprette en ny kogebog i dit eksisterende lager ved at køre følgende kommando inde fra mappen med kogebøger, der findes i dit cheflager:
 
 ```bash
 chef generate cookbook mdatp
 ```
 
-Denne kommando opretter en ny mappestruktur for den nye kogebog ved navn mdatp. Du kan også bruge en eksisterende kogebog, hvis du allerede har en, du vil bruge til at føje MDE-installationen til.
-Når kogebogen er oprettet, kan du oprette en filmappe i mappen Kogebog, der lige er blevet oprettet:
+Denne kommando opretter en ny mappestruktur til den nye kogebog mdatp. Du kan også bruge en eksisterende kogebog, hvis du allerede har en, du vil bruge til at tilføje MDE-udrulningen i.
+Når kogebogen er oprettet, skal du oprette en mappe med filer i kogebogens mappe, der lige er oprettet:
 
 ```bash
 mkdir mdatp/files
 ```
 
-Overfør zip-filen Linux Server Onboarding, som kan downloades fra Microsoft 365 Defender-portalen til denne nye filmappe.
+Overfør den Linux Server Onboarding ZIP-fil, der kan downloades fra Microsoft 365 Defender-portalen, til denne mappe med nye filer.
 
-På Chef-arbejdsstationen skal du gå til mappen mdatp/recipes. Denne mappe oprettes, når kogebogen blev oprettet. Brug din foretrukne teksteditor (f.eks. vi eller nano) til at føje følgende instruktioner til slutningen af standard.rb-filen:
+På Chef Workstation skal du navigere til mappen mdatp/recipes. Denne mappe oprettes, når kogebogen blev oprettet. Brug din foretrukne teksteditor (f.eks. vi eller nano) til at føje følgende instruktioner til slutningen af filen default.rb:
 
 - include_recipe '::onboard_mdatp'
 - include_recipe '::install_mdatp'
 
-Gem og luk derefter default.rb-filen.
+Gem og luk derefter filen default.rb.
 
 Opret derefter en ny opskriftsfil med navnet install_mdatp.rb i mappen opskrifter, og føj denne tekst til filen:
 
@@ -90,8 +90,8 @@ when 'rhel'
 end
 ```
 
-Du skal ændre versionsnummeret, distributions- og repo-navnet, så det passer til den version, du udruller i, og den kanal, du gerne vil installere.
-Derefter skal du oprette en onboard_mdatp.rb-fil i mappen mdatp/recipies. Føj følgende tekst til den pågældende fil:
+Du skal ændre versionsnummeret, distributionen og lagerets navn, så det stemmer overens med den version, du installerer på, og den kanal, du vil installere.
+Derefter skal du oprette en onboard_mdatp.rb-fil i mappen mdatp/recipies. Føj følgende tekst til filen:
 
 ```powershell
 #Create MDATP Directory
@@ -115,10 +115,10 @@ bash 'Extract Onbaording Json MDATP' do
 end
 ```
 
-Sørg for at opdatere navnet på stien til placeringen af onboardingfilen.
-For at teste installationen på arbejdsstationen Chef skal du blot køre ``sudo chef-client -z -o mdatp``.
-Efter installationen bør du overveje at oprette og udrulle en konfigurationsfil til de servere, der er baseret på [Angiv indstillinger for Microsoft Defender til slutpunkt på Linux](/linux-preferences.md).
-Når du har oprettet og testet din konfigurationsfil, kan du placere den i mappen Cookbook/mdatp/files, hvor du også placerede onboardingpakken. Derefter kan du oprette en settings_mdatp.rb-fil i mappen mdatp/recipies og tilføje denne tekst:
+Sørg for at opdatere stinavnet til placeringen af onboardingfilen.
+Hvis du vil teste udrulningen på Chef-arbejdsstationen, skal du blot køre ``sudo chef-client -z -o mdatp``.
+Efter udrulningen bør du overveje at oprette og installere en konfigurationsfil på serverne baseret på [Angiv indstillinger for Microsoft Defender for Endpoint på Linux](/microsoft-365/security/defender-endpoint/linux-preferences).
+Når du har oprettet og testet din konfigurationsfil, kan du placere den i mappen cookbook/mdatp/files, hvor du også har placeret onboardingpakken. Du kan derefter oprette en settings_mdatp.rb-fil i mappen mdatp/recipies og tilføje denne tekst:
 
 ```powershell
 #Copy the configuration file
@@ -131,8 +131,8 @@ cookbook_file '/etc/opt/microsoft/mdatp/managed/mdatp_managed.json' do
 end
 ```
 
-Hvis du vil medtage dette trin som en del af opskriften, skal du blot include_recipe ":: settings_mdatp" til din default.rb-fil i opskriftsmappen.
-Du kan også bruge crontab til at planlægge automatiske opdateringer [Planlæg en opdatering af Microsoft Defender til slutpunkt (Linux)](linux-update-MDE-Linux.md).
+Hvis du vil medtage dette trin som en del af opskriften, skal du blot føje include_recipe ':: settings_mdatp' til filen default.rb i opskriftsmappen.
+Du kan også bruge crontab til at planlægge automatiske opdateringer [Planlæg en opdatering af Microsoft Defender for Endpoint (Linux)](linux-update-MDE-Linux.md).
 
 Fjern MDATP-kogebog:
 

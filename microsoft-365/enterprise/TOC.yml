@@ -230,7 +230,7 @@
         - name: Under og efter flytningen af dine data
           href: during-and-after-your-data-move.md
         - name: Generelle ofte stillede spørgsmål om dataflytning
-          href: data-move-faq.yml
+          href: data-move-faq.md
         - name: Hvor kundedata gemmes
           href: o365-data-locations.md
         - name: Dataplaceringer for EU
