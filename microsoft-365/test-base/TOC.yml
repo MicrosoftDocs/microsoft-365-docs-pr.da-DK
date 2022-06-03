@@ -20,6 +20,8 @@
           href: uploadApplication.md
     - name: Byg en pakke
       href: buildpackage.md
+    - name: Klon en eksisterende pakke
+      href: clonepackage.md
     - name: Pakkeretningslinje
       href: contentguideline.md
     - name: Program-/testregler

@@ -16,6 +16,8 @@
               href: microsoft-365-security-center-mdo.md
             - name: Omdirigering af Defender for Endpoint til Microsoft 365 Defender
               href: microsoft-365-security-mde-redirection.md
+            - name: Omdirigering af Defender for Identity til Microsoft 365 Defender
+              href: microsoft-365-security-mdi-redirection.md
         - name: Microsoft 365 Defender-integration med Microsoft Sentinel
           href: microsoft-365-defender-integration-with-azure-sentinel.md
         - name: Microsoft 365 Defender for US Government-kunder
@@ -501,3 +503,5 @@
           href: /cloud-app-security
         - name: Defender for Business
           href: ../defender-business/index.yml
+        - name: Håndtering af sikkerhedsrisici i Defender
+          href: ../defender-vulnerability-management/index.yml
