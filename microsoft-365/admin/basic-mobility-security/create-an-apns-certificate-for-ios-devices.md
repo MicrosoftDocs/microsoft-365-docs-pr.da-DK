@@ -14,12 +14,12 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Hvis du vil administrere iOS-enheder, f.eks. iPads og iPhones i Basic Mobility and Security, skal du starte med at oprette et APN-certifikat.
-ms.openlocfilehash: 8bcbcdeac9f1cadd945c3f7c44e9192d57db7c82
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 10d2e8412cfecf3627c7520123592b371bf01fdb
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435783"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863516"
 ---
 # <a name="create-an-apns-certificate-for-ios-devices"></a>Opret et APNs-certifikat til iOS-enheder
 
@@ -27,15 +27,13 @@ Hvis du vil administrere iOS-enheder, f.eks. iPads og iPhones i Basic Mobility o
 
 1. Log på for at Microsoft 365 med din globale administratorkonto.
 
-2. Skriv i din browser <https://protection.office.com/>.
+1. Gå til [Microsoft 365 Administration](https://portal.office.com/adminportal/home?#/MifoDevices), og vælg **APN-certifikat til iOS**.
 
-3. Vælg **Enhedshåndtering til forebyggelse af** \> datatab, og vælg **APN-certifikat til iOS-enheder**.
+1. Vælg **Næste** på siden Certifikat til Apple Push-meddelelse Indstillinger.
 
-4. Vælg **Næste** på siden Certifikat til Apple Push-meddelelse Indstillinger.
+1. Vælg Download din CSR-fil, og gem anmodningen om certifikatsignering et sted på din computer, som du vil huske. Vælg **Næste**.
 
-5. Vælg Download din CSR-fil, og gem anmodningen om certifikatsignering et sted på din computer, som du vil huske. Vælg **Næste**.
-
-6. På siden Opret et APN-certifikat:
+1. På siden Opret et APN-certifikat:
 
     1. Vælg Apple APNS-portalen for at åbne Portal til Apple Push-certifikater.
 
@@ -53,10 +51,10 @@ Hvis du vil administrere iOS-enheder, f.eks. iPads og iPhones i Basic Mobility o
        > [!TIP]
        > Hvis du har problemer med at downloade certifikatet, skal du opdatere din browser.
 
-7. Gå tilbage til Microsoft 365, og vælg **Næste** for at gå til siden **med Upload APNS-certifikat**.
+1. Gå tilbage til Microsoft 365, og vælg **Næste** for at gå til siden **med Upload APNS-certifikat**.
 
-8. Gå til det APN-certifikat, du har downloadet fra Portal til Apple Push-certifikater.
+1. Gå til det APN-certifikat, du har downloadet fra Portal til Apple Push-certifikater.
 
-9. Vælg **Udfør**.
+1. Vælg **Udfør**.
 
 Hvis du vil fuldføre installationen, skal du gå tilbage til Security & Compliance Center \> **Sikkerhedspolitikker** \> **Administration af enheder** \> **Administrationsindstillinger**.

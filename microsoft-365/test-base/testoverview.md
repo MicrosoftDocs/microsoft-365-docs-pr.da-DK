@@ -1,5 +1,5 @@
 ---
-title: Test dit program på testbasen
+title: Test dit program på Test Base
 description: Sådan tester du din app
 search.appverid: MET150
 author: Tinacyt
@@ -14,26 +14,34 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: Tinacyt
 f1.keywords: NOCSH
-ms.openlocfilehash: 3c0b5d19c2b96698a2d24d4f165780fe0f9ccfd1
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 2f0ccded84f7b1c46ff2aeea38eae8f0baadc6ff
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64937119"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863581"
 ---
-# <a name="test-your-application-on-test-base"></a>Test dit program på testbasen
+# <a name="test-your-application-on-test-base"></a>Test dit program på Test Base
 
-Dette er en omfattende vejledning, som du kan bruge til at oprette en ny pakke og teste den på testbasen med forskellige programtyper. Se den specifikke dokumentation for din egen app:
+I dette afsnit lærer du, hvordan du opretter pakker med forskellige typer programmer til upload og test på **testbasen**. Programtyper består af følgende værdier:
 
-## <a name="test-binaries-package-on-test-base"></a>Test binær pakke på testbase
+   > [!div class="mx-imgBorder"]
+   > ![Prompter om udgivelse af pakke](Media/testoverview01.png)
 
-Se [Test binære pakker](testapplication.md) for at oprette en testbasispakke med binære filer (f.eks. .exe eller .msi).
+   - **Test binære filer**
 
-## <a name="test-your-intune-app-on-test-base"></a>Test din Intune app på testbasen
+      Se [Oprettelse og test af binære filer på testbasen](testapplication.md) for at forberede en pakke med en binær programfil (.exe, .msi) til overførsel og test.
 
-Se [Test din Intune-app](testintuneapplication.md) for at oprette en Test Base-pakke med en Intunewin-app.
+   - **Intunewin-app**
 
-## <a name="upload-your-test-base-package-zip"></a>Upload din Test Base-pakke (Zip)
+      Se [Test din Intune app på testbasen](testintuneapplication.md) for at forberede en pakke med en Intune programfil (.intunewin) til upload og test.
 
-Du kan få mere at vide under [Zip-upload](uploadApplication.md) , hvis du allerede har en Test Base-pakke.
+   - **Færdigbygget zip-pakke**
+
+      Se [Upload af færdigbygget zip-pakke](uploadApplication.md) , hvis du allerede har en offlinebygget pakke i .zip format.
+
+   - **Klon eksisterende pakke**
+
+      Se [Klon en eksisterende pakke](clonepackage.md) for at oprette en ny pakke ved at kopiere din tidligere udgivne pakke.
+
 

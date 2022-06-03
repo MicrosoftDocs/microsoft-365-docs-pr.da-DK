@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Brug indbygget basic mobility og sikkerhed til at fjerne oplysninger fra tilmeldte enheder.
-ms.openlocfilehash: 959e785958dd6d447713507ee9c48763b814db78
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 5ecdfc691d85b86d882cf05dd5328d41dcdfa767
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129084"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863048"
 ---
 # <a name="wipe-a-mobile-device-in-basic-mobility-and-security"></a>Slet en mobilenhed i Basic Mobility and Security
 
@@ -46,25 +46,21 @@ Mobilenheder kan gemme følsomme organisationsoplysninger og give adgang til org
 
 ## <a name="wipe-a-mobile-device"></a>Slet en mobilenhed
 
-1. Gå til [Microsoft 365 Administration](../../admin/admin-overview/admin-center-overview.md).
+1. Log på Microsoft 365 Administration, og gå til [siden Mobil Enhedshåndtering](https://portal.office.com/adminportal/home?#/MifoDevices).
 
-2. Skriv Mobile Enhedshåndtering i søgefeltet, og vælg **Mobile Enhedshåndtering** på listen over resultater.
+1. Vælg **Administrer enheder**.
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-6-mobile-device-management-option.png" alt-text="Grundlæggende administration af mobilitet og secruity for mobilenheder.":::
+1. Vælg den enhed, du vil slette.
 
-3. Vælg **Administrer enheder**.
+1. Vælg **Administrer**.
 
-4. Vælg den enhed, du vil slette.
-
-5. Vælg **Administrer**.
-
-6. Vælg den type fjernsletning, du vil foretage.
+1. Vælg den type fjernsletning, du vil foretage.
 
     - Hvis du vil foretage en komplet sletning og gendanne enheden til fabriksindstillingerne, skal du vælge **Nulstil fabrik**.
     - Hvis du vil foretage en selektiv sletning og kun slette Microsoft 365 organisationsoplysninger, skal du vælge **Fjern firmadata**.
     - Hvis du vil fjerne enheden fra din organisation, skal du vælge **Fjern enhed**.
 
-7. Vælg **Ja** for at bekræfte.
+1. Vælg **Ja** for at bekræfte.
 
 ## <a name="how-do-i-know-it-worked"></a>Hvordan gør jeg ved, det virkede?
 

@@ -14,12 +14,12 @@ ms.collection:
 - Adm_TOC
 ms.custom: AdminSurgePortfolio
 description: Fjern grupper eller politikker for at deaktivere Grundlæggende mobilitet og sikkerhed.
-ms.openlocfilehash: c3c82c040e688977a68e06639e87c8f733bc8c38
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 59a54b9969bf16c7523a6862c6f0960bb1527e8a
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780759"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863026"
 ---
 # <a name="turn-off-basic-mobility-and-security"></a>Slå Basic Mobility og Security fra
 
@@ -36,7 +36,7 @@ Disse indstillinger fjerner Basic Mobility og Security-håndhævelse for enheder
 
 ## <a name="remove-user-security-groups-from-basic-mobility-and-security-device-policies"></a>Fjern brugersikkerhedsgrupper fra politikker for grundlæggende mobilitet og sikkerhedsenheder
 
-1. I din browser skal du skrive: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. I din browser skal du skrive: [https://compliance.microsoft.com/basicmobilityandsecurity](https://compliance.microsoft.com/basicmobilityandsecurity).
 
 2. Vælg en enhedspolitik, og vælg **Rediger politik**.
 
@@ -48,7 +48,7 @@ Disse indstillinger fjerner Basic Mobility og Security-håndhævelse for enheder
 
 ## <a name="remove-basic-mobility-and-security-device-policies"></a>Fjern enhedspolitikker for grundlæggende mobilitet og sikkerhed
 
-1. I din browser skal du skrive: [https://protection.office.com/devicev2](https://protection.office.com/devicev2).
+1. I din browser skal du skrive: [https://compliance.microsoft.com/basicmobilityandsecurity](https://compliance.microsoft.com/basicmobilityandsecurity).
 
 2. Vælg en enhedspolitik, og vælg derefter **Slet politik**.
 

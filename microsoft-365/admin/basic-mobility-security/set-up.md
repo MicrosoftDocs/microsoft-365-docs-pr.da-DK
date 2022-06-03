@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Konfigurer Basic Mobility og Security for at sikre og administrere dine brugeres mobilenheder ved at udføre handlinger, f.eks. fjernviskering af en enhed.
-ms.openlocfilehash: b26906c0f374f5dc103fe26e4619663195da6ebd
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 04480e59177dc9b51bc50e413715e0ad82c7f461
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780825"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863170"
 ---
 # <a name="set-up-basic-mobility-and-security"></a>Konfigurer Basic Mobility og Security
 
@@ -52,7 +52,7 @@ Hvis du ikke har et brugerdefineret domæne, der er knyttet til Microsoft 365, e
 
 Har du brug for hjælp til at konfigurere posterne? Find din domæneregistrator, og vælg navnet på registratoren for at gå til trinvis hjælp til oprettelse af DNS-post på listen i [Tilføj DNS-poster for at oprette forbindelse til dit domæne](/office365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider). Brug disse instruktioner til at oprette CNAME-poster, der er beskrevet i [Forenkle Windows tilmelding uden Azure AD Premium](/mem/intune/enrollment/windows-enroll#simplify-windows-enrollment-without-azure-ad-premium).
 
-Når du har tilføjet de to CNAME-poster, skal du gå tilbage til Security & Compliance Center og gå til **Forebyggelse af** >  **datatabAdministration** for at fuldføre næste trin.
+Når du har tilføjet de to CNAME-poster, skal du gå tilbage til Security & Compliance Center og gå til Administration **af forebyggelse af** >  datatab **Enhedshåndtering** for at fuldføre næste trin.
 
 ### <a name="step-2-required-configure-an-apns-certificate-for-ios-devices"></a>Trin 2: (påkrævet) Konfigurer et APN-certifikat til iOS-enheder
 
@@ -60,9 +60,7 @@ Hvis du vil administrere iOS-enheder, f.eks. iPad og iPhones, skal du oprette et
 
 1. Log på for at Microsoft 365 med din globale administratorkonto.
 
-2. I din browser skal du skrive: [https://protection.office.com](https://protection.office.com/).
-
-3. Vælg **Forebyggelse af** >  **datatabAdministration af datatab**, og vælg **APN-certifikat til iOS-enheder**.
+2. Gå til [Microsoft 365 Administration](https://portal.office.com/adminportal/home?#/MifoDevices), og vælg **APN-certifikat til iOS**.
 
 4. Vælg **Næste** på siden Certifikat til Apple Push-meddelelse Indstillinger.
 
@@ -95,7 +93,7 @@ MFA hjælper med at sikre logon på Microsoft 365 til tilmelding af mobilenheder
 
 Hvis du vil vide mere om, hvordan du aktiverer MFA på Azure AD-portalen, skal du se [Konfigurer multifaktorgodkendelse](../security-and-compliance/set-up-multi-factor-authentication.md).
 
-Når du har konfigureret MFA, skal du gå tilbage til Security & Compliance Center og navigere til **Forebyggelse af** >  **datatabAdministrationDevice-politikker** >  for at fuldføre næste trin.
+Når du har konfigureret MFA, skal du gå tilbage til Security & Compliance Center og navigere til Forebyggelse **af** >  datatab **Enhedspolitikker** >  for at fuldføre næste trin.
 
 ### <a name="step-4-recommended-manage-device-security-policies"></a>Trin 4: (Anbefales) Administrer politikker for enhedssikkerhed
 
@@ -107,7 +105,7 @@ Det næste trin er at oprette og installere politikker for enhedssikkerhed for a
 
 3. Gå til **Enhedspolitikker**.
 
-   :::image type="content" source="../../media/basic-mobility-security/bms-4-policy.png" alt-text="Grundlæggende indstillinger for sikkerheds- og mobilitetspolitik.":::
+   :::image type="content" source="../../media/basic-mobility-security/basic-mobility-microsoft-purview.png" alt-text="Grundlæggende indstillinger for sikkerheds- og mobilitetspolitik.":::
 
 4. Opret og udrul de politikker for enhedssikkerhed, der er relevante for din organisation, ved at følge trinnene i [Opret sikkerhedspolitikker for enheder i Grundlæggende mobilitet og sikkerhed](create-device-security-policies.md).
 

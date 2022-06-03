@@ -18,12 +18,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: For enheder, du ikke kan administrere med Basic Mobility og Security, skal du blokere Exchange ActiveSync appadgang til Microsoft 365 mail.
-ms.openlocfilehash: 450d694e83b5044efb25adb918f38a124181481f
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 01b89bc50fb348072873d68f52b75d721830aeb5
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435827"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863115"
 ---
 # <a name="manage-device-access-settings-in-basic-mobility-and-security"></a>Administrer indstillinger for enhedsadgang i Basic Mobility og Security
 
@@ -40,9 +40,9 @@ Brug disse trin:
 
 3. Gå til **Forebyggelse af** \> datatab **Enhedspolitikker** for **enhed**\>, og vælg **Administrer indstillinger for enhedsadgang for hele organisationen**.
 
-4. Vælg **Blok**.
+4. Vælg **Access**.
 
-    :::image type="content" source="../../media/basic-mobility-security/bms-5-block-access.png" alt-text="Afkrydsningsfeltet Grundlæggende mobilitet og sikkerhed blokerer adgang.":::
+    :::image type="content" source="../../media/basic-mobility-security/basic-mobility-access.png" alt-text="Afkrydsningsfeltet Grundlæggende mobilitet og sikkerhed blokerer adgang.":::
 
 5. Vælg **Gem**.
 

@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Administrer og sikker mobilenheder, der er forbundet til din Microsoft 365 organisation, ved at konfigurere og bruge Grundlæggende mobilitet og sikkerhed.
-ms.openlocfilehash: 168fd1f0ef08cf1a9bd5d7c90c53781016b232e6
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 9a9b3d433408d4ce5225f1a74351d01150744132
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636124"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863200"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Oversigt over grundlæggende mobilitet og sikkerhed for Microsoft 365
 
@@ -50,7 +50,7 @@ Her er en oversigt over trinnene:
 
 **Trin 3:** Opret enhedspolitikker, og anvend dem på grupper af brugere. Når du gør dette, får brugerne en tilmeldingsmeddelelse på deres enhed, og når de har fuldført tilmeldingen, begrænses deres enheder af de politikker, du har konfigureret for dem. Du kan finde flere oplysninger under [Tilmeld din mobilenhed ved hjælp af Basic Mobility og Security](enroll-your-mobile-device.md). 
 
-:::image type="content" source="../../media/basic-mobility-security/bms-4-policy.png" alt-text="Grundlæggende indstillinger for sikkerheds- og mobilitetspolitik.":::
+:::image type="content" source="../../media/basic-mobility-security/basic-mobility-microsoft-purview.png" alt-text="Grundlæggende indstillinger for sikkerheds- og mobilitetspolitik.":::
 
 ## <a name="device-management-tasks"></a>Opgaver i forbindelse med enhedshåndtering
 

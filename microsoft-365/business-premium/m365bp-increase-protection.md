@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få hjælp til at øge beskyttelsesniveauet i Microsoft 365 Business Premium
-ms.openlocfilehash: 2bd00329f160c187325fc696114f0fac4e503656
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: a442dcd399a1886f5f63bd17dc897d1547a0f579
+ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319127"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65863602"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Øg trusselsbeskyttelsen for Microsoft 365 Business Premium
 
@@ -166,7 +166,7 @@ På følgende billede vises nogle af de standardpolitikker, der er inkluderet i 
 
 ### <a name="view-your-alert-policies"></a>Få vist dine politikker for beskeder
 
-1. Gå til Microsoft 365 Compliance Center på , og log på[https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Gå til Microsoft Purview-compliance-portal på , og log på[https://compliance.microsoft.com](https://compliance.microsoft.com).
 
 2. Vælg **Politikker** i navigationsruden, og vælg derefter **Beskedpolitikker**.
 
@@ -179,12 +179,12 @@ På følgende billede vises nogle af de standardpolitikker, der er inkluderet i 
 
 ### <a name="how-to-view-alerts"></a>Sådan får du vist beskeder
 
-Afhængigt af den specifikke besked kan du få vist dine beskeder enten på Microsoft 365 Defender-portalen eller i Microsoft 365 Overholdelsescenter.
+Afhængigt af den specifikke besked kan du få vist dine beskeder enten på Microsoft 365 Defender-portalen eller i Microsoft Purview-compliance-portal.
 
 | Beskedtype  | Sådan gør du  |
 |---------|---------|
-| Sikkerhedsadvarsel, f.eks. når en bruger klikker på et skadeligt link, en mail rapporteres som malware eller phish, eller en enhed registreres som indeholdende malware     | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og vælg **Politikker &** **reglerAlert** >  politik under **Mail & samarbejde**. Du kan også gå direkte til <https://security.microsoft.com/alertpolicies>. |
-| Besked om overholdelse af regler og standarder, f.eks. når en bruger deler følsomme eller fortrolige oplysninger (advarsel om forebyggelse af datatab), eller der er en usædvanlig mængde ekstern fildeling (besked om styring af oplysninger)    | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>, og vælg derefter **PolitikkerAlertAlert-politikker** >  > .  |
+| Sikkerhedsadvarsel, f.eks. når en bruger klikker på et skadeligt link, en mail rapporteres som malware eller phish, eller en enhed registreres som indeholdende malware     | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og vælg **Politikker & regler** > **Beskedpolitik** under **Mail & samarbejde**. Du kan også gå direkte til <https://security.microsoft.com/alertpolicies>. |
+| Besked om overholdelse af regler og standarder, f.eks. når en bruger deler følsomme eller fortrolige oplysninger (advarsel om forebyggelse af datatab), eller der er en usædvanlig mængde ekstern fildeling (besked om styring af oplysninger)    | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og vælg derefter **Politikker** > **Beskedbeskedpolitikker** > .  |
 
 Du kan få flere oplysninger under [Få vist beskeder](../compliance/alert-policies.md#view-alerts).
 
