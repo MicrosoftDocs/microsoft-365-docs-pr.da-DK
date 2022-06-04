@@ -17,20 +17,20 @@ search.appverid:
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Filplanen indeholder avancerede administrationsfunktioner til opbevaringsmærkater.
-ms.openlocfilehash: 7cb963106551951fb6ae1e2455d21fa44d47a77c
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: 67844e521aeec2257440aea34a79f0b96333f7f9
+ms.sourcegitcommit: e6443eb3a4c826792806873428c0c17b59f4fde5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396320"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65889361"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Brug filplanen til at oprette og administrere opbevaringsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Selvom du kan oprette og administrere opbevaringsmærkater fra **datalivscyklusstyring** i Microsoft Purview-compliance-portal, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
+Selvom du kan oprette og administrere opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
 
 - Du kan masseoprete opbevaringsmærkater ved at importere de relevante oplysninger fra et regneark.
 
@@ -51,7 +51,7 @@ Hvis du vil have adgang til filplanen, skal du have en af følgende administrato
 - Opbevaringsstyring
 - Kun visningsstyring
 
-I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com/) gå til **LøsningPostadministrationFilplan** >  > :
+På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du gå til **Filplan** for administration af **løsninger** > **til datastyring** > :
 
 ![Filplanside](../media/compliance-file-plan.png). 
 
@@ -59,9 +59,9 @@ Hvis **Datastyring** ikke vises i navigationsruden, skal du først rulle ned og 
 
 ## <a name="navigating-your-file-plan"></a>Navigering i filplanen
 
-Hvis du allerede har oprettet opbevaringsmærkater fra **datalivscyklusstyring** i Microsoft Purview-compliance-portal, vises disse mærkater automatisk i filplanen. 
+Hvis du allerede har oprettet opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, vises disse mærkater automatisk i din filplan. 
 
-Hvis du på samme måde nu opretter opbevaringsmærkater i filplanen, er de også tilgængelige fra **Administration af datalivscyklus** , hvis mærkaterne ikke er konfigureret til at markere indhold som en post.
+Hvis du nu opretter opbevaringsmærkater i filplanen, er de også tilgængelige fra **administration af datalivscyklus** , hvis mærkaterne ikke er konfigureret til at markere indhold som en post.
 
 På siden **Filplan** kan du se alle dine mærkater med deres status og indstillinger, valgfri filplanbeskrivelser, en eksportmulighed for at analysere eller aktivere offlinegennemsyn af dine mærkater og en importmulighed for at oprette opbevaringsmærkater. 
 
@@ -86,7 +86,7 @@ Alle kolonner undtagen navnet **kan** vises eller skjules ved at vælge indstill
     - Nej
     - Ja
 
-- **Relabel til** – i øjeblikket udrulning – identificerer, om mærkaten er konfigureret til at anvende en anden mærkat ved slutningen af opbevaringsperioden. Gyldige værdier:
+- **Relabel til** – i øjeblikket udrulning – identificerer, om etiketten er konfigureret til at anvende en anden mærkat ved slutningen af opbevaringsperioden. Gyldige værdier:
     - Tomt eller det valgte navn
 
 - **Opbevaringsvarighed** identificerer opbevaringsperioden. Gyldige værdier:
@@ -123,15 +123,15 @@ Når du vælger **Vælg** for hver af disse valgfri beskrivelse, kan du vælge e
 
 ## <a name="create-retention-labels"></a>Opret opbevaringsmærkater
 
-1. På siden **Filplan** skal du vælge **+ Opret en mærkatRetention-etiket** > 
+1. På siden **Filplan** skal du vælge **+ Opret en****navneopbevaringsmærkat** > 
 
 2. Følg prompterne for konfigurationsprocessen. Vær forsigtig med, hvilket navn du vælger, da dette ikke kan ændres, når etiketten er gemt.
     
-    Du kan få flere oplysninger om opbevaringsindstillingerne under [Indstillinger til at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
+    Du kan få flere oplysninger om opbevaringsindstillingerne under [Indstillinger for opbevaring og sletning af indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
     
     Hvis du vil bruge opbevaringsmærkaten til at deklarere poster, skal du vælge **Markér elementer som poster** eller **Markér elementer som lovmæssige poster**. Du kan få flere oplysninger under [Konfiguration af opbevaringsmærkater til deklarering af poster](declare-records.md#configuring-retention-labels-to-declare-records).
 
-3. Når du har oprettet etiketten, og du kan se indstillingerne for publicering af etiketten, skal du anvende etiketten automatisk eller blot gemme etiketten: Vælg **Gem blot etiketten nu**, og vælg derefter **Udført**.
+3. Når du har oprettet etiketten, og du kan se indstillingerne for publicering af etiketten, skal du anvende etiketten automatisk eller blot gemme etiketten: Vælg **Gem blot etiketten for nu**, og vælg derefter **Udført**.
 
 4. Gentag disse trin for at oprette flere mærkater.
 
@@ -145,9 +145,9 @@ Nogle indstillinger kan ikke ændres, når etiketten er oprettet og gemt, herund
 
 ## <a name="delete-retention-labels"></a>Slet opbevaringsmærkater
 
-Du kan slette opbevaringsmærkater, der i øjeblikket ikke er inkluderet i nogen [publicerede](create-apply-retention-labels.md) eller [automatisk gældende](apply-retention-labels-automatically.md) politikker for opbevaringsmærkater, som ikke er konfigureret til hændelsesbaseret opbevaring, eller markere elementer som lovmæssige poster.
+Du kan slette opbevaringsmærkater, der i øjeblikket ikke er inkluderet i nogen [publicerede](create-apply-retention-labels.md) eller [automatiske](apply-retention-labels-automatically.md) politikker for opbevaringsmærkater, som ikke er konfigureret til hændelsesbaseret opbevaring, eller som markerer elementer som lovmæssige poster.
 
-For opbevaringsmærkater, som du kan slette, hvis de er blevet anvendt på elementer, mislykkes sletningen, og du får vist et link til indholdsoversigten for at identificere de navngivne elementer.
+For opbevaringsmærkater, som du kan slette, hvis de er blevet anvendt på elementer, mislykkes sletningen, og du får vist et link til Indholdsoversigt for at identificere de navngivne elementer.
 
 Det kan dog tage op til to dage, før indholdsoversigten viser de elementer, der er forsynet med mærkater. I dette scenarie kan opbevaringsmærkaten blive slettet uden at vise dig linket til Indholdsoversigt.
 
@@ -179,7 +179,7 @@ I filplanen kan du masseimportér nye opbevaringsmærkater ved hjælp af en .csv
     
     ![Filplanskabelon med udfyldte oplysninger.](../media/file-plan-filled-out-template.png)
 
-4. Vælg **Upload en fil** for at uploade den udfyldte skabelon.
+4. Vælg **Overfør en fil** for at uploade den udfyldte skabelon.
     
    Filplanen overfører filen og validerer posterne.
 
@@ -203,8 +203,8 @@ Brug følgende oplysninger som en hjælp til at udfylde den downloadede skabelon
 |Ejendom|Type|Påkrævet|Gyldige værdier|
 |:-----|:-----|:-----|:-----|
 |Navn|String|Ja|Denne egenskab angiver navnet på opbevaringsmærkaten og skal være entydig i din lejer. Understøttede tegn til import: a-z, A-Z, 0-9, bindestreg (-) og mellemrumstegnet.|
-|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten i Microsoft Purview-compliance-portal.|
-|Bemærkninger|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for brugerne. Denne beskrivelse vises, når brugerne holder markøren over mærkaten i apps, f.eks. Outlook, SharePoint og OneDrive. Hvis du lader denne egenskab være tom, vises der en standardbeskrivelse, som forklarer indstillingerne for opbevaring af mærkaten. |
+|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten på Microsoft Purview-overholdelsesportalen.|
+|Bemærkninger|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for brugerne. Denne beskrivelse vises, når brugerne holder markøren over mærkaten i apps som Outlook, SharePoint og OneDrive. Hvis du lader denne egenskab være tom, vises der en standardbeskrivelse, som forklarer indstillingerne for opbevaring af mærkaten. |
 |IsRecordLabel|String|Nej, medmindre **lovgivningen** er **SAND**|Denne egenskab angiver, om etiketten markerer indholdet som en post. Gyldige værdier er: </br>**TRUE**: Etiketten markerer elementet som en post, og elementet kan derfor ikke slettes. </br>**FALSE**: Etiketten markerer ikke indholdet som en post. Dette er standardværdien. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction, RetentionDuration og RetentionType også angives.|
 |Opbevaringshandling|String|Nej, medmindre **RetentionDuration**, **RetentionType** eller **ReviewerEmail** er angivet|Denne egenskab angiver, hvilken handling der skal udføres, når den værdi, der er angivet af egenskaben RetentionDuration (hvis angivet), udløber. Gyldige værdier er: </br>**Slet**: Elementer, der er ældre end den værdi, der er angivet af egenskaben RetentionDuration, slettes.</br>**Bevar**: Bevar elementer i den varighed, der er angivet af egenskaben RetentionDuration, og gør derefter ingenting, når varighedsperioden udløber. </br>**KeepAndDelete**: Bevar elementer i den varighed, der er angivet i egenskaben RetentionDuration, og slet dem derefter, når varighedsperioden udløber. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionDuration og RetentionType også angives. |
 |Opbevaringsvarighed|String|Nej, medmindre **RetentionAction** eller **RetentionType** er angivet|Denne egenskab angiver det antal dage, indholdet skal bevares. Gyldige værdier er: </br>**Ubegrænset**: Elementer bevares på ubestemt tid. </br>**_n_*: Et positivt heltal i dage. for eksempel **365**. Det maksimale antal, der understøttes, er 24.855, hvilket er 68 år. Hvis du har brug for længere tid end denne maksimumværdi, skal du i stedet bruge Ubegrænset.</br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction og RetentionType også angives.
@@ -217,18 +217,15 @@ Brug følgende oplysninger som en hjælp til at udfylde den downloadede skabelon
 |AuthorityType|String|Nej|Denne egenskab angiver den værdi, der vises i filtypens beskrivelse af **autoritetstype** .|
 |Citatnavn|String|Nej|Denne egenskab angiver navnet på det citat, der vises i beskrivelsesbeskrivelsen **Til klargørings-/citatfilfil** . For eksempel "Sarbanes-Oxley Act of 2002". |
 |Citaturl|String|Nej|Denne egenskab angiver den URL-adresse, der vises i beskrivelsesbeskrivelsen **for klargørings-/citatfilfilen** .|
-|CitationJurisdiction|String|Nej|Denne egenskab angiver den jurisdiktion eller det agentur, der vises i beskrivelsesbeskrivelsen **Tilklarings-/citatfilfil** . For eksempel "Amerikanske værdipapirer og Exchange Commission (SEC)".|
+|CitationJurisdiction|String|Nej|Denne egenskab angiver den jurisdiktion eller det agentur, der vises i beskrivelsesbeskrivelsen **Tilklarings-/citatfilfil** . Det kan f.eks. være "US Securities and Exchange Commission (SEC)".|
 |Lovgivningsmæssige|String|Nej|Denne egenskab angiver, om mærkaten markerer indholdet som en lovmæssig post, hvilket er [mere restriktivt](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked) end en post. Hvis du vil bruge denne mærkatkonfiguration, skal din lejer være konfigureret til at [vise indstillingen for at markere indhold som en lovmæssig post](declare-records.md#how-to-display-the-option-to-mark-content-as-a-regulatory-record), ellers mislykkes importvalideringen. Gyldige værdier er: </br>**TRUE**: Etiketten markerer elementet som en lovmæssig post. Du skal også angive egenskaben **IsRecordLabel** til TRUE.</br>**FALSE**: Mærkaten markerer ikke indholdet som en lovmæssig post. Dette er standardværdien.|
-|EventType|String|Nej, medmindre **RetentionType** er **EventAgeInDays**|Denne egenskab angiver en hændelsestype, der bruges til [hændelsesbaseret opbevaring](event-driven-retention.md). Angiv en eksisterende hændelsestype, der vises i **Hændelsestyper** for **dataadministrationHændelser** >  > . Du kan også bruge [cmdlet'en Get-ComplianceRetentionEventType](/powershell/module/exchange/get-complianceretentioneventtype) til at få vist de tilgængelige hændelsestyper. Selvom der er nogle indbyggede hændelsestyper, f.eks **. medarbejderaktivitet** og **produktlevetid**, kan du også oprette dine egne hændelsestyper. </br> </br> Hvis du angiver din egen hændelsestype, skal den findes før importen, fordi navnet valideres som en del af importprocessen.|
+|EventType|String|Nej, medmindre **RetentionType** er **EventAgeInDays**|Denne egenskab angiver en hændelsestype, der bruges til [hændelsesbaseret opbevaring](event-driven-retention.md). Angiv en eksisterende hændelsestype, der visesi **Hændelseshåndteringshændelsestyper** for **datastyring** >  > . Du kan også bruge [cmdlet'en Get-ComplianceRetentionEventType](/powershell/module/exchange/get-complianceretentioneventtype) til at få vist de tilgængelige hændelsestyper. Selvom der er nogle indbyggede hændelsestyper, f.eks **. medarbejderaktivitet** og **produktlevetid**, kan du også oprette dine egne hændelsestyper. </br> </br> Hvis du angiver din egen hændelsestype, skal den findes før importen, fordi navnet valideres som en del af importprocessen.|
+|IsRecordUnlockedAsDefault|String|Nej|Denne egenskab angiver, om det element, der er markeret som en post, [låses op](record-versioning.md) , når etiketten anvendes. Gyldige værdier er: </br>**TRUE**: Det element, der er markeret som en post, låses op, når etiketten anvendes. Egenskaben **IsRecordLabel** skal være angivet til TRUE, og egenskaben **Regulatory** kan ikke angives til TRUE.</br>**FALSE**: Elementet er ikke markeret som en post eller er markeret som post, men låst, når etiketten anvendes. Dette er standardværdien.|
+|ComplianceTagForNextStage|String|Nej|Denne egenskab angiver navnet på en [erstatningsmærkat](retention-settings.md#relabeling-at-the-end-of-the-retention-period) , der skal anvendes i slutningen af opbevaringsperioden. </br> </br> Angiv ikke denne egenskab, hvis **Regulatory** er **TRUE**.|
 
 Navneindstillinger understøttes ikke i øjeblikket for import:
 
 - Gennemgang af fordeling i flere faser: Selvom du kan konfigurere indstillingerne for en enkelt fase for gennemgang af disposition, når du importerer opbevaringsmærkater med en skabelon, kan du ikke angive yderligere korrekturfaser. Konfigurer i stedet disse på overholdelsesportalen, når importen er fuldført.
-
-- Lås denne post op som standard (udrulles i prøveversion): Denne indstilling er ikke tilgængelig i den skabelon, der skal importeres, og du kan ikke vælge denne indstilling på overholdelsesportalen, når importen er fuldført.
-
-- Erstatningsmærkat (udrulles i prøveversion): Denne indstilling er ikke tilgængelig i skabelonen, der skal importeres, men du kan vælge denne indstilling på overholdelsesportalen, når importen er fuldført.
-
 
 ## <a name="next-steps"></a>Næste trin
 

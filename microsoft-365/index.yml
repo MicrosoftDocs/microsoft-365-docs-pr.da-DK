@@ -13,12 +13,12 @@ metadata:
   ms.author: samanro
   ms.date: 06/08/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: 7e2e2fc3b0e35675338c54f930189e1ac94599f1
-  ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+  ms.openlocfilehash: 5f5f4ae07c65912f336cc9038c5c958018a52e02
+  ms.sourcegitcommit: e6443eb3a4c826792806873428c0c17b59f4fde5
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/19/2022
-  ms.locfileid: "64934153"
+  ms.lasthandoff: 06/04/2022
+  ms.locfileid: "65889273"
 highlightedContent:
   items:
   - title: Konfigurer din infrastruktur til hybridarbejde
@@ -238,7 +238,7 @@ additionalContent:
       - text: Microsoft Viva Insights
         url: /insights/viva-teams-app
       - text: Microsoft Viva Connections
-        url: /sharepoint/viva-connections
+        url: /viva/connections/
       - text: Microsoft Viva Learning
         url: /microsoft-365/learning/
       - text: Mere Microsoft Viva >
