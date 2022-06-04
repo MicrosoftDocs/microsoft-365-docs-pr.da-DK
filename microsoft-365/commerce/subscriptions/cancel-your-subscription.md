@@ -20,13 +20,13 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Få mere at vide om, hvordan du annullerer din prøveversion af Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder eller betalte abonnementer i Microsoft 365 Administration.
-ms.date: 04/29/2022
-ms.openlocfilehash: 4f01946c00a7497f23d086422ffa90718df78a9f
-ms.sourcegitcommit: e0f890f46ae0bde03cc9e1ce178a7c1b8fbe12db
+ms.date: 06/02/2022
+ms.openlocfilehash: ea2a3bf0e77d11733e19b27f19bef378f691fd73
+ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65145184"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "65873660"
 ---
 # <a name="cancel-your-business-subscription"></a>Annuller dit virksomhedsabonnement
 
@@ -56,6 +56,9 @@ Du kan kun annullere og modtage en forholdsmæssig kredit eller refusion, hvis d
 Hvis du har brug for at annullere inden for syv dage efter starten eller fornyelsen af dit abonnement, skal du gå til [Trin til at annullere dit abonnement](#steps-to-cancel-your-subscription) senere i denne artikel.
 
 Hvis der er gået mere end syv dage, skal du [slå tilbagevendende fakturering](renew-your-subscription.md)fra. Dette forhindrer, at dit abonnement fornys ved periodens udløb.  Dubeholder din adgang til dine produkter og tjenester i resten af din abonnementsperiode. Hvis du har et årsabonnement og betaler månedligt, opkræves du hver måned for resten af din abonnementsperiode.
+
+> [!NOTE]
+> Du kan når som helst annullere for at stoppe fremtidige opkrævninger. Efter din 1-måneders gratis prøveversion opkræves du det gældende abonnementsgebyr.
 
 ### <a name="if-you-dont-have-a-billing-profile"></a>Hvis du ikke har en faktureringsprofil
 
