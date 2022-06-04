@@ -11,12 +11,12 @@ metadata:
   ms.author: efrene
   ms.date: 05/23/2022
   ms.localizationpriority: high
-  ms.openlocfilehash: 181254d39d245608bae690f2fdb78f7a6a5c0fa0
-  ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+  ms.openlocfilehash: b8044c7275d4dcae36c1559e4ed802e270679b9c
+  ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/24/2022
-  ms.locfileid: "65663376"
+  ms.lasthandoff: 06/04/2022
+  ms.locfileid: "65892744"
 landingContent:
 - title: Kom i gang
   linkLists:
@@ -36,15 +36,15 @@ landingContent:
       url: admin-overview/sign-up-for-office-365.md
     - text: Konfigurer tjenesten
       url: /microsoft-365/business-premium/m365bp-setup
-    - text: Sikker Windows 10 pc'er
+    - text: Sikker Windows 10-pc'er
       url: setup/secure-win-10-pcs.md
 - title: Enhedskonfiguration
   linkLists:
   - linkListType: video
     links:
-    - text: Forbind pc'er til Microsoft 365
-      url: setup/set-up-windows-devices.md
-    - text: Installér Microsoft Office apps
+    - text: Opret forbindelse mellem pc'er og Microsoft 365
+      url: /microsoft-365/business-premium/m365bp-set-up-windows-devices.md
+    - text: Installér Microsoft Office-apps
       url: setup/install-applications.md
     - text: Konfigurer Outlook til mail
       url: setup/setup-outlook.md
@@ -58,7 +58,7 @@ landingContent:
   linkLists:
   - linkListType: video
     links:
-    - text: Hent Administration-mobilappen
+    - text: Hent mobilappen Administrator
       url: admin-overview/admin-mobile-app.md
 - title: Business Voice
   linkLists:
@@ -118,17 +118,17 @@ landingContent:
   linkLists:
   - linkListType: video
     links:
-    - text: Sikker Windows 10 Pro enheder
+    - text: Sikre Windows 10 Pro-enheder
       url: /microsoft-365/business-premium/m365bp-secure-windows-devices.md
-    - text: Sikker Office apps på iOS
+    - text: Beskyt Office-apps på iOS
       url: /business-premium/m365bp-app-protection-settings-for-android-and-ios.md
 - title: Sikkerhed & overholdelse af angivne standarder
   linkLists:
   - linkListType: video
     links:
-    - text: Oversigt over Microsoft 365 Business Premium sikkerhed
+    - text: Oversigt over Microsoft 365 Business Premium-sikkerhed
       url: security-and-compliance/secure-your-business-data.md
-    - text: (NY!) Microsoft Defender til virksomheder
+    - text: (NY!) Microsoft Defender for Business
       url: /microsoft-365/security/defender-business/index.yml
     - text: Beskyt medarbejderkonti med MFA
       url: security-and-compliance/set-up-multi-factor-authentication.md
@@ -164,7 +164,7 @@ landingContent:
       url: moveto-microsoft-365/add-google-domain.md
     - text: Overfør virksomhedsmail og -kalender fra Google Workspace
       url: moveto-microsoft-365/migrate-email.md
-    - text: Forbind dit domæne til Microsoft 365 til virksomheder
+    - text: Opret forbindelse mellem dit domæne og Microsoft 365 til virksomheder
       url: moveto-microsoft-365/connect-domain-tom365.md
     - text: Overfør Google-filer til Microsoft 365 til virksomheder med Migration Manager
       url: moveto-microsoft-365/migrate-files-migration-manager.md

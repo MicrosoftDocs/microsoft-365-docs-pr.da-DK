@@ -50,7 +50,7 @@
         - name: Installér Office-apps
           href: setup/install-applications.md
         - name: Konfigurer windows-enheder
-          href: setup/set-up-windows-devices.md
+          href: /microsoft-365/business-premium/m365bp-set-up-windows-devices.md
         - name: Konfigurer mobilenheder
           href: setup/set-up-mobile-devices.md
         - name: Konfigurere Outlook til Microsoft 365 for business-mail (video)

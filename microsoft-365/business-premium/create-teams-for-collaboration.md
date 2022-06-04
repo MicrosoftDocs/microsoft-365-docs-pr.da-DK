@@ -23,36 +23,36 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvorfor og hvordan du opretter et team i Microsoft Teams, så din lille virksomhed eller kampagne kan samarbejde.
-ms.openlocfilehash: ef9c435cbaa7a862164c39244bdb2a865845fa58
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a996430d884e50d36c636c8682d862317775f63a
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100153"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65892554"
 ---
 # <a name="use-microsoft-teams-for-collaboration"></a>Brug Microsoft Teams til samarbejde
 
-Microsoft Teams er en samarbejdsapp, der hjælper dine medarbejdere med at holde styr på tingene og føre samtaler fra enhver enhed. Du kan bruge Microsoft Teams til at føre øjeblikkelige samtaler med medlemmer af dine medarbejdere eller gæster uden for organisationen. Du kan også foretage telefonopkald, hoste møder og dele filer.
+Microsoft Teams er en samarbejdsapp, der hjælper medlemmer af organisationen med at bruge en hvilken som helst enhed til at holde styr på tingene og føre samtaler. Du kan bruge Microsoft Teams til at føre øjeblikkelige samtaler med medlemmer af dine medarbejdere eller gæster uden for din organisation. Du kan også foretage telefonopkald, hoste møder og dele filer.
 
 ## <a name="best-practices"></a>Anbefalede fremgangsmåder
 
 1. Opret private teams til følsomme oplysninger.
 
-2. Opret et team for hele organisationen til kommunikation med alle på tværs af organisationen.
+1. Opret et team for hele organisationen til kommunikation med alle på tværs af organisationen.
 
-3. Opret teams til specifikke projekter, og anvend den rette mængde beskyttelse baseret på, hvem der skal inkluderes.
+1. Opret teams til specifikke projekter, og anvend den rette mængde beskyttelse baseret på, hvem der skal inkluderes.
 
-4. Opret specifikke teams til kommunikation med eksterne partnere for at holde dem adskilt fra alt, der er følsomt for din virksomhed.
+1. Opret specifikke teams til kommunikation med eksterne partnere for at holde dem adskilt fra alt, der er følsomt for din virksomhed.
 
 En virksomhed, et juridisk firma eller en sundhedspraksis kan f.eks. oprette følgende teams:
 
-1. **Et virksomheds-, virksomheds- eller øvelsesteam:** Dette er for alle at bruge til daglig kommunikation og arbejde på tværs af din virksomhed. Du kan bruge dette team til at sende meddelelser eller dele oplysninger af interesse for hele firmaet eller praksis.
+1. **Et virksomheds-, virksomheds- eller øvelsesteam:** Dette er for alle at bruge til den daglige kommunikation og arbejde på tværs af din virksomhed. Du kan bruge dette team til at sende meddelelser eller dele oplysninger af interesse for hele firmaet eller praksis.
 
-2. **Individuelle teams:** Konfigurer teams for mindre grupper for at samarbejde om deres daglige arbejde.
+1. **Individuelle teams:** Konfigurer teams for mindre grupper for at samarbejde om deres daglige arbejde.
 
-3. **Et eksternt kommunikationsteam eller -teams:** Koordinater med dine leverandører, partnere eller kunder uden at give dem adgang til noget følsomt. Konfigurer forskellige kanaler til bestemte grupper.
+1. **Et eksternt kommunikationsteam eller -teams:** Koordinater med dine leverandører, partnere eller kunder uden at give dem adgang til noget følsomt. Konfigurer forskellige kanaler til bestemte grupper.
 
-![Diagram over et Microsoft Teams vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en virksomhed.](../media/m365-democracy-teams-business-collab.png)
+![Diagram over et Microsoft Teams-vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en virksomhed.](../media/m365-democracy-teams-business-collab.png)
 
 Og kampagner kan oprette følgende teams for at kommunikere og samarbejde sikkert:
 
@@ -62,27 +62,27 @@ Og kampagner kan oprette følgende teams for at kommunikere og samarbejde sikker
 
 3. **Et partnerteam:** Koordinater med dine leverandører, partnere eller frivillige uden at give dem adgang til noget følsomt.
 
-![Diagram over et Microsoft Teams vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en kampagne.](../media/m365-democracy-teams-collab.png)
+![Diagram over et Microsoft Teams-vindue med tre separate teams, der giver mulighed for sikker kommunikation og samarbejde i en kampagne.](../media/m365-democracy-teams-collab.png)
 
 Når du opretter et team, oprettes der også følgende:
 
-- En ny [Microsoft 365 gruppe](/MicrosoftTeams/office-365-groups)
+- En ny [Microsoft 365-gruppe](/MicrosoftTeams/office-365-groups)
 
-- Et [SharePoint onlinewebsted](/MicrosoftTeams/sharepoint-onedrive-interact) og dokumentbibliotek til lagring af teamfiler
+- Et [SharePoint Online-websted](/MicrosoftTeams/sharepoint-onedrive-interact) og et dokumentbibliotek til lagring af teamfiler
 
-- En [Exchange Online](/MicrosoftTeams/exchange-teams-interact) delt postkasse og kalender
+- En delt [Exchange Online-postkasse](/MicrosoftTeams/exchange-teams-interact) og -kalender
 
-- En OneNote notesbog
+- En OneNote-notesbog
 
-- Knytter til andre Office 365 apps, f.eks. Planner og Power BI
+- Indgår i andre Office 365-apps, f.eks. Planner og Power BI
 
 I Microsoft Teams kan du finde:
 
-1. **Teams:** Find kanaler, du vil tilhøre, eller opret dine egne. I kanaler kan du holde møder på stedet, føre samtaler og dele filer.
+1. **Hold:** Find kanaler, der skal tilhøre, eller opret dine egne. I kanaler kan du holde møder på stedet, føre samtaler og dele filer.
 
-2. **Møder:** Se alt det, du har klar til dag eller uge. Eller planlæg et møde. Denne kalender synkroniseres med din Outlook kalender.
+2. **Møder:** Se alt det, du har klar til dag eller uge. Eller planlæg et møde. Denne kalender synkroniseres med din Outlook-kalender.
 
-3. **Opkald:** Hvis organisationen har konfigureret den, kan du i nogle tilfælde ringe til alle fra Microsoft Teams, også selvom de ikke bruger Microsoft Teams.
+3. **Opkald:** Hvis din organisation har konfigureret den, kan du i nogle tilfælde ringe til alle fra Microsoft Teams, selvom de ikke bruger Microsoft Teams.
 
 4. **Aktivitet:** Se alle dine ulæste meddelelser, @mentions, svar og meget mere.
 
@@ -102,7 +102,7 @@ Opret et team, som du deler med gæster uden for din organisation, f.eks. til an
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FQMp]
 
-Få mere at vide om Microsoft Teams i [Microsoft Teams tekniske dokumentation](/microsoftteams/microsoft-teams)
+Få mere at vide om [teknisk dokumentation til Microsoft Teams på Microsoft Teams](/microsoftteams/microsoft-teams)
 
 ## <a name="admin-settings"></a>Administratorindstillinger
 

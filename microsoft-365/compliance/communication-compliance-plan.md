@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 2f9d3ae0bc7a07d515b80d7e98140e91d29db342
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: c0644f72e702a774ab95a7db8e6ae581edfd3377
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810806"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65892532"
 ---
 # <a name="plan-for-communication-compliance"></a>Plan for kommunikationsoverholdelse
 
@@ -41,20 +41,20 @@ Du kan også se [Microsoft Mechanics-videoen](https://www.youtube.com/watch?v=Yn
 
 ## <a name="transitioning-from-supervision-in-office-365"></a>Overgang fra overvågning i Office 365
 
-For organisationer, der bruger overvågningspolitikker i Office 365, bør du straks planlægge at overgå til politikker for overholdelse af kommunikation i Microsoft Purview og har brug for at forstå disse vigtige punkter:
+For organisationer, der bruger overvågningspolitikker i Office 365, skal du straks planlægge at overgå til politikker for kommunikation med overholdelse af angivne standarder i Microsoft Purview og have brug for at forstå disse vigtige punkter:
 
-- Tilsynsløsningen i Office 365 er blevet fuldt erstattet af kommunikationsoverholdelsesløsningen i Microsoft Purview. Vi anbefaler, at du opretter nye politikker i overholdelse af angivne standarder for kommunikation, der har de samme indstillinger som eksisterende overvågningspolitikker, for at bruge de nye undersøgelses- og afhjælpningsforbedringer.
-- Meddelelser, der er gemt under overvågning i Office 365 politikforekomster, kan ikke flyttes eller deles i kommunikation med overholdelse af angivne standarder.
+- Overvågningsløsningen i Office 365 er blevet fuldt erstattet af løsningen til kommunikationsoverholdelse i Microsoft Purview. Vi anbefaler, at du opretter nye politikker i overholdelse af angivne standarder for kommunikation, der har de samme indstillinger som eksisterende overvågningspolitikker, for at bruge de nye undersøgelses- og afhjælpningsforbedringer.
+- Meddelelser, der er gemt under overvågning i Office 365-politikforekomster, kan ikke flyttes eller deles i kommunikation med overholdelse af angivne standarder.
 - For organisationer med begge løsninger, der bruges side om side under overgangsprocessen, skal politikker, der bruges i hver løsning, have entydige politiknavne. Grupper og brugerdefinerede nøgleordsordbøger kan deles mellem løsninger i en overgangsperiode.
 
-Du kan finde flere oplysninger i [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) for at få oplysninger om overvågning i Office 365.
+Du kan finde flere oplysninger i [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) for at få flere oplysninger om overvågning i Office 365.
 
 ## <a name="work-with-stakeholders-in-your-organization"></a>Arbejd med interessenter i din organisation
 
 Identificer de relevante interessenter i din organisation for at samarbejde om at udføre handlinger i forbindelse med beskeder om kommunikation med overholdelse af angivne standarder. Nogle af de anbefalede interessenter, der bør overvejes, herunder i den indledende planlægning og [arbejdsprocessen for overholdelse af angivne standarder for kommunikation](communication-compliance.md#workflow) fra ende til anden, er personer fra følgende områder i organisationen:
 
 - Informationsteknologi
-- Overholdelse af regler og standarder
+- Overholdelse af angivne standarder
 - Beskyttelse af personlige oplysninger
 - Sikkerhed
 - Personaleafdelingen
@@ -64,29 +64,29 @@ Identificer de relevante interessenter i din organisation for at samarbejde om a
 
 ### <a name="permissions"></a>Tilladelser
 
-Vælg dedikerede interessenter for at overvåge og gennemse beskeder og sager regelmæssigt i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/). Sørg for, at du forstår, hvordan du tildeler brugere og interessenter til forskellige rollegrupper for kommunikation med overholdelse af angivne standarder i din organisation.
+Vælg dedikerede interessenter for at overvåge og gennemse beskeder og sager med jævne mellemrum på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/). Sørg for, at du forstår, hvordan du tildeler brugere og interessenter til forskellige rollegrupper for kommunikation med overholdelse af angivne standarder i din organisation.
 
 > [!IMPORTANT]
 > Når du har konfigureret dine rollegrupper, kan det tage op til 30 minutter, før rollegruppens tilladelser gælder for tildelte brugere på tværs af organisationen.
 
-Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser til at administrere funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil gøre **Overholdelse af kommunikation** tilgængelig som en menuindstilling i Microsoft Purview-compliance-portal og fortsætte med disse konfigurationstrin, skal du være tildelt en af følgende roller eller rollegrupper:
+Der er seks rollegrupper, der bruges til at konfigurere de første tilladelser til at administrere funktioner til kommunikation med overholdelse af angivne standarder. Hvis du vil gøre **Overholdelse af kommunikation** tilgængelig som en menuindstilling på Microsoft Purview-overholdelsesportalen og fortsætte med disse konfigurationstrin, skal du være tildelt en af følgende roller eller rollegrupper:
 
-- Azure Active Directory [*rolle som global administrator*](/azure/active-directory/roles/permissions-reference#global-administrator)
-- rollen Azure Active Directory [*overholdelsesadministrator*](/azure/active-directory/roles/permissions-reference#compliance-administrator)
-- Microsoft Purview-compliance-portal [*rollegruppe for organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
-- rollegruppe for Microsoft Purview-compliance-portal [*overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
+- Rolle som global Azure Active [*Directory-administrator*](/azure/active-directory/roles/permissions-reference#global-administrator)
+- [*Rolle som Azure Active Directory-overholdelsesadministrator*](/azure/active-directory/roles/permissions-reference#compliance-administrator)
+- Rollegruppe for Microsoft Purview-overholdelsesportal [*til organisationsadministration*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
+- Rollegruppe for Microsoft [*Purview-overholdelsesportalen Overholdelsesadministrator*](/microsoft-365/security/office-365-security/permissions-in-the-security-and-compliance-center)
 - *Rollegruppe for kommunikation med overholdelse af angivne standarder*
-- Administration rollegruppe for *kommunikationoverholdelse*
+- Rollegruppe *for administrator af kommunikationsoverholdelse*
 
-Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluderet i rollegruppen *Kommunikationsoverholdelse Administration*:
+Medlemmer af følgende roller har de samme løsningstilladelser, der er inkluderet i rollegruppen *Administration af kommunikationsoverholdelse* :
 
-- Azure Active Directory *global administrator*
-- Azure Active Directory *overholdelsesadministrator*
-- Microsoft Purview-compliance-portal *organisationsstyring*
-- Microsoft Purview-compliance-portal *overholdelsesadministrator*
+- Global Azure Active *Directory-administrator*
+- Azure Active Directory *Compliance Administrator*
+- Microsoft Purview Compliance Portal *Organisationsadministration*
+- Microsoft Purview Compliance Portal *Compliance Administrator*
 
 > [!IMPORTANT]
-> Sørg for, at du altid har mindst én bruger i rollegrupperne *Communication Compliance* eller *Communication Compliance Administration* (afhængigt af den indstilling, du vælger), så konfigurationen af kommunikationsoverholdelse ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader din organisation.
+> Sørg for, at du altid har mindst én bruger i rollegrupperne *Kommunikationsoverholdelse* eller *Administrator af kommunikationsoverholdelse* (afhængigt af den indstilling, du vælger), så konfigurationen af kommunikationsoverholdelse ikke kommer ind i et scenarie med "nul administrator", hvis bestemte brugere forlader din organisation.
 
 Afhængigt af hvordan du vil administrere politikker og beskeder om overholdelse af kommunikation, skal du tildele brugere til bestemte rollegrupper for at administrere forskellige sæt funktioner til kommunikation med overholdelse af angivne standarder. Du har mulighed for at tildele brugere med forskellige overholdelsesansvar til bestemte rollegrupper for at administrere forskellige områder af funktioner til kommunikation med overholdelse af angivne standarder. Du kan også vælge at tildele alle brugerkonti for udpegede administratorer, analytikere, efterforskere og seere til rollegruppen *Kommunikationsoverholdelse* . Brug en enkelt rollegruppe eller flere rollegrupper, så de passer bedst til dine krav til administration af overholdelse.
 
@@ -95,17 +95,17 @@ Vælg mellem disse indstillinger for løsningsrollegruppen, når du konfigurerer
 |**Rolle**|**Rolletilladelser**|
 |:-----|:-----|
 | **Kommunikation med overholdelse af angivne standarder** | Brug denne rollegruppe til at administrere overholdelse af kommunikation for din organisation i en enkelt gruppe. Ved at tilføje alle brugerkonti for udpegede administratorer, analytikere, efterforskere og seere kan du konfigurere tilladelser til kommunikation med overholdelse af angivne standarder i en enkelt gruppe. Denne rollegruppe indeholder alle tilladelser til kommunikation med overholdelse af angivne standarder. Denne konfiguration er den nemmeste måde hurtigt at komme i gang med overholdelse af angivne standarder for kommunikation på, og den er velegnet til organisationer, der ikke har brug for separate tilladelser, der er defineret for separate grupper af brugere. Brugere, der opretter politikker som administrator af kommunikationsoverholdelse, skal have deres postkasse hostet på Exchange Online. |
-| **Administration for overholdelse af angivne standarder for kommunikation** | Brug denne rollegruppe til først at konfigurere overholdelse af kommunikation og senere til at adskille administratorer af kommunikation med overholdelse af angivne standarder i en defineret gruppe. Brugere, der er tildelt denne rollegruppe, kan oprette, læse, opdatere og slette politikker for kommunikation med overholdelse af angivne standarder, globale indstillinger og tildelinger af rollegrupper. Brugere, der er tildelt denne rollegruppe, kan ikke få vist meddelelsesbeskeder. Brugere, der opretter politikker som administrator af kommunikationsoverholdelse, skal have deres postkasse hostet på Exchange Online. |
+| **Administrator af kommunikation med overholdelse af angivne standarder** | Brug denne rollegruppe til først at konfigurere overholdelse af kommunikation og senere til at adskille administratorer af kommunikation med overholdelse af angivne standarder i en defineret gruppe. Brugere, der er tildelt denne rollegruppe, kan oprette, læse, opdatere og slette politikker for kommunikation med overholdelse af angivne standarder, globale indstillinger og tildelinger af rollegrupper. Brugere, der er tildelt denne rollegruppe, kan ikke få vist meddelelsesbeskeder. Brugere, der opretter politikker som administrator af kommunikationsoverholdelse, skal have deres postkasse hostet på Exchange Online. |
 | **Kommunikationsoverholdelsesanalytiker** | Brug denne gruppe til at tildele tilladelser til brugere, der fungerer som analytikere af kommunikation med overholdelse af angivne standarder. Brugere, der er tildelt til denne rollegruppe, kan få vist politikker, hvor de er tildelt som korrekturlæsere, få vist meddelelsesmetadata (ikke meddelelsesindhold), eskalere til yderligere korrekturlæsere eller sende meddelelser til brugere. Analytikere kan ikke løse ventende beskeder. |
-| **Efterforsker af kommunikation med overholdelse af angivne standarder** | Brug denne gruppe til at tildele tilladelser til brugere, der fungerer som undersøgere af kommunikation med overholdelse af angivne standarder. Brugere, der er tildelt denne rollegruppe, kan få vist metadata og indhold, eskalere til yderligere korrekturlæsere, eskalere til en eDiscovery-sag (Premium), sende meddelelser til brugere og løse beskeden. |
+| **Efterforsker af kommunikation med overholdelse af angivne standarder** | Brug denne gruppe til at tildele tilladelser til brugere, der fungerer som undersøgere af kommunikation med overholdelse af angivne standarder. Brugere, der er tildelt denne rollegruppe, kan få vist meddelelsesmetadata og indhold, eskalere til yderligere korrekturlæsere, eskalere til en eDiscovery (Premium)-sag, sende meddelelser til brugere og løse beskeden. |
 | **Meddelelsesoverholdelsesfremviser** | Brug denne gruppe til at tildele tilladelser til brugere, der skal administrere kommunikationsrapporter. Brugere, der er tildelt denne rollegruppe, kan få adgang til alle rapporteringswidgets på startsiden for kommunikation med overholdelse af angivne standarder og kan få vist alle rapporter om kommunikation med overholdelse af angivne standarder. |
 
 ### <a name="supervised-users"></a>Overvågede brugere
 
-Før du begynder at bruge overholdelse af kommunikation, skal du afgøre, hvem der har brug for, at deres kommunikation gennemses. I politikken identificerer brugermailadresser enkeltpersoner eller grupper af personer, der skal overvåges. Eksempler på disse grupper er Microsoft 365-grupper, Exchange-baserede distributionslister, Yammer communities og Microsoft Teams kanaler. Du kan også udelukke bestemte brugere eller grupper fra scanning med en bestemt udeladelsesgruppe eller en liste over grupper. Du kan få flere oplysninger om de gruppertyper, der understøttes i politikker for kommunikation med overholdelse af [angivne standarder, under Kom i gang med overholdelse af angivne standarder for kommunikation](communication-compliance-configure.md#step-3-optional-set-up-groups-for-communication-compliance).
+Før du begynder at bruge overholdelse af kommunikation, skal du afgøre, hvem der har brug for, at deres kommunikation gennemses. I politikken identificerer brugermailadresser enkeltpersoner eller grupper af personer, der skal overvåges. Nogle eksempler på disse grupper er Microsoft 365-grupper, Exchange-baserede distributionslister, Yammer-communities og Microsoft Teams-kanaler. Du kan også udelukke bestemte brugere eller grupper fra scanning med en bestemt udeladelsesgruppe eller en liste over grupper. Du kan få flere oplysninger om de gruppertyper, der understøttes i politikker for kommunikation med overholdelse af [angivne standarder, under Kom i gang med overholdelse af angivne standarder for kommunikation](communication-compliance-configure.md#step-3-optional-set-up-groups-for-communication-compliance).
 
 > [!IMPORTANT]
-> Brugere, der er omfattet af politikker for overholdelse af angivne standarder for kommunikation, skal enten have en Microsoft 365 E5 Overholdelse licens, en Office 365 Enterprise E3-licens med tilføjelsesprogrammet Avanceret overholdelse eller være inkluderet i et Office 365 Enterprise E5-abonnement. Hvis du ikke har en eksisterende Enterprise E5-plan og vil prøve overholdelse af angivne standarder for kommunikation, kan du [tilmelde dig en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
+> Brugere, der er omfattet af politikker for overholdelse af kommunikation, skal enten have en Licens til Microsoft 365 E5-overholdelse, en Office 365 Enterprise E3-licens med tilføjelsesprogrammet Avanceret overholdelse eller være inkluderet i et Office 365 Enterprise E5-abonnement. Hvis du ikke har en eksisterende Enterprise E5-plan og vil prøve overholdelse af angivne standarder for kommunikation, kan du [tilmelde dig en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
 
 ### <a name="reviewers"></a>Korrekturlæsere
 
@@ -113,7 +113,7 @@ Når du opretter en politik for overholdelse af angivne standarder for kommunika
 
 ### <a name="groups-for-supervised-users-and-reviewers"></a>Grupper til overvågede brugere og korrekturlæsere
 
-Hvis du vil forenkle konfigurationen, skal du oprette grupper til personer, der har brug for, at deres kommunikation gennemses, og grupper til personer, der gennemser denne kommunikation. Hvis du bruger grupper, har du muligvis brug for flere. Hvis du f.eks. vil scanne kommunikation mellem to forskellige grupper af personer, eller hvis du vil angive en gruppe, der ikke overvåges. Når du tildeler en distributionsgruppe i politikken, overvåger politikken alle mails fra hver bruger i distributionsgruppen. Når du tildeler en Microsoft 365 gruppe i politikken, overvåger politikken alle mails, der sendes til den pågældende gruppe, og ikke de enkelte mails, der modtages af hvert gruppemedlem.
+Hvis du vil forenkle konfigurationen, skal du oprette grupper til personer, der har brug for, at deres kommunikation gennemses, og grupper til personer, der gennemser denne kommunikation. Hvis du bruger grupper, har du muligvis brug for flere. Hvis du f.eks. vil scanne kommunikation mellem to forskellige grupper af personer, eller hvis du vil angive en gruppe, der ikke overvåges. Når du tildeler en distributionsgruppe i politikken, overvåger politikken alle mails fra hver bruger i distributionsgruppen. Når du tildeler en Microsoft 365-gruppe i politikken, overvåger politikken alle mails, der sendes til den pågældende gruppe, og ikke de enkelte mails, der modtages af hvert gruppemedlem.
 
 Tilføjelse af grupper og distributionslister til politikker for overholdelse af kommunikation er en del af de overordnede betingelser og regler, der er angivet, så det maksimale antal grupper og distributionslister, som en politik understøtter, varierer afhængigt af det antal betingelser, der også føjes til politikken. Hver politik skal understøtte ca. 20 grupper eller distributionslister, afhængigt af antallet af yderligere betingelser, der findes i politikken.
 
@@ -121,7 +121,7 @@ Brug følgende diagram til at hjælpe dig med at konfigurere grupper i din organ
 
 | **Politikmedlem** | **Understøttede grupper** | **Ikke-understøttede grupper** |
 |:-----|:-----|:-----|
-|Overvågede brugere <br> Udeladte brugere | Distributionsgrupper <br> Microsoft 365-grupper | Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper <br> Microsoft 365 grupper med dynamisk medlemskab |
+|Overvågede brugere <br> Udeladte brugere | Distributionsgrupper <br> Microsoft 365-grupper | Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper <br> Microsoft 365-grupper med dynamisk medlemskab |
 | Korrekturlæsere | Ingen | Distributionsgrupper <br> Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper |
 
 ### <a name="privacy"></a>Beskyttelse af personlige oplysninger
@@ -141,8 +141,8 @@ Når du planlægger politikker for kommunikation med overholdelse af angivne sta
 
 - Overvej at tilføje alle brugere i din organisation som in-scope for dine politikker for kommunikation med overholdelse af angivne standarder. Det er nyttigt i nogle tilfælde at identificere bestemte brugere som omfattet af individuelle politikker, men de fleste organisationer bør inkludere alle brugere i politikker for overholdelse af kommunikation, der er optimeret til chikane eller registrering af diskrimination.
 - Konfigurer den procentdel af kommunikationen, der skal gennemses, til 100 % for at sikre, at politikker indhenter alle problemer, der giver anledning til bekymring i forbindelse med kommunikation for din organisation.
-- Du kan scanne kommunikation fra [tredjepartskilder](communication-compliance-channels.md#third-party-sources) for data, der er importeret til postkasser i din Microsoft 365 organisation. Hvis du vil inkludere gennemgang af kommunikation på disse platforme, skal du konfigurere en connector til disse tjenester, før meddelelser, der opfylder politikbetingelser, overvåges af kommunikationspolitikken.
-- Politikker kan understøtte overvågning af andre sprog end engelsk i brugerdefinerede politikker for overholdelse af kommunikation. Byg en [brugerordbog med nøgleord](communication-compliance-policies.md#custom-keyword-dictionaries) med stødende ord på det sprog, du vælger, eller byg din egen model til maskinel indlæring ved hjælp af [klassificeringsmaskiner, der kan oplæres](classifier-get-started-with.md) i Microsoft 365.
+- Du kan scanne kommunikation fra [tredjepartskilder](communication-compliance-channels.md#third-party-sources) for data, der er importeret til postkasser i din Microsoft 365-organisation. Hvis du vil inkludere gennemgang af kommunikation på disse platforme, skal du konfigurere en connector til disse tjenester, før meddelelser, der opfylder politikbetingelser, overvåges af kommunikationspolitikken.
+- Politikker kan understøtte overvågning af andre sprog end engelsk i brugerdefinerede politikker for overholdelse af kommunikation. Opret en [brugerordbog med nøgleord](communication-compliance-policies.md#custom-keyword-dictionaries) med stødende ord på det sprog, du vælger, eller byg din egen model til maskinel indlæring ved hjælp af [klassificeringsmaskiner, der kan oplæres](classifier-get-started-with.md) i Microsoft 365.
 - Alle organisationer har forskellige kommunikationsstandarder og politikbehov. Overvåg for bestemte nøgleord ved hjælp af [betingelser for kommunikation med](communication-compliance-policies.md#conditional-settings) overholdelse af regler og standarder, eller overvåg for bestemte typer oplysninger med [brugerdefinerede følsomme oplysningstyper](create-a-custom-sensitive-information-type.md).
 
 ## <a name="creating-a-communication-compliance-policy-walkthrough"></a>Gennemgang af oprettelse af en politik for overholdelse af angivne standarder for kommunikation
@@ -156,4 +156,4 @@ Vil du se en detaljeret gennemgang af, hvordan du konfigurerer en ny politik for
 
 ## <a name="ready-to-get-started"></a>Er du klar til at komme i gang?
 
-Hvis du vil konfigurere overholdelse af angivne standarder for kommunikation for din Microsoft 365 organisation, skal du se [Konfigurer overholdelse af angivne standarder for kommunikation](communication-compliance-configure.md) eller se [casestudiet for Contoso](communication-compliance-case-study.md), og hvordan de hurtigt konfigurerede en politik for overholdelse af angivne standarder for kommunikation for at overvåge upassende indhold i Microsoft Teams, Exchange Online og Yammer  Kommunikation.
+Hvis du vil konfigurere overholdelse af kommunikation for din Microsoft 365-organisation, skal du se [Konfigurer overholdelse af kommunikation](communication-compliance-configure.md) eller se [casestudiet for Contoso](communication-compliance-case-study.md) , og hvordan de hurtigt konfigurerede en politik for kommunikation med overholdelse af angivne standarder for at overvåge upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation.

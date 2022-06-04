@@ -17,16 +17,16 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: df99f73275e0aa83216bd1de101638dee628f0f2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1e5d4e278bc70fdf63c951598bf12f88816a43d0
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091891"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893223"
 ---
 # <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Gennemse afhjælpningshandlinger i Microsoft 365 Business Premium
 
-Okay, du har opdaget et sikkerhedsbrud, men hvad gør du? Det afhænger af arten af det. 
+Okay, du har opdaget et sikkerhedsbrud, men hvad gør du? Det afhænger af arten af det.
 
 Eksempler på afhjælpningshandlinger omfatter afsendelse af en fil for at sætte en fil i karantæne, forhindre en proces i at køre eller helt fjerne en planlagt opgave. Alle afhjælpningshandlinger spores i Løsningscenter, som er placeret på [https://security.microsoft.com/action-center](https://security.microsoft.com/action-center).
 

@@ -25,25 +25,25 @@ search.appverid:
 - BCS160
 - MET150
 description: Få hjælp til at øge beskyttelsesniveauet i Microsoft 365 Business Premium
-ms.openlocfilehash: a442dcd399a1886f5f63bd17dc897d1547a0f579
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+ms.openlocfilehash: dfbde871e31bd4c8e47fb9365ad4da7a9a1f6226
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863602"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893179"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Øg trusselsbeskyttelsen for Microsoft 365 Business Premium
 
 I dette mål øger du din trusselsbeskyttelse med Microsoft 365 Business Premium. Det er vigtigt at beskytte din virksomhed mod phishing, malware og andre trusler. Denne målsætning indeholder oplysninger om:
 
-- [Forudindstillede sikkerhedspolitikker](#review-and-apply-preset-security-policies) , der kan spare meget tid i forbindelse med konfiguration og konfiguration
+- [Forudindstillede sikkerhedspolitikker](#review-and-apply-preset-security-policies) , der kan spare meget tid i forbindelse med konfiguration og konfiguration.
 - [Brugerdefinerede sikkerhedspolitikker](#create-custom-security-policies) , som du kan definere, så de passer til dine forretningsbehov
-- [Sådan justerer du dine delingsindstillinger for SharePoint og OneDrive filer og mapper](#set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders)
-- [Advarselspolitikker](#review-your-alert-policies) , der overvåger bestemte filer, og hvordan de bruges. 
+- Sådan [justerer du dine delingsindstillinger for SharePoint- og OneDrive-filer og -mapper](#set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders).
+- [Advarselspolitikker](#review-your-alert-policies) , der overvåger bestemte filer, og hvordan de bruges.
 
 ## <a name="review-and-apply-preset-security-policies"></a>Gennemse og anvend forudindstillede sikkerhedspolitikker
 
-Dit abonnement indeholder [forudindstillede sikkerhedspolitikker](../security/office-365-security/preset-security-policies.md) , der bruger anbefalede indstillinger til beskyttelse mod spam, antimalware og anti-phishing. Indbygget beskyttelse er som standard aktiveret. Overvej dog at anvende standard- eller streng beskyttelse for øget sikkerhed. 
+Dit abonnement indeholder [forudindstillede sikkerhedspolitikker](../security/office-365-security/preset-security-policies.md) , der bruger anbefalede indstillinger til beskyttelse mod spam, antimalware og anti-phishing. Indbygget beskyttelse er som standard aktiveret. Overvej dog at anvende standard- eller streng beskyttelse for øget sikkerhed.
 
 :::image type="content" source="media/m365bp-presetsecuritypolicies.png" alt-text="Skærmbillede af forudindstillede sikkerhedspolitikker.":::
 
@@ -55,14 +55,14 @@ Dit abonnement indeholder [forudindstillede sikkerhedspolitikker](../security/of
 Forudindstillede sikkerhedspolitikker beskytter dit mail- og samarbejdsindhold. Disse politikker består af:
 
 - *Profiler*, der bestemmer beskyttelsesniveauet
-- *Politikker* (f.eks. spam, antimalware, anti-phishing, spoof-indstillinger, repræsentation, Pengeskab vedhæftede filer og Pengeskab links)
+- *Politikker* (f.eks. spam, antimalware, anti-phishing, spoof-indstillinger, repræsentation, vedhæftede filer og sikre links)
 - *Politikindstillinger* (f.eks. grupper, brugere eller domæner for at modtage politikkerne og eventuelle undtagelser)
 
 I følgende tabel opsummeres beskyttelsesniveauer og forudindstillede politiktyper.
 
 | Beskyttelsesniveau | Beskrivelse |
 |:---|:---|
-| **Standardbeskyttelse** <br/>(*anbefales til de fleste virksomheder*) | Standardbeskyttelse bruger en grundlinjeprofil, der passer til de fleste brugere. Standardbeskyttelse omfatter anti-spam, anti-malware, anti-phishing, spoof-indstillinger, repræsentationsindstillinger, Pengeskab links og Pengeskab politikker for vedhæftede filer.  |
+| **Standardbeskyttelse** <br/>(*anbefales til de fleste virksomheder*) | Standardbeskyttelse bruger en grundlinjeprofil, der passer til de fleste brugere. Standardbeskyttelse omfatter anti-spam, antimalware, anti-phishing, spoof-indstillinger, repræsentationsindstillinger, sikre links og politikker for vedhæftede filer, der er tillid til.  |
 | **Streng beskyttelse**  | Streng beskyttelse omfatter de samme typer politikker som standardbeskyttelse, men med strengere indstillinger. Hvis din virksomhed skal opfylde yderligere sikkerhedskrav eller -bestemmelser, kan du overveje at anvende streng beskyttelse for mindst dine prioriterede brugere eller mål med høj værdi. |
 | **Indbygget beskyttelse** | Beskytter mod skadelige links og vedhæftede filer i mails. Indbygget beskyttelse er aktiveret og anvendt på alle brugere som standard.  |
 
@@ -85,7 +85,7 @@ Streng beskyttelse tilsidesætter alle andre politikker, og indbygget beskyttels
 
 Hvis du vil vide mere om forudindstillede sikkerhedspolitikker, skal du se [Hvad forudindstillede sikkerhedspolitikker er lavet af](../security/office-365-security/preset-security-policies.md#what-preset-security-policies-are-made-of).
 
-### <a name="how-do-i-assign-preset-security-policies-to-users"></a>Hvordan gør jeg tildele forudindstillede sikkerhedspolitikker til brugere?
+### <a name="how-do-i-assign-preset-security-policies-to-users"></a>Hvordan tildeler jeg forudindstillede sikkerhedspolitikker til brugere?
 
 > [!IMPORTANT]
 > Før du begynder, skal du sørge for, at du har en af følgende roller tildelt i Exchange Online (som er inkluderet i dit abonnement):
@@ -117,7 +117,7 @@ Hvis du vil tildele forudindstillede sikkerhedspolitikker, skal du følge disse 
 
    Når du er færdig, skal du vælge **Næste**.
 
-4. På **siden Defender for Office 365 beskyttelse gælder for** at identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser). Angiv brugere, grupper og domæner på samme måde som i det forrige trin.
+4. På **Defender for Office 365-beskyttelserne gælder for siden for at** identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser). Angiv brugere, grupper og domæner på samme måde som i det forrige trin.
 
    Klik på **Næste**, når du er færdig.
 
@@ -137,9 +137,9 @@ Brug vores vejledning til hurtig start [, Beskyt mod trusler](../security/office
 - [Beskyttelse modmalware](../security/office-365-security/protect-against-threats.md#part-1---anti-malware-protection-in-eop)
 - [Avanceret antiphishing-beskyttelse](../security/office-365-security/protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365)
 - [Antispambeskyttelse](../security/office-365-security/protect-against-threats.md#part-3---anti-spam-protection-in-eop)
-- [Pengeskab links og Pengeskab vedhæftede filer](../security/office-365-security/protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
+- [Sikre links og vedhæftede filer, der er tillid til](../security/office-365-security/protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
 
-## <a name="set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders"></a>Angiv delingsindstillinger for SharePoint og OneDrive filer og mapper
+## <a name="set-sharing-settings-for-sharepoint-and-onedrive-files-and-folders"></a>Angiv delingsindstillinger for SharePoint- og OneDrive-filer og -mapper
 
 Delingsniveauer er som standard angivet til det mest tilladte niveau for både SharePoint og OneDrive. Vi anbefaler, at du ændrer standardindstillingerne for bedre at beskytte din virksomhed.
 
@@ -166,7 +166,7 @@ På følgende billede vises nogle af de standardpolitikker, der er inkluderet i 
 
 ### <a name="view-your-alert-policies"></a>Få vist dine politikker for beskeder
 
-1. Gå til Microsoft Purview-compliance-portal på , og log på[https://compliance.microsoft.com](https://compliance.microsoft.com).
+1. Gå til Microsoft Purview-overholdelsesportalen på , og log på [https://compliance.microsoft.com](https://compliance.microsoft.com) .
 
 2. Vælg **Politikker** i navigationsruden, og vælg derefter **Beskedpolitikker**.
 
@@ -179,12 +179,12 @@ På følgende billede vises nogle af de standardpolitikker, der er inkluderet i 
 
 ### <a name="how-to-view-alerts"></a>Sådan får du vist beskeder
 
-Afhængigt af den specifikke besked kan du få vist dine beskeder enten på Microsoft 365 Defender-portalen eller i Microsoft Purview-compliance-portal.
+Afhængigt af den specifikke besked kan du få vist dine beskeder enten på Microsoft 365 Defender-portalen eller i Microsoft Purview-overholdelsesportalen.
 
 | Beskedtype  | Sådan gør du  |
 |---------|---------|
 | Sikkerhedsadvarsel, f.eks. når en bruger klikker på et skadeligt link, en mail rapporteres som malware eller phish, eller en enhed registreres som indeholdende malware     | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og vælg **Politikker & regler** > **Beskedpolitik** under **Mail & samarbejde**. Du kan også gå direkte til <https://security.microsoft.com/alertpolicies>. |
-| Besked om overholdelse af regler og standarder, f.eks. når en bruger deler følsomme eller fortrolige oplysninger (advarsel om forebyggelse af datatab), eller der er en usædvanlig mængde ekstern fildeling (besked om styring af oplysninger)    | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og vælg derefter **Politikker** > **Beskedbeskedpolitikker** > .  |
+| Besked om overholdelse af regler og standarder, f.eks. når en bruger deler følsomme eller fortrolige oplysninger (advarsel om forebyggelse af datatab), eller der er en usædvanlig mængde ekstern fildeling (besked om styring af oplysninger)    | Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>, og vælg derefter **Politikker** > **Beskedbeskedpolitikker** > .  |
 
 Du kan få flere oplysninger under [Få vist beskeder](../compliance/alert-policies.md#view-alerts).
 
@@ -192,9 +192,9 @@ Du kan få flere oplysninger under [Få vist beskeder](../compliance/alert-polic
 
 Du kan forhindre personer i din organisation i at dele deres kalendere. Du kan også administrere, hvilket detaljeniveau de kan dele. Du kan f.eks. begrænse delingen til kun ledig/optaget tid.
 
-1. Gå [til Organisationsindstillinger i Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2053743), og log på.
+1. Gå [til Organisationsindstillinger i Microsoft 365 Administration,](https://go.microsoft.com/fwlink/p/?linkid=2053743) og log på.
 
-2. Vælg **Kalender**, og vælg, om personer i din organisation kan dele deres kalendere med personer uden for, der har Office 365 eller Exchange eller med andre.
+2. Vælg **Kalender**, og vælg, om personer i din organisation kan dele deres kalendere med personer uden for, der har Office 365 eller Exchange, eller med andre.
 
    Vi anbefaler, at du rydder indstillingen **Ekstern deling** .
 
@@ -210,8 +210,8 @@ Du kan forhindre personer i din organisation i at dele deres kalendere. Du kan o
 
    ![Skærmbillede af ledig/optaget kalenderdeling med alle.](../media/sharefreebusy.png)
 
-Hvis brugerne har tilladelse til at dele deres kalendere, kan du se [disse instruktioner](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) for, hvordan de deler fra Outlook på internettet.
+Hvis dine brugere har tilladelse til at dele deres kalendere, skal du se [disse instruktioner](https://support.office.com/article/7ecef8ae-139c-40d9-bae2-a23977ee58d5) for, hvordan de deler fra Outlook på internettet.
 
 ## <a name="next-steps"></a>Næste trin
 
-Okay, lad os nu starte missionen om at [**konfigurere BYOD-enheder**](m365bp-devices-overview.md).
+Okay, lad os nu [**konfigurere disse ikke-administrerede BYOD-enheder**](m365bp-devices-overview.md).

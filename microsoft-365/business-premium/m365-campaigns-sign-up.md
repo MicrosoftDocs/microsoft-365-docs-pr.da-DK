@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Trinvis tilmelding til Microsoft 365 til kampagner. Beskyt din kampagne mod cybersikkerhedstrusler mod mail, data og kommunikation.
-ms.openlocfilehash: 08ef22374e69590a3535366463770815c2a2b0ee
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b39d01bc6aa1cf138d230e95493d5f9eeb3cc51b
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096254"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893301"
 ---
 # <a name="sign-up-for-microsoft-365-for-campaigns"></a>Tilmeld dig Microsoft 365 til kampagner 
 
@@ -37,7 +37,7 @@ Sådan fuldfører du din tilmelding til Microsoft 365 til kampagner.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Få din invitation til Microsoft 365 til kampagner ved at fuldføre trinnene under [Hent Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
+- Få din invitation til Microsoft 365 til kampagner ved at fuldføre trinnene i [Hent Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
 - Åbn din mailinvitation fra Microsoft. Invitationen har et entydigt tilmeldingslink til din organisation. Du skal bruge dette for at få kampagner særlige priser.
 - Få dit visitkort og en telefon klar.
 
@@ -46,10 +46,10 @@ Sådan fuldfører du din tilmelding til Microsoft 365 til kampagner.
 
 ## <a name="steps-to-sign-up"></a>Trin til tilmelding
 
-1. I din invitation til Microsoft 365 til mail med kampagner skal du vælge **TILMELD DIN ORGANISATION**. Herefter kommer du til Microsoft 365 tilmeldingsside.
+1. I din invitation til mail med Microsoft 365 for Kampagner skal du vælge **TILMELD DIN ORGANISATION**. Dette fører dig til microsoft 365-tilmeldingssiden.
 
     > [!NOTE]
-    > Hvis du allerede har et eksisterende abonnement på Microsoft 365 til virksomheder, og du vil føje tilbuddet om Microsoft 365 for kampagner til det, skal du gå [til føj Microsoft 365 for Kampagner til et eksisterende abonnement](#steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription).
+    > Hvis du allerede har et eksisterende abonnement på Microsoft 365 til virksomheder, og du vil føje tilbuddet om Microsoft 365 til kampagner til det, skal du gå [til føj Microsoft 365 til kampagner til et eksisterende abonnement](#steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription).
 
 2. Angiv dine forretningsoplysninger **på siden Microsoft 365 Business**. Brug en aktuel mailadresse til **firmamailadresse**. Vi skal kun bruge denne adresse for at holde kontakten med dig under konfigurationsprocessen. Vælg **Næste**.
 
@@ -57,12 +57,12 @@ Sådan fuldfører du din tilmelding til Microsoft 365 til kampagner.
  
     1. Skriv det navn eller alias, du vil bruge til din mailadresse, i **Brugernavn**. Det kan f.eks. være, at du kun vil kaldes Alice eller Rob. I en større kampagne, AliceC eller AliceChavez kan gøre mere mening.
 
-    2. Skriv navnet på den kampagne, du arbejder for, i **Din virksomhed**. For eksempel `ContosoCampaign`. Hvis du allerede ejer et domæne, skal du bruge dette navn her. 
+    2. Skriv navnet på den kampagne, du arbejder for, i **Din virksomhed**. Det kunne f.eks. være `ContosoCampaign`. Hvis du allerede ejer et domæne, skal du bruge dette navn her. 
  
-    3. **I Vælg et domæne** skal du vælge **.onmicrosoft.com** lige nu. Vi kan konfigurere et domæne senere eller hjælpe dig med at få Microsoft 365 forbindelse til et domæne, som du allerede ejer.
+    3. **I Vælg et domæne** skal du vælge **.onmicrosoft.com** lige nu. Vi kan konfigurere dig med et domæne senere eller hjælpe dig med at få Microsoft 365 forbundet til et domæne, som du allerede ejer.
 
     > [!IMPORTANT]
-    > Det navn, du angiver for dit `.onmicrosoft.com` domæne, bruges til alle dine SharePoint og OneDrive URL-adresser, og du kan muligvis ikke ændre det. Sørg for, at du har taget navnet fra et brandingperspektiv i betragtning og stavet det korrekt.
+    > Det navn, du angiver for dit `.onmicrosoft.com` domæne, bruges til alle dine SHAREPoint- og OneDrive-URL-adresser, og du kan muligvis ikke ændre det. Sørg for, at du har taget navnet fra et brandingperspektiv i betragtning og stavet det korrekt.
 
     4. Opret en adgangskode, og vælg **Opret min konto**.
  
@@ -85,7 +85,7 @@ Sådan fuldfører du din tilmelding til Microsoft 365 til kampagner.
 
     2. Hvis du kun vil konfigurere dig selv indtil videre, skal du vælge **Næste**. 
 
-    3. Valgfrit: Tilføj nogle ekstra licenser nu ved at ændre tallet i **brugerfeltet** . [De medarbejdere, du arbejder med, kan til enhver tid tildeles licenser til Microsoft 365](../admin/add-users/add-users.md?toc=%2fmicrosoft-365%2fcampaigns%2ftoc.json).
+    3. Valgfrit: Tilføj nogle ekstra licenser nu ved at ændre tallet i **brugerfeltet** . [De medarbejdere, du arbejder med, kan til enhver tid tildeles licenser til Microsoft 365](../admin/add-users/add-users.md?toc=%2fmicrosoft-365%2fcampaigns%2ftoc.json) .
 
 7. **Hvordan vil du betale? side**: Vælg **Nyt kreditkort**, angiv dine kreditkortoplysninger for virksomheden, og vælg **Afgiv ordre**. Hvis du foretrækker det, er det også muligt at bruge en bankkonto.
 
@@ -95,14 +95,14 @@ Dine tilmeldingstrin er fuldført!
 
 Hvis du vil fortsætte med de næste trin, skal du vælge **Start installationsprogrammet** eller vende tilbage senere for at fuldføre trinnene. Når du er klar, skal du kontrollere din mail (fra trin 2) for at finde dit brugernavn og din adgangskode, så du kan logge på næste gang. Disse kaldes dine administrator- eller globale administratorlegitimationsoplysninger.
 
-## <a name="steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription"></a>Trin til at føje Microsoft 365 for kampagner til et eksisterende abonnement
+## <a name="steps-to-add-microsoft-365-for-campaigns-to-an-existing-subscription"></a>Trin til at føje Microsoft 365 til kampagner til et eksisterende abonnement
 
-Hvis du allerede har og eksisterende abonnement på Microsoft 365 til virksomheder, f.eks. Microsoft 365 Business Standard, kan du bruge tilbuddet om Microsoft 365 til kampagner til at føje licenser til det.
+Hvis du allerede har og eksisterende abonnement på Microsoft 365 til virksomheder, f.eks. Microsoft 365 Business Standard, kan du bruge tilbuddet på Microsoft 365 til kampagner til at føje licenser til det.
 
 > [!IMPORTANT]
-> Du kan ikke føje tilbuddet om Microsoft 365 for kampagner til en eksisterende Microsoft 365 konto.
+> Du kan ikke føje tilbuddet om Microsoft 365 til kampagner til en eksisterende Microsoft 365-konto.
 
-1. I din invitation til Microsoft 365 til mail med kampagner skal du vælge **TILMELD DIN ORGANISATION**. Herefter kommer du til Microsoft 365 tilmeldingsside.
+1. I din invitation til mail med Microsoft 365 for Kampagner skal du vælge **TILMELD DIN ORGANISATION**. Dette fører dig til microsoft 365-tilmeldingssiden.
 
 2. På siden **Velkommen skal vi lære dig at kende** og vælge **Vil du føje dette til et eksisterende abonnement? Log på**.
     
@@ -118,6 +118,6 @@ Når du har fuldført disse trin, er du klar til at [tildele de nye licenser](..
 
 ## <a name="next-steps"></a>Næste trin
 
-1. [Log på Microsoft 365 for kampagner](m365-campaigns-sign-in.md).
+1. [Log på Microsoft 365 til kampagner](m365-campaigns-sign-in.md).
 
-2. [Se den automatiserede proces for at få en grundlæggende konfiguration](m365bp-setup.md#use-the-guided-process-for-basic-setup).
+2. [Se den automatiserede proces for at få en grundlæggende konfiguration](m365bp-setup.md#guided-setup-process).

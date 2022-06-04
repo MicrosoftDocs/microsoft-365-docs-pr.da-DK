@@ -22,18 +22,18 @@ search.appverid:
 - BCS160
 - MET150
 description: Tilpas din logonside med en meddelelse om beskyttelse af personlige oplysninger og samtykke til Microsoft 365.
-ms.openlocfilehash: 84c7a488d8a6ba854e3ac8b09067fd350c9ae4fc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: fb56a6de2b916f9b9699e0963f9f1cd1bd8bba16
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097882"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893279"
 ---
 # <a name="customize-your-sign-in-page-with-a-privacy-and-consent-notice"></a>Tilpas din logonside med en meddelelse om beskyttelse af personlige oplysninger og samtykke
 
 Din virksomhed eller kampagne kan gøre det nemmere for de retshåndhævende myndigheder at sagsøge onlinekriminelle ved at tilføje en meddelelse om beskyttelse af personlige oplysninger og samtykke på din logonside.
 
-Du kan tilpasse din logonside med din branding. Du kan også tilføje tekst for at hjælpe dine brugere med at logge på eller for at påpege juridiske krav eller begrænsninger for at få adgang til Microsoft 365 ressourcer.
+Du kan tilpasse din logonside med din branding. Du kan også tilføje tekst for at hjælpe dine brugere med at logge på eller for at påpege juridiske krav eller begrænsninger for at få adgang til Microsoft 365-ressourcer.
 
 ## <a name="design-customization-the-text-on-your-sign-in-page"></a>Design tilpasning af teksten på logonsiden
 
@@ -50,6 +50,6 @@ Du kan finde eksempler på meddelelser om beskyttelse af personlige oplysninger 
 
 ## <a name="next-steps"></a>Næste trin
 
-1. [Brug automatiseret proces til grundlæggende konfiguration](m365bp-setup.md#use-the-guided-process-for-basic-setup).
+1. [Brug automatiseret proces til grundlæggende konfiguration](m365bp-setup.md).
 
 2. [Konfigurer dine sikkerhedsfunktioner](m365bp-security-overview.md).

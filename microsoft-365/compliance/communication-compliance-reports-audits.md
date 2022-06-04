@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: e7e26451e2cf4786f73b16f74bedd46ca764f6ed
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 998f074529089f5c0309f6799900a628915d3959
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173736"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893388"
 ---
 # <a name="use-communication-compliance-reports-and-audits"></a>Brug rapporter og overvågninger for kommunikation med overholdelse af angivne standarder
 
@@ -65,7 +65,7 @@ Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rappo
     - Bruger med besked
     - Sag oprettet
 
-- **Element og handlinger pr. placering**: Gennemse og eksportér tilsvarende elementer og afhjælpningshandlinger pr. Microsoft 365 placering. Indeholder oplysninger om, hvordan arbejdsbelastningsplatforme er knyttet til:
+- **Element og handlinger pr. placering**: Gennemse og eksportér tilsvarende elementer og afhjælpningshandlinger pr. Microsoft 365-placering. Indeholder oplysninger om, hvordan arbejdsbelastningsplatforme er knyttet til:
 
     - Elementer, der stemmer overens
     - Eskalerede elementer
@@ -91,10 +91,10 @@ Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rappo
 
 - **Type af følsomme oplysninger pr. placering** (prøveversion): Gennemse og eksportér oplysninger om registrering af følsomme oplysningstyper og de tilknyttede kilder i politikker for kommunikation med overholdelse af angivne standarder. Omfatter den samlede total og den specifikke opdeling af forekomster af følsomme oplysninger i de kilder, der er konfigureret i din organisation. Værdierne for hver tredjepartskilde vises i separate kolonner i .csv-filen. Eksempler er:
 
-    - **Mail**: Følsomme oplysningstyper, der er registreret i Exchange mails.
-    - **Teams**: Følsomme informationstyper, der registreres i Microsoft Teams kanaler og chatbeskeder.
-    - **Skype for Business**: Følsomme informationstyper, der registreres i Skype til forretningskommunikation.
-    - **Yammer**: Typer af følsomme oplysninger, der registreres i Yammer indbakker, indlæg, chats og svar.
+    - Mail: Følsomme oplysningstyper, der er registreret i **Exchange-mails**.
+    - **Teams**: Følsomme informationstyper, der er registreret i Microsoft Teams-kanaler og chatmeddelelser.
+    - **Skype for Business**: Følsomme informationstyper, der er registreret i Skype for Business-kommunikation.
+    - **Yammer**: Følsomme oplysningstyper, der registreres i Yammer-indbakker, -indlæg, -chats og -svar.
     - **Tredjepartskilder**: Følsomme oplysningstyper, der registreres for aktiviteter, der er knyttet til tredjepartsconnectors, som er konfigureret i din organisation. Hvis du vil se opdelingen af tredjepartskilder for en bestemt følsom oplysningstype i rapporten, skal du holde musen over værdien for typen af følsomme oplysninger i kildekolonnen fra tredjepart.
     - **Andet**: Følsomme informationstyper, der bruges til intern systembehandling. Valg eller fravalg af denne kilde til rapporten påvirker ikke nogen værdier.
 
@@ -144,7 +144,7 @@ Rapporter med meddelelsesoplysninger indeholder følgende oplysninger for hvert 
 I nogle tilfælde skal du give oplysninger til revisorer for lovgivning eller overholdelse af angivne standarder for at bevise overvågning af brugeraktiviteter og kommunikation. Disse oplysninger kan være en oversigt over alle aktiviteter, der er knyttet til en defineret organisationspolitik, eller når en politik for kommunikation med overholdelse af angivne standarder ændres. Politikker for kommunikation med overholdelse af angivne standarder har indbyggede overvågningsspor til komplet parathed til interne eller eksterne revisioner. Detaljerede overvågningshistorikker for hver oprettelses-, redigerings- og sletningshandling registreres af dine kommunikationspolitikker for at give bevis for tilsynsprocedurer.
 
 > [!IMPORTANT]
-> Overvågning skal være aktiveret for din organisation, før hændelser for overholdelse af angivne standarder registreres. Hvis du vil aktivere overvågning, skal du se [Aktivér overvågningsloggen](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365 overvågningslog, kan det tage op til 48 timer, før disse hændelser kan ses i politikker for kommunikation med overholdelse af angivne standarder.
+> Overvågning skal være aktiveret for din organisation, før hændelser for overholdelse af angivne standarder registreres. Hvis du vil aktivere overvågning, skal du se [Aktivér overvågningsloggen](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365-overvågningsloggen, kan det tage op til 48 timer, før disse hændelser kan ses i politikker for kommunikation med overholdelse af angivne standarder.
 
 Hvis du vil have vist opdateringsaktiviteter for politikken for kommunikation, skal du vælge kontrolelementet **Eksportér politikopdateringer** på hovedsiden for en hvilken som helst politik. Du skal være tildelt rollerne *Global administrator* eller *Administrator af kommunikationsoverholdelse* for at eksportere opdateringsaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
 
@@ -188,7 +188,7 @@ Overholdelsespolitik for kommunikation gemmes i en overvågningspostkasse for hv
 
 Hvis du vil kontrollere størrelsen på en tilsynspostkasse for en politik, skal du udføre følgende trin:
 
-1. Brug [cmdlet'en Forbind-ExchangeOnline](/powershell/module/exchange/connect-exchangeonline) i Exchange Online PowerShell V2-modulet til at oprette forbindelse til Exchange Online PowerShell ved hjælp af moderne godkendelse.
+1. Brug [Connect-ExchangeOnline-cmdlet'en](/powershell/module/exchange/connect-exchangeonline) i Exchange Online PowerShell V2-modulet til at oprette forbindelse til Exchange Online PowerShell ved hjælp af moderne godkendelse.
 2. Kør følgende kommando i PowerShell:
 
     ```PowerShell

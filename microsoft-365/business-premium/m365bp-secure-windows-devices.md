@@ -27,19 +27,40 @@ search.appverid:
 - MOE150
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
-description: Få mere at vide om, hvordan du konfigurerer indstillingerne for standardenhedspolitikken, som alle Windows enheder modtager, når de logger på deres arbejds- eller skolekonto.
-ms.openlocfilehash: a88aad90d9ca55c5a5abeb17345179c2defdbd4e
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+description: Få mere at vide om konfiguration af indstillingerne for standardenhedspolitikken, som alle Windows-enheder modtager, når de logger på deres arbejds- eller skolekonto.
+ms.openlocfilehash: 5ac09788d609752d12a6ae6efadfa8739c5a4f9a
+ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621342"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65893077"
 ---
 # <a name="secure-windows-devices"></a>Beskyt Windows-enheder
 
-Målet her er at konfigurere indstillinger, der er en del af standardenhedspolitikken for Windows 10 eller 11. Alle brugere, der opretter forbindelse til en Windows enhed, herunder mobilenheder og pc'er ved at logge på med deres arbejdskonto, modtager automatisk disse indstillinger. Vi anbefaler, at du accepterer standardpolitikken under konfigurationen og tilføjer politikker senere, som er målrettet bestemte grupper af brugere.
+Målet her er at konfigurere indstillinger, der er en del af standardenhedspolitikken for Windows 10 eller 11. Alle brugere, der opretter forbindelse til en Windows-enhed, herunder mobilenheder og pc'er ved at logge på med deres arbejdskonto, modtager automatisk disse indstillinger. Vi anbefaler, at du accepterer standardpolitikken under konfigurationen og tilføjer politikker senere, som er målrettet bestemte grupper af brugere.
+
+## <a name="before-you-begin"></a>Før du begynder
+
+Før du kan konfigurere Windows-enheder til Microsoft 365 Business Premium-brugere, skal du sørge for, at alle Windows-enheder kører Windows 10 Pro, version 1703 (Creators Update) eller Windows 11 Pro.
+
+Windows 10 Pro (eller Windows 11 Pro) er en forudsætning for installation af Windows 10 Business, som er et sæt cloudtjenester og enhedshåndteringsfunktioner, der komplementerer Windows 10 Pro og Windows 11 Pro, og aktiverer central administration og sikkerhedskontroller i Microsoft 365 Business Premium.
+
+[Få mere at vide om krav til Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:techspecstab).
+
+## <a name="windows-10-pro-and-windows-11-pro"></a>Windows 10 Pro og Windows 11 Pro
+
+Hvis du har Windows-enheder, der kører tidligere versioner af Windows, f.eks. Windows 7 Pro, Windows 8 Pro eller Windows 8.1 Pro, giver dit Microsoft 365 Business Premium-abonnement dig ret til at opgradere disse enheder til Windows 10 Pro eller Windows 11 Pro.
   
-## <a name="settings-to-secure-windows-10-devices"></a>Indstillinger at sikre Windows 10 enheder
+Du kan få flere oplysninger om, hvordan du opgraderer Windows-enheder, i følgende artikler:
+
+- [Opgrader Windows Home til Windows 10 eller Windows 11 Pro](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
+- [Opgrader til Windows 10 Pro](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
+
+<!---
+Could not find the Win11 equivalent upgrade link.
+---> 
+  
+## <a name="secure-your-windows-10-and-11-devices"></a>Beskyt dine Windows 10- og 11-enheder
 
 Alle indstillinger er som standard **Slået til**. Følgende indstillinger er tilgængelige: <br/><br/>
 
