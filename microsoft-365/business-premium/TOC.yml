@@ -4,6 +4,8 @@
       href: index.md
     - name: Sådan hjælper Microsoft 365 din virksomhed
       href: m365bp-secure-users.md
+    - name: Strategiplan for Microsoft 365 Business Premium-prøveversion
+      href: m365bp-trial-playbook-microsoft-business-premium.md
     - name: Få Microsoft 365 Business Premium
       href: get-microsoft-365-business-premium.md
     - name: Få Microsoft 365 til kampagner
@@ -16,14 +18,8 @@
           href: m365bp-setup-overview.md
         - name: Konfigurer Microsoft 365 Business Premium
           href: m365bp-setup.md
-        - name: Konfigurer Microsoft 365 for kampagner
-          items:
-            - name: Tilmeld dig
-              href: m365-campaigns-sign-up.md
-            - name: Log på
-              href: m365-campaigns-sign-in.md
-            - name: Tilpas logonsiden
-              href: m365-customize-sign-in.md
+        - name: Konfigurer Microsoft 365 Business til kampagner
+          href: m365-campaigns-setup.md
     - name: Opgrader sikkerhedsbeskyttelse
       items:
         - name: Oversigt
@@ -51,7 +47,7 @@
         - name: Oversigt
           href: m365bp-protect-email-overview.md
         - name: Beskyt mod phishing og andre angreb
-          href: avoid-phishing-and-attacks.md
+          href: m365bp-avoid-phishing-and-attacks.md
         - name: Send krypteret mail
           href: send-encrypted-email.md
     - name: Samarbejd og del sikkert
@@ -78,14 +74,16 @@
           href: m365bp-onboard-devices-mdb.md
         - name: Beskyt Windows-enheder
           items:
-            - name: Indstillinger for beskyttelse til Windows-enheder
-              href: m365bp-protection-settings-for-windows-10-devices.md
             - name: Beskyt Windows-enheder
               href: m365bp-secure-windows-devices.md
             - name: Administrer Windows-enheder
               href: m365bp-manage-windows-devices.md
             - name: Klargør til installation af Office-klient
               href: m365bp-prepare-for-office-client-deployment.md
+            - name: Opret indstillinger for appbeskyttelse til Windows-enheder
+              href: m365bp-protection-settings-for-windows-10-devices.md
+            - name: Valider appindstillinger på Windows-enheder
+              href: m365bp-validate-settings-on-windows-10-pcs.md
         - name: Gennemse og rediger enhedspolitikker
           href: m365bp-view-edit-create-mdb-policies.md
         - name: Administrer enhedsgrupper
@@ -130,6 +128,8 @@
           href: m365bp-create-and-edit-autopilot-devices.md
     - name: Indstillinger for appbeskyttelse til Android og iOS
       href: m365bp-app-protection-settings-for-android-and-ios.md
+    - name: Valider appindstillinger på Android og iOS
+      href: m365bp-validate-settings-on-android-or-ios.md
     - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
       href: m365bp-map-protection-features-to-intune-settings.md
     - name: Konfigurer Overholdelsesstyring
