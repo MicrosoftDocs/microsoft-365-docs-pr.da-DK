@@ -20,13 +20,13 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvordan du føjer licenser til eller udvider dit abonnement med en produktnøgle.
 ROBOTS: NOINDEX
-ms.date: 04/07/2021
-ms.openlocfilehash: df2c4d65f80aedb79e08f6efcab2873256e88d2f
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.date: 06/06/2022
+ms.openlocfilehash: ff7656975b5d93d03706f26de0691a91db1858eb
+ms.sourcegitcommit: 23fd850272f39c4202e2320e56d11fb6707b3e2e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715291"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65925072"
 ---
 # <a name="add-licenses-to-or-extend-a-subscription-paid-for-using-a-product-key"></a>Føj licenser til eller forlæng et abonnement, der betales for ved hjælp af en produktnøgle
 
@@ -39,12 +39,12 @@ Forudbetalte licenser udstedes til dig som en alfanumerisk kode på 25 tegn. Nå
 
 ::: moniker range="o365-worldwide"
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Dine produkter</a>.
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">Dine produkter</a>.
 ::: moniker-end
 
 2. Under fanen **Produkter** skal du vælge det abonnement, du vil føje licenser til.
@@ -59,12 +59,12 @@ Forudbetalte licenser udstedes til dig som en alfanumerisk kode på 25 tegn. Nå
 
 ::: moniker range="o365-worldwide"
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Dine produkter</a>.
 ::: moniker-end
 
 ::: moniker range="o365-21vianet"
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=850626" target="_blank">Dine produkter</a>.
 ::: moniker-end
 
 2. Vælg det abonnement, du vil udvide, under fanen **Produkter** .

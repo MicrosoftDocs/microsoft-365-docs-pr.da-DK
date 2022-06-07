@@ -14,20 +14,23 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: f290af2808db1aa56f39593ec4f9fac68c0f76d8
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 4982f0576038840cb78541c14f3ee6039b4e6cd1
+ms.sourcegitcommit: 23fd850272f39c4202e2320e56d11fb6707b3e2e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438811"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65925137"
 ---
 # <a name="take-response-actions-on-a-device"></a>Udfør svarhandlinger på en enhed
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1 og 2](defender-endpoint-plan-1-2.md)
+
+- [Microsoft Defender for Endpoint Plan 1 og 2](defender-endpoint-plan-1-2.md)
 - [Microsoft Defender for Business](/microsoft-365/security/defender-business/mdb-overview)
+
+[!INCLUDE [Prerelease information](../../includes/prerelease.md)]
 
 Reagere hurtigt på registrerede angreb ved at isolere enheder eller indsamle en undersøgelsespakke. Når du har foretaget en handling på enheder, kan du kontrollere aktivitetsoplysningerne i Løsningscenter.
 
@@ -40,13 +43,14 @@ Svarhandlinger kører langs toppen af en bestemt enhedsside og omfatter:
 - Kør antivirusscanning
 - Begræns appudførelse
 - Isoler enhed
+- Indeholder enhed
 - Kontakt en trusselsekspert
 - Handlingscenter
 
 [![Billede af svarhandlinger.](images/response-actions.png)](images/response-actions.png#lightbox)
 
 > [!IMPORTANT]
-> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) og [Microsoft Defender til virksomheder](../defender-business/mdb-overview.md) kun indeholde følgende manuelle svarhandlinger:
+> [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) og [Microsoft Defender for Business](../defender-business/mdb-overview.md) indeholder kun følgende manuelle svarhandlinger:
 > - Kør antivirusscanning
 > - Isoler enhed
 > - Stop og sæt en fil i karantæne
@@ -61,7 +65,7 @@ Svarhandlinger kører langs toppen af en bestemt enhedsside og omfatter:
 
 > [!IMPORTANT]
 > - Disse svarhandlinger er kun tilgængelige for enheder på Windows 10, version 1703 eller nyere, Windows 11, Windows Server 2019 og Windows Server 2022.
-> - For platforme, der ikke er Windows, er svarfunktioner (f.eks. enhedsisolation) afhængige af tredjepartsfunktionerne.
+> - For ikke-Windows-platforme er svarfunktioner (f.eks. enhedsisolation) afhængige af tredjepartsfunktionerne.
 > - For Microsofts førstepartsagenter skal du se linket "flere oplysninger" under hver funktion for at få vist minimumkrav til operativsystemet.
 
 ## <a name="manage-tags"></a>Administrer mærker
@@ -116,27 +120,27 @@ Pakken indeholder følgende mapper:
 |---|---|
 |Autoruns|Indeholder et sæt filer, der hver især repræsenterer indholdet af registreringsdatabasen for et kendt ASEP (Auto Start Entry Point) for at hjælpe med at identificere angriberens vedholdenhed på enheden. <p> <div class="alert"><b>BEMÆRK:</b> Hvis registreringsdatabasenøglen ikke findes, indeholder filen følgende meddelelse: "ERROR: Systemet kunne ikke finde den angivne registreringsdatabasenøgle eller -værdi".<div>|
 |Installerede programmer|Denne .CSV fil indeholder en liste over installerede programmer, der kan hjælpe med at identificere, hvad der er installeret på enheden i øjeblikket. Du kan få flere oplysninger [under Win32_Product klasse](https://go.microsoft.com/fwlink/?linkid=841509).|
-|Netværksforbindelser|Denne mappe indeholder et sæt datapunkter, der er relateret til forbindelsesoplysningerne, som kan hjælpe med at identificere forbindelsen til mistænkelige URL-adresser, infrastruktur for hackerkommandoer og -styringer (C&C), eventuelle tværgående bevægelser eller fjernforbindelser. <ul><li>ActiveNetConnections.txt: Viser protokolstatistik og aktuelle TCP/IP-netværksforbindelser. Giver mulighed for at søge efter mistænkelig forbindelse foretaget af en proces.</li><li>Arp.txt: Viser de aktuelle ARP-cachetabeller (Address Resolution Protocol) for alle grænseflader. ARP-cachen kan afsløre andre værter på et netværk, der er blevet kompromitteret eller mistænkelige systemer på netværket, som kan have været brugt til at køre et internt angreb.</il><li>DnsCache.txt: Viser indholdet af DNS-klientreklarercachen, som indeholder både poster, der er forudindlæset fra den lokale Hosts-fil, og eventuelle nyligt hentede ressourceposter for navneforespørgsler, der fortolkes af computeren. Dette kan hjælpe med at identificere mistænkelige forbindelser.</li><li>IpConfig.txt: Viser den fulde TCP/IP-konfiguration for alle adaptere. Adaptere kan repræsentere fysiske grænseflader, f.eks. installerede netværkskort eller logiske grænseflader, f.eks. opkaldsforbindelser.</li><li>FirewallExecutionLog.txt og pfirewall.log</li></ul><p><div class="alert"><b>BEMÆRK:</b> Filen pfirewall.log skal findes i %windir%\system32\logfiles\firewall\pfirewall.log, så den medtages i undersøgelsespakken. Du kan få flere oplysninger om, hvordan du opretter firewalllogfilen, under [Konfigurer Windows Defender Firewall med avanceret sikkerhedslogfil](/windows/security/threat-protection/windows-firewall/configure-the-windows-firewall-log)<div>|
+|Netværksforbindelser|Denne mappe indeholder et sæt datapunkter, der er relateret til forbindelsesoplysningerne, som kan hjælpe med at identificere forbindelsen til mistænkelige URL-adresser, infrastruktur for hackerkommandoer og -styringer (C&C), eventuelle tværgående bevægelser eller fjernforbindelser. <ul><li>ActiveNetConnections.txt: Viser protokolstatistik og aktuelle TCP/IP-netværksforbindelser. Giver mulighed for at søge efter mistænkelig forbindelse foretaget af en proces.</li><li>Arp.txt: Viser de aktuelle ARP-cachetabeller (Address Resolution Protocol) for alle grænseflader. ARP-cachen kan afsløre andre værter på et netværk, der er blevet kompromitteret eller mistænkelige systemer på netværket, som kan have været brugt til at køre et internt angreb.</il><li>DnsCache.txt: Viser indholdet af DNS-klientreklarercachen, som indeholder både poster, der er forudindlæset fra den lokale Hosts-fil, og eventuelle nyligt hentede ressourceposter for navneforespørgsler, der fortolkes af computeren. Dette kan hjælpe med at identificere mistænkelige forbindelser.</li><li>IpConfig.txt: Viser den fulde TCP/IP-konfiguration for alle adaptere. Adaptere kan repræsentere fysiske grænseflader, f.eks. installerede netværkskort eller logiske grænseflader, f.eks. opkaldsforbindelser.</li><li>FirewallExecutionLog.txt og pfirewall.log</li></ul><p><div class="alert"><b>BEMÆRK:</b> Filen pfirewall.log skal findes i %windir%\system32\logfiles\firewall\pfirewall.log, så den medtages i undersøgelsespakken. Du kan få flere oplysninger om, hvordan du opretter firewalllogfilen, [under Konfigurer Windows Defender Firewall med avanceret sikkerhedslog](/windows/security/threat-protection/windows-firewall/configure-the-windows-firewall-log)<div>|
 |Forudindstillede filer|Windows Prefetch-filer er designet til at fremskynde programstartprocessen. Det kan bruges til at spore alle de filer, der for nylig er brugt i systemet, og finde sporinger for programmer, der kan være blevet slettet, men stadig kan findes på listen over filer, der allerede findes. <ul><li>Prefetch-mappe: Indeholder en kopi af filerne fra `%SystemRoot%\Prefetch`. BEMÆRK! Det anbefales at downloade en filfremviser for at få vist de forudindstillede filer.</li><li>PrefetchFilesList.txt: Indeholder listen over alle de kopierede filer, der kan bruges til at spore, om der opstod kopieringsfejl i mappen prefetch.</li></ul>|
 |Processer|Indeholder en .CSV fil, der viser de kørende processer, og gør det muligt at identificere aktuelle processer, der kører på enheden. Dette kan være nyttigt, når du identificerer en mistænkelig proces og dens tilstand.|
 |Planlagte opgaver|Indeholder en .CSV fil, der viser de planlagte opgaver, som kan bruges til at identificere rutiner, der udføres automatisk på en valgt enhed, for at søge efter mistænkelig kode, der er indstillet til at køre automatisk.|
 |Log over sikkerhedshændelser|Indeholder sikkerhedshændelsesloggen, som indeholder poster for logon- eller logoutaktivitet eller andre sikkerhedsrelaterede hændelser, der er angivet af systemets overvågningspolitik. <p><div class="alert"><b>BEMÆRK:</b> Åbn hændelseslogfilen ved hjælp af Logbog.</div>|
 |Tjenester|Indeholder en .CSV fil, der viser tjenester og deres tilstande.|
-|Windows SMB-sessioner (Server Message Block)|Viser delt adgang til filer, printere og serielle porte og diverse kommunikation mellem noder på et netværk. Dette kan hjælpe med at identificere dataudfiltrering eller tværgående bevægelse. <p> Indeholder filer til SMBInboundSessions og SMBOutboundSession. <p> <div class="alert"><b>BEMÆRK:</b> Hvis der ikke er nogen sessioner (indgående eller udgående), får du vist en tekstfil, der fortæller dig, at der ikke blev fundet nogen SMB-sessioner.</div>|
+|SMB-sessioner (Windows Server Message Block)|Viser delt adgang til filer, printere og serielle porte og diverse kommunikation mellem noder på et netværk. Dette kan hjælpe med at identificere dataudfiltrering eller tværgående bevægelse. <p> Indeholder filer til SMBInboundSessions og SMBOutboundSession. <p> <div class="alert"><b>BEMÆRK:</b> Hvis der ikke er nogen sessioner (indgående eller udgående), får du vist en tekstfil, der fortæller dig, at der ikke blev fundet nogen SMB-sessioner.</div>|
 |Systemoplysninger|Indeholder en SystemInformation.txt fil, der viser systemoplysninger, f.eks. operativsystemversion og netværkskort.|
 |Midlertidige mapper|Indeholder et sæt tekstfiler, der viser de filer, der er placeret i %Temp% for hver bruger i systemet. <p> Dette kan hjælpe med at spore mistænkelige filer, som en hacker kan have mistet på systemet. <p> <div class="alert"><b>BEMÆRK:</b> Hvis filen indeholder følgende meddelelse: "Systemet kan ikke finde den angivne sti", betyder det, at der ikke er nogen temp-mappe til denne bruger, og det kan skyldes, at brugeren ikke loggede på systemet.</div>|
 |Brugere og grupper|Indeholder en liste over filer, der hver især repræsenterer en gruppe og dens medlemmer.|
-|WdSupportLogs|Leverer MpCmdRunLog.txt og MPSupportFiles.cab  <p> <div class="alert"><b>BEMÆRK:</b> Denne mappe oprettes kun på Windows 10 version 1709 eller nyere med opdateringspakken fra februar 2020 eller nyere installeret: <ul><li>Win10 1709 (RS3) Build 16299.1717: [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)</li><li>Win10 1803 (RS4) Build 17134.1345: [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)</li><li>Win10 1809 (RS5) Build 17763.1075: [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)</li><li>Win10 1903/1909 (19h1/19h2) Builds 18362.693 og 18363.693: [KB4535996](https://support.microsoft.com/help/4535996/windows-10-update-kb4535996)</li></ul> </div>|
+|WdSupportLogs|Leverer MpCmdRunLog.txt og MPSupportFiles.cab  <p> <div class="alert"><b>BEMÆRK:</b> Denne mappe oprettes kun i Windows 10, version 1709 eller nyere med opdateringspakken fra februar 2020 eller nyere installeret: <ul><li>Win10 1709 (RS3) Build 16299.1717: [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)</li><li>Win10 1803 (RS4) Build 17134.1345: [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)</li><li>Win10 1809 (RS5) Build 17763.1075: [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)</li><li>Win10 1903/1909 (19h1/19h2) Builds 18362.693 og 18363.693: [KB4535996](https://support.microsoft.com/help/4535996/windows-10-update-kb4535996)</li></ul> </div>|
 |CollectionSummaryReport.xls|Denne fil er en oversigt over indsamlingen af undersøgelsespakken, den indeholder listen over datapunkter, den kommando, der bruges til at udtrække dataene, udførelsesstatussen og fejlkoden, hvis der er fejl. Du kan bruge denne rapport til at spore, om pakken indeholder alle de forventede data, og identificere, om der opstod fejl.|
 |
 
-## <a name="run-microsoft-defender-antivirus-scan-on-devices"></a>Kør Microsoft Defender Antivirus scanning på enheder
+## <a name="run-microsoft-defender-antivirus-scan-on-devices"></a>Kør Microsoft Defender Antivirus-scanning på enheder
 
 Som en del af undersøgelses- eller svarprocessen kan du fjernindsøge en antivirusscanning for at hjælpe med at identificere og afhjælpe malware, der kan være til stede på en kompromitteret enhed.
 
 > [!IMPORTANT]
 > - Denne handling understøttes ikke i øjeblikket for macOS og Linux. Brug direkte svar til at køre handlingen. Du kan få flere oplysninger om livesvar under [Undersøg enheder på enheder, der bruger liverespons](live-response.md)
-> - En Microsoft Defender Antivirus (Microsoft Defender AV) scanning kan køre sammen med andre antivirusløsninger, uanset om Microsoft Defender AV er den aktive antivirusløsning eller ej. Microsoft Defender AV kan være i passiv tilstand. Du kan få flere oplysninger under [Microsoft Defender Antivirus kompatibilitet](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility).
+> - En Microsoft Defender Antivirus-scanning (Microsoft Defender AV) kan køre sammen med andre antivirusløsninger, uanset om Microsoft Defender AV er den aktive antivirusløsning eller ej. Microsoft Defender AV kan være i passiv tilstand. Du kan få flere oplysninger under [Microsoft Defender Antivirus-kompatibilitet](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility).
 
 Du har valgt **Kør antivirusscanning**, vælg den scanningstype, du vil køre (hurtig eller fuld), og tilføj en kommentar, før du bekræfter scanningen.
 
@@ -156,7 +160,7 @@ Ud over at indeholde et angreb ved at stoppe skadelige processer kan du også l�
 >[!IMPORTANT]
 > - Denne handling er tilgængelig for enheder på Windows 10, version 1709 eller nyere, Windows 11 og Windows Server 2016. 
 > - Denne funktion er tilgængelig, hvis din organisation bruger Microsoft Defender Antivirus.
-> - Denne handling skal opfylde Windows Defender politikformater og signeringskrav for programkontrolkodens integritet. Du kan få flere oplysninger under [Formater og signering af kodeintegritetspolitik](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)).
+> - Denne handling skal opfylde politikformater og signeringskrav til Windows Defender-programkontrolkoden. Du kan få flere oplysninger under [Formater og signering af kodeintegritetspolitik](/windows/security/threat-protection/windows-defender-application-control/use-code-signing-to-simplify-application-control-for-classic-windows-applications)).
 
 Hvis du vil begrænse et program fra at køre, anvendes der en kodeintegritetspolitik, der kun tillader, at filer køres, hvis de er signeret af et certifikat udstedt af Microsoft. Denne begrænsningsmetode kan hjælpe med at forhindre en hacker i at kontrollere kompromitterede enheder og udføre yderligere skadelige aktiviteter.
 
@@ -181,14 +185,14 @@ Når en app er begrænset, vises følgende meddelelse for at informere brugeren 
 Afhængigt af alvorsgraden af angrebet og enhedens følsomhed kan det være en god idé at isolere enheden fra netværket. Denne handling kan hjælpe med at forhindre hackeren i at styre den kompromitterede enhed og udføre yderligere aktiviteter, f.eks. dataudfiltrering og tværgående bevægelse.
 
 > [!IMPORTANT]
-> - Isolering af enheder fra netværket understøttes ikke i øjeblikket for macOS og Linux. Brug direkte svar til at køre handlingen. Du kan få flere oplysninger om live-svar under [Undersøg enheder på enheder, der bruger live-svar](live-response.md).
+> - Isolering af enheder fra netværket understøttes ikke i øjeblikket til macOS og Linux. Brug direkte svar til at køre handlingen. Du kan få flere oplysninger om live-svar under [Undersøg enheder på enheder, der bruger live-svar](live-response.md).
 > - Fuld isolation er tilgængelig for enheder på Windows 10, version 1703, Windows 11, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 og Windows Server 2022.
 > - Selektiv isolation er tilgængelig for enheder på Windows 10, version 1709 eller nyere og Windows 11.
-> - Når du isolerer en enhed, er det kun visse processer og destinationer, der er tilladt. Derfor kan enheder bag en fuld VPN-tunnel ikke nå den Microsoft Defender for Endpoint cloudtjeneste, når enheden er isoleret. Vi anbefaler, at du bruger en VPN til opdelt tunnelføring til Microsoft Defender for Endpoint og Microsoft Defender Antivirus skybaseret beskyttelsesrelateret trafik.
+> - Når du isolerer en enhed, er det kun visse processer og destinationer, der er tilladt. Derfor kan enheder bag en fuld VPN-tunnel ikke nå Microsoft Defender for Endpoint-cloudtjenesten, når enheden er isoleret. Vi anbefaler, at du bruger en opdelt tunnelførings-VPN til Microsoft Defender for Endpoint og skybaseret beskyttelsesrelateret trafik i Microsoft Defender for Antivirus.
 
 Denne enhedsisolationsfunktion afbryder forbindelsen mellem den kompromitterede enhed og netværket, samtidig med at forbindelsen til Defender for Endpoint-tjenesten bevares, og enheden overvåges fortsat.
 
-På Windows 10 version 1709 eller nyere har du større kontrol over netværkets isolationsniveau. Du kan også vælge at aktivere Outlook, Microsoft Teams og Skype for Business forbindelse (også kaldet "Selektiv isolation").
+På Windows 10, version 1709 eller nyere har du mere kontrol over netværkets isolationsniveau. Du kan også vælge at aktivere Outlook-, Microsoft Teams- og Skype for Business-forbindelser (også kaldet 'Selektiv isolation').
 
 > [!NOTE]
 > Du kan til enhver tid genoprette forbindelsen til netværket. Knappen på enhedssiden ændres til **"Release from isolation"**, og derefter skal du udføre de samme trin som at isolere enheden.
@@ -198,7 +202,7 @@ Når du har valgt **Isoler enhed** på enhedssiden, skal du skrive en kommentar 
 :::image type="content" source="images/isolate-device.png" alt-text="En side med oplysninger om en isoleret enhed" lightbox="images/isolate-device.png":::
 
 > [!NOTE]
-> Enheden forbliver tilsluttet Defender for Endpoint-tjenesten, selvom den er isoleret fra netværket. Hvis du har valgt at aktivere Outlook og Skype for Business kommunikation, kan du kommunikere med brugeren, mens enheden er isoleret.
+> Enheden forbliver tilsluttet Defender for Endpoint-tjenesten, selvom den er isoleret fra netværket. Hvis du har valgt at aktivere Outlook- og Skype for Business-kommunikation, kan du kommunikere med brugeren, mens enheden er isoleret.
 
 ### <a name="notification-on-device-user"></a>Meddelelse på enhedsbruger
 
@@ -206,9 +210,55 @@ Når en enhed isoleres, vises følgende meddelelse for at informere brugeren om,
 
 :::image type="content" source="images/atp-notification-isolate.png" alt-text="En meddelelse om ingen netværksforbindelse" lightbox="images/atp-notification-isolate.png":::
 
+## <a name="contain-devices-from-the-network"></a>Indeholder enheder fra netværket
+
+Når du har identificeret en ikke-administreret enhed, der er kompromitteret eller potentielt kompromitteret, kan det være en god idé at indeholde enheden fra netværket. Når du indeholder en enhed, blokerer en onboardet Microsoft Defender for Endpoint-enhed indgående og udgående kommunikation med den pågældende enhed. Denne handling kan hjælpe med at forhindre, at tilstødende enheder kompromitteres, mens analytikeren af sikkerhedshandlinger finder, identificerer og afhjælper truslen på den kompromitterede enhed.
+
+> [!NOTE]
+> Blokering af indgående og udgående kommunikation med en "indeholdt" enhed understøttes på onboardede Microsoft Defender for Endpoint Windows 10- og Windows Server 2019+ enheder.
+
+### <a name="how-to-contain-a-device"></a>Sådan indeholder du en enhed
+
+1. Gå til siden **Enhedslager** , og vælg den enhed, der skal indeholdes
+2. Vælg **Medtag enhed** i menuen Handlinger i enhedens pop op-vindue
+
+:::image type="content" alt-text="Skærmbillede af pop op-meddelelsen med enhedens indhold." source="../../media/defender-endpoint/contain_device.png" lightbox="../../media/defender-endpoint/contain_device.png":::
+
+3. Skriv en kommentar i pop op-vinduet med indeholder enheder, og vælg **Bekræft**.
+
+:::image type="content" alt-text="Skærmbillede af menupunktet for enheden." source="../../media/defender-endpoint/contain_device_popup.png" lightbox="../../media/defender-endpoint/contain_device_popup.png":::
+
+### <a name="contain-a-device-from-the-device-page"></a>Indeholder en enhed fra enhedssiden
+
+En enhed kan også være indeholdt på enhedssiden ved at vælge **Medbring enhed** på handlingslinjen:
+
+:::image type="content" alt-text="Skærmbillede af menupunktet med enhedens indhold på enhedssiden." source="../../media/defender-endpoint/contain_device_page.png" lightbox="../../media/defender-endpoint/contain_device_page.png":::
+
+> [!NOTE]
+>Det kan tage op til 5 minutter, før oplysningerne om en nyligt indeholdt enhed når Microsoft Defender for Endpoint-onboardede enheder.
+
+> [!Important]
+>
+> - Hvis en indeholdt enhed ændrer sin IP-adresse, genkender alle onboardede Enheder i Microsoft Defender for Endpoint dette og begynder at blokere kommunikation med den nye IP-adresse. Den oprindelige IP-adresse blokeres ikke længere (det kan tage op til fem minutter at se disse ændringer).  
+>
+> - I tilfælde, hvor den indeholdte enheds IP bruges af en anden enhed på netværket, vil der være en advarsel, mens den indeholder enheden, med et link til avanceret jagt (med en forudfyldt forespørgsel). Dette giver synlighed for de andre enheder, der bruger den samme IP-adresse, for at hjælpe dig med at træffe en bevidst beslutning, hvis du vil fortsætte med at indeholde enheden.
+>
+> - I de tilfælde, hvor den indeholdte enhed er en netværksenhed, vises der en advarsel med en meddelelse om, at dette kan medføre problemer med netværksforbindelsen (f.eks. indeholder en router, der fungerer som en standardgateway). På dette tidspunkt kan du vælge, om du vil indeholde enheden eller ej.
+
+Når du har indeholdt en enhed, og funktionsmåden ikke er som forventet, skal du bekræfte, at tjenesten Base Filtering Engine (BFE) er aktiveret på de onboardede Defender for Endpoint-enheder.
+
+### <a name="stop-containing-a-device"></a>Stop med at indeholde en enhed
+
+Du kan når som helst stoppe med at indeholde en enhed.
+
+1. Vælg enheden på **enhedsoversigten** , eller åbn enhedssiden
+2. Vælg **Frigiv fra opbevaring** i handlingsmenuen
+
+Denne handling gendanner enhedens forbindelse til netværket.
+
 ## <a name="consult-a-threat-expert"></a>Kontakt en trusselsekspert
 
-Du kan kontakte en Microsoft-trusselsekspert for at få mere indsigt i en potentielt kompromitteret enhed eller allerede kompromitterede enheder. Microsoft-trusselseksperter kan tilkobles direkte fra Microsoft 365 Defender for at få rettidig og præcis svar. Eksperter giver indsigt ikke kun vedrørende en potentielt kompromitteret enhed, men også for bedre at forstå komplekse trusler, målrettede angrebsmeddelelser, som du får, eller hvis du har brug for flere oplysninger om beskederne eller en trusselsintelligenskontekst, som du kan se på portaldashboardet.
+Du kan kontakte en Microsoft-trusselsekspert for at få mere indsigt i en potentielt kompromitteret enhed eller allerede kompromitterede enheder. Microsoft Threat Experts kan tilkobles direkte fra Microsoft 365 Defender for at få rettidig og præcis svar. Eksperter giver indsigt ikke kun vedrørende en potentielt kompromitteret enhed, men også for bedre at forstå komplekse trusler, målrettede angrebsmeddelelser, som du får, eller hvis du har brug for flere oplysninger om beskederne eller en trusselsintelligenskontekst, som du kan se på portaldashboardet.
 
 Se [Kontakt en Microsoft Threat-ekspert](/microsoft-365/security/defender-endpoint/configure-microsoft-threat-experts#consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization) for at få flere oplysninger.
 
