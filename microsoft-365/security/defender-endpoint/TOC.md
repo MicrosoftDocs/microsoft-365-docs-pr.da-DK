@@ -406,6 +406,7 @@
 ###### [Kør antivirusscanning](respond-machine-alerts.md#run-microsoft-defender-antivirus-scan-on-devices)
 ###### [Begræns appudførelse](respond-machine-alerts.md#restrict-app-execution)
 ###### [Isoler enheder fra netværket](respond-machine-alerts.md#isolate-devices-from-the-network)
+###### [Indeholder enheder fra netværket](respond-machine-alerts.md#contain-devices-from-the-network)
 ###### [Kontakt en trusselsekspert](respond-machine-alerts.md#consult-a-threat-expert)
 ###### [Kontrollér aktivitetsdetaljer i Handlingscenter](respond-machine-alerts.md#check-activity-details-in-action-center)
 

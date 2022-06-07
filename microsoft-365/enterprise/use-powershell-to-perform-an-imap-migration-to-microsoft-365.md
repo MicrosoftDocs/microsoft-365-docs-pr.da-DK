@@ -18,16 +18,16 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
 description: Få mere at vide om, hvordan du bruger PowerShell til at udføre en IMAP-overførsel (Internet Mail Access Protocol) til Microsoft 365.
-ms.openlocfilehash: f93d56379dfa82ec3a369c89b35fc40d49fa1537
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cc5a68e3a570151044663366b686998b7d3be08e
+ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078669"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65930169"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en IMAP-overførsel for at Microsoft 365
 
-*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
 
 Som en del af processen med at installere Microsoft 365 kan du vælge at overføre indholdet af brugerpostkasser fra en IMAP-mailtjeneste (Internet Mail Access Protocol) til Microsoft 365. I denne artikel gennemgås opgaverne for en IMAP-migrering via mail ved hjælp af Exchange Online PowerShell.
 
@@ -40,7 +40,7 @@ Anslået tid til at fuldføre denne opgave: 2-5 minutter for at oprette et overf
 
 Du skal have tildelt tilladelser, før du kan udføre denne procedure eller disse procedurer. Hvis du vil se, hvilke tilladelser du har brug for, skal du se posten "Overførsel" i en tabel i emnet [Modtageres tilladelser](/exchange/recipients-permissions-exchange-2013-help) .
 
-Hvis du vil bruge Exchange Online PowerShell-cmdlet'er, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell session. Du kan finde en vejledning [under Forbind til Exchange Online ved hjælp af fjern-PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Hvis du vil bruge Exchange Online PowerShell-cmdlet'erne, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell-session. Se [Opret forbindelse til Exchange Online ved hjælp af ekstern PowerShell for at](/powershell/exchange/connect-to-exchange-online-powershell) få instruktioner.
 
 Du kan se en komplet liste over overførselskommandoer under [Flyt og migrerings-cmdlet'er](/powershell/exchange/).
 
@@ -57,17 +57,17 @@ Følgende begrænsninger gælder for IMAP-overførsler:
 ### <a name="step-1-prepare-for-an-imap-migration"></a>Trin 1: Forbered en IMAP-migrering
 <a name="BK_Step1"> </a>
 
-- **Hvis du har et domæne til din IMAP-organisation, skal du tilføje det som et accepteret domæne for din Microsoft 365 organisation.** Hvis du vil bruge det samme domæne, som du allerede ejer til dine Microsoft 365 postkasser, skal du først tilføje det som et accepteret domæne for at Microsoft 365. Når du har tilføjet den, kan du oprette dine brugere i Microsoft 365. Du kan få flere oplysninger under [Kontrollér dit domæne](../admin/setup/add-domain.md).
+- **Hvis du har et domæne til din IMAP-organisation, skal du tilføje det som et accepteret domæne for din Microsoft 365-organisation.** Hvis du vil bruge det samme domæne, som du allerede ejer til dine Microsoft 365-postkasser, skal du først føje det som et accepteret domæne til Microsoft 365. Når du har tilføjet den, kan du oprette dine brugere i Microsoft 365. Du kan finde flere oplysninger under[Kontrollér dit domæne](../admin/setup/add-domain.md).
 
-- **Føj hver bruger til Microsoft 365, så de har en postkasse.** Du kan finde instruktioner under [Føje brugere til Microsoft 365 til virksomheder](../admin/add-users/add-users.md).
+- **Føj hver bruger til Microsoft 365, så de har en postkasse.** Du kan finde instruktioner under[Føj brugere til Microsoft 365 til virksomheder](../admin/add-users/add-users.md).
 
 - **Hent IMAP-serverens FQDN**. Du skal angive det fuldt kvalificerede domænenavn (FQDN) (også kaldet det fulde computernavn) for den IMAP-server, du vil overføre postkassedata fra, når du opretter et IMAP-overførselsslutpunkt. Brug en IMAP-klient eller kommandoen PING til at kontrollere, at du kan benytte FQDN til at kommunikere med IMAP-serveren via internettet.
 
-- **Konfigurer firewallen for at tillade IMAP-forbindelser**. Du skal muligvis åbne porte i firewallen i den organisation, der er vært for IMAP-serveren, så netværkstrafik, der stammer fra Microsoft-datacenteret under migreringen, har tilladelse til at komme ind i den organisation, der er vært for IMAP-serveren. Du kan finde en liste over de IP-adresser, der bruges af Microsoft-datacentre, [under Exchange Online URL-adresser og IP-adresseområder](./urls-and-ip-address-ranges.md).
+- **Konfigurer firewallen for at tillade IMAP-forbindelser**. Du skal muligvis åbne porte i firewallen i den organisation, der er vært for IMAP-serveren, så netværkstrafik, der stammer fra Microsoft-datacenteret under migreringen, har tilladelse til at komme ind i den organisation, der er vært for IMAP-serveren. Du kan finde en liste over de IP-adresser, der bruges af Microsoft-datacentre, under [Exchange Online URL-adresser og IP-adresseområder](./urls-and-ip-address-ranges.md).
 
 - **Tildel administratorkontotilladelserne for at få adgang til postkasser i din IMAP-organisation**. Hvis du bruger administratorlegitimationsoplysninger i CSV-filen, skal den konto, du bruger, have de nødvendige tilladelser til at oprette adgang til postkasser i det lokale miljø. De tilladelser, der kræves for at få adgang til brugerpostkasser, bestemmes af den pågældende IMAP-server.
 
-- **Hvis du vil bruge Exchange Online PowerShell-cmdlet'er**, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell session. Du kan finde en vejledning [under Forbind til Exchange Online ved hjælp af fjern-PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- **Hvis du vil bruge Exchange Online PowerShell-cmdlet'erne**, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell-session. Se [Opret forbindelse til Exchange Online ved hjælp af ekstern PowerShell for at](/powershell/exchange/connect-to-exchange-online-powershell) få instruktioner.
 
     Du kan se en komplet liste over overførselskommandoer under [Flyt og migrerings-cmdlet'er](/powershell/exchange/).
 
@@ -85,7 +85,7 @@ Identificer den gruppe af brugere, hvis postkasser du vil overføre i et IMAP-ov
 
 Følgende attributter kræves til hver bruger:
 
-- **EmailAddress** angiver bruger-id'et for brugerens Microsoft 365 postkasse.
+- **EmailAddress** angiver bruger-id'et for brugerens Microsoft 365-postkasse.
 
 - **UserName** angiver logonnavnet på den konto, der skal bruges til at få adgang til postkassen på IMAP-serveren.
 
@@ -104,7 +104,7 @@ For attributten **UserName** kan du ud over brugernavnet bruge legitimationsoply
 
  **Microsoft Exchange:**
 
-Hvis du overfører mail fra IMAP-implementeringen til Microsoft Exchange, skal du bruge formatet **Domæne/Admin_UserName/User_UserName** for attributten **UserName** i CSV-filen. Lad os sige, at du overfører mail fra Exchange for Terry Adams, Ann Beebe og Paul Cannon. Du har en mailadministratorkonto, hvor brugernavnet er **mailadmin**, og adgangskoden er **Pssw0rd\@**. Sådan vil CSV-filen se ud:
+Hvis du overfører mail fra IMAP-implementeringen til Microsoft Exchange, skal du bruge formatet **Domæne/Admin_UserName/User_UserName** for attributten **UserName** i CSV-filen. Lad os sige, at du overfører mail fra Exchange for Terry Adams, Ann Beebe og Paul Cannon. Du har en mailadministratorkonto, hvor brugernavnet er **mailadmin** , og adgangskoden er **P\@ssw0rd**. Sådan vil CSV-filen se ud:
 
 ```powershell
 EmailAddress,UserName,Password
@@ -115,7 +115,7 @@ paulc@contoso.edu,contoso-students/mailadmin/paul.cannon,P@ssw0rd
 
  **Dovecot:**
 
-Til IMAP-servere, der understøtter SASL (Simple Authentication and Security Layer), f.eks. en Dovecot IMAP-server, skal du bruge formatet **User_UserName*Admin_UserName**, hvor stjernen ( * ) er et konfigurerbart separatortegn. Lad os sige, at du overfører de samme brugeres mail fra en Dovecot IMAP-server ved hjælp af administratorlegitimationsoplysninger **mailadmin** og **Pssw0rd\@**. Sådan vil CSV-filen se ud:
+Til IMAP-servere, der understøtter SASL (Simple Authentication and Security Layer), f.eks. en Dovecot IMAP-server, skal du bruge formatet **User_UserName*Admin_UserName**, hvor stjernen ( * ) er et konfigurerbart separatortegn. Lad os sige, at du overfører de samme brugeres mail fra en Dovecot IMAP-server ved hjælp af administratorlegitimationsoplysninger **mailadmin** og **P\@ssw0rd**. Sådan vil CSV-filen se ud:
 
 ```powershell
 EmailAddress,UserName,Password
@@ -126,7 +126,7 @@ paulc@contoso.edu,paul.cannon*mailadmin,P@ssw0rd
 
  **Mirapoint:**
 
-Hvis du overfører mail fra Mirapoint Message Server, skal du bruge formatet **#user\@ domæne#Admin_UserName#** som administratorlegitimationsoplysninger. Hvis du vil overføre mail fra Mirapoint ved hjælp af administratorlegitimationsoplysninger **mailadmin** og **Pssw0rd\@**, vil din CSV-fil se sådan ud:
+Hvis du overfører mail fra Mirapoint Message Server, skal du bruge formatet **#user\@domain#Admin_UserName#** som administratorlegitimationsoplysninger. Hvis du vil overføre mail fra Mirapoint ved hjælp af administratorlegitimationsoplysninger **mailadmin** og **P\@ssw0rd**, vil din CSV-fil se sådan ud:
 
 ```powershell
 EmailAddress,UserName,Password
@@ -152,7 +152,7 @@ paulc@contoso.edu,mailadmin,P@ssw0rd,/users/paul.cannon
 
 ### <a name="step-3-create-an-imap-migration-endpoint"></a>Trin 3: Opret et IMAP-overførselsslutpunkt
 
-Hvis du vil overføre mails, skal Microsoft 365 oprette forbindelse til og kommunikere med kildemailsystemet. Det gør Microsoft 365 ved at bruge et overførselsslutpunkt. Overførselsslutpunktet definerer også antallet af postkasser, der skal overføres samtidig, og antallet af postkasser, der skal synkroniseres samtidig under trinvis synkronisering, hvilket sker én gang hver 24. time. Hvis du vil oprette et slutpunkt for overførsel af IMAP, skal du først [oprette forbindelse til Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell).
+For at kunne overføre mails skal Microsoft 365 oprette forbindelse til og kommunikere med kildemailsystemet. For at gøre dette bruger Microsoft 365 et overførselsslutpunkt. Overførselsslutpunktet definerer også antallet af postkasser, der skal overføres samtidig, og antallet af postkasser, der skal synkroniseres samtidig under trinvis synkronisering, hvilket sker én gang hver 24. time. Hvis du vil oprette et slutpunkt for overførslen af IMAP, skal du først [oprette forbindelse til Exchange Online](/powershell/exchange/connect-to-exchange-online-powershell).
 
 Du kan se en komplet liste over overførselskommandoer under [Flyt og migrerings-cmdlet'er](/powershell/exchange/).
 
@@ -170,7 +170,7 @@ New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -P
 50 -MaxConcurrentIncrementalSyncs 25
 ```
 
-Du kan finde flere oplysninger om **New-MigrationEndpoint-cmdlet'en** [underNew-MigrationEndpoint](/powershell/module/exchange/new-migrationendpoint).
+Du kan finde flere oplysninger om **New-MigrationEndpoint-cmdlet'en** under [New-MigrationEndpoint](/powershell/module/exchange/new-migrationendpoint).
 
 #### <a name="verify-it-worked"></a>Kontrollér, at det virkede
 
@@ -182,7 +182,7 @@ Get-MigrationEndpoint IMAPEndpoint | Format-List EndpointType,RemoteServer,Port,
 
 ### <a name="step-4-create-and-start-an-imap-migration-batch"></a>Trin 4: Opret og start en IMAP-overførselsbatch
 
-Du kan bruge Cmdlet'en [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) til at oprette et overførselsbatch til en IMAP-overførsel. Du kan oprette et overførselsbatch og starte det automatisk ved at inkludere parameteren _AutoStart_ . Du kan også oprette overførselsbatchen og derefter starte den bagefter ved hjælp af [cmdlet'enStart-MigrationBatch](/powershell/module/exchange/start-migrationbatch) .
+Du kan bruge Cmdlet'en [New-MigrationBatch](/powershell/module/exchange/new-migrationbatch) til at oprette et overførselsbatch til en IMAP-overførsel. Du kan oprette et overførselsbatch og starte det automatisk ved at inkludere parameteren _AutoStart_ . Du kan også oprette overførselsbatchen og derefter starte den bagefter ved hjælp af cmdlet'en[Start-MigrationBatch](/powershell/module/exchange/start-migrationbatch) .
 
 Følgende Exchange Online PowerShell-kommando starter automatisk overførselsbatchen med navnet "IMAPBatch1" ved hjælp af IMAP-slutpunktet kaldet "IMAPEndpoint":
 
@@ -206,7 +206,7 @@ Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 
 ### <a name="step-5-route-your-email-to-microsoft-365"></a>Trin 5: Distribuer din mail til Microsoft 365
 
-Mailsystemer bruger en DNS-post kaldet en MX-post til at finde ud af, hvor de skal levere mails. Under mailoverførselsprocessen pegede din MX-post på dit kildemailsystem. Nu, hvor mailoverførslen til Microsoft 365 er fuldført, er det tid til at pege din MX-post på Microsoft 365. Dette hjælper med at sikre, at mail leveres til dine Microsoft 365 postkasser. Når du flytter MX-posten, kan du også slå dit gamle mailsystem fra, når du er klar.
+Mailsystemer bruger en DNS-post kaldet en MX-post til at finde ud af, hvor de skal levere mails. Under mailoverførselsprocessen pegede din MX-post på dit kildemailsystem. Nu, hvor mailoverførslen til Microsoft 365 er fuldført, er det tid til at pege din MX-post på Microsoft 365. Dette hjælper med at sikre, at mail leveres til dine Microsoft 365-postkasser. Når du flytter MX-posten, kan du også slå dit gamle mailsystem fra, når du er klar.
 
 For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retninger, leveres der også [generelle MX-postinstruktioner](https://go.microsoft.com/fwlink/?LinkId=397449) .
 
@@ -214,11 +214,11 @@ Det kan tage op til 72 timer, før dine kunders og partneres mailsystemer genken
 
 ### <a name="step-6-delete-imap-migration-batch"></a>Trin 6: Slet IMAP-overførselsbatch
 
-Når du har ændret MX-posten og bekræftet, at alle mails distribueres til Microsoft 365 postkasser, skal du give brugerne besked om, at deres mail vil Microsoft 365. Derefter kan du slette IMAP-overførselsbatchen. Kontrollér følgende, før du sletter overførselsbatchen.
+Når du har ændret MX-posten og bekræftet, at alle mails distribueres til Microsoft 365-postkasser, skal du give brugerne besked om, at deres mail sendes til Microsoft 365. Derefter kan du slette IMAP-overførselsbatchen. Kontrollér følgende, før du sletter overførselsbatchen.
 
-- Alle brugere bruger Microsoft 365 postkasser. Når batchen er slettet, kopieres mails, der sendes til postkasser i det lokale miljø, Exchange Server ikke til de tilsvarende Microsoft 365 postkasser.
+- Alle brugere bruger Microsoft 365-postkasser. Når batchen er slettet, kopieres mails, der sendes til postkasser på Exchange Server i det lokale miljø, ikke til de tilsvarende Microsoft 365-postkasser.
 
-- Microsoft 365 postkasser blev synkroniseret mindst én gang, efter mailen begyndte at blive sendt direkte til dem. Det gør du ved at sikre, at værdien i feltet Senest synkroniseret tid for overførselsbatchen er nyere, end da mailen begyndte at blive distribueret direkte til Microsoft 365 postkasser.
+- Microsoft 365-postkasser blev synkroniseret mindst én gang, efter mailen begyndte at blive sendt direkte til dem. Det gør du ved at sikre, at værdien i feltet Senest synkroniseret tid for overførselsbatchen er nyere, end da mailen begyndte at blive distribueret direkte til Microsoft 365-postkasser.
 
 Hvis du vil slette overførselsbatchen "IMAPBatch1" fra Exchange Online PowerShell, skal du køre følgende kommando:
 
@@ -226,7 +226,7 @@ Hvis du vil slette overførselsbatchen "IMAPBatch1" fra Exchange Online PowerShe
 Remove-MigrationBatch -Identity IMAPBatch1
 ```
 
-Du kan få flere oplysninger om **Cmdlet'en Remove-MigrationBatch** [underRemove-MigrationBatch](/powershell/module/exchange/remove-migrationbatch).
+Du kan få flere oplysninger om cmdlet'en **Remove-MigrationBatch** under [Remove-MigrationBatch](/powershell/module/exchange/remove-migrationbatch).
 
 #### <a name="verify-it-worked"></a>Kontrollér, at det virkede
 
@@ -238,7 +238,7 @@ Get-MigrationBatch IMAPBatch1"
 
 Kommandoen returnerer enten overførselsbatchen med statussen **Fjerner**, eller den returnerer en fejl, der angiver, at overførselsbatchen ikke blev fundet, og kontrollerer, at batchen er slettet.
 
-Du kan få flere oplysninger om **Get-MigrationBatch-cmdlet'en** [underHent-MigrationBatch](/powershell/module/exchange/get-migrationbatch).
+Du kan få flere oplysninger om **Get-MigrationBatch-cmdlet'en** under [Get-MigrationBatch](/powershell/module/exchange/get-migrationbatch).
 
 ## <a name="see-also"></a>Se også
 

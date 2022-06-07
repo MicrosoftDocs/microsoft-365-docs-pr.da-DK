@@ -1,5 +1,5 @@
 ---
-title: Trin 2. Beskyt dine Microsoft 365 privilegerede konti
+title: Trin 2. Beskyt dine privilegerede Microsoft 365-konti
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -20,20 +20,20 @@ search.appverid:
 f1.keywords:
 - NOCSH
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
-description: Denne artikel indeholder oplysninger om beskyttelse af privilegeret adgang til din Microsoft 365 lejer.
+description: Denne artikel indeholder oplysninger om beskyttelse af privilegeret adgang til din Microsoft 365-lejer.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: b9719908fcbe8aa453ac07788ee7771a39242d4e
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 3da8a6279d122a056a168485145c171f9d3d7f5f
+ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622561"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65930191"
 ---
-# <a name="step-2-protect-your-microsoft-365-privileged-accounts"></a>Trin 2. Beskyt dine Microsoft 365 privilegerede konti
+# <a name="step-2-protect-your-microsoft-365-privileged-accounts"></a>Trin 2. Beskyt dine privilegerede Microsoft 365-konti
 
-*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
 
-Sikkerhedsbrud på en Microsoft 365 lejer, herunder indsamling af oplysninger og phishing-angreb, udføres typisk ved at kompromittere legitimationsoplysningerne for en Microsoft 365 privilegeret konto. Sikkerhed i cloudmiljøet er et partnerskab mellem dig og Microsoft:
+Sikkerhedsbrud i en Microsoft 365-lejer, herunder indsamling af oplysninger og phishing-angreb, sker typisk ved at kompromittere legitimationsoplysningerne for en privilegeret Microsoft 365-konto. Sikkerhed i cloudmiljøet er et partnerskab mellem dig og Microsoft:
   
 - Microsofts cloudtjenester er bygget på et fundament af tillid og sikkerhed. Microsoft giver dig sikkerhedskontroller og -funktioner, der kan hjælpe dig med at beskytte dine data og programmer.
     
@@ -43,34 +43,36 @@ Microsoft leverer funktioner, der kan hjælpe med at beskytte din organisation, 
   
 1. Opret dedikerede, privilegerede, cloudbaserede konti, og brug dem kun, når det er nødvendigt.
     
-2. Konfigurer multifaktorgodkendelse (MFA) for dine dedikerede Microsoft 365 privilegerede konti, og brug den stærkeste form for sekundær godkendelse.
+2. Konfigurer multifaktorgodkendelse (MFA) for dine dedikerede Microsoft 365-privilegerede konti, og brug den stærkeste form for sekundær godkendelse.
 
-3. Beskyt privilegerede konti med anbefalinger til Nul tillid identitet og enhedsadgang.
+3. Beskyt privilegerede konti med Zero Trust-identitet og anbefalinger til enhedsadgang.
+
+> [!NOTE]
+> Hvis du vil sikre dine privilegerede roller, skal du se [Bedste fremgangsmåder for Azure AD-roller for](/azure/active-directory/roles/best-practices) at sikre privilegeret adgang til din lejer.
 
 ## <a name="1-create-dedicated-privileged-cloud-based-user-accounts-and-use-them-only-when-necessary"></a>1. Opret dedikerede, privilegerede, skybaserede brugerkonti, og brug dem kun, når det er nødvendigt
 
-I stedet for at bruge daglige brugerkonti, der er blevet tildelt administratorroller, kan du oprette dedikerede brugerkonti, der har administratorrollerne i Azure AD. 
+I stedet for at bruge daglige brugerkonti, der er blevet tildelt administratorroller, skal du oprette dedikerede brugerkonti, der har administratorrollerne i Azure AD. 
 
-Fra nu af logger du kun på med de dedikerede privilegerede konti for opgaver, der kræver administratorrettigheder. Alle andre Microsoft 365 administration skal udføres ved at tildele andre administrationsroller til brugerkonti.
+Fra nu af logger du kun på med de dedikerede privilegerede konti for opgaver, der kræver administratorrettigheder. Al anden Microsoft 365-administration skal udføres ved at tildele andre administrationsroller til brugerkonti.
   
 > [!NOTE]
-> Dette kræver yderligere trin for at logge af som din daglige brugerkonto og logge på med en dedikeret administratorkonto. Men det skal kun gøres lejlighedsvis i forbindelse med administratorhandlinger. Overvej at gendanne dit Microsoft 365 abonnement efter brud på en administratorkonto kræver mange flere trin.
+> Dette kræver yderligere trin for at logge af som din daglige brugerkonto og logge på med en dedikeret administratorkonto. Men det skal kun gøres lejlighedsvis i forbindelse med administratorhandlinger. Overvej at gendanne dit Microsoft 365-abonnement efter brud på en administratorkonto kræver mange flere trin.
 
-Du skal også oprette [akutadgangskonti](/azure/active-directory/roles/security-emergency-access) for at forhindre, at du ved et uheld låses ude af Azure AD.
+Du skal også oprette [akutadgangskonti](/azure/active-directory/roles/security-emergency-access) for at forhindre, at azure AD låses utilsigtet.
 
-Du kan beskytte dine privilegerede konti yderligere med Azure AD Privileged Identity Management (PIM) til tildeling af administratorroller efter behov. 
+Du kan beskytte dine privilegerede konti yderligere med Azure AD Privileged Identity Management (PIM) til tildeling efter behov af administratorroller efter behov. 
  
-## <a name="2-configure-multi-factor-authentication-for-your-dedicated-microsoft-365-privileged-accounts"></a>2. Konfigurer multifaktorgodkendelse for dine dedikerede Microsoft 365 privilegerede konti
+## <a name="2-configure-multi-factor-authentication-for-your-dedicated-microsoft-365-privileged-accounts"></a>2. Konfigurer multifaktorgodkendelse for dine dedikerede Privilegerede Microsoft 365-konti
 
 Multifaktorgodkendelse kræver yderligere oplysninger ud over kontonavnet og adgangskoden. Microsoft 365 understøtter disse ekstra kontrolmetoder:
   
-- Appen Microsoft Authenticator
+- Microsoft Authenticator-appen
 - Et telefonopkald
 - En tilfældigt genereret bekræftelseskode, der sendes via en sms
 - Et chipkort (virtuelt eller fysisk) (kræver godkendelse i organisationsnetværket)
 - En biometrisk enhed
 - Oauth-token
-- 
     
 >[!Note]
 >For organisationer, der skal overholde NIST-standarder (National Institute of Standards and Technology), begrænses brugen af et telefonopkald eller sms-baserede yderligere kontrolmetoder. Klik [her](https://pages.nist.gov/800-63-FAQ/#q-b01) for at få flere oplysninger.
@@ -78,13 +80,13 @@ Multifaktorgodkendelse kræver yderligere oplysninger ud over kontonavnet og adg
 
 Hvis du er en lille virksomhed, der kun bruger brugerkonti, der kun er gemt i cloudmiljøet (identitetsmodellen kun i cloudmiljøet), skal du [konfigurere MFA](/office365/admin/security-and-compliance/set-up-multi-factor-authentication) til at konfigurere MFA ved hjælp af et telefonopkald eller en bekræftelseskode for en sms, der er sendt til en smartphone for hver dedikeret privilegeret konto.
     
-Hvis du er en større organisation, der bruger en Microsoft 365 hybrid identitetsmodel, har du flere kontrolmuligheder. Hvis du allerede har sikkerhedsinfrastrukturen til en stærkere sekundær godkendelsesmetode, skal du [konfigurere MFA](../admin/security-and-compliance/set-up-multi-factor-authentication.md) og konfigurere hver dedikeret privilegeret konto for den relevante kontrolmetode.
+Hvis du er en større organisation, der bruger en Hybrid Identity Model i Microsoft 365, har du flere kontrolmuligheder. Hvis du allerede har sikkerhedsinfrastrukturen til en stærkere sekundær godkendelsesmetode, skal du [konfigurere MFA](../admin/security-and-compliance/set-up-multi-factor-authentication.md) og konfigurere hver dedikeret privilegeret konto for den relevante kontrolmetode.
   
-Hvis sikkerhedsinfrastrukturen for den ønskede stærkere bekræftelsesmetode ikke er på plads og fungerer for Microsoft 365 MFA, anbefaler vi på det kraftigste, at du konfigurerer dedikerede privilegerede konti med MFA ved hjælp af Microsoft Authenticator-appen, et telefonopkald eller en bekræftelseskode for tekstmeddelelser, der sendes til en smart telefon for dine privilegerede konti som en midlertidig sikkerhedsforanstaltning. Behold ikke dine dedikerede privilegerede konti uden den ekstra beskyttelse, der leveres af MFA.
+Hvis sikkerhedsinfrastrukturen for den ønskede stærkere bekræftelsesmetode ikke er på plads og fungerer for Microsoft 365 MFA, anbefaler vi på det kraftigste, at du konfigurerer dedikerede privilegerede konti med MFA ved hjælp af Microsoft Authenticator-appen, et telefonopkald eller en bekræftelseskode til en sms, der sendes til en smart telefon for dine privilegerede konti som en midlertidig sikkerhedsforanstaltning. Behold ikke dine dedikerede privilegerede konti uden den ekstra beskyttelse, der leveres af MFA.
   
-Du kan få flere oplysninger under [MFA for Microsoft 365](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md).
+Du kan få flere oplysninger under [MFA til Microsoft 365](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md).
   
-## <a name="3-protect-administrator-accounts-with-zero-trust-identity-and-device-access-recommendations"></a>3. Beskyt administratorkonti med Nul tillid anbefalinger til identitet og enhedsadgang
+## <a name="3-protect-administrator-accounts-with-zero-trust-identity-and-device-access-recommendations"></a>3. Beskyt administratorkonti med Zero Trust-identitet og anbefalinger til enhedsadgang
 
 For at hjælpe med at sikre en sikker og produktiv arbejdsstyrke giver Microsoft en række anbefalinger til [identitets- og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md). I forbindelse med identitet skal du bruge anbefalingerne og indstillingerne i disse artikler:
 
@@ -97,15 +99,15 @@ Brug disse yderligere metoder til at sikre, at din privilegerede konto og den ko
   
 ### <a name="privileged-access-workstation"></a>Arbejdsstation med privilegeret adgang
 
-Hvis du vil sikre, at udførelsen af yderst privilegerede opgaver er så sikker som muligt, skal du bruge en arbejdsstation med privilegeret adgang (PAW). En PAW er en dedikeret computer, der kun bruges til følsomme konfigurationsopgaver, f.eks. Microsoft 365 konfiguration, der kræver en privilegeret konto. Da denne computer ikke bruges dagligt til internetbrowsing eller mail, er den bedre beskyttet mod internetangreb og trusler.
+Hvis du vil sikre, at udførelsen af yderst privilegerede opgaver er så sikker som muligt, skal du bruge en arbejdsstation med privilegeret adgang (PAW). En PAW er en dedikeret computer, der kun bruges til følsomme konfigurationsopgaver, f.eks. Microsoft 365-konfiguration, der kræver en privilegeret konto. Da denne computer ikke bruges dagligt til internetbrowsing eller mail, er den bedre beskyttet mod internetangreb og trusler.
   
 Du kan finde oplysninger om, hvordan du konfigurerer en PAW, under [https://aka.ms/cyberpaw](/security/compass/privileged-access-devices).
 
-Hvis du vil aktivere Azure PIM for dine Azure AD lejer- og administratorkonti, skal du se [trinnene til konfiguration af PIM](/azure/active-directory/active-directory-privileged-identity-management-configure).
+Hvis du vil aktivere Azure PIM for dine Azure AD-lejer- og administratorkonti, skal du se [trinnene til konfiguration af PIM](/azure/active-directory/active-directory-privileged-identity-management-configure).
 
 Hvis du vil udvikle en omfattende køreplan for at sikre privilegeret adgang mod cyberangreb, skal du se [Sikring af privilegeret adgang til hybrid- og cloudinstallationer i Azure AD](/azure/active-directory/admin-roles-best-practices).
 
-### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
+### <a name="azure-ad-privileged-identity-management"></a>Privilegeret identitetsstyring i Azure AD
 
 I stedet for at få tildelt en administratorrolle permanent til dine privilegerede konti kan du bruge Azure AD PIM til at aktivere tildeling efter behov af administratorrollen efter behov.
   
@@ -113,15 +115,15 @@ Dine administratorkonti går fra at være permanente administratorer til beretti
   
 Brug af PIM og denne proces reducerer betydeligt den tid, dine privilegerede konti er sårbare over for angreb og brug af ondsindede brugere.
 
-PIM fås med Azure Active Directory Premium P2, som følger med Microsoft 365 E5. Du kan også købe individuelle Azure Active Directory Premium P2-licenser til dine administratorkonti.
+PIM fås med Azure Active Directory Premium P2, som er inkluderet i Microsoft 365 E5. Du kan også købe individuelle Azure Active Directory Premium P2-licenser til dine administratorkonti.
   
 Du kan finde flere oplysninger under:
 
-- [Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure).
+- [Privilegeret identitetsstyring i Azure AD](/azure/active-directory/active-directory-privileged-identity-management-configure).
 - [Sikring af privilegeret adgang til hybrid- og cloudinstallationer i Azure AD](/azure/active-directory/roles/security-planning)
   
 
-### <a name="privileged-access-management"></a>Privileged Access Management
+### <a name="privileged-access-management"></a>Privilegeret adgangsstyring
 
 Privilegeret adgangsstyring aktiveres ved at konfigurere politikker, der angiver just-in-time-adgang for opgavebaserede aktiviteter i din lejer. Det kan hjælpe med at beskytte din organisation mod brud, der kan bruge eksisterende privilegerede administratorkonti med stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan f.eks. konfigurere en politik for privilegeret adgangsstyring, der kræver eksplicit godkendelse for at få adgang til og ændre indstillingerne for organisationspostkasser i din lejer.
 
@@ -137,12 +139,12 @@ Hvis du vil aktivere privilegeret adgangsstyring, skal du se [Konfigurer privile
 
 Du kan få flere oplysninger under [Privilegeret adgangsstyring](/office365/securitycompliance/privileged-access-management-overview).
 
-### <a name="security-information-and-event-management-siem-software-for-microsoft-365-logging"></a>SIEM-software (Security Information and Event Management) til Microsoft 365 logføring
+### <a name="security-information-and-event-management-siem-software-for-microsoft-365-logging"></a>Sikkerhedsoplysninger og SIEM-software (Event Management) til Microsoft 365-logføring
 
-SIEM-software, der kører på en server, udfører analyse i realtid af sikkerhedsbeskeder og hændelser, der er oprettet af programmer og netværkshardware. Hvis du vil tillade, at din SIEM-server inkluderer Microsoft 365 sikkerhedsbeskeder og -hændelser i dens analyse- og rapporteringsfunktioner, skal du integrere Azure AD i dit SEIM. Se [Introduktion til Azure Log Integration](/azure/security/security-azure-log-integration-overview).
+SIEM-software, der kører på en server, udfører analyse i realtid af sikkerhedsbeskeder og hændelser, der er oprettet af programmer og netværkshardware. Hvis du vil tillade, at din SIEM-server inkluderer Microsoft 365-sikkerhedsbeskeder og -hændelser i dens analyse- og rapporteringsfunktioner, skal du integrere Azure AD i dit SEIM. Se [Introduktion til Azure Log Integration](/azure/security/security-azure-log-integration-overview).
 
 ## <a name="next-step"></a>Næste trin
 
-[![Beskyt dine Microsoft 365 brugerkonti](../media/deploy-identity-solution-overview/microsoft-365-secure-sign-in.png)](microsoft-365-secure-sign-in.md)
+[![Beskyt dine Microsoft 365-brugerkonti](../media/deploy-identity-solution-overview/microsoft-365-secure-sign-in.png)](microsoft-365-secure-sign-in.md)
 
 Fortsæt med [trin 3](microsoft-365-secure-sign-in.md) for at sikre dine brugerkonti.
