@@ -348,10 +348,6 @@
           href: security-and-compliance/enable-modern-authentication.md
         - name: Trusler registreret af Microsoft Defender Antivirus
           href: /microsoft-365/business-premium/m365bp-review-threats-take-action
-        - name: Konfigurer funktioner til overholdelse af angivne standarder
-          href: /microsoft-365/business-premium/m365bp-set-up-compliance.md
-        - name: Secure Score
-          href: /microsoft-365/security/defender/microsoft-secure-score
         - name: En vejledning til overholdelse af GDPR
           href: security-and-compliance/gdpr-compliance.md
     - name: Administrer enheds- og appdata

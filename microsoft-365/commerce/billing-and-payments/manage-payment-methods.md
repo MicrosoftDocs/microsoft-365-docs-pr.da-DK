@@ -23,18 +23,18 @@ ms.custom:
 - business_assist
 search.appverid: MET150
 description: Køb virksomhedsprodukter eller -tjenester fra Microsoft ved hjælp af en eksisterende betalingsmetode, eller tilføj en ny i Microsoft 365 Administration.
-ms.date: 04/02/2021
-ms.openlocfilehash: 1b36a11c2bdb34880f8f02b84788062dfb88c4b1
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 06/01/2022
+ms.openlocfilehash: a6f15318e1539ef1f6c2656197c222e068f04f87
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63590822"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922991"
 ---
 # <a name="manage-payment-methods"></a>Administrer betalingsmetoder
 
 > [!IMPORTANT]
-> Fra og med den 26. januar 2021 understøttes nye bankkonti ikke længere for kunder i Belgien, Frankrig, Italien, Luxembourg, Portugal, Spanien og USA. Hvis du er en eksisterende kunde i et af disse lande, kan du fortsætte med at betale for dit abonnement med en eksisterende bankkonto, og du kan føje nye abonnementer til det, men kun så længe bankkontoen er i god stand.
+> Fra og med den 26. januar 2021 understøttes nye bankkonti ikke længere for kunder i Belgien, Frankrig, Italien, Luxembourg, Portugal, Spanien og USA. Hvis du er en eksisterende kunde i et af disse lande, kan du fortsætte med at betale for dit abonnement med en eksisterende bankkonto, der har et godt omdømme. Du kan dog ikke føje nye abonnementer til bankkontoen.
 
 Når du køber virksomhedsprodukter eller -tjenester fra Microsoft, kan du bruge en eksisterende betalingsmetode eller tilføje en ny. Du kan bruge et kredit- eller debetkort eller en bankkonto til at betale for de ting, du køber.
 
@@ -58,7 +58,7 @@ Du kan nemt opdatere betalingsmetoden for dit abonnement på Microsoft 365 Busin
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Du skal være en global eller fakturerende administrator for at udføre opgaver i denne artikel. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+Du skal være global administrator eller faktureringsadministrator for at udføre opgaverne i denne artikel. Få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="add-a-payment-method"></a>Tilføj en betalingsmetode
 

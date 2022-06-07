@@ -1,5 +1,5 @@
 ---
-title: Opgrader distributionslister til Microsoft 365-grupper i Outlook
+title: Opgrader distributionslister til Microsoft 365-grupper i Exchange Online
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -21,121 +21,122 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: 787d7a75-e201-46f3-a242-f698162ff09f
-description: Få mere at vide om, hvordan du opgraderer en eller flere distributionslister for at Microsoft 365-grupper i Outlook, og hvordan du bruger PowerShell til at opgradere flere distributionslister samtidigt.
-ms.openlocfilehash: 832d65854a6a18ad28e3d9fca6d1d11c17146c80
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Få mere at vide om, hvordan du opgraderer en eller flere distributionslister til Microsoft 365-grupper i Exchange Online, og hvordan du bruger PowerShell til at opgradere flere distributionslister samtidigt.
+ms.openlocfilehash: 6f27c4a7df345a25f4b5ca7d2a9f2979a97e7c6a
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782253"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922169"
 ---
-# <a name="upgrade-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Opgrader distributionslister til Microsoft 365-grupper i Outlook
+# <a name="upgrade-distribution-lists-to-microsoft-365-groups-in-exchange-online"></a>Opgrader distributionslister til Microsoft 365-grupper i Exchange Online
 
-Du kan opgradere distributionslister til Microsoft 365-grupper i Outlook. Dette er en fantastisk måde at give din organisations distributionslister alle funktionerne og funktionaliteten i Microsoft 365-grupper. [Derfor skal du opgradere distributionslisterne til grupper i Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)
+Opgradering af en distributionsliste til en Microsoft 365-gruppe er en fantastisk måde at forbedre funktionerne og egenskaberne i grupper i din organisation på. Du kan få flere oplysninger under [Hvorfor du skal opgradere distributionslisterne til grupper i Outlook](https://support.microsoft.com/office/7fb3d880-593b-4909-aafa-950dd50ce188)
 
-Du kan opgradere DLs én ad gangen eller flere på samme tid.
+Du kan opgradere distributionslisterne én ad gangen eller flere ad gangen. Du kan bruge Exchange Administration (EAC) eller Exchange Online PowerShell.
 
-## <a name="upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Opgrader en eller mange distributionslistegrupper til Microsoft 365-grupper i Outlook
+## <a name="upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups"></a>Opgrader en eller mange distributionslistegrupper til Microsoft 365-grupper
 
-Du skal være global administrator eller Exchange administrator for at opgradere en distributionslistegruppe. Hvis du vil opgradere til Microsoft 365-grupper, skal distributionslistegruppen have en ejer med en postkasse.
+Du skal være global administrator eller Exchange-administrator for at opgradere en distributionsliste. Hvis du vil opgradere til Microsoft 365 Grupper, skal distributionslisten have en angivet ejer, og den pågældende ejer skal være en postkasse.
 
-### <a name="use-the-new-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Brug den nye EAC til at opgradere en eller mange distributionslistegrupper for at Microsoft 365-grupper i Outlook
-
-1. Gå til det nye Exchange Administration > **Modtagergrupper**\>.<a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank"></a>
-
-2. Vælg den distributionslistegruppe (også kaldet en **distributionsgruppe**), som du vil opgradere til Microsoft 365 gruppe, på siden **Grupper**.
-
-3. Vælg **gruppen Opgrader distribution** på værktøjslinjen.
-
-4. Klik på **Opgrader** i dialogboksen **Klar til opgradering.** Processen starter med det samme. Afhængigt af størrelsen og antallet af distributionslistegrupper, du opgraderer, kan processen tage minutter eller timer.
+### <a name="use-the-classic-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Brug Den klassiske EAC til at opgradere en eller mange distributionslistegrupper til Microsoft 365-grupper i Outlook
 
 > [!NOTE]
-> Et banner øverst angiver, at opgraderingen, f.eks *. distributionsgrupper, er blevet opgraderet. Det tager 5 minutter at afspejle ændringerne. Filtrer efter Microsoft 365 grupper for at se de opgraderede distributionsgrupper*.
+> Procedurerne i dette afsnit er ikke tilgængelige i den nye EAC.
 
-### <a name="use-the-classic-eac-to-upgrade-one-or-many-distribution-list-groups-to-microsoft-365-groups-in-outlook"></a>Brug Klassisk EAC til at opgradere en eller mange distributionslistegrupper for at Microsoft 365-grupper i Outlook
+1. Gå til Exchange Administration > **modtagergrupper**\>.<a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank"></a>
 
-1. Gå til Exchange Administration > **Modtagergrupper**\>.<a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank"></a><br/>Du får vist en meddelelse om, at du har distributionslister (også kaldet **distributionsgrupper**), der er berettiget til at blive opgraderet til Microsoft 365-grupper.<br/> ![Vælg knappen Kom i gang.](../../media/8cf838b4-2644-401f-a366-08c1eea183eb.png)
+   Du får vist en meddelelse, der angiver, at du har distributionslister (også kaldet **distributionsgrupper**), der er berettiget til at blive opgraderet til Microsoft 365 Grupper.
+   
+   ![Vælg knappen Kom i gang.](../../media/8cf838b4-2644-401f-a366-08c1eea183eb.png)
 
-1. Vælg en eller flere distributionslister (også kaldet en **distributionsgruppe**) på **gruppesiden** .<br/>![Vælg en distributionsgruppe.](../../media/2c303433-d60b-4100-a6ae-5809b03a8cdb.png)
+1. Vælg en eller flere distributionslister (også kaldet **distributionsgrupper**) på **gruppesiden** .
 
-1. Vælg opgraderingsikonet.<br/>![Opgrader til Microsoft 365-grupper-ikon.](../../media/1e28cb3d-bff3-4be3-8329-1902d2d54720.png)
+   ![Vælg en distributionsgruppe.](../../media/2c303433-d60b-4100-a6ae-5809b03a8cdb.png)
 
-1. I dialogboksen med oplysninger skal du vælge **Ja** for at bekræfte opgraderingen. Processen starter med det samme. Afhængigt af størrelsen og antallet af DLs, du opgraderer, kan processen tage minutter eller timer.<br/>Hvis distributionslisten ikke kan opgraderes, vises der en dialogboks med dette ord. Se [Hvilke distributionslister kan ikke opgraderes?](#which-distribution-lists-cant-be-upgraded).
+1. Vælg opgraderingsikonet.
 
-1. Hvis du opgraderer flere distributionslister, skal du bruge rullelisten til at filtrere, hvilke distributionslister der er blevet opgraderet. Hvis listen ikke er fuldført, skal du vente et stykke tid længere og derefter vælge **Opdater** for at se, hvad der er blevet opgraderet.<br/>Der er ingen meddelelse, der fortæller dig, hvornår opgraderingsprocessen er fuldført for alle de DLs, du har valgt. Du kan finde ud af dette ved at se, hvad der er angivet under **Tilgængelig til opgradering** eller **Opgraderede URL-adresser**.
+   ![Ikonet Opgrader til Microsoft 365 Grupper.](../../media/1e28cb3d-bff3-4be3-8329-1902d2d54720.png)
 
-1. Hvis du har valgt en DL til opgradering, men den stadig vises på siden som Tilgængelig til opgradering, blev den ikke opgraderet. Se [Hvad du skal gøre, hvis opgraderingen ikke virker](#what-to-do-if-the-upgrade-doesnt-work).
+1. I dialogboksen med oplysninger skal du vælge **Ja** for at bekræfte opgraderingen. Processen starter med det samme. Afhængigt af størrelsen og antallet af distributionslamper, du opgraderer, kan processen tage minutter eller timer.
 
-> [!NOTE]
-> Hvis du får vist gruppernes oversigtsmails, vil du muligvis bemærke nederst, at den nogle gange tilbyder at lade dig opgradere alle berettigede distributionslister, som du er ejer af. Se [Hav en gruppesamtale i Outlook](https://support.microsoft.com/office/a0482e24-a769-4e39-a5ba-a7c56e828b22) for at få flere oplysninger om oversigt over mails.
+   Hvis distributionslisten ikke kan opgraderes, vises der en dialogboks med dette ord. Se [Hvilke distributionslister kan ikke opgraderes?](#which-distribution-lists-cant-be-upgraded).
+
+1. Hvis du opgraderer flere distributionslister, skal du bruge rullelisten til at filtrere, hvilke distributionslister der er blevet opgraderet. Hvis listen ikke er fuldført, skal du vente et stykke tid længere og derefter vælge **Opdater** for at se, hvad der er blevet opgraderet.
+
+**Noter**:
+
+- Du får ikke en meddelelse, når opgraderingerne er fuldført. I stedet kan du se, hvad der er angivet under **Tilgængelig til opgradering** eller **Opgraderede URL-adresser**.
+
+- Hvis du har valgt en distributionsliste til opgradering, men den stadig vises på siden som **Tilgængelig til opgradering**, blev den ikke opgraderet. Se [Hvad du skal gøre, hvis opgraderingen ikke virker](#what-to-do-if-the-upgrade-doesnt-work).
+
+- En gruppes oversigtsmail kan tilbyde, at du kan opgradere alle berettigede distributionslister, som du er ejer af. Du kan finde flere oplysninger om samlet mail under [Hav en gruppesamtale i Outlook](https://support.microsoft.com/office/a0482e24-a769-4e39-a5ba-a7c56e828b22).
 
 ## <a name="what-to-do-if-the-upgrade-doesnt-work"></a>Sådan gør du, hvis opgraderingen ikke virker
 
 Distributionslister, der ikke kan opgraderes, forbliver uændrede.
 
-Hvis en eller flere **kvalificerede** distributionslister ikke kan opgraderes, 
+Hvis en eller flere **berettigede** distributionslister ikke kan opgraderes, skal du gøre følgende:
 
-1. Brug [dette script](https://aka.ms/DLToM365Group) til at søge efter mulige problemer, der kan forhindre, at distributionslisten opgraderes til Microsoft 365 gruppe. Løs eventuelle problemer, der er rapporteret af scriptet, og prøv at opgradere distributionslisten én gang mere. 
+1. Brug [dette script](https://aka.ms/DLToM365Group) til at søge efter mulige problemer. Løs eventuelle problemer, der er rapporteret af scriptet, og prøv at opgradere distributionslisten én gang mere. 
 
-2. Hvis ovenstående script ikke hjælper, eller hvis problemet fortsætter, skal du åbne en [supportanmodning](../../business-video/get-help-support.md). Problemet skal eskaleres til gruppernes teknikerteam, for at de kan finde ud af problemet.
+2. Hvis scriptet ikke hjælper, skal du åbne en [supportanmodning](../../business-video/get-help-support.md). Problemet skal eskaleres til gruppernes teknikerteam.
 
-## <a name="how-to-use-powershell-to-upgrade-several-distribution-lists-at-the-same-time"></a>Sådan bruger du PowerShell til at opgradere flere distributionslister på samme tid
+## <a name="how-to-use-exchange-online-powershell-to-upgrade-several-distribution-lists-at-the-same-time"></a>Sådan bruger du Exchange Online PowerShell til at opgradere flere distributionslister på samme tid
 
-Hvis du har erfaring med at bruge PowerShell, kan det være en god idé at gå denne rute i stedet for at bruge brugergrænsefladen. Vi har et sæt cmdlet'er, der kan hjælpe dig med at opgradere distributionslister. Se nedenfor.
+Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-### <a name="upgrade-a-single-dl"></a>Opgrader en enkelt DL
+### <a name="upgrade-a-single-distribution-list"></a>Opgrader en enkelt distributionsliste
 
-Kør følgende kommando for at opgradere en enkelt DL:
-
-```PowerShell
-Upgrade-DistributionGroup -DlIdentities <Dl SMTP address>
-```
-
-Hvis du f.eks. vil opgradere en DL med SMTP-adressen dl1@contoso.com, skal du køre følgende kommando:
+Hvis du vil opgradere en enkelt distributionsliste, skal du bruge følgende syntaks:
 
 ```PowerShell
-Upgrade-DistributionGroup -DlIdentities dl1@contoso.com
+Upgrade-DistributionGroup -DLIdentities <EmailAddress>
 ```
+
+I dette eksempel opgraderes distributionslisten marketing@contoso.com:
+
+```PowerShell
+Upgrade-DistributionGroup -DLIdentities marketing@contoso.com
+```
+
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Upgrade-DistributionGroup](/powershell/module/exchange/upgrade-distributiongroup).
 
 > [!NOTE]
-> Du kan også opgradere en enkelt distributionsliste til en Microsoft 365 gruppe ved hjælp af [PowerShell-cmdlet'en New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup)
+> Du kan også opgradere en enkelt distributionsliste til en Microsoft 365-gruppe ved hjælp af cmdlet'en [New-UnifiedGroup](/powershell/module/exchange/new-unifiedgroup) .
 
-### <a name="upgrade-multiple-dls-in-a-batch"></a>Opgrader flere DLS i et batch
+### <a name="upgrade-multiple-distribution-lists-at-the-same-time"></a>Opgrader flere distributionslister på samme tid
 
-Du kan også overføre flere URL-adresser som et batch og opgradere dem sammen:
+Hvis du vil opgradere flere distributionslister på samme tid, skal du bruge følgende syntaks:
 
 ```PowerShell
-Upgrade-DistributionGroup -DlIdentities <DL SMTP address1>, <DL SMTP address2>,
-<DL SMTP address3>, <DL SMTP address4>
+Upgrade-DistributionGroup -DLIdentities <EmailAddress1>,<EmailAddress2>,...
 ```
 
-Hvis du f.eks. vil opgradere fem URL-adresser med SMTP-adressen `dl1@contoso.com` og `dl2@contoso.com`, `dl3@contoso.com``dl4@contoso.com` og `dl5@contoso.com`, skal du køre følgende kommando:
+I dette eksempel opgraderes de angivne distributionslister til Microsoft 365 Grupper.
 
 ```powershell
-Upgrade-DistributionGroup -DlIdentities dl1@contoso.com, dl2@contoso.com, dl3@contoso.com, dl4@contoso.com, dl5@contoso.com
+Upgrade-DistributionGroup -DLIdentities marketing@contoso.com,finanace@contoso.com,hr@contoso.com
 ```
 
-### <a name="upgrade-all-eligible-dls"></a>Opgrader alle berettigede URL-adresser
+Du kan finde detaljerede oplysninger om syntaks og parametre under [Upgrade-DistributionGroup](/powershell/module/exchange/upgrade-distributiongroup).
 
-Du kan opgradere alle berettigede DLs på to måder.
+### <a name="upgrade-all-eligible-distribution-lists"></a>Opgrader alle berettigede distributionslister
 
-> [!NOTE]
-> Den Upgrade-DistributionGroup cmdlet modtager ikke data fra pipelinen. Derfor er det nødvendigt at bruge operatoren "foreach-object{}" for at køre korrekt.
+Brug en af følgende metoder til at opgradere alle berettigede distributionslister til Microsoft 365 Grupper:
 
-1. Hent de berettigede URL-adresser i lejeren, og opgrader dem ved hjælp af opgraderingskommandoen:
+- Opgrader alle berettigede distributionslister:
 
    ```PowerShell
-   Get-EligibleDistributionGroupForMigration | Foreach-Object{
-       Upgrade-DistributionGroup -DlIdentities $_.PrimarySMTPAddress
-   }
+   $All = Get-EligibleDistributionGroupForMigration -ResultSize unlimited
+   $All | Foreach-Object {Upgrade-DistributionGroup -DLIdentities $_.PrimarySMTPAddress}
    ```
 
-2. Hent listen over alle url-adresser, og opgrader kun de berettigede URL-adresser:
+- Prøv at opgradere alle distributionslister, uanset om de er berettigede eller ej:
 
    ```PowerShell
-   Get-DistributionGroup| Foreach-Object{
-       Upgrade-DistributionGroup -DlIdentities $_.PrimarySMTPAddress
-   }
+   $All Get-DistributionGroup -RecipientTypeDetails MailUniversalDistributionGroup -ResultSize unlimited
+   $All | Foreach-Object {Upgrade-DistributionGroup -DLIdentities $_.PrimarySMTPAddress}
    ```
 
 ## <a name="faq-about-upgrading-distribution-lists-to-microsoft-365-groups-in-outlook"></a>Ofte stillede spørgsmål om opgradering af distributionslister til Microsoft 365-grupper i Outlook
@@ -145,42 +146,47 @@ Du kan opgradere alle berettigede DLs på to måder.
 Du kan kun opgradere skyadministrerede, enkle, ikke-indlejrede distributionslister. I tabellen nedenfor vises distributionslister, der **IKKE kan** opgraderes.
 
 |Ejendom|Støtteberettigede?|
-|---|---|
+|---|:---:|
 |Administreret distributionsliste i det lokale miljø.|Nej|
 |Indlejrede distributionslister. Distributionslisten har enten underordnede grupper eller er medlem af en anden gruppe.|Nej|
-|Distributionslister med andet medlem **af RecipientTypeDetails** end **UserMailbox**, **SharedMailbox**, **TeamMailbox**, **MailUser**|Nej|
-|Distributionsliste med mere end 100 ejere|Nej|
-|Distributionsliste, der kun har medlemmer, men ingen ejer|Nej|
-|Distributionsliste med alias, der indeholder specialtegn|Nej|
-|Hvis distributionslisten er konfigureret til at være en videresendelsesadresse for delt postkasse|Nej|
-|Hvis DL'en er en del af **afsenderbegrænsningen** i en anden DL.|Nej|
-|Sikkerhedsgrupper|Nej|
-|Dynamiske distributionslister|Nej|
-|Distributionslister, der blev konverteret til **RoomLists**|Nej|
+|Distributionslister, hvor et eller flere medlemmer er andet end en brugerpostkasse, delt postkasse, teampostkasse eller mailbruger. Med andre ord er værdien **RecipientTypeDetails** for et hvilket som helst medlem af distributionslisten ikke **UserMailbox**, **SharedMailbox**, **TeamMailbox** eller **MailUser**.|Nej|
+|Distributionsliste, der har mere end 100 ejere.|Nej|
+|Distributionsliste, der kun har medlemmer, men ingen ejer.|Nej|
+|Distributionsliste med alias, der indeholder specialtegn.|Nej|
+|Distributionslisten er konfigureret til at være en videresendelsesadresse for en delt postkasse.|Nej|
+|Distributionslisten er en del af **Afsenderbegrænsning** på en anden distributionsliste.|Nej|
+|Mailaktiverede sikkerhedsgrupper.|Nej|
+|Dynamiske distributionsgrupper.|Nej|
+|Distributionslister, der blev konverteret til **RoomLists**.|Nej|
 
-### <a name="check-which-dls-are-eligible-for-upgrade"></a>Kontrollér, hvilke DLS der er berettiget til opgradering
+### <a name="check-which-distribution-lists-are-eligible-for-upgrade"></a>Kontrollér, hvilke distributionslister der er berettiget til opgradering
 
-Hvis du vil kontrollere, om en DL er berettiget eller ej, kan du køre nedenstående kommando:
+Kør følgende kommando for at kontrollere, om en bestemt distributionsliste er berettiget til opgradering:
 
 ```PowerShell
-Get-DistributionGroup <DL SMTP address> | Get-EligibleDistributionGroupForMigration
+Get-DistributionGroup <EmailAddress> | Get-EligibleDistributionGroupForMigration
 ```
 
-Hvis du vil kontrollere, hvilke DLS der er berettiget til opgradering, skal du blot køre følgende kommando:
+Hvis du vil se alle distributionsgrupper, der er berettiget til opgradering, skal du køre følgende kommando:
 
 ```PowerShell
 Get-EligibleDistributionGroupForMigration
 ```
 
-### <a name="who-can-run-the-upgrade-scripts"></a>Who kan køre opgraderingsscripts?
+### <a name="who-can-run-the-upgrade-scripts"></a>Hvem kan køre opgraderingsscriptene?
 
-Personer med globale administrator- eller Exchange administratorrettigheder.
+Personer med rettigheder som global administrator eller Exchange-administrator.
 
 ### <a name="why-is-the-contact-card-still-showing-a-distribution-list-what-should-i-do-to-prevent-an-upgraded-distribution-list-from-showing-up-in-my-auto-suggest-list"></a>Hvorfor vises der stadig en distributionsliste på visitkortet? Hvad skal jeg gøre for at forhindre, at en opgraderet distributionsliste vises på min liste med automatisk forslag?
 
-- For Outlook: Når nogen forsøger at sende en mail i Outlook ved at skrive Microsoft 365 gruppenavn efter migreringen, fortolkes modtageren som distributionslisten i stedet for gruppen. Modtagerens visitkort er distributionslisternes visitkort. Dette skyldes, at modtagercachen eller kaldenavnscachen er i Outlook. Mailen sendes til gruppen, men kan skabe forvirring hos afsenderen.<br/>Du kan udføre trinnene i denne artikel [Oplysninger om listen over Outlook autofuldførelse](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list) for at nulstille cachen, hvilket vil løse problemet.
+- **Outlook**: Når du har opgraderet en ditributionsliste til en Microsoft 365-gruppe, er brugerens lokale modtagercache (også kendt som kaldenavnscachen) ikke klar over ændringen. Følg trinnene i følgende artikel for at nulstille brugerens lokale modtagercache: [Oplysninger om autofuldførelseslisten i Outlook](/outlook/troubleshoot/contacts/information-about-the-outlook-autocomplete-list). 
 
-- For Outlook på internettet: Hvis der er Outlook på internettet, forbliver modtageren af distributionslisten i cachen. Du kan følge trinnene i [Fjern foreslået navn eller mailadresse fra listen Automatisk fuldførelse](https://support.microsoft.com/office/9E1419D9-E88F-445B-B07F-F558B8A37C58) for at opdatere cachen for at se gruppens visitkort.
+  Hvis du ikke opdaterer modtagercachen, leveres alle mails, der sendes til Microsoft 365-gruppen, korrekt, men følgende problemer forbliver:
+  
+  - Modtageren af gruppen fortolkes som distributionslisten i stedet for Microsoft 365-gruppen.
+  - Visitkortet er distributionslistens kontakt i stedet for Microsoft 365-gruppens.
+
+- **Outlook på internettet**: På samme måde som Outlook forbliver distributionslisten i modtagercachen. Følg trinnene i denne artikel for at opdatere cachen for at se gruppens visitkort: [Fjern foreslået navn eller mailadresse fra listen automatisk fuldførelse](https://support.microsoft.com/office/9E1419D9-E88F-445B-B07F-F558B8A37C58).
 
 ### <a name="do-new-group-members-get-a-welcome-email-in-their-inbox"></a>Modtager nye gruppemedlemmer en velkomstmail i deres indbakke?
 
@@ -188,31 +194,30 @@ Nej. Indstillingen for aktivering af velkomstmeddelelser er som standard angivet
 
 ### <a name="what-if-one-or-some-of-the-dls-are-not-upgraded"></a>Hvad sker der, hvis en eller nogle af URL-adresserne ikke opgraderes?
 
-Der er nogle tilfælde, hvor selvom DL er berettiget, men ikke kunne opgraderes. DL'en bliver ikke opgraderet og forbliver som en DL.
+Der er nogle tilfælde, hvor berettigede distributionslister ikke kan opgraderes. Eksempel:
 
-- Hvor administratoren har anvendt **politik for gruppemailadresse** for grupperne i en organisation, og de forsøger at opgradere DLs, der ikke opfylder kriterierne, opgraderes DL'en ikke
+- En administrator har anvendt en **politik for gruppemailadresse**, og distributionslisten opfylder ikke kravene i politikken.
 
-- DLs med **MemberJoinRestriction** eller **MemberDepartRestriction** angivet til **Lukket**, kunne ikke opgraderes
+- En distributionsliste har **MemberJoinRestriction** eller **MemberDepartRestriction** angivet til værdien **Lukket**.
 
-- Oprettelse af Microsoft 365 gruppe er kun tilladt for få brugere ved hjælp af trinnene i [denne artikel](/microsoft-365/solutions/manage-creation-of-groups). Hvis ejeren af distributionslisten i dette scenarie ikke har tilladelse til at oprette Microsoft 365 gruppe, opgraderes distributionslisten ikke til Microsoft 365 gruppe.
-Løsning: Brug en af følgende midlertidige løsninger i ovenstående scenarie:
+- Oprettelsen af Microsoft 365-gruppeoprettelse er begrænset som beskrevet i denne artikel: [denne artikel](/microsoft-365/solutions/manage-creation-of-groups).
 
-1. Sørg for, at alle de brugere, der er nævnt som ejere af DL'en, har tilladelse til at oprette M365-gruppen, dvs. er medlem af den sikkerhedsgruppe, der har tilladelse til M365-gruppen.
+  Brug en af følgende løsninger til dette specifikke problem:
 
-   ELLER
+  - Sørg for, at alle ejere af distributionslisten har tilladelse til at oprette Microsoft 365-grupper (dvs. at ejerne er medlem af den sikkerhedsgruppe, der har tilladelse til at oprette Microsoft 365-grupper).
 
-2. Erstat midlertidigt ejeren af den DL, der ikke har tilladelse til at oprette M365-gruppe, med den bruger, der har tilladelse til at oprette M365-gruppe.
+  - Erstat midlertidigt ejeren af distributionslisten med en bruger, der har tilladelse til at oprette Microsoft 365-grupper.
 
 ### <a name="what-happens-to-the-dl-if-the-upgrade-from-eac-fails"></a>Hvad sker der med DL,hvis opgraderingen fra EAC mislykkes?
 
-Opgraderingen sker kun, når opkaldet sendes til serveren. Hvis opgraderingen mislykkes, er dine URL-adresser intakte. De vil fungere som de plejede.
+Opgraderingen sker kun, når opkaldet sendes til serveren. Hvis opgraderingen mislykkes, forbliver dine distributionslister og fungerer, som de plejede.
 
 ### <a name="what-happens-to-message-approval-moderation-settings-on-distribution-groups-after-upgrading"></a>Hvad sker der med indstillinger for meddelelsesgodkendelse (indstilling) for distributionsgrupper efter opgradering?
 
-Indstillingerne for meddelelsesgodkendelse (indstilling) bevares og fungerer fortsat fint, når distributionsgruppen er opgraderet til en Microsoft 365 gruppe.
+Indstillingerne for meddelelsesgodkendelse (indstilling) bevares og fungerer fortsat fint, når distributionsgruppen er opgraderet til en Microsoft 365-gruppe.
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Sammenlign grupper](../create-groups/compare-groups.md) (artikel)\
 [Forklaring af Microsoft 365-grupper til dine brugere](../create-groups/explain-groups-knowledge-worker.md) (artikel)\
-[Tilføj eller fjern medlemmer fra Microsoft 365 grupper ved hjælp af Administration](../create-groups/add-or-remove-members-from-groups.md)
+[Tilføj eller fjern medlemmer fra Microsoft 365-grupper ved hjælp af Administration](../create-groups/add-or-remove-members-from-groups.md)

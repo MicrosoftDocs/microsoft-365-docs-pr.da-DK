@@ -8,7 +8,7 @@ f1.keywords:
 - Intune mobile device platforms
 manager: dougeby
 audience: ITPro
-description: Brug Intune og Autopilot til at tilmelde enheder til administration for at sikre, at de apps, der kører på dem, overholder angivne standarder og for at forhindre, at virksomhedens data lækker.
+description: Brug Intune og Autopilot til at tilmelde enheder til administration for at sikre, at de apps, der kører på dem, er kompatible og for at forhindre, at virksomhedens data lækker.
 ms.topic: article
 ms.prod: microsoft-365-enterprise
 ms.localizationpriority: high
@@ -18,32 +18,38 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 98c98298b5bb6728a0f8526e0406fb1fe02654f0
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: d01630c5e5011363a08ae43ce87e6620d8d17f8f
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64704708"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65923319"
 ---
 # <a name="step-2-enroll-devices-to-intune"></a>Trin 2. Tilmeld enheder til Intune
 
-Der er flere måder at sikre slutpunktet på, et begreb, der ofte bruges til at henvise til det kombinerede objekt, herunder enheder, apps og brugeridentitet. Sikkerhedspolitikker skal håndhæves konsekvent og pålideligt ikke kun på appsene, men selve enheden. Det er en god start at tilmelde enheden for at Intune og registrere sig hos en cloudidentitetsudbyder, f.eks. Azure Active Directory.
+Der er flere måder at sikre slutpunktet på, et begreb, der ofte bruges til at henvise til det kombinerede objekt, herunder enheder, apps og brugeridentitet. Sikkerhedspolitikker skal håndhæves konsekvent og pålideligt ikke kun på appsene, men selve enheden. Det er en god start at tilmelde enheden til Intune og registrere sig hos en cloudidentitetsudbyder, f.eks. Azure Active Directory.
 
 Uanset om en enhed er en BYOD-enhed, der ejes personligt, eller en virksomhedsejet og fuldt administreret enhed, er det godt at have indblik i de slutpunkter, der har adgang til organisationens ressourcer, for at sikre, at du kun tillader sunde og kompatible enheder. Dette omfatter tilstanden og troværdigheden af mobil- og skrivebordsapps, der kører på slutpunkter. Du vil gerne sikre, at disse apps er sunde og kompatible, og at de forhindrer, at virksomhedsdata lækker til forbrugerapps eller -tjenester via ondsindede hensigter eller ved et uheld.
 
-Processen til tilmelding af enheden etablerer en relation mellem brugeren, enheden og den Microsoft Intune tjeneste. Brug af Microsoft Intune som en separat tjeneste giver dig mulighed for at bruge en enkelt webbaseret administrationskonsol til at administrere Windows pc'er, macOS og de mest populære mobilenhedsplatforme.
+Processen til tilmelding af enheden etablerer en relation mellem brugeren, enheden og Microsoft Intune-tjenesten. Hvis du bruger Microsoft Intune som en separat tjeneste, kan du bruge en enkelt webbaseret administrationskonsol til at administrere Windows-pc'er, macOS og de mest populære mobilenhedsplatforme.
 
 Denne artikel anbefaler metoder til tilmelding af enheder til Intune. Du kan finde flere oplysninger om disse metoder, og hvordan du installerer hver enkelt, i [Installationsvejledning: Tilmeld enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment).
 
 ![Trin til administration af enheder](../media/devices/intune-mdm-steps-1.png#lightbox)
 
-## <a name="windows-enrollment"></a>Windows tilmelding
-Der er flere muligheder for at tilmelde Windows 10 og Windows 11 enheder. De mest almindelige metoder omfatter disse to:
+Brug vejledningen i denne artikel sammen med denne illustrerede version af tilmeldingsmuligheder for hver platform. 
 
-- Azure Active Directory (Azure AD) Joinforbind – slutter enheden til Azure Active Directory og giver brugerne mulighed for at logge på Windows med deres Azure AD-legitimationsoplysninger. Hvis Automatisk tilmelding er aktiveret, bliver enheden automatisk tilmeldt Intune. Fordelen ved automatisk tilmelding er en proces med et enkelt trin for brugeren. Ellers skal de kun tilmelde sig separat via MDM-tilmelding og angive deres legitimationsoplysninger igen. Brugerne tilmelder sig på denne måde enten under den indledende Windows OOBE eller fra Indstillinger. Enheden er markeret som en virksomhedsejet enhed i Intune.
-- Autopilot – automatiserer Azure AD Join og tilmelder nye virksomhedsejede enheder i Intune. Denne metode forenkler den køreklare oplevelse og fjerner behovet for at anvende brugerdefinerede operativsystemafbildninger på enhederne. Når administratorer bruger Intune til at administrere Autopilot-enheder, kan de administrere politikker, profiler, apps og meget mere, når de er tilmeldt. Der er fire typer udrulning af Autopilot: Self-Deploying-tilstand (for kiosker, digital skiltning eller en delt enhed), brugerdreven tilstand (for traditionelle brugere), Windows Autopilot til forudklargjort udrulning gør det muligt for partnere eller it-medarbejdere at klargøre en pc, der kører Windows 10 eller Windows 11  så den er fuldt konfigureret og klar til brug i virksomheden, og Autopilot til eksisterende enheder gør det nemt at udrulle den nyeste version af Windows på dine eksisterende enheder.
+[![En visuel repræsentation af indstillingerne for Intune-tilmelding efter platform](../media/devices/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [PDF](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) |  [Visio](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx) <br/> Opdateret i juni 2022
 
-Du kan finde flere indstillinger, herunder tilmelding af BYOD-Windows enheder, [under Tilmeld Windows enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows).
+
+
+## <a name="windows-enrollment"></a>Windows-tilmelding
+Der er flere muligheder for at tilmelde Windows 10- og Windows 11-enheder. De mest almindelige metoder omfatter disse to:
+
+- Azure Active Directory (Azure AD) Join – slutter enheden til Azure Active Directory og giver brugerne mulighed for at logge på Windows med deres Azure AD-legitimationsoplysninger. Hvis Automatisk tilmelding er aktiveret, tilmeldes enheden automatisk i Intune. Fordelen ved automatisk tilmelding er en proces med et enkelt trin for brugeren. Ellers skal de kun tilmelde sig separat via MDM-tilmelding og angive deres legitimationsoplysninger igen. Brugerne tilmelder sig på denne måde enten under den indledende Windows OOBE eller fra Indstillinger. Enheden er markeret som en virksomhedsejet enhed i Intune.
+- Autopilot – automatiserer Azure AD Join og tilmelder nye virksomhedsejede enheder i Intune. Denne metode forenkler den køreklare oplevelse og fjerner behovet for at anvende brugerdefinerede operativsystemafbildninger på enhederne. Når administratorer bruger Intune til at administrere Autopilot-enheder, kan de administrere politikker, profiler, apps og meget mere, når de er tilmeldt. Der er fire typer autopilotinstallation: Self-Deploying-tilstand (for kiosker, digital skiltning eller en delt enhed), brugerdreven tilstand (for traditionelle brugere), Windows Autopilot til forudklargjort installation gør det muligt for partnere eller it-medarbejdere at klargøre en pc, der kører Windows 10 eller Windows 11, så den er fuldt konfigureret og klar til virksomheden, og Autopilot til eksisterende enheder gør det nemt at installere den nyeste version af Windows på dine eksisterende enheder.
+
+Du kan finde flere indstillinger, herunder tilmelding af BYOD Windows-enheder, under [Tilmeld Windows-enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-windows).
 
 ## <a name="ios-and-ipados-enrollment"></a>iOS- og iPadOS-tilmelding
 
@@ -51,7 +57,7 @@ For BYOD-enheder (user owned) kan du lade brugerne tilmelde deres personlige enh
 - Tilmelding af enheder er det, du måske synes om som typisk BYOD-tilmelding. Det giver administratorer en lang række administrationsmuligheder.
 - Brugertilmelding er en mere strømlinet tilmeldingsproces, der giver administratorer et undersæt af indstillinger for enhedshåndtering. Denne funktion er i øjeblikket en prøveversion.
 
-For organisationer, der køber enheder til deres brugere, understøtter Intune følgende iOS-/iPadOS-virksomhedsejede tilmeldingsmetoder til enheder:
+For organisationer, der køber enheder til deres brugere, understøtter Intune følgende metoder til virksomhedsejet enhedsregistrering iOS/iPadOS:
 - Apples automatiserede enhedsregistrering (ADE)
 - Apple School Manager
 - Tilmelding til Apple Configurator Setup Assistant
@@ -67,15 +73,15 @@ Med en Android-arbejdsprofil er slutbrugerens oplysninger adskilt særskilt med 
 
 Men hvis din organisation leverer Android-enheder, kan du vælge at bruge det, der kaldes en fuldt administreret (brugertilhør) eller dedikeret enhed (ingen brugertilhørsenhed).
 
-Hvis du vil vide mere om Android-tilmelding, skal du se [Tilmeld Android-enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-android).
+Du kan få mere at vide om Android-tilmelding under [Tilmeld Android-enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-android).
 
 ## <a name="macos-enrollment"></a>macOS-tilmelding
 
-Tilmelding til macOS kan være et vanskeligt emne for mange it-organisationer. Medmindre et flertal af dine brugere er Mac-brugere, end du muligvis ikke administrerer disse typer enheder i vid udstrækning. Hvis du har et lille antal macOS-brugere, anbefaler vi, at du Intune Kun tilmelding. Hvis du har et stort antal macOS-brugere, anbefaler vi, at du Intune + Jamf-tilmelding.  
-- Intune kun tilmelding – dette er til grundlæggende administration af macOS-enheder. Det kræver en manuel proces, der ligner de fleste af de andre brugerbaserede tilmeldingsmuligheder. Men hvis du har et lille antal Mac-enheder, kan det være nemmere end at konfigurere en hel automatiseret infrastruktur kun for de få brugere. Med Intune kun tilmelding har du mulighed for at installere ting som certifikater, adgangskodekonfigurationer og programmer. Du kan også konfigurere politikker for overholdelse af regler og standarder og få betinget adgang samt muligheden for at gennemtvinge kryptering og enhedssletning. 
-- Intune og Jamf-tilmelding – For dem, der leder efter den dybeste support til Mac-administration, med Jamf + Intune til betinget adgang, har vi en fantastisk løsning, der kombinerer Jamf's omfattende funktioner til administration af Mac med Intune overholdelse af angivne standarder for at aktivere betinget adgang. I dette scenarie administrerer du stadig enheden fuldt ud med Jamf, samtidig med at du kan tage disse signaler fra Jamf for at øge sikkerheden.
+Tilmelding til macOS kan være et vanskeligt emne for mange it-organisationer. Medmindre et flertal af dine brugere er Mac-brugere, end du muligvis ikke administrerer disse typer enheder i vid udstrækning. Hvis du har et lille antal macOS-brugere, anbefaler vi, at du kun tilmelder Intune. Hvis du har et stort antal macOS-brugere, anbefaler vi Intune + Jamf-tilmelding.  
+- Kun tilmelding i Intune – dette er til grundlæggende administration af macOS-enheder. Det kræver en manuel proces, der ligner de fleste af de andre brugerbaserede tilmeldingsmuligheder. Men hvis du har et lille antal Mac-enheder, kan det være nemmere end at konfigurere en hel automatiseret infrastruktur kun for de få brugere. Med Kun Intune-tilmelding har du mulighed for at udrulle ting som certifikater, adgangskodekonfigurationer og programmer. Du kan også konfigurere politikker for overholdelse af regler og standarder og få betinget adgang samt muligheden for at gennemtvinge kryptering og enhedssletning. 
+- Intune- og Jamf-tilmelding – For dem, der leder efter den dybeste understøttelse af Mac-administration med Jamf + Intune til betinget adgang, har vi en fantastisk løsning, der kombinerer de omfattende Mac-administrationsfunktioner i Jamf med Intune-overholdelse for at aktivere betinget adgang. I dette scenarie administrerer du stadig enheden fuldt ud med Jamf, samtidig med at du kan tage disse signaler fra Jamf for at øge sikkerheden.
 
-Du kan få mere at vide om macOS-tilmelding under [Tilmeld macOS-enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-macos).
+Hvis du vil vide mere om macOS-tilmelding, skal du se [Tilmeld macOS-enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-enrollment-macos).
 
 ## <a name="next-steps"></a>Næste trin
 

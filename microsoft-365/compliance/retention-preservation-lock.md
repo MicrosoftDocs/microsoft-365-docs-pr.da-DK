@@ -15,16 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug bevarelseslås med politikker for opbevaring og politikker for opbevaringsmærkat for at hjælpe dig med at opfylde lovmæssige krav og beskytte mod rogue-administratorer.
-ms.openlocfilehash: cf72f0b2eed6328244bf78c9e365447c9f38edeb
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 6ee7937bad487fcac8d1ee15483becfb276d9579
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286006"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922213"
 ---
 # <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Brug Bevarelseslås til at begrænse ændringer af opbevaringspolitikker og politikker for opbevaringsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -50,18 +50,15 @@ En låst politik kan kort sagt øges eller udvides, men den kan ikke reduceres e
 > [!IMPORTANT]
 > Før du låser en politik for opbevaring eller opbevaringsmærkat, er det vigtigt, at du forstår virkningen og bekræfter, om den er påkrævet for din organisation. Det kan f.eks. være nødvendigt for at opfylde lovmæssige krav. Administratorer kan ikke deaktivere eller slette disse politikker, når bevarelseslåsen er anvendt.
 
-Konfigurer bevarelseslås, når du har oprettet en [opbevaringspolitik](create-retention-policies.md) eller en politik for opbevaringsmærkat, som du [publicerer](create-apply-retention-labels.md) eller [anvender automatisk](apply-retention-labels-automatically.md).
-
-> [!NOTE]
-> Låsning af en mærkatpolitik forhindrer ikke en administrator i at reducere opbevaringsperioden i en mærkat, der er inkluderet i den låste politik. Dette krav med andre begrænsninger kan opfyldes, når du konfigurerer en mærkat til at markere elementer som en [lovmæssig post](records-management.md#records).
+Konfigurer bevarelseslås, når du har oprettet en [opbevaringspolitik](create-retention-policies.md), eller en politik for opbevaringsmærkat, som du [publicerer](create-apply-retention-labels.md) og kun indeholder etiketter, der [markerer elementer som lovmæssige poster](records-management.md#records).
 
 ## <a name="how-to-lock-a-retention-policy-or-retention-label-policy"></a>Sådan låser du en opbevaringspolitik eller en politik for opbevaringsmærkat
 
 Du skal bruge PowerShell, hvis du har brug for bevarelseslås. Da administratorer ikke kan deaktivere eller slette en politik for opbevaring, når denne lås er anvendt, er aktivering af denne funktion ikke tilgængelig i brugergrænsefladen for at sikre mod utilsigtet konfiguration.
 
-Alle politikker for opbevaring og med en hvilken som helst konfiguration understøtter bevarelseslås.
+Alle opbevaringspolitikker med en hvilken som helst konfiguration understøtter Bevarelseslås. Hvis du vil anvende bevarelseslås på en politik for opbevaringsmærkater, må den kun indeholde etiketter, der markerer elementer som lovmæssige poster.
 
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Find navnet på den politik, du vil låse, ved at køre [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy). Eksempel:
     

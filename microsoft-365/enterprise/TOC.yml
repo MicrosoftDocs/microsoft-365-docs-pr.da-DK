@@ -627,7 +627,6 @@
 - name: Microsoft 365 arkitektur og løsninger
   href: ../solutions/index.yml
 - name: Enterprise Business Continuity Management (EBCM) med cloudtjenester
-  href: /compliance/assurance/assurance-understanding-ebcm-with-cloud-services
   items:
     - name: Kunde- og cloudpartner EBCM-ansvar
       href: /compliance/assurance/assurance-customer-and-cloud-partner-ebcm-responsibilities

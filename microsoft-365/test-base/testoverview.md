@@ -14,12 +14,12 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: Tinacyt
 f1.keywords: NOCSH
-ms.openlocfilehash: 2f0ccded84f7b1c46ff2aeea38eae8f0baadc6ff
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+ms.openlocfilehash: 2a59599dc9757935413b977bf9e71ed3b7ba09ea
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863581"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65923415"
 ---
 # <a name="test-your-application-on-test-base"></a>Test dit program på Test Base
 
@@ -30,15 +30,15 @@ I dette afsnit lærer du, hvordan du opretter pakker med forskellige typer progr
 
    - **Test binære filer**
 
-      Se [Oprettelse og test af binære filer på testbasen](testapplication.md) for at forberede en pakke med en binær programfil (.exe, .msi) til overførsel og test.
+      Se [Oprettelse og test af binære filer på testbasen](testapplication.md) for at forberede en pakke med en binær programfil (dvs. .exe .msi) til overførsel og test.
 
    - **Intunewin-app**
 
-      Se [Test din Intune app på testbasen](testintuneapplication.md) for at forberede en pakke med en Intune programfil (.intunewin) til upload og test.
+      Se [Test din Intune-app på testbasen](testintuneapplication.md) for at forberede en pakke med en Intune-programfil (.intunewin) til upload og test.
 
    - **Færdigbygget zip-pakke**
 
-      Se [Upload af færdigbygget zip-pakke](uploadApplication.md) , hvis du allerede har en offlinebygget pakke i .zip format.
+      Se [Upload af færdigbygget zip-pakke](uploadapplication.md) , hvis du allerede har en offlinebygget pakke i .zip format.
 
    - **Klon eksisterende pakke**
 

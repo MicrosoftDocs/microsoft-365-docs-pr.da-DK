@@ -1,7 +1,7 @@
 ---
 title: Få mere at vide om styring af insider-risiko
-description: Få mere at vide om, hvordan du minimerer risikoen i din organisation med styring af insiderrisiko i Microsoft Purview.
-keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
+description: Få mere at vide om, hvordan du hjælper med at minimere risikoen i din organisation med styring af insiderrisiko i Microsoft Purview.
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse af angivne standarder
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -15,21 +15,21 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 9b2897a242f7dbbf9af9c9f3b639c0b91623fa25
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 3a2d678f8e653d65007369c2db5ddd8c72a71c66
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810610"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65923275"
 ---
 # <a name="learn-about-insider-risk-management"></a>Få mere at vide om styring af insider-risiko
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview gratis løsninger?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu på [Microsoft Purview-portalen med prøveversioner](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview Styring af insider-risiko er en løsning til overholdelse af angivne standarder, der hjælper med at minimere interne risici ved at gøre det muligt for dig at registrere, undersøge og reagere på skadelige og utilsigtede aktiviteter i din organisation. Politikker for insiderrisiko giver dig mulighed for at definere de typer risici, der skal identificeres og registreres i din organisation, herunder at reagere på sager og eskalere sager til Microsoft eDiscovery (Premium), hvis det er nødvendigt. Risikoanalytikere i din organisation kan hurtigt udføre de nødvendige handlinger for at sikre, at brugerne overholder organisationens standarder for overholdelse af angivne standarder.
+Microsoft Purview Insider Risk Management er en løsning til overholdelse af angivne standarder, der hjælper med at minimere interne risici ved at gøre det muligt for dig at registrere, undersøge og reagere på skadelige og utilsigtede aktiviteter i din organisation. Politikker for insiderrisiko giver dig mulighed for at definere de typer risici, der skal identificeres og registreres i din organisation, herunder at reagere på sager og eskalere sager til Microsoft eDiscovery (Premium), hvis det er nødvendigt. Risikoanalytikere i din organisation kan hurtigt udføre de nødvendige handlinger for at sikre, at brugerne overholder organisationens standarder for overholdelse af angivne standarder.
 
 Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
@@ -68,7 +68,7 @@ Insiderrisikostyring er centreret omkring følgende principper:
 
 - **Gennemsigtighed**: Balancer brugerbeskyttelse af personlige oplysninger i forhold til organisationens risiko med arkitekturen for beskyttelse af personlige oplysninger.
 - **Konfigurerbar**: Konfigurerbare politikker baseret på branche-, geografiske og forretningsgrupper.
-- **Integreret**: Integreret arbejdsproces på tværs af Microsoft Purview løsninger.
+- **Integreret**: Integreret arbejdsproces på tværs af Microsoft Purview-løsninger.
 - **Handlingsklar**: Giver indsigt til aktivering af korrekturlæsermeddelelser, dataundersøgelser og brugerundersøgelser.
 
 ## <a name="identifying-potential-risks-with-analytics"></a>Identificering af potentielle risici med analyse
@@ -147,10 +147,10 @@ Derudover giver den nye [overvågningslog (prøveversion)](insider-risk-manageme
 
 Når sager er undersøgt, kan korrekturlæsere hurtigt løse sagen eller samarbejde med andre risikoparter i din organisation. Hvis brugerne utilsigtet eller utilsigtet overtræder politikbetingelserne, kan der sendes en enkel påmindelse til brugeren fra skabeloner til meddelelser, som du kan tilpasse til din organisation. Disse meddelelser kan fungere som enkle påmindelser eller kan dirigere brugeren til oplæring af genopfriskning eller vejledning for at hjælpe med at forhindre fremtidig risikabel adfærd. Du kan få flere oplysninger under [Skabeloner til insiderrisikostyring](insider-risk-management-notices.md).
 
-I de mere alvorlige situationer kan det være nødvendigt at dele oplysninger om sager om insiderrisikostyring med andre korrekturlæsere eller -tjenester i din organisation. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview løsninger for at hjælpe dig med løsning af risici fra ende til anden.
+I mere alvorlige situationer kan det være nødvendigt at dele sagsoplysninger om insiderrisikostyring med andre korrekturlæsere eller -tjenester i din organisation. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med løsning af risici fra ende til anden.
 
-- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Du kan få mere at vide om eDiscovery-sager (Premium) under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
-- **Office 365 integration af API'er til administration (prøveversion)**: Styring af insiderrisiko understøtter eksport af beskedoplysninger til SIEM-tjenester (Security Information Information and Event Management) via API'erne til administration af Office 365. Hvis du har adgang til beskedoplysninger på platformen, så de passer bedst til din organisations risikoprocesser, får du større fleksibilitet i forhold til, hvordan du reagerer på risikoaktiviteter. Hvis du vil vide mere om eksport af beskedoplysninger med API'er til administration af Office 365, skal du se [Eksportér beskeder](insider-risk-management-settings.md#export-alerts).
+- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery(Premium)-sager, skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **Integration af API'er til Office 365 Management (prøveversion)**: Styring af insiderrisiko understøtter eksport af beskedoplysninger til SIEM-tjenester (security information and event management) via API'erne til Office 365 Management. Hvis du har adgang til beskedoplysninger på platformen, så de passer bedst til din organisations risikoprocesser, får du større fleksibilitet i forhold til, hvordan du reagerer på risikoaktiviteter. Hvis du vil vide mere om eksport af beskedoplysninger med API'er til Office 365 Administration, skal du se [Eksportér beskeder](insider-risk-management-settings.md#export-alerts).
 
 > [!NOTE]
 > Tak for din feedback og support under prøveversionen af ServiceNow-connectoren. Vi har besluttet at afslutte prøveversionen af ServiceNow-connectoren og ophører support i styring af insiderrisiko den 30. november 2020. Vi evaluerer aktivt alternative metoder for at give kunderne serviceNow-integration i styring af insiderrisiko.
@@ -161,7 +161,7 @@ Styring af insiderrisiko kan hjælpe dig med at registrere, undersøge og udfør
 
 ### <a name="data-theft-by-departing-users"></a>Datatyveri foretaget af afrejsende brugere
 
-Når brugere forlader en organisation, enten frivilligt eller som følge af opsigelse, er der ofte legitime bekymringer for, at firma-, kunde- og brugerdata er i fare. Brugere kan uskyldigt antage, at projektdata ikke er beskyttet, eller de kan blive fristet til at tage virksomhedsdata til personlig vinding og i strid med virksomhedens politik og juridiske standarder. Politikker for styring af insiderrisiko, der bruger politikskabelonen [Datatyveri ved at forlade brugere](insider-risk-management-policies.md#policy-templates) , registrerer automatisk aktiviteter, der typisk er knyttet til denne type tyveri. Med denne politik modtager du automatisk beskeder om mistænkelige aktiviteter, der er knyttet til datatyveri, af afrejsende brugere, så du kan foretage relevante undersøgelseshandlinger. Konfiguration af en [Microsoft 365 HR-connector](import-hr-data.md) for din organisation er påkrævet for denne politikskabelon.
+Når brugere forlader en organisation, enten frivilligt eller som følge af opsigelse, er der ofte legitime bekymringer om, at firma-, kunde- og brugerdata er i fare. Brugere kan uskyldigt antage, at projektdata ikke er beskyttet, eller de kan blive fristet til at tage virksomhedsdata til personlig vinding og i strid med virksomhedens politik og juridiske standarder. Politikker for styring af insiderrisiko, der bruger politikskabelonen [Datatyveri ved at forlade brugere](insider-risk-management-policies.md#policy-templates) , registrerer automatisk aktiviteter, der typisk er knyttet til denne type tyveri. Med denne politik modtager du automatisk beskeder om mistænkelige aktiviteter, der er knyttet til datatyveri, af afrejsende brugere, så du kan foretage relevante undersøgelseshandlinger. Konfiguration af en [Microsoft 365 HR-connector](import-hr-data.md) til din organisation er påkrævet for denne politikskabelon.
 
 ### <a name="intentional-or-unintentional-leak-of-sensitive-or-confidential-information"></a>Bevidst eller utilsigtet lækage af følsomme eller fortrolige oplysninger
 
@@ -173,7 +173,7 @@ I de fleste tilfælde gør brugerne deres bedste for at håndtere følsomme elle
 
 ## <a name="intentional-or-unintentional-security-policy-violations-preview"></a>Tilsigtede eller utilsigtede sikkerhedspolitiske overtrædelser (prøveversion)
 
-Brugerne har typisk en stor grad af kontrol, når de administrerer deres enheder på den moderne arbejdsplads. Dette kontrolelement kan indeholde tilladelser til at installere eller fjerne programmer, der er nødvendige i forbindelse med udførelsen af deres opgaver, eller mulighed for midlertidigt at deaktivere sikkerhedsfunktioner for enheden. Uanset om denne aktivitet er utilsigtet, utilsigtet eller ondsindet, kan denne adfærd udgøre en risiko for din organisation og er vigtig at identificere og handle for at minimere. For at hjælpe med at identificere disse risikable sikkerhedsaktiviteter scorer følgende skabeloner for sikkerhedspolitik for styring af insiderrisiko ved at angive indikatorer for sikkerhedsrisiko og bruger Microsoft Defender for Endpoint beskeder til at give indsigt i sikkerhedsrelaterede aktiviteter:
+Brugerne har typisk en stor grad af kontrol, når de administrerer deres enheder på den moderne arbejdsplads. Dette kontrolelement kan indeholde tilladelser til at installere eller fjerne programmer, der er nødvendige i forbindelse med udførelsen af deres opgaver, eller mulighed for midlertidigt at deaktivere sikkerhedsfunktioner for enheden. Uanset om denne aktivitet er utilsigtet, utilsigtet eller ondsindet, kan denne adfærd udgøre en risiko for din organisation og er vigtig at identificere og handle for at minimere. For at hjælpe med at identificere disse risikable sikkerhedsaktiviteter scorer følgende skabeloner for sikkerhedspolitik for styring af insiderrisiko ved at score indikatorer for sikkerhedsrisiko og bruger Microsoft Defender for Endpoint-beskeder til at give indsigt i sikkerhedsrelaterede aktiviteter:
 
 - [Generelle sikkerhedspolitiske overtrædelser (prøveversion)](insider-risk-management-policies.md#general-security-policy-violations-preview)
 - [Sikkerhedspolitikovertrædelser af afgåede brugere (prøveversion)](insider-risk-management-policies.md#security-policy-violations-by-departing-users-preview)
@@ -189,13 +189,13 @@ Brugere i din organisation kan have forskellige risikoniveauer, afhængigt af de
 
 ## <a name="healthcare-preview"></a>Sundhedspleje (prøveversion)
 
-For organisationer i sundhedssektoren har nylige undersøgelser fundet et meget højt antal insiderrelaterede databrud. Registrering af misbrug af patientdata og oplysninger om patientjournaler er en vigtig komponent i sikringen af patienternes privatliv og overholdelse af overholdelsesreglerne, f.eks. HIPAA (Health Insurance Portability and Accountability Act) og HITECH-loven (Health Information Technology for Economic and Clinical Health). Misbrug af patientdata kan variere fra adgang til privilegerede patientjournaler til adgang til patientjournaler fra familie eller naboer med ondsindede hensigter. For at hjælpe med at identificere disse typer risikable aktiviteter bruger følgende skabeloner til styring af insiderrisiko den Microsoft 365 HR-connector og en sundhedsspecifik dataconnector til at starte scoringsrisikoindikatorer i relation til adfærd, der kan opstå i dine EHR-systemer (Electronic Heath Record):
+For organisationer i sundhedssektoren har nylige undersøgelser fundet et meget højt antal insiderrelaterede databrud. Registrering af misbrug af patientdata og oplysninger om patientjournaler er en vigtig komponent i sikringen af patienternes privatliv og overholdelse af overholdelsesreglerne, f.eks. HIPAA (Health Insurance Portability and Accountability Act) og HITECH-loven (Health Information Technology for Economic and Clinical Health). Misbrug af patientdata kan variere fra adgang til privilegerede patientjournaler til adgang til patientjournaler fra familie eller naboer med ondsindede hensigter. For at hjælpe med at identificere disse typer risikable aktiviteter bruger følgende skabeloner til styring af insiderrisiko Microsoft 365 HR-connectoren og en sundhedsspecifik dataconnector til at begynde at score risikoindikatorer i forbindelse med adfærd, der kan opstå i dine EHR-systemer (Electronic Heath Record):
 
 - [Generel misbrug af patientdata (prøveversion)](insider-risk-management-policies.md#general-patient-data-misuse-preview)
 
 ## <a name="actions-and-behaviors-by-disgruntled-users-preview"></a>Handlinger og funktionsmåder for utilfredse brugere (prøveversion)
 
-Beskæftigelse fremhæver hændelser kan påvirke brugeradfærd på flere måder, der er relateret til insiderrisici. Disse stressfaktorer kan være en gennemgang af dårlig ydeevne, en sænkning af position eller den bruger, der er placeret i en plan for evaluering af ydeevnen. Selvom de fleste brugere ikke reagerer ondsindet på disse hændelser, kan stress af disse handlinger resultere i, at nogle brugere udfører handlinger, som de normalt ikke overvejer under normale omstændigheder. For at hjælpe med at identificere disse typer risikable aktiviteter bruger følgende skabeloner til styring af insiderrisiko den Microsoft 365 HR-connector og starter scoringsrisikoindikatorer i relation til adfærd, der kan opstå i nærheden af stresshændelser i forbindelse med beskæftigelse:
+Beskæftigelse fremhæver hændelser kan påvirke brugeradfærd på flere måder, der er relateret til insiderrisici. Disse stressfaktorer kan være en gennemgang af dårlig ydeevne, en sænkning af position eller den bruger, der er placeret i en plan for evaluering af ydeevnen. Selvom de fleste brugere ikke reagerer ondsindet på disse hændelser, kan stress af disse handlinger resultere i, at nogle brugere opfører sig på måder, de normalt ikke overvejer under normale omstændigheder. For at hjælpe med at identificere disse typer risikable aktiviteter bruger følgende skabeloner til styring af insiderrisiko microsoft 365 HR-connectoren og starter scoringsrisikoindikatorer i forbindelse med adfærd, der kan opstå i nærheden af stressorhændelser i forbindelse med beskæftigelse:
 
 - [Datalækager fra utilfredse brugere (prøveversion)](insider-risk-management-policies.md#data-leaks-by-disgruntled-users-preview)
 - [Sikkerhedspolitikovertrædelser af utilfredse brugere (prøveversion)](insider-risk-management-policies.md#security-policy-violations-by-disgruntled-users-preview)

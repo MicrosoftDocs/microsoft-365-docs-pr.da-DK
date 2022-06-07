@@ -1,6 +1,6 @@
 ---
 title: Microsoft Defender for Endpoint for US Government-kunder
-description: Få mere at vide om de Microsoft Defender for Endpoint til US Government-kunders krav og funktioner, der er tilgængelige
+description: Få mere at vide om microsoft Defender for Endpoint for US Government-kunders krav og funktioner, der er tilgængelige
 keywords: government, gcc, high, requirements,capabilities, defender, Microsoft Defender for Endpoint, endpoint, dod
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: ce42709349e5d7464e1809df248c8055bdfaab30
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 84b91b56a8f34f0fa726684dab513d9356904ff4
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810982"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922947"
 ---
 # <a name="microsoft-defender-for-endpoint-for-us-government-customers"></a>Microsoft Defender for Endpoint for US Government-kunder
 
@@ -31,10 +31,10 @@ ms.locfileid: "65810982"
 
 Microsoft Defender for Endpoint til US Government-kunder, der er bygget i Azure US Government-miljøet, bruger de samme underliggende teknologier som Defender for Endpoint i Azure Commercial.
 
-Dette tilbud er tilgængeligt for kunder med GCC, GCC High og DoD og er baseret på den samme forebyggelse, registrering, undersøgelse og afhjælpning som den kommercielle version. Der er dog nogle forskelle i tilgængeligheden af egenskaber for dette tilbud.
+Dette tilbud er tilgængeligt for GCC-, GCC High- og DoD-kunder og er baseret på den samme forebyggelse, opdagelse, undersøgelse og afhjælpning som den kommercielle version. Der er dog nogle forskelle i tilgængeligheden af egenskaber for dette tilbud.
 
 > [!NOTE]
-> Hvis du er GCC kunde, der bruger Defender for Endpoint i Commercial, skal du se de offentlige dokumentationssider.
+> Hvis du er GCC-kunde, der bruger Defender for Endpoint i Commercial, skal du se de offentlige dokumentationssider.
 
 ## <a name="licensing-requirements"></a>Licenskrav
 
@@ -46,12 +46,12 @@ Microsoft Defender for Endpoint til US Government-kunder kræver et af følgende
 
 ****
 
-|GCC|GCC Høj|Dod|
+|GCC|GCC High|Dod|
 |---|---|---|
-|Microsoft 365 GCC G5|Microsoft 365 E5 for GCC High|Microsoft 365 G5 for DOD|
-|GCC Microsoft 365 G5 Security|Microsoft 365 G5 Security for GCC High|Microsoft 365 G5 Sikkerhed for DOD|
-|Microsoft Defender for Endpoint - GCC|Microsoft Defender for Endpoint for GCC High|Microsoft Defender for Endpoint for DOD|
-|Windows 10 Enterprise E5 GCC|Windows 10 Enterprise E5 for GCC High|Windows 10 Enterprise E5 for DOD|
+|Microsoft 365 GCC G5|Microsoft 365 E5 til GCC High|Microsoft 365 G5 til DOD|
+|Microsoft 365 G5 Security GCC|Microsoft 365 G5 Security for GCC High|Microsoft 365 G5 Security for DOD|
+|Microsoft Defender for Endpoint – GCC|Microsoft Defender for Endpoint for GCC High|Microsoft Defender for Endpoint for DOD|
+|Windows 10 Enterprise E5 GCC|Windows 10 Enterprise E5 til GCC High|Windows 10 Enterprise E5 til DOD|
 |
 
 ### <a name="server-licensing"></a>Serverlicensering
@@ -60,15 +60,15 @@ Microsoft Defender for Endpoint til US Government-kunder kræver et af følgende
 
 ****
 
-|GCC|GCC Høj|Dod|
+|GCC|GCC High|Dod|
 |---|---|---|
-|GCC Microsoft Defender for Endpoint Server|Microsoft Defender for Endpoint Server til høj GCC|Microsoft Defender for Endpoint Server til DOD|
+|Microsoft Defender for Endpoint Server GCC|Microsoft Defender for Endpoint Server for GCC High|Microsoft Defender for Endpoint Server for DOD|
 |Microsoft Defender til servere|Microsoft Defender for servers – Government|Microsoft Defender for servers – Government|
 |
 
 ## <a name="portal-urls"></a>PORTAL-URL-adresser
 
-Følgende er URL-adresserne på Microsoft Defender for Endpoint-portalen for US Government-kunder:
+Følgende er URL-adresserne til Microsoft Defender for Endpoint-portalen for US Government-kunder:
 
 <br />
 
@@ -77,11 +77,11 @@ Følgende er URL-adresserne på Microsoft Defender for Endpoint-portalen for US 
 |Kundetype|URL-adresse til portal|
 |---|---|
 |GCC|<https://security.microsoft.com>|
-|GCC Høj|<https://security.microsoft.us>|
+|GCC High|<https://security.microsoft.us>|
 |Dod|<https://security.apps.mil>|
 |
 > [!NOTE]
-> Hvis du er GCC kunde og er ved at flytte fra Microsoft Defender for Endpoint kommerciel til GCC, kan du bruge https://transition.security.microsoft.com til at få adgang til dine Microsoft Defender for Endpoint kommercielle data.
+> Hvis du er GCC-kunde og er ved at flytte fra Microsoft Defender for Endpoint commercial til GCC, kan du bruge https://transition.security.microsoft.com til at få adgang til dine kommercielle Microsoft Defender for Endpoint-data.
 
 ## <a name="endpoint-versions"></a>Slutpunktsversioner
 
@@ -93,7 +93,7 @@ Følgende operativsystemversioner understøttes:
 
 ****
 
-Operativsystemversion|GCC|GCC Høj|Dod
+Operativsystemversion|GCC|GCC High|Dod
 :---|:---:|:---:|:---:
 Windows 11|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows 10, version 21H1 og nyere|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
@@ -111,15 +111,15 @@ Windows Server 2016 (moderne) <sup>2</sup>|![Ja.](images/svg/check-yes.svg)|![Ja
 Windows Server 2012 R2 (moderne) <sup>2</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2016 (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2012 R2 (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-Windows Server 2008 R2 SP1 (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-Windows 8.1 Enterprise (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
+Windows Server 2008 R2 SP1 (legacy) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
+Windows 8.1 Enterprise (legacy) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows 8 Pro (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows 7 SP1 Enterprise (legacy) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows 7 SP1 Pro (ældre) <sup>3</sup>|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Linux|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-macOS|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
-Android|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
-Ios|![Ja.](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion|![Ja](images/svg/check-yes.svg) <br /> Offentlig prøveversion
+Macos|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
+Android|![Ja.](images/svg/check-yes.svg) <br /> |![Ja](images/svg/check-yes.svg) <br /> |![Ja](images/svg/check-yes.svg) <br /> 
+Ios|![Ja.](images/svg/check-yes.svg) <br /> |![Ja](images/svg/check-yes.svg) <br /> |![Ja](images/svg/check-yes.svg) <br /> 
 |
 
 > [!NOTE]
@@ -137,7 +137,7 @@ Følgende operativsystemversioner understøttes, når [du bruger Microsoft Defen
 
 ****
 
-Operativsystemversion|GCC|GCC Høj|Dod
+Operativsystemversion|GCC|GCC High|Dod
 :---|:---:|:---:|:---:
 Windows Server 2022|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
 Windows Server 2019|![Ja.](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)
@@ -154,8 +154,8 @@ Følgende regneark, der kan downloades, viser tjenesterne og deres tilknyttede U
 
 |Regneark med domæneliste| Beskrivelse|
 |---|---|
-|Microsoft Defender for Endpoint URL-adresseliste til kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OPERATIVSYSTEM til kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
-| Microsoft Defender for Endpoint URL-adresseliste for Gov/GCC/DoD | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
+|Microsoft Defender for Endpoint URL-liste for kommercielle kunder| Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OPERATIVSYSTEM til kommercielle kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)
+| Microsoft Defender for Endpoint URL-liste for Gov/GCC/DoD | Regneark med specifikke DNS-poster for tjenesteplaceringer, geografiske placeringer og OS for Gov/GCC/DoD-kunder. <p> [Download regnearket her.](https://download.microsoft.com/download/6/a/0/6a041da5-c43b-4f17-8167-79dfdc10507f/mde-urls-gov.xlsx)
 
 Du kan få mere at vide under [Konfigurer indstillinger for enhedsproxy og internetforbindelse](configure-proxy-internet.md).
 
@@ -172,7 +172,7 @@ I stedet for de offentlige URI'er, der er angivet i vores [API-dokumentation](ap
 
 ****
 
-|Slutpunktstype|GCC|GCC-dod med høj &|
+|Slutpunktstype|GCC|GCC High & DoD|
 |---|---|---|
 |Login|`https://login.microsoftonline.com`|`https://login.microsoftonline.us`|
 |Defender for Endpoint API|`https://api-gcc.securitycenter.microsoft.us`|`https://api-gov.securitycenter.microsoft.us`|
@@ -189,7 +189,7 @@ Dette er de kendte huller:
 
 ****
 
-|Funktionsnavn|GCC|GCC Høj|Dod|
+|Funktionsnavn|GCC|GCC High|Dod|
 |---|:---:|:---:|:---:|
 |Netværksvurderinger|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|
 |Netværksregistrering|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
@@ -198,16 +198,16 @@ Dette er de kendte huller:
 |Microsoft Secure Score|![Ja](images/svg/check-yes.svg) <sup>1</sup>|![Nej](images/svg/check-no.svg) Understøttes ikke|![Nej](images/svg/check-no.svg) Understøttes ikke|  
 
 > [!NOTE]
-> <sup>1</sup> Selvom Microsoft Secure Score er tilgængelig for GCC kunder, er der nogle sikkerhedsanbefalinger, der ikke er tilgængelige.
+> <sup>1</sup> Selvom Microsoft Secure Score er tilgængelig for GCC-kunder, er der nogle sikkerhedsanbefalinger, der ikke er tilgængelige.
 
 
-Disse er de funktioner og kendte huller i [Mobile Threat Defense (Microsoft Defender for Endpoint på Android & iOS)](mtd.md):
+Dette er de funktioner og kendte huller i [Mobile Threat Defense (Microsoft Defender for Endpoint på Android & iOS)](mtd.md):
 
 <br />
 
 ****
 
-|Funktionsnavn|GCC|GCC Høj|Dod|
+|Funktionsnavn|GCC|GCC High|Dod|
 |---|:---:|:---:|:---:|
 |Webbeskyttelse (anti-phishing og brugerdefinerede indikatorer)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|![Ja](images/svg/check-yes.svg)|
 |Beskyttelse mod skadelig software (kun Android)|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|![Nej](images/svg/check-no.svg) Under udvikling|

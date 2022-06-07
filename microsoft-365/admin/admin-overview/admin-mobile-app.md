@@ -1,5 +1,5 @@
 ---
-title: Om mobilappen Microsoft 365 administrator
+title: Om Microsoft 365-administratormobilappen
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -24,31 +24,31 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Få Microsoft 365 Administration-appen, din ledsagerapp til den webbaserede Microsoft 365 Administration, til at administrere din onlineorganisation fra din telefon eller tablet.
-ms.openlocfilehash: 1a6e267a06ea902638d9c5ef5a9c0c7aee44823d
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Få Microsoft 365 Admin-appen, din ledsagerapp til det webbaserede Microsoft 365 Administration, til at administrere din onlineorganisation fra din telefon eller tablet.
+ms.openlocfilehash: 07c404a3bfdee064fa1fdcb38caa1cf2da595000
+ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466740"
+ms.lasthandoff: 06/07/2022
+ms.locfileid: "65922147"
 ---
-# <a name="about-the-microsoft-365-admin-mobile-app"></a>Om Microsoft 365 Administration-mobilappen
+# <a name="about-the-microsoft-365-admin-mobile-app"></a>Om Mobilappen Microsoft 365 Administration
 
-Er du administrator, som normalt er på farten? Selvom du ikke er det, kan der være tidspunkter, hvor du skal administrere Microsoft 365 fra din telefon eller tablet. Se den gratis [Microsoft 365 Administration app](https://go.microsoft.com/fwlink/?LinkID=627216), som er den perfekte ledsagerapp til den webbaserede Microsoft 365 Administration. Du kan downloade appen fra [Apple-App Store](https://apps.apple.com/app/apple-store/id761397963?pt=80423&ct=docsaboutadminapp&mt=8) og fra [Google Play Butik](https://play.google.com/store/apps/details?id=com.ms.office365admin&referrer=utm_source%3Ddocsaboutadminapp%26utm_campaign%25docsaboutadminapp).
+Er du administrator, som normalt er på farten? Selvom du ikke er det, kan der være tidspunkter, hvor du skal administrere Microsoft 365 fra din telefon eller tablet. Se den gratis [Microsoft 365-administratorapp](https://go.microsoft.com/fwlink/?LinkID=627216), som er den perfekte ledsagerapp til det webbaserede Microsoft 365 Administration. Du kan downloade appen fra [Apple App Store](https://apps.apple.com/app/apple-store/id761397963?pt=80423&ct=docsaboutadminapp&mt=8) og fra [Google Play Butik](https://play.google.com/store/apps/details?id=com.ms.office365admin&referrer=utm_source%3Ddocsaboutadminapp%26utm_campaign%25docsaboutadminapp) samt fra linket til Microsoft 365 Administration-appen øverst til højre i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.
 
 :::image type="content" source="../../media/DocsMicrosoftFinalImage.PNG" alt-text="Skærmbillede: Startsiden for mobilappen til administration, der viser søgning, meddelelsescenter, tilstand og hurtige links":::
 
-Administrationsappen har mange funktioner, som gør det muligt for dig at administrere Microsoft 365 fra din mobilenhed eller tablet, når du ikke kan få adgang til en computer. Her er en liste over nogle af de opgaver, du kan udføre fra appen:
+Administrationsappen har mange funktioner, der gør det muligt for dig at administrere Microsoft 365 fra din mobilenhed eller tablet, når du ikke kan få adgang til en computer. Her er en liste over nogle af de opgaver, du kan udføre fra appen:
 
 - **Administrer brugere og enheder** Tilføj eller rediger en bruger, nulstil en brugers adgangskode, tildel en rolle, bloker brugeren, slet bruger, administrer alias, tildel licenser, slet enhedsdata med mere.
 - **Administrer grupper** Tilføj en gruppe, tilføj eller fjern brugere fra grupper.
 - **Licensstyring og fakturering** Få vist en liste over købte og tildelte licenser, tildel licenser til brugere, køb eller fjern licenser, og få vist og download fakturaer.
 - **Støtte** Opret en ny serviceanmodning, og hold styr på alle de opdateringer, der er relateret til serviceanmodningerne, mens du er på farten.
-- **Meddelelsescenter** Hold dig opdateret om alle kommende ændringer, planlagt vedligeholdelse eller andre vigtige meddelelser i forbindelse med Microsoft 365
+- **Meddelelsescenter** Hold dig opdateret om alle kommende ændringer, planlagt vedligeholdelse eller andre vigtige meddelelser, der er relateret til Microsoft 365
 - **Tjenestetilstand** Overvåg tilstanden af alle tjenesterne ved at få vist tjenestens aktuelle status og oplysninger om afbrydelser og afbrydelser af tjenesten.
 - **Meddelelser** Hold dig ajour med alle de vigtige oplysninger og opdateringer, der er relateret til meddelelsescenterindlæg, tjenestetilstand og fakturering via pushmeddelelser. Du kan endda tilpasse det, du vil have besked om.
 
-Hvis du er administrator, og du er ansvarlig for mere end én Microsoft 365 organisation, kan du logge på flere organisationer og hurtigt skifte mellem dem. Appen understøtter mørkt tema og er tilgængelig på 39 sprog.
+Hvis du er administrator, og du er ansvarlig for mere end én Microsoft 365-organisation, kan du logge på flere organisationer og hurtigt skifte mellem dem. Appen understøtter mørkt tema og er tilgængelig på 39 sprog.
   
 > [!IMPORTANT]
 > Hvis du har problemer med at bruge mobilappen Administrator på iOS eller Android, kan du sende en mail til os på [feedback365@microsoft.com](mailto:feedback365@microsoft.com) for at give os besked.
@@ -57,14 +57,16 @@ Hvis du er administrator, og du er ansvarlig for mere end én Microsoft 365 orga
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/05c1d439-9ec2-415f-9178-250f64dec64c]
 
-1. Hvis du vil hente Microsoft 365 Administration-mobilappen, **skal du** søge efter Microsoft 365 Administration i appbutikken for din enhed og installere den.
+1. Hvis du vil hente mobilappen Microsoft 365 Administration, skal du søge efter  **Microsoft 365-administrator**  i appbutikken for din enhed og installere den.
 2. Log på med din globale administratormailadresse, og få vist dashboardet for at se tjenestetilstand, overvåge brugerlicenser og se meddelelser og tjenesteanmodninger.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Du skal være administrator i en Microsoft 365 organisation for at kunne bruge administratormobilappen.
+Du skal være administrator i en Microsoft 365-organisation for at kunne bruge administratormobilappen.
   
 ## <a name="download-the-admin-mobile-app"></a>Download mobilappen administrator
+
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> fra linket til Microsoft 365-administratorappen øverst til højre. 
 
 [Apple App Store](https://apps.apple.com/app/apple-store/id761397963?pt=80423&ct=docsaboutadminapp&mt=8) 
 
@@ -76,17 +78,17 @@ Nedenfor finder du svar på ofte stillede spørgsmål.
   
 ### <a name="what-do-i-need-to-do-to-be-able-to-use-the-app"></a>Hvad skal jeg gøre for at kunne bruge appen?
 
-Hvis du vil bruge appen, skal du have administratortilladelser og et gyldigt abonnement på et af følgende Microsoft 365 abonnementer:
+Hvis du vil bruge appen, skal du have administratortilladelser og et gyldigt abonnement på et af følgende Microsoft 365-abonnementer:
 
 - Microsoft 365 Apps for Enterprise
-- Microsoft 365 Apps til virksomheder
+- Microsoft 365 Apps for Business
 - Microsoft 365 Business Premium
 - Microsoft 365 Business Standard
 - Microsoft 365 Business Basic
 - Microsoft 365 E3/E5
 - Office 365: E1, E3/E5
-- Exchange Online plan
-- OneDrive til forretningsplan
+- Exchange Online-plan
+- OneDrive for Business-plan
   
 ### <a name="can-i-use-the-app-with-my-microsoft-365-family-subscription"></a>Kan jeg bruge appen med mit Microsoft 365 Family-abonnement?
 
@@ -98,7 +100,7 @@ Ja, men med reduceret funktionalitet. Du kan logge på og få vist tjenesteoplys
   
 ### <a name="what-languages-are-supported-by-the-app"></a>Hvilke sprog understøttes af appen?
 
-Appen understøtter alle 39 sprog, som den webbaserede Microsoft 365 Administration understøtter. Hvis du vil ændre sproget, skal du gå til **Indstillinger** >  **Sprog** i navigationsmenuen til venstre i Administration eller vælge ikonet **Sprog** i sektionen **Hurtige links** på startsiden for administratormobilappen.
+Appen understøtter alle 39 sprog, som understøttes af det webbaserede Microsoft 365 Administration. Hvis du vil ændre sproget, skal du gå til **Indstillinger** > **Sprog** i navigationsmenuen til venstre i Administration eller vælge ikonet **Sprog** i sektionen **Hurtige links** på startsiden for administratormobilappen.
   
 ### <a name="how-can-i-share-the-service-incidents-and-messages-with-the-rest-of-my-organization"></a>Hvordan kan jeg dele servicehændelser og meddelelser med resten af min organisation?
 
@@ -114,12 +116,12 @@ Du kan prøve nogle almindelige fejlfindingstrin for mobilapps:
 
 1. Luk og åbn appen igen.
 1. Fjern og geninstaller appen. Sørg for, at du har den nyeste version af appen.
-1. Hvis du har installeret appen Microsoft Authenticator eller Firmaportal på enheden, kan du prøve at geninstallere den eller opdatere til den nyeste version.
+1. Hvis du har microsoft Authenticator- eller Firmaportal-appen installeret på enheden, kan du prøve at geninstallere den eller opdatere til den nyeste version.
 1. Hvis det ikke virker, kan du sende en mail til os på feedback365@microsoft.com for at fortælle os det.
 
-### <a name="how-do-i-manage-notifications-in-the-app"></a>Hvordan gør jeg administrere meddelelser i appen?
+### <a name="how-do-i-manage-notifications-in-the-app"></a>Hvordan administrerer jeg meddelelser i appen?
 
-I navigationsmenuen til venstre skal du gå til **Indstillinger** >  **Meddelelser**. Du kan administrere tjenestetilstand, meddelelsescenter og faktureringsmeddelelser her.
+I navigationsmenuen til venstre skal du gå til **Indstillinger** > **Meddelelser**. Du kan administrere tjenestetilstand, meddelelsescenter og faktureringsmeddelelser her.
 
 ### <a name="what-do-i-do-if-my-question-isnt-answered"></a>Hvad gør jeg, hvis mit spørgsmål ikke besvares?
 
