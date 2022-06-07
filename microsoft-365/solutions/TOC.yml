@@ -314,12 +314,8 @@
           href: ../compliance/ediscovery.md
         - name: Microsoft Purview eDiscovery (Premium)
           href: ../compliance/overview-ediscovery-20.md
-        - name: Handlingsplaner for overholdelse af regler og standarder
+        - name: Ofte stillede spørgsmål om overholdelse af angivne standarder og handlingsplaner
           items:
-            - name: ISO – anbefalet handlingsplan
-              href: /compliance/regulatory/iso-action-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
-            - name: NIST – Anbefalet handlingsplan
-              href: /compliance/regulatory/nist-action-plan?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
             - name: CCPA - Ofte stillede spørgsmål
               href: /compliance/regulatory/ccpa-faq?bc=%2fmicrosoft-365%2fsolutions%2fbreadcrumb%2ftoc.json&toc=%2fmicrosoft-365%2fsolutions%2ftoc.json
             - name: GDPR – Anbefalet handlingsplan
