@@ -16,12 +16,13 @@ ms.collection:
 description: Sikkerhed i Office 365, fra Exchange Online Protection til Defender for Office 365 Plan 1 og 2, Standard vs. Strenge sikkerhedskonfigurationer og meget mere. Forstå, hvad du har, og hvordan du sikrer dine egenskaber.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 62a8d298c9b3e47acb9ba9af5782624646487677
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+adobe-target: true
+ms.openlocfilehash: a5a7a4e78ae3b160b565e253d315d94fc5b6b53a
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647771"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940904"
 ---
 # <a name="microsoft-defender-for-office-365-security-overview"></a>Sikkerhedsoversigt for Microsoft Defender for Office 365
 

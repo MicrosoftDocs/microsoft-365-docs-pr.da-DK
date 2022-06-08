@@ -20,32 +20,32 @@ search.appverid:
 - SPO160
 - MET150
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
-description: I denne artikel beskrives websteder med navigationsindstillinger, hvor SharePoint publicering er aktiveret i SharePoint Online.
-ms.openlocfilehash: 67bf1c854d97cf254d1484151987a87853e1ae9d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: I denne artikel beskrives navigationsindstillinger på websteder, hvor SharePoint Publishing er aktiveret i SharePoint Online.
+ms.openlocfilehash: c95666a0fdb78fa584d9ca32ce19f10e4db89753
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101177"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940926"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>Navigationsindstillinger for SharePoint Online
 
-I denne artikel beskrives websteder med navigationsindstillinger, hvor SharePoint publicering er aktiveret i SharePoint Online. Valget og konfigurationen af navigationen påvirker ydeevnen og skalerbarheden af websteder i SharePoint Online. Skabelonen SharePoint udgivelseswebsted må kun bruges, hvis den kræves til en central portal, og publiceringsfunktionen bør kun aktiveres på bestemte websteder, og kun når den er absolut påkrævet, da den kan påvirke ydeevnen, når den bruges forkert.
+I denne artikel beskrives navigationsindstillinger på websteder, hvor SharePoint Publishing er aktiveret i SharePoint Online. Valget og konfigurationen af navigationen påvirker ydeevnen og skalerbarheden af websteder i SharePoint Online markant. SharePoint-udgivelseswebstedsskabelonen bør kun bruges, hvis den kræves til en central portal, og publiceringsfunktionen bør kun aktiveres på bestemte websteder, og kun når den er absolut påkrævet, da den kan påvirke ydeevnen, når den bruges forkert.
 
 >[!NOTE]
->Hvis du bruger moderne SharePoint navigationsindstillinger som megamenu, overlappende navigation eller hubnavigation, gælder denne artikel ikke for dit websted. Moderne SharePoint webstedsarkitekturer udnytter et mere fladt webstedshierarki og en hub-and-spoke-model. Dette gør det muligt at opnå mange scenarier, der ikke kræver brug af funktionen SharePoint udgivelse.
+>Hvis du bruger moderne Navigationsindstillinger i SharePoint, f.eks. megamenu, overlappende navigation eller hubnavigation, gælder denne artikel ikke for dit websted. Moderne sharePoint-webstedsarkitekturer udnytter et mere fladt webstedshierarki og en hub-and-spoke-model. Dette gør det muligt at opnå mange scenarier, der ikke kræver brug af sharePoint-publiceringsfunktionen.
 
 ## <a name="overview-of-navigation-options"></a>Oversigt over navigationsindstillinger
 
-Konfiguration af navigationsudbydere kan påvirke ydeevnen markant for hele webstedet, og du skal være opmærksom på at vælge en navigationsudbyder og en konfiguration, der skaleres effektivt i forhold til kravene på et SharePoint websted. Der er to klar til brugsnavigationsudbydere samt brugerdefinerede navigationsimplementeringer.
+Konfiguration af navigationsprovideren kan påvirke ydeevnen markant for hele webstedet, og du skal være omhyggelig med at vælge en navigationsudbyder og -konfiguration, der skaleres effektivt i forhold til kravene på et SharePoint-websted. Der er to klar til brugsnavigationsudbydere samt brugerdefinerede navigationsimplementeringer.
 
-Den første indstilling [**, Strukturel navigation**](#using-structural-navigation-in-sharepoint-online), er den anbefalede navigationsindstilling i SharePoint Online for klassiske SharePoint websteder, **hvis du aktiverer strukturel cachelagring af navigation for dit websted**. Denne navigationsudbyder viser navigationselementerne under det aktuelle websted og eventuelt det aktuelle websted og dets sidestillede. Den indeholder yderligere funktioner, f.eks. justering af sikkerhed og optælling af webstedsstruktur. Hvis cachelagring er deaktiveret, påvirker det ydeevnen og skalerbarheden negativt, og det kan være underlagt begrænsning.
+Den første indstilling [**, Strukturel navigation**](#using-structural-navigation-in-sharepoint-online), er den anbefalede navigationsindstilling i SharePoint Online for klassiske SharePoint-websteder, **hvis du aktiverer cachelagring af strukturel navigation for dit websted**. Denne navigationsudbyder viser navigationselementerne under det aktuelle websted og eventuelt det aktuelle websted og dets sidestillede. Den indeholder yderligere funktioner, f.eks. justering af sikkerhed og optælling af webstedsstruktur. Hvis cachelagring er deaktiveret, påvirker det ydeevnen og skalerbarheden negativt, og det kan være underlagt begrænsning.
 
 Den anden indstilling, [**Administreret (metadata) navigation**](#using-managed-navigation-and-metadata-in-sharepoint-online), repræsenterer navigationselementer ved hjælp af et ordsæt for administrerede metadata. Vi anbefaler, at justering af sikkerhed deaktiveres, medmindre det er nødvendigt. Justering af sikkerhed er aktiveret som en sikker standardindstilling for denne navigationsudbyder. Mange websteder kræver dog ikke udgifter til justering af sikkerhed, da navigationselementer ofte er konsistente for alle brugere af webstedet. Med den anbefalede konfiguration til deaktivering af justering af sikkerhed kræver denne navigationsprovider ikke optælling af webstedsstruktur og er yderst skalerbar med acceptabel påvirkning af ydeevnen.
 
 Ud over de indbyggede navigationsudbydere har mange kunder implementeret alternative brugerdefinerede navigationsimplementeringer. Se [Søgebaseret scripting på klientsiden](#using-search-driven-client-side-scripting) i denne artikel.
   
-## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>Fordele og ulemper ved SharePoint indstillinger for onlinenavigation
+## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>Fordele og ulemper ved navigationsindstillinger i SharePoint Online
 
 I følgende tabel opsummeres fordele og ulemper ved hver indstilling.
 
@@ -57,15 +57,15 @@ I følgende tabel opsummeres fordele og ulemper ved hver indstilling.
 Den mest relevante indstilling for dit websted afhænger af kravene til dit websted og af din tekniske funktionalitet. Hvis du vil have en navigationsudbyder, der er nem at konfigurere, og som automatisk opdateres, når indholdet ændres, er strukturel navigation [med cachelagring aktiveret](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43) en god mulighed.
 
 >[!NOTE]
->Anvendelse af det samme princip som moderne SharePoint websteder ved at forenkle den overordnede webstedsstruktur til en fladere, ikke-hierarkisk struktur forbedrer ydeevnen og forenkler flytningen til moderne SharePoint websteder. Det betyder, at i stedet for at have en enkelt gruppe af websteder med hundredvis af websteder (underordnede websteder), er en bedre tilgang at have mange grupper af websteder med meget få underordnede websteder (underordnede websteder).
+>Hvis du anvender det samme princip som moderne SharePoint-websteder ved at forenkle den overordnede webstedsstruktur på en fladere, ikke-hierarkisk struktur, forbedres ydeevnen, og det bliver nemmere at flytte til moderne SharePoint-websteder. Det betyder, at i stedet for at have en enkelt gruppe af websteder med hundredvis af websteder (underordnede websteder), er en bedre tilgang at have mange grupper af websteder med meget få underordnede websteder (underordnede websteder).
 
 ## <a name="analyzing-navigation-performance-in-sharepoint-online"></a>Analyse af navigationsydeevnen i SharePoint Online
 
-[Værktøjet Sidediagnosticering til SharePoint](./page-diagnostics-for-spo.md) er en browserudvidelse til Microsoft Edge- og Chrome-browsere, der analyserer både SharePoint moderne portalsider online og klassiske udgivelseswebstedssider. Dette værktøj fungerer kun for SharePoint Online og kan ikke bruges på en SharePoint systemside.
+[Værktøjet Sidediagnosticering til SharePoint](./page-diagnostics-for-spo.md) er en browserudvidelse til Microsoft Edge- og Chrome-browsere, der analyserer både den moderne SharePoint Online-portal og de klassiske sider på udgivelseswebstedet. Dette værktøj fungerer kun for SharePoint Online og kan ikke bruges på en SharePoint-systemside.
 
-Værktøjet genererer en rapport for hver analyseret side, der viser, hvordan siden klarer sig i forhold til et foruddefineret sæt regler, og viser detaljerede oplysninger, når resultaterne for en test falder uden for den oprindelige værdi. SharePoint Onlineadministratorer og -designere kan bruge værktøjet til at foretage fejlfinding af problemer med ydeevnen for at sikre, at nye sider optimeres inden publicering.
+Værktøjet genererer en rapport for hver analyseret side, der viser, hvordan siden klarer sig i forhold til et foruddefineret sæt regler, og viser detaljerede oplysninger, når resultaterne for en test falder uden for den oprindelige værdi. SharePoint Online-administratorer og -designere kan bruge værktøjet til at foretage fejlfinding af problemer med ydeevnen for at sikre, at nye sider optimeres, før de publiceres.
 
-**SpRequestDuration** er især den tid, det tager for SharePoint at behandle siden. Tung navigation (f.eks. med sider i navigationen), komplekse webstedshierarkier og andre konfigurations- og topologiindstillinger kan alle dramatisk bidrage til længere varigheder.
+**SpRequestDuration** er især den tid, det tager sharePoint at behandle siden. Tung navigation (f.eks. med sider i navigationen), komplekse webstedshierarkier og andre konfigurations- og topologiindstillinger kan alle dramatisk bidrage til længere varigheder.
 
 ## <a name="using-structural-navigation-in-sharepoint-online"></a>Brug af strukturel navigation i SharePoint Online
 
@@ -73,15 +73,15 @@ Dette er den direkte navigation, der bruges som standard, og det er den mest enk
 
 ### <a name="how-to-implement-structural-navigation-caching"></a>Sådan implementerer du cachelagring af strukturel navigation
 
-Under **Site Indstillinger** >  **Look og FeelNavigation** >  kan du validere, om strukturel navigation er valgt til enten global navigation eller aktuel navigation. Hvis du vælger **Vis sider** , påvirker det ydeevnen negativt.
+Under **Webstedsindstillingers** > **udseende og****funktionalitetsnavigation** >  kan du validere, om strukturel navigation er valgt til enten global navigation eller aktuel navigation. Hvis du vælger **Vis sider** , påvirker det ydeevnen negativt.
 
 ![Strukturel navigation med Vis underordnede websteder valgt.](../media/SPONavOptionsStructuredShowSubsites.png)
 
-Cachelagring kan aktiveres eller deaktiveres på niveauet for gruppen af websteder og på webstedsniveau og er som standard aktiveret for begge. Hvis du vil aktivere på niveauet for gruppen af websteder, skal du markere afkrydsningsfeltet **for Aktivér cachelagring** under **Websted Indstillinger** >  **Administrationsgruppe** >  af websteder.
+Cachelagring kan aktiveres eller deaktiveres på niveauet for gruppen af websteder og på webstedsniveau og er som standard aktiveret for begge. Hvis du vil aktivere på niveauet for gruppen af websteder **, skal du** markere afkrydsningsfeltet **for Aktivér cachelagring** under  >  Indstillinger for **gruppe af websteder Administration** > **af gruppe af websteder**.
 
-![Aktivér cachelagring på webstedsniveau.](../media/structural-nav/structural-nav-caching-site-coll.png)
+![Aktivér cachelagring på niveauet for gruppen af websteder.](../media/structural-nav/structural-nav-caching-site-coll.png)
 
-Hvis du vil aktivere på webstedsniveau, **skal du under Websted Indstillinger** >  **Navigation** markere afkrydsningsfeltet for **Aktivér cachelagring**.
+Hvis du vil aktivere på webstedsniveau, skal du under **Navigation** i **Indstillinger** >  for websted markere afkrydsningsfeltet for **Aktivér cachelagring**.
 
 ![Aktivér cachelagring på webstedsniveau.](../media/structural-nav/structural-nav-caching-site.png)
 
@@ -99,11 +99,11 @@ Mange websteder kræver ikke justering af sikkerheden, da navigationsstrukturen 
 
 ### <a name="how-to-implement-managed-navigation-and-the-results"></a>Sådan implementerer du administreret navigation og resultaterne
 
-Der er flere artikler om docs.microsoft.com om detaljerne for administreret navigation. Du kan f.eks. se [Oversigt over administreret navigation i SharePoint Server](/sharepoint/administration/overview-of-managed-navigation).
+Der er flere artikler om docs.microsoft.com om detaljerne for administreret navigation. Se f.eks [. Oversigt over administreret navigation i SharePoint Server](/sharepoint/administration/overview-of-managed-navigation).
 
 Hvis du vil implementere administreret navigation, skal du konfigurere ord med URL-adresser, der svarer til webstedets navigationsstruktur. Administreret navigation kan endda organiseres manuelt for at erstatte strukturel navigation i mange tilfælde. Eksempel:
 
-![SharePoint onlinewebstedsstruktur.](../media/SPONavOptionsListOfSites.png))
+![SharePoint Online-webstedsstruktur.](../media/SPONavOptionsListOfSites.png))
 
 ## <a name="using-search-driven-client-side-scripting"></a>Brug af søgebaseret scripting på klientsiden
 
@@ -117,7 +117,7 @@ Disse navigationsudbydere har et par vigtige fordele:
 
 Et eksempel på en dataprovider er at bruge en **søgebaseret navigation**, som giver fleksibilitet til at optæde navigationsnoder og håndtere justering af sikkerhed effektivt.
 
-Der er andre populære muligheder for at bygge **brugerdefinerede navigationsudbydere**. Gennemse [Navigationsløsninger for SharePoint Online-portaler](/sharepoint/dev/solution-guidance/portal-navigation) for at få yderligere vejledning i, hvordan du bygger en brugerdefineret navigationsudbyder.
+Der er andre populære muligheder for at bygge **brugerdefinerede navigationsudbydere**. Gennemse [navigationsløsninger til SharePoint Online-portaler for](/sharepoint/dev/solution-guidance/portal-navigation) at få yderligere vejledning i, hvordan du bygger en brugerdefineret navigationsudbyder.
 
 Ved hjælp af søgning kan du udnytte de indekser, der er bygget op i baggrunden, ved hjælp af fortløbende gennemsøgning. Søgeresultaterne hentes fra søgeindekset, og resultaterne er sikkerhedsbeskåret. Dette er generelt hurtigere end køreklare navigationsudbydere, når justering af sikkerhed er påkrævet. Hvis du bruger søgning til strukturel navigation, især hvis du har en kompleks webstedsstruktur, vil det fremskynde indlæsningstiden for sider betydeligt. Den største fordel ved dette i forhold til administreret navigation er, at du kan drage fordel af justering efter sikkerhed.
 
@@ -125,7 +125,7 @@ Denne fremgangsmåde omfatter oprettelse af en brugerdefineret masterside og ers
 
 ### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>Eksempel: Erstat den indbyggede navigationskode på en masterside
 
-1. Gå til siden Websted Indstillinger.
+1. Gå til siden Indstillinger for websted.
 2. Åbn mastersidegalleriet ved at klikke på **Mastersider**.
 3. Herfra kan du navigere gennem biblioteket og downloade filen `seattle.master`.
 4. Rediger koden ved hjælp af en teksteditor, og slet kodeblokken i følgende skærmbillede.<br/>![Slet den viste kodeblok.](../media/SPONavOptionsDeleteCodeBlock.png)<br/>
@@ -221,7 +221,7 @@ I vores komplekse navigationseksempel viser en ny sidebelastning uden den lokale
 ### <a name="about-the-javascript-file"></a>Om JavaScript-filen...
 
 >[!NOTE]
->Hvis du bruger brugerdefineret JavaScript, skal du kontrollere, at offentlige CDN er aktiveret, og at filen er på en CDN placering.
+>Hvis du bruger brugerdefineret JavaScript, skal du kontrollere, at offentligt CDN er aktiveret, og at filen er på en CDN-placering.
 
 Hele JavaScript-filen er som følger:
 
@@ -476,7 +476,7 @@ I [eksempelimplementering](#example-replace-the-out-of-the-box-navigation-code-i
 
 - jQuery - https://jquery.com/
 - KnockoutJS - https://knockoutjs.com/
-- Linq.js - https://linqjs.codeplex.com/eller github.com/neuecc/linq.js
+- Linq.js - `https://linqjs.codeplex.com/`eller github.com/neuecc/linq.js
 
 Den aktuelle version af LinqJS indeholder ikke metoden ByHierarchy, der bruges i ovenstående kode, og ødelægger navigationskoden. Du kan løse problemet ved at føje følgende metode til filen Linq.js før linjen `Flatten: function ()`.
 
@@ -545,6 +545,6 @@ ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
   
 ## <a name="related-topics"></a>Relaterede emner
 
-[Oversigt over administreret navigation på SharePoint server](/sharepoint/administration/overview-of-managed-navigation)
+[Oversigt over administreret navigation i SharePoint Server](/sharepoint/administration/overview-of-managed-navigation)
 
 [Cachelagring og ydeevne for strukturel navigation](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)

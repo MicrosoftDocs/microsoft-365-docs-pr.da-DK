@@ -14,27 +14,27 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
 description: 'Oversigt: Konfigurer domænecontrollere og katalogsynkroniseringsserveren for din organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Microsoft Azure.'
-ms.openlocfilehash: a3b5963100072f55c108f29d4437a2ae997ad96d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 765ccb0aaf2611947f505b53b5689009dadd5148
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098356"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940684"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>Godkendelse i organisationsnetværket med høj tilgængelighed fase 2: Konfigurer domænecontrollere
 
-I denne fase af udrulningen af høj tilgængelighed for Microsoft 365 sammenkædet godkendelse i Azure-infrastrukturtjenester konfigurerer du to domænecontrollere og katalogsynkroniseringsserveren i det virtuelle Azure-netværk. Klientwebanmodninger om godkendelse kan derefter godkendes i det virtuelle Azure-netværk i stedet for at sende denne godkendelsestrafik på tværs af vpn-forbindelsen fra webstedet til webstedet til dit lokale netværk.
+I denne fase af udrulningen af høj tilgængelighed til microsoft 365-organisationsnetværksgodkendelse i Azure-infrastrukturtjenester konfigurerer du to domænecontrollere og katalogsynkroniseringsserveren i det virtuelle Azure-netværk. Klientwebanmodninger om godkendelse kan derefter godkendes i det virtuelle Azure-netværk i stedet for at sende denne godkendelsestrafik på tværs af vpn-forbindelsen fra webstedet til webstedet til dit lokale netværk.
   
 > [!NOTE]
-> Active Directory Federation Services (AD FS) kan ikke bruge Azure Active Directory (Azure AD) som erstatning for AD DS-domænecontrollere (Active Directory-domæneservices). 
+> AD FS (Active Directory Federation Services) kan ikke bruge Azure Active Directory (Azure AD) som erstatning for AD DS-domænecontrollere (Active Directory Domain Services). 
   
-Du skal fuldføre denne fase, før du går videre til [fase 3: Konfigurer AD FS-servere](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md). Se [Udrul organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) for alle faserne.
+Du skal fuldføre denne fase, før du går videre til [fase 3: Konfigurer AD FS-servere](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md). Se [Udrul organisationsnetværksgodkendelse med høj tilgængelighed til Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md) for alle faserne.
   
 ## <a name="create-the-domain-controller-virtual-machines-in-azure"></a>Opret de virtuelle domænecontrollercomputere i Azure
 
 Først skal du udfylde kolonnen **Med navnet på den virtuelle maskine** i Tabel M og ændre størrelsen på den virtuelle maskine efter behov i kolonnen **Minimumstørrelse** .
   
-|**Element**|**Navn på virtuel maskine**|**Galleribillede**|**Storage type**|**Mindste størrelse**|
+|**Element**|**Navn på virtuel maskine**|**Galleribillede**|**Lagertype**|**Mindste størrelse**|
 |:-----|:-----|:-----|:-----|:-----|
 |1.  <br/> |![Linje.](../media/Common-Images/TableLine.png) (første domænecontroller, f.eks. DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
 |2.  <br/> |![Linje.](../media/Common-Images/TableLine.png) (anden domænecontroller, f.eks. DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
@@ -44,11 +44,11 @@ Først skal du udfylde kolonnen **Med navnet på den virtuelle maskine** i Tabel
 |6.  <br/> |![Linje.](../media/Common-Images/TableLine.png) (første webprogramproxyserver, eksempel WEB1)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
 |7.  <br/> |![Linje.](../media/Common-Images/TableLine.png) (anden webprogramproxyserver, eksempel WEB2)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
    
- **Tabel M – virtuelle maskiner til organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure**
+ **Tabel M – Virtuelle maskiner til organisationsnetværksgodkendelse med høj tilgængelighed til Microsoft 365 i Azure**
   
-Du kan se en komplet liste over størrelser på virtuelle [maskiner under Størrelser for virtuelle maskiner](/azure/virtual-machines/virtual-machines-windows-sizes).
+Du kan se en komplet liste over størrelser på virtuelle [maskiner under Størrelser for virtuelle maskiner](/azure/virtual-machines/sizes).
   
-Følgende Azure PowerShell kommandoblok opretter de virtuelle maskiner for de to domænecontrollere. Angiv værdierne for variablerne, og fjern tegnene \< and > . Bemærk, at denne Azure PowerShell kommandoblok bruger værdier fra følgende tabeller:
+Følgende Azure PowerShell-kommandoblok opretter de virtuelle maskiner til de to domænecontrollere. Angiv værdierne for variablerne, og fjern tegnene \< and > . Bemærk, at denne Azure PowerShell-kommandoblok bruger værdier fra følgende tabeller:
   
 - Tabel M til dine virtuelle maskiner
     
@@ -67,10 +67,10 @@ Husk, at du har defineret tabellerne R, V, S, I og A i [fase 1: Konfigurer Azure
 > [!NOTE]
 > Følgende kommandosæt bruger den nyeste version af Azure PowerShell. Se [Kom i gang med Azure PowerShell](/powershell/azure/get-started-azureps). 
   
-Når du har angivet alle de korrekte værdier, skal du køre den resulterende blok i prompten Azure PowerShell eller i PowerShell ISE (Integrated Script Environment) på din lokale computer.
+Når du har angivet alle de korrekte værdier, skal du køre den resulterende blok ved Azure PowerShell-prompten eller i PowerShell ISE (Integrated Script Environment) på din lokale computer.
   
 > [!TIP]
-> Hvis du vil generere PowerShell-kommandoblokke, der er klar til kørsel, baseret på dine brugerdefinerede indstillinger, skal du bruge denne [Microsoft Excel konfigurationsprojektmappe](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
+> Hvis du vil generere PowerShell-kommandoblokke, der er klar til kørsel, baseret på dine brugerdefinerede indstillinger, skal du bruge denne [Microsoft Excel-konfigurationsprojektmappe](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx). 
 
 ```powershell
 # Set up variables common to both virtual machines
@@ -144,13 +144,13 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> Da disse virtuelle maskiner er til et intranetprogram, tildeles de ikke en offentlig IP-adresse eller et DNS-domænenavn og vises på internettet. Det betyder dog også, at du ikke kan oprette forbindelse til dem fra Azure Portal. Indstillingen **Forbind** er ikke tilgængelig, når du får vist egenskaberne for den virtuelle maskine. Brug tilbehøret Forbindelse til Fjernskrivebord eller et andet fjernskrivebord-værktøj til at oprette forbindelse til den virtuelle maskine ved hjælp af dens private IP-adresse eller intranet-DNS-navn.
+> Da disse virtuelle maskiner er til et intranetprogram, tildeles de ikke en offentlig IP-adresse eller et DNS-domænenavn og vises på internettet. Det betyder dog også, at du ikke kan oprette forbindelse til dem fra Azure Portal. Indstillingen **Opret forbindelse** er ikke tilgængelig, når du får vist egenskaberne for den virtuelle maskine. Brug tilbehøret Forbindelse til Fjernskrivebord eller et andet fjernskrivebord-værktøj til at oprette forbindelse til den virtuelle maskine ved hjælp af dens private IP-adresse eller intranet-DNS-navn.
   
 ## <a name="configure-the-first-domain-controller"></a>Konfigurer den første domænecontroller
 
 Brug den valgte fjernskrivebord-klient, og opret en forbindelse til fjernskrivebord til den første virtuelle maskine til domænecontrolleren. Brug intranet-DNS- eller computernavnet og legitimationsoplysningerne for den lokale administratorkonto.
   
-Føj derefter den ekstra datadisk til den første domænecontroller med denne kommando fra en kommandoprompt **med Windows PowerShell på den første virtuelle domænecontrollercomputer**:
+Føj derefter den ekstra datadisk til den første domænecontroller med denne kommando fra en Windows PowerShell-kommandoprompt **på den første virtuelle domænecontrollercomputer**:
   
 ```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
@@ -160,7 +160,7 @@ Test derefter den første domænecontrollers forbindelse til placeringer på org
   
 Denne procedure sikrer, at DNS-navnefortsættelsen fungerer korrekt (at den virtuelle maskine er konfigureret korrekt med LOKALE DNS-servere), og at pakker kan sendes til og fra det virtuelle netværk på tværs af det lokale miljø. Hvis denne grundlæggende test mislykkes, skal du kontakte it-afdelingen for at foretage fejlfinding af problemer med DNS-navnefortsættelse og pakkelevering.
   
-Kør derefter følgende kommandoer fra Windows PowerShell kommandoprompt på den første domænecontroller:
+Kør derefter følgende kommandoer fra Windows PowerShell-kommandoprompten på den første domænecontroller:
   
 ```powershell
 $domname="<DNS domain name of the domain for which this computer will be a domain controller, such as corp.contoso.com>"
@@ -175,7 +175,7 @@ Du bliver bedt om at angive legitimationsoplysningerne for en domæneadministrat
 
 Brug den valgte fjernskrivebordsklient, og opret en forbindelse til fjernskrivebord til den anden virtuelle domænecontrollercomputer. Brug intranet-DNS- eller computernavnet og legitimationsoplysningerne for den lokale administratorkonto.
   
-Derefter skal du føje den ekstra datadisk til den anden domænecontroller med denne kommando fra en Windows PowerShell kommandoprompt **på den anden virtuelle domænecontrollercomputer**:
+Derefter skal du føje den ekstra datadisk til den anden domænecontroller med denne kommando fra en Windows PowerShell-kommandoprompt **på den anden virtuelle domænecontrollercomputer**:
   
 ```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
@@ -193,7 +193,7 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
 
 Du bliver bedt om at angive legitimationsoplysningerne for en domæneadministratorkonto. Computeren genstartes.
   
-Derefter skal du opdatere DNS-serverne for dit virtuelle netværk, så Azure tildeler virtuelle maskiner IP-adresserne for de to nye domænecontrollere, der skal bruges som deres DNS-servere. Udfyld variablerne, og kør derefter disse kommandoer fra en Windows PowerShell kommandoprompt på din lokale computer:
+Derefter skal du opdatere DNS-serverne for dit virtuelle netværk, så Azure tildeler virtuelle maskiner IP-adresserne for de to nye domænecontrollere, der skal bruges som deres DNS-servere. Udfyld variablerne, og kør derefter disse kommandoer fra en Windows PowerShell-kommandoprompt på din lokale computer:
   
 ```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -219,7 +219,7 @@ Restart-AzVM -ResourceGroupName $adrgName -Name $secondDCName
 
 Bemærk, at vi genstarter de to domænecontrollere, så de ikke er konfigureret med DNS-serverne i det lokale miljø som DNS-servere. Da de begge er begge DNS-servere, blev de automatisk konfigureret med DNS-serverne i det lokale miljø som DNS-videresendere, da de blev overført til domænecontrollere.
   
-Derefter skal vi oprette et Active Directory-replikeringswebsted for at sikre, at servere i det virtuelle Azure-netværk bruger de lokale domænecontrollere. Forbind til en af domænecontrollerne med en domæneadministratorkonto og køre følgende kommandoer fra en Windows PowerShell prompt på administratorniveau:
+Derefter skal vi oprette et Active Directory-replikeringswebsted for at sikre, at servere i det virtuelle Azure-netværk bruger de lokale domænecontrollere. Opret forbindelse til en af domænecontrollerne med en domæneadministratorkonto, og kør følgende kommandoer fra en Windows PowerShell-prompt på administratorniveau:
   
 ```powershell
 $vnet="<Table V - Item 1 - Value column>"
@@ -232,7 +232,7 @@ New-ADReplicationSubnet -Name $vnetSpace -Site $vnet
 
 Brug den valgte fjernskrivebord-klient, og opret en forbindelse til fjernskrivebord til den virtuelle maskine til katalogsynkroniseringsserveren. Brug intranet-DNS- eller computernavnet og legitimationsoplysningerne for den lokale administratorkonto.
   
-Derefter skal du slutte det til det relevante AD DS-domæne med disse kommandoer ved Windows PowerShell prompten.
+Derefter skal du slutte det til det relevante AD DS-domæne med disse kommandoer i Windows PowerShell-prompten.
   
 ```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
@@ -245,7 +245,7 @@ Her er den konfiguration, der er resultatet af den vellykkede fuldførelse af de
   
 **Fase 2: Domænecontrollere og katalogsynkroniseringsserveren for din netværksgodkendelsesinfrastruktur med høj tilgængelighed i Azure**
 
-![Fase 2 af den høje tilgængelighed Microsoft 365 netværksbaseret godkendelsesinfrastruktur i Azure med domænecontrollere.](../media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
+![Fase 2 af den høje tilgængelighed af Microsoft 365-organisationsnetværkets godkendelsesinfrastruktur i Azure med domænecontrollere.](../media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
   
 ## <a name="next-step"></a>Næste trin
 
@@ -253,8 +253,8 @@ Brug [fase 3: Konfigurer AD FS-servere](high-availability-federated-authenticati
   
 ## <a name="see-also"></a>Se også
 
-[Udrul organisationsnetværksgodkendelse med høj tilgængelighed for Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
+[Udrul organisationsnetværksgodkendelse med høj tilgængelighed til Microsoft 365 i Azure](deploy-high-availability-federated-authentication-for-microsoft-365-in-azure.md)
   
-[Organisationsnetværksidentitet for dit Microsoft 365 udviklings-/testmiljø](federated-identity-for-your-microsoft-365-dev-test-environment.md)
+[Organisationsnetværksidentitet for dit Microsoft 365-udviklings-/testmiljø](federated-identity-for-your-microsoft-365-dev-test-environment.md)
   
 [Microsoft 365-løsnings- og arkitekturcenter](../solutions/index.yml)

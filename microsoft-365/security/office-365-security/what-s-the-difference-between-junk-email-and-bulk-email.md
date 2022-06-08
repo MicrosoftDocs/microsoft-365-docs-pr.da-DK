@@ -1,5 +1,5 @@
 ---
-title: Hvad&apos; er forskellen mellem uønsket mail og massemail?
+title: Hvad er forskellen mellem uønsket mail og massemail?
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -19,12 +19,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om forskellene mellem uønsket mail (spam) og massemails (grå mail) i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5f948b45c5f4b26f3fba74f3883511218daa0ef0
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: dd876b522a0d565b84e8bb9043e277cd3bc34495
+ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647837"
+ms.lasthandoff: 06/08/2022
+ms.locfileid: "65940442"
 ---
 # <a name="whats-the-difference-between-junk-email-and-bulk-email-in-eop"></a>Hvad er forskellen mellem uønsket mail og massemail i EOP?
 
@@ -33,7 +33,7 @@ ms.locfileid: "65647837"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection organisationer (EOP) uden Exchange Online postkasser spørger kunderne nogle gange: "Hvad er forskellen mellem uønsket mail og massemail?" I dette emne forklares forskellen, og de kontrolelementer, der er tilgængelige i EOP, beskrives.
+I Microsoft 365-organisationer med postkasser i Exchange Online eller eOP-organisationer (Exchange Online Protection) uden Exchange Online-postkasser spørger kunderne nogle gange: "Hvad er forskellen mellem uønsket mail og massemail?" I dette emne forklares forskellen, og de kontrolelementer, der er tilgængelige i EOP, beskrives.
 
 - **Uønsket mail** er spam, som er uopfordrede og universelt uønskede meddelelser (når de identificeres korrekt). EOP afviser som standard spam baseret på kildemailserverens omdømme. Hvis en meddelelse overfører IP-kildens inspektion, sendes den til filtrering af spam. Hvis meddelelsen klassificeres som spam ved filtrering af spam, leveres meddelelsen (som standard) til de ønskede modtagere og flyttes til deres mappe med uønsket mail.
 
