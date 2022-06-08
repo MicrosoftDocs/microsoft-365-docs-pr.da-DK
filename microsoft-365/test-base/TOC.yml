@@ -7,7 +7,7 @@
 - name: Hurtig start
   items:
     - name: Opret en Test Base-konto
-      href: createAccount.md
+      href: createaccount.md
     - name: Test dit program på Test Base
       items:
         - name: Oversigt
@@ -16,14 +16,16 @@
           href: testapplication.md
         - name: Test din Intune app på Test Base
           href: testintuneapplication.md
-        - name: Upload din Test Base-pakke (Zip)
-          href: uploadApplication.md
+        - name: Upload en allerede opbygget zip-pakke
+          href: uploadapplication.md
     - name: Byg en pakke
       href: buildpackage.md
     - name: Klon en eksisterende pakke
       href: clonepackage.md
     - name: Pakkeretningslinje
       href: contentguideline.md
+    - name: Forstå dine forbrugsomkostninger
+      href: usagecost.md
     - name: Program-/testregler
       href: rules.md
 - name: Sådan gør du vejledninger
