@@ -1,5 +1,5 @@
 ---
-title: Ældre oplysninger til Office 365-meddelelseskryptering
+title: Ældre oplysninger om Office 365-meddelelseskryptering
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -19,87 +19,89 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
-description: Få mere at vide om, hvordan du overgange ældre filer Office 365-meddelelseskryptering (OME) i organisationen.
-ms.openlocfilehash: 6213aec3edd8d55c21ba4137a2052b08147aedc3
-ms.sourcegitcommit: 99067d5eb1fa7b094e7cdb1f7be65acaaa235a54
+description: Forstå, hvordan du kan overføre ældre filer til Office 365 OME (Message Encryption) for din organisation.
+ms.openlocfilehash: 2d994e2c521f11a70c6946e2f1a9a3a1a5766ba3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/29/2022
-ms.locfileid: "63587497"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014900"
 ---
-# <a name="legacy-information-for-office-365-message-encryption"></a>Ældre oplysninger til Office 365-meddelelseskryptering
+# <a name="legacy-information-for-office-365-message-encryption"></a>Ældre oplysninger om Office 365-meddelelseskryptering
 
-Hvis du endnu ikke har flyttet organisationen til de nye OME-funktioner, men du allerede har installeret OME, gælder oplysningerne i denne artikel for din organisation. Microsoft anbefaler, at du planlægger at flytte til de nye OME-funktioner, så snart det er fornuftigt for din organisation. Du kan finde en [vejledning under Konfigurere Office 365-meddelelseskryptering funktioner, der er bygget oven på Azure Information Protection](set-up-new-message-encryption-capabilities.md). Hvis du vil vide mere om, hvordan de nye funktioner virker først, skal du se [Office 365-meddelelseskryptering](ome.md). Resten af denne artikel henviser til OME-funktionsmåde før frigivelsen af de nye OME-funktioner.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Med Office 365-meddelelseskryptering kan din organisation sende og modtage krypterede mails mellem personer i og uden for organisationen. Office 365-meddelelseskryptering fungerer sammen med Outlook.com, Yahoo, Gmail og andre mailtjenester. Kryptering af mail er med til at sikre, at det kun er de tilsigtede modtagere, der kan se meddelelsens indhold.
+Hvis du endnu ikke har flyttet din organisation til Microsoft Purview Message Encryption, men du allerede har installeret OME, gælder oplysningerne i denne artikel for din organisation. Microsoft anbefaler, at du planlægger at flytte til Microsoft Purview Message Encryption, så snart det er rimeligt for din organisation. Du kan finde instruktioner under [Konfigurer Microsoft Purview-meddelelseskryptering](set-up-new-message-encryption-capabilities.md). Hvis du vil vide mere om, hvordan den nye meddelelseskryptering først, skal du se [Meddelelsekryptering](ome.md). Resten af denne artikel refererer til OME-funktionsmåde før udgivelsen af Microsoft Purview Message Encryption.
+
+Med Office 365 meddelelseskryptering kan din organisation sende og modtage krypterede mails mellem personer i og uden for organisationen. Office 365 Meddelelseskryptering fungerer sammen med Outlook.com, Yahoo, Gmail og andre mailtjenester. Kryptering af mailmeddelelser hjælper med at sikre, at det kun er modtagere, der er beregnet til at få vist meddelelsesindhold.
 
 Her er nogle eksempler:
 
 - En bankmedarbejder sender kreditkortopgørelser til kunder
-- En repræsentant for et forsikringsselskab leverer oplysninger om politikken til kunder
-- En lånemægler anmoder om finansielle oplysninger fra en kunde om et låneprogram
-- En sundhedsudbyder sender sundhedsplejeoplysninger til patienter
+- En repræsentant for et forsikringsselskab giver forsikringsoplysninger til kunder
+- En realkreditmægler anmoder om finansielle oplysninger fra en kunde for en låneansøgning
+- En sundhedsplejeudbyder sender oplysninger om sundhedspleje til patienter
 - En advokat sender fortrolige oplysninger til en kunde eller en anden advokat
 
-## <a name="how-office-365-message-encryption-works-without-the-new-capabilities"></a>Sådan Office 365-meddelelseskryptering fungerer uden de nye funktioner
+## <a name="how-office-365-message-encryption-works-without-the-new-capabilities"></a>Sådan fungerer Office 365 meddelelseskryptering uden de nye funktioner
 
-Office 365-meddelelseskryptering er en onlinetjeneste, der er bygget på Microsoft Azure Rights Management (Azure RMS). Med Azure RMS kan administratorer definere regler for mailflow for at bestemme betingelserne for kryptering. En regel kan f.eks. kræve kryptering af alle meddelelser, der er adresseret til en bestemt modtager.
+Office 365 Meddelelseskryptering er en onlinetjeneste, der er baseret på Microsoft Azure Rights Management (Azure RMS). Med Azure RMS kan administratorer definere regler for mailflow for at bestemme betingelserne for kryptering. En regel kan f.eks. kræve kryptering af alle meddelelser, der er adresseret til en bestemt modtager.
 
-Når nogen sender en mail i et Exchange Online, der svarer til en krypteringsregel, sendes meddelelsen med en vedhæftet HTML-fil. Modtageren åbner den vedhæftede HTML-fil og følger instruktionerne for at få vist den krypterede meddelelse på Office 365-meddelelseskryptering-portalen. Modtageren kan vælge at få vist meddelelsen ved at logge på med en Microsoft-konto eller en arbejds- eller skolekonto, der er knyttet til Office 365, eller ved hjælp af en engangs-adgangskode. Begge indstillinger hjælper med at sikre, at det kun er den tilsigtede modtager, der kan se den krypterede meddelelse. Denne proces er meget anderledes for de nye OME-funktioner.
+Når nogen sender en mail i Exchange Online, der svarer til en krypteringsregel, sendes meddelelsen med en vedhæftet HTML-fil. Modtageren åbner den vedhæftede HTML-fil og følger vejledningen i at få vist den krypterede meddelelse på portalen Office 365 Meddelelsekryptering. Modtageren kan vælge at få vist meddelelsen ved at logge på med en Microsoft-konto eller et arbejde eller en skole, der er knyttet til Office 365, eller ved hjælp af en engangskode. Begge indstillinger er med til at sikre, at det kun er den ønskede modtager, der kan få vist den krypterede meddelelse. Denne proces er meget anderledes for Microsoft Purview Message Encryption.
 
-Følgende diagram opsummerer passagen af en mail via krypterings- og dekrypteringsprocessen.
+I følgende diagram opsummeres passagen af en mail via krypterings- og dekrypteringsprocessen.
 
 ![Diagram, der viser stien til en krypteret mail.](../media/O365-Office365MessageEncryption-Concept.png)
 
-Få mere at vide [under Tjenesteoplysninger for ældre Office 365-meddelelseskryptering før udgivelsen af de nye OME-funktioner](legacy-information-for-message-encryption.md#LegacyServiceInfo).
+Du kan få flere oplysninger under [Tjenesteoplysninger om ældre Office 365 Meddelelsekryptering før udgivelsen af Microsoft Purview Message Encryption](legacy-information-for-message-encryption.md#LegacyServiceInfo).
 
-## <a name="defining-mail-flow-rules-for-office-365-message-encryption-that-dont-use-the-new-ome-capabilities"></a>Definition af regler for mailflow Office 365-meddelelseskryptering, der ikke bruger de nye OME-funktioner
+## <a name="defining-mail-flow-rules-for-office-365-message-encryption-that-dont-use-microsoft-purview-message-encryption"></a>Definition af regler for mailflow for Office 365 Meddelelsekryptering, der ikke bruger Microsoft Purview Message Encryption
 
-For at Office 365-meddelelseskryptering mailflow uden de nye funktioner definerer Exchange Online og Exchange Online Protection administratorerne Exchange regler for mailflow. Disse regler bestemmer under hvilke betingelser mails skal krypteres samt betingelser for fjernelse af meddelelseskryptering. Når en krypteringshandling er indstillet for en regel, udfører tjenesten handlingen på alle meddelelser, der opfylder regelbetingelserne, før meddelelserne sendes.
+Hvis du vil aktivere Office 365 meddelelseskryptering uden de nye funktioner, skal Exchange Online og Exchange Online Protection administratorer definere Exchange regler for mailflow. Disse regler bestemmer, under hvilke betingelser mails skal krypteres, samt betingelser for fjernelse af meddelelseskryptering. Når der er angivet en krypteringshandling for en regel, udfører tjenesten handlingen på alle meddelelser, der opfylder regelbetingelserne, før meddelelserne sendes.
 
-Regler for mailflow er fleksible, så du kan kombinere betingelser, så du kan opfylde specifikke sikkerhedskrav i en enkelt regel. Du kan f.eks. oprette en regel for at kryptere alle meddelelser, der indeholder angivne nøgleord, og som er adresseret til eksterne modtagere. Office 365-meddelelseskryptering krypterer også svar fra modtagere af krypteret mail, og du kan oprette en regel, der dekrypterer disse svar som en praktisk hjælp for dine mailbrugere. På den måde behøver brugerne i organisationen ikke at logge på krypteringsportalen for at få vist svar.
+Regler for mailflow er fleksible, så du kan kombinere betingelser, så du kan opfylde specifikke sikkerhedskrav i en enkelt regel. Du kan f.eks. oprette en regel for at kryptere alle meddelelser, der indeholder angivne nøgleord og er adresseret til eksterne modtagere. Office 365 Meddelelseskryptering krypterer også svar fra modtagere af krypterede mails, og du kan oprette en regel, der dekrypterer disse svar som en hjælp for dine mailbrugere. På den måde behøver brugerne i din organisation ikke at logge på krypteringsportalen for at få vist svar.
 
-Du kan finde flere oplysninger om, hvordan Exchange regler for mailflow, i [Definere regler for Office 365-meddelelseskryptering](define-mail-flow-rules-to-encrypt-email.md).
+Du kan finde flere oplysninger om, hvordan du opretter Exchange regler for mailflow under [Definer regler for Office 365 meddelelsekryptering](define-mail-flow-rules-to-encrypt-email.md).
 
-### <a name="use-the-eac-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-the-new-ome-capabilities"></a>Brug EAC til at oprette en regel for mailflow til kryptering af mails uden de nye OME-funktioner
+### <a name="use-the-eac-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-microsoft-purview-message-encryption"></a>Brug EAC til at oprette en regel for mailflow til kryptering af mails uden Microsoft Purview Message Encryption
 
-1. I en webbrowser skal du logge på med en arbejds- eller skolekonto, der har fået globale administratorrettigheder, [for at Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
+1. Log [på Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser) ved hjælp af en arbejds- eller skolekonto, der er tildelt globale administratortilladelser, i en webbrowser.
 
-2. Vælg **feltet** Administrator.
+2. Vælg feltet **Administrator** .
 
-3. Vælg Microsoft 365 Administration **administration i Exchange**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank"></a>
+3. Vælg **Administrationscentre** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange i Microsoft 365 Administration**</a>.
 
-4. I EAC skal du gå til **Regler for mailflow** \> og **vælge Nyt** ![nyt ikon.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Oprette en ny regel**. Du kan finde flere oplysninger om brug af [EAC Exchange Administration i Exchange Online](/exchange/exchange-admin-center).
+4. I EAC skal du gå til **Regler for** **mailflow** \> og vælge **Nyt** ![ikon.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Opret en ny regel**. Du kan få flere oplysninger om brug af EAC [i Exchange Administration i Exchange Online](/exchange/exchange-admin-center).
 
-5. Skriv **et** navn til reglen under Navn, f.eks. Kryptér mail for DrToniRamos@hotmail.com.
+5. Skriv et navn til reglen i **Navn**, f.eks. Kryptér mail for DrToniRamos@hotmail.com.
 
-6. I **Anvend denne regel, hvis du** vælger en betingelse, og angiv en værdi, hvis det er nødvendigt. Hvis du f.eks. vil kryptere meddelelser, der DrToniRamos@hotmail.com:
+6. I **Anvend denne regel, hvis** du vælger en betingelse, og angiv en værdi, hvis det er nødvendigt. Hvis du f.eks. vil kryptere meddelelser, der skal DrToniRamos@hotmail.com:
 
-   1. Vælg **modtageren i Anvend denne** regel, **hvis**.
+   1. Vælg **modtageren er i** **Anvend denne regel, hvis**.
 
-   2. Vælg et eksisterende navn på listen over kontakter, eller skriv en ny mailadresse i **afkrydsningsfeltet** Navne.
+   2. Vælg et eksisterende navn på listen over kontakter, eller skriv en ny mailadresse i feltet **Afkrydsningsfelter** .
 
       - Hvis du vil vælge et eksisterende navn, skal du vælge det på listen og derefter klikke på **OK**.
 
-      - Hvis du vil angive et nyt navn, skal du skrive en mailadresse **i afkrydsningsfeltet Navne** og derefter **vælge Kontrollér navne** \> **OK**.
+      - Hvis du vil angive et nyt navn, skal du skrive en mailadresse i **afkrydsningsfeltet Afkrydsningsfelter** og derefter markere **afkrydsningsfeltet ok** \> **.**
 
-7. Hvis du vil tilføje flere betingelser, **skal du vælge** Flere indstillinger **og derefter vælge Tilføj** betingelse og vælge på listen.
+7. Hvis du vil tilføje flere betingelser, skal du vælge **Flere indstillinger** og derefter vælge **Tilføj betingelse** og vælge på listen.
 
-   Hvis du f.eks. kun vil anvende reglen, hvis modtageren er uden for din  organisation, skal du vælge Tilføj betingelse og derefter vælge Modtageren er ekstern **/intern** \> **Uden for** \> **organisationen OK**.
+   Hvis du f.eks. kun vil anvende reglen, hvis modtageren er uden for din organisation, skal du vælge **Tilføj betingelse** og derefter vælge **Modtageren er ekstern/intern** \> **Uden for organisationen** \> **OK**.
 
-8. Hvis du vil aktivere kryptering uden at bruge de nye OME-funktioner,  \> skal du i Gør følgende vælge Rediger meddelelsessikkerhed Anvend den tidligere **version af OME** og derefter vælge **Gem**.
+8. Hvis du vil aktivere kryptering uden at bruge de nye OME-funktioner, skal du i **Gør følgende** vælge **Rediger meddelelsessikkerheden** \> **Anvend den tidligere version af OME** og derefter vælge **Gem**.
 
-   Hvis du får en fejlmeddelelse om, at IRM-licenser ikke er aktiveret, bruger du ikke den ældre OME.
+   Hvis du får vist en fejl om, at IRM-licenser ikke er aktiveret, bruger du ikke ældre OME.
 
-9. (Valgfrit) Vælg **Tilføj handling for** at angive en anden handling.
+9. (Valgfrit) Vælg **Tilføj handling** for at angive en anden handling.
 
-### <a name="use-exchange-online-powershell-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-the-new-ome-capabilities"></a>Brug Exchange Online PowerShell til at oprette en regel for mailflow til kryptering af mails uden de nye OME-funktioner
+### <a name="use-exchange-online-powershell-to-create-a-mail-flow-rule-for-encrypting-email-messages-without-the-new-ome-capabilities"></a>Brug Exchange Online PowerShell til at oprette en mailflowregel til kryptering af mails uden de nye OME-funktioner
 
-1. Forbind til Exchange Online PowerShell. Du kan finde flere oplysninger [Forbind Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Forbind til Exchange Online PowerShell. Du kan få flere oplysninger under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Opret en regel ved hjælp af **New-TransportRule-cmdlet'en** , og angiv _ApplyOME-parameteren_ til `$true`.
+2. Opret en regel ved hjælp af **cmdlet'en New-TransportRule** , og angiv parameteren _ApplyOME_ til `$true`.
 
-   I dette eksempel kræves det, at alle mails, der DrToniRamos@hotmail.com til en mailkonto, skal krypteres.
+   I dette eksempel kræves det, at alle mails, der sendes til DrToniRamos@hotmail.com, skal krypteres.
 
    ```powershell
    New-TransportRule -Name "Encrypt rule for Dr Toni Ramos" -SentTo "DrToniRamos@hotmail.com" -SentToScope "NotinOrganization" -ApplyOME $true
@@ -107,41 +109,41 @@ Du kan finde flere oplysninger om, hvordan Exchange regler for mailflow, i [Defi
 
    Hvor
 
-   - Det entydige navn på den nye regel er "Krypteringsregel for Dr Toni Ramos".
-   - _Parameteren SentTo_ angiver modtagerne af meddelelsen (identificeres ved navn, mailadresse, entydigt navn osv.). I dette eksempel identificeres modtageren af mailadressen "DrToniRamos@hotmail.com".
-   - _Parameteren SentToScope_ angiver placeringen af meddelelsens modtagere. I dette eksempel er modtagerens postkasse i hotmail og er ikke en del af organisationen, så værdien `NotInOrganization` bruges.
+   - Det entydige navn på den nye regel er "Kryptér regel for Dr. Toni Ramos".
+   - Parameteren _SentTo_ angiver meddelelsesmodtagerne (identificeret ved navn, mailadresse, entydigt navn osv.). I dette eksempel identificeres modtageren af mailadressen "DrToniRamos@hotmail.com".
+   - Parameteren _SentToScope_ angiver placeringen af meddelelsesmodtagerne. I dette eksempel er modtagerens postkasse i Hotmail og er ikke en del af organisationen, så værdien `NotInOrganization` bruges.
 
-   Du kan finde detaljerede oplysninger om syntaks og parameter [i New-TransportRule](/powershell/module/exchange/New-TransportRule).
+   Du kan finde detaljerede oplysninger om syntaks og parametre under [New-TransportRule](/powershell/module/exchange/New-TransportRule).
 
-### <a name="remove-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Fjern kryptering fra mailsvar, der er krypteret uden de nye OME-funktioner
+### <a name="remove-encryption-from-email-replies-encrypted-without-microsoft-purview-message-encryption"></a>Fjern kryptering fra mailsvar krypteret uden Microsoft Purview-meddelelsekryptering
 
-Når dine mailbrugere sender krypterede meddelelser, kan modtagerne af disse meddelelser svare med krypterede svar. Du kan oprette regler for mailflow for automatisk at fjerne kryptering fra svar, så mailbrugere i organisationen ikke behøver at logge på krypteringsportalen for at få dem vist. Du kan bruge EAC- eller Windows PowerShell-cmdlet'er til at definere disse regler. Du kan dekryptere meddelelser, der sendes fra din organisation, eller meddelelser, der er svar på meddelelser, der sendes fra din organisation. Du kan ikke dekryptere krypterede meddelelser, der stammer fra uden for organisationen.
+Når dine mailbrugere sender krypterede meddelelser, kan modtagere af disse meddelelser svare med krypterede svar. Du kan oprette regler for mailflow for automatisk at fjerne kryptering fra svar, så mailbrugere i din organisation ikke behøver at logge på krypteringsportalen for at få dem vist. Du kan bruge EAC- eller Exchange Online PowerShell-cmdlet'er til at definere disse regler. Du kan dekryptere meddelelser, der sendes fra din organisation, eller meddelelser, der er svar på meddelelser, der sendes fra din organisation. Du kan ikke dekryptere krypterede meddelelser, der stammer fra uden for organisationen.
 
-#### <a name="use-the-eac-to-create-a-rule-for-removing-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Brug EAC til at oprette en regel for at fjerne kryptering fra mailsvar, der er krypteret uden de nye OME-funktioner
+#### <a name="use-the-eac-to-create-a-rule-for-removing-encryption-from-email-replies-encrypted-without-microsoft-purview-message-encryption"></a>Brug EAC til at oprette en regel for fjernelse af kryptering fra mailsvar krypteret uden Microsoft Purview Message Encryption
 
-1. I en webbrowser, der bruger en arbejds- eller skolekonto, som har fået administratortilladelser, skal du [logge på Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser).
+1. Log [på Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser) ved hjælp af en arbejds- eller skolekonto, der er tildelt administratortilladelser, i en webbrowser.
 
-2. Vælg **feltet** Administrator.
+2. Vælg feltet **Administrator** .
 
-3. Vælg >Microsoft 365 Administration Administration **i Exchange**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank"></a>
+3. Vælg **Administrationscentre** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange i Microsoft 365 Administration**</a>.
 
-4. I EAC skal du gå til **Regler for mailflow** \> og **vælge Nyt** ![nyt ikon.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Oprette en ny regel**. Du kan finde flere oplysninger om brug af [EAC Exchange Administration i Exchange Online](/exchange/exchange-admin-center).
+4. I EAC skal du gå til **Regler for** **mailflow** \> og vælge **Nyt** ![ikon.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Opret en ny regel**. Du kan få flere oplysninger om brug af EAC [i Exchange Administration i Exchange Online](/exchange/exchange-admin-center).
 
-5. Skriv **et** navn til reglen under Navn, f.eks. Fjern kryptering fra indgående mail.
+5. Skriv et navn til reglen i **Navn**, f.eks. Fjern kryptering fra indgående post.
 
-6. In **Apply this rule if** select the conditions where encryption should be removed from messages, such as **The recipient is located** \> **Inside the organization**.
+6. I **Anvend denne regel, hvis** du vælger de betingelser, hvor kryptering skal fjernes fra meddelelser, f.eks **. Modtageren er placeret** \> **i organisationen**.
 
-7. I **Gør følgende skal** du vælge **Rediger meddelelsessikkerheden Fjern** \> **den tidligere version af OME**.
+7. **I Gør følgende** skal du vælge **Rediger meddelelsessikkerheden** \> **Fjern den tidligere version af OME**.
 
 8. Vælg **Gem**.
 
-#### <a name="use-exchange-online-powershell-to-create-a-rule-to-remove-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Brug Exchange Online PowerShell til at oprette en regel til at fjerne kryptering fra mailsvar, der er krypteret uden de nye OME-funktioner
+#### <a name="use-exchange-online-powershell-to-create-a-rule-to-remove-encryption-from-email-replies-encrypted-without-the-new-ome-capabilities"></a>Brug Exchange Online PowerShell til at oprette en regel for at fjerne kryptering fra mailsvar krypteret uden de nye OME-funktioner
 
-1. Forbind til Exchange Online PowerShell. Du kan finde flere oplysninger [Forbind Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Forbind til Exchange Online PowerShell. Du kan få flere oplysninger under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Opret en regel ved hjælp af **New-TransportRule-cmdlet'en** , og angiv _removeOME-parameteren_ til `$true`.
+2. Opret en regel ved hjælp af **cmdlet'en New-TransportRule** , og angiv parameteren _RemoveOME_ til `$true`.
 
-   I dette eksempel fjernes krypteringen fra alle de mails, der sendes til modtagere i organisationen.
+   I dette eksempel fjernes krypteringen fra alle mails, der sendes til modtagere i organisationen.
 
    ```powershell
    New-TransportRule -Name "Remove encryption from incoming mail" -SentToScope "InOrganization" -RemoveOME $true
@@ -149,169 +151,169 @@ Når dine mailbrugere sender krypterede meddelelser, kan modtagerne af disse med
 
    Hvor
 
-   - Det entydige navn på den nye regel er "Fjern kryptering fra indgående mail".
-   - _Parameteren SentToScope_ angiver placeringen af meddelelsens modtagere. I dette eksempel bruges værdien `InOrganization` , som angiver en af følgende:
-     - Modtageren er en postkasse, mailbruger, gruppe eller mailaktiveret offentlig mappe i organisationen.
-     - Modtagerens mailadresse er i et accepteret domæne, der er konfigureret som et autoritativt domæne eller en internt relædomæne i _organisationen, og_ meddelelsen blev sendt eller modtaget via en godkendt forbindelse.
+   - Det entydige navn på den nye regel er "Fjern kryptering fra indgående post".
+   - Parameteren _SentToScope_ angiver placeringen af meddelelsesmodtagerne. I dette eksempel bruges værdiværdien `InOrganization` , hvilket angiver en af følgende:
+     - Modtageren er en postkasse, en mailbruger, en gruppe eller en mailaktiveret offentlig mappe i din organisation.
+     - Modtagerens mailadresse er i et accepteret domæne, der er konfigureret som et autoritativt domæne eller et internt relædomæne i din organisation, _og_ meddelelsen blev sendt eller modtaget via en godkendt forbindelse.
 
-Du kan finde detaljerede oplysninger om syntaks og parameter [i New-TransportRule](/powershell/module/exchange/New-TransportRule).
+Du kan finde detaljerede oplysninger om syntaks og parametre under [New-TransportRule](/powershell/module/exchange/New-TransportRule).
 
-## <a name="sending-viewing-and-replying-to-messages-encrypted-without-the-new-capabilities"></a>Sende, vise og svare på meddelelser, der er krypteret uden de nye funktioner
+## <a name="sending-viewing-and-replying-to-messages-encrypted-without-the-new-capabilities"></a>Afsendelse, visning og svar på meddelelser, der er krypteret uden de nye funktioner
 
-Med Office 365-meddelelseskryptering krypteres mails automatisk baseret på administratordefinerede regler. En mail, der modtager en krypteret meddelelse i modtagerens indbakke med en vedhæftet HTML-fil.
+Med Office 365 meddelelseskryptering krypteres mails automatisk baseret på administratordefinerede regler. En mail, der indeholder en krypteret meddelelse, modtages i modtagerens indbakke med en vedhæftet HTML-fil.
 
-Modtagerne skal følge instruktionerne i meddelelsen for at åbne den vedhæftede fil og godkende ved hjælp af en Microsoft-konto eller en arbejds- eller skolekonto, der er knyttet Office 365. Hvis modtagerne ikke har nogen konto, bliver de henvist til at oprette en Microsoft-konto, så de kan logge på for at få vist den krypterede meddelelse. Alternativt kan modtagerne vælge at få en engangskode for at få vist meddelelsen. Når modtagerne har logget på eller brugt en engangs-adgangskode, kan de se den dekrypterede meddelelse og sende et krypteret svar.
+Modtagerne følger vejledningen i meddelelsen for at åbne den vedhæftede fil og godkende ved hjælp af en Microsoft-konto eller et arbejde eller en skole, der er knyttet til Office 365. Hvis modtagerne ikke har nogen af kontiene, bliver de bedt om at oprette en Microsoft-konto, hvor de kan logge på for at få vist den krypterede meddelelse. Modtagere kan også vælge at få vist meddelelsen med en engangskode. Når modtagerne har logget på eller brugt en engangskode, kan de få vist den dekrypterede meddelelse og sende et krypteret svar.
 
-## <a name="customize-encrypted-messages-with-office-365-message-encryption"></a>Tilpasse krypterede meddelelser med Office 365-meddelelseskryptering
+## <a name="customize-encrypted-messages-with-office-365-message-encryption"></a>Tilpas krypterede meddelelser med Office 365 meddelelseskryptering
 
-Som administrator Exchange Online administrator Exchange Online Protection du tilpasse dine krypterede meddelelser. Du kan f.eks. tilføje virksomhedens brand og logo, angive en introduktion og tilføje ansvarsfraskrivelsestekst i krypterede meddelelser og i den portal, hvor modtagerne får vist dine krypterede meddelelser. Ved Windows PowerShell af cmdlet'er kan du tilpasse følgende aspekter af visningsoplevelsen for modtagere af krypterede mails:
+Som Exchange Online og Exchange Online Protection administrator kan du tilpasse dine krypterede meddelelser. Du kan f.eks. tilføje firmaets brand og logo, angive en introduktion og tilføje ansvarsfraskrivelsetekst i krypterede meddelelser og på den portal, hvor modtagerne får vist dine krypterede meddelelser. Ved hjælp af Exchange Online PowerShell-cmdlet'er kan du tilpasse følgende aspekter af visningsoplevelsen for modtagere af krypterede mails:
 
-- Introduktionstekst til den mail, der indeholder den krypterede meddelelse
-- Ansvarsfraskrivelsestekst for den mail, der indeholder den krypterede meddelelse
+- Introduktion til den mail, der indeholder den krypterede meddelelse
+- Ansvarsfraskrivelsetekst i den mail, der indeholder den krypterede meddelelse
 - Portaltekst, der vises i meddelelsesvisningsportalen
 - Logo, der vises i mailen og visningsportalen
 
-Du kan også vende tilbage til standardudseet og -fornemmelsen når som helst.
+Du kan også når som helst vende tilbage til standardtypografien.
 
 I følgende eksempel vises et brugerdefineret logo for ContosoPharma i den vedhæftede fil:
 
 > [!div class="mx-imgBorder"]
-> ![Eksempel på siden med krypterede meddelelser.](../media/TA-OME-3attachment2.jpg)
+> ![Eksempel på visningens krypterede meddelelsesside.](../media/TA-OME-3attachment2.jpg)
 
-### <a name="to-customize-encryption-email-messages-and-the-encryption-portal-with-your-organizations-brand"></a>Sådan tilpasser du krypteringsmails og krypteringsportalen med organisationens brand
+### <a name="to-customize-encryption-email-messages-and-the-encryption-portal-with-your-organizations-brand"></a>Sådan tilpasser du krypteringsmailmeddelelser og krypteringsportalen med din organisations brand
 
-1. Forbind til Exchange Online bruge Remote PowerShell, som beskrevet i [Forbind to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Brug cmdletten Set-OMEConfiguration beskrevet her: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration) , eller brug følgende tabel som vejledning.
+2. Brug Set-OMEConfiguration-cmdlet'en som beskrevet her: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration) , eller brug følgende tabel for at få vejledning.
 
-   **Indstillinger for krypteringstilpasning**
+   **Indstillinger for tilpasning af kryptering**
 
-   |Sådan tilpasser du denne funktion i krypteringsoplevelsen|Brug disse Windows PowerShell kommandoer|
+   |Sådan tilpasser du denne funktion i krypteringsoplevelsen|Brug disse Exchange Online PowerShell-kommandoer|
    |---|---|
-   |Standardtekst, der accompanies krypterede mails <p> Standardteksten vises over vejledningen til visning af krypterede meddelelser|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<string of up to 1024 characters>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message from ContosoPharma secure messaging system"`|
-   |Ansvarsfraskrivelse i den mail, der indeholder den krypterede meddelelse|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<your disclaimer statement, string of up to 1024 characters>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText "This message is confidential for the use of the addressee only"`|
-   |Tekst, der vises øverst i den krypterede mailvisningsportal|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<text for your portal, string of up to 128 characters>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText "ContosoPharma secure email portal"`|
-   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <Byte[]>` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME configuration" -Image ([System.IO.File]::ReadAllBytes('C:\Temp\contosologo.png'))` <p> Understøttede filformater: .png, .jpg, .bmp eller .tiff <p> Optimal størrelse på logofil: mindre end 40 KB <p> Optimal størrelse på logobillede: 170x70 pixel|
+   |Standardtekst, der følger med krypterede mails <p> Standardteksten vises over instruktionerne til visning af krypterede meddelelser|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<string of up to 1024 characters>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText "Encrypted message from ContosoPharma secure messaging system"`|
+   |Ansvarsfraskrivelse-sætning i den mail, der indeholder den krypterede meddelelse|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<your disclaimer statement, string of up to 1024 characters>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText "This message is confidential for the use of the addressee only"`|
+   |Tekst, der vises øverst på den krypterede mailvisningsportal|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<text for your portal, string of up to 128 characters>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText "ContosoPharma secure email portal"`|
+   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <Byte[]>` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME configuration" -Image ([System.IO.File]::ReadAllBytes('C:\Temp\contosologo.png'))` <p> Understøttede filformater: .png, .jpg, .bmp eller .tiff <p> Optimal størrelse af logofil: mindre end 40 KB <p> Optimal størrelse af logobillede: 170 x 70 pixel|
 
-### <a name="to-remove-brand-customizations-from-encryption-email-messages-and-the-encryption-portal"></a>Sådan fjerner du brandtilpasninger fra kryptering af mails og krypteringsportalen
+### <a name="to-remove-brand-customizations-from-encryption-email-messages-and-the-encryption-portal"></a>Sådan fjerner du brandtilpasninger fra krypteringsmailmeddelelser og krypteringsportalen
 
-1. Forbind til Exchange Online bruge Remote PowerShell, som beskrevet i [Forbind to Exchange Online Using Remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Brug Set-OMEConfiguration som beskrevet her: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration). Hvis du vil fjerne organisationens brandede tilpasninger fra værdierne DisclaimerText, EmailText og PortalText, skal du angive værdien til en tom streng `""`. For alle billedværdier, f.eks Logo, skal du indstille værdien til `"$null"`.
+2. Brug cmdlet'en Set-OMEConfiguration som beskrevet her: [Set-OMEConfiguration](/powershell/module/exchange/set-omeconfiguration). Hvis du vil fjerne organisationens brandede tilpasninger fra værdierne DisclaimerText, EmailText og PortalText, skal du angive værdien til en tom streng, `""`. For alle billedværdier, f.eks. Logo, skal du angive værdien til `"$null"`.
 
-   **Indstillinger for krypteringstilpasning**
+   **Indstillinger for tilpasning af kryptering**
 
-   |For at gendanne denne funktion i krypteringsoplevelsen tilbage til standardtekst og -billede|Brug disse Windows PowerShell kommandoer|
+   |Sådan gendannes denne funktion i krypteringsoplevelsen til standardteksten og -billedet|Brug disse Exchange Online PowerShell-kommandoer|
    |---|---|
-   |Standardtekst, der accompanies krypterede mails <p> Standardteksten vises over vejledningen til visning af krypterede meddelelser|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<empty string>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText ""`|
-   |Ansvarsfraskrivelse i den mail, der indeholder den krypterede meddelelse <p> |`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<empty string>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText ""`|
-   |Tekst, der vises øverst i den krypterede mailvisningsportal|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<empty string>"` <p> **Eksempel på at vende tilbage til standard:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText ""`|
-   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <"$null">` <p> **Eksempel på at vende tilbage til standard:** `Set-OMEConfiguration -Identity "OME configuration" -Image $null`|
+   |Standardtekst, der følger med krypterede mails <p> Standardteksten vises over instruktionerne til visning af krypterede meddelelser|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -EmailText "<empty string>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -EmailText ""`|
+   |Ansvarsfraskrivelse-sætning i den mail, der indeholder den krypterede meddelelse <p> |`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> DisclaimerText "<empty string>"` <p> **Eksempel:** `Set-OMEConfiguration -Identity "OME Configuration" -DisclaimerText ""`|
+   |Tekst, der vises øverst på den krypterede mailvisningsportal|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -PortalText "<empty string>"` <p> **Eksempel på gendannelse tilbage til standard:** `Set-OMEConfiguration -Identity "OME Configuration" -PortalText ""`|
+   |Logo|`Set-OMEConfiguration -Identity <OMEConfigurationIdParameter> -Image <"$null">` <p> **Eksempel på gendannelse tilbage til standard:** `Set-OMEConfiguration -Identity "OME configuration" -Image $null`|
 
-## <a name="service-information-for-legacy-office-365-message-encryption-prior-to-the-release-of-the-new-ome-capabilities"></a>Tjenesteoplysninger for ældre Office 365-meddelelseskryptering før udgivelsen af de nye OME-funktioner
+## <a name="service-information-for-legacy-office-365-message-encryption-prior-to-the-release-of-the-new-ome-capabilities"></a>Tjenesteoplysninger for ældre Office 365 meddelelseskryptering før udgivelsen af de nye OME-funktioner
 <a name="LegacyServiceInfo"> </a>
 
-Den følgende tabel indeholder tekniske detaljer for Office 365-meddelelseskryptering, før de nye OME-funktioner frigives.
+Følgende tabel indeholder tekniske oplysninger om tjenesten Office 365 Meddelelsekryptering før udgivelsen af Microsoft Purview Message Encryption.
 
-|Serviceoplysninger|Beskrivelse|
+|Tjenesteoplysninger|Beskrivelse|
 |---|---|
-|Krav til klientenhed|Krypterede meddelelser kan vises på alle klientenheden, så længe den vedhæftede HTML-fil kan åbnes i en moderne browser, der understøtter formularindlæg.|
-|Krypteringsalgoritme og overholdelse af føderale standarder for informationsbehandling (FIPS)|Office 365-meddelelseskryptering bruger de samme krypteringsnøgler som Windows Azure Information Rights Management (IRM) og understøtter Cryptographic Mode 2 (2K-nøgle til RSA- og 256 bit-nøgle til SHA-1-systemer). Du kan finde flere oplysninger om de underliggende IRM-krypterede tilstande i [AD RMS-krypterede tilstande](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).|
-|Understøttede meddelelsestyper|Office 365-meddelelseskryptering understøttes kun for elementer, der har et meddelelsesklasse-id for **IPM. Bemærk!** Du kan få mere at vide [under Elementtyper og meddelelsesklasser](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
-|Begrænsninger for meddelelsesstørrelse|Office 365-meddelelseskryptering kan kryptere meddelelser på op til 25 megabyte. Du kan finde flere oplysninger om begrænsninger for [meddelelsesstørrelser Exchange Online Begrænsninger](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).|
-|Exchange Online politikker for opbevaring af mail|Exchange Online gemmer ikke de krypterede meddelelser.|
-|Sprogsupport til Office 365-meddelelseskryptering|Office 365 meddelelseskryptering understøtter Microsoft 365 sprog, som følger: <p> Indgående mails og vedhæftede HTML-filer lokaliseres baseret på afsenderens sprogindstillinger. <p> Visningsportalen er lokaliseret baseret på modtagerens browserindstillinger. <p> Brødteksten (indholdet) i den krypterede meddelelse er ikke lokaliseret.|
-|Oplysninger om beskyttelse af personlige oplysninger for OME Portal og OME Viewer-appen|Erklæringen [Office 365 messaging encryption Portal](https://privacy.microsoft.com/privacystatement) indeholder detaljerede oplysninger om, hvad Microsoft gør og ikke gør med dine private oplysninger.|
+|Krav til klientenhed|Krypterede meddelelser kan vises på en hvilken som helst klientenhed, så længe den vedhæftede HTML-fil kan åbnes i en moderne browser, der understøtter Formularindlæg.|
+|Krypteringsalgoritme og FIPS-overholdelse (Federal Information Processing Standards)|Office 365 meddelelseskryptering bruger de samme krypteringsnøgler som Windows Azure Information Rights Management (IRM) og understøtter Cryptographic Mode 2 (2K-nøgle til RSA og 256 bit nøgle til SHA-1-systemer). Du kan få flere oplysninger om de underliggende kryptografiske IRM-tilstande i [AD RMS-kryptografiske tilstande](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).|
+|Understøttede meddelelsestyper|Office 365 Meddelelseskryptering understøttes kun for elementer, der har meddelelsesklasse-id'et **IPM. Bemærk.** Du kan få flere oplysninger under [Elementtyper og meddelelsesklasser](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
+|Grænser for meddelelsesstørrelse|Office 365 Meddelelsekryptering kan kryptere meddelelser på op til 25 megabyte. Du kan finde flere oplysninger om grænser for meddelelsesstørrelser [under Exchange Online Grænser](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).|
+|Exchange Online politikker for mailopbevaring|Exchange Online gemmer ikke de krypterede meddelelser.|
+|Understøttelse af sprog for Office 365 meddelelsekryptering|Office 365 Meddelelseskryptering understøtter Microsoft 365 sprog på følgende måde: <p> Indgående mails og vedhæftede HTML-filer lokaliseres på baggrund af afsenderens sprogindstillinger. <p> Visningsportalen lokaliseres på baggrund af modtagerens browserindstillinger. <p> Brødteksten (indholdet) i den krypterede meddelelse lokaliseres ikke.|
+|Oplysninger om beskyttelse af personlige oplysninger for OME-portalen og OME Viewer-appen|[Erklæringen om beskyttelse af personlige oplysninger i Office 365 Messaging Encryption Portal](https://privacy.microsoft.com/privacystatement) indeholder detaljerede oplysninger om, hvad Microsoft gør og ikke gør med dine private oplysninger.|
 
-## <a name="frequently-asked-questions-about-legacy-ome"></a>Ofte stillede spørgsmål om den ældre OME
+## <a name="frequently-asked-questions-about-legacy-ome"></a>Ofte stillede spørgsmål om ældre OME
 <a name="LegacyServiceInfo"> </a>
 
-Har du spørgsmål om Office 365-meddelelseskryptering? Her er nogle svar. Hvis du ikke kan finde det, du skal bruge, kan du kigge [i Microsoft Tech Community-forummerne for at Office 365](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365).
+Har du spørgsmål om Office 365 meddelelseskryptering? Her er nogle svar. Hvis du ikke kan finde det, du har brug for, kan du se [Office 365 i Microsoft Tech Community-forummerne](https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365).
 
- **Q. Mine brugere sender krypterede mails til modtagere uden for organisationen. Er der noget, eksterne modtagere skal gøre for at kunne læse og svare på mails, der er krypteret med Office 365-meddelelseskryptering?**
+ **Q. Mine brugere sender krypterede mails til modtagere uden for vores organisation. Er der noget, eksterne modtagere skal gøre for at læse og besvare mails, der er krypteret med Office 365 Meddelelseskryptering?**
 
-Modtagere uden for organisationen, som modtager Microsoft 365 krypterede meddelelser, kan se dem på en af to måder:
+Modtagere uden for organisationen, der modtager Microsoft 365 krypterede meddelelser, kan få dem vist på to måder:
 
-- Ved at logge på med en Microsoft-konto eller en arbejds- eller skolekonto, der er knyttet Office 365.
+- Ved at logge på med en Microsoft-konto eller en arbejds- eller skolekonto, der er knyttet til Office 365.
 
-- Ved hjælp af en engangs-adgangskode.
+- Ved hjælp af en engangskode.
 
- **Q. Gemmes Microsoft 365 krypterede meddelelser i skyen eller på Microsoft-servere?**
+ **Q. Gemmes Microsoft 365 krypterede meddelelser i cloudmiljøet eller på Microsoft-servere?**
 
-Nej, de krypterede meddelelser gemmes på modtagerens mailsystem, og når modtageren åbner meddelelsen, sendes den midlertidigt til visning på Microsoft-servere. Meddelelserne gemmes ikke der.
+Nej, de krypterede meddelelser opbevares på modtagerens mailsystem, og når modtageren åbner meddelelsen, sendes den midlertidigt til visning på Microsoft-servere. Meddelelserne gemmes ikke der.
 
  **Q. Kan jeg tilpasse krypterede mails med mit brand?**
 
-Ja. Du kan bruge Windows PowerShell-cmdlet'er til at tilpasse den standardtekst, der vises øverst i krypterede mails, ansvarsfraskrivelsesteksten og det logo, du vil bruge til mailen og krypteringsportalen. Denne funktion er nu tilgængelig i OMEv2. Du kan få mere at [vide under Føj branding til krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md).
+Ja. Du kan bruge Exchange Online PowerShell-cmdlet'er til at tilpasse den standardtekst, der vises øverst i krypterede mails, ansvarsfraskrivelseteksten og det logo, du vil bruge til mailen og krypteringsportalen. Denne funktion er nu tilgængelig i OMEv2. Du kan finde flere oplysninger under [Føj branding til krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md).
 
- **Q. Kræver tjenesten en licens for hver bruger i organisationen?**
+ **Q. Kræver tjenesten en licens til alle brugere i organisationen?**
 
 Der kræves en licens til alle brugere i organisationen, der sender krypterede mails.
 
  **Q. Kræver eksterne modtagere abonnementer?**
 
-Nej, eksterne modtagere kræver ikke, at et abonnement læser eller besvarer krypterede meddelelser.
+Nej, eksterne modtagere kræver ikke et abonnement for at læse eller besvare krypterede meddelelser.
 
- **Q. Hvordan er Office 365-meddelelseskryptering forskellig fra RMS (Rights Management Services)?**
+ **Q. Hvordan adskiller Office 365 meddelelseskryptering sig fra RMS (Rights Management Services)?**
 
-RMS leverer information Rights Protection-funktioner til en organisations interne mails ved at levere indbyggede skabeloner, f.eks.: Videresende og Virksomhedsfortrolige. Office 365-meddelelseskryptering understøtter kryptering af mail til meddelelser, der sendes til eksterne modtagere samt interne modtagere.
+RMS leverer informationsrettighedersbeskyttelsesfunktioner til en organisations interne mails ved at angive indbyggede skabeloner, f.eks.: Videresend ikke og Firmafortrolige. Office 365 Meddelelsekryptering understøtter kryptering af mails for meddelelser, der sendes til eksterne modtagere samt interne modtagere.
 
- **Q. Hvordan er Office 365-meddelelseskryptering forskellig fra S/MIME?**
+ **Q. Hvordan adskiller Office 365 meddelelseskryptering sig fra S/MIME?**
 
-S/MIME er i bund og grund en krypteringsteknologi på klientsiden og kræver kompliceret certifikatstyrings- og publiceringsinfrastruktur. Office 365-meddelelseskryptering bruger regler for mailflow (også kaldet transportregler) og afhænger ikke af certifikatpublicering.
+S/MIME er i bund og grund en krypteringsteknologi på klientsiden og kræver kompliceret certifikatadministration og publiceringsinfrastruktur. Office 365 Meddelelsekryptering bruger regler for mailflows (også kaldet transportregler) og er ikke afhængige af certifikatudgivelse.
 
- **Q. Kan jeg læse de krypterede meddelelser over mobilenheder?**
+ **Q. Kan jeg læse de krypterede meddelelser via mobilenheder?**
 
-Ja, du kan få vist meddelelser på Android og iOS ved at downloade OME Viewer-appsene fra Google Play Butik og Apple App Store. Åbn den vedhæftede HTML-fil i OME Viewer-appen, og følg derefter vejledningen for at åbne den krypterede meddelelse. For andre mobilenheder kan du åbne den vedhæftede HTML-fil, så længe din mailklient understøtter Formularindlæg.
+Ja, du kan få vist meddelelser på Android og iOS ved at downloade OME Viewer-apps fra Google Play Butik og Apple App Store. Åbn den vedhæftede HTML-fil i OME Viewer-appen, og følg derefter vejledningen for at åbne den krypterede meddelelse. For andre mobilenheder kan du åbne den vedhæftede HTML-fil, så længe din mailklient understøtter Formularindlæg.
 
  **Q. Krypteres svar og videresendte meddelelser?**
 
-Ja. Svar fortsætter med at være krypteret i hele trådens varighed.
+Ja. Svar krypteres fortsat under hele trådens varighed.
 
- **Q. Leverer Office 365-meddelelseskryptering lokalisering?**
+ **Q. Leverer Office 365 meddelelseskryptering lokalisering?**
 
-Indgående mail- og HTML-indhold lokaliseres baseret på indstillinger for afsendermail. Visningsportalen er lokaliseret baseret på modtagerens browserindstillinger. Men det faktiske brødtekst (indhold) af krypteret meddelelse er ikke lokaliseret.
+Indgående mail og HTML-indhold lokaliseres baseret på indstillinger for afsendermail. Visningsportalen er lokaliseret på baggrund af modtagerens browserindstillinger. Den faktiske brødtekst (indholdet) i den krypterede meddelelse lokaliseres dog ikke.
 
- **Q. Hvilken krypteringsmetode bruges til Office 365-meddelelseskryptering?**
+ **Q. Hvilken krypteringsmetode bruges til Office 365 meddelelseskryptering?**
 
-Office 365-meddelelseskryptering bruger RMS (Rights Management Services) som sin krypteringsinfrastruktur. Den anvendte krypteringsmetode afhænger af, hvor du får de RMS-nøgler, der bruges til at kryptere og dekryptere meddelelser.
+Office 365 Message Encryption bruger RMS (Rights Management Services) som krypteringsinfrastruktur. Den anvendte krypteringsmetode afhænger af, hvor du henter de RMS-nøgler, der bruges til at kryptere og dekryptere meddelelser.
 
-- Hvis du bruger Microsoft Azure RMS til at hente nøgler, bruges krypteret tilstand 2. Cryptographic Mode 2 er en opdateret og forbedret krypteret AD RMS-implementering. Den understøtter RSA 2048 til signatur og kryptering og understøtter SHA-256 til signatur.
+- Hvis du bruger Microsoft Azure RMS til at hente nøglerne, bruges Cryptographic Mode 2. Cryptographic Mode 2 er en opdateret og forbedret implementering af AD RMS-kryptografi. Den understøtter RSA 2048 til signatur og kryptering og understøtter SHA-256 som signatur.
 
-- Hvis du bruger Active Directory (AD) RMS til at hente nøgler, bruges enten Cryptographic Mode 1 eller Cryptographic Mode 2. Den anvendte metode afhænger af din lokale AD RMS-installation. Cryptographic Mode 1 er den oprindelige kryptografiske AD RMS-implementering. Den understøtter RSA 1024 til signatur og kryptering og understøtter SHA-1 til signatur. Denne tilstand understøttes fortsat af alle aktuelle versioner af RMS.
+- Hvis du bruger AD (Active Directory) RMS til at hente nøglerne, bruges enten Cryptographic Mode 1 eller Cryptographic Mode 2. Den anvendte metode afhænger af AD RMS-installationen i det lokale miljø. Cryptographic Mode 1 er den oprindelige AD RMS-kryptografiske implementering. Den understøtter RSA 1024 til signatur og kryptering og understøtter SHA-1 som signatur. Denne tilstand understøttes fortsat af alle aktuelle versioner af RMS.
 
-Du kan finde flere oplysninger [under AD RMS-krypterede tilstande](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).
+Du kan få flere oplysninger under [Kryptografiske AD RMS-tilstande](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh867439(v=ws.10)).
 
-**Q. Hvorfor fortæller nogle krypterede meddelelser sig, at de kommer** fra Office365@messaging.microsoft.com?
+**Q. Hvorfor siger nogle krypterede meddelelser, at de kommer fra** Office365@messaging.microsoft.com?
 
-Når der sendes et krypteret svar fra krypteringsportalen eller via OME Viewer-appen, angives den afsendende mailadresse til Office365@messaging.microsoft.com, fordi den krypterede meddelelse sendes via et Microsoft-slutpunkt. Dette hjælper med at forhindre krypterede meddelelser i at blive markeret som spam. Det viste navn på mailen og adressen i krypteringsportalen ændres ikke på grund af denne mærkning. Desuden gælder denne mærkning kun for meddelelser, der sendes via portalen, ikke via andre mailklienter.
+Når der sendes et krypteret svar fra krypteringsportalen eller via OME Viewer-appen, angives den afsendende mailadresse til Office365@messaging.microsoft.com, fordi den krypterede meddelelse sendes via et Microsoft-slutpunkt. Dette hjælper med at forhindre, at krypterede meddelelser markeres som spam. Det viste navn på mailen og adressen i krypteringsportalen ændres ikke på grund af denne mærkat. Denne mærkning gælder også kun for meddelelser, der sendes via portalen og ikke via nogen anden mailklient.
 
- **Q. Jeg er Exchange-abonnent af hosted kryptering (EHE). Hvor kan jeg få mere at vide om opgraderingen til Office 365-meddelelseskryptering?**
+ **Q. Jeg er en ehe-abonnent (Hosted Encryption) Exchange. Hvor kan jeg få mere at vide om opgraderingen til Office 365 meddelelseskryptering?**
 
-Alle EHE-kunder er blevet opgraderet til Office 365-meddelelseskryptering. Du kan finde flere oplysninger i Exchange [Hosted Encryption Upgrade Center](../security/office-365-security/exchange-online-protection-overview.md).
+Alle EHE-kunder er blevet opgraderet til Office 365 Meddelelseskryptering. Du kan finde flere oplysninger i [Exchange Hosted Encryption Upgrade Center](../security/office-365-security/exchange-online-protection-overview.md).
 
- **Q. Har jeg brug for at åbne eventuelle URL-adresser, IP-adresser eller porte i min organisations firewall for at understøtte Office 365-meddelelseskryptering?**
+ **Q. Skal jeg åbne URL-adresser, IP-adresser eller porte i organisationens firewall for at understøtte Office 365 meddelelseskryptering?**
 
-Ja. Du skal føje URL-adresser til Exchange Online listen over tilladte for organisationen for at aktivere godkendelse for meddelelser, der er krypteret Office 365-meddelelseskryptering. Du kan finde en liste Exchange Online URL-adresser Microsoft 365 [URL-adresser og IP-adresseintervaller](../enterprise/urls-and-ip-address-ranges.md).
+Ja. Du skal føje URL-adresser til Exchange Online til listen over tilladte for din organisation for at aktivere godkendelse af meddelelser, der er krypteret af Office 365 Meddelelsekryptering. Du kan finde en liste over Exchange Online [URL-adresser under Microsoft 365 URL-adresser og IP-adresseområder](../enterprise/urls-and-ip-address-ranges.md).
 
  **Q. Hvor mange modtagere kan jeg sende en Microsoft 365 krypteret meddelelse til?**
 
-Modtagergrænsen er 500 modtagere pr. meddelelse, eller, når de kombineres efter udvidelse af distributionslisten, 11.980 tegn i meddelelsens Til-felt, alt efter hvad der kommer først.
+Modtagergrænsen er 500 modtagere pr. meddelelse, eller 11.980 tegn i feltet **Til** i meddelelsen, afhængigt af hvad der kommer først, når den kombineres efter distributionslistens udvidelse.
 
  **Q. Er det muligt at tilbagekalde en meddelelse, der er sendt til en bestemt modtager?**
 
-Nej. Du kan ikke tilbagekalde en meddelelse til en bestemt person, efter den er sendt.
+Nej. Du kan ikke tilbagekalde en meddelelse til en bestemt person, når den er sendt.
 
- **Q. Kan jeg få vist en rapport over krypterede meddelelser, der er blevet modtaget og læst?**
+ **Q. Kan jeg få vist en rapport over krypterede meddelelser, der er modtaget og læst?**
 
-Der er ikke en rapport, der viser, om en krypteret meddelelse er blevet vist, men der er tilgængelige Microsoft 365-rapporter, som du kan udnytte til at bestemme antallet af meddelelser, der matchede en bestemt regel for mailflow (også kaldet en transportregel), f.eks.
+Der er ikke en rapport, der viser, om en krypteret meddelelse er blevet vist, men der er Microsoft 365 tilgængelige rapporter, som du kan bruge til at bestemme antallet af meddelelser, der matcher en bestemt regel for et mailflow (også kendt som en transportregel), f.eks.
 
- **Q. Hvad gør Microsoft med de oplysninger, jeg angiver via OME-portalen og OME Viewer-appen?**
+ **Q. Hvad gør Microsoft med de oplysninger, jeg giver via OME-portalen og OME Viewer-appen?**
 
-Erklæringen [Office 365 messaging encryption Portal](https://privacy.microsoft.com/privacystatement) indeholder detaljerede oplysninger om, hvad Microsoft gør og ikke gør med dine private oplysninger.
+[Erklæringen om beskyttelse af personlige oplysninger i Office 365 Messaging Encryption Portal](https://privacy.microsoft.com/privacystatement) indeholder detaljerede oplysninger om, hvad Microsoft gør og ikke gør med dine private oplysninger.
 
 **Q. Hvad gør jeg, hvis jeg ikke modtager engangspasskoden, efter jeg har anmodet om den?**
 
-Først skal du kontrollere mappen med uønsket mail eller spam i din mailklient. DKIM- og DMARC-indstillinger for din organisation kan medføre, at disse mails ender med at blive filtreret som spam.
+Først skal du kontrollere mappen med uønsket post eller spam i din mailklient. DKIM- og DMARC-indstillinger for din organisation kan medføre, at disse mails ender filtreret som spam.
 
-Dernæst skal du tjekke karantæne i Security & Compliance Center. Ofte ender meddelelser, der indeholder en engangskode, især de første, din organisation modtager, i karantæne.
+Derefter skal du kontrollere karantænen i Security & Compliance Center. Meddelelser, der indeholder en engangskode, især de første, din organisation modtager, ender ofte i karantæne.

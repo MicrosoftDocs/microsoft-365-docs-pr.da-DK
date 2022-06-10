@@ -18,18 +18,18 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du administrerer delvist indekserede elementer (også kaldet ikke-indekserede elementer) fra Exchange, SharePoint og OneDrive for Business i din organisation.
-ms.openlocfilehash: aa9071cfb99219bea6c5c0d640c9e6e4255e316d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 373072ff1b1a893a8de970ccb6eacbdcd14b48d3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419962"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014944"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>Undersøger delvist indekserede elementer i eDiscovery
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-En eDiscovery-søgning, som du kører fra Microsoft Purview-compliance-portal inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. De fleste mails og webstedsdokumenter indekseres, fordi de falder inden [for indekseringsgrænserne for mails](limits-for-content-search.md#indexing-limits-for-email-messages). Nogle elementer kan dog overskride disse indekseringsgrænser og vil blive delvist indekseret. Her er andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
+En eDiscovery-søgning, som du kører fra Microsoft Purview-overholdelsesportalen, inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. De fleste mails og webstedsdokumenter indekseres, fordi de falder inden [for indekseringsgrænserne for mails](limits-for-content-search.md#indexing-limits-for-email-messages). Nogle elementer kan dog overskride disse indekseringsgrænser og vil blive delvist indekseret. Her er andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
   
 - Mails har en vedhæftet fil, der ikke kan åbnes. dette er den mest almindelige årsag til delvist indekserede mailelementer.
 
@@ -125,7 +125,7 @@ I følgende trin kan du se, hvordan du kører et PowerShell-script, der søger e
 
    ```powershell
      write-host "**************************************************"
-     write-host "     Security & Compliance Center PowerShell      " -foregroundColor yellow -backgroundcolor darkgreen
+     write-host "     Security & Compliance PowerShell      " -foregroundColor yellow -backgroundcolor darkgreen
      write-host "   eDiscovery Partially Indexed Item Statistics   " -foregroundColor yellow -backgroundcolor darkgreen
      write-host "**************************************************"
      " " 
@@ -166,9 +166,9 @@ I følgende trin kan du se, hvordan du kører et PowerShell-script, der søger e
      }
    ```
 
-2. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/exchange-online-powershell).
+2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/exchange-online-powershell).
 
-3. I Security & Compliance Center PowerShell skal du gå til den mappe, hvor du gemte scriptet i trin 1, og derefter køre scriptet. f.eks.:
+3. I Security & Compliance PowerShell skal du gå til den mappe, hvor du gemte scriptet i trin 1, og derefter køre scriptet. f.eks.:
 
    ```powershell
    .\PartiallyIndexedItems.ps1

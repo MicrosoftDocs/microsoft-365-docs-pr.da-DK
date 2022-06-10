@@ -1,5 +1,5 @@
 ---
-title: Konfigurere Teams med tre niveauer af fildelingssikkerhed
+title: Konfigurer Teams med tre niveauer af sikkerhed for fildeling
 f1.keywords: NOCSH
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -21,125 +21,124 @@ ms.custom:
 - seo-marvel-jun2020
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
 recommendations: false
-description: Lær, hvordan du konfigurerer Teams for bedre sikkerhed i forbindelse med fildeling ved hjælp af tre beskyttelsesniveauer og justering af sikkerhed uden besvær.
-ms.openlocfilehash: 116675ac6736e1761286226a8bf724915627574f
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: Få mere at vide om, hvordan du konfigurerer Teams for bedre fildelingssikkerhed ved hjælp af tre beskyttelsesniveauer, der balancerer sikkerheden med nem samarbejde.
+ms.openlocfilehash: 4d287d342371a8182a4c9de5742d2d45ca01a1c6
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63712715"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012467"
 ---
-# <a name="configure-teams-with-three-tiers-of-protection"></a>Konfigurere Teams med tre niveauer af beskyttelse
+# <a name="configure-teams-with-three-tiers-of-protection"></a>Konfigurer Teams med tre beskyttelsesniveauer
 
-Artiklerne i denne serie indeholder anbefalinger til konfiguration af teams i Microsoft Teams og deres tilknyttede SharePoint-websteder til filbeskyttelse, som afbalancerer sikkerhed med øget samarbejde.
+Artiklerne i denne serie indeholder anbefalinger til konfiguration af teams i Microsoft Teams og deres tilknyttede SharePoint websteder til filbeskyttelse, der balancerer sikkerheden med let samarbejde.
 
-Denne artikel definerer fire forskellige konfigurationer, startende med et offentligt team med de mest åbne delingspolitikker. Hver ekstra konfiguration repræsenterer et meningsfuldt trin i beskyttelsen, mens muligheden for at få adgang til og samarbejde om filer, der er gemt i teams, reduceres til det relevante sæt teammedlemmer. 
+Denne artikel definerer fire forskellige konfigurationer, startende med et offentligt team med de mest åbne delingspolitikker. Hver yderligere konfiguration repræsenterer et meningsfuldt trin op i beskyttelse, mens muligheden for at få adgang til og samarbejde om filer, der er gemt i teams, reduceres til det relevante sæt teammedlemmer. 
 
-Konfigurationerne i denne artikel er i overensstemmelse med Microsofts anbefalinger til tre niveauer af beskyttelse af data, identiteter og enheder:
+Konfigurationerne i denne artikel stemmer overens med Microsofts anbefalinger til tre niveauer af beskyttelse af data, identiteter og enheder:
 
-- Beskyttelse af grundlinje
+- Oprindelig beskyttelse
 
 - følsom beskyttelse
 
 - Meget følsom beskyttelse
 
-Du kan finde flere oplysninger om disse niveauer og funktioner, der anbefales til hvert niveau, under [Illustrationer i Microsoft Cloud til virksomhedsarkitekter](./cloud-architecture-models.md)
+Du kan få flere oplysninger om disse niveauer og egenskaber, der anbefales for hvert niveau, i [Illustrationer til Microsoft Cloud for Enterprise Architects](./cloud-architecture-models.md)
 
+## <a name="three-tiers-at-a-glance"></a>Et hurtigt overblik over tre niveauer
 
-## <a name="three-tiers-at-a-glance"></a>Hurtigt overblik over tre niveauer
+I følgende tabel opsummeres konfigurationerne for hvert niveau. Brug disse konfigurationer som udgangspunkt for anbefalinger, og juster konfigurationerne, så de opfylder organisationens behov. Du har muligvis ikke brug for alle niveauer.
 
-Følgende tabel opsummerer konfigurationerne for hvert niveau. Brug disse konfigurationer som udgangspunktanbefalinger, og juster konfigurationerne, så de opfylder organisationens behov. Du behøver muligvis ikke alle niveauer.
-
-|-|Oprindelig plan (offentlig)|Grundlinje (privat)|Følsom|Meget følsom|
+|&nbsp;|Oprindelig plan (offentlig)|Oprindelig plan (privat)|Følsomme|Meget følsom|
 |:-----|:-----|:-----|:-----|:-----|
-|Privat eller offentligt team|Offentlig|Privat|Privat|Privat|
+|Privat eller offentligt team|Offentlige|Privat|Privat|Privat|
 |Who har adgang?|Alle i organisationen, herunder B2B-brugere.|Kun medlemmer af teamet. Andre kan anmode om adgang til det tilknyttede websted.|Kun medlemmer af teamet.|Kun medlemmer af teamet.|
-|Private kanaler|Ejere og medlemmer kan oprette private kanaler|Ejere og medlemmer kan oprette private kanaler|Kun ejere kan oprette private kanaler|Kun ejere kan oprette private kanaler|
-|Delte kanaler|Ejere og medlemmer kan oprette delte kanaler|Ejere og medlemmer kan oprette delte kanaler|Kun ejere kan oprette delte kanaler|Kun ejere kan oprette delte kanaler|
-|Gæsteadgang på webstedsniveau|**Nye og eksisterende gæster** (standard).|**Nye og eksisterende gæster** (standard).|**Nye og eksisterende gæster** eller Kun **personer i din organisation afhængigt** af teamets behov.|**Nye og eksisterende gæster** eller Kun **personer i din organisation afhængigt** af teamets behov.|
-|Indstillinger for webstedsdeling|**Webstedsejere og -medlemmer og personer med redigeringstilladelser kan dele filer og mapper, men kun webstedsejere kan dele webstedet**.|**Webstedsejere og -medlemmer og personer med redigeringstilladelser kan dele filer og mapper, men kun webstedsejere kan dele webstedet**.|**Webstedsejere og -medlemmer og personer med redigeringstilladelser kan dele filer og mapper, men kun webstedsejere kan dele webstedet**.|**Kun webstedsejere kan dele filer, mapper og webstedet**.<br>Anmodninger om adgang **er slået Fra**.|
-|Ikke-administreret enhedsadgang på webstedsniveau|**Fuld adgang fra skrivebordsapps, mobilapps og internettet** (standard).|**Fuld adgang fra skrivebordsapps, mobilapps og internettet** (standard).|**Tillad begrænset adgang, der kun findes på internettet**.|**Bloker adgang**.|
+|Private kanaler|Ejere og medlemmer kan oprette private kanaler|Ejere og medlemmer kan oprette private kanaler|Det er kun ejere, der kan oprette private kanaler|Det er kun ejere, der kan oprette private kanaler|
+|Delte kanaler|Ejere og medlemmer kan oprette delte kanaler|Ejere og medlemmer kan oprette delte kanaler|Det er kun ejere, der kan oprette delte kanaler|Det er kun ejere, der kan oprette delte kanaler|
+|Gæsteadgang på webstedsniveau|**Nye og eksisterende gæster** (standard).|**Nye og eksisterende gæster** (standard).|**Nye og eksisterende gæster** eller **Kun personer i din organisation** , afhængigt af teambehov.|**Nye og eksisterende gæster** eller **Kun personer i din organisation** , afhængigt af teambehov.|
+|Indstillinger for webstedsdeling|**Webstedsejere og -medlemmer og personer med tilladelse til at redigere kan dele filer og mapper, men det er kun webstedsejere, der kan dele webstedet**.|**Webstedsejere og -medlemmer og personer med tilladelse til at redigere kan dele filer og mapper, men det er kun webstedsejere, der kan dele webstedet**.|**Webstedsejere og -medlemmer og personer med tilladelse til at redigere kan dele filer og mapper, men det er kun webstedsejere, der kan dele webstedet**.|**Det er kun webstedsejere, der kan dele filer, mapper og webstedet**.<br>Adgangsanmodninger **slået fra**.|
+|Ikke-administreret enhedsadgang på webstedsniveau|**Fuld adgang fra skrivebordsapps, mobilapps og internettet** (standard).|**Fuld adgang fra skrivebordsapps, mobilapps og internettet** (standard).|**Tillad begrænset webadgang**.|**Bloker adgang**.|
 |Standardtype for delingslink|**Kun personer i din organisation**|**Kun personer i din organisation**|**Bestemte personer**|**Personer med eksisterende adgang**|
-|Følsomhedsmærkater|Ingen|Ingen|Følsomhedsmærkat, der bruges til at klassificere teamet og kontrollere gæstedeling og ikke-administreret enhedsadgang.|Følsomhedsmærkat, der bruges til at klassificere teamet og kontrollere gæstedeling og ikke-administreret enhedsadgang. Etiketten kan også bruges på filer til at kryptere filer.|
+|Følsomhedsmærkater|Ingen|Ingen|Følsomhedsmærkat, der bruges til at klassificere teamet og styre gæstedeling og ikke-administreret enhedsadgang.|Følsomhedsmærkat, der bruges til at klassificere teamet og styre gæstedeling og ikke-administreret enhedsadgang. Label kan også bruges på filer til at kryptere filer.|
 
-En variant af indstillingen Meget følsom, [Teams med sikkerhedsisolation](secure-teams-security-isolation.md), bruger et entydigt følsomhedsmærkat for ét team, hvilket giver ekstra sikkerhed. Du kan bruge denne etiket til at kryptere filer, og kun medlemmer af det pågældende team vil kunne læse dem.
+En variation af indstillingen Meget følsom, [Teams med sikkerhedsisolation](secure-teams-security-isolation.md), bruger en entydig følsomhedsmærkat for ét team, hvilket giver ekstra sikkerhed. Du kan bruge dette mærkat til at kryptere filer, og det er kun medlemmer af teamet, der kan læse dem.
 
-Beskyttelse af grundlinjer omfatter offentlige og private teams. Offentlige teams kan findes og tilgås af alle i organisationen. Private teams kan kun findes og tilgås af medlemmer af teamet. Begge disse konfigurationer begrænser deling af det tilknyttede websted SharePoint teamejere for at hjælpe med administrationen af tilladelser.
+Grundlæggende beskyttelse omfatter offentlige og private teams. Offentlige teams kan registreres og tilgås af alle i organisationen. Private teams kan kun registreres og tilgås af teamets medlemmer. Begge disse konfigurationer begrænser deling af det tilknyttede SharePoint websted til teamejere for at hjælpe med administration af tilladelser.
 
-Teams til følsom og meget følsom beskyttelse er private teams, hvor deling og anmodning om adgang til det tilknyttede websted er begrænset, og følsomhedsetiketter bruges til at angive politikker vedrørende gæstedeling, enhedsadgang og indholdskryptering.
+Teams til følsom og meget følsom beskyttelse er private teams, hvor deling og anmodning om adgang for det tilknyttede websted er begrænset, og følsomhedsmærkater bruges til at angive politikker for gæstedeling, enhedsadgang og indholdkryptering.
 
 ## <a name="sensitivity-labels"></a>Følsomhedsmærkater
 
-De følsomme og meget følsomme niveauer bruger følsomhedsmærkater til at sikre teamet og dets filer. For at implementere disse niveauer skal du aktivere følsomhedsetiketter for at beskytte indhold [i Microsoft Teams, Office 365 Grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md).
+De følsomme og meget følsomme niveauer bruger følsomhedsmærkater som en hjælp til at beskytte teamet og dets filer. Hvis du vil implementere disse niveauer, skal du aktivere [følsomhedsmærkater for at beskytte indhold på Microsoft Teams, Office 365 grupper og SharePoint websteder](../compliance/sensitivity-labels-teams-groups-sites.md).
 
-Selvom niveauet for den oprindelige plan ikke kræver følsomhedsmærkater, kan du overveje at oprette en "generel" etiket og derefter kræve, at alle teams mærkes. Dette er med til at sikre, at brugerne foretager et bevidst valg om følsomhed, når de opretter et team. Hvis du planlægger at installere de følsomme eller meget følsomme niveauer, anbefaler vi, at du opretter en "generel" etiket, som du kan bruge til oprindelige teams og til filer, der ikke er følsomme.
+Selvom det oprindelige niveau ikke kræver følsomhedsmærkater, kan du overveje at oprette en "generel" mærkat og derefter kræve, at alle teams mærkes. Dette hjælper med at sikre, at brugerne foretager et bevidst valg om følsomhed, når de opretter et team. Hvis du planlægger at udrulle de følsomme eller meget følsomme niveauer, anbefaler vi, at du opretter en "generel" mærkat, som du kan bruge til grundlæggende teams og til filer, der ikke er følsomme.
 
-Hvis du er ny bruger af følsomhedsmærkater, anbefaler vi, at du læser [Kom i gang med følsomhedsmærkater for](../compliance/get-started-with-sensitivity-labels.md) at komme i gang. 
+Hvis du ikke kender til at bruge følsomhedsmærkater, anbefaler vi, at du læser [Kom i gang med følsomhedsmærkater](../compliance/get-started-with-sensitivity-labels.md) for at komme i gang. 
 
-Hvis du allerede har udrullet følsomhedsmærkater i din organisation, kan du overveje, hvordan de etiketter, der bruges i de følsomme og meget følsomme niveauer, passer med din overordnede etiketstrategi. 
+Hvis du allerede har udrullet følsomhedsmærkater i din organisation, skal du overveje, hvordan de mærkater, der bruges på de følsomme og meget følsomme niveauer, passer til din overordnede etiketstrategi. 
 
-## <a name="sharing-the-sharepoint-site"></a>Deling af SharePoint websted
+## <a name="sharing-the-sharepoint-site"></a>Deling af det SharePoint websted
 
-Hvert team har en tilknyttet SharePoint, hvor dokumenter er gemt. (Dette er fanen **Filer** i en teams-kanal.) Webstedet SharePoint sin egen administration af tilladelser, men er knyttet til teamtilladelser. Teamejere er inkluderet som webstedsejere, og teammedlemmer medtages som webstedsmedlemmer på det tilknyttede websted.
+Hvert team har et tilknyttet SharePoint websted, hvor dokumenter gemmes. (Dette er fanen **Filer** i en teams-kanal). Det SharePoint websted bevarer sin egen administration af tilladelser, men er sammenkædet med teamtilladelser. Teamejere er inkluderet som webstedsejere, og teammedlemmer medtages som webstedsmedlemmer på det tilknyttede websted.
 
 De resulterende tilladelser tillader:
 
-- Teamejere administrerer webstedet og har fuld kontrol over webstedets indhold.
-- Teammedlemmer kan oprette og redigere filer på webstedet. 
+- Teamejere skal administrere webstedet og have fuld kontrol over webstedets indhold.
+- Gruppemedlemmer til at oprette og redigere filer på webstedet. 
 
-Som standard kan teamejere og medlemmer dele selve webstedet med personer uden for teamet uden rent faktisk at føje dem til teamet. Vi anbefaler mod dette, da det komplicerer brugeradministrationen og kan føre til personer, der ikke er teammedlemmer, der har adgang til teamfiler, uden teamejere ved det. For at forhindre dette anbefaler vi, at det kun er ejere, der har tilladelse til at dele webstedet direkte, da de starter på det oprindelige beskyttelsesniveau.
+Teamejere og -medlemmer kan som standard dele selve webstedet med personer uden for teamet uden rent faktisk at føje dem til teamet. Vi anbefaler dette, da det komplicerer brugeradministrationen og kan medføre, at personer, der ikke er teammedlemmer, har adgang til teamfiler, uden at teamejere er sig det klart. For at forhindre dette anbefaler vi, at det kun er ejere, der har tilladelse til at dele webstedet direkte, fra det oprindelige beskyttelsesniveau.
 
-Teams har ikke en skrivebeskyttet tilladelse, men det har SharePoint websted. Hvis du har interessenter for partnergrupper, der skal kunne se teamfiler, men ikke redigere dem, bør du overveje at føje dem direkte til SharePoint-webstedet med læsetilladelser.
+Selvom teams ikke har en skrivebeskyttet tilladelsesindstilling, er det SharePoint websted. Hvis du har interessenter fra partnergrupper, der har brug for at kunne få vist teamfiler, men ikke redigere dem, kan du overveje at føje dem direkte til det SharePoint websted med læserettigheder.
 
 ## <a name="sharing-files-and-folders"></a>Deling af filer og mapper
 
-Som standard kan både ejere og medlemmer af teamet dele filer og mapper med personer uden for teamet. Dette kan omfatte personer uden for organisationen, hvis du har tilladt gæstedeling. På alle tre niveauer opdaterer vi standardlinktypen for deling for at undgå utilsigtet overdeling. På det meget følsomme niveau begrænser vi denne deling til kun teamejere.
+Som standard kan både ejere og medlemmer af teamet dele filer og mapper med personer uden for teamet. Dette kan omfatte personer uden for din organisation, hvis du har tilladt gæstedeling. På alle tre niveauer opdaterer vi standardlinktypen for deling for at undgå utilsigtet overdeling. På det meget følsomme niveau begrænser vi denne deling til teamejere.
 
-## <a name="sharing-with-people-outside-your-organization"></a>Dele med personer uden for organisationen
+## <a name="sharing-with-people-outside-your-organization"></a>Deling med personer uden for din organisation
 
-Hvis du har brug for at Teams indhold med personer uden for organisationen, er der to muligheder:
+Hvis du har brug for at dele Teams indhold med personer uden for din organisation, er der to muligheder:
 
-- **Gæstedeling** – Gæstedeling bruger Azure AD B2B-samarbejde, som giver brugerne mulighed for at dele filer, mapper, websteder, grupper og teams med personer uden for organisationen. Disse personer får adgang til delte ressourcer ved hjælp af gæstekonti i biblioteket.
-- **Delte kanaler** – Delte kanaler bruger Azure AD B2B direkte forbindelse, som giver brugerne mulighed for at dele ressourcer i organisationen med personer fra andre Azure AD-organisationer. Disse personer får adgang til de delte Teams via deres egen arbejds- eller skolekonto. Der oprettes ingen gæstekonto i organisationen.
+- **Gæstedeling** – Gæstedeling bruger Azure AD B2B-samarbejde, som giver brugerne mulighed for at dele filer, mapper, websteder, grupper og teams med personer uden for din organisation. Disse personer får adgang til delte ressourcer ved hjælp af gæstekonti i din mappe.
+- **Delte kanaler** – Delte kanaler bruger Azure AD direkte B2B-forbindelse, som giver brugerne mulighed for at dele ressourcer i din organisation med personer fra andre Azure AD organisationer. Disse personer får adgang til de delte kanaler i Teams ved hjælp af deres egen arbejds- eller skolekonto. Der oprettes ingen gæstekonto i din organisation.
 
-Både gæstedeling og delte kanaler er nyttige afhængigt af situationen. Se [Planlæg eksternt samarbejde](plan-external-collaboration.md) for at få mere at vide om hver enkelt af dem, og hvordan du beslutter, hvilken du vil bruge i et bestemt scenarie.
+Både gæstedelings- og delte kanaler er nyttige, afhængigt af situationen. Se [Planlæg eksternt samarbejde](plan-external-collaboration.md) for at få oplysninger om hver enkelt, og hvordan du beslutter, hvilken der skal bruges til et bestemt scenarie.
 
-Hvis du planlægger at bruge gæstedeling, anbefaler vi, at [du konfigurerer SharePoint og OneDrive integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) for at få den bedste delings- og administrationsoplevelse.
+Hvis du planlægger at bruge gæstedeling, anbefaler vi, at du konfigurerer [SharePoint og OneDrive integration med Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration-preview) for at få den bedste delings- og administrationsoplevelse.
 
-Teams er som standard slået til, men du kan slå det fra, hvis det er nødvendigt i de følsomme og meget følsomme niveauer, ved hjælp af en følsomhedsmærkat. Delte kanaler er som standard tilgængelige, men det kræver konfiguration af relationer på tværs af organisationer for hver organisation, du vil samarbejde med. Se [Samarbejd med eksterne deltagere i en kanal](collaborate-teams-direct-connect.md) for at få flere oplysninger.
+Teams gæstedeling er som standard slået til, men du kan slå den fra, hvis det er nødvendigt på de følsomme og meget følsomme niveauer ved hjælp af en følsomhedsmærkat. Delte kanaler er som standard slået til, men kræver, at du konfigurerer relationer på tværs af organisationer for hver organisation, du vil samarbejde med. Se [Samarbejd med eksterne deltagere i en kanal](collaborate-teams-direct-connect.md) for at få flere oplysninger.
 
-I det meget følsomme niveau, konfigurerer vi følsomhedsmærkaten til at kryptere filer, som den er anvendt på. Hvis du har brug for, at gæster skal have adgang til disse filer, skal du give dem tilladelser, når du opretter etiketten. Eksterne deltagere i delte kanaler kan ikke tildeles tilladelser til følsomhedsmærkater og kan ikke få adgang til indhold, der er krypteret med en følsomhedsmærkat.
+På det meget følsomme niveau konfigurerer vi følsomhedsmærkaten til at kryptere de filer, som det er anvendt på. Hvis du har brug for, at gæster skal have adgang til disse filer, skal du give dem tilladelser, når du opretter mærkaten. Eksterne deltagere i delte kanaler kan ikke tildeles tilladelser til følsomhedsmærkater og kan ikke få adgang til indhold, der er krypteret af en følsomhedsmærkat.
 
-Vi anbefaler på det kraftigste, at du lader gæstedeling være på grundniveau og på følsomme eller meget følsomme niveauer, hvis du har brug for at samarbejde med personer uden for organisationen. Funktionerne til gæstedeling i Microsoft 365 giver en meget mere sikker og styret delingsoplevelse end at sende filer som vedhæftede filer i mails. Det reducerer også risikoen for skygge-it, hvor brugerne bruger forbrugerprodukter, der ikke er rettigheder til, til at dele med legitime eksterne samarbejdspartnere.
+Vi anbefaler på det kraftigste, at du lader gæstedeling være aktiveret for det oprindelige niveau og for de følsomme eller meget følsomme niveauer, hvis du har brug for at samarbejde med personer uden for din organisation. Gæstedelingsfunktionerne i Microsoft 365 give en meget mere sikker og styrelig delingsoplevelse end at sende filer som vedhæftede filer i mails. Det reducerer også risikoen for skygge-it, hvor brugerne bruger uovertrøvede forbrugerprodukter til at dele med legitime eksterne samarbejdspartnere.
 
-Hvis du jævnligt samarbejder med andre organisationer, der bruger Azure AD, kan delte kanaler være en god mulighed. Delte kanaler vises problemfrit i den anden organisations Teams-klient og tillader eksterne deltagere at bruge deres almindelige brugerkonto for deres organisation i stedet for at skulle logge på separat ved hjælp af en gæstekonto.
+Hvis du jævnligt samarbejder med andre organisationer, der bruger Azure AD, kan delte kanaler være en god mulighed. Delte kanaler vises problemfrit i den anden organisations Teams klient og gør det muligt for eksterne deltagere at bruge deres almindelige brugerkonto til deres organisation i stedet for at skulle logge på separat ved hjælp af en gæstekonto.
 
-Se følgende referencer for at oprette et sikkert og produktivt miljø for gæstedeling i organisationen:
+Se følgende referencer for at oprette et sikkert og produktivt gæstedelingsmiljø for din organisation:
 
-- [Bedste fremgangsmåder for deling af filer og mapper med ikke-godkendte brugere](best-practices-anonymous-sharing.md)
-- [Begræns utilsigtet eksponering af filer ved deling med personer uden for organisationen](share-limit-accidental-exposure.md)
-- [Opret et sikkert miljø for gæstedeling](create-secure-guest-sharing-environment.md)
+- [Bedste praksis for deling af filer og mapper med ikke-godkendte brugere](best-practices-anonymous-sharing.md)
+- [Begræns utilsigtet eksponering af filer, når der deles med personer uden for din organisation](share-limit-accidental-exposure.md)
+- [Opret et sikkert gæstedelingsmiljø](create-secure-guest-sharing-environment.md)
 
 ## <a name="access-from-unmanaged-devices"></a>Adgang fra ikke-administrerede enheder
 
-For følsomme og meget følsomme niveauer begrænser vi adgangen til SharePoint med følsomhedsmærkater. Betinget adgang til Azure AD indeholder mange muligheder for at afgøre, hvordan folk får adgang til Microsoft 365, herunder begrænsninger, der er baseret på placering, risiko, enhedsoverholdelse og andre faktorer. Vi anbefaler, at du [læser Hvad er Betinget adgang?](/azure/active-directory/conditional-access/overview) og overvejer, hvilke yderligere politikker der kan være relevante for din organisation.
+For de følsomme og meget følsomme niveauer begrænser vi adgangen til SharePoint indhold med følsomhedsmærkater. Azure AD betinget adgang giver mange muligheder for at bestemme, hvordan personer får adgang Microsoft 365, herunder begrænsninger baseret på placering, risiko, enhedsoverholdelse og andre faktorer. Vi anbefaler, at du læser [Hvad er betinget adgang?](/azure/active-directory/conditional-access/overview) og overvejer, hvilke yderligere politikker der kan være relevante for din organisation.
 
-Bemærk, at gæster ofte ikke har enheder, der administreres af din organisation. Hvis du tillader gæster på et niveau, skal du overveje, hvilke typer enheder de skal bruge til at få adgang til teams og websteder og angive politikker for enheder, der ikke er administrerede.
+Bemærk, at gæster ofte ikke har enheder, der administreres af din organisation. Hvis du tillader gæster på et af niveauerne, skal du overveje, hvilke typer enheder de bruger til at få adgang til teams og websteder og angive dine ikke-administrerede enhedspolitikker i overensstemmelse hermed.
 
-### <a name="control-device-access-across-microsoft-365"></a>Styre enhedsadgang på tværs af Microsoft 365
+### <a name="control-device-access-across-microsoft-365"></a>Kontrollér enhedsadgang på tværs af Microsoft 365
 
-Indstillingen ikke-administrerede enheder i følsomhedsmærkater påvirker kun SharePoint adgang. Hvis du vil udvide kontrollen over ikke-administrerede enheder ud over SharePoint, kan du oprette en [Azure Active Directory-politik for](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device) betinget adgang for alle apps og tjenester i organisationen i stedet. Hvis du vil konfigurere denne politik specifikt for [Microsoft 365,](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#office-365) skal du vælge **Office 365** skyappen under **Skyapps eller -handlinger**.
+Indstillingen for ikke-administrerede enheder i følsomhedsmærkater påvirker kun SharePoint adgang. Hvis du vil udvide kontrollen over ikke-administrerede enheder ud over SharePoint, kan du [i stedet oprette en politik for betinget adgang Azure Active Directory for alle apps og tjenester i din organisation](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device). Hvis du vil konfigurere denne politik specifikt til [Microsoft 365-tjenester](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#office-365), skal du vælge **Office 365** cloudapp under **Cloudapps eller -handlinger**.
 
-![Skærmbillede af Office 365 i en politik for betinget Azure Active Directory adgang.](/sharepoint/sharepointonline/media/azure-ca-office365-policy.png)
+![Skærmbillede af Office 365 cloudappen i en Azure Active Directory politik for betinget adgang.](/sharepoint/sharepointonline/media/azure-ca-office365-policy.png)
 
-Brug af en politik, der påvirker alle Microsoft 365-tjenester, kan føre til bedre sikkerhed og en bedre oplevelse for dine brugere. Når du f.eks. blokerer adgangen til enheder, der ikke er administrerede, kun i SharePoint, kan brugerne få adgang til chatten i et team med en ikke-administreret enhed, men de mister adgangen, når  de forsøger at få adgang til fanen Filer. Brug af Office 365-skyappen hjælper med at undgå problemer med [tjenesteafhængigheder](/azure/active-directory/conditional-access/service-dependencies).
+Brug af en politik, der påvirker alle Microsoft 365 tjenester, kan føre til bedre sikkerhed og en bedre oplevelse for dine brugere. Når du f.eks. kun blokerer adgang til ikke-administrerede enheder i SharePoint, kan brugerne få adgang til chatten i et team med en ikke-administreret enhed, men mister adgangen, når de forsøger at få adgang til fanen **Filer**. Brug af Office 365 cloudappen hjælper med at undgå problemer med [tjenesteafhængigheder](/azure/active-directory/conditional-access/service-dependencies).
 
 ## <a name="next-step"></a>Næste trin
 
-Start med [at konfigurere det oprindelige beskyttelsesniveau](configure-teams-baseline-protection.md). Hvis det er nødvendigt, kan [du tilføje følsom](configure-teams-sensitive-protection.md) [beskyttelse og meget](configure-teams-highly-sensitive-protection.md) følsom beskyttelse oven på den oprindelige plan.
+Start med [at konfigurere det oprindelige beskyttelsesniveau](configure-teams-baseline-protection.md). Hvis det er nødvendigt, kan du tilføje [følsom beskyttelse](configure-teams-sensitive-protection.md) og [meget følsom beskyttelse](configure-teams-highly-sensitive-protection.md) oven på grundlinjen.
 
 ## <a name="see-also"></a>Se også
 
-[Sikkerhed og overholdelse i Microsoft Teams](/microsoftteams/security-compliance-overview)
+[Sikkerhed og overholdelse af angivne standarder i Microsoft Teams](/microsoftteams/security-compliance-overview)
 
-[Beskedpolitikker i Sikkerheds- og overholdelsescenter](../compliance/alert-policies.md)
+[Underretningspolitikker](../compliance/alert-policies.md)

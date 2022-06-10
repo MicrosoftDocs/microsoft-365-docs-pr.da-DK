@@ -1,5 +1,5 @@
 ---
-title: Opdater den nøjagtige datamatchfølsom tabelfil til informationskilden
+title: Opdater den nøjagtige datamatchtabelfil til følsomme oplysninger
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Opdater din tabelfil med følsomme oplysninger.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: fe72fac43d3cc9a568d8aa1c5d985d34f8477a4d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: a846f22b866b4b8adf75c44e55fde4b9d56b8ac4
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760839"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008839"
 ---
 # <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Opdater den nøjagtige datamatchtabelfil til følsomme oplysninger 
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan opdatere din følsomme informationsdatabase op til 5 gange i hver 24-timers periode. Du skal gemme og uploade din følsomme informationskildetabel igen.
 
@@ -39,15 +41,15 @@ Du kan opdatere din følsomme informationsdatabase op til 5 gange i hver 24-time
 
    |Metode|Sådan gør du|
    |---|---|
-   |Windows PowerShell|Se dokumentationen [til ScheduledTasks](/powershell/module/scheduledtasks/) og [eksemplet med PowerShell-scriptet](#example-powershell-script-for-task-scheduler) i denne artikel|
+   |PowerShell|Se dokumentationen [til ScheduledTasks](/powershell/module/scheduledtasks/) og [eksemplet med PowerShell-scriptet](#example-powershell-script-for-task-scheduler) i denne artikel|
    |Opgavestyrings-API|Se dokumentationen til [Opgavestyring](/windows/desktop/TaskSchd/using-the-task-scheduler)|
    |Windows brugergrænseflade|Klik på **Start** i Windows, og skriv Opgavestyring. Højreklik derefter på **Opgavestyring** på listen over resultater, og vælg **Kør som administrator**.|
 
-### <a name="example-powershell-script-for-task-scheduler"></a>Eksempel på PowerShell-script til Opgavestyring 
+## <a name="example-powershell-script-for-task-scheduler"></a>Eksempel på PowerShell-script til Opgavestyring
 
 Dette afsnit indeholder et eksempel på et PowerShell-script, som du kan bruge til at planlægge dine opgaver for hashing af data og uploade de hashkodede data:
 
-#### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Planlæg hashing og upload i et kombineret trin
+### <a name="schedule-hashing-and-upload-in-a-combined-step"></a>Planlæg hashing og upload i et kombineret trin
 
 ```powershell
 param(\[string\]$dataStoreName,\[string\]$fileLocation)
@@ -82,7 +84,7 @@ $taskName = 'EDMUpload\_' + $dataStoreName
 Register-ScheduledTask -TaskName $taskName -InputObject $scheduledTask -User $user -Password $password
 ```
 
-#### <a name="schedule-hashing-and-upload-as-separate-steps"></a>Planlæg hashing og upload som separate trin
+### <a name="schedule-hashing-and-upload-as-separate-steps"></a>Planlæg hashing og upload som separate trin
 
 ```powershell
 param(\[string\]$dataStoreName,\[string\]$fileLocation)

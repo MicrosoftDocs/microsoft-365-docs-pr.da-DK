@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
 ms.custom: seo-marvel-apr2020
 description: Brug Indholdssøgning på Microsoft Purview-overholdelsesportalen til at udføre en målrettet samling, som søger efter elementer i en bestemt postkasse eller webstedsmappe.
-ms.openlocfilehash: 396c42183667e59e738779f618ca077d909db419
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 224da8e651599d1d007684a069b0dbb9d30a6119
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094918"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015534"
 ---
 # <a name="use-content-search-for-targeted-collections"></a>Brug indholdssøgning til målrettede samlinger
 
@@ -41,12 +41,12 @@ Indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen giver ikke 
 
 - Du skal også have tildelt rollen Mailmodtagere i din Exchange Online organisation. Dette er påkrævet for at køre cmdlet'en **Get-MailboxFolderStatistics** , som er inkluderet i scriptet. Rollen Mailmodtagere tildeles som standard til rollegrupperne Administration af organisation og Modtageradministration i Exchange Online. Du kan få flere oplysninger om tildeling af tilladelser i Exchange Online under [Administrer medlemmer af rollegruppen](/exchange/manage-role-group-members-exchange-2013-help). Du kan også oprette en brugerdefineret rollegruppe, tildele rollen Mailmodtagere til den og derefter tilføje de medlemmer, der skal køre scriptet i trin 1. Du kan få flere oplysninger under [Administrer rollegrupper](/Exchange/permissions-exo/role-groups).
 
-- Scriptet i denne artikel understøtter moderne godkendelse. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-ExchangeOnline` og bruge parameteren *ExchangeEnvironmentName* (og den relevante værdi for din organisationstype) til at oprette forbindelse til Exchange Online PowerShell.  Du skal også redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance Center PowerShell. Du kan få flere oplysninger i eksemplerne i [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) og [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
+- Scriptet i denne artikel understøtter moderne godkendelse. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-ExchangeOnline` og bruge parameteren *ExchangeEnvironmentName* (og den relevante værdi for din organisationstype) til at oprette forbindelse til Exchange Online PowerShell.  Du skal også redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance PowerShell. Du kan få flere oplysninger i eksemplerne i [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) og [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
-- Hver gang du kører scriptet, oprettes der en ny ekstern PowerShell-session. Det betyder, at du kan bruge alle de eksterne PowerShell-sessioner, der er tilgængelige for dig. Du kan forhindre, at dette sker, ved at køre følgende kommando for at afbryde forbindelsen til dine aktive PowerShell-fjernsessioner.
+- Hver gang du kører scriptet, oprettes der en ny ekstern PowerShell-session. Det betyder, at du kan bruge alle de eksterne PowerShell-sessioner, der er tilgængelige for dig. Du kan forhindre, at dette sker, ved at køre følgende kommandoer for at afbryde forbindelsen til dine aktive PowerShell-fjernsessioner.
 
   ```powershell
-  Get-PSSession | Remove-PSSession
+  Get-PSSession | Remove-PSSession; Disconnect-ExchangeOnline
   ```
 
     Du kan få flere oplysninger under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
@@ -67,7 +67,7 @@ Det script, du kører i dette første trin, returnerer en liste over postkassema
 
   - **OneDrive for Business**:`https://contoso-my.sharepoint.com/personal/stacig_contoso_onmicrosoft_com`
 
-- **Dine brugerlegitimationsoplysninger**: Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til Exchange Online PowerShell eller Security & Compliance Center PowerShell ved hjælp af moderne godkendelse. Som tidligere forklaret, skal du have tildelt de nødvendige tilladelser for at kunne køre dette script.
+- **Dine brugerlegitimationsoplysninger**: Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til Exchange Online PowerShell eller Security & Compliance PowerShell ved hjælp af moderne godkendelse. Som tidligere forklaret, skal du have tildelt de nødvendige tilladelser for at kunne køre dette script.
 
 Sådan får du vist en liste over postkassemapper eller webstedsdokumentlinknavne (sti):
 
@@ -132,7 +132,7 @@ Sådan får du vist en liste over postkassemapper eller webstedsdokumentlinknavn
       $searchActionName = "SPFoldersSearch_Preview"
       # List the folders for the SharePoint or OneDrive for Business Site
       $siteUrl = $addressOrSite
-      # Connect to Security & Compliance Center PowerShell
+      # Connect to Security & Compliance PowerShell
       if (!$SccSession)
       {
           Import-Module ExchangeOnlineManagement
@@ -222,7 +222,7 @@ Når du har kørt scriptet for at indsamle en liste over mappe-id'er eller dokum
 
 1. Gå til , <https://compliance.microsoft.com> og log på med den konto og de legitimationsoplysninger, du brugte til at køre scriptet i trin 1.
 
-2. I venstre rude i overholdelsescenteret skal du klikke på **Vis** **alleIndholdssøgning** >  og derefter klikke på **Ny søgning**.
+2. Klik på **Vis al** > **indholdssøgning** i venstre rude i overholdelsescenteret, og klik derefter på **Ny søgning**.
 
 3. I feltet **Nøgleord** skal du indsætte den `folderid:<folderid>` værdi eller  `documentlink:<path>/*` , der blev returneret af scriptet, i trin 1.
 

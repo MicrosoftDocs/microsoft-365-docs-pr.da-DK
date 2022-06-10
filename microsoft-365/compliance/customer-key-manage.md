@@ -12,12 +12,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Når du har konfigureret Kundenøgle, kan du få mere at vide om, hvordan du administrerer den ved at gendanne AKV-nøgler og administrere tilladelser samt oprette og tildele politikker for datakryptering.
-ms.openlocfilehash: a1fab2694be866acd6035af90929b5ab690da031
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: 08fae19a5f0f27ff530c734c46453f885ea9043e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663464"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015742"
 ---
 # <a name="manage-customer-key"></a>Administrer kundenøgle
 
@@ -30,8 +30,8 @@ Når du har konfigureret kundenøgle, skal du oprette og tildele en eller flere 
 Før du begynder, skal du sikre dig, at du har fuldført de opgaver, der kræves for at konfigurere kundenøglen. Du kan få flere oplysninger under [Konfigurer kundenøgle](customer-key-set-up.md). Du skal bruge de Key Vault URI'er, du fik under installationen, for at oprette programmet. Du kan finde flere oplysninger [under Hent URI'en for hver Azure Key Vault-nøgle](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Følg disse trin for at oprette en dep med flere arbejdsbelastninger:
-  
-1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i et Windows PowerShell vindue ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller overholdelsesadministratortilladelser i din organisation.
+
+1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har tilladelser som global administrator eller overholdelsesadministrator i din organisation.
 
 2. Hvis du vil oprette en forhindring af dataforbrug, skal du bruge cmdlet'en New-M365DataAtRestEncryptionPolicy.
 
@@ -73,15 +73,15 @@ Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy "Contoso_Glob
 
 ## <a name="create-a-dep-for-use-with-exchange-online-mailboxes"></a>Opret en forhindring af dataforbrug til brug sammen med Exchange Online postkasser
 
-Før du begynder, skal du sikre dig, at du har fuldført de opgaver, der kræves for at konfigurere Azure Key Vault. Du kan få flere oplysninger under [Konfigurer kundenøgle](customer-key-set-up.md). Du skal fuldføre disse trin ved at oprette fjernforbindelse til Exchange Online med Windows PowerShell.
+Før du begynder, skal du sikre dig, at du har fuldført de opgaver, der kræves for at konfigurere Azure Key Vault. Du kan få flere oplysninger under [Konfigurer kundenøgle](customer-key-set-up.md). Du skal fuldføre disse trin i Exchange Online PowerShell.
 
 En dep er knyttet til et sæt nøgler, der er gemt i Azure Key Vault. Du kan tildele en deaktiveringspostkasse i Microsoft 365. Microsoft 365 bruger derefter de nøgler, der er identificeret i politikken, til at kryptere postkassen. Du skal bruge de Key Vault URI'er, du fik under installationen, for at oprette programmet. Du kan finde flere oplysninger [under Hent URI'en for hver Azure Key Vault-nøgle](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Huske! Når du opretter en forhindring af dataafhænging, angiver du to nøgler i to forskellige Azure Key Vaults. Opret disse nøgler i to separate Azure-områder for at sikre georedundans.
 
 Følg disse trin for at oprette en forhindring af dataforbrug, der skal bruges sammen med en postkasse:
-  
-1. Hvis du bruger en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller Exchange Online administratortilladelser i din organisation, [skal du oprette forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i et Windows PowerShell vindue.
+
+1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller Exchange Online administratortilladelser i din organisation.
 
 2. Hvis du vil oprette en forhindring af dataforbrug, skal du bruge cmdlet'en New-DataEncryptionPolicy ved at skrive følgende kommando.
 
@@ -100,7 +100,7 @@ Følg disse trin for at oprette en forhindring af dataforbrug, der skal bruges s
    - *KeyVaultURI2* er URI'en for den anden nøgle i politikken. Det kunne f.eks. være <https://contoso_EastUS2vault01.vault.azure.net/keys/USA_Key_02>. Adskil de to URI'er med et komma og et mellemrum.
 
    Eksempel:
-  
+
    ```powershell
    New-DataEncryptionPolicy -Name USA_mailboxes -Description "Root key for mailboxes in USA and its territories" -AzureKeyIDs https://contoso_EastUSvault02.vault.azure.net/keys/USA_key_01, https://contoso_CentralUSvault02.vault.azure.net/keys/USA_Key_02
    ```
@@ -110,7 +110,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [New-DataEncr
 ### <a name="assign-a-dep-to-a-mailbox"></a>Tildel en deaktivering af data til en postkasse
 
 Tildel programmet til en postkasse ved hjælp af cmdlet'en Set-Mailbox. Når du har tildelt politikken, kan Microsoft 365 kryptere postkassen med den nøgle, der er identificeret i programmet til forebyggelse af datadata.
-  
+
 ```powershell
 Set-Mailbox -Identity <MailboxIdParameter> -DataEncryptionPolicy <PolicyName>
 ```
@@ -128,16 +128,16 @@ Hvor *MailUserIdParameter* angiver en mailbruger (også kendt som en mailaktiver
 ## <a name="create-a-dep-for-use-with-sharepoint-online-onedrive-for-business-and-teams-files"></a>Opret en deaktiveringsfil til brug sammen med SharePoint Online-, OneDrive for Business- og Teams-filer
 
 Før du begynder, skal du sikre dig, at du har fuldført de opgaver, der kræves for at konfigurere Azure Key Vault. Du kan få flere oplysninger under [Konfigurer kundenøgle](customer-key-set-up.md).
-  
-Hvis du vil konfigurere kundenøglen for SharePoint Online, OneDrive for Business og Teams filer, skal du fuldføre disse trin ved at oprette fjernforbindelse til SharePoint Online med Windows PowerShell.
-  
+
+Hvis du vil konfigurere kundenøglen til SharePoint Online, OneDrive for Business og Teams filer, skal du fuldføre disse trin i SharePoint Online PowerShell.
+
 Du knytter en forhindring af dataforbindelse til et sæt nøgler, der er gemt i Azure Key Vault. Du anvender en forhindring af dataaf data på alle dine data på én geografisk placering, også kaldet et geografisk område. Hvis du bruger multi-geo-funktionen i Office 365, kan du oprette én DEP pr. geo med mulighed for at bruge forskellige nøgler pr. geo. Hvis du ikke bruger multi-geo, kan du oprette én forhindring af dataanvendelse i din organisation til brug sammen med SharePoint Online-, OneDrive for Business- og Teams-filer. Microsoft 365 bruger de nøgler, der er identificeret i forhindring af dataafklaring, til at kryptere dine data i det pågældende geografiske område. Du skal bruge de Key Vault URI'er, du fik under installationen, for at oprette programmet. Du kan finde flere oplysninger [under Hent URI'en for hver Azure Key Vault-nøgle](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
-  
+
 Huske! Når du opretter en forhindring af dataafhænging, angiver du to nøgler i to forskellige Azure Key Vaults. Opret disse nøgler i to separate Azure-områder for at sikre georedundans.
-  
-Hvis du vil oprette en forhindring af datakørsel, skal du fjerntilslut SharePoint Online ved hjælp af Windows PowerShell.
-  
-1. Hvis du bruger en arbejds- eller skolekonto på din lokale computer, der har globale administratortilladelser i din organisation, [Forbind til at SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?preserve-view=true&view=sharepoint-ps).
+
+Hvis du vil oprette en forhindring af datadata, skal du bruge SharePoint Online PowerShell.
+
+1. Opret [forbindelse til SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?preserve-view=true&view=sharepoint-ps) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administratortilladelser i din organisation.
 
 2. Kør Register-SPODataEncryptionPolicy-cmdlet'en på følgende måde i Microsoft Office SharePoint Online Management Shell:
 
@@ -146,7 +146,7 @@ Hvis du vil oprette en forhindring af datakørsel, skal du fjerntilslut SharePoi
    ```
 
    Eksempel:
-  
+
    ```powershell
    Register-SPODataEncryptionPolicy -PrimaryKeyVaultName 'stageRG3vault' -PrimaryKeyName 'SPKey3' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'stageRG5vault' -SecondaryKeyName 'SPKey5' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a'
    ```
@@ -186,7 +186,7 @@ Hvis du vil tildele en dep til en postkasse, før du overfører den til Office 3
 ### <a name="determine-the-dep-assigned-to-a-mailbox"></a>Fastlæg den forhindring af dataafhænging, der er tildelt en postkasse
 
 Brug cmdlet'en Get-MailboxStatistics til at bestemme, hvilken forhindringspakke der er tildelt til en postkasse. Cmdlet'en returnerer et entydigt id (GUID).
-  
+
 1. Hvis du bruger en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, kan du [oprette forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
    ```powershell
@@ -194,9 +194,9 @@ Brug cmdlet'en Get-MailboxStatistics til at bestemme, hvilken forhindringspakke 
    ```
 
    Hvor *GeneralMailboxOrMailUserIdParameter* angiver en postkasse, og DataEncryptionPolicyID returnerer GUID for forhindring af dataoverførsel. Du kan få flere oplysninger om cmdlet'en Get-MailboxStatistics under [Get-MailboxStatistics](/powershell/module/exchange/get-mailboxstatistics).
-  
+
 2. Kør Get-DataEncryptionPolicy-cmdlet'en for at finde det brugervenlige navn på den forhindring af datakørsel, som postkassen er tildelt.
-  
+
    ```powershell
    Get-DataEncryptionPolicy <GUID>
    ```
@@ -210,9 +210,9 @@ Uanset om du har rullet en kundenøgle, tildelt en ny forhindringsliste eller mi
 ### <a name="verify-encryption-completes-for-exchange-online-mailboxes"></a>Kontrollér, at krypteringen er fuldført for Exchange Online postkasser
 
 Det kan tage noget tid at kryptere en postkasse. For første gang skal postkassen også flyttes helt fra én database til en anden, før tjenesten kan kryptere postkassen.
-  
+
 Brug cmdlet'en Get-MailboxStatistics til at bestemme, om en postkasse er krypteret.
-  
+
 ```powershell
 Get-MailboxStatistics -Identity <GeneralMailboxOrMailUserIdParameter> | fl IsEncrypted
 ```
@@ -230,7 +230,7 @@ Kontrollér krypteringsstatussen ved at køre Get-SPODataEncryptionPolicy-cmdlet
 ```
 
 Outputtet fra denne cmdlet indeholder:
-  
+
 - URI'en for den primære nøgle.
 
 - URI'en for den sekundære nøgle.
@@ -251,40 +251,40 @@ Outputtet fra denne cmdlet indeholder:
 
 Hvis du vil have oplysninger om alle de DEP'er, du har oprettet til brug med flere arbejdsbelastninger, skal du udføre disse trin:
 
-1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i et Windows PowerShell vindue ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller overholdelsesadministratortilladelser i din organisation.
+1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har tilladelser som global administrator eller overholdelsesadministrator i din organisation.
 
    - Kør denne kommando for at returnere listen over alle DEP'er med flere arbejdsbelastninger i organisationen.
 
      ```powershell
-        Get-M365DataAtRestEncryptionPolicy
+     Get-M365DataAtRestEncryptionPolicy
      ```
 
    - Hvis du vil returnere oplysninger om en bestemt forhindring af datakørsel, skal du køre denne kommando. I dette eksempel returneres detaljerede oplysninger om programmet til dataafsendelse med navnet "Contoso_Global".
 
      ```powershell
-        Get-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global"
+     Get-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global"
      ```
 
 ## <a name="get-multi-workload-dep-assignment-information"></a>Hent tildelingsoplysninger om dep-tildelinger med flere arbejdsbelastninger
 
-Følg disse trin for at finde ud af, hvilken dep der i øjeblikket er tildelt din lejer. 
+Følg disse trin for at finde ud af, hvilken dep der i øjeblikket er tildelt din lejer.
 
-1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i et Windows PowerShell vindue ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller overholdelsesadministratortilladelser i din organisation.
+1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har tilladelser som global administrator eller overholdelsesadministrator i din organisation.
 
 2. Skriv denne kommando.
 
    ```powershell
-      Get-M365DataAtRestEncryptionPolicyAssignment
+   Get-M365DataAtRestEncryptionPolicyAssignment
    ```
 
 ## <a name="disable-a-multi-workload-dep"></a>Deaktiver en forhindring af databelastning med flere arbejdsbelastninger
 
 Før du deaktiverer en dep med flere arbejdsbelastninger, skal du fjerne tildelingen af forhindring af datatab fra arbejdsbelastninger i din lejer. Hvis du vil deaktivere en forhindring af datamængde, der bruges sammen med flere arbejdsbelastninger, skal du udføre disse trin:
 
-1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i et Windows PowerShell vindue ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller overholdelsesadministratortilladelser i din organisation.
+1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har tilladelser som global administrator eller overholdelsesadministrator i din organisation.
 
 2. Kør cmdlet'en Set-M365DataAtRestEncryptionPolicy.
-  
+
    ```powershell
    Set-M365DataAtRestEncryptionPolicy -[Identity] "PolicyName" -Enabled $false
    ```
@@ -300,19 +300,19 @@ Set-M365DataAtRestEncryptionPolicy -Identity "Contoso_Global" -Enabled $false
 ## <a name="restore-azure-key-vault-keys"></a>Gendan Azure Key Vault-nøgler
 
 Før du udfører en gendannelse, skal du bruge de genoprettelsesfunktioner, der leveres af blød sletning. Alle nøgler, der bruges sammen med Kundenøgle, skal have blød sletning aktiveret. Blød sletning fungerer som en papirkurv og gør det muligt at gendanne i op til 90 dage, uden at det er nødvendigt at gendanne. Gendannelse bør kun være påkrævet under ekstreme eller usædvanlige omstændigheder, f.eks. hvis nøglen eller key vault går tabt. Hvis du skal gendanne en nøgle til brug sammen med kundenøglen, skal du i Azure PowerShell køre Restore-AzureKeyVaultKey-cmdlet'en på følgende måde:
-  
+
 ```powershell
 Restore-AzKeyVaultKey -VaultName <vault name> -InputFile <filename>
 ```
 
 Eksempel:
-  
+
 ```powershell
 Restore-AzKeyVaultKey -VaultName Contoso-O365EX-NA-VaultA1 -InputFile Contoso-O365EX-NA-VaultA1-Key001-Backup-20170802.backup
 ```
 
 Hvis key vault allerede indeholder en nøgle med samme navn, mislykkes gendannelsen. Restore-AzKeyVaultKey gendanner alle nøgleversioner og alle metadata for nøglen, herunder nøglenavnet.
-  
+
 ## <a name="manage-key-vault-permissions"></a>Administrer tilladelser til key vault
 
 Der findes flere cmdlet'er, der giver dig mulighed for at få vist og om nødvendigt fjerne tilladelser til key vault. Du skal muligvis fjerne tilladelser, f.eks. når en medarbejder forlader teamet. For hver af disse opgaver skal du bruge Azure PowerShell. Du kan få flere oplysninger om Azure PowerShell under [Oversigt over Azure PowerShell](/powershell/azure/).
@@ -330,7 +330,7 @@ Get-AzKeyVault -VaultName Contoso-O365EX-NA-VaultA1
 ```
 
 Hvis du vil fjerne en administrators tilladelser, skal du køre cmdlet'en Remove-AzKeyVaultAccessPolicy:
-  
+
 ```powershell
 Remove-AzKeyVaultAccessPolicy -VaultName <vault name> -UserPrincipalName <UPN of user>
 ```
@@ -348,7 +348,7 @@ Hvis du har brug for at vende tilbage til Microsoft-administrerede nøgler, kan 
 > [!IMPORTANT]
 > Offboarding er ikke det samme som en datarensning. En datarensning sletter din organisations data permanent fra Microsoft 365, og det gør offboarding ikke. Du kan ikke udføre en datarensning for en politik for flere arbejdsbelastninger.
 
-Hvis du beslutter ikke længere at bruge Kundenøgle til at tildele dep'er med flere arbejdsbelastninger, skal du kontakte Microsoft Support med en anmodning om at "offboard" fra Kundenøgle. Bed supportteamet om at sende en serviceanmodning til Microsoft Purview kundenøgleteamet. Kontakt m365-ck@service.microsoft.com, hvis du har spørgsmål.
+Hvis du beslutter ikke længere at bruge Kundenøgle til at tildele dep'er med flere arbejdsbelastninger, skal du kontakte Microsoft Support med en anmodning om at "offboard" fra Kundenøgle. Bed supportteamet om at sende en serviceanmodning til Microsoft Purview-kundenøgleteamet. Kontakt m365-ck@service.microsoft.com, hvis du har spørgsmål.
 
 Hvis du ikke længere vil kryptere individuelle postkasser ved hjælp af DEP'er på postkasseniveau, kan du fjerne tildelingen af deP'er på postkasseniveau fra alle dine postkasser.
 
@@ -359,13 +359,13 @@ Hvis du vil fjerne tildelingen af deP'er til postkasser, skal du bruge PowerShel
 2. Kør cmdlet'en Set-Mailbox.
 
    ```powershell
-   Set-Mailbox -Identity <mailbox> -DataEncryptionPolicy $NULL
+   Set-Mailbox -Identity <mailbox> -DataEncryptionPolicy $null
    ```
 
 Når du kører denne cmdlet, ophæves tildelingen af den aktuelt tildelte forhindring af dataafgang, og postkassen krypteres igen ved hjælp af den DEP, der er knyttet til microsoft-administrerede standardnøgler. Du kan ikke fjerne tildelingen af den dep, der bruges af Microsoft-administrerede nøgler. Hvis du ikke vil bruge Microsoft-administrerede nøgler, kan du tildele en anden kundenøgle til postkassen.
 
 > [!IMPORTANT]
-> Gå tilbage fra kundenøgle til administrerede microsoft-nøgler understøttes ikke for filer af typen SharePoint Online, OneDrive for Business og Teams. 
+> Gå tilbage fra kundenøgle til administrerede microsoft-nøgler understøttes ikke for filer af typen SharePoint Online, OneDrive for Business og Teams.
 
 ## <a name="revoke-your-keys-and-start-the-data-purge-path-process"></a>Tilbagekald dine nøgler, og start processen til fjernelse af data
 
@@ -412,7 +412,7 @@ Hvis du vil starte stien til datarensning, skal du udføre disse trin:
 
 ### <a name="revoke-your-customer-keys-and-the-availability-key-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>Tilbagekald dine kundenøgler og tilgængelighedsnøglen for SharePoint Online-, OneDrive for Business- og Teams-filer
 
-Rensning af SharePoint, OneDrive til arbejde eller skole og Teams filer understøttes ikke i Kundenøgle. Disse dep'er med flere arbejdsbelastninger bruges til at kryptere data på tværs af flere arbejdsbelastninger på tværs af alle lejerbrugere. Hvis du fjerner en sådan forhindring af dataadgang, vil det medføre, at data på tværs af flere arbejdsbelastninger bliver utilgængelige. Hvis du beslutter dig for helt at afslutte Microsoft 365 tjenester, kan du forfølge stien til sletning af lejer i henhold til den dokumenterede proces. Se, hvordan [du sletter en lejer i Azure Active Directory](/azure/active-directory/enterprise-users/directory-delete-howto).  
+Rensning af SharePoint, OneDrive til arbejde eller skole og Teams filer understøttes ikke i Kundenøgle. Disse dep'er med flere arbejdsbelastninger bruges til at kryptere data på tværs af flere arbejdsbelastninger på tværs af alle lejerbrugere. Hvis du fjerner en sådan forhindring af dataadgang, vil det medføre, at data på tværs af flere arbejdsbelastninger bliver utilgængelige. Hvis du beslutter dig for helt at afslutte Microsoft 365 tjenester, kan du forfølge stien til sletning af lejer i henhold til den dokumenterede proces. Se, hvordan [du sletter en lejer i Azure Active Directory](/azure/active-directory/enterprise-users/directory-delete-howto).
 
 ## <a name="related-articles"></a>Relaterede artikler
 

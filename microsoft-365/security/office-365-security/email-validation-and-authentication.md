@@ -19,12 +19,12 @@ ms.localizationpriority: high
 description: Administratorer kan få mere at vide om, hvordan EOP bruger mailgodkendelse (SPF, DKIM og DMARC) til at forhindre spoofing, phishing og spam.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2b0a1f1bec76a8dd22bc04502ea7ca09f2c7af66
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 0dca070cb6d6d1b2cb26acb3604e331f27824877
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772768"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008861"
 ---
 # <a name="email-authentication-in-eop"></a>Mailgodkendelse i EOP
 
@@ -170,7 +170,6 @@ For eksterne domæner er den spoofede bruger domænet i fra-adressen, mens den a
 
 - Kildens IP-adresse (opdelt i /24 CIDR-intervaller)
 - Organisationsdomænet for den omvendte DNS-post (PTR).
-- Et bekræftet DKIM-domæne.
 
 ### <a name="create-an-allow-entry-for-the-senderrecipient-pair"></a>Opret en tilladelsesindtastning for afsender-/modtagerparret
 

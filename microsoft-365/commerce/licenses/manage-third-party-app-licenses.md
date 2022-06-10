@@ -19,13 +19,13 @@ ms.custom:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du administrerer licenser til ISV-apps (Independent Software Vendor) i Microsoft 365 Administration.
-ms.date: 06/15/2021
-ms.openlocfilehash: b652b8394b4958788ba49844708a3f80477e2489
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.date: 06/08/2022
+ms.openlocfilehash: 0e83335c7130e3ae42c648ee680cf8137a7b1244
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715401"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011732"
 ---
 # <a name="manage-isv-app-licenses-in-the-microsoft-365-admin-center"></a>Administrer ISV-applicenser i Microsoft 365 Administration
 
@@ -33,11 +33,11 @@ En uafhængig softwareproducent (ISV)-app er en app, som du køber fra en anden 
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Du skal være global administrator, licensadministrator eller brugeradministrator for at tildele licenser. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+Du skal være global administrator, licensadministrator eller brugeradministrator for at tildele licenser. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="assign-isv-app-licenses-to-users-or-groups"></a>Tildel ISV-applicenser til brugere eller grupper
 
-1. I Microsoft 365 Administration skal du gå til siden **FaktureringLicenser** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
+1. I Microsoft 365 Administration skal du gå til siden<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank">Faktureringslicenser</a> > .
 2. Vælg den app, du vil tildele licenser til.
 3. På siden med licensoplysninger skal du vælge **Tildel licenser**.
 4. I ruden **Tildel licenser** skal du begynde at skrive navnet på en bruger eller gruppe og derefter vælge det fra resultaterne for at føje det til listen.
@@ -45,20 +45,22 @@ Du skal være global administrator, licensadministrator eller brugeradministrato
 
 ## <a name="unassign-isv-app-licenses-from-users-or-groups"></a>Fjern tildeling af ISV-applicenser fra brugere eller grupper
 
-1. I Administration, siden **FaktureringLicenser** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
+1. På siden **Faktureringslicenser** >  i Administration.<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
 2. Vælg den app, du vil fjerne tildelingen af licenser for.
 3. På siden med licensoplysninger skal du vælge de brugere og grupper, du vil fjerne licenser fra, og derefter vælge Fjern tildeling af licenser.
 4. I dialogboksen skal du bekræfte, at du vil fjerne licenserne, og derefter vælge Fjern tildeling.
 
 ## <a name="add-or-remove-isv-app-licenses-for-your-account"></a>Tilføj eller fjern ISV-applicenser for din konto
 
-ISV-applicenser administreres af appleverandøren. Kontakt leverandøren for at tilføje eller fjerne licenser til din konto.
+Hvis du har købt din app via Microsoft på https://appsource.microsoft.com, kan du [tilføje eller fjerne licenser](buy-licenses.md) i Microsoft 365 Administration.
+
+Hvis du har købt en ISV-app via en appleverandør, skal du kontakte leverandøren for at tilføje eller fjerne licenser fra din konto.
 
 ## <a name="next-steps"></a>Næste trin
 
 Afhængigt af den ISV-app, du har købt, kan dit næste trin være at installere appen i organisationens miljø. Hvis du installerer appen, bliver den tilgængelig for dine brugere. Brug følgende trin til at installere en ISV-app i dit miljø.
 
-1. I Administration, siden **FaktureringLicenser** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
+1. På siden **Faktureringslicenser** >  i Administration.<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
 2. Vælg den app, du vil installere på din konto.
 3. På siden med licensoplysninger skal du vælge **Installér dette produkt**. Du omdirigeres til et andet platformwebsted, hvor du installerer appen i dit miljø.
 

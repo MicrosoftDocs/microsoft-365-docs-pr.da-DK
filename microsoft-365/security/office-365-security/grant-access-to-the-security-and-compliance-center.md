@@ -20,16 +20,16 @@ description: Brugerne skal have tildelt tilladelser i Microsoft 365 Security & C
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5bf2f6f99af13de0858b041807f01e25e3516da8
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 4e0ca3874f03d9f0c386a84c9e8b56ea58bbfe72
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130752"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018002"
 ---
 # <a name="give-users-access-to-the-security--compliance-center"></a>Giv brugerne adgang til Security & Compliance Center
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -56,15 +56,15 @@ Du kan få flere oplysninger om de forskellige tilladelser, du kan give til brug
 
 2. Vælg rollegruppen på listen over rollegrupper, og klik derefter på **Rediger** ![ikonet Rediger.](../../media/O365-MDM-CreatePolicy-EditIcon.gif)
 
-3. På siden med egenskaber for rollegruppen under **Medlemmer** skal du klikke på **Tilføjikon**![.](../../media/ITPro-EAC-AddIcon.gif) og vælg navnet på den bruger (eller de brugere), du vil tilføje.
+3. På siden med egenskaber for rollegruppen under **Medlemmer** skal du klikke på **Tilføj**![ikon.](../../media/ITPro-EAC-AddIcon.gif) og vælg navnet på den bruger (eller de brugere), du vil tilføje.
 
 4. Når du har valgt alle de brugere, du vil føje til rollegruppen, skal du klikke på **Tilføj og\>** derefter **PÅ OK**.
 
 5. Klik på **Gem**, når du er færdig.
 
-## <a name="use-security--compliance-center-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Brug Security & Compliance Center PowerShell til at give en anden bruger adgang til Security & Compliance Center
+## <a name="use-security--compliance-powershell-to-give-another-user-access-to-the-security--compliance-center"></a>Brug Security & Compliance PowerShell til at give en anden bruger adgang til Security & Compliance Center
 
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Brug følgende syntaks:
 
@@ -88,7 +88,7 @@ Benyt en af følgende fremgangsmåder for at bekræfte, at du har givet adgang t
 
 - I Security & Compliance Center skal du gå til **Tilladelser** og vælge rollegruppen. Kontrollér medlemmerne af rollegruppen i det pop op-vindue med detaljer, der åbnes.
 
-- I Security & Compliance Center skal du erstatte \<RoleGroupName\> med navnet på rollegruppen og køre følgende kommando:
+- I Security & Compliance Skal PowerShell erstatte \<RoleGroupName\> med navnet på rollegruppen og køre følgende kommando:
 
   ```powershell
   Get-RoleGroupMember -Identity "<RoleGroupName>"

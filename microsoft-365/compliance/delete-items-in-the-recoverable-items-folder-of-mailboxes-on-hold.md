@@ -20,12 +20,12 @@ description: Få mere at vide om, hvordan administratorer kan slette elementer i
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 808bc02eb711ff72ec8bd329b1367145d2d991a9
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c30dc8b334061f2a911f847ed2567f046254a1f5
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091737"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016366"
 ---
 # <a name="delete-items-in-the-recoverable-items-folder-of-cloud-based-mailboxes-on-hold"></a>Slet elementer i mappen Gendan elementer i skybaserede postkasser i venteposition
 
@@ -208,23 +208,23 @@ Når du har identificeret In-Place Venteposition, kan du bruge <a href="https://
   
 ### <a name="retention-policies-applied-to-specific-mailboxes"></a>Opbevaringspolitikker, der anvendes på bestemte postkasser
   
-Kør følgende kommando i [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) for at identificere den opbevaringspolitik, der anvendes på postkassen. Denne kommando returnerer også alle Teams politikker for samtaleopbevaring, der er anvendt på en postkasse. Brug GUID 'et (inklusive ikke præfikset `mbx` eller `skp` ) for den opbevaringspolitik, du identificerede i trin 1.
+Kør følgende kommando i [Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) for at identificere den opbevaringspolitik, der anvendes på postkassen. Denne kommando returnerer også alle Teams politikker for samtaleopbevaring, der er anvendt på en postkasse. Brug GUID 'et (inklusive ikke præfikset `mbx` eller `skp` ) for den opbevaringspolitik, du identificerede i trin 1.
 
 ```powershell
 Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name
 ```
 
-Når du har identificeret opbevaringspolitikken, skal du gå til siden Administration  >  af **datalivscyklusRetention** på overholdelsesportalen, redigere den opbevaringspolitik, du identificerede i det forrige trin, og fjerne postkassen fra listen over modtagere, der er inkluderet i opbevaringspolitikken.
+Når du har identificeret opbevaringspolitikken, skal du gå til siden **Opbevaring** af **datalivscyklusstyring** >  på overholdelsesportalen, redigere den opbevaringspolitik, du identificerede i det forrige trin, og fjerne postkassen fra listen over modtagere, der er inkluderet i opbevaringspolitikken.
   
 ### <a name="organization-wide-retention-policies"></a>Opbevaringspolitikker for hele organisationen
   
-Opbevaringspolitikker, der gælder for hele organisationen, Exchange og Teams gælder for alle postkasser i organisationen. De anvendes på organisationsniveau (ikke på postkasseniveau) og returneres, når du kører cmdlet'en **Get-OrganizationConfig** i Trin 1. Kør følgende kommando i [Security & Compliance Center PowerShell](/powershell/exchange/exchange-online-powershell) for at identificere opbevaringspolitikkerne for hele organisationen. Brug GUID 'et (inklusive ikke præfikset  `mbx` ) for de opbevaringspolitikker for hele organisationen, som du identificerede i trin 1.
+Opbevaringspolitikker, der gælder for hele organisationen, Exchange og Teams gælder for alle postkasser i organisationen. De anvendes på organisationsniveau (ikke på postkasseniveau) og returneres, når du kører cmdlet'en **Get-OrganizationConfig** i Trin 1. Kør følgende kommando i [Security & Compliance PowerShell](/powershell/exchange/exchange-online-powershell) for at identificere opbevaringspolitikkerne for hele organisationen. Brug GUID 'et (inklusive ikke præfikset  `mbx` ) for de opbevaringspolitikker for hele organisationen, som du identificerede i trin 1.
 
 ```powershell
 Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name
 ```
 
-Når du har identificeret opbevaringspolitikkerne for hele organisationen, skal du gå til siden Administration  >  af **datalivscyklusRetention** på overholdelsesportalen, redigere hver opbevaringspolitik for hele organisationen, som du identificerede i det forrige trin, og føje postkassen til listen over udeladte modtagere. Hvis du gør dette, fjernes brugerens postkasse fra opbevaringspolitikken.
+Når du har identificeret opbevaringspolitikkerne for hele organisationen, skal du gå til siden **Opbevaring** af **datalivscyklusstyring** >  på overholdelsesportalen, redigere hver opbevaringspolitik for hele organisationen, som du identificerede i det forrige trin, og føje postkassen til listen over udeladte modtagere. Hvis du gør dette, fjernes brugerens postkasse fra opbevaringspolitikken.
 
 > [!IMPORTANT]
 > Når du har udelukket en postkasse fra en opbevaringspolitik for hele organisationen, kan det tage op til 24 timer at synkronisere denne ændring og fjerne postkassen fra politikken.
@@ -249,7 +249,7 @@ Du kan finde flere oplysninger om mærkater under [Få mere at vide om opbevarin
 
 ### <a name="ediscovery-holds"></a>eDiscovery-ventepositioner
   
-Kør følgende kommandoer i [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) for at identificere den venteposition, der er knyttet til en eDiscovery-sag (kaldet *eDiscovery-ventepositioner*), der er anvendt på postkassen. Brug GUID (inklusive ikke præfikset  `UniH` ) til den eDiscovery-venteposition, du identificerede i trin 1. Den anden kommando viser navnet på den eDiscovery-sag, som ventepositionen er knyttet til. den tredje kommando viser navnet på ventepositionen.
+Kør følgende kommandoer i [Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) for at identificere den venteposition, der er knyttet til en eDiscovery-sag (kaldet *eDiscovery-ventepositioner*), der er anvendt på postkassen. Brug GUID (inklusive ikke præfikset  `UniH` ) til den eDiscovery-venteposition, du identificerede i trin 1. Den anden kommando viser navnet på den eDiscovery-sag, som ventepositionen er knyttet til. den tredje kommando viser navnet på ventepositionen.
   
 ```powershell
 $CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>
@@ -285,7 +285,7 @@ Du skal være tildelt rollen Juridisk venteposition i Exchange Online for at bru
 
 ## <a name="step-5-delete-items-in-the-recoverable-items-folder"></a>Trin 5: Slet elementer i mappen Gendanbare elementer
 
-Nu er du klar til rent faktisk at slette elementer i mappen Gendanbare elementer ved hjælp af [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch) - og [New-ComplianceSearchAction-cmdlet'erne](/powershell/module/exchange/new-compliancesearchaction) i Security & Compliance Center PowerShell.
+Nu er du klar til rent faktisk at slette elementer i mappen Gendanbare elementer ved hjælp af [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch) - og [New-ComplianceSearchAction-cmdlet'erne](/powershell/module/exchange/new-compliancesearchaction) i Security & Compliance PowerShell.
 
 Hvis du vil søge efter elementer, der er placeret i mappen Gendanbare elementer, anbefaler vi, at du udfører en *målrettet samling*. Det betyder, at du kun begrænser omfanget af søgningen til elementer, der er placeret i mappen Gendanbare elementer. Det kan du gøre ved at køre scriptet i artiklen [Brug indholdssøgning til målrettede samlinger](use-content-search-for-targeted-collections.md) . Dette script returnerer værdien af egenskaben mappe-id for alle undermapperne i destinationsmappen Gendanbare elementer. Derefter skal du bruge mappe-id'et i en søgeforespørgsel til at returnere elementer, der er placeret i den pågældende mappe.
 
@@ -303,7 +303,7 @@ Her er en oversigt over den proces, der skal bruges til at søge efter og slette
 
    - **SubstrateHolds**: Indeholder hårdt slettede elementer fra Teams og andre skybaserede apps, der er bevaret af en opbevaringspolitik eller en anden type venteposition. Denne undermappe er ikke synlig for slutbrugere.
 
-3. Brug **New-ComplianceSearch-cmdlet'en** (i Security & Compliance Center PowerShell) eller brug værktøjet til indholdssøgning i Overholdelsescenter til at oprette en indholdssøgning, der returnerer elementer fra destinationsbrugerens mappe Genoprettelige elementer. Det kan du gøre ved at medtage FolderId i søgeforespørgslen for alle de undermapper, du vil søge i. Følgende forespørgsel returnerer f.eks. alle meddelelser i undermapperne Sletninger og eDiscoveryHolds:
+3. Brug **New-ComplianceSearch-cmdlet'en** (i Security & Compliance PowerShell) eller brug værktøjet til indholdssøgning i Overholdelsescenter til at oprette en indholdssøgning, der returnerer elementer fra destinationsbrugerens mappe Genoprettelige elementer. Det kan du gøre ved at medtage FolderId i søgeforespørgslen for alle de undermapper, du vil søge i. Følgende forespørgsel returnerer f.eks. alle meddelelser i undermapperne Sletninger og eDiscoveryHolds:
 
    ```text
    folderid:<folder ID of Deletions subfolder> OR folderid:<folder ID of DiscoveryHolds subfolder>
@@ -314,7 +314,7 @@ Her er en oversigt over den proces, der skal bruges til at søge efter og slette
    > [!NOTE]
    > Hvis du bruger **New-ComplianceSearch-cmdlet'en** til at søge i mappen Gendanbare elementer, skal du sørge for at bruge **Start-ComplianceSearch-cmdlet'en** til at køre søgningen.
 
-4. Når du har oprettet en indholdssøgning og valideret, at den returnerer de elementer, du vil slette, skal du bruge `New-ComplianceSearchAction -Purge -PurgeType HardDelete` kommandoen (i Security & Compliance Center PowerShell) til permanent at slette de elementer, der returneres af den indholdssøgning, du oprettede i det forrige trin. Du kan f.eks. køre en kommando, der ligner følgende kommando:
+4. Når du har oprettet en indholdssøgning og valideret, at den returnerer de elementer, du vil slette, skal du bruge `New-ComplianceSearchAction -Purge -PurgeType HardDelete` kommandoen (i Security & Compliance PowerShell) til permanent at slette de elementer, der returneres af den indholdssøgning, du oprettede i det forrige trin. Du kan f.eks. køre en kommando, der ligner følgende kommando:
 
    ```powershell
    New-ComplianceSearchAction -SearchName "RecoverableItems" -Purge -PurgeType HardDelete
@@ -399,15 +399,15 @@ Udfør følgende trin (i den angivne sekvens) i Exchange Online PowerShell.
 
     **Opbevaringspolitikker, der anvendes på bestemte postkasser**
 
-    Brug overholdelsesportalen til at føje postkassen tilbage til opbevaringspolitikken. Gå til siden Administration  >  af **datalivscyklusRetention** i Overholdelsescenter, rediger opbevaringspolitikken, og føj postkassen tilbage til listen over modtagere, som opbevaringspolitikken anvendes på.
+    Brug overholdelsesportalen til at føje postkassen tilbage til opbevaringspolitikken. Gå til siden **Opbevaring** af **datalivscyklusstyring** >  i Overholdelsescenter, rediger opbevaringspolitikken, og føj postkassen tilbage til listen over modtagere, som opbevaringspolitikken anvendes på.
 
     **Opbevaringspolitikker for hele organisationen**
 
-    Hvis du har fjernet en opbevaringspolitik for hele organisationen eller Exchange ved at udelade den fra politikken, skal du bruge overholdelsesportalen til at fjerne postkassen fra listen over udeladte brugere. Gå til siden **Administration af datalivscyklusRetention** i Overholdelsescenter, rediger opbevaringspolitikken for hele organisationen, og fjern postkassen fra listen over udeladte  >  modtagere. Hvis du gør dette, genbruges opbevaringspolitikken til brugerens postkasse.
+    Hvis du har fjernet en opbevaringspolitik for hele organisationen eller Exchange ved at udelade den fra politikken, skal du bruge overholdelsesportalen til at fjerne postkassen fra listen over udeladte brugere. Gå til siden **Opbevaring** af **datalivscyklusstyring** >  i Overholdelsescenter, rediger opbevaringspolitikken for hele organisationen, og fjern postkassen fra listen over udeladte modtagere. Hvis du gør dette, genbruges opbevaringspolitikken til brugerens postkasse.
 
     **eDiscovery-sag i venteposition**
 
-    Brug overholdelsesportalen til at tilføje postkassen den venteposition, der er knyttet til en eDiscovery-sag, igen. Gå til siden **eDiscoveryCore** > , åbn sagen, og føj postkassen tilbage til ventepositionen. 
+    Brug overholdelsesportalen til at tilføje postkassen den venteposition, der er knyttet til en eDiscovery-sag, igen. Gå til siden **eDiscovery** > **Core** , åbn sagen, og føj postkassen tilbage til ventepositionen. 
 
 5. Kør følgende kommando for at tillade, at assistenten til administrerede mapper behandler postkassen igen. Som tidligere nævnt anbefaler vi, at du venter 24 timer efter genanvendelse af en ventepositions- eller opbevaringspolitik (og kontrollerer, at den er på plads), før du genaktiverer assistenten for administrerede mapper.
 
@@ -435,6 +435,6 @@ Som tidligere forklaret, skal du fjerne alle ventepositioner og opbevaringspolit
 |:-----|:-----|:-----|
 |Procesførelse - venteposition  <br/> | `True` <br/> |Egenskaben  *LitigationHoldEnabled*  er angivet til  `True`.  <br/> |
 |In-Place venteposition  <br/> | `c0ba3ce811b6432a8751430937152491` <br/> |Egenskaben  *InPlaceHolds*  indeholder GUID'et for den In-Place venteposition, der er placeret i postkassen. Du kan se, at dette er en In-Place venteposition, fordi GUID'et ikke starter med et præfiks.  <br/> Du kan bruge kommandoen `Get-MailboxSearch -InPlaceHoldIdentity <hold GUID> | FL` i Exchange Online PowerShell til at få oplysninger om In-Place Venteposition på postkassen.  <br/> |
-| Opbevaringspolitikker i overholdelsesportalen, der anvendes på bestemte postkasser  <br/> | `mbxcdbbb86ce60342489bff371876e7f224` <br/> Eller  <br/>  `skp127d7cf1076947929bf136b7a2a8c36f` <br/> |Når du kører **cmdlet'en Get-Mailbox** , indeholder egenskaben  *InPlaceHolds*  også GUID'er for opbevaringspolitikker, der er anvendt på postkassen. Du kan identificere opbevaringspolitikker, fordi GUID'et starter med præfikset  `mbx` . Hvis GUID'et for opbevaringspolitikken starter med præfikset`skp`, angiver det, at opbevaringspolitikken anvendes på Skype for Business samtaler.  <br/> Hvis du vil identificere den opbevaringspolitik, der anvendes på postkassen, skal du køre følgende kommando i Security & Compliance Center PowerShell: <br/> <br/>`Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Sørg for at fjerne præfikset  `mbx` eller  `skp` , når du kører denne kommando.  <br/> |
-|Opbevaringspolitikker for hele organisationen på overholdelsesportalen  <br/> |Ingen værdi  <br/> Eller  <br/>  `-mbxe9b52bf7ab3b46a286308ecb29624696` (angiver, at postkassen er udelukket fra en politik for hele organisationen)  <br/> |Selvom egenskaben  *InPlaceHolds*  er tom, når du kører **Get-Mailbox-cmdlet'en** , kan der stadig anvendes en eller flere opbevaringspolitikker for hele organisationen på postkassen.  <br/> Du kan bekræfte dette ved at køre `Get-OrganizationConfig | FL InPlaceHolds` kommandoen i Exchange Online PowerShell for at få vist en liste over GUID'erne for opbevaringspolitikker for hele organisationen. GUID'et for opbevaringspolitikker for hele organisationen, der anvendes på Exchange postkasser starter med præfikset`mbx`, `mbxa3056bb15562480fadb46ce523ff7b02`f.eks. .  <br/> Hvis du vil identificere den opbevaringspolitik for hele organisationen, der anvendes på postkassen, skal du køre følgende kommando i Security & Compliance Center PowerShell: <br/><br/> `Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Hvis en postkasse udelades fra en opbevaringspolitik for hele organisationen, vises GUID for opbevaringspolitikken i egenskaben  *InPlaceHolds*  for brugerens postkasse, når du kører **cmdlet'en Get-Mailbox** . det identificeres af præfikset  `-mbx`, f.eks.  `-mbxe9b52bf7ab3b46a286308ecb29624696` <br/> |
-|eDiscovery-sag i overholdelsesportalen  <br/> | `UniH7d895d48-7e23-4a8d-8346-533c3beac15d` <br/> |Egenskaben  *InPlaceHolds*  indeholder også GUID'et for alle ventepositioner, der er knyttet til en eDiscovery-sag i overholdelsesportalen, som kan være placeret i postkassen. Du kan se, at dette er en eDiscovery-sag i venteposition, fordi GUID'et starter med præfikset  `UniH` .  <br/> Du kan bruge cmdlet'en  `Get-CaseHoldPolicy` i Security & Compliance Center PowerShell til at få oplysninger om den eDiscovery-sag, som ventepositionen på postkassen er knyttet til. Du kan f.eks. køre kommandoen  `Get-CaseHoldPolicy <hold GUID without prefix> | FL Name` for at få vist navnet på sagspositionen i postkassen. Sørg for at fjerne præfikset  `UniH` , når du kører denne kommando.  <br/><br/> Kør følgende kommandoer for at identificere eDiscovery-sagen, som postkassens venteposition er knyttet til:<br/><br/>`$CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>`<br/><br/>`Get-ComplianceCase $CaseHold.CaseId | FL Name`
+| Opbevaringspolitikker i overholdelsesportalen, der anvendes på bestemte postkasser  <br/> | `mbxcdbbb86ce60342489bff371876e7f224` <br/> Eller  <br/>  `skp127d7cf1076947929bf136b7a2a8c36f` <br/> |Når du kører **cmdlet'en Get-Mailbox** , indeholder egenskaben  *InPlaceHolds*  også GUID'er for opbevaringspolitikker, der er anvendt på postkassen. Du kan identificere opbevaringspolitikker, fordi GUID'et starter med præfikset  `mbx` . Hvis GUID'et for opbevaringspolitikken starter med præfikset`skp`, angiver det, at opbevaringspolitikken anvendes på Skype for Business samtaler.  <br/> Hvis du vil identificere den opbevaringspolitik, der er anvendt på postkassen, skal du køre følgende kommando i Security & Compliance PowerShell: <br/> <br/>`Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Sørg for at fjerne præfikset  `mbx` eller  `skp` , når du kører denne kommando.  <br/> |
+|Opbevaringspolitikker for hele organisationen på overholdelsesportalen  <br/> |Ingen værdi  <br/> Eller  <br/>  `-mbxe9b52bf7ab3b46a286308ecb29624696` (angiver, at postkassen er udelukket fra en politik for hele organisationen)  <br/> |Selvom egenskaben  *InPlaceHolds*  er tom, når du kører **Get-Mailbox-cmdlet'en** , kan der stadig anvendes en eller flere opbevaringspolitikker for hele organisationen på postkassen.  <br/> Du kan bekræfte dette ved at køre `Get-OrganizationConfig | FL InPlaceHolds` kommandoen i Exchange Online PowerShell for at få vist en liste over GUID'erne for opbevaringspolitikker for hele organisationen. GUID'et for opbevaringspolitikker for hele organisationen, der anvendes på Exchange postkasser starter med præfikset`mbx`, `mbxa3056bb15562480fadb46ce523ff7b02`f.eks. .  <br/> Hvis du vil identificere den opbevaringspolitik for hele organisationen, der anvendes på postkassen, skal du køre følgende kommando i Security & Compliance PowerShell: <br/><br/> `Get-RetentionCompliancePolicy <retention policy GUID without prefix> | FL Name`<br/><br/>Hvis en postkasse udelades fra en opbevaringspolitik for hele organisationen, vises GUID for opbevaringspolitikken i egenskaben  *InPlaceHolds*  for brugerens postkasse, når du kører **cmdlet'en Get-Mailbox** . det identificeres af præfikset  `-mbx`, f.eks.  `-mbxe9b52bf7ab3b46a286308ecb29624696` <br/> |
+|eDiscovery-sag i overholdelsesportalen  <br/> | `UniH7d895d48-7e23-4a8d-8346-533c3beac15d` <br/> |Egenskaben  *InPlaceHolds*  indeholder også GUID'et for alle ventepositioner, der er knyttet til en eDiscovery-sag i overholdelsesportalen, som kan være placeret i postkassen. Du kan se, at dette er en eDiscovery-sag i venteposition, fordi GUID'et starter med præfikset  `UniH` .  <br/> Du kan bruge cmdlet'en  `Get-CaseHoldPolicy` i Security & Compliance PowerShell til at få oplysninger om den eDiscovery-sag, som ventepositionen på postkassen er knyttet til. Du kan f.eks. køre kommandoen  `Get-CaseHoldPolicy <hold GUID without prefix> | FL Name` for at få vist navnet på sagspositionen i postkassen. Sørg for at fjerne præfikset  `UniH` , når du kører denne kommando.  <br/><br/> Kør følgende kommandoer for at identificere eDiscovery-sagen, som postkassens venteposition er knyttet til:<br/><br/>`$CaseHold = Get-CaseHoldPolicy <hold GUID without prefix>`<br/><br/>`Get-ComplianceCase $CaseHold.CaseId | FL Name`

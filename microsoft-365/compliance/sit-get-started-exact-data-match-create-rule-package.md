@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Opret nøjagtigt datamatch for typer/regelpakker af følsomme oplysninger
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d18147e576db356a5fb7904c3901003bbf48855e
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: ff493f7af88d377bcf008d13752969107cfd65e7
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435253"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017180"
 ---
 # <a name="create-exact-data-match-sensitive-information-typerule-package"></a>Opret nøjagtigt datamatch for typer/regelpakker af følsomme oplysninger
 
@@ -60,7 +60,7 @@ Se [Objektdefinitioner for følsomme oplysninger og](sensitive-information-type-
 
 ### <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Brug guiden Med det nøjagtige datamatchskema og mønsteret for følsomme oplysninger
 
-1. I Microsoft Purview-compliance-portal for din lejer skal du gå til **DataklassificeringExact-dataforekomster** > .
+1. På Microsoft Purview-overholdelsesportalen for din lejer skal du gå til **Dataklassificering** > **Præcise dataforekomster**.
 
 2. Vælg **EDM-følsomme infotyper** og **Opret EDM-følsom infotype** for at åbne konfigurationsguiden til konfiguration af følsomme oplysninger.
 
@@ -89,7 +89,7 @@ Se [Objektdefinitioner for følsomme oplysninger og](sensitive-information-type-
 
 ### <a name="edit-or-delete-the-sensitive-information-type-pattern"></a>Rediger eller slet mønsteret for følsomme oplysninger
 
-1. Open **Compliance** **CenterDataklassificeringEkstér** >  >  **dataforekomster**.
+1. Open **Compliance Center** > **Dataklassificering** > **Præcise dataforekomster**.
 
 2. Vælg **EDM-følsomme infotyper**.
 
@@ -138,7 +138,7 @@ I nogle tilfælde skal du muligvis identificere bestemte konto- eller postidenti
 
 ## <a name="create-a-rule-package-manually"></a>Opret en regelpakke manuelt
 
-I denne procedure kan du se, hvordan du opretter en fil i XML-format, der kaldes en regelpakke (med Unicode-kodning), og derefter uploader den til Microsoft Purview ved hjælp af PowerShell-cmdlet'er til Overholdelsescenter.
+I denne procedure kan du se, hvordan du opretter en fil i XML-format, der kaldes en regelpakke (med Unicode-kodning), og derefter uploader den til Microsoft Purview ved hjælp af Security & Compliance PowerShell-cmdlet'er.
 
 > [!NOTE]
 > Hvis det SIT, du tilknytter til, kan registrere bekræftende beviser med flere ord, kan de sekundære elementer, du definerer i en manuelt oprettet regelpakke, knyttes til SIT. Navnet `John Smith` ville f.eks. ikke matche som et sekundært element, fordi vi ville sammenligne `John` og `Smith` finde det i indholdet separat med det ord `John Smith` , der blev uploadet i et af felterne, hvis dette bekræftelsesfelt ikke var knyttet til et SIT, der kan registrere mønsteret.

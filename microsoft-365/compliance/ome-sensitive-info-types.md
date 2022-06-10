@@ -20,24 +20,26 @@ description: Få mere at vide om, hvordan du opretter en politik for følsomme o
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: a12c3c559fdd9dcc7bd142e5ee7d58d777211bc7
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 908ec1cf55d8bee06ce9b3b6ccc8eb699d2ba291
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759407"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012274"
 ---
 # <a name="create-a-sensitive-information-type-policy-for-your-organization-using-message-encryption"></a>Opret en politik for følsomme oplysninger for din organisation ved hjælp af meddelelseskryptering
 
-Du kan bruge enten Exchange regler for mailflow eller DLP (Forebyggelse af datatab) til at oprette en politik for følsomme oplysninger med Office 365 meddelelseskryptering. Hvis du vil oprette en Exchange mailflowregel, kan du enten bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> eller PowerShell.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Du kan bruge enten Exchange regler for mailflow eller Forebyggelse af datatab i Microsoft Purview (DLP) til at oprette en politik for følsomme oplysninger med Office 365 meddelelseskryptering. Hvis du vil oprette en Exchange mailflowregel, kan du enten bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> eller PowerShell.
 
 ## <a name="to-create-the-policy-by-using-mail-flow-rules-in-the-eac"></a>Sådan opretter du politikken ved hjælp af regler for mailflow i EAC
 
-Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, og gå til **MailflowRules** > . På siden Regler skal du oprette en regel, der anvender Office 365 Meddelelseskryptering. Du kan oprette en regel baseret på betingelser, f.eks. tilstedeværelsen af bestemte nøgleord eller følsomme oplysningstyper i meddelelsen eller den vedhæftede fil.
+Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, og gå til **Regler for** **mailflow** > . På siden Regler skal du oprette en regel, der anvender Office 365 Meddelelseskryptering. Du kan oprette en regel baseret på betingelser, f.eks. tilstedeværelsen af bestemte nøgleord eller følsomme oplysningstyper i meddelelsen eller den vedhæftede fil.
 
 ### <a name="to-create-the-policy-by-using-mail-flow-rules-in-powershell"></a>Sådan opretter du politikken ved hjælp af regler for mailflow i PowerShell
 
-Brug en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, start en Windows PowerShell session, og opret forbindelse til Exchange Online. Du kan finde instruktioner [under Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Brug cmdlet'erne Set-IRMConfiguration og New-TransportRule til at oprette politikken.
+Brug en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, opret forbindelse til Exchange Online PowerShell. Du kan finde en vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Brug cmdlet'erne Set-IRMConfiguration og New-TransportRule til at oprette politikken.
 
 ## <a name="example-mail-flow-rule-created-with-powershell"></a>Eksempel på en regel for mailflow, der er oprettet med PowerShell
 
@@ -66,8 +68,8 @@ Når Microsoft har krypteret en meddelelse, har modtagerne ubegrænset adgang ti
 
 Det kan være en god idé at opdatere relevant dokumentation og undervisningsmateriale til slutbrugere for at forberede personer i din organisation på denne ændring. Del disse Office 365 ressourcer til meddelelsekryptering med dine brugere efter behov:
 
-- [Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/en-us/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980)
-- [video om Microsoft 365 Essentials: Office meddelelsekryptering](https://youtu.be/CQR0cG_iEUc)
+- [Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980)
+- [Microsoft 365 Essentials Video: Meddelelsekryptering](https://youtu.be/CQR0cG_iEUc)
 
 ## <a name="view-these-changes-in-the-audit-log"></a>Vis disse ændringer i overvågningsloggen
 
@@ -79,4 +81,4 @@ Microsoft 365 overvåger denne aktivitet og gør den tilgængelig for administra
 
 ## <a name="to-disable-or-customize-the-sensitive-information-types-policy"></a>Sådan deaktiverer eller tilpasser du politikken for følsomme oplysningstyper
 
-Når du har oprettet reglen for Exchange mailflow, kan du [deaktivere eller redigere reglen](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#enable-or-disable-a-mail-flow-rule) ved at gå til **MailflowRules** >  i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> og deaktivere reglen "*Kryptér udgående følsomme mails (standardregel)*".
+Når du har oprettet reglen for Exchange mailflow, kan du [deaktivere eller redigere reglen](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#enable-or-disable-a-mail-flow-rule) ved at gå til **Regler for** **mailflow** >  i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> og deaktivere reglen "*Kryptér udgående følsomme mails (standardregel)*".

@@ -17,19 +17,19 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 51f4915da08920018526ac7eb17372247e28de6d
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: 8de6af6f04243a8481d116fe9a67f5420b536f6c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243090"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016498"
 ---
 # <a name="microsoft-defender-for-endpoint-on-android"></a>Microsoft Defender for Endpoint på Android
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -45,22 +45,21 @@ I dette emne beskrives det, hvordan du installerer, konfigurerer, opdaterer og b
 ### <a name="prerequisites"></a>Forudsætninger
 
 - **For slutbrugere**:
-  - Microsoft Defender for Endpoint licens, der er tildelt slutbrugerne af appen. Se [Microsoft Defender for Endpoint licenskrav](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements).
-  - Intune licens er nødvendig, før du onboarder Android-enheder.
+  - Slutbrugeren skal tildeles en Microsoft Intune licens. Du kan få flere oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/azure/active-directory/users-groups-roles/licensing-groups-assign).
+  - Brugerne af appen skal tildeles en Microsoft Defender for Endpoint licens. Du kan få flere oplysninger om, hvordan du tildeler licenser, [under Microsoft Defender for Endpoint licenskrav](/microsoft-365/security/defender-endpoint/minimum-requirements#licensing-requirements).
   - Intune-firmaportal app kan downloades fra [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) og er tilgængelig på Android-enheden.
-  - Derudover kan enheder [tilmeldes](/mem/intune/user-help/enroll-device-android-company-portal) via Intune-firmaportal-appen for at gennemtvinge Intune politikker for enhedsoverholdelse. Dette kræver, at slutbrugeren tildeles en Microsoft Intune licens.
-  - Du kan få flere oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/azure/active-directory/users-groups-roles/licensing-groups-assign).
+  - Derudover kan enheder [tilmeldes](/mem/intune/user-help/enroll-device-android-company-portal) via Intune-firmaportal-appen for at gennemtvinge Intune politikker for enhedsoverholdelse. 
 
-- **Til administratorer**
+- **For administratorer**:
    - Adgang til Microsoft 365 Defender-portalen.
-   - Få [adgang Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) til
-       - Udrul appen til tilmeldte brugergrupper i din organisation.
-       - Konfigurer Microsoft Defender for Endpoint risikosignaler i beskyttelsespolitikken for apps.
+   - Adgang [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) til:
+     - Udrul appen til tilmeldte brugergrupper i din organisation.
+     - Konfigurer Microsoft Defender for Endpoint risikosignaler i beskyttelsespolitikken for apps.
   
     > [!NOTE]
+    >
     > - Microsoft Defender for Endpoint nu udvider beskyttelsen til en organisations data i et administreret program (MAM) for enheder, der ikke er tilmeldt ved hjælp af MDM (Mobile Device Management), men bruger Intune til at administrere mobilapps. Denne support udvides også til kunder, der bruger andre løsninger til administration af virksomhedsmobilitet, mens de stadig bruger Intune til [administration af mobilapps (MAM).](/mem/intune/apps/mam-faq)
     > - Derudover understøtter Microsoft Defender for Endpoint allerede enheder, der er tilmeldt ved hjælp af Intune administration af mobilenheder (MDM).
-
 
 ### <a name="network-requirements"></a>Netværkskrav
 

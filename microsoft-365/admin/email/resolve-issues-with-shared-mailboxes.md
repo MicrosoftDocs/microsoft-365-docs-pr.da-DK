@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Du får muligvis vist fejl, når du konfigurerer delte postkasser. Prøv disse løsninger, hvis du oplever problemer med delte postkasser.
-ms.openlocfilehash: cf121504b53951e0aaaf248d43d045cfa937f4ed
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 08b5bbaa1ea952ee2b9bb6c626328fdb6b91d71c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437101"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008573"
 ---
 # <a name="resolve-issues-with-shared-mailboxes"></a>Løs problemer med delte postkasser
 
@@ -38,9 +38,9 @@ Hvis du får vist fejlmeddelelser, når du opretter eller bruger en delt postkas
 
 Hvis du får vist fejlmeddelelsen, **bruges proxyadressen "smtp:<delt postkassenavn\>" allerede af proxyadresserne eller LegacyExchangeDN for "\<name>". Vælg en anden proxyadresse**. Det betyder, at du forsøger at give den delte postkasse et navn, der allerede er i brug. Lad os f.eks. sige, at du vil have delte postkasser med navnet info@domain1 og info@domain2. Der er to måder at gøre dette på:
 
-  - Brug Windows PowerShell. Se denne vejledning i dette blogindlæg: [Opret delte postkasser med samme alias på forskellige domæner](https://www.cogmotive.com/blog/office-365-tips/create-shared-mailboxes-with-same-alias-at-different-domains-in-office-365)
-    
-  - Navngiv den anden delte postkasse noget andet end starten for at omgå fejlen. Omdøb derefter den delte postkasse i Administration til det, du vil have, den skal være.
+- Brug Exchange Online PowerShell. Se denne vejledning i dette blogindlæg: [Opret delte postkasser med samme alias på forskellige domæner](https://www.cogmotive.com/blog/office-365-tips/create-shared-mailboxes-with-same-alias-at-different-domains-in-office-365)
+
+- Navngiv den anden delte postkasse noget andet end starten for at omgå fejlen. Omdøb derefter den delte postkasse i Administration til det, du vil have, den skal være.
 
 ## <a name="error-about-not-having-send-permissions-when-using-a-shared-mailbox"></a>Fejl ved ikke at have afsendelsestilladelser, når der bruges en delt postkasse
 

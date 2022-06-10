@@ -17,14 +17,16 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du opretter meddelelser om aktiviteter, der matcher præcise data.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 163c1386bed2e1f100a42ab8b22b6404fe6bb145
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 75a0e3c50d9dc540bf76187e6aedcbd5642d250b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760267"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66009382"
 ---
 # <a name="create-notifications-for-exact-data-match-activities"></a>Opret meddelelser for aktiviteter med nøjagtigt datamatch
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du [opretter brugerdefinerede følsomme oplysningstyper med nøjagtigt datamatch (EDM),](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) er der en række aktiviteter, der oprettes i [overvågningsloggen](search-the-audit-log-in-security-and-compliance.md#before-you-search-the-audit-log). Du kan bruge [PowerShell-cmdlet'en New-ProtectionAlert](/powershell/module/exchange/new-protectionalert) til at oprette meddelelser, der giver dig besked, når disse aktiviteter finder sted:
 
@@ -58,7 +60,7 @@ Hvis du vil vide mere om DLP-licenser, skal du se [Microsoft 365 licensvejlednin
 
 ## <a name="configure-notifications-for-edm-activities"></a>Konfigurer meddelelser for EDM-aktiviteter
 
-1. Forbind til [PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. Forbind til [PowerShell & Security & Compliance](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør cmdlet'en `New-ProtectionAlert` ved hjælp af den aktivitet, du vil oprette meddelelsen for.  Hvis du f.eks. vil have besked, når handlingen **UploadDataFuldførelse** fandt sted, skal du køre:
 

@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Enhedsoverholdelse for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: e5440d89a34593655076cb91a348a176590dc52f
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 1d00df09231863dd2d7d110dbf9d3c2600f464dc
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023695"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017826"
 ---
 # <a name="overview-of-the-device-compliance-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Med enhedsoverholdelse i Microsoft 365 Lighthouse
 

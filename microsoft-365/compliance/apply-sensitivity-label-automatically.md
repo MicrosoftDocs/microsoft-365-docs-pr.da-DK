@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: 9998f71d275d28f10fc950b978cc13ce7fd3c335
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 3124427ff556cd08a56ee83cf8f83bc4dbf8eb72
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65840425"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017958"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -31,7 +31,7 @@ ms.locfileid: "65840425"
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!TIP]
-> Du kan få oplysninger om automatisk anvendelse af en følsomhedsmærkat i datatilknytningen [under Mærkning i Microsoft Purview datakort](/azure/purview/create-sensitivity-label).
+> Du kan få oplysninger om automatisk anvendelse af en følsomhedsmærkat i datatilknytningen [under Mærkat i Microsoft Purview-datatilknytning](/azure/purview/create-sensitivity-label).
 
 Når du opretter en følsomhedsmærkat, kan du automatisk tildele denne mærkat til filer og mails, når den opfylder betingelser, som du angiver.
 
@@ -74,7 +74,7 @@ Der er to forskellige metoder til automatisk anvendelse af en følsomhedsmærkat
     - I modsætning til manuel mærkning eller automatisk mærkning med Office apps scannes vedhæftede PDF-filer samt Office vedhæftede filer også for de betingelser, du angiver i politikken for automatisk mærkning. Når der er et match, er mailen mærket, men ikke den vedhæftede fil.
         - Hvis mærkaten anvender kryptering for PDF-filer, krypteres disse filer ved hjælp af [meddelelsekryptering](ome.md) , når din lejer er [aktiveret for vedhæftede PDF-filer](ome-faq.yml#are-pdf-file-attachments-supported-).
         - For disse Office-filer understøttes Word, PowerPoint og Excel. Hvis mærkaten anvender kryptering, krypteres de ved hjælp af [Meddelelsekryptering](ome.md).
-    - Hvis du har Exchange regler for mailflow eller DLP-politikker (Microsoft Purview Forebyggelse af datatab), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes mærkaten. Hvis dette navn anvender kryptering, ignoreres IRM-indstillingerne fra reglerne for Exchange mailflow eller DLP-politikker. Men hvis denne mærkat ikke anvender kryptering, anvendes IRM-indstillingerne fra reglerne for mailflowet eller DLP-politikkerne ud over mærkaten.
+    - Hvis du har Exchange regler for mailflow eller DLP-politikker (Microsoft Purview Data Loss Prevention), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes mærkaten. Hvis dette navn anvender kryptering, ignoreres IRM-indstillingerne fra reglerne for Exchange mailflow eller DLP-politikker. Men hvis denne mærkat ikke anvender kryptering, anvendes IRM-indstillingerne fra reglerne for mailflowet eller DLP-politikkerne ud over mærkaten.
     - Mail, der har IRM-kryptering uden mærkat, erstattes af en mærkat med eventuelle krypteringsindstillinger, når der er et match ved hjælp af automatisk mærkning.
     - Indgående mail markeres, når der er et match med betingelserne for automatisk mærkning. Hvis denne mærkat er konfigureret til [kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Denne kryptering anvendes som standard ikke, når afsenderen er uden for din organisation, men kan anvendes ved at konfigurere **Yderligere indstillinger for mail** og angive en Rights Management ejer.
     - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den person, der sender mailen, når afsenderen er fra din egen organisation. Når afsenderen er uden for din organisation, kan du angive en Rights Management ejer af indgående mail, der er mærket og krypteret af din politik.
@@ -100,7 +100,7 @@ Brug følgende tabel som en hjælp til at identificere forskellene i funktionsm�
 |Tildel en Rights Management ejer til mails, der er sendt fra en anden organisation |Nej |Ja|
 |Erstat eksisterende mærkat med samme eller lavere prioritet for mails |Nej |Ja (kan konfigureres)|
 
-\* Automatisk mærkning er i øjeblikket ikke tilgængelig i alle områder på grund af en backend-Azure-afhængighed. Hvis din lejer ikke kan understøtte denne funktionalitet, er fanen **Automatisk mærkning** ikke synlig i Microsoft Purview-compliance-portal. Du kan få flere oplysninger under [Tilgængelighed af Azure-afhængighed efter land](/troubleshoot/azure/general/dependency-availability-by-country).
+\* Automatisk mærkning er i øjeblikket ikke tilgængelig i alle områder på grund af en backend-Azure-afhængighed. Hvis din lejer ikke kan understøtte denne funktionalitet, er fanen **Automatisk mærkning** ikke synlig på Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger under [Tilgængelighed af Azure-afhængighed efter land](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Hvordan flere betingelser evalueres, når de gælder for mere end én etiket
 
@@ -126,7 +126,7 @@ Standardfunktionsmåde for, om automatisk mærkning tilsidesætter et eksisteren
 - Automatisk mærkning erstatter en [følsomhedsmærkat med lavere prioritet](sensitivity-labels.md#label-priority-order-matters) , der blev anvendt automatisk, men ikke en mærkat med højere prioritet.
     
     > [!TIP]
-    > Følsomhedsmærkaten øverst på listen i Microsoft Purview-compliance-portal har f.eks. navnet **Offentlig** med et ordrenummer (prioritet) på 0, og følsomhedsmærkaten nederst på listen har navnet **Meget fortroligt** med et ordrenummer (prioritet 4). Mærkaten **Meget fortroligt** kan tilsidesætte mærkaten **Offentlig** , men ikke omvendt.
+    > Følsomhedsmærkaten øverst på listen på Microsoft Purview-overholdelsesportalen hedder f.eks. **Offentlig** med et ordrenummer (prioritet) på 0, og følsomhedsmærkaten nederst på listen har navnet **Meget fortroligt** med et ordrenummer (prioritet 4). Mærkaten **Meget fortroligt** kan tilsidesætte mærkaten **Offentlig** , men ikke omvendt.
 
 Kun for politikker for automatisk mærkning af mails kan du vælge en indstilling, der altid skal tilsidesætte en eksisterende følsomhedsmærkat, uanset hvordan den blev anvendt.
 
@@ -297,7 +297,7 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
 
 ### <a name="creating-an-auto-labeling-policy"></a>Oprettelse af en politik for automatisk mærkning
 
-1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal skal du</a> navigere til følsomhedsmærkater:
+1. Gå til følsomhedsmærkater på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>:
 
     - **Løsninger** >  **Information Protection**
 
@@ -409,9 +409,9 @@ Du kan også se resultaterne af politikken for automatisk mærkning ved hjælp a
 
 ### <a name="use-powershell-for-auto-labeling-policies"></a>Brug PowerShell til politikker for automatisk mærkning
 
-Du kan bruge [Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell) til at oprette og konfigurere politikker for automatisk mærkning. Det betyder, at du fuldt ud kan scripte oprettelsen og vedligeholdelsen af politikkerne for automatisk mærkning, hvilket også giver en mere effektiv metode til angivelse af flere URL-adresser til OneDrive og SharePoint placeringer.
+Du kan bruge [Security & Compliance PowerShell](/powershell/exchange/scc-powershell) til at oprette og konfigurere politikker for automatisk mærkning. Det betyder, at du fuldt ud kan scripte oprettelsen og vedligeholdelsen af politikkerne for automatisk mærkning, hvilket også giver en mere effektiv metode til angivelse af flere URL-adresser til OneDrive og SharePoint placeringer.
 
-Før du kører kommandoerne i PowerShell, skal du først [oprette forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Før du kører kommandoerne i PowerShell, skal du først [oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 Sådan opretter du en ny politik for automatisk mærkning:
 

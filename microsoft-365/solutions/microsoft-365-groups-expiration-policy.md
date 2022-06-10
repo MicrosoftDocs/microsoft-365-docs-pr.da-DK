@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 recommendations: false
 description: Få mere at vide om udløbspolitikker for Microsoft 365 grupper.
-ms.openlocfilehash: 431d2ae027e92c83d645a4b27ab515d17326c1b7
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 05d66c4c05289cefeea9478256a016def6561a52
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535796"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014558"
 ---
 # <a name="microsoft-365-group-expiration-policy"></a>udløbspolitik for Microsoft 365 gruppe
 
@@ -58,7 +58,7 @@ Det er vigtigt at vide, at udløb er slået fra som standard. Administratorer sk
 
 ## <a name="how-to-set-the-expiration-policy"></a>Sådan angiver du udløbspolitikken
 
-Som nævnt ovenfor er udløb slået fra som standard. En administrator skal aktivere udløbspolitikken og angive egenskaberne for, at den træder i kraft. Hvis du vil aktivere den, **skal** du gå til Azure Active Directory  > **GroupsExpiration** > . Her kan du angive standardgruppens levetid og angive, hvor lang tid i forvejen du vil have, at den første og anden udløbsbesked skal gå til gruppeejeren.
+Som nævnt ovenfor er udløb slået fra som standard. En administrator skal aktivere udløbspolitikken og angive egenskaberne for, at den træder i kraft. Hvis du vil aktivere den, skal du gå til **udløb** **af** >  **Azure Active Directory** >  Grupper. Her kan du angive standardgruppens levetid og angive, hvor lang tid i forvejen du vil have, at den første og anden udløbsbesked skal gå til gruppeejeren.
 
 Gruppens levetid er angivet i dage og kan indstilles til 180, 365 eller til en brugerdefineret værdi, som du angiver. Den brugerdefinerede værdi skal være på mindst 30 dage.
 
@@ -70,7 +70,7 @@ Du kan angive politikken for alle dine grupper, kun udvalgte grupper (op til 500
 
 ## <a name="how-expiry-works-with-the-retention-policy"></a>Sådan fungerer udløb sammen med opbevaringspolitikken
 
-Hvis du har konfigureret en opbevaringspolitik for grupper i Security and Compliance Center, fungerer udløbspolitikken uden problemer med opbevaringspolitikken. Når en gruppe udløber, bevares gruppens postkassesamtaler og -filer på gruppewebstedet i opbevaringsobjektbeholderen i det specifikke antal dage, der er defineret i opbevaringspolitikken. Brugerne får dog ikke vist gruppen eller dens indhold efter udløb.
+Hvis du har konfigureret en opbevaringspolitik for grupper på Microsoft Purview-overholdelsesportalen, fungerer udløbspolitikken uden problemer sammen med opbevaringspolitikken. Når en gruppe udløber, bevares gruppens postkassesamtaler og -filer på gruppewebstedet i opbevaringsobjektbeholderen i det specifikke antal dage, der er defineret i opbevaringspolitikken. Brugerne får dog ikke vist gruppen eller dens indhold efter udløb.
 
 ## <a name="how-and-when-a-group-owner-learns-if-their-groups-are-going-to-expire"></a>Hvordan og hvornår en gruppeejer får at vide, om deres grupper udløber
 

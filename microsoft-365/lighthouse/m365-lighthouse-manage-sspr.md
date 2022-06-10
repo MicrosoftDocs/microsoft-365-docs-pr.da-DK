@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du administrerer selvbetjent nulstilling af adgangskode.
-ms.openlocfilehash: 4d618eb80dfd4a37ad5548de997b3d551bcbbf85
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 0af624e93ae9321834e147f829a87f09c36dedf7
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022355"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017670"
 ---
 # <a name="manage-self-service-password-reset-in-microsoft-365-lighthouse"></a>Administrer selvbetjent nulstilling af adgangskode i Microsoft 365 Fyrtårn
 
@@ -53,7 +54,7 @@ Fanen Nulstilling af adgangskode indeholder en oversigt over de lejere, der har 
 
 4. Vælg **Rediger SSPR-indstillinger i Azure Active Directory** for at gå til Azure Active Directory (Azure AD).
 
-5. I Azure AD skal du aktivere SSPR for alle eller udvalgte brugere. Du kan få mere at vide under [Selvstudium: Giv brugerne mulighed for at låse deres konto op eller nulstille adgangskoder ved hjælp af Azure Active Directory selvbetjent nulstilling af adgangskode](/azure/active-directory/authentication/tutorial-enable-sspr).
+5. I Azure AD skal du aktivere SSPR for alle eller valgte brugere. Du kan få mere at vide under [Selvstudium: Giv brugerne mulighed for at låse deres konto op eller nulstille adgangskoder ved hjælp af Azure Active Directory selvbetjent nulstilling af adgangskode](/azure/active-directory/authentication/tutorial-enable-sspr).
 
 ## <a name="notify-users-to-register-for-sspr"></a>Giv brugerne besked om at tilmelde sig SSPR
 

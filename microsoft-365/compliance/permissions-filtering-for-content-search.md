@@ -20,12 +20,12 @@ search.appverid:
 ms.assetid: 1adffc35-38e5-4f7d-8495-8e0e8721f377
 description: Brug filtrering af søgetilladelser til kun at lade eDiscovery-ledere søge i et undersæt af postkasser og websteder i din organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ba8cfaaec45ceefff89b17b561a5e80bebbdade6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 067e1a3c785d624579af80f92476d2641266f4dc
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098796"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018047"
 ---
 # <a name="configure-permissions-filtering-for-ediscovery"></a>Konfigurer filtrering af tilladelser for eDiscovery
 
@@ -59,7 +59,7 @@ Følgende fire cmdlet'er i Security & Compliance PowerShell giver dig mulighed f
 
 - Hvis du vil køre cmdlet'erne til overholdelse af sikkerhed, skal du være medlem af rollegruppen Organisationsadministration på overholdelsesportalen. Du kan få flere oplysninger [under Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md).
 
-- Du skal oprette forbindelse til både Exchange Online og Security & Compliance Center PowerShell for at bruge cmdlet'erne til overholdelse af sikkerhed. Dette er nødvendigt, fordi disse cmdlet'er kræver adgang til postkasseegenskaber, og derfor skal du oprette forbindelse til Exchange Online PowerShell. Se trinnene i næste afsnit.
+- Du skal oprette forbindelse til både Exchange Online og Security & Compliance PowerShell for at bruge cmdlet'erne til overholdelse af sikkerhed. Dette er nødvendigt, fordi disse cmdlet'er kræver adgang til postkasseegenskaber, og derfor skal du oprette forbindelse til Exchange Online PowerShell. Se trinnene i næste afsnit.
 
 - Se afsnittet [Flere oplysninger](#more-information) for at få flere oplysninger om filtre for søgetilladelser.
 
@@ -69,7 +69,7 @@ Følgende fire cmdlet'er i Security & Compliance PowerShell giver dig mulighed f
 
 - Der er ingen grænse for antallet af filtre for søgetilladelser, der kan oprettes i en organisation. En søgeforespørgsel kan dog højst have 100 betingelser. I dette tilfælde defineres en betingelse som noget, der er forbundet til forespørgslen af en boolesk operator (f.eks **. AND**, **OR** og **NEAR**). Grænsen for antallet af betingelser omfatter selve søgeforespørgslen plus alle filtre for søgetilladelser, der anvendes på den bruger, der kører søgningen. Jo flere søgetilladelser du har (især hvis disse filtre anvendes på den samme bruger eller gruppe af brugere), jo større er chancen for at overskride det maksimale antal betingelser for en søgning. Hvis du vil forhindre din organisation i at nå betingelsesgrænsen, skal du holde antallet af søgetilladelsersfiltre i din organisation så få som muligt, så de opfylder dine forretningskrav. Du kan finde flere oplysninger under [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser](set-up-compliance-boundaries.md#frequently-asked-questions).
 
-## <a name="connect-to-exchange-online-and-security--compliance-center-powershell-in-a-single-session"></a>Forbind til Exchange Online og security & Compliance Center PowerShell i en enkelt session
+## <a name="connect-to-exchange-online-and-security--compliance-powershell-in-a-single-session"></a>Forbind til Exchange Online og sikkerhed & Overholdelse af angivne standarder i PowerShell i en enkelt session
 
 Før du kan køre scriptet i dette afsnit, skal du downloade og installere Exchange Online PowerShell V2-modulet. Du kan få flere oplysninger [under Om Exchange Online PowerShell V2-modulet](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
@@ -89,13 +89,13 @@ Før du kan køre scriptet i dette afsnit, skal du downloade og installere Excha
     .\ConnectEXO-SCC.ps1
     ```
 
-Hvordan ved du, om det virkede? Når du har kørt scriptet, importeres cmdlet'er fra Exchange Online og security & Compliance PowerShell til din lokale Windows PowerShell session. Hvis du ikke modtager nogen fejl, har du oprettet forbindelse. En hurtig test er at køre PowerShell-cmdlet'er Exchange Online & Compliance Center. Du kan f.eks. køre og **Get-Mailbox** og **Get-ComplianceSearch**.
+Hvordan ved du, om det virkede? Når du har kørt scriptet, er cmdlet'er fra Exchange Online PowerShell og Security & Compliance PowerShell tilgængelige. Hvis du ikke modtager nogen fejl, har du oprettet forbindelse. En hurtig test er at køre Exchange Online PowerShell- og Security & PowerShell-cmdlet'er til overholdelse af angivne standarder. Du kan f.eks. køre og **Get-Mailbox** og **Get-ComplianceSearch**.
 
 Hvis du vil foretage fejlfinding af PowerShell-forbindelsesfejl, skal du se:
 
 - [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#how-do-you-know-this-worked)
 
-- [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
+- [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
 
 ## <a name="new-compliancesecurityfilter"></a>New-ComplianceSecurityFilter
 

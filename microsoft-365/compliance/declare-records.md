@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Deklarer poster ved hjælp af opbevaringsmærkater.
-ms.openlocfilehash: 75445d1cd61bd86dd41d6325efc6e71fac20ddc0
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 0e8453bee843131a5781318f7adde8d19bb04d92
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286050"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016806"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Erklær data ved hjælp af opbevaringsmærkater
 
@@ -43,7 +43,7 @@ Du kan derefter enten publicere disse mærkater i en politik for opbevaringsmær
 
 Indstillingen for opbevaringsmærkat til markering af indhold som en lovmæssig post vises som standard ikke i guiden til opbevaringsmærkater. Hvis du vil have vist denne indstilling, skal du først køre en PowerShell-kommando:
 
-1. [Forbind til PowerShell Office 365 Security & Compliance Center](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. [Forbind til PowerShell & Office 365 security & compliance](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
 2. Kør følgende cmdlet:
 
@@ -75,7 +75,7 @@ Hvis du vil have en komplet vejledning:
 
 Hvis du vil bruge opbevaringsmærkater til at deklarere elementer som poster (i stedet for lovmæssige poster) i SharePoint og OneDrive skal du overveje, om du skal ændre standardindstillingen for lejeren, der giver brugerne mulighed for at redigere egenskaberne for en [låst post](record-versioning.md), når filer er større end 0 byte.
 
-Hvis du vil ændre denne standard, skal du gå til [Microsoft Purview-overholdelsesportalPostadministrationIndstillinger](https://compliance.microsoft.com/) >  **for** >  **administration** >  **afpostadministrationRetentionsmærkaterTillad** >  **redigering af postegenskaber** og derefter deaktivere indstillingen **Tillad brugere at redigere postegenskaber**.
+Hvis du vil ændre denne standard, skal du gå til [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) > **Datastyring** > **Indstillinger for** >  administration af poster **Opbevaringsmærkater** > **Tillad redigering af postegenskaber** og derefter slå indstillingen **Tillad brugere at redigere postegenskaber** fra.
 
 ## <a name="applying-the-configured-retention-label-to-content"></a>Anvendelse af den konfigurerede opbevaringsmærkat på indhold
 

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger den avancerede leveringspolitik i Exchange Online Protection (EOP) til at identificere meddelelser, der ikke skal filtreres i bestemte understøttede scenarier (phishing-simuleringer fra tredjepart og meddelelser, der leveres til sikkerhedshandlinger (SecOps)-postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d9a959e70408af80567d1daed140e0642870b975
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: d9176f73c94df6413e3b79053318f5547788d773
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647793"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011577"
 ---
 # <a name="configure-the-delivery-of-third-party-phishing-simulations-to-users-and-unfiltered-messages-to-secops-mailboxes"></a>Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser
 
@@ -45,7 +45,7 @@ Du kan bruge den _avancerede leveringspolitik_ i Microsoft 365 til at forhindre 
 - [Standardsystembeskeder](/microsoft-365/compliance/alert-policies#default-alert-policies) udløses ikke for disse scenarier.
 - [AIR og klyngedannelse i Defender for Office 365](office-365-air.md) ignorerer disse meddelelser.
 - Specifikt til phishing-simuleringer fra tredjepart:
-  - [Administration indsendelser](admin-submission.md) genererer et automatisk svar, der siger, at meddelelsen er en del af en phishing-simuleringskampagne og ikke er en reel trussel. Beskeder og AIR udløses ikke. Oplevelsen med administratorindsendelser viser disse meddelelser som en simuleret trussel.
+  - [Administratorindsendelser](admin-submission.md) genererer et automatisk svar, der siger, at meddelelsen er en del af en phishing-simuleringskampagne og ikke er en reel trussel. Beskeder og AIR udløses ikke. Oplevelsen med administratorindsendelser viser disse meddelelser som en simuleret trussel.
   - Når en bruger rapporterer en phishingsimuleringsmeddelelse ved hjælp af [rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing](enable-the-report-message-add-in.md), genererer systemet ikke en besked, undersøgelse eller hændelse. Links eller filer detoneres ikke, men meddelelsen vises også under fanen **Brugerrapporterede meddelelser** på siden **Indsendelser** .
   - [Pengeskab Links i Defender for Office 365](safe-links.md) blokerer eller detonerer ikke de specifikt identificerede URL-adresser i disse meddelelser, når der klikkes. URL-adresser er stadig ombrudt, men de er ikke blokeret.
   - [Pengeskab vedhæftede filer i Defender for Office 365](safe-attachments.md) detonerer ikke vedhæftede filer i disse meddelelser.
@@ -54,19 +54,19 @@ Du kan bruge den _avancerede leveringspolitik_ i Microsoft 365 til at forhindre 
 
 <sup>\*\*</sup> Du kan omgå ZAP for malware ved at oprette en politik for antimalware for SecOps-postkassen, hvor ZAP til malware er slået fra. Du kan finde en vejledning [under Konfigurer politikker for antimalware i EOP](configure-anti-malware-policies.md).
 
-Meddelelser, der identificeres af den avancerede leveringspolitik, er ikke sikkerhedstrusler, så meddelelserne er markeret med systemtilsidesættelser. Administration oplevelser viser disse meddelelser som enten på grund af tilsidesættelse af **phishingsimuleringssystemet** eller tilsidesættelse af **secOps-postkassesystemet**. Administratorer kan filtrere og analysere på disse systemtilsidesættelser i følgende oplevelser:
+Meddelelser, der identificeres af den avancerede leveringspolitik, er ikke sikkerhedstrusler, så meddelelserne er markeret med systemtilsidesættelser. Administratoroplevelser viser disse meddelelser som enten på grund af tilsidesættelse af et **phishingsimuleringssystem** eller tilsidesættelse af **et SecOps-postkassesystem** . Administratorer kan filtrere og analysere på disse systemtilsidesættelser i følgende oplevelser:
 
-- [Trusselsoversigt/registreringer i realtid i Defender for Office 365 plan 2](threat-explorer.md): Administration kan filtrere efter **systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
-- [Mailobjektsiden i Threat Explorer/Realtidsregistreringer](mdo-email-entity-page.md): Administration kan få vist en meddelelse, der blev tilladt af organisationspolitikken af enten **SecOps-postkassen** eller **phishingsimulering** under **tilsidesættelse af lejer** i afsnittet **Tilsidesættelser**.
-- [Statusrapporten trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report): Administration kan filtrere efter **visningsdata efter tilsidesættelse af system** i rullemenuen og vælge at få vist meddelelser, der er tilladt på grund af tilsidesættelse af et phishingsimuleringssystem. Hvis du vil se meddelelser, der er tilladt af tilsidesættelsen af SecOps-postkassen, kan du vælge **diagramopdeling efter leveringsplacering** i rullemenuen **med diagramopdeling efter årsag** .
+- [Trusselsoversigt/registreringer i realtid i Defender for Office 365 plan 2](threat-explorer.md): Administratoren kan filtrere **efter systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
+- [Mailobjektsiden i Threat Explorer/Realtidsregistreringer](mdo-email-entity-page.md): Administratoren kan få vist en meddelelse, der blev tilladt af organisationspolitikken af enten **SecOps-postkassen** eller **phishingsimulering** under **tilsidesættelse af lejer** i afsnittet **Tilsidesættelser**.
+- [Statusrapporten trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report): Administratoren kan filtrere efter **visningsdata efter systemtilsidesættelse** i rullemenuen og vælge at få vist meddelelser, der er tilladt på grund af tilsidesættelse af et phishingsimuleringssystem. Hvis du vil se meddelelser, der er tilladt af tilsidesættelsen af SecOps-postkassen, kan du vælge **diagramopdeling efter leveringsplacering** i rullemenuen **med diagramopdeling efter årsag** .
 - [Avanceret jagt i Microsoft Defender for Endpoint](../defender-endpoint/advanced-hunting-overview.md): Phishingsimulering og tilsidesættelser af SecOps-postkassesystemet vises som indstillinger i OrgLevelPolicy i EmailEvents.
-- [Kampagnevisninger](campaigns.md): Administration kan filtrere **efter systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
+- [Kampagnevisninger](campaigns.md): Administratoren kan filtrere **efter systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Avanceret levering** , skal du åbne <https://security.microsoft.com/advanceddelivery>.
 
-- Hvis du vil oprette forbindelse til Security & Compliance Center PowerShell, [skal du se Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+- Hvis du vil oprette forbindelse til PowerShell & overholdelse af angivne standarder, [skal du se Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 - Du skal have tildelt tilladelser, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil oprette, redigere eller fjerne konfigurerede indstillinger i politikken for avanceret levering, skal du være medlem af rollegruppen **Sikkerhedsadministrator** i **Microsoft 365 Defender portalen** og medlem af rollegruppen **Organisationsadministration** i **Exchange Online**.
@@ -146,9 +146,9 @@ Ud over de to scenarier, som den avancerede leveringspolitik kan hjælpe dig med
 
 - **Falske positiver, der gennemses**: Det kan være en god idé midlertidigt at tillade, at visse meddelelser, der stadig analyseres af Microsoft, via [administratorindsendelser, rapporterer](admin-submission.md) kendte fungerende meddelelser, der fejlagtigt markeres som dårlige for Microsoft (falske positiver). Som med alle tilsidesættelser anbefaler vi **_på det kraftigste_** , at disse godtgørelser er midlertidige.
 
-## <a name="security--compliance-center-powershell-procedures-for-secops-mailboxes-in-the-advanced-delivery-policy"></a>Security & Compliance Center PowerShell-procedurer for SecOps-postkasser i den avancerede leveringspolitik
+## <a name="security--compliance-powershell-procedures-for-secops-mailboxes-in-the-advanced-delivery-policy"></a>Sikkerhed & Overholdelse af PowerShell-procedurer for SecOps-postkasser i den avancerede leveringspolitik
 
-I Security & Compliance Center i PowerShell er de grundlæggende elementer i SecOps-postkasser i den avancerede leveringspolitik:
+I Security & Compliance PowerShell er de grundlæggende elementer i SecOps-postkasser i den avancerede leveringspolitik:
 
 - **SecOps-tilsidesættelsespolitikken**: Styres af **\*-SecOpsOverridePolicy-cmdlet'erne** .
 - **SecOps-tilsidesættelsesreglen**: Styres af **\*-SecOpsOverrideRule-cmdlet'erne** .
@@ -279,9 +279,9 @@ Remove-SecOpsOverrideRule -Identity SecOpsOverrideRule6fed4b63-3563-495d-a481-b2
 
 Du kan finde detaljerede oplysninger om syntaks og parametre under [Remove-SecOpsOverrideRule](/powershell/module/exchange/remove-secopsoverriderule).
 
-## <a name="security--compliance-center-powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy"></a>Security & Compliance Center PowerShell-procedurer for phishing-simuleringer fra tredjepart i den avancerede leveringspolitik
+## <a name="security--compliance-powershell-procedures-for-third-party-phishing-simulations-in-the-advanced-delivery-policy"></a>Sikkerhed & Overholdelse af PowerShell-procedurer for phishing-simuleringer fra tredjepart i den avancerede leveringspolitik
 
-I Security & Compliance Center i PowerShell er de grundlæggende elementer i phishing-simuleringer fra tredjepart i den avancerede leveringspolitik:
+I Security & Compliance PowerShell er de grundlæggende elementer i phishing-simuleringer fra tredjepart i den avancerede leveringspolitik:
 
 - **Politikken for tilsidesættelse af phishing-simulering**: Styres af **\*-PhishSimOverridePolicy-cmdlet'erne** .
 - **Reglen for phishingsimulering tilsidesætter reglen**: Styres af **\*-PhishSimOverrideRule-cmdlet'erne** .

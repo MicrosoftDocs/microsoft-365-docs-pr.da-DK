@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Få trinvise værktøjer til at planlægge, overføre og implementere funktionerne i din lejers licenser. Find en vejledning til, hvordan du konfigurerer en tjeneste eller en app, du skal køre.
-ms.openlocfilehash: 5ffb0652b145bba6ae4e834815c5cb51b7ad2b94
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 451f92aade8a6e7910630629b805065e6910b9de
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535918"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017114"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Installationsvejledninger til Microsoft 365 og Office 365 tjenester
 
@@ -162,7 +162,7 @@ Med [konfigurationsvejledningen til Microsoft Intune](https://aka.ms/intunesetup
 
 EOP (Microsoft Exchange Online Protection) er en cloudbaseret tjeneste til filtrering af mails til beskyttelse mod spam og malware med funktioner, der beskytter din organisation mod overtrædelser af meddelelsespolitik.
 
-Brug [konfigurationsvejledningen til Exchange Online Protection](https://aka.ms/EOPguidance) til at konfigurere EOP ved at vælge, hvilke af de tre installationsscenarier&mdash; postkasser i det lokale miljø, hybride (blanding af postkasser i det lokale miljø og cloudmiljøet), eller alle cloudpostkasser&mdash; passer til din organisation. Vejledningen indeholder oplysninger og ressourcer, som du kan bruge til at konfigurere og gennemse din brugers licenser, tildele tilladelser i Microsoft 365 Administration og konfigurere organisationens politikker for antimalware og spam i Security & Compliance Center.
+Brug [konfigurationsvejledningen til Exchange Online Protection](https://aka.ms/EOPguidance) til at konfigurere EOP ved at vælge, hvilke af de tre installationsscenarier&mdash;i postkasser i det lokale miljø, hybride postkasser (blanding af postkasser i det lokale miljø og cloudmiljøet) eller alle cloudpostkasser&mdash;, der passer til din organisation. Vejledningen indeholder oplysninger og ressourcer, som du kan bruge til at konfigurere og gennemse din brugers licenser, tildele tilladelser i Microsoft 365 Administration og konfigurere organisationens politikker for antimalware og spam i Security & Compliance Center.
 
 ### <a name="microsoft-defender-for-office-365-setup-guide"></a>Konfigurationsvejledning til Microsoft Defender for Office 365
 
@@ -181,13 +181,13 @@ Løsningerne i denne vejledning hjælper dig med at få indblik i brugeraktivite
 * Med løsningen til overholdelse af angivne standarder for kommunikation kan du identificere og reagere på kommunikationsrisici for elementer som vold på arbejdspladsen, insiderhandel, chikane, ordensregler og overtrædelser af lovmæssige standarder.
 * Løsningen til styring af insiderrisiko hjælper dig med at identificere, undersøge og reagere på risici for tyveri af immaterielle rettigheder, følsomme datalækager, sikkerhedsovertrædelser, dataspild og fortrolighedsovertrædelser.
 
-### <a name="microsoft-purview-information-protection-setup-guide"></a>Microsoft Purview Information Protection konfigurationsvejledning
+### <a name="microsoft-purview-information-protection-setup-guide"></a>Installationsvejledning til Microsoft Purview Information Protection
 
 Få et overblik over de funktioner, du kan anvende i din strategi til beskyttelse af oplysninger, så du kan være sikker på, at dine følsomme oplysninger er beskyttet. Brug en tilgang med fire trins livscyklus, hvor du opdager, klassificerer, beskytter og overvåger følsomme oplysninger. [Konfigurationsvejledningen til Microsoft Purview Information Protection](https://aka.ms/microsoftpurviewinformationprotectionsetupguide) indeholder en vejledning i, hvordan du fuldfører hver af disse faser.
 
-### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Administration af Microsoft Purview-datalivscyklus konfigurationsvejledning
+### <a name="microsoft-purview-data-lifecycle-management-setup-guide"></a>Konfigurationsvejledning til Microsoft Purview Data Lifecycle Management
 
-[Konfigurationsvejledningen til Administration af Microsoft Purview-datalivscyklus](https://aka.ms/migsetupguide) giver dig de oplysninger, du skal bruge for at konfigurere og administrere organisationens styringsstrategi for at sikre, at dine data klassificeres og administreres i henhold til de specifikke retningslinjer for livscyklus, du angiver. I denne vejledning lærer du, hvordan du opretter, automatisk anvender eller publicerer opbevaringsmærkater, politikker for opbevaringsmærkater og opbevaringspolitikker, der anvendes på din organisations indhold og overholdelsesposter. Du får også oplysninger om import af CSV-filer med en filplan til massescenarier eller til manuel anvendelse af dem i individuelle dokumenter.
+[Konfigurationsvejledningen til Microsoft Purview Data Lifecycle Management](https://aka.ms/migsetupguide) giver dig de oplysninger, du skal bruge for at konfigurere og administrere organisationens styringsstrategi for at sikre, at dine data klassificeres og administreres i henhold til de specifikke retningslinjer for livscyklus, du har angivet. I denne vejledning lærer du, hvordan du opretter, automatisk anvender eller publicerer opbevaringsmærkater, politikker for opbevaringsmærkater og opbevaringspolitikker, der anvendes på din organisations indhold og overholdelsesposter. Du får også oplysninger om import af CSV-filer med en filplan til massescenarier eller til manuel anvendelse af dem i individuelle dokumenter.
 
 ### <a name="microsoft-defender-for-cloud-apps-setup-guide"></a>konfigurationsvejledning til Microsoft Defender for Cloud Apps
 
@@ -250,3 +250,7 @@ For organisationer, der bruger Configuration Manager, kan du bruge [Microsoft 36
 ### <a name="intune-configuration-manager-co-management-setup-guide"></a>vejledning til konfiguration af Intune Configuration Manager medadministration
 
 Brug [konfigurationsvejledningen til Intune Configuration Manager medadministration](https://aka.ms/comanagementsetup) til at konfigurere eksisterende Configuration Manager klientenheder og nye internetbaserede enheder, som din organisation vil være med til at administrere med både Microsoft Intune og Configuration Manager. Med administration giver dig mulighed for at administrere Windows 10 enheder og føje nye funktioner til din organisations enheder, samtidig med at du modtager fordelene ved begge løsninger.
+
+#### <a name="school-data-sync-rollover-setup-guide"></a>Skoledatasynkronisering vejledning til konfiguration af rollover
+
+[Konfigurationsvejledningen til SDS rollover](https://aka.ms/sdsrolloversetupguide) indeholder trinnene, der hjælper din organisation med at synkronisere data om studerende for at Azure Active Directory og Office 365. Denne vejledning strømliner termens livscyklusstyringsproces ved at oprette Office 365 grupper til Exchange Online og SharePoint Online, klasseteams til Microsoft Teams og OneNote samt Intune  til uddannelse og rostering og integration med enkeltlogon for tredjepartsapps. Du udfører afslutning på årsskiftet, lejeroprydning og -arkiv, forberedelse af nyt skoleår og lancering af nyt skoleår. Derefter kan du oprette nye profiler ved hjælp af den metode til synkroniseringsinstallation, der passer til din organisation.

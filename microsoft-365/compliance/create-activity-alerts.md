@@ -19,12 +19,12 @@ search.appverid:
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
 description: Tilføj og administrer aktivitetsbeskeder på Microsoft Purview-overholdelsesportalen, så Microsoft 365 sender dig mailmeddelelser, når brugerne udfører bestemte aktiviteter
-ms.openlocfilehash: 99cbbe4a03047b5cf8ef366a228fc78fe9dfbda1
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b08c23ec80562418112266d03c58f4b764a128ba
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097002"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018091"
 ---
 # <a name="create-activity-alerts"></a>Opret aktivitetsbeskeder
 
@@ -128,7 +128,7 @@ Hvis du vil slå en aktivitetsbesked til igen, skal du blot gentage disse trin o
     |Sletter (fjerner) permanent en mail fra deres postkasse.  |Fjernede meddelelser fra postkasse  | Exchange postkasseaktiviteter  |
     |Sender en mail fra en delt postkasse.  |Sendt meddelelse med tilladelserne Send som  <br/> Og  <br/> Sendt meddelelse med tilladelsen Send på vegne  | Exchange postkasseaktiviteter  |
 
-- Du kan også bruge Cmdlet'erne **New-ActivityAlert** og **Set-ActivityAlert** i Security & Compliance Center PowerShell til at oprette og redigere aktivitetsbeskeder. Vær opmærksom på følgende ting, hvis du bruger disse cmdlet'er til at oprette eller redigere aktivitetsbeskeder:
+- Du kan også bruge Cmdlet'erne **New-ActivityAlert** og **Set-ActivityAlert** i Security & Compliance PowerShell til at oprette og redigere aktivitetsbeskeder. Vær opmærksom på følgende ting, hvis du bruger disse cmdlet'er til at oprette eller redigere aktivitetsbeskeder:
 
   - Hvis du bruger en cmdlet til at føje en aktivitet til den besked, der ikke er angivet på rullelisten **Aktiviteter** , vises der en meddelelse på egenskabssiden for beskeden med teksten "Denne besked indeholder brugerdefinerede handlinger, der ikke er angivet i vælgeren".
 

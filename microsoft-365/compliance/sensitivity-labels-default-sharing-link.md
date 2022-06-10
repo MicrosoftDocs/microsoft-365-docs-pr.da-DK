@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: 132a526cc591f34722e4c0e8d4982859790558da
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 0c72d35399a0185bbd8cf58b5eac58241a695b72
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286884"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012312"
 ---
 # <a name="use-sensitivity-labels-to-configure-the-default-sharing-link-type-for-sites-and-documents-in-sharepoint-and-onedrive"></a>Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive
 
@@ -58,14 +58,14 @@ Hvis du vil anvende standardlinktypen for deling for websteder, skal følsomheds
 
 Hvis du vil anvende standardlinktypen for deling for dokumenter i SharePoint og OneDrive, skal følsomhedsmærkater være aktiveret for disse tjenester. Hvis denne funktion endnu ikke er aktiveret for din lejer, skal du se [Sådan aktiverer du følsomhedsmærkater for SharePoint og OneDrive (tilmelder dig)](sensitivity-labels-sharepoint-onedrive-files.md#how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in).
 
-I en PowerShell-session skal du [oprette forbindelse til Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell) for at konfigurere indstillingerne for standardlinktypen for deling.
+I en PowerShell-session skal du [oprette forbindelse til Office 365 Security & Compliance PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell) for at konfigurere indstillingerne for standardlinktypen for deling.
 
 > [!NOTE]
 > Selvom det ikke er påkrævet, er det nemmest først at [oprette og konfigurere følsomhedsmærkater på Microsoft Purview-overholdelsesportalen](create-sensitivity-labels.md) og derefter ændre disse mærkater med de indstillinger, der konfigurerer standardtypen for delingslinket.
 
 ## <a name="how-to-configure-settings-for-the-default-sharing-link-type"></a>Sådan konfigurerer du indstillinger for standardlinktypen for deling
 
-Konfigurationsindstillingerne for standardlinktypen for deling bruger parameteren PowerShell *AdvancedSettings* med cmdlet'erne [Set-Label](/powershell/module/exchange/set-label) og [New-Label](/powershell/module/exchange/new-labelpolicy) fra [Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell):
+Konfigurationsindstillingerne for standardlinktypen for deling bruger parameteren PowerShell *AdvancedSettings* med cmdlet'erne [Set-Label](/powershell/module/exchange/set-label) og [New-Label](/powershell/module/exchange/new-labelpolicy) fra [Security & Compliance PowerShell](/powershell/exchange/scc-powershell):
 
 - **DefaultSharingScope**: De tilgængelige værdier er:
     - **SpecificPeople**: Angiver standardlinket til deling for webstedet til linket "Bestemte personer"

@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers), der bruger Microsoft 365 Lighthouse, kan du få mere at vide om, hvordan du blokerer en brugerkonto, hvis du mener, at den er kompromitteret, så brugerne ikke kan logge på.
-ms.openlocfilehash: e301221e05bfb6423d16049c368fe949c6c6adb0
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 210e854c438a252e160a3a3e966a34e079f3e952
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65023585"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012246"
 ---
 # <a name="block-user-sign-in-in-microsoft-365-lighthouse"></a>Bloker brugerlogon Microsoft 365 Fyrtårn
 

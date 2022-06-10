@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du konfigurerer en brugerdefineret connector til import af tredjepartsdata fra datakilder, f.eks. Salesforce Chatter, Yahoo Messenger eller Yammer.
-ms.openlocfilehash: f0de03fb68b78779b6d1ed057a8b462c5c2a901b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 02c0d8a61668a0d3dd3e663c1cb4915be15d9a08
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097552"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015512"
 ---
 # <a name="work-with-a-partner-to-archive-third-party-data"></a>Arbejd sammen med en partner om at arkivere tredjepartsdata
 
@@ -403,7 +403,6 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - YouTube
 
-
 ### <a name="verba"></a>Verba
 
 [Verba](https://www.verba.com) understøtter følgende datakilder fra tredjepart:
@@ -476,7 +475,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 Her er trinnene til oprettelse og konfiguration af en tredjepartsdatapostkasse til import af data til Microsoft 365. Som tidligere forklaret, importeres elementer til denne postkasse, hvis partnerconnectoren ikke kan knytte bruger-id'et for elementet til en brugerkonto.
 
- **Udfør disse opgaver i Microsoft 365 Administration**
+### <a name="complete-these-tasks-in-the-microsoft-365-admin-center"></a>Udfør disse opgaver i Microsoft 365 Administration
 
 1. Opret en brugerkonto, og tildel den en Exchange Online Plan 2-licens. Se [Føj brugere til Microsoft 365](../admin/add-users/add-users.md). Der kræves en Plan 2-licens for at placere postkassen i litigation-venteposition eller aktivere en arkivpostkasse, der har en lagerkvote på op til 1,5 TB.
 
@@ -485,9 +484,9 @@ Her er trinnene til oprettelse og konfiguration af en tredjepartsdatapostkasse t
     > [!TIP]
     > Skriv legitimationsoplysningerne for denne brugerkonto ned. Du skal give dem til din partner, som beskrevet i trin 4.
 
- **Udfør disse opgaver i Exchange Administration**
+### <a name="complete-these-tasks-in-the-exchange-admin-center"></a>Udfør disse opgaver i Exchange Administration
 
-1. Skjul datapostkassen fra tredjepart fra adressekartoteket og andre adresselister i din organisation. se [Administrer brugerpostkasser](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes). Du kan også køre følgende PowerShell-kommando:
+1. Skjul datapostkassen fra tredjepart fra adressekartoteket og andre adresselister i din organisation. se [Administrer brugerpostkasser](/exchange/recipients-in-exchange-online/manage-user-mailboxes/manage-user-mailboxes). Du kan også køre følgende [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell):
 
     ```powershell
     Set-Mailbox -Identity <identity of third-party data mailbox> -HiddenFromAddressListsEnabled $true
@@ -509,7 +508,7 @@ Her er trinnene til oprettelse og konfiguration af en tredjepartsdatapostkasse t
 
 ## <a name="step-3-configure-user-mailboxes-for-third-party-data"></a>Trin 3: Konfigurer brugerpostkasser til tredjepartsdata
 
-Det næste trin er at konfigurere brugerpostkasser til at understøtte tredjepartsdata. Udfør disse opgaver ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller ved hjælp af de tilsvarende Windows PowerShell cmdlet'er.
+Det næste trin er at konfigurere brugerpostkasser til at understøtte tredjepartsdata. Udfør disse opgaver ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller ved hjælp af de tilsvarende cmdlet'er.
 
 1. Aktivér arkivpostkassen for hver bruger. se [Aktivér arkivpostkasser](enable-archive-mailboxes.md) og [Aktivér automatisk udvidelse af arkivering](enable-autoexpanding-archiving.md).
 
@@ -562,17 +561,17 @@ Hvis du vil tilbagekalde samtykket for en dataconnector fra tredjepart, kan du s
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Som tidligere forklaret importeres elementer fra datakilder fra tredjepart til Exchange postkasser som mailmeddelelser. Partnerconnectoren importerer elementet ved hjælp af et skema, der kræves af API'en til Microsoft 365. I følgende tabel beskrives meddelelsesegenskaberne for et element fra en datakilde fra en tredjepart, når det er importeret til en Exchange postkasse som en mail. Tabellen angiver også, om meddelelsesegenskaben er obligatorisk. Obligatoriske egenskaber skal udfyldes. Hvis et element mangler en obligatorisk egenskab, importeres det ikke til Microsoft 365. Importprocessen returnerer en fejlmeddelelse, der forklarer, hvorfor et element ikke blev importeret, og hvilken egenskab der mangler.<br/><br/>
+- Som tidligere forklaret importeres elementer fra datakilder fra tredjepart til Exchange postkasser som mailmeddelelser. Partnerconnectoren importerer elementet ved hjælp af et skema, der kræves af API'en til Microsoft 365. I følgende tabel beskrives meddelelsesegenskaberne for et element fra en datakilde fra en tredjepart, når det er importeret til en Exchange postkasse som en mail. Tabellen angiver også, om meddelelsesegenskaben er obligatorisk. Obligatoriske egenskaber skal udfyldes. Hvis et element mangler en obligatorisk egenskab, importeres det ikke til Microsoft 365. Importprocessen returnerer en fejlmeddelelse, der forklarer, hvorfor et element ikke blev importeret, og hvilken egenskab der mangler.
 
-    |**Meddelelsesegenskab**|**Obligatorisk?**|**Beskrivelse**|**Eksempelværdi**|
-    |:-----|:-----|:-----|:-----|
-    |**FRA** <br/> |Ja  <br/> |Den bruger, der oprindeligt oprettede eller sendte elementet i datakilden fra tredjepart. Partnerconnectoren forsøger at knytte bruger-id'et fra kildeelementet (f.eks. et Twitter-håndtag) til en brugerkonto for alle deltagere (brugere i felterne FRA og TIL). Der importeres en kopi af meddelelsen til hver enkelt deltagers postkasse. Hvis ingen af deltagerne fra elementet kan knyttes til en brugerkonto, importeres elementet til tredjepartsarkiveringspostkassen i Microsoft 365.  <br/> <br/> Den deltager, der er identificeret som afsender af elementet, skal have en aktiv postkasse i organisationen, som elementet importeres til. Hvis afsenderen ikke har en aktiv postkasse, returneres følgende fejl:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`  | `bob@contoso.com` <br/> |
-    |**TIL** <br/> |Ja  <br/> |Den bruger, der har modtaget et element, hvis det er relevant for et element i datakilden.  <br/> | `bob@contoso.com` <br/> |
-    |**EMNE** <br/> |Nej  <br/> |Emnet fra kildeelementet.  <br/> | `"Mega deals with Contoso coming your way! #ContosoHolidayDeals"` <br/> |
-    |**DATO** <br/> |Ja  <br/> |Den dato, hvor elementet oprindeligt blev oprettet eller bogført i kundens datakilde. Det kan f.eks. være den dato, hvor en Twitter-meddelelse blev tweetet.  <br/> | `01 NOV 2015` <br/> |
-    |**KROPPEN** <br/> |Nej  <br/> |Indholdet af meddelelsen eller indlægget. For nogle datakilder kan indholdet af denne egenskab være det samme som indholdet for egenskaben **SUBJECT** . Under importprocessen forsøger partnerconnectoren at bevare den fulde pålidelighed fra indholdskilden som muligt. Hvis det er muligt, medtages filer, grafik eller andet indhold fra kildeelementets brødtekst i denne egenskab. Ellers medtages indhold fra kildeelementet i egenskaben **ATTACHMENT** . Indholdet af denne egenskab afhænger af partnerconnectoren og af kildeplatformens funktionalitet.  <br/> | `Author: bob@contoso.com` <br/>  `Date: 10 DEC 2014` <br/>  `Tweet: "Mega deals with Contoso coming your way! #ContosoHolidayDeals"` <br/>  `Date: 01 NOV 2015` <br/> |
-    |**VEDHÆFTET FIL** <br/> |Nej  <br/> |Hvis et element i datakilden (f.eks. et tweet på Twitter eller en chatsamtale) har en vedhæftet fil eller medtag billeder, forsøger partnerforbindelsen først at inkludere vedhæftede filer i egenskaben **BODY** . Hvis det ikke er muligt, føjes den til egenskaben ** VEDHÆFTET FIL **. Andre eksempler på vedhæftede filer omfatter Synes godt om i Facebook, metadata fra indholdskilden og svar på en meddelelse eller et indlæg.  <br/> | `image.gif` <br/> |
-    |**MEDDELELSESKLASSE** <br/> |Ja  <br/> | Dette er en egenskab med flere værdier, som oprettes og udfyldes af partnerconnectoren. Formatet for denne egenskab er  `IPM.NOTE.Source.Event`. (Denne egenskab skal begynde med  `IPM.NOTE`. Dette format svarer til formatet for meddelelsesklassen  `IPM.NOTE.X` . Denne egenskab indeholder følgende oplysninger:  <br/><br/>`Source`: Angiver datakilden fra tredjepart. for eksempel Twitter, Facebook eller BlackBerry.  <br/> <br/>  `Event`: Angiver den type aktivitet, der blev udført i den tredjepartsdatakilde, der producerede elementerne. f.eks. et tweet på Twitter eller et opslag på Facebook. Hændelser er specifikke for datakilden.  <br/> <br/>  Et formål med denne egenskab er at filtrere bestemte elementer baseret på den datakilde, hvor et element stammer fra, eller baseret på typen af hændelse. I en eDiscovery-søgning kan du f.eks. oprette en søgeforespørgsel for at finde alle de tweets, der blev postet af en bestemt bruger.  <br/> | `IPM.NOTE.Twitter.Tweet` <br/> |
+  |Meddelelsesegenskab|Obligatorisk?|Beskrivelse|Eksempelværdi|
+  |---|---|---|---|
+  |**FRA**|Ja|Den bruger, der oprindeligt oprettede eller sendte elementet i datakilden fra tredjepart. Partnerconnectoren forsøger at knytte bruger-id'et fra kildeelementet (f.eks. et Twitter-håndtag) til en brugerkonto for alle deltagere (brugere i felterne FRA og TIL). Der importeres en kopi af meddelelsen til hver enkelt deltagers postkasse. Hvis ingen af deltagerne fra elementet kan knyttes til en brugerkonto, importeres elementet til tredjepartsarkiveringspostkassen i Microsoft 365.  <br/> <br/> Den deltager, der er identificeret som afsender af elementet, skal have en aktiv postkasse i organisationen, som elementet importeres til. Hvis afsenderen ikke har en aktiv postkasse, returneres følgende fejl:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`|`bob@contoso.com`|
+  |**TIL**|Ja|Den bruger, der har modtaget et element, hvis det er relevant for et element i datakilden.|`bob@contoso.com`|
+  |**EMNE**|Nej|Emnet fra kildeelementet.|`"Mega deals with Contoso coming your way! #ContosoHolidayDeals"`|
+  |**DATO**|Ja|Den dato, hvor elementet oprindeligt blev oprettet eller bogført i kundens datakilde. Det kan f.eks. være den dato, hvor en Twitter-meddelelse blev tweetet.|`01 NOV 2015`|
+  |**KROPPEN**|Nej|Indholdet af meddelelsen eller indlægget. For nogle datakilder kan indholdet af denne egenskab være det samme som indholdet for egenskaben **SUBJECT** . Under importprocessen forsøger partnerconnectoren at bevare den fulde pålidelighed fra indholdskilden som muligt. Hvis det er muligt, medtages filer, grafik eller andet indhold fra kildeelementets brødtekst i denne egenskab. Ellers medtages indhold fra kildeelementet i egenskaben **ATTACHMENT** . Indholdet af denne egenskab afhænger af partnerconnectoren og af kildeplatformens funktionalitet.|`Author: bob@contoso.com` <br/>  `Date: 10 DEC 2014` <br/>  `Tweet: "Mega deals with Contoso coming your way! #ContosoHolidayDeals"` <br/>  `Date: 01 NOV 2015`|
+  |**VEDHÆFTET FIL**|Nej|Hvis et element i datakilden (f.eks. et tweet på Twitter eller en chatsamtale) har en vedhæftet fil eller medtag billeder, forsøger partnerforbindelsen først at inkludere vedhæftede filer i egenskaben **BODY** . Hvis det ikke er muligt, føjes den til egenskaben ** VEDHÆFTET FIL **. Andre eksempler på vedhæftede filer omfatter Synes godt om i Facebook, metadata fra indholdskilden og svar på en meddelelse eller et indlæg.|`image.gif`|
+  |**MEDDELELSESKLASSE**|Ja|Dette er en egenskab med flere værdier, som oprettes og udfyldes af partnerconnectoren. Formatet for denne egenskab er  `IPM.NOTE.Source.Event`. (Denne egenskab skal begynde med  `IPM.NOTE`. Dette format svarer til formatet for meddelelsesklassen  `IPM.NOTE.X` . Denne egenskab indeholder følgende oplysninger:  <br/><br/>`Source`: Angiver datakilden fra tredjepart. for eksempel Twitter, Facebook eller BlackBerry.  <br/> <br/>  `Event`: Angiver den type aktivitet, der blev udført i den tredjepartsdatakilde, der producerede elementerne. f.eks. et tweet på Twitter eller et opslag på Facebook. Hændelser er specifikke for datakilden.  <br/> <br/>  Et formål med denne egenskab er at filtrere bestemte elementer baseret på den datakilde, hvor et element stammer fra, eller baseret på typen af hændelse. I en eDiscovery-søgning kan du f.eks. oprette en søgeforespørgsel for at finde alle de tweets, der blev postet af en bestemt bruger.|`IPM.NOTE.Twitter.Tweet`|
 
 - Når elementer importeres til postkasser i Microsoft 365, returneres der et entydigt id til kalderen som en del af HTTP-svaret. Dette id, der kaldes  `x-IngestionCorrelationID`, kan bruges til efterfølgende fejlfindingsformål af partnere til sporing af elementer fra ende til anden. Det anbefales, at partnere registrerer disse oplysninger og logfører dem i overensstemmelse hermed i slutningen. Her er et eksempel på et HTTP-svar, der viser dette id:
 

@@ -14,26 +14,24 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan SMTP DNS-baseret godkendelse af navngivne enheder (DANE) fungerer til at sikre mailkommunikation mellem mailservere.
-ms.openlocfilehash: fa982671aebb7c857c1c55af027d10437091e0dd
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 200dde9c62fb9825ce36eea7416304727bd6b598
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131014"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015764"
 ---
 # <a name="how-smtp-dns-based-authentication-of-named-entities-dane-works"></a>Sådan fungerer SMTP DNS-baseret godkendelse af navngivne enheder (DANE)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-SMTP-protokollen er den primære protokol, der bruges til at overføre meddelelser mellem mailservere og er som standard ikke sikker. TLS-protokollen (Transport Layer Security) blev introduceret for år siden for at understøtte krypteret overførsel af meddelelser via SMTP. Det bruges ofte opportunistisk snarere end som et krav, hvilket efterlader meget e-mail-trafik i klartekst, sårbar over for opfangelse af forbryderiske aktører. SMTP bestemmer desuden IP-adresserne på destinationsservere via den offentlige DNS-infrastruktur, som er udsat for spoofing- og MITM-angreb (Man-in-the-Middle). Dette har medført, at der er blevet oprettet mange nye standarder for at øge sikkerheden for afsendelse og modtagelse af mail, en af dem er DNS-baseret godkendelse af navngivne enheder (DANE).
-  
-DANE til SMTP [RFC 7672](https://tools.ietf.org/html/rfc7672) bruger tilstedeværelsen af en TLSA-post (Transport Layer Security Authentication) i et domænes DNS-post, der er angivet til at signalere et domæne, og dets mailserver(er) understøtter DANE. Hvis der ikke er nogen TLSA-post til stede, fungerer DNS-opløsningen for postflowet som normalt, uden at der forsøges at udføre DANE-kontroller. TLSA-posten signalerer sikkert TLS-understøttelse og publicerer DANE-politikken for domænet. Derfor kan afsendelse af mailservere godkende legitime modtagelsesservere ved hjælp af SMTP-DANE. Det gør det resistent over for nedgradering og MITM-angreb. DANE har direkte afhængigheder af DNSSEC, som fungerer ved digitalt at signere poster for DNS-opslag ved hjælp af kryptografi for offentlige nøgler. DNSSEC kontrollerer rekursive DNS-fortolkere, de DNS-servere, der foretager DNS-forespørgsler for klienter. DNSSEC sikrer, at der ikke pills ved DNS-poster, og at de er autentiske.  
+SMTP-protokollen er den primære protokol, der bruges til at overføre meddelelser mellem mailservere og er som standard ikke sikker. TLS-protokollen (Transport Layer Security) blev introduceret for år siden for at understøtte krypteret overførsel af meddelelser via SMTP. Det bruges ofte opportunistisk snarere end som et krav, hvilket efterlader meget e-mail-trafik i klartekst, sårbar over for opfangelse af forbryderiske aktører. SMTP bestemmer desuden IP-adresserne på destinationsservere via den offentlige DNS-infrastruktur, som er udsat for spoofing- og MITM-angreb (Man-in-the-Middle). Dette har medført, at der er blevet oprettet mange nye standarder for at øge sikkerheden for afsendelse og modtagelse af mail, en af dem er DNS-baseret godkendelse af navngivne enheder (DANE). 
 
 DANE til SMTP [RFC 7672](https://tools.ietf.org/html/rfc7672) bruger tilstedeværelsen af en TLSA-post (Transport Layer Security Authentication) i et domænes DNS-post, der er angivet til at signalere et domæne, og dets mailserver(er) understøtter DANE. Hvis der ikke er nogen TLSA-post til stede, fungerer DNS-opløsningen for postflowet som normalt, uden at der forsøges at udføre DANE-kontroller. TLSA-posten signalerer sikkert TLS-understøttelse og publicerer DANE-politikken for domænet. Derfor kan afsendelse af mailservere godkende legitime modtagelsesservere ved hjælp af SMTP-DANE. Det gør det resistent over for nedgradering og MITM-angreb. DANE har direkte afhængigheder af DNSSEC, som fungerer ved digitalt at signere poster for DNS-opslag ved hjælp af kryptografi for offentlige nøgler. DNSSEC kontrollerer rekursive DNS-fortolkere, de DNS-servere, der foretager DNS-forespørgsler for klienter. DNSSEC sikrer, at der ikke pills ved DNS-poster, og at de er autentiske.
 
 Når MX-, A/AAAA- og DNSSEC-relaterede ressourceposter for et domæne returneres til den REkursive DNS-fortolker som dnsSEC-autentisk, bliver den sendende mailserver bedt om den TLSA-post, der svarer til MX-værtsposten eller -posterne. Hvis TLSA-posten er til stede og dokumenteret autentisk ved hjælp af en anden DNSSEC-kontrol, returnerer den rekursive DNS-fortolker TLSA-posten til den afsendende mailserver.
 
-Når den autentiske TLSA-post er modtaget, opretter den sendende postserver en SMTP-forbindelse til den MX-vært, der er knyttet til den autentiske TLSA-post. Den afsendere, der sender mail, forsøger at konfigurere TLS og sammenligne serverens TLS-certifikat med dataene i TLSA-posten for at validere, at den destinationsmailserver, der er forbundet med afsenderen, er den legitime modtagermailserver. Meddelelsen sendes (ved hjælp af TLS), hvis godkendelsen lykkes. Når godkendelse mislykkes, eller hvis TLS ikke understøttes af destinationsserveren, prøver Exchange Online igen hele valideringsprocessen, der starter med en DNS-forespørgsel for det samme destinationsdomæne, igen efter 15 minutter og derefter 15 minutter efter dette og derefter hver time i de næste 24 timer. Hvis godkendelsen fortsætter med at mislykkes efter 24 timers forsøg, udløber meddelelsen, og der genereres en NDR med fejloplysninger, som sendes til afsenderen.
+Når den autentiske TLSA-post er modtaget, opretter den sendende postserver en SMTP-forbindelse til den MX-vært, der er knyttet til den autentiske TLSA-post. Den afsendere, der sender mail, forsøger at konfigurere TLS og sammenligne serverens TLS-certifikat med dataene i TLSA-posten for at validere, at den destinationsmailserver, der er forbundet med afsenderen, er den legitime modtagermailserver. Meddelelsen sendes (ved hjælp af TLS), hvis godkendelsen lykkes. Når godkendelse mislykkes, eller hvis TLS ikke understøttes af destinationsserveren, vil Exchange Online prøve hele valideringsprocessen igen, der starter med en DNS-forespørgsel for det samme destinationsdomæne, igen efter 15 minutter og derefter 15 minutter efter dette og derefter hver time i de næste 24 timer. Hvis godkendelsen fortsætter med at mislykkes efter 24 timers forsøg, udløber meddelelsen, og der genereres en NDR med fejloplysninger, som sendes til afsenderen.
 
 ## <a name="what-are-the-components-of-dane"></a>Hvad er komponenterne i DANE?
 
@@ -51,12 +49,12 @@ Der er fire konfigurerbare felter, der er entydige for TLSA-posttypen:
 
 |Værdi|Akronym|Beskrivelse|
 |---|---|---|
-|01<sup></sup>|PKIX-TA|Det anvendte certifikat er det offentlige nøglecenter, der er tillid til, fra X.509-tillidskæden.|
-|11<sup></sup>|PKIX-EE|Det markerede certifikat er destinationsserveren. DNSSEC-kontroller skal bekræfte ægtheden.|
+|0<sup>1</sup>|PKIX-TA|Det anvendte certifikat er det offentlige nøglecenter, der er tillid til, fra X.509-tillidskæden.|
+|1<sup>1</sup>|PKIX-EE|Det markerede certifikat er destinationsserveren. DNSSEC-kontroller skal bekræfte ægtheden.|
 |2|DANE-TA|Brug serverens private nøgle fra X.509-træet, der skal valideres af et tillidsforankring i tillidskæden. TLSA-posten angiver det tillidsforankring, der skal bruges til at validere TLS-certifikaterne for domænet.|
 |3|DANE-EE|Stemmer kun overens med destinationsserverens certifikat.|
 
-<sup>1</sup> Exchange Online følger RFC-implementeringsvejledningen om, at værdierne for certifikatanvendelsesfeltet 0 eller 1 ikke skal bruges, når DANE implementeres med SMTP. Når en TLSA-post, der har værdien 0 eller 1 i feltet Certifikatanvendelse, returneres til Exchange Online, behandler Exchange Online den som ikke anvendelig. Hvis alle TLSA-poster ikke kan bruges, udfører Exchange Online ikke DANE-valideringstrinnene for 0 eller 1, når du sender mailen. På grund af tilstedeværelsen af en TLSA-post gennemtvinger Exchange Online i stedet brugen af TLS til afsendelse af mailen, afsendelse af mailen, hvis destinationsmailserveren understøtter TLS eller slipper mailen og genererer en NDR, hvis destinationsmailserveren ikke understøtter TLS.
+<sup>1</sup> Exchange Online følger RFC-implementeringsvejledningen om, at værdierne i certifikatanvendelsesfeltet 0 eller 1 ikke skal bruges, når DANE implementeres med SMTP. Når en TLSA-post med værdien 0 eller 1 i feltet Certifikatanvendelse returneres til Exchange Online, behandler Exchange Online den som ikke anvendelig. Hvis alle TLSA-poster ikke kan bruges, udfører Exchange Online ikke DANE-valideringstrinnene for 0 eller 1, når du sender mailen. På grund af tilstedeværelsen af en TLSA-post gennemtvinger Exchange Online i stedet brugen af TLS til at sende mailen, sende mailen, hvis destinationsmailserveren understøtter TLS eller slippe mailen og generere en NDR, hvis destinationsmailserveren ikke understøtter TLS.
 
 I eksemplet på en TLSA-post er feltet certifikatanvendelse angivet til '3', så dataene for certifikattilknytningen ('abc123... xyz789') ville kun blive matchet med destinationsserverens certifikat.
 
@@ -83,11 +81,11 @@ I eksemplet på en TLSA-post er feltet Matchende type angivet til '1', så datae
 
 I eksemplet på en TLSA-post er dataene for certifikattilknytningen angivet til 'abc123.. xyz789'. Da værdien for Selektorfelt i eksemplet er angivet til '1', refererer den til destinationens servercertifikats offentlige nøgle og den algoritme, der er identificeret til at blive brugt sammen med det. Og da feltværdien matchende type i eksemplet er angivet til '1', refererer den til SHA-256-hashen for emneoplysningerne for den offentlige nøgle fra destinationens servercertifikat.
 
-## <a name="how-can-exchange-online-customers-use-smtp-dane-outbound"></a>Hvordan kan Exchange Online-kunder bruge SMTP DANE-udgående?
+## <a name="how-can-exchange-online-customers-use-smtp-dane-outbound"></a>Hvordan kan Exchange Online kunder bruge SMTP DANE-udgående?
 
-Som Exchange Online-kunde er der ikke noget, du skal gøre for at konfigurere denne forbedrede mailsikkerhed for din udgående mail. Dette er noget, vi har bygget til dig, og det er som standard slået til for alle Exchange Online-kunder og bruges, når destinationsdomænet reklamerer for support til DANE. Hvis du vil høste fordelene ved at sende mail med DNSSEC- og DANE-kontroller, skal du kommunikere med dine forretningspartnere, som du udveksler mail med, at de skal implementere DNSSEC og DANE, så de kan modtage mail ved hjælp af disse standarder.
+Som Exchange Online kunde er der ikke noget, du skal gøre for at konfigurere denne forbedrede mailsikkerhed for din udgående mail. Dette er noget, vi har bygget til dig, og det er som standard aktiveret for alle Exchange Online kunder og bruges, når destinationsdomænet reklamerer for support til DANE. Hvis du vil høste fordelene ved at sende mail med DNSSEC- og DANE-kontroller, skal du kommunikere med dine forretningspartnere, som du udveksler mail med, at de skal implementere DNSSEC og DANE, så de kan modtage mail ved hjælp af disse standarder.
 
-## <a name="how-can-exchange-online-customers-use-smtp-dane-inbound"></a>Hvordan kan Exchange Online-kunder bruge indgående SMTP DANE?
+## <a name="how-can-exchange-online-customers-use-smtp-dane-inbound"></a>Hvordan kan Exchange Online kunder bruge indgående SMTP-DANE?
 
 I øjeblikket understøttes indgående SMTP-DANE ikke for Exchange Online. Support forventes at blive frigivet i slutningen af 2022.
 
@@ -284,10 +282,10 @@ Efter modtagelse af meddelelsen:
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
-### <a name="as-an-exchange-online-customer-can-i-opt-out-of-using-dnssec-andor-dane"></a>Kan jeg som Exchange Online-kunde fravælge at bruge DNSSEC og/eller DANE?
+### <a name="as-an-exchange-online-customer-can-i-opt-out-of-using-dnssec-andor-dane"></a>Kan jeg som Exchange Online kunde fravælge at bruge DNSSEC og/eller DANE?
 
 Vi er overbeviste om, at DNSSEC og DANE vil øge vores tjenestes sikkerhedsposition markant og gavne alle vores kunder. Vi har i løbet af det sidste år arbejdet flittigt på at reducere risikoen for og alvorsgraden af den potentielle indvirkning, som denne udrulning kan have for M365-kunder. Vi overvåger og sporer aktivt udrulningen for at sikre, at negativ indvirkning minimeres, efterhånden som den udrulles. Derfor er undtagelser på lejerniveau eller fravalg ikke tilgængelige.
-Hvis du oplever problemer, der er relateret til aktivering af DNSSEC og/eller DANE, hjælper de forskellige metoder til undersøgelse af fejl, der er nævnt i dette dokument, dig med at identificere kilden til fejlen. I de fleste tilfælde vil problemet være hos den eksterne destinationspart, og du skal kommunikere med disse forretningspartnere, at de skal konfigurere DNSSEC og DANE korrekt for at modtage mail fra Exchange Online ved hjælp af disse standarder.
+Hvis du oplever problemer, der er relateret til aktivering af DNSSEC og/eller DANE, hjælper de forskellige metoder til undersøgelse af fejl, der er nævnt i dette dokument, dig med at identificere kilden til fejlen. I de fleste tilfælde er problemet med den eksterne destinationspart, og du skal kommunikere med disse forretningspartnere, at de skal konfigurere DNSSEC og DANE korrekt for at modtage mail fra Exchange Online ved hjælp af disse standarder.
 
 ### <a name="how-does-dnssec-relate-to-dane"></a>Hvordan relaterer DNSSEC til DANE?
 
@@ -311,7 +309,7 @@ DNSSEC er ikke helt modstandsdygtig over for Man-in-the-Middle-angreb og nedgrad
 
 [Oversigt over DNSSEC-| Microsoft Docs](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj200221(v=ws.11))
 
-[Brug DMARC til at validere trin til konfiguration af mail – Office 365 | Microsoft Docs](/microsoft-365/security/office-365-security/use-dmarc-to-validate-email)
+[Brug DMARC til at validere mail, konfigurationstrin – Office 365 | Microsoft Docs](/microsoft-365/security/office-365-security/use-dmarc-to-validate-email)
 
 [Sådan bruger du DKIM til mail i dit brugerdefinerede domæne - Office 365 | Microsoft Docs](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email)
 

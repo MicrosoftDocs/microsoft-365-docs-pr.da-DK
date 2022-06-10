@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: kywirpel
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Lejere for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 0f25f8bb02c6957598b2b328bc7832c429ca1e7a
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 28ca99b32021be0ad5efbf29a858df7bad253078
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128368"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016514"
 ---
 # <a name="overview-of-the-tenants-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Lejere i Microsoft 365 Fyrtårn
 

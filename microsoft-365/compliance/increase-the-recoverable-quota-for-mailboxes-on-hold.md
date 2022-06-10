@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
 description: Aktivér arkivpostkassen, og aktivér automatisk udvidelse af arkivering for at øge størrelsen af mappen Gendanbare elementer for en postkasse i Microsoft 365.
-ms.openlocfilehash: a05851f1019405a495a7b909bf4a8d096227163d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bbeb72c6a055be42e06c450afccb35965d149dce
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100799"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014988"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Øg kvoten for genoprettelige elementer for fastfrosne postkasser
 
@@ -64,7 +64,7 @@ I resten af dette emne beskrives de trinvise procedurer til oprettelse af en bru
 
 Det første trin er at oprette en brugerdefineret opbevaringskode (kaldet en opbevaringspolitikkode eller RPT) for mappen Genoprettelige elementer. Som tidligere forklaret flytter denne RPT elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i brugerens arkivpostkasse. Du skal bruge PowerShell til at oprette en RPT til mappen Gendanbare elementer. Du kan ikke bruge Exchange Administration (EAC).
 
-1. [Forbind til Exchange Online ved hjælp af PowerShell-fjernadgang](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Kør følgende kommando for at oprette en ny RPT til mappen Gendanbare elementer:
 
@@ -137,7 +137,7 @@ Det sidste trin er at anvende den nye opbevaringspolitik, som du oprettede i tri
 
 ### <a name="use-the-eac-to-apply-the-new-retention-policy"></a>Brug EAC til at anvende den nye opbevaringspolitik
 
-1. Gå til **ModtagereMailbokse** > .
+1. Gå til **Modtageres** > **postkasser**.
 
 2. I listevisningen skal du vælge den postkasse, du vil anvende opbevaringspolitikken på, og **derefter klikke på** ![rediger ikonet Rediger.](../media/ebd260e4-3556-4fb0-b0bb-cc489773042c.gif)
 
@@ -147,7 +147,7 @@ Det sidste trin er at anvende den nye opbevaringspolitik, som du oprettede i tri
 
 Du kan også bruge EAC til at anvende opbevaringspolitikken på flere postkasser.
 
-1. Gå til **ModtagereMailbokse** > .
+1. Gå til **Modtageres** > **postkasser**.
 
 2. I listevisningen skal du bruge Skift- eller Ctrl-tasterne til at vælge flere postkasser.
 

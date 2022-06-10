@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Instruktioner til publicering af opbevaringsmærkater, så du derefter kan anvende dem i apps for at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 110115cad46e819ac32d482ab6ecd1eba2129201
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 3acbe0632a387139bbe865b854a92f8e51609cc1
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285516"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66007322"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Publicer opbevaringsmærkater, og anvend dem i apps
 
@@ -94,7 +94,7 @@ Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv da
 
 Hvis mærkaterne ikke vises efter syv dage, skal du kontrollere **status** for mærkatpolitikken ved at vælge den på siden **Mærkatpolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du får vist **(Fejl),** der er inkluderet i status og i detaljerne for placeringerne, får du vist en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, ved at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at forsøge at distribuere politikken igen:
 
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør en af følgende kommandoer:
     

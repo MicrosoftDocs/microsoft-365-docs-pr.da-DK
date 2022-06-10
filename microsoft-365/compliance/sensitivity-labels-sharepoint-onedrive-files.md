@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Administratorer kan aktivere understøttelse af følsomhedsmærkater for Word-, Excel- og PowerPoint-filer i SharePoint og OneDrive.
-ms.openlocfilehash: ee24663fd5fe1de1bdce8b2d210174a05f156394
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 9130558bb7ae1af86981e1c052a17565f6d943af
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621357"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014250"
 ---
 # <a name="enable-sensitivity-labels-for-office-files-in-sharepoint-and-onedrive"></a>Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive
 
@@ -32,7 +32,7 @@ ms.locfileid: "65621357"
 
 Aktivér indbygget mærkning for [understøttede Office filer](sensitivity-labels-office-apps.md#office-file-types-supported) i SharePoint og OneDrive, så brugerne kan anvende dine [følsomhedsmærkater](sensitivity-labels.md) i Office på internettet. Når denne funktion er aktiveret, kan brugerne se knappen **Følsomhed** på båndet, så de kan anvende mærkater og se eventuelle anvendte navne på statuslinjen.
 
-Aktivering af denne funktion medfører også, at SharePoint og OneDrive kan behandle indholdet af Office filer, der er krypteret ved hjælp af en følsomhedsmærkat. Mærkaten kan anvendes i Office på internettet eller i Office desktopapps og uploades eller gemmes i SharePoint og OneDrive. Indtil du aktiverer denne funktion, kan disse tjenester ikke behandle krypterede filer, hvilket betyder, at samtidig redigering, eDiscovery Microsoft Purview forebyggelse af datatab, søgning og andre samarbejdsfunktioner ikke fungerer for disse filer.
+Aktivering af denne funktion medfører også, at SharePoint og OneDrive kan behandle indholdet af Office filer, der er krypteret ved hjælp af en følsomhedsmærkat. Mærkaten kan anvendes i Office på internettet eller i Office desktopapps og uploades eller gemmes i SharePoint og OneDrive. Indtil du aktiverer denne funktion, kan disse tjenester ikke behandle krypterede filer, hvilket betyder, at samtidig redigering, eDiscovery, forebyggelse af datatab i Microsoft Purview, søgning og andre samarbejdsfunktioner ikke fungerer for disse filer.
 
 Når du har aktiveret følsomhedsmærkater for Office filer i SharePoint og OneDrive, for nye og ændrede filer, der har en følsomhedsmærkat, der anvender kryptering med en skybaseret nøgle (og ikke bruger [kryptering med dobbelt nøgle](double-key-encryption.md):
 
@@ -81,7 +81,7 @@ Brug OneDrive-synkronisering appversion 19.002.0121.0008 eller nyere på Windows
 
 - SharePoint og OneDrive anvender ikke automatisk følsomhedsmærkater på eksisterende filer, som du allerede har krypteret ved hjælp af Azure Information Protection-mærkater. Hvis funktionerne skal fungere, når du har aktiveret følsomhedsmærkater for Office filer i SharePoint og OneDrive, skal du i stedet udføre disse opgaver:
 
-    1. Sørg for, at du har [overført Azure Information Protection-mærkater](/azure/information-protection/configure-policy-migrate-labels) til følsomhedsmærkater og [publiceret dem](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) fra Microsoft Purview-compliance-portal.
+    1. Sørg for, at du har [overført Azure Information Protection-mærkater](/azure/information-protection/configure-policy-migrate-labels) til følsomhedsmærkater og [publiceret dem](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) fra Microsoft Purview-overholdelsesportalen.
     2. Download de navngivne filer, og upload dem derefter til deres oprindelige placering i SharePoint eller OneDrive.
 
 - SharePoint og OneDrive kan ikke behandle krypterede filer, når den mærkat, der anvendte krypteringen, har en af følgende [konfigurationer til kryptering](encryption-sensitivity-labels.md#configure-encryption-settings):
@@ -96,7 +96,7 @@ Brug OneDrive-synkronisering appversion 19.002.0121.0008 eller nyere på Windows
 - Hvis et dokument er markeret, mens det er [tjekket ud i SharePoint](https://support.microsoft.com/office/check-out-check-in-or-discard-changes-to-files-in-a-library-7e2c12a9-a874-4393-9511-1378a700f6de), viser kolonnen **Følsomhed** i dokumentbiblioteket ikke navnet, før dokumentet er tjekket ind og derefter åbnes i SharePoint.
 
 - Hvis et navngivet og krypteret dokument downloades fra SharePoint eller OneDrive af en app eller tjeneste, der bruger et tjenesteprincipalnavn, og derefter uploades igen med en mærkat, der anvender andre krypteringsindstillinger, mislykkes overførslen. Et eksempelscenarie er Microsoft Defender for Cloud Apps ændrer en følsomhedsmærkat på en fil fra **Fortroligt** til **Meget fortroligt** eller fra **Fortroligt** til **Generelt**.
-    
+
     Overførslen mislykkes ikke, hvis appen eller tjenesten først kører [Unlock-SPOSensitivityLabelEncryptedFile-cmdlet'en](/powershell/module/sharepoint-online/unlock-sposensitivitylabelencryptedFile) , som forklaret i afsnittet [Fjern kryptering for et navngivet dokument](#remove-encryption-for-a-labeled-document) . Eller før overførslen slettes den oprindelige fil, eller filnavnet ændres.
 
 - Brugerne kan opleve forsinkelser i at åbne krypterede dokumenter i følgende Gem som-scenarie: Ved hjælp af en skrivebordsversion af Office vælger en bruger Gem som for et dokument, der har en følsomhedsmærkat, der anvender kryptering. Brugeren vælger SharePoint eller OneDrive for placeringen og forsøger derefter straks at åbne dokumentet i Office på internettet. Hvis tjenesten stadig behandler krypteringen, får brugeren vist en meddelelse om, at dokumentet skal åbnes i vedkommendes skrivebordsapp. Hvis de prøver igen om et par minutter, åbnes dokumentet i Office på internettet.
@@ -106,7 +106,7 @@ Brug OneDrive-synkronisering appversion 19.002.0121.0008 eller nyere på Windows
 - I forbindelse med krypterede dokumenter i Office på internettet forhindres kopiering til Udklipsholder og hentning af skærmbilleder ikke. Du kan få flere oplysninger under [Kan Rights Management forhindre hentning af skærmbilleder?](/azure/information-protection/faqs-rms#can-rights-management-prevent-screen-captures)
 
 - Som standard understøtter Office desktopapps og mobilapps ikke samtidig redigering af filer, der er mærket med kryptering. Disse apps fortsætter med at åbne navngivne og krypterede filer i eksklusiv redigeringstilstand.
-    
+
     > [!NOTE]
     > Samtidig redigering understøttes nu for Windows og macOS. Du kan få flere oplysninger under [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md).
 
@@ -119,19 +119,19 @@ Brug OneDrive-synkronisering appversion 19.002.0121.0008 eller nyere på Windows
   - Kryptering, der blev anvendt ved hjælp af [kryptering med dobbelt nøgle](double-key-encryption.md)
   - Kryptering, der blev anvendt uafhængigt af en mærkat, f.eks. ved direkte anvendelse af en beskyttelsesskabelon for Rights Management.
 
-- Navne, der er konfigureret til [andre sprog](create-sensitivity-labels.md#additional-label-settings-with-security--compliance-center-powershell) , understøttes ikke og viser kun det oprindelige sprog.
+- Navne, der er konfigureret til [andre sprog](create-sensitivity-labels.md#additional-label-settings-with-security--compliance-powershell) , understøttes ikke og viser kun det oprindelige sprog.
 
 - Hvis du sletter en etiket, der er anvendt på et dokument i SharePoint eller OneDrive, i stedet for at fjerne mærkaten fra den relevante mærkatpolitik, vil dokumentet, når det downloades, ikke være forsynet med mærkater eller krypteret. Hvis det navngivne dokument til sammenligning gemmes uden for SharePoint eller OneDrive, forbliver dokumentet krypteret, hvis navnet slettes. Bemærk, at selvom du muligvis sletter mærkater i en testfase, er det meget sjældent at slette en mærkat i et produktionsmiljø.
 
 ## <a name="how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in"></a>Sådan aktiverer du følsomhedsmærkater for SharePoint og OneDrive (tilvalg)
 
-Du kan aktivere de nye funktioner ved hjælp af Microsoft Purview-compliance-portal eller ved hjælp af PowerShell. Som med alle konfigurationsændringer på lejerniveau for SharePoint og OneDrive tager det ca. 15 minutter, før ændringen træder i kraft.
+Du kan aktivere de nye funktioner ved hjælp af Microsoft Purview-overholdelsesportalen eller ved hjælp af PowerShell. Som med alle konfigurationsændringer på lejerniveau for SharePoint og OneDrive tager det ca. 15 minutter, før ændringen træder i kraft.
 
-### <a name="use-the-microsoft-purview-compliance-portal-to-enable-support-for-sensitivity-labels"></a>Brug Microsoft Purview-compliance-portal til at aktivere understøttelse af følsomhedsmærkater
+### <a name="use-the-microsoft-purview-compliance-portal-to-enable-support-for-sensitivity-labels"></a>Brug Microsoft Purview-overholdelsesportalen til at aktivere understøttelse af følsomhedsmærkater
 
 Denne indstilling er den nemmeste måde at aktivere følsomhedsmærkater for SharePoint og OneDrive på, men du skal logge på som global administrator for din lejer.
 
-1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/) som global administrator, og naviger til **SolutionsInformation** >  **protectionLabels** > 
+1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) som en global administrator, og naviger til **Mærkater** for **information om** >  **løsninger** > 
 
 2. Hvis du får vist en meddelelse om at aktivere muligheden for at behandle indhold i Office onlinefiler, skal du vælge **Slå til nu**:
 
@@ -144,7 +144,7 @@ Denne indstilling er den nemmeste måde at aktivere følsomhedsmærkater for Sha
 
 ### <a name="use-powershell-to-enable-support-for-sensitivity-labels"></a>Brug PowerShell til at aktivere understøttelse af følsomhedsmærkater
 
-Som et alternativ til at bruge Microsoft Purview-compliance-portal kan du aktivere understøttelse af følsomhedsmærkater ved hjælp af [Set-SPOTenant-cmdlet'en](/powershell/module/sharepoint-online/set-spotenant) fra SharePoint Online PowerShell.
+Som et alternativ til at bruge Microsoft Purview-overholdelsesportalen kan du aktivere understøttelse af følsomhedsmærkater ved hjælp af [Set-SPOTenant-cmdlet'en](/powershell/module/sharepoint-online/set-spotenant) fra SharePoint Online PowerShell.
 
 Hvis du har Microsoft 365 Multi-Geo, skal du bruge PowerShell til at aktivere denne understøttelse for alle dine geografiske placeringer.
 
@@ -228,7 +228,7 @@ Søgningen kan ikke finde navngivne dokumenter i en komprimeret fil, f.eks. en .
 
 Hvis du vil hente GUID'erne for dine følsomhedsmærkater, skal du bruge cmdlet'en [Hent mærkat](/powershell/module/exchange/get-label) :
 
-1. Først skal du [oprette forbindelse til Office 365 Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. Først [skal du oprette forbindelse til Office 365 Security & Compliance PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
     I en PowerShell-session, som du kører som administrator, skal du f.eks. logge på med en global administratorkonto.
 

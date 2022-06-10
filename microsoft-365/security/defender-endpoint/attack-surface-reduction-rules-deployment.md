@@ -1,5 +1,5 @@
 ---
-title: Oversigt over installation af asr-regler (Attack surface reduction)
+title: Udrulningsoversigt til reduktion af angrebsoverflade (ASR)
 description: Indeholder en oversigt over og en forudsætning for udrulning af ASR-regler (Attack Surface Reduction).
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -20,14 +20,14 @@ ms.collection:
 - m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 8743d13939e73e25cefd08724d9a2f8d5a7fa410
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 18654dfb1ae6ae10596889fb4491604a37b8ffe8
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705532"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017425"
 ---
-# <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Oversigt over installation af asr-regler (Attack surface reduction)
+# <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Udrulningsoversigt til reduktion af angrebsoverflade (ASR)
 
 Angrebsoverflader er alle de steder, hvor din organisation er sårbar over for cybertrusler og angreb. Din organisations angrebsoverflader omfatter alle de steder, hvor en hacker kan kompromittere organisationens enheder eller netværk. Reduktion af angrebsoverfladen betyder beskyttelse af organisationens enheder og netværk, hvilket efterlader hackere med færre måder at angribe på. Det kan hjælpe at konfigurere ASR-regler (Attack Surface Reduction) – en af de mange sikkerhedsfunktioner, der findes i Microsoft Defender for Endpoint.
 
@@ -46,7 +46,7 @@ Under den indledende forberedelse er det vigtigt, at du forstår funktionerne i 
 >[!IMPORTANT]
 >Denne vejledning indeholder billeder og eksempler, der kan hjælpe dig med at beslutte, hvordan du konfigurerer ASR-regler. Disse billeder og eksempler afspejler muligvis ikke de bedste konfigurationsindstillinger for dit miljø.
 
-Før du starter, skal du gennemse [Oversigt over reduktion af angrebsoverflade](overview-attack-surface-reduction.md) og [Afmystificerende regler for reduktion af angrebsoverfladen – del 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) for grundlæggende oplysninger. Hvis du vil vide mere om dækningsområder og potentielle indvirkninger, skal du sætte dig ind i det aktuelle sæt ASR-regler. se [Reference til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md).  Når du bliver fortrolig med de ASR-regler, der er angivet, skal du notere dig GUID-tilknytningerne pr. regel. se: [MATRIX FOR ASR-regler og GUID'er](attack-surface-reduction-rules-reference.md#asr-rules-and-guids-matrix).
+Før du starter, skal du gennemse [Oversigt over reduktion af angrebsoverflade](overview-attack-surface-reduction.md) og [Afmystificerende regler for reduktion af angrebsoverfladen – del 1](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/demystifying-attack-surface-reduction-rules-part-1/ba-p/1306420) for grundlæggende oplysninger. Hvis du vil vide mere om dækningsområder og potentielle indvirkninger, skal du sætte dig ind i det aktuelle sæt ASR-regler. se [Reference til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md).  Når du bliver fortrolig med de ASR-regler, der er angivet, skal du notere dig GUID-tilknytningerne pr. regel. se: [ASR-regel til GUID-matrix](attack-surface-reduction-rules-reference.md#asr-rule-to-guid-matrix).
 
 ASR-regler er kun én egenskab i funktionerne til reduktion af angrebsoverfladen i Microsoft Defender for Endpoint. Dette dokument vil gå mere i detaljer om at installere ASR-regler effektivt for at stoppe avancerede trusler som menneskeligt drevet ransomware og andre trusler.  
 
@@ -129,13 +129,13 @@ Som med enhver ny implementering i stor skala, der potentielt kan påvirke din l
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
+[Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md)
 
-[Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
+[Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md)
 
-[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+[Operationaliser regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)
+[Henvisning til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md)
 
 ## <a name="reference"></a>Reference
 

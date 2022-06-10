@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,20 +17,20 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist og administrerer risikable brugere.
-ms.openlocfilehash: dad86fedeb27f13752bcd1c07efd0d51aa33cf2a
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 45c91ec0871393f69e7a166cc8582f149479ad1b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022927"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011832"
 ---
 # <a name="view-and-manage-risky-users-in-microsoft-365-lighthouse"></a>Få vist og administrer risikable brugere i Microsoft 365 Fyrtårn
 
 Microsoft indsamler og analyserer billioner af brugerlogonsignaler hver dag. Disse signaler bruges til at hjælpe med at skabe gode funktionsmådemønstre for brugerlogon og identificere potentielle risikable logonforsøg. Azure Active Directory (Azure AD) Identity Protection bruger disse signaler til at gennemse brugerlogonforsøg og udføre handlinger, hvis der er mistænkelig aktivitet.
 
-Microsoft 365 Lighthouse hjælper med at administrere de risici, der registreres af Azure AD Identity Protection, ved at levere en enkelt visning af risikable brugere på tværs af alle dine administrerede lejere. Du kan hurtigt sikre risikable brugere ved enten at nulstille deres adgangskode eller blokere dem fra at logge på deres Microsoft 365 konto. Du kan også få vist indsigt for bedre at forstå en brugers risiko og fastlægge de næste trin.
+Microsoft 365 Lighthouse hjælper med at administrere risici, der registreres af Azure AD Identity Protection, ved at give en enkelt visning af risikable brugere på tværs af alle dine administrerede lejere. Du kan hurtigt sikre risikable brugere ved enten at nulstille deres adgangskode eller blokere dem fra at logge på deres Microsoft 365 konto. Du kan også få vist indsigt for bedre at forstå en brugers risiko og fastlægge de næste trin.
 
-Azure AD Identity Protection identificerer risici af mange typer, herunder:
+Azure AD Identitetsbeskyttelse identificerer risici af mange typer, herunder:
 
 - Lækkede legitimationsoplysninger
 - Anonym brug af IP
@@ -48,7 +49,7 @@ Følgende betingelser skal være opfyldt, før brugerne kan blive vist på liste
 
 ## <a name="review-detected-risks-and-take-action"></a>Gennemse registrerede risici, og udfør handlinger
 
-I Azure AD Identity Protection omfatter risikoregistreringer alle identificerede mistænkelige handlinger, der er relateret til brugerkonti i Azure AD.
+I Azure AD Identity Protection omfatter risikoregistreringer eventuelle identificerede mistænkelige handlinger, der er relateret til brugerkonti i Azure AD.
 
 1. Vælg **Brugere** i navigationsruden til venstre i Lighthouse.
 
@@ -88,6 +89,6 @@ Sådan reagerer du på flere berørte brugere på én gang:
 > Hvis den organisation, du administrerer, har en Azure AD Premium P2-licens, anbefales det, at du aktiverer politikker for betinget adgang baseret på brugerrisiko. Du kan få flere oplysninger under [Betinget adgang: Brugerrisikobaseret betinget adgang](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user).
 
 ## <a name="related-content"></a>Relateret indhold
-[Selvstudium: Brug risikoregistreringer for brugerlogon til at udløse Azure AD Multi-Factor Authentication eller adgangskodeændringer](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) (artikel)\
+[Selvstudium: Brug risikoregistreringer til brugerlogon til at udløse Azure AD ændringer af multifaktorgodkendelse eller adgangskode](/azure/active-directory/authentication/tutorial-risk-based-sspr-mfa) (artikel)\
 [Hvad er risiko?](/azure/active-directory/identity-protection/concept-identity-protection-risks) (artikel) \
 [Afhjælpning af risici og fjernelse af blokering af brugere](/azure/active-directory/identity-protection/howto-identity-protection-remediate-unblock) (artikel)

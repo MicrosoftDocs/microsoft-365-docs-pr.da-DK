@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
 description: Få mere at vide om, hvordan du bruger PowerShell til at flytte indholdet fra et kildemailsystem på én gang ved at udføre en komplet migrering til Microsoft 365.
-ms.openlocfilehash: ede2dfc25897012c5cb7e5469abea49e6db4292e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d63b7250cd1c4c34d169521943c3973104b15837
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078685"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008391"
 ---
 # <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en komplet migrering til Microsoft 365
 
@@ -41,7 +41,7 @@ Anslået tid til at fuldføre denne opgave: 2-5 minutter for at oprette et overf
 
 Du skal have tildelt tilladelser, før du kan udføre denne procedure eller disse procedurer. Hvis du vil se, hvilke tilladelser du har brug for, skal du se posten "Overførsel" i en tabel i emnet [Modtageres tilladelser](/exchange/recipients-permissions-exchange-2013-help) .
 
-Hvis du vil bruge Exchange Online PowerShell-cmdlet'er, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell session. Du kan finde en vejledning [under Forbind til Exchange Online ved hjælp af fjern-PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Hvis du vil bruge Exchange Online PowerShell-cmdlet'er, skal du logge på og importere cmdlet'erne i din lokale Windows PowerShell session. Se [Forbind til Exchange Online PowerShell for at](/powershell/exchange/connect-to-exchange-online-powershell) få vejledning.
 
 Du kan se en komplet liste over overførselskommandoer under [Flyt og migrerings-cmdlet'er](/powershell/exchange/).
 

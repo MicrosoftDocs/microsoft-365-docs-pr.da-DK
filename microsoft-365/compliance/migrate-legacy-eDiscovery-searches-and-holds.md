@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 416baed923884d9cbabbd6ee7607a48b0a19ab62
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3b80db06faea9c76c7df671468b94fc11f0c63df
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092365"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010082"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Overfør ældre eDiscovery-søgninger og ventepositioner til overholdelsesportalen
 
@@ -35,31 +35,32 @@ Denne artikel indeholder en grundlæggende vejledning i, hvordan du overfører I
 
 ## <a name="before-you-begin"></a>Før du begynder
 
+- Du skal installere Exchange Online V2-modulet. Du kan finde instruktioner under [Installér og vedligehold EXO V2-modulet](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
+
 - Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen for at køre de PowerShell-kommandoer, der er beskrevet i denne artikel. Du skal også være medlem af rollegruppen Registreringsadministration i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>.
 
 - Denne artikel indeholder en vejledning i, hvordan du opretter en eDiscovery-venteposition. Politikken for venteposition anvendes på postkasser via en asynkron proces. Når du opretter en eDiscovery-venteposition, skal du oprette både en CaseHoldPolicy og CaseHoldRule, ellers oprettes ventepositionen ikke, og indholdsplaceringer sættes ikke i venteposition.
 
-## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-center-powershell"></a>Trin 1: Forbind at Exchange Online PowerShell og Security & Compliance Center PowerShell
+## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-powershell"></a>Trin 1: Forbind at Exchange Online PowerShell og PowerShell til & overholdelse af angivne standarder
 
-Det første trin er at oprette forbindelse til Exchange Online PowerShell og Security & Compliance Center PowerShell. Du kan kopiere følgende script, indsætte det i et PowerShell-vindue og derefter køre det. Du bliver bedt om at angive legitimationsoplysninger for den organisation, du vil oprette forbindelse til. 
+Det første trin er at oprette forbindelse til Exchange Online PowerShell og Sikkerhed & Overholdelse af PowerShell i det samme PowerShell-vindue. Du kan kopiere følgende kommandoer, indsætte dem i et PowerShell-vindue og derefter køre dem. Du bliver bedt om at angive legitimationsoplysninger.
 
 ```powershell
-$UserCredential = Get-Credential
-$sccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid -Credential $UserCredential -Authentication Basic -AllowRedirection
-Import-PSSession $sccSession -DisableNameChecking
-$exoSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-Import-PSSession $exoSession -AllowClobber -DisableNameChecking
+Connect-IPPSSession
+Connect-ExchangeOnline -UseRPSSession
 ```
 
-Du skal køre kommandoerne i følgende trin i denne PowerShell-session.
+Du kan finde detaljerede instruktioner [under Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) og [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-get-a-list-of-in-place-ediscovery-searches-by-using-get-mailboxsearch"></a>Trin 2: Hent en liste over In-Place eDiscovery-søgninger ved hjælp af Get-MailboxSearch
 
-Når du er godkendt, kan du få vist en liste over In-Place eDiscovery-søgninger ved at køre Cmdlet'en **Get-MailboxSearch** . Kopiér og indsæt følgende kommando i PowerShell, og kør den derefter. En liste over søgninger vises med deres navne og status for alle In-Place Ventepositioner.
+Når du har oprettet forbindelse, kan du få vist en liste over In-Place eDiscovery-søgninger ved at køre Cmdlet'en **Get-MailboxSearch** . Kopiér og indsæt følgende kommando i PowerShell-vinduet, og kør den derefter.
 
 ```powershell
 Get-MailboxSearch
 ```
+
+En liste over søgninger vises med deres navne og status for alle In-Place Ventepositioner.
 
 Cmdlet-outputtet ligner følgende:
 
@@ -74,7 +75,7 @@ $search = Get-MailboxSearch -Identity "Search 1"
 ```
 
 ```powershell
-$search | FL
+$search | Format-List
 ```
 
 Outputtet af disse to kommandoer svarer til følgende:
@@ -82,7 +83,7 @@ Outputtet af disse to kommandoer svarer til følgende:
 ![Eksempel på PowerShell-output fra brug af Get-MailboxSearch til en individuel søgning.](../media/MigrateLegacyeDiscovery2.png)
 
 > [!NOTE]
-> Varigheden af den In-Place venteposition i dette eksempel er ubestemt (*ItemHoldPeriod: Unlimited*). Dette er typisk for eDiscovery- og juridiske undersøgelsesscenarier. Hvis varigheden af ventepositionen har en anden værdi end ubestemt, skyldes det sandsynligvis, at ventepositionen bruges til at bevare indhold i et opbevaringsscenarie. I stedet for at bruge eDiscovery-cmdlet'erne i Security & Compliance Center PowerShell til opbevaringsscenarier anbefaler vi, at du bruger [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) og [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) til at bevare indhold. Resultatet af at bruge disse cmdlet'er svarer til at bruge **New-CaseHoldPolicy** og **New-CaseHoldRule**, men du kan angive en opbevaringsperiode og en opbevaringshandling, f.eks. sletning af indhold, når opbevaringsperioden udløber. Brug af opbevarings-cmdlet'er kræver heller ikke, at du knytter opbevaringsholdningerne til en eDiscovery-sag.
+> Varigheden af den In-Place venteposition i dette eksempel er ubestemt (*ItemHoldPeriod: Unlimited*). Dette er typisk for eDiscovery- og juridiske undersøgelsesscenarier. Hvis varigheden af ventepositionen har en anden værdi end ubestemt, skyldes det sandsynligvis, at ventepositionen bruges til at bevare indhold i et opbevaringsscenarie. I stedet for at bruge eDiscovery-cmdlet'erne i Security & Compliance PowerShell til opbevaringsscenarier anbefaler vi, at du bruger [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) og [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) til at bevare indhold. Resultatet af at bruge disse cmdlet'er svarer til at bruge **New-CaseHoldPolicy** og **New-CaseHoldRule**, men du kan angive en opbevaringsperiode og en opbevaringshandling, f.eks. sletning af indhold, når opbevaringsperioden udløber. Brug af opbevarings-cmdlet'er kræver heller ikke, at du knytter opbevaringsholdningerne til en eDiscovery-sag.
 
 ## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>Trin 4: Opret en sag på Microsoft Purview-overholdelsesportalen
 
@@ -91,6 +92,7 @@ Hvis du vil oprette en eDiscovery-venteposition, skal du oprette en eDiscovery-s
 ```powershell
 $case = New-ComplianceCase -Name "[Case name of your choice]"
 ```
+
 ![Eksempel på kørsel af kommandoen New-ComplianceCase.](../media/MigrateLegacyeDiscovery3.png)
 
 ## <a name="step-5-create-the-ediscovery-hold"></a>Trin 5: Opret eDiscovery-venteposition
@@ -152,23 +154,23 @@ Hvis du overfører en In-Place eDiscovery-søgning, men ikke knytter den til en 
 ## <a name="more-information"></a>Flere oplysninger
 
 - Du kan finde flere oplysninger om In-Place eDiscovery & Ventepositioner i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> i:
-  
-  - [EDiscovery på stedet](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
+
+  - [direkte eDiscovery](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery)
 
   - [Bevarelse på stedet og procesførelse](/exchange/security-and-compliance/in-place-and-litigation-holds)
 
 - Du kan få flere oplysninger om de PowerShell-cmdlet'er, der bruges i artiklen, i:
 
   - [Get-MailboxSearch](/powershell/module/exchange/get-mailboxsearch)
-  
+
   - [Sag om ny overholdelse](/powershell/module/exchange/new-compliancecase)
 
   - [New-CaseHoldPolicy](/powershell/module/exchange/new-caseholdpolicy)
-  
+
   - [Ny-CaseHoldRule](/powershell/module/exchange/new-caseholdrule)
 
   - [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy)
-  
+
   - [Nyt overholdelsessøg](/powershell/module/exchange/new-compliancesearch)
 
   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)

@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: vivkuma
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om, hvordan du gennemser overvågningslogge for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 59e45f33b1c6708b4743605bda6ac4c93499bf59
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: a357d6d4383fb967b09d1ce3dc1be68d7fd2ca4f
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188762"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017504"
 ---
 # <a name="review-audit-logs-in-microsoft-365-lighthouse"></a>Gennemse overvågningslogge i Microsoft 365 Fyrtårn
 

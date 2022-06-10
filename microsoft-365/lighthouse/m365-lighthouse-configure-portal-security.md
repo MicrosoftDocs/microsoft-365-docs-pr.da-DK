@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: vivkuma
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du konfigurerer portalsikkerhed.
-ms.openlocfilehash: 60e0d2f1ba61e5def3979358f338da0846914543
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 5033787f314036f345a00b7f9632851317ed05f0
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188674"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013568"
 ---
 # <a name="configure-microsoft-365-lighthouse-portal-security"></a>Konfigurer sikkerhed i Microsoft 365 Lighthouse Portal
 

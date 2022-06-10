@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: 161f05c1f9c27723ff4940087c715e0556484b79
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: c790ee691e6a72228c865b8cdf9911ee83f4dfd4
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287128"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011564"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office apps
 
@@ -32,7 +32,7 @@ ms.locfileid: "65287128"
 
 Når du bruger [følsomhedsmærkater](sensitivity-labels.md) i Microsoft 365 Apps på Windows computere, kan du vælge at bruge mærkater, der er indbygget i Office apps, eller et tilføjelsesprogram fra [AIP-klienten (Azure Information Protection).](/azure/information-protection/rms-client/aip-clientv2) 
 
-Indbygget mærkning udgør hjørnestenen i en [udrulning af Microsoft Purview Information Protection](information-protection-solution.md), fordi denne mærkningsteknologi strækker sig på tværs af platforme (Windows, macOS, iOS, Android og web) samt på tværs af Microsoft-apps og -tjenester og meget mere. Indbygget mærkning er også designet til at fungere sammen med andre Microsoft Purview-funktioner, f.eks. dataklassificering og Forebyggelse af datatab i Microsoft Purview (DLP).
+Indbygget mærkning udgør hjørnestenen i en [udrulning af Microsoft Purview Information Protection](information-protection-solution.md), fordi denne mærkningsteknologi strækker sig på tværs af platforme (Windows, macOS, iOS, Android og web) samt på tværs af Microsoft-apps og -tjenester og andre steder. Indbygget mærkning er også designet til at fungere sammen med andre Microsoft Purview-funktioner, f.eks. dataklassificering og Forebyggelse af datatab i Microsoft Purview (DLP).
 
 Da indbyggede mærkater ikke bruger et Office-tilføjelsesprogram, kan de drage fordel af mere stabilitet og bedre ydeevne. De understøtter også de nyeste Funktioner i Microsoft Purview, f.eks. avancerede klassificeringer.
 
@@ -60,7 +60,7 @@ Nu, hvor AIP-klienten er i [vedligeholdelsestilstand](https://techcommunity.micr
 - Tilføjelsesprogrammer er mindre stabile, fordi de kan være i konflikt med andre tilføjelsesprogrammer, der kan resultere i, at Office apps hænger, går ned eller automatisk deaktiverer tilføjelsesprogrammet.
 - Som et tilføjelsesprogram kører det langsommere og kan deaktiveres af brugerne for at tilsidesætte krav til mærkater.
 - Eventuelle fejlrettelser kræver geninstallation af Azure Information Protection-klienten.
-- Mærkatoplevelsen for brugerne er lidt anderledes end indbyggede mærkater, som brugerne har på deres andre enheder (macOS, iOS, Android), og når de bruger Office på internettet. Denne forskel kan øge omkostningerne til uddannelse og support.
+- Mærkatoplevelsen for brugerne adskiller sig lidt fra indbyggede mærkater, som brugerne har på deres andre enheder (macOS, iOS, Android), og når de bruger Office på internettet. Denne forskel kan øge omkostningerne til uddannelse og support.
 - Der er allerede udgivet nye Office mærkningsfunktioner, der [kun understøttes af indbygget mærkning](#features-supported-only-by-built-in-labeling-for-office-apps), og listen vokser hele tiden.
 
 Brug kun AIP-tilføjelsesprogrammet til dine Windows Office apps, hvis du allerede har udrullet det til brugerne, og du har brug for tid til at overføre dem til indbygget mærkning. Eller brugerne har brug for en funktion, der ikke understøttes af indbygget mærkning. Brug [oplysningerne om funktionsparitet](#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps) på denne side som en hjælp til at identificere disse funktioner.
@@ -76,6 +76,7 @@ Nogle funktioner understøttes kun af indbygget mærkning for Office apps og und
     - Adgang til intelligente klassificeringstjenester, der omfatter [klassificeringer, der kan oplæres](classifier-learn-about.md), [EDM (exact data match)](sit-learn-about-exact-data-match-based-sits.md) og [navngivne enheder](named-entities-learn.md)
     - Registrering af følsomme oplysninger som brugertype
     - I Word kan brugerne gennemse og fjerne det identificerede følsomme indhold
+- [Understøttelse af PDF](sensitivity-labels-office-apps.md#pdf-support)
 - For mærkater, der giver brugere mulighed for at tildele tilladelser, kan der tildeles forskellige tilladelser (Læs eller Rediger) til brugere eller grupper
 - Encrypt-Only til mails
 - Synlighed af mærkater på statuslinjen

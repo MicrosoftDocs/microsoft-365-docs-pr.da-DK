@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger til it-administratorer om administration af følsomhedsmærkater i Office apps til stationære computere, mobilenheder og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 71f704e8215265409e5cf0edbbb3324d8925b0e3
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: ff0a64ed04aecff83634172ecf57263482f90dc6
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463203"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014173"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -29,7 +29,7 @@ ms.locfileid: "65463203"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du har [publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) følsomhedsmærkater fra Microsoft Purview-compliance-portal, vises de i Office apps, hvor brugerne kan klassificere og beskytte data, når de oprettes eller redigeres.
+Når du har [publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) følsomhedsmærkater fra Microsoft Purview-overholdelsesportalen, vises de i Office apps, hvor brugerne kan klassificere og beskytte data, når de oprettes eller redigeres.
 
 Brug oplysningerne i denne artikel til at hjælpe dig med at administrere følsomhedsmærkater i Office apps. Du kan f.eks. identificere de minimumversioner af apps, du har brug for, for funktioner, der er specifikke for indbygget mærkning, eventuelle yderligere konfigurationsoplysninger for disse funktioner og forstå interaktioner med Azure Information Protection unified-mærkatklienten og andre apps og tjenester.
 
@@ -45,7 +45,7 @@ I følgende tabeller vises minimumversionen af Office, der introducerede specifi
 
 Nye versioner af Office apps gøres tilgængelige på forskellige tidspunkter for forskellige opdateringskanaler. For Windows får du de nye funktioner tidligere, når du er på den aktuelle kanal eller den månedlige enterprisekanal i stedet for Semi-Annual Enterprise Channel. Minimumversionsnumrene kan også være forskellige fra én opdateringskanal til den næste. Du kan få flere oplysninger under [Oversigt over opdateringskanaler for Microsoft 365 Apps](/deployoffice/overview-update-channels) og [Opdateringshistorik for Microsoft 365 Apps](/officeupdates/update-history-microsoft365-apps-by-date).
 
-Nye funktioner, der findes i en privat prøveversion, er ikke inkluderet i tabellen, men du kan muligvis deltage i disse prøveversioner ved at udnævne din organisation til [Microsoft Information Protection private prøveversionsprogram](https://aka.ms/mip-preview).
+Nye funktioner, der findes i en privat prøveversion, er ikke inkluderet i tabellen, men du kan muligvis joinforbinde disse prøveversioner ved at udnævne din organisation til [Microsoft Information Protection private prøveversionsprogram](https://aka.ms/mip-preview).
 
 Office til iOS og Office til Android: Følsomhedsmærkater er indbygget i [Office-app](https://www.microsoft.com/en-us/microsoft-365/blog/2020/02/19/new-office-app-android-ios-available/).
 
@@ -77,6 +77,7 @@ De angivne tal er det mindste Office programversioner, der kræves for hver funk
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme infotyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig Enterprise-kanal: 2009+ <br /><br> Semi-Annual Enterprise Channel: 2102+ | 16.44+ | Under gennemgang | Under gennemgang | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassificeringer, der kan oplæres                    | Aktuel kanal: 2105+ <br /><br> Månedlig Enterprise-kanal: 2105+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.49+ | Under gennemgang | Under gennemgang | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Understøttelse af samtidig redigering og Automatisk lagring](sensitivity-labels-coauthoring.md) af navngivne og krypterede dokumenter | Aktuel kanal: 2107+ <br /><br> Månedlig Enterprise-kanal: 2107+ <br /><br> Semi-Annual Enterprise-kanal: 2202+ |  16.51+ | Prøveversion: 2,58+, når du [tilmelder](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig | Prøveversion: 16.0.14931+ når du [tilmelder](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
+|[Understøttelse af PDF](#pdf-support)| Prøveversion: Udrulning til [betakanal](https://office.com/insider) |  Under gennemgang | Under gennemgang | Under gennemgang | Under gennemgang |
 
 
 ### <a name="sensitivity-label-capabilities-in-outlook"></a>Egenskaber for følsomhedsmærkat i Outlook
@@ -102,6 +103,7 @@ De angivne tal er det mindste Office programversioner, der kræves for hver funk
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme infotyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig Enterprise-kanal: 2009+ <br /><br> Semi-Annual Enterprise Channel: 2102+ | 16.44+ <sup>\*</sup>                    | Under gennemgang           | Under gennemgang               | Ja |
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassificeringer, der kan oplæres                    | Aktuel kanal: 2105+ <br /><br> Månedlig Enterprise-kanal: 2105+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.49+ | Under gennemgang           | Under gennemgang               | Ja |
 |[Forskellige indstillinger for standardmærkat og obligatorisk mærkning](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Aktuel kanal: 2105+ <br /><br> Månedlig Enterprise-kanal: 2105+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Ja |
+|[Understøttelse af PDF](#pdf-support) | Under gennemgang|  Under gennemgang | Under gennemgang | Under gennemgang | Under gennemgang |
 |
 
 **Fodnoter:**
@@ -119,9 +121,9 @@ Hvis du vil vide mere om understøttelse af mærkning med AIP-klienten, og hvord
 
 ## <a name="if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows"></a>Hvis du har brug for at slå indbygget mærkning fra i Office apps på Windows
 
-Den Office indbyggede navngivningsklient downloader følsomhedsmærkater og politikindstillinger for følsomhedsmærkater fra Microsoft Purview-compliance-portal.
+Den Office indbyggede navngivningsklient downloader følsomhedsmærkater og politikindstillinger for følsomhedsmærkater fra Microsoft Purview-overholdelsesportalen.
 
-Hvis du vil bruge den Office indbyggede navngivningsklient, skal du have en eller flere [mærkatpolitikker publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) til brugere fra Microsoft Purview-compliance-portal og en [understøttet version af Office](#support-for-sensitivity-label-capabilities-in-apps).
+Hvis du vil bruge den Office indbyggede navngivningsklient, skal du have en eller flere [mærkatpolitikker publiceret](create-sensitivity-labels.md#publish-sensitivity-labels-by-creating-a-label-policy) til brugere fra Microsoft Purview-overholdelsesportalen og en [understøttet version af Office](#support-for-sensitivity-label-capabilities-in-apps).
 
 Hvis begge disse betingelser er opfyldt, men du har brug for at slå de indbyggede mærkater fra i Windows Office apps, skal du bruge følgende Gruppepolitik indstilling:
 
@@ -153,7 +155,7 @@ Du kan konvertere en eksisterende skabelon til en følsomhedsmærkat, når du br
 
 Følsomhedsmærkater, som du konfigurerer til at anvende kryptering, fjerner kompleksiteten fra brugerne for at angive deres egne krypteringsindstillinger. I mange Office apps kan disse individuelle krypteringsindstillinger stadig konfigureres manuelt af brugerne ved hjælp af IRM-indstillinger (Information Rights Management). For Windows apps:
 
-- For et dokument: **FileInfoProtect** >  >  **DocumentRestrict Access** > 
+- For et dokument: **Filoplysninger** >  > **Beskyt dokument** > **Begræns adgang**
 - for en mail: Fra fanen **Indstillinger** > **Krypter** 
   
 Når brugerne første gang navngiver et dokument eller en mail, kan de tilsidesætte indstillingerne for mærkatkonfigurationen med deres egne krypteringsindstillinger. Eksempel:
@@ -306,7 +308,7 @@ Når du konfigurerer en følsomhedsmærkat for indholdsmarkeringer, kan du bruge
 | `${Item.Name}` | Filnavn eller mailemne for det indhold, der forsynes med mærkater | **Sales.docx** |
 | `${Item.Location}` | Sti og filnavn for det dokument, der forsynes med mærkater, eller mailemnet for en mail, der forsynes med mærkater | **\\\Sales\2020\Q3\Report.docx**|
 | `${User.Name}` | Vist navn på den bruger, der anvender etiketten | **Richard Simone** |
-| `${User.PrincipalName}` | Azure AD brugerens hovednavn (UPN) for den bruger, der anvender etiketten | **rsimone\@ contoso.com** |
+| `${User.PrincipalName}` | Azure AD brugerens hovednavn (UPN) for den bruger, der anvender etiketten | **rsimone\@contoso.com** |
 | `${Event.DateTime}` | Dato og klokkeslæt for, hvornår indholdet er mærket, i den lokale tidszone for den bruger, der anvender mærkaten i Microsoft 365 apps, eller UTC (Coordinated Universal Time) for Office Online- og automatisk navngivningspolitikker | **10-08-2020 kl. 13:30** |
 
 > [!NOTE]
@@ -370,6 +372,8 @@ Yderligere oplysninger om indbygget mærkning:
 
 - Når obligatorisk mærkning er i kraft, kan brugerne ikke fjerne følsomhedsmærkater fra dokumenter, men kan ændre en eksisterende mærkat.
 
+- Når obligatorisk mærkning er i kraft, vil indstillingen Udskriv til PDF ikke være tilgængelig, når et dokument er mærket eller krypteret. Du kan få flere oplysninger i [afsnittet om understøttelse af PDF](#pdf-support) på denne side.
+
 Du kan finde vejledning til, hvornår du skal bruge denne indstilling, i oplysningerne om [politikindstillinger](sensitivity-labels.md#what-label-policies-can-do).
 
 > [!NOTE]
@@ -385,24 +389,56 @@ I forbindelse med indbygget mærkning skal du identificere minimumversionerne af
 
 Når Outlook app understøtter en standardnavnindstilling, der er forskellig fra standardindstillingen for mærkater for dokumenter:
 
-- I konfigurationen af mærkatpolitikken fra Microsoft Purview-compliance-portal kan du på siden **Anvend en standardmærkat på mails**: Du kan angive dit valg af følsomhedsmærkat, der skal anvendes på alle ikke-navngivne mails, eller ingen standardmærkat. Denne indstilling er uafhængig af indstillingen **Anvend denne mærkat som standard på dokumenter** på den tidligere **politikindstilling for dokumentsiden** i konfigurationen.
+- I konfigurationen af mærkatpolitikken fra Microsoft Purview-overholdelsesportalen på siden **Anvend en standardmærkat på mails** : Du kan angive dit valg af følsomhedsmærkat, der skal anvendes på alle ikke-navngivne mails, eller ingen standardmærkat. Denne indstilling er uafhængig af indstillingen **Anvend denne mærkat som standard på dokumenter** på den tidligere **politikindstilling for dokumentsiden** i konfigurationen.
 
 Når Outlook app ikke understøtter en standardnavnindstilling, der er forskellig fra standardetiketindstillingen for dokumenter: Outlook vil altid bruge den værdi, du angiver for **Anvend denne etiket som standard på dokumenter** på siden **Politikindstillinger for dokumenter i** konfigurationen af mærkatpolitikken.
 
 Når Outlook-appen understøtter deaktivering af obligatorisk mærkning:
 
-- I konfigurationen af mærkatpolitikken fra Microsoft Purview-compliance-portal skal du på siden **Politikindstillinger**: Vælg **Kræv, at brugerne anvender en mærkat på deres mail eller dokumenter**. Vælg derefter **NextNext** > , og fjern markeringen i afkrydsningsfeltet **Kræv, at brugerne anvender en mærkat på deres mails**. Markér afkrydsningsfeltet, hvis du vil have, at obligatorisk mærkning skal gælde for mails og dokumenter.
+- I konfigurationen af mærkatpolitikken fra Microsoft Purview-overholdelsesportalen skal du på siden **Politikindstillinger** : Vælg **Kræv, at brugerne anvender en mærkat på deres mail eller dokumenter**. Vælg derefter **Næste** > **næste** , og fjern markeringen i afkrydsningsfeltet **Kræv, at brugerne anvender en mærkat på deres mails**. Markér afkrydsningsfeltet, hvis du vil have, at obligatorisk mærkning skal gælde for mails og dokumenter.
 
 Når Outlook app ikke understøtter deaktivering af obligatorisk mærkning: Hvis du vælger **Kræv, at brugerne anvender en mærkat på deres mail eller dokumenter** som en politikindstilling, vil Outlook altid bede brugerne om at vælge en mærkat til ikke-navngivne mails.
 
 > [!NOTE]
 > Hvis du har konfigureret de avancerede powershell-indstillinger **OutlookDefaultLabel** og **DisableMandatoryInOutlook** ved hjælp af Cmdlet'erne [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) eller [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) :
 > 
-> Dine valgte værdier for disse PowerShell-indstillinger afspejles i konfigurationen af mærkatpolitikken i Microsoft Purview-compliance-portal, og de fungerer automatisk for Outlook apps, der understøtter disse indstillinger. De andre avancerede PowerShell-indstillinger understøttes fortsat kun for Azure Information Protection unified labeling-klienten.
+> Dine valgte værdier for disse PowerShell-indstillinger afspejles i konfigurationen af mærkatpolitikken på Microsoft Purview-overholdelsesportalen, og de fungerer automatisk for Outlook apps, der understøtter disse indstillinger. De andre avancerede PowerShell-indstillinger understøttes fortsat kun for Azure Information Protection unified labeling-klienten.
+
+## <a name="pdf-support"></a>Understøttelse af PDF
+
+I forbindelse med indbygget mærkning skal du bruge tabellerne i afsnittet [egenskaber](#support-for-sensitivity-label-capabilities-in-apps) på denne side til at identificere understøttede minimumversioner. Azure Information Protection Unified Labeling-klienten understøtter ikke PDF i Office apps.
+
+Word, Excel og PowerPoint understøtter følgende metoder til at konvertere et Office dokument til et PDF-dokument:
+
+- Fil > Gem som > PDF 
+- Eksportér > PDF-fil >
+- Del > Send en kopi > PDF
+
+Når PDF-filen oprettes, arver den etiketten med eventuelle indholdsmarkeringer og kryptering. Krypterede PDF-filer kan åbnes med Microsoft Edge på Windows eller Mac. Du kan finde flere oplysninger og alternative læsere under [Hvilke PDF-læsere understøttes for beskyttede PDF-filer?](/azure/information-protection/rms-client/protected-pdf-readers#viewing-protected-pdfs-in-microsoft-edge-on-windows-or-mac)
+
+
+PDF-scenarier understøttes ikke:
+
+- Udskriv til PDF
+    
+    Hvis brugerne vælger denne indstilling, bliver de advaret om, at dokumentet mister beskyttelsen af mærkaten og krypteringen (hvis den anvendes), og de skal bekræfte, at de vil fortsætte. Hvis politikken for følsomhedsmærkaten kræver begrundelse for at fjerne en mærkat eller sænke dens klassificering, får de vist denne prompt.
+    
+    Da denne indstilling fjerner følsomhedsmærkaten, vil denne indstilling ikke være tilgængelig for brugere, hvis du bruger obligatorisk mærkning. Denne konfiguration refererer til politikindstillingen for følsomhedsmærkat, der kræver, at brugerne anvender en mærkat på deres mails og dokumenter.
+
+- PDF/A-format og kryptering
+    
+     Dette PDF-format, der er designet til langtidsarkivering, understøttes ikke, når mærkaten anvender encrytion og forhindrer brugerne i at konvertere Office dokumenter til PDF.
+    
+- Adgangskodebeskyttelse og kryptering
+    
+    Indstillingen **Filoplysninger** >  > **Beskyt****dokumentkryptering** >  med adgangskode understøttes ikke, når dokumentets mærkat anvender kryptering. I dette scenarie bliver indstillingen Kryptér med adgangskode ikke tilgængelig for brugerne.
+
+Du kan finde flere oplysninger om denne funktion i meddelelsen [Anvend følsomhedsmærkater på PDF-filer, der er oprettet med Office apps](https://insider.office.com/blog/apply-sensitivity-labels-to-pdfs-created-with-office-apps).
+
 
 ## <a name="auditing-labeling-activities"></a>Overvågning af mærkataktiviteter
 
-Du kan finde oplysninger om de overvågningshændelser, der genereres af aktiviteter for følsomhedsmærkater, i afsnittet [Aktiviteter for følsomhedsmærkat](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) under [Søg i overvågningsloggen i Microsoft Purview-compliance-portal](search-the-audit-log-in-security-and-compliance.md).
+Du kan finde oplysninger om de overvågningshændelser, der genereres af aktiviteter for følsomhedsmærkater, i afsnittet [Aktiviteter for følsomhedsmærkat](search-the-audit-log-in-security-and-compliance.md#sensitivity-label-activities) under [Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen](search-the-audit-log-in-security-and-compliance.md).
 
 Disse overvågningsoplysninger repræsenteres visuelt i [Indholdsoversigt](data-classification-content-explorer.md) og [Aktivitetsoversigt](data-classification-activity-explorer.md) for at hjælpe dig med at forstå, hvordan dine følsomhedsmærkater bruges, og hvor dette navngivne indhold er placeret. 
 
@@ -410,8 +446,8 @@ Du kan også oprette brugerdefinerede rapporter med dit valg af SIEM-software (S
 
 > [!TIP]
 > Du kan få hjælp til at oprette brugerdefinerede rapporter i følgende blogindlæg:
-> - [Microsoft Purview aktiviteter i overvågningsloggen via O365 Management API – del 1](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957171)
-> - [Microsoft Purview aktiviteter i overvågningsloggen via O365 Management API – del 2](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957297)
+> - [Aktiviteter i Microsoft Purview-overvågningsloggen via O365 Management API – del 1](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957171)
+> - [Aktiviteter i Microsoft Purview-overvågningsloggen via O365 Management API – del 2](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/microsoft-365-compliance-audit-log-activities-via-o365/ba-p/2957297)
 
 ## <a name="end-user-documentation"></a>Slutbrugerdokumentation
 

@@ -20,12 +20,12 @@ ms.custom:
 description: Få mere at vide om, hvordan du integrerer Azure PIM for at tildele just-in-time, tidsbegrænset adgang til brugere til at udføre opgaver med øgede rettigheder i Microsoft Defender for Office 365, så risikoen for dine data reduceres.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 6e043a671b2416ba1c856c74a53206b06c180f13
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 32bc21130d98687f95af2ce6664c0759a716f362
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130664"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010228"
 ---
 <!--A-->
 # <a name="privileged-identity-management-pim-and-why-to-use-it-with-microsoft-defender-for-office-365"></a>Privileged Identity Management (PIM), og hvorfor du skal bruge den sammen med Microsoft Defender for Office 365
@@ -50,7 +50,7 @@ I dette eksempel konfigurerer vi "Alex", der er medlem af vores sikkerhedsteam, 
 2. Vælg **Sikkerhedslæser** på listen over roller, og **Indstillinger** >  **Derefter Rediger**
 3. Angiv '**Maksimal aktiveringsvarighed (timer)**' til en normal arbejdsdag og 'Ved aktivering' for at kræve **Azure MFA**.
 4. Da dette er Alex' normale rettighedsniveau for daglige handlinger, fjerner vi markeringen **af Kræv berettigelse ved aktivering**' > **opdatering**.
-5. Vælg **Tilføj tildelingerDet** >  **er ikke valgt et medlem** > vælge eller skrive navnet for at søge efter det korrekte medlem.
+5. Vælg **Tilføj tildelinger** > **Intet medlem valgt** > vælge eller skrive navnet for at søge efter det korrekte medlem.
 6. Klik på knappen **Vælg** for at vælge det medlem, du vil tilføje for PIM-rettigheder, > klik på **Næste** > ikke foretage ændringer på siden Tilføj tildeling (både tildelingstype *Berettiget* og varighed *Permanent berettiget* vil være standard) og **Tildel**.
 
 Navnet på din bruger (her 'Alex') vises under Berettigede tildelinger på næste side. Det betyder, at brugeren kan bruge PIM til rollen med de indstillinger, der er konfigureret tidligere.
@@ -75,18 +75,18 @@ Opret en brugerdefineret rollegruppe, der indeholder de ønskede tilladelser, i 
 
 ### <a name="create-the-security-group-in-azure-ad-for-elevated-permissions"></a>Opret sikkerhedsgruppen i Azure AD for administratorrettigheder
 
-1. Gå tilbage til [Azure AD Administration](https://aad.portal.azure.com/), og naviger til **Azure AD** >  **GroupsNew** >  **Group**.
+1. Gå tilbage til [Azure AD Administration](https://aad.portal.azure.com/), og naviger til **Azure AD** >  **Grupper** > **Ny gruppe**.
 2. Navngiv din Azure AD gruppe, så den afspejler formålet. Der **kræves ingen ejere eller medlemmer** lige nu.
 3. Slå **Azure AD roller kan tildeles til gruppen** til **Ja**.
 4. Tilføj ikke nogen roller, medlemmer eller ejere, opret gruppen.
-5. Gå tilbage til den gruppe, du lige har oprettet, og vælg **Privilegeret adgang** >  **Privilegeret adgang.**
-6. I gruppen skal du vælge **Berettigede tildelingerTilføj** >  **tildelinger** > Tilføj den bruger, der skal bruge Søg & Fjern som **medlem.**
+5. Gå tilbage til den gruppe, du lige har oprettet, og vælg **Privilegeret adgang** > **Aktivér privilegeret adgang**.
+6. I gruppen skal du vælge **Berettigede tildelinger** > **Tilføj tildelinger** > Tilføj den bruger, der skal bruge Søg & Fjern som **medlem.**
 7. Konfigurer **Indstillinger** i gruppens rude Privilegeret adgang. Vælg at **redigere** indstillingerne for **rollen medlem**.
 8. Skift aktiveringstiden, så den passer til din organisation. I dette eksempel kræves *der oplysninger om* *Azure MFA*, *begrundelse* og billet, før du vælger **Opdater**.
 
 ### <a name="nest-the-newly-created-security-group-into-the-role-group"></a>Indlejrer den nyoprettede sikkerhedsgruppe i rollegruppen
 
-1. [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell), og kør følgende kommando:
+1. [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell), og kør følgende kommando:
 
    ```powershell
    Add-RoleGroupMember "<<Role Group Name>>" -Member "<<Azure Security Group>>"`

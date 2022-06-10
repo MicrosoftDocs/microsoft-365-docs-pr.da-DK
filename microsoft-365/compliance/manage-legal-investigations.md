@@ -17,12 +17,12 @@ ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
 ms.custom:
 - seo-marvel-apr2020
 description: Brug eDiscovery-sager på Microsoft Purview-overholdelsesportalen til at administrere organisationens juridiske undersøgelse.
-ms.openlocfilehash: 464996eb160eff520582e82ab87b74b4472f7a5d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f75d59e58ae51e5cb525044edb775c87b52686d1
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077886"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010060"
 ---
 # <a name="manage-legal-investigations-in-microsoft-365"></a>Administrer juridiske undersøgelser i Microsoft 365
 
@@ -46,7 +46,7 @@ Med eDiscovery-sager kan du styre, hvem der kan oprette, få adgang til og admin
 
 ### <a name="use-scripts-for-advanced-scenarios"></a>Brug scripts til avancerede scenarier
 
-Ligesom i det forrige afsnit, der viste scripts til indholdssøgningsscenarier, har vi også oprettet nogle PowerShell-scripts til Security & Compliance Center for at hjælpe dig med at administrere eDiscovery-sager.
+Ligesom i det forrige afsnit, hvor der blev angivet scripts til indholdssøgningsscenarier, har vi også oprettet nogle PowerShell-scripts til & overholdelse af angivne standarder for at hjælpe dig med at administrere eDiscovery-sager.
   
 - [Opret en eDiscovery-ventepositionsrapport](create-a-report-on-holds-in-ediscovery-cases.md) , der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager i din organisation.
 

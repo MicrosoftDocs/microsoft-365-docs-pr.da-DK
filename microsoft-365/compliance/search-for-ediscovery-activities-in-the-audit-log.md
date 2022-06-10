@@ -15,20 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 67cc7f42-a53d-4751-b929-6005c80798f7
-description: Få mere at vide om, hvilke hændelser der logføres, når brugere, der har fået tildelt eDiscovery-tilladelser, udfører indholdssøgning, eDiscovery (Standard) og eDiscovery-opgaver (Premium) i Microsoft Purview-compliance-portal.
+description: Få mere at vide om, hvilke hændelser der logføres, når brugere, der har fået tildelt eDiscovery-tilladelser, udfører indholdssøgning, eDiscovery (Standard) og eDiscovery-opgaver (Premium) på Microsoft Purview-overholdelsesportalen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0b94c53d497b5e300cdb0a08dbb5f02daec28c19
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 1e22371999044d5cb70282356045446b46f833fa
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317510"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015490"
 ---
 # <a name="search-for-ediscovery-activities-in-the-audit-log"></a>Søg efter eDiscovery-aktiviteter i overvågningsloggen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Indholdssøgning og eDiscovery-relaterede aktiviteter (for Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium)), der udføres i Microsoft Purview-compliance-portal eller ved at køre de tilsvarende PowerShell-cmdlet'er, er logført i overvågningsloggen. Hændelser logføres, når administratorer eller eDiscovery-ledere (eller alle brugere, der har fået tildelt eDiscovery-tilladelser), udfører følgende indholdssøgnings- og eDiscovery-opgaver (Standard) på overholdelsesportalen:
+Indholdssøgning og eDiscovery-relaterede aktiviteter (for Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium)), der udføres i Microsoft Purview-overholdelsesportalen eller ved at køre de tilsvarende PowerShell-cmdlet'er, logføres i overvågningsloggen. Hændelser logføres, når administratorer eller eDiscovery-ledere (eller alle brugere, der har fået tildelt eDiscovery-tilladelser), udfører følgende indholdssøgnings- og eDiscovery-opgaver (Standard) på overholdelsesportalen:
   
 - Oprettelse og administration af sager med eDiscovery (Standard) og eDiscovery (Premium)
 
@@ -153,7 +153,7 @@ I følgende tabel beskrives de eDiscovery-aktiviteter (Premium), der logføres i
 
 ## <a name="ediscovery-cmdlet-activities"></a>eDiscovery-cmdlet-aktiviteter
 
-I følgende tabel vises de cmdlet-overvågningslogposter, der logføres, når en administrator eller bruger udfører en eDiscovery-relateret aktivitet ved hjælp af overholdelsescenter eller ved at køre den tilsvarende cmdlet i Security & Compliance Center PowerShell. De detaljerede oplysninger i overvågningslogposten er forskellige for de cmdlet-aktiviteter, der er angivet i denne tabel, og de eDiscovery-aktiviteter, der er beskrevet i det forrige afsnit.
+I følgende tabel vises de cmdlet-overvågningslogposter, der logføres, når en administrator eller bruger udfører en eDiscovery-relateret aktivitet ved hjælp af overholdelsescenter eller ved at køre den tilsvarende cmdlet i PowerShell til sikkerhed & overholdelse. De detaljerede oplysninger i overvågningslogposten er forskellige for de cmdlet-aktiviteter, der er angivet i denne tabel, og de eDiscovery-aktiviteter, der er beskrevet i det forrige afsnit.
   
 Som tidligere nævnt kan det tage op til 24 timer, før eDiscovery-cmdlet-aktiviteter vises i søgeresultaterne i overvågningsloggen.
   

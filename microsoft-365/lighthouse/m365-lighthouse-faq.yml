@@ -5,6 +5,7 @@ metadata:
   ms.author: sharik
   author: SKjerland
   manager: scotv
+  ms-reviewer: crimora
   audience: Admin
   ms.topic: faq
   ms.prod: microsoft-365-lighthouse
@@ -17,12 +18,12 @@ metadata:
   - M365-Lighthouse
   search.appverid: MET150
   description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få svar på ofte stillede spørgsmål om Microsoft 365 Fyr.
-  ms.openlocfilehash: 8afa3364c7b646110dcd4d6cf2b8786c1840eb76
-  ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+  ms.openlocfilehash: a980a6fe8376c71470331ff3efc1d5b1f08acb33
+  ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/26/2022
-  ms.locfileid: "65692799"
+  ms.lasthandoff: 06/10/2022
+  ms.locfileid: "66016762"
 title: Microsoft 365 Ofte stillede spørgsmål om Lighthouse
 summary: >
   Denne artikel indeholder svar på ofte stillede spørgsmål om Microsoft 365 Fyrtårn.
@@ -40,7 +41,7 @@ sections:
       Microsoft 365 Lighthouse fokuserer på Microsoft 365 tjenester i stedet for Azure-tjenester. Selvom Azure Lighthouse er indbygget i Azure Portal og gør det muligt for it-partnere at administrere flere lejere til Azure, er Microsoft 365 Lighthouse en separat portal, der hjælper MSP'er med at administrere flere Microsoft 365 kundelejere. Du kan få flere oplysninger om Microsoft 365 Fyrtårn i [Oversigt over Microsoft 365 Fyrtårn](m365-lighthouse-overview.md). Du kan få flere oplysninger om Azure Lighthouse under [Hvad er Azure Lighthouse?](/azure/lighthouse/overview)
   - question: Hvor meget koster Microsoft 365 Lighthouse?
     answer: >
-      Der er ikke knyttet yderligere omkostninger til brugen af Lighthouse til at administrere flere Microsoft 365 kundelejere. Lighthouse er tilgængeligt for MSP'er, der servicerer små og mellemstore virksomheder, og som har et Cloud Solution Provider (CSP) forhold til deres kunder. Bemærk, at indirekte providere i øjeblikket ikke understøttes af Lighthouse. Du kan få flere oplysninger under [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
+      Der er ikke knyttet yderligere omkostninger til brugen af Lighthouse til at administrere flere Microsoft 365 kundelejere. Lighthouse er tilgængeligt for MSP'er, der servicerer små og mellemstore virksomheder, og som har et Cloud Solution Provider (CSP) forhold til deres kunder. Bemærk, at indirekte udbydere i øjeblikket ikke understøttes af Lighthouse. Du kan få flere oplysninger under [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
   - question: Hvad er kravene til at bruge Microsoft 365 Fyrtårn?
     answer: >
       Du kan se en liste over aktuelle krav under [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md).
@@ -55,9 +56,9 @@ sections:
       Hvis du vil tilmelde dig Lighthouse, skal du være registreret i CSP-programmet. Vi kan i øjeblikket ikke understøtte indirekte udbydere. Du kan finde oplysninger om, hvordan du tilmelder dig, under [Tilmeld dig Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md). Hvis du vil vide mere om CSP-programmet, [skal du se oversigten over Cloud Solution Provider program](/partner-center/csp-overview).
   - question: Jeg er færdig med at tilmelde mig, så hvorfor kan jeg ikke se nogen kundelejerdata?
     answer: >
-      Det kan tage op til 48 timer, før kundelejerdata indlæses i Lighthouse. Hvis der er gået mere end 48 timer, siden du var færdig med onboarding, skal du kontakte vores supportteam for at få hjælp. Du skal give dem besked, når du er færdig med onboarding og angive relevante skærmbilleder og logge. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
+      Det kan tage op til 48 timer, før kundelejerdata indlæses i Lighthouse. Hvis der er gået mere end 48 timer, siden du var færdig med onboarding, kan du kontakte vores supportteam for at få hjælp. Du skal give dem besked, når du er færdig med onboarding og angive relevante skærmbilleder og logge. Du kan finde flere oplysninger under [Få hjælp og support til Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
   - question: Hvorfor kan jeg se data for nogle kundelejere, men ikke for andre?
-    answer: "Hvis kundelejerdata skal vises i Lighthouse, skal MSP'er etablere uddelegeret adgang for at administrere kundelejer. Der kræves delegerede Administration rettigheder (DAP) for at onboarde kunder til Lighthouse. Vi anbefaler, at du opretter GDAP (Granular Delegated Administration Privileges) med dine kunder for at muliggøre mere sikker delegeret adgang. Se [Oversigt over tilladelser i Microsoft 365 Fyrtårn](m365-lighthouse-overview-of-permissions.md) for at få flere oplysninger om, hvilke delegerede lejerroller og partnerlejere der anbefales at bruge Lighthouse. Mens DAP og GDAP eksisterer, har GDAP forrang for kunder, hvor begge modeller er på plads. Snart vil kunder med kun GDAP (og ingen DAP) kunne onboarde til Lighthouse. Du kan få flere oplysninger om delegeret adgang under [Anmod om en forhandlerrelation med en kunde i Partnercenter](/partner-center/request-a-relationship-with-a-customer). Lejere skal også have mindst ét Microsoft 365 Business Premium, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business eller Microsoft Defender til virksomheder licens og højst 1.000 brugere med licens i deres lejer. Du kan få flere oplysninger under [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md) og [Oversigt over lejersiden i Microsoft 365 Fyrtårn](m365-lighthouse-tenants-page-overview.md).  \n"
+    answer: "Hvis kundelejerdata skal vises i Lighthouse, skal MSP'er etablere uddelegeret adgang for at administrere kundelejer. Enten GDAP (Granular Delegated Admin Privileges) plus en indirekte forhandlerrelation eller en DAP-relation (Delegated Admin Privileges) er påkrævet for at onboarde kunder til Lighthouse. Vi anbefaler, at du etablerer GDAP sammen med dine kunder for at muliggøre mere sikker delegeret adgang. Hvis DAP og GDAP eksisterer i en kundelejer, har GDAP-tilladelserne forrang for MSP-teknikere i GDAP-aktiverede sikkerhedsgrupper. Kunder med kun GDAP-relationer (uden indirekte forhandlerrelationer) vil snart kunne onboarde til Lighthouse. Du kan få flere oplysninger om delegeret adgang under [Anmod om en forhandlerrelation med en kunde i Partnercenter](/partner-center/request-a-relationship-with-a-customer). Lejere skal også have mindst ét Microsoft 365 Business Premium, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business eller Microsoft Defender til virksomheder licens og højst 1.000 brugere med licens i deres lejer. Du kan få flere oplysninger under [Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md) og [Oversigt over lejersiden i Microsoft 365 Fyrtårn](m365-lighthouse-tenants-page-overview.md).\n\nHvis GDAP er etableret hos kunden, skal en MSP-tekniker være i en GDAP-aktiveret sikkerhedsgruppe, der er tildelt de relevante roller for at kunne administrere kundens data i Lighthouse. GDAP-roller, der er tildelt denne sikkerhedsgruppe, påvirker, hvilke kundedata der kan administreres i Lighthouse. Se [Oversigt over tilladelser i Microsoft 365 Fyrtårn](m365-lighthouse-overview-of-permissions.md) for at få oplysninger om, hvilke delegerede lejerroller og partnerlejere der anbefales at bruge Lighthouse. Du kan finde oplysninger om, hvordan du får vist, hvilke GDAP-roller der er tildelt dig for forskellige kundelejere i Lighthouse, under [Få vist dine Azure Active Directory roller i Microsoft 365 Fyrtårn](m365-lighthouse-view-your-roles.md).   \n"
   - question: Hvad nu, hvis jeg ikke vil se bestemte lejere i Microsoft 365 Lighthouse?
     answer: >
       Hvis du ikke vil se bestemte lejere og deres data i Lighthouse, kan du deaktivere disse lejere. Hvis du vil deaktivere en lejer, skal du følge disse trin:
