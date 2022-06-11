@@ -396,6 +396,8 @@
           href: quarantine-faq.yml
     - name: Trinvise vejledninger
       items:
+        - name: 'Trinvise vejledninger til Microsoft Defender for Office 365, og hvordan du bruger dem'
+          href: step-by-step-guides/step-by-step-guide-overview.md
         - name: '(Falske negativer) Sådan håndteres skadelige mails, der leveres til modtagere ved hjælp af Microsoft Defender for Office 365'
           href: step-by-step-guides/how-to-handle-false-negatives-in-microsoft-defender-for-office-365.md
         - name: '(Falske positiver) Sådan håndterer du legitime mails, der blokeres fra at blive leveret ved hjælp af Microsoft Defender for Office 365'
