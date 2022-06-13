@@ -22,12 +22,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får online- eller telefonsupport til dit abonnement på Microsoft 365 til virksomheder. Du skal være administrator for et virksomhedsabonnement for at få support.
-ms.openlocfilehash: b0caf57ddc71f028cf913f29fa983ed1d7bcffc2
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 3d1b69fef8bd262aada4910c82199203f4cff9ee
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465882"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011776"
 ---
 # <a name="get-support-for-microsoft-365-for-business"></a>Få support til Microsoft 365 til virksomheder
 
@@ -59,8 +59,12 @@ Spar tid ved at starte din tjenesteanmodning online. Vi hjælper dig med at find
 
 ## <a name="phone-support"></a>Telefonsupport
 
-Faktureringssupport fås på engelsk, fra 9-17 (9-18 i Australien) mandag-fredag.\
-Teknisk support fås på engelsk døgnet rundt, alle ugens syv dage.\
+Brug rullemenuen nedenfor til at finde nummeret til dit land eller område.
+
+[!INCLUDE [country-region-support-dropdown-list](../admin/includes/country-region-support-dropdown-list.md)]
+
+Faktureringssupport og tekniske supporttimer (og sprog) vises på hvert lands side, der er valgt på rullelisten.
+
 Er du administrator, skal du have dine kontooplysninger klar, når du ringer.
 
 > [!NOTE]
@@ -73,10 +77,6 @@ Er du administrator, skal du have dine kontooplysninger klar, når du ringer.
 - **I Canada skal du ringe til 1 800 865 9408.**
 
 - **I Storbritannien skal du ringe til 0800 032 6417.**
-
-Hvis nummeret til support ikke er angivet ovenfor, kan du bruge rullemenuen nedenfor til at vælge dit land eller område.
-
-[!INCLUDE [country-region-support-dropdown-list](../admin/includes/country-region-support-dropdown-list.md)]
 
 ## <a name="small-business-support-with-business-assist"></a>Support til små virksomheder med Business Assist
 
@@ -135,7 +135,7 @@ Teknisk support til Office 365 drevet af 21Vianet-abonnementer giver hjælp til 
 | Alvorsniveau | Beskrivelse af handlinger og support | Eksempler |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Alvorsgrad A (Kritisk) | En eller flere tjenester er ikke tilgængelige eller er ubrugelige. Produktion, handlinger eller udrulningsdeadlines påvirkes alvorligt, eller der kan være en alvorlig indvirkning på produktion eller indtjening. Flere brugere eller tjenester påvirkes. | <ul><li>Udbredte problemer med at sende eller modtage mails.</li><li>SharePoint-webstedet er nede.</li><li>Ingen brugere kan sende chatbeskeder, deltage i eller planlægge Skype for Business-møder eller foretage Skype for Business-opkald.</li></ul> |
-| Sev B (Høj) | Tjenesten er brugbar, men på en forringet måde. Situationen påvirker moderat virksomheder og kan behandles inden for almindelig kontortid. En enkelt bruger, kunde eller tjeneste er delvist påvirket. | <ul><li>Knappen Send i Outlook er forvansket.</li><li>Indstillingen er umulig fra EAC (Exchange Administration), men mulig i Windows PowerShell.</li></ul> |
+| Sev B (Høj) | Tjenesten er brugbar, men på en forringet måde. Situationen påvirker moderat virksomheder og kan behandles inden for almindelig kontortid. En enkelt bruger, kunde eller tjeneste er delvist påvirket. | <ul><li>Knappen Send i Outlook er forvansket.</li><li>Indstillingen er umulig fra EAC (Exchange Administration), men mulig i Exchange Online PowerShell.</li></ul> |
 | Alvorsgrad C (Ikke-kritisk) | Situationen påvirker virksomheder minimalt. Problemet er vigtigt, men har ikke en markant aktuel tjenestemæssig eller produktiv betydning for kunden. En enkelt bruger oplever delvise afbrydelser, men der findes en acceptabel løsning. | <ul><li>Sådan angives en brugeradgangskode, der aldrig udløber.</li> <li>Brugeren kan ikke slette kontaktoplysninger i Exchange Online.</li></ul> |
 
 ## <a name="technical-support-initial-response-times"></a>Første svartider for teknisk support
