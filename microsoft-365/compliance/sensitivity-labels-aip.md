@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: c790ee691e6a72228c865b8cdf9911ee83f4dfd4
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0540f3b1b78b728a7c49e0851696d20a04137bb7
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011564"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043060"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office apps
 
@@ -76,7 +76,7 @@ Nogle funktioner understøttes kun af indbygget mærkning for Office apps og und
     - Adgang til intelligente klassificeringstjenester, der omfatter [klassificeringer, der kan oplæres](classifier-learn-about.md), [EDM (exact data match)](sit-learn-about-exact-data-match-based-sits.md) og [navngivne enheder](named-entities-learn.md)
     - Registrering af følsomme oplysninger som brugertype
     - I Word kan brugerne gennemse og fjerne det identificerede følsomme indhold
-- [Understøttelse af PDF](sensitivity-labels-office-apps.md#pdf-support)
+- [Understøttelse af PDF](sensitivity-labels-office-apps.md#pdf-support) (i prøveversion)
 - For mærkater, der giver brugere mulighed for at tildele tilladelser, kan der tildeles forskellige tilladelser (Læs eller Rediger) til brugere eller grupper
 - Encrypt-Only til mails
 - Synlighed af mærkater på statuslinjen

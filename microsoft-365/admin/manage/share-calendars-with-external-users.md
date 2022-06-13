@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 ms.assetid: fb00dd4e-2d5f-4e8d-8ff4-94b2cf002bdd
 description: Aktivér kalenderdeling i Microsoft 365 Administration, så brugerne kan dele deres kalendere med alle i eller uden for organisationen.
-ms.openlocfilehash: 9179e79e27320df2b943a9342ee0c2a91c866448
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: b3ca1d4f2a6ef24a6958b4fe805ccf617c0984e7
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468552"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043138"
 ---
 # <a name="share-microsoft-365-calendars-with-external-users"></a>Del Microsoft 365 kalendere med eksterne brugere
 
@@ -41,7 +41,7 @@ Du kan aktivere kalenderdeling for alle brugere i din organisation i Microsoft 3
   
 ## <a name="enable-calendar-sharing-using-the-microsoft-365-admin-center"></a>Aktivér kalenderdeling ved hjælp af Microsoft 365 Administration
 
-1. Gå til **Indstillinger** \> **Organisationsindstillinger** i Administration, og vælg **Kalender** <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">under fanen **Tjenester**</a>.
+1. Log på som **global administrator** i Administration, gå til **Indstillinger** \> **Organisationsindstillinger**, og vælg **Kalender** <a href="https://go.microsoft.com/fwlink/p/?linkid=2053743" target="_blank">under fanen **Tjenester**</a>.
   
 3. På siden **Kalender** skal du vælge, om du vil lade brugerne dele deres kalendere med personer uden for organisationen, som har Microsoft 365 eller Exchange. Vælg, om du vil give anonyme brugere (brugere uden legitimationsoplysninger) adgang til kalendere via en mailinvitation.
 
@@ -57,7 +57,25 @@ Du kan aktivere kalenderdeling for alle brugere i din organisation i Microsoft 3
 
 ## <a name="invite-people-to-access-calendars"></a>Inviter personer til at få adgang til kalendere
 
-Når deling er aktiveret, kan kalenderejere udvide invitationer til bestemte brugere. Du kan finde instruktioner [under Deling af din kalender i Outlook Web App](https://support.microsoft.com/office/7ecef8ae-139c-40d9-bae2-a23977ee58d5).
+Når deling er aktiveret, kan kalenderejere udvide invitationer til bestemte brugere.
+
+1. Åbn [Outlook på internettet](https://outlook.office365.com).
+
+2. Øverst på siden skal du vælge appstarteren og vælge **Kalender**. Din primære kalender kaldes som standard "Kalender". Hvis du har oprettet andre kalendere, kan du vælge en af dem, der skal deles i stedet. Du kan ikke dele kalendere, der ejes af andre personer.
+
+3. Angiv navnet eller mailadressen på den person, du vil dele kalenderen med, i feltet **Send en invitation til deling i mail** .
+
+4. Vælg, hvor mange oplysninger personen skal se:
+
+     - **Kan se, når jeg er optaget** , giver personen mulighed for at se, når du er optaget, men indeholder ikke oplysninger som f.eks. placeringen af begivenheden.
+
+     - **Kan få vist titler og placeringer,** som personen kan se, når du er optaget, samt titlen på og placeringen af begivenheder.
+
+     - **Kan få vist alle detaljer** giver personen mulighed for at se alle detaljer om dine begivenheder.
+
+     - **Kan redigere** giver personen mulighed for at se alle detaljer om dine begivenheder og redigere din kalender (kun tilgængelig, når vedkommende deler med personer i din organisation).
+
+5. Vælg **Del**. 
 
 ## <a name="related-content"></a>Relateret indhold
 

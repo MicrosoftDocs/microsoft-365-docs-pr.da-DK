@@ -17,16 +17,16 @@ ms.collection:
 description: Få mere at vide om, hvordan du aktiverer tilføjelsesprogrammer til rapportmeddelelse eller rapport phishing for Outlook og Outlook på internettet, for individuelle brugere eller for hele organisationen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a4166b36888c96b12a8aa410848c392c2afdaeb5
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: b0882a37161989248b8c970a5dbe01efc0bcff65
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144833"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043757"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -59,7 +59,7 @@ Hvis du er global administrator eller Exchange Online administrator, og Exchange
   - Outlook inkluderet i Microsoft 365 apps til Enterprise
   - Outlook app til iOS og Android
 
-- Begge tilføjelsesprogrammer er ikke tilgængelige for delte postkasser.
+- Begge tilføjelsesprogrammer er ikke tilgængelige for delte, gruppe- eller delegerede postkasser (tilføjelsesprogrammer er nedtonet).
 
 - Begge tilføjelsesprogrammer er ikke tilgængelige for postkasser i det lokale miljø Exchange.
 

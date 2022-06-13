@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 3a26f20946be39074a18df1b09d392464193599c
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 234ce1ecb486c01b95c91aa51a0c5fd6b46e7a3c
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842396"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043526"
 ---
 # <a name="prioritize-and-manage-automated-investigations-and-response-air"></a>Prioriter og administrer automatiserede undersøgelser og svar (AIR)
 
@@ -41,7 +41,7 @@ I takt med at automatiserede undersøgelser af *mail & resulterer samarbejdsindh
 
 ## <a name="what-youll-need"></a>Det skal du bruge
 
-- Microsoft Defender for Office 365 plan 2 eller nyere
+- Microsoft Defender for Office 365 Plan 2 eller nyere (inkluderet med E5)
 - Tilstrækkelige tilladelser (sikkerhedslæser, sikkerhedshandlinger eller sikkerhedsadministrator samt [rollen Søg og fjern](../permissions-microsoft-365-security-center.md) )
 
 ## <a name="steps-to-analyze-and-approve-air-actions-directly-from-the-action-center"></a>Trin til at analysere og godkende AIR-handlinger direkte fra Løsningscenter
@@ -58,7 +58,7 @@ I takt med at automatiserede undersøgelser af *mail & resulterer samarbejdsindh
 1. Gå til [Microsoft 365 Defender-portalen](https://security.microsoft.com), og log på.
 2. I navigationsruden til venstre skal du udvide **Handling & indsendelser** og derefter klikke på **Løsningscenter**.
 3. Når Handlingscenter indlæses, skal du trykke på fanen **Oversigt** .
-4. Få vist air-historikken, herunder de beslutninger, der er truffet, kilden til handlingen og den administrator, der har truffet beslutningen, hvis det er relevant.
+4. Få vist historikken for AIR, herunder de beslutninger, der er truffet, kilden til handlingen og den administrator, der har truffet beslutningen, hvis det er relevant.
 
 ## <a name="more-information"></a>Flere oplysninger
 

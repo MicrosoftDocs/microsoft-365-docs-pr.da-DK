@@ -1,11 +1,11 @@
 ---
-title: Konfigurer nye egenskaber for meddelelseskryptering
+title: Konfigurer Microsoft Purview-meddelelseskryptering
 f1.keywords:
 - NOCSH
 ms.author: krowley
 author: kccross
 manager: laurawi
-ms.date: 4/30/2019
+ms.date: 4/16/2022
 audience: ITPro
 ms.topic: article
 ms.service: O365-seccomp
@@ -16,64 +16,66 @@ ms.assetid: 7ff0c040-b25c-4378-9904-b1b50210d00e
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
-description: Få mere at vide om de Office 365-meddelelseskryptering funktioner, der muliggør beskyttet mailkommunikation med personer i og uden for organisationen.
+description: Få mere at vide om Microsoft Purview Message Encryption, der muliggør beskyttet mailkommunikation med personer i og uden for din organisation.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 006bef8a78a50e3cc47bfcfe7910621a3fa9ef85
-ms.sourcegitcommit: b1066b2a798568afdea9c09401d52fa38fe93546
+ms.openlocfilehash: 48a5ca3bad7c0fb0d7120cb4e35bc5f24902a46e
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "63587724"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043334"
 ---
-# <a name="set-up-new-message-encryption-capabilities"></a>Konfigurer nye egenskaber for meddelelseskryptering
+# <a name="set-up-message-encryption"></a>Konfigurer meddelelsekryptering
 
-De nye Office 365-meddelelseskryptering (OME)-funktioner giver organisationer mulighed for at dele beskyttet mail med alle på enhver enhed. Brugere kan udveksle beskyttede meddelelser med Microsoft 365 organisationer samt ikke-kunder, der bruger Outlook.com, Gmail og andre mailtjenester.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Følg trinnene nedenfor for at sikre, at de nye OME-funktioner er tilgængelige i din organisation.
+Microsoft Purview Message Encryption gør det muligt for organisationer at dele beskyttet mail med alle på enhver enhed. Brugerne kan udveksle beskyttede meddelelser med andre Microsoft 365 organisationer samt tredjeparter ved hjælp af Outlook.com, Gmail og andre mailtjenester.
 
-## <a name="verify-that-azure-rights-management-is-active"></a>Kontrollér, at Azure Rights Management er aktiv
+Følg nedenstående trin for at sikre, at Microsoft Purview Message Encryption er tilgængelig i din organisation.
 
-De nye OME-funktioner udnytter beskyttelsesfunktionerne i [Azure Rights Management Services (Azure RMS),](/azure/information-protection/what-is-information-protection) som er den teknologi, der bruges af [Azure Information Protection](/azure/information-protection/what-is-azure-rms) til at beskytte mails og dokumenter via krypterings- og adgangskontrolelementer.
+## <a name="verify-that-azure-rights-management-is-active"></a>Bekræft, at Azure Rights Management er aktiv
 
-Den eneste forudsætning for at bruge de nye OME-funktioner er, at [Azure Rights Management](/azure/information-protection/what-is-azure-rms) skal aktiveres i din organisations lejer. Hvis det er, Microsoft 365 aktivere de nye OME-funktioner automatisk, og du behøver ikke at gøre noget.
+Microsoft Purview Message Encryption udnytter beskyttelsesfunktionerne i [Azure Rights Management Services (Azure RMS)](/azure/information-protection/what-is-information-protection) og den teknologi, der bruges af [Azure Information Protection](/azure/information-protection/what-is-azure-rms) til at beskytte mails og dokumenter via krypterings- og adgangskontrol.
 
-Azure RMS aktiveres også automatisk for de fleste berettigede planer, så du behøver sandsynligvis heller ikke at gøre noget i denne retning. Se [Aktivering af Azure Rights Management for](/azure/information-protection/activate-service) at få flere oplysninger.
+Den eneste forudsætning for at bruge Microsoft Purview Message Encryption er, at [Azure Rights Management](/azure/information-protection/what-is-azure-rms) skal aktiveres i din organisations lejer. Hvis det er, aktiverer Microsoft 365 automatisk meddelelsekryptering, og du behøver ikke at foretage dig noget.
+
+Azure RMS aktiveres også automatisk for de fleste berettigede planer, så du behøver sandsynligvis heller ikke at foretage dig noget i denne henseende. Se [Aktivering af Azure Rights Management for at](/azure/information-protection/activate-service) få flere oplysninger.
 
 > [!IMPORTANT]
-> Hvis du bruger Active Directory Rights Management Service (AD RMS) med Exchange Online, skal du overføre til [Azure Information Protection](/azure/information-protection/migrate-from-ad-rms-to-azure-rms), før du kan bruge de nye OME-funktioner. OME er ikke kompatibel med AD RMS.
+> Hvis du bruger AD RMS (Active Directory Rights Management Service) med Exchange Online, skal du [migrere til Azure Information Protection](/azure/information-protection/migrate-from-ad-rms-to-azure-rms), før du kan bruge meddelelseskryptering. Microsoft Purview-meddelelseskryptering er ikke kompatibel med AD RMS.
 
 Du kan finde flere oplysninger under:
 
-- [Hvilke abonnementer skal jeg bruge for at kunne bruge de nye OME-funktioner?](ome-faq.yml#what-subscriptions-do-i-need-to-use-the-new-ome-capabilities-) for at kontrollere, om din abonnementsplan omfatter Azure Information Protection (som omfatter Azure RMS-funktionalitet).
-- [Azure Information Protection for](https://azure.microsoft.com/services/information-protection/) at få oplysninger om at købe et kvalificerede abonnement.
+- [Ofte stillede spørgsmål om meddelelseskryptering](ome-faq.yml) for at kontrollere, om din abonnementsplan indeholder Azure Information Protection (som omfatter Azure RMS-funktionalitet).
+- [Azure Information Protection](https://azure.microsoft.com/services/information-protection/) for at få oplysninger om køb af et berettiget abonnement.
 
-### <a name="manually-activating-azure-rights-management"></a>Aktivere Azure Rights Management manuelt
+### <a name="manually-activating-azure-rights-management"></a>Manuel aktivering af Azure Rights Management
 
 Hvis du har deaktiveret Azure RMS, eller hvis det af en eller anden grund ikke blev aktiveret automatisk, kan du aktivere det manuelt i:
 
-- **Microsoft 365 Administration**: Se Sådan [aktiverer du Azure Rights Management fra Administration](/azure/information-protection/activate-office365) for at få vejledning.
-- **Azure-portal**: Se [Sådan aktiverer du Azure Rights Management fra Azure-portalen for vejledning](/azure/information-protection/activate-azure) .
+- **Microsoft 365 Administration**: Se [Sådan aktiverer du Azure Rights Management fra Administration for at få](/azure/information-protection/activate-office365) instruktioner.
+- **Azure Portal**: Se [Sådan aktiverer du Azure Rights Management fra Azure Portal for at få](/azure/information-protection/activate-azure) instruktioner.
 
-## <a name="configure-management-of-your-azure-information-protection-tenant-key"></a>Konfigurere administrationen af din Azure Information Protection-lejernøgle
+## <a name="configure-management-of-your-azure-information-protection-tenant-key"></a>Konfigurer administration af din Azure Information Protection-lejernøgle
 
-Dette er et valgfrit trin. At give Microsoft tilladelse til at administrere rodnøglen til Azure Information Protection er standardindstillingen og anbefalede bedste praksis for de fleste organisationer. Hvis det er tilfældet, behøver du ikke at gøre noget.
+Dette er et valgfrit trin. Det er standardindstillingen og anbefalet bedste praksis for de fleste organisationer at give Microsoft tilladelse til at administrere rodnøglen til Azure Information Protection. Hvis det er tilfældet, behøver du ikke at gøre noget.
 
-Der er mange årsager, f.eks. overholdelseskrav, som kan være din egen, der genererer og administrerer din egen rodnøgle (også kaldet at medbringe din egen nøgle (BYOK)). Hvis det er tilfældet, anbefaler vi, at du gennemfører de nødvendige trin, før du konfigurerer de nye OME-funktioner. Se [Planlægning og implementering af din Azure Information Protection-lejernøgle for at](/information-protection/plan-design/plan-implement-tenant-key) få mere at vide.
+Der er mange årsager, f.eks. krav til overholdelse af angivne standarder, som kan nødvendiggøre, at du genererer og administrerer din egen rodnøgle (også kendt som BYOK (Bring Your Own Key)). Hvis det er tilfældet, anbefaler vi, at du fuldfører de påkrævede trin, før du konfigurerer Microsoft Purview Message Encryption. Se [Planlægning og implementering af din Azure Information Protection-lejernøgle](/information-protection/plan-design/plan-implement-tenant-key) for at få mere at vide.
 
-## <a name="verify-new-ome-configuration-in-exchange-online-powershell"></a>Bekræft ny OME-konfiguration Exchange Online PowerShell
+## <a name="verify-microsoft-purview-message-encryption-configuration-in-exchange-online-powershell"></a>Kontrollér konfigurationen af Microsoft Purview-meddelelsekryptering i Exchange Online PowerShell
 
-Du kan kontrollere, at Microsoft 365 lejer er konfigureret korrekt til at bruge de nye OME-funktioner [i Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell).
+Du kan kontrollere, at din Microsoft 365 lejer er konfigureret korrekt til at bruge Microsoft Purview Message Encryption i [Exchange Online PowerShell](/powershell/exchange/exchange-online-powershell).
 
-1. [Forbind at Exchange Online PowerShell ved](/powershell/exchange/connect-to-exchange-online-powershell) hjælp af en konto med globale administratortilladelser i din Microsoft 365 lejer.
+1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en konto med globale administratortilladelser i din Microsoft 365 lejer.
 
-2. Kør Get-IRMConfiguration cmdlet'en.
+2. Kør cmdlet'en Get-IRMConfiguration.
 
-     Du bør få vist en værdi på $True for AzureRMSLicensingEnabled-parameteren, som angiver, at OME er konfigureret i din lejer. Hvis den ikke er, skal Set-IRMConfiguration til at angive værdien af AzureRMSLicensingEnabled til $True at aktivere OME.
+     Du får vist værdien $True for parameteren AzureRMSLicensingEnabled, som angiver, at Microsoft Purview Message Encryption er konfigureret i din lejer. Hvis det ikke er muligt, skal du bruge Set-IRMConfiguration til at angive værdien af AzureRMSLicensingEnabled til $True for at aktivere Microsoft Purview Message Encryption.
 
-3. Kør cmdletten Test-IRMConfiguration ved hjælp af følgende syntaks:
+3. Kør Test-IRMConfiguration-cmdlet'en ved hjælp af følgende syntaks:
 
    ```powershell
    Test-IRMConfiguration [-Sender <email address> -Recipient <email address>]
@@ -87,7 +89,7 @@ Du kan kontrollere, at Microsoft 365 lejer er konfigureret korrekt til at bruge 
 
    - Til afsender og modtager skal du bruge mailadressen på alle brugere i din Microsoft 365 lejer.
 
-     Resultaterne bør ligne følgende:
+     Dine resultater skal ligne:
 
      ```console
      Results : Acquiring RMS Templates ...
@@ -103,34 +105,42 @@ Du kan kontrollere, at Microsoft 365 lejer er konfigureret korrekt til at bruge 
             OVERALL RESULT: PASS
      ```
 
-   - Organisationens navn vil erstatte *Contoso*.
+   - Navnet på din organisation erstatter *Contoso*.
 
-   - Standardskabelonnavnene kan være forskellige fra dem, der vises ovenfor. Se [Konfiguration og administration af skabeloner til Azure Information Protection for at](/azure/information-protection/configure-policy-templates) få mere at vide.
+   - Standardskabelonnavnene kan være forskellige fra dem, der vises ovenfor. Se [Konfiguration og administration af skabeloner til Azure Information Protection](/azure/information-protection/configure-policy-templates) for at få mere at vide.
 
-4. Kør cmdletten Remove-PSSession at afbryde forbindelsen til Rights Management-tjenesten.
+4. Hvis testen mislykkes med en fejlmeddelelse **, der ikke kunne hente RMS-skabeloner**, skal du udføre følgende kommandoer og køre Test-IRMConfiguration-cmdlet'en for at kontrollere, at den består.
+
+   ```powershell
+   $RMSConfig = Get-AadrmConfiguration
+   $LicenseUri = $RMSConfig.LicensingIntranetDistributionPointUrl
+   Set-IRMConfiguration -LicensingLocation $LicenseUri
+   Set-IRMConfiguration -InternalLicensingEnabled $true
+   ```
+5. Kør Remove-PSSession-cmdlet'en for at afbryde forbindelsen til Rights Management-tjenesten.
 
      ```powershell
      Remove-PSSession $session
      ```
 
-## <a name="next-steps-define-mail-flow-rules-to-use-new-ome-capabilities"></a>Næste trin: Definere regler for mailflow for at bruge nye OME-funktioner
+## <a name="next-steps-define-mail-flow-rules-to-use-microsoft-purview-message-encryption"></a>Næste trin: Definer regler for mailflow for at bruge Microsoft Purview Message Encryption
 
-Hvis der tidligere er konfigureret regler for mailflow for at kryptere mail i din organisation, skal du opdatere de eksisterende regler for at bruge de nye OME-funktioner. Ved nye installationer skal du oprette nye regler for mailflow.
+Hvis der tidligere er konfigureret regler for mailflow til kryptering af mail i din organisation, skal du opdatere de eksisterende regler for at bruge Microsoft Purview Message Encryption. I forbindelse med nye udrulninger skal du oprette nye regler for mailflow.
 
 > [!IMPORTANT]
-> Hvis du ikke opdaterer eksisterende regler for mailflow, vil brugerne fortsat modtage krypterede mails, der bruger det tidligere HTML-format til vedhæftede filer, i stedet for den nye problemfri OME-oplevelse.
+> Hvis du ikke opdaterer eksisterende regler for mailflow, modtager brugerne fortsat krypterede mails, der bruger det tidligere format for vedhæftede HTML-filer, i stedet for den nye problemfrie oplevelse.
 
-Regler for mailflow bestemmer under hvilke betingelser mails skal krypteres samt betingelser for fjernelse af denne kryptering. Når du angiver en handling for en regel, krypteres meddelelser, der opfylder regelbetingelserne, når de sendes.
+Regler for mailflow bestemmer, under hvilke betingelser mails skal krypteres, samt betingelser for fjernelse af denne kryptering. Når du angiver en handling for en regel, krypteres alle meddelelser, der opfylder regelbetingelserne, når de sendes.
 
-Hvis du vil have en vejledning til oprettelse af regler for mailflow for OME, skal du se Definere regler for mailflow [for at kryptere mails Office 365](define-mail-flow-rules-to-encrypt-email.md).
+Du kan finde trin til oprettelse af meddelelseskryptering af regler for mailflow under [Definer regler for mailflow for at kryptere mails i Office 365](define-mail-flow-rules-to-encrypt-email.md).
 
-Sådan opdaterer du eksisterende regler for at bruge de nye OME-funktioner:
+Sådan opdaterer du eksisterende regler for at bruge Microsoft Purview Message Encryption:
 
-1. I Microsoft 365 Administration skal du gå **til Exchange** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank"></a>
+1. I Microsoft 365 Administration skal du gå til **Administrationscentre** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange**</a>.
 2. I Exchange Administration skal du gå til **Mailflow > Regler**.
-3. Gør følgende for **hver regel**:
-    - Vælg **Rediger meddelelsens sikkerhed**.
-    - Vælg **Anvend Office 365-meddelelseskryptering og rettighedsbeskyttelse**.
+3. For hver regel skal **du gøre følgende**:
+    - Vælg **Rediger meddelelsessikkerheden**.
+    - Vælg **Anvend Office 365 Meddelelsekryptering og rettighedsbeskyttelse**.
     - Vælg en RMS-skabelon på listen.
     - Vælg **Gem**.
     - Vælg **OK**.

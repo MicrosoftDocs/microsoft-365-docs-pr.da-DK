@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Administratorer kan konfigurere en dataconnector til at importere data fra organisationens fysiske badgingsystem til Microsoft 365. Dette giver dig mulighed for at bruge disse data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere adgang til dine fysiske bygninger af bestemte brugere, der kan indikere en mulig intern trussel mod din organisation.
-ms.openlocfilehash: 96017d6477f914c799fecbe834abdac22917bfaa
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 41fd7f1214b231668b56e9326055ad736dcd387e
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077956"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044010"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Konfigurer en connector for at importere data om dårlig fysisk skrivning (eksempelvisning)
 
@@ -55,11 +55,11 @@ Konfiguration af en fysisk dårlig connector består af følgende opgaver:
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>Trin 1: Opret en app i Azure Active Directory
 
-Det første trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den fysiske badging-connector, du opretter i trin 3. Når du opretter denne app, kan Azure AD godkende pushanmodningen for JSON-nyttedata, der indeholder fysiske badgingdata. Under oprettelsen af denne Azure AD-app skal du gemme følgende oplysninger. Disse værdier bruges i senere trin.
+Det første trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den fysiske badging-connector, du opretter i trin 3. Når du opretter denne app, kan Azure AD godkende pushanmodningen for JSON-nyttedata, der indeholder fysiske badgingdata. Under oprettelsen af denne Azure AD app skal du gemme følgende oplysninger. Disse værdier bruges i senere trin.
 
-- Azure AD-program-id (også kaldet *app-id* eller *klient-id*)
+- Azure AD program-id (også kaldet *app-id* eller *klient-id*)
 
-- Azure AD-programhemmelighed (også kaldet *klienthemmeligheden*)
+- Azure AD programhemmelighed (også kaldet *klienthemmeligheden*)
 
 - Lejer-id (også kaldet *mappe-id*)
 
@@ -73,7 +73,7 @@ JSON-filen skal overholde den skemadefinition, der kræves af connectoren. Her e
 
 |Ejendom|Beskrivelse|Datatype|
 |---|---|---|
-|Userid|En medarbejder kan have flere digitale identiteter på tværs af systemerne. Inputtet skal have Azure AD-id'et allerede løst af kildesystemet.|UPN eller mailadresse|
+|Userid|En medarbejder kan have flere digitale identiteter på tværs af systemerne. Inputtet skal have det Azure AD id, der allerede er løst af kildesystemet.|UPN eller mailadresse|
 |Aktiv-id|Reference-id'et for det fysiske aktiv eller det fysiske adgangspunkt.|Alfanumerisk streng|
 |Aktivnavn|Det fulde navn på det fysiske aktiv eller det fysiske adgangspunkt.|Alfanumerisk streng|
 |EventTime|Tidsstemplet for adgang.|Dato og klokkeslæt i UTC-format|
@@ -150,7 +150,7 @@ Det næste trin er at oprette en fysisk badging-connector på overholdelsesporta
 
 4. Gør følgende på siden **Legitimationsoplysninger til godkendelse** , og klik derefter på **Næste**:
 
-   1. Skriv eller indsæt Azure AD-program-id'et for den Azure-app, du oprettede i trin 1.
+   1. Skriv eller indsæt Azure AD program-id for den Azure-app, du oprettede i trin 1.
 
    2. Download eksempelskemaet for din reference for at oprette JSON-filen.
 
@@ -199,9 +199,9 @@ Når du har kørt scriptet, sendes den JSON-fil, der indeholder de fysiske badgi
 
    |Parameter|Beskrivelse|
    |---|---|
-   |tenantId|Dette er id'et for din Microsoft 365 organisation, som du fik i trin 1. Du kan også hente tenantId for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
-   |Appid|Dette er Azure AD-program-id'et for den app, du oprettede i Azure AD i trin 1. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365 organisation.|
-   |appSecret|Dette er Azure AD-programhemmeligheden for den app, du oprettede i Azure AD i trin 1. Dette bruges også til godkendelse.|
+   |tenantId|Dette er id'et for din Microsoft 365 organisation, som du fik i trin 1. Du kan også hente lejer-id'et for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
+   |Appid|Dette er det Azure AD program-id for den app, du oprettede i Azure AD i trin 1. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365 organisation.|
+   |appSecret|Dette er Azure AD programhemmeligheden for den app, du oprettede i Azure AD i trin 1. Dette bruges også til godkendelse.|
    |job-id|Dette er job-id'et for den fysiske dårligging-connector, som du oprettede i trin 3. Dette bruges til at knytte de fysiske badging-data, der pushes til Microsoft-cloudmiljøet, med den fysiske badging-connector.|
    |JsonFilePath|Dette er filstien på den lokale computer (den, du bruger til at køre scriptet) for den JSON-fil, du oprettede i trin 2. Denne fil skal følge det eksempelskema, der er beskrevet i trin 3.|
    |||
@@ -233,7 +233,7 @@ Når du har oprettet den fysiske dårligging-connector og pushoverføre dine fys
 
    ![Logfilen for den fysiske badgingforbindelse viser antallet af objekter fra den JSON-fil, der blev overført.](..\media\PhysicalBadgingConnectorLogFile.png)
 
-   Feltet **RecordsSaved** angiver antallet af objekter i den JSON-fil, der blev overført. Hvis JSON-filen f.eks. indeholder fire objekter, er værdien af felterne **RecordsSaved** 4, hvis scriptet overførte alle objekterne i JSON-filen.
+   Feltet **RecordsSaved** angiver antallet af poster i den JSON-fil, der blev overført. Hvis JSON-filen f.eks. indeholder fire poster, er værdien af felterne **RecordsSaved** 4, hvis scriptet overførte alle posterne i JSON-filen. Feltet **RecordsSkipped** angiver antallet af poster i JSON-filen, der blev sprunget over. Før du uploader poster i JSON-filen, valideres posternes mail-id'er. Alle poster med et ugyldigt mail-id springes over, og det tilsvarende mail-id vises i feltet **EmailIdsNotSaved**
 
 Hvis du ikke har kørt scriptet i trin 4, vises der et link til download af scriptet under **Seneste import**. Du kan downloade scriptet og derefter følge trinnene i Trin 4 for at køre det.
 

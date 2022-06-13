@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 516b74eb8d1e62194718e0ad3234b3269e07fb83
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: ec3002a30e9b5f20636a272574dcc3d6d00e4389
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731367"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044404"
 ---
 # <a name="devicelogonevents"></a>DeviceLogonEvents
 
@@ -58,14 +58,14 @@ Du kan finde oplysninger om andre tabeller i det avancerede jagtskema [i referen
 | `IsLocalAdmin` | `boolean` | Boolesk indikator for, om brugeren er en lokal administrator på computeren |
 | `LogonId` | `string` | Id for en logonsession. Dette id er kun entydigt på den samme computer mellem genstart |
 | `RemoteDeviceName` | `string` | Navnet på den computer, der udførte en fjernhandling på den pågældende computer. Afhængigt af den hændelse, der rapporteres, kan dette navn være et fuldt kvalificeret domænenavn (FQDN), et NetBIOS-navn eller et værtsnavn uden domæneoplysninger |
-| `RemoteIP` | `string` | IP-adresse, der blev oprettet forbindelse til |
+| `RemoteIP` | `string` | IP-adressen på den enhed, som logonforsøget blev udført fra |
 | `RemoteIPType` | `string` | IP-adressetype, f.eks. offentlig, privat, reserveret, tilbagekobling, Teredo, FourToSixMapping og broadcast |
 | `RemotePort` | `int` | TCP-port på den eksterne enhed, der blev tilsluttet |
 | `InitiatingProcessAccountDomain` | `string` | Domænet for den konto, der kørte processen, som er ansvarlig for hændelsen |
 | `InitiatingProcessAccountName` | `string` | Brugernavnet på den konto, der kørte den proces, der er ansvarlig for hændelsen |
 | `InitiatingProcessAccountSid` | `string` | Sikkerheds-id (SID) for den konto, der kørte processen, der er ansvarlig for hændelsen |
 | `InitiatingProcessAccountUpn` | `string` | Brugerens hovednavn (UPN) for den konto, der kørte den proces, der er ansvarlig for hændelsen |
-| ` InitiatingProcessAccountObjectId` | `string` | Azure AD-objekt-id for den brugerkonto, der kørte processen, der er ansvarlig for hændelsen |
+| ` InitiatingProcessAccountObjectId` | `string` | Azure AD objekt-id for den brugerkonto, der kørte den proces, der er ansvarlig for hændelsen |
 | `InitiatingProcessIntegrityLevel` | `string` | Integritetsniveau for den proces, der startede hændelsen. Windows tildeler integritetsniveauer til processer baseret på visse egenskaber, f.eks. hvis de blev startet fra en download på internettet. Disse integritetsniveauer påvirker tilladelser til ressourcer |
 | `InitiatingProcessTokenElevation` | `string` | Tokentype, der angiver tilstedeværelsen eller fraværet af udvidede rettigheder for Bruger Access Control (UAC) for den proces, der startede hændelsen |
 | `InitiatingProcessSHA1` | `string` | SHA-1 for den proces (billedfil), der startede hændelsen |

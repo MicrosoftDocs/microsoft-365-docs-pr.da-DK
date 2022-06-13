@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: b4527d49-4073-4b43-8274-31b7a3166f92
 description: Find ud af, om din lejer og dine brugere opfylder kravene, så du kan bruge Central installation til at udrulle Office tilføjelsesprogrammer.
-ms.openlocfilehash: 4d135e76034880e1419e296f2c201536be98b4bc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3b6517724a89572f971710b8c455866ac44f587e
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093762"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043302"
 ---
 # <a name="determine-if-centralized-deployment-of-add-ins-works-for-your-organization"></a>Find ud af, om central installation af tilføjelsesprogrammer fungerer for din organisation
 
@@ -123,6 +123,8 @@ Når værktøjet er færdigt, opretter det en outputfil i kommasepareret (.csv)-
 - Office plan – Planen for Office, de er licenseret til
 - Office aktiveret – Hvis de har aktiveret Office
 - Understøttet postkasse – Hvis de er i en OAuth-aktiveret postkasse
+
+Hvis dine Microsoft 365 rapporter viser anonyme brugernavne i stedet for faktiske brugernavne, kan du løse problemet ved at ændre indstillingen for rapporter i Microsoft 365 Administration. Du kan finde detaljerede trin under [Microsoft 365 rapporter viser anonyme brugernavne i stedet for faktiske brugernavne](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
 
 > [!NOTE]
 > Multifactor-godkendelse understøttes ikke, når powershell-modulet til central installation bruges. Modulet fungerer kun sammen med basisgodkendelse.

@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 testværktøj til netværksforbindelse
-ms.openlocfilehash: 047a1ad10efa20f2c47491a20855a92bf141eb15
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: ac2ec12ac0da2309e1d5ac0c35bbd0462cc68a62
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705575"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043703"
 ---
 # <a name="microsoft-365-network-connectivity-test-tool"></a>Microsoft 365 testværktøj til netværksforbindelse
 
@@ -261,10 +261,17 @@ Du kan køre den ved at dobbeltklikke på den eksekverbare fil i Windows Stifind
 
 Første gang du starter den eksekverbare fil, bliver du bedt om at acceptere slutbrugerlicensaftalen, før der udføres test. Hvis du allerede har læst og accepteret slutbrugerlicensaftalen, kan du oprette en tom fil med navnet Microsoft-365-Network-Connectivity-Test-EULA-accepted.txt i den aktuelle arbejdsmappe for den eksekverbare proces, når den startes. Hvis du vil acceptere slutbrugerlicensaftalen, kan du skrive 'y' og trykke på Enter i kommandolinjevinduet, når du bliver bedt om det.
 
-Den eksekverbare fil accepterer kommandolinjeparameteren /h for at få vist et link til denne Hjælp-dokumentation.
+Den eksekverbare fil accepterer følgende kommandolinjeparametre:
+- -h for at få vist et link til denne Hjælp-dokumentation
+- -test på testliste &lt;&gt; Angiver de test, der skal køres. Som standard køres der kun grundlæggende test. Gyldige testnavne omfatter: all, dnsConnectivityPerf, dnsResolverIdentification, bufferBloat, traceroute, proxy, vpn, skype, connectivity, networkInterface
+- -filepath &lt;filedir&gt; Mappesti til testresultatfiler. Den tilladte værdi er absolut eller relativ sti til en tilgængelig mappe
+- -by &lt;For&gt; felterne By, Stat og Land bruges den angivne værdi, hvis den er angivet. Hvis den ikke leveres, sendes der en forespørgsel til Windows Location Services (WLS). Hvis WLS mislykkes, registreres placeringen fra computerens netværks udgang 
+- -tilstandstilstand &lt;&gt;
+- -land &lt;&gt; 
+- -proxykonto &lt;&gt; &lt;adgangskode&gt; Proxykontonavn og adgangskode kan angives, hvis du har brug for en proxy for at få adgang til internettet
 
 ### <a name="results"></a>Resultater
-Output af resultater skrives til en JSON-fil i en mappe med navnet TestResults, som oprettes i den aktuelle arbejdsmappe for processen, medmindre den allerede findes. Filformatet for outputtet er connectivity_test_result_YYYY-MM-DD-HH-MM-SS.json. Resultaterne er i JSON-noder, der svarer til det output, der vises på websiden for Microsoft 365 testværktøjet til netværksforbindelse. Der oprettes en ny resultatfil, hver gang du kører den, og den separate eksekverbare fil overfører ikke resultater til din Microsoft-lejer til visning på siderne til Netværksforbindelse i Administration.
+Output af resultater skrives til en JSON-fil i en mappe med navnet TestResults, som oprettes i den aktuelle arbejdsmappe for processen, medmindre den allerede findes. Filformatet for outputtet er connectivity_test_result_YYYY-MM-DD-HH-MM-SS.json. Resultaterne er i JSON-noder, der svarer til det output, der vises på websiden for Microsoft 365 testværktøjet til netværksforbindelse. Der oprettes en ny resultatfil, hver gang du kører den, og den separate eksekverbare fil overfører ikke resultater til din Microsoft-lejer til visning på siderne til Netværksforbindelse i Administration. Front door codes, longitudes og latitudes er ikke inkluderet i resultatfilen.
 
 ### <a name="launching-from-windows-file-explorer"></a>Starter fra Windows Stifinder
 Du kan blot dobbeltklikke på den eksekverbare fil for at starte testen, hvorefter der vises et kommandopromptvindue.

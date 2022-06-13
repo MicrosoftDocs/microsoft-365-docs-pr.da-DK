@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 3670d4c1c55cbaaab739a8de2df359f06b53ae80
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 99bfcd9003d55ced96364f033080992fa4447188
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842381"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042927"
 ---
-# <a name="protect-your-c-suite-with-priority-account-protection"></a>Beskyt din c-suite med prioriteret kontobeskyttelse
+# <a name="protect-your-c-suite-with-priority-account-protection"></a>Beskyt din c-suite med prioritetskontobeskyttelse
 
 Prioritetskontobeskyttelse hjælper it- og sikkerhedsteams med at sikre en høj kvalitet af service og beskyttelse for de kritiske personer i din organisation. Hvis du mærker en konto som en prioriteret konto, kan du opnå den ekstra beskyttelse, der er tilpasset mønstrene for mailflowet, som er målrettet virksomhedens direktører, sammen med ekstra synlighed i rapporter, beskeder og undersøgelser.
 
@@ -49,7 +49,7 @@ Hvis du vil vide mere om, hvilke prioritetskontotags der er, skal du se [Adminis
 [Gennemse den differentierede beskyttelse for brugere, der er mærket som prioritetskonti](../../office-365-security/configure-review-priority-account.md).
 
 ## <a name="powershell-configuration"></a>PowerShell-konfiguration
-Hvis du vil udføre disse trin via PowerShell, kan du gøre dette ved hjælp af følgende cmdlet'er:
+Hvis du vil udføre disse trin via [PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), kan du gøre dette ved hjælp af følgende cmdlet'er:
 1. Få vist en liste over prioritetskonti: **Hent bruger -IsVIP | vælg Identitet**
 1. Føj bruger til listen over prioritetskonti: **Set-User -VIP:$true -Identity \<Identity\>**
 1. Fjern brugeren fra listen over prioritetskonti: **Set-User -VIP:$false -Identity \<Identity\>**

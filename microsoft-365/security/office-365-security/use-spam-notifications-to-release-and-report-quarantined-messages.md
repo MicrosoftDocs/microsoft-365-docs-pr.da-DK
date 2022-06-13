@@ -21,16 +21,16 @@ ms.custom:
 description: Administratorer kan få mere at vide om meddelelser om spam fra slutbrugere for karantænemeddelelser i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c1688e4a56787c9593aae7006a05d52b16558647
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: 44ed83a95fe8f588369f0a1bbae4809f32581f87
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393474"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043474"
 ---
 # <a name="use-quarantine-notifications-to-release-and-report-quarantined-messages"></a>Brug karantænemeddelelser til at frigive og rapportere karantænemeddelelser
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -52,7 +52,9 @@ I forbindelse med delte postkasser understøttes karantænemeddelelser kun for b
 > [!NOTE]
 > Meddelelser, der er sat i karantæne som phishing med høj sikkerhed, malware, efter regler for mailflow (også kendt som transportregler) eller Pengeskab Vedhæftede filer-politikker i Defender for Office 365 er som standard kun tilgængelige for administratorer (som standard bruges karantænepolitikken for AdminOnlyAccessPolicy). Du kan få flere oplysninger under [Administrer karantænerede meddelelser og filer som administrator i EOP](manage-quarantined-messages-and-files.md).
 >
-> I øjeblikket understøttes karantænemeddelelser ikke for grupper.
+> Meddelelser om karantæne for meddelelser, der sendes til distributionsgrupper eller mailaktiverede sikkerhedsgrupper, sendes til alle gruppemedlemmer.
+>
+> Karantænemeddelelser for meddelelser, der sendes til Microsoft 365-grupper sendes kun til alle gruppemedlemmer, hvis indstillingen **Send kopier af gruppesamtaler og -begivenheder til gruppemedlemmer** er slået til.
 
 Når du modtager en karantænemeddelelse, er følgende oplysninger altid tilgængelige for hver karantænemeddelelse:
 

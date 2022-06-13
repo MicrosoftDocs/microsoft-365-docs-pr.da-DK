@@ -20,12 +20,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview indeholder tre eDiscovery-værktøjer, som du kan bruge til at søge efter og eksportere indhold, der findes på forskellige placeringer, f.eks. Exchange postkasser, SharePoint og OneDrive for Business websteder, Microsoft 365-grupper, Microsoft Teams og Skype for Business samtaler. eDiscovery (Standard) og eDiscovery (Premium) indeholder mange ekstra funktioner, der kan hjælpe dig med at administrere dine undersøgelser.
-ms.openlocfilehash: f5660b8a31cad45b110e6e32450dc03b75d5f533
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9262f2773d17f19bd5adaea3eed9e747e343e625
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095856"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043387"
 ---
 # <a name="microsoft-purview-ediscovery-solutions"></a>Microsoft Purview eDiscovery-løsninger
 
@@ -145,6 +145,8 @@ I følgende afsnit vises minimumkravene til abonnementer for indholdssøgning, e
 
 ### <a name="ediscovery-standard"></a>eDiscovery (Standard)
 
+- Exchange online plan 2
+- SharePoint Online Plan 2
 - Microsoft 365 E3 abonnement
 - Microsoft 365 G3 abonnement
 - Microsoft 365 Business Premium abonnement

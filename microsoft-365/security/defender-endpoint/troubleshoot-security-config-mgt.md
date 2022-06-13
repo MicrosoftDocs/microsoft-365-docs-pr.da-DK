@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: troubleshooting
 ms.technology: mde
-ms.openlocfilehash: 4f309c98b7278dbeb062deacf49553b7e73f58da
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: fbfb20b233f1f942faaddd2a235a55beeb48d2c6
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873782"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043116"
 ---
 # <a name="troubleshoot-onboarding-issues-related-to-security-management-for-microsoft-defender-for-endpoint"></a>Foretag fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration for Microsoft Defender for Endpoint
 
@@ -75,16 +75,17 @@ Hvis du vil registrere enheder til Azure Active Directory, skal du sikre dig fø
 
 Via Microsoft Defender for Endpoint-portalen kan sikkerhedsadministratorer nu foretage fejlfinding af sikkerhedsadministration for Microsoft Defender for Endpoint onboarding.
 
-I **Enhedslager for slutpunkter** \> er kolonnen **Administreret af** føjet til filter efter administrationskanal (f.eks. MEM).
+I **Konfigurationsstyring** er **Onboarded via MDE-widgetten Til administration af sikkerhed** blevet tilføjet for at vise en oversigt over tilmeldingsstatus for Microsoft Defender for Endpoint-administrerede enheder.
 
-:::image type="content" source="./images/device-inventory-mde-error.png" alt-text="Enhedens lagerside" lightbox="./images/device-inventory-mde-error.png":::
+Hvis du vil se en liste over alle enheder, der administreres af Microsoft Defender for Endpoint, skal du vælge **Få vist alle enheder, der administreres af MDE**.
 
-Hvis du vil se en liste over alle de enheder, der ikke har udført sikkerhedsadministrationen for Microsoft Defender for Endpoint onboardingproces, skal du filtrere tabellen efter **MDE-Error**.
-
-Vælg en bestemt enhed på listen for at få vist fejlfindingsdetaljer i sidepanelet, der peger på den underliggende årsag til fejlen og den tilsvarende dokumentation.
+Hvis en enheds tilmeldingsstatus ikke er "Udført" på listen, skal du vælge enheden for at få vist fejlfindingsdetaljer i sidepanelet, der peger på den egentlige årsag til fejlen og den tilsvarende dokumentation.
 
 
 :::image type="content" source="./images/secconfig-mde-error.png" alt-text="De filterkriterier, der anvendes på enhedens lagerside" lightbox="./images/secconfig-mde-error.png":::
+
+> [!NOTE] 
+> Vi er opmærksomme på et problem, der påvirker den nøjagtige registrering af mdm'er fra tredjepart, når vi forsøger at bruge sikkerhedsadministrationsfunktionen, og arbejder på en rettelse. 
 
 ## <a name="run-microsoft-defender-for-endpoint-client-analyzer-on-windows"></a>Kør Microsoft Defender for Endpoint klientanalyse på Windows
 
@@ -121,7 +122,7 @@ I følgende tabel vises en liste over fejl og retninger for, hvad du skal prøve
 |Fejlkode|Status for tilmelding|Administratorhandlinger|
 |---|---|---|
 |`5-7`, `9`, `11-12`, `26-33`|Generel fejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration. Dette kan skyldes, at enheden ikke opfylder [forudsætningerne for Microsoft Defender for Endpoint administrationskanal](security-config-management.md). Kørsel af [klientanalysen](https://aka.ms/BetaMDEAnalyzer) på enheden kan hjælpe med at identificere rodårsagen til problemet. Hvis dette ikke hjælper, skal du kontakte support.|
-| `8`, `44` | Microsoft Endpoint Manager konfigurationsproblem | Enheden blev onboardet til Microsoft Defender for Endpoint. Microsoft Endpoint Manager er dog ikke konfigureret via Administration Center for at tillade Microsoft Defender for Endpoint sikkerhedskonfiguration. Sørg for, at den [Microsoft Endpoint Manager lejer er konfigureret, og at funktionen er slået til](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management).|
+| `8`, `44` | Microsoft Endpoint Manager konfigurationsproblem | Enheden blev onboardet til Microsoft Defender for Endpoint. Microsoft Endpoint Manager er dog ikke konfigureret via Administration for at tillade Microsoft Defender for Endpoint sikkerhedskonfiguration. Sørg for, at den [Microsoft Endpoint Manager lejer er konfigureret, og at funktionen er slået til](/mem/intune/protect/mde-security-integration#configure-your-tenant-to-support-microsoft-defender-for-endpoint-security-configuration-management).|
 |`13-14`,`20`,`24`,`25`|Forbindelsesproblem|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, som kan skyldes et forbindelsesproblem. Kontrollér, at [slutpunkterne Azure Active Directory og Microsoft Endpoint Manager](security-config-management.md#connectivity-requirements) er åbnet i firewallen.|
 |`10`,`42`|Generel hybridjoinforbindelsesfejl|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, og operativsystemet kunne ikke udføre hybridjoinforbindelse. Brug [Foretag fejlfinding af hybride Azure Active Directory-joinforbundne enheder](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) til fejlfinding af fejl i hybridjoinforbindelse på OS-niveau.|
 |`15`|Lejeruoverensstemmelse|Enheden blev onboardet til Microsoft Defender for Endpoint. Der opstod dog en fejl i flowet til administration af sikkerhedskonfiguration, fordi dit Microsoft Defender for Endpoint lejer-id ikke stemmer overens med dit Azure Active Directory lejer-id. Sørg for, at det Azure Active Directory lejer-id fra din Defender for Endpoint-lejer stemmer overens med lejer-id'et i SCP-posten for dit domæne. Du kan finde flere oplysninger [ved at foretage fejlfinding af onboardingproblemer, der er relateret til sikkerhedsadministration for Microsoft Defender for Endpoint](troubleshoot-security-config-mgt.md).|

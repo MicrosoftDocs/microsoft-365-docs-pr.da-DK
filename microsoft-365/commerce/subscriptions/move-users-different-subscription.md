@@ -20,16 +20,16 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvordan du flytter brugere mellem abonnementer.
 ms.date: 05/12/2022
-ms.openlocfilehash: b790b708ba9095b40ab9f79a27f531a5267c9c08
-ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
+ms.openlocfilehash: 06d9c6f2ef76ed317705c1e519822db3a8706062
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65403288"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044317"
 ---
 # <a name="move-users-to-a-different-subscription"></a>Flyt brugere til et andet abonnement
 
-Hvis du har mere end ét abonnement, har brugere med en licens til ét abonnement, men vil flytte dem til et andet abonnement, kan du erstatte deres eksisterende licens med en anden.
+Hvis du har mere end ét produkt, har brugere med en licens til ét produkt, men vil flytte dem til et andet produkt, kan du erstatte deres eksisterende licens med en anden.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -49,7 +49,7 @@ Du skal være global administrator, licensadministrator eller brugeradministrato
 
 ::: moniker-end
 
-2. Vælg cirklerne ud for navnene på de brugere, du vil erstatte eksisterende licenser for.
+2. Markér afkrydsningsfelterne ud for navnene på de brugere, du vil erstatte eksisterende licenser for.
 
 3. Øverst skal du vælge **Administrer produktlicenser**.
 

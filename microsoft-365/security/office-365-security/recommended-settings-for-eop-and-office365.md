@@ -19,16 +19,16 @@ ms.collection:
 description: Hvad er bedste praksis for Exchange Online Protection (EOP) og Defender for Office 365 sikkerhedsindstillinger? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal bruges, hvis du vil være mere streng? Og hvad ekstra får du, hvis du også bruger Defender for Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 921523ea3c1d73dc83c148cc2e61aab416ed9302
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: bd30be87a277d271fece74a9700a60992a562399
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599293"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043020"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -208,10 +208,10 @@ Du kan få flere oplysninger om disse indstillinger [under Repræsentationsindst
 |Navn på sikkerhedsfunktion|Standard|Standard|Strenge|Kommenter|
 |---|:---:|:---:|:---:|---|
 |**Tærskel for phishing & beskyttelse**|||||
-|**Giv brugerne mulighed for at beskytte** (repræsenteret brugerbeskyttelse) <br/><br/> _EnableTargetedUserProtection_ <br/><br/> _TargetedUsersToProtect_|Ikke markeret <br/><br/> `$false` <br/><br/> Ingen|Valgte <br/><br/> `$true` <br/><br/> \<list of users\>|Valgte <br/><br/> `$true` <br/><br/> \<list of users\>|Vi anbefaler, at du tilføjer brugere (afsendere af meddelelser) i nøgleroller. Internt kan beskyttede afsendere være din administrerende direktør, økonomidirektør og andre overordnede ledere. Eksterne, beskyttede afsendere kan omfatte rådsmedlemmer eller din bestyrelse. <br/><br/> I forudindstillede sikkerhedspolitikker kan du ikke angive de brugere, der skal beskyttes. Du skal deaktivere de forudindstillede sikkerhedspolitikker og bruge brugerdefinerede anti-phishing-politikker til at tilføje brugere i nøgleroller som foreslået.|
+|**Giv brugerne mulighed for at beskytte** (repræsenteret brugerbeskyttelse) <br/><br/> _EnableTargetedUserProtection_ <br/><br/> _TargetedUsersToProtect_|Ikke markeret <br/><br/> `$false` <br/><br/> Ingen|Valgte <br/><br/> `$true` <br/><br/> \<list of users\>|Valgte <br/><br/> `$true` <br/><br/> \<list of users\>|Vi anbefaler, at du tilføjer brugere (afsendere af meddelelser) i nøgleroller. Internt kan beskyttede afsendere være din administrerende direktør, økonomidirektør og andre overordnede ledere. Eksterne, beskyttede afsendere kan omfatte rådsmedlemmer eller din bestyrelse.|
 |**Aktivér domæner for at beskytte** (repræsenteret domænebeskyttelse)|Ikke markeret|Valgte|Valgte||
 |**Medtag domæner, jeg ejer** <br/><br/> _EnableOrganizationDomainsProtection_|Ud <br/><br/> `$false`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`||
-|**Medtag brugerdefinerede domæner** <br/><br/> _EnableTargetedDomainsProtection_ <br/><br/> _TargetedDomainsToProtect_|Ud <br/><br/> `$false` <br/><br/> Ingen|Valgte <br/><br/> `$true` <br/><br/> \<list of domains\>|Valgte <br/><br/> `$true` <br/><br/> \<list of domains\>|Vi anbefaler, at du tilføjer domæner (afsenderdomæner), som du ikke ejer, men som du ofte interagerer med. <br/><br/> I forudindstillede sikkerhedspolitikker kan du ikke angive de brugerdefinerede domæner, der skal beskyttes. Du skal deaktivere de forudindstillede sikkerhedspolitikker og bruge brugerdefinerede anti-phishing-politikker til at tilføje brugerdefinerede domæner for at beskytte som foreslået.|
+|**Medtag brugerdefinerede domæner** <br/><br/> _EnableTargetedDomainsProtection_ <br/><br/> _TargetedDomainsToProtect_|Ud <br/><br/> `$false` <br/><br/> Ingen|Valgte <br/><br/> `$true` <br/><br/> \<list of domains\>|Valgte <br/><br/> `$true` <br/><br/> \<list of domains\>|Vi anbefaler, at du tilføjer domæner (afsenderdomæner), som du ikke ejer, men som du ofte interagerer med.|
 |**Tilføj afsendere og domæner, der er tillid til** <br/><br/> _ExcludedSenders_ <br/><br/> _ExcludedDomains_|Ingen|Ingen|Ingen|Afhængigt af din organisation anbefaler vi, at du tilføjer afsendere eller domæner, der fejlagtigt identificeres som repræsentationsforsøg.|
 |**Aktivér postkasseintelligens** <br/><br/> _EnableMailboxIntelligence_|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`||
 |**Aktivér intelligens til repræsentationsbeskyttelse** <br/><br/> _EnableMailboxIntelligenceProtection_|Ud <br/><br/> `$false`|Valgte <br/><br/> `$true`|Valgte <br/><br/> `$true`|Denne indstilling tillader den angivne handling for repræsentationsregistreringer af mailbox intelligence.|

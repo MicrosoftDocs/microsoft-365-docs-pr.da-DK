@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 ms.assetid: 9fa2539a-2211-41fd-85a0-bc37b9619ca4
 description: Gør din organisation mere sikker mod adgangskodeangreb, og forbud mod almindelige adgangskoder, og aktivér risikobaseret multifaktorgodkendelse.
-ms.openlocfilehash: 006e537c2e2d77a19b27f1c2d537269d69d07c1e
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: bd33d98a33d136f06bfe8e7741bb14c79f0a6160
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469002"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043204"
 ---
 # <a name="password-policy-recommendations-for-microsoft-365-passwords"></a>Anbefalinger til adgangskodepolitik for Microsoft 365 adgangskoder
 
@@ -61,7 +61,7 @@ God praksis for adgangskoder kan opdeles i nogle få brede kategorier:
 
 Det primære mål med et mere sikkert adgangskodesystem er mangfoldighed af adgangskoder. Din adgangskodepolitik skal indeholde mange forskellige adgangskoder, som er svære at gætte. Her er nogle anbefalinger til, hvordan du holder din organisation så sikker som muligt.
   
-- Bevar et minimumlængdekrav på 8 tegn
+- Bevar et minimumlængdekrav på 14 tegn
 
 - Kræver ikke krav til tegnkomposition. F.eks. \*&amp;(^%$
 

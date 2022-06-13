@@ -16,18 +16,18 @@ search.appverid:
 - MET150
 ms.assetid: a8bdcbdd-9298-462f-b889-df26037a990c
 description: Aktivér arkivpostkassen, og aktivér automatisk udvidelse af arkivering for at øge størrelsen af mappen Gendanbare elementer for en postkasse i Microsoft 365.
-ms.openlocfilehash: bbeb72c6a055be42e06c450afccb35965d149dce
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: d426afffb1002e1187adafc794d5340d730cc7e7
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014988"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044132"
 ---
 # <a name="increase-the-recoverable-items-quota-for-mailboxes-on-hold"></a>Øg kvoten for genoprettelige elementer for fastfrosne postkasser
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Standardpolitikken Exchange opbevaring – med navnet *Standard-MRM-politik* – der automatisk anvendes på nye postkasser i Exchange Online indeholder en opbevaringskode med navnet Gendanbare elementer 14 dages flytning til arkiv. Dette opbevaringsmærke flytter elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i brugerens arkivpostkasse, når opbevaringsperioden på 14 dage udløber for et element. Hvis dette skal ske, skal brugerens arkivpostkasse være aktiveret. Hvis arkivpostkassen ikke er aktiveret, udføres der ingen handling, hvilket betyder, at elementer i mappen Gendanbare elementer for en postkasse, der er i venteposition, ikke flyttes til arkivpostkassen, når opbevaringsperioden på 14 dage udløber. Da intet slettes fra en postkasse i venteposition, er det muligt, at lagerkvoten for mappen Gendanbare elementer kan blive overskredet, især hvis brugerens arkivpostkasse ikke er aktiveret.
+Standardpolitikken Exchange opbevaring – med navnet *Standard-MRM-politik* – der automatisk anvendes på nye postkasser i Exchange Online indeholder en opbevaringskode med navnet Gendanbare elementer 14 dages flytning til arkiv. Dette opbevaringsmærke flytter elementer fra mappen Gendanbare elementer i brugerens primære postkasse til mappen Gendanbare elementer i brugerens arkivpostkasse, når opbevaringsperioden på 14 dage udløber for et element. Mails i mappen Sletninger bevares baseret på parameteren **RetainDeletedItemsFor** og flyttes til andre mapper i slettede elementer, der kan gendannes, og derefter til arkivpostkassen. Hvis dette skal ske, skal brugerens arkivpostkasse være aktiveret. Hvis arkivpostkassen ikke er aktiveret, udføres der ingen handling, hvilket betyder, at elementer i mappen Gendanbare elementer for en postkasse, der er i venteposition, ikke flyttes til arkivpostkassen, når opbevaringsperioden på 14 dage udløber. Da intet slettes fra en postkasse i venteposition, er det muligt, at lagerkvoten for mappen Gendanbare elementer kan blive overskredet, især hvis brugerens arkivpostkasse ikke er aktiveret.
 
 For at reducere risikoen for at overskride denne grænse øges lagerkvoten for mappen Gendanbare elementer automatisk fra 30 GB til 100 GB, når der sættes en venteposition på en postkasse i Exchange Online. Hvis arkivpostkassen er aktiveret, øges lagerkvoten for mappen Gendanbare elementer i arkivpostkassen også fra 30 GB til 100 GB. Hvis funktionen til automatisk udvidelse af arkivering i Exchange Online er aktiveret, er den samlede lagerkvote for brugerens arkivpostkasse, herunder mappen Genoprettelige elementer, 1,5 TB.
 

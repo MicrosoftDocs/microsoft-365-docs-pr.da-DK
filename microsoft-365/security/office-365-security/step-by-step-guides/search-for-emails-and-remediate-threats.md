@@ -15,21 +15,21 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 6bce250add79d4119f82730c05f3042f3e3dbafe
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: acc3f81c789722a460a43df56a3e2794855dad0c
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842382"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043516"
 ---
 # <a name="steps-to-use-manual-email-remediation-in-threat-explorer"></a>Trin til at bruge manuel mailafhjælpning i Threat Explorer
 
 Mailafhjælpning er en allerede eksisterende funktion, der hjælper administratorer med at reagere på mails, der er trusler.
 
 ## <a name="what-youll-need"></a>Det skal du bruge
-- Microsoft Defender for Office 365 plan 2
+- Microsoft Defender for Office 365 Plan 2 (inkluderet i E5-planer)
 - Tilstrækkelige tilladelser (sørg for at tildele kontoen rollen [Søg og Fjern](https://sip.security.microsoft.com/securitypermissions) )
 
 ## <a name="create-and-track-the-remediation"></a>Opret og spor afhjælpningen
@@ -38,8 +38,8 @@ Mailafhjælpning er en allerede eksisterende funktion, der hjælper administrato
 1. Sideruden åbnes og beder om oplysninger som f.eks. et navn på afhjælpningen, alvorsgraden og beskrivelsen. Når oplysningerne er gennemset, skal du trykke på **Send**.
 1. Så snart administratoren godkender denne handling, får vedkommende vist godkendelses-id'et og et link til Microsoft 365 Defender Løsningscenter [her](https://security.microsoft.com/action-center/history). På denne side **kan handlinger spores**.
 
-    1. **Administration handlingsbesked** – En systembesked vises i beskedkøen med navnet 'Administrativ handling sendt af en administrator'. Dette angiver, at en administrator har foretaget en afhjælpning af en enhed. Den indeholder oplysninger som f.eks. navnet på den administrator, der foretog handlingen, og linket til undersøgelsen og tid. Dette gør administratorer opmærksomme på hver vigtige handling, f.eks. afhjælpning, der udføres på enheder.
-    1. **Administration handlingsundersøgelse** – Da analysen på enheder allerede blev udført af administratoren, og det var det, der førte til den udførte handling, udføres der ingen yderligere analyse af systemet. Den viser detaljer som relateret besked, enhed, der er valgt til afhjælpning, udført handling, afhjælpningsstatus, antal enheder og godkender af handlingen. Dette gør det muligt for administratorer at holde styr på undersøgelsen og handlinger, der udføres *manuelt* – en undersøgelse af en administratorhandling.
+    1. **Administratorhandlingsbesked** – En systembesked vises i beskedkøen med navnet 'Administrativ handling sendt af en administrator'. Dette angiver, at en administrator har foretaget en afhjælpning af en enhed. Den indeholder oplysninger som f.eks. navnet på den administrator, der foretog handlingen, og linket til undersøgelsen og tid. Dette gør administratorer opmærksomme på hver vigtige handling, f.eks. afhjælpning, der udføres på enheder.
+    1. **Undersøgelse af administratorhandling** – Da analysen på enheder allerede blev udført af administratoren, og det er det, der førte til den udførte handling, udføres der ingen yderligere analyse af systemet. Den viser detaljer som relateret besked, enhed, der er valgt til afhjælpning, udført handling, afhjælpningsstatus, antal enheder og godkender af handlingen. Dette gør det muligt for administratorer at holde styr på undersøgelsen og handlinger, der udføres *manuelt* – en undersøgelse af en administratorhandling.
 1. **Handlingslogge i Unified Action Center** – Oversigts- og handlingslogge for mailhandlinger, f.eks. blød sletning og flytning til mappen slettede elementer, er *alle tilgængelige i en centraliseret visning* under **fanen Oversigt for** Samlet **Handlingscenter** > . 
 1. **Filtre i Unified Action Center** – Der er flere filtre, f.eks. afhjælpningsnavn, godkendelses-id, undersøgelses-id, status, handlingskilde og handlingstype. Disse er nyttige til at finde og spore mailhandlinger i Unified Action Center.
 

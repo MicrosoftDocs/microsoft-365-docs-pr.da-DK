@@ -15,21 +15,21 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: dcb40c0abd619291da2f05fdfa362c03f853181e
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 765eaffd2f57687c0ee16ace30aff97ddd91462c
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842448"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042159"
 ---
 # <a name="optimize-and-correct-security-policies-with-configuration-analyzer"></a>Optimer og ret sikkerhedspolitikker med konfigurationsanalyse
 
 Konfigurationsanalyse er en central placering og en enkelt glasrude til administration og visning af de mailsikkerhedspolitikker, du har konfigureret i din lejer. Du kan udføre en side-til-side-sammenligning af dine indstillinger med vores Anbefalede Standard- og Strict-indstillinger, anvende anbefalinger og få vist historiske ændringer, der påvirkede din arbejdsstilling.
 
 ## <a name="what-youll-need"></a>Det skal du bruge
-- Microsoft Defender for Office 365 Plan 1
+- Exchange Online Protection
 - Tilstrækkelige tilladelser (rolle som sikkerhedsadministrator)
 - 5 minutter til at udføre nedenstående trin.
 

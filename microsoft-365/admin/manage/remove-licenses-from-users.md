@@ -23,12 +23,12 @@ ms.custom:
 search.appverid: MET150
 description: Den metode, du bruger til at fjerne tildelingen af produktlicenser, afhænger af, om du fjerner tildelingen af licenser fra bestemte brugere eller fra et bestemt produkt.
 ms.date: 04/22/2022
-ms.openlocfilehash: 29d46ac745487328ecfe49bf658fdaa79fa346d9
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 23fc9ea04f45cdeb50acb0ec2d62d584974d6499
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465794"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043236"
 ---
 # <a name="unassign-microsoft-365-licenses-from-users"></a>Fjern tildeling af Microsoft 365 licenser fra brugere
 
@@ -112,13 +112,13 @@ Når du bruger siden **Aktive brugere** til at fjerne tildelingen af licenser, f
 
 3. Øverst skal du vælge **Administrer produktlicenser**.
 
-4. I ruden **Administrer produktlicenser** skal du vælge **Fjern tildeling** **af alleGem** >  ændringer.
+4. I ruden **Administrer produktlicenser** skal du vælge **Fjern tildeling af alle** > **gem ændringer**.
 
 5. Vælg **Udført** nederst i ruden.  
 
 ## <a name="what-happens-to-a-users-data-when-you-remove-their-license"></a>Hvad sker der med en brugers data, når du fjerner brugerens licens?
 
-- Når en licens fjernes fra en bruger, opbevares Exchange onlinedata, der er knyttet til den pågældende konto, i 30 dage. Efter den 30-dages respitperiode slettes dataene og kan ikke gendannes.
+- Når en licens fjernes fra en bruger, opbevares Exchange Online data, der er knyttet til den pågældende konto, i 30 dage. Efter den 30-dages respitperiode slettes dataene og kan ikke gendannes. Den er dog knyttet til opbevaringspolitikken, og det indhold, der svarer til opbevaringsmærkater, bevares til registrering.
 - Filer, der er gemt i OneDrive for Business, slettes ikke, medmindre brugeren slettes fra Microsoft 365 Administration eller fjernes via Active Directory-synkronisering. Du kan få flere oplysninger [under OneDrive opbevaring og sletning](/onedrive/retention-and-deletion).
 - Når licensen fjernes, kan der ikke længere søges i brugerens postkasse ved hjælp af et eDiscovery-værktøj, f.eks. indholdssøgning eller eDiscovery (Premium). Du kan finde flere oplysninger under "Søgning i fjernede postkasser eller postkasser med ikke-licenseret" i [Indholdssøgning i Microsoft 365](../../compliance/content-search.md).
 - Hvis du har et Enterprise-abonnement, f.eks. Office 365 Enterprise E3, kan du Exchange Online bevare postkassedataene for en slettet brugerkonto ved hjælp af [inaktive postkasser](../../compliance/inactive-mailboxes-in-office-365.md). Du kan få flere oplysninger under [Opret og administrer inaktive postkasser i Exchange Online](../../compliance/create-and-manage-inactive-mailboxes.md).

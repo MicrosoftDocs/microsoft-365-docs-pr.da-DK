@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: c1a6180aac7513b2c88904a4c8fb631ba6ffd542
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: 18127cd732c0e2e1392a9c62e221dadfbd123246
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842393"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043428"
 ---
 # <a name="prioritize-manage-investigate--respond-to-incidents-in-microsoft-365-defender"></a>Prioriter, Administrer, Undersøg & Svar på hændelser i Microsoft 365 Defender
 

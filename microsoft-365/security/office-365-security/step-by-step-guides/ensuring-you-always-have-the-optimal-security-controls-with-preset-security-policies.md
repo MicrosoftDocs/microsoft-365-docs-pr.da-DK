@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 029f3503c1b93b17efc9ec5a89f29a0c40a3703f
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: e768635d3bb804dbf586ce652203689942901e4f
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842447"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042950"
 ---
 # <a name="ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies"></a>Sikring af, at du altid har de optimale sikkerhedskontroller med forudindstillede sikkerhedspolitikker
 
@@ -31,7 +31,7 @@ Forudindstillede sikkerhedspolitikker giver dig mulighed for at vælge en sikker
 Når der tilføjes nye kontrolelementer, eller hvis indstillingen for bedste praksis for et sikkerhedskontrolelement ændres i takt med trusselsbilledet i udvikling, opdaterer Microsoft automatisk indstillingerne for sikkerhedskontrol for brugere, der er tildelt en standard- eller streng forudindstillet sikkerhedspolitik. Når du bruger forudindstillede politikker for sikkerhed, vil du altid have Microsofts anbefalede konfiguration af bedste praksis for dine brugere.
 
 ## <a name="what-you-will-need"></a>Det skal du bruge
-- Microsoft Defender for Office 365 Plan 1
+- Microsoft Defender for Office 365 Plan 1 eller nyere (inkluderet i E5)
 - Tilstrækkelige tilladelser (rolle som sikkerhedsadministrator)
 - 5 minutter til at udføre nedenstående trin.
 

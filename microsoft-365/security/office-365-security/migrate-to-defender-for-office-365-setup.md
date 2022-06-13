@@ -1,5 +1,5 @@
 ---
-title: 'Overfør Microsoft Defender for Office 365 Fase 2: Konfiguration'
+title: 'Overfør til Microsoft Defender for Office 365 fase 2: Installation'
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,192 +16,192 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: migrationguides
-description: Tag disse trin for at begynde overførslen fra en tredjepartsbeskyttelsestjeneste eller -enhed for at Microsoft Defender for Office 365 beskyttelse.
+description: Udfør trinnene for at begynde at overføre fra en beskyttelsestjeneste eller enhed fra tredjepart for at Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f4f6e1d557915fe40dc570cd58374371e0e9b6a3
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 34e975be9a937177706fd7db6605d2ef25edcad3
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64474921"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043539"
 ---
-# <a name="migrate-to-microsoft-defender-for-office-365---phase-2-setup"></a>Overfør til Microsoft Defender for Office 365 - Fase 2: Konfiguration
+# <a name="migrate-to-microsoft-defender-for-office-365---phase-2-setup"></a>Overfør til Microsoft Defender for Office 365 - fase 2: Konfiguration
 
 **Gælder for:**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
 <br>
 
-|[![Fase 1: Forbered.](../../media/phase-diagrams/prepare.png#lightbox)](migrate-to-defender-for-office-365-prepare.md) <br> [Fase 1: Forbered](migrate-to-defender-for-office-365-prepare.md)|![Fase 2: Konfigurer.](../../media/phase-diagrams/setup.png) <br> Fase 2: Konfigurer|[![Fase 3: Onboard.](../../media/phase-diagrams/onboard.png#lightbox)](migrate-to-defender-for-office-365-onboard.md) <br> [Fase 3: Onboard](migrate-to-defender-for-office-365-onboard.md)|
+|[![Fase 1: Forbered.](../../media/phase-diagrams/prepare.png#lightbox)](migrate-to-defender-for-office-365-prepare.md) <br> [Fase 1: Forbered](migrate-to-defender-for-office-365-prepare.md)|![Fase 2: Konfigurer.](../../media/phase-diagrams/setup.png) <br> Fase 2: Konfigurer|[![Fase 3: Ombord.](../../media/phase-diagrams/onboard.png#lightbox)](migrate-to-defender-for-office-365-onboard.md) <br> [Fase 3: Onboard](migrate-to-defender-for-office-365-onboard.md)|
 |---|---|---|
 ||*Du er her!*||
 
-Velkommen til **Fase 2: Konfiguration** af din **[overførsel til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Denne overførselsfase omfatter følgende trin:
+Velkommen til **fase 2: Konfiguration** af din **[migrering til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Denne overførselsfase omfatter følgende trin:
 
-1. [Opret distributionsgrupper for pilotbrugere](#step-1-create-distribution-groups-for-pilot-users)
-2. [Konfigurere brugerindsendelse til rapportering af brugermeddelelse](#step-2-configure-user-submission-for-user-message-reporting)
-3. [Vedligeholde eller oprette reglen for mailflow i SCL=-1](#step-3-maintain-or-create-the-scl-1-mail-flow-rule)
-4. [Konfigurere udvidet filtrering for forbindelser](#step-4-configure-enhanced-filtering-for-connectors)
+1. [Opret distributionsgrupper til pilotbrugere](#step-1-create-distribution-groups-for-pilot-users)
+2. [Konfigurer brugerindsendelse til rapportering af brugermeddelelser](#step-2-configure-user-submission-for-user-message-reporting)
+3. [Vedligehold eller opret reglen for SCL=-1-mailflow](#step-3-maintain-or-create-the-scl-1-mail-flow-rule)
+4. [Konfigurer udvidet filtrering for forbindelser](#step-4-configure-enhanced-filtering-for-connectors)
 5. [Opret pilotbeskyttelsespolitikker](#step-5-create-pilot-protection-policies)
 
-## <a name="step-1-create-distribution-groups-for-pilot-users"></a>Trin 1: Opret distributionsgrupper for pilotbrugere
+## <a name="step-1-create-distribution-groups-for-pilot-users"></a>Trin 1: Opret distributionsgrupper til pilotbrugere
 
-Distributionsgrupper er påkrævet Microsoft 365 af følgende aspekter af din overførsel:
+Der kræves distributionsgrupper i Microsoft 365 for følgende aspekter af overførslen:
 
-- **Undtagelser for reglen SCL=-1-mailflow**: Du vil have pilotbrugere til at få den fulde effekt af Defender for Office 365-beskyttelse, så du skal scanne deres indgående meddelelser af Defender for Office 365. Det gør du ved at definere dine pilotbrugere i de relevante distributionsgrupper i Microsoft 365 og konfigurere disse grupper som undtagelser til SCL=-1-mailflowreglen.
+- **Undtagelser for reglen for SCL=-1-mailflow**: Pilotbrugere skal have fuld effekt af Defender for Office 365 beskyttelse, så du skal have, at deres indgående meddelelser scannes af Defender for Office 365. Det gør du ved at definere dine pilotbrugere i de relevante distributionsgrupper i Microsoft 365 og konfigurere disse grupper som undtagelser fra reglen for SCL=-1-mailflowet.
 
-  Som vi har beskrevet i [Onboard Step 2: (Valgfrit) Undtaget pilotbrugere](migrate-to-defender-for-office-365-onboard.md#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service) fra filtrering af din eksisterende beskyttelsestjeneste, bør du overveje at undtage disse samme pilotbrugere fra scanning af din eksisterende beskyttelsestjeneste. At udelukke muligheden for filtrering af din eksisterende beskyttelsestjeneste og udelukkende at være afhængig af Defender for Office 365 er den bedste og nærmeste repræsentation af, hvad der vil ske, når overførslen er fuldført.
+  Som vi beskrev i [Onboard Step 2: (Valgfrit) Undtaget pilotbrugere fra at filtrere efter din eksisterende beskyttelsestjeneste](migrate-to-defender-for-office-365-onboard.md#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service), bør du overveje at fritage de samme pilotbrugere fra at scanne af din eksisterende beskyttelsestjeneste. Fjernelse af muligheden for filtrering af din eksisterende beskyttelsestjeneste og udelukkende at være afhængig af Defender for Office 365 er den bedste og tætteste repræsentation af, hvad der vil ske, når din migrering er fuldført.
 
-- **Test af specifikke Defender for Office 365-beskyttelsesfunktioner**: Selv for pilotbrugerne ønsker du ikke at aktivere alt på én gang. Hvis du bruger en fasebaseret tilgang til de beskyttelsesfunktioner, der er gældende for dine pilotbrugere, bliver fejlfinding og justering meget nemmere. Med denne fremgangsmåde i tankerne anbefaler vi følgende distributionsgrupper:
-  - **En Pengeskab gruppen Vedhæftede filer**: F.eks **. MDOPilotSafeAttachments\_**
-  - **En Pengeskab Links-pilotgruppe**: F.eks **. MDOPilotSafeLinks\_**
-  - **En pilotgruppe til politikindstillinger for Standardpolitik for uønsket post og phishing**: F.eks **. MDOPilotSpamPhishStandard\_\_**
-  - **En pilotgruppe til politikindstillinger for restriktiv politik for uønsket post og phishing**: F.eks **. MDOPilotSpamPhishStrict\_\_**
+- **Test af specifikke Defender for Office 365 beskyttelsesfunktioner**: Selv for pilotbrugerne ønsker du ikke at aktivere alt på én gang. Hvis du bruger en faseinddelt tilgang til de beskyttelsesfunktioner, der er i kraft for dine pilotbrugere, bliver fejlfinding og justering meget nemmere. Med denne fremgangsmåde i tankerne anbefaler vi følgende distributionsgrupper:
+  - **En Pengeskab pilotgruppe for vedhæftede filer**: F.eks. **MDOPilot\_SafeAttachments**
+  - **En pilotgruppe for Pengeskab links**: F.eks. **MDOPilot\_SafeLinks**
+  - **En pilotgruppe for standardindstillinger for politik for anti-spam og phishing**: F.eks. **MDOPilot\_SpamPhish\_Standard**
+  - **En pilotgruppe for politikindstillinger for streng anti-spam og anti-phishing**: F.eks. **MDOPilot\_SpamPhish\_Strict**
 
-For at gøre det klart bruger vi disse specifikke gruppenavne i denne artikel, men du kan frit bruge din egen navngivningskonvention.
+Af hensyn til klarhed bruger vi disse specifikke gruppenavne i hele denne artikel, men du kan frit bruge din egen navngivningskonvention.
 
-Når du er klar til at begynde at teste, skal du tilføje disse grupper som undtagelser [til reglen for mailflow i SCL=-1](#step-3-maintain-or-create-the-scl-1-mail-flow-rule). Når du opretter politikker til de forskellige beskyttelsesfunktioner i Defender for Office 365, skal du bruge disse grupper som betingelser, der definerer, hvem politikken gælder for.
+Når du er klar til at begynde at teste, skal du tilføje disse grupper som undtagelser til [reglen for SCL=-1-mailflowet](#step-3-maintain-or-create-the-scl-1-mail-flow-rule). Når du opretter politikker for de forskellige beskyttelsesfunktioner i Defender for Office 365, skal du bruge disse grupper som betingelser, der definerer, hvem politikken gælder for.
 
-**Bemærkninger**:
+**Noter**:
 
-- Begreberne Standard og Streng kommer fra vores [anbefalede sikkerhedsindstillinger](recommended-settings-for-eop-and-office365.md), som også bruges i [forudindstillede sikkerhedspolitikker](preset-security-policies.md). Ideelt set ville vi bede dig definere dine pilotbrugere i standard- og restriktive sikkerhedspolitikker, men det kan vi ikke. Hvorfor? Fordi du ikke kan tilpasse indstillingerne i foruddefinerede sikkerhedspolitikker (især handlinger, der foretages på meddelelser, eller justering af indstillinger for repræsentationsbeskyttelse). Under dine overførselstests er du nødt til at se, hvad Defender for Office 365 ville gøre ved meddelelser, bekræfte, at det er, hvad du ønsker at ske, og muligvis justere politikkonfigurationerne for at tillade eller forhindre disse resultater.
+- Udtrykkene Standard og Strict stammer fra vores [anbefalede sikkerhedsindstillinger](recommended-settings-for-eop-and-office365.md), som også bruges i [forudindstillede sikkerhedspolitikker](preset-security-policies.md). Ideelt set vil vi fortælle dig, at du skal definere dine pilotbrugere i Standard- og Strict-forudindstillede sikkerhedspolitikker, men det kan vi ikke gøre. Hvorfor? Da du ikke kan tilpasse indstillingerne i forudindstillede sikkerhedspolitikker (især handlinger, der udføres på meddelelser). Under din overførselstest skal du se, hvad Defender for Office 365 ville gøre med meddelelser, kontrollere, at det er det, du vil have, og eventuelt justere politikkonfigurationerne for at tillade eller forhindre disse resultater.
 
-  Så i stedet for at bruge forudindstillede sikkerhedspolitikker, skal du manuelt oprette brugerdefinerede politikker med indstillinger, der ligner meget, men i nogle tilfælde er anderledes end indstillingerne for Standard og Strenge forudindstillede sikkerhedspolitikker.
+  Så i stedet for at bruge forudindstillede sikkerhedspolitikker skal du manuelt oprette brugerdefinerede politikker med indstillinger, der ligner hinanden meget, men i nogle tilfælde er anderledes end indstillingerne for Standard- og Strict-forudindstillede sikkerhedspolitikker.
 
-- Hvis du vil eksperimentere med indstillinger, der  er væsentligt anderledes end vores Standard- eller Streng anbefalede værdier, bør du overveje at oprette og bruge flere og bestemte distributionsgrupper til pilotbrugerne i disse scenarier. Du kan bruge Configuration Analyzer til at se, hvor sikre dine indstillinger er. Du kan finde en vejledning [under Konfigurationsanalyse til beskyttelsespolitikker i EOP og Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md).
+- Hvis du vil eksperimentere med indstillinger, der **adskiller sig væsentligt** fra vores anbefalede Standard- eller Strict-værdier, bør du overveje at oprette og bruge yderligere og specifikke distributionsgrupper for pilotbrugerne i disse scenarier. Du kan bruge Konfigurationsanalyse til at se, hvor sikre dine indstillinger er. Du kan finde instruktioner [under Konfigurationsanalyse for beskyttelsespolitikker i EOP og Microsoft Defender for Office 365](configuration-analyzer-for-security-policies.md).
 
-  For de fleste organisationer er den bedste fremgangsmåde at starte med politikker, der er tæt forbundet med vores anbefalede standardindstillinger. Efter så meget observation og feedback, som du kan gøre i din tilgængelige tidsramme, kan du senere gå videre til mere aggressive indstillinger. Beskyttelse mod efterligning og levering til mappen Uønsket mail vs. levering til karantæne kan kræve tilpasning.
+  For de fleste organisationer er den bedste tilgang at starte med politikker, der er tæt på vores anbefalede Standard-indstillinger. Efter så meget observation og feedback, som du kan gøre i din tilgængelige tidsramme, kan du gå videre til mere aggressive indstillinger senere. Repræsentationsbeskyttelse og levering til mappen Uønsket mail i forhold til levering til karantæne kan kræve tilpasning.
 
-  Hvis du bruger brugerdefinerede politikker, skal du blot sørge for, at de  anvendes før de politikker, der indeholder vores anbefalede indstillinger for overførslen. Hvis en bruger identificeres i flere politikker af samme type (f.eks. antiphishing), anvendes der kun én politik af den pågældende type på brugeren (baseret på politikkens prioritetsværdi). Du kan finde flere oplysninger [i Rækkefølgen og prioriteten af mailbeskyttelse](how-policies-and-protections-are-combined.md).
+  Hvis du bruger brugerdefinerede politikker, skal du blot sørge for, at de anvendes _før_ de politikker, der indeholder vores anbefalede indstillinger for migreringen. Hvis en bruger identificeres i flere politikker af samme type (f.eks. anti-phishing), anvendes der kun én politik af denne type på brugeren (baseret på politikkens prioritetsværdi). Du kan få flere oplysninger under [Rækkefølgen og rækkefølgen af mailbeskyttelse](how-policies-and-protections-are-combined.md).
 
-## <a name="step-2-configure-user-submission-for-user-message-reporting"></a>Trin 2: Konfigurere brugerindsendelse for rapportering af brugermeddelelse
+## <a name="step-2-configure-user-submission-for-user-message-reporting"></a>Trin 2: Konfigurer brugerindsendelse til rapportering af brugermeddelelser
 
-Brugernes mulighed for at identificere falske positive eller falske negativer Defender for Office 365 er en vigtig del af overførslen.
+Muligheden for, at brugerne kan identificere falske positiver eller falske negativer fra Defender for Office 365 er en vigtig del af migreringen.
 
-Du kan angive en Exchange Online for at modtage meddelelser, som brugere rapporterer som skadelige eller ikke skadelige. Du kan finde flere instruktioner under [Brugerrapporterede meddelelsesindstillinger](user-submission.md). Denne postkasse kan modtage kopier af meddelelser, som dine brugere har sendt til Microsoft, eller postkassen kan opfange meddelelser uden at rapportere dem til Microsoft (I er sikkerhedsteamet kan analysere og sende meddelelserne manuelt). Denne opfangelsestilgang tillader dog ikke, at tjenesten automatisk finjusterer og lærer.
+Du kan angive en Exchange Online postkasse for at modtage meddelelser, som brugerne rapporterer som skadelige eller ikke skadelige. Du kan finde flere instruktioner under [Indstillinger for brugerrapporterede meddelelser](user-submission.md). Denne postkasse kan modtage kopier af meddelelser, som dine brugere har sendt til Microsoft, eller postkassen kan opfange meddelelser uden at rapportere dem til Microsoft (du er sikkerhedsteam kan manuelt analysere og sende meddelelserne). Denne aflytningstilgang tillader dog ikke tjenesten automatisk at indstille og lære.
 
-Du skal også bekræfte, at alle brugere i pilotprojektet har en understøttet meddelelsesrapporteringsapp installeret i Outlook der er kompatibel med brugerindsendelse. Disse apps omfatter:
+Du skal også bekræfte, at alle brugere i pilotprojektet har installeret en understøttet meddelelsesrapporteringsapp i Outlook, der er kompatibel med indsendelse af brugere. Disse apps omfatter:
 
 - [Tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md)
-- [Tilføjelsesprogrammet Report Phishing](enable-the-report-phish-add-in.md)
+- [Tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md)
 - Understøttede rapporteringsværktøjer fra tredjepart som beskrevet [her](user-submission.md#third-party-reporting-tools).
 
-Lad være med at understrege vigtigheden af dette trin. Data fra brugerindsendelser giver dig den feedbackløkke, du skal bruge for at bekræfte en god og ensartet slutbrugeroplevelse før og efter overførslen. Denne feedback hjælper dig med at træffe velovervejede beslutninger om konfiguration af politikker samt levere data-sikkerhedskopierede rapporter til din administration om, at overførslen gik problemfrit.
+Undervurder ikke vigtigheden af dette trin. Data fra brugerindsendelser giver dig den feedbackløkke, du skal bruge for at bekræfte en god, ensartet slutbrugeroplevelse før og efter migreringen. Denne feedback hjælper dig med at træffe velunderbyggede beslutninger om politikkonfiguration samt levere databaserede rapporter til din administration om, at migreringen gik problemfrit.
 
-I stedet for at være afhængig af data, der understøttes af hele organisationens oplevelse, har mere end én overførsel resulteret i følelsesmæssige konsekvenser baseret på en enkelt negativ brugeroplevelse. Hvis du har kørt phishing-simulering, kan du desuden bruge feedback fra dine brugere til at give dig besked, når de ser noget risikabelt, der kan kræve undersøgelse.
+I stedet for at stole på data, der understøttes af hele organisationens oplevelse, har mere end én migrering resulteret i følelsesmæssige spekulationer baseret på en enkelt negativ brugeroplevelse. Hvis du har kørt phishing-simuleringer, kan du desuden bruge feedback fra dine brugere til at informere dig, når de ser noget risikabelt, der kan kræve undersøgelse.
 
-## <a name="step-3-maintain-or-create-the-scl-1-mail-flow-rule"></a>Trin 3: Bevar eller opret reglen for mailflow i SCL=-1
+## <a name="step-3-maintain-or-create-the-scl-1-mail-flow-rule"></a>Trin 3: Vedligehold eller opret reglen for SCL=-1-mailflow
 
-Da din indgående mail dirigeres gennem en anden beskyttelsestjeneste, der står foran Microsoft 365, er det meget sandsynligt, at du allerede har en regel for mailflow (også kaldet en transportregel) i Exchange Online, der angiver SCL-niveauet for alle indgående mails til værdien -1 (tilsidesæt spamfiltrering). De fleste tredjepartsbeskyttelsestjenester opfordrer til denne SCL=-1-regel for mailflow til Microsoft 365 kunder, der ønsker at bruge deres tjenester.
+Da din indgående mail dirigeres gennem en anden beskyttelsestjeneste, der er placeret foran Microsoft 365, er det meget sandsynligt, at du allerede har en regel for mailflow (også kendt som en transportregel) i Exchange Online, der angiver niveauet for spamsikkerhed for alle indgående mails til værdien -1 (omgå spamfiltrering). De fleste beskyttelsestjenester fra tredjepart opfordrer til denne SCL=-1-mailflowregel for Microsoft 365 kunder, der vil bruge deres tjenester.
 
-Hvis du bruger en anden mekanisme til at tilsidesætte Microsoft-filtreringsstakken (f.eks. en liste over tilladte IP-adresser), anbefaler vi, at du skifter til at bruge en SCL=-1-mailflowregel, så længe al indgående internetmail til Microsoft 365 kommer fra tredjepartsbeskyttelsestjenesten (ingen mails flyder direkte fra internettet til Microsoft 365).
+Hvis du bruger en anden metode til at tilsidesætte Microsofts filtreringsstak (f.eks. en liste over tilladte IP-adresser), anbefaler vi, at du skifter til at bruge en regel for SCL=-1-mailflow, **så længe** alle indgående internetmails til Microsoft 365 kommer fra beskyttelsestjeneste fra tredjepart (ingen mailflows direkte fra internettet til Microsoft 365).
 
-Reglen for mailflow i SCL=-1 er vigtig under overførslen af følgende årsager:
+Reglen for SCL=-1-mailflow er vigtig under overførslen af følgende årsager:
 
-- Du kan bruge [Threat Explorer til](email-security-in-microsoft-defender.md) at se, hvilke funktioner i Microsoft-stakken der ville *have handlet* på meddelelser uden at påvirke resultaterne fra din eksisterende beskyttelsestjeneste.
-- Du kan gradvist justere, hvem der er beskyttet af Microsoft 365 filtreringsstakken, ved at konfigurere undtagelser til reglen SCL=-1-mailflow. Undtagelserne vil være medlemmer af pilotdistributionsgrupperne, som vi anbefaler senere i denne artikel.
+- Du kan bruge [Threat Explorer](email-security-in-microsoft-defender.md) til at se, hvilke funktioner i Microsoft-stakken der *ville have* handlet på meddelelser, uden at det påvirkede resultaterne fra din eksisterende beskyttelsestjeneste.
+- Du kan gradvist justere, hvem der er beskyttet af Microsoft 365 filtreringsstak, ved at konfigurere undtagelser for reglen for SCL=-1-mailflowet. Undtagelserne er medlemmer af de pilotdistributionsgrupper, som vi anbefaler senere i denne artikel.
 
-  Før eller under overgangen fra din MX-post til Microsoft 365 deaktiverer du denne regel for at aktivere den fulde beskyttelse af Microsoft 365-beskyttelsestakken for alle modtagere i organisationen.
+  Før eller under cutover af din MX-post til Microsoft 365 deaktiverer du denne regel for at aktivere fuld beskyttelse af Microsoft 365 beskyttelsesstak for alle modtagere i din organisation.
 
-Få mere at vide under [Brug regler for mailflow til at indstille spamtillidsniveauet (SCL) i meddelelser Exchange Online](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+Du kan få flere oplysninger under [Brug regler for mailflow til at angive niveauet for spamsikkerhed i meddelelser i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-**Bemærkninger**:
+**Noter**:
 
-- Hvis du planlægger at tillade, at internetmail flyder gennem din eksisterende beskyttelsestjeneste og direkte ind i Microsoft 365 på samme tid, skal du begrænse SCL=-1-mailflowreglen (mail, der tilsidesætter spamfiltrering) til mails, der kun er gået gennem din eksisterende beskyttelsestjeneste. Du vil ikke have, at ufiltrerede internetmails lander i brugerpostkasser Microsoft 365.
+- Hvis du planlægger at tillade, at internetmails flyder gennem din eksisterende beskyttelsestjeneste **og** direkte ind i Microsoft 365 på samme tid, skal du begrænse reglen for SCL=-1-mailflow (mail, der tilsidesætter filtrering af spam) til mails, der kun har været i din eksisterende beskyttelsestjeneste. Du ønsker ikke, at ufiltreret internetmaillanding i brugerpostkasser i Microsoft 365.
 
-  Hvis du vil identificere mails, der allerede er blevet scannet af din eksisterende beskyttelsestjeneste, kan du føje en betingelse til SCL=-1-mailflowreglen. Eksempel:
+  Hvis du vil identificere mails, der allerede er blevet scannet af din eksisterende beskyttelsestjeneste, korrekt, kan du føje en betingelse til reglen for SCL=-1-mailflowet. Eksempel:
 
-  - **Til skybaserede beskyttelsestjenester: Du** kan bruge en header- og headerværdi, der er entydig for din organisation. Meddelelser med sidehovedet scannes ikke af Microsoft 365. Meddelelser uden sidehovedet scannes af Microsoft 365
-  - **Til lokale beskyttelsestjenester eller -enheder: Du** kan bruge kilde-IP-adresser. Meddelelser fra kilde-IP-adresser scannes ikke af Microsoft 365. Meddelelser, der ikke er fra kilde-IP-adresserne, scannes af Microsoft 365.
+  - **Til skybaserede beskyttelsestjenester**: Du kan bruge en overskrifts- og overskriftsværdi, der er entydig for din organisation. Meddelelser med headeren scannes ikke af Microsoft 365. Meddelelser uden overskriften scannes af Microsoft 365
+  - **Til beskyttelsestjenester eller enheder i det lokale miljø**: Du kan bruge kildens IP-adresser. Meddelelser fra kildens IP-adresser scannes ikke af Microsoft 365. Meddelelser, der ikke kommer fra kildens IP-adresser, scannes af Microsoft 365.
 
-- Brug ikke udelukkende MX-poster til at styre, om mails bliver filtreret. Afsendere kan nemt ignorere MX-posten og sende mails direkte Microsoft 365.
+- Brug ikke udelukkende MX-poster til at styre, om post filtreres. Afsendere kan nemt ignorere MX-posten og sende mail direkte til Microsoft 365.
 
 ## <a name="step-4-configure-enhanced-filtering-for-connectors"></a>Trin 4: Konfigurer udvidet filtrering for forbindelser
 
-Det første, du skal gøre, er at konfigurere udvidet filtrering [for](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) forbindelser (også kaldet skip *listing) på* den forbindelse, der bruges til mailflow fra din eksisterende beskyttelsestjeneste til Microsoft 365. Du kan bruge rapporten [over indgående meddelelser til](/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports) at identificere forbindelsen.
+Det første, du skal gøre, er at konfigurere [udvidet filtrering for forbindelser](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors) (også kaldet *oversigt over spring* over) på den connector, der bruges til mailflow, fra din eksisterende beskyttelsestjeneste til Microsoft 365. Du kan bruge [rapporten med indgående meddelelser](/exchange/monitoring/mail-flow-reports/mfr-inbound-messages-and-outbound-messages-reports) til at identificere connectoren.
 
-Forbedret filtrering for forbindelser kræves af en bruger, Defender for Office 365 at se, hvor internetmeddelelser faktisk stammer fra. Udvidet filtrering for forbindelser forbedrer i høj grad nøjagtigheden af Microsoft-filtreringsstakken (især [efterlignet](anti-spoofing-protection.md) intelligens samt funktioner til efter brud i [Threat Explorer](threat-explorer.md) og [automated Investigation & Response (AIR)](automated-investigation-response-office.md)).
+Forbedret filtrering af forbindelser er påkrævet af Defender for Office 365 for at se, hvor internetmeddelelserne rent faktisk kom fra. Forbedret filtrering for forbindelser forbedrer i høj grad nøjagtigheden af Microsoft-filtreringsstakken (især [spoof intelligence](anti-spoofing-protection.md) samt funktioner efter brud i [Threat Explorer](threat-explorer.md) og [Automatiseret undersøgelse & Svar (AIR)](automated-investigation-response-office.md).
 
-For at aktivere udvidet filtrering for forbindelser korrekt skal du tilføje de **offentlige IP-adresser** \***\*\***\* for alle tredjepartstjenester og/eller lokale mailsystemværter, der distribuerer indgående mail til Microsoft 365.
+Hvis du vil aktivere forbedret filtrering for forbindelser korrekt, skal du tilføje de **offentlige** IP-adresser for \*\***alle\*\*** tredjepartstjenester og/eller lokale mailsystemværter, der dirigerer indgående mail til Microsoft 365.
 
-For at bekræfte at Udvidet filtrering for forbindelser fungerer, skal du kontrollere, at indgående meddelelser indeholder en eller begge af følgende overskrifter:
+Hvis du vil bekræfte, at udvidet filtrering for forbindelser fungerer, skal du kontrollere, at indgående meddelelser indeholder en eller begge af følgende headere:
 
 - `X-MS-Exchange-SkipListedInternetSender`
 - `X-MS-Exchange-ExternalOriginalInternetSender`
 
 ## <a name="step-5-create-pilot-protection-policies"></a>Trin 5: Opret pilotbeskyttelsespolitikker
 
-Ved at oprette produktionspolitikker, selvom de ikke anvendes for alle brugere, kan du teste funktioner efter brud som f.eks. [Threat Explorer](threat-explorer.md) og teste integrering af Defender for Office 365 i dit sikkerhedssvarteams processer.
+Ved at oprette produktionspolitikker, selvom de ikke anvendes på alle brugere, kan du teste funktioner efter sikkerhedsbrud som [Threat Explorer](threat-explorer.md) og teste integration Defender for Office 365 i dit sikkerhedssvarteams processer.
 
 > [!IMPORTANT]
-> Politikker kan være begrænset til brugere, grupper eller domæner. Vi anbefaler ikke at blande alle tre i én politik, da kun brugere, der matcher alle tre, falder inden for politikkens omfang. For pilotpolitikker anbefaler vi brug af grupper eller brugere. Til produktionspolitikker anbefaler vi, at du bruger domæner. Det er meget vigtigt at forstå, at  det kun er brugerens primære maildomæne, der afgør, om brugeren falder inden for politikkens område. Så hvis du skifter MX-posten for en brugers sekundære domæne, skal du sørge for, at brugerens primære domæne også er dækket af en politik.
+> Politikker kan være begrænset til brugere, grupper eller domæner. Vi anbefaler, at du ikke blander alle tre i én politik, da det kun er de brugere, der matcher alle tre, der falder inden for politikkens område. I forbindelse med pilotpolitikker anbefaler vi, at du bruger grupper eller brugere. I forbindelse med produktionspolitikker anbefaler vi, at du bruger domæner. Det er ekstremt vigtigt at forstå, at **det kun** er brugerens primære maildomæne, der bestemmer, om brugeren falder inden for politikkens område. Så hvis du skifter MX-posten for en brugers sekundære domæne, skal du sørge for, at brugerens primære domæne også er omfattet af en politik.
 
-### <a name="create-pilot-safe-attachments-policies"></a>Opret et pilotprojekt Pengeskab politikker for vedhæftede filer
+### <a name="create-pilot-safe-attachments-policies"></a>Opret pilotpolitikker for Pengeskab vedhæftede filer
 
-[Pengeskab vedhæftede filer](safe-attachments.md) er den nemmeste Defender for Office 365 at aktivere og teste, før du skifter din MX-post. Pengeskab vedhæftede filer har følgende fordele:
+[Pengeskab Vedhæftede filer](safe-attachments.md) er den nemmeste Defender for Office 365 funktion til at aktivere og teste, før du skifter din MX-post. Pengeskab Vedhæftede filer har følgende fordele:
 
 - Minimal konfiguration.
-- Meget lav risiko for falske positive.
-- Lignende funktionsmåde med beskyttelse mod malware, som altid er tændt og ikke påvirkes af SCL=-1-mailflowreglen.
+- Ekstremt lav chance for falske positiver.
+- Lignende funktionsmåde som beskyttelse mod skadelig software, som altid er slået til og ikke påvirkes af reglen for SCL=-1-mailflow.
 
-Opret en Pengeskab politik for vedhæftede filer til dine pilotbrugere.
+Opret en politik for vedhæftede filer Pengeskab for dine pilotbrugere.
 
-Du kan finde de anbefalede indstillinger [under Anbefalede Pengeskab politikindstillinger for vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-policy-settings). Bemærk, at standard- og strenganbefalinger er de samme. Hvis du vil oprette politikken, skal [du se Konfigurer Pengeskab politikker for vedhæftede filer](set-up-safe-attachments-policies.md). Sørg for at bruge gruppen **MDOPilotSafeAttachments\_** som betingelse for politikken (hvem politikken gælder for).
+Du kan se de anbefalede indstillinger under [Anbefalede Pengeskab politikindstillinger for vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-policy-settings). Bemærk, at Standard- og Strict-anbefalingerne er de samme. Hvis du vil oprette politikken, [skal du se Konfigurer politikker for vedhæftede filer Pengeskab](set-up-safe-attachments-policies.md). Sørg for at bruge gruppen **MDOPilot\_SafeAttachments** som betingelse for politikken (hvem politikken gælder for).
 
 > [!IMPORTANT]
-> I dag er der ingen standardpolitik for Pengeskab vedhæftede filer. Inden du skifter MX-poster, anbefaler vi, at du har en Pengeskab politik for vedhæftede filer, der beskytter hele organisationen.
+> I dag er der ingen standardpolitik for Pengeskab Vedhæftede filer. Før du skifter MX-poster, anbefaler vi, at du har en politik for Pengeskab Vedhæftede filer, der beskytter hele organisationen.
 
-### <a name="create-pilot-safe-links-policies"></a>Oprette pilotpolitikker Pengeskab links
+### <a name="create-pilot-safe-links-policies"></a>Opret pilotpolitikker for Pengeskab links
 
 > [!NOTE]
-> Vi understøtter ikke ombrydning eller omskrivning af allerede ombrudte eller omskrevne links. Hvis din aktuelle beskyttelsestjeneste allerede ombrydes eller omskriver links i mails, skal du deaktivere denne funktion for dine pilotbrugere. En måde at sikre, at dette ikke sker, er at udelade URL-domænet for den anden tjeneste i Pengeskab Links-politikken.
+> Vi understøtter ikke ombrydning eller omskrivning af allerede ombrudte eller omskrevne links. Hvis din aktuelle beskyttelsestjeneste allerede ombryder eller omskriver links i mails, skal du deaktivere denne funktion for dine pilotbrugere. En måde at sikre, at dette ikke sker på, er at udelade URL-domænet for den anden tjeneste i politikken Pengeskab Links.
 >
-> Pengeskab Links-beskyttelse for understøttede Office-apps er en global indstilling, der gælder for alle brugere med licens. Du kan aktivere eller deaktivere den globalt, ikke for bestemte brugere. Du kan finde flere oplysninger [under Konfigurere Pengeskab Links-beskyttelse til Office 365 apps](configure-global-settings-for-safe-links.md#configure-safe-links-protection-for-office-365-apps-in-the-microsoft-365-defender-portal).
+> Pengeskab Links-beskyttelse for understøttede Office apps er en global indstilling, der gælder for alle brugere med licens. Du kan slå den til eller fra globalt, ikke for bestemte brugere. Du kan få flere oplysninger under [Konfigurer Pengeskab Links-beskyttelse for Office 365 apps](configure-global-settings-for-safe-links.md#configure-safe-links-protection-for-office-365-apps-in-the-microsoft-365-defender-portal).
 
-Opret en Pengeskab Links-politik for dine pilotbrugere. Chancerne for falske positive i Pengeskab Links er også ret lave, men du bør overveje at teste funktionen for et mindre antal pilotbrugere end Pengeskab Vedhæftede filer. Da funktionen påvirker brugeroplevelsen, bør du overveje en plan for at informere brugerne.
+Opret en politik for Pengeskab links til dine pilotbrugere. Chancerne for falske positiver i Pengeskab Links er også ret lave, men du bør overveje at teste funktionen på et mindre antal pilotbrugere end Pengeskab Vedhæftede filer. Da funktionen påvirker brugeroplevelsen, bør du overveje en plan for at uddanne brugerne.
 
-Du kan finde de anbefalede indstillinger [under Anbefalede Pengeskab Links-politikindstillinger](recommended-settings-for-eop-and-office365.md#safe-links-settings). Bemærk, at standard- og strenganbefalinger er de samme. Hvis du vil oprette politikken, skal [du se Konfigurer Pengeskab Links-politikker](set-up-safe-links-policies.md). Sørg for at bruge gruppen **MDOPilotSafeLinks\_** som betingelse for politikken (hvem politikken gælder for).
+Du kan se de anbefalede indstillinger under [Politikindstillinger for anbefalede Pengeskab links](recommended-settings-for-eop-and-office365.md#safe-links-settings). Bemærk, at Standard- og Strict-anbefalingerne er de samme. Hvis du vil oprette politikken, skal du se [Konfigurer politikker for Pengeskab links](set-up-safe-links-policies.md). Sørg for at bruge gruppen **MDOPilot\_SafeLinks** som betingelse for politikken (hvem politikken gælder for).
 
 > [!IMPORTANT]
-> I dag er der ingen standardpolitik Pengeskab Links. Inden du skifter MX-poster, anbefaler vi, at du har en Pengeskab Links-politik, der beskytter hele organisationen.
+> I dag er der ingen standardpolitik for Pengeskab links. Før du skifter MX-poster, anbefaler vi, at du har en politik for Pengeskab Links, der beskytter hele organisationen.
 
-### <a name="create-pilot-anti-spam-policies"></a>Opret pilotpolitikker for uønsket post
+### <a name="create-pilot-anti-spam-policies"></a>Opret pilotpolitikker mod spam
 
-Opret to antispampolitikker for pilotbrugere:
+Opret to politikker til bekæmpelse af spam for pilotbrugere:
 
-- En politik, der bruger standardindstillingerne. Brug gruppen **MDOPilotSpamPhishStandard\_\_** som betingelse for politikken (hvem politikken gælder for).
-- En politik, der anvender faste indstillinger. Brug gruppen **MDOPilotSpamPhishStrict\_\_** som betingelse for politikken (hvem politikken gælder for). Denne politik bør have en højere prioritet (lavere tal) end politikken med standardindstillingerne.
+- En politik, der bruger Standardindstillinger. Brug gruppen **MDOPilot\_SpamPhish\_Standard** som betingelse for politikken (hvem politikken gælder for).
+- En politik, der bruger indstillingerne Strict. Brug gruppen **MDOPilot\_SpamPhish\_Strict** som betingelse for politikken (hvem politikken gælder for). Denne politik skal have en højere prioritet (lavere tal) end politikken med Standardindstillinger.
 
-Du kan finde de anbefalede Standard- og Restriktive indstillinger [under Anbefalede indstillinger for politik mod uønsket post](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings). Hvis du vil oprette politikkerne, skal [du se Konfigurer antispam-politikker](configure-your-spam-filter-policies.md).
+Du kan se de anbefalede Standard- og [Strict-indstillinger under Anbefalede indstillinger for politik for anti-spam](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings). Hvis du vil oprette politikkerne, skal du se [Konfigurer politikker mod spam](configure-your-spam-filter-policies.md).
 
-### <a name="create-pilot-anti-phishing-policies"></a>Opret pilotpolitikker for phishing
+### <a name="create-pilot-anti-phishing-policies"></a>Opret pilotpolitikker mod phishing
 
-Opret to antiphishing-politikker for pilotbrugere:
+Opret to politikker til bekæmpelse af phishing for pilotbrugere:
 
-- En politik, der bruger standardindstillingerne, med undtagelse af handlinger til registrering af efterligning som beskrevet nedenfor. Brug gruppen **MDOPilotSpamPhishStandard\_\_** som betingelse for politikken (hvem politikken gælder for).
-- En politik, der bruger faste indstillinger med undtagelse af registreringshandlinger efter efterligning som beskrevet nedenfor. Brug gruppen **MDOPilotSpamPhishStrict\_\_** som betingelse for politikken (hvem politikken gælder for). Denne politik bør have en højere prioritet (lavere tal) end politikken med standardindstillingerne.
+- En politik, der bruger Standardindstillinger med undtagelse af repræsentationsregistreringshandlinger som beskrevet nedenfor. Brug gruppen **MDOPilot\_SpamPhish\_Standard** som betingelse for politikken (hvem politikken gælder for).
+- En politik, der bruger indstillingerne Strict med undtagelse af repræsentationsregistreringshandlinger som beskrevet nedenfor. Brug gruppen **MDOPilot\_SpamPhish\_Strict** som betingelse for politikken (hvem politikken gælder for). Denne politik skal have en højere prioritet (lavere tal) end politikken med Standardindstillinger.
 
-Ved spoof-registreringer er den anbefalede standardhandling Flyt meddelelsen til **modtagernes** mapper med Uønsket mail, og den anbefalede Streng-handling er **Sæt meddelelsen i karantæne**. Brug efterlignet intelligensindsigt til at observere resultaterne. Tilsidesættelser forklares i næste afsnit. Du kan finde flere oplysninger [under Efterlignet intelligensindsigt i EOP](learn-about-spoof-intelligence.md).
+For spoof-registreringer er den anbefalede Standard-handling **Flyt meddelelse til modtagernes mapper med uønsket mail**, og den anbefalede Strenge handling er **Sæt meddelelsen i karantæne**. Brug indsigten spoof intelligence til at overvåge resultaterne. Tilsidesættelser forklares i næste afsnit. Du kan få flere oplysninger under [Spoof intelligence-indsigt i EOP](learn-about-spoof-intelligence.md).
 
-Ved repræsentationsregistreringer skal du ignorere de anbefalede Standard- og Restriktive handlinger for pilotpolitikkerne. Brug i stedet **værdien Anvend ikke nogen handling** til følgende indstillinger:
+I forbindelse med repræsentationsregistreringer skal du ignorere de anbefalede Standard- og Strict-handlinger for pilotpolitikkerne. Brug i stedet værdien **Anvend ikke nogen handling** for følgende indstillinger:
 
-- **Hvis meddelelsen registreres som en efterligning af en bruger**
-- **Hvis meddelelsen registreres som efterligning af domæne**
-- **Hvis postkasseintelligens registrerer en efterligning af en bruger**
+- **Hvis meddelelsen registreres som en repræsenteret bruger**
+- **Hvis meddelelsen registreres som repræsenteret domæne**
+- **Hvis postkasseintelligens registrerer en repræsenteret bruger**
 
-Brug repræsentationsindsigtet til at se resultaterne. Du kan finde flere oplysninger [under Repræsentationsindsigt Defender for Office 365](impersonation-insight.md).
+Brug repræsentationsindsigten til at overvåge resultaterne. Du kan få flere oplysninger under [Repræsentationsindsigt i Defender for Office 365](impersonation-insight.md).
 
-Du skal finjustere beskyttelse mod spoofing (juster tillader og blokke) og aktivere hver repræsentationsbeskyttelseshandling for at sætte i karantæne eller flytte meddelelserne til mappen Uønsket mail (baseret på standardanbefalinger eller restriktive anbefalinger). Du kan se resultaterne og justere indstillingerne efter behov.
+Du skal indstille efterligningsbeskyttelse (justere tillader og blokke) og aktivere hver repræsentationsbeskyttelseshandling for at sætte meddelelserne i karantæne eller flytte dem til mappen Uønsket mail (baseret på Standard- eller Strict-anbefalingerne). Du kan observere resultaterne og justere deres indstillinger efter behov.
 
-Du kan finde flere oplysninger i følgende emner:
+Du kan få flere oplysninger i følgende emner:
 
-- [Beskyttelse mod spoofing](anti-spoofing-protection.md)
-- [Indstillinger for repræsentation i antiphishing-politikker](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
-- [Konfigurer antiphishing-politikker i Defender for Office 365](configure-mdo-anti-phishing-policies.md).
+- [Beskyttelse mod forfalskning](anti-spoofing-protection.md)
+- [Repræsentationsindstillinger i politikker til bekæmpelse af phishing](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
+- [Konfigurer politikker til bekæmpelse af phishing i Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
 ## <a name="next-step"></a>Næste trin
 
-**Tillykke**! Du har fuldført **konfigurationsfasen** for din [overførsel til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)!
+**Tillykke**! Du har fuldført **installationsfasen** for [din migrering for at Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)!
 
-- Fortsæt til [Fase 3: Onboard](migrate-to-defender-for-office-365-onboard.md).
+- Fortsæt til [fase 3: Ombord](migrate-to-defender-for-office-365-onboard.md).

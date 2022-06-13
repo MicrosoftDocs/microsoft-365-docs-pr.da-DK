@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
 description: I denne artikel får du mere at vide om Azure ExpressRoute til Office 365, og hvordan du bruger den til netværksplanlægning.
-ms.openlocfilehash: a284472ad84139a5e76eeab38121d62cf3757829
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 59fa69a58bedf6babf2cf277a627d42293487ab1
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095636"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042908"
 ---
 # <a name="network-planning-with-expressroute-for-office-365"></a>Netværksplanlægning med ExpressRoute til Office 365
 
@@ -46,7 +46,7 @@ I følgende tabel fremhæves nogle få forskelle mellem internet- og Azure Expre
 |Direkte forbindelse med en forudsigelig netværksprofil.  <br/> |Nej  <br/> |Ja  <br/> |
 |IPv6-forbindelse.  <br/> |Ja  <br/> |Ja  <br/> |
 
-Udvid titlerne nedenfor for at få mere vejledning til netværksplanlægning. Vi har også optaget en 10-dels [Azure ExpressRoute til Office 365 træningsserie](https://channel9.msdn.com/series/aer), der dykker dybere ned.
+Udvid titlerne nedenfor for at få mere vejledning til netværksplanlægning.
 
 ## <a name="existing-azure-expressroute-customers"></a>Eksisterende Azure ExpressRoute-kunder
 
@@ -62,7 +62,7 @@ I denne tabel beskrives de to typer peeringrelationer, du kan vælge at implemen
 |:-----|:-----|:-----|
 |**Tjenester** <br/> |IaaS: Azure Virtual Machines  <br/> |PaaS: Offentlige Azure-tjenester  <br/> SaaS: Office 365  <br/> SaaS: Dynamics 365  <br/> |
 |Start af forbindelse**** <br/> |Kunde til Microsoft  <br/> Microsoft-til-kunde  <br/> |Kunde til Microsoft  <br/> Microsoft-til-kunde  <br/> |
-|**QoS-support** <br/> |Ingen QoS  <br/> |<sup>QoS1</sup> <br/> |
+|**QoS-support** <br/> |Ingen QoS  <br/> |QoS<sup>1</sup> <br/> |
 
 <sup>1 </sup> QoS understøtter kun Skype for Business på nuværende tidspunkt.
   
@@ -104,15 +104,15 @@ Når du overvejer topologiplaceringen af de netværks-/sikkerhedsperimeterindsti
 
 - Kunder opfordres til at designe deres sikkerheds-/perimetertopologi til brug sammen med ExpressRoute til Office 365 i overensstemmelse med bedste praksis for redundans, høj tilgængelighed og it-katastrofeberedskab.
 
-Her er et eksempel på Woodgrove Bank, der sammenligner de forskellige muligheder for Azure ExpressRoute-forbindelse med de perimetersikkerhedsmodeller, der er beskrevet ovenfor.
+Her er et eksempel på Contoso, der sammenligner de forskellige muligheder for Azure ExpressRoute-forbindelser med de perimetersikkerhedsmodeller, der er beskrevet ovenfor.
   
 ### <a name="example-1-securing-azure-expressroute"></a>Eksempel 1: Sikring af Azure ExpressRoute
   
-Woodgrove Bank overvejer at implementere Azure ExpressRoute, og efter at have planlagt den optimale arkitektur for [routing med ExpressRoute til Office 365](routing-with-expressroute.md) og efter at have brugt ovenstående vejledning til at forstå båndbreddekrav, bestemmer de den bedste metode til sikring af deres perimeter.
+Contoso overvejer at implementere Azure ExpressRoute, og efter at have planlagt den optimale arkitektur for [routing med ExpressRoute til Office 365](routing-with-expressroute.md) og efter at have brugt ovenstående vejledning til at forstå båndbreddekrav, bestemmer de den bedste metode til sikring af deres perimeter.
   
-For Woodgrove, en multinational organisation med placeringer på flere kontinenter, skal sikkerheden spænde over alle perimeterer. Den optimale forbindelsesmulighed for Woodgrove er en multipunktforbindelse med flere peering-placeringer over hele verden for at servicere deres medarbejderes behov på hvert kontinent. Hvert kontinent indeholder redundante Azure ExpressRoute-kredsløb på kontinentet, og sikkerhed skal spænde over alle disse.
+For Contoso, der er en multinational organisation med placeringer på flere kontinenter, skal sikkerheden spænde over alle perimeterer. Den optimale forbindelsesmulighed for Contoso er en multipunktforbindelse med flere peering-placeringer over hele verden for at servicere deres medarbejderes behov på hvert kontinent. Hvert kontinent indeholder redundante Azure ExpressRoute-kredsløb på kontinentet, og sikkerhed skal spænde over alle disse.
   
-Woodgroves eksisterende infrastruktur er pålidelig og kan håndtere det ekstra arbejde, og Woodgrove Bank kan derfor bruge infrastrukturen til deres Azure ExpressRoute- og internetperimetersikkerhed. Hvis dette ikke var tilfældet, kunne Woodgrove vælge at købe mere udstyr til at supplere deres eksisterende udstyr eller til at håndtere en anden type forbindelse.
+Contosos eksisterende infrastruktur er pålidelig og kan håndtere det ekstra arbejde, og Contoso kan derfor bruge infrastrukturen til deres Azure ExpressRoute- og internetperimetersikkerhed. Hvis det ikke var tilfældet, kunne Contoso vælge at købe mere udstyr for at supplere deres eksisterende udstyr eller håndtere en anden type forbindelse.
   
 ## <a name="high-availability-and-failover-with-azure-expressroute"></a>Høj tilgængelighed og failover med Azure ExpressRoute
 <a name="BKMK_high-availability"> </a>
@@ -158,13 +158,13 @@ Vi anbefaler ikke, at du bruger et enkelt ExpressRoute-kredsløb med internettet
   
 ### <a name="example-2-failover-and-high-availability"></a>Eksempel 2: Failover og høj tilgængelighed
   
-Woodgrove Banks multigeografiske design har gennemgået en gennemgang af routing, båndbredde, sikkerhed og nu skal igennem en gennemgang af høj tilgængelighed. Woodgrove mener, at høj tilgængelighed dækker tre kategorier; robusthed, pålidelighed og redundans.
+Contosos multigeografiske design har gennemgået en gennemgang af routing, båndbredde, sikkerhed og skal nu gennemgå en gennemgang af høj tilgængelighed. Contoso mener, at høj tilgængelighed dækker tre kategorier; robusthed, pålidelighed og redundans.
   
-Robusthed gør det muligt for Woodgrove hurtigt at komme sig efter fejl. Pålidelighed giver Woodgrove mulighed for at tilbyde et ensartet resultat i systemet. Redundans gør det muligt for Woodgrove at flytte mellem en eller flere spejlede forekomster af infrastruktur.
+Robusthed gør det muligt for Contoso hurtigt at genoprette efter fejl. Pålidelighed giver Contoso mulighed for at tilbyde et ensartet resultat i systemet. Redundans gør det muligt for Contoso at flytte mellem en eller flere spejlede forekomster af infrastruktur.
   
-I hver edgekonfiguration har Woodgrove redundante firewalls, proxyer og IDS. For Nordamerika har Woodgrove én edge-konfiguration i deres Dallas-datacenter og en anden edge-konfiguration i deres Virginia-datacenter. Det redundante udstyr på hvert sted giver robusthed til det pågældende sted.
+I hver edgekonfiguration har Contoso redundante firewalls, proxyer og IDS. For Nordamerika har Contoso én edge-konfiguration i deres Dallas-datacenter og en anden edgekonfiguration i deres Virginia-datacenter. Det redundante udstyr på hvert sted giver robusthed til det pågældende sted.
   
-Netværkskonfigurationen i Woodgrove Bank er baseret på nogle få nøgleprincipper:
+Netværkskonfigurationen på Contoso er baseret på nogle få nøgleprincipper:
   
 - Inden for hvert geografisk område er der flere Azure ExpressRoute-kredsløb.
 
@@ -172,15 +172,15 @@ Netværkskonfigurationen i Woodgrove Bank er baseret på nogle få nøgleprincip
 
 - Distribution foretrækker helt klart den ene eller den anden sti afhængigt af tilgængelighed, placering osv.
 
-- Failover mellem Azure ExpressRoute-kredsløb sker automatisk uden yderligere konfiguration eller handling, der kræves af Woodgrove.
+- Failover mellem Azure ExpressRoute-kredsløb sker automatisk uden yderligere konfiguration eller handling, der kræves af Contoso.
 
-- Failover mellem internetkredsløb sker automatisk uden yderligere konfiguration eller handling, der kræves af Woodgrove.
+- Failover mellem internetkredsløb sker automatisk uden yderligere konfiguration eller handling, der kræves af Contoso.
 
-I denne konfiguration kan Woodgrove Bank med redundans på det fysiske og virtuelle niveau tilbyde lokal robusthed, regional robusthed og global robusthed på en pålidelig måde. Woodgrove valgte denne konfiguration efter at have evalueret et enkelt Azure ExpressRoute-kredsløb pr. område samt muligheden for at mislykkes via internettet.
+I denne konfiguration kan Contoso med redundans på det fysiske og virtuelle niveau tilbyde lokal robusthed, regional robusthed og global robusthed på en pålidelig måde. Contoso valgte denne konfiguration efter at have evalueret et enkelt Azure ExpressRoute-kredsløb pr. område samt muligheden for at mislykkes via internettet.
   
-Hvis Woodgrove ikke kunne have flere Azure ExpressRoute-kredsløb pr. område, vil routingtrafik, der stammer fra Nordamerika til Azure ExpressRoute-kredsløbet i Asien og Stillehavsområdet, tilføje en uacceptabel ventetid, og den påkrævede KONFIGURATION af DNS-videresendelse tilføjer kompleksitet.
+Hvis Contoso ikke kunne have flere Azure ExpressRoute-kredsløb pr. område, vil routingtrafik, der stammer fra Nordamerika til Azure ExpressRoute-kredsløbet i Asien og Stillehavsområdet, tilføje en uacceptabel ventetid, og den påkrævede KONFIGURATION af DNS-videresendelse tilføjer kompleksitet.
   
-Det anbefales ikke at bruge internettet som en sikkerhedskopikonfiguration. Dette bryder Woodgroves pålidelighedsprincip, hvilket resulterer i en uoverensstemmende oplevelse ved hjælp af forbindelsen. Desuden vil manuel konfiguration være påkrævet for at udføre failover i forhold til de BGP-reklamer, der er konfigureret, NAT-konfiguration, DNS-konfiguration og proxykonfigurationen. Denne ekstra failover-kompleksitet øger den tid, det er nødvendigt at gendanne, og reducerer deres mulighed for at diagnosticere og foretage fejlfinding af de involverede trin.
+Det anbefales ikke at bruge internettet som en sikkerhedskopikonfiguration. Dette bryder Contosos pålidelighedsprincip, hvilket resulterer i en uoverensstemmende oplevelse ved hjælp af forbindelsen. Desuden vil manuel konfiguration være påkrævet for at udføre failover i forhold til de BGP-reklamer, der er konfigureret, NAT-konfiguration, DNS-konfiguration og proxykonfigurationen. Denne ekstra failover-kompleksitet øger den tid, det er nødvendigt at gendanne, og reducerer deres mulighed for at diagnosticere og foretage fejlfinding af de involverede trin.
   
 Har du stadig spørgsmål om, hvordan du planlægger og implementerer trafikstyring eller Azure ExpressRoute? Læs resten af vores [vejledning til netværk og ydeevne](./network-planning-and-performance.md) eller [ofte stillede spørgsmål om Azure ExpressRoute](/azure/expressroute/expressroute-faqs).
   

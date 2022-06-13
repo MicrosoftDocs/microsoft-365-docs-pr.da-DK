@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: e1832f641c5efc582bee7837dcf8e5b67a9256f6
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 8b99f4f9805f34485457a0f376f4bfea04d96192
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772064"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043725"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -74,16 +74,13 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 - Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser i Exchange Online, før du kan udføre procedurerne i denne artikel:
-  - **Afsendere, URL-adresser og filer**:
     - Hvis du vil tilføje og fjerne værdier fra listen over tilladte/blokerede lejere, skal du være medlem af
       - **Rollegruppen Organisationsadministration** eller **Sikkerhedsadministrator** (**rolle som sikkerhedsadministrator**)
       - **Rollegruppe for sikkerhedsoperator** (**Lejer allowBlockList Manager**).
     - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af
       - **Rollegruppe for global læser**
       - **Rollegruppe for sikkerhedslæser**
-  - **Spoofing**: En af følgende kombinationer:
-    - **Organisationsadministration**
-    - **Konfiguration af sikkerhedsadministrator** <u>og</u> kun **visning** eller **kun visning af organisationsadministration**.
+      - **Rollegruppen Kun visningskonfiguration* .
 
   Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
@@ -468,7 +465,6 @@ Et domænepar for en spoofed afsender på listen over tilladte/blokerede lejere 
 - **Sender infrastruktur**: Denne værdi angiver kilden til meddelelser fra den spoofede bruger. Gyldige værdier omfatter:
   - Domænet, der blev fundet i et omvendt DNS-opslag (PTR-post) for kildemailserverens IP-adresse (f.eks. fabrikam.com).
   - Hvis kildens IP-adresse ikke har nogen PTR-post, identificeres den afsendende infrastruktur som \<source IP\>/24 (f.eks. 192.168.100.100/24).
-  - Et bekræftet DKIM-domæne.
 
 Her er nogle eksempler på gyldige domænepar, der identificerer spoofede afsendere:
 

@@ -22,16 +22,16 @@ ms.custom:
 search.appverid: MET150
 description: De programmer og tjenester, du modtager, afhænger af, hvilke Microsoft 365 produkt du har købt, f.eks. Microsoft 365 Apps for business.
 ms.date: 05/12/2022
-ms.openlocfilehash: 48186847368af2bc43831c6e27ef7d347981f1b3
-ms.sourcegitcommit: 4e7ff69f4d7d27c2d419f763cfcb069e3b0d0d9f
+ms.openlocfilehash: 56b650a4690151c913855d0007a34d2e2ddcba89
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65403222"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043409"
 ---
 # <a name="understand-subscriptions-and-licenses-in-microsoft-365-for-business"></a>Forstå abonnementer og licenser i Microsoft 365 til virksomheder
 
-Når du køber et abonnement på Microsoft 365 til virksomheder, tilmelder du dig et sæt apps og tjenester, som du betaler for enten månedligt eller årligt. De programmer og tjenester, du modtager som en del af dit abonnement, afhænger af, hvilket produkt du har købt, f.eks. Microsoft 365 Apps for business eller Microsoft 365 Business Standard. Du kan se, hvad der følger med hvert produkt på [siden Microsoft 365 til små og mellemstore virksomheder](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab:primaryr1).
+Når du køber et abonnement på Microsoft 365 til virksomheder, tilmelder du dig et sæt apps og tjenester, som du betaler for enten månedligt eller årligt. De programmer og tjenester, du modtager som en del af dit abonnement, afhænger af, hvilket produkt du har købt, f.eks. Microsoft 365 Apps for business eller Microsoft 365 Business Standard. Du kan se, hvad der følger med hvert produkt på [siden Microsoft 365 til små og mellemstore virksomheder](https://www.microsoft.com/microsoft-365/business/compare-all-microsoft-365-business-products).
 
 Når du køber et abonnement, angiver du det antal licenser, du har brug for, baseret på, hvor mange personer du har i din organisation. Når du har købt et abonnement, opretter du konti for personer i din organisation og tildeler derefter en licens til hver enkelt person. I takt med at organisationens behov ændres, kan du købe flere licenser for at imødekomme nye personer eller tildele licenser til andre brugere, når nogen forlader organisationen.
 
@@ -55,10 +55,10 @@ Hvis dit abonnement indeholder et af følgende produkter, kan hver person instal
 Følgende tabel viser, hvad der automatisk sker, når du tildeler en licens til en person:
   
 |Hvis abonnementet har denne tjeneste|Dette sker automatisk|
-|:-----|:-----|
-|Exchange Online|Der oprettes en postkasse for den pågældende person. <br/> Hvis du vil vide mere om SLA'en for, at denne opgave kan fuldføres, skal du se ["Konfiguration..." meddelelser i Microsoft 365 Administration](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center). |
+|---|---|
+|Exchange Online|Der oprettes en postkasse for den pågældende person. <br/> Hvis du vil vide mere om SLA'en for, at denne opgave kan fuldføres, skal du se ["Konfiguration..." meddelelser i Microsoft 365 Administration](https://support.microsoft.com/help/2635238/setting-up-messages-in-the-office-365-admin-center).|
 |SharePoint Online|Redigeringstilladelser til standardwebstedet for SharePoint Onlineteam tildeles til den pågældende person.|
-|Skype for Business Online|Personen har adgang til de funktioner, der er knyttet til licensen.|
+|Microsoft Teams|Personen har adgang til de funktioner, der er knyttet til licensen.|
 |Microsoft 365 Apps for enterprise og Microsoft 365 Apps for business|Personen kan downloade Office apps på op til fem Macs eller pc'er, fem tablets og fem smartphones.|
 
 ## <a name="understand-licenses-for-non-user-mailboxes"></a>Forstå licenser til postkasser, der ikke er bruger
@@ -74,7 +74,7 @@ Du behøver ikke at tildele licenser til ressourcepostkasser, lokalepostkasser o
 Forskellige typer administratorer kan arbejde med licenser på forskellige måder, afhængigt af deres roller. I følgende tabel vises de mest almindelige indstillinger. Du kan se en komplet liste over administratorroller og -rettigheder under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   
 |Administratorrolle|Tildel en licens|Fjern tildelingen af en licens|Køb flere licenser|Slet en konto|
-|:-----|:-----|:-----|:-----|:-----|
+|---|:---:|:---:|:---:|:---:|
 |Faktureringsadministrator|Nej|Nej|Ja|Nej|
 |Global administrator|Ja|Ja|Ja|Ja|
 |Licensadministrator|Ja|Ja|Nej|Nej|

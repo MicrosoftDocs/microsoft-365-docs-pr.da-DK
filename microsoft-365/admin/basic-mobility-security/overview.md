@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Administrer og sikker mobilenheder, der er forbundet til din Microsoft 365 organisation, ved at konfigurere og bruge Grundlæggende mobilitet og sikkerhed.
-ms.openlocfilehash: 9a9b3d433408d4ce5225f1a74351d01150744132
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+ms.openlocfilehash: 15f9c1f64f43c57de41082962bfc1741b40aa0dd
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863200"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042226"
 ---
 # <a name="overview-of-basic-mobility-and-security-for-microsoft-365"></a>Oversigt over grundlæggende mobilitet og sikkerhed for Microsoft 365
 
@@ -34,7 +34,7 @@ Du kan administrere og sikre mobilenheder, når de har forbindelse til din Micro
 
 ## <a name="what-types-of-devices-can-you-manage"></a>Hvilke typer enheder kan du administrere?
 
-Du kan bruge Basic Mobility og Security til at administrere mange typer mobilenheder, f.eks. Windows Phone, Android, iPhone og iPad. Hvis du vil administrere mobilenheder, der bruges af personer i din organisation, skal hver person have en relevant Microsoft 365 licens, og deres enhed skal være tilmeldt Basic Mobility and Security.
+Du kan bruge Basic Mobility og Security til at administrere mange typer mobilenheder, f.eks. Android, iPhone og iPad. Hvis du vil administrere mobilenheder, der bruges af personer i din organisation, skal hver person have en relevant Microsoft 365 licens, og deres enhed skal være tilmeldt Basic Mobility and Security.
 
 Hvis du vil se, hvad Basic Mobility og Security understøtter for hver type enhed, skal du se [Egenskaber for grundlæggende mobilitet og sikkerhed](capabilities.md).
 
@@ -46,7 +46,7 @@ Her er en oversigt over trinnene:
 
 **Trin 1:** Aktivér Grundlæggende mobilitet og sikkerhed ved at følge trinnene i [Konfigurer grundlæggende mobilitet og sikkerhed](set-up.md).
 
-**Trin 2:** Konfigurer Basic Mobility og Security ved f.eks. at oprette et APN-certifikat for at administrere iOS-enheder og tilføje en DNS-post (Domain Name System) for dit domæne for at understøtte Windows telefoner.
+**Trin 2:** Konfigurer Basic Mobility og Security ved f.eks. at oprette et APN-certifikat for at administrere iOS-enheder og tilføje en DNS-post (Domain Name System) for dit domæne.
 
 **Trin 3:** Opret enhedspolitikker, og anvend dem på grupper af brugere. Når du gør dette, får brugerne en tilmeldingsmeddelelse på deres enhed, og når de har fuldført tilmeldingen, begrænses deres enheder af de politikker, du har konfigureret for dem. Du kan finde flere oplysninger under [Tilmeld din mobilenhed ved hjælp af Basic Mobility og Security](enroll-your-mobile-device.md). 
 

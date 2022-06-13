@@ -12,12 +12,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer kundenøgle.
-ms.openlocfilehash: 42c89c23f823f5f4297f31308516888633a1c06c
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 93cf56ba30f333697ccb1ef6f4064918e73d4fcf
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363164"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042434"
 ---
 # <a name="set-up-customer-key"></a>Konfigurer kundenøgle
 
@@ -25,7 +25,7 @@ ms.locfileid: "65363164"
 
 Med Kundenøgle kan du styre din organisations krypteringsnøgler og derefter konfigurere Microsoft 365 til at bruge dem til at kryptere inaktive data i Microsofts datacentre. Med andre ord giver Kundenøgle kunderne mulighed for at tilføje et krypteringslag, der tilhører dem, med deres nøgler.
 
-Konfigurer Azure, før du kan bruge Kundenøgle. I denne artikel beskrives de trin, du skal følge for at oprette og konfigurere de påkrævede Azure-ressourcer, og den indeholder derefter trinnene til konfiguration af kundenøgle. Når du har konfigureret Azure, bestemmer du, hvilken politik og derfor hvilke nøgler der skal tildeles for at kryptere data på tværs af forskellige Microsoft 365 arbejdsbelastninger i din organisation. Du kan få flere oplysninger om kundenøgle eller få en generel oversigt under [Tjenestekryptering med Microsoft Purview kundenøgle](customer-key-overview.md).
+Konfigurer Azure, før du kan bruge Kundenøgle. I denne artikel beskrives de trin, du skal følge for at oprette og konfigurere de påkrævede Azure-ressourcer, og den indeholder derefter trinnene til konfiguration af kundenøgle. Når du har konfigureret Azure, bestemmer du, hvilken politik og derfor hvilke nøgler der skal tildeles for at kryptere data på tværs af forskellige Microsoft 365 arbejdsbelastninger i din organisation. Du kan få flere oplysninger om kundenøgle eller få en generel oversigt under [Tjenestekryptering med Microsoft Purview-kundenøgle](customer-key-overview.md).
   
 > [!IMPORTANT]
 > Vi anbefaler på det kraftigste, at du følger de bedste fremgangsmåder i denne artikel. Disse kaldes **tip** og **VIGTIGT**. Kundenøgle giver dig kontrol over rodkrypteringsnøgler, hvis omfang kan være så stort som hele organisationen. Det betyder, at fejl, der er foretaget med disse nøgler, kan have en bred indvirkning og kan medføre afbrydelser i tjenesten eller uigenkaldeligt tab af dine data.
@@ -107,7 +107,7 @@ Hvis du vil indsende et tilbud om at aktivere Kundenøgle, skal du udføre disse
 
 2. Når du er logget på, skal du vælge det relevante domæne.
 
-3. For det valgte domæne skal du vælge **Anmod om tjenester** på den øverste navigationslinje og gennemse listen over tilgængelige tilbud.
+3. For det valgte domæne skal du vælge **Installér** på den øverste navigationslinje og gennemse listen over tilgængelige tilbud.
 
 4. Vælg oplysningskortet for det tilbud, der gælder for dig:
 
@@ -146,7 +146,7 @@ Det midlertidige eller permanente tab af rodkrypteringsnøgler kan være forstyr
 
 - Kontakt [spock@microsoft.com](mailto:spock@microsoft.com) for at aktivere kundenøglen for tildeling af DEP'er for at kryptere SharePoint Online- og OneDrive for Business-indhold (herunder Teams filer) for alle lejerbrugere.
 
-- Kontakt [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com) for at aktivere kundenøglen for tildeling af dep'er for at kryptere indhold på tværs af flere Microsoft 365 arbejdsbelastninger (Exchange Online, Teams, Microsoft Purview Information Protection).
+- Kontakt [m365-ck@service.microsoft.com](mailto:m365-ck@service.microsoft.com), hvis du vil aktivere kundenøgle til tildeling af DEP'er for at kryptere indhold på tværs af flere Microsoft 365 arbejdsbelastninger (Exchange Online, Teams, Microsoft Purview Information Protection) for alle lejerbrugere.
 
 - Medtag følgende oplysninger i din mail:
 
@@ -234,7 +234,7 @@ Du skal definere tre separate sæt tilladelser for hver key vault, afhængigt af
    - *vault name* er navnet på den key vault, du har oprettet.
    - Erstat *Office 365 appID med for Exchange Online og Skype for Business*`00000002-0000-0ff1-ce00-000000000000`
    - I forbindelse med SharePoint Online-, OneDrive for Business- og Teams-filer skal *du erstatte Office 365 appID* med`00000003-0000-0ff1-ce00-000000000000`
-   - I forbindelse med en politik med flere arbejdsbelastninger (Exchange, Teams, Microsoft Purview Information Protection), der gælder for alle lejerbrugere, skal du erstatte *Office 365 appID* med`c066d759-24ae-40e7-a56f-027002b5d3e4`
+   - I forbindelse med en politik med flere arbejdsbelastninger (Exchange, Teams, Microsoft Purview Information Protection), der gælder for alle lejerbrugere, skal *du erstatte Office 365 appID* med`c066d759-24ae-40e7-a56f-027002b5d3e4`
 
   Eksempel: Angivelse af tilladelser for Exchange Online og Skype for Business:
 

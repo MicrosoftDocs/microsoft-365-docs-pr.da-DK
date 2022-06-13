@@ -14,12 +14,12 @@ ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
 description: Find, test og udrul Microsoft- og Microsoft-partnerapps til brugere og grupper i din organisation fra portalen integrerede apps i Microsoft 365 Administration.
-ms.openlocfilehash: 491315b36a7698399bcd22c60173db8cec482148
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 7d28f541c319622a4c15ac4eb4619b805cd0f13b
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094654"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043160"
 ---
 # <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Test og udrul Microsoft 365 Apps af partnere på portalen integrerede apps
 
@@ -60,7 +60,7 @@ Du kan administrere test og udrulning af købte og licenserede Microsoft 365 App
 
 Du kan finde, teste og udrulle udgivne apps, der ikke allerede vises på listen på siden Integrerede apps. Ved at købe og licensere apps fra Administration kan du føje Microsoft- og Microsoft-partnerapps til din liste fra en enkelt placering.
 
-1. Vælg **Indstillinger** i venstre navigationsrude i Administration, og vælg derefter <a href="https://go.microsoft.com/fwlink/p/?linkid=2125823" target="_blank">**Integrerede apps**</a>.
+1. Vælg **Indstillinger** i venstre navigationsrude i Administration, og vælg derefter <a href="https://admin.microsoft.com/adminportal/home?#/Settings/IntegratedApps" target="_blank">**Integrerede apps**</a>.
 
 2. Vælg **Hent apps** for at få vist appsene.
 
@@ -86,8 +86,8 @@ Du kan finde, teste og udrulle udgivne apps, der ikke allerede vises på listen 
 Du kan ikke udrulle en enkelt store-app eller Microsoft 365 Apps af partner fra portalen integrerede apps til følgende scenarier.
 
 - Det samme tilføjelsesprogram er knyttet til mere end ét SaaS-tilbud.
-- SaaS-tilbuddet er knyttet til tilføjelsesprogrammer, men det integreres ikke med Microsoft Graph, og der er ikke angivet noget AAD app-id.
-- SaaS-tilbuddet er knyttet til tilføjelsesprogrammer, men AAD app-id, der leveres til Microsoft Graph integration, deles på tværs af flere SaaS-tilbud.
+- SaaS-tilbuddet er knyttet til tilføjelsesprogrammer, men det integreres ikke med Microsoft Graph, og der er ikke angivet noget AAD-app-id.
+- SaaS-tilbuddet er knyttet til tilføjelsesprogrammer, men AAD-app-id, der leveres til Microsoft Graph integration, deles på tværs af flere SaaS-tilbud.
 
 ## <a name="upload-custom-line-of-business-apps-for-testing-and-full-deployment"></a>Upload brugerdefinerede line of business-apps til test og fuld udrulning
 

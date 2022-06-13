@@ -1,5 +1,5 @@
 ---
-title: Sådan konfigurerer du karantænetilladelser og -politikker
+title: Sådan konfigureres karantænetilladelser og -politikker
 description: Trinnene til at konfigurere karantænepolitikker og -tilladelser på tværs af forskellige grupper, herunder AdminOnlyPolicy, begrænset adgang, fuld adgang og give sikkerhedsadministratorer og brugere en nem måde at administrere falske positive mapper på.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: d2a3de0af3e824fcc8276bd339469253d1e3588c
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: c8f739a82223a9315e5082377b4951a88b1ea1df
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842379"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043668"
 ---
-# <a name="how-to-configure-quarantine-permissions-and-policies"></a>Sådan konfigurerer du karantænetilladelser og -politikker
+# <a name="how-to-configure-quarantine-permissions-and-policies"></a>Sådan konfigureres karantænetilladelser og -politikker
 
 Det er vigtigt at give sikkerhedsadministratorer og brugere en meget enkel måde at administrere falske positive mapper på i betragtning af den øgede efterspørgsel efter en mere aggressiv sikkerhedsholdning med udviklingen af hybridarbejde. Ved hjælp af en præskriptiv tilgang kan administratorer og brugere opnå dette med vejledningen nedenfor.
 
@@ -37,7 +37,7 @@ Det er vigtigt at give sikkerhedsadministratorer og brugere en meget enkel måde
 
 ## <a name="creating-custom-quarantine-policies-with-request-release-flow"></a>Oprettelse af brugerdefinerede karantænepolitikker med anmodningsfrigivelsesflow
 
-Vores brugerdefinerede politik giver administratorer mulighed for at beslutte, hvilke elementer deres brugere kan prioritere i mappen ***Falsk positiv** _ med udvidet mulighed for at give brugeren mulighed for at anmode om _release* af disse elementer fra mappen.
+Vores brugerdefinerede politikker giver administratorer mulighed for at beslutte, hvilke elementer deres brugere kan prioritere i mappen ***Falsk positiv** _ med udvidet mulighed for at give brugeren mulighed for at anmode om _release* af disse elementer fra mappen.
 
 1. Beslut, hvilke domme kategori (bulk, spam, phish, høj tillid phish, eller malware) af elementer, du vil have din bruger til at triage og ikke triage.
 1. For de kategorier, som du ikke ønsker, at brugerne skal triage, skal du tildele elementerne til **AdminOnlyPolicy**. Hvad angår den kategori, du vil have, at brugerne skal triage med begrænset adgang, kan du *oprette en brugerdefineret politik* med adgang til anmodningsfrigivelse og tildele brugere til den pågældende kategori.
@@ -46,11 +46,11 @@ Vores brugerdefinerede politik giver administratorer mulighed for at beslutte, h
 > [!IMPORTANT]
 > Du kan finde flere oplysninger om, hvordan detaljerede brugerdefinerede politikker kan oprettes, under [Karantænepolitikker – Office 365 | Microsoft Docs](../../office-365-security/quarantine-policies.md).
 
-## <a name="assigning-quarantine-polices-and-enabling-notification-with-organization-branding"></a>Tildeling af karantænepoliti og aktivering af meddelelser med organisationsbranding
+## <a name="assigning-quarantine-policies-and-enabling-notification-with-organization-branding"></a>Tildeling af karantænepolitikker og aktivering af meddelelser med organisationsbranding
 
-Når det er besluttet, hvilke kategorier af elementer brugerne kan triage eller ikke-triage, og oprettede de tilsvarende karantænepolitikker, skal administratorer tildele disse politikker til de respektive brugere og aktivere meddelelser.
+Når det er besluttet, hvilke kategorier af elementer brugerne kan triage eller ikke-triage, og har oprettet de tilsvarende karantænepolitikker, skal administratorer tildele disse politikker til de respektive brugere og aktivere meddelelser.
 
-1. Identificer de brugere, grupper eller domæner, du vil medtage i kategorien *med fuld adgang* i forhold til den *begrænsede adgangskategori* i forhold til kategorien *kun Administration*.
+1. Identificer de brugere, grupper eller domæner, du vil medtage i kategorien *fuld adgang* i forhold til kategorien *begrænset adgang* i forhold til kategorien *Kun administrator* .
 1. Log på [Microsoft Security-portalen](https://security.microsoft.com).
 1. Vælg **Mail & samarbejdspolitikker** > **& regler**.
 1. Vælg **Trusselspolitikker**.

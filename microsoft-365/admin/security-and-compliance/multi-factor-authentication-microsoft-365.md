@@ -25,12 +25,12 @@ search.appverid:
 ms.assetid: 043807b2-21db-4d5c-b430-c8a6dee0e6ba
 ROBOTS: NOINDEX, NOFOLLOW
 description: Multifaktorgodkendelse (MFA) bruger både en adgangskode, som skal være stærk, og en yderligere kontrolmetode.
-ms.openlocfilehash: f939b187fc81381dae4959fdf14280bc839dadb0
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: cabb7d3efc6d99c69e7e125c9170ac7367fc3929
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739865"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044054"
 ---
 # <a name="multifactor-authentication-for-microsoft-365"></a>Multifaktorgodkendelse for Microsoft 365
 
@@ -170,7 +170,7 @@ I Azure Portal kan du:
 - Aktivér og deaktiver sikkerhedsstandarder
 - Konfigurer politikker for betinget adgang
 
-I Microsoft 365 Administration kan du konfigurere <a href="https://go.microsoft.com/fwlink/p/?linkid=2169174" target="_blank">MFA-indstillinger</a> pr. bruger og tjeneste.
+I Microsoft 365 Administration kan du konfigurere <a href="https://go.microsoft.com/fwlink/?LinkId=279980" target="_blank">MFA-indstillinger</a> pr. bruger og tjeneste.
 
 ## <a name="next-steps"></a>Næste trin
 

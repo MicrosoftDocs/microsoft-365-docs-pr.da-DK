@@ -1,5 +1,5 @@
 ---
-title: Forbind Microsoft Defender for Office 365 til Microsoft Sentinel
+title: Opret forbindelse mellem Microsoft Defender for Office 365 og Microsoft Sentinel
 description: Trinnene til at oprette forbindelse Microsoft Defender for Office 365 til Sentinel. Føj dine Microsoft Defender for Office 365 data (*og* data fra resten af Microsoft 365 Defender-pakken), herunder hændelser, til Microsoft Sentinel for at få et enkelt glasrude i din sikkerhed.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: ffd954e3bffb7d1781db5b7d0b4819f47aeede39
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: dbdb4c93ea010959c8f2eae61f9add8ea853d2b1
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842389"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043744"
 ---
-# <a name="connect-microsoft-defender-for-office-365-to-microsoft-sentinel"></a>Forbind Microsoft Defender for Office 365 til Microsoft Sentinel
+# <a name="connect-microsoft-defender-for-office-365-to-microsoft-sentinel"></a>Opret forbindelse mellem Microsoft Defender for Office 365 og Microsoft Sentinel
 
 Du kan overføre dine Microsoft Defender for Office 365 data (*og* data fra resten af Microsoft 365 Defender-pakken), herunder hændelser, til Microsoft Sentinel.
 
@@ -34,7 +34,7 @@ Udnyt den omfattende administration af sikkerhedsoplysninger (SIEM) kombineret m
 > Den Microsoft 365 Defender connector er i øjeblikket **en prøveversion**. Se Supplerende vilkår for anvendelse for Microsoft Azure-prøveversioner for at få yderligere juridiske vilkår, der gælder for Azure-funktioner, der er i beta, prøveversion eller på anden måde endnu ikke er offentligt tilgængelige.>
 
 ## <a name="what-you-will-need"></a>Det skal du bruge
-- Microsoft Defender for Office 365 Plan 2 eller nyere.
+- Microsoft Defender for Office 365 Plan 2 eller nyere. (Inkluderet i E5-planer)
 - Microsoft Sentinel [Quickstart-vejledning](/azure/sentinel/quickstart-onboard).
 - Tilstrækkelige tilladelser (sikkerhedsadministrator i M365 & læse-/skrivetilladelser i Sentinel).
 

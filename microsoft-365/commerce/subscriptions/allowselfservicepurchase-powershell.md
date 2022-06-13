@@ -18,40 +18,40 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Få mere at vide om, hvordan du bruger AllowSelfServicePurchase PowerShell-cmdlet'en til at slå selvbetjeningskøb til eller fra.
+description: Få mere at vide om, hvordan du bruger PowerShell-cmdlet'en AllowSelfServicePurchase til at slå køb via selvbetjening til eller fra.
 ROBOTS: NOINDEX, NOFOLLOW
-ms.date: 12/15/2021
-ms.openlocfilehash: a3800f82386fafe509d9bdabb25cd91422cf058d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.date: 4/7/2022
+ms.openlocfilehash: e4423892f2dc045a9729e68519c85d471838d5ac
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63587953"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042181"
 ---
 # <a name="use-allowselfservicepurchase-for-the-mscommerce-powershell-module"></a>Brug AllowSelfServicePurchase til MSCommerce PowerShell-modulet
 
-**Modulet MSCommerce** PowerShell er nu tilgængeligt i [PowerShell-galleriet](https://aka.ms/allowselfservicepurchase-powershell-gallery). Modulet indeholder en **PolicyID-parameterværdi** for **AllowSelfServicePurchase** , der giver dig mulighed for at kontrollere, om brugerne i organisationen kan foretage selvbetjeningskøb.
+**MSCommerce PowerShell-modulet** er nu tilgængeligt i [PowerShell-galleriet](https://aka.ms/allowselfservicepurchase-powershell-gallery). Modulet indeholder en **PolicyID-parameterværdi** for **AllowSelfServicePurchase** , der giver dig mulighed for at styre, om brugere i din organisation kan foretage køb via selvbetjening.
 
-Du kan bruge **MSCommerce** PowerShell-modulet til at:
+Du kan bruge **MSCommerce PowerShell-modulet** til at:
 
-- Få vist standardtilstanden for **parameterværdien AllowSelfServicePurchase** – uanset om den er aktiveret eller deaktiveret
-- Få vist en liste over relevante produkter, og om selvbetjeningskøb er aktiveret eller deaktiveret
+- Få vist standardtilstanden for parameterværdien **AllowSelfServicePurchase** – uanset om den er aktiveret eller deaktiveret
+- Få vist en liste over relevante produkter, og om køb via selvbetjening er aktiveret eller deaktiveret
 - Få vist eller rediger den aktuelle indstilling for et bestemt produkt for enten at aktivere eller deaktivere det
 
 ## <a name="requirements"></a>Krav
 
-Hvis du vil bruge **modulet MSCommerce** PowerShell, skal du bruge:
+Hvis du vil bruge **MSCommerce PowerShell-modulet** , skal du bruge:
 
 - En Windows 10 enhed
-- PowerShell 5 eller nedenfor. PowerShell 6.x/7.x understøttes i øjeblikket ikke med dette modul.
-- Administratortilladelse for enheden
-- Rollen global administrator eller faktureringsadministrator for din lejer
+- PowerShell 5 eller nyere. PowerShell 6.x/7.x understøttes i øjeblikket ikke i dette modul.
+- Administratortilladelse til enheden
+- Rolle som global administrator eller faktureringsadministrator for din lejer
 
-## <a name="install-the-mscommerce-powershell-module"></a>Installér modulet MSCommerce PowerShell
+## <a name="install-the-mscommerce-powershell-module"></a>Installér MSCommerce PowerShell-modulet
 
-Du skal installere **MSCommerce** PowerShell-modulet på din Windows 10 én gang og derefter importere det til hver PowerShell-session, du starter. Download **MSCommerce** PowerShell-modulet fra [PowerShell-galleriet](https://aka.ms/allowselfservicepurchase-powershell-gallery).
+Du installerer **MSCommerce** PowerShell-modulet én gang på din Windows 10 enhed og importerer det derefter til hver PowerShell-session, du starter. Download **MSCommerce** PowerShell-modulet fra [PowerShell-galleriet](https://aka.ms/allowselfservicepurchase-powershell-gallery).
 
-For at installere **MSCommerce** PowerShell-modulet med **PowerShellGet** skal du køre følgende kommando:
+Hvis du vil installere **MSCommerce PowerShell-modulet** med **PowerShellHent**, skal du køre følgende kommando:
 
 ```powershell
 Install-Module -Name MSCommerce
@@ -59,7 +59,7 @@ Install-Module -Name MSCommerce
 
 ## <a name="import-mscommerce-into-the-powershell-session"></a>Importér MSCommerce til PowerShell-sessionen
 
-Når du har installeret modulet på din Windows 10, skal du derefter importere det til hver PowerShell-session, du starter. Hvis du vil importere den til en PowerShell-session, skal du køre følgende kommando:
+Når du har installeret modulet på din Windows 10 enhed, importerer du det derefter til hver PowerShell-session, du starter. Kør følgende kommando for at importere den i en PowerShell-session:
 
 ```powershell
 Import-Module -Name MSCommerce
@@ -67,35 +67,35 @@ Import-Module -Name MSCommerce
 
 ## <a name="connect-to-mscommerce-with-your-credentials"></a>Forbind til MSCommerce med dine legitimationsoplysninger
 
-Kør følgende kommando for at oprette forbindelse til PowerShell-modulet med dine legitimationsoplysninger.
+Hvis du vil oprette forbindelse til PowerShell-modulet med dine legitimationsoplysninger, skal du køre følgende kommando.
 
 ```powershell
 Connect-MSCommerce
 ```
 
-Denne kommando forbinder den aktuelle PowerShell-session til en Azure Active Directory lejer. Kommandoen beder dig om et brugernavn og en adgangskode til den lejer, du vil oprette forbindelse til. Hvis multifaktorgodkendelse er aktiveret for dine legitimationsoplysninger, bruger du den interaktive mulighed for at logge på.
+Denne kommando forbinder den aktuelle PowerShell-session med en Azure Active Directory lejer. Kommandoen beder dig om et brugernavn og en adgangskode for den lejer, du vil oprette forbindelse til. Hvis multifaktorgodkendelse er aktiveret for dine legitimationsoplysninger, kan du bruge den interaktive indstilling til at logge på.
 
-## <a name="view-details-for-allowselfservicepurchase"></a>Vis detaljer for AllowSelfServicePurchase
+## <a name="view-details-for-allowselfservicepurchase"></a>Få vist oplysninger om AllowSelfServicePurchase
 
-Kør følgende kommando for at få vist en beskrivelse af parameterværdien **AllowSelfServicePurchase** og standardstatus baseret på organisationen:
+Kør følgende kommando for at få vist en beskrivelse af parameterværdien **AllowSelfServicePurchase** og standardstatussen baseret på din organisation:
 
 ```powershell
 Get-MSCommercePolicy -PolicyId AllowSelfServicePurchase
 ```
 
-## <a name="view-a-list-of-self-service-purchase-products-and-their-status"></a>Få vist en liste over selvbetjeningskøbsprodukter og deres status
+## <a name="view-a-list-of-self-service-purchase-products-and-their-status"></a>Få vist en liste over produkter til køb via selvbetjening og deres status
 
-Hvis du vil have vist en liste over alle tilgængelige produkter til selvbetjeningskøb og status for hver enkelt, skal du køre følgende kommando:
+Kør følgende kommando for at få vist en liste over alle tilgængelige produkter til køb via selvbetjening og status for hver enkelt:
 
 ```powershell
 Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase
 ```
 
-I følgende tabel vises de tilgængelige produkter og deres **Produkt-id**.
+I følgende tabel vises de tilgængelige produkter og deres **ProductId**.
 
-| Produkt | ProductId |
+| Produkt | Instruktion |
 |-----------------------------|--------------|
-| Power Apps pr. bruger | CFQ7TTC0KP0P |
+| Power Apps pr. bruger | CFQ7TTC0LH2H |
 | Power Automate pr. bruger | CFQ7TTC0KP0N |
 | Power Automate RPA | CFQ7TTC0KXG6  |
 | Power BI Premium (separat) | CFQ7TTC0KXG7  |
@@ -106,15 +106,15 @@ I følgende tabel vises de tilgængelige produkter og deres **Produkt-id**.
 | Visio Plan 2* | CFQ7TTC0HD32 |
 | Windows 365 Enterprise | CFQ7TTC0HHS9 |
 | Windows 365 Business | CFQ7TTC0J203 |
-| Windows 365 Business med Windows hybridfordel | CFQ7TTC0HX99 |
+| Windows 365 Business med Windows Hybrid-fordel | CFQ7TTC0HX99 |
 
-*Disse iD'er er blevet ændret. Hvis du tidligere har blokeret produkter ved hjælp af de gamle ID'er, blokeres de automatisk ved hjælp af de nye ID'er. Der kræves ikke yderligere arbejde.
+*Disse id'er er blevet ændret. Hvis du tidligere har blokeret produkter ved hjælp af de gamle id'er, blokeres de automatisk ved hjælp af de nye id'er. Der kræves ikke yderligere arbejde.
 
-## <a name="view-or-set-the-status-for-allowselfservicepurchase"></a>Få vist eller angive status for AllowSelfServicePurchase
+## <a name="view-or-set-the-status-for-allowselfservicepurchase"></a>Få vist eller angiv status for AllowSelfServicePurchase
 
 Når du har vist listen over produkter, der kan købes via selvbetjening, kan du få vist eller ændre indstillingen for et bestemt produkt.
 
-Kør følgende kommando for at få politikindstillingen for et bestemt produkt:
+Kør følgende kommando for at hente politikindstillingen for et bestemt produkt:
 
 ```powershell
 Get-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0KP0N
@@ -126,7 +126,7 @@ Kør følgende kommando for at aktivere politikindstillingen for et bestemt prod
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0KP0N -Enabled $True
 ```
 
-Kør følgende kommando for at deaktivere politikindstillingen for et bestemt produkt:
+Hvis du vil deaktivere politikindstillingen for et bestemt produkt, skal du køre følgende kommando:
 
 ```powershell
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ7TTC0KP0N -Enabled $False
@@ -134,16 +134,16 @@ Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ
 
 ## <a name="example-script-to-disable-allowselfservicepurchase"></a>Eksempelscript til deaktivering af AllowSelfServicePurchase
 
-I følgende eksempel kan du se, hvordan du importerer **modulet MSCommerce**, logger på med din konto, henter **ProductId'et** til Power Automate og derefter **deaktiverer AllowSelfServicePurchase** for det pågældende produkt.
+I følgende eksempel gennemgås, hvordan du importerer **MSCommerce-modulet**, logger på med din konto, henter **ProductId** for Power Automate pr. bruger og derefter deaktiverer **AllowSelfServicePurchase** for det pågældende produkt.
 
 ```powershell
 Import-Module -Name MSCommerce
 Connect-MSCommerce #sign-in with your global or billing administrator account when prompted
-$product = Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase | where {$_.ProductName -match 'Power Automate'}
+$product = Get-MSCommerceProductPolicies -PolicyId AllowSelfServicePurchase | where {$_.ProductName -match 'Power Automate per user'}
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId $product.ProductID -Enabled $false
 ```
 
-Hvis der er flere værdier for produktet, kan du køre kommandoen enkeltvis for hver værdi, som vist i følgende eksempel:
+Hvis der er flere værdier for produktet, kan du køre kommandoen enkeltvist for hver værdi som vist i følgende eksempel:
 
 ```powershell
 Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId $product[0].ProductID -Enabled $false
@@ -157,19 +157,19 @@ Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId $pr
 
 Du får vist følgende fejlmeddelelse:
 
-> HåndtagFejl: Politikken kunne ikke hentes med PolicyId 'AllowSelfServicePurchase', ErrorMessage – Den underliggende forbindelse blev lukket: Der opstod en uventet fejl ved en afsendelse.
+> HandleError: Politikken med PolicyId 'AllowSelfServicePurchase', ErrorMessage – Den underliggende forbindelse blev lukket: Der opstod en uventet fejl under en afsendelse.
 
-Dette kan skyldes en ældre version af TLS (Transport Layer Security). For at oprette forbindelse til denne tjeneste skal du bruge TLS 1.2 eller derover
+Dette kan skyldes en ældre version af Transport Layer Security (TLS). Hvis du vil oprette forbindelse til denne tjeneste, skal du bruge TLS 1.2 eller nyere
 
 ### <a name="solution"></a>Løsning
 
-Opgrader til TLS 1.2. Følgende syntaks opdaterer Sikkerhedsprotokol ServicePointManager til TLS1.2:
+Opgrader til TLS 1.2. Følgende syntaks opdaterer ServicePointManager-sikkerhedsprotokollen til TLS1.2:
 
 ```powershell
  [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 ```
 
-Du kan få mere at vide [under Sådan aktiveres TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2).
+Du kan få mere at vide under [Sådan aktiverer du TLS 1.2](/mem/configmgr/core/plan-design/security/enable-tls-1-2).
 
 <!--
 ## Uninstall the MSCommerce module
@@ -184,6 +184,6 @@ Uninstall-Module -Name MSCommerce
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Administrer selvbetjeningskøb (administrator)](manage-self-service-purchases-admins.md) (artikel)
+[Administrer køb via selvbetjening (administrator)](manage-self-service-purchases-admins.md) (artikel)
 
-[Ofte stillede spørgsmål om selvbetjeningskøb](self-service-purchase-faq.yml) (artikel)
+[Ofte stillede spørgsmål om køb via selvbetjening](self-service-purchase-faq.yml) (artikel)

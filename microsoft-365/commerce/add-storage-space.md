@@ -25,12 +25,12 @@ ms.custom:
 search.appverid: MET150
 description: Tilføj fillager i dit Microsoft 365-abonnement. Med ekstra fillager kan du gemme mere indhold i SharePoint.
 ms.date: 05/24/2022
-ms.openlocfilehash: a4a86966ccee1632f60b687696b9062ca3446778
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: bd0edd85718acc51559f5e409de4661a756cd787
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65678871"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043966"
 ---
 # <a name="add-more-sharepoint-storage-to-your-subscription"></a>Føj mere SharePoint lagerplads til dit abonnement
 
@@ -70,7 +70,7 @@ Hvis du endnu ikke har købt ekstra lagerplads til dit abonnement, kan du gøre 
 4. Hvis det er nødvendigt, skal du vælge basisabonnementet og derefter angive det antal gigabyte lagerplads, du vil tilføje.
 5. Vælg **Tjek ud nu**.
 6. På siden **Hvordan ser det ud?** skal du kontrollere antallet af gigabyte lagerplads, du har valgt, gennemse prisoplysningerne og derefter vælge **Næste**.
-7. Kontrollér totalen på siden **Komplet rækkefølge** . Hvis du har brug for at foretage ændringer, skal du vælge **Rediger rækkefølge**. Hvis ordren kræver en kreditkontrol, skal du markere afkrydsningsfeltet . Når du er færdig, skal du vælge **Place order** \> **Go to Administration Home**.
+7. Kontrollér totalen på siden **Komplet rækkefølge** . Hvis du har brug for at foretage ændringer, skal du vælge **Rediger rækkefølge**. Hvis ordren kræver en kreditkontrol, skal du markere afkrydsningsfeltet . Når du er færdig, skal du vælge **Afgiv ordre** \> **Gå til Startside for administrator**.
 
 ## <a name="increase-or-decrease-your-extra-storage"></a>Øg eller reducer din ekstra lagerplads
 
@@ -104,6 +104,7 @@ Ekstra fillager til Office 365 er tilgængelig for følgende abonnementer:
 - Microsoft 365 E3
 - Microsoft 365 E5
 - Microsoft 365 F1
+- Microsoft 365 F3
 
 > [!NOTE]
 > Ekstra fillager til Office 365 er også tilgængelig for planer med GCC, GCC High og DOD.

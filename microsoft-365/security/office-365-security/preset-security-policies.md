@@ -16,16 +16,16 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de anvender Standard- og Strict-politikindstillinger på tværs af beskyttelsesfunktionerne i Exchange Online Protection (EOP) og Microsoft Defender for Office 365
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 01fd969461b47b0208dcfd20ff608e829b6a3336
-ms.sourcegitcommit: dc415d784226c77549ba246601f34324c4f94e73
+ms.openlocfilehash: 06db733b50de51750d6c9f7b3dcf14f28cdff414
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64915967"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044381"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -85,18 +85,25 @@ Forudindstillede sikkerhedspolitikker bruger de tilsvarende politikker fra de fo
   > Politikker for udgående spam er ikke en del af forudindstillede sikkerhedspolitikker. Standardpolitikken for udgående spam beskytter automatisk medlemmer af forudindstillede sikkerhedspolitikker. Du kan også oprette brugerdefinerede politikker for udgående spam for at tilpasse beskyttelsen for medlemmer af forudindstillede sikkerhedspolitikker. Du kan få flere oplysninger under [Konfigurer filtrering af udgående spam i EOP](configure-the-outbound-spam-policy.md).
 
 - **Microsoft Defender for Office 365 politikker**: Dette omfatter organisationer med abonnementer på Microsoft 365 E5 eller Defender for Office 365 tilføjelsesprogrammer:
-  - Anti-phishing-politikker i Microsoft Defender for Office 365 med navnet **Standard Forudindstillet sikkerhedspolitik** og **Strict Preset Security Policy**, som omfatter:
+  - Anti-phishing-politikker i Defender for Office 365 med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy**, som omfatter:
     - De samme [spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings) , der er tilgængelige i EOP's anti-phishing-politikker.
     - [Repræsentationsindstillinger](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Avancerede tærskler for phishing](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
   - [Pengeskab Links-politikker](set-up-safe-links-policies.md) med navnet **Standard preset Security Policy**, **Strict Preset Security Policy** og **Indbygget beskyttelsespolitik**.
   - [Pengeskab politikker for vedhæftede filer](set-up-safe-attachments-policies.md) med navnet **Standardforudsenet sikkerhedspolitik**, **Streng forudindstillet sikkerhedspolitik** og **indbygget beskyttelsespolitik**.
 
-Du kan anvende EOP-beskyttelse på andre brugere end Microsoft Defender for Office 365 beskyttelse.
+Du kan anvende EOP-beskyttelse på andre brugere end Defender for Office 365 beskyttelse, eller du kan anvende EOP og Defender for Office 365 på de samme modtagere.
 
 ### <a name="policy-settings-in-preset-security-policies"></a>Politikindstillinger i forudindstillede sikkerhedspolitikker
 
 Du kan ikke ændre politikindstillingerne i beskyttelsesprofilerne. De angivne værdier for **standard**-, **strict****- og indbyggede beskyttelsespolitikindstillinger** er beskrevet i [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
+
+> [!NOTE]
+> I Defender for Office 365 beskyttelse skal du identificere afsenderne til [beskyttelse af brugerrepræsentation](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) og de interne eller eksterne domæner til [beskyttelse af domænerepræsentation](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+>
+> Alle domæner, som du ejer ([accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)), modtager automatisk beskyttelse mod repræsentation af domæner i forudindstillede sikkerhedspolitikker.
+>
+> Alle modtagere modtager automatisk repræsentationsbeskyttelse fra [postkasseintelligens](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) i forudindstillede sikkerhedspolitikker.
 
 ### <a name="order-of-precedence-for-preset-security-policies-and-other-policies"></a>Rangorden for forudindstillede sikkerhedspolitikker og andre politikker
 
@@ -135,26 +142,75 @@ Hvis der f.eks. findes en sikkerhedsindstilling i **Standardbeskyttelse** , og e
 
 2. På siden **Forudindstillede sikkerhedspolitikker** skal du klikke på **Administrer** i afsnittene **Standardbeskyttelse** eller **Streng beskyttelse** .
 
-3. Guiden **Anvend standardbeskyttelse** eller **Anvend streng beskyttelse** starter i et pop op-vindue. På **EOP-beskyttelserne gælder for siden skal** du identificere de interne modtagere, som [EOP-beskyttelsen](#policies-in-preset-security-policies) gælder for (modtagerbetingelser):
-   - **Brugere**
-   - **Grupper**
-   - **Domæner**
+3. Guiden **Anvend standardbeskyttelse** eller **Anvend streng beskyttelse** starter i et pop op-vindue.
 
-   Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
+   På siden **Anvend Exchange Online Protection skal du** identificere de interne modtagere, som [EOP-beskyttelsen](#policies-in-preset-security-policies) gælder for (modtagerbetingelser):
+   - **Alle modtagere**
+   - **Specifikke modtagere**:
+     - **Brugere**
+     - **Grupper**
+     - **Domæner**
 
-   For brugere eller grupper kan du bruge de fleste identifikatorer (navn, vist navn, alias, mailadresse, kontonavn osv.), men det tilsvarende viste navn vises i resultaterne. For brugere skal du angive en stjerne (\*) alene for at se alle tilgængelige værdier.
+     Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
 
-   - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+     For brugere eller grupper kan du bruge de fleste identifikatorer (navn, vist navn, alias, mailadresse, kontonavn osv.), men det tilsvarende viste navn vises i resultaterne. For brugere skal du angive en stjerne (\*) alene for at se alle tilgængelige værdier.
+
+   - **Ingen**
+
+   - **Udelad disse modtagere**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
 
    Klik på **Næste**, når du er færdig.
 
-4. I Microsoft Defender for Office 365 organisationer føres du til **den Defender for Office 365 beskyttelse gælder for** siden for at identificere de interne modtagere, som [den Microsoft Defender for Office 365 beskyttelse](#policies-in-preset-security-policies) gælder for ( modtagerbetingelser).
+   > [!NOTE]
+   > I organisationer uden Defender for Office 365 kommer du til siden **Gennemse**, når du klikker på **Næste**. De resterende trin/sider før siden **Gennemse** er kun tilgængelige i organisationer med Defender for Office 365.
+
+4. På siden **Anvend Defender for Office 365 beskyttelse** skal du identificere de interne modtagere, som [Defender for Office 365 beskyttelse gælder](#policies-in-preset-security-policies) for (modtagerbetingelser).
 
    Indstillingerne og funktionsmåden er præcis som **EOP-beskyttelserne gælder for** siden i det forrige trin.
 
+   Du kan også vælge **Tidligere valgte modtagere** for at bruge de samme modtagere, som du valgte til EOP-beskyttelse på den forrige side.
+
    Klik på **Næste**, når du er færdig.
 
-5. Kontrollér dine valg på siden **Gennemse og bekræft dine ændringer** , og klik derefter på **Bekræft**.
+5. Klik på **Næste** på siden **Repræsentationsbeskyttelse**.
+
+6. På siden **Føj mailadresser til flag, når de repræsenteres af personer med ondsindede hensigter** , skal du tilføje interne og eksterne afsendere, der er beskyttet af [beskyttelse mod brugerrepræsentation](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+
+   > [!NOTE]
+   > Alle modtagere modtager automatisk repræsentationsbeskyttelse fra [postkasseintelligens](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) i forudindstillede sikkerhedspolitikker.
+
+   Hver post består af et vist navn og en mailadresse. Angiv hver værdi i boksene, og klik derefter på **Tilføj**. Gentag dette trin så mange gange, det er nødvendigt.
+
+   Du kan maksimalt angive 350 brugere, og du kan ikke angive den samme bruger i beskyttelsesindstillinger for brugeridentificeret i flere politikker.
+
+   Hvis du vil fjerne et eksisterende element fra listen, skal du klikke på ![Fjern brugeren fra repræsentationsbeskyttelsesikonet.](../../media/m365-cc-sc-remove.png).
+
+   Klik på **Næste**, når du er færdig.
+
+7. På siden **Føj domæner til flag, når de repræsenteres af personer med ondsindede hensigter** , skal du tilføje interne og eksterne domæner, der er beskyttet af [beskyttelse mod repræsentation af domæner](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+
+   > [!NOTE]
+   > Alle domæner, som du ejer ([accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)), modtager automatisk beskyttelse mod repræsentation af domæner i forudindstillede sikkerhedspolitikker.
+
+   Alle afsendere i de angivne domæner er beskyttet af beskyttelse mod repræsentation af domæner.
+
+   Angiv domænet i feltet, og klik derefter på **Tilføj**. Gentag dette trin så mange gange, det er nødvendigt.
+
+   Hvis du vil fjerne en eksisterende post fra listen, skal du markere posten og derefter klikke på ![Fjern domæne fra repræsentationsbeskyttelsesikonet.](../../media/m365-cc-sc-remove.png).
+
+   Det maksimale antal domæner, du kan angive for beskyttelse mod identitet af domæner i alle politikker til bekæmpelse af phishing, er 50.
+
+   Klik på **Næste**, når du er færdig.
+
+8. På siden **Føj mailadresser og domæner, der er tillid til, til ikke at markere som repræsentation** skal du angive afsendermailadresser og domæner, der skal udelukkes fra repræsentationsbeskyttelse. Meddelelser fra disse afsendere vil aldrig blive markeret som et repræsentationsangreb, men afsenderne bliver stadig scannet af andre filtre i EOP og Defender for Office 365.
+
+   Angiv mailadressen eller domænet i feltet, og klik derefter på **Tilføj**. Gentag dette trin så mange gange, det er nødvendigt.
+
+   Hvis du vil fjerne en eksisterende post fra listen, skal du markere posten og derefter klikke på ![Fjern undtagelser fra repræsentationsbeskyttelsesikonet.](../../media/m365-cc-sc-remove.png).
+
+   Klik på **Næste**, når du er færdig.
+
+9. Kontrollér dine valg på siden **Gennemse og bekræft denne politik** , og klik derefter på **Bekræft**.
 
 ### <a name="use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies"></a>Brug Microsoft 365 Defender-portalen til at ændre tildelingerne af standard- og strenge forudindstillede sikkerhedspolitikker
 
@@ -177,7 +233,7 @@ Derfor anbefaler vi normalt ikke undtagelser fra den **indbyggede sikkerhedspoli
    - **Grupper**
    - **Domæner**
 
-   Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
+   Klik i det relevante felt, begynd at skrive en værdi, og vælg den ønskede værdi fra resultaterne. Gentag denne proces så mange gange, det er nødvendigt. Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern udeladelser fra ikonet indbygget beskyttelse.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.
 
    For brugere eller grupper kan du bruge de fleste identifikatorer (navn, vist navn, alias, mailadresse, kontonavn osv.), men det tilsvarende viste navn vises i resultaterne. For brugere skal du angive en stjerne (\*) alene for at se alle tilgængelige værdier.
 

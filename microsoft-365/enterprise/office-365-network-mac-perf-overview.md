@@ -15,12 +15,12 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Oversigt over netværksforbindelsen i Microsoft 365 Administration Center
-ms.openlocfilehash: 4d23990253b96e57df04411a2207d089c90711ca
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 19aa6beaf299a80b76753357e4cbe4f8f0966362
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621824"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66043823"
 ---
 # <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Netværksforbindelse i Microsoft 365 Administration Center
 
@@ -34,8 +34,8 @@ Microsoft 365 Administration Center indeholder nu samlede målepunkter for netv�
 > [!div class="mx-imgBorder"]
 > ![Siden Netværksydeevne.](../media/m365-mac-perf/m365-mac-perf-page-nav.png)
 
->[!NOTE]
->Netværksforbindelsen i Administration understøtter lejere i WW Commercial og Tyskland, men ikke GCC Moderate, GCC High, DoD eller China.
+> [!NOTE]
+> Netværksforbindelsen i Administration understøtter lejere i WW Commercial og Tyskland, men ikke GCC Moderate, GCC High, DoD eller China.
 
 Når du første gang navigerer til siden med netværksydeevne, skal du konfigurere dine placeringer for at få vist kortet over den globale netværksydeevne, en netværksvurdering, der er beregnet til hele lejeren, procentdelen af dine brugere, der arbejder eksternt i forhold til onsite, og en liste over aktuelle problemer, der skal udføres handlinger på og/eller for at undersøge yderligere. I oversigtsruden kan du foretage detailudledning for at få vist specifikke målepunkter for netværksydeevne og problemer efter placering. Du kan få flere oplysninger under [Oversigt over netværksydeevne i Microsoft 365 Administration Center](#network-connectivity-overview-in-the-microsoft-365-admin-center).
 
@@ -202,14 +202,46 @@ I CSV-filen vises en registreret byplacering i kolonnen userEntered som tom, og 
    > [!div class="mx-imgBorder"]
    > ![Meddelelse om klar CSV-import.](../media/m365-mac-perf/m365-mac-perf-import-ready.png)
 
+## <a name="cqd-tsv-import-for-lan-subnet-office-locations"></a>CQD TSV-import for OFFICE-undernetplaceringer
+
+Hvis du har uploadet byggedata til dit dashboard til opkaldskvalitet, kan du tilføje disse placeringer her for at begynde at vurdere deres netværksforbindelse. Dette påvirker ikke dine eksisterende placeringer.
+
+[Gå til Lejerdata Upload](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload) i Dashboard til opkaldskvalitet. Hvis du har uploadet dine byggedata, får du vist en mulighed for at downloade dem til en .tsv-fil. Download .tsv-filen fra Dashboard til opkaldskvalitet, og upload den derefter i CQD-pop op-vinduet ved at følge nedenstående trin. Hvis du vil oprette .tsv-filen manuelt, skal du justere skemaet i forhold til det i Upload oprette datafil eller i stedet prøve office-placeringerne for CSV-import til LAN-undernet.
+
+1. Klik på fanen **Placeringer** i hovedvinduet Forbindelse til Microsoft 365.
+
+2. Klik på knappen **Administrer flere placeringer** lige over listen over placeringer.
+
+   > [!div class="mx-imgBorder"]
+   > ![Administrer menuen flere placeringer.](../media/m365-mac-perf/m365-mac-perf-import-cqd-manage-multiple.png)
+
+3. Klik på **tilføj placeringer fra Dashboard til opkaldskvalitet**. Pop op-vinduet **Tilføj placeringer fra Dashboard til opkaldskvalitet** vises.
+
+   > [!div class="mx-imgBorder"]
+   > ![Tilføj placeringer fra pop op-vinduet Opkaldskvalitetsdashboard.](../media/m365-mac-perf/m365-mac-perf-import-cqd-add-locations.png)
+
+4. Klik på knappen **Gennemse** ud for feltet **Vælg en .tsv-fil, der skal overføres** , og vælg den gemte TSV-fil. Sørg for, at værdien i filen er tabulatorsepareret.
+
+5. Filen valideres automatisk og fortolkes på listen over Office-placeringer. Hvis der er valideringsfejl, vises der en liste over fejlene i pop op-vinduet **Vi kunne ikke overføre filen** .
+
+   > [!div class="mx-imgBorder"]
+   > ![Vi kunne ikke uploade dit fil-pop op-vindue.](../media/m365-mac-perf/m365-mac-perf-import-cqd-couldnt-upload.png)
+
+6. Hvis der ikke er nogen fejl i filen, får du vist meddelelsen: _Din filtest.tsv uploades og er klar. Vælg Importér for at overføre dine oplysninger._
+
+   > [!div class="mx-imgBorder"]
+   > ![Vælg en .tsc-fil, der skal overføres.](../media/m365-mac-perf/m365-mac-perf-import-cqd-select-tsv.png)
+
+7. Klik **på Upload** nederst i panelet for at uploade kontorplaceringerne.
+
 ## <a name="faq"></a>Ofte stillede spørgsmål
 
 ### <a name="what-is-a-microsoft-365-service-front-door"></a>Hvad er en Microsoft 365 hoveddør til service?
 
 Hoveddøren til Microsoft 365-tjenesten er et indgangspunkt på Microsofts globale netværk, hvor Office klienter og tjenester afslutter deres netværksforbindelse. Hvis du vil have en optimal netværksforbindelse til Microsoft 365, anbefales det, at netværksforbindelsen afbrydes til den nærmeste Microsoft 365 hoveddør.
 
->[!NOTE]
->Microsoft 365 front door-tjeneste har ingen direkte relation til det Azure Front Door Service-produkt, der er tilgængeligt på Azure Marketplace.
+> [!NOTE]
+> Microsoft 365 front door-tjeneste har ingen direkte relation til det Azure Front Door Service-produkt, der er tilgængeligt på Azure Marketplace.
 
 ### <a name="what-is-an-optimal-microsoft-365-service-front-door"></a>Hvad er en optimal Microsoft 365 service front door?
 

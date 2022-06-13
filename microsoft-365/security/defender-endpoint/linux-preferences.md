@@ -16,12 +16,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 2bc051baa8d2ac6df9e29f1679402e63c2774cac
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 6c39db3cceec62ef80cf19f34bbf3d89a219a4f3
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679302"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042970"
 ---
 # <a name="set-preferences-for-microsoft-defender-for-endpoint-on-linux"></a>Angiv indstillinger for Microsoft Defender for Endpoint på Linux
 
@@ -37,7 +37,7 @@ ms.locfileid: "65679302"
 > [!IMPORTANT]
 > Dette emne indeholder instruktioner til, hvordan du angiver indstillinger for Defender for Endpoint på Linux i virksomhedsmiljøer. Hvis du er interesseret i at konfigurere produktet på en enhed fra kommandolinjen, skal du se [Ressourcer](linux-resources.md#configure-from-the-command-line).
 
-I virksomhedsmiljøer kan Defender for Endpoint på Linux administreres via en konfigurationsprofil. Denne profil installeres fra det administrationsværktøj, du vælger. Indstillinger, der administreres af virksomheden, har forrang frem for dem, der er angivet lokalt på enheden. Med andre ord kan brugere i din virksomhed ikke ændre indstillinger, der er angivet via denne konfigurationsprofil.
+I virksomhedsmiljøer kan Defender for Endpoint på Linux administreres via en konfigurationsprofil. Denne profil installeres fra det administrationsværktøj, du vælger. Indstillinger, der administreres af virksomheden, har forrang frem for dem, der er angivet lokalt på enheden. Med andre ord kan brugere i din virksomhed ikke ændre indstillinger, der er angivet via denne konfigurationsprofil. Hvis der blev tilføjet udeladelser via den administrerede konfigurationsprofil, kan de kun fjernes via den administrerede konfigurationsprofil. Kommandolinjen fungerer for undtagelser, der er tilføjet lokalt.
 
 I denne artikel beskrives strukturen af denne profil (herunder en anbefalet profil, som du kan bruge til at komme i gang) og instruktioner til, hvordan du installerer profilen.
 
@@ -53,16 +53,11 @@ Det øverste niveau i konfigurationsprofilen omfatter indstillinger for hele pro
 
 Afsnittet *antivirusEngine* i konfigurationsprofilen bruges til at administrere indstillingerne for produktets antiviruskomponent.
 
-<br>
-
-****
-
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|antivirusEngine|
 |**Datatype**|Ordbog (indlejret indstilling)|
 |**Kommentarer**|Se følgende afsnit for at få en beskrivelse af indholdet i ordbogen.|
-|
 
 #### <a name="enforcement-level-for-antivirus-engine"></a>Håndhævelsesniveau for antivirusprogram
 
@@ -77,18 +72,12 @@ Angiver, hvordan antivirusprogrammet gennemtvinges. Der er tre værdier til angi
   - Automatisk afhjælpning af trusler er slået fra.
   - Opdateringer til sikkerhedsintelligens er slået til.
 
-<br>
-
-****
-
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|enforcementLevel|
 |**Datatype**|String|
 |**Mulige værdier**|real_time (standard) <p> on_demand <p> Passiv|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 101.10.72 eller nyere.|
-|
-
 
 #### <a name="enabledisable-behavior-monitoring"></a>Aktivér/deaktiver adfærdsovervågning 
 
@@ -102,16 +91,12 @@ Bestemmer, om funktionsmådeovervågning og -blokering er aktiveret på enheden 
 |---|---|
 |**Tast**|behaviorMonitoring|
 |**Datatype**|String|
-|**Mulige værdier**|deaktiveret (standard) <p> Aktiveret |
+|**Mulige værdier**|deaktiveret (standard) <p> Aktiveret|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 101.45.00 eller nyere.|
   
 #### <a name="run-a-scan-after-definitions-are-updated"></a>Kør en scanning, når definitioner er opdateret
 
 Angiver, om en processcanning skal startes, når nye sikkerhedsintelligensopdateringer er downloadet på enheden. Aktivering af denne indstilling udløser en antivirusscanning på de kørende processer på enheden.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -119,15 +104,10 @@ Angiver, om en processcanning skal startes, når nye sikkerhedsintelligensopdate
 |**Datatype**|Boolesk |
 |**Mulige værdier**|true (standard) <p> Falsk|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 101.45.00 eller nyere.|
-|
 
 #### <a name="scan-archives-on-demand-antivirus-scans-only"></a>Scan arkiver (kun antivirusscanninger efter behov)
 
 Angiver, om arkiver skal scannes under on-demand-antivirusscanninger.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -135,15 +115,10 @@ Angiver, om arkiver skal scannes under on-demand-antivirusscanninger.
 |**Datatype**|Boolesk |
 |**Mulige værdier**|true (standard) <p> Falsk|
 |**Kommentarer**|Tilgængelig i Microsoft Defender for Endpoint version 101.45.00 eller nyere.|
-|||
 
 #### <a name="degree-of-parallelism-for-on-demand-scans"></a>Graden af parallelitet for scanninger efter behov
 
 Angiver graden af parallelitet for scanninger efter behov. Dette svarer til antallet af tråde, der bruges til at udføre scanningen, og påvirker CPU-forbruget samt varigheden af scanningen efter behov.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -151,16 +126,10 @@ Angiver graden af parallelitet for scanninger efter behov. Dette svarer til anta
 |**Datatype**|Heltal|
 |**Mulige værdier**|2 (standard). Tilladte værdier er heltal mellem 1 og 64.|
 |**Kommentarer**|Tilgængelig i Microsoft Defender for Endpoint version 101.45.00 eller nyere.|
-|||
-  
 
 #### <a name="exclusion-merge-policy"></a>Politik for fletning af udeladelse
 
 Angiver flettepolitikken for udeladelser. Det kan være en kombination af administratordefinerede og brugerdefinerede udeladelser (`merge`) eller kun administratordefinerede udeladelser (`admin_only`). Denne indstilling kan bruges til at forhindre lokale brugere i at definere deres egne udeladelser.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -168,46 +137,31 @@ Angiver flettepolitikken for udeladelser. Det kan være en kombination af admini
 |**Datatype**|String|
 |**Mulige værdier**|flet (standard) <p> admin_only|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 100.83.73 eller nyere.|
-|
 
 #### <a name="scan-exclusions"></a>Scan udeladelser
 
 Enheder, der er blevet udelukket fra scanningen. Udeladelser kan angives af fulde stier, filtypenavne eller filnavne.
 (Udeladelser er angivet som en matrix af elementer. administratoren kan angive lige så mange elementer, som det er nødvendigt, i vilkårlig rækkefølge).
 
-<br>
-
-****
-
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|Udelukkelser|
 |**Datatype**|Ordbog (indlejret indstilling)|
 |**Kommentarer**|Se følgende afsnit for at få en beskrivelse af indholdet i ordbogen.|
-|
 
 ##### <a name="type-of-exclusion"></a>Type af udeladelse
 
 Angiver den type indhold, der er udeladt fra scanningen.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|$type|
 |**Datatype**|String|
 |**Mulige værdier**|excludedPath <p> excludedFileExtension <p> excludedFileName|
-|
 
 ##### <a name="path-to-excluded-content"></a>Sti til udeladt indhold
 
 Bruges til at udelade indhold fra scanningen ved hjælp af hele filstien.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -215,15 +169,10 @@ Bruges til at udelade indhold fra scanningen ved hjælp af hele filstien.
 |**Datatype**|String|
 |**Mulige værdier**|gyldige stier|
 |**Kommentarer**|Gælder kun, hvis *$type* er *udeladtPath*|
-|
 
 ##### <a name="path-type-file--directory"></a>Stitype (fil/mappe)
 
 Angiver, om *stiegenskaben* refererer til en fil eller mappe.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -231,15 +180,10 @@ Angiver, om *stiegenskaben* refererer til en fil eller mappe.
 |**Datatype**|Boolesk |
 |**Mulige værdier**|false (standard) <p> Sandt|
 |**Kommentarer**|Gælder kun, hvis *$type* er *udeladtPath*|
-|
 
 ##### <a name="file-extension-excluded-from-the-scan"></a>Filtypenavnet blev udelukket fra scanningen
 
 Bruges til at udelade indhold fra scanningen med filtypenavnet.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -247,15 +191,10 @@ Bruges til at udelade indhold fra scanningen med filtypenavnet.
 |**Datatype**|String|
 |**Mulige værdier**|gyldige filtypenavne|
 |**Kommentarer**|Gælder kun, hvis *$type* er *udeladtFileExtension*|
-|
 
 ##### <a name="process-excluded-from-the-scan"></a>Processen er udelukket fra scanningen*
 
 Angiver en proces, hvor alle filaktiviteter udelades fra scanning. Processen kan angives enten ved hjælp af dens navn (f.eks. `cat`) eller hele stien (f.eks. `/bin/cat`).
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -263,29 +202,19 @@ Angiver en proces, hvor alle filaktiviteter udelades fra scanning. Processen kan
 |**Datatype**|String|
 |**Mulige værdier**|en hvilken som helst streng|
 |**Kommentarer**|Gælder kun, hvis *$type* er *udeladtFileName*|
-|
 
 #### <a name="allowed-threats"></a>Tilladte trusler
 
 Liste over trusler (identificeret ved deres navn), der ikke er blokeret af produktet, og som i stedet har tilladelse til at køre.
 
-<br>
-
-****
-
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|allowedThreats|
 |**Datatype**|Matrix af strenge|
-|
 
 #### <a name="disallowed-threat-actions"></a>Ikke-tilladte trusselshandlinger
 
 Begrænser de handlinger, som den lokale bruger af en enhed kan foretage, når der registreres trusler. De handlinger, der er inkluderet på denne liste, vises ikke i brugergrænsefladen.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -293,37 +222,26 @@ Begrænser de handlinger, som den lokale bruger af en enhed kan foretage, når d
 |**Datatype**|Matrix af strenge|
 |**Mulige værdier**|allow (begrænser brugernes mulighed for at tillade trusler) <p> gendannelse (begrænser brugere i at gendanne trusler fra karantænen)|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 100.83.73 eller nyere.|
-|
 
 #### <a name="threat-type-settings"></a>Indstillinger for trusselstype
 
 Indstillingen *threatTypeSettings* i antivirusprogrammet bruges til at styre, hvordan visse trusselstyper håndteres af produktet.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|threatTypeSettings|
 |**Datatype**|Ordbog (indlejret indstilling)|
 |**Kommentarer**|Se følgende afsnit for at få en beskrivelse af indholdet i ordbogen.|
-|
 
 ##### <a name="threat-type"></a>Trusselstype
 
 Type af trussel, som funktionsmåden er konfigureret for.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|Nøglen|
 |**Datatype**|String|
 |**Mulige værdier**|potentially_unwanted_application <p> archive_bomb|
-|
 
 ##### <a name="action-to-take"></a>Handling, der skal udføres
 
@@ -333,24 +251,15 @@ Handling, der skal udføres, når der opstår en trussel af den type, der er ang
 - **Blok**: Enheden er beskyttet mod denne type trussel, og du får besked i sikkerhedskonsollen.
 - **Fra**: Enheden er ikke beskyttet mod denne type trussel, og der logføres intet.
 
-<br>
-
-****
-
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|Værdi|
 |**Datatype**|String|
 |**Mulige værdier**|audit (standard) <p> Blok <p> Ud|
-|
 
 #### <a name="threat-type-settings-merge-policy"></a>Politik for fletning af indstillinger for trusselstype
 
 Angiver flettepolitikken for indstillinger for trusselstyper. Dette kan være en kombination af administratordefinerede og brugerdefinerede indstillinger (`merge`) eller kun administratordefinerede indstillinger (`admin_only`). Denne indstilling kan bruges til at begrænse lokale brugere fra at definere deres egne indstillinger for forskellige trusselstyper.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -358,15 +267,10 @@ Angiver flettepolitikken for indstillinger for trusselstyper. Dette kan være en
 |**Datatype**|String|
 |**Mulige værdier**|flet (standard) <p> admin_only|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 100.83.73 eller nyere.|
-|
 
 #### <a name="antivirus-scan-history-retention-in-days"></a>Opbevaring af antivirusscanningshistorik (i dage)
 
 Angiv det antal dage, resultaterne bevares i scanningshistorikken på enheden. Gamle scanningsresultater fjernes fra oversigten. Gamle filer i karantæne, der også er fjernet fra disken.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -374,15 +278,10 @@ Angiv det antal dage, resultaterne bevares i scanningshistorikken på enheden. G
 |**Datatype**|String|
 |**Mulige værdier**|90 (standard). Tilladte værdier er fra 1 dag til 180 dage.|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 101.04.76 eller nyere.|
-|
 
 #### <a name="maximum-number-of-items-in-the-antivirus-scan-history"></a>Maksimalt antal elementer i historikken for antivirusscanning
 
 Angiv det maksimale antal poster, der skal bevares i scanningsoversigten. Poster omfatter alle scanninger efter behov, der er udført tidligere, og alle antivirusregistreringer.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
@@ -390,52 +289,36 @@ Angiv det maksimale antal poster, der skal bevares i scanningsoversigten. Poster
 |**Datatype**|String|
 |**Mulige værdier**|10000 (standard). Tilladte værdier er fra 5000 elementer til 15000 elementer.|
 |**Kommentarer**|Tilgængelig i Defender for Endpoint version 101.04.76 eller nyere.|
-|
 
 ### <a name="cloud-delivered-protection-preferences"></a>Indstillinger for skybaseret beskyttelse
 
 Posten *cloudService* i konfigurationsprofilen bruges til at konfigurere produktets skybaserede beskyttelsesfunktion.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|cloudService|
 |**Datatype**|Ordbog (indlejret indstilling)|
 |**Kommentarer**|Se følgende afsnit for at få en beskrivelse af indholdet i ordbogen.|
-|
 
 #### <a name="enable--disable-cloud-delivered-protection"></a>Aktivér/deaktiver cloudbaseret beskyttelse
 
 Bestemmer, om skybaseret beskyttelse er aktiveret på enheden eller ej. Hvis du vil forbedre sikkerheden for dine tjenester, anbefaler vi, at du holder denne funktion aktiveret.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|Aktiveret|
 |**Datatype**|Boolesk |
 |**Mulige værdier**|true (standard) <p> Falsk|
-|
 
 #### <a name="diagnostic-collection-level"></a>Niveau for indsamling af diagnosticering
 
 Diagnosticeringsdata bruges til at holde Defender for Endpoint sikker og opdateret, registrere, diagnosticere og løse problemer og også foretage produktforbedringer. Denne indstilling bestemmer niveauet af diagnosticering, der sendes af produktet til Microsoft.
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|diagnosticLevel|
 |**Datatype**|String|
 |**Mulige værdier**|valgfri (standard) <p> Kræves|
-|
 
 #### <a name="enable--disable-automatic-sample-submissions"></a>Aktivér/deaktiver automatiske eksempelindsendelser
 
@@ -445,31 +328,21 @@ Bestemmer, om mistænkelige eksempler (der sandsynligvis indeholder trusler) sen
 - **Pengeskab**: Der sendes kun mistænkelige eksempler, der ikke indeholder personidentificerbare oplysninger, automatisk. Dette er standardværdien for denne indstilling.
 - **Alle**: Alle mistænkelige eksempler sendes til Microsoft.
 
-<br>
-
-****
-
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|automaticSampleSubmissionConsent|
 |**Datatype**|String|
 |**Mulige værdier**|Ingen <p> safe (standard) <p> Alle|
-|
 
 #### <a name="enable--disable-automatic-security-intelligence-updates"></a>Aktivér/deaktiver automatiske sikkerhedsintelligensopdateringer
 
 Bestemmer, om sikkerhedsintelligensopdateringer installeres automatisk:
-
-<br>
-
-****
 
 |Beskrivelse|Værdi|
 |---|---|
 |**Tast**|automaticDefinitionUpdateEnabled|
 |**Datatype**|Boolesk |
 |**Mulige værdier**|true (standard) <p> Falsk|
-|
 
 ## <a name="recommended-configuration-profile"></a>Anbefalet konfigurationsprofil
 

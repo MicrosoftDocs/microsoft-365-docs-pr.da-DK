@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 96b1d512f89cafb782b348a0692fbf5c19902ebf
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: c67c709a36c07b947cd1b92abefcc7548acf8f3a
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842392"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66044304"
 ---
 # <a name="how-to-run-attack-simulations-for-your-team"></a>Sådan kører du angrebssimuleringer for dit team
 

@@ -1,5 +1,5 @@
 ---
-title: Sådan konfigurerer du automatiserede angreb og oplæring i oplæring i simulering af angreb
+title: Sådan konfigurerer du automatiserede angreb og træning i angrebssimuleringskurser
 description: Trinnene til at automatisere oplæring af angrebssimulering og sende en nyttedata til målbrugere. Ved at følge denne vejledning lærer du at oprette automatiserede angrebsflow med specifikke teknikker og nyttedata.
 search.product: ''
 search.appverid: ''
@@ -15,16 +15,16 @@ ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
 ms.collection: m365-guidance-templates
-ms.topic: article
+ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: 008d4fd4aeb4725a4c96c917e077c900af1741e2
-ms.sourcegitcommit: 7ab324551afac4fd82abc015247371ebfe6ccac2
+ms.openlocfilehash: ccf4222878777789fb7f89b6382c858eaad9f0c2
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65842380"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042139"
 ---
-# <a name="how-to-setup-automated-attacks-and-training-within-attack-simulation-training"></a>Sådan konfigurerer du automatiserede angreb og oplæring i oplæring i simulering af angreb
+# <a name="how-to-setup-automated-attacks-and-training-within-attack-simulation-training"></a>Sådan konfigurerer du automatiserede angreb og træning i angrebssimuleringskurser
 
 Oplæring af angrebssimulering giver dig mulighed for at køre godartede angrebssimuleringer i din organisation for at vurdere din phishing-risiko og lære dine brugere, hvordan de bedre kan undgå phishangreb. Ved at følge denne vejledning kan du konfigurere automatiserede flow med bestemte teknikker og nyttedata, der kører, når de angivne betingelser er opfyldt, og starte simuleringer mod din organisation.
 

@@ -9,12 +9,12 @@ metadata:
   ms.service: bookings
   ms.localizationpriority: medium
   description: Microsoft Bookings ofte stillede spørgsmål.
-  ms.openlocfilehash: 6a61179849e01f60e46a53f12f1ad5c125987527
-  ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+  ms.openlocfilehash: 1d966f6689bb242a49279cc4d2345b8a7f97d16a
+  ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/27/2022
-  ms.locfileid: "65096022"
+  ms.lasthandoff: 06/13/2022
+  ms.locfileid: "66043280"
 title: Microsoft Bookings ofte stillede spørgsmål
 summary: ''
 sections:
@@ -23,18 +23,18 @@ sections:
   - question: >
       Hvad er Microsoft Bookings?
     answer: >
-      Microsoft Bookings er en Microsoft 365 app, der gør det nemt at planlægge og administrere aftaler. Bookings inkluderer en webbaseret bookingkalender og integreres med Outlook for at optimere medarbejdernes kalender, hvilket giver dine kunder fleksibilitet til at booke et tidspunkt, der fungerer bedst for dem. Automatiserede meddelelsesmails reducerer antallet af no-shows, og organisationer sparer tid med en reduktion i gentagne planlægningsopgaver. Bookings hjælper dig med nemt at udføre virtuelle aftaler via Skype eller Microsoft Teams og hjælper dig med at administrere den daglige planlægning via Bookings-appen i Teams. Med indbygget tilpasning er Bookings designet til at opfylde behovene i flere dele af en organisation.
+      Microsoft Bookings er en Microsoft 365 app, der gør det nemt at planlægge og administrere aftaler. Bookinger inkluderer en webbaseret bookingkalender og integreres med Outlook for at optimere dine medarbejderes kalender, hvilket giver dine kunder fleksibilitet til at booke et tidspunkt, der fungerer bedst for dem. Automatiserede meddelelsesmails reducerer antallet af no-shows, og organisationer sparer tid med en reduktion i gentagne planlægningsopgaver. Bookinger hjælper dig med nemt at gennemføre virtuelle aftaler via Skype eller Microsoft Teams og hjælper dig med at administrere den daglige planlægning via Bookings-appen i Teams. Med indbygget mulighed for at tilpasse er Bookings designet til at opfylde behovene i flere dele af en organisation.
   - question: >
-      Er Bookings tilgængeligt for mit abonnement?
-    answer: "Bookings er tilgængelig med følgende abonnementer: \n- Office 365: A3, A5, E1, E3, E5, F1, F3, Office 365 drevet af 21Vianet.\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Basic, Business Standard, Business Premium. Du kan bruge Bookings med en medfølgende iOS- og Android-app. Bookings er ikke tilgængelig som en separat app. Outlook Web App eller Outlook på internettet skal være aktiveret til at bruge Bookings, da der gemmes data i Outlook.\n\nEn Bookings-licens giver fuld funktionalitet, herunder oprettelse og administration af kalendere. Brugerne kan få vist og redigere eksisterende kalendere, når disse brugere tilføjes som medarbejdere med rollen Administrator eller Fremviser.\n"
+      Er bookinger tilgængelige for mit abonnement?
+    answer: "Bookinger er tilgængelige med følgende abonnementer: \n- Office 365: A3, A5, E1, E3, E5, F1, F3, Office 365 drevet af 21Vianet.\n- Microsoft 365: A3, A5, E3, E5, F1, F3, Business Basic, Business Standard, Business Premium. Du kan bruge Bookings med en medfølgende iOS- og Android-app. Bookinger er ikke tilgængelige som en separat app. Outlook Web App eller Outlook på internettet skal være aktiveret for at bruge Bookings, da der gemmes data i Outlook.\n\nEn Bookings-licens giver fuld funktionalitet, herunder oprettelse og administration af kalendere. Brugerne kan få vist og redigere eksisterende kalendere, når disse brugere tilføjes som medarbejdere med rollen Administrator eller Fremviser.\n"
   - question: >
       Hvordan gør jeg bruge Microsoft Bookings?
     answer: >
-      Bookings er en onlinetjeneste, så du behøver ikke at downloade noget. Du skal blot gå til appvælgeren i Microsoft 365 weboplevelse. Administratorer kan også bruge Bookings medfølgende app til at holde sig ajour med de nyeste oplysninger om kunder og deres aftaler.
+      Bookinger er en onlinetjeneste, så du behøver ikke at downloade noget. Du skal blot gå til appvælgeren i Microsoft 365 weboplevelse. Administratorer kan også bruge appen Bookings companion til at holde sig ajour med de nyeste oplysninger om kunder og deres aftaler.
   - question: >
       Kan mine kunder se min personlige kalender eller virksomhedskalender?
     answer: >
-      Dine kunder kan kun se den Bookings kalender, som du publicerer online for de tjenester, tidspunkter og medarbejdere, du vælger.
+      Dine kunder kan kun se bookingkalenderen, som du publicerer online for de tjenester, tidspunkter og personale, du vælger.
   - question: >
       Hvordan gør jeg ændre en reserverbar attribut under Administrer personale?
     answer: >
@@ -46,33 +46,37 @@ sections:
   - question: >
       Kan jeg bruge Bookings på mit eget websted?
     answer: >
-      Ja. Vi giver dig mulighed for at integrere din Bookings kalender på dit websted via en iFrame. Koden til integrering af links findes under fanen **Bookings side** i Bookings-appen.
+      Ja. Vi giver dig mulighed for at integrere din Bookings-kalender på dit websted via en iFrame. Koden til integrering af links findes under **fanen Bookings-siden** i appen Bookings.
   - question: >
       Kan jeg bruge Bookings, selvom jeg ikke har en webside til min virksomhed?
     answer: >
       Ja. Vi angiver et link til din bookingside under fanen **Bookingside** i webappen. Du skal blot angive dette link til dine kunder eller kunder, så får de vist oplysninger om den seneste tilgængelighed for din virksomhed. Alternativt kan du dele bookingsiden på sociale medier eller endda bruge integreringsfunktionen til at hoste den i en iFrame. Du har også mulighed for at styre, hvem der kan få adgang til siden ved at deaktivere direkte søgemaskineindeksering og begrænse adgangen til dem, der kun findes i din organisation.
   - question: >
-      Kan vores it-afdeling styre, om slutbrugerne har adgang til Bookings?
+      Kan vores it-afdeling kontrollere, om slutbrugerne har adgang til Bookings?
     answer: >
       Administratorer kan slå Bookings fra i Microsoft 365 Administration, hvis de vælger det. Det gør du ved [at følge disse instruktioner](turn-bookings-on-or-off.md).
 
 
-      Hvis en kunde vil deaktivere adgang til Bookings for visse berettigede licenser i sin lejer, kan vedkommende enten bruge en gruppepolitik til at begrænse licenser eller implementere en OWA-postkassepolitik, der begrænser, hvem der kan oprette nye Bookings kalendere.
+      Hvis en kunde ønsker at deaktivere adgang til Bookings for visse berettigede licenser i sin lejer, kan vedkommende enten bruge en gruppepolitik til at begrænse licenser eller implementere en OWA-postkassepolitik, der begrænser, hvem der kan oprette nye Bookings-kalendere.
 
 
-      Hvis du bruger en OWA-postkassepolitik til at deaktivere adgang til Bookings, har alle brugere en Bookings licens, men når de forsøger at få adgang til appen, lykkes de kun, hvis de er en del af politikken, eller hvis de er føjet til en eksisterende Bookings kalender som personale. Detaljer [her](turn-bookings-on-or-off.md) i afsnittet "Tillad kun udvalgte brugere at oprette Bookings kalendere".
+      Hvis du bruger en OWA-postkassepolitik til at deaktivere adgang til Bookings, har alle brugere en Bookings-licens, men når de forsøger at få adgang til appen, lykkes de kun, hvis de er en del af politikken, eller hvis de er føjet til en eksisterende Bookings-kalender som personale. Detaljer [her](turn-bookings-on-or-off.md) i afsnittet "Tillad kun udvalgte brugere at oprette Bookings-kalendere".
   - question: >
-      Kan Bookings tilpasses?
+      Kan jeg linke en betalingsmulighed til mine bookinger?
     answer: >
-      Ja, Bookings kan tilpasses og kan bruges til forskellige scenarier. Når du konfigurerer en Bookings kalender, kan mange aspekter af den webbaserede planlægningsside tilpasses dine forretningsoplysninger, medarbejderoplysninger, tjenestetyper og planlægningspolitikker.
+      Nej. Det Microsoft-ejede betalingssystem udgår.
   - question: >
-      Er al funktionalitet i den oprindelige Bookings webapp tilgængelig i Microsoft Teams?
+      Kan bookinger tilpasses?
     answer: >
-      En letvægtsversion af Bookings er nu tilgængelig som en app i Teams. Du kan finde flere oplysninger om den i [Oversigt over appen Bookings i Teams](https://support.microsoft.com/office/overview-of-the-bookings-app-in-teams-7b8569e1-0c8a-444e-b712-d9968b05110b). Der er omfattende linkfunktionalitet, som du kan åbne i webappen, og efter installationen kan den daglige brug af Bookings udføres uden at forlade Teams. Informationsflows på tværs af platforme.
+      Ja, Bookings kan tilpasses og kan bruges til forskellige scenarier. Når du konfigurerer en bookingkalender, kan mange aspekter af den webbaserede planlægningsside tilpasses dine forretningsoplysninger, medarbejderoplysninger, tjenestetyper og planlægningspolitikker.
   - question: >
-      Er Bookings et tilbud fra en lille virksomhed eller et Enterprise-tilbud eller begge dele?
+      Er al funktionalitet i den oprindelige Bookings-webapp tilgængelig i Microsoft Teams?
     answer: >
-      Bookings er en ideel løsning for både virksomhedskunder og mindre virksomheder på tværs af forskellige brancher. Use cases omfatter:
+      En letvægtsversion af Bookings er nu tilgængelig som en app i Teams. Du kan finde flere oplysninger om det i [Oversigt over Bookings-appen i Teams](https://support.microsoft.com/office/overview-of-the-bookings-app-in-teams-7b8569e1-0c8a-444e-b712-d9968b05110b). Der er omfattende linkfunktionalitet, som du kan åbne i webappen, og efter opsætningen kan den daglige brug af Bookings udføres uden at forlade Teams. Informationsflows på tværs af platforme.
+  - question: >
+      Er Bookings et tilbud på en lille virksomhed eller et Enterprise-tilbud eller begge dele?
+    answer: >
+      Bookings er en ideel løsning for både Enterprise- og small business-kunder på tværs af forskellige brancher. Use cases omfatter:
 
 
       - Finansielle tjenester
@@ -122,29 +126,29 @@ sections:
   - question: >
       Skal jeg overføre min mailkonto fra min aktuelle udbyder til Microsoft 365?
     answer: >
-      Du kan beholde din aktuelle udbyder, men Bookings sender alle meddelelser til den mail, der bruges i din Microsoft 365 konto.
+      Du kan beholde din nuværende udbyder, men Bookings sender alle meddelelser til den mail, der bruges på din Microsoft 365 konto.
   - question: >
       Kan mine medarbejdere bruge Bookings uden en Microsoft 365 konto?
     answer: >
       Ja. Du kan tilføje dine medarbejdere med en hvilken som helst mail, og de får stadig bekræftelse på mailen og kalenderinvitationen, når nogen booker en aftale med dem.
   - question: >
-      Kan jeg oprette mere end én Bookings kalender under den samme Microsoft 365 konto og skifte mellem dem?
+      Kan jeg oprette mere end én Bookings-kalender under den samme Microsoft 365 konto og skifte mellem dem?
     answer: >
-      Ja. Du kan oprette og administrere mere end én Bookings kalender med én konto. Du kan skifte mellem dem ved hjælp af indsætningsknappen ud for firmanavnet i Bookings webapp.
+      Ja. Du kan oprette og administrere mere end én Bookings-kalender med én konto. Du kan skifte mellem dem ved hjælp af indsætningsknappen ud for firmanavnet i Bookings Web app.
 - name: Produktfunktioner
   questions:
   - question: >
-      Hvor vises Bookings kalendere i min Microsoft 365 lejer?
+      Hvor vises bookingkalendere i min Microsoft 365 lejer?
     answer: >
-      Hver ny Bookings kalender opretter en tilsvarende postkasse i Exchange og en relateret post i Azure Active Directory (AAD), hvor posten er angivet som en bruger uden licens.
+      Hver ny Booking-kalender opretter en tilsvarende postkasse i Exchange og en relateret post i Azure Active Directory (AAD), hvor posten er angivet som en bruger uden licens.
   - question: >
-      Kan jeg slette en tidligere oprettet Bookings kalender?
+      Kan jeg slette en tidligere oprettet Bookings-kalender?
     answer: >
-      Hvis du vil slette en Bookings kalender, skal du slette den tilknyttede postkasse i Exchange.
+      Hvis du vil slette en Bookings-kalender, skal du slette den tilknyttede postkasse i Exchange.
   - question: >
       Hvis jeg opretter en kalender, og en anden har adgang til Bookings, kan vedkommende så se min kalender?
     answer: >
-      De eneste personer, der har adgang til Bookings kalendere, som du opretter (via webappen), er alle, der er blevet tilføjet som medarbejdere, enten i rollen Administrator eller Seer. Lejeradministratorer kan se en liste over alle Bookings postkasser i Exchange og AAD.
+      De eneste personer, der har adgang til Bookings-kalendere, som du opretter (via webappen), er alle, der er blevet tilføjet som personale, enten med rollen Administrator eller Seer. Lejeradministratorer kan se en liste over alle Bookings-postkasser i Exchange og AAD.
   - question: >
       Er videomødemøder integreret i Bookings-appen?
     answer: >
@@ -155,33 +159,33 @@ sections:
       En indstilling kaldet **Maksimal leveringstid** bestemmer den længste tid i forvejen (målt i dage), som en reservation kan foretages. Der skal være mindst 24 timer mellem **Den minimale leveringstid** (den minimale leveringstid, i timer for bookinger og annulleringer) og maksimal leveringstid. Den maksimale leveringstid kan angives til én dag, hvis Minimum leveringstid er angivet til 0 timer, hvilket i dette tilfælde betyder, at en kunde kan annullere en reservation indtil det tidspunkt, hvor den starter, og kunderne kan kun planlægge bookinger, hvis aftalen ligger inden for den næste dag.
 
 
-      :::image type="content" source="media/bookings-faq-scheduling.png" alt-text="Planlægning i Bookings":::
+      :::image type="content" source="media/bookings-faq-scheduling.png" alt-text="Planlægning i bookinger":::
   - question: >
-      Hvordan fungerer Bookings på tværs af tidszoner?
+      Hvordan fungerer bookinger på tværs af tidszoner?
     answer: >
-      Alle tidspunkter findes som standard i forretningstidszonen (din lokale tidszone). Alle indstillinger, du konfigurerer for en Bookings kalender, f.eks. arbejdstid, vises i denne tidszone. På siden Selvbetjening kan du få vist alle aftaletiderne i slutbrugerens tidszone, som kan slås fra, hvis det er nødvendigt. Hvis **Vis altid tidspunkter i forretningstidszonen** ikke er markeret under fanen Bookings side, kan de personer, der besøger siden, se tidsintervaller i deres egne lokale tidszoner.
+      Alle tidspunkter findes som standard i forretningstidszonen (din lokale tidszone). Alle indstillinger, du konfigurerer for en Bookings-kalender, f.eks. arbejdstimer, vises i denne tidszone. På siden Selvbetjening kan du få vist alle aftaletiderne i slutbrugerens tidszone, som kan slås fra, hvis det er nødvendigt. Hvis **Vis altid tidsintervaller i forretningstidszonen** ikke er markeret under fanen Bookings-siden, vil de personer, der besøger siden, se tidsintervaller i deres egne lokale tidszoner.
 
 
-      :::image type="content" source="media/bookings-faq-region.png" alt-text="indstillinger for Bookings område og tidszone":::
+      :::image type="content" source="media/bookings-faq-region.png" alt-text="Indstillinger for bookingområde og tidszone":::
 
 
-      Der er ingen klargøring til at angive tidszone for medarbejdere i Bookings. Personaletidszonen og dermed åbningstiderne vil være i virksomhedens tidszone.
+      Der er ingen klargøring til at angive tidszone for personale i Bookings. Personaletidszonen og dermed åbningstiderne vil være i virksomhedens tidszone.
   - question: >
       Kan mailmeddelelser sendes som lejerdomænenavnet?
     answer: >
       Mailadresserne styres og administreres på det Microsoft 365 indstillingsniveau og afhænger af domænekonfigurationsindstillingerne der. Du kan finde flere oplysninger [her](/powershell/module/exchange/get-accepteddomain).
   - question: >
-      Er muligheden for at sende sms-beskeder afhængig af en anden tjeneste eller en bestemt konfiguration?
+      Afhænger muligheden for at sende SMS meddelelser af en anden tjeneste eller specifik konfiguration?
     answer: >
-      SMS-beskeder er i øjeblikket tilgængelige i Nordamerika, og en Skype- eller Twilio-konto vil blive brugt til levering af sms'er.
+      SMS meddelelser er i øjeblikket tilgængelige i Nordamerika, og der bruges en Skype- eller Twilio-konto til SMS levering.
   - question: >
-      Hvordan kan Bookings aftaler vises i en persons kalender?
+      Hvordan kan Bookings-aftaler vises i en persons kalender?
     answer: >
       Bekræftelsen af reservationen sendes til både tjenesteudbyderens og kundens indbakker. Bekræftelsesmailen indeholder en vedhæftet *.ics-fil, som derefter kan føjes til brugerens kalender med alle relevante aftaleoplysninger.
   - question: >
       Hvad udløser tjenesteudbyder- eller personale- og kundemails?
     answer: >
-      Mails udløses baseret på indstillinger under fanen Tjenester i Bookings Webapp. En reservation foretaget af kunden på siden Selvbetjening eller under fanen Kalender i Bookings webappen udløser en bekræftelse og/eller en mail med en påmindelse. Det samme sker, når en person foretager en ændring af reservationen via knappen **Administrer booking** i bekræftelsesmailen eller i webappen. Påmindelsesmails sendes på et angivet tidspunkt før en aftale, som beskrevet under fanen Tjenester i Bookings Webapp.
+      Mails udløses baseret på indstillinger under fanen Tjenester i Bookings Web-appen. En reservation foretaget af kunden på selvbetjeningssiden eller på fanen Kalender i Bookings Web-appen udløser en bekræftelse og/eller en mail med påmindelse. Det samme sker, når en person foretager en ændring af reservationen via knappen **Administrer booking** i bekræftelsesmailen eller i webappen. Påmindelsesmails sendes på et angivet tidspunkt før en aftale, som beskrevet under fanen Tjenester i Bookings Web-appen.
   - question: >
       Kan jeg booke aftaler i klasseklasseformat, der er 1: mange i stedet for 1:1?
     answer: >
@@ -189,10 +193,10 @@ sections:
   - question: >
       Kan kalendere forblive ikke-publicerede (ikke offentligt tilgængelige), men stadig tilgængelige for udpegede brugere?
     answer: >
-      Ja. Der er et afkrydsningsfelt på fanen Bookingside i webappen: **Kræv en Microsoft 365 eller Office 365 konto fra min organisation for at booke**. Hvis du markerer dette afkrydsningsfelt, begrænses adgangen til selvbetjeningssider kun til dem, der findes i din lejer. De Bookings kalender, der er placeret i webappen til oprettelse og administration, kan kun tilgås af de personer, der er føjet som medarbejdere til siden med administrator- eller fremviserroller.
+      Ja. Der er et afkrydsningsfelt på fanen Bookingside i webappen: **Kræv en Microsoft 365 eller Office 365 konto fra min organisation for at booke**. Hvis du markerer dette afkrydsningsfelt, begrænses adgangen til selvbetjeningssider kun til dem, der findes i din lejer. De personer, der tilføjes som personale på siden med administrator- eller seerroller, kan kun få adgang til bookingkalenderen, der er placeret i webappen til oprettelse og administration.
 
 
-      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Styring af adgang til bookingside i Bookings":::
+      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Kontrol af adgang til bookingside i Bookings":::
   - question: >
       Hvor ofte opdateres startsiden?
     answer: >
@@ -200,19 +204,19 @@ sections:
   - question: >
       Kan jeg slå mailmeddelelserne fra for at få timeout?
     answer: >
-      Timeout for optagelse i Bookings webappen udløser altid en mail med en meddelelse til medarbejderne. Hvis nogen medarbejdere er forvirrede over meddelelsen, anbefaler vi, at du tilføjer flere detaljer i noterne eller titlen på meddelelsen Time-Off for bedre at informere medarbejderne om, hvad der sker på administratorsiden.
+      Registrering af timeout i Bookings-webappen udløser altid en mail med en meddelelse til medarbejderne. Hvis nogen medarbejdere er forvirrede over meddelelsen, anbefaler vi, at du tilføjer flere detaljer i noterne eller titlen på meddelelsen Time-Off for bedre at informere medarbejderne om, hvad der sker på administratorsiden.
   - question: >
-      Kan Bookings kalendere klones eller duplikeres, og kan de templatiseres, så de er nemme at skalere?
+      Kan bookingkalendere klones eller duplikeres, og kan de være midlertidige, så de er nemme at skalere?
     answer: >
       Processen ville være at bruge API'en Graph til at hente postkassedetaljer og derefter bruge disse oplysninger til at oprette en ny postkasse. API-dokumentationen findes [her](/graph/api/resources/booking-api-overview?view=graph-rest-beta).
   - question: >
       Hvilken rapportering er tilgængelig i Bookings?
     answer: >
-      Alle Bookings medarbejdere, der er tildelt rollen Administrator, kan downloade en fanesepareret værdi (. TSV)-fil med alle bookinger foretaget inden for de seneste 120 dage. Bookings rapporter kan downloades i . TSV-formular fra fanen Hjem på siden Bookings. API'en til Bookings kan også bruges til at indsamle disse data til mere tilpassede og specifikke formål.
+      Alle bookingmedarbejdere, der er tildelt rollen Administrator, kan downloade en fanesepareret værdi (. TSV)-fil med alle bookinger foretaget inden for de seneste 120 dage. Bookingrapporter kan downloades i . TSV-formular fra fanen Hjem på siden Bookings. Bookings-API'en kan også bruges til at indsamle disse data til mere tilpassede og specifikke formål.
   - question: >
       Er det muligt kun at dele én tjeneste på siden Selvbetjening ad gangen?
     answer: >
-      Ja, du kan enten oprette separate Bookings kalendere for hver tjeneste, eller du kan gå til fanen Tjenester, redigere en tjeneste, og øverst på siden kan du se en mulighed for kun at dele en URL-adresse for den pågældende tjeneste.
+      Ja, du kan enten oprette separate Bookings-kalendere for hver tjeneste, eller du kan gå til fanen Tjenester, redigere en tjeneste, og øverst på siden kan du se en mulighed for kun at dele en URL-adresse for den pågældende tjeneste.
   - question: >
       Hvilke muligheder er der for at integrere en samtykkeformular eller offentliggørelse for dem, der bestiller en aftale?
     answer: >
@@ -220,28 +224,28 @@ sections:
   - question: >
       Hvilke ændringer kan der foretages af personalevalgfunktionen på siden Selvbetjeningsreservation?
     answer: >
-      Kundernes mulighed for at vælge bestemte medarbejdere, når reservationen kan fjernes, kan fjernes helt ved at fravælge indstillingen **Tillad, at kunderne vælger en bestemt person til bookingindstillingen** på siden Booking eller sektionen Tjenester. Bookings tildeler automatisk en tilgængelig medarbejder tilfældigt til bookingen baseret på personalets tilgængelighed.
+      Kundernes mulighed for at vælge bestemte medarbejdere, når reservationen kan fjernes, kan fjernes helt ved at fravælge indstillingen **Tillad, at kunderne vælger en bestemt person til bookingindstillingen** på siden Booking eller sektionen Tjenester. Bookinger tildeler automatisk en tilgængelig medarbejder tilfældigt til bookingen baseret på personalets tilgængelighed.
   - question: >
-      Kan Bookings understøtte mange samtidige bookinganmodninger og selvbetjeningssidebesøg?
+      Kan bookinger understøtte mange samtidige bookinganmodninger og selvbetjeningssidebesøg?
     answer: >
-      Booking kan understøtte et stort antal besøgende og bookinger på én gang. Hvis siden oplever en stor mængde trafik, får brugerne vist fejlen "Serveren er optaget". Tilgængeligheden af aftalen opdateres, når siden indlæses, og når der foretages en reservation. Hvis flere personer forsøger at booke den samme aftale på én gang, vil Bookings kun lade én person booke den pågældende tid og give en meddelelse til de andre potentielle kunder og bede dem om at finde et andet tidspunkt.
+      Booking kan understøtte et stort antal besøgende og bookinger på én gang. Hvis siden oplever en stor mængde trafik, får brugerne vist fejlen "Serveren er optaget". Tilgængeligheden af aftalen opdateres, når siden indlæses, og når der foretages en reservation. Hvis flere personer forsøger at booke den samme aftale på én gang, vil Bookings kun lade én person booke det pågældende tidspunkt og give en meddelelse til de andre potentielle kunder og bede dem om at finde et andet tidspunkt.
 - name: Beskyttelse af personlige oplysninger
   questions:
   - question: >
-      Hvor gemmes Bookings data?
+      Hvor gemmes Bookings-data?
     answer: >
-      Bookings er en Microsoft 365 app, hvilket betyder, at alle data er gemt på den Microsoft 365 platform og i Exchange. Bookings følger alle politikker for datalagring, der er angivet af Microsoft, som er de samme politikker, som alle Office apps følger. Bookings bruger delte postkasser i Exchange til at gemme oplysninger om kunder, medarbejdere, service og aftaler. Politikker for overholdelse af angivne standarder for delte postkasser i Exchange også gælde for Bookings postkasser. Alle kundedata (herunder oplysninger fra kunder, når de booker) registreres i Bookings og gemmes i appen, så de gemmes i Exchange. Microsoft Bookings bruger de samme politikker, som bruges af Microsoft 365, som du kan finde [her.](https://www.microsoft.com/online/legal/v2/?docid=22&langid=en-us)
+      Bookings er en Microsoft 365 app, hvilket betyder, at alle data gemmes på den Microsoft 365 platform og i Exchange. Bookinger følger alle politikker for datalagring, der er angivet af Microsoft, som er de samme politikker, som alle Office apps følger. Bookinger bruger delte postkasser i Exchange til at gemme oplysninger om kunde, personale, service og aftale. Politikker for overholdelse af angivne standarder for delte postkasser i Exchange også gælde for Bookings-postkasser. Alle kundedata (herunder oplysninger fra kunder, når de booker) registreres i Bookings og gemmes i appen, så de gemmes i Exchange. Microsoft Bookings bruger de samme politikker, som bruges af Microsoft 365, som du kan finde [her.](https://www.microsoft.com/online/legal/v2/?docid=22&langid=en-us)
   - question: >
-      Er det en måde at administrere Bookings kalendere centralt for alle brugere?
+      Er der en måde at administrere bookingkalendere centralt for alle brugere?
     answer: >
-      Hver Bookings kalender vedligeholdes uafhængigt af hinanden. Der er ingen sammenflettet visning ud over søgerullelisten, når du har klikket på indsætningsstykket på startsiden.
+      Hver bookingkalender vedligeholdes uafhængigt af hinanden. Der er ingen sammenflettet visning ud over søgerullelisten, når du har klikket på indsætningsstykket på startsiden.
   - question: >
       Hvordan godkendes brugerne?
     answer: >
-      Adgang til Bookings webappen omfatter godkendelse via den almindelige Azure Active Directory (AAD)-godkendelse. Siden Selvbetjeningsreservation kan gøres tilgængelig for alle med websidelinket. Men når indstillingen **Kræv en Microsoft 365- eller Office 365-konto fra min organisation** til at booke er valgt, er siden begrænset til brug i den Microsoft 365 lejer (ved hjælp af AAD godkendelse).
+      Adgang til Bookings Web app omfatter godkendelse via den almindelige AAD-godkendelse (Azure Active Directory). Siden Selvbetjeningsreservation kan gøres tilgængelig for alle med websidelinket. Men når indstillingen **Kræv en Microsoft 365- eller Office 365-konto fra min organisation** til at booke er valgt, er siden begrænset til brug i den Microsoft 365 lejer (ved hjælp af AAD-godkendelse).
 
 
-      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Styring af adgang til bookingside i Bookings":::
+      :::image type="content" source="media/bookings-faq-access-ctrl.png" alt-text="Kontrol af adgang til bookingside i Bookings":::
   - question: >
       Forlader kundedata produktionssystemet af en eller anden grund?
     answer: >
@@ -249,7 +253,7 @@ sections:
   - question: >
       Er det muligt at tilpasse mailadresser for kundesvar?
     answer: >
-      Der er mulighed for at definere, hvilken mailadresse kunden sender deres svar til. Denne indstilling findes under fanen **Firmaoplysninger**. Navnet på Bookings postkasse kan også ændres i Exchange via sædvanlige Exchange processer til omdøbning af postkasser.
+      Der er mulighed for at definere, hvilken mailadresse kunden sender deres svar til. Denne indstilling findes under fanen **Firmaoplysninger**. Selve bookingpostkassens navn kan også ændres i Exchange via sædvanlige Exchange processer til omdøbning af postkasser.
   - question: >
       Vi ønsker, at kunden accepterer vores vilkår og betingelser under bookingprocessen. Er det muligt?
     answer: >
@@ -258,9 +262,9 @@ sections:
 
       Dette afsnit understøtter ikke RTF, men mener, at links kan tilføjes under afsnittet med firmaoplysninger og vises lige under afkrydsningsfeltet samtykke.
   - question: >
-      Hvordan kan Bookings tilknyttede postkasser i Exchange identificeres?
+      Hvordan kan bookings-tilknyttede postkasser i Exchange identificeres?
     answer: >
-      Følgende kommando kan bruges til at hente oplysninger om alle Bookings postkasser og brugere, der har adgang til dem.
+      Følgende kommando kan bruges til at hente oplysninger om alle Bookings-postkasser og brugere, der har adgang til dem.
 
 
       `Get-Mailbox -RecipientTypeDetails SchedulingMailbox -ResultSize: Unlimited | Get-MailboxPermission |Select-Object Identity, User, AccessRights | Where-Object {($_.user -like '*@*')}`
@@ -269,15 +273,15 @@ sections:
   - question: >
       Hvis en bruger planlægger en aftale for en tjeneste, der består af et onlinemøde, hvordan modtager vedkommende så det Microsoft Teams link til mødet, hvis de lader feltet med den valgfrie mailadresse være tomt?
     answer: >
-      Hvis systemet ikke har kundens mailoplysninger, kan bekræftelsesmailen ikke leveres til kunden, og de modtager derfor ikke et Teams link. Løsningen er at angive mailadressen som et obligatorisk felt, hvilket du kan gøre under fanen Tjenester i Bookings. Husk, at når du opretter en ny tjeneste i Bookings, angives kundemailfeltet som standard som et obligatorisk felt.
+      Hvis systemet ikke har kundens mailoplysninger, kan bekræftelsesmailen ikke leveres til kunden, og de modtager derfor ikke et Teams link. Løsningen er at angive mailadressen som et obligatorisk felt, hvilket du kan gøre under fanen Tjenester i Bookings. Husk, at når du opretter en ny tjeneste i Bookings, angives feltet med kundens mail som standard som et obligatorisk felt.
   - question: >
       Hvordan tildeles personale til aftaler, når "Enhver" vælges, eller når kunderne ikke har mulighed for at vælge en medarbejder til aftalen?
     answer: >
       Personalet tildeles tilfældigt i disse scenarier ud af alle medarbejdere, der er tilgængelige på tidspunktet for den aftale, der bookes. Der er i øjeblikket ingen måde at sikre en ligelig fordeling af tilfældigt tildelte aftaler på tværs af alle medarbejdere eller at lægge loft over antallet af tildelte aftaler til hver medarbejder. Hvis der er belastningsjustering, der skal udføres på tværs af dine medarbejdere efter mange tilfældige tildelinger, kan det gøres manuelt under fanen Kalender på siden Bookings.
   - question: >
-      Hvordan kan brugerne fravælge at modtage sms-beskeder, hvis de allerede har tilmeldt sig tidligere?
+      Hvordan kan brugerne fravælge at modtage SMS meddelelser, hvis de allerede har tilmeldt sig tidligere?
     answer: >
-      Når du bestiller en aftale med sms-beskeder aktiveret, bliver kunderne bedt om at markere afkrydsningsfeltet for tilmelding, hver gang de booker. Kunderne kan også svare direkte på sms-meddelelsen (sms-udbyderen), der angiver, at de ønsker, at meddelelserne skal ophøre, og derefter sendes der ingen yderligere tekster til dette telefonnummer. Hvis kunden fravælger at modtage sms-beskeder fra udbyderen og ikke fra Bookings sig selv, modtager vedkommende ikke længere sms-beskeder i fremtiden, selv når vedkommende tilmelder sig fra Bookings side.
+      Når du bestiller en aftale med SMS sms'er aktiveret, bliver kunderne bedt om at markere afkrydsningsfeltet for tilmelding, hver gang de booker. Kunderne kan også svare direkte på SMS meddelelse (den SMS udbyder), der angiver, at de ønsker, at meddelelserne skal ophøre, og derefter sendes der ingen yderligere tekster til dette telefonnummer. Hvis kunden fravælger at modtage sms'er fra udbyderen og ikke fra Bookings selv, modtager vedkommende ikke længere SMS meddelelser i fremtiden, selv når vedkommende tilmelder sig fra siden Bookings.
 - name: Fejlfinding
   questions:
   - question: >
@@ -305,7 +309,7 @@ sections:
       1. I afsnittet **Personer i din organisation** skal du vælge rullelisten ud for **Min organisation** og derefter vælge **Kan få vist, når jeg er optaget**.
 
          > [!NOTE]
-         > Denne indstilling deler dine oplysninger om ledig/optaget tid med Bookings og med andre brugere i organisationen. Den indeholder ikke andre oplysninger, f.eks. hvilken type aftale du har planlagt, hvem du har planlagt aftalen med, eller placeringen.
+         > Denne indstilling deler dine oplysninger om ledig/optaget tid med Bookings og med andre brugere i din organisation. Den indeholder ikke andre oplysninger, f.eks. hvilken type aftale du har planlagt, hvem du har planlagt aftalen med, eller placeringen.
 
          > [!div class="mx-imgBorder"]
          > ![Billede af skærmen til kalenderdeling med Kan se, når jeg er optaget](../media/bookings-view-busy.png)
@@ -314,10 +318,10 @@ sections:
   - question: >
       Vi kan ikke finde en medarbejder i organisationen
     answer: >
-      Hvis en medarbejder har forladt virksomheden, og du har fjernet vedkommende fra din Microsoft 365 eller Office 365 organisation, skal du stadig fjerne brugeren fra Bookings, så vedkommende ikke vises i kalenderen og forhindre kunderne i at booke aftaler med dem.
+      Hvis en medarbejder har forladt virksomheden, og du har fjernet vedkommende fra din Microsoft 365 eller Office 365 organisation, skal du stadig fjerne den pågældende bruger fra Bookings, så vedkommende ikke vises i kalenderen og forhindre kunderne i at booke aftaler med dem.
 
 
-      1. Log på Microsoft 365, og gå derefter til **Bookings** \> **Personale**.
+      1. Log på Microsoft 365, og gå derefter til **Bookings** \> **Staff**.
 
 
       1. Hold musemarkøren over medarbejderens navn. **Ikonerne Rediger** og **slet** vises til højre for kolonnen **Telefon**.
@@ -345,4 +349,4 @@ sections:
 
 
       Hvis du stadig får vist denne fejl efter en længere periode, eller hvis du ofte ser den, skal du kontakte support.
-additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Microsoft Bookings udvider tilgængeligheden i virksomheder blog](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Sådan Microsoft Bookings Works-video](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Begynd at bruge Microsoft Bookings](get-access.md)\n\n- [Slå Microsoft Bookings til eller fra](turn-bookings-on-or-off.md)\n\n- [Tilføj brugere enkeltvist eller samlet](../admin/add-users/add-users.md)\n\n- [Føj medarbejdere til Bookings](add-staff.md)\n\n- [API-komponenter, der skal automatiseres, når skabelonen er defineret](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [URL-adresse til Bookings kalender til visning](https://outlook.office.com/bookings/calendar)\n\n- [Bookings politikker for overholdelse af angivne standarder](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Tilpas og publicer din bookingside](customize-booking-page.md)\n\n- [Konfiguration af lejerpostkasse](/powershell/module/exchange/get-accepteddomain)\n\n- [Gruppe Bookings](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookings målepunkter og aktivitetssporing](metrics-and-activity-tracking.md)\n\n- [Offentlig køreplan for M365](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"
+additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Microsoft Bookings udvider tilgængeligheden i virksomheder blog](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-expands-availability-in-enterprises/ba-p/1214065)\n\n- [Sådan Microsoft Bookings Works-video](https://support.office.com/article/microsoft-bookings-69c45b78-6de4-4f28-9449-cdcc18b7ae45)\n\n- [Begynd at bruge Microsoft Bookings](get-access.md)\n\n- [Slå Microsoft Bookings til eller fra](turn-bookings-on-or-off.md)\n\n- [Tilføj brugere enkeltvist eller samlet](../admin/add-users/add-users.md)\n\n- [Føj medarbejdere til Bookings](add-staff.md)\n\n- [API-komponenter, der skal automatiseres, når skabelonen er defineret](/graph/api/bookingbusiness-post-bookingbusinesses)\n\n- [URL-adresse til bookingkalender til visning](https://outlook.office.com/bookings/calendar)\n\n- [Politikker for overholdelse af bookinger](/compliance/regulatory/gdpr-dsr-Office365#bookings)\n\n- [Tilpas og publicer din bookingside](customize-booking-page.md)\n\n- [Konfiguration af lejerpostkasse](/powershell/module/exchange/get-accepteddomain)\n\n- [Gruppereservationer](https://techcommunity.microsoft.com/t5/microsoft-bookings-blog/microsoft-bookings-now-supports-online-meetings-and-group/ba-p/1214120)\n\n- [Bookingmålepunkter og aktivitetssporing](metrics-and-activity-tracking.md)\n\n- [Offentlig køreplan for M365](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=bookings)"

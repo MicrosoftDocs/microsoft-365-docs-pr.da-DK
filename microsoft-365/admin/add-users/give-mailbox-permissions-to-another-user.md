@@ -25,12 +25,12 @@ search.appverid:
 - MOE150
 ms.assetid: 1dbcf12f-a9de-4d1d-b0b3-a227f8a736d8
 description: Giv en Microsoft 365 bruger ret til at få adgang til en anden brugers postkasse, hvilket gør det muligt for brugeren at læse og sende mails fra den anden brugers postkasse.
-ms.openlocfilehash: 80c316f0615c13d5f46410582abe2ec3516c8a8a
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 5b770b2967072ab6cc8b8abfec8176a7b6aac2c9
+ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436707"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66042368"
 ---
 # <a name="give-mailbox-permissions-to-another-microsoft-365-user---admin-help"></a>Giv postkassetilladelser til en anden Microsoft 365 bruger – Hjælp til administratorer
 
@@ -167,6 +167,8 @@ Der er et par forskellige måder, du kan få adgang til en postkasse på, når d
 
 ::: moniker-end
 
+> [!NOTE]
+> Tilladelserne **Send som** og **Send på vegne** fungerer ikke i Outlook Desktop-klienten med parameteren *HiddenFromAddressListsEnabled* for postkassen angivet til **Sand**, da de kræver, at postkassen er synlig i Outlook via den globale adresseliste.
 
 ## <a name="related-content"></a>Relateret indhold
   
