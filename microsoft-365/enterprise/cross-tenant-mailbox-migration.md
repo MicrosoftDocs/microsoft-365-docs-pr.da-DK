@@ -1,6 +1,6 @@
 ---
 title: Migrering af postkasse på tværs af lejere
-description: Sådan flytter du postkasser mellem Microsoft 365- eller Office 365-lejere.
+description: Sådan flytter du postkasser mellem Microsoft 365 eller Office 365 lejere.
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -16,29 +16,29 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 715ae7ea55655b57c24bacf7fa08ad716fdecd45
-ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
+ms.openlocfilehash: 839d320bfb52175f58009b8d254ec37eadeb4cb1
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65930763"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66007300"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (prøveversion)
 
-Normalt har du under fusioner eller frasalg brug for muligheden for at flytte din brugers Exchange Online-postkasse til en ny lejer. Overførsel af postkasser på tværs af lejere giver lejeradministratorer mulighed for at bruge velkendte grænseflader, f.eks. Remote PowerShell og MRS, til at overføre brugere til deres nye organisation.
+Normalt har du under fusioner eller frasalg brug for muligheden for at flytte din brugers Exchange Online postkasse til en ny lejer. Migrering af postkasser på tværs af lejere gør det muligt for lejeradministratorer at bruge velkendte grænseflader, f.eks. Exchange Online PowerShell og FRU, til at overføre brugere til deres nye organisation.
 
 Administratorer kan bruge den New-MigrationBatch cmdlet, der er tilgængelig via administrationsrollen Flyt postkasser, til at udføre flytninger på tværs af lejere.
 
-De brugere, der migrerer, skal være til stede i Exchange Online-destinationslejersystemet som MailUsers, der er markeret med specifikke attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer.
+De brugere, der migrerer, skal være til stede i destinationslejeren Exchange Online systemet som MailUsers, markeret med specifikke attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer.
 
-Når flytningerne er fuldført, konverteres kildebrugerpostkassen til en MailUser, og targetAddress (vist som ExternalEmailAddress i Exchange) stemples med distributionsadressen til destinationslejeren. Denne proces efterlader den ældre MailUser i kildelejer og giver mulighed for sameksistens og postdistribution. Når forretningsprocesser tillader det, kan kildelejer fjerne kildemailbrugeren eller konvertere dem til en mailkontakt.
+Når flytningerne er fuldført, konverteres kildebrugerpostkassen til en MailUser, og destinationsadressen (vist som ExternalEmailAddress i Exchange) stemples med distributionsadressen til destinationslejeren. Denne proces efterlader den ældre MailUser i kildelejer og giver mulighed for sameksistens og postdistribution. Når forretningsprocesser tillader det, kan kildelejer fjerne kildemailbrugeren eller konvertere dem til en mailkontakt.
 
-Overflytninger af Exchange-postkasser på tværs af lejere understøttes kun for lejere i hybride lejere eller cloudmiljøer eller en kombination af de to.
+Overførsel af Exchange postkasser på tværs af lejere understøttes kun for lejere i hybride eller cloudbaserede lejere eller en hvilken som helst kombination af de to.
 
-I denne artikel beskrives processen for flytning af postkasser på tværs af lejere, og den indeholder en vejledning i, hvordan du forbereder kilde- og destinationslejere for indhold i Exchange Online-postkassen.
+I denne artikel beskrives processen for flytning af postkasser på tværs af lejere, og den indeholder en vejledning i, hvordan du forbereder kilde- og destinationslejere for Exchange Online postkasseindhold flyttes.
 
    > [!NOTE]
-   > Vi har for nylig opdateret vores konfigurationstrin for at aktivere overførsel af postkasser på tværs af lejere, så de ikke længere kræver Azure Key Vault! Hvis det er første gang, du onboarder til denne prøveversion, kræves der ingen handling, og du kan gå videre og følge de trin, der er beskrevet i dette dokument. Hvis du er begyndt at konfigurere dine lejere ved hjælp af den tidligere AKV-metode, anbefaler vi på det kraftigste, at du stopper eller fjerner konfigurationen for at begynde at bruge denne nye metode. Hvis du har overførsel af postkasser i gang med den tidligere AKV-metode, skal du vente, indtil dine eksisterende overførsler er fuldført, og følge nedenstående trin for at aktivere den nye forenklede metode. De påkrævede konfigurationstrin i Azure Key Vault arkiveres, men kan findes **[her](https://github.com/microsoft/cross-tenant/wiki/V1-Content#cross-tenant-mailbox-migration-preview)**, som reference.
+   > Vi har for nylig opdateret vores konfigurationstrin for at aktivere overførsel af postkasser på tværs af lejere, så det ikke længere kræver Azure Key Vault! Hvis det er første gang, du onboarder til denne prøveversion, kræves der ingen handling, og du kan gå videre og følge de trin, der er beskrevet i dette dokument. Hvis du er begyndt at konfigurere dine lejere ved hjælp af den tidligere AKV-metode, anbefaler vi på det kraftigste, at du stopper eller fjerner konfigurationen for at begynde at bruge denne nye metode. Hvis du har overførsel af postkasser i gang med den tidligere AKV-metode, skal du vente, indtil dine eksisterende overførsler er fuldført, og følge nedenstående trin for at aktivere den nye forenklede metode. Azure Key Vault påkrævede konfigurationstrin arkiveres, men kan findes **[her](https://github.com/microsoft/cross-tenant/wiki/V1-Content#cross-tenant-mailbox-migration-preview)** som reference.
 
 ## <a name="preparing-source-and-target-tenants"></a>Forbereder kilde- og destinationslejere
 
@@ -48,9 +48,9 @@ Før du starter, skal du sørge for, at du har de nødvendige tilladelser til at
 
 Derudover kræves der mindst én mailaktiveret sikkerhedsgruppe i kildelejer. Disse grupper bruges til at udvide listen over postkasser, der kan flyttes fra kildelejer (eller nogle gange kaldet ressourcelejer) til destinationslejer. Dette gør det muligt for kildelejeradministratoren at begrænse eller begrænse det specifikke sæt postkasser, der skal flyttes, så utilsigtede brugere ikke kan overføres. Indlejrede grupper understøttes ikke.
 
-Du skal også kommunikere med dit pålidelige partnerfirma (med hvem du flytter postkasser) for at få deres Microsoft 365-lejer-id. Dette lejer-id bruges i feltet Domænenavn for organisationsrelation.
+Du skal også kommunikere med dit partnerfirma, der er tillid til (med hvem du flytter postkasser) for at få deres Microsoft 365 lejer-id. Dette lejer-id bruges i feltet Domænenavn for organisationsrelation.
 
-Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339) og gå til [https://aad.portal.azure.com/\#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties). Klik på kopieringsikonet for egenskaben Lejer-id for at kopiere den til Udklipsholder.
+Hvis du vil hente lejer-id'et for et abonnement, [skal du](https://go.microsoft.com/fwlink/p/?linkid=2024339) logge på Microsoft 365 Administration og gå til [https://aad.portal.azure.com/\#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties](https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties). Klik på kopieringsikonet for egenskaben Lejer-id for at kopiere den til Udklipsholder.
 
 ### <a name="configuration-steps-to-enable-your-tenants-for-cross-tenant-mailbox-migrations"></a>Konfigurationstrin til aktivering af dine lejere for migrering af postkasser på tværs af lejere
 
@@ -59,13 +59,13 @@ Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 36
 
 ### <a name="prepare-the-target-destination-tenant-by-creating-the-migration-application-and-secret"></a>Forbered destinationslejer (destinationslejer) ved at oprette overførselsprogrammet og hemmeligheden
 
-1. Log på din Azure AD-portal (<https://portal.azure.com>) med dine legitimationsoplysninger som lejeradministrator for destinationen
+1. Log på din Azure AD-portal (<https://portal.azure.com>) med legitimationsoplysningerne for din destinationslejeradministrator
 
    ![Azure Logon](../media/tenant-to-tenant-mailbox-move/74f26681e12df3308c7823ee7d527587.png)
 
 2. Klik på Vis under Administrer Azure Active Directory.
 
-   ![Knappen Azure Active Directory](../media/tenant-to-tenant-mailbox-move/109ac3dfbac2403fb288f085767f393b.png)
+   ![knappen Azure Active Directory](../media/tenant-to-tenant-mailbox-move/109ac3dfbac2403fb288f085767f393b.png)
 
 3. Vælg Appregistreringer på navigationslinjen til venstre.
 
@@ -73,7 +73,7 @@ Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 36
 
    ![Nyt program](../media/tenant-to-tenant-mailbox-move/b36698df128e705eacff4bff7231056a.png)
 
-5. På siden Registrer et program under Understøttede kontotyper skal du vælge Konti i en hvilken som helst organisationsmappe (Enhver Azure AD-mappe – Multitenant). Vælg derefter Web under Omdirigerings-URI (valgfrit), og angiv <https://office.com>. Endelig skal du vælge Registrer.
+5. På siden Registrer et program under Understøttede kontotyper skal du vælge Konti i en hvilken som helst organisationsmappe (Enhver Azure AD mappe – Multitenant). Vælg derefter Web under Omdirigerings-URI (valgfrit), og angiv <https://office.com>. Endelig skal du vælge Registrer.
 
    ![Programregistrering](../media/tenant-to-tenant-mailbox-move/edcdf18b9f504c47284fe4afb982c433.png)
 
@@ -114,7 +114,7 @@ Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 36
       > [!NOTE]
       > Dette er den adgangskode, der bruges, når du opretter dit overførselsslutpunkt. Det er ekstremt vigtigt, at du kopierer denne adgangskode til udklipsholderen og eller kopierer denne adgangskode for at sikre/skjule adgangskoden. Dette er den eneste gang, du vil kunne se denne adgangskode! Hvis du på en eller anden måde mister den eller har brug for at nulstille den, kan du logge på vores Azure Portal igen, gå til Appregistreringer, finde din overførselsapp, vælge Hemmeligheder & certifikater og oprette en ny hemmelighed for din app.
 
-19. Nu, hvor du har oprettet overførselsprogrammet og hemmeligheden, skal du give samtykke til programmet. Hvis du vil give dit samtykke til programmet, skal du gå tilbage til Landingssiden for Azure Active Directory, klikke på Virksomhedsprogrammer i venstre navigationsrude, finde din overførselsapp, du har oprettet, vælge den og vælge Tilladelser i venstre navigationsrude.
+19. Nu, hvor du har oprettet overførselsprogrammet og hemmeligheden, skal du give samtykke til programmet. Hvis du vil give dit samtykke til programmet, skal du gå tilbage til landingssiden for Azure Active Directory, klikke på Virksomhedsprogrammer i den venstre navigationsrude, finde din overførselsapp, du har oprettet, vælge den og vælge Tilladelser i venstre navigationsrude.
 
 20. Klik på knappen Tildel administratorsamtykke til [din lejer].
 
@@ -135,14 +135,14 @@ Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 36
     >
     > Du skal også erstatte [application_id_of_the_app_you_just_created] med program-id'et for den postkasseoverførselsapp, du lige har oprettet.
 
-### <a name="prepare-the-target-tenant-by-creating-the-exchange-online-migration-endpoint-and-organization-relationship"></a>Forbered destinationslejer ved at oprette slutpunktet for migreringen til Exchange Online og organisationsrelationen
+### <a name="prepare-the-target-tenant-by-creating-the-exchange-online-migration-endpoint-and-organization-relationship"></a>Forbered destinationslejer ved at oprette slutpunktet for Exchange Online migrering og organisationsrelationen
 
-1. Opret en Ekstern PowerShell-forbindelse til Exchange Online-destinationslejer.
+1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i destinationslejer Exchange Online.
 
 2. Opret et nyt overførselsslutpunkt for flytninger af postkasser på tværs af lejere
 
    > [!NOTE]
-   > Du skal bruge program-id'et for den postkasseoverførselsapp, du lige har oprettet, og adgangskoden (den hemmelighed), du konfigurerede under denne proces. Afhængigt af den Microsoft 365 Cloud Instance, du bruger dit slutpunkt, kan det også være anderledes. Se siden [Microsoft 365-slutpunkter](/microsoft-365/enterprise/microsoft-365-endpoints) , vælg den korrekte forekomst for din lejer, og gennemse den påkrævede adresse for Exchange Online Optimize, og erstat efter behov.
+   > Du skal bruge program-id'et for den postkasseoverførselsapp, du lige har oprettet, og adgangskoden (den hemmelighed), du konfigurerede under denne proces. Afhængigt af den Microsoft 365 cloudforekomst, du bruger dit slutpunkt, kan det også være anderledes. Se siden [Microsoft 365 slutpunkter](/microsoft-365/enterprise/microsoft-365-endpoints), vælg den korrekte forekomst for din lejer, og gennemse Exchange Online Optimer påkrævet adresse, og erstat efter behov.
 
    ```powershell
 
@@ -183,9 +183,9 @@ Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 36
    > Du skal erstatte sourcetenant.onmicrosoft.com i ovenstående eksempel med de korrekte kildelejere onmicrosoft.com navn.
    > Du skal også erstatte [application_id_of_the_app_you_just_created] med program-id'et for den postkasseoverførselsapp, du lige har oprettet.
 
-2. Acceptér programmet, når pop op-vinduet vises. Du kan også logge på din Azure Active Directory-portal og finde programmet under Virksomhedsprogrammer.
+2. Acceptér programmet, når pop op-vinduet vises. Du kan også logge på din Azure Active Directory portal og finde programmet under Virksomhedsprogrammer.
 
-3. Opret nyt eller rediger dit eksisterende organisationsrelationsobjekt til din destinationslejer fra et Exchange Online Remote PowerShell-vindue.
+3. Opret en ny organisationsrelation, eller rediger dit eksisterende objekt for organisationsrelationen med din destinationslejer i Exchange Online PowerShell:
 
    ```powershell
    $targetTenantId="[tenant id of your trusted partner, where the mailboxes are being moved to]"
@@ -204,9 +204,9 @@ Hvis du vil hente lejer-id'et for et abonnement, skal du logge på [Microsoft 36
    ```
 
 > [!NOTE]
-> Det lejer-id, du angiver som $sourceTenantId og $targetTenantId, er GUID'et og ikke lejerdomænenavnet. Du kan finde et eksempel på et lejer-id og oplysninger om, hvordan du finder dit lejer-id, under [Find dit Microsoft 365-lejer-id](/onedrive/find-your-office-365-tenant-id).
+> Det lejer-id, du angiver som $sourceTenantId og $targetTenantId, er GUID'et og ikke lejerdomænenavnet. Du kan finde et eksempel på et lejer-id og oplysninger om, hvordan du finder dit lejer-id, under [Find dit Microsoft 365 lejer-id](/onedrive/find-your-office-365-tenant-id).
 
-### <a name="how-do-i-know-this-worked"></a>Hvordan ved jeg, at det virkede?
+### <a name="how-do-i-know-this-worked"></a>Hvordan gør jeg ved, det virkede?
 
 Du kan bekræfte konfigurationen af migrering af postkasser på tværs af lejere ved at køre [Test-MigrationServerAvailability-cmdlet'en](/powershell/module/exchange/Test-MigrationServerAvailability) i forhold til det slutpunkt for overførsel på tværs af lejere, som du oprettede i din destinationslejer.
 
@@ -228,7 +228,7 @@ Hvis der kræves en postkasse for at flytte tilbage til den oprindelige kildelej
 
 ## <a name="prepare-target-user-objects-for-migration"></a>Forbered destinationsbrugerobjekter til overførsel
 
-De brugere, der migrerer, skal være til stede i destinationslejeren og Exchange Online-systemet (som MailUsers), der er markeret med specifikke attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer. I følgende afsnit er der oplysninger om kravene til MailUser-objektet for destinationslejer.
+De brugere, der migrerer, skal være til stede i destinationslejeren og Exchange Online system (som MailUsers), der er markeret med bestemte attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer. I følgende afsnit er der oplysninger om kravene til MailUser-objektet for destinationslejer.
 
 ### <a name="prerequisites-for-target-user-objects"></a>Forudsætninger for destinationsbrugerobjekter
 
@@ -243,7 +243,7 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
       - UserPrincipalName: UPN justeres i forhold til brugerens NYE identitet eller målfirma (f.eks. user@northwindtraders.onmicrosoft.com).
       - Primær SMTP-adresse: Primær SMTP-adresse justeres i forhold til brugerens NYE firma (f.eks. user@northwind.com).
       - TargetAddress/ExternalEmailAddress: MailUser refererer til brugerens aktuelle postkasse, der hostes i kildelejeren (f.eks. user@contoso.onmicrosoft.com). Når du tildeler denne værdi, skal du kontrollere, at du har/også tildeler PrimarySMTPAddress, ellers angiver denne værdi PrimarySMTPAddress, hvilket medfører flytningsfejl.
-      - Du kan ikke føje ældre smtp-proxyadresser fra kildepostkassen til destinationen MailUser. Du kan f.eks. ikke vedligeholde contoso.com på MEU i fabrikam.onmicrosoft.com lejerobjekter). Domæner er kun knyttet til én Azure AD- eller Exchange Online-lejer.
+      - Du kan ikke føje ældre smtp-proxyadresser fra kildepostkassen til destinationen MailUser. Du kan f.eks. ikke vedligeholde contoso.com på MEU i fabrikam.onmicrosoft.com lejerobjekter). Domæner er kun knyttet til én Azure AD eller Exchange Online lejer.
 
      Eksempel **på destinationens** MailUser-objekt:
 
@@ -256,7 +256,7 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
      | PrimarySmtpAddress   | Lara.Newton@northwind.com                                                                                               |
      | ExternalEmailAddress | SMTP:LaraN@contoso.onmicrosoft.com                                                                                      |
      | ExchangeGuid         | 1ec059c7-8396-4d0b-af4e-d6bd4c12a8d8                                                                                    |
-     | LegacyExchangeDN     | /o=Første organisation/ou=Exchange-administrativ gruppe                                                                  |
+     | LegacyExchangeDN     | /o=Første organisation/ou=Exchange administrativ gruppe                                                                  |
      |                      | (FYDIBOHF23SPDLT)/cn=Recipients/cn=74e5385fce4b46d19006876949855035Lara                                                 |
      | Mailadresser       | x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=d11ec1a2cacd4f81858c8190 |
      |                      | 7273f1f9-Lara                                                                                                           |
@@ -273,22 +273,22 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
      | UserPrincipalName    | LaraN@contoso.onmicrosoft.com                                           |
      | PrimarySmtpAddress   | Lara.Newton@contoso.com                                                 |
      | ExchangeGuid         | 1ec059c7-8396-4d0b-af4e-d6bd4c12a8d8                                    |
-     | LegacyExchangeDN     | /o=Første organisation/ou=Exchange-administrativ gruppe                  |
+     | LegacyExchangeDN     | /o=Første organisation/ou=Exchange administrativ gruppe                  |
      |                      | (FYDIBOHF23SPDLT)/cn=Recipients/cn=d11ec1a2cacd4f81858c81907273f1f9Lara |
      | Mailadresser       | smtp:LaraN@contoso.onmicrosoft.com                                      |
      |                      | SMTP:Lara.Newton@contoso.com                                            |
 
-   - Der kan allerede inkluderes yderligere attributter i Exchange-hybridskrivning. Hvis ikke, bør de medtages.
+   - Der kan allerede medtages yderligere attributter i Exchange hybrid tilbageførsel. Hvis ikke, bør de medtages.
    - msExchBlockedSendersHash – skriver online sikre og blokerede afsenderdata tilbage fra klienter til Active Directory i det lokale miljø.
    - msExchSafeRecipientsHash – skriver online sikre og blokerede afsenderdata tilbage fra klienter til Active Directory i det lokale miljø.
    - msExchSafeSendersHash – skriver online sikre og blokerede afsenderdata fra klienter tilbage til Active Directory i det lokale miljø.
 
-2. Hvis kildepostkassen er på LitigationHold, og størrelsen på genoprettelige elementer i kildepostkassen er større end standarddatabasen (30 GB), fortsættes flytningen ikke, da målkvoten er mindre end størrelsen på kildepostkassen. Du kan opdatere destinationsobjektet MailUser for at overføre ELC-postkasseflagene fra kildemiljøet til destinationen, hvilket udløser destinationssystemet for at udvide kvoten for MailUser til 100 GB, hvilket gør det muligt at flytte til destinationen. Disse instruktioner fungerer kun for hybrididentitet, der kører Azure AD Connect, da kommandoerne til at stemple ELC-flagene ikke vises for lejeradministratorer.
+2. Hvis kildepostkassen er på LitigationHold, og størrelsen på genoprettelige elementer i kildepostkassen er større end standarddatabasen (30 GB), fortsættes flytningen ikke, da målkvoten er mindre end størrelsen på kildepostkassen. Du kan opdatere destinationsobjektet MailUser for at overføre ELC-postkasseflagene fra kildemiljøet til destinationen, hvilket udløser destinationssystemet for at udvide kvoten for MailUser til 100 GB, hvilket gør det muligt at flytte til destinationen. Disse instruktioner fungerer kun for hybrididentitet, der kører Azure AD Forbind, da kommandoerne til at stemple ELC-flagene ikke eksponeres for lejeradministratorer.
 
     > [!NOTE]
     > EKSEMPEL – SOM DET ER, INGEN GARANTI
     >
-    > Dette script forudsætter, at der er forbindelse til både kildepostkassen (for at hente kildeværdier) og destinationen Active Directory i det lokale miljø (for at stemple ADUser-objektet). Hvis kilde har aktiveret procesførelse eller gendannelse af et enkelt element, skal du angive dette på destinationskontoen.  Dette vil øge destinationskontoens dumpsterstørrelse til 100 GB.
+    > Dette script forudsætter, at der er forbindelse til både kildepostkassen (for at hente kildeværdier) og mål-Active Directory i det lokale miljø (for at stemple ADUser-objektet). Hvis kilde har aktiveret procesførelse eller gendannelse af et enkelt element, skal du angive dette på destinationskontoen.  Dette vil øge destinationskontoens dumpsterstørrelse til 100 GB.
 
     ```powershell
     $ELCValue = 0
@@ -303,12 +303,12 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
 
    Bemærk, at dette ikke fungerer for lejere i hybrid.
 
-4. Brugere i målorganisationen skal have licens med relevante Exchange Online-abonnementer, der gælder for organisationen. Du kan anvende en licens, før en postkasse flyttes, men kun når destinationsmailbrugeren er konfigureret korrekt med ExchangeGUID- og proxyadresser. Anvendelse af en licens, før ExchangeGUID anvendes, vil resultere i en ny postkasse, der er klargjort i destinationsorganisationen.
+4. Brugere i målorganisationen skal have licens med de relevante Exchange Online abonnementer, der gælder for organisationen. Du kan anvende en licens, før en postkasse flyttes, men kun når destinationsmailbrugeren er konfigureret korrekt med ExchangeGUID- og proxyadresser. Anvendelse af en licens, før ExchangeGUID anvendes, vil resultere i en ny postkasse, der er klargjort i destinationsorganisationen.
 
     > [!NOTE]
     > Når du anvender en licens på et postkasse- eller MailUser-objekt, renses alle SMTP-typeproxyAdresser for at sikre, at det kun er bekræftede domæner, der er inkluderet i matrixen Exchange EmailAddresses.
 
-5. Du skal sikre, at destinationsmailbrugeren ikke har en tidligere ExchangeGuid, der ikke stemmer overens med kildeudvekslingsguid. Dette kan ske, hvis mål-MEU'en tidligere har fået licens til Exchange Online og klargjort en postkasse. Hvis destinationen MailUser tidligere er licenseret til eller havde en ExchangeGuid, der ikke stemmer overens med Kilde ExchangeGuid, skal du udføre en oprydning af cloud-MEU'en. For disse cloud-MEU'er kan du køre `Set-User <identity> -PermanentlyClearPreviousMailboxInfo`.
+5. Du skal sikre, at destinationsmailbrugeren ikke har en tidligere ExchangeGuid, der ikke stemmer overens med kildeudvekslingsguid. Dette kan ske, hvis mål-MEU'en tidligere var licenseret til Exchange Online og klargjort en postkasse. Hvis destinationen MailUser tidligere er licenseret til eller havde en ExchangeGuid, der ikke stemmer overens med Kilde ExchangeGuid, skal du udføre en oprydning af cloud-MEU'en. For disse cloud-MEU'er kan du køre `Set-User <identity> -PermanentlyClearPreviousMailboxInfo`.
 
     > [!CAUTION]
     > Denne proces kan ikke fortrydes. Hvis objektet har en softDeleted-postkasse, kan det ikke gendannes efter dette punkt. Når det er ryddet, kan du dog synkronisere den korrekte ExchangeGuid med destinationsobjektet, og FRU forbinder kildepostkassen med den destinationspostkasse, der netop er oprettet. (Reference ehlo-blog om den nye parameter).
@@ -348,7 +348,7 @@ Sørg for, at følgende objekter og attributter er angivet i destinationsorganis
 
 ### <a name="perform-mailbox-migrations"></a>Udfør migrering af postkasse
 
-Overflytninger af Exchange-postkasser på tværs af lejere startes fra destinationslejeren som overførselsbatch. Det er ligesom den måde, overførselsbatchs om bord fungerer på, når der migreres fra Exchange i det lokale miljø til Microsoft 365.
+Overflytninger af postkasser på tværs af lejere Exchange startes fra destinationslejeren som overførselsbatch. Det er ligesom den måde, overførselsbatchs om bord fungerer på, når der migreres fra Exchange i det lokale miljø til Microsoft 365.
 
 ### <a name="create-migration-batches"></a>Opret overførselsbatch
 
@@ -369,7 +369,7 @@ T2Tbatch                   Syncing ExchangeRemoteMove 1
 >
 > [Klik her for et eksempel på en CSV-fil](/exchange/csv-files-for-mailbox-migration-exchange-2013-help)
 
-Overførsel af batchafsendelse understøttes også fra det nye <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> , når du vælger indstillingen på tværs af lejere.
+Overførsel af batchafsendelse understøttes også fra det nye <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, når du vælger indstillingen på tværs af lejere.
 
 ### <a name="update-on-premises-mailusers"></a>Opdater mailbrugere i det lokale miljø
 
@@ -381,13 +381,13 @@ Når postkassen flyttes fra kilde til destination, skal du sikre, at mailbrugern
 
 Ja, du skal opdatere destinationsadressen (RemoteRoutingAddress/ExternalEmailAddress) for kildebrugerne i det lokale miljø, når kildelejerpostkassen flyttes til destinationslejeren.  Mens postdistribution kan følge henvisningerne på tværs af flere mailbrugere med forskellige destinationsadresser, skal ledig/optaget-opslag for mailbrugere være rettet mod postkassebrugerens placering. Ledig/optaget-opslag jagter ikke flere omdirigeringer.
 
-**Migrerer Teams-møder på tværs af lejere?**
+**Overfører Teams møder på tværs af lejere?**
 
-Møderne flyttes, men URL-adressen til Teams-mødet opdateres ikke, når elementer overføres på tværs af lejere. Da URL-adressen er ugyldig i destinationslejer, skal du fjerne og genoprette Teams-møderne.
+Møderne flyttes, men Teams møde-URL-adressen opdateres ikke, når elementer overføres på tværs af lejere. Da URL-adressen er ugyldig i destinationslejer, skal du fjerne og genoprette Teams møder.
 
-**Overføres indholdet i Teams-chatmappen på tværs af lejere?**
+**Overføres indholdet i Teams chatmappen på tværs af lejere?**
 
-Nej, indholdet i Teams-chatmappen overfører ikke på tværs af lejere.
+Nej, indholdet i den Teams chatmappe overføres ikke på tværs af lejere.
 
 **Hvordan kan jeg se flytninger på tværs af lejere, ikke mine onboarding- og off-boarding-flytninger?**
 
@@ -400,7 +400,7 @@ Get-MoveRequest -Flags "CrossTenant"
 **Kan du angive eksempelscripts til kopiering af attributter, der bruges i test?**
 
 > [!NOTE]
-> EKSEMPEL – SOM DET ER, ER DER INGEN GARANTI Dette script forudsætter en forbindelse til både kildepostkassen (for at hente kildeværdier) og destinationen for Active Directory-domænetjenester i det lokale miljø (for at stemple ADUser-objektet). Hvis kilde har aktiveret procesførelse eller gendannelse af et enkelt element, skal du angive dette på destinationskontoen.  Dette vil øge destinationskontoens dumpsterstørrelse til 100 GB.
+> EKSEMPEL – SOM DET ER, GARANTERER INGEN GARANTI Dette script forudsætter en forbindelse til både kildepostkassen (for at hente kildeværdier) og destinationen Active Directory i det lokale miljø Domænetjenester (for at stemple ADUser-objektet). Hvis kilde har aktiveret procesførelse eller gendannelse af et enkelt element, skal du angive dette på destinationskontoen.  Dette vil øge destinationskontoens dumpsterstørrelse til 100 GB.
 
    ```powershell
    # This will export users from the source tenant with the CustomAttribute1 = "Cross-Tenant-Project"
@@ -434,14 +434,14 @@ Get-MoveRequest -Flags "CrossTenant"
    Start-ADSyncSyncCycle
    ```
 
-**Hvordan får vi adgang til Outlook på dag 1, når brugspostkassen er flyttet?**
+**Hvordan får vi adgang til Outlook den 1. dag, når brugspostkassen er flyttet?**
 
-Da kun én lejer kan eje et domæne, knyttes den tidligere primære SMTP-adresse ikke til brugeren i destinationslejeren, når flytningen af postkassen er fuldført. kun de domæner, der er knyttet til den nye lejer. Outlook bruger det nye UPN til at godkende til tjenesten, og Outlook-profilen forventer at finde de ældre primære SMTPAddress, så de stemmer overens med postkassen i destinationssystemet. Da den ældre adresse ikke findes i destinationssystemet, opretter Outlook-profilen ikke forbindelse for at finde den nytilflyttede postkasse.
+Da kun én lejer kan eje et domæne, knyttes den tidligere primære SMTP-adresse ikke til brugeren i destinationslejeren, når flytningen af postkassen er fuldført. kun de domæner, der er knyttet til den nye lejer. Outlook bruger det nye UPN til at godkende til tjenesten, og den Outlook profil forventer at finde de ældre primære SMTPAddress, så de stemmer overens med postkassen i destinationssystemet. Da den ældre adresse ikke findes i destinationssystemet, opretter Outlook-profilen ikke forbindelse for at finde den nytilflyttede postkasse.
 
 Til denne indledende installation skal brugerne genopbygge deres profil med deres nye UPN, primære SMTP-adresse og resynkront OST-indhold.
 
 > [!NOTE]
-> Planlæg i overensstemmelse hermed, efterhånden som du batcher dine brugere til fuldførelse. Du skal tage højde for netværksudnyttelse og -kapacitet, når Outlook-klientprofiler oprettes, og efterfølgende OST- og OAB-filer downloades til klienter.
+> Planlæg i overensstemmelse hermed, efterhånden som du batcher dine brugere til fuldførelse. Du skal tage højde for netværksudnyttelse og -kapacitet, når der oprettes Outlook klientprofiler, og efterfølgende OST- og OAB-filer downloades til klienter.
 
 **Hvilke Exchange RBAC-roller skal jeg være medlem af for at konfigurere eller fuldføre en flytning på tværs af lejere?**
 
@@ -453,7 +453,7 @@ Der er en matrix af roller, der er baseret på antagelse af delegerede opgaver, 
 
 **Hvordan målretter vi mod, hvilken SMTP-adresse der er valgt for targetAddress (TargetDeliveryDomain) på den konverterede postkasse (til MailUser-konvertering)?**
 
-Exchange-postkassen flyttes ved hjælp af FRU craft targetAddress i den oprindelige kildepostkasse, når der konverteres til en MailUser, ved at matche en mailadresse (proxyAddress) på destinationsobjektet. Processen tager værdien -TargetDeliveryDomain, der overføres til flyttekommandoen, og kontrollerer derefter, om der er en tilsvarende proxy for det pågældende domæne på destinationssiden. Når vi finder et match, bruges den tilsvarende proxyAddress til at angive ExternalEmailAddress (targetAddress) på det konverterede postkasseobjekt (nu MailUser).
+Exchange postkassen flyttes ved hjælp af FRU-håndværket targetAddress i den oprindelige kildepostkasse, når der konverteres til en MailUser ved at matche en mailadresse (proxyAddress) på destinationsobjektet. Processen tager værdien -TargetDeliveryDomain, der overføres til flyttekommandoen, og kontrollerer derefter, om der er en tilsvarende proxy for det pågældende domæne på destinationssiden. Når vi finder et match, bruges den tilsvarende proxyAddress til at angive ExternalEmailAddress (targetAddress) på det konverterede postkasseobjekt (nu MailUser).
 
 **Hvordan overføres postkassetilladelser?**
 
@@ -461,7 +461,7 @@ Postkassetilladelser omfatter Send på vegne af og Postkasseadgang:
 
 - Send på vegne af (AD:publicDelegates) gemmer DN'et for modtagere med adgang til en brugers postkasse som stedfortræder. Denne værdi er gemt i Active Directory og flyttes i øjeblikket ikke som en del af postkasseovergangen. Hvis der er angivet offentligeDelegates i kildepostkassen, skal du restampere de offentligeDelegates på målpostkassen, når meu-konverteringen til postkassen er fuldført i destinationsmiljøet ved at køre `Set-Mailbox <principle> -GrantSendOnBehalfTo <delegate>`.
 
-- Postkassetilladelser, der er gemt i postkassen, flyttes sammen med postkassen, når både sikkerhedskontoen og stedfortræderen flyttes til destinationssystemet. Brugerens TestUser_7 tildeles f.eks. FullAccess til den postkasse, TestUser_8 i lejerens SourceCompany.onmicrosoft.com. Når flytningen af postkassen er fuldført til TargetCompany.onmicrosoft.com, oprettes de samme tilladelser i destinationsmappen. Eksempler på brug af *Get-MailboxPermission* for TestUser_7 i både kilde- og destinationslejere er vist nedenfor. Exchange-cmdlet'er har en præfiks med kilde og destination i overensstemmelse hermed.
+- Postkassetilladelser, der er gemt i postkassen, flyttes sammen med postkassen, når både sikkerhedskontoen og stedfortræderen flyttes til destinationssystemet. Brugerens TestUser_7 tildeles f.eks. FullAccess til den postkasse, TestUser_8 i lejerens SourceCompany.onmicrosoft.com. Når flytningen af postkassen er fuldført til TargetCompany.onmicrosoft.com, oprettes de samme tilladelser i destinationsmappen. Eksempler på brug af *Get-MailboxPermission* for TestUser_7 i både kilde- og destinationslejere er vist nedenfor. Exchange cmdlet'er har en præfiks med kilde og destination i overensstemmelse hermed.
 
 Her er et eksempel på outputtet af tilladelsen til postkassen, før der flyttes.
 
@@ -515,7 +515,7 @@ Ja, men vi beholder kun lagertilladelserne som beskrevet i disse artikler:
 
 - [Microsoft Docs | Administrer tilladelser for modtagere i Exchange Online](/exchange/recipients-in-exchange-online/manage-permissions-for-recipients)
 
-- [Microsoft Support | Sådan tildeler du exchange- og Outlook-postkassetilladelser i office 365 dedikeret](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
+- [Microsoft Support | Sådan tildeler du Exchange og Outlook postkassetilladelser i Office 365 dedikeret](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
 
 **Har du nogen anbefalinger til batches?**
 
@@ -539,9 +539,9 @@ Overførsel på tværs af lejere overfører kun postkassedata og intet andet. De
 
 Da overflytninger på tværs af lejere ikke eksporterer mærkater, og det er ikke muligt at dele mærkater mellem lejere, kan du kun opnå dette ved at oprette mærkaterne i destinationslejeren igen.
 
-**Understøtter du flytning af Microsoft 365-grupper?**
+**Støtter du flytning af Microsoft 365-grupper?**
 
-I øjeblikket understøtter overførselsfunktionen for postkasser på tværs af lejere ikke migreringen af Microsoft 365-grupper.
+I øjeblikket understøtter overførselsfunktionen for postkasser på tværs af lejere ikke migrering af Microsoft 365-grupper.
 
 **Kan en kildelejeradministrator udføre en eDiscovery-søgning mod en postkasse, når postkassen er blevet overført til den nye/destinationslejer?**
 
@@ -549,13 +549,13 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
 
 ## <a name="known-issues"></a>Kendte problemer
 
-- **Problem: Teams-funktionaliteten efter overførsel i kildelejer er begrænset.** Når postkassen er overført til destinationslejer, har Teams i kildelejer ikke længere adgang til brugerens postkasse. Så hvis en bruger logger på Teams med legitimationsoplysningerne for kildelejer, vil der være tab af funktionalitet, f.eks. manglende evne til at opdatere dit profilbillede, ingen kalenderprogram og manglende evne til at søge efter og deltage i offentlige teams.
+- **Problem: Funktionaliteten efter overførsel Teams i kildelejer er begrænset.** Når postkassen er overført til destinationslejer, har Teams i kildelejer ikke længere adgang til brugerens postkasse. Så hvis en bruger logger på Teams med kildelejeroplysningerne, vil der være tab af funktionalitet, f.eks. manglende evne til at opdatere dit profilbillede, ingen kalenderprogram og manglende evne til at søge efter og deltage i offentlige teams.
 
 - **Problem: Automatisk udvidede arkiver kan ikke overføres.** Overførselsfunktionen på tværs af lejere understøtter overflytninger af den primære postkasse og arkivpostkassen for en bestemt bruger. Hvis brugeren i kilden imidlertid har et automatisk udvidet arkiv – hvilket betyder, at der er mere end én arkivpostkasse, kan funktionen ikke overføre de ekstra arkiver og bør mislykkes.
 
 - **Problem: Cloud MailUsers med ikke-ejet smtp-proxyAddress blokerer FRU flytter baggrund.** Når du opretter MailUser-objekter for destinationslejer, skal du sikre, at alle SMTP-proxyadresser tilhører destinationslejerorganisationen. Hvis der findes en SMTP-proxyAdresse på destinationsmailbrugeren, der ikke tilhører den lokale lejer, forhindres konverteringen af MailUser til Postkasse. Dette skyldes vores forsikring om, at postkasseobjekter kun kan sende mail fra domæner, som lejeren er autoritativ for (domæner, som lejeren har gjort krav på):
 
-  - Når du synkroniserer brugere fra det lokale miljø ved hjælp af Azure AD Connect, klargør du MailUser-objekter i det lokale miljø med ExternalEmailAddress, der peger på kildelejeren, hvor postkassen findes (LaraN@contoso.onmicrosoft.com), og du stempler PrimarySMTPAddress som et domæne, der er placeret i destinationslejeren (Lara.Newton@northwind.com). Disse værdier synkroniseres ned til lejeren, og en passende mailbruger klargøres og klar til overførsel. Der vises et eksempelobjekt her.
+  - Når du synkroniserer brugere fra det lokale miljø ved hjælp af Azure AD Forbind, klargør du MailUser-objekter i det lokale miljø med ExternalEmailAddress, der peger på kildelejeren, hvor postkassen findes (LaraN@contoso.onmicrosoft.com), og du stempler PrimarySMTPAddress som et domæne, der er placeret i destinationslejeren (Lara.Newton@northwind.com). Disse værdier synkroniseres ned til lejeren, og en passende mailbruger klargøres og klar til overførsel. Der vises et eksempelobjekt her.
 
     ```powershell
     Get-MailUser LaraN | select ExternalEmailAddress, EmailAddresses
@@ -570,9 +570,9 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
 
 - **Problem: MailUser-objekter med "eksterne" primære SMTP-adresser ændres/nulstilles til "interne" virksomhedsdomæner, der er gjort krav på**
 
-  MailUser-objekter er markørerne til ikke-lokale postkasser. I tilfælde af migrering af postkasser på tværs af lejere bruger vi MailUser-objekter til at repræsentere enten kildepostkassen (fra målorganisationens perspektiv) eller destinationspostkassen (fra kildeorganisationens perspektiv). MailUsers har en ExternalEmailAddress (targetAddress), der peger på smtp-adressen på den faktiske postkasse (ProxyTest@fabrikam.onmicrosoft.com) og den primæreSMTP-adresse, der repræsenterer den viste SMTP-adresse for postkassebrugeren i mappen. Nogle organisationer vælger at vise den primære SMTP-adresse som en ekstern SMTP-adresse, ikke som en adresse, der ejes/bekræftes af den lokale lejer (f.eks. fabrikam.com i stedet for som contoso.com).  Men når et Exchange-tjenesteplanobjekt er anvendt på MailUser via licenshandlinger, ændres den primære SMTP-adresse, så den vises som et domæne, der er bekræftet af den lokale organisation (contoso.com). Der er to mulige årsager:
+  MailUser-objekter er markørerne til ikke-lokale postkasser. I tilfælde af migrering af postkasser på tværs af lejere bruger vi MailUser-objekter til at repræsentere enten kildepostkassen (fra målorganisationens perspektiv) eller destinationspostkassen (fra kildeorganisationens perspektiv). MailUsers har en ExternalEmailAddress (targetAddress), der peger på smtp-adressen på den faktiske postkasse (ProxyTest@fabrikam.onmicrosoft.com) og den primæreSMTP-adresse, der repræsenterer den viste SMTP-adresse for postkassebrugeren i mappen. Nogle organisationer vælger at vise den primære SMTP-adresse som en ekstern SMTP-adresse, ikke som en adresse, der ejes/bekræftes af den lokale lejer (f.eks. fabrikam.com i stedet for som contoso.com).  Men når et Exchange serviceplanobjekt er anvendt på MailUser via licenshandlinger, ændres den primære SMTP-adresse, så den vises som et domæne, der er bekræftet af den lokale organisation (contoso.com). Der er to mulige årsager:
 
-  - Når der anvendes en Exchange-tjenesteplan på en MailUser, begynder Azure AD-processen at gennemtvinge proxy-rensning for at sikre, at den lokale organisation ikke kan sende mails ud, spoof eller mail fra en anden lejer. Alle SMTP-adresser på et modtagerobjekt med disse tjenesteplaner fjernes, hvis adressen ikke bekræftes af den lokale organisation. Som det er tilfældet i eksemplet, bekræftes det Fabikam.com domæne IKKE af den contoso.onmicrosoft.com lejer, så rensningen fjerner det fabrikam.com domæne. Hvis du vil bevare disse eksterne domæner på MailUser, enten før migreringen eller efter migreringen, skal du ændre dine overførselsprocesser for at fjerne licenser, når flytningen er fuldført, eller før flytningen for at sikre, at brugerne har anvendt den forventede eksterne branding. Du skal sikre, at postkasseobjektet er korrekt licenseret til ikke at påvirke posttjenesten.
+  - Når en Exchange serviceplan anvendes på en MailUser, begynder Azure AD processen at gennemtvinge proxy-rensning for at sikre, at den lokale organisation ikke kan sende mails ud, spoof eller mail fra en anden lejer. Alle SMTP-adresser på et modtagerobjekt med disse tjenesteplaner fjernes, hvis adressen ikke bekræftes af den lokale organisation. Som det er tilfældet i eksemplet, bekræftes det Fabikam.com domæne IKKE af den contoso.onmicrosoft.com lejer, så rensningen fjerner det fabrikam.com domæne. Hvis du vil bevare disse eksterne domæner på MailUser, enten før migreringen eller efter migreringen, skal du ændre dine overførselsprocesser for at fjerne licenser, når flytningen er fuldført, eller før flytningen for at sikre, at brugerne har anvendt den forventede eksterne branding. Du skal sikre, at postkasseobjektet er korrekt licenseret til ikke at påvirke posttjenesten.
   - Her vises et eksempelscript til fjernelse af tjenesteplaner på en MailUser i den contoso.onmicrosoft.com lejer.
 
     ```powershell
@@ -637,11 +637,11 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
 
     - Når msExchRemoteRecipientType er angivet til 8 (DeprovisionMailbox) for mailbrugere i det lokale miljø, der er migreret til destinationslejeren, fjerner proxy-scrubbing-logikken i Azure ikke-ejede domæner og nulstiller den primæreSMTP til et ejet domæne. Ved at rydde msExchRemoteRecipientType i MailUser i det lokale miljø gælder proxy-scrub-logikken ikke længere.
 
-      Nedenfor er det fulde sæt af aktuelle tjenesteplaner, der omfatter Exchange Online.
+      Nedenfor er det fulde sæt af aktuelle serviceplaner, der omfatter Exchange Online.
 
       | Navn                                             |
       | ------------------------------------------------ |
-      | eDiscovery-lager (Premium) (500 GB)             |
+      | eDiscovery(Premium) Storage (500 GB)             |
       | Kundelockbox                                 |
       | Forebyggelse af datatab                             |
       | Exchange Enterprise CAL Services (EOP, DLP)      |
@@ -650,24 +650,24 @@ Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery 
       | Exchange Online (P1)                             |
       | Exchange Online (plan 1)                         |
       | Exchange Online (plan 2)                         |
-      | Exchange Online-arkivering for Exchange Online    |
-      | Exchange Online-arkivering for Exchange Server    |
-      | Tilføjelsesprogrammet Inaktiv bruger i Exchange Online             |
-      | Exchange Online Kiosk                            |
+      | Exchange Online-arkivering til Exchange Online    |
+      | Exchange Online-arkivering til Exchange Server    |
+      | Exchange Online tilføjelsesprogrammet Inaktiv bruger             |
+      | Exchange Online-kiosk                            |
       | Exchange Online Multi-Geo                        |
       | Exchange Online Plan 1                           |
       | Exchange Online POP                              |
       | Exchange Online Protection                       |
       | Informationsbarrierer                             |
-      | Information Protection til Office 365 – Premium  |
+      | Information Protection til Office 365 - Premium  |
       | Information Protection til Office 365 – Standard |
-      | Indsigter fra MyAnalytics                          |
-      | Avanceret overvågning i Microsoft 365                  |
+      | Insights af MyAnalytics                          |
+      | Microsoft 365 Avanceret overvågning                  |
       | Microsoft Bookings                               |
       | Microsoft Business Center                        |
       | Microsoft MyAnalytics (fuld)                     |
       | Office 365 eDiscovery (Premium)                   |
-      | Microsoft Defender for Office 365 (Plan 1)       |
-      | Microsoft Defender til Office 365 (Plan 2)       |
-      | Administration af privilegeret adgang til Office 365          |
-      | Premium-kryptering i Office 365                 |
+      | Microsoft Defender for Office 365 (plan 1)       |
+      | Microsoft Defender for Office 365 (plan 2)       |
+      | Office 365 privilegeret adgangsstyring          |
+      | Premium kryptering i Office 365                 |

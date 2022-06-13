@@ -19,12 +19,12 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du bruger PowerShell til at oprette og publicere opbevaringsmærkater fra kommandolinjen uafhængigt af Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 7d650c87aad92cdb65ed9a40c98c8fc3c94e01fb
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: f2a01024f6c2a05eb5d584112f9a828ac2c3058c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65287150"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66011754"
 ---
 # <a name="create-and-publish-retention-labels-by-using-powershell"></a>Opret og publicer opbevaringsmærkater ved hjælp af PowerShell
 
@@ -739,11 +739,11 @@ if ($ResultCSV)
 
 ## <a name="step-4-run-the-powershell-script"></a>Trin 4: Kør PowerShell-scriptet
 
-Først [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Først [skal du Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 Kør derefter scriptet, der opretter og udgiver opbevaringsmærkater:
   
-1. I PowerShell-sessionen Security & Compliance Center skal du angive stien efterfulgt af tegnene `.\` og filnavnet på scriptet og derefter trykke på ENTER for at køre scriptet. Eksempel:
+1. I PowerShell-sessionen Security & Compliance skal du angive stien efterfulgt af tegnene `.\` og filnavnet på scriptet og derefter trykke på ENTER for at køre scriptet. Eksempel:
     
     ```powershell
     <path>.\CreateRetentionSchedule.ps1

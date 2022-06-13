@@ -4,6 +4,7 @@ f1.keywords: CSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: crimora
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -17,12 +18,12 @@ ms.custom:
 - intro-get-started
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) kan du få mere at vide om, hvordan du tilmelder dig Microsoft 365 Lighthouse.
-ms.openlocfilehash: 8d845ed454a672b1480ca0b6fe6f471cc30a37a6
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 5596005ff9a3db4e5a873a32f87b2677cdc8efaa
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172199"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66007124"
 ---
 # <a name="sign-up-for-microsoft-365-lighthouse"></a>Tilmeld dig Microsoft 365 Fyrtårn
 
@@ -30,7 +31,7 @@ Denne artikel indeholder instruktioner til, hvordan du tilmelder dig Microsoft 3
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Microsoft 365 Lighthouse udrulles kun&mdash; i partnerlejer ikke i kundens lejere, men sørg for, at du og dine kundelejere opfylder de krav, der er angivet i [Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).
+- Microsoft 365 Lighthouse udrulles kun&mdash;i partnerlejer ikke i kundelejere, men sørg for, at du og dine kundelejere opfylder de krav, der er angivet i [Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).
 
 - Du skal være global administrator i den partnerlejer, du logger på.
 
@@ -38,7 +39,7 @@ Denne artikel indeholder instruktioner til, hvordan du tilmelder dig Microsoft 3
 
 1. Gå til Microsoft 365 Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.microsoft.com</a> , og log på med dine legitimationsoplysninger til din partnerlejer. 
 
-1. Gå til **FaktureringKøb** >  **tjenesterAndre** >  tjenester.
+1. Gå til **Fakturering** > **Køb tjenester** > **Andre tjenester**.
 
     Hvis Microsoft 365 Fyrtårn ikke findes på listen over tjenester, skal du vælge **Se alle andre serviceprodukter**.
 

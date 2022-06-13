@@ -11,12 +11,12 @@ ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 description: Brug eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business.
-ms.openlocfilehash: 30398f91a0ab7807ea3438e6bfdde3606e918a4d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cf5c6b61e9b4cc041d9f8e315321c63c78415a63
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092243"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66009425"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>Søg efter indhold ved hjælp af indholdssøgeværktøjet
 
@@ -70,7 +70,7 @@ Indholdssøgning er nem at bruge, men det er også et effektivt værktøj. Bag k
 
 ## <a name="use-scripts-for-advanced-scenarios"></a>Brug scripts til avancerede scenarier
 
-Nogle gange skal du udføre mere avancerede, komplekse og gentagne søgeopgaver for indhold. I disse tilfælde er det nemmere og hurtigere at bruge kommandoer i Security & Compliance Center PowerShell. For at gøre det nemmere har vi oprettet en række PowerShell-scripts til Security & Compliance Center for at hjælpe dig med at fuldføre opgaver, der er relateret til søgning i komplekst indhold.
+Nogle gange skal du udføre mere avancerede, komplekse og gentagne søgeopgaver for indhold. I disse tilfælde er det nemmere og hurtigere at bruge kommandoer i PowerShell til sikkerhed & overholdelse. For at gøre det nemmere har vi oprettet en række PowerShell-scripts til sikkerhed & overholdelse af angivne standarder for at hjælpe dig med at fuldføre opgaver, der er relateret til søgning i komplekst indhold.
 
 - [Søg i bestemte postkasser og webstedsmapper](use-content-search-for-targeted-collections.md) (kaldet en  *målrettet* samling), når du er sikker på, at elementer, der svarer til en sag, er placeret i den pågældende mappe
 

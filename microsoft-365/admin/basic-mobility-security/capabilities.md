@@ -19,12 +19,12 @@ ms.custom:
 search.appverid:
 - MET150
 description: Basic Mobility and Security hjælper dig med at sikre og administrere mobilenheder med politikker, der styrer adgangen til organisationens Microsoft 365 mail og dokumenter.
-ms.openlocfilehash: e63f052e0beebe93f9faa27b54725dbac2a9443f
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 55c2a197959e55e2a74f8691b7181f8ee91b0ea9
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435849"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66010162"
 ---
 # <a name="capabilities-of-basic-mobility-and-security"></a>Funktioner i Basic Mobility og Security
 
@@ -110,7 +110,7 @@ I følgende afsnit vises de politikindstillinger, du kan bruge til at beskytte o
 
 |Indstillingsnavn|Ios|Android|Samsung Knox|
 |---|---|---|---|
-|Kræv datakryptering på <sup>enheder1</sup>|Nej|Ja|Ja|
+|Kræv datakryptering på enheder<sup>1</sup>|Nej|Ja|Ja|
 
 <sup>1</sup> Med Samsung Knox kan du også kræve kryptering på lagerkort.
 
@@ -163,7 +163,7 @@ Følgende indstilling kan forhindre brugerne i at få adgang til deres Microsoft
 
 ## <a name="additional-settings"></a>Yderligere indstillinger
 
-Du kan angive følgende yderligere politikindstillinger ved hjælp af PowerShell-cmdlet'er & Security & Compliance Center. Du kan få flere oplysninger under [Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell).
+Du kan angive følgende yderligere politikindstillinger ved hjælp af PowerShell-cmdlet'er til sikkerhed & overholdelse af angivne standarder. Du kan få flere oplysninger under [Sikkerhed & Overholdelse af angivne standarder i PowerShell](/powershell/exchange/scc-powershell).
 
 |Indstillingsnavn|Ios|Android|
 |---|---|---|
@@ -230,7 +230,7 @@ Du kan angive disse yderligere politikindstillinger ved hjælp af PowerShell-cmd
 
 ## <a name="remotely-wipe-a-mobile-device"></a>Fjernsletning af en mobilenhed
 
-Hvis en enhed mistes eller bliver stjålet, kan du fjerne følsomme organisationsdata og forhindre adgang til dine Microsoft 365 organisationsressourcer ved at slette **Microsoft Purview-compliance-portal** >  **Administration** **af forebyggelse af** >  datatab. Du kan udføre en selektiv sletning for kun at fjerne organisationsdata eller en fuld sletning for at slette alle oplysninger fra en enhed og gendanne dem til fabriksindstillingerne.
+Hvis en enhed mistes eller bliver stjålet, kan du fjerne følsomme organisationsdata og forhindre adgang til dine Microsoft 365 organisationsressourcer ved at udføre en sletning fra **Microsoft Purview-overholdelsesportalEn** > **til forebyggelse af** >  datatab **Enhedshåndtering**. Du kan udføre en selektiv sletning for kun at fjerne organisationsdata eller en fuld sletning for at slette alle oplysninger fra en enhed og gendanne dem til fabriksindstillingerne.
 
 Du kan få flere oplysninger under [Slet en mobilenhed i Grundlæggende mobilitet og sikkerhed](wipe-mobile-device.md).
 

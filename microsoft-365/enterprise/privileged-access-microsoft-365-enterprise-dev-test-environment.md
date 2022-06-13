@@ -15,12 +15,12 @@ ms.collection:
 - M365-security-compliance
 ms.custom: Ent_TLGs
 description: Brug denne testlaboratorievejledning til at aktivere privilegeret adgangsstyring af dine Microsoft 365 til virksomhedstestmiljøer.
-ms.openlocfilehash: 0c92cbd398e4c388fe3c5999c5e0aa9973c4ee06
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8520e4cf224164c62c10858e67359c0fa1a9fc85
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092089"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008435"
 ---
 # <a name="privileged-access-management-for-your-microsoft-365-for-enterprise-test-environment"></a>Privilegeret adgangsstyring for dit Microsoft 365 til virksomhedstestmiljø
 
@@ -45,8 +45,8 @@ Hvis du vil konfigurere privilegeret adgangsstyring på en let måde med minimum
   
 Hvis du vil konfigurere privilegeret adgangsstyring i en simuleret virksomhed, skal du følge vejledningen i [Pass-through-godkendelse](pass-through-auth-m365-ent-test-environment.md).
   
->[!NOTE]
->Test af privilegeret adgangsstyring kræver ikke det simulerede testmiljø for virksomheder, hvilket omfatter et simuleret intranet, der er forbundet til internet- og mappesynkronisering for et Active Directory-domæneservices område. Den leveres her som en mulighed, så du kan teste privilegeret adgangsstyring og eksperimentere med den i et miljø, der repræsenterer en typisk organisation.
+> [!NOTE]
+> Test af privilegeret adgangsstyring kræver ikke det simulerede testmiljø for virksomheder, hvilket omfatter et simuleret intranet, der er forbundet til internet- og mappesynkronisering for et Active Directory-domæneservices område. Den leveres her som en mulighed, så du kan teste privilegeret adgangsstyring og eksperimentere med den i et miljø, der repræsenterer en typisk organisation.
 
 ## <a name="phase-2-configure-privileged-access-management"></a>Fase 2: Konfigurer privilegeret adgangsstyring
 
@@ -54,11 +54,11 @@ I denne fase skal du konfigurere en godkendergruppe og aktivere privilegeret adg
 
 Udfør følgende trin for at konfigurere og bruge privilegeret adgang i din organisation.
 
-#### <a name="step-1-create-an-approvers-group"></a>[Trin 1: Opret en godkenders gruppe](../compliance/privileged-access-management-configuration.md#step-1-create-an-approvers-group)
+### <a name="step-1-create-an-approvers-group"></a>[Trin 1: Opret en godkenders gruppe](../compliance/privileged-access-management-configuration.md#step-1-create-an-approvers-group)
 
 Før du begynder at bruge privilegeret adgang, skal du bestemme, hvem der har godkendelsestilladelse til indgående anmodninger om adgang til udvidede og privilegerede opgaver. Alle brugere, der er en del af godkendergruppen, kan godkende anmodninger om adgang. Hvis du vil bruge privilegeret adgang, skal du oprette en mailaktiveret sikkerhedsgruppe i Microsoft 365. I dit testmiljø skal du navngive den nye sikkerhedsgruppe "Privilegerede adgangsgodkendere" og tilføje "Bruger 3", der tidligere blev oprettet i tidligere trin i vejledningen til testlaboratoriet.
 
-#### <a name="step-2-enable-privileged-access"></a>[Trin 2: Aktivér privilegeret adgang](../compliance/privileged-access-management-configuration.md#step-2-enable-privileged-access)
+### <a name="step-2-enable-privileged-access"></a>[Trin 2: Aktivér privilegeret adgang](../compliance/privileged-access-management-configuration.md#step-2-enable-privileged-access)
 
 Privilegeret adgang skal være udtrykkeligt aktiveret i Microsoft 365 med standardgodkendergruppen, og den skal indeholde et sæt systemkonti, som du vil udelade fra den privilegerede adgangsstyring. Sørg for at aktivere privilegeret adgang i din organisation, før du starter fase 3 i denne vejledning.
 
@@ -68,24 +68,28 @@ I denne fase skal du kontrollere, at politikken for privilegeret adgang fungerer
 
 ### <a name="test-the-ability-to-execute-a-task-not-defined-in-a-privileged-access-policy"></a>Test muligheden for at udføre en opgave, der IKKE er defineret i en privilegeret adgangspolitik
 
-Først skal du oprette forbindelse til Exchange Management PowerShell med legitimationsoplysningerne for en bruger, der er konfigureret med rollen Exchange rolleadministration i testmiljøet, og forsøge at oprette en ny journalregel. Opgaven [Ny-JournalRule](/powershell/module/exchange/new-journalrule) er i øjeblikket ikke defineret i en politik for privilegeret adgang for din organisation.
+Forsøg først at oprette en ny journalregel i Exchange Online PowerShell. Opgaven [Ny-JournalRule](/powershell/module/exchange/new-journalrule) er i øjeblikket ikke defineret i en politik for privilegeret adgang for din organisation.
 
-1. På din lokale computer skal du åbne og logge på Exchange Online Remote PowerShell-modulet hos **Microsoft Corporation** >  **Microsoft Exchange Online Remote PowerShell Module** ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
-2. I Exchange administration af PowerShell skal du oprette en ny journalregel for din organisation:
+1. På din lokale computer [Forbind at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
+2. Opret en ny journalregel for din organisation ved at køre følgende kommando:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    New-JournalRule -Name "JournalRule1" -Recipient joe@contoso.onmicrosoft.com -JournalEmailAddress barbara@adatum.com -Scope Global -Enabled $true
    ```
 
-3. Vis, at den nye journalregel blev oprettet i PowerShell Exchange administration.
+3. Kontrollér, at den nye journalregel blev oprettet:
+
+   ```PowerShell
+   Get-JournalRule -Identity "JournalRule1"
+   ```
 
 ### <a name="create-a-new-privileged-access-policy-for-the-new-journalrule-task"></a>Opret en ny privilegeret adgangspolitik for den New-JournalRule opgave
 
->[!NOTE]
->Hvis du ikke allerede har fuldført trin 1 og 2 fra fase 2 i denne vejledning, skal du sørge for at følge trinnene for at oprette en godkenders gruppe med navnet "Rettighedsadgangsgodkendere" for at aktivere privilegeret adgang i dit testmiljø.
+> [!NOTE]
+> Hvis du ikke allerede har fuldført trin 1 og 2 fra fase 2 i denne vejledning, skal du sørge for at følge trinnene for at oprette en godkenders gruppe med navnet "Rettighedsadgangsgodkendere" for at aktivere privilegeret adgang i dit testmiljø.
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
-2. I Administration skal du gå til **Indstillinger** >  **Sikkerhed & Beskyttelse af personlige** **oplysningerPrivilegeret** >  adgang.
+2. I Administration skal du gå til **Indstillinger** >  Sikkerhed &**Privilegeret adgang til** **beskyttelse af personlige oplysninger** > .
 3. Vælg **Administrer adgangspolitikker og -anmodninger**.
 4. Vælg **Konfigurer politikker**, og vælg derefter **Tilføj en politik**.
 5. På rullelisten skal du vælge eller angive følgende værdier:
@@ -96,17 +100,17 @@ Først skal du oprette forbindelse til Exchange Management PowerShell med legiti
 
 ### <a name="test-approval-requirement-for-the-new-journalrule-task-defined-in-a-privileged-access-policy"></a>Test godkendelseskrav for den New-JournalRule opgave, der er defineret i en politik for privilegeret adgang
 
-1. På din lokale computer skal du åbne og logge på Exchange Online Remote PowerShell-modulet hos **Microsoft Corporation** >  **Microsoft Exchange Online Remote PowerShell Module** ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
+1. På din lokale computer [Forbind at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
 
-2. I Exchange administration af PowerShell skal du oprette en ny journalregel for din organisation:
+2. I Exchange Online PowerShell skal du oprette en ny journalregel for din organisation:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    New-JournalRule -Name "JournalRule2" -Recipient user1@<your subscription domain> -JournalEmailAddress user1@<your subscription domain> -Scope Global -Enabled $true
    ```
 
-3. Vis fejlen "Utilstrækkelige tilladelser" i Exchange Management PowerShell:
+3. Vis fejlen "Utilstrækkelige tilladelser" i Exchange Online PowerShell:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    Insufficient permissions. Please raise an elevated access request for this task.
        + CategoryInfo          : NotSpecified: (:) [], LocalizedException
        + FullyQualifiedErrorId : [Server=CY1PR00MB0220,RequestId=7b8c7470-ddd0-4528-a01e-5e20ecc9bd54,TimeStamp=9/19/2018
@@ -118,7 +122,7 @@ Først skal du oprette forbindelse til Exchange Management PowerShell med legiti
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
 
-2. I Administration skal du gå til **Indstillinger** >  **Sikkerhed & Beskyttelse af personlige** **oplysningerPrivilegeret** >  adgang.
+2. I Administration skal du gå til **Indstillinger** >  Sikkerhed &**Privilegeret adgang til** **beskyttelse af personlige oplysninger** > .
 
 3. Vælg **Administrer adgangspolitikker og -anmodninger**.
 
@@ -132,7 +136,7 @@ Først skal du oprette forbindelse til Exchange Management PowerShell med legiti
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) ved hjælp af legitimationsoplysningerne for Bruger 3 i testmiljøet (medlem af sikkerhedsgruppen "Privilegerede adgangsgodkendere" i testmiljøet).
 
-2. I Administration skal du gå til **Indstillinger** >  **Sikkerhed & Beskyttelse af personlige** **oplysningerPrivilegeret** >  adgang.
+2. I Administration skal du gå til **Indstillinger** >  Sikkerhed &**Privilegeret adgang til** **beskyttelse af personlige oplysninger** > .
 
 3. Vælg **Administrer adgangspolitikker og -anmodninger**.
 
@@ -140,15 +144,19 @@ Først skal du oprette forbindelse til Exchange Management PowerShell med legiti
 
 ### <a name="test-creating-a-new-journal-rule-with-privileged-access-approved-for-the-new-journalrule-task"></a>Test oprettelse af en ny journalregel med privilegeret adgang godkendt for den New-JournalRule opgave
 
-1. På din lokale computer skal du åbne og logge på Exchange Online Remote PowerShell-modulet hos **Microsoft Corporation** >  **Microsoft Exchange Online Remote PowerShell Module** ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
+1. På din lokale computer [Forbind at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af legitimationsoplysninger med rollen Exchange rolleadministration for dit testmiljø.
 
-2. I Exchange administration af PowerShell skal du oprette en ny journalregel for din organisation:
+2. I Exchange Online PowerShell skal du oprette en ny journalregel for din organisation:
 
-   ```ExchangeManagementPowerShell
+   ```PowerShell
    New-JournalRule -Name "JournalRule2" -Recipient user1@<your subscription domain> -JournalEmailAddress user1@<your subscription domain> -Scope Global -Enabled $true
    ```
 
-3. Vis, at den nye journalregel blev oprettet i PowerShell Exchange administration.
+3. Kontrollér, at den nye journalregel blev oprettet:
+
+   ```PowerShell
+   Get-JournalRule -Identity "JournalRule2"
+   ```
 
 ## <a name="next-step"></a>Næste trin
 

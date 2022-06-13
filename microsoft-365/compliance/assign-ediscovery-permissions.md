@@ -1,5 +1,5 @@
 ---
-title: Tildel eDiscovery-tilladelser i Microsoft Purview-compliance-portal
+title: Tildel eDiscovery-tilladelser på Microsoft Purview-overholdelsesportalen
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -16,22 +16,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5b9a067b-9d2e-4aa5-bb33-99d8c0d0b5d7
-description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relaterede opgaver ved hjælp af Microsoft Purview-compliance-portal.
+description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relaterede opgaver ved hjælp af Microsoft Purview-overholdelsesportalen.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 112109d50f0f7e1f11687a325f8756cf2b355e5c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: facd219019aa7ad2bd6325da25a2e4da3db660b1
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419434"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013370"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Tildel eDiscovery-tilladelser på overholdelsesportalen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Hvis andre skal bruge [eDiscovery-relaterede værktøjer](ediscovery.md) i Microsoft Purview-compliance-portal, skal du tildele dem de nødvendige tilladelser. Den nemmeste måde at gøre dette på er ved at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser på overholdelsesportalen** . I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
+Hvis du vil have, at brugerne skal bruge et af de [eDiscovery-relaterede værktøjer](ediscovery.md) på Microsoft Purview-overholdelsesportalen, skal du tildele dem de relevante tilladelser. Den nemmeste måde at gøre dette på er ved at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser på overholdelsesportalen** . I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
 
 > [!TIP]
 > Du kan få vist dine egne tilladelser på oversigtssiden for eDiscovery (Premium) på overholdelsesportalen. Du skal have tildelt mindst én rolle, for at dine tilladelser kan vises.
@@ -59,7 +59,7 @@ Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **
 
 - Du skal være medlem af rollegruppen Organisationsadministration eller tildeles rollen Rolleadministration for at tildele eDiscovery-tilladelser på overholdelsesportalen.
 
-- Du kan bruge [Cmdlet'en Add-RoleGroupMember](/powershell/module/exchange/Add-RoleGroupMember) i Security & Compliance Center PowerShell til at tilføje en mailaktiveret sikkerhedsgruppe som medlem af undergruppen eDiscovery Managers i rollegruppen eDiscovery Manager. Du kan dog ikke føje en mailaktiveret sikkerhedsgruppe til undergruppen eDiscovery-administratorer. Du kan finde [flere oplysninger under Flere oplysninger](#more-information).
+- Du kan bruge [Add-RoleGroupMember-cmdlet'en](/powershell/module/exchange/Add-RoleGroupMember) i Security & Compliance PowerShell til at tilføje en mailaktiveret sikkerhedsgruppe som medlem af undergruppen eDiscovery Managers i rollegruppen eDiscovery Manager. Du kan dog ikke føje en mailaktiveret sikkerhedsgruppe til undergruppen eDiscovery-administratorer. Du kan finde [flere oplysninger under Flere oplysninger](#more-information).
   
 ## <a name="assign-ediscovery-permissions"></a>Tildel eDiscovery-tilladelser
 
@@ -67,9 +67,11 @@ Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **
   
 2. Vælg **Tilladelser** i ruden til venstre.
 
-3. Klik på **Roller** under **Overholdelsescenter** på siden **Tilladelser & roller**.
+3. Klik på **Roller** under **Microsoft Purview-løsninger** på siden **Tilladelser & roller**.
 
-4. Vælg **eDiscovery Manager** på siden **Med overholdelsescenterroller**.
+   Hvis du vil gå direkte til denne side, skal du bruge <https://compliance.microsoft.com/compliancecenterpermissions>.
+
+4. På siden **Rollegrupper til Microsoft Purview-løsninger** skal du vælge **eDiscovery Manager**.
   
 5. Gør et af følgende på siden **eDiscovery Manager** på baggrund af de eDiscovery-tilladelser, du vil tildele.
   
@@ -88,17 +90,16 @@ I følgende tabel vises de eDiscovery-relaterede RBAC-roller på overholdelsespo
   
 | Rolle | Administrator for overholdelse af angivne standarder | & administrator af eDiscovery Manager | Organisationsadministration | Reviewer |
 |:-----|:-----:|:-----:|:-----:|:-----:|
-|Sagsstyring <br/> |![Markeret.](../media/checkmark.png) <br/> |![Markeret.](../media/checkmark.png) <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> |
-|Kommunikation <br/> | <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> | <br/> |
-|Søgning efter overholdelse <br/> |![Markeret.](../media/checkmark.png) <br/> |![Markeret.](../media/checkmark.png) <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> |
-|Vogter <br/> | <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> | <br/> |
-|eksportér <br/> | <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> | <br/> |
-|Holde <br/>  |![Markeret.](../media/checkmark.png) <br/> |![Markeret.](../media/checkmark.png) <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> |
-|Preview <br/>  | <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> | <br/> |
-|Vurder <br/>  | <br/> |![Markeret.](../media/checkmark.png) <br/> | <br/> |![Markeret](../media/checkmark.png) <br/> |
-|RMS-dekryptering <br/>  ||![Markeret](../media/checkmark.png) <br/> |||
-|Søg og fjern <br/> | <br/> | <br/> |![Markeret](../media/checkmark.png)<br/> | <br/> |
-||||||
+|Sagsstyring|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)||
+|Kommunikation||![Markeret.](../media/checkmark.png)|||
+|Søgning efter overholdelse|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)||
+|Vogter||![Markeret.](../media/checkmark.png)|||
+|eksportér||![Markeret.](../media/checkmark.png)|||
+|Holde|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)||
+|Preview||![Markeret.](../media/checkmark.png)|||
+|Vurder||![Markeret.](../media/checkmark.png)||![Markeret](../media/checkmark.png)|
+|RMS-dekryptering||![Markeret](../media/checkmark.png)|||
+|Søg og fjern|||![Markeret](../media/checkmark.png)||
   
 I følgende afsnit beskrives hver af de eDiscovery-relaterede RBAC-roller, der er angivet i den forrige tabel.
 
@@ -138,7 +139,7 @@ Du kan finde flere oplysninger [under Arbejd med vogtere i eDiscovery (Premium)]
 
 Rollen giver brugerne mulighed for at eksportere resultaterne af en indholdssøgning til en lokal computer. Det giver dem også mulighed for at forberede søgeresultater til analyse i eDiscovery (Premium).
 
-Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-compliance-portal](export-search-results.md).
+Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-overholdelsesportalen](export-search-results.md).
 
 ### <a name="hold"></a>Holde
 
@@ -198,7 +199,7 @@ Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
 
   - Da en eDiscovery-administrator kan få vist og få adgang til alle sager med eDiscovery (Standard) og eDiscovery (Premium), kan de overvåge og overvåge alle sager og tilknyttede søgninger efter overholdelse af angivne standarder. Dette kan hjælpe med at forhindre misbrug af søgninger i overholdelse af angivne standarder eller eDiscovery-sager. Og da eDiscovery-administratorer kan få adgang til potentielt følsomme oplysninger i resultaterne af en søgning efter overholdelse, skal du begrænse antallet af personer, der er eDiscovery-administratorer.
 
-- **Kan jeg tilføje en gruppe som medlem af rollegruppen eDiscovery Manager?** Som tidligere forklaret kan du tilføje en mailaktiveret sikkerhedsgruppe som medlem af undergruppen eDiscovery Managers i rollegruppen eDiscovery Manager ved hjælp af cmdlet'en **Add-RoleGroupMember** i Security & Compliance Center PowerShell. Du kan f.eks. køre følgende kommando for at føje en mailaktiveret sikkerhedsgruppe til rollegruppen eDiscovery Manager. 
+- **Kan jeg tilføje en gruppe som medlem af rollegruppen eDiscovery Manager?** Som tidligere forklaret kan du tilføje en mailaktiveret sikkerhedsgruppe som medlem af undergruppen eDiscovery-ledere i rollegruppen eDiscovery Manager ved hjælp af cmdlet'en **Add-RoleGroupMember** i Security & Compliance PowerShell. Du kan f.eks. køre følgende kommando for at føje en mailaktiveret sikkerhedsgruppe til rollegruppen eDiscovery Manager. 
 
   ```powershell
   Add-RoleGroupMember "eDiscovery Manager" -Member <name of security group>
@@ -206,6 +207,6 @@ Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
 
     Exchange distributionsgrupper og Microsoft 365-grupper understøttes ikke. Du skal bruge en mailaktiveret sikkerhedsgruppe, som du kan oprette i Exchange Online PowerShell ved at køre `New-DistributionGroup -Type Security`. Du kan også oprette en mailaktiveret sikkerhedsgruppe (og tilføje medlemmer) i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339). Det kan tage op til 60 minutter, efter du har oprettet den, for at en ny mailaktiveret sikkerhedsgruppe kan føjes til rollegruppen eDiscovery-ledere.
 
-    Som tidligere angivet kan du heller ikke gøre en mailaktiveret sikkerhedsgruppe til eDiscovery-administrator ved hjælp af cmdlet'en **Add-eDiscoveryCaseAdmin** i Security & Compliance Center PowerShell. Du kan kun tilføje individuelle brugere som eDiscovery-administratorer.
+    Som tidligere nævnt kan du heller ikke gøre en mailaktiveret sikkerhedsgruppe til eDiscovery-administrator ved hjælp af **Cmdlet'en Add-eDiscoveryCaseAdmin** i Security & Compliance PowerShell. Du kan kun tilføje individuelle brugere som eDiscovery-administratorer.
 
     Du kan heller ikke tilføje en mailaktiveret sikkerhedsgruppe som medlem af en sag.

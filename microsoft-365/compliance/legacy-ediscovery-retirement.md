@@ -14,12 +14,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: In-Place eDiscovery og In-Place Venteposition (og de tilsvarende PowerShell-cmdlet'er) i Exchange Online udgår i første halvdel af 2020. Den Search-Mailbox cmdlet og Microsoft Purview eDiscovery (Premium) v1.0 udgår også inden for samme tidsperiode.
-ms.openlocfilehash: 367b020a5804ac120f226962ea48a49b73dd70e6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 36883f7edae391ff3461d5d6c135112a4f058671
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094476"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012273"
 ---
 # <a name="retirement-of-legacy-ediscovery-tools"></a>Ophør af ældre eDiscovery-værktøjer
 
@@ -32,7 +32,7 @@ Microsoft har gennem årene leveret eDiscovery-værktøjer, som du kan bruge til
 
 Som et resultat af denne nye og forbedrede eDiscovery-funktionalitet på overholdelsesportalen udfaser vi følgende eDiscovery-relaterede funktioner og funktioner, der er relateret til søgning efter mailindhold i Exchange Online og Microsoft 365:
 
-- [EDiscovery-ventepositioner](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery) og [ventepositioner på](/exchange/security-and-compliance/create-or-remove-in-place-holds) stedet i Exchange Administration.
+- [direkte eDiscovery](/exchange/security-and-compliance/in-place-ediscovery/in-place-ediscovery) og [ventepositioner](/exchange/security-and-compliance/create-or-remove-in-place-holds) på stedet i Exchange Administration.
 
 - De Exchange Online PowerShell-cmdlet'er, der understøtter In-Place eDiscovery og In-Place Ventepositioner (disse cmdlet'er identificeres samlet som **-MailboxSearch-cmdlet'er*). Dette omfatter følgende cmdlet'er:
 
@@ -173,7 +173,7 @@ Det er muligt at overføre In-Place eDiscovery-søgninger og ventepositioner fra
 
 I henhold til den oprindelige meddelelse, der blev annonceret den 1. juli 2017 i Exchange Administration, udgår funktionen In-Place eDiscovery & Venteposition og de tilsvarende **\*-MailboxSearch-cmdlet'er**. Disse cmdlet'er giver brugerne mulighed for at søge efter, holde og eksportere postkasseindhold efter juridiske, lovmæssige og offentlige anmodninger.
 
-Da disse funktioner nu er tilgængelige i [<span class="underline">overholdelsesportalen</span>](./microsoft-365-compliance-center.md) og Office 365 Security & Compliance Center PowerShell med forbedret ydeevne og skalerbarhed, bør du bruge disse forbedrede cmdlet'er. Disse cmdlet'er omfatter [<span class="underline">\*-ComplianceCase</span>](/powershell/module/exchange/get-compliancecase), [<span class="underline">\*-ComplianceSearch</span>](/powershell/module/exchange/get-compliancesearch), [<span class="underline">\*-CaseHoldPolicy</span>](/powershell/module/exchange/get-caseholdpolicy), [<span class="underline">\*-CaseHoldRule</span>](/powershell/module/exchange/get-caseholdrule) og [<span class="underline">\*-ComplianceSearchAction</span>](/powershell/module/exchange/get-compliancesearchaction).
+Da disse funktioner nu er tilgængelige i [<span class="underline">overholdelsesportalen</span>](./microsoft-365-compliance-center.md) og Office 365 Security & Compliance PowerShell med forbedret ydeevne og skalerbarhed, bør du bruge disse forbedrede cmdlet'er. Disse cmdlet'er omfatter [<span class="underline">\*-ComplianceCase</span>](/powershell/module/exchange/get-compliancecase), [<span class="underline">\*-ComplianceSearch</span>](/powershell/module/exchange/get-compliancesearch), [<span class="underline">\*-CaseHoldPolicy</span>](/powershell/module/exchange/get-caseholdpolicy), [<span class="underline">\*-CaseHoldRule</span>](/powershell/module/exchange/get-caseholdrule) og [<span class="underline">\*-ComplianceSearchAction</span>](/powershell/module/exchange/get-compliancesearchaction).
 
 ### <a name="scope-of-affected-organizations"></a>Omfanget af berørte organisationer
 
@@ -254,7 +254,7 @@ Ja, selvom vi fjerner muligheden for at oprette og redigere søgninger, kan du s
 
 ## <a name="search-mailbox-cmdlet"></a>Search-Mailbox cmdlet
 
-**Search-Mailbox-cmdlet'en** i Exchange Online PowerShell udgår som oprindeligt annonceret i en advarsel i cmdlet-outputtet fra 2018. **Search-Mailbox-cmdlet'en** blev oprindeligt brugt til at søge i en brugers postkasse og fjerne skadeligt indhold. Vi anbefaler, at du begynder at bruge Cmdlet'erne **New-ComplianceSearch** og **New-ComplianceSearchAction** i Office 365 Security & Compliance Center PowerShell til at søge efter og fjerne indhold. De [<span class="underline">Microsoft 365 sikkerhedsfunktioner</span>](../security/index.yml) giver robust trusselsbeskyttelse for mail og mange andre Microsoft-tjenester for at få en indbygget sikkerhedsoplevelse.
+**Search-Mailbox-cmdlet'en** i Exchange Online PowerShell udgår som oprindeligt annonceret i en advarsel i cmdlet-outputtet fra 2018. **Search-Mailbox-cmdlet'en** blev oprindeligt brugt til at søge i en brugers postkasse og fjerne skadeligt indhold. Vi anbefaler, at du begynder at bruge **New-ComplianceSearch**- og **New-ComplianceSearchAction-cmdlet'erne** i Office 365 Security & Compliance PowerShell til at søge efter og fjerne indhold. De [<span class="underline">Microsoft 365 sikkerhedsfunktioner</span>](../security/index.yml) giver robust trusselsbeskyttelse for mail og mange andre Microsoft-tjenester for at få en indbygget sikkerhedsoplevelse.
 
 ### <a name="scope-of-affected-organizations"></a>Omfanget af berørte organisationer
 
@@ -348,7 +348,7 @@ eDiscovery (Premium) v1.0, som er den version af eDiscovery (Premium), der er ti
 
 Sådan finder du ud af, om din organisation bruger eDiscovery (Premium) v1.0:
 
-1. Gå til overholdelsesportalen, vælg **eDiscoveryCore** > , og åbn en eDiscovery(Standard)-sag.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank"></a>
+1. Gå til overholdelsesportalen, vælg **eDiscovery** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**Core**</a>, og åbn en eDiscovery(Standard)-sag.
 
 1. Hvis du ser knappen **Skift til eDiscovery (Premium),** vil du blive sendt til 1.0-versionen af eDiscovery (Premium), som udgår. Muligheden for at oprette og administrere sager i eDiscovery (Standard) påvirkes ikke. Det er kun muligheden for at tilføje og analysere sagsdata i eDiscovery (Premium) v1.0 (ved at klikke på **Skift til eDiscovery (Premium)),** der udgår.
 
@@ -356,7 +356,7 @@ Den nye eDiscovery-løsning (Premium) i Microsoft 365 (også kendt som *eDiscove
 
 Sådan får du adgang til eDiscovery (Premium) v2.0:
 
-Gå til overholdelsesportalen, vælg **eDiscoveryAdvanced** > , og åbn en eDiscovery(Standard)-sag.<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
+Gå til overholdelsesportalen, vælg **eDiscovery** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank">**Advanced**</a>, og åbn en eDiscovery(Standard)-sag.
 
 På nuværende tidspunkt anbefaler vi, at du begynder at overføre eDiscovery-arbejdsprocessen til den nye eDiscovery-funktionalitet (Premium). Hvis det er nødvendigt, kan du arkivere dine eDiscovery-sager (Premium) 1,0 sager ved at eksportere indholdet og gemme det offline. Selvom du stadig vil kunne få adgang til eDiscovery (Premium) v1.0 i eksisterende tilfælde indtil den 31. december 2020, yder Microsoft Support ikke support efter den 1. oktober 2020. Se følgende tidslinje for at få flere oplysninger.
 

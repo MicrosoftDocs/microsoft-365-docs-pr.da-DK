@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Opbevaringspolitikker for overvågningslog er en del af de nye funktioner i Microsoft Purview Audit (Premium). En opbevaringspolitik for overvågningslog giver dig mulighed for at angive, hvor længe overvågningslogge skal bevares i din organisation.
-ms.openlocfilehash: 0a35177c160e80cef2263382e4a1bc04057963b5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e75c88ba3ddd47b433e733984b76716532ab3ffa
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099669"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012422"
 ---
 # <a name="manage-audit-log-retention-policies"></a>Administrer opbevaringspolitikker for overvågningslog
 
@@ -102,7 +102,7 @@ Hvis du vil redigere en politik, skal du vælge den for at få vist pop op-siden
 
 > [!IMPORTANT]
 >
-> Hvis du bruger **Cmdlet'en New-UnifiedAuditLogRetentionPolicy** , er det muligt at oprette en opbevaringspolitik for overvågningslog for posttyper eller aktiviteter, der ikke er tilgængelige i værktøjet **Opret overvågningspolitik** på dashboardet. I dette tilfælde kan du ikke redigere politikken (f.eks. ændre opbevaringsvarigheden eller tilføje og fjerne aktiviteter) fra dashboardet **Overvågning af opbevaringspolitikker** . Du kan kun få vist og slette politikken i Overholdelsescenter. Hvis du vil redigere politikken, skal du bruge Cmdlet'en [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) i Security & Compliance Center PowerShell.>
+> Hvis du bruger **Cmdlet'en New-UnifiedAuditLogRetentionPolicy** , er det muligt at oprette en opbevaringspolitik for overvågningslog for posttyper eller aktiviteter, der ikke er tilgængelige i værktøjet **Opret overvågningspolitik** på dashboardet. I dette tilfælde kan du ikke redigere politikken (f.eks. ændre opbevaringsvarigheden eller tilføje og fjerne aktiviteter) fra dashboardet **Overvågning af opbevaringspolitikker** . Du kan kun få vist og slette politikken på Microsoft Purview-overholdelsesportalen. Hvis du vil redigere politikken, skal du bruge Cmdlet'en [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) i Security & Compliance PowerShell.>
 >
 > **Tip:** Der vises en meddelelse øverst på pop op-siden for politikker, der skal redigeres ved hjælp af PowerShell.
 
@@ -112,13 +112,13 @@ Hvis du vil slette en politik, skal du klikke **på sletteikonet**![.](../media/
 
 ## <a name="create-and-manage-audit-log-retention-policies-in-powershell"></a>Opret og administrer opbevaringspolitikker for overvågningslog i PowerShell
 
-Du kan også bruge Security & Compliance Center PowerShell til at oprette og administrere opbevaringspolitikker for overvågningslog. En af grundene til at bruge PowerShell er at oprette en politik for en posttype eller aktivitet, der ikke er tilgængelig i brugergrænsefladen.
+Du kan også bruge Security & Compliance PowerShell til at oprette og administrere opbevaringspolitikker for overvågningslog. En af grundene til at bruge PowerShell er at oprette en politik for en posttype eller aktivitet, der ikke er tilgængelig i brugergrænsefladen.
 
 ### <a name="create-an-audit-log-retention-policy-in-powershell"></a>Opret en opbevaringspolitik for overvågningslog i PowerShell
 
 Følg disse trin for at oprette en opbevaringspolitik for overvågningslog i PowerShell:
 
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende kommando for at oprette en opbevaringspolitik for overvågningslog:
 
@@ -143,7 +143,7 @@ Du kan få flere oplysninger under [New-UnifiedAuditLogRetentionPolicy](/powersh
 
 ### <a name="view-policies-in-powershell"></a>Få vist politikker i PowerShell
 
-Brug [Cmdlet'en Get-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/get-unifiedauditlogretentionpolicy) i Security & Compliance Center PowerShell til at få vist politikker for opbevaring af overvågningslog.
+Brug [Cmdlet'en Get-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/get-unifiedauditlogretentionpolicy) i Security & Compliance PowerShell til at få vist politikker for opbevaring af overvågningslog.
 
 Her er et eksempel på en kommando, der viser indstillingerne for alle politikker for opbevaring af overvågningslog i din organisation. Denne kommando sorterer politikkerne fra højeste til laveste prioritet.
 
@@ -156,11 +156,11 @@ Get-UnifiedAuditLogRetentionPolicy | Sort-Object -Property Priority -Descending 
 
 ### <a name="edit-policies-in-powershell"></a>Rediger politikker i PowerShell
 
-Brug [Set-UnifiedAuditLogRetentionPolicy-cmdlet'en](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) i Security & Compliance Center PowerShell til at redigere en eksisterende opbevaringspolitik for overvågningslog.
+Brug [Set-UnifiedAuditLogRetentionPolicy-cmdlet'en](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) i Security & Compliance PowerShell til at redigere en eksisterende opbevaringspolitik for overvågningslog.
 
 ### <a name="delete-policies-in-powershell"></a>Slet politikker i PowerShell
 
-Brug cmdlet'en [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/remove-unifiedauditlogretentionpolicy) i Security & Compliance Center PowerShell til at slette en opbevaringspolitik for overvågningslog. Det kan tage op til 30 minutter, før politikken fjernes fra din organisation.
+Brug cmdlet'en [Remove-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/remove-unifiedauditlogretentionpolicy) i Security & Compliance PowerShell til at slette en opbevaringspolitik for overvågningsloggen. Det kan tage op til 30 minutter, før politikken fjernes fra din organisation.
 
 ## <a name="more-information"></a>Flere oplysninger
 

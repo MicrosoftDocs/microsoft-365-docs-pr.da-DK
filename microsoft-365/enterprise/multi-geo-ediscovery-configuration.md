@@ -13,12 +13,12 @@ ms.custom: seo-marvel-apr2020
 ms.localizationpriority: medium
 ms.collection: Strat_SP_gtc
 description: Få mere at vide om, hvordan du bruger parameteren Region til at konfigurere eDiscovery til brug på satellitplaceringer i Microsoft 365 Multi-Geo.
-ms.openlocfilehash: 088d6cf861e70185162a74c0b2d9b029849125de
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 99024a93d3eb68103b4f2c5b99e54bfc80201123
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810588"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66008551"
 ---
 # <a name="microsoft-365-multi-geo-ediscovery-configuration"></a>Microsoft 365 Multi-Geo eDiscovery-konfiguration
 
@@ -37,7 +37,7 @@ Når rollen eDiscovery Manager eller Administrator er angivet for en bestemt sat
 
 Sådan angiver du sikkerhedsfilteret for overholdelse af angivne standarder for et område:
 
-1. [Forbind til Microsoft 365 Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell)
+1. [PowerShell Forbind til Microsoft 365 & overholdelse af angivne standarder i PowerShell](/powershell/exchange/connect-to-scc-powershell)
 
 2. Brug følgende syntaks:
 

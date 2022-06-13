@@ -17,17 +17,17 @@ ms.custom:
 - AdminSurgePortfolio
 search.appverid:
 - MET150
-description: Brug Windows PowerShell til at få oplysninger om Basic Mobility- og Security-enheder i din organisation.
-ms.openlocfilehash: 4cac15e8377370e4bd2f8b359a39aaf830f13d10
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+description: Brug Azure AD PowerShell til at få oplysninger om Basic Mobility- og Security-enheder i din organisation.
+ms.openlocfilehash: 816d397f29d6e1726448d92e641856f2a5a31a73
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64781067"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66007190"
 ---
 # <a name="get-details-about-basic-mobility-and-security-managed-devices"></a>Få oplysninger om administrerede enheder til Basic Mobility og Security
 
-I denne artikel kan du se, hvordan du bruger Windows PowerShell til at få oplysninger om de enheder i din organisation, du har konfigureret til Grundlæggende mobilitet og sikkerhed.
+I denne artikel kan du se, hvordan du bruger Azure AD PowerShell til at få oplysninger om de enheder i din organisation, du har konfigureret til Grundlæggende mobilitet og sikkerhed.
 
 Her er en oversigt over de enhedsoplysninger, der er tilgængelige for dig.
 

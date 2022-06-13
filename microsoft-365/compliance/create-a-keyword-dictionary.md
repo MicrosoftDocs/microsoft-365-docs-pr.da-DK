@@ -19,22 +19,22 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om de grundlæggende trin til oprettelse af en nøgleordsordbog i Office 365 Security & Compliance Center.
-ms.openlocfilehash: ceb410d09d9869d87681128f2c6e7b45cd8363cb
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: d00ba4a93c6ead4ecde75ac5415ccac08812feb3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753666"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013326"
 ---
 # <a name="create-a-keyword-dictionary"></a>Opret en ordbog over nøgleord
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview Forebyggelse af datatab (DLP) kan identificere, overvåge og beskytte dine følsomme elementer. Identificering af følsomme elementer kræver nogle gange, at du søger efter nøgleord, især når du identificerer generisk indhold (f.eks. sundhedsrelateret kommunikation) eller upassende eller eksplicit sprog. Selvom du kan oprette nøgleordslister i følsomme oplysningstyper, er nøgleordslister begrænset og kræver ændring af XML for at oprette eller redigere dem. Søgeordsordbøger giver en enklere administration af nøgleord og i meget større skala, der understøtter op til 1 MB ord (efter komprimering) i ordbogen og understøtter ethvert sprog. Lejergrænsen er også 1 MB efter komprimering. 1 MB postkomprimeringsgrænse betyder, at alle ordbøger, der kombineres på tværs af en lejer, kan have næsten 1 million tegn.
+Microsoft Purview DLP (Forebyggelse af datatab) kan identificere, overvåge og beskytte dine følsomme elementer. Identificering af følsomme elementer kræver nogle gange, at du søger efter nøgleord, især når du identificerer generisk indhold (f.eks. sundhedsrelateret kommunikation) eller upassende eller eksplicit sprog. Selvom du kan oprette nøgleordslister i følsomme oplysningstyper, er nøgleordslister begrænset og kræver ændring af XML for at oprette eller redigere dem. Søgeordsordbøger giver en enklere administration af nøgleord og i meget større skala, der understøtter op til 1 MB ord (efter komprimering) i ordbogen og understøtter ethvert sprog. Lejergrænsen er også 1 MB efter komprimering. 1 MB postkomprimeringsgrænse betyder, at alle ordbøger, der kombineres på tværs af en lejer, kan have næsten 1 million tegn.
 
 ## <a name="keyword-dictionary-limits"></a>Nøgleordsordbogsgrænser
 
-Der er en grænse på 50 nøgleordsordbogsbaserede følsomme oplysningstyper, der kan oprettes pr. lejer. Hvis du vil finde ud af, hvor mange nøgleordsordbøger du har i din lejer, skal du oprette forbindelse ved hjælp af procedurerne i [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) for at oprette forbindelse til din lejer og køre dette PowerShell-script.
+Der er en grænse på 50 nøgleordsordbogsbaserede følsomme oplysningstyper, der kan oprettes pr. lejer. Hvis du vil finde ud af, hvor mange nøgleordsordbøger du har i din lejer, skal du oprette forbindelse ved hjælp af procedurerne i [Forbind til PowerShell til Sikkerhed & Overholdelse for](/powershell/exchange/connect-to-scc-powershell) at oprette forbindelse til din lejer og køre dette PowerShell-script.
 
 ```powershell
 $rawFile = $env:TEMP + "\rule.xml"
@@ -76,7 +76,7 @@ Remove-Item $rawFile
 
 Nøgleordene til din ordbog kan stamme fra forskellige kilder, oftest fra en fil (f.eks. en .csv eller .txt liste), der er importeret i tjenesten eller af PowerShell-cmdlet'en, fra en liste, du angiver direkte i PowerShell-cmdlet'en eller fra en eksisterende ordbog. Når du opretter en nøgleordsordbog, skal du følge de samme kernetrin:
 
-1. Brug *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal,</a> eller opret forbindelse til **Microsoft Purview-compliance-portal PowerShell**.
+1. Brug *<a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> , eller opret forbindelse til  **Microsoft Purview-overholdelsesportalen PowerShell**.
 
 2. **Definer eller indlæs dine nøgleord fra den ønskede kilde**. Guiden og cmdlet'en accepterer begge en kommasepareret liste over nøgleord for at oprette en brugerdefineret nøgleordsordbog, så dette trin varierer en smule, afhængigt af hvor dine nøgleord kommer fra. Når de er indlæst, kodes de og konverteres til en bytematrix, før de importeres.
 
@@ -86,7 +86,7 @@ Nøgleordene til din ordbog kan stamme fra forskellige kilder, oftest fra en fil
 
 Brug følgende trin til at oprette og importere nøgleord for en brugerordbog:
 
-1. Forbind til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
+1. Forbind til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
 
 2. Naviger til **klassificeringer > typer følsomme oplysninger**.
 
@@ -112,7 +112,7 @@ Brug følgende trin til at oprette og importere nøgleord for en brugerordbog:
 
 ## <a name="create-a-keyword-dictionary-from-a-file-using-powershell"></a>Opret en nøgleordsordbog fra en fil ved hjælp af PowerShell
 
-Når du har brug for at oprette en stor ordbog, er det ofte at bruge nøgleord fra en fil eller en liste, der er eksporteret fra en anden kilde. I dette tilfælde skal du oprette en nøgleordsordbog, der indeholder en liste over upassende sprog til skærm i eksterne mails. Du skal først [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+Når du har brug for at oprette en stor ordbog, er det ofte at bruge nøgleord fra en fil eller en liste, der er eksporteret fra en anden kilde. I dette tilfælde skal du oprette en nøgleordsordbog, der indeholder en liste over upassende sprog til skærm i eksterne mails. Du skal først [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 1. Kopiér nøgleordene til en tekstfil, og sørg for, at hvert nøgleord er på en separat linje.
 

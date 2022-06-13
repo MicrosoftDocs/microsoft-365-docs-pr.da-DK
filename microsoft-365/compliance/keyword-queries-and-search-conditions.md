@@ -22,18 +22,18 @@ ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om mail- og dokumentegenskaber, som du kan søge i ved hjælp af eDiscovery-søgeværktøjerne i Microsoft 365.
-ms.openlocfilehash: d6a918f41004a366b9e8c7c53c7e0f2153d57c3b
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: ebea983caedc73c8471d6e460b58314bd76f1861
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319035"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012334"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>Nøgleordsforespørgsler og søgebetingelser for eDiscovery
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-I denne artikel beskrives de mail- og dokumentegenskaber, du kan søge efter i mailelementer og Microsoft Teams chatsamtaler i Exchange Online, og dokumenter, der er gemt på SharePoint og OneDrive for Business websteder ved hjælp af eDiscovery-søgeværktøjerne i Microsoft Purview-compliance-portal. Dette omfatter indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) (eDiscovery-søgninger i eDiscovery (Premium) kaldes *samlinger*). Du kan også bruge **\*-ComplianceSearch-cmdlet'erne** i Security & Compliance Center PowerShell til at søge efter disse egenskaber. I artiklen beskrives også:
+I denne artikel beskrives de mail- og dokumentegenskaber, du kan søge efter i mailelementer og Microsoft Teams chatsamtaler i Exchange Online, og dokumenter, der er gemt på SharePoint og OneDrive for Business websteder, ved hjælp af eDiscovery-søgeværktøjerne på Microsoft Purview-overholdelsesportalen. Dette omfatter indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) (eDiscovery-søgninger i eDiscovery (Premium) kaldes *samlinger*). Du kan også bruge **\*-ComplianceSearch-cmdlet'erne** i Security & Compliance PowerShell til at søge efter disse egenskaber. I artiklen beskrives også:
 
 - Brug booleske søgeoperatorer, søgebetingelser og andre teknikker til søgeforespørgslen til at tilpasse søgeresultaterne.
 - Søgning efter følsomme datatyper og brugerdefinerede følsomme datatyper i SharePoint og OneDrive for Business.
@@ -46,7 +46,7 @@ Du kan finde en trinvis vejledning i, hvordan du opretter forskellige eDiscovery
 - [Opret en kladdesamling i eDiscovery (Premium)](create-draft-collection.md)
 
 > [!NOTE]
-> eDiscovery-søgninger i overholdelsesportalen og de tilsvarende **\*-ComplianceSearch-cmdlet'er** i Security & Compliance Center PowerShell bruger KQL (Keyword Query Language). Du kan finde flere detaljerede oplysninger under [Reference til nøgleordsforespørgselssprog](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
+> eDiscovery-søgninger i overholdelsesportalen og de tilsvarende **\*-ComplianceSearch-cmdlet'er** i Security & Compliance PowerShell bruger KQL (Keyword Query Language). Du kan finde flere detaljerede oplysninger under [Reference til nøgleordsforespørgselssprog](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference).
 
 ## <a name="searchable-email-properties"></a>Egenskaber for mail, der kan søges i
 
@@ -92,7 +92,7 @@ Vær dog opmærksom på, at hvis du forhindrer modtagerudvidelse i søgeforespø
 
 ## <a name="searchable-site-properties"></a>Egenskaber for websted, der kan søges i
 
-I følgende tabel vises nogle af de SharePoint og OneDrive for Business egenskaber, der kan søges i ved hjælp af eDiscovery-søgeværktøjerne i Microsoft Purview-compliance-portal eller ved hjælp af **New-ComplianceSearch** eller **Set-ComplianceSearch-cmdlet'en**. Tabellen indeholder et eksempel på syntaksen  _property:value_ for hver egenskab og en beskrivelse af de søgeresultater, der returneres af eksemplerne.
+I følgende tabel vises nogle af de SharePoint og OneDrive for Business egenskaber, der kan søges i ved hjælp af eDiscovery-søgeværktøjerne på Microsoft Purview-overholdelsesportalen eller ved hjælp af **New-ComplianceSearch** eller **Set-ComplianceSearch-cmdlet'en**. Tabellen indeholder et eksempel på syntaksen  _property:value_ for hver egenskab og en beskrivelse af de søgeresultater, der returneres af eksemplerne.
 
 Du kan finde en komplet liste over SharePoint egenskaber, der kan søges [i, under Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Der kan søges i egenskaber, der er markeret med **Ja** i kolonnen **Forespørgselstabel** .
 
@@ -146,7 +146,7 @@ I følgende tabel vises de egenskaber for kontakter, der er indekseret, og som d
 
 Du kan bruge eDiscovery-søgeværktøjer i overholdelsesportalen til at søge efter følsomme data, f.eks. kreditkortnumre eller cpr-numre, der er gemt i dokumenter på SharePoint og OneDrive for Business websteder. Det kan du gøre ved hjælp af egenskaben `SensitiveType` og navnet (eller id'et) for en følsom oplysningstype i en nøgleordsforespørgsel. Forespørgslen `SensitiveType:"Credit Card Number"` returnerer f.eks. dokumenter, der indeholder et kreditkortnummer. Forespørgslen  `SensitiveType:"U.S. Social Security Number (SSN)"` returnerer dokumenter, der indeholder et AMERIKANSK CPR-nummer.
 
-Hvis du vil se en liste over de følsomme oplysningstyper, du kan søge efter, skal du gå til **Dataklassificeringer** \> **Følsomme infotyper** på overholdelsesportalen. Du kan også bruge cmdlet'en **Get-DlpSensitiveInformationType** i Security & Compliance Center PowerShell til at få vist en liste over typer af følsomme oplysninger.
+Hvis du vil se en liste over de følsomme oplysningstyper, du kan søge efter, skal du gå til **Dataklassificeringer** \> **Følsomme infotyper** på overholdelsesportalen. Du kan også bruge cmdlet'en **Get-DlpSensitiveInformationType** i PowerShell til sikkerhed & overholdelse til at få vist en liste over følsomme oplysningstyper.
 
 Du kan finde flere oplysninger om oprettelse af forespørgsler ved hjælp af egenskaben `SensitiveType` under [Formularér en forespørgsel for at finde følsomme data, der er gemt på websteder](form-a-query-to-find-sensitive-data-stored-on-sites.md).
 
@@ -154,7 +154,7 @@ Du kan finde flere oplysninger om oprettelse af forespørgsler ved hjælp af ege
 
 - Hvis du vil søge efter brugerdefinerede følsomme oplysningstyper, skal du angive id'et for typen af følsomme oplysninger i `SensitiveType` egenskaben. Hvis du bruger navnet på en brugerdefineret type følsomme oplysninger (som vist i eksemplet for indbyggede følsomme oplysningstyper i det forrige afsnit), returneres der ingen resultater. Brug kolonnen **Publisher** på siden **Følsomme infotyper** i Overholdelsescenter (eller egenskaben **Publisher** i PowerShell) til at skelne mellem indbyggede og brugerdefinerede følsomme oplysningstyper. Indbyggede følsomme datatyper har en værdi for `Microsoft Corporation` egenskaben **Publisher**.
 
-  Hvis du vil have vist navnet og id'et for de brugerdefinerede følsomme datatyper i din organisation, skal du køre følgende kommando i Security & Compliance Center PowerShell:
+  Hvis du vil have vist navnet og id'et for de brugerdefinerede følsomme datatyper i din organisation, skal du køre følgende kommando i Security & Compliance PowerShell:
 
   ```powershell
   Get-DlpSensitiveInformationType | Where-Object {$_.Publisher -ne "Microsoft Corporation"} | FT Name,Id
@@ -178,13 +178,13 @@ Booleske søgeoperatorer, f.eks **. AND**, **OR** og **NOT**, hjælper dig med a
 |NÆR|keyword1 NEAR(n) keyword2|Returnerer elementer med ord, der er tæt på hinanden, hvor n er lig med antallet af ord fra hinanden. Returnerer f.eks. et element, `best NEAR(5) worst` hvor ordet "værste" er inden for fem ord med "bedst". Hvis der ikke er angivet et tal, er standardafstanden otte ord. <sup>2</sup>|
 |:|property:value|Kolon (:) i syntaksen  `property:value` angiver, at værdien af den egenskab, der søges efter, indeholder den angivne værdi. Returnerer f.eks. alle meddelelser,  `recipients:garthf@contoso.com` der er sendt til garthf@contoso.com.|
 |=|property=value|Det samme som operatoren **:** .|
-|\<|propertyvalue\<|Angiver, at den egenskab, der søges efter, er mindre end den angivne værdi. <sup>1</sup>|
-|\>|propertyvalue\>|Angiver, at den egenskab, der søges efter, er større end den angivne værdi. <sup>1</sup>|
+|\<|egenskabsværdi\<|Angiver, at den egenskab, der søges efter, er mindre end den angivne værdi. <sup>1</sup>|
+|\>|egenskabsværdi\>|Angiver, at den egenskab, der søges efter, er større end den angivne værdi. <sup>1</sup>|
 |\<=|property\<=value|Angiver, at den egenskab, der søges efter, er mindre end eller lig med en bestemt værdi. <sup>1</sup>|
 |\>=|property\>=value|Angiver, at den egenskab, der søges efter, er større end eller lig med en bestemt værdi. <sup>1</sup>|
 |..|property:value1.. value2|Angiver, at den egenskab, der søges efter, er større end eller lig med value1 og mindre end eller lig med value2. <sup>1</sup>|
 |"  "|"dagsværdi" <p> subject:"Quarterly Financials"|I en nøgleordsforespørgsel (hvor du skriver parret `property:value` i feltet **Nøgleord** ), skal du bruge dobbelte anførselstegn (" ") til at søge efter et præcist udtryk eller ord. Men hvis du bruger [søgebetingelsen](#search-conditions) **Emne** eller **Emne/Titel**, skal du ikke føje dobbelte anførselstegn til værdien, fordi anførselstegn tilføjes automatisk, når disse søgebetingelser bruges. Hvis du føjer anførselstegn til værdien, føjes der to par dobbelte anførselstegn til betingelsesværdien, og søgeforespørgslen returnerer en fejl. |
-|\*|Kat\* <p> emne:sæt\*|Præfikssøgninger (også kaldet *matchning af præfiks*), hvor et jokertegn ( * ) er placeret i slutningen af et ord i nøgleord eller `property:value` forespørgsler. I præfikssøgninger returnerer søgningen resultater med ord, der indeholder ordet efterfulgt af nul eller flere tegn. Returnerer f.eks. dokumenter, `title:set*` der indeholder ordet "set", "setup" og "setting" (og andre ord, der starter med "set") i dokumenttitlen. <p> **Bemærk:** Du kan kun bruge præfikssøgninger. for eksempel **cat\**_ eller _* set\**_. Suffikssøgninger (_*\*cat**), infix-søgninger (**ct\***) og understrengssøgninger (**\*cat\***) understøttes ikke. <p> Tilføjelse af et punktum ( \. ) til en præfikssøgning, ændres de resultater, der returneres. Det skyldes, at en periode behandles som et stopord. Hvis du f.eks. søger efter **cat\**_ og søger efter _* cat,\*** returneres der forskellige resultater. Vi anbefaler, at du ikke bruger et punktum i en præfikssøgning.|
+|\*|Kat\* <p> emne:sæt\*|Præfikssøgninger (også kaldet *matchning af præfiks*), hvor et jokertegn ( * ) er placeret i slutningen af et ord i nøgleord eller `property:value` forespørgsler. I præfikssøgninger returnerer søgningen resultater med ord, der indeholder ordet efterfulgt af nul eller flere tegn. Returnerer f.eks. dokumenter, `title:set*` der indeholder ordet "set", "setup" og "setting" (og andre ord, der starter med "set") i dokumenttitlen. <p> **Bemærk:** Du kan kun bruge præfikssøgninger. for eksempel **cat\**_ eller _* set\**_. Suffikssøgninger (_*\*cat**), infix-søgninger (**c\*t**) og understrengssøgninger (**\*cat\***) understøttes ikke. <p> Tilføjelse af et punktum ( \. ) til en præfikssøgning, ændres de resultater, der returneres. Det skyldes, at en periode behandles som et stopord. Hvis du f.eks. søger efter **cat\**_ og søger efter _* cat,\*** returneres der forskellige resultater. Vi anbefaler, at du ikke bruger et punktum i en præfikssøgning.|
 |(  )|(fair ELLER gratis) AND (from:contoso.com) <p> (IPO ELLER indledende) AND (aktier eller aktier) <p> (kvartalsvis finans)|Parenteser grupperer booleske udtryk,  `property:value` elementer og nøgleord. Returnerer f.eks. varer,  `(quarterly financials)` der indeholder ordene kvartalsvis og økonomisk.|
 
 > [!NOTE]
@@ -445,7 +445,7 @@ Du kan finde flere oplysninger om tegngrænser i [eDiscovery-søgegrænser](limi
 
 - Når du søger i en modtageregenskab, f.eks. Til, Fra, Cc eller Modtagere, kan du bruge en SMTP-adresse, et alias eller et vist navn til at angive en modtager. Du kan f.eks. bruge pilarp@contoso.com, pilarp eller "Pilar Pinilla".
 
-- Du kan kun bruge præfikssøgninger. for eksempel **cat\**_ eller _* set\**_. Suffikssøgninger (_*\*cat**), infix-søgninger (**ct\***) og understrengssøgninger (**\*cat\***) understøttes ikke.
+- Du kan kun bruge præfikssøgninger. for eksempel **cat\**_ eller _* set\**_. Suffikssøgninger (_*\*cat**), infix-søgninger (**c\*t**) og understrengssøgninger (**\*cat\***) understøttes ikke.
 
 - Når du søger i en egenskab, skal du bruge dobbelte anførselstegn (" "), hvis søgeværdien består af flere ord. Returnerer f.eks `subject:budget Q1` . meddelelser, der indeholder **budgettet** på emnelinjen, og som indeholder **Q1** hvor som helst i meddelelsen eller i en af meddelelsesegenskaberne. Ved hjælp af `subject:"budget Q1"` returneres alle meddelelser, der indeholder **budgettet Q1** , hvor som helst i emnelinjen.
 

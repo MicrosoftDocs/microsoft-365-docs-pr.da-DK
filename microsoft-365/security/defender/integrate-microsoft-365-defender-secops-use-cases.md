@@ -22,12 +22,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 4c65943ac28315f54e6c2f4cc8b2314e810b291f
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: a039239545a5442592fe1a07f840cf75bebb0eca
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438068"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66012940"
 ---
 # <a name="step-5-develop-and-test-use-cases"></a>Trin 5. Udvikl og test use cases
 
@@ -94,8 +94,8 @@ I eksemplet med anti-phishing-scenariet kunne SOC-teams f.eks. have gjort opdage
 
 |SOC-team|Krav|Personer, der skal opfylde kravet|Behandl for at opfylde kravet|Relevant teknologi|Identificeret mellemrum|Ændringslog for use case|Undtaget (Y/N)|
 |---|---|---|---|---|---|---|---|
-|Threat Intelligence- og Analytics-team|Datakilder fodrer trusselsintelligensmotorerne korrekt.|Threat Intelligence-analytiker/-tekniker|Fastsatte krav til datafeeds, udløser trusselsintelligens fra godkendte kilder|Microsoft Defender for Identity, Microsoft Defender for Endpoint|Threat Intelligence-teamet brugte ikke automatiseringsscript til at linke Microsoft 365 Defender API til trussels-Intel-motorer|Føj Microsoft 365 Defender som datakilder til trusselsprogrammer <BR> <BR> Opdater kørselsbog for use case|N|
-|Overvågningsteam|Datakilder forsyner overvågningsdashboards korrekt|Niveau 1,2 SOC-analytiker – overvågning & beskeder|Arbejdsproces til rapportering af sikker score for Security & Compliance Center|[Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts)  <br><br> Overvågning af sikker score|Soc-analytikere kan ikke rapportere en vellykket ny phishing-variantregistrering for at forbedre Sikker score <br><br> [Rapportering i Security & Compliance Center](/microsoft-365/security/office-365-security/reports-and-insights-in-security-and-compliance)|Føj en proces til sporing af sikker scoreforbedring til arbejdsprocesser i rapportering|N|
+|Threat Intelligence- og Analytics-team|Datakilder fodrer trusselsintelligensmotorerne korrekt.|Threat Intelligence-analytiker/-tekniker|Fastsatte krav til datafeeds, udløser trusselsintelligens fra godkendte kilder|Microsoft Defender for Identity, Microsoft Defender for Endpoint|Threat Intelligence-teamet brugte ikke automatiseringsscript til at linke Microsoft 365 Defender API til trussels-Intel-motorer|Føj Microsoft 365 Defender som datakilder til trusselsprogrammer <p> Opdater kørselsbog for use case|N|
+|Overvågningsteam|Datakilder forsyner overvågningsdashboards korrekt|Niveau 1,2 SOC-analytiker – overvågning & beskeder|Arbejdsproces til rapportering af sikker score for Security & Compliance Center|[Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts) <p> Overvågning af sikker score|Soc-analytikere kan ikke rapportere en vellykket ny phishing-variantregistrering for at forbedre Sikker score <p> [Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen](/microsoft-365/security/office-365-security/view-email-security-reports)|Føj en proces til sporing af sikker scoreforbedring til arbejdsprocesser i rapportering|N|
 |Teknisk team og SecOps-team|Ændringskontrolopdateringer foretages i SOC-teamets runbooks|Niveau 2 SOC-tekniker|Meddelelsesprocedure for ændring af kontrol for SOC-team runbooks|Godkendte ændringer af sikkerhedsenheder|Ændringer af Microsoft 365 Defender forbindelse til SOC-sikkerhedsteknologi kræver godkendelse|Føj Microsoft Defender for Cloud Apps, Defender for Identity, Defender for Endpoint, Security & Compliance Center til SOC-runbooks|Y|
 
 Derudover kunne SOC-holdene have foretaget de opdagelser, der er beskrevet i nedenstående tabel, med hensyn til det Håndtering af trusler og sikkerhedsrisici scenarie, der er beskrevet ovenfor:
@@ -104,7 +104,7 @@ Derudover kunne SOC-holdene have foretaget de opdagelser, der er beskrevet i ned
 |---|---|---|---|---|---|---|---|
 |SOC-tilsyn|Alle aktiver, der er forbundet til godkendte netværk, identificeres og kategoriseres|SOC Tilsyn, BU ejere, programejere, it-aktiv ejere, osv.|Centraliseret system til administration af aktiver for at finde og vise aktivkategori og -attributter baseret på risiko.|ServiceNow eller andre aktiver. <br><br>[Microsoft 365 enhedsoversigt](/microsoft-365/security/defender-endpoint/device-discovery)|Kun 70% af aktiverne er blevet opdaget. Microsoft 365 Defender afhjælpningssporing, der kun gælder for kendte aktiver|Ældre tjenester til administration af aktivlivscyklus for at sikre, at Microsoft 365 Defender har 100 % dækning|N|
 |& SecOps-Teams|Høj indvirkning og kritiske sårbarheder i aktiver afhjælpes i henhold til politikken|SecOps-teknikere, SOC-analytikere: Sårbarhed & overholdelse af angivne standarder, sikkerhedskonstruktion|Defineret proces til kategorisering af høj risiko og kritiske sikkerhedsrisici|[Dashboards til administration af trusler og sårbarheder](/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt)|Defender for Endpoint har identificeret høj indvirkning, enheder med høj besked uden afhjælpningsplan eller implementering af Microsofts anbefalede aktivitet|Tilføj en arbejdsproces for at give aktivejere besked, når afhjælpningsaktivitet er påkrævet inden for 30 dage pr. politik. Implementer et billetsystem for at give aktivejere besked om afhjælpningstrin.|N|
-|Overvågning Teams|Trussels- og sårbarhedsstatus rapporteres via virksomhedens intranetportal|Soc-analytiker på niveau 2|Automatisk genererede rapporter fra Microsoft 365 Defender, der viser status for afhjælpning af aktiver|[Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts) <br><br> Overvågning af sikker score|Der kommunikeres ingen visninger eller dashboardrapporter til aktivejere vedrørende aktivernes trussels- og sårbarhedsstatus.|Opret et automatiseringsscript for at udfylde status for afhjælpning af høj risiko og alvorlig sårbarhed i forbindelse med aktiver i organisationen.|N|
+|Overvågning Teams|Trussels- og sårbarhedsstatus rapporteres via virksomhedens intranetportal|Soc-analytiker på niveau 2|Automatisk genererede rapporter fra Microsoft 365 Defender, der viser status for afhjælpning af aktiver|[Beskeder i Security & Compliance Center](/microsoft-365/security/office-365-security/alerts) <p> Overvågning af sikker score|Der kommunikeres ingen visninger eller dashboardrapporter til aktivejere vedrørende aktivernes trussels- og sårbarhedsstatus.|Opret et automatiseringsscript for at udfylde status for afhjælpning af høj risiko og alvorlig sårbarhed i forbindelse med aktiver i organisationen.|N|
 
 I disse use cases viste testen flere huller i SOC-teamets krav, der blev fastlagt som basispunkter for de enkelte teams ansvarsområder. Brugscasens tjekliste kan være lige så omfattende som nødvendigt for at sikre, at SOC-teamet er forberedt til Microsoft 365 Defender integration med nye eller eksisterende SOC-krav. Da dette vil være en iterativ proces, vil udviklingsprocessen for use case og indholdet af use case-output naturligvis tjene til at opdatere og modne SOC's runbooks med erfaringer.
 
