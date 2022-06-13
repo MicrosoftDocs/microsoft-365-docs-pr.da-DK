@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at beskytte indhold på SharePoint og Microsoft Teams websteder og Microsoft 365 grupper.
-ms.openlocfilehash: 125be09f9d3d9a519e1985a37c0880e3f2465245
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: dfe76e31eb5816e53a3f6d4ab598f1737cdebaa1
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772670"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014294"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsmærkater til at beskytte indhold på Microsoft Teams, Microsoft 365 grupper og SharePoint websteder
 
@@ -67,7 +67,7 @@ Hvis du endnu ikke har aktiveret følsomhedsmærkater for objektbeholdere, skal 
 
 1. Da denne funktion bruger Azure AD funktionalitet, skal du følge vejledningen i dokumentationen til Azure AD for at aktivere understøttelse af følsomhedsmærkater: [Tildel følsomhedsmærkater til Microsoft 365 grupper i Azure Active Directory](/azure/active-directory/users-groups-roles/groups-assign-sensitivity-labels).
 
-2. Du skal nu synkronisere følsomhedsmærkater for at Azure AD. Først skal [du oprette forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+2. Du skal nu synkronisere følsomhedsmærkater for at Azure AD. Først [skal du oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
    I en PowerShell-session, som du kører som administrator, skal du f.eks. logge på med en global administratorkonto.
 
@@ -180,7 +180,7 @@ Kendte begrænsninger for denne prøveversion:
 
 ### <a name="configure-settings-for-the-default-sharing-link-type-for-a-site-by-using-powershell-advanced-settings"></a>Konfigurer indstillinger for standardlinktypen for deling for et websted ved hjælp af avancerede powerShell-indstillinger
 
-Ud over etiketindstillingerne for websteder og grupper, som du kan konfigurere fra Microsoft Purview-compliance-portal, kan du også konfigurere standardlinktypen for deling for et websted. Følsomhedsmærkater for dokumenter kan også konfigureres for en standardlinktype for deling. Disse indstillinger, der hjælper med at forhindre overdeling, vælges automatisk, når brugerne vælger knappen **Del** i deres Office apps. 
+Ud over mærkatindstillingerne for websteder og grupper, som du kan konfigurere fra Microsoft Purview-overholdelsesportalen, kan du også konfigurere standardlinktypen for deling for et websted. Følsomhedsmærkater for dokumenter kan også konfigureres for en standardlinktype for deling. Disse indstillinger, der hjælper med at forhindre overdeling, vælges automatisk, når brugerne vælger knappen **Del** i deres Office apps. 
 
 Du kan finde flere oplysninger og instruktioner [under Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md).
 
@@ -313,7 +313,7 @@ Kontrollér, at du har version 16.0.19418.12000 eller nyere af SharePoint Online
 
 1. Åbn en PowerShell-session med indstillingen **Kør som administrator** .
 
-2. Hvis du ikke kender guid'et for din mærkat: [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) og få vist en liste over følsomhedsmærkater og deres GUID'er.
+2. Hvis du ikke kender guid'et for din mærkat: [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) og få vist en liste over følsomhedsmærkater og deres GUID'er.
 
    ```powershell
    Get-Label |ft Name, Guid
@@ -361,7 +361,7 @@ Når du bruger administrationscentre, der understøtter følsomhedsmærkater, me
 
 Følgende apps og tjenester understøtter følsomhedsmærkater, der er konfigureret for websteder og gruppeindstillinger:
 
-- Administration centre:
+- Administrationscentre:
 
   - SharePoint Administration
   - Teams Administration
@@ -379,7 +379,7 @@ Følgende apps og tjenester understøtter følsomhedsmærkater, der er konfigure
 
 Følgende apps og tjenester understøtter i øjeblikket ikke følsomhedsmærkater, der er konfigureret for websteder og gruppeindstillinger:
 
-- Administration centre:
+- Administrationscentre:
 
   - Exchange Administration
 
@@ -421,7 +421,7 @@ Hvis du vil hjælpe dig med at administrere samtidighed af følsomhedsmærkater 
 
 ### <a name="use-powershell-to-convert-classifications-for-microsoft-365-groups-to-sensitivity-labels"></a>Brug PowerShell til at konvertere klassificeringer for Microsoft 365 grupper til følsomhedsmærkater
 
-1. Først skal [du oprette forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. Først [skal du oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
    Log f.eks. på med en global administratorkonto i en PowerShell-session, som du kører som administrator:
 

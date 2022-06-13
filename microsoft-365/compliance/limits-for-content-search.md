@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
 description: Få mere at vide om de grænser, der gælder for funktionerne til indholdssøgning og eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 030e4dd16e2b24504632947a336b244a945813ff
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f20c33781b8dd9f92091e1b0c459137a4edd33ed
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091715"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014866"
 ---
 # <a name="limits-for-ediscovery-search"></a>Grænser for eDiscovery-søgning
 
@@ -45,7 +45,7 @@ I følgende tabel vises søgegrænserne, når du bruger værktøjet til indholds
 |Det maksimale antal postkasser eller websteder, der kan søges i i en enkelt søgning|Ingen grænse <sup>1</sup>|
 |Det maksimale antal søgninger, der kan køre på samme tid i din organisation.|30|
 |Det maksimale antal søgninger i hele organisationen, der kan køres på samme tid.|3|
-|Det maksimale antal søgninger, som en enkelt bruger kan starte på samme tid. Denne grænse er sandsynligvis nået, når brugeren forsøger at starte flere søgninger ved hjælp af kommandoen **Get-ComplianceSearch \|Start-ComplianceSearch** i Security & Compliance Center PowerShell.|10|
+|Det maksimale antal søgninger, som en enkelt bruger kan starte på samme tid. Denne grænse er sandsynligvis nået, når brugeren forsøger at starte flere søgninger ved hjælp af kommandoen **Get-ComplianceSearch \|Start-ComplianceSearch** i Security & Compliance PowerShell.|10|
 |Det maksimale antal elementer pr. brugerpostkasse, der vises på eksempelsiden, når der vises resultater for indholdssøgning.|100|
 |Det maksimale antal elementer, der findes i alle brugerpostkasser, som muligvis kan vises på eksempelsiden, når søgeresultaterne vises. De nyeste elementer vises.|1.000 <sup>2</sup>|
 |Det maksimale antal brugerpostkasser, der kan gennemses for søgeresultater. Hvis der er mere end 1.000 postkasser, der indeholder indhold, der svarer til søgeforespørgslen, er det højst de øverste 1000 postkasser med de fleste søgeresultater, der er tilgængelige som prøveversion.|1,000|

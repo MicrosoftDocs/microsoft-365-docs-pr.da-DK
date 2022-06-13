@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 95d79bd95aa816b82e69399b9bde99500fcc8b6b
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 7124d97c56e414a7c5a47488805bb4134426f073
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419522"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018024"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
@@ -177,7 +177,7 @@ Du kan f.eks. oprette og anvende en opbevaringsmærkat med navnet "Gennemse sene
 
 #### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>Brug af en opbevaringsmærkat som en betingelse i en DLP-politik
 
-Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Forebyggelse af datatab) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
+Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Data Loss Prevention) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
 
 Du kan få flere oplysninger under [Brug af en opbevaringsmærkat som en betingelse i en DLP-politik](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
@@ -237,7 +237,7 @@ Når opbevaringsmærkater markerer elementer som en post eller en lovmæssig pos
 
 #### <a name="monitoring-retention-labels"></a>Overvågning af opbevaringsmærkater
 
-På Microsoft Purview-compliance-portal skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
+På Microsoft Purview-overholdelsesportalen skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
 
 Du kan derefter foretage detailudledning i detaljer ved hjælp af [Indholdsoversigt](data-classification-content-explorer.md) og [Aktivitetsoversigt](data-classification-activity-explorer.md).
 
@@ -369,7 +369,7 @@ Hvis du vil se et optaget webinar (kræver registrering), skal du gå [til Detal
 
 ## <a name="policy-lookup"></a>Politikopslag
 
-Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningerne **til administration af datalivscyklus** eller **datastyring** i Microsoft Purview-compliance-portal.
+Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde de politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningerne til **administration af datalivscyklus** eller **Dataadministration** på Microsoft Purview-overholdelsesportalen.
 
 Eksempel:
 
@@ -550,7 +550,7 @@ Opbevaringshandlinger, der logføres som overvågningshændelser, er kun tilgæn
 
 ## <a name="powershell-cmdlets-for-retention-policies-and-retention-labels"></a>PowerShell-cmdlet'er til opbevaringspolitikker og opbevaringsmærkater
 
-Hvis du vil bruge opbevarings-cmdlet'erne, skal du først [oprette forbindelse til Office 365 Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell). Brug derefter en af følgende cmdlet'er:
+Hvis du vil bruge opbevarings-cmdlet'erne, skal du først [oprette forbindelse til Office 365 Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell). Brug derefter en af følgende cmdlet'er:
 
 - [Get-ComplianceTag](/powershell/module/exchange/get-compliancetag)
 

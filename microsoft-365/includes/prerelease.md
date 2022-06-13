@@ -1,6 +1,6 @@
 ---
-title: Ansvarsfraskrivelse i forbindelse med udgivelse af Microsoft Defender for Endpoint
-description: Ansvarsfraskrivelse for den foreløbige version af Microsoft Defender for Endpoint.
+title: Microsoft Defender for Endpoint fraskrivelsesfraskrivelse
+description: Ansvarsfraskrivelse for foreløbig version af Microsoft Defender for Endpoint.
 ms.date: 08/28/2017
 ms.reviewer: ''
 manager: dansimp
@@ -15,4 +15,4 @@ ms.lasthandoff: 08/05/2021
 ms.locfileid: "63591984"
 ---
 > [!IMPORTANT]
-> Nogle oplysninger relaterer til foreløbige produkter, som kan ændres væsentligt, før det frigives kommercielt. Microsoft påser ingen garantier, udtrykkelige eller underforståede, med hensyn til de oplysninger, du har angivet her.
+> Nogle oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.

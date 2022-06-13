@@ -16,12 +16,12 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Denne artikel indeholder en oversigt over typer af følsomme oplysninger, og hvordan de registrerer følsomme oplysninger som f.eks. social sikring, kreditkort eller bankkontonumre for at identificere følsomme elementer
-ms.openlocfilehash: 0e154e0ee578b9a182cb7cd5b43cafba466f9bcd
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: d814bd413fc95a02bc35ab05a804c544d9b84b1e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64971345"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014228"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Få mere at vide om typer af følsomme oplysninger.
 
@@ -171,7 +171,7 @@ Du kan vælge mellem flere muligheder for at oprette brugerdefinerede typer føl
 
 - **Brug EDM** – Du kan konfigurere brugerdefinerede følsomme informationstyper ved hjælp af EDM-baseret klassificering (Exact Data Match). Med denne metode kan du oprette en dynamisk følsom oplysningstype ved hjælp af en sikker database, som du kan opdatere med jævne mellemrum. Se [Få mere at vide om præcise datamatchbaserede følsomme oplysningstyper](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types).
 
-- **Brug PowerShell** – Du kan konfigurere brugerdefinerede typer følsomme oplysninger ved hjælp af PowerShell. Selvom denne metode er mere kompleks end at bruge brugergrænsefladen, har du flere konfigurationsindstillinger. Se [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
+- **Brug PowerShell** – Du kan konfigurere brugerdefinerede typer følsomme oplysninger ved hjælp af PowerShell. Selvom denne metode er mere kompleks end at bruge brugergrænsefladen, har du flere konfigurationsindstillinger. Se [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md).
 
 > [!NOTE]
 > Forbedrede tillidsniveauer er tilgængelige til øjeblikkelig brug i Microsoft Purview-tjenester til forebyggelse af datatab, beskyttelse af oplysninger, Overholdelse af kommunikation, administration af datalivscyklus og datastyring.

@@ -18,24 +18,24 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du opretter en brugerdefineret type følsomme oplysninger, der giver dig mulighed for at bruge regler, der opfylder organisationens behov.
-ms.openlocfilehash: f0ebc1bb4b13f9e31ca1a8a1967fce007105cfe6
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 69a9808cda2d30cc350da40f6c4f677598c6a000
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753886"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016410"
 ---
 # <a name="customize-a-built-in-sensitive-information-type"></a>Tilpas en indbygget type af følsomme oplysninger
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Når du søger efter følsomme oplysninger i indhold, skal du beskrive disse oplysninger i det, der kaldes en *regel*. Microsoft Purview Forebyggelse af datatab (DLP) indeholder regler for de mest almindelige typer følsomme oplysninger, som du kan bruge med det samme. Hvis du vil bruge disse regler, skal du inkludere dem i en politik. Det kan være, at du vil justere disse indbyggede regler, så de opfylder organisationens specifikke behov, og det kan du gøre ved at oprette en brugerdefineret type følsomme oplysninger. I dette emne kan du se, hvordan du tilpasser den XML-fil, der indeholder den eksisterende regelsamling, for at registrere et større udvalg af potentielle kreditkortoplysninger.
+Når du søger efter følsomme oplysninger i indhold, skal du beskrive disse oplysninger i det, der kaldes en *regel*. Microsoft Purview DLP (Forebyggelse af datatab) indeholder regler for de mest almindelige følsomme oplysningstyper, som du kan bruge med det samme. Hvis du vil bruge disse regler, skal du inkludere dem i en politik. Det kan være, at du vil justere disse indbyggede regler, så de opfylder organisationens specifikke behov, og det kan du gøre ved at oprette en brugerdefineret type følsomme oplysninger. I dette emne kan du se, hvordan du tilpasser den XML-fil, der indeholder den eksisterende regelsamling, for at registrere et større udvalg af potentielle kreditkortoplysninger.
 
 Du kan tage dette eksempel og anvende det på andre indbyggede typer følsomme oplysninger. Du kan se en liste over standardtyper for følsomme oplysninger og XML-definitioner under [Objektdefinitioner for følsomme oplysninger.](sensitive-information-type-entity-definitions.md)
 
 ## <a name="export-the-xml-file-of-the-current-rules"></a>Eksportér XML-filen for de aktuelle regler
 
-Hvis du vil eksportere XML-koden, skal du [oprette forbindelse til Security and Compliance Center via Remote PowerShell.](/powershell/exchange/connect-to-scc-powershell)
+Hvis du vil eksportere XML-koden, skal du [oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 1. I PowerShell skal du skrive følgende for at få vist organisationens regler på skærmen. Hvis du ikke har oprettet dine egne, kan du kun se de indbyggede standardregler, der er forsynet med mærkaten "Microsoft Rule Package".
 
@@ -43,7 +43,7 @@ Hvis du vil eksportere XML-koden, skal du [oprette forbindelse til Security and 
    Get-DlpSensitiveInformationTypeRulePackage
    ```
 
-2. Store organisationens regler i en variabel ved at skrive følgende. Lagring af noget i en variabel gør det let tilgængeligt senere i et format, der fungerer til fjernkommandoer i PowerShell.
+2. Store organisationens regler i en variabel ved at skrive følgende. Lagring af noget i en variabel gør det let tilgængeligt senere i et format, der fungerer til PowerShell-kommandoer.
 
    ```powershell
    $ruleCollections = Get-DlpSensitiveInformationTypeRulePackage
@@ -86,7 +86,7 @@ Nu, hvor du har fundet definitionen af reglen Kreditkortnummer i XML-koden, kan 
 
 ## <a name="modify-the-xml-and-create-a-new-sensitive-information-type"></a>Rediger XML-koden, og opret en ny type følsomme oplysninger
 
-Først skal du oprette en ny type følsomme oplysninger, fordi du ikke kan ændre standardreglerne direkte. Du kan gøre en lang række ting med brugerdefinerede typer følsomme oplysninger, som er beskrevet i [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md). I dette eksempel holder vi det enkelt og fjerner kun bekræftende beviser og føjer nøgleord til reglen Kreditkortnummer.
+Først skal du oprette en ny type følsomme oplysninger, fordi du ikke kan ændre standardreglerne direkte. Du kan gøre en lang række ting med brugerdefinerede typer følsomme oplysninger, som er beskrevet i [Opret en brugerdefineret type følsomme oplysninger i PowerShell til sikkerhed & overholdelse af angivne standarder](create-a-custom-sensitive-information-type-in-scc-powershell.md). I dette eksempel holder vi det enkelt og fjerner kun bekræftende beviser og føjer nøgleord til reglen Kreditkortnummer.
 
 Alle definitioner af XML-regler er baseret på følgende generelle skabelon. Du skal kopiere og indsætte XML-koden til definitionen af kreditkortnummer i skabelonen, redigere nogle værdier (bemærk ". . ." pladsholdere i følgende eksempel), og upload derefter den ændrede XML som en ny regel, der kan bruges i politikker.
 
@@ -159,7 +159,7 @@ Nu har du noget, der ligner følgende XML. Da regelpakker og regler identificere
 
 ## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Fjern det bekræftede beviskrav fra en type følsomme oplysninger
 
-Nu, hvor du har en ny type følsomme oplysninger, som du kan uploade til Microsoft Purview-compliance-portal, er det næste trin at gøre reglen mere specifik. Rediger reglen, så den kun søger efter et 16-cifret tal, der består kontrolsummen, men som ikke kræver yderligere (bekræftende) beviser, f.eks. nøgleord. Hvis du vil gøre dette, skal du fjerne den del af XML, der søger efter bekræftende beviser. Korrative beviser er meget nyttige til at reducere falske positiver. I dette tilfælde er der normalt visse nøgleord eller en udløbsdato i nærheden af kreditkortnummeret. Hvis du fjerner disse beviser, skal du også justere, hvor sikker du er på, at du har fundet et kreditkortnummer ved at `confidenceLevel`sænke , hvilket er 85 i eksemplet.
+Nu, hvor du har en ny type følsomme oplysninger, som du kan uploade til Microsoft Purview-overholdelsesportalen, er det næste trin at gøre reglen mere specifik. Rediger reglen, så den kun søger efter et 16-cifret tal, der består kontrolsummen, men som ikke kræver yderligere (bekræftende) beviser, f.eks. nøgleord. Hvis du vil gøre dette, skal du fjerne den del af XML, der søger efter bekræftende beviser. Korrative beviser er meget nyttige til at reducere falske positiver. I dette tilfælde er der normalt visse nøgleord eller en udløbsdato i nærheden af kreditkortnummeret. Hvis du fjerner disse beviser, skal du også justere, hvor sikker du er på, at du har fundet et kreditkortnummer ved at `confidenceLevel`sænke , hvilket er 85 i eksemplet.
 
 ```xml
 <Entity id="db80b3da-0056-436e-b0ca-1f4cf7080d1f" patternsProximity="300"
@@ -203,7 +203,7 @@ Hvis du vil uploade din regel, skal du gøre følgende.
 
 1. Gem den som en .xml fil med Unicode-kodning. Dette er vigtigt, da reglen ikke fungerer, hvis filen gemmes med en anden kodning.
 
-2. [Forbind til Security and Compliance Center via Remote PowerShell.](/powershell/exchange/connect-to-scc-powershell)
+2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 3. I PowerShell skal du skrive følgende.
 

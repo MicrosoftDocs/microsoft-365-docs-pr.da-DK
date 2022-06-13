@@ -20,12 +20,12 @@ ms.collection:
 - m365solution-identitydevice
 - m365solution-scenario
 ms.technology: mdo
-ms.openlocfilehash: a355ed4c31cf2355ee6166987651da092c7afb33
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 592b5733844dc6a3df1a1d207e3a2c3deda7d7b7
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64945467"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015208"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>Politikanbefalinger til sikring af mail
 
@@ -72,7 +72,7 @@ Du kan begrænse brugernes mulighed for at downloade vedhæftede filer fra Outlo
 
 Her er trinnene:
 
-1. [Forbind til en Exchange Online Remote PowerShell-session](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
+1. [Forbind til Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 2. Hvis du ikke allerede har en OWA-postkassepolitik, skal du oprette en med cmdlet'en [New-OwaMailboxPolicy](/powershell/module/exchange/new-owamailboxpolicy) .
 3. Hvis du vil tillade visning af vedhæftede filer, men ingen download, skal du bruge denne kommando:
 

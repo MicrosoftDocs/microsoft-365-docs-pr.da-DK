@@ -1,5 +1,5 @@
 ---
-title: Rediger en brugerdefineret type af følsomme oplysninger ved hjælp af PowerShell
+title: Rediger en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -15,79 +15,81 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan du redigerer brugerdefinerede følsomme oplysninger ved hjælp af PowerShell.
-ms.openlocfilehash: 2f1bc44dca9ec4a938c8cd3d4158163f9d5e2e2f
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+ms.openlocfilehash: deb50679702cec69187392337511b4dde2d1ceb3
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63597993"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014382"
 ---
-# <a name="modify-a-custom-sensitive-information-type-using-powershell"></a>Rediger en brugerdefineret type af følsomme oplysninger ved hjælp af PowerShell
+# <a name="modify-a-custom-sensitive-information-type-using-powershell"></a>Rediger en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
 
-I Overholdelsescenter PowerShell kræver ændring af en brugerdefineret type af følsomme oplysninger, at du:
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-1. Eksportér den eksisterende regelpakke, der indeholder den brugerdefinerede type af følsomme oplysninger, til en XML-fil (eller brug den eksisterende XML-fil, hvis du har den).
+I PowerShell til & overholdelse af angivne standarder kræver ændring af en brugerdefineret type følsomme oplysninger, at du:
 
-2. Rediger den brugerdefinerede type af følsomme oplysninger i den eksporterede XML-fil.
+1. Eksportér den eksisterende regelpakke, der indeholder den brugerdefinerede type følsomme oplysninger, til en XML-fil (eller brug den eksisterende XML-fil, hvis du har den).
+
+2. Rediger typen af brugerdefinerede følsomme oplysninger i den eksporterede XML-fil.
 
 3. Importér den opdaterede XML-fil tilbage til den eksisterende regelpakke.
 
-Hvis du vil oprette forbindelse til Compliance Center PowerShell, [skal du Forbind til Compliance Center PowerShell](/powershell/exchange/exchange-online-powershell).
+Hvis du vil oprette forbindelse til PowerShell til & overholdelse af angivne standarder, skal du se [Sikkerhed & Overholdelse af PowerShell](/powershell/exchange/exchange-online-powershell).
 
-### <a name="step-1-export-the-existing-rule-package-to-an-xml-file"></a>Trin 1: Eksportér den eksisterende regelpakke til en XML-fil
+## <a name="step-1-export-the-existing-rule-package-to-an-xml-file"></a>Trin 1: Eksportér den eksisterende regelpakke til en XML-fil
 
 > [!NOTE]
-> Hvis du har en kopi af XML-filen (f.eks. du lige har oprettet og importeret den), kan du gå videre til næste trin for at redigere XML-filen.
+> Hvis du har en kopi af XML-filen (f.eks. du lige har oprettet og importeret den), kan du gå til næste trin for at redigere XML-filen.
 
-1. Hvis du ikke allerede kender den, skal du køre [Get-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/get-dlpsensitiveinformationtype) for at finde navnet på den brugerdefinerede regelpakke:
+1. Hvis du ikke allerede ved det, skal du køre [Cmdlet'en Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtype) for at finde navnet på den brugerdefinerede regelpakke:
 
    ```powershell
    Get-DlpSensitiveInformationTypeRulePackage
    ```
 
    > [!NOTE]
-   > Den indbyggede regelpakke, der indeholder de indbyggede typer af følsomme oplysninger, kaldes Microsoft Rule Package. Regelpakken, der indeholder de brugerdefinerede typer af følsomme oplysninger, du har oprettet i brugergrænsefladen til Overholdelsescenter, kaldes Microsoft.SCCManaged.CustomRulePack.
+   > Den indbyggede regelpakke, der indeholder de indbyggede følsomme oplysningstyper, kaldes Microsoft Rule Package. Den regelpakke, der indeholder de brugerdefinerede følsomme oplysningstyper, som du oprettede i brugergrænsefladen i Compliance Center, kaldes Microsoft.SCCManaged.CustomRulePack.
 
-2. Brug [Get-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) til at gemme den brugerdefinerede regelpakke på en variabel:
+2. Brug [Cmdlet'en Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) til at gemme den brugerdefinerede regelpakke i en variabel:
 
    ```powershell
    $rulepak = Get-DlpSensitiveInformationTypeRulePackage -Identity "RulePackageName"
    ```
 
-   Hvis navnet på regelpakken f.eks. er "Brugerdefineret regelpakke til medarbejder-id", skal du køre følgende cmdlet:
+   Hvis navnet på regelpakken f.eks. er "Employee ID Custom Rule Pack", skal du køre følgende cmdlet:
 
    ```powershell
    $rulepak = Get-DlpSensitiveInformationTypeRulePackage -Identity "Employee ID Custom Rule Pack"
    ```
 
-3. Brug følgende syntaks til at eksportere pakken med brugerdefinerede regler til en XML-fil:
+3. Brug følgende syntaks til at eksportere den brugerdefinerede regelpakke til en XML-fil:
 
    ```powershell
    [System.IO.File]::WriteAllBytes('XMLFileAndPath', $rulepak.SerializedClassificationRuleCollection)
    ```
 
-   I dette eksempel eksporteres regelpakken til den filExportedRulePackage.xml der er navngivet i mappen C:\Dokumenter.
+   I dette eksempel eksporteres regelpakken til den fil, der hedder ExportedRulePackage.xml i mappen C:\Dokumenter.
 
    ```powershell
    [System.IO.File]::WriteAllBytes('C:\My Documents\ExportedRulePackage.xml', $rulepak.SerializedClassificationRuleCollection)
    ```
 
-#### <a name="step-2-modify-the-sensitive-information-type-in-the-exported-xml-file"></a>Trin 2: Ændre typen af følsomme oplysninger i den eksporterede XML-fil
+## <a name="step-2-modify-the-sensitive-information-type-in-the-exported-xml-file"></a>Trin 2: Rediger typen af følsomme oplysninger i den eksporterede XML-fil
 
 Typer af følsomme oplysninger i XML-filen og andre elementer i filen er beskrevet tidligere i dette emne.
 
-#### <a name="step-3-import-the-updated-xml-file-back-into-the-existing-rule-package"></a>Trin 3: Importér den opdaterede XML-fil tilbage til den eksisterende regelpakke
+## <a name="step-3-import-the-updated-xml-file-back-into-the-existing-rule-package"></a>Trin 3: Importér den opdaterede XML-fil tilbage til den eksisterende regelpakke
 
-For at importere den opdaterede XML tilbage til den eksisterende regelpakke skal du bruge [Set-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/set-dlpsensitiveinformationtyperulepackage) :
+Hvis du vil importere den opdaterede XML tilbage til den eksisterende regelpakke, skal du bruge Cmdlet'en [Set-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/set-dlpsensitiveinformationtyperulepackage) :
 
 ```powershell
 Set-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\External Sensitive Info Type Rule Collection.xml'))
 ```
 
-Du kan finde detaljerede oplysninger om syntaks og [parameter i Set-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/set-dlpsensitiveinformationtyperulepackage).
+Du kan finde detaljerede syntaks- og parameteroplysninger under [Set-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/set-dlpsensitiveinformationtyperulepackage).
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
-- [Enhedsdefinitioner for følsomme oplysningstyper](sensitive-information-type-entity-definitions.md)
-- [Funktioner af typen Følsomme oplysninger](sit-functions.md)
+- [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md)
+- [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
+- [Funktioner for type af følsomme oplysninger](sit-functions.md)

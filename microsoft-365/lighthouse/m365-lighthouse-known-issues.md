@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: crimora
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthous
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers), der bruger Microsoft 365 Lighthouse, skal du se en liste over kendte problemer for Lighthouse efter funktionsområde.
-ms.openlocfilehash: aa3b5980b60e966b4edfbac4a6e8d706c399e943
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: 7a175d6c14e9b434240ff1a85f901a919ea79dcc
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022762"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016718"
 ---
 # <a name="known-issues-with-microsoft-365-lighthouse"></a>Kendte problemer med Microsoft 365 Fyrtårn
 
@@ -73,10 +74,7 @@ I denne artikel beskrives de kendte problemer for Microsoft 365 Fyrtårn efter f
 
 ## <a name="granular-delegated-admin-privileges-gdap"></a>Detaljeret delegerede administratorrettigheder (GDAP)
 
-> [!NOTE]
-> GDAP er i øjeblikket tilgængelig som [teknisk prøveversion](/partner-center/announcements/2022-february#6) (offentlig prøveversion), så partnere kan tildele detaljerede tilladelser, før GDAP bliver offentligt tilgængelig.
-
-I øjeblikket er DAP påkrævet for at onboarde kunder til Lighthouse. Vi anbefaler også, at du etablerer GDAP sammen med dine kunder for at muliggøre mere sikker delegeret adgang. Mens DAP og GDAP eksisterer, har GDAP forrang for kunder, hvor begge modeller er på plads. Snart vil kunder med kun GDAP (og ingen DAP) kunne onboarde til Lighthouse.<br><br>
+Enten GDAP (Granular Delegated Admin Privileges) plus en indirekte forhandlerrelation eller en DAP-relation (Delegated Admin Privileges) er påkrævet for at onboarde kunder til Lighthouse. Hvis DAP og GDAP eksisterer i en kundelejer, har GDAP-tilladelserne forrang for MSP-teknikere i GDAP-aktiverede sikkerhedsgrupper. Kunder med kun GDAP-relationer (uden indirekte forhandlerrelationer) vil snart kunne onboarde til Lighthouse.<br><br>
 
 | Problem | Beskrivelse | Løsning |
 | ---------------- | ---------------- | ---------------- |

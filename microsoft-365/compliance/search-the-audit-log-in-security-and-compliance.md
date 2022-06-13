@@ -1,5 +1,5 @@
 ---
-title: Søg i overvågningsloggen i Microsoft Purview-compliance-portal
+title: Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,22 +17,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Brug Microsoft Purview-compliance-portal til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
+description: Brug Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 9d556facba3fa1a9c1dbafbfe2b2cb519f1b362d
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: 80ddd03eb37bd1b8984585a3e6d38b25a3a2b983
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810960"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014272"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog i Microsoft Purview-compliance-portal til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
+Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
 
 ## <a name="microsoft-365-services-that-support-auditing"></a>Microsoft 365 tjenester, der understøtter overvågning
 
@@ -107,7 +107,7 @@ Sørg for at læse følgende elementer, før du begynder at søge i overvågning
     > [!NOTE]
     > Selvom overvågning af postkasser som standard er slået til, vil du måske bemærke, at overvågningshændelser for postkasser for nogle brugere ikke findes i søgninger i overvågningsloggen på overholdelsesportalen eller via API'en for Office 365 administrationsaktiviteter. Du kan få flere oplysninger under [Flere oplysninger om logføring af overvågning af postkasser](enable-mailbox-auditing.md#more-information).
 
-- Hvis du vil slå søgning i overvågningslog for din organisation fra, kan du køre følgende kommando i den eksterne PowerShell, der er forbundet med din Exchange Online organisation:
+- Hvis du vil slå søgning i overvågningslog for din organisation fra, kan du køre følgende kommando i Exchange Online PowerShell:
 
   ```powershell
   Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false
@@ -573,8 +573,8 @@ I følgende tabel vises en liste over aktiviteter til synkronisering af filer i 
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
-|Tillader, at computeren synkroniserer filer|ManagedSyncClientAllowed|Brugeren etablerer en synkroniseringsrelation med et websted. Synkroniseringsrelationen lykkedes, fordi brugerens computer er medlem af et domæne, der er føjet til listen over domæner (kaldet *listen over sikre modtagere*), som kan få adgang til dokumentbiblioteker i din organisation. <br/><br/> Du kan få flere oplysninger om denne funktion under [Brug Windows PowerShell-cmdlet'er til at aktivere OneDrive-synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
-|Blokeret computer fra synkronisering af filer|Ikke-administreretSyncClientBlocked|Brugeren forsøger at etablere en synkroniseringsrelation med et websted fra en computer, der ikke er medlem af organisationens domæne, eller som er medlem af et domæne, der ikke er føjet til listen over domæner (kaldet  *listen over modtagere*  , der er tillid til), som kan få adgang til dokumentbiblioteker i din organisation. Synkroniseringsrelationen er ikke tilladt, og brugerens computer er blokeret fra at synkronisere, downloade eller overføre filer i et dokumentbibliotek. <br/><br/> Du kan få oplysninger om denne funktion under [Brug Windows PowerShell-cmdlet'er til at aktivere OneDrive-synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
+|Tillader, at computeren synkroniserer filer|ManagedSyncClientAllowed|Brugeren etablerer en synkroniseringsrelation med et websted. Synkroniseringsrelationen lykkedes, fordi brugerens computer er medlem af et domæne, der er føjet til listen over domæner (kaldet *listen over sikre modtagere*), som kan få adgang til dokumentbiblioteker i din organisation. <br/><br/> Du kan få flere oplysninger om denne funktion under [Brug PowerShell-cmdlet'er til at aktivere OneDrive-synkronisering for domæner, der er på listen over sikre modtagere](/powershell/module/sharepoint-online/).|
+|Blokeret computer fra synkronisering af filer|Ikke-administreretSyncClientBlocked|Brugeren forsøger at etablere en synkroniseringsrelation med et websted fra en computer, der ikke er medlem af organisationens domæne, eller som er medlem af et domæne, der ikke er føjet til listen over domæner (kaldet  *listen over modtagere*  , der er tillid til), som kan få adgang til dokumentbiblioteker i din organisation. Synkroniseringsrelationen er ikke tilladt, og brugerens computer er blokeret fra at synkronisere, downloade eller overføre filer i et dokumentbibliotek. <br/><br/> Du kan få oplysninger om denne funktion under [Brug PowerShell-cmdlet'er til at aktivere OneDrive-synkronisering for domæner, der er på listen over modtagere, der er tillid til](/powershell/module/sharepoint-online/).|
 |Downloadede filer til computer|FileSyncDownloadedFull|Brugeren downloader en fil til sin computer fra et SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive-synkronisering app (OneDrive.exe).|
 |Downloadede filændringer på computeren|FileSyncDownloadedPartial|Denne hændelse frarådes sammen med den gamle OneDrive for Business synkroniseringsapp (Groove.exe).|
 |Overførte filer til dokumentbiblioteket|FileSyncUploadedFull|Brugeren uploader en ny fil eller ændringer til en fil i SharePoint dokumentbibliotek eller OneDrive for Business ved hjælp af OneDrive-synkronisering app (OneDrive.exe).|
@@ -645,7 +645,7 @@ I følgende tabel vises hændelser, der stammer fra administrationsopgaver for w
 
 I følgende tabel vises de aktiviteter, der kan logføres af logføring af overvågning af postkasser. Postkasseaktiviteter, der udføres af ejeren af postkassen, en delegeret bruger eller en administrator, logføres automatisk i overvågningsloggen i op til 90 dage. Det er muligt for en administrator at deaktivere logføring af overvågning af postkasser for alle brugere i organisationen. I dette tilfælde logføres ingen postkassehandlinger for nogen bruger. Du kan få flere oplysninger under [Administrer overvågning af postkasser](enable-mailbox-auditing.md).
 
- Du kan også søge efter postkasseaktiviteter ved hjælp af cmdlet'en [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) i Exchange Online PowerShell.
+ Du kan også søge efter postkasseaktiviteter ved hjælp af cmdlet'en [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 |Fuldt navn|Drift|Beskrivelse|
 |:-----|:-----|:-----|
@@ -805,9 +805,9 @@ Workplace Analytics giver indsigt i, hvordan grupper samarbejder på tværs af d
 |Slettede resultat|DeletedResult|Analytiker slettede et forespørgselsresultat.|
 |Downloadet rapport|DownloadedReport|Analytiker downloadede en fil med forespørgselsresultatet.|
 |Udført forespørgsel|ExecutedQuery|Analytiker kørte en forespørgsel.|
-|Opdaterede indstillingen for dataadgang|UpdatedDataAccessSetting|Administration opdaterede indstillinger for dataadgang.|
-|Opdateret indstilling for beskyttelse af personlige oplysninger|UpdatedPrivacySetting|Administration opdaterede indstillinger for beskyttelse af personlige oplysninger, f.eks. minimumgruppestørrelse.|
-|Overførte organisationsdata|UploadedOrgData|Administration overførte organisationsdatafil.|
+|Opdaterede indstillingen for dataadgang|UpdatedDataAccessSetting|Administratoren opdaterede indstillingerne for dataadgang.|
+|Opdateret indstilling for beskyttelse af personlige oplysninger|UpdatedPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger. f.eks. minimumgruppestørrelse.|
+|Overførte organisationsdata|UploadedOrgData|Administratoren har uploadet en organisationsdatafil.|
 |Bruger, der er logget på<sup>*</sup>| UserLoggedIn |En bruger er logget på sin Microsoft 365 brugerkonto.|
 |Brugeren er logget af<sup>*</sup>| UserLoggedOff |En bruger loggede af sin Microsoft 365 brugerkonto.
 |Set udforsk|ViewedExplore|Analytiker fik vist visualiseringer under en eller flere udforsk sidefaner.|
@@ -930,7 +930,7 @@ Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder,
 |Vist svar|VisRespons|Formularejeren får et bestemt svar. <br><br>Property ResponseId:string og Property ResponderId:string angiver, hvilket resultat der vises. <br><br>For en anonym responder vil egenskaben ResponderId være null.|
 |Link til oprettet oversigt|HentSummaryLink|Formularejeren opretter link til oversigtsresultater for at dele resultater.|
 |Link til slettet oversigt|Sletsumelink|Formularejeren sletter linket med oversigtsresultater.|
-|Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned med Administration <br/>- Administration blokeret <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
+|Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned af administratoren <br/>- Blokeringen af administratoren er fjernet <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
 |Opdateret bruger phishing-status|UpdateUserPhishingStatus|Denne hændelse logføres, hver gang værdien for brugerens sikkerhedsstatus blev ændret. Værdien af brugerstatussen i overvågningsposten **bekræftes som Phisher** , da brugeren oprettede en phishing-formular, der blev fjernet af Microsoft Online-sikkerhedsteamet. Hvis en administrator fjerner blokeringen af brugeren, angives værdien af brugerens status til **Nulstil som normal bruger**.|
 |Invitation til sendte formularer Pro|Invitation til proinvitation|Brugeren klikker for at aktivere en Pro prøveversion.|
 |Opdateret formularindstilling<sup>*</sup> |UpdateFormSetting|Formularejeren opdaterer en eller flere formularindstillinger. <br><br>Property FormSettingName:string angiver opdaterede følsomme indstillingers navn. Property NewFormSettings:string angiver opdaterede indstillingers navn og nye værdi. Property thankYouMessageContainsLink:boolean angiver, at den opdaterede takkemeddelelse indeholder et URL-link.|
@@ -1015,8 +1015,8 @@ I følgende tabel vises de aktiviteter i Briefing-mail, der er logført i Micros
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:----|:-----|:-----|
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administration opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administration opdaterer indstillingerne for beskyttelse af personlige oplysninger for briefingmail.
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administratoren opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administratoren opdaterer indstillingerne for beskyttelse af personlige oplysninger for Briefing-mail.
 
 ### <a name="myanalytics-activities"></a>MyAnalytics-aktiviteter
 
@@ -1024,8 +1024,8 @@ I følgende tabel vises de aktiviteter i MyAnalytics, der er logført i Microsof
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administration opdaterer indstillinger på organisationsniveau for MyAnalytics. |
-|Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administration opdaterer brugerindstillingerne for MyAnalytics.|
+|Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administratoren opdaterer indstillinger på organisationsniveau for MyAnalytics. |
+|Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administratoren opdaterer brugerindstillingerne for MyAnalytics.|
 
 ### <a name="information-barriers-activities"></a>Aktiviteter inden for informationsbarrierer
 
@@ -1064,7 +1064,7 @@ I følgende tabel vises de aktiviteter for forbrugsrapporter, der er logført i 
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administration opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapporter. |
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger for forbrugsrapporter. |
 
 ### <a name="exchange-admin-audit-log"></a>Exchange administratorens overvågningslog
 
@@ -1134,7 +1134,7 @@ Ja, du kan hente overvågningslogge ved hjælp af følgende metoder:
 
 - [API'en til administration af Office 365](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) i Microsoft Purview-compliance-portal.
+- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) på Microsoft Purview-overholdelsesportalen.
 
 - Cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell.
 

@@ -18,12 +18,12 @@ ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
 description: Når du ikke længere har brug for at bevare indholdet af en Microsoft 365 inaktiv postkasse, kan du slette den inaktive postkasse permanent.
-ms.openlocfilehash: 640a118a2fc277b05edc181e19008836027dc468
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 1f45e5ce3aca79e4f5abbc13442876ecbb22e90c
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772374"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017936"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Slet en inaktiv postkasse
 
@@ -38,7 +38,7 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af
   
 ## <a name="before-you-delete-an-inactive-mailbox"></a>Før du sletter en inaktiv postkasse
 
-- Du skal bruge Exchange Online PowerShell til at fjerne ventepositioner fra en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til disse procedurer. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du skal bruge Exchange Online PowerShell til at fjerne ventepositioner fra en inaktiv postkasse. Du kan ikke bruge EAC (Exchange Administration) eller Microsoft Purview-overholdelsesportalen til disse procedurer. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Du kan kopiere indholdet af en inaktiv postkasse til en anden postkasse, før du fjerner ventepositionen og sletter en inaktiv postkasse. Du kan finde flere oplysninger under [Gendan en inaktiv postkasse i Office 365](restore-an-inactive-mailbox.md).
 
@@ -118,7 +118,7 @@ Set-Mailbox <identity of inactive mailbox> -ExcludeFromAllOrgHolds
 
 #### <a name="remove-an-inactive-mailbox-from-a-specific-location-retention-policy"></a>Fjern en inaktiv postkasse fra en bestemt opbevaringspolitik for en placering
 
-Brug [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) til at fjerne en inaktiv postkasse fra en eksplicit opbevaringspolitik:
+Brug [Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) til at fjerne en inaktiv postkasse fra en eksplicit opbevaringspolitik:
 
 ```powershell
 Set-RetentionCompliancePolicy -Identity <retention policy GUID without prefix or suffix> -RemoveExchangeLocation <identity of inactive mailbox>

@@ -25,19 +25,19 @@ ms.custom:
 ROBOTS: NOINDEX, NOFOLLOW
 feedback_system: None
 description: referencemateriale til forebyggelse af datatab
-ms.openlocfilehash: 55e8e5bd16b850ecce84cc87d43e7269746a7999
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: b7546d41310942a0e6eab99511a78c594822ee2a
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754814"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017280"
 ---
 # <a name="data-loss-prevention-reference"></a>Reference til forebyggelse af datatab
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!IMPORTANT]
-> Dette er et referenceemne, der ikke længere er hovedressourcen for Microsoft Purview Forebyggelse af datatab (DLP)-oplysninger. DLP-indholdssættet opdateres og omstruktureres. De emner, der behandles i denne artikel, går videre til nye, opdaterede artikler. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
+> Dette er et referenceemne, der ikke længere er hovedressourcen til oplysninger om Forebyggelse af datatab i Microsoft Purview (DLP). DLP-indholdssættet opdateres og omstruktureres. De emner, der behandles i denne artikel, går videre til nye, opdaterede artikler. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
 
 <!-- this topic needs to be split into smaller, more coherent ones. It is confusing as it is. -->
 <!-- move this note to a more appropriate place, no topic should start with a note -->
@@ -73,9 +73,9 @@ With a DLP policy, you can:
 -->
 ## <a name="create-and-manage-dlp-policies"></a>Opret og administrer DLP-politikker
 
-Du kan oprette og administrere DLP-politikker på siden til forebyggelse af datatab i Microsoft Purview-compliance-portal.
+Du kan oprette og administrere DLP-politikker på siden til forebyggelse af datatab på Microsoft Purview-overholdelsesportalen.
 
-![Siden til forebyggelse af datatab i Microsoft Purview-compliance-portal](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
+![Siden til forebyggelse af datatab på Microsoft Purview-overholdelsesportalen](../media/943fd01c-d7aa-43a9-846d-0561321a405e.png)
 
 <!-- MOVED TO LEARN ABOUT ## What a DLP policy contains
 
@@ -493,7 +493,7 @@ DLP registrerer følsomme oplysninger ved hjælp af detaljeret indholdsanalyse (
 
 ### <a name="policies-are-synced"></a>Politikker synkroniseres
 
-Når du har oprettet en DLP-politik i Microsoft Purview-compliance-portal, gemmes den i et centralt politiklager og synkroniseres derefter med de forskellige indholdskilder, herunder:
+Når du har oprettet en DLP-politik på Microsoft Purview-overholdelsesportalen, gemmes den i et centralt politiklager og synkroniseres derefter med de forskellige indholdskilder, herunder:
 
 - Exchange Online, og derfra til Outlook på internettet og Outlook.
 
@@ -531,7 +531,7 @@ DLP evaluerer alt indhold, der kan indekseres. Du kan finde flere oplysninger om
 
 ### <a name="policy-evaluation-in-exchange-online-outlook-and-outlook-on-the-web"></a>Politikevaluering i Exchange Online, Outlook og Outlook på internettet
 
-Når du opretter en DLP-politik, der indeholder Exchange Online som en placering, synkroniseres politikken fra Microsoft Purview-compliance-portal til Exchange Online og derefter fra Exchange Online til Outlook på internettet  og Outlook.
+Når du opretter en DLP-politik, der indeholder Exchange Online som en placering, synkroniseres politikken fra Microsoft Purview-overholdelsesportalen til Exchange Online og derefter fra Exchange Online til Outlook på internettet og Outlook.
 
 Når en meddelelse sammensættes i Outlook, kan brugeren se politiktips, da det indhold, der oprettes, evalueres i forhold til DLP-politikker. Og når en meddelelse er sendt, evalueres den i forhold til DLP-politikker som en normal del af mailflowet sammen med Exchange regler for mailflow (også kendt som transportregler) og DLP-politikker, der er oprettet i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. DLP-politikker scanner både meddelelsen og eventuelle vedhæftede filer.
 
@@ -545,15 +545,15 @@ DLP-politikevaluering i Office er designet til ikke at påvirke programmernes yd
 ### <a name="policy-evaluation-in-microsoft-teams"></a>Politikevaluering i Microsoft Teams
  <!--what do you mean that it's synched to user accounts?  I thought DLP policies were applied to locations not users like sensitivity labels are  -->
 
-Når du opretter en DLP-politik, der indeholder Microsoft Teams som en placering, synkroniseres politikken fra Microsoft Purview-compliance-portal til brugerkonti og Microsoft Teams kanaler og chatbeskeder. Afhængigt af hvordan DLP-politikker konfigureres, kan meddelelsen blive blokeret eller tilbagekaldt, når nogen forsøger at dele følsomme oplysninger i en Microsoft Teams chat- eller kanalmeddelelse. Og dokumenter, der indeholder følsomme oplysninger, og som deles med gæster (eksterne brugere), åbnes ikke for disse brugere. Du kan få mere at vide under [Forebyggelse af datatab og Microsoft Teams](dlp-microsoft-teams.md).
+Når du opretter en DLP-politik, der indeholder Microsoft Teams som en placering, synkroniseres politikken fra Microsoft Purview-overholdelsesportalen til brugerkonti og Microsoft Teams kanaler og chatbeskeder. Afhængigt af hvordan DLP-politikker konfigureres, kan meddelelsen blive blokeret eller tilbagekaldt, når nogen forsøger at dele følsomme oplysninger i en Microsoft Teams chat- eller kanalmeddelelse. Og dokumenter, der indeholder følsomme oplysninger, og som deles med gæster (eksterne brugere), åbnes ikke for disse brugere. Du kan få mere at vide under [Forebyggelse af datatab og Microsoft Teams](dlp-microsoft-teams.md).
 
 ## <a name="permissions"></a>Tilladelser
 
-Globale administratorer, sikkerhedsadministratorer og administratorer af overholdelse har som standard adgang til at oprette og anvende en DLP-politik. Andre medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have tilladelse til Microsoft Purview-compliance-portal. Din lejeradministrator har som standard adgang til denne placering og kan give overholdelsesansvarlige og andre personer adgang til Microsoft Purview-compliance-portal uden at give dem alle tilladelserne for en lejeradministrator. For at gøre dette anbefaler vi, at du:
+Globale administratorer, sikkerhedsadministratorer og administratorer af overholdelse har som standard adgang til at oprette og anvende en DLP-politik. Andre medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have tilladelser til Microsoft Purview-overholdelsesportalen. Din lejeradministrator har som standard adgang til denne placering og kan give overholdelsesansvarlige og andre personer adgang til Microsoft Purview-overholdelsesportalen uden at give dem alle tilladelserne for en lejeradministrator. For at gøre dette anbefaler vi, at du:
 
 1. Opret en gruppe i Microsoft 365, og føj overholdelsesansvarlige til den.
 
-2. Opret en rollegruppe på siden **Tilladelser** i Microsoft Purview-compliance-portal.
+2. Opret en rollegruppe på siden **Tilladelser** på Microsoft Purview-overholdelsesportalen.
 
 3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **Administration af DLP-overholdelse**.
 
@@ -567,15 +567,15 @@ Disse tilladelser kræves kun for at oprette og anvende en DLP-politik. Gennemtv
 
 ## <a name="find-the-dlp-cmdlets"></a>Find DLP-cmdlet'erne
 
-Hvis du vil bruge de fleste cmdlet'er til Microsoft Purview-compliance-portal, skal du:
+Hvis du vil bruge de fleste cmdlet'er til Microsoft Purview-overholdelsesportalen, skal du gøre følgende:
 
-1. [Forbind til Office 365 Microsoft Purview-compliance-portal ved hjælp af fjern-PowerShell](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Brug en af disse [policy-and-compliance-dlp-cmdlet'er](/powershell/module/exchange/export-dlppolicycollection).
 
-DLP-rapporter skal dog hente data fra hele Microsoft 365, herunder Exchange Online. Derfor ***er cmdlet'erne til DLP-rapporterne tilgængelige i Exchange Online Powershell – ikke i Microsoft Purview-compliance-portal Powershell***. Hvis du vil bruge cmdlet'erne til DLP-rapporterne, skal du derfor:
+DLP-rapporter skal dog hente data fra hele Microsoft 365, herunder Exchange Online. Derfor ***er cmdlet'erne til DLP-rapporterne tilgængelige i Exchange Online Powershell – ikke i Powershell på Microsoft Purview-overholdelsesportalen***. Hvis du vil bruge cmdlet'erne til DLP-rapporterne, skal du derfor:
 
-1. [Forbind til at Exchange Online ved hjælp af ekstern PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Brug en af disse cmdlet'er til DLP-rapporter:
 

@@ -20,12 +20,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om spoof intelligence-indsigt i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: fc09bb008586b26649e31f409fa3be8114c6d2b6
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 9455ddf17d26e33ed5b2669a27ee93cf5f56b8f9
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772070"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016048"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>Spoof intelligence-indsigt i EOP
 
@@ -115,7 +115,6 @@ På siden **Spoof intelligence-indsigt** , der vises, når du klikker på **Vis 
 - **Sender infrastruktur**: Også kendt som _infrastrukturen_. Den afsendende infrastruktur vil være en af følgende værdier:
   - Domænet, der blev fundet i et omvendt DNS-opslag (PTR-post) for kildemailserverens IP-adresse.
   - Hvis kildens IP-adresse ikke har nogen PTR-post, identificeres den afsendende infrastruktur som \<source IP\>/24 (f.eks. 192.168.100.100/24).
-  - Et bekræftet DKIM-domæne.
 - **Antal meddelelser**: Antallet af meddelelser fra kombinationen af det spoofede domæne _og_ den sendende infrastruktur til din organisation inden for de sidste 7 dage.
 - **Sidst set**: Den sidste dato, hvor der blev modtaget en meddelelse fra den afsendelsesinfrastruktur, der indeholder det spoofede domæne.
 - **Spoof-type**: En af følgende værdier:

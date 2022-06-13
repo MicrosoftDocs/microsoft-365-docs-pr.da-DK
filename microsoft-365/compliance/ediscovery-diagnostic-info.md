@@ -17,12 +17,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du indsamler eDiscovery-diagnosticeringsoplysninger for en Microsoft Support-sag.
-ms.openlocfilehash: 2759156a3948339629ea7d988eaaa5464da197fa
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f5dba88a598a73441c67e3eaa08a59b7258ea712
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095878"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014426"
 ---
 # <a name="collect-ediscovery-diagnostic-information"></a>Indsaml diagnosticeringsoplysninger i eDiscovery
 
@@ -35,9 +35,9 @@ Nogle gange kræver Microsofts supportteknikere specifikke oplysninger om dit pr
 
 ## <a name="collect-diagnostic-information-for-ediscovery-standard"></a>Indsaml diagnosticeringsoplysninger for eDiscovery (Standard)
 
-Indsamling af diagnosticeringsoplysninger til eDiscovery (Standard) er cmdlet-baseret, så du skal bruge Security & Compliance Center PowerShell. Følgende PowerShell-eksempler kører cmdlet'er og gemmer derefter outputtet i en angivet tekstfil. I de fleste supporttilfælde skal du kun køre en af disse kommandoer.
+Indsamling af diagnosticeringsoplysninger til eDiscovery (Standard) er cmdlet-baseret, så du skal bruge Security & Compliance PowerShell. Følgende PowerShell-eksempler kører cmdlet'er og gemmer derefter outputtet i en angivet tekstfil. I de fleste supporttilfælde skal du kun køre en af disse kommandoer.
 
-Hvis du vil køre følgende cmdlet'er, skal du [oprette forbindelse til Security & Compliance Center PowerShell</span>](/powershell/exchange/connect-to-scc-powershell). Når du har forbindelse, skal du køre en eller flere af følgende kommandoer og sørge for at erstatte pladsholdere med de faktiske objektnavne.
+Hvis du vil køre følgende cmdlet'er, skal du [oprette forbindelse til Security & Compliance PowerShell</span>](/powershell/exchange/connect-to-scc-powershell). Når du har forbindelse, skal du køre en eller flere af følgende kommandoer og sørge for at erstatte pladsholdere med de faktiske objektnavne.
 
 Når du har gennemset den genererede tekstfil og redigeret følsomme oplysninger, skal du sende dem til Den Microsoft Support-tekniker, der arbejder på din sag.
 
@@ -80,13 +80,13 @@ Get-ComplianceCase "<eDiscovery (Standard) case name>"| %{$_|fl;"`t==Searches=="
 
 Under fanen **Indstillinger** i en eDiscovery-sag (Premium) kan du hurtigt kopiere diagnosticeringsoplysningerne for sagen. Diagnosticeringsoplysningerne gemmes i Udklipsholder, så du kan indsætte dem i en tekstfil og sende dem til Microsoft Support.
 
-1. Gå til overholdelsesportalen, og vælg **eDiscoveryAvanceret** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank"></a>
+1. Gå til overholdelsesportalen, og vælg **eDiscovery** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank">**Advanced**</a>.
 
 2. Vælg en sag, og klik derefter på fanen **Indstillinger**.
 
 3. Klik på **Vælg** under **Sagsoplysninger**.
 
-4. Klik på **HandlingerKopiér**  >  supportoplysninger på pop op-siden for at kopiere oplysningerne til Udklipsholder.
+4. Klik på **Handlinger** > **Kopiér supportoplysninger** på pop op-siden for at kopiere oplysningerne til Udklipsholder.
 
 5. Åbn en tekstfil (i Notesblok), og indsæt derefter oplysningerne i tekstfilen.
 

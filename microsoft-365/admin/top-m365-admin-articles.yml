@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: De 20 mest viste artikler med hjælp til administratorer i denne måned
-summary: Senest opdateret 24-05-2022. Vil du gerne vide, hvilke hjælp-artikler der er mest populære hos administratorer? Se denne samling af de 20 mest viste hjælpartikler, der opdateres månedligt.
+summary: Sidst opdateret den 9. juni 2022. Vil du gerne vide, hvilke hjælp-artikler der er mest populære hos administratorer? Se denne samling af de 20 mest viste hjælpartikler, der opdateres månedligt.
 metadata:
   title: De 20 mest viste artikler med hjælp til administratorer i denne måned
   description: Se denne samling af top 20 hjælp-artikler, der er mest populære blandt administratorer, og som opdateres månedligt.
@@ -8,16 +8,16 @@ metadata:
   ms.topic: landing-page
   author: SKjerland
   ms.author: sharik
-  ms.date: 05/24/2022
+  ms.date: 06/09/2022
   ms.localizationpriority: high
   ms.custom: AdminSurgePortfolio
   ms.collection: Adm_TOC
-  ms.openlocfilehash: d27424db329d3d5b42dfea2ab6b98a0340f75b6f
-  ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+  ms.openlocfilehash: 5697a2c7e3edbe7669859e4a01c45c99ed4b13b2
+  ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/25/2022
-  ms.locfileid: "65670074"
+  ms.lasthandoff: 06/10/2022
+  ms.locfileid: "66013304"
 landingContent:
 - title: Administrer data og tjenester
   linkLists:
@@ -25,6 +25,8 @@ landingContent:
     links:
     - text: Om administratorroller
       url: add-users/about-admin-roles.md
+    - text: Oversigt over Microsoft 365 Administration
+      url: admin-overview/admin-center-overview.md
     - text: Microsoft 365 anvendelsesrapporter
       url: activity-reports/activity-reports.md
     - text: Få support til Microsoft 365 til virksomheder
@@ -45,10 +47,6 @@ landingContent:
       url: security-and-compliance/set-up-multi-factor-authentication.md
 - title: Regninger og abonnementer
   linkLists:
-  - linkListType: overview
-    links:
-    - text: Om registreringsnumre og meddelelser, der ikke gennemses
-      url: ../commerce/about-registration-numbers.md
   - linkListType: how-to-guide
     links:
     - text: Annuller dit virksomhedsabonnement
@@ -59,6 +57,8 @@ landingContent:
       url: ../commerce/billing-and-payments/manage-payment-methods.md
     - text: Få vist din regning eller faktura
       url: ../commerce/billing-and-payments/view-your-bill-or-invoice.md
+    - text: Prøv eller køb Microsoft 365 til virksomheder
+      url: ../commerce/try-or-buy-microsoft-365.md
 - title: E-mail
   linkLists:
   - linkListType: overview
@@ -75,8 +75,6 @@ landingContent:
       url: add-users/give-mailbox-permissions-to-another-user.md
     - text: Rediger et brugernavn og en mailadresse
       url: add-users/change-a-user-name-and-email-address.md
-    - text: Konvertér en brugerpostkasse til en delt postkasse
-      url: email/convert-user-mailbox-to-shared-mailbox.md
 - title: Brugere, grupper og adgangskoder
   linkLists:
   - linkListType: how-to-guide

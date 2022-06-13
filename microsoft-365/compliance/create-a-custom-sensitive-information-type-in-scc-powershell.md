@@ -1,5 +1,5 @@
 ---
-title: Opret en brugerdefineret type af følsomme oplysninger ved hjælp af PowerShell
+title: Opret en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -14,43 +14,45 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du opretter og importerer en brugerdefineret type af følsomme oplysninger for politikker i Overholdelsescenter.
-ms.openlocfilehash: 89c215ca52b255a6e3aed72ff032cdd2475c0d87
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+description: Få mere at vide om, hvordan du opretter og importerer en brugerdefineret type følsomme oplysninger for politikker i Overholdelsescenter.
+ms.openlocfilehash: 8678b7c218844d9963bd610b66e8b6c2c2647dea
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63589512"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014514"
 ---
-# <a name="create-a-custom-sensitive-information-type-using-powershell"></a>Opret en brugerdefineret type af følsomme oplysninger ved hjælp af PowerShell
+# <a name="create-a-custom-sensitive-information-type-using-powershell"></a>Opret en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
 
-I denne artikel kan du se, hvordan du opretter en *XML-regelpakkefil* , der definerer [brugerdefinerede typer af følsomme oplysninger](sensitive-information-type-entity-definitions.md). I denne artikel beskrives en brugerdefineret type af følsomme oplysninger, der identificerer et medarbejder-id. Du kan bruge XML-eksempel i denne artikel som et udgangspunkt for din egen XML-fil.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Du kan finde flere oplysninger om typer af følsomme oplysninger [under Få mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md).
+I denne artikel kan du se, hvordan du opretter en *XML-regelpakkefil* , der definerer brugerdefinerede [følsomme oplysningstyper](sensitive-information-type-entity-definitions.md). I denne artikel beskrives en brugerdefineret type følsomme oplysninger, der identificerer et medarbejder-id. Du kan bruge XML-eksempelfilen i denne artikel som udgangspunkt for din egen XML-fil.
 
-Når du har oprettet en korrekt udformet XML-fil, kan du uploade den til en Microsoft 365 hjælp af PowerShell. Derefter er du klar til at bruge din brugerdefinerede type af følsomme oplysninger i politikker. Du kan teste dets effektivitet ved registrering af følsomme oplysninger efter hensigten.
+Du kan finde flere oplysninger om typer af følsomme oplysninger under [Få mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md).
+
+Når du har oprettet en korrekt udformet XML-fil, kan du uploade den til Microsoft 365 ved hjælp af PowerShell. Derefter er du klar til at bruge din brugerdefinerede type følsomme oplysninger i politikker. Du kan teste dens effektivitet ved at registrere de følsomme oplysninger, som du havde tiltænkt.
 
 > [!NOTE]
-> Hvis du ikke har brug for det detaljerede kontrolelement, som PowerShell leverer, kan du oprette brugerdefinerede typer af følsomme oplysninger Microsoft 365 Overholdelsescenter. Få mere at vide under [Opret en brugerdefineret type af følsomme oplysninger](create-a-custom-sensitive-information-type.md).
+> Hvis du ikke har brug for det detaljerede kontrolelement, som PowerShell indeholder, kan du oprette brugerdefinerede følsomme oplysningstyper på Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger under [Opret en brugerdefineret type følsomme oplysninger](create-a-custom-sensitive-information-type.md).
 
 ## <a name="important-disclaimer"></a>Vigtig ansvarsfraskrivelse
 
-Microsoft Support kan ikke hjælpe dig med at oprette definitioner, der matcher indhold.
+Microsoft Support kan ikke hjælpe dig med at oprette definitioner, der stemmer overens med indholdet.
 
-Til brugerdefineret udvikling af indholdsmatching, test og fejlfinding skal du bruge dine egne interne it-ressourcer eller bruge konsulenttjenester som f.eks. Microsoft Consulting Services (MCS). Microsoft-supportteknikere kan yde begrænset support til denne funktion, men de kan ikke garantere, at tilpassede forslag til indholdsmatchning fuldt ud opfylder dine behov.
+Hvis du vil matche brugerdefineret udvikling, test og fejlfinding af indhold, skal du bruge dine egne interne it-ressourcer eller bruge konsulenttjenester, f.eks. Microsoft Consulting Services (MCS). Microsofts supportteknikere kan yde begrænset support til denne funktion, men de kan ikke garantere, at brugerdefinerede forslag, der matcher indhold, fuldt ud opfylder dine behov.
 
-MCS kan levere regulære udtryk til testformål. De kan også give hjælp til fejlfinding af et eksisterende RegEx-mønster, der ikke fungerer som forventet, med et enkelt specifikt indholdseksemem muligvis.
+MCS kan levere regulære udtryk til testformål. De kan også hjælpe med fejlfinding af et eksisterende RegEx-mønster, der ikke fungerer som forventet med et enkelt specifikt indholdseksempel.
 
 Se [Potentielle valideringsproblemer, du skal være opmærksom på](#potential-validation-issues-to-be-aware-of) i denne artikel.
 
-Du kan finde flere oplysninger om programmet Boost.RegEx (tidligere kaldet RegEx++), der bruges til at behandle teksten, under [Boost.Regex 5.1.3](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/).
+Du kan få flere oplysninger om Boost.RegEx-programmet (tidligere kaldet RegEx++), der bruges til at behandle teksten, under [Boost.Regex 5.1.3](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/).
 
 > [!NOTE]
-> Hvis du bruger et og-tegn (&) som en del af et nøgleord i din brugerdefinerede type af følsomme oplysninger, skal du tilføje et yderligere ord med mellemrum omkring tegnet. Brug f.eks `L & P` _. ikke_ `L&P`.
+> Hvis du bruger et &-tegn (&) som en del af et nøgleord i din brugerdefinerede følsomme oplysningstype, skal du tilføje et ekstra ord med mellemrum omkring tegnet. Brug f.eks. `L & P` _ikke_ `L&P`.
 
-## <a name="sample-xml-of-a-rule-package"></a>XML-eksempel på en regelpakke
+## <a name="sample-xml-of-a-rule-package"></a>Eksempel på XML-kode i en regelpakke
 
-Her er XML-eksempel på regelpakken, som vi opretter i denne artikel. Elementer og attributter er forklaret i afsnittene herunder.
+Her er xml-eksemplet på den regelpakke, vi opretter i denne artikel. Elementer og attributter forklares i afsnittene nedenfor.
 
 ```xml
 <?xml version="1.0" encoding="UTF-16"?>
@@ -133,25 +135,25 @@ Her er XML-eksempel på regelpakken, som vi opretter i denne artikel. Elementer 
 </RulePackage>
 ```
 
-## <a name="what-are-your-key-requirements-rule-entity-pattern-elements"></a>Hvad er de vigtigste krav? [Regel,Enhed, Mønsterelementer]
+## <a name="what-are-your-key-requirements-rule-entity-pattern-elements"></a>Hvad er dine vigtigste krav? [Regel, enhed, mønsterelementer]
 
-Det er vigtigt, at du forstår den grundlæggende struktur i XML-skemaet for en regel. Din forståelse af strukturen hjælper din brugerdefinerede type af følsomme oplysninger med at identificere det rigtige indhold.
+Det er vigtigt, at du forstår den grundlæggende struktur i XML-skemaet for en regel. Din forståelse af strukturen hjælper din brugerdefinerede type følsomme oplysninger med at identificere det rigtige indhold.
 
-En regel definerer en eller flere enheder (også kaldet typer af følsomme oplysninger). Hver enhed definerer et eller flere mønstre. Et mønster er det, en politik søger efter, når den evaluerer indhold (f.eks. mails og dokumenter).
+En regel definerer et eller flere enheder (også kendt som følsomme oplysningstyper). Hvert objekt definerer et eller flere mønstre. Et mønster er det, en politik søger efter, når den evaluerer indhold (f.eks. mail og dokumenter).
 
-I XML-markeringer betyder "regler" de mønstre, der definerer den følsomme oplysningstype. Tilknyt ikke referencer til regler i denne artikel med "betingelser" eller "handlinger", der er almindelige i andre Microsoft-funktioner.
+I XML-markering betyder "regler" de mønstre, der definerer typen af følsomme oplysninger. Knyt ikke referencer til regler i denne artikel med "betingelser" eller "handlinger", der er almindelige i andre Microsoft-funktioner.
 
-### <a name="simplest-scenario-entity-with-one-pattern"></a>Mest enkle scenarie: enhed med ét mønster
+### <a name="simplest-scenario-entity-with-one-pattern"></a>Nemmeste scenarie: enhed med ét mønster
 
-Her er et simpelt scenarie: Du vil have din politik til at identificere indhold, der indeholder nicifrede medarbejder-id'er, der bruges i organisationen. Et mønster refererer til det regulære udtryk i reglen, der identificerer nicifrede tal. Alt indhold, der indeholder et nicifret tal, opfylder mønsteret.
+Her er et simpelt scenarie: Politikken skal identificere indhold, der indeholder nicifrede medarbejder-id'er, som bruges i din organisation. Et mønster refererer til det regulære udtryk i reglen, der identificerer nicifrede tal. Alt indhold, der indeholder et nicifret tal, opfylder mønsteret.
 
 ![Diagram over enhed med ét mønster.](../media/4cc82dcf-068f-43ff-99b2-bac3892e9819.png)
 
-Men dette mønster kan identificere et  hvilket som helst nicifret tal, herunder længere tal eller andre typer af nicifrede tal, som ikke er medarbejder-id'er. Denne type uønsket match kaldes en *falsk positiv*.
+Men dette mønster kan identificere **alle** nicifrede tal, herunder længere tal eller andre typer nicifrede tal, der ikke er medarbejder-id'er. Denne type uønskede match er kendt som et *falsk positivt*.
 
 ### <a name="more-common-scenario-entity-with-multiple-patterns"></a>Mere almindeligt scenarie: enhed med flere mønstre
 
-På grund af mulighederne for falske positive bruger du typisk mere end ét mønster til at definere en enhed. Flere mønstre giver støtte til beviser for destinationsenheden. Eksempelvis kan yderligere nøgleord, datoer eller anden tekst hjælpe med at identificere den oprindelige enhed (f.eks. det nicifrede medarbejdernummer).
+På grund af risikoen for falske positiver bruger du typisk mere end ét mønster til at definere en enhed. Flere mønstre giver understøttende beviser for målenheden. Yderligere nøgleord, datoer eller anden tekst kan f.eks. hjælpe med at identificere det oprindelige objekt (f.eks. det nicifrede medarbejdernummer).
 
 Hvis du f.eks. vil øge sandsynligheden for at identificere indhold, der indeholder et medarbejder-id, kan du definere andre mønstre, der skal søges efter:
 
@@ -160,96 +162,96 @@ Hvis du f.eks. vil øge sandsynligheden for at identificere indhold, der indehol
 
 ![Diagram over enhed med flere mønstre.](../media/c8dc2c9d-00c6-4ebc-889a-53b41a90024a.png)
 
-Der er vigtige punkter, du skal overveje for flere mønster matches:
+Der er vigtige punkter, der skal overvejes i forbindelse med flere mønsterforekomster:
 
-- Mønstre, der kræver flere beviser, har et højere tillidsniveau. Baseret på tillidsniveauet kan du udføre følgende handlinger:
-  - Brug mere restriktive handlinger (f.eks. blokere indhold) med resultater med større tillid.
-  - Brug mindre restriktive handlinger (f.eks. send meddelelser) med mindre tillidshandlinger.
+- Mønstre, der kræver flere beviser, har et højere konfidensniveau. Baseret på tillidsniveauet kan du foretage følgende handlinger:
+  - Brug mere restriktive handlinger (f.eks. bloker indhold) med matches med større genkendelsessikkerhed.
+  - Brug mindre restriktive handlinger (f.eks. sende meddelelser) med matches med lavere genkendelsessikkerhed.
 
-- De supplerende `IdMatch` elementer `Match` henviser til RegExes og nøgleord, der faktisk er børn af `Rule` elementet, ikke `Pattern`. Disse supplerende elementer refereres til af `Pattern`, men er inkluderet i `Rule`. Denne funktionsmåde betyder, at der kan refereres til en enkelt definition af et understøttende element, f.eks. et regulært udtryk eller en liste over nøgleord, af flere enheder og mønstre.
+- De understøttende `IdMatch` elementer og `Match` -elementer refererer til RegExes og nøgleord, der faktisk er underordnede til elementet `Rule` , ikke `Pattern`. Disse understøttende elementer refereres til af `Pattern`, men er inkluderet i `Rule`. Denne funktionsmåde betyder, at der kan refereres til en enkelt definition af et understøttende element, f.eks. et regulært udtryk eller en nøgleordsliste, af flere objekter og mønstre.
 
-## <a name="what-entity-do-you-need-to-identify-entity-element-id-attribute"></a>Hvilken enhed skal du identificere? [Enhedselement, id-attribut]
+## <a name="what-entity-do-you-need-to-identify-entity-element-id-attribute"></a>Hvilket objekt skal du identificere? [Enhedselement, id-attribut]
 
-En enhed er en følsom oplysningstype, f.eks. et kreditkortnummer, der har et tydeligt mønster. Hver enhed har et entydigt GUID som dets id.
+En enhed er en følsom oplysningstype, f.eks. et kreditkortnummer, der har et veldefineret mønster. Hvert objekt har et entydigt GUID som id.
 
-### <a name="name-the-entity-and-generate-its-guid"></a>Navngive enheden og oprette dets GUID
+### <a name="name-the-entity-and-generate-its-guid"></a>Navngiv objektet, og generér dets GUID
 
-1. Tilføj elementerne og i den valgte XML-editor `Rules` `Entity` .
-2. Tilføj en kommentar, der indeholder navnet på din brugerdefinerede enhed, f.eks. Medarbejder-id. Senere skal du føje enhedsnavnet til sektionen oversatte strenge, og dette navn vises i Administration, når du opretter en politik.
-3. Opret et entydigt GUID for enheden. Eksempelvis kan du i Windows PowerShell køre kommandoen `[guid]::NewGuid()`. Senere skal du også føje GUID'et til afsnittet med oversatte strenge i enheden.
+1. Tilføj elementerne og `Entity` i `Rules` din foretrukne XML-editor.
+2. Tilføj en kommentar, der indeholder navnet på dit brugerdefinerede objekt, f.eks. Medarbejder-id. Senere skal du føje objektnavnet til afsnittet oversatte strenge, og dette navn vises i Administration, når du opretter en politik.
+3. Opret et entydigt GUID for objektet. I Windows PowerShell kan du f.eks. køre kommandoen `[guid]::NewGuid()`. Senere skal du også føje GUID'et til afsnittet oversatte strenge i objektet.
 
 ![XML-markering, der viser regler og enhedselementer.](../media/c46c0209-0947-44e0-ac3a-8fd5209a81aa.png)
 
 ## <a name="what-pattern-do-you-want-to-match-pattern-element-idmatch-element-regex-element"></a>Hvilket mønster vil du matche? [Mønsterelement, IdMatch-element, Regex-element]
 
-Mønsteret indeholder listen over, hvad den følsomme oplysningstype leder efter. Mønsteret kan indeholde RegExes, nøgleord og indbyggede funktioner. Funktioner gør opgaver på samme måde som at køre RegExes for at finde datoer eller adresser. Typer af følsomme oplysninger kan have flere mønstre med entydige tillidsmønstre.
+Mønsteret indeholder en liste over, hvad typen af følsomme oplysninger søger efter. Mønsteret kan omfatte RegExes, nøgleord og indbyggede funktioner. Funktioner udfører opgaver som at køre RegExes for at finde datoer eller adresser. Følsomme informationstyper kan have flere mønstre med entydige konfidenser.
 
-I følgende diagram henviser alle mønstrene til det samme regulære udtryk. Denne RegEx søger efter et nicifret tal omgivet `(\d{9})` af mellemrum `(\s) ... (\s)`. Dette regulære udtryk refereres til af `IdMatch` elementet og er det almindelige krav for alle mønstre, der søger efter Medarbejder-id-enheden. `IdMatch` er den identifikator, som mønsteret skal forsøge at matche. Et `Pattern` element skal have præcis ét `IdMatch` element.
+I følgende diagram refererer alle mønstre til det samme regulære udtryk. Denne RegEx søger efter et nicifret tal `(\d{9})` omgivet af blanktegn `(\s) ... (\s)`. Elementet refererer til dette regulære `IdMatch` udtryk, og det er det almindelige krav for alle mønstre, der søger efter enheden Medarbejder-id. `IdMatch` er det id, som mønsteret forsøger at matche. Et `Pattern` element skal have nøjagtigt ét `IdMatch` element.
 
-![XML-markering, der viser flere mønsterelementer, der refererer til enkelt Regex-element.](../media/8f3f497b-3b8b-4bad-9c6a-d9abf0520854.png)
+![XML-markering, der viser flere mønsterelementer, der refererer til et enkelt Regex-element.](../media/8f3f497b-3b8b-4bad-9c6a-d9abf0520854.png)
 
-Et tilfreds mønster match returnerer et antal og et tillidsniveau, som du kan bruge i betingelserne i din politik. Når du føjer en betingelse til registrering af en type af følsomme oplysninger til en politik, kan du redigere antallet og tillidsniveauet som vist i følgende diagram. Tillidsniveau (også kaldet matchnøjagtighed) forklares senere i denne artikel.
+Et opfyldt mønstermatch returnerer et antal- og konfidensniveau, som du kan bruge i betingelserne i din politik. Når du føjer en betingelse for registrering af en følsom oplysningstype til en politik, kan du redigere optællings- og tillidsniveauet som vist i følgende diagram. Konfidensniveau (også kaldet matchnøjagtighed) forklares senere i denne artikel.
 
-![Indstillinger for antal forekomster og matchnøjagtighed.](../media/sit-confidence-level.png)
+![Indstillinger for antal forekomster og match af nøjagtighed.](../media/sit-confidence-level.png)
 
-Regulære udtryk er effektive, så der er problemer, du skal kende til. Eksempelvis kan en RegEx, der identificerer for meget indhold, påvirke ydeevnen. Du kan få mere at vide om disse problemer i [afsnittet Potentielle valideringsproblemer, du skal være opmærksom](#potential-validation-issues-to-be-aware-of) på senere i denne artikel.
+Regulære udtryk er effektive, så der er problemer, du skal kende til. En RegEx, der identificerer for meget indhold, kan f.eks. påvirke ydeevnen. Du kan få mere at vide om disse problemer i afsnittet [Potentielle valideringsproblemer, du skal være opmærksom på](#potential-validation-issues-to-be-aware-of) senere i denne artikel.
 
-## <a name="do-you-want-to-require-additional-evidence-match-element-mincount-attribute"></a>Vil du kræve yderligere beviser? [Match-element, minTæl-attribut]
+## <a name="do-you-want-to-require-additional-evidence-match-element-mincount-attribute"></a>Vil du kræve yderligere beviser? [Match element, attribut for minCount]
 
-Ud over , `IdMatch`kan et mønster `Match` bruge elementet til at kræve yderligere supplerende bevis, f.eks et nøgleord, RegEx, dato eller adresse.
+Ud over `IdMatch`kan et mønster bruge -elementet `Match` til at kræve yderligere dokumentation, f.eks. et nøgleord, RegEx, en dato eller en adresse.
 
-A `Pattern` kan indeholde flere `Match` elementer:
+En `Pattern` kan indeholde flere `Match` elementer:
 
-- Direkte i `Pattern` elementet.
-- Kombineret ved hjælp af `Any` elementet.
+- Direkte i elementet `Pattern` .
+- Kombineret ved hjælp af -elementet `Any` .
 
-`Match` elementer sammenføjes af en implicit AND-operator. Med andre ord skal alle `Match` elementer være tilfredse, for at mønsteret kan matches.
+`Match` -elementer joinforbindes af en implicit AND-operator. Det vil sige, at alle `Match` elementer skal være opfyldt, for at mønsteret kan matches.
 
-Du kan bruge elementet til `Any` at introducere AND- eller OR-operatorer. Elementet `Any` beskrives senere i denne artikel.
+Du kan bruge -elementet `Any` til at introducere OPERATORerne AND eller OR. Elementet `Any` beskrives senere i denne artikel.
 
-Du kan bruge den valgfrie `minCount` attribut til at angive, hvor mange forekomster af et match der skal findes for hvert `Match` element. Du kan f.eks. angive, at et mønster kun er tilfreds, når der findes mindst to nøgleord fra en liste over nøgleord.
+Du kan bruge den valgfrie `minCount` attribut til at angive, hvor mange forekomster af et match der skal findes for hvert `Match` element. Du kan f.eks. angive, at et mønster kun opfyldes, når der findes mindst to nøgleord fra en nøgleordsliste.
 
-![XML-markering, der viser elementet Match med minOccurs-attributten.](../media/607f6b5e-2c7d-43a5-a131-a649f122e15a.png)
+![XML-markering, der viser matchelementet med attributten minOccurs.](../media/607f6b5e-2c7d-43a5-a131-a649f122e15a.png)
 
-### <a name="keywords-keyword-group-and-term-elements-matchstyle-and-casesensitive-attributes"></a>Nøgleord [Nøgleord, Gruppe- og Ordelementer, matchStyle og attributter, hvor der er forskel på store og små bogstaver]
+### <a name="keywords-keyword-group-and-term-elements-matchstyle-and-casesensitive-attributes"></a>Nøgleord [nøgleord, gruppe- og ordelementer, matchStyle- og caseSensitive-attributter]
 
-Som beskrevet tidligere kræver identificering af følsomme oplysninger ofte yderligere nøgleord som bekræftende beviser. Ud over at matche et nicifret tal kan du f.eks. se efter ord som "kort", "badge" eller "id" ved hjælp af nøgleordselementet. Elementet `Keyword` har en attribut `ID` , der kan refereres til af flere `Match` elementer i flere mønstre eller enheder.
+Som beskrevet tidligere kræver identificering af følsomme oplysninger ofte yderligere nøgleord som dokumentation. Ud over at matche et nicifret tal kan du f.eks. søge efter ord som "kort", "badge" eller "ID" ved hjælp af nøgleordselementet. Elementet `Keyword` har en `ID` attribut, der kan refereres til af flere `Match` elementer i flere mønstre eller objekter.
 
-Nøgleord er inkluderet som en liste over `Term` elementer i et `Group` element. Elementet `Group` har en `matchStyle` attribut med to mulige værdier:
+Nøgleord medtages som en liste over `Term` elementer i et `Group` element. Elementet `Group` har en `matchStyle` attribut med to mulige værdier:
 
-- **matchStyle="word"**: Et ordmatch identificerer hele ord omgivet af blanktegn eller andre afgrænsere. Du bør altid bruge **Word,** medmindre du har brug for at matche dele af ord eller ord på asiatiske sprog.
+- **matchStyle="word"**: Et ordmatch identificerer hele ord omgivet af blanktegn eller andre afgrænsere. Du skal altid bruge **ordet** , medmindre du har brug for at matche dele af ord eller ord på asiatiske sprog.
 
-- **matchStyle="string"**: Et strengmatch identificerer strenge, uanset hvad de er omgivet af. "Id" matcher f.eks. "bud" og "idé". Brug `string` kun, når du har brug for at matche asiatiske ord, eller hvis dit nøgleord muligvis er inkluderet i andre strenge.
+- **matchStyle="string"**: Et strengmatch identificerer strenge, uanset hvad de er omgivet af. "ID" matcher f.eks. "bud" og "idé". Bruges `string` kun, når du har brug for at matche asiatiske ord, eller hvis nøgleordet kan være inkluderet i andre strenge.
 
-Endelig kan du bruge attributten `caseSensitive` `Term` for elementet til at angive, at indholdet skal svare nøjagtigt til nøgleordet, herunder små og store bogstaver.
+Endelig kan du bruge attributten `caseSensitive` for `Term` elementet til at angive, at indholdet skal matche nøgleordet nøjagtigt, herunder små bogstaver og store bogstaver.
 
 ![XML-markering, der viser Match elementer, der refererer til nøgleord.](../media/e729ba27-dec6-46f4-9242-584c6c12fd85.png)
 
 ### <a name="regular-expressions-regex-element"></a>Regulære udtryk [Regex-element]
 
-I dette eksempel bruger medarbejderenheden `ID` `IdMatch` allerede elementet til at referere til et regulært udtryk for mønsteret: et nicifret tal omgivet af mellemrum. `Match` Desuden kan et mønster bruge et element til at referere til et ekstra element `Regex` til at identificere bekræftende beviser, f.eks. et femcifret eller nicifret tal i formatet et amerikansk postnummer.
+I dette eksempel bruger medarbejderenheden `ID` allerede elementet `IdMatch` til at referere til et regulært udtryk for mønsteret: et nicifret tal omgivet af mellemrum. Et mønster kan desuden bruge et `Match` element til at referere til et ekstra `Regex` element til at identificere bekræftende beviser, f.eks. et femcifret eller nicifret tal i formatet af et amerikansk postnummer.
 
-### <a name="additional-patterns-such-as-dates-or-addresses-built-in-functions"></a>Flere mønstre, f.eks. datoer eller adresser [indbyggede funktioner]
+### <a name="additional-patterns-such-as-dates-or-addresses-built-in-functions"></a>Yderligere mønstre, f.eks. datoer eller adresser [indbyggede funktioner]
 
-Følsomme oplysningstyper kan også bruge indbyggede funktioner til at identificere bekræftende beviser. Eksempelvis en dato i USA, EN EU-dato, udløbsdato eller en amerikansk adresse. Microsoft 365 understøtter ikke upload af dine egne brugerdefinerede funktioner. Men når du opretter en brugerdefineret type af følsomme oplysninger, kan enheden referere til indbyggede funktioner.
+Følsomme informationstyper kan også bruge indbyggede funktioner til at identificere bekræftende beviser. Det kan f.eks. være en amerikansk dato, EU-dato, udløbsdato eller amerikansk adresse. Microsoft 365 understøtter ikke upload af dine egne brugerdefinerede funktioner. Men når du opretter en brugerdefineret type følsomme oplysninger, kan din enhed referere til indbyggede funktioner.
 
-Eksempelvis har en medarbejder-id-badge en ansættelsesdato på sig, så denne brugerdefinerede enhed kan bruge den indbyggede `Func_us_date` funktion til at identificere en dato i det format, der ofte bruges i USA.
+Et badge for medarbejder-id har f.eks. en ansættelsesdato på sig, så dette brugerdefinerede objekt kan bruge den indbyggede `Func_us_date` funktion til at identificere en dato i det format, der ofte bruges i USA.
 
-Du kan få mere at vide [under Funktioner af typen Følsomme oplysninger](sit-functions.md).
+Du kan få flere oplysninger under [Funktioner til følsomme oplysninger.](sit-functions.md)
 
-![XML-markering, der viser den indbyggede funktion Match element referencing.](../media/dac6eae3-9c52-4537-b984-f9f127cc9c33.png)
+![XML-kode, der viser Match-element, der refererer til den indbyggede funktion.](../media/dac6eae3-9c52-4537-b984-f9f127cc9c33.png)
 
-## <a name="different-combinations-of-evidence-any-element-minmatches-and-maxmatches-attributes"></a>Forskellige kombinationer af beviser [Ethvert element, minMatches og maxMatches attributter]
+## <a name="different-combinations-of-evidence-any-element-minmatches-and-maxmatches-attributes"></a>Forskellige kombinationer af beviser [attributterne Any element, minMatches og maxMatches]
 
-I et `Pattern` element er alle elementer `IdMatch` forbundet `Match` med en implicit AND-operator. Med andre ord skal alle match være opfyldt, før mønsteret kan være tilfreds.
+I et `Pattern` element joinforbindes alle `IdMatch` elementer og `Match` af en implicit AND-operator. Med andre ord skal alle matches opfyldes, før mønsteret kan opfyldes.
 
-Du kan oprette en mere fleksibel matchende logik ved at bruge elementet `Any` til at gruppere `Match` elementer. Du kan f.eks. bruge elementet `Any` til at matche alle, ingen eller et nøjagtigt undersæt af dets underordnede `Match` elementer.
+Du kan oprette mere fleksibel matchende logik ved hjælp af elementet `Any` til at gruppere `Match` elementer. Du kan f.eks. bruge elementet `Any` til at matche alle, ingen eller et nøjagtigt undersæt af dets underordnede `Match` elementer.
 
-Elementet `Any` har valgfrie attributter `minMatches` og `maxMatches` attributter, `Match` du kan bruge til at definere, hvor mange af de underordnede elementer, der skal være opfyldt, før mønsteret matches. Disse attributter definerer *antallet* af `Match` elementer, ikke antallet af forekomster af bevis, der blev fundet for matchene. Hvis du vil definere et minimum antal forekomster for et bestemt match, f.eks. to nøgleord på en liste, `minCount` skal du bruge attributten for `Match` et element (se ovenfor).
+Elementet `Any` har valgfrie `minMatches` og `maxMatches` attributter, som du kan bruge til at definere, hvor mange af de underordnede `Match` elementer der skal opfyldes, før mønsteret matches. Disse attributter definerer *antallet* af `Match` elementer og ikke antallet af fundne forekomster af beviser for matchene. Hvis du vil definere et minimumantal forekomster for et bestemt match, f.eks. to nøgleord fra en liste, skal du bruge attributten `minCount` for et `Match` element (se ovenfor).
 
-### <a name="match-at-least-one-child-match-element"></a>Match mindst ét underordnet Match-element
+### <a name="match-at-least-one-child-match-element"></a>Søg efter mindst ét underordnet matchelement
 
-Hvis du kun vil kræve et minimum antal `Match` elementer, kan du bruge attributten `minMatches` . Disse elementer er faktisk forbundet `Match` af en implicit OR-operator. Dette `Any` element er tilfreds, hvis der findes en dato, der er formateret i USA, eller et nøgleord fra en af listerne.
+Hvis du kun vil have et minimumantal `Match` elementer, kan du bruge attributten `minMatches` . Disse elementer er faktisk `Match` joinforbundet af en implicit OR-operator. Dette `Any` element opfyldes, hvis der findes en amerikansk formateret dato eller et nøgleord fra en af listerne.
 
 ```xml
 <Any minMatches="1" >
@@ -259,9 +261,9 @@ Hvis du kun vil kræve et minimum antal `Match` elementer, kan du bruge attribut
 </Any>
 ```
 
-### <a name="match-an-exact-subset-of-any-children-match-elements"></a>Match et nøjagtigt undersæt af underordnede Match-elementer
+### <a name="match-an-exact-subset-of-any-children-match-elements"></a>Match et nøjagtigt undersæt af underordnede elementer Match elementer
 
-Hvis du vil kræve et nøjagtigt antal `Match` elementer, skal du `minMatches` angive `maxMatches` og til den samme værdi. Dette `Any` element er kun tilfreds, hvis der findes præcis én dato eller ét nøgleord. Hvis der er flere forekomster, er mønsteret ikke matchet.
+Hvis du vil kræve et nøjagtigt antal `Match` elementer, skal du angive `minMatches` og `maxMatches` til den samme værdi. Dette `Any` element opfyldes kun, hvis der findes nøjagtigt én dato eller ét nøgleord. Hvis der er flere forekomster, matches mønsteret ikke.
 
 ```xml
 <Any minMatches="1" maxMatches="1" >
@@ -271,11 +273,11 @@ Hvis du vil kræve et nøjagtigt antal `Match` elementer, skal du `minMatches` a
 </Any>
 ```
 
-### <a name="match-none-of-children-match-elements"></a>Match ingen af børn Match-elementer
+### <a name="match-none-of-children-match-elements"></a>Forskel på ingen underordnede elementer
 
-Hvis du vil kræve, at der ikke er bestemte beviser for, at et mønster er tilfreds, kan du angive både minMatches og maxMatches til 0. Dette kan være nyttigt, hvis du har en nøgleordsliste eller andre beviser, der sandsynligvis indikerer en falsk positiv.
+Hvis du vil kræve, at fraværet af specifikke beviser for et mønster opfyldes, kan du angive både minMatches og maxMatches til 0. Dette kan være nyttigt, hvis du har en nøgleordsliste eller andre beviser, der sandsynligvis angiver en falsk positiv.
 
-Eksempelvis søger medarbejder-id'et efter nøgleordet "kort", fordi det kan referere til et "id-kort". Men hvis kortet kun vises i sætningen "kreditkort", betyder "kort" i dette indhold sandsynligvis "Id-kort". Så du kan tilføje "kreditkort" som et nøgleord til en liste over ord, som du vil udelukke fra at opfylde mønsteret.
+Enheden for medarbejder-id søger f.eks. efter nøgleordet "kort", fordi det muligvis refererer til et "id-kort". Men hvis kortet kun vises i udtrykket "kreditkort", er det usandsynligt, at "kort" i dette indhold betyder "ID-kort". Så du kan tilføje "kreditkort" som et nøgleord til en liste over ord, som du vil udelukke fra at opfylde mønsteret.
 
 ```xml
 <Any minMatches="0" maxMatches="0" >
@@ -286,7 +288,7 @@ Eksempelvis søger medarbejder-id'et efter nøgleordet "kort", fordi det kan ref
 
 ### <a name="match-a-number-of-unique-terms"></a>Match et antal entydige ord
 
-Hvis du vil matche et antal entydige ord, skal du bruge det *entydigeResults-parameter* , der er indstillet til *sand*, som vist i følgende eksempel:
+Hvis du vil matche et antal entydige ord, skal du bruge parameteren *uniqueResults* , angivet til *sand*, som vist i følgende eksempel:
 
 ```xml
 <Pattern confidenceLevel="75">
@@ -295,53 +297,53 @@ Hvis du vil matche et antal entydige ord, skal du bruge det *entydigeResults-par
 </Pattern>
 ```
 
-I dette eksempel er der defineret et mønster for lønrevision ved brug af mindst tre entydige match.
+I dette eksempel er der defineret et mønster for lønrevision ved hjælp af mindst tre entydige matches.
 
 ## <a name="how-close-to-the-entity-must-the-other-evidence-be-patternsproximity-attribute"></a>Hvor tæt på enheden skal de andre beviser være? [patternsProximity-attribut]
 
-Typen af følsomme oplysninger leder efter et mønster, der repræsenterer et medarbejder-id, og som en del af det mønster leder den også efter bekræftende beviser som f.eks. "ID". Det giver mening, at jo nærmere sammen dette bevis er, jo mere sandsynligt er det, at mønsteret er et faktisk medarbejder-id. Du kan afgøre, hvor tæt andre beviser i mønsteret skal være på enheden ved hjælp af de nødvendige patternsProximity-attribut for Enhedselementet.
+Din type følsomme oplysninger leder efter et mønster, der repræsenterer et medarbejder-id, og som en del af dette mønster leder den også efter bekræftende beviser som f.eks. et nøgleord som f.eks. "ID". Det giver mening, at jo tættere dette bevis er, jo mere sandsynligt er mønsteret at være et faktisk medarbejder-id. Du kan bestemme, hvor tæt andre beviser i mønsteret skal være på enheden ved hjælp af attributten PatternsProximity for elementet Entity.
 
-![XML-kode, der viser mønstreProximity-attributten.](../media/e97eb7dc-b897-4e11-9325-91c742d9839b.png)
+![XML-markering, der viser attributten patternsProximity.](../media/e97eb7dc-b897-4e11-9325-91c742d9839b.png)
 
-For hvert mønster i enheden definerer patternsProximity-attributværdien afstanden (i Unicode-tegn) fra IdMatch-placeringen for alle andre matches, der er angivet for det pågældende mønster. Afstandsvinduet er forankret af IdMatch-placeringen, hvor vinduet går ud til venstre og højre for IdMatch.
+For hvert mønster i enheden definerer attributværdien patternsProximity afstanden (i Unicode-tegn) fra idMatch-placeringen for alle andre matches, der er angivet for det pågældende mønster. Nærhedsvinduet er forankret af idMatch-placeringen, hvor vinduet udvides til venstre og højre for IdMatch.
 
-![Diagram over afstandsvindue.](../media/b593dfd1-5eef-4d79-8726-a28923f7c31e.png)
+![Diagram over nærhedsvindue.](../media/b593dfd1-5eef-4d79-8726-a28923f7c31e.png)
 
-Eksemplet nedenfor viser, hvordan afstandsvinduet påvirker matchet, hvor IdMatch-elementet for det brugerdefinerede medarbejder-id kræver mindst ét bekræftende match for nøgleord eller dato. Kun ID1 stemmer overens, fordi der for ID2 og ID3 findes enten ingen eller kun delvis bekræftende beviser inden for nærheden af vinduet.
+I nedenstående eksempel illustreres det, hvordan nærhedsvinduet påvirker det mønstermatch, hvor IdMatch-elementet for det brugerdefinerede medarbejder-id kræver mindst ét bekræftende match af nøgleord eller dato. Det er kun ID1, der stemmer overens, fordi der for ID2 og ID3 findes enten ingen eller kun delvis bekræftende beviser i nærheden af vinduet.
 
-![Diagram over bekræftende beviser og afstandsvindue.](../media/dc68e38e-dfa1-45b8-b204-89c8ba121f96.png)
+![Diagram over bekræftende beviser og nærhedsvindue.](../media/dc68e38e-dfa1-45b8-b204-89c8ba121f96.png)
 
-Bemærk, at for mails behandles brødteksten og hver vedhæftet fil som separate elementer. Det betyder, at afstandsvinduet ikke går ud over slutningen af hvert af disse elementer. For hvert element (vedhæftet fil eller brødtekst) skal både idMatch og bekræftende bevis findes i det pågældende element.
+Bemærk, at for mails behandles meddelelsesteksten og hver vedhæftet fil som separate elementer. Det betyder, at nærhedsvinduet ikke strækker sig ud over slutningen af hvert af disse elementer. For hvert element (vedhæftet fil eller brødtekst) skal både idMatch og bekræftende beviser være placeret i det pågældende element.
 
-## <a name="what-are-the-right-confidence-levels-for-different-patterns-confidencelevel-attribute-recommendedconfidence-attribute"></a>Hvad er de rigtige tillidsniveauer for forskellige mønstre? [attributten confidenceLevel, anbefalede attributten Konfidence]
+## <a name="what-are-the-right-confidence-levels-for-different-patterns-confidencelevel-attribute-recommendedconfidence-attribute"></a>Hvad er de rigtige tillidsniveauer til forskellige mønstre? [confidenceLevel attribut, recommendedConfidence attribute]
 
-Jo mere bevis, et mønster kræver, jo mere tillid har du til, at en faktisk enhed (f.eks. medarbejder-id) er blevet identificeret, når mønsteret er matchet. Du har f.eks. større tillid til et mønster, der kræver et nicifret id-nummer, ansættelsesdato og et nøgleord i nærheden, end du gør i et mønster, der kun kræver et nicifret id.
+Jo flere beviser, som et mønster kræver, jo større tillid har du til, at der er identificeret et faktisk objekt (f.eks. medarbejder-id), når mønsteret matches. Du har f.eks. større tillid til et mønster, der kræver et nicifret id-nummer, ansættelsesdato og nøgleord i nærheden, end du gør i et mønster, der kun kræver et nicifret id-nummer.
 
-Mønsterelementet har en påkrævet confidenceLevel-attribut. Du kan tænke på værdien af tillidSniveau (et heltal mellem 1 og 100) som et entydigt id for hvert mønster i en enhed – mønstrene i en enhed skal have forskellige tillidsniveauer, som du tildeler. Heltals nøjagtige værdi er ligegyldig – du skal blot vælge tal, som giver mening for dit team til overholdelse af regler og standarder. Når du overfører din brugerdefinerede type af følsomme oplysninger og derefter opretter en politik, kan du referere til disse tillidsniveauer i betingelserne i de regler, du opretter.
+Mønsterelementet har en påkrævet confidenceLevel-attribut. Du kan tænke på værdien af confidenceLevel (et heltal mellem 1 og 100) som et entydigt id for hvert mønster i en enhed – mønstrene i et objekt skal have forskellige tillidsniveauer, som du tildeler. Den præcise værdi af heltalet betyder ikke noget – du skal blot vælge tal, der giver mening for dit overholdelsesteam. Når du har uploadet din brugerdefinerede type følsomme oplysninger og derefter oprettet en politik, kan du referere til disse tillidsniveauer i betingelserne for de regler, du opretter.
 
 ![XML-markering, der viser mønsterelementer med forskellige værdier for attributten confidenceLevel.](../media/sit-xml-markedup-2.png)
 
-Ud over confidenceLevel for hvert mønster har enheden en anbefaletKonfidence-attribut. Den anbefalede tillidsattribut kan bruges som standardtillidsniveauet for reglen. Når du opretter en regel i en politik, og du ikke angiver et tillidsniveau, som reglen skal bruge, matcher denne regel baseret på det anbefalede tillidsniveau for enheden. Bemærk, at den anbefalede Attribut for konfidence er obligatorisk for hvert Enheds-id i regelpakken, hvis den mangler, kan du ikke gemme politikker, der bruger typen Af følsomme oplysninger.
+Ud over confidenceLevel for hvert mønster har enheden en anbefalet attribut for Tillid. Den anbefalede konfidensattribut kan opfattes som standardsikkerhedsniveauet for reglen. Når du opretter en regel i en politik, og du ikke angiver et konfidensniveau for den regel, der skal bruges, vil reglen stemme overens på baggrund af det anbefalede tillidsniveau for enheden. Bemærk, at attributten recommendedConfidence er obligatorisk for hvert enheds-id i regelpakken, hvis den mangler, kan du ikke gemme politikker, der bruger typen følsomme oplysninger.
 
-## <a name="do-you-want-to-support-other-languages-in-the-ui-of-the-compliance-center-localizedstrings-element"></a>Vil du understøtte andre sprog i brugergrænsefladen i Overholdelsescenter? [LocalizedStrings-element]
+## <a name="do-you-want-to-support-other-languages-in-the-ui-of-the-compliance-center-localizedstrings-element"></a>Vil du understøtte andre sprog i brugergrænsefladen i Overholdelsescenter? [Elementet LocalizedStrings]
 
-Hvis dit overholdelsesteam bruger Microsoft 365 Compliance Center til at oprette politikker på forskellige lande/områder og på forskellige sprog, kan du angive oversatte versioner af navnet og beskrivelsen af din brugerdefinerede type af følsomme oplysninger. Når dit overholdelsesteam bruger Microsoft 365 på et sprog, du understøtter, får de vist det oversatte navn i brugergrænsefladen.
+Hvis dit overholdelsesteam bruger Microsoft Purview-overholdelsesportalen til at oprette politikker i forskellige landestandarder og på forskellige sprog, kan du angive lokaliserede versioner af navnet og beskrivelsen af din brugerdefinerede type følsomme oplysninger. Når dit overholdelsesteam bruger Microsoft 365 på et sprog, som du understøtter, får de vist det oversatte navn i brugergrænsefladen.
 
-![Konfiguration af antal forekomster og matchnøjagtighed.](../media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
+![Konfiguration af forekomstantal og matchnøjagtighed.](../media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
 
-Elementet Regler skal indeholde et LocalizedStrings-element, som indeholder et Ressource-element, der refererer til GUID'et for det brugerdefinerede objekt. Hvert Ressourceelement indeholder desuden ét eller flere Navne- og Beskrivelse-elementer, som hver bruger attributten langcode til at levere en oversatte streng til et bestemt sprog.
+Elementet Rules skal indeholde elementet LocalizedStrings, som indeholder et ressourceelement, der refererer til GUID'et for dit brugerdefinerede objekt. Hvert ressourceelement indeholder til gengæld et eller flere elementer af typen Name og Description, som hver især bruger langcode-attributten til at levere en lokaliseret streng til et bestemt sprog.
 
 ![XML-markering, der viser indholdet af elementet LocalizedStrings.](../media/a96fc34a-b93d-498f-8b92-285b16a7bbe6.png)
 
-Bemærk, at du kun bruger oversatte strenge til den måde, som din brugerdefinerede type af følsomme oplysninger vises på i Brugergrænsefladen i Overholdelsescenter. Du kan ikke bruge oversatte strenge til at levere forskellige oversatte versioner af en nøgleordsliste eller et regulært udtryk.
+Bemærk, at du kun bruger lokaliserede strenge til, hvordan din brugerdefinerede type følsomme oplysninger vises i brugergrænsefladen i Overholdelsescenter. Du kan ikke bruge oversatte strenge til at angive forskellige oversatte versioner af en nøgleordsliste eller et regulært udtryk.
 
-## <a name="other-rule-package-markup-rulepack-guid"></a>Anden kode til regelpakke [RulePack GUID]
+## <a name="other-rule-package-markup-rulepack-guid"></a>Anden regelpakkemarkering [RulePack GUID]
 
-Til sidst indeholder begyndelsen af hver RulePackage nogle generelle oplysninger, som du skal udfylde. Du kan bruge følgende markering som en skabelon og erstatte ". . ." pladsholdere med dine egne oplysninger.
+Til sidst indeholder starten af hver RulePackage nogle generelle oplysninger, som du skal udfylde. Du kan bruge følgende markering som en skabelon og erstatte ". . ." pladsholdere med dine egne oplysninger.
 
-Det vigtigste er, at du skal generere et GUID til RulePack. Ovenfor genererede du et GUID for enheden. dette er et andet GUID for RulePack. Der er flere måder at oprette GUID'er på, men du kan nemt gøre det i PowerShell ved at skrive [guid]::NewGuid().
+Vigtigst er det, at du skal generere et GUID for RulePack. Ovenfor har du genereret et GUID for objektet. dette er endnu et GUID for RulePack. Der er flere måder at generere GUID'er på, men du kan nemt gøre det i PowerShell ved at skrive [guid]::NewGuid().
 
-Elementet Version er også vigtigt. Når du overfører regelpakken for første gang, noterer Microsoft 365 versionsnummeret. Hvis du senere opdaterer regelpakken og uploader en ny version, skal du sørge for at opdatere versionsnummeret eller Microsoft 365 ikke installere regelpakken.
+Elementet Version er også vigtigt. Første gang du uploader din regelpakke, noterer Microsoft 365 versionsnummeret. Hvis du senere opdaterer regelpakken og uploader en ny version, skal du sørge for at opdatere versionsnummeret, ellers installerer Microsoft 365 ikke regelpakken.
 
 ```xml
 <?xml version="1.0" encoding="utf-16"?>
@@ -366,13 +368,13 @@ Elementet Version er også vigtigt. Når du overfører regelpakken for første g
 
 Når du er færdig, bør dit RulePack-element se sådan ud.
 
-![XML-markering, der viser elementet RulePack.](../media/fd0f31a7-c3ee-43cd-a71b-6a3813b21155.png)
+![XML-markering, der viser RulePack-element.](../media/fd0f31a7-c3ee-43cd-a71b-6a3813b21155.png)
 
 ## <a name="validators"></a>Validatorer
 
-Microsoft 365 viser funktionsprocessorer for ofte anvendte SIT'er som validatorer. Her er en liste over dem.
+Microsoft 365 fremviser funktionsprocessorer for almindeligt anvendte SIT'er som validatorer. Her er en liste over dem.
 
-### <a name="list-of-currently-available-validators"></a>Liste over aktuelt tilgængelige validatorer
+### <a name="list-of-currently-available-validators"></a>Liste over validatorer, der er tilgængelige i øjeblikket
 
 - `Func_credit_card`
 - `Func_ssn`
@@ -398,9 +400,9 @@ Microsoft 365 viser funktionsprocessorer for ofte anvendte SIT'er som validatore
 - `Func_japanese_my_number_personal`
 - `Func_japanese_my_number_corporate`
 
-Dette giver dig mulighed for at definere dine egne RegEx og validere dem. Hvis du vil bruge validatorer, skal du definere din egen RegEx og `Validator` bruge egenskaben til at tilføje funktionsprocessoren efter eget valg. Når den er defineret, kan du bruge denne RegEx i et SIT.
+Det giver dig mulighed for at definere din egen RegEx og validere dem. Hvis du vil bruge validatorer, skal du definere din egen RegEx og bruge egenskaben `Validator` til at tilføje den valgte funktionsbehandler. Når den er defineret, kan du bruge denne RegEx i et SIT.
 
-I eksemplet nedenfor er der defineret et regulært udtryk Regex_credit_card_AdditionalDelimiters kreditkort, som derefter valideres ved hjælp af kontrolsumfunktionen for kreditkort ved hjælp af Func_credit_card som validator.
+I eksemplet nedenfor er der defineret et regulært udtryk – Regex_credit_card_AdditionalDelimiters for kreditkort, som derefter valideres ved hjælp af kontrolsumfunktionen for kreditkortet ved hjælp af Func_credit_card som validator.
 
 ```xml
 <Regex id="Regex_credit_card_AdditionalDelimiters" validators="Func_credit_card"> (?:^|[\s,;\:\(\)\[\]"'])([0-9]{4}[ -_][0-9]{4}[ -_][0-9]{4}[ -_][0-9]{4})(?:$|[\s,;\:\(\)\[\]"'])</Regex>
@@ -418,9 +420,9 @@ I eksemplet nedenfor er der defineret et regulært udtryk Regex_credit_card_Addi
 
 Microsoft 365 indeholder to generiske validatorer
 
-### <a name="checksum-validator"></a>Kontrolsums validator
+### <a name="checksum-validator"></a>Kontrolsumsvalidator
 
-I dette eksempel er der defineret en kontrolsumvalidering for medarbejder-id for at validere RegEx for EmployeeID.
+I dette eksempel er der defineret en kontrolsumsvalidator for medarbejder-id'et for at validere RegEx for EmployeeID.
 
 ```xml
 <Validators id="EmployeeIDChecksumValidator">
@@ -439,28 +441,28 @@ I dette eksempel er der defineret en kontrolsumvalidering for medarbejder-id for
 </Entity>
 ```
 
-### <a name="date-validator"></a>Dato validator
+### <a name="date-validator"></a>Datovalidator
 
-I dette eksempel defineres en dato validator for en RegEx-del, som er dato.
+I dette eksempel er der defineret en datovalidator for en RegEx-del, hvor er dato.
 
 ```xml
 <Validators id="date_validator_1"> <Validator type="DateSimple"> <Param name="Pattern">DDMMYYYY</Param> <!—supported patterns DDMMYYYY, MMDDYYYY, YYYYDDMM, YYYYMMDD, DDMMYYYY, DDMMYY, MMDDYY, YYDDMM, YYMMDD --> </Validator> </Validators>
 <Regex id="date_regex_1" validators="date_validator_1">\d{8}</Regex>
 ```
 
-## <a name="changes-for-exchange-online"></a>Ændringer for Exchange Online
+## <a name="changes-for-exchange-online"></a>Ændringer af Exchange Online
 
-Tidligere kunne du have brugt Exchange Online PowerShell til at importere dine brugerdefinerede typer af følsomme oplysninger til DLP. Nu kan dine brugerdefinerede typer af følsomme oplysninger bruges <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">både i Exchange Administration</a> og Overholdelsescenter. Som en del af denne forbedring skal du bruge Compliance Center PowerShell til at importere dine brugerdefinerede typer af følsomme oplysninger – du kan ikke importere dem fra Exchange PowerShell længere. Dine brugerdefinerede typer af følsomme oplysninger fortsætter med at fungere som før; det kan dog tage op til en time, før ændringer af brugerdefinerede typer af følsomme oplysninger i Overholdelsescenter vises i Exchange Administration.
+Tidligere har du måske brugt Exchange Online PowerShell til at importere dine brugerdefinerede følsomme oplysningstyper til DLP. Nu kan dine brugerdefinerede typer følsomme oplysninger bruges i både <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> og Overholdelsescenter. Som en del af denne forbedring skal du bruge Security & Compliance PowerShell til at importere dine brugerdefinerede følsomme oplysningstyper – du kan ikke længere importere dem fra Exchange Online PowerShell. Dine brugerdefinerede typer følsomme oplysninger fungerer fortsat på samme måde som før. Det kan dog tage op til én time, før ændringer af brugerdefinerede følsomme oplysningstyper i Overholdelsescenter vises i Exchange Administration.
 
-Bemærk, at du i Overholdelsescenter bruger **[New-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage)** til at overføre en regelpakke. (Tidligere brugte du Exchange **ClassificationRuleCollection**' cmdlet i Administration).
+Bemærk, at du i Overholdelsescenter bruger **[New-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage)** til at uploade en regelpakke. Tidligere brugte du cmdlet'en **ClassificationRuleCollection** i Exchange Administration.
 
-## <a name="upload-your-rule-package"></a>Upload din regelpakke
+## <a name="upload-your-rule-package"></a>Upload regelpakken
 
-Hvis du vil overføre din regelpakke, skal du gøre følgende:
+Benyt følgende fremgangsmåde for at uploade regelpakken:
 
-1. Gem den som en .xml med Unicode-kodning.
+1. Gem den som en .xml fil med Unicode-kodning.
 
-2. [Forbind til Compliance Center PowerShell](/powershell/exchange/exchange-online-powershell)
+2. [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/exchange-online-powershell)
 
 3. Brug følgende syntaks:
 
@@ -468,86 +470,86 @@ Hvis du vil overføre din regelpakke, skal du gøre følgende:
    New-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('PathToUnicodeXMLFile'))
    ```
 
-   I dette eksempel overføres Unicode XML-filen med navnet MyNewRulePack.xml fra C:\Dokumenter.
+   I dette eksempel overføres Unicode XML-filen med navnet MyNewRulePack.xml fra C:\Mine dokumenter.
 
    ```powershell
    New-DlpSensitiveInformationTypeRulePackage -FileData ([System.IO.File]::ReadAllBytes('C:\My Documents\MyNewRulePack.xml'))
    ```
 
-   Du kan finde detaljerede oplysninger om syntaks og parameter [i New-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage).
+   Du kan finde detaljerede oplysninger om syntaks og parametre under [New-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage).
 
    > [!NOTE]
-   > Det maksimale antal regelpakker, der understøttes, er 10, men hver pakke kan indeholde definitionen af flere typer af følsomme oplysninger.
+   > Det maksimale antal understøttede regelpakker er 10, men hver pakke kan indeholde definitionen af flere følsomme informationstyper.
 
-4. Hvis du vil bekræfte, at du har oprettet en ny type af følsomme oplysninger, skal du gøre et af følgende:
+4. Benyt en af følgende fremgangsmåder for at bekræfte, at du har oprettet en ny type følsomme oplysninger:
 
-   - Kør [cmdlet'en Get-DlpSensitiveInformationTypeRulePackage](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) for at bekræfte, at den nye regelpakke er angivet:
+   - Kør [Get-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage) for at kontrollere, at den nye regelpakke er angivet:
 
      ```powershell
      Get-DlpSensitiveInformationTypeRulePackage
      ```
 
-   - Kør [cmdlet'en Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) for at bekræfte, at typen af følsomme oplysninger er angivet:
+   - Kør [cmdlet'en Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) for at kontrollere, at typen af følsomme oplysninger er angivet:
 
      ```powershell
      Get-DlpSensitiveInformationType
      ```
 
-     For brugerdefinerede typer af følsomme oplysninger vil Publisher være noget andet end Microsoft Corporation.
+     I forbindelse med brugerdefinerede følsomme oplysningstyper vil egenskabsværdien for Publisher være noget andet end Microsoft Corporation.
 
-   - Erstat \<Name\> med værdien Navn på typen af følsomme oplysninger (eksempel: Medarbejder-id), og kør [cmdlet'en Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) :
+   - Erstat \<Name\> med værdien Name for den følsomme oplysningstype (f.eks. Medarbejder-id), og kør cmdlet'en [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) :
 
      ```powershell
      Get-DlpSensitiveInformationType -Identity "<Name>"
      ```
 
-## <a name="potential-validation-issues-to-be-aware-of"></a>Potentielle valideringsproblemer at være opmærksom på
+## <a name="potential-validation-issues-to-be-aware-of"></a>Potentielle valideringsproblemer, du skal være opmærksom på
 
-Når du overfører XML-filen med regelpakken, validerer systemet XML-koden og kontrollerer for kendte dårlige mønstre og indlysende problemer med ydeevnen. Her er nogle kendte problemer, som valideringen kontrollerer for – et regulært udtryk:
+Når du uploader xml-filen med regelpakken, validerer systemet XML-koden og kontrollerer, om der er kendte forkerte mønstre og åbenlyse problemer med ydeevnen. Her er nogle kendte problemer, som valideringen kontrollerer for – et regulært udtryk:
 
-- Lookbehind assertions in the regular expression should be of fixed length only. Variable længde assertions will result in errors.
+- Lookbehind-antagelser i det regulære udtryk bør kun have en fast længde. Antagelser med variabel længde resulterer i fejl.
 
-  Bestået f.eks `"(?<=^|\s|_)"` . ikke validering. Det første mønster (`^`) er nullængde, mens de næste to mønstre (`\s` og `_`) har en længde på én. Du kan også skrive dette regulære udtryk på `"(?:^|(?<=\s|_))"`.
+  Vil f.eks `"(?<=^|\s|_)"` . ikke bestå valideringen. Det første mønster (`^`) er nul, mens de næste to mønstre (`\s` og `_`) har en længde på et. En alternativ måde at skrive dette regulære udtryk på er `"(?:^|(?<=\s|_))"`.
 
-- Kan ikke starte eller slutte med skiftende , `|`som matcher alt, fordi det betragtes som et tomt match.
+- Der kan ikke startes eller sluttes med en alternativator `|`, der svarer til alt, fordi den anses for at være et tomt match.
 
-  Det kan f.eks`b|`. være, `|a` at valideringen ikke bliver bestået eller ej.
+  Det kan f.eks. være valideringen `|a` , der `b|` ikke består.
 
-- Kan ikke starte eller slutte med et `.{0,m}` mønster, som ikke har nogen funktionsformål og kun påvirker ydeevnen.
+- Kan ikke starte eller slutte med et `.{0,m}` mønster, der ikke har noget funktionelt formål og kun forringer ydeevnen.
 
-  Det kan f.eks`ASDF.{0,50}`. være, `.{0,50}ASDF` at valideringen ikke bliver bestået eller ej.
+  Det kan f.eks. være valideringen `.{0,50}ASDF` , der `ASDF.{0,50}` ikke består.
 
 - Kan ikke have `.{0,m}` eller `.{1,m}` i grupper og kan ikke have `.\*` eller `.+` i grupper.
 
-  Bestået f.eks `(.{0,50000})` . ikke validering.
+  Vil f.eks `(.{0,50000})` . ikke bestå valideringen.
 
-- Må ikke have nogen tegn med `{0,m}` eller `{1,m}` repeatere i grupper.
+- Der kan ikke være tegn med `{0,m}` eller `{1,m}` repeatere i grupper.
 
-  Bestået f.eks `(a\*)` . ikke validering.
+  Vil f.eks `(a\*)` . ikke bestå valideringen.
 
-- Kan ikke starte eller slutte med `.{1,m}`; i stedet skal du bruge `.`.
+- Kan ikke starte eller slutte med `.{1,m}`. Brug i stedet `.`.
 
-  Bestået f.eks `.{1,m}asdf` . ikke validering. I stedet skal du bruge `.asdf`.
+  Vil f.eks `.{1,m}asdf` . ikke bestå valideringen. `.asdf`Brug i stedet .
 
-- Der kan ikke være en ubundet gentagelse (f.eks. `*` `+`eller ) i en gruppe.
+- Der kan ikke være en ubundet repeater (f.eks `*` . eller `+`) i en gruppe.
 
-  Det kan f.eks. `(xx)+` være, `(xx)\*` og valideringen kan ikke foretages.
+  Og består f.eks `(xx)\*` `(xx)+` . ikke valideringen.
 
-- Nøgleord kan maksimalt have 50 tegn.  Hvis du har et nøgleord i en gruppe, der overskrider dette, er en foreslået løsning at oprette gruppen af ord [](./create-a-keyword-dictionary.md) som en nøgleordsordbog og henvise til GUID'en for nøgleordsordbogen i XML-strukturen som en del af enheden for match eller idMatch i filen.
+- Nøgleord har højst 50 tegn i længden.  Hvis du har et nøgleord i en gruppe, der overskrider dette, er en foreslået løsning at oprette ordgruppen som en [nøgleordsordbog](./create-a-keyword-dictionary.md) og referere til GUID'et for nøgleordsordbogen i XML-strukturen som en del af Entity for Match eller idMatch i filen.
 
-- Hver brugerdefineret type af følsomme oplysninger kan maksimalt have 2048 nøgleord.
+- Hver brugerdefineret type følsomme oplysninger kan maksimalt have 2048 nøgleord i alt.
 
-- Den maksimale størrelse af nøgleordsordbøger i en enkelt lejer er 480 KB komprimeret for at overholde AD-skemagrænserne. Du kan henvise til den samme ordbog lige så mange gange, som det er nødvendigt, når du opretter brugerdefinerede typer af følsomme oplysninger. Start med at oprette lister med brugerdefinerede nøgleord i typen af følsomme oplysninger, og brug ordbøger til nøgleord, hvis du har mere end 2.048 nøgleord på en liste med nøgleord, eller hvis et nøgleord er større end 50 tegn.
+- Den maksimale størrelse af nøgleordsordbøger i en enkelt lejer er 480 KB komprimeret for at overholde AD-skemagrænserne. Referer til den samme ordbog så mange gange, det er nødvendigt, når du opretter brugerdefinerede følsomme oplysningstyper. Start med at oprette brugerdefinerede nøgleordslister i den følsomme oplysningstype, og brug nøgleordsordbøger, hvis du har mere end 2048 nøgleord på en nøgleordsliste, eller hvis et nøgleord er længere end 50 tegn.
 
-- Der kan maksimalt være tilladt 50 ordbøger baseret på følsomme oplysningstyper i en lejer.
+- Der kan maksimalt angives 50 nøgleordsordbøger, der er baseret på følsomme oplysningstyper, i en lejer.
 
-- Sørg for, at hvert Enhed-element indeholder en anbefaletConfidence-attribut.
+- Sørg for, at hvert objektelement indeholder en anbefalet attribut forConfidence.
 
-- Når du bruger PowerShell-cmdletten, er der en maksimal returstørrelse på de data, der er deserialiserede, på ca. 1 megabyte.   Dette påvirker størrelsen på XML-filen med regelpakken. Sørg for, at den uploadede fil er begrænset til en maksimumgrænse på 770 kilobyte som en foreslået grænse for ensartede resultater uden fejl under behandlingen.
+- Når du bruger PowerShell-cmdlet'en, er der en maksimal returstørrelse på de deserialiserede data på ca. 1 megabyte.   Dette påvirker størrelsen på DIN REGELPAKKE-XML-fil. Bevar den uploadede fil med en maksimumgrænse på 770 KB som en foreslået grænse for ensartede resultater uden fejl under behandling.
 
-- XML-strukturen kræver ikke formateringstegn, f.eks. mellemrum, faner eller vognretur/linjefeed-indtastninger.  Vær opmærksom på dette, når du optimerer for plads på overførsler. Værktøjer som f.eks. Microsoft Visual Code giver joinlinjefunktioner til komprimering af XML-filen.
+- XML-strukturen kræver ikke formateringstegn, f.eks. mellemrum, faner eller vognretur/linjeskift.  Vær opmærksom på dette, når du optimerer for plads på uploads. Værktøjer som f.eks. Microsoft Visual Code indeholder joinlinjefunktioner til at komprimere XML-filen.
 
-Hvis en brugerdefineret type af følsomme oplysninger indeholder et problem, der kan påvirke ydeevnen, uploades den ikke, og du får muligvis vist en af disse fejlmeddelelser:
+Hvis en brugerdefineret type følsomme oplysninger indeholder et problem, der kan påvirke ydeevnen, overføres den ikke, og du får muligvis vist en af disse fejlmeddelelser:
 
 - `Generic quantifiers which match more content than expected (e.g., '+', '*')`
 
@@ -555,15 +557,15 @@ Hvis en brugerdefineret type af følsomme oplysninger indeholder et problem, der
 
 - `Complex grouping in conjunction with general quantifiers`
 
-## <a name="recrawl-your-content-to-identify-the-sensitive-information"></a>Omdæl dit indhold for at identificere følsomme oplysninger
+## <a name="recrawl-your-content-to-identify-the-sensitive-information"></a>Gensøg dit indhold for at identificere de følsomme oplysninger
 
-Microsoft 365 bruger søge crawleren til at identificere og klassificere følsomme oplysninger i webstedsindhold. Indhold i SharePoint Online og OneDrive for Business automatisk sammen, når det opdateres. Men hvis du vil identificere din nye brugerdefinerede type af følsomme oplysninger i alt eksisterende indhold, skal indholdet på ny ændres.
+Microsoft 365 bruger søgecrawleren til at identificere og klassificere følsomme oplysninger i webstedets indhold. Indhold på SharePoint Online- og OneDrive for Business-websteder gensøges automatisk, når det opdateres. Men hvis du vil identificere din nye brugerdefinerede type følsomme oplysninger i alt eksisterende indhold, skal dette indhold søges igen.
 
-I Microsoft 365 kan du ikke manuelt anmode om, at en hel organisation ændres manuelt, men du kan manuelt anmode om, at en gruppe af websteder, en liste eller et bibliotek ændres. Få mere at vide under [Anmod manuelt om gennemsøgning og gensøgning af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
+I Microsoft 365 kan du ikke manuelt anmode om en nycrawl af en hel organisation, men du kan manuelt anmode om en ny forespørgsel for en gruppe af websteder, en liste eller et bibliotek. Du kan få flere oplysninger under [Anmod manuelt om gennemsøgning og omformatering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
 
 ## <a name="reference-rule-package-xml-schema-definition"></a>Reference: XML-skemadefinition for regelpakke
 
-Du kan kopiere denne markering, gemme den som en XSD-fil og bruge den til at validere XML-filen for regelpakken.
+Du kan kopiere denne markering, gemme den som en XSD-fil og bruge den til at validere XML-filen til regelpakken.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -910,6 +912,6 @@ Du kan kopiere denne markering, gemme den som en XSD-fil og bruge den til at val
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
-- [Enhedsdefinitioner for følsomme oplysningstyper](sensitive-information-type-entity-definitions.md)
-- [Funktioner af typen Følsomme oplysninger](sit-functions.md)
+- [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md)
+- [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
+- [Funktioner for type af følsomme oplysninger](sit-functions.md)

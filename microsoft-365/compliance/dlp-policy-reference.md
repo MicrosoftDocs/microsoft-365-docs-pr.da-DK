@@ -19,18 +19,18 @@ ms.collection:
 recommendations: false
 description: DLP-politikkomponent og konfigurationsreference
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 1ad00a36f48849ca110a598f92c5536ef7b21843
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: b62289cfe4d18b4c6e2e79bb9a308f8b88978451
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648602"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015786"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview Forebyggelse af datatab politikker (DLP) har mange komponenter at konfigurere. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
+Microsoft Purview DLP-politikker (Forebyggelse af datatab) indeholder mange komponenter, der skal konfigureres. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
 
 ## <a name="policy-templates"></a>Politikskabeloner 
 
@@ -525,8 +525,9 @@ Indhold som f.eks. en Excel projektmappe på et OneDrive for Business websted, d
 
 ![Meddelelseslinjen viser politiktip i Excel 2016](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
-> [!NOTE]
-> Meddelelsesmails sendes ubeskyttet.
+> [!IMPORTANT]
+> - Meddelelsesmails sendes ubeskyttet.
+> - Mailmeddelelser understøttes kun for de Microsoft 365 tjenester.
 
 Du kan også give personer mulighed for at [tilsidesætte politikken](#user-overrides), så de ikke blokeres, hvis de har et gyldigt forretningsbehov, eller hvis politikken registrerer et falsk positivt.
 
@@ -648,7 +649,7 @@ https://docs.microsoft.com/en-us/microsoft-365/compliance/dlp-configure-view-ale
 
 Når en regel matches, kan du sende en hændelsesrapport til din overholdelsesansvarlige (eller alle personer, du vælger) med oplysninger om hændelsen. Rapporten indeholder oplysninger om det element, der blev matchet, det faktiske indhold, der matchede reglen, og navnet på den person, der senest ændrede indholdet. I forbindelse med mails inkluderer rapporten også den oprindelige meddelelse, der svarer til en DLP-politik, som en vedhæftet fil.
 
-DLP sender hændelsesoplysninger til andre Microsoft Purview information protection-tjenester, f.eks[. styring af insiderrisiko](insider-risk-management.md). Hvis du vil have oplysninger om hændelser til styring af insiderrisiko, skal du angive alvorsgraden af **hændelsesrapporterne** til **Høj**.
+DLP sender hændelsesoplysninger til andre Microsoft Purview-information protection-tjenester, f.eks [. styring af insiderrisiko](insider-risk-management.md). Hvis du vil have oplysninger om hændelser til styring af insiderrisiko, skal du angive alvorsgraden af **hændelsesrapporterne** til **Høj**.
 
 <!--![Page for configuring incident reports](../media/31c6da0e-981c-415e-91bf-d94ca391a893.png)-->
 

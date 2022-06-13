@@ -12,14 +12,16 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan du kan rulle de kunderodnøgler, der er gemt i Azure Key Vault, som bruges sammen med kundenøglen. Tjenesterne omfatter filer af typen Exchange Online, Skype for Business, SharePoint Online, OneDrive for Business og Teams.
-ms.openlocfilehash: 81d82f49c056f5a6ec9b8731b549aee68d5d658b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: f34e79ee772df1a88058625c0b2df5f62413bcfd
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64761345"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017328"
 ---
 # <a name="roll-or-rotate-a-customer-key-or-an-availability-key"></a>Rul eller roter en kundenøgle eller en tilgængelighedsnøgle
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!CAUTION]
 > Opløft kun en krypteringsnøgle, som du bruger sammen med Kundenøgle, når dine krav til sikkerhed eller overholdelse af angivne standarder kræver, at du skal rulle nøglen. Du må desuden ikke slette nogen nøgler, der er eller er knyttet til politikker. Når du ruller dine nøgler, vil der være indhold, der er krypteret med de forrige nøgler. Selvom aktive postkasser f.eks. krypteres igen ofte, kan inaktive, afbrudte og deaktiverede postkasser stadig krypteres med de forrige nøgler. SharePoint Online sikkerhedskopierer indhold til gendannelses- og gendannelsesformål, så der kan stadig være arkiveret indhold ved hjælp af ældre nøgler.
@@ -53,7 +55,7 @@ Når du ruller en af de Azure Key Vault-nøgler, der er knyttet til en forhindri
 
 Hvis du vil instruere kundenøglen i at bruge den nye nøgle til at kryptere flere arbejdsbelastninger, skal du udføre disse trin:
 
-1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) i et Windows PowerShell vindue ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har globale administrator- eller overholdelsesadministratortilladelser i din organisation.
+1. Opret [forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) ved hjælp af en arbejds- eller skolekonto på din lokale computer, der har tilladelser som global administrator eller overholdelsesadministrator i din organisation.
 
 2. Kør cmdlet'en Set-M365DataAtRestEncryptionPolicy.
   
@@ -103,10 +105,10 @@ SharePoint Online giver dig kun mulighed for at rulle én nøgle ad gangen. Hvis
 
 ## <a name="related-articles"></a>Relaterede artikler
 
-- [Tjenestekryptering med kundenøgle til Office 365](customer-key-overview.md)
+- [Tjenestekryptering med kundenøgle](customer-key-overview.md)
 
-- [Konfigurer kundenøgle til Office 365](customer-key-set-up.md)
+- [Konfigurer kundenøgle](customer-key-set-up.md)
 
-- [Administrer kundenøgle for Office 365](customer-key-manage.md)
+- [Administrer kundenøgle](customer-key-manage.md)
 
 - [Få mere at vide om tilgængelighedsnøglen](customer-key-availability-key-understand.md)

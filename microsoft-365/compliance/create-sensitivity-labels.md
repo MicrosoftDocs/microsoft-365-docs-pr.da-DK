@@ -17,13 +17,13 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: 'Et krav til alle Microsoft Purview Information Protection løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: 99b2b50ed00f470443956ff30ebb4940bbe1024d
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+description: 'Et krav til alle Microsoft Purview-Information Protection-løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
+ms.openlocfilehash: 8b25fa9864bcbef92f509f7251a15bf24cc3da2d
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622375"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017026"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
@@ -31,7 +31,7 @@ ms.locfileid: "65622375"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Alle Microsoft Purview Information Protection løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
+Alle Microsoft Purview-Information Protection-løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
 
 Først skal du oprette og konfigurere de følsomhedsmærkater, du vil gøre tilgængelige for apps og andre tjenester. De mærkater, du vil have, at brugerne skal se og anvende fra Office apps.
 
@@ -43,7 +43,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
 ## <a name="create-and-configure-sensitivity-labels"></a>Opret og konfigurer følsomhedsmærkater
 
-1. Vælg **LøsningerInformationsbeskyttelseLabels** >  >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
+1. Vælg **Beskyttelsesetiketter** for **løsninger** > **i** >  [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/)
 
 2. På siden **Etiketter** skal du vælge **+ Opret en mærkat** for at starte den nye konfiguration af følsomhedsmærkat: 
     
@@ -60,7 +60,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
     - Hvis **Grupper & websteder** er valgt, kan du konfigurere indstillinger, der gælder for Microsoft 365 grupper, og websteder for Teams og SharePoint. Hvis denne indstilling ikke er valgt, får du vist den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge for grupper og webstedet.
 
-    Du kan få oplysninger om området **Skematiserede dataaktiver** under [Mærk automatisk dit indhold i Microsoft Purview dataoversigt](/azure/purview/create-sensitivity-label).
+    Du kan få oplysninger om området **Skematiserede dataaktiver** under [Mærk automatisk dit indhold i Microsoft Purview-dataoversigt](/azure/purview/create-sensitivity-label).
 
 4. Følg konfigurationsprompterne for mærkatindstillingerne.
 
@@ -86,9 +86,9 @@ Før du publicerer dine mærkater, vil de ikke være tilgængelige til valg i ap
 > [!IMPORTANT]
 > Under denne fane **Etiketter** skal du ikke vælge fanen **Publicer navne** (eller knappen **Publicer navn** , når du redigerer en etiket), medmindre du har brug for at oprette en ny etiketpolitik. Du skal kun bruge flere mærkatpolitikker, hvis brugerne har brug for forskellige mærkater eller forskellige politikindstillinger. Målet er at have så få mærkatpolitikker som muligt – det er ikke ualmindeligt kun at have én mærkatpolitik for organisationen.
 
-### <a name="additional-label-settings-with-security--compliance-center-powershell"></a>Yderligere mærkatindstillinger med Security & Compliance Center PowerShell
+### <a name="additional-label-settings-with-security--compliance-powershell"></a>Yderligere mærkatindstillinger med Security & Compliance PowerShell
 
-Der er flere mærkatindstillinger tilgængelige med [Set-Label-cmdlet'en](/powershell/module/exchange/set-label) fra [Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell).
+Der er flere mærkatindstillinger tilgængelige med [Set-Label-cmdlet'en](/powershell/module/exchange/set-label) fra [Security & Compliance PowerShell](/powershell/exchange/scc-powershell).
 
 Eksempel:
 
@@ -104,7 +104,7 @@ Som et resultat af denne konfiguration kan brugere, der har Office apps, der bru
 
 For de sprog, du skal understøtte, skal du bruge Office [sprog-id'er](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) (også kendt som sprogkoder) og angive din egen oversættelse for navnet og værktøjstippet.
 
-Før du kører kommandoerne i PowerShell, skal du først [oprette forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Før du kører kommandoerne i PowerShell, skal du først [oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ```powershell
 $Languages = @("fr-fr","it-it","de-de")
@@ -126,7 +126,7 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
 ## <a name="publish-sensitivity-labels-by-creating-a-label-policy"></a>Publicer følsomhedsmærkater ved at oprette en mærkatpolitik
 
-1. Vælg **SolutionsInformation** >  **protectionLabel-politikker** >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
+1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Mærkater** for **beskyttelse af** >  **løsninger** >  information
 
 2. På siden **Mærkatpolitikker** skal du vælge **Publicer etiket** for at starte konfigurationen **af politikken Opret** :
     
@@ -148,7 +148,7 @@ Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSet
 
     Du kan finde flere oplysninger om disse indstillinger under [Hvad mærkatpolitikker kan gøre](sensitivity-labels.md#what-label-policies-can-do) ud fra oversigtsoplysningerne og bruge hjælpen i brugergrænsefladen til individuelle indstillinger.
 
-    For mærkater, der er konfigureret til **Microsoft Purview dataoversigtsaktiver (prøveversion)**: Disse mærkater har ingen tilknyttede politikindstillinger.
+    For mærkater, der er konfigureret til **Microsoft Purview Data Map-aktiver (prøveversion)**: Disse mærkater har ingen tilknyttede politikindstillinger.
 
 6. Gentag disse trin, hvis du har brug for forskellige politikindstillinger for forskellige brugere eller områder. Du vil f.eks. have flere mærkater for en gruppe brugere eller et andet standardnavn for et undersæt af brugere. Eller hvis du har konfigureret mærkater til at have forskellige områder.
 
@@ -162,9 +162,9 @@ Hvis du vil redigere en eksisterende mærkatpolitik, skal du vælge den og deref
 
 Denne knap starter konfigurationen **af politikken Opret** , hvor du kan redigere, hvilke mærkater der er inkluderet, og etiketindstillingerne. Når du har fuldført konfigurationen, replikeres eventuelle ændringer automatisk til de valgte brugere og tjenester.
 
-### <a name="additional-label-policy-settings-with-security--compliance-center-powershell"></a>Yderligere indstillinger for mærkatpolitik med Security & Compliance Center PowerShell
+### <a name="additional-label-policy-settings-with-security--compliance-powershell"></a>Yderligere indstillinger for mærkatpolitik med PowerShell til sikkerhed & overholdelse af angivne standarder
 
-Yderligere indstillinger for mærkatpolitik er tilgængelige med [Set-LabelPolicy-cmdlet'en](/powershell/module/exchange/set-labelpolicy) fra [Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell).
+Yderligere indstillinger for mærkatpolitik er tilgængelige med [Set-LabelPolicy-cmdlet'en](/powershell/module/exchange/set-labelpolicy) fra [Security & Compliance PowerShell](/powershell/exchange/scc-powershell).
 
 Azure Information Protection Unified Labeling-klienten understøtter mange [avancerede indstillinger](/azure/information-protection/rms-client/clientv2-admin-guide-customizations), der omfatter overførsel fra andre mærkatløsninger, og pop op-meddelelser i Outlook, der advarer, begrunder eller blokerer mails, der sendes. Du kan se den komplette liste under [Tilgængelige avancerede indstillinger for mærkatpolitikker](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) i denne klients administratorvejledning.
 
@@ -176,7 +176,7 @@ Der er dog nogle scenarier, hvor ændringer af mærkater og mærkater kan træde
 
 ## <a name="use-powershell-for-sensitivity-labels-and-their-policies"></a>Brug PowerShell til følsomhedsmærkater og deres politikker
 
-Du kan nu bruge [Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell) til at oprette og konfigurere alle de indstillinger, du kan se i dit administrationscenter for mærkater. Det betyder, at du ud over at bruge PowerShell til indstillinger, der ikke er tilgængelige i administrationscentre for mærkater, nu fuldt ud kan scripte oprettelsen og vedligeholdelsen af følsomhedsmærkater og politikker for følsomhedsmærkater. 
+Du kan nu bruge [Security & Compliance PowerShell](/powershell/exchange/scc-powershell) til at oprette og konfigurere alle de indstillinger, du kan se i dit administrationscenter for mærkater. Det betyder, at du ud over at bruge PowerShell til indstillinger, der ikke er tilgængelige i administrationscentre for mærkater, nu fuldt ud kan scripte oprettelsen og vedligeholdelsen af følsomhedsmærkater og politikker for følsomhedsmærkater. 
 
 Se følgende dokumentation for understøttede parametre og værdier:
 

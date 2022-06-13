@@ -14,17 +14,17 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 43b39cac260f5bda773af6a428304dc898444771
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 558358cca679d9600f9a95c13c4fac6147764b75
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419588"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66013348"
 ---
 # <a name="performance-analyzer-for-microsoft-defender-antivirus"></a>Effektivitetsanalyse til Microsoft Defender Antivirus
 
 **Gælder for**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -103,7 +103,7 @@ Microsoft Defender Antivirus effektivitetsanalyse har følgende forudsætninger:
 
 - Understøttede Windows versioner: Windows 10, Windows 11 og Windows Server 2016 og nyere
 - Platformversion: 4.18.2108.7+
-- PowerShell-version: PowerShell Version 5.1, PowerShell ISE, Remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
+- PowerShell-version: PowerShell Version 5.1, PowerShell ISE, remote PowerShell (4.18.2201.10+), PowerShell 7.x (4.18.2201.10+)
 
 ## <a name="powershell-reference"></a>PowerShell-reference
 
@@ -150,7 +150,7 @@ New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl
 
 Ovenstående kommando indsamler en optagelse af ydeevnen og gemmer den på den angivne sti: **.\Defender-scans.etl**.
 
-##### <a name="example-2-collect-a-performance-recording-for-remote-powershell-session"></a>Eksempel 2: Indsaml en ydelsesoptagelse for en Ekstern PowerShell-session
+##### <a name="example-2-collect-a-performance-recording-for-remote-powershell-session"></a>Eksempel 2: Indsaml en ydelsesoptagelse for en ekstern PowerShell-session
 
 ```powershell
 $s = New-PSSession -ComputerName Server02 -Credential Domain01\User01
@@ -160,9 +160,11 @@ New-MpPerformanceRecording -RecordTo C:\LocalPathOnServer02\trace.etl -Session $
 Ovenstående kommando indsamler en optagelse af ydeevnen på Server02 (som angivet af argument $s af parametersessionen) og gemmer den i den angivne sti: **C:\LocalPathOnServer02\trace.etl** på Server02.
 
 ##### <a name="example-3-collect-a-performance-recording-in-non-interactive-mode"></a>Eksempel 3: Indsaml en optagelse af ydeevnen i ikke-interaktiv tilstand
+
 ```powershell
-New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl -Seconds 60 
+New-MpPerformanceRecording -RecordTo:.\Defender-scans.etl -Seconds 60
 ```
+
 Ovenstående kommando indsamler en optagelse af ydeevnen i den varighed i sekunder, der er angivet af parameteren -Seconds. Dette anbefales til brugere, der udfører batchsamlinger, som ikke kræver nogen interaktion eller prompt.
 
 #### <a name="parameters-new-mpperformancerecording"></a>Parametre: New-MpPerformanceRecording
@@ -192,6 +194,7 @@ Accept wildcard characters: False
 ```
 
 ##### <a name="-seconds"></a>-Sekunder
+
 Angiver varigheden af ydelsesoptagelsen i sekunder. Dette anbefales til brugere, der udfører batchsamlinger, som ikke kræver nogen interaktion eller prompt.
 
 ```yaml
@@ -280,11 +283,13 @@ Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopProcesses:10 -TopExtensio
 ```powershell
 Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopScans:100 -MinDuration:100ms
 ```
+
 ##### <a name="example-5-using--raw-parameter"></a>Eksempel 5: Brug af parameteren -Raw
 
 ```powershell
 Get-MpPerformanceReport -Path:.\Defender-scans.etl -TopFiles:10 -TopExtensions:10 -TopProcesses:10 -TopScans:10 -Raw | ConvertTo-Json
 ```
+
 Brug af -Raw i ovenstående kommando angiver, at outputtet skal være maskinlæsbart og let kan konverteres til serialiseringsformater, f.eks. JSON
 
 #### <a name="parameters-get-mpperformancereport"></a>Parametre: Get-MpPerformanceReport
@@ -312,9 +317,10 @@ Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False
 ```
+
 ##### <a name="-raw"></a>-Rå
 
-Angiver, at outputtet af ydelsesoptagelsen skal være maskinlæsbart og let kan konverteres til serialiseringsformater, f.eks. JSON (f.eks. via kommandoen Konvertér til JSON). Dette anbefales til brugere, der er interesseret i batchbehandling med andre databehandlingssystemer. 
+Angiver, at outputtet af ydelsesoptagelsen skal være maskinlæsbart og let kan konverteres til serialiseringsformater, f.eks. JSON (f.eks. via kommandoen Konvertér til JSON). Dette anbefales til brugere, der er interesseret i batchbehandling med andre databehandlingssystemer.
 
 ```yaml
 Type: <SwitchParameter>

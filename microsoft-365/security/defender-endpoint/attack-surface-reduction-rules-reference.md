@@ -17,18 +17,18 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 30764562ebe60842f2824d7e313bec73e03f2ffa
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 2d003ce76db677b22b3873f6f19df05b34f06b96
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65838863"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016190"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
+- [Microsoft Microsoft 365 Defender til Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Antivirus
@@ -42,17 +42,15 @@ Denne artikel indeholder oplysninger om regler for reduktion af angreb:
 - [Understøttede versioner af operativsystemet](#supported-operating-systems)
 - [Understøttede systemer til administration af konfiguration](#supported-configuration-management-systems)
 - [Oplysninger om besked pr. regel og meddelelse](#per-rule-alert-and-notification-details)
-- [Matrix for ASR-regler og GUID'er](#asr-rules-and-guids-matrix)
+- [ASR-regel til GUID-matrix](#asr-rule-to-guid-matrix)
 - [ASR-regeltilstande](#asr-rule-modes)
 - [Beskrivelser pr. regel](#per-rule-descriptions)
-  - Regelbeskrivelser
-  - Navne på systemregel for konfigurationsstyring
 
 ## <a name="supported-operating-systems"></a>Understøttede operativsystemer
 
 I følgende tabel vises de understøttede operativsystemer til regler, der i øjeblikket er offentligt tilgængelige. Reglerne vises alfabetisk i denne tabel.
 
-> [!Note]
+> [!NOTE]
 >
 > Medmindre andet er angivet, er minimum Windows&nbsp; 10 build version 1709 (RS3, build 16299) eller nyere. Det mindste Windows&nbsp; Server-build er version 1809 eller nyere.
 >
@@ -60,7 +58,7 @@ I følgende tabel vises de understøttede operativsystemer til regler, der i øj
 
 | Regelnavn| &nbsp;Windows 11 <br>Og<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>Og<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig kanal) eller nyere | Y | Y |
+| [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig Enterprise Channel) eller nyere | Y | Y |
 | [Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y <br> version 1809 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
 | [Bloker alle Office programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y | Y | Y | Y | Y |
 | [Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y <br> version 1803 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
@@ -115,7 +113,7 @@ Links til oplysninger om systemversioner til konfigurationsstyring, der referere
 
 ## <a name="per-rule-alert-and-notification-details"></a>Pr. regeladvarsel og meddelelsesoplysninger
 
-Toastbeskeder genereres for alle regler i bloktilstand. Regler i nogen anden tilstand genererer ikke toastbeskeder
+Toastbeskeder genereres for alle regler i bloktilstand. Regler i en anden tilstand genererer ikke toastbeskeder
 
 For regler med "Regeltilstand" angivet:
 
@@ -142,7 +140,7 @@ For regler med "Regeltilstand" angivet:
 |[Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
   
-## <a name="asr-rules-and-guids-matrix"></a>Matrix for ASR-regler og GUID'er
+## <a name="asr-rule-to-guid-matrix"></a>ASR-regel til GUID-matrix
 
 | Regelnavn | Regel-GUID |
 |:-----|:-----|
@@ -165,16 +163,16 @@ For regler med "Regeltilstand" angivet:
 
 ## <a name="asr-rule-modes"></a>ASR-regeltilstande
 
-- **Ikke konfigureret** eller **deaktiveret**: Dette er den tilstand, hvor ASR-reglen ikke er blevet aktiveret eller deaktiveret. Koden for denne tilstand = 0.
-- **Blok**: Dette er den tilstand, som ASR-reglen er aktiveret i. Koden for denne tilstand er 1.
-- **Overvågning**: Dette er den tilstand, som ASR-reglen evalueres i for dens virkningsfulde funktionsmåde over for den organisation eller det miljø, hvor den er udrullet. Koden for denne tilstand er 2.
-- **Advare** Dette er den tilstand, hvor ASR-reglen er aktiveret og præsenterer en meddelelse til slutbrugeren, men tillader slutbrugeren at omgå blokken. Koden for denne tilstand er 6.
+- **Ikke konfigureret** eller **deaktiveret**: Den tilstand, hvor ASR-reglen ikke er blevet aktiveret eller er blevet deaktiveret. Koden for denne tilstand = 0.
+- **Blok**: Den tilstand, som ASR-reglen er aktiveret i. Koden for denne tilstand er 1.
+- **Overvågning**: Den tilstand, som ASR-reglen evalueres i for den effekt, den ville have på organisationen eller miljøet, hvis den er aktiveret (indstillet til at blokere eller advare). Koden for denne tilstand er 2.
+- **Advare** Den tilstand, hvor ASR-reglen er aktiveret og præsenterer en meddelelse til slutbrugeren, men tillader slutbrugeren at omgå blokken. Koden for denne tilstand er 6.
 
 _Advarselstilstand_ er en type blokeringstilstand, der giver brugerne besked om potentielt risikable handlinger. Brugerne kan vælge at tilsidesætte advarselsmeddelelsen om blokering og tillade den underliggende handling. Brugerne kan vælge **OK** for at gennemtvinge blokken eller vælge bypassindstillingen – **Fjern blokering** – via den toastbesked om slutbrugerens pop op-meddelelse, der genereres på tidspunktet for blokken. Når blokeringen af advarslen er fjernet, tillades handlingen, indtil næste gang advarselsmeddelelsen vises, hvorefter slutbrugeren skal udføre handlingen igen.
 
-Hvis der klikkes på knappen Tillad, undertrykkes blokken i 24 timer. Efter 24 timer skal slutbrugeren tillade blokken igen. Advarselstilstanden for ASR-regler understøttes kun for RS5+-enheder (1809+). Hvis bypass er tildelt ASR-regler på enheder med ældre versioner, vil reglen være i blokeret tilstand.
+Når der klikkes på knappen Tillad, undertrykkes blokken i 24 timer. Efter 24 timer skal slutbrugeren tillade blokken igen. Advarselstilstanden for ASR-regler understøttes kun for RS5+-enheder (1809+). Hvis bypass er tildelt ASR-regler på enheder med ældre versioner, vil reglen være i blokeret tilstand.
 
-Du kan også angive en regel i advarselstilstand via PowerShell ved blot at angive AttackSurfaceReductionRules_Actions som "Advar". Eksempel:
+Du kan også angive en regel i advarselstilstand via PowerShell ved at angive AttackSurfaceReductionRules_Actions som "Advar". Eksempel:
 
 ```powershell
 -command "& {&'Add-MpPreference' -AttackSurfaceReductionRules_Ids 56a863a9-875e-4185-98a7-b882c64b5ce5 -AttackSurfaceReductionRules_Actions Warn"} 
@@ -186,7 +184,7 @@ Du kan også angive en regel i advarselstilstand via PowerShell ved blot at angi
 
 Denne regel forhindrer et program i at skrive en sårbar signeret driver til disken. Sårbare signerede drivere i naturen kan udnyttes af lokale programmer \- _, der har tilstrækkelige rettigheder_ \- til at få adgang til kernen. Sårbare signerede drivere gør det muligt for angribere at deaktivere eller omgå sikkerhedsløsninger, hvilket i sidste ende fører til, at systemet kompromitteres.
 
-**Reglen block abuse of exploited vulnerable signed drivers** rule not block a driver already already on the system from beloaded.
+**Reglen Bloker misbrug af udnyttede sårbare signerede drivere** blokerer ikke, at en driver, der allerede findes på systemet, indlæses.
 
 > [!NOTE]
 >
@@ -217,7 +215,7 @@ Dependencies: none provided by engineering
 
 Denne regel forhindrer angreb ved at blokere Adobe Reader i at oprette processer.
 
-Ved hjælp af social engineering eller udnyttelser kan malware downloade og starte nyttedata og bryde ud af Adobe Reader. Ved at blokere underordnede processer fra at blive genereret af Adobe Reader, forhindres malware, der forsøger at bruge den som en vektor, i at sprede sig.
+Malware kan downloade og starte nyttedata og bryde ud af Adobe Reader via social engineering eller udnyttelser. Ved at blokere underordnede processer fra at blive genereret af Adobe Reader forhindres malware, der forsøger at bruge Adobe Reader som angrebsvektor, i at sprede sig.
 
 Intune navn:`Process creation from Adobe Reader (beta)`
 
@@ -255,7 +253,7 @@ Afhængigheder: MDAV
 
 Denne regel hjælper med at forhindre tyveri af legitimationsoplysninger ved at låse LSASS (Local Security Authority Subsystem Service) nede.
 
-LSASS godkender brugere, der logger på en Windows computer. Microsoft Defender Credential Guard i Windows forhindrer normalt forsøg på at udtrække legitimationsoplysninger fra LSASS. Nogle organisationer kan dog ikke aktivere Credential Guard på alle deres computere på grund af kompatibilitetsproblemer med brugerdefinerede chipkortdrivere eller andre programmer, der indlæses i LSA (Local Security Authority). I disse tilfælde kan hackere bruge hackværktøjer som Mimikatz til at skrabe cleartext-adgangskoder og NTLM-hashen fra LSASS.
+LSASS godkender brugere, der logger på en Windows computer. Microsoft Defender Credential Guard i Windows forhindrer normalt forsøg på at udtrække legitimationsoplysninger fra LSASS. Nogle organisationer kan ikke aktivere Credential Guard på alle deres computere på grund af kompatibilitetsproblemer med brugerdefinerede chipkortdrivere eller andre programmer, der indlæses i LSA (Local Security Authority). I disse tilfælde kan hackere bruge værktøjer som Mimikatz til at skrabe cleartext-adgangskoder og NTLM-hashen fra LSASS.
 
 > [!NOTE]
 > I nogle apps optæller koden alle kørende processer og forsøger at åbne dem med udtømmende tilladelser. Denne regel afviser appens handling for procesåbning og logfører oplysningerne i loggen over sikkerhedshændelser. Denne regel kan generere en masse støj. Hvis du har en app, der blot optæller LSASS, men ikke har nogen reel indvirkning på funktionaliteten, er det ikke nødvendigt at føje den til listen over undtagelser. I sig selv angiver denne post i hændelsesloggen ikke nødvendigvis en ondsindet trussel.
@@ -334,7 +332,7 @@ Denne regel registrerer mistænkelige egenskaber i et sløret script.
 > [!IMPORTANT]
 > PowerShell-scripts er midlertidigt udelukket fra reglen "Bloker udførelse af potentielt slørede scripts" på grund af de store problemer med den fælles FP, der tidligere er opstået.
 
-Script tilsløring er en almindelig teknik, som både malware forfattere og legitime applikationer bruger til at skjule intellektuel ejendom eller reducere script indlæsningstider. Malware forfattere bruger også tilsløring til at gøre skadelig kode sværere at læse, hvilket forhindrer tæt kontrol af mennesker og sikkerhedssoftware.
+Script tilsløring er en almindelig teknik, som både malware forfattere og legitime applikationer bruger til at skjule intellektuel ejendom eller reducere script indlæsningstider. Malware forfattere bruger også tilsløring til at gøre ondsindet kode sværere at læse, som hæmmer tæt kontrol af mennesker og sikkerhedssoftware.
 
 > [!IMPORTANT]
 > På grund af det høje antal falske positiver registrerer denne regel i øjeblikket ikke PowerShell-scripts. dette er en midlertidig løsning. Reglen opdateres og begynder snart at omlægge PowerShell-scripts.
@@ -459,7 +457,7 @@ Afhængigheder: MDAV, RPC
 
 ### <a name="block-process-creations-originating-from-psexec-and-wmi-commands"></a>Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI
 
-Denne regel blokerer processer, der er oprettet via [PsExec](/sysinternals/downloads/psexec) og [WMI](/windows/win32/wmisdk/about-wmi) , fra at køre. Både PsExec og WMI kan udføre kode eksternt, så der er risiko for, at malware misbruger denne funktionalitet til kommando- og kontrolformål eller for at sprede en infektion i hele organisationens netværk.
+Denne regel blokerer processer, der er oprettet via [PsExec](/sysinternals/downloads/psexec) og [WMI](/windows/win32/wmisdk/about-wmi) , fra at køre. Både PsExec og WMI kan udføre kode eksternt. Der er risiko for, at malware misbruger funktionaliteten i PsExec og WMI til kommando- og kontrolformål eller for at sprede en infektion gennem en organisations netværk.
 
 > [!WARNING]
 > Brug kun denne regel, hvis du administrerer dine enheder med [Intune](/intune) eller en anden MDM-løsning. Denne regel er ikke kompatibel med administration via [Microsoft Endpoint Configuration Manager](/configmgr), fordi denne regel blokerer WMI-kommandoer, som Configuration Manager klient bruger til at fungere korrekt.
@@ -480,6 +478,9 @@ Afhængigheder: MDAV
 ### <a name="block-untrusted-and-unsigned-processes-that-run-from-usb"></a>Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB
 
 Med denne regel kan administratorer forhindre usignerede eller upålidelige eksekverbare filer i at køre fra flytbare USB-drev, herunder SD-kort. Blokerede filtyper omfatter eksekverbare filer (f.eks. .exe, .dll eller .scr)
+
+> [!IMPORTANT]
+> Filer, der kopieres fra USB til diskdrevet, blokeres af denne regel, hvis og når den er ved at blive udført på diskdrevet.
 
 Intune navn:`Untrusted and unsigned processes that run from USB`
 

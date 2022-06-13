@@ -18,12 +18,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du identificerer de forskellige ventepositionstyper, der kan placeres i en Exchange Online postkasse i Microsoft 365.
-ms.openlocfilehash: 4b4ff5064f59285412c4c20108df9dbbae992f7e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f38376fe3d7517b877239a9bb6add5fbf9952d59
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097750"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017892"
 ---
 # <a name="how-to-identify-the-type-of-hold-placed-on-an-exchange-online-mailbox"></a>Sådan identificeres den type venteposition, der er placeret i en Exchange Online postkasse
 
@@ -130,9 +130,9 @@ Når du har fået GUID'et for en venteposition, der er anvendt på en postkasse,
 
 ### <a name="ediscovery-holds"></a>eDiscovery-ventepositioner
 
-Kør følgende kommandoer i Security & Compliance Center PowerShell for at identificere en eDiscovery-venteposition, der er anvendt på postkassen. Brug GUID (inklusive ikke UniH-præfikset) for den eDiscovery-venteposition, du identificerede i trin 1. 
+Kør følgende kommandoer i Security & Compliance PowerShell for at identificere en eDiscovery-venteposition, der er anvendt på postkassen. Brug GUID (inklusive ikke UniH-præfikset) for den eDiscovery-venteposition, du identificerede i trin 1. 
 
-Hvis du vil oprette forbindelse til Security & Compliance Center PowerShell, [skal du se Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Hvis du vil oprette forbindelse til PowerShell & overholdelse af angivne standarder, [skal du se Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 Den første kommando opretter en variabel, der indeholder oplysninger om ventepositionen. Denne variabel bruges i de andre kommandoer. Den anden kommando viser navnet på den eDiscovery-sag, som ventepositionen er knyttet til. Den tredje kommando viser navnet på ventepositionen og en liste over de postkasser, som ventepositionen gælder for.
 
@@ -163,7 +163,7 @@ Hvis GUID'et for den In-Place Venteposition starter med præfikset `cld` , skal 
 
 ### <a name="microsoft-365-retention-policies"></a>Microsoft 365 opbevaringspolitikker
 
-[Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) og køre følgende kommando for at identificere den Microsoft 365 opbevaringspolitik (for hele organisationen eller en bestemt placering), der er anvendt på postkassen. Brug guid'et (inklusive ikke præfikset mbx, skp eller grp eller det handlingssuffiks), du identificerede i trin 1.
+[Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell), og kør følgende kommando for at identificere den Microsoft 365 opbevaringspolitik (for hele organisationen eller en bestemt placering), der er anvendt på postkassen. Brug guid'et (inklusive ikke præfikset mbx, skp eller grp eller det handlingssuffiks), du identificerede i trin 1.
 
 ```powershell
 Get-RetentionCompliancePolicy <hold GUID without prefix or suffix> -DistributionDetail  | FL Name,*Location
@@ -292,7 +292,7 @@ Når der ikke længere anvendes en opbevaringspolitik på en postkasse, placerer
 
 Når du har identificeret de ventepositioner, der er anvendt på en postkasse, kan du udføre opgaver, f.eks. ændre varigheden af ventepositionen, midlertidigt eller permanent fjerne ventepositionen eller udelade en inaktiv postkasse fra en Microsoft 365 opbevaringspolitik. Du kan få flere oplysninger om at udføre opgaver, der er relateret til ventepositioner, i et af følgende emner:
 
-- Kør kommandoen [Set-RetentionCompliancePolicy -Identity \<Policy Name> -AddExchangeLocationException \<user mailbox>](/powershell/module/exchange/set-retentioncompliancepolicy) i [Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) for at udelade en postkasse fra en opbevaringspolitik for hele organisationen Microsoft 365. Denne kommando kan kun bruges til opbevaringspolitikker, hvor værdien for egenskaben *ExchangeLocation* er lig med `All`.
+- Kør kommandoen [Set-RetentionCompliancePolicy -Identity \<Policy Name> -AddExchangeLocationException \<user mailbox>](/powershell/module/exchange/set-retentioncompliancepolicy) i [Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) for at udelukke en postkasse fra en opbevaringspolitik for hele organisationen Microsoft 365. Denne kommando kan kun bruges til opbevaringspolitikker, hvor værdien for egenskaben *ExchangeLocation* er lig med `All`.
 
 - [Rediger varigheden af fastfrysning for en inaktiv postkasse](change-the-hold-duration-for-an-inactive-mailbox.md)
 

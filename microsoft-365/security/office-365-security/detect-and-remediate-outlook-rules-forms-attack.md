@@ -18,12 +18,12 @@ description: Få mere at vide om, hvordan du genkender og afhjælper Outlook reg
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 268e50059ad1b128e583a5be383788b545fa6190
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 370fa7cf6e8003954044290b7c19c3d839b0a145
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65874090"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016026"
 ---
 # <a name="detect-and-remediate-outlook-rules-and-custom-forms-injections-attacks"></a>Registrer og afhjælp Outlook regler og angreb på brugerdefinerede formularer
 
@@ -155,7 +155,7 @@ Du skal have globale administratorrettigheder for at køre scriptet, fordi scrip
 
 ## <a name="how-to-stop-and-remediate-the-outlook-rules-and-forms-attack"></a>Sådan stopper og afhjælper du angreb på Outlook regler og formularer
 
-Hvis du finder beviser for et af disse angreb, er afhjælpning enkel, du skal blot slette reglen eller formularen fra postkassen. Du kan gøre dette med Outlook-klienten eller ved hjælp af Ekstern PowerShell til at fjerne regler.
+Hvis du finder beviser for et af disse angreb, er afhjælpning enkel, du skal blot slette reglen eller formularen fra postkassen. Du kan gøre dette med Outlook-klienten eller bruge Exchange PowerShell til at fjerne regler.
 
 ### <a name="using-outlook"></a>Brug af Outlook
 
@@ -171,11 +171,11 @@ Hvis du finder beviser for et af disse angreb, er afhjælpning enkel, du skal bl
 
 ### <a name="using-powershell"></a>Brug af PowerShell
 
-Der er to eksterne PowerShell-cmdlet'er, du kan bruge til at fjerne eller deaktivere farlige regler. Du skal blot følge trinnene.
+Der er to Exchange PowerShell-cmdlet'er, du kan bruge til at fjerne eller deaktivere farlige regler. Du skal blot følge trinnene.
 
 #### <a name="steps-for-mailboxes-that-are-on-an-exchange-server"></a>Trin til postkasser på en Exchange server
 
-1. Forbind til den Exchange server ved hjælp af ekstern PowerShell. Følg trinnene i [Forbind for at Exchange servere ved hjælp af ekstern PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell).
+1. Forbind til Exchange-serveren ved hjælp af PowerShell eller Exchange Management Shell. Følg trinnene i [Forbind for at Exchange servere ved hjælp af Ekstern PowerShell](/powershell/exchange/connect-to-exchange-servers-using-remote-powershell) eller [Åbn Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
 
 2. Hvis du vil fjerne en enkelt regel helt, flere regler eller alle regler fra en postkasse, skal du bruge cmdlet'en [Fjern IndbakkeRegel](/powershell/module/exchange/Remove-InboxRule) .
 
@@ -183,7 +183,7 @@ Der er to eksterne PowerShell-cmdlet'er, du kan bruge til at fjerne eller deakti
 
 #### <a name="steps-for-mailboxes-in-exchange-online"></a>Trin til postkasser i Exchange Online
 
-1. Følg trinnene i [Forbind for at Exchange Online ved hjælp af PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Følg trinnene i [Forbind for at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Hvis du vil fjerne en enkelt regel helt, flere regler eller alle regler fra en postkasse, skal du bruge cmdlet'en [Fjern indbakkeregel](/powershell/module/exchange/Remove-InboxRule) .
 

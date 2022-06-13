@@ -4,6 +4,7 @@ f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
 manager: scotv
+ms-reviewer: ragovind
 audience: Admin
 ms.topic: article
 ms.prod: microsoft-365-lighthouse
@@ -16,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers), der bruger Microsoft 365 Lighthouse, kan du få mere at vide om, hvordan du nulstiller en adgangskode for en enkelt bruger eller for flere risikable brugere på tværs af forskellige lejere.
-ms.openlocfilehash: 2dd0e5d5f11f0086197db7cc472917c6bfb54aee
-ms.sourcegitcommit: 339d2c2ffea06726f69429f73c1113c649f37b18
+ms.openlocfilehash: a4e72afc33a5484112b784f0df2be96c31049f05
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65022808"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017556"
 ---
 # <a name="reset-a-user-password-in-microsoft-365-lighthouse"></a>Nulstil en brugeradgangskode i Microsoft 365 Fyrtårn
 

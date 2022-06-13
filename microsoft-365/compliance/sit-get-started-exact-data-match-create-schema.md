@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Opret skemaet for nøjagtigt datamatch baseret på typer af følsomme oplysninger
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 9eb4e69aa833e8a355115115e1c965e57d65716c
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 080bdff37893bcf0d41414c066b51727d2650f7a
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435275"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017158"
 ---
 # <a name="create-the-schema-for-exact-data-match-based-sensitive-information-types"></a>Opret skemaet for nøjagtigt datamatch baseret på typer af følsomme oplysninger
 
@@ -50,7 +50,7 @@ Du kan bruge denne guide til at forenkle processen til oprettelse af skemafiler.
 
 ## <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Brug guiden Med det nøjagtige datamatchskema og mønsteret for følsomme oplysninger
 
-1. I Microsoft Purview-compliance-portal for din lejer skal du gå til **DataklassificeringEksportér** >  **data, der stemmer overens** **medEDM-skemaer** > .
+1. På Microsoft Purview-overholdelsesportalen for din lejer skal du gå til **Dataklassificering** > **Nøjagtige data matcher** > **EDM-skemaer**.
 
 2. Vælg **Opret EDM-skema** for at åbne konfigurationsvinduet til skemaguiden.
 
@@ -80,7 +80,7 @@ Du kan bruge denne guide til at forenkle processen til oprettelse af skemafiler.
 
 Hvis du har oprettet EDM-skemaet i guiden EDM-skema, skal du eksportere EDM-skemafilen i XML-format. Du skal bruge den i fasen [Hash og uploade den følsomme informationskildetabel for at finde præcise data, der matcher følsomme informationstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) .
 
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Hvis du vil eksportere EDM-skemafilen, skal du bruge denne syntaks:
 
@@ -175,7 +175,7 @@ Flaget `ignoredDelimiters` understøtter ikke:
 
    Når du har oprettet EDM-skemafilen i XML-format, skal du uploade den til cloudtjenesten.
 
-2. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 3. Kør følgende kommando for at uploade databaseskemaet:
 

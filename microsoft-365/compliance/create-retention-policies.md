@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug en opbevaringspolitik til effektivt at bevare kontrollen over det indhold, som brugerne genererer med mail, dokumenter og samtaler. Hold hvad du vil og slippe af med, hvad du ikke gør.
-ms.openlocfilehash: abb18142517ceb6c5442ccd372c4f392db706bc1
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 6243db961e9c7789ea1a43f41d848d3d9cbda9e2
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65284946"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016454"
 ---
 # <a name="create-and-configure-retention-policies"></a>Opret og konfigurer opbevaringspolitikker
 
@@ -78,7 +78,7 @@ Når du har mere end én opbevaringspolitik, og når du også bruger opbevarings
 > [!NOTE]
 > Opbevaringspolitikker understøtter nu [delte kanaler](/MicrosoftTeams/shared-channels), der i øjeblikket er en prøveversion. Når du konfigurerer opbevaringsindstillinger for **placeringen af Teams kanalmeddelelsen**, nedarver de opbevaringsindstillinger fra deres overordnede team, hvis et team har delte kanaler.
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Administration af** >  datalivscyklusRetentionspolitikker.
+1. Vælg Opbevaringspolitikker for administration  >  af **datalivscyklus** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/).
 
 2. Vælg **Ny opbevaringspolitik** for at starte konfigurationen **Opret opbevaringspolitik** , og navngiv din nye opbevaringspolitik.
 
@@ -134,7 +134,7 @@ Det er muligt, at en opbevaringspolitik, der anvendes på Microsoft 365 grupper,
 >
 > Hvis du vil bruge denne funktion, skal dit Yammer netværk være [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) og ikke hybridtilstand.
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Administration af** >  datalivscyklusRetentionspolitikker.
+1. Vælg Opbevaringspolitikker for administration  >  af **datalivscyklus** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/).
 
 2. Vælg **Ny opbevaringspolitik** for at oprette en ny opbevaringspolitik.
 
@@ -182,7 +182,7 @@ Brug følgende instruktioner til opbevaringspolitikker, der gælder for en af di
 - Microsoft 365 grupper
 - Skype for Business
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Administration af** >  datalivscyklusRetentionspolitikker.
+1. Vælg Opbevaringspolitikker for administration  >  af **datalivscyklus** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/).
 
 2. Vælg **Ny opbevaringspolitik** for at starte konfigurationen **Opret opbevaringspolitik** , og navngiv din nye opbevaringspolitik.
 
@@ -214,7 +214,7 @@ Når du opretter og sender en opbevaringspolitik, kan det tage op til syv dage, 
 
 Først skal opbevaringspolitikken distribueres til de placeringer, du har valgt, og derefter anvendes på indhold. Du kan altid kontrollere distributionsstatussen for opbevaringspolitikken ved at vælge den på siden **Opbevaringspolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du i pop op-vinduet får vist **(Fejl),** der er inkluderet i status, og i oplysningerne om placeringerne vises en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, kan du prøve at køre Kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
 
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør en af følgende kommandoer:
     

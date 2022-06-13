@@ -19,18 +19,18 @@ ms.custom:
 - seo-marvel-mar2020
 ms.assetid: 59414438-99f5-488b-975c-5023f2254369
 description: I denne artikel lærer du, hvordan du opretter, tester og finjusterer en DLP-politik i henhold til dine organisatoriske behov.
-ms.openlocfilehash: 605288d5ee2839cc2f3ec225e551f0ba3e65bfcc
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 8e4c96a1625e3e11995aed66fff4a289da5d059d
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753986"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66016960"
 ---
 # <a name="create-test-and-tune-a-dlp-policy"></a>Opret, test og finjuster en DLP-politik
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview Forebyggelse af datatab (DLP) hjælper dig med at forhindre utilsigtet eller utilsigtet deling af følsomme oplysninger.
+Microsoft Purview DLP (Forebyggelse af datatab) hjælper dig med at forhindre utilsigtet eller utilsigtet deling af følsomme oplysninger.
 
 DLP undersøger mails og filer for følsomme oplysninger, f.eks. et kreditkortnummer. Ved hjælp af DLP kan du registrere følsomme oplysninger og udføre handlinger som:
 
@@ -44,7 +44,7 @@ Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have t
   
 1. Opret en gruppe i Microsoft 365, og føj overholdelsesansvarlige til den.
     
-2. Opret en rollegruppe på siden **Tilladelser** i Microsoft Purview-compliance-portal. 
+2. Opret en rollegruppe på siden **Tilladelser** på Microsoft Purview-overholdelsesportalen. 
 
 3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **DLP Compliance Management**.
     
@@ -62,7 +62,7 @@ Der er roller og rollegrupper som prøveversion, som du kan teste for at finjust
 
 Her er en liste over relevante roller, der findes som prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection Administration
+- Information Protection administrator
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
@@ -94,7 +94,7 @@ Se [Objektdefinitioner for følsomme oplysninger,](sensitive-information-type-en
 
 Når risikoen for datalækage ikke er helt indlysende, er det svært at se, præcis hvor du skal starte med at implementere DLP. Heldigvis kan DLP-politikker køres i "testtilstand", så du kan måle deres effektivitet og nøjagtighed, før du slår dem til.
 
-DLP-politikker for Exchange Online kan administreres via Exchange Administration. Men du kan konfigurere DLP-politikker for alle arbejdsbelastninger via Microsoft Purview-compliance-portal, så det er det, jeg skal bruge til demonstrationer i denne artikel. I Microsoft Purview-compliance-portal finder du DLP-politikkerne under **Politik til** **forebyggelse af** >  datatab. Vælg **Opret en politik** for at starte.
+DLP-politikker for Exchange Online kan administreres via Exchange Administration. Men du kan konfigurere DLP-politikker for alle arbejdsbelastninger via Microsoft Purview-overholdelsesportalen, så det er det, jeg skal bruge til demonstrationer i denne artikel. På Microsoft Purview-overholdelsesportalen kan du finde DLP-politikkerne under **Politik til** **forebyggelse af** >  datatab. Vælg **Opret en politik** for at starte.
 
 Microsoft 365 indeholder en række [DLP-politikskabeloner](what-the-dlp-policy-templates-include.md), som du kan bruge til at oprette politikker. Lad os sige, at du er en australsk virksomhed. Du kan filtrere skabelonerne i Australien og vælge Økonomi, Medicinsk og Sundhed og Beskyttelse af personlige oplysninger.
 
@@ -235,7 +235,7 @@ Når du er glad for, at din DLP-politik nøjagtigt og effektivt registrerer føl
 
 ![Mulighed for at aktivere politik.](../media/DLP-create-test-tune-turn-on-policy.png)
  
-Hvis du venter på at se, hvornår politikken træder i kraft, [skal du Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell) og køre [cmdlet'en Get-DlpCompliancePolicy](/powershell/module/exchange/get-dlpcompliancepolicy) for at se DistributionStatus.
+Hvis du venter på at se, hvornår politikken træder i kraft, [skal du Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) og køre [cmdlet'en Get-DlpCompliancePolicy](/powershell/module/exchange/get-dlpcompliancepolicy) for at se DistributionStatus.
 
  ```powershell
  Get-DlpCompliancePolicy "Testing -Australia PII" -DistributionDetail | Select distributionstatus

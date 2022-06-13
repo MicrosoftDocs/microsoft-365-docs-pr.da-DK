@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Denne artikel indeholder referenceoplysninger om eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen, som kan hjælpe dig med at få mere at vide om indholdssøgning.
-ms.openlocfilehash: 8d7f1497a0dbd400536dd74c5abd4b9e3be7e29f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: ec80cd12efc3c314f891972b1ac48232f02c072f
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097112"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018113"
 ---
 # <a name="feature-reference-for-content-search"></a>Funktionsreference til indholdssøgning
 
@@ -62,7 +62,7 @@ Vær opmærksom på følgende, når du bruger nøgleordslisten til at oprette en
 
 - Når du kører en indholdssøgning, kontrollerer Microsoft 365 automatisk søgeforespørgslen efter tegn, der ikke understøttes, og for booleske operatorer, der muligvis ikke har store bogstaver. Tegn, der ikke understøttes, skjules ofte og medfører typisk en søgefejl eller returnerer utilsigtede resultater. Du kan finde flere oplysninger om de tegn, der ikke understøttes, under Kontrollér, om der er [fejl i forespørgslen til indholdssøgningen](check-your-content-search-query-for-errors.md).
 
-- Hvis du har en søgeforespørgsel, der indeholder nøgleord for tegn, der ikke er engelske (f.eks. kinesiske tegn), kan du klikke på **Ikonet Forespørg sprog-land/** områdeForespørgselssprog-land![/område i Indholdssøgning.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) og vælg en kodeværdi for sprog/land-kultur til søgningen. Standardsproget/-området er neutralt. Hvordan kan du se, om du har brug for at ændre sprogindstillingen for en indholdssøgning? Hvis du er sikker på, at indholdsplaceringer indeholder de tegn, du søger efter, men søgningen ikke returnerer nogen resultater, kan sprogindstillingen være årsagen.
+- Hvis du har en søgeforespørgsel, der indeholder nøgleord for ikke-engelske tegn (f.eks. kinesiske tegn), kan du klikke på **Forespørgselssprog-land/område**![Ikonet Forespørg sprog-land/område i Indholdssøgning.](../media/8d4b60c8-e1f1-40f9-88ae-ee2a7eca0886.png) og vælg en kodeværdi for sprog/land-kultur til søgningen. Standardsproget/-området er neutralt. Hvordan kan du se, om du har brug for at ændre sprogindstillingen for en indholdssøgning? Hvis du er sikker på, at indholdsplaceringer indeholder de tegn, du søger efter, men søgningen ikke returnerer nogen resultater, kan sprogindstillingen være årsagen.
 
 ## <a name="partially-indexed-items"></a>Delvist indekserede elementer
 
@@ -192,7 +192,7 @@ Du kan bruge mailegenskaben **ItemClass** eller søgebetingelsen **Type** til at
 
 ## <a name="searching-inactive-mailboxes"></a>Søger i inaktive postkasser
 
-Du kan søge i inaktive postkasser i en indholdssøgning. Hvis du vil hente en liste over de inaktive postkasser i din organisation, skal du køre kommandoen `Get-Mailbox -InactiveMailboxOnly` i Exchange Online PowerShell. Du kan også gå til **Opbevaring** af **datalivscyklusstyring** \> på Microsoft Purview-overholdelsesportalen og derefter klikke på ellipsen **Merenavigationslinje**![.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Inaktive postkasser**.
+Du kan søge i inaktive postkasser i en indholdssøgning. Hvis du vil hente en liste over de inaktive postkasser i din organisation, skal du køre kommandoen `Get-Mailbox -InactiveMailboxOnly` i Exchange Online PowerShell. Du kan også gå til **Opbevaring** af **datalivscyklusstyring** \> på Microsoft Purview-overholdelsesportalen og derefter klikke på ellipserne for **mere**![navigationslinje.](../media/9723029d-e5cd-4740-b5b1-2806e4f28208.gif) \>**Inaktive postkasser**.
 
 Her er et par ting, du skal være opmærksom på, når du søger i inaktive postkasser.
 
@@ -200,7 +200,7 @@ Her er et par ting, du skal være opmærksom på, når du søger i inaktive post
 
 - Nogle gange kan en bruger have en aktiv postkasse og en inaktiv postkasse, der har samme SMTP-adresse. I dette tilfælde er det kun den bestemte postkasse, du vælger som en placering til en indholdssøgning, der søges i. Hvis du med andre ord føjer en brugers postkasse til en søgning, kan du ikke antage, at der søges i både brugerens aktive og inaktive postkasser. Der søges kun i den postkasse, du udtrykkeligt føjer til søgningen.
 
-- Du kan bruge Security & Compliance Center PowerShell til at oprette en indholdssøgning for at søge i en inaktiv postkasse. Hvis du vil gøre dette, skal du tilføje et punktum ( . ) til mailadressen på den inaktive postkasse. Følgende kommando opretter f.eks. en indholdssøgning, der søger i en inaktiv postkasse med mailadressen pavelb@contoso.onmicrosoft.com:
+- Du kan bruge Security & Compliance PowerShell til at oprette en indholdssøgning for at søge i en inaktiv postkasse. Hvis du vil gøre dette, skal du tilføje et punktum ( . ) til mailadressen på den inaktive postkasse. Følgende kommando opretter f.eks. en indholdssøgning, der søger i en inaktiv postkasse med mailadressen pavelb@contoso.onmicrosoft.com:
 
    ```powershell
    New-ComplianceSearch -Name InactiveMailboxSearch -ExchangeLocation .pavelb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true

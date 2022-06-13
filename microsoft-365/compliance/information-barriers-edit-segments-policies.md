@@ -1,7 +1,7 @@
 ---
 title: Administrer politikker for informationsbarrierer
 description: Få mere at vide om, hvordan du redigerer eller fjerner politikker for informationsbarrierer.
-keywords: Microsoft 365, Microsoft Purview, overensstemmelse
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, informationsbarrierer
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -13,12 +13,12 @@ ms.collection:
 ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
-ms.openlocfilehash: a4962ba35ef2a66067acdf2676dbe34e63de99c5
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: eaaa98233a839f41c008052ab91c5c0f45f8eb13
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396224"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014162"
 ---
 # <a name="manage-information-barriers-policies"></a>Administrer politikker for informationsbarrierer
 
@@ -42,7 +42,7 @@ Når du har [defineret politikker for informationsbarrierer (IB),](information-b
 | [Fejlfinding af informationsbarrierer](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) | Se denne artikel, når du støder på uventede problemer med informationsbarrierer. |
 
 >[!IMPORTANT]
->Hvis du vil udføre de opgaver, der er beskrevet i denne artikel, skal du have tildelt en passende rolle, f.eks. en af følgende:<br>- Microsoft 365 Enterprise global administrator<br>- Global administrator<br>- Overholdelsesadministrator<br>- Administration af IB-overholdelse (dette er en ny rolle!)<br><br>Hvis du vil vide mere om forudsætninger for informationsbarrierer, skal du se [Forudsætninger (for politikker om informationsbarrierer).](information-barriers-policies.md#step-1-make-sure-prerequisites-are-met)<br><br> Sørg for at [oprette forbindelse til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+>Hvis du vil udføre de opgaver, der er beskrevet i denne artikel, skal du have tildelt en passende rolle, f.eks. en af følgende:<br>- Microsoft 365 Enterprise global administrator<br>- Global administrator<br>- Overholdelsesadministrator<br>- Administration af IB-overholdelse (dette er en ny rolle!)<br><br>Hvis du vil vide mere om forudsætninger for informationsbarrierer, skal du se [Forudsætninger (for politikker om informationsbarrierer).](information-barriers-policies.md#step-1-make-sure-prerequisites-are-met)<br><br> Sørg for at [oprette forbindelse til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="edit-user-account-attributes"></a>Rediger brugerkontoattributter
 

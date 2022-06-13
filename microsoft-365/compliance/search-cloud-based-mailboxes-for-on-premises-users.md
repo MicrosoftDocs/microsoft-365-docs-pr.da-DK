@@ -18,12 +18,12 @@ search.appverid:
 ms.assetid: 3f7dde1a-a8ea-4366-86da-8ee6777f357c
 description: Administratorer kan bruge eDiscovery-værktøjer i Microsoft 365 til at søge efter og eksportere Teams chatdata til brugere i det lokale miljø i en Exchange hybridinstallation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e532dc629df1ddc2e3ceaa94a639723dae483714
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 4af64bd77d820b67314bc37e574afdff3966d21b
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077816"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014338"
 ---
 # <a name="search-for-teams-chat-data-for-on-premises-users"></a>Søg efter Teams-chatdata for brugere i det lokale miljø
 
@@ -46,7 +46,7 @@ Her er kravene og begrænsningerne for aktivering af cloudbaseret lager for brug
   
 ## <a name="how-it-works"></a>Sådan fungerer det
 
-Hvis en Microsoft Teams-aktiveret bruger har en postkasse i det lokale miljø, og brugerens brugerkonto/identitet er synkroniseret til cloudmiljøet, opretter Microsoft et cloudbaseret lager, der knytter brugerens 1xN-Teams chatdata til i det lokale miljø. Teams chatdata for brugere i det lokale miljø indekseres til søgning. Dette giver dig mulighed for at bruge indholdssøgning (og søgninger, der er knyttet til Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery -sager (Premium) til at søge efter, få vist og eksportere Teams chatdata til lokale brugere. Du kan også bruge **\*** ComplianceSearch-cmdlet'er i Security & Compliance Center PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
+Hvis en Microsoft Teams-aktiveret bruger har en postkasse i det lokale miljø, og brugerens brugerkonto/identitet er synkroniseret til cloudmiljøet, opretter Microsoft et cloudbaseret lager, der knytter brugerens 1xN-Teams chatdata til i det lokale miljø. Teams chatdata for brugere i det lokale miljø indekseres til søgning. Dette giver dig mulighed for at bruge indholdssøgning (og søgninger, der er knyttet til Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery -sager (Premium) til at søge efter, få vist og eksportere Teams chatdata til lokale brugere. Du kan også bruge **\*** ComplianceSearch-cmdlet'er i Security & Compliance PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
   
 Følgende grafik viser arbejdsprocessen for, hvordan Teams chatdata for brugere i det lokale miljø er tilgængelige til søgning, visning og eksport.
   
@@ -86,9 +86,9 @@ Sådan bruger du indholdssøgning på Microsoft Purview-overholdelsesportalen ti
 
 ## <a name="using-powershell-to-search-for-teams-chat-data-for-on-premises-users"></a>Brug af PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø
 
-Du kan bruge **New-ComplianceSearch-cmdlet'erne** i Security & Compliance Center PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø. Som tidligere forklaret behøver du ikke indsende en supportanmodning for at bruge PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
+Du kan bruge **New-ComplianceSearch-cmdlet'erne** i Security & Compliance PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø. Som tidligere forklaret behøver du ikke indsende en supportanmodning for at bruge PowerShell til at søge efter Teams chatdata for brugere i det lokale miljø.
   
-1. [Forbind til PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende PowerShell-kommando for at oprette en indholdssøgning, der søger efter Teams chatdata for brugere i det lokale miljø.
 

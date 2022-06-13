@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
 description: Brug funktionen Søg og fjern på Microsoft Purview-overholdelsesportalen til at søge efter og slette en mail fra alle postkasser i organisationen.
-ms.openlocfilehash: 9e6159bcd6cdd8a06a310c5de9f07b105dbb4122
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f4cf7b3f6aeefc3af71739f91322736354c1b68e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094896"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017236"
 ---
 # <a name="search-for-and-delete-email-messages"></a>Søg efter og slet mails
 
@@ -50,7 +50,7 @@ Du kan bruge funktionen Indholdssøgning til at søge efter og slette mails fra 
   > [!NOTE]
   > Rollegruppen **Organisationsadministration** findes både i Exchange Online og på overholdelsesportalen. Dette er separate rollegrupper, der giver forskellige tilladelser. Når du er medlem af **Organisationsadministration** i Exchange Online giver du ikke de nødvendige tilladelser til at slette mails. Hvis du ikke har fået tildelt rollen **Søg og fjern** i Overholdelsescenter (enten direkte eller via en rollegruppe, f.eks **. Organisationsadministration**), får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** med meddelelsen "Der blev ikke fundet en parameter, der svarer til parameternavnet "Fjern".
 
-- Du skal bruge Security & Compliance Center PowerShell til at slette meddelelser. Se [Trin 1](#step-1-connect-to-security--compliance-center-powershell) for at få instruktioner om, hvordan du opretter forbindelse.
+- Du skal bruge Security & Compliance PowerShell til at slette meddelelser. Se [Trin 1: Forbind til Sikkerhed & Overholdelse af PowerShell](#step-1-connect-to-security--compliance-powershell) for at få oplysninger om, hvordan du opretter forbindelse.
 
 - Der kan maksimalt fjernes 10 elementer pr. postkasse på én gang. Da funktionen til at søge efter og fjerne meddelelser er beregnet til at være et værktøj til svar på hændelser, hjælper denne grænse med at sikre, at meddelelser hurtigt fjernes fra postkasser. Denne funktion er ikke beregnet til at rydde op i brugerpostkasser.
 
@@ -60,9 +60,9 @@ Du kan bruge funktionen Indholdssøgning til at søge efter og slette mails fra 
 
 - Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er gemt på en Azure Storage placering og ikke i livetjenesten. Det betyder, at de ikke returneres af den indholdssøgning, du opretter i trin 1. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery-sag (Premium).](close-or-delete-case.md)
 
-## <a name="step-1-connect-to-security--compliance-center-powershell"></a>Trin 1: Forbind til Security & Compliance Center PowerShell
+## <a name="step-1-connect-to-security--compliance-powershell"></a>Trin 1: Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder
 
-Det første trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det første trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-create-a-content-search-to-find-the-message-to-delete"></a>Trin 2: Opret en indholdssøgning for at finde den meddelelse, der skal slettes
 
@@ -121,7 +121,7 @@ Når du har oprettet og tilpasset en indholdssøgning for at returnere de meddel
 > [!NOTE]
 > Som tidligere nævnt slettes elementer fra Microsoft Teams, der returneres af indholdssøgning, ikke, når du kører kommandoen **New-ComplianceSearchAction -Purge**.
 
-Hvis du vil køre følgende kommandoer til at slette meddelelser, skal du sørge for, at du har [forbindelse til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Hvis du vil køre følgende kommandoer til at slette meddelelser, skal du sørge for, at du har [forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ### <a name="soft-delete-messages"></a>Meddelelser med blød sletning
 

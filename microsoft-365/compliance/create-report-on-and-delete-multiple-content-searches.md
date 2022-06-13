@@ -17,20 +17,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
-description: Få mere at vide om, hvordan du automatiserer opgaver til indholdssøgning, f.eks. oprettelse af søgninger og kørsel af rapporter ved hjælp af Security & Compliance Center PowerShell.
+description: Få mere at vide om, hvordan du automatiserer opgaver til indholdssøgning, f.eks. oprettelse af søgninger og kørsel af rapporter ved hjælp af PowerShell til sikkerhed & overholdelse af angivne standarder.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 8ef806b9be55b8c39ad26f477d35eb076b22c16b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 50d0a66957e4bdca1e39cb42c837aa0f992bad98
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099257"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66018069"
 ---
 # <a name="create-report-on-and-delete-multiple-content-searches"></a>Opret, rapportér om og slet flere indholdssøgninger
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
- Hurtig oprettelse og rapportering af registreringssøgninger er ofte et vigtigt skridt i eDiscovery og undersøgelser, når du forsøger at få mere at vide om de underliggende data og dine søgningers rigdom og kvalitet. Som en hjælp til at gøre dette tilbyder PowerShell i Security & Compliance Center et sæt cmdlet'er, der kan automatisere tidskrævende opgaver til indholdssøgning. Disse scripts giver en hurtig og nem måde at oprette en række søgninger på og derefter køre rapporter over de anslåede søgeresultater, der kan hjælpe dig med at bestemme mængden af pågældende data. Du kan også bruge scripts til at oprette forskellige versioner af søgninger for at sammenligne de resultater, som hver enkelt producerer. Disse scripts kan hjælpe dig med hurtigt og effektivt at identificere og slagte dine data.
+ Hurtig oprettelse og rapportering af registreringssøgninger er ofte et vigtigt skridt i eDiscovery og undersøgelser, når du forsøger at få mere at vide om de underliggende data og dine søgningers rigdom og kvalitet. For at hjælpe dig med at gøre dette tilbyder PowerShell & overholdelse af angivne standarder et sæt cmdlet'er, der kan automatisere tidskrævende opgaver i forbindelse med indholdssøgning. Disse scripts giver en hurtig og nem måde at oprette en række søgninger på og derefter køre rapporter over de anslåede søgeresultater, der kan hjælpe dig med at bestemme mængden af pågældende data. Du kan også bruge scripts til at oprette forskellige versioner af søgninger for at sammenligne de resultater, som hver enkelt producerer. Disse scripts kan hjælpe dig med hurtigt og effektivt at identificere og slagte dine data.
 
 ## <a name="before-you-create-a-content-search"></a>Før du opretter en indholdssøgning
 
@@ -77,9 +77,9 @@ Den fil med kommaseparerede værdier (CSV), som du opretter i dette trin, indeho
 
 3. Gem Excel-filen som en CSV-fil i en mappe på din lokale computer. Det script, du opretter i trin 3, bruger oplysningerne i denne CSV-fil til at oprette søgninger.
 
-## <a name="step-2-connect-to-security--compliance-center-powershell"></a>Trin 2: Forbind til Security & Compliance Center PowerShell
+## <a name="step-2-connect-to-security--compliance-powershell"></a>Trin 2: Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder
 
-Det næste trin er at oprette forbindelse til Security & Compliance Center PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det næste trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>Trin 3: Kør scriptet for at oprette og starte søgninger
 

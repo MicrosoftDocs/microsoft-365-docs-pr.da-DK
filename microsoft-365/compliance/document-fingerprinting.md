@@ -12,22 +12,22 @@ ms.service: exchange-online
 ms.collection: M365-security-compliance
 ms.localizationpriority: medium
 description: Informationsmedarbejdere i din organisation håndterer mange slags følsomme oplysninger i løbet af en typisk dag. Dokumentaftryk gør det nemmere for dig at beskytte disse oplysninger ved at identificere standardformularer, der bruges i hele organisationen. I dette emne beskrives begreberne bag dokumentaftryk, og hvordan du opretter et ved hjælp af PowerShell.
-ms.openlocfilehash: 744b96f693676cf94357034a4404f63f0fbd2c45
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 3df4b7cf6f9fa09e81cf326cc58cc8114c025be9
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754472"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014470"
 ---
 # <a name="document-fingerprinting"></a>Dokumentfingeraftryk
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Informationsmedarbejdere i din organisation håndterer mange slags følsomme oplysninger i løbet af en typisk dag. I Microsoft Purview-compliance-portal gør dokumentaftryk det nemmere for dig at beskytte disse oplysninger ved at identificere de standardformularer, der bruges i hele organisationen. I dette emne beskrives begreberne bag dokumentaftryk, og hvordan du opretter et ved hjælp af PowerShell.
+Informationsmedarbejdere i din organisation håndterer mange slags følsomme oplysninger i løbet af en typisk dag. På Microsoft Purview-overholdelsesportalen gør dokumentaftryk det nemmere for dig at beskytte disse oplysninger ved at identificere de standardformularer, der bruges i hele organisationen. I dette emne beskrives begreberne bag dokumentaftryk, og hvordan du opretter et ved hjælp af PowerShell.
 
 ## <a name="basic-scenario-for-document-fingerprinting"></a>Grundlæggende scenarie for dokumentaftryk
 
-Dokumentaftryk er en Microsoft Purview Forebyggelse af datatab funktion (DLP), der konverterer en standardformular til en følsom oplysningstype, som du kan bruge i reglerne i dine DLP-politikker. Du kan f.eks. oprette et dokumentaftryk baseret på en tom patentskabelon og derefter oprette en DLP-politik, der registrerer og blokerer alle udgående patentskabeloner med følsomt indhold udfyldt. Du kan eventuelt konfigurere [politiktips](use-notifications-and-policy-tips.md) for at give afsendere besked om, at de muligvis sender følsomme oplysninger, og afsenderen skal bekræfte, at modtagerne er kvalificerede til at modtage patenterne. Denne proces fungerer sammen med alle tekstbaserede formularer, der bruges i din organisation. Yderligere eksempler på formularer, som du kan uploade, omfatter:
+Dokumentaftryk er en Microsoft Purview DLP-funktion (Forebyggelse af datatab), der konverterer en standardformular til en følsom oplysningstype, som du kan bruge i reglerne i dine DLP-politikker. Du kan f.eks. oprette et dokumentaftryk baseret på en tom patentskabelon og derefter oprette en DLP-politik, der registrerer og blokerer alle udgående patentskabeloner med følsomt indhold udfyldt. Du kan eventuelt konfigurere [politiktips](use-notifications-and-policy-tips.md) for at give afsendere besked om, at de muligvis sender følsomme oplysninger, og afsenderen skal bekræfte, at modtagerne er kvalificerede til at modtage patenterne. Denne proces fungerer sammen med alle tekstbaserede formularer, der bruges i din organisation. Yderligere eksempler på formularer, som du kan uploade, omfatter:
 
 - Offentlige formularer
 - HIPAA-formularer (Health Insurance Portability and Accountability Act)
@@ -68,7 +68,7 @@ Dokumentaftryk registrerer ikke følsomme oplysninger i følgende tilfælde:
 
 ## <a name="use-powershell-to-create-a-classification-rule-package-based-on-document-fingerprinting"></a>Brug PowerShell til at oprette en klassificeringsregelpakke, der er baseret på dokumentaftryk
 
-I øjeblikket kan du kun oprette et dokumentaftryk i [PowerShell & Security & Compliance Center](/powershell/exchange/connect-to-scc-powershell).
+I øjeblikket kan du kun oprette et dokumentaftryk i [PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
 DLP bruger klassificeringsregelpakker til at registrere følsomt indhold. Hvis du vil oprette en klassificeringsregelpakke, der er baseret på et dokuments fingeraftryk, skal du bruge cmdlet'erne **New-DlpFingerprint** og **New-DlpSensitiveInformationType** . Da resultaterne af **New-DlpFingerprint** ikke gemmes uden for dataklassificeringsreglen, kører du altid **New-DlpFingerprint** og **New-DlpSensitiveInformationType** eller **Set-DlpSensitiveInformationType** i den samme PowerShell-session. I følgende eksempel oprettes et nyt dokumentaftryk baseret på filen C:\Mine dokumenter\Contoso Employee Template.docx. Du gemmer det nye fingeraftryk som en variabel, så du kan bruge den sammen med Cmdlet'en **New-DlpSensitiveInformationType** i den samme PowerShell-session.
 
@@ -87,13 +87,13 @@ New-DlpSensitiveInformationType -Name "Contoso Customer Confidential" -Fingerpri
 
 Du kan nu bruge **cmdlet'en Get-DlpSensitiveInformationType** til at finde alle DLP-dataklassificeringsregelpakker, og i dette eksempel er "Contoso Customer Confidential" en del af listen over regelpakker til dataklassificering.
 
-Til sidst skal du føje regelpakken "Contoso Customer Confidential" til en DLP-politik i Microsoft Purview-compliance-portal. I dette eksempel føjes der en regel til en eksisterende DLP-politik med navnet "ConfidentialPolicy".
+Til sidst skal du føje regelpakken "Contoso Customer Confidential" til en DLP-politik på Microsoft Purview-overholdelsesportalen. I dette eksempel føjes der en regel til en eksisterende DLP-politik med navnet "ConfidentialPolicy".
 
 ```powershell
 New-DlpComplianceRule -Name "ContosoConfidentialRule" -Policy "ConfidentialPolicy" -ContentContainsSensitiveInformation @{Name="Contoso Customer Confidential"} -BlockAccess $True
 ```
 
-Du kan også bruge dataklassificeringsregelpakken i regler for mailflow i Exchange Online, som vist i følgende eksempel. Hvis du vil køre denne kommando, skal du først [Forbind for at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Bemærk også, at det tager tid for regelpakken at synkronisere fra Microsoft Purview-compliance-portal til Exchange Administration.
+Du kan også bruge dataklassificeringsregelpakken i regler for mailflow i Exchange Online, som vist i følgende eksempel. Hvis du vil køre denne kommando, skal du først [Forbind for at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Bemærk også, at det tager tid for regelpakken at synkronisere fra Microsoft Purview-overholdelsesportalen til Exchange Administration.
 
 ```powershell
 New-TransportRule -Name "Notify :External Recipient Contoso confidential" -NotifySender NotifyOnly -Mode Enforce -SentToScope NotInOrganization -MessageContainsDataClassification @{Name=" Contoso Customer Confidential"}

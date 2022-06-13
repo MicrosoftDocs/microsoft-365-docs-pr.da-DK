@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Konfigurer følsomhedsmærkater til kryptering, der beskytter dine data ved at begrænse adgang og brug.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f2a9f399e447e7b483e664da2e0bf7575b9f55d8
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 0b1db15a9ac896bdcc871177ece532aa01d4bc38
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65599227"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66014316"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
 
@@ -47,7 +47,7 @@ Når du som administrator konfigurerer en følsomhedsmærkat til at anvende kryp
 - **Tildel tilladelser nu**, så du kan bestemme præcis, hvilke brugere der får hvilke tilladelser til indhold med den pågældende mærkat.
 - **Lad brugerne tildele tilladelser** , når de anvender mærkaten på indhold. På denne måde kan du give personer i din organisation en vis fleksibilitet, som de muligvis har brug for til at samarbejde og få udført deres arbejde.
 
-Krypteringsindstillingerne er tilgængelige, når du [opretter en følsomhedsmærkat](create-sensitivity-labels.md) i Microsoft Purview-compliance-portal.
+Krypteringsindstillingerne er tilgængelige, når du [opretter en følsomhedsmærkat](create-sensitivity-labels.md) på Microsoft Purview-overholdelsesportalen.
 
 ## <a name="understand-how-the-encryption-works"></a>Forstå, hvordan krypteringen fungerer
 
@@ -336,9 +336,9 @@ Med Azure Information Protection Unified-mærkatklienten kan brugerne f.eks.:[](
 
 I forbindelse med indbygget mærkning og For Azure Information Protection Unified [Labeling-klienten, når samtidig redigering er aktiveret](sensitivity-labels-coauthoring.md), får brugerne vist den samme dialogboks, som hvis de valgte følgende indstillinger:
 
-- Windows: Fanen **Filer** > **InfoProtect** >  **DocumentRestrict** >  **AccessRestricted Access** > 
+- Windows: Fanen **Filer** > **oplysninger** > **Beskyt dokument** > **Begræns adgang til** > **begrænset adgang**
 
-- macOS: **Fanen Gennemse** > **ProtectionPermissionsRestricted** >  >  **Access**
+- macOS: **Gennemse** fanen >**beskyttelsesrettigheder** >  >  **begrænset adgang**
 
 > [!TIP]
 > Hvis brugerne havde kendskab til at konfigurere brugerdefinerede tilladelser med Azure Information Protection Unified-navngivningsklienten, før [samtidig redigering blev aktiveret](sensitivity-labels-coauthoring.md), kan det være nyttigt at gennemse tilknytningen af tilladelsesniveauer til individuelle brugsrettigheder: [Rettigheder, der er inkluderet i tilladelsesniveauer](/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
@@ -446,11 +446,13 @@ Kryptering af dine mest følsomme dokumenter og mails hjælper med at sikre, at 
 - Når godkendte brugere åbner krypterede dokumenter i deres Office apps, får de vist navnet og beskrivelsen på en gul meddelelseslinje øverst i deres app. Når krypteringstilladelserne udvides til personer uden for din organisation, skal du omhyggeligt gennemse de navne og beskrivelser, der er synlige på denne meddelelseslinje, når dokumentet åbnes.
 
 - Hvis flere brugere skal redigere en krypteret fil på samme tid, skal de alle bruge Office på internettet, eller du har [aktiveret samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md), og alle brugere har [Office apps, der understøtter denne funktion](sensitivity-labels-coauthoring.md#prerequisites). Hvis det ikke er tilfældet, og filen allerede er åben:
-
+    
   - I Office apps (Windows, Mac, Android og iOS) får brugerne vist meddelelsen **Filer i brug** med navnet på den person, der har tjekket filen ud. De kan derefter få vist en skrivebeskyttet kopi eller gemme og redigere en kopi af filen og modtage en meddelelse, når filen er tilgængelig.
   - I Office på internettet får brugerne vist en fejlmeddelelse om, at de ikke kan redigere dokumentet med andre personer. De kan derefter vælge **Åbn i Læsevisning**.
 
-- [Funktionen AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) i Office apps til iOS og Android er deaktiveret for krypterede filer. Denne funktionalitet er også deaktiveret for krypterede filer på Windows og Mac, hvis du ikke har [aktiveret samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md). Brugerne får vist en meddelelse om, at filen har begrænsede tilladelser, der skal fjernes, før Automatisk lagring kan aktiveres.
+- [Funktionen AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) i Office apps er deaktiveret for krypterede filer, hvis du ikke har [aktiveret samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md). Brugerne får vist en meddelelse om, at filen har begrænsede tilladelser, der skal fjernes, før Automatisk lagring kan aktiveres.
+
+- Office til Windows understøtter mærkater, der anvender kryptering, når brugerne ikke har forbindelse til internettet. Men for de andre platforme (macOS, iOS, Android) skal brugerne være online for at anvende disse mærkater i Office apps. Azure Information Protection Unified Labeling-klienten skal også være online for at kunne anvende disse mærkater i Stifinder og PowerShell. Brugerne behøver ikke at være online for at åbne krypteret indhold. Du kan få flere oplysninger om offlineadgang i afsnittet [Rights Management bruge licens til offlineadgang](#rights-management-use-license-for-offline-access).
 
 - Det kan tage længere tid at åbne krypterede filer i Office apps (Windows, Mac, Android og iOS).
 

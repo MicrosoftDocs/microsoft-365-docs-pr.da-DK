@@ -19,12 +19,12 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: I denne artikel får du mere at vide om de bedste fremgangsmåder til deling af filer og mapper med ikke-godkendte brugere.
-ms.openlocfilehash: bd153d34e6e9ddc4a4b627a79df90286661353d3
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 783dfce365b34b694f048c7e65e3158678bea244
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128582"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66017980"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>Bedste praksis for deling af filer og mapper med ikke-godkendte brugere
 
@@ -87,7 +87,8 @@ Når *Alle-deling* er aktiveret for din organisation, er standardlinket til deli
 
 Du kan afhjælpe denne risiko ved at ændre standardindstillingen for links til et link, der kun fungerer for personer i din organisation. Brugere, der vil dele med ikke-godkendte personer, skal derefter specifikt vælge denne indstilling.
 
-Sådan angiver du standardlinket til fil- og mappedeling for organisationen
+Sådan angiver du standardlinket til fil- og mappedeling for organisationen:
+
 1. Åbn SharePoint Administration, og vælg <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Deling**</a>.
 1. Under **Fil- og mappelinks** skal du vælge **Kun personer i din organisation**.
 
@@ -95,7 +96,7 @@ Sådan angiver du standardlinket til fil- og mappedeling for organisationen
 
 1. Vælg **Gem**
 
-Sådan angiver du standardlinket til fil- og mappedeling for et bestemt websted
+Sådan angiver du standardlinket til fil- og mappedeling for et bestemt websted:
 
 1. Åbn SharePoint Administration, udvid **Websteder**, og vælg derefter <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Aktive websteder**</a>.
 1. Vælg det websted, du vil ændre, og vælg derefter **Deling**.
@@ -109,7 +110,8 @@ Sådan angiver du standardlinket til fil- og mappedeling for et bestemt websted
 
 Du kan bruge [Microsoft Purview DLP (Data Loss Prevention)](../compliance/dlp-learn-about-dlp.md) til at forhindre ikke-godkendt deling af følsomt indhold. Forebyggelse af datatab kan udføre handlinger på baggrund af en fils følsomhedsmærkat, opbevaringsmærkat eller følsomme oplysninger i selve filen.
 
-Sådan opretter du en DLP-regel
+Sådan opretter du en DLP-regel:
+
 1. I Microsoft Purview Administration skal du gå til [siden til forebyggelse af datatab](https://compliance.microsoft.com/datalossprevention).
 2. Klik på **Opret politik**.
 3. Vælg **Brugerdefineret,** og klik på **Næste**.
@@ -133,18 +135,11 @@ Sådan opretter du en DLP-regel
 
 ## <a name="protect-against-malicious-files"></a>Beskyt mod skadelige filer
 
-Når du tillader anonyme brugere at uploade filer, er der en øget risiko for, at nogen uploader en skadelig fil. I Microsoft 365 kan du bruge funktionen *Pengeskab vedhæftede filer* i Defender for Office 365 til automatisk at scanne uploadede filer og sætte filer i karantæne, der er usikre.
+Når du tillader anonyme brugere at uploade filer, er der en øget risiko for, at nogen uploader en skadelig fil. I organisationer med Microsoft Defender for Office 365 Plan 1- eller Plan 2-licenser (f.eks. i Microsoft 365 E5 eller som et tilføjelsesprogram) kan du bruge funktionen *Pengeskab Vedhæftede filer* til at detonere uploadede filer i et virtuelt sandkassemiljø og sætte filer i karantæne, der er usikre.
 
-Sådan slår du sikre vedhæftede filer til
-1. Åbn [siden Vedhæftede filer i ATP-Pengeskab](https://protection.office.com/safeattachmentv2) i Administration af sikkerhed og overholdelse.
-2. Klik på **Globale indstillinger**.
-3. Slå ATP til for SharePoint, OneDrive og Microsoft Teams.
+Du kan finde en vejledning under [Slå Pengeskab vedhæftede filer til for SharePoint, OneDrive og Microsoft Teams](../security/office-365-security/turn-on-mdo-for-spo-odb-and-teams.md).
 
-   ![Skærmbillede af indstillingen for sikre vedhæftede filer i Security and Compliance Center.](../media/safe-attachments-setting.png)
-
-4. Du kan også slå Pengeskab dokumenter til og derefter klikke på **Gem**
-
-Se [ATP for at få SharePoint, OneDrive og Microsoft Teams](../security/office-365-security/mdo-for-spo-odb-and-teams.md) og [Slå ATP til for at få SharePoint, OneDrive og Microsoft Teams](../security/office-365-security/turn-on-mdo-for-spo-odb-and-teams.md) for at få yderligere vejledning.
+Hvis du har Microsoft 365 A5- eller E5-sikkerhedslicenser, kan du også aktivere (og bruge) funktionen *Pengeskab dokumenter*. Du kan få flere oplysninger [under Pengeskab dokumenter i Microsoft 365 A5 eller E5 Security](../security/office-365-security/safe-docs.md).
 
 ## <a name="add-copyright-information-to-your-files"></a>Føj oplysninger om ophavsret til dine filer
 

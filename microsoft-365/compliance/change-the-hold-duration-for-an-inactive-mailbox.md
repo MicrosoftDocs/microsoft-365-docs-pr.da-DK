@@ -20,14 +20,16 @@ ms.assetid: bdee24ed-b8cf-4dd0-92ae-b86ec4661e6b
 ms.custom:
 - seo-marvel-apr2020
 description: Når en Office 365 postkasse er gjort inaktiv, skal du ændre varigheden af ventepositionen eller Office 365 opbevaringspolitik, der er tildelt den inaktive postkasse.
-ms.openlocfilehash: d959195731ee0bf4de9b533f85fa2e2356259c12
-ms.sourcegitcommit: 1d972f15a45204e89e268c5ff257021aced5e775
+ms.openlocfilehash: f9db81631c563bb985d087b4dfd12ae784c825ff
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/18/2022
-ms.locfileid: "64911362"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015830"
 ---
 # <a name="change-the-hold-duration-for-an-inactive-mailbox"></a>Rediger varigheden af fastfrysning for en inaktiv postkasse
+
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 En [inaktiv postkasse](inactive-mailboxes-in-office-365.md) er postkassetilstand, der bruges til at bevare en tidligere medarbejders mail, når vedkommende forlader din organisation. En postkasse bliver inaktiv, når der anvendes en relevant venteposition på den, før det Microsoft 365 brugerobjekt slettes.  Følgende typer ventepositioner starter oprettelsen af en inaktiv postkasse ved sletning af brugerkonto:
 
@@ -61,13 +63,13 @@ Efterhånden som regler og politikker udvikler sig, kan der være situationer, h
 
 ## <a name="connect-to-powershell"></a>Forbind til PowerShell
 
-Som vi har nævnt før, kan mange forskellige typer ventepositioner udløse oprettelsen af en inaktiv postkasse.  Hvis du vil ændre varigheden af ventepositionen for den inaktive postkasse, skal du derfor først identificere, hvilken type ventepositioner der påvirker den.  Hvis du vil gøre dette, skal du bruge Exchange Online PowerShell til at identificere typerne af ventepositioner, og hvis den inaktive postkasse påvirkes af Microsoft 365 opbevaringspolitikker eller mærkater, skal du også bruge Security and Compliance Center PowerShell til at identificere de specifikke politikker.
+Som vi har nævnt før, kan mange forskellige typer ventepositioner udløse oprettelsen af en inaktiv postkasse.  Hvis du vil ændre varigheden af ventepositionen for den inaktive postkasse, skal du derfor først identificere, hvilken type ventepositioner der påvirker den.  Hvis du vil gøre dette, skal du bruge Exchange Online PowerShell til at identificere typerne af ventepositioner, og hvis den inaktive postkasse påvirkes af Microsoft 365 opbevaringspolitikker eller -mærkater, skal du også bruge Security & Compliance PowerShell til at identificere de specifikke politikker.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell eller Security & Compliance Center PowerShell, skal du se et af følgende emner:
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell eller Security & Compliance PowerShell, skal du se et af følgende emner:
 
   - [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
-  - [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell)
+  - [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell)
 
 ## <a name="step-1-identify-the-holds-on-an-inactive-mailbox"></a>Trin 1: Identificer ventepositionerne i en inaktiv postkasse
 
@@ -181,10 +183,10 @@ I følgende tabel identificeres de seks forskellige ventepositionstyper, der ble
 |**Inaktiv postkasse**|**Ventepositionstype**|**Sådan identificerer du ventepositionen i den inaktive postkasse**|
 |:-----|:-----|:-----|
 |Ann Beebe  <br/> |Procesførelse - venteposition  <br/> | Egenskaben  `LitigationHoldEnabled`  er angivet til at angive, at  `True` postkassen er i en procesførelsesventeposition. <br/><br/> Derudover er indstillet til at `365.00:00:00` angive, `LitigationHoldDuration` at postkasseelementer ikke længere vil være underlagt procesførelse i venteposition 365 dage efter deres oprettelsesdato (sendt/modtaget).  <br/><br/> `LitigationHoldDate` angiver den dato, hvor LitigationHold blev aktiveret, og `LitigationHoldOwner` identificerer den person, der startede ventepositionen for procesførelsen. <br/> |
-|Carol Olson  <br/> |Microsoft 365 opbevaringspolitik fra den Microsoft 365 Overholdelsescenter, der anvendes på bestemte postkasser  <br/> |Egenskaben `InPlaceHolds` indeholder GUID'et for den Microsoft 365 opbevaringspolitik, der anvendes på den inaktive postkasse. Du kan se, at dette er en opbevaringspolitik, der anvendes på bestemte postkasser, fordi GUID'et starter med præfikset `mbx` og ender i en `:2` eller `:3`. <br/><br/> Du kan finde flere oplysninger under [Om formatet af værdien InPlaceHolds for opbevaringspolitikker](identify-a-hold-on-an-exchange-online-mailbox.md#understanding-the-format-of-the-inplaceholds-value-for-retention-policies).  <br/> |
+|Carol Olson  <br/> |Microsoft 365 opbevaringspolitik fra Microsoft Purview-overholdelsesportalen, der anvendes på bestemte postkasser  <br/> |Egenskaben `InPlaceHolds` indeholder GUID'et for den Microsoft 365 opbevaringspolitik, der anvendes på den inaktive postkasse. Du kan se, at dette er en opbevaringspolitik, der anvendes på bestemte postkasser, fordi GUID'et starter med præfikset `mbx` og ender i en `:2` eller `:3`. <br/><br/> Du kan finde flere oplysninger under [Om formatet af værdien InPlaceHolds for opbevaringspolitikker](identify-a-hold-on-an-exchange-online-mailbox.md#understanding-the-format-of-the-inplaceholds-value-for-retention-policies).  <br/> |
 |Megan Bowen <br/> | Microsoft 365 opbevaringsmærkat med en bevar eller bevar og slet-handling anvendes på mindst ét element i postkassen  <br/> |Egenskaben `ComplianceTagHoldApplied` `True` angiver, at et element er mærket med en bevar eller bevar og slet mærkat.  <br/><br/> Desuden indeholder egenskaben `InPlaceHolds` GUID'et for den Microsoft 365 opbevaringsmærkatpolitik, der anvendes på den inaktive postkasse.  <br/><br/> Du kan finde flere oplysninger under [Identificere postkasser i venteposition, fordi der er anvendt en opbevaringsmærkat på en mappe eller et element](identify-a-hold-on-an-exchange-online-mailbox.md#identifying-mailboxes-on-hold-because-a-retention-label-has-been-applied-to-a-folder-or-item) <br/>  |
-|Mario Necaise  <br/> |Opbevaringspolitik for Microsoft 365 for hele organisationen fra Microsoft 365 Overholdelsescenter  <br/> |Egenskaben  `InPlaceHolds`  er tom, `LitigationHoldEnabled` er `False` og `ComplianceTagHoldApplied` er `False`. Dette angiver, at en eller flere hele (Exchange) placering Microsoft 365 opbevaringspolitikker, der anvendes på den organisation, som den inaktive postkasse nedarver. <br/><br/> Du kan finde flere oplysninger under [Sådan bekræfter du, at der anvendes en opbevaringspolitik for hele organisationen på en postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#how-to-confirm-that-an-organization-wide-retention-policy-is-applied-to-a-mailbox) <br/> |
-|Abraham McMahon  <br/> |eDiscovery-sag i den Microsoft 365 Overholdelsescenter  <br/> |Egenskaben  `InPlaceHolds`  indeholder GUID'et for den eDiscovery-sagsposition, der er placeret i den inaktive postkasse. Du kan se, at dette er en eDiscovery-sag i venteposition, fordi GUID'et starter med præfikset  `UniH` .  <br/><br/> Du kan finde flere oplysninger under [eDiscovery-ventepositioner](identify-a-hold-on-an-exchange-online-mailbox.md#ediscovery-holds). <br/> |
+|Mario Necaise  <br/> |Microsoft 365 opbevaringspolitik for hele organisationen fra Microsoft Purview-overholdelsesportalen <br/> |Egenskaben  `InPlaceHolds`  er tom, `LitigationHoldEnabled` er `False` og `ComplianceTagHoldApplied` er `False`. Dette angiver, at en eller flere hele (Exchange) placering Microsoft 365 opbevaringspolitikker, der anvendes på den organisation, som den inaktive postkasse nedarver. <br/><br/> Du kan finde flere oplysninger under [Sådan bekræfter du, at der anvendes en opbevaringspolitik for hele organisationen på en postkasse](identify-a-hold-on-an-exchange-online-mailbox.md#how-to-confirm-that-an-organization-wide-retention-policy-is-applied-to-a-mailbox) <br/> |
+|Abraham McMahon  <br/> |eDiscovery-sagsholdning på Microsoft Purview-overholdelsesportalen  <br/> |Egenskaben  `InPlaceHolds`  indeholder GUID'et for den eDiscovery-sagsposition, der er placeret i den inaktive postkasse. Du kan se, at dette er en eDiscovery-sag i venteposition, fordi GUID'et starter med præfikset  `UniH` .  <br/><br/> Du kan finde flere oplysninger under [eDiscovery-ventepositioner](identify-a-hold-on-an-exchange-online-mailbox.md#ediscovery-holds). <br/> |
 |Pilar Pinilla  <br/> |In-Place venteposition  <br/> |Egenskaben  `InPlaceHolds`  indeholder GUID'et for den In-Place venteposition, der er placeret i den inaktive postkasse. Du kan se, at dette er en In-Place venteposition, fordi GUID'et ikke starter med et præfiks.  <br/><br/> **BEMÆRK**! Fra den 1. oktober 2020 kan bevarelsestiden for bevarelse på stedet ikke længere ændres. Du kan kun fjerne en In-Place venteposition, hvilket medfører sletning af den inaktive postkasse. <br/><br/> Du kan finde flere oplysninger under [Udfasning af ældre eDiscovery-værktøjer](legacy-ediscovery-retirement.md). <br/> |
 
 ## <a name="step-2-change-the-hold-duration-for-an-inactive-mailbox"></a>Trin 2: Rediger varigheden af ventepositionen for en inaktiv postkasse
@@ -203,7 +205,7 @@ Når du har identificeret, hvilken type venteposition der er placeret i den inak
 
 ### <a name="change-the-duration-for-a-microsoft-365-retention-policy"></a>Rediger varigheden af en opbevaringspolitik for Microsoft 365
 
-Hvis du vil ændre varigheden af ventepositionen for en Microsoft 365 opbevaringspolitik, skal du først identificere den politik, der påvirker den inaktive postkasse, ved at køre `Get-RetentionCompliancePolicy` med det tilknyttede GUID fra `InPlaceHolds` egenskaben i postkassen i Security and Compliance Center PowerShell.
+Hvis du vil ændre varigheden af ventepositionen for en Microsoft 365 opbevaringspolitik, skal du først identificere den politik, der påvirker den inaktive postkasse, ved at køre `Get-RetentionCompliancePolicy` med det tilknyttede GUID fra `InPlaceHolds` egenskaben i postkassen i Security & Compliance PowerShell.
 
 Sørg for at fjerne præfikset og suffikset fra GUID,når du kører denne kommando.  Hvis du f.eks. bruger eksempeloplysningerne ovenfor, skal du tage værdien `InPlaceHolds` for `mbxcdbbb86ce60342489bff371876e7f224:3` og derefter fjerne `mbx` og `:3` resultere i et politik-GUID for `cdbbb86ce60342489bff371876e7f224`.  I dette eksempel skal du køre:
 
@@ -211,16 +213,16 @@ Sørg for at fjerne præfikset og suffikset fra GUID,når du kører denne komman
 Get-RetentionCompliancePolicy cdbbb86ce60342489bff371876e7f224 | FL Name
 ```
 
-Når du kender navnet på politikken, kan du blot ændre opbevaringspolitikken i Microsoft 365 Compliance Center.  Vær opmærksom på, at opbevaringspolitikker typisk anvendes på mere end én placering, så ændring af politikken påvirker alle anvendte placeringer – både inaktive og aktive, som også kan omfatte andre placeringer end Exchange.  Du kan få flere oplysninger under [Opret og konfigurer opbevaringspolitikker](create-retention-policies.md).  
+Når du kender navnet på politikken, kan du blot ændre opbevaringspolitikken på Microsoft Purview-overholdelsesportalen.  Vær opmærksom på, at opbevaringspolitikker typisk anvendes på mere end én placering, så ændring af politikken påvirker alle anvendte placeringer – både inaktive og aktive, som også kan omfatte andre placeringer end Exchange.  Du kan få flere oplysninger under [Opret og konfigurer opbevaringspolitikker](create-retention-policies.md).  
 
 > [!IMPORTANT]
 > Opbevaringspolitikker med [bevarelseslås](retention-preservation-lock.md) aktiveret kan have opbevaringsperioden forlænget, men ikke reduceret eller fjernet.
 
-Hvis det er hensigten kun at ændre opbevaringsperioden for inaktive postkasser eller kun bestemte inaktive postkasser, kan du overveje at udrulle [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention), som kan bruges til individuelt at målrette bestemte postkasser – eller postkassetyper, f.eks. inaktive postkasser – ved hjælp af Azure AD og Exchange attributter og egenskaber.
+Hvis hensigten er at ændre opbevaringsperioden for kun inaktive postkasser eller kun bestemte inaktive postkasser, kan du overveje at udrulle [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention), som kan bruges til individuelt at målrette bestemte postkasser - eller postkassetyper, f.eks. inaktive postkasser - ved hjælp af Azure AD og Exchange attributter og egenskaber.
 
 ### <a name="change-the-duration-for-a-microsoft-365-retention-label"></a>Rediger varigheden af en Microsoft 365 opbevaringsmærkat
 
-På samme måde som med opbevaringspolitikker skal du, når du ændrer varigheden af en Microsoft 365 opbevaringsmærkat, først identificere den politik, der publicerer mærkaten, der påvirker indholdet i den inaktive postkasse, ved at køre `Get-RetentionCompliancePolicy` med det tilknyttede GUID fra `InPlaceHolds` egenskaben i postkassen i Security and Compliance Center PowerShell.
+På samme måde som med opbevaringspolitikker skal du, når du ændrer varigheden af en Microsoft 365 opbevaringsmærkat, først identificere den politik, der publicerer mærkaten, der påvirker indholdet i den inaktive postkasse, ved at køre `Get-RetentionCompliancePolicy` med det tilknyttede GUID fra `InPlaceHolds` egenskaben i postkassen i Security & Compliance PowerShell.
 
 Sørg for at fjerne præfikset og suffikset fra GUID,når du kører denne kommando.  Hvis du f.eks. bruger eksempeloplysningerne ovenfor, skal du tage værdien `InPlaceHolds` for `mbx6fe063689d404a5bb9940eed0f0bf5d2:1` og derefter fjerne `mbx` og `:1` resultere i et politik-GUID for `6fe063689d404a5bb9940eed0f0bf5d2`.  I dette eksempel skal du køre:
 

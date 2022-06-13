@@ -16,12 +16,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.assetid: 3a1ea1a6-edbd-4922-9ad3-0b075f7f9009
 description: Find Microsoft 365 PowerShell-cmdlet-referencer til Azure AD, Exchange Online, SharePoint Online, Skype for Business Online og Security & Compliance.
-ms.openlocfilehash: 96c03bed9275d3e48164ac5ac5ba57d78b36c634
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 97372031f928e7862145945c72e522510f7cd30e
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65101375"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66015434"
 ---
 # <a name="cmdlet-references-for-microsoft-365-services"></a>Cmdlet-referencer til Microsoft 365 tjenester
 
@@ -61,11 +61,11 @@ Du kan se Skype for Business Online-cmdlet-cmdlet'er under [Skype for Business O
 
 Du kan finde forbindelsesvejledning til Skype for Business Online PowerShell under [Administrer Skype for Business Online med PowerShell](manage-skype-for-business-online-with-microsoft-365-powershell.md).
 
-## <a name="security--compliance-center-powershell-cmdlets"></a>PowerShell-cmdlet'er til Security & Compliance Center
+## <a name="security--compliance-powershell-cmdlets"></a>PowerShell-cmdlet'er til sikkerhed & overholdelse af angivne standarder
 
 Cmdlet-referencerne til Security & Compliance Center findes i afsnittet Reference i [PowerShell-dokumentationen & overholdelse af angivne standarder](/powershell/exchange/scc-powershell).
 
-Du kan finde forbindelsesinstruktioner til Security & Compliance Center PowerShell under [Forbind til Security & Compliance Center PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Du kan finde forbindelsesinstruktioner til PowerShell om sikkerhed & overholdelse af angivne standarder [i Forbind til PowerShell om sikkerhed & overholdelse](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="see-also"></a>Se også
 
