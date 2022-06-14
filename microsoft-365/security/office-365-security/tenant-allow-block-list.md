@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8b99f4f9805f34485457a0f376f4bfea04d96192
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: a25d1b7ad11c57bc63035086d9a043bcac504c16
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043725"
+ms.locfileid: "66057599"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -80,7 +80,7 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
     - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af
       - **Rollegruppe for global læser**
       - **Rollegruppe for sikkerhedslæser**
-      - **Rollegruppen Kun visningskonfiguration* .
+      - **Rollegruppen Kun visningskonfiguration** .
 
   Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 

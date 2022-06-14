@@ -24,3 +24,9 @@
       href: moodle-plugin-configuration.md
     - name: Brug Microsoft Teams-hold og -møder med Moodle
       href: teams-classes-meetings-with-moodle.md
+- name: Open LMS-integrationer
+  items:
+    - name: Konfigurer Moodle-plugin til Open LMS
+      href: open-lms-plugin-configuration.md
+    - name: Brug Microsoft Teams-hold og -møder med Open LMS
+      href: open-lms-teams-classes-and-meetings.md

@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 40e0285f185d112fa508d871e0ccd70c2a09120e
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: b80bbb747ab9a0aefebaa4dd5721370ba56a3890
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739411"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057709"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg underretninger i Microsoft 365 Defender
 
@@ -37,7 +37,7 @@ ms.locfileid: "65739411"
 - Microsoft 365 Defender
 
 >[!Note]
->I denne artikel beskrives sikkerhedsbeskeder i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende mailmeddelelser til dig selv eller andre administratorer, når brugerne udfører bestemte aktiviteter i Microsoft 365. Du kan få flere oplysninger under [Opret aktivitetsbeskeder – Microsoft Purview | Microsoft Docs](../../compliance/create-activity-alerts.md).
+>I denne artikel beskrives sikkerhedsbeskeder i Microsoft 365 Defender. Du kan dog bruge aktivitetsbeskeder til at sende mailmeddelelser til dig selv eller andre administratorer, når brugerne udfører bestemte aktiviteter i Microsoft 365. Du kan få flere oplysninger under [Opret aktivitetsbeskeder – Microsoft Purview-| Microsoft Docs](../../compliance/create-activity-alerts.md).
 
 Beskeder er grundlaget for alle hændelser og angiver forekomsten af skadelige eller mistænkelige hændelser i dit miljø. Beskeder er typisk en del af et bredere angreb og giver fingerpeg om en hændelse.
 
@@ -218,3 +218,4 @@ Fortsæt [din undersøgelse](investigate-incidents.md) efter behov i forbindelse
 - [Oversigt over hændelser](incidents-overview.md)
 - [Administrer hændelser](manage-incidents.md)
 - [Undersøg hændelser](investigate-incidents.md)
+- [Undersøg datatabshændelser](investigate-dlp.md)

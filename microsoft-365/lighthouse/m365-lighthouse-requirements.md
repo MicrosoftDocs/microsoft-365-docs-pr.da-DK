@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers) skal du få en liste over krav til brug af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 4dae28206ba06b8e942290da29ba6a86b49ca7fd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 27d5440b70916ebdb3b761ac4308d3b97ccb27da
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017538"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057767"
 ---
 # <a name="requirements-for-microsoft-365-lighthouse"></a>Krav til Microsoft 365 Lighthouse
 
@@ -34,7 +34,7 @@ Desuden skal hver MSP-kundelejer kvalificere sig til Lighthouse ved at opfylde f
 
 - Der skal være konfigureret uddelegeret adgang for MSP'en (Managed Service Provider) for at kunne administrere kundelejer*
 - Der skal være mindst én Microsoft 365 Business Premium, Microsoft 365 E3, Microsoft 365 E5, Windows 365 Business eller Microsoft Defender til virksomheder licens
-- Der må ikke være mere end 1000 licenserede brugere
+- Der må ikke være mere end 2.500 licenserede brugere
 
 Enten GDAP (Granular Delegated Admin Privileges) plus en indirekte forhandlerrelation eller en DAP-relation (Delegated Admin Privileges) er påkrævet for at onboarde kunder til Lighthouse. Hvis DAP og GDAP eksisterer i en kundelejer, har GDAP-tilladelserne forrang for MSP-teknikere i GDAP-aktiverede sikkerhedsgrupper. Kunder med kun GDAP-relationer (uden indirekte forhandlerrelationer) vil snart kunne onboarde til Lighthouse.
 

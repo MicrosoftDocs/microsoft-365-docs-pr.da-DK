@@ -17,16 +17,16 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 8e9faf6114551725dc1fc3b8b6af173bbe1e21b4
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 09c0e80c8e8632c088aa42af558c90cbf0f0fc71
+ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417946"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "66057639"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -180,7 +180,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
      Klik på **Anvend**, når du er færdig.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/admin-submission-customize-columns.png":::
+     > :::image type="content" source="../../media/email-admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/email-admin-submission-customize-columns.png":::
 
    - Klik på **Filtrer** for at filtrere posterne. De tilgængelige filtre er:
      - **Dato for afsendelse**: **Startdato** og **Slutdato**.
@@ -197,7 +197,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
      Klik på **Anvend**, når du er færdig.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/admin-submission-filters.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/admin-submission-filters.png":::
+     > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/email-admin-submission-filters.png":::
 
    - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
      - **Ingen**
@@ -287,7 +287,7 @@ Hvis du har installeret [tilføjelsesprogrammet Rapportmeddelelse](enable-the-re
 
 Når en bruger sender en mistænkelig mail til den brugerdefinerede postkasse, har brugeren og administratoren ikke mulighed for at fortryde indsendelsen. Hvis brugeren vil gendanne mailen, vil den være tilgængelig til gendannelse i mapperne Slettet post eller Uønsket mail.
 
-### <a name="converting-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Konverterer brugerrapporterede meddelelser fra den brugerdefinerede postkasse til en administratorindsendelse
+### <a name="convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Konvertér brugerrapporterede meddelelser fra den brugerdefinerede postkasse til en administratorindsendelse
 
 Hvis du har konfigureret den brugerdefinerede postkasse til at opfange brugerrapporterede meddelelser uden at sende meddelelserne til Microsoft, kan du finde og sende bestemte meddelelser til Microsoft til analyse.
 
