@@ -16,18 +16,18 @@ ms.date: 02/03/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 8da099332ffbe2cc3d860faef504e4c5d9663614
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 0365f8a9d2f267d7ebc0cfeddd5b7d1d5c16a72a
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418626"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078782"
 ---
 # <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Konfigurer og valider Microsoft Defender Antivirus netværksforbindelser
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -90,7 +90,7 @@ Du kan få flere oplysninger under [Administrer Microsoft Defender Antivirus med
 
 ### <a name="attempt-to-download-a-fake-malware-file-from-microsoft"></a>Forsøg på at downloade en falsk malwarefil fra Microsoft
 
-Du kan downloade en eksempelfil, som Microsoft Defender Antivirus registrerer og blokerer, hvis du har korrekt forbindelse til cloudmiljøet. Besøg [https://aka.ms/ioavtest](https://aka.ms/ioavtest) for at downloade filen.
+Du kan downloade en eksempelfil, som Microsoft Defender Antivirus registrerer og blokerer, hvis du har korrekt forbindelse til cloudmiljøet. Besøg [https://aka.ms/ioavtest1](https://aka.ms/ioavtest1) for at downloade filen.
 
 > [!NOTE]
 > Den downloadede fil er ikke ligefrem malware. Det er en falsk fil, der er designet til at teste, om du har korrekt forbindelse til cloudmiljøet.
@@ -119,7 +119,7 @@ Der forekommer en lignende meddelelse, hvis du bruger Internet Explorer:
    Den Windows hændelseslog viser også [Windows Defender klienthændelses-id 1116](troubleshoot-microsoft-defender-antivirus.md).
 
     > [!TIP]
-    > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+    > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
     > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
     > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
     > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Cloud Apps i Microsoft 365 Defender
+title: Microsoft Defender for Cloud Apps i Microsoft 365 Defender (eksempelvisning)
 description: Få mere at vide om ændringer fra Microsoft Defender for Cloud Apps til Microsoft 365 Defender
 keywords: Introduktion til Microsoft 365 Defender, Microsoft Defender for Cloud Apps
 ms.prod: microsoft-365-enterprise
@@ -19,14 +19,14 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 28ad4e490e1347c3e17d9e99d1bc9d0f8ea5b60f
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: 2cd146cfb0fe9b6af10f562bbf6eb00bc5bf9a3d
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057882"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078396"
 ---
-# <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender"></a>Microsoft Defender for Cloud Apps i Microsoft 365 Defender
+# <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender-preview"></a>Microsoft Defender for Cloud Apps i Microsoft 365 Defender (eksempelvisning)
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
@@ -68,9 +68,12 @@ Billedet og tabellen nedenfor viser ændringerne i navigationen mellem Microsoft
 | Filer | resterende i Defender for Cloud Apps-portalen |
 | Brugere og konti | Assets –> Identities |
 | Sikkerhedskonfiguration | resterende i Defender for Cloud Apps-portalen |
-| Sikkerhedsholdning for identitet | resterende i Defender for Cloud Apps-portalen |
+| Sikkerhedsholdning for identitet | [vurderinger af Microsoft Defender for Identity identitetssikkerhedsholdning](/defender-for-identity/isp-overview) |
 | OAuth-apps | Cloudapps – > OAuth-apps |
 | Forbundne apps | resterende i Defender for Cloud Apps-portalen |
+
+> [!NOTE]
+> Den nye Defender for Cloud Apps-oplevelse på Microsoft 365 Defender-portalen er i øjeblikket tilgængelig for alle brugere, der er beskrevet i [Administrer administratoradgang](/defender-cloud-apps/manage-admins), bortset fra dem med de roller, der er defineret [i indbyggede administratorroller i Defender for Cloud Apps](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps).
 
 ## <a name="whats-changed"></a>Hvad er ændret
 

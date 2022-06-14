@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 499f001c0327c1634be4a94e2a8446adca93daab
-ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
+ms.openlocfilehash: ef22f0873e6a61864cf3b2abf2d8a4bc26f80c4d
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/08/2022
-ms.locfileid: "65941036"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078980"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -36,38 +36,38 @@ ms.locfileid: "65941036"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Der findes en række rapporter på Microsoft 365 Defender-portalen på <https://security.microsoft.com> for at hjælpe dig med at se, hvordan sikkerhedsfunktioner til mail, f.eks. anti-spam og antimalwarefunktioner i Microsoft 365, beskytter din organisation. Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-these-reports), kan du få vist og downloade disse rapporter som beskrevet i denne artikel.
+Der findes en række forskellige rapporter på Microsoft 365 Defender-portalen på <https://security.microsoft.com> for at hjælpe dig med at se, hvordan sikkerhedsfunktioner for mail, f.eks. anti-spam og antimalwarefunktioner i Microsoft 365 beskytter din organisation. Hvis du har de [nødvendige tilladelser](#what-permissions-are-needed-to-view-these-reports), kan du få vist og downloade disse rapporter som beskrevet i denne artikel.
 
 > [!NOTE]
 >
-> Nogle af rapporterne på siden **Mail & samarbejdsrapporter** kræver Microsoft Defender til Office 365. Du kan få oplysninger om disse rapporter under [Få vist Defender for Office 365-rapporter på Microsoft 365 Defender-portalen](view-reports-for-mdo.md).
+> Nogle af rapporterne på siden **Mail & samarbejdsrapporter** kræver Microsoft Defender for Office 365. Du kan få oplysninger om disse rapporter under [Få vist Defender for Office 365 rapporter på portalen Microsoft 365 Defender](view-reports-for-mdo.md).
 >
-> Rapporter, der er relateret til mailflow, findes nu i Exchange Administration. Du kan få flere oplysninger om disse rapporter under [Mailflowrapporter i det nye Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
+> Rapporter, der er relateret til mailflow, findes nu i Exchange Administration. Du kan få flere oplysninger om disse rapporter [under Mailflowrapporter i det nye Exchange Administration](/exchange/monitoring/mail-flow-reports/mail-flow-reports).
 
 Se denne korte video for at få mere at vide om, hvordan du kan bruge rapporter til at forstå effektiviteten af Defender for Office 365 i din organisation.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBkxB]
 
-## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Ændringer af sikkerhedsrapporten via mail på Microsoft 365 Defender-portalen
+## <a name="email-security-report-changes-in-the-microsoft-365-defender-portal"></a>Ændringer i sikkerhedsrapporten via mail på Microsoft 365 Defender-portalen
 
-Rapporterne Exchange Online Protection (EOP) og Microsoft Defender for Office 365 i Microsoft 365 Defender-portalen, der er blevet erstattet, flyttet eller udfaset, er beskrevet i følgende tabel.
+De Exchange Online Protection (EOP) og Microsoft Defender for Office 365 rapporter på Microsoft 365 Defender-portalen, der er blevet erstattet, flyttet eller udfaset, er beskrevet i følgende tabel.
 
 |Frarådet rapport og cmdlet'er|Ny rapport og cmdlet'er|Id for Meddelelsescenter|Dato|
 |---|---|:---:|:---:|
 |**URL-sporing** <br/><br/> Get-URLTrace|[URL-beskyttelsesrapport](view-reports-for-mdo.md#url-protection-report) <br/><br/> [Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <br> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|MC239999|Juni 2021|
 |**Mailrapport sendt og modtaget** <br/><br/> Get-MailTrafficReport <br> Get-MailDetailReport|[Statusrapport om trusselsbeskyttelse](#threat-protection-status-report) <br> [Statusrapport for mailflow](#mailflow-status-report) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport) <br> [Get-MailFlowStatusReport](/powershell/module/exchange/get-mailflowstatusreport)|MC236025|Juni 2021|
 |**Videresender rapport** <br/><br/> ingen cmdlet'er|[Rapport over automatisk videresendte meddelelser i EAC](/exchange/monitoring/mail-flow-reports/mfr-auto-forwarded-messages-report) <br/><br/> ingen cmdlet'er|MC250533|Juni 2021|
-|**Rapport over filtyper for vedhæftede filer, der er tillid til** <br/><br/> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250532|Juni 2021|
-|**Meddelelsesdispositionsrapport for vedhæftede filer, der er tillid til** <br/><br/> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|Juni 2021|
+|**rapport over filtyper for vedhæftede filer Pengeskab** <br/><br/> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250532|Juni 2021|
+|**Pengeskab meddelelsesdispositionsrapport for vedhæftede filer** <br/><br/> Get-AdvancedThreatProtectionTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250531|Juni 2021|
 |**Malware, der er registreret i mailrapport** <br/><br/> Get-MailTrafficReport <br> Get-MailDetailMalwareReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailmalware \>](#view-data-by-email--malware-and-chart-breakdown-by-detection-technology) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250530|Juni 2021|
 |**Rapport over registrering af spam** <br/><br/> Get-MailTrafficReport <br> Get-MailDetailSpamReport|[Statusrapport om trusselsbeskyttelse: Få vist data via mailspam \>](#view-data-by-email--spam-and-chart-breakdown-by-detection-technology) <br/><br/> [Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <br> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|MC250529|Oktober 2021|
 |Get-AdvancedThreatProtectionDocumentReport <br/><br/> Get-AdvancedThreatProtectionDocumentDetail|[Get-ContentMalwareMdoAggregateReport](/powershell/module/exchange/get-contentmalwaremdoaggregatereport) <br/><br/> [Get-ContentMalwareMdoDetailReport](/powershell/module/exchange/get-contentmalwaremdodetailreport)|MC343433|Maj 2022|
-|**Rapport over Exchange-transportregel** <br/><br/> [Hent-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[Rapport over Exchange-transportregel i EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br/><br/> [Hent-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|April 2022|
+|**rapport over Exchange transportregel** <br/><br/> [Hent-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|[Exchange rapport over transportregel i EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report) <br/><br/> [Hent-MailTrafficPolicyReport](/powershell/module/exchange/get-mailtrafficpolicyreport) <br> [Get-MailDetailTransportRuleReport](/powershell/module/exchange/get-maildetailtransportrulereport)|MC316157|April 2022|
 |Get-MailTrafficTopReport|[Øverste afsendere og modtagerrapport](view-email-security-reports.md#top-senders-and-recipients-report) <br/><br/> [Hent-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport) <br/><br/> **Bemærk**! Der er ingen erstatning for krypteringsrapporteringsfunktionerne i Get-MailTrafficTopReport.|MC315742|April 2022|
 
 ## <a name="compromised-users-report"></a>Rapport over kompromitterede brugere
 
 > [!NOTE]
-> Denne rapport er tilgængelig i Microsoft 365-organisationer med Exchange Online-postkasser. Den er ikke tilgængelig i enkeltstående organisationer med Exchange Online Protection (EOP).
+> Denne rapport er tilgængelig i Microsoft 365 organisationer med Exchange Online postkasser. Den er ikke tilgængelig i enkeltstående Exchange Online Protection organisationer (EOP).
 
 Rapporten **Kompromitterede brugere** viser antallet af brugerkonti, der er markeret som **mistænkelige** eller **begrænsede** inden for de seneste 7 dage. Konti i en af disse tilstande er problematiske eller endda kompromitterede. Med hyppig brug kan du bruge rapporten til at spotte stigninger og endda tendenser i mistænkelige eller begrænsede konti. Du kan få flere oplysninger om kompromitterede brugere under [Besvarelse af en kompromitteret mailkonto](responding-to-a-compromised-email-account.md).
 
@@ -101,31 +101,31 @@ På siden **Kompromitterede brugere** er ikonet ![Opret tidsplan.](../../media/m
 
 :::image type="content" source="../../media/compromised-users-report-activity-view.png" alt-text="Visningen Rapport i rapporten Kompromitterede brugere" lightbox="../../media/compromised-users-report-activity-view.png":::
 
-## <a name="exchange-transport-rule-report"></a>Rapport over Exchange-transportregel
+## <a name="exchange-transport-rule-report"></a>rapport over Exchange transportregel
 
-Rapporten **over Exchange-transportregler** viser effekten af regler for mailflow (også kaldet transportregler) på indgående og udgående meddelelser i din organisation.
+Rapporten **Exchange transportregel** viser effekten af regler for mailflow (også kaldet transportregler) på indgående og udgående meddelelser i din organisation.
 
-Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **Exchange-transportregel** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne <https://security.microsoft.com/reports/ETRRuleReport>.
+Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **Exchange transportregel** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne <https://security.microsoft.com/reports/ETRRuleReport>.
 
-:::image type="content" source="../../media/transport-rule-report-widget.png" alt-text="Widgetten Exchange-transportregel på siden Mail & samarbejdsrapporter" lightbox="../../media/transport-rule-report-widget.png":::
+:::image type="content" source="../../media/transport-rule-report-widget.png" alt-text="Widgetten Exchange transportregel på siden Mail & samarbejdsrapporter" lightbox="../../media/transport-rule-report-widget.png":::
 
-På **rapportsiden Exchange-transportregel** er de tilgængelige diagrammer og data beskrevet i følgende afsnit.
+På **rapportsiden Exchange transportregel** er de tilgængelige diagrammer og data beskrevet i følgende afsnit.
 > [!NOTE]
-> **Rapporten over Exchange-transportregel** er nu tilgængelig i EAC. Du kan få flere oplysninger [i Rapporten over Exchange-transportregel i den nye EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report).
+> **Rapporten Exchange transportregel** er nu tilgængelig i EAC. Du kan få flere oplysninger i [rapporten Exchange transportregel i den nye EAC](/exchange/monitoring/mail-flow-reports/mfr-exchange-transport-rule-report).
 
 ### <a name="chart-breakdown-by-direction"></a>Diagramopdeling efter retning
 
-:::image type="content" source="../../media/transport-rule-report-etr-direction-view.png" alt-text="Retningsvisningen for Exchange Transport-regler i rapporten om Exchange-transportregel" lightbox="../../media/transport-rule-report-etr-direction-view.png":::
+:::image type="content" source="../../media/transport-rule-report-etr-direction-view.png" alt-text="Retningsvisningen for Exchange transportregler i rapporten Exchange transportregel" lightbox="../../media/transport-rule-report-etr-direction-view.png":::
 
 Hvis du vælger **Diagramopdeling efter Retning**, er følgende diagrammer tilgængelige:
 
-- **Få vist data efter Exchange-transportregler**: Antallet af **indgående** og **udgående** meddelelser, der blev påvirket af regler for mailflow.
-- **Få vist data efter DLP Exchange-transportregler**: Antallet af **indgående** og **udgående** meddelelser, der blev påvirket af DLP-regler (forebyggelse af datatab).
+- **Få vist data efter Exchange transportregler**: Antallet af **indgående** og **udgående** meddelelser, der blev påvirket af regler for mailflow.
+- **Få vist data efter DLP-Exchange transportregler**: Antallet af **indgående** og **udgående** meddelelser, der blev påvirket af DLP-regler (forebyggelse af datatab).
 
 Følgende oplysninger vises i detaljetabellen under grafen:
 
 - **Dato**
-- **DLP-politik** (**vis kun data efter DLP Exchange-transportregler** )
+- **DLP-politik** (**få vist data efter DLP-Exchange kun transportregler**)
 - **Transportregel**
 - **Emne**
 - **Afsenderadresse**
@@ -141,22 +141,22 @@ Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer*
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
-På **rapportsiden Exchange-transportregel** skal du klikke på ![ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ![ikonet Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om rapport](#request-report)** og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Eksportknapper](#export-report)** er tilgængelige.
+På **rapportsiden Exchange transportregel** vises ![ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ![ikonet Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om rapport](#request-report)** og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Eksportknapper](#export-report)** er tilgængelige.
 
 ### <a name="chart-breakdown-by-severity"></a>Diagramopdeling efter alvorsgrad
 
-:::image type="content" source="../../media/transport-rule-report-etr-severity-view.png" alt-text="Alvorsgradsvisningen for Exchange Transport-regler i rapporten over Exchange-transportregler" lightbox="../../media/transport-rule-report-etr-severity-view.png":::
+:::image type="content" source="../../media/transport-rule-report-etr-severity-view.png" alt-text="Alvorsgradsvisningen for Exchange transportregler i rapporten over Exchange transportregel" lightbox="../../media/transport-rule-report-etr-severity-view.png":::
 
 Hvis du vælger **Diagramopdeling efter Alvorsgrad**, er følgende diagrammer tilgængelige:
 
-- **Få vist data efter Exchange-transportregler**: Meddelelserne **Høj alvorsgrad**, **Mellem alvorsgrad** og **Lav alvorsgrad** . Du angiver alvorsgradsniveauet som en handling i reglen (**Overvåg denne regel med alvorsgradsniveau** eller _AngivAuditSeverity_). Du kan få flere oplysninger under [Handlinger for mailflowregel i Exchange Online](/Exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions).
+- **Få vist data efter Exchange transportregler**: Meddelelserne **Høj alvorsgrad**, **Mellem alvorsgrad** og **Lav alvorsgrad**. Du angiver alvorsgradsniveauet som en handling i reglen (**Overvåg denne regel med alvorsgradsniveau** eller _AngivAuditSeverity_). Du kan få flere oplysninger under [Handlinger i mailflowregel i Exchange Online](/Exchange/security-and-compliance/mail-flow-rules/mail-flow-rule-actions).
 
-- **Få vist data efter DLP Exchange-transportregler**: Antallet af meddelelser med **høj alvorsgrad**, **Mellem alvorsgrad** og **Lav alvorsgrad** , der blev påvirket af DLP-regler for mailflow.
+- **Få vist data efter DLP-Exchange transportregler**: Antallet af meddelelser med **høj alvorsgrad**, **mellem alvorlighed** og **lav alvorsgrad**, der blev påvirket af DLP-regler for mailflow.
 
 Følgende oplysninger vises i detaljetabellen under grafen:
 
 - **Dato**
-- **DLP-politik** (**vis kun data efter DLP Exchange-transportregler** )
+- **DLP-politik** (**få vist data efter DLP-Exchange kun transportregler**)
 - **Transportregel**
 - **Emne**
 - **Afsenderadresse**
@@ -172,7 +172,7 @@ Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer*
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
-På **rapportsiden Exchange-transportregel** skal du klikke på ![ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ![ikonet Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om rapport](#request-report)** og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Eksportknapper](#export-report)** er tilgængelige.
+På **rapportsiden Exchange transportregel** vises ![ikonet Opret tidsplan.](../../media/m365-cc-sc-create-icon.png) **[Opret tidsplan](#schedule-report)**, ![ikonet Anmod om rapport.](../../media/m365-cc-sc-download-icon.png) **[Anmod om rapport](#request-report)** og ![ikonet Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Eksportknapper](#export-report)** er tilgængelige.
 
 ## <a name="forwarding-report"></a>Videresender rapport
 
@@ -181,7 +181,7 @@ På **rapportsiden Exchange-transportregel** skal du klikke på ![ikonet Opret t
 
 ## <a name="mailflow-status-report"></a>Statusrapport for mailflow
 
-**Statusrapporten Mailflow** er en smart rapport, der viser oplysninger om indgående og udgående mail, registrering af spam, malware, mail, der er identificeret som "god", og oplysninger om tilladte eller blokerede mails på kanten. Dette er den eneste rapport, der indeholder oplysninger om edge-beskyttelse, og som viser, hvor meget mail der er blokeret, før de tillades i tjenesten til evaluering af Exchange Online Protection (EOP). Det er vigtigt at forstå, at hvis en meddelelse sendes til fem modtagere, tæller vi den som fem forskellige meddelelser og ikke én meddelelse.
+**Statusrapporten Mailflow** er en smart rapport, der viser oplysninger om indgående og udgående mail, registrering af spam, malware, mail, der er identificeret som "god", og oplysninger om tilladte eller blokerede mails på kanten. Dette er den eneste rapport, der indeholder oplysninger om edge-beskyttelse, og som viser, hvor meget mail, der er blokeret, før det tillades i tjenesten til evaluering af Exchange Online Protection (EOP). Det er vigtigt at forstå, at hvis en meddelelse sendes til fem modtagere, tæller vi den som fem forskellige meddelelser og ikke én meddelelse.
 
 Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **Statusoversigt over mailflow** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne <https://security.microsoft.com/reports/mailflowStatusReport>.
 
@@ -198,7 +198,7 @@ På **rapportsiden Mailflowstatus** er fanen **Type** valgt som standard. Diagra
 - **Malware**: Mail, der er blokeret som malware af forskellige filtre.
 - **Phishingmail**: Mail, der er blokeret som phishing af forskellige filtre.
 - **Spam**: Mail, der er blokeret som spam af forskellige filtre.
-- **Edge Protection**: Mail, der er afvist ved kanten/perimeteren, før den evalueres af EOP eller Defender for Office 365.
+- **Edge Protection**: Mail, der afvises ved kanten/perimeteren, før den evalueres af EOP eller Defender for Office 365.
 - **Regelmeddelelser**: Mails, der blev reageret på efter regler for mailflow (også kendt som transportregler).
 
 I detaljetabellen under grafen kan du se følgende oplysninger:
@@ -274,7 +274,7 @@ I visningen **Mailflow** kan du se, hvordan Microsofts beskyttelse mod mailtruss
 
 Den samlede visning og tabelvisningen Med detaljer kan der filtreres i 90 dage.
 
-Oplysningerne i diagrammet er farvekodet af **EOP** eller **Defender for Office 365-teknologier** .
+Oplysningerne i diagrammet er farvekodet af **EOP** eller **Defender for Office 365** teknologier.
 
 Diagrammet er organiseret i følgende vandrette bånd:
 
@@ -283,12 +283,12 @@ Diagrammet er organiseret i følgende vandrette bånd:
   - **Edge-blok**: Meddelelser, der er filtreret ved kanten og identificeret som Edge Protection.
   - **Behandlet**: Meddelelser, der håndteres af filtreringsstakken.
 - Resultatbånd:
-  - **Regelblok**: Meddelelser, der behandles af exchange-regler for mailflow (transportregler).
+  - **Regelblok**: Meddelelser, der behandles af Exchange regler for mailflow (transportregler).
   - **Malwareblok**: Meddelelser, der identificeres som malware af forskellige filtre.<sup>\*</sup>
   - **Phishblok**: Meddelelser, der er identificeret som phish under behandling af forskellige filtre.<sup>\*</sup>
   - **Spamblok**: Meddelelser, der er identificeret som spam under behandling af forskellige filtre.<sup>\*</sup>
   - **Repræsentationsblok**: Meddelelser registreret som bruger repræsentation eller domæne repræsentation i Defender for Office 365.<sup>\*</sup>
-  - **Detonationsblok**: Meddelelser, der registreres under detonation af filer eller URL-adresser af politikker for sikre vedhæftede filer eller politikker for sikre links i Defender til Office 365.<sup>\*</sup>
+  - **Detonationsblok**: Meddelelser, der registreres under detonation af filer eller URL-adresser af politikker for Pengeskab vedhæftede filer eller politikker for Pengeskab links i Defender for Office 365.<sup>\*</sup>
   - **ZAP fjernet**: Meddelelser, der fjernes med automatisk udrensning på nul timer (ZAP).<sup>\*</sup>
   - **Leveret**: Meddelelser leveret til brugere på grund af en tilladelse.<sup>\*</sup>
 
@@ -304,7 +304,7 @@ I detaljetabellen under diagrammet vises følgende oplysninger:
 - **Mail i alt**
 - **Filtreret kant**
 - **Regelmeddelelser**
-- **Antimalwareprogram, Sikre vedhæftede filer, filtreret regel**
+- **Antimalwareprogram, Pengeskab vedhæftede filer, filtreret regel**
 - **DMARC-repræsentation, spoof, phishfiltreret**
 - **Detonationsregistrering**
 - **Filtreret anti-spam**
@@ -333,7 +333,7 @@ På **rapportsiden Mailflowstatus** skal du klikke på ![ikonet Eksportér.](../
 
 ## <a name="mail-latency-report"></a>Rapport over mailventetid
 
-**Rapporten Mailventetid** i Defender for Office 365 indeholder oplysninger om maillevering og detonationsventetid, der opleves i din organisation. Du kan få flere oplysninger under [Rapport over mailventetid](view-reports-for-mdo.md#mail-latency-report).
+**Rapporten Mailventetid** i Defender for Office 365 indeholder oplysninger om levering af mail og ventetid for detonation i din organisation. Du kan få flere oplysninger under [Rapport over mailventetid](view-reports-for-mdo.md#mail-latency-report).
 
 ## <a name="spam-detections-report"></a>Rapport over spamregistreringer
 
@@ -371,7 +371,7 @@ Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer*
   - **Andet**
 - **Spoof-type**: **Intern** og **ekstern**
 
-:::image type="content" source="../../media/spoof-detections-report-page.png" alt-text="Rapportsiden Spoof Mail på Microsoft 365 Defender-portalen" lightbox="../../media/spoof-detections-report-page.png":::
+:::image type="content" source="../../media/spoof-detections-report-page.png" alt-text="Rapportsiden Spoof mail på Microsoft 365 Defender-portalen" lightbox="../../media/spoof-detections-report-page.png":::
 
 I detaljetabellen under grafen kan du se følgende oplysninger:
 
@@ -392,7 +392,7 @@ På siden **Spoof-registreringer** er ikonet ![Opret tidsplan.](../../media/m365
 
 ## <a name="submissions-report"></a>Rapport over indsendelser
 
-Rapporten **Indsendelser** viser oplysninger om elementer, som administratorer har rapporteret til Microsoft til analyse. Du kan få flere oplysninger under [Brug indsendelse af administratorer til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+Rapporten **Indsendelser** viser oplysninger om elementer, som administratorer har rapporteret til Microsoft til analyse. Du kan få flere oplysninger under [Brug Administration Indsendelse til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
 Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **Indsendelser** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne <https://security.microsoft.com/adminSubmissionReport>. Hvis du vil gå til [administratorindsendelser på Microsoft 365 Defender-portalen](admin-submission.md), skal du klikke på **Gå til Indsendelser**. Administratorer kan få vist rapporten de sidste 30 dage.
 
@@ -424,23 +424,23 @@ Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer*
   - **Ventende**
   - **Afsluttet**
 
-Detaljetabellen under grafen viser de samme oplysninger og har de samme indstillinger for **Gruppér** eller **Tilpas kolonner** som under fanen **Sendt til analyse** under **Mail &** **samarbejdsindsendelser**\>. Du kan få flere oplysninger under [Få vist administratorindsendelser til Microsoft](admin-submission.md#view-admin-submissions-to-microsoft).
+Detaljetabellen under grafen viser de samme oplysninger og har de samme indstillinger for **Gruppér** eller **Tilpas kolonner** som under fanen **Sendt til analyse** under **Mail &** **samarbejdsindsendelser**\>. Du kan få flere oplysninger under [Få vist administratorindsendelser til Microsoft](admin-submission.md#view-urls-admin-submissions-to-microsoft).
 
 På siden **Indsendelser** er knappen **[Eksportér](#export-report)** tilgængelig.
 
-:::image type="content" source="../../media/submissions-report-page.png" alt-text="Rapportsiden Indsendelser på Microsoft 365 Defender-portalen" lightbox="../../media/submissions-report-page.png":::
+:::image type="content" source="../../media/submissions-report-page.png" alt-text="Rapportsiden Afsendelser på portalen Microsoft 365 Defender" lightbox="../../media/submissions-report-page.png":::
 
 ## <a name="threat-protection-status-report"></a>Statusrapport om trusselsbeskyttelse
 
-Statusrapporten **trusselsbeskyttelse** er tilgængelig i både EOP og Defender for Office 365. Rapporterne indeholder dog forskellige data. EOP-kunder kan f.eks. få vist oplysninger om malware, der er registreret i en mail, men ikke oplysninger om skadelige filer, der er registreret af [Sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+Statusrapporten **trusselsbeskyttelse** er tilgængelig i både EOP og Defender for Office 365, men rapporterne indeholder forskellige data. EOP-kunder kan f.eks. få vist oplysninger om malware, der er registreret i en mail, men ikke oplysninger om skadelige filer, der er registreret af [Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
 
-Rapporten indeholder antallet af mails med skadeligt indhold, f.eks. filer eller webstedsadresser (URL-adresser), der blev blokeret af antimalwareprogrammet, [zap (automatisk fjernelse på nul timer)](zero-hour-auto-purge.md) og Defender for Office 365-funktioner som [Sikre links](safe-links.md), [Sikre vedhæftede filer](safe-attachments.md) og [repræsentationsbeskyttelsesfunktioner i anti-phishing-politikker](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Du kan bruge disse oplysninger til at identificere tendenser eller afgøre, om organisationens politikker skal justeres.
+Rapporten indeholder antallet af mails med skadeligt indhold, f.eks. filer eller webadresser (URL-adresser), der blev blokeret af antimalwareprogrammet, [ZAP (automatisk fjernelse på nul timer)](zero-hour-auto-purge.md) og Defender for Office 365 funktioner som f.eks. [Pengeskab Links](safe-links.md), [Pengeskab Vedhæftede filer](safe-attachments.md) og [repræsentationsbeskyttelsesfunktioner i anti-phishing-politikker](set-up-anti-phishing-policies.md#exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365). Du kan bruge disse oplysninger til at identificere tendenser eller afgøre, om organisationens politikker skal justeres.
 
 **Bemærk**! Det er vigtigt at forstå, at hvis en meddelelse sendes til fem modtagere, tæller vi den som fem forskellige meddelelser og ikke én meddelelse.
 
 Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **Status for trusselsbeskyttelse** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne en af følgende URL-adresser:
 
-- Defender for Office 365: <https://security.microsoft.com/reports/TPSAggregateReportATP>
+- Defender for Office 365:<https://security.microsoft.com/reports/TPSAggregateReportATP>
 - EOP: <https://security.microsoft.com/reports/TPSAggregateReport>
 
 :::image type="content" source="../../media/threat-protection-status-report-widget.png" alt-text="Widgetten Status for trusselsbeskyttelse på siden Mail & samarbejdsrapporter" lightbox="../../media/threat-protection-status-report-widget.png":::
@@ -495,9 +495,9 @@ I visningen **Vis data efter mail-phish \>** og **diagramopdeling efter registre
 
 - **Avanceret filter**: Phishing-signaler baseret på maskinel indlæring.
 - **Kampagne**<sup>\*</sup>: Meddelelser, der er identificeret som en del af en [kampagne](campaigns.md).
-- **Fildeonation**<sup>\*</sup>: [Sikre vedhæftede filer](safe-attachments.md) registrerede en skadelig vedhæftet fil under detonationsanalyse.
-- **Omdømme for fildeonation**<sup>\*</sup>: Vedhæftede filer, der tidligere er registreret af detonationer for [sikre vedhæftede filer](safe-attachments.md) i andre Microsoft 365-organisationer.
-- **Filomdømme**: Meddelelsen indeholder en fil, der tidligere blev identificeret som skadelig i andre Microsoft 365-organisationer.
+- **Fildeonation**<sup>\*</sup>: [Pengeskab Vedhæftede filer](safe-attachments.md) registrerede en skadelig vedhæftet fil under detonationsanalyse.
+- Omdømme <sup>\*</sup>for **fildeonation**: Vedhæftede filer, der tidligere er registreret af Pengeskab detonationer for [vedhæftede filer](safe-attachments.md) i andre Microsoft 365 organisationer.
+- **Filomdømme**: Meddelelsen indeholder en fil, der tidligere blev identificeret som skadelig i andre Microsoft 365 organisationer.
 - **Matchning af fingeraftryk**: Meddelelsen ligner en tidligere registreret skadelig meddelelse.
 - **Generelt filter**: Phishingsignaler baseret på analytikerregler.
 - **Repræsentationsmærke**: Sender repræsentation af velkendte mærker.
@@ -508,11 +508,11 @@ I visningen **Vis data efter mail-phish \>** og **diagramopdeling efter registre
 - **Spoof DMARC**: Meddelelsen mislykkedes [DMARC-godkendelse](use-dmarc-to-validate-email.md).
 - **Spoof eksternt domæne**: Afsendermailadresse spoofing ved hjælp af et domæne, der er eksternt for din organisation.
 - **Spoof intra-org**: Afsendermailadresse spoofing ved hjælp af et domæne, der er internt i din organisation.
-- **URL-detonation**<sup>\*</sup>: [Safe Links](safe-links.md) registrerede en skadelig URL-adresse i meddelelsen under detonationsanalyse.
-- **Omdømme for URL-detonation**<sup>\*</sup>: URL-adresser, der tidligere er registreret af [Safe Links-detonationer](safe-links.md) i andre Microsoft 365-organisationer.
-- **Skadelig URL-adresse**: Meddelelsen indeholder en URL-adresse, der tidligere blev identificeret som skadelig i andre Microsoft 365-organisationer.
+- **URL-detonation**<sup>\*</sup>: [Pengeskab Links](safe-links.md) registrerede en skadelig URL-adresse i meddelelsen under detonationsanalyse.
+- **Omdømme for URL-detonation**<sup>\*</sup>: URL-adresser, der tidligere er registreret af [Pengeskab Links-detonationer](safe-links.md) i andre Microsoft 365 organisationer.
+- **Skadelig URL-adresse**: Meddelelsen indeholder en URL-adresse, der tidligere blev identificeret som skadelig i andre Microsoft 365 organisationer.
 
-<sup>\*</sup> Kun Defender for Office 365
+<sup>\*</sup>kun Defender for Office 365
 
 I detaljetabellen under diagrammet er følgende oplysninger tilgængelige:
 
@@ -559,11 +559,11 @@ I visningen **Vis data efter mailspam \>** og **diagramopdeling efter teknologiv
 
 - **Avanceret filter**: Phishing-signaler baseret på maskinel indlæring.
 - **Bulk**: [Masseklageniveauet (BCL)](bulk-complaint-level-values.md) for meddelelsen overskrider den definerede grænse for spam.
-- **Domæneomdømme**: Meddelelsen var fra et domæne, der tidligere blev identificeret som afsendelse af spam i andre Microsoft 365-organisationer.
+- **Domæneomdømme**: Meddelelsen kom fra et domæne, der tidligere blev identificeret som afsendelse af spam i andre Microsoft 365 organisationer.
 - **Matchning af fingeraftryk**: Meddelelsen ligner en tidligere registreret skadelig meddelelse.
-- **IP-omdømme**: Meddelelsen stammer fra en kilde, der tidligere blev identificeret som afsendelse af spam i andre Microsoft 365-organisationer.
+- **IP-omdømme**: Meddelelsen stammer fra en kilde, der tidligere blev identificeret som afsendelse af spam i andre Microsoft 365 organisationer.
 - **Registrering af blandet analyse**: Flere filtre bidrog til dommen for meddelelsen.
-- **Skadelig URL-adresse**: Meddelelsen indeholder en URL-adresse, der tidligere blev identificeret som skadelig i andre Microsoft 365-organisationer.
+- **Skadelig URL-adresse**: Meddelelsen indeholder en URL-adresse, der tidligere blev identificeret som skadelig i andre Microsoft 365 organisationer.
 
 I detaljetabellen under diagrammet er følgende oplysninger tilgængelige:
 
@@ -610,16 +610,16 @@ På siden **Status for trusselsbeskyttelse** er ikonet ![Opret tidsplan.](../../
 
 I visningen **Vis data efter mailmalware \>** og **diagramopdeling efter registreringsteknologi** vises følgende oplysninger i diagrammet:
 
-- **Fildeonation**<sup>\*</sup>: [Sikre vedhæftede filer](safe-attachments.md) registrerede en skadelig vedhæftet fil under detonationsanalyse.
-- **Omdømme for fildeonation**<sup>\*</sup>: Vedhæftede filer, der tidligere er registreret af detonationer for [sikre vedhæftede filer](safe-attachments.md) i andre Microsoft 365-organisationer.
-- **Filomdømme**: Meddelelsen indeholder en fil, der tidligere blev identificeret som skadelig i andre Microsoft 365-organisationer.
+- **Fildeonation**<sup>\*</sup>: [Pengeskab Vedhæftede filer](safe-attachments.md) registrerede en skadelig vedhæftet fil under detonationsanalyse.
+- Omdømme <sup>\*</sup>for **fildeonation**: Vedhæftede filer, der tidligere er registreret af Pengeskab detonationer for [vedhæftede filer](safe-attachments.md) i andre Microsoft 365 organisationer.
+- **Filomdømme**: Meddelelsen indeholder en fil, der tidligere blev identificeret som skadelig i andre Microsoft 365 organisationer.
 - **Antimalwareprogram**<sup>\*</sup>: Registrering fra antimalwareprogrammer.
 - **Filtype for politik til** bekæmpelse af skadelig software: Meddelelsen blev blokeret på grund af filtypen for den vedhæftede fil ([almindelig filtrering af vedhæftede filer i politikker for antimalware](anti-malware-protection.md)).
-- **URL-detonation**<sup>\*</sup>: [Safe Links](safe-links.md) registrerede en skadelig URL-adresse i meddelelsen under detonationsanalyse.
-- **URL-detonationsomdømme**<sup>\*</sup>>: URL-adresser, der tidligere er registreret [](safe-links.md) af safe links-detonationer i andre Microsoft 365-organisationer.
+- **URL-detonation**<sup>\*</sup>: [Pengeskab Links](safe-links.md) registrerede en skadelig URL-adresse i meddelelsen under detonationsanalyse.
+- **URL-detonationsomdømme**<sup>\*</sup>>: URL-adresser, der tidligere er registreret af [Pengeskab](safe-links.md) Links-detonationer i andre Microsoft 365 organisationer.
 - **Kampagne**<sup>\*</sup>: Meddelelser, der er identificeret som en del af en [kampagne](campaigns.md).
 
-<sup>\*</sup> Kun Defender for Office 365
+<sup>\*</sup>kun Defender for Office 365
 
 I detaljetabellen under diagrammet er følgende oplysninger tilgængelige:
 
@@ -665,7 +665,7 @@ På siden **Status for trusselsbeskyttelse** er ikonet ![Opret tidsplan.](../../
 I **visningsdata efter mail-phish\>**, **vis data efter mailspam \>** eller **Vis data efter visning af malware i mail \>** viser valg **af diagramopdeling efter politiktype** følgende oplysninger i diagrammet:
 
 - **Antimalware**
-- **Sikre vedhæftede filer**<sup>\*</sup>
+- **Pengeskab vedhæftede filer**<sup>\*</sup>
 - **Anti-phish**
 - **Anti-spam**
 - **Regel for mailflow** (også kendt som en transportregel)
@@ -704,7 +704,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiknavn (kun tabelvisning med detaljer)**: **Alle** eller den angivne politik.
 - **Modtagere**
 
-<sup>\*</sup> Kun Defender for Office 365
+<sup>\*</sup>kun Defender for Office 365
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
@@ -759,7 +759,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiknavn (kun tabelvisning med detaljer)**: **Alle** eller den angivne politik.
 - **Modtagere**
 
-<sup>\*</sup> Kun Defender for Office 365
+<sup>\*</sup>kun Defender for Office 365
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
@@ -769,11 +769,11 @@ På siden **Status for trusselsbeskyttelse** er ikonet ![Opret tidsplan.](../../
 
 :::image type="content" source="../../media/threat-protection-status-report-content-malware-view.png" alt-text="Visningen Indholdsmalware i statusrapporten trusselsbeskyttelse" lightbox="../../media/threat-protection-status-report-content-malware-view.png":::
 
-I visningen **Vis data efter indholdsmalware \>** vises følgende oplysninger i diagrammet for Microsoft Defender for Office 365-organisationer:
+I visningen **Vis data efter indholdsmalware \>** vises følgende oplysninger i diagrammet for Microsoft Defender for Office 365 organisationer:
 
-- **Antimalwareprogram**: Ondsindede filer, der er registreret i SharePoint, OneDrive og Microsoft Teams af den [indbyggede virusregistrering i Microsoft 365](virus-detection-in-spo.md).
-- **MDO-detonation**: Ondsindede filer, der er registreret af [sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
-- **Filomdømme**: Meddelelsen indeholder en fil, der tidligere blev identificeret som skadelig i andre Microsoft 365-organisationer.
+- **Antimalwareprogram**: Skadelige filer, der er registreret i SharePoint, OneDrive og Microsoft Teams af den [indbyggede virusregistrering i Microsoft 365](virus-detection-in-spo.md).
+- **MDO-detonation**: Skadelige filer, der registreres af [Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+- **Filomdømme**: Meddelelsen indeholder en fil, der tidligere blev identificeret som skadelig i andre Microsoft 365 organisationer.
 
 I detaljetabellen under diagrammet er følgende oplysninger tilgængelige:
 
@@ -802,12 +802,12 @@ I visningen **Vis data efter systemtilsidesættelse** og **Diagramopdeling efter
 
 - **Spring over i det lokale miljø**
 - **TILLAD IP**
-- **Exchange-transportregel** (regel for mailflow)
+- **Exchange transportregel** (regel for mailflow)
 - **Organisationen tillader afsendere**
 - **Organisationens tilladte domæner**
 - **ZAP er ikke aktiveret**
-- **Afsender, der er tillid til bruger**
-- **Brugersikkert domæne**
+- **Afsender af Pengeskab bruger**
+- **Brugerens Pengeskab domæne**
 - **Phishing-simulering**: Du kan få flere oplysninger under [Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser](configure-advanced-delivery.md).
 - **Tredjepartsfilter**
 
@@ -865,12 +865,12 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Grund**
   - **Spring over i det lokale miljø**
   - **TILLAD IP**
-  - **Exchange-transportregel** (regel for mailflow)
+  - **Exchange transportregel** (regel for mailflow)
   - **Organisationen tillader afsendere**
   - **Organisationens tilladte domæner**
   - **ZAP er ikke aktiveret**
-  - **Afsender, der er tillid til bruger**
-  - **Brugersikkert domæne**
+  - **Afsender af Pengeskab bruger**
+  - **Brugerens Pengeskab domæne**
   - **Phishing-simulering**: Du kan få flere oplysninger under [Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser](configure-advanced-delivery.md).
   - **Tredjepartsfilter**
 - **Leveringsplacering**: **Mappen Uønsket mail er ikke aktiveret** eller **SecOps-postkassen**.
@@ -883,7 +883,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiktype**:
   - **Alle**
   - **Antimalware**
-  - **Sikre vedhæftede filer**<sup>\*</sup>
+  - **Pengeskab vedhæftede filer**<sup>\*</sup>
   - **Anti-phish**
   - **Anti-spam**
   - **Regel for mailflow** (transportregel)
@@ -891,7 +891,7 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 - **Politiknavn (kun detaljetabelvisning)**: **Alle**
 - **Modtagere**
 
-<sup>\*</sup> Kun Defender for Office 365
+<sup>\*</sup>kun Defender for Office 365
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
@@ -920,13 +920,13 @@ På siden **Top malware** skal du klikke på ikonet ![Opret tidsplan.](../../med
 
 ## <a name="top-senders-and-recipients-report"></a>Rapport over de vigtigste afsendere og modtagere
 
-Rapporten **Over de vigtigste afsendere og modtagere** er tilgængelig i både EOP og Defender til Office 365. Rapporterne indeholder dog forskellige data. EOP-kunder kan f.eks. få vist oplysninger om de mest populære modtagere af malware, spam og phishing (spoofing), men ikke oplysninger om malware, der er registreret af [sikre vedhæftede filer](safe-attachments.md) eller phishing, som [registreres af repræsentationsbeskyttelse](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
+Rapporten **Over de vigtigste afsendere og modtagere** er tilgængelig både i EOP og Defender for Office 365, men rapporterne indeholder forskellige data. EOP-kunder kan f.eks. få vist oplysninger om de vigtigste modtagere af malware, spam og phishing (spoofing), men ikke oplysninger om malware, der er registreret af [Pengeskab Vedhæftede filer](safe-attachments.md) eller phishing registreret af [repræsentationsbeskyttelse](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-**De øverste afsendere og modtagere** viser de vigtigste afsendere af meddelelser i din organisation samt de vigtigste modtagere af meddelelser, der blev registreret af EOP og Defender for Office 365-beskyttelsesfunktioner. Rapporten viser som standard data for den seneste uge, men data er tilgængelige for de sidste 90 dage.
+De **øverste afsendere og modtagere** viser de vigtigste afsendere af meddelelser i din organisation samt de vigtigste modtagere af meddelelser, der blev registreret af EOP og Defender for Office 365 beskyttelsesfunktioner. Rapporten viser som standard data for den seneste uge, men data er tilgængelige for de sidste 90 dage.
 
 Hvis du vil have vist rapporten på Microsoft 365 Defender-portalen på <https://security.microsoft.com>, skal du gå til **Rapporter** \> **Mail & samarbejde** \> **Mail & samarbejdsrapporter**. På siden **Mail & samarbejdsrapporter** skal du finde **rapporten Over de vigtigste afsendere og modtagere** og derefter klikke på **Vis detaljer**. Hvis du vil gå direkte til rapporten, skal du åbne en af følgende URL-adresser:
 
-- Defender for Office 365: <https://security.microsoft.com/reports/TopSenderRecipientsATP>
+- Defender for Office 365:<https://security.microsoft.com/reports/TopSenderRecipientsATP>
 - EOP: <https://security.microsoft.com/reports/TopSenderRecipient>
 
 :::image type="content" source="../../media/top-senders-and-recipients-widget.png" alt-text="Widgetten Top afsendere og modtagere på dashboardet Rapporter" lightbox="../../media/top-senders-and-recipients-widget.png":::
@@ -959,12 +959,12 @@ På siden **Top afsendere og modtagere** skal du klikke på ![ikonet Eksportér.
 
 ## <a name="url-protection-report"></a>URL-beskyttelsesrapport
 
-**URL-beskyttelsesrapport** er kun tilgængelig i Microsoft Defender til Office 365. Du kan få flere oplysninger under [URL-beskyttelsesrapport](view-reports-for-mdo.md#url-protection-report).
+**URL-beskyttelsesrapport** er kun tilgængelig i Microsoft Defender for Office 365. Du kan få flere oplysninger under [URL-beskyttelsesrapport](view-reports-for-mdo.md#url-protection-report).
 
 ## <a name="user-reported-messages-report"></a>Rapport over brugerrapporterede meddelelser
 
 > [!IMPORTANT]
-> Hvis rapporten over **brugerrapporterede meddelelser** skal fungere korrekt, **skal logføring af overvågning være slået** til for dit Microsoft 365-miljø. Dette gøres typisk af en person, der har rollen Overvågningslogge tildelt i Exchange Online. Du kan finde flere oplysninger under [Slå søgning i Microsoft 365-overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
+> Hvis rapporten over **rapporterede brugermeddelelser** skal fungere korrekt, **skal overvågningslogføring være aktiveret** for dit Microsoft 365 miljø. Dette gøres typisk af en person, der har rollen Overvågningslogge tildelt i Exchange Online. Du kan finde flere oplysninger under [Slå søgning i Microsoft 365 overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md).
 
 Rapporten **over brugerrapporterede meddelelser** viser oplysninger om mails, som brugerne har rapporteret som uønsket mail, phishing-forsøg eller god mail ved hjælp af [tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md) eller [tilføjelsesprogram til rapport phishing](enable-the-report-phish-add-in.md).
 
@@ -1015,22 +1015,22 @@ Hvis du vil sende en meddelelse til Microsoft til analyse, skal du vælge meddel
 - **Rapport phishing**
 - **Rapportér malware**
 - **Rapportér spam**'
-- **Undersøgelse af udløser** (Defender for Office 365)
+- **Udløs undersøgelse** (Defender for Office 365)
 
 På siden **Brugerrapporterede meddelelser** er ikonet ![Eksportér.](../../media/m365-cc-sc-download-icon.png) **[Knappen Eksport er](#export-report)** tilgængelig.
 
 ## <a name="what-permissions-are-needed-to-view-these-reports"></a>Hvilke tilladelser er nødvendige for at få vist disse rapporter?
 
-Hvis du vil have vist og bruge de rapporter, der er beskrevet i denne artikel, skal du være medlem af en af følgende rollegrupper på Microsoft 365 Defender-portalen:
+Hvis du vil have vist og bruge de rapporter, der er beskrevet i denne artikel, skal du være medlem af en af følgende rollegrupper på Microsoft 365 Defender portalen:
 
 - **Organisationsadministration**
 - **Sikkerhedsadministrator**
 - **Sikkerhedslæser**
 - **Global læser**
 
-Du kan få flere oplysninger under [Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
+Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
-**Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+**Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="what-if-the-reports-arent-showing-data"></a>Hvad sker der, hvis rapporterne ikke viser data?
 
@@ -1061,7 +1061,7 @@ Hvis du ikke får vist data i dine rapporter, skal du kontrollere de filtre, du 
 
 Hvis du vil administrere planlagte rapporter, som du allerede har oprettet, skal du gøre følgende:
 
-1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Rapporter** \> udvid **Mail & samarbejde** \> vælg **Administrer tidsplaner**.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Rapporter** \> udvide **Mail & samarbejde** \> vælge **Administrer tidsplaner**.
 
    Hvis du vil gå direkte til siden **Administrer tidsplaner** , skal du bruge <https://security.microsoft.com/ManageSubscription>.
 
@@ -1112,7 +1112,7 @@ Hvis du vil administrere planlagte rapporter, som du allerede har oprettet, skal
 
 ### <a name="download-reports"></a>Download rapporter
 
-1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Rapporter** \> udvide **Mail & samarbejde** \> vælge **Rapporter til download**.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Rapporter** \> udvide **Mail & samarbejde** \> vælge **Rapporter til download**.
 
    Hvis du vil gå direkte til siden **Rapporter til download** , skal du bruge <https://security.microsoft.com/ReportsForDownload>.
 
@@ -1148,4 +1148,4 @@ Hver eksporteret .csv fil er begrænset til 150.000 rækker. Hvis dataene indeho
 
 [Få vist mailflowrapporter på Microsoft 365 Defender-portalen](view-mail-flow-reports.md)
 
-[Få vist rapporter for Defender til Office 365](view-reports-for-mdo.md)
+[Få vist rapporter for Defender for Office 365](view-reports-for-mdo.md)

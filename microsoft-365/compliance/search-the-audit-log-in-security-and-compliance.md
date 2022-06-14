@@ -1,5 +1,5 @@
 ---
-title: Søg i overvågningsloggen på Microsoft Purview-overholdelsesportalen
+title: Søg i overvågningsloggen i Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -17,22 +17,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 0d4d0f35-390b-4518-800e-0c7ec95e946c
-description: Brug Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
+description: Brug Microsoft Purview-compliance-portal til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 80ddd03eb37bd1b8984585a3e6d38b25a3a2b983
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0e8ac4e3a8705960f307314717127c969a26c2f6
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014272"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078496"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
+Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Hvis det er tilfældet, kan du bruge søgeværktøjet til overvågningslog i Microsoft Purview-compliance-portal til at søge i den samlede overvågningslog for at få vist bruger- og administratoraktivitet i din organisation. Tusindvis af bruger- og administratorhandlinger, der udføres i mange Microsoft 365 tjenester og løsninger, registreres, registreres og bevares i din organisations samlede overvågningslog. Brugere i din organisation kan bruge søgeværktøjet til overvågningslog til at søge efter, få vist og eksportere overvågningsposterne for disse handlinger til en CSV-fil.
 
 ## <a name="microsoft-365-services-that-support-auditing"></a>Microsoft 365 tjenester, der understøtter overvågning
 
@@ -68,6 +68,7 @@ Hvorfor en samlet overvågningslog? Da du kan søge i overvågningsloggen efter 
 | Threat Intelligence|ThreatIntelligence, ThreatIntelligenceUrl, ThreatFinder, ThreatIntelligenceAtpContent|
 | Workplace Analytics|WorkplaceAnalytics|
 | Yammer|Yammer|
+| SystemSync| DataShareCreated, DataShareDeleted, GenerateCopyOfLakeData, DownloadCopyOfLakeData |
 
 Du kan få flere oplysninger om de handlinger, der overvåges i hver af de tjenester, der er angivet i den forrige tabel, i afsnittet [Overvågede aktiviteter](#audited-activities) i denne artikel.
 
@@ -408,7 +409,7 @@ Klik på et af følgende links for at gå til en bestemt tabel.
         [Krypterede aktiviteter på meddelelsesportalen](#encrypted-message-portal-activities)
     :::column-end:::
     :::column:::
-        
+        [SystemSync-aktiviteter] (#systemsync aktiviteter)
     :::column-end:::
     :::column:::
         
@@ -447,7 +448,7 @@ I følgende tabel beskrives fil- og sideaktiviteterne i SharePoint Online og One
 |Genbrug alle mindre versioner af filen|FileVersionsAllMinorsRecycled|Brugeren sletter alle underordnede versioner fra versionshistorikken for en fil. De slettede versioner flyttes til webstedets papirkurv.|
 |Genanvendt alle versioner af filen|FileVersionsAllRecycled|Brugeren sletter alle versioner fra versionshistorikken for en fil. De slettede versioner flyttes til webstedets papirkurv.|
 |Genanvendt version af fil|FileVersionRecycled|Brugeren sletter en version fra versionshistorikken for en fil. Den slettede version flyttes til webstedets papirkurv.|
-|Omdøbt fil|Filnavnet er navngivet|Brugeren omdøber et dokument på et websted.|
+|Omdøbt fil|Filnavnet er navngivet|Brugeren omdøber et dokument.|
 |Gendannet fil|Filerrestored|Brugeren gendanner et dokument fra papirkurven på et websted.|
 |Overført fil|Filen er indlæst|Brugeren overfører et dokument til en mappe på et websted.|
 |Vist side|Sidevisning|Brugeren får en side på et websted. Dette omfatter ikke brug af en webbrowser til at få vist filer, der er placeret i et dokumentbibliotek. Når en bruger får vist en side, logføres hændelsen PageViewed ikke igen for den samme bruger for samme side i de næste fem minutter.|
@@ -805,9 +806,9 @@ Workplace Analytics giver indsigt i, hvordan grupper samarbejder på tværs af d
 |Slettede resultat|DeletedResult|Analytiker slettede et forespørgselsresultat.|
 |Downloadet rapport|DownloadedReport|Analytiker downloadede en fil med forespørgselsresultatet.|
 |Udført forespørgsel|ExecutedQuery|Analytiker kørte en forespørgsel.|
-|Opdaterede indstillingen for dataadgang|UpdatedDataAccessSetting|Administratoren opdaterede indstillingerne for dataadgang.|
-|Opdateret indstilling for beskyttelse af personlige oplysninger|UpdatedPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger. f.eks. minimumgruppestørrelse.|
-|Overførte organisationsdata|UploadedOrgData|Administratoren har uploadet en organisationsdatafil.|
+|Opdaterede indstillingen for dataadgang|UpdatedDataAccessSetting|Administration opdaterede indstillinger for dataadgang.|
+|Opdateret indstilling for beskyttelse af personlige oplysninger|UpdatedPrivacySetting|Administration opdaterede indstillinger for beskyttelse af personlige oplysninger, f.eks. minimumgruppestørrelse.|
+|Overførte organisationsdata|UploadedOrgData|Administration overførte organisationsdatafil.|
 |Bruger, der er logget på<sup>*</sup>| UserLoggedIn |En bruger er logget på sin Microsoft 365 brugerkonto.|
 |Brugeren er logget af<sup>*</sup>| UserLoggedOff |En bruger loggede af sin Microsoft 365 brugerkonto.
 |Set udforsk|ViewedExplore|Analytiker fik vist visualiseringer under en eller flere udforsk sidefaner.|
@@ -930,7 +931,7 @@ Hvis en formularaktivitet udføres af en medforfatter eller en anonym responder,
 |Vist svar|VisRespons|Formularejeren får et bestemt svar. <br><br>Property ResponseId:string og Property ResponderId:string angiver, hvilket resultat der vises. <br><br>For en anonym responder vil egenskaben ResponderId være null.|
 |Link til oprettet oversigt|HentSummaryLink|Formularejeren opretter link til oversigtsresultater for at dele resultater.|
 |Link til slettet oversigt|Sletsumelink|Formularejeren sletter linket med oversigtsresultater.|
-|Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned af administratoren <br/>- Blokeringen af administratoren er fjernet <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
+|Opdateret phishingstatus for formular|UpdatePhishingStatus|Denne hændelse logføres, når den detaljerede værdi for den interne sikkerhedsstatus blev ændret, uanset om dette ændrede den endelige sikkerhedstilstand (formularen er f.eks. nu Lukket eller Åbnet). Det betyder, at du kan se dublethændelser uden en endelig ændring af sikkerhedstilstanden. De mulige statusværdier for denne hændelse er:<br/>- Tag ned <br/>- Tag ned med Administration <br/>- Administration blokeret <br/>- Automatisk blokeret <br/>- Automatisk fjernelse af blokering <br/>- Kunde rapporteret <br/>- Nulstil kunde rapporteret|
 |Opdateret bruger phishing-status|UpdateUserPhishingStatus|Denne hændelse logføres, hver gang værdien for brugerens sikkerhedsstatus blev ændret. Værdien af brugerstatussen i overvågningsposten **bekræftes som Phisher** , da brugeren oprettede en phishing-formular, der blev fjernet af Microsoft Online-sikkerhedsteamet. Hvis en administrator fjerner blokeringen af brugeren, angives værdien af brugerens status til **Nulstil som normal bruger**.|
 |Invitation til sendte formularer Pro|Invitation til proinvitation|Brugeren klikker for at aktivere en Pro prøveversion.|
 |Opdateret formularindstilling<sup>*</sup> |UpdateFormSetting|Formularejeren opdaterer en eller flere formularindstillinger. <br><br>Property FormSettingName:string angiver opdaterede følsomme indstillingers navn. Property NewFormSettings:string angiver opdaterede indstillingers navn og nye værdi. Property thankYouMessageContainsLink:boolean angiver, at den opdaterede takkemeddelelse indeholder et URL-link.|
@@ -1015,8 +1016,8 @@ I følgende tabel vises de aktiviteter i Briefing-mail, der er logført i Micros
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:----|:-----|:-----|
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administratoren opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administratoren opdaterer indstillingerne for beskyttelse af personlige oplysninger for Briefing-mail.
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for organisationen|UpdatedOrganizationBriefingSettings|Administration opdaterer organisationens indstillinger for beskyttelse af personlige oplysninger for Briefing-mail. |
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for brugeren|UpdatedUserBriefingSettings|Administration opdaterer indstillingerne for beskyttelse af personlige oplysninger for briefingmail.
 
 ### <a name="myanalytics-activities"></a>MyAnalytics-aktiviteter
 
@@ -1024,8 +1025,8 @@ I følgende tabel vises de aktiviteter i MyAnalytics, der er logført i Microsof
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administratoren opdaterer indstillinger på organisationsniveau for MyAnalytics. |
-|Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administratoren opdaterer brugerindstillingerne for MyAnalytics.|
+|Opdaterede indstillingerne for MyAnalytics for organisationen|UpdatedOrganizationMyAnalyticsSettings|Administration opdaterer indstillinger på organisationsniveau for MyAnalytics. |
+|Opdaterede brugerindstillinger for MyAnalytics|UpdatedUserMyAnalyticsSettings|Administration opdaterer brugerindstillingerne for MyAnalytics.|
 
 ### <a name="information-barriers-activities"></a>Aktiviteter inden for informationsbarrierer
 
@@ -1064,7 +1065,7 @@ I følgende tabel vises de aktiviteter for forbrugsrapporter, der er logført i 
 
 |**Fuldt navn**|**Drift**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administratoren opdaterede indstillingerne for beskyttelse af personlige oplysninger for forbrugsrapporter. |
+|Opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapport|UpdateUsageReportsPrivacySetting|Administration opdaterede indstillinger for beskyttelse af personlige oplysninger for forbrugsrapporter. |
 
 ### <a name="exchange-admin-audit-log"></a>Exchange administratorens overvågningslog
 
@@ -1106,6 +1107,18 @@ Hver overvågningspost for en sporet meddelelse indeholder følgende felter:
 - AttachmentName - Navnet på den vedhæftede fil.
 - OperationProperties – En liste over valgfrie egenskaber, f.eks. antallet af OTP-adgangskoder, der er sendt, eller mailemnet.
 
+### <a name="systemsync-activities"></a>SystemSync-aktiviteter
+
+I følgende tabel vises de aktiviteter for SystemSync, der er logført i Microsoft 365 overvågningslog.
+
+|**Fuldt navn**|**Drift**|**Beskrivelse**|
+|:-----|:-----|:-----|
+|Datashare er oprettet|DataShareCreated|Når dataeksporten oprettes af brugeren.|
+|Datashare er slettet|DataShareDeleted|Når dataeksporten slettes af brugeren.|
+|Generér kopi af lakedata|GenerateCopyOfLakeData|Når kopien af Lake Data genereres.|
+|Download kopi af lakedata|DownloadCopyOfLakeData|Når kopien af Lake Data downloades.|
+
+
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
 **Hvad er forskellige Microsoft 365 tjenester, der overvåges i øjeblikket?**
@@ -1134,7 +1147,7 @@ Ja, du kan hente overvågningslogge ved hjælp af følgende metoder:
 
 - [API'en til administration af Office 365](/office/office-365-management-api/office-365-management-activity-api-reference).
 
-- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) på Microsoft Purview-overholdelsesportalen.
+- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) i Microsoft Purview-compliance-portal.
 
 - Cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell.
 

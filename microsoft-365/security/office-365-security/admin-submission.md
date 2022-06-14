@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 09c0e80c8e8632c088aa42af558c90cbf0f0fc71
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: 125e151873e45717a4621bf2798e3587671c6b8d
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057639"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078927"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
@@ -60,7 +60,7 @@ Se denne korte video for at få mere at vide om, hvordan du bruger administrator
 
 - Administratorer kan sende meddelelser så gamle som 30 dage, hvis de stadig er tilgængelige i postkassen og ikke fjernes af brugeren eller en anden administrator.
 
-- Administratorindsendelser begrænses til følgende satser:
+- Administration indsendelser begrænses til følgende satser:
   - Maksimalt antal indsendelser i en periode på 15 minutter: 150 indsendelser
   - Samme indsendelser i en 24-timers periode: 3 indsendelser
   - Samme indsendelser i en 15-minutters periode: 1 indsendelse
@@ -149,13 +149,13 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 > [!NOTE]
 > Hvis filtrering af skadelig software har erstattet vedhæftede filer i meddelelser med filen Malware Alert Text.txt, skal du sende den oprindelige meddelelse fra karantæne, der indeholder de oprindelige vedhæftede filer. Du kan få flere oplysninger om karantæne, og hvordan du udgiver meddelelser med falske malware-positiver, under [Administrer karantænemeddelelser og filer som administrator](manage-quarantined-messages-and-files.md).
 
-## <a name="view-admin-submissions-to-microsoft"></a>Få vist administratorindsendelser til Microsoft
+## <a name="view-email-admin-submissions-to-microsoft"></a>Få vist mailadministratorindsendelser til Microsoft
 
 1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til siden **Indsendelser** under **Handlinger & indsendelser** \> **.** Hvis du vil gå direkte til siden **Indsendelser** , skal du bruge <https://security.microsoft.com/reportsubmission>.
 
-2. På siden **Indsendelser** skal du kontrollere, at fanen **Mails**, **URL-adresse** eller **Vedhæftet mail** er valgt.
+2. På siden **Indsendelser** skal du bekræfte, at fanen **Mails** er valgt.
 
-   - Du kan sortere posterne ved at klikke på en tilgængelig kolonneoverskrift. Klik på **Tilpas kolonner** for at få vist maksimalt syv kolonner. Standardværdierne er markeret med en stjerne (<sup>\*</sup>):
+   - Du kan sortere posterne ved at klikke på en tilgængelig kolonneoverskrift. Klik på **Tilpas kolonner** for at vælge de kolonner, du har brug for. Alle kolonner kan vælges og vises i indsendelsesgitteret. Standardværdierne er markeret med en stjerne (<sup>\*</sup>):
      - **Navn på afsendelse**<sup>\*</sup>
      - **Afsender**<sup>\*</sup>
      - **Modtager**
@@ -201,7 +201,6 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
    - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
      - **Ingen**
-     - **Type**
      - **Grund**
      - **Status**
      - **Resultat**
@@ -209,7 +208,105 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
    - Klik på **Eksportér** for at eksportere posterne. I den dialogboks, der vises, skal du gemme filen .csv.
 
-### <a name="admin-submission-result-details"></a>Oplysninger om resultat af administratorindsendelse
+## <a name="view-email-attachment-admin-submissions-to-microsoft"></a>Få vist administratorindsendelser af vedhæftede filer i mails til Microsoft
+
+1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til siden **Indsendelser** under **Handlinger & indsendelser** \> **.** Hvis du vil gå direkte til siden **Indsendelser** , skal du bruge <https://security.microsoft.com/reportsubmission>.
+
+2. På siden **Indsendelser** skal du kontrollere, at fanen **Vedhæftede filer i mails** er valgt.
+
+   - Du kan sortere posterne ved at klikke på en tilgængelig kolonneoverskrift. Klik på **Tilpas kolonner** for at vælge de kolonner, du har brug for. Alle kolonner kan vælges og vises i indsendelsesgitteret. Standardværdierne er markeret med en stjerne (<sup>\*</sup>):
+     - **Navn på vedhæftet fil**<sup>\*</sup>
+     - **Dato for afsendelse**<sup>\*</sup>
+     - **Årsag til afsendelse**<sup>\*</sup>
+     - **Status**<sup>\*</sup>
+     - **Resultat**<sup>\*</sup>
+     - **Filtrer dom**
+     - **Årsag til levering/blokering**
+     - **Afsendelses-id**
+     - **Objekt-id**
+     - **Politikhandling**
+     - **Sendt af**
+     - **Tags**<sup>\*</sup>
+     - **Tillad**
+
+     Klik på **Anvend**, når du er færdig.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/email-attachment-admin-submission-customize-columns.png":::
+
+   - Klik på **Filtrer** for at filtrere posterne. De tilgængelige filtre er:
+     - **Dato for afsendelse**: **Startdato** og **Slutdato**.
+     - **Indsendelses-id: En GUID-værdi**, der er tildelt hver indsendelse.
+     - **Navn på vedhæftet fil**
+     - **Sendt af**
+     - **Årsag til afsendelse**
+     - **Status**
+     - **Tags**
+
+     Klik på **Anvend**, når du er færdig.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/email-attachment-admin-submission-filters.png":::
+
+   - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
+     - **Ingen**
+     - **Grund**
+     - **Status**
+     - **Resultat**
+     - **Tags**
+
+   - Klik på **Eksportér** for at eksportere posterne. I den dialogboks, der vises, skal du gemme filen .csv.
+
+## <a name="view-urls-admin-submissions-to-microsoft"></a>Få vist url-adresser, administratorindsendelser til Microsoft
+
+1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til siden **Indsendelser** under **Handlinger & indsendelser** \> **.** Hvis du vil gå direkte til siden **Indsendelser** , skal du bruge <https://security.microsoft.com/reportsubmission>.
+
+2. Kontrollér, at fanen **URL-adresser** er valgt på siden **Indsendelser**.
+
+   - Du kan sortere posterne ved at klikke på en tilgængelig kolonneoverskrift. Klik på **Tilpas kolonner** for at vælge de kolonner, du har brug for. Alle kolonner kan vælges og vises i indsendelsesgitteret. Standardværdierne er markeret med en stjerne (<sup>\*</sup>):
+     - **URL**<sup>\*</sup>
+     - **Dato for afsendelse**<sup>\*</sup>
+     - **Årsag til afsendelse**<sup>\*</sup>
+     - **Status**<sup>\*</sup>
+     - **Resultat**<sup>\*</sup>
+     - **Filtrer dom**
+     - **Årsag til levering/blokering**
+     - **Afsendelses-id**
+     - **Objekt-id**
+     - **Politikhandling**
+     - **Sendt af**
+     - **Tags**<sup>\*</sup>
+     - **Tillad**
+
+     Klik på **Anvend**, når du er færdig.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/url-admin-submission-customize-columns.png":::
+
+   - Klik på **Filtrer** for at filtrere posterne. De tilgængelige filtre er:
+     - **Dato for afsendelse**: **Startdato** og **Slutdato**.
+     - **Indsendelses-id: En GUID-værdi**, der er tildelt hver indsendelse.
+     - **URL**
+     - **Sendt af**
+     - **Årsag til afsendelse**
+     - **Status**
+     - **Tags**
+
+     Klik på **Anvend**, når du er færdig.
+
+     > [!div class="mx-imgBorder"]
+     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/url-admin-submission-filters.png":::
+
+   - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
+     - **Ingen**
+     - **Grund**
+     - **Status**
+     - **Resultat**
+     - **Tags**
+
+   - Klik på **Eksportér** for at eksportere posterne. I den dialogboks, der vises, skal du gemme filen .csv.
+
+### <a name="admin-submission-result-details"></a>Administration oplysninger om indsendelsesresultat
 
 Meddelelser, der sendes i administratorindsendelser, gennemses, og resultaterne vises i pop op-vinduet med oplysninger om indsendelser:
 

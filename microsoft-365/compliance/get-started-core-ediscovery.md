@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Beskriver, hvordan du kommer i gang med at bruge eDiscovery (Standard) i Microsoft Purview. Når du har tildelt eDiscovery-tilladelser og oprettet en sag, kan du tilføje medlemmer, oprette eDiscovery-ventepositioner og derefter søge efter og eksportere indhold, der er relevant for din undersøgelse.
-ms.openlocfilehash: e224bf22741d0e1599d099802470e231b11fd785
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 38e4d24405810293c9261c1c7f728ece0714cd66
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094940"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078474"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Kom i gang med eDiscovery (Standard) i Microsoft Purview
 
@@ -37,7 +37,7 @@ I denne artikel beskrives de trin, der er nødvendige for at konfigurere eDiscov
 
 Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement og licenser pr. bruger.
 
-- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen og bruge ventepositions- og eksportfunktioner, skal din organisation have et Microsoft 365 E3 eller Office 365 E3 abonnement eller nyere. Microsoft 365 Frontline-organisationer skal have et F5-abonnement.
+- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Standard) i Microsoft Purview-compliance-portal og bruge ventepositions- og eksportfunktionerne, skal din organisation have et Exchange onlineabonnement på Plan 2 eller Microsoft 365 E3 eller Office 365 E3 abonnement eller nyere. Microsoft 365 Frontline-organisationer skal have et F5-abonnement.
 
 - **Licenser pr. bruger:** Hvis du vil placere en eDiscovery-venteposition på postkasser og websteder, skal brugerne tildeles en af følgende licenser, afhængigt af dit organisationsabonnement:
 
@@ -109,7 +109,7 @@ Det næste trin er at oprette en sag og begynde at bruge eDiscovery (Standard). 
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a> , og log på med legitimationsoplysningerne for en brugerkonto, der er tildelt de relevante eDiscovery-tilladelser. Medlemmer af rollegruppen Organisationsadministration kan også oprette eDiscovery-sager (Standard).
 
-2. Klik på **Vis alle** i navigationsruden til venstre på overholdelsesportalen, og klik derefter på **eDiscoveryCore** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank"></a>
+2. Klik på **Vis alle** i navigationsruden til venstre på overholdelsesportalen, og klik derefter på **eDiscovery** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**Core**</a>.
 
 3. Klik på **Opret en sag** på siden **eDiscovery (Standard**).
 

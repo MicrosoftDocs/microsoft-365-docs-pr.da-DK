@@ -15,18 +15,18 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Administratorer kan konfigurere en dataconnector til at importere medarbejderdata fra organisationens HR-system for at Microsoft 365. Dette giver dig mulighed for at bruge HR-data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere aktiviteter fra bestemte brugere, der kan udgøre en intern trussel for din organisation.
-ms.openlocfilehash: 4da4546ef42854c8265254b2c9e1a51b528a8d7d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: cfde990b002d05962b3b7489f1adc9f5122af7c5
+ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092795"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66078562"
 ---
 # <a name="set-up-a-connector-to-import-hr-data"></a>Konfigurer en connector til import af HR-data
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen for at importere HR-data (Human Resources), der er relateret til hændelser, f.eks. en brugers fratræden eller en ændring i en brugers jobniveau. HR-dataene kan derefter bruges af [insiderrisikostyringsløsningen](insider-risk-management.md) til at generere risikoindikatorer, der kan hjælpe dig med at identificere mulig ondsindet aktivitet eller datatyveri af brugere i din organisation.
+Du kan konfigurere en dataconnector i Microsoft Purview-compliance-portal til at importere HR-data, der er relateret til hændelser, f.eks. en brugers fratræden eller en ændring af en brugers jobniveau. HR-dataene kan derefter bruges af [insiderrisikostyringsløsningen](insider-risk-management.md) til at generere risikoindikatorer, der kan hjælpe dig med at identificere mulig ondsindet aktivitet eller datatyveri af brugere i din organisation.
 
 Konfiguration af en connector til HR-data, som politikker for styring af insiderrisiko kan bruge til at generere risikoindikatorer, består i at oprette en CSV-fil, der indeholder HR-dataene, oprette en app i Azure Active Directory, der bruges til godkendelse, oprette en HR-dataconnector i overholdelsesportalen og derefter køre et script (efter en tidsplan), der overfører HR-dataene i CSV-filer til Microsoft-cloudmiljøet, så de er tilgængelige  til løsningen til styring af insiderrisiko.
 
@@ -39,11 +39,11 @@ Konfiguration af en connector til HR-data, som politikker for styring af insider
 
 - Bestem, hvordan du henter eller eksporterer dataene fra organisationens HR-system (og regelmæssigt), og føj dem til de CSV-filer, du opretter i trin 1. Det script, du kører i trin 4, uploader HR-dataene i CSV-filerne til Microsoft-cloudmiljøet.
 
-- Den bruger, der opretter HR-connectoren i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter HR-connectoren i trin 3, skal tildeles rollen Dataconnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 - Det eksempelscript, du kører i trin 4, uploader dine HR-data til Microsoft-cloudmiljøet, så de kan bruges af løsningen til styring af insiderrisiko. Dette eksempelscript understøttes ikke under noget Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptet leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscriptet og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-- Denne connector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible. Du kan finde en trinvis vejledning til konfiguration af en HR-connector i et GCC miljø under [Konfigurer en connector til import af HR-data i US Government](import-hr-data-US-government.md).
+- Denne connector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible. Du kan finde en trinvis vejledning til konfiguration af en HR-connector i et GCC miljø under [Konfigurer en connector til import af HR-data i US Government](import-hr-data-US-government.md).
 
 ## <a name="step-1-prepare-a-csv-file-with-your-hr-data"></a>Trin 1: Forbered en CSV-fil med dine HR-data
 
@@ -169,7 +169,7 @@ I følgende tabel beskrives hver kolonne i CSV-filen for data til gennemsyn af y
 ### <a name="csv-file-for-employee-profile-data-preview"></a>CSV-fil til medarbejderprofildata (prøveversion)
 
 > [!NOTE]
-> Muligheden for at oprette en HR-connector til medarbejderprofildata findes i en offentlig prøveversion. Hvis du vil oprette en HR-connector, der understøtter medarbejderprofildata, skal du gå til siden **Dataconnectors på overholdelsesportalen**, vælge fanen **Forbindelser** og derefter klikke på **Tilføj en connectorHR** >  **(prøveversion).** Følg trinnene for at oprette en connector i [Trin 3: Opret HR-connectoren](#step-3-create-the-hr-connector).
+> Muligheden for at oprette en HR-connector til medarbejderprofildata findes i en offentlig prøveversion. Hvis du vil oprette en HR-connector, der understøtter medarbejderprofildata, skal du gå til siden **Dataconnectors på overholdelsesportalen**, vælge fanen **Forbindelser** og derefter klikke på **Tilføj en connector** > **HR (prøveversion).** Følg trinnene for at oprette en connector i [Trin 3: Opret HR-connectoren](#step-3-create-the-hr-connector).
 
 Her er et eksempel på en CSV-fil til dataene for medarbejderprofildataene.
 
@@ -219,11 +219,11 @@ Her er kravene til konfiguration af en CSV-fil med flere datatyper:
 
 - Du skal tilføje de påkrævede kolonner (og valgfrit, hvis du bruger dem) for hver datatype og det tilsvarende kolonnenavn i kolonneoverskriften. Hvis en datatype ikke svarer til en kolonne, kan du lade værdien være tom.
 
-- Hvis du vil bruge en CSV-fil med flere typer HR-data, skal HR-connectoren vide, hvilke rækker i CSV-filen der indeholder typen HR-data. Dette opnås ved at føje en ekstra **HRScenario-kolonne** til CSV-filen. Værdierne i denne kolonne identificerer typen af HR-data i hver række. Værdier, der svarer til de fire HR-scenarier, kan f.eks. være Fratræden, Ændring af jobniveau, \`Gennemgang\` af ydeevne, \`Plan for\` forbedring af ydeevnen og \`Medarbejderprofil\`.\`\`\`\`
+- Hvis du vil bruge en CSV-fil med flere typer HR-data, skal HR-connectoren vide, hvilke rækker i CSV-filen der indeholder typen HR-data. Dette opnås ved at føje en ekstra **HRScenario-kolonne** til CSV-filen. Værdierne i denne kolonne identificerer typen af HR-data i hver række. Værdier, der svarer til HR-scenarierne, kan f.eks. være Fratræden, Ændring af jobniveau, \`Gennemgang\` af ydeevne, \`Plan for forbedring af ydeevnen\` og \`Medarbejderprofil\`.\`\`\`\`
 
 - Hvis du har flere CSV-filer, der indeholder kolonnen HRScenario**, skal du sørge for, at hver fil bruger det samme kolonnenavn og de samme værdier, som identificerer de specifikke HR-scenarier.
 
-I følgende eksempel vises en CSV-fil, der indeholder kolonnen **HRScenario** . Værdierne i kolonnen HRScenario identificerer datatypen i den tilsvarende række.
+I følgende eksempel vises en CSV-fil, der indeholder kolonnen **HRScenario** . Værdierne i kolonnen HRScenario identificerer datatypen i den tilsvarende række. I eksemplet nedenfor kan du se fire HR-scenarier Fratræden, Ændring af jobniveau, \`Gennemgang\` af ydeevne og \`Plan for\` forbedring af ydeevnen.\`\`\`\`
 
 ```text
 HRScenario,EmailAddress,ResignationDate,LastWorkingDate,EffectiveDate,Remarks,Rating,OldLevel,NewLevel
@@ -246,11 +246,11 @@ Baseret på din organisations HR-systemer, og hvordan du eksporterer HR-data til
 
 ## <a name="step-2-create-an-app-in-azure-active-directory"></a>Trin 2: Opret en app i Azure Active Directory
 
-Det næste trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den HR-connector, du opretter i trin 3. Når du opretter denne app, kan Azure AD godkende HR-connectoren, når den kører, og forsøger at få adgang til din organisation. Denne app bruges også til at godkende det script, du kører i trin 4, for at uploade dine HR-data til Microsoft-cloudmiljøet. Under oprettelsen af denne Azure AD-app skal du gemme følgende oplysninger. Disse værdier bruges i trin 3 og trin 4.
+Det næste trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den HR-connector, du opretter i trin 3. Når du opretter denne app, kan Azure AD godkende HR-connectoren, når den kører, og forsøger at få adgang til din organisation. Denne app bruges også til at godkende det script, du kører i trin 4, for at uploade dine HR-data til Microsoft-cloudmiljøet. Under oprettelsen af denne Azure AD app skal du gemme følgende oplysninger. Disse værdier bruges i trin 3 og trin 4.
 
-- Azure AD-program-id (også kaldet *app-id* eller *klient-id*)
+- Azure AD program-id (også kaldet *app-id* eller *klient-id*)
 
-- Azure AD-programhemmelighed (også kaldet *klienthemmeligheden*)
+- Azure AD programhemmelighed (også kaldet *klienthemmeligheden*)
 
 - Lejer-id (også kaldet *mappe-id*)
 
@@ -270,7 +270,7 @@ Når du har fuldført dette trin, skal du sørge for at kopiere det job-id, der 
 
 4. Gør følgende på siden **Konfigurer forbindelsen** , og klik derefter på **Næste**:
 
-   1. Skriv eller indsæt Azure AD-program-id'et for den Azure-app, du oprettede i trin 2.
+   1. Skriv eller indsæt Azure AD program-id for den Azure-app, du oprettede i trin 2.
 
    2. Skriv et navn til HR-connectoren.
 
@@ -341,8 +341,8 @@ Det sidste trin i konfiguration af en HR-connector er at køre et eksempelscript
    | Parameter | Beskrivelse |
    |:-----|:-----|:-----|
    |`tenantId`|Dette er id'et for din Microsoft 365 organisation, som du fik i trin 2. Du kan også hente lejer-id'et for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
-   |`appId` |Dette er Azure AD-program-id'et for den app, du oprettede i Azure AD i trin 2. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365 organisation. | 
-   |`appSecret`|Dette er Azure AD-programhemmeligheden for den app, du oprettede i Azure AD i trin 2. Dette bruges også til godkendelse.|
+   |`appId` |Dette er det Azure AD program-id for den app, du oprettede i Azure AD i trin 2. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365 organisation. | 
+   |`appSecret`|Dette er Azure AD programhemmeligheden for den app, du oprettede i Azure AD i trin 2. Dette bruges også til godkendelse.|
    |`jobId`|Dette er job-id'et for den HR-connector, du oprettede i trin 3. Dette bruges til at knytte de HR-data, der uploades til Microsoft-cloudmiljøet, til HR-connectoren.|
    |`filePath`|Dette er filstien til filen (gemt på det samme system som scriptet), som du oprettede i trin 1. Prøv at undgå mellemrum i filstien. ellers skal du bruge enkelte anførselstegn.|
    |||
@@ -414,7 +414,7 @@ Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver
 
    1. I feltet **Tilføj argumenter (valgfrit)** skal du indsætte den samme scriptkommando, som du kørte i trin 4. Det kan f.eks. `.\HRConnector.ps1 -tenantId "d5723623-11cf-4e2e-b5a5-01d1506273g9" -appId "c12823b7-b55a-4989-faba-02de41bb97c3" -appSecret "MNubVGbcQDkGCnn"  -jobId "e081f4f4-3831-48d6-7bb3-fcfab1581458" -filePath "C:\Users\contosoadmin\Desktop\Data\employee_termination_data.csv"`
 
-   1. I feltet **Start i (valgfrit)** skal du indsætte mappeplaceringen for det script, du kørte i trin 4. For eksempel `C:\Users\contosoadmin\Desktop\Scripts`.
+   1. I feltet **Start i (valgfrit)** skal du indsætte mappeplaceringen for det script, du kørte i trin 4. Det kunne f.eks. være `C:\Users\contosoadmin\Desktop\Scripts`.
 
    1. Klik på **OK** for at gemme indstillingerne for den nye handling.
 
