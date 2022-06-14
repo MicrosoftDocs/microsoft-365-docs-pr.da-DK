@@ -170,8 +170,6 @@
               href: use-arc-exceptions-to-mark-trusted-arc-senders.md
         - name: Mailflow i EOP
           href: mail-flow-in-eop.md
-        - name: Politikker for brugerindsendelser
-          href: user-submission.md
         - name: Tilføj understøttelse af anonym indgående mail via IPv6
           href: support-for-anonymous-inbound-email-messages-over-ipv6.md
         - name: Installér Application Guard til Office
@@ -328,6 +326,8 @@
               href: enable-the-report-message-add-in.md
             - name: Rapportér falske positiver og falske negativer i Outlook
               href: report-false-positives-and-false-negatives.md
+            - name: Brugerrapporterede meddelelsesindstillinger
+              href: user-submission.md
             - name: 'Brug regler for mailflow til at se, hvad brugerne rapporterer til Microsoft'
               href: /exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft
             - name: Indsend malware og ikke-malware til Microsoft
