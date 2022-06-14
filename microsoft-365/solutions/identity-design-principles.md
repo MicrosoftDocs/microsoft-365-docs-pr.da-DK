@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 planlægning af virksomhedsressourcer – sikkerhedsarkitektur
+title: Til identitet og videre – en arkitekts synspunkt
 description: Få mere at vide om de vigtigste designstrategier for Microsoft Enterprise-arkitektur fra Alex Shteynberg, Teknisk Principal Architect hos Microsoft.
 ms.author: bcarter
 author: brendacarter
@@ -14,12 +14,12 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: ff8fdb34cc69f108b57468d71342a3b1dfb39302
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 065e9a124deb7c064b31666d96a11f076d65abdd
+ms.sourcegitcommit: 52e2a67a1badd7faaabbcf99c65f464e23a47805
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015076"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66060955"
 ---
 # <a name="to-identity-and-beyondone-architects-viewpoint"></a>Til identitet og videre – en arkitekts synspunkt
 

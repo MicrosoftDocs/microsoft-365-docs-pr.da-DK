@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a25d1b7ad11c57bc63035086d9a043bcac504c16
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: ea60746554c9ad52c3e8b6d23989b2b7659cd0ad
+ms.sourcegitcommit: 52e2a67a1badd7faaabbcf99c65f464e23a47805
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057599"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "66060932"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -73,14 +73,16 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 
 - Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
-- Du skal have tildelt tilladelser i Exchange Online, før du kan udføre procedurerne i denne artikel:
-    - Hvis du vil tilføje og fjerne værdier fra listen over tilladte/blokerede lejere, skal du være medlem af
-      - **Rollegruppen Organisationsadministration** eller **Sikkerhedsadministrator** (**rolle som sikkerhedsadministrator**)
-      - **Rollegruppe for sikkerhedsoperator** (**Lejer allowBlockList Manager**).
-    - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af
-      - **Rollegruppe for global læser**
-      - **Rollegruppe for sikkerhedslæser**
-      - **Rollegruppen Kun visningskonfiguration** .
+- Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
+  - Hvis du vil tilføje og fjerne poster fra listen over tilladte/blokerede lejere, skal du være medlem af en af følgende rollegrupper:
+    - **Organisationsadministration** ( **sikkerhedsadministratorrollen** ).
+    - **Sikkerhedsadministrator** (rollen **Sikkerhedsadministrator** ).
+    - **Sikkerhedsoperator** (rollen **AllowBlockList Manager for lejeren** ).
+
+  - Hvis du vil have skrivebeskyttet adgang til listen over tilladte/blokerede lejere, skal du være medlem af en af følgende rollegrupper:
+    - **Rollegruppen Global læser** .
+    - **Rollegruppen Sikkerhedslæser** .
+    - **Rollegruppen Kun visningskonfiguration** .
 
   Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
@@ -482,7 +484,6 @@ Du kan f.eks. tilføje en tilladelsespost for følgende domænepar:
 - **Infrastruktur**: tms.mx.com
 
 Det er kun meddelelser fra dette domæne *og* det afsendende infrastrukturpar, der må spoof. Andre afsendere, der forsøger at spoof gmail.com, er ikke tilladt. Meddelelser fra afsendere i andre domæner, der stammer fra tms.mx.com kontrolleres af spoof intelligence.
-
 
 ## <a name="what-to-expect-after-you-add-an-allow-or-block-entry"></a>Hvad kan du forvente, når du har tilføjet en tilladelses- eller blokindtastning?
 
