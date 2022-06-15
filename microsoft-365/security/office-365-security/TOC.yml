@@ -404,6 +404,8 @@
           href: step-by-step-guides/how-to-handle-false-positives-in-microsoft-defender-for-office-365.md
         - name: Sådan konfigureres karantænetilladelser og -politikker
           href: step-by-step-guides/how-to-configure-quarantine-permissions-with-quarantine-policies.md
+        - name: Hold dig informeret om kommende ændringer til Microsoft Defender for Office 365 ved hjælp af meddelelsescenteret
+          href: step-by-step-guides/stay-informed-with-message-center.md
         - name: 'Sikring af, at du altid har de optimale sikkerhedskontroller med forudindstillede sikkerhedspolitikker'
           href: step-by-step-guides/ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies.md
         - name: 'Sådan prioriterer, administrerer, undersøger og besvarer du hændelser i Microsoft 365 Defender'
