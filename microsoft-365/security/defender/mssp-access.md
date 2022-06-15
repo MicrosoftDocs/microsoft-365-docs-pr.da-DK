@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 ms.collection:
 - M365-security-compliance
-ms.openlocfilehash: 3b3f438555be507d046f99838596a6672714e0ad
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 4eccd4d6140810bae4caef5e194082aeb3054217
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65670218"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102366"
 ---
 # <a name="provide-managed-security-service-provider-mssp-access"></a>Angiv mssp-adgang (managed security service provider) 
 
@@ -128,6 +128,3 @@ Hvis du vil implementere en delegeret adgangsløsning med flere lejere, skal du 
      På dette tidspunkt er der klargjort analytikeradgang, og hver analytiker bør kunne få adgang til kundens Microsoft 365 Defender portal:
 
     `https://security.microsoft.com/?tid=<CustomerTenantId>` med de tilladelser og roller, de blev tildelt.
-
-> [!IMPORTANT]
-> Uddelegeret adgang til Microsoft Defender for Endpoint i Microsoft 365 Defender portalen giver i øjeblikket adgang til en enkelt lejer pr. browservindue.

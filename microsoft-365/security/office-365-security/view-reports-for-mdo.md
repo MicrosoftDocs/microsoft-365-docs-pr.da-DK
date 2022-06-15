@@ -21,16 +21,16 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 08fd6e2fed34296b42fb3b12bec9b5b2b4cb91f8
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 551d2f0f2da872ff24da2bd0d691eea775894c08
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535840"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102564"
 ---
 # <a name="view-defender-for-office-365-reports-in-the-microsoft-365-defender-portal"></a>Få vist Defender for Office 365 rapporter på Microsoft 365 Defender-portalen
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -48,7 +48,7 @@ Microsoft Defender for Office 365 organisationer (f.eks. Microsoft 365 E5 abonne
 
 ### <a name="download-reports"></a>Download rapporter
 
-1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **ReportsEmail** >  **& collaboration** \> **Reports til download**. Hvis du vil gå direkte til siden **Rapporter til download** , skal du bruge <https://security.microsoft.com/ReportsForDownload?viewid=custom>.
+På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail i rapporter** > **& samarbejdsrapporter** \> **til download**. Hvis du vil gå direkte til siden **Rapporter til download** , skal du bruge <https://security.microsoft.com/ReportsForDownload?viewid=custom>.
 
 :::image type="content" source="../../media/email-collaboration-download-reports.png" alt-text="Siden Mail & samarbejdsrapporter på Microsoft 365 Defender-portalen" lightbox="../../media/email-collaboration-download-reports.png":::
 
@@ -149,7 +149,7 @@ I **handlingsvisningen Vis data efter URL-adresse klikbeskyttelse** vises antall
 - **Blokeret**: Klik på Blokeret.
 - **Blokeret af lejeradministrator**: De klik, der er blokeret i politikker for Pengeskab links.
 - **Blokeret og klikket igennem**: Blokerede klik, hvor brugerne klikker sig igennem til den blokerede URL-adresse.
-- **Blokeret af lejeradministratoren og klikket igennem**: Administratoren har blokeret linket, men brugeren har klikket sig igennem.
+- **Blokeret af lejeradministratoren og klikket igennem**: Administration har blokeret linket, men brugeren har klikket sig igennem.
 - **Klikkede sig igennem under scanningen**: Klikker, hvor brugerne klikker gennem den ventende scanningsside til URL-adressen.
 - **Afventer scanning**: Klik på URL-adresser, der afventer en scanningsafsigelse.
 
@@ -224,7 +224,7 @@ PowerShell-rapporterings-cmdlet'er:
 
 |Rapport|Emne|
 |---|---|
-|Mest populære afsendere og modtagere|[Hent-MailTrafficTopReport](/powershell/module/exchange/get-mailtraffictopreport) <p> [Hent-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
+|Mest populære afsendere og modtagere|[Hent-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
 |Mest populære malware|[Hent-MailTrafficSummaryReport](/powershell/module/exchange/get-mailtrafficsummaryreport)|
 |Posttrafik|[Hent-MailTrafficATPReport](/powershell/module/exchange/get-mailtrafficatpreport) <p> [Get-MailDetailATPReport](/powershell/module/exchange/get-maildetailatpreport)|
 |Sikre links|[Get-SafeLinksAggregateReport](/powershell/module/exchange/get-safelinksaggregatereport) <p> [Get-SafeLinksDetailReport](/powershell/module/exchange/get-safelinksdetailreport)|

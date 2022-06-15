@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: drjones, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -20,22 +20,22 @@ ms.custom:
 - okr_SMB
 - AdminSurgePortfolio
 - AdminTemplateSet
-description: Hvis du har Microsoft 365 Business Standard fra en forhandler, kan du få mere at vide om, hvordan du indløser produktnøglen og aktiverer dit abonnement.
+description: Hvis du har købt Microsoft 365 Business Standard fra en detailbutik, kan du få mere at vide om, hvordan du indløser produktnøglen og aktiverer dit abonnement.
 ms.date: 11/13/2020
-ms.openlocfilehash: 9d0adb7609f7334f3dc5dcb0d0c52839bc61758d
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: 9dd666155022298ca824a1d0cf563e8fcc7f63ae
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63589918"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101498"
 ---
 # <a name="enter-your-product-key-for-microsoft-365-business-standard"></a>Angiv din produktnøgle til Microsoft 365 Business Standard
 
-Hvis du har Microsoft 365 Business Standard fra en forhandler, hjælper denne artikel dig med at aktivere dit abonnement.
+Hvis du har købt Microsoft 365 Business Standard fra en detailbutik, hjælper denne artikel dig med at aktivere dit abonnement.
   
  **Har du brug for noget andet?**
- **Hvis du vil have hjælp Microsoft 365 Family eller Microsoft 365 Personal**, skal du [se Brug af produktnøgler Office](https://support.microsoft.com/office/12a5763a-d45c-4685-8c95-a44500213759).  
- **Volumenlicenskunde?** Hvis du har Microsoft 365 til virksomheder via et [Microsoft Open-licensprogram](https://go.microsoft.com/fwlink/p/?LinkID=613298), skal du se artiklen Angiv [din produktnøgle, der er købt hos Microsoft Open](purchases-from-microsoft-open.md).
+ **Hvis du vil have hjælp til Microsoft 365 Family eller Microsoft 365 Personal**, skal [du se Brug af produktnøgler med Office](https://support.microsoft.com/office/12a5763a-d45c-4685-8c95-a44500213759).  
+ **Volumenlicenskunde?** Hvis du har købt Microsoft 365 til virksomheder via et [Microsoft Open License Program](https://go.microsoft.com/fwlink/p/?LinkID=613298), skal du se artiklen [Angiv din produktnøgle, der er købt fra Microsoft Open](purchases-from-microsoft-open.md).
   
 ## <a name="activate-a-new-subscription"></a>Aktivér et nyt abonnement
 
@@ -43,31 +43,31 @@ Hvis du har Microsoft 365 Business Standard fra en forhandler, hjælper denne ar
 
 2. Angiv din produktnøgle, og vælg derefter **Næste**.
 
-3. Angiv dit navn, din arbejdsmailadresse, firmaets telefonnummer, virksomhedens navn og land eller område, og vælg derefter **Næste**.
+3. Angiv dit navn, din arbejdsmailadresse, dit firmas telefonnummer, dit firmanavn og dit land eller område, og vælg derefter **Næste**.
 
 4. Angiv et telefonnummer for at modtage enten en sms eller et opkald for at bekræfte din identitet.
 
-5. Du kan få et nyt domæne, bruge et domænenavn, du allerede ejer, eller tilføje et domæne senere. Trinnene kan variere, så følg instruktionerne, afhængigt af hvilken indstilling du vælger.
+5. Du kan få et nyt domæne, bruge et domænenavn, du allerede ejer, eller tilføje et domæne senere. Trinnene kan variere, så følg prompterne, afhængigt af hvilken indstilling du vælger.
 
     > [!NOTE]
-    > Hvis du vil sikre dig, at dit abonnement forlænges automatisk ved udløbet af abonnementsperioden, kan du tilføje et kreditkort eller en bankkonto og derefter slå Tilbagevendende [fakturering til for](subscriptions/renew-your-subscription.md#turn-recurring-billing-off-or-on) det pågældende abonnement.
+    > Hvis du vil sikre dig, at dit abonnement automatisk forlænges i slutningen af dets løbetid, kan du tilføje et kreditkort eller en bankkonto og derefter [aktivere Tilbagevendende fakturering](subscriptions/renew-your-subscription.md#turn-recurring-billing-off-or-on) for det pågældende abonnement.
 
-6. Når du er færdig, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Administration for</a> at administrere dit abonnement.
+6. Når du er færdig, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Administration center</a> for at administrere dit abonnement.
 
-## <a name="extend-the-expiration-date-or-add-a-license-to-an-existing-subscription"></a>Udvid udløbsdatoen, eller føj en licens til et eksisterende abonnement
+## <a name="extend-the-expiration-date-or-add-a-license-to-an-existing-subscription"></a>Forlæng udløbsdatoen, eller føj en licens til et eksisterende abonnement
 
-Hvis du vil forlænge udløbsdatoen eller føje en licens til dit eksisterende Microsoft 365 Business Standard-abonnement, skal du bruge en ny og ubrugt nøgle til den samme Microsoft 365 plan. Angivelse af din Microsoft 365-produktnøgle fungerer ikke, fordi en nøgle, der allerede er blevet indløst, ikke kan bruges igen. Se [Tilføj licenser til eller forlæng et abonnement, som er betalt med en produktnøgle](licenses/add-licenses-using-product-key.md).
+Hvis du vil forlænge udløbsdatoen eller føje en licens til dit eksisterende Microsoft 365 Business Standard-abonnement, skal du bruge en ny og ubrugt nøgle til den samme Microsoft 365 plan. Hvis du angiver din oprindelige Microsoft 365 produktnøgle, fungerer det ikke, fordi en nøgle, der allerede er blevet indløst, ikke kan bruges igen. Se [Føj licenser til eller forlæng et abonnement, der betales for ved hjælp af en produktnøgle](licenses/add-licenses-using-product-key.md).
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis du er ny bruger af Microsoft 365 til virksomheder, kan du se, hvordan [du konfigurerer Microsoft 365](../admin/setup/setup.md).
+Hvis du ikke kender Microsoft 365 til virksomheder, kan du få mere at vide om, hvordan [du konfigurerer Microsoft 365](../admin/setup/setup.md).
 
-Se denne liste over almindelige fejl og løsninger: [Problemer med din Microsoft 365 for Business-produktnøgle?](product-key-errors-and-solutions.md)
+Se denne liste over almindelige fejl og løsninger: [Problemer med produktnøglen til Microsoft 365 til virksomheder?](product-key-errors-and-solutions.md)
   
-Eller ring [til Microsoft Support](../admin/get-help-support.md).
+Du kan [også ringe til Microsoft Support](../admin/get-help-support.md).
 
 ## <a name="related-content"></a>Relateret indhold
 
 [Opgrader til en anden plan](./subscriptions/upgrade-to-different-plan.md) (artikel)\
-[Hvad sker der med mine data og min adgang, når mit Microsoft 365 for Business-abonnement stopper?](./subscriptions/what-if-my-subscription-expires.md) (artikel)\
-[Forstå abonnementer og licenser i Microsoft 365 for business](./licenses/subscriptions-and-licenses.md) (artikel)
+[Hvad sker der med mine data og adgang, når mit abonnement på Microsoft 365 til virksomheder ophører?](./subscriptions/what-if-my-subscription-expires.md) (artikel)\
+[Forstå abonnementer og licenser i Microsoft 365 til virksomheder](./licenses/subscriptions-and-licenses.md) (artikel)

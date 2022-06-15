@@ -15,19 +15,19 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 6faca5dde477908010f4426ff9009f383b63c58c
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 0dd59d2196ebb2c2af80fb53d43a009ff3a367d0
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418604"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102318"
 ---
 # <a name="configure-exclusions-for-files-opened-by-processes"></a>Konfigurer udeladelser for filer, der er åbnet af processer
 
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -39,8 +39,6 @@ Du kan udelade filer, der er blevet åbnet af bestemte processer, fra Microsoft 
 I denne artikel beskrives det, hvordan du konfigurerer lister over undtagelser.
 
 ## <a name="examples-of-exclusions"></a>Eksempler på udeladelser
-
-<br/><br/>
 
 |Udelukkelse|Eksempel|
 |---|---|
@@ -99,8 +97,6 @@ Formatet for cmdlet'erne er:
 
 Følgende er tilladt som \<cmdlet\>:
 
-<br/><br/>
-
 |Konfigurationshandling|PowerShell-cmdlet|
 |---|---|
 |Opret eller overskriv listen|`Set-MpPreference`|
@@ -141,8 +137,6 @@ Brugen af jokertegn på listen over procesudeladelser adskiller sig fra brugen a
 Du kan især ikke bruge spørgsmålstegnet (`?`) jokertegn, og stjerne jokertegnet (`*`) kan kun bruges i slutningen af en fuldstændig sti. Du kan stadig bruge miljøvariabler (f.eks. `%ALLUSERSPROFILE%`) som jokertegn, når du definerer elementer på listen over procesudeladelser.
 
 I følgende tabel beskrives det, hvordan jokertegnene kan bruges på listen over procesudeladelser:
-
-<br/><br/>
 
 |Wildcard|Eksempel på brug|Eksempler på forekomster|
 |---|---|---|
@@ -191,7 +185,7 @@ $WDAVprefs.ExclusionProcess
 Se [Brug PowerShell-cmdlet'er til at konfigurere og køre Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) og [Microsoft Defender Antivirus-cmdlet'er](/powershell/module/defender) for at få flere oplysninger om, hvordan du bruger PowerShell med Microsoft Defender Antivirus.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

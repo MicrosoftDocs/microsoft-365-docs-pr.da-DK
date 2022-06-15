@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: nalinkla, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,12 +21,12 @@ ms.custom:
 search.appverid: MET150
 description: Den nemmeste måde at opgradere planer på er at bruge fanen Opgrader i Administration. Fanen Opgrader understøttes dog ikke altid.
 ms.date: 04/21/2021
-ms.openlocfilehash: 1867a161f8de02e20261553bb4dbb10b92ce523f
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 4578730d82fddd5bdd3d0d25dd7fd1e16414808b
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042390"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102252"
 ---
 # <a name="upgrade-to-a-different-plan"></a>Skift til en anden plan
 
@@ -36,7 +36,7 @@ Når din virksomhed ændres, eller du har brug for flere funktioner, kan du opgr
 
 Når du bruger fanen **Opgrader** , bliver du ført gennem processen med at købe en ny plan. Alle brugere tildeles automatisk licenser i den nye plan, og din gamle plan annulleres for dig.
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+1. I Administration center skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a>.
 2. Vælg det abonnement, du vil opgradere.
 3. På siden med abonnementsoplysninger under **Produktoplysninger og opgraderinger** skal du vælge **Få vist de opgraderinger, der anbefales til din organisation**.
 4. Find den plan, du vil opgradere til, og vælg derefter knappen **Opgrader** .

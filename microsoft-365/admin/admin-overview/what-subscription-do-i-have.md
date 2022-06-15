@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: sgautam, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -23,12 +23,12 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvilke Microsoft 365 abonnementer din organisation har, ved at gå til siden Dine produkter.
 ms.date: 01/21/2021
-ms.openlocfilehash: 0f88b833157485e0b7d27a84b94c6de801df56f8
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: fb2b3354bd9d12f50b2b70291b6ecba94dd4c9b3
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466696"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101520"
 ---
 # <a name="which-microsoft-365-subscription-do-i-have"></a>Hvilket Microsoft 365 abonnement har jeg?
 

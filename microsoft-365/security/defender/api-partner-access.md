@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: 612cbb4005285f46594bc900cbbc14497b72ffec
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: 43bb018abe6a19464d7e52493ed1b4ccd1f15140
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268810"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102410"
 ---
 # <a name="create-an-app-with-partner-access-to-microsoft-365-defender-apis"></a>Opret en app med partneradgang til Microsoft 365 Defender API'er
 
@@ -75,7 +75,7 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD program med fle
 
 1. Log på [Azure](https://portal.azure.com) som bruger med rollen **Global administrator** .
 
-2. Gå til **Azure Active Directory** >  **App registrationsNy** >  **registrering**.
+2. Gå til **Azure Active Directory** >  **Appregistreringer** > **Ny registrering**.
 
    :::image type="content" source="../../media/atp-azure-new-app2.png" alt-text="Et programs registreringssektion på Microsoft 365 Defender-portalen" lightbox="../../media/atp-azure-new-app2.png":::
 
@@ -89,7 +89,7 @@ Følgende trin med vejledning i, hvordan du opretter et Azure AD program med fle
 
    :::image type="content" source="../..//media/atp-api-new-app-partner.png" alt-text="Et programs registreringssektioner på portalen Microsoft 365 Defender" lightbox="../..//media/atp-api-new-app-partner.png":::
 
-4. På din programside skal du vælge **API-tilladelserTilføj** >  **tilladelserAPI'er** > , som min organisation bruger >, skrive **Microsoft Threat Protection** og vælge **Microsoft Threat Protection**. Din app kan nu få adgang til Microsoft 365 Defender.
+4. På din programside skal du vælge **API-tilladelser** > **Tilføj****tilladelseS-API'er** > , som min organisation bruger >, skrive **Microsoft Threat Protection** og vælge **Microsoft Threat Protection**. Din app kan nu få adgang til Microsoft 365 Defender.
 
    > [!TIP]
    > *Microsoft Threat Protection* er et tidligere navn på Microsoft 365 Defender og vises ikke på den oprindelige liste. Du skal begynde at skrive navnet i tekstfeltet for at se det blive vist.
@@ -183,33 +183,35 @@ return $token
 ### <a name="get-an-access-token-using-c"></a>Hent et adgangstoken ved hjælp af C\#
 
 > [!NOTE]
-> Følgende kode blev testet med Nuget Microsoft.IdentityModel.Clients.ActiveDirectory 3.19.8.
+> Følgende kode blev testet med Nuget Microsoft.Identity.Client 3.19.8.
 
 > [!IMPORTANT]
 > [NuGet-pakken Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) og ADAL (Azure AD Authentication Library) frarådes. Der er ikke tilføjet nye funktioner siden den 30. juni 2020.   Vi opfordrer dig på det kraftigste til at opgradere, se [migreringsvejledningen](/azure/active-directory/develop/msal-migration) for at få flere oplysninger.
 
 1. Opret et nyt konsolprogram.
-1. Installér NuGet [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/).
+1. Installér NuGet [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/).
 1. Tilføj følgende linje:
 
     ```C#
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
+    using Microsoft.Identity.Client;
     ```
 
 1. Kopiér og indsæt følgende kode i din app (glem ikke at opdatere de tre variabler: `tenantId`, `clientId`, `appSecret`):
 
     ```C#
-    string tenantId = ""; // Paste your directory (tenant) ID here
-    string clientId = ""; // Paste your application (client) ID here
-    string appSecret = ""; // Paste your own app secret here to test, then store it in a safe place, such as the Azure Key Vault!
+    string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
+    string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
+    string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
+    const string authority = https://login.microsoftonline.com;
+    const string audience = https://api.securitycenter.microsoft.com;
 
-    const string authority = "https://login.windows.net";
-    const string wdatpResourceId = "https://api.security.microsoft.com";
+    IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
 
-    AuthenticationContext auth = new AuthenticationContext($"{authority}/{tenantId}/");
-    ClientCredential clientCredential = new ClientCredential(clientId, appSecret);
-    AuthenticationResult authenticationResult = auth.AcquireTokenAsync(wdatpResourceId, clientCredential).GetAwaiter().GetResult();
-    string token = authenticationResult.AccessToken;
+    List<string> scopes = new List<string>() { $"{audience}/.default" };
+
+    AuthenticationResult authResult = myApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();
+
+    string token = authResult.AccessToken;
     ```
 
 ### <a name="get-an-access-token-using-python"></a>Hent et adgangstoken ved hjælp af Python

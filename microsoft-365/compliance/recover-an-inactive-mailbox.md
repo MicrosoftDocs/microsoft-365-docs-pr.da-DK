@@ -17,12 +17,12 @@ search.appverid:
 ms.assetid: 35d0ecdb-7cb0-44be-ad5c-69df2f8f8b25
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan du gendanner indholdet af en inaktiv postkasse i Office 365 ved at konvertere den til en ny postkasse, der indeholder indholdet af den inaktive postkasse.
-ms.openlocfilehash: 027abe49a6e517a783f6458013bdcb4d0faee78b
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 2c679407cb4f7203bb69d88c871bd844694a7c47
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435385"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101542"
 ---
 # <a name="recover-an-inactive-mailbox"></a>Gendan en inaktiv postkasse
 
@@ -109,7 +109,7 @@ Når du har gendannet en inaktiv postkasse, oprettes der også en ny brugerkonto
   Get-Mailbox -InactiveMailboxOnly <identity of inactive mailbox> | Format-List ExternalDirectoryObjectId
   ```
     
-    - Hvis der er en værdi for egenskaben **ExternalDirectoryObjectId** , er postkassens opbevaringsperiode udløbet, og du kan gendanne den inaktive postkasse ved at køre kommandoen **New-Mailbox -InactiveMailbox** .
+    - Hvis der ikke er nogen værdi for egenskaben **ExternalDirectoryObjectId** , er postkassens opbevaringsperiode udløbet, og du kan gendanne den inaktive postkasse ved at køre kommandoen **New-Mailbox -InactiveMailbox** .
     - Hvis der er en værdi for egenskaben **ExternalDirectoryObjectId** , er opbevaringsperioden for den slettede postkasse ikke udløbet, og du skal gendanne postkassen ved at [gendanne brugerkontoen](../admin/add-users/delete-a-user.md).
 
 - **Overvej at aktivere arkivpostkassen, når du har gendannet en inaktiv postkasse.** Dette gør det muligt for den returnerende bruger eller nye medarbejder at flytte gamle meddelelser til arkivpostkassen. Og når opbevaringsventepositionen udløber, flytter den arkivpolitik, der er en del af standardpolitikken Exchange MRM-opbevaringspolitik, der er tildelt Exchange Online postkasser, elementer, der er to år eller ældre, til arkivpostkassen. Hvis du ikke aktiverer arkivpostkassen, forbliver elementer, der er ældre end to år, i brugerens primære postkasse. Du kan få flere oplysninger under [Aktivér arkivpostkasser](enable-archive-mailboxes.md).

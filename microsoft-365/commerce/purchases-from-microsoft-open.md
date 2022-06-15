@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: drjones, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -20,12 +20,12 @@ search.appverid: MET150
 ROBOTS: NOINDEX
 description: Få mere at vide om, hvordan du aktiverer, fornyer eller føjer licenser til et abonnement på Microsoft 365 til virksomheder.
 ms.date: 10/21/2020
-ms.openlocfilehash: 2f877438571c261217305651121d33b3f14697b4
-ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+ms.openlocfilehash: 32f4fcc5c6febece9f9680120a41a4a49674f816
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64715137"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66102432"
 ---
 # <a name="enter-your-product-key-purchased-from-microsoft-open"></a>Angiv din produktnøgle, der er købt fra Microsoft Open
 

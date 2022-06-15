@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: jkinma, jmueller
+ms.reviewer: mijeffer, jmueller
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,12 +21,12 @@ ms.custom:
 - admindeeplinkMAC
 description: Få mere at vide om, hvordan du downloader software- og produktlicensnøgler til permanent software, der er købt via programmet Cloud Solution Provider (CSP).
 ms.date: 01/27/2021
-ms.openlocfilehash: 212aaac02772e5b695cf7ee6f3f256a9fd596c1b
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 58b35335e1d00207be664700694edfb46cc8fdec
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468892"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101882"
 ---
 # <a name="download-perpetual-software-and-product-license-keys-in-microsoft-365"></a>Download permanente software- og produktlicensnøgler i Microsoft 365
 
@@ -38,7 +38,7 @@ Du skal være global administrator for at udføre trinnene i denne artikel. Du k
 
 ## <a name="download-software-and-product-license-keys"></a>Download software- og produktlicensnøgler
 
-1. I Microsoft 365 Administration skal du gå til siden **FaktureringFå** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">din produktside</a>.
+1. I Microsoft 365 Administration skal du gå til siden **Fakturering** > <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a>.
 2. Under fanen **Produkter** i afsnittet **Software** skal du vælge den software, du vil downloade.
 3. På siden med abonnementsoplysninger skal du i afsnittet **Downloads & nøgler** vælge filtypen **Produktversion**, **Sprog** og **CPU &** og derefter vælge **Download**.
 4. Hvis du vil hente nøglen, skal du vælge **Kopiér nøgle til Udklipsholder**.

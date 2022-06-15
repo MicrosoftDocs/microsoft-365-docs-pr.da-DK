@@ -1,6 +1,8 @@
-- name: Overholdelsesportal for Microsoft Purview
+- name: Løsninger til Microsoft Purview-risiko og overholdelse af angivne standarder
   href: index.yml
-- name: Nyheder i Microsoft Purview
+- name: Få mere at vide om løsninger til risiko & overholdelse af angivne standarder
+  href: purview-compliance.md
+- name: Nyheder i løsninger til risiko og overholdelse af angivne standarder
   href: whats-new.md
 - name: Prøveversion af overholdelse af regler og standarder
   items:
@@ -1001,6 +1003,8 @@
           href: set-up-basic-audit.md
         - name: Søgning i overvågningsloggen
           href: search-the-audit-log-in-security-and-compliance.md
+        - name: Overvåg ny søgning
+          href: audit-new-search.md
         - name: 'Eksportér, konfigurer og få vist data fra overvågningsloggen'
           href: export-view-audit-log-records.md
         - name: Brug et PowerShell-script til at søge i overvågningsloggen

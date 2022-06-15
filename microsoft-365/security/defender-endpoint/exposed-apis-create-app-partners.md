@@ -1,7 +1,7 @@
 ---
-title: Opret et program for at få adgang til Microsoft Defender for Endpoint uden en bruger
+title: Partneradgang via Microsoft Defender for Endpoint API'er
 ms.reviewer: ''
-description: Få mere at vide om, hvordan du designer en webapp for at få programmatisk adgang til Microsoft Defender for Endpoint uden en bruger.
+description: Få mere at vide om, hvordan du designer en webapp for at få programmatisk adgang til Microsoft Defender for Endpoint på vegne af dine brugere.
 keywords: apis, graf-API, understøttede API'er, agent, beskeder, enhed, bruger, domæne, ip, fil, avanceret jagt, forespørgsel
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,12 +16,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: 5f17f29f083df6e567218363027e7677c87ee154
-ms.sourcegitcommit: 265a4fb38258e9428a1ecdd162dbf9afe93eb11b
+ms.openlocfilehash: 7ca212cf6cdacdaf374dbe65f4fd88c74712bb34
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/07/2022
-ms.locfileid: "65268858"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101817"
 ---
 # <a name="partner-access-through-microsoft-defender-for-endpoint-apis"></a>Partneradgang via Microsoft Defender for Endpoint API'er
 
@@ -140,7 +140,7 @@ I følgende eksempel bruger vi tilladelsen **"Læs alle beskeder"** :
 
 **Bemærk:** Hvis du vil hente adgangstoken på vegne af din kunde, skal du bruge kundens lejer-id på følgende tokenkøb.
 
-Du kan få flere oplysninger om AAD token i [AAD selvstudium](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds)
+Du kan få flere oplysninger om AAD-token i [AAD-selvstudium](/azure/active-directory/develop/active-directory-v2-protocols-oauth-client-creds)
 
 ### <a name="using-powershell"></a>Brug af PowerShell
 
@@ -168,33 +168,35 @@ return $token
 
 ### <a name="using-c"></a>Brug af C #
 
-> Nedenstående kode blev testet med Nuget Microsoft.IdentityModel.Clients.ActiveDirectory
+> Nedenstående kode blev testet med Nuget Microsoft.Identity.Client
 
 > [!IMPORTANT]
-> [NuGet-pakken Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) og ADAL (Azure AD Authentication Library) frarådes. Der er ikke tilføjet nye funktioner siden den 30. juni 2020.   Vi opfordrer dig på det kraftigste til at opgradere, se [migreringsvejledningen](/azure/active-directory/develop/msal-migration) for at få flere oplysninger.
+> [NuGet-pakken Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) og ADAL (Azure AD Authentication Library) frarådes. Der er ikke tilføjet nye funktioner siden den 30. juni 2020. Vi opfordrer dig på det kraftigste til at opgradere, se [migreringsvejledningen](/azure/active-directory/develop/msal-migration) for at få flere oplysninger.
 
 - Opret et nyt konsolprogram
-- Installér NuGet [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/)
+- Installér NuGet [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client/)
 - Tilføj nedenstående ved hjælp af
 
     ```console
-    using Microsoft.IdentityModel.Clients.ActiveDirectory;
+    using Microsoft.Identity.Client;
     ```
 
 - Kopiér/indsæt nedenstående kode i dit program (glem ikke at opdatere de tre variabler: `tenantId`, `appId`og `appSecret`)
 
-    ```console
+    ```csharp
     string tenantId = "00000000-0000-0000-0000-000000000000"; // Paste your own tenant ID here
     string appId = "11111111-1111-1111-1111-111111111111"; // Paste your own app ID here
-    string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place!
+    string appSecret = "22222222-2222-2222-2222-222222222222"; // Paste your own app secret here for a test, and then store it in a safe place! 
+    const string authority = https://login.microsoftonline.com;
+    const string audience = https://api.securitycenter.microsoft.com;
 
-    const string authority = "https://login.microsoftonline.com";
-    const string wdatpResourceId = "https://api.securitycenter.microsoft.com";
+    IConfidentialClientApplication myApp = ConfidentialClientApplicationBuilder.Create(appId).WithClientSecret(appSecret).WithAuthority($"{authority}/{tenantId}").Build();
 
-    AuthenticationContext auth = new AuthenticationContext($"{authority}/{tenantId}/");
-    ClientCredential clientCredential = new ClientCredential(appId, appSecret);
-    AuthenticationResult authenticationResult = auth.AcquireTokenAsync(wdatpResourceId, clientCredential).GetAwaiter().GetResult();
-    string token = authenticationResult.AccessToken;
+    List<string> scopes = new List<string>() { $"{audience}/.default" };
+
+    AuthenticationResult authResult = myApp.AcquireTokenForClient(scopes).ExecuteAsync().GetAwaiter().GetResult();
+
+    string token = authResult.AccessToken;
     ```
 
 ### <a name="using-python"></a>Brug af Python

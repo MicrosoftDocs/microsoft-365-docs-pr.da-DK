@@ -5,7 +5,7 @@ f1.keywords:
 author: cmcatee-MSFT
 ms.author: cmcatee
 manager: scotv
-ms.reviewer: mijeffer, jmueller
+ms.reviewer: amberb, vikdesai
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -21,12 +21,12 @@ ms.custom:
 - AdminTemplateSet
 description: Find ud af, hvor meget skat du vil blive opkrævet for dit Microsoft 365 for virksomhedsabonnement i forskellige områder.
 ms.date: 03/17/2021
-ms.openlocfilehash: 35442bc495b6179a844bdbe3a6b98a4f58556140
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: 049b361f75dec9402464aa4216e15388a8174f1d
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731223"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66101618"
 ---
 # <a name="tax-information"></a>Skatteoplysninger
 
@@ -42,7 +42,7 @@ Virksomheder i følgende lande kan angive deres momsnummer eller lokale ækvival
 - Østrig
 - Bahamas
 - Bangladesh
-- Belarus
+- Hviderusland
 - Belgien
 - Brasilien*
 - Bulgarien
@@ -65,7 +65,7 @@ Virksomheder i følgende lande kan angive deres momsnummer eller lokale ækvival
 - Italien
     :::column-end:::
     :::column:::
-- Korea
+- Sydkorea
 - Letland
 - Liechtenstein
 - Litauen
@@ -74,7 +74,7 @@ Virksomheder i følgende lande kan angive deres momsnummer eller lokale ækvival
 - Malta
 - Mexico
 - Monaco
-- Holland
+- Nederlandene
 - New Zealand
 - Norge
 - Polen
@@ -126,7 +126,7 @@ Hvis du faktureres fra en af følgende placeringer, anvendes den aktuelle lokale
   
 - Indien
 - Japan
-- Korea
+- Sydkorea
 - Singapore
 - Taiwan
 
@@ -138,7 +138,7 @@ Hvis din fakturering sker af Microsoft Corporation ([se din faktura](view-your-b
 
 ## <a name="add-your-vat-id"></a>Tilføj dit moms-id
 
-1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a> .
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Dine produkter</a>.
 2. Vælg det abonnement, du vil opdatere, under fanen **Produkter** .
 3. Vælg **Rediger tjenesteanvendelsesadresse** i afsnittet **Tjenesteanvendelsesadresse** på siden med abonnementsoplysninger.
 4. Angiv dit moms-id, herunder præfikset, og uden mellemrum, i feltet **Momsnummer** i ruden **Rediger tjenesteforbrugsadresse**.
@@ -172,5 +172,5 @@ Hvis du kvalificerer dig til momsfritagelse på dit marked, [skal du starte en s
   
 ## <a name="related-content"></a>Relateret indhold
   
-[Få vist din faktura](view-your-bill-or-invoice.md) (artikel)\
-[Forstå din faktura](understand-your-invoice.md) (artikel)
+[Se din regning eller faktura](view-your-bill-or-invoice.md) (artikel)\
+[Forstå din regning eller faktura](understand-your-invoice.md) (artikel)

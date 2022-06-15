@@ -14,12 +14,12 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: m365-security-compliance
-ms.openlocfilehash: ad165fcdca11edbafd55a5cb0d37d12d0fba49c3
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: c56c855983e27a3882796cd1e222c97305a627c4
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090589"
+ms.locfileid: "66101546"
 ---
 # <a name="microsoft-purview-risk-and-compliance-solutions"></a>Microsoft Purview løsninger til risiko og overholdelse af angivne standarder
 
@@ -57,6 +57,12 @@ Utilsigtet deling af følsomme elementer kan forårsage økonomisk skade på din
 [Administration af Microsoft Purview-datalivscyklus](/microsoft-365/compliance/manage-data-governance#microsoft-purview-data-lifecycle-management) (tidligere Microsoft Information Governance) giver dig værktøjer og funktioner til at bevare og slette indhold på tværs af Exchange, SharePoint, OneDrive, Microsoft 365-grupper, Teams og Yammer. Opbevaring og sletning af mails, dokumenter og meddelelser er ofte nødvendige for overholdelse af angivne standarder og lovmæssige krav. Men hvis du sletter indhold, der ikke længere har forretningsværdi, reduceres angrebsoverfladen også.
 
 Du kan finde flere oplysninger under [Få mere at vide om administration af datalivscyklus](/microsoft-365/compliance/data-lifecycle-management).
+
+### <a name="encrypt-your-data-and-control-your-encryption-keys"></a>Kryptér dine data, og styr dine krypteringsnøgler
+
+[Kryptering](/microsoft-365/compliance/encryption) er en vigtig del af din strategi til beskyttelse af filer og beskyttelse af oplysninger. Krypteringsprocessen koder dine data (kaldet almindelig tekst) til kryptering. I modsætning til almindelig tekst kan kryptering ikke bruges af personer eller computere, medmindre og før krypteringen af krypteringen. Dekryptering kræver en krypteringsnøgle, som kun godkendte brugere har. Kryptering hjælper med at sikre, at kun godkendte modtagere kan dekryptere dit indhold.
+
+[Microsoft Purview kryptering med dobbelt nøgle](/microsoft-365/compliance/double-key-encryption) hjælper med at sikre de mest følsomme data, der er underlagt de strengeste beskyttelseskrav. [Microsoft Purview Kundenøgle](/microsoft-365/compliance/customer-key-overview) hjælper dig med at overholde lovmæssige eller overholdelsesforpligtelser til styring af rodnøgler. Du giver udtrykkeligt Microsoft 365 tjenester tilladelse til at bruge dine krypteringsnøgler til at levere ekstra cloudtjenester, f.eks. eDiscovery, antimalware, anti-spam, søgeindeksering osv.
 
 ## <a name="identify-data-risks-and-manage-regulatory-compliance-requirements"></a>Identificer datarisici, og administrer lovmæssige krav til overholdelse af angivne standarder
 
