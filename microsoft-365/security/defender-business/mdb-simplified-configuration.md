@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 0662ab458a3163e998de7b054926ceff31559a9e
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: f6cb1ff397233a60b0ad02a08486333790d079cc
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174420"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089434"
 ---
 # <a name="the-simplified-configuration-process-in-microsoft-defender-for-business"></a>Den forenklede konfigurationsproces i Microsoft Defender til virksomheder
 
@@ -38,10 +38,6 @@ Når det drejer sig om onboarding af enheder og konfiguration af sikkerhedsindst
 2. [Få mere at vide om den forenklede konfigurationsproces i Defender for Business](#why-we-recommend-using-the-simplified-configuration-process)
 3. [Fortsæt til de næste trin](#next-steps)
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="review-your-setup-and-configuration-options"></a>Gennemse indstillingerne for konfiguration og konfiguration
 

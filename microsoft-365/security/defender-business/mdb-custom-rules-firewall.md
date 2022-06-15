@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: acc183abcbae89cd952011cfc637161bb409a95f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: e8ab0981b2e4cfbcd5d885bdfc26f42c6f432aa6
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174504"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090382"
 ---
 # <a name="manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business"></a>Administrer dine brugerdefinerede regler for firewallpolitikker i Microsoft Defender til virksomheder
 
@@ -34,16 +34,12 @@ Du kan få mere at vide om firewallpolitikker og -indstillinger [under Firewall 
 - [Rediger en brugerdefineret regel for en firewallpolitik](#edit-a-custom-rule-for-a-firewall-policy)
 - [Slet en brugerdefineret regel](#delete-a-custom-rule)
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="create-a-custom-rule-for-a-firewall-policy"></a>Opret en brugerdefineret regel for en firewallpolitik
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. Gå til **konfigurationen EndpointsDevice** > , og gennemse listen over politikker.
+2. Gå til **Slutpunkter** > **Enhedskonfiguration**, og gennemse listen over politikker.
 
 3. I afsnittet **Firewall** skal du vælge en eksisterende politik eller tilføje en ny politik.
 
@@ -66,7 +62,7 @@ Du kan få mere at vide om firewallpolitikker og -indstillinger [under Firewall 
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. Gå til **konfigurationen EndpointsDevice** > , og gennemse listen over politikker.
+2. Gå til **Slutpunkter** > **Enhedskonfiguration**, og gennemse listen over politikker.
 
 3. I afsnittet **Firewall** skal du vælge en eksisterende politik eller tilføje en ny politik.
 
@@ -91,7 +87,7 @@ Du kan få mere at vide om firewallpolitikker og -indstillinger [under Firewall 
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. Gå til **konfigurationen EndpointsDevice** > , og gennemse listen over politikker.
+2. Gå til **Slutpunkter** > **Enhedskonfiguration**, og gennemse listen over politikker.
 
 3. I afsnittet **Firewall** skal du vælge en eksisterende politik eller tilføje en ny politik.
 

@@ -15,12 +15,12 @@ ms.collection:
 search.appverid: MET150
 ms.reviewer: shlomiakirav
 description: Få hjælp, eller kontakt support, hvis du har problemer med Defender for Business.
-ms.openlocfilehash: 37e41f8e5d5f6421739fb98a38d99bb6aa0597c6
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 4f2a45514ba701eac27af32b2585c9a765dcc1f2
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173154"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090300"
 ---
 # <a name="get-help-and-support-for-microsoft-defender-for-business"></a>Få hjælp og support til Microsoft Defender til virksomheder
 
@@ -30,10 +30,6 @@ Hvis du har brug for hjælp til Microsoft Defender til virksomheder, skal du væ
 
 Hvis du ikke kan se svaret på dit spørgsmål, kan du åbne en supportanmodning. Se [Få support](../../admin/get-help-support.md)
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="see-also"></a>Se også
 

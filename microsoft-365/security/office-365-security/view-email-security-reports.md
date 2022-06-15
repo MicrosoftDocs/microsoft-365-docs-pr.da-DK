@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ef22f0873e6a61864cf3b2abf2d8a4bc26f80c4d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 5501477e14bd5053f6adbe597642470854616a5e
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078980"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089964"
 ---
 # <a name="view-email-security-reports-in-the-microsoft-365-defender-portal"></a>Få vist mailsikkerhedsrapporter på Microsoft 365 Defender-portalen
 
@@ -424,7 +424,7 @@ Du kan filtrere både diagrammet og detaljetabellen ved at klikke på **Filtrer*
   - **Ventende**
   - **Afsluttet**
 
-Detaljetabellen under grafen viser de samme oplysninger og har de samme indstillinger for **Gruppér** eller **Tilpas kolonner** som under fanen **Sendt til analyse** under **Mail &** **samarbejdsindsendelser**\>. Du kan få flere oplysninger under [Få vist administratorindsendelser til Microsoft](admin-submission.md#view-urls-admin-submissions-to-microsoft).
+Detaljetabellen under grafen viser de samme oplysninger og har de samme indstillinger for **Gruppér** eller **Tilpas kolonner** som under fanen **Sendt til analyse** under **Mail &** **samarbejdsindsendelser**\>. Du kan få flere oplysninger under [Få vist indsendelser af mailadministratorer til Microsoft](admin-submission.md#view-email-admin-submissions-to-microsoft).
 
 På siden **Indsendelser** er knappen **[Eksportér](#export-report)** tilgængelig.
 

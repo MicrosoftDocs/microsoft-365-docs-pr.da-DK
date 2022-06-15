@@ -16,21 +16,17 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 8f716f692687276e5c1c4482429ab016f9574f2f
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 58b2756bead1df85e12e3276d0da475d6882b589
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621306"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088973"
 ---
 # <a name="onboard-devices-to-microsoft-defender-for-business"></a>Om bord på enheder til Microsoft Defender til virksomheder
 
 Med Microsoft Defender til virksomheder har du flere muligheder at vælge imellem til onboarding af din virksomheds enheder. Denne artikel fører dig gennem dine muligheder og indeholder en oversigt over, hvordan onboarding fungerer.
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="what-to-do"></a>Sådan gør du
 
@@ -180,7 +176,7 @@ Når du kører det lokale script på en macOS enhed, oprettes der et tillidsforh
 
 8. Vælg **Fortsæt**, acceptér licensvilkårene, og angiv derefter din adgangskode, når du bliver bedt om det.
 
-9. Du bliver bedt om at tillade, at en driver fra Microsoft installeres (enten "System Extension Blocked" eller "Installation er i venteposition" eller begge dele. Driveren skal have tilladelse til at blive installeret. Hvis du vil tillade installationen, skal du vælge **Åbn sikkerhedsindstillinger** eller **Åbn systemindstillingerSikkerhed** >  **& Beskyttelse af personlige oplysninger** og derefter vælge **Tillad**.
+9. Du bliver bedt om at tillade, at en driver fra Microsoft installeres (enten "System Extension Blocked" eller "Installation er i venteposition" eller begge dele. Driveren skal have tilladelse til at blive installeret. Hvis du vil tillade installationen, skal du vælge **Åbn sikkerhedsindstillinger** eller **Åbn systemindstillinger** > **Sikkerhed & Beskyttelse af personlige oplysninger** og derefter vælge **Tillad**.
 
 10. Brug følgende Python-kommando i Bash til at køre onboardingpakken: `/usr/bin/python MicrosoftDefenderATPOnboardingMacOs.sh`
 
@@ -219,7 +215,7 @@ Hvis din virksomhed foretrækker at få personer til at tilmelde deres egne enhe
 
 1. Hvis du vil bekræfte, at enheden er knyttet til dit firma, skal du bruge følgende Python-kommando i Bash: `mdatp health --field org_id`.
 
-2. Hvis du bruger macOS 10.15 (Catalina) eller nyere, skal du give Defender for Business-samtykke for at beskytte din enhed. Gå til **SystemindstillingerSikkerhed** >  **& Beskyttelse af personlige oplysningerBeskyttelse** >  **af personlige oplysningerFuld** >  diskadgang. Vælg låseikonet for at foretage ændringer (nederst i dialogboksen), og vælg derefter **Microsoft Defender til virksomheder** (eller **Defender for Endpoint**, hvis det er det, du ser).
+2. Hvis du bruger macOS 10.15 (Catalina) eller nyere, skal du give Defender for Business-samtykke for at beskytte din enhed. Gå til **Systemindstillinger** > **Sikkerhed & Beskyttelse af personlige oplysninger** >  > **Fuld diskadgang**. Vælg låseikonet for at foretage ændringer (nederst i dialogboksen), og vælg derefter **Microsoft Defender til virksomheder** (eller **Defender for Endpoint**, hvis det er det, du ser).
 
 3. Hvis du vil bekræfte, at enheden er onboardet, skal du bruge følgende kommando i Bash: `mdatp health --field real_time_protection_enabled`
 

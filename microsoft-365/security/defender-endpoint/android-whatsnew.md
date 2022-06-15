@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 95c4d77014e31c748cc4bd6662a148810c01f79a
-ms.sourcegitcommit: 195e4734d9a6e8e72bd355ee9f8bca1f18577615
+ms.openlocfilehash: d1379836a2d55a8c6c256ce734c40acc5fc48599
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64825184"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090492"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Nyheder i Microsoft Defender for Endpoint på Android
 
@@ -30,6 +30,13 @@ ms.locfileid: "64825184"
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="network-protection"></a>Netværksbeskyttelse
+Netværksbeskyttelse på Microsoft Defender for Endpoint er nu en offentlig prøveversion. Netværksbeskyttelse giver beskyttelse mod rogue Wi-Fi relaterede trusler, rogue hardware som pineapple enheder og underretter brugeren, hvis en relateret trussel opdages. Brugerne får også vist en guidet oplevelse, hvor de kan oprette forbindelse til sikre netværk og skifte netværk, når de har forbindelse til en usikker forbindelse.
+
+Den indeholder flere administratorkontrolelementer, der giver fleksibilitet, f.eks. muligheden for at konfigurere funktionen fra Microsoft Endpoint Manager Administration center. Administratorer kan også aktivere kontrolelementer til beskyttelse af personlige oplysninger for at konfigurere de data, der sendes af Defender for Endpoint fra Android-enheder. 
+
+Hvis du er interesseret i at deltage i denne offentlige prøveversion, kan du dele dit lejer-id med os på networkprotection@microsoft.com. Du kan få flere oplysninger under [Netværksbeskyttelse](/microsoft-365/security/defender-endpoint/android-configure).
 
 >[!NOTE]
 >Microsoft Defender understøttes ikke længere for versioner under 1.0.3011.0302. Brugerne anmodes om at opgradere til de nyeste versioner for at holde deres enheder sikre.

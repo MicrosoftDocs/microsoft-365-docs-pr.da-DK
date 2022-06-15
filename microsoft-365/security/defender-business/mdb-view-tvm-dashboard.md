@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: a4df65d0364aff71c3d3bbfb261952859d6d8ecf
-ms.sourcegitcommit: 54bc063818779e351ca24f04ba571f762d85751d
+ms.openlocfilehash: 8301119b0169e0ee2ac56cc7a85b3037ccb75907
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393082"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090558"
 ---
 # <a name="use-your-threat--vulnerability-management-dashboard-in-microsoft-defender-for-business"></a>Brug dashboardet Administration af sårbarheder i & Threat & i Microsoft Defender til virksomheder
 
@@ -37,10 +37,6 @@ Vil du se, hvordan det fungerer? Se denne video, der beskriver [Admininstration 
 
 [Få mere at vide om Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender](../defender-vulnerability-management/defender-vulnerability-management.md).
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="next-steps"></a>Næste trin
 

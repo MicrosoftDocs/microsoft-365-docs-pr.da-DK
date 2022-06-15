@@ -13,12 +13,12 @@ ms.localizationpriority: medium
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 7dc6c65221211367e080fac46506f209d17f88ff
-ms.sourcegitcommit: 60970cf8a2cb451011c423d797dfb77925394f89
+ms.openlocfilehash: b6ffc1325eb71bf366761545c8e21bfe5da3b4fa
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65587440"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090096"
 ---
 # <a name="set-up-email-notifications"></a>Konfigurer mailmeddelelser
 
@@ -31,10 +31,6 @@ Du kan konfigurere mailmeddelelser til dit sikkerhedsteam. Når der derefter gen
 3. [Fortsæt til de næste trin](#next-steps).
 
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="types-of-email-notifications"></a>Typer af mailmeddelelser
 

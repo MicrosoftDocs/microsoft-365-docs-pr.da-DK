@@ -16,21 +16,17 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 0481ffdf51b60a40de854ec2e4eb9b9d38d4344a
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: b7a911991935407f9d512213c9d76c92106b74c8
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174855"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089556"
 ---
 # <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder
 
 På Microsoft 365 Defender-portalen kan dit sikkerhedsteam reagere på og afhjælpe registrerede trusler. I denne artikel gennemgås et eksempel på, hvordan du kan bruge Defender for Business.
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="view-detected-threats"></a>Vis registrerede trusler
 

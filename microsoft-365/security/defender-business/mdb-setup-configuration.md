@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 5dd056640101d3feb97d9f502e4dcc8661454115
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: f7a66096b685e2ab1d1bb79ec0247fd2f4ffd67d
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173238"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089478"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-business"></a>Konfigurer og konfigurer Microsoft Defender til virksomheder
 
@@ -33,10 +33,6 @@ Microsoft Defender til virksomheder giver en strømlinet konfigurationsoplevelse
 > - [Konfigurer dine sikkerhedspolitikker og -indstillinger](mdb-configure-security-settings.md)
 > - [Besøg dit håndtering af sikkerhedsrisici dashboard](mdb-view-tvm-dashboard.md)
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="the-setup-and-configuration-process"></a>Konfigurationsprocessen
 

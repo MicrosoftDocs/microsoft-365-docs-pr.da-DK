@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 125e151873e45717a4621bf2798e3587671c6b8d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 47e97b728fb27d8df6ad813946d3cdbe08c52085
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078927"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089105"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
@@ -180,7 +180,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
      Klik på **Anvend**, når du er færdig.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/email-admin-submission-customize-columns.png":::
+     > :::image type="content" source="../../media/email-admin-submission-customize-columns.png" alt-text="Tilpas kolonneindstillingen for mailadministratorindsendelser." lightbox="../../media/email-admin-submission-customize-columns.png":::
 
    - Klik på **Filtrer** for at filtrere posterne. De tilgængelige filtre er:
      - **Dato for afsendelse**: **Startdato** og **Slutdato**.
@@ -197,7 +197,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
      Klik på **Anvend**, når du er færdig.
 
      > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/email-admin-submission-filters.png":::
+     > :::image type="content" source="../../media/email-admin-submission-filters.png" alt-text="Filterindstillinger for afsendelser af mailadministratorer." lightbox="../../media/email-admin-submission-filters.png":::
 
    - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
      - **Ingen**
@@ -231,8 +231,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
      Klik på **Anvend**, når du er færdig.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/email-attachment-admin-submission-customize-columns.png":::
+     :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Tilpas kolonneindstillinger for indsendelser af vedhæftede filer i mails.":::
 
    - Klik på **Filtrer** for at filtrere posterne. De tilgængelige filtre er:
      - **Dato for afsendelse**: **Startdato** og **Slutdato**.
@@ -245,8 +244,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
      Klik på **Anvend**, når du er færdig.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/email-attachment-admin-submission-customize-columns.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/email-attachment-admin-submission-filters.png":::
+     :::image type="content" source="../../media/email-attachment-admin-submission-filters.png" alt-text="Filterindstillinger for indsendelser af vedhæftede filer i mails.":::
 
    - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
      - **Ingen**
@@ -280,8 +278,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
      Klik på **Anvend**, når du er færdig.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Indstillingerne for Ny tilpasning af kolonner for administratorindsendelser" lightbox="../../media/url-admin-submission-customize-columns.png":::
+     :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Tilpas kolonneindstillinger for url-administratorindsendelser.":::
 
    - Klik på **Filtrer** for at filtrere posterne. De tilgængelige filtre er:
      - **Dato for afsendelse**: **Startdato** og **Slutdato**.
@@ -294,8 +291,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
      Klik på **Anvend**, når du er færdig.
 
-     > [!div class="mx-imgBorder"]
-     > :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Indstillinger for nyt filter for administratorindsendelser" lightbox="../../media/url-admin-submission-filters.png":::
+     :::image type="content" source="../../media/url-admin-submission-customize-columns.png" alt-text="Filterindstillinger for url-administratorindsendelser.":::
 
    - Hvis du vil gruppere posterne, skal du klikke på **Gruppér** og vælge en af følgende værdier på rullelisten:
      - **Ingen**

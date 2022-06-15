@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret politikker for opbevaring af automatisk mærkning, så du automatisk kan anvende mærkater for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: 1b8871cba184772bd82e5e608c6e38113d4b0024
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b059a90c8a4f1406e8368cb399ca5de58b2538dd
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012874"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089854"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
 
@@ -75,7 +75,7 @@ Beslut, om politikken for opbevaringsmærkaten skal være **tilpasset** eller **
 
 Når du opretter en politik, der automatisk skal anvendes, vælger du en opbevaringsmærkat, der automatisk skal anvendes på indhold baseret på de betingelser, du angiver.
 
-1. Gå til en af følgende placeringer på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/):
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/) skal du navigere til en af følgende placeringer:
     
     - Hvis du bruger datastyring:
         - **Løsninger** >  **Datastyring** > > fanen **Mærkatpolitikker** > **Anvend automatisk en etiket**
@@ -149,7 +149,7 @@ Derudover understøttes SharePoint elementer, der er kladder, eller som aldrig e
 > 
 > Selvom gruppepostkasser normalt medtages ved at vælge den **Microsoft 365-grupper** placering, omfatter gruppeplaceringen kun SharePoint websteder, der er forbundet med en Microsoft 365 gruppe, for denne specifikke politikkonfiguration.
 
-Når du opretter politikker for automatisk anvendelse af opbevaringsmærkater for følsomme oplysninger, får du vist den samme liste over politikskabeloner, som når du opretter en DLP-politik (Microsoft Purview Data Loss Prevention). Hver skabelon er forudkonfigureret til at søge efter bestemte typer følsomme oplysninger. I følgende eksempel er de følsomme oplysningstyper fra kategorien **Beskyttelse af personlige oplysninger** og dataskabelonen Personlige **oplysninger (PII** ):
+Når du opretter politikker for automatisk anvendelse af opbevaringsmærkater for følsomme oplysninger, får du vist den samme liste over politikskabeloner, som når du opretter en DLP-politik (Microsoft Purview Forebyggelse af datatab). Hver skabelon er forudkonfigureret til at søge efter bestemte typer følsomme oplysninger. I følgende eksempel er de følsomme oplysningstyper fra kategorien **Beskyttelse af personlige oplysninger** og dataskabelonen Personlige **oplysninger (PII** ):
 
 ![Politikskabeloner med typer af følsomme oplysninger.](../media/sensitive-info-configuration.png)
 
@@ -327,6 +327,8 @@ Sådan overvejer du, hvornår opbevaringsmærkater automatisk anvendes på vedh�
 
 - Det er kun nyligt delte vedhæftede filer i skyen, der automatisk mærkes til opbevaring.
 
+- Når en bruger føjes til en Teams samtale og får adgang til hele samtalens historik, kan denne historik omfatte vedhæftede filer i skyen. Hvis de blev delt inden for 48 timer, efter at brugeren har føjet til samtalen, forsynes de aktuelle kopier af de vedhæftede filer i skyen automatisk med henblik på opbevaring. Vedhæftede filer i skyen, der er delt før denne tidsperiode, understøttes ikke for nyligt tilføjede brugere.
+
 - Vedhæftede filer i skyen, der deles uden for Teams og Outlook, understøttes ikke.
 
 - Følgende elementer understøttes ikke som vedhæftede filer i skyen, der kan bevares:
@@ -343,7 +345,7 @@ Når du anvender opbevaringsmærkater automatisk på baggrund af følsomme oplys
   
 ![Diagram over, hvornår automatisk anvendelse af navne træder i kraft.](../media/retention-labels-autoapply-timings.png)
 
-Hvis de forventede mærkater ikke vises efter syv dage, skal du kontrollere **status** for politikken for automatisk anvendelse ved at vælge den på siden **Mærkatpolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du får vist status for **Fra (fejl),** og du i oplysningerne om placeringerne får vist en meddelelse om, at det tager længere tid end forventet at installere politikken (for SharePoint) eller at forsøge at geninstallere politikken (for OneDrive), kan du prøve at køre [PowerShell-kommandoen Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
+Hvis de forventede mærkater ikke vises efter syv dage, skal du kontrollere **status** for politikken for automatisk anvendelse ved at vælge den på siden **Mærkatpolitikker** i Microsoft Purview-compliance-portal. Hvis du får vist status for **Fra (fejl),** og du i oplysningerne om placeringerne får vist en meddelelse om, at det tager længere tid end forventet at installere politikken (for SharePoint) eller at forsøge at geninstallere politikken (for OneDrive), kan du prøve at køre [PowerShell-kommandoen Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
 
 1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 

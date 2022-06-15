@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 9d401c5be4fc0454ce1d895fe5ea49267e5c5f70
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: c7b01355b782a3b08b76f95b31db5b0a9f5e1188
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469167"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090299"
 ---
 # <a name="view-and-edit-your-security-policies-and-settings-in-microsoft-defender-for-business"></a>Få vist og rediger dine sikkerhedspolitikker og -indstillinger i Microsoft Defender til virksomheder
 
@@ -53,10 +53,6 @@ Brug denne artikel som en vejledning til administration af dine sikkerhedspoliti
 6. [Få vist andre indstillinger på Microsoft 365 Defender-portalen](#view-and-edit-other-settings-in-the-microsoft-365-defender-portal). 
 7. [Fortsæt til de næste trin](#next-steps).
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="choose-where-to-manage-security-policies-and-devices"></a>Vælg, hvor sikkerhedspolitikker og -enheder skal administreres
 
@@ -125,7 +121,7 @@ Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke udf
 
 Ud over næste generations politikker for beskyttelse, firewall og filtrering af webindhold indeholder Defender for Business avancerede sikkerhedsfunktioner. Disse funktioner forudkonfigureres ved hjælp af anbefalede indstillinger. Du kan dog gennemse dem og om nødvendigt redigere indstillingerne, så de passer til dine forretningsbehov.
 
-Hvis du vil have adgang til indstillinger for avancerede funktioner, skal du gå til Indstillinger **EndpointsGenerellefunktioner** >  >  **på** portalen **Microsoft 365 Defender** >  ([https://security.microsoft.com](https://security.microsoft.com)).
+Hvis du vil have adgang til indstillinger for avancerede funktioner, skal du gå til Indstillinger **Endpoints** > **Generelle** > **avancerede funktioner** på portalen **Microsoft 365 Defender** >  ([https://security.microsoft.com](https://security.microsoft.com)).
 
 I følgende tabel beskrives indstillingerne for avancerede funktioner:
 

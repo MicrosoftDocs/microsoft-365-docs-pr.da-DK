@@ -4,12 +4,12 @@ description: inkluder fil
 author: mjcaparas
 ms.service: microsoft-365-enterprise
 ms.author: macapara
-ms.openlocfilehash: 3da0554f55e25f765702fa0d0fbf169ba2e66438
-ms.sourcegitcommit: b5529afa84f7dde0a89b1e08aeaf6a3a15cd7679
+ms.openlocfilehash: 61d7b5f00a42789a2d4f46aa41eb3f8865fb6e03
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65601611"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66091427"
 ---
 ## <a name="prerequisites"></a>Forudsætninger
 
@@ -123,7 +123,7 @@ Følgende tabel kan hjælpe dig med at forstå, hvilke politikker der kan konfig
 
 Hvis du vil understøtte Microsoft Defender for Endpoint administration af sikkerhedskonfiguration via Microsoft Endpoint Manager Administration, skal du aktivere kommunikation mellem dem inde fra hver konsol.
 
-1. Log på [Microsoft 365 Defender portal,](https://security.microsoft.com/) og gå til **Indstillinger** >  **EndpointsConfiguration** >  **ManagementEnforcement** >  Scope, og aktivér platformene til administration af sikkerhedsindstillinger:
+1. Log på [Microsoft 365 Defender portal,](https://security.microsoft.com/) og gå til **Indstillinger** >  **Endpoints** > **Configuration Management** > **Enforcement Scope**, og aktivér platformene til administration af sikkerhedsindstillinger:
 
    :::image type="content" source="../media/security-settings-mgt.png" alt-text="Aktivér administration af Microsoft Defender for Endpoint indstillinger i Defender-konsollen.":::
     
@@ -134,7 +134,7 @@ Hvis du vil understøtte Microsoft Defender for Endpoint administration af sikke
   > [!TIP]
   > Brug pilottilstand og de korrekte enhedskoder til at teste og validere udrulningen på et lille antal enheder. Uden at bruge pilottilstand tilmeldes alle enheder, der er omfattet af det konfigurerede område, automatisk.
 
-1. Sørg for, at de relevante brugere har tilladelse til at administrere sikkerhedsindstillinger for slutpunkter i Microsoft Endpoint Manager eller tildele disse tilladelser ved at konfigurere en rolle på Defender-portalen. Gå til **Indstillinger** >  **RolesTilføj** >  element:
+1. Sørg for, at de relevante brugere har tilladelse til at administrere sikkerhedsindstillinger for slutpunkter i Microsoft Endpoint Manager eller tildele disse tilladelser ved at konfigurere en rolle på Defender-portalen. Gå til **Indstillinger** >  **Rolles** > **Tilføj element**:
 
    :::image type="content" source="../media/add-role-in-mde.png" alt-text="Opret en ny rolle på Defender-portalen.":::
 
@@ -158,14 +158,11 @@ Hvis du vil understøtte Microsoft Defender for Endpoint administration af sikke
 Microsoft Defender for Endpoint understøtter flere muligheder for at onboarde enheder. Du kan finde den aktuelle vejledning under [Onboarding-værktøjer og -metoder til Windows enheder](/microsoft-365/security/defender-endpoint/security-config-management) i dokumentationen til Defender for Endpoint.
 
 
-> [!IMPORTANT]
-> Når en enhed er onboardet med Microsoft Defender for Endpoint, skal den være mærket med **MDE-Management**, før den kan tilmeldes sikkerhedsadministration til Microsoft Defender for Endpoint. Du kan få flere oplysninger om enhedsmærkning i MDE under [*Opret og administrer enhedstags*](/microsoft-365/security/defender-endpoint/machine-tags).
-
 
 ## <a name="co-existence-with-microsoft-endpoint-configuration-manager"></a>Samk Microsoft Endpoint Configuration Manager
 I nogle miljøer kan det være en idé at bruge Sikkerhedsadministration til Microsoft Defender for Endpoint med [Configuration Manager lejertilknyt.](/mem/configmgr/tenant-attach/endpoint-security-get-started) Hvis du bruger begge dele, skal du styre politikken via en enkelt kanal, da brug af mere end én kanal opretter muligheden for konflikter og uønskede resultater.
 
-Hvis du vil understøtte dette, skal du konfigurere *indstillingerne for Administrer sikkerhed ved hjælp af Configuration Manager* til *Fra*.  Log på [Microsoft 365 Defender-portalen](https://security.microsoft.com/), og gå til **Indstillinger** >  **EndpointsConfiguration** >  **ManagementEnforcement** >  Scope:
+Hvis du vil understøtte dette, skal du konfigurere *indstillingerne for Administrer sikkerhed ved hjælp af Configuration Manager* til *Fra*.  Log på [Microsoft 365 Defender-portalen](https://security.microsoft.com/), og gå til **Indstillinger** >  **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
 :::image type="content" source="../media/manage-security-settings-cfg-mgr.png" alt-text="Administrer sikkerhedsindstillinger ved hjælp af Configuration Manager indstilling.":::
 
@@ -181,7 +178,7 @@ Sådan identificerer du de enheder, der er tilmeldt Microsoft Defender for Endpo
 
 1. Log på [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Gå til **EnhederAlle** >  **enheder**, og vælg derefter kolonnen **Administreret af** for at sortere visningen af enheder.
+2. Gå til **Enheder** > **Alle enheder**, og vælg derefter kolonnen **Administreret af** for at sortere visningen af enheder.
 
    Enheder, der onboarder til Microsoft Defender for Endpoint og har registreret, men som ikke administreres af Intune, vises **Microsoft Defender for Endpoint** i kolonnen *Administreret af*. Dette er de enheder, der kan modtage en politik for sikkerhedsadministration for Microsoft Defender for Endpoint.
 

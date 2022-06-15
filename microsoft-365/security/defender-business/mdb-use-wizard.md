@@ -17,21 +17,17 @@ ms.collection:
 - M365-security-compliance
 - m365-initiative-defender-business
 ms.custom: intro-get-started
-ms.openlocfilehash: 042f20cce0e0d30195ed241b376bf304abeaa2aa
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 034c37e0b87ab77c2e4119ab87563da06925501a
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172785"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088995"
 ---
 # <a name="use-the-setup-wizard-in-microsoft-defender-for-business"></a>Brug installationsguiden i Microsoft Defender til virksomheder
 
 Microsoft Defender til virksomheder var designet til at spare små og mellemstore virksomheder tid og kræfter. Du kan f.eks. foretage indledende konfiguration med en installationsguide. Konfigurationsguiden hjælper dig med at tildele adgang til dit sikkerhedsteam, konfigurere mailmeddelelser til dit sikkerhedsteam og onboarde virksomhedens Windows enheder.
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 > [!TIP]
 > Det er valgfrit at bruge installationsguiden. Du kan vælge at gennemgå konfigurationsprocessen manuelt. Du kan få mere at vide under:
@@ -42,7 +38,7 @@ Microsoft Defender til virksomheder var designet til at spare små og mellemstor
 
 Installationsguiden er udviklet til at køre, første gang en person i virksomheden logger på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). 
 
-Hvis din virksomhed har brugt Microsoft 365 Business Premium, køres installationsguiden til Defender for Business, første gang nogen går til **EndpointsDevice-lageret** > . 
+Hvis din virksomhed har brugt Microsoft 365 Business Premium, køres installationsguiden til Defender for Business, første gang nogen går til **Slutpunkter** > **Enhedslager**. 
 
 Startskærmen i installationsguiden ligner følgende billede:
 
@@ -59,7 +55,7 @@ Installationsguiden er udviklet til at hjælpe dig med hurtigt og effektivt at k
 
    I Defender for Business kan medlemmer af dit sikkerhedsteam tildeles en af følgende tre roller:<br/>
    
-   - **Global administrator**: En global administrator kan få vist og redigere alle indstillinger på tværs af din Microsoft 365 lejer. Den globale administrator udfører den indledende konfiguration af din virksomheds Microsoft 365-abonnement. 
+   - **Global Administration**: En global administrator kan få vist og redigere alle indstillinger på tværs af din Microsoft 365 lejer. Den globale administrator udfører den indledende konfiguration af din virksomheds Microsoft 365-abonnement. 
    - **Sikkerhedsadministrator**: En sikkerhedsadministrator kan få vist og redigere sikkerhedsindstillinger og udføre handlinger, når der registreres trusler.
    - **Sikkerhedslæser**: En sikkerhedslæser kan få vist oplysninger i rapporter, men kan ikke ændre nogen sikkerhedsindstillinger. 
 

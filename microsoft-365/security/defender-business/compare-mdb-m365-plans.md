@@ -16,21 +16,17 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: d7ee7588d9c73a6146b770cfcf135a8eeb44f72f
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: 245063299df0df25f8a4c14ed9a3ee26b880ea15
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663420"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66089876"
 ---
 # <a name="compare-security-features-in-microsoft-365-plans-for-small-and-medium-sized-businesses"></a>Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder
 
 Microsoft tilbyder en lang række cloudløsninger og -tjenester, herunder flere forskellige planer for små og mellemstore virksomheder. [Microsoft 365 Business Premium](../../business/microsoft-365-business-overview.md) omfatter f.eks. funktioner til administration af sikkerhed og enheder sammen med produktivitetsfunktioner, f.eks. Office apps. Denne artikel er udviklet til at hjælpe med at tydeliggøre, hvilke sikkerhedsfunktioner, f.eks. enhedsbeskyttelse, der er inkluderet i Microsoft 365 Business Premium, Microsoft Defender til virksomheder og Microsoft Defender for Endpoint.
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 **Brug denne artikel til at**:
 

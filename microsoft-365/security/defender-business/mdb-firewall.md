@@ -1,6 +1,6 @@
 ---
 title: Firewall i Microsoft Defender til virksomheder
-description: Få mere at vide om Windows Defender firewallindstillinger i Defender for Business. Firewall kan hjælpe med at forhindre uønsket netværkstrafik, der flyder til virksomhedens enheder.
+description: Få mere at vide om Windows Defender Firewall indstillinger i Defender for Business. Firewall kan hjælpe med at forhindre uønsket netværkstrafik, der flyder til virksomhedens enheder.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -15,12 +15,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 9a22af2e1ef047de0deaf98c6eea37cda15dcc5f
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 9ec6e0b10812c42c90266fd2793557ae6f3b2efc
+ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172660"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66090338"
 ---
 # <a name="firewall-in-microsoft-defender-for-business"></a>Firewall i Microsoft Defender til virksomheder
 
@@ -33,10 +33,6 @@ Du kan bruge firewallbeskyttelse til at angive, om du vil tillade eller blokere 
 - [Standardindstillinger for firewall i Defender for Business](#default-firewall-settings-in-defender-for-business)
 - [Firewallindstillinger, du kan konfigurere i Defender for Business](#firewall-settings-you-can-configure-in-defender-for-business)
 
->
-> **Har du et øjeblik?**
-> Tag vores <a href="https://microsoft.qualtrics.com/jfe/form/SV_0JPjTPHGEWTQr4y" target="_blank">korte undersøgelse om sikkerhed</a>. Vi vil meget gerne høre fra dig!
->
 
 ## <a name="default-firewall-settings-in-defender-for-business"></a>Standardindstillinger for firewall i Defender for Business
 

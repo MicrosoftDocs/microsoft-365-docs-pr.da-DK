@@ -14,12 +14,12 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: denisebmsft
   ms.author: deniseb
-  ms.openlocfilehash: 2c1e21f6e333cd1e5d000fcc7fba0f32a153835d
-  ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+  ms.openlocfilehash: d94aeed225105bf16f2fa057d7c0caf1730eec09
+  ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 05/17/2022
-  ms.locfileid: "65438723"
+  ms.lasthandoff: 06/15/2022
+  ms.locfileid: "66090514"
 landingContent:
 - title: Oversigt
   linkLists:
@@ -47,16 +47,8 @@ landingContent:
       url: get-defender-business.md
     - text: Brug prøveversionen af strategiplan
       url: trial-playbook-defender-business.md
-    - text: Tilføj brugere, og tildel licenser
-      url: mdb-add-users.md
-    - text: Besøg Microsoft 365 Defender-portalen
-      url: mdb-get-started.md
     - text: Brug konfigurationsguiden
       url: mdb-use-wizard.md
-  - linkListType: tutorial
-    links:
-    - text: Prøv selvstudier og simuleringer
-      url: mdb-tutorials.md
 - title: Hjælp og flere ressourcer
   linkLists:
   - linkListType: how-to-guide
@@ -65,73 +57,5 @@ landingContent:
       url: mdb-get-help.md
     - text: Ofte stillede spørgsmål
       url: mdb-faq.yml
-    - text: Fejlfinding
-      url: mdb-troubleshooting.yml
-  - linkListType: reference
-    links:
     - text: Ordliste over sikkerhedsord
       url: /microsoft-365/business-premium/m365bp-glossary
-    - text: Oplysninger om API-reference
-      url: /microsoft-365/security/defender-endpoint/exposed-apis-create-app-partners
-    - text: Microsoft 365 Business Premium
-      url: /microsoft-365/business-premium/
-    - text: Microsoft 365 Lighthouse
-      url: /microsoft-365/lighthouse/m365-lighthouse-overview
-- title: Konfigurer
-  linkLists:
-  - linkListType: deploy
-    links:
-    - text: Se konfigurationsprocessen
-      url: mdb-setup-configuration.md
-    - text: Trin 1 – Gennemse kravene
-      url: mdb-requirements.md
-    - text: Trin 2 – Tildel roller og tilladelser
-      url: mdb-roles-permissions.md
-    - text: Trin 3 – Konfigurer mailmeddelelser
-      url: mdb-email-notifications.md
-    - text: Trin 4 – Onboard enheder
-      url: mdb-onboard-devices.md
-    - text: Trin 5 – Gennemse dine sikkerhedspolitikker
-      url: mdb-view-edit-policies.md
-- title: Få vist og reager på trusler
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Få vist dit trusselsdashboard
-      url: mdb-view-tvm-dashboard.md
-    - text: Få vist og administrer hændelser
-      url: mdb-view-manage-incidents.md
-    - text: Reager på og afhjælp trusler
-      url: mdb-respond-mitigate-threats.md
-    - text: Gennemse afhjælpningshandlinger
-      url: mdb-review-remediation-actions.md
-    - text: Få vist og brug rapporter
-      url: mdb-reports.md
-- title: Få vist eller rediger sikkerhedspolitikker
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Få vist, rediger og opret politikker
-      url: mdb-view-edit-create-policies.md
-    - text: Administrer regler for firewallpolitikker
-      url: mdb-custom-rules-firewall.md
-  - linkListType: reference
-    links:
-    - text: Politikrækkefølge
-      url: mdb-policy-order.md
-    - text: Indstillinger for næste generations beskyttelse
-      url: mdb-next-gen-configuration-settings.md
-    - text: Firewallindstillinger
-      url: mdb-firewall.md
-- title: Overvåg eller administrer enheder
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Få vist og overvåg enheder
-      url: mdb-manage-devices.md
-    - text: Opret enhedsgrupper
-      url: mdb-create-edit-device-groups.md
-    - text: Onboard enheder
-      url: mdb-onboard-devices.md
-    - text: Fjern enheder
-      url: mdb-offboard-devices.md
