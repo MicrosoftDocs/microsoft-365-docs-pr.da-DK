@@ -22,18 +22,18 @@ search.appverid:
 - BCS160
 - MET150
 description: Tilpas din logonside med en meddelelse om beskyttelse af personlige oplysninger og samtykke til Microsoft 365.
-ms.openlocfilehash: fb56a6de2b916f9b9699e0963f9f1cd1bd8bba16
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 34aff0437b08bc5cb34064b5b7ed474e9b2cf094
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893279"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129003"
 ---
 # <a name="customize-your-sign-in-page-with-a-privacy-and-consent-notice"></a>Tilpas din logonside med en meddelelse om beskyttelse af personlige oplysninger og samtykke
 
 Din virksomhed eller kampagne kan gøre det nemmere for de retshåndhævende myndigheder at sagsøge onlinekriminelle ved at tilføje en meddelelse om beskyttelse af personlige oplysninger og samtykke på din logonside.
 
-Du kan tilpasse din logonside med din branding. Du kan også tilføje tekst for at hjælpe dine brugere med at logge på eller for at påpege juridiske krav eller begrænsninger for at få adgang til Microsoft 365-ressourcer.
+Du kan tilpasse din logonside med din branding. Du kan også tilføje tekst for at hjælpe dine brugere med at logge på eller for at påpege juridiske krav eller begrænsninger for at få adgang til Microsoft 365 ressourcer.
 
 ## <a name="design-customization-the-text-on-your-sign-in-page"></a>Design tilpasning af teksten på logonsiden
 
@@ -46,7 +46,7 @@ De elementer, du kan opdatere, er:
 - Bannerlogo
 - Brugernavnstip
 
-Du kan finde eksempler på meddelelser om beskyttelse af personlige oplysninger og samtykke i Bilag A i [Søgning efter og beslaglægning af computere og indhentning af elektronisk bevismateriale i kriminalefterforskninger](https://www.justice.gov/sites/default/files/criminal-ccips/legacy/2015/01/14/ssmanual2009.pdf).
+Du kan finde eksempler på meddelelser om beskyttelse af personlige oplysninger og samtykke i Bilag A i [Søgning efter og beslaglægning af computere og indhentning af elektronisk bevismateriale i kriminalefterforskninger](https://www.justice.gov/file/442111/download).
 
 ## <a name="next-steps"></a>Næste trin
 

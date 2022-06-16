@@ -21,12 +21,12 @@ description: Brug Microsoft Purview-compliance-portal til at søge i den samlede
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
-ms.openlocfilehash: 0e8ac4e3a8705960f307314717127c969a26c2f6
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 76cee49b8f37f946f9aa8e67bf40e8642f242fac
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078496"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128805"
 ---
 # <a name="search-the-audit-log-in-the-compliance-portal"></a>Søg i overvågningsloggen på overholdelsesportalen
 
@@ -63,6 +63,7 @@ Hvorfor en samlet overvågningslog? Da du kan søge i overvågningsloggen efter 
 | Opbevaringspolitikker og opbevaringsmærkater|MIPLabel, MipAutoLabelExchangeItem, MipAutoLabelSharePointItem, MipAutoLabelSharePointPolicyLocation|
 | Typer af følsomme oplysninger|DlpSensitiveInformationType|
 | Følsomhedsmærkater|MIPLabel, SensitivityLabelAction, SensitivityLabeledFileAction, SensitivityLabelPolicyMatch|
+| Krypteret meddelelsesportal|OMEPortal|
 | SharePoint Online|SharePoint, SharePointFileOperation,SharePointSharingOperation, SharePointListOperation, SharePointCommentOperation |
 | Stream|MicrosoftStream|
 | Threat Intelligence|ThreatIntelligence, ThreatIntelligenceUrl, ThreatFinder, ThreatIntelligenceAtpContent|
@@ -409,7 +410,7 @@ Klik på et af følgende links for at gå til en bestemt tabel.
         [Krypterede aktiviteter på meddelelsesportalen](#encrypted-message-portal-activities)
     :::column-end:::
     :::column:::
-        [SystemSync-aktiviteter] (#systemsync aktiviteter)
+        [SystemSync-aktiviteter](#systemsync-activities)
     :::column-end:::
     :::column:::
         

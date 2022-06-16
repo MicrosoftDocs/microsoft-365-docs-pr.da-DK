@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette politikker til bekæmpelse af spam i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 20372843af62c28f4aae05c40d714bdfcdca203b
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: d72b99b73a7c399147360364fc2de0a6cee6435b
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115977"
+ms.locfileid: "66128717"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>Konfigurer politikker mod spam i EOP
 
@@ -177,6 +177,8 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
      > <sup>2</sup> Du kan bruge værdien som en betingelse i regler for mailflow til at filtrere eller distribuere meddelelsen.
      >
      > <sup>3</sup> Hvis **du vælger en tom værdi for en politik** , betyder det, at standardkarantænepolitikken for den pågældende dom bruges. Når du senere redigerer politikken for bekæmpelse af spam eller får vist indstillingerne, vises standardnavnet for karantænepolitikken. Du kan få flere oplysninger om de standard karantænepolitikker, der bruges til domsafsigelser for spamfilteret, i [denne tabel](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features).
+     >
+     > Brugerne kan ikke udgive deres egne meddelelser, der er sat i karantæne som phishing med høj tillid. I bedste fald kan administratorer konfigurere karantænepolitikken, så brugerne kan anmode om at få frigivet deres phishing-meddelelser med høj genkendelsessikkerhed i karantæne.
 
    - **Bevar spam i karantæne i dette antal dage**: Angiver, hvor længe meddelelsen skal holdes i karantæne, hvis du har valgt **Karantænemeddelelse** som handlingen for en dom til filtrering af spam. Når tidsperioden udløber, slettes meddelelsen, og den kan ikke gendannes. En gyldig værdi er fra 1 til 30 dage.
 

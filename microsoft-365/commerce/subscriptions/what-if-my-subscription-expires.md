@@ -20,12 +20,12 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvad der sker med dine data, når dit abonnement på Microsoft 365 til virksomheder udløber, deaktiveres, eller hvis du annullerer.
 ms.date: 09/16/2021
-ms.openlocfilehash: a96ef700c522577e8d22f734ea6a8a94b410d83a
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: a9837a146ff6494ceaa94adeefeeaf6ed7769986
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102300"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128695"
 ---
 # <a name="what-happens-to-my-data-and-access-when-my-microsoft-365-for-business-subscription-ends"></a>Hvad sker der med mine data og adgang, når mit abonnement på Microsoft 365 til virksomheder ophører?
 
@@ -55,7 +55,7 @@ I følgende tabel forklares det, hvad du kan forvente, når et betalt Microsoft 
   
 > [!NOTE]
 >
-> **Hvad er "kundedata"?** Kundedata, som defineret i [servicevilkårene for Microsoft Online](https://go.microsoft.com/fwlink/p/?LinkId=613649), refererer til alle data, herunder alle tekst-, lyd- eller billedfiler, der leveres til Microsoft af kunden eller på vegne af kunden gennem kundens brug af Microsoft 365-tjenester. Hvis du vil vide mere om beskyttelse af kundedata, skal du se [Kom i gang med Microsoft Service Trust Portal](../../compliance/get-started-with-service-trust-portal.md).
+> **Hvad er "kundedata"?** Kundedata, som defineret i [servicevilkårene for Microsoft Online](https://www.microsoft.com/en-us/licensing/product-licensing/products), refererer til alle data, herunder alle tekst-, lyd- eller billedfiler, der leveres til Microsoft af kunden eller på vegne af kunden gennem kundens brug af Microsoft 365-tjenester. Hvis du vil vide mere om beskyttelse af kundedata, skal du se [Kom i gang med Microsoft Service Trust Portal](../../compliance/get-started-with-service-trust-portal.md).
 
 ## <a name="what-happens-if-i-cancel-a-subscription"></a>Hvad sker der, hvis jeg annullerer et abonnement?
 

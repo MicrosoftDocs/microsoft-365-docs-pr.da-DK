@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Brug enten forenklet visning i Microsoft 365 Administration til at administrere almindelige opgaver eller dashboardvisning for at få mere komplekse indstillinger og opgaver.
-ms.openlocfilehash: d553eff9a9ed78225200320bbadb5a7e28d517f0
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: f3f9d1616189a5e3347a882a6caec0df28e274c0
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436135"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129025"
 ---
 # <a name="overview-of-the-microsoft-365-admin-center"></a>Oversigt over Microsoft 365 Administration
 
@@ -45,7 +45,7 @@ Med <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">
 
 Log på Office.com med din arbejdskonto, og vælg appstarteren.
 
-Hvis du har tilladelse til at få adgang til Administration, kan du se **Administrator** på listen. Vælg den.
+Hvis du har tilladelse til at få adgang til Administration, kan du se **Administration** på listen. Vælg den.
 
 Øverst i Administration skal du gennemse de øverste handlinger for dig. Du kan få vist forskellige handlinger, afhængigt af hvad du allerede har konfigureret, f.eks. oprettelse af nye konti, brug af Teams, konfiguration af mail og installation af Office apps.
 
@@ -67,7 +67,7 @@ I <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Mi
 
 Specialiserede arbejdsområder, f.eks. sikkerhed eller enhedshåndtering, giver mulighed for mere detaljeret kontrol. Du kan få flere oplysninger om, hvordan administrationerne arbejder sammen, under [Hvad med de specifikke typer it-roller og andre arbejdsområder, f.eks. sikkerhed, Enhedshåndtering eller Exchange?](#what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange) i denne artikel.
 
-Hvis du vil have adgang til Microsoft 365 Administration, skal du gå til [admin.microsoft.com](https://admin.microsoft.com) eller, hvis du allerede er logget på, vælge appstarteren og vælge **Administrator**.
+Hvis du vil gå til Microsoft 365 Administration, skal du gå til [admin.microsoft.com](https://admin.microsoft.com) eller, hvis du allerede er logget på, vælge appstarteren og vælge **Administration**.
 
 På startsiden kan du oprette kort til opgaver, du udfører ofte. Hvis du vil tilføje et nyt kort, skal du vælge **Tilføj kort** og derefter vælge plustegnet ud for det kort, du vil tilføje. Luk vinduet, når du er færdig. Du kan omarrangere kortene ved at markere dem og derefter trække dem derhen, hvor du vil. Hvis du vil fjerne et kort, skal du vælge de tre prikker (flere handlinger) og derefter vælge **Fjern**.
 
@@ -106,7 +106,7 @@ Hvis du ikke ved, hvem du skal kontakte på dit arbejde eller din skole for at f
 > [!NOTE]
 > Målrettede udgivelsesadministratorer har først adgang til nye funktioner. Nye funktioner udrulles senere til alle administratorer. Det betyder, at du muligvis ikke kan se Administration, eller at det kan se anderledes ud end det, der er beskrevet i hjælpartiklerne. Hvis du vil være blandt de første til at se nye funktioner, skal du se Deltag i Administration nedenfor.
 
-## <a name="admin-center-features-and-settings"></a>Funktioner og indstillinger for Administration
+## <a name="admin-center-features-and-settings"></a>Administration centerfunktioner og -indstillinger
 
 Her er de funktioner og indstillinger, du finder i navigationen til venstre i Administration. Få mere at vide om administratoropgaver i [administratorhjælp](Oversigt over Microsoft 365 Administration](admin-center-overview.md).
 
@@ -121,12 +121,12 @@ Her er de funktioner og indstillinger, du finder i navigationen til venstre i Ad
 |**Grupper**|Opret og administrer grupper i din organisation, f.eks. en Microsoft 365 gruppe, en distributionsgruppe, en sikkerhedsgruppe eller en delt postkasse. Få mere at vide om, hvordan [du opretter](../create-groups/create-groups.md) og [administrerer](../create-groups/manage-groups.md) grupper.|
 |**Ressourcer**|Opret og administrer ressourcer, f.eks. en SharePoint gruppe af websteder. Få mere at vide om, hvordan [du opretter grupper af websteder](/sharepoint/create-site-collection).|
 |**Fakturering**|Få vist, køb eller annuller abonnementer for din organisation. Få vist tidligere faktureringsopgørelser, eller få vist antallet af tildelte licenser til individuelle brugere. Få mere at vide om, hvordan [du administrerer fakturering](../../commerce/index.yml).|
-|**Support**|Få vist eksisterende tjenesteanmodninger, eller opret nye. Få mere at vide under [Kontakt support til forretningsprodukter – Administratorhjælp](../../business-video/get-help-support.md).|
+|**Support**|Få vist eksisterende tjenesteanmodninger, eller opret nye. Få mere at vide under [Kontakt support til forretningsprodukter – Administration Hjælp](../../business-video/get-help-support.md).|
 |**Indstillinger**|Administrer globale indstillinger for apps som mail, websteder og Office-pakken. Skift din adgangskodepolitik og udløbsdato. Tilføj og opdater domænenavne som contoso.com. Skift din organisations profil og udgivelsespræferencer. Og vælg, om partnere kan få adgang til dit administrationscenter.|
 |**Konfiguration**|Administrer eksisterende domæner, aktivér og administrer multifaktorgodkendelse, administrer administratoradgang, overfør brugerpostkasser til Office 365, administrer funktionsopdateringer, og hjælp brugerne med at installere deres Office apps.|
 |**Rapporter**|Få et hurtigt overblik over, hvordan din organisation bruger Microsoft 365 med detaljerede rapporter om brug af mail, Office aktiveringer og meget mere. Få mere at vide om, hvordan du bruger de nye [aktivitetsrapporter](../activity-reports/activity-reports.md).|
 |**Sundhed**|Få et hurtigt overblik over tilstanden. Du kan også se flere oplysninger og sundhedshistorikken. Se [Sådan kontrollerer du tjenestetilstand](../../enterprise/view-service-health.md) og [Sådan kontrollerer du Windows udgivelsestilstand for at](/windows/deployment/update/check-release-health) få flere oplysninger. <p>Brug Meddelelsescenter til at holde styr på kommende ændringer af funktioner og tjenester. Vi sender meddelelser der med oplysninger, der hjælper dig med at planlægge ændringer og forstå, hvordan det kan påvirke brugerne. Få flere oplysninger i [Meddelelsescenter](../manage/message-center.md).|
-|**Administrationscentre**|Åbn separate administrationscentre for Exchange, Skype for Business, SharePoint, Yammer og Azure AD. Hvert administrationscenter indeholder alle tilgængelige indstillinger for den pågældende tjeneste.  <p> I Exchange Administration kan du f.eks. konfigurere og administrere mail, kalendere, distributionsgrupper og meget mere. Opret og administrer grupper af websteder, indstillinger for websteder og OneDrive for Business i SharePoint Administration. Konfigurer chatbeskeder, telefonmøde med manuelt opkald og onlinetilstedeværelsen i Skype for Business Administration.  <p> Få mere at vide om [Exchange Administration](/exchange/exchange-admin-center) og [SharePoint Administration](/sharepoint/sharepoint-online). <p> **Bemærk:** De administrationscentre, der er tilgængelige for dig, afhænger af din plan og dit område.|
+|**Administration centre**|Åbn separate administrationscentre for Exchange, Skype for Business, SharePoint, Yammer og Azure AD. Hvert administrationscenter indeholder alle tilgængelige indstillinger for den pågældende tjeneste.  <p> I Exchange Administration kan du f.eks. konfigurere og administrere mail, kalendere, distributionsgrupper og meget mere. Opret og administrer grupper af websteder, indstillinger for websteder og OneDrive for Business i SharePoint Administration. Konfigurer chatbeskeder, telefonmøde med manuelt opkald og onlinetilstedeværelsen i Skype for Business Administration.  <p> Få mere at vide om [Exchange Administration](/exchange/exchange-admin-center) og [SharePoint Administration Center](/sharepoint/sharepoint-online). <p> **Bemærk:** De administrationscentre, der er tilgængelige for dig, afhænger af din plan og dit område.|
 |
 
 ## <a name="common-tasks-in-the-admin-center"></a>Almindelige opgaver i Administration
@@ -149,7 +149,7 @@ Her er de funktioner og indstillinger, du finder i navigationen til venstre i Ad
 
 3. Vælg enten **Målrettet udgivelse for alle** eller **Målrettet udgivelse for valgte brugere**. Hvis du vælger Målrettet udgivelse for udvalgte brugere, skal du sørge for at føje din administratorkonto (og andre administratorer i din organisation, der vil deltage) til listen over valgte brugere.
 
-## <a name="admin-center-feedback"></a>Feedback fra Administration
+## <a name="admin-center-feedback"></a>feedback Administration center
 
 Mens du er i Administration, kan du give Microsoft feedback om din oplevelse ved at vælge **Giv feedback** lige ved siden af knappen **Har du brug for hjælp?** nederst på hver side. Fortæl os, hvad du kan lide, og hvad vi kan gøre bedre. Derudover kan du få pop op-undersøgelser fra tid til anden og spørge om dine overordnede indtryk eller en bestemt oplevelse, der netop er udgivet. Du kan også give feedback i slutningen af denne artikel ved at vælge **Var disse oplysninger nyttige?**
 
@@ -171,13 +171,13 @@ Du kan få flere oplysninger under [Prøv eller køb et Microsoft 365 til virkso
 
 Vi elsker at høre fra dig! Rapportering af fejl og deling af feedback hjælper os med at gøre Microsoft 365 Administration bedre. Hvis du vil give feedback, skal du vælge knappen **Feedback** nederst på siden og bruge formularen til at sende os dine tanker. Markér afkrydsningsfeltet, og bekræft din mailadresse, hvis du vil have, at en person fra det Microsoft 365 Administration team skal følge op på dine kommentarer. Vi kan ikke love at følge op på hver eneste feedback, men vi vil prøve!
 
-Du kan også give feedback uden for Administration i vores UserVoice-forum. Du kan bruge denne side til at komme med funktionsforslag, som andre forumbrugere kan stemme om: [UserVoice-forum for det nye administrationscenter](https://go.microsoft.com/fwlink/?linkid=2024994).
+<!---You can also give feedback from outside of the admin center on our UserVoice forum. You can use this page to make feature suggestions that can be voted on by other forum users: [UserVoice forum for the new admin center](https://go.microsoft.com/fwlink/?linkid=2024994).--->
 
 ### <a name="what-about-the-specific-types-of-it-roles-and-other-workspaces-like-security-device-management-or-exchange"></a>Hvad med de specifikke typer af it-roller og andre arbejdsområder, f.eks. sikkerhed, Enhedshåndtering eller Exchange?
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration er</a> det almindelige indgangspunkt for alle teams og roller, der administrerer Microsoft 365. Oplevelsen, oplysningerne og kontrolelementerne er skræddersyet og kan tilpasses for hver enkelt administrator og rolle. Derudover giver specialiserede arbejdsområder mulighed for dyb, detaljeret kontrol. Disse arbejdsområder til specialister omfatter SharePoint, Teams &amp; Skype, Exchange, sikkerhed, overholdelse af angivne standarder, Enhedshåndtering og Azure Active Directory. Du kan finde specialistarbejdsområder i navigationsruden i Microsoft 365 Administration på [https://admin.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2024339).
 
-### <a name="what-language-options-are-available-the-admin-center"></a>Hvilke sprogindstillinger er tilgængelige i Administration?
+### <a name="what-language-options-are-available-the-admin-center"></a>Hvilke sprogindstillinger er tilgængelige i Administration Center?
 
 Microsoft 365 Administration er fuldt oversat på 40 sprog.
 

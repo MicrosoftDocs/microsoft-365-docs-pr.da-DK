@@ -1,6 +1,6 @@
 ---
 title: Beskyt din organisations data med enhedsstyring
-description: Overvåg organisationens datasikkerhed via rapporter om enhedsstyring.
+description: Overvåg din organisations datasikkerhed via enhedskontrolrapporter.
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -14,71 +14,68 @@ manager: dansimp
 audience: ITPro
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 8a31ce05ed6986159d9f6e4c489e6f7707cfecc4
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: 6fe93be2ec244628f2bf2195eb453307235ea06f
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64465283"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129179"
 ---
-# <a name="device-control-report"></a>Rapport over enhedsstyring
+# <a name="device-control-report"></a>Rapport over enhedskontrol
 
 **Gælder for:** 
-- [Microsoft Defender for Endpoint plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Microsoft Defender for Endpoint beskytter mod datatab ved at overvåge og kontrollere mediebrug af enheder i organisationen, f.eks. brug af flytbare lagringsenheder og USB-drev.
+Microsoft Defender for Endpoint enhedskontrol beskytter mod tab af data ved at overvåge og styre medier, der bruges af enheder i din organisation, f.eks. brug af flytbare lagerenheder og USB-drev.
 
-Med enhedsstyringsrapporten kan du få vist hændelser, der er relateret til medieforbrug, f.eks.:
+Med rapporten over enhedskontrol kan du få vist hændelser, der er relateret til medieforbrug. Sådanne hændelser omfatter:
 
-- **Overvågningshændelser:** Viser antallet af overvågningshændelser, der sker, når eksterne medier er tilsluttet.
-- **Politikhændelser:** Viser antallet af politikhændelser, der sker, når en politik for enhedsstyring udløses.
+- **Overvågningshændelser:** Viser antallet af overvågningshændelser, der opstår, når der er forbindelse til eksterne medier.
+- **Politikhændelser:** Viser antallet af politikhændelser, der opstår, når en politik for enhedskontrol udløses.
 
 > [!NOTE]
-> Overvågningshændelsen til at spore medieforbrug er aktiveret som standard for enheder, der er onboardet Microsoft Defender for Endpoint.
+> Overvågningshændelsen til sporing af medieforbrug er som standard aktiveret for enheder, der er onboardet til Microsoft Defender for Endpoint.
 
-## <a name="understanding-the-audit-events"></a>Forstå overvågningshændelser
+## <a name="understanding-the-audit-events"></a>Om overvågningshændelserne
 
-Overvågningshændelser omfatter:
+Overvågningshændelserne omfatter:
 
-- **USB-drevholder og -unmount:** Overvågningshændelser, der genereres, når et USB-drev ermonteret eller ikke-tilsluttet.
-- **PnP:** Plug and Play overvågningshændelser genereres, når flytbart lager, en printer eller Bluetooth medie er tilsluttet.
-- **Kontrol af flytbare lageradgang:** Hændelser genereres, når der udløses en kontrolpolitik for flytbar lageradgang. Det kan være Overvågning, Bloker eller Tillad.
+- **Tilslutning og afmontering af USB-drev:** Overvågningshændelser, der genereres, når et USB-drev er tilsluttet eller ikke er tilsluttet.
+- **PnP:** Plug and Play overvågningshændelser genereres, når der er tilsluttet et flytbart lager, en printer eller Bluetooth medie.
+- **Adgangskontrol til flytbart lager:** Hændelser genereres, når en politik for adgangskontrol til flytbare lagermedier udløses. Det kan være Overvågning, Bloker eller Tillad.
 
-## <a name="monitor-device-control-security"></a>Overvåg sikkerhed for enhedsstyring
+## <a name="monitor-device-control-security"></a>Overvåg sikkerhed for enhedskontrol
 
-Enhedsstyring i Microsoft Defender for Endpoint giver sikkerhedsadministratorer værktøjer, der gør det muligt for dem at spore deres organisations enhedsstyringssikkerhed via rapporter. Du kan finde rapporten om enhedsstyring i Microsoft 365 Defender ved at gå til **Rapporter > Enhedsbeskyttelse**.
+Enhedskontrol i Defender for Endpoint giver sikkerhedsadministratorer værktøjer, der gør det muligt for dem at spore deres organisations enhedskontrolsikkerhed via rapporter. Du kan finde rapporten over enhedskontrol på portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)). Gå til Rapporten **Generel** > **sikkerhed** for **rapporter** > . Find **enhedens kontrolkort** , og vælg linket for at åbne rapporten. 
 
-Kortet Enhedsbeskyttelse på dashboardet **Rapporter** viser antallet af overvågningshændelser, der er genereret af medietype i løbet af de seneste 180 dage.
+Kortet Enhedsbeskyttelse på dashboardet **Rapporter** viser antallet af overvågningshændelser, der er genereret af medietypen, i løbet af de sidste 180 dage.
 
-> [!div class="mx-imgBorder"]
-> ![DeviceControlReportCard](https://user-images.githubusercontent.com/81826151/138504137-e9a7673e-e988-48cd-820d-2625ec6df352.png)
+Knappen **Vis detaljer** viser flere data om medieforbrug på **rapportsiden for enhedskontrol** .
 
-Knappen **Vis detaljer** viser flere medieforbrugsdata på siden **til rapport om enhedsstyring** .
-
-Siden indeholder et dashboard med samlet antal hændelser pr. type og en liste over begivenheder. Administratorer kan filtrere efter tidsinterval, medieklassenavn og enheds-id.
+Siden indeholder et dashboard med et samlet antal hændelser pr. type og en liste over hændelser og viser 500 hændelser pr. side, men administratorer kan rulle ned for at se flere hændelser og kan filtrere efter tidsinterval, medieklassenavn og enheds-id.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/Detaileddevicecontrolreport.png" alt-text="Siden med oplysninger om enhedsstyringsrapport i Microsoft 365 Defender portal" lightbox="images/Detaileddevicecontrolreport.png":::
+> :::image type="content" source="images/Detaileddevicecontrolreport.png" alt-text="Siden Detaljer om rapport for enhedskontrol på portalen Microsoft 365 Defender" lightbox="images/Detaileddevicecontrolreport.png":::
 
-Når du vælger en begivenhed, vises der et pop op-vindue, der viser dig flere oplysninger:
+Når du vælger en hændelse, vises der et pop op-vindue, der viser flere oplysninger:
 
-- **Generelle oplysninger:** Dato, Handlingstilstand, politikken og Access for denne hændelse.
+- **Generelle oplysninger:** Dato, Handlingstilstand, politikken og Adgang for denne hændelse.
 - **Medieoplysninger:** Medieoplysninger omfatter Medienavn, Klassenavn, Klasse-GUID, Enheds-id, Leverandør-id, Serienummer og Bustype.
-- **Oplysninger om placering:** Enhedsnavn, bruger- og MDATP-enheds-id.
+- **Oplysninger om placering:** Enhedsnavn, Bruger og MDATP-enheds-id.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/devicecontrolreportfilter.png" alt-text="Siden Filter på enhedskontrolrapport" lightbox="images/devicecontrolreportfilter.png":::
+> :::image type="content" source="images/devicecontrolreportfilter.png" alt-text="Rapportsiden Filtrer på enhedskontrol" lightbox="images/devicecontrolreportfilter.png":::
 
-Hvis du vil se aktivitet i realtid for disse medier i hele organisationen, skal du vælge **knappen Åbn avanceret jagt** . Dette omfatter en integreret, foruddefineret forespørgsel.
+Hvis du vil se aktivitet i realtid for dette medie på tværs af organisationen, skal du vælge knappen **Åbn avanceret jagt** . Dette omfatter en integreret, foruddefineret forespørgsel.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="images/Devicecontrolreportquery.png" alt-text="Siden Forespørgsel på enhedskontrolrapport" lightbox="images/Devicecontrolreportquery.png":::
+> :::image type="content" source="images/Devicecontrolreportquery.png" alt-text="Rapportsiden Forespørgsel på enhedskontrol" lightbox="images/Devicecontrolreportquery.png":::
 
-Hvis du vil se enhedens sikkerhed, skal du **vælge knappen Åbn enhed side** i pop op-pop-op-dialogboksen. Denne knap åbner enhedsenhedssiden.
+Hvis du vil se sikkerheden for enheden, skal du vælge knappen **Åbn enhedside** på pop op-vinduet. Denne knap åbner enhedens enhedsside.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/Devicesecuritypage.png" alt-text="Enhedsenhedssiden" lightbox="images/Devicesecuritypage.png":::
 
-## <a name="reporting-delays"></a>Rapportering af forsinkelser
+## <a name="reporting-delays"></a>Rapporteringsforsinkelser
 
-Rapporten enhedsstyring kan have en 12-timers forsinkelse fra det tidspunkt, hvor en medieforbindelse oprettes, til det tidspunkt, hvor hændelsen afspejles på kortet eller på listen over domæner.
+Der kan være en forsinkelse på op til 12 timer fra det tidspunkt, hvor en medieforbindelse indtræffer, til hændelsen afspejles på kortet eller på domænelisten.

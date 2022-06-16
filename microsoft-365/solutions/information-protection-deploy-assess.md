@@ -17,12 +17,12 @@ ms.collection:
 - m365solution-scenario
 ms.custom: ''
 description: Bestem reglerne for beskyttelse af personlige oplysninger, de relevante scenarier, din parathed og de følsomme oplysningstyper, der findes i dit Microsoft 365 miljø.
-ms.openlocfilehash: 73cf1f3a51806fb53d5f04eb835a2fbcc7cd7b3b
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: a09e447733baa352a5302490b88e95a08a2775a4
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015032"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129047"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>Vurder risici for beskyttelse af personlige oplysninger, og identificer følsomme elementer med Microsoft 365
 
@@ -192,11 +192,11 @@ Dette trin omfatter identifikation af bestemte følsomme informationstyper, der 
 
 Det kan være en stor opgave at finde indhold i dit miljø, der indeholder personlige oplysninger, og det kan tidligere omfatte en kombination af at bruge Søgning efter overholdelse, eDiscovery, eDiscovery (Premium), DLP og overvågning.
 
-Med den nye **dataklassificeringsløsning** på Microsoft Purview-overholdelsesportalen er dette blevet meget nemmere med funktionen [Indholdsoversigt](../compliance/data-classification-content-explorer.md) , som fungerer sammen med enten indbyggede eller brugerdefinerede typer følsomme oplysninger, herunder dem, der er relateret til personlige data.
+Med den nye **dataklassificeringsløsning** i Microsoft Purview-compliance-portal er dette blevet meget lettere med funktionen [Indholdsoversigt](../compliance/data-classification-content-explorer.md), som fungerer sammen med enten indbyggede eller brugerdefinerede typer følsomme oplysninger, herunder dem, der er relateret til personlige data.
 
 ### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
 
-Microsoft Purview-overholdelsesportalen er forudinstalleret med mere end 100 følsomme oplysningstyper, hvoraf de fleste er relateret til at identificere og finde personlige data. Disse indbyggede typer følsomme oplysninger kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre m.m., baseret på mønstre, der er defineret af et regulært udtryk (regex) eller en funktion. Du kan få mere at vide under [Hvad de følsomme oplysningstyper søger efter](../compliance/sensitive-information-type-entity-definitions.md).
+Den Microsoft Purview-compliance-portal leveres forudinstalleret med over 100 følsomme informationstyper, hvoraf de fleste er relateret til at identificere og finde personlige data. Disse indbyggede typer følsomme oplysninger kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre m.m., baseret på mønstre, der er defineret af et regulært udtryk (regex) eller en funktion. Du kan få mere at vide under [Hvad de følsomme oplysningstyper søger efter](../compliance/sensitive-information-type-entity-definitions.md).
 
 Hvis du har brug for at identificere og beskytte en organisationsspecifik eller regional type følsomme elementer, f.eks. et brugerdefineret format for medarbejder-id'er eller andre personlige oplysninger, der ikke allerede er omfattet af en indbygget type følsomme oplysninger, kan du oprette en brugerdefineret type følsomme oplysninger ved hjælp af disse metoder:
 
@@ -210,9 +210,9 @@ Se disse artikler for at få flere oplysninger:
 
 - [Tilpas en indbygget type af følsomme oplysninger](../compliance/customize-a-built-in-sensitive-information-type.md)
 - [Få mere at vide om typer af følsomme oplysninger.](../compliance/sensitive-information-type-learn-about.md)
-- [Opret en brugerdefineret type følsomme oplysninger på Microsoft 365 Purview-overholdelsesportalen](../compliance/create-a-custom-sensitive-information-type.md)
-- [Opret en brugerdefineret type følsomme oplysninger i PowerShell til sikkerhed & overholdelse af angivne standarder](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
-- [Opret brugerdefinerede typer følsomme oplysninger med nøjagtig datamatchbaseret klassificering](../compliance/create-custom-sensitive-information-types-with-exact-data-match-based-classification.md)
+- [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center](../compliance/create-a-custom-sensitive-information-type.md)
+- [Opret en brugerdefineret type følsomme oplysninger i Security & Compliance Center PowerShell](../compliance/create-a-custom-sensitive-information-type-in-scc-powershell.md)
+- [Opret brugerdefinerede typer følsomme oplysninger med nøjagtig datamatchbaseret klassificering](/microsoft-365/compliance/sit-get-started-exact-data-match-based-sits-overview?view=o365-worldwide)
 
 ### <a name="content-explorer"></a>Indholdsoversigt
 

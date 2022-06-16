@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 74f1a657cbf675b8a55edc169339cb16a22f4dbe
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: a3d50debf31f53f75177e7c8cf8c7116ae3789b6
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115669"
+ms.locfileid: "66128849"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitik
 
@@ -212,6 +212,9 @@ Standard karantænepolitikker, forudindstillede tilladelsesgrupper og tilladelse
 > Hvis du er tilfreds med standardtilladelserne for slutbrugere og karantænemeddelelser, der leveres (eller ikke er angivet) af standardkarantænepolitikkerne, behøver du ikke at foretage dig noget. Hvis du vil tilføje eller fjerne slutbrugerfunktioner (de tilgængelige knapper) for meddelelser i karantæne for brugere eller aktivere karantænemeddelelser og tilføje eller fjerne de samme funktioner i karantænemeddelelser, kan du tildele en anden karantænepolitik til karantænehandlingen.
 
 ## <a name="assign-quarantine-policies-in-supported-policies-in-the-microsoft-365-defender-portal"></a>Tildel karantænepolitikker i understøttede politikker på portalen Microsoft 365 Defender
+
+> [!NOTE]
+> Brugerne kan ikke frigive deres egne meddelelser, der er sat i karantæne som malware (politikker for antimalware) eller phishing med høj genkendelsessikkerhed (politikker til bekæmpelse af spam), uanset hvordan karantænepolitikken er konfigureret. I bedste fald kan administratorer konfigurere karantænepolitikken, så brugerne kan anmode om frigivelse af deres karantæne malware eller phishing-meddelelser med høj genkendelsessikkerhed.
 
 ### <a name="anti-spam-policies"></a>Politikker til bekæmpelse af spam
 

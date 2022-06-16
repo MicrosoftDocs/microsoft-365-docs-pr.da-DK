@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Instruktioner til publicering af opbevaringsmærkater, så du derefter kan anvende dem i apps for at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 3acbe0632a387139bbe865b854a92f8e51609cc1
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b96d5f3df440db58aff63bffca11523f7c09d8ee
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007322"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128915"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Publicer opbevaringsmærkater, og anvend dem i apps
 
@@ -58,13 +58,13 @@ Sørg for, at du har [oprettet de opbevaringsmærkater](file-plan-manager.md#cre
 
 Beslut, om politikken for opbevaringsmærkaten skal være **tilpasset** eller **statisk**, før du opretter den. Du kan finde flere oplysninger under [Tilpassede eller statiske politikområder for opbevaring](retention.md#adaptive-or-static-policy-scopes-for-retention). Hvis du beslutter at bruge en tilpasset politik, skal du oprette et eller flere tilpassede områder, før du opretter din politik for opbevaringsmærkat og derefter vælger dem under processen til oprettelse af opbevaringsmærkatpolitik. Du kan finde en vejledning under [Konfigurationsoplysninger for tilpassede områder](retention-settings.md#configuration-information-for-adaptive-scopes).
 
-1. Gå til en af følgende placeringer på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>:
+1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> skal du gå til en af følgende placeringer:
     
     - Hvis du bruger datastyring:
         - **Løsninger** >  Fanen **Label policies** > > **records management** > **Publish labels**
     
     - Hvis du bruger administration af datalivscyklus:
-        - **Løsninger** >  Administration  >  **af datalivscyklus** Fanen **Etiketpolitikker** > **Publicer navne**
+        - **Løsninger** >  Administration af  >  **datalivscyklus** Fanen **Etiketpolitikker** > **Publicer navne**
     
     Kan du ikke se din løsning i navigationsruden med det samme? Vælg først **Vis alle**. 
 
@@ -92,7 +92,7 @@ Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv da
 
 ![Diagram over, hvornår publicerede navne træder i kraft.](../media/retention-labels-published-timings.png)
 
-Hvis mærkaterne ikke vises efter syv dage, skal du kontrollere **status** for mærkatpolitikken ved at vælge den på siden **Mærkatpolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du får vist **(Fejl),** der er inkluderet i status og i detaljerne for placeringerne, får du vist en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, ved at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at forsøge at distribuere politikken igen:
+Hvis mærkaterne ikke vises efter syv dage, skal du kontrollere **status** for mærkatpolitikken ved at vælge den på siden **Mærkatpolitikker** i Microsoft Purview-compliance-portal. Hvis du får vist **(Fejl),** der er inkluderet i status og i detaljerne for placeringerne, får du vist en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, ved at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at forsøge at distribuere politikken igen:
 
 1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 

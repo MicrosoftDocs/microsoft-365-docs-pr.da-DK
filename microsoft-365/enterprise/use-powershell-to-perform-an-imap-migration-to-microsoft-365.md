@@ -18,12 +18,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
 description: Få mere at vide om, hvordan du bruger PowerShell til at udføre en IMAP-overførsel (Internet Mail Access Protocol) til Microsoft 365.
-ms.openlocfilehash: 7f0fd2ded375729d1e738215fec3558fbc93257b
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: e3375af79ce4332ebf8f44e88181d7d8dc0e430f
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012654"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128783"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en IMAP-overførsel for at Microsoft 365
 
@@ -208,7 +208,7 @@ Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 
 Mailsystemer bruger en DNS-post kaldet en MX-post til at finde ud af, hvor de skal levere mails. Under mailoverførselsprocessen pegede din MX-post på dit kildemailsystem. Nu, hvor mailoverførslen til Microsoft 365 er fuldført, er det tid til at pege din MX-post på Microsoft 365. Dette hjælper med at sikre, at mail leveres til dine Microsoft 365 postkasser. Når du flytter MX-posten, kan du også slå dit gamle mailsystem fra, når du er klar.
 
-For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retninger, leveres der også [generelle MX-postinstruktioner](https://go.microsoft.com/fwlink/?LinkId=397449) .
+For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retninger, leveres der også [generelle MX-postinstruktioner](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide#add-an-mx-record-for-email-outlook-exchange-online) .
 
 Det kan tage op til 72 timer, før dine kunders og partneres mailsystemer genkender den ændrede MX-post. Vent mindst 72 timer, før du fortsætter til næste opgave: Trin 6: Slet IMAP-overførselsbatch.
 

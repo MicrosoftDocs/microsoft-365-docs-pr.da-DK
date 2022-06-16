@@ -13,12 +13,12 @@ ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 ROBOTS: NOINDEX, NOFOLLOW
 description: Integrer Microsoft Teams møder med lærred
-ms.openlocfilehash: cbb24972dba7fafe60cb460e514a0fede64a08fb
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 59b4ee7a31d1c88f0417d2a9d3e0af1335155076
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621467"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66129157"
 ---
 # <a name="use-microsoft-teams-meetings-with-canvas"></a>Brug Microsoft Teams-møder med lærred
 
@@ -31,15 +31,16 @@ Microsoft Teams møder er en LTI-app (Learning Tools Interoperability), der hjæ
 >
 > - Din lejer skal have en Microsoft Education-licens.
 > - Det er kun en enkelt Microsoft-lejer, der kan bruges til at tilknytte brugere mellem lærred og Microsoft.
-> - Du skal slå Skoledatasynkronisering (SDS) fra, før du bruger LTI-klasse Teams for at undgå dubletter af grupper.
+> - Hvis du planlægger at bruge funktionen Microsoft Teams synkroniser på lærredet samtidig med Microsofts Skoledatasynkronisering (SDS), skal du ikke inkludere data for klasse- og klasseliste i din SDS synkronisering. Du kan fortsætte med at bruge SDS til at synkronisere alle andre data, herunder brugere, organisationer, overordnede kontakter og demografi.
+> - Du kan bruge LTI Teams møder uden at aktivere **Kursussynkronisering**. Du kan dog ikke bruge indstillingen **Tilføj hele klassen**. Du kan enten skrive eller kopiere og indsætte deltagernes mailadresser eller føje kanaler fra eksisterende teams til møderne.
 
-## <a name="microsoft-office-365-admin"></a>Microsoft Office 365 administrator
+## <a name="microsoft-office-365-admin"></a>Microsoft Office 365 Administration
 
 Før du administrerer Microsoft Teams integration i Instructure Canvas, er det vigtigt, at Canvass **Microsoft-Teams-Sync-for-Canvas Azure-app** godkendes af din institutions Microsoft Office 365 administrator i din Microsoft Azure lejer, før du fuldfører konfigurationen af lærredsadministratoren.
 
 1. Log på Lærred.
 
-2. Vælg linket **Administrator** i den globale navigation, og vælg derefter din konto.
+2. Vælg linket **Administration** i den globale navigation, og vælg derefter din konto.
 
 3. I administrationsnavigationen skal du vælge linket **Indstillinger** og derefter fanen **Integrationer**.
 
@@ -52,7 +53,7 @@ Før du administrerer Microsoft Teams integration i Instructure Canvas, er det v
 
 5. Vælg **Opdater Indstillinger** når du er færdig.
 
-6. Hvis du vil godkende adgang til Lærredets **Microsoft-Teams-Sync-for-Canvas Azure-app**, skal du vælge linket **Tildel lejeradgang**. Du bliver omdirigeret til slutpunktet for Samtykke for Microsoft Identity Platform-administrator.
+6. Hvis du vil godkende adgang til Lærredets **Microsoft-Teams-Sync-for-Canvas Azure-app**, skal du vælge linket **Tildel lejeradgang**. Du omdirigeres til Microsoft Identity Platform Administration Consent Endpoint.
 
    ![Tilladelser.](media/permissions.png)
 
@@ -65,15 +66,15 @@ Før du administrerer Microsoft Teams integration i Instructure Canvas, er det v
 
    ![teams-synkronisering.](media/teams-sync.png)
 
-## <a name="canvas-admin"></a>Lærredsadministrator
+## <a name="canvas-admin"></a>Administration på lærred
 
 Konfigurer Microsoft Teams LTI 1.3 Integration.
 
-Som lærredsadministrator skal du tilføje LTI-appen Microsoft Teams møder i dit miljø. Notér LTI-klient-id'et for appen.
+Som Administration på lærredet skal du tilføje LTI-appen Microsoft Teams møder i dit miljø. Notér LTI-klient-id'et for appen.
 
- - Microsoft Teams møder – 170000000000703
+- Microsoft Teams møder – 170000000000703
 
-1. Adgang **til administratorindstillingerApps** > .
+1. Få adgang **Administration indstillinger** > **Apps**.
 
 2. Vælg **+ App** for at tilføje Teams LTI-apps.
 

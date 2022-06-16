@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret politikker for opbevaring af automatisk mærkning, så du automatisk kan anvende mærkater for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: a349ce1678c6cc28a82aa6c97c31358a57970f35
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 87328b69f2649a1e6a6c6755892e17e7c04aac53
+ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115603"
+ms.locfileid: "66128819"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
 
@@ -79,7 +79,7 @@ Når du opretter en politik, der automatisk skal anvendes, vælger du en opbevar
         - **Løsninger** \> **Datastyring** \> Fanen \> **Etiketpolitikker** **Anvend automatisk en etiket**
 
     - Hvis du bruger administration af datalivscyklus:
-        - **Løsninger** \> Administration \> **af datalivscyklus** Fanen \> **Etiketpolitikker** **Anvend automatisk en etiket**
+        - **Løsninger** \> Administration af \> **datalivscyklus** Fanen \> **Etiketpolitikker** **Anvend automatisk en etiket**
 
     Kan du ikke se din løsning i navigationsruden med det samme? Vælg først **Vis alle**.
 
