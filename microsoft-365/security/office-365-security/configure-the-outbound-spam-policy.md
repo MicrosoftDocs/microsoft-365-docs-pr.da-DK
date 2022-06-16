@@ -19,16 +19,16 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan de får vist, opretter, ændrer og sletter udgående spampolitikker i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9ab8585a0671f9c62ec2015d91486539c84004db
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 690d4def4081812653cb533765f6c61cca7d1e90
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847446"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115823"
 ---
 # <a name="configure-outbound-spam-filtering-in-eop"></a>Konfigurer filtrering af udgående spam i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -80,7 +80,7 @@ Hvis du vil øge effektiviteten af filtrering af udgående spam, kan du oprette 
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for politikker for udgående spam under [Politikindstillinger for udgående spamfilter for EOP](recommended-settings-for-eop-and-office365.md#eop-outbound-spam-policy-settings).
@@ -115,6 +115,16 @@ Når du opretter en brugerdefineret politik for udgående spam på Microsoft 365
    Flere værdier i samme betingelse bruger OR-logik (f.eks. _\<sender1\>_ eller _\<sender2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<sender1\>_ og _\<member of group 1\>_).
 
    - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne afsendere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+
+   > [!IMPORTANT]
+   > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+   >
+   > - Modtageren er: romain@contoso.com
+   > - Modtageren er medlem af: Direktører
+   >
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   >
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 

@@ -4,12 +4,12 @@ description: inkluder fil
 author: mjcaparas
 ms.service: microsoft-365-enterprise
 ms.author: macapara
-ms.openlocfilehash: 61d7b5f00a42789a2d4f46aa41eb3f8865fb6e03
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 31008df3e43c99f3a97dad3dce037b96e3b0c4b5
+ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/15/2022
-ms.locfileid: "66091427"
+ms.locfileid: "66116221"
 ---
 ## <a name="prerequisites"></a>Forudsætninger
 
@@ -33,7 +33,7 @@ Når en enhed, der er domænetilsluttet, opretter et tillidsforhold til Azure Ac
 - Azure Active Directory Forbind (AAD-Forbind) skal synkroniseres med den lejer, der bruges fra Microsoft Defender for Endpoint
 - Hybrid Azure Active Directory joinforbindelse skal konfigureres i dit miljø (enten via samling eller AAD-Forbind synkronisering)
 - AAD-Forbind synkronisering skal inkludere enhedsobjekterne *i området* for synkronisering med Azure Active Directory (når det er nødvendigt til joinforbindelse)
-- AAD-Forbind regler for synkronisering skal ændres for Server 2012 R2 (når der kræves understøttelse af Server 2012 R2)
+- AAD-Forbind regler for synkronisering [skal ændres for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt?view=o365-worldwide#instructions-for-applying-computer-join-rule-in-aad-connect) (når der kræves understøttelse af Server 2012 R2)
 - Alle enheder skal registreres i Azure Active Directory for den lejer, der er vært for Microsoft Defender for Endpoint. Scenarier på tværs af lejere understøttes ikke. 
 
 ### <a name="connectivity-requirements"></a>Forbindelseskrav

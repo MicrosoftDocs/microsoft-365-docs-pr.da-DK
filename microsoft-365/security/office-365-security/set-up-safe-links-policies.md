@@ -19,12 +19,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette Pengeskab Links-politikker og globale indstillinger for Pengeskab links i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 969e3f3bb3b139a21cd2d84b4a0bd698a74b5107
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 5e66b1b079f67d6454754d056ca9fedf5fefb74f
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772440"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115779"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365
 
@@ -116,6 +116,16 @@ Når du opretter en brugerdefineret politik for Pengeskab links på Microsoft 36
    Flere værdier i samme betingelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
 
    - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+
+   > [!IMPORTANT]
+   > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+   >
+   > - Modtageren er: romain@contoso.com
+   > - Modtageren er medlem af: Direktører
+   >
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   >
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 

@@ -14,16 +14,16 @@ search.appverid: MET150
 description: Trusselsafhjælpning
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d584ce10f4e119ec4fe8aa2991c6cac0edd5377c
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 6102d1e7d3b7e39787c3787b8bc0851eedbdcefb
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621896"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115537"
 ---
 # <a name="remediate-malicious-email-delivered-in-office-365"></a>Afhjælp skadelig mail leveret i Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 2](defender-for-office-365.md)
@@ -36,6 +36,8 @@ Afhjælpning betyder at tage en foreskrevet handling mod en trussel. Ondsindet m
 ## <a name="what-you-need-to-know-before-you-begin"></a>Det har du brug for at vide, før du begynder
 
 Administratorer kan udføre de nødvendige handlinger på mails, men for at få disse handlinger godkendt skal de have tildelt rollen *Søg og Fjern* i **& samarbejdstilladelser** i Microsoft 365 Defender portalen. Uden at rollen *Søg og fjern føjes* til en af rollegrupperne, kan de ikke udføre handlingen.
+
+Da mailhandlinger opretter automatiserede undersøgelser i backend, skal du aktivere *Automatiseret undersøgelse*. Gå til **Indstillinger** \> **Slutpunkter** \> **Avancerede funktioner**, og slå **Automatiseret undersøgelse** til.
 
 ## <a name="manual-and-automated-remediation"></a>Manuel og automatiseret afhjælpning
 
@@ -55,7 +57,7 @@ Når mails er valgt via Stifinder, kan du starte afhjælpningen ved at udføre d
 
 - Direkte godkendelse: Når handlinger som *f.eks. flytning til indbakke*, *flytning til uønsket* post, *flytning til slettede elementer*, *blød sletning* eller *hård sletning* vælges af sikkerhedsafdelingen, der har de nødvendige tilladelser, og de næste trin i afhjælpningen følges, begynder afhjælpningsprocessen at udføre den valgte handling.
 > [!NOTE]
-> Da afhjælpningen bliver sparket i gang, genererer den en advarsel og en undersøgelse parallelt. Der vises en besked i beskedkøen med navnet "Administrativ handling sendt af en administrator", hvilket tyder på, at sikkerhedsafdelingen har udført afhjælpning af en enhed. Der vises oplysninger som f.eks. navnet på den person, der udførte handlingen, understøttende undersøgelseslink, tid osv. Det fungerer rigtig godt at vide, hver gang en hård handling som afhjælpning udføres på enheder. Alle disse handlinger kan spores under fanen **Handlinger & Indsendelser** \> **Action** **CenterHistory**  ->  (offentlig prøveversion).
+> Da afhjælpningen bliver sparket i gang, genererer den en advarsel og en undersøgelse parallelt. Der vises en besked i beskedkøen med navnet "Administrativ handling sendt af en administrator", hvilket tyder på, at sikkerhedsafdelingen har udført afhjælpning af en enhed. Der vises oplysninger som f.eks. navnet på den person, der udførte handlingen, understøttende undersøgelseslink, tid osv. Det fungerer rigtig godt at vide, hver gang en hård handling som afhjælpning udføres på enheder. Alle disse handlinger kan spores under **fanen** **Handlinger & Oversigt over indsendelser** \> **i Løsningscenter**  ->  (offentlig prøveversion).
 
 - Totrinsgodkendelse: En handling af typen "Føj til afhjælpning" kan udføres af administratorer, der ikke har de nødvendige tilladelser, eller som skal vente med at udføre handlingen. I dette tilfælde føjes de målrettede mails til en afhjælpningsobjektbeholder. Der kræves godkendelse, før afhjælpningen udføres.
 
@@ -64,9 +66,9 @@ Når mails er valgt via Stifinder, kan du starte afhjælpningen ved at udføre d
 > [!div class="mx-imgBorder"]
 > [![Mail med malware på siden "Zapped", der viser tidspunktet for Zap-udførelse.](../../media/tp-RemediationArticle3.png)](../../media/tp-RemediationArticle3.png#lightbox)
 
-Al afhjælpning (direkte godkendelser), der er oprettet i Stifinder, Avanceret jagt eller via automatiseret undersøgelse, vises i Løsningscenter. Få adgang til disse via navigationspanelet til venstre under fanen **Handlinger & Indsendelser** \> **HandlingscenterHistorie**  -> .
+Al afhjælpning (direkte godkendelser), der er oprettet i Stifinder, Avanceret jagt eller via automatiseret undersøgelse, vises i Løsningscenter. Få adgang til disse via navigationspanelet til venstre under fanen Handlinger &**Oversigt over** **indsendelser** \> **i Løsningscenter**  -> .
 
-Alle afhjælpninger (direkte godkendelser), der blev oprettet i Stifinder eller Avanceret jagt eller via automatiseret undersøgelse, vises i Løsningscenter. Få adgang til disse via navigationspanelet til venstre under fanen **Handlinger & Indsendelser** \> **HandlingscenterHistorie**  -> . 
+Alle afhjælpninger (direkte godkendelser), der blev oprettet i Stifinder eller Avanceret jagt eller via automatiseret undersøgelse, vises i Løsningscenter. Få adgang til disse via navigationspanelet til venstre under fanen Handlinger &**Oversigt over** **indsendelser** \> **i Løsningscenter**  -> . 
 
 Manuelle handlinger, der afventer godkendelse, ved hjælp af godkendelsesprocessen med to trin (1. føje til afhjælpning af et medlem af sikkerhedshandlingsteamet, 2. gennemset og godkendt af et andet medlem af sikkerhedshandlingsteamet) er kun synlige i de ældre Defender for Office 365 Action Center **Review** \> **Action Center** og ikke i hændelser/undersøgelser og Unified Action Center.
 

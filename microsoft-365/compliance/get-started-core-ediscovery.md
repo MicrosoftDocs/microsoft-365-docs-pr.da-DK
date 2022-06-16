@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Beskriver, hvordan du kommer i gang med at bruge eDiscovery (Standard) i Microsoft Purview. Når du har tildelt eDiscovery-tilladelser og oprettet en sag, kan du tilføje medlemmer, oprette eDiscovery-ventepositioner og derefter søge efter og eksportere indhold, der er relevant for din undersøgelse.
-ms.openlocfilehash: 38e4d24405810293c9261c1c7f728ece0714cd66
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: c8a3ca883191c450ebc20ddb555018b8b480199b
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078474"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115867"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Kom i gang med eDiscovery (Standard) i Microsoft Purview
 
@@ -41,6 +41,10 @@ Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement
 
 - **Licenser pr. bruger:** Hvis du vil placere en eDiscovery-venteposition på postkasser og websteder, skal brugerne tildeles en af følgende licenser, afhængigt af dit organisationsabonnement:
 
+  -  Exchange online Plan 2-licens
+
+   ELLER
+   
   - En Microsoft 365 E3 eller Office 365 E3 licens eller nyere
 
    ELLER

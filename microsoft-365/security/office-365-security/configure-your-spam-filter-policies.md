@@ -18,16 +18,16 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette politikker til bekæmpelse af spam i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 94d6ace6cd5d6fcfd87800053048e84e25d4c153
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 20372843af62c28f4aae05c40d714bdfcdca203b
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847378"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115977"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>Konfigurer politikker mod spam i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -75,7 +75,7 @@ For at øge effektiviteten af spamfiltrering kan du oprette brugerdefinerede ant
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for politikker til bekæmpelse af spam under [Politikindstillinger for eOP for spam](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
@@ -112,6 +112,16 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
    Flere værdier i samme betingelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
 
    - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+
+   > [!IMPORTANT]
+   > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+   >
+   > - Modtageren er: romain@contoso.com
+   > - Modtageren er medlem af: Direktører
+   >
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   >
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 
@@ -150,7 +160,7 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
      - En markering ( ![Markeret.](../../media/checkmark.png)) angiver, at handlingen er tilgængelig (ikke alle handlinger er tilgængelige for alle domme).
      - En stjerne ( <sup>\*</sup> ) efter markeringen angiver standardhandlingen for dom for filtrering af spam.
 
-     |Handling|Spam|Høj<br>Tillid<br>Spam|Phishing|Høj<br>Tillid<br>Phishing|Bulk|
+     |Handling|Spam|Høj<br>Tillid<br>spam|Phishing|Høj<br>Tillid<br>Phishing|Bulk|
      |---|:---:|:---:|:---:|:---:|:---:|
      |**Flyt meddelelsen til mappen Uønsket mail**: Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. <sup>1</sup>|![Markeret.](../../media/checkmark.png)<sup>\*</sup>|![Markeret.](../../media/checkmark.png)<sup>\*</sup>|![Markeret.](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)<sup>\*</sup>|
      |**Tilføj X-header**: Føjer en X-header til brevhovedet og leverer meddelelsen til postkassen. <p> Du skal angive navnet på X-headerfeltet (ikke værdien) senere i **tekstfeltet Tilføj dette X-headerfelt** . <p> I forbindelse med **spam** - og **spamdomme med høj genkendelsessikkerhed** flyttes meddelelsen til mappen Uønsket mail. <sup>1,2</sup>|![Markeret.](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)||![Markeret](../../media/checkmark.png)|

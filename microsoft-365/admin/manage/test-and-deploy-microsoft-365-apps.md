@@ -14,16 +14,16 @@ ms.custom: AdminSurgePortfolio
 search.appverid: MET150
 ROBOTS: NOINDEX, NOFOLLOW
 description: Find, test og udrul Microsoft- og Microsoft-partnerapps til brugere og grupper i din organisation fra portalen integrerede apps i Microsoft 365 Administration.
-ms.openlocfilehash: 7d28f541c319622a4c15ac4eb4619b805cd0f13b
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 862d70fe57974d2940458cb1fa59d05674d7ff58
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043160"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115493"
 ---
 # <a name="test-and-deploy-microsoft-365-apps-by-partners-in-the-integrated-apps-portal"></a>Test og udrul Microsoft 365 Apps af partnere på portalen integrerede apps
 
-Den Microsoft 365 Administration giver dig fleksibiliteten til at udrulle apps fra en enkelt butik, brugerdefinerede forretningslinjer og Microsoft 365 partnerapps fra en enkelt placering. Du kan få adgang til placeringen i indstillingerne for Microsoft Administration i integrerede apps. Muligheden for at finde, teste og udrulle apps, der er købt og licenseret af Microsoft-partnere, fra portalen til integrerede apps giver den bekvemmelighed og de fordele, som din organisation kræver for at holde forretningstjenesterne opdateret regelmæssigt og køre effektivt.
+Den Microsoft 365 Administration giver dig fleksibiliteten til at udrulle apps fra en enkelt butik, brugerdefinerede forretningslinjer og Microsoft 365 partnerapps fra en enkelt placering. Du kan få adgang til placeringen i indstillingerne for Microsoft Administration Center i Integrerede apps. Muligheden for at finde, teste og udrulle apps, der er købt og licenseret af Microsoft-partnere, fra portalen til integrerede apps giver den bekvemmelighed og de fordele, som din organisation kræver for at holde forretningstjenesterne opdateret regelmæssigt og køre effektivt.
 
 Du kan finde flere oplysninger om køb og licensering Microsoft 365 apps fra partnere i din organisation under [Administrer og udrul Microsoft 365 Apps fra Microsoft 365 Administration](https://techcommunity.microsoft.com/t5/microsoft-365-blog/manage-and-deploy-microsoft-365-apps-from-the-microsoft-365/ba-p/1194324).
 
@@ -242,16 +242,16 @@ Opdateringer til tilføjelsesprogrammer sker på følgende måde:
 - **Office Store tilføjelsesprogram**: Når en administrator har valgt et tilføjelsesprogram fra Office Store, opdateres tilføjelsesprogrammet, næste gang de relevante Office programmer starter, hvis et tilføjelsesprogram opdateres i Office Store. Webprogrammet kan ændres når som helst. 
 
 > [!NOTE]
-> I forbindelse med Word skal du Excel og PowerPoint bruge et [SharePoint app-katalog](https://dev.office.com/docs/add-ins/publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog) til at installere tilføjelsesprogrammer til brugere i et lokalt miljø uden forbindelse til Microsoft 365 og/eller understøttelse af SharePoint tilføjelsesprogrammer. Til Outlook bruge Exchange kontrolpanel til at installere i et lokalt miljø uden forbindelse til Microsoft 365.  
+> I forbindelse med Word, Excel og PowerPoint bruge et [SharePoint app-katalog](/sharepoint/dev/sp-add-ins/publish-sharepoint-add-ins) til at installere tilføjelsesprogrammer til brugere i et lokalt miljø uden forbindelse til Microsoft 365 og/eller understøttelse af SharePoint tilføjelsesprogrammer er påkrævet. Til Outlook bruge Exchange kontrolpanel til at installere i et lokalt miljø uden forbindelse til Microsoft 365.  
 
 ## <a name="add-in-states"></a>Tilstande for tilføjelsesprogrammer
 Et tilføjelsesprogram kan være i tilstanden **Til** eller **Fra** . 
 
 | Staten | Sådan opstår tilstanden | Indvirkning |
 |:-----|:-----|:-----|
-|**Aktive**  <br/> |Administratoren har uploadet tilføjelsesprogrammet og tildelt det til brugere eller grupper.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, kan se det i de relevante klienter.  <br/> |
-|**Slukket**  <br/> |Administratoren har deaktiveret tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> Hvis tilføjelsesprogrammets tilstand ændres til Aktiv, har brugerne og grupperne adgang til det igen.  <br/> |
-|**Slettet**  <br/> |Administratoren slettede tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> |
+|**Aktive**  <br/> |Administration uploadet tilføjelsesprogrammet og tildelt det til brugere eller grupper.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, kan se det i de relevante klienter.  <br/> |
+|**Slukket**  <br/> |Administration slået tilføjelsesprogrammet fra.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> Hvis tilføjelsesprogrammets tilstand ændres til Aktiv, har brugerne og grupperne adgang til det igen.  <br/> |
+|**Slettet**  <br/> |Administration slettede tilføjelsesprogrammet.  <br/> |Brugere og grupper, der er tildelt tilføjelsesprogrammet, har ikke længere adgang til det.  <br/> |
  
 Overvej at slette et tilføjelsesprogram, hvis ingen bruger det længere. Hvis du f.eks. deaktiverer et tilføjelsesprogram, kan det give mening, hvis et tilføjelsesprogram kun bruges på bestemte tidspunkter af året. 
 
@@ -284,7 +284,7 @@ Du kan også slette et tilføjelsesprogram, der er installeret.
 
 ## <a name="scenarios-where-exchange-admin-cannot-deploy-an-add-in"></a>Scenarier, hvor Exchange administrator ikke kan installere et tilføjelsesprogram 
 
-Der er to tilfælde, hvor en Exchange administrator ikke kan installere et tilføjelsesprogram:
+Der er to tilfælde, hvor et Exchange Administration ikke kan installere et tilføjelsesprogram:
 - Hvis et tilføjelsesprogram skal have tilladelse til MS Graph API'er og skal have samtykke fra en global administrator.
 - Hvis et tilføjelsesprogram er sammenkædet med to eller flere tilføjelsesprogrammer og webapps, og mindst ét af disse tilføjelsesprogrammer installeres af en anden administrator (exchange/global), og brugertildelingen ikke er ensartet. Vi tillader kun installation af tilføjelsesprogrammer, når brugertildelingen er den samme for alle de apps, der allerede er installeret.  
 

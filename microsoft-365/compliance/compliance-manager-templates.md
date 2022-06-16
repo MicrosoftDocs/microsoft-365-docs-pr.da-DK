@@ -1,5 +1,5 @@
 ---
-title: Arbejde med vurderingsskabeloner i Microsoft Purview Compliance Manager
+title: Få mere at vide om vurderingsskabeloner i Microsoft Purview Overholdelsesstyring
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,13 +17,13 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Forstå, hvordan du bruger og administrerer skabeloner til oprettelse af vurderinger i Microsoft Purview Compliance Manager. Opret og rediger skabeloner ved hjælp af en formateret Excel-fil.
-ms.openlocfilehash: 009b2d742ab135abcde7c3ab73f9ec15c05c8f29
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+description: Forstå, hvordan du bruger og administrerer skabeloner til oprettelse af vurderinger i Microsoft Purview Overholdelsesstyring. Opret og rediger skabeloner ved hjælp af en formateret Excel-fil.
+ms.openlocfilehash: e83e079ba47a9e9ab33b3219ca648d1b4af9f124
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972777"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115999"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Få mere at vide om vurderingsskabeloner i Overholdelsesstyring
 
@@ -36,13 +36,16 @@ ms.locfileid: "64972777"
 
 ## <a name="templates-overview"></a>Oversigt over skabeloner
 
-En skabelon er en struktur af kontrolelementer til oprettelse af en vurdering i Overholdelsesstyring. Vores omfattende sæt af skabeloner kan hjælpe din organisation med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af data.
+En skabelon er en struktur af kontrolelementer til oprettelse af en vurdering i Overholdelsesstyring. Vores omfattende sæt af skabeloner kan hjælpe din organisation med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af data. Vi refererer til skabeloner med samme navn som deres underliggende certificering eller regulering, f.eks. EU's GDPR-skabelon og ISO/IEC 27701:2019-skabelonen.
 
 ## <a name="template-versions-microsoft-and-universal"></a>Skabelonversioner: Microsoft og universal
 
-Vi refererer til skabeloner med samme navn som deres underliggende certificering eller regulering, f.eks. EU's GDPR-skabelon og ISO/IEC 27701:2019-skabelonen.
+Overholdelsesstyring kan bruges til at vurdere forskellige produkttyper. Alle skabeloner, undtagen standardskabelonen [Microsoft Data Protection Baseline](compliance-manager-assessments.md#data-protection-baseline-default-assessment) , findes i to versioner:
 
-Overholdelsesstyring kan bruges til at vurdere forskellige produkttyper. Alle skabeloner bortset fra grundlinjen findes i mindst én version, der gælder for et foruddefineret produkt, f.eks. Microsoft 365, og en universel version, der kan skræddersyes til at passe til andre produkter. Vurderinger fra universelle skabeloner er mere generelle, men tilbyder udvidet alsidighed, da de kan hjælpe dig med nemt at spore din organisations overholdelse af angivne standarder på tværs af flere produkter.
+1. En version, der gælder for et foruddefineret produkt, f.eks. Microsoft 365, og
+2. En universel version, der kan skræddersyes til at passe til andre produkter.
+
+Vurderinger fra universelle skabeloner er mere generelle, men tilbyder udvidet alsidighed, da de kan hjælpe dig med nemt at spore din organisations overholdelse af angivne standarder på tværs af flere produkter.
 
 Bemærk, at kunder med GCC (US Government Community) Moderate, GCC High og DoD i øjeblikket ikke kan bruge universelle skabeloner.
 
@@ -80,7 +83,7 @@ GCC Høj- og DOD-konti skal købe skabelonlicenser via [volumenlicenser](https:/
 
 Hvis du vil prøve Premium-skabeloner, før du foretager et køb, kan du også få prøveversioner af licenserne. Prøvelicenser er gode i op til 25 skabeloner i 90 dage. Når du har fået din prøvelicens, skal skabelonerne være tilgængelige i din lejer inden for 48 timer.
 
-Hvis din organisation har en kommerciel licens til Overholdelsesstyring, kan du få mere at vide om, hvordan du starter din prøveversion på [Om den gratis prøveversion til Premium-vurderinger fra Microsoft Purview Compliance Manager](compliance-easy-trials-compliance-manager-assessments.md).
+Hvis din organisation har en kommerciel licens til Overholdelsesstyring, kan du få mere at vide om, hvordan du starter din prøveversion på [About the free trial for Microsoft Purview Compliance Manager premium assessments](compliance-easy-trials-compliance-manager-assessments.md).
 
 Hvis din organisation er under en GCC- eller DOD-licens, skal du vælge det relevante prøveversionslink til din organisation:
 

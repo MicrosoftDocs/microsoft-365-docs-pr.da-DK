@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de anvender Standard- og Strict-politikindstillinger på tværs af beskyttelsesfunktionerne i Exchange Online Protection (EOP) og Microsoft Defender for Office 365
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 06db733b50de51750d6c9f7b3dcf14f28cdff414
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: eb9eb8c3f45b0047922be854972d1f96123342cb
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044381"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115515"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365
 
@@ -64,6 +64,16 @@ En profil bestemmer beskyttelsesniveauet. Følgende profiler er tilgængelige:
   - **Domæner**: Alle modtagere i de angivne [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i din organisation.
 
   Du kan kun bruge en betingelse eller undtagelse én gang, men du kan angive flere værdier for betingelsen eller undtagelsen. Flere værdier med samme betingelse eller undtagelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser eller undtagelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
+
+  > [!IMPORTANT]
+  > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+  >
+  > - Modtageren er: romain@contoso.com
+  > - Modtageren er medlem af: Direktører
+  >
+  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+  >
+  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
 - **Indbygget beskyttelse** (kun Defender for Office 365): En profil, der kun aktiverer beskyttelse af Pengeskab links og Pengeskab vedhæftede filer. Denne profil indeholder effektivt standardpolitikker for Pengeskab links og Pengeskab vedhæftede filer, som aldrig har haft standardpolitikker.
 

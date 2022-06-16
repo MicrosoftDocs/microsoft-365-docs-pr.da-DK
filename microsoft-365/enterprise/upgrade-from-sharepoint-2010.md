@@ -20,12 +20,12 @@ f1.keywords:
 - NOCSH
 description: Find oplysninger og ressourcer, der skal opgraderes fra SharePoint 2010 og SharePoint Server 2010. Support til begge ophører den 13. april 2021.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 4ed6cf873442d4fd48cdbf9562e6067fd238384e
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: eba7c6739aef420bc90ef866dbd6f3becbccd8ff
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772746"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115955"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>Opgradering fra SharePoint 2010
 
@@ -163,11 +163,11 @@ Du kan beslutte at flytte nogle af dine websteder til "evergreen" hardware Share
 
 - *Hardware-/softwarekrav til:*
 
-    [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/hardware-and-software-requirements-0) |  [SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)
+    [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2013](/sharepoint/install/hardware-software-requirements-2013) |  [SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)
 
 - *Softwaregrænser og grænser for:*
 
-    [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262787(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/software-boundaries-and-limits) |  [SharePoint Server 2016](/SharePoint/install/software-boundaries-and-limits-0)
+    [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262787(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/software-boundaries-and-limits) |  [SharePoint Server 2016](/sharepoint/install/software-boundaries-limits-2019)
 
 - *Oversigt over opgraderingsprocessen for:*
 
@@ -234,11 +234,11 @@ Begynd med at vide, at du opfylder hardware- og softwarekrav, og følg derefter 
 
 - *Hardware-/softwarekrav til*:
 
-    [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/hardware-and-software-requirements-0) |  [SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)
+    [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262485(v=office.14)) |  [SharePoint Server 2013](/sharepoint/install/hardware-software-requirements-2013) |  [SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)
 
 - *Softwaregrænser og grænser for*:
 
-    [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262787(v=office.12)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262787(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/software-boundaries-and-limits) |  [SharePoint Server 2016](/SharePoint/install/software-boundaries-and-limits-0)
+    [SharePoint Server 2007](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262787(v=office.12)) |  [SharePoint Server 2010](/previous-versions/office/sharepoint-server-2010/cc262787(v=office.14)) |  [SharePoint Server 2013](/SharePoint/install/software-boundaries-and-limits) |  [SharePoint Server 2016](/sharepoint/install/software-boundaries-limits-2019)
 
 - *Oversigt over opgraderingsprocessen for*:
 

@@ -18,16 +18,16 @@ description: Få mere at vide om, hvordan du definerer politikker for vedhæfted
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 811730ce12af80b2ac8df7db068b63b96b856bbd
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 46b69c1bea0f967fe22c031397a8887f3399c99b
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847076"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115559"
 ---
 # <a name="set-up-safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for vedhæftede filer Pengeskab i Microsoft Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -72,7 +72,7 @@ I Exchange Online PowerShell eller enkeltstående EOP PowerShell kan du administ
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få flere oplysninger under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for Pengeskab politikker for vedhæftede filer [under Pengeskab Indstillinger for vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
@@ -106,7 +106,17 @@ Når du opretter en brugerdefineret politik for vedhæftede filer Pengeskab på 
 
    Flere værdier i samme betingelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
 
-   - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (tilbagesende undtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+   - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+
+   > [!IMPORTANT]
+   > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+   >
+   > - Modtageren er: romain@contoso.com
+   > - Modtageren er medlem af: Direktører
+   >
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   >
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 

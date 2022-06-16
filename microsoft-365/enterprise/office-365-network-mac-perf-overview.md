@@ -3,11 +3,12 @@ title: Netværksforbindelse i Microsoft 365 Administration Center
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 12/06/2021
+ms.date: 06/15/2022
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: medium
+ms.reviewer: pandrew1
 search.appverid:
 - MET150
 ms.collection:
@@ -15,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 description: Oversigt over netværksforbindelsen i Microsoft 365 Administration Center
-ms.openlocfilehash: 19aa6beaf299a80b76753357e4cbe4f8f0966362
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 5c360820c39be6ec1c42ecdfa0a045a51716e408
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043823"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115631"
 ---
 # <a name="network-connectivity-in-the-microsoft-365-admin-center"></a>Netværksforbindelse i Microsoft 365 Administration Center
 
@@ -35,7 +36,7 @@ Microsoft 365 Administration Center indeholder nu samlede målepunkter for netv�
 > ![Siden Netværksydeevne.](../media/m365-mac-perf/m365-mac-perf-page-nav.png)
 
 > [!NOTE]
-> Netværksforbindelsen i Administration understøtter lejere i WW Commercial og Tyskland, men ikke GCC Moderate, GCC High, DoD eller China.
+> Netværksforbindelsen i Administration Center understøtter lejere i WW Commercial og Germany, men ikke GCC Moderate, GCC High, DoD eller China.
 
 Når du første gang navigerer til siden med netværksydeevne, skal du konfigurere dine placeringer for at få vist kortet over den globale netværksydeevne, en netværksvurdering, der er beregnet til hele lejeren, procentdelen af dine brugere, der arbejder eksternt i forhold til onsite, og en liste over aktuelle problemer, der skal udføres handlinger på og/eller for at undersøge yderligere. I oversigtsruden kan du foretage detailudledning for at få vist specifikke målepunkter for netværksydeevne og problemer efter placering. Du kan få flere oplysninger under [Oversigt over netværksydeevne i Microsoft 365 Administration Center](#network-connectivity-overview-in-the-microsoft-365-admin-center).
 
@@ -47,19 +48,22 @@ For at komme i gang skal du aktivere indstillingen for tilvalg af placering for 
 
 ### <a name="1-enable-windows-location-services"></a>1. Aktivér Windows placeringstjenester
 
-Til denne indstilling skal du have mindst to computere, der kører på hver office-placering, som understøtter forudsætninger. OneDrive til Windows version skal være opdateret og installeret på hver computer. Du kan få flere oplysninger om OneDrive versioner i [produktbemærkningerne til OneDrive](https://support.office.com/article/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0). Netværksmålinger planlægges snart føjet til andre Office 365 klientprogrammer.
+Til denne indstilling skal du have mindst to computere, der kører på hver office-placering, som understøtter forudsætninger. OneDrive til Windows version skal være opdateret og installeret på hver computer. Netværkstests køres kun mere end én gang om dagen på et tilfældigt tidspunkt. Netværksmålinger planlægges snart føjet til andre Office 365 klientprogrammer.
 
 Windows Placeringsservice skal være godkendt på maskinerne. Du kan teste dette ved at køre **appen Kort** og finde dig selv. Den kan aktiveres på en enkelt maskine med **Indstillinger | Beskyttelse af personlige oplysninger | Den placering**, hvor indstillingen _Tillad, at apps får adgang til din placering_, skal være aktiveret. Windows Location Services-samtykke kan installeres på pc'er ved hjælp af MDM eller Gruppepolitik med indstillingen _LetAppsAccessLocation_.
 
-Du behøver ikke at tilføje placeringer i Administration med denne metode, da de automatisk identificeres ved byopløsningen. Flere kontorplaceringer i samme by vises ikke, når du bruger Windows Placeringstjenester. Placeringsoplysninger afrundes til de nærmeste 300 meter med 300 meter, så der ikke er adgang til mere præcise placeringsoplysninger.
+Du behøver ikke at tilføje placeringer i Administration Center med denne metode, da de automatisk identificeres ved byopløsningen. Flere kontorplaceringer i samme by vises ikke, når du bruger Windows Placeringstjenester. Placeringsoplysninger afrundes til de nærmeste 300 meter med 300 meter, så der ikke er adgang til mere præcise placeringsoplysninger. Brug af Windows Placeringstjenester til netværksmålinger er som standard slået fra for kunder. Du skal aktivere den i pop op-vinduet Network Connectivity Indstillinger Location.
+
+   > [!div class="mx-imgBorder"]
+   > ![Aktivér placering](../media/m365-mac-perf/m365-mac-perf-location-enable.png)
 
 Maskinerne skal have Wi-Fi netværk i stedet for et Ethernet-kabel. Computere med et Ethernet-kabel har ikke præcise placeringsoplysninger.
 
-Målingseksempler og kontorplaceringer bør begynde at blive vist 24 timer efter, at disse forudsætninger er opfyldt.
+Målingseksempler og kontorplaceringer bør begynde at blive vist 24 timer efter, at disse forudsætninger er opfyldt. Office placeringer, der registreres fra Windows Location Services, aggregeres pr. City og bevares i din visning i 90 dage, efter at der ikke længere modtages eksempler. Hvis du vælger at skifte til office-placeringer, der er tilføjet af administratoren med LAN-undernetoplysninger, kan du deaktivere Windows Placeringstjenester og skjule alle de registrerede placeringer. De fjernes efter 90 dages periode.
 
 ### <a name="2-add-locations-and-provide-lan-subnet-information"></a>2. Tilføj placeringer, og angiv oplysninger om LAN-undernet
 
-Til denne indstilling kræves der hverken Windows placeringstjenester eller Wi-Fi. Din OneDrive til Windows version skal være opdateret og installeret på mindst én computer på placeringen.
+Til denne indstilling kræves der hverken Windows placeringstjenester eller Wi-Fi. Din OneDrive til Windows version skal være opdateret og installeret på mindst én computer på placeringen, og du skal kende dine LAN-undernetoplysninger for hvert af dine kontorer. Denne indstilling tillader flere kontorplaceringer pr. by, og du kan navngive dine kontorplaceringer. Du kan også uploade dem fra andre kilder.
 
 Sørg for, at du også tilføjer placeringer på **siden med placeringer eller importerer** dem fra en CSV-fil. De tilføjede placeringer skal indeholde oplysninger om office LAN-undernet. I dialogboksen til tilføjelse eller redigering af en placering kan du angive et antal LAN-undernet og en række offentlige udgående IP-undernet. LAN-undernet er påkrævet, og et af dem skal matche LAN-undernetattributten i en modtaget netværksvurdering, før resultaterne vises. Supernet understøttes ikke, så LAN-undernettet skal matche nøjagtigt.
 
@@ -73,9 +77,9 @@ Alle testmålinger fra klientcomputere omfatter lan-undernetoplysningerne, som e
 
 ### <a name="3-manually-gather-test-reports-with-the-microsoft-365-network-connectivity-test-tool"></a>3. Indsaml testrapporter manuelt med testværktøjet Microsoft 365 netværksforbindelse
 
-Hvis du vil bruge denne indstilling, skal du identificere en person på hver placering. Bed vedkommende om at gennemse for at [Microsoft 365 test af netværksforbindelsen](https://connectivity.office.com) på en Windows computer, hvor de har administrative tilladelser. På webstedet skal de logge på deres Office 365-konto for den samme organisation, som du vil have vist resultaterne for. Derefter skal de klikke på **Kør test**. Under testen er der en downloadet Connectivity-test-EXE. De skal åbne og udføre det. Når testene er fuldført, uploades testresultatet til Administration.
+Hvis du vil bruge denne indstilling, skal du identificere en person på hver placering. Bed vedkommende om at gennemse for at [Microsoft 365 test af netværksforbindelsen](https://connectivity.office.com) på en Windows computer, hvor de har administrative tilladelser. På webstedet skal de logge på deres Office 365-konto for den samme organisation, som du vil have vist resultaterne for. Derefter skal de klikke på **Kør test**. Under testen er der en downloadet Connectivity-test-EXE. De skal åbne og udføre det. Når testene er fuldført, uploades testresultatet til Administration Center.
 
-Testrapporter er knyttet til en placering, hvis den blev tilføjet med lan-undernetoplysninger, ellers vises de kun på byplaceringen.
+Testrapporter er knyttet til en placering, hvis den blev tilføjet med lan-undernetoplysninger, ellers vises de kun på den registrerede bys placering.
 
 Målingseksempler og kontorplaceringer skal begynde at blive vist 2-3 minutter, efter at en testrapport er fuldført. Du kan finde flere oplysninger under [Microsoft 365 test af netværksforbindelsen](office-365-network-mac-perf-onboarding-tool.md).
 

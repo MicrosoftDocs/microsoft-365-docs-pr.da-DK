@@ -1,5 +1,5 @@
 ---
-title: Byg og administrer vurderinger i Microsoft Purview Compliance Manager
+title: Byg og administrer vurderinger i Microsoft Purview Overholdelsesstyring
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,13 +16,13 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Opret vurderinger i Microsoft Purview Compliance Manager for at hjælpe dig med at opfylde de krav til forskrifter og certificeringer, der er vigtige for din organisation.
-ms.openlocfilehash: 841d48951eebf0d04bf5c97a708a250218b44c65
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+description: Byg vurderinger i Microsoft Purview Overholdelsesstyring for at hjælpe dig med at opfylde de krav til forskrifter og certificeringer, der er vigtige for din organisation.
+ms.openlocfilehash: cb2d90bf8dfbdcb2ec2ca534d1659a19d27998bc
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972557"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115735"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Byg og administrer vurderinger i Overholdelsesstyring
 
@@ -79,11 +79,11 @@ Du kan oprette en gruppe, mens du opretter en ny vurdering. Grupper kan ikke opr
 
 ## <a name="understand-templates-before-creating-assessments"></a>Forstå skabeloner, før du opretter vurderinger
 
-Vurderingsskabeloner indeholder kontrol- og handlingsanbefalinger til vurderinger baseret på certificeringer for forskellige bestemmelser og standarder for beskyttelse af personlige oplysninger. Organisationens tilgængelige skabeloner kan indeholde en eller flere skabeloner, der er inkluderet som en del af din licensaftale, sammen med eventuelle yderligere Premium-skabeloner, du har købt.
+Vurderingsskabeloner indeholder kontrol- og handlingsanbefalinger til vurderinger baseret på certificeringer for forskellige bestemmelser og standarder for beskyttelse af personlige oplysninger. Din organisation starter med mindst én og muligvis flere **inkluderede** skabeloner, der kan bruges, afhængigt af din licensaftale. Din organisation kan også købe yderligere **Premium-skabeloner** .
 
-Hver skabelon, uanset om den er inkluderet eller premium, findes i to versioner: én til brug sammen med Microsoft 365 (eller andre Tilgængelige Microsoft-produkter) og en universel version, der kan skræddersyes til at vurdere andre produkter, du bruger. Du kan vælge den relevante skabelontype for det produkt, du vil vurdere.
+Hver skabelon findes i to versioner: én til brug med Microsoft 365 (eller andre Microsoft-produkter som tilgængelige) og en universel version, der kan skræddersyes til at vurdere andre produkter, du bruger. Du kan vælge den relevante skabelontype for det produkt, du vil vurdere.
 
-Du kan få mere at vide om skabeloner under [Arbejde med vurderingsskabeloner](compliance-manager-templates.md).
+Få flere oplysninger om skabeloner under [Få mere at vide om vurderingsskabeloner i Overholdelsesstyring](compliance-manager-templates.md).
 
 ## <a name="create-assessments"></a>Opret vurderinger
 

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ef3fc69cf07f4b643e12bab96a73b68627e07203
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 74f1a657cbf675b8a55edc169339cb16a22f4dbe
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648233"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115669"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitik
 
@@ -685,6 +685,9 @@ Hvis karantænepolitikken tildeler tilladelserne **Fuld adgang** (alle tilgænge
   - **Vurder**
 
   :::image type="content" source="../../media/quarantine-tags-esn-full-access.png" alt-text="De tilgængelige knapper i karantænemeddelelsen, hvis karantænepolitikken giver brugeren fuld adgangstilladelser" lightbox="../../media/quarantine-tags-esn-full-access.png":::
+
+> [!NOTE]
+> Som beskrevet tidligere er karantænemeddelelser deaktiveret i standard karantænepolitikken med navnet DefaultFullAccessPolicy, selvom karantænepolitikken er tildelt tilladelsesgruppen **Fuld adgang** . Karantænemeddelelser er kun tilgængelige i brugerdefinerede karantænepolitikker, som du opretter, eller i standardpolitikken for karantæneadgang med navnet NotificationEnabledPolicy ([hvis denne politik er tilgængelig i din organisation](#full-access-permissions-and-quarantine-notifications)).
 
 ### <a name="individual-permissions"></a>Individuelle tilladelser
 

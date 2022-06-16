@@ -1,5 +1,5 @@
 ---
-title: Pengeskab vedhæftede filer
+title: Sikre vedhæftede filer
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -20,16 +20,16 @@ ms.collection:
 description: Administratorer kan få mere at vide om funktionen Pengeskab vedhæftede filer i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9d069d92eb012211af8dd4e12109ebcae7eb221e
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: e50904932b95dabdad627a7a3291659c1c4d9584
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65128712"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115933"
 ---
 # <a name="safe-attachments-in-microsoft-defender-for-office-365"></a>Pengeskab vedhæftede filer i Microsoft Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -84,6 +84,16 @@ I dette afsnit beskrives indstillingerne i Pengeskab politikker for vedhæftede 
   - **Modtageren er medlem af**
 
   Du kan kun bruge en betingelse eller undtagelse én gang, men betingelsen eller undtagelsen kan indeholde flere værdier. Flere værdier med samme betingelse eller undtagelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser eller undtagelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
+
+  > [!IMPORTANT]
+  > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+  >
+  > - Modtageren er: romain@contoso.com
+  > - Modtageren er medlem af: Direktører
+  >
+  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+  >
+  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
 - **Prioritet**: Hvis du opretter flere politikker, kan du angive den rækkefølge, de anvendes i. Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
 

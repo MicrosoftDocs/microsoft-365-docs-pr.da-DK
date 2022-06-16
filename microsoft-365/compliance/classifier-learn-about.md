@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Klassificerere, der kan oplæres, kan genkende forskellige typer indhold til mærkning eller politikanvendelse ved at give dem positive og negative eksempler at se på.
-ms.openlocfilehash: 955e94aad0c7c4c20a020a76ebf4b4ffc1871d9a
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: ed2b744c1c136afde38151dc424eef547607ef27
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078804"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115845"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Få mere at vide om trænbare klassificeringer
 
@@ -57,7 +57,7 @@ Denne klassificeringsmetode er velegnet til indhold, der ikke nemt identificeres
 
 ### <a name="where-you-can-use-classifiers"></a>Her kan du bruge klassificeringer
 
-Klassificeringer er tilgængelige til brug som en betingelse for [Office automatisk mærkning med følsomhedsmærkater](apply-sensitivity-label-automatically.md), [politik for automatisk anvendelse af opbevaringsmærkat baseret på en betingelse](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) og i [kommunikation med overholdelse af angivne standarder](communication-compliance.md). 
+Klassificeringer er tilgængelige til brug som en betingelse for [Office automatisk mærkning med følsomhedsmærkater](apply-sensitivity-label-automatically.md), [politik for automatisk anvendelse af opbevaringsmærkat baseret på en betingelse](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) og i [kommunikation med overholdelse af angivne standarder](communication-compliance.md).
 
 Følsomhedsmærkater kan bruge klassificeringer som betingelser. Se [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md).
 
@@ -73,13 +73,9 @@ Følsomhedsmærkater kan bruge klassificeringer som betingelser. Se [Anvend auto
 
 Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 
-- **Voksen, Racy og Gory**: Registrerer billeder af disse typer. Billederne skal have en størrelse på mellem 50 KB og 4 mb og være større end 50 x 50 pixel i højden x bredde. Scanning og registrering understøttes for Exchange Online mails og Microsoft Teams kanaler og chats. Registrerer indhold i .jpeg-, .png-, .gif- og .bmp-filer.
+- **Voksen, racy og gory**: Registrerer billeder af disse typer. Billederne skal have en størrelse på mellem 50 KB og 4 mb og være større end 50 x 50 pixel i højden x bredde. Scanning og registrering understøttes for Exchange Online mails og Microsoft Teams kanaler og chats. Registrerer indhold i .jpeg-, .png-, .gif- og .bmp-filer.
 
 - **Aftaler**: Registrerer indhold, der er relateret til juridiske aftaler, f.eks. aftaler om hemmeligholdelse, arbejdserklæringer, låne- og leasingaftaler, ansættelses- og konkurrenceklausuler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
-
-- **CV'er**: registrerer dokumenter, .pdf, .rtf, .txt elementer, der er tekstregnskaber for en ansøgers personlige, uddannelsesmæssige, faglige kvalifikationer, erhvervserfaring og andre personligt identificerende oplysninger
-
-- **Kildekode**: Registrerer elementer, der indeholder et sæt instruktioner og sætninger, der er skrevet i de øverste 25 anvendte computerprogrammeringssprog på GitHub: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script. Registrerer indhold i .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData-, .rds-, .rb-, .scala-, .sc-, .sh- og .swift-filer.
 
 - **Kundeklager**: Klassificeringen af kundeklager registrerer feedback og klager over din organisations produkter eller tjenester. Denne klassificering kan hjælpe dig med at opfylde lovmæssige krav til registrering og behandling af klager, f.eks. forbrugerfinansieringsbureauet og fødevare- og drugadministrationskravene. I forbindelse med overholdelse af angivne standarder for kommunikation registreres indhold i .msg- og .eml-filer. I resten af Microsoft Purview Information Protection-tjenester registreres indhold i filer af typen .docx, .pdf, .txt, .rtf, .jpg, .jpeg, .png, .gif, .bmp og .svg.
 
@@ -101,23 +97,22 @@ Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 
 - **Indkøb**: Registrerer indhold i kategorier af bud, anførselstegn, køb og betaling for levering af varer og tjenester. Registrerer indhold i filer af typen .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, .xla.
 
-- **Bandeord**: Registrerer en bestemt kategori af stødende sprogtekstelementer, der indeholder udtryk, der gør de fleste til grin.
+- **Bandeord**: Registrerer en bestemt kategori af stødende sprogtekstelementer, der indeholder udtryk, der gør de fleste til grin. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
 
-- **CV'er**: registrerer dokumenter, .pdf, .rtf, .txt elementer, der er tekstregnskaber for en ansøgers personlige, uddannelsesmæssige, faglige kvalifikationer, erhvervserfaring og andre personligt identificerende oplysninger
+- **Cv**: registrerer dokumenter, .pdf, .rtf, .txt elementer, der er tekstregnskaber for en ansøgers personlige, uddannelsesmæssige, faglige kvalifikationer, arbejdserfaring og andre personligt identificerende oplysninger
 
-- **Kildekode**: Registrerer elementer, der indeholder et sæt instruktioner og sætninger, der er skrevet i de øverste 25 anvendte computerprogrammeringssprog på GitHub: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script.
+- **Kildekode**: Registrerer elementer, der indeholder et sæt instruktioner og sætninger, der er skrevet computerprogrammeringssprog på GitHub: ActionScript, C, C#, C++, Clojure, CoffeeScript, Go, Haskell, Java, JavaScript, Lua, MATLAB, Objective-C, Perl, PHP, Python, R, Ruby, Scala, Shell, Swift, TeX, Vim Script. Registrerer indhold i .msg, .as, .h, .c, .cs, .cc, .cpp, .hpp, .cxx, .hh, .c++, .clj, .edn, .cljc, .cljs, .coffee, .litcoffee, .go, .hs, .lhs, .java, .jar, .js, .mjs, .lua, .m, .mm, .pl, .pm, .t, .xs, .pod, .php, .phar, .php4, .pyc, . R, .r, .rda, . RData-, .rds-, .rb-, .scala-, .sc-, .sh- og .swift-filer.
 
-    > [!NOTE]
-    > Kildekode oplæres til at registrere, når størstedelen af teksten er kildekode. Den registrerer ikke kildekodetekst, der er afbrudt med almindelig tekst.
+  > [!NOTE]
+  > Kildekode oplæres til at registrere, når størstedelen af teksten er kildekode. Den registrerer ikke kildekodetekst, der er afbrudt med almindelig tekst.
 
 - **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
 
 - **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom.
-- **Bandeord**: Registrerer en bestemt kategori af stødende sprogtekstelementer, der indeholder udtryk, der gør de fleste til grin. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
-- **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
+
 - **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
 
-Disse vises i visningen **Microsoft Purview-compliance-portal** >  **Dataklassificeringsklasse** > **med** statussen `Ready to use`.
+Disse klassificeringer vises i visningen **Microsoft Purview-compliance-portal** \> **Dataklassificering** \> **Klassificeringsklasse** med statussen `Ready to use`.
 
 ![classifiers-pre-trained-classifiers.](../media/classifiers-ready-to-use-classifiers.png)
 
@@ -145,7 +140,7 @@ Alle andre er kun engelsk i øjeblikket.
 
 Når de færdiguddannede klassificeringer ikke opfylder dine behov, kan du oprette og oplære dine egne klassificeringer. Der er mere arbejde forbundet med at oprette din egen, men de vil være meget bedre skræddersyet til dine organisationers behov.
 
-Du begynder at oprette en brugerdefineret klassificering, der kan oplæres, ved at give den eksempler, der helt sikkert er i kategorien. Når den behandler disse eksempler, tester du den ved at give den en blanding af både matchende og ikke-matchende eksempler. Klassificeringen foretager derefter forudsigelser om, hvorvidt et bestemt element falder ind under den kategori, du bygger. Du kan derefter bekræfte resultaterne og sortere de sande positiver, sande negativer, falske positiver og falske negative for at øge nøjagtigheden af forudsigelserne. 
+Du begynder at oprette en brugerdefineret klassificering, der kan oplæres, ved at give den eksempler, der helt sikkert er i kategorien. Når den behandler disse eksempler, tester du den ved at give den en blanding af både matchende og ikke-matchende eksempler. Klassificeringen foretager derefter forudsigelser om, hvorvidt et bestemt element falder ind under den kategori, du bygger. Du kan derefter bekræfte resultaterne og sortere de sande positiver, sande negativer, falske positiver og falske negative for at øge nøjagtigheden af forudsigelserne.
 
 Når du publicerer klassificeringen, sorteres elementerne på placeringer, f.eks. SharePoint Online, Exchange og OneDrive, og indholdet klassificeres. Når du har publiceret klassificeringen, kan du fortsætte med at oplære den ved hjælp af en feedbackproces, der svarer til den indledende oplæringsproces.
 

@@ -16,12 +16,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.custom: ''
 description: Få mere at vide om, hvor du kan få adgang til Windows og Office Deployment Lab Kit.
-ms.openlocfilehash: 2324501927b39d860b8f2b06e36a85585fa8d4be
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 63ec41e1865647caac60aa6fe91f69ed6c878e74
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669205"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115911"
 ---
 # <a name="windows-and-office-365-deployment-lab-kit"></a>Windows- og Office 365-installationslaboratoriesæt
 
@@ -31,8 +31,8 @@ Der er to versioner af laboratoriet, som kan downloades gratis:
 
 |Windows 10-laboratorie|Windows 11-laboratorie|
 |---|---|
-|[Win 10 lab-miljø](https://download.microsoft.com/download/3/3/a/33a3c7d7-b393-4f78-9b90-2d5eb7fd98e8/Win10_21H1_lab.zip)|[Win 11-laboratoriemiljø](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_05.09.zip)|
-|[Win 10 lab guides](https://download.microsoft.com/download/2/9/9/29952cdb-b98d-4f9b-9d6e-9fb49644b0a0/Win10_21H1_Lab_05.12.zip)|[Win 11 lab guides](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
+|[Win 10 lab-miljø](https://download.microsoft.com/download/8/5/e/85e007b0-1f3e-460c-bd0a-5a8c6ec490b5/Win10_21H2_lab.zip)|[Win 11-laboratoriemiljø](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_05.09.zip)|
+|[Win 10 lab guides](https://download.microsoft.com/download/8/5/e/85e007b0-1f3e-460c-bd0a-5a8c6ec490b5/Win10_21H2_guides.zip)|[Win 11 lab guides](https://download.microsoft.com/download/9/d/9/9d9e278e-a1ea-4704-85e1-cb24f3806f45/Win11_Lab_Guides_05.09.zip)|
 
 ## <a name="a-complete-lab-environment"></a>Et komplet laboratoriemiljø
 
@@ -40,7 +40,7 @@ Der er to versioner af laboratoriet, som kan downloades gratis:
 
 |Windows 10-laboratorie|Windows 11-laboratorie|
 |---|---|
-|Windows 10 Enterprise, version 21H1|Windows 11 Enterprise|
+|Windows 10 Enterprise, version 21H2|Windows 11 Enterprise|
 |Microsoft Endpoint Configuration Manager, version 2203|Microsoft Endpoint Configuration Manager, version 2203|
 |Windows vurderings- og installationspakke til Windows 10|Windows vurderings- og installationspakke til Windows 11|
 |Windows Server 2019|Windows Server 2022|
@@ -105,7 +105,7 @@ Detaljerede laboratorievejledninger fører dig gennem flere installations- og ad
 
 
 > [!NOTE]
-> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. Evalueringssoftwaren i disse laboratorier udløber 90-120 dage efter aktiveringen. Nye versioner af laboratorierne udgives i august 2022. 
+> Brug en bredbåndsinternetforbindelse til at downloade dette indhold og tillade ca. 30 minutter til automatisk klargøring. Laboratoriemiljøet kræver mindst 16 GB ledig hukommelse og 150 GB ledig diskplads. For at opnå optimal ydeevne anbefales 32 GB ledig hukommelse og 300 GB ledig plads. De virtuelle klienter udløber 90 dage efter aktivering af øvelsen. De virtuelle servere udløber den 11. september 2022. Nye versioner af øvelserne publiceres før udløb. 
 
 ## <a name="additional-guidance"></a>Yderligere vejledning
 

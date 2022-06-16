@@ -16,16 +16,16 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter, redigerer og sletter de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection organisationer (EOP) med eller uden Exchange Online postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 08523e98577f208858fb615911ef24aacf7bedc6
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 384494fdd625fe050079ecd99f59b68d1ba87cad
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438899"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115691"
 ---
 # <a name="configure-anti-phishing-policies-in-eop"></a>Konfigurer politikker for antiphishing i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -112,6 +112,16 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
    Flere værdier i samme betingelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
 
    - **Udelad disse brugere, grupper og domæner**: Hvis du vil tilføje undtagelser for de interne modtagere, som politikken gælder for (modtagerundtagelser), skal du vælge denne indstilling og konfigurere undtagelserne. Indstillingerne og funktionsmåden er præcis som betingelserne.
+
+   > [!IMPORTANT]
+   > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+   >
+   > - Modtageren er: romain@contoso.com
+   > - Modtageren er medlem af: Direktører
+   >
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   >
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 

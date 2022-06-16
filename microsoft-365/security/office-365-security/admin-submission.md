@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 47e97b728fb27d8df6ad813946d3cdbe08c52085
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: bd56ce39cbb1d48470742f80a8b07747dd52f33a
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089105"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66116027"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
@@ -394,3 +394,7 @@ Under fanen **Brugerrapporterede meddelelser** skal du vælge en meddelelse på 
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="../../media/admin-submission-main-action-button.png" alt-text="Indstillingerne New (Ny) på knappen Action (Handling)" lightbox="../../media/admin-submission-main-action-button.png":::
+
+Hvis meddelelsen rapporteres til Microsoft, ændres afsendelsesværdien **Konverteret til administrator** fra **Nej** til **Ja**. Du kan få direkte adgang til administratorindsendelsen ved at klikke på **Få vist den konverterede administratorindsendelse** fra overløbsmenuen i pop op-vinduet til indsendelse for den pågældende brugerrapporterede meddelelse.
+
+:::image type="content" source="../../media/view-converted-admin-submission.png" alt-text="Mulighed for at få vist en oprettet administratorindsendelse fra en bruger rapporteret meddelelse.":::

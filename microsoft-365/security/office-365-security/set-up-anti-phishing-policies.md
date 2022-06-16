@@ -17,16 +17,16 @@ ms.custom:
 description: Administratorer kan få mere at vide om de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 786a71e37e9602be2c8de4637ffd5f83a70e7e59
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 1a1265e70c0d22182e8ee4db865eeb53ac8168b7
+ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438877"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66115889"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Politikker til bekæmpelse af phishing i Microsoft 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -86,6 +86,15 @@ Følgende politikindstillinger er tilgængelige i politikker til bekæmpelse af 
 
   > [!NOTE]
   > Der kræves mindst ét valg i indstillingerne **for brugere, grupper og domæner** i brugerdefinerede politikker til bekæmpelse af phishing for at identificere de meddelelsesmodtagere  <u>, som politikken gælder for</u>. Politikker til bekæmpelse af phishing i Defender for Office 365 har også [repræsentationsindstillinger](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365), hvor du kan angive individuelle afsendermailadresser eller afsenderdomæner<u>, der modtager repræsentationsbeskyttelse</u>, som beskrevet senere i denne artikel.
+  >
+  > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+  >
+  > - Modtageren er: romain@contoso.com
+  > - Modtageren er medlem af: Direktører
+  >
+  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+  >
+  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
 ## <a name="spoof-settings"></a>Spoof-indstillinger
 
