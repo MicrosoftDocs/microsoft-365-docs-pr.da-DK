@@ -15,12 +15,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: ba9102f96ea08bf33f72a260779b4b37d6a6f0f4
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 3d6f763bd2ac2c4352f1b200c05c3079bc615aaf
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217370"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139335"
 ---
 # <a name="customize-controlled-folder-access"></a>Tilpas styret mappeadgang
 
@@ -33,7 +33,7 @@ ms.locfileid: "65217370"
 - Windows
 
 > [!TIP]
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 Kontrolleret mappeadgang hjælper dig med at beskytte værdifulde data mod skadelige apps og trusler, f.eks. ransomware. Kontrolleret mappeadgang understøttes på Windows Server 2019, Windows Server 2022, Windows 10 og Windows 11 klienter. I denne artikel beskrives det, hvordan du tilpasser egenskaber for kontrolleret mappeadgang, og den indeholder følgende afsnit:
 
@@ -177,4 +177,4 @@ Du kan få flere oplysninger om tilpasning af meddelelsen, når en regel udløse
 
 - [Beskyt vigtige mapper med kontrolleret mappeadgang](controlled-folders.md)
 - [Aktivér styret mappeadgang](enable-controlled-folders.md)
-- [Evaluer regler for reduktion af angrebsoverfladen](evaluate-attack-surface-reduction.md)
+- [Aktivér regler for reduktion af angrebsoverflade](enable-attack-surface-reduction.md)

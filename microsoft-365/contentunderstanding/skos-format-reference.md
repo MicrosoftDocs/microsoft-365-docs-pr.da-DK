@@ -10,54 +10,54 @@ search.appverid: ''
 ms.collection: enabler-strategic
 ms.localizationpriority: high
 description: SKOS-formatreference til SharePoint taksonomi
-ms.openlocfilehash: 95183b64d76a70f69d08cd5a3c9dcf76f4e83bce
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+ms.openlocfilehash: c9dbaae4242155522eec2fff0f7fd4d721e697cc
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "63591684"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139667"
 ---
 # <a name="skos-format-reference-for-sharepoint-taxonomy"></a>SKOS-formatreference til SharePoint taksonomi
 
-Denne artikel indeholder RDF-terminologi, der bruges [til SharePoint taksonomi](/dotnet/api/microsoft.sharepoint.taxonomy) og er baseret på [SKOS](https://www.w3.org/TR/skos-primer/). Brug RDF SKILDPADDE til serialisering af denne [RDF-syntaks](https://www.w3.org/TR/turtle/).
+Denne artikel indeholder RDF-ordforråd, der bruges til at repræsentere [SharePoint taksonomi](/dotnet/api/microsoft.sharepoint.taxonomy) og er baseret på [SKOS](https://www.w3.org/TR/skos-primer/). Brug RDF [TURTLE](https://www.w3.org/TR/turtle/) til serialisering af denne RDF-syntaks.
 
-I følgende tabel vises [de tilsvarende SKOS-værdier](https://www.w3.org/TR/skos-primer/) for [SharePoint terminologi](/dotnet/api/microsoft.sharepoint.taxonomy). SharePoint understøtter ikke [SKOS-værdier](https://www.w3.org/TR/skos-primer/), der ikke SharePoint ens taksonomi.
+I følgende tabel vises [SKOS-ækvivalenterne](https://www.w3.org/TR/skos-primer/) for [ordforrådet for SharePoint taksonomi](/dotnet/api/microsoft.sharepoint.taxonomy). SharePoint understøtter ikke [SKOS-værdier](https://www.w3.org/TR/skos-primer/), der ikke har nogen tilsvarende SharePoint taksonomi.
 
-|SharePoint taksonomi|SKOS-ækvivalent|
+|SharePoint taksonomi|Tilsvarende SKOS|
 |:-----------------|:--------------|
-|sharepoint-taxonomy:Term|skos:Concept|
+|sharepoint-taksonomi:Ord|skos:Concept|
 |sharepoint-taksonomi:TermSet|skos:ConceptScheme|
 |sharepoint-taksonomi:inTermSet|skos:inScheme|
 |sharepoint-taksonomi:hasTopLevelTerm|skos:hasTopConcept|
 |sharepoint-taksonomi:topLevelTermOf|skos:topConceptOf|
-|sharepoint-taxonomy:defaultLabel|skos:prefLabel|
-|sharepoint-taxonomy:termSetName|skos:prefLabel|
-|sharepoint-taxonomy:propertyName|skos:prefLabel|
-|sharepoint-taxonomy:otherLabel|skos:altLabel|
-|sharepoint-taxonomy:description|skos:definition|
-|sharepoint-taksonomi:overordnet|skos:broader|
-|sharepoint-taxonomy:child|skos:narrower|
+|sharepoint-taksonomi:defaultLabel|skos:prefLabel|
+|sharepoint-taksonomi:termSetName|skos:prefLabel|
+|sharepoint-taksonomi:propertyName|skos:prefLabel|
+|sharepoint-taksonomi:otherLabel|skos:altLabel|
+|sharepoint-taksonomi:beskrivelse|skos:definition|
+|sharepoint-taksonomi:overordnet|skos:bredere|
+|sharepoint-taksonomi:child|skos:smallere|
 
-I følgende tabel vises de enheder af SharePoint terminologi, der er afledt af [OWL](https://www.w3.org/TR/owl2-primer/).
+I følgende tabel vises enhederne for det SharePoint taksonomiforråd, der er afledt af [OWL](https://www.w3.org/TR/owl2-primer/).
 
-|SharePoint terminologi|Afledt af OWL|
+|SharePoint taksonomiforråd|Afledt af OWL|
 |:-----------------------------|:----------------------|
-|sharepoint-taxonomy:isAvailableForTagging|owl:datatypeproperty|
-|sharepoint-taxonomy:SharedCustomPropertyForTerm|owl:ObjectProperty|
-|sharepoint-taksonomi:LocalCustomPropertyForTerm|owl:ObjectProperty|
-|sharepoint-taksonomi:CustomPropertyForTermSet|owl:ObjectProperty|
+|sharepoint-taksonomi:isAvailableForTagging|ugle:datatypeegenskab|
+|sharepoint-taksonomi:SharedCustomPropertyForTerm|ugle:ObjectProperty|
+|sharepoint-taksonomi:LocalCustomPropertyForTerm|ugle:ObjectProperty|
+|sharepoint-taksonomi:CustomPropertyForTermSet|ugle:ObjectProperty|
 
-## <a name="sharepoint-taxonomy-vocabulary"></a>SharePoint terminologi
+## <a name="sharepoint-taxonomy-vocabulary"></a>SharePoint taksonomiforråd
 
-Et taksonomi er et formelt klassificeringssystem. En taksonomi grupperer de ord, etiketter og ord, der beskriver noget, og arrangerer derefter grupperne i et hierarki.
+En taksonomi er et formelt klassificeringssystem. En taksonomi grupperer de ord, navne og ord, der beskriver noget, og arrangerer derefter grupperne i et hierarki.
 
-**sharepoint-taxonomy:Term**
+**sharepoint-taksonomi:Ord**
 
-Repræsenterer et Ord eller et Nøgleord i et administreret metadatahierarki.
+Repræsenterer et ord eller et nøgleord i et administreret metadatahierarki.
 
-Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) er atomenheden i en SharePoint [TermStore](/dotnet/api/microsoft.sharepoint.taxonomy.termstore). Hvert [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) tilhører et [TermSet,](/dotnet/api/microsoft.sharepoint.taxonomy.termset) der tilhører en [Ordgruppe](/dotnet/api/microsoft.sharepoint.taxonomy.group).
+Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) er den atomiske enhed i en SharePoint [TermStore](/dotnet/api/microsoft.sharepoint.taxonomy.termstore). Hvert [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) tilhører et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) , der tilhører en [ordgruppe](/dotnet/api/microsoft.sharepoint.taxonomy.group).
 
-Syntaksen til at definere [et ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) er som følger:
+Syntaksen til at definere et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) er som følger:
 
 ```SKOS
 ex:TermA    a    sharepoint-taxonomy:Term;
@@ -68,27 +68,27 @@ ex:TermA    a    sharepoint-taxonomy:Term;
     sharePoint-taxonomy:defaultLabel    “Term A”@en-us.
 ```
 
-Et [Udtryk, der](/dotnet/api/microsoft.sharepoint.taxonomy.term) er ily, findes [inden for et TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset). DefaultLabel er navnet på ordet [, som](/dotnet/api/microsoft.sharepoint.taxonomy.term) det vises i den visuelle repræsentation. De påkrævede felter til definition af et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) omfatter:
+Der [](/dotnet/api/microsoft.sharepoint.taxonomy.term) findes en ordkompulsorit i et [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). DefaultLabel er navnet på [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term) , som det vises i den visuelle repræsentation. De obligatoriske felter til definition af et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) omfatter:
 
-- sharepoint-taxonomy:defaultLabel
+- sharepoint-taksonomi:defaultLabel
 - sharepoint-taksonomi:inTermSet
 
 Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) kan:
 
-- Være hierarkisk relateret til et [andet ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) , der er angivet [, og begge](/dotnet/api/microsoft.sharepoint.taxonomy.term) vilkår tilhører det samme [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
-- Have flere underordnede [vilkår](/dotnet/api/microsoft.sharepoint.taxonomy.term), men kun en enkelt overordnet [periode](/dotnet/api/microsoft.sharepoint.taxonomy.term).
-- Der er ikke defineret [et overordnet](/dotnet/api/microsoft.sharepoint.taxonomy.term) ord, hvis det er en topLevelTermOf a [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
-- Har ét defaultLabel pr. [TermStore-arbejdssprog](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) .
-- Findes ikke, hvis den ikke indeholder et [overordnet ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) og heller ikke er topLevelTermOf a [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
-- Have kun et entydigt standardmærkat på samme hierarkiske niveau.
+- Vær hierarkisk relateret til et andet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) , der er angivet, at begge [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) tilhører det samme [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
+- Har flere underordnede [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term), men kun et enkelt overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
+- Der er ikke defineret et overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) , hvis det er topLevelTermOf et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
+- Har én defaultLabel pr. [TermStore-arbejdssprog](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) .
+- Findes ikke, hvis det hverken indeholder et overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) eller er topLevelTermOf et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
+- Har kun en entydig defaultLabel på samme hierarkiske niveau.
 
 **sharepoint-taksonomi:TermSet**
 
-Repræsenterer et hierarkisk eller fladt sæt af Ord-objekter kaldet "TermSet".
+Repræsenterer et hierarkisk eller fladt sæt ordobjekter, der kaldes et "Ordsæt".
 
-Som navnet antyder, er TermSet et sæt [vilkår](/dotnet/api/microsoft.sharepoint.taxonomy.term). Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) i en [Ordstore skal](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) høre til et [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Intet [ord kan](/dotnet/api/microsoft.sharepoint.taxonomy.term) findes uafhængigt af hinanden.
+Som navnet antyder, er TermSet et sæt [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term). Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) i en [TermStore](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) skal tilhøre et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Intet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) kan eksistere uafhængigt af hinanden.
 
-Syntaksen til at definere [et Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er:
+Syntaksen til at definere et [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er:
 
 ```SKOS
 ex:TermSetA    a    sharepoint-taxonomy:TermSet;
@@ -97,15 +97,15 @@ ex:TermSetA    a    sharepoint-taxonomy:TermSet;
     sharepoint-taxonomy:hasTopLevelTerm    Ex:Term A.
 ```
 
-[Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er logisk grupperet sammen i [Ordgrupper](/dotnet/api/microsoft.sharepoint.taxonomy.group). Det felt, der skal bruges til at definere [et Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) , er:
+[TermSets](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er logisk grupperet i [TermGroups](/dotnet/api/microsoft.sharepoint.taxonomy.group). Det obligatoriske felt til definition af et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er:
 
-- sharepoint-taxonomy:termSetName
+- sharepoint-taksonomi:termSetName
 
-Med det angivne ordSetName er ikke entydigt i [TermGroup](/dotnet/api/microsoft.sharepoint.taxonomy.group), tilføjer SharePoint et tal i slutningen af navnet for at bevare entydigheden for termSetName(s).
+Hvis det angivne termSetName ikke er entydigt i [TermGroup](/dotnet/api/microsoft.sharepoint.taxonomy.group), tilføjer SharePoint et tal i slutningen af navnet for at bevare entydigheden af termSetName(s).
 
 **sharepoint-taksonomi:hasTopLevelTerm**
 
-SharePoint denne egenskab til at tilknytte det mest ord i [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset), som er indgangspunktet til hierarkiet af [Ord i et](/dotnet/api/microsoft.sharepoint.taxonomy.term) [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).[](/dotnet/api/microsoft.sharepoint.taxonomy.term) Dette er en invers relation til sharepoint-taksonomi:topLevelTermOf.
+SharePoint bruger denne egenskab til at knytte det øverste [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) i [ordsættet](/dotnet/api/microsoft.sharepoint.taxonomy.termset), som er indgangspunktet til hierarkiet af [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) i et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Dette er en omvendt relation til sharepoint-taksonomi:topLevelTermOf.
 
 Syntaksen til at definere dette er:
 
@@ -114,11 +114,11 @@ ex:TermSetA    sharepoint-taxonomy:hasTopLevelTerm    ex:TermA.
 ```
 
 > [!NOTE]
-> Du kan ikke definere ordet på øverste [niveau](/dotnet/api/microsoft.sharepoint.taxonomy.term) for et overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
+> Du kan ikke definere [ordet på øverste](/dotnet/api/microsoft.sharepoint.taxonomy.term) niveau for et overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
 
 **sharepoint-taksonomi:topLevelTermOf**
 
-Sharepoint-taksonomi:topLevelTermOf er den inverse af sharepoint-taksonomi:hasTopLevelTerm
+Sharepoint-taksonomi:topLevelTermOf er det omvendte af sharepoint-taksonomi:hasTopLevelTerm
 
 Syntaksen til at definere dette er:
 
@@ -128,45 +128,45 @@ ex:TermA    sharepoint-taxonomy:topLevelTermOf    ex:TermSetA.
 
 **sharepoint-taksonomi:inTermSet**
 
-Brug dette til at knytte [et ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) til et [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) kan kun findes i et enkelt [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset). SharePoint kræver denne egenskab, når du [definerer et ord](https://github.com/MicrosoftDocs/microsoft-365-docs-pr/blob/3a3cd54dd076b18bdff1d43b3e342897f8704c23/microsoft-365/contentunderstanding/skos-format-reference.md#term).
+Brug dette til at knytte et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) til et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) kan kun findes i et enkelt [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). SharePoint kræver denne egenskab, når [du definerer et ord](#sharepoint-taxonomy-vocabulary).
 
-## <a name="required-labels"></a>Påkrævede etiketter
+## <a name="required-labels"></a>Obligatoriske navne
 
-Det kan være en god ide for din organisation at planlægge nøje, før du begynder at bruge administrerede metadata. Hvor meget planlægning du skal udføre, afhænger af, hvor formel din taksonomi er. Det afhænger også af, hvor meget kontrol du vil påtvinge metadata. På hvert niveau i hierarkiet skal du konfigurere nødvendige navne for et ord eller et Ordsæt.
+Din organisation vil måske foretage omhyggelig planlægning, før du begynder at bruge administrerede metadata. Mængden af planlægning, som du skal gøre, afhænger af, hvor formel din taksonomi er. Det afhænger også af, hvor meget kontrol du vil pålægge metadata. På hvert niveau i hierarkiet skal du konfigurere påkrævede mærkater for et ord eller et ordsæt.
 
-Et ord kan have en eller flere etiketter på standardsproget, og der kan være nul eller flere etiketter på det sprog, der ikke er standard. Hvis ordet har etiketter på et sprog, skal en af etiketterne være standardetiketten.
+Et ord kan have et eller flere navne på standardsproget og nul eller flere navne på det ikke-standardsprog. Hvis ordet har navne på et sprog, skal et af navnene være standardnavnet.
 
-**sharepoint-taxonomy:defaultLabel**
+**sharepoint-taksonomi:defaultLabel**
 
-Brug dette standardleksiket for et [ord,](/dotnet/api/microsoft.sharepoint.taxonomy.term) der er en påkrævet parameter for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term). Bruges til visuelt at repræsentere [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term).
+Brug denne leksikalske standardetiket til et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) , der er en påkrævet parameter for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term). Bruges til visuelt at repræsentere [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term).
 
-Syntaksen til at definere et defaultLabel er:
+Syntaksen til at definere en defaultLabel er:
 
 ```SKOS
 ex:TermA    sharepoint-taxonomy:defaultLabel    “Term A”@en-us.
 ```
 
-DefaultLabel indeholder to dele – strengen og sprogkoden. Sproget skal være et af [TermStore-arbejdssprogene](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) . DefaultLabel skal være entydigt for [alle vilkår](/dotnet/api/microsoft.sharepoint.taxonomy.term) i samme [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset) på det samme hierarkiske niveau.
+DefaultLabel indeholder to dele til den – strengen og sprogkoden. Sproget skal være et af [TermStore-arbejdssprogene](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) . DefaultLabel skal være entydig for alle [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) i det samme [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) på samme hierarkiske niveau.
 
-**sharepoint-taxonomy:termSetName**
+**sharepoint-taksonomi:termSetName**
 
 Henter og angiver navnet på det aktuelle TermSet-objekt.
 
-Dette er den lexiske etiket for [et TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset) i et [TermStore-arbejdssprog](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) . Dette er en påkrævet parameter for et [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Bruges til visuelt at repræsentere et [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
+Dette er den leksikalske mærkat for et [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) i et [arbejdssprog i TermStore](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) . Dette er en påkrævet parameter for et [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset). Bruges til visuelt at repræsentere et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset).
 
-Syntaksen til at definere et ordNavn er:
+Syntaksen til at definere et termSetName er:
 
 ```SKOS
 ex:TermA    sharepoint-taxonomy:TermSetName    “Term Set A”@en-us.
 ```
 
-**sharepoint-taxonomy:propertyName**
+**sharepoint-taksonomi:propertyName**
 
 Henter og angiver egenskabsnavnet for det aktuelle TermSet-objekt.
 
-Dette er den lexical etiket for en sharepoint-taksonomi:SharedCustomPropertyForTerm, sharepoint-taxonomy:LocalCustomPropertyForTerm og sharepoint-taxonomy:CustomPropertyForTermSet på et [TermStore-arbejdssprog](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) .
+Dette er den leksikalske mærkat for en sharepoint-taksonomi:SharedCustomPropertyForTerm, sharepoint-taxonomy:LocalCustomPropertyForTerm og sharepoint-taxonomy:CustomPropertyForTermSet i et [TermStore-arbejdssprog](/dotnet/api/microsoft.sharepoint.taxonomy.termstore) .
 
-Sharepoint-taksonomi:egenskabNavn behandles som nøglen til CustomProperty.
+Sharepoint-taksonomi:propertyName behandles som nøglen til CustomProperty.
 
 Syntaksen til at definere et propetyName er:
 
@@ -174,15 +174,15 @@ Syntaksen til at definere et propetyName er:
 ex:SharedCustomProperty1    sharepoint-taxonomy:propertyName    “Shared Custom Property Key 1”@en-us.
 ```
 
-## <a name="optional-labels"></a>Valgfrie etiketter
+## <a name="optional-labels"></a>Valgfrie navne
 
-Du kan også føje valgfrie etiketter til din taksonomi.
+Du kan også føje valgfrie mærkater til din taksonomi.
 
-**sharepoint-taxonomy:otherLabel**
+**sharepoint-taksonomi:otherLabel**
 
-Dette er den alternative eksikale etiket for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
+Dette er den alternative leksikalske mærkat for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
 
-Syntaksen til at definere et andetLabel er:
+Syntaksen til at definere en otherLabel er:
 
 ```SKOS
 ex:TermA    sharepoint-taxonomy:otherLabel    “Term A”@en-us.
@@ -190,11 +190,11 @@ ex:TermA    sharepoint-taxonomy:otherLabel    “Term A”@en-us.
 
 ## <a name="semantic-relationships"></a>Semantiske relationer
 
-Taksonomier har hierarkiske og nogle gange et simpelt "relateret udtryk" tilknytningsrelation, men nogle har "semantiske relationer" eller brugerdefinerede relationer.
+Taksonomier har hierarkiske og nogle gange et simpelt "relateret" associativt forhold, men nogle har "semantiske relationer" eller brugerdefinerede relationer.
 
 **sharepoint-taksonomi:overordnet**
 
-Dette hierarkisk relaterer et [ord til](/dotnet/api/microsoft.sharepoint.taxonomy.term) et andet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term). Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) kan være et ord på [øverste niveau Ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) for et [Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset), men i tilfælde af at det ikke skal have et overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
+Dette hierarkisk relaterer et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) til et andet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term). Et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) kan være et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) på øverste niveau i et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset), men hvis det ikke gør det, skal det have et overordnet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
 
 Syntaksen til at definere en overordnet er:
 
@@ -202,31 +202,31 @@ Syntaksen til at definere en overordnet er:
 ex:TermA1    sharepoint-taxonomy:parent    ex:TermA.
 ```
 
-Det betyder, at TermA er forælder, og TermA er det underordnede ord.
+Det betyder, at TermA er det overordnede ord, og at TermA er underordnet.
 
-**sharepoint-taxonomy:child**
+**sharepoint-taksonomi:child**
 
-Objektet indeholder en eller flere underordnede TermSet-forekomster, og disse kan åbnes via egenskaben Ordsæt. Denne klasse indeholder også metoder til at oprette nye underordnede TermSet-objekter. Tilladelser til redigering af underordnede forekomster af Ord og Ordsæt er angivet på gruppen.
+Objektet indeholder en eller flere underordnede forekomster af TermSet, og disse kan tilgås via egenskaben TermSets. Denne klasse indeholder også metoder til oprettelse af nye underordnede TermSet-objekter. Der er angivet tilladelser til redigering af underordnede ord- og ordsætforekomster i gruppen.
 
-Dette hierarkisk relaterer et [ord til](/dotnet/api/microsoft.sharepoint.taxonomy.term) et andet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
+Dette hierarkisk relaterer et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) til et andet [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term).
 
-Syntaksen til at definere et underordnet barn er:
+Syntaksen til at definere et underordnet element er:
 
 ```SKOS
 ex:TermA    sharepoint-taxonomy:child    ex:TermA1.
 ```
 
-Det betyder, at TermA er forælder, og TermA er det underordnede ord.
+Det betyder, at TermA er det overordnede ord, og at TermA er underordnet.
 
 ## <a name="documentation-notes"></a>Dokumentationsnoter
 
-I dette afsnit beskrives den taksonomi, der er beskrevet i Microsoft. SharePoint. Navneområde for taksonomi.
+I dette afsnit beskrives taksonomien, som er beskrevet i Microsoft. SharePoint. Taksonominavneområde.
 
-**sharepoint-taxonomy:description**
+**sharepoint-taksonomi:beskrivelse**
 
-Dette er en detaljeret forklaring af [SharePoint terminologi-enhed](/dotnet/api/microsoft.sharepoint.taxonomy).
+Dette er en detaljeret forklaring af alle [SharePoint taksonomiforrådsobjekt](/dotnet/api/microsoft.sharepoint.taxonomy).
 
-Syntaksen for at tilføje en beskrivelse er:
+Syntaksen for tilføjelse af en beskrivelse er:
 
 ```SKOS
 ex:TermA    sharepoint-taxonomy:description    “Term A is the top level term of TermSetA”@en-us.
@@ -234,9 +234,9 @@ ex:TermA    sharepoint-taxonomy:description    “Term A is the top level term o
 
 ## <a name="custom-properties"></a>Brugerdefinerede egenskaber
 
-Henter samlingen af brugerdefinerede egenskabsobjekter for det aktuelle Ord-objekt fra den skrivebeskyttede ordbog.
+Henter samlingen af brugerdefinerede egenskabsobjekter for det aktuelle ordobjekt fra den skrivebeskyttede ordbog.
 
-Brugerdefinerede egenskaber er nøgleværdipar, der kan defineres for et ord [](/dotnet/api/microsoft.sharepoint.taxonomy.term) eller et [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset) for yderligere at få en beskrivelse af [ordet eller et](/dotnet/api/microsoft.sharepoint.taxonomy.term) [TermSet](/dotnet/api/microsoft.sharepoint.taxonomy.termset). SharePoint angiver nøglen til den brugerdefinerede egenskab ved hjælp af propertyName.
+Brugerdefinerede egenskaber er nøgleværdipar, der kan defineres for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) eller et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) for at fremme beskrivelsen af [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term) eller et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset). SharePoint angiver nøglen til den brugerdefinerede egenskab ved hjælp af propertyName.
 
 **sharepoint-taksonomi:CustomPropertyForTermSet**
 
@@ -249,9 +249,9 @@ ex:CustomProp1    rdf:type    sharepoint-taxonomy:CustomPropertyForTermSet;
 ex:TermSetA    ex:CustomProp1    “Red”@en-us.
 ```
 
-**sharepoint-taxonomy:SharedCustomPropertyForTerm**
+**sharepoint-taksonomi:SharedCustomPropertyForTerm**
 
-Hvis den brugerdefinerede egenskab for [](/dotnet/api/microsoft.sharepoint.taxonomy.term) et ord skal udføres sammen med [ordet, skal](/dotnet/api/microsoft.sharepoint.taxonomy.term) du definere den under SharedCustomPropertyForTerm, når du genbruger ordet et andet sted.[](/dotnet/api/microsoft.sharepoint.taxonomy.term)
+Hvis den brugerdefinerede egenskab for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) skal overføres sammen med [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term), skal du definere det under SharedCustomPropertyForTerm, når du genbruger [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term) et andet sted.
 
 Syntaksen til at definere dette er:
 
@@ -263,7 +263,7 @@ ex:TermA    ex:CustomProp2    “5 cm”@en-us.
 ```
 **sharepoint-taksonomi:LocalCustomPropertyForTerm**
 
-Hvis den brugerdefinerede egenskab for [](/dotnet/api/microsoft.sharepoint.taxonomy.term) et ord ikke behøver at være med sammen med [ordet, når](/dotnet/api/microsoft.sharepoint.taxonomy.term) du genbruger ordet [](/dotnet/api/microsoft.sharepoint.taxonomy.term) et andet sted, skal du definere den under LocalCustomPropertyForTerm.
+Hvis den brugerdefinerede egenskab for et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) ikke behøver at blive overført sammen med [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term), skal du definere det under LocalCustomPropertyForTerm, når du genbruger [ordet](/dotnet/api/microsoft.sharepoint.taxonomy.term) et andet sted.
 
 Syntaksen til at definere dette er:
 
@@ -276,11 +276,11 @@ ex:TermA    ex:CustomProp3    “5 cm”@en-us.
 
 ## <a name="data-properties"></a>Dataegenskaber
 
-På hvert niveau i hierarkiet kan du konfigurere bestemte dataegenskaber for et ord eller et Ordsæt.
+På hvert niveau i hierarkiet kan du konfigurere specifikke dataegenskaber for et ord eller et ordsæt.
 
-**sharepoint-taxonomy:isAvailableForTagging**
+**sharepoint-taksonomi:isAvailableForTagging**
 
-Brug dette til at angive, [om et](/dotnet/api/microsoft.sharepoint.taxonomy.term) ord [eller et Ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er tilgængeligt SharePoint Lister og biblioteker.
+Brug denne til at angive, om et [ord](/dotnet/api/microsoft.sharepoint.taxonomy.term) eller et [ordsæt](/dotnet/api/microsoft.sharepoint.taxonomy.termset) er tilgængeligt i SharePoint lister og biblioteker.
 
 Syntaksen for dette er:
 
@@ -290,34 +290,34 @@ ex:TermA    sharepoint-taxonomy:isAvailableForTagging     "true"^^xsd:Boolean;
 
 ## <a name="domain-and-range"></a>Domæne og område
 
-Nedenstående tabel beskriver domænet og området af SharePoint terminologi.
+I nedenstående tabel beskrives domænet og området for SharePoint taksonomiforråd.
 
-|Prædikater/verber|Betydning|Domæne|Område|
+|Prædikater/verbum|Betydning|Domæne|Vifte|
 |:--------------|:------|:-----|:----|
-inTermSet|I ordsæt|Ord|Ordsæt|
-inTermGroup|I ordgruppe|TermSet|Ordgruppe|
-topLevelTermOf|Is Top Level Term Of|Ord|TermSet|
-hasTopLevelTerm|Har ordet på øverste niveau|Ordsæt|Ord|
-termSetName|Ordsæt har Navn|Ord|Almindelig konstant|
-defaultLabel|Ord har standardetiket|Ord|Almindelig konstant|
-otherLabel|Ordet har en anden etiket|Ord|Almindelig konstant|
-propertyName|Har egenskabsnavn|SharedCustomPropertyForTerm, LocalCustomPropertyForTerm, CustomPropertyForTermSet |Boolesk, Streng, Heltal, Decimal, Dobbelt|
-|beskrivelse|Har Beskrivelse|Alle|Almindelig konstant|
-|forælder|Har forældre|Ord|Ord|
-|barn|Har barn|Ord|Ord|
+inTermSet|I ordsæt|Udtrykket|Ordsæt|
+inTermGroup|I ordgruppe|Ordsæt|Ordgruppe|
+topLevelTermOf|Er ord på øverste niveau for|Udtrykket|Ordsæt|
+hasTopLevelTerm|Har ord på øverste niveau|Ordsæt|Udtrykket|
+termSetName|Ordsættet har navn|Udtrykket|Almindelig konstant|
+defaultLabel|Ordet har en standardetiket|Udtrykket|Almindelig konstant|
+otherLabel|Ordet har en anden etiket|Udtrykket|Almindelig konstant|
+Propertyname|Har egenskabsetiket|SharedCustomPropertyForTerm, LocalCustomPropertyForTerm, CustomPropertyForTermSet |Boolesk, streng, heltal, decimal, dobbelt|
+|Beskrivelse|Indeholder en beskrivelse|Alle|Almindelig konstant|
+|Overordnede|Har overordnet|Udtrykket|Udtrykket|
+|Barn|Har underordnet|Udtrykket|Udtrykket|
 |isAvailableForTagging|Er tilgængelig til mærkning|Ord, ordsæt|Boolesk |
-|SharedCustomPropertyForTerm|Har en delt brugerdefineret egenskab|Ord|Boolesk, streng, heltal, decimal, dobbelt|
-|LocalCustomPropertyForTerm|Har en lokal brugerdefineret egenskab|Ord|Boolesk, Streng, Heltal, Decimal, Dobbelt|
-|CustomPropertyForTermSet|Egenskaben Har brugerdefineret|TermSet|Boolesk, Streng, Heltal, Decimal, Dobbelt|
+|SharedCustomPropertyForTerm|Har delt brugerdefineret egenskab|Udtrykket|Boolesk, streng, heltal, decimal, dobbelt|
+|LocalCustomPropertyForTerm|Har lokal brugerdefineret egenskab|Udtrykket|Boolesk, streng, heltal, decimal, dobbelt|
+|CustomPropertyForTermSet|Har brugerdefineret egenskab|Ordsæt|Boolesk, streng, heltal, decimal, dobbelt|
 
-[SKOS](https://www.w3.org/TR/skos-primer/) gyldige scenarier, [SharePoint taksonomi](/dotnet/api/microsoft.sharepoint.taxonomy) ikke tillader:
+[SKOS](https://www.w3.org/TR/skos-primer/) gyldige scenarier, der [SharePoint taksonomi](/dotnet/api/microsoft.sharepoint.taxonomy) ikke tillader:
 
-- Hierarkisk redundans – Et [SKOS-koncept](https://www.w3.org/TR/skos-primer/) kan knyttes til flere bredere begreber på samme tid, men en sharepoint-taksonomi:Ord kan kun have én sharepoint-taksonomi:overordnet, og derfor er cyklisk afhængighed af vilkår heller ikke tilladt.
-- Uafhængige ord er ikke tilladt i SharePoint taksonomi. Hver sharepoint-taksonomi:Ord skal enten have en sharepoint-taksonomi:overordnet, eller det skal være sharepoint-taksonomi:topLevelTermAf et TermSet.
-- SharePoint taksonomi understøtter ikke tilknytningsrelationer.
-- SharePoint taksonomi tillader kun to typer hierarkiske relationer – sharepoint-taksonomi:overordnet og sharepoint-taksonomi:underordnet.
-- I [modsætning til SKOS](https://www.w3.org/TR/skos-primer/) kan den hierarkiske relation SharePoint terminologi kun etableres med Vilkår inden for samme TermSet.
+- Hierarkisk redundans – Et [SKOS-koncept](https://www.w3.org/TR/skos-primer/) kan knyttes til flere bredere begreber på samme tid, men en sharepoint-taksonomi:Term kan kun have én sharepoint-taksonomi:parent, og derfor cyklisk afhængighed, af Vilkår er heller ikke tilladt.
+- Mistede ord er ikke tilladt i SharePoint taksonomi. Alle sharepoint-taksonomi:Term skal enten have en sharepoint-taksonomi:parent, eller det skal være sharepoint-taksonomi:topLevelTermOf et TermSet.
+- SharePoint taksonomi understøtter ikke associative relationer.
+- SharePoint taksonomi tillader kun to typer hierarkiske relationer – sharepoint-taksonomi:parent og sharepoint-Taxonomy:child.
+- I modsætning til [SKOS](https://www.w3.org/TR/skos-primer/) kan den hierarkiske relation i SharePoint taksonomiforråd kun oprettes med ord i det samme ordsæt.
 
 ## <a name="see-also"></a>Se også
 
-[Importere et ordsæt ved hjælp af et SKOS-baseret format](import-term-set-skos.md)
+[Importér et ordsæt ved hjælp af et SKOS-baseret format](import-term-set-skos.md)

@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: admindeeplinkEXCHANGE
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 'Oversigt: Forstå, hvorfor du skal bruge PowerShell til at administrere Microsoft 365 i nogle tilfælde mere effektivt og i andre tilfælde af nødvendighed.'
-ms.openlocfilehash: 114b97ff27ae1b79e58589eb746a261f83dc422f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0da00ffe3c492b3bac3da9f435ece89219b4113f
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097926"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139357"
 ---
 # <a name="why-you-need-to-use-powershell-for-microsoft-365"></a>Derfor skal du bruge PowerShell til Microsoft 365
 
@@ -172,7 +172,7 @@ Microsoft 365 Administration er beregnet til at give adgang til almindelige, nyt
 
 Skype for Business Online Administration indeholder f.eks. et par muligheder for at oprette brugerdefinerede mødeindkaldelser:
 
-![Eksempel på visning af brugerdefinerede mødeindkaldelser i Skype for Business Online Administration.](../media/o365-powershell-meeting-invitation.png)
+![Eksempel på visning af brugerdefinerede mødeindkaldelser i Skype for Business Online Administration center.](../media/o365-powershell-meeting-invitation.png)
 
 Med disse indstillinger kan du føje et strejf af tilpasning og professionalisme til mødeindkaldelser. Men der er mere i indstillinger for mødekonfiguration end blot oprettelse af brugerdefinerede mødeinvitationer. Møder tillader f.eks.som standard:
 
@@ -189,7 +189,7 @@ Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $False -AllowConference
 ```
 
 > [!NOTE]
-> Hvis du vil køre denne kommando, skal du installere [Skype for Business Online PowerShell-modulet](https://www.microsoft.com/download/details.aspx?id=39366).
+> Hvis du vil køre denne kommando, skal du installere [Skype for Business Online PowerShell-modulet](/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-the-skype-for-business-online-connector).
 
 Fortolkningen af denne PowerShell-kommando er:
 
@@ -221,7 +221,7 @@ I det sidste eksempel kan du sige, at du har flere hundrede SharePoint Online-we
 
 4. I dialogboksen **Del** skal du vælge det link, der viser alle de brugere, der har tilladelser til webstedet:
 
-     ![Eksempel på visning af medlemmerne af et SharePoint Online-websted i SharePoint Online Administration.](../media/o365-powershell-view-permissions.png)
+     ![Eksempel på visning af medlemmerne af et SharePoint Online-websted i SharePoint Online Administration center.](../media/o365-powershell-view-permissions.png)
 
 5. Vælg **Avanceret** i dialogboksen **Delt med**.
 
@@ -238,7 +238,7 @@ Get-SPOSite | ForEach {Remove-SPOUser -Site $_.Url -LoginName "kenmyer@litwarein
 > [!NOTE]
 > Denne kommando kræver, at du installerer [SharePoint Online PowerShell-modulet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
-Fortolkningen af denne PowerShell-kommando er: Hent alle de SharePoint websteder i det aktuelle Microsoft 365-abonnement (**Get-SPOSite**), og fjern Ken Meyer fra listen over brugere, der har adgang til det (**ForEach {Remove-SPOUser -Site $\_. URL -LoginName "kenmyer\@ litwareinc.com"}**).
+Fortolkningen af denne PowerShell-kommando er: Hent alle de SharePoint websteder i det aktuelle Microsoft 365-abonnement (**Get-SPOSite**), og fjern Ken Meyer fra listen over brugere, der har adgang til det (**ForEach {Remove-SPOUser -Site $\_. Url -LoginName "kenmyer\@litwareinc.com"}**).
 
 Vi beder Microsoft 365 om at fjerne Ken Meyer fra alle websteder, herunder dem, han ikke har adgang til. Så resultaterne viser fejl for de websteder, som han ikke har adgang til. Vi kan bruge en yderligere betingelse på denne kommando til kun at fjerne Ken Meyer fra de websteder, der har ham på deres logonliste. Men de returnerede fejl skader ikke selve webstederne. Det kan tage et par minutter at køre denne kommando på hundredvis af websteder i stedet for at arbejde i timer i Microsoft 365 Administration.
 
@@ -248,7 +248,7 @@ Her er et andet eksempel på en massehandling. Brug denne kommando til at føje 
 Get-SPOSite | ForEach {Add-SPOUser -Site $_.Url -LoginName "bkearney@litwareinc.com" -Group "Members"}
 ```
 
-Fortolkningen af denne PowerShell-kommando er: Hent alle de SharePoint websteder i det aktuelle Microsoft 365-abonnement, og for hvert websted giver Bonnie Kearney adgang ved at føje hendes logonnavn til gruppen Medlemmer på webstedet (**ForEach {Add-SPOUser -Site $\_. Url -LoginName "bkearney\@ litwareinc.com" -Gruppe "Medlemmer"}**).
+Fortolkningen af denne PowerShell-kommando er: Hent alle de SharePoint websteder i det aktuelle Microsoft 365-abonnement, og for hvert websted giver Bonnie Kearney adgang ved at føje hendes logonnavn til gruppen Medlemmer på webstedet (**ForEach {Add-SPOUser -Site $\_. Url -LoginName "bkearney\@litwareinc.com" -Gruppe "Medlemmer"}**).
 
 ## <a name="powershell-for-microsoft-365-is-great-at-filtering-data"></a>PowerShell til Microsoft 365 er god til filtrering af data
 
@@ -258,7 +258,7 @@ Med Microsoft 365 Administration kan du filtrere dine data på flere måder, så
 
 Med <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> kan du også kombinere filterkriterier. Du kan f.eks. finde postkasserne for alle de personer, der bor i Bloomington og arbejder i økonomiafdelingen.
 
-Men der er begrænsninger for, hvad du kan gøre i Exchange Administration. Du kunne f.eks. ikke så nemt finde postkasserne for personer, der bor i Bloomington *eller* San Diego, eller postkasserne for alle dem, der ikke bor i Bloomington.
+Men der er begrænsninger for, hvad du kan gøre i Exchange Administration center. Du kunne f.eks. ikke så nemt finde postkasserne for personer, der bor i Bloomington *eller* San Diego, eller postkasserne for alle dem, der ikke bor i Bloomington.
 
 Du kan bruge følgende PowerShell til Microsoft 365 kommando til at få en liste over postkasser for alle de personer, der bor i Bloomington eller San Diego:
 
@@ -330,7 +330,7 @@ Fortolkningen af denne PowerShell-kommando er: Hent alle brugere i det aktuelle 
 
 Med Microsoft 365 Administration kan du få vist lister over data. Her er et eksempel på Skype for Business Online Administration, der viser en liste over brugere, der er blevet aktiveret til Skype for Business Online:
 
-![Eksempel på Skype for Business Online Administration, der viser en liste over brugere, der er blevet aktiveret til Skype for Business Online.](../media/o365-powershell-lync-users.png)
+![Eksempel på Skype for Business Online Administration center, der viser en liste over brugere, der er blevet aktiveret til Skype for Business Online.](../media/o365-powershell-lync-users.png)
 
 Hvis du vil gemme oplysningerne i en fil, skal du indsætte dem i et dokument eller Microsoft Excel regneark. Begge tilfælde kan kræve yderligere formatering. Derudover giver Microsoft 365 Administration ikke mulighed for at udskrive den viste liste direkte.
 
@@ -378,7 +378,7 @@ Lad os antage, at du vil oprette en rapport, der viser følgende oplysninger for
 
 - Angiver, om brugeren er aktiveret for Skype for Business Online
 
-Du kan ikke nemt oprette en sådan rapport i Microsoft 365 Administration. Du skal i stedet oprette et separat dokument for at gemme oplysningerne, f.eks. et Excel regneark. Hent derefter alle brugernavne og licensoplysninger fra Microsoft 365 Administration, hent oplysninger om postkasser fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, hent Skype for Business Online-oplysninger fra Skype for Business Online Administration, og kombiner derefter det Oplysninger.
+Du kan ikke nemt oprette en sådan rapport i Microsoft 365 Administration. Du skal i stedet oprette et separat dokument for at gemme oplysningerne, f.eks. et Excel regneark. Hent derefter alle brugernavne og licensoplysninger fra Microsoft 365 Administration, hent oplysninger om postkasser fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, hent Skype for Business Online-oplysninger fra Skype for Business Online-Administration  og derefter kombinere disse oplysninger.
 
 Alternativet er at bruge et PowerShell-script til at kompilere rapporten for dig.
 

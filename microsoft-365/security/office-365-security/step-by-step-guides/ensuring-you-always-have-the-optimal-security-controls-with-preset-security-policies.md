@@ -17,12 +17,12 @@ audience: ITPro
 ms.collection: m365-guidance-templates
 ms.topic: how-to
 ms.technology: mdo
-ms.openlocfilehash: e768635d3bb804dbf586ce652203689942901e4f
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 534e548dbd0950b387e757bfb81ebb446f617086
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042950"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139450"
 ---
 # <a name="ensuring-you-always-have-the-optimal-security-controls-with-preset-security-policies"></a>Sikring af, at du altid har de optimale sikkerhedskontroller med forudindstillede sikkerhedspolitikker
 
@@ -58,13 +58,13 @@ Når du har valgt mellem standard- og strenge sikkerhedsindstillinger for dine b
 1. Vælg **Trusselspolitikker**.
 1. Vælg **Forudindstillede sikkerhedspolitikker** under overskriften **Skabelonpolitikker**
 1. Vælg **Administrer** under forudindstillingen Standardbeskyttelse.
-1. Tilføj de brugere, grupper eller domæner, du vil anvende forudindstillingen Standard på, i afsnittet EOP-beskyttelse gælder for. Klik på knappen **Næste** .
-1. Tilføj de brugere, grupper eller domæner, du vil anvende forudindstillingen Standard på, i afsnittet MDO-beskyttelse gælder for. Klik på knappen **Næste** .
-1. Klik på knappen **Bekræft** .
-1. Vælg linket **Administrer** i forudindstillet streng beskyttelse.
-1. Tilføj de brugere, grupper eller domæner, du vil anvende forudindstillingen Standard på, i afsnittet EOP-beskyttelse gælder for. Klik på knappen **Næste** .
-1. Tilføj de brugere, grupper eller domæner, du vil anvende forudindstillingen Standard på, i afsnittet MDO-beskyttelse gælder for. Klik på knappen **Næste** .
-1. Klik på knappen **Bekræft** .
+1. Vælg **Alle modtagere** for at anvende Exchange Online Protection lejer bredt, eller vælg **Specifikke modtagere** for manuelt at tilføje brugere, grupper eller domæner, du vil anvende beskyttelsespolitikken på. Klik på knappen **Næste** .
+1. Vælg **Alle modtagere** for at anvende lejeren Defender for Office 365 Beskyttelse, eller vælg **Specifikke modtagere** for manuelt at tilføje brugere, grupper eller domæner, du vil anvende beskyttelsespolitikken på. Klik på knappen **Næste** .
+1. I afsnittet **Repræsentationsbeskyttelse** skal du tilføje mailadresser & domæner for at beskytte mod repræsentationsangreb og derefter tilføje eventuelle afsendere og domæner, der er tillid til, som du ikke ønsker, at repræsentationsbeskyttelsen skal gælde for, og tryk derefter på **Næste**
+3. Klik på knappen **Bekræft** .
+4. Vælg linket **Administrer** i forudindstillet streng beskyttelse.
+5. Gentag trin 7-10 igen, men for brugerne skal der anvendes streng beskyttelse på. (hvis relevant)
+7. Klik på knappen **Bekræft** .
 
 > [!TIP]
 > Hvis du vil vide mere om forudindstillede politikker, skal du klikke [her](../../office-365-security/preset-security-policies.md)

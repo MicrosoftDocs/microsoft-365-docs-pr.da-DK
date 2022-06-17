@@ -21,12 +21,12 @@ search.appverid:
 - SPO160
 ms.assetid: bebb285f-1d54-4f79-90a5-94985afc6af8
 description: Få mere at vide om, hvordan du bruger Office 365 Content Delivery Network (CDN) til at fremskynde leveringen af dine SharePoint Online-aktiver.
-ms.openlocfilehash: 42836fa8a43b7251be27cfd841b67d47e12b036e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8b106840133f5c690fd0df80700fdb79a3590d92
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092001"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139557"
 ---
 # <a name="use-the-office-365-content-delivery-network-cdn-with-sharepoint-online"></a>Brug Office 365 Content Delivery Network (CDN) sammen med SharePoint Online
 
@@ -518,7 +518,7 @@ Hvis du vil gøre det muligt for din organisation at bruge private oprindelser, 
 Set-PnPTenantCdnEnabled -CdnType Private -Enable $true
 ```
 
-Du kan få flere oplysninger om denne cmdlet under [Set-PnPTenantCdnEnabled](/powershell/module/sharepoint-pnp/set-pnptenantcdnenabled).
+Du kan få flere oplysninger om denne cmdlet under [Set-PnPTenantCdnEnabled](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnEnabled.html).
 
 <a name="Office365CDNforPnPPoshFileType"> </a>
 ### <a name="change-the-list-of-file-types-to-include-in-the-office-365-cdn-optional"></a>Rediger listen over filtyper, der skal medtages i Office 365 CDN (valgfrit)
@@ -546,7 +546,7 @@ Hvis du vil se, hvilke filtyper der i øjeblikket er tilladt af CDN, skal du bru
 Get-PnPTenantCdnPolicies -CdnType <Public | Private>
 ```
 
-Du kan få flere oplysninger om disse cmdlet'er under [Set-PnPTenantCdnPolicy](/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy) og [Get-PnPTenantCdnPolicies](/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies).
+Du kan få flere oplysninger om disse cmdlet'er under [Set-PnPTenantCdnPolicy](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnPolicy.html) og [Get-PnPTenantCdnPolicies](https://pnp.github.io/powershell/cmdlets/Get-PnPTenantCdnPolicies.html).
 
 <a name="Office365CDNforPnPPoshSiteClassification"> </a>
 ### <a name="change-the-list-of-site-classifications-you-want-to-exclude-from-the-office-365-cdn-optional"></a>Rediger listen over webstedsklassifikationer, du vil udelade fra Office 365 CDN (valgfrit)
@@ -579,7 +579,7 @@ Egenskaben _ExcludeRestrictedSiteClassifications_ indeholder de webstedsklassifi
 
 Egenskaben _ExcludeIfNoScriptDisabled_ udelukker indhold fra CDN baseret på indstillingerne for _NoScript-attributten_ på webstedsniveau. NoScript-attributten er som standard angivet til **Aktiveret** for _moderne_ websteder og **Deaktiveret** for _klassiske_ websteder. Dette afhænger af dine lejerindstillinger.
 
-Du kan få flere oplysninger om disse cmdlet'er under [Set-PnPTenantCdnPolicy](/powershell/module/sharepoint-pnp/set-pnptenantcdnpolicy) og [Get-PnPTenantCdnPolicies](/powershell/module/sharepoint-pnp/get-pnptenantcdnpolicies).
+Du kan få flere oplysninger om disse cmdlet'er under [Set-PnPTenantCdnPolicy](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnPolicy.html) og [Get-PnPTenantCdnPolicies](https://pnp.github.io/powershell/cmdlets/Get-PnPTenantCdnPolicies.html).
 
 <a name="Office365CDNforSPOOriginPnPPosh"> </a>
 ### <a name="add-an-origin-for-your-assets"></a>Tilføj et udgangspunkt for dine aktiver
@@ -626,7 +626,7 @@ Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/test/siteassets/folder%
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl "sites/test/siteassets/folder 1"
 ```
 
-Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 > [!NOTE]
 > I private oprindelser skal aktiver, der deles fra et oprindelsessted, have en overordnet version udgivet, før der kan opnås adgang til dem fra CDN.
@@ -650,7 +650,7 @@ Disse oprindelser er normalt konfigureret for dig som standard, når du aktivere
   Add-PnPTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
   ```
 
-Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 Når du har kørt kommandoen, synkroniserer systemet konfigurationen på tværs af datacenteret. Dette kan tage op til 15 minutter.
 
@@ -675,7 +675,7 @@ Når du har kørt kommandoen, synkroniserer systemet konfigurationen på tværs 
   Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl */publishingimages
   ```
 
-Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 Når du har kørt kommandoen, synkroniserer systemet konfigurationen på tværs af datacenteret. Dette kan tage op til 15 minutter.
 
@@ -688,7 +688,7 @@ Brug **Add-PnPTenantCdnOrigin-cmdlet'en** til at definere en gruppe af websteder
 Add-PnPTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
-Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/add-pnptenantcdnorigin).
+Du kan få flere oplysninger om denne kommando og dens syntaks under [Add-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Add-PnPTenantCdnOrigin.html).
 
 Når du har kørt kommandoen, synkroniserer systemet konfigurationen på tværs af datacenteret. Du får muligvis vist en meddelelse, der _afventer konfiguration_, som forventes, da SharePoint Online-lejeren opretter forbindelse til CDN-tjenesten. Dette kan tage op til 15 minutter.
 
@@ -713,7 +713,7 @@ Du kan fjerne adgangen til en mappe eller SharePoint bibliotek, som du har ident
 Remove-PnPTenantCdnOrigin -OriginUrl <path> -CdnType <Public | Private | Both>
 ```
 
-Du kan få oplysninger om, hvordan du bruger denne cmdlet, under [Remove-PnPTenantCdnOrigin](/powershell/module/sharepoint-pnp/remove-pnptenantcdnorigin).
+Du kan få oplysninger om, hvordan du bruger denne cmdlet, under [Remove-PnPTenantCdnOrigin](https://pnp.github.io/powershell/cmdlets/Remove-PnPTenantCdnOrigin.html).
 
 <a name="Office365CDNforSPOModifyOriginPnPPosh"> </a>
 #### <a name="modify-an-origin-in-the-office-365-cdn"></a>Rediger et oprindelsessted i Office 365 CDN
@@ -737,7 +737,7 @@ Hvis du vil deaktivere brugen af private oprindelser i CDN, skal du angive følg
 Set-PnPTenantCdnEnabled -CdnType Private -Enable $false
 ```
 
-Du kan få flere oplysninger om denne cmdlet under [Set-PnPTenantCdnEnabled](/powershell/module/sharepoint-pnp/set-pnptenantcdnenabled).
+Du kan få flere oplysninger om denne cmdlet under [Set-PnPTenantCdnEnabled](https://pnp.github.io/powershell/cmdlets/Set-PnPTenantCdnEnabled.html).
 
 </details>
 

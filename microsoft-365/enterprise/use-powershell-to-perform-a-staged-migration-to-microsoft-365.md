@@ -18,12 +18,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: Få mere at vide om, hvordan du bruger PowerShell til at flytte indhold fra et kildemailsystem over tid ved hjælp af en faseindsat migrering til Microsoft 365.
-ms.openlocfilehash: 26c12208c00e6b9b33b0be850a4791ddca804c8c
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0c40e617fbd069ab9894d572a5582985194e7a6e
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014206"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139535"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en faseinddelt migrering til Microsoft 365
 
@@ -65,7 +65,7 @@ Før du overfører postkasser til Microsoft 365 ved hjælp af en trinvis overfø
 
 - Brug Outlook uden for virksomhedens netværk til at oprette forbindelse til din lokale Exchange postkasse.
 
-- Brug [Microsoft Remote Connectivity Analyzer](https://https://testconnectivity.microsoft.com/) til at teste dine forbindelsesindstillinger. Brug Outlook Anywhere (RPC via HTTP) eller Outlook Autodiscover-test.
+- Brug [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/) til at teste dine forbindelsesindstillinger. Brug Outlook Anywhere (RPC via HTTP) eller Outlook Autodiscover-test.
 
 - Kør følgende kommandoer i Exchange Online PowerShell:
 

@@ -12,12 +12,12 @@ metadata:
   ms.custom: commerce_vl
   ms.localizationpriority: medium
   description: Ofte stillede spørgsmål om produktnøgler
-  ms.openlocfilehash: e42553a7ae588464481bc1573442016f8ce15b55
-  ms.sourcegitcommit: 1c5f9d17a8b095cd88b23f4874539adc3ae021de
+  ms.openlocfilehash: aac4f6aeed6fb8320929d333cdc7b58addfbd221
+  ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/08/2022
-  ms.locfileid: "64715203"
+  ms.lasthandoff: 06/17/2022
+  ms.locfileid: "66139645"
 title: Ofte stillede spørgsmål om produktnøgler
 summary: ''
 sections:
@@ -35,7 +35,7 @@ sections:
       Du kan få flere oplysninger under [Ofte stillede spørgsmål om aktivering af onlinetjeneste for åbne programmer](/licensing/online-service-activation-faq).
   - question: >
       Hvordan gør jeg finde produktnøgler i Microsoft 365 Administration?
-    answer: "1. Log på Microsoft 365 Administration. \n2. Gå til **FaktureringFå** >  **dine** **produkterVolume-licenserDownloads** >  >  **& nøgler**, > peg på produktet, og vælg **Vis nøgler**.\n\nDu kan finde produktnøgleoplysninger for hvert produkt, licenstypen (Volume Licensing Key, KMS (Key Management Service) og MAK (Multiple Activation Key) og antallet af anvendte og tilgængelige MAK-aktiveringer.\n\nVælg **Download alle produktnøgler** for at downloade de nøgler, der vises for en licens til et lokalt drev.\n"
+    answer: "1. Log på Microsoft 365 Administration. \n2. Gå til **Fakturering Af** > **dine produkter** > **Volumenlicens** > **Downloads & nøgler** > holde markøren over produktet, og vælg **Vis nøgler**.\n\nDu kan finde produktnøgleoplysninger for hvert produkt, licenstypen (Volume Licensing Key, KMS (Key Management Service) og MAK (Multiple Activation Key) og antallet af anvendte og tilgængelige MAK-aktiveringer.\n\nVælg **Download alle produktnøgler** for at downloade de nøgler, der vises for en licens til et lokalt drev.\n"
   - question: >
       Hvordan gør jeg finde SQL Server produktnøgler?
     answer: >
@@ -45,7 +45,7 @@ sections:
       Du kan også finde nøglen ved at hente SQL ISO-filen fra Administration > .. \x64-mappe > DefaultSetup.ini fil. Sørg for at sikkerhedskopiere alle eksisterende versioner, før du installerer eller opgraderer SQL udgaver. Hvis du har brug for hjælp til fejlfinding af tekniske problemer under produktinstallation eller onlinetjenesteaktivering, skal du kontakte Microsoft Teknisk Support ved at indsende en [teknisk supportanmodning](https://support.microsoft.com/oas).
   - question: >
       Hvordan gør jeg finde en produktnøgle til volumenlicenskøb?
-    answer: "Hvis din aftale giver adgang til et produkt, der kræver en nøgle, kan du finde disse nøgler ved at gå til **BillingYour** >  **productsVolume** >  **licensingDownloads** >  & nøgler. \n\nNogle produkter kræver dog ikke en produktnøgle. Disse oplysninger er angivet i produktbeskrivelsen i kataloget Downloads og nøgler.\n\nHvis du vil finde ud af, om dit produkt kræver en nøgle, skal du gå til [Produktaktivering og nøgleoplysninger](https://licensingapps.microsoft.com/product-activation). Under Find produkter skal du vælge et produkt eller søge efter dit produktnavn.\n"
+    answer: "Hvis din aftale giver adgang til et produkt, der kræver en nøgle, kan du finde disse nøgler ved at gå til **Fakturering** > **Dine produkter** > **Volumenlicens** > **Downloads & nøgler**. \n\nNogle produkter kræver dog ikke en produktnøgle. Disse oplysninger er angivet i produktbeskrivelsen i kataloget Downloads og nøgler.\n\nHvis du vil finde ud af, om dit produkt kræver en nøgle, skal du gå til [Produktaktivering og nøgleoplysninger](https://licensingapps.microsoft.com/product-activation). Under Find produkter skal du vælge et produkt eller søge efter dit produktnavn.\n"
   - question: >
       Hvad er en konfigurationsnøgle?
     answer: >
@@ -67,7 +67,7 @@ sections:
 
       > [!NOTE]
 
-      > Alle kunder har ret til at bruge produktnøgler til re-imaging- og nedgraderingsformål. Vælg Plus, Enterprise Agreement (EA) og Select-kunder har begrænsede evalueringsrettigheder til oplæring og sikkerhedskopiering. Du kan få flere oplysninger under [Produktlicensoplysninger](/licensing/learn-more/volume-licensing-briefs).
+      > Alle kunder har ret til at bruge produktnøgler til re-imaging- og nedgraderingsformål. Vælg Plus, Enterprise Agreement (EA) og Select-kunder har begrænsede evalueringsrettigheder til oplæring og sikkerhedskopiering. Du kan få flere oplysninger under [Produktlicensoplysninger](https://www.microsoft.com/licensing/docs/view/Licensing-Briefs).
 - name: Aktivering af diskenhed
   questions:
   - question: >
@@ -168,7 +168,7 @@ sections:
       Når du har downloadet servermediet fra VLSC, kan du aktivere det ved hjælp af guiden til produktaktivering. Du behøver ikke at finde en volumenlicensnøgle eller en produktnøgle i VLSC. Når du fuldfører alle trin i aktiveringsguiden, bliver serveren bedt om at oprette forbindelse til Microsoft Clearing House via internettet for at validere dataene. For offlineservere tilbyder aktiveringsguiden telefon- eller webaktivering.
 
 
-      Til at begynde med skal du tildele serveren en licensrolle til Fjernskrivebord (**StartAdministrative** >  **ToolsServer** >  Manager) og derefter aktivere RDS-tjenesten fra Licensstyring til Fjernskrivebord. Vælg **StartAdministrative** >  **værktøjerFjern** >  skrivebordstjenester, og vælg derefter **Fjernskrivebord/Terminal License Manager**.
+      Til at begynde med skal du tildele serveren en licensrolle til Fjernskrivebord (**Start** > **Administration af** > **serverstyring**) og derefter aktivere RDS-tjenesten fra Licensstyring til Fjernskrivebord. Vælg **Start** > **administrative værktøjer** > **Fjernskrivebord-tjenester**, og vælg derefter **Fjernskrivebord/Terminal License Manager**.
 
 
       Under aktiveringen bliver du bedt om at vælge licensprogrammet og aftalenummeret. For Open License-kunder skal du angive dit autorisationsnummer. For MPSA skal du angive dit købskontonummer (ikke MPSA-aftalenummeret). Hvis du er usikker på programtypen for det licens-id, der bruges til at købe dine CAL-licenser, skal du gå til **oversigt over VLSC-relationer** og se kolonnen **Overordnet program** .
@@ -190,14 +190,14 @@ sections:
       > Hvis du er open license-kunde, skal du købe mindst én enhed af produktet, som du vil gentegne for at få adgang til produktmediet og modtage en produktnøgle.
 
 
-      Du kan finde flere oplysninger om rettigheder til genbehandling under [Produktlicensvejledninger](/licensing/learn-more/volume-licensing-briefs).
+      Du kan finde flere oplysninger om rettigheder til genbehandling under [Produktlicensvejledninger](https://www.microsoft.com/licensing/docs/view/Licensing-Briefs).
   - question: >
       Hvordan gør jeg downloade mine nøgler til en lokal fil?
-    answer: "Med Microsoft 365 Administration kan du downloade produktnøgler til en lokal fil til senere brug. Når du downloader produktnøgler fra siden Downloads og nøgler, indeholder filen alle volumenlicensnøgler, der er knyttet til aftaler i din administratorprofil. Men hvis du downloader nøgler fra visningen Licenserings-id på siden Relationsoversigt, indeholder filen kun de nøgler, der er knyttet til det licens-id, du får vist.\n\nEn produktnøglefil, der kan downloades, er i tabulatorsepareret format og kan åbnes i Excel eller en teksteditor til sortering og visning af nøgler. Dette er de kolonner, der er inkluderet i filen: **Licens-id**, **Overordnet program**, **Organisation**, **Produkt**, **Produktnøgle**, **Type** og **MAK Activations-Used/Available, Seats og OSA Status**. \n\nHvis du vil åbne en downloadet fil i Excel, skal du udføre disse trin:\n  1. Åbn Microsoft Excel.\n  2. Vælg **FilerÅbn** > , og vælg derefter den downloadede CSV-fil.\n  3. Vælg **Afgrænset** (standard), og vælg derefter **Tabulatorsepareret** (for at forhindre, at alle data vises i en enkelt kolonne).\n  4. Vælg **Udfør**. \n\nDen .CSV fil åbnes i Excel, og dataene vises i separate kolonner.\n"
+    answer: "Med Microsoft 365 Administration kan du downloade produktnøgler til en lokal fil til senere brug. Når du downloader produktnøgler fra siden Downloads og nøgler, indeholder filen alle volumenlicensnøgler, der er knyttet til aftaler i din administratorprofil. Men hvis du downloader nøgler fra visningen Licenserings-id på siden Relationsoversigt, indeholder filen kun de nøgler, der er knyttet til det licens-id, du får vist.\n\nEn produktnøglefil, der kan downloades, er i tabulatorsepareret format og kan åbnes i Excel eller en teksteditor til sortering og visning af nøgler. Dette er de kolonner, der er inkluderet i filen: **Licens-id**, **Overordnet program**, **Organisation**, **Produkt**, **Produktnøgle**, **Type** og **MAK Activations-Used/Available, Seats og OSA Status**. \n\nHvis du vil åbne en downloadet fil i Excel, skal du udføre disse trin:\n  1. Åbn Microsoft Excel.\n  2. Vælg **Filer** > **Åbn**, og vælg derefter den downloadede CSV-fil.\n  3. Vælg **Afgrænset** (standard), og vælg derefter **Tabulatorsepareret** (for at forhindre, at alle data vises i en enkelt kolonne).\n  4. Vælg **Udfør**. \n\nDen .CSV fil åbnes i Excel, og dataene vises i separate kolonner.\n"
 - name: Support
   questions:
   - question: >
       Hvordan gør jeg kontakt support?
     answer: >
       Microsoft 365 Administration kunder kan kontakte support via telefon eller webformular. Microsoft besvarer indsendelser af webformularer inden for 24 timer. Hvis du vil kontakte support, skal du se [Kontakt os](/licensing/contact-us).
-additionalContent: "\n## <a name=\"additional-resources\"></a>Flere ressourcer\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)\n\n- [Ofte stillede spørgsmål om aktivering af onlinetjeneste for åbne programmer](online-service-activation-faq.yml)"
+additionalContent: "\n## <a name=\"additional-resources\"></a>Yderligere ressourcer\n\n- [Ofte stillede spørgsmål om downloads](downloads-faq.yml)\n\n- [Ofte stillede spørgsmål om aktivering af onlinetjeneste for åbne programmer](online-service-activation-faq.yml)"

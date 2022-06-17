@@ -21,12 +21,12 @@ search.appverid:
 - SPO160
 ms.assetid: e8ce6b72-745b-464a-85c7-cbf6eb53391b
 description: Få mere at vide om, hvordan du øger ydeevnen ved at erstatte webdelen indholdsforespørgsel med webdelen Indholdssøgning i SharePoint Server 2013 og SharePoint Online.
-ms.openlocfilehash: 45b43b3071ca39c67283ac70ab92b20e2fc7e21a
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 4c8a97d24320d5380eccc089737947df9b1a0d0b
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621977"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139491"
 ---
 # <a name="using-content-search-web-part-instead-of-content-query-web-part-to-improve-performance-in-sharepoint-online"></a>Brug af webdelen Indholdssøgning i stedet for webdelen indholdsforespørgsel til at forbedre ydeevnen i SharePoint Online
 
@@ -72,6 +72,6 @@ Når du har tilføjet en webdel til indholdssøgning, kan du tilpasse søgningen
   
 ## <a name="query-building-and-testing-tool"></a>Værktøj til oprettelse og test af forespørgsler
 
-Hvis du vil have et værktøj til at bygge og teste komplekse forespørgsler, skal du se [søgeforespørgselsværktøjet](https://sp2013searchtool.codeplex.com/) på Codeplex. 
+Hvis du vil have et værktøj til at oprette og teste komplekse forespørgsler, skal du se [søgeforespørgselsværktøjet](https://github.com/pnp/PnP-Tools/tree/master/Solutions/SharePoint.Search.QueryTool#download-the-tool).
   
 

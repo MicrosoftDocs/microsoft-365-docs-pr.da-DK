@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers), der bruger Microsoft 365 Lighthouse, kan du få mere at vide om, hvordan du får hjælp og support.
-ms.openlocfilehash: 5bf61e9563a87ac44219c1c4644153ce98755cb5
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: cf0f9e9fd689f8e683b63af4cc8db7a09a1f6240
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017800"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139313"
 ---
 # <a name="get-help-and-support-for-microsoft-365-lighthouse"></a>Få hjælp og support til Microsoft 365 Fyrtårn 
 
@@ -40,7 +40,7 @@ Der findes flere muligheder, hvis du har brug for hjælp. Først skal du kontrol
     3. Find **Microsoft 365-pakken** på listen over tjenester, og udvid den derefter til at vise alle tjenesterne i pakken.
     4. Find **Microsoft 365 Lighthouse** og kontrollere sundhed.
 
-- Se, om problemet er angivet i [Kendte problemer med Microsoft 365 Lighthouse](/office365/troubleshoot/microsoft-365-lighthouse/lighthouse-known-issues).
+- Se, om problemet er angivet i [Kendte problemer med Microsoft 365 Lighthouse](/microsoft-365/lighthouse/m365-lighthouse-known-issues?view=o365-worldwide).
 
 Hvis du oplever et problem, der ikke er angivet i nogen af disse ressourcer, skal du følge vejledningen i denne artikel for at få vist indstillinger for selvhjælp eller for at oprette en serviceanmodning.
 

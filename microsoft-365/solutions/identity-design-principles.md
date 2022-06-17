@@ -14,12 +14,12 @@ ms.collection:
 - M365solutions
 ms.custom: seo-marvel-jun2020
 f1.keywords: NOCSH
-ms.openlocfilehash: 065e9a124deb7c064b31666d96a11f076d65abdd
-ms.sourcegitcommit: 52e2a67a1badd7faaabbcf99c65f464e23a47805
+ms.openlocfilehash: 71b4fc8a671f4b30d70a4c3ec026c39b24c1a9a4
+ms.sourcegitcommit: 7ac54e1952383d5cd5f084c6a9d247eb747d4904
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66060955"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66139513"
 ---
 # <a name="to-identity-and-beyondone-architects-viewpoint"></a>Til identitet og videre – en arkitekts synspunkt
 
@@ -194,7 +194,7 @@ Til [Multi-Geo](../enterprise/microsoft-365-multi-geo.md) eller ikke til Multi-G
 - Det giver ikke ydeevnefordele. Det kan gøre ydeevnen dårligere, hvis [netværksdesignet](https://aka.ms/office365networking) ikke er korrekt. Få enheder "tæt" på Microsoft-netværket, ikke nødvendigvis på dine data.
 - Det er ikke en løsning til [overholdelse af GDPR](https://www.microsoft.com/trust-center/privacy/gdpr-overview). GDPR fokuserer ikke på datasuverænitet eller lagerplaceringer. Der er andre overholdelsesrammer for dette.
 - Det løser ikke delegering af administration (se nedenfor) eller [informationsbarrierer](../compliance/information-barriers.md).
-- Det er ikke det samme som flerlejer og kræver yderligere arbejdsprocesser [til klargøring af brugere](https://github.com/MicrosoftDocs/azure-docs-pr/blob/master/articles/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation.md) .
+- Det er ikke det samme som flerlejer og kræver yderligere arbejdsprocesser [til klargøring af brugere](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation) .
 - Den [flytter ikke din lejer](../enterprise/moving-data-to-new-datacenter-geos.md) (din Azure AD) til et andet geografisk område.
 
 ## <a name="delegation-of-administration"></a>Delegering af administration
@@ -227,7 +227,7 @@ Nogle gange kræver scenarier tilføjelse af en ekstern bruger til en rolle (se 
 
 ### <a name="microsoft-365-defender-and-microsoft-365-purview-compliance-portals"></a>Microsoft 365 Defender og Microsoft 365 Purview-overholdelsesportaler
 
-**Mail & samarbejdsroller** på [Microsoft 365 Defender-portalen](../security/office-365-security/permissions-microsoft-365-security-center.md) og **_Rollegrupper til Microsoft Purview-løsninger_* i [Microsoft 365 Purview-overholdelsesportalen](../compliance/microsoft-365-compliance-center-permissions.md) er en samling af "rollegrupper", som er separate og adskiller sig fra Azure AD roller. Det kan være forvirrende, fordi nogle af disse rollegrupper har samme navn som Azure AD roller (f.eks. Sikkerhedslæser), men de kan have forskellige medlemskaber. Jeg foretrækker at bruge Azure AD roller. Hver rollegruppe består af en eller flere "roller" (se, hvad jeg mener om genbrug af det samme ord?) og har medlemmer fra Azure AD, som er mailaktiverede objekter. Du kan også oprette en rollegruppe med samme navn som en rolle, som måske eller måske ikke indeholder rollen (undgå denne forvirring).
+**Mail & samarbejdsroller** på [Microsoft 365 Defender-portalen](../security/office-365-security/permissions-microsoft-365-security-center.md) og **_Rollegrupper for Microsoft Purview løsninger_* i [Microsoft 365 Purview-overholdelsesportalen](../compliance/microsoft-365-compliance-center-permissions.md) er en samling af "rollegrupper", som er separate og adskiller sig fra Azure AD roller. Det kan være forvirrende, fordi nogle af disse rollegrupper har samme navn som Azure AD roller (f.eks. Sikkerhedslæser), men de kan have forskellige medlemskaber. Jeg foretrækker at bruge Azure AD roller. Hver rollegruppe består af en eller flere "roller" (se, hvad jeg mener om genbrug af det samme ord?) og har medlemmer fra Azure AD, som er mailaktiverede objekter. Du kan også oprette en rollegruppe med samme navn som en rolle, som måske eller måske ikke indeholder rollen (undgå denne forvirring).
 
 På en måde er disse tilladelser en udvikling af modellen for Exchange rollegrupper. Exchange Online har dog sin egen grænseflade [til administration af rollegrupper](/exchange/permissions-exo). Nogle rollegrupper i Exchange Online er låst og administreret fra Azure AD eller Microsoft 365 Defender og Microsoft 365 Purview-overholdelsesportaler, men andre kan have de samme eller lignende navne og administreres i Exchange Online (føjer til forvirring). Jeg anbefaler, at du undgår at bruge Exchange Online brugergrænseflade, medmindre du har brug for områder til Exchange administration.
 
