@@ -6,7 +6,7 @@
       href: overview.md
 - name: Hurtig start
   items:
-    - name: Opret en Test Base-konto
+    - name: Oprettelse af en Test Base-konto
       href: createaccount.md
     - name: Test dit program på Test Base
       items:
@@ -40,6 +40,8 @@
       href: memory.md
     - name: CPU-regressionsanalyse
       href: cpu.md
+    - name: Anmodning om at ændre adgangsniveau
+      href: accesslevel.md
     - name: SDK og API
       href: sdkapi.md
 - name: Reference
