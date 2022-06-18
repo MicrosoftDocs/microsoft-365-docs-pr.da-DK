@@ -1,0 +1,24 @@
+- name: Microsoft Whiteboard
+  href: index.md
+- name: Whiteboard til organisationer
+  items:
+    - name: Aktivér og administrer adgang
+      href: enable-whiteboard-access-organizations.md
+    - name: Administrer data
+      href: manage-data-organizations.md
+    - name: Administrer deling
+      href: manage-sharing-organizations.md
+    - name: Udrul på Windows-enheder
+      href: deploy-on-windows-organizations.md
+- name: Whiteboard til offentlige myndigheder
+  items:
+    - name: Aktivér og administrer adgang – GCC Høj
+      href: enable-whiteboard-access-gcc-high.md
+    - name: Administrer data – GCC høj
+      href: manage-data-gcc-high.md
+    - name: Administrer deling – GCC høj
+      href: manage-sharing-gcc-high.md
+    - name: Administrer klienter – GCC høj
+      href: manage-clients-gcc-high.md
+- name: Whiteboard PowerShell
+  href: /powershell/module/whiteboard/

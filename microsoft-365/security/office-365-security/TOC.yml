@@ -223,13 +223,13 @@
         - name: Liste over tilladte/blokerede lejere
           items:
             - name: Administrer listen over tilladte/blokerede lejere
-              href: tenant-allow-block-list.md
-            - name: Tilføj blokerede på listen over tilladte/blokerede lejere
-              href: manage-tenant-blocks.md
-            - name: Tilføj tilladte på listen over tilladte/blokerede lejere
-              href: manage-tenant-allows.md
-            - name: Rediger og fjern poster på listen over tilladte/blokerede lejer
-              href: modify-remove-entries-tenant-allow-block.md
+              href: manage-tenant-allow-block-list.md
+            - name: Tillad eller bloker mails ved hjælp af listen Tillad/bloker lejer
+              href: allow-block-email-spoof.md
+            - name: Tillad eller bloker URL-adresser ved hjælp af listen Tillad/bloker lejer
+              href: allow-block-urls.md
+            - name: Tillad eller bloker filer ved hjælp af listen Tillad/bloker lejer
+              href: allow-block-files.md
         - name: Opret lister over blokerede afsendere
           href: Create-block-sender-lists-in-office-365.md
         - name: Opret lister over sikre afsendere
