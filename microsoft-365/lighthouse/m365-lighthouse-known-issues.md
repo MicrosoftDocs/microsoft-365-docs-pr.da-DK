@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthous
 search.appverid: MET150
 description: For MSP'er (Managed Service Providers), der bruger Microsoft 365 Lighthouse, skal du se en liste over kendte problemer for Lighthouse efter funktionsområde.
-ms.openlocfilehash: 7a175d6c14e9b434240ff1a85f901a919ea79dcc
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 61073729b9589033ab361973c1c87bac2b28959a
+ms.sourcegitcommit: 04a93269fbbbdb5513335422cabdc1b269ead5ac
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016718"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66160814"
 ---
 # <a name="known-issues-with-microsoft-365-lighthouse"></a>Kendte problemer med Microsoft 365 Fyrtårn
 
@@ -66,15 +66,15 @@ I denne artikel beskrives de kendte problemer for Microsoft 365 Fyrtårn efter f
 | **Deaktiverings- og genaktiveringshandlinger er ikke angivet i overvågningslogge** | Følgende aktiviteter rapporteres i øjeblikket ikke på siden Overvågningslogge i Lighthouse: <ul><li>Navn: offboardTenant \| Action: Inaktiver en kunde</li> <li>Navn: resetTenantOnboardingStatus \| Action: Reactive customer</li></ul> | Der er ingen løsning, men vi arbejder på at løse problemet. Disse aktiviteter vises i overvågningslogge, når rettelsen er installeret i tjenesten. |
 | **Filteret viser ikke alle brugere** | Når MSP-teknikere forsøger at filtrere ved hjælp af **Initieret** af, vises listen over alle UPN'er (User Principal Names) – svarende til mail-id'er for de teknikere, der startede handlinger, der genererer overvågningslogge – ikke fuldt ud under filteret.<br><br>Bemærk, at selve overvågningsloggene vises fuldt ud. Det er kun muligheden for at filtrere dem ved hjælp af **Initieret af** , der påvirkes. | Der er ingen løsning, men vi arbejder på at løse problemet. Filteret vender tilbage til den forventede funktionsmåde – der viser den komplette liste over UPN'er, der skal filtreres efter – når rettelsen er installeret i tjenesten. |
 
-## <a name="delegated-admin-privileges-dap"></a>Delegerede administratorrettigheder (DAP)
+## <a name="delegated-admin-privileges-dap"></a>Delegerede Administration rettigheder (DAP)
 
 | Problem | Beskrivelse | Løsning |
 | ---------------- | ---------------- | ---------------- |
-| **Tilladelsesforskydning ved ændring af DAP-roller** | Hvis en MSP-tekniker føjes til eller fjernes fra gruppen Administratoragent eller Helpdesk Agent, kan der være en forsinkelse i at afspejle de relevante tilladelser i Lighthouse. | Problemet løses inden for 30 minutter. Der kræves ingen yderligere trin. |
+| **Tilladelsesforskydning ved ændring af DAP-roller** | Hvis en MSP-tekniker føjes til eller fjernes fra gruppen Administration Agent eller Helpdesk Agent, kan der opstå en forsinkelse, der afspejler de relevante tilladelser i Lighthouse. | Problemet løses inden for 30 minutter. Der kræves ingen yderligere trin. |
 
-## <a name="granular-delegated-admin-privileges-gdap"></a>Detaljeret delegerede administratorrettigheder (GDAP)
+## <a name="granular-delegated-admin-privileges-gdap"></a>Detaljeret delegerede Administration rettigheder (GDAP)
 
-Enten GDAP (Granular Delegated Admin Privileges) plus en indirekte forhandlerrelation eller en DAP-relation (Delegated Admin Privileges) er påkrævet for at onboarde kunder til Lighthouse. Hvis DAP og GDAP eksisterer i en kundelejer, har GDAP-tilladelserne forrang for MSP-teknikere i GDAP-aktiverede sikkerhedsgrupper. Kunder med kun GDAP-relationer (uden indirekte forhandlerrelationer) vil snart kunne onboarde til Lighthouse.<br><br>
+Enten GDAP (Granular Delegated Administration Privileges) plus en indirekte forhandlerrelation eller en DAP-relation (Delegated Administration Privileges) er påkrævet for at onboarde kunder til Lighthouse. Hvis DAP og GDAP eksisterer i en kundelejer, har GDAP-tilladelserne forrang for MSP-teknikere i GDAP-aktiverede sikkerhedsgrupper. Kunder med kun GDAP-relationer (uden indirekte forhandlerrelationer) kan i øjeblikket ikke onboarde til Lighthouse, men vil kunne onboarde i en fremtidig version.<br><br>
 
 | Problem | Beskrivelse | Løsning |
 | ---------------- | ---------------- | ---------------- |
