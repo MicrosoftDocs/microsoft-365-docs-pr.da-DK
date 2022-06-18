@@ -1,6 +1,6 @@
 ---
-title: Manuel installation af Microsoft Defender for Endpoint på macOS
-description: Installér Microsoft Defender for Endpoint manuelt på macOS fra kommandolinjen.
+title: Manuel udrulning af Microsoft Defender for Endpoint på macOS
+description: Installer Microsoft Defender for Endpoint på macOS manuelt fra kommandolinjen.
 keywords: microsoft, defender, Microsoft Defender for Endpoint, mac, installation, installere, uninstallation, intune, jamf, macos, catalina, mojave, high sierra
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,23 +16,23 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 4c2bf6cef9e2d2d7413cff9aa4a8ed110ae72edf
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 68f91e4b8f789087aacea14b6b2a8a8b67262fd0
+ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65129260"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66159613"
 ---
-# <a name="manual-deployment-for-microsoft-defender-for-endpoint-on-macos"></a>Manuel installation af Microsoft Defender for Endpoint på macOS
+# <a name="manual-deployment-for-microsoft-defender-for-endpoint-on-macos"></a>Manuel udrulning af Microsoft Defender for Endpoint på macOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink).
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink).
 
 I dette emne beskrives det, hvordan du installerer Microsoft Defender for Endpoint på macOS manuelt. En vellykket installation kræver fuldførelse af alle følgende trin:
 
@@ -43,14 +43,14 @@ I dette emne beskrives det, hvordan du installerer Microsoft Defender for Endpoi
 
 ## <a name="prerequisites-and-system-requirements"></a>Forudsætninger og systemkrav
 
-Før du går i gang, kan du se [de primære Microsoft Defender for Endpoint på macOS-siden](microsoft-defender-endpoint-mac.md) for at få en beskrivelse af forudsætninger og systemkrav til den aktuelle softwareversion.
+Før du går i gang, kan du se [de primære Microsoft Defender for Endpoint på macOS side](microsoft-defender-endpoint-mac.md) for at få en beskrivelse af forudsætninger og systemkrav til den aktuelle softwareversion.
 
 ## <a name="download-installation-and-onboarding-packages"></a>Download installations- og onboardingpakker
 
 Download installations- og onboardingpakkerne fra Microsoft 365 Defender portalen:
 
 1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a> skal du gå til **Indstillinger > Slutpunkter > Enhedshåndtering > Onboarding**.
-2. I afsnit 1 på siden skal du angive operativsystemet til **macOS** og installationsmetoden til **Lokalt script**.
+2. I afsnit 1 på siden skal du angive operativsystemet til **macOS** og installationsmetode til **Lokalt script**.
 3. I afsnit 2 på siden skal du vælge **Download installationspakke**. Gem den som wdav.pkg i en lokal mappe.
 4. I afsnit 2 på siden skal du vælge **Download onboarding-pakke**. Gem den som WindowsDefenderATPOnboardingPackage.zip i den samme mappe.
 
@@ -128,7 +128,7 @@ Hvis du vil fuldføre denne proces, skal du have administratorrettigheder på en
 2. Kør Bash-scriptet for at installere konfigurationsfilen:
 
     ```bash
-    bash MicrosoftDefenderATPOnboardingMacOs.sh
+    Sudo bash -x MicrosoftDefenderATPOnboardingMacOs.sh
     ```
 
 3. Kontrollér, at enheden nu er knyttet til din organisation, og rapporterer et gyldigt organisations-id:
@@ -137,7 +137,7 @@ Hvis du vil fuldføre denne proces, skal du have administratorrettigheder på en
     mdatp health --field org_id
     ```
 
-    Efter installationen kan du se Microsoft Defender-ikonet på macOS-statuslinjen i øverste højre hjørne.
+    Efter installationen kan du se Ikonet Microsoft Defender på statuslinjen for macOS i øverste højre hjørne.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="images/mdatp-icon-bar.png" alt-text="Ikonet Microsoft Defender på statuslinjen" lightbox="images/mdatp-icon-bar.png":::
@@ -206,18 +206,18 @@ Hvis du vil fuldføre denne proces, skal du have administratorrettigheder på en
 
     Systemet skal vise følgende meddelelse:
 
-    > Microsoft Defender for Endpoint – macOS Slutpunktsregistrering og -svar diy-testfil<br/>
+    > Microsoft Defender for Endpoint – macOS Slutpunktsregistrering og -svar DIY-testfil<br/>
     > Den tilsvarende besked vil være tilgængelig på MDATP-portalen.
 
 10. Klik på **Åbn**.
 
-    I løbet af et par minutter skal der udløses en besked med navnet "macOS Slutpunktsregistrering og -svar Test Alert".
+    Om nogle få minutter skal der sendes en besked med navnet "macOS Slutpunktsregistrering og -svar testadvarsel".
 
 11. Gå til Microsoft 365 Defender portal (https://security.microsoft.com/).
 
 12. Gå til beskedkøen.
 
-    :::image type="content" source="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="En macOS-Slutpunktsregistrering og -svar testadvarsel, der viser alvorsgrad, kategori, registreringskilde og en skjult menu med handlinger" lightbox="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png":::
+    :::image type="content" source="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png" alt-text="En macOS Slutpunktsregistrering og -svar testadvarsel, der viser alvorsgrad, kategori, registreringskilde og en skjult menu med handlinger" lightbox="images/b8db76c2-c368-49ad-970f-dcb87534d9be.png":::
 
     Se oplysningerne om beskeden og enhedens tidslinje, og udfør de almindelige undersøgelsestrin.
 
@@ -227,4 +227,4 @@ Se [Logføring af installationsproblemer](mac-resources.md#logging-installation-
 
 ## <a name="uninstallation"></a>Uninstallation
 
-Se [Fjernelse](mac-resources.md#uninstalling) for at få oplysninger om, hvordan du fjerner Microsoft Defender for Endpoint på macOS fra klientenheder.
+Se [Fjernelse for](mac-resources.md#uninstalling) at få oplysninger om, hvordan du fjerner Microsoft Defender for Endpoint på macOS fra klientenheder.

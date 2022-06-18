@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 2000d10918c7e351c7e4bedfe8281b6a011cca9d
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 82ed2110987bcb5fc1238a31a45c264c64392ba3
+ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65872418"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66159396"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
@@ -103,11 +103,90 @@ I følgende tabel opsummeres tilstanden for Microsoft Defender Antivirus i flere
 
 (<a id="fn2">2</a>) På Windows Server 2019, Windows Server, version 1803 eller nyere, Windows Server 2016 eller Windows Server 2012 R2 går Microsoft Defender Antivirus ikke automatisk i passiv tilstand, når du installerer et antivirusprogram, der ikke er fra Microsoft. I disse tilfælde skal du angive Microsoft Defender Antivirus til passiv tilstand for at forhindre problemer, der skyldes, at flere antivirusprogrammer er installeret på en server. Du kan angive Microsoft Defender Antivirus til passiv tilstand ved hjælp af PowerShell, Gruppepolitik eller en registreringsdatabasenøgle. 
 
+**Metode til registreringsdatabasenøgle**
+
   Du kan angive Microsoft Defender Antivirus til passiv tilstand ved at angive følgende registreringsdatabasenøgle:
 - Sti: `HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`
 - Navn: `ForceDefenderPassiveMode`
 - Type: `REG_DWORD`
 - Værdi: `1`
+
+**GPO-metode**
+
+- Åbn Gruppepolitik Administrationseditor > **Computerkonfiguration** > **Administrative skabeloner** >  **Windows komponenter** >  **Microsoft Defender Antivirus**.
+- Vælg **Slå Microsoft Defender Antivirus fra**.
+- Angiv gruppepolitikobjektet til **Aktiveret**.
+
+Du kan få vist beskyttelsesstatussen i PowerShell med kommandoen "Get-MpComputerStatus" og nøglen "AMRunningMode".
+
+## SYNTAX
+
+```
+PS C:\Users\tommaso> Get-MpComputerStatus
+
+
+AMEngineVersion                  : 0.0.0.0
+AMProductVersion                 : 4.18.2205.4
+AMRunningMode                    : Not running
+AMServiceEnabled                 : False
+AMServiceVersion                 : 0.0.0.0
+AntispywareEnabled               : False
+AntispywareSignatureAge          : 4294967295
+AntispywareSignatureLastUpdated  :
+AntispywareSignatureVersion      : 0.0.0.0
+AntivirusEnabled                 : False
+AntivirusSignatureAge            : 4294967295
+AntivirusSignatureLastUpdated    :
+AntivirusSignatureVersion        : 0.0.0.0
+BehaviorMonitorEnabled           : False
+ComputerID                       : 5CF99D95-BF09-4B2E-9911-8E01C55642E5
+ComputerState                    : 0
+DefenderSignaturesOutOfDate      : False
+DeviceControlDefaultEnforcement  : N/A
+DeviceControlPoliciesLastUpdated : 01/01/1601 00:00:00
+DeviceControlState               : N/A
+FullScanAge                      : 4294967295
+FullScanEndTime                  :
+FullScanOverdue                  : False
+FullScanRequired                 : False
+FullScanSignatureVersion         :
+FullScanStartTime                :
+IoavProtectionEnabled            : False
+IsTamperProtected                : False
+IsVirtualMachine                 : True
+LastFullScanSource               : 0
+LastQuickScanSource              : 0
+NISEnabled                       : False
+NISEngineVersion                 : 0.0.0.0
+NISSignatureAge                  : 4294967295
+NISSignatureLastUpdated          :
+NISSignatureVersion              : 0.0.0.0
+OnAccessProtectionEnabled        : False
+ProductStatus                    : 1
+QuickScanAge                     : 4294967295
+QuickScanEndTime                 :
+QuickScanOverdue                 : False
+QuickScanSignatureVersion        :
+QuickScanStartTime               :
+RealTimeProtectionEnabled        : False
+RealTimeScanDirection            : 0
+RebootRequired                   : False
+TamperProtectionSource           : Signatures
+TDTMode                          : N/A
+TDTStatus                        : N/A
+TDTTelemetry                     : N/A
+TroubleShootingDailyMaxQuota     :
+TroubleShootingDailyQuotaLeft    :
+TroubleShootingEndTime           :
+TroubleShootingExpirationLeft    :
+TroubleShootingMode              :
+TroubleShootingModeSource        :
+TroubleShootingQuotaResetTime    :
+TroubleShootingStartTime         :
+PSComputerName                   :
+```
+
+I følgende eksempel **kører Defender-status ikke**.
 
  > [!NOTE]
  > Hvis passiv tilstand skal fungere på slutpunkter, der kører Windows Server 2016 og Windows Server 2012 R2, skal disse slutpunkter onboardes med den moderne, samlede løsning, der er beskrevet i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 

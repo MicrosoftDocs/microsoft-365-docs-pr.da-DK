@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Klassificerere, der kan oplæres, kan genkende forskellige typer indhold til mærkning eller politikanvendelse ved at give dem positive og negative eksempler at se på.
-ms.openlocfilehash: ed2b744c1c136afde38151dc424eef547607ef27
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 03c0c0991188982fbfc4fb9ec908f6e5f4ab3bba
+ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115845"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66159570"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Få mere at vide om trænbare klassificeringer
 
@@ -53,7 +53,7 @@ Denne klassificeringsmetode er velegnet til indhold, der ikke nemt identificeres
 
 > [!NOTE]
 > I prøveversion – Du kan få vist de klassificeringer, der kan oplæres, i Indholdsoversigt ved at udvide **Klassificeringer, der kan oplæres** i filterpanelet. De klassificeringer, der kan oplæres, viser automatisk antallet af hændelser, der findes i SharePoint, Teams og OneDrive, uden at der kræves nogen mærkning.
-> Hvis du ikke vil bruge denne funktion, skal du sende en anmodning til Microsoft Support for at deaktivere køreklar klassificering. Dette deaktiverer scanningen af dit følsomme og navngivne indhold, før du opretter politikker for mærkning.
+> Hvis du ikke vil bruge denne funktion, skal du sende en anmodning til Microsoft Support. Dette deaktiverer visningen af dine følsomme data, der ikke bruges i nogen mærkatpolitikker i Indholdsoversigt. Du kan også deaktivere scanning af dine data. Hvis scanning er slået fra, fungerer følsomhedsmærkater og DLP-politikker med disse klassificeringer ikke
 
 ### <a name="where-you-can-use-classifiers"></a>Her kan du bruge klassificeringer
 

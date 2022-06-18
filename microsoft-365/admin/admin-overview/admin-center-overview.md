@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Brug enten forenklet visning i Microsoft 365 Administration til at administrere almindelige opgaver eller dashboardvisning for at få mere komplekse indstillinger og opgaver.
-ms.openlocfilehash: f3f9d1616189a5e3347a882a6caec0df28e274c0
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 056072e454b0df3e7c4b06ce39735b1db3961b25
+ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66129025"
+ms.lasthandoff: 06/18/2022
+ms.locfileid: "66159548"
 ---
 # <a name="overview-of-the-microsoft-365-admin-center"></a>Oversigt over Microsoft 365 Administration
 
@@ -108,11 +108,7 @@ Hvis du ikke ved, hvem du skal kontakte på dit arbejde eller din skole for at f
 
 ## <a name="admin-center-features-and-settings"></a>Administration centerfunktioner og -indstillinger
 
-Her er de funktioner og indstillinger, du finder i navigationen til venstre i Administration. Få mere at vide om administratoropgaver i [administratorhjælp](Oversigt over Microsoft 365 Administration](admin-center-overview.md).
-
-<br>
-
-****
+Her er de funktioner og indstillinger, du finder i navigationen til venstre i Administration. Få mere at vide om administratoropgaver i [hjælp til administratorer](/microsoft-365/admin/).
 
 |Menuen|Hvad det er til|
 |-----|-----|
