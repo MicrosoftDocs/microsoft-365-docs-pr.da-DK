@@ -22,12 +22,12 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365 tjenester, og analysér i hvert diagram for at få mere indsigt.
-ms.openlocfilehash: 6d773b3f6bf7f2660a2608085b503b1cde1c05c9
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 9dbd1ef7044db3a27c93cfe7e2acd09aaa32cd14
+ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007234"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66151156"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365 rapporter i Administration
 
@@ -113,6 +113,7 @@ Afhængigt af dit abonnement er her de tilgængelige rapporter i alle miljøer.
 |[Skype for Business Online peer-to-peer-aktivitet](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
 |[Viva Learning aktivitet](viva-learning-activity.md)|Ja|NIELSEN|NIELSEN|NIELSEN|NIELSEN|
 |[Viva Insights aktivitet](viva-insights-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
+|[Project aktivitet](project-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
 
 I/T<sup>1</sup>: Rapporten er planlagt til at blive udgivet i fremtiden. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Køreplanen for Microsoft 365</a> opdateres før udgivelsen.
 I/T<sup>2</sup>: Tjenesten er ikke tilgængelig i miljøet, så der er ingen plan om at udgive rapporten.
@@ -151,7 +152,7 @@ Globale administratorer kan gendanne denne ændring for deres lejer og vise iden
 
 3. Fjern markeringen i sætningen **Vis skjulte bruger-, gruppe- og webstedsnavne i alle rapporter**, og gem derefter dine ændringer.
 
-Det tager et par minutter, før disse ændringer træder i kraft på rapporterne i rapportdashboardet. Denne indstilling gælder også for de Microsoft 365 anvendelsesrapporter i [Microsoft Graph](/graph/api/resources/report) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics) samt [forbrugsrapporterne i Microsoft Teams Administration](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i overvågningsloggen til Microsoft Purview-overholdelsesportalen.
+Det tager et par minutter, før disse ændringer træder i kraft på rapporterne i rapportdashboardet. Denne indstilling gælder også for de Microsoft 365 anvendelsesrapporter i [Microsoft Graph](/graph/api/resources/report) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics) samt [forbrugsrapporterne i Microsoft Teams Administration center](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i Microsoft Purview-compliance-portal overvågningslog.
 
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Hvad sker der med forbrugsdata, når en brugerkonto lukkes?
 

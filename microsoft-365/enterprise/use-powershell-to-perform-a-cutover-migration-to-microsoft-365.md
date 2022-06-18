@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
 description: Få mere at vide om, hvordan du bruger PowerShell til at flytte indholdet fra et kildemailsystem på én gang ved at udføre en komplet migrering til Microsoft 365.
-ms.openlocfilehash: d63b7250cd1c4c34d169521943c3973104b15837
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 3761640c42a6907818886e96c9d6355d70073522
+ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66008391"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66151200"
 ---
 # <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>Brug PowerShell til at udføre en komplet migrering til Microsoft 365
 
@@ -177,7 +177,7 @@ Get-MigrationBatch -Identity CutoverBatch |  Format-List Status
 
 Mailsystemer bruger en DNS-post kaldet en MX-post til at finde ud af, hvor de skal levere mails. Under mailoverførselsprocessen pegede din MX-post på dit kildemailsystem. Nu, hvor mailoverførslen til Microsoft 365 er fuldført, er det tid til at pege din MX-post på Microsoft 365. Dette hjælper med at sikre, at mail leveres til dine Microsoft 365 postkasser. Når du flytter MX-posten, kan du også slå dit gamle mailsystem fra, når du er klar.
 
-For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retninger, leveres der også [generelle MX-postinstruktioner](https://support.office.microsoft.com/article/7b7b075d-79f9-4e37-8a9e-fb60c1d95166#bkmk_add_mx) .
+For mange DNS-udbydere er der specifikke instruktioner til at ændre din MX-post. Hvis din DNS-udbyder ikke er inkluderet, eller hvis du vil have en fornemmelse af de generelle retninger, leveres der også [generelle MX-postinstruktioner](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide#add-an-mx-record-for-email-outlook-exchange-online) .
 
 Det kan tage op til 72 timer, før dine kunders og partneres mailsystemer genkender den ændrede MX-post. Vent mindst 72 timer, før du fortsætter til næste opgave: [Trin 6: Slet overførselsbatchen til udskæring](#step-6-delete-the-cutover-migration-batch).
 

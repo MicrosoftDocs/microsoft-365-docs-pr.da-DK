@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug en opbevaringspolitik til effektivt at bevare kontrollen over det indhold, som brugerne genererer med mail, dokumenter og samtaler. Hold hvad du vil og slippe af med, hvad du ikke gør.
-ms.openlocfilehash: 6243db961e9c7789ea1a43f41d848d3d9cbda9e2
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 7b8ca4e909893ec417d3466f825c2c0a1c5c736a
+ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016454"
+ms.lasthandoff: 06/17/2022
+ms.locfileid: "66151178"
 ---
 # <a name="create-and-configure-retention-policies"></a>Opret og konfigurer opbevaringspolitikker
 
@@ -78,7 +78,7 @@ Når du har mere end én opbevaringspolitik, og når du også bruger opbevarings
 > [!NOTE]
 > Opbevaringspolitikker understøtter nu [delte kanaler](/MicrosoftTeams/shared-channels), der i øjeblikket er en prøveversion. Når du konfigurerer opbevaringsindstillinger for **placeringen af Teams kanalmeddelelsen**, nedarver de opbevaringsindstillinger fra deres overordnede team, hvis et team har delte kanaler.
 
-1. Vælg Opbevaringspolitikker for administration  >  af **datalivscyklus** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/).
+1. Vælg **Opbevaringspolitikker** for **datalivscyklusstyring** >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/).
 
 2. Vælg **Ny opbevaringspolitik** for at starte konfigurationen **Opret opbevaringspolitik** , og navngiv din nye opbevaringspolitik.
 
@@ -134,7 +134,7 @@ Det er muligt, at en opbevaringspolitik, der anvendes på Microsoft 365 grupper,
 >
 > Hvis du vil bruge denne funktion, skal dit Yammer netværk være [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) og ikke hybridtilstand.
 
-1. Vælg Opbevaringspolitikker for administration  >  af **datalivscyklus** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/).
+1. Vælg **Opbevaringspolitikker** for **datalivscyklusstyring** >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/).
 
 2. Vælg **Ny opbevaringspolitik** for at oprette en ny opbevaringspolitik.
 
@@ -162,15 +162,11 @@ Du kan finde flere oplysninger om, hvordan opbevaringspolitikker fungerer for Ya
 
 #### <a name="additional-retention-policies-needed-to-support-yammer"></a>Yderligere opbevaringspolitikker, der er nødvendige for at understøtte Yammer
 
-Yammer er mere end blot communitymeddelelser og private meddelelser. Hvis du vil bevare og slette mails for dit Yammer netværk, skal du konfigurere en yderligere opbevaringspolitik, der omfatter alle Microsoft 365 grupper, der bruges til Yammer, ved hjælp af **den Microsoft 365-grupper** placering. 
+Yammer er mere end blot communitymeddelelser og private meddelelser. Hvis du vil bevare og slette mails for dit Yammer netværk, skal du konfigurere en yderligere opbevaringspolitik, der omfatter alle Microsoft 365 grupper, der bruges til Yammer, ved hjælp af **den Microsoft 365-grupper** placering.
 
-Hvis du vil bevare og slette filer, der er gemt i Yammer, skal du bruge en opbevaringspolitik, der indeholder **placeringen af Microsoft 365-grupper** eller **OneDrive konti**:
+Denne placering omfatter også filer, der uploades til Yammer communities. Disse filer gemmes på det gruppetilsluttede SharePoint websted for Yammer community'et.
 
-- Filer, der deles i private meddelelser, gemmes på den OneDrive konto for den bruger, der har delt filen. 
-
-- Filer, der uploades til communities, gemmes på det gruppetilsluttede SharePoint websted for det Yammer community.
-
-Det er muligt, at en opbevaringspolitik, der anvendes på SharePoint websteder eller OneDrive konti, kan slette en fil, der henvises til i en Yammer meddelelse, før disse meddelelser slettes. I dette scenarie vises filen stadig i meddelelsen Yammer, men når brugerne vælger filen, får de vist fejlen "Filen blev ikke fundet". Denne funktionsmåde er ikke specifik for opbevaringspolitikker, og det kan også ske, hvis en bruger sletter en fil manuelt fra SharePoint eller OneDrive.
+Det er muligt, at en opbevaringspolitik, der anvendes på SharePoint websteder, kan slette en fil, der refereres til i en Yammer meddelelse, før disse meddelelser slettes. I dette scenarie vises filen stadig i meddelelsen Yammer, men når brugerne vælger filen, får de vist fejlen "Filen blev ikke fundet". Denne funktionsmåde er ikke specifik for opbevaringspolitikker og kan også ske, hvis en bruger sletter en fil manuelt fra SharePoint.
 
 ### <a name="retention-policy-for-locations-other-than-teams-and-yammer"></a>Opbevaringspolitik for andre placeringer end Teams og Yammer
 
@@ -182,7 +178,7 @@ Brug følgende instruktioner til opbevaringspolitikker, der gælder for en af di
 - Microsoft 365 grupper
 - Skype for Business
 
-1. Vælg Opbevaringspolitikker for administration  >  af **datalivscyklus** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/).
+1. Vælg **Opbevaringspolitikker** for **datalivscyklusstyring** >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/).
 
 2. Vælg **Ny opbevaringspolitik** for at starte konfigurationen **Opret opbevaringspolitik** , og navngiv din nye opbevaringspolitik.
 
@@ -212,7 +208,7 @@ Når du opretter og sender en opbevaringspolitik, kan det tage op til syv dage, 
   
 ![Diagram over, hvornår opbevaringspolitikken træder i kraft.](../media/retention-policy-timings.png)
 
-Først skal opbevaringspolitikken distribueres til de placeringer, du har valgt, og derefter anvendes på indhold. Du kan altid kontrollere distributionsstatussen for opbevaringspolitikken ved at vælge den på siden **Opbevaringspolitikker** på Microsoft Purview-overholdelsesportalen. Hvis du i pop op-vinduet får vist **(Fejl),** der er inkluderet i status, og i oplysningerne om placeringerne vises en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, kan du prøve at køre Kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
+Først skal opbevaringspolitikken distribueres til de placeringer, du har valgt, og derefter anvendes på indhold. Du kan altid kontrollere distributionsstatussen for opbevaringspolitikken ved at vælge den på siden **Opbevaringspolitikker** i Microsoft Purview-compliance-portal. Hvis du i pop op-vinduet får vist **(Fejl),** der er inkluderet i status, og i oplysningerne om placeringerne vises en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, kan du prøve at køre Kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
 
 1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
 
