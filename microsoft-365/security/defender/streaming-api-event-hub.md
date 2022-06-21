@@ -17,12 +17,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 9cae28cc69d67bb18058e2c81cd8235ffce79997
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: ec18c23df27329598b6e48446ccf43d062b163ad
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754394"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185363"
 ---
 # <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-azure-event-hub"></a>Konfigurer Microsoft 365 Defender til at streame avancerede jagthændelser til din Azure Event Hub
 
@@ -111,6 +111,23 @@ Benyt følgende fremgangsmåde for at hente datatyperne for hændelsesegenskaber
 - Her er et eksempel på hændelsen Enhedsoplysninger:
 
   :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Et eksempel på en forespørgsel om enhedsoplysninger" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
+
+## <a name="estimating-initial-event-hub-capacity"></a>Vurdering af den indledende Event Hub-kapacitet
+Følgende forespørgsel om avanceret jagt kan hjælpe med at give et groft estimat af datamængdegennemløb og den indledende hændelseshubkapacitet baseret på hændelser pr. sekund og anslået MB/sek. Vi anbefaler, at du kører forespørgslen i løbet af normal åbningstid for at registrere det "reelle" gennemløb.
+ 
+```kusto 
+let bytes_ = 500;
+union withsource=MDTables*
+| where Timestamp > startofday(ago(6h))
+| summarize count() by bin(Timestamp, 1m), MDTables
+| extend EPS = count_ /60
+| summarize avg(EPS), estimatedMBPerSec = (avg(EPS) * bytes_ ) / (1024*1024) by MDTables
+| sort by toint(estimatedMBPerSec) desc
+```
+
+## <a name="monitoring-created-resources"></a>Overvågning af oprettede ressourcer
+
+Du kan overvåge de ressourcer, der oprettes af streaming-API'en, ved hjælp af **Azure Monitor**. Du kan finde flere oplysninger i [Log Analytics-arbejdsområdedataeksport i Azure Monitor](/azure/azure-monitor/logs/logs-data-export). 
 
 ## <a name="related-topics"></a>Relaterede emner
 

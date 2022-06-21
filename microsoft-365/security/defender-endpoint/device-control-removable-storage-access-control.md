@@ -14,13 +14,13 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.date: 06/06/2022
-ms.openlocfilehash: 503740e6dc16aea98fd44b71d9693d2b4a5844a8
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.date: 06/20/2022
+ms.openlocfilehash: 78eb4f9cb65fb5eec54747a256abf290a43deb2f
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043627"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185453"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>flytbare Storage Access Control Microsoft Defender for Endpoint enhedsstyring
 
@@ -290,7 +290,7 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
 ## <a name="deploying-and-managing-policy-by-using-intune-user-interface"></a>Udrulning og administration af politik ved hjælp af Intune brugergrænseflade
 
-(*Kommer snart!*) Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>). Gå til **Endpoint Security** > **Attack Surface Reduction** > **Create Policy**. Vælg **Platform: Windows 10 og nyere** med **Profil: Enhedskontrol**.
+Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>). Gå til **Endpoint Security** > **Attack Surface Reduction** > **Create Policy**. Vælg **Platform: Windows 10 og nyere** med **Profil: Enhedskontrol**.
 
 ## <a name="deploying-and-managing-removable-storage-access-control-by-using-group-policy"></a>Udrulning og administration af Flytbare Storage Access Control ved hjælp af Gruppepolitik
 

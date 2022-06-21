@@ -1,5 +1,5 @@
 ---
-title: Definer dine Bookings servicetilbud
+title: Definer dine Bookings-servicetilbud
 ms.author: kwekua
 author: kwekuako
 manager: scotv
@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 4a1c391e-524f-48e0-bef8-185df3a9634b
 description: Instruktioner til angivelse af oplysninger om servicetilbud, herunder tjenestenavn, beskrivelse, placering, varighed og priser. Du kan også mærke de medarbejdere, der er kvalificerede til at levere tjenesten.
-ms.openlocfilehash: 0c302e8d84274fa2df8eea27362407ded4a468e3
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 2daae2139e3d2d4107f4aaed1b94ca655877000a
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637775"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185077"
 ---
 # <a name="define-your-service-offerings-in-bookings"></a>Definer dine servicetilbud i Bookings
 
@@ -22,11 +22,15 @@ Når du definerer dine servicetilbud i Microsoft Bookings, angiver du et tjenest
 
 Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen og påmindelser, som du sender, når nogen booker en tjeneste via din bookingside.
 
-## <a name="create-the-service-details"></a>Opret oplysninger om tjenesten
+## <a name="watch-create-a-new-service"></a>Se: Opret en ny tjeneste
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuKXH]
+
+## <a name="steps"></a>Trin
 
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
-2. Gå til **Din kalenderTjenester** > **,** og vælg **Tilføj ny tjeneste**.
+2. Gå til **Dine kalendertjenester** > **,** og vælg **Tilføj ny tjeneste**.
 
 3. Tilføj dine valg på siden **Grundlæggende oplysninger** .
 
@@ -42,7 +46,7 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
      - Et link til et Teams eller Skype møde, der er unikt for bookingen, føjes til kalenderbegivenheden i både medarbejdernes og kundernes kalendere sammen med opkaldsoplysninger.
      - Linket til at deltage i mødet føjes til alle mails med bekræftelse og påmindelse som vist i følgende eksempel:
 
-       :::image type="content" source="media/bookings-teams-meeting-link.jpg" alt-text="Eksempel på link til at deltage i Teams møde i Bookings.":::
+       :::image type="content" source="media/bookings-teams-meeting-link.jpg" alt-text="Eksempel på link til at deltage Teams møde i Bookings.":::
 
        > [!NOTE]
        > Teams møder kan deltage via Teams mobilapp, Teams desktopapp, i en webbrowser eller via opkaldstelefonen. Vi anbefaler på det kraftigste, at du aktiverer Teams som standardtjenesten til onlinemøder for din lejer for at få den bedste oplevelse med at booke virtuelle aftaler.
@@ -58,13 +62,13 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
    **Prisen er ikke angivet**: Vælg de prisindstillinger, der skal vises på siden Self-Service. Hvis **Price ikke er angivet** , vises der ingen pris eller reference til omkostninger eller priser.
 
-   **Bemærk**! Dette felt vises i bookingbegivenheden for det reserverede personale samt den begivenhed, der vises under fanen Kalender i Bookings webapp.
+   **Bemærk**! Dette felt vises i bookingbegivenheden for det reserverede personale samt den begivenhed, der vises under fanen Kalender i Bookings-webappen.
 
-   **Maksimalt antal deltagere pr. begivenhed**: Denne indstilling giver dig mulighed for at oprette tjenester, der kræver mulighed for, at flere personer kan booke den samme aftaletid og det samme personale (f.eks. en fitnessklasse). Aftaletidsslotet for den valgte tjeneste, personale og tid vil være tilgængeligt for at booke, indtil det maksimale antal deltagere, der er angivet af dig, er nået. Den aktuelle aftalekapacitet og de aktuelle deltagere kan ses under fanen Kalender i Bookings webapp.
+   **Maksimalt antal deltagere pr. begivenhed**: Denne indstilling giver dig mulighed for at oprette tjenester, der kræver mulighed for, at flere personer kan booke den samme aftaletid og det samme personale (f.eks. en fitnessklasse). Aftaletidsslotet for den valgte tjeneste, personale og tid vil være tilgængeligt for at booke, indtil det maksimale antal deltagere, der er angivet af dig, er nået. Den aktuelle aftalekapacitet og de aktuelle deltagere kan ses under fanen Kalender i bookingwebappen.
 
    :::image type="content" source="media/bookings-maximum-attendees.jpg" alt-text="Eksempel på angivelse af det maksimale antal deltagere i Bookings":::
 
-   **Lad kunden administrere sin booking**: Denne indstilling bestemmer, om kunden kan ændre eller annullere sin booking, forudsat at den er booket via fanen Kalender på Bookings webapp.
+   **Lad kunden administrere sin booking**: Denne indstilling bestemmer, om kunden kan ændre eller annullere sin booking, forudsat at den er booket via fanen Kalender i Bookings-webappen.
 
    - Aktiveret:
 
@@ -74,13 +78,13 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
      - **Annuller booking** Dette annullerer reservationen og fjerner den fra personalets kalender.
      - **Ny booking** Denne indstilling fører brugeren til Self-Service side med alle tjenester og personale angivet for at planlægge en ny booking.
 
-        :::image type="content" source="media/bookings-manage-booking-button.jpg" alt-text="Knappen Administrer Bookings i Bookings.":::
+        :::image type="content" source="media/bookings-manage-booking-button.jpg" alt-text="Knappen Administrer bookinger i Bookings.":::
 
       Vi anbefaler kun, at du lader denne indstilling være aktiveret, hvis du er fortrolig med de kunder, der har adgang til siden Self-Service.
 
    - Deaktiveret:
 
-     Brugeren har ikke mulighed for at omlægge eller annullere sin reservation, når vedkommende booker via fanen Kalender i Bookings webapp. Når du booker via Self-Service side, vil kunderne dog stadig have knappen **Administrer booking** og alle dens muligheder, selvom denne indstilling er deaktiveret.
+     Brugeren har ikke mulighed for at omlægge eller annullere sin reservation, når vedkommende booker via fanen Kalender i Webappen Bookings. Når du booker via Self-Service side, vil kunderne dog stadig have knappen **Administrer booking** og alle dens muligheder, selvom denne indstilling er deaktiveret.
 
      Vi anbefaler, at du deaktiverer denne indstilling, hvis du vil begrænse adgangen til Self-Service side. Derudover foreslår vi, at du føjer tekst til din bekræftelse og påmindelsesmails, der fortæller dine kunder, hvordan de kan foretage ændringer af deres booking på andre måder, f.eks. ved at ringe til kontoret eller sende en mail til helpdesk.
 
@@ -88,7 +92,7 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
 5. **Standardpris**  Dette er den pris, der vises på siden Self-Service. Hvis **Price ikke er angivet** , vises der ingen pris eller reference til omkostninger eller priser.
 
-6. **Noter** Dette felt vises i bookingbegivenheden for det reserverede personale samt i den begivenhed, der vises under fanen Kalender i Bookings webapp.
+6. **Noter** Dette felt vises i bookingbegivenheden for det reserverede personale samt i den begivenhed, der vises under fanen Kalender i Bookings-webappen.
 
 7. **Brugerdefinerede felter** kan være nyttige, når du indsamler oplysninger, der er nødvendige, hver gang den specifikke aftale bestilles. Eksempler omfatter forsikringsudbyder forud for et klinikbesøg, lånetype for lånekonsultationer, større undersøgelse for akademisk rådgivning eller ansøger-id for kandidatinterview. Disse felter vises på siden Booking, når dine kunder bestiller aftaler med dig og dine medarbejdere.
 
@@ -100,7 +104,7 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
    Du kan medtage eventuel yderligere tekst, du vil have her, f.eks. oplysninger om omplanlægning, eller hvad kunderne skal medbringe til aftalen. Følgende er et eksempel på brugerdefineret tekst, der er føjet til den oprindelige bekræftelsesmail, i feltet **Yderligere oplysninger om mailbekræftelse** :
 
-   :::image type="content" source="media/bookings-additional-info.jpg" alt-text="Yderligere oplysninger i en Bookings mail.":::
+   :::image type="content" source="media/bookings-additional-info.jpg" alt-text="Yderligere oplysninger i en Bookings-e-mail.":::
 
 9. **Aktivér sms-beskeder for din kunde** Hvis indstillingen er valgt, sendes SMS meddelelser til kunden, men kun, hvis de tilmelder sig.
 
@@ -114,4 +118,4 @@ Du kan også føje tilpassede oplysninger og URL-adresser til mailbekræftelsen 
 
 10. **Indstillingerne for standardplanlægning** er som standard slået til. Slå til/fra-knappen fra, hvis du vil tilpasse, hvordan kunder booker en bestemt medarbejder.
 
-11. **Indstillinger for udgivelse** Vælg, om tjenesten skal vises som reserverbar på siden Self-Service, eller om tjenesten kun skal kunne reserveres under fanen Kalender i Bookings Webapp.
+11. **Indstillinger for udgivelse** Vælg, om tjenesten skal vises som reserverbar på siden Self-Service, eller om tjenesten kun skal kunne bookes under fanen Kalender i Bookings Web-appen.

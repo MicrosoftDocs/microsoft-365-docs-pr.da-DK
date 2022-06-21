@@ -9,12 +9,12 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 0968717e-b61f-4b06-987c-6c1464541782
 description: Angiv medarbejdernes arbejdstid og tilgængelighed i Microsoft Bookings.
-ms.openlocfilehash: 19b5a186c66659777a0dbe3444c0e43c4142ff36
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 1cd395b377d9d9b0a20ef1d01956a27c559afb42
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637246"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185055"
 ---
 # <a name="employee-working-hours-in-microsoft-bookings"></a>Angiv medarbejderes arbejdstid i Microsoft Bookings
 
@@ -30,7 +30,7 @@ Se denne video, eller følg nedenstående trin for at angive en medarbejders arb
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuXUq]
 
-## <a name="customize-employee-working-hours"></a>Tilpas medarbejdernes arbejdstid
+## <a name="steps"></a>Trin
 
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
@@ -42,7 +42,7 @@ Se denne video, eller følg nedenstående trin for at angive en medarbejders arb
 
 1. Brug rullemenuerne til at vælge start- og sluttidspunkter for hver dag. Tiderne er tilgængelige i intervaller på 15 minutter.
 
-   ![Billede af skærmen Bookings medarbejderes arbejdstid.](../media/bookings-staff-hours.png)
+   ![Billede af skærmen Bookings-medarbejderes arbejdstid.](../media/bookings-staff-hours.png)
 
 1. Vælg **+** at tilføje start- og sluttidspunktsvælgere.
 
@@ -54,7 +54,7 @@ Når du planlægger en fridag for en medarbejder, vises denne medarbejder ikke t
 
 1. På skærmen Arbejdstid skal du vælge **x** ud for den dag, hvor medarbejderen har fri.
 
-   ![Billede af skærmen Bookings medarbejderes arbejdstid med musen over x-knappen.](../media/bookings-staff-time-off.png)
+   ![Billede af skærmen Bookings-medarbejderes arbejdstid med musen over x-knappen.](../media/bookings-staff-time-off.png)
 
 1. Hvis du vil planlægge en dag, der tidligere er markeret som en fridag, skal du vælge **+** fortegnet ud for den dag, du vil planlægge.
 

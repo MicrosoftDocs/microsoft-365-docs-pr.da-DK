@@ -14,20 +14,20 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om prøveversionen af Microsoft Purview-løsninger, og hvordan du tilmelder dig.
-ms.openlocfilehash: 653c80e7c8b412ac1d9c14a021519ca80baab6e9
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 425c9c3aecd4df38a53a5b6bee818f466f167a27
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65188828"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185121"
 ---
 # <a name="about-the-microsoft-purview-solutions-trial"></a>Om prøveversionen af Microsoft Purview-løsninger
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Microsoft Purview-løsninger hjælper med at beskytte din organisation mod interne trusler som følge af upassende tilladelser til filer og mails og hjælper din organisation med at overholde lovmæssige og interne forretningskrav.
+Microsoft Purview løsninger hjælper med at beskytte din organisation mod interne trusler som følge af upassende tilladelser til filer og mails og hjælper din organisation med at overholde lovmæssige og interne forretningskrav.
 
-Prøveversionen af Microsoft Purview-løsninger er den nemmeste måde at prøve alle funktionerne i Microsoft Purview-løsninger på, og det tager kun et par minutter at konfigurere den. Når konfigurationen af prøveversionen er fuldført, er alle funktioner i Microsoft E5-licenspakken tilgængelige, som du kan bruge i op til 90 dage.
+Prøveversionen af Microsoft Purview-løsninger er den nemmeste måde at prøve alle funktionerne i Microsoft Purview løsninger på, og det tager kun et par minutter at konfigurere den. Når konfigurationen af prøveversionen er fuldført, er alle funktioner i Microsoft E5-licenspakken tilgængelige, som du kan bruge i op til 90 dage.
 
 ## <a name="terms-and-conditions"></a>Vilkår og betingelser
 
@@ -54,9 +54,9 @@ Få oplysninger om roller under [Om administratorroller](../admin/add-users/abou
 
 Besøg [Microsoft 365 prøveversionshubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef) for at tilmelde dig prøveversionen. Du kan også følge nedenstående trin:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://go.microsoft.com/fwlink/p/?linkid=2077149) skal du vælge **Prøveversioner** i venstre navigationsrude for at få adgang til Microsoft 365 prøveversionshubben.
-2. Under **Overholdelsestest** skal du finde kortet **Microsoft Purview-løsninger** og vælge **Prøv nu**.
-3. I pop op-vinduet Prøveversion af **Microsoft Purview-løsninger** skal du gennemse oplysningerne om, hvad der er inkluderet, og hvad du kan forvente, når du starter prøveversionen, og derefter vælge **Start prøveversion.**
+1. I [Microsoft Purview-compliance-portal skal](https://go.microsoft.com/fwlink/p/?linkid=2077149) du vælge **Prøveversioner** i venstre navigationsrude for at få adgang til Microsoft 365 prøveversionshubben.
+2. Under **Prøveversioner af overholdelse** skal du finde kortet **Microsoft Purview løsninger** og vælge **Prøv nu**.
+3. I pop op-vinduet **med prøveversioner af Microsoft Purview løsninger** skal du gennemse oplysningerne om, hvad der er inkluderet, og hvad du kan forvente, når du starter prøveversionen, og derefter vælge **Start prøveversion.**
 
 Din prøveversion træder i kraft med det samme i 90 dage. Det kan tage op til to timer, før alle Purview-løsninger vises i venstre navigationsrude. Log af, og log på igen for at se opdateringerne.
 
@@ -64,7 +64,7 @@ Din prøveversion træder i kraft med det samme i 90 dage. Det kan tage op til t
 
 #### <a name="getting-started"></a>Introduktion
 
-Du kan begynde at bruge Purview-løsninger, så snart du ser dem på Microsoft Purview-overholdelsesportalen. Intet oprettes automatisk, og brugerne påvirkes ikke. Når du navigerer til hver løsning, kan du blive guidet til at foretage ekstra konfigurationer for at begynde at bruge funktioner.
+Du kan begynde at bruge Purview-løsninger, så snart du ser dem i Microsoft Purview-compliance-portal. Intet oprettes automatisk, og brugerne påvirkes ikke. Når du navigerer til hver løsning, kan du blive guidet til at foretage ekstra konfigurationer for at begynde at bruge funktioner.
 
 Brug vores [playbook til prøveversion](compliance-easy-trials-compliance-playbook.md) for at hjælpe dig med at komme i gang.
 
@@ -88,15 +88,15 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
 
 - **Revision**
 
-  Microsoft Purview Audit (Premium) hjælper organisationer med at udføre tekniske undersøgelser og undersøgelser af overholdelse af angivne standarder ved at øge opbevaringen af overvågningsloggen, der kræves for at udføre en undersøgelse, hvilket giver adgang til vigtige hændelser, der hjælper med at bestemme omfanget af kompromiser og hurtigere adgang til API'en for Office 365 administrationsaktiviteter. Få mere at vide om [Overvågning](advanced-audit.md)
+  Microsoft Purview-gennemgang (Premium) hjælper organisationer med at udføre tekniske undersøgelser og undersøgelser af overholdelse af angivne standarder ved at øge den opbevaring af overvågningsloggen, der kræves for at udføre en undersøgelse, give adgang til vigtige hændelser, der hjælper med at bestemme omfanget af kompromiser og hurtigere adgang til API'en for Office 365 administrationsaktiviteter. Få mere at vide om [Overvågning](advanced-audit.md)
 
 - **Kommunikation med overholdelse af angivne standarder**
 
-  Microsoft Purview Communication Compliance hjælper dig med at overvinde moderne udfordringer med overholdelse af angivne standarder, der er forbundet med intern og ekstern kommunikation, ved at hjælpe dig med automatisk at registrere upassende meddelelser, undersøge mulige politikovertrædelser og tage skridt til at afhjælpe. Få mere at vide om [kommunikation med overholdelse af angivne standarder](communication-compliance.md)
+  Microsoft Purview Kommunikationsoverholdelse hjælper dig med at overvinde moderne udfordringer med overholdelse af angivne standarder, der er forbundet med intern og ekstern kommunikation, ved at hjælpe dig med automatisk at registrere upassende meddelelser, undersøge mulige politikovertrædelser og træffe foranstaltninger til at afhjælpe. Få mere at vide om [kommunikation med overholdelse af angivne standarder](communication-compliance.md)
 
 - **Overholdelsesstyring**
 
-  Microsoft Purview Compliance Manager kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører. Få mere at vide om [Overholdelsesstyring](compliance-manager.md)
+  Microsoft Purview Overholdelsesstyring kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører. Få mere at vide om [Overholdelsesstyring](compliance-manager.md)
 
 - **Administration af datalivscyklus**
 
@@ -104,12 +104,12 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
 
 - **Forebyggelse af datatab**
 
-  Microsoft Purview DLP (Forebyggelse af datatab) hjælper dig med at styre deling og brug af følsomme oplysninger på enheder, apps og tjenester. Med prøveversioner kan du udvide dækningen af DLP-politikker til Teams og enheder, beskytte endnu mere følsomt indhold ved hjælp af oplærbare klassificeringer og nøjagtigt datamatch (EDM) og hurtigt komme i gang med vores anbefalede DLP-politikker.  [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
+  Microsoft Purview Forebyggelse af datatab (DLP) hjælper dig med at styre deling og brug af følsomme oplysninger på enheder, apps og tjenester. Med prøveversioner kan du udvide dækningen af DLP-politikker til Teams og enheder, beskytte endnu mere følsomt indhold ved hjælp af oplærbare klassificeringer og nøjagtigt datamatch (EDM) og hurtigt komme i gang med vores anbefalede DLP-politikker.  [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
 
    Når prøveversionen slutter:
 
   - Dine eksisterende politikker forbliver slået til, medmindre du slår dem fra.
-  - Hvis du redigerer DLP-politikker, der indeholder enten placeringen Teams eller Enheder, når prøveversionen er afsluttet, fjernes disse placeringer fra politikken.
+  - Du kan ikke længere redigere eller tilføje Teams eller enheders placeringer i eksisterende eller nye politikker.
 
 - **eDiscovery**
 
@@ -129,7 +129,7 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
   
   Du kan finde flere oplysninger om hver af disse forudkonfigurerede funktioner, og hvordan de vil påvirke brugerne, under Få mere at vide om den [gratis prøveversion til Microsoft Purview Information Protection](mip-easy-trials.md).
 
-  Du kan få flere oplysninger om alle funktioner i Microsoft Purview Information Protection under [Microsoft Purview Information Protection](information-protection.md).
+  Du kan få flere oplysninger om alle funktioner til Microsoft Purview Information Protection under [Microsoft Purview Information Protection](information-protection.md).
 
 - **Styring af insiderrisiko**
 
@@ -143,7 +143,7 @@ Spekulerer du på, hvad du kan opleve i din gratis prøveversion? Prøveversione
 
 - **Datastyring**
 
-  Brug integrerede funktioner i Microsoft Purview Records Management til at:
+  Brug integrerede Microsoft Purview-datastyring-funktioner til at:
 
   - Klassificer indhold som en post for at forhindre brugere i at redigere i henhold til regler, love eller organisationspolitik
   - Anvend automatisk opbevaringsmærkater på indhold, når det opfylder de kriterier, du angiver, ved hjælp af mærkatpolitikker for automatisk anvendelse

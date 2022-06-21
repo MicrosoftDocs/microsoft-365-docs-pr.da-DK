@@ -9,18 +9,24 @@ ms.service: bookings
 ms.localizationpriority: medium
 ms.assetid: 116d7a84-a7a0-4911-a1e9-debb2cca7c43
 description: Skift farvetemaet for din bookingside i appen Microsoft Bookings.
-ms.openlocfilehash: 1c00f87f3447b7002bf647086ee60c756662803d
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: df91e0855615612cfca1fc24a3ddf4cdcb992b0e
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637797"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185099"
 ---
 # <a name="customize-and-publish-your-booking-page"></a>Tilpas og publicer din bookingside
 
 Bookingsiden er stedet, hvor du konfigurerer, hvordan din eksterne bookingside vil se ud. Når du har tilpasset og publiceret din bookingside, vil folk bruge den til at booke aftaler med dig.
 
-Hvis du vil tilpasse din bookingside, skal du logge på [Office.com](https://office.com) og derefter gå til **Bookings** \> **bookingside**. Du kan tilpasse bookingsiden med følgende muligheder. Når du har konfigureret din bookingside, kan du publicere den, så andre kan begynde at booke aftaler med dig.
+Hvis du vil tilpasse din bookingside, skal du logge på [Office.com](https://office.com) og derefter **gå til** \> **bookingsiden**. Du kan tilpasse bookingsiden med følgende muligheder. Når du har konfigureret din bookingside, kan du publicere den, så andre kan begynde at booke aftaler med dig.
+
+## <a name="watch-customize-and-publish-your-booking-page"></a>Se: Tilpas og publicer din bookingside
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuYil]
+
+## <a name="steps"></a>Trin
 
 1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
 
@@ -44,7 +50,7 @@ I afsnittet nedenfor kan du se oplysninger om, hvordan du konfigurerer din booki
 
 - **Planlægningspolitik**, **Mailmeddelelser** og **Personale** Alle disse indstillinger svarer til dem, der er tilgængelige for hver tjeneste under fanen Tjenester.
 
-- **Tilgængelighed** Dette er en mulighed for at angive specifikke dato- og klokkeslætsintervaller for tilgængelighed for en tjeneste. Ellers vil Bookings som standard have åbningstider. Du kan bruge indstillingen **Tilgængelighed** her til scenarier som ferier eller forlængede timer.
+- **Tilgængelighed** Dette er en mulighed for at angive specifikke dato- og klokkeslætsintervaller for tilgængelighed for en tjeneste. Ellers vil Bookings som standard være din åbningstider. Du kan bruge indstillingen **Tilgængelighed** her til scenarier som ferier eller forlængede timer.
 
 - **Tilpas din side** Vælg farver og logoer, der vises på siden Self-Service, f.eks. for at sikre ensartethed i brandet.
 
@@ -54,21 +60,21 @@ Når du publicerer din bookingside, vil kunderne se din bookingside, hvor de kan
 
 :::image type="content" source="media/bookings-self-service-2.png" alt-text="Bookingside, der vender mod kunden.":::
 
-## <a name="publish-the-booking-page"></a>Publicer bookingsiden
+<!-- ## Publish the booking page
 
-Se denne video, eller følg nedenstående trin for at publicere eller annullere publiceringen af din bookingside.
+Watch this video or follow the steps below to publish or unpublish your booking page.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWuYil]
 
-1. I Microsoft 365 skal du vælge appstarteren og derefter vælge **Bookings**.
+1. In Microsoft 365, select the app launcher, and then select **Bookings**.
 
-1. Vælg **Bookingside** i navigationsruden.
+1. In the navigation pane, select **Booking page**.
 
-1. Kontrollér, at dine planlægningspolitikker er korrekte. Se [Angiv dine planlægningspolitikker](set-scheduling-policies.md) for at få flere oplysninger.
+1. Verify your scheduling policies are correct. See [Set your scheduling policies](set-scheduling-policies.md) for more information.
 
-1. Vælg **Gem og publicer**. Du får vist en bekræftelsesmeddelelse.
+1. Select **Save and publish**. You'll see a confirmation message.
 
-1. Vælg **Åbn publiceret side** for at se din side i en webbrowser.
+1. Select **Open published page** to see your page in a web browser. -->
 
 ## <a name="unpublish-the-booking-page"></a>Annuller publiceringen af bookingsiden
 

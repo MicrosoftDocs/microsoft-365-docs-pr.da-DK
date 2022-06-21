@@ -8,7 +8,7 @@ ms.prod: microsoft-365-enterprise
 ms.topic: article
 f1.keywords:
 - NOCSH
-ms.date: 05/05/2022
+ms.date: 06/20/2022
 ms.reviewer: georgiah
 ms.custom:
 - it-pro
@@ -16,18 +16,18 @@ ms.custom:
 - admindeeplinkEXCHANGE
 ms.collection:
 - M365-subscription-management
-ms.openlocfilehash: 839d320bfb52175f58009b8d254ec37eadeb4cb1
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: fc0c9186f506cdead968668959c401517551a4d3
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007300"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185385"
 ---
 # <a name="cross-tenant-mailbox-migration-preview"></a>Overførsel af postkasse på tværs af lejere (prøveversion)
 
 Normalt har du under fusioner eller frasalg brug for muligheden for at flytte din brugers Exchange Online postkasse til en ny lejer. Migrering af postkasser på tværs af lejere gør det muligt for lejeradministratorer at bruge velkendte grænseflader, f.eks. Exchange Online PowerShell og FRU, til at overføre brugere til deres nye organisation.
 
-Administratorer kan bruge den New-MigrationBatch cmdlet, der er tilgængelig via administrationsrollen Flyt postkasser, til at udføre flytninger på tværs af lejere.
+Administratorer kan bruge cmdlet'en **New-MigrationBatch** , der er tilgængelig via administrationsrollen _Flyt postkasser_ , til at udføre flytninger på tværs af lejere.
 
 De brugere, der migrerer, skal være til stede i destinationslejeren Exchange Online systemet som MailUsers, markeret med specifikke attributter for at aktivere flytninger på tværs af lejere. Systemet kan ikke flyttes for brugere, der ikke er konfigureret korrekt i destinationslejer.
 
@@ -208,19 +208,11 @@ Hvis du vil hente lejer-id'et for et abonnement, [skal du](https://go.microsoft.
 
 ### <a name="how-do-i-know-this-worked"></a>Hvordan gør jeg ved, det virkede?
 
-Du kan bekræfte konfigurationen af migrering af postkasser på tværs af lejere ved at køre [Test-MigrationServerAvailability-cmdlet'en](/powershell/module/exchange/Test-MigrationServerAvailability) i forhold til det slutpunkt for overførsel på tværs af lejere, som du oprettede i din destinationslejer.
+Du kan bekræfte overførselskonfigurationen for postkasser på tværs af lejere ved at køre cmdlet'en [Test-MigrationServerAvailability](/powershell/module/exchange/Test-MigrationServerAvailability) mod det slutpunkt for overførsel på tværs af lejere, som du oprettede i din destinationslejer.
 
-   > [!NOTE]
-   >
-   > - Destinationslejer:
-   >
-   > Test-MigrationServerAvailability -Slutpunkt "[navnet på dit slutpunkt for overførsel på tværs af lejere]"
-   >
-   > Get-OrganizationRelationship | fl name, DomainNames, MailboxMoveEnabled, MailboxMoveCapability
-   >
-   > - Kildelejer:
-   >
-   > Get-OrganizationRelationship | fl name, DomainNames, MailboxMoveEnabled, MailboxMoveCapability
+```powershell
+Test-MigrationServerAvailability -EndPoint "Migration endpoint for cross-tenant mailbox moves" - TestMailbox "Primary SMTP of MailUser object in target tenant"
+```
 
 ### <a name="move-mailboxes-back-to-the-original-source"></a>Flyt postkasser tilbage til den oprindelige kilde
 
@@ -377,19 +369,19 @@ Når postkassen flyttes fra kilde til destination, skal du sikre, at mailbrugern
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
-**Skal vi opdatere RemoteMailboxes i kilden i det lokale miljø efter flytningen?**
+### <a name="do-we-need-to-update-remotemailboxes-in-source-on-premises-after-the-move"></a>Skal vi opdatere RemoteMailboxes i kilden i det lokale miljø efter flytningen?
 
 Ja, du skal opdatere destinationsadressen (RemoteRoutingAddress/ExternalEmailAddress) for kildebrugerne i det lokale miljø, når kildelejerpostkassen flyttes til destinationslejeren.  Mens postdistribution kan følge henvisningerne på tværs af flere mailbrugere med forskellige destinationsadresser, skal ledig/optaget-opslag for mailbrugere være rettet mod postkassebrugerens placering. Ledig/optaget-opslag jagter ikke flere omdirigeringer.
 
-**Overfører Teams møder på tværs af lejere?**
+### <a name="do-teams-meetings-migrate-cross-tenant"></a>Overfører Teams møder på tværs af lejere?
 
 Møderne flyttes, men Teams møde-URL-adressen opdateres ikke, når elementer overføres på tværs af lejere. Da URL-adressen er ugyldig i destinationslejer, skal du fjerne og genoprette Teams møder.
 
-**Overføres indholdet i Teams chatmappen på tværs af lejere?**
+### <a name="does-the-teams-chat-folder-content-migrate-cross-tenant"></a>Overføres indholdet i Teams chatmappen på tværs af lejere?
 
 Nej, indholdet i den Teams chatmappe overføres ikke på tværs af lejere.
 
-**Hvordan kan jeg se flytninger på tværs af lejere, ikke mine onboarding- og off-boarding-flytninger?**
+### <a name="how-can-i-see-just-moves-that-are-cross-tenant-moves-not-my-onboarding-and-off-boarding-moves"></a>Hvordan kan jeg se flytninger på tværs af lejere, ikke mine onboarding- og off-boarding-flytninger?
 
 Brug parameteren _Flags_ . Her er et eksempel.
 
@@ -397,7 +389,7 @@ Brug parameteren _Flags_ . Her er et eksempel.
 Get-MoveRequest -Flags "CrossTenant"
 ```
 
-**Kan du angive eksempelscripts til kopiering af attributter, der bruges i test?**
+### <a name="can-you-provide-example-scripts-for-copying-attributes-used-in-testing"></a>Kan du angive eksempelscripts til kopiering af attributter, der bruges i test?
 
 > [!NOTE]
 > EKSEMPEL – SOM DET ER, GARANTERER INGEN GARANTI Dette script forudsætter en forbindelse til både kildepostkassen (for at hente kildeværdier) og destinationen Active Directory i det lokale miljø Domænetjenester (for at stemple ADUser-objektet). Hvis kilde har aktiveret procesførelse eller gendannelse af et enkelt element, skal du angive dette på destinationskontoen.  Dette vil øge destinationskontoens dumpsterstørrelse til 100 GB.
@@ -434,7 +426,7 @@ Get-MoveRequest -Flags "CrossTenant"
    Start-ADSyncSyncCycle
    ```
 
-**Hvordan får vi adgang til Outlook den 1. dag, når brugspostkassen er flyttet?**
+### <a name="how-do-we-access-outlook-on-day-1-after-the-use-mailbox-is-moved"></a>Hvordan får vi adgang til Outlook den 1. dag, når brugspostkassen er flyttet?
 
 Da kun én lejer kan eje et domæne, knyttes den tidligere primære SMTP-adresse ikke til brugeren i destinationslejeren, når flytningen af postkassen er fuldført. kun de domæner, der er knyttet til den nye lejer. Outlook bruger det nye UPN til at godkende til tjenesten, og den Outlook profil forventer at finde de ældre primære SMTPAddress, så de stemmer overens med postkassen i destinationssystemet. Da den ældre adresse ikke findes i destinationssystemet, opretter Outlook-profilen ikke forbindelse for at finde den nytilflyttede postkasse.
 
@@ -443,7 +435,7 @@ Til denne indledende installation skal brugerne genopbygge deres profil med dere
 > [!NOTE]
 > Planlæg i overensstemmelse hermed, efterhånden som du batcher dine brugere til fuldførelse. Du skal tage højde for netværksudnyttelse og -kapacitet, når der oprettes Outlook klientprofiler, og efterfølgende OST- og OAB-filer downloades til klienter.
 
-**Hvilke Exchange RBAC-roller skal jeg være medlem af for at konfigurere eller fuldføre en flytning på tværs af lejere?**
+### <a name="what-exchange-rbac-roles-do-i-need-to-be-member-of-to-set-up-or-complete-a-cross-tenant-move"></a>Hvilke Exchange RBAC-roller skal jeg være medlem af for at konfigurere eller fuldføre en flytning på tværs af lejere?
 
 Der er en matrix af roller, der er baseret på antagelse af delegerede opgaver, når du udfører flytning af en postkasse. Der kræves i øjeblikket to roller:
 
@@ -451,17 +443,17 @@ Der er en matrix af roller, der er baseret på antagelse af delegerede opgaver, 
 
 - Rollen for udførelse af de faktiske flyttekommandoer kan delegeres til en funktion på lavere niveau. Rollen flyt postkasser tildeles til muligheden for at flytte postkasser ind eller ud af organisationen.
 
-**Hvordan målretter vi mod, hvilken SMTP-adresse der er valgt for targetAddress (TargetDeliveryDomain) på den konverterede postkasse (til MailUser-konvertering)?**
+### <a name="how-do-we-target-which-smtp-address-is-selected-for-targetaddress-targetdeliverydomain-on-the-converted-mailbox-to-mailuser-conversion"></a>Hvordan målretter vi mod, hvilken SMTP-adresse der er valgt for targetAddress (TargetDeliveryDomain) på den konverterede postkasse (til MailUser-konvertering)?
 
 Exchange postkassen flyttes ved hjælp af FRU-håndværket targetAddress i den oprindelige kildepostkasse, når der konverteres til en MailUser ved at matche en mailadresse (proxyAddress) på destinationsobjektet. Processen tager værdien -TargetDeliveryDomain, der overføres til flyttekommandoen, og kontrollerer derefter, om der er en tilsvarende proxy for det pågældende domæne på destinationssiden. Når vi finder et match, bruges den tilsvarende proxyAddress til at angive ExternalEmailAddress (targetAddress) på det konverterede postkasseobjekt (nu MailUser).
 
-**Hvordan overføres postkassetilladelser?**
+### <a name="how-do-mailbox-permissions-transition"></a>Hvordan overføres postkassetilladelser?
 
 Postkassetilladelser omfatter Send på vegne af og Postkasseadgang:
 
 - Send på vegne af (AD:publicDelegates) gemmer DN'et for modtagere med adgang til en brugers postkasse som stedfortræder. Denne værdi er gemt i Active Directory og flyttes i øjeblikket ikke som en del af postkasseovergangen. Hvis der er angivet offentligeDelegates i kildepostkassen, skal du restampere de offentligeDelegates på målpostkassen, når meu-konverteringen til postkassen er fuldført i destinationsmiljøet ved at køre `Set-Mailbox <principle> -GrantSendOnBehalfTo <delegate>`.
 
-- Postkassetilladelser, der er gemt i postkassen, flyttes sammen med postkassen, når både sikkerhedskontoen og stedfortræderen flyttes til destinationssystemet. Brugerens TestUser_7 tildeles f.eks. FullAccess til den postkasse, TestUser_8 i lejerens SourceCompany.onmicrosoft.com. Når flytningen af postkassen er fuldført til TargetCompany.onmicrosoft.com, oprettes de samme tilladelser i destinationsmappen. Eksempler på brug af *Get-MailboxPermission* for TestUser_7 i både kilde- og destinationslejere er vist nedenfor. Exchange cmdlet'er har en præfiks med kilde og destination i overensstemmelse hermed.
+- Postkassetilladelser, der er gemt i postkassen, flyttes sammen med postkassen, når både sikkerhedskontoen og stedfortræderen flyttes til destinationssystemet. Brugerens TestUser_7 tildeles f.eks. FullAccess til den postkasse, TestUser_8 i lejerens SourceCompany.onmicrosoft.com. Når flytningen af postkassen er fuldført til TargetCompany.onmicrosoft.com, oprettes de samme tilladelser i destinationsmappen. Eksempler på brug af _Get-MailboxPermission_ for TestUser_7 i både kilde- og destinationslejere er vist nedenfor. Exchange cmdlet'er har en præfiks med kilde og destination i overensstemmelse hermed.
 
 Her er et eksempel på outputtet af tilladelsen til postkassen, før der flyttes.
 
@@ -488,7 +480,7 @@ TestUser_8@TargetCompany.onmicrosoft.com         {FullAccess}                   
 > [!NOTE]
 > Tilladelser for postkasser og kalendere på tværs af lejere understøttes IKKE. Du skal organisere principaler og stedfortrædere i bundtede flyttebatch, så disse forbundne postkasser overføres samtidig fra kildelejer.
 
-**Hvilken X500-proxy skal føjes til destinationens MailUser-proxyadresser for at aktivere overførsel?**
+### <a name="what-x500-proxy-should-be-added-to-the-target-mailuser-proxy-addresses-to-enable-migration"></a>Hvilken X500-proxy skal føjes til destinationens MailUser-proxyadresser for at aktivere overførsel?
 
 Overflytningen af postkassen på tværs af lejere kræver, at værdien LegacyExchangeDN for kildepostkasseobjektet stemples som en x500-mailadresse på destinationens MailUser-objekt.
 
@@ -505,11 +497,11 @@ x500:/o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn
 > [!NOTE]
 > Ud over denne X500-proxy skal du kopiere alle X500-proxyer fra postkassen i kilden til postkassen i destinationen.
 
-**Kan kilde- og destinationslejer anvende det samme domænenavn?**
+### <a name="can-the-source-and-target-tenant-utilize-the-same-domain-name"></a>Kan kilde- og destinationslejer anvende det samme domænenavn?
 
 Nej. Domænenavnene for kilde- og destinationslejer skal være entydige. Et kildedomæne for contoso.com og destinationsdomænet for fourthcoffee.com.
 
-**Vil delte postkasser blive flyttet og stadig fungere?**
+### <a name="will-shared-mailboxes-move-and-still-work"></a>Vil delte postkasser blive flyttet og stadig fungere?
 
 Ja, men vi beholder kun lagertilladelserne som beskrevet i disse artikler:
 
@@ -517,35 +509,43 @@ Ja, men vi beholder kun lagertilladelserne som beskrevet i disse artikler:
 
 - [Microsoft Support | Sådan tildeler du Exchange og Outlook postkassetilladelser i Office 365 dedikeret](https://support.microsoft.com/topic/how-to-grant-exchange-and-outlook-mailbox-permissions-in-office-365-dedicated-bac01b2c-08ff-2eac-e1c8-6dd01cf77287)
 
-**Har du nogen anbefalinger til batches?**
+### <a name="do-you-have-any-recommendations-for-batches"></a>Har du nogen anbefalinger til batches?
 
 Må ikke overskride 2000 postkasser pr. batch. Vi anbefaler på det kraftigste, at du indsender batches to uger før cut-over-datoen, da der ikke er nogen indvirkning på slutbrugerne under synkroniseringen. Hvis du har brug for vejledning til postkassemængder på over 50.000, kan du kontakte distributionslisten for teknisk feedback på crosstenantmigrationpreview@service.microsoft.com.
 
-**Hvad gør jeg, hvis jeg bruger tjenestekryptering med kundenøgle?**
+### <a name="what-if-i-use-service-encryption-with-customer-key"></a>Hvad gør jeg, hvis jeg bruger tjenestekryptering med kundenøgle?
 
 Postkassen dekrypteres, før den flyttes. Sørg for, at kundenøglen er konfigureret i destinationslejer, hvis den stadig er påkrævet. Se [her](/microsoft-365/compliance/customer-key-overview) for at få flere oplysninger.
 
-**Hvad er den anslåede overførselstid?**
+### <a name="what-is-the-estimated-migration-time"></a>Hvad er den anslåede overførselstid?
 
 For at hjælpe dig med at planlægge din migrering viser den tabel, der vises [her](/exchange/mailbox-migration/office-365-migration-best-practices#estimated-migration-times) , retningslinjerne for, hvornår du kan forvente, at massepostkasseoverførslen eller individuelle migreringer fuldføres. Disse estimater er baseret på en dataanalyse af tidligere kundemigreringer. Da hvert miljø er unikt, kan den nøjagtige migreringshastighed variere.
 
 Husk, at denne funktion i øjeblikket er tilgængelig som prøveversion og SLA'en, og at eventuelle relevante tjenesteniveauer ikke gælder for problemer med ydeevnen eller tilgængeligheden under prøveversionsstatussen for denne funktion.
 
-**Beskyttelse af dokumenter i kildelejer, der kan forbruges af brugere i destinationslejer.**
+### <a name="protecting-documents-in-the-source-tenant-consumable-by-users-in-the-destination-tenant"></a>Beskyttelse af dokumenter i kildelejer, der kan forbruges af brugere i destinationslejer.**
 
 Overførsel på tværs af lejere overfører kun postkassedata og intet andet. Der er flere andre muligheder, som er dokumenteret i følgende blogindlæg, som kan hjælpe: <https://techcommunity.microsoft.com/t5/security-compliance-and-identity/mergers-and-spinoffs/ba-p/910455>
 
-**Kan jeg have de samme mærkater i destinationslejer, som du havde i kildelejer, enten som det eneste sæt mærkater eller et ekstra sæt mærkater for de migrerede brugere, afhængigt af justeringen mellem organisationerne.**
+### <a name="can-i-have-the-same-labels-in-the-destination-tenant-as-you-had-in-the-source-tenant-either-as-the-only-set-of-labels-or-an-additional-set-of-labels-for-the-migrated-users-depending-on-alignment-between-the-organizations"></a>Kan jeg have de samme mærkater i destinationslejer, som du havde i kildelejer, enten som det eneste sæt mærkater eller et ekstra sæt mærkater for de migrerede brugere, afhængigt af justeringen mellem organisationerne.**
 
 Da overflytninger på tværs af lejere ikke eksporterer mærkater, og det er ikke muligt at dele mærkater mellem lejere, kan du kun opnå dette ved at oprette mærkaterne i destinationslejeren igen.
 
-**Støtter du flytning af Microsoft 365-grupper?**
+### <a name="do-you-support-moving-microsoft-365-groups"></a>Støtter du flytning af Microsoft 365-grupper?
 
 I øjeblikket understøtter overførselsfunktionen for postkasser på tværs af lejere ikke migrering af Microsoft 365-grupper.
 
-**Kan en kildelejeradministrator udføre en eDiscovery-søgning mod en postkasse, når postkassen er blevet overført til den nye/destinationslejer?**
+### <a name="can-a-source-tenant-admin-perform-an-ediscovery-search-against-a-mailbox-after-the-mailbox-has-been-migrated-to-the-newtarget-tenant"></a>Kan en kildelejeradministrator udføre en eDiscovery-søgning mod en postkasse, når postkassen er blevet overført til den nye/destinationslejer?
 
 Nej, efter overførsel af en postkasse på tværs af lejere fungerer eDiscovery mod den migrerede brugers postkasse i kilden ikke. Det skyldes, at der ikke længere er en postkasse i kilden, der kan søges efter, da postkassen er blevet overført til destinationslejer og nu tilhører destinationslejer. eDiscovery, postpostkasseoverførslen kan kun udføres i destinationslejer (hvor postkassen findes nu). Hvis en kopi af kildepostkassen skal bevares i kildelejer efter migreringen, kan administratoren i kilden kopiere indholdet til en alternativ postkasse før migrering for fremtidige eDiscovery-handlinger mod dataene.
+
+### <a name="at-which-point-will-the-destination-mailuser-be-converted-to-a-destination-mailbox-and-the-source-mailbox-converted-to-a-source-mailuser"></a>På hvilket tidspunkt konverteres destinationspostkassen til en destinationspostkasse, og kildepostkassen konverteres til en mailbruger?
+
+Disse konverteringer sker automatisk under migreringsprocessen. Ingen manuelle trin er nødvendige.
+
+### <a name="at-which-step-should-i-assign-the-exchange-online-license-to-destination-mailusers"></a>På hvilket trin skal jeg tildele den Exchange Online licens til destinationsmailbrugere?
+
+Dette kan gøres, før overførslen er fuldført, men du bør ikke tildele en licens, før du stempler _ExchangeGuid-attributten_ , eller konverteringen af MailUser-objektet til postkassen mislykkes, og der oprettes i stedet en ny postkasse. For at afhjælpe denne risiko er det bedst at vente, indtil migreringen er fuldført, og tildele licenser i løbet af den 30-dages respitperiode.
 
 ## <a name="known-issues"></a>Kendte problemer
 

@@ -8,16 +8,16 @@ ms.topic: article
 ms.service: bookings
 ms.localizationpriority: medium
 description: Brug denne side til at oprette din personaleliste og til at administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse.
-ms.openlocfilehash: d5e35ae301acc785803b0c5374b4bc50bbf499e0
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: b9acf72e9026b230702ed4cad232a92842b51028
+ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637224"
+ms.lasthandoff: 06/21/2022
+ms.locfileid: "66185143"
 ---
 # <a name="add-staff-to-bookings"></a>Føj medarbejdere til Bookings
 
-På siden Personale i Bookings kan du oprette din personaleliste og administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse. Du kan også angive arbejdstimer for hver medarbejder herfra.
+På personalesiden i Bookings kan du oprette din personaleliste og administrere medarbejderoplysninger, f.eks. navn, telefonnummer og mailadresse. Du kan også angive arbejdstimer for hver medarbejder herfra.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -29,13 +29,13 @@ Selvom Bookings er en funktion i Microsoft 365, er det ikke alle dine medarbejde
 
 ## <a name="steps"></a>Trin
 
-1. Vælg din kalender på startsiden. 
+1. Vælg din kalender på startsiden.
 
 2. Gå til personaleindstillingen i venstre rude, og vælg **Tilføj nyt personale**.
 
 3. Når du tilføjer personale fra din organisation, skal du skrive deres navn i feltet **Tilføj personer** og vælge dem, når de vises i rullemenuen. De andre felter udfyldes automatisk.
 
-    Når en medarbejder er tilføjet, kan du redigere det navn, der vises på alle Bookings kommunikation, ved at vælge **x** ud for vedkommendes navn og redigere feltet **Tilføj personer**. Dette kan være nyttigt, hvis medarbejderne skal have en bestemt titel eller et navn, der vises for kunder, f.eks. angive Adele Vance som "Dr. Vance, MD".
+    Når en medarbejder er tilføjet, kan du redigere det navn, der vises i al Bookings-kommunikation, ved at vælge **x** ud for vedkommendes navn og redigere feltet **Tilføj personer** . Dette kan være nyttigt, hvis medarbejderne skal have en bestemt titel eller et navn, der vises for kunder, f.eks. angive Adele Vance som "Dr. Vance, MD".
 
 4. Hvis du vil tilføje medarbejdere uden for din organisation, skal du manuelt udfylde deres mail og andre oplysninger.
 
@@ -50,13 +50,13 @@ Selvom Bookings er en funktion i Microsoft 365, er det ikke alle dine medarbejde
 
 6. Vælg **Giv alle medarbejdere besked via mail, når en reservation, der er tildelt dem, oprettes eller ændres** for at aktivere personalemails. Følgende er et eksempel på en mail:
 
-    :::image type="content" source="media/bookings-notify-all-email.jpg" alt-text="En mail med en meddelelse fra Bookings.":::
+    :::image type="content" source="media/bookings-notify-all-email.jpg" alt-text="En mail med besked fra Bookings.":::
 
 7. Vælg **Begivenheder i Office 365 kalender påvirker tilgængeligheden**, hvis oplysninger om ledig/optaget tid fra medarbejdernes kalendere skal påvirke tilgængeligheden af bookingtjenester via Bookings.
 
-    Hvis en medarbejder f.eks. har et teammøde eller en personlig aftale, der er planlagt til kl. 15 på en onsdag, viser Bookings, at medarbejderen ikke er tilgængelig til at blive booket inden for dette tidsrum. Dette klokkeslæt vises som optaget eller foreløbigt i Bookings kalendervisning, som vist i nedenstående eksempel.
+    Hvis en medarbejder f.eks. har et teammøde eller en personlig aftale, der er planlagt til kl. 15 på en onsdag, viser Bookings den pågældende medarbejder som utilgængelig for at blive booket i det pågældende tidsrum. Dette tidspunkt vises som optaget eller foreløbig i visningen Bookings-kalender, som vist i nedenstående eksempel.
 
-    :::image type="content" source="media/bookings-busy-tentative-view-2.png" alt-text="En visning af en Bookings kalender.":::
+    :::image type="content" source="media/bookings-busy-tentative-view-2.png" alt-text="En visning af en Bookings-kalender.":::
 
 > [!IMPORTANT]
 > Vi anbefaler på det kraftigste, at du lader denne indstilling være slået til (den er slået til som standard) for at undgå dobbeltbookinger og for at optimere tilgængeligheden af dine medarbejdere.
@@ -66,11 +66,11 @@ Selvom Bookings er en funktion i Microsoft 365, er det ikke alle dine medarbejde
     Ved at fravælge denne boks kan medarbejderne få brugerdefinerede timer, der yderligere begrænser, hvornår de kan bookes. Dette er nyttigt i scenarier, hvor en medarbejder kun kan være på stedet tirsdage og onsdage, eller de dedikerer deres morgener til én type aftaler og deres eftermiddage til andre typer.
 
     > [!NOTE]
-    > Bookings understøtter op til 100 medarbejdere i en Bookings kalender.
+    > Bookinger understøtter op til 100 medarbejdere i en bookingkalender.
 
-## <a name="make-a-bookings-user-a-super-user-without-adding-them-as-staff-in-bookings"></a>Gør en Bookings bruger til en superbruger uden at tilføje dem som personale i Bookings
+## <a name="make-a-bookings-user-a-super-user-without-adding-them-as-staff-in-bookings"></a>Gør en Bookings-bruger til en superbruger uden at tilføje dem som personale i Bookings
 
-Det kan være en god idé at føje en person til personalelisten i Bookings uden at gøre dem tilgængelige for kunder eller klienter. Når du gør dem til superbrugere, bliver de administrator af bookingpostkassen. At være administrator af en bookingpostkasse defineres som at have fuld adgang og send som tilladelser til bookingpostkassen.
+Det kan være en god idé at føje en person til din personaleliste i Bookings uden at gøre dem tilgængelige for kunder eller kunder. Når du gør dem til superbrugere, bliver de administrator af bookingpostkassen. At være administrator af en bookingpostkasse defineres som at have fuld adgang og send som tilladelser til bookingpostkassen.
 
 > [!NOTE]
 > Disse trin fungerer kun, hvis den bruger, der tilføjes, ikke allerede er tildelt en **seerrolle** i Bookings.
