@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: c0fdf84ec4883921a8e12b2a0638be66a393f725
-ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
+ms.openlocfilehash: 424d1974c16c5205052bec19b1235df28db2e2e3
+ms.sourcegitcommit: 7df8adc9e67ab65e413d7ea7bb0dcb9fd2da1a11
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/21/2022
-ms.locfileid: "66185497"
+ms.locfileid: "66185778"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus kompatibilitet med andre sikkerhedsprodukter
 
@@ -101,7 +101,7 @@ I følgende tabel opsummeres tilstanden for Microsoft Defender Antivirus i flere
 | Windows Server 2016 <br/> Windows Server 2012 R2  | En ikke-Microsoft-antivirus-/antimalwareløsning | Ja | Microsoft Defender Antivirus skal angives til passiv tilstand (manuelt) <sup>[[2](#fn2)]<sup> |
 |Windows Server 2016 <br/> Windows Server 2012 R2  | En ikke-Microsoft-antivirus-/antimalwareløsning | Nej | Microsoft Defender Antivirus skal deaktiveres (manuelt) <sup>[[3](#fn3)]<sup> |
 
-(<a id="fn2">2</a>) På Windows Server 2019, Windows Server, version 1803 eller nyere, Windows Server 2016 eller Windows Server 2012 R2 går Microsoft Defender Antivirus ikke automatisk i passiv tilstand, når du installerer et antivirusprodukt, der ikke er fra Microsoft. I disse tilfælde skal du angive Microsoft Defender Antivirus til passiv tilstand for at forhindre problemer, der skyldes, at flere antivirusprogrammer er installeret på en server. Du kan angive Microsoft Defender Antivirus til passiv tilstand ved hjælp af PowerShell, Gruppepolitik eller en registreringsdatabasenøgle. 
+(<a id="fn2">2</a>) På Windows Server 2019, Windows Server, version 1803 eller nyere, Windows Server 2016 eller Windows Server 2012 R2 går Microsoft Defender Antivirus ikke automatisk i passiv tilstand, når du installerer et antivirusprogram, der ikke er fra Microsoft. I disse tilfælde skal du angive Microsoft Defender Antivirus til passiv tilstand for at forhindre problemer, der skyldes, at flere antivirusprogrammer er installeret på en server. Du kan angive Microsoft Defender Antivirus til passiv tilstand ved hjælp af PowerShell, Gruppepolitik eller en registreringsdatabasenøgle. 
 
 **Metode til registreringsdatabasenøgle**
 
@@ -113,16 +113,16 @@ I følgende tabel opsummeres tilstanden for Microsoft Defender Antivirus i flere
 
 **GPO-metode**
 
-1. Åbn Gruppepolitik Administrationseditor > **Computerkonfiguration** > **Administrative skabeloner** >  **Windows komponenter** >  **Microsoft Defender Antivirus**.
+- Åbn Gruppepolitik Administrationseditor > **Computerkonfiguration** > **Administrative skabeloner** >  **Windows komponenter** >  **Microsoft Defender Antivirus**.
+- Vælg **Slå Microsoft Defender Antivirus fra**.
+- Angiv gruppepolitikobjektet til **Aktiveret**.
 
-2. Vælg **Slå Microsoft Defender Antivirus fra**.
+Du kan få vist beskyttelsesstatussen i PowerShell med kommandoen "Get-MpComputerStatus" og nøglen "AMRunningMode".
 
-3.  Angiv gruppepolitikobjektet til **Aktiveret**.
-
-Du kan få vist din beskyttelsesstatus i PowerShell ved hjælp af kommandoen [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus) og nøglen `AMRunningMode`. Her er et eksempel på, hvordan outputtet ser ud:
+## SYNTAX
 
 ```
-PS C:\Users\contoso> Get-MpComputerStatus
+PS C:\Users\tommaso> Get-MpComputerStatus
 
 
 AMEngineVersion                  : 0.0.0.0
@@ -186,7 +186,7 @@ TroubleShootingStartTime         :
 PSComputerName                   :
 ```
 
-I det foregående eksempel kører **Defender-status ikke**.
+I følgende eksempel **kører Defender-status ikke**.
 
  > [!NOTE]
  > Hvis passiv tilstand skal fungere på slutpunkter, der kører Windows Server 2016 og Windows Server 2012 R2, skal disse slutpunkter onboardes med den moderne, samlede løsning, der er beskrevet i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
@@ -196,11 +196,16 @@ I det foregående eksempel kører **Defender-status ikke**.
 > [!TIP]
 > På Windows Server 2016 kan du muligvis se *Windows Defender Antivirus* i stedet for *Microsoft Defender Antivirus*.
 
+> [!IMPORTANT]
+> - Microsoft Defender Antivirus er kun tilgængelig på enheder, der kører Windows 10 og 11, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 eller nyere, Windows Server 2016 og Windows Server 2012 R2.
+> - I Windows 8.1 tilbydes antivirusbeskyttelse på virksomhedsniveau som [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)), som administreres via Microsoft Endpoint Configuration Manager.
+> - Windows Defender tilbydes også til [forbrugerenheder på Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), selvom Windows Defender ikke leverer administration på virksomhedsniveau.
+
 Defender for Endpoint indeholder funktioner, der yderligere udvider den antivirusbeskyttelse, der er installeret på dit slutpunkt. Du kan drage fordel af at køre Microsoft Defender Antivirus sammen med en anden antivirusløsning.
 
 [Registrering af slutpunkter og svar (Slutpunktsregistrering og -svar) i blokeringstilstand](edr-in-block-mode.md) giver f.eks. yderligere beskyttelse mod skadelige artefakter, selvom Microsoft Defender Antivirus ikke er det primære antivirusprodukt. Disse funktioner kræver, at Microsoft Defender Antivirus installeres og kører i passiv tilstand eller aktiv tilstand.
 
-## <a name="requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode"></a>Krav til, at Microsoft Defender Antivirus skal køre i passiv tilstand
+### <a name="requirements-for-microsoft-defender-antivirus-to-run-in-passive-mode"></a>Krav til, at Microsoft Defender Antivirus skal køre i passiv tilstand
 
 Slutpunkter skal opfylde følgende krav, før Microsoft Defender Antivirus kan køre i passiv tilstand:
 
@@ -209,18 +214,13 @@ Slutpunkter skal opfylde følgende krav, før Microsoft Defender Antivirus kan k
 - Et andet antivirus-/antimalwareprodukt, der ikke er fra Microsoft, skal installeres og bruges som den primære antivirusløsning
 - Slutpunkter skal være onboardet til Defender for Endpoint
 
-> [!IMPORTANT]
-> - Microsoft Defender Antivirus er kun tilgængelig på enheder, der kører Windows 10 og 11, Windows Server 2022, Windows Server 2019, Windows Server, version 1803 eller nyere, Windows Server 2016 og Windows Server 2012 R2.
-> - I Windows 8.1 tilbydes antivirusbeskyttelse på virksomhedsniveau som [System Center Endpoint Protection](/previous-versions/system-center/system-center-2012-R2/hh508760(v=technet.10)), som administreres via Microsoft Endpoint Configuration Manager.
-> - Windows Defender tilbydes også til [forbrugerenheder på Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn344918(v=ws.11)#BKMK_WindowsDefender), selvom Windows Defender ikke leverer administration på virksomhedsniveau.
-
 ## <a name="how-microsoft-defender-antivirus-affects-defender-for-endpoint-functionality"></a>Sådan påvirker Microsoft Defender Antivirus Funktionen Defender for Endpoint
 
 Defender for Endpoint påvirker, om Microsoft Defender Antivirus kan køre i passiv tilstand. Og tilstanden for Microsoft Defender Antivirus kan påvirke visse funktioner i Defender for Endpoint. Beskyttelse i realtid fungerer f.eks., når Microsoft Defender Antivirus er i aktiv eller passiv tilstand, men ikke når Microsoft Defender Antivirus er deaktiveret eller fjernet.
 
 > [!IMPORTANT]
-> - Tabellen i dette afsnit opsummerer de funktioner og funktioner, der fungerer aktivt eller ej, afhængigt af om Microsoft Defender Antivirus er i aktiv tilstand, passiv tilstand eller deaktiveret/fjernet. Denne tabel er udviklet til kun at være til orientering.   
-> - **Deaktiver ikke funktioner**, f.eks. beskyttelse i realtid, skybaseret beskyttelse eller begrænset periodisk scanning, hvis du bruger Microsoft Defender Antivirus i passiv tilstand, eller hvis du bruger [Slutpunktsregistrering og -svar i bloktilstand](edr-in-block-mode.md), som arbejder bag kulisserne for at registrere og afhjælpe skadelige artefakter, der blev registreret efter sikkerhedsbrud.
+> Tabellen i dette afsnit opsummerer de funktioner og funktioner, der fungerer aktivt eller ej, afhængigt af om Microsoft Defender Antivirus er i aktiv tilstand, passiv tilstand eller deaktiveret/fjernet. Denne tabel er udviklet til kun at være til orientering. 
+> **Deaktiver ikke funktioner**, f.eks. beskyttelse i realtid, skybaseret beskyttelse eller begrænset periodisk scanning, hvis du bruger Microsoft Defender Antivirus i passiv tilstand, eller hvis du bruger [Slutpunktsregistrering og -svar i bloktilstand](edr-in-block-mode.md), som arbejder bag kulisserne for at registrere og afhjælpe skadelige artefakter, der blev registreret efter sikkerhedsbrud.
 
 | Beskyttelse | Microsoft Defender Antivirus <br/>(*Aktiv tilstand*) | Microsoft Defender Antivirus <br/>(*Passiv tilstand*) | Microsoft Defender Antivirus <br/>(*Deaktiveret eller fjernet*) | [EDR i bloktilstand](edr-in-block-mode.md) | 
 |:---|:---|:---|:---|:---| 
@@ -238,11 +238,11 @@ Defender for Endpoint påvirker, om Microsoft Defender Antivirus kan køre i pas
 | [Enhedsstyring](device-control-report.md) | Ja | Ja | Nej | Nej |
 | [PUA-beskyttelse](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md) | Ja | Nej | Nej | Nej |
 
-(<a id="fn4">4</a>) Når Microsoft Defender Antivirus er i passiv tilstand, giver beskyttelse i realtid ikke nogen blokering eller håndhævelse, selvom den er aktiveret og i passiv tilstand.
+(<a id="fn4">4</a>) Når Microsoft Defender Antivirus er i passiv tilstand, sikrer beskyttelse i realtid generelt ikke nogen blokering eller håndhævelse, selvom den er aktiveret og i passiv tilstand.
 
-(<a id="fn5">5</a>) Når Microsoft Defender Antivirus er i passiv tilstand, er scanninger ikke planlagt.
+(<a id="fn5">5</a>) Når Microsoft Defender Antivirus er i passiv tilstand, planlægges scanninger ikke.
 
-(<a id="fn6">6</a>) Når Microsoft Defender Antivirus er i passiv tilstand, afhjælpes trusler ikke. Trusler kan dog afhjælpes ved [at registrere og reagere på slutpunkter (Slutpunktsregistrering og -svar) i bloktilstand](edr-in-block-mode.md). I dette tilfælde kan du få vist beskeder, der viser Microsoft Defender Antivirus som en kilde, også selvom Microsoft Defender Antivirus er i passiv tilstand.
+(<a id="fn6">6</a>) Når Microsoft Defender Antivirus er i passiv tilstand, afhjælper den ikke trusler. Trusler kan dog afhjælpes ved [at registrere og reagere på slutpunkter (Slutpunktsregistrering og -svar) i bloktilstand](edr-in-block-mode.md). I dette tilfælde kan du få vist beskeder, der viser Microsoft Defender Antivirus som en kilde, også selvom Microsoft Defender Antivirus er i passiv tilstand.
 
 (<a id="fn7">7</a>) Opdateringsrytmen for sikkerhedsintelligens styres kun af Windows Update indstillinger. Defender-specifikke indstillinger for opdateringsplaner (dagligt/ugentligt på bestemt tidspunkt, intervalbaserede) fungerer kun, når Microsoft Defender Antivirus er i aktiv tilstand. De ignoreres i passiv tilstand.
 
@@ -276,7 +276,7 @@ I tabellen i dette afsnit beskrives forskellige tilstande, som du kan se med Mic
  |:---|:---| 
  |  Aktiv tilstand  |  I aktiv tilstand bruges Microsoft Defender Antivirus som antivirusappen på computeren. Indstillinger, der konfigureres ved hjælp af Configuration Manager, Gruppepolitik, Microsoft Intune eller andre administrationsprodukter, gælder. Filer scannes, trusler afhjælpes, og registreringsoplysninger rapporteres i dit konfigurationsværktøj (f.eks. Configuration Manager eller Microsoft Defender Antivirus-appen på selve slutpunktet).  | 
  |  Passiv tilstand eller Slutpunktsregistrering og -svar bloktilstand |  I passiv tilstand bruges Microsoft Defender Antivirus ikke som antivirusapp, og trusler afhjælpes *ikke* af Microsoft Defender Antivirus. <p>Trusler kan dog afhjælpes ved [at registrere og reagere på slutpunkter (Slutpunktsregistrering og -svar) i blokeringstilstand](edr-in-block-mode.md), når de kører i Slutpunktsregistrering og -svar Bloktilstand. <p> Filer scannes af Slutpunktsregistrering og -svar, og der leveres rapporter om trusselsregistreringer, der deles med Defender for Endpoint-tjenesten. Du får muligvis vist beskeder, der viser Microsoft Defender Antivirus som en kilde, selvom Microsoft Defender Antivirus er i passiv tilstand. <p> Når Microsoft Defender Antivirus er i passiv tilstand, kan du stadig [administrere opdateringer for Microsoft Defender Antivirus](manage-updates-baselines-microsoft-defender-antivirus.md), men du kan ikke flytte Microsoft Defender Antivirus  i aktiv tilstand, hvis dine enheder har et antivirusprogram, der ikke er fra Microsoft, og som yder beskyttelse i realtid mod malware. <p> Hvis du vil opnå optimal sikkerhedslagseffekt for forsvar og registrering, skal du sørge for at få dine antivirus- og antimalwareopdateringer, selvom Microsoft Defender Antivirus kører i passiv tilstand. Se [Administrer Microsoft Defender Antivirus opdateringer og anvende grundlinjer](manage-updates-baselines-microsoft-defender-antivirus.md). <p> Bemærk, at passiv tilstand kun understøttes på Windows Server 2012 R2 & 2016, når maskinen er onboardet ved hjælp af den [moderne, samlede løsning](/microsoft-365/security/defender-endpoint/configure-server-endpoints).  | 
- |  Deaktiveret eller fjernet  |  Når Microsoft Defender Antivirus er deaktiveret eller fjernet, bruges den ikke som antivirusapp. Filer scannes ikke, og trusler afhjælpes ikke. <p> Det anbefales ikke generelt at deaktivere eller fjerne Microsoft Defender Antivirus. Hvis det er muligt, skal du bevare Microsoft Defender Antivirus i passiv tilstand, hvis du bruger en ikke-Microsoft-antimalware-/antivirusløsning. <p> I tilfælde, hvor Microsoft Defender Antivirus deaktiveres automatisk, kan det aktiveres igen automatisk, hvis det antivirus-/antimalwareprodukt, der ikke er Fra Microsoft, udløber eller på anden måde stopper med at yde beskyttelse i realtid mod virus, malware eller andre trusler. Den automatiske genaktivering af Microsoft Defender Antivirus hjælper med at sikre, at antivirusbeskyttelsen bevares på dine slutpunkter. <p> Du kan også bruge [begrænset periodisk scanning](limited-periodic-scanning-microsoft-defender-antivirus.md), som fungerer sammen med Microsoft Defender Antivirus-programmet til jævnligt at kontrollere, om der er trusler, hvis du bruger en antivirusapp, der ikke er fra Microsoft.  | 
+ |  Deaktiveret eller fjernet  |  Når Microsoft Defender Antivirus er deaktiveret eller fjernet, bruges den ikke som antivirusprogram. Filer scannes ikke, og trusler afhjælpes ikke. <p> Deaktivering eller fjernelse af Microsoft Defender Antivirus anbefales ikke generelt. Hvis det er muligt, skal du beholde Microsoft Defender Antivirus i passiv tilstand, hvis du bruger en ikke-Microsoft-antimalware-/antivirusløsning. <p> I tilfælde, hvor Microsoft Defender Antivirus deaktiveres automatisk, kan det aktiveres igen automatisk, hvis det antivirus-/antimalwareprodukt, der ikke er Fra Microsoft, udløber eller på anden måde stopper med at yde beskyttelse i realtid mod virus, malware eller andre trusler. Den automatiske genaktivering af Microsoft Defender Antivirus hjælper med at sikre, at antivirusbeskyttelsen bevares på dine slutpunkter. <p> Du kan også bruge [begrænset periodisk scanning](limited-periodic-scanning-microsoft-defender-antivirus.md), som fungerer sammen med Microsoft Defender Antivirus-programmet til jævnligt at kontrollere, om der er trusler, hvis du bruger en antivirusapp, der ikke er fra Microsoft.  | 
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
