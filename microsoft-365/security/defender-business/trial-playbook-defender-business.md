@@ -15,18 +15,19 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mest ud af din Defender for Business-prøveversion med denne playbook. Kom hurtigt i gang med at konfigurere, og kom i gang med at bruge dine nye sikkerhedsfunktioner.
-ms.openlocfilehash: 4f239a08e46e8c8bede5c2e972c3daed2af8b550
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.custom: trial-playbook
+ms.openlocfilehash: 73a3bd1421b9891c07e582e791df2dfd86088ccf
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418983"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530756"
 ---
 # <a name="trial-playbook-microsoft-defender-for-business"></a>Playbook til prøveversion: Microsoft Defender til virksomheder
 
 **Velkommen til Defender for Business-prøveversionens playbook!** 
 
-Denne playbook er en enkel vejledning, der hjælper dig med at få mest ud af din 30-dages gratis prøveversion. Ved hjælp af anbefalingerne i denne artikel fra Microsoft Defender-teamet lærer du, hvordan Defender for Business kan hjælpe dig med at hæve din sikkerhed fra traditionel antivirusbeskyttelse til næste generations beskyttelse, slutpunktsregistrering og -svar og Håndtering af trusler og sikkerhedsrisici. 
+Denne playbook er en enkel vejledning, der hjælper dig med at få mest ud af din 30-dages gratis prøveversion. Ved hjælp af anbefalingerne i denne artikel fra Microsoft Defender-teamet lærer du, hvordan Defender for Business kan hjælpe dig med at hæve din sikkerhed fra traditionel antivirusbeskyttelse til næste generations beskyttelse, registrering af slutpunkter og svar samt Håndtering af trusler og sikkerhedsrisici. 
 
 ## <a name="what-is-defender-for-business"></a>Hvad er Defender for Business? 
 
@@ -61,7 +62,7 @@ Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://securi
 
 ### <a name="step-3-use-the-setup-wizard-in-defender-for-business-recommended"></a>Trin 3: Brug installationsguiden i Defender for Business (anbefales)
 
-Defender for Business er udviklet til at spare tid og kræfter på små og mellemstore virksomheder. Du kan udføre den indledende konfiguration med en installationsguide. Konfigurationsguiden hjælper dig med at tildele adgang til dit sikkerhedsteam, konfigurere mailmeddelelser til dit sikkerhedsteam og onboarde virksomhedens Windows enheder. **[Brug installationsguiden](mdb-use-wizard.md)**.
+Defender for Business er udviklet til at spare tid og kræfter på små og mellemstore virksomheder. Du kan udføre den indledende konfiguration med en installationsguide. Installationsguiden guider dig gennem tildeling af adgang til dit sikkerhedsteam, konfiguration af mailmeddelelser til dit sikkerhedsteam og onboarding af virksomhedens Windows-enheder. **[Brug installationsguiden](mdb-use-wizard.md)**.
 
 > [!NOTE]
 > Du kan kun bruge guiden Konfigurer én gang. 
@@ -75,10 +76,10 @@ Defender for Business er udviklet til at spare tid og kræfter på små og melle
 
 2. **[Konfigurer mailmeddelelser](mdb-email-notifications.md#view-and-edit-email-notifications)** til dit sikkerhedsteam.
 
-3. **[Onboarde og konfigurer Windows enheder](mdb-onboard-devices.md)**. Onboarding af enheder med det samme hjælper med at beskytte disse enheder fra dag 1.
+3. **[Onboarde og konfigurer Windows-enheder](mdb-onboard-devices.md)**. Onboarding af enheder med det samme hjælper med at beskytte disse enheder fra dag 1.
 
    > [!NOTE]
-   > Mens du bruger installationsguiden, registrerer systemet, om du har Windows enheder, der allerede er tilmeldt Intune. Du bliver spurgt, om du vil bruge automatisk onboarding for alle eller nogle af disse enheder. Du kan onboarde alle Windows enheder på én gang, eller du kan vælge bestemte enheder, du vil starte med, og derefter tilføje flere enheder senere. [Få mere at vide om automatisk onboarding](mdb-use-wizard.md#what-is-automatic-onboarding).
+   > Mens du bruger installationsguiden, registrerer systemet, om du har Windows-enheder, der allerede er tilmeldt Intune. Du bliver spurgt, om du vil bruge automatisk onboarding for alle eller nogle af disse enheder. Du kan onboarde alle Windows-enheder på én gang, eller du kan vælge bestemte enheder, du vil starte med, og derefter tilføje flere enheder senere. [Få mere at vide om automatisk onboarding](mdb-use-wizard.md#what-is-automatic-onboarding).
    
    Hvis du vil onboarde andre enheder, skal du se [trin 4](#step-4-set-up-and-configure-defender-for-business).
 
@@ -108,20 +109,20 @@ Hvis du har brugt installationsguiden, men du har brug for at onboarde flere enh
 
    | Enheder | Onboardingmetoder |
    |:---|:---|
-   | [Windows klienter](mdb-onboard-devices.md) | Vælg en af følgende muligheder for at onboarde Windows klientenheder til Defender for Business:<br/>– Lokalt script (til onboarding af enheder manuelt på Microsoft 365 Defender-portalen)<br/>- Gruppepolitik (hvis du allerede bruger Gruppepolitik og foretrækker denne metode)<br/>- Microsoft Intune (*anbefalet*; medtaget i [Microsoft 365 Business Premium](../../business-premium/index.md)) |
-   | [macOS computere](mdb-onboard-devices.md) | Vælg en af følgende muligheder for at onboarde macOS enheder:<br/>- Lokalt script til macOS (*anbefales*) <br/>- Microsoft Intune for macOS (Intune er medtaget i [Microsoft 365 Business Premium](../../business-premium/index.md))<br/><br/>Vi anbefaler, at du bruger et lokalt script til at onboarde macOS enheder. Selvom du kan [konfigurere tilmelding for macOS enheder i Intune](/mem/intune/enrollment/macos-enroll), er det lokale script den nemmeste metode til onboarding macOS enheder til Defender for Business. |
-   | Windows Server- og Linux-servere | *Windows server- og Linux-servere understøttes ikke i øjeblikket. Server onboarding og sikkerhedsfunktioner kommer snart til Defender for Business*. |
+   | [Windows-klienter](mdb-onboard-devices.md) | Vælg en af følgende indstillinger for at føje Windows-klientenheder til Defender for Business:<br/>– Lokalt script (til onboarding af enheder manuelt på Microsoft 365 Defender-portalen)<br/>- Gruppepolitik (hvis du allerede bruger Gruppepolitik og foretrækker denne metode)<br/>- Microsoft Intune (*anbefalet*; medtaget i [Microsoft 365 Business Premium](../../business-premium/index.md)) |
+   | [macOS-computere](mdb-onboard-devices.md) | Vælg en af følgende muligheder for at onboarde macOS-enheder:<br/>- Lokalt script til macOS (*anbefales*) <br/>- Microsoft Intune til macOS (Intune er inkluderet i [Microsoft 365 Business Premium](../../business-premium/index.md))<br/><br/>Vi anbefaler, at du bruger et lokalt script til at onboarde macOS-enheder. Selvom du kan [konfigurere tilmelding til macOS-enheder i Intune](/mem/intune/enrollment/macos-enroll), er det lokale script den nemmeste metode til onboarding af macOS-enheder til Defender for Business. |
+   | Windows Server- og Linux-servere | *Windows Server- og Linux-servere understøttes ikke i øjeblikket. Server onboarding og sikkerhedsfunktioner kommer snart til Defender for Business*. |
    | [Mobilenheder](mdb-onboard-devices.md) | Du skal bruge Microsoft Intune til at onboarde mobilenheder, f.eks. Android- og iOS-/iPadOS-enheder. Hvis du har [Microsoft 365 Business Premium](../../business-premium/index.md), har du Intune som en del af dit abonnement. Intune kan også købes separat. Se følgende ressourcer for at få hjælp til at tilmelde disse enheder til Intune:<br/>- [Tilmeld Android-enheder](/mem/intune/enrollment/android-enroll)<br/>- [Tilmeld iOS- eller iPadOS-enheder](/mem/intune/enrollment/ios-enroll) |
 
 5. **[Få vist og konfigurer evt. dine sikkerhedspolitikker](mdb-configure-security-settings.md)**. Når du har onboardet din virksomheds enheder for at Microsoft Defender til virksomheder, er dit næste skridt at få vist og om nødvendigt redigere dine sikkerhedspolitikker og -indstillinger. Defender for Business indeholder forudkonfigurerede sikkerhedspolitikker, der bruger anbefalede indstillinger. Du kan dog redigere dine indstillinger, så de passer til dine forretningsbehov.
 
    | Handling | Beskrivelse |
    |:---|:---|
-   | [Vælg, hvor du vil administrere dine sikkerhedspolitikker og -enheder](mdb-configure-security-settings.md#choose-where-to-manage-security-policies-and-devices). | Hvis du vælger den [forenklede konfigurationsproces](mdb-simplified-configuration.md), kan du få vist og administrere dine sikkerhedspolitikker på portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)). Du er dog ikke begrænset til denne indstilling. Hvis du har brugt [Intune](/mem/intune/protect/), kan du fortsætte med at bruge Microsoft Endpoint Manager Administration til at administrere dine sikkerhedspolitikker og -enheder. |
+   | [Vælg, hvor du vil administrere dine sikkerhedspolitikker og -enheder](mdb-configure-security-settings.md#choose-where-to-manage-security-policies-and-devices). | Hvis du vælger den [forenklede konfigurationsproces](mdb-simplified-configuration.md), kan du få vist og administrere dine sikkerhedspolitikker på portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)). Du er dog ikke begrænset til denne indstilling. Hvis du har brugt [Intune](/mem/intune/protect/), kan du blive ved med at bruge Microsoft Endpoint Manager Administration til at administrere dine sikkerhedspolitikker og -enheder. |
    | [Få vist eller rediger dine beskyttelsespolitikker i næste generation](mdb-configure-security-settings.md#view-or-edit-your-next-generation-protection-policies). | Næste generations beskyttelsesindstillinger omfatter beskyttelse i realtid, blokering ved første øjekast, netværksbeskyttelse, handlinger, der skal udføres på potentielt uønskede apps, og antivirus planlagte scanninger.  |
    | [Få vist eller rediger firewallpolitikkerne](mdb-configure-security-settings.md#view-or-edit-your-firewall-policies-and-custom-rules). | Firewallbeskyttelse bestemmer, hvilken netværkstrafik der må overføres til eller fra virksomhedens enheder. [Brugerdefinerede regler](mdb-custom-rules-firewall.md) kan bruges til at definere undtagelser fra firewallpolitikkerne. |
    | [Konfigurer filtrering af webindhold](mdb-configure-security-settings.md#set-up-web-content-filtering). | Filtrering af webindhold gør det muligt for dit sikkerhedsteam at spore og regulere adgangen til websteder baseret på deres indholdskategorier, f.eks. indhold beregnet til voksne, høj båndbredde, juridisk ansvar, fritid eller ikke-kategoriseret. |
-   | [Gennemse indstillingerne for avancerede funktioner](mdb-configure-security-settings.md#review-settings-for-advanced-features). | I Defender for Business forudkonfigureres dine sikkerhedsfunktioner ved hjælp af anbefalede indstillinger. Du kan dog gennemse dem og om nødvendigt redigere indstillingerne, så de passer til dine forretningsbehov. <br/><br/>Hvis du vil have adgang til indstillinger for avancerede funktioner, skal du gå til Indstillinger **EndpointsGenerellefunktioner** >  >  **på** portalen **Microsoft 365 Defender** >  ([https://security.microsoft.com](https://security.microsoft.com)). |
+   | [Gennemse indstillingerne for avancerede funktioner](mdb-configure-security-settings.md#review-settings-for-advanced-features). | I Defender for Business forudkonfigureres dine sikkerhedsfunktioner ved hjælp af anbefalede indstillinger. Du kan dog gennemse dem og om nødvendigt redigere indstillingerne, så de passer til dine forretningsbehov. <br/><br/>Hvis du vil have adgang til indstillinger for avancerede funktioner, skal du gå til **Indstillinger** > **Slutpunkter** > **Generelle** > **avancerede funktioner** på portalen Microsoft 365 Defender ([https://security.microsoft.com](https://security.microsoft.com)). |
    | [Få vist og rediger andre indstillinger](mdb-configure-security-settings.md#access-your-settings-in-the-microsoft-365-defender-portal) på Microsoft 365 Defender-portalen. | Ud over sikkerhedspolitikker, der anvendes på enheder, er der andre indstillinger, som du kan få vist og redigere i Defender for Business. Du kan f.eks. angive den tidszone, der skal bruges, og du kan onboarde (eller offboard) enheder. |
 
 ## <a name="start-using-defender-for-business"></a>Begynd at bruge Defender for Business
@@ -138,7 +139,7 @@ I de næste 30 dage anbefaler vi, at du afprøver dine nye sikkerhedsfunktioner,
 Defender for Business indeholder et dashboard til administration af sårbarheder & threat &, der er designet til at spare tid og kræfter på dit sikkerhedsteam. [Brug dashboardet Administration af sårbarheder & Threat &](mdb-view-tvm-dashboard.md).
 
 - Få vist din eksponeringsscore, der er knyttet til enheder i din organisation.   
-- Få vist dine vigtigste sikkerhedsanbefalinger, f.eks. adressering af nedsat kommunikation med enheder, aktivering af firewallbeskyttelse eller opdatering af Microsoft Defender Antivirus definitioner.   
+- Få vist dine vigtigste sikkerhedsanbefalinger, f.eks. adressering af nedsat kommunikation med enheder, aktivering af firewallbeskyttelse eller opdatering af Microsoft Defender Antivirus-definitioner.   
 - Få vist afhjælpningsaktiviteter, f.eks. filer, der er sendt til karantæne, eller sikkerhedsrisici, der findes på enheder.
 
 ### <a name="view-and-respond-to-detected-threats"></a>Få vist og reager på registrerede trusler

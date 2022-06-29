@@ -15,12 +15,13 @@ search.appverid:
 - MOE150
 - MET150
 description: Prøveversion af Microsoft Purview-løsninger.
-ms.openlocfilehash: b43c29ee706fb6d4864227fbfbfe95ad5bbe0495
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.custom: trial-playbook
+ms.openlocfilehash: 981f4d619eeef380625d6de8194e9cb0c42e2011
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012896"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530274"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Playbook til prøveversion: Microsoft Purview-løsninger
 
@@ -57,20 +58,20 @@ Du kan nemt og hurtigt begynde at prøve Microsofts løsninger til overholdelse 
 
 **Udfør undersøgelser**:
 
-Microsoft Purview Audit (Premium) hjælper organisationer med at udføre kriminaltekniske undersøgelser og undersøgelser af overholdelse af angivne standarder ved at øge opbevaringen af overvågningsloggen, der kræves for at udføre en undersøgelse, give adgang til vigtige hændelser, der hjælper med at bestemme omfanget af kompromiser og give hurtigere adgang til API'en til administration af Office 365.
+Microsoft Purview-gennemgang (Premium) hjælper organisationer med at udføre tekniske undersøgelser og undersøgelser af overholdelse af angivne standarder ved at øge den opbevaring af overvågningsloggen, der kræves for at udføre en undersøgelse, give adgang til vigtige hændelser, der hjælper med at bestemme omfanget af kompromiser og give hurtigere adgang til API'en for Office 365 managementaktivitet.
 
 ### <a name="step-1-apply-the-e5-license-to-each-user-for-which-youd-like-to-generate-e5-events"></a>Trin 1: [Anvend E5-licensen på hver bruger, som du vil generere E5-hændelser for](set-up-advanced-audit.md#step-1-set-up-audit-premium-for-users)
 
 > [!TIP]
 > Bedste praksis for prøveversion: Dag 1
 
-Overvågningsfunktioner (Premium), f.eks. muligheden for at logføre vigtige hændelser, f.eks. MailItemsAccessed og Send, kræver en passende E5-licens, der er tildelt til brugerne. Derudover skal app-/tjenesteplanen Avanceret overvågning være aktiveret for disse brugere.
+Overvågningsfunktioner (Premium), f.eks. muligheden for at logføre vigtige hændelser som MailItemsAccessed og Send, kræver en passende E5-licens, der er tildelt til brugerne. Derudover skal app-/tjenesteplanen Avanceret overvågning være aktiveret for disse brugere.
 
 Konfigurer overvågning (Premium) for brugere – udfør [følgende trin for hver bruger](set-up-advanced-audit.md#step-1-set-up-audit-premium-for-users) for at bekræfte, at appen Avanceret overvågning er tildelt til brugere.
 
 1. Aktivér overvågningshændelser (Premium) – [aktivér, at SearchQueryInitiatedExchange og SearchQueryInitiatedSharePoint](set-up-advanced-audit.md#step-2-enable-audit-premium-events) overvåges for hver bruger i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 1. Konfigurer politikker for opbevaring af overvågning – [opret yderligere politikker for opbevaring af overvågningslog](set-up-advanced-audit.md#step-3-set-up-audit-retention-policies) for at opfylde kravene i organisationens sikkerhedshandlinger, it og overholdelsesteams.
-1. Søg efter overvågningshændelser (Premium) – [søg efter vigtige overvågningshændelser (Premium)](set-up-advanced-audit.md#step-4-search-for-audit-premium-events) og andre aktiviteter, når du udfører kriminaltekniske undersøgelser.
+1. Søg efter Overvågningshændelser (Premium) – [søg efter vigtige overvågningshændelser (Premium)](set-up-advanced-audit.md#step-4-search-for-audit-premium-events) og andre aktiviteter, når der udføres kriminaltekniske undersøgelser.
 
 ### <a name="step-2-create-new-audit-log-policies-to-specify-how-long-to-retain-audit-logs-in-your-org-for-activities-performed-by-users-and-define-priority-levels-for-your-policies"></a>Trin 2: [Opret nye politikker for overvågningslogfiler for at angive, hvor længe overvågningslogge i organisationen skal bevares for aktiviteter, der udføres af brugere, og definere prioritetsniveauer for dine politikker](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy)
 
@@ -81,14 +82,14 @@ Opbevaringspolitikker for overvågningslog er en del af de nye overvågningsfunk
 
 1. Før du opretter en opbevaringspolitik for overvågningsloggen – [vigtige ting at vide,](audit-log-retention-policies.md#before-you-create-an-audit-log-retention-policy) før du opretter din politik.
 1. [Opret en opbevaringspolitik for overvågningslog](audit-log-retention-policies.md#create-an-audit-log-retention-policy)
-1. [Administrer opbevaringspolitikker for overvågningslog på Microsoft Purview-overholdelsesportalen](audit-log-retention-policies.md#manage-audit-log-retention-policies-in-the-compliance-portal) – Opbevaringspolitikker for overvågningslog vises under fanen Overvågning af opbevaringspolitikker (også kaldet dashboardet). Du kan bruge dashboardet til at få vist, redigere og slette politikker for overvågningsopbevaring.
+1. [Administrer opbevaringspolitikker for overvågningslog i Microsoft Purview-compliance-portal](audit-log-retention-policies.md#manage-audit-log-retention-policies-in-the-compliance-portal) – Opbevaringspolitikker for overvågningslog vises under fanen Overvågning af opbevaringspolitikker (også kaldet dashboardet). Du kan bruge dashboardet til at få vist, redigere og slette politikker for overvågningsopbevaring.
 1. Opret og administrer opbevaringspolitikker for overvågningslog på PowerShell – Du kan også bruge PowerShell til sikkerhed & overholdelse af angivne standarder til at [oprette og administrere opbevaringspolitikker for overvågningslog](audit-log-retention-policies.md#create-and-manage-audit-log-retention-policies-in-powershell). En af grundene til at bruge PowerShell er at oprette en politik for en posttype eller aktivitet, der ikke er tilgængelig i brugergrænsefladen.
 
 ## <a name="communication-compliance"></a>Kommunikation med overholdelse af angivne standarder
 
 **Identificer og håndtér ordensregler for politikovertrædelser**:
 
-Microsoft Purview Communication Compliance hjælper dig med på intelligent vis at identificere kommunikationsovertrædelser for at understøtte et kompatibelt og sundt arbejdsmiljø ved at hjælpe dig med at registrere upassende meddelelser, undersøge mulige politikovertrædelser og træffe foranstaltninger til at afhjælpe.
+Microsoft Purview Kommunikationsoverholdelse hjælper dig med på intelligent vis at identificere kommunikationsovertrædelser for at understøtte et kompatibelt og sundt arbejdsmiljø ved at hjælpe dig med at registrere upassende meddelelser, undersøge mulige politikovertrædelser og træffe foranstaltninger til afhjælpning.
 
 ### <a name="step-1-enable-permissions-for-communication-compliance"></a>Trin 1: [Aktivér tilladelser til kommunikation med overholdelse af angivne standarder](communication-compliance-configure.md#step-1-required-enable-permissions-for-communication-compliance)
 
@@ -148,7 +149,7 @@ Begynd at arbejde med vurderinger og udføre forbedringshandlinger for at implem
 1. [Få en bedre forståelse af, hvordan forskellige handlinger påvirker din score for overholdelse af angivne standarder](compliance-score-calculation.md).
 
 > [!NOTE]
-> Microsoft 365 eller Office 365 E1/E3-abonnementet indeholder skabelonen Microsoft Data Protection Baseline. Microsoft 365 eller Office 365 E5 indeholder E5-overholdelse skabeloner til:
+> Microsoft 365- eller Office 365 E1/E3-abonnementet indeholder skabelonen Microsoft Data Protection Baseline. Microsoft 365 eller Office 365 E5, E5 Compliance indeholder skabeloner til:
 >
 > - Microsoft Data Protection Baseline
 > - EU's GDPR  
@@ -161,7 +162,7 @@ Begynd at arbejde med vurderinger og udføre forbedringshandlinger for at implem
 
 Brugerdefinerede vurderinger er nyttige i forbindelse med:
 
-- Administration af overholdelse af angivne standarder for produkter, der ikke Microsoft 365, f.eks. tredjepartsapps og -tjenester, programmer i det lokale miljø og andre aktiver
+- Administration af overholdelse af angivne standarder for ikke-Microsoft 365-produkter, f.eks. tredjepartsapps og -tjenester, programmer i det lokale miljø og andre aktiver
 - Administration af dine egne brugerdefinerede eller virksomhedsspecifikke kontrolelementer til overholdelse af angivne standarder
 
 1. [Udvid en skabelon for Overholdelsesstyring ved at tilføje dine egne kontrolelementer og forbedringshandlinger](compliance-manager-templates-extend.md)
@@ -200,14 +201,14 @@ Standardnavne giver dig mulighed for automatisk at anvende en opbevaringsmærkat
 
 **Beskyt følsomme data**:
 
-Organisationer skal beskytte følsomme oplysninger for at overholde forretningsstandarder og brancheregler for at forhindre utilsigtede afsløringer. Konfigurer Microsoft Purview-politikker til forebyggelse af datatab for at identificere, overvåge og automatisk beskytte følsomme oplysninger på tværs af Microsoft 365.
+Organisationer skal beskytte følsomme oplysninger for at overholde forretningsstandarder og brancheregler for at forhindre utilsigtede afsløringer. Konfigurer Microsoft Purview Forebyggelse af datatab politikker for at identificere, overvåge og automatisk beskytte følsomme oplysninger på tværs af Microsoft 365.
 
-### <a name="step-1-protect-data-loss-on-teams-locations"></a>Trin 1: [Beskyt datatab på Teams placeringer](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
+### <a name="step-1-protect-data-loss-on-teams-locations"></a>Trin 1: [Beskyt datatab på Teams-placeringer](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
 
 > [!TIP]
 > Bedste praksis for prøveversion: Dag 1
 
-Hvis din organisation har forebyggelse af datatab, kan du definere politikker, der forhindrer personer i at dele følsomme oplysninger i en Microsoft Teams kanal eller chatsession.
+Hvis din organisation har forebyggelse af datatab, kan du definere politikker, der forhindrer personer i at dele følsomme oplysninger i en Microsoft Teams-kanal eller -chatsession.
 
 1. Få mere at vide om [DLP-licenser til Microsoft Teams og omfanget af DLP-beskyttelse](dlp-microsoft-teams.md#dlp-licensing-for-microsoft-teams)
 1. [Føj Microsoft Teams som en placering til eksisterende DLP-politikker](dlp-microsoft-teams.md#add-microsoft-teams-as-a-location-to-existing-dlp-policies)
@@ -218,10 +219,10 @@ Hvis din organisation har forebyggelse af datatab, kan du definere politikker, d
 > [!TIP]
 > Bedste praksis for prøveversion: Konfiguration inden for de første 30 dage
 
-Microsoft Endpoint DLP giver dig mulighed for at overvåge Windows 10 enheder og registrere, hvornår følsomme elementer bruges og deles.
+Med Microsoft Endpoint DLP kan du overvåge Windows 10 enheder og registrere, hvornår følsomme elementer bruges og deles.
 
-1. Forbered dine slutpunkter – sørg for, at de Windows 10 og macOS enheder, du planlægger at installere Endpoint DLP for at [opfylde disse krav](endpoint-dlp-getting-started.md)
-1. [Onboarder enheder i enhedsadministration](endpoint-dlp-getting-started.md)  – Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan overvåge og beskytte følsomme elementer på en enhed. Begge disse handlinger udføres på Microsoft Purview-overholdelsesportalen.
+1. Forbered dine slutpunkter – sørg for, at de Windows 10- og macOS-enheder, du planlægger at installere Endpoint DLP, for at [opfylde disse krav](endpoint-dlp-getting-started.md)
+1. [Onboarder enheder i enhedsadministration](endpoint-dlp-getting-started.md)  – Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan overvåge og beskytte følsomme elementer på en enhed. Begge disse handlinger udføres i Microsoft Purview-compliance-portal.
    - Scenarie 1 – [Onboarding-enheder](endpoint-dlp-getting-started.md) , der endnu ikke er onboardet.
    - Scenarie 2 – [Microsoft Defender for Endpoint er allerede installeret, og der rapporteres slutpunkter i](endpoint-dlp-getting-started.md). Alle disse slutpunkter vises på listen over administrerede enheder.
 1. [Konfigurer vores DLP-standardpolitik for enheder](mip-easy-trials.md#dlp-for-devices) eller [Definer en ny DLP-politik for enheder](endpoint-dlp-learn-about.md).
@@ -235,7 +236,7 @@ Du har fleksibilitet i den måde, du konfigurerer dine DLP-politikker på. Du ka
 1. Tilføj placeringer
 1. Tilføj følsomme oplysningstyper eller mærkater for at beskytte
 1. Tilføj handlinger
-   - Teams:
+   - Hold:
       - [Undgå ekstern adgang til følsomme dokumenter](dlp-microsoft-teams.md#prevent-external-access-to-sensitive-documents)
       - [Få politiktips, der kan hjælpe med at oplære brugere og instruktioner i tilpasning af politiktips](dlp-microsoft-teams.md#policy-tips-help-educate-users)
    - Enheder: Skift kun fra overvågning til blok
@@ -264,7 +265,7 @@ Hvis du vil have adgang til eDiscovery (Premium) eller tilføjes som medlem af e
 
 Flere organisationer bruger eDiscovery-løsningen (Premium) i Microsoft Purview til kritiske eDiscovery-processer. Dette omfatter besvarelse af lovmæssige anmodninger, undersøgelser og retssager.
 
-1. Administrer eDiscovery (Premium) – [få mere at vide om, hvordan du konfigurerer eDiscovery (Premium), administrerer sager, administrerer en arbejdsproces i eDiscovery (Premium) og analyserer søgeresultaterne for eDiscovery (Premium).](/learn/modules/manage-advanced-ediscovery)
+1. Administrer eDiscovery (Premium) – [få mere at vide om, hvordan du konfigurerer eDiscovery (Premium), administrerer sager, administrerer en arbejdsproces i eDiscovery (Premium) og analyserer søgeresultaterne for eDiscovery (Premium](/learn/modules/manage-advanced-ediscovery)).
 1. [Opret en eDiscovery-sag ved hjælp af det nye sagsformat i Advance eDiscovery](advanced-ediscovery-new-case-format.md)
 1. [Luk eller slet en sag](close-or-delete-case.md) – Når sagen eller undersøgelsen er afsluttet, kan du lukke eller slette den. Du kan også genåbne en lukket sag.
 
@@ -272,13 +273,13 @@ Flere organisationer bruger eDiscovery-løsningen (Premium) i Microsoft Purview 
 
 Hvis du vil tillade, at personer i din organisation begynder at oprette og bruge sager, skal du konfigurere globale indstillinger, der gælder for alle sager i din organisation. På nuværende tidspunkt er den eneste globale indstilling **registrering af rettigheder for advokater og klienter** (flere globale indstillinger vil være tilgængelige i fremtiden).
 
-1. [Konfigurer eDiscovery (Premium) – global Indstillinger](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-ediscovery-premium)
+1. [Konfigurer eDiscovery (Premium) – globale indstillinger](get-started-with-advanced-ediscovery.md#step-3-configure-global-settings-for-ediscovery-premium)
 1. [Konfigurer indstillinger for søgning og analyse](configure-search-and-analytics-settings-in-advanced-ediscovery.md)
 1. [Administrer job i eDiscovery (Premium)](managing-jobs-ediscovery20.md)
 
 ### <a name="step-4-optional-compliance-boundaries"></a>Trin 4 (valgfrit): [Overholdelsesgrænser](set-up-compliance-boundaries.md)
 
-Overholdelsesgrænser opretter logiske grænser i en organisation, der styrer placeringen af brugerindhold (f.eks. postkasser, OneDrive konti og SharePoint websteder), som eDiscovery-ledere kan søge efter. De styrer også, hvem der kan få adgang til eDiscovery-sager, der bruges til at administrere de juridiske, menneskelige ressourcer eller andre undersøgelser i din organisation.
+Overholdelsesgrænser opretter logiske grænser i en organisation, der styrer placeringen af brugerindhold (f.eks. postkasser, OneDrive-konti og SharePoint-websteder), som eDiscovery-ledere kan søge i. De styrer også, hvem der kan få adgang til eDiscovery-sager, der bruges til at administrere de juridiske, menneskelige ressourcer eller andre undersøgelser i din organisation.
 
 ![Overholdelsesgrænser består af søgetilladelsesfiltre, der styrer adgangen til agenturer og administratorrollegrupper, der styrer adgangen til eDiscovery-sager.](../media/M365_ComplianceBoundary_OrgChart_v2.png)
 
@@ -291,7 +292,7 @@ Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser:
 
 ### <a name="step-5-optional-learn-about-content-search-tool"></a>Trin 5 (valgfrit): [Få mere at vide om søgeværktøjet indhold](search-for-content.md)
 
-Brug indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business. Du kan bruge værktøjet til indholdssøgning til at søge efter mail, dokumenter og chatsamtaler i samarbejdsværktøjer, f.eks. Microsoft Teams og Microsoft 365-grupper.
+Brug søgeværktøjet indhold i Microsoft Purview-compliance-portal til hurtigt at finde mails i Exchange-postkasser, dokumenter på SharePoint-websteder og OneDrive-placeringer og chatsamtaler i Skype for Business. Du kan bruge værktøjet til indholdssøgning til at søge efter mail, dokumenter og chatsamtaler i samarbejdsværktøjer, f.eks. Microsoft Teams og Microsoft 365-grupper.
 
 - [Få mere at vide om eDiscovery-søgning (Premium)](search-for-content.md#search-for-content)
 
@@ -346,7 +347,7 @@ Når du er klar til at køre politikken uden simulering, skal du vælge indstill
 
 **Registrer og afhjælp insiderrisici**:
 
-Udnyt kunstig intelligens, så du hurtigt kan identificere, sortere og afhjælpe interne risici. Ved hjælp af logge fra Microsoft 365 og Azure-tjenester kan du definere politikker, der overvåger for insiderrisikosignaler, og derefter udføre afhjælpningshandlinger, f.eks. fremme af brugeruddannelse eller starte en undersøgelse.
+Udnyt kunstig intelligens, så du hurtigt kan identificere, sortere og afhjælpe interne risici. Ved hjælp af logge fra Microsoft 365- og Azure-tjenester kan du definere politikker, der overvåger for insiderrisikosignaler, og derefter udføre afhjælpningshandlinger, f.eks. fremme af brugeruddannelse eller starte en undersøgelse.
 
 ### <a name="step-1-required-enable-permissions-for-insider-risk-management"></a>Trin 1 (påkrævet): [Aktivér tilladelser til styring af insiderrisiko](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management)
 
@@ -369,23 +370,23 @@ Kom hurtigt i gang, og få mest ud af funktionerne til styring af insiderrisiko 
 
 Hver anbefalet handling guider dig gennem de påkrævede aktiviteter for anbefalingen, herunder eventuelle krav, hvad du kan forvente, og virkningen af at konfigurere funktionen i din organisation.
 
-### <a name="step-3-required-enable-the-microsoft-365-audit-log"></a>Trin 3 (påkrævet): [Aktivér Microsoft 365 overvågningslog](insider-risk-management-configure.md#step-2-required-enable-the-microsoft-365-audit-log)
+### <a name="step-3-required-enable-the-microsoft-365-audit-log"></a>Trin 3 (påkrævet): [Aktivér Microsoft 365-overvågningsloggen](insider-risk-management-configure.md#step-2-required-enable-the-microsoft-365-audit-log)
 
-Overvågning er som standard aktiveret for Microsoft 365 organisationer. Nogle organisationer kan have deaktiveret overvågning af bestemte årsager. Hvis overvågning er deaktiveret for din organisation, kan det skyldes, at en anden administrator har deaktiveret den. Vi anbefaler, at du bekræfter, at det er OK at aktivere overvågning igen, når du fuldfører dette trin.
+Overvågning er som standard aktiveret for Microsoft 365-organisationer. Nogle organisationer kan have deaktiveret overvågning af bestemte årsager. Hvis overvågning er deaktiveret for din organisation, kan det skyldes, at en anden administrator har deaktiveret den. Vi anbefaler, at du bekræfter, at det er OK at aktivere overvågning igen, når du fuldfører dette trin.
 
-Du kan finde en trinvis vejledning til, hvordan du slår overvågning til, under [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md). Når du har slået overvågning til, vises der en meddelelse om, at overvågningsloggen er ved at blive forberedt, og at du kan køre en søgning om et par timer, efter at forberedelsen er fuldført. Du behøver kun at gøre denne handling én gang. Du kan finde flere oplysninger om, hvordan du bruger Microsoft 365 overvågningsloggen, [i Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md).
+Du kan finde en trinvis vejledning til, hvordan du slår overvågning til, under [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md). Når du har slået overvågning til, vises der en meddelelse om, at overvågningsloggen er ved at blive forberedt, og at du kan køre en søgning om et par timer, efter at forberedelsen er fuldført. Du behøver kun at gøre denne handling én gang. Du kan finde flere oplysninger om, hvordan du bruger Microsoft 365-overvågningsloggen, under [Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md).
 
 ### <a name="step-4-required-enable-and-view-insider-risk-analytics-insights"></a>Trin 4 (påkrævet): [Aktivér og få vist indsigt i insiderrisikoanalyse](insider-risk-management-configure.md#step-3-optional-enable-and-view-insider-risk-analytics-insights)
 
 Analyse af styring af insiderrisiko giver dig mulighed for at evaluere potentielle insiderrisici i din organisation uden at konfigurere nogen politikker for insiderrisiko. Resultaterne af analysescanningen kan tage op til 48 timer, før indsigt er tilgængelig som rapporter til gennemsyn. Hvis du vil vide mere om indsigt i analyse, skal du se [Indstillinger for styring af insiderrisiko: Analytics (prøveversion)](insider-risk-management-settings.md) og se [videoen Insider Risk Management Analytics](https://www.youtube.com/watch?v=5c0P5MCXNXk) for at hjælpe dig med at forstå din insiderrisikoholdning og hjælpe dig med at træffe foranstaltninger ved at konfigurere relevante politikker for at identificere risikable brugere.
 
-Hvis du vil aktivere insiderrisikoanalyse, skal du være medlem af administratoren af Insider Risk Management eller Insider Risk Management. [Udfør disse trin for at aktivere insiderrisikoanalyse](insider-risk-management-configure.md).
+Hvis du vil aktivere insiderrisikoanalyse, skal du være medlem af Insider Risk Management eller Insider Risk Management Administration. [Udfør disse trin for at aktivere insiderrisikoanalyse](insider-risk-management-configure.md).
 
 ## <a name="records-management"></a>Datastyring
 
 **Administrer elementer af høj værdi for forretnings-, juridiske eller lovmæssige krav til registrering**:
 
-Brug funktioner i Microsoft Purview Records Management til at automatisere opbevaringsplanen for organisatoriske lovmæssige, juridiske og forretningskritiske poster. Udnyt automatiseringsfunktioner fra oprettelse gennem samarbejde for at deklarere poster, bevare indhold og fjerne dem til sidst.
+Brug Microsoft Purview-datastyring funktioner til at automatisere opbevaringsplanen for organisatoriske lovmæssige, juridiske og forretningskritiske poster. Udnyt automatiseringsfunktioner fra oprettelse gennem samarbejde for at deklarere poster, bevare indhold og fjerne dem til sidst.
 
 ### <a name="step-1-mark-contents-as-records"></a>Trin 1: Markér indhold som poster  
 

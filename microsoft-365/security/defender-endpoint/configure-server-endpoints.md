@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 18ca82c4bbcb765eec419cd5b7477df8abbd8515
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 4c21d0bdf8a96347e60b79d998c0b8c64fd507a1
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490664"
+ms.locfileid: "66531094"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -146,6 +146,16 @@ Løsning:
 3. Importér certifikatet til lageret "Mellemliggende nøglecentre", der er tillid til, på den lokale computer.
 Du kan bruge PowerShell-kommandoen: Import-Certificate -FilePath .\InterCA.cer -CertStoreLocation Cert:\LocalMachine\Ca
 
+## <a name="integration-with-microsoft-defender-for-cloud"></a>Integration med Microsoft Defender for Cloud
+
+Microsoft Defender for Endpoint integreres problemfrit med Microsoft Defender for Cloud. Du kan onboarde servere automatisk, få servere overvåget af Microsoft Defender for Cloud vist i Defender for Endpoint og udføre detaljerede undersøgelser som Microsoft Defender for Cloud-kunde. 
+
+Du kan få flere oplysninger under [Integration med Microsoft Defender for Cloud](azure-server-integration.md). Servere, der er onboardet via Microsoft Defender for Cloud, får deres indledende konfiguration indstillet til at køre Defender Antivirus i [passiv tilstand](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
+
+> [!NOTE]
+> - Integrationen mellem Microsoft Defender til servere og Microsoft Defender for Endpoint er blevet udvidet til at understøtte Windows Server 2022, [Windows Server 2019 og Windows Virtual Desktop (WVD).](/azure/security-center/release-notes#microsoft-defender-for-endpoint-integration-with-azure-defender-now-supports-windows-server-2019-and-windows-10-virtual-desktop-wvd-in-preview)
+> - Overvågning af serverslutpunkt, der udnytter denne integration, er blevet deaktiveret for Office 365 GCC-kunder.
+
 ## <a name="windows-server-2012-r2-and-windows-server-2016"></a>Windows Server 2012 R2 og Windows Server 2016
 
 ### <a name="prerequisites"></a>Forudsætninger
@@ -166,7 +176,7 @@ Installationspakken kontrollerer, om følgende komponenter allerede er installer
 
 #### <a name="prerequisites-for-running-with-third-party-security-solutions"></a>Forudsætninger for at køre med sikkerhedsløsninger fra tredjepart
 
-Hvis du vil bruge en antimalwareløsning fra tredjepart, skal du køre Microsoft Defender Antivirus i passiv tilstand. Du skal huske at indstille til passiv tilstand under installationen og onboardingprocessen.
+Hvis du vil bruge en tredjepartsløsning til antimalware, skal du køre Microsoft Defender Antivirus i passiv tilstand. Du skal huske at indstille til passiv tilstand under installationen og onboardingprocessen.
 
 > [!NOTE]
 > Hvis du installerer Microsoft Defender for Endpoint på servere med McAfee Endpoint Security (ENS) eller VirusScan Enterprise (VSE), skal versionen af McAfee-platformen muligvis opdateres for at sikre, at Microsoft Defender Antivirus ikke fjernes eller deaktiveres. Du kan få flere oplysninger, herunder de specifikke versionsnummer, der kræves, i [artiklen McAfee Knowledge Center](https://kc.mcafee.com/corporate/index?page=content&id=KB88214).
@@ -193,7 +203,7 @@ Du skal downloade både **installations** - og **onboardingpakker** fra portalen
    > [!NOTE]
    > På Windows Server 2012R2 installeres Microsoft Defender Antivirus af installationspakken og vil være aktiv, medmindre du indstiller den til passiv tilstand. På Windows Server 2016 skal Microsoft Defender Antivirus installeres som en funktion (se [Skift til MDE](/microsoft-365/security/defender-endpoint/switch-to-mde-phase-2#re-enable-microsoft-defender-antivirus-on-windows-server-2016)) først og opdateres fuldt ud, før du fortsætter med installationen.
    >
-   > Hvis du kører en antimalwareløsning, der ikke er fra Microsoft, skal du sikre, at du føjer undtagelser for Microsoft Defender Antivirus ([fra denne liste over Microsoft Defender-processer under fanen Defender-processer](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)) til den løsning, der ikke er Microsoft, før installationen.  Det anbefales også at føje sikkerhedsløsninger, der ikke er fra Microsoft, til listen over undtagelser fra Defender Antivirus.
+   > Hvis du kører en antimalwareløsning, der ikke er fra Microsoft, skal du sørge for at føje undtagelser for Microsoft Defender Antivirus ([fra denne liste over Microsoft Defender-processer under fanen Defender-processer](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)) til den løsning, der ikke er Microsoft, før installationen.  Det anbefales også at føje sikkerhedsløsninger, der ikke er fra Microsoft, til listen over undtagelser fra Defender Antivirus.
 
 **Installationspakken** indeholder en MSI-fil, der installerer den Microsoft Defender for Endpoint agent.
 
@@ -374,7 +384,7 @@ Du kan offboard Windows Server 2012 R2, Windows Server 2016, Windows Server (SAC
 
 - [Offboard-enheder, der bruger Gruppepolitik](configure-endpoints-gp.md#offboard-devices-using-group-policy)
 - [Offboard-enheder, der bruger Configuration Manager](configure-endpoints-sccm.md#offboard-devices-using-configuration-manager)
-- [Offboard og overvåg enheder ved hjælp af værktøjer til Enhedshåndtering til mobilenheder](configure-endpoints-mdm.md#offboard-and-monitor-devices-using-mobile-device-management-tools)
+- [Offboard-enheder, der bruger værktøjer til Enhedshåndtering mobilenheder](configure-endpoints-mdm.md#offboard-devices-using-mobile-device-management-tools)
 - [Offboard-enheder, der bruger et lokalt script](configure-endpoints-script.md#offboard-devices-using-a-local-script)
 
 Efter offboarding kan du fortsætte med at fjerne den samlede løsningspakke på Windows Server 2012 R2 og Windows Server 2016.

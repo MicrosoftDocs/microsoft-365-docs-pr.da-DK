@@ -1,5 +1,5 @@
 ---
-title: Prøveversion af prøveversionen af Microsoft Compliance Manager Premium-vurderinger
+title: Prøveversion af prøveversionen af Microsoft Purview Compliance Manager Premium Assessments
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -14,17 +14,20 @@ ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MOE150
 - MET150
-description: Prøveversion af prøveversionen af Microsoft Compliance Manager-premiumvurderinger.
-ms.openlocfilehash: f50060fa5e9f037fbe1301496f18422684c38d3d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Prøveversion af prøveversionen af Microsoft Purview Compliance Manager Premium Assessments.
+ms.custom: trial-playbook
+ms.openlocfilehash: 3d41cde8cbf7cb6158573ed158a41dfe42d28dd5
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64759849"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530988"
 ---
-# <a name="trial-playbook-microsoft-compliance-manager-premium-assessments"></a>Playbook til prøveversion: Premium-vurderinger fra Microsoft Compliance Manager
+# <a name="trial-playbook-microsoft-purview-compliance-manager-premium-assessments"></a>Playbook til prøveversion: Premium-vurderinger fra Microsoft Purview Compliance Manager
 
-Velkommen til microsoft Compliance Manager Premium Assessment-prøveversionens playbook.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+Velkommen til prøveversionen af Microsoft Purview Compliance Manager Premium assessment.
 
 Denne playbook hjælper dig med at få mest ud af din 90-dages gratis prøveversion ved at lære dig, hvordan du bruger det omfattende sæt premiumvurderingsskabeloner (tilføjelsesprogram).
 
@@ -61,7 +64,7 @@ Overholdelsesstyring tilbyder også mere end 300 lovmæssige eller Premium-skabe
 
 Med prøvelicenser kan du bruge 25 Premium-skabeloner i 90 dage. Du kan vælge på en liste over mere end 300 Premium-skabeloner. Du behøver ikke at vælge alle 25 skabeloner på én gang. Når de er valgt, er de licenserede skabeloner tilgængelige til brug inden for 4 timer efter, at du har fået din prøvelicens.
 
-Der er to måder at aktivere prøveversionen af tilføjelsesprogrammet til Premium vurdering på: via dashboardet Overholdelsesstyring eller via prøveversionen af Microsoft 365 Overholdelse.
+Der er to måder at aktivere prøveversionen af Premium Assessment-tilføjelsesprogrammet på: via dashboardet Overholdelsesstyring eller via Prøveversionen af Microsoft Purview.
 
 ### <a name="enable-trial-via-the-compliance-manager-dashboard"></a>Aktivér prøveversion via dashboardet Overholdelsesstyring
 
@@ -85,7 +88,7 @@ Når du har startet prøveversionen af Premium-vurderingen, får du vist en over
 - Links til tilgængelige skabeloner
 - Tid tilbage i prøveperiode
 
-## <a name="additional-resources"></a>Flere ressourcer
+## <a name="additional-resources"></a>Yderligere ressourcer
 
 **Microsoft Docs**: Få detaljerede oplysninger om, hvordan Overholdelsesstyrings premiumvurderinger fungerer, og hvordan du bedst implementerer dem for din organisation. Besøg [Docs](compliance-manager-templates.md).
 

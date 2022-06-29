@@ -21,12 +21,12 @@ search.appverid:
 description: Få mere at vide om, hvordan du bruger PowerShell-cmdlet'en AllowSelfServicePurchase til at slå køb via selvbetjening til eller fra.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 4/7/2022
-ms.openlocfilehash: e4423892f2dc045a9729e68519c85d471838d5ac
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 7c9ac6a1e58049d188d4cd29441d8e0689f2c787
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66042181"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530832"
 ---
 # <a name="use-allowselfservicepurchase-for-the-mscommerce-powershell-module"></a>Brug AllowSelfServicePurchase til MSCommerce PowerShell-modulet
 
@@ -45,7 +45,7 @@ Hvis du vil bruge **MSCommerce PowerShell-modulet** , skal du bruge:
 - En Windows 10 enhed
 - PowerShell 5 eller nyere. PowerShell 6.x/7.x understøttes i øjeblikket ikke i dette modul.
 - Administratortilladelse til enheden
-- Rolle som global administrator eller faktureringsadministrator for din lejer
+- Global eller fakturerings-Administration rolle for din lejer
 
 ## <a name="install-the-mscommerce-powershell-module"></a>Installér MSCommerce PowerShell-modulet
 
@@ -65,7 +65,7 @@ Når du har installeret modulet på din Windows 10 enhed, importerer du det dere
 Import-Module -Name MSCommerce
 ```
 
-## <a name="connect-to-mscommerce-with-your-credentials"></a>Forbind til MSCommerce med dine legitimationsoplysninger
+## <a name="connect-to-mscommerce-with-your-credentials"></a>Opret forbindelse til MSCommerce med dine legitimationsoplysninger
 
 Hvis du vil oprette forbindelse til PowerShell-modulet med dine legitimationsoplysninger, skal du køre følgende kommando.
 
@@ -73,7 +73,7 @@ Hvis du vil oprette forbindelse til PowerShell-modulet med dine legitimationsopl
 Connect-MSCommerce
 ```
 
-Denne kommando forbinder den aktuelle PowerShell-session med en Azure Active Directory lejer. Kommandoen beder dig om et brugernavn og en adgangskode for den lejer, du vil oprette forbindelse til. Hvis multifaktorgodkendelse er aktiveret for dine legitimationsoplysninger, kan du bruge den interaktive indstilling til at logge på.
+Denne kommando forbinder den aktuelle PowerShell-session med en Azure Active Directory-lejer. Kommandoen beder dig om et brugernavn og en adgangskode for den lejer, du vil oprette forbindelse til. Hvis multifaktorgodkendelse er aktiveret for dine legitimationsoplysninger, kan du bruge den interaktive indstilling til at logge på.
 
 ## <a name="view-details-for-allowselfservicepurchase"></a>Få vist oplysninger om AllowSelfServicePurchase
 
@@ -95,7 +95,7 @@ I følgende tabel vises de tilgængelige produkter og deres **ProductId**.
 
 | Produkt | Instruktion |
 |-----------------------------|--------------|
-| Power Apps pr. bruger | CFQ7TTC0LH2H |
+| Power Apps pr. bruger* | CFQ7TTC0LH2H |
 | Power Automate pr. bruger | CFQ7TTC0KP0N |
 | Power Automate RPA | CFQ7TTC0KXG6  |
 | Power BI Premium (separat) | CFQ7TTC0KXG7  |
@@ -107,6 +107,7 @@ I følgende tabel vises de tilgængelige produkter og deres **ProductId**.
 | Windows 365 Enterprise | CFQ7TTC0HHS9 |
 | Windows 365 Business | CFQ7TTC0J203 |
 | Windows 365 Business med Windows Hybrid-fordel | CFQ7TTC0HX99 |
+| Microsoft 365 F3 | CFQ7TTC0LH05 |
 
 *Disse id'er er blevet ændret. Hvis du tidligere har blokeret produkter ved hjælp af de gamle id'er, blokeres de automatisk ved hjælp af de nye id'er. Der kræves ikke yderligere arbejde.
 
@@ -134,7 +135,7 @@ Update-MSCommerceProductPolicy -PolicyId AllowSelfServicePurchase -ProductId CFQ
 
 ## <a name="example-script-to-disable-allowselfservicepurchase"></a>Eksempelscript til deaktivering af AllowSelfServicePurchase
 
-I følgende eksempel gennemgås, hvordan du importerer **MSCommerce-modulet**, logger på med din konto, henter **ProductId** for Power Automate pr. bruger og derefter deaktiverer **AllowSelfServicePurchase** for det pågældende produkt.
+I følgende eksempel gennemgår vi, hvordan du importerer **MSCommerce-modulet** , logger på med din konto, henter **ProductId** for Power Automate pr. bruger og derefter deaktiverer **AllowSelfServicePurchase** for det pågældende produkt.
 
 ```powershell
 Import-Module -Name MSCommerce
@@ -184,6 +185,6 @@ Uninstall-Module -Name MSCommerce
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Administrer køb via selvbetjening (administrator)](manage-self-service-purchases-admins.md) (artikel)
+[Administrer køb via selvbetjening (Administration)](manage-self-service-purchases-admins.md) (artikel)
 
 [Ofte stillede spørgsmål om køb via selvbetjening](self-service-purchase-faq.yml) (artikel)

@@ -297,7 +297,7 @@
         - name: Oversigt
           href: privileged-access-management-solution-overview.md
         - name: Få mere at vide om Privileged Access Management
-          href: privileged-access-management-overview.md
+          href: privileged-access-management.md
         - name: Kom i gang med Privileged Access Management
           href: privileged-access-management-configuration.md
     - name: Beskyt bruger- og enhedsadgang
@@ -601,6 +601,8 @@
               href: retention-policies-exchange.md
         - name: Almindelige indstillinger for opbevaring og sletning
           href: retention-settings.md
+        - name: PowerShell-cmdlet'er til opbevaring og sletning
+          href: retention-cmdlets.md
         - name: Begrænsninger for opbevaring og sletning
           href: retention-limits.md
     - name: Administration af datalivscyklus

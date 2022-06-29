@@ -20,16 +20,16 @@ search.appverid:
 - GEA150
 description: Få mere at vide om Azure Information Protection (AIP) til Office 365, der drives af 21Vianet, og hvordan du konfigurerer det for kunder i Kina.
 monikerRange: o365-21vianet
-ms.openlocfilehash: 0f495139a807d4a0eeb3181626717c6d5061fc38
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 80cd8d9b848235fc3486ad1952fa58f9d7d1570d
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64935209"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530162"
 ---
 # <a name="azure-information-protection-support-for-office-365-operated-by-21vianet"></a>Azure Information Protection support til Office 365, der drives af 21Vianet
 
-I denne artikel beskrives forskellene mellem understøttelse af Azure Information Protection (AIP) for Office 365, der drives af 21Vianet og kommercielle tilbud, samt specifikke instruktioner til konfiguration af AIP til kunder i Kina&mdash;, herunder hvordan du installerer AIP-scannerjob i det lokale miljø og administrerer indholdsscanningsjob.
+I denne artikel beskrives forskellene mellem understøttelse af Azure Information Protection (AIP) for Office 365, der drives af 21Vianet og kommercielle tilbud, samt specifikke instruktioner til konfiguration af AIP til kunder i Kina&mdash;, herunder hvordan du installerer AIP-scanneren i det lokale miljø og administrerer job til indholdsscanning.
 
 ## <a name="differences-between-aip-for-office-365-operated-by-21vianet-and-commercial-offerings"></a>Forskelle mellem AIP for Office 365, der drives af 21Vianet, og kommercielle tilbud
 
@@ -37,7 +37,7 @@ Selvom vores mål er at levere alle kommercielle funktioner og funktionalitet ti
 
 Følgende liste indeholder de eksisterende huller mellem AIP for Office 365 drevet af 21Vianet og vores kommercielle tilbud fra og med januar 2021:
 
-- AD RMS-kryptering (Active Directory Rights Management-tjenester) understøttes kun i Microsoft 365 Apps for enterprise (build 11731.10000 eller nyere). Office Professional Plus understøtter ikke AD RMS.
+- AD RMS-kryptering (Active Directory Rights Management Services) understøttes kun i Microsoft 365 Apps for enterprise (build 11731.10000 eller nyere). Office Professional Plus understøtter ikke AD RMS.
 
 - Overførsel fra AD RMS til AIP er i øjeblikket ikke tilgængelig.
   
@@ -45,7 +45,7 @@ Følgende liste indeholder de eksisterende huller mellem AIP for Office 365 drev
   
 - Deling af dokumenter og vedhæftede filer med brugere i det kommercielle cloudmiljø er i øjeblikket ikke tilgængelig. Dette omfatter Office 365, der drives af 21Vianet-brugere i det kommercielle cloudmiljø, som ikke Office 365 drevet af 21Vianet-brugere i den kommercielle cloud, og brugere med en RMS for Individuals-licens.
   
-- IRM med SharePoint (IRM-beskyttede websteder og biblioteker) er i øjeblikket ikke tilgængelig.
+- IRM med SharePoint (IRM-beskyttede websteder og biblioteker) er ikke tilgængelig i øjeblikket.
   
 - Mobilenhedsudvidelsen til AD RMS er ikke tilgængelig i øjeblikket.
 
@@ -62,7 +62,7 @@ Følgende liste indeholder de eksisterende huller mellem AIP for Office 365 drev
 Sådan konfigurerer du AIP for kunder i Kina:
 1. [Aktivér Rights Management for lejeren](#step-1-enable-rights-management-for-the-tenant).
 
-1. [Tilføj Tjenesteprincipalen Microsoft Purview Information Protection Synkroniser tjeneste](#step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal).
+1. [Tilføj tjenesteprincipalen Microsoft Information Protection synkroniser](#step-2-add-the-microsoft-information-protection-sync-service-service-principal) tjeneste.
 
 1. [Konfigurer DNS-kryptering](#step-3-configure-dns-encryption).
 
@@ -81,24 +81,24 @@ Hvis krypteringen skal fungere korrekt, skal RMS være aktiveret for lejeren.
     1. Start PowerShell som administrator.
     2. Hvis AIPService-modulet ikke er installeret, skal du køre `Install-Module AipService`.
     3. Importér modulet ved hjælp af `Import-Module AipService`.
-    4. Forbind til tjenesten ved hjælp af `Connect-AipService -environmentname azurechinacloud`.
+    4. Opret forbindelse til tjenesten ved hjælp af `Connect-AipService -environmentname azurechinacloud`.
     5. Kør `(Get-AipServiceConfiguration).FunctionalState` , og kontrollér, om tilstanden er `Enabled`.
 
 2. Hvis funktionstilstanden er `Disabled`, skal du køre `Enable-AipService`.
 
-### <a name="step-2-add-the-microsoft-purview-information-protection-sync-service-service-principal"></a>Trin 2: Tilføj Tjenesteprincipalen Microsoft Purview Information Protection synkroniser tjeneste
+### <a name="step-2-add-the-microsoft-information-protection-sync-service-service-principal"></a>Trin 2: Tilføj tjenesteprincipalen Microsoft Information Protection synkroniser tjeneste
 
-**Tjenesteprincipalen Microsoft Purview Information Protection Synkroniseringstjeneste** er som standard ikke tilgængelig i Azure China-lejere og kræves til Azure Information Protection. Opret denne tjenesteprincipal manuelt via Azure Az PowerShell-modulet.
+Tjenesteprincipalen **Microsoft Information Protection synkroniser** tjeneste er som standard ikke tilgængelig i Azure China-lejere og kræves til Azure Information Protection. Opret denne tjenesteprincipal manuelt via Azure Az PowerShell-modulet.
 
 1. Hvis du ikke har installeret Azure Az-modulet, skal du installere det eller bruge en ressource, hvor Azure Az-modulet er forudinstalleret, f.eks [. Azure Cloud Shell](/azure/cloud-shell/overview). Du kan få flere oplysninger under [Installér Azure Az PowerShell-modulet](/powershell/azure/install-az-ps).
 
-1. Forbind til tjenesten ved hjælp af [cmdlet'en Forbind-AzAccount](/powershell/module/az.accounts/Connect-AzAccount) og `azurechinacloud` miljønavnet:
+1. Opret forbindelse til tjenesten ved hjælp af [Connect-AzAccount-cmdlet'en](/powershell/module/az.accounts/Connect-AzAccount) `azurechinacloud` og miljønavnet:
 
     ```powershell
     Connect-azaccount -environmentname azurechinacloud
     ```
 
-1. Opret **tjenesteprincipalen Microsoft Purview Information Protection synkroniser tjeneste** manuelt ved hjælp af cmdlet'en [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal) og `870c4f2e-85b6-4d43-bdda-6ed9a579b725` program-id'et for Microsoft Purview Information Protection Synkroniseringstjeneste:
+1. Opret **tjenesteprincipalen Microsoft Information Protection synkroniser** tjenesten manuelt ved hjælp af [new-AzADServicePrincipal-cmdlet'en](/powershell/module/az.resources/new-azadserviceprincipal) og `870c4f2e-85b6-4d43-bdda-6ed9a579b725` program-id'et for Microsoft Purview Information Protection-synkroniseringstjenesten:
 
     ```powershell 
     New-AzADServicePrincipal -ApplicationId 870c4f2e-85b6-4d43-bdda-6ed9a579b725
@@ -108,7 +108,7 @@ Hvis krypteringen skal fungere korrekt, skal RMS være aktiveret for lejeren.
 
 ### <a name="step-3-configure-dns-encryption"></a>Trin 3: Konfigurer DNS-kryptering
 
-Hvis kryptering skal fungere korrekt, skal Office klientprogrammer oprette forbindelse til forekomsten af tjenesten i Kina og bootstrap derfra. Hvis du vil omdirigere klientprogrammer til den rette tjenesteforekomst, skal lejeradministratoren konfigurere en DNS SRV-post med oplysninger om URL-adressen til Azure RMS. Uden DNS SRV-posten forsøger klientprogrammet som standard at oprette forbindelse til den offentlige cloudforekomst og mislykkes.
+Hvis krypteringen skal fungere korrekt, skal Office-klientprogrammer oprette forbindelse til Forekomsten af tjenesten i Kina og bootstrap derfra. Hvis du vil omdirigere klientprogrammer til den rette tjenesteforekomst, skal lejeradministratoren konfigurere en DNS SRV-post med oplysninger om URL-adressen til Azure RMS. Uden DNS SRV-posten forsøger klientprogrammet som standard at oprette forbindelse til den offentlige cloudforekomst og mislykkes.
 
 Antagelsen er også, at brugerne logger på med et brugernavn, der er baseret på det lejerejede domæne (f.eks. `joe@contoso.cn`), og ikke brugernavnet `onmschina` (f.eks. `joe@contoso.onmschina.cn`). Domænenavnet fra brugernavnet bruges til DNS-omdirigering til den korrekte tjenesteforekomst.
 
@@ -118,7 +118,7 @@ Antagelsen er også, at brugerne logger på med et brugernavn, der er baseret p�
 
     1. Start PowerShell som administrator.
     2. Hvis AIPService-modulet ikke er installeret, skal du køre `Install-Module AipService`.
-    3. Forbind til tjenesten ved hjælp af `Connect-AipService -environmentname azurechinacloud`.
+    3. Opret forbindelse til tjenesten ved hjælp af `Connect-AipService -environmentname azurechinacloud`.
     4. Kør `(Get-AipServiceConfiguration).RightsManagementServiceId` for at hente RMS-id'et.
 
 2. Log på din DNS-udbyder, naviger til dns-indstillingerne for domænet, og tilføj derefter en ny SRV-post.
@@ -157,7 +157,7 @@ Du kan finde flere oplysninger under:
 - [Hurtig start til AIP: Installér AIP-klienten](/azure/information-protection/quickstart-deploy-client)
 - [AIP-administratorvejledning](/azure/information-protection/rms-client/clientv2-admin-guide)
 - [AIP-brugervejledning](/azure/information-protection/rms-client/clientv2-user-guide)
-- [Få mere at vide om Microsoft 365 følsomhedsmærkater](../../compliance/sensitivity-labels.md)
+- [Få mere at vide om Følsomhedsmærkater fra Microsoft 365](../../compliance/sensitivity-labels.md)
 
 ### <a name="step-5-configure-aip-apps-on-windows"></a>Trin 5: Konfigurer AIP-apps på Windows
 
@@ -197,23 +197,23 @@ Du kan få flere oplysninger under [Hvad er Azure Information Protection unified
     > Du kan bruge det samme klyngenavn i kommandoen [Install-AIPScanner](/powershell/module/azureinformationprotection/install-aipscanner) til at knytte flere scannernoder til den samme klynge. Brug af den samme klynge til flere scannernoder gør det muligt for flere scannere at arbejde sammen om at udføre dine scanninger.
     > 
 
-1. Kontrollér, at tjenesten nu er installeret ved hjælp af **Administrative** **ToolsServices** > .
+1. Kontrollér, at tjenesten nu er installeret ved hjælp af **Administrative Tools** > **Services**.
 
     Den installerede tjeneste hedder **Azure Information Protection Scanner** og er konfigureret til at køre ved hjælp af den scannertjenestekonto, du har oprettet.
 
-1. Få et Azure-token, der skal bruges sammen med din scanner. Et Azure AD-token gør det muligt for scanneren at godkende til Azure Information Protection-tjenesten, hvilket gør det muligt for scanneren at køre ikke-interaktivt. 
+1. Få et Azure-token, der skal bruges sammen med din scanner. Et Azure AD token gør det muligt for scanneren at godkende til Azure Information Protection-tjenesten, hvilket gør det muligt for scanneren at køre ikke-interaktivt. 
 
-    1. Åbn Azure Portal, og opret et Azure AD-program for at angive et adgangstoken til godkendelse. Du kan få flere oplysninger under [Sådan navngiver du filer, der ikke er interaktivt til Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
+    1. Åbn Azure Portal, og opret et Azure AD program for at angive et adgangstoken til godkendelse. Du kan få flere oplysninger under [Sådan navngiver du filer, der ikke er interaktivt til Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
     
         > [!TIP]
-        > Når du opretter og konfigurerer Azure [AD-programmer til kommandoen Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) , viser ruden **Anmodnings-API-tilladelser** de **API'er, som min organisation bruger** , i stedet for fanen **Microsoft API'er** . Vælg de **API'er, som min organisation bruger** til, og vælg derefter **Azure Rights Management Services**. 
+        > Når du opretter og konfigurerer Azure AD programmer til kommandoen [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), viser ruden **Anmodnings-API-tilladelser** de **API'er, som min organisation bruger**, i stedet for fanen **Microsoft API'er**. Vælg de **API'er, som min organisation bruger** til at vælge **Azure Rights Management Services**. 
         >
 
-    1. Log **på lokalt** for installationen fra computeren med Windows Server, hvis din scannertjenestekonto er tildelt den, skal du logge på med denne konto og starte en PowerShell-session. 
+    1. Hvis din scannertjenestekonto fra Windows Server-computeren er tildelt **log på lokalt** for installationen, skal du logge på med denne konto og starte en PowerShell-session. 
     
         Hvis din scannertjenestekonto ikke kan tildeles log **på lokalt** for installationen, skal du bruge parameteren *OnBehalfOf* med [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) som beskrevet i [Sådan navngiver du filer, der ikke er interaktivt for Azure Information Protection](/azure/information-protection/rms-client/clientv2-admin-guide-powershell#how-to-label-files-non-interactively-for-azure-information-protection).
 
-    1. Kør [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), og angiv værdier, der er kopieret fra dit Azure AD-program:
+    1. Kør [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), og angiv værdier, der er kopieret fra dit Azure AD program:
 
       ```PowerShell
       Set-AIPAuthentication -AppId <ID of the registered app> -AppSecret <client secret sting> -TenantId <your tenant ID> -DelegatedUser <Azure AD account>
@@ -227,7 +227,7 @@ Du kan få flere oplysninger under [Hvad er Azure Information Protection unified
       Acquired application access token on behalf of CONTOSO\scanner.
       ```
 
-    Scanneren har nu et token, der skal godkendes i Azure AD. Dette token er gyldigt i et år, to år eller aldrig i henhold til din konfiguration af **webapp/API-klienthemmeligheden** i Azure AD. Når tokenet udløber, skal du gentage denne procedure.
+    Scanneren har nu et token, der skal godkendes for at Azure AD. Dette token er gyldigt i et år, to år eller aldrig i henhold til din konfiguration af **webapp/API-klienthemmeligheden** i Azure AD. Når tokenet udløber, skal du gentage denne procedure.
 
 1. Kør [Set-AIPScannerConfiguration-cmdlet'en](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) for at indstille scanneren til at fungere i offlinetilstand. Køre:
 
@@ -263,7 +263,7 @@ Du kan få flere oplysninger under [Hvad er Azure Information Protection unified
     Brug en af følgende syntakser, afhængigt af den type lager, du tilføjer:
 
     - Til et netværksshare skal du bruge `\\Server\Folder`.
-    - For et SharePoint bibliotek skal du bruge `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
+    - Til et SharePoint-bibliotek skal du bruge `http://sharepoint.contoso.com/Shared%20Documents/Folder`.
     - For en lokal sti: `C:\Folder`
     - For en UNC-sti: `\\Server\Folder`
 

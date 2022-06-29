@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 2aee32adca1799fca84932991dc128a6a3f64ca7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 61541cf74640035845ac04889834d12ea6730ad8
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492441"
+ms.locfileid: "66530302"
 ---
 # <a name="protect-your-network"></a>Beskyt dit netværk
 
@@ -38,6 +38,8 @@ ms.locfileid: "66492441"
 
 **Platforme**
 - Windows
+- Macos
+- Linux
 
 Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
@@ -52,7 +54,7 @@ Se denne video for at få mere at vide om, hvordan Netværksbeskyttelse hjælper
 
 ## <a name="requirements-for-network-protection"></a>Krav til netværksbeskyttelse
 
-Netværksbeskyttelse kræver Windows 10 eller 11 (Pro eller Enterprise) eller Windows Server version 1803 eller nyere og Microsoft Defender Antivirus beskyttelse i realtid.
+Netværksbeskyttelse kræver Windows 10 eller 11 (Pro eller Enterprise), Windows Server version 1803 eller nyere, macOS version 11 eller nyere eller Defender Understøttede Linux-versioner og Microsoft Defender Antivirus beskyttelse i realtid.
 
 | Windows-version | Microsoft Defender Antivirus |
 |:---|:---|

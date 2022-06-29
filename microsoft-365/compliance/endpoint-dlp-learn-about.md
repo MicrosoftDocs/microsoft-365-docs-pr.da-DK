@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Forebyggelse af datatab for slutpunkter udvider overvågningen af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer er gjort synlige i løsningerne til overholdelse af angivne standarder '
-ms.openlocfilehash: 54f2605e815c98242a66b4d2be844ee59a2699e8
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 015e219d1b3ed41605ae3b331488d8dec6e7751f
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078826"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530898"
 ---
 # <a name="learn-about-endpoint-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab ved slutpunkt
 
@@ -32,17 +32,17 @@ ms.locfileid: "66078826"
 
 Du kan bruge Microsoft Purview Forebyggelse af datatab (DLP) til at overvåge de handlinger, der udføres på elementer, du har besluttet dig for at være følsomme, og til at forhindre utilsigtet deling af disse elementer. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
 
-**Forebyggelse af datatab for slutpunkter** (Slutpunkt DLP) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i DLP til følsomme elementer, der fysisk er gemt på Windows 10, Windows 11 og macOS (Catalina 10.15 og nyere). Når enheder er onboardet i Microsoft Purview løsninger, bliver oplysningerne om, hvad brugerne foretager sig med følsomme elementer, synlige i [Aktivitetsoversigt](data-classification-activity-explorer.md), og du kan gennemtvinge beskyttende handlinger på disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).
+**Forebyggelse af datatab for slutpunkter** (Slutpunkt DLP) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i DLP til følsomme elementer, der fysisk gemmes på Windows 10, Windows 11 og macOS-enheder (Catalina 10.15 og nyere). Når enheder er onboardet i Microsoft Purview-løsninger, bliver oplysningerne om, hvad brugerne foretager sig med følsomme elementer, synlige i [Aktivitetsoversigt](data-classification-activity-explorer.md) , og du kan gennemtvinge beskyttende handlinger på disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).
 
 > [!TIP]
-> Hvis du leder efter enhedsstyring til flytbart lager, [skal du se Microsoft Defender for Endpoint Flytbare Storage Access Control til enhedshåndtering](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
+> Hvis du leder efter enhedsstyring til flytbart lager, [skal du se Microsoft Defender for Endpoint Device Control Removable Storage Access Control](../security/defender-endpoint/device-control-removable-storage-access-control.md#microsoft-defender-for-endpoint-device-control-removable-storage-access-control).
 
 > [!NOTE]
-> I Microsoft Purview forekommer DLP-politikevalueringen af følsomme elementer centralt, så der er ingen tidsforskydning for politikker og politikopdateringer, der skal distribueres til individuelle enheder. Når en politik opdateres i Overholdelsescenter, tager det normalt ca. en time, før disse opdateringer synkroniseres på tværs af tjenesten. Når politikopdateringer er synkroniseret, evalueres elementer på målrettede enheder automatisk igen, næste gang de tilgås eller ændres.
+> I Microsoft Purview forekommer DLP-politikevalueringen af følsomme elementer centralt, så der er ingen tidsforskydning for, at politikker og politikopdateringer distribueres til individuelle enheder. Når en politik opdateres i Overholdelsescenter, tager det normalt ca. en time, før disse opdateringer synkroniseres på tværs af tjenesten. Når politikopdateringer er synkroniseret, evalueres elementer på målrettede enheder automatisk igen, næste gang de tilgås eller ændres.
 
 ## <a name="endpoint-activities-you-can-monitor-and-take-action-on"></a>Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på
 
-Slutpunkt DLP giver dig mulighed for at overvåge og administrere følgende typer aktiviteter, som brugere foretager på følsomme elementer, der fysisk er gemt Windows 10, Windows 11 eller macOS enheder.
+Slutpunkt DLP giver dig mulighed for at overvåge og administrere følgende typer aktiviteter, som brugere foretager på følsomme elementer, der fysisk er gemt Windows 10, Windows 11 eller macOS-enheder.
 
 |Aktivitet |Beskrivelse  |Windows 10 1809 og nyere / Windows 11| macOS Catalina 10.15| Kan overvåges/begrænses|
 |---------|---------|---------|---------|---------|
@@ -52,7 +52,7 @@ Slutpunkt DLP giver dig mulighed for at overvåge og administrere følgende type
 |kopiér til et netværksshare    |Registrerer, når en bruger forsøger at kopiere et element til et netværksshare eller et tilknyttet netværksdrev |Understøttes|Understøttes         |kan overvåges og begrænses|
 |udskriv et dokument    |Registrerer, når en bruger forsøger at udskrive et beskyttet element på en lokal printer eller netværksprinter.|Understøttes|Understøttes|kan overvåges og begrænses         |
 |kopiér til en fjernsession|Registrerer, når en bruger forsøger at kopiere et element til en fjernskrivebordssession |Understøttes|understøttes ikke|  kan overvåges og begrænses|
-|kopiér til en Bluetooth enhed|Registrerer, når en bruger forsøger at kopiere et element til en ikke-tilladt Bluetooth app (som defineret på listen over ikke-tilladte Bluetooth aps i DLP-indstillingerne for slutpunktet).|Understøttes|understøttes ikke| kan overvåges og begrænses|
+|kopiér til en Bluetooth-enhed|Registrerer, når en bruger forsøger at kopiere et element til en Bluetooth-app, der ikke er tilladt (som defineret på listen over ikke-tilladte Bluetooth-aps i indstillingerne for Slutpunkt DLP).|Understøttes|understøttes ikke| kan overvåges og begrænses|
 |opret et element|Registrerer, når en bruger opretter et element|Understøttes |Understøttes |kan overvåges|
 |omdøb et element|Registrerer, når en bruger omdøber et element|Understøttes |Understøttes |kan overvåges|
 
@@ -71,8 +71,8 @@ Se [Design en politik til forebyggelse af datatab](dlp-policy-design.md) for at 
 Slutpunkt DLP understøtter overvågning af disse filtyper. DLP overvåger aktiviteterne for disse filtyper, selvom der ikke er et politikmatch. 
 
 - Word-filer
-- PowerPoint filer
-- Excel filer
+- PowerPoint-filer
+- Excel-filer
 - PDF-filer
 - .csv filer
 - .tsv-filer
@@ -88,7 +88,7 @@ Slutpunkt DLP understøtter overvågning af disse filtyper. DLP overvåger aktiv
 Hvis du kun vil have overvågningsdata fra politikforekomster, kan du slå **altid overvågning af filaktivitet for enheder** fra i de globale DLP-indstillinger for slutpunktet.
 
 > [!NOTE]
-> Hvis indstillingen **Overvåg altid filaktivitet for enheder** er slået til, overvåges aktiviteter på alle Word-, PowerPoint-, Excel-, PDF- og .csv-filer altid, selvom enheden ikke er målrettet efter nogen politik.
+> Hvis indstillingen **Overvåg altid filaktivitet for enheder** er slået til, overvåges aktiviteter på alle Word-, PowerPoint-, Excel-, PDF- og .csv-filer altid, også selvom enheden ikke er målrettet efter nogen politik.
 
 > [!TIP]
 > Hvis du vil sikre, at aktiviteter overvåges for alle understøttede filtyper, skal du oprette en [brugerdefineret DLP-politik](create-test-tune-dlp-policy.md).
@@ -115,7 +115,7 @@ Hvis filtyperne ikke dækker de filtypenavne, du skal angive som en betingelse i
 > Indstillingerne for filtypenavne og filtyper kan ikke bruges som betingelser i den samme regel. Hvis du vil bruge dem som betingelser i den samme politik, skal de være i separate regler. 
 
 > [!IMPORTANT]
-> Disse Windows versioner understøtter filtyper og filtypefunktioner:
+> Disse Windows-versioner understøtter filtyper og filtypenavnsfunktioner:
 >- Windows 10 version 20H1/20H2/21H1 (KB 5006738)
 >- Windows 10 version 19H1/19H2 (KB 5007189)
 >- Windows 10 RS5 (KB 5006744)
@@ -127,7 +127,7 @@ Der er et par ekstra begreber, som du skal være opmærksom på, før du går i 
 
 ### <a name="enabling-device-management"></a>Aktivering af enhedshåndtering
 
-Enhedshåndtering er den funktionalitet, der muliggør indsamling af telemetri fra enheder og bringer den ind i Microsoft Purview løsninger som Endpoint DLP og styring af [insiderrisiko](insider-risk-management.md). Du skal onboarde alle de enheder, du vil bruge som placeringer i DLP-politikker.
+Enhedshåndtering er den funktionalitet, der muliggør indsamling af telemetri fra enheder og overfører den til Microsoft Purview-løsninger, f.eks. Endpoint DLP og [styring af insiderrisiko](insider-risk-management.md). Du skal onboarde alle de enheder, du vil bruge som placeringer i DLP-politikker.
 
 > [!div class="mx-imgBorder"]
 > ![aktivere enhedshåndtering.](../media/endpoint-dlp-learn-about-1-enable-device-management.png)
@@ -143,9 +143,9 @@ Onboarding og offboarding håndteres via scripts, du downloader fra Enhedshåndt
 > [!div class="mx-imgBorder"]
 > ![onboardingside for enheden.](../media/endpoint-dlp-learn-about-3-device-onboarding-page.png)
 
- Brug procedurerne i [Introduktion til Microsoft 365 Slutpunkt DLP](endpoint-dlp-getting-started.md) til at onboarde enheder.
+ Brug procedurerne i [Introduktion til Microsoft 365 Endpoint DLP](endpoint-dlp-getting-started.md) til at onboarde enheder.
 
-Hvis du har onboardet enheder via [Microsoft Defender for Endpoint](/windows/security/threat-protection/), vises disse enheder automatisk på listen over enheder. Du kan **slå enhedsovervågning** til for at bruge slutpunktet DLP.
+Hvis du har onboardet enheder via [Microsoft Defender for Endpoint](../security/defender-endpoint/configure-machines-onboarding.md), vises disse enheder automatisk på listen over enheder. Det skyldes, at onboarding til Defender også onboarder enheder til DLP. Du skal kun **slå enhedsovervågning** til for at bruge slutpunktet DLP. .
 
 > [!div class="mx-imgBorder"]
 > ![liste over administrerede enheder.](../media/endpoint-dlp-learn-about-2-device-list.png)
@@ -203,8 +203,8 @@ Hvis en fil f.eks. kopieres til et flytbart USB-medie, får du vist disse attrib
 
 Nu, hvor du har lært om Endpoint DLP, er dine næste trin:
 
-1. [Oversigt over onboarding af Windows 10- eller Windows 11 enheder i Microsoft Purview](device-onboarding-overview.md)
-1. [Oversigt over onboarding af macOS enheder i Microsoft Purview](device-onboarding-macos-overview.md)
+1. [Oversigt over onboarding af Windows 10 eller Windows 11 enheder i Microsoft Purview](device-onboarding-overview.md)
+1. [Oversigt over onboarding af macOS-enheder i Microsoft Purview](device-onboarding-macos-overview.md)
 1. [Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt](dlp-configure-endpoint-settings.md)
 1. [Brug forebyggelse af datatab ved slutpunkt](endpoint-dlp-using.md)
 

@@ -17,18 +17,18 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 3c11e531e8b4706128e1519b790046f800827d67
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: ed3d06e1719b51d0914c89e6283c8b53c2ab0812
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285012"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530504"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
->Følgende funktioner er tilgængelige som prøveversion eller offentligt tilgængelige i den seneste version af Microsoft 365 Defender.
+Viser de nye funktioner og funktioner i Microsoft 365 Defender. 
 
 RSS-feed: Få besked, når denne side opdateres, ved at kopiere og indsætte følgende URL-adresse i din feedlæser:
 
@@ -45,12 +45,15 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 
 Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescenteret](https://admin.microsoft.com/Adminportal/Home#/MessageCenter). 
 
+## <a name="june-2022"></a>Juni 2022
+- (eksempelvisning) Tabellerne [DeviceTvmInfoGathering](advanced-hunting-devicetvminfogathering-table.md) og [DeviceTvmInfoGatheringKB](advanced-hunting-devicetvminfogatheringkb-table.md) er nu tilgængelige i det avancerede jagtskema. Brug disse tabeller til at jage gennem vurderingshændelser i Defender Vulnerability Management, herunder status for forskellige konfigurationer og enheders tilstande for angrebsoverfladen.
+
 ## <a name="may-2022"></a>Maj 2022
 - (eksempelvisning) I overensstemmelse med den nyligt annoncerede udvidelse til en ny tjenestekategori kaldet [Microsoft Security Experts](https://aka.ms/MicrosoftSecurityExperts) introducerer vi tilgængeligheden af [Microsoft Defender Experts for Hunting](defenderexpertsforhuntingprev.md) (Defender Experts for Hunting) til offentlig prøveversion. Defender Experts for Hunting er til kunder, der har et robust center for sikkerhedshandlinger, men som gerne vil have Microsoft til proaktivt at jage efter trusler på tværs af Microsoft Defender-data, herunder slutpunkter, Office 365, cloudprogrammer og identitet. 
 
 ## <a name="april-2022"></a>April 2022
 - (eksempelvisning) [Handlinger](advanced-hunting-take-action.md) kan nu udføres på mails direkte fra resultaterne af jagtforespørgslen. Mails kan flyttes til andre mapper eller slettes permanent. 
-- (eksempelvisning) Den nye [`UrlClickEvents` tabel](advanced-hunting-urlclickevents-table.md) i avanceret jagt kan bruges til at jage efter trusler som phishing-kampagner og mistænkelige links baseret på oplysninger, der kommer fra klik på Pengeskab links i mails, Microsoft Teams og Office 365 apps.
+- (eksempelvisning) Den nye [`UrlClickEvents` tabel](advanced-hunting-urlclickevents-table.md) i avanceret jagt kan bruges til at jage efter trusler som phishing-kampagner og mistænkelige links baseret på oplysninger, der kommer fra klik på sikre links i mails, Microsoft Teams og Office 365 apps.
 
 ## <a name="march-2022"></a>Marts 2022
 
@@ -63,7 +66,7 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 ## <a name="november-2021"></a>November 2021
 
-- (eksempelvisning) Tilføjelsesprogrammet programstyring til Defender for Cloud Apps er nu tilgængeligt i Microsoft 365 Defender. Appstyring indeholder en funktionalitet til administration af sikkerhed og politik, der er udviklet til OAuth-aktiverede apps, der har adgang til Microsoft 365 data via Microsoft Graph API'er. Appstyring giver fuld synlighed, afhjælpning og styring af, hvordan disse apps og deres brugere får adgang til, bruger og deler dine følsomme data, der er gemt i Microsoft 365, via handlingsbaseret indsigt og automatiserede politikbeskeder og handlinger. [Få mere at vide om programstyring](/cloud-app-security/app-governance-manage-app-governance).
+- (eksempelvisning) Tilføjelsesprogrammet programstyring til Defender for Cloud Apps er nu tilgængeligt i Microsoft 365 Defender. Appstyring indeholder en funktionalitet til administration af sikkerhed og politik, der er udviklet til OAuth-aktiverede apps, der har adgang til Microsoft 365-data via Microsoft Graph-API'er. Appstyring giver fuld synlighed, afhjælpning og styring af, hvordan disse apps og deres brugere får adgang til, bruger og deler dine følsomme data, der er gemt i Microsoft 365, via handlingsbaseret indsigt og automatiserede politikbeskeder og handlinger. [Få mere at vide om programstyring](/cloud-app-security/app-governance-manage-app-governance).
 - (eksempelvisning) Den [avancerede jagtside](advanced-hunting-overview.md) understøtter nu flere faner, smart rulning, strømlinede skemafaner, indstillinger for hurtig redigering af forespørgsler, en indikator for ressourceforbrug for forespørgsler og andre forbedringer for at gøre forespørgslerne mere jævne og nemmere at finjustere.
 - (eksempelvisning) Du kan nu bruge [funktionen link til hændelse](advanced-hunting-link-to-incident.md) til at inkludere hændelser eller poster fra de avancerede resultater af jagtforespørgslen direkte i en ny eller eksisterende hændelse, som du er ved at undersøge.
 
@@ -87,7 +90,7 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 - (eksempelvisning) Hændelsesgraf
 
-  En ny **Graph** fane under fanen **Oversigt** i en hændelse viser det fulde omfang af angrebet, hvordan angrebet spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt hackeren gik.
+  En ny **Graph-fane** under fanen **Oversigt** i en hændelse viser det fulde omfang af angrebet, hvordan angrebet spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt angriberen gik.
 
 ## <a name="july-2021"></a>Juli 2021
 
@@ -135,7 +138,7 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 - [rapport over Microsoft 365 Defender trusselsanalyse](threat-analytics.md)
 
-  Trusselsanalyser hjælper dig med at reagere på og minimere virkningen af aktive angreb. Du kan også få mere at vide om angrebsforsøg, der er blokeret af Microsoft 365 Defender løsninger, og træffe forebyggende foranstaltninger, der afhjælper risikoen for yderligere eksponering og øger robusthed. Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig for Microsoft Defender for Endpoint og Microsoft Defender for Office E5-licensindehavere.
+  Trusselsanalyser hjælper dig med at reagere på og minimere virkningen af aktive angreb. Du kan også få mere at vide om angrebsforsøg, der er blokeret af Microsoft 365 Defender løsninger, og træffe forebyggende foranstaltninger, der afhjælper risikoen for yderligere eksponering og øger robusthed. Som en del af den samlede sikkerhedsoplevelse er trusselsanalyse nu tilgængelig for licensindehavere af Microsoft Defender for Endpoint og Microsoft Defender for Office E5.
 
 ## <a name="march-2021"></a>Marts 2021
 

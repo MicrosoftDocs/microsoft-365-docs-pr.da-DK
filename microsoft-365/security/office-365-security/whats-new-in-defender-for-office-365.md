@@ -19,12 +19,12 @@ ms.custom: seo-marvel-apr2020
 ms.reviewer: vippand
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 37819c0f5ea458a4f5ee25b3536e3688aabd1882
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 82b23047b8013f9916168d46b5b595b326f6d1e5
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486901"
+ms.locfileid: "66530515"
 ---
 # <a name="whats-new-in-microsoft-defender-for-office-365"></a>Nyheder i Microsoft Defender for Office 365
 
@@ -67,6 +67,7 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 
 - [Vi præsenterer tabellen URLClickEvents i Microsoft 365 Defender Avanceret jagt](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-the-urlclickevents-table-in-advanced-hunting-with/ba-p/3295096): Vi præsenterer tabellen URLClickEvents i avanceret jagt med Microsoft Defender for Office 365.
 - [Forbedringer af manuel mailafhjælpning](/microsoft-365/security/office-365-security/remediate-malicious-email-delivered-office-365): Manuel mailrensningshandlinger, der udføres i Microsoft Defender for Office 365, i det samlede løsningscenter i Microsoft 365 Defender (M365D) ved hjælp af en ny handlingsfokuseret undersøgelse.
+- [Introduktion af differentieret beskyttelse af prioriterede konti i Microsoft Defender for Office 365](https://techcommunity.microsoft.com/t5/microsoft-defender-for-office/introducing-differentiated-protection-for-priority-accounts-in/ba-p/3283838): Introduktion af den generelle tilgængelighed af differentieret beskyttelse for prioriterede konti. 
  
 ## <a name="march-2022"></a>Marts 2022
 

@@ -15,12 +15,13 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Defender for Office 365 prøveversion af playbook til løsninger.
-ms.openlocfilehash: a1adcf15bd051478e874b990a5e6b12f19d3b0c6
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.custom: trial-playbook
+ms.openlocfilehash: 6f4bd69e1797398dbe7e091a61fcc7a25d474121
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648343"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66531116"
 ---
 # <a name="trial-playbook-microsoft-defender-for-office-365"></a>Playbook til prøveversion: Microsoft Defender for Office 365
 
@@ -44,11 +45,11 @@ Når du har startet prøveversionen og fuldført konfigurationsprocessen, kan de
 
 Vi har automatisk konfigureret [forudindstillede sikkerhedspolitikker](preset-security-policies.md) i dit miljø. Disse politikker repræsenterer en profil for grundlæggende beskyttelse, der passer til de fleste brugere. Standardbeskyttelse omfatter:
 
-- Pengeskab Links, Pengeskab Vedhæftede filer og anti-phishing-politikker, der er begrænset til hele lejeren eller undersættet af brugere, du har valgt under installationen af prøveversionen.
-- Pengeskab beskyttelse mod vedhæftede filer for SharePoint, OneDrive og Microsoft Teams.
-- Pengeskab Links-beskyttelse for understøttede Office 365 apps.
+- Sikre links, sikre vedhæftede filer og anti-phishing-politikker, der er begrænset til hele lejeren eller undersættet af brugere, du har valgt under installationen af prøveversionen.
+- Beskyttelse af sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams.
+- Beskyttelse af sikre links for understøttede Office 365 apps.
 
-Se denne video for at få mere at vide: [Beskyt mod skadelige links med Pengeskab Links i Microsoft Defender for Office 365 – YouTube](https://www.youtube.com/watch?v=vhIJ1Veq36Y&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=9).
+Se denne video for at få mere at vide: [Beskyt mod skadelige links med Sikre links i Microsoft Defender for Office 365 – YouTube](https://www.youtube.com/watch?v=vhIJ1Veq36Y&list=PL3ZTgFEc7LystRja2GnDeUFqk44k7-KXf&index=9).
 
 ### <a name="enable-users-to-report-suspicious-content"></a>Giv brugerne mulighed for at rapportere mistænkeligt indhold
 

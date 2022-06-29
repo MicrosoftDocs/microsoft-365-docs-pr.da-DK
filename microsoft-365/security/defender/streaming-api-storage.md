@@ -1,7 +1,7 @@
 ---
-title: Stream Microsoft 365 Defender begivenheder til din Storage-konto
-description: Få mere at vide om, hvordan Microsoft 365 Defender til at streame Avancerede rævebegivenheder til din Storage konto.
-keywords: rå dataeksport, streaming-API, API, Hændelseshubs, Azure-lager, lagerkonto, Avanceret jagt, rå datadeling
+title: Stream Microsoft 365 Defender hændelser til din lagerkonto
+description: Få mere at vide om, hvordan du konfigurerer Microsoft 365 Defender til at streame avancerede jagthændelser til din lagerkonto.
+keywords: rå dataeksport, streaming-API, API, Event Hubs, Azure Storage, lagerkonto, Avanceret jagt, rådatadeling
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -17,14 +17,14 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: ed62807c0efc7003bab8fc725c2753c3d91ef1d6
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 0f5195e5a74395073267fd4df87f077c6a1d5f20
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64501217"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530570"
 ---
-# <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft 365 Defender at streame avancerede rævebegivenheder til din Storage-konto
+# <a name="configure-microsoft-365-defender-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft 365 Defender til at streame hændelser for avanceret jagt til din lagerkonto
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -36,34 +36,42 @@ ms.locfileid: "64501217"
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-1. Opret en [Storage-konto](/azure/storage/common/storage-account-overview) i din lejer.
+1. Opret en [lagerkonto](/azure/storage/common/storage-account-overview) i din lejer.
 
-2. Log på din [Azure-lejer](https://ms.portal.azure.com/), gå til **Abonnementer > Dit abonnement > ressourceudbydere > registrere dig til Microsoft.Insights**.
+2. Log på din [Azure-lejer](https://ms.portal.azure.com/), gå til **Abonnementer > Dit abonnement > Ressourceudbydere > Tilmeld dig Microsoft.Insights**.
+
+### <a name="add-contributor-permissions"></a>Tilføj bidragydertilladelser
+
+Når lagerkontoen er oprettet, skal du:
+
+1. Definer den bruger, der skal logge på Microsoft 365 Defender som bidragyder.
+
+    Gå til **Lagerkonto > Adgangskontrol (IAM) > Tilføj** og bekræft under **Rolletildelinger**.
 
 ## <a name="enable-raw-data-streaming"></a>Aktivér rå datastreaming
 
-1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> ***Global Administrator** _ eller _*_Security Administrator_**.
+1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> som en ***Global Administrator** _ eller _*_Sikkerhedsadministrator_**.
 
-2. Gå til **Indstillinger** \> **Microsoft 365 Defender** \> **Streaming API**. Hvis du vil gå direkte til **siden Streaming API** , skal du bruge <https://security.microsoft.com/settings/mtp_settings/raw_data_export>.
+2. Gå til **Indstillinger** \> **Microsoft 365 Defender** \> **Streaming-API**. Hvis du vil gå direkte til siden **Streaming-API** , skal du bruge <https://security.microsoft.com/settings/mtp_settings/raw_data_export>.
 
-3. Klik **på Tilføj**.
+3. Klik på **Tilføj**.
 
-4. I pop **op-menuen Tilføj nye Streaming API-indstillinger** , der vises, skal du konfigurere følgende indstillinger:
+4. I pop op-vinduet **Tilføj nye streaming-API-indstillinger** , der vises, skal du konfigurere følgende indstillinger:
    1. **Navn**: Vælg et navn til de nye indstillinger.
-   2. Vælg **Videressendelse af begivenheder for Azure Storage**.
-   3. I feltet **Storage for Ressourcekonto, der** vises, skal du skrive dit **Storage firmaressource-id**. For at få **dit** Storage-kontoressource-id skal du åbne Azure Portal ved at <https://portal.azure.com>klikke på **Storage-konti** \> \> gå til fanen Egenskaber kopiere teksten under **Storage Kontoressource-id**.
+   2. Vælg **Videresend hændelser til Azure Storage**.
+   3. I feltet **Ressource-id for lagerkonto** , der vises, skal du skrive **ressource-id'et for din lagerkonto**. Hvis du vil hente **ressource-id'et for din lagerkonto**, skal du åbne Azure Portal på <https://portal.azure.com>, klikke på **Lagerkonti** \> gå til fanen \> Egenskaber kopiere teksten under **Ressource-id for lagerkonto**.
 
-      :::image type="content" source="../defender-endpoint/images/storage-account-resource-id.png" alt-text="Et Storage kontoressource-id" lightbox="../defender-endpoint/images/storage-account-resource-id.png":::
+      :::image type="content" source="../defender-endpoint/images/storage-account-resource-id.png" alt-text="Et ressource-id for en lagerkonto" lightbox="../defender-endpoint/images/storage-account-resource-id.png":::
 
-   4. Tilbage i pop **op-menuen Tilføj nye Streaming API-indstillinger** skal du vælge **de hændelsestyper** , du vil streame.
+   4. Tilbage på pop op-vinduet **Tilføj nye streaming-API-indstillinger** skal du vælge de **hændelsestyper** , du vil streame.
 
-   Klik på Send, når du er **færdig**.
+   Klik på **Send**, når du er færdig.
 
-## <a name="the-schema-of-the-events-in-the-storage-account"></a>Skemaet for hændelserne i Storage konto
+## <a name="the-schema-of-the-events-in-the-storage-account"></a>Skemaet for hændelserne på lagerkontoen
 
-- Der oprettes en blobbeholder for hver hændelsestype:
+- Der oprettes en blobobjektbeholder for hver hændelsestype:
 
-  :::image type="content" source="../defender-endpoint/images/storage-account-event-schema.png" alt-text="Eksempel på en blobbeholder" lightbox="../defender-endpoint/images/storage-account-event-schema.png":::
+  :::image type="content" source="../defender-endpoint/images/storage-account-event-schema.png" alt-text="Eksempel på en blobobjektbeholder" lightbox="../defender-endpoint/images/storage-account-event-schema.png":::
 
 - Skemaet for hver række i en blob er følgende JSON:
 
@@ -78,17 +86,17 @@ ms.locfileid: "64501217"
 
 - Hver blob indeholder flere rækker.
 
-- Hver række indeholder navnet på begivenheden, tidspunktet, hvor Defender for Endpoint modtog begivenheden, den lejer, den tilhører (du får kun begivenheder fra din lejer), og begivenheden i JSON-format i en egenskab kaldet "egenskaber".
+- Hver række indeholder hændelsesnavnet, det tidspunkt, hvor Defender for Endpoint modtog hændelsen, den lejer, den tilhører (du får kun hændelser fra din lejer) og hændelsen i JSON-format i en egenskab med navnet "egenskaber".
 
-- Du kan finde flere oplysninger om skemaet for Microsoft 365 Defender i Oversigt [over Avanceret ræveing](../defender/advanced-hunting-overview.md).
+- Du kan finde flere oplysninger om skemaet for Microsoft 365 Defender begivenheder under [Oversigt over avanceret jagt](../defender/advanced-hunting-overview.md).
 
 ## <a name="data-types-mapping"></a>Tilknytning af datatyper
 
-For at få datatyperne for vores hændelsesegenskaber skal du gøre følgende:
+Hvis du vil hente datatyperne for vores hændelsesegenskaber, skal du gøre følgende:
 
-1. Log på en <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender og</a> gå til **En avanceret jagt**\>. Brug <security.microsoft.com/advanced-hunting> **for at gå** direkte til <security.microsoft.com/advanced-hunting>.
+1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> og gå til **Jagt** \> **Avanceret jagt**. Hvis du vil gå direkte til siden **Avanceret jagt** , skal du bruge <security.microsoft.com/advanced-hunting>.
 
-2. På fanen **Forespørgsel skal** du køre følgende forespørgsel for at få tilknytningen af datatyperne for hver hændelse:
+2. Kør følgende forespørgsel under fanen **Forespørgsel** for at hente tilknytningen af datatyper for hver hændelse:
 
    ```text
    {EventType}
@@ -98,11 +106,15 @@ For at få datatyperne for vores hændelsesegenskaber skal du gøre følgende:
 
 - Her er et eksempel på hændelsen Enhedsoplysninger:
 
-  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Et eksempel på en enhedsoplysningerforespørgsel" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
+  :::image type="content" source="../defender-endpoint/images/machine-info-datatype-example.png" alt-text="Et eksempel på en forespørgsel om enhedsoplysninger" lightbox="../defender-endpoint/images/machine-info-datatype-example.png":::
+
+## <a name="monitoring-created-resources"></a>Overvågning af oprettede ressourcer
+
+Du kan overvåge de ressourcer, der oprettes af streaming-API'en, ved hjælp af **Azure Monitor**. Du kan få flere oplysninger under [Overvåg destinationer – Azure Monitor | Microsoft Docs](/azure/azure-monitor/logs/logs-data-export?tabs=portal#monitor-destinations).
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [Oversigt over Avanceret jagt](../defender/advanced-hunting-overview.md)
-- [Microsoft 365 Defender Streaming API](streaming-api.md)
-- [Stream Microsoft 365 Defender begivenheder til din Azure-lagerkonto](streaming-api-storage.md)
-- [Azure Storage firmadokumentation](/azure/storage/common/storage-account-overview)
+- [Oversigt over avanceret jagt](../defender/advanced-hunting-overview.md)
+- [api til Microsoft 365 Defender streaming](streaming-api.md)
+- [Stream Microsoft 365 Defender hændelser til din Azure Storage-konto](streaming-api-storage.md)
+- [Dokumentation til Azure Storage-konto](/azure/storage/common/storage-account-overview)

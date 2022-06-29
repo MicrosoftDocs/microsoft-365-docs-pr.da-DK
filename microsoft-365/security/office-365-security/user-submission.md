@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9b6586bb781daadb5b19756c9dac6893567f311d
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 5f2881076679f64633afc1ddcac6a9de7df64acb
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489807"
+ms.locfileid: "66530592"
 ---
 # <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
@@ -48,12 +48,16 @@ Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i st
 ## <a name="custom-mailbox-prerequisites"></a>Forudsætninger for brugerdefineret postkasse
 
 Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så brugerrapporterede meddelelser går til din brugerdefinerede postkasse:
-
+ 
 - [Identificer den brugerdefinerede postkasse som en SecOps-postkasse i politikken for avanceret levering](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
 
-- [Opret en politik for antimalware](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) for den brugerdefinerede postkasse, hvor zap(automatisk fjernelse på nul timer) for malware er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér automatisk fjernelse på nul timer for malware** er ikke valgt).
+- [Opret en antimalwarepolitik](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) for den brugerdefinerede postkasse, hvor
+    - nul-timers automatisk fjernelse (ZAP) for malware er slået fra (afsnittet **Beskyttelsesindstillinger** Aktivér \> **automatisk fjernelse på nul timer for malware** er ikke valgt). 
+    - den fælles indstilling for filtrering af vedhæftede filer er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér filteret for fælles vedhæftede filer** er ikke valgt). 
 
 Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de brugere, der rapporterer meddelelser:
+
+- [Sørg for, at den brugerdefinerede postkasse ikke er en del af nogen forudindstillede sikkerhedspolitikker](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
 
 - [Opret en politik for sikre links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanningen af Sikre links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelsesafsnittet** \> **Fra**).
 

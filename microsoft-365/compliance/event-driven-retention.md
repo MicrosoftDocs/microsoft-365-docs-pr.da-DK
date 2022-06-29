@@ -20,16 +20,16 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Som regel en del af en løsning til datastyring, kan du konfigurere en opbevaringsmærkat for at starte opbevaringsperioden baseret på en hændelse, som du identificerer.
-ms.openlocfilehash: 65a3c2088974398abb6ddbeb205cfb66541629e2
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 380a95a6b4d6fa6585d0912b675d65032cd8258b
+ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285100"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66530854"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Start opbevaring, når der opstår en hændelse
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -68,9 +68,9 @@ Hvis du vil bruge hændelsesbaseret opbevaring, er det vigtigt at forstå relati
     
 3. Produktlevetid er hændelsestypen. et bestemt produkt, der når ud af livet, er en begivenhed. Når der opstår en hændelse af den pågældende hændelsestype – i dette tilfælde, når et produkt når sin slutdato – opretter du en hændelse, der angiver:
     
-   - Et aktiv-id (for SharePoint og OneDrive dokumenter)
+   - Et aktiv-id (for SharePoint- og OneDrive-dokumenter)
     
-   - Nøgleord (til Exchange elementer). I dette eksempel bruger organisationen en produktkode i meddelelser, der indeholder produktposter, så nøgleordet for Exchange elementer er funktionelt det samme som aktiv-id'et for SharePoint og OneDrive dokumenter.
+   - Nøgleord (til Exchange-elementer). I dette eksempel bruger organisationen en produktkode i meddelelser, der indeholder produktposter, så nøgleordet for Exchange-elementer er funktionelt det samme som aktiv-id'et for SharePoint- og OneDrive-dokumenter.
     
    - Den dato, hvor hændelsen fandt sted. Denne dato bruges som starten på opbevaringsperioden. Denne dato kan være den aktuelle, en fortid eller en fremtidig dato.
 
@@ -87,7 +87,7 @@ Arbejdsproces på højt niveau for hændelsesbaseret opbevaring:
 ![Diagram over arbejdsproces til konfiguration af hændelsesbaseret opbevaring.](../media/event-based-retention-process.png)
   
 > [!TIP]
-> Se [Brug opbevaringsmærkater til at administrere livscyklussen for dokumenter, der er gemt i SharePoint](auto-apply-retention-labels-scenario.md) for at få et detaljeret scenarie om brug af administrerede egenskaber i SharePoint til automatisk at anvende opbevaringsmærkater og implementere hændelsesbaseret opbevaring.
+> Se [Brug opbevaringsmærkater til at administrere livscyklussen for dokumenter, der er gemt i SharePoint](auto-apply-retention-labels-scenario.md) , for at få et detaljeret scenarie om brug af administrerede egenskaber i SharePoint til automatisk at anvende opbevaringsmærkater og implementere hændelsesbaseret opbevaring.
 
 ### <a name="step-1-create-a-label-whose-retention-period-is-based-on-an-event"></a>Trin 1: Opret en mærkat, hvis opbevaringsperiode er baseret på en hændelse
 
@@ -97,7 +97,7 @@ Hvis du vil oprette og konfigurere din opbevaringsmærkat, skal du se instruktio
 
 En hændelsestype er blot en generel beskrivelse af en hændelse, som du vil knytte til en opbevaringsmærkat.
 
-Standardhændelsestyperne har **(hændelsestype)** efter deres navn på rullelisten for at gøre det nemmere at identificere dem, og du kan også se og oprette hændelsestype fra fanen **DatastyringHændelser** >  > **Administrer hændelsestyper**.
+Standardhændelsestyperne har **(hændelsestype)** efter deres navn på rullelisten for at gøre det nemmere at identificere dem, og du kan også se og oprette hændelsestype fra fanen **Hændelser** for **datastyring** >  > **Administrer hændelsestyper**.
 
 Hændelsesbaseret opbevaring kræver opbevaringsindstillinger, der:
   
@@ -131,7 +131,7 @@ Når der anvendes en hændelsesbaseret mærkat på indhold, kan du angive et akt
   
 - Produktkoder, som du kan bruge til kun at bevare indhold for et bestemt produkt.
     
-- Project koder, som du kan bruge til kun at bevare indhold for et bestemt projekt.
+- Projektkoder, som du kan bruge til kun at bevare indhold for et bestemt projekt.
     
 - Medarbejder-id'er, som du kan bruge til kun at bevare indhold for en bestemt person.
     
@@ -141,7 +141,7 @@ Aktiv-id er blot en anden dokumentegenskab, der er tilgængelig i SharePoint og 
   
 ### <a name="step-5-create-an-event"></a>Trin 5: Opret en hændelse
 
-Når der opstår en bestemt forekomst af den pågældende hændelsestype, f.eks. når et produkt udløber, skal du gå til siden **DatastyringHændelser** >  på Microsoft Purview-overholdelsesportalen og vælge **+ Opret** for at oprette en hændelse. Du udløser hændelsen ved at oprette den her.
+Når der opstår en bestemt forekomst af den pågældende hændelsestype, f.eks. når et produkts levetid, skal du gå til siden **Hændelser** for **datastyring** >  i Microsoft Purview-compliance-portal og vælge **+ Opret** for at oprette en hændelse. Du udløser hændelsen ved at oprette den her.
 
 ![Opret en hændelse for at udløse start af opbevaring for hændelsesbaserede opbevaringsmærkater.](../media/create-event-records-management.png)
 
@@ -155,11 +155,11 @@ Når du opretter hændelsen, skal du vælge den samme hændelsestype, der er ang
 
 Hvis du har brug for at oprette en hændelse for flere opbevaringsmærkater, der har forskellige hændelsestyper, skal du vælge indstillingen **Vælg eksisterende navne** . Vælg derefter de mærkater, der er konfigureret for de hændelsestyper, du vil knytte til denne hændelse.
 
-### <a name="step-7-enter-keywords-or-query-for-exchange-asset-id-for-sharepoint-and-onedrive"></a>Trin 7: Angiv nøgleord eller forespørgsler for Exchange, aktiv-id for SharePoint og OneDrive
+### <a name="step-7-enter-keywords-or-query-for-exchange-asset-id-for-sharepoint-and-onedrive"></a>Trin 7: Angiv nøgleord eller forespørgsel for Exchange, aktiv-id for SharePoint og OneDrive
 
-Nu begrænser du omfanget af indholdet. For Exchange indhold gør du dette ved at angive nøgleord eller en forespørgsel. For SharePoint og OneDrive indhold gør du dette ved at angive aktiv-id'er.
+Nu begrænser du omfanget af indholdet. For Exchange-indhold gør du dette ved at angive nøgleord eller en forespørgsel. For SharePoint- og OneDrive-indhold gør du dette ved at angive aktiv-id'er.
 
-Til Exchange elementer skal du bruge nøgleord eller en forespørgsel, der bruger KQL (Keyword Query Language). Du kan få flere oplysninger om forespørgselssyntaksen i [Reference til nøgleordsforespørgselssprog (KQL).](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) Du kan finde flere oplysninger om de egenskaber, der kan søges efter, som du kan bruge til Exchange, under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).
+I Forbindelse med Exchange-elementer skal du bruge nøgleord eller en forespørgsel, der bruger KQL (Keyword Query Language). Du kan få flere oplysninger om forespørgselssyntaksen i [Reference til nøgleordsforespørgselssprog (KQL).](/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference) Du kan finde flere oplysninger om de egenskaber, der kan søges i, i [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).
 
 For aktiv-id'er gennemtvinges opbevaring kun for indhold med det angivne *egenskab:værdipar* . Hvis du f.eks. bruger egenskaben Aktiv-id, skal du angive `ComplianceAssetID:<value>` i feltet for aktiv-id'er, der vises på følgende billede.
 
@@ -202,15 +202,22 @@ Du kan bruge et PowerShell-script til at automatisere hændelsesbaseret opbevari
 - [New-ComplianceRetentionEvent](/powershell/module/exchange/new-complianceretentionevent)
     
 
+Hvis du vil hjælpe med at identificere andre cmdlet'er for at oprette opbevaringsmærkater og deres politikker, skal du se [PowerShell-cmdlet'er for opbevaringspolitikker og opbevaringsmærkater](retention-cmdlets.md).
+
 ## <a name="automate-events-by-using-a-rest-api"></a>Automatiser hændelser ved hjælp af en REST API
 
 Du kan bruge en REST API til automatisk at oprette de hændelser, der udløser starten af opbevaringstiden.
+
+> [!NOTE]
+> Nu, hvor du udruller som prøveversion, kan du alternativt bruge [Microsoft Graph API til datastyring til](compliance-extensibility.md#microsoft-graph-api-for-records-management-preview) at oprette hændelsen og også oprette hændelsestyper og opbevaringsmærkater.
+> 
+> Vi opfordrer dig til at prøve disse Graph-API'er, fordi REST API'erne i dette afsnit snart frarådes og holder op med at fungere.
 
 En REST API er et tjenesteslutpunkt, der understøtter sæt HTTP-handlinger (metoder), som giver adgang til oprettelse/hentning/opdatering/sletning af tjenestens ressourcer. Du kan få flere oplysninger under [Komponenter i en REST API-anmodning/-svar](/rest/api/gettingstarted/#components-of-a-rest-api-requestresponse). Ved hjælp af Microsoft 365 REST API kan hændelser oprettes og hentes ved hjælp af metoderne POST og GET.
 
 Der er to muligheder for at bruge REST-API'en:
 
-- **Microsoft Power Automate eller et lignende program** til automatisk at udløse forekomsten af en hændelse. Microsoft Power Automate er en orchestrator til oprettelse af forbindelse til andre systemer, så du behøver ikke at skrive en brugerdefineret løsning. Du kan få flere oplysninger på [Power Automate websted](https://flow.microsoft.com/en-us/).
+- **Microsoft Power Automate eller et lignende program** til automatisk at udløse forekomsten af en hændelse. Microsoft Power Automate er en orchestrator til oprettelse af forbindelse til andre systemer, så du behøver ikke at skrive en brugerdefineret løsning. Du kan få flere oplysninger på [Power Automate-webstedet](https://flow.microsoft.com/en-us/).
 
 - **PowerShell eller en HTTP-klient til at kalde REST-API'en** for at oprette hændelser ved hjælp af PowerShell (version 6 eller nyere), som er en del af en brugerdefineret løsning.
 
@@ -222,13 +229,13 @@ https://ps.compliance.protection.outlook.com/psws/service.svc/ComplianceRetentio
 
 Kontrollér svarkoden. Hvis det er 302, skal du hente den omdirigerede URL-adresse fra egenskaben Location for svarheaderen og bruge denne URL-adresse i stedet for `https://ps.compliance.protection.outlook.com/psws/service.svc/ComplianceRetentionEvent` i de efterfølgende instruktioner.
 
-De hændelser, der oprettes automatisk, kan bekræftes ved at få dem vist på Microsoft Purview-overholdelsesportalen > **DataadministrationHændelser** >  .
+De hændelser, der oprettes automatisk, kan bekræftes ved at få dem vist i Microsoft Purview-compliance-portal >**Datastyringshændelser** >  .
 
 ### <a name="use-microsoft-power-automate-to-create-the-event"></a>Brug Microsoft Power Automate til at oprette hændelsen
 
-Opret et flow, der opretter en hændelse ved hjælp af REST API'en Microsoft 365:
+Opret et flow, der opretter en hændelse ved hjælp af REST API'en til Microsoft 365:
 
-![Brug Flow til at oprette en hændelse.](../media/automate-event-driven-retention-flow-1.png)
+![Brug af Flow til at oprette en hændelse.](../media/automate-event-driven-retention-flow-1.png)
 
 ![Brug af flow til at kalde REST-API'en.](../media/automate-event-driven-retention-flow-2.png)
 
