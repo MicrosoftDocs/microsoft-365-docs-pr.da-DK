@@ -21,20 +21,20 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om faktureringskonti, og hvordan de bruges til at administrere kontoindstillinger, fakturaer, betalingsmetoder og køb.
 ms.date: 05/24/2022
-ms.openlocfilehash: 0c1dd2048cbe38ecca162f361f3f0bdbc6c3861f
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 4630ee028a298d3c901a0e66cde41df58bebece2
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65670052"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493613"
 ---
-# <a name="understand-billing-accounts"></a>Forstå faktureringskonti
+# <a name="understand-your-microsoft-billing-accounts"></a>Forstå dine Microsoft-faktureringskonti
 
 Der oprettes en faktureringskonto, når du tilmelder dig for at prøve eller købe Microsoft-produkter. Du kan bruge din faktureringskonto til at administrere dine kontoindstillinger, fakturaer, betalingsmetoder og køb. Du kan få adgang til flere faktureringskonti. Du har f.eks. tilmeldt dig Microsoft 365 direkte, eller du har adgang til organisationens Enterprise Agreement, Microsoft Product & Services Agreement eller Microsoft-kundeaftale. I hvert af disse scenarier har du en separat faktureringskonto.
 
 <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration understøtter</a> i øjeblikket følgende type faktureringskonti:
 
-- Microsoft Online Services Program: Denne faktureringskonto oprettes, når du tilmelder dig et Microsoft 365 abonnement direkte.
+- Microsoft Online Services Program: Denne faktureringskonto oprettes, når du tilmelder dig et Microsoft 365-abonnement direkte.
 - Microsoft Products & Services Agreement (MPSA) Program: Denne faktureringskonto oprettes, når din organisation signerer en MPSA-volumenlicensaftale for at købe software og onlinetjenester.
 - Microsoft-kundeaftale: Denne faktureringskonto oprettes, når din organisation arbejder sammen med en Microsoft-repræsentant, en autoriseret partner eller køber uafhængigt af hinanden.
 
@@ -77,7 +77,7 @@ Du kan give andre adgang til faktureringskontoen i <a href="https://go.microsoft
 
 > [!Note]
 > - Faktureringskontoroller gælder kun for faktureringskonti og gælder ikke for andre Microsoft 365 Administration scenarier.
-> - For faktureringskonti, der oprettes i Microsoft 365 tilmelding, tildeles nye administratorer af Global, Fakturering og Global Reader automatisk særskilte adgangsniveauer. Du kan administrere denne adgang fra siden **Faktureringskonti** >  ved udtrykkeligt at fjerne disse brugere fra afsnittet om rolletildeling nederst på siden.
+> - For faktureringskonti, der oprettes i microsoft 365-tilmeldingen, tildeles nye administratorer af Global, Fakturering og Global Reader automatisk særskilte adgangsniveauer. Du kan administrere denne adgang fra siden **Faktureringskonti** >  ved udtrykkeligt at fjerne disse brugere fra afsnittet om rolletildeling nederst på siden.
 
 ## <a name="related-content"></a>Relateret indhold
 

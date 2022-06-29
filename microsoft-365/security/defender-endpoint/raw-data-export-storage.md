@@ -1,6 +1,6 @@
 ---
-title: Stream Microsoft Defender for Endpoint hændelser til din Storage konto
-description: Få mere at vide om, hvordan du konfigurerer Microsoft Defender for Endpoint til at streame avancerede jagthændelser til din Storage konto.
+title: Stream Microsoft Defender for Endpoint hændelser til din lagerkonto
+description: Få mere at vide om, hvordan du konfigurerer Microsoft Defender for Endpoint til at streame avancerede jagthændelser til din lagerkonto.
 keywords: rå dataeksport, streaming-API, API, Event Hubs, Azure Storage, lagerkonto, Avanceret jagt, rådatadeling
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -15,14 +15,14 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: d5d4917e2464964da819af0a06f0b8e4883dfea9
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: c94830e4f9dbfe16a8dfafba35aecb5a36efddf5
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783881"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493437"
 ---
-# <a name="configure-microsoft-defender-for-endpoint-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft Defender for Endpoint til at streame avancerede jagthændelser til din Storage konto
+# <a name="configure-microsoft-defender-for-endpoint-to-stream-advanced-hunting-events-to-your-storage-account"></a>Konfigurer Microsoft Defender for Endpoint til at streame hændelser for avanceret jagt til din lagerkonto
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -30,11 +30,11 @@ ms.locfileid: "64783881"
 
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configuresiem-abovefoldlink)
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-1. Opret en [Storage konto](/azure/storage/common/storage-account-overview) i din lejer.
+1. Opret en [lagerkonto](/azure/storage/common/storage-account-overview) i din lejer.
 
 2. Log på din [Azure-lejer](https://ms.portal.azure.com/), gå til **Abonnementer > Dit abonnement > Ressourceudbydere > Tilmeld dig Microsoft.insights**.
 
@@ -42,21 +42,21 @@ ms.locfileid: "64783881"
 
 1. Log på [Microsoft 365 Defender](https://security.microsoft.com) som en ***Global Administrator** _ eller _*_Sikkerhedsadministrator_**.
 
-2. Gå til [siden Indstillinger for dataeksport](https://security.microsoft.com/interoperability/dataexport) i Microsoft 365 Defender.
+2. Gå til [siden Indstillinger for dataeksport](https://security.microsoft.com/settings/mtp_settings/raw_data_export) i Microsoft 365 Defender.
 
 3. Klik på **Tilføj indstillinger for dataeksport**.
 
 4. Vælg et navn til de nye indstillinger.
 
-5. Vælg **Videresend hændelser for at Azure Storage**.
+5. Vælg **Videresend hændelser til Azure Storage**.
 
-6. Skriv dit **Storage-kontoressource-id**. Hvis du vil hente dit **Storage-kontoressource-id**, skal du gå til din Storage kontoside under fanen \> [Azure Portal](https://ms.portal.azure.com/) \> egenskaber kopiere teksten under **Storage kontoressource-id**:
+6. Skriv **ressource-id'et for din lagerkonto**. Hvis du vil hente **ressource-id'et for din lagerkonto**, skal du gå til siden Lagerkonto under fanen [Azure Portal](https://ms.portal.azure.com/) \> egenskaber \> kopiere teksten under **Ressource-id for lagerkonto**:
 
    :::image type="content" source="images/storage-account-resource-id.png" alt-text="Event Hubs med ressource-id1" lightbox="images/storage-account-resource-id.png":::
 
 7. Vælg de hændelser, du vil streame, og klik på **Gem**.
 
-## <a name="the-schema-of-the-events-in-the-storage-account"></a>Skemaet for hændelserne på den Storage konto
+## <a name="the-schema-of-the-events-in-the-storage-account"></a>Skemaet for hændelserne på lagerkontoen
 
 - Der oprettes en blobobjektbeholder for hver hændelsestype:
 
@@ -104,4 +104,4 @@ Hvis du vil hente datatyperne for vores hændelsesegenskaber, skal du gøre føl
 - [Oversigt over avanceret jagt](advanced-hunting-overview.md)
 - [API til Microsoft Defender for Endpoint streaming](raw-data-export.md)
 - [Stream Microsoft Defender for Endpoint hændelser til din Azure Storage-konto](raw-data-export-storage.md)
-- [dokumentation til Azure Storage-konto](/azure/storage/common/storage-account-overview)
+- [Dokumentation til Azure Storage-konto](/azure/storage/common/storage-account-overview)

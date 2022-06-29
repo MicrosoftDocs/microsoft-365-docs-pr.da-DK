@@ -21,14 +21,14 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvordan du ændrer, hvor ofte du faktureres for dit virksomhedsabonnement.
 ms.date: 05/24/2022
-ms.openlocfilehash: 366d35b81d5c7ea84d5f9cd471ea4f6b7feac984
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 4b5c5e42f33e3ca36a89b694a4249296df6e200c
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669227"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492993"
 ---
-# <a name="change-your-billing-frequency"></a>Skift din faktureringshyppighed
+# <a name="change-your-microsoft-365-subscription-billing-frequency"></a>Skift faktureringshyppigheden for dit Microsoft 365-abonnement
 
 Når du køber et abonnement, vælger du en faktureringshyppighed. Hvis du vil ændre, hvor ofte du faktureres for et abonnement, skal du følge disse trin.
 

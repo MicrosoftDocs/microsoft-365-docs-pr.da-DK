@@ -18,28 +18,28 @@ ms.custom:
 description: Administratorer kan få mere at vide om de tilgængelige og foretrukne muligheder for at tillade indgående meddelelser i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 898f04826f89e3a33c0cfcca01b717523e7c6122
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 016257a6cdc3128ba6753532bb0bed74845355d0
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64974207"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493081"
 ---
 # <a name="create-safe-sender-lists-in-eop"></a>Opret lister over sikre afsendere i EOP
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Hvis du er Microsoft 365 kunde med postkasser i Exchange Online eller en separat Exchange Online Protection-kunde (EOP) uden Exchange Online postkasser, tilbyder EOP flere måder at sikre, at brugerne modtager mail fra afsendere, der er tillid til. Disse indstillinger omfatter Exchange regler for mailflow (også kendt som transportregler), Outlook Pengeskab afsendere, IP-tilladelseslisten (forbindelsesfiltrering) og lister over tilladte afsendere eller tilladte domænelister i politikker mod spam. Samlet set kan du tænke på disse indstillinger som _sikre afsenderlister_.
+Hvis du er Microsoft 365-kunde med postkasser i Exchange Online eller en separat EOP-kunde (Exchange Online Protection) uden Exchange Online postkasser, tilbyder EOP flere måder at sikre, at brugerne modtager mail fra afsendere, der er tillid til. Disse indstillinger omfatter Regler for Exchange-mailflow (også kendt som transportregler), Outlook Safe Senders, IP-tilladelseslisten (forbindelsesfiltrering) og lister over tilladte afsendere eller tilladte domænelister i politikker til bekæmpelse af spam. Samlet set kan du tænke på disse indstillinger som _sikre afsenderlister_.
 
 De tilgængelige lister over sikre afsendere er beskrevet på følgende liste i rækkefølge fra de mest anbefalede til mindst anbefalede:
 
 1. Regler for mailflow
-2. afsendere af Outlook Pengeskab
+2. Afsendere, der er tillid til i Outlook
 3. Liste over IP-tilladte (forbindelsesfiltrering)
 4. Lister over tilladte afsendere eller tilladte domænelister (politikker til bekæmpelse af spam)
 
@@ -55,7 +55,7 @@ Regler for mailflow giver størst fleksibilitet til at sikre, at kun de rigtige 
 >
 > - Hvis du vil tillade, at et domæne sender ikke-godkendt mail (omgå beskyttelse mod spoofing), men ikke tilsidesætte anti-spam og andre beskyttelser, kan du bruge [indsigt i spoof intelligence](learn-about-spoof-intelligence.md) og [lejerens tilladelses-/blokliste](tenant-allow-block-list.md).
 >
-> - EOP og Outlook undersøge forskellige meddelelsesegenskaber for at bestemme meddelelsens afsender. Du kan få flere oplysninger i afsnittet [Overvejelser i forbindelse med massemail](#considerations-for-bulk-email) senere i denne artikel.
+> - EOP og Outlook undersøger forskellige meddelelsesegenskaber for at bestemme meddelelsens afsender. Du kan få flere oplysninger i afsnittet [Overvejelser i forbindelse med massemail](#considerations-for-bulk-email) senere i denne artikel.
 >
 
 I modsætning hertil har du også flere muligheder for at blokere mail fra bestemte kilder ved hjælp af _lister over blokerede afsendere_. Du kan få flere oplysninger under [Opret lister over afsenderblokering i EOP](create-block-sender-lists-in-office-365.md).
@@ -97,20 +97,22 @@ I følgende eksempel antages det, at du har brug for mail fra contoso.com til at
    1. **Rediger meddelelsesegenskaberne** \> **angiv niveauet for spamsikkerhed (SCL)** \> **Omgå filtrering af spam**.
    2. **Rediger meddelelsesegenskaberne** \> **angiv en brevhoved**: **Angiv brevhovedet** \<CustomHeaderName\> **til værdien** \<CustomHeaderValue\>.
 
-      For eksempel `X-ETR: Bypass spam filtering for authenticated sender 'contoso.com'`. Hvis du har mere end ét domæne i reglen, kan du tilpasse overskriftsteksten efter behov.
+      Det kunne f.eks. være `X-ETR: Bypass spam filtering for authenticated sender 'contoso.com'`. Hvis du har mere end ét domæne i reglen, kan du tilpasse overskriftsteksten efter behov.
 
       Når en meddelelse springer spamfiltrering over pga. en regel for mailflow, stemples værdien `SFV:SKN` i **headeren X-Forefront-Antispam-Report** . Hvis meddelelsen kommer fra en kilde, der er på listen over tilladte IP-adresser, tilføjes værdien `IPV:CAL` også. Disse værdier kan hjælpe dig med fejlfinding.
 
       :::image type="content" source="../../media/1-AllowList-SkipFilteringFromContoso.png" alt-text="Regelindstillingerne for mailflow i EAC til omgåelse af spamfiltrering" lightbox="../../media/1-AllowList-SkipFilteringFromContoso.png":::
 
-## <a name="use-outlook-safe-senders"></a>Brug Outlook Pengeskab afsendere
+## <a name="use-outlook-safe-senders"></a>Brug Afsendere, der er tillid til i Outlook
 
 > [!CAUTION]
-> Denne metode skaber en høj risiko for, at personer med ondsindede hensigter leverer mails til indbakken, som ellers ville blive filtreret. Men brugerens lister over Pengeskab afsendere eller Pengeskab domæner forhindrer ikke filtrering af phishing-meddelelser med høj sikkerhed eller skadelig software.
+> Denne metode skaber en høj risiko for, at personer med ondsindede hensigter leverer mails til indbakken, som ellers ville blive filtreret. Men lister over sikre afsendere eller sikre domæner for brugeren forhindrer ikke filtrering af phishing-meddelelser med høj sikkerhed eller skadelig software.
 
-I stedet for en organisationsindstilling kan brugere eller administratorer føje afsendermailadresserne til listen Pengeskab Afsendere i postkassen. Du kan finde instruktioner under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Office 365](configure-junk-email-settings-on-exo-mailboxes.md). Dette er ikke ønskeligt i de fleste situationer, da afsendere tilsidesætter dele af filtreringsstakken. Selvom du har tillid til afsenderen, kan afsenderen stadig blive kompromitteret og sende skadeligt indhold. Det er bedst, at du lader vores filtre gøre, hvad der er nødvendigt for at kontrollere hver meddelelse og derefter [rapportere den falske positive/negative til Microsoft](report-junk-email-messages-to-microsoft.md) , hvis vores filtre fik det forkert. Omgåelse af filtreringsstakken forstyrrer også [ZAP](zero-hour-auto-purge.md).
+I stedet for en organisationsindstilling kan brugere eller administratorer føje afsendermailadresserne til listen Afsendere, der er tillid til i postkassen. Du kan finde instruktioner under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Office 365](configure-junk-email-settings-on-exo-mailboxes.md). Denne metode er ikke ønskelig i de fleste situationer, da afsendere tilsidesætter dele af filtreringsstakken. Selvom du har tillid til afsenderen, kan afsenderen stadig blive kompromitteret og sende skadeligt indhold. Det er bedre, når du lader vores filtre kontrollere hver meddelelse og derefter [rapportere den falske positive/negative til Microsoft](report-junk-email-messages-to-microsoft.md) , hvis vi fik det forkert. Omgåelse af filtreringsstakken forstyrrer også [automatisk udrensning på nul timer (ZAP).](zero-hour-auto-purge.md)
 
-Når meddelelser springer spamfiltrering over pga. en brugers liste over Pengeskab afsendere, indeholder headerfeltet **X-Forefront-Antispam-Report** værdien `SFV:SFE`, hvilket angiver, at filtrering efter spam, spoof og phishing blev omgået.
+Som design og for at øge sikkerheden for Exchange Online postkasser genkendes kun indstillingerne for uønsket mail for sikre afsendere, blokerede afsendere og blokerede domæner. Indstillingerne for sikre domæner ignoreres.
+
+Når meddelelser springer spamfiltrering over på grund af en brugers liste over sikre afsendere, indeholder headerfeltet **X-Forefront-Antispam-Report** værdien `SFV:SFE`, hvilket angiver, at filtrering efter spam, spoof og phishing blev omgået.
 
 ## <a name="use-the-ip-allow-list"></a>Brug listen over tilladte IP-adresser
 
@@ -149,11 +151,11 @@ Adresserne `5321.MailFrom` og `5322.From` er ofte de samme (person til person-ko
 Antag f.eks., at Blue Yonder Airlines har hyret Margie's Travel til at sende sin e-mail-reklame. Den meddelelse, du modtager i indbakken, har følgende egenskaber:
 
 - Adressen `5321.MailFrom` er blueyonder.airlines@margiestravel.com.
-- Adressen `5322.From` er blueyonder@news.blueyonderairlines.com, hvilket er det, du kan se i Outlook.
+- Adressen `5322.From` er blueyonder@news.blueyonderairlines.com, hvilket er det, du får vist i Outlook.
 
-Pengeskab afsenderlister og sikre domænelister i politikker til bekæmpelse af spam i EOP undersøger kun adresserne`5322.From`. Dette svarer til Outlook Pengeskab afsendere, der bruger `5322.From` adressen.
+Lister over sikre afsendere og lister over sikre domæner i politikker til bekæmpelse af spam i EOP undersøger kun adresserne `5322.From` . Dette svarer til Outlook Safe Senders, der bruger adressen `5322.From` .
 
 Hvis du vil forhindre, at denne meddelelse filtreres, kan du benytte følgende fremgangsmåde:
 
-- Tilføj blueyonder@news.blueyonderairlines.com (`5322.From`adressen) som afsender af Outlook Pengeskab.
+- Tilføj blueyonder@news.blueyonderairlines.com ( `5322.From` adressen) som Outlook Safe Sender.
 - [Brug en regel for et mailflow](#recommended-use-mail-flow-rules) med en betingelse, der søger efter meddelelser fra blueyonder@news.blueyonderairlines.com (adressen `5322.From` , blueyonder.airlines@margiestravel.com (den `5321.MailFrom`) eller begge dele.

@@ -1,5 +1,5 @@
 ---
-title: Skift Microsoft 365 for forretningsplaner manuelt
+title: Skift Microsoft 365 til virksomheder-planer manuelt
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -20,14 +20,14 @@ search.appverid: MET150
 description: Skift abonnementer manuelt ved at købe et nyt abonnement og sikre, at både abonnementerne er angivet og aktive.
 ROBOTS: NOINDEX
 ms.date: 03/17/2021
-ms.openlocfilehash: d7969821cceb0864ac2ee20674e7aa67d8a12e39
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 5e2d9e3da47c8d9c86e3e0b6d3d0b648c6016509
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101592"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493547"
 ---
-# <a name="change-plans-manually"></a>Skift planer manuelt
+# <a name="manually-change-microsoft-plans"></a>Skift Microsoft-planer manuelt
 
 ## <a name="step-1-decide-how-to-change-plans"></a>Trin 1: Beslut, hvordan du vil ændre planer
 
@@ -50,7 +50,7 @@ Hvis du vil fortsætte med en manuel ændring, skal du læse [Trin 2: Køb et ny
 
 ELLER
 
-**Køb et nyt abonnement og nye licenser:** Følg trinnene i [Køb et andet Microsoft 365 til virksomheder-abonnement for](../try-or-buy-microsoft-365.md) at købe et nyt abonnement.
+**Køb et nyt abonnement og nye licenser:** Følg trinnene i [Køb et andet Abonnement på Microsoft 365 til virksomheder for](../try-or-buy-microsoft-365.md) at købe et nyt abonnement.
 
 Sørg for at købe et abonnement til den samme organisation, som brugerne er i nu. Kontrollér f.eks. mailadresserne for de brugere, du vil flytte. Hvis deres mailadresser indeholder \@contoso.com, skal du købe et nyt abonnement til contoso.com.
 Medtag en licens for hver bruger, du vil flytte.
@@ -80,7 +80,7 @@ Licenserne for det aktuelle abonnement fjernes senere. du betaler kun for de nye
 
 ## <a name="step-4-reassign-licenses"></a>Trin 4: Tildel licenser igen
 
-Når du opgraderer fra en Office 365 plan til en Microsoft 365 plan, skal du ændre licenstildelingerne for alle brugere. Licenser tildeles ikke automatisk, når du ændrer planer manuelt.
+Når du opgraderer fra en Office 365 plan til en Microsoft 365-plan, skal du ændre licenstildelingerne for alle brugere. Licenser tildeles ikke automatisk, når du ændrer planer manuelt.
 
 ### <a name="reassign-a-license-for-one-user"></a>Tildel en licens til én bruger igen
 

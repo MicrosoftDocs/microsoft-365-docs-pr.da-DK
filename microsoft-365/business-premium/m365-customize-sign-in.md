@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -22,18 +22,18 @@ search.appverid:
 - BCS160
 - MET150
 description: Tilpas din logonside med en meddelelse om beskyttelse af personlige oplysninger og samtykke til Microsoft 365.
-ms.openlocfilehash: 34aff0437b08bc5cb34064b5b7ed474e9b2cf094
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: f715841e9a19d04c270449a9aa5d641df34efb0a
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66129003"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493635"
 ---
 # <a name="customize-your-sign-in-page-with-a-privacy-and-consent-notice"></a>Tilpas din logonside med en meddelelse om beskyttelse af personlige oplysninger og samtykke
 
 Din virksomhed eller kampagne kan gøre det nemmere for de retshåndhævende myndigheder at sagsøge onlinekriminelle ved at tilføje en meddelelse om beskyttelse af personlige oplysninger og samtykke på din logonside.
 
-Du kan tilpasse din logonside med din branding. Du kan også tilføje tekst for at hjælpe dine brugere med at logge på eller for at påpege juridiske krav eller begrænsninger for at få adgang til Microsoft 365 ressourcer.
+Du kan tilpasse din logonside med din branding. Du kan også tilføje tekst for at hjælpe dine brugere med at logge på eller for at påpege juridiske krav eller begrænsninger for at få adgang til Microsoft 365-ressourcer.
 
 ## <a name="design-customization-the-text-on-your-sign-in-page"></a>Design tilpasning af teksten på logonsiden
 
