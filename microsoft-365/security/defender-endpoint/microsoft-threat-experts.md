@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b81daa25618fd971f5f29e2672673e8dcd2e35bc
-ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
+ms.openlocfilehash: 38e0145d1df971d651aab0be02c08e46ea70fe70
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/18/2022
-ms.locfileid: "66159440"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490316"
 ---
 # <a name="microsoft-threat-experts"></a>Microsoft Threat Experts
 
@@ -50,7 +50,7 @@ Se denne video for at få mere at vide om, hvordan Microsoft-trusselseksperter l
 
 Hvis du er Microsoft Defender for Endpoint kunde, skal du ansøge om **Microsoft-trusselseksperter – målrettede angrebsmeddelelser** for at få særlig indsigt og analyse, der hjælper med at identificere de mest kritiske trusler i dit miljø, så du kan reagere hurtigt på dem.
 
-Hvis du vil tilmelde dig Microsoft-trusselseksperter – fordele ved meddelelser om målrettede angreb, skal du gå til **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** \> **Microsoft-trusselseksperter – Målrettede angrebsmeddelelser** er gældende. Når du har accepteret, får du fordelene ved målrettede angrebsmeddelelser.
+Hvis du vil tilmelde dig Microsoft-trusselseksperter – fordele ved meddelelser om målrettede angreb, skal du gå til **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** \> **Microsoft-trusselseksperter – Målrettede angrebsmeddelelser**, der skal anvendes. Når du har accepteret, får du fordelene ved målrettede angrebsmeddelelser.
 
 Kontakt dit kontoteam eller din Microsoft-repræsentant for at abonnere **på Microsoft-trusselseksperter – Eksperter on Demand for** at rådføre sig med vores trusselseksperter om relevante opdagelser og modstandere, som din organisation står overfor.
 
@@ -67,7 +67,7 @@ Microsoft-trusselseksperter – Målrettet angrebsmeddelelse giver proaktiv jagt
 
 ## <a name="microsoft-threat-experts---experts-on-demand"></a>Microsoft-trusselseksperter - Eksperter efter behov
 
-Kunderne kan engagere vores sikkerhedseksperter direkte fra Microsoft 365 Defender for at få rettidig og præcis svar. Eksperter giver indsigt, der er nødvendige for bedre at forstå de komplekse trusler, der påvirker din organisation, fra alarmforespørgsler, potentielt kompromitterede enheder, hovedårsagen til en mistænkelig netværksforbindelse til yderligere trusselsintelligens vedrørende igangværende vedvarende trusselskampagner. Med denne funktion kan du:
+Kunderne kan engagere vores sikkerhedseksperter direkte fra Microsoft 365 Defender portal for at få deres svar. Eksperter giver indsigt, der er nødvendige for bedre at forstå de komplekse trusler, der påvirker din organisation, fra alarmforespørgsler, potentielt kompromitterede enheder, hovedårsagen til en mistænkelig netværksforbindelse til yderligere trusselsintelligens vedrørende igangværende vedvarende trusselskampagner. Med denne funktion kan du:
 
 - Få yderligere afklaring af beskeder, herunder den egentlige årsag til eller omfanget af hændelsen
 - Få klarhed over mistænkelig enhedsadfærd og næste trin, hvis du står over for en avanceret hacker

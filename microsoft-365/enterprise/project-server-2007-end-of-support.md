@@ -1,8 +1,8 @@
 ---
 title: Køreplan for ophør af support til Project Server 2007
-ms.author: efrene
-author: efrene
-manager: scotv
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 ms.date: 1/31/2018
 audience: ITPro
 ms.topic: conceptual
@@ -19,16 +19,16 @@ search.appverid:
 - PJW120
 ms.assetid: d379018f-72b7-4284-b40a-6c23c8ae38fe
 description: Den 10. oktober 2017 ophører supporten til Project Server 2007, Project Portfolio Server og Project 2007. Brug denne artikel til at planlægge opgraderingen nu.
-ms.openlocfilehash: 3abceb4eb9d26cf8d9b5394265ba84cf7dc714ba
-ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
+ms.openlocfilehash: c072daf811ec8e175c830aaa95b2163c80fa2b6f
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/08/2022
-ms.locfileid: "65941124"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487310"
 ---
 # <a name="project-server-2007-end-of-support-roadmap"></a>Køreplan for ophør af support til Project Server 2007
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
 Support til Office 2007-servere og -programmer ophørte i 2017, og du skal overveje planer for migrering. Hvis du i øjeblikket bruger Project Server 2007 og relaterede produkter, skal du bemærke følgende slutdatoer for support:
   
@@ -63,7 +63,7 @@ Hvis du bruger Project Server 2007, skal du udforske dine overførselsmuligheder
     
 - Overfør til en nyere version af Project Server i det lokale miljø (helst Project Server 2016)
     
-|**Hvorfor foretrækker jeg at migrere til Project Online**|**Hvorfor foretrækker jeg at migrere til Project Server 2016**|
+|**Hvorfor ville jeg foretrække at migrere til Project Online**|**Hvorfor skulle jeg foretrække at migrere til Project Server 2016**|
 |:-----|:-----|
 | Jeg har mobilbrugere.  <br/> <br/>Omkostninger til migrering er et vigtigt problem (hardware, software, timer og indsats for at implementere). <br/><br/>  Efter migreringen er omkostninger til vedligeholdelse af mit miljø et stort problem (f.eks. automatiske opdateringer, garanteret oppetid osv.).  <br/> | Forretningsregler begrænser mig fra at drive min virksomhed i cloudmiljøet.<br/><br/>  Jeg har brug for kontrol over opdateringer til mit miljø.  |
    
@@ -76,9 +76,9 @@ Overvej følgende, når du planlægger at overføre fra Project Server 2007:
   
 - Det kan være en udfordring at **få hjælp fra en Microsoft-partner** – Opgradering fra Project Server 2007 kan være udfordrende og kræver megen forberedelse og planlægning. Det kan være særligt udfordrende, hvis du ikke var den person, der konfigurerede Project Server 2007 oprindeligt. Heldigvis er der Microsoft-partnere, der kan hjælpe, uanset om du planlægger at migrere til Project Server 2016 eller til Project Online. Søg efter en Microsoft-partner for at få hjælp til din migrering i [Microsoft Partnercenter](https://go.microsoft.com/fwlink/p/?linkid=841249). Søg efter begrebet  *Guldprojekt og Porteføljestyring* for at få vist en liste over alle Microsoft-partnere, der har ekspertise inden for Project. 
     
-- **Planlæg dine tilpasninger** – Mange af de tilpasninger, du har foretaget i dit Project Server 2007-miljø, fungerer muligvis ikke, når du overfører til Project Server 2016 eller Project Online. Der er betydelige forskelle i Project Server-arkitekturen mellem versioner. De påkrævede operativsystemer, databaseservere og klientwebbrowsere, der understøttes, er også forskellige. Planlæg, hvordan du tester eller genopbygger dine tilpasninger til det nye miljø. Planlægning giver også en god mulighed for at overveje, om hver tilpasning stadig er nødvendig. Du kan finde flere oplysninger under [Opret en plan for aktuelle tilpasninger under opgraderingen til SharePoint 2013](/SharePoint/upgrade-and-update/create-a-communication-plan-for-the-upgrade-to-sharepoint-2013). 
+- **Planlæg dine tilpasninger** – Mange af de tilpasninger, du har foretaget i dit Project Server 2007-miljø, fungerer muligvis ikke, når du migrerer til Project Server 2016 eller Project Online. Der er betydelige forskelle i Project Server-arkitekturen mellem versioner. De påkrævede operativsystemer, databaseservere og klientwebbrowsere, der understøttes, er også forskellige. Planlæg, hvordan du tester eller genopbygger dine tilpasninger til det nye miljø. Planlægning giver også en god mulighed for at overveje, om hver tilpasning stadig er nødvendig. Du kan finde flere oplysninger under [Opret en plan for aktuelle tilpasninger under opgraderingen til SharePoint 2013](/SharePoint/upgrade-and-update/create-a-communication-plan-for-the-upgrade-to-sharepoint-2013). 
     
-- **Tid og tålmodighed** – Opgraderingsplanlægning, udførelse og test vil tage tid og kræfter, især hvis du opgraderer til Project Server 2016. Hvis du f.eks. overfører fra Project Server 2007 til Project Server 2016, skal du først overføre til Project Server 2010, kontrollere dine data og derefter gøre det samme, når du overfører til hver efterfølgende version. Det kan være en god idé at kontakte en Microsoft-partner for at få et skøn over, hvor lang tid det vil tage, og hvad det vil koste.
+- **Tid og tålmodighed** – Opgraderingsplanlægning, udførelse og test tager tid og kræfter, især hvis du opgraderer til Project Server 2016. Hvis du f.eks. overfører fra Project Server 2007 til Project Server 2016, skal du først overføre til Project Server 2010, kontrollere dine data og derefter gøre det samme, når du overfører til hver efterfølgende version. Det kan være en god idé at kontakte en Microsoft-partner for at få et skøn over, hvor lang tid det vil tage, og hvad det vil koste.
     
 ## <a name="migrate-to-project-online"></a>Overfør til Project Online
 
@@ -86,7 +86,7 @@ Hvis du vælger at overføre fra Project Server 2007 til Project Online, kan du 
   
 1. Gem dine projektplaner fra Project Server 2003 i .mpp-format.
     
-2. I Project Professional 2013, Project Professional 2016 eller Project Online Desktop-klienten skal du åbne hver .mpp-fil og derefter gemme og publicere den på Project Online.
+2. I Project Professional 2013 skal du Project Professional 2016 eller Project Online Desktop Client åbne hver .mpp-fil og derefter gemme og publicere den til Project Online.
     
 Du kan oprette din PWA-konfiguration (Microsoft Project Web App) manuelt i Project Online. Du kan f.eks. genskabe de nødvendige brugerdefinerede felter eller virksomhedskalendere. Microsoft-partnere kan også hjælpe med denne proces.
   
@@ -95,24 +95,24 @@ Nøgleressourcer:
 |**Ressource**|**Beskrivelse**|
 |:-----|:-----|
 |[Kom i gang med Project Online](https://support.office.com/article/e3e5f64f-ada5-4f9d-a578-130b2d4e5f11) <br/> |Sådan konfigurerer og bruger du Project Online <br/> |
-|[Beskrivelser af Project Online-tjenesten](/office365/servicedescriptions/project-online-service-description/project-online-service-description) <br/> |Oplysninger om de forskellige Project Online-planer, der er tilgængelige for dig <br/> |
+|[Project Online tjenestebeskrivelser](/office365/servicedescriptions/project-online-service-description/project-online-service-description) <br/> |Oplysninger om de forskellige Project Online planer, der er tilgængelige for dig <br/> |
    
 ## <a name="migrate-to-a-newer-on-premises-version-of-project-server"></a>Overfør til en nyere version af Project Server i det lokale miljø
 
-Vi er overbeviste om, at du får den bedste værdi og brugeroplevelse ved at migrere til Project Online. Men vi forstår også, at nogle organisationer skal opbevare projektdata i et lokalt miljø. Hvis du vælger at beholde dine projektdata i det lokale miljø, kan du overføre Dit Project Server 2007-miljø til Project Server 2010, Project Server 2013 eller Project Server 2016.
+Vi er overbeviste om, at du får den bedste værdi og brugeroplevelse ved at migrere til Project Online. Men vi forstår også, at nogle organisationer skal opbevare projektdata i et lokalt miljø. Hvis du vælger at beholde dine projektdata i det lokale miljø, kan du overføre Project Server 2007-miljøet til Project Server 2010, Project Server 2013 eller Project Server 2016.
   
-Hvis du ikke kan overføre til Project Online, anbefaler vi, at du overfører til Project Server 2016. Project Server 2016 indeholder alle funktionerne i tidligere versioner af Project Server. Den stemmer mest overens med den oplevelse, der er tilgængelig med Project Online, selvom nogle funktioner kun er tilgængelige i Project Online.
+Hvis du ikke kan overføre til Project Online, anbefaler vi, at du overfører til Project Server 2016. Project Server 2016 indeholder alle funktionerne i tidligere versioner af Project Server. Den passer bedst til den oplevelse, der er tilgængelig med Project Online, selvom nogle funktioner kun er tilgængelige i Project Online.
   
 Efter hver overførsel skal du kontrollere, at dine data er migreret korrekt.
   
 > [!NOTE]
 >
   
-### <a name="how-do-i-migrate-to-project-server-2016"></a>Hvordan overfører jeg til Project Server 2016?
+### <a name="how-do-i-migrate-to-project-server-2016"></a>Hvordan gør jeg migrere til Project Server 2016?
 
-Arkitektoniske forskelle mellem Project Server 2007 og Project Server 2016 forhindrer en direkte overførselssti. Så du skal overføre dine Project Server 2007-data til hver efterfølgende version af Project Server, indtil du når Project Server 2016.
+Arkitektoniske forskelle mellem Project Server 2007 og Project Server 2016 forhindre en direkte overførselssti. Så du skal overføre dine Project Server 2007-data til hver efterfølgende version af Project Server, indtil du når Project Server 2016.
   
-Følg disse trin til Project Server 2016:
+Følg disse trin for at Project Server 2016:
   
 1. Overfør fra Project Server 2007 til Project Server 2010.
     
@@ -133,7 +133,7 @@ Nøgleressourcer:
 |[Oversigt over opgradering af Project Server 2010](/previous-versions/office/project-server-2010/ee662496(v=office.14)) <br/> |En overordnet visning af, hvad du skal gøre for at opgradere fra Project Server 2007 til Project Server 2010 <br/> |
 |[Planlæg opgradering til Project Server 2010](/previous-versions/office/project-server-2010/ff603505(v=office.14)) <br/> |Overvejelser i forbindelse med planlægning, når du opgraderer fra Project Server 2007 til Project Server 2010, herunder systemkrav  <br/> |
    
-#### <a name="how-do-i-upgrade"></a>Hvordan opgraderer jeg?
+#### <a name="how-do-i-upgrade"></a>Hvordan gør jeg opgradering?
 
 Du kan finde flere oplysninger under [Opgrader til Project Server 2010](/previous-versions/office/project-server-2010/gg502590(v=office.14)). Men det er vigtigt at forstå, at der er to forskellige metoder, du kan bruge til at opgradere:
   
@@ -198,14 +198,14 @@ Nøgleressourcer:
   
 |**Ressource**|**Beskrivelse**|
 |:-----|:-----|
-|[Oversigt over Project Server 2016-opgraderingsprocessen](/previous-versions/office/project-server-2010/ee662104(v=office.14)) <br/> |Oversigt over, hvad du skal gøre for at opgradere fra Project Server 2013 til Project Server 2016 <br/> |
+|[Oversigt over Project Server 2016 opgraderingsprocessen](/previous-versions/office/project-server-2010/ee662104(v=office.14)) <br/> |Oversigt over, hvad du skal gøre for at opgradere fra Project Server 2013 til Project Server 2016 <br/> |
 |[Planlæg opgradering til Project Server 2016](/project/plan-for-upgrade-to-project-server-2016) <br/> |Planlægningsovervejelser, du opgraderer fra Project Server 2013 til Project Server 2016 <br/> |
    
 #### <a name="things-to-know-about-upgrading-to-this-version"></a>Ting, du skal vide om opgradering til denne version
 
-[Ting, du skal vide om opgraderingen af Project Server 2016](/project/plan-for-upgrade-to-project-server-2016) , fortæller dig nogle vigtige ændringer til opgradering af denne version, som omfatter:
+[Ting, du har brug for at vide om Project Server 2016 opgradering](/project/plan-for-upgrade-to-project-server-2016), fortæller dig nogle vigtige ændringer til opgradering af denne version, som omfatter:
   
-- Når du opretter dit Project Server 2016-miljø, som du vil overføre dine Project Server 2013-data til, medtages Project Server 2016-installationsfilerne i SharePoint Server 2016. Du kan få flere oplysninger under [Installér Project Server 2016](/project/deploy-project-server-2016).
+- Når du opretter dit Project Server 2016 miljø, som du vil overføre dine Project Server 2013-data til, medtages de Project Server 2016 installationsfiler i SharePoint Server 2016. Du kan få flere oplysninger under [Installér Project Server 2016](/project/deploy-project-server-2016).
     
 - Ressourceplaner frarådes i Project Server 2016. Dine Project Server 2013-ressourceplaner overføres til Ressourceengagementer i Project Server 2016 og i Project Online. Se [Oversigt: Ressourceengagementer](https://support.office.com/article/73eefb5a-81fe-42bf-980e-9532b1bdc870) for at få flere oplysninger. 
     
@@ -215,7 +215,7 @@ Project Portfolio Server 2007 blev brugt sammen med Project Server 2007 til over
   
 Andre ressourcer:
   
-- [Beskrivelser af Project Online-tjeneste:](/office365/servicedescriptions/project-online-service-description/project-online-service-description) Se de funktioner til oversigtsadministration, der er inkluderet i Project Server 2016 og Project Online Premium.
+- [Project Online tjenestebeskrivelser:](/office365/servicedescriptions/project-online-service-description/project-online-service-description) Se de funktioner til oversigtsadministration, der er inkluderet i Project Server 2016 og Project Online Premium.
     
 - [Overførselsvejledning til Microsoft Office Project Portfolio Server 2007.](https://go.microsoft.com/fwlink/p/?linkid=841279)
     

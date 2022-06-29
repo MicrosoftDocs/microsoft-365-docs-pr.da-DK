@@ -19,12 +19,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 2cd146cfb0fe9b6af10f562bbf6eb00bc5bf9a3d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 8cacce248561acc0e51fb40c6b5f48b33f6d2de7
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078396"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487205"
 ---
 # <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender-preview"></a>Microsoft Defender for Cloud Apps i Microsoft 365 Defender (eksempelvisning)
 
@@ -73,7 +73,7 @@ Billedet og tabellen nedenfor viser ændringerne i navigationen mellem Microsoft
 | Forbundne apps | resterende i Defender for Cloud Apps-portalen |
 
 > [!NOTE]
-> Den nye Defender for Cloud Apps-oplevelse på Microsoft 365 Defender-portalen er i øjeblikket tilgængelig for alle brugere, der er beskrevet i [Administrer administratoradgang](/defender-cloud-apps/manage-admins), bortset fra dem med de roller, der er defineret [i indbyggede administratorroller i Defender for Cloud Apps](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps).
+> Den nye Defender for Cloud Apps-oplevelse på Microsoft 365 Defender-portalen er i øjeblikket tilgængelig for alle brugere, der er beskrevet i [Administrer administratoradgang](/defender-cloud-apps/manage-admins), undtagen **administrator af app/instans**, **brugergruppeadministrator**, **global administrator af Cloud Discovery** og **rapportadministrator af Cloud Discovery**, som defineret [i indbyggede administratorroller i Defender for Cloud Apps](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps).
 
 ## <a name="whats-changed"></a>Hvad er ændret
 

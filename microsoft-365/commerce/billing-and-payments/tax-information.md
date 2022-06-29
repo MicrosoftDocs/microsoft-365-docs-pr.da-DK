@@ -19,18 +19,18 @@ ms.custom:
 - okr_SMB
 - AdminSurgePortfolio
 - AdminTemplateSet
-description: Find ud af, hvor meget skat du vil blive opkrævet for dit Microsoft 365 for virksomhedsabonnement i forskellige områder.
+description: Find ud af, hvor meget skat du skal betale for dit Abonnement på Microsoft 365 til virksomheder i forskellige områder.
 ms.date: 03/17/2021
-ms.openlocfilehash: 049b361f75dec9402464aa4216e15388a8174f1d
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 1c676167f68c37b51c2ccdfc8ac08561e52cbea9
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101618"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486531"
 ---
-# <a name="tax-information"></a>Skatteoplysninger
+# <a name="microsoft-365-tax-information"></a>Microsoft 365-momsoplysninger
 
-Når du køber Microsoft 365 produkter og tjenester, bestemmes de skatter, du betaler, af en af to ting: din virksomhedsadresse eller din leveringsadresse, hvis det er anderledes. Hvis din organisation befinder sig i USA, skal du angive et FEIN (Federal Employer Identification Number).
+Når du køber Microsoft 365-produkter og -tjenester, bestemmes de skatter, du betaler, af en af to ting: din virksomhedsadresse eller din leveringsadresse, hvis den er anderledes. Hvis din organisation befinder sig i USA, skal du angive et FEIN (Federal Employer Identification Number).
 
 Virksomheder i følgende lande kan angive deres momsnummer eller lokale ækvivalente:
 
@@ -102,13 +102,13 @@ Virksomheder i følgende lande kan angive deres momsnummer eller lokale ækvival
 
 ## <a name="europe-the-middle-east-and-africa-emea"></a>Europa, Mellemøsten og Afrika (EMEA)
 
-Når du køber Microsoft 365 tjenester i EMEA-området, kan dette køb være underlagt Value-Added moms.
+Når du køber Microsoft 365-tjenester i EMEA-området, kan dette køb være underlagt Value-Added Moms.
   
 - Hvis du befinder dig i en EU-medlemsstat, Armenien, Belarus, Norge, Tyrkiet eller De Forenede Arabiske Emirater, og du ikke angiver dit gyldige lokale moms-id, anvender Microsoft Ireland Operations Ltd. den aktuelle lokale momssats baseret på det faktureringsland, din konto er angivet til.
 
 - Hvis du befinder dig i Liechtenstein, Rusland, Serbien, Sydafrika eller Schweiz, anvendes momsen, uanset om du angiver dit moms-id eller ej.
 
-- For EU-kunder skal det være tilgængeligt til bekræftelse i VIES (Vat Information Exchange System), før vi kan validere dit moms-id. Hvis dit moms-id ikke kan bekræftes, skal du kontakte din lokale skattemyndighed.
+- For EU-kunder skal det være tilgængeligt til bekræftelse i VIES (Moms Information Exchange System), før vi kan validere dit moms-id. Hvis dit moms-id ikke kan bekræftes, skal du kontakte din lokale skattemyndighed.
 
 Du kan kvalificere dig til nul-momsklassifikation, hvis:
   

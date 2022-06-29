@@ -23,14 +23,14 @@ ms.custom:
 search.appverid: MET150
 description: Brug disse trin til at købe flere licenser eller reducere antallet af licenser til dit Abonnement på Microsoft 365 til virksomheder.
 ms.date: 06/06/2022
-ms.openlocfilehash: bbeff9310a652a768c92ba3640e84607b8628619
-ms.sourcegitcommit: 23fd850272f39c4202e2320e56d11fb6707b3e2e
+ms.openlocfilehash: ad7f0b15218043757c1e0692603e74760e2c10ef
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65925073"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489664"
 ---
-# <a name="buy-or-remove-licenses"></a>Køb eller fjern licenser
+# <a name="buy-or-remove-microsoft-365-licenses-for-a-subscription"></a>Køb eller fjern Microsoft 365-licenser til et abonnement
 
 Du kan købe flere licenser eller reducere antallet af licenser til dine abonnementer ved hjælp af følgende trin.
 
@@ -41,7 +41,7 @@ Du kan købe flere licenser eller reducere antallet af licenser til dine abonnem
 
 - Du skal være enten global administrator eller faktureringsadministrator for at udføre de opgaver, der er beskrevet i denne artikel. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 - Du kan [tilføje brugere og tildele licenser på samme tid](../../admin/add-users/add-users.md).
-- Hvis du har købt din Microsoft 365 til virksomheder- eller Office 365 Enterprise-plan via en tredjepartspartner, skal du købe yderligere licenser via den pågældende partner.
+- Hvis du har købt din Microsoft 365 for business- eller Office 365 Enterprise-plan via en tredjepartspartner, skal du købe yderligere licenser via den pågældende partner.
 
 ## <a name="watch-buy-new-licenses"></a>Se: Køb nye licenser
 

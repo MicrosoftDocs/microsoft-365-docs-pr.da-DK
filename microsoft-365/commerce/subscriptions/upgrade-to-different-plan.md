@@ -21,14 +21,14 @@ ms.custom:
 search.appverid: MET150
 description: Den nemmeste måde at opgradere planer på er at bruge fanen Opgrader i Administration. Fanen Opgrader understøttes dog ikke altid.
 ms.date: 04/21/2021
-ms.openlocfilehash: 4578730d82fddd5bdd3d0d25dd7fd1e16414808b
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 557070177fac2e1ae91d3ddb9e2125221c6b4f3f
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102252"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489140"
 ---
-# <a name="upgrade-to-a-different-plan"></a>Skift til en anden plan
+# <a name="upgrade-to-a-different-microsoft-plan"></a>Opgrader til en anden Microsoft-plan
 
 Når din virksomhed ændres, eller du har brug for flere funktioner, kan du opgradere planer. Den nemmeste måde at gøre dette på er at bruge fanen **Opgrader** i Administration. Brug af fanen **Opgrader** understøttes dog ikke i alle situationer. I nogle tilfælde kan du muligvis ændre planer manuelt.
 
@@ -36,7 +36,7 @@ Når din virksomhed ændres, eller du har brug for flere funktioner, kan du opgr
 
 Når du bruger fanen **Opgrader** , bliver du ført gennem processen med at købe en ny plan. Alle brugere tildeles automatisk licenser i den nye plan, og din gamle plan annulleres for dig.
 
-1. I Administration center skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">af dine produkter</a>.
+1. I Administration skal du gå til siden **Fakturering**\><a href="https://go.microsoft.com/fwlink/p/?linkid=842054" target="_blank">Dine produkter</a>.
 2. Vælg det abonnement, du vil opgradere.
 3. På siden med abonnementsoplysninger under **Produktoplysninger og opgraderinger** skal du vælge **Få vist de opgraderinger, der anbefales til din organisation**.
 4. Find den plan, du vil opgradere til, og vælg derefter knappen **Opgrader** .
@@ -144,10 +144,10 @@ Når du opgraderer planer automatisk ved hjælp af knappen **Skift planer** (ell
 
 Brugere med det gamle abonnement flyttes automatisk til det nye abonnement.
 
-Hvis dit gamle abonnement omfatter flere tjenester, og hvis du har ændret, hvilke af disse tjenester dine brugere er tildelt, kan du notere dig dette, før du opgraderer planer, så du kan genskabe disse ændringer senere. Alle brugere får adgang til alle tjenester i det nye abonnement. Hvis du f.eks. tidligere har købt Microsoft 365 Business Premium til alle 100 af dine brugere, men ikke har fået tildelt SharePoint Online-tjenesten fra 50 af dem, bevares denne ændring ikke, når du har opgraderet planer.
+Hvis dit gamle abonnement omfatter flere tjenester, og hvis du har ændret, hvilke af disse tjenester dine brugere er tildelt, kan du notere dig dette, før du opgraderer planer, så du kan genskabe disse ændringer senere. Alle brugere får adgang til alle tjenester i det nye abonnement. Hvis du f.eks. tidligere har købt Microsoft 365 Business Premium til alle 100 af dine brugere, men ikke tildelt SharePoint Online-tjenesten fra 50 af dem, bevares denne ændring ikke, når du har opgraderet planer.
 
 Hvis du har mere end ét abonnement, før du opgraderer planer og har brugere tildelt licenser til mere end ét abonnement, bevares dette tildelingsmønster så meget som muligt i det nye abonnement.
-Alle brugerdata bevares under opgraderingen, herunder Exchange postkasser og SharePoint onlinedokumenter, lister og andre oplysninger.
+Alle brugerdata bevares under opgraderingen, herunder Exchange-postkasser og SharePoint Online-dokumenter, -lister og andre oplysninger.
   
 ### <a name="billing"></a>Fakturering
 
@@ -165,4 +165,4 @@ Den dag, din planopgradering er fuldført, deaktiveres faktureringen på dit gam
 ## <a name="related-content"></a>Relateret indhold
 
 [Skift planer manuelt](change-plans-manually.md) (artikel)\
-[Sikkerhedskopiér data, før du skifter Microsoft 365 til virksomhedsplaner](back-up-data-before-switching-plans.md) (artikel)
+[Sikkerhedskopiér data, før du skifter Microsoft 365 til virksomheder-planer](back-up-data-before-switching-plans.md) (artikel)

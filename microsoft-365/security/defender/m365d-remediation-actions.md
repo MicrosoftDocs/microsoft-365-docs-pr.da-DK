@@ -21,12 +21,12 @@ ms.topic: conceptual
 ms.custom: autoir
 ms.reviewer: evaldm, isco
 ms.technology: m365d
-ms.openlocfilehash: 5605678a1fcc30719d7f838a16452ba527c554b7
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+ms.openlocfilehash: 669d4f3b4e8c2d805f72f9113cea1e9e926f3390
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64847043"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492360"
 ---
 # <a name="remediation-actions-in-microsoft-365-defender"></a>Afhjælpningshandlinger i Microsoft 365 Defender
 
@@ -50,7 +50,7 @@ I følgende tabel opsummeres afhjælpningshandlinger, der i øjeblikket underst�
 
 |Afhjælpningshandlinger for enheden (slutpunktet)  |Handlinger til afhjælpning af mail  |Brugere (konti)  |
 |:---------|:---------|----------|
-|- Indsaml undersøgelsespakke <br/>- Isoler enhed (denne handling kan fortrydes)<br/>- Offboard-maskine <br/>- Frigiv kørsel af kode <br/>- Frigiv fra karantæne <br/>- Anmodningseksempel <br/>- Begræns udførelse af kode (denne handling kan fortrydes) <br/>- Kør antivirusscanning <br/>- Stop og sæt karantæne      |- Bloker URL-adresse (tidspunkt for klik)<br/>- Blød sletning af mails eller klynger<br/>- Karantænemail<br/>- Sæt en vedhæftet fil i karantæne<br/>- Slå videresendelse af eksterne mails fra          |- Deaktiver bruger<br />- Nulstil brugeradgangskode<br />- Bekræft, at brugeren er kompromitteret          |
+|- Indsaml undersøgelsespakke <br/>- Isoler enhed (denne handling kan fortrydes)<br/>- Offboard-maskine <br/>- Frigiv kørsel af kode <br/>- Frigiv fra karantæne <br/>- Anmodningseksempel <br/>- Begræns udførelse af kode (denne handling kan fortrydes) <br/>- Kør antivirusscanning <br/>- Stop og sæt karantæne <br/>- Indeholder enheder fra netværket     |- Bloker URL-adresse (tidspunkt for klik)<br/>- Blød sletning af mails eller klynger<br/>- Karantænemail<br/>- Sæt en vedhæftet fil i karantæne<br/>- Slå videresendelse af eksterne mails fra          |- Deaktiver bruger<br />- Nulstil brugeradgangskode<br />- Bekræft, at brugeren er kompromitteret          |
 
 Afhjælpningshandlinger, uanset om de afventer godkendelse eller allerede er fuldført, kan ses i [Løsningscenter](m365d-action-center.md).
 
@@ -85,3 +85,4 @@ Ud over afhjælpningshandlinger, der følger efter automatiserede undersøgelser
 - [Besøg Løsningscenter](m365d-action-center.md)
 - [Få vist og administrer afhjælpningshandlinger](m365d-autoir-actions.md)
 - [Adresser falske positiver eller falske negativer](m365d-autoir-report-false-positives-negatives.md)
+- [Indeholder enheder fra netværket](../defender-endpoint\respond-machine-alerts.md#contain-devices-from-the-network)

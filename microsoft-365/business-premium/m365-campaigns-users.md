@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,18 +24,18 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan disse sikkerhedsanbefalinger til Microsoft 365 Business Premium påvirker dine brugere og beskytter dine data.
-ms.openlocfilehash: 30e609a6dc74ef8a0303c93f65eb44a4003d3a99
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 49d5a4cea525f8245599ded625af6d7a5b355eae
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893133"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491089"
 ---
 # <a name="how-these-security-recommendations-affect-your-microsoft-365-users"></a>Sådan påvirker disse sikkerhedsanbefalinger dine Microsoft 365-brugere
 
 Sikkerhedsanbefalinger til Microsoft 365 i denne løsning gør det meget sværere for hackere at få adgang til dit miljø. Konsekvensen er, at brugerne skal være opmærksomme på, hvordan de arbejder i dette mere sikre miljø. Vi forstår, at der kræves lidt ekstra tålmodighed, men det er værd at beskytte din organisation.
 
-![Illustration, der opsummerer vigtige punkter nedenfor for iPhones, Android-enheder, Macs, Windows 10, deling og nøglepersonale.](../media/M365-democracy-Users_900px.png)
+![Illustration, der opsummerer vigtige punkter nedenfor for iPhones, Android-enheder, Macs, Windows 10, deling og nøglemedarbejdere.](../media/M365-democracy-Users_900px.png)
 
 ## <a name="use-secure-email-practices"></a>Brug af sikre mailpraksisser
 
@@ -43,7 +43,7 @@ Alle brugere skal være opmærksomme på og bruge disse mailpraksisser til at ho
 
 - Konfigurer mail for at bruge multifaktorgodkendelse med godkenderappen.
 
-- Bekræft legitime mails, og søg efter sikkerhedstip fra avanceret phishing-beskyttelse (Defender til Office 365).
+- Bekræft legitime mails, og søg efter sikkerhedstips fra avanceret phishing-beskyttelse (Defender for Office 365).
 
 - Åbn kun sikre links og vedhæftede filer, som bekræftet af Sikre links og Vedhæftede filer, der er tillid til.
 
@@ -63,7 +63,7 @@ Det tager et par minutter for alle brugere, du føjer til dit miljø, at [konfig
 
 Når du har konfigureret disse, bliver brugerne bedt om at bruge godkenderappen, når de får adgang til dine organisationsdata på disse enheder, herunder mail.
 
-## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>Hold BYOD Macs og Windows 10-pc'er friske
+## <a name="keep-byod-macs-and-windows-10-pcs-fresh"></a>Hold BYOD Macs og Windows 10 pc'er friske
 
 Det er også vigtigt, at brugerne holder deres primære arbejdsenhed opdateret:
 
@@ -73,11 +73,11 @@ Det er også vigtigt, at brugerne holder deres primære arbejdsenhed opdateret:
 
 For [ikke-administrerede Windows 10- og Mac-enheder](m365bp-protect-pcs-macs.md) har brugerne ansvaret for at sikre, at grundlæggende sikkerhedsfunktioner er aktiveret.
 
-**Aktivér grundlæggende sikkerhedsfunktioner på BYOD Windows 10- og Mac-enheder**
+### <a name="enable-basic-security-capabilities-on-byod-windows-10-and-mac-devices"></a>Aktivér grundlæggende sikkerhedsfunktioner på BYOD-Windows 10- og Mac-enheder
 
 |**Windows 10**|**Mac**|
 |:-----|:------|
-|Slå BitLocker-enhedsbeskyttelse til<p><p> Sørg for, at Windows Defender forbliver aktiveret <p>Slå Windows Firewall til| Brug FileVault til at kryptere Mac-disken <p><p>Brug en pålidelig antivirussoftware <p>Slå firewallbeskyttelse til|
+|Slå BitLocker-enhedsbeskyttelse til<p><p> Sørg for, at Windows Defender forbliver på <p>Slå Windows Firewall til| Brug FileVault til at kryptere Mac-disken <p><p>Brug en pålidelig antivirussoftware <p>Slå firewallbeskyttelse til|
 
 Hvis du vil vide mere om disse anbefalinger, skal [du se Beskyt din konto og dine enheder mod hackere og malware](https://support.office.com/article/Protect-your-account-and-devices-from-hackers-and-malware-066d6216-a56b-4f90-9af3-b3a1e9a327d6#ID0EAABAAA=Windows_10).
 
@@ -85,6 +85,6 @@ Hvis du vil vide mere om disse anbefalinger, skal [du se Beskyt din konto og din
 
 Brugerne kan blive fristet til at dele og gemme dine organisationsfiler andre steder end Microsoft 365. Microsoft 365 gør det så nemt som muligt at samarbejde og dele sikkert. Du kan [dele filer og videoer](share-files-and-videos.md) direkte fra Microsoft Teams, OneDrive, Stream og endda fra en fil. Deling fra disse værktøjer hjælper med at forhindre, at dine data lækker. Du kan føje yderligere beskyttelse til følsomme data for at forhindre deling uden for din organisation.
 
-## <a name="set-up-managed-windows-10-devices"></a>Konfigurer administrerede Windows 10-enheder
+## <a name="set-up-managed-windows-10-devices"></a>Konfigurer administrerede Windows 10 enheder
 
-Vi anbefaler, at dine vigtigste medarbejdere bruger nyerhvervede Windows 10-enheder, som du administrerer. Vi viser dig, hvordan du [administrerer og sikrer disse enheder](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Dette sikrer, at medarbejdere, der er det højeste værdimål for hackere, modtager den mest beskyttelse.
+Vi anbefaler, at dine vigtigste medarbejdere bruger nyerhvervede Windows 10 enheder, som du administrerer. Vi viser dig, hvordan du [administrerer og sikrer disse enheder](../business/set-up-windows-devices.md?toc=/microsoft-365/campaigns/toc.json). Dette sikrer, at medarbejdere, der er det højeste værdimål for hackere, modtager den mest beskyttelse.

@@ -15,6 +15,7 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom:
+- adminvideo
 - TopSMBIssues
 - SaRA
 - MSStore_Link
@@ -28,12 +29,12 @@ search.appverid:
 - MOE150
 ms.assetid: 6383f56d-3d09-4dcb-9b41-b5f5a5efd611
 description: Brug installationsguiden til at føje dit domæne til Microsoft 365 i Microsoft 365 Administration ved at tilføje en DNS-post hos din DNS-vært.
-ms.openlocfilehash: ad4654bce8781607a77272dafeb3eb9135c85765
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: 64b82aab051af2c9d5444042f27009b4e02f1ad8
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65922898"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492032"
 ---
 # <a name="add-a-domain-to-microsoft-365"></a>Føj et domæne til Microsoft 365
 
@@ -52,7 +53,7 @@ Hvis du vil tilføje, redigere eller fjerne domæner, **skal** du være **admini
 
 Din virksomhed skal muligvis bruge flere domænenavne til forskellige formål. Det kan f.eks. være, at du vil tilføje en anden stavemåde for dit firmanavn, fordi kunderne allerede bruger det, og deres kommunikation ikke har kontaktet dig.
 
-1. I Microsoft 365 Administration skal du vælge <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Installation**</a>.
+1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Installation**</a> i Microsoft 365 Administration.
 1. Under **Hent dit brugerdefinerede domænesæt** skal du vælge **Vis** > **Administrer** > **Tilføj domæne**.
 1. Angiv det nye domænenavn, du vil tilføje, og vælg derefter **Næste**.
 1. Log på din domæneregistrator, og vælg derefter **Næste**.
@@ -159,18 +160,20 @@ Hver Microsoft 365-organisation kan have op til fem onmicrosoft.com domæner.
 
 Sådan tilføjer du et onmicrosoft.com domæne:
 
-1. I Microsoft 365 Administration skal du vælge **Indstillinger** og derefter vælge **Domæner**.
-2. Vælg dit onmicrosoft.com standarddomæne.
+1. Vælg **Indstillinger** i Microsoft 365 Administration, og vælg derefter **Domæner**.
+
+2. Vælg et eksisterende *.onmicrosoft.com* domæne.
 
     ![Siden Domæner.](../../media/onmicrosoft-domains.png)
   
-3. På siden med domæneegenskaber skal du i afsnittet **Om dette domæne** vælge **Tilføj microsoft-domæne**.
 
-    ![Om denne domæneside.](../../media/add-onmicrosoft-domain-link.png)
+3. Under fanen **Oversigt** skal du vælge **Tilføj onmicrosoft.com domæne**.
 
-4. Skriv navnet på det nye onmicrosoft.com domæne i feltet **Domænenavn** **på siden Tilføj onmicrosoft-domæne**. 
+    ![Skærmbillede af domæneegenskaber.](../../media/add-onmicrosoft-domain-link.png)
 
-    ![Skærmbillede af siden Tilføj onmicrosoft-domæne.](../../media/add-an-onmicrosoftcom-domain-page.png)
+4. Angiv navnet på det nye onmicrosoft.com domæne i feltet **Domænenavn** **på siden Tilføj onmicrosoft-domæne**. 
+
+    ![Skærmbillede af domænet Tilføj onmicrosoft.](../../media/add-an-onmicrosoftcom-domain-page.png)
 
     > [!NOTE]
     > Sørg for at kontrollere stavemåden og nøjagtigheden af det angivne domænenavn. Du er begrænset til fem onmicrosoft.com domæner, og de kan i øjeblikket ikke slettes, når de først er oprettet.     

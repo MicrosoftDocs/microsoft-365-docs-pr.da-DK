@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 1f4ebaadd22a14eb2a9b24194c43fb35a5382adf
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: 1ffaaf3984afdb6e5d87210fc23e7463d41b7ee4
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65923157"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493247"
 ---
 # <a name="configure-defender-for-endpoint-on-android-features"></a>Konfigurer Defender for Endpoint på Android-funktioner
 
@@ -45,7 +45,7 @@ Du kan finde flere oplysninger om, hvordan du konfigurerer Defender for Endpoint
 Defender for Endpoint på Android gør det muligt for administratorer at konfigurere brugerdefinerede indikatorer, så de også understøtter Android-enheder. Du kan få mere at vide om, hvordan du konfigurerer brugerdefinerede indikatorer, under [Administrer indikatorer](manage-indicators.md).
 
 ## <a name="configure-web-protection"></a>Konfigurer webbeskyttelse
-Defender for Endpoint på Android giver it-administratorer mulighed for at konfigurere webbeskyttelsesfunktionen. Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration.
+Defender for Endpoint på Android giver it-administratorer mulighed for at konfigurere webbeskyttelsesfunktionen. Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration center.
 
 > [!NOTE]
 > Defender for Endpoint på Android ville bruge en VPN-forbindelse for at levere webbeskyttelsesfunktionen. Dette er ikke en almindelig VPN- og er en lokal/selv-løkke-VPN, der ikke tager trafik uden for enheden.
@@ -55,19 +55,19 @@ Defender for Endpoint på Android giver it-administratorer mulighed for at konfi
 >[!NOTE]
 >Netværksbeskyttelse på Microsoft Defender for Endpoint er nu en offentlig prøveversion. Følgende oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
 
-Denne funktion giver beskyttelse mod rogue Wi-Fi relaterede trusler og rogue certifikater, som er den primære angrebsvektor for Wi-Fi netværk. Administratorer kan få vist rodnøglecenteret og private rodnøglecentercertifikater i Microsoft Endpoint Manager Administration og etablere tillid med slutpunkter. Det giver brugeren en guidet oplevelse til at oprette forbindelse til sikre netværk og giver dem også besked, hvis der registreres en relateret trussel. 
+Denne funktion giver beskyttelse mod rogue Wi-Fi relaterede trusler og rogue certifikater, som er den primære angrebsvektor for Wi-Fi netværk. Administratorer kan få vist rodnøglecenteret og private rodnøglecentercertifikater i Microsoft Endpoint Manager Administration center og etablere tillid med slutpunkter. Det giver brugeren en guidet oplevelse til at oprette forbindelse til sikre netværk og giver dem også besked, hvis der registreres en relateret trussel. 
 
-Den indeholder flere administratorkontrolelementer, der giver fleksibilitet, f.eks. muligheden for at konfigurere funktionen fra Microsoft Endpoint Manager Administration samt tilføje certifikater, der er tillid til. Administratorer kan også aktivere [kontrolelementer til beskyttelse af personlige oplysninger](android-configure.md) for at konfigurere de data, der sendes af Defender for Endpoint fra Android-enheder.
+Den indeholder flere administratorkontrolelementer, der giver fleksibilitet, f.eks. muligheden for at konfigurere funktionen fra Microsoft Endpoint Manager Administration Center samt tilføje certifikater, der er tillid til. Administratorer kan også aktivere [kontrolelementer til beskyttelse af personlige oplysninger](/microsoft-365/security/defender-endpoint/android-configure#privacy-controls) for at konfigurere de data, der sendes af Defender for Endpoint fra Android-enheder.
 
 Netværksbeskyttelse i Microsoft Defender for slutpunkt er aktiveret som standard. Administratorer kan bruge følgende trin til at **konfigurere Netværksbeskyttelse på Android-enheder.**
 
-1. I Administrator af Microsoft Endpoint Manager skal du navigere til Apps > appkonfigurationspolitikker. Opret en ny appkonfigurationspolitik.
+1. I Microsoft Endpoint Manager Administration skal du navigere til Apps > appkonfigurationspolitikker. Opret en ny appkonfigurationspolitik.
     > [!div class="mx-imgBorder"]
-    > ![Billede af, hvordan du opretter en politik.](images/create-policy.png)
+    > ![Billede af, hvordan du opretter en politik.](images/android-mem.png)
 1. Angiv et navn og en beskrivelse for entydigt at identificere politikken. Vælg **"Android Enterprise"** som platform og **"Kun personligt ejet arbejdsprofil"** som profiltype og **"Microsoft Defender"** som målrettet app.
     > [!div class="mx-imgBorder"]
     > ![Billede af oplysninger om politik.](images/appconfigdetails.png)
-1. På siden Indstillinger skal du vælge **'Brug konfigurationsdesigner'** og føje **'Aktivér netværksbeskyttelse i Microsoft Defender'** som nøgle og værdi som **'0'** til diable Network Protection. (Netværksbeskyttelse er aktiveret som standard)
+1. På siden Indstillinger skal du vælge **'Brug konfigurationsdesigner'** og tilføje **'Aktivér netværksbeskyttelse i Microsoft Defender'** som nøgle og værdi som **'0'** for at deaktivere Netværksbeskyttelse. (Netværksbeskyttelse er aktiveret som standard)
     > [!div class="mx-imgBorder"]
     > ![Billede af, hvordan du vælger Aktivér politik for netværksbeskyttelse](images/selectnp.png)
     
@@ -101,13 +101,14 @@ Følgende kontrolelementer til beskyttelse af personlige oplysninger er tilgæng
 |Malwarerapport |Administratorer kan konfigurere kontrolelementet til beskyttelse af personlige oplysninger for malwarerapport – Hvis beskyttelse af personlige oplysninger er aktiveret, sender Defender for Endpoint ikke navnet på malwareappen og andre appoplysninger som en del af rapporten med malwarebeskeder |
 |Phish-rapport |Administratorer kan konfigurere kontrolelementet til beskyttelse af personlige oplysninger for phishrapport – Hvis beskyttelse af personlige oplysninger er aktiveret, sender Defender for Endpoint ikke domænenavnet og oplysningerne om det usikre websted som en del af phish-beskedrapporten |
 |Vurdering af sårbarheder for apps (kun Android) |Som standard sendes der kun oplysninger om de apps, der er installeret i arbejdsprofilen, til vurdering af sårbarheder. Administratorer kan deaktivere beskyttelse af personlige oplysninger for at inkludere personlige apps|
+|Network Protection (prøveversion)| Administratorer kan aktivere eller deaktivere beskyttelse af personlige oplysninger i netværksbeskyttelse – Hvis indstillingen er aktiveret, sender Defender ikke netværksoplysninger.|
 
 ## <a name="configure-vulnerability-assessment-of-apps-for-byod-devices"></a>Konfigurer vurdering af sårbarheder for apps til BYOD-enheder
 
 Fra version 1.0.3425.0303 af Microsoft Defender for Endpoint på Android kan du køre sårbarhedsvurderinger af OS og apps, der er installeret på de onboardede mobilenheder.
 
 > [!NOTE]
-> Vurdering af sårbarheder er en del af [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/defender-vulnerability-management.md) i Microsoft Defender for Endpoint. 
+> Vurdering af sårbarheder er en del af [Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender](../defender-vulnerability-management/defender-vulnerability-management.md) i Microsoft Defender for Endpoint. 
 
 **Noter om beskyttelse af personlige oplysninger for apps fra personlige enheder (BYOD):**
 
@@ -121,7 +122,7 @@ Brug følgende trin til at **aktivere vurdering af sårbarheder for apps** fra e
 > [!NOTE]
 > Denne indstilling er som standard slået fra for de enheder, der er tilmeldt enhedens administratortilstand.
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Profiler** >  til **enhedskonfiguration** > **Opret profil** og angive følgende indstillinger:
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Enhedskonfigurationsprofiler** >  >  **Opret profil** og angive følgende indstillinger:
 
    - **Platform**: Vælg Android-enhedsadministrator
    - **Profil**: Vælg "Brugerdefineret", og klik på Opret
@@ -141,7 +142,7 @@ Brug følgende trin til at **aktivere vurdering af sårbarheder for apps** fra e
 
 Defender for Endpoint understøtter vurdering af sårbarheder for apps i arbejdsprofilen. Hvis du vil slå denne funktion fra for målrettede brugere, kan du dog bruge følgende trin:
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) og gå til **Apps** > **Appkonfigurationspolitikker** > **Tilføj** > **administrerede enheder**.
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431), og gå til **Apps** > **Appkonfigurationspolitikker** > **Tilføj** > **administrerede enheder**.
 2. Giv politikken et navn. **Platform > Android Enterprise**; vælg profiltypen.
 3. Vælg **Microsoft Defender for Endpoint** som destinationsapp.
 4. På siden Indstillinger skal du vælge **Brug konfigurationsdesigner** og tilføje **DefenderTVMPrivacyMode** som nøgle- og værditype som **Heltal**
@@ -159,7 +160,7 @@ Kontrolelementet til beskyttelse af personlige oplysninger for phish-rapporten k
 
 Brug følgende trin til at slå den til for målrettede brugere:
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Profiler** >  til **enhedskonfiguration** > **Opret profil** og angive følgende indstillinger:
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Enhedskonfigurationsprofiler** >  >  **Opret profil** og angive følgende indstillinger:
 
    - **Platform**: Vælg Android-enhedsadministrator.
    - **Profil**: Vælg "Brugerdefineret", og klik på **Opret**.
@@ -181,7 +182,7 @@ Brug af dette kontrolelement til beskyttelse af personlige oplysninger påvirker
 
 Brug følgende trin til at aktivere beskyttelse af personlige oplysninger for målrettede brugere i arbejdsprofilen:
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) og gå til **Apps** > **Appkonfigurationspolitikker** > **Tilføj** > **administrerede enheder**.
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431), og gå til **Apps** > **Appkonfigurationspolitikker** > **Tilføj** > **administrerede enheder**.
 2. Giv politikken et navn, **Platform > Android Enterprise**, vælg profiltypen.
 3. Vælg **Microsoft Defender for Endpoint** som destinationsapp.
 4. På siden Indstillinger skal du vælge **Brug konfigurationsdesigner** og tilføje **DefenderExcludeURLInReport** som nøgle- og værditype som **Heltal**.
@@ -198,7 +199,7 @@ Kontrolelementet til beskyttelse af personlige oplysninger for malwaretrusselrap
 
 Brug følgende trin til at slå den til for målrettede brugere:
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Profiler** >  til **enhedskonfiguration** > **Opret profil** og angive følgende indstillinger:
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Enhedskonfigurationsprofiler** >  >  **Opret profil** og angive følgende indstillinger:
 
    - **Platform**: Vælg Android-enhedsadministrator.
    - **Profil**: Vælg "Brugerdefineret", og klik på **Opret**.
@@ -220,7 +221,7 @@ Brug af dette kontrolelement til beskyttelse af personlige oplysninger påvirker
 
 Brug følgende trin til at aktivere beskyttelse af personlige oplysninger for målrettede brugere i arbejdsprofilen:
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) og gå til **Apps** > **Appkonfigurationspolitikker** > **Tilføj** > **administrerede enheder**.
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431), og gå til **Apps** > **Appkonfigurationspolitikker** > **Tilføj** > **administrerede enheder**.
 2. Giv politikken et navn, **Platform > Android Enterprise**, vælg profiltypen.
 3. Vælg **Microsoft Defender for Endpoint** som destinationsapp.
 4. På siden Indstillinger skal du vælge **Brug konfigurationsdesigner** og tilføje **DefenderExcludeAppInReport** som nøgle- og værditype som **heltal**

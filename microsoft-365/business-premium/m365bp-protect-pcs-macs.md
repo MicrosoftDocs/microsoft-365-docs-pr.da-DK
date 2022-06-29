@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: dansimp
 audience: Admin
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -24,19 +24,19 @@ search.appverid:
 - MET150
 - MOE150
 description: Beskyt ikke-administrerede eller byod-enheder (bring-your-own devices) mod cyberangreb med Microsoft 365 Business Premium. Sådan konfigurerer du cybersikkerhed til Windows-pc'er og Macs.
-ms.openlocfilehash: 10d8edd8a3e8106fc448fa3850590de9f6cda8df
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 32f491e1a124bacf50f0efa553f6b141c08409b9
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65892576"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489107"
 ---
 # <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Beskyt ikke-administrerede Windows-pc'er og Macs i Microsoft 365 Business Premium
 
-Dette mål fokuserer på at skabe beskyttelse for alle ikke-administrerede Windows 10-pc'er og Macs, der ikke er tilmeldt Microsoft Intune. Det er meget sandsynligt, at din lille virksomhed eller kampagne kan have medarbejdere, der medbringer deres egne enheder (BYOD), og disse enheder administreres ikke. BYOD omfatter personligt ejede telefoner, tablets og pc'er.
+Dette mål fokuserer på at skabe beskyttelse for alle ikke-administrerede Windows 10 pc'er og Macs, der ikke er tilmeldt Microsoft Intune. Det er meget sandsynligt, at din lille virksomhed eller kampagne kan have medarbejdere, der medbringer deres egne enheder (BYOD), og disse enheder administreres ikke. BYOD omfatter personligt ejede telefoner, tablets og pc'er.
 
 >[!NOTE]
->BYOD-brugere skal hver især installere og køre appen Firmaportal for at tilmelde disse enheder og få adgang til virksomhedsressourcerne.
+>BYOD-brugere skal hver især installere og køre appen Firmaportal for at tilmelde disse enheder og modtage adgang til virksomhedsressourcer.
 
 Det er vigtigt, at du sikrer, at dine frontlinjebrugere følger disse retningslinjer, så minimumsikkerhedsfunktionerne er konfigureret på alle BYOD-enhederne.
 
@@ -45,14 +45,14 @@ Det er vigtigt, at du sikrer, at dine frontlinjebrugere følger disse retningsli
 **Slå enhedskryptering til**<p>
 Enhedskryptering er tilgængelig på en lang række Windows-enheder og hjælper med at beskytte dine data ved at kryptere dem. Hvis du slår enhedskryptering til, er det kun godkendte personer, der kan få adgang til din enhed og dine data. Se [Slå enhedskryptering](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) til for at få vejledning.
 
- Hvis enhedskryptering ikke er tilgængelig på enheden, kan du i stedet aktivere [BitLocker-standardkryptering](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) . (BitLocker er ikke tilgængelig i Windows 10 Home-udgaven). 
+ Hvis enhedskryptering ikke er tilgængelig på enheden, kan du i stedet aktivere [BitLocker-standardkryptering](https://support.microsoft.com/help/4028713/windows-10-turn-on-device-encryption) . BitLocker er ikke tilgængelig på Windows 10 Home udgave. 
 
-**Beskyt din enhed med Windows Security**<p>
-Hvis du har Windows 10, får du den nyeste antivirusbeskyttelse med Windows Security. Når du starter Windows 10 første gang, er Windows Security slået til og hjælper aktivt med at beskytte din pc ved at scanne efter malware (skadelig software), virus og sikkerhedstrusler. Windows Security bruger beskyttelse i realtid til at scanne alt, hvad du downloader eller kører på din pc.
+**Beskyt din enhed med Windows Sikkerhed**<p>
+Hvis du har Windows 10, får du den nyeste antivirusbeskyttelse med Windows Sikkerhed. Når du starter Windows 10 for første gang, er Windows Sikkerhed tændt og hjælper aktivt med at beskytte din pc ved at scanne efter malware (skadelig software), virus og sikkerhedstrusler. Windows Sikkerhed bruger beskyttelse i realtid til at scanne alt, hvad du downloader eller kører på din pc.
 
-Windows Update downloader automatisk opdateringer til Windows Security for at hjælpe med at beskytte din pc og beskytte den mod trusler.
+Windows Update downloader automatisk opdateringer til Windows Sikkerhed for at holde din pc sikker og beskytte den mod trusler.
 
-Hvis du har en tidligere version af Windows og bruger Microsoft Security Essentials, er det en god idé at flytte til Windows Security. Du kan finde flere oplysninger under [Hjælp med at beskytte min enhed med Windows Security](https://support.microsoft.com/help/17464/windows-10-help-protect-my-device-with-windows-security).
+Hvis du har en tidligere version af Windows og bruger Microsoft Security Essentials, er det en god idé at flytte til Windows Sikkerhed. Du kan finde flere oplysninger under [Hjælp med at beskytte min enhed med Windows Sikkerhed](https://support.microsoft.com/help/17464/windows-10-help-protect-my-device-with-windows-security).
 
 **Slå Windows Firewall til**<p>
 Du bør altid køre Windows Firewall, selvom du har en anden firewall slået til. Hvis du slår Windows Firewall fra, kan det gøre din enhed (og dit netværk, hvis du har en) mere sårbar over for uautoriseret adgang. Se [Slå Windows Firewall til eller fra](https://support.microsoft.com/help/4028544/windows-10-turn-windows-defender-firewall-on-or-off) for at få vejledning.

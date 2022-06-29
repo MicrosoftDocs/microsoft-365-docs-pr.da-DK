@@ -6,22 +6,20 @@ author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
-ms.topic: overview
-ms.date: 04/01/2022
-ms.prod: m365-security
-ms.technology: mdb
+ms.topic: how-to
+ms.service: o365-administration
 ms.localizationpriority: high
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: a03d79da004dab7a68e691c6c2a8ac21ac2b7501
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 7d86b04b1c3883bc5b3da0e429dbbddd8275622f
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318176"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489508"
 ---
 # <a name="onboard-enrolled-devices-to-microsoft-defender-for-business"></a>Onboarde tilmeldte enheder til Microsoft Defender til virksomheder
 
@@ -29,15 +27,15 @@ Nu, hvor du har tilmeldt enhederne, skal du onboarde dem til Microsoft Defender 
 
 Hvis du vil onboarde enheder, kan du vælge mellem flere muligheder:
 
-- [Brug automatisk onboarding til Windows enheder, der allerede er tilmeldt Microsoft Endpoint Manager](#use-automatic-onboarding-for-windows-devices-that-are-already-enrolled-in-microsoft-endpoint-manager)
+- [Brug automatisk onboarding til Windows-enheder, der allerede er tilmeldt Microsoft Endpoint Manager](#use-automatic-onboarding-for-windows-devices-that-are-already-enrolled-in-microsoft-endpoint-manager)
 
-- [Brug et lokalt script til at onboarde Windows og macOS enheder](#use-a-local-script-to-onboard-windows-and-macos-devices)
+- [Brug et lokalt script til at onboarde Windows- og macOS-enheder](#use-a-local-script-to-onboard-windows-and-macos-devices)
 
-- [Brug Endpoint Manager til at tilmelde enheder](#use-microsoft-endpoint-manager-to-enroll-devices) (Windows, macOS, iOS og Android), og anvend derefter Defender for Business-politikker på disse enheder
+- [Brug Endpoint Manager til at tilmelde enheder](#use-microsoft-endpoint-manager-to-enroll-devices) (Windows, macOS, iOS og Android) og derefter anvende Defender for Business-politikker på disse enheder
 
 Denne artikel indeholder også:
 
-- [Sådan kører du en registreringstest på en Windows enhed](#run-a-detection-test-on-a-windows-device)
+- [Sådan kører du en registreringstest på en Windows-enhed](#run-a-detection-test-on-a-windows-device)
 
 - [Sådan onboarder du enheder gradvist](#onboard-devices-gradually)
 
@@ -46,37 +44,37 @@ Denne artikel indeholder også:
 > [!IMPORTANT]
 > Hvis noget går galt, og din onboardingproces mislykkes, [kan du se Microsoft Defender til virksomheder fejlfinding](../security/defender-business/mdb-troubleshooting.yml).
 
-## <a name="use-automatic-onboarding-for-windows-devices-that-are-already-enrolled-in-microsoft-endpoint-manager"></a>Brug automatisk onboarding til Windows enheder, der allerede er tilmeldt Microsoft Endpoint Manager
+## <a name="use-automatic-onboarding-for-windows-devices-that-are-already-enrolled-in-microsoft-endpoint-manager"></a>Brug automatisk onboarding til Windows-enheder, der allerede er tilmeldt Microsoft Endpoint Manager
 
-Den automatiske onboardingindstilling gælder kun for Windows enheder. Automatisk onboarding er tilgængelig, hvis følgende betingelser er opfyldt:
+Indstillingen for automatisk onboarding gælder kun for Windows-enheder. Automatisk onboarding er tilgængelig, hvis følgende betingelser er opfyldt:
 
 - Din organisation brugte allerede Microsoft Endpoint Manager, Microsoft Intune eller Mobile Enhedshåndtering (MDM) i Microsoft Intune, før du fik Defender for Business (Microsoft 365 Business Premium  kunder allerede har Microsoft Intune).
 
-- Du har allerede Windows enheder, der er tilmeldt Endpoint Manager.
+- Du har allerede Windows-enheder tilmeldt Endpoint Manager.
 
-Hvis Windows enheder allerede er tilmeldt Endpoint Manager, registrerer Defender for Business disse enheder, mens du er i gang med at konfigurere Defender for Business. Du bliver spurgt, om du vil bruge automatisk onboarding til alle eller nogle af dine Windows enheder. Du kan onboarde alle Windows enheder på én gang, eller du kan vælge bestemte enheder, du vil starte med, og derefter tilføje flere enheder senere.
+Hvis Windows-enheder allerede er tilmeldt Endpoint Manager, registrerer Defender for Business disse enheder, mens du er i gang med at konfigurere Defender for Business. Du bliver spurgt, om du vil bruge automatisk onboarding til alle eller nogle af dine Windows-enheder. Du kan onboarde alle Windows-enheder på én gang, eller du kan vælge bestemte enheder, du vil starte med, og derefter tilføje flere enheder senere.
 
 > [!TIP]
-> Vi anbefaler, at du vælger indstillingen "alle de enheder, der er tilmeldt". På den måde bliver Windows enheder automatisk onboardet i Defender for Business, når de er tilmeldt Endpoint Manager senere.
+> Vi anbefaler, at du vælger indstillingen "alle de enheder, der er tilmeldt". På den måde bliver Windows-enheder automatisk onboardet til Defender for Business, når de er tilmeldt Endpoint Manager senere.
 Hvis du vil vide mere om automatisk onboarding, skal du se Trin 2 i [Brug guiden til at konfigurere Microsoft Defender til virksomheder](../security/defender-business/mdb-use-wizard.md).
 
-## <a name="use-a-local-script-to-onboard-windows-and-macos-devices"></a>Brug et lokalt script til at onboarde Windows og macOS enheder
+## <a name="use-a-local-script-to-onboard-windows-and-macos-devices"></a>Brug et lokalt script til at onboarde Windows- og macOS-enheder
 
-Du kan bruge et lokalt script til at onboarde Windows- og Mac-enheder. Når du kører onboardingscriptet på en enhed, oprettes der et tillidsforhold til Azure Active Directory (hvis denne tillid ikke allerede findes), tilmelder enheden Microsoft Endpoint Manager (hvis den ikke allerede er tilmeldt) og onboarder derefter enheden til Defender for Business. Denne metode er nyttig til onboarding af enheder i Defender for Business. Du kan onboarde op til 10 enheder ad gangen.
+Du kan bruge et lokalt script til at onboarde Windows- og Mac-enheder. Når du kører onboardingscriptet på en enhed, oprettes der et tillidsforhold til Azure Active Directory (hvis denne tillid ikke allerede findes), tilmeldes enheden i Microsoft Endpoint Manager (hvis den ikke allerede er tilmeldt) og onboarder derefter enheden til Defender for Business. Denne metode er nyttig til onboarding af enheder i Defender for Business. Du kan onboarde op til 10 enheder ad gangen.
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. Vælg **Indstillinger** >  **Endpoints** i navigationsruden, og vælg derefter **Onboarding** under **Enhedshåndtering**.
+2. Vælg **Indstillinger** > **Slutpunkter** i navigationsruden, og vælg derefter **Onboarding** under **Enhedshåndtering**.
 
 3. Vælg et operativsystem, f.eks **. Windows 10 og 11** eller **macOS**, og vælg derefter **Lokalt script** i afsnittet **Installationsmetode**. 
 
-4. Vælg **Download onboarding-pakke**. Vi anbefaler, at du gemmer onboardingpakken på et flytbart drev. Hvis du har valgt **macOS**, skal du også vælge **Download installationspakken** og gemme den på din flytbare enhed.
+4. Vælg **Download onboarding-pakke**. Vi anbefaler, at du gemmer onboardingpakken på et flytbart drev. Hvis du har valgt **macOS**, skal du også vælge **Download installationspakke** og gemme den på din flytbare enhed.
 
 5. Brug følgende vejledning:
 
-   - Windows enheder: [Onboard Windows enheder ved hjælp af et lokalt script](../security/defender-endpoint/configure-endpoints-script.md#onboard-windows-devices-using-a-local-script)
+   - [Windows-enheder: Onboard Windows-enheder ved hjælp af et lokalt script](../security/defender-endpoint/configure-endpoints-script.md#onboard-windows-devices-using-a-local-script)
 
-   - macOS enheder: [Manuel installation af Microsoft Defender for Endpoint på macOS](../security/defender-endpoint/mac-install-manually.md#download-installation-and-onboarding-packages)
+   - macOS-enheder: [Manuel installation af Microsoft Defender for Endpoint på macOS](../security/defender-endpoint/mac-install-manually.md#download-installation-and-onboarding-packages)
 
 ## <a name="use-microsoft-endpoint-manager-to-enroll-devices"></a>Brug Microsoft Endpoint Manager til at tilmelde enheder
 
@@ -86,11 +84,11 @@ Hvis du allerede har brugt Endpoint Manager (herunder Microsoft Intune og mobil 
 
 Se [Tilmelding af enhed i Microsoft Intune](/mem/intune/enrollment/device-enrollment). 
 
-## <a name="run-a-detection-test-on-a-windows-device"></a>Kør en registreringstest på en Windows enhed
+## <a name="run-a-detection-test-on-a-windows-device"></a>Kør en registreringstest på en Windows-enhed
 
-Når du har onboardet Windows enheder til Defender for Business, kan du køre en registreringstest på en Windows enhed for at sikre, at alt fungerer korrekt.
+Når du har onboardet Windows-enheder til Defender for Business, kan du køre en registreringstest på en Windows-enhed for at sikre, at alt fungerer korrekt.
 
-1. Opret en mappe på den Windows enhed: `C:\test-MDATP-test`.
+1. Opret en mappe på Windows-enheden: `C:\test-MDATP-test`.
 
 2. Åbn kommandoprompten som administrator.
 
@@ -110,7 +108,7 @@ Hvis du foretrækker at onboarde enheder i faser, som vi kalder *gradvis onboard
 
 2. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-3. Vælg **Indstillinger** >  **Endpoints** i navigationsruden, og vælg derefter **Onboarding** under **Enhedshåndtering**.
+3. Vælg **Indstillinger** > **Slutpunkter** i navigationsruden, og vælg derefter **Onboarding** under **Enhedshåndtering**.
 
 4. Vælg et operativsystem (f.eks **. Windows 10 og 11),** og vælg derefter en onboardingmetode (f.eks **. Lokalt script**). Følg vejledningen for den valgte metode.
 
@@ -135,13 +133,13 @@ Hvis du vil være ombord på en enhed, skal du bruge en af følgende procedurer:
 
 1. Kør scriptet på hver enhed, du vil offboarde. Har du brug for hjælp til denne opgave? Se følgende ressourcer:   
 
-   - Windows enheder: [Offboard Windows enheder ved hjælp af et lokalt script](../security/defender-endpoint/configure-endpoints-script.md#offboard-devices-using-a-local-script)
+   - Windows-enheder: [Offboard Windows-enheder ved hjælp af et lokalt script](../security/defender-endpoint/configure-endpoints-script.md#offboard-devices-using-a-local-script)
    
-   - macOS enheder: [Fjerner på macOS](../security/defender-endpoint/mac-resources.md#uninstalling)
+   - macOS-enheder: [Fjernelse på macOS](../security/defender-endpoint/mac-resources.md#uninstalling)
 
 > [!IMPORTANT]
 > Hvis du om bord på en enhed holder op med at sende data til Defender for Business. Data, der modtages før offboarding, opbevares dog i op til seks (6) måneder.
 
 ## <a name="next-objective"></a>Næste mål
 
-[Konfigurer beskyttelse af dine Windows enheder](m365bp-protection-settings-for-windows-10-devices.md).
+[Konfigurer beskyttelse af dine Windows-enheder](m365bp-protection-settings-for-windows-10-devices.md).

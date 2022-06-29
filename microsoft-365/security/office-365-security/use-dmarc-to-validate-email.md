@@ -18,12 +18,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du konfigurerer domænebaseret meddelelsesgodkendelse, -rapportering og -overensstemmelse (DMARC) for at validere meddelelser, der er sendt fra din organisation.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 99c688587e7e09e2726457256f14403e2db73d1e
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: a3e5cc711aef4e81833540572027b8d06087c510
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772056"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486923"
 ---
 # <a name="use-dmarc-to-validate-email"></a>Brug DMARC til at validere mail
 
@@ -39,9 +39,9 @@ Domænebaseret meddelelsesgodkendelse, -rapportering og -overensstemmelse ([DMAR
 DMARC sikrer, at destinationsmailsystemerne har tillid til meddelelser, der sendes fra dit domæne. Brug af DMARC med SPF og DKIM giver organisationer mere beskyttelse mod spoofing- og phishingmails. DMARC hjælper med at modtage mail systemer beslutte, hvad de skal gøre med meddelelser fra dit domæne, der mislykkes SPF eller DKIM kontrol.
 
 > [!TIP]
-> Besøg [Kataloget for Microsoft Intelligent Security Association (MISA)](https://www.microsoft.com/misapartnercatalog) for at få vist tredjepartsleverandører, der tilbyder DMARC-rapportering for Microsoft 365.
+> Besøg [Kataloget for Microsoft Intelligent Security Association (MISA)](https://www.microsoft.com/misapartnercatalog) for at få vist tredjepartsleverandører, der tilbyder DMARC-rapportering til Microsoft 365.
 
-## <a name="how-do-spf-and-dmarc-work-together-to-protect-email-in-microsoft-365"></a>Hvordan arbejder SPF og DMARC sammen om at beskytte mails i Microsoft 365?
+## <a name="how-do-spf-and-dmarc-work-together-to-protect-email-in-microsoft-365"></a>Hvordan arbejder SPF og DMARC sammen for at beskytte mail i Microsoft 365?
 
  En mail kan indeholde flere afsendere eller afsenderadresser. Disse adresser bruges til forskellige formål. Overvej f.eks. disse adresser:
 
@@ -92,17 +92,17 @@ Microsofts DMARC TXT-post ser nogenlunde sådan ud:
 _dmarc.microsoft.com.   3600    IN      TXT     "v=DMARC1; p=none; pct=100; rua=mailto:d@rua.contoso.com; ruf=mailto:d@ruf.contoso.com; fo=1"
 ```
 
-Hvis du vil have flere tredjepartsleverandører, der tilbyder DMARC-rapportering for Microsoft 365, skal du gå til [MISA-kataloget](https://www.microsoft.com/misapartnercatalog?IntegratedProducts=DMARCReportingforOffice365).
+Hvis du vil have flere tredjepartsleverandører, der tilbyder DMARC-rapportering til Microsoft 365, skal du gå til [MISA-kataloget](https://www.microsoft.com/misapartnercatalog?IntegratedProducts=DMARCReportingforOffice365).
 
 ## <a name="set-up-dmarc-for-inbound-mail"></a>Konfigurer DMARC til indgående post
 
-Du behøver ikke at gøre en ting for at konfigurere DMARC for mails, som du modtager i Microsoft 365. Det hele bliver ordnet. Hvis du vil vide mere om, hvad der sker med mails, der ikke kan bestå vores DMARC-kontroller, skal du se [Sådan håndterer Microsoft 365 indgående mail, der mislykkes DMARC](#how-microsoft-365-handles-inbound-email-that-fails-dmarc).
+Du behøver ikke at gøre noget for at konfigurere DMARC for mails, du modtager i Microsoft 365. Det hele bliver ordnet. Hvis du vil vide mere om, hvad der sker med mails, der ikke kan bestå vores DMARC-kontroller, skal du se [Sådan håndterer Microsoft 365 indgående mails, der mislykkes DMARC](#how-microsoft-365-handles-inbound-email-that-fails-dmarc).
 
-## <a name="set-up-dmarc-for-outbound-mail-from-microsoft-365"></a>Konfigurer DMARC til udgående post fra Microsoft 365
+## <a name="set-up-dmarc-for-outbound-mail-from-microsoft-365"></a>Konfigurer DMARC til udgående mail fra Microsoft 365
 
 Hvis du bruger Microsoft 365, men du ikke bruger et brugerdefineret domæne (du bruger onmicrosoft.com), behøver du ikke at foretage dig andet. SPF er allerede konfigureret til dig, og Microsoft 365 genererer automatisk en DKIM-signatur for din udgående post. Der er ikke mere at gøre for at konfigurere DMARC for din organisation. Du kan få flere oplysninger om denne signatur under [Standardfunktionsmåde for DKIM og Microsoft 365](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior).
 
- Hvis du har et brugerdefineret domæne eller bruger lokale Exchange servere sammen med Microsoft 365, skal du konfigurere DMARC manuelt til udgående mails. Konfiguration af DMARC for dit brugerdefinerede domæne omfatter følgende trin:
+ Hvis du har et brugerdefineret domæne eller bruger Exchange-servere i det lokale miljø sammen med Microsoft 365, skal du manuelt konfigurere DMARC til dine udgående mails. Konfiguration af DMARC for dit brugerdefinerede domæne omfatter følgende trin:
 
 - [Trin 1: Identificer gyldige mailkilder for dit domæne](#step-1-identify-valid-sources-of-mail-for-your-domain)
 
@@ -124,7 +124,7 @@ Hvis du allerede har konfigureret SPF, har du allerede gennemgået denne øvelse
 
 Nu, hvor du har en liste over alle dine gyldige afsendere, kan du følge trinnene for at [konfigurere SPF for at forhindre spoofing](set-up-spf-in-office-365-to-help-prevent-spoofing.md).
 
-Hvis contoso.com f.eks. sender mail fra Exchange Online, en lokal Exchange server, hvis IP-adresse er 192.168.0.1, og et webprogram, hvis IP-adresse er 192.168.100.100, vil SPF TXT-posten se sådan ud:
+Hvis contoso.com f.eks. sender mail fra Exchange Online, en Exchange-server i det lokale miljø, hvis IP-adresse er 192.168.0.1, og et webprogram, hvis IP-adresse er 192.168.100.100, vil SPF TXT-posten se sådan ud:
 
 ```console
 contoso.com  IN  TXT  " v=spf1 ip4:192.168.0.1 ip4:192.168.100.100 include:spf.protection.outlook.com -all"
@@ -134,7 +134,7 @@ Som bedste praksis skal du sikre, at der tages hensyn til tredjeparts afsendere 
 
 ### <a name="step-3-set-up-dkim-for-your-custom-domain"></a>Trin 3: Konfigurer DKIM til dit brugerdefinerede domæne
 
-Når du har konfigureret SPF, skal du konfigurere DKIM. I DKIM kan du føje en digital signatur til mails i meddelelsesoverskriften. Hvis du ikke konfigurerer DKIM og i stedet tillader, at Microsoft 365 bruger STANDARD-DKIM-konfigurationen for dit domæne, kan DMARC mislykkes. Denne fejl kan ske, fordi STANDARD-DKIM-konfigurationen bruger dit oprindelige *onmicrosoft.com* domæne som *adressen 5322.From*, ikke dit *brugerdefinerede* domæne. Dette skaber en uoverensstemmelse mellem *5321.MailFrom* og *5322.From-adresserne* i alle de mails, der er sendt fra dit domæne.
+Når du har konfigureret SPF, skal du konfigurere DKIM. I DKIM kan du føje en digital signatur til mails i meddelelsesoverskriften. Hvis du ikke konfigurerer DKIM og i stedet tillader Microsoft 365 at bruge STANDARD-DKIM-konfigurationen for dit domæne, kan DMARC mislykkes. Denne fejl kan ske, fordi STANDARD-DKIM-konfigurationen bruger dit oprindelige *onmicrosoft.com* domæne som *5321.MailFrom-adressen* , ikke dit *brugerdefinerede* domæne. Dette skaber en uoverensstemmelse mellem *5321.MailFrom* og *5322.From-adresserne* i alle de mails, der er sendt fra dit domæne.
 
 Hvis du har afsendere fra tredjepart, der sender mail på dine vegne, og den mail, de sender, har uoverensstemmelse mellem 5321.MailFrom og 5322.From-adresser, mislykkes DMARC for den pågældende mail. For at undgå dette skal du konfigurere DKIM til dit domæne specifikt med denne tredjeparts afsender. Dette gør det muligt for Microsoft 365 at godkende mail fra denne tredjepartstjeneste. Det giver dog også andre, for eksempel Yahoo, Gmail og Comcast, mulighed for at bekræfte e-mail sendt til dem af tredjeparten, som om det var e-mail sendt af dig. Dette er nyttigt, fordi det giver dine kunder mulighed for at opbygge tillid til dit domæne, uanset hvor deres postkasse er placeret, og samtidig markerer Microsoft 365 ikke en meddelelse som spam på grund af spoofing, fordi den består godkendelseskontroller for dit domæne.
 
@@ -190,7 +190,7 @@ Når du har oprettet din post, skal du opdatere posten hos din domæneregistrato
 I dette eksempel kan du se DMARC TXT-posten: `dmarc.microsoft.com.   3600    IN      TXT     "v=DMARC1; p=none; pct=100; rua=mailto:d@rua.agari.com; ruf=mailto:d@ruf.agari.com; fo=1"`, hvor *rua-adressen* , i dette tilfælde, behandles af tredjepartsvirksomheden Agari. Denne adresse bruges til at sende "samlet feedback" til analyse, og den bruges til at generere en rapport.
 
 > [!TIP]
-> Besøg [MISA-kataloget](https://www.microsoft.com/misapartnercatalog) for at få vist flere tredjepartsleverandører, der tilbyder DMARC-rapportering for Microsoft 365. Se [IETF.org's 'Domain-based Message Authentication, Reporting, and Conformance (DMARC)'](https://datatracker.ietf.org/doc/html/rfc7489) for at få flere oplysninger om DMARC 'rua'-adresser.
+> Besøg [MISA-kataloget](https://www.microsoft.com/misapartnercatalog) for at få vist flere tredjepartsleverandører, der tilbyder DMARC-rapportering til Microsoft 365. Se [IETF.org's 'Domain-based Message Authentication, Reporting, and Conformance (DMARC)'](https://datatracker.ietf.org/doc/html/rfc7489) for at få flere oplysninger om DMARC 'rua'-adresser.
 
 ## <a name="best-practices-for-implementing-dmarc-in-microsoft-365"></a>Bedste praksis for implementering af DMARC i Microsoft 365
 
@@ -220,31 +220,31 @@ Du kan implementere DMARC gradvist uden at påvirke resten af dit mailflow. Opre
    _dmarc.contoso.com. TXT "v=DMARC1; p=reject; sp=reject; ruf=mailto:authfail@contoso.com; rua=mailto:aggrep@contoso.com"
    ```
 
-## <a name="how-microsoft-365-handles-outbound-email-that-fails-dmarc"></a>Sådan håndterer Microsoft 365 udgående mail, der ikke lykkes DMARC
+## <a name="how-microsoft-365-handles-outbound-email-that-fails-dmarc"></a>Sådan håndterer Microsoft 365 udgående mails, der mislykkes DMARC
 
 Hvis en meddelelse er udgående fra Microsoft 365 og mislykkes DMARC, og du har angivet politikken til p=karantæne eller p=afvis, dirigeres meddelelsen gennem [gruppen for højrisikolevering for udgående meddelelser](high-risk-delivery-pool-for-outbound-messages.md). Der er ingen tilsidesættelse af udgående mail.
 
-Hvis du publicerer en DMARC-afvisningspolitik (p=afvis), kan ingen andre kunder i Microsoft 365 forfalske dit domæne, fordi meddelelser ikke kan overføre SPF eller DKIM til dit domæne, når en meddelelse sendes udgående via tjenesten. Men hvis du publicerer en DMARC-afvisningspolitik, men ikke har alle dine mails godkendt via Microsoft 365, kan nogle af dem være markeret som spam for indgående mail (som beskrevet ovenfor), eller den vil blive afvist, hvis du ikke publicerer SPF og forsøger at videresende den udgående via tjenesten. Dette sker f.eks., hvis du glemmer at inkludere nogle af IP-adresserne for servere og apps, der sender mail på vegne af dit domæne, når du opretter din DMARC TXT-post.
+Hvis du publicerer en DMARC-afvisningspolitik (p=afvis), kan ingen andre kunder i Microsoft 365 forfalske dit domæne, fordi meddelelser ikke kan overføre SPF eller DKIM til dit domæne, når du videresender en udgående meddelelse via tjenesten. Men hvis du publicerer en DMARC-afvisningspolitik, men ikke har alle dine mails godkendt via Microsoft 365, kan nogle af dem være markeret som spam for indgående mail (som beskrevet ovenfor), eller den vil blive afvist, hvis du ikke publicerer SPF og forsøger at videresende den udgående via tjenesten. Dette sker f.eks., hvis du glemmer at inkludere nogle af IP-adresserne for servere og apps, der sender mail på vegne af dit domæne, når du opretter din DMARC TXT-post.
 
-## <a name="how-microsoft-365-handles-inbound-email-that-fails-dmarc"></a>Sådan håndterer Microsoft 365 indgående mail, der mislykkes DMARC
+## <a name="how-microsoft-365-handles-inbound-email-that-fails-dmarc"></a>Sådan håndterer Microsoft 365 indgående mails, der mislykkes DMARC
 
-Hvis DMARC-politikken for afsendelsesserveren er `p=reject`, markerer [Exchange Online Protection](exchange-online-protection-overview.md) (EOP) meddelelsen som spoof i stedet for at afvise den. Med andre ord, for indgående mail, Microsoft 365 godbidder `p=reject` og `p=quarantine` på samme måde. Administratorer kan definere den handling, der skal udføres på meddelelser, der er klassificeret som spoof i [politikken til bekæmpelse af phishing](set-up-anti-phishing-policies.md).
+Hvis DMARC-politikken for afsendelsesserveren er `p=reject`, markerer [Exchange Online Protection](exchange-online-protection-overview.md) (EOP) meddelelsen som spoof i stedet for at afvise den. Med andre ord, for indgående mail behandler Microsoft 365 på `p=reject` `p=quarantine` samme måde. Administratorer kan definere den handling, der skal udføres på meddelelser, der er klassificeret som spoof i [politikken til bekæmpelse af phishing](set-up-anti-phishing-policies.md).
 
-Microsoft 365 er konfigureret på denne måde, fordi nogle legitime mails muligvis mislykkes i DMARC. En meddelelse kan f.eks. mislykkes DMARC, hvis den sendes til en adresseliste, der derefter videresender meddelelsen til alle listedeltagere. Hvis Microsoft 365 afviste disse meddelelser, kan folk miste legitime mails og ikke have nogen måde at hente dem på. I stedet vil disse meddelelser stadig mislykkes DMARC, men de vil blive markeret som spam og ikke afvist. Hvis det er nødvendigt, kan brugerne stadig få disse meddelelser i deres indbakke via disse metoder:
+Microsoft 365 er konfigureret på denne måde, fordi en legitim mail muligvis mislykkes DMARC. En meddelelse kan f.eks. mislykkes DMARC, hvis den sendes til en adresseliste, der derefter videresender meddelelsen til alle listedeltagere. Hvis Microsoft 365 afviste disse meddelelser, kan folk miste legitime mails og ikke have nogen måde at hente dem på. I stedet vil disse meddelelser stadig mislykkes DMARC, men de vil blive markeret som spam og ikke afvist. Hvis det er nødvendigt, kan brugerne stadig få disse meddelelser i deres indbakke via disse metoder:
 
 - Brugerne tilføjer afsendere, der er tillid til, individuelt ved hjælp af deres mailklient.
 
 - Administratorer kan bruge indsigt i [spoof intelligence](learn-about-spoof-intelligence.md) eller [lejerens tilladelses-/blokliste](tenant-allow-block-list.md) til at tillade meddelelser fra den spoofede afsender.
 
-- Administratorer opretter en regel for Exchange mailflow (også kendt som en transportregel) for alle brugere, der tillader meddelelser for disse bestemte afsendere.
+- Administratorer opretter en Regel for Exchange-mailflow (også kendt som en transportregel) for alle brugere, der tillader meddelelser for disse bestemte afsendere.
 
 Du kan få flere oplysninger under [Opret lister over sikre afsendere](create-safe-sender-lists-in-office-365.md).
 
-## <a name="how-microsoft-365-utilizes-authenticated-received-chain-arc"></a>Sådan bruger Microsoft 365 godkendt modtaget kæde (ARC)
+## <a name="how-microsoft-365-utilizes-authenticated-received-chain-arc"></a>Sådan bruger Microsoft 365 den godkendte modtagne kæde (ARC)
 
-Alle hostede postkasser i Microsoft 365 får nu fordel af ARC med forbedret leveringsdygtighed af meddelelser og forbedret beskyttelse mod spoofing. ARC bevarer resultaterne af mailgodkendelsen fra alle deltagende mellemled eller hop, når en mail distribueres fra den oprindelige server til modtagerpostkassen. Før ARC kan ændringer udført af mellemled i maildistribution, f.eks. regler for videresendelse eller automatiske signaturer, medføre DMARC-fejl, når mailen nåede modtagerpostkassen. Med ARC gør den kryptografiske bevarelse af godkendelsesresultaterne det muligt for Microsoft 365 at bekræfte ægtheden af afsenderen af en mail.
+Alle hostede postkasser i Microsoft 365 får nu fordel af ARC med forbedret leveringsdygtighed af meddelelser og forbedret beskyttelse mod spoofing. ARC bevarer resultaterne af mailgodkendelsen fra alle deltagende mellemled eller hop, når en mail distribueres fra den oprindelige server til modtagerpostkassen. Før ARC kan ændringer udført af mellemled i maildistribution, f.eks. regler for videresendelse eller automatiske signaturer, medføre DMARC-fejl, når mailen nåede modtagerpostkassen. Med ARC giver den kryptografiske bevarelse af godkendelsesresultaterne Microsoft 365 mulighed for at bekræfte ægtheden af afsenderen af en mail.
 
-Microsoft 365 bruger i øjeblikket ARC til at bekræfte godkendelsesresultater, når Microsoft er ARC Sealer, men planlægger at tilføje understøttelse af arc-sealere fra tredjepart i fremtiden.
+Microsoft 365 bruger i øjeblikket ARC til at bekræfte godkendelsesresultater, når Microsoft er ARC Sealer, men planlægger at tilføje understøttelse af ARC-sealere fra tredjepart i fremtiden.
 
 ## <a name="troubleshooting-your-dmarc-implementation"></a>Fejlfinding af din DMARC-implementering
 
@@ -279,6 +279,6 @@ Vil du have flere oplysninger om DMARC? Disse ressourcer kan hjælpe.
 
 [**Konfigurer SPF i Microsoft 365 for at forhindre spoofing**](set-up-spf-in-office-365-to-help-prevent-spoofing.md)
 
-[**Brug DKIM til at validere udgående mails, der er sendt fra dit brugerdefinerede domæne i Microsoft 365**](use-dkim-to-validate-outbound-email.md)
+[**Brug DKIM til at validere udgående mail, der er sendt fra dit brugerdefinerede domæne i Microsoft 365**](use-dkim-to-validate-outbound-email.md)
 
 [Brug ARC-afsendere, der er tillid til, til legitime mailflow](/microsoft-365/security/office-365-security/use-arc-exceptions-to-mark-trusted-arc-senders?view=o365-21vianet&branch=tracyp_emailauth)

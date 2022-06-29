@@ -5,7 +5,6 @@ f1.keywords:
 ms.author: deniseb
 author: denisebmsft
 manager: dansimp
-ms.date: 03/08/2022
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -26,14 +25,14 @@ search.appverid:
 - MET150
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Få mere at vide om, hvordan du sender krypteret mail ved hjælp af Outlook.
-ms.openlocfilehash: b9b2251114831bfe0b6364dc4327bd0c21da55e2
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: e4a25cc59d0d92c1905507b1e5db1253f120849c
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65316826"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489552"
 ---
-# <a name="encrypt-or-label-sensitive-email"></a>Kryptér eller forsyn følsom mail med mærkat
+# <a name="encrypt-or-label-your-sensitive-email-in-microsoft-365"></a>Kryptér eller mærkér din følsomme mail i Microsoft 365
 
 Dine data og oplysninger er vigtige og ofte fortrolige. Målet her er at hjælpe med at beskytte disse følsomme oplysninger ved at sikre, at alle bruger følsomhedsmærkater, så mailmodtagere behandler oplysningerne med den største følsomhed.
 
@@ -49,11 +48,11 @@ Før enkeltpersoner sender mails med fortrolige eller følsomme oplysninger, bø
 
 ## <a name="set-it-up"></a>Konfigurer det
 
-Hvis du vil kryptere en meddelelse, der ikke opfylder en foruddefineret regel, eller hvis din administrator ikke har konfigureret nogen regler, kan du anvende en række forskellige krypteringsregler, før du sender meddelelsen. Hvis du vil sende en krypteret meddelelse fra Outlook 2013 eller 2016 eller Outlook 2016 til Mac, skal du vælge **Indstillinger > tilladelser** og derefter vælge den beskyttelse, du har brug for. Du kan også sende en krypteret meddelelse ved at vælge knappen **Beskyt** i Outlook på internettet. Du kan få flere oplysninger under [Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/en-us/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980).
+Hvis du vil kryptere en meddelelse, der ikke opfylder en foruddefineret regel, eller hvis din administrator ikke har konfigureret nogen regler, kan du anvende en række forskellige krypteringsregler, før du sender meddelelsen. Hvis du vil sende en krypteret meddelelse fra Outlook 2013 eller 2016 eller Outlook 2016 til Mac, skal du vælge **Indstillinger > Tilladelser** og derefter vælge den beskyttelse, du har brug for. Du kan også sende en krypteret meddelelse ved at vælge knappen **Beskyt** i Outlook på internettet. Du kan få flere oplysninger under [Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/en-us/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980).
 
-## <a name="admin-settings"></a>Administratorindstillinger
+## <a name="admin-settings"></a>indstillinger for Administration
 
-Du kan få mere at vide om konfiguration af mailkryptering på [Mailkryptering i Microsoft 365](../compliance/email-encryption.md).
+Du kan få mere at vide om konfiguration af mailkryptering ved [mailkryptering i Microsoft 365](../compliance/email-encryption.md).
 
 ### <a name="automatically-encrypt-email-messages"></a>Kryptér automatisk mails
 
@@ -62,8 +61,8 @@ Administratorer kan oprette regler for mailflow for automatisk at beskytte mails
 Du opretter regler for mailflow for at kryptere mails med Microsoft Purview-meddelelseskryptering. Definer regler for mailflow for udløsning af meddelelseskryptering ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC).</a>
 
 1. Log på ved hjælp af en arbejds- eller skolekonto, der er tildelt globale administratortilladelser, i en webbrowser.
-2. Vælg feltet Administrator.
-3. Vælg **Administrationscentre > Exchange** i Administration.
+2. Vælg feltet Administration.
+3. Vælg **Administration centre > Exchange** i Administration centrum.
 
 Du kan finde flere oplysninger under [Definer regler for mailflow for at kryptere mails](../compliance/define-mail-flow-rules-to-encrypt-email.md).
 

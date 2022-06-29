@@ -19,12 +19,12 @@ ms.collection:
 description: Hvad er bedste praksis for Exchange Online Protection (EOP) og Defender for Office 365 sikkerhedsindstillinger? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal bruges, hvis du vil være mere streng? Og hvad ekstra får du, hvis du også bruger Defender for Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 96eb39bf6cdf0ba110c7474e86a16b2e3a7e72fe
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 7798bc177cf6d3a864644fdfa6563ced14cd0ab8
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078848"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489766"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
@@ -35,7 +35,7 @@ ms.locfileid: "66078848"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-**Exchange Online Protection (EOP)** er kernen i sikkerheden for Microsoft 365-abonnementer og hjælper med at forhindre ondsindede mails i at nå ud til din medarbejders indbakker. Men med nye, mere sofistikerede angreb, der opstår hver dag, er forbedret beskyttelse ofte påkrævet. **Microsoft Defender for Office 365** Plan 1 eller Plan 2 indeholder yderligere funktioner, der giver administratorer flere lag af sikkerhed, kontrol og undersøgelse.
+**Exchange Online Protection (EOP)** er kernen i sikkerheden for Microsoft 365-abonnementer og hjælper med at forhindre ondsindede mails i at nå ud til dine medarbejderes indbakker. Men med nye, mere sofistikerede angreb, der opstår hver dag, er forbedret beskyttelse ofte påkrævet. **Microsoft Defender for Office 365** Plan 1 eller Plan 2 indeholder yderligere funktioner, der giver administratorer flere lag af sikkerhed, kontrol og undersøgelse.
 
 Selvom vi gør det muligt for sikkerhedsadministratorer at tilpasse deres sikkerhedsindstillinger, er der to sikkerhedsniveauer i EOP og Microsoft Defender for Office 365, som vi anbefaler: **Standard** og **Strict**. Selvom kundemiljøer og -behov er forskellige, hjælper disse filtreringsniveauer med at forhindre uønskede mails i at nå ud til medarbejdernes indbakke i de fleste situationer.
 
@@ -46,7 +46,7 @@ I denne artikel beskrives standardindstillingerne og de anbefalede Standard- og 
 > [!NOTE]
 > Modulet Office 365 Advanced Threat Protection Recommended Configuration Analyzer (ORCA) til PowerShell kan hjælpe dig (administratorer) med at finde de aktuelle værdier for disse indstillinger. **Cmdlet'en Get-ORCAReport** genererer især en vurdering af indstillinger for anti-spam, anti-phishing og andre indstillinger for meddelelseshygiejne. Du kan downloade ORCA-modulet på <https://www.powershellgallery.com/packages/ORCA/>.
 >
-> I Microsoft 365 organisationer anbefaler vi, at du lader filteret for uønsket mail i Outlook være angivet til **Ingen automatisk filtrering** for at forhindre unødvendige konflikter (både positive og negative) med EOP's spamfiltreringsbesigelser. Du kan finde flere oplysninger i følgende artikler:
+> I Microsoft 365-organisationer anbefaler vi, at du lader filteret for uønsket mail i Outlook være angivet til **Ingen automatisk filtrering** for at forhindre unødvendige konflikter (både positive og negative) med spamfiltreringsdomme fra EOP. Du kan finde flere oplysninger i følgende artikler:
 >
 > - [Konfigurer indstillinger for uønsket mail i Exchange Online-postkasser](configure-junk-email-settings-on-exo-mailboxes.md)
 > - [Om indstillinger for uønsket mail i Outlook](configure-junk-email-settings-on-exo-mailboxes.md#about-junk-email-settings-in-outlook)
@@ -90,26 +90,26 @@ Hvis du vil oprette og konfigurere politikker til bekæmpelse af spam, skal du s
 
 #### <a name="asf-settings-in-anti-spam-policies"></a>ASF-indstillinger i politikker mod spam
 
-I tabellen i dette afsnit beskrives DEF-indstillinger (Advanced Spam Filter), der er tilgængelige i politikker til bekæmpelse af spam. Alle disse indstillinger er **Slået fra** for både **Standard** - og **Strict-niveauer** . Du kan få flere oplysninger om ASF-indstillinger under [Avancerede INDSTILLINGER for spamfilter i EOP](advanced-spam-filtering-asf-options.md).
+Du kan få flere oplysninger om avancerede indstillinger for spamfilter i politikker til bekæmpelse af spam under [Avancerede indstillinger for spamfilter i EOP](advanced-spam-filtering-asf-options.md).
 
-|Navn på sikkerhedsfunktion|Kommenter|
-|---|---|
-|**Billedlinks til fjernwebsteder** (_IncreaseScoreWithImageLinks_)||
-|**Numerisk IP-adresse i URL-adresse** (_IncreaseScoreWithNumericIps_)||
-|**URL-omdirigering til anden port** (_IncreaseScoreWithRedirectToOtherPort_)||
-|**Links til websteder med .biz eller .info** (_IncreaseScoreWithBizOrInfoUrls_)||
-|**Tomme meddelelser** (_MarkAsSpamEmptyMessages_)||
-|**Integrer koder i HTML** (_MarkAsSpamEmbedTagsInHtml_)||
-|**JavaScript eller VBScript i HTML** (_MarkAsSpamJavaScriptInHtml_)||
-|**Formularkoder i HTML** (_MarkAsSpamFormTagsInHtml_)||
-|**Ramme- eller iframe-koder i HTML** (_MarkAsSpamFramesInHtml_)||
-|**Webfejl i HTML** (_MarkAsSpamWebBugsInHtml_)||
-|**Objektkoder i HTML** (_MarkAsSpamObjectTagsInHtml_)||
-|**Følsomme ord** (_MarkAsSpamSensitiveWordList_)||
-|**SPF-post: hard fail** (_MarkAsSpamSpfRecordHardFail_)||
-|**Det lykkedes ikke at filtrere afsender-id'et** (_MarkAsSpamFromAddressAuthFail_)||
-|**Backscatter** (_MarkAsSpamNdrBackscatter_)||
-|**Testtilstand** (_TestModeAction_)|I forbindelse med ASF-indstillinger, der understøtter **Test** som en handling, kan du konfigurere testtilstandshandlingen til **Ingen**, **Tilføj standardtekst i X-header** eller **Send Bcc-meddelelse** (`None`, `AddXHeader`eller `BccMessage`). Du kan finde flere oplysninger under [Aktivér, deaktiver eller test ASF-indstillinger](advanced-spam-filtering-asf-options.md#enable-disable-or-test-asf-settings).|
+|Navn på sikkerhedsfunktion|Standard|Anbefalede<br/>Standard|Anbefalede<br/>Strenge|Kommenter|
+|---|:---:|:---:|:---:|---|
+|**Billedlinks til fjernwebsteder** <p> _IncreaseScoreWithImageLinks_|Ud|Ud|Ud||
+|**Numerisk IP-adresse i URL-adresse** <p> _IncreaseScoreWithNumericIps_|Ud|Ud|Ud||
+|**OMdirigering af URL-adresse til en anden port** <p> _IncreaseScoreWithRedirecttoOtherPort_|Ud|Ud|Ud||
+|**Links til .biz- eller .info-websteder** <p> _IncreaseScoreWithBizOrInfoUrls_|Ud|Ud|Ud||
+|**Tomme meddelelser** <p> _MarkAsSpamEmptyMessages_|Ud|Ud|Ud||
+|**Integrer koder i HTML** <p> _MarkAsSpamEmbedTagsInHtml_|Ud|Ud|Ud||
+|**JavaScript eller VBScript i HTML** <p> _MarkAsSpamJavaScriptInHtml_|Ud|Ud|Ud||
+|**Formularkoder i HTML** <p> _MarkAsSpamFormTagsInHtml_|Ud|Ud|Ud||
+|**Ramme- eller iframe-koder i HTML** <p> _MarkAsSpamFramesInHtml_|Ud|Ud|Ud||
+|**Webfejl i HTML** <p> _MarkAsSpamWebBugsInHtml_|Ud|Ud|Ud||
+|**Objektkoder i HTML** <p> _MarkAsSpamObjectTagsInHtml_|Ud|Ud|Ud||
+|**Følsomme ord** <p> _MarkAsSpamSensitiveWordList_|Ud|Ud|Ud||
+|**SPF-post: hard fail** <p> _MarkAsSpamSpfRecordHardFail_|Ud|Ud|Ud||
+|**Det lykkedes ikke at filtrere afsender-id'et** <p> _MarkAsSpamFromAddressAuthFail_|Ud|Ud|Ud||
+|**Tilbagekastning** <p> _MarkAsSpamNdrBackscatter_|Ud|Ud|Ud||
+|**Testtilstand** <p> _TestModeAction_)|Ingen|Ingen|Ingen|I forbindelse med ASF-indstillinger, der understøtter **Test** som en handling, kan du konfigurere testtilstandshandlingen til **Ingen**, **Tilføj standardtekst i X-header** eller **Send Bcc-meddelelse** (`None`, `AddXHeader`eller `BccMessage`). Du kan finde flere oplysninger under [Aktivér, deaktiver eller test ASF-indstillinger](advanced-spam-filtering-asf-options.md#enable-disable-or-test-asf-settings).|
 
 #### <a name="eop-outbound-spam-policy-settings"></a>Politikindstillinger for eOP-udgående spam
 
@@ -137,14 +137,9 @@ Hvis du vil oprette og konfigurere politikker for antimalware, skal du se [Konfi
 |Navn på sikkerhedsfunktion|Standard|Standard|Strenge|Kommenter|
 |---|:---:|:---:|:---:|---|
 |**Beskyttelsesindstillinger**|||||
-|**Aktivér filteret for almindelige vedhæftede filer** <p> _EnableFileFilter_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Denne indstilling sætter meddelelser, der indeholder eksekverbare vedhæftede filer, i karantæne, afhængigt af filtypen, uanset indholdet af den vedhæftede fil.|
+|**Aktivér filteret for almindelige vedhæftede filer** <p> _EnableFileFilter_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Denne indstilling sætter meddelelser, der indeholder vedhæftede filer, i karantæne, afhængigt af filtypen, uanset indholdet af den vedhæftede fil. Du kan se en liste over filtyper under [Politikker for antimalware](anti-malware-protection.md#anti-malware-policies).|
 |**Aktivér automatisk fjernelse på nul timer for malware** <p> _ZapEnabled_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Karantænepolitik**|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|Når du opretter en ny antimalwarepolitik, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for meddelelser, der er sat i karantæne som malware (AdminOnlyAccessPolicy uden karantænemeddelelser). <p> Standard- og Strict-forudindstillede sikkerhedspolitikker bruger standard karantænepolitikken (AdminOnlyAccessPolicy uden karantænemeddelelser), som beskrevet i tabellen [her](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). <p> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer flere funktioner for brugere i standardpolitikkerne eller brugerdefinerede politikker for antimalware. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
-|**Modtagermeddelelser**|||||
-|**Giv modtagere besked, når meddelelser er sat i karantæne som malware** <p> _Handling_|Ikke markeret <p> _Slet meddelelse_|Ikke markeret <p> _Slet meddelelse_|Ikke markeret <p> _Slet meddelelse_|Hvis der registreres malware i en vedhæftet fil, er meddelelsen sat i karantæne og kan kun frigives af en administrator.|
-|**Afsendermeddelelser**|||||
-|**Giv interne afsendere besked, når meddelelser er sat i karantæne som malware** <p> _EnableInternalSenderNotifications_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`||
-|**Giv eksterne afsendere besked, når meddelelser er sat i karantæne som malware** <p> _EnableExternalSenderNotifications_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`||
 |**Administration meddelelser**|||||
 |**Giv en administrator besked om ikke-leverede meddelelser fra interne afsendere** <p> _EnableInternalSenderAdminNotifications_ <p> _InternalSenderAdminAddress_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Vi har ingen specifik anbefaling til denne indstilling.|
 |**Giv en administrator besked om ikke-leverede meddelelser fra eksterne afsendere** <p> _EnableExternalSenderAdminNotifications_ <p> _ExternalSenderAdminAddress_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Vi har ingen specifik anbefaling til denne indstilling.|
@@ -152,10 +147,10 @@ Hvis du vil oprette og konfigurere politikker for antimalware, skal du se [Konfi
 |**Brug tilpasset meddelelsestekst** <p> _Brugerdefineredenotifikationer_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`||
 |**Fra navn** <p> _CustomFromName_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
 |**Fra adresse** <p> _CustomFromAddress_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
-|**Tilpas meddelelser for meddelelser fra interne afsendere**||||Disse indstillinger bruges kun, hvis **Giv interne afsendere besked, når meddelelser er sat i karantæne som malware** , eller **Giv en administrator besked om ikke-leverede meddelelser fra interne afsendere** er valgt.|
+|**Tilpas meddelelser for meddelelser fra interne afsendere**||||Disse indstillinger bruges kun, hvis **Giv en administrator besked om ikke-leverede meddelelser fra interne afsendere** er valgt.|
 |**Emne** <p> _CustomInternalSubject_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
 |**Meddelelse** <p> _Brugerdefineretinternaltbody_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
-|**Tilpas meddelelser for meddelelser fra eksterne afsendere**||||Disse indstillinger bruges kun, hvis **Giv eksterne afsendere besked, når meddelelser er sat i karantæne som malware** eller **Giv en administrator besked om ikke-leverede meddelelser fra eksterne afsendere** er valgt.|
+|**Tilpas meddelelser for meddelelser fra eksterne afsendere**||||Disse indstillinger bruges kun, hvis **Giv en administrator besked om ikke-leverede meddelelser fra eksterne afsendere** er valgt.|
 |**Emne** <p> _Brugerdefineret ekstern element_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
 |**Meddelelse** <p> _Brugerdefineret eksternbod_|Tom <p> `$null`|Tom <p> `$null`|Tom <p> `$null`||
 
@@ -163,7 +158,7 @@ Hvis du vil oprette og konfigurere politikker for antimalware, skal du se [Konfi
 
 Du kan få flere oplysninger om disse indstillinger under [Spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings). Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer anti-phishing-politikker i EOP](configure-anti-phishing-policies-eop.md).
 
-Spoof-indstillingerne er indbyrdes relaterede, men indstillingen **Vis første kontakt sikkerhedstip** har ingen afhængighed af spoof-indstillinger.
+Spoof-indstillingerne er indbyrdes relaterede, men indstillingen **Vis sikkerhedstip til første kontakt** er ikke afhængig af spoof-indstillinger.
 
 |Navn på sikkerhedsfunktion|Standard|Standard|Strenge|Kommenter|
 |---|:---:|:---:|:---:|---|
@@ -171,8 +166,8 @@ Spoof-indstillingerne er indbyrdes relaterede, men indstillingen **Vis første k
 |**Aktivér spoof intelligence** <p> _EnableSpoofIntelligence_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Handlinger**|||||
 |**Hvis meddelelsen registreres som spoof** <p> _AuthenticationFailAction_|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <p> `MoveToJmf`|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <p> `MoveToJmf`|**Sæt meddelelsen i karantæne** <p> `Quarantine`|Denne indstilling gælder for spoofede afsendere, der automatisk blev blokeret som vist i [indsigten spoof intelligence](learn-about-spoof-intelligence.md) eller manuelt blokeret på [listen over tilladte/blokerede lejere](tenant-allow-block-list.md). <p> Hvis du vælger **Sæt meddelelsen i karantæne**, er feltet **Anvend karantænepolitik** tilgængeligt for at vælge den karantænepolitik, der definerer, hvad brugerne må gøre med meddelelser, der er sat i karantæne som spoofing. Når du opretter en ny anti-phishing-politik, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for meddelelser, der er sat i karantæne som spoofing (DefaultFullAccessPolicy uden karantænemeddelelser). <p> Standard- og Strict-forudindstillede sikkerhedspolitikker bruger standardkarantænepolitikken (DefaultFullAccessPolicy uden karantænemeddelelser), som beskrevet i tabellen [her](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). <p> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer mere restriktive eller mindre restriktive funktioner for brugere i standardpolitikkerne eller brugerdefinerede politikker til bekæmpelse af phishing. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
-|**Vis første kontakt sikkerhedstip** <p> _EnableFirstContactSafetyTips_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Du kan få flere oplysninger under [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
-|**Vis (?) for ikke-godkendte afsendere for spoof** <p> _EnableUnauthenticatedSender_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Føjer et spørgsmålstegn (?) til afsenderens billede i Outlook for uidentificerede forfalskede afsendere. Du kan få flere oplysninger under [Ikke-godkendte afsenderindikatorer](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).|
+|**Vis sikkerhedstip til første kontakt** <p> _EnableFirstContactSafetyTips_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Du kan få flere oplysninger under [Første kontaktsikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).|
+|**Vis (?) for ikke-godkendte afsendere for spoof** <p> _EnableUnauthenticatedSender_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Føjer et spørgsmålstegn (?) til afsenderens foto i Outlook for uidentificerede upooferede afsendere. Du kan få flere oplysninger under [Ikke-godkendte afsenderindikatorer](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).|
 |**Vis mærket "via"** <p> _EnableViaTag_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . <p> Du kan få flere oplysninger under [Ikke-godkendte afsenderindikatorer](set-up-anti-phishing-policies.md#unauthenticated-sender-indicators).|
 
 ## <a name="microsoft-defender-for-office-365-security"></a>Microsoft Defender for Office 365 sikkerhed
@@ -183,9 +178,9 @@ Der følger flere sikkerhedsfordele med et Microsoft Defender for Office 365 abo
 >
 > - Standardpolitikken mod phishing i Microsoft Defender for Office 365 giver [spoof-beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) og postkasseintelligens til alle modtagere. De andre tilgængelige [repræsentationsbeskyttelsesfunktioner](#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) og [avancerede indstillinger](#advanced-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365) er dog ikke konfigureret eller aktiveret i standardpolitikken. Hvis du vil aktivere alle beskyttelsesfunktioner, skal du ændre standardpolitikken for anti-phishing eller oprette yderligere politikker til bekæmpelse af phishing.
 >
-> - Selvom der ikke er nogen standardpolitik for Pengeskab vedhæftede filer eller Pengeskab links, indeholder den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** Pengeskab beskyttelse af vedhæftede filer og Pengeskab linksbeskyttelse til modtagere, der ikke allerede er inkluderet i brugerdefinerede Pengeskab politikker for vedhæftede filer eller Pengeskab  Links politikker. Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
+> - Selvom der ikke er nogen standardpolitik for vedhæftede filer i sikkerhed eller politik for sikre links, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** beskyttelse af vedhæftede filer og beskyttelse af sikre links til modtagere, der ikke allerede er inkluderet i brugerdefinerede politikker for vedhæftede filer eller Sikre links. Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 >
-> - [Pengeskab Beskyttelse af vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md) beskyttelse og [beskyttelse af Pengeskab dokumenter](safe-docs.md) har ingen afhængigheder af politikker for Pengeskab Links.
+> - [Sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams-beskyttelse](mdo-for-spo-odb-and-teams.md) og beskyttelse af [sikre dokumenter](safe-docs.md) har ingen afhængigheder af politikker for sikre links.
 
 Hvis dit abonnement omfatter Microsoft Defender for Office 365, eller hvis du har købt Defender for Office 365 som et tilføjelsesprogram, skal du angive følgende Standard- eller Strict-konfigurationer.
 
@@ -219,115 +214,115 @@ Du kan få flere oplysninger om disse indstillinger [under Repræsentationsindst
 |**Hvis meddelelsen registreres som en repræsenteret bruger** <p> _TargetedUserProtectionAction_|**Anvend ikke nogen handling** <p> `NoAction`|**Sæt meddelelsen i karantæne** <p> `Quarantine`|**Sæt meddelelsen i karantæne** <p> `Quarantine`||
 |**Hvis meddelelsen registreres som et repræsenterede domæne** <p> _TargetedDomainProtectionAction_|**Anvend ikke nogen handling** <p> `NoAction`|**Sæt meddelelsen i karantæne** <p> `Quarantine`|**Sæt meddelelsen i karantæne** <p> `Quarantine`||
 |**Hvis postkasseintelligens registrerer og repræsenterer en bruger** <p> _MailboxIntelligenceProtectionAction_|**Anvend ikke nogen handling** <p> `NoAction`|**Flyt meddelelsen til modtagernes mapper med uønsket mail** <p> `MoveToJmf`|**Sæt meddelelsen i karantæne** <p> `Quarantine`||
-|**Vis sikkerhedstip for bruger repræsentering** <p> _EnableSimilarUsersSafetyTips_|Ud <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`||
-|**Vis sikkerhedstip for domæne repræsentering** <p> _EnableSimilarDomainsSafetyTips_|Ud <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`||
-|**Vis usædvanlige tegn sikkerhedstip** <p> _EnableUnusualCharactersSafetyTips_|Ud <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Vis sikkerhedstip til brugeridentificeret repræsentation** <p> _EnableSimilarUsersSafetyTips_|Ud <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Vis sikkerhedstip til repræsentation af domæne** <p> _EnableSimilarDomainsSafetyTips_|Ud <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Vis sikkerhedstip til usædvanlige tegn i brugeridentificeret repræsentation** <p> _EnableUnusualCharactersSafetyTips_|Ud <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`||
 
 #### <a name="eop-anti-phishing-policy-settings-in-microsoft-defender-for-office-365"></a>Indstillinger for EOP-politik til anti-phishing i Microsoft Defender for Office 365
 
 Dette er de samme indstillinger, som er tilgængelige i [politikindstillinger for anti-spam i EOP](#eop-anti-spam-policy-settings).
 
-### <a name="safe-attachments-settings"></a>Pengeskab indstillinger for vedhæftede filer
+### <a name="safe-attachments-settings"></a>Indstillinger for vedhæftede filer, der er tillid til
 
-Pengeskab Vedhæftede filer i Microsoft Defender for Office 365 indeholder globale indstillinger, der ikke har nogen relation til Pengeskab politikker for vedhæftede filer, og indstillinger, der er specifikke for hver politik for Pengeskab links. Du kan få flere oplysninger under [Pengeskab Vedhæftede filer i Defender for Office 365](safe-attachments.md).
+Sikre vedhæftede filer i Microsoft Defender for Office 365 indeholder globale indstillinger, der ikke har nogen relation til politikker for vedhæftede filer, der er tillid til, og indstillinger, der er specifikke for hver politik for Sikre links. Du kan få flere oplysninger [under Vedhæftede filer, der er tillid til i Defender for Office 365](safe-attachments.md).
 
-Selvom der ikke er nogen standardpolitik for Pengeskab Vedhæftede filer, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** Pengeskab beskyttelse af vedhæftede filer til alle modtagere, der ikke allerede er inkluderet i brugerdefinerede Pengeskab politikker for vedhæftede filer. Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
+Selvom der ikke er nogen standardpolitik for vedhæftede filer, giver den forudindstillede sikkerhedspolitik **for indbygget beskyttelse** beskyttelse af vedhæftede filer til alle modtagere, der ikke allerede er inkluderet i brugerdefinerede politikker for vedhæftede filer, der er tillid til. Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 
-#### <a name="global-settings-for-safe-attachments"></a>Globale indstillinger for vedhæftede filer Pengeskab
+#### <a name="global-settings-for-safe-attachments"></a>Globale indstillinger for sikre vedhæftede filer
 
 > [!NOTE]
-> De globale indstillinger for Pengeskab Vedhæftede filer angives af den forudindstillede sikkerhedspolitik for indbygget **beskyttelse**, men ikke **af standard-** eller **strenge** forudindstillede sikkerhedspolitikker. Uanset hvad kan administratorer når som helst ændre disse globale Pengeskab indstillinger for vedhæftede filer.
+> De globale indstillinger for Sikre vedhæftede filer angives af den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** , men ikke **af standard-** eller **strenge** forudindstillede sikkerhedspolitikker. Uanset hvad kan administratorer når som helst ændre disse globale indstillinger for vedhæftede filer, der er tillid til.
 >
 > Kolonnen **Standard** viser værdierne før eksistensen af den forudindstillede sikkerhedspolitik indbygget **beskyttelse** . Kolonnen **Indbygget beskyttelse** viser de værdier, der er angivet af den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** , som også er vores anbefalede værdier.
 
-Hvis du vil konfigurere disse indstillinger, skal du se [Slå Pengeskab vedhæftede filer til for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md) og [Pengeskab dokumenter i Microsoft 365 E5](safe-docs.md).
+Hvis du vil konfigurere disse indstillinger, skal du se [Slå vedhæftede filer, der er tillid til, til for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md) og [sikre dokumenter i Microsoft 365 E5](safe-docs.md).
 
 I PowerShell skal du bruge [Set-AtpPolicyForO365-cmdlet'en](/powershell/module/exchange/set-atppolicyforo365) til disse indstillinger.
 
 |Navn på sikkerhedsfunktion|Standard|Indbygget beskyttelse|Kommenter|
 |---|:---:|:---:|---|
 |**Slå Defender for Office 365 til for SharePoint, OneDrive og Microsoft Teams** <p> _EnableATPForSPOTeamsODB_|Ud <p> `$false`|På <p> `$true`|Hvis du vil forhindre brugere i at downloade skadelige filer, skal du se [Brug SharePoint Online PowerShell til at forhindre brugere i at downloade skadelige filer](turn-on-mdo-for-spo-odb-and-teams.md#step-2-recommended-use-sharepoint-online-powershell-to-prevent-users-from-downloading-malicious-files).|
-|**Slå Pengeskab dokumenter til for Office klienter** <p> _EnableSafeDocs_|Ud <p> `$false`|På <p> `$true`|Denne funktion er kun tilgængelig og meningsfuld med licenser, der ikke er inkluderet i Defender for Office 365 (f.eks. Microsoft 365 E5 eller Microsoft 365 E5 Sikkerhed). Du kan få flere oplysninger [under Pengeskab dokumenter i Microsoft 365 E5](safe-docs.md).|
-|**Tillad, at andre klikker gennem beskyttet visning, selvom Pengeskab dokumenter har identificeret filen som skadelig** <p> _AllowSafeDocsOpen_|Ud <p> `$false`|Ud <p> `$false`|Denne indstilling er relateret til Pengeskab dokumenter.|
+|**Slå Sikre dokumenter til for Office-klienter** <p> _EnableSafeDocs_|Ud <p> `$false`|På <p> `$true`|Denne funktion er kun tilgængelig og meningsfuld med licenser, der ikke er inkluderet i Defender for Office 365 (f.eks. Microsoft 365 E5 eller Microsoft 365 E5 Sikkerhed). Du kan få flere oplysninger [under Sikre dokumenter i Microsoft 365 E5](safe-docs.md).|
+|**Tillad, at personer klikker gennem beskyttet visning, selvom sikre dokumenter har identificeret filen som skadelig** <p> _AllowSafeDocsOpen_|Ud <p> `$false`|Ud <p> `$false`|Denne indstilling er relateret til sikre dokumenter.|
 
-#### <a name="safe-attachments-policy-settings"></a>politikindstillinger for Pengeskab vedhæftede filer
+#### <a name="safe-attachments-policy-settings"></a>Politikindstillinger for vedhæftede filer, der er tillid til
 
-Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer politikker for vedhæftede filer Pengeskab i Defender for Office 365](set-up-safe-attachments-policies.md).
+Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer politikker for vedhæftede filer, der er tillid til i Defender for Office 365](set-up-safe-attachments-policies.md).
 
 I PowerShell skal du bruge cmdlet'erne [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy) og [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safelinkspolicy) til disse indstillinger.
 
 > [!NOTE]
-> Som beskrevet tidligere er der ingen standardpolitik for Pengeskab Vedhæftede filer, men Pengeskab Beskyttelse af vedhæftede filer tildeles til alle modtagere af den [forudindstillede sikkerhedspolitik **for indbygget beskyttelse**](preset-security-policies.md).
+> Som beskrevet tidligere er der ingen standardpolitik for vedhæftede filer, men beskyttelse mod vedhæftede filer tildeles til alle modtagere af den [forudindstillede sikkerhedspolitik **indbygget beskyttelse**](preset-security-policies.md).
 >
-> **Standarden i den brugerdefinerede** kolonne refererer til standardværdierne i nye Pengeskab politikker for vedhæftede filer, som du opretter. De resterende kolonner angiver (medmindre andet er angivet) de værdier, der er konfigureret i de tilsvarende forudindstillede sikkerhedspolitikker.
+> **Standarden i den brugerdefinerede** kolonne refererer til standardværdierne i de nye politikker for vedhæftede filer, du opretter. De resterende kolonner angiver (medmindre andet er angivet) de værdier, der er konfigureret i de tilsvarende forudindstillede sikkerhedspolitikker.
 
 |Navn på sikkerhedsfunktion|Standard i brugerdefineret|Indbygget beskyttelse|Standard|Strenge|Kommenter|
 |---|:---:|:---:|:---:|:---:|---|
-|**Pengeskab vedhæftede filer ukendt malware-svar** <p> _Aktivér_ og _handling_|**Ud** <p> `-Enable $false` Og `-Action Block`|**Bloker** <p> `-Enable $true` Og `-Action Block`|**Bloker** <p> `-Enable $true` Og `-Action Block`|**Bloker** <p> `-Enable $true` Og `-Action Block`|Når parameteren _Enable_ er $false, betyder værdien af parameteren _Action_ ikke noget.|
-|**Karantænepolitik** (_QuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy| <p> Standard- og Strict-forudindstillede sikkerhedspolitikker bruger standard karantænepolitikken (AdminOnlyAccessPolicy uden karantænemeddelelser), som beskrevet i tabellen [her](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). <p> Når du opretter en ny politik for vedhæftede filer Pengeskab, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for meddelelser, der er sat i karantæne af Pengeskab Attachments (AdminOnlyAccessPolicy uden karantænemeddelelser). <p> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer flere funktioner for brugerne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
-|**Omdiriger vedhæftet fil med registrerede vedhæftede filer** : **Aktivér omdirigering** <p> _Omdirigere_ <p> _RedirectAddress_|Ikke valgt, og der er ikke angivet nogen mailadresse. <p> `-Redirect $false` <p> _RedirectAddress_ er tom (`$null`)|Ikke valgt, og der er ikke angivet nogen mailadresse. <p> `-Redirect $false` <p> _RedirectAddress_ er tom (`$null`)|Valgt, og angiv en mailadresse. <p> `$true` <p> en mailadresse|Valgt, og angiv en mailadresse. <p> `$true` <p> en mailadresse|Omdiriger meddelelser til en sikkerhedsadministrator til gennemsyn. <p> **Bemærk**! Denne indstilling er ikke konfigureret i de forudindstillede sikkerhedspolitikker **Standard**, **Strict** eller **Indbygget beskyttelse** . Værdierne **Standard** og **Strict** angiver vores **anbefalede** værdier i nye Pengeskab politikker for vedhæftede filer, som du opretter.|
-|**Anvend registreringssvar for Pengeskab vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)** <p> _ActionOnError_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Sikre vedhæftede filer ukendt malware-svar** <p> _Aktivér_ og _handling_|**Ud** <p> `-Enable $false` Og `-Action Block`|**Bloker** <p> `-Enable $true` Og `-Action Block`|**Bloker** <p> `-Enable $true` Og `-Action Block`|**Bloker** <p> `-Enable $true` Og `-Action Block`|Når parameteren _Enable_ er $false, betyder værdien af parameteren _Action_ ikke noget.|
+|**Karantænepolitik** (_QuarantineTag_)|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy|AdminOnlyAccessPolicy| <p> Standard- og Strict-forudindstillede sikkerhedspolitikker bruger standard karantænepolitikken (AdminOnlyAccessPolicy uden karantænemeddelelser), som beskrevet i tabellen [her](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). <p> Når du opretter en ny politik for sikre vedhæftede filer, betyder en tom værdi, at standardkarantænepolitikken bruges til at definere de historiske funktioner for meddelelser, der er sat i karantæne af Sikre vedhæftede filer (AdminOnlyAccessPolicy uden karantænemeddelelser). <p> Administratorer kan oprette og vælge brugerdefinerede karantænepolitikker, der definerer flere funktioner for brugerne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).|
+|**Omdiriger vedhæftet fil med registrerede vedhæftede filer** : **Aktivér omdirigering** <p> _Omdirigere_ <p> _RedirectAddress_|Ikke valgt, og der er ikke angivet nogen mailadresse. <p> `-Redirect $false` <p> _RedirectAddress_ er tom (`$null`)|Ikke valgt, og der er ikke angivet nogen mailadresse. <p> `-Redirect $false` <p> _RedirectAddress_ er tom (`$null`)|Valgt, og angiv en mailadresse. <p> `$true` <p> en mailadresse|Valgt, og angiv en mailadresse. <p> `$true` <p> en mailadresse|Omdiriger meddelelser til en sikkerhedsadministrator til gennemsyn. <p> **Bemærk**! Denne indstilling er ikke konfigureret i de forudindstillede sikkerhedspolitikker **Standard**, **Strict** eller **Indbygget beskyttelse** . Værdierne **Standard** og **Strict** angiver vores **anbefalede** værdier i de nye politikker for vedhæftede filer, du opretter.|
+|**Anvend registreringssvaret Sikre vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)** <p> _ActionOnError_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 
-### <a name="safe-links-settings"></a>indstillinger for Pengeskab links
+### <a name="safe-links-settings"></a>Indstillinger for Sikre links
 
-Pengeskab Links i Defender for Office 365 indeholder globale indstillinger, der gælder for alle brugere, der er inkluderet i aktive Pengeskab linkspolitikker, og indstillinger, der er specifikke for hver Pengeskab Links-politik. Du kan få flere oplysninger [under Pengeskab Links i Defender for Office 365](safe-links.md).
+Sikre links i Defender for Office 365 indeholder globale indstillinger, der gælder for alle brugere, der er inkluderet i aktive politikker for sikre links, og indstillinger, der er specifikke for hver politik for Sikre links. Du kan få flere oplysninger under [Sikre links i Defender for Office 365](safe-links.md).
 
-Selvom der ikke er nogen standardpolitik for Pengeskab links, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** Pengeskab Links-beskyttelse til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab Links-politikker). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
+Selvom der ikke er nogen standardpolitik for Sikre links, giver den forudindstillede sikkerhedspolitik for **indbygget beskyttelse** beskyttelse af sikre links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for sikre links). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 
-#### <a name="global-settings-for-safe-links"></a>Globale indstillinger for Pengeskab links
+#### <a name="global-settings-for-safe-links"></a>Globale indstillinger for sikre links
 
 > [!NOTE]
-> De globale indstillinger for Pengeskab Links angives af den forudindstillede sikkerhedspolitik for indbygget **beskyttelse**, men ikke af **standard**- eller **strenge** forudindstillede sikkerhedspolitikker. Uanset hvad kan administratorer når som helst ændre disse globale indstillinger for Pengeskab links.
+> De globale indstillinger for Sikre links angives af den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** , men ikke **af standard-** eller **strenge** forudindstillede sikkerhedspolitikker. Uanset hvad kan administratorer når som helst ændre disse globale indstillinger for Sikre links.
 >
 > Kolonnen **Standard** viser værdierne før eksistensen af den forudindstillede sikkerhedspolitik indbygget **beskyttelse** . Kolonnen **Indbygget beskyttelse** viser de værdier, der er angivet af den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** , som også er vores anbefalede værdier.
 
-Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer globale indstillinger for Pengeskab Links i Defender for Office 365](configure-global-settings-for-safe-links.md).
+Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer globale indstillinger for Sikre links i Defender for Office 365](configure-global-settings-for-safe-links.md).
 
 I PowerShell skal du bruge [Set-AtpPolicyForO365-cmdlet'en](/powershell/module/exchange/set-atppolicyforo365) til disse indstillinger.
 
 |Navn på sikkerhedsfunktion|Standard|Indbygget beskyttelse|Kommenter|
 |---|:---:|:---:|---|
-|**Bloker følgende URL-adresser** <p> _ExcludedUrls_|Tom <p> `$null`|Tom <p> `$null`|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan få flere oplysninger på [listen "Bloker følgende URL-adresser" for Pengeskab Links](safe-links.md#block-the-following-urls-list-for-safe-links).
-|**Brug Pengeskab links i Office 365 apps** <p> _EnableSafeLinksForO365Clients_|På <p> `$true`|På <p> `$true`|Brug Pengeskab Links i understøttede Office 365 skrivebords- og mobilapps (iOS og Android). Du kan få flere oplysninger [under Pengeskab Indstillinger for links til Office 365 apps](safe-links.md#safe-links-settings-for-office-365-apps).|
+|**Bloker følgende URL-adresser** <p> _ExcludedUrls_|Tom <p> `$null`|Tom <p> `$null`|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan få flere oplysninger på [listen "Bloker følgende URL-adresser" for Sikre links](safe-links.md#block-the-following-urls-list-for-safe-links). <p> **Bemærk**! Du kan nu administrere blokerings-URL-adresser på [listen over tilladte/blokerede lejere](allow-block-urls.md#create-block-url-entries-in-the-tenant-allowblock-list). Listen "Bloker følgende URL-adresser" frarådes. Vi forsøger at overføre eksisterende poster fra listen "Bloker følgende URL-adresser" for at blokere URL-adresser på listen over tilladte/blokerede lejere. Meddelelser, der indeholder den blokerede URL-adresse, sættes i karantæne.|
+|**Brug sikre links i Office 365 apps** <p> _EnableSafeLinksForO365Clients_|På <p> `$true`|På <p> `$true`|Brug Sikre links i understøttede Office 365 skrivebords- og mobilapps (iOS og Android). Du kan få flere oplysninger under [Indstillinger for sikre links for Office 365 apps](safe-links.md#safe-links-settings-for-office-365-apps).|
 |**Spor ikke, hvornår brugere klikker på beskyttede links i Office 365 apps** <p> _TrackClicks_|På <p> `$false`|Ud <p> `$true`|Hvis du deaktiverer denne indstilling (indstilling _af TrackClicks_ til `$true`), spores brugerklik i understøttede Office 365 apps.|
 |**Lad ikke brugere klikke sig igennem til den oprindelige URL-adresse i Office 365 apps** <p> _AllowClickThrough_|På <p> `$false`|På <p> `$false`|Hvis du aktiverer denne indstilling (indstilling _AllowClickThrough_ til ), forhindres det, at `$false`der klikkes videre til den oprindelige URL-adresse i understøttede Office 365 apps.|
 
-#### <a name="safe-links-policy-settings"></a>politikindstillinger for Pengeskab links
+#### <a name="safe-links-policy-settings"></a>Politikindstillinger for sikre links
 
-Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365](set-up-safe-links-policies.md).
+Hvis du vil konfigurere disse indstillinger, skal du se [Konfigurer politikker for sikre links i Microsoft Defender for Office 365](set-up-safe-links-policies.md).
 
 I PowerShell skal du bruge cmdlet'erne [New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy) og [Set-SafeLinksPolicy](/powershell/module/exchange/set-safelinkspolicy) til disse indstillinger.
 
 > [!NOTE]
-> Som beskrevet tidligere er der ingen standardpolitik for Pengeskab links, men Pengeskab Links-beskyttelse tildeles til alle modtagere af den [forudindstillede sikkerhedspolitik **for indbygget beskyttelse**](preset-security-policies.md).
+> Som beskrevet tidligere er der ingen standardpolitik for Sikre links, men Beskyttelse af sikre links tildeles til alle modtagere af den [forudindstillede sikkerhedspolitik **indbygget beskyttelse**](preset-security-policies.md).
 >
-> **Standarden i den brugerdefinerede** kolonne refererer til standardværdierne i nye Pengeskab Links-politikker, som du opretter. De resterende kolonner angiver (medmindre andet er angivet) de værdier, der er konfigureret i de tilsvarende forudindstillede sikkerhedspolitikker.
+> **Standarden i den brugerdefinerede** kolonne refererer til standardværdierne i de nye politikker for sikre links, som du opretter. De resterende kolonner angiver (medmindre andet er angivet) de værdier, der er konfigureret i de tilsvarende forudindstillede sikkerhedspolitikker.
 
 |Navn på sikkerhedsfunktion|Standard i brugerdefineret|Indbygget beskyttelse|Standard|Strenge|Kommenter|
 |---|:---:|:---:|:---:|:---:|---|
 |**URL-adresse & klik på beskyttelsesindstillinger**||||||
 |**Handling på potentielt skadelige URL-adresser i mails**||||||
-|**På: Pengeskab Links kontrollerer en liste over kendte, ondsindede links, når brugerne klikker på links i mail** <p> _EnableSafeLinksForEmail_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
-|**Anvend Pengeskab links til mails, der er sendt i organisationen** <p> _EnableForInternalSenders_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**On: Safe Links kontrollerer en liste over kendte, ondsindede links, når brugerne klikker på links i mail** <p> _EnableSafeLinksForEmail_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Anvend sikre links på mails, der er sendt i organisationen** <p> _EnableForInternalSenders_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer** <p> _ScanUrls_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres** <p> _DeliverMessageAfterScan_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
-|**Undlad at omskrive URL-adresser. Kontroller kun via API'en Pengeskab Links** <p> _DisableURLRewrite_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`||
-|**Omskriv ikke følgende URL-adresser i mail** <p> _DoNotRewriteUrls_|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Vi har ingen specifik anbefaling til denne indstilling. Du kan få flere oplysninger på [listerne "Omskriv ikke følgende URL-adresser" i politikker for Pengeskab links](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).|
+|**Undlad at omskrive URL-adresser. Kontroller kun via API'en til sikre links** <p> _DisableURLRewrite_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`||
+|**Omskriv ikke følgende URL-adresser i mail** <p> _DoNotRewriteUrls_|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Vi har ingen specifik anbefaling til denne indstilling. <p> **Bemærk**! Formålet med listen "Omskriv ikke følgende URL-adresser" er at springe ombrydningen Af sikre links over for de angivne URL-adresser. I stedet for at bruge denne liste kan du nu [oprette tilladte URL-adresser på listen over tilladte/blokerede lejere](allow-block-urls.md#create-allow-url-entries).|
 |**Handling for potentielt skadelige URL-adresser i Microsoft Teams**||||||
-|**On: Pengeskab Links kontrollerer en liste over kendte, ondsindede links, når brugerne klikker på links i Microsoft Teams** <p> _EnableSafeLinksForTeams_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Om: Sikre links kontrollerer en liste over kendte, skadelige links, når brugerne klikker på links i Microsoft Teams** <p> _EnableSafeLinksForTeams_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Klik på beskyttelsesindstillinger**||||||
 |**Spor bruger klik** <p> _TrackUserClicks_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Lad brugerne klikke sig videre til den oprindelige URL-adresse** <p> _AllowClickThrough_|Valgte <p> `$true`|Valgte <p> `$true`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Hvis du slår denne indstilling fra (indstilling _AllowClickThrough_ til ), forhindres det, at `$false`der klikkes videre til den oprindelige URL-adresse.|
-|**Vis organisationsbranding på meddelelses- og advarselssider** <p> _EnableOrganizationBranding_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Vi har ingen specifik anbefaling til denne indstilling. <p> Før du aktiverer denne indstilling, skal du følge vejledningen i [Tilpas Microsoft 365 tema for din organisation for](../../admin/setup/customize-your-organization-theme.md) at uploade dit firmalogo.|
+|**Vis organisationsbranding på meddelelses- og advarselssider** <p> _EnableOrganizationBranding_|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Vi har ingen specifik anbefaling til denne indstilling. <p> Før du slår denne indstilling til, skal du følge vejledningen i [Tilpas Microsoft 365-temaet for din organisation for](../../admin/setup/customize-your-organization-theme.md) at uploade dit virksomhedslogo.|
 |**Anmeldelse**||||||
-|**Hvordan vil du give brugerne besked?**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan vælge **Brug brugerdefineret meddelelsestekst** (_CustomNotificationText_) for at angive brugerdefineret meddelelsestekst, der skal bruges. Du kan også vælge **Brug Microsoft Oversætter til automatisk lokalisering** (_UseTranslatedNotificationText_) for at oversætte den brugerdefinerede meddelelsestekst til brugerens sprog.
+|**Hvordan vil du give brugerne besked?**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|**Brug standardmeddelelsesteksten**|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan vælge **Brug brugerdefineret meddelelsestekst** (_CustomNotificationText_) for at angive brugerdefineret meddelelsestekst, der skal bruges. Du kan også vælge **Brug Microsoft Translator til automatisk lokalisering** (_UseTranslatedNotificationText_) for at oversætte den brugerdefinerede meddelelsestekst til brugerens sprog.
 
 ## <a name="related-articles"></a>Relaterede artikler
 
-- Leder du efter bedste praksis for **Exchange regler for mailflow (også kaldet transportregler**)? Se [Bedste fremgangsmåder til konfiguration af regler for mailflow i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/configuration-best-practices).
+- Leder du efter bedste praksis for **regler for Exchange-mailflow (også kaldet transportregler**)? Se [Bedste fremgangsmåder til konfiguration af regler for mailflow i Exchange Online](/exchange/security-and-compliance/mail-flow-rules/configuration-best-practices).
 
 - Administratorer og brugere kan sende falske positiver (god mail markeret som dårlig) og falske negativer (dårlig mail er tilladt) til Microsoft til analyse. Du kan få flere oplysninger under [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
 
 - Brug disse links til at få oplysninger om, hvordan du **konfigurerer** din [EOP-tjeneste](/exchange/standalone-eop/set-up-your-eop-service) og **konfigurerer** [Microsoft Defender for Office 365](defender-for-office-365.md). Glem ikke de nyttige retninger i "[Beskyt mod trusler i Office 365](protect-against-threats.md)".
 
-- Du kan finde **grundlæggende sikkerhedsindstillinger for Windows** her: [Hvor kan jeg få de grundlæggende sikkerhedsindstillinger?](/windows/security/threat-protection/windows-security-baselines#where-can-i-get-the-security-baselines) for indstillinger for gruppepolitikobjekt/i det lokale miljø og [Brug grundlæggende sikkerhedsindstillinger til at konfigurere Windows enheder i Intune](/intune/protect/security-baselines) til Intune-baseret sikkerhed. Endelig kan du sammenligne Microsoft Defender for Endpoint og Microsoft Intune grundlæggende sikkerhedslinjer i [Sammenlign Microsoft Defender for Endpoint og Windows Intune sikkerhed oprindelige planer](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline#compare-the-microsoft-defender-atp-and-the-windows-intune-security-baselines).
+- Du kan finde **grundlæggende sikkerhedsindstillinger for Windows** her: [Hvor kan jeg få de grundlæggende sikkerhedsindstillinger?](/windows/security/threat-protection/windows-security-baselines#where-can-i-get-the-security-baselines) for indstillinger for gruppepolitikobjekt/i det lokale miljø og [Brug grundlæggende sikkerhedsindstillinger til at konfigurere Windows-enheder i Intune](/intune/protect/security-baselines) til Intune-baseret sikkerhed. Til sidst kan du sammenligne Microsoft Defender for Endpoint og Microsoft Intune grundlæggende sikkerhedslinjer i [Sammenlign Microsoft Defender for Endpoint og Windows Intune grundlæggende sikkerhedslinjer](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline#compare-the-microsoft-defender-atp-and-the-windows-intune-security-baselines).

@@ -7,30 +7,28 @@ ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 05/20/2022
-ms.prod: m365-security
-ms.technology: mdb
+ms.service: o365-administration
 ms.localizationpriority: high
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 5a01c2f045ea797aa61f3028f2a0a4ef4e260fe6
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: d628df3109eafd3d342041784d70b9857e260d81
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623186"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486027"
 ---
 # <a name="view-and-edit-device-protection-policies"></a>Få vist og rediger politikker for beskyttelse af enheder
 
-I Microsoft 365 Business Premium konfigureres sikkerhedsindstillingerne for administrerede enheder via politikker for enhedsbeskyttelse i Microsoft Defenders sikkerhedscenter eller Administration. For at hjælpe med at forenkle konfiguration er der forudkonfigurerede politikker, der hjælper med at beskytte din organisations enheder, så snart de er onboardet. Du kan bruge standardpolitikkerne, redigere eksisterende politikker eller oprette dine egne politikker.
+I Microsoft 365 Business Premium konfigureres sikkerhedsindstillinger for administrerede enheder via politikker for enhedsbeskyttelse i Microsoft Defenders sikkerhedscenter eller Administration center. For at hjælpe med at forenkle konfiguration er der forudkonfigurerede politikker, der hjælper med at beskytte din organisations enheder, så snart de er onboardet. Du kan bruge standardpolitikkerne, redigere eksisterende politikker eller oprette dine egne politikker.
 
 **I denne vejledning beskrives det, hvordan du**:
 
 - Få et overblik over dine standardpolitikker
-- Arbejd med enhedspolitikker i Defender Security Center, Administration og Intune.
+- Arbejd med enhedspolitikker i Defender Security Center, Administration center og Intune.
 
 ## <a name="about-the-default-device-protection-policies"></a>Om standardpolitikker for enhedsbeskyttelse
 
@@ -40,7 +38,7 @@ Microsoft 365 Business Premium indeholder to primære typer politikker til besky
 
 - **Firewallpolitikker**, der bestemmer, hvilken netværkstrafik der må overføres til og fra organisationens enheder.
 
-Disse politikker er en del af Microsoft Defender til virksomheder, der er inkluderet i dit abonnement på Microsoft 365 Business Premium. Der gives oplysninger om, hvordan du arbejder med politikker i Microsoft Defender Security Center, og hvordan du arbejder med politikker i Administration og Intune.
+Disse politikker er en del af Microsoft Defender til virksomheder, der er inkluderet i dit abonnement på Microsoft 365 Business Premium. Der gives oplysninger om arbejde med politikker i Microsoft Defender Security Center, samt hvordan du arbejder med politikker i Administration center og Intune.
 
 ## <a name="working-with-device-polices-in-the-microsoft-defender-security-center"></a>Arbejde med enhedspoliti i Microsoft Defender Security Center
 
@@ -52,11 +50,11 @@ Sådan får du vist dine eksisterende politikker for enhedsbeskyttelse i Sikkerh
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-1. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**).
+1. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows-klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**).
 
     :::image type="content" source="../media/mdb-deviceconfiguration.png" lightbox="../media/mdb-deviceconfiguration.png" alt-text="Siden Enhedskonfiguration.":::
 
-1. Vælg en operativsystemfane (f.eks. **Windows klienter**), og gennemse derefter listen over politikker under kategorierne **Næste generation af beskyttelse** og **Firewall**.
+1. Vælg en operativsystemfane (f.eks **. Windows-klienter**), og gennemse derefter listen over politikker under kategorierne **Beskyttelse af næste generation** og **Firewall** .
 
 1. Hvis du vil have vist flere oplysninger om en politik, skal du vælge dens navn. Der åbnes en siderude, der indeholder flere oplysninger om den pågældende politik, f.eks. hvilke enheder der er beskyttet af den pågældende politik.
 
@@ -68,9 +66,9 @@ Sådan redigerer du en enhedspolitik:
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-1. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**).
+1. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows-klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**).
 
-1. Vælg en operativsystemfane (f.eks. **Windows klienter**), og gennemse derefter listen over politikker under kategorierne **Næste generation af beskyttelse** og **Firewall**.
+1. Vælg en operativsystemfane (f.eks **. Windows-klienter**), og gennemse derefter listen over politikker under kategorierne **Beskyttelse af næste generation** og **Firewall** .
 
 1. Hvis du vil redigere en politik, skal du vælge dens navn og derefter vælge **Rediger**.
 
@@ -103,9 +101,9 @@ Sådan opretter du en ny politik for beskyttelse af enheder:
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-1. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**).
+1. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows-klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**).
 
-1. Vælg en operativsystemfane (f.eks. **Windows klienter**), og gennemse derefter listen over **næste generations beskyttelsespolitikker**.
+1. Vælg en operativsystemfane (f.eks **. Windows-klienter**), og gennemse derefter listen over **næste generations beskyttelsespolitikker** .
 
 1. Under **Næste generation af beskyttelse** eller **Firewall** skal du vælge **+ Tilføj**.
 
@@ -131,13 +129,13 @@ Sådan opretter du en ny politik for beskyttelse af enheder:
    - Foretag de nødvendige ændringer ved at vælge **Rediger**.
    - Når du er klar til at fortsætte, skal du vælge **Opret politik**.
 
-## <a name="using-device-policies-in-the-admin-center"></a>Brug af enhedspolitikker i Administration
+## <a name="using-device-policies-in-the-admin-center"></a>Brug af enhedspolitikker i Administration center
 
-Følgende oplysninger beskriver visning og administration af politikker i Microsoft Business Premium Administration.
+Følgende oplysninger beskriver visning og administration af politikker i Microsoft Business Premium Administration center.
 
 ### <a name="working-with-device-policies"></a>Arbejde med enhedspolitikker
 
-Sådan arbejder du med politikker i Administration:
+Sådan arbejder du med politikker i Administration center:
 
 1.  Gå til Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>.
 
@@ -237,7 +235,7 @@ Uanset politikmetoden kan administration af den samme indstilling på den samme 
 
 [Administrer slutpunktssikkerhed i Microsoft Intune](/mem/Intune/protect/endpoint-security)
 
-[Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../admin/security-and-compliance/secure-your-business-data.md)
+[Bedste praksis for sikring af Microsoft 365 til virksomheder-planer](../admin/security-and-compliance/secure-your-business-data.md)
 
 ## <a name="next-objective"></a>Næste mål
 

@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: dansimp
 audience: Admin
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan sikkerhedsstandarder kan hjælpe med at beskytte din organisation mod identitetsrelaterede angreb ved at angive forudkonfigurerede sikkerhedsindstillinger for Microsoft 365 Business Premium.
-ms.openlocfilehash: c1a63efc29154768a7d54d31f51c25a3c84fa30a
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 24f4cbc8feda3689a3a6f7ee49a876cd205939f3
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417836"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489162"
 ---
 # <a name="security-defaults-and-multi-factor-authentication"></a>Sikkerhedsstandarder og multifaktorgodkendelse
 
@@ -54,7 +54,7 @@ Sikkerhedsstandarder er udviklet til at hjælpe med at beskytte virksomhedens br
 - Deaktivering af godkendelse fra ældre godkendelsesklienter, der ikke kan udføre MFA.
 - Beskyttelse af administratorer ved at kræve ekstra godkendelse, hver gang de logger på.
 
-MFA er et vigtigt første skridt til at beskytte din virksomhed, og sikkerhedsstandarder gør det nemt at implementere MFA. Hvis dit abonnement blev oprettet den 22. oktober 2019, kan sikkerhedsstandarder være blevet aktiveret automatisk for dig, og du&mdash; bør kontrollere dine indstillinger for at bekræfte det.
+MFA er et vigtigt første skridt til at beskytte din virksomhed, og sikkerhedsstandarder gør det nemt at implementere MFA. Hvis dit abonnement blev oprettet den 22. oktober 2019, kan sikkerhedsstandarder være blevet aktiveret automatisk, så du&mdash;bør kontrollere dine indstillinger for at bekræfte det.
 
 > [!TIP]
 > Du kan få flere oplysninger om sikkerhedsstandarder og de politikker, de [gennemtvinger, under Hvad er sikkerhedsstandarder?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
@@ -63,9 +63,9 @@ MFA er et vigtigt første skridt til at beskytte din virksomhed, og sikkerhedsst
 
 1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> med sikkerhedsadministrator, administrator af betinget adgang eller globale administratorlegitimationsoplysninger.
 
-2. Vælg **Vis alle** i ruden til venstre, og vælg derefter **Azure Active Directory** under **Administrationscentre**.
+2. Vælg **Vis alle** i venstre rude, og vælg derefter **Azure Active Directory** under **Administration centre**.
 
-3. Vælg **Azure Active Directory** i venstre rude i **Azure Active Directory Administration**.
+3. I venstre rude i **Azure Active Directory Administration** skal du vælge **Azure Active Directory**.
 
 4. Vælg **Egenskaber** i menuen til venstre i dashboardet i sektionen **Administrer**.
 

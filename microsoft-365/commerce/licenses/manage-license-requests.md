@@ -18,16 +18,16 @@ ms.custom:
 - MACBillingLicensesRequests
 - AdminSurgePortfolio
 search.appverid: MET150
-description: Få mere at vide om, hvordan du gennemser og godkender eller afviser licensanmodninger fra brugere for dit abonnement på Microsoft 365 til virksomheder.
+description: Få mere at vide om, hvordan du gennemser og godkender eller afviser licensanmodninger fra brugere for dit Abonnement på Microsoft 365 til virksomheder.
 ms.date: 04/22/2022
-ms.openlocfilehash: dfe8410ce894e19489664396866917e4c5bb3dd4
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: b4259c4c04284e47193d827a6a10214669a5c991
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044241"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491001"
 ---
-# <a name="manage-license-requests"></a>Administrer licensanmodninger
+# <a name="manage-self-service-license-requests"></a>Administrer anmodninger om selvbetjeningslicens
 
 > [!NOTE]
 > Oplysningerne i denne artikel gælder kun for købte produkter, der er købt via selvbetjening. Du kan få mere at vide under [Ofte stillede spørgsmål om køb via selvbetjening](../subscriptions/self-service-purchase-faq.yml).
@@ -35,7 +35,7 @@ ms.locfileid: "66044241"
 Hvis du deaktiverer køb via selvbetjening i din organisation, kan du bruge licensanmodninger til at administrere licensanmodningsprocessen for dine brugere. Når en bruger forsøger at foretage et køb via selvbetjening for et produkt, du har blokeret, kan vedkommende sende en anmodning om en licens til dig, administratoren. Når de foretager en anmodning, kan de tilføje navnene på andre brugere, der også har brug for licenser til produktet.
 
 > [!NOTE]
-> Hvis du blokerer brugere fra at foretage køb via selvbetjening, sender Microsoft dem ikke marketingmails. Hvis de bruger en prøveversion af et produkt, får de heller ikke vist prompter om at købe det. Du kan få mere at vide under [Administrer køb via selvbetjening (administrator).](../subscriptions/manage-self-service-purchases-admins.md)
+> Hvis du blokerer brugere fra at foretage køb via selvbetjening, sender Microsoft dem ikke marketingmails. Hvis de bruger en prøveversion af et produkt, får de heller ikke vist prompter om at købe det. Du kan få mere at vide under [Administrer køb via selvbetjening (Administration)](../subscriptions/manage-self-service-purchases-admins.md).
 
 Hvis administratoren vil se og administrere licensanmodninger, skal du bruge fanen **Anmodninger** på siden **Licensering** . Listen viser navnet på det produkt, der anmodes om, navnet på den person, der anmoder om en licens, den anmodede dato og status for anmodningen. Administratorer kan filtrere listen for at få vist anmodninger, der afventer eller er fuldført. Anmodninger opbevares i 30 dage.
 

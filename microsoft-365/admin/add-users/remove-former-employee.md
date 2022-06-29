@@ -15,6 +15,7 @@ ms.collection:
 - Adm_TOC
 - SPO_Content
 ms.custom:
+- adminvideo
 - MSStore_Link
 - TRN_M365B
 - OKR_SMB_Videos
@@ -26,17 +27,17 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Bloker adgang til Microsoft 365 så en tidligere medarbejder ikke kan logge på, beskytte organisationsdata og give andre medarbejdere adgang til deres mail og OneDrive data.
-ms.openlocfilehash: 3bff5812d1efd6b38f05303de7ec2c078b31cf01
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+description: Bloker adgang til Microsoft 365, så en tidligere medarbejder ikke kan logge på, beskytte organisationsdata og give andre medarbejdere adgang til deres mail- og OneDrive-data.
+ms.openlocfilehash: d8b32a2489735469ecdd2af3b479b0705d33be13
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65436311"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486214"
 ---
 # <a name="overview-remove-a-former-employee-and-secure-data"></a>Oversigt: Fjern en tidligere medarbejder, og sikre data
 
-Et spørgsmål, vi ofte får, er "Hvad skal jeg gøre for at sikre data og beskytte adgangen, når en medarbejder forlader min organisation?" I denne artikelserie forklares det, hvordan du blokerer adgang til Microsoft 365, så disse brugere ikke kan logge på Microsoft 365, de trin, du skal udføre for at sikre organisationsdata, og hvordan andre medarbejdere kan få adgang til mail og OneDrive data.
+Et spørgsmål, vi ofte får, er "Hvad skal jeg gøre for at sikre data og beskytte adgangen, når en medarbejder forlader min organisation?" I denne artikelserie forklares det, hvordan du blokerer adgang til Microsoft 365, så disse brugere ikke kan logge på Microsoft 365, de trin, du skal udføre for at sikre organisationsdata, og hvordan andre medarbejdere kan få adgang til mail og OneDrive-data.
 
 > [!TIP]
 > Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
@@ -45,7 +46,7 @@ Et spørgsmål, vi ofte får, er "Hvad skal jeg gøre for at sikre data og besky
 
 Du skal være global administrator for at fuldføre trinnene i denne løsning.
 
-Hvis du vil fuldføre trinnene i denne serie, skal du bruge disse Microsoft 365 funktioner.
+Hvis du vil fuldføre trinnene i denne serie, skal du bruge disse Funktioner og funktioner i Microsoft 365.
 
 |Produkt eller komponent|Funktionalitet eller funktion|
 |---|---|
@@ -69,19 +70,19 @@ Hvis du vil fuldføre trinnene i denne serie, skal du bruge disse Microsoft 365 
 
 |Trin|Hvorfor gøre dette?|
 |---|---|
-|[Trin 1 – Undgå, at en tidligere medarbejder logger på og blokerer adgangen til Microsoft 365-tjenester](remove-former-employee-step-1.md)|Dette blokerer din tidligere medarbejder fra at logge på Microsoft 365 og forhindrer personen i at få adgang til Microsoft 365 tjenester.|
+|[Trin 1 – Undgå, at en tidligere medarbejder logger på og blokerer adgangen til Microsoft 365-tjenester](remove-former-employee-step-1.md)|Dette blokerer din tidligere medarbejder fra at logge på Microsoft 365 og forhindrer personen i at få adgang til Microsoft 365-tjenester.|
 |[Trin 2 – Gem indholdet af en tidligere medarbejders postkasse](remove-former-employee-step-2.md)|Dette er nyttigt for den person, der skal overtage medarbejderens arbejde, eller hvis der er procesførelse.|
 |[Trin 3 – Slet og bloker en tidligere medarbejders mobilenhed](remove-former-employee-step-3.md)|Fjerner dine forretningsdata fra telefonen eller tabletten.|
 |[Trin 4 – Videresend en tidligere medarbejders mail til en anden medarbejder, eller konvertér til en delt postkasse](remove-former-employee-step-4.md)|Det giver dig mulighed for at holde den tidligere medarbejders mailadresse aktiv. Hvis du har kunder eller partnere, der stadig sender mail til den tidligere medarbejders adresse, får de adgang til den person, der overtager arbejdet.|
-|[Trin 5 – Giv en anden medarbejder adgang til OneDrive og Outlook data](remove-former-employee-step-5.md)|Hvis du kun fjerner en brugers licens, men ikke sletter kontoen, forbliver indholdet i brugerens OneDrive tilgængeligt for dig, selv efter 30 dage. <p> Før du sletter kontoen, skal du give adgang til vedkommendes OneDrive og Outlook til en anden bruger. Når du har slettet en medarbejders konto, bevares indholdet i vedkommendes OneDrive og Outlook i **30** dage. I løbet af de 30 dage kan du dog gendanne brugerens konto og få adgang til deres indhold. Hvis du gendanner brugerens konto, forbliver det OneDrive og Outlook indhold tilgængeligt for dig selv efter 30 dage.| 
-|[Trin 6 – Fjern og slet licensen Microsoft 365 fra en tidligere medarbejder](remove-former-employee-step-6.md)|Når du fjerner en licens, kan du tildele den til en anden. Eller du kan slette licensen, så du ikke betaler for den, før du ansætter en anden person. <p> Når du fjerner eller sletter en licens, bevares brugerens gamle mail, kontakter og kalender i **30 dage** og slettes derefter permanent. Hvis du fjerner eller sletter en licens, men ikke sletter kontoen, forbliver indholdet i brugerens OneDrive tilgængeligt for dig, selv efter 30 dage.|
+|[Trin 5 – Giv en anden medarbejder adgang til OneDrive- og Outlook-data](remove-former-employee-step-5.md)|Hvis du kun fjerner en brugers licens, men ikke sletter kontoen, forbliver indholdet i brugerens OneDrive tilgængeligt for dig, selv efter 30 dage. <p> Før du sletter kontoen, skal du give en anden bruger adgang til deres OneDrive og Outlook. Når du har slettet en medarbejders konto, bevares indholdet i vedkommendes OneDrive og Outlook i **30** dage. I løbet af de 30 dage kan du dog gendanne brugerens konto og få adgang til deres indhold. Hvis du gendanner brugerens konto, forbliver OneDrive- og Outlook-indholdet tilgængeligt for dig, selv efter 30 dage.| 
+|[Trin 6 – Fjern og slet Microsoft 365-licensen fra en tidligere medarbejder](remove-former-employee-step-6.md)|Når du fjerner en licens, kan du tildele den til en anden. Eller du kan slette licensen, så du ikke betaler for den, før du ansætter en anden person. <p> Når du fjerner eller sletter en licens, bevares brugerens gamle mail, kontakter og kalender i **30 dage** og slettes derefter permanent. Hvis du fjerner eller sletter en licens, men ikke sletter kontoen, forbliver indholdet i brugerens OneDrive tilgængeligt for dig selv efter 30 dage.|
 |[Trin 7 – Slet en tidligere medarbejders brugerkonto](remove-former-employee-step-7.md)|Dette fjerner kontoen fra dit administrationscenter. Holder tingene rene.|
 
  ## <a name="watch-delete-a-user"></a>Se: Slet en bruger
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR?autoplay=false]
 
-Når en medarbejder forlader virksomheden, skal du fjerne vedkommende fra Microsoft 365 til virksomheden. Før du gør det, skal du blokere dem fra at få adgang til virksomhedsfiler, bevare de dokumenter, de har oprettet, og udføre flere andre administrative opgaver, der er knyttet til at fjerne en bruger.
+Når en medarbejder forlader virksomheden, skal du fjerne vedkommende fra Microsoft 365 til virksomheder. Før du gør det, skal du blokere dem fra at få adgang til virksomhedsfiler, bevare de dokumenter, de har oprettet, og udføre flere andre administrative opgaver, der er knyttet til at fjerne en bruger.
 
 1. Vælg **Brugere** i Administration, og vælg **Aktive brugere**.
 1. Vælg den bruger, du vil fjerne, og vælg derefter **Slet bruger**.

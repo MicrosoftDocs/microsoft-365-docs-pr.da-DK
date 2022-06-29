@@ -1,15 +1,13 @@
 ---
 title: Gennemse afhjælpningshandlinger i Microsoft 365 Business Premium
-description: Se, hvordan du får vist afhjælpninger, der er taget automatisk, eller som afventer godkendelse i Løsningscenter
+description: Se, hvordan du får vist afhjælpninger, der er taget automatisk, eller som afventer godkendelse, i Løsningscenter.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.date: 02/24/2022
-ms.prod: m365-security
-ms.technology: mdb
+ms.service: o365-administration
 ms.localizationpriority: high
 ms.reviewer: inbadian, shlomiakirav
 f1.keywords: NOCSH
@@ -17,12 +15,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 1e5d4e278bc70fdf63c951598bf12f88816a43d0
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 73790afedc78961562b592d1eb4decd4a8f1b0d4
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893223"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490393"
 ---
 # <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Gennemse afhjælpningshandlinger i Microsoft 365 Business Premium
 
@@ -47,7 +45,7 @@ Eksempler på afhjælpningshandlinger omfatter afsendelse af en fil for at sætt
 
 3. Vælg fanen **Ventende** for at få vist og godkende (eller afvise) ventende handlinger. Sådanne handlinger kan opstå som følge af beskyttelse mod antivirus/antimalware, automatiserede undersøgelser, manuelle svaraktiviteter eller live-svarsessioner.
 
-4. Vælg fanen **Oversigt** for at få vist en liste over fuldførte handlinger. 
+4. Vælg fanen **Oversigt** for at få vist en liste over fuldførte handlinger.
 
 ## <a name="types-of-remediation-actions"></a>Typer af afhjælpningshandlinger
 

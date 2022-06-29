@@ -22,15 +22,15 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Den metode, du bruger til at fjerne tildelingen af produktlicenser, afhænger af, om du fjerner tildelingen af licenser fra bestemte brugere eller fra et bestemt produkt.
-ms.date: 04/22/2022
-ms.openlocfilehash: 23fc9ea04f45cdeb50acb0ec2d62d584974d6499
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.date: 06/23/2022
+ms.openlocfilehash: 87e62b8c39e5ba0a8f61caeea3560438a716881d
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043236"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486170"
 ---
-# <a name="unassign-microsoft-365-licenses-from-users"></a>Fjern tildeling af Microsoft 365 licenser fra brugere
+# <a name="unassign-microsoft-365-licenses-from-users"></a>Fjern tildeling af Microsoft 365-licenser fra brugere
 
 Du kan fjerne tildelingen af licenser fra brugere på siden **Aktive brugere** eller på siden **Licenser** . Den metode, du bruger, afhænger af, om du vil fjerne tildelingen af produktlicenser fra bestemte brugere eller fjerne tildelingen af brugerlicenser fra et bestemt produkt.
 
@@ -42,13 +42,15 @@ Du kan fjerne tildelingen af licenser fra brugere på siden **Aktive brugere** e
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Du skal være global administrator, licensadministrator og brugeradministrator for at fjerne tildelingen af licenser. Du kan få flere oplysninger under [Om Microsoft 365 administratorroller](../add-users/about-admin-roles.md).
+- Du skal være global administrator, licensadministrator og brugeradministrator for at fjerne tildelingen af licenser. Du kan få flere oplysninger under [Om administratorroller i Microsoft 365](../add-users/about-admin-roles.md).
 - Du kan [fjerne licenser fra brugerkonti med Office 365 PowerShell](../../enterprise/remove-licenses-from-user-accounts-with-microsoft-365-powershell.md).
 - Du kan også [slette brugerkonti](../add-users/delete-a-user.md) , der er tildelt en licens, for at gøre deres licens tilgængelig for andre brugere. Når du sletter en brugerkonto, er vedkommendes licens straks tilgængelig til at tildele til en anden.
 
 ## <a name="use-the-licenses-page-to-unassign-licenses"></a>Brug siden Licenser til at fjerne tildelingen af licenser
 
-Når du bruger siden **Licenser** til at fjerne tildelingen af licenser, fjerner du tildelingen af licenser for et bestemt produkt for op til 20 brugere.
+På siden **Licenser** kan du tildele eller fjerne tildeling af licenser for op til 20 brugere ad gangen. På siden vises de produkter, du ejer, antallet af tilgængelige licenser for hvert produkt og antallet af tildelte licenser ud af det samlede antal tilgængelige licenser. Antallet af licenser er et samlet antal licenser for alle abonnementer for det samme produktnavn.
+
+Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fem licenser, og et andet abonnement, der har 8 licenser til det samme produkt. På siden **Licenser** kan du se, at du har i alt 13 licenser til Microsoft 365 Business Premium på tværs af alle dine abonnementer. Dette adskiller sig fra det, du ser på siden **Dine produkter** , som viser en række for hvert abonnement, du ejer, selvom de er for det samme produkt.
 
 ::: moniker range="o365-worldwide"
 
@@ -62,13 +64,13 @@ Når du bruger siden **Licenser** til at fjerne tildelingen af licenser, fjerner
 
 ::: moniker-end
 
-2. Vælg det produkt, du vil fjerne tildelingen af licenser for.
+1. Vælg et produkt.
 
-3. Vælg de brugere, du vil fjerne tildelingen af licenser for.
+2. Markér afkrydsningsfelterne for de brugere, du vil fjerne tildelingen af licenser til.
 
-4. Vælg **Fjern tildeling af licenser**.
+3. Vælg **Fjern tildeling af licenser**.
 
-5. I feltet **Fjern tildeling af licenser** skal du vælge **Fjern tildeling**.
+4. I feltet **Fjern tildeling af licenser** skal du vælge **Fjern tildeling**.
 
 ## <a name="use-the-active-users-page-to-unassign-licenses"></a>Brug siden Aktive brugere til at fjerne tildelingen af licenser
 
@@ -119,11 +121,11 @@ Når du bruger siden **Aktive brugere** til at fjerne tildelingen af licenser, f
 ## <a name="what-happens-to-a-users-data-when-you-remove-their-license"></a>Hvad sker der med en brugers data, når du fjerner brugerens licens?
 
 - Når en licens fjernes fra en bruger, opbevares Exchange Online data, der er knyttet til den pågældende konto, i 30 dage. Efter den 30-dages respitperiode slettes dataene og kan ikke gendannes. Den er dog knyttet til opbevaringspolitikken, og det indhold, der svarer til opbevaringsmærkater, bevares til registrering.
-- Filer, der er gemt i OneDrive for Business, slettes ikke, medmindre brugeren slettes fra Microsoft 365 Administration eller fjernes via Active Directory-synkronisering. Du kan få flere oplysninger [under OneDrive opbevaring og sletning](/onedrive/retention-and-deletion).
+- Filer, der er gemt i OneDrive for Business, slettes ikke, medmindre brugeren slettes fra Microsoft 365 Administration eller fjernes via Active Directory-synkronisering. Du kan få flere oplysninger under [Opbevaring og sletning af OneDrive](/onedrive/retention-and-deletion).
 - Når licensen fjernes, kan der ikke længere søges i brugerens postkasse ved hjælp af et eDiscovery-værktøj, f.eks. indholdssøgning eller eDiscovery (Premium). Du kan finde flere oplysninger under "Søgning i fjernede postkasser eller postkasser med ikke-licenseret" i [Indholdssøgning i Microsoft 365](../../compliance/content-search.md).
 - Hvis du har et Enterprise-abonnement, f.eks. Office 365 Enterprise E3, kan du Exchange Online bevare postkassedataene for en slettet brugerkonto ved hjælp af [inaktive postkasser](../../compliance/inactive-mailboxes-in-office-365.md). Du kan få flere oplysninger under [Opret og administrer inaktive postkasser i Exchange Online](../../compliance/create-and-manage-inactive-mailboxes.md).
-- Hvis du vil vide mere om, hvordan du blokerer en brugers adgang til Microsoft 365 data, når vedkommendes licens er fjernet, og hvordan du får adgang til dataene bagefter, skal du se [Fjern en tidligere medarbejder](../add-users/remove-former-employee.md).
-- Hvis du fjerner en brugers licens, og brugeren stadig har Office apps installeret, får vedkommende vist [fejl i forbindelse med produkt uden licens og aktivering i Office](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380), når brugeren bruger Office apps.
+- Hvis du vil vide mere om, hvordan du blokerer en brugers adgang til Microsoft 365-data, når vedkommendes licens er fjernet, og hvordan du får adgang til dataene bagefter, skal du se [Fjern en tidligere medarbejder](../add-users/remove-former-employee.md).
+- Hvis du fjerner en brugers licens, og brugeren stadig har Office-apps installeret, får vedkommende vist [fejl i Produkt uden licens og aktivering i Office](https://support.microsoft.com/office/0d23d3c0-c19c-4b2f-9845-5344fedc4380) , når brugeren bruger Office-apps.
 
 ## <a name="next-steps"></a>Næste trin
 

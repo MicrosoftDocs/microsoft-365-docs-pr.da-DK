@@ -1,8 +1,8 @@
 ---
-title: API Explorer i Microsoft Defender til Slutpunkt
+title: API Explorer i Microsoft Defender for Endpoint
 ms.reviewer: ''
-description: Brug API-stifinderen til at oprette og udføre API-forespørgsler, teste og sende anmodninger om alle tilgængelige API'er
-keywords: api, stifinder, send, anmod, hent, slå op,
+description: Brug API Explorer til at konstruere og udføre API-forespørgsler, teste og sende anmodninger for enhver tilgængelig API
+keywords: api, explorer, sende, anmode, hente, poste,
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -16,57 +16,56 @@ ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 6e7d0e5927a85f2f3952221c294fe2387c268546
-ms.sourcegitcommit: 348f3998a029a876a9dcc031f808e9e350804f22
+ms.openlocfilehash: 5d3d81f878e201cd00e7286bd045caa5fb3e1625
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "63591855"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486789"
 ---
 # <a name="api-explorer"></a>API Explorer
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-Microsoft Defender til Endpoint API Explorer er et værktøj, der hjælper dig med at udforske forskellige API'er til Defender til slutpunkter interaktivt.
+Microsoft Defender for Endpoint API Explorer er et værktøj, der hjælper dig med at udforske forskellige Defender for Endpoint API'er interaktivt.
 
-API-stifinderen gør det nemt at opbygge og udføre API-forespørgsler, teste og sende anmodninger om en hvilken som helst tilgængelig Defender til slutpunkts-API-slutpunkt. Brug API-stifinderen til at udføre handlinger eller finde data, der muligvis endnu ikke er tilgængelige via brugergrænsefladen.
+API Explorer gør det nemt at konstruere og udføre API-forespørgsler, teste og sende anmodninger for alle tilgængelige Defender for Endpoint API-slutpunkter. Brug API Explorer til at udføre handlinger eller finde data, der muligvis endnu ikke er tilgængelige via brugergrænsefladen.
 
-Værktøjet er nyttigt under appudvikling. Det giver dig mulighed at udføre API-forespørgsler, der respekterer dine brugeradgangsindstillinger, hvilket reducerer behovet for at oprette adgangstokens.
+Værktøjet er nyttigt under appudvikling. Det giver dig mulighed for at udføre API-forespørgsler, der respekterer dine brugeradgangsindstillinger, hvilket reducerer behovet for at generere adgangstokens.
 
-Du kan også bruge værktøjet til at udforske galleriet med eksempelforespørgsler, kopiere eksempler på resultatkoder og oprette fejlfindingsoplysninger.
+Du kan også bruge værktøjet til at udforske galleriet med eksempelforespørgsler, kopiere eksempler på resultatkode og generere fejlfindingsoplysninger.
 
 Med API Explorer kan du:
 
-- Kør anmodninger for enhver metode, og se svar i realtid
-- Gennemse hurtigt API-eksemplerne, og find ud af, hvilke parametre de understøtter
-- Foretag API-opkald uden besvær. ingen grund til at godkende ud over logon på administrationsportalen
+- Kør anmodninger for en hvilken som helst metode, og se svar i realtid.
+- Gennemse hurtigt API-eksemplerne, og få mere at vide om, hvilke parametre de understøtter.
+- Foretag nemt API-kald. ingen grund til at godkende ud over logon til administrationsportalen.
 
 ## <a name="access-api-explorer"></a>Access API Explorer
 
-I venstre navigationsmenu skal du vælge **Partnere & API-API-stifinder**\>.
+I navigationsmenuen til venstre skal du vælge **Partnere & API-API-stifinder**\>.**[](https://security.microsoft.com/interoperability/api-explorer)**
 
 ## <a name="supported-apis"></a>Understøttede API'er
 
-API Explorer understøtter alle de API'er, der tilbydes af Defender til Slutpunkt.
+API Explorer understøtter alle de API'er, der tilbydes af Defender for Endpoint.
 
-Listen over understøttede API'er er tilgængelig i [API-dokumentationen](apis-intro.md).
+Listen over understøttede API'er er tilgængelig i [dokumentationen til API'er](apis-intro.md).
 
-## <a name="get-started-with-the-api-explorer"></a>Introduktion til API-stifinderen
+## <a name="get-started-with-the-api-explorer"></a>Kom i gang med API Explorer
 
 1. I venstre rude er der en liste over eksempelanmodninger, som du kan bruge.
 2. Følg linkene, og klik på **Kør forespørgsel**.
 
-Nogle af eksemplerne kan kræve, at der angives en parameter i URL-adressen, f.eks. {machine- ID}.
+Nogle af eksemplerne kan kræve angivelse af en parameter i URL-adressen, f.eks. {machine- ID}.
 
 ## <a name="faq"></a>Ofte stillede spørgsmål
 
-**Skal jeg have et API-token for at bruge API-stifinderen?** <br>
-Legitimationsoplysninger til at få adgang til en API er ikke nødvendige. API-stifinderen bruger tokenet Defender til slutpunktsstyringsportalen, når der anmodes.
+**Skal jeg have et API-token for at bruge API Explorer?** <br>
+Legitimationsoplysninger for at få adgang til en API er ikke nødvendige. API Explorer bruger tokenet Defender for Endpoint-administrationsportal, når den foretager en anmodning.
 
-Legitimationsoplysningerne til logonbrugergodkendelse bruges til at bekræfte, at API Explorer er autoriseret til at få adgang til data på dine vegne.
+Legitimationsoplysningerne til brugergodkendelse, der er logget på, bruges til at bekræfte, at API Explorer er godkendt til at få adgang til data på dine vegne.
 
-Specifikke API-anmodninger er begrænset baseret på dine RBAC-rettigheder. Eksempelvis er en anmodning om at "Send-indikator" begrænset til sikkerhedsadministratorrollen.
+Specifikke API-anmodninger er begrænset på baggrund af dine RBAC-rettigheder. En anmodning om at "indsende indikator" er f.eks. begrænset til sikkerhedsadministratorrollen.

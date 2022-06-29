@@ -2,11 +2,11 @@
 title: Brug Microsoft Teams til samarbejde
 f1.keywords:
 - NOCSH
-ms.author: samanro
-author: samanro
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -23,12 +23,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvorfor og hvordan du opretter et team i Microsoft Teams, så din lille virksomhed eller kampagne kan samarbejde.
-ms.openlocfilehash: a996430d884e50d36c636c8682d862317775f63a
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 046a888c0df95bc404bafcddb041e015131e6503
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65892554"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489642"
 ---
 # <a name="use-microsoft-teams-for-collaboration"></a>Brug Microsoft Teams til samarbejde
 
@@ -70,11 +70,11 @@ Når du opretter et team, oprettes der også følgende:
 
 - Et [SharePoint Online-websted](/MicrosoftTeams/sharepoint-onedrive-interact) og et dokumentbibliotek til lagring af teamfiler
 
-- En delt [Exchange Online-postkasse](/MicrosoftTeams/exchange-teams-interact) og -kalender
+- En [Exchange Online](/MicrosoftTeams/exchange-teams-interact) delt postkasse og kalender
 
 - En OneNote-notesbog
 
-- Indgår i andre Office 365-apps, f.eks. Planner og Power BI
+- Knytter til andre Office 365 apps, f.eks. Planner og Power BI
 
 I Microsoft Teams kan du finde:
 
@@ -104,10 +104,10 @@ Opret et team, som du deler med gæster uden for din organisation, f.eks. til an
 
 Få mere at vide om [teknisk dokumentation til Microsoft Teams på Microsoft Teams](/microsoftteams/microsoft-teams)
 
-## <a name="admin-settings"></a>Administratorindstillinger
+## <a name="admin-settings"></a>indstillinger for Administration
 
-> [!Note]
-> Du skal være administrator for at oprette et team for hele organisationen. Du kan få flere oplysninger under [Hvad er en administrator i Microsoft 365?](https://support.office.com/article/what-is-an-admin-e123627e-4892-4461-b9aa-1b6d57a5cfa4?ui=en-US&rs=en-US&ad=US).
+> [!NOTE]
+> Du skal være administrator for at oprette et team for hele organisationen. Du kan få flere oplysninger under [Hvad er en Administration i Microsoft 365?](https://support.office.com/article/what-is-an-admin-e123627e-4892-4461-b9aa-1b6d57a5cfa4?ui=en-US&rs=en-US&ad=US).
 
 ## <a name="next-objective"></a>Næste mål
 

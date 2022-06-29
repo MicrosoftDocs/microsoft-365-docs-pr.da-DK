@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 282834b0c582690ff53c8361440bce21fc2d4d0b
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 9cc85dc768696169c8da164975278a661c755f94
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679270"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492419"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Nyheder i Microsoft Defender for Endpoint
 
@@ -60,24 +60,27 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 - [Nyheder i Defender for Endpoint på iOS](ios-whatsnew.md)
 - [Nyheder i Defender for Endpoint på Linux](linux-whatsnew.md)
 
+## <a name="june-2022"></a>Juni 2022
+- [Defender for Servers Plan 2 kan nu integreres med MDE-samlet løsning](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)<br>Du kan nu begynde at installere den moderne, samlede løsning til Windows Server 2012 R2 og 2016 på servere, der er omfattet af Defender for Servers Plan 2, ved hjælp af en enkelt knap.
+
 ## <a name="may-2022"></a>Maj 2022
-- [Ændringsbeskyttelse af macOS (prøveversion)](tamperprotection-macos.md)<br>Ændringsbeskyttelse hjælper med at forhindre uautoriseret fjernelse af Microsoft Defender for Endpoint på macOS.
+- [Manipulationsbeskyttelse til macOS (prøveversion)](tamperprotection-macos.md)<br>Manipulationsbeskyttelse hjælper med at forhindre uautoriseret fjernelse af Microsoft Defender for Endpoint på macOS.
 
 - [Tilføj domænecontrollerenheder – forbedring af evalueringslaboratorium (prøveversion)](evaluation-lab.md#add-a-domain-controller-preview)<br>Tilføj en domænecontroller for at køre komplekse scenarier, f.eks. tværgående flytning og angreb på fleretage på tværs af flere enheder.
 
 ## <a name="april-2022"></a>April 2022
 - [Opdateret onboarding og funktionsparitet for Windows Server 2012 R2 og Windows Server 2016)](configure-server-endpoints.md)<br/> Den nye samlede løsningspakke er nu offentlig tilgængelig og gør det nemmere at onboarde servere ved at fjerne afhængigheder og installationstrin. Desuden leveres denne samlede løsningspakke med mange nye funktionsforbedringer.
-- Integration med Tunnel. Microsoft Defender for Endpoint på iOS kan nu integreres med Microsoft Tunnel, en VPN-gatewayløsning, der muliggør sikkerhed og forbindelse i en enkelt app. Denne funktion var tidligere kun tilgængelig på Android. [Få mere at vide](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
+- Integration med tunnel. Microsoft Defender for Endpoint på iOS kan nu integreres med Microsoft Tunnel, en VPN-gatewayløsning, der muliggør sikkerhed og forbindelse i en enkelt app. Denne funktion var tidligere kun tilgængelig på Android. [Få mere at vide](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
 
 ## <a name="january-2022"></a>Januar 2022
 
 - Forbedringer til evalueringslaboratorier: Du kan nu føje Windows 11- og Linux-enheder til øvelsen. 
 
-- Trussel og håndtering af sikkerhedsrisici til Android og iOS er nu offentlig tilgængelig. [Få mere at vide](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
+- Trussels- og sårbarhedsstyring til Android og iOS er nu offentlig tilgængelig. [Få mere at vide](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
 
 ## <a name="december-2021"></a>December 2021
 
-- Trussels- og håndtering af sikkerhedsrisici kan hjælpe med at identificere Log4j-sikkerhedsrisici i programmer og komponenter. [Få mere at vide](https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/#TVM).
+- Administration af trusler og sårbarheder kan hjælpe med at identificere Log4j-sikkerhedsrisici i programmer og komponenter. [Få mere at vide](https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/#TVM).
 
 - Find IoT-enheder (prøveversion): [Enhedsregistrering](device-discovery.md) har nu mulighed for at hjælpe dig med at finde ikke-administrerede IoT-enheder, der er tilsluttet virksomhedens netværk. Dette giver dig en enkelt samlet visning af dit IoT-lager sammen med resten af dine it-enheder (arbejdsstationer, servere og mobil).
 
@@ -91,7 +94,7 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 
 ## <a name="october-2021"></a>Oktober 2021
 
-- [Opdateret onboarding- og funktionsparitet for Windows Server 2012 R2 og Windows Server 2016 (prøveversion)](configure-server-endpoints.md)<br/> Den nye samlede løsningspakke gør det nemmere at onboarde servere ved at fjerne afhængigheder og installationstrin. Desuden leveres denne samlede løsningspakke med mange nye funktionsforbedringer.
+- [Opdateret onboarding og funktionsparitet for Windows Server 2012 R2 og Windows Server 2016 (prøveversion)](configure-server-endpoints.md)<br/> Den nye samlede løsningspakke gør det nemmere at onboarde servere ved at fjerne afhængigheder og installationstrin. Desuden leveres denne samlede løsningspakke med mange nye funktionsforbedringer.
 
 - Windows 11 support føjet til Microsoft Defender for Endpoint og Microsoft 365 Defender.
 
@@ -128,13 +131,13 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 
 - [Understøttelse af administration af mobilapps](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Denne forbedring gør det muligt Microsoft Defender for Endpoint beskytte en organisations data i et administreret program, når Intune bruges til at administrere mobilapps. Du kan få flere oplysninger om administration af mobilapps i [denne dokumentation](/mem/intune/apps/mam-faq).
 
-- [Microsoft Tunnel VPN-integration](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN-funktioner er nu integreret med Microsoft Defender for Endpoint app til Android. Denne forening giver organisationer mulighed for at tilbyde en forenklet slutbrugeroplevelse med én sikkerhedsapp – der tilbyder både mobilt trusselsforsvar og mulighed for at få adgang til ressourcer i det lokale miljø fra deres mobilenhed, mens sikkerhed og it-teams kan opretholde de samme administratoroplevelser, som de kender.
+- [Integration af Microsoft Tunnel VPN](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-new-capabilities-on-android-and-ios/ba-p/2442730) <br> Microsoft Tunnel VPN-funktioner er nu integreret med Microsoft Defender for Endpoint app til Android. Denne forening giver organisationer mulighed for at tilbyde en forenklet slutbrugeroplevelse med én sikkerhedsapp – der tilbyder både mobilt trusselsforsvar og mulighed for at få adgang til ressourcer i det lokale miljø fra deres mobilenhed, mens sikkerhed og it-teams kan opretholde de samme administratoroplevelser, som de kender.
 
 - [Registrering af jailbreak på iOS](/microsoft-365/security/defender-endpoint/ios-configure-features#conditional-access-with-defender-for-endpoint-on-ios) <br> Funktionen til registrering af jailbreak i Microsoft Defender for Endpoint på iOS er nu offentlig tilgængelig. Dette føjer sig til den phishing-beskyttelse, der allerede findes.  Du kan få flere oplysninger under [Konfiguration af politik for betinget adgang baseret på enhedsrisikosignaler](/microsoft-365/security/defender-endpoint/ios-configure-features).
 
 
 ## <a name="march-2021"></a>Marts 2021
-- [Administrer beskyttelse mod manipulation ved hjælp af Microsoft 365 Defender-portalen](prevent-changes-to-security-settings-with-tamper-protection.md#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal) <br> Du kan administrere indstillinger for manipulationsbeskyttelse på Windows 10, Windows Server 2016, Windows Server 2019 og Windows Server 2022 ved hjælp af en metode, der kaldes *lejertilknyttelse*.
+- [Administrer beskyttelse mod manipulation ved hjælp af Microsoft 365 Defender-portalen](prevent-changes-to-security-settings-with-tamper-protection.md#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal) <br> Du kan administrere indstillinger for manipulationsbeskyttelse på Windows 10, Windows Server 2016, Windows Server 2019 og Windows Server 2022 ved hjælp af en metode kaldet *lejertilknyttelse*.
 
 
 ## <a name="january-2021"></a>Januar 2021

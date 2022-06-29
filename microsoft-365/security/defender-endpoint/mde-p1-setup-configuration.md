@@ -7,7 +7,6 @@ ms.author: deniseb
 manager: dansimp
 audience: ITPro
 ms.topic: overview
-ms.date: 01/14/2022
 ms.prod: m365-security
 ms.technology: mdep1
 ms.localizationpriority: medium
@@ -16,17 +15,17 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 774139aa6ccbf0562d5f6a9bf14eb89550e865a8
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: e94a0ee04d45e92d5891c73ba3a70ac2f05cd482
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665948"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485951"
 ---
 # <a name="set-up-and-configure-microsoft-defender-for-endpoint-plan-1"></a>Konfigurer Microsoft Defender for Endpoint Plan 1
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 I denne artikel beskrives det, hvordan du konfigurerer Defender for Endpoint Plan 1. Uanset om du har hjælp eller gør det selv, kan du bruge denne artikel som vejledning i hele udrulningen.  
 
@@ -40,7 +39,7 @@ Den generelle konfigurationsproces for Defender for Endpoint Plan 1 er som følg
 | Antallet  | Trin  | Beskrivelse  |
 |:---------:|:---------|:---------|
 | 1 | [Gennemse kravene](#review-the-requirements)  | Viser krav til licenser, browser, operativsystem og datacenter   |
-| 2 | [Planlæg din installation](#plan-your-deployment) | Viser flere udrulningsmetoder, der skal overvejes og inkluderes links til flere ressourcer, som kan hjælpe dig med at beslutte, hvilken metode der skal bruges  |
+| 2 | [Planlæg din udrulning](#plan-your-deployment) | Viser flere udrulningsmetoder, der skal overvejes og inkluderes links til flere ressourcer, som kan hjælpe dig med at beslutte, hvilken metode der skal bruges  |
 | 3 | [Konfigurer dit lejermiljø](#set-up-your-tenant-environment) | Viser en liste over opgaver til konfiguration af dit lejermiljø |
 | 4 | [Tildel roller og tilladelser](#assign-roles-and-permissions) | Viser roller og tilladelser, der skal overvejes for dit sikkerhedsteam <br/><br/>**TIP**! Så snart roller og tilladelser er tildelt, kan dit sikkerhedsteam komme i gang med at bruge Microsoft 365 Defender portalen. Du kan få mere at vide under [Introduktion](mde-plan1-getting-started.md). |
 | 5 | [Onboard til Defender for Endpoint](#onboard-to-defender-for-endpoint) | Viser flere metoder efter operativsystem til onboarding til Defender for Endpoint Plan 1 og indeholder links til mere detaljerede oplysninger om hver metode  |
@@ -53,13 +52,13 @@ I følgende tabel vises de grundlæggende krav til Defender for Endpoint Plan 1:
 
 | Krav | Beskrivelse |
 |:---|:---|
-| Licenskrav | Defender for Endpoint Plan 1 |
+| Licenskrav | Defender for Endpoint Plan 1 (separat eller som en del af Microsoft 365 E3 eller A3) |
 | Krav til browser | Microsoft Edge <br/> Internet Explorer version 11 <br/> Google Chrome |
-| Operativsystemer | Windows 10, version 1709 eller nyere <br/>macOS: 11.5 (Big Sur), 10.15.7 (Catalina) eller 10.14.6 (Mojave) <br/>Ios <br/>Android OS  |
+| Operativsystemer | Windows 11 eller Windows 10, version 1709 eller nyere <br/>macOS (de tre nyeste versioner understøttes) <br/>Ios <br/>Android OS <br/><br/>Bemærk, at den separate version af Defender for Endpoint Plan 1 ikke indeholder serverlicenser. Hvis du vil onboarde servere, skal du bruge Defender for Servers Plan 1 eller Plan 2 som en del af [Defender for Cloud-tilbuddet](/azure/defender-for-cloud/defender-for-cloud-introduction) . For at få mere at vide. se [Oversigt over Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction). |
 | Datacenter | En af følgende datacenterplaceringer: <br/>- Den Europæiske Union <br/>- Det Forenede Kongerige <br/>- USA |
 
 
-## <a name="plan-your-deployment"></a>Planlæg din installation
+## <a name="plan-your-deployment"></a>Planlæg din udrulning
 
 Når du planlægger din udrulning, kan du vælge mellem flere forskellige arkitekturer og udrulningsmetoder. Alle organisationer er entydige, så du har flere muligheder at overveje, som vist i følgende tabel: <br/><br/>
 
@@ -104,10 +103,10 @@ I følgende tabel beskrives de nøgleroller, du skal overveje for Defender for E
 
 | Rolle | Beskrivelse |
 |:---|:---|
-| Globale administratorer (også kaldet globale administratorer) <br/><br/> *Begræns antallet af globale administratorer som bedste praksis.* | Globale administratorer kan udføre alle slags opgaver. Den person, der har tilmeldt dit firma til Microsoft 365 eller Microsoft Defender for Endpoint Plan 1, er som standard global administrator. <br/><br/> Globale administratorer kan få adgang til/ændre indstillinger på tværs af alle Microsoft 365 portaler, f.eks.: <br/>- Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
+| Globale administratorer (også kaldet globale administratorer) <br/><br/> *Begræns antallet af globale administratorer som bedste praksis.* | Globale administratorer kan udføre alle slags opgaver. Den person, der tilmeldte dit firma til Microsoft 365 eller Microsoft Defender for Endpoint Plan 1, er som standard global administrator. <br/><br/> Globale administratorer kan få adgang til/ændre indstillinger på tværs af alle Microsoft 365-portaler, f.eks.: <br/>- Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) <br/>- Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com))  |
 | Sikkerhedsadministratorer (også kaldet sikkerhedsadministratorer) | Sikkerhedsadministratorer kan udføre sikkerhedsoperatoropgaver plus følgende opgaver: <br/>– Overvåg sikkerhedsrelaterede politikker <br/>– Administrer sikkerhedstrusler og -beskeder <br/>- Få vist rapporter |
 | Sikkerhedsoperator | Sikkerhedsoperatorer kan udføre sikkerhedslæseropgaver plus følgende opgaver: <br/>- Få vist oplysninger om registrerede trusler <br/>- Undersøg og reager på registrerede trusler  |
-| Sikkerhedslæser | Sikkerhedslæsere kan udføre følgende opgaver: <br/>– Få vist sikkerhedsrelaterede politikker på tværs af Microsoft 365 tjenester <br/>– Få vist sikkerhedstrusler og -beskeder <br/>- Få vist rapporter  |
+| Sikkerhedslæser | Sikkerhedslæsere kan udføre følgende opgaver: <br/>– Få vist sikkerhedsrelaterede politikker på tværs af Microsoft 365-tjenester <br/>– Få vist sikkerhedstrusler og -beskeder <br/>- Få vist rapporter  |
 
 
 > [!TIP]
@@ -119,7 +118,7 @@ Når du er klar til at onboarde din organisations slutpunkter, kan du vælge mel
 
 |Slutpunktsoperativsystem | Onboardingmetoder|
 |---|---|
-| Windows 10 | [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Enhedshåndtering Microsoft Endpoint Manager/Mobil](configure-endpoints-mdm.md) <br> [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md)  |
+| Windows 10 | [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [Microsoft Endpoint Manager/Mobil Enhedshåndtering](configure-endpoints-mdm.md) <br> [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br> [VDI-scripts](configure-endpoints-vdi.md)  |
 | Macos | [Lokale scripts](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil Enhedshåndtering](mac-install-with-other-mdm.md) |
 | Ios |[Appbaseret](ios-install.md) |
 | Android | [Microsoft Endpoint Manager](android-intune.md) |
@@ -136,11 +135,11 @@ Hvis du vil konfigurere din næste generation af beskyttelse i Microsoft Endpoin
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på.
 
-2. Vælg **Endpoint** **securityAntivirus** > , og vælg derefter en eksisterende politik. Hvis du ikke har en eksisterende politik, skal du oprette en ny politik.
+2. Vælg **Endpoint security** > **Antivirus**, og vælg derefter en eksisterende politik. Hvis du ikke har en eksisterende politik, skal du oprette en ny politik.
 
 3. Angiv eller rediger indstillingerne for antiviruskonfigurationen. Har du brug for hjælp? Se følgende ressourcer: <br/>
 
-   - [Indstillinger for Windows 10 Microsoft Defender Antivirus politik i Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows)
+   - [Indstillinger for Windows 10 Microsoft Defender Antivirus-politik i Microsoft Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-windows)
    - [Konfigurer Defender for Endpoint på iOS-funktioner](ios-configure-features.md)
 
 4. Når du er færdig med at angive dine indstillinger, skal du vælge **Gennemse + gem**.
@@ -157,7 +156,7 @@ Reduktion af angrebsoverfladen handler om at reducere de steder og måder, din o
 | [Netværksbeskyttelse](#network-protection) | Konfigurer netværksbeskyttelse for at forhindre personer i din organisation i at bruge programmer, der har adgang til farlige domæner eller skadeligt indhold på internettet. |
 | [Webbeskyttelse](#web-protection) | Konfigurer beskyttelse af webtrusler for at beskytte din organisations enheder mod phishing-websteder, websteder, der udnyttes, og andre websteder, der ikke er tillid til, eller websteder med lavt omdømme. Konfigurer filtrering af webindhold for at spore og regulere adgangen til websteder baseret på deres indholdskategorier (f.eks. fritid, høj båndbredde, indhold fra voksne eller juridisk ansvar). |
 | [Netværksfirewall](#network-firewall) | Konfigurer din netværksfirewall med regler, der bestemmer, hvilken netværkstrafik der må komme ind i eller ud fra organisationens enheder. |
-| [Programkontrolelement](#application-control)  | Konfigurer regler for programkontrol, hvis du kun vil tillade, at programmer og processer, der er tillid til, kører på dine Windows enheder.    |
+| [Programkontrolelement](#application-control)  | Konfigurer regler for programkontrol, hvis du kun vil tillade, at programmer og processer, der er tillid til, kører på dine Windows-enheder.    |
 
 ### <a name="attack-surface-reduction-rules"></a>Regler for reduktion af angrebsoverflade
 
@@ -167,7 +166,7 @@ Regler for reduktion af angrebsoverfladen er tilgængelige på enheder, der kør
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på.
 
-2. Vælg **Endpoint securityAttack** >  **surface reduction** > **+ Create policy**.
+2. Vælg Reduktion **af angrebsoverfladen** >  **for slutpunktssikkerhed** > **+ Opret politik**.
 
 3. Vælg **Windows 10 og nyere** for **Platform**.
 
@@ -227,15 +226,15 @@ Vi anbefaler, at du bruger Microsoft Endpoint Manager til at konfigurere kontrol
 
 9. Gennemse **+ opret under fanen Gennemse + opret** , gennemse indstillingerne for din politik, og vælg derefter **Opret**. Politikken anvendes på alle slutpunkter, der blev onboardet til Defender for Endpoint om kort tid.
 
-### <a name="device-control"></a>Enhedsstyring
+### <a name="device-control"></a>Enhedskontrol
 
-Du kan konfigurere Defender for Endpoint til at blokere eller tillade flytbare enheder og filer på flytbare enheder. Vi anbefaler, at du bruger Microsoft Endpoint Manager til at konfigurere dine indstillinger for enhedskontrol.
+Du kan konfigurere Defender for Endpoint til at blokere eller tillade flytbare enheder og filer på flytbare enheder. Vi anbefaler, at du bruger Microsoft Endpoint Manager til at konfigurere indstillingerne for enhedskontrol.
 
-:::image type="content" source="../../media/mde-p1/mem-admintemplates.png" alt-text="Microsoft Endpoint Manager administrative skabeloner" lightbox="../../media/mde-p1/mem-admintemplates.png":::
+:::image type="content" source="../../media/mde-p1/mem-admintemplates.png" alt-text="Administrative skabeloner i Microsoft Endpoint Manager" lightbox="../../media/mde-p1/mem-admintemplates.png":::
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på. 
 
-2. Vælg **EnhederKonfigurationsprofilerOpret** >  >  **profil**.
+2. Vælg **Enhedskonfigurationsprofiler** >  >  **Opret profil**.
 
 3. Vælg **Windows 10 og nyere** for **Platform**, og vælg **Skabeloner** som **Profiltype**. 
 
@@ -243,9 +242,9 @@ Du kan konfigurere Defender for Endpoint til at blokere eller tillade flytbare e
 
 4. Navngiv politikken under fanen **Grundlæggende** , og tilføj en beskrivelse. Vælg **Næste**. 
 
-5. Vælg **Alle Indstillinger** under fanen **Konfigurationsindstillinger**. Skriv derefter alle de indstillinger, der gælder for flytbare enheder, `Removable` i søgefeltet.
+5. Vælg **Alle indstillinger** under fanen **Konfigurationsindstillinger**. Skriv derefter alle de indstillinger, der gælder for flytbare enheder, `Removable` i søgefeltet.
 
-6. Vælg et element på listen, f.eks **. Alle Flytbare Storage klasser: Afvis alle adgang** for at åbne dens pop op-rude. Pop op-vinduet for hver indstilling forklarer, hvad der sker, når det er aktiveret, deaktiveret eller ikke konfigureret. Vælg en indstilling, og vælg derefter **OK**. 
+6. Vælg et element på listen, f.eks **. Alle Flytbare lagermedier-klasser: Afvis alle adgang** for at åbne dens pop op-rude. Pop op-vinduet for hver indstilling forklarer, hvad der sker, når det er aktiveret, deaktiveret eller ikke konfigureret. Vælg en indstilling, og vælg derefter **OK**. 
 
 7. Gentag trin 6 for hver indstilling, du vil konfigurere. Vælg derefter **Næste**.
 
@@ -268,7 +267,7 @@ Med netværksbeskyttelse kan du hjælpe med at beskytte din organisation mod far
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på. 
 
-2. Vælg **EnhederKonfigurationsprofilerOpret** >  >  **profil**.
+2. Vælg **Enhedskonfigurationsprofiler** >  >  **Opret profil**.
 
 3. Vælg **Windows 10 og nyere** for **Platform**, og vælg **Skabeloner** som **Profiltype**. 
 
@@ -276,7 +275,7 @@ Med netværksbeskyttelse kan du hjælpe med at beskytte din organisation mod far
 
 4. Navngiv politikken under fanen **Grundlæggende** , og tilføj en beskrivelse. Vælg **Næste**. 
 
-5. Udvid **Microsoft Defender Exploit Guard** under fanen **Konfigurationsindstillinger**, og udvid derefter **Netværksfiltrering**.
+5. På fanen **Konfigurationsindstillinger** skal du udvide **Microsoft Defender Exploit Guard** og derefter udvide **Netværksfiltrering**.
 
    Angiv **Netværksbeskyttelse** til **Aktivér**. Du kan alternativt vælge **Overvågning** for at se, hvordan netværksbeskyttelse fungerer i dit miljø i starten.
 
@@ -303,7 +302,7 @@ Med webbeskyttelse kan du beskytte din organisations enheder mod webtrusler og u
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på.
  
-2. Vælg **Endpoint securityAttack** >  **surface reduction (Reduktion af overflade**), og vælg derefter **+ Opret politik**.
+2. Vælg Reduktion **af angrebsoverfladen** **for slutpunktssikkerhed** > , og vælg derefter **+ Opret politik**.
 
 3. Vælg en platform, f.eks **. Windows 10 og nyere**, vælg profilen **Webbeskyttelse**, og vælg derefter **Opret**. 
 
@@ -333,7 +332,7 @@ Med webbeskyttelse kan du beskytte din organisations enheder mod webtrusler og u
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com/](https://security.microsoft.com/)), og log på.
 
-2. Vælg **Indstillinger** >  **Slutpunkter**.
+2. Vælg **Indstillinger** > **Slutpunkter**.
 
 3. Under **Regler** skal du vælge **Filtrering af webindhold** og derefter vælge **+ Tilføj politik**.
 
@@ -358,7 +357,7 @@ Følg disse trin for at konfigurere grundlæggende firewallindstillinger:
 
 1. Gå til Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)), og log på.
 
-2. Vælg **Endpoint** **securityFirewall** > , og vælg derefter **+ Opret politik**.
+2. Vælg **Endpoint security** > **Firewall**, og vælg derefter **+ Opret politik**.
 
 3. Vælg en platform, f.eks **. Windows 10 og nyere**, vælg profilen **Microsoft Defender Firewall**, og vælg derefter **Opret**. 
 
@@ -385,15 +384,15 @@ Følg disse trin for at konfigurere grundlæggende firewallindstillinger:
 9. Gennemse dine politikindstillinger under fanen **Gennemse + opret** , og vælg derefter **Opret**.
 
 > [!TIP]
-> Firewallindstillinger er detaljerede og kan virke komplekse. Se [Bedste praksis for konfiguration af Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
+> Firewallindstillinger er detaljerede og kan virke komplekse. Se [Bedste fremgangsmåder til konfiguration af Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
 
 ### <a name="application-control"></a>Programkontrolelement
 
-WDAC (Windows Defender Application Control) hjælper med at beskytte dine Windows slutpunkter ved kun at tillade kørsel af programmer og processer, der er tillid til. De fleste organisationer brugte en faseinddelt udrulning af WDAC. Det betyder, at de fleste organisationer ikke udruller WDAC på tværs af alle Windows slutpunkter først. Afhængigt af om din organisations Windows slutpunkter er fuldt administrerede, let administrerede eller "Medbring din egen enhed", kan du installere WDAC på alle eller nogle slutpunkter.
+Windows Defender Application Control (WDAC) hjælper med at beskytte dine Windows-slutpunkter ved kun at tillade, at programmer og processer, der er tillid til, kører. De fleste organisationer brugte en faseinddelt udrulning af WDAC. Det vil sagt, at de fleste organisationer ikke udruller WDAC på tværs af alle Windows-slutpunkter i starten. Afhængigt af om din organisations Windows-slutpunkter er fuldt administrerede, let administrerede eller "Medbring din egen enhed", kan du faktisk installere WDAC på alle eller nogle slutpunkter.
 
 Hvis du vil have hjælp til at planlægge din WDAC-installation, skal du se følgende ressourcer:
 
-- [Programkontrol for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
+- [Programkontrol til Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
 
 - [Windows Defender beslutninger om design af politikker for programkontrol](/windows/security/threat-protection/windows-defender-application-control/understand-windows-defender-application-control-policy-design-decisions)
 

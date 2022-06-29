@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: 86d2b0b09748a83c9b73430c4c6e371ca2e37f31
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 52dc38d3675ffe15bd781aefaecede9d1783bac3
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65838969"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487164"
 ---
 # <a name="export-software-vulnerabilities-assessment-per-device"></a>Eksportér vurdering af softwaresårbarheder pr. enhed
 
@@ -113,9 +113,10 @@ LastSeenTimestamp|String|Sidste gang CVE blev set på enheden.|2020-11-03 10:13:
 OSPlatform|String|Platform for det operativsystem, der kører på enheden. Denne egenskab angiver specifikke operativsystemer med variationer inden for samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11
 RbacGroupName|String|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, vil værdien være "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere
 Reference til anbefaling|String|En reference til det anbefalings-id, der er relateret til denne software.|va _--microsoft-_-silverlight
-RecommendedSecurityUpdate (valgfrit)|String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.|Sikkerhedsopdateringer fra april 2020
+RecommendedSecurityUpdate (valgfrit)|String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.|Sikkerheds Opdateringer fra april 2020
 RecommendedSecurityUpdateId (valgfrit)|String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator for de tilsvarende artikler om vejledning eller videnbase (KB)|4550961
 RegistryPaths|Matrixstreng\[\]|Registreringsdatabase beviser, at produktet er installeret på enheden.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\MicrosoftSilverlight" ]
+Sikkerhedsopdatering er tilgængelig|Boolesk |Angiver, om der er en tilgængelig sikkerhedsopdatering til softwaren.| De mulige værdier er true eller false.
 SoftwareName|String|Navnet på softwareproduktet.|Chrome
 SoftwareVendor|String|Navnet på softwareleverandøren.|Google
 SoftwareVersion|String|Softwareproduktets versionsnummer.|81.0.4044.138
@@ -157,7 +158,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
             "lastSeenTimestamp": "2020-12-30 14:17:26",
             "firstSeenTimestamp": "2020-12-30 11:07:15",
             "exploitabilityLevel": "NoExploit",
-            "recommendationReference": "va-_-microsoft-_-edge"
+            "recommendationReference": "va-_-microsoft-_-edge",
+            "securityUpdateAvailable": true
         },
         {
             "id": "00044f912345baf756462bde6db733b9a9c56ad4_.net_framework_4.0.0.0__",
@@ -182,7 +184,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
             "lastSeenTimestamp": "2020-12-30 13:18:33",
             "firstSeenTimestamp": "2020-12-30 11:07:15",
             "exploitabilityLevel": "NoExploit",
-            "recommendationReference": "va-_-microsoft-_-.net_framework"
+            "recommendationReference": "va-_-microsoft-_-.net_framework",
+            "securityUpdateAvailable": true
         },
         {
             "id": "00044f912345baf756462dbe6db733d6a9c59ab4_system_center_2012_endpoint_protection_4.10.209.0__",
@@ -207,7 +210,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
             "lastSeenTimestamp": "2020-12-30 14:17:26",
             "firstSeenTimestamp": "2020-12-30 11:07:15",
             "exploitabilityLevel": "NoExploit",
-            "recommendationReference": "va-_-microsoft-_-system_center_2012_endpoint_protection"
+            "recommendationReference": "va-_-microsoft-_-system_center_2012_endpoint_protection",
+            "securityUpdateAvailable": true
         },
         {
             "id": "00044f612345bdaf759462dbe6bd733b6a9c59ab4_onedrive_20.245.1206.2__",
@@ -232,7 +236,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
             "lastSeenTimestamp": "2020-12-30 13:18:33",
             "firstSeenTimestamp": "2020-12-30 11:07:15",
             "exploitabilityLevel": "NoExploit",
-            "recommendationReference": "va-_-microsoft-_-onedrive"
+            "recommendationReference": "va-_-microsoft-_-onedrive",
+            "securityUpdateAvailable": true
         },
         {
             "id": "00044f912345daf759462bde6db733b6a9c56ab4_windows_10_10.0.17763.1637__",
@@ -255,7 +260,8 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitie
             "lastSeenTimestamp": "2020-12-30 14:17:26",
             "firstSeenTimestamp": "2020-12-30 11:07:15",
             "exploitabilityLevel": "NoExploit",
-            "recommendationReference": "va-_-microsoft-_-windows_10" "va-_-microsoft-_-windows_11"
+            "recommendationReference": "va-_-microsoft-_-windows_10" "va-_-microsoft-_-windows_11",
+            "securityUpdateAvailable": true
         }
     ],
     "@odata.nextLink": "https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilitiesByMachine?pagesize=5&$skiptoken=eyJFeHBvcnREZWZpbml0aW9uIjp7IlRpbWVQYXRoIjoiMjAyMS0wMS0xMS8xMTAxLyJ9LCJFeHBvcnRGaWxlSW5kZXgiOjAsIkxpbmVTdG9wcGVkQXQiOjV9"
@@ -398,7 +404,7 @@ LastSeenTimestamp|String|Sidste gang CVE blev set på enheden.|2020-11-03 10:13:
 OSPlatform|String|Platform for det operativsystem, der kører på enheden; specifikke operativsystemer med variationer inden for samme familie, f.eks. Windows 10 og Windows 11. Se tvm-understøttede operativsystemer og platforme for at få flere oplysninger.|Windows10 og Windows 11 
 RbacGroupName|String|Den rollebaserede adgangskontrolgruppe (RBAC). Hvis denne enhed ikke er tildelt nogen RBAC-gruppe, vil værdien være "Ikke tildelt". Hvis organisationen ikke indeholder nogen RBAC-grupper, er værdien "Ingen".|Servere  
 Reference til anbefaling|Streng|En reference til det anbefalings-id, der er relateret til denne software.|va--microsoft--silverlight  
-RecommendedSecurityUpdate |String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.|Sikkerhedsopdateringer fra april 2020  
+RecommendedSecurityUpdate |String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.|Sikkerheds Opdateringer fra april 2020  
 RecommendedSecurityUpdateId |String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator for de tilsvarende artikler om vejledning eller videnbase (KB)|4550961  
 RegistryPaths |Matrix[streng]|Registreringsdatabase beviser, at produktet er installeret på enheden.|[ "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Google Chrome" ]  
 SoftwareName|String|Navnet på softwareproduktet.|Chrome  
@@ -586,5 +592,5 @@ GET https://api.securitycenter.microsoft.com/api/machines/SoftwareVulnerabilityC
 
 Andre relaterede
 
-- [Risikobaseret trussel & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
+- [Risikobaseret trussel & administration af sårbarheder](next-gen-threat-and-vuln-mgt.md)
 - [Sikkerhedsrisici i din organisation](tvm-weaknesses.md)

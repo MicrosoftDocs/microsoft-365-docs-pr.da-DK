@@ -18,19 +18,19 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 5ac27241297b9943f1559653777b8e1668fe7f89
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 51eaa6ddcaf50a48ccbd8ffc000a79049c1d9842
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64783023"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489464"
 ---
 # <a name="run-the-client-analyzer-on-windows"></a>Kør klientanalysen på Windows
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
-1. Download [værktøjet MDE-klientanalyse](https://aka.ms/mdatpanalyzer) til den Windows maskine, du skal undersøge.
+1. Download [værktøjet MDE-klientanalyse](https://aka.ms/mdatpanalyzer) til den Windows-maskine, du skal undersøge.
 
 2. Udpak indholdet af MDEClientAnalyzer.zip på maskinen.
 
@@ -53,9 +53,9 @@ ms.locfileid: "64783023"
 Ud over ovenstående er der også en mulighed for at [indsamle logfiler for understøttelse af analyse ved hjælp af live-svar.](troubleshoot-collect-support-log.md).
 
 > [!NOTE]
-> På Windows 10/11, Windows Server 2019/2022 eller Windows Server 2012R2/2016, hvor den [moderne unified løsning](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) er installeret, kalder klientanalysescriptet til en eksekverbar fil, der kaldes `MDEClientAnalyzer.exe` for at køre forbindelsestest til URL-adresser til cloudtjenesten.
+> På Windows 10/11, Windows Server 2019/2022 eller Windows Server 2012R2/2016, hvor den [moderne unified løsning](configure-server-endpoints.md#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution) er installeret, kalder klientanalysescriptet til en eksekverbar fil, der kaldes `MDEClientAnalyzer.exe` for at køre forbindelsestestene til URL-adresser til cloudtjenesten.
 >
-> På Windows 8.1, Windows Server 2016 eller en tidligere os-udgave, hvor Microsoft Monitoring Agent (MMA) bruges til onboarding, kalder klientanalysescriptet til en eksekverbar fil, der kaldes `MDEClientAnalyzerPreviousVersion.exe` for at køre forbindelsestest for URL-adresser til kommando og kontrol (CnC), samtidig med at der også ringes til Microsoft Monitoring Agent-forbindelsesværktøjet `TestCloudConnection.exe` til URL-adresser til cyberdatakanaler.
+> På Windows 8.1, Windows Server 2016 eller en tidligere OS-udgave, hvor Microsoft Monitoring Agent (MMA) bruges til onboarding, kalder klientanalysescriptet til en eksekverbar fil, der kaldes `MDEClientAnalyzerPreviousVersion.exe` for at køre forbindelsestest for URL-adresser til kommando og kontrol (CnC), samtidig med at den også ringer til Microsoft Monitoring Agent-forbindelsesværktøjet `TestCloudConnection.exe` til URL-adresser til cyberdatakanalen.
 
 
 Alle PowerShell-scripts og -moduler, der er inkluderet i analysen, er Signeret af Microsoft.
@@ -82,7 +82,7 @@ Eksempelindhold efter ændring af MDEClientAnalyzer.ps1:
 >
 > - Den version af Windows, som analysefunktionen køres på.
 > - Tilgængelighed af hændelseslogkanal på computeren.
-> - Starttilstanden for den Slutpunktsregistrering og -svar sensor (assistenten stoppes, hvis maskinen endnu ikke er onboardet).
+> - Starttilstanden for EDR-sensoren (assistenten stoppes, hvis maskinen endnu ikke er onboardet).
 > - Hvis der blev brugt en avanceret fejlfindingsparameter sammen med analysekommandoen.
 
 Den udpakkede MDEClientAnalyzerResult.zip fil indeholder som standard følgende elementer.
@@ -94,11 +94,11 @@ Den udpakkede MDEClientAnalyzerResult.zip fil indeholder som standard følgende 
 - Mappen SystemInfoLogs \[\]
   - AddRemovePrograms.csv
 
-    Beskrivelse: Liste over x86-installeret software på x64 OS-software, der er indsamlet fra registreringsdatabasen.
+    Beskrivelse: Liste over x64-installeret software på x64 OS, der indsamles fra registreringsdatabasen.
 
   - AddRemoveProgramsWOW64.csv
 
-    Beskrivelse: Liste over x86-installeret software på x64 OS-software, der er indsamlet fra registreringsdatabasen.
+    Beskrivelse: Liste over x86-installeret software på x64 OS, der indsamles fra registreringsdatabasen.
 
     - CertValidate.log
 
@@ -106,7 +106,7 @@ Den udpakkede MDEClientAnalyzerResult.zip fil indeholder som standard følgende 
 
     - dsregcmd.txt
 
-      Beskrivelse: Output fra kørsel af [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). Dette indeholder oplysninger om computerens Azure AD-status.
+      Beskrivelse: Output fra kørsel af [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd). Dette indeholder oplysninger om computerens Azure AD status.
 
     - IFEO.txt
 

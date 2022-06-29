@@ -4,9 +4,9 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -23,12 +23,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Log på Microsoft 365. Beskyt din virksomhed, praksis eller kampagne mod cybersikkerhedstrusler mod mail, data og kommunikation.
-ms.openlocfilehash: d478b37c38b9184e1ec60844025b3fe356fb43dd
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 97ebd115d46a5cc4bce096f809da242bfcbb9ba5
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893323"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491167"
 ---
 # <a name="sign-in-to-microsoft-365-business-for-campaigns"></a>Log på Microsoft 365 Business for Campaigns
 
@@ -38,7 +38,7 @@ Sådan logger du på:
 
 1. Find det brugernavn og den adgangskode, vi sendte til den mailadresse, du brugte, da du [tilmeldte dig Microsoft 365 til kampagner](m365-campaigns-sign-up.md).
 
-2. I browseren skal du gå til Microsoft 365 Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>.
+2. Gå til Microsoft 365 Administration på <a href="https://go.microsoft.com/fwlink/p/?linkid=837890" target="_blank">https://admin.microsoft.com</a>i browseren.
 
 3. Skriv dit brugernavn og din adgangskode, og vælg derefter **Log på**.
 
@@ -46,7 +46,7 @@ Sådan logger du på:
 
 ## <a name="for-staff"></a>For medarbejdere
 
-Brugere, der er føjet til dit Abonnement på Microsoft 365 til kampagner (eller Microsoft 365 Business Premium), kan logge på ved at følge disse trin:
+Brugere, der er føjet til dit abonnement på Microsoft 365 til kampagner (eller Microsoft 365 Business Premium), kan logge på ved at følge disse trin:
 
 1. Gå til <a href="https://office.com" target="_blank">https://office.com</a>.
 

@@ -21,14 +21,14 @@ ms.custom:
 search.appverid: MET150
 description: Når du lukker din konto med Microsoft, slettes alle oplysninger, der er relateret til din konto, herunder licenser, brugere og brugerdata.
 ms.date: 04/02/2021
-ms.openlocfilehash: c036a4cda929d58265a088b15a43772caacb0b94
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: a14dd1153d8030dd953c58404902a891aeefdaf9
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102454"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491753"
 ---
-# <a name="close-your-account"></a>Luk din konto
+# <a name="close-your-microsoft-account"></a>Luk din Microsoft-konto
 
 Når du lukker din konto hos Microsoft, slettes all oplysninger, der er relateret til din konto. Disse oplysninger omfatter abonnementer, licenser, betalingsmetoder, brugere og brugerdata.
 
@@ -48,7 +48,7 @@ Hvis du vil slette brugere, skal du se [Brugeradministrationsadministrator: Slet
 
 Du kan også bruge [PowerShell-cmdlet'en Remove-MsolUser](/powershell/module/msonline/remove-msoluser) til at slette brugere samlet.
 
-Hvis din organisation bruger Active Directory, der synkroniseres med Microsoft Azure Active Directory (Azure AD), skal du i stedet slette brugerkontoen fra Active Directory. Du kan finde instruktioner [under Massesletning af brugere i Azure Active Directory](/azure/active-directory/users-groups-roles/users-bulk-delete).
+Hvis din organisation bruger Active Directory, der synkroniseres med Microsoft Azure Active Directory (Azure AD), skal du i stedet slette brugerkontoen fra Active Directory. Du kan finde instruktioner under [Massesletning af brugere i Azure Active Directory](/azure/active-directory/users-groups-roles/users-bulk-delete).
 
 ## <a name="step-2-cancel-all-active-subscriptions"></a>Trin 2: Annuller alle aktive abonnementer
 
@@ -92,6 +92,6 @@ Når du har fuldført dette sidste trin, lukkes og slettes din konto hos Microso
 
 ## <a name="related-content"></a>Relateret indhold 
 
-[Forstå din faktura for Microsoft 365 for business](./billing-and-payments/understand-your-invoice2.md) (artikel)\
+[Forstå din faktura eller faktura til Microsoft 365 for business](./billing-and-payments/understand-your-invoice2.md) (artikel)\
 [Annuller dit abonnement](./subscriptions/cancel-your-subscription.md) (artikel)
 

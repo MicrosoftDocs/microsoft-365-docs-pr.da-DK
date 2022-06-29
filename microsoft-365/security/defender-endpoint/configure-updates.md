@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 8a6022161b3c5c52fafd6cc17e5bdea50abc9b7e
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 491d51b30b45fb99cba9924f947c9566305c2fbc
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419236"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490957"
 ---
 # <a name="create-a-custom-gradual-rollout-process-for-microsoft-defender-updates"></a>Opret en brugerdefineret gradvis udrulningsproces for Microsoft Defender-opdateringer
 
@@ -31,7 +31,7 @@ ms.locfileid: "65419236"
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus
 
@@ -51,10 +51,10 @@ I følgende tabel vises de tilgængelige gruppepolitikindstillinger for konfigur
 
 |Indstilling af titel|Beskrivelse|Placering|
 |---|---|---|
-|Vælg gradvis udrulningskanal for månedlig opdatering af Microsoft Defender-platform|Aktivér denne politik for at angive, hvornår enheder modtager Opdateringer til Microsoft Defender-platformen under den månedlige gradvise udrulning. <p> Betakanal: Enheder, der er angivet til denne kanal, er de første til at modtage nye opdateringer. Vælg Beta Channel for at deltage i identificering og rapportering af problemer til Microsoft. Enheder i Windows Insider Program abonneres som standard på denne kanal. Kun til brug i (manuelle) testmiljøer og et begrænset antal enheder. <p> Aktuel kanal (prøveversion): Enheder, der er angivet til denne kanal, tilbydes opdateringer tidligst under den månedlige gradvise udgivelsescyklus. Foreslået til præproduktions-/valideringsmiljøer. <p> Aktuel kanal (faset): Enheder tilbydes opdateringer efter den månedlige gradvise udgivelsescyklus. Foreslået at gælde for en lille, repræsentativ del af din produktionspopulation (~10%). <p> Aktuel kanal (bred): Enheder tilbydes kun opdateringer, når den gradvise udgivelsescyklus er fuldført. Foreslået at anvende på et bredt sæt enheder i din produktionspopulation (~10-100%). <p> Kritisk – tidsforsinkelse: Enheder får tilbudt opdateringer med en forsinkelse på 48 timer. Kun foreslået til kritiske miljøer. <p>Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden automatisk opdateret under den gradvise udgivelsescyklus. Egnet til de fleste enheder.|Windows komponenter\Microsoft Defender Antivirus|
-|Vælg gradvis udrulningskanal for Microsoft Defender-månedligt program|Aktivér denne politik for at angive, hvornår enheder modtager opdateringer fra Microsoft Defender-programmet under den månedlige gradvise udrulning. <p> Betakanal: Enheder, der er angivet til denne kanal, er de første til at modtage nye opdateringer. Vælg Beta Channel for at deltage i identificering og rapportering af problemer til Microsoft. Enheder i Windows Insider Program abonneres som standard på denne kanal. Kun til brug i (manuelle) testmiljøer og et begrænset antal enheder. <p> Aktuel kanal (prøveversion): Enheder, der er angivet til denne kanal, tilbydes opdateringer tidligst under den månedlige gradvise udgivelsescyklus. Foreslået til præproduktions-/valideringsmiljøer. <p> Aktuel kanal (faset): Enheder tilbydes opdateringer efter den månedlige gradvise udgivelsescyklus. Foreslået at gælde for en lille, repræsentativ del af din produktionspopulation (~10%). <p> Aktuel kanal (bred): Enheder tilbydes kun opdateringer, når den gradvise udgivelsescyklus er fuldført. Foreslået at anvende på et bredt sæt enheder i din produktionspopulation (~10-100%). <p> Kritisk – tidsforsinkelse: Enheder får tilbudt opdateringer med en forsinkelse på 48 timer. Kun foreslået til kritiske miljøer.<p> Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden automatisk opdateret under den gradvise udgivelsescyklus. Egnet til de fleste enheder.|Windows komponenter\Microsoft Defender Antivirus|
-|Vælg gradvis udrulningskanal for opdateringer til sikkerhedsintelligens i Microsoft Defender|Aktivér denne politik for at angive, hvornår enheder modtager Microsoft Defender Security Intelligence-opdateringer under den daglige gradvise udrulning. <p> Aktuel kanal (i fase): Enheder tilbydes opdateringer efter udgivelsescyklussen. Foreslået at gælde for en lille, repræsentativ del af produktionspopulationen (~10%). <p> Aktuel kanal (bred): Enheder tilbydes kun opdateringer, når den gradvise udgivelsescyklus er fuldført. Foreslået at anvende på et bredt sæt enheder i din produktionspopulation (~10-100%). <p>  Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden automatisk opdateret under den daglige udgivelsescyklus. Egnet til de fleste enheder.|Windows komponenter\Microsoft Defender Antivirus|
-|Deaktiver gradvis udrulning af Microsoft Defender-opdateringer|Aktivér denne politik for at deaktivere gradvis udrulning af Defender-opdateringer. <p> Aktuel kanal (bred): Enheder, der er angivet til denne kanal, vil blive tilbudt opdateringer sidst under den gradvise udgivelsescyklus. Bedst til datacentermaskiner, der kun modtager begrænsede opdateringer. <p> Bemærk! Denne indstilling gælder for både månedlige og daglige Defender-opdateringer og tilsidesætter alle tidligere konfigurerede kanalvalg for platform- og programopdateringer. <p> Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden i Aktuel kanal (standard), medmindre andet er angivet i specifikke kanaler for platform- og programopdateringer. Hold dig automatisk opdateret under den gradvise udgivelsescyklus. Egnet til de fleste enheder.|Windows komponenter\Microsoft Defender Antivirus|
+|Vælg gradvis udrulningskanal for månedlig opdatering af Microsoft Defender-platform|Aktivér denne politik for at angive, hvornår enheder modtager Opdateringer til Microsoft Defender-platformen under den månedlige gradvise udrulning. <p> Betakanal: Enheder, der er angivet til denne kanal, er de første til at modtage nye opdateringer. Vælg Beta Channel for at deltage i identificering og rapportering af problemer til Microsoft. Enheder i Windows Insider Program abonneres som standard på denne kanal. Kun til brug i (manuelle) testmiljøer og et begrænset antal enheder. <p> Aktuel kanal (prøveversion): Enheder, der er angivet til denne kanal, tilbydes opdateringer tidligst under den månedlige gradvise udgivelsescyklus. Foreslået til præproduktions-/valideringsmiljøer. <p> Aktuel kanal (faset): Enheder tilbydes opdateringer efter den månedlige gradvise udgivelsescyklus. Foreslået at gælde for en lille, repræsentativ del af din produktionspopulation (~10%). <p> Aktuel kanal (bred): Enheder tilbydes kun opdateringer, når den gradvise udgivelsescyklus er fuldført. Foreslået at anvende på et bredt sæt enheder i din produktionspopulation (~10-100%). <p> Kritisk – tidsforsinkelse: Enheder får tilbudt opdateringer med en forsinkelse på 48 timer. Kun foreslået til kritiske miljøer. <p>Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden automatisk opdateret under den gradvise udgivelsescyklus. Egnet til de fleste enheder.|Windows-komponenter\Microsoft Defender Antivirus|
+|Vælg gradvis udrulningskanal for Microsoft Defender-månedligt program|Aktivér denne politik for at angive, hvornår enheder modtager opdateringer fra Microsoft Defender-programmet under den månedlige gradvise udrulning. <p> Betakanal: Enheder, der er angivet til denne kanal, er de første til at modtage nye opdateringer. Vælg Beta Channel for at deltage i identificering og rapportering af problemer til Microsoft. Enheder i Windows Insider Program abonneres som standard på denne kanal. Kun til brug i (manuelle) testmiljøer og et begrænset antal enheder. <p> Aktuel kanal (prøveversion): Enheder, der er angivet til denne kanal, tilbydes opdateringer tidligst under den månedlige gradvise udgivelsescyklus. Foreslået til præproduktions-/valideringsmiljøer. <p> Aktuel kanal (faset): Enheder tilbydes opdateringer efter den månedlige gradvise udgivelsescyklus. Foreslået at gælde for en lille, repræsentativ del af din produktionspopulation (~10%). <p> Aktuel kanal (bred): Enheder tilbydes kun opdateringer, når den gradvise udgivelsescyklus er fuldført. Foreslået at anvende på et bredt sæt enheder i din produktionspopulation (~10-100%). <p> Kritisk – tidsforsinkelse: Enheder får tilbudt opdateringer med en forsinkelse på 48 timer. Kun foreslået til kritiske miljøer.<p> Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden automatisk opdateret under den gradvise udgivelsescyklus. Egnet til de fleste enheder.|Windows-komponenter\Microsoft Defender Antivirus|
+|Vælg gradvis udrulningskanal for opdateringer til sikkerhedsintelligens i Microsoft Defender|Aktivér denne politik for at angive, hvornår enheder modtager Microsoft Defender Security Intelligence-opdateringer under den daglige gradvise udrulning. <p> Aktuel kanal (i fase): Enheder tilbydes opdateringer efter udgivelsescyklussen. Foreslået at gælde for en lille, repræsentativ del af produktionspopulationen (~10%). <p> Aktuel kanal (bred): Enheder tilbydes kun opdateringer, når den gradvise udgivelsescyklus er fuldført. Foreslået at anvende på et bredt sæt enheder i din produktionspopulation (~10-100%). <p>  Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden automatisk opdateret under den daglige udgivelsescyklus. Egnet til de fleste enheder.|Windows-komponenter\Microsoft Defender Antivirus|
+|Deaktiver gradvis udrulning af Microsoft Defender-opdateringer|Aktivér denne politik for at deaktivere gradvis udrulning af Defender-opdateringer. <p> Aktuel kanal (bred): Enheder, der er angivet til denne kanal, vil blive tilbudt opdateringer sidst under den gradvise udgivelsescyklus. Bedst til datacentermaskiner, der kun modtager begrænsede opdateringer. <p> Bemærk! Denne indstilling gælder for både månedlige og daglige Defender-opdateringer og tilsidesætter alle tidligere konfigurerede kanalvalg for platform- og programopdateringer. <p> Hvis du deaktiverer eller ikke konfigurerer denne politik, forbliver enheden i Aktuel kanal (standard), medmindre andet er angivet i specifikke kanaler for platform- og programopdateringer. Hold dig automatisk opdateret under den gradvise udgivelsescyklus. Egnet til de fleste enheder.|Windows-komponenter\Microsoft Defender Antivirus|
 |
 
 ## <a name="group-policy"></a>Gruppepolitik
@@ -64,7 +64,7 @@ I følgende tabel vises de tilgængelige gruppepolitikindstillinger for konfigur
 
 Du kan bruge [Gruppepolitik](/windows/win32/srvnodes/group-policy?redirectedfrom=MSDN) til at konfigurere og administrere Microsoft Defender Antivirus på dine slutpunkter.
 
-Generelt kan du bruge følgende fremgangsmåde til at konfigurere eller ændre Microsoft Defender Antivirus gruppepolitikindstillinger:
+Generelt kan du bruge følgende fremgangsmåde til at konfigurere eller ændre gruppepolitikindstillingerne for Microsoft Defender Antivirus:
 
 1. Åbn **administrationskonsollen Gruppepolitik Gruppepolitik**, højreklik på det **Gruppepolitik objekt**, du vil konfigurere, og klik på **Rediger**.
 
@@ -72,7 +72,7 @@ Generelt kan du bruge følgende fremgangsmåde til at konfigurere eller ændre M
 
 3. Klik på **Administrative skabeloner**.
 
-4. Udvid træet for at **Windows komponenter > Microsoft Defender Antivirus**.
+4. Udvid træet til **Windows-komponenter > Microsoft Defender Antivirus**.
 
 5. Udvid det afsnit (kaldet **Placering** i tabellen i dette emne), der indeholder den indstilling, du vil konfigurere, dobbeltklik på indstillingen for at åbne den, og foretag konfigurationsændringer.
 
@@ -96,7 +96,7 @@ Brug følgende parametre:
 Set-MpPreference
 -PlatformUpdatesChannel Beta|Preview|Staged|Broad|Delayed|NotConfigured
 -EngineUpdatesChannel Beta|Preview|Staged|Broad|Delayed|NotConfigured
--DisableGradualRelease True|False
+-DisableGradualRelease 1|0
 -SignaturesUpdatesChannel Staged|Broad|NotConfigured
 ```
 
@@ -107,7 +107,7 @@ Bruges `Set-MpPreference -PlatformUpdatesChannel Beta` til at konfigurere platfo
 Du kan få flere oplysninger om parametrene, og hvordan du konfigurerer dem, under [Set-MpPreference (Microsoft Defender Antivirus)|Microsoft Docs](/powershell/module/defender/set-mppreference).
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

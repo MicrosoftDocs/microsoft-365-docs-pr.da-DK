@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger den avancerede leveringspolitik i Exchange Online Protection (EOP) til at identificere meddelelser, der ikke skal filtreres i bestemte understøttede scenarier (phishing-simuleringer fra tredjepart og meddelelser, der leveres til sikkerhedshandlinger (SecOps)-postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d9176f73c94df6413e3b79053318f5547788d773
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 109d711623d2a0355851414af3ef0cb1beadf6af
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011577"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490437"
 ---
 # <a name="configure-the-delivery-of-third-party-phishing-simulations-to-users-and-unfiltered-messages-to-secops-mailboxes"></a>Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser
 
@@ -38,35 +38,35 @@ For at holde din organisation [sikker som standard](secure-by-default.md) tillad
 - **Phishingsimuleringer fra tredjepart**: Simulerede angreb kan hjælpe dig med at identificere sårbare brugere, før et reelt angreb påvirker din organisation.
 - **Sikkerhedshandlinger (SecOps)-postkasser**: Dedikerede postkasser, der bruges af sikkerhedsteams til at indsamle og analysere ufiltrerede meddelelser (både gode og dårlige).
 
-Du kan bruge den _avancerede leveringspolitik_ i Microsoft 365 til at forhindre filtrering af indgående meddelelser _i disse specifikke scenarier_.<sup>\*</sup> Den avancerede leveringspolitik sikrer, at meddelelser i disse scenarier opnår følgende resultater:
+Du kan bruge den _avancerede leveringspolitik_ i Microsoft 365 til at forhindre filtrering af indgående meddelelser _i disse specifikke scenarier_ .<sup>\*</sup> Den avancerede leveringspolitik sikrer, at meddelelser i disse scenarier opnår følgende resultater:
 
 - Filtre i EOP og Microsoft Defender for Office 365 ikke udføre nogen handling på disse meddelelser.<sup>\*</sup>
 - [Zap(nul-tøm)](zero-hour-auto-purge.md) for spam og phishing foretager ingen handling på disse meddelelser.<sup>\*\*</sup>
 - [Standardsystembeskeder](/microsoft-365/compliance/alert-policies#default-alert-policies) udløses ikke for disse scenarier.
 - [AIR og klyngedannelse i Defender for Office 365](office-365-air.md) ignorerer disse meddelelser.
 - Specifikt til phishing-simuleringer fra tredjepart:
-  - [Administratorindsendelser](admin-submission.md) genererer et automatisk svar, der siger, at meddelelsen er en del af en phishing-simuleringskampagne og ikke er en reel trussel. Beskeder og AIR udløses ikke. Oplevelsen med administratorindsendelser viser disse meddelelser som en simuleret trussel.
+  - [Administration indsendelser](admin-submission.md) genererer et automatisk svar, der siger, at meddelelsen er en del af en phishing-simuleringskampagne og ikke er en reel trussel. Beskeder og AIR udløses ikke. Oplevelsen med administratorindsendelser viser disse meddelelser som en simuleret trussel.
   - Når en bruger rapporterer en phishingsimuleringsmeddelelse ved hjælp af [rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing](enable-the-report-message-add-in.md), genererer systemet ikke en besked, undersøgelse eller hændelse. Links eller filer detoneres ikke, men meddelelsen vises også under fanen **Brugerrapporterede meddelelser** på siden **Indsendelser** .
-  - [Pengeskab Links i Defender for Office 365](safe-links.md) blokerer eller detonerer ikke de specifikt identificerede URL-adresser i disse meddelelser, når der klikkes. URL-adresser er stadig ombrudt, men de er ikke blokeret.
-  - [Pengeskab vedhæftede filer i Defender for Office 365](safe-attachments.md) detonerer ikke vedhæftede filer i disse meddelelser.
+  - [Sikre links i Defender for Office 365](safe-links.md) blokerer eller detonerer ikke de specifikt identificerede URL-adresser i disse meddelelser på tidspunktet for klik. URL-adresser er stadig ombrudt, men de er ikke blokeret.
+  - [Sikre vedhæftede filer i Defender for Office 365](safe-attachments.md) detonerer ikke vedhæftede filer i disse meddelelser.
 
 <sup>\*</sup> Du kan ikke omgå filtrering af malware.
 
 <sup>\*\*</sup> Du kan omgå ZAP for malware ved at oprette en politik for antimalware for SecOps-postkassen, hvor ZAP til malware er slået fra. Du kan finde en vejledning [under Konfigurer politikker for antimalware i EOP](configure-anti-malware-policies.md).
 
-Meddelelser, der identificeres af den avancerede leveringspolitik, er ikke sikkerhedstrusler, så meddelelserne er markeret med systemtilsidesættelser. Administratoroplevelser viser disse meddelelser som enten på grund af tilsidesættelse af et **phishingsimuleringssystem** eller tilsidesættelse af **et SecOps-postkassesystem** . Administratorer kan filtrere og analysere på disse systemtilsidesættelser i følgende oplevelser:
+Meddelelser, der identificeres af den avancerede leveringspolitik, er ikke sikkerhedstrusler, så meddelelserne er markeret med systemtilsidesættelser. Administration oplevelser viser disse meddelelser som enten på grund af tilsidesættelse af **phishingsimuleringssystemet** eller tilsidesættelse af **secOps-postkassesystemet**. Administratorer kan filtrere og analysere på disse systemtilsidesættelser i følgende oplevelser:
 
-- [Trusselsoversigt/registreringer i realtid i Defender for Office 365 plan 2](threat-explorer.md): Administratoren kan filtrere **efter systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
-- [Mailobjektsiden i Threat Explorer/Realtidsregistreringer](mdo-email-entity-page.md): Administratoren kan få vist en meddelelse, der blev tilladt af organisationspolitikken af enten **SecOps-postkassen** eller **phishingsimulering** under **tilsidesættelse af lejer** i afsnittet **Tilsidesættelser**.
-- [Statusrapporten trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report): Administratoren kan filtrere efter **visningsdata efter systemtilsidesættelse** i rullemenuen og vælge at få vist meddelelser, der er tilladt på grund af tilsidesættelse af et phishingsimuleringssystem. Hvis du vil se meddelelser, der er tilladt af tilsidesættelsen af SecOps-postkassen, kan du vælge **diagramopdeling efter leveringsplacering** i rullemenuen **med diagramopdeling efter årsag** .
+- [Trusselsoversigt/registreringer i realtid i Defender for Office 365 plan 2](threat-explorer.md): Administration kan filtrere efter **systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
+- [Mailobjektsiden i Threat Explorer/Realtidsregistreringer](mdo-email-entity-page.md): Administration kan få vist en meddelelse, der blev tilladt af organisationspolitikken af enten **SecOps-postkassen** eller **phishingsimulering** under **tilsidesættelse af lejer** i afsnittet **Tilsidesættelser**.
+- [Statusrapporten trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report): Administration kan filtrere efter **visningsdata efter tilsidesættelse af system** i rullemenuen og vælge at få vist meddelelser, der er tilladt på grund af tilsidesættelse af et phishingsimuleringssystem. Hvis du vil se meddelelser, der er tilladt af tilsidesættelsen af SecOps-postkassen, kan du vælge **diagramopdeling efter leveringsplacering** i rullemenuen **med diagramopdeling efter årsag** .
 - [Avanceret jagt i Microsoft Defender for Endpoint](../defender-endpoint/advanced-hunting-overview.md): Phishingsimulering og tilsidesættelser af SecOps-postkassesystemet vises som indstillinger i OrgLevelPolicy i EmailEvents.
-- [Kampagnevisninger](campaigns.md): Administratoren kan filtrere **efter systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
+- [Kampagnevisninger](campaigns.md): Administration kan filtrere **efter systemets tilsidesættelseskilde** og vælge enten **phishingsimulering** eller **SecOps-postkasse**.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Avanceret levering** , skal du åbne <https://security.microsoft.com/advanceddelivery>.
 
-- Hvis du vil oprette forbindelse til PowerShell & overholdelse af angivne standarder, [skal du se Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
+- Hvis du vil oprette forbindelse til PowerShell til & overholdelse af angivne standarder, skal du se [Opret forbindelse til PowerShell til sikkerhed & overholdelse](/powershell/exchange/connect-to-scc-powershell).
 
 - Du skal have tildelt tilladelser, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil oprette, redigere eller fjerne konfigurerede indstillinger i politikken for avanceret levering, skal du være medlem af rollegruppen **Sikkerhedsadministrator** i **Microsoft 365 Defender portalen** og medlem af rollegruppen **Organisationsadministration** i **Exchange Online**.
@@ -75,7 +75,7 @@ Meddelelser, der identificeres af den avancerede leveringspolitik, er ikke sikke
   Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md) og [Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
-  > Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle giver brugerne de nødvendige tilladelser på Microsoft 365 Defender portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ## <a name="use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy"></a>Brug Microsoft 365 Defender-portalen til at konfigurere SecOps-postkasser i den avancerede leveringspolitik
 
@@ -110,7 +110,7 @@ Posterne i SecOps-postkassen, som du har konfigureret, vises på fanen **SecOps-
    - **Domæne**: Udvid denne indstilling, og angiv mindst ét mailadressedomæne (f.eks. contoso.com) ved at klikke i feltet, angive en værdi og derefter trykke på Enter eller vælge den værdi, der vises under feltet. Gentag dette trin så mange gange, det er nødvendigt. Du kan tilføje op til 20 poster.
 
      > [!NOTE]
-     > Brug domænet fra adressen `5321.MailFrom` (også kendt som **MAIL FROM-adresse** , P1-afsender eller konvolutafsender), der bruges i SMTP-overførslen af meddelelsen **, eller** et DomæneNøgler-identificeret mail (DKIM) som angivet af din leverandør af phishingsimulering. 
+     > Brug domænet fra adressen `5321.MailFrom` (også kendt som **MAIL FROM-adresse** , P1-afsender eller konvolutafsender), der bruges i SMTP-overførslen af meddelelsen **, eller** et DomæneNøgler-identificeret mail (DKIM) som angivet af din leverandør af phishingsimulering.
 
    - **Sender IP**: Udvid denne indstilling, og angiv mindst én gyldig IPv4-adresse ved at klikke i feltet, angive en værdi og derefter trykke på Enter eller vælge den værdi, der vises under feltet. Gentag dette trin så mange gange, det er nødvendigt. Du kan tilføje op til 10 poster. Gyldige værdier er:
      - Enkelt IP: f.eks. 192.168.1.1.
@@ -122,12 +122,12 @@ Posterne i SecOps-postkassen, som du har konfigureret, vises på fanen **SecOps-
 
    > [!NOTE]
    > Hvis du vil konfigurere en phishingsimulering fra tredjepart i Avanceret levering, skal du angive følgende oplysninger:
-   > 
+   >
    > - Mindst ét **domæne** fra en af følgende kilder:
    >   - Adressen `5321.MailFrom` (også kendt som MAIL FROM-adresse, P1-afsender eller konvolut afsender).
    >   - DKIM-domænet.
    > - Mindst én **afsendelses-IP**.
-   > 
+   >
    > Du kan eventuelt inkludere **URL-adresser til simulering for at** sikre, at URL-adresser i simuleringsmeddelelser ikke blokeres.
    > Du kan angive op til 10 poster for hvert felt.
    > Der skal være et match på mindst ét **domæne** og ét **afsendelses-IP**, men ingen tilknytning mellem værdier vedligeholdes.
@@ -142,9 +142,9 @@ De phishing-simuleringsposter fra tredjepart, som du har konfigureret, vises på
 
 Ud over de to scenarier, som den avancerede leveringspolitik kan hjælpe dig med, er der andre scenarier, der kan kræve, at du tilsidesætter filtrering:
 
-- **Tredjepartsfiltre**: Hvis dit domænes MX-post *ikke* peger på Office 365 (meddelelser distribueres først et andet sted), er [sikker som standard](secure-by-default.md) *ikke tilgængelig*. Hvis du vil tilføje beskyttelse, skal du aktivere Udvidet filtrering for forbindelser (også kendt som *oversigt over spring over*). Du kan få flere oplysninger under [Administrer mailflow ved hjælp af en cloudtjeneste fra tredjepart med Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud). Hvis du ikke vil have udvidet filtrering for forbindelser, skal du bruge regler for mailflow (også kaldet transportregler) til at omgå Microsoft-filtrering for meddelelser, der allerede er blevet evalueret af filtrering fra tredjepart. Du kan få flere oplysninger under [Brug regler for mailflow til at angive SCL'en i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+- **Tredjepartsfiltre**: Hvis dit domænes MX-post _ikke_ peger på Office 365 (meddelelser distribueres først et andet sted), er [sikker som standard](secure-by-default.md) _ikke tilgængelig_. Hvis du vil tilføje beskyttelse, skal du aktivere Udvidet filtrering for forbindelser (også kendt som _oversigt over spring over_). Du kan få flere oplysninger under [Administrer mailflow ved hjælp af en cloudtjeneste fra tredjepart med Exchange Online](/exchange/mail-flow-best-practices/manage-mail-flow-using-third-party-cloud). Hvis du ikke vil have udvidet filtrering for forbindelser, skal du bruge regler for mailflow (også kaldet transportregler) til at omgå Microsoft-filtrering for meddelelser, der allerede er blevet evalueret af filtrering fra tredjepart. Du kan få flere oplysninger under [Brug regler for mailflow til at angive SCL'en i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
 
-- **Falske positiver, der gennemses**: Det kan være en god idé midlertidigt at tillade, at visse meddelelser, der stadig analyseres af Microsoft, via [administratorindsendelser, rapporterer](admin-submission.md) kendte fungerende meddelelser, der fejlagtigt markeres som dårlige for Microsoft (falske positiver). Som med alle tilsidesættelser anbefaler vi **_på det kraftigste_** , at disse godtgørelser er midlertidige.
+- **Falske positiver, der gennemses**: Det kan være en god idé midlertidigt at tillade, at visse meddelelser, der stadig analyseres af Microsoft, via [administratorindsendelser, rapporterer](admin-submission.md) kendte fungerende meddelelser, der fejlagtigt markeres som dårlige for Microsoft (falske positiver). Som med alle tilsidesættelser anbefaler vi _**på det kraftigste**_ , at disse godtgørelser er midlertidige.
 
 ## <a name="security--compliance-powershell-procedures-for-secops-mailboxes-in-the-advanced-delivery-policy"></a>Sikkerhed & Overholdelse af PowerShell-procedurer for SecOps-postkasser i den avancerede leveringspolitik
 

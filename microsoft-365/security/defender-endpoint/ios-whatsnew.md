@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 3f05c819e5390504bca9c1f5aaa7f85d1e7edc2a
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: b94c52feb88703ac28f9cd72267d7fa8c952a741
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090470"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489963"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-ios"></a>Nyheder i Microsoft Defender for Endpoint på iOS
 
@@ -36,11 +36,11 @@ Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøvevers
 ## <a name="network-protection"></a>Netværksbeskyttelse
 Netværksbeskyttelse på Microsoft Defender for Endpoint er nu en offentlig prøveversion. Netværksbeskyttelse giver beskyttelse mod rogue Wi-Fi relaterede trusler, rogue hardware som pineapple enheder og underretter brugeren, hvis en relateret trussel opdages. Brugerne får også vist en guidet oplevelse, hvor de kan oprette forbindelse til sikre netværk og skifte netværk, når de har forbindelse til en usikker forbindelse.
 
-Den indeholder flere administratorkontrolelementer, der giver fleksibilitet, f.eks. muligheden for at konfigurere funktionen fra Microsoft Endpoint Manager Administration center. Administratorer kan også aktivere kontrolelementer til beskyttelse af personlige oplysninger for at konfigurere de data, der sendes af Defender for Endpoint fra iOS-enheder. Du kan få flere oplysninger ved at læse [Konfigurer netværksbeskyttelse]().
+Den indeholder flere administratorkontrolelementer, der giver fleksibilitet, f.eks. muligheden for at konfigurere funktionen fra Microsoft Endpoint Manager Administration center. Administratorer kan også aktivere kontrolelementer til beskyttelse af personlige oplysninger for at konfigurere de data, der sendes af Defender for Endpoint fra iOS-enheder. Du kan få flere oplysninger ved at læse [Konfigurer netværksbeskyttelse](/microsoft-365/security/defender-endpoint/ios-configure-features#configure-network-protection).
 
-Netværksbeskyttelse til iOS er allerede aktiveret for din lejer. Slutbrugere, der tester funktionen Netværksbeskyttelse, kan installere prøveversionen af appen via TestFlight. Gå til https://aka.ms/mdeiospp på iOS-enheden. Dette beder dig om at installere TestFlight-appen på din enhed eller åbne TestFlight, hvis den allerede er installeret. I TestFlight-appen skal du følge vejledningen på skærmen for at installere Microsoft Defender Endpoint. Kontrollér, at versionsnummeret for MDE er 1.1.29270104.
+Netværksbeskyttelse til iOS er allerede aktiveret for din lejer. Slutbrugere, der tester funktionen Netværksbeskyttelse, kan installere prøveversionen af appen via TestFlight. Gå til https://aka.ms/mdeiospp på iOS-enheden. Dette vil bede dig om at installere TestFlight-appen på din enhed eller åbne TestFlight, hvis den allerede er installeret. I appen TestFlight skal du følge vejledningen på skærmen for at installere Microsoft Defender Endpoint. Kontrollér, at versionsnummeret for MDE er 1.1.29270104.
 
-## <a name="integration-with-tunnel"></a>Integration med Tunnel
+## <a name="integration-with-tunnel"></a>Integration med tunnel
 Microsoft Defender for Endpoint på iOS kan nu integreres med Microsoft Tunnel, en VPN-gatewayløsning, der muliggør sikkerhed og forbindelse i en enkelt app.  Integration med Tunnel giver en enklere og sikker VPN-oplevelse på iOS med kun én app. Denne funktion var tidligere kun tilgængelig på Android. Du kan finde flere oplysninger [i techcommunity-indlægget her](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/what-s-new-in-microsoft-endpoint-manager-2204-april-edition/ba-p/3297995)
 
 ## <a name="improved-experience-on-supervised-ios-devices"></a>Forbedret oplevelse på overvågede iOS-enheder
@@ -49,15 +49,15 @@ Microsoft Defender for Endpoint på iOS har nu specialiseret sig i overvågede i
 
 ## <a name="microsoft-defender-for-endpoint-is-now-microsoft-defender-in-the-app-store"></a>Microsoft Defender for Endpoint er nu Microsoft Defender i App Store
 
-Microsoft Defender for Endpoint er nu tilgængelig som **Microsoft Defender** i appbutikken. Med denne opdatering er appen tilgængelig som prøveversion for **forbrugere i området USA**. Afhængigt af hvordan du logger på appen med din arbejdskonto eller personlige konto, har du adgang til funktioner til Microsoft Defender for Endpoint eller funktioner til Microsoft Defender for enkeltpersoner. Du kan få flere oplysninger på [denne blog](https://www.microsoft.com/en-us/microsoft-365/microsoft-defender-for-individuals).
+Microsoft Defender for Endpoint er nu tilgængelig som **Microsoft Defender** i appbutikken. Med denne opdatering er appen tilgængelig som prøveversion for **forbrugere i området USA**. Afhængigt af hvordan du logger på appen med din arbejdskonto eller personlige konto, har du adgang til funktioner til Microsoft Defender for Endpoint eller funktioner til Microsoft Defender for enkeltpersoner. Du kan få flere oplysninger på [denne blog](https://www.microsoft.com/microsoft-365/microsoft-defender-for-individuals).
 
 ## <a name="threat-and-vulnerability-management"></a>Trussels- og sårbarhedsstyring
 
 Den 25. januar 2022 annoncerede vi den generelle tilgængelighed af trussels- og sårbarhedsstyring på Android og iOS. Du kan finde flere oplysninger [i techcommunity-indlægget her](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-general-availability-of-vulnerability-management/ba-p/3071663).
 
 ## <a name="1128250101"></a>1.1.28250101
-- **Integration med Tunnel** – Microsoft Defender for Endpoint på iOS kan nu integreres med Microsoft Tunnel, en VPN-gatewayløsning, der muliggør sikkerhed og forbindelse i en enkelt app. Du kan få flere oplysninger [under Microsoft Tunnel Oversigt](/mem/intune/protect/microsoft-tunnel-overview).
-- **Onboard zero-touch for tilmeldte iOS-enheder**, der er tilmeldt via Microsoft Endpoint Manager (Intune), er offentligt tilgængelig. Du kan få flere oplysninger under [Onboarding af Microsoft Defender for Endpoint uden berøring](/microsoft-365/security/defender-endpoint/ios-install#zero-touch-onboarding-of-microsoft-defender-for-endpoint).
+- **Integration med Tunnel** – Microsoft Defender for Endpoint på iOS kan nu integreres med Microsoft Tunnel, en VPN-gatewayløsning, der muliggør sikkerhed og forbindelse i en enkelt app. Du kan få flere oplysninger under [Oversigt over Microsoft-tunnel](/mem/intune/protect/microsoft-tunnel-overview).
+- **Zero-touch onboard for tilmeldte iOS-enheder**, der er tilmeldt via Microsoft Endpoint Manager (Intune), er offentligt tilgængelig. Du kan få flere oplysninger under [Onboarding af Microsoft Defender for Endpoint uden berøring](/microsoft-365/security/defender-endpoint/ios-install#zero-touch-onboarding-of-microsoft-defender-for-endpoint).
 - Fejlrettelser.
 
 
@@ -79,7 +79,7 @@ Den 25. januar 2022 annoncerede vi den generelle tilgængelighed af trussels- og
 
 ## <a name="1120240103"></a>1.1.20240103
 - Kortet Device Health – Enhedens tilstandskort giver slutbrugerne besked om eventuelle ventende softwareopdateringer.
-- Forbedringer af anvendelighed – Slutbrugere kan nu deaktivere Defender for Endpoint VPN fra selve Microsoft Defender-appen. Før denne opdatering skulle slutbrugerne kun deaktivere VPN fra Indstillinger-appen.
+- Forbedringer af anvendelighed – Slutbrugere kan nu deaktivere Defender for Endpoint VPN fra selve Microsoft Defender-appen. Før denne opdatering skulle slutbrugerne kun deaktivere VPN fra appen Indstillinger.
 - Fejlrettelser.
 
 ## <a name="1120020101"></a>1.1.20020101
@@ -95,12 +95,12 @@ Den 25. januar 2022 annoncerede vi den generelle tilgængelighed af trussels- og
 ## <a name="1115140101"></a>1.1.15140101
 
 - **Jailbreak Detection** fås som prøveversion. Du kan få flere oplysninger under [Konfiguration af politik for betinget adgang baseret på enhedsrisikosignaler](ios-configure-features.md#conditional-access-with-defender-for-endpoint-on-ios).
-- **Automatisk konfiguration af VPN-profil** er en prøveversion for tilmeldte enheder via Microsoft Endpoint Manager (Intune). Du kan få flere oplysninger under [Automatisk konfiguration af VPN-profil for tilmeldte iOS-enheder](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding).
+- **Automatisk konfiguration af VPN-profilen** fås som prøveversion for tilmeldte enheder via Microsoft Endpoint Manager (Intune). Du kan få flere oplysninger under [Automatisk konfiguration af VPN-profil for tilmeldte iOS-enheder](ios-install.md#auto-onboarding-of-vpn-profile-simplified-onboarding).
 - Microsoft Defender ATP-produktnavnet er nu blevet opdateret til Microsoft Defender for Endpoint i appbutikken.
 - Forbedret logonoplevelse.
 - Fejlrettelser.
 
 ## <a name="1115010101"></a>1.1.15010101
 
-- Med denne version annoncerer vi understøttelse af iPadOS/iPad enheder.
+- Med denne version annoncerer vi understøttelse af iPadOS-/iPad-enheder.
 - Fejlrettelser.

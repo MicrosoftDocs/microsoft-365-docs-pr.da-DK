@@ -1,13 +1,12 @@
 ---
 title: Konfigurer Microsoft 365 Business Premium
-description: Se, hvordan du konfigurerer Microsoft 365 Business Premium
+description: Sådan konfigurerer du Microsoft 365 Business Premium eller arbejder med en løsningsudbyder for at gøre det.
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
 manager: dansimp
 audience: Admin
 ms.topic: overview
-ms.date: 06/03/2022
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.reviewer: shlomiakirav
@@ -15,12 +14,12 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 4aa9218406d261e39df075ad855ceda5bd755b70
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: ad188065f7f007029fccb94d8a5466ba9ec00f3e
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65892467"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486857"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 
@@ -36,7 +35,7 @@ Sørg for, at du opfylder følgende krav, før du starter konfigurationsprocesse
 | Krav | Beskrivelse |
 |:---|:---|
 | Abonnement | Microsoft 365 Business Premium eller Microsoft 365 til kampagner <br/><br/> Hvis du vil starte en prøveversion eller købe dit abonnement, skal du se følgende artikler: <br/>- [Hent Microsoft 365 Business Premium](get-microsoft-365-business-premium.md)<br/>- [Hent Microsoft 365 til kampagner](get-microsoft-365-campaigns.md) |
-| Tilladelser  | Hvis du vil fuldføre den indledende konfigurationsproces, skal du være global administrator. [Få mere at vide om administratorroller](../admin/add-users/about-admin-roles.md). |
+| Tilladelser  | Hvis du vil fuldføre den indledende konfigurationsproces, skal du være global Administration. [Få mere at vide om administratorroller](../admin/add-users/about-admin-roles.md). |
 | Krav til browser | Microsoft Edge, Safari, Chrome eller Firefox. [Få mere at vide om krav til browser](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources#coreui-heading-uyetipy).  |
 | Operativsystem | **Windows**: Windows 11, Windows 10, Windows 8.1, Windows Server 2019 eller nyere eller Windows Server 2016<br/><br/>**macOS**: En af de tre nyeste versioner af macOS |
 
@@ -45,7 +44,7 @@ Sørg for, at du opfylder følgende krav, før du starter konfigurationsprocesse
 
 ## <a name="guided-setup-process"></a>Automatiseret konfigurationsproces
 
-Microsoft 365 Business Premium indeholder en guidet proces. I følgende video vises den guidede konfigurationsproces for Microsoft 365 Business Standard, som også gælder for Microsoft 365 Business Premium.<br/><br/>
+Microsoft 365 Business Premium omfatter en guidet proces. Følgende video viser den guidede konfigurationsproces for Microsoft 365 Business Standard, som også gælder for Microsoft 365 Business Premium.<br/><br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ]
 

@@ -8,7 +8,7 @@ ms.sitesec: library
 ms.pagetype: security
 ms.localizationpriority: high
 audience: ITPro
-ms.topic: article
+ms.topic: reference
 author: denisebmsft
 ms.author: deniseb
 ms.custom: nextgen
@@ -18,12 +18,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: bcba0da734c4f5b1945a506d77a88355215efada
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: c1354d69ea1b645ee419ce7635c49e65a0557f26
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65923297"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487857"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Opdateringer til Microsoft Defender Antivirus, og anvend grundlinjer
 
@@ -50,7 +50,7 @@ Det er vigtigt at holde Microsoft Defender Antivirus opdateret for at sikre, at 
 Microsoft Defender Antivirus bruger [skybaseret beskyttelse](cloud-protection-microsoft-defender-antivirus.md) (også kaldet Microsoft Advanced Protection Service eller MAPS) og downloader jævnligt dynamiske opdateringer til sikkerhedsintelligens for at yde yderligere beskyttelse. Disse dynamiske opdateringer træder ikke i stedet for regelmæssige opdateringer af sikkerhedsintelligens via KB2267602.
 
 > [!NOTE]
-> Opdateringer udgives under følgende KB:
+> Opdateringer udgives under følgende nøgletal:
 > - Microsoft Defender Antivirus: KB2267602
 > - System Center Endpoint Protection: KB2461484
 
@@ -77,11 +77,11 @@ Du kan få flere oplysninger under [Administrer kilderne til opdateringer til Mi
 > - Denne artikel indeholder en liste over ændringer, der er inkluderet i den brede udgivelseskanal. [Se den seneste brede kanalversion her](https://www.microsoft.com/security/encyclopedia/adlpackages.aspx?action=info).
 > - Hvis du vil vide mere om processen for gradvis udrulning og se flere oplysninger om den næste version, skal du se [Administrer den gradvise udrulningsproces for Microsoft Defender-opdateringer](manage-gradual-rollout.md).
 > - Hvis du vil vide mere om opdateringer til sikkerhedsintelligens, skal du se [Opdateringer til sikkerhedsintelligens til Microsoft Defender Antivirus og anden Microsoft antimalware](https://www.microsoft.com/en-us/wdsi/defenderupdates).
-> - Hvis du leder efter en liste over Microsoft **[Defender-processer, skal du downloade projektmappen med mde-URL-adresser](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)** og derefter vælge regnearket **Microsoft Defender-processer** . Projektmappen med mde-URL-adresser viser også de tjenester og deres tilknyttede URL-adresser, som dit netværk skal kunne oprette forbindelse til, som beskrevet i [Aktivér adgang til URL-adresser til Microsoft Defender for Endpoint-tjenesten på proxyserveren](configure-proxy-internet.md).
+> - Hvis du leder efter en liste over Microsoft **[Defender-processer, skal du downloade projektmappen med mde-URL-adresser](https://download.microsoft.com/download/6/b/f/6bfff670-47c3-4e45-b01b-64a2610eaefa/mde-urls-commercial.xlsx)** og derefter vælge regnearket **Microsoft Defender-processer** . Projektmappen med mde-URL-adresser viser også de tjenester og deres tilknyttede URL-adresser, som dit netværk skal kunne oprette forbindelse til, som beskrevet i [Aktivér adgang til Microsoft Defender for Endpoint tjeneste-URL-adresser på proxyserveren](configure-proxy-internet.md).
 
 ## <a name="monthly-platform-and-engine-versions"></a>Månedlige platform- og programversioner
 
-Du kan få flere oplysninger om, hvordan du opdaterer eller installerer platformopdateringen, under [Opdater til Windows Defender-platformen til antimalware](https://support.microsoft.com/help/4052623/update-for-windows-defender-antimalware-platform).
+Du kan få oplysninger om, hvordan du opdaterer eller installerer platformsopdateringen, under [Opdatering til Windows Defender antimalwareplatform](https://support.microsoft.com/help/4052623/update-for-windows-defender-antimalware-platform).
 
 Alle vores opdateringer indeholder
 
@@ -90,6 +90,33 @@ Alle vores opdateringer indeholder
 - Forbedringer af integration (Cloud, [Microsoft 365 Defender](/microsoft-365/security/defender/microsoft-365-defender))
 <br/><br/>
 <details>
+<summary>Maj-2022 (platform: 4.18.2205.7 | Motor: 1.1.19300.2)</summary>
+
+&ensp;Version af sikkerhedsintelligensopdatering: **1.369.88.0**<br/>
+&ensp;Udgivet: **22. juni 2022**<br/>
+&ensp;Platform: **4.18.2205.7**<br/>
+&ensp;Motor: **1.1.19300.2**<br/>
+&ensp;Supportfase: **Sikkerhed og kritisk Opdateringer**<br/>
+
+Programversion: 1.1.19300.2<br/>
+Version af sikkerhedsintelligensopdatering: 1.369.88.0<br/>
+
+### <a name="whats-new"></a>Nyheder
+
+- Tilføjet rettelse til ETW-kanalkonfiguration for opdateringer 
+- Tilføjet understøttelse af kontekstafhængige udelukkelser, der tillader mere specifik målretning mod udelukkelse 
+- Maksimumstørrelse for fast kontekst
+- Tilføjet rettelse til [ASR LSASS-registrering](attack-surface-reduction-rules-reference.md)
+- Tilføjet rettelse til SHSetKnownFolder for regeludeladelseslogik
+- Tilføjede grænser for AMSI-diskforbrug for oversigtslageret
+- Tilføjet rettelse til Defender-tjenesten, der nægter at acceptere signaturopdateringer
+
+### <a name="known-issues"></a>Kendte problemer
+
+Ingen kendte problemer
+
+<br/><br/>
+</details><details>
 <summary>Marts-2022-OPDATERING (platform: 4.18.2203.5 | Motor: 1.1.19200.5)</summary>
 
 *Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering.*
@@ -98,7 +125,7 @@ Alle vores opdateringer indeholder
 &ensp;Udgivet: **22. april 2022**<br/>
 &ensp;Platform: **4.18.2203.5**<br/>
 &ensp;Motor: **1.1.19200.5**<br/>
-&ensp;Supportfase: **Sikkerhedsopdateringer og vigtige opdateringer**<br/>
+&ensp;Supportfase: **Sikkerhed og kritisk Opdateringer**<br/>
 
 Programversion: 1.1.19200.5 <br/>
 Version af sikkerhedsintelligensopdatering: 1.363.817.0<br/>
@@ -119,7 +146,7 @@ Ingen kendte problemer
 &ensp;Udgivet: **7. april 2022**<br/>
 &ensp;Platform: **4.18.2203.5**<br/>
 &ensp;Motor: **1.1.19100.5**<br/>
-&ensp;Supportfase: **Sikkerhedsopdateringer og vigtige opdateringer**<br/>
+&ensp;Supportfase: **Sikkerhed og kritisk Opdateringer**<br/>
 
 Programversion: 1.1.19100.5 <br/>
 Version af sikkerhedsintelligensopdatering: 1.361.1449.0<br/>
@@ -134,7 +161,7 @@ Version af sikkerhedsintelligensopdatering: 1.361.1449.0<br/>
 
 ### <a name="known-issues"></a>Kendte problemer
 
-Ingen kendte problemer
+- Mulighed for høj ressourceudnyttelse (CPU og/eller hukommelse). Se opdateringen Platform 4.18.2203.5 og Engine 1.1.19200.5 for marts 2022.
 
 <br/><br/>
 </details><details>
@@ -144,7 +171,7 @@ Ingen kendte problemer
 &ensp;Udgivet: **14. marts 2022**<br/>
 &ensp;Platform: **4.18.2202.4**<br/>
 &ensp;Motor: **1.1.19000.8**<br/>
-&ensp;Supportfase: **Sikkerhedsopdateringer og vigtige opdateringer**<br/>
+&ensp;Supportfase: **Sikkerhed og kritisk Opdateringer**<br/>
 
 Programversion: 1.1.19000.8 <br/>
 Version af sikkerhedsintelligensopdatering: 1.361.14.0 <br/>
@@ -154,40 +181,12 @@ Version af sikkerhedsintelligensopdatering: 1.361.14.0 <br/>
 - Forbedringer af registrerings- og funktionsovervågningslogik
 - Faste registreringer af falsk positiv udløsende angrebsoverfladereduktion
 - Tilføjet rettelse, der resulterer i bedre pålidelighed af EDR- og Advanced Hunting Detection-beskeder
-- Defender understøtter ikke længere brugerdefinerede meddelelser på toast-pop op-meddelelser. Ændret GPO/Intune/SCCM og dokumenter for at afspejle denne ændring.
-- Forbedringer til hentning af både oplysninger og kopiering af filer, der er skrevet til et flytbart lager. Du kan få mere at vide under [Microsoft Defender for Endpoint Device Control Removable Storage Access Control, flytbare lagermedier](device-control-removable-storage-access-control.md).
+- Defender understøtter ikke længere brugerdefinerede meddelelser på toast-pop op-meddelelser. Ændret gruppepolitikobjekt/Intune/SCCM og dokumenter for at afspejle denne ændring.
+- Forbedringer til hentning af både oplysninger og kopiering af filer, der er skrevet til et flytbart lager. Du kan få mere at vide [under Microsoft Defender for Endpoint Flytbare lagermedier til enhedsstyring Access Control flytbare lagermedier](device-control-removable-storage-access-control.md).
 - Forbedret trafikoutput, når SmartScreen-tjenesten ikke er tilgængelig 
 - Forbedringer af forbindelsen for kunder, der bruger proxyer med godkendelseskrav
 - Fast fejl ved opdatering af VDI-enhed for netværksfilshares 
 - EDR i bloktilstand understøtter nu detaljeret enhedsmålretning med nye CSP'er. Se [EDR (Endpoint Detection and Response) i bloktilstand](edr-in-block-mode.md).
-
-### <a name="known-issues"></a>Kendte problemer
-
-Ingen kendte problemer
-
-<br/><br/>
-</details><details>
-<summary>Januar-2022 (platform: 4.18.2201.10 | Motor: 1.1.18900.2)</summary>
-
-&ensp;Version af sikkerhedsintelligensopdatering: **1.357.8.0**<br/>
-&ensp;Udgivet: **9. februar 2022**<br/>
-&ensp;Platform: **4.18.2201.10**<br/>
-&ensp;Motor: **1.1.18900.2**<br/>
-&ensp;Supportfase: **Sikkerhedsopdateringer og vigtige opdateringer**<br/>
-
-Programversion: 1.1.18900.2 <br/>
-Version af sikkerhedsintelligensopdatering: 1.357.8.0 <br/>
-
-### <a name="whats-new"></a>Nyheder
-
-- Forbedringer af adfærdsovervågning i filtreringsydeevnen
-- Hærdning til TrustedInstaller
-- Forbedringer af beskyttelse mod ændring
-- Erstattet `ScanScheduleTime` med ny `ScanScheduleOffest` cmdlet i [Set-MpPreference](/powershell/module/defender/set-mppreference). Denne politik konfigurerer antallet af minutter efter midnat for at udføre en planlagt scanning.
-- Indstillingen er `-ServiceHealthReportInterval` føjet til [Set-MpPreference](/powershell/module/defender/set-mppreference). Denne politik konfigurerer tidsintervallet (i minutter) til at udføre en planlagt scanning.
-- Indstillingen er `AllowSwitchToAsyncInspection` føjet til [Set-MpPreference](/powershell/module/defender/set-mppreference). Denne politik muliggør en optimering af ydeevnen, der tillader synkront inspicerede netværksflows, at skifte til asynkron inspektion, når de er blevet kontrolleret og valideret.
-- Opdateringer til Effektivitetsanalyse v2: Understøttelse af Remote PowerShell og PowerShell 7.x er tilføjet. Se [Effektivitetsanalyse til Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
-- Løste en potentiel fejl i dubletter af pakker i netværkskontrolsystemdriveren til Microsoft Defender Antivirus.
 
 ### <a name="known-issues"></a>Kendte problemer
 
@@ -202,6 +201,34 @@ Ingen kendte problemer
 Når en ny pakkeversion er udgivet, reduceres understøttelsen af de to tidligere versioner til kun teknisk support. Versioner, der er ældre end dem, der er angivet i dette afsnit, og som kun er beregnet til teknisk opgraderingssupport.<br/><br/>
 
 <details>
+<summary>Januar-2022 (platform: 4.18.2201.10 | Motor: 1.1.18900.2)</summary>
+
+&ensp;Version af sikkerhedsintelligensopdatering: **1.357.8.0**<br/>
+&ensp;Udgivet: **9. februar 2022**<br/>
+&ensp;Platform: **4.18.2201.10**<br/>
+&ensp;Motor: **1.1.18900.2**<br/>
+&ensp;Supportfase: **Teknisk opgraderingssupport (kun)**<br/>
+
+Programversion: 1.1.18900.2 <br/>
+Version af sikkerhedsintelligensopdatering: 1.357.8.0 <br/>
+
+### <a name="whats-new"></a>Nyheder
+
+- Forbedringer af adfærdsovervågning i filtreringsydeevnen
+- Hærdning til TrustedInstaller
+- Forbedringer af beskyttelse mod ændring
+- Erstattet `ScanScheduleTime` med ny `ScanScheduleOffest` cmdlet i [Set-MpPreference](/powershell/module/defender/set-mppreference). Denne politik konfigurerer antallet af minutter efter midnat for at udføre en planlagt scanning.
+- Indstillingen er `-ServiceHealthReportInterval` føjet til [Set-MpPreference](/powershell/module/defender/set-mppreference). Denne politik konfigurerer tidsintervallet (i minutter) til at udføre en planlagt scanning.
+- Indstillingen er `AllowSwitchToAsyncInspection` føjet til [Set-MpPreference](/powershell/module/defender/set-mppreference). Denne politik muliggør en optimering af ydeevnen, der tillader synkront inspicerede netværksflows, at skifte til asynkron inspektion, når de er blevet kontrolleret og valideret.
+- Effektivitetsanalyse v2-opdateringer: Understøttelse af Remote PowerShell og PowerShell 7.x er tilføjet. Se [Effektivitetsanalyse til Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
+- Løste en potentiel fejl i dubletter af pakker i netværkskontrolsystemdriveren til Microsoft Defender Antivirus.
+
+### <a name="known-issues"></a>Kendte problemer
+
+Ingen kendte problemer
+
+<br/><br/>
+</details><details>
 <summary>November-2021 (platform: 4.18.2111.5 | Motor: 1.1.18800.4)</summary>
 
 &ensp;Version af sikkerhedsintelligensopdatering: **1.355.2.0**<br/>
@@ -215,9 +242,9 @@ Programversion: 1.1.18800.4 Opdateringsversion af sikkerhedsintelligens: 1.355.2
 ### <a name="whats-new"></a>Nyheder
 
 - Forbedret cpu-forbrugseffektivitet i visse intensive scenarier på Exchange-servere
-- Der er tilføjet nye statusfelter for enhedskontrol under Get-MpComputerStatus i Defender PowerShell-modulet. Du kan finde flere oplysninger under [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](device-control-removable-storage-access-control.md).
+- Der er tilføjet nye statusfelter for enhedskontrol under Get-MpComputerStatus i Defender PowerShell-modulet. Du kan få flere oplysninger [under Microsoft Defender for Endpoint Flytbare lagermedier til enhedshåndtering Access Control](device-control-removable-storage-access-control.md).
 - Løste fejl, hvor `SharedSignatureRoot` værdien ikke kunne fjernes, når den er angivet med PowerShell
-- Fast fejl, hvor [manipulationsbeskyttelse](prevent-changes-to-security-settings-with-tamper-protection.md) ikke kunne aktiveres, selvom Microsoft Defender for Endpoint angav, at manipulationsbeskyttelse var slået til
+- Fast fejl, hvor [manipulationsbeskyttelse](prevent-changes-to-security-settings-with-tamper-protection.md) ikke blev aktiveret, selvom Microsoft Defender for Endpoint indikerede, at manipulationsbeskyttelse var slået til
 - Tilføjet understøttelse og fejlrettelser til effektivitetsanalyse for Microsoft Defender Antivirus-værktøjet. Du kan få flere oplysninger under [Effektivitetsanalyse til Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).   
    - PowerShell ISE-understøttelse tilføjet til `New-MpPerformanceRecording`
    - Løste fejlfejl for `Get-MpPerformanceReport -TopFilesPerProcess`
@@ -298,7 +325,7 @@ Ingen kendte problemer
 ### <a name="whats-new"></a>Nyheder
 - Understøttelse af enhedskontrol tilføjet for Bærbare Windows-enheder
 - Beskyttelse af potentielt uønskede programmer (PUA) er som standard slået til for forbrugere (se [Bloker potentielt uønskede programmer med Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus)).
-- Planlagte scanninger for administrerede systemer for gruppepolitikobjekter overholder den brugerkonfigurerede scanningstid
+- Planlagte scanninger for Gruppepolitik objektadministrerede systemer overholder den brugerkonfigurerede scanningstid
 - Forbedringer af funktionsovervågningsprogrammet
 
 ### <a name="known-issues"></a>Kendte problemer
@@ -459,7 +486,7 @@ Ingen kendte problemer
 
 ### <a name="whats-new"></a>Nyheder
 
-- Der kræves administratortilladelser for at gendanne filer i karantæne
+- Administration tilladelser er påkrævet for at gendanne filer i karantæne
 - XML-formaterede hændelser understøttes nu
 - Understøttelse af CSP til at ignorere udeladelsesfletninger
 - Nye administrationsgrænseflader til:
@@ -648,7 +675,7 @@ Motor: **1.1.16700.2**<br/>
 
 ### <a name="known-issues"></a>Kendte problemer
 
-[**Fast**] enheder, der bruger [moderne standbytilstand](/windows-hardware/design/device-experiences/modern-standby) , kan opleve et stop med Windows Defender-filterdriveren, der resulterer i et hul i beskyttelsen.  Berørte maskiner ser ud til, at kunden ikke har opdateret til den nyeste antimalwareplatform.
+[**Faste**] enheder, der bruger [moderne standbytilstand](/windows-hardware/design/device-experiences/modern-standby), kan opleve et stop sammen med den Windows Defender filterdriver, der resulterer i et hul i beskyttelsen.  Berørte maskiner ser ud til, at kunden ikke har opdateret til den nyeste antimalwareplatform.
 <br/>
 > [!IMPORTANT]
 > Denne opdatering er:
@@ -686,22 +713,22 @@ Når denne opdatering er installeret, skal enheden bruge jumppakken 4.18.2001.10
 
 Platform- og programopdateringer leveres på en månedlig kadence. Hvis du vil have fuld support, skal du holde dig opdateret med de nyeste platformopdateringer. Vores supportstruktur er dynamisk og udvikler sig til to faser afhængigt af tilgængeligheden af den nyeste platformversion:
 
-- **Servicefase for vigtige opdateringer og sikkerhedsopdateringer** – Når du kører den nyeste platformversion, er du berettiget til at modtage både sikkerhedsopdateringer og vigtige opdateringer til platformen til antimalware.
+- **Sikkerheds- og kritisk Opdateringer servicefase** – Når du kører den nyeste platformversion, er du berettiget til at modtage både sikkerhedsopdateringer og vigtige opdateringer til platformen til antimalware.
 
 - **Fasen Teknisk support (kun)** – Når en ny platformversion udgives, reduceres understøttelsen af ældre versioner (N-2) til kun teknisk support. Platformversioner, der er ældre end N-2, understøttes ikke længere.*
 
-\* Der ydes fortsat teknisk support til opgraderinger fra versionen af Windows 10 (se [Platformversion, der følger med Windows 10-udgivelser](#platform-version-included-with-windows-10-releases)) til den nyeste platformversion.
+\*Der ydes fortsat teknisk support til opgraderinger fra Windows 10 version (se [Platformversion, der følger med Windows 10 versioner](#platform-version-included-with-windows-10-releases)) til den nyeste platformversion.
 
 Under fasen med teknisk support (kun) leveres kommercielt rimelige supporthændelser via Microsoft Customer Service & Support og Microsofts administrerede supporttilbud (f.eks. Premier Support). Hvis en supporthændelse kræver eskalering til udvikling for yderligere vejledning, kræver en ikke-sikkerhedsrelateret opdatering eller kræver en sikkerhedsopdatering, bliver kunderne bedt om at opgradere til den nyeste platformversion eller en mellemliggende opdatering (*).
 
 > [!NOTE]
 > Hvis du installerer Microsoft Defender Antivirus Platform Update manuelt, eller hvis du bruger et script eller et ikke-Microsoft-administrationsprodukt til at installere Microsoft Defender Antivirus Platform Update, skal du sørge for, at versionen `4.18.2001.10` er installeret fra [kataloget til Microsoft Update](https://www.catalog.update.microsoft.com/Search.aspx?q=4.18.2001.10) , før den nyeste version af Platform Update (N-2) installeres.
 
-### <a name="platform-version-included-with-windows-10-releases"></a>Platformversion, der er inkluderet i Windows 10-udgivelser
+### <a name="platform-version-included-with-windows-10-releases"></a>Platformversion, der er inkluderet i Windows 10 udgivelser
 
-Nedenstående tabel indeholder microsoft Defender Antivirus-platform- og programversioner, der leveres sammen med de nyeste Windows 10-versioner:<br/><br/>
+Nedenstående tabel indeholder microsoft Defender Antivirus-platform- og programversioner, der leveres med de nyeste Windows 10 versioner:<br/><br/>
 
-|Windows 10-version  |Platformversion  |Programversion |Supportfase |
+|Windows 10 version  |Platformversion  |Programversion |Supportfase |
 |:---|:---|:---|:---|
 |2004 (20H1/20H2) |4.18.1909.6 |1.1.17000.2 | Teknisk opgraderingssupport (kun) |
 |1909 (19H2) |4.18.1902.5 |1.1.16700.3 | Teknisk opgraderingssupport (kun) |
@@ -712,11 +739,11 @@ Nedenstående tabel indeholder microsoft Defender Antivirus-platform- og program
 |1703 (RS2) |4.11.15603.2 |1.1.13504.0 | Teknisk opgraderingssupport (kun) |
 |1607 (RS1) |4.10.14393.3683 |1.1.12805.0 | Teknisk opgraderingssupport (kun) |
 
-Du kan få oplysninger om udgivelse af Windows 10 i [faktaarket for Windows-livscyklus](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+Du kan få Windows 10 udgivelsesoplysninger i [faktaarket for Windows-livscyklus](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 ## <a name="updates-for-deployment-image-servicing-and-management-dism"></a>Opdateringer til DISM (Deployment Image Servicing and Management)
 
-Vi anbefaler, at du opdaterer dine windows 10 -(Enterprise-, Pro- og Home-udgaver), Windows Server 2019, Windows Server 2022 og Windows Server 2016 OS-installationsafbildninger med de nyeste antivirus- og antimalwareopdateringer. Hvis du holder afbildningerne af operativsystemet opdateret, undgår du et hul i beskyttelsen.
+Vi anbefaler, at du opdaterer dine Windows 10 (Enterprise-, Pro- og Home-udgaver), Windows Server 2019, Windows Server 2022 og Windows Server 2016 OS-installationsafbildninger med de nyeste antivirus- og antimalwareopdateringer. Hvis du holder afbildningerne af operativsystemet opdateret, undgår du et hul i beskyttelsen.
 
 Du kan få flere oplysninger under [afbildninger af microsoft Defender-opdatering til Windows-operativsystemet](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
@@ -1030,7 +1057,7 @@ Du kan få flere oplysninger under [afbildninger af microsoft Defender-opdaterin
 - Ingen
 
 ### <a name="additional-information"></a>Flere oplysninger:
-- Tilføjet understøttelse af Windows 10 RS1 eller nyere operativsysteminstallationsafbildninger.
+- Tilføjede understøttelse af Windows 10 RS1- eller nyere operativsysteminstallationsafbildninger.
 <br/>
 </details>
 
@@ -1044,7 +1071,7 @@ Du kan få flere oplysninger under [afbildninger af microsoft Defender-opdaterin
 |[Administrer opdateringer for slutpunkter, der er forældede](manage-outdated-endpoints-microsoft-defender-antivirus.md) | Hvis et slutpunkt går glip af en opdatering eller planlagt scanning, kan du gennemtvinge en opdatering eller scanning, næste gang en bruger logger på. |
 |[Administrer begivenhedsbaserede gennemtvungne opdateringer](manage-event-based-updates-microsoft-defender-antivirus.md) | Du kan angive, at beskyttelsesopdateringer skal downloades ved start eller efter visse skybaserede beskyttelseshændelser. |
 |[Administrer opdateringer til mobilenheder og virtuelle maskiner (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)| Du kan angive indstillinger, f.eks. om opdateringer skal forekomme på batteristrøm, som især er nyttige til mobilenheder og virtuelle maskiner. |
-| [Microsoft Defender for Endpoint-opdatering til EDR-sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | Du kan opdatere den EDR-sensor (MsSense.exe), der er inkluderet i den nye Microsoft Defender for Endpoint Unified-løsningspakke, der blev udgivet i 2021.   |
+| [Microsoft Defender for Endpoint opdatering til EDR-sensor](https://support.microsoft.com/topic/microsoft-defender-for-endpoint-update-for-edr-sensor-f8f69773-f17f-420f-91f4-a8e5167284ac) | Du kan opdatere den EDR-sensor (MsSense.exe), der er inkluderet i den nye Microsoft Defender for Endpoint samlede løsningspakke, der blev udgivet i 2021.   |
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:

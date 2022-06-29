@@ -21,16 +21,16 @@ ms.custom:
 - AdminTemplateSet
 description: Få mere at vide om, hvordan du køber og administrerer tilføjelsesprogrammer til dit abonnement på Microsoft 365 til virksomheder.
 ms.date: 04/02/2021
-ms.openlocfilehash: 28c155eaa10a578d10126c563945859e6931f180
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 4fbb4cc9277c4f4a6ddc3c780388d0ebd8d492ad
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101636"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492076"
 ---
-# <a name="buy-or-manage-add-ons"></a>Køb eller administrer tilføjelsesprogrammer
+# <a name="buy-or-manage-add-ons-for-microsoft-365-business-plans"></a>Køb eller administrer tilføjelsesprogrammer til Microsoft 365-forretningsplaner
 
-Mange Microsoft 365 til virksomheder har tilføjelsesprogrammer, som du kan købe til dine abonnementer. Tilføjelsesprogrammer indeholder flere funktioner, der forbedrer din abonnementsoplevelse.
+Mange Microsoft 365 til virksomheder-planer har tilføjelsesprogrammer, som du kan købe til dine abonnementer. Tilføjelsesprogrammer indeholder flere funktioner, der forbedrer din abonnementsoplevelse.
 
 Der er to typer tilføjelsesprogrammer:
 
@@ -45,7 +45,7 @@ Du skal være global administrator eller faktureringsadministrator for at udfør
 
 Brug følgende trin til at finde og købe tilføjelsesprogrammer. Listen indeholder kun tilføjelsesprogrammer, der er tilgængelige for dig. Denne liste er baseret på dine aktive abonnementer og eventuelle andre eksisterende tilføjelsesprogrammer, du allerede har. Hvis et tilføjelsesprogram ikke er på listen, er det ikke muligt at købe det.
 
-Du kan få oplysninger om Skype for Business tilføjelsesprogrammer under [licenser til Skype for Business og Microsoft Teams tilføjelsesprogrammer](/SkypeForBusiness/skype-for-business-and-microsoft-teams-add-on-licensing/skype-for-business-and-microsoft-teams-add-on-licensing).
+Du kan få oplysninger om Skype for Business tilføjelsesprogrammer under [licenser til Skype for Business og Microsoft Teams-tilføjelsesprogrammer](/SkypeForBusiness/skype-for-business-and-microsoft-teams-add-on-licensing/skype-for-business-and-microsoft-teams-add-on-licensing).
 
 1. I Administration skal du gå til siden **Fakturering** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=868433" target="_blank">Køb tjenester</a> .
 2. Nederst på siden **Køb tjenester** i afsnittet **Tilføjelsesprogrammer** skal du finde det tilføjelsesprogram, du vil købe, og vælge **Detaljer**.

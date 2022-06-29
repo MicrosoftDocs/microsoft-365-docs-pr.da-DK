@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 MS.technology: mde
 ms.custom: api
-ms.openlocfilehash: a9e46b428500b41b143585434f7a16c13227db1c
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: ebfcfe21070656d71c50429cd4653d0e14f7724d
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669754"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493213"
 ---
 # <a name="offboard-machine-api"></a>Api til offlinecomputer
 
@@ -98,7 +98,7 @@ Hvis det lykkes, returnerer denne metode 200 – Oprettet svarkode og [Computerh
 
 ### <a name="request"></a>Anmodning
 
-Her er et eksempel på anmodningen.
+Her er et eksempel på anmodningen. Hvis der ikke er tilføjet en JSON-kommentar, opstår der en fejl med kode **400**.
 
 ```http
 POST https://api.securitycenter.microsoft.com/api/machines/1e5bc9d7e413ddd7902c2932e418702b84d0cc07/offboard

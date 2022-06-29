@@ -15,19 +15,19 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 75fa8c4e3dff9ed05716389ec5bed1d5331eefba
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: c743b54e27bc9caa60bb6b4e24191d626ece6fcf
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65419028"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490503"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-android-with-microsoft-intune"></a>Installér Microsoft Defender for Endpoint på Android med Microsoft Intune
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -40,7 +40,7 @@ Få mere at vide om, hvordan du installerer Defender for Endpoint på Android p�
 >
 > Du kan oprette forbindelse til Google Play fra Intune for at installere Defender for Endpoint-appen på tværs af enhedsadministrator- og Android Enterprise-tilmeldingstilstande.
 >
-> Opdateringer til appen opdateres automatisk via Google Play.
+> Opdateringer til appen automatisk via Google Play.
 
 ## <a name="deploy-on-device-administrator-enrolled-devices"></a>Installér på de enheder, der er tilmeldt af enhedsadministratoren
 
@@ -50,7 +50,7 @@ Få mere at vide om, hvordan du installerer Defender for Endpoint på Android p�
 
 1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Apps** \> **Android-apps** \> **Tilføj \> Android Store-app** og vælge **Vælg**.
 
-   :::image type="content" source="images/mda-addandroidstoreapp.png" alt-text="Ruden Tilføj Android Store-program på Microsoft Endpoint Manager Administrationsportal"  lightbox="images/mda-addandroidstoreapp.png":::
+   :::image type="content" source="images/mda-addandroidstoreapp.png" alt-text="Ruden Tilføj Android Store-program i Microsoft Endpoint Manager Administration Center-portalen"  lightbox="images/mda-addandroidstoreapp.png":::
 
 2. På siden **Tilføj app** og i afsnittet *Appoplysninger* skal du skrive:
 
@@ -61,20 +61,20 @@ Få mere at vide om, hvordan du installerer Defender for Endpoint på Android p�
 
    Andre felter er valgfri. Vælg **Næste**.
 
-   :::image type="content" source="images/mda-addappinfo.png" alt-text="Siden Tilføj app, der viser oplysninger om programmets udgiver og URL-adresse på Microsoft Endpoint Manager Administrationsportal" lightbox="images/mda-addappinfo.png":::
+   :::image type="content" source="images/mda-addappinfo.png" alt-text="Siden Tilføj app, der viser programmets udgiver- og URL-oplysninger på Microsoft Endpoint Manager Administration Center-portalen" lightbox="images/mda-addappinfo.png":::
 
 3. I afsnittet *Tildelinger* skal du gå til sektionen **Påkrævet** og vælge **Tilføj gruppe.** Du kan derefter vælge den eller de brugergrupper, du vil målrette mod Defender for Endpoint på Android-appen. Vælg **Vælg** og derefter **Næste**.
 
     > [!NOTE]
     > Den valgte brugergruppe skal bestå af Intune tilmeldte brugere.
     >
-    > :::image type="content" source="images/363bf30f7d69a94db578e8af0ddd044b.png" alt-text="Ruden Tilføj gruppe på siden Tilføj app på Microsoft Endpoint Manager Administrationsportal" lightbox="images/363bf30f7d69a94db578e8af0ddd044b.png":::
+    > :::image type="content" source="images/363bf30f7d69a94db578e8af0ddd044b.png" alt-text="Ruden Tilføj gruppe på siden Tilføj app på Microsoft Endpoint Manager Administration Center-portalen" lightbox="images/363bf30f7d69a94db578e8af0ddd044b.png":::
 
 4. I afsnittet **Gennemse+Opret** skal du kontrollere, at alle de angivne oplysninger er korrekte, og derefter vælge **Opret**.
 
     Om et øjeblik oprettes Defender for Endpoint-appen, og der vises en meddelelse i øverste højre hjørne af siden.
 
-    :::image type="content" source="images/86cbe56f88bb6e93e9c63303397fc24f.png" alt-text="Ruden programstatus på Microsoft Endpoint Manager Administrationsportal" lightbox="images/86cbe56f88bb6e93e9c63303397fc24f.png":::
+    :::image type="content" source="images/86cbe56f88bb6e93e9c63303397fc24f.png" alt-text="Ruden programstatus på Microsoft Endpoint Manager Administration Center-portalen" lightbox="images/86cbe56f88bb6e93e9c63303397fc24f.png":::
 
 5. På den side med appoplysninger, der vises, skal du i afsnittet **Overvåg** vælge **Status for enhedsinstallation** for at kontrollere, at enhedsinstallationen er fuldført.
 
@@ -104,9 +104,9 @@ Du kan få flere oplysninger om de tilmeldingsindstillinger, der understøttes a
 
 Følg nedenstående trin for at føje Microsoft Defender for Endpoint app til din administrerede Google Play.
 
-1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Apps** \> **Android-apps** \> **Tilføj** og vælge **Administreret Google Play-app**.
+1. I [Microsoft Endpoint Manager Administration](https://go.microsoft.com/fwlink/?linkid=2109431) skal du gå til **Apps** \> **Android Apps** \> **Tilføj** og vælge **Administreret Google Play-app**.
 
-    :::image type="content" source="images/579ff59f31f599414cedf63051628b2e.png" alt-text="Ruden til tilføjelse af programmer på Microsoft Endpoint Manager Administrationsportal" lightbox="images/579ff59f31f599414cedf63051628b2e.png":::
+    :::image type="content" source="images/579ff59f31f599414cedf63051628b2e.png" alt-text="Ruden tilføjelse af programmer på Microsoft Endpoint Manager Administrationsportal" lightbox="images/579ff59f31f599414cedf63051628b2e.png":::
 
 2. På din administrerede Google Play-side, der indlæses efterfølgende, skal du gå til søgefeltet og angive `Microsoft Defender`. Din søgning skal vise appen Microsoft Defender for Endpoint i administreret Google Play. Klik på appen Microsoft Defender for Endpoint fra søgeresultatet Apps.
 
@@ -204,7 +204,7 @@ Defender for Endpoint understøtter politikker for enhedskonfiguration for admin
 
    :::image type="content" source="images/1autosetupofvpn.png" alt-text="Menupunktet Konfigurationsprofiler i ruden Politik" lightbox="images/1autosetupofvpn.png":::
 
-2. **Konfiguration Indstillinger** Angiv et **navn** og en **beskrivelse** for entydigt at identificere konfigurationsprofilen.
+2. **Konfigurationsindstillinger** Angiv et **navn** og en **beskrivelse** for entydigt at identificere konfigurationsprofilen.
 
    :::image type="content" source="images/2autosetupofvpn.png" alt-text="Felterne Navn og Beskrivelse for enhedskonfigurationsprofilen i ruden Grundlæggende" lightbox="images/2autosetupofvpn.png":::
 
@@ -259,11 +259,6 @@ Enhedskonfigurationsprofilen er nu tildelt den valgte brugergruppe.
 
 ## <a name="set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode"></a>Konfigurer Microsoft Defender i personlig profil på Android Enterprise i BYOD-tilstand
 
-> [!NOTE]
-> Microsoft Defender-understøttelse i personlig profil i Android Enterprise-tilstand (AE) i BYOD-tilstand (Bring-Your-Own-Device) er nu tilgængelig som offentlig prøveversion. Følgende oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
-
-Med understøttelse af Microsoft Defender i personlige Android-profiler kan brugerenheder beskyttes mod phishing- og malwareangreb på en personlig profil, der potentielt kan kompromittere virksomhedens ressourcer på arbejdsprofilen.
-
 ### <a name="set-up-microsoft-defender-in-personal-profile"></a>Konfigurer Microsoft Defender i personlig profil
 
 Administratorer kan gå til Administration af [Microsoft Endpoint Management](https://endpoint.microsoft.com) for at konfigurere Microsoft Defender-support i personlige profiler ved at følge disse trin:
@@ -293,7 +288,7 @@ Administratorer kan gå til Administration af [Microsoft Endpoint Management](ht
     > [!div class="mx-imgBorder"]
     > ![Billede af korrektur og oprettelse af politik.](images/savepolicy.png)
 
-Administratorer kan også konfigurere **kontrolelementer til beskyttelse af personlige oplysninger** fra Microsoft Endpoint Manager Administration for at styre, hvilke data der kan sendes af Defender-mobilklienten til sikkerhedsportalen. Du kan få flere oplysninger under [Konfiguration af kontrolelementer til beskyttelse af personlige oplysninger](android-configure.md).
+Administratorer kan også konfigurere kontrolelementer til **beskyttelse af personlige oplysninger** fra Microsoft Endpoint Manager Administration for at styre, hvilke data der kan sendes af Defender-mobilklienten til sikkerhedsportalen. Du kan få flere oplysninger under [Konfiguration af kontrolelementer til beskyttelse af personlige oplysninger](android-configure.md).
 
 Organisationer kan kommunikere med deres brugere for at beskytte personlig profil med Microsoft Defender på deres tilmeldte BYOD-enheder.
 

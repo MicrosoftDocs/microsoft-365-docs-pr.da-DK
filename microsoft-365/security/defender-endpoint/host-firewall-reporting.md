@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 33eff726609db3d7f2d07f4a5bcf4955536c086c
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 0dcb03a5398b38e05c3c7c867306444b17b8c720
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647277"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490226"
 ---
 # <a name="host-firewall-reporting-in-microsoft-defender-for-endpoint"></a>Rapportering af værtsfirewall i Microsoft Defender for Endpoint
 
@@ -30,7 +30,7 @@ ms.locfileid: "65647277"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-Hvis du er global administrator eller sikkerhedsadministrator, kan du nu hoste firewallrapportering til [Microsoft 365 Defender-portalen](https://security.microsoft.com). Denne funktion giver dig mulighed for at få vist Windows 10, Windows 11, Windows Server 2019 og Windows Server 2022-firewallrapportering fra en centraliseret placering.
+Hvis du er global administrator eller sikkerhedsadministrator, kan du nu hoste firewallrapportering på [Microsoft 365 Defender-portalen](https://security.microsoft.com). Denne funktion giver dig mulighed for at få vist firewallrapportering Windows 10, Windows 11, Windows Server 2019 og Windows Server 2022 fra en central placering.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -41,8 +41,9 @@ Hvis du er global administrator eller sikkerhedsadministrator, kan du nu hoste f
   - [Overvåg forbindelse til filtreringsplatform](/windows/security/threat-protection/auditing/audit-filtering-platform-connection)
 - Aktivér disse hændelser ved hjælp af Gruppepolitik Object Editor, Lokal sikkerhedspolitik eller kommandoerne auditpol.exe. Du kan få flere oplysninger [her](/windows/win32/fwp/auditing-and-logging).
   - De to PowerShell-kommandoer er:
-    - **auditpol /set /subcategory:"Filtering Platform Packet Drop" /failure:enable**
-    - **auditpol /set /subcategory:"Filtering Platform Connection" /failure:enable**
+    - `auditpol /set /subcategory:"Filtering Platform Packet Drop" /failure:enable`
+    - `auditpol /set /subcategory:"Filtering Platform Connection" /failure:enable`
+
 ```powershell
 param (
     [switch]$remediate
@@ -81,23 +82,32 @@ catch {
 > [!NOTE]
 > Sørg for at følge vejledningen i afsnittet ovenfor, og konfigurer dine enheder korrekt til tidlig deltagelse i prøveversionen.
 
-- Når hændelserne er aktiveret, begynder Microsoft 365 Defender at overvåge dataene.
-  - Fjern-IP, Fjernport, Lokal port, Lokal IP, Computernavn, Behandl på tværs af indgående og udgående forbindelser.
-- Administratorer kan nu se Windows [værtsfirewallaktivitet her](https://security.microsoft.com/firewall).
-  - Yderligere rapportering kan lettes ved at downloade [scriptet til brugerdefineret rapportering](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) for at overvåge de Windows Defender Firewall aktiviteter ved hjælp af Power BI.
-  - Det kan tage op til 12 timer, før dataene afspejles.
+- Når hændelserne er aktiveret, begynder Microsoft 365 Defender at overvåge dataene, hvilket omfatter: 
+   - Ekstern IP
+   - Ekstern port
+   - Lokal port
+   - Lokal IP
+   - Computernavn
+   - Behandl på tværs af indgående og udgående forbindelser
+- Administratorer kan nu se [Windows-værtsfirewallaktivitet her](https://security.microsoft.com/firewall).
+   - Yderligere rapportering kan lettes ved at downloade [scriptet til brugerdefineret rapportering](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) for at overvåge de Windows Defender Firewall aktiviteter ved hjælp af Power BI.
+   - Det kan tage op til 12 timer, før dataene afspejles.
 
 ## <a name="supported-scenarios"></a>Understøttede scenarier
 
-Følgende scenarier understøttes under Ring0 Preview.
+Følgende scenarier understøttes under Ring0 Preview:
+
+- [Firewallrapportering](#firewall-reporting)
+- [Fra "Computere med blokeret forbindelse" til enhed](#from-computers-with-a-blocked-connection-to-device)
+- [Analysér ind på avanceret jagt (opdatering af prøveversion)](#drill-into-advanced-hunting-preview-refresh)
 
 ### <a name="firewall-reporting"></a>Firewallrapportering
 
-Her er et par eksempler på firewallrapportsiderne. Her kan du finde en oversigt over indgående, udgående og programaktivitet. Du kan få adgang til denne side direkte ved at gå til <https://security.microsoft.com/firewall>.
+Her er nogle eksempler på firewallrapportsiderne. Her kan du finde en oversigt over indgående, udgående og programaktivitet. Du kan få adgang til denne side direkte ved at gå til <https://security.microsoft.com/firewall>.
 
 :::image type="content" source="images/host-firewall-reporting-page.png" alt-text="Rapporteringssiden for værtsfirewallen" lightbox="\images\host-firewall-reporting-page.png":::
 
-Du kan også få adgang til disse rapporter ved at gå til **ReportsSecurity** >  **ReportDevices** >  (sektion) nederst på kortet **Firewall Blocked Inbound Connections**.
+Du kan også få adgang til disse rapporter ved at gå til sektionen **Rapporter** > **for sikkerhedsrapportenheder** >  nederst på kortet **Firewall blokerede indgående forbindelser**.
 
 ### <a name="from-computers-with-a-blocked-connection-to-device"></a>Fra "Computere med blokeret forbindelse" til enhed
 
@@ -119,4 +129,4 @@ Firewallrapporter understøtter detailudledning fra kortet direkte til **Avancer
 
 Forespørgslen kan nu udføres, og alle relaterede firewallhændelser fra de sidste 30 dage kan udforskes.
 
-I forbindelse med yderligere rapportering eller brugerdefinerede ændringer kan forespørgslen eksporteres til Power BI til yderligere analyse. Brugerdefineret rapportering kan lettes ved at downloade [scriptet til brugerdefineret rapportering](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) for at overvåge de Windows Defender Firewall aktiviteter ved hjælp af Power BI.
+Hvis du vil have mere rapportering eller brugerdefinerede ændringer, kan forespørgslen eksporteres til Power BI til yderligere analyse. Brugerdefineret rapportering kan lettes ved at downloade [scriptet til brugerdefineret rapportering](https://github.com/microsoft/MDATP-PowerBI-Templates/tree/master/Firewall) for at overvåge de Windows Defender Firewall aktiviteter ved hjælp af Power BI.

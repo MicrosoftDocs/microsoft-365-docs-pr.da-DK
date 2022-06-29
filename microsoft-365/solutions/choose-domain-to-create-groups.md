@@ -1,5 +1,5 @@
 ---
-title: Vælg det domæne, der skal bruges, når du opretter Microsoft 365 grupper
+title: Vælg det domæne, der skal bruges, når du opretter Microsoft 365-grupper
 ms.reviewer: arvaradh
 f1.keywords: NOCSH
 ms.author: mikeplum
@@ -17,21 +17,21 @@ search.appverid:
 - MET150
 ms.assetid: 7cf5655d-e523-4bc3-a93b-3ccebf44a01a
 recommendations: false
-description: Få mere at vide om, hvordan du vælger det domæne, der skal bruges, når du opretter Microsoft 365 grupper, ved at konfigurere politikker for mailadresser ved hjælp af PowerShell.
-ms.openlocfilehash: c6eb1bbccf8745c88941f40d6fefeed29aec5620
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Få mere at vide om, hvordan du vælger det domæne, der skal bruges, når du opretter Microsoft 365-grupper, ved at konfigurere politikker for mailadresser ved hjælp af PowerShell.
+ms.openlocfilehash: bd9fad340d136fe4cac228f94f1904761cff7071
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012532"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490891"
 ---
-# <a name="choose-the-domain-to-use-when-creating-microsoft-365-groups"></a>Vælg det domæne, der skal bruges, når du opretter Microsoft 365 grupper
+# <a name="choose-the-domain-to-use-when-creating-microsoft-365-groups"></a>Vælg det domæne, der skal bruges, når du opretter Microsoft 365-grupper
 
-Nogle organisationer bruger separate maildomæner til at segmentere forskellige dele af deres virksomheder. Du kan angive, hvilket domæne der skal bruges, når brugerne opretter Microsoft 365 grupper.
+Nogle organisationer bruger separate maildomæner til at segmentere forskellige dele af deres virksomheder. Du kan angive, hvilket domæne der skal bruges, når brugerne opretter Microsoft 365-grupper.
   
 Hvis din organisation har brug for, at brugerne skal oprette deres grupper i andre domæner end din virksomheds standard accepteret domæne, kan du tillade dette ved at konfigurere politikker for mailadresser ved hjælp af PowerShell.
 
-Før du kan køre PowerShell-cmdlet'erne, skal du downloade og installere et modul, hvor du kan tale med din organisation. Se [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Før du kan køre PowerShell-cmdlet'erne, skal du downloade og installere et modul, hvor du kan tale med din organisation. Se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="example-scenarios"></a>Eksempelscenarier
 
@@ -50,7 +50,7 @@ I følgende to scenarier forklares det, hvordan du kan opnå dette.
   
 ### <a name="scenario-1"></a>Scenarie 1
 
-I følgende eksempel kan du se, hvordan du klargør alle Microsoft 365 grupper i din organisation i det groups.contoso.com domæne.
+I følgende eksempel kan du se, hvordan du klargør alle Microsoft 365-grupper i din organisation i det groups.contoso.com domæne.
   
 ```
 New-EmailAddressPolicy -Name Groups -IncludeUnifiedGroupRecipients -EnabledEmailAddressTemplates "SMTP:@groups.contoso.com" -Priority 1
@@ -58,7 +58,7 @@ New-EmailAddressPolicy -Name Groups -IncludeUnifiedGroupRecipients -EnabledEmail
 
 ### <a name="scenario-2"></a>Scenarie 2
 
-Lad os sige, at du vil styre, hvilke underdomæner Microsoft 365 grupper oprettes i. Du ønsker:
+Lad os sige, at du vil styre, hvilke underdomæner Microsoft 365-grupper der oprettes i. Du ønsker:
   
 - Grupper, der er oprettet af studerende (brugere, hvor **Afdeling er** angivet til **Studerende**) i domænet students.groups.contoso.com. Brug denne kommando:
     
@@ -77,7 +77,9 @@ Lad os sige, at du vil styre, hvilke underdomæner Microsoft 365 grupper oprette
   ```
   New-EmailAddressPolicy -Name OtherGroups -IncludeUnifiedGroupRecipients -EnabledPrimarySMTPAddressTemplate "SMTP:@groups.contoso.com" -Priority 3
   ```
-
+> [!NOTE]
+> Dette scenarie fungerer ikke, når MX-posten peger på filtrering af spam fra tredjepart.
+ 
 ## <a name="change-email-address-policies"></a>Skift politikker for mailadresse
 
 Hvis du vil ændre skabelonerne for prioritet eller mailadresse for en eksisterende EAP, skal du bruge cmdlet'en Set-EmailAddressPolicy.
@@ -101,7 +103,7 @@ Remove-EmailAddressPolicy -Identity StudentsGroups
   
 ## <a name="hybrid-requirements"></a>Hybridkrav
 
-Hvis din organisation er konfigureret i et hybridscenarie, skal du se [Konfigurer Microsoft 365 grupper med Exchange hybrid](/exchange/hybrid-deployment/set-up-microsoft-365-groups) i det lokale miljø for at sikre, at din organisation opfylder kravene til oprettelse af Microsoft 365 grupper. 
+Hvis din organisation er konfigureret i et hybridscenarie, skal du se [Konfigurer Microsoft 365-grupper med Exchange-hybrider](/exchange/hybrid-deployment/set-up-microsoft-365-groups) i det lokale miljø for at sikre, at din organisation opfylder kravene til oprettelse af Microsoft 365-grupper. 
   
 ## <a name="additional-info-about-using-email-address-policies-groups"></a>Yderligere oplysninger om brug af politikker for mailadresser:
 
@@ -125,4 +127,4 @@ Der er et par andre ting, du skal vide:
 
 [Opret din plan for styring af samarbejde](collaboration-governance-first.md) (artikel)
 
-[Opret en Microsoft 365 gruppe i Administration](../admin/create-groups/create-groups.md) (artikel)
+[Opret en Microsoft 365-gruppe i Administration](../admin/create-groups/create-groups.md) (artikel)

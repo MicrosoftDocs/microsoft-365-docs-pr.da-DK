@@ -1,5 +1,5 @@
 ---
-title: Microsoft Defender for Endpoint flytbare Storage Access Control til enhedsstyring, flytbare lagermedier
+title: Microsoft Defender for Endpoint Access Control flytbart lagermedie til enhedsstyring
 description: En gennemgang af Microsoft Defender for Endpoint
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,15 +14,15 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
-ms.date: 06/20/2022
-ms.openlocfilehash: 78eb4f9cb65fb5eec54747a256abf290a43deb2f
-ms.sourcegitcommit: af2b570e76e074bbef98b665b5f9a731350eda58
+ms.date: 06/24/2022
+ms.openlocfilehash: d9ff97aa50a03c1a75f073328a250a9acc3faf54
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/21/2022
-ms.locfileid: "66185453"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490747"
 ---
-# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>flytbare Storage Access Control Microsoft Defender for Endpoint enhedsstyring
+# <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Access Control flytbare lagermedier Microsoft Defender for Endpoint enhedsstyring
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -30,9 +30,9 @@ ms.locfileid: "66185453"
 > [!NOTE]
 > Administration af Gruppepolitik og Intune OMA-URI/Custom Policy management af dette produkt er nu offentlig tilgængelig (4.18.2106): Se [Tech Community-bloggen: Beskyt dit flytbare lager og din printer med Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/protect-your-removable-storage-and-printers-with-microsoft/ba-p/2324806).
 
-## <a name="device-control-removable-storage-access-control-overview"></a>Oversigt over flytbare Storage Access Control af enhedskontrolelementer
+## <a name="device-control-removable-storage-access-control-overview"></a>Oversigt over flytbare lagermedier til enhedsstyring Access Control
 
-Microsoft Defender for Endpoint device control Flytbare Storage Access Control funktion giver dig mulighed for at overvåge, tillade eller forhindre adgang til læsning, skrivning eller udførelse af et flytbart lagermedier med eller uden udeladelse.
+Microsoft Defender for Endpoint device control Flytbare lagermedier Access Control funktion giver dig mulighed for at overvåge, tillade eller forhindre adgang til læsning, skrivning eller udførelse af flytbare lagermedier med eller uden udeladelse.
 
 |Privilegium|Tilladelse|
 |---|---|
@@ -43,39 +43,41 @@ Microsoft Defender for Endpoint device control Flytbare Storage Access Control f
 |Brugerbaseret support|Ja|
 |Computerbaseret support|Ja|
 
-Microsoft Defender for Endpoint funktionen Flytbar enhedshåndtering Storage Access Control giver dig følgende funktioner:
+Microsoft Defender for Endpoint funktionen Flytbare lagermedier til enhedshåndtering Access Control giver dig følgende funktioner:
 
 |Kapacitet|Beskrivelse|Udrul via Intune|Udrul via Gruppepolitik|
 |---|---|---|---|
-|Oprettelse af flytbar mediegruppe|Giver dig mulighed for at oprette en flytbar mediegruppe, der kan genbruges|Trin 4 og 6 i afsnittet [Udrulning af Flytbare Storage Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri)| Trin 4 og 6 i afsnittet [Udrulning af Flytbare Storage Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
-|Oprettelse af politik|Giver dig mulighed for at oprette en politik, der gennemtvinger hver flytbare mediegruppe|Trin 5 og 7 i afsnittet [Installation af Flytbare Storage Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri)| Trin 5 og 7 i afsnittet [Udrulning af Flytbare Storage Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
-|Standard gennemtvingelse|Giver dig mulighed for at angive standardadgang (Afvis eller Tillad) til flytbare medier, hvis der ikke er nogen politik|Trin 2 i afsnittet [Installation af Flytbare Storage Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri) | Trin 2 i afsnittet [Installation af Flytbare Storage Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
-|Aktivér eller deaktiver Flytbare Storage Access Control|Hvis du angiver Deaktiver, deaktiveres politikken Flytbare Storage Access Control på denne computer| Trin 1 i afsnittet [Installation af Flytbare Storage Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri)| Trin 1 i afsnittet [Installation af Flytbare Storage Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
-|Hent filoplysninger|Giver dig mulighed for at oprette en politik til hentning af filoplysninger, når der sker skriveadgang|  | Trin 10 i afsnittet [Udrulning af Flytbare Storage Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy) |
+|Oprettelse af flytbar mediegruppe|Giver dig mulighed for at oprette en flytbar mediegruppe, der kan genbruges|Trin 4 og 6 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri)| Trin 4 og 6 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
+|Oprettelse af politik|Giver dig mulighed for at oprette en politik, der gennemtvinger hver flytbare mediegruppe|Trin 5 og 7 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri)| Trin 5 og 7 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
+|Standard gennemtvingelse|Giver dig mulighed for at angive standardadgang (Afvis eller Tillad) til flytbare medier, hvis der ikke er nogen politik|Trin 2 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri) | Trin 2 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
+|Aktivér eller deaktiver flytbare lagermedier Access Control|Hvis du angiver Deaktiver, deaktiveres Politikken for Flytbare lagermedier Access Control på denne computer| Trin 1 i afsnittet [Installation af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI](#deploying-removable-storage-access-control-by-using-intune-oma-uri)| Trin 1 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy)|
+|Hent filoplysninger|Giver dig mulighed for at oprette en politik til hentning af filoplysninger, når der sker skriveadgang|  | Trin 10 i afsnittet [Udrulning af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik](#deploying-removable-storage-access-control-by-using-group-policy) |
 
 ### <a name="prepare-your-endpoints"></a>Forbered dine slutpunkter
 
-Installer Flytbare Storage Access Control på Windows 10 og Windows 11 enheder, der har antimalwareklientversion **4.18.2103.3 eller nyere**.
+Installer Flytbare lagermedier Access Control på Windows 10 og Windows 11 enheder, der har antimalwareklientversion **4.18.2103.3 eller nyere**.
 
-- **4.18.2104 eller nyere**: Tilføj SerialNumberId, VID_PID, understøttelse af filstibaseret gruppepolitikobjekt, ComputerSid
+- **4.18.2104 eller nyere**: Tilføj `SerialNumberId`understøttelse af filstibaseret gruppepolitikobjekt af typen , `VID_PID`og `ComputerSid`
 
-- **4.18.2105 eller nyere**: Tilføj understøttelse af jokertegn for HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId, kombinationen af en bestemt bruger på en bestemt computer, SSD-understøttelse, der kan fjernes (en SanDisk Extreme SSD)/USB Attached SCSI (UAS)
+- **4.18.2105 eller nyere**: Tilføj understøttelse af jokertegn for `HardwareId/DeviceId/InstancePathId/FriendlyNameId/SerialNumberId`, kombinationen af specifik bruger på en bestemt maskine, SSD, der kan fjernes (en SanDisk Extreme SSD)/UAS-understøttelse (USB Attached SCSI)
 
-- **4.18.2107 eller nyere**: Tilføj understøttelse af Windows Portable Device (WPD) (til mobilenheder, f.eks. tablets), føj AccountName til [avanceret jagt](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint)
+- **4.18.2107 eller nyere**: Tilføj understøttelse af Windows Portable Device (WPD) (til mobilenheder, f.eks. tablets); føj `AccountName` til [avanceret jagt](device-control-removable-storage-access-control.md#view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint)
+
+- **4.18.2205 eller nyere**: Udvid standardgennemtvingenheden til **Printer**. Hvis du angiver den til **Afvis**, blokeres printeren også, så hvis du kun vil administrere lagerplads, skal du sørge for at oprette en brugerdefineret politik for at tillade Printer.
 
 :::image type="content" source="images/powershell.png" alt-text="PowerShell-grænsefladen" lightbox="images/powershell.png":::
 
 > [!NOTE]
-> Ingen af Windows Sikkerhed komponenter skal være aktive, da du kan køre Flytbare Storage Access Control uafhængigt af Windows Sikkerhed status.
+> Ingen af Windows Sikkerhed komponenter skal være aktive, da du kan køre Flytbare lagermedier Access Control uafhængigt af Windows Sikkerhed status.
 
-## <a name="device-control-removable-storage-access-control-policies"></a>Politikker for flytbare Storage Access Control for enhedsstyring
+## <a name="device-control-removable-storage-access-control-policies"></a>Politikker for flytbart lager Access Control for enhedsstyring
 
 Du kan bruge følgende egenskaber til at oprette en flytbar lagergruppe:
 
 > [!NOTE]
 > Kommentarer, der bruger XML-kommentarnotation `<!-- COMMENT -->` , kan bruges i XML-filerne Regel og Gruppe, men de skal være inden for den første XML-kode og ikke den første linje i XML-filen.
 
-### <a name="removable-storage-group"></a>Flytbar Storage gruppe
+### <a name="removable-storage-group"></a>Flytbar lagergruppe
 
 |Egenskabsnavn|Beskrivelse|Muligheder|
 |---|---|---|
@@ -98,15 +100,15 @@ Du kan bruge følgende egenskaber til at oprette politikken for adgangskontrol:
 | **Muligheder** | Definerer, om der skal vises en meddelelse eller ej |**Når Tillad type er valgt**: <p>0: intet<p>4: Deaktiver **AuditAllowed** og **AuditDenied** for denne post. Selvom **Allow** sker, og indstillingen AuditAllowed er konfigureret, sender systemet ikke hændelsen. <p>8: Hent filoplysninger, og få en kopi af filen som dokumentation for skriveadgang. <p>16: Hent filoplysninger for skriveadgang. <p>**Når Afvis type er valgt**: <p>0: intet<p>4: Deaktiver **AuditDenied** for denne post. Selvom **Block** sker, og AuditDenied er konfigureret, vises der ikke en meddelelse i systemet. <p>**Når Type **AuditAllowed** er valgt**: <p>0: intet <p>1: intet <p>2: Send begivenhed<p> **Når Type **AuditDenied** er valgt**: <p>0: intet <p>1: vis meddelelse <p>2: Send begivenhed<p>3: Vis meddelelse og send begivenhed |
 |AccessMask|Definerer adgangen. | **Adgang på diskniveau**: <p>1: Læs <p>2: Skriv <p>4: Udfør <p>**Adgang på filsystemniveau**: <p>8: Filsystemet Læs <p>16: Skriv til filsystemet <p>32: Filsystemet Udfør <p><p>Du kan have flere adgange ved at udføre en binær OR-handling. AccessMask for Læs og Skriv og Udfør vil f.eks. være 7. AccessMask for Læs og Skriv er 3.|
 
-## <a name="device-control-removable-storage-access-control-scenarios"></a>Enhedskontrol - Flytbare Storage Access Control scenarier
+## <a name="device-control-removable-storage-access-control-scenarios"></a>Scenarier med flytbare Access Control af enhedskontrolelementer
 
-For at hjælpe dig med at blive fortrolig med Microsoft Defender for Endpoint Flytbare Storage Access Control har vi sammensat nogle almindelige scenarier, som du kan følge.
+For at hjælpe dig med at blive fortrolig med Microsoft Defender for Endpoint Flytbare lagermedier Access Control har vi sammensat nogle almindelige scenarier, som du kan følge.
 
 ### <a name="scenario-1-prevent-write-and-execute-access-to-all-but-allow-specific-approved-usbs"></a>Scenarie 1: Undgå skrive- og udførelsesadgang til alle undtagen tillad specifikke godkendte USB'er
 
 1. Opret grupper
 
-    1. Gruppe 1: Ethvert flytbart lager og cd/dvd. Et eksempel på et flytbart lagermedie og en cd/dvd er: Gruppe **9b28fae8-72f7-4267-a1a5-685f747a7146** i eksemplet [på En Flytbar Storage- og CD-DVD-Group.xml-fil](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples).
+    1. Gruppe 1: Ethvert flytbart lager og cd/dvd. Et eksempel på et flytbart lagermedie og en cd/dvd er: Gruppér **9b28fae8-72f7-4267-a1a5-685f747a7146** i eksempelfilen [Any Flytbart lagermedie og cd-dvd Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) fil.
 
     2. Gruppe 2: Godkendte USB'er baseret på enhedsegenskaber. Et eksempel på denne use case er: Instance ID – Group **65fa649a-a111-4912-9294-fb6337a25038** i eksemplet [Godkendte USB'er Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) fil.
 
@@ -123,7 +125,7 @@ For at hjælpe dig med at blive fortrolig med Microsoft Defender for Endpoint Fl
 
 1. Opret grupper
 
-    1. Gruppe 1: Ethvert flytbart lager og cd/dvd. Et eksempel på denne brugscase er: Gruppe **9b28fae8-72f7-4267-a1a5-685f747a7146** i eksemplet [på Filen Any Flytbare Storage og CD-DVD Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples).
+    1. Gruppe 1: Ethvert flytbart lager og cd/dvd. Et eksempel på denne brugscase er: Gruppe **9b28fae8-72f7-4267-a1a5-685f747a7146** i eksemplet [på Any Removable Storage- og CD-DVD-Group.xml-filen](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) .
 
     2. Gruppe 2: UsB'er, der ikke er godkendt, baseret på enhedsegenskaber, f.eks. Leverandør-id/Produkt-id, Brugervenligt navn - Gruppe **65fa649a-a111-4912-9294-fb6337a25038** i eksemplet [På ikke-godkendte USB'er Group.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) fil.
 
@@ -136,13 +138,13 @@ For at hjælpe dig med at blive fortrolig med Microsoft Defender for Endpoint Fl
 
     2. Politik 2: Overvåg adgangen Skriv og Udfør til andre. Et eksempel på denne use case er: PolicyRule **b58ab853-9a6f-405c-a194-740e69422b48** i [eksempelscenariet 2 Overvågningsskrivning og Udfør-adgang til others.xml](https://github.com/microsoft/mdatp-devicecontrol/tree/main/Removable%20Storage%20Access%20Control%20Samples) fil.
 
-## <a name="deploying-and-managing-removable-storage-access-control-by-using-intune-oma-uri"></a>Udrulning og administration af Flytbare Storage Access Control ved hjælp af Intune OMA-URI
+## <a name="deploying-and-managing-removable-storage-access-control-by-using-intune-oma-uri"></a>Udrulning og administration af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI
 
-Funktionen Flytbare Storage Access Control giver dig mulighed for at anvende politik ved hjælp af OMA-URI på enten bruger eller enhed eller begge dele.
+Funktionen Flytbare lagermedier Access Control giver dig mulighed for at anvende politik ved hjælp af OMA-URI på enten bruger eller enhed eller begge dele.
 
 ### <a name="licensing-requirements"></a>Licenskrav
 
-Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit [abonnement på Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2). Hvis du vil have adgang til og bruge Flytbare Storage Access Control, skal du have Microsoft 365 E3 eller Microsoft 365 E5.
+Før du kommer i gang med Flytbare lagermedier Access Control, skal du bekræfte dit [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2). Hvis du vil have adgang til og bruge Access Control til Flytbare lagermedier, skal du have Microsoft 365 E3 eller Microsoft 365 E5.
 
 ### <a name="permission"></a>Tilladelse
 
@@ -152,17 +154,15 @@ I forbindelse med politikinstallation i Intune skal kontoen have tilladelser til
 - Brugerdefineret rolle med tilladelserne Opret/Rediger/Opdater/Læs/Slet/Vis rapporter slået til for profiler til enhedskonfiguration
 - Global administrator
 
-### <a name="deploying-removable-storage-access-control-by-using-intune-oma-uri"></a>Udrulning af Flytbare Storage Access Control ved hjælp af Intune OMA-URI
+### <a name="deploying-removable-storage-access-control-by-using-intune-oma-uri"></a>Udrulning af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI
 
 Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) **> Enheder > Opret profil > Platform: Windows 10 og nyere, Profiltype: Skabeloner > Brugerdefineret**
 
-1. Aktivér eller deaktiver Flytbare Storage Access Control (RSAC):
-
-   Du kan aktivere Flytbare Storage Access Control på følgende måde:
+1. Aktivér eller deaktiver enhedskontrol på følgende måde:
 
    - Klik på **Tilføj** under **Konfigurationsindstillinger for brugerdefineret >**.
    - I ruden **Tilføj række** skal du angive:
-     - **Navngiv** som **Aktivér RSAC**
+     - **Navngiv** som **Aktivér enhedskontrol**
      - **OMA-URI** som `./Vendor/MSFT/Defender/Configuration/DeviceControlEnabled`
      - **Datatype** som **heltal**
      - **Værdi** som **1**
@@ -172,13 +172,13 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
      - Klik på **Gem**.
 
-   :::image type="content" source="images/enable-rsac.png" alt-text="Skærmbillede af aktivering af politikken Flytbare Storage Access Control" lightbox="images/enable-rsac.png":::
+   :::image type="content" source="images/enable-rsac.png" alt-text="Skærmbillede af aktivering af politikken for Flytbare lagermedier Access Control" lightbox="images/enable-rsac.png":::
 
 2. Angiv standard gennemtvingelse:
 
-   Du kan angive standardadgang (Afvis eller Tillad) til flytbare medier, hvis der ikke er nogen politik.
+   Du kan angive standardadgangen (Afvis eller Tillad) for alle funktioner i Enhedshåndtering (`RemovableMediaDevices`, `CdRomDevices`, `WpdDevices`, `PrinterDevices`).
 
-   Du har f.eks. enten politikken Afvis eller Tillad for RemovableMediaDevices, men du har ikke nogen politik for CdRomDevices eller WpdDevices. Du angiver Standardafvis via denne politik, og derefter blokeres adgangen Læs/Skriv/Udfør til CdRomDevices eller WpdDevices.
+   Du har f.eks. enten politikken **Afvis** eller **Tillad** for `RemovableMediaDevices`, men du har ikke en politik for `CdRomDevices` eller `WpdDevices`. Du kan angive **Standardafvis** via denne politik, hvorefter adgangen `CdRomDevices` Læs/Skriv/Udfør til eller `WpdDevices` blokeres. Hvis du kun vil administrere lagerplads, skal du sørge for at oprette en **tillad** politik for printeren. Ellers anvendes denne standard gennemtvingelse også på printere.
 
    - I ruden **Tilføj række** skal du angive:
      - **Navn** som **standardafvis**
@@ -195,7 +195,7 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
 3. Afvis som standard for overvågning:
 
-   Du kan oprette overvågningspolitikken for Standardafvis på følgende måde:
+   Du kan oprette en overvågningspolitik for Standardafvis på følgende måde:
 
    - I ruden **Tilføj række** skal du angive:
      - **Navn** som **standardafvising for overvågning**
@@ -208,7 +208,7 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
        Sti til XML-fil: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Audit%20Default%20Deny.xml>
 
-       Brug følgende XML-data til at oprette overvågningspolitik for Standardafvising:
+       Brug følgende XML-data til at oprette overvågningspolitikken for Standardafvising:
 
        :::image type="content" source="images/audit-default-deny-xml-file-1.png" alt-text="Skærmbillede af xml-filen til standardafvising som standard":::
 
@@ -217,23 +217,23 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
    Du kan oprette en flytbar lagergruppe med Skrivebeskyttet adgang på følgende måde:
 
    - I ruden **Tilføj række** skal du angive:
-     - **Navngiv** som **enhver flytbar Storage gruppe**
+     - **Navngiv** som **en hvilken som helst flytbar lagergruppe**
      - **OMA-URI** som `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b9b28fae8-72f7-4267-a1a5-685f747a7146%7d/GroupData`
 
-       :::image type="content" source="images/any-removable-storage-group.png" alt-text="Skærmbillede af oprettelse af en flytbar Storage gruppe" lightbox="images/any-removable-storage-group.png":::
+       :::image type="content" source="images/any-removable-storage-group.png" alt-text="Skærmbillede af oprettelse af en flytbar lagergruppe" lightbox="images/any-removable-storage-group.png":::
 
      - **Datatype** som **streng (XML-fil)**
-       - **Brugerdefineret XML** som **enhver flytbar Storage- og cd-dvd- og WPD-Group.xml** fil
+       - **Brugerdefineret XML** som **et vilkårligt flytbart lagermedier og en cd-dvd og en WPD-Group.xml** fil
 
          Sti til XML-fil: <https://github.com/microsoft/mdatp-devicecontrol/blob/main/Removable%20Storage%20Access%20Control%20Samples/Intune%20OMA-URI/Any%20Removable%20Storage%20and%20CD-DVD%20and%20WPD%20Group.xml>
 
-         Brug følgende XML-data til at oprette 'Enhver flytbar Storage og cd-dvd og WPD-gruppe' med skrivebeskyttet adgang:
+         Brug følgende XML-data til at oprette 'Any Flytbare Storage- og CD-DVD- og WPD-grupper' med ReadOnly-adgang:
 
          :::image type="content" source="images/read-only-group-xml-file.png" alt-text="Skærmbillede af skrivebeskyttet xml-gruppefil":::
 
 5. ReadOnly – Politik:
 
-   Du kan oprette En ReadOnly-politik og anvende den flytbare ReadOnly-lagergruppe for at tillade læseaktivitet på følgende måde:
+   Du kan oprette en ReadOnly-politik og anvende den på den flytbare ReadOnly-lagergruppe for at tillade læseaktivitet på følgende måde:
 
    - I ruden **Tilføj række** skal du angive:
      - **Navngiv** som **Tillad læseaktivitet**
@@ -250,7 +250,7 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
        :::image type="content" source="images/read-only-policy-xml-file.png" alt-text="Skærmbillede af xml-fil med skrivebeskyttet politik":::
 
-6. Opret gruppe for tilladte medier: Du kan oprette den tilladte mediegruppe på følgende måde:
+6. Opret en gruppe for tilladte medier: Du kan oprette den tilladte mediegruppe på følgende måde:
    - I ruden **Tilføj række** skal du angive:
      - **Navngiv** som **godkendt USB-gruppe**
      - **OMA-URI** som `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyGroups/%7b65fa649a-a111-4912-9294-fb6337a25038%7d/GroupData`
@@ -266,7 +266,7 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
        :::image type="content" source="images/create-group-allowed-medias-xml-file.png" alt-text="Skærmbillede af oprettelse af gruppe for tilladt XML-mediefil":::
 
-7. Opret politik for at tillade den godkendte USB-gruppe: Du kan oprette en politik for at tillade den godkendte USB-gruppe på følgende måde:
+7. Opret en politik for at tillade den godkendte USB-gruppe: Du kan oprette en politik for at tillade den godkendte USB-gruppe på følgende måde:
    - I ruden **Tilføj række** skal du angive:
      - **Navngiv** som **Tillad adgang og Overvåg filoplysninger**
      - **OMA-URI** som `./Vendor/MSFT/Defender/Configuration/DeviceControl/PolicyRules/%7bb2061588-029e-427d-8404-6dfec096a571%7d/RuleData`
@@ -292,30 +292,32 @@ Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.c
 
 Denne funktion er tilgængelig i Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>). Gå til **Endpoint Security** > **Attack Surface Reduction** > **Create Policy**. Vælg **Platform: Windows 10 og nyere** med **Profil: Enhedskontrol**.
 
-## <a name="deploying-and-managing-removable-storage-access-control-by-using-group-policy"></a>Udrulning og administration af Flytbare Storage Access Control ved hjælp af Gruppepolitik
+## <a name="deploying-and-managing-removable-storage-access-control-by-using-group-policy"></a>Udrulning og administration af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik
 
-Funktionen Flytbare Storage Access Control giver dig mulighed for at anvende politik ved hjælp af Gruppepolitik til enten bruger eller enhed eller begge dele.
+Funktionen Flytbare lagermedier Access Control giver dig mulighed for at anvende en politik ved hjælp af Gruppepolitik til enten bruger eller enhed eller begge dele.
 
 ### <a name="licensing"></a>Licensering
 
-Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit [abonnement på Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2). Hvis du vil have adgang til og bruge Flytbare Storage Access Control, skal du have Microsoft 365 E3 eller Microsoft 365 E5.
+Før du kommer i gang med Flytbare lagermedier Access Control, skal du bekræfte dit [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=2). Hvis du vil have adgang til og bruge Access Control til Flytbare lagermedier, skal du have Microsoft 365 E3 eller Microsoft 365 E5.
 
-### <a name="deploying-removable-storage-access-control-by-using-group-policy"></a>Udrulning af Flytbare Storage Access Control ved hjælp af Gruppepolitik
+### <a name="deploying-removable-storage-access-control-by-using-group-policy"></a>Udrulning af Flytbare lagermedier Access Control ved hjælp af Gruppepolitik
 
-1. Aktivér eller deaktiver flytbare Storage Access Control:
+1. Aktivér eller deaktiver flytbare lagermedier Access Control:
 
-   Du kan aktivere Flytbare Storage Access Control (RSAC) på følgende måde:
+   Du kan aktivere enhedskontrol på følgende måde:
 
-   - Gå til **Computerkonfiguration > Administrative skabeloner > Windows Komponenter > Microsoft Defender Antivirus > Funktioner > Enhedskontrol**
+   - Gå til **Computerkonfiguration > Administrative skabeloner > Windows-komponenter > Microsoft Defender Antivirus > Funktioner > Enhedskontrol**
    - I vinduet **Enhedskontrol** skal du vælge **Aktiveret**.
 
    :::image type="content" source="images/enable-rsac-gp.png" alt-text="Skærmbillede af aktivering af RSAC ved hjælp af Gruppepolitik " lightbox="images/enable-rsac-gp.png":::
 
 2. Angiv standard gennemtvingelse:
 
-   Du kan angive standardadgang (Afvis eller Tillad) til flytbare medier, hvis der ikke er en politik på følgende måde:
+   Du kan angive standardadgang (Afvis eller Tillad) for alle enhedskontrolfunktioner (Flytbare medier, CdRomDevices, WpdDevices, PrinterDevices).
 
-   - Gå til **Computerkonfiguration > Administrative skabeloner > Windows Komponenter > Microsoft Defender Antivirus > Funktioner > Enhedskontrol > Vælg standard gennemtvingelse af enhedskontrol**
+   Du har f.eks. enten politikken Afvis eller Tillad for RemovableMediaDevices, men du har ikke nogen politik for CdRomDevices eller WpdDevices. Du angiver Standardafvis via denne politik, og derefter blokeres adgangen Læs/Skriv/Udfør til CdRomDevices eller WpdDevices. Hvis du kun vil administrere lagerpladsen, skal du sørge for at oprette Tillad politik for printer. Ellers anvendes denne standard gennemtvingelse også på printeren.
+
+   - Gå til **Computerkonfiguration > Administrative skabeloner > Windows-komponenter > Microsoft Defender Antivirus > Funktioner > Enhedskontrol > Vælg standard gennemtvingelse af enhedskontrol**
 
    - I vinduet **Vælg standard gennemtvingelse af enhedskontrol** skal du vælge **Standardafvis:**
 
@@ -361,7 +363,7 @@ Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit
 
    Du kan kombinere politikgrupper for enhedskontrol i én XML-fil på følgende måde:
 
-   - Gå til **Computerkonfiguration** \> **Administrative skabeloner** \> **Windows Komponenter** \> **Microsoft Defender Antivirus** \> **Enhedskontrol** \> **Definer politikgrupper for enhedskontrol**.
+   - Gå til **Computerkonfiguration** \> **Administrative skabeloner** \> **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **Enhedskontrol** \> **Definer politikgrupper for enhedskontrol**.
 
     :::image type="content" source="images/define-device-control-policy-grps-gp.png" alt-text="Skærmbillede af Definer politikgrupper for enhedskontrol" lightbox="images/define-device-control-policy-grps-gp.png":::
 
@@ -377,7 +379,7 @@ Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit
 
    Du kan kombinere politikregler for enhedskontrol i én XML-fil på følgende måde:
 
-   - Gå til **Computerkonfiguration > Administrative skabeloner > Windows Komponenter > Microsoft Defender Antivirus > Enhedskontrol > Definer politikregler for enhedskontrol**
+   - Gå til **Computerkonfiguration > Administrative skabeloner > Windows-komponenter > Microsoft Defender Antivirus > Device Control > Definer politikregler for enhedskontrol**
 
      :::image type="content" source="images/define-device-cntrl-policy-rules-gp.png" alt-text="Skærmbillede af definer politikregler for enhedskontrol" lightbox="images/define-device-cntrl-policy-rules-gp.png":::
 
@@ -393,15 +395,15 @@ Før du kommer i gang med Flytbare Storage Access Control, skal du bekræfte dit
 
     Hvis du vil have en kopi af filen (beviser), når skriveadgangen finder sted, skal du angive den placering, hvor systemet kan gemme kopien.
 
-    - Gå til **Computerkonfiguration > Administrative skabeloner > Windows Komponenter > Microsoft Defender Antivirus > Enhedskontrol > Definer dataplacering for enhedskontrol.**
+    - Gå til **Computerkonfiguration > Administrative skabeloner > Windows-komponenter > Microsoft Defender Antivirus > Device Control > Define Device Control evidence data remote location**.
 
     - I vinduet **Definer beviser for enhedskontroldata skal** du vælge **Aktiveret** og angive stien til den lokale mappe eller netværkssharemappe.
 
       :::image type="content" source="images/evidence-data-remote-location-gp.png" alt-text="Skærmbillede af fjernplacering af enhedskontroldata" lightbox="images/evidence-data-remote-location-gp.png":::
 
-## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Få vist flytbare Storage Access Control data for enhedsstyring i Microsoft Defender for Endpoint
+## <a name="view-device-control-removable-storage-access-control-data-in-microsoft-defender-for-endpoint"></a>Få vist data om flytbare lagermedier til enhedsstyring Access Control data i Microsoft Defender for Endpoint
 
-På [Microsoft 365 Defender-portalen](https://security.microsoft.com/advanced-hunting) vises hændelser, der udløses af flytbare Storage Access Control for enhedskontrol. Hvis du vil have adgang til Microsoft 365 sikkerhed, skal du have følgende abonnement:
+På [Microsoft 365 Defender-portalen](https://security.microsoft.com/advanced-hunting) vises hændelser, der udløses af Access Control til Flytbare lagermedier for enhedskontrol. Hvis du vil have adgang til sikkerheden i Microsoft 365, skal du have følgende abonnement:
 
 - Microsoft 365 til E5-rapportering
 
@@ -483,7 +485,7 @@ Du kan køre "Get-MpComputerStatus" på PowerShell som administrator. Følgende 
 
 ### <a name="how-can-i-know-which-machine-is-using-out-of-date-antimalware-client-version-in-the-organization"></a>Hvordan ved jeg, hvilken computer der bruger forældet antimalwareklientversion i organisationen?
 
-Du kan bruge følgende forespørgsel til at hente en antimalwareklientversion på Microsoft 365 sikkerhedsportalen:
+Du kan bruge følgende forespørgsel til at hente en antimalwareklientversion på Microsoft 365-sikkerhedsportalen:
 
 ```kusto
 //check the antimalware client version

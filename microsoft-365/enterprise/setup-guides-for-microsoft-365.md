@@ -1,5 +1,5 @@
 ---
-title: Installationsvejledninger til Microsoft 365 og Office 365 tjenester
+title: Installationsvejledninger til Microsoft 365- og Office 365-tjenester
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
@@ -21,19 +21,19 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Få trinvise værktøjer til at planlægge, overføre og implementere funktionerne i din lejers licenser. Find en vejledning til, hvordan du konfigurerer en tjeneste eller en app, du skal køre.
-ms.openlocfilehash: 832c551c9f42082d4c55c8a7902a740ef124012d
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: f1d16517d92e059fc6ca2646fc64ae7ba63ce3a8
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078540"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491651"
 ---
-# <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Installationsvejledninger til Microsoft 365 og Office 365 tjenester
+# <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Installationsvejledninger til Microsoft 365- og Office 365-tjenester
 
-Microsoft 365 og Office 365 konfigurationsvejledninger giver dig skræddersyet vejledning og ressourcer til planlægning og udrulning af din lejer, dine apps og tjenester. Disse vejledninger oprettes ved hjælp af de samme bedste fremgangsmåder, som [Microsoft 365 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) onboardingspecialister deler i individuelle interaktioner, og de er tilgængelige for alle administratorer i Microsoft 365 Administration. De giver oplysninger om produktkonfiguration, aktivering af sikkerhedsfunktioner, udrulning af samarbejdsværktøjer og stiller scripts til rådighed for at fremskynde avancerede udrulninger.
+Konfigurationsvejledninger til Microsoft 365 og Office 365 giver dig skræddersyet vejledning og ressourcer til planlægning og installation af din lejer, dine apps og tjenester. Disse vejledninger oprettes ved hjælp af de samme bedste fremgangsmåder, som [Onboarding-specialister i Microsoft 365 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365) deler i individuelle interaktioner, og de er tilgængelige for alle administratorer i Microsoft 365 Administration. De giver oplysninger om produktkonfiguration, aktivering af sikkerhedsfunktioner, udrulning af samarbejdsværktøjer og stiller scripts til rådighed for at fremskynde avancerede udrulninger.
 
 > [!NOTE]
-> Du skal være tildelt en administratorrolle, f.eks. Global læser, for at få adgang til Microsoft 365 konfigurationsvejledninger. Det er kun administratorer med rollen Global administrator, der kan bruge hjælpelinjerne til at ændre indstillingerne i lejeren.
+> Du skal være tildelt en administratorrolle, f.eks. Global Læser, for at få adgang til Microsoft 365-konfigurationsvejledningerne. Det er kun administratorer med rollen Global administrator, der kan bruge hjælpelinjerne til at ændre indstillingerne i lejeren.
 
 ## <a name="how-to-access-setup-guides-in-the-microsoft-365-admin-center"></a>Sådan får du adgang til konfigurationsvejledninger i Microsoft 365 Administration
 
@@ -53,7 +53,7 @@ Du kan få adgang til installationsvejledningerne på siden [med konfigurationsv
 
 ### <a name="prepare-your-environment"></a>Forbered dit miljø
 
-Vejledningen [Forbered dit miljø](https://aka.ms/prepareyourenvironment) hjælper dig med at forberede organisationens miljø til Microsoft 365 og Office 365 tjenester. Uanset hvad dine mål er, er der opgaver, du skal udføre for at sikre en vellykket udrulning. Hvis du vil undgå fejl under forberedelse af dit miljø, får du en trinvis vejledning i, hvordan du opretter forbindelse til dit domæne, tilføjer brugere, tildeler licenser, konfigurerer mail med Exchange Online og installerer eller installerer Office apps.
+Vejledningen [Forbered dit miljø](https://aka.ms/prepareyourenvironment) hjælper dig med at forberede organisationens miljø til Microsoft 365- og Office 365-tjenester. Uanset hvad dine mål er, er der opgaver, du skal udføre for at sikre en vellykket udrulning. Hvis du vil undgå fejl under forberedelse af dit miljø, får du en trinvis vejledning i, hvordan du opretter forbindelse til dit domæne, tilføjer brugere, tildeler licenser, konfigurerer mail med Exchange Online og installerer eller installerer Office-apps.
 
 ### <a name="email-setup-guide"></a>Vejledning til konfiguration af mail
 
@@ -61,35 +61,39 @@ Vejledningen [Forbered dit miljø](https://aka.ms/prepareyourenvironment) hjælp
 
 ### <a name="migrate-gmail-contacts-and-calendar-items"></a>Overfør Gmail-kontakter og kalenderelementer
 
-Når du overfører en Gmail-brugers postkasse til Microsoft 365, overføres mails, men kontakter og kalenderelementer er ikke. [Gmail-kontakterne og kalenderrådgiveren](https://aka.ms/gmailcontactscalendar) indeholder trin til import af Google-kontakter og Google-kalenderelementer for at Microsoft 365 ved hjælp af import- og eksportmetoder med Outlook.com, Outlook-klienten eller PowerShell.
+Når du overfører en Gmail-brugers postkasse til Microsoft 365, overføres mailmeddelelser, men kontakter og kalenderelementer er ikke. [Gmail-kontakterne og kalenderrådgiveren](https://aka.ms/gmailcontactscalendar) indeholder trin til import af Google-kontakter og Google-kalenderelementer til Microsoft 365 ved hjælp af import- og eksportmetoder med Outlook.com, Outlook-klienten eller PowerShell.
 
-### <a name="microsoft-365-setup-guide"></a>Microsoft 365 konfigurationsvejledning
+### <a name="microsoft-365-setup-guide"></a>Installationsvejledning til Microsoft 365
 
-[Konfigurationsvejledningen til Microsoft 365](https://aka.ms/microsoft365setupguide) giver dig vejledning, når du konfigurerer produktivitetsværktøjer, sikkerhedspolitikker og funktioner til enhedshåndtering. Med et Microsoft 365 Business Premium- eller Microsoft 365 til virksomhedsabonnement kan du bruge denne rådgiver til at konfigurere organisationens enheder.
+[Konfigurationsvejledningen til Microsoft 365](https://aka.ms/microsoft365setupguide) giver dig vejledning, når du konfigurerer produktivitetsværktøjer, sikkerhedspolitikker og funktioner til enhedshåndtering. Med et Microsoft 365 Business Premium- eller Microsoft 365 for enterprise-abonnement kan du bruge denne rådgiver til at konfigurere organisationens enheder.
 
-Du får vejledning og adgang til ressourcer, så du kan aktivere dine cloudtjenester, opdatere enheder til den nyeste understøttede version af Windows 10 og slutte enheder til Azure Active Directory (Azure AD) på én central placering.
+Du får vejledning og adgang til ressourcer, så du kan aktivere dine cloudtjenester, opdatere enheder til den nyeste understøttede version af Windows 10 og føje enheder til Azure Active Directory (Azure AD) på én central placering.
 
 ### <a name="remote-work-setup-guide"></a>Vejledning til konfiguration af fjernarbejde
 
 [Konfigurationsvejledningen til fjernarbejde](https://aka.ms/remoteworksetup) giver organisationer de tip og ressourcer, der er nødvendige for at sikre, at dine brugere kan arbejde eksternt, at dine data er sikre, og at brugernes legitimationsoplysninger beskyttes.
 
-Du får vejledning til at optimere fjernarbejderes enhedstrafik til både Microsoft 365 ressourcer i cloudmiljøet og organisationens netværk, hvilket vil reducere belastningen på VPN-infrastrukturen med fjernadgang.
+Du får vejledning til at optimere fjernarbejderes enhedstrafik til både Microsoft 365-ressourcer i cloudmiljøet og organisationens netværk, hvilket vil reducere belastningen på VPN-infrastrukturen for fjernadgang.
 
-### <a name="microsoft-edge-setup-guide"></a>konfigurationsvejledning til Microsoft Edge
+### <a name="microsoft-edge-setup-guide"></a>Installationsvejledning til Microsoft Edge
 
 Microsoft Edge er blevet genopbygget fra bunden for at give dig kompatibilitet og ydeevne i verdensklasse, den sikkerhed og beskyttelse af personlige oplysninger, du fortjener, og nye funktioner, der er designet til at give dig det bedste fra internettet.
 
-[Konfigurationsvejledningen til Microsoft Edge](https://aka.ms/edgeadvisoradmin) hjælper dig med at konfigurere Registrering af virksomhedswebsted for at se, hvilke websteder der kan være brug for i din organisation for at bruge IE-tilstand, gennemse og konfigurere vigtige sikkerhedsfunktioner, konfigurere politikker for beskyttelse af personlige oplysninger og politikker for overholdelse af angivne standarder, så de opfylder organisationens krav, og administrere webadgang på dine enheder. Du kan downloade Microsoft Edge til individuelle enheder, eller vi viser dig, hvordan du udruller til flere brugere i din organisation med Gruppepolitik, Configuration Manager eller Microsoft Intune.
+[Konfigurationsvejledningen til Microsoft Edge](https://aka.ms/edgeadvisoradmin) hjælper dig med at konfigurere Registrering af virksomhedswebsted for at se, hvilke websteder der kan være behov for at bruge IE-tilstand, gennemse og konfigurere vigtige sikkerhedsfunktioner, konfigurere politikker for beskyttelse af personlige oplysninger og politikker for overholdelse af angivne standarder, så de opfylder organisationens krav, og administrere webadgang på dine enheder. Du kan downloade Microsoft Edge til individuelle enheder, eller vi viser dig, hvordan du udruller til flere brugere i din organisation med Gruppepolitik, Configuration Manager eller Microsoft Intune.
 
-### <a name="configure-ie-mode-for-microsoft-edge"></a>Konfigurer IE-tilstand for Microsoft Edge
+### <a name="configure-ie-mode-for-microsoft-edge"></a>Konfigurer IE-tilstand til Microsoft Edge
 
-Hvis du allerede har installeret Microsoft Edge og kun vil konfigurere IE-tilstand, vil [vejledningen Konfigurer IE-tilstand for Microsoft Edge](https://aka.ms/configureiemodeadmin) give dig scripts til at automatisere konfigurationen af Enterprise Site Discovery. Du får også anbefalinger til IE-tilstand fra et skybaseret værktøj, der hjælper dig med at oprette en liste over enterprise-tilstandswebsteder, der skal udrulles til dine brugere.
+Hvis du allerede har installeret Microsoft Edge og kun vil konfigurere IE-tilstand, giver [vejledningen Konfigurer IE-tilstand til Microsoft Edge](https://aka.ms/configureiemodeadmin) dig scripts til at automatisere konfigurationen af Enterprise Site Discovery. Du får også anbefalinger til IE-tilstand fra et skybaseret værktøj, der hjælper dig med at oprette en liste over enterprise-tilstandswebsteder, der skal udrulles til dine brugere.
 
-### <a name="microsoft-search-setup-guide"></a>Microsoft Søg konfigurationsvejledning
+### <a name="microsoft-search-setup-guide"></a>Installationsvejledning til Microsoft Search
 
-Microsoft Søg hjælper din organisation med at finde det, de skal bruge for at fuldføre det, de arbejder på. Uanset om du søger efter personer, filer, organisationsdiagrammer, websteder eller svar på almindelige spørgsmål, kan din organisation bruge Microsoft Søg i hele deres arbejdsdag for at få svar.
+Microsoft Search hjælper din organisation med at finde det, de skal bruge for at fuldføre det, de arbejder på. Uanset om du søger efter personer, filer, organisationsdiagrammer, websteder eller svar på almindelige spørgsmål, kan din organisation bruge Microsoft Search i hele deres arbejdsdag til at få svar.
 
-[Konfigurationsvejledningen til Microsoft Søg](https://aka.ms/MicrosoftSearchSetup) hjælper dig med at konfigurere Microsoft Søg, om du vil styre den til en gruppe af brugere eller udrulle den til alle i din organisation. Du skal tildele søgeadministratorer og søgeeditorer og derefter tilpasse søgeoplevelsen for dine brugere med svar og flere muligheder, f.eks. føje Bing udvidelse til Chrome eller angive Bing som din standardsøgemaskine.
+[Konfigurationsvejledningen til Microsoft Search](https://aka.ms/MicrosoftSearchSetup) hjælper dig med at konfigurere Microsoft Search, uanset om du vil køre den som pilot for en gruppe brugere eller udrulle den til alle i din organisation. Du skal tildele søgeadministratorer og søgeeditorer og derefter tilpasse søgeoplevelsen for dine brugere med svar og flere muligheder, f.eks. føje Bing-udvidelsen til Chrome eller angive Bing som din standardsøgemaskine.
+
+### <a name="block-use-of-internet-explorer-in-your-organization"></a>Bloker brugen af Internet Explorer i din organisation
+
+Microsofts support til Internet Explorer 11 ophører snart for de fleste versioner af Windows 10. [Block-brug af Internet Explorer i din organisationsvejledning](https://aka.ms/retireinternetexplorer) sikrer, at dine brugere stadig kan køre ældre webapps, der er afhængige af Internet Explorer. Denne vejledning hjælper dig også med at flytte disse brugere til Microsoft Edge med IE-tilstand.
 
 ## <a name="guides-for-authentication-and-access"></a>Vejledninger til godkendelse og adgang
 
@@ -103,11 +107,11 @@ Vejledningen [Identitetssikkerhed for teams](https://admin.microsoft.com/Adminpo
 
 ### <a name="add-or-sync-users-to-microsoft-365"></a>Føj eller synkroniser brugere til Microsoft 365
 
-[Denne vejledning](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard) hjælper med at strømline processen med at få dine brugerkonti konfigureret i **Microsoft 365**. Baseret på dit miljø og dine behov kan du vælge at tilføje brugere individuelt, overføre din lokale mappe med Azure AD cloudsynkronisering eller Azure AD Forbind eller foretage fejlfinding af eksisterende synkroniseringsproblemer, når det er nødvendigt.
+[Denne vejledning](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/modernonboarding/identitywizard) hjælper med at strømline processen med at få dine brugerkonti konfigureret i **Microsoft 365**. Baseret på dit miljø og dine behov kan du vælge at tilføje brugere individuelt, overføre din lokale mappe med Azure AD cloudsynkronisering eller Azure AD Opret forbindelse eller foretage fejlfinding af eksisterende synkroniseringsproblemer, når det er nødvendigt.
 
 ### <a name="azure-ad-setup-guide"></a>Azure AD konfigurationsvejledning
 
-[Konfigurationsvejledningen til Azure AD](https://aka.ms/aadpguidance) indeholder oplysninger, der sikrer, at din organisation har et stærkt sikkerhedsgrundlag. I denne vejledning skal du konfigurere de første funktioner, f.eks. Azure Role-based access control (Azure RBAC) for administratorer, Azure AD Forbind til din lokale mappe og Azure AD Forbind Health, så du kan overvåge din hybrididentitets tilstand under automatiserede synkroniseringer.
+[Konfigurationsvejledningen til Azure AD](https://aka.ms/aadpguidance) indeholder oplysninger, der sikrer, at din organisation har et stærkt sikkerhedsgrundlag. I denne vejledning skal du konfigurere de første funktioner, f.eks. Azure Role-based access control (Azure RBAC) for administratorer, Azure AD Opret forbindelse til din lokale mappe og Azure AD Connect Health, så du kan overvåge din hybrididentitets tilstand under automatiserede synkroniseringer.
 
 Den indeholder også vigtige oplysninger om aktivering af selvbetjent nulstilling af adgangskode, betinget adgang og integreret tredjepartslogon, herunder valgfri avanceret identitetsbeskyttelse og automatisering af brugerklargøring.
 
@@ -120,7 +124,7 @@ Vejledningen [Synkroniser brugere fra Windows Server Active Directory](https://a
 Opgrader til en alternativ logonmetode, der giver brugerne mulighed for at få sikker adgang til deres enheder med en af følgende godkendelsesmetoder uden adgangskode:
 
 - Windows Hello til virksomheder
-- Appen Microsoft Authenticator
+- Microsoft Authenticator-appen
 - Sikkerhedsnøgler
 
 Brug [installationsvejledningen Planlæg din installation uden adgangskode](https://aka.ms/passwordlesssetup) til at finde de bedste godkendelsesmetoder uden adgangskode, som du kan bruge, og få vejledning i, hvordan du installerer dem.
@@ -137,7 +141,7 @@ Brug [installationsvejledningen Planlæg din selvbetjente adgangskodenulstilling
 
 ### <a name="active-directory-federation-services-ad-fs-deployment-advisor"></a>udrulningsrådgiver for Active Directory Federation Services (AD FS)
 
-[AD FS-udrulningsrådgiveren](https://aka.ms/adfsguidance) giver dig en trinvis vejledning i installation af en AD FS-infrastruktur i det lokale miljø, der godkender brugere til Microsoft 365 og Office 365 tjenester. Med denne vejledning kan din organisation gennemse AD FS-komponenter og -krav, hente og installere SSL-certifikater, der er nødvendige for installationen, og installere en påkrævet proxyserver for webprogrammet.
+[AD FS-udrulningsrådgiveren](https://aka.ms/adfsguidance) giver dig en trinvis vejledning i installation af en AD FS-infrastruktur i det lokale miljø, der godkender brugere til Microsoft 365- og Office 365-tjenester. Med denne vejledning kan din organisation gennemse AD FS-komponenter og -krav, hente og installere SSL-certifikater, der er nødvendige for installationen, og installere en påkrævet proxyserver for webprogrammet.
 
 ## <a name="guides-for-security-and-compliance"></a>Vejledninger til sikkerhed og overholdelse af angivne standarder
 
@@ -193,39 +197,47 @@ Få et overblik over de funktioner, du kan anvende i din strategi til beskyttels
 
 [Konfigurationsvejledningen til Microsoft Defender for Cloud Apps](https://aka.ms/cloudappsecuritysetup) gør det nemt at følge vejledningen til udrulning og administration for at konfigurere din Cloud Discovery-løsning. Med Cloud Discovery integrerer du dine understøttede sikkerhedsapps, og derefter skal du bruge trafiklogge til dynamisk at finde og analysere de cloudapps, som din organisation bruger. Du skal også konfigurere funktioner, der er tilgængelige via Defender for Cloud Apps-løsningen, herunder politikker for trusselsregistrering for at identificere højrisikoanvendelse, politikker til beskyttelse af oplysninger for at definere adgang og sessionskontrol i realtid til overvågning af aktivitet. Med disse funktioner får dit miljø forbedret synlighed, kontrol over dataflytning og analyser til at identificere og bekæmpe cybertrusler på tværs af alle dine Cloudtjenester i Microsoft og tredjepart.
 
+### <a name="audit-solutions-setup-guide"></a>Vejledning til konfiguration af overvågningsløsninger
+
+[Microsoft 365-vejledningen til overvågningsløsninger](https://aka.ms/auditsolutionsetup) indeholder en integreret løsning, der hjælper organisationer med effektivt at reagere på sikkerhedshændelser, tekniske undersøgelser og overholdelse af angivne standarder. Når du bruger overvågningsløsningerne i Microsoft 365, kan du søge i overvågningsloggen efter aktiviteter, der er udført i forskellige Microsoft 365-tjenester.
+
+### <a name="ediscovery-solutions-setup-guide"></a>Vejledning til konfiguration af eDiscovery-løsninger
+
+eDiscovery er processen med at identificere og levere elektroniske oplysninger, der kan bruges som bevis i retssager. Konfigurationsvejledningen til eDiscovery-løsninger hjælper med at bruge eDiscovery-værktøjer i Microsoft Purview, der giver dig mulighed for at søge efter indhold i Exchange Online, OneDrive for Business, SharePoint Online, Microsoft Teams, Microsoft 365-grupper og Yammer-communities.
+
 ## <a name="guides-for-collaboration"></a>Vejledninger til samarbejde
 
 ### <a name="build-your-employee-experience"></a>Skab din medarbejderoplevelse
 
-Transformér, hvordan dine medarbejdere arbejder sammen med [dashboardet Medarbejderoplevelse](https://aka.ms/EmployeeExperienceDashboard). I forbindelse med problemfrit teamwork kan du bruge Microsoft 365 til at oprette produktive, justerede teams og holde medarbejderne engageret i ledelsen og resten af organisationen. Hjælp dine medarbejdere med at være effektive i alle arbejdsaktiviteter. Disse vejledninger indeholder instruktioner om, hvordan du bruger SharePoint, Teams og Yammer til at opbygge samarbejde på tværs af organisationen for at hjælpe med at fremme produktiviteten.
+Transformér, hvordan dine medarbejdere arbejder sammen med [dashboardet Medarbejderoplevelse](https://aka.ms/EmployeeExperienceDashboard). Hvis du vil arbejde problemfrit, skal du bruge Microsoft 365 til at oprette produktive, justerede teams og holde medarbejderne engageret i ledelsen og resten af organisationen. Hjælp dine medarbejdere med at være effektive i alle arbejdsaktiviteter. Disse vejledninger indeholder instruktioner om, hvordan du bruger SharePoint, Teams og Yammer til at opbygge samarbejde på tværs af din organisation for at hjælpe med at fremme produktiviteten.
 
 ### <a name="microsoft-365-apps-setup-guide"></a>Microsoft 365 Apps konfigurationsvejledning
 
-[Konfigurationsvejledningen til Microsoft 365 Apps](https://aka.ms/OPPquickstartguide) hjælper dig med at få brugernes enheder til at køre den nyeste version af Office produkter, f.eks. Word, Excel, PowerPoint og OneNote. Du får vejledning til de forskellige installationsmetoder, der omfatter nemme muligheder for selvinstallation af virksomhedsinstallationer med administrationsværktøjer. Vejledningen hjælper dig med at vurdere dit miljø, finde ud af dine specifikke installationskrav og implementere de nødvendige supportværktøjer for at sikre en vellykket installation.
+[Konfigurationsvejledningen til Microsoft 365 Apps](https://aka.ms/OPPquickstartguide) hjælper dig med at få dine brugeres enheder til at køre den nyeste version af Office-produkter, f.eks. Word, Excel, PowerPoint og OneNote. Du får vejledning til de forskellige installationsmetoder, der omfatter nemme muligheder for selvinstallation af virksomhedsinstallationer med administrationsværktøjer. Vejledningen hjælper dig med at vurdere dit miljø, finde ud af dine specifikke installationskrav og implementere de nødvendige supportværktøjer for at sikre en vellykket installation.
 
 ### <a name="mobile-apps-setup-guide"></a>Vejledning til konfiguration af mobilapps
 
-[Konfigurationsvejledningen til mobilapps](https://aka.ms/officeappguidance) indeholder instruktioner til download og installation af Office apps på dine Windows-, iOS- og Android-mobilenheder. Denne vejledning giver dig trinvise oplysninger om, hvordan du downloader og installerer Microsoft 365 og Office 365 apps på dine telefon- og tabletenheder.
+[Konfigurationsvejledningen til mobilapps](https://aka.ms/officeappguidance) indeholder instruktioner til download og installation af Office-apps på dine Windows-, iOS- og Android-mobilenheder. Denne vejledning giver dig trinvise oplysninger om, hvordan du downloader og installerer Microsoft 365- og Office 365-apps på dine telefon- og tabletenheder.
 
-### <a name="microsoft-teams-setup-guide"></a>konfigurationsvejledning til Microsoft Teams
+### <a name="microsoft-teams-setup-guide"></a>Konfigurationsvejledning til Microsoft Teams
 
-[Konfigurationsvejledningen til Microsoft Teams](https://aka.ms/teamsguidance) giver din organisation vejledning til at konfigurere teamarbejdsområder, der hoster samtaler i realtid via beskeder, opkald og lyd- eller videomøder for både team og privat kommunikation. Brug værktøjerne i denne vejledning til at konfigurere gæsteadgang, angive, hvem der kan oprette teams, og tilføje teammedlemmer fra en .csv-fil, alt sammen uden at det er nødvendigt at åbne en PowerShell-session. Du får også de bedste fremgangsmåder til at fastlægge organisationens netværkskrav og sikre en vellykket Teams udrulning.
+[Konfigurationsvejledningen til Microsoft Teams](https://aka.ms/teamsguidance) giver din organisation vejledning til at konfigurere teamarbejdsområder, der hoster samtaler i realtid via beskeder, opkald og lyd- eller videomøder for både team og privat kommunikation. Brug værktøjerne i denne vejledning til at konfigurere gæsteadgang, angive, hvem der kan oprette teams, og tilføje teammedlemmer fra en .csv-fil, alt sammen uden at det er nødvendigt at åbne en PowerShell-session. Du får også de bedste fremgangsmåder til at fastlægge din organisations netværkskrav og sikre en vellykket Udrulning af Teams.
 
-### <a name="teams-phone-setup-guide"></a>Teams Telefon konfigurationsvejledning
+### <a name="teams-phone-setup-guide"></a>Vejledning til konfiguration af Teams Phone
 
-[Konfigurationsvejledningen til Teams Telefon](https://aka.ms/teamsphonesetupguide) hjælper dig med at holde forbindelsen ved hjælp af moderne opkaldsløsninger. Anvend nøglefunktioner med et skybaseret opkaldskontrolsystem, der understøtter arbejdsbelastningen for telekommunikation for Teams. Du kan vælge og installere funktioner fra de tilgængelige offentlige PSTN-tilslutningsmuligheder (Switched Telephone Network). Du kan også finde hjælp til andre funktioner, f.eks. automatisk omstilling, opkaldskøer, Lydmøde, opkalds-id og livebegivenheder.
+[Konfigurationsvejledningen til Teams Phone](https://aka.ms/teamsphonesetupguide) hjælper dig med at holde forbindelsen ved hjælp af moderne opkaldsløsninger. Anvend vigtige funktioner med et cloudbaseret opkaldskontrolsystem, der understøtter arbejdsbelastningen for telekommunikation i Teams. Du kan vælge og installere funktioner fra de tilgængelige offentlige PSTN-tilslutningsmuligheder (Switched Telephone Network). Du kan også finde hjælp til andre funktioner, f.eks. automatisk omstilling, opkaldskøer, lydmøde, opkalds-id og livebegivenheder.
 
-### <a name="sharepoint-setup-guide"></a>konfigurationsvejledning til SharePoint
+### <a name="sharepoint-setup-guide"></a>Installationsvejledning til SharePoint
 
-[Konfigurationsvejledningen til SharePoint](https://aka.ms/spoguidance) hjælper dig med at konfigurere dit SharePoint dokumentlager og indholdsstyring, oprette websteder, konfigurere ekstern deling, overføre data og konfigurere avancerede indstillinger og fremme brugerengagement og kommunikation i din organisation. Du skal følge trinnene til konfiguration af dine politikker for tilladelse til deling af indhold, vælge dine værktøjer til synkronisering af migrering og aktivere sikkerhedsindstillingerne for dit SharePoint miljø.
+[Konfigurationsvejledningen til SharePoint](https://aka.ms/spoguidance) hjælper dig med at konfigurere dit SharePoint-dokumentlager og indholdsstyring, oprette websteder, konfigurere ekstern deling, overføre data og konfigurere avancerede indstillinger og fremme brugerengagement og kommunikation i din organisation. Du skal følge trinnene til konfiguration af dine politikker for tilladelser til deling af indhold, vælge dine værktøjer til synkronisering af migrering og aktivere sikkerhedsindstillingerne for dit SharePoint-miljø.
 
-### <a name="onedrive-setup-guide"></a>OneDrive konfigurationsvejledning
+### <a name="onedrive-setup-guide"></a>Konfigurationsvejledning til OneDrive
 
-Brug [konfigurationsvejledningen til OneDrive](https://aka.ms/ODfBquickstartguide) til at komme i gang med OneDrive fillagring, deling, samarbejde og synkroniseringsfunktioner. OneDrive er en central placering, hvor brugerne kan synkronisere deres Microsoft 365 Apps filer, konfigurere ekstern deling, overføre brugerdata og konfigurere avancerede indstillinger for sikkerhed og enhedsadgang. Konfigurationsvejledningen til OneDrive kan udrulles ved hjælp af et OneDrive-abonnement eller en separat OneDrive plan.
+Brug [konfigurationsvejledningen til OneDrive](https://aka.ms/ODfBquickstartguide) til at komme i gang med OneDrive-fillagring, -deling, -samarbejde og -synkroniseringsfunktioner. OneDrive indeholder en central placering, hvor brugerne kan synkronisere deres Microsoft 365 Apps filer, konfigurere ekstern deling, overføre brugerdata og konfigurere avancerede indstillinger for sikkerhed og enhedsadgang. Konfigurationsvejledningen til OneDrive kan installeres ved hjælp af et OneDrive-abonnement eller en separat OneDrive-plan.
 
-### <a name="yammer-deployment-advisor"></a>Yammer udrulningsrådgiver
+### <a name="yammer-deployment-advisor"></a>Yammer-udrulningsrådgiver
 
-Forbind og engagere dig i Yammer på tværs af din organisation. Yammer [udrulningsrådgiveren](https://aka.ms/yammerdeploymentguide) forbereder dit Yammer netværk ved at tilføje domæner, definere administratorer og kombinere Yammer netværk. Du får vejledning til at udrulle Yammer og derefter tilpasse udseendet, konfigurere sikkerhed og overholdelse af angivne standarder og tilpasse indstillingerne.
+Opret forbindelse til og engager på tværs af din organisation med Yammer. [Yammer-udrulningsrådgiveren](https://aka.ms/yammerdeploymentguide) forbereder dit Yammer-netværk ved at tilføje domæner, definere administratorer og kombinere Yammer-netværk. Du får vejledning til at udrulle Yammer og derefter tilpasse udseendet, konfigurere sikkerhed og overholdelse af angivne standarder og tilpasse indstillingerne.
 
 ## <a name="advanced-guides"></a>Avancerede vejledninger
 
@@ -235,22 +247,22 @@ Brug den [direkte opgradering med Configuration Manager vejledning](https://aka.
 
 ### <a name="deploy-office-to-your-users"></a>Udrul Office til dine brugere
 
-Udrul Office apps fra cloudmiljøet med mulighed for at tilpasse din installation ved hjælp af Office Deployment Tool. Vejledningen [Installér Office til dine brugere](https://aka.ms/proplusodt) hjælper dig med at oprette en brugerdefineret Office konfiguration med avancerede indstillinger, eller du kan bruge en færdigbygget anbefalet konfiguration. Uanset om dine brugere foretager en selvinstallation, eller du udruller til dine brugere enkeltvist eller samlet, giver denne avancerede vejledning dig en trinvis vejledning til at give brugerne en Office installation, der er skræddersyet til din organisation.
+Udrul Office-apps fra cloudmiljøet med mulighed for at tilpasse din installation ved hjælp af Office-installationsværktøjet. [Vejledningen Installér Office til dine brugere](https://aka.ms/proplusodt) hjælper dig med at oprette en tilpasset Office-konfiguration med avancerede indstillinger, eller du kan bruge en færdigbygget anbefalet konfiguration. Uanset om dine brugere udfører en selvinstallation, eller du udruller til dine brugere enkeltvist eller samlet, giver denne avancerede vejledning dig en trinvis vejledning til at give brugerne en Office-installation, der er skræddersyet til din organisation.
 
 ### <a name="deploy-office-to-remote-users"></a>Udrul Office til eksterne brugere
 
-Nu, hvor fjernarbejde er normen, skal brugerne modtage organisationens Office indstillinger, når de ikke har forbindelse til dit interne netværk, eller når de bruger deres egne enheder.
+Nu, hvor fjernarbejde er normen, skal brugerne modtage din organisations Office-indstillinger, når de ikke har forbindelse til dit interne netværk, eller når de bruger deres egne enheder.
 
-Brug [vejledningen Installér Office til fjernbrugere](https://aka.ms/officeremoteinstall) til at oprette en brugerdefineret Office installation, og send derefter brugerne et genereret PowerShell-script, der uden problemer installerer Office med konfigurationen.
+Brug [vejledningen Udrul Office til eksterne brugere](https://aka.ms/officeremoteinstall) til at oprette en tilpasset Office-installation, og send derefter brugerne et genereret PowerShell-script, der problemfrit installerer Office med din konfiguration.
 
 ### <a name="deploy-and-update-microsoft-365-apps-with-configuration-manager"></a>Udrul og opdater Microsoft 365 Apps med Configuration Manager
 
-For organisationer, der bruger Configuration Manager, kan du bruge [Microsoft 365 Apps Udrul og opdater med Configuration Manager rådgiver](https://aka.ms/oppinstall) til at generere et script, der automatisk konfigurerer din Microsoft 365 Apps udrulning ved hjælp af bedste fremgangsmåder anbefales af FastTrack teknikere. Brug denne vejledning til at bygge dine udrulningsgrupper, tilpasse dine Office apps og funktioner, konfigurere dynamiske eller lean installationer og derefter køre scriptet for at oprette de programmer, regler for automatisk udrulning og enhedssamlinger, du skal bruge for at målrette udrulningen.
+For organisationer, der bruger Configuration Manager, kan du bruge [Microsoft 365 Apps Udrul og opdater med Configuration Manager rådgiver](https://aka.ms/oppinstall) til at generere et script, der automatisk konfigurerer din Microsoft 365 Apps  installation ved hjælp af de bedste fremgangsmåder, der anbefales af FastTrack-teknikere. Brug denne vejledning til at bygge dine udrulningsgrupper, tilpasse dine Office-apps og -funktioner, konfigurere dynamiske eller magre installationer og derefter køre scriptet for at oprette de programmer, regler for automatisk udrulning og enhedssamlinger, du skal bruge for at målrette udrulningen.
 
 ### <a name="intune-configuration-manager-co-management-setup-guide"></a>vejledning til konfiguration af Intune Configuration Manager medadministration
 
 Brug [konfigurationsvejledningen til Intune Configuration Manager medadministration](https://aka.ms/comanagementsetup) til at konfigurere eksisterende Configuration Manager klientenheder og nye internetbaserede enheder, som din organisation vil være med til at administrere med både Microsoft Intune og Configuration Manager. Med administration giver dig mulighed for at administrere Windows 10 enheder og føje nye funktioner til din organisations enheder, samtidig med at du modtager fordelene ved begge løsninger.
 
-### <a name="school-data-sync-rollover-setup-guide"></a>Skoledatasynkronisering vejledning til konfiguration af rollover
+### <a name="school-data-sync-rollover-setup-guide"></a>Konfigurationsvejledning til rollover til skoledata
 
-[Konfigurationsvejledningen til SDS rollover](https://aka.ms/sdsrolloversetupguide) indeholder trinnene, der hjælper din organisation med at synkronisere data om studerende for at Azure Active Directory og Office 365. Denne vejledning strømliner termens livscyklusstyringsproces ved at oprette Office 365 grupper til Exchange Online og SharePoint Online, klasseteams til Microsoft Teams og OneNote samt Intune  til uddannelse og rostering og integration med enkeltlogon for tredjepartsapps. Du udfører afslutning på årsskiftet, lejeroprydning og -arkiv, forberedelse af nyt skoleår og lancering af nyt skoleår. Derefter kan du oprette nye profiler ved hjælp af den metode til synkroniseringsinstallation, der passer til din organisation.
+[Konfigurationsvejledningen til SDS Rollover](https://aka.ms/sdsrolloversetupguide) indeholder de trin, der kan hjælpe din organisation med at synkronisere data om studerende til Azure Active Directory og Office 365. Denne vejledning strømliner administrationsprocessen for livscyklussen ved at oprette Office 365 grupper til Exchange Online og SharePoint Online, klasseteams til Microsoft Teams og OneNote samt Intune for Education samt rostering og enkeltlogonintegration for tredjepartsapps. Du udfører afslutning på årsskiftet, lejeroprydning og -arkiv, forberedelse af nyt skoleår og lancering af nyt skoleår. Derefter kan du oprette nye profiler ved hjælp af den metode til synkroniseringsinstallation, der passer til din organisation.

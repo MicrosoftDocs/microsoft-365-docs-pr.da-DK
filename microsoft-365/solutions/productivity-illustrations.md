@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365-produktivitetsillustrationer
-description: Få mere at vide om, hvordan du implementerer Microsoft 365 og Microsoft Teams produktivitetsløsninger med disse arkitekturdiagrammer.
+description: Få mere at vide om, hvordan du implementerer Microsoft 365- og Microsoft Teams-produktivitetsløsninger med disse arkitekturdiagrammer.
 ms.author: samanro
 author: samanro
 manager: bcarter
@@ -13,34 +13,34 @@ ms.collection:
 - M365-security-compliance
 ms.custom: ''
 f1.keywords: NOCSH
-ms.openlocfilehash: 08a85610d7790924e5e702f9d0a4133f391c4bde
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: a0b9688cf184a3b35c4780d4fdaf979fca193380
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669270"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487620"
 ---
 # <a name="microsoft-365-productivity-illustrations"></a>Microsoft 365-produktivitetsillustrationer
 
-Den Microsoft 365 virksomhedsløsningsserie indeholder en vejledning i implementering af Microsoft 365 funktioner, især hvor funktioner på tværs af teknologier, herunder Teams arkitekturdiagrammer.
+Microsoft 365 Enterprise-løsningsserien indeholder en vejledning i implementering af Microsoft 365-funktioner, især hvor funktioner på tværs af teknologier, herunder Teams-arkitekturdiagrammer.
 
-## <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>Microsoft Teams og relaterede produktivitetstjenester i Microsoft 365 for it-arkitekter
-Den logiske arkitektur af produktivitetstjenester i Microsoft 365, der fører med Microsoft Teams.
+## <a name="microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects"></a>Microsoft Teams og relaterede produktivitetstjenester i Microsoft 365 til it-arkitekter
+Den logiske arkitektur af produktivitetstjenester i Microsoft 365, der fører an med Microsoft Teams.
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Teams logisk arkitekturplakat.](../downloads/msft-teams-logical-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.vsdx)  <br>Opdateret januar 2021   |Microsoft leverer en pakke med produktivitetstjenester, der arbejder sammen om at levere samarbejdsoplevelser med datastyring, sikkerhed og funktionalitet til overholdelse af angivne standarder. <br/> <br/>Denne serie illustrationer giver et overblik over den logiske arkitektur af produktivitetstjenester for virksomhedsarkitekter, der fører an i Microsoft Teams.|
+|[![Plakat med logisk arkitektur i Teams.](../downloads/msft-teams-logical-architecture-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-m365-teams-logical-architecture.vsdx)  <br>Opdateret januar 2021   |Microsoft leverer en pakke med produktivitetstjenester, der arbejder sammen om at levere samarbejdsoplevelser med datastyring, sikkerhed og funktionalitet til overholdelse af angivne standarder. <br/> <br/>Denne serie illustrationer giver et overblik over den logiske arkitektur af produktivitetstjenester for virksomhedsarkitekter, der fører an med Microsoft Teams.|
 
-## <a name="corporate-communications-with-microsoft-365--a-contoso-case-study"></a>Virksomhedskommunikation med Microsoft 365 — et Contoso-casestudie
+## <a name="corporate-communications-with-microsoft-365--a-contoso-case-study"></a>Virksomhedskommunikation med Microsoft 365 – et Contoso-casestudie
 Medarbejderengagement er en væsentlig bidragyder til arbejdstilfredshed, fastholdelse og produktivitet i enhver organisation. På tværs af Microsoft 365 er der flere måder at kommunikere og engagere din målgruppe på. 
 
 At vide, hvilken metode (eller kombinationer af metoder) der skal bruges, og hvornår de skal bruges, afhænger af dit publikum og din organisations kommunikationskultur. 
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Plakat med contoso-virksomhedskommunikationsscenarie.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Opdateret januar 2022   |Denne plakat illustrerer, hvordan Contoso holder medarbejderne informeret og engageret på tværs af populære kommunikationsscenarier. Contoso bruger en række Microsoft 365 apps, herunder et nyt tilbud, Viva Connections.<br/><br/>**Relaterede løsningsvejledninger** <br/> <ul><li>[Organisationskommunikation: Vejledning, metoder og produkter](/sharepoint/corporate-communications-overview)|
+|[![Plakat med contoso-virksomhedskommunikationsscenarie.](../media/solutions-architecture-center/contoso-corporate-communication-thumb.png)](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) <br/> [PDF](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.pdf) \| [Visio](https://download.microsoft.com/download/0/3/4/034fbee5-ecf4-4559-86d3-815e898f21ea/contoso-corporate-communication-poster.vsdx)  <br>Opdateret januar 2022   |Denne plakat illustrerer, hvordan Contoso holder medarbejderne informeret og engageret på tværs af populære kommunikationsscenarier. Contoso bruger en række Microsoft 365-apps, herunder et nyt tilbud, Viva Connections.<br/><br/>**Relaterede løsningsvejledninger** <br/> <ul><li>[Organisationskommunikation: Vejledning, metoder og produkter](/sharepoint/corporate-communications-overview)|
 
-## <a name="groups-in-microsoft-365-for-it-architects"></a>Grupper i Microsoft 365 for it-arkitekter
+## <a name="groups-in-microsoft-365-for-it-architects"></a>Grupper i Microsoft 365 til it-arkitekter
 Denne illustration indeholder oplysninger til it-arkitekter om Microsoft 365-grupper. Hvis du vil vide mere om konfiguration og administration af Microsoft 365-grupper og teams til samarbejde i din organisation, skal du se [Konfigurer sikkert samarbejde med Microsoft 365](/microsoft-365/solutions/setup-secure-collaboration-with-teams) og [Hvad er styring af samarbejde?](/microsoft-365/solutions/collaboration-governance-overview).
 
 | Element | Beskrivelse |
@@ -49,30 +49,30 @@ Denne illustration indeholder oplysninger til it-arkitekter om Microsoft 365-gru
 
 ## <a name="migrate-to-microsoft-365"></a>Migrer til Microsoft 365
 
-Microsoft indeholder værktøjer til overførsel af dine netværksfilshares og SharePoint Server-websteder, så de Microsoft 365 med fokus på at beskytte og sikre dit indholds sikkerhed under overførslen. Dette sæt illustrationer viser de forskellige metoder, der er tilgængelige til at flytte dit indhold til SharePoint, Teams og OneDrive, og hvordan dine data flyder gennem processen.
+Microsoft indeholder værktøjer til overførsel af dine lokale netværksfilshares og SharePoint Server-websteder til Microsoft 365 med fokus på at beskytte og sikre dit indholds sikkerhed under migrering. Dette sæt illustrationer viser de forskellige metoder, der er tilgængelige til at flytte dit indhold til SharePoint, Teams og OneDrive, og hvordan dine data flyder gennem processen.
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Modelplakat: Migrer til Microsoft 365.](../media/solutions-architecture-center/msft-migration-thumb.png)](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf) <p> [PDF](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf)\| [Visio](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m-365-migration-posters-mm-spmt.vsdx) <p> Opdateret marts 2021 |Omfatter: <ul><li> Overførsel af filshare</li><li>SharePoint serveroverførsel</li></ul> <p> Du kan få flere oplysninger under [Overfør dit indhold til Microsoft 365](/sharepointmigration/migrate-to-sharepoint-online).|
+|[![Modelplakat: Migrer til Microsoft 365.](../media/solutions-architecture-center/msft-migration-thumb.png)](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf) <p> [PDF](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m365-migration-posters-mm-spmt.pdf)\| [Visio](https://download.microsoft.com/download/0/5/b/05b7fb7c-1557-4ebb-9036-c5fc3a4cd94c/m-365-migration-posters-mm-spmt.vsdx) <p> Opdateret marts 2021 |Omfatter: <ul><li> Overførsel af filshare</li><li>Overflytning af SharePoint Server</li></ul> <p> Du kan få flere oplysninger under [Overfør dit indhold til Microsoft 365](/sharepointmigration/migrate-to-sharepoint-online).|
 
-## <a name="microsoft-365-information-protection-and-compliance-capabilities"></a>Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder
+## <a name="microsoft-365-information-protection-and-compliance-capabilities"></a>Funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder i Microsoft 365
 
-Microsoft 365 omfatter en lang række funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder. Sammen med Microsofts produktivitetsværktøjer er disse funktioner designet til at hjælpe organisationer med at samarbejde i realtid, samtidig med at de overholder strenge lovgivningsmæssige rammer for overholdelse af angivne standarder.
+Microsoft 365 indeholder en lang række funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder. Sammen med Microsofts produktivitetsværktøjer er disse funktioner designet til at hjælpe organisationer med at samarbejde i realtid, samtidig med at de overholder strenge lovgivningsmæssige rammer for overholdelse af angivne standarder.
 
 Dette sæt illustrationer bruger en af de mest regulerede industrier, finansielle tjenester, til at vise, hvordan disse funktioner kan anvendes til at håndtere fælles lovgivningsmæssige krav. Du er velkommen til at tilpasse disse illustrationer til eget brug.
 
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Modelplakat: Microsoft 365 funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF Download](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)   <br/> Japansk: [Download som en PDF-download](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf)\| [som en Visio](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Beskyttelse af oplysninger og forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
+|[![Modelplakat: Funktioner til beskyttelse af oplysninger og overholdelse af angivne standarder i Microsoft 365.](../media/solutions-architecture-center/m365-compliance-illustrations-thumb.png)](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) <br/> Engelsk: [Download som en PDF-fil](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.pdf) [Download som En Visio-fil](https://download.microsoft.com/download/3/a/6/3a6ab1a3-feb0-4ee2-8e77-62415a772e53/m365-compliance-illustrations.vsdx)\|   <br/> Japansk: [Download som en PDF-fil](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.pdf) [Download som en Visio-fil](https://download.microsoft.com/download/6/f/1/6f1a7d0e-dd8e-442e-b073-8e94327ae4f8/m365-compliance-illustrations.vsdx)\|   <br/> Opdateret i november 2020|Omfatter: <ul><li>  Beskyttelse af oplysninger og forebyggelse af datatab</li><li>Opbevaringspolitikker og opbevaringsmærkater </li><li>Informationsbarrierer</li><li>Kommunikationsoverholdelse</li><li>Insiderrisiko</li><li>Dataindtagelse fra tredjepart</li>|
 
 
 ## <a name="security-and-information-protection-for-multi-region-organizations"></a>Sikkerhed og Information Protection for organisationer med flere områder
-Beskyttelse af sikkerhed og oplysninger for organisationer med flere områder med en enkelt Microsoft 365 lejer
+Sikkerhed og information til organisationer med flere områder med en enkelt Microsoft 365-lejer
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Infografik med flere områder.](../media/solutions-architecture-center/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx)<br>Opdateret marts 2020 |Det er af mange grunde det bedste valg og den bedste oplevelse at bruge en enkelt Microsoft 365 lejer til din globale organisation. Mange arkitekter kæmper dog med, hvordan de skal opfylde sikkerheds- og informationsbeskyttelsesmål på tværs af forskellige regioner. Dette sæt emner indeholder anbefalinger. |
+|[![Infografik med flere områder.](../media/solutions-architecture-center/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx)<br>Opdateret marts 2020 |Brug af en enkelt Microsoft 365-lejer til din globale organisation er det bedste valg og den bedste oplevelse af mange årsager. Mange arkitekter kæmper dog med, hvordan de skal opfylde sikkerheds- og informationsbeskyttelsesmål på tværs af forskellige regioner. Dette sæt emner indeholder anbefalinger. |
 
 <!--
 ## Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations
@@ -92,7 +92,7 @@ Afhængigt af dit miljø er nogle værktøjer bedre egnet til visse arkitekturer
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Tommelfingerbillede for Microsoft Defender for Endpoint udrulningsstrategi.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)\| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx)   <br>Opdateret september 2021| Det arkitektoniske materiale hjælper dig med at planlægge din udrulning for følgende arkitekturer: <ul><li> Oprindelig sky </li><li> Fælles administration </li><li> Det lokale</li><li>Evaluering og lokal onboarding</li> |
+|[![Tommelfingerbillede for Microsoft Defender for Endpoint udrulningsstrategi.](../media/solutions-architecture-center/mde-deployment-strategy.png)](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)<br/> [PDF](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.pdf)  \| [Visio](https://download.microsoft.com/download/5/6/0/5609001f-b8ae-412f-89eb-643976f6b79c/mde-deployment-strategy.vsdx) <br>Opdateret september 2021| Det arkitektoniske materiale hjælper dig med at planlægge din udrulning for følgende arkitekturer: <ul><li> Oprindelig sky </li><li> Fælles administration </li><li> Det lokale</li><li>Evaluering og lokal onboarding</li> |
 <!--
 
 <a name="BKMK_O365IDP"></a>
@@ -109,19 +109,20 @@ Recommended Zero Trust capabilities for protecting identities and devices that a
 
 ## <a name="ediscovery-premium-architecture-in-microsoft-365"></a>eDiscovery-arkitektur (Premium) i Microsoft 365
 
-eDiscovery (Premium) komplette arbejdsproces og dataflow, herunder i Microsoft 365 Multi-Geo-miljøer.
+eDiscovery (Premium) end-to-end-arbejdsproces og dataflow, herunder i Microsoft 365 Multi-Geo-miljøer.
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Modelplakat: eDiscovery-arkitektur (Premium) i Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Vis som et billede](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| [Download som en PDF-fil](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)\| [Download som en Visio](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx)   <br/> Opdateret oktober 2020|Omfatter: <ul><li>  Afslutningsarbejdsproces i et enkelt miljø</li><li>Komplette arbejdsprocesser i et Microsoft 365 Multi-Geo-miljø </li><li>Dataflow fra slutpunkt til slutpunkt, der understøtter EDRM-arbejdsprocessen</li> |
+|[![Modelplakat: eDiscovery (Premium)-arkitektur i Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) <br/> [Vis som et billede](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png) \| [Download som en PDF-fil](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.pdf)  \| [Download som Visio](https://download.microsoft.com/download/d/1/c/d1ce536d-9bcf-4d31-b75b-fcf0dc560665/m365-advanced-ediscovery-architecture.vsdx) <br/> Opdateret oktober 2020|Omfatter: <ul><li>  Afslutningsarbejdsproces i et enkelt miljø</li><li>Komplette arbejdsprocesser i et Microsoft 365 Multi-Geo-miljø </li><li>Dataflow fra slutpunkt til slutpunkt, der understøtter EDRM-arbejdsprocessen</li> |
 
 ## <a name="microsoft-telephony-solutions"></a>Microsoft Telephony Solutions
 
-Microsoft understøtter flere muligheder, når du begynder din rejse til Teams i Microsoft-cloudmiljøet. Denne plakat hjælper dig med at beslutte, hvilken Microsoft-telekommunikationsløsning (Telefonsystem i cloudmiljøet eller Enterprise-VoIP i det lokale miljø), der er den rette for brugerne i din organisation, og hvordan din organisation kan oprette forbindelse til PSTN (Public Switched Telephone Network).
+Denne plakat hjælper dig med at afgøre, hvilken Microsoft-telekommunikationsløsning der er den rette for brugerne i din organisation. I artiklen beskrives Telefonsystem, Microsofts teknologi til aktivering af opkaldskontrol og PBX-funktioner (Private Branch Exchange) i Microsoft 365 med Microsoft Teams. Plakaten beskriver også mulighederne for at oprette forbindelse mellem telefonsystemet og det offentlige telefonnetværk (PSTN).  
+
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Plakat for Microsoft Telephony Solutions.](../media/solutions-architecture-center/microsoft-telephony-solutions-thumb.png)](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) <br/> [PDF](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) \| [Visio](https://download.microsoft.com/download/7/5/c/75c13012-e20c-48bd-a6dd-ea49d1a3420d/microsoft-voice-solutions.vsdx) <br/>Opdateret marts 2021 | Du kan få mere at vide under [Planlæg din Teams stemmeløsning](/microsoftteams/cloud-voice-landing-page).|
+|[![Plakat for Microsoft Telephony Solutions.](../media/solutions-architecture-center/microsoft-voice-solutions-thumb.png)](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) <br/> [PDF](https://download.microsoft.com/download/4/3/5/435cd4e9-ca56-4fd1-acb6-d1fda7952320/microsoft-voice-solutions.pdf) \| [Visio](https://download.microsoft.com/download/7/5/c/75c13012-e20c-48bd-a6dd-ea49d1a3420d/microsoft-voice-solutions.vsdx) <br/>Opdateret i juni 2022 | Du kan få mere at vide under [Planlæg din Teams-stemmeløsning](/microsoftteams/cloud-voice-landing-page).|
 
 
 ## <a name="set-up-your-infrastructure-for-hybrid-work"></a>Konfigurer din infrastruktur til hybridarbejde
@@ -134,12 +135,12 @@ Opdateret i juni 2021
 
 Du kan få flere oplysninger i artiklen til denne plakat: [Konfigurer din infrastruktur til hybridarbejde med Microsoft 365](empower-people-to-work-remotely.md).
 
-## <a name="microsoft-teams-with-security-isolation"></a>Microsoft Teams med sikkerhedsisolering
+## <a name="microsoft-teams-with-security-isolation"></a>Microsoft Teams med sikkerhedsisolation
 
-Med Microsoft 365 kan du konfigurere et privat team i Microsoft Teams og bruge SharePoint indstillinger for webstedssikkerhed og en entydig følsomhedsmærkat til at kryptere filer, så det kun er teammedlemmer, der kan dekryptere dem.
+Med Microsoft 365 kan du konfigurere et privat team i Microsoft Teams og bruge sikkerhedsindstillingerne for SharePoint-webstedet og en entydig følsomhedsmærkat til at kryptere filer, så det kun er teammedlemmer, der kan dekryptere dem.
 
-[![Microsoft Teams med plakat med sikkerhedsisolation.](../media/secure-teams-security-isolation/team-security-isolation-poster.png)](../downloads/team-security-isolation-poster.pdf) <br/>
-[PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/team-security-isolation-poster.pdf) |  [PowerPoint](https://download.microsoft.com/download/8/0/5/8057fc16-c044-40b6-a652-7ed555ba2895/team-security-isolation-poster.pptx) <br>
+[![Microsoft Teams med plakat for sikkerhedsisolering.](../media/secure-teams-security-isolation/team-security-isolation-poster.png)](../downloads/team-security-isolation-poster.pdf) <br/>
+[PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/team-security-isolation-poster.pdf) |  [Powerpoint](https://download.microsoft.com/download/8/0/5/8057fc16-c044-40b6-a652-7ed555ba2895/team-security-isolation-poster.pptx) <br>
 Opdateret august 2020
 
 Du kan finde flere oplysninger i artiklen til denne plakat: [Konfigurer et team med sikkerhedsisolering](secure-teams-security-isolation.md).

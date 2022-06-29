@@ -19,12 +19,12 @@ ms.custom: migrationguides
 description: Fuldfør trinnene til overførsel fra en beskyttelsestjeneste eller enhed fra tredjepart til Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a2b70cdd53797a4985cc76f777401fa33f3e1163
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: b2358103b3ab6bfee34e88d23f4b3de0d774e34e
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939207"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492120"
 ---
 # <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Migrer til Microsoft Defender for Office 365 – fase 3: Onboard
 
@@ -39,22 +39,22 @@ ms.locfileid: "64939207"
 
 Velkommen til **fase 3: Onboard** af din **[migrering til Microsoft Defender for Office 365](migrate-to-defender-for-office-365.md#the-migration-process)**! Denne overførselsfase omfatter følgende trin:
 
-1. [Begynd onboarding af Teams for sikkerhed](#step-1-begin-onboarding-security-teams)
+1. [Begynd onboarding af sikkerhedsteams](#step-1-begin-onboarding-security-teams)
 2. [(Valgfrit) Undtaget pilotbrugere fra filtrering efter din eksisterende beskyttelsestjeneste](#step-2-optional-exempt-pilot-users-from-filtering-by-your-existing-protection-service)
 3. [Juster spoof intelligence](#step-3-tune-spoof-intelligence)
 4. [Juster repræsentationsbeskyttelse og postkasseintelligens](#step-4-tune-impersonation-protection-and-mailbox-intelligence)
 5. [Brug data fra brugerindsendelser til at måle og justere](#step-5-use-data-from-user-submissions-to-measure-and-adjust)
 6. [(Valgfrit) Føj flere brugere til din pilot, og gentage](#step-6-optional-add-more-users-to-your-pilot-and-iterate)
-7. [Udvid Microsoft 365 beskyttelse til alle brugere, og slå reglen for SCL=-1-mailflow fra](#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)
+7. [Udvid Microsoft 365-beskyttelse til alle brugere, og slå reglen for SCL=-1-mailflow fra](#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)
 8. [Skift dine MX-poster](#step-8-switch-your-mx-records)
 
-## <a name="step-1-begin-onboarding-security-teams"></a>Trin 1: Begynd at onboarde Teams
+## <a name="step-1-begin-onboarding-security-teams"></a>Trin 1: Begynd at onboarde sikkerhedsteams
 
 Hvis din organisation har et team for sikkerhedssvar, er det nu tid til at begynde at integrere Microsoft Defender for Office 365 i dine svarprocesser, herunder systemer til oprettelse af billetter. Dette er et helt emne for sig selv, men det er nogle gange overset. Hvis du henter det involverede sikkerhedssvarteam tidligt, sikrer du, at din organisation er klar til at håndtere trusler, når du skifter dine MX-poster. Svar på hændelser skal være veludstyret til at håndtere følgende opgaver:
 
 - Få mere at vide om de nye værktøjer, og integrer dem i eksisterende flow. Eksempel:
-  - Administration af karantænemeddelelser er vigtig. Du kan finde instruktioner under [Administrer karantænemeddelelser og filer som administrator](manage-quarantined-messages-and-files.md).
-  - Meddelelsessporing giver dig mulighed for at se, hvad der skete med meddelelser, når de kommer ind eller forlader Microsoft 365. Du kan finde flere oplysninger [under Meddelelsessporing i det moderne Exchange Administration i Exchange Online](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
+  - Administration administration af karantænemeddelelser er vigtig. Du kan finde instruktioner under [Administrer karantænemeddelelser og filer som administrator](manage-quarantined-messages-and-files.md).
+  - Meddelelsessporing giver dig mulighed for at se, hvad der skete med meddelelser, når de kommer ind eller forlader Microsoft 365. Du kan finde flere oplysninger under [Meddelelsessporing i det moderne Exchange Administration i Exchange Online](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac).
 - Identificer risici, der kan være blevet overført til organisationen.
 - Tilpas [beskeder](../../compliance/alert-policies.md) for organisationsprocesser.
 - Administrer hændelseskøen, og afhjælp potentielle risici.
@@ -78,10 +78,10 @@ Hvis din organisation ikke har et sikkerhedssvarteam eller eksisterende procesfo
 
 Tilladelser i Defender for Office 365 er baseret på rollebaseret adgangskontrol og forklares i Tilladelser på [Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md). Dette er de vigtige punkter, du skal være opmærksom på:
 
-- Azure AD-roller giver tilladelser til **alle** arbejdsbelastninger i Microsoft 365. Hvis du f.eks. føjer en bruger til sikkerhedsadministratoren i Azure Portal, har vedkommende tilladelser som sikkerhedsadministrator overalt.
-- Mail & samarbejdsroller på Microsoft 365 Defender-portalen giver tilladelser til Microsoft 365 Defender-portalen, Microsoft Purview-overholdelsesportalen og det ældre center for sikkerhed & overholdelse. Hvis du f.eks. føjer en bruger til Sikkerhedsadministrator på Microsoft 365 Defender-portalen, har vedkommende **kun** adgang som sikkerhedsadministrator på Microsoft 365 Defender-portalen, i Microsoft Purview-overholdelsesportalen og i Security & Compliance Center.
+- Azure AD roller giver tilladelser til **alle** arbejdsbelastninger i Microsoft 365. Hvis du f.eks. føjer en bruger til sikkerhedsadministratoren i Azure Portal, har vedkommende tilladelser som sikkerhedsadministrator overalt.
+- Mail & samarbejdsroller på Microsoft 365 Defender-portalen giver tilladelser til Microsoft 365 Defender-portalen, Microsoft Purview-compliance-portal og det ældre Center for sikkerhed & overholdelse. Hvis du f.eks. føjer en bruger til Sikkerhedsadministrator på Microsoft 365 Defender-portalen, har vedkommende **kun** adgang som sikkerhedsadministrator på Microsoft 365 Defender-portalen, i Microsoft Purview-compliance-portal og i Security & Compliance Center.
 - Mange funktioner i Microsoft 365 Defender-portalen er baseret på Exchange Online PowerShell-cmdlet'er og kræver derfor medlemskab af rollegrupper i de tilsvarende roller (teknisk set, rollegrupper) i Exchange Online (især for at få adgang til det tilsvarende Exchange Online  PowerShell-cmdlet'er).
-- Der er mail & samarbejdsroller på Microsoft 365 Defender-portalen, der ikke har nogen roller, der svarer til Azure AD-roller, og som er vigtige for sikkerhedshandlinger (f.eks. rollen Prøveversion og rollen Søg og Fjern).
+- Der er mail-& samarbejdsroller på Microsoft 365 Defender-portalen, der ikke har samme rolle som Azure AD roller, og som er vigtige for sikkerhedshandlinger (f.eks. rollen Prøveversion og rollen Søg og Fjern).
 
 Det er typisk kun en delmængde af sikkerhedsafdelingen, der har brug for yderligere rettigheder til at downloade meddelelser direkte fra brugerpostkasser. Dette kræver en ekstra tilladelse, som Sikkerhedslæser ikke har som standard.
 
@@ -90,7 +90,7 @@ Det er typisk kun en delmængde af sikkerhedsafdelingen, der har brug for yderli
 Selvom dette trin ikke er påkrævet, bør du overveje at konfigurere dine pilotbrugere til at omgå filtrering fra din eksisterende beskyttelsestjeneste. Denne handling gør det muligt for Defender for Office 365 at håndtere **alle** filtrerings- og beskyttelsesopgaver for pilotbrugerne. Hvis du ikke fritager dine pilotbrugere fra din eksisterende beskyttelsestjeneste, fungerer Defender for Office 365 kun effektivt på misser fra den anden tjeneste (filtrering af meddelelser, der allerede er filtreret).
 
 > [!NOTE]
-> Dette trin er udtrykkeligt påkrævet, hvis din aktuelle beskyttelsestjeneste indeholder linkombrydning, men du vil styre Pengeskab Links-funktionalitet. Dobbeltombrydning af links understøttes ikke.
+> Dette trin er udtrykkeligt påkrævet, hvis din aktuelle beskyttelsestjeneste leverer linkombrydning, men du vil styre sikker links-funktionalitet. Dobbeltombrydning af links understøttes ikke.
 
 ## <a name="step-3-tune-spoof-intelligence"></a>Trin 3: Juster spoof intelligence
 
@@ -179,9 +179,9 @@ Efterhånden som du finder og løser problemer, kan du føje flere brugere til p
 
 - Det er også en god idé at undersøge unødvendige tilsidesættelser. Med andre ord, se på de domme, som Microsoft 365 ville have givet på meddelelserne. Hvis Microsoft365 gengivede den korrekte dom, reduceres eller fjernes behovet for tilsidesættelse i høj grad.
 
-## <a name="step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule"></a>Trin 7: Udvid Microsoft 365 beskyttelse til alle brugere, og slå reglen for SCL=-1-mailflow fra
+## <a name="step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule"></a>Trin 7: Udvid Microsoft 365-beskyttelse til alle brugere, og slå reglen for SCL=-1-mailflow fra
 
-Udfør trinnene i dette afsnit, når du er klar til at skifte dine MX-poster, så de peger på Microsoft 365.
+Udfør trinnene i dette afsnit, når du er klar til at skifte dine MX-poster til at pege på Microsoft 365.
 
 1. Udvid pilotpolitikkerne til hele organisationen. Grundlæggende er der forskellige måder at gøre dette på:
    - Brug [forudindstillede sikkerhedspolitikker](preset-security-policies.md) , og del dine brugere mellem standardbeskyttelsesprofilen og den strenge beskyttelsesprofil (sørg for, at alle er dækket). Forudindstillede sikkerhedspolitikker anvendes før brugerdefinerede politikker, som du har oprettet, eller nogen standardpolitikker. Du kan slå dine individuelle pilotpolitikker fra uden at slette dem.
@@ -201,21 +201,13 @@ Du kan sætte dataoptagelse og -justering på pause i denne fase.
 > [!NOTE]
 >
 > - Når du skifter MX-post for dit domæne, kan det tage op til 48 timer, før ændringerne overføres over hele internettet.
->
 > - Vi anbefaler, at du sænker TTL-værdien for dine DNS-poster for at muliggøre hurtigere svar og mulig annullering (hvis det er nødvendigt). Du kan vende tilbage til den oprindelige TTL-værdi, når overgangen er fuldført og bekræftet.
->
 > - Du bør overveje at starte med at ændre domæner, der bruges mindre hyppigt. Du kan afbryde og overvåge, før du flytter til større domæner. Selvom du gør dette, skal du dog stadig sørge for, at alle brugere og domæner er dækket af politikker, fordi sekundære SMTP-domæner fortolkes som primære domæner før politikprogrammet.
->   
 > - Flere MX-poster for et enkelt domæne fungerer teknisk set, så du kan have opdelt routing, forudsat at du har fulgt alle vejledningen i denne artikel. Du skal især sørge for, at politikker anvendes på alle brugere, at reglen SCL=-1 mailflow kun anvendes på mails, der passerer gennem din eksisterende beskyttelsestjeneste, som beskrevet i [trin 3: Vedligehold eller opret reglen for SCL=-1-mailflowet](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-scl-1-mail-flow-rule). Denne konfiguration introducerer dog funktionsmåde, der gør fejlfinding meget vanskeligere, og derfor anbefaler vi det normalt ikke, især ikke i længere tid.
->
 > - Før du skifter MX-poster, skal du kontrollere, at følgende indstillinger ikke er aktiveret på den indgående connector fra beskyttelsestjenesten til Microsoft 365. Connectoren vil typisk have en eller flere af følgende indstillinger konfigureret:
->
 >   - **og kræve, at emnenavnet på det certifikat, som partneren bruger til at godkende med Office 365 svarer til dette domænenavn** (*RestrictDomainsToCertificate*)
->   - **Afvis mails, hvis de ikke sendes fra dette IP-adresseområde** (*RestrictDomainsToIPAddresses*)
->
->   Hvis connectortypen er **Partner** , og en af disse indstillinger er slået til, mislykkes al postlevering til dine domæner, når du har skiftet dine MX-poster. Du skal deaktivere disse indstillinger, før du fortsætter. Hvis connectoren er en connector i det lokale miljø, der bruges til hybrid, behøver du ikke at ændre connectoren i det lokale miljø. Men du kan stadig kontrollere, om der findes en **Partner-connector** .
->   
-> - Hvis din aktuelle mailgateway også giver modtagervalidering, kan det være en god idé at kontrollere, at domænet er konfigureret som [autoritativt](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i Microsoft 365. Dette kan forhindre unødvendige bounce-meddelelser.
+>   - **Afvis mails, hvis de ikke sendes fra dette IP-adresseområde** (*RestrictDomainsToIPAddresses*) Hvis connectortypen er **Partner** , og en af disse indstillinger er slået til, mislykkes al levering af post til dine domæner, når du har skiftet dine MX-poster. Du skal deaktivere disse indstillinger, før du fortsætter. Hvis connectoren er en connector i det lokale miljø, der bruges til hybrid, behøver du ikke at ændre connectoren i det lokale miljø. Men du kan stadig kontrollere, om der findes en **Partner-connector** .
+> - Hvis din aktuelle mailgateway også giver modtagervalidering, kan du kontrollere, at domænet er konfigureret som [Autoritativ](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i Microsoft 365. Dette kan forhindre unødvendige bounce-meddelelser.
 
 Når du er klar, skal du skifte MX-posten for dine domæner. Du kan overføre alle dine domæner på én gang. Du kan også overføre mindre ofte anvendte domæner først og derefter overføre resten senere.
 

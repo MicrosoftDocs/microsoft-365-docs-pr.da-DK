@@ -1,5 +1,5 @@
 ---
-title: Indstillinger for brugerrapporterede meddelelser
+title: Brugerrapporterede meddelelsesindstillinger
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -18,14 +18,14 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: f09054a4ee57ce7105a7b2daffc65be5b91dc8f6
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 9b6586bb781daadb5b19756c9dac6893567f311d
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839662"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489807"
 ---
-# <a name="user-reported-message-settings"></a>Indstillinger for brugerrapporterede meddelelser
+# <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "65839662"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med Exchange Online postkasser kan du angive, at en postkasse skal modtage meddelelser, som brugerne rapporterer som skadelige eller ikke skadelige. Når brugerne rapporterer meddelelser ved hjælp af de forskellige rapporteringsindstillinger, kan du bruge denne postkasse til at opfange meddelelser (kun sende til den brugerdefinerede postkasse) eller modtage kopier af meddelelser (sende til den brugerdefinerede postkasse og Microsoft). Denne funktion fungerer sammen med følgende indstillinger for meddelelsesrapportering:
+I Microsoft 365-organisationer med Exchange Online postkasser kan du angive en postkasse for at modtage meddelelser, som brugerne rapporterer som skadelige eller ikke skadelige. Når brugerne rapporterer meddelelser ved hjælp af de forskellige rapporteringsindstillinger, kan du bruge denne postkasse til at opfange meddelelser (kun sende til den brugerdefinerede postkasse) eller modtage kopier af meddelelser (sende til den brugerdefinerede postkasse og Microsoft). Denne funktion fungerer sammen med følgende indstillinger for meddelelsesrapportering:
 
 - [Tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md)
 - [Tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md)
@@ -55,9 +55,9 @@ Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så b
 
 Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de brugere, der rapporterer meddelelser:
 
-- [Opret en politik for Pengeskab links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanning af Pengeskab links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelserne** fra \> **).**
+- [Opret en politik for sikre links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanningen af Sikre links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelsesafsnittet** \> **Fra**).
 
-- [Opret en politik for vedhæftede filer Pengeskab](set-up-safe-attachments-policies.md) for den brugerdefinerede postkasse, hvor scanning af vedhæftede filer Pengeskab er slået fra (**Pengeskab afsnittet Ukendt malwaresvar i vedhæftede** \> filer **er slået fra**).
+- [Opret en politik for sikre vedhæftede filer](set-up-safe-attachments-policies.md) for den brugerdefinerede postkasse, hvor scanning af vedhæftede filer, der er tillid til, er slået fra (afsnittet \>**Sikre vedhæftede filer ukendt malwaresvar** **fra**).
 
 Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger, kan du bruge procedurerne i denne artikel til at konfigurere postkassen til brugerindsendelser.
 
@@ -82,18 +82,20 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
 1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> **Trusselspolitikker** \> **Brugerrapporterede meddelelsesindstillinger** i afsnittet **Andre**. Hvis du vil gå direkte til siden **Brugerindsendelser** , skal du bruge <https://security.microsoft.com/userSubmissionsReportMessage>.
 
-2. På siden **Brugerindsendelser** bestemmes det, du ser, af, om **indstillingen for knappen Microsoft Outlook Rapportmeddelelse** er **Slået fra** eller **Til**:
+2. På siden **Brugerindsendelser** bestemmes det, du ser, af, om **indstillingen for microsoft Outlook-rapportmeddelelsen** er **Slået fra** eller **Til**:
 
-   - **Microsoft Outlook knappen** \> ![Rapportmeddelelse **slået til til**/](../../media/scc-toggle-on.png)fra: Vælg denne indstilling, hvis du bruger tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
+   - **Microsoft Outlook-rapportmeddelelsesknap** \> **På** ![ Slå til.](../../media/scc-toggle-on.png): Vælg denne indstilling, hvis du bruger tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
      - **Send de rapporterede meddelelser til**: Vælg en af følgende indstillinger:
        - **Microsoft**: Postkassen til brugerindsendelser bruges ikke (alle rapporterede meddelelser sendes til Microsoft).
        - **Microsoft og min organisations postkasse**: Angiv mailadressen på en eksisterende Exchange Online postkasse i det felt, der vises. Distributionsgrupper er ikke tilladt. Brugerindsendelser sendes til både Microsoft til analyse og til den brugerdefinerede postkasse, som administratoren eller sikkerhedsteamet skal analysere.
        - **Min organisations postkasse**: Angiv mailadressen på en eksisterende Exchange Online postkasse i det felt, der vises. Distributionsgrupper er ikke tilladt. Brug denne indstilling, hvis meddelelsen kun skal gå til en administrator eller sikkerhedsteamet til analyse først. Meddelelser sendes ikke til Microsoft, medmindre administratoren selv videresender den.
 
           > [!IMPORTANT]
-          > Offentlige myndigheder i USA (GCC, GCC High og DoD) kan kun konfigurere **Min organisations postkasse**. De to andre indstillinger er deaktiveret.
+          > Amerikanske offentlige organisationer (GCC, GCC High og DoD) kan kun konfigurere **Min organisations postkasse**. De to andre indstillinger er deaktiveret.
           >
           > Hvis organisationer er konfigureret til kun at sende brugerrapporterede meddelelser til den brugerdefinerede postkasse, vises rapporterede meddelelser i **brugerrapporterede meddelelser** , men deres resultater vil altid være tomme (da de ikke ville være blevet scannet igen).
+          >
+          > Hvis du udfører phishingsimulering ved hjælp af [oplæring i simulering af angreb](attack-simulation-training-get-started.md) eller et tredjepartsprodukt, skal du [konfigurere denne postkasse som en SecOps-postkasse](configure-advanced-delivery.md). Hvis du ikke gør det, kan rapportering af meddelelser udløse oplæringsopgaver i phishingsimuleringsproduktet.
 
        Uanset hvilken værdi du har valgt for **Send de rapporterede meddelelser til**, er følgende indstillinger tilgængelige:
 
@@ -106,7 +108,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
           > [!CAUTION]
           > Hvis du har [deaktiveret rapportering af uønsket mail i Outlook på internettet](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md#disable-or-enable-junk-email-reporting-in-outlook-on-the-web) ved hjælp af Outlook på internettet postkassepolitikker, men du har konfigureret en af de tidligere indstillinger for at rapportere meddelelser til Microsoft, kan brugerne rapportere meddelelser til Microsoft i Outlook på internettet  ved hjælp af tilføjelsesprogrammet Rapportmeddelelse eller tilføjelsesprogrammet Rapport phishing.
 
-     Lad knappen ![Til/fra for **Microsoft Outlook Rapportmeddelelse** **være slået**](../../media/scc-toggle-on.png) til for at give slutbrugere mulighed for at rapportere falske positive meddelelser fra karantæneportalen.
+     Lad knappen ![Meddelelse **i Microsoft Outlook-rapport** til/fra være **slået**](../../media/scc-toggle-on.png) til for at give slutbrugere mulighed for at rapportere falske positive meddelelser fra karantæneportalen.
 
      - **Afsnittet Brugerrapporteringsoplevelse**
        - **Før rapporteringsfanen** : I felterne **Titel** og **Meddelelsesbrødtekst** skal du angive den beskrivende tekst, som brugerne får vist, før de rapporterer en meddelelse ved hjælp af tilføjelsesprogrammet Rapportmeddelelse eller tilføjelsesprogrammet Rapport phishing. Du kan bruge variablen %type% til at inkludere indsendelsestypen (uønsket, ikke uønsket mail, phish osv.).
@@ -117,7 +119,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
           > Din mail sendes, som den er, til Microsoft til analyse. Nogle mails kan indeholde personlige eller følsomme oplysninger.
 
-   - **Microsoft Outlook knappen** \> Rapportmeddelelse **slået Fra**![](../../media/scc-toggle-off.png): Vælg denne indstilling, hvis du bruger rapporteringsværktøjer fra tredjepart i stedet for tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
+   - **Microsoft Outlook-rapportmeddelelsesknap** \> **Ud** ![ Slå indstillingen fra](../../media/scc-toggle-off.png): Vælg denne indstilling, hvis du bruger rapporteringsværktøjer fra tredjepart i stedet for tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
      - Vælg **Brug denne brugerdefinerede postkasse til at modtage brugerrapporterede indsendelser**. I feltet, der vises, skal du angive mailadressen på en eksisterende Exchange Online postkasse, der kan modtage mail.
 
    - **Knappen Sæt rapportmeddelelse i karantæne**: Aktivér denne funktion, hvis du vil lade slutbrugerne rapportere meddelelser fra karantæne.
@@ -126,7 +128,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
 ## <a name="third-party-reporting-tools"></a>Rapporteringsværktøjer fra tredjepart
 
-Du kan konfigurere værktøjer til rapportering af meddelelser fra tredjepart for at sende rapporterede meddelelser til den brugerdefinerede postkasse. Det gør du ved at angive **knappen Microsoft Outlook Rapportmeddelelse** til **Fra** og angive **Min organisations postkasse** til en Office 365 postkasse efter eget valg.
+Du kan konfigurere værktøjer til rapportering af meddelelser fra tredjepart for at sende rapporterede meddelelser til den brugerdefinerede postkasse. Det gør du ved at angive **knappen Meddelelse i Microsoft Outlook-rapport** til **Fra** og angive **Min organisations postkasse** til en Office 365 postkasse efter eget valg.
 
 Det eneste krav er, at den oprindelige meddelelse er inkluderet som en . EML eller . Den vedhæftede MSG-fil (ikke komprimeret) i den meddelelse, der sendes til den brugerdefinerede postkasse (videresend ikke kun den oprindelige meddelelse til den brugerdefinerede postkasse). 
 

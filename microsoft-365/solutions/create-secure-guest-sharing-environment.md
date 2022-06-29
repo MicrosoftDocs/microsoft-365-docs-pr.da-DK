@@ -19,16 +19,16 @@ ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
 description: Få mere at vide om tilgængelige muligheder for at oprette et sikkert gæstedelingsmiljø i Microsoft 365, hvilket giver gæsteadgang til forbedret samarbejde.
-ms.openlocfilehash: 5b6f27bd81a47a92926cebeef89de11ed78fcd3d
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 26daea8795084a87a2891a5dd04da172692990cb
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64948347"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490913"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>Opret et sikkert gæstedelingsmiljø
 
-I denne artikel gennemgår vi en række forskellige muligheder for at oprette et sikkert gæstedelingsmiljø i Microsoft 365. Dette er eksempler, der giver dig en idé om de tilgængelige indstillinger. Du kan bruge disse procedurer i forskellige kombinationer for at imødekomme organisationens behov for sikkerhed og overholdelse af angivne standarder.
+I denne artikel gennemgår vi en række muligheder for at oprette et sikkert gæstedelingsmiljø i Microsoft 365. Dette er eksempler, der giver dig en idé om de tilgængelige indstillinger. Du kan bruge disse procedurer i forskellige kombinationer for at imødekomme organisationens behov for sikkerhed og overholdelse af angivne standarder.
 
 Denne artikel indeholder:
 
@@ -41,7 +41,7 @@ Denne artikel indeholder:
 - Automatisk tildeling af en følsomhedsmærkat til dokumenter, der indeholder en type følsomme oplysninger.
 - Fjerner automatisk gæsteadgang fra filer med en følsomhedsmærkat.
 
-Nogle af de muligheder, der er beskrevet i denne artikel, kræver, at gæster har en konto i Azure Active Directory. Hvis du vil sikre, at gæster er inkluderet i mappen, når du deler filer og mapper med dem, skal du bruge [SharePoint og OneDrive integration med Azure AD B2B Preview](/sharepoint/sharepoint-azureb2b-integration-preview).
+Nogle af de indstillinger, der beskrives i denne artikel, kræver, at gæster har en konto i Azure Active Directory. Hvis du vil sikre, at gæster er inkluderet i mappen, når du deler filer og mapper med dem, skal du bruge [SharePoint- og OneDrive-integrationen med Azure AD B2B Preview](/sharepoint/sharepoint-azureb2b-integration-preview).
 
 Bemærk, at vi ikke diskuterer aktivering af indstillinger for gæstedeling i denne artikel. Se [Samarbejde med personer uden for din organisation](collaborate-with-people-outside-your-organization.md) for at få oplysninger om aktivering af gæstedeling i forskellige scenarier.
 
@@ -68,21 +68,21 @@ Nu skal gæsten tilmelde sig multifaktorgodkendelse, før vedkommende kan få ad
 
 ### <a name="more-information"></a>Flere oplysninger
 
-[Planlægning af en Azure AD-udrulning af multifaktorgodkendelse](/azure/active-directory/authentication/howto-mfa-getstarted)
+[Planlægning af en Azure AD udrulning af multifaktorgodkendelse](/azure/active-directory/authentication/howto-mfa-getstarted)
 
 ## <a name="set-up-a-terms-of-use-for-guests"></a>Konfigurer vilkår for anvendelse for gæster
 
 I nogle situationer har gæster muligvis ikke underskrevet fortrolighedsaftaler eller andre juridiske aftaler med din organisation. Du kan kræve, at gæster accepterer et vilkår for anvendelse, før de får adgang til filer, der deles med dem. Vilkår for anvendelse kan vises, første gang de forsøger at få adgang til en delt fil eller et delt websted.
 
-Hvis du vil oprette vilkår for anvendelse, skal du først oprette dokumentet i Word eller et andet program til oprettelse og derefter gemme det som en .pdf fil. Denne fil kan derefter uploades til Azure AD.
+Hvis du vil oprette vilkår for anvendelse, skal du først oprette dokumentet i Word eller et andet program til oprettelse og derefter gemme det som en .pdf fil. Denne fil kan derefter overføres til Azure AD.
 
-Sådan opretter du vilkår for anvendelse af Azure AD
+Sådan opretter du en Azure AD vilkår for anvendelse
 
 1. Log på Azure som global administrator, sikkerhedsadministrator eller administrator af betinget adgang.
 2. Gå til [Vilkår for anvendelse](https://aka.ms/catou).
 3. Klik på **Nye ord**.
 
-   ![Skærmbillede af nye vilkår for anvendelse af Azure AD.](../media/azure-ad-guest-terms-of-use.png)
+   ![Skærmbillede af Azure AD nye vilkår for anvendelse.](../media/azure-ad-guest-terms-of-use.png)
 
 4. Skriv et **navn** og **et vist navn**.
 6. Gå til den pdf-fil, du har oprettet, for **Vilkår for anvendelse af dokumentet**, og vælg den.
@@ -102,7 +102,7 @@ Sådan opretter du en politik for betinget adgang
 5. På bladet **Brugere og grupper** skal du vælge **Vælg brugere og grupper**, markere afkrydsningsfeltet **Alle gæster og eksterne brugere** .
 6. Klik på **Cloudapps eller -handlinger** under **Tildelinger**.
 7. Under fanen **Medtag** skal du vælge **Vælg apps** og derefter klikke på **Vælg**.
-8. På bladet **Vælg** skal du vælge **Microsoft Teams** **Office 365 SharePoint Online** og **Outlook Grupper** og derefter klikke på **Vælg**.
+8. Vælg **Microsoft Teams** under bladet **Vælg**, **Office 365 SharePoint Online** og **Outlook-grupper**, og klik derefter på **Vælg**.
 9. Klik på **Grant (Tildel**) under **Access controls (Adgangskontrolelementer**).
 10. På bladet **Grant** skal du vælge **Guest terms of use** og derefter klikke på **Select**.
 11. Klik på **Til** under **Aktivér politik** på bladet **Ny**, og klik derefter på **Opret**.
@@ -114,7 +114,7 @@ Første gang en gæst forsøger at få adgang til indhold eller et team eller we
 
 ### <a name="more-information"></a>Flere oplysninger
 
-[Azure Active Directory vilkår for anvendelse](/azure/active-directory/conditional-access/terms-of-use)
+[Vilkår for anvendelse af Azure Active Directory](/azure/active-directory/conditional-access/terms-of-use)
 
 ## <a name="set-up-guest-access-reviews"></a>Konfigurer gæsteadgangsgennemgange
 
@@ -124,8 +124,8 @@ Sådan konfigurerer du en gennemgang af gæsteadgang
 
 1. Klik på **Få adgang til korrekturer** i menuen til venstre på [siden Identitetsstyring](https://portal.azure.com/#blade/Microsoft_AAD_ERM/DashboardBlade).
 2. Klik på **Ny adgangsgennemsyn**.
-3. Vælg indstillingen **Teams + grupper**.
-4. Vælg indstillingen **Alle Microsoft 365 grupper med gæstebrugere**. Klik på **Vælg gruppe(er), der skal udelades** , hvis du vil udelade grupper.
+3. Vælg indstillingen **Teams + grupper** .
+4. Vælg indstillingen **Alle Microsoft 365-grupper med gæstebrugere** . Klik på **Vælg gruppe(er), der skal udelades** , hvis du vil udelade grupper.
 5. Vælg indstillingen **Kun gæstebrugere** , og klik derefter på **Næste: Anmeldelser**.
 6. Vælg **Gruppeejer(e)** under **Vælg korrekturlæsere**.
 7. Klik på **Vælg reservelæsere**, vælg, hvem der skal være reservelæsere, og klik derefter på **Vælg**.
@@ -133,31 +133,31 @@ Sådan konfigurerer du en gennemgang af gæsteadgang
 9. Vælg en startdato og en varighed.
 10. Vælg **Aldrig** for **Slut**, og klik derefter på **Næste: Indstillinger**.
 
-    ![Skærmbillede af fanen Til gennemsyn af Azure AD-adgang.](../media/azure-ad-create-access-review.png)
+    ![Skærmbillede af Azure AD fanen Til gennemsyn.](../media/azure-ad-create-access-review.png)
 
-11. Under fanen **Indstillinger skal du** gennemse indstillingerne for overholdelse af dine forretningsregler.
+11. Under fanen **Indstillinger** skal du gennemse indstillingerne for overholdelse af dine forretningsregler.
 
-    ![Skærmbillede af fanen Indstillinger for gennemsyn af Azure AD-adgang.](../media/azure-ad-create-access-review-settings.png)
+    ![Skærmbillede af Azure AD fanen Indstillinger for gennemgang af adgang.](../media/azure-ad-create-access-review-settings.png)
 
 12. Klik på **Næste: Gennemse + Opret**.
 13. Skriv et **navn til gennemsyn** , og gennemse indstillingerne.
 14. Klik på **Opret**.
 
-Det er vigtigt at bemærke, at for SharePoint og OneDrive placeringer blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet er delt eller ej, for alle gæster, mens interne brugere fortsat vil have adgang til dokumentet.
+Det er vigtigt at bemærke, at for SharePoint- og OneDrive-placeringer blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet er delt eller ej, for alle gæster, mens interne brugere fortsat vil have adgang til dokumentet.
 
 ### <a name="more-information"></a>Flere oplysninger
 
-[Administrer gæsteadgang med Azure AD-adgangsgennemgange](/azure/active-directory/governance/manage-guest-access-with-access-reviews)
+[Administrer gæsteadgang med Azure AD adgangsgennemgange](/azure/active-directory/governance/manage-guest-access-with-access-reviews)
 
-[Opret en gennemgang af adgang for grupper eller programmer i Azure AD-adgangsgennemgange](/azure/active-directory/governance/create-access-review)
+[Opret en gennemgang af adgang for grupper eller programmer i Azure AD adgangsgennemgange](/azure/active-directory/governance/create-access-review)
 
 ## <a name="set-up-web-only-access-for-guests"></a>Konfigurer webadgang for gæster
 
-Du kan reducere din angrebsoverflade og lette administrationen ved at kræve, at gæster kun skal have adgang til dine teams, websteder og filer ved hjælp af en webbrowser.
+Du kan kræve, at gæster kun skal have adgang til dine teams, websteder og filer ved hjælp af en webbrowser. Dette reducerer risikoen for, at de kan downloade følsomme filer og efterlade dem på en ikke-administreret enhed. Dette er også nyttigt, når du deler med miljøer, der bruger delte enheder.
 
-For Microsoft 365-grupper og Teams sker dette med en politik for betinget adgang i Azure AD. For SharePoint er dette konfigureret i SharePoint Administration. Du kan også [bruge følsomhedsmærkater til at begrænse gæster til kun at få webadgang](../compliance/sensitivity-labels-teams-groups-sites.md).
+For Microsoft 365-grupper og Teams udføres dette med en politik for Azure AD betinget adgang. For SharePoint er dette konfigureret i SharePoint Administration. Du kan også [bruge følsomhedsmærkater til at begrænse gæster til kun at få webadgang](../compliance/sensitivity-labels-teams-groups-sites.md).
 
-Sådan begrænser du gæster til kun at have webadgang for Grupper og Teams:
+Sådan begrænser du gæster til webadgang for grupper og Teams:
 
 1. Gå til [Politikker for betinget adgang i Azure](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade).
 2. Klik på **Ny politik** på bladet **Betinget adgang – politikker**.
@@ -166,22 +166,22 @@ Sådan begrænser du gæster til kun at have webadgang for Grupper og Teams:
 5. På bladet **Brugere og grupper** skal du vælge **Vælg brugere og grupper**, markere afkrydsningsfeltet **Alle gæster og eksterne brugere** .
 6. Klik på **Cloudapps eller -handlinger** under **Tildelinger**.
 7. Under fanen **Medtag** skal du vælge **Vælg apps** og derefter klikke på **Vælg**.
-8. På bladet **Vælg** skal du vælge **Microsoft Teams** og **Outlook Grupper** og derefter klikke på **Vælg**.
+8. På bladet **Vælg** skal du vælge **Microsoft Teams** og **Outlook-grupper** og derefter klikke på **Vælg**.
 9. Klik på **Betingelser** under **Tildelinger**.
 10. Klik på **Klientapps** på bladet **Betingelser**.
 11. På bladet **Klientapps** skal du klikke på **Ja** for **Konfigurer** og derefter vælge indstillingerne **Mobilapps og desktopklienter**, **Exchange ActiveSync klienter** og **Andre klienter**. Fjern markeringen i afkrydsningsfeltet **Browser** .
 
-    ![Skærmbillede af indstillingerne for klientapps for betinget adgang i Azure AD.](../media/azure-ad-conditional-access-client-mobile.png)
+    ![Skærmbillede af Azure AD indstillinger for klientapps med betinget adgang.](../media/azure-ad-conditional-access-client-mobile.png)
 
 12. Klik på **Udført**.
 13. Klik på **Grant (Tildel**) under **Access controls (Adgangskontrolelementer**).
-14. På bladet **Grant (Tildel** ) skal du vælge **Kræv, at enheden er markeret som kompatibel** og **Kræv hybrid azure AD-tilsluttet enhed**.
+14. På bladet **Grant** skal du vælge **Kræv, at enheden er markeret som kompatibel** og **Kræv hybrid Azure AD tilsluttet enhed**.
 15. Under **For flere kontrolelementer** skal du vælge **Kræv et af de markerede kontrolelementer** og derefter klikke på **Vælg**.
 16. Klik på **Til** under **Aktivér politik** på bladet **Ny**, og klik derefter på **Opret**.
 
-At begrænse gæster til web ony-adgang for SharePoint
+Sådan begrænser du gæster til web ony-adgang for SharePoint
 
-1. I SharePoint Administration skal du udvide **Politikker** og vælge <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Adgangskontrol**</a>.
+1. Udvid **Politikker** i SharePoint Administration, og vælg <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Adgangskontrol**</a>.
 2. Vælg **Ikke-administrerede enheder**.
 3. Vælg indstillingen **Tillad begrænset webadgang,** og vælg derefter **Gem**.
 
@@ -189,7 +189,7 @@ Bemærk, at denne indstilling i SharePoint Administration opretter en understøt
 
 ## <a name="configure-a-session-timeout-for-guests"></a>Konfigurer timeout for session for gæster
 
-Hvis gæster skal godkendes regelmæssigt, kan det reducere muligheden for, at ukendte brugere får adgang til organisationens indhold, hvis en gæsts enhed ikke beskyttes. Du kan konfigurere en politik for betinget adgang for sessionens timeout for gæster i Azure AD.
+Hvis gæster skal godkendes regelmæssigt, kan det reducere muligheden for, at ukendte brugere får adgang til organisationens indhold, hvis en gæsts enhed ikke beskyttes. Du kan konfigurere en politik for betinget adgang for sessiontimeout for gæster i Azure AD.
 
 Sådan konfigurerer du timeoutpolitik for en gæstesession
 
@@ -200,7 +200,7 @@ Sådan konfigurerer du timeoutpolitik for en gæstesession
 5. På bladet **Brugere og grupper** skal du vælge **Vælg brugere og grupper**, markere afkrydsningsfeltet **Alle gæster og eksterne brugere** .
 6. Klik på **Cloudapps eller -handlinger** under **Tildelinger**.
 7. Under fanen **Medtag** skal du vælge **Vælg apps** og derefter klikke på **Vælg**.
-8. På bladet **Vælg** skal du vælge **Microsoft Teams** **Office 365 SharePoint Online** og **Outlook Grupper** og derefter klikke på **Vælg**.
+8. Vælg **Microsoft Teams** under bladet **Vælg**, **Office 365 SharePoint Online** og **Outlook-grupper**, og klik derefter på **Vælg**.
 9. Klik på **Session** under **Adgangskontrolelementer**.
 10. På bladet **Session** skal du vælge **Logonfrekvens**.
 11. Vælg **1** og **Dage** for tidsperioden, og klik derefter på **Vælg**.
@@ -208,13 +208,13 @@ Sådan konfigurerer du timeoutpolitik for en gæstesession
 
 ## <a name="create-a-sensitive-information-type-for-a-highly-sensitive-project"></a>Opret en type følsomme oplysninger for et projekt, der er meget følsomt
 
-Følsomme oplysningstyper er foruddefinerede strenge, der kan bruges i politikarbejdsprocesser til at gennemtvinge overholdelseskrav. Microsoft Purview-overholdelsesportalen leveres med mere end hundrede følsomme oplysningstyper, herunder kørekortsnumre, kreditkortnumre, bankkontonumre osv.
+Følsomme oplysningstyper er foruddefinerede strenge, der kan bruges i politikarbejdsprocesser til at gennemtvinge overholdelseskrav. Den Microsoft Purview-compliance-portal leveres med over hundrede følsomme oplysninger typer, herunder kørekort numre, kreditkortnumre, bankkontonumre, osv.
 
 Du kan oprette brugerdefinerede typer følsomme oplysninger som en hjælp til at administrere indhold, der er specifikt for din organisation. I dette eksempel opretter vi en brugerdefineret type følsomme oplysninger for et projekt, der er meget følsomt. Vi kan derefter bruge denne type følsomme oplysninger til automatisk at anvende en følsomhedsmærkat.
 
 Sådan opretter du en type følsomme oplysninger
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) i venstre navigationsrude skal du udvide **Klassificering** og derefter klikke på **Følsomme infotyper**.
+1. I [den Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du i venstre navigationsrude udvide **Klassificering** og derefter klikke på **Typer af følsomme oplysninger**.
 2. Klik på **Opret**.
 3. Skriv **Project Saturn** for **Navn** og **Beskrivelse**, og klik derefter på **Næste**.
 4. Klik på **Tilføj et element**.
@@ -237,7 +237,7 @@ Sådan opretter du en politik for automatisk mærkning
 3. Klik på **Opret politik for automatisk mærkat** under fanen **Automatisk mærkning**.
 4. Vælg **Brugerdefineret** på siden **Vælg de oplysninger, som mærkaten skal anvendes** på, og klik på **Næste**.
 5. Skriv et navn og en beskrivelse til politikken, og klik på **Næste**.
-6. På siden **Vælg de placeringer, hvor du vil anvende mærkaten skal du** aktivere **SharePoint websteder** og klikke på **Vælg websteder**.
+6. På siden **Vælg de placeringer, hvor du vil anvende mærkaten, skal du** aktivere **SharePoint-websteder** og klikke på **Vælg websteder**.
 7. Tilføj URL-adresserne for de websteder, hvor du vil aktivere automatisk mærkning, og klik på **Udført**.
 8. Klik på **Næste**.
 9. På siden **Konfigurer almindelige eller avancerede regler** skal du vælge **Fælles regler** og klikke på **Næste**.
@@ -258,7 +258,7 @@ Når politikken er på plads, anvendes den angivne mærkat automatisk, når en b
 
 ## <a name="create-a-dlp-policy-to-remove-guest-access-to-highly-sensitive-files"></a>Opret en DLP-politik for at fjerne gæsteadgang til meget følsomme filer
 
-Du kan bruge [Microsoft Purview DLP (forebyggelse af datatab)](../compliance/dlp-learn-about-dlp.md) til at forhindre uønsket gæstedeling af følsomt indhold. Forebyggelse af datatab kan udføre handlinger på baggrund af en fils følsomhedsmærkat og fjerne gæsteadgang.
+Du kan bruge [Microsoft Purview Forebyggelse af datatab (DLP)](../compliance/dlp-learn-about-dlp.md) til at forhindre uønsket gæstedeling af følsomt indhold. Forebyggelse af datatab kan udføre handlinger på baggrund af en fils følsomhedsmærkat og fjerne gæsteadgang.
 
 Sådan opretter du en DLP-regel
 
@@ -266,7 +266,7 @@ Sådan opretter du en DLP-regel
 2. Klik på **Opret politik**.
 3. Vælg **Brugerdefineret,** og klik på **Næste**.
 4. Skriv et navn til politikken, og klik på **Næste**.
-5. Slå alle indstillinger fra på **siden Placeringer for at anvende politikken**, undtagen **SharePoint websteder** og **OneDrive konti**, og klik derefter på **Næste**.
+5. På **siden Placeringer for at anvende politikken** skal du slå alle indstillinger fra undtagen **SharePoint-websteder** og **OneDrive-konti** og derefter klikke på **Næste**.
 6. Klik på **Næste** på siden **Definer politikindstillinger**.
 7. På siden **Tilpas avancerede DLP-regler** skal du klikke på **Opret regel** og skrive et navn til reglen.
 8. Under **Betingelser** skal du klikke på **Tilføj betingelse** og vælge **Indhold indeholder**.
@@ -274,8 +274,8 @@ Sådan opretter du en DLP-regel
 
    ![Skærmbillede af indstillinger for betingelser, typer af følsomme oplysninger, følsomhedsmærkater og opbevaringsmærkater.](../media/limit-accidental-exposure-dlp-conditions.png)
 
-10. Klik på **Tilføj en handling** under **Handlinger**, og vælg **Begræns adgang, eller kryptér indholdet på Microsoft 365 placeringer**.
-11. Markér afkrydsningsfeltet **Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer**, og vælg derefter indstillingen **Kun personer uden for organisationen**.
+10. Klik på **Tilføj en handling** under **Handlinger**, og vælg **Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer**.
+11. Markér afkrydsningsfeltet **Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer** , og vælg derefter indstillingen **Kun personer uden for din organisation** .
 
       ![Skærmbillede af indstillinger for DLP-regelhandlinger.](../media/dlp-remove-guest-access-sensitive-files.png)
 
@@ -290,10 +290,10 @@ Det er vigtigt at bemærke, at denne politik ikke fjerner adgang, hvis gæsten e
 
 ## <a name="additional-options"></a>Yderligere indstillinger
 
-Der er nogle yderligere indstillinger i Microsoft 365 og Azure Active Directory, der kan hjælpe med at sikre dit gæstedelingsmiljø.
+Der er nogle yderligere indstillinger i Microsoft 365 og Azure Active Directory, der kan hjælpe med at beskytte dit gæstedelingsmiljø.
 
-- Du kan oprette en liste over tilladte eller afviste delingsdomæner for at begrænse, hvem brugerne kan dele med. Se [Begræns deling af SharePoint og OneDrive indhold efter domæne](/sharepoint/restricted-domains-sharing) og [Tillad eller bloker invitationer til B2B-brugere fra bestemte organisationer](/azure/active-directory/b2b/allow-deny-list) for at få flere oplysninger.
-- Du kan begrænse, hvilke andre Azure Active Directory lejere dine brugere kan oprette forbindelse til. Se [Brug lejerbegrænsninger til at administrere adgang til SaaS-cloudprogrammer for at](/azure/active-directory/manage-apps/tenant-restrictions) få flere oplysninger.
+- Du kan oprette en liste over tilladte eller afviste delingsdomæner for at begrænse, hvem brugerne kan dele med. Se [Begræns deling af SharePoint- og OneDrive-indhold efter domæne](/sharepoint/restricted-domains-sharing) og [Tillad eller bloker invitationer til B2B-brugere fra bestemte organisationer](/azure/active-directory/b2b/allow-deny-list) for at få flere oplysninger.
+- Du kan begrænse, hvilke andre Azure Active Directory-lejere brugerne kan oprette forbindelse til. Se [Brug lejerbegrænsninger til at administrere adgang til SaaS-cloudprogrammer for at](/azure/active-directory/manage-apps/tenant-restrictions) få flere oplysninger.
 - Du kan oprette et administreret miljø, hvor partnere kan hjælpe med at administrere gæstekonti. Se [Opret et B2B-ekstranet med administrerede gæster for at](/Office365/Enterprise/b2b-extranet) få flere oplysninger.
 
 ## <a name="see-also"></a>Se også

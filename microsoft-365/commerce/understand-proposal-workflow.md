@@ -20,14 +20,14 @@ search.appverid: MET150
 description: Få mere at vide om forslag, der kan hjælpe dig med at købe Microsoft-produkter og -tjenester.
 ROBOTS: NOINDEX
 ms.date: 04/28/2022
-ms.openlocfilehash: 8dc80bfaadcbee236f282796dcdb37f59360ebe4
-ms.sourcegitcommit: 58ec09f1fd66af9717dc2743585d06d358ec7360
+ms.openlocfilehash: e54b68b5090287d7a61e9dea70726b7ec9e83c72
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/30/2022
-ms.locfileid: "65144855"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66485973"
 ---
-# <a name="understand-the-proposal-workflow"></a>Forstå arbejdsprocessen for forslaget
+# <a name="understand-the-microsoft-proposal-workflow"></a>Forstå arbejdsprocessen for Microsoft-forslag
 
 Et forslag er et formelt tilbud fra Microsoft om, at din organisation kan købe Microsoft-produkter og -tjenester. Du arbejder direkte sammen med en Microsoft-repræsentant om at fastlægge de specifikke produkter, tjenester og vilkår for dit forslag.
 
@@ -59,7 +59,7 @@ Rollerne ejer af faktureringskontoen og bidragydere til faktureringskontoen tild
 
 ### <a name="assign-roles-in-the-microsoft-365-admin-center"></a>Tildel roller i Microsoft 365 Administration
 
-1. I Microsoft 365 Administration skal du gå til siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank">Faktureringsbilling-konti</a> > .
+1. I Microsoft 365 Administration skal du gå til siden **Faktureringskonti** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=2084771" target="_blank"></a>
 2. Vælg **Tildel roller** i sektionen **Faktureringskontoroller** på siden **Faktureringskonti**.
 3. Søg efter navnet på den person, du vil tildele en rolle, i ruden **Tildel roller** .
 4. Markér afkrydsningsfeltet for det rollenavn, personen skal have, og vælg derefter **Tildel**.
@@ -76,7 +76,7 @@ Du kan få flere oplysninger om faktureringskontoroller under [Forstå adgang ti
 Hvis dette er en ny faktureringskonto, og ingen har accepteret en aftale, bliver du automatisk ejeren af faktureringskontoen, forudsat at du:
 
 - Er den person, der er nævnt i forslaget **, eller**
-- Er allerede [en Azure Active Directory global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) for din organisation
+- Er allerede [global Azure Active Directory-administrator](/azure/active-directory/roles/permissions-reference#global-administrator) for din organisation
 
 ## <a name="what-is-the-overall-workflow"></a>Hvad er den overordnede arbejdsproces?
 

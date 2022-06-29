@@ -1,5 +1,5 @@
 ---
-title: Introduktion til Microsoft Service Trust Portal
+title: Kom i gang med Microsoft Service Trust Portal
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,139 +16,119 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 ms.assetid: f30e2353-0bd6-41ed-8347-eea1fb8d2662
-description: Få mere at vide om, hvordan du får adgang til og bruger Microsoft Service Trust Portal som en hjælp til fremgangsmåder for sikkerhed, beskyttelse af personlige oplysninger og overholdelse af regler og standarder.
-ms.openlocfilehash: f23cf5be7f05462e505c4d3a46407255e460420b
-ms.sourcegitcommit: 3fb76db6b34e24569417f4c8a41b99f46a780389
+description: Få mere at vide om, hvordan du får adgang til og bruger Microsoft Service Trust Portal til at hjælpe med sikkerhed, beskyttelse af personlige oplysninger og overholdelse af angivne standarder.
+ms.openlocfilehash: a87fc67aebb0e37ff0a26a1ee7e2f8a7c7d69cc3
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "63589506"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493133"
 ---
-# <a name="get-started-with-the-microsoft-service-trust-portal"></a>Introduktion til Microsoft Service Trust Portal
+# <a name="get-started-with-microsoft-service-trust-portal"></a>Kom i gang med Microsoft Service Trust Portal
 
-Microsoft Service Trust Portal indeholder en række forskellige indhold, værktøjer og andre ressourcer om Microsofts fremgangsmåder for sikkerhed, beskyttelse af personlige oplysninger og overholdelse af regler og standarder.
+Microsoft Service Trust Portal indeholder en lang række indhold, værktøjer og andre ressourcer om Microsofts praksis for sikkerhed, beskyttelse af personlige oplysninger og overholdelse af angivne standarder.
 
-## <a name="accessing-the-service-trust-portal"></a>Få adgang til Service Trust Portal
+## <a name="accessing-the-service-trust-portal"></a>Adgang til Service Trust Portal
 
-Service Trust Portal indeholder oplysninger om Microsofts implementering af kontrolelementer og processer, der beskytter vores skytjenester og kundedataene deri. For at få adgang til nogle af ressourcerne på Service Trust Portal skal du logge på som godkendt bruger med din konto til Microsofts skytjenester (Azure Active Directory organisationskonto) og gennemse og acceptere Microsofts aftale om hemmeligholdelse af materialer til overholdelse af regler og standarder.
+Service Trust Portal er Microsofts offentlige websted til publicering af overvågningsrapporter og andre oplysninger relateret til overholdelse af angivne standarder, der er knyttet til Microsofts cloudtjenester. STP-brugere kan downloade overvågningsrapporter, der er oprettet af eksterne auditører, og få indsigt fra Microsoft-oprettede whitepapers, der indeholder oplysninger om, hvordan Microsoft bygger og driver cloudtjenester. Hvis du vil have adgang til nogle af ressourcerne på Service Trust Portal, skal du logge på som en godkendt bruger med din Microsoft Cloud Services-konto (Azure Active Directory-organisationskonto) og gennemse og acceptere Microsofts fortrolighedsaftale for overholdelsesmateriale.
 
 ### <a name="existing-customers"></a>Eksisterende kunder
 
-Eksisterende kunder kan få adgang til Service Trust Portal <https://aka.ms/STP> med et af følgende onlineabonnementer (prøveversion eller betalt):
+Eksisterende kunder kan få adgang til Service Trust Portal på <https://aka.ms/STP> med et af følgende onlineabonnementer (prøveversion eller betaling):
 
 - Microsoft 365
 - Dynamics 365
 - Azure
 
  > [!NOTE]
- > Azure Active Directory konti, der er knyttet til organisationer, har adgang til alle dokumenter og funktioner som f.eks. Overholdelsesstyring.
+ > Azure Active Directory-konti, der er knyttet til organisationer, har adgang til det fulde udvalg af dokumenter og ressourcer, f.eks. Overholdelsesstyring.
 
-### <a name="new-customers-and-customers-evaluating-microsoft-online-services"></a>Nye kunder og kunder, der vurderer Microsofts onlinetjenester
+### <a name="new-customers-and-customers-evaluating-microsoft-online-services"></a>Nye kunder og kunder, der evaluerer Microsoft onlinetjenester
 
-Hvis du vil oprette en ny konto eller oprette en prøvekonto, skal du bruge en af følgende tilmeldingsformularer (bruges også til prøvekonti) for at få adgang til STP..
+Hvis du vil oprette en ny konto eller oprette en prøvekonto, skal du bruge en af følgende tilmeldingsformularer (bruges også til prøvekonti) til at få adgang til STP.
 
-- Tilmeld dig en ny [Microsoft 365 Apps for business-prøvekonto eller](https://go.microsoft.com/fwlink/p/?LinkID=507653) en ny [Office 365 Enterprise prøveversionskonto](https://go.microsoft.com/fwlink/p/?LinkID=698279)
+- Tilmeld dig en ny [Microsoft 365 Apps for business prøvekonto](https://go.microsoft.com/fwlink/p/?LinkID=507653) eller en ny [Office 365 Enterprise prøvekonto](https://go.microsoft.com/fwlink/p/?LinkID=698279)
 
 - Tilmeld dig en ny [Dynamics 365-prøvekonto](https://go.microsoft.com/fwlink/?LinkId=252780)
 
 - Tilmeld dig en ny [Azure-prøvekonto](https://go.microsoft.com/fwlink/?LinkId=722737).
 
-Når du tilmelder dig en gratis prøveversion eller et abonnement, skal du aktivere Azure Active Directory for at understøtte din adgang til STP'en.
+Når du tilmelder dig enten en gratis prøveversion eller et abonnement, skal du aktivere Azure Active Directory for at understøtte din adgang til STP.
 
 ## <a name="using-the-service-trust-portal"></a>Brug af Service Trust Portal
 
-Funktionerne og indholdet på Service Trust Portal er tilgængelige fra hovedmenuen.
+Funktionerne og indholdet på Service Trust Portal er tilgængelige i hovedmenuen.
 
 ![Menuen Service Trust Portal.](../media/STPMenus1.png)
 
-I de følgende afsnit beskrives hvert element i hovedmenuen.
+I følgende afsnit beskrives hvert element i hovedmenuen.
 
 ### <a name="service-trust-portal"></a>Service Trust Portal
 
-Linket **til Service Trust Portal** viser startsiden. Her kan du hurtigt komme tilbage til startsiden.
+Linket **Service Trust Portal** viser startsiden. Det giver en hurtig måde at komme tilbage til startsiden på.
 
-### <a name="compliance-manager"></a>Overholdelsesstyring
+### <a name="certifications-standards-regulations-and-industry-resources"></a>Certificeringer, standarder, regler og brancheressourcer
 
-> [!IMPORTANT]
-> Overholdelsesstyring er flyttet fra Service Trust Portal til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>. Alle kundedata er blevet flyttet til den nye placering, så du kan fortsætte med at bruge Overholdelsesstyring uden afbrydelse. Se dokumentationen [til Overholdelsesstyring](compliance-manager.md) for at få installationsoplysninger og få mere at vide om nye funktioner.
+Giver et væld af sikkerhedsimplementerings- og designoplysninger med det formål at gøre det nemmere for dig at opfylde lovmæssige målsætninger for overholdelse af angivne standarder ved at forstå, hvordan Microsoft Cloud-tjenester beskytter dine data. Hvis du vil gennemse indhold, skal du vælge et af følgende felter.
 
-### <a name="trust-documents"></a>Hav tillid til dokumenter
+- **DoD** – Sikkerhedskrav til cloudcomputing for det amerikanske forsvarsministerium.
+- **FedRAMP** – US Government-program, der giver en standardtilgang til sikkerhed, autorisation og overvågning.
+- **Finansielle tjenester** – Microsoft Cloud til FInancial Services indeholder funktioner til administration af data.
+- **GDPR** – Hvordan Microsoft hjælper med at støtte vores kunder på deres GDPR-overholdelsesrejser.
+- **GRC Assessment** – Giver revisions- og sikkerhedseksperter et fælles sæt vurderingsprocedurer.
+- **HIPAA** – Krav til beskyttelse af personlige oplysninger for personlige oplysninger, der opbevares af omfattede enheder.
+- **IRS 1075** – US Government-program, der giver vejledning til at beskytte fortroligheden af Federal Tax Information (FTI).
+- **ISO** – Overholdelse af specifikke krav til informationssikkerhed og risikostyring.
+- **ITAR** – AMERIKANSK regulering, der styrer fremstilling, salg og distribution af forsvar.
+- **NIST 800-171 (DFARS)** – Amerikanske sikkerhedskrav til beskyttelse af kontrollerede ikke-klassificerede oplysninger i ikke-føderale systemer og organisationer.
+- **PCI DSS** – Validering af kontrolelementer omkring kortholderdata for at reducere svindel med kreditkort.
+- **SOC-rapporter** – SOC 1-, 2- og 3-rapporter, der er designet til at skabe tillid til og tillid til Microsoft-tjenester.
 
-Indeholder et væld af sikkerhedsimplementeringen og designoplysninger med det formål at gøre det nemmere for dig at opfylde lovmæssige overholdelsesmål ved at forstå, hvordan Microsoft Cloud-tjenester sørger for dine data. Hvis du vil gennemse indholdet, skal du vælge en af følgende indstillinger i **rullemenuen Hav** tillid til dokumenter.
+Ressourcer med serieafkrydsningsfeltet angiver, at dokumentet har flere versioner, som kan vises, når du klikker på dokumentet og klikker på "vis alle versioner" på følgende side.  
 
-- **Overvågningsrapporter:** Der vises en liste over uafhængige overvågnings- og vurderingsrapporter på Microsofts skytjenester. Disse rapporter indeholder oplysninger om Microsoft Cloud-tjenesters overholdelse af databeskyttelsesstandarder og lovkrav, f.eks.:
+Filtrer efter dato og cloudtjeneste – Når du får vist de tilgængelige dokumenter, kan du sortere resultaterne efter datointerval ved at vælge **Datoer** og derefter vælge det interval, du vil bruge.
 
-  - Den internationale standardiseringsorganisation (ISO)
-  - Kontrolelementer for tjenesteorganisation (SOC)
-  - NIST (National Institute of Standards and Technology)
-  - Federal Risk and Authorization Management Program (FedRAMP)
-  - Persondataforordningen (GDPR)
+:::image type="content" source="../media/stp-documents-filter-date.png" alt-text="Filtrer tilgængelige dokumenter efter datointerval.":::
 
-- **Databeskyttelse:** Indeholder et væld af ressourcer, f.eks. reviderede kontrolelementer, hvidbøger, ofte stillede spørgsmål, test afanalyser, værktøjer til risikovurdering og vejledninger til overholdelse af regler og standarder.
+Visning af dokumentdownload – Når du får vist de tilgængelige dokumenter, kan du sortere resultaterne efter den relevante **cloudtjeneste**.
 
-- **Azure Security and Compliance Blueprints:** Ressourcer, der hjælper dig med at opbygge sikre og kompatible skybaserede programmer. Dette område indeholder grundtegningsvejledning til offentlige myndigheder, økonomi, sundhedssektoren og detail lodrette områder.
+:::image type="content" source="../media/stp-documents-filter-service.png" alt-text="Filtrer tilgængelige dokumenter efter cloudtjeneste.":::
 
-### <a name="industries--regions"></a>Brancher & områder
-
-Leverer branche- og områdespecifikke oplysninger om overholdelse af regler og standarder om Microsofts skytjenester.
-
-- **Brancher:** På nuværende tidspunkt indeholder denne side en branchespecifik landingsside for den finansielle sektor. Den indeholder oplysninger som f.eks. tilbud om overholdelse, ofte stillede spørgsmål og succeshistorier. Der frigives ressourcer til flere brancher i fremtiden, men du kan finde ressourcer til flere brancher ved at gå til siden Trust **Documents > Data Protection** i STP.
-
-- **Områder:** Giver juridiske meninger om overholdelse af Microsoft Cloud-tjenester i henhold til forskellige love i forskellige lande. Bestemte lande omfatter Australien, Canada, Danmark, Tyskland, Polen, Rumænien, Spanien og Storbritannien.
-
-### <a name="trust-center"></a>Center for sikkerhed og sikkerhed og sikkerhed
-
-Links til [Microsoft Center for sikkerhed og beskyttelse](https://www.microsoft.com/trust-center), som indeholder flere oplysninger om sikkerhed, overholdelse af regler og standarder og beskyttelse af personlige oplysninger i Microsoft Cloud. Dette omfatter oplysninger om funktionerne i Microsoft Cloud-tjenester, som du kan bruge til at tage hånd om specifikke krav i GDPR, dokumentation, der kan hjælpe dig med dit GDPR-ansvar og din forståelse af de tekniske og organisatoriske foranstaltninger, som Microsoft har taget for at understøtte GDPR.
+> [!NOTE]
+> Mange af filerne på STP kræver accept af en licensaftale. Nogle browserbaserede PDF-fremvisere tillader ikke, at Javascript kører, hvilket forhindrer, at licensaftalen vises, og at filen åbnes.
 
 ### <a name="my-library"></a>Mit bibliotek
 
-Med denne nye funktion kan du gemme ( *eller fastgøre*) dokumenter, så du hurtigt kan få adgang til dem på siden Mit bibliotek. Du kan også konfigurere meddelelser, så Microsoft sender dig en mail, når dokumenter i mit bibliotek opdateres. Du kan finde flere oplysninger i [afsnittet Mit](#my-library-1) bibliotek i denne artikel.
+Med denne funktion kan du gemme (eller *fastgøre*) dokumenter, så du hurtigt kan få adgang til dem på siden Mit bibliotek. Du kan også konfigurere meddelelser, så Microsoft sender dig en mail, når dokumenter i Mit bibliotek opdateres. Du kan få flere oplysninger i afsnittet [Mit bibliotek](#my-library-1) i denne artikel.
 
-### <a name="more"></a>Mere
+### <a name="all-documents"></a>Alle dokumenter
 
-Gå til **Mere > administrator for at** få adgang til administrative funktioner, der kun er tilgængelige for den globale administratorkonto. Denne indstilling er kun synlig, når du er logget på som global administrator. Der er to indstillinger i **rullemenuen** Administrator:
-
-- **Indstillinger: På** denne side kan du tildele brugerroller til Overholdelsesstyring (klassisk).
-
-- **Brugeroplysninger Indstillinger: På** denne side kan du eksportere en rapport, der indeholder tildelinger af handlingselement i Overholdelsesstyring (klassisk) for en bestemt bruger. Du kan også tildele alle handlingspunkter til en anden bruger og fjerne eventuelle tildelte handlingspunkter fra den angivne bruger.
+I dette afsnit vises alle tilgængelige dokumenter. Vælg de dokumenter, der skal gemmes i sektionen Mit bibliotek. Dokumenter sorteres i de samme kategorier, der vises under Certificeringer, Standarder, Forordninger og Brancheressourcer.
 
 ### <a name="search"></a>Søg
 
-Klik på forstørrelsesglasset i øverste højre hjørne på siden Service Trust Portal for at udvide feltet, angiv dine søgeord, og tryk på **Enter**. **Søgesiden** vises med søgeordet vist i søgefeltet og de søgeresultater, der er angivet nedenfor.
+Klik på forstørrelsesglasset i øverste højre hjørne af siden Service Trust Portal for at udvide feltet, angiv søgeordene, og tryk på **Enter**. **Siden Søg** vises med det søgeord, der vises i søgefeltet, og de søgeresultater, der er angivet nedenfor.
 
-Søgningen returnerer som standard dokumentresultater. Du kan filtrere resultaterne ved at bruge rullelisterne til at indskrænke listen over viste dokumenter. Du kan bruge flere filtre til at indsnævre listen over dokumenter. Filtre omfatter de specifikke skytjenester, kategorier af overholdelses- eller sikkerhedspraksisser, områder og brancher. Klik på dokumentnavnets link for at hente dokumentet.
+![Service Trust Portal – Søg efter dokumenter med filter anvendt.](../media/86b754e1-c63c-4514-89ac-d014bf334140-2.png)
 
-> [!NOTE]
-> Rapporter og dokumenter i Service Trust Portal kan downloades i mindst 12 måneder efter publiceringen, eller indtil en ny version af dokumentet er tilgængelig.
+Som standard returnerer søgningen dokumentresultater. Du kan filtrere resultaterne ved hjælp af rullelisterne for at tilpasse listen over viste dokumenter. Du kan bruge flere filtre til at indsnævre listen over dokumenter. Filtre omfatter de specifikke cloudtjenester og områder. Klik på linket med dokumentnavnet for at hente dokumentet.
 
 ## <a name="my-library"></a>Mit bibliotek
 
-Brug funktionen Mit bibliotek til at føje dokumenter og ressourcer på Service Trust Portal til siden Mit bibliotek. Dette giver dig adgang til dokumenter, der er relevante for dig, på ét sted.  Hvis du vil føje et dokument til Mit bibliotek, skal du **klikke på menuen ...** til højre for et dokument og derefter vælge **Gem i bibliotek**. Du kan føje flere dokumenter til Mit bibliotek **ved at klikke** på afkrydsningsfeltet ud for et eller flere dokumenter og derefter klikke på Gem i bibliotek øverst på siden.
+Brug funktionen Mit bibliotek til at føje dokumenter og ressourcer på Service Trust Portal til siden Mit bibliotek. Det giver dig adgang til dokumenter, der er relevante for dig, på ét sted.  Hvis du vil føje et dokument til Mit bibliotek, skal du klikke på menuen **...** til højre for et dokument og derefter vælge **Gem i bibliotek**. Du kan føje flere dokumenter til Mit bibliotek ved at klikke på afkrydsningsfeltet ud for et eller flere dokumenter og derefter klikke på **Gem i bibliotek** øverst på siden.
 
-Desuden giver funktionen Meddelelser dig mulighed for at konfigurere Mit bibliotek, så der sendes en mail til dig, hver gang Microsoft opdaterer et dokument, som du har føjet til dit Mit bibliotek. Hvis du vil konfigurere meddelelser, skal du gå til Mit bibliotek og **klikke på Indstillinger**. Du kan vælge hyppigheden af meddelelser og angive en mailadresse i din organisation, som meddelelser skal sendes til. Mailmeddelelser indeholder links til de dokumenter, der er blevet opdateret, og en kort beskrivelse af opdateringen.
+Derudover giver meddelelsesfunktionen dig mulighed for at konfigurere Mit bibliotek, så der sendes en mail til dig, hver gang Microsoft opdaterer et dokument, som du har føjet til Mit bibliotek. Hvis du vil konfigurere meddelelser, skal du gå til Mit bibliotek og klikke på **Meddelelsesindstillinger**. Du kan vælge, hvor ofte meddelelser skal sendes, og angive en mailadresse i din organisation, der skal sendes meddelelser til. Mailmeddelelser indeholder links til de dokumenter, der er blevet opdateret, og en kort beskrivelse af opdateringen.
 
-Bemærk også, at vi identificerer dokumenter i dit Mit bibliotek, der er blevet opdateret inden for de seneste 30 dage, uanset om du slår meddelelser til eller fra. En kort beskrivelse af opdateringen vises også i et værktøjstip.
-
-## <a name="starter-packs"></a>Startpakker
-
-Startpakker er et Microsoft-curated sæt dokumentation om Microsoft Cloud-tjenester til bestemte brancher. Service Trust Portal tilbyder i øjeblikket følgende tre startpakker til organisationer med finansielle tjenester. Disse startpakker hjælper organisationer med at evaluere og vurdere sikkerhed, overholdelse og beskyttelse af personlige oplysninger i Microsoft Cloud og giver vejledning i at hjælpe med at implementere Microsoft Cloud-tjenester i den meget regulerede finansielle sektor.
-
-- **Evalueringspakke til start:** Bruges til tidlig evaluering af Microsoft Cloud til organisationer med finansielle tjenester.
-
-- **Assessment Starter Pack:** Efter evaluering kan du bruge tjeklisterne og andre retningslinjer i denne startpakke til at hjælpe din organisation med at vurdere risici i forbindelse med sikkerhed, overholdelse af regler og standarder og beskyttelse af personlige oplysninger.
-
-- **Audit Starter Pack:** Brug denne startpakke for at få vejledning i at bruge overvågningskontrolelementer og andet værktøj til at hjælpe med at vejlede din implementering af Microsoft Cloud-tjenester på en måde, der er med til at reducere din organisations risikorisiko.
-
-For at få adgang til disse startpakker skal du gå til **Service Trust Portal > Industry & regions > Industry Solutions > financial services**. Du kan åbne eller hente dokumenter fra en startpakke eller gemme dem i Mit bibliotek.
+Bemærk også, at vi identificerer alle dokumenter i Mit bibliotek, der er blevet opdateret inden for de sidste 30 dage, uanset om du aktiverer meddelelser eller ej. En kort beskrivelse af opdateringen vises også i et værktøjstip.
 
 ## <a name="localization-support"></a>Understøttelse af lokalisering
 
-Service Trust Portal giver dig mulighed for at få vist sideindholdet på forskellige sprog. Hvis du vil ændre sidesproget, skal du blot klikke på globusikonet nederst til venstre på siden og vælge det ønskede sprog.
+Med Service Trust Portal kan du få vist sideindholdet på forskellige sprog. Hvis du vil ændre sidesproget, skal du blot klikke på globusikonet i nederste venstre hjørne af siden og vælge det ønskede sprog.
 
 ## <a name="give-feedback"></a>Giv feedback
 
-Vi kan hjælpe dig med spørgsmål om Service Trust Portal, eller hvis du oplever fejl, når du bruger portalen. Du kan også kontakte os med spørgsmål og feedback om overholdelsesrapporter og tillidsressourcer i Service Trust Portal ved hjælp af linket Feedback nederst på STP-siderne.
+Vi kan hjælpe med spørgsmål om Service Trust Portal eller fejl, du oplever, når du bruger portalen. Du kan også kontakte os med spørgsmål og feedback om tjenestetillidsportalens overholdelsesrapporter og tillidsressourcer ved hjælp af linket Feedback nederst på STP-siderne.
 
-Din feedback er vigtig for os. Klik på knappen Feedback nederst på siden for at sende os kommentarer om, hvad du kunne eller ikke kunne lide, eller de forslag, du måtte have til forbedring af vores produkter eller produktfunktioner.
+Din feedback er vigtig for os. Klik på knappen Feedback nederst på siden for at sende os kommentarer til, hvad du gjorde eller ikke kunne lide, eller forslag, du måtte have til at forbedre vores produkter eller produktfunktioner.
 
 ![Hvilken type feedback har du.](../media/5a949f4c-cd2d-4258-aa33-394f3f9feb7b.jpg)

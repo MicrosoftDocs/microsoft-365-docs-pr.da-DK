@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 29a221e60484431722be4e7104efb5b37a0408bc
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 7b195f595592b5c3b284b6dee4fd65b66d80e06a
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648563"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489359"
 ---
 # <a name="web-content-filtering"></a>Filtrering af webindhold
 
@@ -39,7 +39,7 @@ Filtrering af webindhold er en del af [webbeskyttelsesfunktionerne](web-protecti
 
 Konfigurer politikker på tværs af dine enhedsgrupper for at blokere bestemte kategorier. Blokering af en kategori forhindrer brugere i angivne enhedsgrupper i at få adgang til URL-adresser, der er knyttet til kategorien. FOR alle kategorier, der ikke er blokeret, overvåges URL-adresserne automatisk. Dine brugere kan få adgang til URL-adresserne uden afbrydelser, og du skal indsamle adgangsstatistikker for at hjælpe med at oprette en mere brugerdefineret politikbeslutning. Brugerne får vist en meddelelse om blokering, hvis et element på den side, de får vist, foretager kald til en blokeret ressource.
 
-Filtrering af webindhold er tilgængelig i de større webbrowsere med blokke udført af Windows Defender SmartScreen (Microsoft Edge) og Network Protection (Chrome, Firefox, Brave og Opera). Du kan få flere oplysninger om browsersupport i afsnittet [Forudsætninger](#prerequisites) .
+Filtrering af webindhold er tilgængelig i de store webbrowsere med blokke udført af Windows Defender SmartScreen (Microsoft Edge) og Network Protection (Chrome, Firefox, Brave og Opera). Du kan få flere oplysninger om browsersupport i afsnittet [Forudsætninger](#prerequisites) .
 
 ## <a name="benefits-of-web-content-filtering"></a>Fordele ved filtrering af webindhold
 
@@ -63,6 +63,17 @@ Før du afprøver denne funktion, skal du sikre dig, at du opfylder de krav, der
 
 Data gemmes i det område, der blev valgt som en del af [indstillingerne for Microsoft Defender for Endpoint datahåndtering](data-storage-privacy.md). Dine data forlader ikke datacenteret i det pågældende område. Desuden deles dine data ikke med nogen tredjepart, herunder vores dataudbydere.
 
+## <a name="precedence-for-multiple-active-policies"></a>Rangplacering for flere aktive politikker
+
+Anvendelse af flere forskellige politikker til filtrering af webindhold på den samme enhed vil resultere i, at den mere restriktive politik gælder for hver kategori. Overvej følgende scenarie:
+
+- **Politik 1**: blokerer kategori 1 og 2 og reviderer resten
+- **Politik 2**: blokerer kategori 3 og 4 og reviderer resten
+
+Resultatet er, at kategorierne 1-4 er blokeret.  Dette er illustreret på følgende billede.
+
+:::image type="content" source="images/web-content-filtering-policies-mode-precedence.png" alt-text="Illustrerer prioriteten af blokeringstilstand for politikfiltrering af webindhold i forhold til overvågningstilstand":::
+
 ## <a name="turn-on-web-content-filtering"></a>Slå filtrering af webindhold til
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og log på.
@@ -75,7 +86,7 @@ Data gemmes i det område, der blev valgt som en del af [indstillingerne for Mic
 
 ### <a name="configure-web-content-filtering-policies"></a>Konfigurer politikker for filtrering af webindhold
 
-Politikker for filtrering af webindhold angiver, hvilke webstedskategorier der er blokeret for, hvilke enhedsgrupper der er blokeret. Hvis du vil administrere politikkerne, **skal du** gå til Indstillinger \> **Filtrering af webindhold** **for slutpunkter** \> (under **Regler**).
+Politikker for filtrering af webindhold angiver, hvilke webstedskategorier der er blokeret for, hvilke enhedsgrupper der er blokeret. Hvis du vil administrere politikkerne, skal du gå til **Indstillinger** \> **Slutpunkter** \> **Filtrering af webindhold** (under **Regler**).
 
 Politikker kan installeres for at blokere en af følgende overordnede eller underordnede kategorier:
 
@@ -166,7 +177,7 @@ Politikker kan installeres for at blokere en af følgende overordnede eller unde
 
 Hvis du vil tilføje en ny politik, skal du følge disse trin:
 
-1. Vælg **Indstillinger** >  **Webindholdsfiltrering** > **+ Tilføj politik** på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>.
+1. På <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal skal</a> du vælge **Indstillinger Filtrering** >  af  > **webindhold****+ Tilføj politik**.
 
 2. Angiv et navn.
 
@@ -194,7 +205,7 @@ Det er muligt at tilsidesætte den blokerede kategori i filtrering af webindhold
 
 Følg disse trin for at definere en brugerdefineret indikator:
 
-1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> skal du gå til **Indstillinger** \> **URL-adresse til slutpunktsindikatorer** \>  \> **/****domænetilføj**\> element.
+1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> skal du gå til **Indstillinger** \> **URL-adresse** til indikatorer  for \> **slutpunkter**\>/**Domænetilføj**\> element.
 
 2. Angiv domænet for webstedet.
 
@@ -250,7 +261,7 @@ Brug filteret for tidsinterval øverst til venstre på siden til at vælge en ti
 
 Kun Microsoft Edge understøttes, hvis enhedens operativsystemkonfiguration er Server (**cmd** \> **Systeminfo** \> **OS Configuration**). Netværksbeskyttelse understøttes kun i tilstanden Undersøg på serverenheder, som er ansvarlig for at beskytte trafik på tværs af understøttede tredjepartsbrowsere.
 
-Det er kun Microsoft Edge, der understøttes, og netværksbeskyttelse understøttes ikke på Windows 10 Azure Virtual Desktop-værter med flere sessioner.
+Kun Microsoft Edge understøttes, og netværksbeskyttelse understøttes ikke på Windows 10 Azure Virtual Desktop-værter med flere sessioner.
 
 Netværksbeskyttelse understøtter i øjeblikket ikke SSL-inspektion, hvilket kan resultere i, at nogle websteder tillades af filtrering af webindhold, som normalt ville blive blokeret. Websteder vil blive tilladt på grund af manglende synlighed i krypteret trafik, efter at TLS-håndtrykket har fundet sted, og en manglende evne til at fortolke visse omdirigeringer.  Dette omfatter omdirigeringer fra nogle webbaserede maillogonsider til postkassesiden. Som en accepteret løsning kan du oprette en brugerdefineret blokeringsindikator for logonsiden for at sikre, at ingen brugere kan få adgang til webstedet. Vær opmærksom på, at dette kan blokere deres adgang til andre tjenester, der er knyttet til det samme websted. 
 

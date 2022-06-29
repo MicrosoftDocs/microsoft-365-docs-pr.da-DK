@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: ac43b62c16cd3e1394cec7a1a75e69bf613757ef
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d9824a738468f14ebfc7cd7bdc3c612c21a0e43c
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64934329"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493103"
 ---
 # <a name="configure-advanced-features-in-defender-for-endpoint"></a>Konfigurer avancerede funktioner i Defender for Endpoint
 
@@ -30,7 +30,7 @@ ms.locfileid: "64934329"
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedfeats-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-advancedfeats-abovefoldlink)
 
 Afhængigt af de Microsoft-sikkerhedsprodukter, du bruger, kan nogle avancerede funktioner være tilgængelige, så du kan integrere Defender for Endpoint med.
 
@@ -78,9 +78,9 @@ Denne konfiguration kan bruges til scenarier, hvor lokale SOC-handlinger kun vil
 > [!NOTE]
 > Ændring af denne indstilling påvirker kun fremtidige beskeders korrelation.
 
-## <a name="enable-edr-in-block-mode"></a>Aktivér Slutpunktsregistrering og -svar i bloktilstand
+## <a name="enable-edr-in-block-mode"></a>Aktivér EDR i bloktilstand
 
-Registrering af slutpunkter og svar (Slutpunktsregistrering og -svar) i blokeringstilstand giver beskyttelse mod skadelige artefakter, selv når Microsoft Defender Antivirus kører i passiv tilstand. Når funktionen er slået til, blokerer Slutpunktsregistrering og -svar i bloktilstand skadelige artefakter eller funktionsmåder, der registreres på en enhed. Slutpunktsregistrering og -svar i bloktilstand fungerer bag kulisserne for at afhjælpe skadelige artefakter, der registreres efter sikkerhedsbrud.
+EDR (Endpoint Detection and Response) i blokeringstilstand giver beskyttelse mod skadelige artefakter, selv når Microsoft Defender Antivirus kører i passiv tilstand. Når EDR er slået til, blokerer EDR i bloktilstand skadelige artefakter eller funktionsmåder, der registreres på en enhed. EDR i bloktilstand arbejder bag kulisserne for at afhjælpe skadelige artefakter, der registreres efter sikkerhedsbrud.
 
 ## <a name="autoresolve-remediated-alerts"></a>Automatisk løsningsbeskeder
 
@@ -105,7 +105,7 @@ Denne funktion giver dig mulighed for at blokere potentielt skadelige filer på 
 
 Sådan slår du **Tillad eller bloker** filer til:
 
-1. I navigationsruden skal du vælge **Indstillinger** \> **Slutpunkter** **Generelle** \> **avancerede funktioner** \> **Tillad eller bloker**\> fil.
+1. I navigationsruden skal du vælge **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** \> **Tillad eller bloker fil**.
 
 1. Slå **indstillingen til og** **fra.**
  
@@ -137,7 +137,7 @@ Hold beskyttelse mod manipulation slået til for at forhindre uønskede ændring
 
 ## <a name="show-user-details"></a>Vis brugeroplysninger
 
-Slå denne funktion til, så du kan se brugeroplysninger, der er gemt i Azure Active Directory. Oplysningerne omfatter oplysninger om en brugers billede, navn, titel og afdeling, når der undersøges brugerkontoobjekter. Du kan finde brugerkontooplysninger i følgende visninger:
+Aktivér denne funktion, så du kan se brugeroplysninger, der er gemt i Azure Active Directory. Oplysningerne omfatter oplysninger om en brugers billede, navn, titel og afdeling, når der undersøges brugerkontoobjekter. Du kan finde brugerkontooplysninger i følgende visninger:
 
 - Dashboard til sikkerhedshandlinger
 - Beskedkø
@@ -150,7 +150,7 @@ Du kan få flere oplysninger under [Undersøg en brugerkonto](investigate-user.m
 Aktivering af Skype for Business integration giver dig mulighed for at kommunikere med brugere ved hjælp af Skype for Business, mail eller telefon. Denne aktivering kan være praktisk, når du har brug for at kommunikere med brugeren og afhjælpe risici.
 
 > [!NOTE]
-> Når en enhed isoleres fra netværket, er der et pop op-vindue, hvor du kan vælge at aktivere Outlook og Skype kommunikation, der tillader kommunikation til brugeren, mens brugeren ikke har forbindelse til netværket. Denne indstilling gælder for Skype og Outlook kommunikation, når enheder er i isolationstilstand.
+> Når en enhed isoleres fra netværket, er der et pop op-vindue, hvor du kan vælge at aktivere Outlook- og Skype-kommunikation, som tillader kommunikation til brugeren, mens brugeren ikke har forbindelse til netværket. Denne indstilling gælder for Skype- og Outlook-kommunikation, når enheder er i isolationstilstand.
 
 ## <a name="microsoft-defender-for-identity-integration"></a>Microsoft Defender for Identity integration
 
@@ -163,7 +163,7 @@ Integrationen med Microsoft Defender for Identity giver dig mulighed for at pivo
 
 Denne funktion er kun tilgængelig, hvis du har en aktiv Office 365 E5 eller tilføjelsesprogrammet Threat Intelligence. Du kan få flere oplysninger på produktsiden Office 365 Enterprise E5.
 
-Når du aktiverer denne funktion, kan du integrere data fra Microsoft Defender for Office 365 i Microsoft 365 Defender for at udføre en omfattende sikkerhedsundersøgelse på tværs af Office 365 postkasser og Windows enheder.
+Når du aktiverer denne funktion, kan du inkorporere data fra Microsoft Defender for Office 365 i Microsoft 365 Defender for at udføre en omfattende sikkerhedsundersøgelse på tværs af Office 365 postkasser og Windows-enheder.
 
 > [!NOTE]
 > Du skal have den relevante licens for at aktivere denne funktion.
@@ -200,11 +200,15 @@ Når du har fuldført integrationstrinnene på begge portaler, kan du se relevan
 
 Bloker adgang til websteder, der indeholder uønsket indhold, og spor webaktivitet på tværs af alle domæner. Hvis du vil angive de webindholdskategorier, du vil blokere, skal du oprette en [politik for filtrering af webindhold](https://security.microsoft.com/preferences2/web_content_filtering_policy). Sørg for, at du har netværksbeskyttelse i blokeringstilstand, når [du installerer Microsoft Defender for Endpoint grundlæggende sikkerhedsindstilling](https://devicemanagement.microsoft.com/#blade/Microsoft_Intune_Workflows/SecurityBaselineSummaryMenu/overview/templateType/2).
 
-## <a name="share-endpoint-alerts-with-microsoft-purview-compliance-portal"></a>Del slutpunktbeskeder med Microsoft Purview-overholdelsesportalen
+## <a name="share-endpoint-alerts-with-microsoft-purview-compliance-portal"></a>Del slutpunktbeskeder med Microsoft Purview-compliance-portal
 
-Videresender sikkerhedsbeskeder for slutpunkter og deres triagestatus til Microsoft Purview-overholdelsesportalen, så du kan forbedre politikker for styring af insiderrisiko med beskeder og afhjælpe interne risici, før de forårsager skade. Videresendte data behandles og gemmes på samme placering som dine Office 365 data.
+Videresender sikkerhedsbeskeder for slutpunkter og deres triagestatus til Microsoft Purview-compliance-portal, så du kan forbedre politikker for styring af insiderrisiko med beskeder og afhjælpe interne risici, før de forårsager skade. Videresendte data behandles og gemmes på samme placering som dine Office 365 data.
 
 Når du har konfigureret [indikatorerne for overtrædelse af sikkerhedspolitik](/microsoft-365/compliance/insider-risk-management-settings#indicators) i indstillingerne for styring af insiderrisiko, deles Defender for Endpoint-beskeder med styring af insiderrisiko for relevante brugere.
+
+## <a name="authenticated-telemetry"></a>Godkendt telemetri
+
+Du kan **slå** godkendt telemetri til for at forhindre spoofing af telemetri i dit dashboard.
 
 ## <a name="microsoft-intune-connection"></a>Microsoft Intune forbindelse
 
@@ -216,7 +220,7 @@ Defender for Endpoint kan integreres med [Microsoft Intune](/intune/what-is-intu
 Denne funktion er kun tilgængelig, hvis du har følgende forudsætninger:
 
 - En licenseret lejer til Enterprise Mobility + Security E3 og Windows E5 (eller Microsoft 365 Enterprise E5)
-- Et aktivt Microsoft Intune miljø med Intune administrerede Windows enheder[, som Azure AD-tilmeldte](/azure/active-directory/devices/concept-azure-ad-join/).
+- Et aktivt Microsoft Intune miljø, hvor Intune administrerede Windows-enheder [Azure AD tilsluttet](/azure/active-directory/devices/concept-azure-ad-join/).
 
 ### <a name="conditional-access-policy"></a>Politik for betinget adgang
 

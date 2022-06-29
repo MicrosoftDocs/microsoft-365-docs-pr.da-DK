@@ -4,7 +4,7 @@ f1.keywords:
 - NOCSH
 ms.author: v-kcirillo
 author: cirilk
-manager: scotv
+manager: dansimp
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Trinvis tilmelding til Microsoft 365 til kampagner. Beskyt din kampagne mod cybersikkerhedstrusler mod mail, data og kommunikation.
-ms.openlocfilehash: b39d01bc6aa1cf138d230e95493d5f9eeb3cc51b
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 623298b7a9c2feb2fb535e8f4fbffca5baf42fc7
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893301"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491189"
 ---
 # <a name="sign-up-for-microsoft-365-for-campaigns"></a>Tilmeld dig Microsoft 365 til kampagner 
 

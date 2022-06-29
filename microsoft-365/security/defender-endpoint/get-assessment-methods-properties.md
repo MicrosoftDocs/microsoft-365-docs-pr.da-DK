@@ -15,12 +15,12 @@ ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
 ms.custom: api
-ms.openlocfilehash: fc2686b9ef6a30c9c81d7633ce8a59a0454d622d
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 022c5854c955ed9b0faef16455be1af3a81b0997
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65838932"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487283"
 ---
 # <a name="export-assessment-methods-and-properties-per-device"></a>Eksportér vurderingsmetoder og -egenskaber pr. enhed
 
@@ -166,7 +166,8 @@ rbacGroupId|String|Det rollebaserede RBAC-gruppe-id (Access Control).
 Reference til anbefaling|String|En reference til det anbefalings-id, der er relateret til denne software.
 RecommendedSecurityUpdate|String|Navn på eller beskrivelse af den sikkerhedsopdatering, der leveres af softwareleverandøren til at løse problemet med sårbarheden.
 RecommendedSecurityUpdateId|String|Identifikator for de relevante sikkerhedsopdateringer eller identifikator for den tilsvarende vejledning eller videnbase (KB) artikler.
-Matrixstreng\[for registreringsdatabasestier\]|Registreringsdatabase beviser, at produktet er installeret på enheden.
+Stier i registreringsdatabasen|Matrix[streng]|Registreringsdatabase beviser, at produktet er installeret på enheden.
+Sikkerhedsopdatering er tilgængelig|Boolesk |Angiver, om der er en tilgængelig sikkerhedsopdatering til softwaren.
 SoftwareName|String|Navnet på softwareproduktet.
 SoftwareVendor|String|Navnet på softwareleverandøren.
 SoftwareVersion|String|Softwareproduktets versionsnummer.
@@ -213,5 +214,5 @@ VulnerabilitySeverityLevel|String|Alvorsgradsniveau, der er tildelt sikkerhedss�
 
 Andre relaterede
 
-- [Risikobaseret trussel & håndtering af sikkerhedsrisici](next-gen-threat-and-vuln-mgt.md)
+- [Risikobaseret trussel & administration af sårbarheder](next-gen-threat-and-vuln-mgt.md)
 - [Sikkerhedsrisici i din organisation](tvm-weaknesses.md)

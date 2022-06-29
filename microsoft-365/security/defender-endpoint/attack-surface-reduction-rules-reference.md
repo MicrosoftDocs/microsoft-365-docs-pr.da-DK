@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.date: 02/04/2022
-ms.openlocfilehash: 44f2697f5d56e05a7edfb624d09fd8117034fc8f
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 593eb801505275210862d9b776c6e2dca290ef89
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078355"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66493015"
 ---
 # <a name="attack-surface-reduction-rules-reference"></a>Reference til regler for reduktion af angrebsoverflade
 
@@ -52,34 +52,34 @@ I følgende tabel vises de understøttede operativsystemer til regler, der i øj
 
 > [!NOTE]
 >
-> Medmindre andet er angivet, er minimum Windows&nbsp; 10 build version 1709 (RS3, build 16299) eller nyere. Det mindste Windows&nbsp; Server-build er version 1809 eller nyere.
+> Medmindre andet er angivet, er det mindste Windows&nbsp;10-build version 1709 (RS3, build 16299) eller nyere. Det mindste Windows&nbsp;Server-build er version 1809 eller nyere.
 >
-> Regler for reduktion af angrebsoverfladen i Windows&nbsp; Server&nbsp;2012&nbsp;R2 og Windows&nbsp; Server&nbsp;2016 er tilgængelige for enheder, der er onboardet ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
+> Regler for reduktion af angrebsoverfladen i Windows&nbsp;Server&nbsp;2012&nbsp;R2 og Windows&nbsp;Server&nbsp;2016 er tilgængelige for enheder, der er onboardet ved hjælp af den moderne samlede løsningspakke. Du kan få flere oplysninger [under Ny funktionalitet i den moderne samlede løsning til Windows Server 2012 R2 og 2016 Preview](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview).
 
-| Regelnavn| &nbsp;Windows 11 <br>Og<br> &nbsp;Windows 10 | &nbsp;Windows Server <br> 2022 <br>Og<br>  &nbsp;Windows Server <br> 2019 | Windows Server | &nbsp;Windows Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | &nbsp;Windows Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
+| Regelnavn| Windows&nbsp;11 <br>Og<br> Windows&nbsp;10 | Windows&nbsp;Server <br> 2022 <br>Og<br>  Windows&nbsp;Server <br> 2019 | Windows Server | Windows&nbsp;Server <br> 2016 <sup>[[1, 2](#fn1)]<sup></sup> | Windows&nbsp;Server <br> 2012&nbsp;R2 <sup>[[1, 2](#fn1)]<sup></sup> |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | [Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y | Y | Y <br> version 1803 (halvårlig Enterprise Channel) eller nyere | Y | Y |
 | [Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y <br> version 1809 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
-| [Bloker alle Office programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y | Y | Y | Y | Y |
-| [Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y <br> version 1803 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
+| [Bloker alle Office-programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y | Y | Y | Y | Y |
+| [Bloker tyveri af legitimationsoplysninger fra det lokale windows-undersystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y <br> version 1803 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
 | [Bloker eksekverbart indhold fra mailklient og webmail](#block-executable-content-from-email-client-and-webmail) | Y | Y | Y | Y | Y |
 | [Bloker eksekverbare filer, så de ikke kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | Y <br> version 1803 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
 | [Bloker udførelse af potentielt slørede scripts](#block-execution-of-potentially-obfuscated-scripts) | Y | Y | Y | Y | Y |
 | [Bloker JavaScript eller VBScript fra start af downloadet eksekverbart indhold](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Y | Y | Y | N | N |
-| [Bloker Office programmer, så de ikke kan oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) | Y | Y | Y | Y | Y |
-| [Bloker Office programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes)  | Y | Y | Y | Y | Y |
-| [Bloker Office kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) | Y | Y | Y | Y | Y |
+| [Bloker Office-programmer fra at oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) | Y | Y | Y | Y | Y |
+| [Bloker Office-programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes)  | Y | Y | Y | Y | Y |
+| [Bloker Office-kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) | Y | Y | Y | Y | Y |
 | [Bloker vedholdenhed via WMI-hændelsesabonnement](#block-persistence-through-wmi-event-subscription) <br> \*_Fil- og mappeudeladelser understøttes ikke._ | Y <br> version 1903 (build 18362) eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y <br> version 1903 (build 18362) eller nyere | N | N |
 | [Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y <br> version 1803 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
 | [Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y | Y | Y | Y | Y |
-| [Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) | Y | Y | Y | N | N |
+| [Bloker Win32 API-kald fra Office-makroer](#block-win32-api-calls-from-office-macros) | Y | Y | Y | N | N |
 | [Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Y <br> version 1803 eller nyere <sup>[[3](#fn1)]<sup></sup> | Y | Y | Y | Y |
 
-(<a id="fn1">1</a>) Refererer til den moderne samlede løsning til Windows Server 2012 og 2016. Du kan finde flere oplysninger under [Onboard Windows Servers til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
+(<a id="fn1">1</a>) Refererer til den moderne samlede løsning til Windows Server 2012 og 2016. Du kan finde flere oplysninger under [Onboarder Windows-servere til Defender for Endpoint-tjenesten](configure-server-endpoints.md).
 
-(<a id="fn1">2</a>) For Windows&nbsp; Server 2016 og Windows&nbsp; Server 2012&nbsp;R2 er den mindste version af Microsoft Endpoint Configuration Manager version 2111.
+(<a id="fn1">2</a>) For Windows&nbsp;Server 2016 og Windows&nbsp;Server 2012&nbsp;R2 er den mindste påkrævede version af Microsoft Endpoint Configuration Manager version 2111.
 
-(<a id="fn1">3</a>) Version og buildnummer gælder kun for Windows&nbsp; 10.
+(<a id="fn1">3</a>) Version og buildnummer gælder kun for Windows&nbsp;10.
 
 ## <a name="supported-configuration-management-systems"></a>Understøttede systemer til administration af konfiguration
 
@@ -89,19 +89,19 @@ Links til oplysninger om systemversioner til konfigurationsstyring, der referere
 |---|:---:|:---:|:---:|:---:|:---:|
 |[Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) | Y  | Y MEM OMA-URI |   | Y  |  Y  |
 |[Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Y |   |  | Y  | Y  |
-|[Bloker alle Office programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y |   |Y <br><br> CB 1710 | Y  | Y  |
-|[Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y  |   | Y <br><br>CB 1802 | Y  | Y  |
+|[Bloker alle Office-programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) | Y |   |Y <br><br> CB 1710 | Y  | Y  |
+|[Bloker tyveri af legitimationsoplysninger fra det lokale windows-undersystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) | Y  |   | Y <br><br>CB 1802 | Y  | Y  |
 |[Bloker eksekverbart indhold fra mailklient og webmail](#block-executable-content-from-email-client-and-webmail) | Y |  |Y <br><br> CB 1710 | Y | Y  |
 |[Bloker eksekverbare filer, så de ikke kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) | Y |   | Y <br><br> CB 1802 |  Y |  Y |
 |[Bloker udførelse af potentielt slørede scripts](#block-execution-of-potentially-obfuscated-scripts) | Y |   |  Y  <br><br> CB 1710 | Y  | Y  |
 |[Bloker JavaScript eller VBScript fra start af downloadet eksekverbart indhold](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Y |   | Y <br><br> CB 1710 | Y  | Y  |
-|[Bloker Office programmer, så de ikke kan oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) | Y |  |Y <br><br> CB 1710 | Y  | Y  |
-|[Bloker Office programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes) | Y |  | Y <br><br> CB 1710 | Y  | Y  |
-|[Bloker Office kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) | Y |  |Y <br><br> CB 1710 | Y  | Y  |
+|[Bloker Office-programmer fra at oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) | Y |  |Y <br><br> CB 1710 | Y  | Y  |
+|[Bloker Office-programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes) | Y |  | Y <br><br> CB 1710 | Y  | Y  |
+|[Bloker Office-kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) | Y |  |Y <br><br> CB 1710 | Y  | Y  |
 |[Bloker vedholdenhed via WMI-hændelsesabonnement](#block-persistence-through-wmi-event-subscription) |  |  |  |Y   | Y  |
 |[Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI](#block-process-creations-originating-from-psexec-and-wmi-commands) | Y |   |   |  Y | Y  |
 |[Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Y |   |Y <br><br> CB 1802  | Y  | Y  |
-|[Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) | Y |   | Y <br><br> CB 1710  | Y  |  Y |
+|[Bloker Win32 API-kald fra Office-makroer](#block-win32-api-calls-from-office-macros) | Y |   | Y <br><br> CB 1710  | Y  |  Y |
 |[Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Y |   | Y <br><br> CB 1802 | Y  | Y  |
 
   (<a id="fn1">1</a>) Du kan konfigurere regler for reduktion af angrebsoverflader pr. regel ved hjælp af en hvilken som helst regels GUID.
@@ -118,26 +118,26 @@ Toastbeskeder genereres for alle regler i bloktilstand. Regler i en anden tilsta
 For regler med "Regeltilstand" angivet:
 
 - ASR-regler med \<ASR Rule, Rule State\> kombinationer bruges til at vise beskeder (toastbeskeder) på Microsoft Defender for Endpoint kun for enheder på blokniveau med høj sky. Enheder, der ikke har et højt skyblokeringsniveau, genererer ikke beskeder for nogen <ASR-regel, regeltilstand> kombinationer
-- Slutpunktsregistrering og -svar beskeder genereres for ASR-regler i de angivne tilstande, men kun for enheder på højt skyblokeringsniveau.
+- EDR-beskeder genereres for ASR-regler i de angivne tilstande, men kun for enheder på højt skyblokeringsniveau.
 
-| Regelnavn: | Regeltilstand: | Genererer beskeder i Slutpunktsregistrering og -svar? <br> (Ja&nbsp;\|&nbsp;Nej) | Genererer toastbeskeder? <br> (Ja&nbsp;\|&nbsp;Nej) |
+| Regelnavn: | Regeltilstand: | Genererer beskeder i EDR? <br> (Ja&nbsp;\|&nbsp;Nej) | Genererer toastbeskeder? <br> (Ja&nbsp;\|&nbsp;Nej) |
 |---|:---:|:---:|:---:|
 |   |   |  _Kun for enheder med blokniveau i høj sky_ | _Kun i bloktilstand_ |
 |[Bloker misbrug af udnyttede sårbare bilister](#block-abuse-of-exploited-vulnerable-signed-drivers) |   | N  | Y |
 |[Bloker Adobe Reader fra at oprette underordnede processer](#block-adobe-reader-from-creating-child-processes) | Bloker  | Y <br> Kræver enhed på blokniveau med høj sky  | Y <br> Kræver enhed på blokniveau med høj sky |
-|[Bloker alle Office programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) |   | N | Y |
-|[Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) |   | N | Y |
+|[Bloker alle Office-programmer, så de ikke kan oprette underordnede processer](#block-all-office-applications-from-creating-child-processes) |   | N | Y |
+|[Bloker tyveri af legitimationsoplysninger fra det lokale windows-undersystem (lsass.exe)](#block-credential-stealing-from-the-windows-local-security-authority-subsystem) |   | N | Y |
 |[Bloker eksekverbart indhold fra mailklient og webmail](#block-executable-content-from-email-client-and-webmail) |   | Y <br> Kræver enhed på blokniveau med høj sky | Y <br> Kræver enhed på blokniveau med høj sky |
 |[Bloker eksekverbare filer, så de ikke kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til](#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion) |   | N | Y |
 |[Bloker udførelse af potentielt slørede scripts](#block-execution-of-potentially-obfuscated-scripts) |  Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
 |[Bloker JavaScript eller VBScript fra start af downloadet eksekverbart indhold](#block-javascript-or-vbscript-from-launching-downloaded-executable-content) | Bloker | Y <br> Kræver enhed på blokniveau med høj sky  | Y <br> Kræver enhed på blokniveau med høj sky |
-|[Bloker Office programmer, så de ikke kan oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) |   | N | Y |
-|[Bloker Office programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes)  |   | N | Y |
-|[Bloker Office kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) |  |  N | Y |
+|[Bloker Office-programmer fra at oprette eksekverbart indhold](#block-office-applications-from-creating-executable-content) |   | N | Y |
+|[Bloker Office-programmer fra at indsætte kode i andre processer](#block-office-applications-from-injecting-code-into-other-processes)  |   | N | Y |
+|[Bloker Office-kommunikationsprogram fra oprettelse af underordnede processer](#block-office-communication-application-from-creating-child-processes) |  |  N | Y |
 |[Bloker vedholdenhed via WMI-hændelsesabonnement](#block-persistence-through-wmi-event-subscription) |  Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
 |[Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI](#block-process-creations-originating-from-psexec-and-wmi-commands) |   | N | Y |
 |[Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB](#block-untrusted-and-unsigned-processes-that-run-from-usb) | Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
-|[Bloker Win32 API-kald fra Office makroer](#block-win32-api-calls-from-office-macros) |   | N | Y |
+|[Bloker Win32 API-kald fra Office-makroer](#block-win32-api-calls-from-office-macros) |   | N | Y |
 |[Brug avanceret beskyttelse mod ransomware](#use-advanced-protection-against-ransomware) | Overvågningsblok&nbsp;\|&nbsp; | Y \| Y <br> Kræver enhed på blokniveau med høj sky  | N \| Y <br> Kræver enhed på blokniveau med høj sky |
   
 ## <a name="asr-rule-to-guid-matrix"></a>ASR-regel til GUID-matrix
@@ -146,19 +146,19 @@ For regler med "Regeltilstand" angivet:
 |:-----|:-----|
 | Bloker misbrug af udnyttede sårbare bilister | 56a863a9-875e-4185-98a7-b882c64b5ce5 |
 | Bloker Adobe Reader fra at oprette underordnede processer | 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c |
-| Bloker alle Office programmer, så de ikke kan oprette underordnede processer | d4f940ab-401b-4efc-aadc-ad5f3c50688a |
-| Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed (lsass.exe) | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 |
+| Bloker alle Office-programmer, så de ikke kan oprette underordnede processer | d4f940ab-401b-4efc-aadc-ad5f3c50688a |
+| Bloker tyveri af legitimationsoplysninger fra det lokale windows-undersystem (lsass.exe) | 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 |
 | Bloker eksekverbart indhold fra mailklient og webmail | be9ba2d9-53ea-4cdc-84e5-9b1eeee46550 |
 | Bloker eksekverbare filer, så de ikke kører, medmindre de opfylder et prævalens-, alders- eller listekriterium, der er tillid til | 01443614-cd74-433a-b99e-2ecdc07bfc25 |
 | Bloker udførelse af potentielt slørede scripts | 5beb7efe-fd9a-4556-801d-275e5ffc04cc |
 | Bloker JavaScript eller VBScript fra start af downloadet eksekverbart indhold | d3e037e1-3eb8-44c8-a917-57927947596d |
-| Bloker Office programmer, så de ikke kan oprette eksekverbart indhold | 3b576869-a4ec-4529-8536-b80a7769e899 |
-| Bloker Office programmer fra at indsætte kode i andre processer | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84 |
-| Bloker Office kommunikationsprogram fra oprettelse af underordnede processer | 26190899-1602-49e8-8b27-eb1d0a1ce869 |
+| Bloker Office-programmer fra at oprette eksekverbart indhold | 3b576869-a4ec-4529-8536-b80a7769e899 |
+| Bloker Office-programmer fra at indsætte kode i andre processer | 75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84 |
+| Bloker Office-kommunikationsprogram fra oprettelse af underordnede processer | 26190899-1602-49e8-8b27-eb1d0a1ce869 |
 | Bloker vedholdenhed via WMI-hændelsesabonnement <br>* Fil- og mappeudeladelser understøttes ikke. | e6db77e5-3df2-4cf1-b95a-636979351e5b |
 | Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI | d1e49aac-8f56-4280-b9ba-993a6d77406c |
 | Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB | b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 |
-| Bloker Win32 API-kald fra Office makroer | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
+| Bloker Win32 API-kald fra Office-makroer | 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b |
 | Brug avanceret beskyttelse mod ransomware | c1db55ab-c21a-4637-bb3f-a12568109d35 |
 
 ## <a name="asr-rule-modes"></a>ASR-regeltilstande
@@ -231,9 +231,9 @@ Avanceret jagthandlingstype:
 
 Afhængigheder: MDAV
 
-### <a name="block-all-office-applications-from-creating-child-processes"></a>Bloker alle Office programmer, så de ikke kan oprette underordnede processer
+### <a name="block-all-office-applications-from-creating-child-processes"></a>Bloker alle Office-programmer, så de ikke kan oprette underordnede processer
 
-Denne regel blokerer Office apps fra at oprette underordnede processer. Office apps omfatter Word, Excel, PowerPoint, OneNote og Access.
+Denne regel blokerer Office-apps fra at oprette underordnede processer. Office-apps omfatter Word, Excel, PowerPoint, OneNote og Access.
 
 Oprettelse af skadelige underordnede processer er en almindelig malwarestrategi. Malware, der misbruger Office som en vektor, kører ofte VBA-makroer og udnytter kode til at downloade og forsøge at køre flere nyttedata. Nogle legitime line of business-programmer kan dog også generere underordnede processer til godartede formål; f.eks. gydning af en kommandoprompt eller brug af PowerShell til at konfigurere indstillinger i registreringsdatabasen.
 
@@ -250,17 +250,17 @@ Avanceret jagthandlingstype:
 
 Afhængigheder: MDAV
 
-### <a name="block-credential-stealing-from-the-windows-local-security-authority-subsystem"></a>Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndighed
+### <a name="block-credential-stealing-from-the-windows-local-security-authority-subsystem"></a>Bloker tyveri af legitimationsoplysninger fra det lokale Windows-undersystem til sikkerhedsmyndighed
 
 Denne regel hjælper med at forhindre tyveri af legitimationsoplysninger ved at låse LSASS (Local Security Authority Subsystem Service) nede.
 
-LSASS godkender brugere, der logger på en Windows computer. Microsoft Defender Credential Guard i Windows forhindrer normalt forsøg på at udtrække legitimationsoplysninger fra LSASS. Nogle organisationer kan ikke aktivere Credential Guard på alle deres computere på grund af kompatibilitetsproblemer med brugerdefinerede chipkortdrivere eller andre programmer, der indlæses i LSA (Local Security Authority). I disse tilfælde kan hackere bruge værktøjer som Mimikatz til at skrabe cleartext-adgangskoder og NTLM-hashen fra LSASS.
+LSASS godkender brugere, der logger på en Windows-computer. Microsoft Defender Credential Guard i Windows forhindrer normalt forsøg på at udtrække legitimationsoplysninger fra LSASS. Nogle organisationer kan ikke aktivere Credential Guard på alle deres computere på grund af kompatibilitetsproblemer med brugerdefinerede chipkortdrivere eller andre programmer, der indlæses i LSA (Local Security Authority). I disse tilfælde kan hackere bruge værktøjer som Mimikatz til at skrabe cleartext-adgangskoder og NTLM-hashen fra LSASS.
 
 > [!NOTE]
 > I nogle apps optæller koden alle kørende processer og forsøger at åbne dem med udtømmende tilladelser. Denne regel afviser appens handling for procesåbning og logfører oplysningerne i loggen over sikkerhedshændelser. Denne regel kan generere en masse støj. Hvis du har en app, der blot optæller LSASS, men ikke har nogen reel indvirkning på funktionaliteten, er det ikke nødvendigt at føje den til listen over undtagelser. I sig selv angiver denne post i hændelsesloggen ikke nødvendigvis en ondsindet trussel.
   
 > [!IMPORTANT]
-> Standardtilstanden for ASR-reglen (Attack Surface Reduction) "Block credential stealing from the Windows local security authority subsystem (lsass.exe)" ændres fra **Ikke konfigureret** til **Konfigureret**, og standardtilstanden er angivet til **Bloker**. Alle andre ASR-regler forbliver i standardtilstanden: **Ikke konfigureret**. Der er allerede indbygget yderligere filtreringslogik i reglen for at reducere slutbrugermeddelelser. Kunder kan konfigurere reglen til **tilstanden Overvågning**, **Advar** eller **Deaktiveret** , hvilket tilsidesætter standardtilstanden. Funktionaliteten af denne regel er den samme, uanset om reglen er konfigureret i standardtilstanden, eller hvis du aktiverer Bloker-tilstand manuelt.
+> Standardtilstanden for ASR-reglen (Attack Surface Reduction) "Block credential stealing from the Local security authority subsystem (lsass.exe)" ændres fra **Ikke konfigureret** til **Konfigureret** , og standardtilstanden er angivet til **Bloker**. Alle andre ASR-regler forbliver i standardtilstanden: **Ikke konfigureret**. Der er allerede indbygget yderligere filtreringslogik i reglen for at reducere slutbrugermeddelelser. Kunder kan konfigurere reglen til **tilstanden Overvågning**, **Advar** eller **Deaktiveret** , hvilket tilsidesætter standardtilstanden. Funktionaliteten af denne regel er den samme, uanset om reglen er konfigureret i standardtilstanden, eller hvis du aktiverer Bloker-tilstand manuelt.
 
 Intune navn:`Flag credential stealing from the Windows local security authority subsystem`
 
@@ -277,14 +277,14 @@ Afhængigheder: MDAV
 
 ### <a name="block-executable-content-from-email-client-and-webmail"></a>Bloker eksekverbart indhold fra mailklient og webmail
 
-Denne regel blokerer følgende filtyper fra at starte via mail, der er åbnet i Microsoft Outlook-programmet, eller Outlook.com og andre populære webmailudbydere:
+Denne regel blokerer følgende filtyper fra at starte fra mail, der er åbnet i Microsoft Outlook-programmet, eller Outlook.com og andre populære webmailudbydere:
 
 - Eksekverbare filer (f.eks. .exe, .dll eller .scr)
-- Scriptfiler (f.eks. en PowerShell .ps-, Visual Basic .vbs- eller JavaScript-.js-fil)
+- Scriptfiler (f.eks. en PowerShell-.ps1, Visual Basic .vbs- eller JavaScript-.js-fil)
 
 Intune navn:`Execution of executable content (exe, dll, ps, js, vbs, etc.) dropped from email (webmail/mail client) (no exceptions)`
 
-Microsoft Endpoint Manager navn:`Block executable content from email client and webmail`
+Navn på Microsoft Endpoint Manager:`Block executable content from email client and webmail`
 
 GUID: `be9ba2d9-53ea-4cdc-84e5-9b1eeee46550`
 
@@ -370,9 +370,9 @@ Avanceret jagthandlingstype:
 
 Afhængigheder: MDAV, AMSI
 
-### <a name="block-office-applications-from-creating-executable-content"></a>Bloker Office programmer, så de ikke kan oprette eksekverbart indhold
+### <a name="block-office-applications-from-creating-executable-content"></a>Bloker Office-programmer fra at oprette eksekverbart indhold
 
-Denne regel forhindrer, at Office apps, herunder Word, Excel og PowerPoint, opretter potentielt skadeligt eksekverbart indhold ved at blokere for, at skadelig kode skrives til disken.
+Denne regel forhindrer Office-apps, herunder Word, Excel og PowerPoint, i at oprette potentielt skadeligt eksekverbart indhold ved at blokere for, at skadelig kode skrives til disken.
 
 Malware, der misbruger Office som en vektor, kan forsøge at bryde ud af Office og gemme skadelige komponenter på disken. Disse skadelige komponenter vil overleve en genstart af computeren og forblive på systemet. Derfor forsvarer denne regel sig mod en fælles vedholdenhedsteknik.
 
@@ -389,11 +389,11 @@ Avanceret jagthandlingstype:
 
 Afhængigheder: MDAV, RPC
 
-### <a name="block-office-applications-from-injecting-code-into-other-processes"></a>Bloker Office programmer fra at indsætte kode i andre processer
+### <a name="block-office-applications-from-injecting-code-into-other-processes"></a>Bloker Office-programmer fra at indsætte kode i andre processer
 
-Denne regel blokerer kodeinjektionsforsøg fra Office apps i andre processer.
+Denne regel blokerer kodeinjektionsforsøg fra Office-apps i andre processer.
 
-Hackere kan forsøge at bruge Office apps til at overføre skadelig kode til andre processer via kodeinjektion, så koden kan maskerade som en ren proces.
+Angribere kan forsøge at bruge Office-apps til at overføre skadelig kode til andre processer via kodeinjektion, så koden kan maskerade som en ren proces.
 
 Der er ingen kendte legitime forretningsmæssige formål med at bruge kodeinjektion.
 
@@ -412,11 +412,11 @@ Avanceret jagthandlingstype:
 
 Afhængigheder: MDAV
 
-### <a name="block-office-communication-application-from-creating-child-processes"></a>Bloker Office kommunikationsprogram fra oprettelse af underordnede processer
+### <a name="block-office-communication-application-from-creating-child-processes"></a>Bloker Office-kommunikationsprogram fra oprettelse af underordnede processer
 
-Denne regel forhindrer, at Outlook opretter underordnede processer, samtidig med at legitime Outlook funktioner tillades.
+Denne regel forhindrer Outlook i at oprette underordnede processer, samtidig med at legitime Outlook-funktioner tillades.
 
-Denne regel beskytter mod social engineering-angreb og forhindrer, at kode misbruges i Outlook. Den beskytter også mod [Outlook regler og formularer](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/), som hackere kan bruge, når en brugers legitimationsoplysninger kompromitteres.
+Denne regel beskytter mod social engineering-angreb og forhindrer, at kode misbruges i Outlook. Den beskytter også mod [outlook-regler og formularudnyttelser](https://blogs.technet.microsoft.com/office365security/defending-against-rules-and-forms-injection/) , som hackere kan bruge, når en brugers legitimationsoplysninger kompromitteres.
 
 > [!NOTE]
 > Denne regel blokerer tip til DLP-politik og værktøjstip i Outlook. Denne regel gælder kun for Outlook og Outlook.com.
@@ -461,7 +461,7 @@ Afhængigheder: MDAV, RPC
 Denne regel blokerer processer, der er oprettet via [PsExec](/sysinternals/downloads/psexec) og [WMI](/windows/win32/wmisdk/about-wmi) , fra at køre. Både PsExec og WMI kan udføre kode eksternt. Der er risiko for, at malware misbruger funktionaliteten i PsExec og WMI til kommando- og kontrolformål eller for at sprede en infektion gennem en organisations netværk.
 
 > [!WARNING]
-> Brug kun denne regel, hvis du administrerer dine enheder med [Intune](/intune) eller en anden MDM-løsning. Denne regel er ikke kompatibel med administration via [Microsoft Endpoint Configuration Manager](/configmgr), fordi denne regel blokerer WMI-kommandoer, som Configuration Manager klient bruger til at fungere korrekt.
+> Brug kun denne regel, hvis du administrerer dine enheder med [Intune](/intune) eller en anden MDM-løsning. Denne regel er ikke kompatibel med administration via [Microsoft Endpoint Configuration Manager](/configmgr) fordi denne regel blokerer WMI-kommandoer, som Configuration Manager klient bruger til at fungere korrekt.
 
 Intune navn:`Process creation from PSExec and WMI commands`
 
@@ -496,7 +496,7 @@ Avanceret jagthandlingstype:
 
 Afhængigheder: MDAV
 
-### <a name="block-win32-api-calls-from-office-macros"></a>Bloker Win32 API-kald fra Office makroer
+### <a name="block-win32-api-calls-from-office-macros"></a>Bloker Win32 API-kald fra Office-makroer
 
 Denne regel forhindrer VBA-makroer i at kalde Win32-API'er.
 

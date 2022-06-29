@@ -22,14 +22,14 @@ ms.custom:
 search.appverid: MET150
 description: Administratorer kan genaktivere et abonnement, når det udløber, deaktiveres eller annulleres, eller hvis du annullerede midt i en abonnementsperiode.
 ms.date: 04/07/2021
-ms.openlocfilehash: 7cb93854f4da8e3568eef058009652cdb6b32b96
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 1f0d38a3b0b09a581d4ed31a6d9abb9d8f8ea467
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101476"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489442"
 ---
-# <a name="reactivate-your-subscription"></a>Genaktiver dit abonnement
+# <a name="reactivate-your-microsoft-subscription"></a>Genaktiver dit Microsoft-abonnement
 
 Du kan genaktivere dit abonnement i Administration, hvis: abonnementet er udløbet, er blevet deaktiveret af Microsoft, eller hvis du annullerede det midt i en abonnementsperiode.
   
@@ -60,6 +60,6 @@ Du skal være global administrator eller faktureringsadministrator for at genakt
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Prøv eller køb et Microsoft 365 til virksomhedsabonnement](../try-or-buy-microsoft-365.md) (artikel)\
+[Prøv eller køb et Microsoft 365 til virksomheder-abonnement](../try-or-buy-microsoft-365.md) (artikel)\
 [Forny Microsoft 365 til virksomheder](renew-your-subscription.md) (artikel)\
 [Annuller dit abonnement](cancel-your-subscription.md) (artikel)

@@ -14,6 +14,7 @@ ms.collection:
 - Adm_O365
 - Adm_TOC
 ms.custom:
+- adminvideo
 - AdminSurgePortfolio
 - AdminTemplateSet
 search.appverid:
@@ -21,17 +22,17 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
-description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365 tjenester, og analysér i hvert diagram for at få mere indsigt.
-ms.openlocfilehash: 9dbd1ef7044db3a27c93cfe7e2acd09aaa32cd14
-ms.sourcegitcommit: f302de988d98628922eea1f509a3f639634ddc64
+description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365-tjenester, og foretag detailudledning i hvert diagram for at få mere indsigt.
+ms.openlocfilehash: 481f7abf0015994ab211f55feedabc4aa615dbca
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/17/2022
-ms.locfileid: "66151156"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486308"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365 rapporter i Administration
+# <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365-rapporter i Administration
 
-Du kan nemt se, hvordan personer i din virksomhed bruger Microsoft 365 tjenester. Du kan f.eks. identificere, hvem der bruger en tjeneste meget og når kvoter, eller hvem der muligvis ikke har brug for en Microsoft 365 licens overhovedet. Modellen for permanent licens medtages ikke i rapporterne.
+Du kan nemt se, hvordan personer i din virksomhed bruger Microsoft 365-tjenester. Du kan f.eks. identificere, hvem der bruger en tjeneste meget og når kvoter, eller hvem der muligvis slet ikke har brug for en Microsoft 365-licens. Modellen for permanent licens medtages ikke i rapporterne.
 
 Rapporter er tilgængelige for de sidste 7 dage, 30 dage, 90 dage og 180 dage. Der findes ikke data for alle rapporteringsperioder med det samme. Rapporterne bliver tilgængelige inden for 48 timer.
 
@@ -53,19 +54,19 @@ Rapporter er tilgængelige for de sidste 7 dage, 30 dage, 90 dage og 180 dage. D
 
 ::: moniker-end
 
-2. Klik på knappen **Vis mere** på aktivitetskortet med et hurtigt overblik for en tjeneste (f.eks. mail eller OneDrive) for at få vist siden med rapportoplysninger. På denne side leveres der forskellige rapporter for tjenesten under faner.
+2. Klik på knappen **Vis mere** på aktivitetskortet med et hurtigt overblik for en tjeneste (f.eks. mail eller OneDrive) for at se siden med rapportdetaljer. På denne side leveres der forskellige rapporter for tjenesten under faner.
 
    :::image type="content" alt-text="Forbrugsdashboardet." source="../../media/4c0f966d-9d2b-4a6f-a106-a6e2b9a2de07.png" lightbox="../../media/4c0f966d-9d2b-4a6f-a106-a6e2b9a2de07.png":::
 
-## <a name="who-can-see-reports"></a>Who kan se rapporter
+## <a name="who-can-see-reports"></a>Hvem kan se rapporter?
 
 Personer, der har følgende tilladelser:
 
 - Globale administratorer: Vi anbefaler, at kun nogle få personer i din virksomhed har denne rolle. Det reducerer risikoen for din virksomhed.
 
-- Exchange administratorer
+- Exchange-administratorer
 
-- SharePoint administratorer
+- SharePoint-administratorer
 
 - Skype for Business administratorer
 
@@ -75,9 +76,9 @@ Personer, der har følgende tilladelser:
 
 - Rapportlæser
 
-- Teams administrator
+- Teams-administrator
 
-- Teams kommunikationsadministrator
+- Teams Communications-administrator
 
 Du kan få mere at vide under [Om administratorroller](../add-users/about-admin-roles.md) og [Tildel administratorroller](../add-users/assign-admin-roles.md).
 
@@ -91,20 +92,20 @@ Afhængigt af dit abonnement er her de tilgængelige rapporter i alle miljøer.
 |[Mailaktivitet](email-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Brug af mailapps](email-apps-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Postkasseforbrug](mailbox-usage.md)|Ja|Ja|Ja|Ja|Ja|
-|[Office aktiveringer](microsoft-office-activations-ww.md)|Ja|Ja|Ja|Ja|Ja|
+|[Office-aktiveringer](microsoft-office-activations-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Aktive brugere](active-users-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[Microsoft 365 grupper](office-365-groups-ww.md)|Ja|Ja|Ja|Ja|Ja|
+|[Microsoft 365-grupper](office-365-groups-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[Microsoft 365 Apps brug](microsoft365-apps-usage-ww.md)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja
 |[OneDrive for Business brugeraktivitet](onedrive-for-business-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
 |[OneDrive for Business brug](onedrive-for-business-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[SharePoint webstedsforbrug](sharepoint-site-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[SharePoint aktivitet](sharepoint-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
-|[Microsoft Teams brugeraktivitet](microsoft-teams-user-activity-preview.md)|Ja|Ja|Ja|Ja|I/T<sup>2</sup>|
-|[Microsoft Teams enhedsforbrug](microsoft-teams-device-usage-preview.md)|Ja|Ja|Ja|Ja|I/T<sup>2</sup>|
-|[Microsoft Teams forbrugsaktivitet](microsoft-teams-usage-activity.md)|Ja|Ja|Ja|Ja|I/T<sup>2</sup>|
-|[Yammer aktivitet](yammer-activity-report-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
-|[Yammer enhedsforbrug](yammer-device-usage-report-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
-|[Yammer gruppers aktivitetsrapport](yammer-groups-activity-report-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
+|[Brug af SharePoint-websted](sharepoint-site-usage-ww.md)|Ja|Ja|Ja|Ja|Ja|
+|[SharePoint-aktivitet](sharepoint-activity-ww.md)|Ja|Ja|Ja|Ja|Ja|
+|[Microsoft Teams-brugeraktivitet](microsoft-teams-user-activity-preview.md)|Ja|Ja|Ja|Ja|I/T<sup>2</sup>|
+|[Brug af Microsoft Teams-enheder](microsoft-teams-device-usage-preview.md)|Ja|Ja|Ja|Ja|I/T<sup>2</sup>|
+|[Brugsaktivitet i Microsoft Teams](microsoft-teams-usage-activity.md)|Ja|Ja|Ja|Ja|I/T<sup>2</sup>|
+|[Yammer-aktivitet](yammer-activity-report-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
+|[Yammer-enhedsforbrug](yammer-device-usage-report-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
+|[Aktivitetsrapport for Yammer-grupper](yammer-groups-activity-report-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
 |[Formularaktivitet](forms-activity-ww.md)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|
 |[Dynamics 365 Customer Voice-aktivitet](forms-pro-activity-ww.md)|Ja|Ja|I/T<sup>2</sup>|I/T<sup>2</sup>|I/T<sup>2</sup>|
 |[Skype for Business Onlineaktivitet](/SkypeForBusiness/skype-for-business-online-reporting/activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
@@ -113,9 +114,9 @@ Afhængigt af dit abonnement er her de tilgængelige rapporter i alle miljøer.
 |[Skype for Business Online peer-to-peer-aktivitet](/SkypeForBusiness/skype-for-business-online-reporting/peer-to-peer-activity-report)|Ja|Ja|Nr<sup>. 1</sup>|Nr<sup>. 1</sup>|Ja|
 |[Viva Learning aktivitet](viva-learning-activity.md)|Ja|NIELSEN|NIELSEN|NIELSEN|NIELSEN|
 |[Viva Insights aktivitet](viva-insights-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
-|[Project aktivitet](project-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
+|[Projektaktivitet](project-activity.md)|Ja|Ja|NIELSEN|NIELSEN|NIELSEN|
 
-I/T<sup>1</sup>: Rapporten er planlagt til at blive udgivet i fremtiden. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Køreplanen for Microsoft 365</a> opdateres før udgivelsen.
+I/T<sup>1</sup>: Rapporten er planlagt til at blive udgivet i fremtiden. <a href="https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=" target="_blank">Microsoft 365 Roadmap</a> opdateres før udgivelsen.
 I/T<sup>2</sup>: Tjenesten er ikke tilgængelig i miljøet, så der er ingen plan om at udgive rapporten.
 
 ## <a name="how-to-view-licensing-information"></a>Sådan får du vist licensoplysninger
@@ -126,7 +127,7 @@ I/T<sup>2</sup>: Tjenesten er ikke tilgængelig i miljøet, så der er ingen pla
 
 ## <a name="how-to-view-usage-information-for-a-specific-user"></a>Sådan får du vist forbrugsoplysninger for en bestemt bruger
 
-Brug tjenesterapporterne til at undersøge, hvor meget en bestemt bruger bruger af tjenesten. Hvis du f.eks. vil finde ud af, hvor meget postkasselager en bestemt bruger har brugt, skal du åbne rapporten Postkasseforbrug og sortere brugerne efter navn. Hvis du har tusindvis af brugere, skal du eksportere rapporten til Excel så du hurtigt kan filtrere gennem listen.
+Brug tjenesterapporterne til at undersøge, hvor meget en bestemt bruger bruger af tjenesten. Hvis du f.eks. vil finde ud af, hvor meget postkasselager en bestemt bruger har brugt, skal du åbne rapporten Postkasseforbrug og sortere brugerne efter navn. Hvis du har tusindvis af brugere, skal du eksportere rapporten til Excel, så du hurtigt kan filtrere gennem listen.
 
 Du kan ikke generere en rapport, hvor du angiver en brugers konto og derefter får vist en liste over, hvilke tjenester de bruger, og hvor meget de bruger.
 
@@ -146,13 +147,23 @@ Rapporter indeholder oplysninger om din organisations forbrugsdata. Rapporter vi
 
 Globale administratorer kan gendanne denne ændring for deres lejer og vise identificerbare brugeroplysninger, hvis organisationens praksis for beskyttelse af personlige oplysninger tillader det. Det kan opnås i Microsoft 365 Administration ved at følge disse trin:
 
-1. I Administration skal du gå til siden **Indstillinger** \> **Org Indstillinger** \> **Services**.
+1. I Administration skal du gå til siden **Indstillinger** \> **for organisationsindstillingertjenester**\>.
 
 2. Vælg **Rapporter**.
 
 3. Fjern markeringen i sætningen **Vis skjulte bruger-, gruppe- og webstedsnavne i alle rapporter**, og gem derefter dine ændringer.
 
-Det tager et par minutter, før disse ændringer træder i kraft på rapporterne i rapportdashboardet. Denne indstilling gælder også for de Microsoft 365 anvendelsesrapporter i [Microsoft Graph](/graph/api/resources/report) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics) samt [forbrugsrapporterne i Microsoft Teams Administration center](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i Microsoft Purview-compliance-portal overvågningslog.
+Fra den 23. juni 2022 bliver en API gradvist tilgængelig for alle miljøer, så globale administratorer kan ændre denne indstilling uden at skulle besøge Microsoft 365 Administration. API-oplysningerne er nedenfor:  
+
+URL-adressen er https://graph.microsoft.com/beta/admin/reportSettings 
+
+Der er godkendt to metoder til denne API:
+
+:::image type="content" source="../../media/api-show-details.png" alt-text="API-metoder.":::
+
+Rapporten indeholder kun egenskaben Indstilling for beskyttelse af personlige oplysninger. Du kan få flere oplysninger om Graph API [under Brug Microsoft Graph API](/graph/use-the-api). Globale administratorer kan bruge Software Development Kit (SDK) eller kalde API'en direkte ved hjælp af et hvilket som helst programsprog med netværksevne. Vi anbefaler, at du bruger [Graph Explorer](/graph/graph-explorer/graph-explorer-overview).
+
+Det tager et par minutter, før disse ændringer træder i kraft på rapporterne i rapportdashboardet. Denne indstilling gælder også for Microsoft 365-forbrugsrapporterne i [Microsoft Graph](/graph/api/resources/report) og [Power BI](/microsoft-365/admin/usage-analytics/usage-analytics) og [forbrugsrapporterne i Microsoft Teams Administration center](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). Visning af identificerbare brugeroplysninger er en logført hændelse i Microsoft Purview-compliance-portal overvågningslog.
 
 ## <a name="what-happens-to-usage-data-when-a-user-account-is-closed"></a>Hvad sker der med forbrugsdata, når en brugerkonto lukkes?
 
@@ -162,5 +173,5 @@ Men når du vælger en bestemt dag op til 28 dage fra dags dato, viser rapporten
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft 365 besøgsanalyse](../usage-analytics/usage-analytics.md) (artikel)\
-[Tilpas rapporterne i Microsoft 365 forbrugsanalyse](../usage-analytics/customize-reports.md) (artikel)
+[Microsoft 365-brugsanalyse](../usage-analytics/usage-analytics.md) (artikel)\
+[Tilpas rapporterne i Microsoft 365-brugsanalyse](../usage-analytics/customize-reports.md) (artikel)

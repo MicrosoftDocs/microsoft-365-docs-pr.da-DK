@@ -6,7 +6,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: dansimp
 audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer og beskytter dine administratorkonti i Microsoft 365 Business Premium.
-ms.openlocfilehash: 1428ee6b447f3f841e7e8e9b77cfd82c2f7a6444
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: e20fa8f408668287065f6aa1e30490fd8e3c2fec
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320003"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489919"
 ---
 # <a name="protect-your-administrator-accounts-in-microsoft-365-business-premium"></a>Beskyt dine administratorkonti i Microsoft 365 Business Premium
 
@@ -40,7 +40,7 @@ Når du tilmelder dig Microsoft 365 og angiver dine oplysninger, bliver du autom
 
 ## <a name="create-additional-admin-accounts"></a>Opret flere administratorkonti
 
-Brug kun administratorkonti til administration. Administratorer skal have en separat brugerkonto til regelmæssig brug af Office apps og kun bruge deres administrative konto, når det er nødvendigt for at administrere konti og enheder, og mens de arbejder med andre administratorfunktioner. Det er også en god idé at fjerne Microsoft 365-licensen fra administratorkontiene, så du ikke behøver at betale for dem.
+Brug kun administratorkonti til administration. Administratorer skal have en separat brugerkonto til regelmæssig brug af Office-apps og kun bruge deres administrative konto, når det er nødvendigt for at administrere konti og enheder, og mens de arbejder med andre administratorfunktioner. Det er også en god idé at fjerne Microsoft 365-licensen fra administratorkontiene, så du ikke behøver at betale for dem.
 
 Du skal konfigurere mindst én ekstra global administratorkonto for at give administratoren adgang til en anden medarbejder, der er tillid til. Du kan også oprette separate administratorkonti til brugeradministration (denne rolle kaldes **Administrator af brugeradministration**). Du kan få flere oplysninger under [Administratorroller](/office365/admin/add-users/about-admin-roles).
 
@@ -56,7 +56,7 @@ Sådan opretter du flere administratorkonti:
 
  1. Angiv og konfigurer oplysninger om **produktlicenser** .
 
- 1. I **Valgfrie indstillinger** skal du definere brugerens rolle, herunder tilføje adgang til Administration, hvis det er relevant.
+ 1. Under **Valgfrie indstillinger** skal du definere brugerens rolle, herunder tilføje Administration centeradgang, hvis det er relevant.
 
     :::image type="content" source="media/m365bp-global-admin.png" alt-text="Definer nye brugerroller.":::
 

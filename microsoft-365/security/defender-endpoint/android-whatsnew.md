@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: d1379836a2d55a8c6c256ce734c40acc5fc48599
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: f5b4cfc38f702bf7ea5affdae13f2215c044fc89
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090492"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66486701"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-android"></a>Nyheder i Microsoft Defender for Endpoint på Android
 
@@ -31,6 +31,9 @@ ms.locfileid: "66090492"
 
 Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+## <a name="microsoft-defender-on-android-enterprise-byod-personal-profile"></a>Microsoft Defender på android enterprise BYOD personlig profil
+Microsoft Defender for Endpoint understøttes nu på Android Enterprise Personal-profil (kun BYOD) med alle de vigtigste funktioner, herunder scanning af skadelig software, beskyttelse mod phishinglinks, netværksbeskyttelse og administration af sårbarheder. Denne understøttelse er kombineret med [kontrolelementer til beskyttelse af personlige oplysninger](/microsoft-365/security/defender-endpoint/android-configure#privacy-controls) for at sikre beskyttelse af personlige oplysninger for brugeren på en personlig profil. Du kan få flere oplysninger ved at læse [meddelelsen](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-the-public-preview-of-defender-for-endpoint-personal/ba-p/3370979) og [installationsvejledningen](/microsoft-365/security/defender-endpoint/android-intune#set-up-microsoft-defender-in-personal-profile-on-android-enterprise-in-byod-mode).
+
 ## <a name="network-protection"></a>Netværksbeskyttelse
 Netværksbeskyttelse på Microsoft Defender for Endpoint er nu en offentlig prøveversion. Netværksbeskyttelse giver beskyttelse mod rogue Wi-Fi relaterede trusler, rogue hardware som pineapple enheder og underretter brugeren, hvis en relateret trussel opdages. Brugerne får også vist en guidet oplevelse, hvor de kan oprette forbindelse til sikre netværk og skifte netværk, når de har forbindelse til en usikker forbindelse.
 
@@ -41,7 +44,7 @@ Hvis du er interesseret i at deltage i denne offentlige prøveversion, kan du de
 >[!NOTE]
 >Microsoft Defender understøttes ikke længere for versioner under 1.0.3011.0302. Brugerne anmodes om at opgradere til de nyeste versioner for at holde deres enheder sikre.
 Brugerne kan bruge følgende trin til at opdatere:
->1. På din arbejdsprofil skal du gå til Administreret afspilning Store.
+>1. Gå til Managed Play Store på din arbejdsprofil.
 >2. Tryk på profilikonet i øverste højre hjørne, og vælg "Administrer apps og enhed".
 >3. Find MDE under tilgængelige opdateringer, og vælg opdater.
 >
@@ -73,7 +76,7 @@ Udgivelsesbuild: 1.0.3501.0301 Udgivelsesmåned: November 2021 Microsoft Defende
 
 Giv dine brugere og helpdesk (efter behov) besked om, at brugerne skal acceptere de nye tilladelser, når de bliver bedt om det, når de har opdateret Defender for Endpoint til build 1.0.3501.0301 eller nyere version. Brugerne skal gøre følgende for at acceptere tilladelserne:
 
-1. Tryk på meddelelsen Defender for Endpoint i appen, eller åbn appen Defender for Endpoint. Brugerne får vist en skærm, der viser de nødvendige tilladelser. Der mangler et grønt flueben ud for tilladelsen Storage.
+1. Tryk på meddelelsen Defender for Endpoint i appen, eller åbn appen Defender for Endpoint. Brugerne får vist en skærm, der viser de nødvendige tilladelser. Der mangler et grønt flueben ud for tilladelsen Lager.
 
 2. Tryk på **Start**.
 

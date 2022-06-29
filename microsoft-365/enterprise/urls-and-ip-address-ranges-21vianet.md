@@ -3,7 +3,7 @@ title: URL-adresser og IP-adresseintervaller for Office 365, der drives af 21Via
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/28/2022
+ms.date: 06/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -21,22 +21,22 @@ f1.keywords:
 - NOCSH
 description: I denne artikel vises URL-adresserne og IP-adresseintervaller for Office 365, når de drives af 21Vianet i Kina.
 hideEdit: true
-ms.openlocfilehash: 4c91505c0a83408e435879e718901d949e5eba26
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: e99a89e511faef069f0856e046ea1898e896b3c1
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217514"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489897"
 ---
 # <a name="urls-and-ip-address-ranges-for-office-365-operated-by-21vianet"></a>URL-adresser og IP-adresseintervaller for Office 365, der drives af 21Vianet
 
- *Gælder for: Office 365, der drives af 21Vianet – Small Business Admin, Office 365 drevet af 21Vianet – Administrator*
+ *Gælder for: Office 365 drevet af 21Vianet – Small Business Administration, Office 365 drevet af 21Vianet – Administration*
 
 **Oversigt**: Følgende slutpunkter (FQDN'er, porte, URL-adresser, IPv4- og IPv6-præfikser) gælder for Office 365, der drives af 21 Vianet, og er designet til at levere produktivitetstjenester til organisationer, der kun bruger disse planer.
   
  **Office 365 slutpunkter:** [Verdensomspændende (herunder GCC)](urls-and-ip-address-ranges.md)  | *Office 365 drevet af 21 Vianet* |  [Office 365 US Government DoD](microsoft-365-u-s-government-dod-endpoints.md) |  [Office 365 US Government GCC High](microsoft-365-u-s-government-gcc-high-endpoints.md) |
   
-**Senest opdateret:** 28-04-2021 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/China?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)
+**Senest opdateret:** 01-06-2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/China?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)
 
 **Download:** alle påkrævede og valgfrie destinationer på én [JSON-formateret](https://endpoints.office.com/endpoints/China?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) liste.
 

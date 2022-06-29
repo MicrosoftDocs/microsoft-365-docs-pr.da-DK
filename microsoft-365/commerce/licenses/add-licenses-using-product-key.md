@@ -21,14 +21,14 @@ search.appverid: MET150
 description: Få mere at vide om, hvordan du føjer licenser til eller udvider dit abonnement med en produktnøgle.
 ROBOTS: NOINDEX
 ms.date: 06/06/2022
-ms.openlocfilehash: ff7656975b5d93d03706f26de0691a91db1858eb
-ms.sourcegitcommit: 23fd850272f39c4202e2320e56d11fb6707b3e2e
+ms.openlocfilehash: bcc74eaf5031d281ef0b320df7c6bbc3a8debff2
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65925072"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66492005"
 ---
-# <a name="add-licenses-to-or-extend-a-subscription-paid-for-using-a-product-key"></a>Føj licenser til eller forlæng et abonnement, der betales for ved hjælp af en produktnøgle
+# <a name="add-licenses-to-or-extend-a-paid-subscription-by-using-a-microsoft-365-product-key"></a>Føj licenser til eller forlæng et betalt abonnement ved hjælp af en Microsoft 365-produktnøgle
 
 Forudbetalte licenser udstedes til dig som en alfanumerisk kode på 25 tegn. Når du har købt de licenser, du har brug for, kan du føje dem til dit abonnement. Du kan også bruge en produktnøgle til at forlænge udløbsdatoen for dit abonnement.
 

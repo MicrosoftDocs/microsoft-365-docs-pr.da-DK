@@ -25,15 +25,15 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Tildel licenser, afhængigt af om du vil tildele produktlicenser til bestemte brugere eller tildele brugerlicenser til et bestemt produkt.
-ms.date: 04/22/2022
-ms.openlocfilehash: 5402a3f2b1f1e702b0d8f3e8b021206c9131710d
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.date: 06/23/2022
+ms.openlocfilehash: ecca89deaadd55182875e8d3a5d8d74e2aec17eb
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65465816"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487515"
 ---
-# <a name="assign-microsoft-365-licenses-to-users"></a>Tildel brugere Microsoft 365 licenser
+# <a name="assign-microsoft-365-licenses-to-users"></a>Tildel Microsoft 365-licenser til brugere
 
 Du kan tildele licenser til brugere på siden **Aktive brugere** eller på siden **Licenser** . Den metode, du bruger, afhænger af, om du vil tildele produktlicenser til bestemte brugere eller tildele brugerlicenser til et bestemt produkt.
 
@@ -49,15 +49,17 @@ Du kan tildele licenser til brugere på siden **Aktive brugere** eller på siden
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Du skal være global administrator, licensadministrator eller brugeradministrator for at tildele licenser. Du kan få flere oplysninger under [Om Microsoft 365 administratorroller](../add-users/about-admin-roles.md).
-- Du kan [tildele Microsoft 365 licenser til brugerkonti med PowerShell](../../enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell.md).
+- Du skal være global administrator, licensadministrator eller brugeradministrator for at tildele licenser. Du kan få flere oplysninger under [Om administratorroller i Microsoft 365](../add-users/about-admin-roles.md).
+- Du kan [tildele Microsoft 365-licenser til brugerkonti med PowerShell](../../enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell.md).
 - Hvis du vil bruge gruppebaserede licenser, skal du se [Tildel licenser til brugere efter gruppemedlemskab i Azure Active Directory](/azure/active-directory/users-groups-roles/licensing-groups-assign)
 - Nogle tjenester, f.eks. Sway, tildeles automatisk til brugere og behøver ikke at blive tildelt individuelt.
 
 
 ## <a name="use-the-licenses-page-to-assign-licenses-to-users"></a>Brug siden Licenser til at tildele licenser til brugere
 
-Når du bruger siden **Licenser** til at tildele licenser, tildeler du licenser for et bestemt produkt til op til 20 brugere. På siden **Licenser** kan du se en liste over alle de produkter, du har abonnementer på. Du kan også se det samlede antal licenser for hvert produkt, hvor mange licenser der er tildelt, og hvor mange der er tilgængelige.
+På siden **Licenser** kan du tildele eller fjerne tildeling af licenser for op til 20 brugere ad gangen. På siden vises de produkter, du ejer, antallet af tilgængelige licenser for hvert produkt og antallet af tildelte licenser ud af det samlede antal tilgængelige licenser. Antallet af licenser er et samlet antal licenser for alle abonnementer for det samme produktnavn.
+
+Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fem licenser, og et andet abonnement, der har 8 licenser til det samme produkt. På siden **Licenser** kan du se, at du har i alt 13 licenser til Microsoft 365 Business Premium på tværs af alle dine abonnementer. Dette adskiller sig fra det, du ser på siden **Dine produkter** , som viser en række for hvert abonnement, du ejer, selvom de er for det samme produkt.
 
 ::: moniker range="o365-worldwide"
 
@@ -79,9 +81,9 @@ Når du bruger siden **Licenser** til at tildele licenser, tildeler du licenser 
 
 4. Vælg **Slå apps og tjenester til eller fra** for at tildele eller fjerne adgang til bestemte elementer.
 
-6. Når du er færdig, skal du vælge **Tildel** og derefter vælge **Luk**.
+6. Når du er færdig, skal du vælge **Tildel** og derefter lukke ruden til højre.
 
-Hvis der er en konflikt, vises der en meddelelse, som fortæller dig, hvad problemet er, og fortæller dig, hvordan du løser det. Hvis du f.eks. har valgt licenser, der indeholder modstridende tjenester, vises der i fejlmeddelelsen, at du skal gennemse de tjenester, der er inkluderet i hver licens, og prøve igen.
+Hvis der er en konflikt, får du vist en meddelelse, der fortæller dig, hvad problemet er, og hvordan du løser det. Hvis du f.eks. har valgt licenser, der indeholder modstridende tjenester, vises der i fejlmeddelelsen, at du skal gennemse de tjenester, der er inkluderet i hver licens, og prøve igen.
 
 ## <a name="change-the-apps-and-services-a-user-has-access-to"></a>Skift de apps og tjenester, som en bruger har adgang til
 
@@ -187,7 +189,7 @@ Du kan invitere gæstebrugere til at samarbejde med din organisation i Azure Act
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis dine brugere endnu ikke har installeret Office apps, kan du dele [vejledningen til hurtig start af medarbejdere](../setup/employee-quick-setup.md) med dine brugere for at konfigurere ting, f.eks. [hvordan du downloader og installerer Microsoft 365 eller Office 2019 på en pc eller Mac](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658)[, og hvordan du konfigurerer Office apps og mail på en mobilenhed](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f).
+Hvis dine brugere endnu ikke har installeret Office-apps, kan du dele [vejledning til hurtig start af medarbejdere](../setup/employee-quick-setup.md) med dine brugere for at konfigurere ting, f.eks. [hvordan du downloader og installerer Microsoft 365 eller Office 2019 på en pc eller Mac](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658)[, og hvordan du konfigurerer Office-apps og mail på en mobilenhed](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f).
 
 ## <a name="related-content"></a>Relateret indhold
 

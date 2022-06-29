@@ -2,11 +2,11 @@
 title: Del filer og videoer i Microsoft Teams og SharePoint
 f1.keywords:
 - NOCSH
-ms.author: twerner
-author: twerner
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 ms.audience: Admin
-ms.topic: article
+ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
@@ -24,21 +24,22 @@ search.appverid:
 - BCS160
 - MET150
 - MOE150
-description: Del filer og videoer i din kampagne med Microsoft Teams og SharePoint. Microsoft 365 Business Premium inkluderer Teams hvilket er en fantastisk måde at dele filer og videoer på på en sikker måde.
-ms.openlocfilehash: 354722f92b34081c318c818d94e9ca5c95074aa7
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+description: Del filer og videoer i din kampagne med Microsoft Teams og SharePoint. Microsoft 365 Business Premium omfatter Teams, som er en fantastisk måde at dele filer og videoer på en sikker måde.
+ms.openlocfilehash: 666b9b6bfaeecb39445f1c9b9056ca87d0e9a20c
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772352"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66489530"
 ---
 # <a name="share-files-and-videos-in-a-safe-environment"></a>Del filer og videoer i et sikkert miljø
 
-En anden ting, du skal være opmærksom på, er at sikre, at alle medlemmer af organisationen styrer, hvem der kan få vist og redigere filer, og at de er gemt på et sikkert sted med de korrekte tilladelser anvendt. Microsoft 365 Business Premium brugere kan bruge Microsoft Teams til at gemme filer og derefter dele filerne enten i eller uden for virksomheden, praksis eller kampagne. Du kan også sende et SharePoint link. Hvis du sender et link i stedet for en vedhæftet fil, ved du, hvem der får vist og redigerer filerne, og de kan ikke vises eller ændres uden tilladelse.
 
-![Diagram over et Microsoft Teams vindue, der viser fanen Filer og linket Hent i menuen.](../media/m365-democracy-teams-sharefiles.png)
+En anden ting, du skal være opmærksom på, er at sikre, at alle medlemmer af organisationen styrer, hvem der kan få vist og redigere filer, og at de er gemt på et sikkert sted med de korrekte tilladelser anvendt. Microsoft 365 Business Premium brugere kan bruge Microsoft Teams til at gemme filer og derefter dele filerne enten i eller uden for virksomheden, praksis eller kampagne. Du kan også sende et SharePoint-link. Hvis du sender et link i stedet for en vedhæftet fil, ved du, hvem der får vist og redigerer filerne, og de kan ikke vises eller ændres uden tilladelse.
 
-Med filer i Microsoft Teams og SharePoint kan filer også arbejdes på og gennemses sammen, endda spore ændringer efter behov. I Teams deles filer i en virksomhed, en praksis eller en kampagne. Hvis du har brug for at dele dem eksternt med personer uden for din organisation, kan du føje dem som gæster til et team eller sende dem et sikkert SharePoint link.
+![Diagram over et Microsoft Teams-vindue, der viser fanen Filer og Hent link i menuen.](../media/m365-democracy-teams-sharefiles.png)
+
+Med filer i Microsoft Teams og SharePoint kan filer også arbejdes på og gennemses sammen, endda spore ændringer efter behov. I Teams deles filer i en virksomhed, øvelse eller kampagne. Hvis du har brug for at dele dem eksternt med personer uden for din organisation, kan du føje dem som gæster til et team eller sende dem et sikkert SharePoint-link.
 
 Du kan også bruge Microsoft Stream til at gemme og dele videoer internt. Disse videoer kan ikke ses af offentligheden, så de er ideelle til interne firma- eller kampagnebeskeder.
 
@@ -46,7 +47,7 @@ Du kan også bruge Microsoft Stream til at gemme og dele videoer internt. Disse 
 
 Sørg for, at brugerne bruger disse metoder til at dele filer og videoer sikkert:
 
-1. Store filer i Microsoft Teams eller SharePoint, og sørg for, at kun de personer, der har brug for adgang til disse filer, har dem.
+1. Gem filer i Microsoft Teams eller SharePoint, og sørg for, at det kun er de personer, der har brug for adgang til disse filer, der har dem.
 2. Når du vil dele, skal du ikke vedhæfte filer til en mail. Vælg i stedet **Hent link** fra Microsoft Teams eller SharePoint, og send linket i en mail.
 3. Hvis du vil dele en fil eksternt, skal du føje brugeren som gæst til dit team eller bruge SharePoint til at få et sikkert link til kun at dele denne fil.
 4. Brug Microsoft Stream til at hoste videoer, som din kampagne skal se.

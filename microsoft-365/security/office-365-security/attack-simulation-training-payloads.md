@@ -1,5 +1,5 @@
 ---
-title: Nyttedata til oplæring i simulering af angreb
+title: Nyttedata i oplæring i simulering af angreb
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,14 +13,14 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter og administrerer nyttedata til oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: a21e3e72e435e9aaa53fb5fab825be6c490017fe
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 38e9e60c50a7bc0dec4e8f9f75845fdc34e4b237
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65840195"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487218"
 ---
-# <a name="payloads-for-attack-simulation-training-in-defender-for-office-365"></a>Nyttedata til oplæring i simulering af angreb i Defender for Office 365
+# <a name="payloads-in-attack-simulation-training-in-defender-for-office-365"></a>Nyttedata i oplæring af simulering af angreb i Defender for Office 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -42,7 +42,7 @@ Følgende oplysninger vises for hver nyttedata:
 - **Sprog**: Hvis nyttedataene indeholder flere oversættelser, vises de første to sprog direkte. Hvis du vil se de resterende sprog, skal du holde markøren over det numeriske ikon (f.eks. **+10**).
 - **Kilde**: For indbyggede nyttedata er værdien **Global**. For brugerdefinerede nyttedata er værdien **Lejer**.
 - **Startede simuleringer**: Antallet af startede simuleringer, der bruger nyttedataene.
-- **Kompromitteret sats (%)**: For indbyggede nyttedata er denne værdi den forudsagte gennemsnitlige kompromisrate for simuleringssimuleringer af angrebssimuleringer, der bruger den samme type nyttedata på tværs af alle andre Microsoft 365 organisationer.
+- **Kompromitteret sats (%)**: For indbyggede nyttedata er denne værdi den forudsagte gennemsnitlige kompromitterende sats for træningssimulering af angrebssimuleringer, der bruger den samme type nyttedata på tværs af alle andre Microsoft 365-organisationer.
 - **Oprettet af**: For indbyggede nyttedata er værdien **Microsoft**. For brugerdefinerede nyttedata er værdien UPN for den bruger, der oprettede nyttedataene.
 - **Senest ændret**
 - **Teknik**: En af de tilgængelige [social engineering teknikker](attack-simulation-training.md#select-a-social-engineering-technique):
@@ -178,7 +178,7 @@ Når du vælger en nyttedata på listen, vises der et pop op-vindue med følgend
      - <https://www.windocyte.com>
 
      > [!NOTE]
-     > En URL-omdømmetjeneste kan identificere en eller flere af disse URL-adresser som usikre. Kontrollér tilgængeligheden af URL-adressen i dine understøttede webbrowsere, før du bruger URL-adressen i en simulering. Du kan få flere oplysninger under [URL-adresser til phishingsimulering, der er blokeret af Google Pengeskab Browsing](attack-simulation-training-faq.md#phishing-simulation-urls-blocked-by-google-safe-browsing).
+     > En URL-omdømmetjeneste kan identificere en eller flere af disse URL-adresser som usikre. Kontrollér tilgængeligheden af URL-adressen i dine understøttede webbrowsere, før du bruger URL-adressen i en simulering. Du kan få flere oplysninger under [URL-adresser til phishingsimulering, der er blokeret af Google Sikker browsing](attack-simulation-training-faq.md#phishing-simulation-urls-blocked-by-google-safe-browsing).
 
    - **Indholdssektion for vedhæftede filer** : Denne sektion er kun tilgængelig, hvis du har valgt **Link i vedhæftet fil** på siden **Vælg teknik** .
 
@@ -190,7 +190,7 @@ Når du vælger en nyttedata på listen, vises der et pop op-vindue med følgend
 
      - **Tilføj kode(r)**
   
-     - **Tema**: De tilgængelige værdier er: **Kontoaktivering**, **Kontobekræftelse**, **Fakturering**, **Ryd op i mail**, **Modtaget dokument**, **Udgifts**, **Fax**, **Økonomirapport**, **Indgående meddelelser**, **Faktura**, **Modtaget element**, **Logonbesked**, **Post modtaget**, **Andet**, **Adgangskode**, **Betaling**, **Løn**, **Personligt tilbud**, **Karantæne** , **Fjernarbejde**, **Gennemse meddelelse**, **Sikkerhedsopdatering**, **Afbrudt tjeneste**, **Signatur påkrævet**, **Opgraderingspostkasse Storage**, **Kontrollér postkasse** eller **Voicemail**.
+     - **Tema**: De tilgængelige værdier er: **Kontoaktivering**, **Kontobekræftelse**, **Fakturering**, **Ryd op i mail**, **Modtaget dokument**, **Udgifts**, **Fax**, **Økonomirapport**, **Indgående meddelelser**, **Faktura**, **Modtaget element**, **Logonbesked**, **Post modtaget**, **Andet**, **Adgangskode**, **Betaling**, **Løn**, **Personligt tilbud**, **Karantæne** , **Fjernarbejde**, **Gennemse meddelelse**, **Sikkerhedsopdatering**, **Afbrudt tjeneste**, **Signatur påkrævet**, **Opgrader postkasselager**, **Bekræft postkasse** eller **Talebesked**.
   
      - **Brand**: De tilgængelige værdier er: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** eller **Andet**.
   

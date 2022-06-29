@@ -1,5 +1,5 @@
 ---
-title: Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365
+title: Konfigurer politikker for sikre links i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -16,17 +16,17 @@ ms.assetid: bdd5372d-775e-4442-9c1b-609627b94b5d
 ms.collection:
 - M365-security-compliance
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette Pengeskab Links-politikker og globale indstillinger for Pengeskab links i Microsoft Defender for Office 365.
+description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette politikker for sikre links og globale indstillinger for Sikre links i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5e66b1b079f67d6454754d056ca9fedf5fefb74f
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 2d006cd49392b80c826e23ef0d63f954d81249c0
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115779"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487021"
 ---
-# <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365
+# <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for sikre links i Microsoft Defender for Office 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -35,67 +35,67 @@ ms.locfileid: "66115779"
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Denne artikel er beregnet til erhvervskunder, der har [Microsoft Defender for Office 365](defender-for-office-365.md). Hvis du er hjemmebruger og leder efter oplysninger om Safelinks i Outlook, skal du se [Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Denne artikel er beregnet til erhvervskunder, der har [Microsoft Defender for Office 365](defender-for-office-365.md). Hvis du er hjemmebruger og leder efter oplysninger om Safelinks i Outlook, skal du se [Avanceret Outlook.com sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-Pengeskab Links i [Microsoft Defender for Office 365](defender-for-office-365.md) indeholder URL-scanning af indgående mails i et mailflow og tidspunktet for klikbekræftelse af URL-adresser og links i mails og andre steder. Du kan få flere oplysninger [under Pengeskab Links i Microsoft Defender for Office 365](safe-links.md).
+Sikre links i [Microsoft Defender for Office 365](defender-for-office-365.md) indeholder URL-scanning af indgående mails i et mailflow og tidspunktet for klikbekræftelse af URL-adresser og links i mails og andre steder. Du kan få flere oplysninger [under Sikre links i Microsoft Defender for Office 365](safe-links.md).
 
-Selvom der ikke er nogen standardpolitik for Pengeskab links, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** Pengeskab Links-beskyttelse til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab Links-politikker). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
+Selvom der ikke er nogen standardpolitik for Sikre links, giver den forudindstillede sikkerhedspolitik for **indbygget beskyttelse** beskyttelse af sikre links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for sikre links). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 
-Du kan også bruge procedurerne i denne artikel til at oprette Pengeskab linkspolitikker, der gælder for bestemte brugere, grupper eller domæner.
+Du kan også bruge procedurerne i denne artikel til at oprette politikker for sikre links, der gælder for bestemte brugere, grupper eller domæner.
 
 > [!NOTE]
 >
-> Du kan konfigurere de globale indstillinger for beskyttelse af Pengeskab links **uden for** Pengeskab Links-politikker. Du kan finde instruktioner under [Konfigurer globale indstillinger for Pengeskab Links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
+> Du kan konfigurere de globale indstillinger for beskyttelse af sikre links **uden for** politikkerne for sikre links. Du kan finde instruktioner under [Konfigurer globale indstillinger for Sikre links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
 >
-> Administratorer bør overveje de forskellige konfigurationsindstillinger for Pengeskab Links. En af de tilgængelige indstillinger er at inkludere brugeridentificerbare oplysninger i Pengeskab Links. Denne funktion gør det muligt for sikkerhedshandlinger (SecOps)-teams at undersøge potentielle bruger kompromitterer, foretage korrigerende handlinger og begrænse dyre brud.
+> Administratorer bør overveje de forskellige konfigurationsindstillinger for Sikre links. En af de tilgængelige muligheder er at inkludere brugeridentificerbare oplysninger i Sikre links. Denne funktion gør det muligt for sikkerhedshandlinger (SecOps)-teams at undersøge potentielle bruger kompromitterer, foretage korrigerende handlinger og begrænse dyre brud.
 
-Du kan konfigurere politikker for Pengeskab links på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til berettigede Microsoft 365 organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser, men med Microsoft Defender for Office 365 abonnementer på tilføjelsesprogrammer).
+Du kan konfigurere politikker for sikre links på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til berettigede Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser, men Microsoft Defender for Office 365 abonnementer på tilføjelsesprogrammer).
 
-De grundlæggende elementer i en politik for Pengeskab links er:
+De grundlæggende elementer i en politik for sikre links er:
 
-- **Politikken for sikre links**: Aktivér beskyttelse af Pengeskab links, slå scanning af URL-adresser i realtid til, angiv, om der skal ventes på, at scanning i realtid fuldføres, før meddelelsen leveres, slå søgning efter interne meddelelser til, angiv, om brugerklik skal spores på URL-adresser, og angiv, om brugerne skal have tilladelse til at klikke på gennemløb til den oprindelige URL-adresse.
+- **Politikken for sikre links**: Slå beskyttelse af sikre links til, slå scanning af URL-adresser i realtid til, angiv, om der skal ventes på, at scanning i realtid fuldføres, før meddelelsen leveres, slå søgning efter interne meddelelser til, angiv, om brugerklik skal spores på URL-adresser, og angiv, om brugerne skal have tilladelse til at klikke på gennemløb til den oprindelige URL-adresse.
 - **Reglen for sikre links**: Angiver prioritets- og modtagerfiltrene (hvem politikken gælder for).
 
-Forskellen mellem disse to elementer er ikke indlysende, når du administrerer Pengeskab links-politikker på Microsoft 365 Defender portalen:
+Forskellen mellem disse to elementer er ikke indlysende, når du administrerer politikker for sikre links på Microsoft 365 Defender portalen:
 
-- Når du opretter en politik for Pengeskab links, opretter du faktisk en regel for sikre links og den tilknyttede politik for sikre links på samme tid ved hjælp af det samme navn for begge.
-- Når du ændrer en politik for Pengeskab links, ændrer indstillinger, der er relateret til navn, prioritet, aktiveret eller deaktiveret, og modtagerfiltre reglen for sikre links. Alle andre indstillinger ændrer den tilknyttede politik for sikre links.
-- Når du fjerner en politik for Pengeskab links, fjernes reglen for sikre links og den tilknyttede politik for sikre links.
+- Når du opretter en politik for sikre links, opretter du faktisk en regel for sikre links og den tilknyttede politik for sikre links på samme tid ved hjælp af det samme navn for begge.
+- Når du ændrer en politik for sikre links, ændrer indstillinger, der er relateret til navn, prioritet, aktiveret eller deaktiveret, og modtagerfiltre reglen for sikre links. Alle andre indstillinger ændrer den tilknyttede politik for sikre links.
+- Når du fjerner en politik for sikre links, fjernes reglen for sikre links og den tilknyttede politik for sikre links.
 
-I Exchange Online PowerShell eller enkeltstående EOP PowerShell kan du administrere politikken og reglen separat. Du kan få flere oplysninger i afsnittet [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for Pengeskab links](#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-links-policies) senere i denne artikel.
+I Exchange Online PowerShell eller enkeltstående EOP PowerShell kan du administrere politikken og reglen separat. Du kan få flere oplysninger i afsnittet [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for sikre links](#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-links-policies) senere i denne artikel.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Pengeskab links**, skal du bruge <https://security.microsoft.com/safelinksv2>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Sikre links** , skal du bruge <https://security.microsoft.com/safelinksv2>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser, før du kan udføre procedurerne i denne artikel:
-  - Hvis du vil oprette, redigere og slette Pengeskab linkspolitikker, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** på Microsoft 365 Defender portalen **og** medlem af rollegruppen **Organisationsadministration** i Exchange Online.
-  - Hvis du vil have skrivebeskyttet adgang til Pengeskab links-politikker, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser**.
+  - Hvis du vil oprette, redigere og slette politikker for sikre links, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** i Microsoft 365 Defender portalen **og** medlem af rollegruppen **Organisationsadministration** i Exchange Online.
+  - Hvis du vil have skrivebeskyttet adgang til politikker for sikre links, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser** .
 
   Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md) og [Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
   >
-  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   . – Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
-- Du kan se vores anbefalede indstillinger for politikker for Pengeskab links [under Pengeskab Politikindstillinger for links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
+- Du kan se vores anbefalede indstillinger for politikker for sikre links under [Politikindstillinger for sikre links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
 - Der kan gå op til 6 timer, før en ny eller opdateret politik anvendes.
 
-- [Nye funktioner føjes løbende til Microsoft Defender for Office 365](defender-for-office-365.md#new-features-in-microsoft-defender-for-office-365). Når der tilføjes nye funktioner, skal du muligvis foretage justeringer af dine eksisterende politikker for Pengeskab links.
+- [Nye funktioner føjes løbende til Microsoft Defender for Office 365](defender-for-office-365.md#new-features-in-microsoft-defender-for-office-365). Efterhånden som der tilføjes nye funktioner, skal du muligvis foretage justeringer af dine eksisterende politikker for sikre links.
 
-## <a name="use-the-microsoft-365-defender-portal-to-create-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at oprette politikker for Pengeskab links
+## <a name="use-the-microsoft-365-defender-portal-to-create-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at oprette politikker for sikre links
 
-Når du opretter en brugerdefineret politik for Pengeskab links på Microsoft 365 Defender-portalen, oprettes reglen for sikre links og den tilknyttede politik for sikre links samtidig med det samme navn for begge.
+Når du opretter en brugerdefineret politik for sikre links på Microsoft 365 Defender-portalen, oprettes reglen for sikre links og den tilknyttede politik for sikre links samtidig med det samme navn for begge.
 
-1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab links**, skal du bruge <https://security.microsoft.com/safelinksv2>.
+1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Sikre links** , skal du bruge <https://security.microsoft.com/safelinksv2>.
 
-2. Klik på ![Opret ikon **på siden Pengeskab links**.](../../media/m365-cc-sc-create-icon.png) **Opret**.
+2. Klik på Ikonet Opret på ![siden **Sikre links**.](../../media/m365-cc-sc-create-icon.png) **Opret**.
 
-3. **Politikguiden New Pengeskab Links** åbnes. Konfigurer følgende indstillinger på siden **Navngiv din politik** :
+3. Guiden **Ny politik for sikre links** åbnes. Konfigurer følgende indstillinger på siden **Navngiv din politik** :
 
    - **Navn**: Angiv et entydigt, beskrivende navn til politikken.
    - **Beskrivelse**: Angiv en valgfri beskrivelse af politikken.
@@ -130,18 +130,21 @@ Når du opretter en brugerdefineret politik for Pengeskab links på Microsoft 36
    Klik på **Næste**, når du er færdig.
 
 5. Konfigurer følgende indstillinger på siden **Beskyttelsesindstillinger** , der vises:
-   - **Vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelser**: Vælg **Til** for at aktivere beskyttelse af Pengeskab links for links i mails. Hvis du slår denne indstilling til, er følgende indstillinger tilgængelige:
+   - **Vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelser**: Vælg **Til** for at aktivere beskyttelse af sikre links for links i mails. Hvis du slår denne indstilling til, er følgende indstillinger tilgængelige:
      - **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**: Vælg denne indstilling for at aktivere scanning i realtid af links i mails. Hvis du slår denne indstilling til, er følgende indstilling tilgængelig:
        - **Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres**: Vælg denne indstilling for at vente på, at scanningen af URL-adresser i realtid fuldføres, før meddelelsen leveres.
-     - **Anvend Pengeskab Links til mails, der er sendt i organisationen**: Vælg denne indstilling for at anvende politikken Pengeskab Links på meddelelser mellem interne afsendere og interne modtagere.
-   - **Vælg handlingen for ukendte eller potentielt skadelige URL-adresser i Microsoft Teams**: Vælg **Til** for at aktivere beskyttelse af Pengeskab links for links i Teams. Bemærk, at det kan tage op til 24 timer, før denne indstilling træder i kraft.
+     - **Anvend sikre links på mails, der er sendt i organisationen**: Vælg denne indstilling for at anvende politikken Sikre links på meddelelser mellem interne afsendere og interne modtagere.
+   - **Vælg handlingen for ukendte eller potentielt skadelige URL-adresser i Microsoft Teams**: Vælg **Til** for at aktivere beskyttelse af sikre links for links i Teams. Bemærk, at det kan tage op til 24 timer, før denne indstilling træder i kraft.
 
      > [!NOTE]
-     > Pengeskab Links-beskyttelse for Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
+     > Beskyttelse af Sikre links til Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
 
    - **Spor bruger clicks**: Lad denne indstilling være markeret for at aktivere sporing af brugerens klik på URL-adresser i mails.
    - **Lad brugerne klikke sig videre til den oprindelige URL-adresse**: Fjern markeringen i denne indstilling for at forhindre brugere i at klikke sig videre til den oprindelige URL-adresse på [advarselssider](safe-links.md#warning-pages-from-safe-links).
-   - **Omskriv ikke følgende URL-adresser**: Giver adgang til de angivne URL-adresser, der ellers ville blive blokeret af Pengeskab Links.
+   - **Undlad at omskrive følgende URL-adresser**: Giver adgang til de angivne URL-adresser, der ellers ville blive blokeret af Sikre links.
+
+     > [!NOTE]
+     > Formålet med listen "Omskriv ikke følgende URL-adresser" er at springe ombrydningen Af sikre links over for de angivne URL-adresser. I stedet for at bruge denne liste kan du nu [oprette tilladte URL-adresser på listen over tilladte/blokerede lejere](allow-block-urls.md#create-allow-url-entries).
 
      Skriv den ønskede URL-adresse eller værdi i feltet, og klik derefter på **Tilføj**. Gentag dette trin så mange gange, det er nødvendigt.
 
@@ -149,16 +152,16 @@ Når du opretter en brugerdefineret politik for Pengeskab links på Microsoft 36
 
      Du kan få mere at vide om syntaksen under [Postsyntaks for listen "Omskriv ikke følgende URL-adresser"](safe-links.md#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
 
-   Du kan finde detaljerede oplysninger om disse indstillinger [under Pengeskab Indstillinger for links til mails](safe-links.md#safe-links-settings-for-email-messages) og [Pengeskab Linksindstillinger for Microsoft Teams](safe-links.md#safe-links-settings-for-microsoft-teams).
+   Du kan finde detaljerede oplysninger om disse indstillinger under [Indstillinger for sikre links for mails](safe-links.md#safe-links-settings-for-email-messages) og [Indstillinger for Sikre links til Microsoft Teams](safe-links.md#safe-links-settings-for-microsoft-teams).
 
-   Du kan få mere at vide om de anbefalede værdier for standard- og strenge politikindstillinger [under Pengeskab Politikindstillinger for links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
+   Du kan få mere at vide om de anbefalede værdier for Standard- og Strict-politikindstillinger under [Politikindstillinger for sikre links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
    Klik på **Næste**, når du er færdig.
 
 6. På siden **Meddelelse** , der vises, skal du vælge en af følgende værdier for **Hvordan vil du give brugerne besked?**:
    - **Brug standardmeddelelsesteksten**
    - **Brug brugerdefineret meddelelsestekst**: Hvis du vælger denne værdi (længden må ikke overstige 200 tegn), vises følgende indstillinger:
-     - **Brug Microsoft Oversætter til automatisk lokalisering**
+     - **Brug Microsoft Translator til automatisk lokalisering**
      - **Brugerdefineret meddelelsestekst**: Angiv den brugerdefinerede meddelelsestekst i dette felt.
 
    Klik på **Næste**, når du er færdig.
@@ -169,32 +172,32 @@ Når du opretter en brugerdefineret politik for Pengeskab links på Microsoft 36
 
 8. Klik på **Udført** på den bekræftelsesside, der vises.
 
-## <a name="use-the-microsoft-365-defender-portal-to-view-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at få vist politikker for Pengeskab links
+## <a name="use-the-microsoft-365-defender-portal-to-view-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at få vist politikker for sikre links
 
-1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab links**, skal du bruge <https://security.microsoft.com/safelinksv2>.
+1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Sikre links** , skal du bruge <https://security.microsoft.com/safelinksv2>.
 
-2. På siden **Pengeskab Links** vises følgende egenskaber på listen over politikker for Pengeskab links:
+2. På siden **Sikre links** vises følgende egenskaber på listen over politikker for sikre links:
    - **Navn**
    - **Status**
    - **Prioritet**
 
 3. Når du vælger en politik ved at klikke på navnet, vises politikindstillingerne i et pop op-vindue.
 
-## <a name="use-the-microsoft-365-defender-portal-to-modify-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at redigere politikker for Pengeskab links
+## <a name="use-the-microsoft-365-defender-portal-to-modify-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at redigere politikker for sikre links
 
-1. På Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> Sektionen \> **Trusselspolitikker politikker** \> **Pengeskab Links**.
+1. På Microsoft 365 Defender-portalen skal du gå til afsnittet **Politikker & regler** \> **Trusselspolitikker politikker** \> afsnittet  \> **Sikre links**.
 
-2. På siden **Pengeskab Links** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Sikre links** skal du vælge en politik på listen ved at klikke på navnet.
 
-3. I det pop op-vindue med politikoplysninger, der vises, skal du vælge **Rediger** i hvert afsnit for at redigere indstillingerne i sektionen. Du kan få flere oplysninger om indstillingerne i det forrige afsnit [Brug Microsoft 365 Defender-portalen til at oprette politikker for Pengeskab links](#use-the-microsoft-365-defender-portal-to-create-safe-links-policies) i denne artikel.
+3. I det pop op-vindue med politikoplysninger, der vises, skal du vælge **Rediger** i hvert afsnit for at redigere indstillingerne i sektionen. Du kan få flere oplysninger om indstillingerne i det forrige afsnit [Brug Microsoft 365 Defender-portalen til at oprette politikker for sikre links](#use-the-microsoft-365-defender-portal-to-create-safe-links-policies) i denne artikel.
 
 Hvis du vil aktivere eller deaktivere en politik eller angive prioritetsrækkefølgen for politikken, skal du se følgende afsnit.
 
-### <a name="enable-or-disable-safe-links-policies"></a>Aktivér eller deaktiver politikker for Pengeskab links
+### <a name="enable-or-disable-safe-links-policies"></a>Aktivér eller deaktiver politikker for sikre links
 
-1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab links**, skal du bruge <https://security.microsoft.com/safelinksv2>.
+1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Sikre links** , skal du bruge <https://security.microsoft.com/safelinksv2>.
 
-2. På siden **Pengeskab Links** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Sikre links** skal du vælge en politik på listen ved at klikke på navnet.
 
 3. Øverst i pop op-vinduet med politikoplysninger, der vises, kan du se en af følgende værdier:
    - **Politik slået fra**: Hvis du vil aktivere politikken, skal du klikke på ![Slå ikonet til.](../../media/m365-cc-sc-turn-on-off-icon.png) **Aktivér** .
@@ -206,20 +209,20 @@ Hvis du vil aktivere eller deaktivere en politik eller angive prioritetsrækkef�
 
 Tilbage på hovedpolitiksiden **vil statusværdien** for politikken være **Til** eller **Fra**.
 
-### <a name="set-the-priority-of-safe-links-policies"></a>Angiv prioriteten for politikker for Pengeskab links
+### <a name="set-the-priority-of-safe-links-policies"></a>Angiv prioriteten for politikker for sikre links
 
-Som standard får Pengeskab Links en prioritet, der er baseret på den rækkefølge, de blev oprettet i (nyere politikker har lavere prioritet end ældre politikker). Et lavere prioritetsnummer angiver en højere prioritet for politikken (0 er den højeste), og politikker behandles i prioriteret rækkefølge (politikker med højere prioritet behandles før politikker med lavere prioritet). Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
+Som standard får Sikre links en prioritet, der er baseret på den rækkefølge, de blev oprettet i (nyere politikker har lavere prioritet end ældre politikker). Et lavere prioritetsnummer angiver en højere prioritet for politikken (0 er den højeste), og politikker behandles i prioriteret rækkefølge (politikker med højere prioritet behandles før politikker med lavere prioritet). Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
 
 Hvis du vil ændre prioriteten for en politik, skal du klikke på **Forøg prioritet** eller **Formindsk prioritet** i egenskaberne for politikken (du kan ikke direkte ændre **prioritetsnummeret** på portalen Microsoft 365 Defender). Det giver kun mening at ændre prioriteten for en politik, hvis du har flere politikker.
 
 **Bemærk**!
 
-- I Microsoft 365 Defender-portalen kan du kun ændre prioriteten for politikken Pengeskab links, når du har oprettet den. I PowerShell kan du tilsidesætte standardprioriteten, når du opretter reglen for sikre links (hvilket kan påvirke prioriteten af eksisterende regler).
-- Pengeskab Politikker for links behandles i den rækkefølge, de vises i (den første politik har **prioritetsværdien** 0). Du kan finde flere oplysninger om prioritetsrækkefølgen, og hvordan flere politikker evalueres og anvendes, under [Beskyttelse af mailrækkefølge og prioritet](how-policies-and-protections-are-combined.md).
+- På Microsoft 365 Defender-portalen kan du kun ændre prioriteten for politikken Sikre links, når du har oprettet den. I PowerShell kan du tilsidesætte standardprioriteten, når du opretter reglen for sikre links (hvilket kan påvirke prioriteten af eksisterende regler).
+- Politikker for sikre links behandles i den rækkefølge, de vises i (den første politik har **prioritetsværdien** 0). Du kan finde flere oplysninger om prioritetsrækkefølgen, og hvordan flere politikker evalueres og anvendes, under [Beskyttelse af mailrækkefølge og prioritet](how-policies-and-protections-are-combined.md).
 
-1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab links**, skal du bruge <https://security.microsoft.com/safelinksv2>.
+1. På Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre links** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Sikre links** , skal du bruge <https://security.microsoft.com/safelinksv2>.
 
-2. På siden **Pengeskab Links** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Sikre links** skal du vælge en politik på listen ved at klikke på navnet.
 
 3. Øverst i pop op-vinduet med politikoplysninger, der vises, kan du se **Forøg prioritet** eller **Formindsk prioritet** baseret på den aktuelle prioritetsværdi og antallet af brugerdefinerede politikker:
    - Politikken med **prioritetsværdien** **0** har kun indstillingen **Formindsk prioritet** tilgængelig.
@@ -230,17 +233,17 @@ Hvis du vil ændre prioriteten for en politik, skal du klikke på **Forøg prior
 
 4. Når du er færdig, skal du klikke på **Luk** i pop op-vinduet med politikoplysninger.
 
-## <a name="use-the-microsoft-365-defender-portal-to-remove-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at fjerne politikker for Pengeskab links
+## <a name="use-the-microsoft-365-defender-portal-to-remove-safe-links-policies"></a>Brug Microsoft 365 Defender-portalen til at fjerne politikker for sikre links
 
-1. På Microsoft 365 Defender-portalen skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Links** i afsnittet **Politikker**.
+1. På Microsoft 365 Defender-portalen skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre links** i afsnittet **Politikker**.
 
-2. På siden **Pengeskab Links** skal du vælge en politik på listen ved at klikke på navnet. Øverst i pop op-vinduet med politikoplysninger, der vises, skal du klikke på ![ikonet Flere handlinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere handlinger** \> ![Ikonet](../../media/m365-cc-sc-delete-icon.png) Slet politik **Slet politik**.
+2. På siden **Sikre links** skal du vælge en politik på listen ved at klikke på navnet. Øverst i pop op-vinduet med politikoplysninger, der vises, skal du klikke på ![ikonet Flere handlinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere handlinger** \> ![Ikonet](../../media/m365-cc-sc-delete-icon.png) Slet politik **Slet politik**.
 
 3. Klik på **Ja** i den bekræftelsesdialogboks, der vises.
 
-## <a name="use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-links-policies"></a>Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for Pengeskab links
+## <a name="use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-links-policies"></a>Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for sikre links
 
-Som tidligere beskrevet består en politik for Pengeskab links af en politik for sikre links og en regel for sikre links.
+Som tidligere beskrevet består en politik for sikre links af en politik for sikre links og en regel for sikre links.
 
 I PowerShell er forskellen mellem politikker for sikre links og regler for sikre links synlig. Du administrerer politikker for sikre links ved hjælp **\*af cmdlet'erne -SafeLinksPolicy** , og du administrerer regler for sikre links ved hjælp **\*af -SafeLinksRule-cmdlet'erne** .
 
@@ -248,9 +251,9 @@ I PowerShell er forskellen mellem politikker for sikre links og regler for sikre
 - I PowerShell kan du ændre indstillingerne i politikken for sikre links og reglen for sikre links separat.
 - Når du fjerner en politik for sikre links fra PowerShell, fjernes den tilsvarende regel for sikre links ikke automatisk og omvendt.
 
-### <a name="use-powershell-to-create-safe-links-policies"></a>Brug PowerShell til at oprette politikker for Pengeskab links
+### <a name="use-powershell-to-create-safe-links-policies"></a>Brug PowerShell til at oprette politikker for sikre links
 
-Oprettelse af en politik for Pengeskab links i PowerShell er en proces med to trin:
+Oprettelse af en politik for sikre links i PowerShell er en proces med to trin:
 
 1. Opret politikken for sikre links.
 2. Opret reglen for sikre links, der angiver politikken for sikre links, som reglen gælder for.
@@ -286,7 +289,7 @@ I dette eksempel oprettes en politik for sikre links med navnet Contoso All med 
 - Slå scanning i realtid af url-adresser, der klikkes på, til, herunder links, der peger på filer.
 - Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres.
 - Slå scanning af URL-adresser til og omskrivning af interne meddelelser.
-- Spor brugerklik, der er relateret til Pengeskab Links-beskyttelse (vi bruger ikke parameteren _TrackUserClicks_, og standardværdien er $true).
+- Spor brugerklik, der er relateret til beskyttelse af sikre links (vi bruger ikke parameteren _TrackUserClicks_ , og standardværdien er $true).
 - Tillad ikke, at brugerne klikker sig igennem til den oprindelige URL-adresse.
 
 ```PowerShell
@@ -386,7 +389,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Get-SafeLink
 
 ### <a name="use-powershell-to-modify-safe-links-policies"></a>Brug PowerShell til at ændre politikker for sikre links
 
-Du kan ikke omdøbe en politik for sikre links i PowerShell ( **Set-SafeLinksPolicy-cmdlet'en** har ingen _navneparameter_ ). Når du omdøber en politik for Pengeskab links på Microsoft 365 Defender-portalen, omdøber du kun _reglen_ for sikre links.
+Du kan ikke omdøbe en politik for sikre links i PowerShell ( **Set-SafeLinksPolicy-cmdlet'en** har ingen _navneparameter_ ). Når du omdøber en politik for sikre links på Microsoft 365 Defender-portalen, omdøber du kun _reglen_ for sikre links.
 
 Den eneste yderligere overvejelse i forbindelse med ændring af politikker for sikre links i PowerShell er den tilgængelige syntaks for parameteren _DoNotRewriteUrls_ ( [listen "Omskriv ikke følgende URL-adresser](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies)"):
 
@@ -433,7 +436,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-SafeLink
 
 ### <a name="use-powershell-to-enable-or-disable-safe-links-rules"></a>Brug PowerShell til at aktivere eller deaktivere regler for sikre links
 
-Aktivering eller deaktivering af en regel for sikre links i PowerShell aktiverer eller deaktiverer hele politikken Pengeskab Links (reglen for sikre links og politikken for tildelte sikre links).
+Aktivering eller deaktivering af en regel for sikre links i PowerShell aktiverer eller deaktiverer hele politikken For sikre links (reglen for sikre links og politikken for tildelte sikre links).
 
 Hvis du vil aktivere eller deaktivere en regel for sikre links i PowerShell, skal du bruge denne syntaks:
 
@@ -512,13 +515,13 @@ Remove-SafeLinksRule -Identity "Marketing Department"
 
 Du kan finde detaljerede oplysninger om syntaks og parametre under [Remove-SafeLinksRule](/powershell/module/exchange/remove-safelinksrule).
 
-Hvis du vil kontrollere, at Pengeskab Links scanner meddelelser, skal du kontrollere de tilgængelige Microsoft Defender for Office 365 rapporter. Du kan få flere oplysninger under [Få vist rapporter for Defender for Office 365](view-reports-for-mdo.md) og [Brug Stifinder på Microsoft 365 Defender-portalen](threat-explorer.md).
+Hvis du vil kontrollere, at Safe Links scanner meddelelser, skal du kontrollere de tilgængelige Microsoft Defender for Office 365 rapporter. Du kan få flere oplysninger under [Få vist rapporter for Defender for Office 365](view-reports-for-mdo.md) og [Brug Stifinder på Microsoft 365 Defender-portalen](threat-explorer.md).
 
 ## <a name="how-do-you-know-these-procedures-worked"></a>Hvordan ved du, at disse procedurer virkede?
 
-Benyt en af følgende fremgangsmåder for at bekræfte, at du har oprettet, ændret eller fjernet Pengeskab Links-politikker:
+Benyt en af følgende fremgangsmåder for at bekræfte, at du har oprettet, ændret eller fjernet politikker for sikre links:
 
-- Kontrollér listen over politikker, deres **statusværdier** og deres **prioritetsværdier** på siden **Pengeskab links** på portalen Microsoft 365 Defender på <https://security.microsoft.com/safelinksv2>. Hvis du vil have vist flere oplysninger, skal du vælge politikken på listen og få vist detaljerne i vinduet.
+- Kontrollér listen over politikker, deres **statusværdier** og deres **prioritetsværdier** på siden **Sikre links** på Microsoft 365 Defender-portalen på <https://security.microsoft.com/safelinksv2>. Hvis du vil have vist flere oplysninger, skal du vælge politikken på listen og få vist detaljerne i vinduet.
 
 - I Exchange Online PowerShell eller Exchange Online Protection PowerShell skal du erstatte \<Name\> med navnet på politikken eller reglen, køre følgende kommando og kontrollere indstillingerne:
 

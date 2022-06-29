@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a3d50debf31f53f75177e7c8cf8c7116ae3789b6
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 780d2bade0713bac295cf9597662c5ef2313a093
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128849"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490094"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitik
 
@@ -53,8 +53,10 @@ De individuelle karantænepolitiktilladelser, der findes i de forudindstillede t
 |**Bloker afsender** (_PermissionToBlockSender_)||![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
 |**Slet** (_PermissionToDelete_)||![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
 |**Eksempelvisning** (_PermissionToPreview_)||![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
-|**Tillad, at modtagere frigiver en meddelelse fra karantæne** (_PermissionToRelease_)|||![Markeret.](../../media/checkmark.png)|
+|**Tillad, at modtagere frigiver en meddelelse fra karantæne** (_PermissionToRelease_)<sup>\*</sup>|||![Markeret.](../../media/checkmark.png)|
 |**Tillad, at modtagere anmoder om, at en meddelelse frigives fra karantæne** (_PermissionToRequestRelease_)||![Markeret](../../media/checkmark.png)||
+
+<sup>\*</sup>**Tillad, at modtagerne frigiver en meddelelse fra karantænetilladelsen** anvendes ikke i antimalwarepolitikker eller i forbindelse med phishing-dommen med høj sikkerhed i politikker til bekæmpelse af spam. Brugerne kan ikke frigive deres egen malware eller phishing-meddelelser med høj sikkerhed fra karantæne. Du kan i bedste fald bruge **Tillad, at modtagerne anmoder om, at en meddelelse frigives fra karantænetilladelsen** .
 
 Standardpolitikkerne for karantæne, deres tilknyttede tilladelsesgrupper, og om karantænemeddelelser er aktiveret, er beskrevet i følgende tabel:
 
@@ -66,7 +68,7 @@ Standardpolitikkerne for karantæne, deres tilknyttede tilladelsesgrupper, og om
 
 Hvis du ikke kan lide standardtilladelserne i de forudindstillede tilladelsesgrupper, eller hvis du vil aktivere karantænemeddelelser, skal du oprette og bruge brugerdefinerede karantænepolitikker. Du kan finde flere oplysninger om, hvad hver tilladelse gør, i afsnittet [Oplysninger om tilladelse til karantænepolitik](#quarantine-policy-permission-details) senere i denne artikel.
 
-Du opretter og tildeler karantænepolitikker på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med Exchange Online postkasser; enkeltstående EOP PowerShell i EOP-organisationer uden Exchange Online postkasser).
+Du opretter og tildeler karantænepolitikker på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med Exchange Online postkasser; enkeltstående EOP PowerShell i EOP-organisationer uden Exchange Online postkasser).
 
 > [!NOTE]
 > Hvor længe karantænemeddelelser opbevares i karantæne, før de udløber, kontrolleres af **Bevar spam i karantæne i dette antal dage** (_QuarantineRetentionPeriod_) i politikker for bekæmpelse af spam. Du kan få flere oplysninger under [Konfigurer politikker til bekæmpelse af spam i EOP](configure-your-spam-filter-policies.md).
@@ -90,7 +92,7 @@ For nye organisationer eller ældre organisationer, der aldrig har haft meddelel
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Karantænepolitikker** , skal du bruge <https://security.microsoft.com/quarantinePolicies>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Hvis du vil have vist, oprette, redigere eller fjerne karantænepolitikker, skal du være medlem af rollerne **Organisationsadministration**, **Sikkerhedsadministrator** eller **Karantæneadministrator** på Microsoft 365 Defender portalen. Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
@@ -201,7 +203,7 @@ I _understøttede_ beskyttelsesfunktioner, der sætter mails i karantæne, kan d
 |[Politikker mod spam](configure-your-spam-filter-policies.md): <ul><li>**Spam** (_SpamAction_)</li><li>**Spam med høj genkendelsessikkerhed** (_HighConfidenceSpamAction_)</li><li>**Phishing** (_PhishSpamAction_)</li><li>**Phishing med høj genkendelsessikkerhed** (_HighConfidencePhishAction_)</li><li>**Masse** (_BulkSpamAction_)</li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>AdminOnlyAccessPolicy (ingen adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li></ul>|
 |Politikker til bekæmpelse af phishing: <ul><li>[Spoof intelligence-beskyttelse](set-up-anti-phishing-policies.md#spoof-settings) (_AuthenticationFailAction_)</li><li>[Repræsentationsbeskyttelse i Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365):<ul><li>**Hvis meddelelsen registreres som en repræsenteret bruger** (_TargetedUserProtectionAction_)</li><li>**Hvis meddelelsen registreres som et repræsenterede domæne** (_TargetedDomainProtectionAction_)</li><li>**Hvis mailbox intelligence registrerer og repræsenterer en bruger** (_MailboxIntelligenceProtectionAction_)</li></ul></li></ul>|Ja|<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>Repræsentationsbeskyttelse:<ul><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li><li>DefaultFullAccessPolicy<sup>\*</sup> (fuld adgang)</li></ul></li></ul>|
 |[Politikker for antimalware](configure-anti-malware-policies.md): Alle registrerede meddelelser er altid sat i karantæne.|Ja|AdminOnlyAccessPolicy (ingen adgang)|
-|[beskyttelse Pengeskab vedhæftede filer](safe-attachments.md): <ul><li>Mails med vedhæftede filer, der er sat i karantæne som malware af Pengeskab politikker for vedhæftede filer (_aktivér_ og _handling_)</li><li>Filer, der er sat i karantæne som malware af [Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Ja</li><li>Nej</li></ul>|<ul><li>AdminOnlyAccessPolicy (ingen adgang)</li><li>Nielsen</li></ul>|
+|[Beskyttelse mod vedhæftede filer, der er tillid til](safe-attachments.md): <ul><li>Mails med vedhæftede filer, der er sat i karantæne som malware af politikker for sikre vedhæftede filer (_Aktivér_ og _handling_)</li><li>Filer, der er sat i karantæne som malware af [Sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md)</li></ul>|<ul><li>Ja</li><li>Nej</li></ul>|<ul><li>AdminOnlyAccessPolicy (ingen adgang)</li><li>Nielsen</li></ul>|
 |[Regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) (også kendt som transportregler) med handlingen: **Levér meddelelsen til den hostede karantæne** (_karantæne_).|Nej|Nielsen|
 
 <sup>\*</sup> Som [tidligere beskrevet i denne artikel](#full-access-permissions-and-quarantine-notifications) bruger din organisation muligvis NotificationEnabledPolicy i stedet for DefaultFullAccessPolicy. Den eneste forskel mellem disse to karantænepolitikker er, at karantænemeddelelser er slået til i NotificationEnabledPolicy og slået fra i DefaultFullAccessPolicy.
@@ -285,7 +287,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-HostedCo
 
 ### <a name="anti-phishing-policies"></a>Politikker for antiphishing
 
-Spoof intelligence er tilgængelig i EOP og Defender for Office 365. Beskyttelse mod repræsentation af brugere, beskyttelse mod repræsentation af domæner og postkasseintelligens er kun tilgængelige i Defender for Office 365. Du kan få flere oplysninger [under Politikker til bekæmpelse af phishing i Microsoft 365](set-up-anti-phishing-policies.md).
+Spoof intelligence er tilgængelig i EOP og Defender for Office 365. Beskyttelse mod repræsentation af brugere, beskyttelse mod repræsentation af domæner og postkasseintelligens er kun tilgængelige i Defender for Office 365. Du kan få flere oplysninger under [Politikker til bekæmpelse af phishing i Microsoft 365](set-up-anti-phishing-policies.md).
 
 1. I [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**.
 
@@ -424,31 +426,31 @@ New-MalwareFilterPolicy -Identity "Human Resources" -QuarantineTag NoAccess
 
 Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-MalwareFilterPolicy](/powershell/module/exchange/set-malwarefilterpolicy).
 
-### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Pengeskab politikker for vedhæftede filer i Defender for Office 365
+### <a name="safe-attachments-policies-in-defender-for-office-365"></a>Politikker for vedhæftede filer, der er tillid til, i Defender for Office 365
 
-1. På [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**.
+1. På [Microsoft 365 Defender-portalen](https://security.microsoft.com) skal du gå til **Mail & samarbejdspolitikker** \> **& regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**.
 
-   Du kan også gå direkte til siden **Pengeskab Vedhæftede filer** ved at bruge <https://security.microsoft.com/safeattachmentv2>.
+   Du kan også gå direkte til siden **Vedhæftede filer, der er tillid** til, ved at bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. Benyt en af følgende fremgangsmåder på siden **Pengeskab vedhæftede filer**:
-   - Find og vælg en eksisterende politik for Pengeskab Vedhæftede filer.
-   - Opret en ny politik for vedhæftede filer Pengeskab.
+2. Benyt en af følgende fremgangsmåder på siden **Vedhæftede filer, der er tillid** til:
+   - Find og vælg en eksisterende politik for vedhæftede filer, der er tillid til.
+   - Opret en ny politik for vedhæftede filer, der er tillid til.
 
 3. Udfør et af følgende trin:
-   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-vinduet med politikoplysninger skal du gå til afsnittet **Indstillinger** og derefter klikke på **Rediger indstillinger**.
-   - **Opret ny**: Gå til siden **Indstillinger** i den nye politikguide.
+   - **Rediger eksisterende**: Vælg politikken ved at klikke på navnet på politikken. I pop op-vinduet med politikoplysninger skal du gå til sektionen **Indstillinger** og derefter klikke på **Rediger indstillinger**.
+   - **Opret ny**: I den nye politikguide skal du gå til siden **Indstillinger** .
 
-4. Benyt følgende fremgangsmåde på siden **Indstillinger**:
-   1. **Pengeskab Vedhæftede filer ukendt malware-svar**: Vælg **Bloker**, **Erstat** eller **Dynamisk levering**.
+4. Gør følgende på siden **Indstillinger** :
+   1. **Ukendte malwaresvar for vedhæftede filer, der er tillid** til: Vælg **Bloker**, **Erstat** eller **Dynamisk levering**.
    2. Vælg en karantænepolitik i feltet **Karantænepolitik** .
 
    **Bemærk**! Når du opretter en ny politik, angiver en tom værdi for **karantænepolitikken** , at standardkarantænepolitikken bruges. Når du senere redigerer politikken, erstattes den tomme værdi af det faktiske standardnavn for karantænepolitikken, som beskrevet i den forrige tabel.
 
-Komplette instruktioner til oprettelse og ændring af politikker for vedhæftede filer Pengeskab er beskrevet i [Konfigurer politikker for Pengeskab vedhæftede filer i Microsoft Defender for Office 365](set-up-safe-attachments-policies.md).
+Komplette instruktioner til oprettelse og ændring af politikker for vedhæftede filer, der er tillid til, er beskrevet i [Konfigurer politikker for vedhæftede filer i Microsoft Defender for Office 365](set-up-safe-attachments-policies.md).
 
-#### <a name="safe-attachments-policies-in-powershell"></a>Pengeskab politikker for vedhæftede filer i PowerShell
+#### <a name="safe-attachments-policies-in-powershell"></a>Politikker for sikre vedhæftede filer i PowerShell
 
-Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i Pengeskab politikker for vedhæftede filer, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
+Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i politikker for sikre vedhæftede filer, skal du oprette forbindelse til Exchange Online PowerShell eller Exchange Online Protection PowerShell og bruge følgende syntaks:
 
 ```powershell
 <New-SafeAttachmentPolicy -Name "<Unique name>" | Set-SafeAttachmentPolicy -Identity "<Policy name>"> -Enable $true -Action <Block | Replace | DynamicDelivery> [-QuarantineTag <QuarantineTagName>]
@@ -458,9 +460,9 @@ Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i Penge
 
 - _Parameterværdierne_ Bloker, Erstat eller DynamicDelivery kan resultere i karantænemeddelelser (værdien Tillad sætter ikke meddelelser i karantæne). Værdien af _handlingsparameteren_ giver kun mening, når værdien af parameteren _Enable_ er `$true`.
 
-- Når du opretter nye Pengeskab politikker for vedhæftede filer uden at bruge parameteren QuarantineTag, bruges standardkarantænepolitikken for Pengeskab registreringer af vedhæftede filer i mail (AdminOnlyAccessPolicy).
+- Når du opretter nye politikker for sikre vedhæftede filer uden at bruge parameteren QuarantineTag, bruges standardkarantatpolitikken for registrering af sikre vedhæftede filer i mail (AdminOnlyAccessPolicy).
 
-  Du skal kun erstatte standard karantænepolitikken med en brugerdefineret karantænepolitik, hvis du vil ændre standardegenskaberne for slutbrugere i mails, der er sat i karantæne af Pengeskab politikker for vedhæftede filer.
+  Du skal kun erstatte standard karantænepolitikken med en brugerdefineret karantænepolitik, hvis du vil ændre standardegenskaberne for slutbrugere i mails, der er sat i karantæne af politikker for vedhæftede filer, der er tillid til.
 
   Kør følgende kommando for at se de vigtige parameterværdier:
 
@@ -468,7 +470,7 @@ Hvis du hellere vil bruge PowerShell til at tildele karantænepolitikker i Penge
   Get-SafeAttachmentPolicy | Format-List Name,Enable,Action,QuarantineTag
   ```
 
-- En ny politik for vedhæftede filer Pengeskab i PowerShell kræver en politik for sikker vedhæftede filer (indstillinger) ved hjælp af **Cmdlet'en New-SafeAttachmentPolicy** og en eksklusiv regel for sikre vedhæftede filer (modtagerfiltre) ved hjælp af **New-SafeAttachmentRule-cmdlet'en**. Du kan finde instruktioner under [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for vedhæftede filer Pengeskab](set-up-safe-attachments-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies).
+- En ny politik for sikre vedhæftede filer i PowerShell kræver en politik for sikker vedhæftede filer (indstillinger) ved hjælp af **Cmdlet'en New-SafeAttachmentPolicy** og en eksklusiv regel for sikre vedhæftede filer (modtagerfiltre) ved hjælp af **Cmdlet'en New-SafeAttachmentRule** . Du kan finde instruktioner under [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for sikre vedhæftede filer](set-up-safe-attachments-policies.md#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies).
 
 I dette eksempel oprettes der en politik for sikker vedhæftede filer med navnet Research Department, der blokerer registrerede meddelelser og bruger den brugerdefinerede karantænepolitik med navnet NoAccess, der tildeler **ingen adgangstilladelser** til de karantænelagrede meddelelser.
 
@@ -519,7 +521,7 @@ De globale indstillinger for karantænepolitikker giver dig mulighed for at tilp
 
         :::image type="content" source="../../media/quarantine-tags-esn-customization-selected-languages.png" alt-text="De valgte sprog i de globale indstillinger for karantænebeskeder for karantænepolitikker." lightbox="../../media/quarantine-tags-esn-customization-selected-languages.png":::
 
-   - **Brug mit firmalogo**: Vælg denne indstilling for at erstatte det Microsoft-standardlogo, der bruges øverst i karantænemeddelelser. Før du udfører dette trin, skal du følge vejledningen i [Tilpas det Microsoft 365 tema for din organisation for](../../admin/setup/customize-your-organization-theme.md) at uploade dit brugerdefinerede logo.
+   - **Brug mit firmalogo**: Vælg denne indstilling for at erstatte det Microsoft-standardlogo, der bruges øverst i karantænemeddelelser. Før du udfører dette trin, skal du følge vejledningen i [Tilpas Microsoft 365-temaet for din organisation for](../../admin/setup/customize-your-organization-theme.md) at uploade dit brugerdefinerede logo.
 
      På følgende skærmbillede vises et brugerdefineret logo i en karantænemeddelelse:
 
@@ -632,7 +634,7 @@ Standardbeskedpolitikken med navnet **Bruger anmodede som standard om at frigive
 
 Administratorer kan tilpasse modtagerne af mailmeddelelser eller oprette en brugerdefineret beskedpolitik for at få flere indstillinger.
 
-Du kan få flere oplysninger om politikker for beskeder [under Beskedpolitikker i Microsoft 365](../../compliance/alert-policies.md).
+Du kan få flere oplysninger om politikker for beskeder under [Beskedpolitikker i Microsoft 365](../../compliance/alert-policies.md).
 
 ## <a name="quarantine-policy-permission-details"></a>Oplysninger om tilladelse til karantænepolitik
 
@@ -729,6 +731,9 @@ Tilladelsen **Eksempel** (_PermissionToPreview_) styrer brugernes mulighed for a
 - **Karantænemeddelelser**: Ingen effekt.
 
 #### <a name="allow-recipients-to-release-a-message-from-quarantine-permission"></a>Tillad, at modtagere frigiver en meddelelse fra karantænetilladelsen
+
+> [!NOTE]
+> Denne tilladelse er ikke hædret i antimalwarepolitikker eller i forbindelse med phishing-dommen med høj tillid i politikker til bekæmpelse af spam. Brugerne kan ikke frigive deres egen malware eller phishing-meddelelser med høj sikkerhed fra karantæne. Du kan i bedste fald bruge [Tillad, at modtagerne anmoder om, at en meddelelse frigives fra tilladelsen til karantæne](#allow-recipients-to-request-a-message-to-be-released-from-quarantine-permission) .
 
 **Tillad, at modtagerne frigiver en meddelelse fra karantænetilladelsen** (_PermissionToRelease_) styrer brugernes mulighed for at frigive deres karantænemeddelelser direkte og uden godkendelse fra en administrator.
 

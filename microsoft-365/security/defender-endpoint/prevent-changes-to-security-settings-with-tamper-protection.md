@@ -20,12 +20,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 36aa48f26e60e2c3afb034a218c3356e27d75ffd
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: f8d44cd032e658e28242c89f3fbd938bfd1fb320
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873352"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490547"
 ---
 # <a name="protect-security-settings-with-tamper-protection"></a>Beskyt sikkerhedsindstillinger med manipulationsbeskyttelse
 
@@ -38,7 +38,7 @@ ms.locfileid: "65873352"
 **Platforme**
 - Windows
 
-Tamperbeskyttelse er tilgængelig for enheder, der kører en af følgende versioner af Windows:
+Der er tamperbeskyttelse tilgængelig for enheder, der kører en af følgende versioner af Windows:
 
 - Windows 11
 - Windows 11 Enterprise flere sessioner 
@@ -51,7 +51,7 @@ Tamperbeskyttelse er tilgængelig for enheder, der kører en af følgende versio
 - Windows Server 2012 R2
 
 > [!NOTE]
-> Tamper-beskyttelse i Windows Server 2012 R2 er tilgængelig til enheder, der er onboardet ved hjælp af den moderne unified løsningspakke. Du kan få flere oplysninger under [Onboard Windows-servere til tjenesten Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
+> Tamper-beskyttelse i Windows Server 2012 R2 er tilgængelig for enheder, der er onboardet ved hjælp af den moderne unified løsningspakke. Du kan få flere oplysninger under [Onboarder Windows-servere til tjenesten Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-server-endpoints).
 
 ## <a name="overview"></a>Oversigt
 
@@ -64,12 +64,13 @@ Under nogle former for cyberangreb forsøger dårlige aktører at deaktivere sik
 - Deaktivering af skybaseret beskyttelse
 - Fjerner sikkerhedsintelligensopdateringer
 - Deaktivering af automatiske handlinger på registrerede trusler
+- Skjulning af meddelelser i Windows Sikkerhed-appen
 
 ### <a name="how-it-works"></a>Sådan fungerer det
 
-Ændringsbeskyttelse låser i bund og grund Microsoft Defender Antivirus til dens sikre standardværdier og forhindrer, at dine sikkerhedsindstillinger ændres via apps og metoder, f.eks.:
+Ændringsbeskyttelse låser i bund og grund Microsoft Defender Antivirus til sine sikre standardværdier og forhindrer, at dine sikkerhedsindstillinger ændres via apps og metoder, f.eks.:
 
-- Konfiguration af indstillinger i Registreringseditor på din Windows enhed
+- Konfiguration af indstillinger i Registreringseditor på din Windows-enhed
 - Ændring af indstillinger via PowerShell-cmdlet'er
 - Redigering eller fjernelse af sikkerhedsindstillinger via Gruppepolitik
 
@@ -80,7 +81,7 @@ Under nogle former for cyberangreb forsøger dårlige aktører at deaktivere sik
 |Sådan udfører du denne opgave...|Se dette afsnit...|
 |---|---|
 |Administrer beskyttelse mod ændring på tværs af din lejer <p> Brug Microsoft 365 Defender-portalen til at slå ændringsbeskyttelse til eller fra|[Administrer ændringsbeskyttelse for din organisation ved hjælp af Microsoft 365 Defender](#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal)|
-|Finjuster beskyttelsesindstillinger for ændring i din organisation <p> Brug Intune (Microsoft Endpoint Manager) til at slå beskyttelse mod manipulation til eller fra. Du kan konfigurere manipulationsbeskyttelse for nogle eller alle brugere med denne metode.|[Administrer ændringsbeskyttelse for din organisation ved hjælp af Microsoft Endpoint Manager](#manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager)|
+|Finjuster beskyttelsesindstillinger for ændring i din organisation <p> Brug Intune (Microsoft Endpoint Manager) til at slå ændringsbeskyttelse til eller fra. Du kan konfigurere manipulationsbeskyttelse for nogle eller alle brugere med denne metode.|[Administrer manipulationsbeskyttelse for din organisation ved hjælp af Microsoft Endpoint Manager](#manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager)|
 |Slå ændringsbeskyttelse til (eller fra) for din organisation med Configuration Manager|[Administrer manipulationsbeskyttelse for din organisation ved hjælp af lejertilknyttelse med Configuration Manager, version 2006](#manage-tamper-protection-for-your-organization-with-configuration-manager-version-2006)|
 |Slå manipulationsbeskyttelse til (eller fra) for en individuel enhed|[Administrer beskyttelse mod manipulation på en individuel enhed](#manage-tamper-protection-on-an-individual-device)|
 |Få vist oplysninger om forsøg på manipulation på enheder|[Få vist oplysninger om manipulationsforsøg](#view-information-about-tampering-attempts)|
@@ -96,14 +97,14 @@ Følgende tabel indeholder oplysninger om metoder, værktøjer og afhængigheder
 | Sådan aktiveres manipulationsbeskyttelse | Afhængighed af cloudbeskyttelse |
 |---|---|
 |Microsoft Intune|Nej|
-|Microsoft Endpoint Configuration Manager med lejer vedhæft|Nej|
+|Microsoft Endpoint Configuration Manager med lejer vedhæftning|Nej|
 |Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com))|Ja|
 
 ## <a name="manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal"></a>Administrer ændringsbeskyttelse for din organisation ved hjælp af Microsoft 365 Defender-portalen
 
 Manipulationsbeskyttelse kan slås til eller fra for din lejer ved hjælp af Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)). Her er et par punkter, du skal være opmærksom på:
 
-- I øjeblikket er muligheden for at administrere beskyttelse mod manipulation på Microsoft 365 Defender-portalen aktiveret som standard for nye udrulninger. I forbindelse med eksisterende udrulninger er der mulighed for at ændre beskyttelse via tilvalg. Hvis du vil tilmelde dig, skal du vælge **Indstillinger** **Endpoints** \> **Advanced features** \> **Tamper Protection** på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalen Microsoft 365 Defender</a>\>.
+- I øjeblikket er muligheden for at administrere beskyttelse mod manipulation på Microsoft 365 Defender-portalen aktiveret som standard for nye udrulninger. I forbindelse med eksisterende udrulninger er der mulighed for at ændre beskyttelse via tilvalg. Hvis du vil tilmelde dig, skal du på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal</a> vælge **Indstillinger** \> **Slutpunkter** \> **Avancerede funktioner** \> **Manipulationsbeskyttelse**.
 - Når du bruger Microsoft 365 Defender-portalen til at administrere beskyttelse mod manipulation, behøver du ikke at bruge Intune eller lejertilknyttelsesmetoden.
 - Når du administrerer beskyttelse mod ændring på Microsoft 365 Defender portalen, anvendes indstillingen for hele lejeren, hvilket påvirker alle de enheder, der kører Windows 10, Windows 10 Enterprise flere sessioner, Windows 11 Windows 11 Enterprise  multi-session, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 eller Windows Server 2022. Brug enten [Microsoft Endpoint Manager](#manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager) eller [Configuration Manager med lejertilknyttelse](#manage-tamper-protection-for-your-organization-with-configuration-manager-version-2006) for at finjustere manipulationsbeskyttelsen (f.eks. at have manipulationsbeskyttelse på nogle enheder, men deaktivere den for andre).
 - Hvis du har et hybridmiljø, har de indstillinger for beskyttelse af ændringer, der er konfigureret i Intune højere prioritet end de indstillinger, der er konfigureret i Microsoft 365 Defender-portalen.
@@ -112,7 +113,7 @@ Manipulationsbeskyttelse kan slås til eller fra for din lejer ved hjælp af Mic
 
 - Du skal have tildelt de nødvendige [tilladelser](/microsoft-365/security/defender-endpoint/assign-portal-access) , f.eks. global administrator, sikkerhedsadministrator eller sikkerhedshandlinger.
 
-- Dine Windows enheder skal køre en af følgende versioner af Windows:
+- Dine Windows-enheder skal køre en af følgende versioner af Windows:
   
   - Windows 11
   - Windows 11 Enterprise flere sessioner 
@@ -127,7 +128,7 @@ Manipulationsbeskyttelse kan slås til eller fra for din lejer ved hjælp af Mic
 Du kan få flere oplysninger om udgivelser [under Windows 10 udgivelsesoplysninger](/windows/release-health/release-information).
 
 - Dine enheder skal [være onboardet til Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboarding).
-- Dine enheder skal bruge platformversionen `4.18.2010.7` for antimalware (eller nyere) og versionen `1.1.17600.5` af antimalwareprogrammet (eller nyere). ([Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md)).
+- Dine enheder skal bruge platformversionen `4.18.2010.7` for antimalware (eller nyere) og versionen `1.1.17600.5` af antimalwareprogrammet (eller nyere). ([Administrer Opdateringer til Microsoft Defender Antivirus, og anvend grundlinjer](manage-updates-baselines-microsoft-defender-antivirus.md)).
 - [Skybaseret beskyttelse](enable-cloud-protection-microsoft-defender-antivirus.md) skal være aktiveret.
 
 > [!NOTE]
@@ -140,11 +141,11 @@ Du kan få flere oplysninger om udgivelser [under Windows 10 udgivelsesoplysning
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. Vælg **Indstillinger** \> **slutpunkter**.
+2. Vælg **Indstillinger** \> **Slutpunkter**.
 
 3. Gå til **Generelle** \> **avancerede funktioner**, og slå derefter ændringsbeskyttelse til.
 
-## <a name="manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager"></a>Administrer ændringsbeskyttelse for din organisation ved hjælp af Microsoft Endpoint Manager
+## <a name="manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager"></a>Administrer manipulationsbeskyttelse for din organisation ved hjælp af Microsoft Endpoint Manager
 
 Hvis din organisation bruger Microsoft Endpoint Manager (MEM), kan du slå ændringsbeskyttelse til (eller fra) for din organisation i Microsoft Endpoint Manager Administration ([https://endpoint.microsoft.com](https://endpoint.microsoft.com)). Brug Intune, når du vil finjustere beskyttelsesindstillinger for ændring. Hvis du f.eks. vil aktivere manipulationsbeskyttelse på nogle enheder, men ikke alle, skal du bruge Intune.
 
@@ -152,12 +153,12 @@ Hvis din organisation bruger Microsoft Endpoint Manager (MEM), kan du slå ændr
 
 - Dine enheder skal [være onboardet til Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboarding).
 - Du skal have tildelt de nødvendige [tilladelser](/microsoft-365/security/defender-endpoint/assign-portal-access) , f.eks. global administrator, sikkerhedsadministrator eller sikkerhedshandlinger.
-- Din organisation bruger [Microsoft Endpoint Manager til at administrere enheder](/mem/endpoint-manager-getting-started). (Microsoft Endpoint Manager(MEM)-licenser er påkrævet. MEM indgår i Microsoft 365 E3/E5, Enterprise Mobility + Security E3/E5, Microsoft 365 Business Premium, Microsoft 365 F1/F3, Microsoft 365  Government G3/G5 og tilsvarende uddannelseslicenser.)
-- Dine Windows enheder skal køre Windows 11 eller Windows 10 [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) eller nyere. (Du kan få flere oplysninger om udgivelser [under Windows 10 udgivelsesoplysninger](/windows/release-health/release-information)).
-- Du skal bruge Windows sikkerhed, hvor [security intelligence](https://www.microsoft.com/wdsi/definitions) er opdateret til version 1.287.60.0 (eller nyere).
-- Dine enheder skal bruge platformversion 4.18.1906.3 (eller nyere) og version 4.18.1906.3 (eller nyere) og antimalwaremotorversion `1.1.15500.X` (eller nyere). ([Administrer Microsoft Defender Antivirus opdateringer, og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md)).
+- Din organisation bruger [Microsoft Endpoint Manager til at administrere enheder](/mem/endpoint-manager-getting-started). (Microsoft Endpoint Manager (MEM)-licenser er påkrævet. MEM er inkluderet i Microsoft 365 E3/E5, Enterprise Mobility + Security E3/E5, Microsoft 365 Business Premium, Microsoft 365 F1/F3, Microsoft 365 Government G3/G5 og tilsvarende uddannelseslicenser.)
+- Dine Windows-enheder skal køre Windows 11 eller Windows 10 [1709](/lifecycle/announcements/revised-end-of-service-windows-10-1709), [1803](/lifecycle/announcements/windows-server-1803-end-of-servicing), [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019) eller nyere. (Du kan få flere oplysninger om udgivelser [under Windows 10 udgivelsesoplysninger](/windows/release-health/release-information)).
+- Du skal bruge Windows Security med [security intelligence](https://www.microsoft.com/wdsi/definitions) opdateret til version 1.287.60.0 (eller nyere).
+- Dine enheder skal bruge platformversion 4.18.1906.3 (eller nyere) og version 4.18.1906.3 (eller nyere) og antimalwaremotorversion `1.1.15500.X` (eller nyere). ([Administrer Opdateringer til Microsoft Defender Antivirus, og anvend grundlinjer](manage-updates-baselines-microsoft-defender-antivirus.md)).
 
-### <a name="turn-tamper-protection-on-or-off-in-microsoft-endpoint-manager"></a>Slå manipulationsbeskyttelse til (eller fra) i Microsoft Endpoint Manager
+### <a name="turn-tamper-protection-on-or-off-in-microsoft-endpoint-manager"></a>Slå beskyttelse mod manipulation til (eller fra) i Microsoft Endpoint Manager
 
 :::image type="content" source="images/turnontamperprotectinmem.png" alt-text="Slå manipulationsbeskyttelse til med Intune" lightbox="images/turnontamperprotectinmem.png":::
 
@@ -174,10 +175,10 @@ Hvis din organisation bruger Microsoft Endpoint Manager (MEM), kan du slå ændr
  
 ### <a name="manage-tamper-protection-for-your-organization-with-configuration-manager-version-2006"></a>Administrer manipulationsbeskyttelse for din organisation med Configuration Manager, version 2006
 
-Hvis du bruger [version 2006 af Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006), kan du administrere indstillinger for beskyttelse af Windows 10, Windows 10 Enterprise flere sessioner, Windows 11, Windows 11 Enterprise flere sessioner Windows  Server 2012 R2, Windows Server 2016, Windows Server 2019 og Windows Server 2022 ved hjælp af en metode, der kaldes *lejertilknyt.* Vedhæfting af lejer kan du synkronisere dine Configuration Manager enheder, der kun er i det lokale miljø, til Microsoft Endpoint Manager Administration og derefter levere politikker for konfiguration af slutpunktssikkerhed til samlinger i det lokale miljø & enheder.
+Hvis du bruger [version 2006 af Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2006), kan du administrere indstillinger for ændring af beskyttelse på Windows 10, Windows 10 Enterprise flere sessioner, Windows 11, Windows 11 Enterprise  multi-session, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 og Windows Server 2022 ved hjælp af en metode kaldet *lejertilknyt.* Vedhæftning af lejer kan du synkronisere dine Configuration Manager enheder, der kun er i det lokale miljø, til Microsoft Endpoint Manager Administration og derefter levere politikker for konfiguration af slutpunktssikkerhed til samlinger i det lokale miljø & enheder.
 
 > [!NOTE]
-> Proceduren kan bruges til at udvide beskyttelse mod manipulation til enheder, der kører Windows 10, Windows 10 Enterprise multisession, Windows 11, Windows 11 Enterprise multisession, Windows Server 2019 og Windows Server 2022. Sørg for at gennemse forudsætningerne og andre oplysninger i de ressourcer, der er nævnt i denne procedure. For Windows Server 2012 R2 kræves den moderne, samlede løsning [version 2203 af Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203).
+> Proceduren kan bruges til at udvide beskyttelse mod manipulation til enheder, der kører Windows 10, Windows 10 Enterprise multisession, Windows 11, Windows 11 Enterprise multisession, Windows Server 2019 og Windows Server 2022. Sørg for at gennemse forudsætningerne og andre oplysninger i de ressourcer, der er nævnt i denne procedure. Til Windows Server 2012 R2, der kører den moderne, samlede løsning [version 2203 af Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203) er påkrævet.
 
 1. Konfigurer tilknytning af lejer. Du kan få mere at vide under [Kom i gang: Opret og installer sikkerhedspolitikker for slutpunkter fra Administration](/mem/configmgr/tenant-attach/endpoint-security-get-started).
 
@@ -192,13 +193,13 @@ Hvis du bruger [version 2006 af Configuration Manager](/mem/configmgr/core/plan-
 
 Se følgende ressourcer:
 
-- [Indstillinger til profilen for Windows Sikkerhed oplevelse i Microsoft Intune](/mem/intune/protect/antivirus-security-experience-windows-settings)
+- [Indstillinger for profilen Windows Sikkerhed oplevelse i Microsoft Intune](/mem/intune/protect/antivirus-security-experience-windows-settings)
 - [Tech Community-blog: Meddelelse om ændringsbeskyttelse for klienter med tilknytning til Configuration Manager lejer](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/announcing-tamper-protection-for-configuration-manager-tenant/ba-p/1700246#.X3QLR5Ziqq8.linkedin)
 
 ## <a name="manage-tamper-protection-on-an-individual-device"></a>Administrer beskyttelse mod manipulation på en individuel enhed
 
 > [!NOTE]
-> Ændringsbeskyttelse blokerer forsøg på at ændre Microsoft Defender Antivirus indstillinger via registreringsdatabasen.
+> Ændring af beskyttelse blokerer forsøg på at ændre Microsoft Defender Antivirus-indstillinger via registreringsdatabasen.
 > Hvis du vil sikre, at ændringsbeskyttelse ikke forstyrrer ikke-Microsoft-sikkerhedsprodukter eller virksomhedsinstallationsscripts, der ændrer disse indstillinger, skal du gå til **Windows Sikkerhed** og opdatere **Sikkerhedsintelligens** til version 1.287.60.0 eller nyere. (Se [Opdateringer til sikkerhedsintelligens](https://www.microsoft.com/wdsi/definitions)). Når du har foretaget denne opdatering, fortsætter beskyttelse mod ændring for at beskytte dine indstillinger i registreringsdatabasen, og logge forsøger at ændre dem uden at returnere fejl.
 
 Hvis du er privat bruger, eller hvis du ikke er underlagt indstillinger, der administreres af et sikkerhedsteam, kan du bruge appen Windows Sikkerhed til at administrere beskyttelse mod ændring. Du skal have de nødvendige administratortilladelser på enheden for at ændre sikkerhedsindstillingerne, f.eks. ændring af beskyttelse.
@@ -217,7 +218,7 @@ Her er, hvad du kan se i appen Windows Sikkerhed:
 
 Hvis du bruger Windows Server 2012 R2 ved hjælp af den moderne samlede løsning, Windows Server 2016, Windows 10 version 1709, 1803 eller [1809](/windows/release-health/status-windows-10-1809-and-windows-server-2019), kan du ikke se **Tamper Protection** i Windows Sikkerhed-appen. Du kan i stedet bruge PowerShell til at afgøre, om beskyttelse mod ændring er aktiveret.
 
-På Windows Server 2016 afspejler appen Indstillinger ikke nøjagtigt status for beskyttelse i realtid, når beskyttelse mod ændring er aktiveret.
+På Windows Server 2016 afspejler appen Indstillinger ikke nøjagtigt status for beskyttelse i realtid, når ændringsbeskyttelse er aktiveret.
 
 #### <a name="use-powershell-to-determine-whether-tamper-protection-and-real-time-protection-are-turned-on"></a>Brug PowerShell til at afgøre, om beskyttelse mod ændring og beskyttelse i realtid er slået til
 
@@ -233,7 +234,7 @@ Manipulationsforsøg indikerer typisk større cyberangreb. Forkerte aktører for
 
 Når der registreres et forsøg på manipulation, udløses der en besked på [Microsoft 365 Defender-portalen](/microsoft-365/security/defender-endpoint/portal-overview) ([https://security.microsoft.com](https://security.microsoft.com)).
 
-Ved hjælp af [slutpunktsregistrering og -svar](overview-endpoint-detection-response.md) og [avancerede jagtfunktioner](advanced-hunting-overview.md) i Microsoft Defender for Endpoint kan dit sikkerhedsteam undersøge og løse sådanne forsøg.
+Ved hjælp af [registrering og svar på slutpunkter](overview-endpoint-detection-response.md) og [avancerede jagtfunktioner](advanced-hunting-overview.md) i Microsoft Defender for Endpoint kan dit team for sikkerhedshandlinger undersøge og løse sådanne forsøg.
 
 ## <a name="review-your-security-recommendations"></a>Gennemse dine sikkerhedsanbefalinger
 
@@ -243,7 +244,7 @@ Hvis du vil vide mere om administration af trussel & sårbarheder, skal [du se D
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
-### <a name="on-which-versions-of-windows-can-i-configure-tamper-protection"></a>I hvilke versioner af Windows kan jeg konfigurere beskyttelse mod ændring?
+### <a name="on-which-versions-of-windows-can-i-configure-tamper-protection"></a>I hvilke versioner af Windows kan jeg konfigurere beskyttelse mod manipulation?
 
 - Windows 11
 - Windows 11 Enterprise flere sessioner
@@ -258,7 +259,7 @@ Nej. Antivirustilbud, der ikke er fra Microsoft, vil fortsat blive registreret i
 
 ### <a name="what-happens-if-microsoft-defender-antivirus-is-not-active-on-a-device"></a>Hvad sker der, hvis Microsoft Defender Antivirus ikke er aktiv på en enhed?
 
-Enheder, der er onboardet til Microsoft Defender for Endpoint, har Microsoft Defender Antivirus kørende i passiv tilstand. I disse tilfælde vil beskyttelse mod manipulation fortsat beskytte tjenesten og dens funktioner.
+De enheder, der er onboardet til Microsoft Defender for Endpoint, har Microsoft Defender Antivirus kørende i passiv tilstand. I disse tilfælde vil beskyttelse mod manipulation fortsat beskytte tjenesten og dens funktioner.
 
 ### <a name="how-do-i-turn-tamper-protection-on-or-off"></a>Hvordan gør jeg slå beskyttelse mod manipulation til eller fra?
 
@@ -266,27 +267,27 @@ Hvis du er privat bruger, skal du se [Administrer beskyttelse mod manipulation p
 
 Hvis du er en organisation, der bruger [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint), bør du kunne administrere beskyttelse mod ændring i Intune på samme måde som med andre funktioner til beskyttelse af slutpunkter. Se følgende afsnit i denne artikel:
 
-- [Administrer ændringsbeskyttelse ved hjælp af Microsoft Endpoint Manager](#manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager)
+- [Administrer beskyttelse mod manipulation ved hjælp af Microsoft Endpoint Manager](#manage-tamper-protection-for-your-organization-using-microsoft-endpoint-manager)
 - [Administrer beskyttelse mod manipulation ved hjælp af Microsoft 365 Defender-portalen](#manage-tamper-protection-for-your-organization-using-the-microsoft-365-defender-portal)
 
-### <a name="how-does-configuring-tamper-protection-in-intune-affect-how-i-manage-microsoft-defender-antivirus-with-group-policy"></a>Hvordan påvirker konfiguration af beskyttelse mod ændring i Intune, hvordan jeg administrerer Microsoft Defender Antivirus med Gruppepolitik?
+### <a name="how-does-configuring-tamper-protection-in-intune-affect-how-i-manage-microsoft-defender-antivirus-with-group-policy"></a>Hvordan påvirker konfiguration af manipulationsbeskyttelse i Intune, hvordan jeg administrerer Microsoft Defender Antivirus med Gruppepolitik?
 
 Hvis du i øjeblikket bruger Intune til at konfigurere og administrere beskyttelse mod ændring, skal du fortsætte med at bruge Intune. 
 
-Gruppepolitik gælder ikke for beskyttelse mod ændring. Ændringer af Microsoft Defender Antivirus indstillinger, der bruger Gruppepolitik, ignoreres, når ændringsbeskyttelse er slået til, eller når beskyttelse mod ændring er konfigureret med Intune.
+Gruppepolitik gælder ikke for beskyttelse mod ændring. Ændringer af Microsoft Defender Antivirus-indstillinger, der bruger Gruppepolitik ignoreres, når beskyttelse mod ændring er slået til, eller når beskyttelse mod ændring er konfigureret med Intune.
 
 ### <a name="if-we-use-microsoft-intune-to-configure-tamper-protection-does-it-apply-only-to-the-entire-organization"></a>Hvis vi bruger Microsoft Intune til at konfigurere beskyttelse mod manipulation, gælder den så kun for hele organisationen?
 
 Du har fleksibilitet til at konfigurere beskyttelse mod ændring med Intune. Du kan målrette hele organisationen eller vælge bestemte enheder og brugergrupper.
 
-### <a name="can-i-configure-tamper-protection-with-microsoft-endpoint-configuration-manager"></a>Kan jeg konfigurere manipulationsbeskyttelse med Microsoft Endpoint Configuration Manager?
+### <a name="can-i-configure-tamper-protection-with-microsoft-endpoint-configuration-manager"></a>Kan jeg konfigurere beskyttelse mod ændring med Microsoft Endpoint Configuration Manager?
 
-Hvis du bruger lejertilknyt, kan du bruge Microsoft Endpoint Configuration Manager. Se følgende ressourcer:
+Hvis du bruger tilknytning af lejer, kan du bruge Microsoft Endpoint Configuration Manager. Se følgende ressourcer:
 
 - [Administrer manipulationsbeskyttelse for din organisation med Configuration Manager, version 2006](#manage-tamper-protection-for-your-organization-with-configuration-manager-version-2006)
 - [Tech Community-blog: Meddelelse om ændringsbeskyttelse for klienter med tilknytning til Configuration Manager lejer](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/announcing-tamper-protection-for-configuration-manager-tenant/ba-p/1700246#.X3QLR5Ziqq8.linkedin)
 
-### <a name="i-have-the-windows-e3-enrollment-can-i-use-configuring-tamper-protection-in-intune"></a>Jeg har den Windows E3 tilmelding. Kan jeg konfigurere beskyttelse mod manipulation i Intune?
+### <a name="i-have-the-windows-e3-enrollment-can-i-use-configuring-tamper-protection-in-intune"></a>Jeg har Windows E3-tilmeldingen. Kan jeg konfigurere beskyttelse mod manipulation i Intune?
 
 I øjeblikket er konfiguration af beskyttelse mod manipulation i Intune kun tilgængelig for kunder, der har [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint).
 
@@ -320,7 +321,7 @@ Dit team af sikkerhedshandlinger kan også bruge jagtforespørgsler, f.eks. føl
 
 ## <a name="see-also"></a>Se også
 
-- [Hjælp med at sikre Windows pc'er med Endpoint Protection til Microsoft Intune](/intune/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
+- [Hjælp med at beskytte Windows-pc'er med Endpoint Protection til Microsoft Intune](/intune/help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune)
 - [Få et overblik over Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint)
 - [Bedre sammen: Microsoft Defender Antivirus og Microsoft Defender for Endpoint](why-use-microsoft-defender-antivirus.md)
 - [Aktivér fejlfindingstilstand](enable-troubleshooting-mode.md)

@@ -17,12 +17,12 @@ ms.custom: seo-marvel-apr2020
 description: Administratorer kan få mere at vide om, hvordan de bruger indsendelsesportalen på Microsoft 365 Defender portalen til at indsende mistænkelige mails, formodede phishing-mails, spam og andre potentielt skadelige meddelelser, URL-adresser og vedhæftede filer i mails til Microsoft til nyscanning.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: bd56ce39cbb1d48470742f80a8b07747dd52f33a
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 280b609f39431759216ab4e40cfb5d01752b6514
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66116027"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66487676"
 ---
 # <a name="use-the-submissions-portal-to-submit-suspected-spam-phish-urls-and-files-to-microsoft"></a>Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft
 
@@ -32,7 +32,7 @@ ms.locfileid: "66116027"
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 
-I Microsoft 365 organisationer med Exchange Online postkasser kan administratorer bruge portalen Indsendelser på portalen Microsoft 365 Defender til at sende mails, URL-adresser og vedhæftede filer til Microsoft til scanning.
+I Microsoft 365-organisationer med Exchange Online postkasser kan administratorer bruge portalen Indsendelser på portalen Microsoft 365 Defender til at sende mails, URL-adresser og vedhæftede filer til Microsoft til scanning.
 
 Når du sender en mail til analyse, får du:
 
@@ -46,7 +46,7 @@ Når du sender en mail til analyse, får du:
 
 Hvis du vil have andre måder at sende mails, URL-adresser og vedhæftede filer til Microsoft på, skal du se [Rapportér meddelelser og filer til Microsoft](report-junk-email-messages-to-microsoft.md).
 
-Se denne korte video for at få mere at vide om, hvordan du bruger administratorindsendelser i Microsoft Defender for Office 365 til at sende meddelelser til Microsoft til evaluering. 
+Se denne korte video for at få mere at vide om, hvordan du bruger administratorindsendelser i Microsoft Defender for Office 365 til at sende meddelelser til Microsoft til evaluering.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBLPn]
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
@@ -96,7 +96,7 @@ Den rapporterede meddelelse markeres som falsk positiv eller falsk negativ. Der 
 
 2. I afsnittet **Tilføj netværksmeddelelses-id'et eller upload mailfilen** skal du bruge en af følgende indstillinger:
    - **Tilføj mailnetværkets meddelelses-id**: Dette er en GUID-værdi, der er tilgængelig i **headeren X-MS-Exchange-Organization-Network-Message-Id** i meddelelsen eller i **X-MS-Office365-Filtering-Correlation-Id-headeren** i karantænemeddelelser.
-   - **Upload mailfilen (.msg eller .eml):** Klik på **Gennemse filer**. Find og vælg filen .eml eller .msg i den dialogboks, der åbnes, og klik derefter på **Åbn**.
+   - **Overfør mailfilen (.msg eller .eml):** Klik på **Gennemse filer**. Find og vælg filen .eml eller .msg i den dialogboks, der åbnes, og klik derefter på **Åbn**.
 
 3. I feltet **Vælg en modtager, der har et problem** skal du angive den modtager, du vil køre en politikkontrol mod. Politikkontrollen bestemmer, om mailen blev overset pga. bruger- eller organisationspolitikker.
 
@@ -376,11 +376,11 @@ Hvis du har installeret [tilføjelsesprogrammet Rapportmeddelelse](enable-the-re
 > [!NOTE]
 > Hvis organisationer er konfigureret til kun at sende brugerrapporterede meddelelser til den brugerdefinerede postkasse, vises rapporterede meddelelser i **brugerrapporterede meddelelser** , men deres resultater vil altid være tomme (da de ikke ville være blevet scannet igen).
 
-### <a name="undo-user-submissions"></a>Fortryd brugerindsendelser
+## <a name="undo-user-submissions"></a>Fortryd brugerindsendelser
 
 Når en bruger sender en mistænkelig mail til den brugerdefinerede postkasse, har brugeren og administratoren ikke mulighed for at fortryde indsendelsen. Hvis brugeren vil gendanne mailen, vil den være tilgængelig til gendannelse i mapperne Slettet post eller Uønsket mail.
 
-### <a name="convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Konvertér brugerrapporterede meddelelser fra den brugerdefinerede postkasse til en administratorindsendelse
+## <a name="convert-user-reported-messages-from-the-custom-mailbox-into-an-admin-submission"></a>Konvertér brugerrapporterede meddelelser fra den brugerdefinerede postkasse til en administratorindsendelse
 
 Hvis du har konfigureret den brugerdefinerede postkasse til at opfange brugerrapporterede meddelelser uden at sende meddelelserne til Microsoft, kan du finde og sende bestemte meddelelser til Microsoft til analyse.
 
@@ -398,3 +398,20 @@ Under fanen **Brugerrapporterede meddelelser** skal du vælge en meddelelse på 
 Hvis meddelelsen rapporteres til Microsoft, ændres afsendelsesværdien **Konverteret til administrator** fra **Nej** til **Ja**. Du kan få direkte adgang til administratorindsendelsen ved at klikke på **Få vist den konverterede administratorindsendelse** fra overløbsmenuen i pop op-vinduet til indsendelse for den pågældende brugerrapporterede meddelelse.
 
 :::image type="content" source="../../media/view-converted-admin-submission.png" alt-text="Mulighed for at få vist en oprettet administratorindsendelse fra en bruger rapporteret meddelelse.":::
+
+## <a name="view-associated-alert-for-user-and-admin-email-submissions"></a>Få vist den tilknyttede besked om indsendelser af bruger- og administratormails
+
+> [!IMPORTANT]
+> Oplysningerne i dette afsnit gælder kun for Defender for Office 365 Plan 2 eller nyere.
+>
+> Brugerindsendelser genererer i øjeblikket kun beskeder for meddelelser, der rapporteres som phishing.
+
+For hver bruger rapporterede phishingmeddelelse og afsendelse af administratormail, genereres der en tilsvarende besked.
+
+Hvis du vil have vist den tilsvarende besked for en brugerrapporteret phishing-meddelelse, skal du vælge fanen **Brugerrapporterede meddelelser** og derefter dobbeltklikke på meddelelsen for at åbne pop op-vinduet til indsendelse. Klik på ![ikonet Flere indstillinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere indstillinger** , og vælg derefter  **Vis besked**.
+
+:::image type="content" source="../../media/alert-from-user-submission.png" alt-text="Mulighed for at få vist den relaterede besked fra en bruger rapporteret phishing-meddelelse.":::
+
+Hvis du vil have vist den tilsvarende besked om afsendelser af administratormails, skal du vælge fanen **Mails** og derefter dobbeltklikke på meddelelsen for at åbne pop op-vinduet til afsendelse. Vælg **Vis besked** i indstillingen **Åbn mailobjekt** .
+
+:::image type="content" source="../../media/alert-from-admin-submission.png" alt-text="Mulighed for at få vist den relaterede besked fra en administratorindsendelse.":::

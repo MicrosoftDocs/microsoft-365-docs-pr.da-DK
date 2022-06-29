@@ -18,12 +18,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om overvejelser i forbindelse med udrulning og ofte stillede spørgsmål om simulering af angreb og oplæring i Microsoft 365 E5 eller Microsoft Defender for Office 365 Plan 2-organisationer.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4145dcd073ec97c43ac64eecdbd25c48612a9b83
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: 50f82d975e9dc4f534f9223b85fd9e841a3ad725
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65649015"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490481"
 ---
 # <a name="attack-simulation-training-deployment-considerations-and-faq"></a>Ofte stillede spørgsmål og overvejelser i forbindelse med udrulning af kursus i angrebssimulering
 
@@ -40,15 +40,15 @@ Mens hele simuleringsoprettelses- og planlægningsoplevelsen er designet til at 
 
 ## <a name="issues-with-end-user-experiences"></a>Problemer med slutbrugeroplevelser
 
-### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>URL-adresser til phishing-simulering blokeret af Google Pengeskab Browsing
+### <a name="phishing-simulation-urls-blocked-by-google-safe-browsing"></a>URL-adresser til phishing-simulering blokeret af Google Safe Browsing
 
-En TJENESTE til URL-omdømme identificerer muligvis en eller flere af de URL-adresser, der bruges af oplæringen i simulering af angreb som usikre. Google Pengeskab browsing i Google Chrome blokerer nogle af de simulerede phishing-URL-adresser med en **meddelelse om vildledende websted forude**. Selvom vi arbejder med mange leverandører af URL-omdømme for altid at tillade vores simulerings-URL-adresser, har vi ikke altid fuld dækning.
+En TJENESTE til URL-omdømme identificerer muligvis en eller flere af de URL-adresser, der bruges af oplæringen i simulering af angreb som usikre. Google Sikker browsing i Google Chrome blokerer nogle af de simulerede phishing-URL-adresser med en **meddelelse om vildledende websted forude** . Selvom vi arbejder med mange leverandører af URL-omdømme for altid at tillade vores simulerings-URL-adresser, har vi ikke altid fuld dækning.
 
 :::image type="content" source="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png" alt-text="Advarsel om vildledende websted i Google Chrome" lightbox="../../media/attack-sim-training-faq-chrome-deceptive-site-message.png":::
 
 Bemærk, at dette problem ikke påvirker Microsoft Edge.
 
-Som en del af planlægningsfasen skal du kontrollere tilgængeligheden af URL-adressen i dine understøttede webbrowsere, før du bruger URL-adressen i en phishing-kampagne. Hvis URL-adresserne er blokeret af Google Pengeskab Browsing, [skal du følge denne vejledning](https://support.google.com/chrome/a/answer/7532419) fra Google for at give adgang til URL-adresserne.
+Som en del af planlægningsfasen skal du kontrollere tilgængeligheden af URL-adressen i dine understøttede webbrowsere, før du bruger URL-adressen i en phishing-kampagne. Hvis URL-adresserne er blokeret af Google Safe Browsing, [skal du følge denne vejledning](https://support.google.com/chrome/a/answer/7532419) fra Google for at give adgang til URL-adresserne.
 
 Se [Oplæring i at komme i gang med at bruge simulering af angreb](attack-simulation-training-get-started.md) for at få vist en liste over URL-adresser, der i øjeblikket bruges af træningen til simulering af angreb.
 
@@ -127,12 +127,18 @@ Simuleringsrapporter i Oplæring af angrebssimulator indeholder oplysninger om b
 - Brugere, der opgav deres legitimationsoplysninger.
 - Brugere, der har rapporteret meddelelsen som phishing.
 
-Hvis meddelelser, som brugere har rapporteret som phishing, ikke registreres i simuleringsrapporter om simulering af angrebssimulering, kan der være en regel for Exchange mailflow (også kendt som en transportregel), der blokerer leveringen af de rapporterede meddelelser til Microsoft. Kontrollér, at alle regler for mailflow ikke blokerer levering til følgende mailadresser:
+Hvis meddelelser, som brugere har rapporteret som phishing, ikke registreres i simuleringsrapporter om simulering af angrebssimulering, kan der være en regel for Exchange-mailflow (også kendt som en transportregel), der blokerer leveringen af de rapporterede meddelelser til Microsoft. Kontrollér, at alle regler for mailflow ikke blokerer levering til følgende mailadresser:
 
 - junk@office365.microsoft.com
 - abuse@messaging.microsoft.com
 - phish@office365.microsoft.com
-- - Nej\_ junk@office365.microsoft.com
+- junk@office365.microsoft.com ikke\_
+
+### <a name="users-are-assigned-training-after-they-report-a-simulated-message"></a>Brugerne tildeles oplæring, når de rapporterer en simuleret meddelelse
+
+Hvis brugerne får tildelt oplæring, efter at de har rapporteret en phishingsimuleringsmeddelelse, skal du kontrollere, om din organisation har **konfigureret en brugerdefineret postkasse** i din **brugers indsendelsespolitik**. Når du konfigurerer en **brugerdefineret postkasse**, skal denne postkasse udelades fra politikker for sikre links og vedhæftede filer i henhold [til forudsætningerne for den brugerdefinerede postkasse](user-submission.md).
+
+Hvis din organisation har konfigureret en **brugerdefineret postkasse** og ikke har konfigureret de påkrævede udeladelser, kan disse meddelelser blive detoneret, hvilket medfører oplæringsopgaver.
 
 ## <a name="other-frequently-asked-questions"></a>Andre ofte stillede spørgsmål
 
@@ -163,7 +169,7 @@ Når det er sagt, kan du oprette din egen nyttedata på det sprog, du vælger, v
 
 ### <a name="q-how-can-i-switch-to-other-languages-for-my-admin-portal-and-training-experience"></a>Spørgsmål: Hvordan kan jeg skifte til andre sprog for min administrationsportal og uddannelse?
 
-Svar: I Microsoft 365 eller Office 365 er sprogkonfigurationen specifik og centraliseret for hver brugerkonto. Du kan finde oplysninger om, hvordan du ændrer sprogindstillingen, [under Skift visningssprog og tidszone i Microsoft 365 for Business](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
+Svar: I Microsoft 365 eller Office 365 er sprogkonfigurationen specifik og centraliseret for hver brugerkonto. Du kan finde instruktioner til, hvordan du ændrer din sprogindstilling, [under Skift visningssprog og tidszone i Microsoft 365 for Business](https://support.microsoft.com/office/6f238bff-5252-441e-b32b-655d5d85d15b).
 
 Bemærk, at det kan tage op til 30 minutter at synkronisere konfigurationsændringen på tværs af alle tjenester.
 
@@ -188,3 +194,8 @@ Svar: Levering, der er opmærksom på områder, bruger attributten TimeZone for 
 Kl. 9:00 samme dag sendes simuleringsmeddelelsen til UserB. Med områdeorienteret levering sendes meddelelsen ikke til BrugerA samme dag, fordi kl. 9:00 Pacific time er kl. 12:00 Eastern time. Meddelelsen sendes i stedet til UserA kl. 9:00 Eastern time den følgende dag.
 
 Så i den indledende kørsel af en kampagne med områdeorienteret levering aktiveret kan det se ud til, at simuleringsmeddelelsen kun blev sendt til brugere i en bestemt tidszone. Men efterhånden som tiden går, og flere brugere kommer i omfang, øges de målrettede brugere.
+
+
+### <a name="q-does-microsoft-collect-or-store-any-information-that-users-enter-at-the-credential-harvest-sign-in-page-used-in-the-credential-harvest-simulation-technique"></a>Spørgsmål: Indsamler eller gemmer Microsoft oplysninger, som brugerne indtaster på logonsiden for Credential Harvest, og som bruges i simuleringsteknikken Til indsamling af legitimationsoplysninger?
+
+Sv.: Nej. Alle oplysninger, der angives på logonsiden for indsamling af legitimationsoplysninger, kasseres uovervåget. Det er kun 'klik', der registreres for at registrere kompromishændelsen. Microsoft indsamler, logfører eller gemmer ikke oplysninger, som brugerne angiver på dette trin.

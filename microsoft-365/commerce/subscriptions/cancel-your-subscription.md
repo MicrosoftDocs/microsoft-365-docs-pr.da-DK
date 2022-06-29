@@ -21,14 +21,16 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvordan du annullerer din prøveversion af Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder eller betalte abonnementer i Microsoft 365 Administration.
 ms.date: 06/02/2022
-ms.openlocfilehash: ea2a3bf0e77d11733e19b27f19bef378f691fd73
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 962553d620b9cc3477f5eb7c91fa0b822dc5de07
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873660"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66490359"
 ---
-# <a name="cancel-your-business-subscription"></a>Annuller dit virksomhedsabonnement
+# <a name="cancel-your-microsoft-subscription"></a>Annuller dit Microsoft-abonnement
+
+Hvis du vil annullere dit abonnement, er den nemmeste måde at gøre det på at [slå tilbagevendende fakturering fra](renew-your-subscription.md). Når du slår tilbagevendende fakturering fra, kan du fortsætte med at bruge dit abonnement, indtil det udløber i slutningen af abonnementsperioden. Hvis du vil annullere med det samme, kan du bruge oplysningerne og trinnene i denne artikel til at gøre det.
 
 > [!IMPORTANT]
 > - Denne artikel gælder kun for abonnementer på Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder. Hvis du har Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365-abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
