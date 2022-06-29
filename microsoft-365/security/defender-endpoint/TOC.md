@@ -326,6 +326,7 @@
 #### [Microsoft Defender Antivirus udeladelser](configure-exclusions-microsoft-defender-antivirus.md)
 ##### [Udeladelser baseret på filtypenavn og mappeplacering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 ##### [Udeladelser for filer, der åbnes af processer](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+##### [Udeladelser af kontekstafhængige filer og mapper](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md)
 ##### [Udeladelser for Windows Server-](configure-server-exclusions-microsoft-defender-antivirus.md)
 ##### [Almindelige fejl at undgå](common-exclusion-mistakes-microsoft-defender-antivirus.md)
 

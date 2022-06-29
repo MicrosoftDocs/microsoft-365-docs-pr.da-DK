@@ -68,6 +68,8 @@
       href: m365-lighthouse-threat-management-page-overview.md
     - name: Afhjælp trusler med Microsoft Defender Antivirus
       href: m365-lighthouse-mitigate-threats.md
+    - name: Oversigt over siden Enhedssikkerhed
+      href: m365-lighthouse-device-security-overview.md
 - name: Få hjælp og support
   items:
     - name: Få hjælp og support

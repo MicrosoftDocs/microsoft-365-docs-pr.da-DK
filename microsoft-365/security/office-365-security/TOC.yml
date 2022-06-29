@@ -202,14 +202,18 @@
               href: attack-simulation-training-get-started.md
             - name: Simuler et phishingangreb med kursus i angrebssimulering
               href: attack-simulation-training.md
-            - name: Oplæring i nyttedata til angrebssimulering
+            - name: Kursus i nyttedata til angrebssimulering
               href: attack-simulation-training-payloads.md
             - name: Simuleringsautomatiseringer i kursus i angrebssimulering
               href: attack-simulation-training-simulation-automations.md
             - name: Automatisering af nyttedata i kursus i angrebssimulering
               href: attack-simulation-training-payload-automations.md
+            - name: Opret brugerdefinerede nyttedata til kursus i angrebssimulering
+              href: attack-simulation-training-payloads.md
             - name: Slutbrugermeddelelser til kursus i angrebssimulering
               href: attack-simulation-training-end-user-notifications.md
+            - name: Logonsider i kursus i angrebssimulering
+              href: attack-simulation-training-login-pages.md
             - name: Indsigt og rapportering i kursus i angrebssimulering
               href: attack-simulation-training-insights.md
             - name: Ofte stillede spørgsmål og overvejelser i forbindelse med udrulning af kursus i angrebssimulering

@@ -14,7 +14,7 @@
         - name: Planlæg din konfiguration af Microsoft 365 til virksomheder
           href: setup/plan-your-setup.md
         - name: Tilmeld dig Microsoft 365 Business Premium
-          href: ../business-premium/index.md
+          href: ../business-premium/get-microsoft-365-business-premium.md
         - name: Tilmeld dig Microsoft 365 Business Standard
           items:
             - name: Tilmeld dig Microsoft 365 Business Standard
@@ -50,7 +50,7 @@
         - name: Installér Office-apps
           href: setup/install-applications.md
         - name: Konfigurer windows-enheder
-          href: /microsoft-365/business-premium/m365bp-set-up-windows-devices.md
+          href: /microsoft-365/business-premium/m365bp-set-up-windows-devices
         - name: Konfigurer mobilenheder
           href: setup/set-up-mobile-devices.md
         - name: Konfigurere Outlook til Microsoft 365 for business-mail (video)
@@ -346,8 +346,6 @@
           href: manage/idle-session-timeout-web-apps.md
         - name: Aktivér moderne godkendelse for Office 2013
           href: security-and-compliance/enable-modern-authentication.md
-        - name: Trusler registreret af Microsoft Defender Antivirus
-          href: /microsoft-365/business-premium/m365bp-review-threats-take-action
         - name: En vejledning til overholdelse af GDPR
           href: security-and-compliance/gdpr-compliance.md
     - name: Administrer enheds- og appdata

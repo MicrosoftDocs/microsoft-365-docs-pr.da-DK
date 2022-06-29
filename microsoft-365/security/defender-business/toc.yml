@@ -13,6 +13,8 @@
           href: compare-mdb-m365-plans.md
         - name: Integration med Microsoft 365 Lighthouse
           href: mdb-lighthouse-integration.md
+        - name: Ressourcer til partnere
+          href: mdb-partners.md
     - name: Kom i gang
       items:
         - name: Hent Defender for Business

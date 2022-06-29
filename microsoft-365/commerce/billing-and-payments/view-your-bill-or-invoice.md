@@ -25,14 +25,14 @@ ms.custom:
 - adminvideo
 description: Find din faktura eller faktureringsopgørelse i Microsoft 365 Administration. Du kan også gemme og udskrive en kopi af din faktura.
 ms.date: 01/25/2022
-ms.openlocfilehash: 02905b1e31dc295d8b5d79bc150a0c93823c9dd7
-ms.sourcegitcommit: bdd6ffc6ebe4e6cb212ab22793d9513dae6d798c
+ms.openlocfilehash: b82b3c6472abad250c65900208fbdc5e2603e2f6
+ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63588541"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66491731"
 ---
-# <a name="view-your-bill-or-invoice"></a>Få vist din regning eller faktura
+# <a name="view-your-microsoft-365-for-business-subscription-bill-or-invoice"></a>Få vist din regning eller faktura for abonnement på Microsoft 365 til virksomheder
 
 Denne artikel er beregnet til personer, der har et abonnement på Office 365 til virksomheder.
   
