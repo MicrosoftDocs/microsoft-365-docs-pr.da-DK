@@ -1073,7 +1073,7 @@
           href: compliance-manager-alert-policies.md
         - name: 'Få mere at vide om, hvordan din overholdelsesscore beregnes'
           href: compliance-score-calculation.md
-        - name: Værktøj til analyse af overholdelseskonfiguration
+        - name: Configuration Analyzer til Microsoft Purview
           href: compliance-manager-mcca.md
         - name: Ofte stillede spørgsmål (FAQ)
           href: compliance-manager-faq.yml

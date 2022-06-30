@@ -44,32 +44,31 @@
 #### [Brug PowerShell, WMI eller MPCmdRun.exe](manage-mde-post-migration-other-tools.md)
 #### [Server-migreringsscenarier](server-migration.md)
 
-## [Konfigurer og onboard enheder]()
+## [Onboard og konfigurer enheder]()
 ### [Onboard enheder, og konfigurer Microsoft Defender for Endpoint-funktioner](onboard-configure.md)
-
-
-### [Microsoft Defender for Endpoint på Windows og Windows Server]()
-#### [Onboardingværktøjer og -metoder til Windows-slutpunkter](configure-endpoints.md)
-#### [Onboard Windows-enheder og Windows Servers]()
-
-##### [Onboard tidligere versioner af Windows](onboard-downlevel.md)
-
-##### [Onboard Windows-enheder og Windows Servers]()
-###### [Onboard Windows Server 2012 R2, 2016, Halvårlig kanal, 2019 og 2022](configure-server-endpoints.md)
-###### [Onboard Windows-enheder ved hjælp af et lokalt script](configure-endpoints-script.md)
-###### [Onboard Windows-enheder ved hjælp af Gruppepolitik](configure-endpoints-gp.md)
-###### [Onboard Windows-enheder ved hjælp af Microsoft Endpoint Konfigurationsstyring](configure-endpoints-sccm.md)
-###### [Onboard Windows-enheder ved hjælp af værktøjer til administration af mobilenheder](configure-endpoints-mdm.md)
-###### [Indbyggede VDI-enheder (Virtual Desktop Infrastructure)](configure-endpoints-vdi.md)
-###### [Onboard Windows 10 enheder med flere sessioner i Windows Virtual Desktop](onboard-windows-multi-session-device.md)
-
-#### [Integration med Microsoft Defender for Cloud](azure-server-integration.md)
-
+### [Onboarding af Windows-klient](onboard-windows-client.md)
+#### [Onboard Windows-klient ved hjælp af Intune](configure-endpoints-mdm.md)
+#### [Onboard Windows-klient ved hjælp af Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md)
+#### [Onboard Windows-klient ved hjælp af Gruppepolitik](configure-endpoints-gp.md)
+#### [Onboard Windows-klient ved hjælp af et lokalt script](configure-endpoints-script.md)
+#### [Indbyggede VDI-enheder (Virtual Desktop Infrastructure)](configure-endpoints-vdi.md)
+#### [Onboard Windows 10 enheder med flere sessioner i Windows Virtual Desktop](onboard-windows-multi-session-device.md)
 #### [Onboard enheder uden internetadgang](onboard-offline-machines.md)
-#### [Kør en registreringstest på en ny onboardet enhed](run-detection-test.md)
-#### [Kør simulerede angreb på enheder](attack-simulations.md)
-#### [Konfigurer indstillinger for proxy- og internetforbindelse](configure-proxy-internet.md)
-#### [Opret en beskedregel for onboarding eller offboarding](onboarding-notification.md)
+#### [Onboard tidligere versioner af Windows](onboard-downlevel.md)
+
+
+
+### [Onboarding af Windows Server](onboard-windows-server.md)
+#### [Onboard Windows Server 2012 R2, 2016, Halvårlig kanal, 2019 og 2022](configure-server-endpoints.md)
+#### [Onboard Windows Server ved hjælp af Configuration Manager](configure-endpoints-sccm.md)
+#### [Onboard Windows-Serverenheder ved hjælp af Gruppepolitik](configure-endpoints-gp.md)
+#### [Onboard Windows Server ved hjælp af et lokalt script](configure-endpoints-script.md)
+#### [Indbyggede VDI-enheder (Virtual Desktop Infrastructure)](configure-endpoints-vdi.md)
+
+
+
+
+
 
 ### [Microsoft Defender for Endpoint på andre operativsystemer]()
 #### [Onboard ikke-Windows-enheder](configure-endpoints-non-windows.md)
@@ -175,6 +174,14 @@
 ###### [Ofte stillede spørgsmål og fejlfinding](ios-troubleshoot.md)
 
 ###### [Beskyttelse af personlige oplysninger](ios-privacy.md)
+
+
+
+### [Integration med Microsoft Defender for Cloud](azure-server-integration.md)
+### [Kør en registreringstest på en ny onboardet enhed](run-detection-test.md)
+### [Kør simulerede angreb på enheder](attack-simulations.md)
+### [Konfigurer indstillinger for proxy- og internetforbindelse](configure-proxy-internet.md)
+### [Opret en beskedregel for onboarding eller offboarding](onboarding-notification.md)
 
 ### [Administrer konfigurationsindstillinger for Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager](security-config-management.md)
 
