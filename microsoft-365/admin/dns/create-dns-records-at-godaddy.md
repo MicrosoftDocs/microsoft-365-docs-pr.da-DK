@@ -1,5 +1,5 @@
 ---
-title: Forbind dine DNS-poster på GoDaddy til Microsoft 365
+title: Opret forbindelse mellem dine DNS-poster på GoDaddy og Microsoft 365
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -23,14 +22,14 @@ search.appverid:
 - MOE150
 ms.assetid: f40a9185-b6d5-4a80-bb31-aa3bb0cab48a
 description: Få mere at vide om, hvordan du bekræfter dit domæne og konfigurerer DNS-poster for mail, Skype for Business Online og andre tjenester hos GoDaddy til Microsoft.
-ms.openlocfilehash: 6cf110b55c76ce6c857f13dcd5b0075b309b654f
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 150c97d8764247757e233934c5b2d8a3ea9f5b6c
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780341"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563203"
 ---
-# <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>Forbind dine DNS-poster på GoDaddy til Microsoft 365
+# <a name="connect-your-dns-records-at-godaddy-to-microsoft-365"></a>Opret forbindelse mellem dine DNS-poster på GoDaddy og Microsoft 365
 
  **[Se ofte stillede spørgsmål om domæner](../setup/domains-faq.yml)** , hvis du ikke kan finde det, du leder efter.
 
@@ -40,17 +39,17 @@ Hvis GoDaddy er din DNS-hostingudbyder, skal du følge trinnene i denne artikel 
 
 Du har to muligheder for at konfigurere DNS-poster for dit domæne:
 
-- [**Brug Domæne Forbind**](#use-domain-connect-to-verify-and-set-up-your-domain) Hvis du ikke har konfigureret dit domæne med en anden mailtjenesteudbyder, skal du bruge trinnene Domæne Forbind til automatisk at bekræfte og konfigurere dit nye domæne til brug sammen med Microsoft 365.
+- [**Brug domæneforbindelse**](#use-domain-connect-to-verify-and-set-up-your-domain) Hvis du ikke har konfigureret dit domæne med en anden mailtjenesteudbyder, skal du bruge trinnene Domæneforbindelse til automatisk at bekræfte og konfigurere dit nye domæne til brug sammen med Microsoft 365.
 
    ELLER
 
 - [**Brug de manuelle trin**](#create-dns-records-with-manual-setup) Bekræft dit domæne ved hjælp af de manuelle trin nedenfor, og vælg, hvornår og hvilke poster der skal føjes til din domæneregistrator. Dette giver dig mulighed for at konfigurere nye MX-poster (mail), f.eks. når det passer dig.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Brug Domæne Forbind til at bekræfte og konfigurere dit domæne
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Brug Domæneforbindelse til at bekræfte og konfigurere dit domæne
 
 Følg disse trin for automatisk at bekræfte og konfigurere dit GoDaddy-domæne med Microsoft 365:
 
-1. Vælg **Indstillinger** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a> i Microsoft 365 Administration, og vælg det domæne, du vil konfigurere.
+1. Vælg **Indstillinger** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a> i Microsoft 365 Administration, og vælg det domæne, du vil konfigurere.
 
 1. Vælg de tre prikker (flere handlinger) > vælg **Start konfiguration**.
 
@@ -66,7 +65,7 @@ Følg disse trin for automatisk at bekræfte og konfigurere dit GoDaddy-domæne 
 
 ## <a name="create-dns-records-with-manual-setup"></a>Opret DNS-poster med manuel konfiguration
 
-Når du har tilføjet disse poster på GoDaddy, konfigureres dit domæne til at arbejde med Microsoft-tjenester.
+Når du har tilføjet disse poster på GoDaddy, konfigureres dit domæne til at fungere sammen med Microsoft-tjenester.
 
 > [!NOTE]
 > Det tager typisk ca. 15 minutter, før DNS-ændringer træder i kraft. Det kan dog undertiden tage længere tid for en ændring, du har foretaget for at opdatere på tværs af internettets DNS-system. Hvis du har problemer med mailflow eller andre problemer, når du har tilføjet DNS-poster, skal du se [Fejlfinding af problemer, når du har ændret dit domænenavn eller dine DNS-poster](../get-help-with-domains/find-and-fix-issues.md).
@@ -108,11 +107,11 @@ Før du bruger dit domæne med Microsoft, skal vi sikre os, at du ejer det. Din 
 
    Vent et par minutter, før du fortsætter, så den post, du lige har oprettet, kan opdateres på tværs af internettet.
 
-Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om posten. Når Microsoft finder den korrekte TXT-post, bekræftes dit domæne.
+Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om posten. Når Microsoft finder den rigtige TXT-post, er dit domæne godkendt.
   
 Sådan bekræfter du posten i Microsoft 365:
   
-1. I Administration skal du gå til **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a>.
+1. I Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Indstillingsdomæner**</a>\>.
 
 1. På siden Domæner skal du vælge det domæne, du bekræfter, og vælge **Start konfiguration**.
 

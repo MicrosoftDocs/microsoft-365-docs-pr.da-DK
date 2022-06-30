@@ -1,5 +1,5 @@
 ---
-title: Forbind dine DNS-poster på Amazon Web Services (AWS) for at Microsoft 365
+title: Forbind dine DNS-poster på Amazon Web Services (AWS) med Microsoft 365
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -22,20 +21,20 @@ search.appverid:
 - MOE150
 ms.assetid: 7a2efd75-0771-4897-ba7b-082fe5bfa9da
 description: Få mere at vide om, hvordan du bekræfter dit domæne og konfigurerer DNS-poster for mail, Skype for Business Online og andre tjenester hos Amazon Web Services (AWS) til Microsoft.
-ms.openlocfilehash: d194e425485a45d2c3dc949fc85e74bc957932fb
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 2f14bb3234ca48f61cf3fabc0942d35f44b61b60
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780649"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563247"
 ---
-# <a name="connect-your-dns-records-at-amazon-web-services-aws-to-microsoft-365"></a>Forbind dine DNS-poster på Amazon Web Services (AWS) for at Microsoft 365
+# <a name="connect-your-dns-records-at-amazon-web-services-aws-to-microsoft-365"></a>Forbind dine DNS-poster på Amazon Web Services (AWS) med Microsoft 365
 
  **[Se ofte stillede spørgsmål om domæner](../setup/domains-faq.yml)** , hvis du ikke kan finde det, du leder efter.
 
 Hvis AWS er din DNS-hostingudbyder, skal du følge trinnene i denne artikel for at bekræfte dit domæne og konfigurere DNS-poster for mail, Skype Online for Business osv.
 
-Når du har tilføjet disse poster i AWS, konfigureres dit domæne til at arbejde med Microsoft-tjenester.
+Når du har tilføjet disse poster på AWS, konfigureres dit domæne til at fungere sammen med Microsoft-tjenester.
 
 > [!NOTE]
 > Det tager typisk ca. 15 minutter, før DNS-ændringer træder i kraft. Det kan dog undertiden tage længere tid for en ændring, du har foretaget for at opdatere på tværs af internettets DNS-system. Hvis du har problemer med mailflow eller andre problemer, når du har tilføjet DNS-poster, skal du se [Find og løs problemer, når du har tilføjet dit domæne eller DNS-poster](../get-help-with-domains/find-and-fix-issues.md).
@@ -78,7 +77,7 @@ Før du bruger dit domæne med Microsoft, skal vi sikre os, at du ejer det. Din 
 
     |Postnavn|Posttype|Værdi|TTL (sekunder)|Routingpolitik|
     |:-----|:-----|:-----|:-----|:-----|
-    |Lad feltet være tomt.|TXT – Bruges til at bekræfte afsendere af mails|MS=*msXXXXXXXXX* <br/> **Bemærk:** Dette er et eksempel. Brug din specifikke værdi **for Destination eller Adressepunkter** her fra tabellen i Microsoft 365. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|300|Simpel|
+    |Lad feltet være tomt.|TXT – Bruges til at bekræfte afsendere af mails|MS=ms *XXXXXXXXX* <br/> **Bemærk:** Dette er et eksempel. Brug din specifikke værdi **for Destination eller Adressepunkter** her fra tabellen i Microsoft 365. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|300|Simpel|
 
 1. Vælg **Opret poster**.
 
@@ -86,11 +85,11 @@ Før du bruger dit domæne med Microsoft, skal vi sikre os, at du ejer det. Din 
 
    Vent et par minutter, før du fortsætter, så den post, du lige har oprettet, kan opdateres på tværs af internettet.
 
-Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om en søgning efter posten. Når Microsoft finder den korrekte TXT-post, bekræftes dit domæne.
+Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om en søgning efter posten. Når Microsoft finder den rigtige TXT-post, er dit domæne godkendt.
 
 Sådan bekræfter du posten i Microsoft 365:
 
-1. I Administration skal du gå til **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a>.
+1. I Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Indstillingsdomæner**</a>\>.
 
 1. På siden Domæner skal du vælge det domæne, du bekræfter, og vælge **Start konfiguration**.
 
@@ -136,7 +135,7 @@ Sådan bekræfter du posten i Microsoft 365:
 
     |Postnavn|Posttype|Værdi|TTL (sekunder)|Routingpolitik|
     |:-----|:-----|:-----|:-----|:-----|
-    |Lad feltet være tomt.|MX – angiver mailservere|0 *\<domain-key\>*.mail.protection.outlook.com. <br/> 0 er MX-prioritetsværdien. Føj den til begyndelsen af MX-værdien adskilt fra resten af værdien med et mellemrum. <br/> **Denne værdi SKAL slutte med et punktum (.)** <br/> **Bemærk:** Få din \<*domain-key*\> fra din Microsoft 365 konto. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|300|Enkel routing|
+    |Lad feltet være tomt.|MX – angiver mailservere|0 *\<domain-key\>*.mail.protection.outlook.com. <br/> 0 er MX-prioritetsværdien. Føj den til begyndelsen af MX-værdien adskilt fra resten af værdien med et mellemrum. <br/> **Denne værdi SKAL slutte med et punktum (.)** <br/> **Bemærk:** Få din \<*domain-key*\> fra din Microsoft 365-konto. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|300|Enkel routing|
 
 1. Vælg **Opret poster**.
 
@@ -183,7 +182,7 @@ Sådan bekræfter du posten i Microsoft 365:
 ## <a name="add-a-txt-record-for-spf-to-help-prevent-email-spam"></a>Tilføj en TXT-post til SPF for at forhindre mailspam
 
 > [!IMPORTANT]
-> Du kan ikke have mere end én TXT-post til SPF for et domæne. Hvis dit domæne har mere end én SPF-post, får du problemer med mailfejl samt problemer med levering og spamklassificering. Hvis du allerede har en SPF-post for dit domæne, skal du ikke oprette en ny til Microsoft. Føj i stedet de påkrævede Microsoft-værdier til den aktuelle post, så du har en *enkelt* SPF-post, der indeholder begge værdisæt. Har du brug for eksempler? Se disse [poster i det eksterne domænenavnssystem til Microsoft](../../enterprise/external-domain-name-system-records.md). Hvis du vil validere din SPF-post, kan du bruge et af [disseSPF-valideringsværktøjer](../setup/domains-faq.yml).
+> Du kan ikke have mere end én TXT-post til SPF for et domæne. Hvis dit domæne har mere end én SPF-post, får du problemer med mailfejl samt problemer med levering og spamklassificering. Hvis du allerede har en SPF-post for dit domæne, skal du ikke oprette en ny til Microsoft. Føj i stedet de påkrævede Microsoft-værdier til den aktuelle post, så du har en *enkelt* SPF-post, der indeholder begge værdisæt. Har du brug for eksempler? Se disse [poster i det eksterne domænenavnssystem til Microsoft](../../enterprise/external-domain-name-system-records.md). Hvis du vil validere din SPF-post, kan du bruge et af disse[SPF-valideringsværktøjer](../setup/domains-faq.yml).
 
 1. Du kommer i gang ved at gå til siden med domæner på AWS ved hjælp af [dette link](https://console.aws.amazon.com/route53/home). Du bliver bedt om at logge på først.
 

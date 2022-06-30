@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -22,12 +21,12 @@ search.appverid:
 - MOE150
 ms.assetid: 7173c635-58b3-400f-95e0-97abe915565e
 description: Få mere at vide om, hvordan du bekræfter dit domæne og konfigurerer DNS-poster for mail, Skype for Business Online og andre tjenester hos Wix til Microsoft.
-ms.openlocfilehash: 58d7819e006183a35272811ed791d3236f9fc742
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 9ae245481173b99a9cb1221ed0650dc0b91feecd
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780293"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563181"
 ---
 # <a name="connect-your-dns-records-at-wix-to-microsoft-365"></a>Forbind dine DNS-poster på Wix til Microsoft 365
 
@@ -35,7 +34,7 @@ ms.locfileid: "64780293"
 
 Hvis Wix er din DNS-hostingudbyder, skal du følge trinnene i denne artikel for at bekræfte dit domæne og konfigurere DNS-poster for mail, Skype for Business Online osv.
 
-Når du har tilføjet disse poster på Wix, konfigureres dit domæne til at arbejde med Microsoft-tjenester.
+Når du har tilføjet disse poster på Wix, konfigureres dit domæne til at fungere sammen med Microsoft-tjenester.
 
 > [!NOTE]
 > Det tager typisk ca. 15 minutter, før DNS-ændringer træder i kraft. Det kan dog undertiden tage længere tid for en ændring, du har foretaget for at opdatere på tværs af internettets DNS-system. Hvis du har problemer med mailflow eller andre problemer, når du har tilføjet DNS-poster, skal du se [Fejlfinding af problemer, når du har ændret dit domænenavn eller dine DNS-poster](../get-help-with-domains/find-and-fix-issues.md).
@@ -62,22 +61,22 @@ Før du bruger dit domæne med Microsoft, skal vi sørge for, at du ejer det. Di
 
 4. I felterne for den nye post skal du skrive eller kopiere og indsætte værdierne fra følgende tabel.
 
-   |Host Name|TXT-værdi|TTL|
+   |Værtsnavn|TXT-værdi|TTL|
    |---|---|---|
-   |Udfyldes automatisk (lad argumentet være tomt)|MS=*msXXXXXXXXX* <br/> **Bemærk:** Dette er et eksempel. Brug din specifikke **værdi for Destination eller Adresser fra** tabellen her. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|1 time|
+   |Udfyldes automatisk (lad argumentet være tomt)|MS=ms *XXXXXXXXX* <br/> **Bemærk:** Dette er et eksempel. Brug din specifikke **værdi for Destination eller Adresser fra** tabellen her. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|1 time|
 
-5. **VælgGem**.
+5. Vælg **Gem**.
 
    :::image type="content" source="../../media/dns-wix/wix-domains-txt-save.png" alt-text="Vælg Gem.":::
 
    Vent et par minutter, før du fortsætter, så den post, du lige har oprettet, kan opdateres på tværs af internettet.
 
 
-Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om posten. Når Microsoft finder den korrekte TXT-post, bekræftes dit domæne.
+Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om posten. Når Microsoft finder den rigtige TXT-post, er dit domæne godkendt.
 
 Sådan bekræfter du posten i Microsoft 365:
 
-1. I Administration skal du gå til **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a>.
+1. I Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Indstillingsdomæner**</a>\>.
 
 1. På siden Domæner skal du vælge det domæne, du bekræfter, og vælge **Start konfiguration**.
 
@@ -108,7 +107,7 @@ Sådan bekræfter du posten i Microsoft 365:
 
 1. I felterne for den nye post skal du skrive eller kopiere og indsætte værdierne fra følgende tabel:
 
-   |Host Name|Peger på|Prioritet|TTL|
+   |Værtsnavn|Peger på|Prioritet|TTL|
    |---|---|---|---|
    |Udfyldt automatisk|*\<domain-key\>*.mail.protection.outlook.com <br/> **Bemærk:** Få din *\<domain-key\>* fra din Microsoft-konto.  [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|0 <br/> Du kan få flere oplysninger om prioritet under [Hvad er MX-prioritet?](../setup/domains-faq.yml)|1 time|
 
@@ -132,7 +131,7 @@ Sådan bekræfter du posten i Microsoft 365:
 
 4. I felterne for den nye post skal du skrive eller kopiere og indsætte værdierne fra følgende tabel:
 
-   |Host Name|Værdi|TTL|
+   |Værtsnavn|Værdi|TTL|
    |---|---|---|
    |Autodiscover|autodiscover.outlook.com|1 time|
 
@@ -161,7 +160,7 @@ Sådan bekræfter du posten i Microsoft 365:
 
 4. I felterne for den nye post skal du skrive eller kopiere og indsætte værdierne fra følgende tabel:
 
-   |Host Name|Værdi|TTL|
+   |Værtsnavn|Værdi|TTL|
    |---|---|---|
    |[Lad dette være tomt]|v=spf1 include:spf.protection.outlook.com -all <br/> **Bemærk:** Vi anbefaler, at du kopierer og indsætter denne post, så al afstand forbliver korrekt.|1 time|
 

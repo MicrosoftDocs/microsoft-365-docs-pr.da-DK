@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -22,12 +21,12 @@ search.appverid:
 - MOE150
 ms.assetid: 84acd4fc-6eec-4d00-8bed-568f036ae2af
 description: Få mere at vide om, hvordan du bekræfter dit domæne og konfigurerer DNS-poster for mail, Skype for Business Online og andre tjenester hos Cloudflare til Microsoft.
-ms.openlocfilehash: 164a681cccac3385d2ca963ac58706c8e743bc1e
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 50dbee0ab2ca587ee628a40fdc9c032ec9c8820d
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780363"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563313"
 ---
 # <a name="connect-your-dns-records-at-cloudflare-to-microsoft-365"></a>Forbind dine DNS-poster på Cloudflare til Microsoft 365
 
@@ -39,13 +38,13 @@ Hvis Cloudflare er din DNS-hostingudbyder, skal du følge trinnene i denne artik
 
 Du har to muligheder for at konfigurere DNS-poster for dit domæne:
 
-- [**Brug Domæne Forbind**](#use-domain-connect-to-verify-and-set-up-your-domain) Hvis du ikke har konfigureret dit domæne med en anden mailtjenesteudbyder, skal du bruge trinnene Domæne Forbind til automatisk at bekræfte og konfigurere dit nye domæne til brug sammen med Microsoft 365.
+- [**Brug domæneforbindelse**](#use-domain-connect-to-verify-and-set-up-your-domain) Hvis du ikke har konfigureret dit domæne med en anden mailtjenesteudbyder, skal du bruge trinnene Domæneforbindelse til automatisk at bekræfte og konfigurere dit nye domæne til brug sammen med Microsoft 365.
 
     ELLER
 
 - [**Brug de manuelle trin**](#create-dns-records-with-manual-setup) Bekræft dit domæne ved hjælp af de manuelle trin nedenfor, og vælg, hvornår og hvilke poster der skal føjes til din domæneregistrator. Dette giver dig mulighed for at konfigurere nye MX-poster (mail), f.eks. når det passer dig.
 
-## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Brug Domæne Forbind til at bekræfte og konfigurere dit domæne
+## <a name="use-domain-connect-to-verify-and-set-up-your-domain"></a>Brug Domæneforbindelse til at bekræfte og konfigurere dit domæne
 
 Følg disse trin for automatisk at bekræfte og konfigurere dit Cloudflare-domæne med Microsoft 365:
 
@@ -65,7 +64,7 @@ Følg disse trin for automatisk at bekræfte og konfigurere dit Cloudflare-domæ
 
 ## <a name="create-dns-records-with-manual-setup"></a>Opret DNS-poster med manuel konfiguration
 
-Når du har tilføjet disse poster i Cloudflare, konfigureres dit domæne til at arbejde med Microsoft 365 tjenester.
+Når du har tilføjet disse poster i Cloudflare, konfigureres dit domæne til at fungere sammen med Microsoft 365-tjenester.
 
 > [!NOTE]
 > Det tager typisk ca. 15 minutter, før DNS-ændringer træder i kraft. Det kan dog undertiden tage længere tid for en ændring, du har foretaget for at opdatere på tværs af internettets DNS-system. Hvis du har problemer med mailflow eller andre problemer, når du har tilføjet DNS-poster, skal du se [Fejlfinding af problemer, når du har ændret dit domænenavn eller dine DNS-poster](../get-help-with-domains/find-and-fix-issues.md).
@@ -123,7 +122,7 @@ Før du bruger dit domæne med Microsoft, skal vi sikre os, at du ejer det. Din 
 
     |Type|Navn|TTL|Indhold|
     |---|---|---|:----|
-    |TXT|@|30 minutter|MS=*msXXXXXXXXX* <br/> **Bemærk:** Dette er et eksempel. Brug din specifikke **værdi for Destination eller Adresser fra** tabellen her. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|
+    |TXT|@|30 minutter|MS=ms *XXXXXXXXX* <br/> **Bemærk:** Dette er et eksempel. Brug din specifikke **værdi for Destination eller Adresser fra** tabellen her. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|
 
 1. Vælg **Gem**.
 
@@ -131,11 +130,11 @@ Før du bruger dit domæne med Microsoft, skal vi sikre os, at du ejer det. Din 
 
    Vent et par minutter, før du fortsætter, så den post, du lige har oprettet, kan opdateres på tværs af internettet.
 
-Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og søge efter posten. Når Microsoft finder den korrekte TXT-post, bekræftes dit domæne.
+Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og søge efter posten. Når Microsoft finder den rigtige TXT-post, er dit domæne godkendt.
 
 Sådan bekræfter du posten i Microsoft 365:
 
-1. I Administration skal du gå til **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a>.
+1. I Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Indstillingsdomæner**</a>\>.
 
 1. På siden Domæner skal du vælge det domæne, du bekræfter, og vælge **Start konfiguration**.
 
@@ -168,7 +167,7 @@ Sådan bekræfter du posten i Microsoft 365:
 
    |Type|Navn|Mailserver|TTL|Prioritet|
    |---|---|---|---|---|
-   |MX|@|*\<domain-key\>*.mail.protection.outlook.com <br/> **Bemærk:** Få din *\<domain-key\>* fra din Microsoft 365 konto. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|30 minutter|1 <br/> Du kan få flere oplysninger om prioritet under [Hvad er MX-prioritet?](../setup/domains-faq.yml) <br/>|
+   |MX|@|*\<domain-key\>*.mail.protection.outlook.com <br/> **Bemærk:** Få din *\<domain-key\>* fra din Microsoft 365-konto. [Hvordan gør jeg finde det her?](../get-help-with-domains/information-for-dns-records.md)|30 minutter|1 <br/> Du kan få flere oplysninger om prioritet under [Hvad er MX-prioritet?](../setup/domains-faq.yml) <br/>|
 
 1. Vælg **Gem**.
 
@@ -209,7 +208,7 @@ Sådan bekræfter du posten i Microsoft 365:
 ### <a name="add-a-txt-record-for-spf-to-help-prevent-email-spam"></a>Tilføj en TXT-post til SPF for at forhindre mailspam
 
 > [!IMPORTANT]
-> Du kan ikke have mere end én TXT-post til SPF for et domæne. Hvis dit domæne har mere end én SPF-post, får du problemer med mailfejl samt problemer med levering og spamklassificering. Hvis du allerede har en SPF-post for dit domæne, skal du ikke oprette en ny til Microsoft 365. Føj i stedet de påkrævede Microsoft 365 værdier til den aktuelle post, så du har en *enkelt* SPF-post, der indeholder begge værdisæt.
+> Du kan ikke have mere end én TXT-post til SPF for et domæne. Hvis dit domæne har mere end én SPF-post, får du problemer med mailfejl samt problemer med levering og spamklassificering. Hvis du allerede har en SPF-post for dit domæne, skal du ikke oprette en ny til Microsoft 365. Føj i stedet de påkrævede Microsoft 365-værdier til den aktuelle post, så du har en *enkelt* SPF-post, der indeholder begge værdisæt.
 
 1. Du kommer i gang ved at gå til siden domæner på Cloudflare ved hjælp af [dette link](https://www.cloudflare.com/a/login). Du bliver bedt om at logge på først.
 

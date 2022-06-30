@@ -1,5 +1,5 @@
 ---
-title: Forbind dine DNS-poster på Network Solutions for at Microsoft 365
+title: Opret forbindelse mellem dine DNS-poster på Network Solutions og Microsoft 365
 f1.keywords:
 - CSH
 ms.author: efrene
@@ -9,7 +9,6 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 ms.localizationpriority: medium
-ROBOTS: NOINDEX, NOFOLLOW
 ms.collection:
 - M365-subscription-management
 - Adm_O365
@@ -22,20 +21,20 @@ search.appverid:
 - MOE150
 ms.assetid: 1dc55f9f-5309-450f-acc3-b2b4119c8be3
 description: Få mere at vide om, hvordan du bekræfter dit domæne og konfigurerer DNS-poster for mail, Skype for Business Online og andre tjenester hos Network Solutions til Microsoft.
-ms.openlocfilehash: 87026bfbbae7398c774bf083e0df8d2c228c7560
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 6ebe81c17d02c0cc6126f75f3b6471e01a334db4
+ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64780284"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66563269"
 ---
-# <a name="connect-your-dns-records-at-network-solutions-to-microsoft-365"></a>Forbind dine DNS-poster på Network Solutions for at Microsoft 365
+# <a name="connect-your-dns-records-at-network-solutions-to-microsoft-365"></a>Opret forbindelse mellem dine DNS-poster på Network Solutions og Microsoft 365
 
  **[Se ofte stillede spørgsmål om domæner](../setup/domains-faq.yml)** , hvis du ikke kan finde det, du leder efter.
 
 Hvis Network Solutions er din DNS-hostingudbyder, skal du følge trinnene i denne artikel for at bekræfte dit domæne og konfigurere DNS-poster for mail, Skype for Business Online osv.
 
-Når du har tilføjet disse poster i Network Solutions, konfigureres dit domæne til at arbejde med Microsoft-tjenester.
+Når du har tilføjet disse poster på Network Solutions, konfigureres dit domæne til at fungere sammen med Microsoft-tjenester.
 
 > [!NOTE]
 > Det tager typisk ca. 15 minutter, før DNS-ændringer træder i kraft. Det kan dog undertiden tage længere tid for en ændring, du har foretaget for at opdatere på tværs af internettets DNS-system. Hvis du har problemer med mailflow eller andre problemer, når du har tilføjet DNS-poster, skal du se [Fejlfinding af problemer, når du har ændret dit domænenavn eller dine DNS-poster](../get-help-with-domains/find-and-fix-issues.md).
@@ -84,11 +83,11 @@ Før du bruger dit domæne med Microsoft, skal vi sikre os, at du ejer det. Din 
 
    Vent et par minutter, før du fortsætter, så den post, du lige har oprettet, kan opdateres på tværs af internettet.
 
-Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om posten. Når Microsoft finder den korrekte TXT-post, bekræftes dit domæne.
+Nu, hvor du har tilføjet posten på domæneregistratorens websted, skal du gå tilbage til Microsoft og anmode om posten. Når Microsoft finder den rigtige TXT-post, er dit domæne godkendt.
 
 Sådan bekræfter du posten i Microsoft 365:
 
-1. I Administration skal du gå til **Indstillinger** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Domæner**</a>.
+1. I Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=834818" target="_blank">**Indstillingsdomæner**</a>\>.
 
 1. På siden Domæner skal du vælge det domæne, du bekræfter, og vælge **Start konfiguration**.
 
@@ -170,7 +169,7 @@ Sådan bekræfter du posten i Microsoft 365:
 
 1. I felterne for CNAME-posten skal du skrive eller kopiere og indsætte værdierne fra følgende tabel.
 
-   |Refererer til|Host Name|Alias til|TTL|
+   |Refererer til|Værtsnavn|Alias til|TTL|
    |---|---|---|---|
    |Anden vært|Autodiscover|autodiscover.outlook.com **Denne værdi MÅ IKKE slutte med et punktum (.)** <br/> 1 time|
 
@@ -302,7 +301,7 @@ Vælg kun denne indstilling, hvis din organisation bruger Skype for Business til
 
 1. I felterne for CNAME-posten skal du skrive eller kopiere og indsætte værdierne fra følgende tabel.
 
-   |Type|Refererer til|Host Name|Alias til|TTL|
+   |Type|Refererer til|Værtsnavn|Alias til|TTL|
    |---|---|---|---|---|
    |CNAME|Anden vært|Sip|sipdir.online.lync.com  <br/> **Denne værdi MÅ IKKE slutte med et punktum (.)**|1 time|
    |CNAME|Anden vært|lyncdiscover|webdir.online.lync.com  <br/> **Denne værdi MÅ IKKE slutte med et punktum (.)**|1 time|
@@ -351,7 +350,7 @@ Denne tjeneste hjælper dig med at sikre og fjernstyre mobilenheder, der oprette
 
 1. I felterne for CNAME-posten skal du skrive eller kopiere og indsætte værdierne fra følgende tabel.
 
-   |Type|Refererer til|Host Name|Alias til|TTL|
+   |Type|Refererer til|Værtsnavn|Alias til|TTL|
    |---|---|---|---|---|
    |CNAME|Anden vært|enterpriseregistration|enterpriseregistration.windows.net  <br/> **Denne værdi MÅ IKKE slutte med et punktum (.)**|1 time|
    |CNAME|Anden vært|enterpriseenrollment|enterpriseenrollment-s.manage.microsoft.com  <br/> **Denne værdi MÅ IKKE slutte med et punktum (.)**|1 time|
