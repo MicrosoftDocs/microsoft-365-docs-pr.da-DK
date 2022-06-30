@@ -1,6 +1,6 @@
 ---
 title: Onboarde tidligere versioner af Windows på Microsoft Defender for Endpoint
-description: Onboarde understøttede tidligere versioner af Windows enheder, så de kan sende sensordata til den Microsoft Defender for Endpoint sensor
+description: Onboarde understøttede tidligere versioner af Windows-enheder, så de kan sende sensordata til den Microsoft Defender for Endpoint sensor
 keywords: onboard, windows, 7, 81, oms, sp1, enterprise, pro, down level
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 8ca88340ae90889c0e45c5905863373d930949b2
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: c330d3c8210ea0c83605a2b5e9f9f43d1c930442
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65872956"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554395"
 ---
 # <a name="onboard-previous-versions-of-windows"></a>Onboard tidligere versioner af Windows
 
@@ -39,17 +39,17 @@ ms.locfileid: "65872956"
 
 > Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-downlevel-abovefoldlink)
 
-Defender for Endpoint udvider understøttelsen til at omfatte operativsystemer på et tidligere niveau, hvilket giver avancerede funktioner til registrering af angreb og undersøgelse af understøttede Windows versioner.
+Defender for Endpoint udvider supporten til at omfatte operativsystemer på et tidligere niveau, hvilket giver avancerede funktioner til registrering af angreb og undersøgelsesfunktioner på understøttede Windows-versioner.
 
-Hvis du vil føje Windows klientslutpunkter til Defender for Endpoint, skal du gøre følgende:
+Hvis du vil føje Windows-klientslutpunkter på et niveau ned til Defender for Endpoint, skal du:
 
 - [Konfigurer og opdater System Center Endpoint Protection klienter](#configure-and-update-system-center-endpoint-protection-clients)
 - [Installér og konfigurer Microsoft Monitoring Agent (MMA) til at rapportere sensordata](#install-and-configure-microsoft-monitoring-agent-mma)
 
-For Windows Server 2008 R2 SP1 har du mulighed for [at onboarde via Microsoft Defender for Cloud](#onboard-windows-servers-through-microsoft-defender-for-cloud).
+Til Windows Server 2008 R2 SP1 har du mulighed for [at onboarde via Microsoft Defender for Cloud](#onboard-windows-servers-through-microsoft-defender-for-cloud).
 
 > [!NOTE]
-> Der kræves en separat serverlicens til Defender for Endpoint pr. node for at kunne onboarde en Windows server via Microsoft Monitoring Agent (mulighed 1). Alternativt kræves der en Licens til Microsoft Defender til servere pr. node for at onboarde en Windows server via Microsoft Defender for Cloud (mulighed 2), se [Understøttede funktioner, der er tilgængelige i Microsoft Defender for Cloud](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
+> Der kræves en separat serverlicens til Defender for Endpoint pr. node for at kunne onboarde en Windows-server via Microsoft Monitoring Agent (mulighed 1). Alternativt kræves der en Licens til Microsoft Defender til servere pr. node for at onboarde en Windows-server via Microsoft Defender for Cloud (mulighed 2), se [Understøttede funktioner, der er tilgængelige i Microsoft Defender for Cloud](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-servers).
 
 > [!TIP]
 > Når du har onboardet enheden, kan du vælge at køre en registreringstest for at bekræfte, at den er onboardet korrekt til tjenesten. Du kan finde flere oplysninger under [Kør en registreringstest på et nyligt onboardet Defender for Endpoint-slutpunkt](run-detection-test.md).
@@ -63,9 +63,9 @@ Defender for Endpoint kan integreres med System Center Endpoint Protection for a
 
 Følgende trin er påkrævet for at aktivere denne integration:
 
-- Installér [opdateringen til antimalwareplatformen fra januar 2017 for Endpoint Protection klienter](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
+- Installér [opdateringen til antimalwareplatformen fra januar 2017 for Endpoint Protection-klienter](https://support.microsoft.com/help/3209361/january-2017-anti-malware-platform-update-for-endpoint-protection-clie)
 - Konfigurer medlemskabet af SCEP-klienten Cloud Protection Service til indstillingen **Avanceret**
-- Konfigurer dit netværk for at tillade forbindelser til Microsoft Defender Antivirus cloudmiljøet. Du kan få flere oplysninger under [Konfigurer og valider Microsoft Defender Antivirus netværksforbindelser](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
+- Konfigurer dit netværk for at tillade forbindelser til Microsoft Defender Antivirus-cloudmiljøet. Du kan få flere oplysninger under [Konfigurer og valider Netværksforbindelser til Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/configure-network-connections-microsoft-defender-antivirus)
 
 ## <a name="install-and-configure-microsoft-monitoring-agent-mma"></a>Installér og konfigurer Microsoft Monitoring Agent (MMA)
 
@@ -93,7 +93,7 @@ Gennemse følgende oplysninger for at bekræfte minimumsystemkrav:
 
 ### <a name="installation-steps"></a>Installationstrin
 
-1. Download agentkonfigurationsfilen: [Windows 64-bit agent](https://go.microsoft.com/fwlink/?LinkId=828603) eller [Windows 32-bit agent](https://go.microsoft.com/fwlink/?LinkId=828604).
+1. Download agentinstallationsfilen: [Windows 64-bit agent](https://go.microsoft.com/fwlink/?LinkId=828603) eller [Windows 32-bit agent](https://go.microsoft.com/fwlink/?LinkId=828604).
 
     >[!NOTE]
     >På grund [af udfasningen af SHA-1-support af MMA-agenten skal MMA-agenten](/azure/azure-monitor/agents/agent-windows#sha-2-code-signing-support-requirement) være version 10.20.18029 eller nyere.
@@ -107,7 +107,7 @@ Gennemse følgende oplysninger for at bekræfte minimumsystemkrav:
 3. Brug arbejdsområde-id'et og nøglen Workspace til at vælge en af følgende installationsmetoder for at installere agenten:
     - [Installer agenten manuelt ved hjælp af konfigurationen](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-setup-wizard).
 
-      På siden **Indstillinger for agentopsætning** skal du vælge **Forbind agenten til Azure Log Analytics (OMS)**
+      På siden **Indstillinger for agentopsætning** skal du vælge **Opret forbindelse mellem agenten og Azure Log Analytics (OMS)**
 
     - [Installér agenten ved hjælp af kommandolinjen](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-command-line).
     - [Konfigurer agenten ved hjælp af et script](/azure/log-analytics/log-analytics-windows-agents#install-agent-using-dsc-in-azure-automation).
@@ -128,11 +128,11 @@ Hvis dine servere skal bruge en proxy til at kommunikere med Defender for Endpoi
 
 Hvis en proxy eller firewall er i brug, skal du sørge for, at serverne kan få adgang til alle URL-adresserne til Microsoft Defender for Endpoint-tjenesten direkte og uden SSL-opfangelse. Du kan finde flere oplysninger under [Aktivér adgang til URL-adresser til Defender for Endpoint-tjenesten](configure-proxy-internet.md#enable-access-to-microsoft-defender-for-endpoint-service-urls-in-the-proxy-server). Brug af SSL-opfangelse forhindrer systemet i at kommunikere med Defender for Endpoint-tjenesten.
 
-Når du er færdig, kan du se onboardede Windows servere på portalen inden for en time.
+Når du er færdig, kan du se onboardede Windows-servere på portalen inden for en time.
 
-## <a name="onboard-windows-servers-through-microsoft-defender-for-cloud"></a>Onboarde Windows servere via Microsoft Defender for Cloud
+## <a name="onboard-windows-servers-through-microsoft-defender-for-cloud"></a>Onboarde Windows-servere via Microsoft Defender for Cloud
 
-1. Vælg Indstillinger **Device Management** >  Onboarding **i** >  Microsoft 365 Defender **navigationsrude**.
+1. I Microsoft 365 Defender navigationsrude skal du vælge **Indstillinger** > **Onboarding af enhedshåndtering** > .
 
 2. Vælg **Windows Server 2008 R2 SP1** som operativsystem.
 
@@ -163,7 +163,7 @@ Kontrollér, at Microsoft Defender AV og Microsoft Defender for Endpoint kører.
 
     Hvis resultatet er 'Den angivne tjeneste findes ikke som en installeret tjeneste', skal du installere Microsoft Defender AV. Du kan få flere oplysninger [under Microsoft Defender Antivirus i Windows 10](microsoft-defender-antivirus-windows.md).
 
-    Du kan få oplysninger om, hvordan du bruger Gruppepolitik til at konfigurere og administrere Microsoft Defender Antivirus på dine Windows servere, under [Brug Gruppepolitik indstillinger til at konfigurere og administrere Microsoft Defender Antivirus ](use-group-policy-microsoft-defender-antivirus.md).
+    Du kan få oplysninger om, hvordan du bruger Gruppepolitik til at konfigurere og administrere Microsoft Defender Antivirus på dine Windows-servere, under [Brug Gruppepolitik indstillinger til at konfigurere og administrere Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md).
 
 
 2. Kør følgende kommando for at kontrollere, at Microsoft Defender for Endpoint kører:
@@ -183,7 +183,7 @@ Følg trinnene i [Kør en registreringstest på en nyligt onboardet enhed](run-d
 
 ### <a name="using-group-policy"></a>Brug af Gruppepolitik
 
-**Trin 1: Download den tilsvarende udpate for dit slutpunkt.**
+**Trin 1: Download den tilsvarende opdatering til dit slutpunkt.**
 
 1. Naviger til c:\windows\sysvol\domain\scripts (ændringskontrol kan være nødvendig på en af domænecontrollerne).
 1. Opret en mappe med navnet MMA.
@@ -192,9 +192,9 @@ Følg trinnene i [Kør en registreringstest på en nyligt onboardet enhed](run-d
     - Opdatering til kundeoplevelse og diagnosticeringstelemetri:
       - [Til Windows Server 2008 R2 x64](https://www.microsoft.com/download/details.aspx?familyid=1bd1d18d-4631-4d8e-a897-327925765f71)
      
-    For Windows Server 2008 R2 SP1 kræves der også følgende opdateringer:
+    Der kræves også følgende opdateringer til Windows Server 2008 R2 SP1:
 
-    Månedlig rulning i februar 2018 – KB4074598 (Windows Server 2008 R2)
+    Månedlig opdatering i februar 2018 – KB4074598 (Windows Server 2008 R2)
 
     [Microsoft Update-katalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)<br>
     Download opdateringer til Windows Server 2008 R2 x64
@@ -214,22 +214,20 @@ Følgende kommando er et eksempel. Erstat følgende værdier:
 
 
 ```dos
-@echo off 
-cd "C:"
-IF EXIST "C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe" ( 
-exit
-) ELSE (
+@echo off  
+cd "C:" 
+IF EXIST "C:\Program Files\Microsoft Monitoring Agent\Agent\MonitoringHost.exe" (  
+exit 
+) ELSE ( 
+ 
+wusa.exe C:\Windows\MMA\Windows6.1-KB3080149-x64.msu /quiet /norestart 
+wusa.exe C:\Windows\MMA\Windows6.1-KB4074598-x64.msu /quiet /norestart 
+wusa.exe C:\Windows\MMA\Windows6.1-KB3154518-x64.msu /quiet /norestart 
+wusa.exe C:\Windows\MMA\Windows8.1-KB3080149-x64.msu /quiet /norestart 
+"c:\windows\MMA\MMASetup-AMD64.exe" /c /t:"C:\Windows\MMA"
+c:\windows\MMA\setup.exe /qn NOAPM=1 ADD_OPINSIGHTS_WORKSPACE=1 OPINSIGHTS_WORKSPACE_ID="<your workspace ID>" OPINSIGHTS_WORKSPACE_KEY="<your workspace key>" AcceptEndUserLicenseAgreement=1
 
-wusa.exe C:\Windows\MMA\Windows6.1-KB3080149-x64.msu /quiet /norestart
-wusa.exe C:\Windows\MMA\Windows6.1-KB4074598-x64.msu /quiet /norestart
-wusa.exe C:\Windows\MMA\Windows6.1-KB3154518-x64.msu /quiet /norestart
-wusa.exe C:\Windows\MMA\Windows8.1-KB3080149-x64.msu /quiet /norestart
-"c:\windows\MMA\MMASetup-AMD64.exe" /c /t: "C:\Windows\MMA"c:\windows\MMA\ setup.exe /qn NOAPM=1 ADD_OPINSIGHTS_WORKSPACE=1
-OPINSIGHTS_WORKSPACE_ID="<your workspace ID>"
-OPINSIGHTS_WORKSPACE_KEY="<your workspace key>" AcceptEndUserLicenseAgreement=1
-)
-
-)
+) 
 ```
 
 
@@ -258,7 +256,7 @@ Gentag processen, men opret målretning på elementniveau under fanen COMMON, s�
 
 :::image type="content" source="images/targeteditor.png" alt-text="Destinationseditoren" lightbox="images/targeteditor.png":::
 
-For Windows Server 2008 R2 skal du bruge (og det kopierer kun ned) følgende:
+Til Windows Server 2008 R2 skal du bruge (og det kopierer kun ned) følgende:
 - Windows6.1-KB3080149-x64.msu
 - Windows6.1-KB3154518-x64.msu
 - Windows6.1-KB4075598-x64.msu
@@ -290,22 +288,22 @@ Som nævnt i onboardingdokumentationen til Server specifikt omkring Server 2008 
 - Installér den [månedlige opdateringspakke fra februar 2018](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598)
 - Installér enten [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) (eller nyere) eller [KB3154518](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the-net-framework)
 
-Kontrollér nøgletal er til stede, før du onboarder Windows Server 2008 R2. Denne proces giver dig mulighed for at onboarde alle serverne, hvis du ikke har Configuration Manager administration af servere.
+Kontrollér, at nøgletal er til stede, før du onboarder Windows Server 2008 R2. Denne proces giver dig mulighed for at onboarde alle serverne, hvis du ikke har Configuration Manager administration af servere.
 
 
 ## <a name="offboard-endpoints"></a>Slutpunkter uden for tavlen
 
-Du har to muligheder for at fjerne Windows slutpunkter fra tjenesten:
+Du har to muligheder for at komme uden for Windows-slutpunkter fra tjenesten:
 
 - Fjern MMA-agenten
 - Fjern konfigurationen af Defender for Slutpunktarbejdsområde
 
 > [!NOTE]
-> Offboarding medfører, at det Windows slutpunkt stopper med at sende sensordata til portalen, men data fra slutpunktet, herunder reference til eventuelle beskeder, det har haft, bevares i op til seks måneder.
+> Offboarding medfører, at Windows-slutpunktet stopper med at sende sensordata til portalen, men data fra slutpunktet, herunder reference til eventuelle beskeder, det har haft, bevares i op til seks måneder.
 
 ### <a name="uninstall-the-mma-agent"></a>Fjern MMA-agenten
 
-Hvis du vil fjerne Windows slutpunktet, kan du fjerne MMA-agenten eller fjerne den fra rapportering til dit Defender for Endpoint-arbejdsområde. Når du har offboardet agenten, sender slutpunktet ikke længere sensordata til Defender for Endpoint.
+Hvis du vil væk fra Windows-slutpunktet, kan du fjerne MMA-agenten eller fjerne den fra rapportering til dit Defender for Endpoint-arbejdsområde. Når du har offboardet agenten, sender slutpunktet ikke længere sensordata til Defender for Endpoint.
 Du kan få flere oplysninger under [Sådan deaktiverer du en agent](/azure/log-analytics/log-analytics-windows-agents#to-disable-an-agent).
 
 ### <a name="remove-the-defender-for-endpoint-workspace-configuration"></a>Fjern konfigurationen af Defender for Slutpunktarbejdsområde
@@ -327,7 +325,7 @@ Du kan bruge en af følgende metoder:
 
 1. Hent dit arbejdsområde-id:
 
-   1. Vælg **Indstillinger** >  **Onboarding** i navigationsruden.
+   1. Vælg **Indstillinger** > **Onboarding** i navigationsruden.
 
    1. Vælg det relevante operativsystem, og hent dit arbejdsområde-id.
 

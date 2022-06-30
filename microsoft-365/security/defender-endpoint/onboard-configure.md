@@ -16,12 +16,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: d218e09c8cc300552bcc9f230c1d375d33a5feb6
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 309baa41f217cbac9a865317084f284b3d22961b
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530548"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554219"
 ---
 # <a name="onboard-devices-and-configure-microsoft-defender-for-endpoint-capabilities"></a>Onboard enheder, og konfigurer Microsoft Defender for Endpoint-funktioner
 
@@ -62,8 +62,8 @@ I følgende tabel vises de tilgængelige værktøjer, der er baseret på det slu
 | **Windows-klient**  |     [Mobil Enhedshåndtering/Microsoft Intune](configure-endpoints-mdm.md) <br> [Gruppepolitik](configure-endpoints-gp.md) <br> [Lokalt script (op til 10 enheder)](configure-endpoints-script.md) <br>[VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender for Cloud](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)  |
 | **Windows Server**  | [Microsoft Endpoint Configuration Manager](configure-endpoints-sccm.md) <br>  [Gruppepolitik](configure-endpoints-gp.md) <br>  [VDI-scripts](configure-endpoints-vdi.md) <br> [Integration med Microsoft Defender for Cloud](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)  |
 | **Macos**    | [Lokale scripts](mac-install-manually.md) <br> [Microsoft Endpoint Manager](mac-install-with-intune.md) <br> [JAMF Pro](mac-install-with-jamf.md) <br> [Mobil Enhedshåndtering](mac-install-with-other-mdm.md) |
-| **Linux Server** | [Lokalt script](linux-install-manually.md) <br> [Marionet](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md)|
-| **Ios**      | [Microsoft Endpoint Manager](ios-install.md)               |
+| **Linux Server** | [Lokalt script](linux-install-manually.md) <br> [Marionet](linux-install-with-puppet.md) <br> [Ansible](linux-install-with-ansible.md) <br> [Integration med Microsoft Defender for Cloud](configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)     |
+| **Ios**      | [Microsoft Endpoint Manager](ios-install.md)           |
 | **Android**  | [Microsoft Endpoint Manager](android-intune.md)            | 
 
 

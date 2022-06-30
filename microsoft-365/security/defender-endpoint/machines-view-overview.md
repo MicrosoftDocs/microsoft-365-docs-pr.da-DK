@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 78cb81b1a0da9f0d1965dab7c209067a4e8d02e6
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 81ff80776d3b12e4ec90d6d2c2473389686ae9c9
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65874168"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554461"
 ---
 # <a name="device-inventory"></a>Enhedslager
 
@@ -119,12 +119,12 @@ Filter | Beskrivelse
 **Udeladelsestilstand** </br> | Filtrer listen ud fra, om enheden er blevet udelukket eller ej. Du kan få flere oplysninger under [Udelad enheder](exclude-devices.md).
 **OS-platform** </br>| Filtrer efter de OS-platforme, du er interesseret i at undersøge </br></br>(_Kun computere og mobilenheder og IoT-enheder_)
 **Først set** </br> | Filtrer visningen på baggrund af, hvornår enheden første gang blev set på netværket, eller hvornår den første gang blev rapporteret af Microsoft Defender for Endpoint sensor.</br></br>(_Kun computere og mobilenheder og IoT-enheder_)
-**Windows version** </br> | Filtrer efter de Windows versioner, du er interesseret i at undersøge.</br></br> (_Kun computere og mobilenheder_)
+**Windows-version** </br> | Filtrer efter de Windows-versioner, du er interesseret i at undersøge.</br></br> (_Kun computere og mobilenheder_)
 **Tilstand for sensortilstand** </br> | Filtrer efter følgende tilstande for sensortilstand for enheder, der er onboardet i Microsoft Defender for Endpoint:</br> - **Aktiv**: Enheder, der aktivt rapporterer sensordata til tjenesten.</br> - **Inaktiv:** Enheder, der har stoppet med at sende signaler i mere end 7 dage. </br> - **Forkert konfigureret**: Enheder, der har nedsat kommunikation med tjenesten eller ikke kan sende sensordata. </br> Forkert konfigurerede enheder kan klassificeres yderligere til: </br>  - Ingen sensordata </br>  - Nedsat kommunikation </br>  Du kan finde flere oplysninger om, hvordan du løser problemer på forkert konfigurerede enheder, under [Løs usunde sensorer](/microsoft-365/security/defender-endpoint/fix-unhealthy-sensors).</br></br> (_Kun computere og mobilenheder_)
 **Onboardingstatus** </br> | Onboardingstatus angiver, om enheden i øjeblikket er onboardet til Microsoft Defender for Endpoint eller ej. Du kan filtrere efter følgende tilstande: </br> - **Onboardet**: Slutpunktet er onboardet til Microsoft Defender for Endpoint.  </br> - **Kan onboardes**: Slutpunktet blev fundet i netværket som en understøttet enhed, men det er i øjeblikket ikke onboardet. Microsoft anbefaler på det kraftigste onboarding af disse enheder. </br> - **Ikke understøttet**: Slutpunktet blev fundet på netværket, men understøttes ikke af Microsoft Defender for Endpoint. </br> - **Utilstrækkelige oplysninger**: Systemet kunne ikke fastslå, om enheden understøttes.</br></br> (_Kun computere og mobilenheder_)
 **Status for antivirus** </br> | Filtrer visningen baseret på, om antivirusstatussen er deaktiveret, ikke opdateret eller ukendt.</br></br> (_Kun computere og mobilenheder_)
 **Gruppe** </br> | Filtrer listen baseret på den gruppe, du er interesseret i at undersøge. </br></br> (_Kun computere og mobilenheder_)
-**Administreret af** </br> | Administreret af angiver, hvordan enheden administreres. Du kan filtrere efter:</br>- Microsoft Defender for Endpoint </br> – Administration af mobilenheder (MDM) </br>- Ukendt: Dette kan skyldes, at der kører en forældet Windows version, at SCCM er på plads, eller at en anden tredjepart MDM kører.</br></br> (_Kun computere og mobilenheder_)
+**Administreret af** </br> | Administreret af angiver, hvordan enheden administreres. Du kan filtrere efter:</br> - Microsoft Defender for Endpoint</br> – Microsoft Endpoint Manager (MEM), herunder medadministration med Microsoft Configuration Manager via tilknytning af lejer</br>– Microsoft Configuration Manager (ConfigMgr)</br> - Ukendt: Dette kan skyldes, at der kører en forældet Windows-version, administration af gruppepolitikobjekt eller en anden mdm fra tredjepart.</br></br> (_Kun computere og mobilenheder_) 
 **Enhedstype** </br> | Filtrer efter den enhedstype, du er interesseret i at undersøge.</br></br> (_Kun IoT-enheder_)
 
 ## <a name="use-columns-to-customize-the-device-inventory-views"></a>Brug kolonner til at tilpasse enhedslagervisningerne

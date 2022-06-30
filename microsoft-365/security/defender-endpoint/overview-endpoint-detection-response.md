@@ -1,8 +1,8 @@
 ---
-title: Oversigt over slutpunktsregistrering og -svar funktioner
+title: Oversigt over slutpunktsregistrerings- og svarfunktioner
 ms.reviewer: ''
-description: Få mere at vide om slutpunktsregistrering og -svar funktioner i Microsoft Defender for Endpoint
-keywords: Microsoft Defender for Endpoint, slutpunktsregistrering og -svar, svar, opdagelse, cybersikkerhed, beskyttelse
+description: Få mere at vide om funktionaliteten til registrering af slutpunkter og svar i Microsoft Defender for Endpoint
+keywords: Microsoft Defender for Endpoint, registrering og svar på slutpunkter, svar, opdagelse, cybersikkerhed, beskyttelse
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,24 +15,27 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 78f05c9e366d2f8b4d5b4d7697961f0d702581f8
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 757064e8867cda8676fd0cf20a662ff04d130e9c
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438520"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554505"
 ---
-# <a name="overview-of-endpoint-detection-and-response"></a>Oversigt over slutpunktsregistrering og -svar
+# <a name="overview-of-endpoint-detection-and-response"></a>Oversigt over registrering og svar af slutpunkter
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1 og 2](defender-endpoint-plan-1-2.md)
+- [Microsoft Defender for Endpoint Plan 1 og 2](defender-endpoint-plan-1-2.md)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Defender for Endpoint slutpunktsregistrering og -svar funktioner giver avancerede angrebsregistreringer, der er næsten i realtid og kan handles på. Sikkerhedsanalytikere kan prioritere beskeder effektivt, få indsigt i det fulde omfang af et brud og reagere på trusler.
+Funktionerne til registrering af slutpunkter og svar i Defender for Endpoint giver avancerede angrebsregistreringer, der er næsten i realtid og kan handles på. Sikkerhedsanalytikere kan prioritere beskeder effektivt, få indsigt i det fulde omfang af et brud og reagere på trusler.
 
 Når der registreres en trussel, oprettes der beskeder i systemet, som en analytiker skal undersøge. Beskeder med de samme angrebsteknikker eller tilskrevet den samme person med ondsindede hensigter samles i en enhed, der kaldes en _hændelse_. Sammenlægning af beskeder på denne måde gør det nemt for analytikere samlet at undersøge og reagere på trusler.
+
+> [!NOTE]
+> Defender for Endpoint Detection er ikke beregnet til at være en overvågnings- eller logføringsløsning, der registrerer alle handlinger eller aktiviteter, der udføres på et bestemt slutpunkt. Vores sensor har en intern begrænsningsmekanisme, så den høje frekvens af gentagne identiske hændelser oversvømmer ikke loggene.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4o1j5]
 

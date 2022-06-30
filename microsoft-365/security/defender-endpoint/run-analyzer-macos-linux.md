@@ -1,6 +1,6 @@
 ---
 title: Kør klientanalysen på macOS eller Linux
-description: Få mere at vide om, hvordan du kører Microsoft Defender for Endpoint-klientanalysen på macOS eller Linux
+description: Få mere at vide om, hvordan du kører Microsoft Defender for Endpoint Client Analyzer på macOS eller Linux
 keywords: klientanalyse, fejlfinding af sensor, analyse, mdeanalyzer, macos, linux, mdeanalyzer
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: a4dd7193bed1a22e3b88e6bc9201f5a15ddcd9eb
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: fc5944be9fd209898b53203533f568ae7ccec70e
+ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090448"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66554527"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalysen på macOS og Linux
 
@@ -34,7 +34,7 @@ ms.locfileid: "66090448"
 1. Download værktøjet [XMDE-klientanalyse](https://aka.ms/XMDEClientAnalyzer) til den macOS- eller Linux-maskine, du skal undersøge.
 
    > [!NOTE]
-   > Den aktuelle SHA256-hash for 'XMDEClientAnalyzer.zip', der downloades fra ovenstående link, er: 'AFD674A149F139E80F1AE90E36814DAAC08AAD9E8B0DA20CB1D3FA33B9D0D1AD'.
+   > Den aktuelle SHA256-hash for 'XMDEClientAnalyzer.zip', der downloades fra ovenstående link, er: '94DBD785249C10F37D7BE9C1E881AA096CF3A9F30E829DBBFD42683717BC5DA8'.
 
 2. Udpak indholdet af XMDEClientAnalyzer.zip på maskinen.
 
@@ -101,7 +101,7 @@ Yderligere hjælp til syntaks:
 
 - mde_diagnostic.zip
 
-  Beskrivelse: Samme diagnosticeringsoutput, der genereres, når der køres *oprettelse af mdatp-diagnosticering* på begge [macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-resources#collecting-diagnostic-information)
+  Beskrivelse: Samme diagnosticeringsoutput, der genereres, når der køres *oprettelse af mdatp-diagnosticering* på enten [macOS](/windows/security/threat-protection/microsoft-defender-atp/mac-resources#collecting-diagnostic-information)
 
   Eller
 
