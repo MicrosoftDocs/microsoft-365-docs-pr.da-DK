@@ -14,12 +14,13 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: ad188065f7f007029fccb94d8a5466ba9ec00f3e
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.custom: intro-get-started
+ms.openlocfilehash: 6edfd60b5f5a3d10200191cd676fb66fa72ec1ba
+ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486857"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66556762"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 

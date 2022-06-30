@@ -20,17 +20,18 @@ ms.custom:
 - Core_O365Admin_Migration
 - MiniMaven
 - MSB365
+- intro-overview
 search.appverid:
 - BCS160
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Få mere at vide om, hvordan du implementerer cybersikkerhed for små eller mellemstore virksomheder med Microsoft 365 Business Premium. Cybersikkerhedsegenskaberne og -funktionerne er optimeret til at forhindre cyberangreb og sikkerhedsbrud og hjælper dig med at beskytte data, enheder og oplysninger med førsteklasses cyberbeskyttelse.
-ms.openlocfilehash: 61e0321df75645a3e8ef06867d9e110b7bfd40a2
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 213e96c58c822d0d8b40d2e540582eb6a2719ef8
+ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66491376"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66556828"
 ---
 # <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 Business Premium &mdash; cybersikkerhed for små virksomheder
 

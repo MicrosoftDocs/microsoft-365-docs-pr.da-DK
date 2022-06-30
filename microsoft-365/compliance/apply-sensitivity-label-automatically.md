@@ -17,16 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: 3124427ff556cd08a56ee83cf8f83bc4dbf8eb72
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 2726a55b05ff27caee3c9739ad9d8604ce1a29d6
+ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017958"
+ms.lasthandoff: 06/30/2022
+ms.locfileid: "66556911"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -45,13 +45,13 @@ Denne mulighed for automatisk at anvende følsomhedsmærkater på indhold er vig
 
 Der er to forskellige metoder til automatisk anvendelse af en følsomhedsmærkat på indhold i Microsoft 365:
 
-- **Navngivning på klientsiden, når brugerne redigerer dokumenter eller skriver (også besvarer eller videresender) mails**: Brug en mærkat, der er konfigureret til automatisk mærkning af filer og mails (herunder Word, Excel, PowerPoint og Outlook).
+- **Navngivning på klientsiden, når brugere redigerer dokumenter eller skriver (også besvarer eller videresender) mails**: Brug en mærkat, der er konfigureret til automatisk mærkning af filer og mails (herunder Word, Excel, PowerPoint og Outlook).
 
-    Denne metode understøtter anbefaling af en mærkat til brugere samt automatisk anvendelse af en mærkat. Men i begge tilfælde beslutter brugeren, om brugeren vil acceptere eller afvise mærkaten, for at sikre korrekt mærkning af indhold. Denne navngivning på klientsiden har minimal forsinkelse for dokumenter, fordi mærkaten kan anvendes, selv før dokumentet gemmes. Det er dog ikke alle klientapps, der understøtter automatisk mærkning. Denne funktion understøttes af indbygget mærkning med [nogle versioner af Office](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) samt Azure Information Protection Unified Labeling-klienten.
+    Denne metode understøtter anbefaling af en mærkat til brugere samt automatisk anvendelse af en mærkat. Men i begge tilfælde beslutter brugeren, om brugeren vil acceptere eller afvise mærkaten, for at sikre korrekt mærkning af indhold. Denne navngivning på klientsiden har minimal forsinkelse for dokumenter, fordi mærkaten kan anvendes, selv før dokumentet gemmes. Det er dog ikke alle klientapps, der understøtter automatisk mærkning. Denne funktion understøttes af indbygget mærkning med [nogle versioner af Office](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) samt Azure Information Protection Unified-navngivningsklienten.
 
-    Du kan finde konfigurationsanvisninger under [Sådan konfigurerer du automatisk mærkning for Office apps](#how-to-configure-auto-labeling-for-office-apps) på denne side.
+    Du kan finde konfigurationsvejledninger under [Sådan konfigurerer du automatisk mærkning for Office-apps](#how-to-configure-auto-labeling-for-office-apps) på denne side.
 
-- **Mærkning på tjenestesiden, når indhold allerede er gemt (i SharePoint eller OneDrive) eller sendt via mail (behandlet af Exchange Online)**: Brug en politik for automatisk mærkning.
+- **Angivelse på tjenestesiden, når indhold allerede er gemt (i SharePoint eller OneDrive) eller sendt via mail (behandlet af Exchange Online)**: Brug en politik for automatisk mærkning.
     
     Du kan også høre denne metode, der kaldes automatisk mærkning af inaktive data (dokumenter i SharePoint og OneDrive) og data under overførsel (mail, der sendes eller modtages af Exchange). For Exchange omfatter den ikke inaktive mails (postkasser).
     
@@ -59,28 +59,28 @@ Der er to forskellige metoder til automatisk anvendelse af en følsomhedsmærkat
 
     Du kan finde konfigurationsanvisninger under [Sådan konfigurerer du politikker for automatisk mærkning for SharePoint, OneDrive og Exchange](#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange) på denne side.
     
-    Specifik til automatisk mærkning af SharePoint og OneDrive:
+    Specifik til automatisk mærkning for SharePoint og OneDrive:
     
-    - Office filer til Word (.docx), PowerPoint (.pptx) og Excel (.xlsx) understøttes.
+    - Office-filer til Word (.docx), PowerPoint (.pptx) og Excel (.xlsx) understøttes.
         - Disse filer kan automatisk mærkes som hvile, før eller efter politikkerne for automatisk mærkning oprettes. Filer kan ikke navngives automatisk, hvis de er en del af en åben session (filen er åben).
         - I øjeblikket understøttes vedhæftede filer i listeelementer ikke og navngives ikke automatisk.
     - Maksimalt 25.000 automatisk navngivne filer i din lejer pr. dag.
     - Der kan maksimalt angives 100 politikker for automatisk mærkning pr. lejer, som hver især er målrettet til op til 100 websteder (SharePoint eller OneDrive), når de er angivet individuelt. Du kan også angive alle websteder, og denne konfiguration er undtaget fra maksimum 100 websteder.
     - Eksisterende værdier for ændret, ændret af og datoen ændres ikke som følge af politikker for automatisk mærkning – både for simuleringstilstand, og når der anvendes mærkater.
-    - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den konto, der senest ændrede filen.
+    - Når mærkaten anvender kryptering, er [udstederen af Rights Management og Rights Management-ejeren](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den konto, der senest ændrede filen.
 
-    Specifik til automatisk mærkning af Exchange:
+    Specifik til automatisk mærkning for Exchange:
     
-    - I modsætning til manuel mærkning eller automatisk mærkning med Office apps scannes vedhæftede PDF-filer samt Office vedhæftede filer også for de betingelser, du angiver i politikken for automatisk mærkning. Når der er et match, er mailen mærket, men ikke den vedhæftede fil.
-        - Hvis mærkaten anvender kryptering for PDF-filer, krypteres disse filer ved hjælp af [meddelelsekryptering](ome.md) , når din lejer er [aktiveret for vedhæftede PDF-filer](ome-faq.yml#are-pdf-file-attachments-supported-).
-        - For disse Office-filer understøttes Word, PowerPoint og Excel. Hvis mærkaten anvender kryptering, krypteres de ved hjælp af [Meddelelsekryptering](ome.md).
-    - Hvis du har Exchange regler for mailflow eller DLP-politikker (Microsoft Purview Data Loss Prevention), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes mærkaten. Hvis dette navn anvender kryptering, ignoreres IRM-indstillingerne fra reglerne for Exchange mailflow eller DLP-politikker. Men hvis denne mærkat ikke anvender kryptering, anvendes IRM-indstillingerne fra reglerne for mailflowet eller DLP-politikkerne ud over mærkaten.
+    - I modsætning til manuel mærkning eller automatisk mærkning med Office-apps scannes vedhæftede PDF-filer samt Vedhæftede Office-filer også efter de betingelser, du angiver i politikken for automatisk mærkning. Når der er et match, er mailen mærket, men ikke den vedhæftede fil.
+        - Hvis mærkaten anvender kryptering for PDF-filer, krypteres disse filer nu, hvis de ikke krypteres, ved hjælp af [meddelelseskryptering](ome.md) , når din lejer er [aktiveret for vedhæftede PDF-filer](ome-faq.yml#are-pdf-file-attachments-supported-). De anvendte krypteringsindstillinger nedarves fra mailen.
+        - For disse Office-filer understøttes Word, PowerPoint og Excel. Hvis mærkaten anvender kryptering, og disse filer ikke krypteres, krypteres de nu ved hjælp af [meddelelseskryptering](ome.md). Krypteringsindstillingerne nedarves fra mailen.
+    - Hvis du har regler for Exchange-mailflow eller DLP-politikker (Microsoft Purview Forebyggelse af datatab), der anvender IRM-kryptering: Når indhold identificeres af disse regler eller politikker og en politik for automatisk mærkning, anvendes mærkaten. Hvis dette navn anvender kryptering, ignoreres IRM-indstillingerne fra exchange-reglerne for mailflow eller DLP-politikker. Men hvis denne mærkat ikke anvender kryptering, anvendes IRM-indstillingerne fra reglerne for mailflowet eller DLP-politikkerne ud over mærkaten.
     - Mail, der har IRM-kryptering uden mærkat, erstattes af en mærkat med eventuelle krypteringsindstillinger, når der er et match ved hjælp af automatisk mærkning.
-    - Indgående mail markeres, når der er et match med betingelserne for automatisk mærkning. Hvis denne mærkat er konfigureret til [kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Denne kryptering anvendes som standard ikke, når afsenderen er uden for din organisation, men kan anvendes ved at konfigurere **Yderligere indstillinger for mail** og angive en Rights Management ejer.
-    - Når mærkaten anvender kryptering, er [Rights Management udsteder og Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den person, der sender mailen, når afsenderen er fra din egen organisation. Når afsenderen er uden for din organisation, kan du angive en Rights Management ejer af indgående mail, der er mærket og krypteret af din politik.
+    - Indgående mail markeres, når der er et match med betingelserne for automatisk mærkning. Hvis denne mærkat er konfigureret til [kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Denne kryptering anvendes som standard ikke, når afsenderen er uden for din organisation, men kan anvendes ved at konfigurere **Yderligere indstillinger for mail** og angive en Rights Management-ejer.
+    - Når mærkaten anvender kryptering, er Udstederen [af Rights Management og Rights Management-ejeren](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den person, der sender mailen, når afsenderen er fra din egen organisation. Når afsenderen er uden for din organisation, kan du angive en Rights Management-ejer for indgående mail, der er mærket og krypteret af din politik.
     - Hvis mærkaten er konfigureret til at anvende [dynamiske markeringer](sensitivity-labels-office-apps.md#dynamic-markings-with-variables), skal du være opmærksom på, at for indgående mail kan denne konfiguration resultere i, at navnene på personer uden for din organisation vises.
 
-## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>Sammenlign automatisk mærkning for Office apps med politikker for automatisk mærkning
+## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>Sammenlign automatisk mærkning for Office-apps med politikker for automatisk mærkning
 
 Brug følgende tabel som en hjælp til at identificere forskellene i funktionsmåden for de to komplementære automatiske mærkningsmetoder:
 
@@ -91,16 +91,16 @@ Brug følgende tabel som en hjælp til at identificere forskellene i funktionsm�
 |Betingelser: Klassificeringer, der kan oplæres|Ja |Nej |
 |Betingelser: Delingsindstillinger og yderligere indstillinger for mail|Nej |Ja |
 |Betingelser: Undtagelser|Nej |Ja (kun mail) |
-|Anbefalinger, politikværktøjstip og brugertilsidesættelser|Ja |Nej |
+|Anbefalinger, værktøjstip til politik og brugertilsidesættelser|Ja |Nej |
 |Simuleringstilstand|Nej |Ja |
-|Exchange vedhæftede filer kontrolleres for betingelser|Nej | Ja|
+|Exchange-vedhæftede filer kontrolleres for betingelser|Nej | Ja|
 |Anvend visuelle markeringer |Ja |Ja (kun mail) |
 |Tilsidesæt IRM-kryptering, der er anvendt uden et navn|Ja, hvis brugeren har minimumsretten til eksport |Ja (kun mail) |
 |Navn på indgående mail|Nej |Ja|
-|Tildel en Rights Management ejer til mails, der er sendt fra en anden organisation |Nej |Ja|
+|Tildel en Rights Management-ejer til mails, der er sendt fra en anden organisation |Nej |Ja|
 |Erstat eksisterende mærkat med samme eller lavere prioritet for mails |Nej |Ja (kan konfigureres)|
 
-\* Automatisk mærkning er i øjeblikket ikke tilgængelig i alle områder på grund af en backend-Azure-afhængighed. Hvis din lejer ikke kan understøtte denne funktionalitet, er fanen **Automatisk mærkning** ikke synlig på Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger under [Tilgængelighed af Azure-afhængighed efter land](/troubleshoot/azure/general/dependency-availability-by-country).
+\* Automatisk mærkning er i øjeblikket ikke tilgængelig i alle områder på grund af en backend-Azure-afhængighed. Hvis din lejer ikke kan understøtte denne funktionalitet, er fanen **Automatisk mærkning** ikke synlig i Microsoft Purview-compliance-portal. Du kan få flere oplysninger under [Tilgængelighed af Azure-afhængighed efter land](/troubleshoot/azure/general/dependency-availability-by-country).
 
 ## <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Hvordan flere betingelser evalueres, når de gælder for mere end én etiket
 
@@ -108,7 +108,7 @@ Etiketterne sorteres til evaluering i henhold til deres position, som du angiver
 
 ## <a name="dont-configure-a-parent-label-to-be-applied-automatically-or-recommended"></a>Konfigurer ikke en overordnet etiket, der skal anvendes automatisk eller anbefales
 
-Husk, at du ikke kan anvende en overordnet etiket (en etiket med undermærkater) på indhold. Sørg for, at du ikke konfigurerer et overordnet navn, så det anvendes automatisk eller anbefales i Office apps, og vælg ikke et overordnet navn til en politik for automatisk mærkning. Hvis du gør det, anvendes den overordnede mærkat ikke på indhold.
+Husk, at du ikke kan anvende en overordnet etiket (en etiket med undermærkater) på indhold. Sørg for, at du ikke konfigurerer et overordnet navn, så det anvendes automatisk eller anbefales i Office-apps, og vælg ikke et overordnet navn til en politik for automatisk mærkning. Hvis du gør det, anvendes den overordnede mærkat ikke på indhold.
 
 Hvis du vil bruge automatisk mærkning med undermærkater, skal du sørge for at publicere både den overordnede etiket og undermærkaten.
 
@@ -126,7 +126,7 @@ Standardfunktionsmåde for, om automatisk mærkning tilsidesætter et eksisteren
 - Automatisk mærkning erstatter en [følsomhedsmærkat med lavere prioritet](sensitivity-labels.md#label-priority-order-matters) , der blev anvendt automatisk, men ikke en mærkat med højere prioritet.
     
     > [!TIP]
-    > Følsomhedsmærkaten øverst på listen på Microsoft Purview-overholdelsesportalen hedder f.eks. **Offentlig** med et ordrenummer (prioritet) på 0, og følsomhedsmærkaten nederst på listen har navnet **Meget fortroligt** med et ordrenummer (prioritet 4). Mærkaten **Meget fortroligt** kan tilsidesætte mærkaten **Offentlig** , men ikke omvendt.
+    > Følsomhedsmærkaten øverst på listen i Microsoft Purview-compliance-portal har f.eks. navnet **Offentlig** med et ordrenummer (prioritet) på 0, og følsomhedsmærkaten nederst på listen har navnet **Meget fortroligt** med et ordrenummer (prioritet 4). Mærkaten **Meget fortroligt** kan tilsidesætte mærkaten **Offentlig** , men ikke omvendt.
 
 Kun for politikker for automatisk mærkning af mails kan du vælge en indstilling, der altid skal tilsidesætte en eksisterende følsomhedsmærkat, uanset hvordan den blev anvendt.
 
@@ -136,21 +136,21 @@ Kun for politikker for automatisk mærkning af mails kan du vælge en indstillin
 |Automatisk anvendt eller standardmærkat fra politik, lavere prioritet |Word, Excel, PowerPoint: Ja <br /><br> Outlook: Ja | SharePoint og OneDrive: Ja <br /><br> Exchange: Ja |
 |Automatisk anvendt eller standardmærkat fra politik, højere prioritet |Word, Excel, PowerPoint: Nej <br /><br> Outlook: Nej |SharePoint og OneDrive: Nej <br /><br> Exchange: Nej som standard, men kan konfigureres |
 
-Den konfigurerbare indstilling for politikker for automatisk mærkning af mails findes på siden **Yderligere indstillinger for mail** . Denne side vises, når du har valgt en følsomhedsmærkat for en politik for automatisk mærkning, der indeholder Exchange placering.
+Den konfigurerbare indstilling for politikker for automatisk mærkning af mails findes på siden **Yderligere indstillinger for mail** . Denne side vises, når du har valgt en følsomhedsmærkat for en politik for automatisk mærkning, der indeholder Exchange-placeringen.
 
-## <a name="how-to-configure-auto-labeling-for-office-apps"></a>Sådan konfigurerer du automatisk mærkning for Office apps
+## <a name="how-to-configure-auto-labeling-for-office-apps"></a>Sådan konfigurerer du automatisk mærkning for Office-apps
 
-Hvis du vil have indbygget mærkning i Office apps, skal du kontrollere de [minimumversioner, der kræves](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) til automatisk mærkning i Office apps.
+Hvis du vil have indbygget mærkat i Office-apps, skal du kontrollere de [minimumversioner, der kræves](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps) til automatisk mærkning i Office-apps.
 
 Azure Information Protection unified labeling-klienten understøtter kun automatisk mærkning for indbyggede og brugerdefinerede følsomme infotyper og understøtter ikke klassificeringstyper, der kan oplæres, eller følsomme infotyper, der bruger EDM (Exact Data Match) eller navngivne enheder.
 
-Indstillingerne for automatisk mærkning af Office apps er tilgængelige, når du [opretter eller redigerer en følsomhedsmærkat](create-sensitivity-labels.md). Sørg for **, at Filer & mails** er valgt for etikettens område:
+Indstillingerne for automatisk mærkning af Office-apps er tilgængelige, når du [opretter eller redigerer en følsomhedsmærkat](create-sensitivity-labels.md). Sørg for **, at Filer & mails** er valgt for etikettens område:
 
 ![Indstillinger for følsomhedsmærkatområde for filer og mails.](../media/filesandemails-scope-options-sensitivity-label.png)
 
 Når du bevæger dig gennem konfigurationen, kan du se siden **Automatisk mærkning af filer og mails** , hvor du kan vælge på en liste over følsomme infotyper eller klassificeringer, der kan oplæres:
 
-![Etiketbetingelser for automatisk mærkning i Office apps.](../media/sensitivity-labels-conditions.png)
+![Mærkatbetingelser for automatisk mærkning i Office-apps.](../media/sensitivity-labels-conditions.png)
 
 Når denne følsomhedsmærkat anvendes automatisk, får brugeren vist en meddelelse i deres Office-app. Eksempel:
 
@@ -160,7 +160,7 @@ Når denne følsomhedsmærkat anvendes automatisk, får brugeren vist en meddele
 
 Når du vælger indstillingen **Følsomme oplysningstyper** , får du vist den samme liste over typer af følsomme oplysninger, som når du opretter en DLP-politik (forebyggelse af datatab). Så du kan f.eks. automatisk anvende mærkaten Meget fortroligt på indhold, der indeholder kundernes personlige oplysninger, f.eks. kreditkortnumre, cpr-numre eller pasnumre:
 
-![Følsomme oplysningstyper til automatisk mærkning i Office apps.](../media/sensitivity-labels-sensitive-info-types.png)
+![Følsomme infotyper til automatisk mærkning i Office-apps.](../media/sensitivity-labels-sensitive-info-types.png)
 
 På samme måde som når du konfigurerer DLP-politikker, kan du tilpasse din betingelse ved at ændre antallet af forekomster og matche nøjagtigheden. Eksempel:
 
@@ -174,7 +174,7 @@ Du kan få mere at vide om disse konfigurationsindstillinger i dokumentationen t
 På samme måde som med konfiguration af DLP-politik kan du vælge, om en betingelse skal registrere alle følsomme oplysningstyper eller blot én af dem. Hvis du vil gøre dine betingelser mere fleksible eller komplekse, kan du tilføje [grupper og bruge logiske operatorer mellem grupperne](data-loss-prevention-policies.md).
 
 > [!NOTE]
-> Automatisk mærkning baseret på brugerdefinerede følsomme oplysningstyper gælder kun for nyligt oprettet eller ændret indhold i OneDrive og SharePoint og ikke for eksisterende indhold. Denne begrænsning gælder også for politi til automatisk mærkning.
+> Automatisk mærkning, der er baseret på brugerdefinerede følsomme oplysningstyper, gælder kun for nyligt oprettet eller ændret indhold i OneDrive og SharePoint. ikke til eksisterende indhold. Denne begrænsning gælder også for politi til automatisk mærkning.
 
 #### <a name="custom-sensitive-information-types-with-exact-data-match"></a>Brugerdefinerede typer følsomme oplysninger med nøjagtigt datamatch
 
@@ -184,7 +184,7 @@ Hvis du konfigurerer en følsomhedsmærkat med kun EDM for betingelser for føls
 
 ### <a name="configuring-trainable-classifiers-for-a-label"></a>Konfiguration af klassificeringer, der kan oplæres, for en etiket
 
-Hvis du bruger denne indstilling med Microsoft 365 Apps til Windows version 2106 eller nyere eller Microsoft 365 Apps til Mac version 16.50 eller nyere, skal du sørge for, at du har publiceret i din lejer mindst én anden følsomhedsmærkat, der er konfigureret til automatisk mærkning og [indstillingen følsomme infotyper](#configuring-sensitive-info-types-for-a-label). Dette krav er ikke nødvendigt, når du bruger nyere versioner på disse platforme.
+Hvis du bruger denne indstilling sammen med Microsoft 365 Apps til Windows version 2106 eller nyere eller Microsoft 365 Apps til Mac version 16.50 eller nyere, skal du sørge for, at du har publiceret i din lejer mindst én anden følsomhedsmærkat, der er konfigureret til automatisk mærkning og [indstillingen følsomme infotyper](#configuring-sensitive-info-types-for-a-label). Dette krav er ikke nødvendigt, når du bruger nyere versioner på disse platforme.
 
 Når du vælger indstillingen **Klassificeringer, der kan oplæres** , skal du vælge en eller flere af de forudoplærte eller brugerdefinerede klassificeringer, der kan oplæres:
 
@@ -207,7 +207,7 @@ Her er et eksempel på en prompt fra Azure Information Protection Unified Labeli
 
 ### <a name="when-automatic-or-recommended-labels-are-applied"></a>Når der anvendes automatiske eller anbefalede mærkater
 
-Implementeringen af automatisk og anbefalet mærkning i Office apps afhænger af, om du bruger mærkning, der er indbygget i Office, eller Azure Information Protection Unified-mærkatklienten. I begge tilfælde:
+Implementeringen af automatisk og anbefalet mærkning i Office-apps afhænger af, om du bruger mærkning, der er indbygget i Office, eller Azure Information Protection Unified Labeling-klienten. I begge tilfælde:
 
 - Du kan ikke bruge automatisk mærkning til dokumenter og mails, der tidligere blev manuelt mærket eller tidligere automatisk mærket med en højere følsomhed. Husk, at du kun kan anvende en enkelt følsomhedsmærkat på et dokument eller en mail (ud over en enkelt opbevaringsmærkat).
 
@@ -215,15 +215,15 @@ Implementeringen af automatisk og anbefalet mærkning i Office apps afhænger af
 
 Specifik til indbygget mærkning:
 
-- Det er ikke alle Office apps, der understøtter automatisk (og anbefalet) mærkning. Du kan få flere oplysninger under [Understøttelse af egenskaber for følsomhedsmærkat i apps](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
+- Det er ikke alle Office-apps, der understøtter automatisk (og anbefalet) mærkning. Du kan få flere oplysninger under [Understøttelse af egenskaber for følsomhedsmærkat i apps](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
 
 - For anbefalede mærkater i skrivebordsversionerne af Word markeres det følsomme indhold, der udløste anbefalingen, så brugerne kan gennemse og fjerne det følsomme indhold i stedet for at anvende den anbefalede følsomhedsmærkat.
 
-- Du kan finde oplysninger om, hvordan disse mærkater anvendes i Office apps, f.eks. skærmbilleder, og hvor følsomme oplysninger registreres, under [Anvend eller anbefal automatisk følsomhedsmærkater på dine filer og mails i Office](https://support.microsoft.com/office/automatically-apply-or-recommend-sensitivity-labels-to-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1).
+- Du kan finde oplysninger om, hvordan disse mærkater anvendes i Office-apps, f.eks. skærmbilleder, og hvordan følsomme oplysninger registreres, under [Anvend eller anbefal automatisk følsomhedsmærkater på dine filer og mails i Office](https://support.microsoft.com/office/automatically-apply-or-recommend-sensitivity-labels-to-your-files-and-emails-in-office-622e0d9c-f38c-470a-bcdb-9e90b24d71a1).
 
 Specifik til Azure Information Protection Unified Labeling-klienten:
 
-- Automatisk og anbefalet mærkning gælder for Word, Excel og PowerPoint, når du gemmer et dokument, og for at Outlook, når du sender en mail.
+- Automatisk og anbefalet mærkat gælder for Word, Excel og PowerPoint, når du gemmer et dokument, og i Outlook, når du sender en mail.
 
 - Hvis Outlook skal understøtte anbefalet mærkning, skal du først konfigurere en [avanceret politikindstilling](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#enable-recommended-classification-in-outlook).
 
@@ -244,7 +244,7 @@ Da politikker for automatisk mærkning ikke understøtter klassificeringer, der 
 
 Selvom der automatisk oprettes en politik for automatisk mærkning for dig ved automatisk at udfylde de værdier, du skal vælge manuelt, hvis du har oprettet politikken fra bunden, kan du stadig få vist og redigere værdierne, før de gemmes.
 
-Som standard er alle placeringer for SharePoint, OneDrive og Exchange inkluderet i politikken for automatisk mærkat, og når politikken gemmes, køres den i [simuleringstilstand](#learn-about-simulation-mode). Der er ingen kontrol af, at du har [aktiveret følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md), hvilket er en af forudsætningerne for, at automatisk mærkning kan anvendes på indhold i SharePoint og OneDrive.
+Alle placeringer for SharePoint, OneDrive og Exchange er som standard inkluderet i politikken for automatisk mærkat, og når politikken gemmes, køres den i [simuleringstilstand](#learn-about-simulation-mode). Der er ingen kontrol af, at du har [aktiveret følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md), hvilket er en af forudsætningerne for, at automatisk mærkning kan anvendes på indhold i SharePoint og OneDrive.
 
 ## <a name="how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange"></a>Sådan konfigurerer du politikker for automatisk mærkning for SharePoint, OneDrive og Exchange
 
@@ -253,23 +253,23 @@ Sørg for, at du er opmærksom på forudsætningerne, før du konfigurerer polit
 ### <a name="prerequisites-for-auto-labeling-policies"></a>Forudsætninger for politikker for automatisk mærkning
 
 - Simuleringstilstand:
-  - Overvågning af Microsoft 365 skal være aktiveret. Hvis du har brug for at aktivere overvågning, eller hvis du ikke er sikker på, om overvågning allerede er aktiveret, skal du se [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md).
+  - Overvågning for Microsoft 365 skal være aktiveret. Hvis du har brug for at aktivere overvågning, eller hvis du ikke er sikker på, om overvågning allerede er aktiveret, skal du se [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md).
   - Hvis du vil have vist fil- eller mailindhold i kildevisningen, skal du have rollen **Indholdsfremviser til dataklassificering**, som er inkluderet i rollegruppen **Indholdsfremviser i Indholdsoversigt** eller **Information Protection** og **Information Protection Rollegrupper for efterforskere** (i øjeblikket i prøveversion). Uden den påkrævede rolle kan du ikke se indholdsruden, når du vælger et element under fanen **Matchende elementer** . Globale administratorer har ikke denne rolle som standard.
 
 - Sådan navngiver du filer automatisk i SharePoint og OneDrive:
-  - Du har [aktiveret følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+  - Du har [aktiveret følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
   - På det tidspunkt, hvor politikken for automatisk mærkning kører, må filen ikke være åben af en anden proces eller bruger. En fil, der er tjekket ud til redigering, er omfattet af denne kategori.
 
 - Hvis du planlægger at bruge [brugerdefinerede typer følsomme oplysninger](sensitive-information-type-learn-about.md) i stedet for de indbyggede følsomhedstyper:
-  - Brugerdefinerede typer af oplysninger om følsomhed gælder kun for indhold, der tilføjes eller ændres i SharePoint eller OneDrive, når de brugerdefinerede typer af følsomhedsoplysninger er oprettet.
+  - Brugerdefinerede typer af følsomhedsoplysninger gælder kun for indhold, der tilføjes eller ændres i SharePoint eller OneDrive, når de brugerdefinerede typer af følsomhedsoplysninger er oprettet.
   - Hvis du vil teste nye brugerdefinerede følsomme oplysningstyper, skal du oprette dem, før du opretter politikken for automatisk mærkning og derefter oprette nye dokumenter med eksempeldata til test.
 
 - En eller flere følsomhedsmærkater [, der er oprettet og publiceret](create-sensitivity-labels.md) (til mindst én bruger), som du kan vælge til politikker for automatisk mærkning. For disse mærkater:
-  - Det er ligegyldigt, om mærkatindstillingen for automatisk mærkning i Office apps er slået til eller fra, fordi denne etiketindstilling supplerer politikker for automatisk mærkning, som forklaret i indledningen.
+  - Det er ligegyldigt, om mærkatindstillingen for automatisk mærkning i Office-apps er slået til eller fra, fordi denne etiketindstilling supplerer politikker for automatisk mærkning, som forklaret i indledningen.
   - Hvis de navne, du vil bruge til automatisk mærkning, er konfigureret til at bruge visuelle markeringer (sidehoveder, sidefødder, vandmærker), skal du være opmærksom på, at disse ikke anvendes på dokumenter.
   - Hvis mærkaterne anvender [kryptering](encryption-sensitivity-labels.md):
-    - Når politikken for automatisk mærkning indeholder placeringer for SharePoint eller OneDrive, skal mærkaten konfigureres for indstillingen **Tildel tilladelser nu**, og **Brugeradgang til indhold udløber** skal være angivet til **Aldrig**.
-    - Når politikken for automatisk mærkning kun er til Exchange, kan mærkaten konfigureres for enten **Tildel tilladelser nu** eller **Lad brugere tildele tilladelser** (for indstillingerne Videresend ikke eller Encrypt-Only).
+    - Når politikken for automatisk mærkning indeholder placeringer for SharePoint eller OneDrive, skal mærkaten være konfigureret for indstillingen **Tildel tilladelser nu** , og **Brugeradgang til indhold udløber** skal være angivet til **Aldrig**.
+    - Når politikken for automatisk mærkning kun er til Exchange, kan mærkaten konfigureres for enten **Tildel tilladelser nu** eller **Lad brugere tildele tilladelser** (for indstillingerne Videresend ikke eller Encrypt-Only). Du kan ikke automatisk anvende en etiket, der er [konfigureret til at anvende S/MIME-beskyttelse](sensitivity-labels-office-apps.md#configure-a-label-to-apply-smime-protection-in-outlook).
 
 ### <a name="learn-about-simulation-mode"></a>Få mere at vide om simuleringstilstand
 
@@ -289,15 +289,15 @@ Arbejdsproces for en politik for automatisk mærkning:
 
 5. Udrul i produktion.
 
-Den simulerede installation kører som WhatIf-parameteren for PowerShell. Du får vist resultater, der er rapporteret, som om politikken for automatisk mærkning har anvendt den valgte etiket ved hjælp af de regler, du har defineret. Du kan derefter tilpasse dine regler for nøjagtighed, hvis det er nødvendigt, og køre simuleringen igen. Men da automatisk mærkning af Exchange gælder for mails, der sendes og modtages i stedet for mails, der er gemt i postkasser, skal du ikke forvente, at resultaterne for mail i en simulering er konsistente, medmindre du kan sende og modtage præcis de samme mails.
+Den simulerede installation kører som WhatIf-parameteren for PowerShell. Du får vist resultater, der er rapporteret, som om politikken for automatisk mærkning har anvendt den valgte etiket ved hjælp af de regler, du har defineret. Du kan derefter tilpasse dine regler for nøjagtighed, hvis det er nødvendigt, og køre simuleringen igen. Men da automatisk mærkning for Exchange gælder for mails, der sendes og modtages i stedet for mails, der er gemt i postkasser, skal du ikke forvente, at resultaterne for mail i en simulering er konsistente, medmindre du kan sende og modtage præcis de samme mails.
 
-I simuleringstilstand kan du også gradvist øge omfanget af politikken for automatisk mærkning før udrulningen. Du kan f.eks. starte med en enkelt placering, f.eks. et SharePoint websted, med et enkelt dokumentbibliotek. Derefter skal du med iterative ændringer øge omfanget til flere websteder og derefter til en anden placering, f.eks. OneDrive.
+I simuleringstilstand kan du også gradvist øge omfanget af politikken for automatisk mærkning før udrulningen. Du kan f.eks. starte med en enkelt placering, f.eks. et SharePoint-websted, med et enkelt dokumentbibliotek. Derefter skal du med iterative ændringer øge omfanget til flere websteder og derefter til en anden placering, f.eks. OneDrive.
 
 Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den tid, det tager at køre politikken for automatisk mærkning, for at hjælpe dig med at planlægge og planlægge, hvornår du skal køre den uden simuleringstilstand.
 
 ### <a name="creating-an-auto-labeling-policy"></a>Oprettelse af en politik for automatisk mærkning
 
-1. Gå til følsomhedsmærkater på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>:
+1. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal skal du</a> navigere til følsomhedsmærkater:
 
     - **Løsninger** >  **Information Protection**
 
@@ -318,17 +318,17 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
 
 5. For siden **Navngiv din politik for automatisk mærkning**: Angiv et entydigt navn og eventuelt en beskrivelse for at hjælpe med at identificere det automatisk anvendte navn, de placeringer og betingelser, der identificerer det indhold, der skal navngives.
 
-6. På siden **Vælg de placeringer, hvor du vil anvende etiketten**: Vælg, og angiv placeringer for Exchange, SharePoint og OneDrive. Hvis du ikke vil beholde standarden for **Alle** , der er inkluderet for dine valgte placeringer, skal du vælge linket for at vælge bestemte instanser, der skal medtages, eller vælge linket for at vælge bestemte forekomster, der skal udelades. Vælg derefter **Næste**.
+6. For siden **Vælg de placeringer, hvor du vil anvende etiketten**: Vælg og angiv placeringer for Exchange, SharePoint og OneDrive. Hvis du ikke vil beholde standarden for **Alle** , der er inkluderet for dine valgte placeringer, skal du vælge linket for at vælge bestemte instanser, der skal medtages, eller vælge linket for at vælge bestemte forekomster, der skal udelades. Vælg derefter **Næste**.
 
     ![Vælg siden Placeringer til konfiguration af automatisk mærkning.](../media/locations-auto-labeling-wizard.png)
     
     Hvis du ændrer standardindstillingerne ved hjælp af **Inkluderet** eller **Udeladt**:
     
-    - For den **Exchange** placering anvendes politikken i henhold til afsenderadressen for de angivne modtagere. For det meste vil du beholde standardindstillingen **Alle** , der er inkluderet **i Ingen** udeladt. Denne konfiguration er velegnet, selvom du tester for et undersæt af brugere. I stedet for at angive dit undersæt af brugere her, kan du bruge de avancerede regler i næste trin til at konfigurere betingelser til at inkludere eller udelade modtagere i din organisation. Ellers kan du ændre standardindstillingerne her:
+    - For **Exchange-placeringen** anvendes politikken i henhold til afsenderadressen for de angivne modtagere. For det meste vil du beholde standardindstillingen **Alle** , der er inkluderet **i Ingen** udeladt. Denne konfiguration er velegnet, selvom du tester for et undersæt af brugere. I stedet for at angive dit undersæt af brugere her, kan du bruge de avancerede regler i næste trin til at konfigurere betingelser til at inkludere eller udelade modtagere i din organisation. Ellers kan du ændre standardindstillingerne her:
         -  Hvis du ændrer standarden for **Alle** inkluderet og i stedet vælger bestemte brugere eller grupper, vil mails, der sendes uden for din organisation, være undtaget fra politikken. 
         -  Hvis du bevarer standardindstillingen **Alle** inkluderet, men angiver brugere eller grupper, der skal udelades, vil mails, som disse udeladte brugere sender, være undtaget fra politikken, men ikke mail, som de modtager.
     
-    - Hvis du vil have OneDrive konti, skal du se [Hent en liste over alle url-adresser til OneDrive i din organisation](/onedrive/list-onedrive-urls) for at hjælpe dig med at angive individuelle OneDrive konti, der skal medtages eller udelades.
+    - For OneDrive-konti skal du se [Få en liste over alle bruger-OneDrive-URL-adresser i din organisation](/onedrive/list-onedrive-urls) for at hjælpe dig med at angive individuelle OneDrive-konti, der skal medtages eller udelades.
 
 7. På siden **Konfigurer almindelige eller avancerede regler** : Bevar standarden for **Fælles regler** for at definere regler, der identificerer indhold, der skal navngives på tværs af alle de valgte placeringer. Hvis du har brug for forskellige regler pr. placering, herunder flere indstillinger for Exchange, skal du vælge **Avancerede regler**. Vælg derefter **Næste**.
 
@@ -336,7 +336,7 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
     - I forbindelse med følsomme oplysningstyper kan du vælge både indbyggede og brugerdefinerede typer følsomme oplysninger.
     - For de delte indstillinger kan du kun vælge **med personer i min organisation** eller **med personer uden for min organisation**.
 
-    Hvis din placering er **Exchange**, og du har valgt **Avancerede regler**, er der andre betingelser, som du kan vælge:
+    Hvis din placering er **Exchange** , og du har valgt **Avancerede regler**, er der andre betingelser, som du kan vælge:
     - Afsenderens IP-adresse er
     - Modtagerdomænet er
     - Modtageren er
@@ -357,23 +357,25 @@ Endelig kan du bruge simuleringstilstand til at angive en tilnærmelse af den ti
 
 8. Afhængigt af dine tidligere valg har du nu mulighed for at oprette nye regler ved hjælp af betingelser og undtagelser.
 
-    Konfigurationsindstillingerne for følsomme oplysningstyper er de samme som dem, du vælger til automatisk mærkning af Office apps. Hvis du har brug for flere oplysninger, skal du se [Konfiguration af følsomme oplysningstyper for en mærkat](#configuring-sensitive-info-types-for-a-label).
+    Konfigurationsindstillingerne for følsomme oplysningstyper er de samme som dem, du vælger til automatisk mærkning af Office-apps. Hvis du har brug for flere oplysninger, skal du se [Konfiguration af følsomme oplysningstyper for en mærkat](#configuring-sensitive-info-types-for-a-label).
 
     Når du har defineret alle de regler, du har brug for, og bekræftet, at deres status er slået til, skal du vælge **Næste** for at gå videre til at vælge en etiket, der skal anvendes automatisk.
 
 9. På siden **Vælg en mærkat, der skal anvendes automatisk** : Vælg **+ Vælg en etiket**, vælg en etiket i ruden **Vælg en følsomhedsmærkat** , og vælg derefter **Næste**.
 
-10. Hvis din politik indeholder Exchange placering: Angiv valgfri konfigurationer på siden **Yderligere indstillinger for mail**:
+10. Hvis din politik indeholder Exchange-placeringen: Angiv valgfri konfigurationer på siden **Yderligere indstillinger for mail** :
     
     - **Erstat automatisk eksisterende mærkater med samme eller lavere prioritet**: Gælder for både indgående og udgående mails, når du vælger denne indstilling, sikrer det, at der altid anvendes en matchende følsomhedsmærkat. Hvis du ikke vælger denne indstilling, anvendes der ikke en matchende følsomhedsmærkat på mails, der har en eksisterende følsomhedsmærkat med [en højere prioritet](sensitivity-labels.md#label-priority-order-matters) , eller som er manuelt mærket.
     
-    - **Anvend kryptering på mails, der modtages uden for din organisation**: Når du vælger denne indstilling, skal du tildele en [Rights Management ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) for at sikre, at en autoriseret person i din organisation har [brugsrettigheder](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) til fuld kontrol for mails, der er sendt fra din uden for organisationen, og dine politikmærkater med kryptering. Denne rolle kan være nødvendig for senere at fjerne krypteringen eller tildele forskellige brugsrettigheder til brugere i din organisation.
+    - **Anvend kryptering på mails, der modtages uden for din organisation**: Når du vælger denne indstilling, skal du tildele en [Rights Management-ejer](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) for at sikre, at en autoriseret person i organisationen har [brugsrettigheder](/azure/information-protection/configure-usage-rights#usage-rights-and-descriptions) til fuld kontrol for mails, der er sendt fra din uden for organisationen, og dine politikmærkater med kryptering. Denne rolle kan være nødvendig for senere at fjerne krypteringen eller tildele forskellige brugsrettigheder til brugere i din organisation.
         
-        For **Tildel en Rights Management ejer** skal du angive en enkelt bruger efter en mailadresse, der ejes af din organisation. Angiv ikke en mailkontakt, en delt postkasse eller en gruppetype, da disse ikke understøttes for denne rolle.
+        For **Tildel en Rights Management-ejer** skal du angive en enkelt bruger efter en mailadresse, der ejes af din organisation. Angiv ikke en mailkontakt, en delt postkasse eller en gruppetype, da disse ikke understøttes for denne rolle.
 
-10. På siden **Beslut, om du vil teste politikken nu eller senere** : Vælg **Kør politik i simuleringstilstand** , hvis du er klar til at køre politikken for automatisk mærkning nu i simuleringstilstand. Ellers skal du vælge **Forlad politik slået fra**. Vælg **Næste**:
-
+10. På siden **Beslut, om du vil teste politikken nu eller senere** : Vælg **Kør politik i simuleringstilstand** , hvis du er klar til at køre politikken for automatisk mærkning nu i simuleringstilstand. Beslut derefter, om politikken automatisk skal aktiveres, hvis den ikke redigeres i syv dage:
+    
     ![Test politikken for automatisk mærkning, der er konfigureret.](../media/simulation-mode-auto-labeling-wizard.png)
+    
+    Hvis du ikke er klar til at køre simulering, skal du vælge **Forlad politik slået fra**. 
 
 11. På **oversigtssiden** : Gennemse konfigurationen af politikken for automatisk mærkning, foretag de nødvendige ændringer, og fuldfør konfigurationen.
 
@@ -393,7 +395,7 @@ Politikker for automatisk mærkning kører løbende, indtil de slettes. Nye og �
 
 ### <a name="monitoring-your-auto-labeling-policy"></a>Overvågning af politikken for automatisk mærkning
 
-Når politikken for automatisk mærkning er slået til, kan du få vist status for mærkater for filer på de valgte SharePoint og OneDrive placeringer. Mails er ikke inkluderet i status for mærkat, fordi de automatisk er mærket, som de sendes.
+Når politikken for automatisk mærkning er slået til, kan du få vist status for mærkater for filer på dine valgte SharePoint- og OneDrive-placeringer. Mails er ikke inkluderet i status for mærkat, fordi de automatisk er mærket, som de sendes.
 
 Status for mærkning omfatter de filer, der skal mærkes af politikken, de filer, der er mærket inden for de seneste syv dage, og det samlede antal filer, der er mærket. På grund af den maksimale mærkat på 25.000 filer om dagen giver disse oplysninger dig indblik i den aktuelle status for mærkaten for din politik, og hvor mange filer der stadig skal mærkes.
 
@@ -409,7 +411,7 @@ Du kan også se resultaterne af politikken for automatisk mærkning ved hjælp a
 
 ### <a name="use-powershell-for-auto-labeling-policies"></a>Brug PowerShell til politikker for automatisk mærkning
 
-Du kan bruge [Security & Compliance PowerShell](/powershell/exchange/scc-powershell) til at oprette og konfigurere politikker for automatisk mærkning. Det betyder, at du fuldt ud kan scripte oprettelsen og vedligeholdelsen af politikkerne for automatisk mærkning, hvilket også giver en mere effektiv metode til angivelse af flere URL-adresser til OneDrive og SharePoint placeringer.
+Du kan bruge [Security & Compliance PowerShell](/powershell/exchange/scc-powershell) til at oprette og konfigurere politikker for automatisk mærkning. Det betyder, at du fuldt ud kan scripte oprettelse og vedligeholdelse af politikker for automatisk mærkning, hvilket også giver en mere effektiv metode til angivelse af flere URL-adresser til OneDrive- og SharePoint-placeringer.
 
 Før du kører kommandoerne i PowerShell, skal du først [oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
@@ -419,7 +421,7 @@ Sådan opretter du en ny politik for automatisk mærkning:
 New-AutoSensitivityLabelPolicy -Name <AutoLabelingPolicyName> -SharePointLocation "<SharePointSiteLocation>" -ApplySensitivityLabel <Label> -Mode TestWithoutNotifications
 ```
 
-Denne kommando opretter en politik for automatisk mærkning for et SharePoint websted, du angiver. Hvis du vil have en OneDrive placering, skal du i stedet bruge parameteren *OneDriveLocation*.
+Denne kommando opretter en politik for automatisk mærkning for et SharePoint-websted, som du angiver. For en OneDrive-placering skal du i stedet bruge parameteren *OneDriveLocation* .
 
 Sådan føjer du flere websteder til en eksisterende politik for automatisk mærkning:
 
@@ -428,7 +430,7 @@ $spoLocations = @("<SharePointSiteLocation1>","<SharePointSiteLocation2>")
 Set-AutoSensitivityLabelPolicy -Identity <AutoLabelingPolicyName> -AddSharePointLocation $spoLocations -ApplySensitivityLabel <Label> -Mode TestWithoutNotifications
 ```
 
-Denne kommando angiver de nye SharePoint URL-adresser i en variabel, der derefter føjes til en eksisterende politik for automatisk mærkning. Hvis du vil tilføje OneDrive placeringer i stedet, skal du bruge parameteren *AddOneDriveLocation* med en anden variabel, f.eks. *$OneDriveLocations*.
+Denne kommando angiver de nye SharePoint URL-adresser i en variabel, der derefter føjes til en eksisterende politik for automatisk mærkning. Hvis du vil tilføje OneDrive-placeringer i stedet, skal du bruge parameteren *AddOneDriveLocation* med en anden variabel, f.eks. *$OneDriveLocations*.
 
 Sådan opretter du en ny politikregel for automatisk mærkning:
 
@@ -448,18 +450,18 @@ Du kan finde flere oplysninger om de PowerShell-cmdlet'er, der understøtter pol
 - [Set-AutoSensitivityLabelPolicy](/powershell/module/exchange/set-autosensitivitylabelpolicy)
 - [Set-AutoSensitivityLabelRule](/powershell/module/exchange/set-autosensitivitylabelrule)
 
-## <a name="tips-to-increase-labeling-reach"></a>Tips for at øge rækkevidden af mærkater
+## <a name="tips-to-increase-labeling-reach"></a>Tip til at øge rækkevidden af mærkater
 
-Selvom automatisk mærkning er en af de mest effektive måder at klassificere, navngive og beskytte Office filer, som din organisation ejer, skal du kontrollere, om du kan supplere den med en af følgende metoder for at øge rækkevidden af mærkater:
+Selvom automatisk mærkning er en af de mest effektive måder at klassificere, navngive og beskytte Office-filer på, som din organisation ejer, skal du kontrollere, om du kan supplere den med en af følgende metoder for at øge rækkevidden af mærkater:
 
-- Med SharePoint Syntex kan du [anvende en følsomhedsmærkat på en model til dokumentforståelse](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model), så identificerede dokumenter i et SharePoint bibliotek automatisk mærkes.
+- Med SharePoint Syntex kan du [anvende en følsomhedsmærkat på en model til dokumentforståelse](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model), så identificerede dokumenter i et SharePoint-bibliotek automatisk mærkes.
 
 - Når du bruger [Azure Information Protection Unified-mærkatklienten](/azure/information-protection/rms-client/aip-clientv2):
 
-  - For filer i datalagre i det lokale miljø, f.eks. netværksshares og SharePoint serverbiblioteker: Brug [scanneren](/azure/information-protection/deploy-aip-scanner) til at finde følsomme oplysninger i disse filer, og mærk dem korrekt. Hvis du planlægger at overføre eller overføre disse filer til SharePoint i Microsoft 365, kan du bruge scanneren til at navngive filerne, før du flytter dem til cloudmiljøet.
+  - For filer i datalagre i det lokale miljø, f.eks. netværksshares og SharePoint Server-biblioteker: Brug [scanneren](/azure/information-protection/deploy-aip-scanner) til at finde følsomme oplysninger i disse filer, og mærk dem korrekt. Hvis du planlægger at overføre eller overføre disse filer til SharePoint i Microsoft 365, skal du bruge scanneren til at navngive filerne, før du flytter dem til cloudmiljøet.
 
   - Hvis du har brugt en anden etiketløsning, før du bruger følsomhedsmærkater: Brug PowerShell og [en avanceret indstilling til at genbruge mærkater](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#migrate-labels-from-secure-islands-and-other-labeling-solutions) fra disse løsninger.
 
 - Tilskynd [manuel mærkning,](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) når brugerne har fået oplæring af, hvilke følsomhedsmærkater der skal anvendes. Når du er sikker på, at brugerne forstår, hvilken mærkat der skal anvendes, kan du overveje at konfigurere en standardmærkat og obligatorisk mærkning som [politikindstillinger](sensitivity-labels.md#what-label-policies-can-do).
 
-Overvej desuden at [markere nye filer som følsomme som standard](/sharepoint/sensitive-by-default) i SharePoint for at forhindre gæster i at få adgang til nyligt tilføjede filer, indtil mindst én DLP-politik scanner indholdet af filen.
+Du kan også overveje at [markere nye filer som følsomme som standard](/sharepoint/sensitive-by-default) i SharePoint for at forhindre gæster i at få adgang til nyligt tilføjede filer, indtil mindst én DLP-politik scanner indholdet af filen.

@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 764d1c84212e240332449a1a107042a83be01b32
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 912254e5827815f796560bc6979856f4545b0ae9
+ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554346"
+ms.locfileid: "66556806"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
 
@@ -119,7 +119,7 @@ Hvis du vil kopiere en politik og oprette en ny politik, skal du fuldføre følg
 
 ## <a name="policy-activity-detection"></a>Registrering af politikaktivitet
 
-Kommunikation scannes hver time fra det tidspunkt, hvor politikkerne oprettes. Hvis du f.eks. opretter en upassende indholdspolitik kl. 11:00, indsamler politikken kommunikationsoverholdelsessignaler hver time, der starter fra det tidspunkt, hvor politikken blev oprettet. Redigering af en politik ændres ikke denne gang. Hvis du vil have vist den seneste scanningsdato og -klokkeslæt for en politik, skal du gå til kolonnen Seneste politikscanning på siden Politik. Når du har oprettet en ny politik, kan det tage op til en time at få vist den første dato og det første klokkeslæt for politikscanning. Datoen og klokkeslættet for den seneste scanning konverteres til tidszonen i dit lokale system.
+Kommunikation scannes hver time fra det tidspunkt, hvor politikkerne oprettes. Hvis du f.eks. opretter en upassende indholdspolitik kl. 11:00, indsamler politikken kommunikationsoverholdelsessignaler hver time, der starter fra det tidspunkt, hvor politikken blev oprettet. Redigering af en politik ændres ikke denne gang. Hvis du vil have vist den seneste scanningsdato og -klokkeslæt for en politik, skal du gå til kolonnen *Seneste politikscanning* på siden **Politik** . Når du har oprettet en ny politik, kan det tage op til en time at få vist den første dato og det første klokkeslæt for politikscanning. Datoen og klokkeslættet for den seneste scanning konverteres til tidszonen i dit lokale system.
 
 I følgende tabel beskrives den tid, det skal registreres for understøttede indholdstyper:
 
@@ -138,7 +138,7 @@ I følgende tabel beskrives den tid, det skal registreres for understøttede ind
 
 For eksisterende politikker, der er oprettet før den 31. juli 2022, kan det tage op til 24 timer at registrere meddelelser og gennemse beskeder, der stemmer overens med disse politikker. Hvis du vil reducere ventetiden for disse politikker, [skal du kopiere den eksisterende politik](/microsoft-365/compliance/communication-compliance-policies#copy-a-policy) og oprette en ny politik fra kopien. Hvis du ikke har brug for at gemme data fra den ældre politik, kan de sættes på pause eller slettes.
 
-Hvis du vil identificere en ældre politik, skal du gennemse kolonnen Seneste politikscanning på siden Politik. Ældre politikker viser en fuld dato for scanningen, mens politikker, der er oprettet efter den 31. juli 2022, vises for 1 time siden for scanningen. En anden mulighed for at reducere ventetiden er at vente indtil den 31. december 2022 på, at dine eksisterende politikker automatisk overføres til de nye registreringskriterier.
+Hvis du vil identificere en ældre politik, skal du gennemse kolonnen *Seneste politikscanning* på siden **Politik** . Ældre politikker viser en fuld dato for scanningen, mens politikker, der er oprettet efter den 31. juli 2022, vises for *1 time siden* for scanningen. En anden mulighed for at reducere ventetiden er at vente indtil den 31. december 2022 på, at dine eksisterende politikker automatisk overføres til de nye registreringskriterier.
 
 ## <a name="storage-limit-notification-preview"></a>Besked om lagergrænse (prøveversion)
 
