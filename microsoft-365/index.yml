@@ -13,12 +13,12 @@ metadata:
   ms.author: samanro
   ms.date: 06/08/2021
   ms.localizationpriority: high
-  ms.openlocfilehash: d853086e40898c3f74e653793295e921c062659e
-  ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+  ms.openlocfilehash: 2fb99f9ee947d245736898ff056843f08b367a8c
+  ms.sourcegitcommit: 8cd230e243eba452b27f725d66152becb6aff49b
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 06/29/2022
-  ms.locfileid: "66491607"
+  ms.lasthandoff: 06/30/2022
+  ms.locfileid: "66563159"
 highlightedContent:
   items:
   - title: Konfigurer din infrastruktur til hybridarbejde
@@ -106,18 +106,18 @@ productDirectory:
   - title: Beskyt dine oplysninger, og overhold regler
     imageSrc: https://docs.microsoft.com/office/media/icons/certificate-blue.svg
     links:
-    - url: compliance/insider-risk-solution-overview.md
-      text: Insider-risikoløsninger i Microsoft Purview
-    - url: compliance/compliance-quick-tasks.md
-      text: Hurtige opgaver for at komme i gang med Microsoft Purview
-    - url: compliance/information-protection.md
-      text: Azure Information Protection
-    - url: compliance/manage-data-governance.md
-      text: Administrer informationsstyring
-    - url: compliance/auditing-solutions-overview.md
+    - url: /microsoft-365/compliance/purview-compliance
+      text: Løsninger til Microsoft Purview-risiko og overholdelse af angivne standarder
+    - url: /microsoft-365/compliance/insider-risk-solution-overview
+      text: Insider-risikoløsninger
+    - url: /microsoft-365/compliance/information-protection-solution
+      text: Løsninger til beskyttelse af oplysninger
+    - url: /microsoft-365/compliance/data-governance-solution
+      text: Løsninger til administration af datalivscyklus
+    - url: /microsoft-365/compliance/ediscovery
+      text: eDiscovery-løsninger
+    - url: /microsoft-365/compliance/auditing-solutions-overview
       text: Overvågningsløsninger
-    - url: compliance/overview-ediscovery-20.md
-      text: eDiscovery (Premium)
   - title: Udrul og administrer dine skriveborde og enheder
     imageSrc: https://docs.microsoft.com/office/media/icons/deploy-blue.svg
     links:
