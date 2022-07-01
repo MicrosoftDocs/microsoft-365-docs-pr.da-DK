@@ -1,5 +1,5 @@
 ---
-title: Konfigurationsanalyse til Microsoft Purview
+title: Configuration Analyzer til Microsoft Purview
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,18 +17,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå, hvordan du bruger Konfigurationsanalyse til Microsoft Purview til at komme hurtigt i gang med Microsoft Purview Compliance Manager.
-ms.openlocfilehash: 5d9d786ba88792ac827252ea7ff257d1f80fa70b
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: d2e5fbc0d928fb5931139a274cf9cce5bdc4d983
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554483"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573941"
 ---
 # <a name="configuration-analyzer-for-microsoft-purview-camp"></a>Konfigurationsanalyse til Microsoft Purview (CAMP)
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-**I denne artikel:** Få mere at vide om, hvordan du installerer og kører værktøjet Configuration Analyzer til Microsoft Purview (CAMP) for hurtigt at komme i gang med Microsoft Compliance Manger.
+**I denne artikel:** Få mere at vide om, hvordan du installerer og kører værktøjet Configuration Analyzer til Microsoft Purview (CAMP) for hurtigt at komme i gang med Microsoft Purview Compliance Manger.
 
 ## <a name="compliance-configuration-analyzer-camp-overview"></a>Oversigt over CAMP (Compliance Configuration Analyzer)
 

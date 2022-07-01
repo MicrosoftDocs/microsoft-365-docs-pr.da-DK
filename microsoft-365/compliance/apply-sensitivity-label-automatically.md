@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: 2726a55b05ff27caee3c9739ad9d8604ce1a29d6
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: 79c0ac8873ba23604f394340bb030c1412a6212a
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556911"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574238"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -30,7 +30,7 @@ ms.locfileid: "66556911"
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-> [!TIP]
+> [!NOTE]
 > Du kan få oplysninger om automatisk anvendelse af en følsomhedsmærkat i datatilknytningen [under Mærkat i Microsoft Purview-datatilknytning](/azure/purview/create-sensitivity-label).
 
 Når du opretter en følsomhedsmærkat, kan du automatisk tildele denne mærkat til filer og mails, når den opfylder betingelser, som du angiver.
@@ -79,6 +79,12 @@ Der er to forskellige metoder til automatisk anvendelse af en følsomhedsmærkat
     - Indgående mail markeres, når der er et match med betingelserne for automatisk mærkning. Hvis denne mærkat er konfigureret til [kryptering](encryption-sensitivity-labels.md), anvendes denne kryptering altid, når afsenderen er fra din organisation. Denne kryptering anvendes som standard ikke, når afsenderen er uden for din organisation, men kan anvendes ved at konfigurere **Yderligere indstillinger for mail** og angive en Rights Management-ejer.
     - Når mærkaten anvender kryptering, er Udstederen [af Rights Management og Rights Management-ejeren](/azure/information-protection/configure-usage-rights#rights-management-issuer-and-rights-management-owner) den person, der sender mailen, når afsenderen er fra din egen organisation. Når afsenderen er uden for din organisation, kan du angive en Rights Management-ejer for indgående mail, der er mærket og krypteret af din politik.
     - Hvis mærkaten er konfigureret til at anvende [dynamiske markeringer](sensitivity-labels-office-apps.md#dynamic-markings-with-variables), skal du være opmærksom på, at for indgående mail kan denne konfiguration resultere i, at navnene på personer uden for din organisation vises.
+
+> [!TIP]
+> For nogle nye kunder tilbyder vi automatisk konfiguration af standardindstillinger for automatisk mærkning for både mærkning på klientsiden og servicesidemærkatering. Selvom du ikke er berettiget til denne automatiske konfiguration, kan det være nyttigt at referere til deres konfiguration. Du kan f.eks. manuelt konfigurere eksisterende mærkater og oprette dine egne politikker for automatisk mærkning med de samme indstillinger for at fremskynde udrulningen af mærkater.
+> 
+> Du kan få flere oplysninger under [Standardmærkater og -politikker for Microsoft Purview Information Protection](mip-easy-trials.md).
+
 
 ## <a name="compare-auto-labeling-for-office-apps-with-auto-labeling-policies"></a>Sammenlign automatisk mærkning for Office-apps med politikker for automatisk mærkning
 

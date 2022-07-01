@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Angiv brugertilladelser og roller til Microsoft Purview Compliance Manager, og konfigurer automatisk test af handlinger. Administrer brugerhistorik, og filtrer dashboardvisningen.
-ms.openlocfilehash: c7920a9eac06128f3cf9bfb54645a83296ca7e53
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 76126f9a13716e3ebf48309f8129de6ede4d11e9
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091021"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574041"
 ---
 # <a name="get-started-with-compliance-manager"></a>Kom i gang med Overholdelsesstyring
 
@@ -31,17 +31,17 @@ ms.locfileid: "65091021"
 
 **I denne artikel:** Denne artikel hjælper dig med at konfigurere Overholdelsesstyring. Få mere at vide om, hvordan du **får adgang til** Overholdelsesstyring, **angiver roller og tilladelser** og konfigurerer **automatisk test af forbedringshandlinger**. Gennemgå **dashboardet Overholdelsesstyring** , og forstå hovedsiderne: siden forbedringshandlinger, løsningssiden, vurderingssiden og siden med vurderingsskabeloner.
 
-## <a name="who-can-access-compliance-manager"></a>Who har adgang til Overholdelsesstyring
+## <a name="who-can-access-compliance-manager"></a>Hvem har adgang til Overholdelsesstyring
 
-Overholdelsesstyring er tilgængelig for organisationer med Office 365- og Microsoft 365-licenser og for kunder med amerikanske Government Community Cloud (GCC) Moderate, GCC High og DoD (Department of Defense). Tilgængeligheds- og administrationsfunktioner til vurdering afhænger af din licensaftale.  [Vis oplysninger om tjenestebeskrivelse](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
+Overholdelsesstyring er tilgængelig for organisationer med Office 365- og Microsoft 365-licenser samt for GCC-kunder (US Government Community Cloud) Moderate, GCC High og DoD (Department of Defense). Tilgængeligheds- og administrationsfunktioner til vurdering afhænger af din licensaftale.  [Vis oplysninger om tjenestebeskrivelse](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-compliance-manager).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Den Microsoft 365 globale administrator for din organisation vil sandsynligvis være den første bruger, der har adgang til Overholdelsesstyring. Vi anbefaler, at den globale administrator logger på og angiver brugertilladelser som beskrevet nedenfor, første gang de besøger Overholdelsesstyring.
+Den globale Microsoft 365-administrator for din organisation vil sandsynligvis være den første bruger, der har adgang til Overholdelsesstyring. Vi anbefaler, at den globale administrator logger på og angiver brugertilladelser som beskrevet nedenfor, første gang de besøger Overholdelsesstyring.
 
 ## <a name="sign-in"></a>Log på
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>, og **log på** med din Microsoft 365 globale administratorkonto.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og **log på** med din globale Microsoft 365-administratorkonto.
 2. Vælg **Overholdelsesstyring** i venstre navigationsrude. Du ankommer til [dashboardet Overholdelsesstyring](#understand-the-compliance-manager-dashboard).
 
 Det direkte link til Overholdelse af adgang er [https://compliance.microsoft.com/compliancemanager](https://compliance.microsoft.com/compliancemanager).
@@ -52,14 +52,14 @@ Overholdelsesstyring bruger en rollebaseret RBAC-tilladelsesmodel (Access Contro
 
 ### <a name="where-to-set-permissions"></a>Hvor skal tilladelser angives?
 
-Den person, der har den globale administratorrolle for din organisation, kan angive brugertilladelser for Overholdelsesstyring. Tilladelser kan angives i Microsoft Purview-overholdelsesportalen samt i Azure Active Directory (Azure AD).
+Den person, der har den globale administratorrolle for din organisation, kan angive brugertilladelser for Overholdelsesstyring. Tilladelser kan angives i Microsoft Purview-compliance-portal samt i Azure Active Directory (Azure AD).
 
 > [!NOTE]
-> Kunder i miljøer med GCC (US Government Community) High and Department of Defense (DoD) kan kun angive brugertilladelser og roller for Overholdelsesstyring i Azure AD. Nedenfor kan du se azure AD-instruktioner og rolletypedefinitioner.
+> Kunder i GCC-miljøer (US Government Community) High and Department of Defense (DoD) kan kun angive brugertilladelser og roller for Overholdelsesstyring i Azure AD. Nedenfor kan du se Azure AD instruktioner og definitioner af rolletyper.
 
-Hvis du vil angive tilladelser og tildele roller på Microsoft Purview-overholdelsesportalen, skal du følge nedenstående trin:
+Hvis du vil angive tilladelser og tildele roller i Microsoft Purview-compliance-portal, skal du følge nedenstående trin:
 
-1. Gå til Microsoft Purview-overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**Tilladelser**</a>.
+1. Gå til Microsoft Purview-compliance-portal, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**Tilladelser**</a>.
 
 2. Under rullelisten med overholdelsesportalen skal du vælge **Roller**.
 
@@ -75,19 +75,19 @@ Hvis du vil angive tilladelser og tildele roller på Microsoft Purview-overholde
 
 8. Når du er færdig med at tildele brugere, skal du vælge **Udført** og derefter vælge **Gem** og derefter **Luk**.
 
-#### <a name="more-about-azure-ad"></a>Få mere at vide om Azure AD
+#### <a name="more-about-azure-ad"></a>Mere om Azure AD
 
-Hvis du vil tildele roller og angive tilladelser i Azure AD, skal du se [Tildel administrator- og ikke-administratorroller til brugere med Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
+Hvis du vil tildele roller og angive tilladelser i Azure AD, skal du se [Tildel administratorroller og ikke-administratorroller til brugere med Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).
 
-Brugere med Azure AD-identiteter, der ikke har Office 365 eller Microsoft 365 abonnementer, kan ikke få adgang til Overholdelsesstyring på Microsoft Purview-overholdelsesportalen. Kontakt [cmresearch@microsoft.com](mailto:cmresearch@microsoft.com) for at få hjælp til at få adgang til Overholdelsesstyring.
+Brugere med Azure AD identiteter, der ikke har Office 365- eller Microsoft 365-abonnementer, kan ikke få adgang til Overholdelsesstyring i Microsoft Purview-compliance-portal. Kontakt [cmresearch@microsoft.com](mailto:cmresearch@microsoft.com) for at få hjælp til at få adgang til Overholdelsesstyring.
 
 ### <a name="role-types"></a>Rolletyper
 
-I nedenstående tabel vises de funktioner, der er tilladt af hver rolle i Overholdelsesstyring. I tabellen kan du også se, hvordan hver enkelt [Azure AD-rolle](/azure/active-directory/roles/permissions-reference) knyttes til overholdelsesstyringsroller. Brugerne skal som minimum have læserrollen Overholdelsesstyring eller rollen Global læser i Azure AD for at få adgang til Overholdelsesstyring.
+I nedenstående tabel vises de funktioner, der er tilladt af hver rolle i Overholdelsesstyring. Tabellen viser også, hvordan hver [Azure AD rolle](/azure/active-directory/roles/permissions-reference) knyttes til roller som Overholdelsesstyring. Brugerne skal som minimum have læserrollen Overholdelsesstyring eller Azure AD rolle som global læser for at få adgang til Overholdelsesstyring.
 
-| Brugeren kan: | Rollen Overholdelsesstyring | Azure AD-rolle | 
+| Brugeren kan: | Rollen Overholdelsesstyring | Azure AD rolle | 
 | :------------- | :-------------: | :------------: |
-| **Læs, men rediger ikke data**| Læser til Overholdelsesstyring  | Global læser af Azure AD, Sikkerhedslæser |
+| **Læs, men rediger ikke data**| Læser til Overholdelsesstyring  | Azure AD Global læser, Sikkerhedslæser |
 | **Rediger data**| Bidrag til Overholdelsesstyring | Administrator for overholdelse af angivne standarder |
 | **Rediger testresultater**| Vurdering af overholdelsesstyring | Administrator for overholdelse af angivne standarder |
 | **Administrer vurderinger samt skabelon- og lejerdata**| Administration af Overholdelsesstyring | Overholdelsesadministrator, Administrator af overholdelsesdata, Sikkerhedsadministrator  |
@@ -114,26 +114,34 @@ Du kan starte din prøveversion direkte fra Overholdelsesstyring og konfigurere 
 
 Få mere at vide om, hvordan du kommer i gang med vurderinger, ved at gå til afsnittet [Vurderinger](#assessments-page) nedenfor.
 
-## <a name="settings-for-automated-testing-and-user-history"></a>Indstillinger til automatiseret test og brugerhistorik
+## <a name="settings-for-automated-testing-and-user-history"></a>Indstillinger for automatiseret test og brugerhistorik
 
-Indstillingerne for Overholdelsesstyring i Microsoft Purview-overholdelsesportalen giver dig mulighed for at aktivere og deaktivere automatisk test af forbedringshandlinger. Indstillingerne giver dig også mulighed for at administrere dataene for de brugere, der er knyttet til forbedringshandlinger, herunder muligheden for at tildele forbedringshandlinger til en anden bruger.  Det er kun personer med en global administrator- eller overholdelsesadministratorrolle, der kan få adgang til indstillingerne for Overholdelsesstyring.
+Indstillingerne for Overholdelsesstyring i Microsoft Purview-compliance-portal giver dig mulighed for at aktivere og deaktivere automatisk test af forbedringshandlinger. Indstillingerne giver dig også mulighed for at administrere dataene for de brugere, der er knyttet til forbedringshandlinger, herunder muligheden for at tildele forbedringshandlinger til en anden bruger.  Det er kun personer med en global administrator- eller overholdelsesadministratorrolle, der kan få adgang til indstillingerne for Overholdelsesstyring.
 
 > [!NOTE]
-> Den automatiserede testfunktion er ikke tilgængelig for kunder i GCC miljøer med høj og dod, fordi Secure Score ikke er tilgængelig i disse miljøer. GCC High- og DoD-kunder skal manuelt implementere og teste deres forbedringshandlinger.
+> Den automatiserede testfunktion er ikke tilgængelig for kunder i GCC High- og DoD-miljøer, fordi Secure Score ikke er tilgængelig i disse miljøer. GCC High- og DoD-kunder skal manuelt implementere og teste deres forbedringshandlinger.
 
 ### <a name="set-up-automated-testing"></a>Konfigurer automatiseret test
 
-Overholdelsesstyring registrerer signaler fra andre Microsoft Purview-løsninger, som din organisation abonnerer på, herunder administration af datalivscyklus, beskyttelse af oplysninger, Forebyggelse af datatab i Microsoft Purview, overholdelse af kommunikation og styring af insiderrisiko. På detaljesiden for hver forbedringshandling viser feltet **Testlogik** under fanen **Test** , hvad der kræves i den anden løsning, for at handlingen kan overføre og optjene point mod din overholdelsesscore.
+Overholdelsesstyring registrerer signaler fra andre Microsoft Purview-løsninger, som din organisation kan abonnere på, herunder administration af datalivscyklus, information beskyttelse, Microsoft Purview Forebyggelse af datatab, kommunikation med overholdelse af angivne standarder og styring af insiderrisiko. Overholdelsesstyring registrerer også signaler fra komplementære forbedringshandlinger, der overvåges af [Microsoft Secure Score](../security/defender/microsoft-secure-score.md).
 
-Overholdelsesstyring registrerer også signaler fra komplementære forbedringshandlinger, der også overvåges af [Microsoft Secure Score](../security/defender/microsoft-secure-score.md). Ved hjælp af disse signaler kan Overholdelsesstyring automatisk teste visse forbedringshandlinger for dig, hvilket hjælper med at maksimere effektiviteten i dine aktiviteter for overholdelse af angivne standarder. Når en forbedringshandling er blevet testet og implementeret, modtager du det fulde antal point, som krediteres din samlede score for overholdelse af angivne standarder.
+Ved hjælp af disse signaler kan Overholdelsesstyring automatisk teste visse forbedringshandlinger for dig, hvilket hjælper med at maksimere effektiviteten i dine aktiviteter for overholdelse af angivne standarder. Når en forbedringshandling er blevet testet og implementeret, modtager du det fulde antal point, som [krediteres din samlede score for overholdelse af angivne standarder](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
 
-Automatisk test er som standard slået til for organisationer, der ikke har arbejdet med Overholdelsesstyring. Når du udruller Microsoft 365 eller Office 365 første gang, tager det ca. syv dage at indsamle data fuldt ud og indregne dem i din overholdelsesscore. Når automatiseret test er slået til, opdateres handlingens testdato ikke, men teststatussen opdateres. Når der oprettes nye vurderinger, omfatter scorer automatisk Microsofts kontrolscores og secure score-integration.
+**Automatisk test er som standard slået til for organisationer, der ikke har arbejdet med Overholdelsesstyring.** Første gang du udruller Microsoft 365 eller Office 365, tager det ca. syv dage at indsamle data fuldt ud og indregne dem i din overholdelsesscore. Når automatiseret test er slået til, opdateres handlingens testdato ikke, men teststatussen opdateres. Når der oprettes nye vurderinger, omfatter scorer automatisk Microsofts kontrolscores og secure score-integration. Se [Administrer indstillinger for automatiseret test](#manage-automated-testing-settings) nedenfor for at redigere eller deaktivere denne indstilling.
+
+#### <a name="how-to-tell-which-actions-are-tested-automatically"></a>Sådan kan du se, hvilke handlinger der testes automatisk
+
+Find kolonnen **Testkilde** på siden **Forbedringshandlinger**. Hvis værdien er angivet som **Automatisk**, testes handlingen automatisk af Overholdelsesstyring.  Hvis værdien er **Manuel**, testes handlingen af din organisation. Hvis værdien er **Overordnet**, arver handlingen teststatussen for en anden handling, som den er knyttet til. Få oplysninger om [testkilden til forbedring af handlingen](compliance-manager-improvement-actions.md#update-testing-source).
+
+#### <a name="which-actions-cant-be-tested-automatically"></a>Hvilke handlinger kan ikke testes automatisk
+
+Forbedringshandlinger i skabeloner, der ikke er begrænset til Microsoft 365, er i øjeblikket ikke berettiget til automatisk test. Universelle skabeloner eller en skabelon til Microsoft Azure eller Microsoft Dynamics har f.eks. ikke handlinger, der kan testes automatisk. Få mere at vide om [vurderingsskabeloner](compliance-manager-templates.md).
 
 #### <a name="manage-automated-testing-settings"></a>Administrer indstillinger for automatiseret test
 
 Den globale administrator for din organisation kan når som helst ændre indstillingerne for automatiseret test. Du kan deaktivere automatiseret test for almindelige forbedringshandlinger eller slå den til for individuelle handlinger. Følg vejledningen nedenfor for at ændre dine automatiserede testindstillinger.
 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> på Microsoft Purview-overholdelsesportalen.
+1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> i Microsoft Purview-compliance-portal.
 
 2. Vælg **Overholdelsesstyring** på siden Indstillinger.
 
@@ -145,11 +153,8 @@ Den globale administrator for din organisation kan når som helst ændre indstil
 
 6. Vælg **Gem** for at gemme indstillingerne. Du modtager en bekræftelse øverst på skærmen om, at dit valg blev gemt. Hvis du modtager en meddelelse om fejl, kan du prøve igen.
 
-**Bemærk:** Det er kun den globale administrator, der kan slå automatiske opdateringer til eller fra for alle handlinger. Administratoren af Overholdelsesstyring kan aktivere automatiske opdateringer for individuelle handlinger, men ikke for alle handlinger globalt.
-
-**Få mere at vide**
-- [Få mere at vide om, hvordan kontinuerlig overvågning bidrager til din overholdelsesscore](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
-- [Få mere at vide om, hvordan du designer en testkilde til en forbedringshandling](compliance-manager-improvement-actions.md#update-testing-source).
+> [!NOTE]
+> Det er kun den globale administrator, der kan slå automatiske opdateringer til eller fra for alle handlinger. Administratoren af Overholdelsesstyring kan aktivere automatiske opdateringer for individuelle handlinger, men ikke for alle handlinger globalt.
 
 ### <a name="manage-user-history"></a>Administrer brugerhistorik
 
@@ -159,7 +164,7 @@ Indstillingerne for brugerhistorik giver dig også mulighed for at omfordele all
 
 **Sådan finder du indstillingerne for brugerhistorik:**
 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> på Microsoft Purview-overholdelsesportalen.
+1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> i Microsoft Purview-compliance-portal.
 
 2. Vælg **Overholdelsesstyring** på siden Indstillinger.
 
@@ -171,13 +176,13 @@ Til højre for hver brugers mailadresse indeholder rullemenuen **Vælg** indstil
 
 #### <a name="export-a-report-of-user-history-data"></a>Eksportér en rapport over brugerhistorikdata
 
-Du kan eksportere en Excel fil, der indeholder en liste over forbedringshandlinger, der i øjeblikket er tildelt en bruger.  Rapporten viser også eventuelle dokumentationsfiler, der er uploadet af den pågældende bruger. Disse oplysninger kan hjælpe dig med at omfordele handlinger til forbedring af åbne filer.
+Du kan eksportere en Excel-fil, der indeholder en liste over forbedringshandlinger, der i øjeblikket er tildelt en bruger.  Rapporten viser også eventuelle dokumentationsfiler, der er uploadet af den pågældende bruger. Disse oplysninger kan hjælpe dig med at omfordele handlinger til forbedring af åbne filer.
 
 Rapporten afspejler status for forbedringshandlingen fra oprettelsesdatoen. Det er ikke en historisk rapport over alle tidligere ændringer af dens status eller tildeling (få mere at vide om, hvordan du [eksporterer en rapport fra siden forbedringshandlinger](compliance-manager-improvement-actions.md#export-a-report)).
 
 **Følg nedenstående trin for at eksportere en rapport efter bruger:**
 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> på Microsoft Purview-overholdelsesportalen.
+1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> i Microsoft Purview-compliance-portal.
 
 2. Vælg **Overholdelsesstyring** på siden Indstillinger.
 
@@ -187,7 +192,7 @@ Rapporten afspejler status for forbedringshandlingen fra oprettelsesdatoen. Det 
 
 5. Vælg **Eksportér rapport** i rullemenuen **Vælg**.
 
-6. Når rapportens Excel fil er genereret, kan du åbne den og gemme den på din lokale computer.
+6. Når Excel-filen til din rapport er genereret, kan du åbne den og gemme den på din lokale computer.
 
 #### <a name="reassign-improvement-actions-to-another-user"></a>Overdrag forbedringshandlinger til en anden bruger
 
@@ -195,7 +200,7 @@ Du kan tildele forbedringshandlinger fra én bruger til en anden. Når du tildel
 
 **Følg nedenstående trin for at tildele forbedringshandlinger til en anden bruger:**
 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> på Microsoft Purview-overholdelsesportalen.
+1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> i Microsoft Purview-compliance-portal.
 
 2. Vælg **Overholdelsesstyring** på siden Indstillinger.
 
@@ -222,7 +227,7 @@ Hvis du sletter en brugers historik, fjernes vedkommende som ejer af forbedrings
 
 Hvis du vil slette en brugers historik, skal du følge nedenstående trin:
 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> på Microsoft Purview-overholdelsesportalen.
+1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> i Microsoft Purview-compliance-portal.
 
 2. Vælg **Overholdelsesstyring** på siden Indstillinger.
 
@@ -246,7 +251,7 @@ Dashboardet Overholdelsesstyring er designet til at give dig et hurtigt overblik
 
 Din overholdelsesscore er fremhævet øverst. Den viser en procentdel baseret på punkter, der er opnåelige for fuldførelse af forbedringshandlinger, der omhandler vigtige standarder og bestemmelser for databeskyttelse. Punkter fra [Microsoft-handlinger](compliance-manager-assessments.md#microsoft-actions-tab), som administreres af min Microsoft, tæller også med i din score for overholdelse af angivne standarder.
 
-Første gang, du kommer til Overholdelsesstyring, er din oprindelige score baseret på [Microsoft 365 baseline for databeskyttelse](compliance-manager-assessments.md#data-protection-baseline-default-assessment). Denne grundlæggende vurdering, som er tilgængelig for alle organisationer, er et sæt kontrolelementer, der indeholder fælles brancheregler og -standarder. Overholdelsesstyring scanner dine eksisterende Microsoft 365 løsninger og giver dig en indledende vurdering baseret på dine aktuelle indstillinger for beskyttelse af personlige oplysninger og sikkerhed. Når du tilføjer vurderinger, der er relevante for din organisation, bliver din score mere meningsfuld for dig.
+Første gang, du kommer til Overholdelsesstyring, er din oprindelige score baseret på [microsoft 365-grundlinjen for databeskyttelse](compliance-manager-assessments.md#data-protection-baseline-default-assessment). Denne grundlæggende vurdering, som er tilgængelig for alle organisationer, er et sæt kontrolelementer, der indeholder fælles brancheregler og -standarder. Overholdelsesstyring scanner dine eksisterende Microsoft 365-løsninger og giver dig en indledende vurdering baseret på dine aktuelle indstillinger for beskyttelse af personlige oplysninger og sikkerhed. Når du tilføjer vurderinger, der er relevante for din organisation, bliver din score mere meningsfuld for dig.
 
 **Få mere at vide:** [Forstå, hvordan din overholdelsesscore beregnes](compliance-score-calculation.md).
 
@@ -345,7 +350,7 @@ Der er to måder, du kan udføre handlinger på fra dette skærmbillede:
 
 1. I rækken i den ønskede løsning skal du under kolonnen **Resterende handlinger** vælge linkets nummer. Du får vist en filtreret visning af skærmbilledet forbedringshandlinger, der viser utestede forbedringshandlinger for den løsning.
 
-2. Vælg **Åbn** i rækken i den ønskede løsning under kolonnen **Åbn løsning**. Du kan se løsningen eller placeringen i Microsoft 365 og Office 365 sikkerheds- og overholdelsescentre, hvor du kan udføre den anbefalede handling.
+2. Vælg **Åbn** i rækken i den ønskede løsning under kolonnen **Åbn løsning**. Du kan se løsningen eller placeringen i Microsoft 365- og Office 365 sikkerheds- og overholdelsescentre, hvor du kan udføre den anbefalede handling.
 
 ## <a name="assessments-page"></a>Siden Vurderinger
 

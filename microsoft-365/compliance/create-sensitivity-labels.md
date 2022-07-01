@@ -17,25 +17,30 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: 'Et krav til alle Microsoft Purview-Information Protection-løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: 8b25fa9864bcbef92f509f7251a15bf24cc3da2d
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: 'Et krav til alle Microsoft Purview Information Protection løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
+ms.openlocfilehash: 0f920c91e1e844a4feaab7f9d1d58e88da6791ca
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017026"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573863"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
-Alle Microsoft Purview-Information Protection-løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
+Alle Microsoft Purview Information Protection løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
-Først skal du oprette og konfigurere de følsomhedsmærkater, du vil gøre tilgængelige for apps og andre tjenester. De mærkater, du vil have, at brugerne skal se og anvende fra Office apps.
+Først skal du oprette og konfigurere de følsomhedsmærkater, du vil gøre tilgængelige for apps og andre tjenester. Det kan f.eks. være de mærkater, som brugerne skal se og anvende fra Office-apps.
 
 Opret derefter en eller flere mærkatpolitikker, der indeholder de mærkater og politikindstillinger, du konfigurerer. Det er mærkatpolitikken, der publicerer mærkaterne og indstillingerne for de valgte brugere og placeringer.
+
+> [!TIP]
+> Hvis du endnu ikke har nogen følsomhedsmærkater, kan du være berettiget til automatisk oprettelse af standardmærkater og en politik for standardmærkater. Selvom du har nogle mærkater, kan det være nyttigt at se konfigurationen af disse standardmærkater, som vi opretter til nye kunder. Du kan f.eks. foretage de samme manuelle konfigurationer for at fremskynde din egen udrulning af mærkater.
+> 
+> Du kan få flere oplysninger under [Standardmærkater og -politikker for Microsoft Purview Information Protection](mip-easy-trials.md).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -43,7 +48,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
 ## <a name="create-and-configure-sensitivity-labels"></a>Opret og konfigurer følsomhedsmærkater
 
-1. Vælg **Beskyttelsesetiketter** for **løsninger** > **i** >  [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/)
+1. Vælg **Beskyttelsesmærkater** for **løsninger** > **i** >  [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
 
 2. På siden **Etiketter** skal du vælge **+ Opret en mærkat** for at starte den nye konfiguration af følsomhedsmærkat: 
     
@@ -58,7 +63,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
     - Hvis **Filer & mails** er valgt, kan du konfigurere indstillinger, der gælder for apps, der understøtter følsomhedsmærkater, f.eks. Office Word og Outlook. Hvis denne indstilling ikke er valgt, kan du se den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge i disse apps.
 
-    - Hvis **Grupper & websteder** er valgt, kan du konfigurere indstillinger, der gælder for Microsoft 365 grupper, og websteder for Teams og SharePoint. Hvis denne indstilling ikke er valgt, får du vist den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge for grupper og webstedet.
+    - Hvis **Grupper & websteder** er valgt, kan du konfigurere indstillinger, der gælder for Microsoft 365-grupper, og websteder for Teams og SharePoint. Hvis denne indstilling ikke er valgt, får du vist den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge for grupper og webstedet.
 
     Du kan få oplysninger om området **Skematiserede dataaktiver** under [Mærk automatisk dit indhold i Microsoft Purview-dataoversigt](/azure/purview/create-sensitivity-label).
 
@@ -94,15 +99,15 @@ Eksempel:
 
 - Brug parameteren *LocaleSettings* til multinationale installationer, så brugerne kan se navnet og værktøjstippet på deres lokale sprog. [I følgende afsnit](#example-configuration-to-configure-a-sensitivity-label-for-different-languages) er der et eksempel på en konfiguration, der angiver navnet og værktøjstippet for fransk, italiensk og tysk.
 
-- Azure Information Protection Unified Labeling-klienten understøtter en omfattende liste over [avancerede indstillinger](/azure/information-protection/rms-client/clientv2-admin-guide-customizations), der omfatter angivelse af en navnefarve og anvendelse af en brugerdefineret egenskab, når der anvendes en mærkat. Du kan se den komplette liste under [Tilgængelige avancerede indstillinger for mærkater](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels) i denne klients administratorvejledning.
+- Avancerede indstillinger, der understøttes af indbygget mærkning, er inkluderet i PowerShell-dokumentationen. Du kan få mere hjælp til at angive disse avancerede PowerShell-indstillinger i afsnittet [PowerShell-tip til angivelse af avancerede indstillinger](#powershell-tips-for-specifying-the-advanced-settings) . Du kan finde flere avancerede indstillinger, der understøttes af Azure Information Protection Unified Labeling-klienten, i [dokumentationen i denne klients administratorvejledning](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-labels).
 
 #### <a name="example-configuration-to-configure-a-sensitivity-label-for-different-languages"></a>Eksempelkonfiguration til konfiguration af en følsomhedsmærkat for forskellige sprog
 
 I følgende eksempel vises PowerShell-konfigurationen for en etiket med navnet "Offentlig" med pladsholdertekst for værktøjstippet. I dette eksempel er navnet og teksten i værktøjstippet konfigureret til fransk, italiensk og tysk.
 
-Som et resultat af denne konfiguration kan brugere, der har Office apps, der bruger disse visningssprog, se deres navne og værktøjstip på det samme sprog. Hvis du på samme måde har Azure Information Protection Unified-mærkatklient installeret til mærkatfiler fra Stifinder, kan brugere, der har disse sprogversioner af Windows se deres navne og værktøjstip på deres lokale sprog, når de bruger højreklikshandlinger til mærkning.
+Som et resultat af denne konfiguration kan brugere, der har Office-apps, der bruger disse visningssprog, se deres navne og værktøjstip på det samme sprog. Hvis du på samme måde har Azure Information Protection Unified-mærkatklient installeret til mærkatfiler fra Stifinder, kan brugere, der har disse sprogversioner af Windows, se deres navnenavne og værktøjstip på deres lokale sprog, når de bruger højreklikshandlinger til mærkning.
 
-For de sprog, du skal understøtte, skal du bruge Office [sprog-id'er](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) (også kendt som sprogkoder) og angive din egen oversættelse for navnet og værktøjstippet.
+For de sprog, du skal understøtte, skal du bruge [Office-sprog-id'er](/deployoffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016#language-identifiers) (også kaldet sprogkoder) og angive din egen oversættelse af navnet og værktøjstippet.
 
 Før du kører kommandoerne i PowerShell, skal du først [oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
@@ -124,9 +129,29 @@ Settings=@(
 Set-Label -Identity $Label -LocaleSettings (ConvertTo-Json $DisplayNameLocaleSettings -Depth 3 -Compress),(ConvertTo-Json $TooltipLocaleSettings -Depth 3 -Compress)
 ```
 
+#### <a name="powershell-tips-for-specifying-the-advanced-settings"></a>PowerShell-tip til angivelse af avancerede indstillinger
+
+Selvom du kan angive en følsomhedsmærkat ved hjælp af navnet, anbefaler vi, at du bruger mærkat-GUID'et for at undgå mulig forvirring med angivelse af navnet eller det viste navn. Navnet er entydigt i din lejer, så du kan være sikker på, at du konfigurerer det korrekte navn. Det viste navn er ikke entydigt og kan resultere i, at det forkerte navn konfigureres. Sådan finder du GUID'et og bekræfter navnets omfang:
+
+````powershell
+Get-Label | Format-Table -Property DisplayName, Name, Guid, ContentType
+````
+
+Hvis du vil fjerne en avanceret indstilling fra en følsomhedsmærkat, skal du bruge den samme AdvancedSettings-parametersyntaks, men angive en null-strengværdi. Eksempel:
+
+````powershell
+Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{DefaultSharingScope=""}
+````
+
+Hvis du vil kontrollere etikettens konfiguration, herunder avancerede indstillinger, skal du bruge følgende syntaks med dit eget mærkat-GUID:
+
+```powershell
+(Get-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e).settings
+```
+
 ## <a name="publish-sensitivity-labels-by-creating-a-label-policy"></a>Publicer følsomhedsmærkater ved at oprette en mærkatpolitik
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du vælge **Mærkater** for **beskyttelse af** >  **løsninger** >  information
+1. Vælg **Mærkater** for **beskyttelse af** >  **løsninger** >  i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/)
 
 2. På siden **Mærkatpolitikker** skal du vælge **Publicer etiket** for at starte konfigurationen **af politikken Opret** :
     
@@ -166,7 +191,7 @@ Denne knap starter konfigurationen **af politikken Opret** , hvor du kan rediger
 
 Yderligere indstillinger for mærkatpolitik er tilgængelige med [Set-LabelPolicy-cmdlet'en](/powershell/module/exchange/set-labelpolicy) fra [Security & Compliance PowerShell](/powershell/exchange/scc-powershell).
 
-Azure Information Protection Unified Labeling-klienten understøtter mange [avancerede indstillinger](/azure/information-protection/rms-client/clientv2-admin-guide-customizations), der omfatter overførsel fra andre mærkatløsninger, og pop op-meddelelser i Outlook, der advarer, begrunder eller blokerer mails, der sendes. Du kan se den komplette liste under [Tilgængelige avancerede indstillinger for mærkatpolitikker](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies) i denne klients administratorvejledning.
+Denne dokumentation indeholder de avancerede indstillinger, der understøttes af indbygget mærkning. Du kan finde flere avancerede indstillinger, der understøttes af Azure Information Protection Unified Labeling-klienten, i [dokumentationen i denne klients administratorvejledning](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies).
 
 ## <a name="when-to-expect-new-labels-and-changes-to-take-effect"></a>Hvornår kan du forvente, at nye mærkater og ændringer træder i kraft?
 
@@ -185,7 +210,10 @@ Se følgende dokumentation for understøttede parametre og værdier:
 - [Angiv navn](/powershell/module/exchange/set-label)
 - [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy)
 
-Du kan også bruge [Remove-Label](/powershell/module/exchange/remove-label) og [Remove-LabelPolicy](/powershell/module/exchange/remove-labelpolicy) , hvis du har brug for at scripte sletning af følsomhedsmærkater eller politikker for følsomhedsmærkater. Før du sletter følsomhedsmærkater, skal du dog sørge for at læse følgende afsnit.
+> [!TIP]
+> Når du konfigurerer avancerede indstillinger for en følsomhedsmærkat, kan det være nyttigt at henvise til [PowerShell-tip til angivelse af afsnittet med avancerede indstillinger](#powershell-tips-for-specifying-the-advanced-settings) på denne side.
+
+Du kan også bruge [Remove-Label](/powershell/module/exchange/remove-label) og [Remove-LabelPolicy](/powershell/module/exchange/remove-labelpolicy) , hvis du har brug for at scripte sletning af følsomhedsmærkater eller politikker for følsomhedsmærkater. Før du sletter følsomhedsmærkater, skal du dog sørge for at læse næste afsnit.
 
 ## <a name="removing-and-deleting-labels"></a>Fjerner og sletter navne
 
@@ -193,17 +221,17 @@ I et produktionsmiljø er det usandsynligt, at du skal fjerne følsomhedsmærkat
 
 Det er mindre risikabelt at fjerne en mærkat fra en mærkatpolitik end at slette den, og den kan altid tilføjes igen senere, hvis det er nødvendigt. Du kan ikke slette en etiket, hvis den stadig er i en mærkatpolitik.
 
-Når du fjerner en mærkat fra en mærkatpolitik, så mærkaten ikke længere publiceres til de oprindeligt angivne brugere, kan brugerne ikke længere se den mærkat, der skal vælges i deres Office apps, næste gang mærkatpolitikken opdateres. Hvis denne etiket allerede er anvendt, fjernes navnet ikke fra indholdet eller objektbeholderen. Brugere, der bruger indbygget mærkat i skrivebordsapps til Word, Excel og PowerPoint, kan f.eks. stadig se navnet på det anvendte navn på statuslinjen. En anvendt objektbeholderetiket fortsætter med at beskytte det Teams eller SharePoint websted.
+Når du fjerner en mærkat fra en mærkatpolitik, så mærkaten ikke længere publiceres til de oprindeligt angivne brugere, kan brugerne ikke længere se den mærkat, der skal vælges i deres Office-apps, næste gang mærkatpolitikken opdateres. Hvis denne etiket allerede er anvendt, fjernes navnet ikke fra indholdet eller objektbeholderen. Brugere, der bruger indbygget mærkat i skrivebordsapps til Word, Excel og PowerPoint, kan f.eks. stadig se det anvendte mærkatnavn på statuslinjen. En anvendt objektbeholderetiket fortsætter med at beskytte Teams- eller SharePoint-webstedet.
 
 Når du til sammenligning sletter en etiket:
 
 - Hvis mærkaten anvendte kryptering, arkiveres den underliggende beskyttelsesskabelon, så tidligere beskyttet indhold stadig kan åbnes. På grund af denne arkiverede beskyttelsesskabelon kan du ikke oprette en ny mærkat med det samme navn. Selvom det er muligt at slette en beskyttelsesskabelon ved hjælp af [PowerShell](/powershell/module/aipservice/remove-aipservicetemplate), skal du ikke gøre dette, medmindre du er sikker på, at du ikke behøver at åbne indhold, der er krypteret med den arkiverede skabelon.
 
-- For dokumenter, der er gemt i SharePoint eller OneDrive, og du har [aktiveret følsomhedsmærkater for Office filer](sensitivity-labels-sharepoint-onedrive-files.md): Når du åbner dokumentet i Office på internettet, kan du ikke se den mærkat, der er anvendt i appen, og navnet vises ikke længere i kolonnen **Følsomhed** i SharePoint. Hvis den slettede mærkat anvendte kryptering, og tjenesterne kan behandle det krypterede indhold, fjernes krypteringen. Egress handlinger fra disse tjenester resulterer i det samme resultat. Download, kopiér til, flyt til og åbn f.eks. med en Office desktop- eller mobilapp. Selvom mærkatoplysningerne forbliver i filens metadata, kan apps ikke længere knytte mærkat-id'et til et vist navn, så brugerne antager, at en fil ikke er mærket.
+- For dokumenter, der er gemt i SharePoint eller OneDrive, og du har [aktiveret følsomhedsmærkater for Office-filer](sensitivity-labels-sharepoint-onedrive-files.md): Når du åbner dokumentet i Office på internettet, kan du ikke se den mærkat, der er anvendt i appen, og mærkatnavnet vises ikke længere i kolonnen **Følsomhed** i SharePoint. Hvis den slettede mærkat anvendte kryptering, og tjenesterne kan behandle det krypterede indhold, fjernes krypteringen. Udgående handlinger fra disse tjenester resulterer i det samme resultat. Du kan f.eks. downloade, kopiere til, flytte til og åbne med en Office-skrivebords- eller mobilapp. Selvom mærkatoplysningerne forbliver i filens metadata, kan apps ikke længere knytte mærkat-id'et til et vist navn, så brugerne antager, at en fil ikke er mærket.
 
-- For dokumenter, der er gemt uden for SharePoint og OneDrive, eller du ikke har aktiveret følsomhedsmærkater for Office filer og for mails: Når du åbner indholdet, forbliver mærkatoplysningerne i metadataene, men uden navnetilknytningen for mærkat-id'et kan brugerne ikke se det anvendte mærkatnavn vist (f.eks. på statuslinjen for skrivebordsapps). Hvis den slettede mærkat anvendte kryptering, forbliver krypteringen, og brugerne kan stadig se navnet på og beskrivelsen af den nu arkiverede beskyttelsesskabelon.
+- For dokumenter, der er gemt uden for SharePoint og OneDrive, eller du ikke har aktiveret følsomhedsmærkater for Office-filer og for mails: Når du åbner indholdet, forbliver mærkatoplysningerne i metadataene, men uden mærkat-id'et til navnetilknytning kan brugerne ikke se det anvendte mærkatnavn vist (f.eks. på statuslinjen for skrivebordsapps). Hvis den slettede mærkat anvendte kryptering, forbliver krypteringen, og brugerne kan stadig se navnet på og beskrivelsen af den nu arkiverede beskyttelsesskabelon.
 
-- For objektbeholdere, f.eks. websteder i SharePoint og Teams: Etiketten fjernes, og de indstillinger, der er konfigureret med den pågældende mærkat, gennemtvinges ikke længere. Denne handling tager typisk mellem 48-72 timer for SharePoint websteder og kan være hurtigere i Teams og Microsoft 365-grupper.
+- For objektbeholdere, f.eks. websteder i SharePoint og Teams: Etiketten fjernes, og de indstillinger, der er konfigureret med den pågældende mærkat, gennemtvinges ikke længere. Denne handling tager typisk mellem 48-72 timer for SharePoint-websteder og kan være hurtigere for Teams og Microsoft 365-grupper.
 
 Som med alle mærkatændringer tager det tid at replikere til alle brugere og tjenester, hvis du fjerner en følsomhedsmærkat fra en mærkatpolitik eller sletter en følsomhedsmærkat.
 

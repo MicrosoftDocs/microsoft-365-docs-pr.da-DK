@@ -18,17 +18,17 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Compliance Manager hjælper organisationer med at forenkle og automatisere risikovurderinger og foreslår anbefalede handlinger for at hjælpe med at håndtere risici.
-ms.openlocfilehash: deb3c3755a8afbab0071b8f829da620676f926ff
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: dc08d38da7c02ef0c02401244934b7d2338ab5f7
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078222"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574090"
 ---
 # <a name="microsoft-purview-compliance-manager"></a>Microsoft Purview Compliance Manager
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [prøveversionshubben til Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "65078222"
 
 ## <a name="what-is-compliance-manager"></a>Hvad er Overholdelsesstyring?
 
-[Microsoft Purview Compliance Manager](https://compliance.microsoft.com/compliancemanager) er en funktion på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> , der hjælper dig med at administrere organisationens overholdelseskrav med større brugervenlighed. Overholdelsesstyring kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører.
+[Microsoft Purview Compliance Manager](https://compliance.microsoft.com/compliancemanager) er en funktion i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, der hjælper dig med at administrere organisationens overholdelseskrav nemmere og nemmere. Overholdelsesstyring kan hjælpe dig gennem hele overholdelsesrejsen, lige fra opgørelse af dine databeskyttelsesrisici til administration af kompleksiteten ved implementering af kontroller, overholdelse af regler og certificeringer og rapportering til auditører.
 
 Se videoen nedenfor for at få mere at vide om, hvordan Overholdelsesstyring kan hjælpe med at forenkle, hvordan din organisation administrerer overholdelse af angivne standarder:
 <br>
@@ -53,15 +53,15 @@ Overholdelsesstyring hjælper med at forenkle overholdelse af angivne standarder
 
 - En risikobaseret overholdelsesscore, der kan hjælpe dig med at forstå din overholdelse af angivne standarder ved at måle dine fremskridt i fuldførelse af forbedringshandlinger.
 
-Dashboardet Overholdelsesstyring viser din aktuelle overholdelsesscore, hjælper dig med at se, hvad der kræver opmærksomhed, og hjælper dig med at udføre vigtige forbedringshandlinger. Nedenfor er et eksempel på, hvordan dashboardet Overholdelsesstyring vil se ud:
+Oversigtssiden Overholdelsesstyring viser din aktuelle overholdelsesscore, hjælper dig med at se, hvad der kræver opmærksomhed, og hjælper dig med at udføre vigtige forbedringshandlinger. Nedenfor er et eksempel på oversigtssiden:
 
-![Overholdelsesstyring – dashboard.](../media/compliance-manager-dashboard.png "Dashboardet Overholdelsesstyring")
+![Overholdelsesstyring – dashboard.](../media/compliance-manager-overview.png "Oversigtsside for Overholdelsesstyring")
 
 ## <a name="understanding-your-compliance-score"></a>Om din overholdelsesscore
 
 Overholdelsesstyring tildeler dig point for at fuldføre forbedringshandlinger, der er truffet for at overholde en forordning, standard eller politik, og kombinerer disse punkter til en samlet score for overholdelse af angivne standarder. Hver handling har forskellig indvirkning på din score afhængigt af de potentielle risici. Din score for overholdelse af angivne standarder kan hjælpe med at prioritere, hvilken handling du skal fokusere på for at forbedre din overordnede overholdelse af angivne standarder.
 
-Overholdelsesstyring giver dig en indledende score baseret på Microsoft 365 baseline for databeskyttelse. Denne grundlinje er et sæt kontrolelementer, der omfatter vigtige bestemmelser og standarder for databeskyttelse og generel datastyring.
+Overholdelsesstyring giver dig en indledende score baseret på microsoft 365-grundlinjen til databeskyttelse. Denne grundlinje er et sæt kontrolelementer, der omfatter vigtige bestemmelser og standarder for databeskyttelse og generel datastyring.
 
 ##### <a name="learn-more"></a>Lær mere
 
@@ -91,11 +91,11 @@ Overholdelsesstyring sporer følgende typer kontrolelementer:
 
 ### <a name="assessments"></a>Vurderinger
 
-En vurdering er gruppering af kontroller fra en bestemt forordning, standard eller politik. Fuldførelse af handlingerne i en vurdering hjælper dig med at opfylde kravene i en standard, forordning eller lov. Du kan f.eks. have en vurdering af, at når du fuldfører alle handlinger i den, hjælper det at bringe dine Microsoft 365 indstillinger i overensstemmelse med ISO 27001-kravene.
+En vurdering er gruppering af kontroller fra en bestemt forordning, standard eller politik. Fuldførelse af handlingerne i en vurdering hjælper dig med at opfylde kravene i en standard, forordning eller lov. Du kan f.eks. have en vurdering af, at når du fuldfører alle handlinger i den, hjælper det at bringe dine Microsoft 365-indstillinger i overensstemmelse med ISO 27001-kravene.
 
 Vurderinger har flere komponenter:
 
-- **Tjenester inden for området**: det specifikke sæt Microsoft-tjenester, der gælder for vurderingen
+- **Tjenester i omfang**: det specifikke sæt Microsoft-tjenester, der gælder for vurderingen
 - **Microsoft-administrerede kontrolelementer**: kontrolelementer til Microsoft-cloudtjenester, som Microsoft implementerer på dine vegne
 - **Dine kontrolelementer**: Nogle gange kaldet kundeadministrerede kontrolelementer, er disse kontrolelementer implementeret og administreret af din organisation
 - **Delte kontrolelementer**: Dette er kontrolelementer, som både din organisation og Microsoft deler ansvaret for at implementere
@@ -162,4 +162,4 @@ Få mere at vide om, hvordan du logger på, tildeler tilladelser og roller, konf
 
 Begynd derefter at tilpasse Overholdelsesstyring for at hjælpe dig med at overholde branchestandarder, der betyder mest for din organisation, ved [at konfigurere vurderinger](compliance-manager-assessments.md).
 
-For at hjælpe dig med at overholde reglerne for beskyttelse af personlige oplysninger har vi udviklet en arbejdsproces, der guider dig gennem en komplette proces for at planlægge og implementere funktioner på tværs af Microsoft 365, herunder ved hjælp af Overholdelsesstyring. Du kan få flere oplysninger under [Udrul beskyttelse af personlige oplysninger for regler om beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy). 
+For at hjælpe dig med at overholde reglerne for beskyttelse af personlige oplysninger har vi udviklet en arbejdsproces, der guider dig gennem en komplette proces for at planlægge og implementere funktioner på tværs af Microsoft 365, herunder ved hjælp af Overholdelsesstyring. Du kan få flere oplysninger under [Udrul beskyttelse af personlige oplysninger for at få regler for beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy). 

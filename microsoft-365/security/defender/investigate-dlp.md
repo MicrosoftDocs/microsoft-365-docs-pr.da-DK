@@ -16,12 +16,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 6111bf9e2a44d079bfae19d9aa0c34f7b125ff08
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: a92e3b206b10b68ecc3ff2f94870a9174185b63b
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057870"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574291"
 ---
 # <a name="investigate-data-loss-incidents-with-microsoft-365-defender"></a>Undersøg datatabshændelser med Microsoft 365 Defender
 
@@ -31,7 +31,7 @@ ms.locfileid: "66057870"
 
 - Microsoft 365 Defender
 
-Hændelser for Microsoft Purview DLP (Forebyggelse af datatab) kan nu administreres på portalen Microsoft 365 Defender. Du kan administrere DLP-hændelser sammen med sikkerhedshændelser fra **hændelser & beskeder** \> **Hændelser** på hurtig start af <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. Fra denne side kan du:
+Hændelser for Microsoft Purview Forebyggelse af datatab (DLP) kan nu administreres på Microsoft 365 Defender-portalen. Du kan administrere DLP-hændelser sammen med sikkerhedshændelser fra **hændelser & beskeder** \> **Hændelser** på hurtig start af <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. Fra denne side kan du:
 
 - Få vist alle dine DLP-beskeder grupperet under hændelser i Microsoft 365 Defender hændelseskø.
 - Få vist intelligente mellemløsningsbeskeder (DLP-MDE, DLP-MDO) og DLP-DLP-indbyrdes forbundne beskeder under en enkelt hændelse.
@@ -44,7 +44,7 @@ Du kan også bruge connectoren Microsoft 365 Defender i Microsoft Sentinel til a
 
 ## <a name="licensing-requirements"></a>Licenskrav
 
-Hvis du vil undersøge Microsoft Purview-hændelser til forebyggelse af datatab på Microsoft 365 Defender-portalen, skal du have en licens fra et af følgende abonnementer: 
+Hvis du vil undersøge Microsoft Purview Forebyggelse af datatab hændelser på Microsoft 365 Defender-portalen, skal du have en licens fra et af følgende abonnementer: 
 
 - Microsoft Office 365 E5/A5
 - Microsoft 365 E5/A5
@@ -52,9 +52,12 @@ Hvis du vil undersøge Microsoft Purview-hændelser til forebyggelse af datatab 
 - sikkerhed Microsoft 365 E5/A5
 - Microsoft 365 E5/A5 Information Protection og styring
 
+> [!NOTE] 
+> Når du er licenseret og berettiget til denne funktion, overføres DLP-beskeder automatisk til Microsoft 365 Defender. Åbn en supportsag, hvis du vil deaktivere denne funktion. 
+
 ## <a name="dlp-investigation-experience-in-the-microsoft-365-defender-portal"></a>DLP-undersøgelsesoplevelse på Microsoft 365 Defender-portalen
 
-Før du starter, [skal du aktivere beskeder for alle dine DLP-politikker](/microsoft-365/compliance/dlp-configure-view-alerts-policies#alert-configuration-experience) på <a href="https://purview.microsoft.com" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
+Før du starter, [skal du aktivere beskeder for alle dine DLP-politikker](/microsoft-365/compliance/dlp-configure-view-alerts-policies#alert-configuration-experience) i <a href="https://purview.microsoft.com" target="_blank">Microsoft Purview-compliance-portal</a>.
 
 1. Gå til Microsoft 365 Defender-portalen, og vælg **Hændelser** i navigationsmenuen til venstre for at åbne siden med hændelser.
 
@@ -89,7 +92,7 @@ Før du starter, [skal du aktivere beskeder for alle dine DLP-politikker](/micro
 
 Du kan bruge connectoren Microsoft 365 Defender i Microsoft Sentinel til at importere alle DLP-hændelser i Sentinel for at udvide din korrelation, registrering og undersøgelse på tværs af andre datakilder og udvide dine automatiserede orkestreringsflows ved hjælp af Sentinels oprindelige SOAR-funktioner. 
 
-1. Følg instruktionerne på Forbind data fra Microsoft 365 Defender til Microsoft Sentinel for at importere alle hændelser, herunder DLP-hændelser og beskeder i Sentinel. Aktivér `CloudAppEvents` hændelsesconnectoren for at trække alle O365-overvågningslogge til Sentinel.
+1. Følg vejledningen på Opret forbindelse mellem data fra Microsoft 365 Defender og Microsoft Sentinel for at importere alle hændelser, herunder DLP-hændelser og beskeder i Sentinel. Aktivér `CloudAppEvents` hændelsesconnectoren for at trække alle O365-overvågningslogge til Sentinel.
 
    Du bør kunne se dine DLP-hændelser i Sentinel, når ovenstående connector er konfigureret.
 

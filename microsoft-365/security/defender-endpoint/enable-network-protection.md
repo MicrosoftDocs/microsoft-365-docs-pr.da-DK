@@ -15,19 +15,19 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: e53cda0ac61bdc546e972d663bf0063b02b21ad3
-ms.sourcegitcommit: 570c3be37b6ab1d59a4988f7de9c9fb5ca38028f
+ms.openlocfilehash: 9e94b164dd5c4863b792acdfdd36756ebd94347a
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65363254"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573997"
 ---
 # <a name="turn-on-network-protection"></a>Slå netværksbeskyttelse til
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 - Microsoft Defender Antivirus
@@ -36,7 +36,7 @@ ms.locfileid: "65363254"
 - Windows
 
 > [!TIP]
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-assignaccess-abovefoldlink)
 
 [Netværksbeskyttelse](network-protection.md) hjælper med at forhindre medarbejdere i at bruge alle programmer til at få adgang til farlige domæner, der kan hoste phishing-svindel, udnyttelser og andet skadeligt indhold på internettet. Du kan [overvåge netværksbeskyttelse](evaluate-network-protection.md) i et testmiljø for at få vist, hvilke apps der blokeres, før du aktiverer netværksbeskyttelse.
 
@@ -67,7 +67,7 @@ Hvis nøglen mangler, skal du navigere til **SOFTWARE** \> **Microsoft** \> **Wi
 Aktivér netværksbeskyttelse ved hjælp af en af disse metoder:
 
 - [PowerShell](#powershell)
-- [Mobil Enhedshåndtering (MDM)](#mobile-device-management-mdm)
+- [Administration af mobilenheder (MDM)](#mobile-device-management-mdm)
 - [Microsoft Endpoint Manager](#microsoft-endpoint-manager)
 - [Gruppepolitik](#group-policy)
 - [Microsoft Endpoint Configuration Manager](#microsoft-endpoint-configuration-manager)
@@ -99,17 +99,39 @@ Brug [./Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection](/windows/cli
 
 ### <a name="microsoft-endpoint-manager"></a>Microsoft Endpoint Manager
 
+#### <a name="microsoft-defender-for-endpoint-baseline-method"></a>Microsoft Defender for Endpoint baselinemetode
+
+1. Log på Microsoft Endpoint Manager Administration (https://endpoint.microsoft.com).
+2. Gå til **Endpoint Security** > **Baselines** >  **Microsoft Defender for Endpoint Baseline**.
+3. Vælg **Opret en profil**, angiv derefter et navn til din profil, og vælg derefter **Næste**.
+4. I afsnittet **Konfigurationsindstillinger** skal du gå til **Regler for reduktion af angrebsoverfladen** > angive **Bloker**, **Aktivér** eller **Overvåg** for **Aktivér netværksbeskyttelse**. Vælg **Næste**.
+5. Vælg de relevante **områdekoder** og **-tildelinger** efter behov i din organisation.
+7. Gennemse alle oplysningerne, og vælg derefter **Opret**.
+
+#### <a name="antivirus-policy-method"></a>Antiviruspolitikmetode
+1. Log på Microsoft Endpoint Manager Administration (https://endpoint.microsoft.com).
+2. Gå til **Endpoint security** > **Antivirus**
+3. Vælg **Opret en politik**
+4. I pop op-vinduet **Opret en politik** skal du vælge **Windows 10, Windows 11 og Windows Server** på listen **Platform**.
+5. Vælg **Microsoft Defender Antivirus** **på** profillisten, og vælg derefter **Opret**
+6. Angiv et navn til din profil, og vælg derefter **Næste**.
+7. I afsnittet **Konfigurationsindstillinger** skal du vælge **Deaktiveret**, **Aktiveret (blokeringstilstand)** eller **Aktiveret (overvågningstilstand)** for **Aktivér netværksbeskyttelse** og derefter vælge **Næste**.
+8. Vælg de relevante **tildelings-** og **områdekoder** som krævet af din organisation.
+9. Gennemse alle oplysningerne, og vælg derefter **Opret**.
+
+#### <a name="configuration-profile-method"></a>Metode til konfigurationsprofil
+
 1. Log på Microsoft Endpoint Manager Administration (https://endpoint.microsoft.com).
 
-2. Gå til **EnhederKonfigurationsprofilerOpret** >  >  **profil**.
+2. Gå til **Enhedskonfigurationsprofiler** >  >  **Opret profil**.
 
 3. I pop op-vinduet **Opret en profil** skal du vælge **Platform** og vælge **Profiltype** som **skabeloner**.
 
 4. Vælg **Endpoint Protection** på listen over skabeloner i **skabelonnavnet**, og vælg derefter **Opret**.
 
-4. Gå til **Endpoint** **protectionBasics** > , angiv et navn til din profil, og vælg derefter **Næste**.
+4. Gå til **Grundlæggende oplysninger om slutpunktsbeskyttelse** > , angiv et navn til din profil, og vælg derefter **Næste**.
 
-5. I afsnittet **Konfigurationsindstillinger** skal du gå til **Microsoft Defender Exploit Guard** >  **NetværksfiltreringNetværksbeskyttelseEnable** >  >  eller **Audit**. Vælg **Næste**.
+5. I afsnittet **Konfigurationsindstillinger** skal du gå til **Microsoft Defender Exploit Guard** > **Network-filtrering** > **Aktivér** eller **overvåg** **netværksbeskyttelse** > . Vælg **Næste**.
 
 6. Vælg de relevante **områdekoder**, **tildelinger** og **anvendelighedsregler** , som kræves af din organisation. Administratorer kan angive flere krav.
 
@@ -127,15 +149,15 @@ Brug følgende procedure til at aktivere netværksbeskyttelse på domænetilslut
 
 2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Network Protection**.
+3. Udvid træet til **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **Windows Defender Exploit Guard** \> **Network Protection**.
 
    > [!NOTE]
-   > I ældre versioner af Windows står der muligvis "Windows Defender Antivirus" i gruppepolitikken i stedet for "Microsoft Defender Antivirus".
+   > I ældre versioner af Windows kan der i gruppepolitikstien stå "Windows Defender Antivirus" i stedet for "Microsoft Defender Antivirus".
 
 4. Dobbeltklik på indstillingen **Forbyd brugere og apps at få adgang til farlige websteder** , og angiv indstillingen til **Aktiveret**. I afsnittet indstillinger skal du angive en af følgende indstillinger:
     - **Block** – Brugerne kan ikke få adgang til skadelige IP-adresser og domæner.
     - **Deaktiver (standard)** – Funktionen Netværksbeskyttelse fungerer ikke. Brugere blokeres ikke fra at få adgang til skadelige domæner.
-    - **Overvågningstilstand** – Hvis en bruger besøger en skadelig IP-adresse eller et skadeligt domæne, registreres en hændelse i Windows hændelsesloggen. Brugeren blokeres dog ikke for at besøge adressen.
+    - **Overvågningstilstand** – Hvis en bruger besøger en skadelig IP-adresse eller et skadeligt domæne, registreres en hændelse i Windows-hændelsesloggen. Brugeren blokeres dog ikke for at besøge adressen.
 
    > [!IMPORTANT]
    > Hvis du vil aktivere netværksbeskyttelse fuldt ud, skal du angive indstillingen Gruppepolitik til **Aktiveret** og også vælge **Bloker** i rullemenuen med indstillinger.
@@ -147,7 +169,7 @@ Brug følgende procedure til at aktivere netværksbeskyttelse på domænetilslut
 
 1. Åbn Configuration Manager-konsollen.
 
-2. Gå til **Assets and Compliance** >  **Endpoint Protection** >  **Windows Defender Exploit Guard**.
+2. Gå til **Assets and Compliance** > **Endpoint Protection** >  **Windows Defender Exploit Guard**.
 
 3. Vælg **Opret Exploit Guard-politik** på båndet for at oprette en ny politik.
    - Hvis du vil redigere en eksisterende politik, skal du vælge politikken og derefter vælge **Egenskaber** på båndet eller i genvejsmenuen. Rediger indstillingen **Konfigurer netværksbeskyttelse** under fanen **Netværksbeskyttelse** .  

@@ -19,22 +19,22 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at udrulle følsomhedsmærkater for at beskytte din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske vejledninger, der kan hjælpe dig med at komme på din mærkatrejse.
-ms.openlocfilehash: f27f1a475f5880058db40894015dabdec9038be1
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 2998c993cd605f0371e728bba1cdea555b5e51e0
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286028"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574206"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Kom i gang med følsomhedsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 [!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan finde oplysninger om, hvad følsomhedsmærkater er, og hvordan de kan hjælpe dig med at beskytte din organisations data, under [Få mere at vide om følsomhedsmærkater](sensitivity-labels.md).
 
-Hvis du har [Azure Information Protection](/azure/information-protection/what-is-information-protection) og stadig bruger Azure Information Protection-mærkater, der blev administreret fra Azure Portal, skal du overføre disse mærkater til platformen for [samlet mærkat](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform). For Windows computere kan du derefter [vælge, hvilken navngivningsklient der skal bruges til](/azure/information-protection/rms-client/use-client#choose-which-labeling-client-to-use-for-windows-computers) dine publicerede følsomhedsmærkater.
+Hvis du har [Azure Information Protection](/azure/information-protection/what-is-information-protection) og stadig bruger Azure Information Protection-mærkater, der blev administreret fra Azure Portal, skal du overføre disse mærkater til platformen for [samlet mærkat](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform). På Windows-computere kan du derefter [vælge, hvilken navngivningsklient der skal bruges til](/azure/information-protection/rms-client/use-client#choose-which-labeling-client-to-use-for-windows-computers) dine publicerede følsomhedsmærkater.
 
 Når du er klar til at begynde at beskytte din organisations data ved hjælp af følsomhedsmærkater:
 
@@ -46,7 +46,7 @@ Når du er klar til at begynde at beskytte din organisations data ved hjælp af 
 
 3. **Publicer etiketterne.** Når dine følsomhedsmærkater er konfigureret, kan du publicere dem ved hjælp af en mærkatpolitik. Beslut, hvilke brugere og grupper der skal have mærkaterne, og hvilke politikindstillinger der skal bruges. En enkelt etiket kan genbruges – du definerer den én gang, og derefter kan du inkludere den i flere mærkatpolitikker, der er tildelt forskellige brugere. Så du kan f.eks. styre dine følsomhedsmærkater ved at tildele en mærkatpolitik til nogle få brugere. Når du derefter er klar til at udrulle mærkaterne på tværs af din organisation, kan du oprette en ny mærkatpolitik for dine mærkater, og denne gang skal du angive alle brugere.
 
-
+> [!TIP]
 > Du er muligvis berettiget til automatisk oprettelse af standardnavne og en standardetiketpolitik, der tager sig af trin 1-3 for dig. Du kan få flere oplysninger under [Standardmærkater og -politikker for Microsoft Purview Information Protection](mip-easy-trials.md).
 
 Det grundlæggende flow til installation og anvendelse af følsomhedsmærkater:
@@ -57,11 +57,11 @@ Det grundlæggende flow til installation og anvendelse af følsomhedsmærkater:
 
 En række forskellige abonnementer understøtter følsomhedsmærkater, og licenskravene for brugere afhænger af de funktioner, du bruger.
 
-Hvis du vil se indstillingerne for licensering af dine brugere, så de kan drage fordel af Microsoft Purview-funktioner, skal du se [Microsoft 365 licensvejledning for at få oplysninger om sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Du kan få mere at vide om følsomhedsmærkater i afsnittet [Microsoft Purview Information Protection: Følsomhedsmærkatering](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-information-protection-sensitivity-labeling) og relateret [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få licenskrav på funktionsniveau.
+Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft Purview-funktioner, skal du se [Microsoft 365-licensvejledningen for at få hjælp til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Du kan se følsomhedsmærkater i afsnittet [Microsoft Purview Information Protection: Følsomhedsmærkater](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-information-protection-sensitivity-labeling) og relateret [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få licenskrav på funktionsniveau.
 
 ## <a name="permissions-required-to-create-and-manage-sensitivity-labels"></a>Tilladelser, der kræves for at oprette og administrere følsomhedsmærkater
 
-Medlemmer af dit overholdelsesteam, der skal oprette følsomhedsmærkater, skal have tilladelser til Microsoft Purview-overholdelsesportalen.
+Medlemmer af overholdelsesteamet, der skal oprette følsomhedsmærkater, skal have tilladelser til Microsoft Purview-compliance-portal.
 
 Globale administratorer for din lejer har som standard adgang til dette administrationscenter og kan give overholdelsesansvarlige og andre personer adgang uden at give dem alle tilladelserne for en lejeradministrator. For denne delegerede begrænsede administratoradgang skal du føje brugere til rollegruppen **Overholdelsesdataadministrator**, **Overholdelsesadministrator** eller **Sikkerhedsadministrator** . 
 
@@ -75,9 +75,9 @@ Hvis du vil bruge standardrollerne, kan du oprette en ny rollegruppe og føje ro
 > - **Information Protection efterforskere**
 > - **Information Protection læsere**
 >
-> Hvis du vil have en forklaring på hver enkelt og de nye roller, de indeholder, skal du vælge en rollegruppe i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalEn</a> >  tilladelser **&** **rollerKompliancecenterRoles** >  >  og derefter gennemse beskrivelsen i pop op-ruden. Du kan også se [Rollegrupper i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
+> Hvis du vil have en forklaring på hver enkelt og de nye roller, de indeholder, skal du vælge en rollegruppe i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> >  **Tilladelser & roller** > **Overholdelsescenterroller** >  og derefter gennemse beskrivelsen i pop op-ruden. Du kan også se [Rollegrupper i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#role-groups-in-the-security--compliance-center).
 
-Du kan finde oplysninger om, hvordan du føjer brugere til standardrollegruppen, roller eller opretter dine egne rollegrupper, [under Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md).
+Du kan finde oplysninger om, hvordan du føjer brugere til standardrollegruppen, roller eller opretter dine egne rollegrupper, [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md).
 
 Disse tilladelser kræves kun for at oprette og konfigurere følsomhedsmærkater og deres mærkatpolitikker. De behøver ikke at anvende mærkaterne i apps eller tjenester. Hvis der er behov for yderligere tilladelser til bestemte konfigurationer, der er relateret til følsomhedsmærkater, vises disse tilladelser i deres respektive dokumentationsinstruktioner.
 
@@ -92,21 +92,21 @@ Alle scenarier kræver, at du [opretter og konfigurerer følsomhedsmærkater og 
 
 |Jeg vil...|Dokumentation|
 |----------------|---------------|
-|Administrer følsomhedsmærkater for Office apps, så indhold mærkes, som det oprettes – omfatter understøttelse af manuel mærkning på alle platforme |[Administrer følsomhedsmærkater i Office apps](sensitivity-labels-office-apps.md)|
-|Udvid mærkning til Stifinder og PowerShell med yderligere funktioner til Office apps på Windows (hvis det er nødvendigt)|[Azure Information Protection Unified Labeling Client til Windows](/azure/information-protection/rms-client/aip-clientv2)|
+|Administrer følsomhedsmærkater for Office-apps, så indhold mærkes, som det oprettes – omfatter understøttelse af manuel mærkning på alle platforme |[Administrer følsomhedsmærkater i Office apps](sensitivity-labels-office-apps.md)|
+|Udvid mærkning til Stifinder og PowerShell med yderligere funktioner til Office-apps på Windows (hvis det er nødvendigt)|[Azure Information Protection Unified Labeling Client til Windows](/azure/information-protection/rms-client/aip-clientv2)|
 |Kryptér dokumenter og mails med følsomhedsmærkater, og begræns, hvem der har adgang til indholdet, og hvordan det kan bruges |[Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering](encryption-sensitivity-labels.md)|
 |Aktivér følsomhedsmærkater for Office på internettet med understøttelse af samtidig redigering, eDiscovery, forebyggelse af datatab, søgning – også selvom dokumenter krypteres | [Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md)
-|Brug samtidig redigering og automatisk lagring i Office skrivebordsapps, når dokumenter krypteres | [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md)
+|Brug samtidig redigering og automatisk lagring i Office-skrivebordsapps, når dokumenter krypteres | [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md)
 |Anvend automatisk følsomhedsmærkater på dokumenter og mails | [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md)|
-|Brug følsomhedsmærkater til at beskytte indhold i Teams og SharePoint |[Brug følsomhedsmærkater med Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md)|
+|Brug følsomhedsmærkater til at beskytte indhold i Teams og SharePoint |[Brug følsomhedsmærkater med Microsoft Teams, Microsoft 365-grupper og SharePoint-websteder](sensitivity-labels-teams-groups-sites.md)|
 |Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og individuelle dokumenter i SharePoint og OneDrive |[Brug følsomhedsmærkater til at angive standardlinket til deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md)|
-|Anvend en følsomhedsmærkat på en model til dokumentforståelse, så identificerede dokumenter i et SharePoint bibliotek automatisk klassificeres og beskyttes |[Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model)|
+|Anvend en følsomhedsmærkat på en model til dokumentforståelse, så identificerede dokumenter i et SharePoint-bibliotek automatisk klassificeres og beskyttes |[Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model)|
 |Undgå eller advar brugere om deling af filer eller mails med en bestemt følsomhedsmærkat |[Brug følsomhedsmærkater som betingelser i DLP-politikker](dlp-sensitivity-label-as-condition.md) |
 |Anvend en følsomhedsmærkat på en fil, når jeg modtager en besked om, at indhold, der indeholder personlige data, deles og skal beskyttes| [Undersøg og afhjælp beskeder i Administration af risiko for beskyttelse af personlige oplysninger](/privacy/priva/risk-management-alerts)|
 |Anvend en opbevaringsmærkat for at bevare eller slette filer eller mails, der har en bestemt følsomhedsmærkat|[Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold](apply-retention-labels-automatically.md) |
 |Find, mærk og beskyt filer, der er gemt i datalagre i det lokale miljø |[Udrulning af Azure Information Protection-scanneren for automatisk at klassificere og beskytte filer](/azure/information-protection/deploy-aip-scanner)|
 |Find, mærk og beskyt filer, der er gemt i datalagre i cloudmiljøet|[Opdag, klassificer, mærk og beskyt regulerede og følsomme data, der er gemt i cloudmiljøet](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
-|Label SQL databasekolonner ved hjælp af de samme følsomhedsmærkater som dem, der bruges til filer og mails, så organisationen har en samlet mærkatløsning, der fortsat kan beskytte disse strukturerede data, når de eksporteres |[Klassificering af & dataregistrering for Azure SQL Database, Azure SQL Managed Instance og Azure Synapse Analytics](/azure/azure-sql/database/data-discovery-and-classification-overview) <br /><br /> [SQL dataregistrering og -klassificering for SQL Server i det lokale miljø](/sql/relational-databases/security/sql-data-discovery-and-classification)|
+|Mærkér SQL-databasekolonner ved hjælp af de samme følsomhedsmærkater som dem, der bruges til filer og mails, så organisationen har en samlet mærkatløsning, der fortsat kan beskytte disse strukturerede data, når de eksporteres |[Klassificering af & dataregistrering for Azure SQL Database, Azure SQL Managed Instance og Azure Synapse Analytics](/azure/azure-sql/database/data-discovery-and-classification-overview) <br /><br /> [SQL-dataregistrering og -klassificering for SQL Server i det lokale miljø](/sql/relational-databases/security/sql-data-discovery-and-classification)|
 |Anvend og få vist mærkater i Power BI, og beskyt data, når de gemmes uden for tjenesten|[Følsomhedsmærkater i Power BI](/power-bi/admin/service-security-sensitivity-label-overview)|
 |Overvåg og forstå, hvordan følsomhedsmærkater bruges i min organisation|[Om klassificering af data](data-classification-overview.md)|
 |Udvid følsomhedsmærkater til tredjepartsapps og -tjenester|[Microsoft Information Protection SDK](/information-protection/develop/overview#microsoft-information-protection-sdk)|
@@ -117,7 +117,7 @@ Alle scenarier kræver, at du [opretter og konfigurerer følsomhedsmærkater og 
 Den mest effektive dokumentation til slutbrugere er tilpasset vejledning og instruktioner, du angiver for de navne og konfigurationer, du vælger. Du kan bruge politikindstillingen Mærkat **Giv brugere et link til en brugerdefineret Hjælp-side** til at angive et internt link til denne dokumentation. Brugerne kan derefter nemt få adgang til den fra knappen **Følsomhed** :
 
 - Til indbygget mærkning: Menuindstillingen **Få mere at vide** .
-- For Azure Information Protection unified labeling-klienten: Menuindstillingen **Hjælp og feedback** > linket **Fortæl mig mere** i dialogboksen Microsoft Azure Information Protection.
+- Til Azure Information Protection unified labeling-klient: Menupunkt for **Hjælp og feedback** > linket **Fortæl mig mere** i dialogboksen Microsoft Azure Information Protection.
 
 For at hjælpe dig med at angive din tilpassede dokumentation kan du se følgende side og downloads, som du kan bruge til at hjælpe med at oplære dine brugere: [Slutbrugeruddannelse af følsomhedsmærkater](https://microsoft.github.io/ComplianceCxE/enduser/sensitivity/). 
 

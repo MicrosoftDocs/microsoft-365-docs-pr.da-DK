@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan Microsoft 365 Business Premium hjælper din virksomhed med produktivitet og sikkerhed.
-ms.openlocfilehash: 8cfdbdf6f8980a0dbc3a30ca5994714b82571920
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 851abcfc2e7d6b55c4c6d201132dabafc56a898e
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489875"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574150"
 ---
 # <a name="how-microsoft-365-security-recommendations-affect-your-users"></a>Sådan påvirker Microsoft 365-sikkerhedsanbefalinger dine brugere
 
@@ -67,7 +67,7 @@ Microsoft 365 Business Premium omfatter dine foretrukne Produktivitetsapps til O
 
 ## <a name="resources-to-train-your-users"></a>Ressourcer til at oplære dine brugere
 
-De sikkerhedsanbefalinger, der leveres i dette bibliotek, gør det meget sværere for cyberattackers at få adgang til dit miljø. En vigtig del af din sikkerhedsstrategi omfatter dog oplæring af brugere&mdash; af de personer i virksomheden, der bruger dine systemer regelmæssigt. Brugerne kan hjælpe med at være din forreste forsvarslinje. Alle skal vide, hvordan de arbejder produktivt, samtidig med at de bevarer et mere sikkert miljø. 
+De sikkerhedsanbefalinger, der gives i disse missioner, gør det meget sværere for cyberangreb at få adgang til dit miljø. En vigtig del af din sikkerhedsstrategi omfatter dog oplæring af medlemmer af organisationen&mdash;, de personer i virksomheden, der jævnligt bruger dine systemer. Brugerne kan være din forreste forsvarslinje. Alle skal vide, hvordan de arbejder produktivt, samtidig med at de bevarer et mere sikkert miljø.
 
 Der er ressourcer tilgængelige, som kan hjælpe alle i din organisation med at:
 

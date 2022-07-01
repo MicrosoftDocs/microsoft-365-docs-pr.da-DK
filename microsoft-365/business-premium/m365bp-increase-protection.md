@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få hjælp til at øge beskyttelsesniveauet i Microsoft 365 Business Premium
-ms.openlocfilehash: a4f76555fad2147477ab5bf9202c45123d1624f7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 7917fa7e0530724c201db8b118ea2adedc7c3a62
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486049"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573841"
 ---
 # <a name="increase-threat-protection-for-microsoft-365-business-premium"></a>Øg trusselsbeskyttelsen for Microsoft 365 Business Premium
 
@@ -75,11 +75,11 @@ Hvis brugere tildeles flere politikker, bruges en prioritetsrækkefølge til at 
 
 1. **Streng beskyttelse** får den højeste prioritet og tilsidesætter alle andre politikker.
 
-2. **Standardbeskyttelse** 
+1. **Standardbeskyttelse** 
 
-3. **Brugerdefinerede sikkerhedspolitikker**
+1. **Brugerdefinerede sikkerhedspolitikker**
 
-4. **Indbygget beskyttelse** får den laveste prioritet og tilsidesættes af streng beskyttelse, standardbeskyttelse og brugerdefinerede politikker.
+1. **Indbygget beskyttelse** får den laveste prioritet og tilsidesættes af streng beskyttelse, standardbeskyttelse og brugerdefinerede politikker.
 
 Streng beskyttelse tilsidesætter alle andre politikker, og indbygget beskyttelse tilsidesættes af de andre politikker. 
 
@@ -100,11 +100,11 @@ Hvis du vil tildele forudindstillede sikkerhedspolitikker, skal du følge disse 
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
-2. Gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Forudindstillede sikkerhedspolitikker** i afsnittet **Skabelonpolitikker** . Hvis du vil gå direkte til siden **Forudindstillede sikkerhedspolitikker** , skal du bruge <https://security.microsoft.com/presetSecurityPolicies>.
+1. Gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Forudindstillede sikkerhedspolitikker** i afsnittet **Skabelonpolitikker** . Hvis du vil gå direkte til siden **Forudindstillede sikkerhedspolitikker** , skal du bruge <https://security.microsoft.com/presetSecurityPolicies>.
 
-2. På siden **Forudindstillede sikkerhedspolitikker** skal du enten i afsnittet **Standardbeskyttelse** eller **Streng beskyttelse** ændre til/fra-knappen fra **Deaktiveret** til **Aktiveret** og derefter vælge **Administrer**.
+1. På siden **Forudindstillede sikkerhedspolitikker** skal du enten i afsnittet **Standardbeskyttelse** eller **Streng beskyttelse** ændre til/fra-knappen fra **Deaktiveret** til **Aktiveret** og derefter vælge **Administrer**.
 
-3. Guiden **Anvend standardbeskyttelse** eller **Anvend streng beskyttelse** starter i et pop op-vindue. På **EOP-beskyttelsen gælder for siden skal** du identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser):
+1. Guiden **Anvend standardbeskyttelse** eller **Anvend streng beskyttelse** starter i et pop op-vindue. På **EOP-beskyttelsen gælder for siden skal** du identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser):
    - **Brugere**
    - **Grupper**
    - **Domæner**
@@ -117,11 +117,11 @@ Hvis du vil tildele forudindstillede sikkerhedspolitikker, skal du følge disse 
 
    Når du er færdig, skal du vælge **Næste**.
 
-4. På **siden Defender for Office 365 beskyttelse gælder for** at identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser). Angiv brugere, grupper og domæner på samme måde som i det forrige trin.
+1. På **siden Defender for Office 365 beskyttelse gælder for** at identificere de interne modtagere, som politikkerne gælder for (modtagerbetingelser). Angiv brugere, grupper og domæner på samme måde som i det forrige trin.
 
    Klik på **Næste**, når du er færdig.
 
-5. Kontrollér dine valg på siden **Gennemse og bekræft dine ændringer** , og vælg derefter **Bekræft**.
+1. Kontrollér dine valg på siden **Gennemse og bekræft dine ændringer** , og vælg derefter **Bekræft**.
 
 > [!TIP]
 > Du kan få mere at vide om tildeling af forudindstillede sikkerhedspolitikker i følgende artikler:
@@ -144,14 +144,14 @@ Brug vores vejledning til hurtig start [, Beskyt mod trusler](../security/office
 Delingsniveauer er som standard angivet til det mest tilladte niveau for både SharePoint og OneDrive. Vi anbefaler, at du ændrer standardindstillingerne for bedre at beskytte din virksomhed.
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/?linkid=2185222" target="_blank">**Deling** i SharePoint Administration</a>, og log på med en konto, der har [administratortilladelser til din organisation](/sharepoint/sharepoint-admin-role).
- 
-2. Under **Ekstern deling** skal du angive delingsniveauet. (Vi anbefaler, at du bruger **Mindst tilladte** for at forhindre ekstern deling).
 
-3. Under **Fil- og mappelinks** skal du vælge en indstilling (f.eks **. Bestemte personer**). Vælg derefter, om du vil tildele visnings- eller redigeringstilladelser som standard for delte links (f.eks **. Vis**).
+1. Under **Ekstern deling** skal du angive delingsniveauet. (Vi anbefaler, at du bruger **Mindst tilladte** for at forhindre ekstern deling).
 
-4. Under **Andre indstillinger** skal du vælge de indstillinger, du vil bruge.
+1. Under **Fil- og mappelinks** skal du vælge en indstilling (f.eks **. Bestemte personer**). Vælg derefter, om du vil tildele visnings- eller redigeringstilladelser som standard for delte links (f.eks **. Vis**).
 
-5. Vælg derefter **Gem**.
+1. Under **Andre indstillinger** skal du vælge de indstillinger, du vil bruge.
+
+1. Vælg derefter **Gem**.
 
 > [!TIP]
 > Du kan få mere at vide om disse indstillinger under [Administrer delingsindstillinger](/sharepoint/turn-external-sharing-on-or-off).
@@ -168,9 +168,9 @@ På følgende billede vises nogle af de standardpolitikker, der er inkluderet i 
 
 1. Gå til Microsoft Purview-compliance-portal på , og log på[https://compliance.microsoft.com](https://compliance.microsoft.com).
 
-2. Vælg **Politikker** i navigationsruden, og vælg derefter **Beskedpolitikker**.
+1. Vælg **Politikker** i navigationsruden, og vælg derefter **Beskedpolitikker**.
 
-3. Vælg en individuel politik for at få vist flere oplysninger eller redigere politikken. På følgende billede vises en liste over politikker for beskeder med én politik valgt:
+1. Vælg en individuel politik for at få vist flere oplysninger eller redigere politikken. På følgende billede vises en liste over politikker for beskeder med én politik valgt:
 
    :::image type="content" source="media/selected-alert-policy.png" lightbox="media/selected-alert-policy.png" alt-text="Skærmbillede af en valgt beskedpolitik.":::
 
@@ -194,13 +194,13 @@ Du kan forhindre personer i din organisation i at dele deres kalendere. Du kan o
 
 1. Gå [til Organisationsindstillinger i Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2053743), og log på.
 
-2. Vælg **Kalender**, og vælg, om personer i din organisation kan dele deres kalendere med personer uden for, der har Office 365 eller Exchange, eller med andre.
+1. Vælg **Kalender**, og vælg, om personer i din organisation kan dele deres kalendere med personer uden for, der har Office 365 eller Exchange, eller med andre.
 
    Vi anbefaler, at du rydder indstillingen **Ekstern deling** .
 
    Hvis du vælger indstillingen Del med alle, kan du vælge også kun at dele oplysninger om ledig/optaget tid.
 
-3. Vælg **Gem ændringer** nederst på siden.
+1. Vælg **Gem ændringer** nederst på siden.
 
    På følgende billede kan du se, at kalenderdeling ikke er tilladt.
 

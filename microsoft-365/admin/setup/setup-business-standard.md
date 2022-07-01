@@ -27,18 +27,21 @@ search.appverid:
 - MOE150
 - BEA160
 description: Når du køber Microsoft 365 Business Standard, har du mulighed for at bruge et domæne, du ejer, eller købe et under tilmeldingen.
-ms.openlocfilehash: a08f5eb5c0a1bb2a77242f4b661c683310568d81
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: d5504edaff4c9d406d218d8ab8333b6d50af406e
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092817"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573885"
 ---
 # <a name="set-up-microsoft-365-business-standard-with-a-new-or-existing-domain"></a>Konfigurer Microsoft 365 Business Standard med et nyt eller eksisterende domæne
 
 Når du køber Microsoft 365 Business Standard, har du mulighed for at tilføje et domæne, du ejer, eller købe et. Se [Tilmeld dig et Microsoft 365 Business Standard-abonnement](../simplified-signup/signup-business-standard.md).
 
 I denne artikel fører vi dig gennem trinnene til tilføjelse af et eksisterende domæne, som du allerede ejer eller køber et nyt. Hvis du har købt et nyt domæne, da du tilmeldte dig, er dit domæne konfigureret, og du kan flytte til [Tilføj brugere og tildele licenser](#add-users-and-assign-licenses).
+
+> [!Tip]
+> Hvis du har et Microsoft 365 Business Premium abonnement, skal du se [Konfigurer Microsoft 365 Business Premium](../../business-premium/m365bp-setup.md).
 
 ## <a name="set-up-microsoft-365-for-business"></a>Konfigurer Microsoft 365 til virksomheder
 
@@ -49,7 +52,7 @@ I denne artikel fører vi dig gennem trinnene til tilføjelse af et eksisterende
 Hvis du vil tilføje, redigere eller fjerne domæner, skal du være global administrator. Du kan finde flere oplysninger under [Om administratorroller](../add-users/about-admin-roles.md).
 
 > [!IMPORTANT]
-> Den person, der tilmelder sig Microsoft 365 til virksomheden (normalt virksomhedsejeren), bliver automatisk den tekniske administrator af organisationen. Du kan tilføje andre personer som administratorer, hvis du vil have hjælp til at administrere dine Microsoft 365-tjenester. Se [Tildel administratorroller](../add-users/assign-admin-roles.md) for at få flere oplysninger.
+> Den person, der tilmelder sig Microsoft 365 for business (normalt virksomhedsejeren), bliver automatisk den tekniske administrator af organisationen. Du kan tilføje andre personer som administratorer, hvis du vil have hjælp til at administrere dine Microsoft 365-tjenester. Se [Tildel administratorroller](../add-users/assign-admin-roles.md) for at få flere oplysninger.
 
 ## <a name="watch-add-an-existing-domain-to-your-microsoft-365-business-standard-subscription"></a>Se: Føj et eksisterende domæne til dit Microsoft 365 Business Standard-abonnement
 
@@ -59,7 +62,7 @@ Hvis du vil tilføje, redigere eller fjerne domæner, skal du være global admin
 
 1. Vælg **Opret en ny firmamailkonto (avanceret)** på siden **Sådan logger du på** på Microsoft 365 Business Standard tilmelde dig.
 
-2. På siden **Installér dine Office apps** kan du eventuelt installere appsene på din egen computer.
+2. På siden **Installér dine Office-apps** kan du eventuelt installere appsene på din egen computer.
 
 3. I trinnet **Tilføj domæne** skal du angive det domænenavn, du vil bruge (f.eks. contoso.com).
 
@@ -82,7 +85,7 @@ Alle brugere, du tilføjer, tildeles automatisk en Microsoft 365 Business Standa
 
 2. Når du har tilføjet brugerne, får du også mulighed for at dele legitimationsoplysninger med de nye brugere, du har tilføjet. Du kan vælge at udskrive dem, sende dem en mail eller downloade dem.
 
-## <a name="connect-your-domain"></a>Forbind dit domæne
+## <a name="connect-your-domain"></a>Opret forbindelse til dit domæne
   
 Hvis du vil konfigurere tjenester, skal du opdatere poster hos din DNS-vært eller domæneregistrator.
   
@@ -93,7 +96,7 @@ Hvis du vil konfigurere tjenester, skal du opdatere poster hos din DNS-vært ell
 
 2. Følg trinnene i guiden, og mail og andre tjenester konfigureres for dig.
 
-    Når tilmeldingsprocessen er fuldført, bliver du dirigeret til Administration, hvor du skal følge en guide for at installere Office apps, tilføje dit domæne, tilføje brugere og tildele licenser. Når du har fuldført den indledende konfiguration, kan du bruge siden **Konfiguration** i Administration til at fortsætte med at konfigurere de tjenester, der følger med dine abonnementer.
+    Når tilmeldingsprocessen er fuldført, sendes du videre til Administration, hvor du skal følge en guide for at installere Office-apps, tilføje dit domæne, tilføje brugere og tildele licenser. Når du har fuldført den indledende konfiguration, kan du bruge siden **Konfiguration** i Administration til at fortsætte med at konfigurere de tjenester, der følger med dine abonnementer.
 
     Du kan få flere oplysninger om installationsguiden og siden **Konfiguration af** Administration under [Forskel mellem installationsguiden og siden Installation](o365-setup-wizard-and-setup-page.md).
 
@@ -105,7 +108,7 @@ Hvis du vil konfigurere tjenester, skal du opdatere poster hos din DNS-vært ell
 
 1. Vælg **Opret en ny firmamailkonto (avanceret)** på siden **Sådan logger du på** på Microsoft 365 Business Standard tilmelde dig.
 
-2. Følg trinnene for at købe et nyt domæne, og angiv det domænenavn, du vil bruge (f.eks. contoso.com). Når du er færdig med at købe dit domæne, kan du [tilføje brugere og licenser](../add-users/add-users.md) og installere dine Office apps i Administration.
+2. Følg trinnene for at købe et nyt domæne, og angiv det domænenavn, du vil bruge (f.eks. contoso.com). Når du er færdig med at købe dit domæne, kan du [tilføje brugere og licenser](../add-users/add-users.md) og installere dine Office-apps i Administration.
 
 ## <a name="finish-setting-up"></a>Afslut indstillingerne
 
@@ -113,7 +116,7 @@ Følg nedenstående trin for at konfigurere Outlook, Teams, OneDrive og dit webs
 
 ### <a name="step-set-up-outlook-for-email"></a>Trin: Konfigurer Outlook til mail
 
-1. Søg efter Outlook i Windows menuen Start, og vælg det.
+1. Søg efter Outlook i menuen Start i Windows, og vælg det.
 
     Hvis du bruger en Mac, skal du åbne Outlook fra værktøjslinjen eller finde den ved hjælp af Finder.
 
@@ -121,13 +124,13 @@ Følg nedenstående trin for at konfigurere Outlook, Teams, OneDrive og dit webs
 
 2. Vælg **Filoplysninger** \>  \> **Tilføj konto**.
 
-3. Angiv din Microsoft-mailadresse, og vælg **Forbind**.
+3. Angiv din Microsoft-mailadresse, og vælg **Opret forbindelse**.
 
 ## <a name="watch-set-up-outlook-for-email"></a>Se: Konfigurer Outlook til mail
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/9fe86884-8a83-42cc-bca9-61a12e6dad31?autoplay=false]
   
-Mere på [Konfigurer Outlook til mail](https://support.microsoft.com/office/f5bf0cd1-e1f3-4b0d-a022-ecab17efe86f).
+Mere under [Konfigurer Outlook til mail](https://support.microsoft.com/office/f5bf0cd1-e1f3-4b0d-a022-ecab17efe86f).
   
 ### <a name="import-email"></a>Importér mail
 
@@ -135,13 +138,13 @@ Hvis du brugte Outlook med en anden mailkonto, kan du importere din tidligere ma
   
 1. **Eksportér din gamle mail**
 
-    I Outlook skal du vælge **Filer** \> **Åbn &amp; eksport** \> **Import/Export**.
+    I Outlook skal du vælge **Åbn** **filEksportér &amp;** \> \> **import/eksport**.
 
-    Vælg **Eksportér til en fil,** og følg derefter trinnene for at eksportere din Outlook datafil (.pst) og eventuelle undermapper.
+    Vælg **Eksportér til en fil,** og følg derefter trinnene for at eksportere Outlook-datafilen (.pst) og eventuelle undermapper.
 
 2. **Importér din gamle mail**
 
-    I Outlook skal du vælge **Filer** \> **Åbn &amp; eksport** \> **Import/Export** igen.
+    I Outlook skal du vælge **Åbn** **filEksportér &amp;** \> \> **import/eksport** igen.
 
     Denne gang skal du vælge **Importér fra et andet program eller en anden fil** og følge trinnene for at importere den sikkerhedskopifil, du oprettede, da du eksporterede din gamle mail.
 
@@ -153,11 +156,11 @@ Mere på [Importér mail med Outlook](https://support.microsoft.com/office/6a377
 
 Du kan også bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> til at importere alles mail. Du kan få flere oplysninger under [Overfør flere mailkonti](/Exchange/mailbox-migration/mailbox-migration).
 
-## <a name="set-up-microsoft-teams-and-onedrive-for-business"></a>Konfigurer Microsoft Teams og OneDrive til virksomheder
+## <a name="set-up-microsoft-teams-and-onedrive-for-business"></a>Konfigurer Microsoft Teams og OneDrive for business
 
-Vælg ikonet OneDrive cloud på proceslinjen, og følg trinnene for at flytte filerne til den nye OneDrive for Business mappe. Vælg **Næste** for at konfigurere Microsoft Teams.
+Vælg OneDrive-skyikonet på proceslinjen, og følg trinnene for at flytte dine filer til den nye OneDrive for Business mappe. Vælg **Næste** for at konfigurere Microsoft Teams.
 
-1. Åbn Microsoft Teams, vælg dit profilikon, og tilføj derefter arbejds- **eller skolekonto**. Følg trinnene for at føje din nye konto til Teams.
+1. Åbn Microsoft Teams, vælg dit profilikon, og **tilføj derefter arbejds- eller skolekonto**. Følg trinnene for at føje din nye konto til Teams.
 
 ## <a name="use-a-public-website"></a>Brug et offentligt websted
 
@@ -173,7 +176,7 @@ Microsoft 365 indeholder ikke et offentligt websted til din virksomhed. Hvis du 
 
 ## <a name="invite-users-to-join-your-subscription-and-organization"></a>Inviter brugere til at tilmelde sig dit abonnement og din organisation
 
-Når du har konfigureret din organisation, kan du invitere andre brugere til at tilmelde sig dit Microsoft 365 virksomhedsabonnement. De får adgang til alle funktionerne i abonnementet.
+Når du har konfigureret din organisation, kan du invitere andre brugere til at tilmelde sig dit Microsoft 365-virksomhedsabonnement. De får adgang til alle funktionerne i abonnementet.
 
 [Inviter brugere til mit abonnement](../simplified-signup/admin-invite-business-standard.md)
 
@@ -181,7 +184,7 @@ Fortæl brugerne, at de kan følge trinnene i nedenstående artikler for at tilm
 
 - [Acceptér en invitation via mail](../simplified-signup/user-invite-business-standard.md)
 
-- [Acceptér en invitation via mail ved hjælp af en Outlook, Yahoo, Gmail eller en anden konto (bruger)](../simplified-signup/user-invite-msa-nodomain-join.md)
+- [Acceptér en invitation via mail ved hjælp af en Outlook-, Yahoo-, Gmail- eller anden konto (bruger)](../simplified-signup/user-invite-msa-nodomain-join.md)
 
 ## <a name="related-topics"></a>Relaterede emner
 

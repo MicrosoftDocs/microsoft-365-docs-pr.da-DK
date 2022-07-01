@@ -1,5 +1,5 @@
 ---
-title: Find din Microsoft 365 partner eller forhandler
+title: Find din Microsoft 365-partner eller -forhandler
 f1.keywords:
 - NOCSH
 ms.author: cmcatee
@@ -23,17 +23,17 @@ search.appverid:
 - MOE150
 - BEA160
 ms.assetid: b6c18a9b-2aed-4c84-9d75-af709160258c
-description: Få mere at vide om, hvordan du finder en ny Microsoft 365 partner eller får kontaktoplysninger til en partner, du tidligere har arbejdet med.
-ms.openlocfilehash: 338ea8e9c1f0fd75143ec97ca7ea06b7ee15a1c5
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Få mere at vide om, hvordan du finder en ny Microsoft 365-partner eller får kontaktoplysninger til en partner, du tidligere har arbejdet med.
+ms.openlocfilehash: af865ee194cb9efb5c2891e6c73d860604c57bec
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468476"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573752"
 ---
-# <a name="find-your-microsoft-365-subscriptions-partner-or-reseller"></a>Find din Microsoft 365-abonnementspartner eller -forhandler
+# <a name="find-your-microsoft-365-subscriptions-partner-or-reseller"></a>Find din partner eller forhandler af Microsoft 365-abonnementer
 
-Som administrator kan du samarbejde med en partner om at købe, aktivere og forny Microsoft 365 abonnementer via et Microsoft Open Volume Licensing-program. 
+Som administrator kan du samarbejde med en partner om at købe, aktivere og forny Microsoft 365-abonnementer via et Microsoft Open Volume Licensing-program. 
   
  **Er du ikke sikker på, om Open Volume Licensing er noget for dig?** Se [oversigten over Microsoft Open-programmer](https://go.microsoft.com/fwlink/p/?LinkId=613298).
   
@@ -52,7 +52,7 @@ Hvis du er klar til at købe eller forny Microsoft 365 via Open Volume Licensing
   
 ## <a name="get-partner-info-in-the-admin-center"></a>Hent partneroplysninger i Administration
 
-1. I Administration skal du gå til siden **Indstillinger** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2074649" target="_blank">Partner-relationer</a>.
+1. I Administration skal du gå til siden **Indstillinger** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2074649" target="_blank">Partnerrelationer</a> .
   
 2. Hvis du har en partner, vises partnerens navn og relation til din organisation her. Hvis du vil have vist partnerens kontaktoplysninger (telefonnummer og mailadresse), skal du vælge partnernavnet.
     
@@ -63,5 +63,3 @@ Hvis du er klar til at købe eller forny Microsoft 365 via Open Volume Licensing
  **Til Microsoft-partnere**
   
 [Hjælp til partnere](https://support.microsoft.com/office/ae811622-b838-4f62-b7e9-659627374963)
-  
-

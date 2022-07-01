@@ -1,5 +1,5 @@
 ---
-title: Arbejde med forbedringshandlinger i Microsoft Purview Overholdelsesstyring
+title: Arbejde med forbedringshandlinger i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,13 +16,13 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du implementerer og tester kontrolelementer ved at arbejde med forbedringshandlinger i Microsoft Purview Overholdelsesstyring. Tildel arbejde, gem dokumentation og eksportér rapporter.
-ms.openlocfilehash: 9dca4f3a742b82a2cf119ceb40b04241d1b5177f
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+description: Få mere at vide om, hvordan du implementerer og tester kontrolelementer ved at arbejde med forbedringshandlinger i Microsoft Purview Compliance Manager. Tildel arbejde, gem dokumentation og eksportér rapporter.
+ms.openlocfilehash: ed52b6e9b3f6c817430383beebcb57f9c4dcf613
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621775"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574272"
 ---
 # <a name="working-with-improvement-actions-in-compliance-manager"></a>Arbejde med forbedringshandlinger i Overholdelsesstyring
 
@@ -67,7 +67,7 @@ Når du har identificeret den relevante modtageren, skal du sørge for, at vedko
 3. Vælg **Tildel**. Den tildelte bruger modtager en mail, der forklarer, at forbedringshandlingen er tildelt til vedkommende, med et direkte link til forbedringshandlingen.
 
 > [!NOTE]
-> Kunder med GCC (US Government Community) High and Department of Defense (DoD) modtager ikke en mail, når de tildeles forbedringshandlinger.
+> Kunder med det amerikanske offentlige samfund (GCC) High and Department of Defense (DoD) modtager ikke en mail, når de tildeles forbedringshandlinger.
 
 Den tildelte bruger kan derefter udføre de anbefalede handlinger.
 
@@ -146,7 +146,7 @@ Testhistorikken indeholder en downloadet rapport over alle ændringer af teststa
 #### <a name="exporting-testing-history"></a>Eksport af testhistorik
 Du kan eksportere en rapport, der viser dig en oversigt over alle ændringer i teststatus for en forbedringshandling. Disse rapporter er især nyttige til overvågning af status for [handlinger, der testes automatisk](#automatic-testing-source), da sådanne handlinger regelmæssigt eller ofte opdateres på baggrund af din lejers data.
 
-På siden med oplysninger om en forbedringshandling skal du vælge fanen **Test** . Under **Testhistorik** skal du vælge knappen **Eksportér testhistorik** . Rapporten downloades som en Excel fil.
+På siden med oplysninger om en forbedringshandling skal du vælge fanen **Test** . Under **Testhistorik** skal du vælge knappen **Eksportér testhistorik** . Rapporten downloades som en Excel-fil.
 
 ## <a name="update-testing-source"></a>Opdater testkilde
 
@@ -156,7 +156,9 @@ Overholdelsesstyring giver dig mulighed for at teste forbedringshandlinger. I af
 Forbedringshandlinger, der er angivet for manuel test, er handlinger, som du manuelt tester og implementerer. Du angiver de nødvendige tilstande for implementering og teststatus og uploader eventuelle dokumentationsfiler under fanen **Dokumenter** . For nogle handlinger er dette den eneste tilgængelige metode til test af forbedringshandlinger.
 
 #### <a name="automatic-testing-source"></a>Automatisk testkilde
-Hvis en implementeringshandling er berettiget til automatisk at blive testet af Overholdelsesstyring, får du vist den **automatiske** indstilling for testkilde. Overholdelsesstyring registrerer signaler fra andre løsninger til overholdelse af angivne standarder, som du har konfigureret i dit Microsoft 365 miljø, samt eventuelle komplementære handlinger, som Microsoft Secure Score også overvåger. Feltet **Testlogik** under fanen **Test** viser, hvilken type politik eller konfiguration der kræves i en anden løsning, for at handlingen kan overføre og optjene point i forhold til din overholdelsesscore.
+Visse forbedringshandlinger kan testes automatisk af Overholdelsesstyring. [Få oplysninger](compliance-manager-improvement-actions.md#update-testing-source) om, hvilke forbedringshandlinger der kan og ikke kan testes automatisk.
+
+For de forbedringshandlinger, der kan testes automatisk, kan du se indstillingen **Automatisk** til test af kilde. Overholdelsesstyring registrerer signaler fra andre løsninger til overholdelse af angivne standarder, som du har konfigureret i dit Microsoft 365-miljø, samt eventuelle komplementære handlinger, som Microsoft Secure Score også overvåger. Feltet **Testlogik** under fanen **Test** viser, hvilken type politik eller konfiguration der kræves i en anden løsning, for at handlingen kan overføre og optjene point i forhold til din overholdelsesscore.
 
 Når signaler angiver, at en forbedringshandling er blevet implementeret korrekt, modtager du automatisk de point, der er berettiget til den pågældende handling, hvilket vil indregne scorer for alle relaterede kontrolelementer og vurderinger. Få mere at vide om, hvordan [kontinuerlig vurdering påvirker din score for overholdelse af angivne standarder](compliance-score-calculation.md#how-compliance-manager-continuously-assesses-controls).
 
@@ -250,4 +252,4 @@ Du kan konfigurere beskeder, så du straks får besked, når der sker visse ænd
 
 ## <a name="export-a-report"></a>Eksportér en rapport
 
-Vælg **Eksportér** i øverste venstre hjørne af skærmen for at hente et Excel regneark, der indeholder alle dine forbedringshandlinger og de filterkategorier, der vises på siden forbedringshandlinger.
+Vælg **Eksportér** i øverste venstre hjørne af skærmen for at hente et Excel-regneark, der indeholder alle dine forbedringshandlinger og de filterkategorier, der vises på siden forbedringshandlinger.

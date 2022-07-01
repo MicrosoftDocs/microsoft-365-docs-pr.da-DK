@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office-apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: b924c9763d29e76f711a8e414c0a2086e09a81d8
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: aca0c6522b52d4915802b9d6baefffa5151ccbda
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556850"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574184"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office-apps
 
@@ -166,7 +166,7 @@ Følgende konfigurationer fra AIP-tilføjelsesprogrammet understøttes endnu ikk
 
 - [Mærk nedarvning fra vedhæftede filer i mails](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 - [S/MIME til Outlook](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#configure-a-label-to-apply-smime-protection-in-outlook)
-    - Denne indstilling er begyndt at [blive udrullet som prøveversion til indbygget mærkning](sensitivity-labels-office-apps.md#configure-a-label-to-apply-smime-protection-in-outlook)
+    - Denne indstilling er begyndt at [blive udrullet som prøveversion til indbygget mærkning på tværs af alle platforme](sensitivity-labels-office-apps.md#configure-a-label-to-apply-smime-protection-in-outlook)
 - [Overdeling af pop op-meddelelser til Outlook](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 - [Standardundermærkat for en overordnet etiket](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#specify-a-default-sublabel-for-a-parent-label)
 - [Fjern eksterne indholdsmarkeringer](/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solution )

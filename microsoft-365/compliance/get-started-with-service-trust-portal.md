@@ -17,12 +17,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 ms.assetid: f30e2353-0bd6-41ed-8347-eea1fb8d2662
 description: Få mere at vide om, hvordan du får adgang til og bruger Microsoft Service Trust Portal til at hjælpe med sikkerhed, beskyttelse af personlige oplysninger og overholdelse af angivne standarder.
-ms.openlocfilehash: a87fc67aebb0e37ff0a26a1ee7e2f8a7c7d69cc3
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 486f8fd26ee0b30c3155615e5fcb9b40fa714f75
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66493133"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573807"
 ---
 # <a name="get-started-with-microsoft-service-trust-portal"></a>Kom i gang med Microsoft Service Trust Portal
 
@@ -30,7 +30,7 @@ Microsoft Service Trust Portal indeholder en lang række indhold, værktøjer og
 
 ## <a name="accessing-the-service-trust-portal"></a>Adgang til Service Trust Portal
 
-Service Trust Portal er Microsofts offentlige websted til publicering af overvågningsrapporter og andre oplysninger relateret til overholdelse af angivne standarder, der er knyttet til Microsofts cloudtjenester. STP-brugere kan downloade overvågningsrapporter, der er oprettet af eksterne auditører, og få indsigt fra Microsoft-oprettede whitepapers, der indeholder oplysninger om, hvordan Microsoft bygger og driver cloudtjenester. Hvis du vil have adgang til nogle af ressourcerne på Service Trust Portal, skal du logge på som en godkendt bruger med din Microsoft Cloud Services-konto (Azure Active Directory-organisationskonto) og gennemse og acceptere Microsofts fortrolighedsaftale for overholdelsesmateriale.
+Service Trust Portal indeholder oplysninger om Microsofts implementering af kontrolelementer og processer, der beskytter vores cloudtjenester og kundedataene heri. Hvis du vil have adgang til nogle af ressourcerne på Service Trust Portal, skal du logge på som en godkendt bruger med din Microsoft Cloud Services-konto (Azure Active Directory-organisationskonto) og gennemse og acceptere Microsofts fortrolighedsaftale for overholdelsesmateriale.
 
 ### <a name="existing-customers"></a>Eksisterende kunder
 
@@ -67,51 +67,52 @@ I følgende afsnit beskrives hvert element i hovedmenuen.
 
 Linket **Service Trust Portal** viser startsiden. Det giver en hurtig måde at komme tilbage til startsiden på.
 
-### <a name="certifications-standards-regulations-and-industry-resources"></a>Certificeringer, standarder, regler og brancheressourcer
+### <a name="compliance-manager"></a>Overholdelsesstyring
 
-Giver et væld af sikkerhedsimplementerings- og designoplysninger med det formål at gøre det nemmere for dig at opfylde lovmæssige målsætninger for overholdelse af angivne standarder ved at forstå, hvordan Microsoft Cloud-tjenester beskytter dine data. Hvis du vil gennemse indhold, skal du vælge et af følgende felter.
+> [!IMPORTANT]
+> Overholdelsesstyring er flyttet fra Service Trust Portal til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>. Alle kundedata er blevet flyttet til den nye placering, så du kan fortsætte med at bruge Overholdelsesstyring uden afbrydelser. Se dokumentationen til [Overholdelsesstyring](compliance-manager.md) for at få konfigurationsoplysninger og få mere at vide om nye funktioner.
 
-- **DoD** – Sikkerhedskrav til cloudcomputing for det amerikanske forsvarsministerium.
-- **FedRAMP** – US Government-program, der giver en standardtilgang til sikkerhed, autorisation og overvågning.
-- **Finansielle tjenester** – Microsoft Cloud til FInancial Services indeholder funktioner til administration af data.
-- **GDPR** – Hvordan Microsoft hjælper med at støtte vores kunder på deres GDPR-overholdelsesrejser.
-- **GRC Assessment** – Giver revisions- og sikkerhedseksperter et fælles sæt vurderingsprocedurer.
-- **HIPAA** – Krav til beskyttelse af personlige oplysninger for personlige oplysninger, der opbevares af omfattede enheder.
-- **IRS 1075** – US Government-program, der giver vejledning til at beskytte fortroligheden af Federal Tax Information (FTI).
-- **ISO** – Overholdelse af specifikke krav til informationssikkerhed og risikostyring.
-- **ITAR** – AMERIKANSK regulering, der styrer fremstilling, salg og distribution af forsvar.
-- **NIST 800-171 (DFARS)** – Amerikanske sikkerhedskrav til beskyttelse af kontrollerede ikke-klassificerede oplysninger i ikke-føderale systemer og organisationer.
-- **PCI DSS** – Validering af kontrolelementer omkring kortholderdata for at reducere svindel med kreditkort.
-- **SOC-rapporter** – SOC 1-, 2- og 3-rapporter, der er designet til at skabe tillid til og tillid til Microsoft-tjenester.
+### <a name="trust-documents"></a>Hav tillid til dokumenter
 
-Ressourcer med serieafkrydsningsfeltet angiver, at dokumentet har flere versioner, som kan vises, når du klikker på dokumentet og klikker på "vis alle versioner" på følgende side.  
+Giver et væld af sikkerhedsimplementerings- og designoplysninger med det formål at gøre det nemmere for dig at opfylde lovmæssige målsætninger for overholdelse af angivne standarder ved at forstå, hvordan Microsoft Cloud-tjenester beskytter dine data. Hvis du vil gennemse indhold, skal du vælge en af følgende indstillinger i rullemenuen **Hav tillid til dokumenter** .
 
-Filtrer efter dato og cloudtjeneste – Når du får vist de tilgængelige dokumenter, kan du sortere resultaterne efter datointerval ved at vælge **Datoer** og derefter vælge det interval, du vil bruge.
+- **Overvågningsrapporter:** Der vises en liste over uafhængige overvågnings- og vurderingsrapporter om Microsofts Cloud-tjenester. Disse rapporter indeholder oplysninger om overholdelse af databeskyttelsesstandarder og lovmæssige krav til Microsoft Cloud-tjenester, f.eks.:
+  - ISO (International Organization for Standardization)
+  - SOC (Service Organization Controls)
+  - NIST (National Institute of Standards and Technology)
+  - FedRAMP (Federal Risk and Authorization Management Program)
+  - Generel forordning om databeskyttelse (GDPR)
+- **Databeskyttelse:** Indeholder et væld af ressourcer, f.eks. overvågede kontrolelementer, hvidbøger, ofte stillede spørgsmål, indtrængningstest, værktøjer til risikovurdering og vejledninger til overholdelse af angivne standarder.
+- **Kursusplaner for sikkerhed og overholdelse af angivne standarder i Azure:** Ressourcer, der hjælper dig med at bygge sikre og kompatible cloudbaserede programmer. Dette område indeholder vejledning til offentlige myndigheder, finans, sundhedssektoren og detail vertikaler.
 
-:::image type="content" source="../media/stp-documents-filter-date.png" alt-text="Filtrer tilgængelige dokumenter efter datointerval.":::
+### <a name="industries--regions"></a>Brancher & områder
 
-Visning af dokumentdownload – Når du får vist de tilgængelige dokumenter, kan du sortere resultaterne efter den relevante **cloudtjeneste**.
+Leverer branchespecifikke overholdelsesoplysninger om Microsoft Cloud-tjenester.
 
-:::image type="content" source="../media/stp-documents-filter-service.png" alt-text="Filtrer tilgængelige dokumenter efter cloudtjeneste.":::
+- **Industrier:** På nuværende tidspunkt indeholder denne side en branchespecifik landingsside for branchen finansielle tjenesteydelser. Dette indeholder oplysninger som f.eks. tilbud om overholdelse af angivne standarder, ofte stillede spørgsmål og succeshistorier. Ressourcer til flere brancher frigives i fremtiden, men du kan finde ressourcer til flere brancher ved at gå til siden **Tillidsdokumenter > Databeskyttelse** i STP.
+- **Regioner:** Giver juridiske udtalelser om Overholdelse af Microsoft Cloud-tjenester i forskellige love i forskellige lande. Specifikke lande omfatter Australien, Canada, Tjekkiet, Danmark, Tyskland, Polen, Rumænien, Spanien og Storbritannien.
 
-> [!NOTE]
-> Mange af filerne på STP kræver accept af en licensaftale. Nogle browserbaserede PDF-fremvisere tillader ikke, at Javascript kører, hvilket forhindrer, at licensaftalen vises, og at filen åbnes.
+### <a name="trust-center"></a>Center for sikkerhed og rettighedsadministration
+
+Links til [Microsoft Trust Center](https://www.microsoft.com/trust-center), som indeholder flere oplysninger om sikkerhed, overholdelse af angivne standarder og beskyttelse af personlige oplysninger i Microsoft Cloud. Dette omfatter oplysninger om de funktioner i Microsoft Cloud-tjenester, som du kan bruge til at håndtere specifikke krav i GDPR, dokumentation, der er nyttig for din GDPR-ansvarlighed, og din forståelse af de tekniske og organisatoriske foranstaltninger, Som Microsoft har truffet for at understøtte GDPR.
 
 ### <a name="my-library"></a>Mit bibliotek
 
 Med denne funktion kan du gemme (eller *fastgøre*) dokumenter, så du hurtigt kan få adgang til dem på siden Mit bibliotek. Du kan også konfigurere meddelelser, så Microsoft sender dig en mail, når dokumenter i Mit bibliotek opdateres. Du kan få flere oplysninger i afsnittet [Mit bibliotek](#my-library-1) i denne artikel.
 
-### <a name="all-documents"></a>Alle dokumenter
+### <a name="more"></a>Mere
 
-I dette afsnit vises alle tilgængelige dokumenter. Vælg de dokumenter, der skal gemmes i sektionen Mit bibliotek. Dokumenter sorteres i de samme kategorier, der vises under Certificeringer, Standarder, Forordninger og Brancheressourcer.
+Gå til **Flere > Administration** for at få adgang til administrative funktioner, der kun er tilgængelige for den globale administratorkonto. Denne indstilling er kun synlig, når du er logget på som global administrator. Der er to indstillinger i **rullemenuen Administration**:
+
+- **Indstillinger:** På denne side kan du tildele brugerroller til Overholdelsesstyring (klassisk).
+- **Indstillinger for beskyttelse af personlige oplysninger for brugeren:** På denne side kan du eksportere en rapport, der indeholder tildelinger af handlingselement i Overholdelsesstyring (klassisk) for en bestemt bruger. Du kan også tildele alle handlingselementer til en anden bruger og fjerne alle tildelte handlingselementer fra den angivne bruger.
 
 ### <a name="search"></a>Søg
 
-Klik på forstørrelsesglasset i øverste højre hjørne af siden Service Trust Portal for at udvide feltet, angiv søgeordene, og tryk på **Enter**. **Siden Søg** vises med det søgeord, der vises i søgefeltet, og de søgeresultater, der er angivet nedenfor.
+Som standard returnerer søgningen dokumentresultater. Du kan filtrere resultaterne ved hjælp af rullelisterne for at tilpasse listen over viste dokumenter. Du kan bruge flere filtre til at indsnævre listen over dokumenter. Filtre omfatter de specifikke cloudtjenester, kategorier af fremgangsmåder for overholdelse af angivne standarder eller sikkerhed, områder og brancher. Klik på linket med dokumentnavnet for at hente dokumentet.
 
-![Service Trust Portal – Søg efter dokumenter med filter anvendt.](../media/86b754e1-c63c-4514-89ac-d014bf334140-2.png)
-
-Som standard returnerer søgningen dokumentresultater. Du kan filtrere resultaterne ved hjælp af rullelisterne for at tilpasse listen over viste dokumenter. Du kan bruge flere filtre til at indsnævre listen over dokumenter. Filtre omfatter de specifikke cloudtjenester og områder. Klik på linket med dokumentnavnet for at hente dokumentet.
+> [!NOTE]
+> Service Trust Portal-rapporter og -dokumenter kan downloades i mindst 12 måneder efter publiceringen, eller indtil en ny version af dokumentet bliver tilgængelig.
 
 ## <a name="my-library"></a>Mit bibliotek
 
@@ -120,6 +121,18 @@ Brug funktionen Mit bibliotek til at føje dokumenter og ressourcer på Service 
 Derudover giver meddelelsesfunktionen dig mulighed for at konfigurere Mit bibliotek, så der sendes en mail til dig, hver gang Microsoft opdaterer et dokument, som du har føjet til Mit bibliotek. Hvis du vil konfigurere meddelelser, skal du gå til Mit bibliotek og klikke på **Meddelelsesindstillinger**. Du kan vælge, hvor ofte meddelelser skal sendes, og angive en mailadresse i din organisation, der skal sendes meddelelser til. Mailmeddelelser indeholder links til de dokumenter, der er blevet opdateret, og en kort beskrivelse af opdateringen.
 
 Bemærk også, at vi identificerer alle dokumenter i Mit bibliotek, der er blevet opdateret inden for de sidste 30 dage, uanset om du aktiverer meddelelser eller ej. En kort beskrivelse af opdateringen vises også i et værktøjstip.
+
+## <a name="starter-packs"></a>Starterpakker
+
+Starterpakker er et Microsoft-kurateret sæt dokumentation om Microsoft Cloud-tjenester til bestemte brancher. Service Trust Portal tilbyder i øjeblikket følgende tre startpakker til organisationer for finansielle tjenester. Disse startpakker hjælper organisationer med at evaluere og vurdere sikkerhed, overholdelse af angivne standarder og beskyttelse af personlige oplysninger i Microsoft Cloud og levere vejledning til at hjælpe med at implementere Microsoft Cloud-tjenester i den stærkt regulerede branche for finansielle tjenester.
+
+- **Starterpakke til evaluering:** Bruges til tidlig evaluering af Microsoft-cloudmiljøet til organisationer med finansielle tjenester.
+
+- **Vurderingsstarterpakke:** Efter evalueringen kan du bruge tjeklisterne og andre vejledninger i denne startpakke til at hjælpe din organisation med at vurdere risici, der er relateret til sikkerhed, overholdelse af angivne standarder og beskyttelse af personlige oplysninger.
+
+- **Overvåg starterpakke:** Brug denne startpakke for at få vejledning i, hvordan du bruger overvågningskontrolelementer og andre værktøjer til at hjælpe dig med at implementere Microsoft Cloud-tjenester på en måde, der hjælper med at reducere din organisations eksponering for risici.
+
+Hvis du vil have adgang til disse startpakker, skal du gå til **Service Trust Portal > Industries & Regions > Industry Solutions > Financial Services**. Du kan åbne eller downloade dokumenter fra en startpakke eller gemme dem i Mit bibliotek.
 
 ## <a name="localization-support"></a>Understøttelse af lokalisering
 

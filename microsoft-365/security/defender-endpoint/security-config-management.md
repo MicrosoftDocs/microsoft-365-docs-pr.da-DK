@@ -1,7 +1,7 @@
 ---
 title: Administrer konfigurationsindstillinger for Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager
 description: Få mere at vide om, hvordan du aktiverer sikkerhedsindstillinger i Microsoft Endpoint Manager via Microsoft Defender for Endpoint.
-keywords: enhedshåndtering, konfigurere Microsoft Defender for Endpoint enheder Microsoft Endpoint Manager
+keywords: enhedshåndtering, konfigurere Microsoft Defender for Endpoint enheder, Microsoft Endpoint Manager
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 7e9e074e4aeaadf041a70baed1d741ea95a9f792
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 2c19352d584bedc5acd94f9984242a2c50d2fcf3
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622605"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66573909"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-configuration-settings-on-devices-with-microsoft-endpoint-manager"></a>Administrer konfigurationsindstillinger for Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager
 
@@ -38,7 +38,7 @@ ms.locfileid: "65622605"
 > Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configureendpointsscript-abovefoldlink)
 
 
-Sikkerhedsadministration for Microsoft Defender for Endpoint er en funktion for enheder, der ikke administreres af en Microsoft Endpoint Manager, enten Microsoft Intune eller Microsoft Endpoint Configuration Manager, hvis du vil modtage sikkerhedskonfigurationer til Microsoft Defender direkte fra Endpoint Manager.
+Sikkerhedsadministration for Microsoft Defender for Endpoint er en funktion for enheder, der ikke administreres af en Microsoft-Endpoint Manager til at modtage sikkerhedskonfigurationer til Microsoft Defender direkte fra Endpoint Manager.
 
 
 Du kan få flere oplysninger om Administration af sikkerhedskonfiguration, herunder forudsætninger, understøttede platforme og meget mere, under [Administrer Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager](/mem/intune/protect/mde-security-integration).
@@ -51,7 +51,7 @@ Se denne video for at få mere at vide om, hvordan du bruger Microsoft Endpoint 
 >[!NOTE]
 >Denne funktion udrulles gradvist. 
 
-Du kan få flere oplysninger om administration af sikkerhedskonfiguration under [Administrer Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager](/mem/intune/protect/mde-security-integration).
+Du kan få flere oplysninger om Administration af sikkerhedskonfiguration under [Administrer Microsoft Defender for Endpoint på enheder med Microsoft Endpoint Manager](/mem/intune/protect/mde-security-integration).
 
 Hvis du støder på problemer med tilmelding, skal du se [Fejlfinding af onboardingproblemer i administration af sikkerhedskonfiguration](troubleshoot-security-config-mgt.md).
 
@@ -66,7 +66,7 @@ Brug følgende trin til at validere, at dine slutpunkter har fuldført sikkerhed
 
 2.  Kontrollér, at enheden er tilmeldt, på [Azure Active Directory-portalen](https://aad.portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/).
 
-3.  I [Microsoft Endpoint Manager Administration](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/mDMDevicesPreview) skal du kontrollere, at enheden er blevet tilmeldt, ved at slå den op i afsnittet **Enheder > Alle enheder**.
+3.  I [Microsoft Endpoint Manager Administration Center skal du](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/mDMDevicesPreview) kontrollere, at enheden er blevet tilmeldt, ved at slå den op i afsnittet **Enheder > Alle enheder**.
 
 
 ## <a name="offboard-devices"></a>Offboard-enheder
