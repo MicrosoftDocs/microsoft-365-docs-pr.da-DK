@@ -29,16 +29,18 @@ search.appverid:
 - MOE150
 ms.assetid: 6383f56d-3d09-4dcb-9b41-b5f5a5efd611
 description: Brug installationsguiden til at føje dit domæne til Microsoft 365 i Microsoft 365 Administration ved at tilføje en DNS-post hos din DNS-vært.
-ms.openlocfilehash: 64b82aab051af2c9d5444042f27009b4e02f1ad8
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: be72f10727a5d4ed168740d80eb04078584137d9
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492032"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602894"
 ---
 # <a name="add-a-domain-to-microsoft-365"></a>Føj et domæne til Microsoft 365
 
- **[Se ofte stillede spørgsmål om domæner](domains-faq.yml)** , hvis du ikke kan finde det, du leder efter. 
+ **[Se ofte stillede spørgsmål om domæner](domains-faq.yml)** , hvis du ikke kan finde det, du leder efter.
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
   
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -48,6 +50,8 @@ Hvis du vil tilføje, redigere eller fjerne domæner, **skal** du være **admini
 > Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
 
 ## <a name="watch-add-a-domain"></a>Se: Tilføj et domæne
+
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198213).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4dN8c?autoplay=false]
 

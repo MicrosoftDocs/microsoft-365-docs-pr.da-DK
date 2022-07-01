@@ -1,5 +1,5 @@
 ---
-title: Planlæg installation af ASR-regler (Attack Surface Reduction)
+title: Planlæg udrulning af reduktion af angrebsoverflade (ASR)
 description: Indeholder en vejledning i, hvordan du planlægger udrulningen af asr-regler (Attack Surface Reduction).
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 07388ab8f1aac89991423c07fb442017aafb73e6
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 4e538a4e986ad0636c380ec2ba167249221ac3ec
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705291"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602486"
 ---
-# <a name="plan-attack-surface-reduction-asr-rules-deployment"></a>Planlæg installation af ASR-regler (Attack Surface Reduction)
+# <a name="plan-attack-surface-reduction-asr-rules-deployment"></a>Planlæg udrulning af reduktion af angrebsoverflade (ASR)
 
 Når du tester ASR-regler (Attack Surface Reduction), er det vigtigt at starte med den rigtige forretningsenhed. Du skal starte med en lille gruppe personer i en bestemt afdeling. Du kan identificere nogle ASR-mestre i en bestemt forretningsenhed, der kan give virkelige verden indflydelse på ASR-reglerne og hjælpe dig med at tilpasse implementeringen.
 
@@ -44,7 +43,7 @@ Den måde, du vælger forretningsenheden for at udrulle udrulningen af ASR-regle
   - Software
   - Delte mapper
   - Brug af scripts
-  - Office makroer
+  - Office-makroer
   - Andre enheder, der påvirkes af ASR-regler
 
 Afhængigt af dine forretningsbehov kan du vælge at inkludere flere forretningsenheder for at få et bredt udsnit af software, delte mapper, scripts, makroer osv. Omvendt kan du vælge at begrænse omfanget af udrulningen af dine første ASR-regler til en enkelt afdeling og derefter gentage udrulningsprocessen for hele ASR-reglerne til dine andre afdelinger én ad gangen.
@@ -77,17 +76,17 @@ Typiske roller og ansvarsområder omfatter:
 ## <a name="ring-deployment"></a>Ring udrulning
 
 For store virksomheder anbefaler Microsoft at implementere ASR-regler i "ringe". Ringe er grupper af enheder, der visuelt repræsenteres som koncentriske cirkler, der udstråler udad som ikke-overlappende træringe. Når den inderste ring er udrullet, kan du overføre den næste ring til testfasen. En grundig vurdering af dine forretningsenheder, mestre, apps og processer i ASR-regler er altafgørende for at definere dine ringe.
-I de fleste tilfælde har din organisation designet udrulningsringe til faseinddelte udrulninger af Windows opdateringer. Du kan bruge dit eksisterende ringdesign til at implementere ASR-regler.
-Se: [Opret en udrulningsplan for Windows](/windows/deployment/update/create-deployment-plan)
+I de fleste tilfælde har din organisation designet udrulningsringe til faseinddelte udrulninger af Windows-opdateringer. Du kan bruge dit eksisterende ringdesign til at implementere ASR-regler.
+Se: [Opret en installationsplan til Windows](/windows/deployment/update/create-deployment-plan)
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
+[Udrulningsoversigt til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md)
 
-[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
+[Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md)
 
-[Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
+[Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md)
 
-[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+[Operationaliser regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)
+[Henvisning til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md)

@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 724e6c0b0e0a9854df6c87977cacbf1e1a69bfbe
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 8c650e639d1a4629ed25bcc3a7f3a8c28df4b8e8
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739994"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603464"
 ---
 # <a name="learn-the-advanced-hunting-query-language"></a>Få mere at vide om det avancerede forespørgselssprog for jagt
 
@@ -133,7 +133,7 @@ Vælg **Kør forespørgsel** for at se resultaterne.
 >[!TIP]
 >Du kan få vist forespørgselsresultater som diagrammer og hurtigt justere filtre. Du kan få vejledning ved [at læse om at arbejde med forespørgselsresultater](advanced-hunting-query-results.md)
 
-Se denne [korte video](https://www.youtube.com/watch?v=8qZx7Pp5XgM) for at få mere at vide om, hvordan du kan bruge Kusto Query Language til at joinforbinde tabeller.
+
 
 ## <a name="learn-common-query-operators"></a>Få mere at vide om almindelige forespørgselsoperatorer
 
@@ -143,7 +143,7 @@ Du har lige kørt din første forespørgsel og har en generel idé om dens kompo
 |--|--|
 | `where` | Filtrer en tabel til delsættet af rækker, der opfylder et prædikat. |
 | `summarize` | Producere en tabel, der samler indholdet af inputtabellen. |
-| `join` | Flet rækkerne i to tabeller for at danne en ny tabel ved at matche værdierne for de angivne kolonner fra hver tabel. |
+| `join` | Flet rækkerne i to tabeller for at danne en ny tabel ved at matche værdierne for de angivne kolonner fra hver tabel. Se [Sammenføjning-tabeller i KQL](https://www.youtube.com/watch?v=8qZx7Pp5XgM) for at få mere at vide.|
 | `count` | Returner antallet af poster i inputpostsættet. |
 | `top` | Returner de første N-poster sorteret efter de angivne kolonner. |
 | `limit` | Vend tilbage til det angivne antal rækker. |
@@ -202,7 +202,7 @@ Afsnittet **Introduktion** indeholder nogle få enkle forespørgsler, der bruger
 :::image type="content" source="../../media/get-started-section.png" alt-text="Afsnittet **Introduktion** på siden **Avanceret jagt** på Microsoft 365 Defender-portalen" lightbox="../../media/get-started-section.png":::
 
 >[!NOTE]
->Ud over de grundlæggende forespørgselseksempler kan du også få adgang til [delte forespørgsler](advanced-hunting-shared-queries.md) for specifikke trusselsjagtscenarier. Udforsk de delte forespørgsler i venstre side eller i [det GitHub forespørgselslager](https://aka.ms/hunting-queries).
+>Ud over de grundlæggende forespørgselseksempler kan du også få adgang til [delte forespørgsler](advanced-hunting-shared-queries.md) for specifikke trusselsjagtscenarier. Udforsk de delte forespørgsler i venstre side eller [i GitHub-forespørgselslageret](https://aka.ms/hunting-queries).
 
 ## <a name="access-query-language-documentation"></a>Få adgang til dokumentation til forespørgselssprog
 

@@ -20,12 +20,12 @@ ms.collection:
 - m365initiative-m365-defender
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 2036f0b1e749250d42066fc5ea742c550a2f756e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 4c83db02acea02b076b84f8b180e4d9ff8460a80
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664100"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603313"
 ---
 # <a name="get-expert-training-on-advanced-hunting"></a>Få ekspertuddannelse i avanceret jagt
 
@@ -89,6 +89,14 @@ CloudAppEvents
 | take 100
 | sort by Timestamp desc
 ```
+
+
+## <a name="other-resources"></a>Andre ressourcer
+
+| Titel | Beskrivelse | Se |
+|---|---|---|
+|Sammenføjning af tabeller i KQL | Få mere at vide om fordelene ved at sammenføje tabeller ved at oprette meningsfulde resultater. | [YouTube](https://www.youtube.com/watch?v=8qZx7Pp5XgM) (4:17) |
+| Optimering af tabeller i KQL | Få mere at vide om, hvordan du undgår timeout, når du kører komplekse forespørgsler, ved at optimere dine forespørgsler. | [YouTube](https://www.youtube.com/watch?v=ceYvRuPp5D8) (5:38)  | 
 
 ## <a name="related-topics"></a>Relaterede emner
 

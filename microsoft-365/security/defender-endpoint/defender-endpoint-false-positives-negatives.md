@@ -15,20 +15,20 @@ audience: ITPro
 ms.collection:
 - m365-security-compliance
 - m365initiative-defender-endpoint
-- m365solution-scenario
-- m365scenario-fpfn
+- m365solution-overview
+- m365solution-fpfn
 ms.topic: how-to
 ms.date: 12/02/2021
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs, yonghree, jcedola
 ms.custom:
 - FPFN
 - admindeeplinkDEFENDER
-ms.openlocfilehash: 81c41abffc6ec01c127b901ac63b3a5d3b6c5732
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5cae5a4b305846617130ecdf7c267ffc4ca13037
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65418450"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603962"
 ---
 # <a name="address-false-positivesnegatives-in-microsoft-defender-for-endpoint"></a>Adresser falske positive/negativer i Microsoft Defender for Endpoint
 
@@ -119,7 +119,7 @@ Hvis du har beskeder, der enten er falske positiver, eller som er sande positive
 
 ## <a name="part-2-review-remediation-actions"></a>Del 2: Gennemse afhjælpningshandlinger
 
-[Afhjælpningshandlinger](manage-auto-investigation.md#remediation-actions), f.eks. afsendelse af en fil for at sætte en proces i karantæne eller stoppe en proces, udføres på enheder (f.eks. filer), der registreres som trusler. Der forekommer flere typer afhjælpningshandlinger automatisk via automatiseret undersøgelse og Microsoft Defender Antivirus:
+[Afhjælpningshandlinger](manage-auto-investigation.md#remediation-actions), f.eks. afsendelse af en fil for at sætte en proces i karantæne eller stoppe en proces, udføres på enheder (f.eks. filer), der registreres som trusler. Flere typer afhjælpningshandlinger forekommer automatisk gennem automatiseret undersøgelse og Microsoft Defender Antivirus:
 
 - Sæt en fil i karantæne
 - Fjern en registreringsdatabasenøgle
@@ -206,16 +206,16 @@ Hvis du vil definere udeladelser på tværs af Microsoft Defender for Endpoint, 
 - [Opret "tillad"-indikatorer for Microsoft Defender for Endpoint](#indicators-for-microsoft-defender-for-endpoint)
 
 > [!NOTE]
-> Microsoft Defender Antivirus undtagelser gælder kun for antivirusbeskyttelse og ikke på tværs af andre Microsoft Defender for Endpoint funktioner. Hvis du vil udelade filer bredt, skal du bruge udeladelser for Microsoft Defender Antivirus og [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators) for Microsoft Defender for Endpoint.
+> Microsoft Defender Antivirus-udelukkelser gælder kun for antivirusbeskyttelse og ikke på tværs af andre Microsoft Defender for Endpoint egenskaber. Hvis du vil udelade filer bredt, skal du bruge udeladelser til Microsoft Defender Antivirus og [brugerdefinerede indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators) for Microsoft Defender for Endpoint.
 
 Procedurerne i dette afsnit beskriver, hvordan du definerer udeladelser og indikatorer.
 
-### <a name="exclusions-for-microsoft-defender-antivirus"></a>Udeladelser for Microsoft Defender Antivirus
+### <a name="exclusions-for-microsoft-defender-antivirus"></a>Undtagelser for Microsoft Defender Antivirus
 
 Generelt skal du ikke definere undtagelser for Microsoft Defender Antivirus. Sørg for, at du definerer udeladelser sparsomt, og at du kun inkluderer de filer, mapper, processer og procesåbnede filer, der resulterer i falske positiver. Derudover skal du sørge for regelmæssigt at gennemse dine definerede undtagelser. Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at definere eller redigere dine antivirusudeladelser. Du kan dog bruge andre metoder, f.eks. [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se [Administrer Microsoft Defender for Endpoint](manage-mde-post-migration.md).
 
 > [!TIP]
-> Har du brug for hjælp til antivirusudeladelser? Se [Konfigurer og valider udeladelser for Microsoft Defender Antivirus scanninger](configure-exclusions-microsoft-defender-antivirus.md).
+> Har du brug for hjælp til antivirusudeladelser? Se [Konfigurer og valider udeladelser for Microsoft Defender Antivirus-scanninger](configure-exclusions-microsoft-defender-antivirus.md).
 
 #### <a name="use-microsoft-endpoint-manager-to-manage-antivirus-exclusions-for-existing-policies"></a>Brug Microsoft Endpoint Manager til at administrere antivirusudeladelser (for eksisterende politikker)
 
@@ -225,7 +225,7 @@ Generelt skal du ikke definere undtagelser for Microsoft Defender Antivirus. Sø
 
 3. Vælg **Egenskaber**, og vælg **Rediger** ud for **Konfigurationsindstillinger**.
 
-4. Udvid **Microsoft Defender Antivirus Udeladelser,** og angiv derefter dine udeladelser.
+4. Udvid **Microsoft Defender Antivirus Exclusions,** og angiv derefter dine undtagelser.
 
 5. Vælg **Gennemse + gem**, og vælg derefter **Gem**.
 
@@ -237,7 +237,7 @@ Generelt skal du ikke definere undtagelser for Microsoft Defender Antivirus. Sø
 
 3. Vælg en platform (f.eks **. Windows 10 og nyere**, **macOS** eller **Windows 10 og Windows Server**).
 
-4. Vælg **Microsoft Defender Antivirus udeladelser** for **Profil**, og vælg derefter **Opret**.
+4. Som **Profil** skal du vælge **Microsoft Defender Antivirus-udeladelser** og derefter vælge **Opret**.
 
 5. Angiv et navn og en beskrivelse til profilen, og vælg derefter **Næste**.
 
@@ -253,7 +253,7 @@ Generelt skal du ikke definere undtagelser for Microsoft Defender Antivirus. Sø
 
 [Indikatorer](/microsoft-365/security/defender-endpoint/manage-indicators) (specifikt indikatorer for kompromitteret eller IoCs) gør det muligt for dit sikkerhedsteam at definere registrering, forebyggelse og udeladelse af enheder. Du kan f.eks. angive, at visse filer skal udelades fra scanninger og afhjælpningshandlinger i Microsoft Defender for Endpoint. Eller indikatorer kan bruges til at generere beskeder for bestemte filer, IP-adresser eller URL-adresser.
 
-Hvis du vil angive objekter som udeladelser for Microsoft Defender for Endpoint, skal du oprette "tillad"-indikatorer for disse objekter. Sådanne "tillad"-indikatorer i Microsoft Defender for Endpoint gælder for [næste generations beskyttelse](microsoft-defender-antivirus-in-windows-10.md), [slutpunktsregistrering og -svar](overview-endpoint-detection-response.md) og [automatiseret undersøgelse & afhjælpning](/microsoft-365/security/defender-endpoint/automated-investigations).
+Hvis du vil angive objekter som udeladelser for Microsoft Defender for Endpoint, skal du oprette "tillad"-indikatorer for disse objekter. Sådanne "tillad"-indikatorer i Microsoft Defender for Endpoint gælder for [næste generations beskyttelse](microsoft-defender-antivirus-in-windows-10.md), [registrering og svar af slutpunkter](overview-endpoint-detection-response.md) og [automatiseret undersøgelse & afhjælpning](/microsoft-365/security/defender-endpoint/automated-investigations).
 
 Der kan oprettes "Tillad"-indikatorer for:
 
@@ -398,7 +398,7 @@ Potentielt uønskede programmer (PUA) er en kategori af software, der kan få en
 > [!TIP]
 > Hvis du vil vide mere om PUA, skal du se [Registrer og bloker potentielt uønskede programmer](/windows/security/threat-protection/microsoft-defender-antivirus/detect-block-potentially-unwanted-apps-microsoft-defender-antivirus).
 
-Afhængigt af de apps, din organisation bruger, får du muligvis falske positiver som følge af dine indstillinger for PUA-beskyttelse. Hvis det er nødvendigt, kan du overveje at køre PUA-beskyttelse i overvågningstilstand i et stykke tid eller anvende PUA-beskyttelse på et undersæt af enheder i din organisation. PUA-beskyttelse kan konfigureres for Microsoft Edge browser og for Microsoft Defender Antivirus.
+Afhængigt af de apps, din organisation bruger, får du muligvis falske positiver som følge af dine indstillinger for PUA-beskyttelse. Hvis det er nødvendigt, kan du overveje at køre PUA-beskyttelse i overvågningstilstand i et stykke tid eller anvende PUA-beskyttelse på et undersæt af enheder i din organisation. PUA-beskyttelse kan konfigureres til Microsoft Edge-browseren og til Microsoft Defender Antivirus.
 
 Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) til at redigere eller angive indstillinger for PUA-beskyttelse. Du kan dog bruge andre metoder, f.eks. [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) (se [Administrer Microsoft Defender for Endpoint](manage-mde-post-migration.md).
 
@@ -410,7 +410,7 @@ Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem/endpoint-manager-ov
 
 3. Under **Administrer** skal du vælge **Egenskaber** og derefter vælge **Rediger** ud for **Konfigurationsindstillinger**.
 
-4. Rul ned under fanen **Konfigurationsindstillinger**, og udvid **Microsoft Defender Antivirus**.
+4. På fanen **Konfigurationsindstillinger** skal du rulle ned og udvide **Microsoft Defender Antivirus**.
 
 5. Angiv **Registrer potentielt uønskede programmer** til **Overvågning**. Du kan slå den fra, men ved hjælp af overvågningstilstand kan du se registreringer.
 
@@ -426,7 +426,7 @@ Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem/endpoint-manager-ov
 
 4. Under fanen **Grundlæggende** skal du angive et navn og en beskrivelse til politikken. Vælg derefter **Næste**.
 
-5. Rul ned under fanen **Konfigurationsindstillinger**, og udvid **Microsoft Defender Antivirus**.
+5. På fanen **Konfigurationsindstillinger** skal du rulle ned og udvide **Microsoft Defender Antivirus**.
 
 6. Angiv **Registrer potentielt uønskede programmer** til **Overvågning**, og vælg derefter **Næste**. Du kan slå PUA-beskyttelse fra, men ved hjælp af overvågningstilstand kan du se registreringer.
 
@@ -459,7 +459,7 @@ Hvis du har gennemgået alle trinnene i denne artikel og stadig har brug for hj�
 3. Beskriv dit problem i vinduet **Supportassistent** , og send derefter din meddelelse. Herfra kan du åbne en serviceanmodning.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

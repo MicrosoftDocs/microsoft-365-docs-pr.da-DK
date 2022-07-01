@@ -25,15 +25,17 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: fb5ac074-e203-4e1f-9843-b9d1a3e03297
-description: Få mere at vide om, hvordan en Microsoft 365 global administrator kan ændre en brugers mailadresse og viste navn, når vedkommendes navn ændres.
-ms.openlocfilehash: f48cbf3428988ce50b9f8913dd4f6c4e47858b2d
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Få mere at vide om, hvordan en global Microsoft 365-administrator kan ændre en brugers mailadresse og viste navn, når vedkommendes navn ændres.
+ms.openlocfilehash: 420a25df1383bccd4fe93b2ea79d0eeb6f91d982
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466718"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601108"
 ---
 # <a name="change-a-user-name-and-email-address"></a>Rediger et brugernavn og en mailadresse
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
 Du skal muligvis ændre en persons mailadresse og viste navn, hvis de f.eks. bliver gift, og deres efternavn ændres.
 
@@ -42,14 +44,16 @@ Du skal muligvis ændre en persons mailadresse og viste navn, hvis de f.eks. bli
 
 ## <a name="watch-change-a-users-name-or-email-address"></a>Se: Skift en brugers navn eller mailadresse
 
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198016).
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1SJuc]
 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**BrugereAktive**</a> >  brugere i Microsoft 365 Administration.
+1. Vælg **Aktive** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**brugere**</a> i Microsoft 365 Administration.
 1. Vælg brugeren på listen over aktive brugere.
 1. Vælg **Administrer kontaktoplysninger**.
 1. Rediger det viste navn, og vælg **Gem ændringer**.
 
-Hvis du har fundet denne video nyttig, kan du se hele [træningsserien for små virksomheder og dem, der ikke er Microsoft 365](../../business-video/index.yml).
+Hvis du har fundet denne video nyttig, kan du se den [komplette træningsserie for små virksomheder og nye i Microsoft 365](../../business-video/index.yml).
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -107,11 +111,11 @@ Du skal være [global administrator](about-admin-roles.md) for at fuldføre diss
 
    - Denne ændring kan tage et stykke tid.
 
-   - Deres nye brugernavn. De skal bruge den til at logge på Microsoft 365.
+   - Deres nye brugernavn. De skal bruge den for at logge på Microsoft 365.
 
    - Hvis de bruger Skype for Business Online, skal de omlægge de Skype for Business Online-møder, som de har organiseret, og bede deres eksterne kontakter om at opdatere deres kontaktoplysninger.
 
-   - Hvis de bruger OneDrive, er URL-adressen til denne placering blevet ændret. Hvis de har OneNote notesbøger i deres OneDrive, skal de muligvis lukke og genåbne dem i OneNote. Hvis de har delt filer fra deres OneDrive, fungerer linkene til filerne muligvis ikke, og brugeren kan dele igen.
+   - Hvis de bruger OneDrive, er URL-adressen til denne placering blevet ændret. Hvis de har OneNote-notesbøger i deres OneDrive, skal de muligvis lukke og genåbne dem i OneNote. Hvis de har delt filer fra deres OneDrive, fungerer linkene til filerne muligvis ikke, og brugeren kan dele igen.
 
    - Hvis adgangskoden også ændres, bliver vedkommende bedt om at angive den nye adgangskode på sin mobilenhed, eller den synkroniseres ikke.
 
@@ -155,11 +159,11 @@ Nogle personer kan fortsætte med at sende mail til personens gamle mailadresse,
 
 ## <a name="what-if-the-persons-offline-address-book-wont-sync-with-the-global-address-list"></a>Hvad sker der, hvis personens offlineadressekartotek ikke synkroniseres med den globale adresseliste?
 
-Hvis vedkommende bruger Exchange Online, eller hvis vedkommendes konto er knyttet til organisationens lokale Exchange miljø, kan du få vist denne fejl, når du forsøger at ændre et brugernavn og en mailadresse: "Denne bruger er synkroniseret med dit lokale Active Directory. Nogle detaljer kan kun redigeres via dit lokale Active Directory."
+Hvis vedkommende bruger Exchange Online, eller hvis vedkommendes konto er knyttet til din organisations Lokale Exchange-miljø, kan du få vist denne fejl, når du forsøger at ændre et brugernavn og en mailadresse: "Denne bruger er synkroniseret med dit lokale Active Directory. Nogle detaljer kan kun redigeres via dit lokale Active Directory."
 
-Dette skyldes Microsoft Online Email Routing Address (MOERA). MOERA er oprettet ud fra personens _userPrincipalName-attribut_ i Active Directory og tildeles automatisk til cloudkontoen under den indledende synkronisering, og når den først er oprettet, kan den ikke ændres eller fjernes i Microsoft 365. Du kan efterfølgende ændre brugernavnet i Active Directory, men det ændrer ikke MOERA, og du kan støde på problemer med at vise det nyligt ændrede navn på den globale adresseliste.
+Dette skyldes Microsoft Online Email Routing Address (MOERA). MOERA er oprettet ud fra personens  _userPrincipalName-attribut_ i Active Directory og tildeles automatisk til cloudkontoen under den indledende synkronisering, og når den først er oprettet, kan den ikke ændres eller fjernes i Microsoft 365. Du kan efterfølgende ændre brugernavnet i Active Directory, men det ændrer ikke MOERA, og du kan støde på problemer med at vise det nyligt ændrede navn på den globale adresseliste.
 
-Du kan løse problemet ved at logge på [Azure Active Directory-modulet til PowerShell](https://go.microsoft.com/fwlink/?LinkId=823193) med dine legitimationsoplysninger som Microsoft 365 administrator. og brug følgende syntaks:
+Du kan løse problemet ved at logge på [Azure Active Directory-modulet til PowerShell](https://go.microsoft.com/fwlink/?LinkId=823193) med dine legitimationsoplysninger til Microsoft 365-administratoren. og brug følgende syntaks:
 
 ```powershell
 Set-MsolUserPrincipalName -UserPrincipalName anne.wallace@contoso.onmicrosoft.com -NewUserPrincipalName anne.jones@contoso.com
@@ -168,7 +172,7 @@ Set-MsolUserPrincipalName -UserPrincipalName anne.wallace@contoso.onmicrosoft.co
 > [!TIP]
 > Dette ændrer personens **userPrincipalName-attribut** og har ingen indflydelse på vedkommendes MOERA-mailadresse (Microsoft Online Email Routing Address). Det er dog bedste praksis at få personens logon-UPN til at matche vedkommendes primære SMTP-adresse.
 
-Hvis du vil vide mere om, hvordan du ændrer et brugernavn i Active Directory, skal du se [Omdøb en brugerkonto](/previous-versions/windows/it-pro/windows-server-2003/cc772952(v=ws.10)) i Windows Server 2003 og tidligere.
+Du kan få mere at vide om, hvordan du ændrer en persons brugernavn i Active Directory i Windows Server 2003 og tidligere under [Omdøb en brugerkonto](/previous-versions/windows/it-pro/windows-server-2003/cc772952(v=ws.10)).
 
 ## <a name="related-content"></a>Relateret indhold
 

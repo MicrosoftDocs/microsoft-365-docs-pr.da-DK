@@ -23,20 +23,24 @@ search.appverid:
 - GEA150
 ms.assetid: 0d6dfb17-8582-4172-a9a9-aed798150263
 description: Få en periodisk rapport over, hvordan personer i din organisation bruger Microsoft 365-tjenester, og foretag detailudledning i hvert diagram for at få mere indsigt.
-ms.openlocfilehash: 481f7abf0015994ab211f55feedabc4aa615dbca
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 05bee2950cb50b0b5a21ef67e9f73cec5e78b07a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486308"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601602"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center"></a>Microsoft 365-rapporter i Administration
 
-Du kan nemt se, hvordan personer i din virksomhed bruger Microsoft 365-tjenester. Du kan f.eks. identificere, hvem der bruger en tjeneste meget og når kvoter, eller hvem der muligvis slet ikke har brug for en Microsoft 365-licens. Modellen for permanent licens medtages ikke i rapporterne.
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
+Du kan nemt se, hvordan personer i din virksomhed bruger Microsoft 365-tjenester. Du kan f.eks. identificere, hvem der bruger en tjeneste meget og når kvoter, eller hvem der muligvis slet ikke har brug for en Microsoft 365-licens. Modellen for permanent licens medtages ikke i rapporterne. 
+  
 Rapporter er tilgængelige for de sidste 7 dage, 30 dage, 90 dage og 180 dage. Der findes ikke data for alle rapporteringsperioder med det samme. Rapporterne bliver tilgængelige inden for 48 timer.
 
 ## <a name="watch-act-on-a-usage-report-in-office-365"></a>Se: Vær opmærksom på en forbrugsrapport i Office 365
+  
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198103).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4VjrX?autoplay=false]
 

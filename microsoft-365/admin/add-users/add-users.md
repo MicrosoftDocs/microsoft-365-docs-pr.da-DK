@@ -21,18 +21,20 @@ ms.custom:
 - business_assist
 search.appverid:
 - MET150
-description: Få mere at vide om, hvordan du giver hvert teammedlem en brugerkonto, så de kan have Microsoft 365 licenser, logonlegitimationsoplysninger og Microsoft 365 postkasser.
+description: Få mere at vide om, hvordan du giver hvert teammedlem en brugerkonto, så de kan have Microsoft 365-licenser, logonoplysninger og Microsoft 365-postkasser.
 ms.date: 07/01/2020
-ms.openlocfilehash: 8ebc4b99840f9987d115539d0039efa1950499d3
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: b9662263711bb08063a9c2ff9f70767bb3ea7ce4
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65466806"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601988"
 ---
 # <a name="add-users-and-assign-licenses-at-the-same-time"></a>Tilføj brugere, og tildel licenser på samme tid
 
-Personerne i dit team skal hver især have en brugerkonto, før de kan logge på og få adgang [til Microsoft 365 til virksomheder](https://www.microsoft.com/microsoft-365/business). Den nemmeste måde at tilføje brugerkonti på er ved at tilføje dem én ad gangen i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Når du har gjort dette trin, har dine brugere Microsoft 365 licenser, logger på legitimationsoplysninger og Microsoft 365 postkasser.
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
+
+Personerne i dit team skal hver især have en brugerkonto, før de kan logge på og få adgang [til Microsoft 365 til virksomheder](https://www.microsoft.com/microsoft-365/business). Den nemmeste måde at tilføje brugerkonti på er ved at tilføje dem én ad gangen i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Når du har gjort dette trin, har brugerne Microsoft 365-licenser, logger på legitimationsoplysninger og Microsoft 365-postkasser.
 
 > [!TIP]
 > Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
@@ -43,6 +45,8 @@ Du skal være global, licens eller brugeradministrator for at tilføje brugere o
 
 ## <a name="watch-add-users-in-the-dashboard-view"></a>Se: Tilføj brugere i dashboardvisningen
 
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198205).
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfN?autoplay=false]
 
 > [!NOTE]
@@ -50,7 +54,7 @@ Du skal være global, licens eller brugeradministrator for at tilføje brugere o
 
 ## <a name="add-users-one-at-a-time-in-the-dashboard-view"></a>Tilføj brugere én ad gangen i dashboardvisningen
 
-:::image type="content" source="../../media/classic-admin-center.png" alt-text="Skærmbillede: Dashboardvisning i Administration":::
+:::image type="content" source="../../media/classic-admin-center.png" alt-text="Skærmbillede: Administration midterste dashboardvisning":::
 
 ::: moniker range="o365-worldwide"
 
@@ -64,7 +68,7 @@ Du skal være global, licens eller brugeradministrator for at tilføje brugere o
 
 ::: moniker-end 
 
-2. Gå til **BrugereAktive** >  brugere, og vælg **Tilføj en bruger**.
+2. Gå til **Brugere** > **Aktive brugere**, og vælg **Tilføj en bruger**.
 3. I ruden **Konfigurer de grundlæggende** oplysninger skal du udfylde de grundlæggende brugeroplysninger og derefter vælge **Næste**.
     - **Navn** Udfyld for- og efternavn, vist navn og brugernavn.
     - **Domæne** Vælg domænet for brugerens konto. Hvis brugerens brugernavn f.eks. er Jakob, og domænet er contoso.com, logger vedkommende på ved hjælp af jakob@contoso.com.
@@ -104,12 +108,12 @@ Du kan bruge en af følgende metoder til at tilføje flere brugere på samme tid
 
 - **Brug et regneark til at tilføje flere personer samlet.** Se [Tilføj flere brugere på samme tid](../../enterprise/add-several-users-at-the-same-time.md).
 - **Automatiser tilføjelse af konti og tildeling af licenser.** Se [Opret brugerkonti med Microsoft 365 PowerShell](../../enterprise/create-user-accounts-with-microsoft-365-powershell.md). Vælg denne metode, hvis du allerede har kendskab til Windows PowerShell cmdlet'er.
-- **Bruger du ActiveDirectory?** [Konfigurer katalogsynkronisering for Microsoft 365](../../enterprise/set-up-directory-synchronization.md). Brug værktøjet Azure AD Forbind til at replikere Active Directory-brugerkonti (og andre Active Directory-objekter) i Microsoft 365. Synkroniseringen tilføjer kun brugerkontiene. Du skal tildele licenser til de synkroniserede brugere, før de kan bruge mail og andre Office apps.
-- **Migrerer du fra Exchange?** Se [Måder at overføre flere mailkonti til Office 365](/Exchange/mailbox-migration/mailbox-migration) på. Når du overfører flere postkasser til Microsoft 365 ved hjælp af enten cutover, staged eller en hybrid Exchange metode, tilføjer du automatisk brugere som en del af migreringen. Overførslen tilføjer kun brugerkontiene. Du skal tildele licenser til brugerne, før de kan bruge mail og andre Office apps. Hvis du ikke tildeler en licens til en bruger, deaktiveres brugerens postkasse efter en respitperiode på 30 dage. Få mere at vide om, hvordan [du tildeler licenser til brugere](../manage/assign-licenses-to-users.md) i Microsoft 365 Administration.
+- **Bruger du ActiveDirectory?** [Konfigurer katalogsynkronisering for Microsoft 365](../../enterprise/set-up-directory-synchronization.md). Brug værktøjet Azure AD Connect til at replikere Active Directory-brugerkonti (og andre Active Directory-objekter) i Microsoft 365. Synkroniseringen tilføjer kun brugerkontiene. Du skal tildele licenser til de synkroniserede brugere, før de kan bruge mail og andre Office-apps.
+- **Vil du overføre fra Exchange?** Se [Måder at overføre flere mailkonti til Office 365](/Exchange/mailbox-migration/mailbox-migration) på. Når du overfører flere postkasser til Microsoft 365 ved hjælp af enten cutover, staged eller en hybrid Exchange-metode, tilføjer du automatisk brugere som en del af migreringen. Overførslen tilføjer kun brugerkontiene. Du skal tildele licenser til brugerne, før de kan bruge mail og andre Office-apps. Hvis du ikke tildeler en licens til en bruger, deaktiveres brugerens postkasse efter en respitperiode på 30 dage. Få mere at vide om, hvordan [du tildeler licenser til brugere](../manage/assign-licenses-to-users.md) i Microsoft 365 Administration.
 
 ## <a name="next-steps"></a>Næste trin
 
-Når du har tilføjet en bruger, får du en meddelelse via mail fra Microsoft. Mailen indeholder personens bruger-id og adgangskode, så vedkommende kan logge på Microsoft 365. Brug din normale proces til at kommunikere nye adgangskoder. Del [vejledningen til hurtig start af medarbejdere](../setup/employee-quick-setup.md) med dine nye brugere for at konfigurere ting, f.eks. hvordan [du downloader og installerer Office apps på en pc eller Mac](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658), og hvordan [du konfigurerer Office apps og mail på en mobilenhed](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f).
+Når du har tilføjet en bruger, får du en meddelelse via mail fra Microsoft. Mailen indeholder personens bruger-id og adgangskode, så vedkommende kan logge på Microsoft 365. Brug din normale proces til at kommunikere nye adgangskoder. Del [vejledningen til hurtig start af medarbejdere](../setup/employee-quick-setup.md) med dine nye brugere for at konfigurere ting, f.eks. hvordan [du downloader og installerer Office-apps på en pc eller Mac](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658) , og hvordan du [konfigurerer Office-apps og mail på en mobilenhed](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f).
 
 ## <a name="related-content"></a>Relateret indhold
 

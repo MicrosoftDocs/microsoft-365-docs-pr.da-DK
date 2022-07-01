@@ -21,16 +21,20 @@ search.appverid:
 description: Få mere at vide om Microsoft 365 Business Premium, en abonnementstjeneste, der tager sig af it-delen for dig.
 feedback_system: None
 ms.date: 10/20/2021
-ms.openlocfilehash: 00763cd0438a28adbf98b60afed4a463086a2625
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: f127ac87d4f3886a623f1c81ef2cec6f53677434
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65435805"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601569"
 ---
 # <a name="microsoft-365-business-premium"></a>Microsoft 365 Business Premium
 
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
+
 ## <a name="watch-what-is-microsoft-365-business-premium"></a>Se: Hvad er Microsoft 365 Business Premium?
+
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198029).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2mhaA?autoplay=false]
 
@@ -50,4 +54,4 @@ Når du tilmelder dig Microsoft 365 Business Premium, får du alle de samme prod
 
 Hvis du har Microsoft Business Premium, er den hurtigste måde at konfigurere sikkerhed og begynde at samarbejde sikkert på at følge vejledningen i dette bibliotek: [Microsoft 365 til mindre virksomheder og kampagner](../../business-premium/index.md). Denne vejledning blev udviklet i samarbejde med Microsoft Defending Democracy-teamet for at beskytte alle små virksomhedskunder mod cybertrusler, der blev lanceret af avancerede hackere. 
 
-Du kan finde detaljerede oplysninger [under Microsoft 365 Virksomhedsindhold](../../admin/index.yml).
+Du kan finde detaljerede oplysninger under [Microsoft 365 Business-indhold](../../admin/index.yml).

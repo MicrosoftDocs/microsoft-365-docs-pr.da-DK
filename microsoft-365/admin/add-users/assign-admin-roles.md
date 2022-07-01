@@ -29,14 +29,16 @@ search.appverid:
 - GEA150
 ms.assetid: eac4d046-1afd-4f1a-85fc-8219c79e1504
 description: Få mere at vide om, hvordan du tildeler administratorroller til en bruger eller flere brugere i din virksomhed, så de kan udføre bestemte opgaver i Administration.
-ms.openlocfilehash: 663a5fb60fa815eab079f4ab96e53e8b168105b7
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 62a860fd90104e475763494f84ca1b4546774757
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437014"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601515"
 ---
 # <a name="assign-admin-roles-in-the-microsoft-365-admin-center"></a>Tildel administratorroller i Microsoft 365 Administration
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
 Hvis du er den person, der har købt dit Microsoft-virksomhedsabonnement, er du global administrator. Det betyder, at du har ubegrænset kontrol over produkterne i dine abonnementer, og at du har adgang til de fleste data.
 
@@ -46,13 +48,15 @@ Når du tilføjer nye brugere, og du ikke tildeler dem en administratorrolle, ha
 
 ## <a name="watch-add-an-admin"></a>Se: Tilføj en administrator
 
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198030).
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfO] 
 
 1. Når du tilmelder dig Microsoft 365 Business, bliver du automatisk global administrator. Som en hjælp til at administrere virksomheden kan du også gøre andre personer til administratorer. 
-1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**BrugereAktive**</a> >  brugere i Microsoft 365 Administration.
+1. Vælg **Aktive** > <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**brugere**</a> i Microsoft 365 Administration.
 1. Vælg den bruger, du vil gøre til administrator, og vælg derefter **Administrer roller**.
 
-Hvis du har fundet denne video nyttig, kan du se hele [træningsserien for små virksomheder og dem, der ikke er Microsoft 365](../../business-video/index.yml).
+Hvis du har fundet denne video nyttig, kan du se den [komplette træningsserie for små virksomheder og nye i Microsoft 365](../../business-video/index.yml).
 
 ## <a name="assign-admin-roles"></a>Tildel administratorroller 
 
@@ -65,7 +69,7 @@ Du kan tildele brugere til en rolle på to forskellige måder:
 
 1. I Administration skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2097861" target="_blank">**Rolletildelinger**</a>. Vælg fanerne **Azure AD** eller **Intune** for at få vist de administratorroller, der er tilgængelige for din organisation.
 2. Vælg den administratorrolle, du vil tildele brugeren til.
-3. Vælg **Tildelt** **administratorerTilføj** > .
+3. Vælg **Tildel administratorer** > **Tilføj**.
 4. Skriv brugerens **viste navn** eller **brugernavn**, og vælg derefter brugeren på listen over forslag.
 5. Tilføj flere brugere, indtil du er færdig.
 6. Vælg **Gem**, hvorefter brugeren føjes til listen over tildelte administratorer.
@@ -105,7 +109,7 @@ Du kan kontrollere administratorrolletilladelser på to forskellige måder:
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Om Microsoft 365 administratorroller](about-admin-roles.md) (artikel)\
+[Om Microsoft 365-administratorroller](about-admin-roles.md) (artikel)\
 [Azure AD indbyggede roller](/azure/active-directory/roles/permissions-reference) (artikel)\
 [Tildel roller til brugerkonti med PowerShell](../../enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell.md) (artikel)\
 [Godkend eller fjern partnerrelationer](../misc/add-partner.md) (artikel)

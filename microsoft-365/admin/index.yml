@@ -16,12 +16,12 @@ metadata:
   - AdminSurgePortfolio
   - intro-hub-or-landing
   ms.collection: Adm_TOC
-  ms.openlocfilehash: d5491560ba5d26435ab7d124fc9b5818970a00f6
-  ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+  ms.openlocfilehash: cc7a727276871edb56106e1c2b779405a1f7c99e
+  ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 04/29/2022
-  ms.locfileid: "65130313"
+  ms.lasthandoff: 07/01/2022
+  ms.locfileid: "66602010"
 highlightedContent:
   items:
   - title: Office 365 er nu Microsoft 365!
@@ -44,7 +44,7 @@ productDirectory:
   - title: Videobibliotek til administratorkursus
     imageSrc: https://docs.microsoft.com/office/media/icons/video-play.svg
     summary: Få mere at vide om, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed med korte videoer.
-    url: admin-video-library.yml
+    url: https://go.microsoft.com/fwlink/?linkid=2197659
   - title: Kom i gang
     imageSrc: https://docs.microsoft.com/office/media/icons/sign-up-blue.svg
     summary: Tilmeld dig, og konfigurer Microsoft 365.

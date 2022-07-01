@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 5f2881076679f64633afc1ddcac6a9de7df64acb
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 64ce66e10e7f6f549479b6f8a838c5db220d36dd
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530592"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602442"
 ---
 # <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
@@ -48,16 +48,16 @@ Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i st
 ## <a name="custom-mailbox-prerequisites"></a>Forudsætninger for brugerdefineret postkasse
 
 Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så brugerrapporterede meddelelser går til din brugerdefinerede postkasse:
- 
-- [Identificer den brugerdefinerede postkasse som en SecOps-postkasse i politikken for avanceret levering](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
+
+- [Identificer den brugerdefinerede postkasse som en SecOps-postkasse](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
 
 - [Opret en antimalwarepolitik](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) for den brugerdefinerede postkasse, hvor
-    - nul-timers automatisk fjernelse (ZAP) for malware er slået fra (afsnittet **Beskyttelsesindstillinger** Aktivér \> **automatisk fjernelse på nul timer for malware** er ikke valgt). 
-    - den fælles indstilling for filtrering af vedhæftede filer er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér filteret for fælles vedhæftede filer** er ikke valgt). 
+  - Automatisk udrensning (ZAP) på nul timer for malware er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér automatisk tøm af malware på nul timer** er ikke valgt).
+  - Den fælles indstilling for filtrering af vedhæftede filer er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér filteret for fælles vedhæftede filer** er ikke valgt).
 
 Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de brugere, der rapporterer meddelelser:
 
-- [Sørg for, at den brugerdefinerede postkasse ikke er en del af nogen forudindstillede sikkerhedspolitikker](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
+- Sørg for, at den brugerdefinerede postkasse ikke er en del af nogen [forudindstillede sikkerhedspolitikker](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
 
 - [Opret en politik for sikre links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanningen af Sikre links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelsesafsnittet** \> **Fra**).
 
@@ -134,7 +134,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
 Du kan konfigurere værktøjer til rapportering af meddelelser fra tredjepart for at sende rapporterede meddelelser til den brugerdefinerede postkasse. Det gør du ved at angive **knappen Meddelelse i Microsoft Outlook-rapport** til **Fra** og angive **Min organisations postkasse** til en Office 365 postkasse efter eget valg.
 
-Det eneste krav er, at den oprindelige meddelelse er inkluderet som en . EML eller . Den vedhæftede MSG-fil (ikke komprimeret) i den meddelelse, der sendes til den brugerdefinerede postkasse (videresend ikke kun den oprindelige meddelelse til den brugerdefinerede postkasse). 
+Det eneste krav er, at den oprindelige meddelelse er inkluderet som en . EML eller . Den vedhæftede MSG-fil (ikke komprimeret) i den meddelelse, der sendes til den brugerdefinerede postkasse (videresend ikke kun den oprindelige meddelelse til den brugerdefinerede postkasse).
 
  > [!NOTE]
  > Hvis der findes flere vedhæftede filer i mailen, kasseres indsendelsen. Vi understøtter kun mails med én vedhæftet fil.

@@ -28,14 +28,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Bloker adgang til Microsoft 365, så en tidligere medarbejder ikke kan logge på, beskytte organisationsdata og give andre medarbejdere adgang til deres mail- og OneDrive-data.
-ms.openlocfilehash: d8b32a2489735469ecdd2af3b479b0705d33be13
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 12c1656ba0826e9d4d2472427642914cdcc7b2e6
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486214"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601712"
 ---
 # <a name="overview-remove-a-former-employee-and-secure-data"></a>Oversigt: Fjern en tidligere medarbejder, og sikre data
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
 Et spørgsmål, vi ofte får, er "Hvad skal jeg gøre for at sikre data og beskytte adgangen, når en medarbejder forlader min organisation?" I denne artikelserie forklares det, hvordan du blokerer adgang til Microsoft 365, så disse brugere ikke kan logge på Microsoft 365, de trin, du skal udføre for at sikre organisationsdata, og hvordan andre medarbejdere kan få adgang til mail og OneDrive-data.
 
@@ -78,7 +80,9 @@ Hvis du vil fuldføre trinnene i denne serie, skal du bruge disse Funktioner og 
 |[Trin 6 – Fjern og slet Microsoft 365-licensen fra en tidligere medarbejder](remove-former-employee-step-6.md)|Når du fjerner en licens, kan du tildele den til en anden. Eller du kan slette licensen, så du ikke betaler for den, før du ansætter en anden person. <p> Når du fjerner eller sletter en licens, bevares brugerens gamle mail, kontakter og kalender i **30 dage** og slettes derefter permanent. Hvis du fjerner eller sletter en licens, men ikke sletter kontoen, forbliver indholdet i brugerens OneDrive tilgængeligt for dig selv efter 30 dage.|
 |[Trin 7 – Slet en tidligere medarbejders brugerkonto](remove-former-employee-step-7.md)|Dette fjerner kontoen fra dit administrationscenter. Holder tingene rene.|
 
- ## <a name="watch-delete-a-user"></a>Se: Slet en bruger
+## <a name="watch-delete-a-user"></a>Se: Slet en bruger
+
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198203).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOfR?autoplay=false]
 

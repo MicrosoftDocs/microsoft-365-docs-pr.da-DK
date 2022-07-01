@@ -13,16 +13,16 @@ ms.collection:
 description: Få mere at vide om, hvordan du rapporterer falske positiver og falske negativer i Outlook ved hjælp af funktionen Rapportmeddelelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 762f16916e03940f4d0f95c48f13751d3cbd63c7
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 60f9a9eff9694752630170991b7a800f52a2952d
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416966"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602132"
 ---
 # <a name="report-false-positives-and-false-negatives-in-outlook"></a>Rapportér falske positiver og falske negativer i Outlook
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -30,9 +30,9 @@ ms.locfileid: "65416966"
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
-> Hvis du er administrator i en Microsoft 365 organisation med Exchange Online postkasser, anbefaler vi, at du bruger siden **Indsendelser** på Microsoft 365 Defender-portalen. Du kan få flere oplysninger [under Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+> Hvis du er administrator i en Microsoft 365-organisation med Exchange Online postkasser, anbefaler vi, at du bruger siden **Indsendelser** på portalen Microsoft 365 Defender. Du kan få flere oplysninger [under Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller lokale postkasser ved hjælp af hybrid moderne godkendelse kan du sende falske positiver (god mail, der blev blokeret eller sendt til mappen med uønsket post) og falske negativer (uønsket mail eller phish, der blev leveret til indbakken) til Exchange Online Protection (EOP).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller lokale postkasser ved hjælp af hybrid moderne godkendelse kan du sende falske positiver (god mail, der blev blokeret eller sendt til mappen med uønsket post) og falske negativer (uønskede mails eller phish, der blev leveret til indbakken) til Exchange Online Protection (EOP).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -40,7 +40,7 @@ I Microsoft 365 organisationer med postkasser i Exchange Online eller lokale pos
 
 - Tilføjelsesprogrammet Rapportmeddelelse og tilføjelsesprogrammet Rapport phishing fungerer for Outlook på alle platforme (Outlook på internettet, iOS, Android og Desktop).
 
-- Hvis du er administrator i en organisation med Exchange Online postkasser, skal du bruge portalen Indsendelser på portalen Microsoft 365 Defender. Du kan få flere oplysninger under [Brug indsendelse af administratorer til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+- Hvis du er administrator i en organisation med Exchange Online postkasser, skal du bruge portalen Indsendelser på portalen Microsoft 365 Defender. Du kan få flere oplysninger under [Brug Administration Indsendelse til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
 - Du kan konfigurere til at sende meddelelser direkte til Microsoft, en postkasse, du angiver, eller begge dele. Du kan få flere oplysninger under [Politikker for brugerindsendelser](user-submission.md).
 
@@ -50,18 +50,6 @@ I Microsoft 365 organisationer med postkasser i Exchange Online eller lokale pos
 
 Se denne korte video for at få mere at vide om, hvordan du kan bruge Microsoft Defender for Office 365 til nemt at undersøge brugerindsendelser for at bestemme indholdet af en meddelelse og reagere på indsendelsen ved at anvende den relevante afhjælpningshandling. 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWBHof]
-
-### <a name="turn-off-the-built-in-reporting-experience"></a>Slå den indbyggede rapporteringsoplevelse fra
-
-Vi anbefaler ikke den indbyggede rapporteringsoplevelse i Outlook, fordi den ikke kan bruge [politikken for brugerindsendelse](./user-submission.md). Vi anbefaler, at du bruger tilføjelsesprogrammet Rapportmeddelelse eller tilføjelsesprogrammet Rapport phishing i stedet.
-
-Du skal have tildelt tilladelser, før du kan køre denne cmdlet. Hvis du vil finde de tilladelser, der kræves for at køre en cmdlet eller parameter i din organisation, skal du se [Find de tilladelser, der kræves for at køre en Exchange cmdlet](/powershell/exchange/find-exchange-cmdlet-permissions).
-
-Kør følgende PowerShell-kommando for at deaktivere den indbyggede rapporteringsoplevelse i Outlook på internettet:
-
-```powershell
-Set-OwaMailboxPolicy -Identity OwaMailboxPolicy-Default -ReportJunkEmailEnabled $false
-```
 
 ## <a name="use-the-report-message-feature"></a>Brug funktionen Rapportmeddelelse
 

@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 505308bec005811e174b90cde9e872532ccacdfe
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: c4236edcb2b5ec15b7c66be8f4b74ad0a2bc44c7
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739477"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603459"
 ---
 # <a name="advanced-hunting-query-best-practices"></a>Avancerede bedste praksisser for jagtforespørgslen
 
@@ -44,6 +44,8 @@ Når du har kørt din forespørgsel, kan du se udførelsestiden og dens ressourc
 
 Kunder, der kører flere forespørgsler regelmæssigt, bør spore forbruget og anvende optimeringsvejledningen i denne artikel for at minimere afbrydelse som følge af overskridelse af kvoter eller forbrugsparametre.
 
+Se [Optimering af KQL-forespørgsler](https://www.youtube.com/watch?v=ceYvRuPp5D8) for at se nogle af de mest almindelige måder at forbedre dine forespørgsler på.  
+
 ## <a name="general-optimization-tips"></a>Generelle optimeringstip
 
 - **Tilpas størrelsen på nye forespørgsler** – Hvis du har mistanke om, at en forespørgsel returnerer et stort resultatsæt, skal du først vurdere det ved hjælp af [optællingsoperatoren](/azure/data-explorer/kusto/query/countoperator). Brug [grænse](/azure/data-explorer/kusto/query/limitoperator) eller synonymet `take` for at undgå store resultatsæt.
@@ -63,7 +65,9 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør spore forbruget og a
 - **Opspar, udtræk ikke** – Når det er muligt, skal du bruge [fortolkningsoperatoren](/azure/data-explorer/kusto/query/parseoperator) eller en fortolkningsfunktion, [f.eks. parse_json()](/azure/data-explorer/kusto/query/parsejsonfunction). `matches regex` Undgå strengoperatoren eller [funktionen extract(),](/azure/data-explorer/kusto/query/extractfunction) som begge bruger regulært udtryk. Forbeholder dig brugen af regulære udtryk til mere komplekse scenarier. [Læs mere om fortolkningsfunktioner](#parse-strings)
 - **Filtrer tabeller ikke udtryk – Filtrer** ikke efter en beregnet kolonne, hvis du kan filtrere på en tabelkolonne.
 - **Ingen ord med tre tegn** – undgå at sammenligne eller filtrere ved hjælp af ord med tre tegn eller færre. Disse ord er ikke indekseret, og matchning af dem kræver flere ressourcer.
-- **Project selektivt** – gør dine resultater nemmere at forstå ved kun at projektere de kolonner, du har brug for. Projektering af bestemte kolonner, før der køres [joinforbindelser](/azure/data-explorer/kusto/query/joinoperator) eller lignende handlinger, hjælper også med at forbedre ydeevnen.
+- **Projekt selektivt** – Gør dine resultater nemmere at forstå ved kun at projektere de kolonner, du har brug for. Projektering af bestemte kolonner, før der køres [joinforbindelser](/azure/data-explorer/kusto/query/joinoperator) eller lignende handlinger, hjælper også med at forbedre ydeevnen.
+
+
 
 ## <a name="optimize-the-join-operator"></a>Optimer operatoren `join`
 [Joinoperatoren](/azure/data-explorer/kusto/query/joinoperator) fletter rækker fra to tabeller ved at matche værdier i angivne kolonner. Anvend disse tip til at optimere forespørgsler, der bruger denne operator.
@@ -186,13 +190,13 @@ Kunder, der kører flere forespørgsler regelmæssigt, bør spore forbruget og a
     | summarize hint.shufflekey = RecipientEmailAddress count() by Subject, RecipientEmailAddress
     ```
 
-Se denne [korte video](https://www.youtube.com/watch?v=ceYvRuPp5D8) for at få mere at vide om, hvordan du kan optimere Kusto-forespørgselssproget.  
+
 
 ## <a name="query-scenarios"></a>Forespørgselsscenarier
 
 ### <a name="identify-unique-processes-with-process-ids"></a>Identificer entydige processer med proces-id'er
 
-Proces-id'er genbruges i Windows og genbruges til nye processer. De kan ikke alene fungere som entydige identifikatorer for bestemte processer.
+Proces-id'er (PID'er) genbruges i Windows og genbruges til nye processer. De kan ikke alene fungere som entydige identifikatorer for bestemte processer.
 
 Hvis du vil hente et entydigt id for en proces på en bestemt computer, skal du bruge proces-id'et sammen med processens oprettelsestid. Når du joinforbinder eller opsummerer data om processer, skal du inkludere kolonner for computer-id'et (enten `DeviceId` eller `DeviceName`), proces-id'et (`ProcessId` eller `InitiatingProcessId`) og tidspunktet for oprettelse af processen (`ProcessCreationTime` eller `InitiatingProcessCreationTime`)
 

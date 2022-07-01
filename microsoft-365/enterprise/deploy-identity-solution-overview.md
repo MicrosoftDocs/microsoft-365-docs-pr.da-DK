@@ -14,47 +14,46 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
 - m365solution-m365-identity
-- m365solution-scenario
 - m365solution-overview
 ms.custom:
 - intro-overview
 description: Udrul din identitetsinfrastruktur til Microsoft 365.
-ms.openlocfilehash: 6128daa59bfece9403953e041f258d87ef6a7413
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9f0956b0c131fb4cf90ce462fcfca0b9e124578e
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092949"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603676"
 ---
 # <a name="deploy-your-identity-infrastructure-for-microsoft-365"></a>Udrul din identitetsinfrastruktur til Microsoft 365
 
-I Microsoft 365 for virksomheder baner en veltilrettelagt og udført identitetsinfrastruktur vejen for stærkere sikkerhed, herunder begrænsning af adgang til dine produktivitetsarbejdsbelastninger og deres data til kun godkendte brugere og enheder. Sikkerhed for identiteter er et nøgleelement i en Nul tillid udrulning, hvor alle forsøg på at få adgang til ressourcer både i det lokale miljø og i cloudmiljøet godkendes og godkendes.
+I Microsoft 365 for enterprise baner en veltilrettelagt og udført identitetsinfrastruktur vejen for stærkere sikkerhed, herunder begrænsning af adgang til dine produktivitetsarbejdsbelastninger og deres data til kun godkendte brugere og enheder. Sikkerhed for identiteter er et nøgleelement i en Nul tillid udrulning, hvor alle forsøg på at få adgang til ressourcer både i det lokale miljø og i cloudmiljøet godkendes og godkendes.
 
-Du kan få oplysninger om identitetsfunktionerne for hvert Microsoft 365 til virksomheder, rollen som Azure Active Directory (Azure AD), lokale og cloudbaserede komponenter og de mest almindelige godkendelseskonfigurationer i [plakaten Identitetsinfrastruktur](../downloads/m365e-identity-infra.pdf).
+Du kan få oplysninger om identitetsfunktionerne for hver Microsoft 365 for enterprise, rollen som Azure Active Directory (Azure AD), komponenter i det lokale miljø og cloudbaserede komponenter og de mest almindelige godkendelseskonfigurationer på [plakaten Identitetsinfrastruktur](../downloads/m365e-identity-infra.pdf).
 
 [![Plakaten Identitetsinfrastruktur.](../downloads/m365e-identity-infra.png)](../downloads/m365e-identity-infra.pdf)
 
-Gennemse denne plakat med to sider for hurtigt at få oplysninger om identitetsbegreber og -konfigurationer for Microsoft 365 for virksomheder.
+Gennemse denne plakat med to sider for hurtigt at få oplysninger om identitetsbegreber og -konfigurationer til Microsoft 365 for enterprise.
 
 Du kan [downloade denne plakat](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/m365e-identity-infra.pdf) og kan udskrive den i brev-, juridiske eller tabloid-format (11 x 17).
 
-Denne løsning er det første trin til at bygge Microsoft 365 Nul tillid udrulningsstak.
+Denne løsning er det første trin til at bygge Udrulningsstakken til Microsoft 365 Nul tillid.
 
-![Den Microsoft 365 Nul tillid udrulningsstak](../media/deploy-identity-solution-overview/zero-trust-deployment-stack.png)
+![Microsoft 365 Nul tillid udrulningsstak](../media/deploy-identity-solution-overview/zero-trust-deployment-stack.png)
 
-Du kan få flere oplysninger i [Microsoft 365 Nul tillid udrulningsplan](/microsoft-365/security/microsoft-365-zero-trust).
+Du kan få flere oplysninger i [Udrulningsplanen for Microsoft 365 Nul tillid](/microsoft-365/security/microsoft-365-zero-trust).
 
 ## <a name="whats-in-this-solution"></a>Hvad er der i denne løsning
 
-Denne løsning hjælper dig gennem udrulningen af en identitetsinfrastruktur for din Microsoft 365 lejer for at give dine medarbejdere adgang og beskyttelse mod identitetsbaserede angreb.
+Denne løsning hjælper dig gennem udrulningen af en identitetsinfrastruktur for din Microsoft 365-lejer for at give dine medarbejdere adgang og beskyttelse mod identitetsbaserede angreb.
 
 ![Udrul din identitetsinfrastruktur til Microsoft 365](../media/deploy-identity-solution-overview/deploy-identity-solution-overview.png)
 
 Trinnene i denne løsning er:
 
 1. [Bestem din identitetsmodel.](deploy-identity-solution-identity-model.md)
-2. [Beskyt dine Microsoft 365 privilegerede konti.](protect-your-global-administrator-accounts.md)
-3. [Beskyt dine Microsoft 365 brugerkonti.](microsoft-365-secure-sign-in.md)
+2. [Beskyt dine privilegerede Microsoft 365-konti.](protect-your-global-administrator-accounts.md)
+3. [Beskyt dine Microsoft 365-brugerkonti.](microsoft-365-secure-sign-in.md)
 4. [Udrul din identitetsmodel.](cloud-only-identities.md)
 
 Denne løsning understøtter nøgleprincipperne i [Nul tillid](https://www.microsoft.com/security/business/zero-trust/):
@@ -65,30 +64,30 @@ Denne løsning understøtter nøgleprincipperne i [Nul tillid](https://www.micro
 
 I modsætning til almindelig intranetadgang, der har tillid til alt bag en organisations firewall, behandler Nul tillid hvert enkelt logon og adgang, som om det stammer fra et ikke-kontrolleret netværk, uanset om det er bag organisationens firewall eller på internettet. Nul tillid kræver beskyttelse af netværket, infrastrukturen, identiteter, slutpunkter, apps og data.
 
-## <a name="microsoft-365-capabilities-and-features"></a>Microsoft 365 funktioner og funktioner
+## <a name="microsoft-365-capabilities-and-features"></a>Microsoft 365-funktioner og -funktioner
 
-Azure AD indeholder en komplet pakke med identitetsstyring og sikkerhedsfunktioner til din Microsoft 365 lejer.
+Azure AD indeholder en komplet pakke med identitetsstyring og sikkerhedsfunktioner til din Microsoft 365-lejer.
 
 |Funktionalitet eller funktion|Beskrivelse|Licensering|
 |---|---|---|
-|[Multifaktorgodkendelse (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA kræver, at brugerne angiver to former for bekræftelse, f.eks. en brugeradgangskode plus en meddelelse fra Microsoft Authenticator-appen eller et telefonopkald. MFA reducerer i høj grad risikoen for, at stjålne legitimationsoplysninger kan bruges til at få adgang til dit miljø. Microsoft 365 bruger Azure AD Multi-Factor Authentication-tjenesten til MFA-baserede logons.|Microsoft 365 E3 eller E5|
-|[Betinget adgang](/azure/active-directory/conditional-access/overview)|Azure AD evaluerer betingelserne for brugerlogon og bruger politikker for betinget adgang til at bestemme den tilladte adgang. I denne vejledning viser vi f.eks., hvordan du opretter en politik for betinget adgang for at kræve overholdelse af angivne standarder for enheden for at få adgang til følsomme data. Dette reducerer i høj grad risikoen for, at en hacker med deres egen enhed og stjålne legitimationsoplysninger kan få adgang til dine følsomme data. Den beskytter også følsomme data på enhederne, fordi enhederne skal opfylde specifikke krav til tilstand og sikkerhed.|Microsoft 365 E3 eller E5|
-|[Azure AD-grupper](/azure/active-directory/fundamentals/active-directory-manage-groups)|Politikker for betinget adgang, enhedshåndtering med Intune og endda tilladelser til filer og websteder i din organisation er afhængige af tildelingen til brugerkonti eller Azure AD-grupper. Vi anbefaler, at du opretter Azure AD-grupper, der svarer til de beskyttelsesniveauer, du implementerer. For eksempel er dine chefmedarbejdere sandsynligvis højere værdimål for hackere. Det giver derfor mening at føje disse medarbejderes brugerkonti til en Azure AD-gruppe og tildele denne gruppe til politikker for betinget adgang og andre politikker, der gennemtvinger et højere niveau af beskyttelse af adgang.|Microsoft 365 E3 eller E5|
-|[Azure AD Identity Protection](/azure/active-directory/identity-protection/overview)|Giver dig mulighed for at registrere potentielle sikkerhedsrisici, der påvirker din organisations identiteter, og konfigurere politikken for automatisk afhjælpning til lav, mellem og høj logonrisiko og brugerrisiko. Denne vejledning er afhængig af denne risikoevaluering for at anvende politikker for betinget adgang til multifaktorgodkendelse. Denne vejledning indeholder også en politik for betinget adgang, der kræver, at brugerne ændrer deres adgangskode, hvis der registreres højrisikoaktivitet for deres konto.|Microsoft 365 E5, Microsoft 365 E3 med E5 Security-tilføjelsesprogrammet, EMS E5 eller Azure AD Premium P2-licenser|
+|[Multifaktorgodkendelse (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks)|MFA kræver, at brugerne angiver to former for bekræftelse, f.eks. en brugeradgangskode plus en meddelelse fra Appen Microsoft Authenticator eller et telefonopkald. MFA reducerer i høj grad risikoen for, at stjålne legitimationsoplysninger kan bruges til at få adgang til dit miljø. Microsoft 365 bruger tjenesten Azure AD multifaktorgodkendelse til MFA-baserede logons.|Microsoft 365 E3 eller E5|
+|[Betinget adgang](/azure/active-directory/conditional-access/overview)|Azure AD evaluerer betingelserne for brugerens logon og bruger politikker for betinget adgang til at bestemme den tilladte adgang. I denne vejledning viser vi f.eks., hvordan du opretter en politik for betinget adgang for at kræve overholdelse af angivne standarder for enheden for at få adgang til følsomme data. Dette reducerer i høj grad risikoen for, at en hacker med deres egen enhed og stjålne legitimationsoplysninger kan få adgang til dine følsomme data. Den beskytter også følsomme data på enhederne, fordi enhederne skal opfylde specifikke krav til tilstand og sikkerhed.|Microsoft 365 E3 eller E5|
+|[Azure AD grupper](/azure/active-directory/fundamentals/active-directory-manage-groups)|Politikker for betinget adgang, enhedshåndtering med Intune og endda tilladelser til filer og websteder i din organisation er afhængige af tildelingen til brugerkonti eller Azure AD grupper. Vi anbefaler, at du opretter Azure AD grupper, der svarer til de beskyttelsesniveauer, du implementerer. For eksempel er dine chefmedarbejdere sandsynligvis højere værdimål for hackere. Det giver derfor mening at føje disse medarbejderes brugerkonti til en Azure AD gruppe og tildele denne gruppe til politikker for betinget adgang og andre politikker, der gennemtvinger et højere beskyttelsesniveau for adgang.|Microsoft 365 E3 eller E5|
+|[Azure AD Identity Protection](/azure/active-directory/identity-protection/overview)|Giver dig mulighed for at registrere potentielle sikkerhedsrisici, der påvirker din organisations identiteter, og konfigurere politikken for automatisk afhjælpning til lav, mellem og høj logonrisiko og brugerrisiko. Denne vejledning er afhængig af denne risikoevaluering for at anvende politikker for betinget adgang til multifaktorgodkendelse. Denne vejledning indeholder også en politik for betinget adgang, der kræver, at brugerne ændrer deres adgangskode, hvis der registreres højrisikoaktivitet for deres konto.|Microsoft 365 E5, Microsoft 365 E3 med tilføjelsesprogrammet E5 Security, EMS E5 eller Azure AD Premium P2-licenser|
 |[Selvbetjeningstjenesten til nulstilling af adgangskode (SSPR)](/azure/active-directory/authentication/concept-sspr-howitworks)|Tillad, at brugerne nulstiller deres adgangskoder sikkert og uden indgriben fra helpdesk ved at kontrollere flere godkendelsesmetoder, som administratoren kan kontrollere.|Microsoft 365 E3 eller E5|
-|[Adgangskodebeskyttelse i Azure AD](/azure/active-directory/authentication/concept-password-ban-bad)|Registrer og bloker kendte svage adgangskoder og deres varianter og yderligere svage ord, der er specifikke for din organisation. Standardlister over globale forbudte adgangskoder anvendes automatisk for alle brugere i en Azure AD-lejer. Du kan definere yderligere poster på en brugerdefineret liste over forbudte adgangskoder. Når brugerne ændrer eller nulstiller deres adgangskoder, kontrolleres disse lister over forbudte adgangskoder for at gennemtvinge brugen af stærke adgangskoder.|Microsoft 365 E3 eller E5|
+|[Azure AD adgangskodebeskyttelse](/azure/active-directory/authentication/concept-password-ban-bad)|Registrer og bloker kendte svage adgangskoder og deres varianter og yderligere svage ord, der er specifikke for din organisation. Standardlister over globale forbudte adgangskoder anvendes automatisk på alle brugere i en Azure AD lejer. Du kan definere yderligere poster på en brugerdefineret liste over forbudte adgangskoder. Når brugerne ændrer eller nulstiller deres adgangskoder, kontrolleres disse lister over forbudte adgangskoder for at gennemtvinge brugen af stærke adgangskoder.|Microsoft 365 E3 eller E5|
 |
 
 ## <a name="next-steps"></a>Næste trin
 
-Brug disse trin til at installere en identitetsmodel og en godkendelsesinfrastruktur for din Microsoft 365 lejer:
+Brug disse trin til at installere en identitetsmodel og en godkendelsesinfrastruktur for din Microsoft 365-lejer:
 
 1. [Bestem din cloudidentitetsmodel.](deploy-identity-solution-identity-model.md)
-2. [Beskyt dine Microsoft 365 privilegerede konti.](protect-your-global-administrator-accounts.md)
-3. [Beskyt dine Microsoft 365 brugerkonti.](microsoft-365-secure-sign-in.md)
+2. [Beskyt dine privilegerede Microsoft 365-konti.](protect-your-global-administrator-accounts.md)
+3. [Beskyt dine Microsoft 365-brugerkonti.](microsoft-365-secure-sign-in.md)
 4. Udrul din cloudidentitetsmodel: [kun cloud](cloud-only-identities.md) eller [hybrid](prepare-for-directory-synchronization.md).
 
-[![Bestem den identitetsmodel, der skal bruges til din Microsoft 365 lejer](../media/deploy-identity-solution-overview/identity-solution-identity-model.png)](deploy-identity-solution-identity-model.md)
+[![Bestem den identitetsmodel, der skal bruges til din Microsoft 365-lejer](../media/deploy-identity-solution-overview/identity-solution-identity-model.png)](deploy-identity-solution-identity-model.md)
   
 ## <a name="additional-microsoft-cloud-identity-resources"></a>Yderligere ressourcer til Microsofts cloudidentitet
 
@@ -111,9 +110,9 @@ Få mere at vide om, hvordan it-eksperter hos Microsoft [administrerer identitet
 >Denne IT Showcase-ressource er kun tilgængelig på engelsk.
 >
 
-### <a name="how-contoso-did-identity-for-microsoft-365"></a>Sådan gjorde Contoso identitet for Microsoft 365
+### <a name="how-contoso-did-identity-for-microsoft-365"></a>Sådan klarede Contoso identitet for Microsoft 365
 
-Du kan se et eksempel på, hvordan en fiktiv, men repræsentativ multinational organisation har udrullet en hybrid identitetsinfrastruktur til Microsoft 365 cloudtjenester, under [Identitet for Contoso Corporation](contoso-identity.md).
+Du kan se et eksempel på, hvordan en fiktiv, men repræsentativ multinational organisation har udrullet en hybrid identitetsinfrastruktur til Microsoft 365-cloudtjenester, under [Identitet for Contoso Corporation](contoso-identity.md).
 
 <!--
 

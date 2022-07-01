@@ -22,12 +22,12 @@ ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
 description: Microsoft 365 Administration – få mere at vide om de funktioner, der blev tilføjet i denne måned.
-ms.openlocfilehash: 198832f09f6b219579f128b7104ecf3ae2fa3446
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: fe801e913e227239b53eb7f1166a3f802f4217ce
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679346"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602574"
 ---
 # <a name="whats-new-in-the-microsoft-365-admin-center"></a>Nyheder i Microsoft 365 Administration
 
@@ -48,8 +48,8 @@ Og hvis du gerne vil vide, hvad der er nyt med andre Microsoft-cloudtjenester:
 - [Nyheder i Microsoft Purview-compliance-portal](/Office365/SecurityCompliance/whats-new)
 - [Nyheder i Microsoft 365 Defender](../security/mtp/whats-new.md)
 - [Nyheder i SharePoint Administration](/sharepoint/what-s-new-in-admin-center)
-- [Office opdateringer](/OfficeUpdates/)
-- [Sådan kontrollerer du Windows udgivelsestilstand](/windows/deployment/update/check-release-health)
+- [Office-opdateringer](/OfficeUpdates/)
+- [Sådan kontrollerer du tilstanden af Windows-udgivelse](/windows/deployment/update/check-release-health)
 
 ## <a name="may-2022"></a>Maj 2022
 
@@ -73,15 +73,15 @@ Du kan få flere oplysninger om disse roller [under Azure AD indbyggede roller](
 
 ### <a name="quick-assist"></a>Lynhjælp
 
-Vi har flyttet Lynhjælp til Windows Store for at forbedre appens ydeevne og sikkerhed. Appen Windows Lynhjælp giver dig og dine slutbrugere mulighed for at modtage eller give pc-hjælp via en fjernforbindelse.
+Vi har flyttet Lynhjælp til Windows Store for at forbedre appens ydeevne og sikkerhed. Windows Lynhjælp-appen giver dig og dine slutbrugere mulighed for at modtage eller give pc-hjælp via en fjernforbindelse.
 
-Med den nye Lynhjælp Store app kan du se en betydelig forbedring af tiderne for generering af adgangskode og en reduktion af programfejl.
+Med den nye Lynhjælp Store-app kan du se en betydelig forbedring af tiderne for generering af adgangskode og en reduktion af programfejl.
 
 Du kan finde flere oplysninger under [Løs pc-problemer via en fjernforbindelse](https://support.microsoft.com/windows/solve-pc-problems-over-a-remote-connection-b077e31a-16f4-2529-1a47-21f6a9040bf3), og [installér Lynhjælp](https://support.microsoft.com/windows/install-quick-assist-c17479b7-a49d-4d12-938c-dbfb97c88bca)
 
 ## <a name="april-2022"></a>April 2022
 
-### <a name="nps-sentiment-insights"></a>NPS-tillid Insights
+### <a name="nps-sentiment-insights"></a>NPS Sentiment Insights
 
 NPS-undersøgelsesindsigt er et AI-drevet dashboard, der er tilgængeligt i Microsoft 365 Administration.
 
@@ -89,7 +89,7 @@ I Administration skal du gå til Feedback **på tilstand Produktfeedback** >  > 
 
 Denne funktion hjælper administratorer som dig med at få handlingsvenlig indsigt, der er afledt af Microsoft NPS-undersøgelser, som dine brugere har svaret på. Få mere at vide på [Microsofts NPS-produktfeedback og indsigt for din organisation](manage/manage-feedback-product-insights.md).
 
-Baseret på din feedback introducerer vi en ny funktion, der identificerer synspunkterne for hver nps ordret feedback, så du kan lære, hvad dine brugere har med Microsoft 365 produkter. Synspunktsmærkater, f.eks **. Positiv**, **Negativ** og **Andet** , tildeles nps ordret feedback.
+På baggrund af din feedback introducerer vi en ny funktion, der identificerer synspunkterne for hver nps ordret feedback, så du kan lære, hvad dine brugere føler med hensyn til Microsoft 365-produkter. Synspunktsmærkater, f.eks **. Positiv**, **Negativ** og **Andet** , tildeles nps ordret feedback.
 
 :::image type="content" source="../media/product-feedback-nps-verbatims.png" alt-text="Skærmbillede: Dashboard til produktfeedback på fanen Indsigt i NPS-undersøgelser":::
 
@@ -136,15 +136,15 @@ Tidligere kunne du kun mærke prioritetskonti ved at søge efter dem ved hjælp 
 
 ## <a name="march-2022"></a>Marts 2022
 
-### <a name="microsoft-365-lighthouse-ga"></a>Microsoft 365 Fyrtårn GA
+### <a name="microsoft-365-lighthouse-ga"></a>Microsoft 365 Lighthouse GA
 
-Små og mellemstore virksomheder er ofte afhængige af pålidelige it-partnere til at administrere deres it-miljøer. Vi gør det nemmere for partnere at sikre kunder i stor skala med den generelle tilgængelighed af [Microsoft 365 Lighthouse](https://aka.ms/March1SMBPartnerBlog), en administrationsportal med flere lejere til MSP'er (Managed Service Providers). Microsoft 365 Lighthouse giver kunderne en komplet oplevelse ved at sætte deres partnere i stand til hurtigt at identificere og reagere på trusler, unormale logons og beskeder om enhedens overholdelse af angivne standarder for at holde dem sikre.
+Små og mellemstore virksomheder er ofte afhængige af pålidelige it-partnere til at administrere deres it-miljøer. Vi gør det nemmere for partnere at sikre kunder i stor skala med den generelle tilgængelighed af [Microsoft 365 Lighthouse](https://aka.ms/March1SMBPartnerBlog), en administrationsportal med flere lejere til MSP'er (Managed Service Providers). Microsoft 365 Lighthouse giver kunderne en komplet oplevelse ved at sætte deres partnere i stand til hurtigt at identificere og reagere på trusler, unormale logons og beskeder om enhedens overholdelse af angivne standarder for at beskytte dem.
 
-:::image type="content" source="../media/lighthouse.png" alt-text="Skærmbillede: dashboardet Microsoft 365 Lighthouse":::
+:::image type="content" source="../media/lighthouse.png" alt-text="Skærmbillede: Microsoft 365 Lighthouse-dashboard":::
 
-Microsoft 365 Lighthouse er kun en it-partnertjeneste, og den er kun tilgængelig for partnere, der er tilmeldt programmet Cloud Solution Provider (CSP), og som administrerer kunder, der har op til 1.000 brugere med licens til Microsoft 365 Business Premium, Microsoft 365 E3 , eller Microsoft Defender til virksomheder (i prøveversion) abonnementer. Hvis du er Microsoft CSP-tilmeldt it-partner, er Microsoft 365 Lighthouse gratis for din organisation og er designet til at hjælpe din virksomhed med at skalere og vokse. Se [hjælpbiblioteket Microsoft 365 Lighthouse](../lighthouse/m365-lighthouse-overview.md) for at få flere oplysninger.
+Microsoft 365 Lighthouse er kun en it-partnertjeneste, og den er kun tilgængelig for partnere, der er tilmeldt programmet Cloud Solution Provider (CSP), og som administrerer kunder, der har op til 1.000 licenserede brugere med Microsoft 365 Business Premium, Microsoft 365 E3 eller Microsoft Defender til virksomheder (prøveversion) abonnementer. Hvis du er Microsoft CSP-tilmeldt it-partner, er Microsoft 365 Lighthouse gratis for din organisation og er designet til at hjælpe din virksomhed med at skalere og vokse. Se [Hjælp-biblioteket til Microsoft 365 Lighthouse](../lighthouse/m365-lighthouse-overview.md) for at få flere oplysninger.
 
-Hvis du vil i gang med at bruge Microsoft 365 Fyrtårn, skal [du se Tilmeld dig Microsoft 365 Fyrtårn](../lighthouse/m365-lighthouse-sign-up.md). Hvis du vil vide mere om Microsoft 365 Lighthouse, Defender for Business og Microsoft 365 Business Premium, [kan du deltage i vores partnerwebinarserie](https://aka.ms/M365MDBSeries).
+Hvis du vil i gang med at bruge Microsoft 365 Lighthouse, skal [du se Tilmeld dig Microsoft 365 Lighthouse](../lighthouse/m365-lighthouse-sign-up.md). Hvis du vil vide mere om Microsoft 365 Lighthouse, Defender for Business og Microsoft 365 Business Premium, kan [du deltage i vores partnerwebinarserie](https://aka.ms/M365MDBSeries).
 
 ## <a name="february-2022"></a>Februar 2022
 
@@ -181,7 +181,7 @@ Få mere at vide på [Microsofts NPS-produktfeedback og indsigt for din organisa
 
 ### <a name="microsoft-365-admin-center-video-training"></a>Microsoft 365 Administration videotræning
 
-Vi har opdateret vores Microsoft 365 Administration videotræning. Gå til siden [Administration videobibliotek for at](admin-video-library.yml) få mere at vide om, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed.
+Vi har opdateret vores Microsoft 365 Administration videotræning. Gå til siden [Administration videobibliotek](https://go.microsoft.com/fwlink/?linkid=2197659) for at få mere at vide om, hvordan du konfigurerer og administrerer Microsoft 365 for din virksomhed.
 
 :::image type="content" source="../media/admin-library-vid-training.png" alt-text="Skærmbillede: Viser biblioteket til videotræning i Administration":::
 
@@ -199,11 +199,11 @@ Vi har tilføjet to grafer kaldet **Volumentendens** og **Volumentendens efter p
 
 Kurvediagrammet under fanen **Volumentendens** fremhæver tendensen, hvis supportsagerne er stigende eller faldende for din organisation måned for måned. Du kan holde markøren over grafen for at kontrollere antallet af supportsager, der er oprettet i hver måned.
 
-:::image type="content" source="../media/SuppInsight-voltrnd.PNG" alt-text="Skærmbillede: Graph, der fremhæver tendensen, hvis supportsager er stigende eller faldende for din organisation måned for måned":::
+:::image type="content" source="../media/SuppInsight-voltrnd.PNG" alt-text="Skærmbillede: Graf, der fremhæver tendensen, hvis supportsager er stigende eller faldende for din organisation måned for måned":::
 
 **Grafen Mængdetendens efter produkt** viser de øverste 3 produkter i hver måned med de højeste supportsager. Vi har aktiveret filtrering i tabellen, og du kan nu filtrere resultaterne efter **Produkt**, **Alvorsgrad** og **Dato**.
 
-:::image type="content" source="../media/SuppInsight-voltrndproduct.PNG" alt-text="Skærmbillede: Graph viser de øverste 3 produkter i hver måned med de højeste supportsager":::
+:::image type="content" source="../media/SuppInsight-voltrndproduct.PNG" alt-text="Skærmbillede: Grafen viser de tre mest populære produkter i hver måned med de højeste supportsager":::
 
 Vi har også tilføjet to nye felter, **Alvorsgrad** og **Lukket dato** i tabellen **Vis serviceanmodning** for at give dig mere indsigt i dine billetter.
 
@@ -217,7 +217,7 @@ Hvis du vil tjekke disse opdateringer ud i <a href="https://go.microsoft.com/fwl
 
 Vi har føjet et par nye kategorier til søgefunktionen.
 
-- Du kan nu søge efter Microsoft 365 administratorroller i global søgning og hurtigt få vist og administrere rolletildelinger fra en hvilken som helst side. Søg f.eks. efter **Intune administrator**.
+- Du kan nu søge efter Microsoft 365-administratorroller i global søgning og hurtigt få vist og administrere rolletildelinger fra en hvilken som helst side. Søg f.eks. efter **Intune administrator**.
 
 - Du kan nu finde forenklede konfigurationsoplevelser via global søgning. Dette kan hjælpe dig og dit team med hurtigt at komme i gang med, hvordan du bruger nye funktioner. Søg f.eks. efter **angiv adgangskode til aldrig at udløbe**.
 

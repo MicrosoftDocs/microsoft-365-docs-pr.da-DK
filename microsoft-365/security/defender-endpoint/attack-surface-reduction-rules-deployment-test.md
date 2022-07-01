@@ -1,5 +1,5 @@
 ---
-title: Test asr-regler (Attack Surface Reduction)
+title: Regler for testreduktion af angrebsoverflade
 description: Indeholder en vejledning i, hvordan du tester installationen af asr-regler (attack surface reduction).
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: facce2b736cb23cc41625b4b7d5c3f8b0ca5cfae
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 8bfe3e0d36a02831b5673b92217152ce87804d0a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705269"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601284"
 ---
-# <a name="test-attack-surface-reduction-asr-rules"></a>Test asr-regler (Attack Surface Reduction)
+# <a name="test-attack-surface-reduction-asr-rules"></a>Regler for testreduktion af angrebsoverflade
 
 Test af ASR-regler (Attack Surface Reduction) hjælper dig med at afgøre, om regler vil forhindre line of business-handlinger, før du aktiverer en regel. Ved at starte med en lille kontrolleret gruppe kan du begrænse potentielle arbejdsafbrydelser, når du udvider din udrulning på tværs af organisationen.
 
@@ -42,10 +41,10 @@ Begynd testfasen ved at aktivere ASR-reglerne med de regler, der er angivet til 
 
 ### <a name="configure-asr-rules-using-mem"></a>Konfigurer ASR-regler ved hjælp af MEM
 
-Du kan bruge MEM -slutpunktssikkerhed (Microsoft Endpoint Manager) til at konfigurere brugerdefinerede ASR-regler.
+Du kan bruge Microsoft Endpoint Manager (MEM) Endpoint Security til at konfigurere brugerdefinerede ASR-regler.
 
 1. Åbn [Microsoft Endpoint Manager Administration](https://endpoint.microsoft.com/#home).
-2. Gå til **Endpoint** **SecurityAttack-overfladereduktion** > .
+2. Gå til **slutpunktets overfladereduktion****af sikkerhedsangreb** > .
 3. Vælg **Opret politik**.
 4. Vælg **Windows 10 og nyere** i **Platform**, og vælg **Regler for reduktion af angrebsoverflade** under **Profil**.
   
@@ -76,7 +75,7 @@ Din nye politik for reduktion af angrebsoverfladen for ASR-regler er angivet i *
 
 ## <a name="step-2-understand-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal"></a>Trin 2: Forstå rapporteringssiden for regler for reduktion af angrebsoverfladen på portalen Microsoft 365 Defender
 
-Rapporteringssiden for ASR-regler findes i **Microsoft 365 Defender** **portalReportsAttack** >  >  **regler for overfladereduktion**. Denne side har tre faner:
+Rapporteringssiden for ASR-regler findes i **Microsoft 365 Defender portalrapporter** >  > **regler for reduktion af angrebsoverfladen**. Denne side har tre faner:
 
 - Opdagelser
 - Konfiguration
@@ -124,7 +123,7 @@ Ruden **GroupBy** og **Filter** indeholder følgende indstillinger:
 > :::image type="content" source="images/asr-defender365-filter.png" alt-text="Reglerne for reduktion af angrebsoverfladen filtrerer efter regler" lightbox="images/asr-defender365-filter.png":::
 
 >[!Note]
->Hvis du har en Microsoft Microsoft 365 Security E5- eller A5-, Windows E5- eller A5-licens, åbner følgende link Microsoft Defender 365 Reports > [Attack surface reductions](https://security.microsoft.com/asr?viewid=detections) > fanen Detections.
+>Hvis du har en Microsoft 365 Security E5- eller A5-, Windows E5- eller A5-licens, åbner følgende link Microsoft Defender 365 Reports > [Attack surface reductions](https://security.microsoft.com/asr?viewid=detections) > fanen Detections.
 
 ### <a name="configuration-tab"></a>Fanen Konfiguration
 
@@ -154,20 +153,20 @@ Endpoint Security-| Ruden Reduktion af angrebsoverfladen åbnes:
 > :::image type="content" source="images/asr-defender365-05b-mem3.png" alt-text="Ruden Reduktion af overfladereduktion af slutpunktssikkerhedsangreb" lightbox="images/asr-defender365-05b-mem3.png":::
 
 >[!Note]
->Hvis du har en Licens til Microsoft Defender 365 E5 (eller Windows E5?), åbner dette link microsoft Defender 365-rapporter > reduktioner i overfladen af angreb > fanen [Konfigurationer](https://security.microsoft.com/asr?viewid=configuration).
+>Hvis du har en Licens til Microsoft Defender 365 E5 (eller Windows E5?), åbnes Microsoft Defender 365 Reports > Reduktioner af angrebsoverfladen > fanen [Konfigurationer](https://security.microsoft.com/asr?viewid=configuration) .
 
 ### <a name="add-exclusions"></a>Tilføj udeladelser
 
 Denne fane indeholder en metode til at vælge registrerede objekter (f.eks. falske positiver) til udeladelse. Når der tilføjes undtagelser, indeholder rapporten en oversigt over den forventede virkning.
 
 >[!Note]
-> Microsoft Defender Antivirus AV-undtagelser overholdes af ASR-regler.  Se [Konfigurer og valider udeladelser baseret på filtypenavn, navn eller placering](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
+> Microsoft Defender Antivirus AV-undtagelser er omfattet af ASR-regler.  Se [Konfigurer og valider udeladelser baseret på filtypenavn, navn eller placering](configure-extension-file-exclusions-microsoft-defender-antivirus.md).
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="Images/asr-defender365-06d.png" alt-text="Ruden til udeladelse af den registrerede fil" lightbox="Images/asr-defender365-06d.png":::
 
 > [!Note]
->Hvis du har en Microsoft Defender 365 E5-licens (eller Windows E5?), åbner dette link overfladereduktionerne i Microsoft Defender 365 Reports > Attack > fanen [Exclusions](https://security.microsoft.com/asr?viewid=exclusions).
+>Hvis du har en Microsoft Defender 365 E5- (eller Windows E5?)-licens, åbnes Microsoft Defender 365 Reports > Surface Reductions > fanen [Exclusions](https://security.microsoft.com/asr?viewid=exclusions) .
 
 ### <a name="use-powershell-as-an-alternative-method-to-enable-asr-rules"></a>Brug PowerShell som en alternativ metode til at aktivere ASR-regler
 
@@ -192,9 +191,9 @@ Hvis du vil aktivere alle de tilføjede regler for reduktion af angrebsoverflade
 
 Du kan også bruge Gruppepolitik, Intune eller MDM-udbydere (Mobile Device Management) til at konfigurere og installere indstillingen. Få mere at vide i artiklen om [reduktion af angrebsoverfladen](attack-surface-reduction.md) .
 
-## <a name="use-windows-event-viewer-review-as-an-alternative-to-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal"></a>Brug Windows Logbog gennemse som et alternativ til rapporteringssiden for regler for reduktion af angreb på Microsoft 365 Defender-portalen
+## <a name="use-windows-event-viewer-review-as-an-alternative-to-the-attack-surface-reduction-rules-reporting-page-in-the-microsoft-365-defender-portal"></a>Brug Windows Logbog review som et alternativ til rapporteringssiden for regler for reduktion af angreb på Microsoft 365 Defender-portalen
 
-Hvis du vil gennemse apps, der ville være blevet blokeret, skal du åbne Logbog og filtrere efter Event ID 1121 i Microsoft-Windows-Windows Defender/Operational-logfilen. I følgende tabel vises alle netværksbeskyttelseshændelser.
+Hvis du vil gennemse apps, der ville være blevet blokeret, skal du åbne Logbog og filtrere efter Event ID 1121 i Microsoft-Windows-Windows Defender/Operational log. I følgende tabel vises alle netværksbeskyttelseshændelser.
 
 Hændelses-id | Beskrivelse
 -|-
@@ -204,12 +203,12 @@ Hændelses-id | Beskrivelse
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
+[Udrulningsoversigt til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md)
 
-[Planlæg installation af ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-plan.md)
+[Planlæg udrulning af reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment-plan.md)
 
-[Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
+[Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md)
 
-[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+[Operationaliser regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)
+[Henvisning til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md)

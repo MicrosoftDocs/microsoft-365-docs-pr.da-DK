@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Som regel en del af en løsning til datastyring, kan du konfigurere en opbevaringsmærkat for at starte opbevaringsperioden baseret på en hændelse, som du identificerer.
-ms.openlocfilehash: 380a95a6b4d6fa6585d0912b675d65032cd8258b
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 753188e187bd3a80cd83c10d41b373b1507a1e24
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530854"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603142"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Start opbevaring, når der opstår en hændelse
 
@@ -43,14 +43,13 @@ Eksempler på brug af hændelsesbaseret opbevaring:
     
 - **Produktlevetid** Din organisation kan have opbevaringskrav, der er relateret til den sidste produktionsdato for produkter for indhold, f.eks. tekniske specifikationer. I dette tilfælde er den sidste produktionsdato den hændelse, der udløser opbevaringsperioden. 
     
-Hændelsesbaseret opbevaring bruges typisk som en del af en proces til datastyring. Det betyder, at:
-  
+Hændelsesbaseret opbevaring bruges typisk som en del af en datastyringsproces. Det betyder, at:
+
 - Opbevaringsmærkater, der er baseret på hændelser, markerer også normalt elementer som en post som en del af en løsning til datastyring. Du kan finde flere oplysninger under [Få mere at vide om datastyring](records-management.md).
 
-- Et dokument, der er blevet erklæret som en post, men hvis hændelsesudløser endnu ikke er sket, bevares på ubestemt tid (poster kan ikke slettes permanent), før en hændelse udløser dokumentets opbevaringsperiode.
-    
+- Et dokument, der er blevet erklæret som en post, men hvis hændelsesudløser endnu ikke er sket, bevares på ubestemt tid. Indtil en hændelse udløser opbevaringsperioden for dette dokument, som derefter udløber, kan poster ikke slettes permanent.
+
 - Opbevaringsmærkater, der er baseret på hændelser, udløser normalt en dispositionsgennemgang i slutningen af opbevaringsperioden, så en dataadministrator manuelt kan gennemse og fjerne indholdet. Du kan få flere oplysninger under [Fordeling af indhold](disposition.md).
-    
 
 En opbevaringsmærkat, der er baseret på en hændelse, har de samme egenskaber som enhver opbevaringsmærkat i Microsoft 365. Du kan finde flere oplysninger under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).
 
@@ -64,7 +63,7 @@ Hvis du vil bruge hændelsesbaseret opbevaring, er det vigtigt at forstå relati
   
 1. Du opretter opbevaringsmærkater for forskellige typer indhold og knytter dem derefter til en type hændelse. Opbevaringsmærkater for forskellige typer produktfiler og -poster er f.eks. knyttet til en hændelsestype med navnet Produktlevetid, fordi disse poster skal opbevares i 10 år, fra det tidspunkt, hvor produktet udløber.
     
-2. Brugere (typisk dataadministratorer) anvender disse opbevaringsmærkater på indhold og (for dokumenter i SharePoint og OneDrive) angive et aktiv-id for hvert element. I dette eksempel er aktiv-id'et et produktnavn eller en produktkode, der bruges af organisationen. Derefter tildeles hvert produkts poster en opbevaringsmærkat, og hver post har en egenskab, der indeholder et aktiv-id. Diagrammet repræsenterer **alt indhold** for alle produktposter i en organisation, og hvert element indeholder aktiv-id'et for det produkt, hvis post det er. 
+2. Brugere, der typisk er dataadministratorer, anvender disse opbevaringsmærkater på indhold, og (for dokumenter i SharePoint og OneDrive) skal du angive et aktiv-id for hvert element. I dette eksempel er aktiv-id'et et produktnavn eller en produktkode, der bruges af organisationen. Derefter tildeles hvert produkts poster en opbevaringsmærkat, og hver post har en egenskab, der indeholder et aktiv-id. Diagrammet repræsenterer **alt indhold** for alle produktposter i en organisation, og hvert element indeholder aktiv-id'et for det produkt, hvis post det er. 
     
 3. Produktlevetid er hændelsestypen. et bestemt produkt, der når ud af livet, er en begivenhed. Når der opstår en hændelse af den pågældende hændelsestype – i dette tilfælde, når et produkt når sin slutdato – opretter du en hændelse, der angiver:
     
@@ -76,7 +75,7 @@ Hvis du vil bruge hændelsesbaseret opbevaring, er det vigtigt at forstå relati
 
 4. Når du har oprettet en hændelse, synkroniseres denne hændelsesdato med alt det indhold, der har en opbevaringsmærkat af den pågældende hændelsestype, og som indeholder det angivne aktiv-id eller nøgleord. Som enhver opbevaringsmærkat kan denne synkronisering tage op til syv dage. I det forrige diagram udløses opbevaringsperioden for alle elementer med rødt af denne hændelse. Med andre ord, når dette produkt når sin levetid, udløser hændelsen opbevaringsperioden for det pågældende produkts poster.
 
-Det er vigtigt at forstå, at hvis du ikke angiver et aktiv-id eller nøgleord for en hændelse, vil **alt indhold** med en opbevaringsmærkat for den pågældende hændelsestype få sin opbevaringsperiode udløst af hændelsen. Det betyder, at alt indhold bevares i det forrige diagram. Det er muligvis ikke, hvad du har tænkt dig.
+Det er vigtigt at forstå, at hvis du ikke angiver et aktiv-id eller nøgleord for en hændelse, vil **alt indhold** med en opbevaringsmærkat for den pågældende hændelsestype få sin opbevaringsperiode udløst af hændelsen. Det betyder, at alt indhold bevares i det forrige diagram. Det er usandsynligt, at dette resultat er det, du havde til hensigt.
 
 Til sidst skal du huske, at hver opbevaringsmærkat har sine egne opbevaringsindstillinger. I dette eksempel angiver de alle 10 år, men det er muligt for en hændelse at udløse opbevaringsmærkater, hvor hver etiket har en anden opbevaringsperiode.
   
@@ -91,9 +90,13 @@ Arbejdsproces på højt niveau for hændelsesbaseret opbevaring:
 
 ### <a name="step-1-create-a-label-whose-retention-period-is-based-on-an-event"></a>Trin 1: Opret en mærkat, hvis opbevaringsperiode er baseret på en hændelse
 
-Hvis du vil oprette og konfigurere din opbevaringsmærkat, skal du se instruktionerne for [Opret opbevaringsmærkater](file-plan-manager.md#create-retention-labels) til dataadministration eller [Sådan opretter du opbevaringsmærkater til administration af datalevetid](create-retention-labels-data-lifecycle-management.md). Men specifikt for hændelsesbaseret opbevaring skal du på siden **Definer opbevaringsindstillinger** , når du opretter opbevaringsmærkaten, efter **Start opbevaringsperioden baseret på** vælge en af standardhændelsestyperne på rullelisten eller oprette din egen ved at vælge **Opret ny hændelsestype**:
+Hvis du vil oprette og konfigurere din opbevaringsmærkat, skal du se instruktionerne for [Opret opbevaringsmærkater](file-plan-manager.md#create-retention-labels) til datastyring. Men specifik for hændelsesbaseret opbevaring:
 
-![Opret en ny hændelsestype for en opbevaringsmærkat.](../media/SPRetention6.png)
+- På siden **Definer etiketindstillinger** , når du opretter opbevaringsmærkaten, skal du sørge for at vælge **Bevar elementer for evigt eller for en bestemt periode**. Derefter:
+    
+    Når du har angivet tidsperioden på siden **Definer perioden** , skal du vælge en af standardhændelsestyperne på rullelisten for **Hvornår skal perioden begynde?**. Du kan også oprette din egen hændelsestype ved at vælge **Opret ny hændelsestype** og følge konfigurationsprompterne:
+    
+    ![Opret en ny hændelsestype for en opbevaringsmærkat.](../media/SPRetention6.png)
 
 En hændelsestype er blot en generel beskrivelse af en hændelse, som du vil knytte til en opbevaringsmærkat.
 
@@ -105,7 +108,7 @@ Hændelsesbaseret opbevaring kræver opbevaringsindstillinger, der:
     
 - Slet indholdet automatisk, eller udløs en dispositionsgennemgang i slutningen af opbevaringsperioden.
   
-Hændelsesbaseret opbevaring bruges typisk til indhold, der er defineret som en post, så dette er et godt tidspunkt til at kontrollere, om du også skal vælge den indstilling, der markerer indhold som en [post](records-management.md#records).
+Hændelsesbaseret opbevaring bruges typisk til indhold, der er defineret som en post, så det er nu et godt tidspunkt til at kontrollere, om du også skal vælge den indstilling, der markerer indhold som en [post](records-management.md#records).
 
 Hvis du bruger en eksisterende hændelsestype i stedet for at oprette en ny hændelsestype, skal du gå til trin 3.
 
@@ -116,7 +119,7 @@ Hvis du bruger en eksisterende hændelsestype i stedet for at oprette en ny hæn
 
 Hvis du har valgt **Opret ny hændelsestype** for opbevaringsindstillingerne, skal du angive et navn og en beskrivelse til hændelsestypen. Vælg derefter **Næste**, **Indsend** og **Udført**.
 
-Tilbage på siden **Definer opbevaringsindstillinger** for **Start den opbevaringsperiode**, der er baseret på, skal du bruge rullelisten til at vælge den hændelsestype, du har oprettet.
+Tilbage på siden **Definer periode** for **Hvornår skal perioden begynde?, skal** du bruge rullelisten til at vælge den hændelsestype, du har oprettet.
 
   
 ### <a name="step-3-publish-or-auto-apply-the-event-based-retention-labels"></a>Trin 3: Publicer eller anvend automatisk de hændelsesbaserede opbevaringsmærkater
@@ -145,7 +148,7 @@ Når der opstår en bestemt forekomst af den pågældende hændelsestype, f.eks.
 
 ![Opret en hændelse for at udløse start af opbevaring for hændelsesbaserede opbevaringsmærkater.](../media/create-event-records-management.png)
 
-Der understøttes op til en million hændelser pr. lejer.
+Op til 1.000.000 hændelser understøttes pr. lejer.
 
 ### <a name="step-6-choose-the-same-event-type-used-by-the-label-in-step-2"></a>Trin 6: Vælg den samme hændelsestype, der bruges af etiketten i trin 2
 
@@ -177,7 +180,7 @@ Sletning af en hændelse annullerer ikke de opbevaringsindstillinger, der nu er 
 
 ## <a name="use-content-search-to-find-all-content-with-a-specific-label-or-asset-id"></a>Brug indholdssøgning til at finde alt indhold med et bestemt navn eller aktiv-id
 
-Når opbevaringsmærkater er tildelt indhold, kan du bruge indholdssøgning til at finde alt indhold, der er klassificeret med en bestemt opbevaringsmærkat, eller som indeholder et bestemt aktiv-id:
+Når opbevaringsmærkater er tildelt indhold, kan du bruge indholdssøgning til at finde alt indhold, der har en bestemt opbevaringsmærkat, eller som indeholder et bestemt aktiv-id:
   
 - Hvis du vil finde alt indhold med en bestemt opbevaringsmærkat, skal du vælge betingelsen **Opbevaringsmærkat** og derefter angive det fulde navn eller en del af navnet og bruge et jokertegn. 
     

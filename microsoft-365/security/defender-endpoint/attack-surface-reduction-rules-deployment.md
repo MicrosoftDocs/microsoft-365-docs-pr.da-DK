@@ -17,15 +17,14 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 18654dfb1ae6ae10596889fb4491604a37b8ffe8
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 10ae1829f632492afdfd515d080b6be7c335b898
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017425"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601196"
 ---
 # <a name="attack-surface-reduction-asr-rules-deployment-overview"></a>Udrulningsoversigt til reduktion af angrebsoverflade (ASR)
 
@@ -58,9 +57,9 @@ Som beskrevet i [Brug regler for reduktion af angrebsoverfladen for at forhindre
 
 | Polymorfe trusler | Tværgående flytning & tyveri af legitimationsoplysninger | Regler for produktivitetsapps |  Mailregler | Scriptregler | Regler for diverse |
 |:---|:---|:---|:---|:---|:---|
-| Bloker eksekverbare filer fra at køre, medmindre de opfylder en prævalens (1000 maskiner), alder (24 timer) eller listekriterier, der er tillid til | Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI | Bloker Office apps fra oprettelse af eksekverbart indhold | Bloker eksekverbart indhold fra mailklient og webmail | Bloker sløret JS/VBS/PS/makrokode | Bloker misbrug af udnyttede sårbare underskrevne førere <sup>[[1](#fn1)]<sup></sup>  |
-| Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB | Bloker tyveri af legitimationsoplysninger fra delsystemet Windows lokale sikkerhedsmyndigheder (lsass.exe)<sup>[[2](#fn1)]<sup></sup>   | Bloker Office apps fra oprettelse af underordnede processer |  Bloker kun Office kommunikationsprogrammer fra oprettelse af underordnede processer | Bloker JS/VBS fra start af downloadet eksekverbart indhold | |
-| Brug avanceret beskyttelse mod ransomware | Bloker vedholdenhed via WMI-hændelsesabonnement | Bloker Office apps fra at indsætte kode i andre processer | Bloker Office kommunikationsapps fra oprettelse af underordnede processer | | |
+| Bloker eksekverbare filer fra at køre, medmindre de opfylder en prævalens (1000 maskiner), alder (24 timer) eller listekriterier, der er tillid til | Bloker procesoprettelser, der stammer fra kommandoerne PSExec og WMI | Bloker Office-apps fra oprettelse af eksekverbart indhold | Bloker eksekverbart indhold fra mailklient og webmail | Bloker sløret JS/VBS/PS/makrokode | Bloker misbrug af udnyttede sårbare underskrevne førere <sup>[[1](#fn1)]<sup></sup>  |
+| Bloker processer, der ikke er tillid til, og som ikke er signeret, og som kører fra USB | Bloker tyveri af legitimationsoplysninger fra det lokale windows-undersystem (lsass.exe)<sup>[[2](#fn1)]<sup></sup>   | Bloker Office-apps fra oprettelse af underordnede processer |  Bloker kun Office-kommunikationsprogrammer fra oprettelse af underordnede processer | Bloker JS/VBS fra start af downloadet eksekverbart indhold | |
+| Brug avanceret beskyttelse mod ransomware | Bloker vedholdenhed via WMI-hændelsesabonnement | Bloker Office-apps fra at indsætte kode i andre processer | Bloker Office-kommunikationsapps fra oprettelse af underordnede processer | | |
 | | | Bloker Adobe Reader fra at oprette underordnede processer | | | |
 
 (<a id="fn1">1</a>) _Bloker misbrug af udnyttede sårbare signerede drivere_ er i øjeblikket ikke tilgængelig i MEM Endpoint-sikkerhed. Du kan konfigurere denne regel ved hjælp af [MEM OMA-URI](enable-attack-surface-reduction.md#mem).
@@ -92,7 +91,7 @@ Microsoft Defender Antivirus skal være aktiveret og konfigureret som primær an
 Microsoft Defender Antivirus må ikke være i nogen af følgende tilstande:
 
 - Passiv
-- Passiv tilstand med slutpunktsregistrering og svar (Slutpunktsregistrering og -svar) i bloktilstand
+- Passiv tilstand med slutpunktsregistrering og svar (EDR) i bloktilstand
 - Begrænset periodisk scanning (LPS)
 - Ud
 
@@ -103,15 +102,15 @@ Se: [Skybaseret beskyttelse og Microsoft Defender Antivirus](cloud-protection-mi
 Microsoft Defender Antivirus fungerer problemfrit sammen med Microsofts cloudtjenester. Disse cloudbeskyttelsestjenester, også kaldet Microsoft Advanced Protection Service (MAPS), forbedrer standardbeskyttelse i realtid og giver muligvis det bedste antivirusforsvar. Cloudbeskyttelse er afgørende for at forhindre brud på malware og en vigtig komponent i ASR-regler.
 [Slå skybaseret beskyttelse til i Microsoft Defender Antivirus](enable-cloud-protection-microsoft-defender-antivirus.md).
 
-### <a name="microsoft-defender-antivirus-components-must-be-current-versions"></a>Microsoft Defender Antivirus komponenter skal være aktuelle versioner
+### <a name="microsoft-defender-antivirus-components-must-be-current-versions"></a>Microsoft Defender Antivirus-komponenter skal være aktuelle versioner
 
-Følgende Microsoft Defender Antivirus komponentversioner må ikke være mere end to versioner, der er ældre end den version, der er mest tilgængelig i øjeblikket:
+Følgende versioner af Microsoft Defender Antivirus-komponenten må ikke være mere end to versioner, der er ældre end den version, der er mest tilgængelig i øjeblikket:
 
-- **Microsoft Defender Antivirus platformsopdateringsversion** – Microsoft Defender Antivirus platform opdateres månedligt.
-- **Microsoft Defender Antivirus programversion** – Microsoft Defender Antivirus opdateres månedligt.
-- **Microsoft Defender Antivirus sikkerhedsintelligens** – Microsoft opdaterer løbende Microsoft Defender Security Intelligence (også kendt som, definition og signatur) for at håndtere de nyeste trusler og for at tilpasse registreringslogikken.
+- **Opdateringsversion af Microsoft Defender Antivirus Platform**  – Microsoft Defender Antivirus-platformen opdateres månedligt.
+- **Microsoft Defender Antivirus-programversion** – Microsoft Defender Antivirus-programmet opdateres månedligt.
+- **Microsoft Defender Antivirus security intelligence** – Microsoft opdaterer løbende Microsoft Defender Security Intelligence (også kendt som, definition og signatur) for at håndtere de nyeste trusler og for at tilpasse registreringslogikken.
 
-Hvis du bevarer Microsoft Defender Antivirus aktuelle versioner, hjælper det med at reducere asr-reglerne for falske positive resultater og forbedrer Microsoft Defender Antivirus registreringsfunktioner. Du kan finde flere oplysninger om de aktuelle versioner, og hvordan du opdaterer de forskellige Microsoft Defender Antivirus komponenter, [ved at besøge support til Microsoft Defender Antivirus platform](manage-updates-baselines-microsoft-defender-antivirus.md).
+Hvis microsoft Defender Antivirus-versioner bevares, hjælper det med at reducere asr-reglerne med falske positive resultater og forbedrer microsoft Defender Antivirus-registreringsfunktionerne. Du kan finde flere oplysninger om de aktuelle versioner, og hvordan du opdaterer de forskellige Microsoft Defender Antivirus-komponenter, ved at besøge [support til Microsoft Defender Antivirus-platformen](manage-updates-baselines-microsoft-defender-antivirus.md).
 
 ### <a name="caveat"></a>Advarsel
 
@@ -171,11 +170,11 @@ Som med enhver ny implementering i stor skala, der potentielt kan påvirke din l
 
 [Konfigurer og valider udeladelser baseret på filtypenavn, navn eller placering](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
 
-[understøttelse af Microsoft Defender Antivirus platform](manage-updates-baselines-microsoft-defender-antivirus.md)
+[Understøttelse af Microsoft Defender Antivirus-platform](manage-updates-baselines-microsoft-defender-antivirus.md)
 
 [Oversigt over lagerbeholdning i Microsoft 365 Apps Administration](/deployoffice/admincenter/inventory)
 
-[Opret en udrulningsplan for Windows](/windows/deployment/update/create-deployment-plan)
+[Opret en installationsplan til Windows](/windows/deployment/update/create-deployment-plan)
 
 [Brug rollebaseret adgangskontrol og områdekoder til distribueret it i Intune](/mem/intune/fundamentals/scope-tags)
 

@@ -1,5 +1,5 @@
 ---
-title: Operationalize ASR-regler (Attack Surface Reduction)
+title: Operationaliser regler for reduktion af angrebsoverflade
 description: Indeholder en vejledning i, hvordan du kan udføre udrulningen af regler for reduktion af angrebsoverfladen.
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 2c666a8b31308fb3cfb18a9a35211e49d886eab0
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: 708d929376c029ba5ce448c93fd6c455a78ebec8
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705379"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602872"
 ---
-# <a name="operationalize-attack-surface-reduction-asr-rules"></a>Operationalize ASR-regler (Attack Surface Reduction)
+# <a name="operationalize-attack-surface-reduction-asr-rules"></a>Operationaliser regler for reduktion af angrebsoverflade
 
 Når du har udrullet asr-regler (attack surface reduction), er det vigtigt, at du har processer på plads til at overvåge og reagere på ASR-relaterede aktiviteter.
 
@@ -46,7 +45,7 @@ Et af de mest magtfulde træk [ved Microsoft 365 Defender](https://security.micr
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="images/asr-defender365-advanced-hunting2.png" alt-text="Siden Avanceret jagt på portalen Microsoft 365 Defender" lightbox="images/asr-defender365-advanced-hunting2.png":::
 
-Avanceret jagt er et forespørgselsbaseret værktøj (Kusto Query Language), der giver dig mulighed for at udforske op til 30 dage af de hentede (rå) data, som Microsoft Defender ATP Endpoint Detection and Response (Slutpunktsregistrering og -svar) indsamler fra alle dine maskiner. Gennem avanceret jagt kan du proaktivt inspicere hændelser for at finde interessante indikatorer og enheder. Den fleksible adgang til data gør det muligt at jagte både kendte og potentielle trusler uden begrænsninger.
+Avanceret jagt er et forespørgselsbaseret værktøj (Kusto Query Language), som du kan bruge til at udforske op til 30 dage af de hentede (rå) data, som EDR (Microsoft Defender ATP Endpoint Detection and Response) indsamler fra alle dine maskiner. Gennem avanceret jagt kan du proaktivt inspicere hændelser for at finde interessante indikatorer og enheder. Den fleksible adgang til data gør det muligt at jagte både kendte og potentielle trusler uden begrænsninger.
 
 Gennem avanceret jagt er det muligt at udtrække oplysninger om ASR-regler, oprette rapporter og få detaljerede oplysninger om konteksten af en given ASR-regelrevision eller -blokhændelse.
 
@@ -81,12 +80,12 @@ Du kan finde flere oplysninger om jagtmuligheder under: [Afmystificerende regler
 
 ## <a name="topics-in-this-deployment-collection"></a>Emner i denne installationssamling
 
-[Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
+[Udrulningsoversigt til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md)
 
-[Planlæg installation af ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-plan.md)
+[Planlæg udrulning af reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment-plan.md)
 
-[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
+[Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md)
 
-[Aktivér ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-implement.md)
+[Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md)
 
-[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)
+[Henvisning til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md)

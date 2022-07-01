@@ -1,5 +1,5 @@
 ---
-title: Forskelle mellem modeller til dokumentforståelse og formularbehandling
+title: Forskelle mellem brugerdefinerede modeller i Microsoft SharePoint Syntex
 ms.author: chucked
 author: chuckedmonson
 manager: pamgreen
@@ -13,14 +13,14 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om vigtige forskelle mellem en model til dokumentforståelse og en formularbehandlingsmodel.
-ms.openlocfilehash: 49e3e2a0d63303b1c5cbdbfd941ba8aaa40594a7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 31f70983b90e758516f92081217010bb6a64acd4
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66491697"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603786"
 ---
-# <a name="differences-between-document-understanding-and-form-processing-models"></a>Forskelle mellem modeller til dokumentforståelse og formularbehandling 
+# <a name="differences-between-custom-models-in-microsoft-sharepoint-syntex"></a>Forskelle mellem brugerdefinerede modeller i Microsoft SharePoint Syntex 
 
 Indholdsforståelse i Microsoft SharePoint Syntex giver dig mulighed for at identificere og klassificere dokumenter, der uploades til SharePoint-dokumentbiblioteker, og derefter udtrække relevante oplysninger fra hver fil. Når filer f.eks. uploades til et SharePoint-dokumentbibliotek, klassificeres alle filer, der er identificeret som *indkøbsordrer* , som sådanne og vises derefter i en brugerdefineret dokumentbiblioteksvisning. Derudover kan du hente bestemte oplysninger fra hver fil (f.eks *. po-nummer* og *total*) og få dem vist som en kolonne i dokumentbibliotekets visning. 
 
@@ -78,7 +78,7 @@ Brug følgende tabel til at forstå, hvornår du skal bruge formularbehandling, 
 | Oprettelse af model | Model, der er oprettet i AI Builder med problemfri adgang fra SharePoint-dokumentbibliotek.| Model, der er oprettet i SharePoint på et nyt websted, indholdscenteret. |
 | Klassificeringstype| Settable classifier bruges til at give et fingerpeg til systemet om, hvilke data der skal udtrækkes.| Klassificering, der kan oplæres, med valgfrie udtrækninger ved hjælp af maskinundervisning til at tildele dokumentplacering for, hvilke data der skal udtrækkes.|
 | Steder | Oplært i et enkelt dokumentbibliotek.| Kan anvendes på flere biblioteker.|
-| Understøttede filtyper| Oplær på PDF-, JPG-, PNG-format, i alt 50 MB og 500 sider.| Oplær på 5-10 PDF-, Office- eller mailfiler, herunder negative eksempler.<br>Office-filer afkortes med 64.000 tegn. OCR-scannede filer er begrænset til 20 sider. Modeller til dokumentforståelse understøtter følgende filtyper: docx, eml, heic, heif, htm, html, jpeg, jpg, markdown, md, msg, pdf, png, ppt, pptx, rtf, tif, tiff, txt, xls og xlsx.|
+| Understøttede filtyper| Oplær på PDF-, JPG-, PNG-format, i alt 50 MB og 500 sider.| Oplær på 5-10 PDF-, Office- eller mailfiler, herunder negative eksempler.<br>Office-filer afkortes med 64.000 tegn. OCR-scannede filer er begrænset til 20 sider. Se [understøttede filtyper](document-understanding-overview.md#supported-file-types).|
 | Integrer med administrerede metadata | Nej | Ja, ved at udtrække enheder, der refererer til et konfigureret felt for administrerede metadata.|
 | Integration af funktioner til overholdelse af angivne standarder med Microsoft Purview Information Protection | Angiv publicerede opbevaringsmærkater.<br>Angiv følsomhedsmærkater kommer. | Angiv publicerede opbevaringsmærkater.<br>Angiv publicerede følsomhedsmærkater. |
 | Understøttede områder| Formularbehandling er afhængig af Power Platform. Du kan få oplysninger om global tilgængelighed for Power Platform og AI Builder under [Tilgængelighed af Power Platform](https://dynamics.microsoft.com/geographic-availability/). | Tilgængelig i alle områder.|

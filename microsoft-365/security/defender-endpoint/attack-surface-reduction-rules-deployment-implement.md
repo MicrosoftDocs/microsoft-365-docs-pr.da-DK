@@ -1,5 +1,5 @@
 ---
-title: Aktivér ASR-regler (Attack Surface Reduction)
+title: Aktiver regler for reduktion af angrebsoverflade
 description: Indeholder en vejledning i, hvordan du implementerer udrulningen af regler for reduktion af angrebsoverfladen.
 keywords: Installation af regler for reduktion af angrebsoverfladen, ASR-installation, aktivér asr-regler, konfigurer ASR, forebyggelsessystem for værtsindtrængen, beskyttelsesregler, regler for bekæmpelse af udnyttelse, anti-exploit, udnyttelsesregler, regler til forebyggelse af infektion, Microsoft Defender for Endpoint, konfigurer ASR-regler
 search.product: eADQiWindows 10XVcnh
@@ -17,17 +17,16 @@ ms.custom: asr
 ms.technology: mde
 ms.topic: article
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.date: 1/18/2022
-ms.openlocfilehash: 19e654c979428e25d1365cbab5b6f75b39adbdb3
-ms.sourcegitcommit: 5c9137f98e688ab23c144e75687399e390bb2601
+ms.openlocfilehash: c3c693a46c3c22749a4e8ff2d572cef56bc06d9b
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/07/2022
-ms.locfileid: "64705510"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603742"
 ---
-# <a name="enable-attack-surface-reduction-asr-rules"></a>Aktivér ASR-regler (Attack Surface Reduction)
+# <a name="enable-attack-surface-reduction-asr-rules"></a>Aktiver regler for reduktion af angrebsoverflade
 
 Implementering af ASR-regler (Attack Surface Reduction) flytter den første testring til en aktiveret, funktionel tilstand.
 
@@ -99,7 +98,7 @@ Se emnet [reference til regler for reduktion af angrebsoverfladen](attack-surfac
 
 2. I **Gruppepolitik Management Editor** skal du gå til **Computerkonfiguration** og klikke på **Administrative skabeloner**.
 
-3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **reduktion af angrebsoverfladen**.
+3. Udvid træet til **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack overfladereduktion**.
 
 4. Dobbeltklik på indstillingen **Udelad filer og stier fra regler for reduktion af angrebsoverfladen** , og angiv indstillingen til **Aktiveret**. Vælg **Vis** , og angiv hver fil eller mappe i kolonnen **Værdinavn** . Angiv **0** i kolonnen **Værdi** for hvert element.
 
@@ -131,12 +130,12 @@ Du kan tilpasse meddelelsen, når en regel udløses, og blokerer en app eller fi
 
 ## <a name="additional-topics-in-this-deployment-collection"></a>Yderligere emner i denne installationssamling
 
-[Oversigt over installation af asr-regler (Attack surface reduction)](attack-surface-reduction-rules-deployment.md)
+[Udrulningsoversigt til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md)
 
-[Planlæg installation af ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-plan.md)
+[Planlæg udrulning af reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment-plan.md)
 
-[Test asr-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-test.md)
+[Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md)
 
-[Operationalize ASR-regler (Attack Surface Reduction)](attack-surface-reduction-rules-deployment-operationalize.md)
+[Operationaliser regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-operationalize.md)
 
-[Reference til asr-regler (Attack surface reduction)](attack-surface-reduction-rules-reference.md)
+[Henvisning til regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-reference.md)

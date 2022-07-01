@@ -23,14 +23,16 @@ ms.custom:
 search.appverid: MET150
 description: Brug disse trin til at købe flere licenser eller reducere antallet af licenser til dit Abonnement på Microsoft 365 til virksomheder.
 ms.date: 06/06/2022
-ms.openlocfilehash: ad7f0b15218043757c1e0692603e74760e2c10ef
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 530a1058b9f6676d6a674041ef8fe69d6cfe77e7
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489664"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602364"
 ---
 # <a name="buy-or-remove-microsoft-365-licenses-for-a-subscription"></a>Køb eller fjern Microsoft 365-licenser til et abonnement
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
 Du kan købe flere licenser eller reducere antallet af licenser til dine abonnementer ved hjælp af følgende trin.
 
@@ -44,6 +46,8 @@ Du kan købe flere licenser eller reducere antallet af licenser til dine abonnem
 - Hvis du har købt din Microsoft 365 for business- eller Office 365 Enterprise-plan via en tredjepartspartner, skal du købe yderligere licenser via den pågældende partner.
 
 ## <a name="watch-buy-new-licenses"></a>Se: Køb nye licenser
+
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198206).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4KWvE]
 

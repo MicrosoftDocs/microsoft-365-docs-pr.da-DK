@@ -29,17 +29,19 @@ search.appverid:
 - BEA160
 - GEA150
 ms.assetid: 7a5d073b-7fae-4aa5-8f96-9ecd041aba9c
-description: Log på med din Microsoft 365 administratorkonto for at nulstille adgangskoder for brugere, når du har et abonnement på Microsoft 365 til virksomheder.
-ms.openlocfilehash: 4c2c4bc1409a49b0f0bb26217fd349348331e95b
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+description: Log på med din Microsoft 365-administratorkonto for at nulstille adgangskoder for brugere, når du har et Abonnement på Microsoft 365 til virksomheder.
+ms.openlocfilehash: c7d3d70e2c286fbf35c4d2ae2e3eb8b812fd7e31
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65620949"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601668"
 ---
 # <a name="reset-passwords-in-microsoft-365-for-business"></a>Nulstil adgangskoder i Microsoft 365 til virksomheder
 
-I denne artikel forklares det, hvordan du nulstiller adgangskoder til dig selv og dine brugere, når du har et abonnement på Microsoft 365 til virksomheder.
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
+
+I denne artikel forklares det, hvordan du nulstiller adgangskoder til dig selv og dine brugere, når du har et Abonnement på Microsoft 365 til virksomheder.
 
 > [!NOTE]
 > Du kan også konfigurere selvbetjent nulstilling af adgangskode for dine brugere, så de kan nulstille deres egne adgangskoder. Du kan få mere at vide under [Lad brugerne nulstille deres egne adgangskoder](let-users-reset-passwords.md).
@@ -49,22 +51,22 @@ I denne artikel forklares det, hvordan du nulstiller adgangskoder til dig selv o
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Denne artikel er til personer, der angiver en politik for udløb af adgangskode for en virksomhed, skole eller nonprofitorganisation. Hvis du vil fuldføre disse trin, skal du logge på med din Microsoft 365 administratorkonto. [Oversigt i Microsoft 365 Administration](../admin-overview/admin-center-overview.md).
+Denne artikel er til personer, der angiver en politik for udløb af adgangskode for en virksomhed, skole eller nonprofitorganisation. Hvis du vil fuldføre disse trin, skal du logge på med din Microsoft 365-administratorkonto. [Oversigt i Microsoft 365 Administration](../admin-overview/admin-center-overview.md).
 
 Du skal være [global administrator eller adgangskodeadministrator](about-admin-roles.md) for at kunne udføre disse trin.
 
 ## <a name="watch-reset-a-business-password-for-a-user"></a>Se: Nulstil en virksomhedsadgangskode for en bruger
 
-Se en kort video om nulstilling af brugeradgangskoder.<br><br>
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198204).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FVVP]
 
-1. Når en bruger anmoder om en ny adgangskode, modtager du en anmodning om nulstilling af adgangskode i en mail. Hvis du vil nulstille adgangskoden, skal du åbne appstarteren og vælge **Administrator**.
+1. Når en bruger anmoder om en ny adgangskode, modtager du en anmodning om nulstilling af adgangskode i en mail. Hvis du vil nulstille adgangskoden, skal du åbne appstarteren og vælge **Administration**.
 1. I Microsoft 365 Administration skal du vælge **Brugere**, <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">**Aktive brugere**</a> og derefter vælge nøgleikonet ud for den bruger, der anmodede om nulstillingen.
 1. Vælg **Opret automatisk adgangskode** for at få oprettet en vilkårlig adgangskode automatisk.
 1. Vælg **Nulstil**.
 
-Hvis du har fundet denne video nyttig, kan du se hele [træningsserien for små virksomheder og dem, der ikke er Microsoft 365](../../business-video/index.yml).
+Hvis du har fundet denne video nyttig, kan du se den [komplette træningsserie for små virksomheder og nye i Microsoft 365](../../business-video/index.yml).
   
 ## <a name="steps-reset-a-business-password-for-a-user"></a>Trin: Nulstil en virksomhedsadgangskode for en bruger
 
@@ -82,9 +84,9 @@ Det anbefales på det kraftigste, at du konfigurerer selvbetjent nulstilling af 
 
 ## <a name="reset-my-admin-password"></a>Nulstil min administratoradgangskode
 
-Brug disse trin, hvis du har glemt din adgangskode, men du kan logge på Microsoft 365, fordi din adgangskode f.eks. gemmes i browseren:
+Brug disse trin, hvis du har glemt din adgangskode, men du kan logge på Microsoft 365, fordi din adgangskode f.eks. gemmes i din browser:
 
-1. Vælg dit navn (ikon) i øverste højre hjørne > **Min** **kontoPersonlige** >  oplysninger.
+1. Vælg dit navn (ikon) i øverste højre hjørne >**Personlige oplysninger om** **Min konto** > .
 
 2. Under **Kontaktoplysninger** skal du dobbelttjekke, at din **alternative mail** er præcis, og at du har angivet et mobiltelefonnummer. Hvis ikke, skal du ændre dem nu.
 
@@ -103,7 +105,6 @@ Hvis du har glemt din adgangskode og ikke kan logge på:
 - Du kan [også ringe til Microsoft Support](../../business-video/get-help-support.md).
 
 ## <a name="reset-all-business-passwords-for-everyone-in-your-organization-at-the-same-time"></a>Nulstil alle virksomhedsadgangskoder for alle i organisationen på samme tid
-<a name="bkmk_forgot"> </a>
 
 Disse trin fungerer for en virksomhed med mange brugere. Hvis du har hundred- eller tusindvis af brugere, kan du se næste afsnit om nulstilling af adgangskoder samlet (højst 40 brugere ad gangen).
   
@@ -118,7 +119,6 @@ Disse trin fungerer for en virksomhed med mange brugere. Hvis du har hundred- el
 5. Angiv en mailadresse, hvor du kan modtage de midlertidige adgangskoder. Du skal give dine brugere besked om deres midlertidige adgangskoder.
   
 ## <a name="reset-business-passwords-in-bulk"></a>Nulstil virksomhedsadgangskoder samlet
-<a name="bkmk_forgot"> </a>
 
 Brug PowerShell! Se dette indlæg fra Eyal Doron: [Administration af adgangskoder med PowerShell](https://go.microsoft.com/fwlink/?linkid=853696).
   
@@ -130,7 +130,7 @@ Du kan få en oversigt under [Administrer Microsoft 365 med PowerShell](../../en
 
 Se dette fantastiske blogindlæg fra Vasil Michev, Microsoft MVP: [Force password change for all users in Office 365](https://go.microsoft.com/fwlink/?linkid=853693).
   
-## <a name="i-dont-have-a-microsoft-365-for-business-subscription"></a>Jeg har ikke et abonnement på Microsoft 365 til virksomheder
+## <a name="i-dont-have-a-microsoft-365-for-business-subscription"></a>Jeg har ikke et Abonnement på Microsoft 365 til virksomheder
 
 Prøv denne artikel: [Jeg har glemt brugernavnet eller adgangskoden til den konto, jeg bruger med Office.](https://support.microsoft.com/office/eba0b4a2-c0ae-472c-99f6-bc63ee2425a8?wt.mc_id=SCL_reset-passwords_AdmHlp)
   
@@ -140,4 +140,4 @@ Prøv denne artikel: [Jeg har glemt brugernavnet eller adgangskoden til den kont
 [Nulstil adgangskoder](../add-users/reset-passwords.md) (artikel)\
 [Angiv en individuel brugers adgangskode til aldrig at udløbe](set-password-to-never-expire.md) (artikel)\
 [Angiv politikken for udløb af adgangskode for din organisation](../manage/set-password-expiration-policy.md) (artikel)\
-[Microsoft 365 til træningsvideoer til virksomheder](../../business-video/index.yml) (linkside)
+[Microsoft 365 til virksomheder træningsvideoer](../../business-video/index.yml) (linkside)

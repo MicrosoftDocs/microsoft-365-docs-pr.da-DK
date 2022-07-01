@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 2f745c0f215f19b0d6e4f9fc06b39ba8234fd170
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: aa6255289ddffd7edb9025e36c69a49f4a3b855b
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554263"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603500"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Nyheder i Microsoft Defender for Endpoint på Linux
 
@@ -46,6 +46,7 @@ Denne artikel opdateres ofte for at fortælle dig, hvad der er nyt i de nyeste v
 
 **Nyheder**
 
+- Rettelse til understøttelse af definitionslager på ikke-standardplaceringer (uden for /var) for v2-definitionsopdateringer
 - Løste et problem i den produktsensor, der bruges på RHEL 6, og som kan medføre, at operativsystemet hænger
 - `mdatp connectivity test` blev udvidet med en ekstra URL-adresse, som produktet kræver for at fungere korrekt. Den nye URL-adresse er [https://go.microsoft.com/fwlink/?linkid=2144709](https://go.microsoft.com/fwlink/?linkid=2144709).
 - Indtil nu har niveauet for produktloggen ikke været vedvarende mellem genstart af produktet. Fra og med denne version er der en ny kommandolinjeværktøjsparameter, der fastholder logniveauet. Den nye kommando er `mdatp log level persist --level <level>`.

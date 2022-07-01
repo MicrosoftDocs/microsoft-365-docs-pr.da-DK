@@ -28,16 +28,18 @@ search.appverid:
 ms.assetid: 8f0454b2-f51a-4d9c-bcde-2c48e41621c6
 description: Få mere at vide om, hvordan du konfigurerer multifaktorgodkendelse for din organisation.
 monikerRange: o365-worldwide
-ms.openlocfilehash: 6879a49bf0868081fed6ad8171138ce7001783c4
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 00a92a7755c0200d0ad707e84ceb13fac7c978c9
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739909"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66603861"
 ---
-# <a name="set-up-multifactor-authentication-for-microsoft-365"></a>Konfigurer multifaktorgodkendelse for Microsoft 365
+# <a name="set-up-multifactor-authentication-for-microsoft-365"></a>Konfigurer multifaktorgodkendelse til Microsoft 365
 
-Multifaktorgodkendelse betyder, at du og dine medarbejdere skal angive mere end én måde at logge på Microsoft 365 er en af de nemmeste måder at sikre din virksomhed på. Baseret på din forståelse af [multifaktorgodkendelse (MFA) og dens understøttelse i Microsoft 365](multi-factor-authentication-microsoft-365.md) er det tid til at konfigurere den og udrulle den til din organisation. 
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
+
+Multifaktorgodkendelse betyder, at du og dine medarbejdere skal angive mere end én måde at logge på Microsoft 365 på er en af de nemmeste måder at sikre din virksomhed på. Baseret på din forståelse af [multifaktorgodkendelse (MFA) og dens understøttelse i Microsoft 365](multi-factor-authentication-microsoft-365.md) er det tid til at konfigurere den og udrulle den til din organisation. 
 
 > [!IMPORTANT]
 > Hvis du har købt dit abonnement eller din prøveversion efter den 21. oktober 2019, og du bliver bedt om at angive MFA, når du logger på, er [sikkerhedsstandarder](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) automatisk aktiveret for dit abonnement.
@@ -46,6 +48,8 @@ Multifaktorgodkendelse betyder, at du og dine medarbejdere skal angive mere end 
 > Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
 
 ## <a name="watch-turn-on-multifactor-authentication"></a>Se: Slå multifaktorgodkendelse til
+
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2197909).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE2MuO3?autoplay=false]
 
@@ -58,7 +62,7 @@ Multifaktorgodkendelse betyder, at du og dine medarbejdere skal angive mere end 
 
 - Du skal være global administrator for at administrere MFA. Du kan få mere at vide under [Om administratorroller](../add-users/about-admin-roles.md).
 - Hvis du har slået ældre MFA pr. bruger til, [skal du slå ældre MFA pr. bruger fra](#turn-off-legacy-per-user-mfa).
-- Hvis du har Office 2013-klienter på Windows enheder, [skal du aktivere moderne godkendelse for Office 2013-klienter](./enable-modern-authentication.md).
+- Hvis du har Office 2013-klienter på [Windows-enheder, skal du aktivere moderne godkendelse for Office 2013-klienter](./enable-modern-authentication.md).
 - Avanceret: Hvis du har katalogtjenester fra tredjepart med Active Directory Federation Services (AD FS), skal du konfigurere Azure MFA-serveren. Se [avancerede scenarier med Azure AD Multifactor-godkendelse og VPN-løsninger fra tredjepart](/azure/active-directory/authentication/howto-mfaserver-nps-vpn) for at få flere oplysninger.
 
 ### <a name="turn-off-legacy-per-user-mfa"></a>Deaktiver ældre MFA pr. bruger
@@ -79,7 +83,7 @@ Du aktiverer eller deaktiverer sikkerhedsstandarder i ruden **Egenskaber** for A
 
 1. Log på [Microsoft 365 Administration](https://admin.microsoft.com) med globale administratorlegitimationsoplysninger.
 2. Vælg **Vis alle** i venstre navigationsrude, og vælg **Azure Active Directory** under **Administration centre**.
-3. Vælg **Azure Active Directory** \> **Egenskaber** i **Azure Active Directory Administration**.
+3. Vælg **Azure Active Directory-egenskaber** \> i **Azure Active Directory Administration**.
 4. Nederst på siden skal du vælge **Administrer sikkerhedsstandarder**.
 5. Vælg **Ja** for at aktivere sikkerhedsstandarder eller **Nej** for at deaktivere sikkerhedsstandarder, og vælg derefter **Gem**.
 
@@ -87,7 +91,7 @@ Hvis du har brugt [grundlæggende politikker for betinget adgang](/azure/active-
 
 1. Gå til [siden Betinget adgang – Politikker](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies).
 2. Vælg hver grundlæggende politik, der er **Slået** til, og angiv **Aktivér politik** til **Fra**.
-3. Gå til [siden Azure Active Directory – egenskaber](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
+3. Gå til [siden Azure Active Directory – Egenskaber](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Properties).
 4. Nederst på siden skal du vælge **Administrer sikkerhedsstandarder**.
 5. Vælg **Ja** for at aktivere sikkerhedsstandarder og **Nej** for at deaktivere sikkerhedsstandarder, og vælg derefter **Gem**.
 
@@ -102,16 +106,14 @@ Betinget adgang er tilgængelig for kunder, der har købt Azure AD Premium P1, e
 
 Risikobaseret betinget adgang er tilgængelig via Azure AD Premium P2-licens eller licenser, der omfatter dette, f.eks. Microsoft 365 E5. Du kan få flere oplysninger under [Risikobaseret betinget adgang](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk).
 
-Du kan finde flere oplysninger om Azure AD P1 og P2 [under Azure Active Directory priser](https://azure.microsoft.com/pricing/details/active-directory/).
+Du kan finde flere oplysninger om Azure AD P1 og P2 under [Priser på Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ### <a name="turn-on-modern-authentication-for-your-organization"></a>Slå moderne godkendelse til for din organisation
 
-For de fleste abonnementer er moderne godkendelse automatisk slået til, men hvis du har købt dit abonnement før august 2017, er det sandsynligt, at du skal aktivere moderne godkendelse for at få funktioner som Multifactor Authentication til at fungere i Windows klienter som Outlook.
-
+For de fleste abonnementer er moderne godkendelse automatisk slået til, men hvis du har købt dit abonnement før august 2017, er det sandsynligt, at du skal aktivere moderne godkendelse for at få funktioner som Multifactor Authentication til at fungere i Windows-klienter som Outlook.
 
 1. Vælg **Indstillinger** \> **Organisationsindstillinger** i venstre navigationsrude i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.
 2. Under fanen **Tjenester** skal du vælge **Moderne godkendelse**, og i ruden **Moderne godkendelse** skal du sørge for **, at Aktivér moderne godkendelse** er valgt. Vælg **Gem ændringer**.
-
 
 ## <a name="next-steps"></a>Næste trin
 

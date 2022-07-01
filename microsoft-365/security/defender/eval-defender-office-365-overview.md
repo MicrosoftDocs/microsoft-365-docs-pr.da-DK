@@ -1,6 +1,6 @@
 ---
-title: Trin 3. Evaluer Microsoft Defender for Office 365 oversigt
-description: Brug denne oversigt til at få mere at vide om trinnene til konfiguration af et MDO-pilotprojekt, herunder krav, aktivering eller aktivering af eval og konfiguration af pilotprojektet.
+title: Trin 3. Oversigt over evaluer Microsoft Defender for Office 365
+description: Brug denne oversigt til at få mere at vide om, hvordan du konfigurerer et MDO-pilotprojekt, herunder krav, aktivering eller aktivering af evaluering og konfiguration af piloten.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,33 +18,32 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
-- m365solution-overview
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 6acfec658ee7c104ae58974390ba39da8bc171f9
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 51e441dbebd247e041768e02875e635c9dfa7098
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569881"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602464"
 ---
-# <a name="step-3-enable-and-pilot-microsoft-defender-for-office-365"></a>Trin 3. Aktivér og Microsoft Defender for Office 365
+# <a name="step-3-enable-and-pilot-microsoft-defender-for-office-365"></a>Trin 3. Aktivér og pilot Microsoft Defender for Office 365
 
 **Gælder for:**
 - Microsoft 365 Defender
 
-I denne artikel beskrives, hvordan du aktiverer og Microsoft Defender for Office 365. Før du starter denne proces, skal du sørge for, at du har gennemgået den overordnede [proces til evaluering af Microsoft 365 Defender](eval-overview.md), og at du har [oprettet Microsoft 365 Defender evalueringsmiljøet](eval-create-eval-environment.md). 
+I denne artikel beskrives processen til aktivering og pilot Microsoft Defender for Office 365. Før du starter denne proces, skal du sørge for, at du har gennemgået den overordnede proces til [evaluering af Microsoft 365 Defender](eval-overview.md), og du har [oprettet Microsoft 365 Defender evalueringsmiljø](eval-create-eval-environment.md). 
 <br>
 
-Brug følgende trin til at aktivere og prøve Microsoft Defender for Office 365.
+Brug følgende trin til at aktivere og styre Microsoft Defender for Office 365.
 
-:::image type="content" source="../../media/defender/m365-defender-office-eval-steps.png" alt-text="Trinnene til at føje Microsoft Defender for Office til Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-office-eval-steps.png":::
+:::image type="content" source="../../media/defender/m365-defender-office-eval-steps.png" alt-text="Trinnene til tilføjelse af Microsoft Defender til Office i Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-office-eval-steps.png":::
 
 I følgende tabel beskrives trinnene i illustrationen.
 
 | Trinnummer | Link  |Beskrivelse  |
 |---------|---------|---------|
-|1|[Gennemgå arkitekturkrav og nøglekoncepter](eval-defender-office-365-architecture.md)    | Forstå Defender til Office, og sørg for, at dit Exchange Online opfylder arkitekturens forudsætninger.       |
+|1|[Gennemse arkitekturkrav og nøglebegreber](eval-defender-office-365-architecture.md)    | Forstå Defender for Office-arkitekturen, og sørg for, at dit Exchange Online miljø opfylder forudsætningerne for arkitekturen.       |
 |2|[Aktivér evalueringsmiljøet](eval-defender-office-365-enable-eval.md)     |   Følg trinnene for at konfigurere evalueringsmiljøet.      |
-|3|[Konfigurer pilotprojektet ](eval-defender-office-365-pilot.md)    |    Opret pilotgrupper, konfigurer beskyttelse, og bliv fortrolig med de vigtigste funktioner og dashboards.     |
+|3|[Konfigurer piloten ](eval-defender-office-365-pilot.md)    |    Opret pilotgrupper, konfigurer beskyttelse, og bliv fortrolig med vigtige funktioner og dashboards.     |
 

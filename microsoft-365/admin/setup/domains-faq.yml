@@ -27,14 +27,14 @@ metadata:
   - GEA150
   ms.assetid: 1272bad0-4bd4-4796-8005-67d6fb3afc5a
   description: Få mere at vide om domæner (onmicrosoft-domæne og overførselsdomæne) ved at finde svar på dine spørgsmål i Ofte stillede spørgsmål.
-  ms.openlocfilehash: 1aad7ddab71528cd153a30e7c7e3d1c1073b700b
-  ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+  ms.openlocfilehash: e9cf6952abacfe73fcd171a15ee7edf1f19823f6
+  ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 06/29/2022
-  ms.locfileid: "66492529"
+  ms.lasthandoff: 07/01/2022
+  ms.locfileid: "66603434"
 title: Ofte stillede spørgsmål om domæner
-summary: "\n\nDenne artikel indeholder svar på ofte stillede spørgsmål om domæner i Microsoft 365.\n\nHvis du ikke kan finde et svar på dit spørgsmål, kan du fortælle os det ved at skrive en kommentar, så føjer vi det til listen.\n"
+summary: "\n\nDenne artikel indeholder svar på ofte stillede spørgsmål om domæner i Microsoft 365.\n\nSe [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.\n\nHvis du ikke kan finde et svar på dit spørgsmål, kan du fortælle os det ved at skrive en kommentar, så føjer vi det til listen.\n"
 sections:
 - name: Ignoreret
   questions:

@@ -1,5 +1,5 @@
 ---
-title: Sådan tilmelder du dig – Hjælp til administratorer
+title: Sådan tilmelder du dig – Administration Hjælp
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -29,40 +29,45 @@ search.appverid:
 ROBOTS: NOINDEX
 description: Forstå, hvad du har brug for at vide om de nyeste versioner af Office-programmerne, før du gennemgår tilmeldingsprocessen for Office 365.
 ms.date: 03/17/2021
-ms.openlocfilehash: 185931ba308ae547355cb21a2935bb6f9097c8b7
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 400c30fd1b6879097afe510f36582c46879c85a5
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636212"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601174"
 ---
-# <a name="how-to-sign-up---admin-help"></a>Sådan tilmelder du dig – Hjælp til administratorer
+# <a name="how-to-sign-up---admin-help"></a>Sådan tilmelder du dig – Administration Hjælp
 
-Tilmeld dig Microsoft 365 til virksomheder, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office programmer.
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
+
+Tilmeld dig Microsoft 365 til virksomheder, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office-programmer.
 
 ::: moniker range="o365-21vianet"
 
-Hvis du er i Kina, er Office 365, der drives af 21Vianet, designet til at opfylde behovene for sikre, pålidelige og skalerbare cloudtjenester i Kina. Denne tjeneste er drevet af teknologi, som Microsoft har givet licens til 21Vianet. Microsoft driver ikke selve tjenesten. 21Vianet driver, leverer og administrerer levering af tjenesten. 21Vianet er den største udbyder af mobilneutrale internetdatacentertjenester i Kina, der leverer hosting, administrerede netværkstjenester og cloudcomputinginfrastrukturtjenester. Ved at licensere Microsoft-teknologier driver 21Vianet lokale Microsoft-datacentre for at give dig mulighed for at bruge Microsoft-tjenester samtidig med, at dine data bevares i Kina. 21Vianet leverer også dit abonnement og faktureringstjenester samt support.
+Hvis du er i Kina, er Office 365, der drives af 21Vianet, designet til at opfylde behovene for sikre, pålidelige og skalerbare cloudtjenester i Kina. Denne tjeneste er drevet af teknologi, som Microsoft har givet licens til 21Vianet. Microsoft driver ikke selve tjenesten. 21Vianet driver, leverer og administrerer levering af tjenesten. 21Vianet er den største udbyder af mobilneutrale internetdatacentertjenester i Kina, der leverer hosting, administrerede netværkstjenester og cloudcomputinginfrastrukturtjenester. Ved at licensere Microsoft-teknologier driver 21Vianet lokale Microsoft-datacentre for at give dig mulighed for at bruge Microsoft-tjenester, samtidig med at dine data bevares i Kina. 21Vianet leverer også dit abonnement og faktureringstjenester samt support.
   
 > [!NOTE]
 > Disse tjenester er underlagt kinesisk lovgivning.
   
-Tilmeld dig Office 365, der drives af 21Vianet, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office programmer.
+Tilmeld dig Office 365, der drives af 21Vianet, så dit team kan begynde at bruge de nyeste versioner af Word, Excel, PowerPoint og andre Office-programmer.
   
 Er du klar til at tilmelde dig? [Vælg en plan](https://products.office.com/zh-cn/business/compare-office-365-for-business-plans).
   
 ::: moniker-end
 
 ::: moniker range="o365-worldwide"
+
 ## <a name="choose-a-plan"></a>Vælg en plan
 
 Før du køber, skal du overveje den plan, du tilmelder dig. Dette vil hjælpe med at forhindre voksende smerter senere.
 
 ## <a name="watch-choose-a-microsoft-365-subscription"></a>Se: Vælg et Microsoft 365-abonnement
 
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198032).
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/906be77d-ded6-48fb-a25f-da110f787282]
 
-Hvis du har fundet denne video nyttig, kan du se hele [træningsserien for små virksomheder og dem, der ikke er Microsoft 365](../../business-video/index.yml).
+Hvis du har fundet denne video nyttig, kan du se den [komplette træningsserie for små virksomheder og nye i Microsoft 365](../../business-video/index.yml).
 
 Har du brug for hjælp til at vælge en plan? Salgskonsulenter er tilgængelige til at besvare dine spørgsmål. Gå til [Sammenlign alle produkter](https://products.office.com/compare-all-microsoft-office-products?tab=2) , og vælg en af de kontaktsupportmuligheder, der er angivet i venstre side.
   
@@ -93,9 +98,9 @@ Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonn
   - **E-mail** og **telefonnummer** , så vi kan kontakte dig, hvis det er nødvendigt om dit abonnement. Hvis du f.eks. glemmer din adgangskode, vil vi bruge disse oplysninger til at sende dig en midlertidig. Vi sender også dine faktureringsoplysninger til den mailadresse, du angiver.
 
     > [!NOTE]
-    > Den mailadresse, du angiver her, er forskellig fra din Microsoft 365 mailadresse (dit logonnavn nedenfor). Da det er her, vi også sender dine faktureringsoplysninger, anbefaler vi, at du bruger en mailadresse, der er relevant for modtagelse af firmamail.
+    > Den mailadresse, du angiver her, er forskellig fra din Microsoft 365-mailadresse (dit logonnavn nedenfor). Da det er her, vi også sender dine faktureringsoplysninger, anbefaler vi, at du bruger en mailadresse, der er relevant for modtagelse af firmamail.
   
-- **Et logonnavn (bruger-id):** Dette bruger-id bliver din første Microsoft 365 mailadresse, bare for at komme hurtigt i gang.
+- **Et logonnavn (bruger-id):** Dette bruger-id bliver din indledende Microsoft 365-mailadresse, bare for at komme hurtigt i gang.
 
     Dette bruger-id er den mailadresse, du bruger til at logge på. Hvis dit virksomhedsnavn f.eks. er Fjerde kaffe, kan du vælge rob@fourthcoffee.onmicrosoft.com for dit bruger-id.
 
@@ -114,4 +119,4 @@ Du behøver ikke at annullere din prøveversion. Hvis du ikke køber prøveabonn
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft 365 til træningsvideoer til virksomheder](../../business-video/index.yml) (linkside)
+[Microsoft 365 til virksomheder træningsvideoer](../../business-video/index.yml) (linkside)

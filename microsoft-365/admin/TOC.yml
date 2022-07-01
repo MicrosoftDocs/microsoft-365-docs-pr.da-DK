@@ -4,7 +4,7 @@
     - name: De 20 mest populære artikler med hjælp til administratorer
       href: top-m365-admin-articles.yml
     - name: Videobibliotek til administratorkursus
-      href: admin-video-library.yml
+      href: 'https://go.microsoft.com/fwlink/?linkid=2197659'
     - name: Kom i gang
       items:
         - name: Tilmeld dig

@@ -15,16 +15,15 @@ manager: dansimp
 ms.technology: mde
 ms.topic: how-to
 ms.collection:
-- m365solution-scenario
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
 ms.date: 1/18/2022
-ms.openlocfilehash: 31af082f66836ecfbe6a7cd804fd3b7bba2ed4bd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 90244050b9fd8e5714ba28f7ac9850091d368da7
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012378"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601218"
 ---
 # <a name="enable-attack-surface-reduction-rules"></a>Aktivér regler for reduktion af angrebsoverflade
 
@@ -44,7 +43,7 @@ ms.locfileid: "66012378"
 
 ## <a name="requirements"></a>Krav
 
-Reduktion af angrebsoverfladen på tværs af Windows versioner
+Funktioner til reduktion af angrebsoverflade på tværs af Windows-versioner
 
 Du kan angive regler for reduktion af angrebsoverfladen for enheder, der kører en af følgende versioner af Windows:
 
@@ -64,7 +63,7 @@ Hvis du vil bruge hele funktionssættet med regler for reduktion af angrebsoverf
 - [Cloud-Delivery Protection](/windows/security/threat-protection/microsoft-defender-antivirus/enable-cloud-protection-microsoft-defender-antivirus) på (nogle regler kræver det)
 - Windows 10 Enterprise E5- eller E3-licens
 
-Selvom regler for reduktion af angrebsoverfladen ikke kræver en [Windows E5-licens](/windows/deployment/deploy-enterprise-licenses) med en Windows E5-licens, får du avancerede administrationsfunktioner, herunder overvågning, analyse og arbejdsprocesser, der er tilgængelige i Defender for Endpoint samt rapporterings- og konfigurationsfunktioner i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalen</a>. Disse avancerede funktioner er ikke tilgængelige med en E3-licens, men du kan stadig bruge Logbog til at gennemse hændelser for regler for reduktion af angrebsoverfladen.
+Selvom regler for reduktion af angrebsoverfladen ikke kræver en [Windows E5-licens](/windows/deployment/deploy-enterprise-licenses) med en Windows E5-licens, får du avancerede administrationsfunktioner, herunder overvågning, analyser og arbejdsprocesser, der er tilgængelige i Defender for Endpoint, samt rapporterings- og konfigurationsegenskaber i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portalen</a>. Disse avancerede funktioner er ikke tilgængelige med en E3-licens, men du kan stadig bruge Logbog til at gennemse hændelser for regler for reduktion af angrebsoverfladen.
 
 Hver ASR-regel indeholder en af fire indstillinger:
 
@@ -73,10 +72,10 @@ Hver ASR-regel indeholder en af fire indstillinger:
 - **Overvågning**: Evaluer, hvordan ASR-reglen vil påvirke din organisation, hvis den er aktiveret
 - **Advarsel**! Aktivér ASR-reglen, men tillad, at slutbrugeren tilsidesætter blokken
 
-Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende licens-SKU) for at drage fordel af de avancerede overvågnings- og rapporteringsfunktioner, der er tilgængelige i [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender for Endpoint). Men hvis du har en anden licens, f.eks. Windows Professional eller Windows E3, der ikke indeholder avancerede overvågnings- og rapporteringsfunktioner, kan du udvikle dine egne overvågnings- og rapporteringsværktøjer oven på de hændelser, der genereres på hvert slutpunkt, når ASR-regler udløses (f.eks. Videresending af hændelse).
+Vi anbefaler, at du bruger ASR-regler med en Windows E5-licens (eller lignende licens-SKU) til at drage fordel af de avancerede overvågnings- og rapporteringsfunktioner, der er tilgængelige i [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md) (Defender for Endpoint). Men hvis du har en anden licens, f.eks. Windows Professional eller Windows E3, der ikke omfatter avancerede overvågnings- og rapporteringsfunktioner, kan du udvikle dine egne overvågnings- og rapporteringsværktøjer oven på de hændelser, der genereres på hvert slutpunkt, når ASR-regler udløses (f.eks. Videresending af hændelse).
 
 > [!TIP]
-> Hvis du vil vide mere om Windows licenser, [skal du se Windows 10 Licenser](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) og få [vejledningen til volumenlicensering for at få Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
+> Hvis du vil vide mere om Windows-licenser, [skal du se Windows 10 Licenser](https://www.microsoft.com/licensing/product-licensing/windows10?activetab=windows10-pivot:primaryr5) og få [vejledningen til volumenlicens til Windows 10](https://download.microsoft.com/download/2/D/1/2D14FE17-66C2-4D4C-AF73-E122930B60F6/Windows-10-Volume-Licensing-Guide.pdf).
 
 Du kan aktivere regler for reduktion af angrebsoverfladen ved hjælp af en af disse metoder:
 
@@ -108,7 +107,7 @@ ASR-regler understøtter miljøvariabler og jokertegn. Du kan få oplysninger om
 
 2. Regler for reduktion af angrebsoverfladen for MEM-administrerede enheder understøtter nu funktionsmåde for sammenlægning af indstillinger fra forskellige politikker for at oprette en overordnet politik for hver enhed. Det er kun de indstillinger, der ikke er i konflikt, der flettes, mens de indstillinger, der er i konflikt, ikke føjes til undersættet af regler. Tidligere hvis to politikker indeholdt konflikter for en enkelt indstilling, var begge politikker markeret som værende i konflikt, og ingen indstillinger fra nogen af profilerne ville blive installeret. Funktionsmåden for fletning af regler for reduktion af angrebsoverfladen er som følger:
    - Regler for reduktion af angrebsoverfladen fra følgende profiler evalueres for hver enhed, som reglerne gælder for:
-     - Enheder > konfigurationspolitik > profil til beskyttelse af slutpunkter > **Microsoft Defender Exploit Guard** >  [Nedskæring af surface](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).
+     - Enheder > konfigurationspolitik > profil til beskyttelse af slutpunkter > **Microsoft Defender Exploit Guard** > [Attack Surface Reduction](/mem/intune/protect/endpoint-protection-windows-10#attack-surface-reduction-rules).
      - Slutpunktsikkerhed > Regler  >  for **reduktion af angrebsoverfladen** Regler for [reduktion af angrebsoverflade](/mem/intune/protect/endpoint-security-asr-policy#devices-managed-by-intune).
      - Slutpunktssikkerhed > Grundlæggende sikkerhedslinjer > **Microsoft Defender ATP Baseline** > [Attack Surface Reduction Rules](/mem/intune/protect/security-baseline-settings-defender-atp#attack-surface-reduction-rules).
    - Indstillinger, der ikke har konflikter, føjes til en delmængde af politikken for enheden.
@@ -156,9 +155,9 @@ Følgende procedurer for aktivering af ASR-regler omfatter instruktioner til, hv
 
 ### <a name="mem"></a>MEM
 
-Du kan bruge MICROSOFT ENDPOINT MANAGER (MEM) OMA-URI til at konfigurere brugerdefinerede ASR-regler. I følgende procedure bruges reglen [Bloker misbrug af udnyttede sårbare signerede drivere](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) i eksemplet.
+Du kan bruge MICROSOFT Endpoint Manager (MEM) OMA-URI til at konfigurere brugerdefinerede ASR-regler. I følgende procedure bruges reglen [Bloker misbrug af udnyttede sårbare signerede drivere](attack-surface-reduction-rules-reference.md#block-abuse-of-exploited-vulnerable-signed-drivers) i eksemplet.
 
-1. Åbn MEM Administration (Microsoft Endpoint Manager). Klik på **Enheder** i menuen **Start**, vælg **Konfigurationsprofiler**, og klik derefter på **Opret profil**.
+1. Åbn Microsoft Endpoint Manager (MEM) Administration. Klik på **Enheder** i menuen **Start**, vælg **Konfigurationsprofiler**, og klik derefter på **Opret profil**.
 
    > [!div class="mx-imgBorder"]
    >  :::image type="content" source="images/mem01-create-profile.png" alt-text="Siden Opret profil på Microsoft Endpoint Manager Administrationsportal" lightbox="images/mem01-create-profile.png":::
@@ -172,19 +171,19 @@ Du kan bruge MICROSOFT ENDPOINT MANAGER (MEM) OMA-URI til at konfigurere brugerd
    Vælg **Brugerdefineret**, og vælg derefter **Opret**.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem02-profile-attributes.png" alt-text="Attributterne for regelprofilen på Microsoft Endpoint Manager Administrationsportal" lightbox="images/mem02-profile-attributes.png":::
+   > :::image type="content" source="images/mem02-profile-attributes.png" alt-text="Attributterne for regelprofilen på Microsoft Endpoint Manager Administration-portalen" lightbox="images/mem02-profile-attributes.png":::
 
 3. Værktøjet Brugerdefineret skabelon åbnes i trin **1 Grundlæggende**. Skriv et navn til skabelonen i **Navn** i **1 Grundlæggende**, og i **Beskrivelse** kan du skrive en beskrivelse (valgfrit).
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem03-1-basics.png" alt-text="De grundlæggende attributter i Microsoft Endpoint Manager Administrationsportal" lightbox="images/mem03-1-basics.png":::
+   > :::image type="content" source="images/mem03-1-basics.png" alt-text="De grundlæggende attributter i Microsoft Endpoint Manager Administration-portalen" lightbox="images/mem03-1-basics.png":::
 
-4. Klik på **Næste**. Trin **2 Konfigurationsindstillinger** åbnes. Klik på **Tilføj** for OMA-URI-Indstillinger. Der vises nu to indstillinger: **Tilføj** og **eksportér**.
+4. Klik på **Næste**. Trin **2 Konfigurationsindstillinger** åbnes. Klik på **Tilføj** for OMA-URI-indstillinger. Der vises nu to indstillinger: **Tilføj** og **eksportér**.
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem04-2-configuration-settings.png" alt-text="Konfigurationsindstillingerne på Microsoft Endpoint Manager Administrationsportal" lightbox="images/mem04-2-configuration-settings.png":::
+   > :::image type="content" source="images/mem04-2-configuration-settings.png" alt-text="Konfigurationsindstillingerne i Microsoft Endpoint Manager Administration-portalen" lightbox="images/mem04-2-configuration-settings.png":::
 
-5. Klik på **Tilføj** igen. Indstillinger **Add Row OMA-URI** åbnes. Gør følgende i **Tilføj række**:
+5. Klik på **Tilføj** igen. **Indstillingerne for Tilføj række OMA-URI** åbnes. Gør følgende i **Tilføj række**:
 
    - Skriv et navn til reglen i **Navn**.
    - Angiv en kort beskrivelse i **Beskrivelse**.
@@ -212,7 +211,7 @@ Du kan bruge MICROSOFT ENDPOINT MANAGER (MEM) OMA-URI til at konfigurere brugerd
    - **Tilføj alle enheder**
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem06-4-assignments.png" alt-text="Tildelingerne på portalen Microsoft Endpoint Manager Administration" lightbox="images/mem06-4-assignments.png":::
+   > :::image type="content" source="images/mem06-4-assignments.png" alt-text="Tildelingerne i Microsoft Endpoint Manager Administration-portalen" lightbox="images/mem06-4-assignments.png":::
 
 8. I **Udeladte grupper** skal du vælge de grupper, du vil udelade fra denne regel, og derefter vælge **Næste**.
 
@@ -223,7 +222,7 @@ Du kan bruge MICROSOFT ENDPOINT MANAGER (MEM) OMA-URI til at konfigurere brugerd
    - Angiv den relevante værdi eller det relevante værdiinterval i **Værdi**
 
    > [!div class="mx-imgBorder"]
-   > :::image type="content" source="images/mem07-5-applicability-rules.png" alt-text="Anvendelighedsreglerne på portalen Microsoft Endpoint Manager Administration" lightbox="images/mem07-5-applicability-rules.png":::
+   > :::image type="content" source="images/mem07-5-applicability-rules.png" alt-text="Anvendelighedsreglerne på Microsoft Endpoint Manager Administrationsportal" lightbox="images/mem07-5-applicability-rules.png":::
 
 10. Vælg **Næste**. Gennemse **+ opret** i trin 6, gennemse de indstillinger og oplysninger, du har valgt og angivet, og vælg derefter **Opret**.
 
@@ -291,7 +290,7 @@ Eksempel:
 
 2. I **editoren til Gruppepolitik administration** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-3. Udvid træet for at **Windows komponenter** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **reduktion af angrebsoverfladen**.
+3. Udvid træet til **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **Microsoft Defender Exploit Guard** \> **Attack overfladereduktion**.
 
 4. Vælg **Konfigurer regler for reduktion af angrebsoverfladen** , og vælg **Aktiveret**. Du kan derefter angive den individuelle tilstand for hver regel i indstillingsafsnittet. Vælg **Vis...** og angiv regel-id'et i kolonnen **Værdinavn** og din valgte tilstand i kolonnen **Værdi** på følgende måde:
 

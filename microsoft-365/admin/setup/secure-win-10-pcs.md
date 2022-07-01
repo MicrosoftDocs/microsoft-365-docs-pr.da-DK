@@ -25,14 +25,16 @@ search.appverid:
 - BCS160
 - MET150
 description: Få mere at vide om, hvordan du sikrer Windows 10 pc'er, når du har konfigureret Microsoft 365 Business Premium.
-ms.openlocfilehash: 872fce9124f6a27dd884ed9d740baa9d195d8f95
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: a1a7743605992899ed2cfcbb0089e971716d5a13
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663442"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602386"
 ---
 # <a name="secure-windows-10-computers"></a>Beskyt Windows 10-computere
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
 Denne artikel gælder for Microsoft 365 Business Premium.
 
@@ -40,17 +42,19 @@ Når du har [konfigureret](/microsoft-365/business-premium/m365bp-setup) Microso
 
 ## <a name="watch-secure-your-windows-10-pcs"></a>Se med: Beskyt dine Windows 10 pc'er
 
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198200).
+
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4kcAF?autoplay=false]
 
 Når du har konfigureret enhedsbeskyttelse i Microsoft 365 Business, skal du følge disse trin for at beskytte dine Windows 10 computere.
 
 1. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2171997" target="_blank">**Installation**</a> i Microsoft 365 Administration.
 
-2. Under **Beskyt dine Windows computere** skal du vælge **Vis**.
+2. Under  **Beskyt dine Windows-computere** skal du vælge  **Vis**.
 
 3. Vælg  **Kom i gang**.
 
-4. Under **Who skal politikken gælde for?**, skal du vælge, om dine valg skal anvendes på alle i organisationen eller på bestemte sikkerhedsgrupper.
+4. Under **Hvem skal politikken gælde for?** skal du vælge, om dine valg skal anvendes på alle i organisationen eller på bestemte sikkerhedsgrupper.
 
 5. Vælg  **Gem ændringer**.
 

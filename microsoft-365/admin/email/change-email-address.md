@@ -27,20 +27,22 @@ search.appverid:
 - GEA150
 ms.assetid: f4d8cae9-6d06-4c4b-b4e5-6581fd05ea82
 description: Skift din mailadresse til en brugervenlig mailadresse som tom@fourthcoffee.com ved at købe et domænenavn og føje den til Microsoft 365.
-ms.openlocfilehash: a71e92b48e7091ae243b62ec594cd2be5ce52406
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 2c6085ee9c951b9afb3d44460bfd613b63375986
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437277"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602420"
 ---
-# <a name="change-your-microsoft-365-email-address-to-use-your-custom-domain"></a>Skift din Microsoft 365 mailadresse, så den bruger dit brugerdefinerede domæne
+# <a name="change-your-microsoft-365-email-address-to-use-your-custom-domain"></a>Skift din Microsoft 365-mailadresse til at bruge dit brugerdefinerede domæne
+
+Se [Hjælp til små virksomheder i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
  **[Se ofte stillede spørgsmål om domæner](../setup/domains-faq.yml)** , hvis du ikke kan finde det, du leder efter. 
   
 ::: moniker range="o365-worldwide"
 
-Din oprindelige mailadresse i Microsoft 365 omfatter .onmicrosoft.com, f.eks. tom@fourthcoffee.onmicrosoft.com. Du kan ændre den til en mere brugervenlig adresse, f.eks. tom@fourthcoffee.com. Du skal bruge dit eget domænenavn, f.eks. fourthcoffee.com først. Hvis du allerede har en, fantastisk! Hvis ikke, kan du få mere at vide om, hvordan du [køber en fra en domæneregistrator](../get-help-with-domains/buy-a-domain-name.md).
+Din oprindelige mailadresse i Microsoft 365 indeholder .onmicrosoft.com, f.eks. tom@fourthcoffee.onmicrosoft.com. Du kan ændre den til en mere brugervenlig adresse, f.eks. tom@fourthcoffee.com. Du skal bruge dit eget domænenavn, f.eks. fourthcoffee.com først. Hvis du allerede har en, fantastisk! Hvis ikke, kan du få mere at vide om, hvordan du [køber en fra en domæneregistrator](../get-help-with-domains/buy-a-domain-name.md).
 
 ::: moniker-end
 
@@ -50,9 +52,11 @@ Din oprindelige mailadresse i Office 365, der drives af 21Vianet, omfatter partn
 
 ::: moniker-end
 
-Når du ændrer dit domænes mail, så den kommer til Microsoft 365, ved at opdatere dit domænes MX-post under konfigurationen, begynder ALLE mails, der sendes til domænet, at komme til Microsoft 365. Sørg for, at du har tilføjet brugere og oprettet postkasser i Microsoft 365 for alle, der har mail på dit domæne, FØR du ændrer MX-posten. Vil du ikke flytte mail for alle på dit domæne for at Microsoft 365? Du kan tage skridt til at [styre Microsoft 365 med blot nogle få mailadresser i stedet](../misc/pilot-microsoft-365-from-my-custom-domain.md).
+Når du ændrer dit domænes mail, så den kommer til Microsoft 365, ved at opdatere dit domænes MX-post under konfigurationen, kommer ALLE mails, der sendes til domænet, til Microsoft 365. Sørg for, at du har tilføjet brugere og oprettet postkasser i Microsoft 365 for alle, der har mail på dit domæne, FØR du ændrer MX-posten. Vil du ikke flytte mail for alle på dit domæne til Microsoft 365? Du kan tage skridt til at [styre Microsoft 365 med blot nogle få mailadresser i stedet](../misc/pilot-microsoft-365-from-my-custom-domain.md).
   
 ## <a name="set-up-business-email-with-a-new-domain"></a>Konfigurer firmamail med et nyt domæne
+
+Se denne video og andre på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198215).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWyVVA?autoplay=false]
 
@@ -88,18 +92,18 @@ Du skal være global administrator for at kunne udføre disse trin.
 
 ::: moniker-end
 
-2. Gå til siden **SetupDomains** > .
+2. Gå til siden **Installationsdomæner** > .
 
 3. På siden **Domæner** skal du vælge **Tilføj domæne**.
 
-4. Følg trinnene for at bekræfte, at du ejer dit domæne. Du bliver guidet til at få alt konfigureret korrekt med dit domæne i Microsoft 365.
+4. Følg trinnene for at bekræfte, at du ejer dit domæne. Du får hjælp til at få alt konfigureret korrekt med dit domæne i Microsoft 365.
 
-5. Gå til **BrugereAktive** >  brugere.
+5. Gå til **Brugere** > **Aktive brugere**.
 
 6. Vælg en bruger for at redigere brugerens brugernavn og ændre det til det domæne, du lige har tilføjet.
 
 > [!NOTE]
-> Hvis du ikke bruger en Exchange licens, kan du ikke bruge domænet til at sende eller modtage mails fra den Microsoft 365 lejer.
+> Hvis du ikke bruger en Exchange-licens, kan du ikke bruge domænet til at sende eller modtage mails fra Microsoft 365-lejeren.
   
 ## <a name="related-content"></a>Relateret indhold
 
