@@ -241,6 +241,28 @@
               href: get-help-with-domains/change-nameservers-at-any-domain-registrar.md
             - name: Opret DNS-poster hos en hvilken som helst DNS-vært
               href: get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md
+            - name: Forbind dine DNS-poster på IONOS by 1&1
+              href: dns/create-dns-records-at-1-1-internet.md
+            - name: Forbind dine DNS-poster på 123-reg.co.uk
+              href: dns/create-dns-records-at-123-reg-co-uk.md
+            - name: Forbind dine DNS-poster på AWS (Amazon Web Services)
+              href: dns/create-dns-records-at-aws.md
+            - name: Forbind dine DNS-poster på Cloudflare
+              href: dns/create-dns-records-at-cloudflare.md
+            - name: Forbind dine DNS-poster på GoDaddy
+              href: dns/create-dns-records-at-godaddy.md
+            - name: Forbind dine DNS-poster på Namecheap
+              href: dns/create-dns-records-at-namecheap.md
+            - name: Forbind dine DNS-poster på Network Solutions
+              href: dns/create-dns-records-at-network-solutions.md
+            - name: Forbind dine DNS-poster på OVH
+              href: dns/create-dns-records-at-ovh.md
+            - name: Forbind dine DNS-poster på web.com
+              href: dns/create-dns-records-at-web-com.md
+            - name: Forbind dine DNS-poster på Wix
+              href: dns/create-dns-records-at-wix.md
+            - name: Forbind dine DNS-poster til Microsoft ved hjælp af Windows-baseret DNS
+              href: dns/create-dns-records-using-windows-based-dns.md
         - name: Fejlfinding af domæneproblemer
           href: get-help-with-domains/find-and-fix-issues.md
     - name: Administrer dine data og tjenester
