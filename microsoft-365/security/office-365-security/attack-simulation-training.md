@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de simulerer phishingangreb og oplærer deres brugere i forebyggelse af phishing ved hjælp af oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 8f6ef692885277368c7ca1c194116a4455f52b31
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: c1489c2653adbfa05958ca61240a97d837a9dc93
+ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839749"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66609325"
 ---
 # <a name="simulate-a-phishing-attack-with-attack-simulation-training-in-defender-for-office-365"></a>Simuler et phishing-angreb med oplæring i simulering af angreb i Defender for Office 365
 
@@ -70,39 +70,38 @@ Konfigurer følgende indstillinger på siden **Navnesimulering** :
 
 Klik på **Næste**, når du er færdig.
 
-## <a name="select-a-payload"></a>Vælg en nyttedata
+## <a name="select-a-payload-and-login-page"></a>Vælg en nyttedata- og logonside
 
-På siden **Vælg nyttedata** skal du vælge en eksisterende nyttedata på listen eller oprette en ny nyttedata.
+På siden **Vælg nyttedata og logon** skal du vælge en eksisterende nyttedata på listen eller oprette en ny nyttedata.
 
-Følgende oplysninger vises på listen over nyttedata, som du kan bruge til at vælge:
+Du kan også få vist den logonside, der bruges i nyttedataene, vælge en anden logonside, du vil bruge, eller oprette en ny logonside, du vil bruge.
+
+### <a name="payload"></a>Nyttelast
+
+Følgende oplysninger vises for hver nyttedata:
 
 - **Navn på nyttedata**
 - **Sprog**: Sproget for nyttedataindholdet. Microsofts payload-katalog (global) leverer nyttedata på mere end 10 sprog, som også kan filtreres.
 - **Klikfrekvens**: Hvor mange personer der har klikket på denne nyttedata.
-- **Forudsagt kompromisrate**: Historiske data for nyttedataene på tværs af Microsoft 365, der forudsiger procentdelen af personer, der kompromitteres af denne nyttedata.
+- **Forudsagt kompromisrate**: Historiske data for nyttedataene på tværs af Microsoft 365, der forudsiger procentdelen af personer, der bliver kompromitteret af denne nyttedata.
 - **De startede simuleringer** tæller antallet af gange, denne nyttedata blev brugt i andre simuleringer.
 
 På ikonet ![Søg.](../../media/m365-cc-sc-search-icon.png) **I søgefeltet** kan du skrive en del af navnet på nyttedata og trykke på Enter for at filtrere resultaterne.
 
 Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 
-- **Kilde**: Angiver, om nyttedataene blev oprettet i din organisation eller er en del af Microsofts eksisterende nyttedatakatalog. Gyldige værdier er:
-  - **Global** (indbygget)
-  - **Lejer** (brugerdefineret)
-  - **Alle**
-
 - **Kompleksitet**: Beregnet på baggrund af antallet af indikatorer i nyttedataene, der angiver et muligt angreb (stavefejl, uopsættelighed osv.). Flere indikatorer er nemmere at identificere som et angreb og angive lavere kompleksitet. De tilgængelige værdier er:
-  - **Lav**
-  - **Medium**
   - **Høj**
+  - **Medium**
+  - **Lav**
 
-- **Sprog**: De tilgængelige værdier er: **kinesisk (forenklet),****kinesisk (traditionelt),****engelsk**, **fransk**, **tysk**, **italiensk**, **japansk**, **koreansk**, **portugisisk**, **russisk**, **spansk** og **hollandsk**.
+- **Sprog**: De tilgængelige værdier er: **engelsk**, **spansk**, **tysk**, **japansk**, **fransk**, **portugisisk**, **hollandsk**, **italiensk**, **svensk**, **kinesisk (forenklet)**, **norsk bokmål**, **polsk**, **russisk**, **finsk**, **koreansk**, **tyrkisk**, **ungarsk**, **hebraisk**, **thai**, **arabisk**, **vietnamesisk**, **slovakisk**, **græsk**, **indonesisk**, **rumænsk**, **slovensk**, **kroatisk**, **catalansk** eller **andet**.
 
 - **Tilføj kode(r)**
 
 - **Filtrer efter tema**: De tilgængelige værdier er: **Kontoaktivering**, **Kontobekræftelse**, **Fakturering**, **Ryd op i mail**, **Modtaget dokument**, **Udgift**, **Fax**, **Økonomirapport**, **Indgående meddelelser**, **Faktura**, **Modtagne elementer**, **Logonbesked**, **Post modtaget**, **Adgangskode**, **Betaling**, **Løn**, **Personligt tilbud**, **Karantæne**, **Fjernarbejde**, **Gennemse meddelelse**, **Sikkerhedsopdatering**, **Afbrudt tjeneste**, **Signatur påkrævet**, **Lager til opgradering af postkasse Bekræft postkasse**, **Voicemail** og **Andet**.
 
-- **Filtrer efter brand**: De tilgængelige værdier er: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** og **Andet**.
+- **Filtrer efter brand**: De tilgængelige værdier er: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** og **Other**.
 
 - **Filtrer efter branche**: De tilgængelige værdier er: **Banking**, **Business services**, **Consumer services**, **Education**, **Energy**, **Construction**, **Consulting**, **Financial services**, **Government**, **Hospitality**, **Insurance**, **Legal**, **Courier services**, **IT**, **Healthcare**, **Manufacturing**, **Retail**, **Telecom**, **Real estate**, og **Andet**.
 
@@ -112,20 +111,55 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Siden Vælg nyttedata i Oplæring af simulering af angreb på portalen Microsoft 365 Defender" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
-
-Hvis du vælger en nyttedata på listen, vises oplysninger om nyttedataene i et pop op-vindue:
-
-- Fanen **Oversigt** indeholder et eksempel og andre oplysninger om nyttedataene.
-- Fanen **Simuleringer, der startes** , indeholder **simuleringsnavnet**, **klikfrekvensen**, **kompromitteret hastighed** og **handling**.
-
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Pop op-vinduet Med oplysninger om nyttedata i oplæringen af simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
-
-Hvis du vælger en nyttedata på listen ved at klikke på navnet, skal du klikke på ikonet ![Send en test nyttedata.](../../media/m365-cc-sc-create-icon.png) **Send en testknap** vises på hovedsiden, hvor du kan sende en kopi af nyttedatamailen til dig selv (den bruger, der aktuelt er logget på) til inspektion.
+Hvis du vælger en nyttedata på listen ved at markere afkrydsningsfeltet, skal du vælge ikonet ![Send en test nyttedata.](../../media/m365-cc-sc-create-icon.png) **Send en testknap** vises på hovedsiden, hvor du kan sende en kopi af nyttedatamailen til dig selv (den bruger, der aktuelt er logget på) til inspektion.
 
 Hvis du vil oprette din egen nyttedata, skal du klikke på ![Opret et nyttedataikon.](../../media/m365-cc-sc-create-icon.png) **Opret en nyttedata**. Du kan få flere oplysninger under [Opret brugerdefinerede nyttedata til oplæring af simulering af angreb](attack-simulation-training-payloads.md#create-payloads).
 
-Klik på **Næste**, når du er færdig.
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload.png" alt-text="Siden Vælg nyttedata i Oplæring af simulering af angreb på portalen Microsoft 365 Defender" lightbox="../../media/attack-sim-training-simulations-select-payload.png":::
+
+Hvis du vælger en nyttedata på listen ved at klikke et vilkårligt sted i rækken ud over afkrydsningsfeltet, vises oplysninger om nyttedataene i et pop op-vindue:
+
+- Fanen **Nyttedata** indeholder et eksempel og andre oplysninger om nyttedataene.
+- Fanen **Logonside** er beskrevet i næste afsnit.
+- Fanen **Simuleringer, der startes** , indeholder **simuleringsnavnet**, **klikfrekvensen**, **kompromitteret hastighed** og **handling**.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png" alt-text="Fanen Payload i pop op-vinduet med nyttedata under oplæring i simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png":::
+
+### <a name="login-page"></a>Logonside
+
+Vælg nyttedataene på listen ved at klikke et vilkårligt sted i rækken ud over afkrydsningsfeltet for at åbne pop op-vinduet med detaljer.
+
+Fanen **Logonside** i pop op-vinduet med nyttedataoplysninger viser den logonside, der i øjeblikket er valgt for nyttedataene.
+
+Hvis du vil have vist hele logonsiden, skal du bruge **linkene Side 1** og **Side 2** nederst på siden til tosidede logonsider.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png" alt-text="Fanen Logonside i pop op-vinduet med nyttedata under oplæring i simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png":::
+
+Hvis du vil ændre den logonside, der bruges i nyttedataene, skal du klikke på ![ikonet Skift logonside.](../../media/m365-cc-sc-edit-icon.png) **Skift logonside**.
+
+På pop op-vinduet **Vælg logonside** , der vises, vises følgende oplysninger for hver logonside:
+
+- **Navn**
+- **Sprog**
+- **Kilde**: For indbyggede logonsider er værdien **Global**. For brugerdefinerede logonsider er værdien **Lejer**.
+- **Status**: **Klar** eller **Kladde**.
+- **Oprettet af**: For indbyggede logonsider er værdien **Microsoft**. For brugerdefinerede logonsider er værdien UPN for den bruger, der oprettede logonsiden.
+- **Senest ændret**
+- **Handlinger**: Klik på ![ikonet Eksempel.](../../media/m365-cc-sc-eye-icon.png) **Eksempelvisning** for at få vist logonsiden.
+
+Hvis du vil finde en logonside på listen, skal du bruge søgeikonet ![.](../../media/m365-cc-sc-search-icon.png) **Søgefelt** for at finde navnet på logonsiden.
+
+Klik på ![Filterikon.](../../media/m365-cc-sc-filter-icon.png) **Filtrer** for at filtrere logonsiderne efter **kilde** eller **sprog**.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-select-login-page.png" alt-text="Vælg logonsiden under fanen Logonside i pop op-vinduet med nyttedataoplysninger i Oplæring i simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-select-login-page.png":::
+
+Hvis du vil oprette en ny logonside, skal du klikke på [Opret nyt ikon.](../../media/m365-cc-sc-create-icon.png) **Opret ny** for at starte guiden Opret slutbrugerlogonside. Trinnene er de samme som på **logonsider** under **oplæring** \> af simulering af angreb **under fanen Simuleret indholdsbibliotek** . Du kan finde en vejledning under [Opret logonsider](attack-simulation-training-login-pages.md#create-login-pages).
+
+Tilbage på **siden Vælg logon** skal du bekræfte, at den nye logonside, du har oprettet, er valgt, og derefter klikke på **Gem**.
+
+Tilbage på pop op-vinduet med nyttedataoplysninger skal du klikke på [Ikonet Luk.](../../media/m365-cc-sc-close-icon.png) **Luk**.
+
+Når du er færdig på **siden Vælg en nyttedata og logon**, skal du klikke på **Næste**.
 
 ## <a name="target-users"></a>Destinationsbrugere
 
@@ -300,7 +334,7 @@ På siden **Vælg slutbrugermeddelelse** skal du vælge mellem følgende meddele
 
 - **Microsofts standardmeddelelse (anbefales):** Følgende yderligere indstillinger er tilgængelige på siden:
 
-  - **Vælg standardsprog**: De tilgængelige værdier er: **kinesisk (forenklet),** **kinesisk (traditionelt),** **engelsk**, **fransk**, **tysk**, **italiensk**, **japansk**, **koreansk**, **portugisisk**, **russisk**, **spansk** og **hollandsk**.
+  - **Vælg standardsprog**: De tilgængelige værdier er: **engelsk**, **spansk**, **tysk**, **japansk**, **fransk**, **portugisisk**, **hollandsk**, **italiensk**, **svensk**, **kinesisk (forenklet)**, **norsk bokmål**, **polsk**, **russisk**, **finsk**, **koreansk**, **tyrkisk**, **ungarsk**, **hebraisk**, **thai**, **arabisk**, **vietnamesisk**, **slovakisk**, **græsk**, **indonesisk**, **rumænsk**, **slovensk**, **kroatisk**, **catalansk** eller **andet**.
 
   - Følgende meddelelser er som standard inkluderet:
     - **Meddelelse om positiv forstærkning fra Microsoft**

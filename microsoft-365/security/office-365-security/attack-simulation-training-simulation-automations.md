@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Administratorer kan få mere at vide om, hvordan de opretter automatiserede simuleringer, der indeholder bestemte teknikker og nyttedata, der startes, når de angivne betingelser er opfyldt i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 32730dfa36b0140bda246137b4cf6706b3472da7
-ms.sourcegitcommit: a8fbaf4b441b5325004f7a2dacd9429ec9d80534
+ms.openlocfilehash: 1efc6faaae0040e37aafac4faa0a10228d76e766
+ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65739665"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66609408"
 ---
 # <a name="simulation-automations-for-attack-simulation-training"></a>Simuleringsautomatiseringer til oplæring af simulering af angreb
 
@@ -67,7 +67,13 @@ Hvis du klikker på linket **Vis detaljer** i beskrivelsen, åbnes der et pop op
 
 Klik på **Næste**, når du er færdig.
 
-## <a name="select-payloads"></a>Vælg nyttedata
+## <a name="select-a-payload-and-login-page"></a>Vælg en nyttedata- og logonside
+
+På siden **Vælg nyttedata og logon** skal du vælge en eksisterende nyttedata på listen eller oprette en ny nyttedata.
+
+Du kan også få vist den logonside, der bruges i nyttedataene, vælge en anden logonside, du vil bruge, eller oprette en ny logonside, du vil bruge.
+
+### <a name="payload"></a>Nyttelast
 
 Vælg en af følgende indstillinger på siden **Vælg nyttedata** :
 
@@ -76,36 +82,32 @@ Vælg en af følgende indstillinger på siden **Vælg nyttedata** :
 
 Hvis du vælger **Randomiser**, er der ikke noget at konfigurere på denne side, så klik på **Næste** for at fortsætte.
 
-Hvis du vælger **Vælg manuelt**, skal du vælge en eller flere nyttedata på listen. Følgende oplysninger vises, så du kan vælge mellem følgende:
+Hvis du vælger **Vælg manuelt**, skal du vælge en eller flere nyttedata på listen. Følgende oplysninger vises for hver nyttedata:
 
 - **Navn på nyttedata**
 - **Teknik**: Du skal vælge mindst én nyttedata pr. teknik, som du valgte på den forrige side.
-- **Sprog**: Sproget for nyttedataindholdet. Microsofts payload-katalog (global) leverer nyttedata på mere end 10 sprog, som også kan filtreres.
+- **Sprog**: De tilgængelige værdier er: **engelsk**, **spansk**, **tysk**, **japansk**, **fransk**, **portugisisk**, **hollandsk**, **italiensk**, **svensk**, **kinesisk (forenklet)**, **norsk bokmål**, **polsk**, **russisk**, **finsk**, **koreansk**, **tyrkisk**, **ungarsk**, **hebraisk**, **thai**, **arabisk**, **vietnamesisk**, **slovakisk**, **græsk**, **indonesisk**, **rumænsk**, **slovensk**, **kroatisk**, **catalansk** eller **andet**.
 - **Klikfrekvens**: Hvor mange personer der har klikket på denne nyttedata.
-- **Forudsagt kompromisrate**: Historiske data for nyttedataene på tværs af Microsoft 365, der forudsiger procentdelen af personer, der kompromitteres af denne nyttedata.
+- **Forudsagt kompromisrate**: Historiske data for nyttedataene på tværs af Microsoft 365, der forudsiger procentdelen af personer, der bliver kompromitteret af denne nyttedata.
 - **De startede simuleringer** tæller antallet af gange, denne nyttedata blev brugt i andre simuleringer.
 
 På ikonet ![Søg.](../../media/m365-cc-sc-search-icon.png) **I søgefeltet** kan du skrive en del af navnet på nyttedata og trykke på Enter for at filtrere resultaterne.
 
 Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 
-- **Kilde**: Angiver, om nyttedataene blev oprettet i din organisation eller er en del af Microsofts eksisterende nyttedatakatalog. Gyldige værdier er:
-  - **Global** (indbygget)
-  - **Lejer** (brugerdefineret)
-  - **Alle**
-
 - **Kompleksitet**: Beregnet på baggrund af antallet af indikatorer i nyttedataene, der angiver et muligt angreb (stavefejl, uopsættelighed osv.). Flere indikatorer er nemmere at identificere som et angreb og angive lavere kompleksitet. De tilgængelige værdier er:
-  - **Lav**
-  - **Medium**
-  - **Høj**
 
-- **Sprog**: De tilgængelige værdier er: **engelsk**, **spansk**, **tysk**, **japansk**, **fransk**, **portugisisk**, **hollandsk**, **italiensk**, **svensk**, **kinesisk (forenklet)**, **norsk bokmål**, **polsk**, **russisk**, **finsk**, **koreansk**, **tyrkisk**, **ungarsk**, **hebraisk**, **thai**, **arabisk**, **vietnamesisk**, **slovakisk**, **græsk**, **indonesisk**, **rumænsk**, **slovensk**, **kroatisk**, **catalansk** og **andet**.
+  - **Høj**
+  - **Medium**
+  - **Lav**
+
+- **Sprog**
 
 - **Tilføj kode(r)**
 
 - **Filtrer efter tema**: De tilgængelige værdier er: **Kontoaktivering**, **Kontobekræftelse**, **Fakturering**, **Ryd op i mail**, **Modtaget dokument**, **Udgift**, **Fax**, **Økonomirapport**, **Indgående meddelelser**, **Faktura**, **Modtagne elementer**, **Logonbesked**, **Post modtaget**, **Adgangskode**, **Betaling**, **Løn**, **Personligt tilbud**, **Karantæne**, **Fjernarbejde**, **Gennemse meddelelse**, **Sikkerhedsopdatering**, **Afbrudt tjeneste**, **Signatur påkrævet**, **Lager til opgradering af postkasse Bekræft postkasse**, **Voicemail** og **Andet**.
 
-- **Filtrer efter brand**: De tilgængelige værdier er: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** og **Andet**.
+- **Filtrer efter brand**: De tilgængelige værdier er: **American Express**, **Capital One**, **DHL**, **DocuSign**, **Dropbox**, **Facebook**, **First American**, **Microsoft**, **Netflix**, **Scotiabank**, **SendGrid**, **Stewart Title**, **Tesco**, **Wells Fargo**, **Syrinx Cloud** og **Other**.
 
 - **Filtrer efter branche**: De tilgængelige værdier er: **Banking**, **Business services**, **Consumer services**, **Education**, **Energy**, **Construction**, **Consulting**, **Financial services**, **Government**, **Hospitality**, **Insurance**, **Legal**, **Courier services**, **IT**, **Healthcare**, **Manufacturing**, **Retail**, **Telecom**, **Real estate**, og **Andet**.
 
@@ -115,14 +117,49 @@ Hvis du klikker på **Filtrer**, er følgende filtre tilgængelige:
 
 Når du er færdig med at konfigurere filtrene, skal du klikke på **Anvend**, **Annuller** eller **Ryd filtre**.
 
-Hvis du vælger en nyttedata på listen ved at klikke på navnet, vises oplysninger om nyttedataene i et pop op-vindue:
+Hvis du vælger en nyttedata på listen ved at klikke et vilkårligt sted i rækken ud over afkrydsningsfeltet, vises oplysninger om nyttedataene i et pop op-vindue:
 
-- Fanen **Oversigt** indeholder et eksempel og andre oplysninger om nyttedataene.
+- Fanen **Nyttedata** indeholder et eksempel og andre oplysninger om nyttedataene.
+- Fanen **Logonside** er beskrevet i næste afsnit.
 - Fanen **Simuleringer, der startes** , indeholder **simuleringsnavnet**, **klikfrekvensen**, **kompromitteret hastighed** og **handling**.
 
-:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details.png" alt-text="Pop op-vinduet Med oplysninger om nyttedata i oplæringen af simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details.png":::
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png" alt-text="Fanen Payload i pop op-vinduet med nyttedata under oplæring i simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details-payload-tab.png":::
 
-Klik på **Næste**, når du er færdig.
+### <a name="login-page"></a>Logonside
+
+Vælg nyttedataene på listen ved at klikke et vilkårligt sted i rækken ud over afkrydsningsfeltet for at åbne pop op-vinduet med detaljer.
+
+Fanen **Logonside** i pop op-vinduet med nyttedataoplysninger viser den logonside, der i øjeblikket er valgt for nyttedataene.
+
+Hvis du vil have vist hele logonsiden, skal du bruge **linkene Side 1** og **Side 2** nederst på siden til tosidede logonsider.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png" alt-text="Fanen Logonside i pop op-vinduet med nyttedata under oplæring i simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-details-login-page-tab.png":::
+
+Hvis du vil ændre den logonside, der bruges i nyttedataene, skal du klikke på ![ikonet Skift logonside.](../../media/m365-cc-sc-edit-icon.png) **Skift logonside**.
+
+På pop op-vinduet **Vælg logonside** , der vises, vises følgende oplysninger for hver logonside:
+
+- **Navn**
+- **Sprog**
+- **Kilde**: For indbyggede logonsider er værdien **Global**. For brugerdefinerede logonsider er værdien **Lejer**.
+- **Status**: **Klar** eller **Kladde**.
+- **Oprettet af**: For indbyggede logonsider er værdien **Microsoft**. For brugerdefinerede logonsider er værdien UPN for den bruger, der oprettede logonsiden.
+- **Senest ændret**
+- **Handlinger**: Klik på ![ikonet Eksempel.](../../media/m365-cc-sc-eye-icon.png) **Eksempelvisning** for at få vist logonsiden.
+
+Hvis du vil finde en logonside på listen, skal du bruge søgeikonet ![.](../../media/m365-cc-sc-search-icon.png) **Søgefelt** for at finde navnet på logonsiden.
+
+Klik på ![Filterikon.](../../media/m365-cc-sc-filter-icon.png) **Filtrer** for at filtrere logonsiderne efter **kilde** eller **sprog**.
+
+:::image type="content" source="../../media/attack-sim-training-simulations-select-payload-select-login-page.png" alt-text="Vælg logonsiden under fanen Logonside i pop op-vinduet med nyttedataoplysninger i Oplæring i simulering af angreb på Microsoft 365 Defender-portalen" lightbox="../../media/attack-sim-training-simulations-select-payload-select-login-page.png":::
+
+Hvis du vil oprette en ny logonside, skal du klikke på [Opret nyt ikon.](../../media/m365-cc-sc-create-icon.png) **Opret ny** for at starte guiden Opret slutbrugerlogonside. Trinnene er de samme som på **logonsider** under **oplæring** \> af simulering af angreb **under fanen Simuleret indholdsbibliotek** . Du kan finde en vejledning under [Opret logonsider](attack-simulation-training-login-pages.md#create-login-pages).
+
+Tilbage på **siden Vælg logon** skal du bekræfte, at den nye logonside, du har oprettet, er valgt, og derefter klikke på **Gem**.
+
+Tilbage på pop op-vinduet med nyttedataoplysninger skal du klikke på [Ikonet Luk.](../../media/m365-cc-sc-close-icon.png) **Luk**.
+
+Når du er færdig på **siden Vælg en nyttedata og logon**, skal du klikke på **Næste**.
 
 ## <a name="target-users"></a>Destinationsbrugere
 
@@ -235,11 +272,11 @@ Klik på **Næste**, når du er færdig.
 
 På **landingssiden** kan du konfigurere den webside, som brugeren sendes til, hvis brugeren åbner nyttedataene i simuleringen.
 
-- **Vælg indstillinger for landingsside**: De tilgængelige værdier afhænger af dine tidligere valg på siden [Vælg nyttedata](#select-payloads) som beskrevet i følgende tabel:
+- **Vælg indstillinger for landingsside**: De tilgængelige værdier afhænger af dine tidligere valg af nyttedata på siden [Vælg en nyttedata og logonside](#select-a-payload-and-login-page) som beskrevet i følgende tabel:
 
-  |Valg på siden Vælg nyttedata|Tilgængelige værdier for Vælg indstillinger for landingsside|
+  |Valg af nyttedata|Tilgængelige værdier for Vælg indstillinger for landingsside|
   |---|---|
-  |Vælg manuelt|Brug Microsofts standardlandingsside <p> Opret din egen landingsside <p> Brug en brugerdefineret URL-adresse <p> **Bemærk**! Værdien **Brug en brugerdefineret URL-adresse** er ikke tilgængelig, hvis du tidligere har valgt **vedhæftet fil til malware** eller **Link til malware** på siden [Vælg teknikker til social engineering](#select-one-or-more-social-engineering-techniques) .|
+  |Vælg manuelt|Brug Microsofts standardlandingsside <br><br> Opret din egen landingsside <p> Brug en brugerdefineret URL-adresse <p> **Bemærk**! Værdien **Brug en brugerdefineret URL-adresse** er ikke tilgængelig, hvis du tidligere har valgt **vedhæftet fil til malware** eller **Link til malware** på siden [Vælg teknikker til social engineering](#select-one-or-more-social-engineering-techniques) .|
   |Randomisere|Brug Microsofts standardlandingsside|
 
   De tilgængelige indstillinger **for Vælg landingsside** og deres tilknyttede indstillinger er beskrevet på følgende liste:
@@ -480,7 +517,7 @@ Konfigurer følgende yderligere indstillinger for automatiseringen på siden **S
 - **Brug entydige nyttedata på tværs af simuleringer i en automatisering**: Denne indstilling er som standard ikke valgt.
 - **Målrepeater for lovovertrædere**: Denne indstilling er som standard ikke valgt. Hvis du vælger den, skal du konfigurere følgende indstilling, der vises:
   - **Angiv det maksimale antal gange, en bruger kan målrettes inden for denne automatisering**: Angiv en værdi fra 1 til 10.
-- **Send simuleringsmail baseret på brugerens aktuelle tidszoneindstilling fra Outlook webapp**: Denne indstilling er som standard ikke valgt.
+- **Send simuleringsmail baseret på brugerens aktuelle tidszoneindstilling fra Outlook Web App**: Denne indstilling er som standard ikke valgt.
 - **Vis siden med interstitialdata, der indsamles via drive-by**: Denne indstilling er kun tilgængelig, hvis du har valgt **Drive-by URL på** siden **[Vælg teknikker til social engineering](#select-one-or-more-social-engineering-techniques)** . Indstillingen er som standard slået til (![til/fra-ikonet til).](../../media/scc-toggle-on.png)
 
 ## <a name="review-simulation-automation"></a>Gennemse simuleringsautomatisering
