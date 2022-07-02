@@ -70,6 +70,8 @@
       href: m365-lighthouse-mitigate-threats.md
     - name: Oversigt over siden Enhedssikkerhed
       href: m365-lighthouse-device-security-overview.md
+    - name: Oversigt over meddelelser i karantæne
+      href: m365-lighthouse-quarantine-messages-overview.md
 - name: Få hjælp og support
   items:
     - name: Få hjælp og support

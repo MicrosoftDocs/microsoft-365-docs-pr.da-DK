@@ -64,24 +64,26 @@
           href: create-communications-site.md
 - name: Beskyt administrerede enheder
   items:
-    - name: Oversigt
-      href: m365bp-protect-devices.md
-    - name: Konfigurer administrerede enheder
-      href: m365bp-managed-devices-setup.md
-    - name: 'Onboard tilmeldte enheder, og anvend politikker'
-      href: m365bp-onboard-devices-mdb.md
-    - name: Beskyt Windows-enheder
+    - name: Konfigurer og beskyt administrerede enheder
       items:
+        - name: Oversigt
+          href: m365bp-protect-devices.md
+        - name: Konfigurer administrerede enheder
+          href: m365bp-managed-devices-setup.md
+        - name: 'Onboard tilmeldte enheder, og anvend politikker'
+          href: m365bp-onboard-devices-mdb.md
         - name: Beskyt Windows-enheder
-          href: m365bp-secure-windows-devices.md
-        - name: Administrer Windows-enheder
-          href: m365bp-manage-windows-devices.md
-        - name: Klargør til installation af Office-klient
-          href: m365bp-prepare-for-office-client-deployment.md
-        - name: Opret indstillinger for appbeskyttelse til Windows-enheder
-          href: m365bp-protection-settings-for-windows-10-devices.md
-        - name: Valider appindstillinger på Windows-enheder
-          href: m365bp-validate-settings-on-windows-10-pcs.md
+          items:
+            - name: Beskyt Windows-enheder
+              href: m365bp-secure-windows-devices.md
+            - name: Administrer Windows-enheder
+              href: m365bp-manage-windows-devices.md
+            - name: Klargør til installation af Office-klient
+              href: m365bp-prepare-for-office-client-deployment.md
+            - name: Opret indstillinger for appbeskyttelse til Windows-enheder
+              href: m365bp-protection-settings-for-windows-10-devices.md
+            - name: Valider appindstillinger på Windows-enheder
+              href: m365bp-validate-settings-on-windows-10-pcs.md
     - name: Gennemse og rediger enhedspolitikker
       href: m365bp-view-edit-create-mdb-policies.md
     - name: Administrer enhedsgrupper
@@ -134,6 +136,8 @@
       href: m365bp-validate-settings-on-android-or-ios.md
     - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
       href: m365bp-map-protection-features-to-intune-settings.md
+    - name: Intune administratorroller
+      href: m365bp-intune-admin-roles-in-the-mac.md
     - name: Konfigurer Overholdelsesstyring
       href: m365bp-set-up-compliance.md
     - name: Microsoft Defender for Business
