@@ -22,18 +22,22 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan du får online- eller telefonsupport til dit abonnement på Microsoft 365 til virksomheder. Du skal være administrator for et virksomhedsabonnement for at få support.
-ms.openlocfilehash: 3d1b69fef8bd262aada4910c82199203f4cff9ee
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 129a774d808cfc0f7f1dc860f72ede7c21ad8f1a
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011776"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66602850"
 ---
 # <a name="get-support-for-microsoft-365-for-business"></a>Få support til Microsoft 365 til virksomheder
 
 ::: moniker range="o365-worldwide"
 
+Se [Microsoft 365 small business-hjælp](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
+
 ## <a name="watch-get-help-or-support"></a>Se: Få hjælp eller support
+
+Se denne og andre videoer på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2197598).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1FOgo?autoplay=false]
 

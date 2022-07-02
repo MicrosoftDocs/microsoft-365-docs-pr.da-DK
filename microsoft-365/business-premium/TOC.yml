@@ -74,6 +74,8 @@
           href: m365bp-onboard-devices-mdb.md
         - name: Beskyt Windows-enheder
           items:
+            - name: Opgrader til Windows 10 Pro (hvis det er nødvendigt)
+              href: m365bp-upgrade-windows-10-pro.md
             - name: Beskyt Windows-enheder
               href: m365bp-secure-windows-devices.md
             - name: Administrer Windows-enheder
@@ -136,7 +138,7 @@
       href: m365bp-validate-settings-on-android-or-ios.md
     - name: Knyt beskyttelsesfunktioner til Intune-indstillinger
       href: m365bp-map-protection-features-to-intune-settings.md
-    - name: Intune administratorroller
+    - name: Intune-administratorroller
       href: m365bp-intune-admin-roles-in-the-mac.md
     - name: Konfigurer Overholdelsesstyring
       href: m365bp-set-up-compliance.md
