@@ -26,18 +26,18 @@ search.appverid:
 - MET150
 ms.assetid: 5abfef7b-5957-484a-b06b-a7c55e013e44
 description: Få mere at vide om, hvordan du implementerer cybersikkerhed for små eller mellemstore virksomheder med Microsoft 365 Business Premium. Cybersikkerhedsegenskaberne og -funktionerne er optimeret til at forhindre cyberangreb og sikkerhedsbrud og hjælper dig med at beskytte data, enheder og oplysninger med førsteklasses cyberbeskyttelse.
-ms.openlocfilehash: 213e96c58c822d0d8b40d2e540582eb6a2719ef8
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: 4baa58c4c4b48e761846c8c0ce7982c8e2c4c101
+ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556828"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66574063"
 ---
 # <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 Business Premium &mdash; cybersikkerhed for små virksomheder
 
 Lad os starte med at sige, at du har foretaget et klogt valg ved at indføre Microsoft 365 Business Premium og dens produktivitetsværktøjer i verdensklasse. Microsoft 365 Business Premium er designet med henblik på cybersikkerhed og beskytter dine data, enheder og oplysninger. Du er din organisations første og bedste forsvar mod hackere og cyberangreb, herunder tilfældige personer, organiseret kriminalitet eller meget sofistikerede nationalstater.
 
-Opgaven foran dig er denne &mdash;. Lad Microsoft 365 Business Premium hjælpe dig med at sikre din organisations fremtid! Du kan håndtere denne opgave ved at udføre følgende opgaver, som kan hjælpe dig med at styrke dit miljø, oplære dit team og beskytte administrerede enheder. Opgaverne kategoriseres efter vigtighed, og fuldførelsen af dem er den mest effektive måde at modarbejde hackere, beskytte mod ransomware og sikre, at din organisations fremtid er beskyttet med de bedste cybersikkerhedsbeskyttelser. Lad os komme i gang.
+Opgaven foran dig er denne &mdash;. Lad Microsoft 365 Business Premium hjælpe dig med at sikre din organisations fremtid! Du kan håndtere denne opgave ved at udføre følgende opgaver, som kan hjælpe dig med at styrke dit miljø, oplære medlemmer af din organisation og beskytte administrerede enheder. Missionerne er grupperet efter punkter, som Administration skal udføre, og punkter medlemmerne skal udføre. Fuldførelsen af dem er den mest effektive måde at modarbejde hackere, beskytte mod ransomware og sikre, at din forretning er beskyttet med de bedste cybersikkerhedsbeskyttelser. Lad os komme i gang.
 
 Klik dig gennem fanerne nedenfor for at få mere at vide om hver opgave, og hvordan du konfigurerer sikkerhed med Microsoft 365 Business Premium.
 

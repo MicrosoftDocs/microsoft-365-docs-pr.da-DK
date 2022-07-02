@@ -2,12 +2,12 @@
   href: index.md
 - name: Brugerdefinerede modeller
   items:
+    - name: Forskelle mellem brugerdefinerede modeller
+      href: difference-between-document-understanding-and-form-processing-model.md
     - name: Dokumentforståelse
       items:
         - name: Oversigt
           href: document-understanding-overview.md
-        - name: Forskelle mellem modeller
-          href: difference-between-document-understanding-and-form-processing-model.md
         - name: Importér en prøvemodel
           href: learn-about-document-understanding-models-through-the-sample-model.md
         - name: Opret et indholdscenter
@@ -46,8 +46,6 @@
       items:
         - name: Oversigt
           href: form-processing-overview.md
-        - name: Forskelle mellem modeller
-          href: difference-between-document-understanding-and-form-processing-model.md
         - name: Opret en model for formularbehandling
           href: create-a-form-processing-model.md
         - name: Anvend en opbevaringsmærkat

@@ -26,14 +26,16 @@ search.appverid:
 - MOE150
 ms.assetid: da585eea-f576-4f55-a1e0-87090b6aaa9d
 description: Få mere at vide om administratorroller, f.eks. tjenesteadministratorrollen, som knyttes til bestemte forretningsfunktioner og giver tilladelser til at udføre bestemte opgaver i Administration.
-ms.openlocfilehash: bef4328146c62d19257ca50d33004ce7d1185fe1
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: cd40eb3421abf21205aac909fa2cb1796d7f0aa2
+ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636234"
+ms.lasthandoff: 07/01/2022
+ms.locfileid: "66601966"
 ---
 # <a name="about-admin-roles-in-the-microsoft-365-admin-center"></a>Om administratorroller i Microsoft 365 Administration
+
+Se [Microsoft 365 small business-hjælp](https://go.microsoft.com/fwlink/?linkid=2197659) på YouTube.
 
 Microsoft 365- eller Office 365-abonnementet fås med et sæt administratorroller, som du kan tildele til brugere i organisationen ved hjælp af <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. De enkelte administratorroller relaterer til almindelige forretningsfunktioner og giver personer tilladelse til at udføre bestemte opgaver i Administrationerne.
 
@@ -43,6 +45,8 @@ Med <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">
 > Hvis du har brug for hjælp til trinnene i dette emne, kan du overveje at [arbejde med en Microsoft Small Business-specialist](https://go.microsoft.com/fwlink/?linkid=2186871). Med Business Assist har du og dine medarbejdere adgang til specialister i små virksomheder døgnet rundt, efterhånden som du får din virksomhed til at vokse, lige fra onboarding til hverdagsbrug.
 
 ## <a name="watch-what-is-an-admin"></a>Se: Hvad er en administrator?
+
+Se denne og andre videoer på vores [YouTube-kanal](https://go.microsoft.com/fwlink/?linkid=2198028).
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1SRc0]
 
