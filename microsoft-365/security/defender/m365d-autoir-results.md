@@ -1,7 +1,7 @@
 ---
-title: Detaljer og resultater af en automatisk undersøgelse
-description: Se resultaterne og de vigtigste resultater af automatiseret undersøgelse i Microsoft 365 Defender
-keywords: automatiseret, undersøgelse, resultater, analysér, detaljer, afhjælpning, autokorrektion
+title: Detaljer og resultater af en automatiseret undersøgelse
+description: Få vist resultaterne og de vigtigste resultater af den automatiserede undersøgelse i Microsoft 365 Defender
+keywords: automatiseret, undersøgelse, resultater, analysere, detaljer, afhjælpning, autoair
 search.appverid: met150
 ms.prod: m365-security
 ms.technology: m365d
@@ -23,96 +23,96 @@ ms.custom:
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.openlocfilehash: 5a95980147c66fa8655f5c1b2ebe8adfff9e87c0
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: cc53717feed347019540ffcb8c85687a6c28537f
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64501261"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607471"
 ---
-# <a name="details-and-results-of-an-automated-investigation"></a>Detaljer og resultater af en automatisk undersøgelse
+# <a name="details-and-results-of-an-automated-investigation"></a>Detaljer og resultater af en automatiseret undersøgelse
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
 **Gælder for:**
 - Microsoft 365 Defender
 
-Det Microsoft 365 Defender muligt at få oplysninger [om undersøgelsen](m365d-autoir.md), når en automatisk undersøgelse køres, både under og efter den automatiske undersøgelsesproces. Hvis du har de nødvendige tilladelser, kan du få vist disse oplysninger i en [undersøgelsesdetaljeringsvisning](m365d-action-center.md#required-permissions-for-action-center-tasks), der giver dig opdateret status og mulighed for at godkende eventuelle ventende handlinger. 
+Med Microsoft 365 Defender er oplysninger om undersøgelsen tilgængelige både under og efter den automatiserede undersøgelsesproces, når en [automatiseret undersøgelse](m365d-autoir.md) kører. Hvis du har de [nødvendige tilladelser](m365d-action-center.md#required-permissions-for-action-center-tasks), kan du få vist disse oplysninger i en visning af undersøgelsesdetaljer, der giver dig opdateret status og mulighed for at godkende eventuelle ventende handlinger. 
 
-## <a name="new-unified-investigation-page"></a>(NY) Siden Samlet undersøgelse
+## <a name="new-unified-investigation-page"></a>(NY) Unified Investigation-side
 
-Undersøgelsessiden er for nylig blevet opdateret til at omfatte oplysninger på tværs af dine enheder, mails og samarbejdsindhold. Den nye, samlede undersøgelsesside definerer et fælles sprog og giver en samlet oplevelse for automatiske undersøgelser på [tværs Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) og [Microsoft Defender for Office 365](../office-365-security/defender-for-office-365.md). For at få adgang til den samlede undersøgelsesside skal du vælge linket i det gule banner, du ser på:
+Undersøgelsessiden er for nylig blevet opdateret, så den indeholder oplysninger på tværs af dine enheder, mail og samarbejdsindhold. Den nye, samlede undersøgelsesside definerer et fælles sprog og giver en samlet oplevelse for automatiske undersøgelser på tværs af [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) og [Microsoft Defender for Office 365](../office-365-security/defender-for-office-365.md). Hvis du vil have adgang til siden med den samlede undersøgelse, skal du vælge linket i det gule banner, du får vist på:
 
-- En side i Office 365 <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Security & Compliance Center</a>
-- En undersøgelsesside på Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com))
-- Enhver hændelse eller handlingscenteroplevelse i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>
+- En hvilken som helst undersøgelsesside i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077143" target="_blank">Office 365 Security & Compliance Center</a>
+- En hvilken som helst undersøgelsesside på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com))
+- Enhver hændelses- eller Handlingscenter-oplevelse på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>
 
-## <a name="open-the-investigation-details-view"></a>Åbn undersøgelsesdetaljerne
+## <a name="open-the-investigation-details-view"></a>Åbn visningen med undersøgelsesoplysninger
 
-Du kan åbne undersøgelsens detaljevisning ved hjælp af en af følgende metoder:
+Du kan åbne visningen med undersøgelsesdetaljer ved hjælp af en af følgende metoder:
 
-- [Vælg et element i Handlingscenter](#select-an-item-in-the-action-center)
-- [Vælg en undersøgelse fra en side med oplysninger om hændelsen](#open-an-investigation-from-an-incident-details-page)
+- [Vælg et element i Løsningscenter](#select-an-item-in-the-action-center)
+- [Vælg en undersøgelse fra en side med oplysninger om hændelser](#open-an-investigation-from-an-incident-details-page)
 
-### <a name="select-an-item-in-the-action-center"></a>Vælg et element i Handlingscenter
+### <a name="select-an-item-in-the-action-center"></a>Vælg et element i Løsningscenter
 
-Det forbedrede [handlingscenter](m365d-action-center.md) ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) samler [afhjælpningshandlinger på tværs](m365d-remediation-actions.md) af dine enheder, mail & indhold til samarbejde og identiteter. Angivne handlinger omfatter afhjælpningshandlinger, der er blevet foretaget automatisk eller manuelt. I Handlingscenter kan du få vist handlinger, der afventer godkendelse, og handlinger, der allerede er godkendt eller fuldført. Du kan også gå til flere detaljer, f.eks. en undersøgelsesside.
+Det forbedrede [Handlingscenter](m365d-action-center.md) ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) samler [afhjælpningshandlinger](m365d-remediation-actions.md) på tværs af dine enheder, mail & samarbejdsindhold og identiteter. De viste handlinger omfatter afhjælpningshandlinger, der blev udført automatisk eller manuelt. I Løsningscenter kan du få vist handlinger, der afventer godkendelse, og handlinger, der allerede er godkendt eller fuldført. Du kan også navigere til flere detaljer, f.eks. en undersøgelsesside.
 
 > [!TIP]
-> Du skal have [visse tilladelser for](m365d-action-center.md#required-permissions-for-action-center-tasks) at godkende, afvise eller fortryde handlinger.
+> Du skal have [visse tilladelser](m365d-action-center.md#required-permissions-for-action-center-tasks) til at godkende, afvise eller fortryde handlinger.
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender,</a> og log på. 
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal,</a> og log på. 
 
-2. Vælg Handlingscenter i **navigationsruden**. 
+2. Vælg **Løsningscenter** i navigationsruden. 
 
-3. Vælg et element **under** **fanen Ventende** eller Oversigt. Pop op-ruden åbnes.
+3. Vælg et element under fanen **Ventende** eller **Oversigt** . Dens pop op-rude åbnes.
 
-4. Gennemse oplysningerne i pop op-ruden, og gør derefter et af følgende:
-   - Vælg **siden Åbn undersøgelse for** at få vist flere oplysninger om undersøgelsen.
-   - Vælg **Godkend** for at starte en afventende handling.
-   - Vælg **Afvis** for at forhindre, at der tages en afventende handling.
-   - Vælg **Gå på jagt** for at gå til [Avanceret jagt](advanced-hunting-overview.md).
+4. Gennemse oplysningerne i pop op-ruden, og udfør derefter et af følgende trin:
+   - Vælg **siden Åbn undersøgelse** for at få vist flere oplysninger om undersøgelsen.
+   - Vælg **Godkend** for at starte en ventende handling.
+   - Vælg **Afvis** for at forhindre, at der udføres en ventende handling.
+   - Vælg **Gå på jagt** for at gå ind i [Avanceret jagt](advanced-hunting-overview.md).
 
-### <a name="open-an-investigation-from-an-incident-details-page"></a>Åbn en undersøgelse fra siden med oplysninger om hændelsen
+### <a name="open-an-investigation-from-an-incident-details-page"></a>Åbn en undersøgelse fra en side med oplysninger om en hændelse
 
-Brug en side med oplysninger om hændelser til at få vist detaljerede oplysninger om en hændelse, herunder beskeder, der blev udløst oplysninger om påvirkede enheder, brugerkonti eller postkasser.
+Brug en side med oplysninger om hændelser til at få vist detaljerede oplysninger om en hændelse, herunder beskeder, der blev udløst oplysninger om alle berørte enheder, brugerkonti eller postkasser.
 
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender,</a> og log på. 
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal,</a> og log på. 
 
-2. I **navigationsruden skal du vælge Hændelser &** **beskederIncidents** > . 
+2. Vælg **Hændelser & beskeder** > **Hændelser** i navigationsruden. 
 
 3. Vælg et element på listen, og vælg derefter **Åbn hændelsesside**.
 
-4. Vælg **fanen Undersøgelser** , og vælg derefter en undersøgelse på listen. Pop op-ruden åbnes.
+4. Vælg fanen **Undersøgelser** , og vælg derefter en undersøgelse på listen. Dens pop op-rude åbnes.
 
 5. Vælg **siden Åbn undersøgelse**. 
 
 Her er et eksempel.
 
-:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Undersøgelsessiden på Microsoft 365 Defender portalen" lightbox="../../media/mtp-incidentdetails-tabs.png":::
+:::image type="content" source="../../media/mtp-incidentdetails-tabs.png" alt-text="Undersøgelsessiden på Microsoft 365 Defender-portalen" lightbox="../../media/mtp-incidentdetails-tabs.png":::
 
 ## <a name="investigation-details"></a>Undersøgelsesoplysninger
 
-Brug visningen undersøgelsesdetaljer til at se tidligere, aktuelle og afventende aktiviteter i forbindelse med en undersøgelse. Her er et eksempel.
+Brug visningen med undersøgelsesoplysninger til at se tidligere, aktuelle og ventende aktiviteter, der vedrører en undersøgelse. Her er et eksempel.
 
-:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Siden med undersøgelsesoplysninger i Microsoft 365 Defender portalen" lightbox="../../media/mtp-air-investdetails.png":::
+:::image type="content" source="../../media/mtp-air-investdetails.png" alt-text="Siden med undersøgelsesoplysninger på Microsoft 365 Defender-portalen" lightbox="../../media/mtp-air-investdetails.png":::
 
-I  visningen **Undersøgelsesdetaljer** kan du se oplysninger på fanerne Undersøgelse, **Beskeder, Enheder****, Identiteter**, Nøgle **fund, Enheder**, **Log** og Ventende handlinger, der er beskrevet i følgende tabel. 
+I visningen Undersøgelsesoplysninger kan du se oplysninger i **grafen Undersøgelse**, **Beskeder**, **Enheder**, **Identiteter**, **Nøgleresultater**, **Enheder**, **Log** og **Ventende handlinger** , som beskrevet i følgende tabel.
 
 > [!NOTE]
-> De specifikke faner, du ser på siden med undersøgelsesoplysninger, afhænger af, hvad dit abonnement omfatter. Hvis dit abonnement f.eks. ikke Microsoft Defender for Office 365 plan 2, kan du ikke se fanen **Postkasser**.
+> De specifikke faner, du kan se på en side med undersøgelsesoplysninger, afhænger af, hvad dit abonnement omfatter. Hvis dit abonnement f.eks. ikke indeholder Microsoft Defender for Office 365 Plan 2, kan du ikke se fanen **Postkasser**.
 
-| Tabulator | Beskrivelse |
+| Tab | Beskrivelse |
 |:--------|:--------|
-| **Graf for undersøgelse** | Giver en visuel repræsentation af undersøgelsen. Afbilder enheder og viser fundne trusler samt beskeder, og om der er handlinger, der afventer godkendelse.<br/>Du kan vælge et element på grafen for at få vist flere detaljer. Hvis du f.eks. **vælger ikonet** Beviser, kommer du  til fanen Beviser, hvor du kan se registrerede enheder og deres konklusion. |
-| **Beskeder** | Viser beskeder, der er knyttet til undersøgelsen. Beskeder kan komme fra funktioner til trusselsbeskyttelse på en brugers enhed, i Office, Microsoft Defender for Cloud Apps og andre Microsoft 365 Defender funktioner.|
-| **Enheder** | Viser de enheder, der er medtaget i undersøgelsen, samt afhjælpningsniveauet. (Afhjælpningsniveauer svarer til [automatiseringsniveauet for enhedsgrupper](m365d-configure-auto-investigation-response.md#review-or-change-the-automation-level-for-device-groups)). |
-| **Postkasser** |Viser postkasser, der er påvirket af registrerede trusler.  |
-| **Brugere**  | Viser brugerkonti, der er påvirket af registrerede trusler. |
-| **Beviser** | Oplister beviser, der er taget i forbindelse med beskeder eller undersøgelser. Omfatter konklusion (*ondsindede*, *mistænkelige**, ukendte* eller *ingen trusler fundet*) og afhjælpningsstatus. |
-| **Enheder** | Indeholder oplysninger om hver analyseret enhed, herunder en konklusion for hver enhedstype (*ondsindede**,* mistænkelige eller *ingen trusler fundet*).|
-|**Log** | Giver en kronologisk og detaljeret visning af alle undersøgelseshandlinger, der er foretaget, efter at der blev udløst en besked.|
-| **Ventende handlingsoversigt** | Viser elementer, der kræver godkendelse for at fortsætte. Gå til Handlingscenter ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) for at godkende afventende handlinger. |
+| **Undersøgelsesgraf** | Giver en visuel repræsentation af undersøgelsen. Viser enheder og viser de trusler, der blev fundet, sammen med beskeder, og om der er handlinger, der afventer godkendelse.<br/>Du kan vælge et element på grafen for at få vist flere oplysninger. Hvis du f.eks. vælger ikonet **Beviser** , kommer du til fanen **Beviser** , hvor du kan se registrerede enheder og deres domme. |
+| **Beskeder** | Viser de beskeder, der er knyttet til undersøgelsen. Beskeder kan komme fra funktioner til trusselsbeskyttelse på en brugers enhed, i Office-apps, Microsoft Defender for Cloud Apps og andre Microsoft 365 Defender funktioner. <br> <br> Bemærk, at hvis du ser *beskedtypen Ikke-understøttet*, betyder det, at automatiserede undersøgelsesfunktioner ikke kan hente beskeden for at køre en automatisk undersøgelse. Du kan dog [undersøge disse beskeder manuelt](investigate-incidents.md#alerts).
+| **Enheder** | Viser de enheder, der er inkluderet i undersøgelsen, sammen med afhjælpningsniveauet. (Afhjælpningsniveauer svarer til [automatiseringsniveauet for enhedsgrupper](m365d-configure-auto-investigation-response.md#review-or-change-the-automation-level-for-device-groups)). |
+| **Postkasser** |Viser postkasser, der påvirkes af registrerede trusler.  |
+| **Brugere**  | Viser brugerkonti, der påvirkes af registrerede trusler. |
+| **Beviser** | Viser bevismateriale, der er rejst i forbindelse med beskeder eller undersøgelser. Inkluderer domme (*Ondsindet*, *Mistænkelig*, *Ukendt* eller *Ingen trusler fundet*) og afhjælpningsstatus. |
+| **Enheder** | Indeholder oplysninger om hvert analyseret objekt, herunder en dom for hver objekttype (*ondsindede*, *mistænkelige* eller *ingen trusler fundet*).|
+|**Log** | Giver en kronologisk og detaljeret visning af alle de undersøgelseshandlinger, der udføres, efter at en besked blev udløst.|
+| **Oversigt over ventende handlinger** | Viser elementer, der kræver godkendelse for at fortsætte. Gå til Løsningscenter ([https://security.microsoft.com/action-center](https://security.microsoft.com/action-center)) for at godkende ventende handlinger. |
 
 ## <a name="next-steps"></a>Næste trin
 

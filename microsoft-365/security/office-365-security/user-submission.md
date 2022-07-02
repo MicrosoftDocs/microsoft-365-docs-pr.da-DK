@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 64ce66e10e7f6f549479b6f8a838c5db220d36dd
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: a4a46225b911c3272baa66772a0cf9ab63f1a1da
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66602442"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607581"
 ---
 # <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
@@ -49,19 +49,19 @@ Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i st
 
 Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så brugerrapporterede meddelelser går til din brugerdefinerede postkasse:
 
-- [Identificer den brugerdefinerede postkasse som en SecOps-postkasse](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy)
+- [Identificer den brugerdefinerede postkasse som en SecOps-postkasse](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
 - [Opret en antimalwarepolitik](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) for den brugerdefinerede postkasse, hvor
-  - Automatisk udrensning (ZAP) på nul timer for malware er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér automatisk tøm af malware på nul timer** er ikke valgt).
-  - Den fælles indstilling for filtrering af vedhæftede filer er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér filteret for fælles vedhæftede filer** er ikke valgt).
+  - Automatisk udrensning (ZAP) på nul timer for malware er deaktiveret (afsnittet **Beskyttelsesindstillinger** > **Aktivér automatisk nul-tøm for malware** er ikke valgt).
+  - Den fælles indstilling for filtrering af vedhæftede filer er deaktiveret (afsnittet **Beskyttelsesindstillinger** > **Aktivér filteret til fælles vedhæftede filer** er ikke valgt).
 
-Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de brugere, der rapporterer meddelelser:
+Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de rapporterede meddelelser:
 
 - Sørg for, at den brugerdefinerede postkasse ikke er en del af nogen [forudindstillede sikkerhedspolitikker](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
 
-- [Opret en politik for sikre links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanningen af Sikre links er slået fra (**vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelsesafsnittet** \> **Fra**).
+- [Opret en politik for sikre links](set-up-safe-links-policies.md) for den brugerdefinerede postkasse, hvor scanning af sikre links er slået fra (**Vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelser** > **Fra**).
 
-- [Opret en politik for sikre vedhæftede filer](set-up-safe-attachments-policies.md) for den brugerdefinerede postkasse, hvor scanning af vedhæftede filer, der er tillid til, er slået fra (afsnittet \>**Sikre vedhæftede filer ukendt malwaresvar** **fra**).
+- [Opret en politik for vedhæftede filer, der er tillid](set-up-safe-attachments-policies.md) til, for den brugerdefinerede postkasse, hvor scanning af vedhæftede filer, der er tillid til, herunder Dynamisk levering, er slået fra (sektionen **Sikre vedhæftede filer ukendt malwaresvar** > **Slået fra**).
 
 Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger, kan du bruge procedurerne i denne artikel til at konfigurere postkassen til brugerindsendelser.
 
@@ -84,11 +84,11 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
 ## <a name="use-the-microsoft-365-defender-portal-to-configure-the-user-submissions-mailbox"></a>Brug Microsoft 365 Defender-portalen til at konfigurere postkassen for brugerindsendelser
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Politikker & regler** \> **Trusselspolitikker** \> **Brugerrapporterede meddelelsesindstillinger** i afsnittet **Andre**. Hvis du vil gå direkte til siden **Brugerindsendelser** , skal du bruge <https://security.microsoft.com/userSubmissionsReportMessage>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Politikker & regler** > **Trusselspolitikker** > **Brugerrapporterede meddelelsesindstillinger** i afsnittet **Andre**. Hvis du vil gå direkte til siden **Brugerindsendelser** , skal du bruge <https://security.microsoft.com/userSubmissionsReportMessage>.
 
 2. På siden **Brugerindsendelser** bestemmes det, du ser, af, om **indstillingen for microsoft Outlook-rapportmeddelelsen** er **Slået fra** eller **Til**:
 
-   - **Microsoft Outlook-rapportmeddelelsesknap** \> **På** ![ Slå til.](../../media/scc-toggle-on.png): Vælg denne indstilling, hvis du bruger tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
+   - **Microsoft Outlook-rapportmeddelelsesknap** >  **På** ![ Slå til.](../../media/scc-toggle-on.png): Vælg denne indstilling, hvis du bruger tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
      - **Send de rapporterede meddelelser til**: Vælg en af følgende indstillinger:
        - **Microsoft**: Postkassen til brugerindsendelser bruges ikke (alle rapporterede meddelelser sendes til Microsoft).
        - **Microsoft og min organisations postkasse**: Angiv mailadressen på en eksisterende Exchange Online postkasse i det felt, der vises. Distributionsgrupper er ikke tilladt. Brugerindsendelser sendes til både Microsoft til analyse og til den brugerdefinerede postkasse, som administratoren eller sikkerhedsteamet skal analysere.
@@ -123,7 +123,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
           > Din mail sendes, som den er, til Microsoft til analyse. Nogle mails kan indeholde personlige eller følsomme oplysninger.
 
-   - **Microsoft Outlook-rapportmeddelelsesknap** \> **Ud** ![ Slå indstillingen fra](../../media/scc-toggle-off.png): Vælg denne indstilling, hvis du bruger rapporteringsværktøjer fra tredjepart i stedet for tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
+   - **Microsoft Outlook-rapportmeddelelsesknap** >  **Ud** ![ Slå indstillingen fra](../../media/scc-toggle-off.png): Vælg denne indstilling, hvis du bruger rapporteringsværktøjer fra tredjepart i stedet for tilføjelsesprogrammet Rapportmeddelelse, tilføjelsesprogrammet Rapport phishing eller den indbyggede rapportering i Outlook på internettet, og konfigurer derefter følgende indstillinger:
      - Vælg **Brug denne brugerdefinerede postkasse til at modtage brugerrapporterede indsendelser**. I feltet, der vises, skal du angive mailadressen på en eksisterende Exchange Online postkasse, der kan modtage mail.
 
    - **Knappen Sæt rapportmeddelelse i karantæne**: Aktivér denne funktion, hvis du vil lade slutbrugerne rapportere meddelelser fra karantæne.
@@ -155,8 +155,5 @@ Eksempel:
 
 `3|This part is ignored by the system` <br>
 `Not Junk:This part of the subject is ignored as well`
-
-- Begge disse meddelelser rapporteres som Ikke uønsket baseret på emne.
-- Resten ignoreres.
 
 Meddelelser, der ikke følger dette format, vises ikke korrekt på portalen Indsendelser.

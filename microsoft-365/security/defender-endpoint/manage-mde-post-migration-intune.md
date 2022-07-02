@@ -15,14 +15,14 @@ audience: ITPro
 ms.collection:
 - M365-security-compliance
 ms.topic: article
-ms.date: 11/29/2021
+ms.date: 07/01/2022
 ms.reviewer: chventou
-ms.openlocfilehash: 05fb01b411b1b32eeac763f3c364b29e29f5d8f5
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 1cbaff007a5ef2839cbcf51babc7a057c7b756c0
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603698"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607449"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-with-intune"></a>Administrer Microsoft Defender for Endpoint med Intune
 
@@ -57,8 +57,6 @@ I denne artikel beskrives det, hvordan du finder dine indstillinger for Microsof
 ## <a name="configure-microsoft-defender-for-endpoint-with-intune"></a>Konfigurer Microsoft Defender for Endpoint med Intune
 
 I følgende tabel vises en liste over forskellige opgaver, du kan udføre for at konfigurere Microsoft Defender for Endpoint med Intune. Du behøver ikke at konfigurere alt på én gang. vælg en opgave, læs de tilsvarende ressourcer, og fortsæt derefter.
-
-<br/><br/>
 
 |Opgave|Ressourcer til at få mere at vide|
 |---|---|

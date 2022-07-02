@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.reviewer: chventou
-ms.openlocfilehash: 51ead270b8e8223b2fd67cfd5fb1cf4e9f8a05d4
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 71b18f5e78301ac144faef9046420e817c65fa6b
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603291"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607361"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-with-powershell-wmi-and-mpcmdrunexe"></a>Administrer Microsoft Defender for Endpoint med PowerShell, WMI og MPCmdRun.exe
 
@@ -35,7 +35,6 @@ ms.locfileid: "66603291"
 
 > [!NOTE]
 > Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem) til at administrere organisationens trusselsbeskyttelsesfunktioner for enheder (også kaldet slutpunkter). Endpoint Manager omfatter [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) og [Microsoft Endpoint-Configuration Manager](/mem/configmgr/core/understand/introduction).
->
 > - [Få mere at vide om Endpoint Manager](/mem/endpoint-manager-overview)
 > - [Samtidig administration af Microsoft Defender for Endpoint på Windows 10 og Windows 11 enheder med Configuration Manager og Intune](manage-mde-post-migration-intune.md)
 > - [Administrer Microsoft Defender for Endpoint med Intune](manage-mde-post-migration-intune.md)

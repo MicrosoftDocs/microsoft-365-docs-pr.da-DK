@@ -1,6 +1,6 @@
 ---
-title: Onboarde Windows enheder med flere sessioner i Azure Virtual Desktop
-description: Læs mere i denne artikel om Onboarding Windows enheder med flere sessioner i Azure Virtual Desktop
+title: Onboarde Windows-enheder i Azure Virtual Desktop
+description: Få mere at vide om onboarding af Windows-enheder til Defender for Endpoint i Azure Virtual Desktop
 keywords: Azure Virtual Desktop, AVD, Microsoft Defender, slutpunkt, onboard
 ms.prod: w10
 ms.mktglfcycl: manage
@@ -15,26 +15,27 @@ ms.custom: nextgen
 ms.reviewer: ''
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 7a093a3b50d7153c71eecb9707ff8ab0dbef0d20
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 91a9cc3e7a9fdc38a05deaf04f2124819f41d1ae
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013282"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607427"
 ---
-# <a name="onboard-windows-multi-session-devices-in-azure-virtual-desktop"></a>Onboarde Windows enheder med flere sessioner i Azure Virtual Desktop
+# <a name="onboard-windows-devices-in-azure-virtual-desktop"></a>Onboarde Windows-enheder i Azure Virtual Desktop
 
 6 minutter til læsning
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
-- Windows multisession, der kører på Azure Virtual Desktop (AVD)
+- Windows-multisession, der kører på Azure Virtual Desktop (AVD)
+- [Windows 10 Enterprise multisession](/microsoft-365/security/defender-endpoint/azure-server-integration)
 
 Microsoft Defender for Endpoint understøtter overvågning af både VDI- og Azure Virtual Desktop-sessioner. Afhængigt af organisationens behov skal du muligvis implementere VDI- eller Azure Virtual Desktop-sessioner for at hjælpe dine medarbejdere med at få adgang til virksomhedens data og apps fra en ikke-administreret enhed, en ekstern placering eller et lignende scenarie. Med Microsoft Defender for Endpoint kan du overvåge disse virtuelle maskiner for uregelmæssig aktivitet.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Bliv fortrolig med [overvejelserne i forbindelse med VDI, der ikke er vedvarende](/microsoft-365/security/defender-endpoint/configure-endpoints-vdi#onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-1). Selvom [Azure Virtual Desktop](/azure/virtual-desktop/overview) ikke giver mulighed for ikke-vedholdenhed, giver det mulighed for at bruge et gyldent Windows billede, der kan bruges til at klargøre nye værter og geninstallere maskiner. Dette øger volatiliteten i miljøet og påvirker således, hvilke poster der oprettes og vedligeholdes på Microsoft Defender for Endpoint portalen, hvilket kan reducere synligheden for dine sikkerhedsanalytikere.
+Bliv fortrolig med [overvejelserne i forbindelse med VDI, der ikke er vedvarende](/microsoft-365/security/defender-endpoint/configure-endpoints-vdi#onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-1). Selvom [Azure Virtual Desktop](/azure/virtual-desktop/overview) ikke giver mulighed for ikke-vedholdenhed, giver det mulighed for at bruge et gyldent Windows-billede, der kan bruges til at klargøre nye værter og geninstallere maskiner. Dette øger volatiliteten i miljøet og påvirker således, hvilke poster der oprettes og vedligeholdes på Microsoft Defender for Endpoint portalen, hvilket kan reducere synligheden for dine sikkerhedsanalytikere.
 
 > [!NOTE]
 > Afhængigt af dit valg af onboardingmetode kan enheder vises på Microsoft Defender for Endpoint portal som enten:
@@ -73,7 +74,7 @@ Dette scenarie bruger et centralt placeret script og kører det ved hjælp af en
 
 1. Åbn VDI-konfigurationspakken .zip filen (WindowsDefenderATPOnboardingPackage.zip)
 
-    1. Vælg **Indstillinger** **Onboarding-slutpunkter** \> (under **Enhedshåndtering**\>) i navigationsruden Microsoft 365 Defender portalen.
+    1. I Microsoft 365 Defender portalnavigationsrude skal du vælge **Indstillinger** \> **Slutpunkter** \> **Onboarding** (under **Enhedshåndtering**).
     1. Vælg Windows 10 eller Windows 11 som operativsystem.
     1. I feltet **Installationsmetode** skal du vælge VDI-onboardingscripts for ikke-faste slutpunkter.
     1. Klik på **Download pakke** , og gem filen .zip.
@@ -106,10 +107,10 @@ Dette scenarie bruger et centralt placeret script og kører det ved hjælp af en
 
 Hvis du planlægger at administrere dine maskiner ved hjælp af et administrationsværktøj, kan du onboarde enheder med Microsoft Endpoint Configuration Manager.
 
-Du kan få flere oplysninger under [Onboard Windows enheder ved hjælp af Configuration Manager](configure-endpoints-sccm.md).
+Du kan få flere oplysninger under [Onboarde Windows-enheder ved hjælp af Configuration Manager](configure-endpoints-sccm.md).
 
 > [!WARNING]
-> Hvis du planlægger at bruge [reference til regler for reduktion af angrebsoverfladen](attack-surface-reduction-rules-reference.md), skal du være opmærksom på, at reglen "[Bloker procesoprettelser, der stammer fra PSExec- og WMI-kommandoer](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)", ikke bør bruges, fordi reglen ikke er kompatibel med administration via Microsoft Endpoint Configuration Manager. Reglen blokerer WMI-kommandoer, som Configuration Manager-klienten bruger til at fungere korrekt.
+> Hvis du planlægger at bruge [referencen til regler for reduktion af angrebsoverfladen](attack-surface-reduction-rules-reference.md), skal du være opmærksom på, at reglen "[Bloker procesoprettelser, der stammer fra PSExec- og WMI-kommandoer](attack-surface-reduction-rules-reference.md#block-process-creations-originating-from-psexec-and-wmi-commands)", ikke bør bruges, fordi reglen ikke er kompatibel med administration via Microsoft Endpoint Configuration Manager. Reglen blokerer WMI-kommandoer, som Configuration Manager-klienten bruger til at fungere korrekt.
 
 > [!TIP]
 > Når du har onboardet enheden, kan du vælge at køre en registreringstest for at bekræfte, at enheden er onboardet korrekt til tjenesten. Du kan finde flere oplysninger under [Kør en registreringstest på en nyligt onboardet Microsoft Defender for Endpoint enhed](run-detection-test.md).
@@ -154,12 +155,12 @@ Hvis du bruger FSlogix-brugerprofiler, anbefaler vi også, at du udelukker følg
 
 #### <a name="licensing-requirements"></a>Licenskrav
 
-Bemærk om licensering: Når du bruger Windows enterprise-multisession, kan du, afhængigt af dine krav, vælge enten at have alle brugere licenseret via Microsoft Defender for Endpoint (pr. bruger), Windows Enterprise E5, Microsoft 365 Security eller Microsoft 365 E5 , eller få den virtuelle maskine licenseret via Microsoft Defender for Cloud.
+Bemærk om licensering: Når du bruger Flere Windows Enterprise-sessioner, afhængigt af dine krav, kan du vælge enten at have alle brugere licenseret via Microsoft Defender for Endpoint (pr. bruger), Windows Enterprise E5, Microsoft 365 Security eller Microsoft 365 E5 eller have vm'en licenseret via Microsoft Defender for Cloud.
 Du kan finde licenskrav til Microsoft Defender for Endpoint på: [Licenskrav](minimum-requirements.md#licensing-requirements).
 
 ### <a name="known-issues-and-limitations"></a>Kendte problemer og begrænsninger
 
-Det er kun Microsoft Edge, der understøttes til webfiltrering i Windows 10 flere sessioner.
+Kun Microsoft Edge understøttes til webfiltrering i Windows 10 multisession.
 
 #### <a name="related-links"></a>Relaterede links
 

@@ -16,14 +16,14 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.topic: article
-ms.date: 11/29/2021
+ms.date: 07/01/2022
 ms.reviewer: chventou
-ms.openlocfilehash: e83306f4af82d8a24745ca5af3d146bb50c41ee7
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: b253fe7dad271684f5c0e927ec162ea4e993df29
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603390"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607383"
 ---
 # <a name="manage-microsoft-defender-for-endpoint-with-configuration-manager"></a>Administrer Microsoft Defender for Endpoint med Configuration Manager
 
@@ -34,15 +34,12 @@ ms.locfileid: "66603390"
 
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-
 Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem), som omfatter [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) (Intune) og [Microsoft Endpoint Configuration Manager](/mem/configmgr/core/understand/introduction) (Configuration Manager ) til at administrere organisationens trusselsbeskyttelsesfunktioner for enheder (også kaldet slutpunkter).
 
 - [Få mere at vide om Endpoint Manager](/mem/endpoint-manager-overview)
 - [Samtidig administration af Microsoft Defender for Endpoint på Windows 10 og Windows 11 enheder med Configuration Manager og Intune](manage-mde-post-migration-intune.md)
 
 ## <a name="configure-microsoft-defender-for-endpoint-with-configuration-manager"></a>Konfigurer Microsoft Defender for Endpoint med Configuration Manager
-
-<br/><br/>
 
 |Opgave|Ressourcer til at få mere at vide|
 |---|---|

@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 70f75fd5986a5d837e33b3caf0b7cb23239ddce5
-ms.sourcegitcommit: dd7e5b67ff4ae4e7f74490e437c1795933c74cc7
+ms.openlocfilehash: c8fd4be82e9ff778db136db314faa6c100240856
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/08/2022
-ms.locfileid: "64731586"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607493"
 ---
 # <a name="incident-response-with-microsoft-365-defender"></a>Svar på hændelse med Microsoft 365 Defender
 
@@ -40,7 +40,7 @@ ms.locfileid: "64731586"
 
 En hændelse i Microsoft 365 Defender er en samling af korrelerede beskeder og tilknyttede data, der udgør historien om et angreb.
 
-Microsoft 365 tjenester og apps opretter beskeder, når de registrerer en mistænkelig eller skadelig hændelse eller aktivitet. Individuelle beskeder giver værdifulde fingerpeg om et fuldført eller igangværende angreb. Angreb anvender dog typisk forskellige teknikker mod forskellige typer enheder, f.eks. enheder, brugere og postkasser. Resultatet er flere beskeder for flere enheder i din lejer.
+Microsoft 365-tjenester og -apps opretter beskeder, når de registrerer en mistænkelig eller skadelig hændelse eller aktivitet. Individuelle beskeder giver værdifulde fingerpeg om et fuldført eller igangværende angreb. Angreb anvender dog typisk forskellige teknikker mod forskellige typer enheder, f.eks. enheder, brugere og postkasser. Resultatet er flere beskeder for flere enheder i din lejer.
 
 Da det kan være udfordrende og tidskrævende at samle de enkelte beskeder for at få indsigt i et angreb, Microsoft 365 Defender samler automatisk beskederne og deres tilknyttede oplysninger i en hændelse.
 
@@ -98,13 +98,16 @@ De ekstra faner for en hændelse er:
 
   Alle understøttede hændelser og mistænkelige enheder i beskederne om hændelsen.
 
-- Graph (eksempelvisning)
+- Graph (prøveversion)
 
   En visuel repræsentation af angrebet, der forbinder de forskellige mistænkelige enheder, der er en del af angrebet, med deres relaterede aktiver, f.eks. brugere, enheder og postkasser.
 
 Her er relationen mellem en hændelse og dens data og fanerne for en hændelse på Microsoft 365 Defender portalen.
 
 :::image type="content" source="../../media/incidents-overview/incidents-security-center.png" alt-text="Relationen mellem en hændelse og dens data til fanerne for en hændelse på Microsoft 365 Defender portalen." lightbox="../../media/incidents-overview/incidents-security-center.png":::
+
+> [!NOTE]
+> Hvis du får vist beskedstatus for *ikke-understøttet beskedtype* , betyder det, at automatiserede undersøgelsesfunktioner ikke kan hente beskeden for at køre en automatisk undersøgelse. Du kan dog [undersøge disse beskeder manuelt](investigate-incidents.md#alerts).
 
 ## <a name="example-incident-response-workflow-for-microsoft-365-defender"></a>Eksempel på arbejdsproces for svar på hændelser for Microsoft 365 Defender
 
@@ -121,7 +124,7 @@ Overvej disse trin for din egen arbejdsproces for svar på hændelser:
 
 1. Start en [undersøgelse og analyse af angreb og advarsler](investigate-incidents.md) for hver hændelse:
 
-   1. Få vist en oversigt over hændelsen for at forstå dens omfang og alvorsgrad, og hvilke enheder der påvirkes med fanerne **Oversigt** og **Graph** (prøveversion).
+   1. Få vist en oversigt over hændelsen for at forstå dens omfang og alvorsgrad, og hvilke enheder der påvirkes med fanerne **Oversigt** og **Graf** (prøveversion).
 
    1. Begynd at analysere beskederne for at forstå deres oprindelse, omfang og alvorsgrad med fanen **Beskeder** .
 
@@ -201,7 +204,7 @@ På samme måde kan du, hvis din organisation bruger rollebaseret adgangskontrol
 
 Følg disse trin for at oprette en ny regel og tilpasse indstillingerne for mailmeddelelser.
 
-1. Vælg **Indstillinger > Microsoft 365 Defender > Meddelelser via mail om hændelse i** navigationsruden.
+1. Vælg **Indstillinger > Microsoft 365 Defender > Mailmeddelelser om hændelse** i navigationsruden.
 2. Vælg **Tilføj element**.
 3. Skriv navnet på reglen og en beskrivelse på siden **Grundlæggende** , og vælg derefter **Næste**.
 4. Konfigurer på siden **Meddelelsesindstillinger** :
@@ -209,7 +212,7 @@ Følg disse trin for at oprette en ny regel og tilpasse indstillingerne for mail
     - **Område for enhedsgruppe** – Du kan angive alle enhedsgrupper eller vælge på listen over enhedsgrupper i din lejer.
     - **Giv kun besked ved første forekomst pr. hændelse** – Vælg, hvis du kun vil have en meddelelse for den første besked, der svarer til dine andre valg. Senere opdateringer eller beskeder, der er relateret til hændelsen, sender ikke yderligere meddelelser.
     - **Medtag organisationsnavn i mailen** – Vælg, om organisationens navn skal vises i mailmeddelelsen.
-    - **Medtag lejerspecifikt portallink** – Vælg, om du vil tilføje et link med lejer-id'et i mailmeddelelsen for at få adgang til en bestemt Microsoft 365 lejer.
+    - **Medtag lejerspecifikt portallink** – Vælg, om du vil tilføje et link med lejer-id'et i mailmeddelelsen for at få adgang til en bestemt Microsoft 365-lejer.
 
     :::image type="content" source="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png" alt-text="Siden Meddelelsesindstillinger for meddelelser om hændelsesmail på Microsoft 365 Defender-portalen." lightbox="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png":::
 

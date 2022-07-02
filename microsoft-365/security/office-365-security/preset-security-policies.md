@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de anvender Standard- og Strict-politikindstillinger på tværs af beskyttelsesfunktionerne i Exchange Online Protection (EOP) og Microsoft Defender for Office 365
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: eb9eb8c3f45b0047922be854972d1f96123342cb
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: ffce562fbcbdf8ca9d6c19265166400163be7acf
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115515"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607647"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365
 
@@ -75,7 +75,7 @@ En profil bestemmer beskyttelsesniveauet. Følgende profiler er tilgængelige:
   >
   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
-- **Indbygget beskyttelse** (kun Defender for Office 365): En profil, der kun aktiverer beskyttelse af Pengeskab links og Pengeskab vedhæftede filer. Denne profil indeholder effektivt standardpolitikker for Pengeskab links og Pengeskab vedhæftede filer, som aldrig har haft standardpolitikker.
+- **Indbygget beskyttelse** (kun Defender for Office 365): En profil, der kun aktiverer beskyttelse af sikre links og vedhæftede filer. Denne profil indeholder effektivt standardpolitikker for Sikre links og Vedhæftede filer, som aldrig har haft standardpolitikker.
 
   For **indbygget beskyttelse** er den forudindstillede sikkerhedspolitik som standard slået til for alle Defender for Office 365 kunder. Selvom vi ikke anbefaler det, kan du også konfigurere undtagelser, der er baseret på **brugere**, **grupper** og **domæner** , så beskyttelsen ikke anvendes på bestemte brugere.
 
@@ -85,22 +85,22 @@ Indtil du tildeler politikkerne til brugere, tildeles de forudindstillede **stan
 
 Forudindstillede sikkerhedspolitikker bruger de tilsvarende politikker fra de forskellige beskyttelsesfunktioner i EOP og Microsoft Defender for Office 365. Disse politikker oprettes, _når_ du har tildelt **standardbeskyttelse** eller forudindstillede sikkerhedspolitikker for **streng beskyttelse** til brugere. Du kan ikke ændre indstillingerne i disse politikker.
 
-- **politikker for Exchange Online Protection (EOP**): Dette omfatter Microsoft 365 organisationer med Exchange Online postkasser og separate EOP-organisationer uden Exchange Online postkasser:
+- **Exchange Online Protection politikker (EOP**): Disse politikker findes i alle Microsoft 365-organisationer med Exchange Online postkasser og separate EOP-organisationer uden Exchange Online postkasser:
 
   - [Anti-spam-politikker](configure-your-spam-filter-policies.md) med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy**.
   - [Antimalwarepolitikker](configure-anti-malware-policies.md) med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy**.
-  - [EOP Anti-phishing-politikker](set-up-anti-phishing-policies.md#spoof-settings) med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy** (spoof settings).
+  - [Anti-phishing-politikker (spoofing protection)](set-up-anti-phishing-policies.md#spoof-settings) med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy** (spoof settings).
 
   > [!NOTE]
   > Politikker for udgående spam er ikke en del af forudindstillede sikkerhedspolitikker. Standardpolitikken for udgående spam beskytter automatisk medlemmer af forudindstillede sikkerhedspolitikker. Du kan også oprette brugerdefinerede politikker for udgående spam for at tilpasse beskyttelsen for medlemmer af forudindstillede sikkerhedspolitikker. Du kan få flere oplysninger under [Konfigurer filtrering af udgående spam i EOP](configure-the-outbound-spam-policy.md).
 
-- **Microsoft Defender for Office 365 politikker**: Dette omfatter organisationer med abonnementer på Microsoft 365 E5 eller Defender for Office 365 tilføjelsesprogrammer:
+- **Microsoft Defender for Office 365 politikker**: Disse politikker er i organisationer med abonnementer på Microsoft 365 E5 eller Defender for Office 365 tilføjelsesprogrammer:
   - Anti-phishing-politikker i Defender for Office 365 med navnet **Standard Preset Security Policy** og **Strict Preset Security Policy**, som omfatter:
     - De samme [spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings) , der er tilgængelige i EOP's anti-phishing-politikker.
     - [Repræsentationsindstillinger](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
     - [Avancerede tærskler for phishing](set-up-anti-phishing-policies.md#advanced-phishing-thresholds-in-anti-phishing-policies-in-microsoft-defender-for-office-365)
-  - [Pengeskab Links-politikker](set-up-safe-links-policies.md) med navnet **Standard preset Security Policy**, **Strict Preset Security Policy** og **Indbygget beskyttelsespolitik**.
-  - [Pengeskab politikker for vedhæftede filer](set-up-safe-attachments-policies.md) med navnet **Standardforudsenet sikkerhedspolitik**, **Streng forudindstillet sikkerhedspolitik** og **indbygget beskyttelsespolitik**.
+  - [Safe Links-politikker](set-up-safe-links-policies.md) med navnet **Standard-forudindstillet sikkerhedspolitik**, **Streng forudindstillet sikkerhedspolitik** og **indbygget beskyttelsespolitik**.
+  - [Politikker for vedhæftede filer, der er tillid](set-up-safe-attachments-policies.md) til, med navnet **Standardforudstillet sikkerhedspolitik**, **Streng forudindstillet sikkerhedspolitik** og **indbygget beskyttelsespolitik**.
 
 Du kan anvende EOP-beskyttelse på andre brugere end Defender for Office 365 beskyttelse, eller du kan anvende EOP og Defender for Office 365 på de samme modtagere.
 
@@ -122,13 +122,13 @@ Når der anvendes flere politikker for en bruger, anvendes følgende rækkefølg
 1. **Streng sikkerhedspolitisk** forudindstillet beskyttelse
 2. Forudindstillet sikkerhedspolitik for **standardbeskyttelse**
 3. Brugerdefinerede sikkerhedspolitikker
-4. **Indbygget beskyttelse** forudindstillet sikkerhedspolitik og standardsikkerhedspolitikker
+4. **Indbygget beskyttelse** forudindstillet sikkerhedspolitik for sikre links og vedhæftede filer og standardpolitikker for antimalware, spam og anti-phishing.
 
-Med andre ord tilsidesætter indstillingerne for den **strenge beskyttelsespolitik** indstillingerne for **standardbeskyttelsespolitikken**, som tilsidesætter indstillingerne fra en brugerdefineret politik, som tilsidesætter indstillingerne fra den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** (Pengeskab Links og Pengeskab Vedhæftede filer) og standardpolitikken (spam, anti-malware og anti-phishing).
+Med andre ord tilsidesætter indstillingerne for den **strenge beskyttelsespolitik** indstillingerne for **standardbeskyttelsespolitikken** , som tilsidesætter indstillingerne fra en brugerdefineret politik, som tilsidesætter indstillingerne fra den forudindstillede sikkerhedspolitik indbygget **beskyttelse** (Sikre links og sikre vedhæftede filer) og standardpolitikken (spam, anti-malware og anti-phishing).
 
 Hvis der f.eks. findes en sikkerhedsindstilling i **Standardbeskyttelse** , og en administrator har aktiveret **Standardbeskyttelse** for en bruger, anvendes indstillingen **Standardbeskyttelse** i stedet for det, der er konfigureret for den pågældende indstilling i en brugerdefineret politik eller i standardpolitikken (for den samme bruger). Bemærk, at du kan have en del af din organisation, som du kun vil anvende **Standard** - eller **Strict-beskyttelsespolitikken** på, mens du anvender en brugerdefineret politik på andre brugere i din organisation for at opfylde bestemte behov.
 
-**Indbygget beskyttelse** påvirker ikke modtagere i eksisterende politikker for Pengeskab links eller Pengeskab vedhæftede filer. Hvis du allerede har konfigureret **standardbeskyttelse**, **streng beskyttelse** eller brugerdefineret Pengeskab links eller Pengeskab politikker for vedhæftede filer, anvendes disse politikker _altid_ _før_ **indbygget beskyttelse**, så der er ingen indvirkning på de modtagere, der allerede er defineret i disse eksisterende forudindstillede eller brugerdefinerede politikker.
+**Indbygget beskyttelse** påvirker ikke modtagere i eksisterende politikker for sikre links eller vedhæftede filer. Hvis du allerede har konfigureret **standardbeskyttelse**, **streng beskyttelse** eller brugerdefinerede politikker for sikre links eller vedhæftede filer, anvendes disse politikker _altid_ _før_ **indbygget beskyttelse**, så der er ingen indvirkning på de modtagere, der allerede er defineret i disse eksisterende forudindstillede eller brugerdefinerede politikker.
 
 ## <a name="assign-preset-security-policies-to-users"></a>Tildel forudindstillede sikkerhedspolitikker til brugere
 
@@ -136,7 +136,7 @@ Hvis der f.eks. findes en sikkerhedsindstilling i **Standardbeskyttelse** , og e
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Forudindstillede sikkerhedspolitikker** , skal du bruge <https://security.microsoft.com/presetSecurityPolicies>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil konfigurere forudindstillede sikkerhedspolitikker, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
@@ -144,7 +144,7 @@ Hvis der f.eks. findes en sikkerhedsindstilling i **Standardbeskyttelse** , og e
 
   Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
-  **Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  **Bemærk**! Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
 ### <a name="use-the-microsoft-365-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users"></a>Brug Microsoft 365 Defender-portalen til at tildele standard- og strenge forudindstillede sikkerhedspolitikker til brugere
 
@@ -230,7 +230,7 @@ Hvis du vil deaktivere **standardbeskyttelse** eller forudindstillede sikkerheds
 
 ### <a name="use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-the-built-in-protection-preset-security-policy"></a>Brug Microsoft 365 Defender-portalen til at ændre tildelingerne af den forudindstillede sikkerhedspolitik for indbygget beskyttelse
 
-Husk, at den forudindstillede sikkerhedspolitik for **indbygget beskyttelse** tildeles til alle modtagere og ikke påvirker modtagere, der er defineret i de forudindstillede sikkerhedspolitikker **Standardbeskyttelse** eller **Streng beskyttelse**, eller brugerdefinerede Pengeskab links eller Pengeskab vedhæftede filer-politikker.
+Husk, at den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** tildeles til alle modtagere og ikke påvirker modtagere, der er defineret i de forudindstillede sikkerhedspolitikker **Standardbeskyttelse** eller **Streng beskyttelse** , eller brugerdefinerede politikker for Sikre links eller Vedhæftede filer.
 
 Derfor anbefaler vi normalt ikke undtagelser fra den **indbyggede sikkerhedspolitik** , der er forudindstillet i beskyttelse.
 
@@ -238,7 +238,7 @@ Derfor anbefaler vi normalt ikke undtagelser fra den **indbyggede sikkerhedspoli
 
 2. På siden **Forudindstillede sikkerhedspolitikker** skal du vælge **Tilføj udeladelser (anbefales ikke)** **i afsnittet Indbygget beskyttelse** .
 
-3. På pop **op-vinduet Udelad fra indbygget beskyttelse**, der vises, skal du identificere de interne modtagere, der er udelukket fra den indbyggede beskyttelse af Pengeskab links og Pengeskab vedhæftede filer:
+3. På pop **op-vinduet Udelad fra indbygget beskyttelse** , der vises, skal du identificere de interne modtagere, der er udelukket fra den indbyggede beskyttelse Af sikre links og Sikre vedhæftede filer:
    - **Brugere**
    - **Grupper**
    - **Domæner**

@@ -16,15 +16,15 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Administratorer kan få mere at vide om, hvordan de får vist og administrerer karantænemeddelelser for alle brugere i Exchange Online Protection (EOP). Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere filer i karantæne i SharePoint Online, OneDrive for Business og Microsoft Teams.
+description: Administratorer kan få mere at vide om, hvordan de får vist og administrerer karantænemeddelelser for alle brugere i Exchange Online Protection (EOP). Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere karantænefiler i SharePoint Online, OneDrive for Business og Microsoft Teams.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 3bd239231cc49684f8b07fb73f33265c9463bad4
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 50fa4eb3895fa9ad35e6182c2bcc7d7875bdae3a
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839793"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607295"
 ---
 # <a name="manage-quarantined-messages-and-files-as-an-admin-in-eop"></a>Administrer karantænemeddelelser og filer som administrator i EOP
 
@@ -35,15 +35,15 @@ ms.locfileid: "65839793"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser, indeholder karantæne potentielt farlige eller uønskede meddelelser. Du kan få flere oplysninger under [Karantænelagrede mails i EOP](quarantine-email-messages.md).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser indeholder karantæne potentielt farlige eller uønskede meddelelser. Du kan få flere oplysninger under [Karantænelagrede mails i EOP](quarantine-email-messages.md).
 
 Administratorer kan få vist, udgive og slette alle typer af karantænemeddelelser for alle brugere. Administratorer kan også rapportere falske positiver til Microsoft.
 
 Som standard er det kun administratorer, der kan administrere meddelelser, der er sat i karantæne som malware, phishing med høj sikkerhed eller som følge af regler for mailflow (også kendt som transportregler). Men administratorer kan bruge _karantænepolitikker_ til at definere, hvad brugerne må gøre for at sætte meddelelser i karantæne, afhængigt af hvorfor meddelelsen blev sat i karantæne (for understøttede funktioner). Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere filer, der er sat i karantæne af [Pengeskab Attachments for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
+Administratorer i organisationer med Microsoft Defender for Office 365 kan også administrere filer, der er sat i karantæne af [Sikre vedhæftede filer for SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md).
 
-Du får vist og administrerer karantænemeddelelser på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
+Du får vist og administrerer karantænemeddelelser på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser).
 
 Se denne korte video for at få mere at vide om, hvordan du administrerer karantænemeddelelser som administrator. 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGGPF]
@@ -52,7 +52,7 @@ Se denne korte video for at få mere at vide om, hvordan du administrerer karant
 
 - Hvis du vil åbne Microsoft 365 Defender-portalen, skal du gå til <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Karantæne** , skal du bruge <https://security.microsoft.com/quarantine>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil udføre handlinger på karantænemeddelelser for alle brugere, skal du være medlem af rollegrupperne **Organisationsadministration**, **Sikkerhedsadministrator** eller **Karantæneadministrator**<sup>\*</sup> . Hvis du vil sende meddelelser til Microsoft, skal du være medlem af rollegruppen **Sikkerhedsadministrator** .
@@ -62,7 +62,7 @@ Se denne korte video for at få mere at vide om, hvordan du administrerer karant
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
   - <sup>\*</sup>Medlemmer af rollegruppen **Karantæneadministrator** i **Mail & samarbejdsroller** i [Microsoft 365 Defender portalen](permissions-microsoft-365-security-center.md#email--collaboration-roles-in-the-microsoft-365-defender-portal) skal også være medlem af rollegruppen **Hygiejnestyring** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) at udføre karantæneprocedurer i Exchange Online PowerShell.
 
@@ -113,7 +113,7 @@ Se denne korte video for at få mere at vide om, hvordan du administrerer karant
      - **Transportregel** (regel for mailflow)
      - **Bulk**
      - **Spam**
-     - **Malware**: Politikker for antimalware i EOP eller Pengeskab politikker for vedhæftede filer i Defender for Office 365. Værdien **for Politiktype** angiver, hvilken funktion der blev brugt.
+     - **Malware**: Politikker for antimalware i politikker for EOP eller Vedhæftede filer, der er tillid til, i Defender for Office 365. Værdien **for Politiktype** angiver, hvilken funktion der blev brugt.
      - **Phishing**: Spamfilterets dom var **Phishing** eller beskyttelse mod phishing sat meddelelsen i karantæne ([spoof-indstillinger](set-up-anti-phishing-policies.md#spoof-settings) eller [repræsentationsbeskyttelse](konfigureret anti-phishing-politikker.
      - **Phishing med høj genkendelsessikkerhed**
    - **Modtager**: **Alle brugere** eller **kun mig**. Slutbrugere kan kun administrere karantænemeddelelser, der sendes til dem.
@@ -125,7 +125,7 @@ Se denne korte video for at få mere at vide om, hvordan du administrerer karant
      - **Udgivet**
    - **Politiktype**: Filtrer meddelelser efter politiktype:
      - **Politik for antimalware**
-     - **politik for vedhæftede filer Pengeskab**
+     - **Politik for vedhæftede filer, der er tillid til**
      - **Politik til bekæmpelse af phishing**
      - **Politik mod spam**
      - **Transportregel** (regel for mailflow)
@@ -137,6 +137,9 @@ Se denne korte video for at få mere at vide om, hvordan du administrerer karant
    - Emne. Brug hele meddelelsens emne. Der skelnes ikke mellem store og små bogstaver i søgningen.
 
    Når du har angivet søgekriterierne, skal du trykke på ENTER for at filtrere resultaterne.
+
+   > [!NOTE]
+   > **Søgefeltet** på hovedsiden **Karantæne** søger kun efter elementer i karantæne i den aktuelle visning og ikke hele karantænen. Hvis du vil søge i alle elementer i karantæne, skal du bruge **Filter** og det resulterende pop op-vindue **Filtre** . 
 
 Når du har fundet en bestemt karantænemeddelelse, skal du vælge meddelelsen for at få vist detaljer om den og udføre handlinger på den (f.eks. få vist, udgive, downloade eller slette meddelelsen).
 
@@ -219,7 +222,7 @@ Følgende handlinger er tilgængelige, når du har klikket på ![ikonet Flere ha
   - **Vælg afsendelsestypen**: **Mail** (standard), **URL-adresse** eller **Fil**.
   - **Tilføj netværksmeddelelses-id'et, eller upload mailfilen**: Vælg en af følgende indstillinger:
     - **Tilføj mailnetværkets meddelelses-id** (standard med den tilsvarende værdi i feltet)
-    - **Upload mailfilen (.msg eller eml):** Klik på **Gennemse filer** for at finde og vælge den .msg- eller .eml-meddelelsesfil, der skal sendes.
+    - **Overfør mailfilen (.msg eller eml):** Klik på **Gennemse filer** for at finde og vælge den .msg- eller .eml-meddelelsesfil, der skal sendes.
   - **Vælg en modtager, der havde et problem**: Vælg en (foretrukket) eller flere oprindelige modtagere af meddelelsen for at analysere de politikker, der er anvendt på dem.
   - **Vælg en årsag til afsendelse til Microsoft**: Vælg en af følgende indstillinger:
     - **Burde ikke være blevet blokeret (falsk positiv)** (standard): Følgende indstillinger er tilgængelige:
@@ -280,7 +283,7 @@ Når du vælger flere karantænemeddelelser på listen (op til 100) ved at klikk
 > [!NOTE]
 > Procedurerne for karantænefiler i dette afsnit er kun tilgængelige for Microsoft Defender for Office 365 Plan 1- eller Plan 2-abonnenter.
 
-I organisationer med Defender for Office 365 kan administratorer administrere filer, der er sat i karantæne af Pengeskab Attachments for SharePoint, OneDrive og Microsoft Teams. Hvis du vil aktivere beskyttelse af disse filer, skal du se [Slå Pengeskab vedhæftede filer til for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md).
+I organisationer med Defender for Office 365 kan administratorer administrere filer, der er sat i karantæne af Sikre vedhæftede filer for SharePoint, OneDrive og Microsoft Teams. Hvis du vil aktivere beskyttelse af disse filer, skal du se [Slå vedhæftede filer, der er tillid til, til for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md).
 
 ### <a name="view-quarantined-files"></a>Vis filer, der er sat i karantæne
 
@@ -318,7 +321,7 @@ Når du vælger en karantænefil på listen, er følgende oplysninger tilgængel
 :::image type="content" source="../../media/quarantine-file-details-flyout.png" alt-text="Pop op-vinduet med detaljer for en karantænefil" lightbox="../../media/quarantine-file-details-flyout.png":::
 
 - **Filnavn**
-- **Fil-URL-adresse**: URL-adresse, der definerer filens placering (f.eks. i SharePoint Online).
+- **URL-adresse** til fil: URL-adresse, der definerer filens placering (f.eks. i SharePoint Online).
 - **Skadeligt indhold registreret på** Den dato/det klokkeslæt, hvor filen blev sat i karantæne.
 - **Udløber**: Den dato, hvor filen slettes fra karantæne.
 - **Registreret af**
@@ -371,7 +374,7 @@ De cmdlet'er, du bruger til at få vist og administrere meddelelser og filer i k
 - [Slet karantænemeddelelse](/powershell/module/exchange/delete-quarantinemessage)
 - [Eksport-KarantæneMeddelelse](/powershell/module/exchange/export-quarantinemessage)
 - [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage)
-- [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage): Bemærk, at denne cmdlet kun er til meddelelser og ikke til filer fra Pengeskab Vedhæftede filer til SharePoint, OneDrive og Microsoft Teams.
+- [Preview-QuarantineMessage](/powershell/module/exchange/preview-quarantinemessage): Bemærk, at denne cmdlet kun er til meddelelser og ikke til filer, der er sat i karantæne fra Sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams.
 - [Release-QuarantineMessage](/powershell/module/exchange/release-quarantinemessage)
 
 ## <a name="for-more-information"></a>Du kan få flere oplysninger

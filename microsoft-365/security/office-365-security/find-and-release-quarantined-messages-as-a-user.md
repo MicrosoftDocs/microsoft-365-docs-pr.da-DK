@@ -17,16 +17,16 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Brugerne kan få mere at vide om, hvordan de får vist og administrerer meddelelser i karantæne i Exchange Online Protection (EOP), der skulle have været leveret til dem.
+description: Brugerne kan få mere at vide om, hvordan de får vist og administrerer karantænemeddelelser i Exchange Online Protection (EOP), der skulle have været leveret til dem.
 ms.technology: mdo
 ms.prod: m365-security
 adobe-target: true
-ms.openlocfilehash: 3a0faf45e6c9c756490be5ae3ab69b99f3a71cb0
-ms.sourcegitcommit: 61bdfa84f2d6ce0b61ba5df39dcde58df6b3b59d
+ms.openlocfilehash: 845e72f2cf3eeb97d7d5f90224967a4fe5068cf1
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/08/2022
-ms.locfileid: "65940992"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607669"
 ---
 # <a name="find-and-release-quarantined-messages-as-a-user-in-eop"></a>Find og frigiv karantænemeddelelser som en bruger i EOP
 
@@ -37,7 +37,7 @@ ms.locfileid: "65940992"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online-postkasser er der sat potentielt farlige eller uønskede meddelelser i karantæne. Du kan få flere oplysninger under [Karantæne i EOP](quarantine-email-messages.md).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser indeholder karantæne potentielt farlige eller uønskede meddelelser. Du kan få flere oplysninger under [Karantæne i EOP](quarantine-email-messages.md).
 
 Som almindelig bruger (ikke administrator) er de **standardfunktioner** , der er tilgængelige for dig som modtager af en karantænemeddelelse, beskrevet i følgende tabel:
 
@@ -51,9 +51,9 @@ Som almindelig bruger (ikke administrator) er de **standardfunktioner** , der er
 |Phishing med høj genkendelsessikkerhed||||
 |**Politikker for antiphishing**||||
 |Spoof intelligence-beskyttelse i EOP|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
-|Repræsenteret brugerbeskyttelse i Defender til Office 365|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|Repræsenteret brugerbeskyttelse i Defender for Office 365|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
 |Repræsenteret domænebeskyttelse i Defender for Office 365|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
-|Beskyttelse af postkasseintelligens i Defender til Office 365|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
+|Beskyttelse af postkasseintelligens i Defender for Office 365|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
 |**Politikker for antimalware**||||
 |Mails med vedhæftede filer, der er sat i karantæne som malware.||||
 |**Sikre vedhæftede filer i Defender for Office 365**||||
@@ -62,9 +62,9 @@ Som almindelig bruger (ikke administrator) er de **standardfunktioner** , der er
 |**Regler for mailflow (transportregler)**||||
 |Regler for mailflow, der sætter mails i karantæne.||||
 
-_Karantænepolitikker_ definerer, hvad brugerne har tilladelse til at gøre for meddelelser i karantæne baseret på, hvorfor meddelelsen blev sat i karantæne i [understøttede funktioner](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). Standardkarantatpolitikker gennemtvinger de historiske funktioner, som beskrevet i den forrige tabel. Administratorer kan oprette og anvende brugerdefinerede karantænepolitikker, der definerer mindre restriktive eller mere restriktive funktioner for brugere i understøttede funktioner. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
+_Karantænepolitikker_ definerer, hvad brugerne har tilladelse til at gøre for at sætte meddelelser i karantæne, afhængigt af hvorfor meddelelsen blev sat i karantæne i [understøttede funktioner](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features). Standardkarantatpolitikker gennemtvinger de historiske funktioner, som beskrevet i den forrige tabel. Administratorer kan oprette og anvende brugerdefinerede karantænepolitikker, der definerer mindre restriktive eller mere restriktive funktioner for brugere i understøttede funktioner. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-Du får vist og administrerer dine karantænemeddelelser på Microsoft 365 Defender-portalen eller (hvis en administrator har konfigureret dette) karantænemeddelelser fra karantænepolitikker.
+Du kan få vist og administrere dine karantænemeddelelser på Microsoft 365 Defender-portalen eller (hvis en administrator har konfigureret dette) karantænemeddelelser fra karantænepolitikker.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -79,7 +79,7 @@ Du får vist og administrerer dine karantænemeddelelser på Microsoft 365 Defen
 > [!NOTE]
 > Din mulighed for at få vist karantænemeddelelser styres af den [karantænepolitik](quarantine-policies.md) , der gælder for den karantænerede meddelelsestype (som kan være [standard karantænepolitikken af karantæneårsagen](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features)).
 
-1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & karantæne for gennemsyn** **af** \> samarbejde.\> Hvis du vil gå direkte til siden **Karantæne** , skal du bruge <https://security.microsoft.com/quarantine>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & karantæne for gennemsyn**  \> af samarbejde.\> Hvis du vil gå direkte til siden **Karantæne** , skal du bruge <https://security.microsoft.com/quarantine>.
 
 2. På siden **Karantæne** kan du sortere resultaterne ved at klikke på en tilgængelig kolonneoverskrift. Klik på **Tilpas kolonner**  for at ændre de kolonner, der vises. Standardværdierne er markeret med en stjerne (<sup>\*</sup>):
 
@@ -137,7 +137,11 @@ Du får vist og administrerer dine karantænemeddelelser på Microsoft 365 Defen
 
    Når du har angivet søgekriterierne, skal du trykke på ENTER for at filtrere resultaterne.
 
+   > [!NOTE]
+   > **Søgefeltet** på hovedsiden **Karantæne** søger kun efter elementer i karantæne i den aktuelle visning og ikke hele karantænen. Hvis du vil søge i alle elementer i karantæne, skal du bruge **Filter** og det resulterende pop op-vindue **Filtre** .
+
 Når du har fundet en bestemt karantænemeddelelse, skal du vælge meddelelsen for at få vist detaljer om den og udføre handlinger på den (f.eks. få vist, udgive, downloade eller slette meddelelsen).
+
 
 ### <a name="view-quarantined-message-details"></a>Vis oplysninger om karantænemeddelelse
 

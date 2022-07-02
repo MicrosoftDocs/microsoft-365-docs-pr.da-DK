@@ -28,12 +28,12 @@ search.appverid:
 ROBOTS: NO INDEX, NO FOLLOW
 ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
 description: Få mere at vide om konfiguration af indstillingerne for standardenhedspolitikken, som alle Windows-enheder modtager, når de logger på deres arbejds- eller skolekonto.
-ms.openlocfilehash: 5ac09788d609752d12a6ae6efadfa8739c5a4f9a
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: a9fd78ef37aed3663572b7049ae150e85916e41b
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893077"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607405"
 ---
 # <a name="secure-windows-devices"></a>Beskyt Windows-enheder
 
@@ -41,26 +41,19 @@ Målet her er at konfigurere indstillinger, der er en del af standardenhedspolit
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Før du kan konfigurere Windows-enheder til Microsoft 365 Business Premium-brugere, skal du sørge for, at alle Windows-enheder kører Windows 10 Pro, version 1703 (Creators Update) eller Windows 11 Pro.
+Før du kan konfigurere Windows-enheder til Microsoft 365 Business Premium brugere, skal du kontrollere, at alle Windows-enheder kører Windows 10 Pro.
 
-Windows 10 Pro (eller Windows 11 Pro) er en forudsætning for installation af Windows 10 Business, som er et sæt cloudtjenester og enhedshåndteringsfunktioner, der komplementerer Windows 10 Pro og Windows 11 Pro, og aktiverer central administration og sikkerhedskontroller i Microsoft 365 Business Premium.
+Windows 10 Pro er en forudsætning for udrulning af Windows 10 Business, som er en række cloudtjenester og funktioner til enhedshåndtering, der komplementerer Windows 10 Pro og Windows 11 Pro, og muliggøre central administration og sikkerhedskontroller af Microsoft 365 Business Premium.
 
 [Få mere at vide om krav til Microsoft 365 Business Premium](https://www.microsoft.com/microsoft-365/business/microsoft-365-business-premium?activetab=pivot:techspecstab).
 
-## <a name="windows-10-pro-and-windows-11-pro"></a>Windows 10 Pro og Windows 11 Pro
+## <a name="windows-10-pro"></a>Windows 10 Pro
 
 Hvis du har Windows-enheder, der kører tidligere versioner af Windows, f.eks. Windows 7 Pro, Windows 8 Pro eller Windows 8.1 Pro, giver dit Microsoft 365 Business Premium-abonnement dig ret til at opgradere disse enheder til Windows 10 Pro eller Windows 11 Pro.
   
-Du kan få flere oplysninger om, hvordan du opgraderer Windows-enheder, i følgende artikler:
+Du kan få flere oplysninger om, hvordan du opgraderer Windows-enheder, under [Opgrader Windows-enheder til Windows 10 Pro](m365bp-upgrade-windows-10-pro.md).
 
-- [Opgrader Windows Home til Windows 10 eller Windows 11 Pro](https://support.microsoft.com/windows/upgrade-windows-home-to-windows-pro-ef34d520-e73f-3198-c525-d1a218cc2818)
-- [Opgrader til Windows 10 Pro](https://support.microsoft.com/windows/upgrade-to-windows-10-pro-71ecc746-0f81-a4c0-bd4b-0db8559e0796)
-
-<!---
-Could not find the Win11 equivalent upgrade link.
----> 
-  
-## <a name="secure-your-windows-10-and-11-devices"></a>Beskyt dine Windows 10- og 11-enheder
+## <a name="secure-your-windows-10-and-11-devices"></a>Beskyt dine Windows 10 og 11 enheder
 
 Alle indstillinger er som standard **Slået til**. Følgende indstillinger er tilgængelige: <br/><br/>
 

@@ -1,5 +1,5 @@
 ---
-title: Administrer Microsoft Defender for Endpoint efter overførsel
+title: Administrer Microsoft Defender for Endpoint efter den indledende konfiguration eller overførsel
 description: Nu, hvor du har skiftet til Microsoft Defender for Endpoint, er dit næste skridt at administrere dine trusselsbeskyttelsesfunktioner
 keywords: efter migrering, administration, drift, vedligeholdelse, udnyttelse, Microsoft Defender for Endpoint,
 ms.prod: m365-security
@@ -15,16 +15,16 @@ audience: ITPro
 ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
-ms.date: 11/29/2021
+ms.date: 07/01/2022
 ms.reviewer: chventou
-ms.openlocfilehash: 0103fea7a569b7462e455541e574fee58c719d24
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: d00de67b52f521042d5595320346f875f8c89c9e
+ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66601086"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "66607559"
 ---
-# <a name="manage-microsoft-defender-for-endpoint-post-migration"></a>Administrer Microsoft Defender for Endpoint, efter overførsel
+# <a name="manage-microsoft-defender-for-endpoint-after-initial-setup-or-migration"></a>Administrer Microsoft Defender for Endpoint efter den indledende konfiguration eller overførsel
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/?linkid=2154037)
@@ -33,11 +33,9 @@ ms.locfileid: "66601086"
 
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
-Når du har flyttet fra din forrige slutpunktsbeskyttelses- og antivirusløsning til Microsoft Defender for Endpoint, er dit næste trin at administrere dine funktioner og egenskaber. Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem/endpoint-manager-overview), som omfatter [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) og [Microsoft Endpoint-Configuration Manager](/mem/configmgr/core/understand/introduction), til at administrere organisationens enheder og sikkerhedsindstillinger. Du kan dog bruge andre værktøjer/metoder, f.eks. [Gruppepolitik Objekter i Azure Active Directory-domæneservices](/azure/active-directory-domain-services/manage-group-policy).
+Når du har konfigureret og konfigureret Microsoft Defender for Endpoint, er dit næste trin at administrere dine funktioner og egenskaber. Vi anbefaler, at du bruger [Microsoft Endpoint Manager](/mem/endpoint-manager-overview), som omfatter [Microsoft Intune](/mem/intune/fundamentals/what-is-intune) og [Microsoft Endpoint-Configuration Manager](/mem/configmgr/core/understand/introduction), til at administrere organisationens enheder og sikkerhedsindstillinger. Du kan dog bruge andre værktøjer/metoder, f.eks. [Gruppepolitik Objekter i Azure Active Directory-domæneservices](/azure/active-directory-domain-services/manage-group-policy).
 
 I følgende tabel vises forskellige værktøjer/metoder, du kan bruge, med links til at få mere at vide.
-
-<br/><br/>
 
 |Værktøj/metode|Beskrivelse|
 |---|---|
