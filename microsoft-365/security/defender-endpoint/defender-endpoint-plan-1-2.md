@@ -17,12 +17,12 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: f55cfa3a9c32c6392f1c7d263f8e866ff4084e1e
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: e1cf2647ac8308d30b82e69cbb288fde330fdc5a
+ms.sourcegitcommit: 0c87abc17fbfe8aa43d61510101acdad0d491cd2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490007"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66612189"
 ---
 # <a name="compare-microsoft-defender-for-endpoint-plans"></a>Sammenlign Microsoft Defender for Endpoint planer
 
@@ -65,10 +65,11 @@ Du **kan dog kontakte support og anmode om en tilsidesættelse af din lejeroplev
 
 ## <a name="start-a-trial"></a>Start en prøveversion
 
-- Hvis du vil prøve Defender for Endpoint Plan 1, skal du besøge [https://aka.ms/mdep1trial](https://aka.ms/mdep1trial).
-- Hvis du vil prøve Defender for Endpoint Plan 2, skal du besøge [https://aka.ms/MDEp2OpenTrial](https://aka.ms/MDEp2OpenTrial).
-- Hvis du vil prøve tilføjelsesprogrammet Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender, skal du besøge [https://aka.ms/AddonPreviewTrial](https://aka.ms/AddonPreviewTrial). 
+- Hvis du vil prøve Defender for Endpoint Plan, skal du gå til [siden til tilmelding af prøveversionen af Defender for Endpoint](https://go.microsoft.com/fwlink/p/?LinkID=2168109).
+- Hvis du vil prøve tilføjelsesprogrammet Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender for Defender for Endpoint Plan 2, skal du besøge [https://aka.ms/AddonPreviewTrial](https://aka.ms/AddonPreviewTrial). 
 
 ## <a name="see-also"></a>Se også
+
+- [Kom i gang med Microsoft Security (prøveversionstilbud)](https://www.microsoft.com/security/business/get-started/start-free-trial)
 
 - [Microsoft Defender til virksomheder](../defender-business/mdb-overview.md) (beskyttelse af slutpunkter for små og mellemstore virksomheder)

@@ -18,17 +18,17 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: c1354d69ea1b645ee419ce7635c49e65a0557f26
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 1b8cb5b55cc0605df0040bcc6b3a75498ef1ea4a
+ms.sourcegitcommit: 0c87abc17fbfe8aa43d61510101acdad0d491cd2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487857"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66612167"
 ---
 # <a name="manage-microsoft-defender-antivirus-updates-and-apply-baselines"></a>Administrer Opdateringer til Microsoft Defender Antivirus, og anvend grundlinjer
 
 > [!IMPORTANT]
-> Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering. Se [Månedlige platform- og programversioner](#monthly-platform-and-engine-versions) (i denne artikel).
+> Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til mindst denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering. Se [Månedlige platform- og programversioner](#monthly-platform-and-engine-versions) (i denne artikel).
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 1 og 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -119,7 +119,7 @@ Ingen kendte problemer
 </details><details>
 <summary>Marts-2022-OPDATERING (platform: 4.18.2203.5 | Motor: 1.1.19200.5)</summary>
 
-*Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering.*
+*Kunder, der anvendte opdateringen til Microsoft Defender-programmet fra marts 2022 (**1.1.19100.5**), kan have oplevet høj ressourceudnyttelse (CPU og/eller hukommelse). Microsoft har udgivet en opdatering (**1.1.19200.5**), der løser de fejl, der blev introduceret i den tidligere version. Kunder anbefales at opdatere til mindst denne nye motor build af Antivirus Engine (**1.1.19200.5**). Hvis du vil sikre, at eventuelle problemer med ydeevnen er fuldt løst, anbefales det at genstarte maskiner efter anvendelse af opdatering.*
 
 &ensp;Version af sikkerhedsintelligensopdatering: **1.363.817.0**<br/>
 &ensp;Udgivet: **22. april 2022**<br/>
@@ -748,6 +748,21 @@ Vi anbefaler, at du opdaterer dine Windows 10 (Enterprise-, Pro- og Home-udgaver
 Du kan få flere oplysninger under [afbildninger af microsoft Defender-opdatering til Windows-operativsystemet](https://support.microsoft.com/help/4568292/defender-update-for-windows-operating-system-installation-images).
 
 <details>
+<summary>20220629.5</summary>
+
+&ensp;Pakkeversion: **20220629.5**<br/>
+&ensp;Platformversion: **4.18.2205.7**<br/>
+&ensp;Programversion: **1.1.19300.2**<br/>
+&ensp;Signaturversion: **1.369.220.0**<br/>
+
+### <a name="fixes"></a>Rettelser
+- Ingen
+
+### <a name="additional-information"></a>Flere oplysninger:
+- Ingen
+
+<br/>
+</details><details>
 <summary>20220603.3</summary>
 
 &ensp;Pakkeversion: **20220603.3**<br/>
