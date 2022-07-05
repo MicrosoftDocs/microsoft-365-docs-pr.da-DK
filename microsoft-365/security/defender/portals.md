@@ -1,7 +1,7 @@
 ---
 title: Microsofts sikkerhedsportaler og administrationscentre
-description: Find det rette Microsoft Administration eller -portal til administration af forskellige tjenester, der er relateret til Microsoft 365 sikkerhed
-keywords: sikkerhed, portaler, Microsoft 365, M365, Sikkerhedscenter, Administration, URL-adresse, link, Microsoft 365 Defender, Microsoft Defender for Endpoint, Microsoft Defender Security Center, Microsoft Defender for Identity, Microsoft Defender for Office 365, MCAS, WDSI, SCC, Intune, MDM, MEM, ASC, Cloud App Security , Azure AD, security & compliance Center
+description: Find det rette Microsoft Administration eller -portal til administration af forskellige tjenester, der er relateret til Microsoft 365-sikkerhed
+keywords: sikkerhed, portaler, Microsoft 365, M365, Sikkerhedscenter, Administration, URL-adresse, link, Microsoft 365 Defender, Microsoft Defender for Endpoint, Microsoft Defender Security Center, Microsoft Defender for Identity, Microsoft Defender for Office 365, MCAS, WDSI, SCC, Intune, MDM, MEM, ASC, Cloud App Security , Azure AD, security & compliance center
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
@@ -16,18 +16,18 @@ ms.collection:
 ms.topic: article
 search.appverid: met150
 ms.technology: m365d
-ms.openlocfilehash: 2c476e78a0d5af6267ae93879f5399e521e7461f
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 46239af639aa95094505e30a3d3cbdf35dff3893
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941583"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616970"
 ---
 # <a name="microsoft-security-portals-and-admin-centers"></a>Microsofts sikkerhedsportaler og administrationscentre
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-Selvom [Microsoft 365 Defender portal](microsoft-365-defender.md#the-microsoft-365-defender-portal) er det nye hjem til overvågning og administration af sikkerhed på tværs af dine identiteter, data, enheder og apps, skal du have adgang til forskellige portaler til visse specialiserede opgaver.
+Selvom [Microsoft 365 Defender portal](microsoft-365-defender-portal.md) er det nye hjem til overvågning og administration af sikkerhed på tværs af dine identiteter, data, enheder og apps, skal du have adgang til forskellige portaler til visse specialiserede opgaver.
 
 > [!TIP] 
 > Hvis du vil have adgang til forskellige relevante portaler fra Microsoft 365 Defender portal, skal du vælge **Flere ressourcer** i navigationsruden.
@@ -55,8 +55,8 @@ Selvom disse portaler ikke er specifikt til administration af sikkerhed, underst
 | Portalnavn | Beskrivelse | Link | 
 |---|---|---| 
 | Azure Portal | Få vist og administrer alle dine [Azure-ressourcer](/azure/azure-resource-manager/management/overview)  | [portal.azure.com](https://portal.azure.com/) |
-| Azure Active Directory portal | Få vist og administrer [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) | [aad.portal.azure.com](https://aad.portal.azure.com/) |
+| Azure Active Directory-portal | Få vist og administrer [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) | [aad.portal.azure.com](https://aad.portal.azure.com/) |
 | Microsoft Purview-overholdelsesportal | Administrer politikker for datahåndtering, og sørg for [overholdelse af regler](/compliance/regulatory/offering-home) | [compliance.microsoft.com](https://compliance.microsoft.com/) |
-| Microsoft 365 Administration | Konfigurer Microsoft 365 tjenester, administrer roller, licenser og spor opdateringer til dine Microsoft 365 tjenester | [admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2166757) |
+| Microsoft 365 Administration | Konfigurer Microsoft 365-tjenester. administrere roller, licenser og spore opdateringer til dine Microsoft 365-tjenester | [admin.microsoft.com](https://go.microsoft.com/fwlink/p/?linkid=2166757) |
 | Microsoft Endpoint Manager Administration | Brug [Microsoft Endpoint Manager](/mem/configmgr/) til at administrere og sikre enheder ved hjælp af kombinerede Intune og Configuration Manager funktioner | [devicemanagement.microsoft.com](https://devicemanagement.microsoft.com/) |
 | Microsoft Intune portal | Brug [Microsoft Intune](/intune/fundamentals/what-is-intune) til at installere enhedspolitikker og overvåge enheder for overholdelse af angivne standarder | [endpoint.microsoft.com](https://endpoint.microsoft.com/#blade/Microsoft_Intune_DeviceSettings/DevicesMenu/overview)

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Secure Score
-description: Beskriver Microsoft Secure Score i Microsoft 365 Defender, hvordan du forbedrer din sikkerhedsstilling, og hvad sikkerhedsadministratorer kan forvente.
+description: Beskriver Microsoft Secure Score på Microsoft 365 Defender-portalen, hvordan du forbedrer din sikkerhedsholdning, og hvad sikkerhedsadministratorer kan forvente.
 keywords: microsoft secure score, secure score, office 365 secure score, microsoft security score, Microsoft 365 Defender portal, forbedringshandlinger
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -23,62 +23,62 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: ed80d57d25fea2f3c19b6fe6363f993569c68a92
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 33e4ae46c6ec75d615cf64efe93d7b5bd8a77905
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499439"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616971"
 ---
 # <a name="microsoft-secure-score"></a>Microsoft Secure Score
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-Microsoft Secure Score er en måling af en organisations sikkerhedshold, med et højere tal, der angiver, at der er foretaget flere forbedringshandlinger. Den kan findes på https://security.microsoft.com/securescore [Microsoft 365 Defender-portalen](microsoft-365-defender.md#the-microsoft-365-defender-portal).
+Microsoft Secure Score er en måling af en organisations sikkerhedsholdning, hvor et højere antal angiver, at der er foretaget flere forbedringshandlinger. Du kan finde den på https://security.microsoft.com/securescore [Microsoft 365 Defender-portalen](microsoft-365-defender-portal.md).
 
-Hvis du følger Secure Score-anbefalingerne, kan du beskytte din organisation mod trusler. Fra et centraliseret dashboard i Microsoft 365 Defender kan organisationer overvåge og arbejde på sikkerheden for deres Microsoft 365 identiteter, apps og enheder.
+Hvis du følger secure score-anbefalingerne, kan det beskytte din organisation mod trusler. Organisationer kan overvåge og arbejde med sikkerheden af deres Microsoft 365-identiteter, apps og enheder fra et centraliseret dashboard på Microsoft 365 Defender portalen.
 
 Secure Score hjælper organisationer med at:  
 
-* Rapportér om den aktuelle tilstand af organisationens sikkerhedshold.
-* Forbedr deres sikkerhed ved at give synlighed, synlighed, vejledning og kontrol.  
-* Sammenlign med benchmarks, og opret KPI'er (Key Performance Indicators).
+* Rapportér om den aktuelle tilstand af organisationens sikkerhedsholdning.
+* Forbedre deres sikkerhedsholdning ved at levere registrering, synlighed, vejledning og kontrol.  
+* Sammenlign med benchmarks, og fastlæg KPI'er (key performance indicators).
 
-Watch this video for a quick overview of Secure score.
+Se denne video for at få et hurtigt overblik over Sikker score.
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWUPrP]
 
-Organisationer får adgang til robuste visualiseringer af målepunkter og tendenser, integration med andre Microsoft-produkter, sammenligning af resultater med lignende organisationer og meget mere. Scoren kan også afspejles, når tredjepartsløsninger har behandlet anbefalede handlinger.
+Organisationer får adgang til robuste visualiseringer af målepunkter og tendenser, integration med andre Microsoft-produkter, sammenligning af resultater med lignende organisationer og meget mere. Scoren kan også afspejle, når tredjepartsløsninger har håndteret anbefalede handlinger.
 
-:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Microsoft Secure Score-startsiden i Microsoft 365 Defender-portalen" lightbox="../../media/secure-score/secure-score-home-page.png":::
+:::image type="content" source="../../media/secure-score/secure-score-home-page.png" alt-text="Startsiden for Microsoft Secure Score på Microsoft 365 Defender-portalen" lightbox="../../media/secure-score/secure-score-home-page.png":::
 
 ## <a name="how-it-works"></a>Sådan fungerer det
 
 Du får point for følgende handlinger:
 
 - Konfiguration af anbefalede sikkerhedsfunktioner
-- Udføre sikkerhedsrelaterede opgaver
-- Løsning af forbedringshandlingen med et program eller en software fra tredjepart eller en alternativ afhjælpning
+- Udfører sikkerhedsrelaterede opgaver
+- Løsning af forbedringshandlingen med et tredjepartsprogram eller en software eller en alternativ afhjælpning
 
-Nogle forbedringshandlinger giver kun point, når de er fuldført. Nogle giver delvise point, hvis de er fuldført for visse enheder eller brugere. Hvis du ikke kan eller ikke vil udføre en af forbedringshandlingerne, kan du vælge at acceptere risikoen eller den resterende risiko.
+Nogle forbedringshandlinger giver kun point, når de er fuldført. Nogle giver delvise punkter, hvis de er fuldført for nogle enheder eller brugere. Hvis du ikke kan eller ikke vil gennemføre en af forbedringshandlingerne, kan du vælge at acceptere risikoen eller den resterende risiko.
 
-Hvis du har en licens til et af de understøttede Microsoft-produkter, får du vist anbefalinger til disse produkter. Vi viser dig det fulde sæt af mulige forbedringer af et produkt, uanset licensversion, abonnement eller plan. På den måde kan du forstå de bedste fremgangsmåder for sikkerhed og forbedre dine resultater. Din absolutte sikkerhedsstilling, der repræsenteres af Secure Score, forbliver den samme, uanset hvilke licenser din organisation ejer til et bestemt produkt. Husk, at sikkerheden skal balanceres med brugervenligheden, og ikke alle anbefalinger kan fungere for dit miljø.
+Hvis du har en licens til et af de understøttede Microsoft-produkter, får du vist anbefalinger til disse produkter. Vi viser dig det fulde sæt af mulige forbedringer for et produkt, uanset licensversion, abonnement eller plan. På denne måde kan du forstå bedste praksis for sikkerhed og forbedre din score. Din absolutte sikkerhedsholdning, repræsenteret ved Secure Score, forbliver den samme, uanset hvilke licenser din organisation ejer for et bestemt produkt. Vær opmærksom på, at sikkerheden skal afbalanceres med anvendelighed, og det er ikke alle anbefalinger, der kan fungere for dit miljø.
 
-Dine resultater opdateres i realtid for at afspejle de oplysninger, der præsenteres på handlingssiderne for visualiseringer og forbedringer. Secure Score synkroniserer også dagligt for at modtage systemdata om dine opnået point for hver handling.
+Din score opdateres i realtid for at afspejle de oplysninger, der vises på siderne med visualiseringer og forbedringer. Secure Score synkroniseres også dagligt for at modtage systemdata om dine opnåede point for hver handling.
 
 ### <a name="key-scenarios"></a>Vigtige scenarier
 
 - [Kontrollér din aktuelle score](microsoft-secure-score-improvement-actions.md#check-your-current-score)
-- [Sammenlign dine resultater med organisationer som din](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
+- [Sammenlign din score med organisationer som din](microsoft-secure-score-history-metrics-trends.md#compare-your-score-to-organizations-like-yours)
 - [Få vist forbedringshandlinger, og beslut en handlingsplan](microsoft-secure-score-improvement-actions.md#take-action-to-improve-your-score)
-- [Initier arbejdsflows for at undersøge eller implementere](microsoft-secure-score-improvement-actions.md#view-improvement-action-details)
+- [Start arbejdsflow for at undersøge eller implementere](microsoft-secure-score-improvement-actions.md#view-improvement-action-details)
 
 ### <a name="how-improvement-actions-are-scored"></a>Sådan scores forbedringshandlinger
 
-Hver forbedringshandling er 10 point værd eller mindre, og de fleste scores på binær vis. Hvis du implementerer forbedringshandlingen, f.eks. oprette en ny politik eller aktivere en bestemt indstilling, får du 100 % af punkterne. Ved andre forbedringshandlinger, er point angivet som en procentdel af den samlede konfiguration.
+Hver forbedringshandling er 10 point eller mindre værd, og de fleste scores binært. Hvis du implementerer forbedringshandlingen, f.eks. opretter en ny politik eller aktiverer en bestemt indstilling, får du 100 % af punkterne. I forbindelse med andre forbedringshandlinger angives punkter som en procentdel af den samlede konfiguration.
 
-En forbedring viser f.eks., at du får 10 point ved at beskytte alle dine brugere med multifaktorgodkendelse. Du har kun 50 af 100 brugere beskyttet i alt, så du får en delvis score på 5 point (50 beskyttet /100 i alt * 10 maks. pts = 5 pkt.).
+En forbedringshandling angiver f.eks., at du får 10 punkter ved at beskytte alle dine brugere med multifaktorgodkendelse. Du har kun 50 af 100 brugere i alt beskyttet, så du får en delvis score på 5 point (50 beskyttet / 100 i alt * maks. 10 pkt. = 5 pkt.).
 
-### <a name="products-included-in-secure-score"></a>Produkter inkluderet i Secure Score
+### <a name="products-included-in-secure-score"></a>Produkter, der er inkluderet i Secure Score
 
 Der er i øjeblikket anbefalinger til følgende produkter:
 
@@ -86,27 +86,27 @@ Der er i øjeblikket anbefalinger til følgende produkter:
 - Azure Active Directory
 - Microsoft Defender for Endpoint
 - Microsoft Defender for Identity
-- Defender til skyapps
+- Defender for Cloud Apps
 - Microsoft Teams
 
-Anbefalinger til andre sikkerhedsprodukter kommer snart. Anbefalingerne dækker ikke alle de angrebsoverflader, der er knyttet til hvert produkt, men de er en god grundlinje. Du kan også markere forbedringshandlingerne som dækket af en tredjepart eller alternativ afhjælpning.
+Anbefalinger til andre sikkerhedsprodukter kommer snart. Anbefalingerne dækker ikke alle de angrebsoverflader, der er knyttet til hvert produkt, men de er en god baseline. Du kan også markere forbedringshandlingerne som dækket af en tredjepart eller en alternativ afhjælpning.
 
-### <a name="security-defaults"></a>Sikkerhedsstandardindstillinger
+### <a name="security-defaults"></a>Sikkerhedsstandarder
 
-Microsoft Secure Score har opdateret [forbedringshandlinger](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) for at understøtte sikkerhedsstandardindstillinger i Azure Active Directory, som gør det nemmere at beskytte din organisation med forudkonfigurerede sikkerhedsindstillinger til almindelige angreb.
+Microsoft Secure Score har opdaterede [forbedringshandlinger, der understøtter sikkerhedsstandarder i Azure Active Directory](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults), hvilket gør det nemmere at beskytte din organisation med forudkonfigurerede sikkerhedsindstillinger for almindelige angreb.
 
-Hvis du slår sikkerhedsstandardindstillinger til, får du tildelt alle point for følgende forbedringshandlinger:
+Hvis du slår sikkerhedsstandarder til, får du tildelt komplette point for følgende forbedringshandlinger:
 
-- Sørg for, at alle brugere kan udføre multifaktorgodkendelse for sikker adgang (9 punkter)
+- Sørg for, at alle brugere kan fuldføre multifaktorgodkendelse for sikker adgang (9 punkter)
 - Kræv MFA for administrative roller (10 point)
 - Aktivér politik for at blokere ældre godkendelse (7 punkter)
 
 >[!IMPORTANT]
->Sikkerhedsstandarden omfatter sikkerhedsfunktioner, der giver samme sikkerhed som forbedringshandlingerne "politik for logonrisici" og "politik om brugerrisici". I stedet for at konfigurere disse politikker oven i sikkerhedsstandardindstillingerne anbefaler vi, at deres status opdateres til "Løst via alternativ afhjælpning".
+>Sikkerhedsstandarder omfatter sikkerhedsfunktioner, der giver samme sikkerhed som forbedringshandlinger for "logonrisikopolitik" og "politik for brugerrisiko". I stedet for at konfigurere disse politikker oven på sikkerhedsstandarderne anbefaler vi, at du opdaterer deres status til "Løst via alternativ afhjælpning".
 
 ## <a name="required-permissions"></a>Påkrævede tilladelser
 
-Hvis du vil have tilladelse til at få adgang til Microsoft Secure Score, skal du have tildelt en af følgende roller Azure Active Directory.
+Hvis du vil have tilladelse til at få adgang til Microsoft Secure Score, skal du være tildelt en af følgende roller i Azure Active Directory.
 
 ### <a name="read-and-write-roles"></a>Læse- og skriveroller
 
@@ -114,8 +114,8 @@ Med læse- og skriveadgang kan du foretage ændringer og interagere direkte med 
 
 * Global administrator
 * Sikkerhedsadministrator
-* Exchange administrator
-* SharePoint administrator
+* Exchange-administrator
+* SharePoint-administrator
 
 ### <a name="read-only-roles"></a>Skrivebeskyttede roller
 
@@ -125,20 +125,20 @@ Med skrivebeskyttet adgang kan du ikke redigere status eller noter for en forbed
 * Brugeradministrator
 * Tjenestesupportadministrator
 * Sikkerhedslæser
-* Sikkerhedsoperatør
+* Sikkerhedsoperator
 * Global læser
 
-## <a name="risk-awareness"></a>Risiko/opmærksomhed
+## <a name="risk-awareness"></a>Risikobevidsthed
 
-Microsoft Secure Score er en numerisk oversigt over din sikkerhedsovergang baseret på systemkonfigurationer, brugeradfærd og andre sikkerhedsrelaterede målinger. Det er ikke en absolut måling af, hvor sandsynligt dit system eller dine data vil blive brudt. I stedet repræsenterer den det omfang, i hvilket du har indført sikkerhedskontrolelementer i dit Microsoft-miljø, der kan hjælpe med at forskyde risikoen for at blive brudt. Ingen onlinetjeneste er beskyttet mod sikkerhedsbribrider, og sikre scorer bør ikke fortolkes som en garanti mod sikkerhedsbrud på nogen måde.
+Microsoft Secure Score er en numerisk oversigt over din sikkerhedsholdning baseret på systemkonfigurationer, brugeradfærd og andre sikkerhedsrelaterede målinger. Det er ikke en absolut måling af, hvor sandsynligt dit system eller dine data vil blive overtrådt. Det repræsenterer i stedet det omfang, du har indført sikkerhedskontroller i dit Microsoft-miljø, som kan hjælpe med at opveje risikoen for brud på sikkerheden. Ingen onlinetjeneste er immun over for sikkerhedsbrud, og sikker score bør ikke fortolkes som en garanti mod sikkerhedsbrud på nogen måde.
 
 ## <a name="we-want-to-hear-from-you"></a>Vi vil gerne høre fra dig
 
-Hvis du har problemer, kan du fortælle os om det ved at slå et indlæg op i [community'et Sikkerhed, & Privacy Compliance](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) . Vi overvåger communityet og yder hjælp.
+Hvis du har problemer, kan du fortælle os det ved at slå op i community'et [Sikkerhed, Beskyttelse af personlige oplysninger & Overholdelse.](https://techcommunity.microsoft.com/t5/Security-Privacy-Compliance/bd-p/security_privacy) Vi overvåger community'et og yder hjælp.
 
 ## <a name="related-resources"></a>Relaterede ressourcer
 
-- [Vurder din sikkerhedsstilling](microsoft-secure-score-improvement-actions.md)
-- [Spor din Microsoft Secure Score-historik, og opfylder mål](microsoft-secure-score-history-metrics-trends.md)
-- [Hvad der kommer](microsoft-secure-score-whats-coming.md)
+- [Vurder dit sikkerhedsniveau](microsoft-secure-score-improvement-actions.md)
+- [Spor din Microsoft Secure Score-historik, og opdr. mål](microsoft-secure-score-history-metrics-trends.md)
+- [Hvad kommer der](microsoft-secure-score-whats-coming.md)
 - [Nyheder](microsoft-secure-score-whats-new.md)

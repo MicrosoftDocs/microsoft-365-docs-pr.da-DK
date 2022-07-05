@@ -17,17 +17,17 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
 ms.custom: intro-get-started
-ms.openlocfilehash: d332cbf32f5423fb16abb158f9a30a18c2391a22
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 3926282bce47af2abee905f5c95844a8a78c6d33
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64939339"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617102"
 ---
 # <a name="get-started-with-microsoft-defender-for-endpoint-plan-1"></a>Kom i gang med Microsoft Defender for Endpoint Plan 1
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 På Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) kan du få vist oplysninger om registrerede trusler, administrere dine beskeder og hændelser, udføre de nødvendige handlinger på registrerede trusler og administrere enheder. På Microsoft 365 Defender-portalen kan du komme i gang med at interagere med de trusselsbeskyttelsesfunktioner, du får med Defender for Endpoint Plan 1. I følgende afsnit beskrives det, hvordan du kommer i gang:
 
@@ -67,9 +67,9 @@ Navigationslinjen i venstre side af skærmen giver dig mulighed for nemt at flyt
 | **Hændelser & beskeder** | Udvides for at vise **hændelser** og **beskeder**. |
 | **Hændelser & beskeder** >  **Hændelser** | Navigerer til listen **Hændelser** . Hændelser oprettes, når beskeder udløses og/eller trusler registreres. Listen **Hændelser** viser som standard data for de seneste 30 dage, hvor den seneste hændelse vises først. <br/><br/> Du kan få mere at vide under [Hændelser](view-incidents-queue.md). |
 | **Hændelser & beskeder** >  **Indberetninger** | Navigerer til listen **Beskeder** (også kaldet **køen Beskeder**). Beskeder udløses, når der registreres en mistænkelig eller skadelig fil, proces eller funktionsmåde. Som standard viser listen **Beskeder** data for de seneste 30 dage, hvor den seneste besked vises først. <br/><br/> Du kan få mere at vide under [Beskeder](alerts-queue.md). |
-| **Handlingscenter** | Navigerer til Løsningscenter, som sporer afhjælpningshandlinger og manuelle svarhandlinger. Handlingscenter sporer aktiviteter som disse: <br/>– Microsoft Defender Antivirus støder på en skadelig fil og derefter blokerer/fjerner filen. <br/>- Sikkerhedsteamet isolerer en enhed.<br/>– Defender for Endpoint registrerer og sætter en fil i karantæne. <br/><br/> Du kan få mere at vide i [Løsningscenter](auto-investigation-action-center.md). |
+| **Handlingscenter** | Navigerer til Løsningscenter, som sporer afhjælpningshandlinger og manuelle svarhandlinger. Handlingscenter sporer aktiviteter som disse: <br/>– Microsoft Defender Antivirus støder på en skadelig fil og blokerer/fjerner derefter den pågældende fil. <br/>- Sikkerhedsteamet isolerer en enhed.<br/>– Defender for Endpoint registrerer og sætter en fil i karantæne. <br/><br/> Du kan få mere at vide i [Løsningscenter](auto-investigation-action-center.md). |
 | **Secure Score** | Viser en repræsentation af din organisations sikkerhedsholdning sammen med en liste over forbedringshandlinger og målepunkter. <br/><br/> Du kan få mere at vide under [Microsoft Secure Score](../defender/microsoft-secure-score.md). |
-| **Learning hub** | Navigerer til en liste over læringsforløb, som du kan få adgang til for at få mere at vide om Microsoft 365 sikkerhedsfunktioner.  |
+| **Læringshub** | Navigerer til en liste over læringsforløb, som du kan få adgang til for at få mere at vide om sikkerhedsfunktioner i Microsoft 365.  |
 | **Slutpunkter** >  **Søg** | Navigerer til en side, hvor du kan søge efter bestemte enheder efter enhedsnavn. På listen over resultater kan du hurtigt se detaljer, f.eks. risikoniveau og tilstand. |
 |  **Slutpunkter** >  **Enhedslager** | Navigerer til listen over enheder, der er onboardet til Defender for Endpoint. Indeholder oplysninger om enheder, f.eks. deres eksponerings- og risikoniveauer. <br/><br/> Du kan få mere at vide under [Enhedsoversigt](machines-view-overview.md). |
 |  **Slutpunkter** >  **Konfiguration & oprindelige planer** | Udvides for at vise **grundlæggende sikkerhedsdata** og **konfigurationsstyring**. |
@@ -80,8 +80,8 @@ Navigationslinjen i venstre side af skærmen giver dig mulighed for nemt at flyt
 | **Sundhed** >  **Tjenestetilstand** | Navigerer til siden Tjenestetilstand i Microsoft 365 Administration. På denne side kan du få vist tilstandsstatussen på tværs af alle de tjenester, der er tilgængelige med organisationens abonnementer.   |
 | **Sundhed** >  **Meddelelsescenter** | Navigerer til Meddelelsescenter i Microsoft 365 Administration. Meddelelsescenteret indeholder oplysninger om planlagte ændringer. Hver meddelelse beskriver, hvad der kommer, hvordan det kan påvirke brugerne, og hvordan du administrerer ændringer. |  
 | **Tilladelser & roller** | Giver dig mulighed for at give tilladelser til at bruge Microsoft 365 Defender-portalen. Tilladelser tildeles via roller i Azure Active Directory (Azure AD). Vælg en rolle, hvorefter der vises en pop op-rude. Pop op-vinduet indeholder et link til Azure AD, hvor du kan tilføje eller fjerne medlemmer i en rollegruppe. <br/><br/> Du kan få mere at vide under [Administrer portaladgang ved hjælp af rollebaseret adgangskontrol](rbac.md).  |
-| **Indstillinger** | Navigerer til generelle indstillinger for Microsoft 365 Defender-portalen (angivet som **Security Center**) og Defender for Endpoint (angivet som **Slutpunkter**). <br/><br/> Du kan få mere at vide under [Indstillinger](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal). |
-| **Flere ressourcer** | Viser en liste over flere portaler og centre, f.eks. Azure Active Directory og Microsoft Purview-overholdelsesportalen. <br/><br/> Du kan få mere at vide under [Microsofts sikkerhedsportaler og administrationscentre](../defender/portals.md). |
+| **Indstillinger** | Navigerer til generelle indstillinger for Microsoft 365 Defender-portalen (angivet som **Security Center**) og Defender for Endpoint (angivet som **Slutpunkter**). <br/><br/> Du kan få mere at vide under [Indstillinger](../defender/microsoft-365-defender-portal.md). |
+| **Flere ressourcer** | Viser en liste over flere portaler og centre, f.eks. Azure Active Directory og Microsoft Purview-compliance-portal. <br/><br/> Du kan få mere at vide under [Microsofts sikkerhedsportaler og administrationscentre](../defender/portals.md). |
 
 > [!TIP]
 > Du kan få mere at vide i [oversigten over Microsoft 365 Defender portal](../defender/microsoft-365-security-center-mde.md).

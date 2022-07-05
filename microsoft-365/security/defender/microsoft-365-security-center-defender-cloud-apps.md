@@ -19,12 +19,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: 8cacce248561acc0e51fb40c6b5f48b33f6d2de7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 9113e3f06ba0f9c8cbec0da6d738cc170a215771
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487205"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616979"
 ---
 # <a name="microsoft-defender-for-cloud-apps-in-microsoft-365-defender-preview"></a>Microsoft Defender for Cloud Apps i Microsoft 365 Defender (eksempelvisning)
 
@@ -73,7 +73,9 @@ Billedet og tabellen nedenfor viser ændringerne i navigationen mellem Microsoft
 | Forbundne apps | resterende i Defender for Cloud Apps-portalen |
 
 > [!NOTE]
-> Den nye Defender for Cloud Apps-oplevelse på Microsoft 365 Defender-portalen er i øjeblikket tilgængelig for alle brugere, der er beskrevet i [Administrer administratoradgang](/defender-cloud-apps/manage-admins), undtagen **administrator af app/instans**, **brugergruppeadministrator**, **global administrator af Cloud Discovery** og **rapportadministrator af Cloud Discovery**, som defineret [i indbyggede administratorroller i Defender for Cloud Apps](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps).
+> Den nye Defender for Cloud Apps-oplevelse på Microsoft 365 Defender-portalen er i øjeblikket tilgængelig for alle brugere, der er beskrevet i [Administrer administratoradgang](/defender-cloud-apps/manage-admins), med undtagelse af:
+> * **App-/forekomstadministrator**, **brugergruppeadministrator**, **global administrator af Cloud Discovery** og **Administrator af Cloud Discovery-rapport** som defineret [i indbyggede administratorroller i Defender for Cloud Apps](/defender-cloud-apps/manage-admins#built-in-admin-roles-in-defender-for-cloud-apps).
+> * Brugergrupper for beskyttelse af personlige oplysninger som defineret i [Beskyttelse af personlige oplysninger for aktivitet](/defender-cloud-apps/activity-privacy)
 
 ## <a name="whats-changed"></a>Hvad er ændret
 

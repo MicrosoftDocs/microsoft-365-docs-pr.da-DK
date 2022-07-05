@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: ed3d06e1719b51d0914c89e6283c8b53c2ab0812
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 4f2ab696b728244e495ec04933b83eaafeeb3db0
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530504"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616973"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
@@ -134,7 +134,7 @@ Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescent
 
 - Microsoft 365 Defender
 
-  Den forbedrede [Microsoft 365 Defender-portal](https://security.microsoft.com) er nu tilgængelig. Denne nye oplevelse samler Defender for Endpoint, Defender for Office 365, Defender for Identity og meget mere i en enkelt portal. Dette er det nye hjem, hvor du kan administrere dine sikkerhedskontrolelementer. [Få mere at vide om nyheder](./microsoft-365-defender.md#the-microsoft-365-defender-portal).
+  Den forbedrede [Microsoft 365 Defender-portal](https://security.microsoft.com) er nu tilgængelig. Denne nye oplevelse samler Defender for Endpoint, Defender for Office 365, Defender for Identity og meget mere i en enkelt portal. Dette er det nye hjem, hvor du kan administrere dine sikkerhedskontrolelementer. [Få mere at vide om nyheder](microsoft-365-defender-portal.md).
 
 - [rapport over Microsoft 365 Defender trusselsanalyse](threat-analytics.md)
 

@@ -19,12 +19,12 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkDEFENDER
-ms.openlocfilehash: bac70dd864e1ab72fae5fbefa2a8da12cce4f6e7
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: dd8721bd8c62a99180f9e8cf34b05c5ec6c8b4c8
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64667224"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617188"
 ---
 # <a name="microsoft-defender-for-endpoint-in-microsoft-365-defender"></a>Microsoft Defender for Endpoint i Microsoft 365 Defender
 
@@ -57,7 +57,7 @@ Billedet og tabellen nedenfor viser ændringerne i navigationen mellem Microsoft
 | Konfigurationsstyring | Konfigurationsstyring |
 | Indstillinger | Indstillinger | 
 
-Den forbedrede [Microsoft 365 Defender](microsoft-365-defender.md#the-microsoft-365-defender-portal) at <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a> kombinerer sikkerhedsfunktioner, der beskytter, registrerer, undersøger og besvarer mail-, samarbejds-, identitets- og enhedstrusler. Dette samler funktioner fra eksisterende Microsoft-sikkerhedsportaler, herunder Microsoft Defender Security Center og Office 365 Security & Compliance Center.
+Den forbedrede [Microsoft 365 Defender](microsoft-365-defender-portal.md) at <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">https://security.microsoft.com</a> kombinerer sikkerhedsfunktioner, der beskytter, registrerer, undersøger og besvarer mail-, samarbejds-, identitets- og enhedstrusler. Dette samler funktioner fra eksisterende Microsoft-sikkerhedsportaler, herunder Microsoft Defender Security Center og Office 365 Security & Compliance Center.
 
 Hvis du kender Microsoft Defender Security Center, kan du i denne artikel beskrive nogle af ændringerne og forbedringerne i Microsoft 365 Defender. Der er dog nogle nye og opdaterede elementer, du skal være opmærksom på.
 
@@ -70,8 +70,8 @@ Microsoft Defender for Endpoint i Microsoft 365 Defender understøtter [tildelin
 
 > [!Note]
 > Microsoft 365 Defender er ikke tilgængelig for:
->- Amerikanske Government Community Cloud (GCC)
->- Amerikansk Government Community Cloud høj (GCC høj)
+>- US Government Community Cloud (GCC)
+>- US Government Community Cloud High (GCC High)
 >- Det amerikanske forsvarsministerium
 >- Alle amerikanske offentlige institutioner med kommercielle licenser
 
@@ -118,7 +118,7 @@ Denne tabel er en hurtig reference til ændringerne mellem Microsoft Defender Se
 | Sundhed  |  Linker i øjeblikket til siden "Tjenestetilstand" i [Microsoft 365 Administration](https://admin.microsoft.com/). |
 | Indstillinger |  Administrer dine indstillinger for Microsoft 365 Defender, Slutpunkter, Mail & samarbejde, Identiteter og Enhedsregistrering.   |
 
-## <a name="microsoft-365-security-navigation-and-capabilities"></a>Microsoft 365 sikkerhedsnavigation og -funktioner
+## <a name="microsoft-365-security-navigation-and-capabilities"></a>Microsoft 365-sikkerhedsnavigation og -funktioner
 
 Den venstre navigationslinje eller værktøjslinjen Hurtig start vil se bekendt ud. Der er dog nogle nye og opdaterede elementer på Microsoft 365 Defender portal. 
 
@@ -170,7 +170,7 @@ Få vist rapporter, rediger dine indstillinger, og rediger brugerroller.
 
 ### <a name="siem-api-connections"></a>SIEM API-forbindelser
 
-Hvis du bruger [Defender for Endpoint SIEM-API'en](../defender-endpoint/enable-siem-integration.md), kan du fortsætte med at gøre det. Vi har tilføjet nye links i API-nyttedataene, der peger på beskedsiden eller hændelsessiden på Microsoft 365 sikkerhedsportalen. Nye API-felter omfatter LinkToMTP og IncidentLinkToMTP. Du kan få flere oplysninger under [Omdirigering af konti fra Microsoft Defender for Endpoint til Microsoft 365 Defender](./microsoft-365-security-mde-redirection.md).
+Hvis du bruger [Defender for Endpoint SIEM-API'en](../defender-endpoint/enable-siem-integration.md), kan du fortsætte med at gøre det. Vi har tilføjet nye links i API-nyttedataene, der peger på beskedsiden eller hændelsessiden på Microsoft 365-sikkerhedsportalen. Nye API-felter omfatter LinkToMTP og IncidentLinkToMTP. Du kan få flere oplysninger under [Omdirigering af konti fra Microsoft Defender for Endpoint til Microsoft 365 Defender](./microsoft-365-security-mde-redirection.md).
 
 ### <a name="email-alerts"></a>Mailbeskeder
 

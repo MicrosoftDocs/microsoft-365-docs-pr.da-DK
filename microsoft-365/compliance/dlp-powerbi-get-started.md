@@ -1,5 +1,5 @@
 ---
-title: Introduktion til forebyggelse af datatab for Power BI
+title: Kom i gang med DLP til Power BI
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -19,89 +19,91 @@ ms.collection:
 ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
-description: Forbered og installer DLP til PowerBI-placeringer.
-ms.openlocfilehash: a1ea5321b77db1b4e7741f4d41cdd485adbd0b97
-ms.sourcegitcommit: 46456ca009c9d50622e57e24269be74986184654
+description: Forbered og udrul DLP på PowerBI-placeringer.
+ms.openlocfilehash: f831d42898e491258a53423c1d59b9f50c0b289d
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/22/2022
-ms.locfileid: "63717306"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616930"
 ---
-# <a name="get-started-with-data-loss-prevention-policies-for-power-bi-preview"></a>Introduktion til politikker til forebyggelse af datatab for Power BI (prøveversion)
+# <a name="get-started-with-data-loss-prevention-policies-for-power-bi-preview"></a>Kom i gang med politikker til forebyggelse af datatab for Power BI (prøveversion)
 
-For at hjælpe organisationer med at registrere og beskytte deres følsomme data [Microsoft 365 DLP-politik (forebyggelse af datatab) understøtter](/microsoft-365/compliance/dlp-learn-about-dlp) Power BI. Når et PowerBI-datasæt opfylder kriterierne i en DLP-politik, kan der udløses en besked, der forklarer karakteren af det følsomme indhold. Denne besked er også registreret på fanen beskeder om forebyggelse af datatab i **Microsoft-overholdelsesportalen** for overvågning og administration af administratorer. Desuden kan mailbeskeder sendes til administratorer og bestemte brugere.
+[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+
+For at hjælpe organisationer med at registrere og beskytte deres følsomme data understøtter [Microsoft Purview politikker til forebyggelse af datatab (DLP)](/microsoft-365/compliance/dlp-learn-about-dlp) Power BI. Når et PowerBI-datasæt stemmer overens med kriterierne i en DLP-politik, kan en besked, der forklarer arten af det følsomme indhold, udløses. Denne besked er også registreret på fanen **beskeder** til forebyggelse af datatab på Microsofts overholdelsesportal til overvågning og administration af administratorer. Desuden kan mailbeskeder sendes til administratorer og angivne brugere.
 
 ## <a name="considerations-and-limitations"></a>Overvejelser og begrænsninger
 
-- DLP-politikker gælder for arbejdsområder. Kun arbejdsområder, der er hostet Premium Gen2-kapaciteter, understøttes.
-- Evaluering af DLP-datasæt påvirker kapacitet. Efter forbrug for DLP-evalueringsarbejdsbelastninger understøttes ikke.
-- Både den klassiske og den nye oplevelsesarbejdsområder understøttes, så længe de er hostet i Premium Gen2-kapacitet.
-- Du skal oprette en brugerdefineret DLP-brugerdefineret politik for Power BI. DLP-skabeloner understøttes ikke.
-- DLP-politik, der anvendes på DLP-placeringen, understøtter følsomhedsmærkater og typer af følsomme oplysninger som betingelser. 
-- DLP-politikker for Power BI understøttes ikke for eksempeldatasæt, [streamingdatasæt](/power-bi/connect-data/service-real-time-streaming) eller datasæt, der opretter forbindelse til deres datakilde via [DirectQuery](/power-bi/connect-data/desktop-use-directquery) eller [en direkte forbindelse](/power-bi/connect-data/desktop-directquery-about#live-connections).
-- DLP-politikker for Power BI ikke i nationale skyer.
+- DLP-politikker gælder for arbejdsområder. Det er kun arbejdsområder, der hostes i Premium Gen2-kapaciteter, der understøttes. Du kan få flere oplysninger under [Hvad er Power BI Premium Gen2?](/power-bi/enterprise/service-premium-gen2-what-is).
+- DLP-arbejdsbelastninger til evaluering af datasæt påvirker kapaciteten. Måling af DLP-evalueringsarbejdsbelastninger understøttes ikke.
+- Arbejdsområder med både den klassiske og den nye oplevelse understøttes, så længe de hostes i Premium Gen2-kapaciteter.
+- Du skal oprette en brugerdefineret DLP-politik til Power BI. DLP-skabeloner understøttes ikke.
+- DLP-politikker, der anvendes på DLP-placeringen, understøtter følsomhedsmærkater og følsomme oplysningstyper som betingelser. 
+- DLP-politikker for Power BI understøttes ikke for eksempeldatasæt, [streamingdatasæt](/power-bi/connect-data/service-real-time-streaming) eller datasæt, der opretter forbindelse til deres datakilde via [DirectQuery](/power-bi/connect-data/desktop-use-directquery) eller [direkte forbindelse](/power-bi/connect-data/desktop-directquery-about#live-connections).
+- DLP-politikker for Power BI understøttes ikke i nationale cloudmiljøer.
 
 ## <a name="licensing-and-permissions"></a>Licenser og tilladelser
 
-### <a name="skusubscriptions-licensing"></a>SKU/abonnementslicenser
+### <a name="skusubscriptions-licensing"></a>LICENSER TIL SKU/abonnementer
 
-Før du går i gang med DLP til Power BI, skal du bekræfte dit [Microsoft 365 abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1). Du kan se den fulde [licensvejledning Microsoft 365 vejledning til sikkerhed og & overholdelse af regler og standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+Før du går i gang med DLP til Power BI, skal du bekræfte dit [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1). Du kan finde en komplet licensvejledning i [Microsoft 365-vejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 ### <a name="permissions"></a>Tilladelser
 
-Data fra DLP til Power BI kan ses i [Aktivitetsoversigt](/microsoft-365/compliance/data-classification-activity-explorer). Der er fire roller, der giver tilladelse til aktivitetsstifinder. den konto, du bruger til at få adgang til dataene, skal være medlem af en af dem.
+Data fra DLP til Power BI kan ses i [Aktivitetsoversigt](/microsoft-365/compliance/data-classification-activity-explorer). Der er fire roller, der giver tilladelse til aktivitetsoversigten. den konto, du bruger til at få adgang til dataene, skal være medlem af en hvilken som helst af dem.
 
 - Global administrator
 - Overholdelsesadministrator
 - Sikkerhedsadministrator
-- Dataadministrator for overholdelse af regler og standarder
+- Administrator af overholdelsesdata
 
-## <a name="how-dlp-policies-for-power-bi-work"></a>Sådan fungerer DLP-politikker Power BI arbejde
+## <a name="how-dlp-policies-for-power-bi-work"></a>Sådan fungerer DLP-politikker for Power BI
 
-Du definerer en DLP-politik i afsnittet til forebyggelse af datatab på overholdelsesportalen. Se [Designe en politik til forebyggelse af datatab](dlp-policy-design.md#design-a-data-loss-prevention-policy). I politikken angiver du følsomhedsmærkater, du vil registrere. Du kan også angive den eller de handlinger, der skal ske, når politikken registrerer et datasæt, hvor der er anvendt en bestemt følsomhedsmærkat. DLP-politikker understøtter to handlinger for Power BI:
+Du definerer en DLP-politik i afsnittet om forebyggelse af datatab på overholdelsesportalen. Se [Design en politik til forebyggelse af datatab](dlp-policy-design.md#design-a-data-loss-prevention-policy). I politikken skal du angive følsomhedsmærkat(er), du vil registrere. Du kan også angive den eller de handlinger, der skal udføres, når politikken registrerer et datasæt, hvor der er anvendt en angivet følsomhedsmærkat. DLP-politikker understøtter to handlinger til Power BI:
 
 - Brugermeddelelse via politiktip.
-- Beskeder. Beskeder kan sendes via mail til administratorer og brugere. Administratorer kan desuden overvåge og administrere beskeder på fanen **Beskeder** i Overholdelsescenter. 
+- Indberetninger. Beskeder kan sendes via mail til administratorer og brugere. Derudover kan administratorer overvåge og administrere beskeder under fanen **Beskeder** i Overholdelsescenter. 
 
-Når et datasæt evalueres af DLP og opfylder betingelserne i en DLP-politik, anvendes de handlinger, der er defineret i politikken. Et datasæt evalueres, når et datasæt er:
+Når et datasæt evalueres af DLP og stemmer overens med betingelserne i en DLP-politik, anvendes de handlinger, der er defineret i politikken. Et datasæt evalueres, når et datasæt er:
 
-- Publicer
-- Genudgiv
+- Udgive
+- Genudgive
 - Opdatering efter behov
 - Planlagt opdatering
 
 >[!NOTE]
-> DLP-evaluering af datasættet sker ikke, hvis et af følgende gælder:
-> - Initiatoren af hændelsen er en tjenesteinspektør.
-> - Datasætejeren er enten en tjenesteinspektør eller en B2B-bruger.
+> DLP-evalueringen af datasættet forekommer ikke, hvis et af følgende er sandt:
+> - Initiatoren af hændelsen er en tjenesteprincipal.
+> - Ejeren af datasættet er enten en tjenesteprincipal eller en B2B-bruger.
 
-### <a name="what-happens-when-a-dataset-matches-a-dlp-policy"></a>Hvad sker der, når et datasæt svarer til en DLP-politik
+### <a name="what-happens-when-a-dataset-matches-a-dlp-policy"></a>Hvad sker der, når et datasæt stemmer overens med en DLP-politik?
 
 Når et datasæt svarer til en DLP-politik:
 
-- Hvis politikken har konfigureret en brugermeddelelse, markeres den i Power BI-tjenesten med et skjoldikon for at indikere, at den svarer til en DLP-politik.
+- Hvis politikken har konfigureret en brugermeddelelse, markeres den i Power BI-tjeneste med et skjoldikon for at angive, at den svarer til en DLP-politik.
 
     ![Skærmbillede af badge med politiktip på datasæt på lister.](../media/dlp-power-bi-policy-tip-on-dataset.png)
 
-    Åbn siden med oplysninger om datasæt for at få vist et politiktip, der forklarer matchet med politikken, og hvordan den registrerede type af følsomme oplysninger skal håndteres.
+    Åbn siden med oplysninger om datasæt for at se et politiktip, der forklarer, hvordan politikken matcher, og hvordan den registrerede type følsomme oplysninger skal håndteres.
 
     ![Skærmbillede af politiktip på siden med oplysninger om datasæt.](../media/dlp-power-bi-policy-tip-in-dataset-details.png)
 
     >[!NOTE]
-    > Hvis du skjuler politiktippen, slettes den ikke. Den vises, næste gang du besøger siden.
+    > Hvis du skjuler politiktip, slettes det ikke. Den vises, næste gang du besøger siden.
 
-- Hvis beskeder er aktiveret i politikken, registreres en besked på fanen **dlp-beskeder i overholdelsescenteret** , og (hvis konfigureret) sendes der en mail til administratorer og/eller bestemte brugere. Følgende billede viser fanen **Beskeder i sektionen** til forebyggelse af datatab i overholdelsescenteret.
+- Hvis beskeder er aktiveret i politikken, registreres der en besked under fanen **dlp-beskeder** i Overholdelsescenter, og (hvis den er konfigureret) sendes der en mail til administratorer og/eller angivne brugere. På følgende billede vises fanen **Beskeder** i afsnittet forebyggelse af datatab i Microsoft Purview-compliance-portal.
 
-    ![Skærmbillede af fanen Beskeder i overholdelsescenteret.](../media/dlp-power-bi-alerts-tab.png)
+    ![Skærmbillede af fanen Beskeder i Overholdelsescenter.](../media/dlp-power-bi-alerts-tab.png)
 
 ## <a name="configure-a-dlp-policy-for-power-bi"></a>Konfigurer en DLP-politik for Power BI
 
-Følg fremgangsmåderne i [Opret, test og finjuster en DLP-politik,](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy) og brug den brugerdefinerede skabelon.
+Følg procedurerne i [Opret, test og tilpas en DLP-politik,](create-test-tune-dlp-policy.md#create-test-and-tune-a-dlp-policy) og brug den brugerdefinerede skabelon.
 
 > [!IMPORTANT]
-> Når du vælger placeringer til din DLP-politik for Power BI, skal du kun vælge Power BI placering. Vælg ikke andre placeringer. Denne konfiguration understøttes ikke. 
+> Når du vælger placeringerne for din DLP-politik for Power BI, skal du kun vælge Power BI-placeringen. Undlad at vælge andre placeringer. Denne konfiguration understøttes ikke. 
 
-<!--1. Log into the [Microsoft 365 compliance portal](https://compliance.microsoft.com).
+<!--1. Log into the [Microsoft Purview compliance portal](https://compliance.microsoft.com).
 
 1. Choose the **Data loss prevention** solution in the navigation pane, select the **Policies** tab, choose **Create policy**.
 
@@ -221,7 +223,7 @@ Assign a severity level that will be shown in alerts generated from this policy.
  
 ## Monitor and manage policy alerts
 
-Log into the Microsoft 365 compliance portal and navigate to **Data loss prevention > Alerts**.
+Log into the Microsoft Purview compliance portal and navigate to **Data loss prevention > Alerts**.
 
 ![Screenshot of D L P Alerts tab.](media/service-security-dlp-policies-for-power-bi/power-bi-dlp-alerts-tab.png)
 

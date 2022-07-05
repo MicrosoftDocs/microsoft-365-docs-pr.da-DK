@@ -22,16 +22,16 @@ ms.custom:
 - seo-marvel-mar2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ca64509321ff43bbe8b7baf7ec7dfa270d9afdc4
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: 0fda154f8eb52ddab024a7f5bb02f980c9a05894
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941517"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617146"
 ---
 # <a name="automated-investigation-and-response-air-in-microsoft-defender-for-office-365"></a>Automatiseret undersøgelse og reaktion (AIR) i Microsoft Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
@@ -81,25 +81,25 @@ AIR-funktioner er inkluderet i [Microsoft Defender for Office 365](defender-for-
 - [Beskyttelse mod malware](protect-against-threats.md#part-1---anti-malware-protection-in-eop)
 - [Beskyttelse mod phishing](../office-365-security/protect-against-threats.md#part-2---anti-phishing-protection-in-eop-and-defender-for-office-365)
 - [Beskyttelse mod spam](protect-against-threats.md#part-3---anti-spam-protection-in-eop)
-- [Pengeskab links og Pengeskab vedhæftede filer](protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
+- [Sikre links og vedhæftede filer, der er tillid til](protect-against-threats.md#part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365)
 
 Derudover skal du sørge for at [gennemse organisationens politikker for beskeder](../../compliance/alert-policies.md), især [standardpolitikkerne i kategorien Trusselsadministration](../../compliance/alert-policies.md#default-alert-policies).
 
 ## <a name="which-alert-policies-trigger-automated-investigations"></a>Hvilke beskedpolitikker udløser automatiserede undersøgelser?
 
-Microsoft 365 indeholder mange indbyggede beskedpolitikker, der hjælper med at identificere Exchange misbrug af administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler og risici i forbindelse med styring af oplysninger. Flere af [standardpolitikkerne for beskeder](../../compliance/alert-policies.md#default-alert-policies) kan udløse automatiserede undersøgelser. I følgende tabel beskrives de beskeder, der udløser automatiserede undersøgelser, deres alvorsgrad på Microsoft 365 Defender portalen, og hvordan de genereres:
+Microsoft 365 indeholder mange indbyggede beskedpolitikker, der hjælper med at identificere misbrug af Exchange-administratortilladelser, malwareaktivitet, potentielle eksterne og interne trusler og risici for styring af oplysninger. Flere af [standardpolitikkerne for beskeder](../../compliance/alert-policies.md#default-alert-policies) kan udløse automatiserede undersøgelser. I følgende tabel beskrives de beskeder, der udløser automatiserede undersøgelser, deres alvorsgrad på Microsoft 365 Defender portalen, og hvordan de genereres:
 
 |Besked|Sværhedsgraden|Sådan genereres beskeden|
 |---|---|---|
-|Der blev registreret et potentielt skadeligt klik på URL-adressen|**Høj**|Denne besked genereres, når en af følgende opstår: <ul><li>En bruger, der er beskyttet af [Pengeskab Links](safe-links.md) i din organisation, klikker på et skadeligt link</li><li>Ændringer af dom for URL-adresser identificeres af Microsoft Defender for Office 365</li><li>Brugere tilsidesætter advarselssider for Pengeskab links (baseret på organisationens [politik for Pengeskab links](set-up-safe-links-policies.md).</li></ul> <p> Du kan få flere oplysninger om hændelser, der udløser denne besked, under [Konfigurer politikker for Pengeskab links](set-up-safe-links-policies.md).|
+|Der blev registreret et potentielt skadeligt klik på URL-adressen|**Høj**|Denne besked genereres, når en af følgende opstår: <ul><li>En bruger, der er beskyttet af [sikre links](safe-links.md) i din organisation, klikker på et skadeligt link</li><li>Ændringer af dom for URL-adresser identificeres af Microsoft Defender for Office 365</li><li>Brugere tilsidesætter advarselssider for Sikre links (baseret på organisationens [politik for sikre links](set-up-safe-links-policies.md).</li></ul> <p> Du kan få flere oplysninger om hændelser, der udløser denne besked, under [Konfigurer politikker for sikre links](set-up-safe-links-policies.md).|
 |En mail rapporteres af en bruger som malware eller phish|**Informative**|Denne besked genereres, når brugere i organisationen rapporterer meddelelser som phishing-mail ved hjælp af [tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md) eller [tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md).|
 |Mails, der indeholder malware, fjernes efter levering|**Informative**|Denne besked genereres, når alle mails, der indeholder malware, leveres til postkasser i din organisation. Hvis denne hændelse indtræffer, fjerner Microsoft de inficerede meddelelser fra Exchange Online postkasser ved hjælp af [automatisk tømning på nul timer (ZAP).](zero-hour-auto-purge.md)|
 |Mails, der indeholder phish-URL-adresser, fjernes efter levering|**Informative**|Denne besked genereres, når alle meddelelser, der indeholder phish, leveres til postkasser i din organisation. Hvis denne hændelse opstår, fjerner Microsoft de inficerede meddelelser fra Exchange Online postkasser ved hjælp af [ZAP](zero-hour-auto-purge.md).|
 |Der registreres mistænkelige mønstre for afsendelse af mail|**Medium**|Denne besked genereres, når en person i din organisation har sendt mistænkelig mail og er i fare for at blive begrænset fra at sende mail. Beskeden er en tidlig advarsel om funktionsmåde, der kan indikere, at kontoen er kompromitteret, men ikke alvorlig nok til at begrænse brugeren. <p> Selvom det er sjældent, kan en besked, der genereres af denne politik, være en uregelmæssighed. Det er dog en god idé at [kontrollere, om brugerkontoen er kompromitteret](responding-to-a-compromised-email-account.md).|
-|En bruger er begrænset til at sende mail|**Høj**|Denne besked genereres, når en person i din organisation er begrænset til at sende udgående mails. Denne besked opstår typisk, når en [mailkonto kompromitteres](responding-to-a-compromised-email-account.md). <p> Du kan få flere oplysninger om brugere med begrænset adgang under [Fjern blokerede brugere fra portalen Brugere med begrænset adgang i Microsoft 365](removing-user-from-restricted-users-portal-after-spam.md).|
+|En bruger er begrænset til at sende mail|**Høj**|Denne besked genereres, når en person i din organisation er begrænset til at sende udgående mails. Denne besked opstår typisk, når en [mailkonto kompromitteres](responding-to-a-compromised-email-account.md). <p> Du kan få flere oplysninger om begrænsede brugere i [Fjern blokerede brugere fra portalen Brugere med begrænset adgang i Microsoft 365](removing-user-from-restricted-users-portal-after-spam.md).|
 
 > [!TIP]
-> Hvis du vil vide mere om politikker for beskeder eller redigere standardindstillingerne, skal du se [Beskedpolitikker på Microsoft Purview-overholdelsesportalen](../../compliance/alert-policies.md).
+> Hvis du vil vide mere om politikker for beskeder eller redigere standardindstillingerne, skal du se [Beskedpolitikker i Microsoft Purview-compliance-portal](../../compliance/alert-policies.md).
 
 ## <a name="required-permissions-to-use-air-capabilities"></a>Påkrævede tilladelser til at bruge AIR-funktioner
 
@@ -120,7 +120,7 @@ Tilladelser tildeles via visse roller, f.eks. dem, der er beskrevet i følgende 
 
 ## <a name="changes-are-coming-soon-in-your-microsoft-365-defender-portal"></a>Ændringer kommer snart på Microsoft 365 Defender-portalen
 
-Hvis du allerede bruger AIR-funktioner i Microsoft Defender for Office 365, kan du se nogle ændringer i den [forbedrede Microsoft 365 Defender portal](../defender/microsoft-365-defender.md#the-microsoft-365-defender-portal).
+Hvis du allerede bruger AIR-funktioner i Microsoft Defender for Office 365, kan du se nogle ændringer i den [forbedrede Microsoft 365 Defender portal](../defender/microsoft-365-defender-portal.md).
 
 :::image type="content" source="../../media/m3d-action-center-unified.png" alt-text="Unified Action Center" lightbox="../../media/m3d-action-center-unified.png":::
 

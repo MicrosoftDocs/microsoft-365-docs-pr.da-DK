@@ -14,12 +14,12 @@ ms.collection:
 ms.custom: admindeeplinkSPO
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du opretter en formularbehandlingsmodel i SharePoint Syntex.
-ms.openlocfilehash: bf0a15894e7b9bbc4905a0372d557e1880650e84
-ms.sourcegitcommit: 2d870e06e87b10d9e8ec7a7a8381353bc3bc59c7
+ms.openlocfilehash: b44dc34b2b57c75f5fefea074cd74fa0b686bcaa
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65349810"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617210"
 ---
 # <a name="create-a-form-processing-model-in-microsoft-sharepoint-syntex"></a>Opret en formularbehandlingsmodel i Microsoft SharePoint Syntex
 
@@ -29,7 +29,7 @@ ms.locfileid: "65349810"
 
 </br>
 
-Brug af [AI Builder](/ai-builder/overview) – en funktion i Microsoft Power Apps – SharePoint Syntex brugere kan oprette en [formularbehandlingsmodel](form-processing-overview.md) direkte fra et SharePoint dokumentbibliotek. 
+Brug af [AI Builder](/ai-builder/overview) – en funktion i Microsoft Power Apps – SharePoint Syntex brugere kan oprette en [formularbehandlingsmodel](form-processing-overview.md) direkte fra et SharePoint-dokumentbibliotek. 
 
 Oprettelse af en formularbehandlingsmodel omfatter følgende trin:
 
@@ -41,7 +41,7 @@ Oprettelse af en formularbehandlingsmodel omfatter følgende trin:
 
 ## <a name="requirements"></a>Krav
 
-Du kan kun oprette en formularbehandlingsmodel i SharePoint dokumentbiblioteker, som den er aktiveret for. Hvis formularbehandling er aktiveret, kan du se **AutomateAI** >  **BuilderOpret** >  **en model til behandling af formularmenuen** i dokumentbiblioteket. Hvis behandlingen skal være aktiveret i dokumentbiblioteket, skal du kontakte SharePoint administrator.
+Du kan kun oprette en formularbehandlingsmodel i De SharePoint-dokumentbiblioteker, som den er aktiveret for. Hvis formularbehandling er aktiveret, kan du se menuen **Automatiser** > **AI Builder** > **Opret en model til behandling af formularer** i dokumentbiblioteket. Hvis du har brug for at få aktiveret behandling i dokumentbiblioteket, skal du kontakte SharePoint-administratoren.
 
 ![Skærmbillede, der viser AI Builder-modellen.](../media/content-understanding/create-ai-builder-model2.png)
 
@@ -57,7 +57,7 @@ Det første trin i oprettelsen af en model til formularbehandling er at navngive
 
     ![Skærmbillede, der viser panelet Opret en model til behandling af formularer.](../media/content-understanding/new-form-model2.png) 
 
-3. Du kan nu automatisk udtrække og gemme oplysninger fra en *samling* strukturerede filer, der deler et lignende layout, f.eks. fakturaer eller skattedokumenter, som findes i et SharePoint dokumentbibliotek. Det giver dig mulighed for at oprette flere modeller i en enkelt model og udtrække specifikke oplysninger om tabelelement.
+3. Du kan nu automatisk udtrække og gemme oplysninger fra en *samling* strukturerede filer, der deler et lignende layout, f.eks. fakturaer eller momsdokumenter, som findes i et SharePoint-dokumentbibliotek. Det giver dig mulighed for at oprette flere modeller i en enkelt model og udtrække specifikke oplysninger om tabelelement.
 
    Samlingens navn gemmes i en dedikeret kolonne i det dokumentbibliotek, hvor modellen anvendes, hvilket giver dig mulighed for at skelne mellem forskellige fillayout, der behandles af den samme model.
 
@@ -75,9 +75,9 @@ Det første trin i oprettelsen af en model til formularbehandling er at navngive
 
         - Hvis du vælger **En eksisterende liste**, skal du vælge den liste, du vil bruge, på **listen Valgt** .
 
-4. Når du opretter en formularbehandlingsmodel, opretter du en ny SharePoint indholdstype. En SharePoint indholdstype repræsenterer en kategori af dokumenter, der har fælles egenskaber og deler en samling af kolonner eller metadataegenskaber for det pågældende indhold. SharePoint indholdstyper administreres via <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
+4. Når du opretter en formularbehandlingsmodel, opretter du en ny SharePoint-indholdstype. En SharePoint-indholdstype repræsenterer en kategori af dokumenter, der har fælles egenskaber, og som deler en samling af kolonner eller metadataegenskaber for det pågældende indhold. SharePoint-indholdstyper administreres via <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
 
-   Hvis du vil knytte denne model til en eksisterende indholdstype i galleriet med SharePoint indholdstyper, skal du vælge **Avancerede indstillinger**.
+   Hvis du vil knytte denne model til en eksisterende indholdstype i galleriet med SharePoint-indholdstyper, skal du vælge **Avancerede indstillinger**.
 
     ![Skærmbillede, der viser avancerede indstillinger i panelet Opret en model til behandling af formularer.](../media/content-understanding/new-form-model-advanced-settings.png) 
 
@@ -93,7 +93,7 @@ Det første trin i oprettelsen af en model til formularbehandling er at navngive
 
 ## <a name="step-2-add-and-analyze-documents"></a>Trin 2: Tilføj og analysér dokumenter
 
-Når du har oprettet din nye formularbehandlingsmodel, åbner browseren en ny Power Apps modelsiden til behandling af AI Builder-formularer. På denne side kan du tilføje og analysere dine eksempeldokumenter. 
+Når du har oprettet din nye formularbehandlingsmodel, åbner browseren en ny side med en formularbehandlingsmodel i Power Apps AI Builder. På denne side kan du tilføje og analysere dine eksempeldokumenter. 
 
 > [!NOTE]
 > Når du kigger efter eksempelfiler, der skal bruges, kan du se [kravene til inputdokumentet til formularbehandlingsmodellen og tip til optimering](/ai-builder/form-processing-model-requirements). 
@@ -112,7 +112,7 @@ Du skal mærke dokumenterne for at lære modellen at kende for at forstå de fel
 
 1. Når du har oprettet og oplært din model, er du klar til at publicere den og bruge den i SharePoint. Du kan finde detaljerede trin under [Oplær og publicer din formularbehandlingsmodel](/ai-builder/form-processing-train). 
 
-2. Når modellen er publiceret, skal du vælge **Brug model** og derefter vælge **Opret flow**. Dette opretter et Power Automate flow, der kan køre i SharePoint dokumentbibliotek, og som udtrækker de felter, der er identificeret i modellen.
+2. Når modellen er publiceret, skal du vælge **Brug model** og derefter vælge **Opret flow**. Dette opretter et Power Automate-flow, der kan køre i SharePoint-dokumentbiblioteket, og som udtrækker de felter, der er blevet identificeret i modellen.
 
     ![Skærmbillede i AI Builder, der viser panelet Opret et flow.](../media/content-understanding/ai-builder-create-a-flow-1.png)
  
@@ -130,7 +130,7 @@ Du skal mærke dokumenterne for at lære modellen at kende for at forstå de fel
 
     ![Knappen Oplysninger.](../media/content-understanding/info-button.png)  
 
-3. Upload filer til dokumentbiblioteket. Alle filer, som modellen identificerer som indholdstype, viser filerne i visningen og viser de udtrukne data i kolonnerne.
+3. Overfør filer til dokumentbiblioteket. Alle filer, som modellen identificerer som indholdstype, viser filerne i visningen og viser de udtrukne data i kolonnerne.
 
     ![Gjort.](../media/content-understanding/doc-lib-done.png) 
 
@@ -141,11 +141,11 @@ Du skal mærke dokumenterne for at lære modellen at kende for at forstå de fel
 
 Der er to flow tilgængelige til behandling af en valgt fil eller batch af filer i et bibliotek, hvor der er anvendt en formularbehandlingsmodel.
 
-- **Udtræk oplysninger fra et billede eller en PDF-fil med en formularbehandlingsmodel** – Bruges til at udtrække tekst fra et markeret billede eller en PDF-fil ved at køre en formularbehandlingsmodel. Understøtter en enkelt valgt fil ad gangen og understøtter kun PDF-filer og billedfiler (PNG, JPG og JPEG). Hvis du vil køre flowet, skal du vælge en fil og derefter vælge **AutomateExtract-oplysninger** > .
+- **Udtræk oplysninger fra et billede eller en PDF-fil med en formularbehandlingsmodel** – Bruges til at udtrække tekst fra et markeret billede eller en PDF-fil ved at køre en formularbehandlingsmodel. Understøtter en enkelt valgt fil ad gangen og understøtter kun PDF-filer og billedfiler (PNG, JPG og JPEG). Hvis du vil køre flowet, skal du vælge en fil og derefter vælge **Automatiser** > **udtræk oplysninger**.
 
     ![Skærmbillede, der viser menuen Automatiser med Udtræk oplysninger fremhævet.](../media/content-understanding/automate-extract-info.png)  
 
-- **Udtræk oplysninger fra filer med en formularbehandlingsmodel** – Bruges sammen med modeller til formularbehandling til at læse og udtrække oplysninger fra en batch af filer. Behandler op til 5.000 SharePoint filer ad gangen. Når du kører dette flow, er der visse parametre, du kan angive. Du kan:
+- **Udtræk oplysninger fra filer med en formularbehandlingsmodel** – Bruges sammen med modeller til formularbehandling til at læse og udtrække oplysninger fra en batch af filer. Behandler op til 5.000 SharePoint-filer ad gangen. Når du kører dette flow, er der visse parametre, du kan angive. Du kan:
 
     - Vælg, om tidligere behandlede filer skal medtages (standarden er ikke at inkludere tidligere behandlede filer).
     - Vælg det antal filer, der skal behandles (standarden er 100 filer).
@@ -153,16 +153,19 @@ Der er to flow tilgængelige til behandling af en valgt fil eller batch af filer
     - Angiv, hvordan rækkefølgen skal sorteres (stigende eller faldende rækkefølge).
 
     ![Skærmbillede, der viser panelet Kør flow med parameterindstillinger fremhævet.](../media/content-understanding/run-flow-panel.png)  
+    
+> [!NOTE]
+> **Udtræk oplysninger fra et billede eller en PDF-fil med et flow for en formularbehandlingsmodel** er automatisk tilgængelige for et bibliotek med en model til formularbehandling tilknyttet. **Udpak oplysninger fra filer med et modelflow til formularbehandling** er en skabelon, der skal føjes til biblioteket, hvis det er nødvendigt.
 
 ### <a name="classification-date-field"></a>Feltet Klassificeringsdato
 
 Når der anvendes en SharePoint Syntex formularbehandlingsmodel (eller en model til dokumentforståelse) på et dokumentbibliotek, medtages feltet **Klassificeringsdato** i biblioteksskemaet. Dette felt er som standard tomt. Når dokumenter behandles og klassificeres af en model, opdateres dette felt dog med et dato/klokkeslætsstempel for færdiggørelse. 
 
-Når en model stemples med **klassificeringsdatoen**, kan du bruge **Send en mail, når SharePoint Syntex behandler et filflow**, til at give brugerne besked om, at en ny fil er blevet behandlet og klassificeret af en model i SharePoint dokumentbibliotek.
+Når en model stemples med **klassificeringsdatoen**, kan du bruge **Send en mail, når SharePoint Syntex behandler et filflow**, til at give brugerne besked om, at en ny fil er blevet behandlet og klassificeret af en model i SharePoint-dokumentbiblioteket.
 
 Sådan kører du flowet:
 
-1. Vælg en fil, og vælg derefter **Integrer** >  **Power Automate** >  **Opret et flow**.
+1. Vælg en fil, og vælg derefter **Integrer** > **Power Automate** > **Opret et flow**.
 
 2. På panelet **Opret et flow** skal du vælge **Send en mail, når SharePoint Syntex behandler en fil**.
 
@@ -170,6 +173,6 @@ Sådan kører du flowet:
 
 ## <a name="see-also"></a>Se også
   
-[dokumentation til Power Automate](/power-automate/)
+[Dokumentation til Power Automate](/power-automate/)
 
 [Oplæring: Øg virksomhedens ydeevne med AI Builder](/learn/paths/improve-business-performance-ai-builder/?source=learn)

@@ -15,12 +15,12 @@ ms.custom:
 search.appverid: MET150
 ms.localizationpriority: high
 description: Konfigurer SharePoint Syntex
-ms.openlocfilehash: 97d12527667de1583f787844da11a4ad875f34ba
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: 3511719e4f396141217a2b4711f642c675ac781e
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463137"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617232"
 ---
 # <a name="set-up-sharepoint-syntex"></a>Konfigurer SharePoint Syntex
 
@@ -28,20 +28,20 @@ Administratorer kan bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=202
 
 Overvej følgende, før du starter:
 
-- På hvilke SharePoint websteder vil du aktivere formularbehandling? Alle dem, nogle, eller vælg websteder?
+- På hvilke SharePoint-websteder vil du aktivere formularbehandling? Alle dem, nogle, eller vælg websteder?
 - Hvad vil du kalde dit standardindholdscenter?
 
 Du kan ændre dine indstillinger efter den indledende konfiguration i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.
 
 Før du konfigurerer, skal du sørge for at planlægge den bedste måde at konfigurere forståelse af indhold på i dit miljø. Du skal f.eks. træffe følgende beslutninger:
 
-- De SharePoint websteder, hvor du vil aktivere formularbehandling – dem alle, nogle eller valgte websteder
+- De SharePoint-websteder, hvor du vil aktivere formularbehandling – dem alle, nogle eller valgte websteder
 - Navn og administratorer for dit indholdscenter
 
 ## <a name="requirements"></a>Krav 
 
 > [!NOTE]
-> Du skal have tilladelser som global administrator eller SharePoint administrator for at kunne få adgang til Microsoft 365 Administration og konfigurere SharePoint Syntex.
+> Du skal have tilladelser som global administrator eller SharePoint-administrator for at kunne få adgang til Microsoft 365 Administration og konfigurere SharePoint Syntex.
 
 Som administrator kan du også foretage ændringer af dine valgte indstillinger når som helst efter konfigurationen og i hele indstillingerne for administration af indhold i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.
 
@@ -57,13 +57,13 @@ Brugere, der opretter modeller på et [indholdscenterwebsted](/microsoft-365/con
 
 ### <a name="licensing"></a>Licensering
 
-Hvis du vil bruge SharePoint Syntex, skal din organisation have et abonnement på SharePoint Syntex, og hver bruger skal have tildelt følgende licenser:
+Hvis du vil bruge SharePoint Syntex, skal din organisation have et abonnement på SharePoint Syntex, og hver bruger skal have tildelt en licens. SharePoint Syntex licenser omfatter følgende apps, som alle skal tildeles:
 
 - SharePoint Syntex
 - SharePoint Syntex – SPO-type
 - Common Data Service til SharePoint Syntex
 
-Hvis du vil bruge formularbehandling, skal du også bruge AI Builder-kreditter. Hvis du har 300 eller flere licenserede brugere, gives der hver måned en tildeling af AI Builder-kreditter.
+Hvis du vil bruge formularbehandling, skal du også bruge AI Builder-kreditter. For hver licenseret bruger af SharePoint Syntex gives der en allokering af AI Builder-kreditter hver måned.
 
 Du kan finde flere oplysninger om SharePoint Syntex licenser under [SharePoint Syntex licenser](syntex-licensing.md)
 
@@ -78,12 +78,12 @@ Du kan finde flere oplysninger om SharePoint Syntex licenser under [SharePoint S
     > [!div class="mx-imgBorder"]
     > ![Start konfigurationen.](../media/content-understanding/admin-content-understanding-get-started.png)</br>
 
-4. På siden **Konfigurer formularbehandling** kan du vælge, om du vil give brugerne mulighed for at oprette modeller til formularbehandling i bestemte SharePoint dokumentbiblioteker. Der er en menuindstilling tilgængelig på båndet i dokumentbiblioteket, hvor du kan **oprette en formularbehandlingsmodel** i SharePoint dokumentbiblioteker, hvor den er aktiveret.
+4. På siden **Konfigurer formularbehandling** kan du vælge, om du vil give brugerne mulighed for at oprette modeller til formularbehandling i bestemte SharePoint-dokumentbiblioteker. Der er en menuindstilling tilgængelig på båndet i dokumentbiblioteket, hvor du kan **oprette en formularbehandlingsmodel** i De SharePoint-dokumentbiblioteker, hvor den er aktiveret.
  
-     **For hvilke SharePoint biblioteker skal vise muligheden for at oprette en formularbehandlingsmodel**, kan du vælge:</br>
-      - **Biblioteker på alle SharePoint websteder** for at gøre det tilgængeligt for alle SharePoint biblioteker i din organisation.</br>
-      - **Biblioteker på valgte SharePoint websteder**, og vælg derefter de websteder, hvor du vil gøre dem tilgængelige, eller upload en liste over op til 50 websteder.</br>
-      - **Ingen SharePoint biblioteker**, hvis du ikke vil gøre det tilgængeligt for nogen websteder (du kan ændre dette efter installationen).
+     **For hvilke SharePoint-biblioteker skal vise muligheden for at oprette en formularbehandlingsmodel**, kan du vælge:</br>
+      - **Biblioteker på alle SharePoint-websteder** for at gøre det tilgængeligt for alle SharePoint-biblioteker i din organisation.</br>
+      - **Biblioteker på valgte SharePoint-websteder**, og vælg derefter de websteder, hvor du vil gøre dem tilgængelige, eller upload en liste over op til 50 websteder.</br>
+      - **Ingen SharePoint-biblioteker** , hvis du ikke vil gøre det tilgængeligt for nogen websteder (du kan ændre dette efter konfigurationen).
 
    > [!div class="mx-imgBorder"]
    > ![Konfigurer indstillinger for formularbehandlingswebsted.](../media/content-understanding/admin-configforms.png)
@@ -101,7 +101,7 @@ Du kan finde flere oplysninger om SharePoint Syntex licenser under [SharePoint S
 
     Klik på **Næste**.
 
-5. På siden **Opret indholdscenter** kan du oprette et SharePoint indholdscenterwebsted, hvor dine brugere kan oprette og administrere modeller til dokumentforståelse. Hvis du tidligere har oprettet et indholdscenter fra SharePoint Administration, vises disse oplysninger her, og du kan blot vælge **Næste**.
+5. På siden **Opret indholdscenter** kan du oprette et SharePoint-indholdscenterwebsted, hvor brugerne kan oprette og administrere modeller til dokumentforståelse. Hvis du tidligere har oprettet et indholdscenter fra SharePoint Administration, vises disse oplysninger her, og du kan blot vælge **Næste**.
 
     1. Under **Navn på websted** skal du skrive det navn, du vil give dit indholdscenterwebsted.
     

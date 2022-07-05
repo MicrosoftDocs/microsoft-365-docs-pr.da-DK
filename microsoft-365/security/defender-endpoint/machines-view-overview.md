@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 81ff80776d3b12e4ec90d6d2c2473389686ae9c9
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 232f27b9edb23e932d49cf33e026d22abfbe72dd
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554461"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617320"
 ---
 # <a name="device-inventory"></a>Enhedslager
 
@@ -83,6 +83,11 @@ Brug kolonnen **Onboarding Status** til at sortere og filtrere efter registrered
 Under fanerne **Netværksenheder** og **IoT-enheder** kan du også se oplysninger som leverandør, model og enhedstype:
 
 ![Billede af listen over netværksenheder.](images/device-inventory-networkdevices.png)
+
+> [!NOTE]
+> Integrationer af enhedsregistrering med [Microsoft Defender til IoT](/azure/defender-for-iot/organizations/) og [Corelight](https://corelight.com/integrations/iot-security) er tilgængelige som en hjælp til at finde, identificere og sikre din komplette OT/IOT-aktivoversigt. Enheder, der registreres med disse integrationer, vises på fanen **IoT-enheder** . Du kan finde flere oplysninger under [Enhedsregistreringsintegrationer](device-discovery.md#device-discovery-integrations).
+>
+> Når Defender for IoT er konfigureret, kan du også få vist enhederne der. Se [Administrer dine IoT-enheder med enhedsoversigten for organisationer](/azure/defender-for-iot/organizations/how-to-manage-device-inventory-for-organizations).
 
 Øverst på hver enheds lagerfane kan du se det samlede antal enheder, antallet af enheder, der endnu ikke er onboardet, og antallet af enheder, der er blevet identificeret som en højere risiko for din organisation. Du kan bruge disse oplysninger til at hjælpe dig med at prioritere enheder i forbindelse med forbedringer af sikkerhedsholdning.
 

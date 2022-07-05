@@ -21,18 +21,18 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 03a7a070d574ec18a12c3e70d5cef20d2161490b
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 3604f163ddf8a14098d366f48aca2918b09f1e9e
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64663748"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66616984"
 ---
 # <a name="track-your-microsoft-secure-score-history-and-meet-goals"></a>Spor din Microsoft Secure Score-historik, og opdr. mål
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-[Microsoft Secure Score](microsoft-secure-score.md) er en måling af en organisations sikkerhedsholdning, hvor et højere antal angiver, at der er foretaget flere forbedringshandlinger. Du kan finde den på https://security.microsoft.com/securescore [Microsoft 365 Defender-portalen](microsoft-365-defender.md#the-microsoft-365-defender-portal).
+[Microsoft Secure Score](microsoft-secure-score.md) er en måling af en organisations sikkerhedsholdning, hvor et højere antal angiver, at der er foretaget flere forbedringshandlinger. Du kan finde den på https://security.microsoft.com/securescore [Microsoft 365 Defender-portalen](microsoft-365-defender-portal.md).
 
 ## <a name="gain-insights-into-activity-that-has-affected-your-score"></a>Få indsigt i aktiviteter, der har påvirket din score
 

@@ -20,18 +20,19 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 68503556a1d2f3330e47fe601a303363a3f28896
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 2e4939eb21a62c99ecf6572060213c87c2c01176
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623241"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617298"
 ---
 # <a name="device-discovery-overview"></a>Oversigt over enhedssøgning
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
+
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -107,7 +108,7 @@ Hvis du vil løse udfordringen med at få tilstrækkelig synlighed til at finde,
 
 ## <a name="vulnerability-assessment-on-discovered-devices"></a>Vurdering af sårbarheder på registrerede enheder
 
-Sikkerhedsrisici og risici på dine enheder samt andre registrerede ikke-administrerede enheder i netværket er en del af de aktuelle TVM-flow under "Sikkerheds Anbefalinger" og vises på enhedssider på tværs af portalen.
+Sikkerhedsrisici og risici på dine enheder samt andre registrerede ikke-administrerede enheder i netværket er en del af de aktuelle TVM-flow under "Sikkerhedsanbefalinger" og repræsenteres på enhedssider på tværs af portalen.
 Søg efter "SSH"-relaterede sikkerhedsanbefalinger for at finde SSH-sikkerhedsrisici, der er relateret til ikke-administrerede og administrerede enheder.
 
 :::image type="content" source="images/1156c82ffadd356ce329d1cf551e806c.png" alt-text="Dashboardet med sikkerhedsanbefalinger" lightbox="images/1156c82ffadd356ce329d1cf551e806c.png":::

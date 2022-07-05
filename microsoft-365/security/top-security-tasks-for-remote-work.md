@@ -17,12 +17,12 @@ ms.collection:
 - remotework
 ms.custom: admindeeplinkDEFENDER
 description: Beskyt din virksomheds mail og dine data mod cybertrusler, herunder ransomware, phishing og ondsindede vedhæftede filer.
-ms.openlocfilehash: 3c3a6ad89a795a45a0f76f868fbc6d23a52b963b
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: bc1dd84e83e5c5f1828e65203585d38acc28de5e
+ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319215"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "66617254"
 ---
 # <a name="top-12-tasks-for-security-teams-to-support-working-from-home"></a>Top 12-opgaver til sikkerhedsteams, der understøtter at arbejde hjemmefra
 
@@ -33,10 +33,10 @@ Hvis du er som [Microsoft](https://www.microsoft.com/microsoft-365/blog/2020/03/
 
 Hvis du er en lille eller mellemstor organisation, der bruger en af Microsofts forretningsplaner, kan du i stedet se disse ressourcer:
 
-- [Bedste praksis for sikring af Microsoft 365 til forretningsplaner](../admin/security-and-compliance/secure-your-business-data.md)
-- [Microsoft 365 til kampagner](../business-premium/index.md) (indeholder en anbefalet sikkerhedskonfiguration for Microsoft 365 business)
+- [Bedste praksis for sikring af Microsoft 365 til virksomheder-planer](../admin/security-and-compliance/secure-your-business-data.md)
+- [Microsoft 365 til kampagner](../business-premium/index.md) (indeholder en anbefalet sikkerhedskonfiguration til Microsoft 365 Business)
 
-For kunder, der bruger vores virksomhedsplaner, anbefaler Microsoft, at du udfører de opgaver, der er angivet i følgende tabel, som gælder for din serviceplan. Hvis du i stedet for at købe en Microsoft 365 enterprise-plan kombinerer abonnementer, skal du bemærke følgende:
+For kunder, der bruger vores virksomhedsplaner, anbefaler Microsoft, at du udfører de opgaver, der er angivet i følgende tabel, som gælder for din serviceplan. Hvis du i stedet for at købe en Microsoft 365 Enterprise-plan kombinerer abonnementer, skal du bemærke følgende:
 
 - Microsoft 365 E3 omfatter Enterprise Mobility + Security (EMS) E3 og Azure AD P1
 - Microsoft 365 E5 omfatter EMS E5 og Azure AD P2
@@ -58,7 +58,7 @@ For kunder, der bruger vores virksomhedsplaner, anbefaler Microsoft, at du udfø
 |11|[Kom i gang med Microsoft Defender for Cloudapps](#11-get-started-with-microsoft-defender-for-cloud-apps)|||![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 |12|[Overvåg for trusler, og udfør handlinger](#12-monitor-for-threats-and-take-action)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|![Inkluderet.](../media/d238e041-6854-4a78-9141-049224df0795.png)|
 
-Før du begynder, skal du kontrollere din [sikre score for Microsoft 365](./defender/microsoft-secure-score.md) på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">portalen Microsoft 365 Defender</a>. Fra et centraliseret dashboard kan du overvåge og forbedre sikkerheden for dine Microsoft 365 identiteter, data, apps, enheder og infrastruktur. Du får point for konfiguration af anbefalede sikkerhedsfunktioner, udførelse af sikkerhedsrelaterede opgaver (f.eks. visning af rapporter) eller løsning af anbefalinger med et tredjepartsprogram eller -software. De anbefalede opgaver i denne artikel øger din score.
+Før du begynder, skal du kontrollere din [Microsoft 365 Secure Score](./defender/microsoft-secure-score.md) på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>. Fra et centraliseret dashboard kan du overvåge og forbedre sikkerheden for dine Microsoft 365-identiteter, data, apps, enheder og infrastruktur. Du får point for konfiguration af anbefalede sikkerhedsfunktioner, udførelse af sikkerhedsrelaterede opgaver (f.eks. visning af rapporter) eller løsning af anbefalinger med et tredjepartsprogram eller -software. De anbefalede opgaver i denne artikel øger din score.
 
 :::image type="content" source="../media/secure-score.png" alt-text="Skærmen Microsoft Secure Score på Microsoft 365 Defender-portalen" lightbox="../media/secure-score.png":::
 
@@ -74,13 +74,13 @@ Det tager kun nogle få minutter at anvende disse politikker, men vær forberedt
 
 |Plan|Anbefaling|
 |---|---|
-|Microsoft 365 planer (uden Azure AD P1 eller P2)|[Aktivér sikkerhedsstandarder i Azure AD](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Sikkerhedsstandarder i Azure AD omfatter MFA for brugere og administratorer.|
+|Microsoft 365-planer (uden Azure AD P1 eller P2)|[Aktivér sikkerhedsstandarder i Azure AD](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Sikkerhedsstandarder i Azure AD omfatter MFA for brugere og administratorer.|
 |Microsoft 365 E3 (med Azure AD P1)|Brug [almindelige politikker for betinget adgang](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) til at konfigurere følgende politikker: <br/>- [Kræv MFA for administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br/>- [Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br/> - [Bloker ældre godkendelse](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)|
 |Microsoft 365 E5 (med Azure AD P2)|Ved at udnytte Azure AD identitetsbeskyttelse kan du begynde at implementere Microsofts [anbefalede sæt betinget adgang og relaterede politikker](./office-365-security/identity-access-policies.md) ved at oprette disse politikker:<br/> - [Kræv MFA, når logonrisikoen er mellem eller høj](./office-365-security/identity-access-policies.md#require-mfa-based-on-sign-in-risk) <br/>- [Bloker klienter, der ikke understøtter moderne godkendelse](./office-365-security/identity-access-policies.md#block-clients-that-dont-support-multi-factor)<br/>- [Brugere med høj risiko skal ændre adgangskode](./office-365-security/identity-access-policies.md#high-risk-users-must-change-password)|
 
 ## <a name="2-protect-against-threats"></a>2: Beskyt mod trusler
 
-Alle Microsoft 365 planer indeholder en række funktioner til trusselsbeskyttelse. Det tager kun et par minutter, før beskyttelsen af disse funktioner støder op.
+Alle Microsoft 365-planer indeholder en række funktioner til trusselsbeskyttelse. Det tager kun et par minutter, før beskyttelsen af disse funktioner støder op.
 
 - Beskyttelse mod malware
 - Beskyttelse mod skadelige URL-adresser og filer
@@ -103,9 +103,9 @@ Du kan få en oversigt, herunder en oversigt over planer, [under Defender for Of
 
 Den globale administrator kan konfigurere disse beskyttelser:
 
-- [Konfigurer politikker for Pengeskab links](office-365-security/set-up-safe-links-policies.md)
-- [Konfigurer globale indstillinger for Pengeskab links](office-365-security/configure-global-settings-for-safe-links.md)
-- [Konfigurer politikker for vedhæftede filer Pengeskab](office-365-security/set-up-safe-attachments-policies.md)
+- [Konfigurer politikker for sikre links](office-365-security/set-up-safe-links-policies.md)
+- [Konfigurer globale indstillinger for Sikre links](office-365-security/configure-global-settings-for-safe-links.md)
+- [Konfigurer politikker for vedhæftede filer, der er tillid til](office-365-security/set-up-safe-attachments-policies.md)
 
 Du skal samarbejde med Exchange Online-administratoren og SharePoint Online-administratoren om at konfigurere Defender for Office 365 for disse arbejdsbelastninger:
 
@@ -171,7 +171,7 @@ Den hurtigste måde at komme i gang på er at [konfigurere automatisk tilmelding
 
 Du kan også drage fordel af disse selvstudier:
 
-- [Brug Autopilot til at tilmelde Windows enheder i Intune](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices)
+- [Brug Autopilot til at tilmelde Windows-enheder i Intune](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices)
 - [Brug Apples funktioner til tilmelding af virksomhedsenheder i Apple Business Manager (ABM) til at tilmelde iOS-/iPadOS-enheder i Intune](/mem/intune/enrollment/tutorial-use-device-enrollment-program-enroll-ios)
 
 Når du har tilmeldt enheder, kan du bruge vejledningen i [Almindelige politikker for identitets- og enhedsadgang](./office-365-security/identity-access-policies.md) til at oprette disse politikker:
@@ -187,7 +187,7 @@ Hvis du hurtigt gør det muligt for størstedelen af dine medarbejdere at arbejd
 
 Netværkselementer som VPN-koncentratorer, udgående udstyr til centrale netværk (f.eks. proxyer og enheder til forebyggelse af datatab), central internetbåndbredde, backhaul MPLS-kredsløb, NAT-funktionalitet osv. bliver pludselig belastet enormt på grund af belastningen af hele virksomheden, der bruger dem. Slutresultatet er dårlig ydeevne og produktivitet kombineret med en dårlig brugeroplevelse for brugere, der tilpasser sig hjemmefra.
 
-Nogle af de beskyttelser, der traditionelt er blevet leveret ved at dirigere trafik tilbage gennem virksomhedens netværk, leveres af de cloudapps, som brugerne får adgang til. Hvis du har nået dette trin i denne artikel, har du implementeret et sæt avancerede cloudsikkerhedskontroller for Microsoft 365 tjenester og data. Når disse kontrolelementer er på plads, er du muligvis klar til at dirigere fjernbrugeres trafik direkte til Office 365. Hvis du stadig har brug for et VPN-link for at få adgang til andre programmer, kan du forbedre din ydeevne og brugeroplevelse markant ved at implementere opdelt tunnelføring. Når du når til enighed i din organisation, kan dette opnås inden for en dag af et velkoordnet netværksteam.
+Nogle af de beskyttelser, der traditionelt er blevet leveret ved at dirigere trafik tilbage gennem virksomhedens netværk, leveres af de cloudapps, som brugerne får adgang til. Hvis du har nået dette trin i denne artikel, har du implementeret et sæt avancerede cloudsikkerhedskontroller til Microsoft 365-tjenester og -data. Når disse kontrolelementer er på plads, er du muligvis klar til at dirigere fjernbrugeres trafik direkte til Office 365. Hvis du stadig har brug for et VPN-link for at få adgang til andre programmer, kan du forbedre din ydeevne og brugeroplevelse markant ved at implementere opdelt tunnelføring. Når du når til enighed i din organisation, kan dette opnås inden for en dag af et velkoordnet netværksteam.
 
 Se disse ressourcer på Docs for at få flere oplysninger:
 
@@ -212,7 +212,7 @@ Microsoft 365 indeholder følgende ressourcer, der kan hjælpe med at informere 
 |Koncept|Ressourcer|
 |---|---|
 |Microsoft 365|[Læringsforløb, der kan tilpasses](/office365/customlearning/) <p>Disse ressourcer kan hjælpe dig med at sammensætte træning for slutbrugere i din organisation|
-|Microsoft 365-sikkerhed|[Learning modul: Beskyt din organisation med indbygget intelligent sikkerhed fra Microsoft 365](/learn/modules/security-with-microsoft-365) <p>I dette modul kan du beskrive, hvordan Microsoft 365 sikkerhedsfunktioner arbejder sammen og formulere fordelene ved disse sikkerhedsfunktioner.|
+|Microsoft 365-sikkerhed|[Læringsmodul: Beskyt din organisation med indbygget, intelligent sikkerhed fra Microsoft 365](/learn/modules/security-with-microsoft-365) <p>I dette modul kan du beskrive, hvordan Microsoft 365-sikkerhedsfunktioner arbejder sammen, og hvordan du kan formulere fordelene ved disse sikkerhedsfunktioner.|
 |Multifaktorgodkendelse|[Totrinsbekræftelse: Hvad er den ekstra bekræftelsesside?](/azure/active-directory/user-help/multi-factor-authentication-end-user-first-time) <p>Denne artikel hjælper slutbrugerne med at forstå, hvad multifaktorgodkendelse er, og hvorfor den bruges i din organisation.|
 
 Ud over denne vejledning anbefaler Microsoft, at dine brugere foretager de handlinger, der er beskrevet i denne artikel: [Beskyt din konto og dine enheder mod hackere og malware](https://support.office.com/article/066d6216-a56b-4f90-9af3-b3a1e9a327d6.aspx). Disse handlinger omfatter:
@@ -223,7 +223,7 @@ Ud over denne vejledning anbefaler Microsoft, at dine brugere foretager de handl
 
 Microsoft anbefaler også, at brugerne beskytter deres personlige mailkonti ved at gøre de handlinger, der anbefales i følgende artikler:
 
-- [Hjælp med at beskytte din Outlook.com-mailkonto](https://support.microsoft.com/office/a4f20fc5-4307-4ece-8231-6d4d4bd8a9ba)
+- [Hjælp med at beskytte din Outlook.com mailkonto](https://support.microsoft.com/office/a4f20fc5-4307-4ece-8231-6d4d4bd8a9ba)
 
 - [Beskyt din Gmail-konto med totrinsbekræftelse](https://go.microsoft.com/fwlink/p/?linkid=2015688)
 
@@ -241,13 +241,13 @@ Kom i gang med Defender for Cloud Apps nu. Senere kan du konfigurere mere avance
 
 ## <a name="12-monitor-for-threats-and-take-action"></a>12: Overvåg for trusler, og udfør handlinger
 
-Microsoft 365 omfatter flere måder at overvåge status og udføre relevante handlinger på. Dit bedste udgangspunkt er <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, hvor du kan se din organisations [Microsoft Secure Score](./defender/microsoft-secure-score.md) og eventuelle beskeder eller enheder, der kræver din opmærksomhed.
+Microsoft 365 indeholder flere måder at overvåge status og udføre relevante handlinger på. Dit bedste udgangspunkt er <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, hvor du kan se din organisations [Microsoft Secure Score](./defender/microsoft-secure-score.md) og eventuelle beskeder eller enheder, der kræver din opmærksomhed.
 
-- [Kom i gang med Microsoft 365 Defender-portalen](./defender/microsoft-365-defender.md#the-microsoft-365-defender-portal)
+- [Kom i gang med Microsoft 365 Defender-portalen](./defender/microsoft-365-defender-portal.md)
 - [Se sikkerhedsportalerne i Microsoft 365](./defender/portals.md)
 
 ## <a name="next-steps"></a>Næste trin
 
-Tillykke! Du har hurtigt implementeret nogle af de vigtigste sikkerhedsforanstaltninger, og din organisation er meget mere sikker. Nu er du klar til at gå endnu længere med trusselsbeskyttelsesfunktioner (herunder Microsoft Defender for Endpoint), dataklassificering og beskyttelsesfunktioner samt sikring af administrative konti. Hvis du vil have mere at vide om et metodisk sæt sikkerhedsanbefalinger til Microsoft 365, skal du se [Microsoft 365 BDMs (Security for Business Decision Makers)](Microsoft-365-security-for-bdm.md).
+Tillykke! Du har hurtigt implementeret nogle af de vigtigste sikkerhedsforanstaltninger, og din organisation er meget mere sikker. Nu er du klar til at gå endnu længere med trusselsbeskyttelsesfunktioner (herunder Microsoft Defender for Endpoint), dataklassificering og beskyttelsesfunktioner samt sikring af administrative konti. Du kan finde et dybere, metodisk sæt sikkerhedsanbefalinger til Microsoft 365 under [Microsoft 365 BDMs (Security for Business Decision Makers).](Microsoft-365-security-for-bdm.md)
 
 Besøg også Microsofts nye Defender for Cloud på [docs.microsoft.com/security](/security).
