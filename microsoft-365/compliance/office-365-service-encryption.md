@@ -14,16 +14,16 @@ search.appverid:
 - MET150
 ms.collection: Strat_O365_Enterprise
 description: 'Oversigt: Forstå datas robusthed i Microsoft Office 365.'
-ms.openlocfilehash: 9b569bc30a9d7d8485fe0004cf46ba39277c47ae
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 66899a337e9349a78178df67aa83e44b580c7148
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760795"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629373"
 ---
 # <a name="service-encryption"></a>Tjenestekryptering
 
-Ud over at bruge kryptering på diskenhedsniveau kan Exchange Online, Microsoft Teams, SharePoint Online og OneDrive for Business også bruge Tjenestekryptering til at kryptere kundedata. Tjenestekryptering giver mulighed for to indstillinger for nøgleadministration:
+Ud over at bruge kryptering på diskenhedsniveau bruger Exchange Online, Microsoft Teams, SharePoint Online og OneDrive for Business også Tjenestekryptering til at kryptere kundedata. Tjenestekryptering giver mulighed for to indstillinger for nøgleadministration:
 
 ## <a name="microsoft-managed-keys"></a>Microsoft-administrerede nøgler
 Microsoft administrerer alle kryptografiske nøgler, herunder rodnøglerne til tjenestekryptering. Denne indstilling er i øjeblikket aktiveret som standard for Exchange Online, SharePoint Online OneDrive for Business. Microsoft-administrerede nøgler leverer standardtjenestekryptering, medmindre du beslutter dig for at onboarde ved hjælp af kundenøglen. Hvis du på et senere tidspunkt beslutter at stoppe med at bruge kundenøglen uden at følge stien til datarensning, forbliver dine data krypteret ved hjælp af de Microsoft-administrerede nøgler. Dine data krypteres altid på dette standardniveau som minimum. 
@@ -35,7 +35,7 @@ Tjenestekryptering giver flere fordele:
 
 - Giver et ekstra beskyttelseslag oven på BitLocker.
 
-- Giver mulighed for at adskille Windows administratorer af operativsystemet fra adgang til programdata, der er gemt eller behandlet af operativsystemet.
+- Giver mulighed for at adskille Administratorer af Windows-operativsystemet fra adgang til programdata, der er gemt eller behandlet af operativsystemet.
 
 - Omfatter en kundenøgleindstilling, der gør det muligt for tjenester med flere lejere at levere nøgleadministration pr. lejer.
 

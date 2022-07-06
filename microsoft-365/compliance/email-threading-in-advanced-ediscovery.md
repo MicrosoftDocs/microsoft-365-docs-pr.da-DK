@@ -14,18 +14,16 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtråde en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
+description: Når du foretager en eDiscovery-analyse (Premium), opdeler mailtrådning en mailsamtale og adskiller hver meddelelse i forskellige kategorier.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 6aa8bfdccf2f7430da1aa00ed444a9c218525ee8
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: a17f746cb0c88fb68e4654d0dd7de528135d62ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622132"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629701"
 ---
 # <a name="email-threading-in-ediscovery-premium"></a>Mailtrådning i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Overvej en mailsamtale, der har stået på i et stykke tid. I de fleste tilfælde indeholder den sidste meddelelse i mailtråden indholdet af alle de foregående meddelelser. Derfor vil gennemgang af den sidste meddelelse give en komplet kontekst for den samtale, der skete i tråden. Mailtrådning identificerer sådanne meddelelser, så korrekturlæsere kan gennemse en brøkdel af indsamlede dokumenter uden at miste nogen kontekst.
 
@@ -45,4 +43,4 @@ Mailtråde fortolker hver mailtråd og dekonstruerer den til individuelle meddel
 
 Det lyder hurtigt som samtalegrupperinger i Outlook. Der er dog nogle vigtige forskelle. Overvej en mailsamtale, der blev opdelt i to samtaler. En person har f.eks. besvaret en mail, der ikke er den nyeste i samtalen, så de sidste to mails i samtalen begge har unikt indhold.
 
-Outlook vil stadig gruppere mails i en enkelt samtale. Hvis du kun læser den sidste mail, vil det betyde, at konteksten for den anden til sidste mail, som også indeholder entydigt indhold, mangler. Da mailtrådning fortolker hver mail i individuelle komponenter og sammenligner dem, markerer mailtrådning begge de sidste to mails som inklusive, hvilket sikrer, at du ikke går glip af nogen kontekst, så længe du læser alle de mails, der er markeret som inklusive.
+Outlook grupperer stadig mails i en enkelt samtale. Hvis du kun læser den sidste mail, vil det betyde, at konteksten for den anden til sidste mail, som også indeholder entydigt indhold, mangler. Da mailtrådning fortolker hver mail i individuelle komponenter og sammenligner dem, markerer mailtrådning begge de sidste to mails som inklusive, hvilket sikrer, at du ikke går glip af nogen kontekst, så længe du læser alle de mails, der er markeret som inklusive.

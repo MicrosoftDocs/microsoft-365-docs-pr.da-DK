@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om opbevaring for Exchange
+title: Få mere at vide om opbevaring til Exchange
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,34 +17,32 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan opbevaring fungerer for Exchange.
-ms.openlocfilehash: b49a21f5358bb8d4b25c1b164d30180f1fa265d9
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 1b4c255e2a228801ece0c98d0ac8686b3582ab30
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285940"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626001"
 ---
-# <a name="learn-about-retention-for-exchange"></a>Få mere at vide om opbevaring for Exchange
+# <a name="learn-about-retention-for-exchange"></a>Få mere at vide om opbevaring til Exchange
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md), fordi den indeholder oplysninger, der er specifikke for Exchange.  For andre arbejdsbelastninger skal du se:
+Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md) , fordi den indeholder oplysninger, der er specifikke for Exchange.  For andre arbejdsbelastninger skal du se:
 
 - [Få mere at vide om opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md)
-- [Få mere at vide om opbevaring for Microsoft Teams](retention-policies-teams.md)
-- [Få mere at vide om opbevaring for Yammer](retention-policies-yammer.md)
+- [Få mere at vide om opbevaring til Microsoft Teams](retention-policies-teams.md)
+- [Få mere at vide om opbevaring til Yammer](retention-policies-yammer.md)
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Hvad er inkluderet i forbindelse med opbevaring og sletning
 
-Følgende Exchange elementer fra brugerpostkasser og delte postkasser kan bevares og slettes ved hjælp af opbevaringspolitikker og opbevaringsbeskrivelser: Mails (indeholder modtagne meddelelser, kladder, sendte meddelelser) med vedhæftede filer, opgaver, når de har en slutdato og noter. 
+Følgende Exchange-elementer fra brugerpostkasser og delte postkasser kan bevares og slettes ved hjælp af opbevaringspolitikker og opbevaringsmærkater: Mails (indeholder modtagne meddelelser, kladder, sendte meddelelser) med eventuelle vedhæftede filer, opgaver, når de har en slutdato, og noter. 
 
 Kalenderelementer, der har en slutdato, understøttes for opbevaringspolitikker, men understøttes ikke for opbevaringsmærkater.
 
 Kontakter og alle opgaver og kalenderelementer, der ikke har en slutdato, understøttes ikke.
 
-Andre elementer, der er gemt i en postkasse, f.eks. Skype og Teams meddelelser, er ikke inkluderet i opbevaringspolitikker eller mærkater for Exchange. Disse elementer har deres egne opbevaringspolitikker.
+Andre elementer, der er gemt i en postkasse, f.eks. Skype- og Teams-meddelelser, er ikke inkluderet i opbevaringspolitikker eller mærkater for Exchange. Disse elementer har deres egne opbevaringspolitikker.
 
 Postkasser skal have mindst 10 MB data, før opbevaringsindstillinger gælder for dem, og opbevaringsmærkater kan publiceres til dem.
 
@@ -54,16 +52,16 @@ Både en postkasse og en offentlig mappe bruger [mappen Gendanbare elementer](/e
   
 Når en bruger sletter en meddelelse i en anden mappe end mappen Slettet post, flyttes meddelelsen som standard til mappen Slettet post. En bruger kan dog slette et element (Skift+Slet) i en hvilken som helst mappe, som tilsidesætter mappen Slettet post og flytter elementet direkte til mappen Gendan elementer.
   
-Når du anvender opbevaringsindstillinger på Exchange data, evaluerer et timerjob jævnligt elementer i mappen Gendanbare elementer. Hvis et element ikke stemmer overens med reglerne for mindst én opbevaringspolitik eller opbevaringsmærkat for at bevare elementet, slettes det permanent (også kaldet hårdt slettet) fra mappen Genoprettelige elementer.
+Når du anvender opbevaringsindstillinger på Exchange-data, evaluerer et timerjob jævnligt elementer i mappen Gendanbare elementer. Hvis et element ikke stemmer overens med reglerne for mindst én opbevaringspolitik eller opbevaringsmærkat for at bevare elementet, slettes det permanent (også kaldet hårdt slettet) fra mappen Genoprettelige elementer.
 
 > [!NOTE]
 > På grund af det [første opbevaringsprincip](retention.md#the-principles-of-retention-or-what-takes-precedence) suspenderes permanent sletning altid, hvis det samme element skal bevares på grund af en anden opbevaringspolitik eller opbevaringsmærkat, eller den er omfattet af eDiscovery-ventepositioner af juridiske eller undersøgelsesmæssige årsager.
 
-Det kan tage op til syv dage at køre timerjobbet, og den Exchange placering skal indeholde mindst 10 MB.
+Det kan tage op til syv dage at køre timerjobbet, og Exchange-placeringen skal indeholde mindst 10 MB.
   
 Når en bruger forsøger at ændre egenskaberne for et postkasseelement – f.eks. emne, brødtekst, vedhæftede filer, afsendere og modtagere eller dato for afsendelse eller modtagelse af en meddelelse – gemmes der en kopi af det oprindelige element i mappen Gendanbare elementer, før ændringen bekræftes. Denne handling sker for hver efterfølgende ændring. Ved slutningen af opbevaringsperioden slettes kopier i mappen Elementer, der kan gendannes, permanent.
 
-Når opbevaringsindstillinger er anvendt på Exchange indhold, afhænger de stier, som indholdet følger, af, om opbevaringsindstillingerne skal bevares og slettes, kun bevares eller slettes.
+Når opbevaringsindstillinger er anvendt på Exchange-indhold, afhænger de stier, som indholdet tager, af, om opbevaringsindstillingerne skal bevares og slettes, kun bevares eller slettes.
 
 Når opbevaringsindstillingerne skal bevares og slettes:
 
@@ -89,7 +87,7 @@ Når opbevaringsindstillingerne kun bevares eller slettes, er indholdsstierne va
 
 ## <a name="user-notification-of-expiry-date"></a>Brugermeddelelse om udløbsdato
 
-Opbevaringspolitikker for Exchange, i modsætning til opbevaringspolitikker for de andre Microsoft 365 arbejdsbelastninger, har en bruger tilstedeværelse ved at vise navnet på opbevaringspolitikken øverst i hver mail, der har den korteste udløbsdato for elementet, og den beregnede udløbsdato for det pågældende element. Brugerne kan ikke se denne meddelelse, hvis opbevaringspolitikken ikke sletter elementer (bevar kun).
+Opbevaringspolitikker for Exchange har i modsætning til opbevaringspolitikker for de andre Microsoft 365-arbejdsbelastninger en brugertilstedeværelse ved at vise navnet på opbevaringspolitikken øverst i hver mail, der har den korteste udløbsdato for elementet, og den beregnede udløbsdato for det pågældende element. Brugerne kan ikke se denne meddelelse, hvis opbevaringspolitikken ikke sletter elementer (bevar kun).
 
 Hvis der anvendes en opbevaringsmærkat på en mail, vises navnet på den pågældende etiket og den tilsvarende udløbsdato altid, og det erstatter navnet og datoen fra enhver opbevaringspolitik, der er anvendt på postkassen.
 
@@ -97,9 +95,9 @@ Husk, at i denne kontekst er udløbsdatoen for, hvornår en mail slettes, hvorn�
 
 ## <a name="when-a-user-leaves-the-organization"></a>Når en bruger forlader organisationen 
 
-Hvis en bruger forlader organisationen, og brugerens postkasse er inkluderet i en politik til opbevaring, bliver postkassen en inaktiv postkasse, når brugerens Microsoft 365 konto slettes. Indholdet af en inaktiv postkasse er stadig underlagt en opbevaringspolitik, der blev placeret i postkassen, før den blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan få flere oplysninger under [Inaktive postkasser i Exchange Online](inactive-mailboxes-in-office-365.md).
+Hvis en bruger forlader organisationen, og brugerens postkasse er inkluderet i en politik til opbevaring, bliver postkassen en inaktiv postkasse, når brugerens Microsoft 365-konto slettes. Indholdet af en inaktiv postkasse er stadig underlagt en opbevaringspolitik, der blev placeret i postkassen, før den blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan få flere oplysninger under [Inaktive postkasser i Exchange Online](inactive-mailboxes-in-office-365.md).
 
-Når opbevaringsindstillingerne ikke længere gælder, fordi dataene slettes permanent, eller opbevaringsperioden er udløbet, kan den Exchange administrator nu [slette den inaktive postkasse](delete-an-inactive-mailbox.md). I dette scenarie slettes den inaktive postkasse ikke automatisk.
+Når opbevaringsindstillingerne ikke længere gælder, fordi dataene slettes permanent, eller opbevaringsperioden er udløbet, kan Exchange-administratoren nu [slette den inaktive postkasse](delete-an-inactive-mailbox.md). I dette scenarie slettes den inaktive postkasse ikke automatisk.
 
 ## <a name="configuration-guidance"></a>Konfigurationsvejledning
 

@@ -17,41 +17,39 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan opbevaring fungerer for SharePoint og OneDrive.
-ms.openlocfilehash: 8515b84f21677644be821ca129ab02083121ab84
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 3fb316c0780ccb5c854e12dae8bde450c877f1d2
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468848"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629183"
 ---
 # <a name="learn-about-retention-for-sharepoint-and-onedrive"></a>Få mere at vide om opbevaring for SharePoint og OneDrive
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md), fordi den indeholder oplysninger, der er specifikke for SharePoint og OneDrive.
+Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md) , fordi den indeholder oplysninger, der er specifikke for SharePoint og OneDrive.
 
 For andre arbejdsbelastninger skal du se:
 
-- [Få mere at vide om opbevaring for Microsoft Teams](retention-policies-teams.md)
-- [Få mere at vide om opbevaring for Yammer](retention-policies-yammer.md)
-- [Få mere at vide om opbevaring for Exchange](retention-policies-exchange.md)
+- [Få mere at vide om opbevaring til Microsoft Teams](retention-policies-teams.md)
+- [Få mere at vide om opbevaring til Yammer](retention-policies-yammer.md)
+- [Få mere at vide om opbevaring til Exchange](retention-policies-exchange.md)
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Hvad er inkluderet i forbindelse med opbevaring og sletning
 
-Alle filer, der er gemt på SharePoint eller OneDrive websteder, kan bevares ved at anvende en opbevaringspolitik eller en opbevaringsmærkat. 
+Alle filer, der er gemt på SharePoint- eller OneDrive-websteder, kan bevares ved at anvende en opbevaringspolitik eller en opbevaringsmærkat. 
 
 Følgende filer kan slettes:
 
-- Når du bruger en opbevaringspolitik: Alle filer i dokumentbiblioteker, som omfatter alle automatisk oprettede SharePoint dokumentbiblioteker, f.eks **. webstedsaktiver**.
+- Når du bruger en opbevaringspolitik: Alle filer i dokumentbiblioteker, som omfatter alle automatisk oprettede SharePoint-dokumentbiblioteker, f.eks **. webstedsaktiver**.
     
 - Når du bruger opbevaringsmærkater: Alle filer i alle dokumentbiblioteker og alle filer på rodniveau, der ikke findes i en mappe.
     
 > [!TIP]
 > Når du bruger en [forespørgsel med en politik for automatisk anvendelse af en opbevaringsmærkat](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties), kan du udelade bestemte dokumentbiblioteker ved hjælp af følgende post: `NOT(DocumentLink:"<URL to document library>")`
 
-Listeelementer understøttes ikke af opbevaringspolitikker, men understøttes af opbevaringsmærkater med undtagelse af elementer på systemlister. Disse er skjulte lister, der bruges af SharePoint til at administrere systemet og omfatter mastersidekataloget, løsningskataloget og datakilderne. Når der anvendes opbevaringsmærkater på understøttede listeelementer, bevares de altid i henhold til opbevaringsindstillingerne, men de slettes ikke, hvis de er skjult i søgningen.
+Listeelementer understøttes ikke af opbevaringspolitikker, men understøttes af opbevaringsmærkater med undtagelse af elementer på systemlister. Disse er skjulte lister, der bruges af SharePoint til at administrere systemet og omfatter mastersidekataloget, løsningskataloget og datakilder. Når der anvendes opbevaringsmærkater på understøttede listeelementer, bevares de altid i henhold til opbevaringsindstillingerne, men de slettes ikke, hvis de er skjult i søgningen.
 
 Når du anvender en opbevaringsmærkat på et understøttet listeelement, der har en vedhæftet dokumentfil:
 - For en standardopbevaringsmærkat (deklarerer ikke, at elementet er en post):
@@ -61,12 +59,12 @@ Når du anvender en opbevaringsmærkat på et understøttet listeelement, der ha
 
 Opbevaringsindstillinger fra både opbevaringspolitikker og opbevaringsmærkater gælder ikke for organisering af strukturer, der omfatter biblioteker, lister og mapper.
 
-I forbindelse med opbevaringspolitikker og mærkatpolitikker for automatisk anvendelse: SharePoint websteder skal indekseres, for at opbevaringsindstillingerne kan anvendes. Men hvis elementer i SharePoint dokumentbiblioteker er konfigureret til ikke at blive vist i søgeresultater, udelukker denne konfiguration ikke filer fra opbevaringsindstillingerne.
+I forbindelse med opbevaringspolitikker og mærkatpolitikker for automatisk anvendelse: SharePoint-websteder skal indekseres, for at opbevaringsindstillingerne kan anvendes. Men hvis elementer i SharePoint-dokumentbiblioteker er konfigureret til ikke at blive vist i søgeresultater, udelukker denne konfiguration ikke filer fra opbevaringsindstillingerne.
 
 
 ## <a name="how-retention-works-for-sharepoint-and-onedrive"></a>Sådan fungerer opbevaring for SharePoint og OneDrive
 
-Hvis du vil gemme indhold, der skal bevares, skal du SharePoint og OneDrive oprette et bibliotek til bevarelse af venteposition, hvis der ikke findes et for webstedet. Biblioteket til bevarelse af venteposition er ikke designet til at blive brugt interaktivt, men gemmer i stedet automatisk filer, når dette er nødvendigt af hensyn til overholdelse af angivne standarder. Det fungerer på følgende måde:
+Hvis du vil gemme indhold, der skal bevares, skal SharePoint og OneDrive oprette et bibliotek til bevarelse af venteposition, hvis der ikke findes et for webstedet. Biblioteket til bevarelse af venteposition er ikke designet til at blive brugt interaktivt, men gemmer i stedet automatisk filer, når dette er nødvendigt af hensyn til overholdelse af angivne standarder. Det fungerer på følgende måde:
 
 Når en bruger ændrer eller sletter et element, der kan opbevares, kontrolleres det, om indholdet er blevet ændret, siden opbevaringsindstillingerne blev anvendt. Hvis dette er den første ændring, siden opbevaringsindstillingerne blev anvendt, kopieres indholdet til biblioteket Bevarelse af venteposition, hvilket gør det muligt for brugeren at ændre eller slette det oprindelige indhold.
 
@@ -80,7 +78,7 @@ Brugerne får også vist en fejlmeddelelse, hvis de forsøger at slette et navng
 
 - Indstillingen for datastyring, der giver brugerne mulighed for at slette navngivne elementer, er deaktiveret.
     
-    Hvis du vil kontrollere eller ændre denne indstilling, skal du gå til løsningen **Datastyring** i Microsoft Purview-compliance-portal > **DatastyringIndstillinger** >  **for** >  administration af **posterAdministrationsnavneSletning** >  **af elementer**. Der er separate indstillinger for SharePoint og OneDrive.
+    Hvis du vil kontrollere eller ændre denne indstilling, skal du gå til løsningen **Styring af poster** i **Microsoft Purview-compliance-portal > Indstillinger for** >  administration af **poster** > **Opbevaringsmærkater** > **Sletning af elementer**. Der er separate indstillinger for SharePoint og OneDrive.
     
     Hvis du ikke har adgang til løsningen til **dataadministration** , kan du også bruge *AllowFilesWithKeepLabelToBeDeletedSPO* og *AllowFilesWithKeepLabelToBeDeletedODB* fra [Get-PnPTenant](https://pnp.github.io/powershell/cmdlets/Get-PnPTenant.html) og [Set-PnPTenant](https://pnp.github.io/powershell/cmdlets/Set-PnPTenant.html).
 
@@ -90,7 +88,7 @@ Brugerne får også vist en fejlmeddelelse, hvis de forsøger at slette et navng
 
 - Opbevaringsmærkaten markerer elementer som en [lovmæssig post](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked), hvilket altid forhindrer, at elementet redigeres eller slettes.
 
-Når opbevaringsindstillinger er tildelt til indhold på en OneDrive konto eller på et SharePoint websted, afhænger de stier, som indholdet følger, af, om opbevaringsindstillingerne skal bevares og slettes, kun bevares eller slettes.
+Når opbevaringsindstillinger er tildelt til indhold på en OneDrive-konto eller et SharePoint-websted, afhænger stierne af, om opbevaringsindstillingerne skal bevares og slettes, kun bevares eller slettes.
 
 Når opbevaringsindstillingerne skal bevares og slettes:
 
@@ -122,7 +120,7 @@ Når opbevaringsindstillingerne kun bevares eller slettes, er indholdsstierne va
 
 ## <a name="how-retention-works-with-cloud-attachments"></a>Sådan fungerer opbevaring med vedhæftede filer i skyen
 
-Vedhæftede filer i skyen er integrerede links til filer, som brugerne deler, og de kan bevares og slettes, når dine brugere deler dem i Outlook mails og Teams meddelelser. Når du [automatisk anvender en opbevaringsmærkat på vedhæftede filer i skyen](apply-retention-labels-automatically.md#auto-apply-labels-to-cloud-attachments), anvendes opbevaringsmærkaten på en kopi af den delte fil, som er gemt i biblioteket Bevarelse af venteposition.
+Vedhæftede filer i skyen er integrerede links til filer, som brugerne deler, og de kan bevares og slettes, når dine brugere deler dem i Outlook-mails og Teams-meddelelser. Når du [automatisk anvender en opbevaringsmærkat på vedhæftede filer i skyen](apply-retention-labels-automatically.md#auto-apply-labels-to-cloud-attachments), anvendes opbevaringsmærkaten på en kopi af den delte fil, som er gemt i biblioteket Bevarelse af venteposition.
 
 I dette scenarie anbefaler vi, at du konfigurerer mærkatindstillingen for at starte opbevaringsperioden baseret på, hvornår elementet er mærket. Hvis du konfigurerer opbevaringsperioden baseret på, hvornår elementet oprettes eller senest ændres, hentes denne dato fra den oprindelige fil på tidspunktet for delingen. Hvis du konfigurerer starten på opbevaringen til at være ved seneste ændring, har denne indstilling ingen effekt for denne kopi i biblioteket bevarelsesventeposition.
 
@@ -136,11 +134,11 @@ Da opbevaringsmærkaten ikke anvendes på den oprindelige fil, ændres eller sle
 
 Den kopi, der er gemt i biblioteket bevarelsesposition, oprettes typisk inden for en time fra den vedhæftede fil i skyen, der deles.
 
-## <a name="how-retention-works-with-onenote-content"></a>Sådan fungerer opbevaring med OneNote indhold
+## <a name="how-retention-works-with-onenote-content"></a>Sådan fungerer opbevaring med OneNote-indhold
 
-Når du anvender en opbevaringspolitik på en placering, der indeholder OneNote indhold, eller en opbevaringsmærkat til en OneNote mappe i baggrunden, er de forskellige OneNote sider og sektioner individuelle filer, der nedarver opbevaringsindstillingerne. Det betyder, at hver sektion på en side bevares og slettes individuelt i henhold til de opbevaringsindstillinger, du angiver.
+Når du anvender en opbevaringspolitik på en placering, der indeholder OneNote-indhold, eller en opbevaringsmærkat til en OneNote-mappe, er de forskellige OneNote-sider og -sektioner i baggrunden individuelle filer, der nedarver opbevaringsindstillingerne. Det betyder, at hver sektion på en side bevares og slettes individuelt i henhold til de opbevaringsindstillinger, du angiver.
 
-Det er kun sider og sektioner, der påvirkes af de opbevaringsindstillinger, du angiver. Selvom du f.eks. får vist en dato for **ændring** for hver enkelt notesbog, bruges denne dato ikke af Microsoft 365 opbevaring.
+Det er kun sider og sektioner, der påvirkes af de opbevaringsindstillinger, du angiver. Selvom du f.eks. får vist datoen **Ændret** for hver enkelt notesbog, bruges denne dato ikke af Microsoft 365-opbevaring.
 
 ## <a name="how-retention-works-with-document-versions"></a>Sådan fungerer opbevaring med dokumentversioner
 
@@ -162,7 +160,7 @@ Det er ikke tilfældet for opbevaringsmærkater, når indholdet ikke er underlag
 
 **SharePoint**:
 
-Når en bruger forlader organisationen, påvirkes alt indhold, der er oprettet af den pågældende bruger, ikke, fordi SharePoint betragtes som et samarbejdsmiljø, i modsætning til en brugers postkasse eller OneDrive konto.
+Når en bruger forlader organisationen, påvirkes alt indhold, der er oprettet af den pågældende bruger, ikke, fordi SharePoint betragtes som et samarbejdsmiljø, i modsætning til en brugers postkasse eller OneDrive-konto.
 
 **OneDrive**:
 

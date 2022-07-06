@@ -18,16 +18,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer centrale indstillinger for forebyggelse af datatab for slutpunkter (DLP).
-ms.openlocfilehash: edf5d42421aa9fb0c54d0121655e3a31d4a729f6
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 99598880515dd14bc453ebd61a633be7eb66a9fc
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078760"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629943"
 ---
 # <a name="configure-endpoint-data-loss-prevention-settings"></a>Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Mange aspekter af DLP-funktionsmåden (Endpoint Data Loss Prevention) styres af centralt konfigurerede indstillinger. Indstillinger anvendes på alle DLP-politikker for enheder.
 
@@ -37,7 +35,7 @@ Du skal konfigurere disse indstillinger, hvis du vil styre:
 
 - Begrænsninger for udgående sky
 - Forskellige typer restriktive handlinger på brugeraktiviteter pr. program.
-- Udeladelser af filstier for Windows og macOS enheder.
+- Undtagelser for filstier til Windows- og macOS-enheder.
 - Begrænsninger for browser og domæne.
 - Sådan vises forretningsberettigelser for tilsidesættelse af politikker i politiktip.
 - Hvis aktiviteter på Office-, PDF- og CSV-filer overvåges automatisk.
@@ -46,16 +44,16 @@ Du skal konfigurere disse indstillinger, hvis du vil styre:
 
 Før du går i gang, skal du konfigurere dine DLP-indstillinger. 
 
-### <a name="endpoint-dlp-windows-1011-and-macos-settings"></a>Indstillinger for slutpunktet DLP Windows 10/11 og macOS
+### <a name="endpoint-dlp-windows-1011-and-macos-settings"></a>DLP-Windows 10/11- og macOS-indstillinger for slutpunkt
 
 |Indstilling |Windows 10, 1809 og nyere Windows 11  |macOS Catalina 10.15 eller nyere |Bemærkninger  |
 |---------|---------|---------|---------|
 |Udeladelser af filsti     |Understøttes         |Understøttes         |macOS indeholder en anbefalet liste over undtagelser, der er slået til som standard          |
 |Begrænsede apps     |Understøttes         |Understøttes         |         |
 |Begrænsede appgrupper |Understøttes |Understøttes ikke
-|Ikke-tilladte Bluetooth apps    |Understøttes         |Understøttes ikke         |         |
+|Ikke-tilladte Bluetooth-apps    |Understøttes         |Understøttes ikke         |         |
 |Browser- og domænebegrænsninger for følsomme elementer      |Understøttes         |Understøttes         |         |
-|Yderligere indstillinger for Slutpunkt DLP     |Understøttes         |Understøttes         |Det er kun standardforretningsberettigelser, der understøttes for macOS enheder         |
+|Yderligere indstillinger for Slutpunkt DLP     |Understøttes         |Understøttes         |Kun forretningsjusteringer, der er standard, understøttes for macOS-enheder         |
 |Overvåg altid filaktivitet for enheder     |Understøttes         |Understøttes         |         |
 |Sæt automatisk fil i karantæne fra ikke-tilladte apps | Understøttes | Understøttes ikke| |
 |Avanceret klassificering | Understøttes | Understøttes ikke| |
@@ -63,20 +61,20 @@ Før du går i gang, skal du konfigurere dine DLP-indstillinger.
 
 ### <a name="advanced-classification-scanning-and-protection"></a>Avanceret klassificeringsscanning og -beskyttelse
 
-Avanceret klassificeringsscanning og -beskyttelse gør det muligt for den mere avancerede Microsoft Purview cloudbaserede dataklassificeringstjeneste at scanne elementer, klassificere dem og returnere resultaterne til den lokale maskine. Det betyder, at du kan drage fordel af klassificeringsteknikker som [nøjagtig datamatchklassificering](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md) , [navngivne enheder](named-entities-learn.md) og [klassificeringer, der kan oplæres](classifier-learn-about.md) , i dine DLP-politikker.
+Avanceret klassificeringsscanning og -beskyttelse gør det muligt for den mere avancerede cloudbaserede Microsoft Purview-dataklassificeringstjeneste at scanne elementer, klassificere dem og returnere resultaterne til den lokale computer. Det betyder, at du kan drage fordel af klassificeringsteknikker som [nøjagtig datamatchklassificering](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md) og [navngivne enheder](named-entities-learn.md) i dine DLP-politikker.
 
 Når avanceret klassificering er slået til, sendes indhold fra den lokale enhed til cloudtjenesterne med henblik på scanning og klassificering. Hvis båndbreddeudnyttelsen er et problem, kan du angive en grænse for, hvor meget der kan bruges i en rullende 24-timers periode. Grænsen er konfigureret i Endpoint DLP-indstillinger og anvendes pr. enhed. Hvis du angiver en forbrugsgrænse for båndbredde, og den overskrides, holder DLP op med at sende brugerindholdet til cloudmiljøet. På dette tidspunkt fortsætter dataklassificeringen lokalt på enheden, men klassificering ved hjælp af præcise datamatch, navngivne enheder og klassificeringer, der kan oplæres, er ikke tilgængelige. Når den akkumulerede båndbreddeforbrug falder til under grænsen for rullende 24 timer, genoptages kommunikationen med cloudtjenesterne.
 
 Hvis båndbreddeudnyttelsen ikke er et problem, skal du vælge **Ingen grænse** for at tillade ubegrænset båndbreddeudnyttelse.
 
-Disse Windows versioner understøtter avanceret klassificeringsscanning og -beskyttelse:
+Disse Windows-versioner understøtter avanceret klassificeringsscanning og -beskyttelse:
 
 - Windows 10 version 20H1/20H2/21H1 (KB 5006738)
 - Windows 10 version 19H1/19H2 (KB 5007189)
 - Windows 10 RS5 (KB 5006744)
 
 > [!NOTE]
-> Understøttelse af avanceret klassificering er tilgængelig for filtyperne Office (Word, Excel, PowerPoint) og PDF.
+> Understøttelse af avanceret klassificering er tilgængelig for Filtyper i Office (Word, Excel, PowerPoint) og PDF.
 
 > [!NOTE]
 > DLP-politikevaluering forekommer altid i cloudmiljøet, selvom brugerindhold ikke sendes.
@@ -105,9 +103,9 @@ Du kan bruge denne logik til at konstruere dine udeladelsesstier til Windows 10 
 
 - En blanding af alt det ovenstående. <br/>For eksempel: `%SystemDrive%\Users\*\Documents\*(2)\Sub\`
 
-#### <a name="macos-devices"></a>macOS enheder
+#### <a name="macos-devices"></a>macOS-enheder
 
-På samme måde som med Windows 10 enheder kan du tilføje dine egne undtagelser for macOS enheder.
+På samme måde som med Windows 10 enheder kan du tilføje dine egne undtagelser for macOS-enheder.
 
 - Der skelnes ikke mellem store og små bogstaver i definitioner af filstier, og `User` det er det samme som `user`.
 
@@ -115,7 +113,7 @@ På samme måde som med Windows 10 enheder kan du tilføje dine egne undtagelser
 
 #####  <a name="recommended-file-path-exclusions-preview"></a>Anbefalede udeladelser af filstier (prøveversion)
 
-Af hensyn til ydeevnen indeholder Endpoint DLP en liste over anbefalede undtagelser for filstier for macOS enheder. Disse undtagelser er som standard slået til. Du kan deaktivere dem, hvis du vil, ved at slå **indstillingen Medtag anbefalede filstiudeladelser for Mac til** /fra. Listen indeholder:
+Af hensyn til ydeevnen indeholder Endpoint DLP en liste over anbefalede undtagelser for filstier til macOS-enheder. Disse undtagelser er som standard slået til. Du kan deaktivere dem, hvis du vil, ved at slå **indstillingen Medtag anbefalede filstiudeladelser for Mac til** /fra. Listen indeholder:
 
 - /Applications/*
 - /System/*
@@ -129,7 +127,7 @@ Af hensyn til ydeevnen indeholder Endpoint DLP en liste over anbefalede undtagel
 
 #### <a name="restricted-apps"></a>Begrænsede apps
 
-**Begrænsede apps** (tidligere kaldet **Ikke-tilladte apps**) er en liste over programmer, du opretter. Du kan konfigurere, hvilke handlinger DLP skal udføre, når en bruger bruger en app på listen til at **_få adgang til_** en DLP-beskyttet fil på en enhed. Den er tilgængelig til Windows 10 og macOS enheder.
+**Begrænsede apps** (tidligere kaldet **Ikke-tilladte apps**) er en liste over programmer, du opretter. Du kan konfigurere, hvilke handlinger DLP skal udføre, når en bruger bruger en app på listen til at **_få adgang til_** en DLP-beskyttet fil på en enhed. Den er tilgængelig til Windows 10- og macOS-enheder.
 
 Når **Adgang fra begrænsede apps** er valgt i en politik, og en bruger bruger en app, der findes på listen over begrænsede apps, til at få adgang til en beskyttet fil, vil aktiviteten være `audited`, `blocked`eller `blocked with override` afhængigt af hvordan du har konfigureret den. Det betyder, at medmindre den samme app er medlem af en **begrænset appgruppe**, tilsidesætter de handlinger, der er konfigureret for aktiviteter i **gruppen Begrænset app** , de handlinger, der er konfigureret for adgangsaktiviteten for listen **Begrænsede apps** . Al aktivitet overvåges og kan gennemses i Aktivitetsoversigt.
 
@@ -175,10 +173,10 @@ Hvis Notepad.exe føjes til **Begrænsede apps** , og **Filaktiviteter for alle 
 |Filaktiviteter for alle apps     |Alle apps         |Kopiér til en enhed, der kan fjernes fra USB | Bloker       |
 |Filaktiviteter for alle apps     |Alle apps         |Kopiér til et netværksshare         |Kun overvågning         |
 |Filaktiviteter for alle apps   |Alle apps         |Udskrive         |Bloker         |
-|Filaktiviteter for alle apps     |Alle apps         |Kopiér eller flyt ved hjælp af ikke-tilladte Bluetooth app         |Blokeret         |
+|Filaktiviteter for alle apps     |Alle apps         |Kopiér eller flyt ved hjælp af en Bluetooth-app, der ikke er tilladt         |Blokeret         |
 |Filaktiviteter for alle apps     |Alle apps         |Fjernskrivebord-tjenester         |Blok med tilsidesættelse         |
 
-Bruger A åbner en DLP-beskyttet fil ved hjælp af Notesblok. DLP giver adgang til og overvåger aktiviteten. Mens bruger A stadig er i Notesblok og derefter forsøger at kopiere til Udklipsholder fra det beskyttede element, fungerer dette, og DLP overvåger aktiviteten. Bruger A forsøger derefter at udskrive det beskyttede element fra Notesblok, og aktiviteten er blokeret.
+Bruger A åbner en DLP-beskyttet fil ved hjælp af Notesblok. DLP giver adgang til og overvåger aktiviteten. Mens bruger A stadig er i Notesblok, forsøger han at kopiere til Udklipsholder fra det beskyttede element, og dette fungerer, og DLP overvåger aktiviteten. Bruger A forsøger derefter at udskrive det beskyttede element fra Notesblok, og aktiviteten er blokeret.
 
 > [!NOTE]
 > Når den DLP-handling, der skal udføres i **Begrænsede appaktiviteter** , er angivet til `block`, blokeres al adgang, og brugeren kan ikke udføre nogen aktiviteter på filen.
@@ -187,20 +185,20 @@ Bruger A åbner en DLP-beskyttet fil ved hjælp af Notesblok. DLP giver adgang t
 
 Hvis en app ikke er i **Filaktiviteter for apps i begrænsede appgrupper** eller ikke er på listen **Begrænsede appaktiviteter** eller er på listen **Begrænsede appaktiviteter** med handlingen `Audit only`, eller 'Bloker med tilsidesættelse', anvendes alle begrænsninger, der er defineret i **filaktiviteterne for alle apps** , i den samme regel.  
 
-#### <a name="macos-devices"></a>macOS enheder
+#### <a name="macos-devices"></a>macOS-enheder
 
-På samme måde som på Windows enheder kan du nu forhindre macOS apps i at få adgang til følsomme data ved at definere dem på listen **Begrænsede appaktiviteter**. 
+På samme måde som på Windows-enheder kan du nu forhindre macOS-apps i at få adgang til følsomme data ved at definere dem på listen **Begrænsede appaktiviteter** . 
 
 > [!NOTE]
 > Bemærk, at apps på tværs af platforme skal angives med deres unikke stier for det operativsystem, de kører på.
 
 Sådan finder du hele stien til Mac-apps:
 
-1. Åbn **Aktivitetsovervågning** på den macOS enhed. Find og dobbeltklik på den proces, du vil begrænse
+1. Åbn **Aktivitetsovervågning** på macOS-enheden. Find og dobbeltklik på den proces, du vil begrænse
 
 2. Vælg fanen **Åbn filer og porte** .
   
-3. For macOS apps skal du have det fulde stinavn, herunder navnet på appen.
+3. I forbindelse med macOS-apps skal du have det fulde stinavn, herunder navnet på appen.
 
 #### <a name="protect-sensitive-data-from-cloud-synchronization-apps"></a>Beskyt følsomme data mod cloudsynkroniseringsapps
 
@@ -215,9 +213,9 @@ Når indstillingen er aktiveret, aktiveres Automatisk karantæne, når en ikke-t
 
 Du kan bruge automatisk karantæne til at forhindre en endeløs kæde af DLP-meddelelser for brugeren og administratorer – se [scenarie 4: Undgå at løkke DLP-meddelelser fra cloudsynkroniseringsapps med automatisk karantæne (prøveversion)](endpoint-dlp-using.md#scenario-4-avoid-looping-dlp-notifications-from-cloud-synchronization-apps-with-auto-quarantine-preview).
 
-### <a name="unallowed-bluetooth-apps"></a>Ikke-tilladte Bluetooth apps
+### <a name="unallowed-bluetooth-apps"></a>Ikke-tilladte Bluetooth-apps
 
-Undgå, at personer overfører filer, der er beskyttet af dine politikker, via bestemte Bluetooth apps.
+Undgå, at personer overfører filer, der er beskyttet af dine politikker, via bestemte Bluetooth-apps.
 
 ### <a name="browser-and-domain-restrictions-to-sensitive-data"></a>Begrænsninger for browser og domæne for følsomme data
 
@@ -225,22 +223,22 @@ Begræns følsomme filer, der matcher dine politikker, fra at blive delt med uin
 
 #### <a name="unallowed-browsers"></a>Ikke-tilladte browsere
 
-For Windows enheder, du tilføjer browsere, der identificeres af deres eksekverbare navne, blokeres det fra at få adgang til filer, der opfylder betingelserne for en gennemtvunget DLP-politik, hvor begrænsningen for upload til cloudtjenester er indstillet til at blokere eller blokere tilsidesættelse. Når disse browsere er blokeret, så de ikke kan få adgang til en fil, får slutbrugerne vist en toastbesked, hvor de bliver bedt om at åbne filen via Microsoft Edge.
+For Windows-enheder tilføjer du browsere, der identificeres af deres eksekverbare navne, som blokeres fra at få adgang til filer, der opfylder betingelserne i en gennemtvunget DLP-politik, hvor begrænsningen for upload til cloudtjenester er indstillet til at blokere eller blokere tilsidesættelse. Når disse browsere er blokeret fra at få adgang til en fil, får slutbrugerne vist en toastmeddelelse, hvor de bliver bedt om at åbne filen via Microsoft Edge.
 
-Hvis du vil macOS enheder, skal du tilføje den fulde filsti. Sådan finder du hele stien til Mac-apps:
+For macOS-enheder skal du tilføje den fulde filsti. Sådan finder du hele stien til Mac-apps:
 
-1. Åbn **Aktivitetsovervågning** på den macOS enhed. Find og dobbeltklik på den proces, du vil begrænse
+1. Åbn **Aktivitetsovervågning** på macOS-enheden. Find og dobbeltklik på den proces, du vil begrænse
 
 2. Vælg fanen **Åbn filer og porte** .
   
-3. For macOS apps skal du have det fulde stinavn, herunder navnet på appen.
+3. I forbindelse med macOS-apps skal du have det fulde stinavn, herunder navnet på appen.
 
 #### <a name="service-domains"></a>Tjenestedomæner
 
 > [!NOTE]
-> Indstillingen **Tjenestedomæner** gælder kun for filer, der uploades ved hjælp af Microsoft Edge eller Google Chrome, hvor [Microsoft Purview-udvidelsen er](dlp-chrome-learn-about.md#learn-about-the-microsoft-purview-extension) installeret.
+> Indstillingen **Tjenestedomæner** gælder kun for filer, der uploades ved hjælp af Microsoft Edge eller Google Chrome, hvor [Microsoft Purview Extension er](dlp-chrome-learn-about.md#learn-about-the-microsoft-purview-extension) installeret.
 
-Du kan styre, om følsomme filer, der er beskyttet af dine politikker, kan overføres til bestemte tjenestedomæner fra Microsoft Edge.
+Du kan styre, om følsomme filer, der er beskyttet af dine politikker, kan uploades til specifikke tjenestedomæner fra Microsoft Edge.
 
 Hvis listetilstanden er angivet til **Bloker**, kan brugeren ikke overføre følsomme elementer til disse domæner. Når en uploadhandling blokeres, fordi et element stemmer overens med en DLP-politik, genererer DLP enten en advarsel eller blokerer upload af det følsomme element.
 
@@ -294,9 +292,9 @@ Filaktivitet overvåges altid for onboardede enheder, uanset om de er inkluderet
 - [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
 - [Kom i gang med Aktivitetsoversigt](data-classification-activity-explorer.md)
 - [Microsoft Defender for Endpoint](/windows/security/threat-protection/)
-- [Oversigt over Windows 10 og Windows 11 enheder i Microsoft Purview](/microsoft-365/compliance/device-onboarding-overview)
-- [Microsoft 365 abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
-- [Azure Active Directory (AAD) tilmeldt](/azure/active-directory/devices/concept-azure-ad-join)
+- [Oversigt over onboarding af Windows 10 og Windows 11 enheder i Microsoft Purview](/microsoft-365/compliance/device-onboarding-overview)
+- [Microsoft 365-abonnement](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans?rtc=1)
+- [Azure Active Directory (AAD) er tilmeldt](/azure/active-directory/devices/concept-azure-ad-join)
 - [Download den nye Microsoft Edge baseret på Chromium](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium)
 - [Kom i gang med DLP-standardpolitikken](get-started-with-the-default-dlp-policy.md)
 - [Opret en DLP-politik ud fra en skabelon](create-a-dlp-policy-from-a-template.md)

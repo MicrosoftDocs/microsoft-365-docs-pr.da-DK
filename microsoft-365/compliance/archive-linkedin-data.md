@@ -14,25 +14,23 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
-description: Få mere at vide om, hvordan administratorer kan konfigurere & bruge en oprindelig connector til at importere data fra en LinkedIn-firmaside for at Microsoft 365.
-ms.openlocfilehash: 352e33ed4c78dd57533312e3f7c37bb3357216f3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan administratorer kan konfigurere & bruge en oprindelig connector til at importere data fra en LinkedIn-firmaside til Microsoft 365.
+ms.openlocfilehash: d018237a7cd0d4171be8a9f104ee4ccd745f2228
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095966"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630626"
 ---
 # <a name="set-up-a-connector-to-archive-linkedin-data"></a>Konfigurer en connector til arkivering af LinkedIn-data
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug en connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra linkede virksomhedssider. Når du har konfigureret en connector, oprettes der forbindelse til kontoen for den specifikke LinkedIn-firmaside én gang hver 24. time. Connectoren konverterer de meddelelser, der er sendt til siden Firma, til en mail og importerer derefter disse elementer til en postkasse i Microsoft 365.
 
-Brug en connector i Microsoft Purview-overholdelsesportalen til at importere og arkivere data fra LinkedIn-virksomhedssider. Når du har konfigureret en connector, oprettes der forbindelse til kontoen for den specifikke LinkedIn-firmaside én gang hver 24. time. Connectoren konverterer de meddelelser, der er sendt til siden Firma, til en mail og importerer derefter disse elementer til en postkasse i Microsoft 365.
-
-Når siden LinkedIn-firmadata er gemt i en postkasse, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, Content Search, In-Place Archiving, Auditing og Microsoft 365 retention policies på LinkedIn-data. Du kan f.eks. søge efter disse elementer ved hjælp af indholdssøgning eller knytte lagerpostkassen til en tilsynsførende i en Microsoft Purview eDiscovery-sag (Premium). Oprettelse af en connector til import og arkivering af LinkedIn-data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når siden LinkedIn-firmadata er gemt i en postkasse, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, Content Search, In-Place Archiving, Auditing og Microsoft 365 retention policies på LinkedIn-data. Du kan f.eks. søge efter disse elementer ved hjælp af indholdssøgning eller knytte lagerpostkassen til en tilsynsførende i en Microsoft Purview eDiscovery (Premium)-sag. Oprettelse af en connector til import og arkivering af LinkedIn-data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en connector
 
-- Den bruger, der opretter en LinkedIn-firmasideconnector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter en LinkedIn-firmasideconnector, skal tildeles rollen Dataconnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 - Du skal have logonlegitimationsoplysninger (mailadresse eller telefonnummer og adgangskode) for en LinkedIn-brugerkonto, der er administrator for den LinkedIn-firmaside, du vil arkivere. Du kan bruge disse legitimationsoplysninger til at logge på LinkedIn, når du konfigurerer connectoren.
 
@@ -40,7 +38,7 @@ Når siden LinkedIn-firmadata er gemt i en postkasse, kan du anvende Microsoft P
 
 ## <a name="create-a-linkedin-connector"></a>Opret en LinkedIn-connector
 
-1. Gå til <https://compliance.microsoft.com> , og klik derefter på **DataconnectorsLinkedIn** >  **Company-sider**.
+1. Gå til , <https://compliance.microsoft.com> og klik derefter på **Dataconnectors** > **LinkedIn Company-sider**.
 
 2. Klik på **Tilføj connector** på produktsiden **LinkedIn-virksomhedssider**.
 
@@ -60,7 +58,7 @@ Når siden LinkedIn-firmadata er gemt i en postkasse, kan du anvende Microsoft P
 
 6. Vælg den firmaside, du vil arkivere elementer fra, og klik derefter på **Næste**.
 
-7. På siden **Vælg lagerplacering** skal du klikke i feltet, vælge mailadressen på en Microsoft 365 postkasse, som LinkedIn-elementerne skal importeres til, og derefter klikke på **Næste**. Elementer importeres til mappen Indbakke i denne postkasse.
+7. På siden **Vælg lagerplacering** skal du klikke i feltet, vælge mailadressen på en Microsoft 365-postkasse, som LinkedIn-elementerne importeres til, og derefter klikke på **Næste**. Elementer importeres til mappen Indbakke i denne postkasse.
 
 8. Klik på **Næste** for at gennemse connectorindstillingerne, og klik derefter på **Udfør** for at fuldføre connectorkonfigurationen.
 

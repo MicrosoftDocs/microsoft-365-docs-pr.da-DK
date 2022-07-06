@@ -16,34 +16,32 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Du kan tilføje skabeloner til tilsynsførende kommunikation (f.eks. en skabelon til meddelelse om venteposition) i eDiscovery (Premium), så de kan bruges i alle tilfælde i din organisation.
-ms.openlocfilehash: faf4ea91ae6f160b2ba7388a7cfea8ad6cb9797b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0ae8496178cd27a395de66e18355ccd675006486
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097266"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630813"
 ---
 # <a name="manage-custodian-communications-templates-in-ediscovery-premium"></a>Administrer skabeloner til tilsynsførende kommunikation i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du eller andre brugere opretter en meddelelse om bevarelse af venteposition eller andre typer af tilsynsførende kommunikation, skulle du oprette kommunikationsdokumentet fra bunden ved hjælp af kommunikationseditoren under fanen **Kommunikation** i en eDiscovery-sag (Premium). Nu har vi udgivet en ny funktion, hvor du kan oprette kommunikationsskabeloner, der under alle omstændigheder kan bruges til at oprette kommunikation i din organisation. Når der er oprettet kommunikationsskabeloner, kan de bruges i en sag. Det betyder, at paralegals eller andre brugere, der opretter tilsynsførende kommunikation, ikke behøver at starte fra bunden for at oprette en meddelelse. De kan i stedet vælge en skabelon for at oprette den meddelelse, der sendes til en tilsynsførende.
+Når du eller andre brugere opretter en meddelelse om venteposition eller andre typer af tilsynsførende kommunikation, skulle du oprette kommunikationsdokumentet fra bunden ved hjælp af kommunikationseditoren under fanen **Kommunikation** i en eDiscovery-sag (Premium). Nu har vi udgivet en ny funktion, hvor du kan oprette kommunikationsskabeloner, der under alle omstændigheder kan bruges til at oprette kommunikation i din organisation. Når der er oprettet kommunikationsskabeloner, kan de bruges i en sag. Det betyder, at paralegals eller andre brugere, der opretter tilsynsførende kommunikation, ikke behøver at starte fra bunden for at oprette en meddelelse. De kan i stedet vælge en skabelon for at oprette den meddelelse, der sendes til en tilsynsførende.
 
 I denne artikel forklares det, hvordan du opretter kommunikationsskabeloner for hele organisationen og vælger dem, når du opretter en ny meddelelse om forældremyndigheden over en bestemt eDiscovery-sag (Premium).
 
 ## <a name="before-you-create-templates-in-the-communications-library"></a>Før du opretter skabeloner i kommunikationsbiblioteket
 
-- Du skal være eDiscovery-administrator i din organisation for at tilføje eller fjerne skabeloner i kommunikationsbiblioteket i eDiscovery (Premium). Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser på Microsoft Purview-overholdelsesportalen](assign-ediscovery-permissions.md)  
+- Du skal være eDiscovery-administrator i din organisation for at tilføje eller fjerne skabeloner i kommunikationsbiblioteket i eDiscovery (Premium). Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Microsoft Purview-compliance-portal](assign-ediscovery-permissions.md)  
 
 - Din organisation kan maksimalt have 50 skabeloner i kommunikationsbiblioteket.
 
 ## <a name="create-a-communications-template"></a>Opret en kommunikationsskabelon
 
-1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) i portalen til overholdelse af angivne standarder, og klik derefter på **indstillinger for eDiscovery (Premium).**
+1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) på overholdelsesportalen, og klik derefter på **indstillinger for eDiscovery (Premium**).
 
    ![Vælg indstillinger for eDiscovery (Premium)](..\media\HistoricalVersions1.png)
 
-2. Vælg fanen **Kommunikationsbibliotek** på siden **Indstillinger**.
+2. På siden **Indstillinger** skal du vælge fanen **Kommunikationsbibliotek** .
 
 3. Klik på **Opret** på siden **Kommunikationsbibliotek**.
 

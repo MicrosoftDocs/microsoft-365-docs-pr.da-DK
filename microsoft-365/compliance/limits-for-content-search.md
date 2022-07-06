@@ -16,25 +16,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 78fe3147-1979-4c41-83bb-aeccf244368d
-description: Få mere at vide om de grænser, der gælder for funktionerne til indholdssøgning og eDiscovery (Standard) på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: f20c33781b8dd9f92091e1b0c459137a4edd33ed
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Få mere at vide om de grænser, der gælder for funktionerne til indholdssøgning og eDiscovery (Standard) i Microsoft Purview-compliance-portal.
+ms.openlocfilehash: 79078818ca3975dcbfee0ce72b93f1c3d6039802
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014866"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629525"
 ---
 # <a name="limits-for-ediscovery-search"></a>Grænser for eDiscovery-søgning
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Der anvendes forskellige grænser for eDiscovery-søgeværktøjer på Microsoft Purview-overholdelsesportalen. Dette omfatter søgninger, der kører på **indholdssøgesiden**, og søgninger, der er knyttet til en eDiscovery-sag på siden **eDiscovery (Standard).** Disse grænser hjælper med at opretholde sundhed og kvalitet af tjenester, der leveres til organisationer. Der er også grænser for indeksering af mails i Exchange Online til søgning. Du kan ikke ændre grænserne for eDiscovery-søgninger eller mailindeksering, men du skal være opmærksom på dem, så du kan tage disse begrænsninger i betragtning, når du planlægger, kører og foretager fejlfinding af eDiscovery-søgninger.
+Der anvendes forskellige grænser for eDiscovery-søgeværktøjer i Microsoft Purview-compliance-portal. Dette omfatter søgninger, der kører på **indholdssøgesiden**, og søgninger, der er knyttet til en eDiscovery-sag på siden **eDiscovery (Standard).** Disse grænser hjælper med at opretholde sundhed og kvalitet af tjenester, der leveres til organisationer. Der er også grænser for indeksering af mails i Exchange Online til søgning. Du kan ikke ændre grænserne for eDiscovery-søgninger eller mailindeksering, men du skal være opmærksom på dem, så du kan tage disse begrænsninger i betragtning, når du planlægger, kører og foretager fejlfinding af eDiscovery-søgninger.
 
 Du kan finde begrænsninger, der er relateret til værktøjet Microsoft Purview eDiscovery (Premium), [under Grænser i eDiscovery (Premium)](limits-ediscovery20.md)
 
 ## <a name="search-limits"></a>Søgegrænser
 
-I følgende tabel vises søgegrænserne, når du bruger værktøjet til indholdssøgning på overholdelsesportalen og efter søgninger, der er knyttet til en Microsoft Purview eDiscovery-sag (Standard).
+I følgende tabel vises søgegrænserne, når du bruger værktøjet til indholdssøgning på overholdelsesportalen og efter søgninger, der er knyttet til en Microsoft Purview eDiscovery (Standard)-sag.
 
 <br>
 
@@ -66,7 +64,7 @@ I følgende tabel vises søgegrænserne, når du bruger værktøjet til indholds
 >
 > <sup>2</sup> Hensigten med eksempelsiden er at vise et begrænset eksempel på resultaterne. Selv for massive søgninger med tusindvis af resultater kan antallet af elementer, der vises på eksempelsiden, og det vil ofte være meget mindre end den maksimalt mulige værdi på 1000. Hvis du vil se de komplette søgeresultater, skal du eksportere resultaterne.
 >
-> <sup>3</sup> Når du søger SharePoint og OneDrive for Business placeringer, tælles tegnene i URL-adresserne på de websteder, der søges efter, med i forhold til denne grænse.
+> <sup>3</sup> Når du søger i SharePoint og OneDrive for Business placeringer, tælles tegnene i URL-adresserne på de websteder, der søges efter, i forhold til denne grænse.
 >
 > <sup>4</sup> Til forespørgsler, der ikke er udtryk (en nøgleordsværdi, der ikke bruger dobbelte anførselstegn), bruger vi et særligt præfiksindeks. Dette fortæller os, at der forekommer et ord i et dokument, men ikke der, hvor det forekommer i dokumentet. Hvis du vil udføre en udtryksforespørgsel (en nøgleordsværdi med dobbelte anførselstegn), skal vi sammenligne placeringen i dokumentet med ordene i udtrykket. Det betyder, at vi ikke kan bruge præfiksindekset til udtryksforespørgsler. I dette tilfælde udvider vi forespørgslen internt med alle de mulige ord, som præfikset udvides til. kan f.eks `"time*"` . udvides til `"time OR timer OR times OR timex OR timeboxed OR ..."`. 10.000 er det maksimale antal varianter, ordet kan udvides til, ikke antallet af dokumenter, der svarer til forespørgslen. Der er ingen øvre grænse for ord, der ikke er udtryk.
 
@@ -103,7 +101,7 @@ I følgende tabel vises grænserne, når du eksporterer resultaterne af en indho
 |Det maksimale antal eksporter, som en enkelt bruger kan køre på en gang|3|
 |Maksimalt antal postkasser til søgeresultater, der kan downloades ved hjælp af eDiscovery-eksportværktøjet|100,000|
 |Maksimal størrelse på PST-fil, der kan eksporteres <p> **Bemærk:** Hvis søgeresultaterne fra en brugers postkasse er større end 10 GB, eksporteres søgeresultaterne for postkassen i to (eller flere) separate PST-filer. Hvis du vælger at eksportere alle søgeresultater i en enkelt PST-fil, vil PST-filen blive overført til flere PST-filer, hvis den samlede størrelse af søgeresultaterne er større end 10 GB. Hvis du vil ændre denne standardstørrelse, kan du redigere Windows-registreringsdatabasen på den computer, du bruger til at eksportere søgeresultaterne. Se [Skift størrelsen af PST-filer, når du eksporterer eDiscovery-søgeresultater](change-the-size-of-pst-files-when-exporting-results.md). Søgeresultaterne fra en bestemt postkasse opdeles ikke mellem flere PST-filer, medmindre indholdet fra en enkelt postkasse er mere end 10 GB. Hvis du vælger at eksportere søgeresultaterne i én PST-fil for , der indeholder alle meddelelser i en enkelt mappe, og søgeresultaterne er større end 10 GB, er elementerne stadig organiseret i kronologisk rækkefølge, så de vil blive overført til yderligere PST-filer baseret på afsendelsesdatoen.|10 GB|
-|Bedøm, med hvilken søgeresultater fra postkasser og websteder uploades til en Azure Storage placering fra Microsoft.|Maksimalt 2 GB pr. time|
+|Bedøm, med hvilken søgeresultater fra postkasser og websteder uploades til en Microsoft-leveret Azure Storage-placering.|Maksimalt 2 GB pr. time|
 
 ## <a name="indexing-limits-for-email-messages"></a>Indekseringsgrænser for mails
 
@@ -144,7 +142,7 @@ Du kan finde oplysninger om indholdssøgninger i:
 
 - [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md)
 
-Du kan finde sagsgrænser, der er relateret til eDiscovery (Standard) og eDiscovery (Premium), i:
+Hvis du vil se sagsgrænser, der er relateret til eDiscovery (Standard) og eDiscovery (Premium), skal du se:
 
 - [Grænser i eDiscovery (Standard)](limits-core-ediscovery.md)
 

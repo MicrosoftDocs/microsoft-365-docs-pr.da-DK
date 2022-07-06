@@ -13,19 +13,19 @@ ms.localizationpriority: medium
 ms.assetid: e313c489-ce5e-4015-aadf-981c697ab51f
 ms.collection:
 - M365-security-compliance
-description: Office 365-meddelelseskryptering gør det muligt for mailbrugere at sende krypterede meddelelser til personer inden for vores organisation. Som administrator kan du aktivere en Office 365-meddelelseskryptering ved at oprette regler for mailflow (også kaldet transportregler), der angiver betingelserne for kryptering.
-ms.openlocfilehash: 086ddd06d90990da7b9260fcdac10acb7b22de3e
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Microsoft Purview-meddelelseskryptering gør det muligt for brugerne at sende krypterede meddelelser til personer uden for organisationen. Som administrator kan du aktivere Microsoft Purview-meddelelseskryptering ved at oprette regler for mailflow (også kaldet transportregler), der angiver betingelserne for kryptering.
+ms.openlocfilehash: 1440d2c1bcc60b68b3aae02cdba5ca7dec8737db
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588714"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627299"
 ---
 # <a name="enable-message-encryption-and-decryption"></a>Aktivér meddelelseskryptering og dekryptering
 
-Office 365-meddelelseskryptering gør det muligt for mailbrugere at sende krypterede meddelelser til personer inden for vores organisation. Som administrator kan du aktivere en Office 365-meddelelseskryptering ved at oprette regler for mailflow (også kaldet transportregler), der angiver betingelserne for kryptering. Når en af brugerne sender en meddelelse, der opfylder betingelserne i reglen, krypteres meddelelsen.
+Microsoft Purview-meddelelseskryptering gør det muligt for brugerne at sende krypterede meddelelser til personer uden for organisationen. Som administrator kan du aktivere Microsoft Purview-meddelelseskryptering ved at oprette regler for mailflow (også kaldet transportregler), der angiver betingelserne for kryptering. Når en af brugerne sender en meddelelse, der opfylder betingelserne i reglen, krypteres meddelelsen.
   
-Hvis du vil lære, hvordan du opretter regler for mailflow til kryptering, skal du se [Definere regler for at kryptere eller dekryptere mails](./define-mail-flow-rules-to-encrypt-email.md).
+Hvis du vil vide mere om, hvordan du opretter regler for mailflow til kryptering, skal du se [Definer regler for kryptering eller dekryptering af mails](./define-mail-flow-rules-to-encrypt-email.md).
   
 ## <a name="see-also"></a>Se også
 

@@ -11,21 +11,19 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en connector til at importere og arkivere XIP-kildedata fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: fe58aa290a984b7386fdd125e06384e43c60b912
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Administratorer kan konfigurere en connector til at importere og arkivere XIP-kildedata fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
+ms.openlocfilehash: a5ae71c246170f7eda041dd521e779f9c6218278
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317018"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626881"
 ---
 # <a name="set-up-a-connector-to-archive-xip-source-data"></a>Konfigurer en connector til arkivering af XIP-kildedata
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra XIP-kildeplatformen til brugerpostkasser i din Microsoft 365-organisation. Veritas indeholder en [XIP-connector](https://globanet.com/xip/) , der gør det muligt at bruge en XIP-fil til at importere elementer til Microsoft 365. En XIP-fil ligner en ZIP-fil, men gør det muligt at bruge en digital signatur. Den digitale signatur bekræftes af Veritas Merge 1, før XIP-kildefilen udtrækkes. Connectoren konverterer indholdet fra XIP-kildefilen til et mailformat og importerer derefter disse elementer til brugerpostkasserne i Microsoft 365.
 
-Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra XIP-kildeplatformen til brugerpostkasser i din Microsoft 365 organisation. Veritas indeholder en [XIP-connector](https://globanet.com/xip/), der gør det muligt at bruge en XIP-fil til at importere elementer til Microsoft 365. En XIP-fil ligner en ZIP-fil, men gør det muligt at bruge en digital signatur. Den digitale signatur bekræftes af Veritas Merge 1, før XIP-kildefilen udtrækkes. Connectoren konverterer indholdet fra XIP-kildefilen til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
-
-Når XIP-kildedata er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og overholdelse af kommunikation. Brug af en XIP-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når XIP-kildedata er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en XIP-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-the-xip-source-data"></a>Oversigt over arkivering af XIP-kildedataene
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24 timer kopieres XIP-kildeelementer til Veritas Merge1-webstedet. Connectoren konverterer også indholdet til et mailformat.
 
-3. Den XIP-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den XIP-connector, du opretter i overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører meddelelserne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Connectoren importerer de konverterede meddelelseselementer til postkasserne for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning, som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **XIP** i brugerpostkasserne, og elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hvert kildeelement indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager.
 
@@ -45,9 +43,9 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret en Veritas Merge1-konto til Microsoft-connectors. Hvis du vil oprette en konto, skal du kontakte [Veritas Kundesupport](https://www.veritas.com/content/support/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter XIP-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter XIP-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen DataConnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-xip-connector"></a>Trin 1: Konfigurer XIP-connectoren
 
@@ -73,7 +71,7 @@ Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i co
 
 Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen, skal du følge disse trin:
 
-1. Aktivér automatisk brugertilknytning på siden **Tilknyt XIP-brugere til Microsoft 365 brugere**. XIP-kildeelementerne indeholder en egenskab med navnet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+1. Aktivér automatisk brugertilknytning på siden **Knyt XIP-brugere til Microsoft 365-brugere** . XIP-kildeelementerne indeholder en egenskab med navnet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365-bruger, importeres elementerne til den pågældende brugers postkasse.
 
 2. Klik på **Næste**, gennemse dine indstillinger, og gå til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 

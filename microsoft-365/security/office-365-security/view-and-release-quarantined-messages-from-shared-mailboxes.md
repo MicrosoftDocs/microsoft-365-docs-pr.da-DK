@@ -13,16 +13,15 @@ search.appverid:
 ms.assetid: ''
 ms.collection:
 - M365-security-compliance
-ROBOTS: NOINDEX
 description: Brugerne kan få mere at vide om, hvordan de får vist og reagerer på meddelelser i karantæne, der er sendt til delte postkasser, som de har tilladelse til.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2613d3b8be200db3a9107355a27b0dd79ce537d3
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: a37ed03535bd3f3b48aca81c7bf7adeb3c660b46
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65647335"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629007"
 ---
 # <a name="view-and-release-quarantined-messages-from-shared-mailboxes"></a>Få vist og frigiv karantænemeddelelser fra delte postkasser
 
@@ -50,7 +49,9 @@ Automapping er nu ikke længere påkrævet, for at brugerne kan administrere kar
 
 - Knappen **Bloker afsender** er i øjeblikket ikke tilgængelig i pop op-vinduet **Detaljer** for karantænemeddelelser, der blev sendt til den delte postkasse.
 
-- Hvad angår karantænehandlinger for delte postkasser, anbefaler vi ikke mere end to niveauer af indlejrede grupper, hvis du bruger indlejrede sikkerhedsgrupper til at give adgang til en delt postkasse. Gruppe A er f.eks. medlem af Gruppe B, som er medlem af Gruppe C. Hvis du vil tildele tilladelser til en delt postkasse, skal du ikke føje brugeren til Gruppe A og derefter tildele Gruppe C til den delte postkasse.  
+- Hvad angår karantænehandlinger for delte postkasser, anbefaler vi ikke mere end to niveauer af indlejrede grupper, hvis du bruger indlejrede sikkerhedsgrupper til at give adgang til en delt postkasse. Gruppe A er f.eks. medlem af Gruppe B, som er medlem af Gruppe C. Hvis du vil tildele tilladelser til en delt postkasse, skal du ikke føje brugeren til Gruppe A og derefter tildele Gruppe C til den delte postkasse.
+
+- Fra og med juli 2022 bør brugere med primære SMTP-adresser, der er forskellige fra deres UPN'er (user principal names), kunne få adgang til karantænemeddelelser for den delte postkasse.
 
 - Hvis du vil administrere meddelelser i karantæne for den delte postkasse i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), skal slutbrugeren bruge cmdlet'en [Get-QuarantineMessage](/powershell/module/exchange/get-quarantinemessage) med delt postkassemailadresse til værdien af parameteren _RecipientAddress_ til at identificere meddelelserne. Eksempel:
 

@@ -23,16 +23,14 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Sådan opretter du en brugerdefineret MRM-politik (Messaging Records Management) til arkivering og sletning for automatisk at flytte elementer til en brugers arkivpostkasse.
-ms.openlocfilehash: 9ea642dc9d6aa4e66938703b45a8af0bab53476f
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 7002f28d5926ac02cf01e7ab26b02cddfbd58404
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012996"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626045"
 ---
 # <a name="customize-an-archive-and-deletion-policy-for-mailboxes-in-your-organization"></a>Tilpas en politik for arkiv og sletning for postkasser i din organisation
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview-administratorer kan oprette en politik for arkivering og sletning, der automatisk flytter elementer til en brugers [arkivpostkasse](archive-mailboxes.md) og automatisk sletter elementer fra postkassen.
 
@@ -68,7 +66,7 @@ Du kan følge nogle af eller alle trinnene i denne artikel for at konfigurere en
 
 Det første trin er at sikre, at hver bruger i din organisation har en arkivpostkasse. En brugers arkivpostkasse skal være aktiveret, så en opbevaringskode med opbevaringshandlingen "Flyt til arkiv" kan flytte elementet, når opbevaringsalderen udløber.
 
-Du kan finde oplysninger om, hvordan du aktiverer arkivpostkasser, [under Aktivér arkivpostkasser på Microsoft Purview-overholdelsesportalen](enable-archive-mailboxes.md).
+Du kan finde oplysninger om, hvordan du aktiverer arkivpostkasser, [under Aktivér arkivpostkasser i Microsoft Purview-compliance-portal](enable-archive-mailboxes.md).
   
 > [!NOTE]
 > Du kan aktivere arkivpostkasser når som helst under denne proces, så længe de er aktiveret på et tidspunkt, før du fuldfører processen. Hvis en arkivpostkasse ikke er aktiveret, udføres der ingen handling på elementer, hvor der er tildelt en politik for arkiv eller sletning.
@@ -83,7 +81,7 @@ I dette trin skal du oprette de tre brugerdefinerede opbevaringskoder, der tidli
 
 - Slettede elementer i Alpine House 5 år til sletning og gendannelse (brugerdefineret kode for mappen Slettet post)
 
-Hvis du vil oprette nye opbevaringstags, skal du bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> i din Exchange Online organisation. Sørg for at bruge den klassiske version af EAC.
+Hvis du vil oprette nye opbevaringskoder, skal du bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> i din Exchange Online organisation. Sørg for at bruge den klassiske version af EAC.
   
 1. Gå til , [https://admin.protection.outlook.com/ecp/](https://admin.protection.outlook.com/ecp/) og log på med dine legitimationsoplysninger.
   
@@ -99,7 +97,7 @@ Først skal du oprette et DPT (Custom Archive Default Policy Tag), der flytter e
 
 2. På siden **Ny kode, der automatisk anvendes på hele postkassen (standard),** skal du udfylde følgende felter: 
 
-    ![Indstillinger til at oprette et nyt standardpolitikmærke for arkivet.](../media/41c0a43c-9c72-44e0-8947-da0831896432.png)
+    ![Indstillinger for oprettelse af et nyt standardpolitikmærke for arkivet.](../media/41c0a43c-9c72-44e0-8947-da0831896432.png)
   
    1. **Navn** Skriv et navn til den nye opbevaringskode. 
 
@@ -121,7 +119,7 @@ Derefter skal du oprette en anden brugerdefineret DPT, men denne er en politik f
 
 2. På siden **Ny kode, der automatisk anvendes på hele postkassen (standard),** skal du udfylde følgende felter: 
 
-    ![Indstillinger til at oprette et nyt standardpolitikmærke for sletning.](../media/f1f0ff62-eec9-4824-8e7c-d93dcfb09a79.png)
+    ![Indstillinger for oprettelse af en ny standardpolitikkode for sletning.](../media/f1f0ff62-eec9-4824-8e7c-d93dcfb09a79.png)
   
    1. **Navn** Skriv et navn til den nye opbevaringskode. 
 
@@ -143,7 +141,7 @@ Den sidste opbevaringskode, der blev oprettet, er et brugerdefineret opbevarings
 
 2. På siden **Ny kode, der anvendes automatisk på en standardmappe** skal du udfylde følgende felter:
 
-    ![Indstillinger til at oprette en ny opbevaringspolitikkode for mappen Slettet post.](../media/6f3104bd-5edb-48ac-884d-5fe13d81dd1d.png)
+    ![Indstillinger for oprettelse af et nyt opbevaringspolitikmærke for mappen Slettet post.](../media/6f3104bd-5edb-48ac-884d-5fe13d81dd1d.png)
   
    1. **Navn** Skriv et navn til den nye opbevaringskode. 
 
@@ -222,7 +220,7 @@ Når du har anvendt den nye opbevaringspolitik på postkasser i trin 4, kan det 
   
 Her er trinnene til at oprette forbindelse til Exchange Online PowerShell og derefter køre Assistent til administrerede mapper på hver postkasse i din organisation.
 
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
   
 2. Kør følgende to kommandoer for at starte Assistent til administreret mappe for alle brugerpostkasser i din organisation.
 
@@ -252,7 +250,7 @@ I trin 4 skal du tildele den nye opbevaringspolitik til eksisterende postkasser.
 
 Det gør du ved at bruge Exchange Online PowerShell til at opdatere organisationens standardpostkasseplan. En *postkasseplan* er en skabelon, der automatisk konfigurerer egenskaber for nye postkasser.  I dette valgfrie trin kan du erstatte den aktuelle opbevaringspolitik, der er tildelt til postkasseplanen (som standard standard MRM-politikken) med den MRM-opbevaringspolitik, du oprettede i trin 3. Når du har opdateret postkasseplanen, tildeles den nye MRM-opbevaringspolitik til nye postkasser.
 
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør følgende kommando for at få vist oplysninger om postkasseplaner i din organisation.
 
@@ -288,6 +286,6 @@ Det gør du ved at bruge Exchange Online PowerShell til at opdatere organisation
     |Slet aldrig  <br/> |Denne kode forhindrer, at elementer slettes af en opbevaringspolitik.  <br/> |Indbygget  <br/> |Personlig; dette mærke kan anvendes af brugere.  <br/> |
     |Personligt 1 års flytning til arkiv  <br/> |Flytter elementer til arkivpostkassen efter 1 år.  <br/> |Indbygget  <br/> |Personlig; dette mærke kan anvendes af brugere.  <br/> |
 
-    > <sup>\*</sup>Brugerne kan bruge værktøjet Gendan slettede elementer i Outlook og Outlook på internettet (tidligere kaldet Outlook Web App) til at gendanne et slettet element inden for opbevaringsperioden for slettede elementer, hvilket som standard er 14 dage i Exchange Online. En administrator kan bruge Exchange Online PowerShell til at øge opbevaringsperioden for slettede elementer til højst 30 dage. Du kan finde flere oplysninger [under: Gendan slettede elementer i Outlook for Windows](https://support.office.com/article/49e81f3c-c8f4-4426-a0b9-c0fd751d48ce), og [rediger opbevaringsperioden for slettede elementer for en postkasse i Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).
+    > <sup>\*</sup>Brugerne kan bruge værktøjet Gendan slettet post i Outlook og Outlook på internettet (tidligere kaldet Outlook Web App) til at gendanne et slettet element inden for opbevaringsperioden for slettede elementer, hvilket som standard er 14 dage i Exchange Online. En administrator kan bruge Exchange Online PowerShell til at øge opbevaringsperioden for slettede elementer til højst 30 dage. Du kan finde flere oplysninger [under: Gendan slettede elementer i Outlook til Windows](https://support.office.com/article/49e81f3c-c8f4-4426-a0b9-c0fd751d48ce), og [rediger opbevaringsperioden for slettede elementer for en postkasse i Exchange Online](/exchange/recipients-in-exchange-online/manage-user-mailboxes/change-deleted-item-retention).
   
 - Brug af koden **Flyt til arkivopbevaring i 14 dage, der kan genoprettes** , hjælper med at frigøre lagerplads i mappen Gendanbare elementer i brugerens primære postkasse. Dette er nyttigt, når en brugers postkasse er sat i venteposition, hvilket betyder, at intet slettes permanent fra brugerens postkasse. Uden at flytte elementer til arkivpostkassen er det muligt, at lagerkvoten for mappen Gendanbare elementer i den primære postkasse nås. Du kan finde flere oplysninger om dette, og hvordan du undgår det, under [Forøg kvoten for genoprettelige elementer for postkasser i venteposition](./increase-the-recoverable-quota-for-mailboxes-on-hold.md).

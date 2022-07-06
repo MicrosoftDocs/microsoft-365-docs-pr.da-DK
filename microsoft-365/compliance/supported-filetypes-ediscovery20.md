@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 description: En liste over understøttede filtyper i Microsoft 365 eDiscovery (Premium), herunder billedfiltyper, der understøttes af OCR-funktionaliteten i eDiscovery (Premium).
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 422200b3015ff86566507cbe3f63bc2a75a84bea
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: faa367800653e320621336e98f9e8fc684b222ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095790"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631023"
 ---
 # <a name="supported-file-types-in-ediscovery-premium"></a>Understøttede filtyper i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview eDiscovery (Premium) understøtter mange filtyper på mange forskellige niveauer. Supportfilerne er beskrevet i følgende tabeller i denne artikel. Denne liste er ikke færdig, og vi tilføjer nye filtyper, efterhånden som vi fortsætter vores valideringstest. Disse tabeller angiver, om en filtype understøttes til tekstudtrækning (og optisk tegngenkendelse eller OCR-tekstudtrækning for billedfiler), der kan ses i den oprindelige fremviser og også understøttes i Anmærk fremviser i eDiscovery (Premium).
 
@@ -292,7 +290,7 @@ Microsoft Purview eDiscovery (Premium) understøtter mange filtyper på mange fo
 |application/vnd.wordperfect; version=6.x|Ja|Ja|Ja|Nej|Nej|.wpd|
 |
 
-## <a name="word-pro"></a>Word-Pro
+## <a name="word-pro"></a>Word Pro
 
 <br>
 

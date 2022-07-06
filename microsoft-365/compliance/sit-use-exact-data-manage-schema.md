@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du redigerer eller fjerner det nøjagtige skema til datamatch.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 29cfefbd6bf9bb9f92fe5ed7664575ec75adfa12
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: fb8a9d014bb4654ce39b0bb6312f8b20cd6d781e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014668"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629139"
 ---
 # <a name="manage-your-exact-data-match-schema"></a>Administrer dit skema for nøjagtige datamatch
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="editing-the-schema-for-edm-based-classification-manually"></a>Redigere skemaet for EDM-baseret klassificering manuelt
 
@@ -37,7 +35,7 @@ Hvis du vil foretage ændringer i EDM-skemaet, f.eks. **filenedm.xml** , f.eks. 
 
 1. Rediger din **edm.xml-fil** (dette er den fil, der er beskrevet i [Opret skemaet til præcise datamatchbaserede typer følsomme oplysninger](sit-get-started-exact-data-match-create-schema.md#create-the-schema-for-exact-data-match-based-sensitive-information-types).
 
-2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+2. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 3. Kør følgende kommando for at opdatere databaseskemaet:
 
@@ -65,7 +63,7 @@ Hvis du vil foretage ændringer i EDM-skemaet, f.eks. **filenedm.xml** , f.eks. 
 
 Hvis du vil fjerne det skema, du bruger til EDM-baseret klassificering, skal du følge disse trin:
 
-1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende kommando, hvor navnet på datalageret for "patientjournaler" erstattes med det, du vil fjerne (ved hjælp af patientpostlageret som eksempel):
 

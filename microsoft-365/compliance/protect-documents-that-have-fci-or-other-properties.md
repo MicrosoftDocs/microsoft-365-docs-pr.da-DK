@@ -21,32 +21,30 @@ ms.custom:
 - admindeeplinkMAC
 - admindeeplinkSPO
 description: Få mere at vide om, hvordan du bruger en DLP-politik (forebyggelse af datatab) til at beskytte dokumenter, der har egenskaber fra et tredjepartssystem.
-ms.openlocfilehash: 1b73f1441909c49534c17cef47804021ca2824dd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: c57a7b60377cf401a0e29e33ce524c4180b9f725
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007256"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626353"
 ---
 # <a name="create-a-dlp-policy-to-protect-documents-with-fci-or-other-properties"></a>Opret en DLP-politik for at beskytte dokumenter med FCI eller andre egenskaber
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft Purview Forebyggelse af datatab politikker (DLP) kan bruge klassificeringsegenskaber eller elementegenskaber til at identificere følsomme elementer. Du kan f.eks. bruge:
 
-Microsoft Purview DLP-politikker (Forebyggelse af datatab) kan bruge klassificeringsegenskaber eller elementegenskaber til at identificere følsomme elementer. Du kan f.eks. bruge:
-
-- FCI-egenskaber (Windows Server File Classification Infrastructure)
-- SharePoint dokumentegenskaber
+- Egenskaber for Windows Server File Classification Infrastructure (FCI)
+- Egenskaber for SharePoint-dokument
 - egenskaber for systemdokument fra tredjepart
 
 ![Diagram, der viser Office 365 og eksternt klassificeringssystem.](../media/59ad0ac1-4146-4919-abd1-c74d8508d25e.png)
 
-Din organisation kan f.eks. bruge Windows Server FCI til at identificere elementer med personlige data, f.eks. cpr-numre, og derefter klassificere dokumentet ved at angive egenskaben **Personlige oplysninger** til **Høj**, **Moderat**, **Lav**, **Offentlig** eller **Ikke-pii** baseret på typen og antallet af forekomster af personlige oplysninger, der findes i dokumentet.
+Din organisation kan f.eks. bruge Windows Server FCI til at identificere elementer med personlige data, f.eks. cpr-numre, og derefter klassificere dokumentet ved at angive egenskaben **Personligt identificerbare oplysninger** til **Høj**, **Moderat**, **Lav**, **Offentlig** eller **Ikke-PII** baseret på typen og antallet af forekomster af personlige oplysninger, der findes i dokumentet.
 
-I Microsoft 365 kan du oprette en DLP-politik, der identificerer dokumenter, hvor egenskaben er angivet til bestemte værdier, f.eks **. Høj** og **Mellem**, og derefter udfører en handling, f.eks. blokering af adgang til disse filer. Den samme politik kan have en anden regel, der udfører en anden handling, hvis egenskaben er angivet til **Lav**, f.eks. afsendelse af en mailmeddelelse. På denne måde integreres DLP med Windows Server FCI og kan hjælpe med at beskytte Office dokumenter, der uploades eller deles til Microsoft 365, fra Windows serverbaserede filservere.
+I Microsoft 365 kan du oprette en DLP-politik, der identificerer dokumenter, hvor egenskaben er angivet til bestemte værdier, f.eks **. Høj** og **Mellem**, og derefter udfører en handling, f.eks. blokering af adgang til disse filer. Den samme politik kan have en anden regel, der udfører en anden handling, hvis egenskaben er angivet til **Lav**, f.eks. afsendelse af en mailmeddelelse. På denne måde integreres DLP med Windows Server FCI og kan hjælpe med at beskytte Office-dokumenter, der uploades eller deles til Microsoft 365, fra Windows Server-baserede filservere.
 
-En DLP-politik søger ganske enkelt efter et bestemt egenskabsnavn/værdipar. Alle dokumentegenskaber kan bruges, så længe egenskaben har en tilsvarende administreret egenskab til SharePoint søgning. En SharePoint gruppe af websteder kan f.eks. bruge en indholdstype med navnet **Rejserapport** med et obligatorisk felt med navnet **Kunde**. Når en person opretter en rejserapport, skal vedkommende angive kundenavnet. Dette egenskabsnavn/værdipar kan også bruges i en DLP-politik – f.eks. hvis du vil have en regel, der blokerer adgang til dokumentet for gæster, når feltet **Kunde** indeholder **Contoso**.
+En DLP-politik søger ganske enkelt efter et bestemt egenskabsnavn/værdipar. En hvilken som helst dokumentegenskab kan bruges, så længe egenskaben har en tilsvarende administreret egenskab for SharePoint-søgning. En gruppe af SharePoint-websteder kan f.eks. bruge en indholdstype med navnet **Rejserapport** med et obligatorisk felt med navnet **Kunde**. Når en person opretter en rejserapport, skal vedkommende angive kundenavnet. Dette egenskabsnavn/værdipar kan også bruges i en DLP-politik – f.eks. hvis du vil have en regel, der blokerer adgang til dokumentet for gæster, når feltet **Kunde** indeholder **Contoso**.
 
-Hvis du vil anvende din DLP-politik på indhold med bestemte Microsoft 365 mærkater, skal du ikke følge trinnene her. I stedet kan du få mere at vide om, hvordan [du bruger en opbevaringsmærkat som en betingelse i en DLP-politik](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
+Hvis du vil anvende din DLP-politik på indhold med bestemte Microsoft 365-mærkater, skal du ikke følge trinnene her. I stedet kan du få mere at vide om, hvordan [du bruger en opbevaringsmærkat som en betingelse i en DLP-politik](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
 ## <a name="before-you-create-the-dlp-policy"></a>Før du opretter DLP-politikken
 
@@ -61,7 +59,7 @@ Dette er vigtigt, fordi DLP bruger søgecrawleren til at identificere og klassif
 
 Du kan finde flere oplysninger om søgeegenskaber og administrerede egenskaber [under Administrer søgeskemaet i SharePoint Online](/sharepoint/manage-search-schema).
 
-### <a name="step-1-upload-a-document-with-the-needed-property-to-office-365"></a>Trin 1: Upload et dokument med den nødvendige egenskab for at Office 365
+### <a name="step-1-upload-a-document-with-the-needed-property-to-office-365"></a>Trin 1: Overfør et dokument med den nødvendige egenskab for at Office 365
 
 Du skal først uploade et dokument med den egenskab, du vil referere til i din DLP-politik. Microsoft 365 registrerer egenskaben og opretter automatisk en gennemsøgt egenskab ud fra den. I næste trin skal du oprette en administreret egenskab og derefter knytte den administrerede egenskab til denne gennemsøgte egenskab.
 
@@ -69,7 +67,7 @@ Du skal først uploade et dokument med den egenskab, du vil referere til i din D
 
 1. Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>.
 
-2. Vælg **Administrationscentre** \> SharePoint i venstre **navigationsrude**. Du er nu i <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
+2. I venstre navigationsrude skal du vælge **Administration centre** \> **i SharePoint**. Du er nu i <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>.
 
 3. I venstre navigationsrude skal du vælge **Søg** \> på siden \> **til administration af søgning** **Administrer søgeskema**.
 
@@ -87,7 +85,7 @@ Du skal først uploade et dokument med den egenskab, du vil referere til i din D
 
 8. Tilføj **en tilknytning** under **Tilknytninger til gennemsøgte egenskaber**\>.
 
-9. I dialogboksen \> **til valg af gennemsøgt egenskab** skal du søge efter og vælge den gennemsøgte egenskab, der svarer til den Windows Server FCI-egenskab eller en anden egenskab, som du vil bruge i DLP-politikken \> **OK**.
+9. I dialogboksen \> **til valg af gennemsøgt egenskab** skal du søge efter og vælge den gennemsøgte egenskab, der svarer til egenskaben Windows Server FCI eller en anden egenskab, som du vil bruge i DLP-politikken \> **OK**.
 
    ![dialogboksen til valg af gennemsøgt egenskab.](../media/aeda1dce-1342-48bf-9594-a8e4f230e8aa.png)
 
@@ -95,7 +93,7 @@ Du skal først uploade et dokument med den egenskab, du vil referere til i din D
 
 ## <a name="create-a-dlp-policy-that-uses-an-fci-property-or-other-property"></a>Opret en DLP-politik, der bruger en FCI-egenskab eller en anden egenskab
 
-I dette eksempel bruger en organisation FCI på sine Windows serverbaserede filservere. De bruger specifikt FCI-klassificeringsegenskaben med navnet **Personligt identificerbare oplysninger** med mulige værdier som **Høj**, **Moderat**, **Lav**, **Offentlig** og **Ikke-PII**. Nu vil de bruge deres eksisterende FCI-klassificering i deres DLP-politikker i Office 365.
+I dette eksempel bruger en organisation FCI på sine Windows Server-baserede filservere. De bruger specifikt FCI-klassificeringsegenskaben med navnet **Personligt identificerbare oplysninger** med mulige værdier som **High**, **Moderate**, **Low**, **Public** og **Not PII**. Nu vil de bruge deres eksisterende FCI-klassificering i deres DLP-politikker i Office 365.
 
 Først skal de følge trinnene ovenfor for at oprette en administreret egenskab i SharePoint Online, som knyttes til den gennemsøgte egenskab, der oprettes automatisk ud fra FCI-egenskaben.
 
@@ -107,9 +105,9 @@ Derefter opretter de en DLP-politik med to regler, der begge bruger betingelsen 
 
 ### <a name="create-the-dlp-policy-by-using-security--compliance-powershell"></a>Opret DLP-politikken ved hjælp af PowerShell til sikkerhed & overholdelse af angivne standarder
 
-Betingelsen **Dokumentegenskaber indeholder nogen af disse værdier** er midlertidigt ikke tilgængelige på Microsoft Purview-overholdelsesportalen, men du kan stadig bruge denne betingelse i Security & Compliance PowerShell. Du kan bruge `New\Set\Get-DlpCompliancePolicy` cmdlet'erne til at arbejde med en DLP-politik og bruge `New\Set\Get-DlpComplianceRule` cmdlet'erne med `ContentPropertyContainsWords` parameteren til at tilføje betingelsen **Dokumentegenskaber indeholder en af disse værdier**.
+Betingelsen **Dokumentegenskaber indeholder nogen af disse værdier** er midlertidigt ikke tilgængelige i Microsoft Purview-compliance-portal, men du kan stadig bruge denne betingelse i Security & Compliance PowerShell. Du kan bruge `New\Set\Get-DlpCompliancePolicy` cmdlet'erne til at arbejde med en DLP-politik og bruge `New\Set\Get-DlpComplianceRule` cmdlet'erne med `ContentPropertyContainsWords` parameteren til at tilføje betingelsen **Dokumentegenskaber indeholder en af disse værdier**.
 
-1. [Forbind til PowerShell til & overholdelse af sikkerhed & overholdelse](/powershell/exchange/connect-to-scc-powershell)
+1. [Opret forbindelse til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell)
 
 2. Opret politikken ved hjælp `New-DlpCompliancePolicy`af .
 
@@ -127,7 +125,7 @@ Betingelsen **Dokumentegenskaber indeholder nogen af disse værdier** er midlert
    New-DlpComplianceRule -Name FCI_PII_content-High,Moderate -Policy FCI_PII_policy -AccessScope NotInOrganization -BlockAccess $true -ContentPropertyContainsWords "Personally Identifiable Information:High,Moderate" -Disabled $falseNew-DlpComplianceRule -Name FCI_PII_content-Low -Policy FCI_PII_policy -AccessScope NotInOrganization -BlockAccess $false -ContentPropertyContainsWords "Personally Identifiable Information:Low" -Disabled $false -NotifyUser Owner
    ```
 
-   Windows Server FCI indeholder mange indbyggede egenskaber, herunder **personlige oplysninger**, der bruges i dette eksempel. De mulige værdier for hver egenskab kan være forskellige for hver organisation. Værdierne **High**, **Moderate** og **Low** , der bruges her, er kun et eksempel. For din organisation kan du få vist de Windows Server FCI-klassificeringsegenskaber med deres mulige værdier i filen Server Resource Manager på den Windows Server-baserede filserver. Du kan få flere oplysninger under [Opret en klassificeringsegenskab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759215(v=ws.11)).
+   Windows Server FCI indeholder mange indbyggede egenskaber, herunder **personlige oplysninger** , der bruges i dette eksempel. De mulige værdier for hver egenskab kan være forskellige for hver organisation. Værdierne **High**, **Moderate** og **Low** , der bruges her, er kun et eksempel. For din organisation kan du få vist egenskaberne for Windows Server FCI-klassificering med deres mulige værdier i filen Server Resource Manager på den Windows Server-baserede filserver. Du kan få flere oplysninger under [Opret en klassificeringsegenskab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759215(v=ws.11)).
 
 Når du er færdig, skal politikken have to nye regler, der begge bruger **dokumentegenskaberne, som indeholder en af disse værdibetingelse** . Denne betingelse vises ikke i brugergrænsefladen, selvom de andre betingelser, handlinger og indstillinger vises.
 
@@ -148,7 +146,7 @@ Du kan få flere oplysninger under [Anmod manuelt om gennemsøgning og genindeks
 
 ### <a name="reindex-a-site-optional"></a>Omsæt et websted (valgfrit)
 
-1. På webstedet skal du vælge **Indstillinger** (tandhjulsikon øverst til højre) \> **Websted Indstillinger**.
+1. På webstedet skal du vælge **Indstillinger** (tandhjulsikon øverst til højre) \> **Indstillinger for websted**.
 
 2. Under **Søg** skal du vælge **Søg og offlinetilgængelighed** \> **Omstil websted**.
 

@@ -17,22 +17,20 @@ search.appverid:
 ms.assetid: ''
 description: Brug temaer i eDiscovery (Premium) til at organisere korrektursæt ved at finde det dominerende tema i hvert dokument.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 1cfbbafe6551f4483174665390d71ceb6bec0328
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e42124345c45725d492a1f121e1b6cc4c95c4ccb
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096584"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630891"
 ---
 # <a name="themes-in-ediscovery-premium"></a>Temaer i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvordan skriver en person et dokument? De starter som regel med en eller flere ideer, de vil formidle i dokumentet, og skriver ved hjælp af ord, der stemmer overens med idéerne. Jo mere udbredt en idé er, jo hyppigere de ord, der er relateret til denne idé tendens til at være. Dette informerer også, hvordan personer bruger dokumenter. Det vigtigste at forstå ved at læse et dokument er de ideer, som dokumentet forsøger at formidle, hvilke ideer der vises hvor, og hvad relationerne mellem idéerne er.
 
 Dette kan udvides til, hvordan en person ønsker at bruge et sæt dokumenter. De ønsker at se, hvilke idéer der er til stede i sættene, og hvilke dokumenter der taler om disse idéer. Hvis de finder et bestemt interessedokument, vil de også gerne kunne se dokumenter, der diskuterer lignende idéer.
 
-Funktionaliteten Temaer i eDiscovery (Premium) forsøger at efterligne, hvordan mennesker mener om dokumenter, ved at analysere de *temaer*, der er beskrevet i et korrektursæt, og tildele et tema til dokumenter i korrektursættet. I eDiscovery (Premium) går temaer et skridt videre og identificerer det *dominerende tema* i hvert dokument. Det dominerende tema er det, der oftest vises i et dokument.
+Funktionaliteten Temaer i eDiscovery (Premium) forsøger at efterligne, hvordan mennesker mener om dokumenter, ved at analysere de *temaer* , der beskrives i et korrektursæt, og tildele et tema til dokumenter i korrektursættet. I eDiscovery (Premium) går temaer et skridt videre og identificerer det *dominerende tema* i hvert dokument. Det dominerende tema er det, der oftest vises i et dokument.
 
 ## <a name="how-does-themes-work"></a>Hvordan fungerer temaer?
 

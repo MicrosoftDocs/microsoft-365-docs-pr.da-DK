@@ -1,5 +1,5 @@
 ---
-title: Fraråde visning af meddelelseskrypteringsapp
+title: Fraråder OME Viewer-app
 f1.keywords:
 - NOCSH
 ms.author: krowley
@@ -18,44 +18,42 @@ ms.collection:
 - M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
-description: Appen Office 365-meddelelseskryptering (OME) Viewer blev fjernet fra Android- og Apple-butikker i 2018.
-ms.openlocfilehash: 0eded17f4da5347e1f1a88031a780cee5f8b1dee
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: Appen OME (Office 365 Message Encryption) blev fjernet fra Android- og Apple Stores i 2018.
+ms.openlocfilehash: 2e1e0ead7d34761a3159b4b51368ea4460acb596
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588904"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630075"
 ---
-# <a name="deprecating-message-encryption-viewer-app"></a>Fraråde visning af meddelelseskrypteringsapp
+# <a name="deprecating-message-encryption-viewer-app"></a>Fraråder appen Meddelelsekrypteringsfremviser
 
-Den 15. august 2018 fjernede vi Office 365-meddelelseskryptering (OME) Viewer-mobilappen fra Android- og Apple Store. Mobilappen Office 365 Message Encryption Viewer at kunne læse mails og vedhæftede filer, der blev krypteret med den tidligere version af OME på Apple- og Android-telefoner. Ud over at fjerne OME Viewer-appen foretager vi ikke andre ændringer i den tidligere version af OME.
+Den 15. august 2018 fjernede vi mobilappen Office 365 Message Encryption (OME) Viewer fra Android- og Apple-butikker. Mobilappen Office 365 Message Encryption Viewer var påkrævet for at læse mails og vedhæftede filer, der blev krypteret med den tidligere version af OME på Apple- og Android-telefoner. Ud over at fjerne OME Viewer-appen foretager vi ikke andre ændringer af den tidligere version af OME.
   
 ## <a name="changes-from-august-2018"></a>Ændringer fra august 2018
 
-Som offentliggjort i september 2017 har vi udgivet en ny version af [Office 365-meddelelseskryptering](https://aka.ms/ome2017), så brugerne kan sende krypterede og beskyttede meddelelser til personer i eller uden for organisationen uden krav fra mobilappen. Siden da har vi tilføjet yderligere funktioner:
+Som annonceret i september 2017 har vi udgivet en ny version af [Office 365 Meddelelseskryptering](https://aka.ms/ome2017), så brugerne kan sende krypterede og beskyttede meddelelser til alle i eller uden for organisationen uden mobilappens krav. Siden da har vi tilføjet yderligere funktioner:
   
-- [Kun krypteret skabelon](https://aka.ms/encryptonly)
+- [Skabelon kun til kryptering](https://aka.ms/encryptonly)
 
 - [Kontrolelement til dekryptering af vedhæftede filer](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007)
 
-Med denne ændring vil brugerne ikke længere kunne downloade mobilappen til Office 365 Message Encryption Viewer fra den 1. august. Det betyder, at modtagerne af mails muligvis ikke kan læse meddelelser, der er krypteret med den tidligere version af OME, på nogle Android- og Apple-mobilenheder. De vil dog stadig kunne læse disse meddelelser på personlige computere (via skrivebordsbrowsere). Brugere, der allerede har downloadet appen, vil fortsat kunne bruge den.
+Med denne ændring kan brugerne ikke længere downloade mobilappen Office 365 Message Encryption Viewer fra den 1. august. Det betyder, at mailmodtagere muligvis ikke kan læse meddelelser, der er krypteret med den tidligere version af OME, på nogle Android- og Apple-mobilenheder. De vil dog stadig kunne læse disse meddelelser på personlige computere (via skrivebordsbrowsere). Brugere, der allerede har downloadet appen, vil fortsat kunne bruge den.
   
 ## <a name="why-this-change-was-made"></a>Hvorfor denne ændring blev foretaget
 
-Den nye version af OME kræver ikke længere en mobilapp for at læse beskyttede mails og vedhæftede filer. Kunder, der bruger de nye OME-funktioner, kan få vist den beskyttede meddelelse i Outlook mobil, og ikke-kunder kan få vist beskyttede meddelelser i en browser.
+Den nye version af OME kræver ikke længere, at en mobilapp læser beskyttede mails og vedhæftede filer. Kunder, der bruger Microsoft Purview-meddelelseskryptering, kan få vist den beskyttede meddelelse i Outlook Mobile, og ikke-kunder kan få vist beskyttede meddelelser i en browser.
   
-Krav om, at brugere skal downloade en mobilapp, er en anden forhindring for, at kunderne kan få vist beskyttede meddelelser. De nye Office 365-meddelelseskryptering giver en bedre mobiloplevelse.
+Det er en anden forhindring for kunderne at få vist beskyttede meddelelser, hvis brugerne skal downloade en mobilapp. Microsoft Purview-meddelelseskryptering giver en bedre mobiloplevelse.
   
-## <a name="can-i-still-use-the-previous-version-of-office-365-message-encryption"></a>Kan jeg stadig bruge den tidligere version af Office 365-meddelelseskryptering
+## <a name="can-i-still-use-the-previous-version-of-office-365-message-encryption"></a>Kan jeg stadig bruge den tidligere version af Office 365 Meddelelsekryptering
 
-Den tidligere version af Office 365-meddelelseskryptering frarådes på nuværende tidspunkt, men vi har foretaget betydelige forbedringer til den nye version af Office 365-meddelelseskryptering , hvilket gør det nemmere at kryptere og rettighedsbeskytte følsomme data til alle og på en hvilken som helst enhed – herunder muligheden for, at brugerne kan læse beskyttede meddelelser direkte i Outlook (computer, mobil og web). 
+Den tidligere version af Office 365 meddelelseskryptering frarådes på nuværende tidspunkt, men vi har foretaget betydelige forbedringer af Microsoft Purview-meddelelseskryptering, hvilket gør det nemmere at kryptere og rettigheder beskytte følsomme data for alle og på en hvilken som helst enhed – herunder brugernes mulighed for at læse beskyttede meddelelser direkte i Outlook (desktop,  mobil og web).
   
-## <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hvad skal jeg gøre for at forberede denne ændring?
+## <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hvad skal jeg gøre for at forberede mig på denne ændring
 
-Hvis din organisation i øjeblikket sender krypterede vedhæftede filer til modtagere, der kræver OME Viewer-appen, skal du opdatere din dokumentation og undervisningsressourcer.
+Hvis din organisation i øjeblikket sender krypterede vedhæftede filer til modtagere, der kræver OME Viewer-appen, skal du opdatere dokumentationen og undervisningsressourcerne.
   
-Vi anbefaler, at Exchange regler for mailflow til at bruge den aktuelle version af OME, så organisationen kan udnytte de nye og forbedrede funktioner. Når du har konfigureret de nye OME-funktioner, behøver modtagerne ikke OME Viewer-appen for at læse krypterede meddelelser på mobilenheder.
+Vi anbefaler, at du opdaterer eksisterende regler for Exchange-mailflow for at bruge Microsoft Purview-meddelelseskryptering, så din organisation kan drage fordel af de nye og forbedrede funktioner. Når du har konfigureret Microsoft Purview-meddelelseskryptering, behøver modtagerne ikke APPEN OME Viewer til at læse krypterede meddelelser på mobilenheder.
   
-Microsoft anbefaler, at du planlægger at flytte til de nye OME-funktioner, så snart det er fornuftigt for din organisation. Du kan finde en [vejledning under Konfigurere Office 365-meddelelseskryptering funktioner](set-up-new-message-encryption-capabilities.md). Hvis du vil vide mere om, hvordan de nye funktioner virker først, skal du se [Office 365-meddelelseskryptering](ome.md).
-  
-
+Microsoft anbefaler, at du planlægger at flytte til Microsoft Purview-meddelelseskryptering, så snart det er rimeligt for din organisation. Du kan finde en vejledning under [Konfigurer Microsoft Purview-meddelelseskryptering](set-up-new-message-encryption-capabilities.md). Hvis du vil vide mere om, hvordan kryptering af meddelelser fungerer først, skal du se [Meddelelsekryptering](ome.md).

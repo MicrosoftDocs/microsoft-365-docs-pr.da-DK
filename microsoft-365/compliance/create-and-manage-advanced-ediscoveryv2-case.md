@@ -19,17 +19,15 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: I denne artikel beskrives det, hvordan du opretter og administrerer Microsoft Purview eDiscovery-sager (Premium). Det første trin er at oprette en sag og begynde at bruge funktioner og funktionalitet i eDiscovery (Premium).
-ms.openlocfilehash: e5773f54d0ce6efbfc5aae22eb616f96c3777eda
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: I denne artikel beskrives det, hvordan du opretter og administrerer Microsoft Purview eDiscovery (Premium)-sager. Det første trin er at oprette en sag og begynde at bruge funktioner og funktionalitet i eDiscovery (Premium).
+ms.openlocfilehash: b8577a8d44cb6860cd595d3f2f13c731c290ba12
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096980"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630361"
 ---
 # <a name="create-and-manage-an-ediscovery-premium-case"></a>Opret og administrer en eDiscovery-sag (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har konfigureret Microsoft Purview eDiscovery (Premium) og [tildelt tilladelser til eDiscovery-ledere](get-started-with-advanced-ediscovery.md#step-2-assign-ediscovery-permissions) i din organisation, der skal administrere sager, er det næste trin at oprette og administrere en sag.
 
@@ -37,11 +35,11 @@ Denne artikel indeholder også en overordnet oversigt over, hvordan du bruger sa
 
 ## <a name="create-a-case"></a>Opret en sag
 
-Udfør følgende trin for at oprette en sag og tilføje medlemmer. Den bruger, der opretter sagen, tilføjes automatisk som medlem. Medlemmer af sagen kan få adgang til sagen på Microsoft Purview-overholdelsesportalen og udføre eDiscovery-opgaver (Premium).
+Udfør følgende trin for at oprette en sag og tilføje medlemmer. Den bruger, der opretter sagen, tilføjes automatisk som medlem. Medlemmer af sagen kan få adgang til sagen i Microsoft Purview-compliance-portal og udføre eDiscovery-opgaver (Premium).
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a> , og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt eDiscovery-tilladelser. Medlemmer af rollegruppen Organisationsadministration kan også oprette eDiscovery-sager (Premium).
 
-2. Klik på **Vis alle** i navigationsruden til venstre på overholdelsesportalen, vælg derefter **eDiscoveryAdvanced** > , og vælg derefter <a href="https://go.microsoft.com/fwlink/p/?linkid=2173764" target="_blank">fanen **Sager**</a>.
+2. Klik på **Vis alle** i navigationsruden til venstre på overholdelsesportalen, vælg derefter **eDiscovery** > **Advanced**, og vælg derefter <a href="https://go.microsoft.com/fwlink/p/?linkid=2173764" target="_blank">fanen **Sager**</a>.
 
 3. Vælg **Opret en sag**.
 
@@ -65,7 +63,7 @@ Udfør følgende trin for at oprette en sag og tilføje medlemmer. Den bruger, d
 
 ## <a name="manage-the-workflow"></a>Administrer arbejdsprocessen
 
-Her er en grundlæggende arbejdsproces, der passer til [almindelige eDiscovery-fremgangsmåder](advanced-ediscovery-edrm.md), så du kan komme i gang med at bruge eDiscovery (Premium). I hvert af disse trin fremhæver vi også nogle udvidede funktioner i eDiscovery (Premium), som du kan udforske.
+Her er en grundlæggende arbejdsproces, der er i overensstemmelse med [almindelige eDiscovery-fremgangsmåder](advanced-ediscovery-edrm.md), så du kan komme i gang med at bruge eDiscovery (Premium). I hvert af disse trin fremhæver vi også nogle udvidede funktioner i eDiscovery (Premium), som du kan udforske.
 
 ![eDiscovery-arbejdsproces (Premium).](../media/AeDWorkflow.png)
 
@@ -73,15 +71,15 @@ Her er en grundlæggende arbejdsproces, der passer til [almindelige eDiscovery-f
 
    Her er nogle ting, der sker (eller som du kan gøre), når du føjer tilsynsførende til en sag:
 
-   - Data i forældremyndighedens Exchange postkasse, OneDrive konto og eventuelle Microsoft Teams eller Yammer grupper, som vogteren er medlem af, kan "markeres" som frihedsberøvende data i tilfælde.
+   - Data i forældremyndighedens Exchange-postkasse, OneDrive-konto og alle Microsoft Teams- eller Yammer-grupper, som vogteren er medlem af, kan "markeres" som data om varetægtsfængsling i tilfælde af.
   
    - Forældremyndighedens data genindekseres (af en proces, der kaldes *Avanceret indeksering*). Dette hjælper med at optimere søgningen efter den i næste trin.
   
    - Du kan placere en venteposition på data fra tilsynsførende. Dette bevarer data, der kan være relevante for sagen under undersøgelsen.
   
-   - Du kan knytte andre datakilder til en tilsynsførende (du kan f.eks. knytte et SharePoint websted eller en Microsoft 365 gruppe til en tilsynsførende), så disse data kan omlægges, sættes i venteposition og søges på samme måde som dataene i forældremyndighedens postkasse eller OneDrive konto.
+   - Du kan knytte andre datakilder til en tilsynsførende (du kan f.eks. knytte et SharePoint-websted eller En Microsoft 365-gruppe til en tilsynsførende), så disse data kan omdexeres, sættes i venteposition og søges på samme måde som dataene i forældremyndighedens postkasse eller OneDrive-konto.
 
-   - Du kan bruge [arbejdsprocessen for kommunikation](managing-custodian-communications.md) i eDiscovery (Premium) til at sende en meddelelse om juridisk venteposition til tilsynsførende.
+   - Du kan bruge [arbejdsprocessen for kommunikation](managing-custodian-communications.md) i eDiscovery (Premium) til at sende en meddelelse om juridisk venteposition til vogtere.
 
 2. **[Indsaml relevant indhold fra datakilder](create-draft-collection.md)**. Når du har føjet tilsynsførende og ikke-frihedsberøvende datakilder til en sag, kan du bruge det indbyggede indsamlingsværktøj til at søge i disse datakilder efter indhold, der kan være relevant for sagen. Du kan bruge nøgleord, egenskaber og betingelser til at [oprette søgeforespørgsler](building-search-queries.md) , der returnerer søgeresultater med de data, der er mest relevante for sagen. Du kan også:
 
@@ -91,7 +89,7 @@ Her er en grundlæggende arbejdsproces, der passer til [almindelige eDiscovery-f
 
    - Rediger en forespørgsel, og kør samlingen igen.
 
-3. **[Send samling til et korrektursæt](commit-draft-collection.md)**. Når du har konfigureret og bekræftet, at en søgning returnerer de ønskede data, er det næste trin at føje søgeresultaterne til et korrektursæt. Når du føjer data til et korrektursæt, kopieres elementer fra deres oprindelige placering til en sikker Azure Storage placering. Dataene indekseres igen for at optimere dem til grundige og hurtige søgninger, når du gennemser og analyserer elementer i korrektursættet. Du kan også [føje data, der ikke er Office 365, til et korrektursæt](load-non-office-365-data-into-a-review-set.md).
+3. **[Send samling til et korrektursæt](commit-draft-collection.md)**. Når du har konfigureret og bekræftet, at en søgning returnerer de ønskede data, er det næste trin at føje søgeresultaterne til et korrektursæt. Når du føjer data til et korrektursæt, kopieres elementer fra deres oprindelige placering til en sikker Azure Storage-placering. Dataene indekseres igen for at optimere dem til grundige og hurtige søgninger, når du gennemser og analyserer elementer i korrektursættet. Du kan også [føje data, der ikke er Office 365, til et korrektursæt](load-non-office-365-data-into-a-review-set.md).
 
    Der er også en særlig type korrektursæt, som du kan føje data til, kaldet et *samtalegennemsynssæt*. Disse typer korrektursæt indeholder funktioner til genopbygning af samtaler, så du kan rekonstruere, gennemse og eksportere gevindsamtaler som dem i Microsoft Teams. Du kan finde flere oplysninger [under Gennemse samtaler i eDiscovery (Premium)](conversation-review-sets.md).
 
@@ -107,13 +105,13 @@ Her er en grundlæggende arbejdsproces, der passer til [almindelige eDiscovery-f
 
    - [Analysér sagsdata](analyzing-data-in-review-set.md). Analysefunktionen i eDiscovery (Premium) er effektiv. Når du har kørt analyser af dataene i gennemgangssættet, udfører vi analyser, f.eks. næsten registrering af dubletter, mailtråde og temaer, der kan hjælpe med at reducere mængden af dokumenter, du skal gennemse. Vi genererer også en analyserapport, der opsummerer resultatet af at køre analyse. Som tidligere forklaret kører kørsel af analyser også [modellen til registrering af rettighedsregistrering for advokatklienter](attorney-privilege-detection.md#use-the-attorney-client-privilege-detection-model).
 
-5. **Eksportér og download sagsdata**. Et sidste trin efter indsamling, gennemgang og analyse af sagsdata er at eksportere dem ud af eDiscovery (Premium) til ekstern gennemgang eller til gennemsyn af personer uden for undersøgelsesteamet. Eksport af data er en proces med to trin. Det første trin er at [eksportere](export-documents-from-review-set.md) data ud af korrektursættet og kopiere dem til en anden Azure Storage placering (en, der leveres af Microsoft eller en, der administreres af din organisation). Derefter kan du bruge Azure Storage Explorer til at [downloade](download-export-jobs.md) dataene til en lokal computer. Ud over de eksporterede datafiler indeholder indeholder den også en eksportrapport, en oversigtsrapport og en fejlrapport.
+5. **Eksportér og download sagsdata**. Et sidste trin efter indsamling, gennemgang og analyse af sagsdata er at eksportere dem ud af eDiscovery (Premium) til ekstern gennemgang eller til gennemsyn af personer uden for undersøgelsesteamet. Eksport af data er en proces med to trin. Det første trin er at [eksportere](export-documents-from-review-set.md) data ud af korrektursættet og kopiere dem til en anden Azure Storage-placering (en, der leveres af Microsoft eller en, der administreres af din organisation). Derefter kan du bruge Azure Storage Explorer til at [downloade](download-export-jobs.md) dataene til en lokal computer. Ud over de eksporterede datafiler indeholder indeholder den også en eksportrapport, en oversigtsrapport og en fejlrapport.
 
 ## <a name="ediscovery-premium-architecture"></a>eDiscovery-arkitektur (Premium)
 
-Her er et arkitekturdiagram, der viser eDiscovery-arbejdsprocessen (Premium) i et enkelt geomiljø og i et multi-geo-miljø samt dataflowet fra slutpunkt til slutpunkt, der er justeret i forhold til [modellen for reference til elektronisk registrering](overview-ediscovery-20.md#ediscovery-premium-alignment-with-the-electronic-discovery-reference-model).
+Her er et arkitekturdiagram, der viser eDiscovery(Premium) end-to-end-arbejdsprocessen i et enkelt geo-miljø og i et multi-geo-miljø samt dataflowet fra slutpunkt til slutpunkt, der er justeret i forhold til [modellen for reference til elektronisk registrering](overview-ediscovery-20.md#ediscovery-premium-alignment-with-the-electronic-discovery-reference-model).
 
-[![Modelplakat: eDiscovery-arkitektur (Premium) i Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
+[![Modelplakat: eDiscovery (Premium)-arkitektur i Microsoft 365.](../media/solutions-architecture-center/ediscovery-poster-thumb.png)](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 
 [Vis som et billede](../media/solutions-architecture-center/m365-advanced-ediscovery-architecture.png)
 

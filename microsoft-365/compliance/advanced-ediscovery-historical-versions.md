@@ -16,28 +16,26 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Brug historiske versioner i eDiscovery (Premium) til at indsamle indhold fra alle versioner af dokumenter, der er gemt i SharePoint og OneDrive.
-ms.openlocfilehash: 2b71d79fae15b5bc8bafbf32fc189dad9b314d40
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3706da8c9383dfdd3d6b41f309f8b84920648842
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092541"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627729"
 ---
 # <a name="set-up-historical-versions-in-ediscovery-premium-preview"></a>Konfigurer historiske versioner i eDiscovery (Premium) (prøveversion)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Funktionen historiske versioner i eDiscovery (Premium) gør det muligt for eDiscovery-ledere i din organisation at søge efter og indsamle indhold fra alle versioner af dokumenter, der er gemt i SharePoint Online og OneDrive for Business. Derefter kan du føje dette indhold til et anmeldelsessæt til analyse og gennemgang. Dette hjælper dig med at finde og gennemse indhold fra en bestemt version af et dokument, der kan være relevant for en sag eller undersøgelse, også selvom den seneste version af det samme dokument ikke indeholder de relevante oplysninger.
 
-Hvis SharePoint administratorer vil understøtte funktionen til historiske versioner i eDiscovery (Premium), skal de aktivere versionering for websteder i deres organisation. Når brugerne derefter ændrer dokumenter i SharePoint eller OneDrive, oprettes der implicitte almindelige versioner, når dokumentet gemmes (eller gemmes automatisk). SharePoint versioner gør det muligt at spore den aktivitet, der udføres på SharePoint elementer (herunder dokumenter, hændelser og opgaver). Denne versionsstyringsfunktion efterlader et revisionsspor, der kan levere beviser i juridiske undersøgelser. Disse ældre versioner af et dokument er tilgængelige for organisationen, som kan blive bedt om at dele sådanne versioner, der har følsomt eller relevant indhold under en retskendelse i en juridisk sag.
+SharePoint-administratorer skal aktivere versionering for websteder i deres organisation for at understøtte funktionaliteten til historiske versioner i eDiscovery (Premium). Når brugerne derefter ændrer dokumenter i SharePoint eller OneDrive, oprettes der implicitte almindelige versioner, når dokumentet gemmes (eller gemmes automatisk). Med SharePoint-versionering kan du spore den aktivitet, der udføres på SharePoint-elementer (herunder dokumenter, hændelser og opgaver). Denne versionsstyringsfunktion efterlader et revisionsspor, der kan levere beviser i juridiske undersøgelser. Disse ældre versioner af et dokument er tilgængelige for organisationen, som kan blive bedt om at dele sådanne versioner, der har følsomt eller relevant indhold under en retskendelse i en juridisk sag.
 
-Når en eDiscovery-administrator aktiverer historiske versioner for organisationen og derefter aktiverer den for bestemte SharePoint websteder, gennemsøger den SharePoint indholds-pushtjeneste alle overordnede og underordnede versioner af dokumenter på de aktiverede websteder og sender derefter disse versioner til indeksering. Når gennemsøgnings- og indekseringsprocessen er fuldført, er dokumenter og deres versioner tilgængelige til eDiscovery-søgning. Så længe der er adgang til en bestemt version (efter versionshistorik), kan du finde denne version i en eDiscovery-samlingssøgning (Premium).
+Når en eDiscovery-administrator aktiverer historiske versioner for organisationen og derefter aktiverer den for bestemte SharePoint-websteder, gennemsøger SharePoint-indholds-pushtjenesten alle overordnede og underordnede versioner af dokumenter på de aktiverede websteder og sender derefter disse versioner til indeksering. Når gennemsøgnings- og indekseringsprocessen er fuldført, er dokumenter og deres versioner tilgængelige til eDiscovery-søgning. Så længe der er adgang til en bestemt version (efter versionshistorik), kan du finde denne version i en søgning i en eDiscovery (Premium)-samling.
 
 ## <a name="set-up-historical-versions"></a>Konfigurer historiske versioner
 
 Hvis du vil aktivere historiske versioner i eDiscovery (Premium), skal din organisation aktivere den og derefter aktivere bestemte websteder, så alle versioner af dokumenter, der er gemt på disse websteder, indekseres til søgning. Før du konfigurerer eDiscovery (Premium) for historiske versioner, skal du aktivere understøttelse af versioner i SharePoint.
 
-### <a name="step-1-turn-on-versioning-in-sharepoint"></a>Trin 1: Aktivér versionering i SharePoint
+### <a name="step-1-turn-on-versioning-in-sharepoint"></a>Trin 1: Slå versionering til i SharePoint
 
 Det første trin er at aktivere versionering i SharePoint Online, så alle versioner af et dokument bevares. Du kan finde instruktioner [under Versionering i SharePoint](/microsoft-365/community/versioning-basics-best-practices).
 
@@ -48,11 +46,11 @@ Det næste trin er at aktivere historiske versioner i eDiscovery (Premium). Hvis
 > [!IMPORTANT]
 > Når du har slået historiske versioner til, kan du ikke slå dem fra i den offentlige prøveversion. Du kan slå den fra, når historiske versioner er blevet offentligt tilgængelige.
 
-1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) på Microsoft Purview-overholdelsesportalen, og klik derefter på **indstillinger for eDiscovery (Premium).**
+1. I Microsoft Purview-compliance-portal skal du gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) og derefter klikke på **indstillinger for eDiscovery (Premium).**
 
    ![Vælg indstillinger for eDiscovery (Premium)](..\media\HistoricalVersions1.png)
 
-2. På siden **Indstillinger** skal du vælge fanen **Historiske versioner (prøveversion)** og derefter skifte **lejerkontrolelementet Historiske versioner** til til.
+2. På siden **Indstillinger** skal du vælge fanen **Historiske versioner (prøveversion)** og derefter slå **lejerkontrolelementet Historiske versioner** til til.
 
    ![Slå til/fra-knappen til for at aktivere historiske versioner](..\media\HistoricalVersions2.png)
 
@@ -60,18 +58,18 @@ Det næste trin er at aktivere historiske versioner i eDiscovery (Premium). Hvis
 
 3. Klik på **Ja** for at aktivere historiske versioner.
 
-### <a name="step-3-activate-sharepoint-sites"></a>Trin 3: Aktivér SharePoint websteder
+### <a name="step-3-activate-sharepoint-sites"></a>Trin 3: Aktivér SharePoint-websteder
 
-Når du har slået historiske versioner til for din organisation, er det sidste trin at aktivere SharePoint websteder for at understøtte historiske versioner. Når du aktiverer et websted (ved at føje det til en liste over websteder under fanen **Historiske versioner** ), gennemsøges webstedet igen, og alle versioner af dokumenter, der er gemt på det pågældende websted, indekseres til søgning.
+Når du har slået historiske versioner til for din organisation, er det sidste trin at aktivere SharePoint-websteder for at understøtte historiske versioner. Når du aktiverer et websted (ved at føje det til en liste over websteder under fanen **Historiske versioner** ), gennemsøges webstedet igen, og alle versioner af dokumenter, der er gemt på det pågældende websted, indekseres til søgning.
 
 > [!NOTE]
 > Der er en grænse på 100 webstedsaktiveringer pr. organisation under den offentlige prøveversion af historiske versioner. En aktivering tælles i forhold til denne grænse, når du aktiverer eller deaktiverer et websted for historiske versioner. Hvis du aktiverer flere websteder, tælles hvert websted som en enkelt aktivering. Det samlede antal aktiveringer vises under fanen **Historiske versioner** .
 
-1. På fanen **Historiske versioner** på siden eDiscovery (Premium) **Indstillinger** skal du klikke på **Aktivér** for at aktivere websteder for historiske versioner.
+1. På fanen **Historiske versioner** på siden **Indstillinger for** eDiscovery (Premium) skal du klikke på **Aktivér** for at aktivere websteder for historiske versioner.
 
    ![Klik på Aktivér for at aktivere websteder for historiske versioner](..\media\HistoricalVersions3.png)  
 
-   Der vises en pop op-side, der indeholder en liste over alle SharePoint websteder i din organisation.
+   Der vises en pop op-side, der indeholder en liste over alle SharePoint-websteder i din organisation.
 
 2. Vælg et websted, der skal aktiveres, og klik derefter på **Aktivér** for at aktivere det for historiske versioner. Du kan bruge søgefeltet til at søge efter et bestemt websted.
 

@@ -18,25 +18,23 @@ search.appverid:
 - MOE150
 - MET150
 description: Instruktioner til publicering af opbevaringsmærkater, så du derefter kan anvende dem i apps for at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: b96d5f3df440db58aff63bffca11523f7c09d8ee
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 54e2a7f5f9776438ad36d51d43b38ed379cb35d0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128915"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630339"
 ---
 # <a name="publish-retention-labels-and-apply-them-in-apps"></a>Publicer opbevaringsmærkater, og anvend dem i apps
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
 > Dette scenarie understøttes for alle konfigurationer af opbevaringsmærkater, herunder [lovmæssige poster](records-management.md#records).
 
 Brug følgende oplysninger til at hjælpe dig med at publicere [opbevaringsmærkater](retention.md) og derefter anvende dem på dokumenter og mails.
 
-Opbevaringsmærkater hjælper dig med at bevare det, du har brug for, og slette det, du ikke har på elementniveau (dokument eller mail). De bruges også til at deklarere et element som en post som en del af en [løsning til datastyring](records-management.md) for dine Microsoft 365 data.
+Opbevaringsmærkater hjælper dig med at bevare det, du har brug for, og slette det, du ikke har på elementniveau (dokument eller mail). De bruges også til at deklarere et element som en post som en del af en [løsning til datastyring](records-management.md) for dine Microsoft 365-data.
 
 At gøre opbevaringsmærkater tilgængelige for personer i din organisation, så de kan klassificere indhold, er en proces med to trin: 
 
@@ -76,7 +74,7 @@ Beslut, om politikken for opbevaringsmærkaten skal være **tilpasset** eller **
 
 5. Afhængigt af dit valgte område:
     
-    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Exchange mail**, men ikke **SharePoint websteder**. 
+    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Exchange-mail** , men ikke **SharePoint-websteder**. 
     
     - Hvis du vælger **Statisk**: På siden **Vælg placeringer** skal du slå en af placeringerne til eller fra. For hver placering kan du lade den være som standard for at [anvende politikken på hele placeringen](retention-settings.md#a-policy-that-applies-to-entire-locations), eller du kan [angive medtag og ekskludering](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
     
@@ -86,7 +84,7 @@ Hvis du vil redigere en eksisterende politik for opbevaringsmærkater (politikty
 
 ## <a name="when-retention-labels-become-available-to-apply"></a>Når opbevaringsmærkater bliver tilgængelige for anvendelse
 
-Hvis du publicerer opbevaringsmærkater til SharePoint eller OneDrive, ser disse mærkater typisk ud til brugerne at vælge inden for én dag. Der kan dog gå op til syv dage. 
+Hvis du publicerer opbevaringsmærkater på SharePoint eller OneDrive, vises disse mærkater typisk, som brugerne kan vælge inden for én dag. Der kan dog gå op til syv dage. 
 
 Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv dage, før disse opbevaringsmærkater vises for brugerne. Som med alle opbevaringsindstillinger for Exchange skal postkassen indeholde mindst 10 MB data.
 
@@ -94,17 +92,17 @@ Hvis du publicerer opbevaringsmærkater til Exchange, kan det tage op til syv da
 
 Hvis mærkaterne ikke vises efter syv dage, skal du kontrollere **status** for mærkatpolitikken ved at vælge den på siden **Mærkatpolitikker** i Microsoft Purview-compliance-portal. Hvis du får vist **(Fejl),** der er inkluderet i status og i detaljerne for placeringerne, får du vist en meddelelse om, at det tager længere tid end forventet at installere politikken eller at prøve at geninstallere politikken, ved at køre kommandoen [Set-AppRetentionCompliancePolicy](/powershell/module/exchange/set-appretentioncompliancepolicy) eller [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) PowerShell for at forsøge at distribuere politikken igen:
 
-1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør en af følgende kommandoer:
     
-    - For politikplaceringerne **Teams private kanalmeddelelser** **skal du Yammer brugermeddelelser** og **Yammer communitymeddelelser**:
+    - For politikplaceringerne **er meddelelser fra en privat teams-kanal**, **Yammer-brugermeddelelser** og **Yammer-communitymeddelelser**:
     
         ```PowerShell
         Set-AppRetentionCompliancePolicy -Identity <policy name> -RetryDistribution
         ```
     
-    - For alle andre politikplaceringer, f.eks. **Exchange mail**, **SharePoint websteder**, **Teams kanalmeddelelser** osv.:
+    - For alle andre politikplaceringer, f.eks **. Exchange-mail**, **SharePoint-websteder**, **Teams-kanalmeddelelser** osv.:
     
         ```PowerShell
         Set-RetentionCompliancePolicy -Identity <policy name> -RetryDistribution
@@ -114,7 +112,7 @@ Hvis mærkaterne ikke vises efter syv dage, skal du kontrollere **status** for m
 
 I Exchange Online gøres opbevaringsmærkater tilgængelige for slutbrugerne af en proces, der kører hver syvende dag. Ved hjælp af PowerShell kan du se, hvornår denne proces sidst kørte, og derfor identificere, hvornår den vil køre igen.
   
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
     
 2. Kør disse kommandoer.
     

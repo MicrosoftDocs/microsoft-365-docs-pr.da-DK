@@ -19,23 +19,21 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få vist et eksempel på de resultater, der returneres af en indholdssøgning eller en eDiscovery-søgning (Standard) på Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: acbfebc5935666299dc6a717d70f9c426a6d61cd
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få vist et eksempel på de resultater, der returneres af en indholdssøgning eller en eDiscovery-søgning (Standard) i Microsoft Purview-compliance-portal.
+ms.openlocfilehash: f369148c6f898c4150d0c86f898640f71ab367a0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099625"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628589"
 ---
 # <a name="preview-ediscovery-search-results"></a>Eksportér søgeresultater fra eDiscovery
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du har kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery-sag (Standard), kan du få vist et eksempel på de resultater, der returneres af søgningen. Visning af elementer, der returneres af søgeforespørgslen, kan hjælpe dig med at afgøre, om søgningen returnerer de resultater, du håber på, eller om du har brug for at ændre søgeforespørgslen og køre søgningen igen.
+Når du har kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard), kan du få vist et eksempel på de resultater, der returneres af søgningen. Visning af elementer, der returneres af søgeforespørgslen, kan hjælpe dig med at afgøre, om søgningen returnerer de resultater, du håber på, eller om du har brug for at ændre søgeforespørgslen og køre søgningen igen.
 
 Sådan får du vist et eksempel på resultater, der returneres af en søgning:
 
-1. På Microsoft Purview-overholdelsesportalen skal du gå til siden indholdssøgning eller en eDiscovery (Standard)-sag.
+1. I Microsoft Purview-compliance-portal skal du gå til søgesiden indhold eller en eDiscovery-sag (Standard).
 
 2. Vælg Søg for at få vist pop op-siden.
 

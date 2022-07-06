@@ -17,28 +17,26 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: 0c72d35399a0185bbd8cf58b5eac58241a695b72
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: ca4b74c2fb25c4f1f1ef96b8ae0241481358797d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012312"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628567"
 ---
 # <a name="use-sensitivity-labels-to-configure-the-default-sharing-link-type-for-sites-and-documents-in-sharepoint-and-onedrive"></a>Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Som en yderligere konfiguration af de indstillinger, du kan se på Microsoft Purview-overholdelsesportalen for [følsomhedsmærkater](sensitivity-labels.md), kan du bruge disse mærkater til at konfigurere indstillinger for standardlinktypen for deling for et SharePoint websted eller en OneDrive-konto og for individuelle dokumenter. Disse indstillinger vælges automatisk, men de er ikke meget synlige for brugerne, når de vælger knappen **Del** i deres Office apps. Som eksempel:
+Som en yderligere konfiguration af de indstillinger, du kan se i Microsoft Purview-compliance-portal for [følsomhedsmærkater](sensitivity-labels.md), kan du bruge disse mærkater til at konfigurere indstillinger for standardlinktypen for deling for et SharePoint-websted eller en OneDrive-konto og for individuelle dokumenter. Disse indstillinger vælges automatisk, men de er ikke meget synlige for brugerne, når de vælger knappen **Del** i deres Office-apps. Som eksempel:
 
 ![Eksempel på dialogboksen med standardlink til deling.](../media/default-sharing-link-example.png)
 
 Standardlinktypen for deling angiver omfanget (hvem) og tilladelser (visning eller redigering), der automatisk vælges, når brugerne deler filer og mapper. Selvom brugerne altid kan tilsidesætte disse standardindstillinger, før de sender delingslinket, angiver de indstillinger, du vælger, en sikker baseline. Brugerne ændrer normalt ikke indstillingerne før deling.
 
-På webstedsniveau (SharePoint websted eller OneDrive konto) er følsomhedsmærkater et praktisk alternativ til angivelse af den standardlinktype for deling, der kan konfigureres for et websted i SharePoint Administration. Du kan få flere oplysninger under [Skift standardlinktypen for et websted](/sharepoint/change-default-sharing-link) i dokumentationen til SharePoint.
+På webstedsniveau (SharePoint-websted eller OneDrive-konto) er følsomhedsmærkater et praktisk alternativ til angivelse af standardlinktypen for deling, der kan konfigureres for et websted i SharePoint Administration. Du kan finde flere oplysninger under [Skift standardlinktypen for et websted](/sharepoint/change-default-sharing-link) i dokumentationen til SharePoint.
 
-Denne konfiguration på webstedsniveau fungerer godt for SharePoint websteder, der har dokumenter med samme følsomhedsniveau. Men hvis websteder indeholder nogle dokumenter, der har et højere følsomhedsniveau, som kræver mere restriktive indstillinger, kan du konfigurere en følsomhedsmærkat med forskellige indstillinger for standardtypen for delingslinket og derefter anvende denne mærkat på dokumenter.
+Denne konfiguration på webstedsniveau fungerer godt for SharePoint-websteder, der har dokumenter med samme følsomhedsniveau. Men hvis websteder indeholder nogle dokumenter, der har et højere følsomhedsniveau, som kræver mere restriktive indstillinger, kan du konfigurere en følsomhedsmærkat med forskellige indstillinger for standardtypen for delingslinket og derefter anvende denne mærkat på dokumenter.
 
 I dette scenarie, hvor webstedet har indstillinger for standardlinktyper for deling, og et dokument på dette websted har forskellige indstillinger for standardlinktyper, anvendes de mere restriktive områdeindstillinger på det tidspunkt, hvor brugeren vælger delingsindstillingen for dokumentet. Eksempel:
 
@@ -46,7 +44,7 @@ I dette scenarie, hvor webstedet har indstillinger for standardlinktyper for del
 
 - Standardlinktypen for deling for webstedet er begrænset til bestemte personer med redigeringstilladelser. Et dokument på dette websted er mærket med standardlinktypen for deling angivet til alle i organisationen med visningstilladelser. Når en bruger deler dokumentet, vil den valgte standardlinktype for deling være begrænset til bestemte personer med redigeringstilladelser.
 
-Konfiguration af standardlinktypen for dokumenter kan også være relevant uden indstillingen på webstedsniveau. Selvom SharePoint websteder f.eks. typisk er organiseret til at hoste den samme type dokumenter, er det ikke tilfældet for OneDrive konti. Brugere gemmer typisk en lang række filer til OneDrive, ofte herunder en blanding af personlige dokumenter og forretningsdokumenter. Det er sandsynligvis ikke praktisk at angive en standardlinktype for alle dokumenter for en brugers OneDrive konto, men individuelle dokumenter kan stadig drage fordel af disse indstillinger. Eksempel:
+Konfiguration af standardlinktypen for dokumenter kan også være relevant uden indstillingen på webstedsniveau. Selvom SharePoint-websteder f.eks. typisk er organiseret til at hoste den samme type dokumenter, er det ikke tilfældet for OneDrive-konti. Brugerne gemmer typisk en lang række filer på OneDrive, ofte inklusive en blanding af personlige dokumenter og forretningsdokumenter. Det er sandsynligvis ikke praktisk at angive en standardlinktype for alle dokumenter for en brugers OneDrive-konto, men individuelle dokumenter kan stadig drage fordel af disse indstillinger. Eksempel:
 
 - Dokumenter med mærkaten **Meget fortroligt** har en standardlinktype for deling, der begrænser deling til bestemte personer i stedet for nogen i organisationen.
 - Dokumenter, der er navngivet **Generelt** , har en standardlinktype for deling, der begrænser deling til personer i din organisation.
@@ -61,7 +59,7 @@ Hvis du vil anvende standardlinktypen for deling for dokumenter i SharePoint og 
 I en PowerShell-session skal du [oprette forbindelse til Office 365 Security & Compliance PowerShell](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell) for at konfigurere indstillingerne for standardlinktypen for deling.
 
 > [!NOTE]
-> Selvom det ikke er påkrævet, er det nemmest først at [oprette og konfigurere følsomhedsmærkater på Microsoft Purview-overholdelsesportalen](create-sensitivity-labels.md) og derefter ændre disse mærkater med de indstillinger, der konfigurerer standardtypen for delingslinket.
+> Selvom det ikke er påkrævet, er det nemmest først at [oprette og konfigurere følsomhedsmærkater i Microsoft Purview-compliance-portal](create-sensitivity-labels.md) og derefter ændre disse mærkater med de indstillinger, der konfigurerer standardtypen for delingslinket.
 
 ## <a name="how-to-configure-settings-for-the-default-sharing-link-type"></a>Sådan konfigurerer du indstillinger for standardlinktypen for deling
 
@@ -92,7 +90,9 @@ PowerShell-eksempler, hvor følsomhedsmærkaten GUID er **8faca7b8-8d20-48a3-8ea
     Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{DefaultShareLinkPermission="Edit"}
     ````
 
-Hvis du vil konfigurere indstillingerne for standardlinktypen for deling for et websted, skal [følsomhedsmærkatens omfang](sensitivity-labels.md#label-scopes) omfatte **Grupper & websteder** , når du opretter følsomhedsmærkaten på Microsoft Purview-overholdelsesportalen. Når den er oprettet, kan du se dette vist som **Site, UnifiedGroup** i kolonnen **Scope** på siden **Labels** , og indstillingen PowerShell *ContentType* viser også den samme værdi. For dokumenter skal området indeholde **Filer & mails**, der vises som **Filer, Mail**. Derefter:
+Du kan finde mere hjælp til at angive avancerede PowerShell-indstillinger under [PowerShell-tip til angivelse af avancerede indstillinger](create-sensitivity-labels.md#powershell-tips-for-specifying-the-advanced-settings).
+
+Hvis du vil konfigurere indstillingerne for standardlinktypen for deling for et websted, skal [følsomhedsmærkatens omfang](sensitivity-labels.md#label-scopes) omfatte **Grupper & websteder**, når du opretter følsomhedsmærkaten i Microsoft Purview-compliance-portal. Når den er oprettet, kan du se dette vist som **Site, UnifiedGroup** i kolonnen **Scope** på siden **Labels** , og indstillingen PowerShell *ContentType* viser også den samme værdi. For dokumenter skal området indeholde **Filer & mails**, der vises som **Filer, Mail**. Derefter:
 
 - Når området omfatter **Grupper & websteder**, kan du anvende etiketten på et websted, som angiver standardlinktypen for deling for det pågældende websted. Du kan finde oplysninger om, hvordan du anvender en følsomhedsmærkat på et websted, under [Sådan anvender du følsomhedsmærkater på objektbeholdere](sensitivity-labels-teams-groups-sites.md#how-to-apply-sensitivity-labels-to-containers).
 
@@ -100,18 +100,3 @@ Hvis du vil konfigurere indstillingerne for standardlinktypen for deling for et 
 
 > [!TIP]
 > Du kan også angive, at mærkaten er standardfølsomhedsmærkaten, der skal anvendes for nye websteder eller nye dokumenter som en [politikindstilling for mærkater](sensitivity-labels.md#what-label-policies-can-do).
-
-### <a name="powershell-tips-for-specifying-the-advanced-settings"></a>PowerShell-tip til angivelse af avancerede indstillinger
-
-Selvom du kan angive følsomhedsmærkaten ved hjælp af navnet, anbefaler vi, at du bruger mærkat-GUID'et for at undgå mulig forvirring med angivelse af navnet eller det viste navn. Sådan finder du GUID'et og bekræfter navnets omfang:
-
-````powershell
-Get-Label | Format-Table -Property DisplayName, Name, Guid, ContentType
-````
-
-Hvis du vil fjerne en af disse avancerede indstillinger fra en følsomhedsmærkat, skal du bruge den samme AdvancedSettings-parametersyntaks, men angive en null-strengværdi. Eksempel:
-
-````powershell
-Set-Label -Identity 8faca7b8-8d20-48a3-8ea2-0f96310a848e -AdvancedSettings @{DefaultSharingScope=""}
-````
-

@@ -12,20 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Cisco Jabber DataParser-connector til at importere og arkivere Cisco Jabber-data i Microsoft 365.
-ms.openlocfilehash: 3cc3fc0642b40bfd16f7e8b42fa3d68a98e7bca9
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 2a6b5b45856de6823c53d5783ffac3532eebbfa5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622167"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626969"
 ---
 # <a name="set-up-a-connector-to-archive-cisco-jabber-data"></a>Konfigurer en connector til arkivering af Cisco Jabber-data
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug [Cisco Jabber DataParser](https://www.17a-4.com/jabber-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Cisco Jabber til brugerpostkasser i din Microsoft 365-organisation. DataParser indeholder en Cisco Jabber-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Cisco Jabber DataParser-connectoren konverterer Cisco Jabber-data til et mailmeddelelsesformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Brug [Cisco Jabber DataParser](https://www.17a-4.com/jabber-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Cisco Jabber til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Cisco Jabber-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Cisco Jabber DataParser-connectoren konverterer Cisco Jabber-data til et mailmeddelelsesformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
-
-Når Cisco Jabber-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og overholdelse af kommunikation. Brug af en Cisco Jabber-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når Cisco Jabber-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Cisco Jabber-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-cisco-jabber-data"></a>Oversigt over arkivering af Cisco Jabber-data
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 2. Cisco Jabber-elementer indsamles jævnligt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
-3. Cisco Jabber DataParser-connectoren, som du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Cisco Jabber DataParser-connectoren, som du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Der oprettes en undermappe i mappen Indbakke med navnet **Cisco Jabber DataParser** i brugerpostkasserne, og Cisco Jabber-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle Cisco Jabber-elementer indeholder denne egenskab, som udfyldes med mailadressen på hver deltager.
 
@@ -45,15 +43,15 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Opret en DataParser-konto til Microsoft-connectors. For at gøre dette skal du kontakte [17a-4 LLC](https://www.17a-4.com/contact/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter Cisco Jabber DataParser-connectoren i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector-administrator. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Cisco Jabber DataParser-connectoren i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-cisco-jabber-dataparser-connector"></a>Trin 1: Konfigurer en Cisco Jabber DataParser-connector
 
 Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til Cisco Jabber-data.
 
-1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsCisco** >  **Jabber DataParser**.
+1. Gå til <https://compliance.microsoft.com> , og klik derefter på **Dataconnectors** > **Cisco Jabber DataParser**.
 
 2. Klik på **Tilføj connector** på siden Cisco **Jabber DataParser-produktbeskrivelse**.
 
@@ -69,7 +67,7 @@ Arbejd med 17a-4-support for at konfigurere Cisco Jabber DataParser-connectoren.
 
 ## <a name="step-3-map-users"></a>Trin 3: Tilknyt brugere
 
-Cisco Jabber DataParser-connectoren knytter automatisk brugere til deres Microsoft 365 mailadresser, før de importerer data til Microsoft 365.
+Cisco Jabber DataParser-connectoren knytter automatisk brugere til deres Microsoft 365-mailadresser, før de importerer data til Microsoft 365.
 
 ## <a name="step-4-monitor-the-cisco-jabber-dataparser-connector"></a>Trin 4: Overvåg Cisco Jabber DataParser-connectoren
 

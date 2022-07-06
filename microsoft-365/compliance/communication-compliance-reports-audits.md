@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 998f074529089f5c0309f6799900a628915d3959
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 27c166f3c9df0dead57f977b00cab41eb82347ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893388"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630495"
 ---
 # <a name="use-communication-compliance-reports-and-audits"></a>Brug rapporter og overvågninger for kommunikation med overholdelse af angivne standarder
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="reports"></a>Rapporter
 
@@ -93,12 +91,11 @@ Brug indstillingen *Eksportér* til at oprette en .csv fil, der indeholder rappo
 
     - Mail: Følsomme oplysningstyper, der er registreret i **Exchange-mails**.
     - **Teams**: Følsomme informationstyper, der er registreret i Microsoft Teams-kanaler og chatmeddelelser.
-    - **Skype for Business**: Følsomme informationstyper, der er registreret i Skype for Business-kommunikation.
     - **Yammer**: Følsomme oplysningstyper, der registreres i Yammer-indbakker, -indlæg, -chats og -svar.
     - **Tredjepartskilder**: Følsomme oplysningstyper, der registreres for aktiviteter, der er knyttet til tredjepartsconnectors, som er konfigureret i din organisation. Hvis du vil se opdelingen af tredjepartskilder for en bestemt følsom oplysningstype i rapporten, skal du holde musen over værdien for typen af følsomme oplysninger i kildekolonnen fra tredjepart.
     - **Andet**: Følsomme informationstyper, der bruges til intern systembehandling. Valg eller fravalg af denne kilde til rapporten påvirker ikke nogen værdier.
 
-### <a name="message-details-report-preview"></a>Rapport med meddelelsesoplysninger (prøveversion)
+### <a name="message-details-report"></a>Rapport med meddelelsesoplysninger
 
 Opret brugerdefinerede rapporter, og gennemse detaljer for meddelelser i bestemte politikker under fanen **Politikker** . Disse rapporter kan bruges til samlet gennemgang af meddelelser og til at oprette et snapshot af rapporten for status for meddelelser i en tidsperiode, der kan tilpasses. Når du har oprettet en rapport, kan du få vist og downloade detaljerapporten som en .csv-fil under fanen **Rapporter med meddelelsesoplysninger** .
 
@@ -106,7 +103,7 @@ Opret brugerdefinerede rapporter, og gennemse detaljer for meddelelser i bestemt
 
 Hvis du vil oprette en ny rapport med meddelelsesoplysninger, skal du udføre følgende trin:
 
-1. Log på Microsoft Purview-overholdelsesportalen med en konto, der er medlem af rollegruppen *Communication Compliance Investigators* .
+1. Log på Microsoft Purview-compliance-portal med en konto, der er medlem af rollegruppen *Communication Compliance Investigators*.
 2. Gå til fanen **Politikker** , vælg en politik, og vælg derefter **Opret rapport med meddelelsesoplysninger**.
 3. I ruden **Opret rapport med meddelelsesoplysninger** skal du angive et navn til rapporten i feltet **Rapportnavn** .
 4. Vælg en *startdato* og *en slutdato* for rapporten i **Vælg et datointerval**.
@@ -146,7 +143,7 @@ I nogle tilfælde skal du give oplysninger til revisorer for lovgivning eller ov
 > [!IMPORTANT]
 > Overvågning skal være aktiveret for din organisation, før hændelser for overholdelse af angivne standarder registreres. Hvis du vil aktivere overvågning, skal du se [Aktivér overvågningsloggen](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365-overvågningsloggen, kan det tage op til 48 timer, før disse hændelser kan ses i politikker for kommunikation med overholdelse af angivne standarder.
 
-Hvis du vil have vist opdateringsaktiviteter for politikken for kommunikation, skal du vælge kontrolelementet **Eksportér politikopdateringer** på hovedsiden for en hvilken som helst politik. Du skal være tildelt rollerne *Global administrator* eller *Administrator af kommunikationsoverholdelse* for at eksportere opdateringsaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
+Hvis du vil have vist opdateringsaktiviteter for politikken for kommunikation, skal du vælge kontrolelementet **Eksportér politikopdateringer** på hovedsiden for en hvilken som helst politik. Du skal være tildelt rollerne *Global Administration* eller *Communication Compliance Administration* for at eksportere opdateringsaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
 
 |**Feltet**|**Detaljer**|
 |:-----|:-----|
@@ -155,7 +152,7 @@ Hvis du vil have vist opdateringsaktiviteter for politikken for kommunikation, s
 | **Operationer** | De opdateringshandlinger, der udføres på politikken. |
 | **Overvågningsdata** | Dette felt er den primære datakilde for alle politikopdateringsaktiviteter. Alle opdateringsaktiviteter registreres og adskilles af kommaafgrænsere. |
 
-Hvis du vil have vist aktiviteter til gennemgang af overholdelse af angivne standarder for en politik, skal du vælge kontrolelementet **Eksportér aktiviteter til gennemsyn** på siden **Oversigt** for en bestemt politik. Du skal være tildelt rollerne *Global administrator* eller *Administrator af kommunikationsoverholdelse* for at kunne eksportere korrekturaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
+Hvis du vil have vist aktiviteter til gennemgang af overholdelse af angivne standarder for en politik, skal du vælge kontrolelementet **Eksportér aktiviteter til gennemsyn** på siden **Oversigt** for en bestemt politik. Du skal være tildelt rollerne *Global Administration* eller *Kommunikationsoverholdelse Administration* for at kunne eksportere korrekturaktiviteterne. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
 
 |**Feltet**|**Detaljer**|
 |:-----|:-----|

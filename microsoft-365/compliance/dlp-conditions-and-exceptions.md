@@ -15,16 +15,14 @@ search.appverid:
 - MET150
 recommendations: false
 description: få mere at vide om dlp-politikbetingelser og -undtagelser
-ms.openlocfilehash: cd252002f2fcef3e3935dd44b1333e801bcba46d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 9e1c27e8b4aa79da94fd035bbeb15912b1618be8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090445"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629921"
 ---
 # <a name="dlp-policy-conditions-exceptions-and-actions"></a>DLP-politikbetingelser, -undtagelser og -handlinger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Betingelser og undtagelser i DLP-politikker identificerer følsomme elementer, som politikken anvendes på. Handlinger definerer, hvad der sker som følge af en undtagelsesbetingelse, der er opfyldt.
 
@@ -32,7 +30,7 @@ Betingelser og undtagelser i DLP-politikker identificerer følsomme elementer, s
 - Undtagelser definerer, hvad der skal udelades.
 - Handlinger definerer, hvad der sker som følge af en betingelse eller undtagelse, der opfyldes
 
-De fleste betingelser og undtagelser har én egenskab, der understøtter en eller flere værdier. Hvis DLP-politikken f.eks. anvendes på Exchange mails, kræver betingelsen **Afsenderen** er afsenderen af meddelelsen. Nogle betingelser har to egenskaber. **En meddelelsesoverskrift indeholder** f.eks. en af disse ordbetingelse, som kræver én egenskab for at angive meddelelsesoverskriftsfeltet og en anden egenskab for at angive den tekst, der skal søges efter i overskriftsfeltet. Nogle betingelser eller undtagelser har ingen egenskaber. Betingelsen **Vedhæftet fil er** f.eks. beskyttet med adgangskode og søger blot efter vedhæftede filer i meddelelser, der er beskyttet med adgangskode.
+De fleste betingelser og undtagelser har én egenskab, der understøtter en eller flere værdier. Hvis DLP-politikken f.eks. anvendes på Exchange-mails, kræver **afsenderens** betingelse afsenderen af meddelelsen. Nogle betingelser har to egenskaber. **En meddelelsesoverskrift indeholder** f.eks. en af disse ordbetingelse, som kræver én egenskab for at angive meddelelsesoverskriftsfeltet og en anden egenskab for at angive den tekst, der skal søges efter i overskriftsfeltet. Nogle betingelser eller undtagelser har ingen egenskaber. Betingelsen **Vedhæftet fil er** f.eks. beskyttet med adgangskode og søger blot efter vedhæftede filer i meddelelser, der er beskyttet med adgangskode.
 
 Handlinger kræver typisk yderligere egenskaber. Når DLP-politikreglen f.eks. omdirigerer en meddelelse, skal du angive, hvor meddelelsen omdirigeres til.
 <!-- Some actions have multiple properties that are available or required. For example, when the rule adds a header field to the message header, you need to specify both the name and value of the header. When the rule adds a disclaimer to messages, you need to specify the disclaimer text, but you can also specify where to insert the text, or what to do if the disclaimer can't be added to the message. Typically, you can configure multiple actions in a rule, but some actions are exclusive. For example, one rule can't reject and redirect the same message.-->
@@ -68,66 +66,66 @@ Hvis du vil konfigurere afsenderens adresseplacering på et DLP-regelniveau, er 
 
 - **Brevhoved eller konvolut** (`HeaderOrEnvelope`) Undersøg afsendere i brevhovedet og brevkonvolutten.
 
-|betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|betingelse eller undtagelse i DLP|condition/exception parameters in Security & Compliance PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
-|Afsenderen er|betingelse: *Fra* <br/><br/> undtagelse: *ExceptIfFrom*|Adresser|Meddelelser, der sendes af de angivne postkasser, mailbrugere, mailkontakter eller Microsoft 365 grupper i organisationen.|
-|Afsenderen er medlem af |*Framedlem af* <br/><br/> *Undtagen hvis framedlem af*|Adresser|Meddelelser, der sendes af et medlem af den angivne distributionsgruppe, mailaktiverede sikkerhedsgruppe eller Microsoft 365 gruppe.|
+|Afsenderen er|betingelse: *Fra* <br/><br/> undtagelse: *ExceptIfFrom*|Adresser|Meddelelser, der sendes af de angivne postkasser, mailbrugere, mailkontakter eller Microsoft 365-grupper i organisationen.|
+|Afsenderen er medlem af |*Framedlem af* <br/><br/> *Undtagen hvis framedlem af*|Adresser|Meddelelser, der sendes af et medlem af den angivne distributionsgruppe, mailaktiverede sikkerhedsgruppe eller Microsoft 365-gruppe.|
 |Afsenderens IP-adresse er|betingelse: *SenderIPRanges*<br/><br/> undtagelse: *ExceptIfSenderIPRanges*|IPAddressRanges|Meddelelser, hvor afsenderens IP-adresse svarer til den angivne IP-adresse eller falder inden for det angivne IP-adresseinterval.|
 |Afsenderadressen indeholder ord|betingelse: *FromAddressContainsWords* <br/><br/> undtagelse: *ExceptIfFromAddressContainsWords*|Ord|Meddelelser, der indeholder de angivne ord i afsenderens mailadresse.|
 |Afsenderadresse matcher mønstre|condition: *FromAddressMatchesPatterns* <br/><br/> undtagelse: *ExceptFromAddressMatchesPatterns*|Mønstre|Meddelelser, hvor afsenderens mailadresse indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
-|Afsenderdomænet er|betingelse: *SenderDomainIs* <br/><br/> undtagelse: *ExceptIfSenderDomainIs*|Domainname|Meddelelser, hvor domænet for afsenderens mailadresse stemmer overens med den angivne værdi. Hvis du har brug for at finde afsenderdomæner, der *indeholder* det angivne domæne (f.eks. et underdomæne for et domæne), skal du bruge betingelsen **AfsenderadressematchesPatterns** og angive domænet ved hjælp af syntaksen: '\.domaincom\.$'.|
+|Afsenderdomænet er|betingelse: *SenderDomainIs* <br/><br/> undtagelse: *ExceptIfSenderDomainIs*|Domainname|Meddelelser, hvor domænet for afsenderens mailadresse stemmer overens med den angivne værdi. Hvis du har brug for at finde afsenderdomæner, der *indeholder* det angivne domæne (f.eks. et underdomæne for et domæne), skal du bruge betingelsen **AfsenderadressematchesPatterns** og angive domænet ved hjælp af syntaksen: '\.domæne\.com$'.|
 |Afsenderområde|betingelse: *FromScope* <br/><br/> undtagelse: *ExceptIfFromScope*|UserScopeFrom|Meddelelser, der sendes af enten interne eller eksterne afsendere.|
 |Afsenderens angivne egenskaber omfatter et af disse ord|betingelse: *SenderADAttributeContainsWords* <br/><br/> undtagelse: *ExceptIfSenderADAttributeContainsWords*|Første egenskab: `ADAttribute` <br/><br/> Anden egenskab: `Words`|Meddelelser, hvor afsenderens angivne Active Directory-attribut indeholder et af de angivne ord.|
 |Afsenderens angivne egenskaber stemmer overens med disse tekstmønstre|condition: *SenderADAttributeMatchesPatterns* <br/><br/> undtagelse: *ExceptIfSenderADAttributeMatchesPatterns*|Første egenskab: `ADAttribute` <br/><br/> Anden egenskab: `Patterns`|Meddelelser, hvor afsenderens angivne Active Directory-attribut indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
 
 ### <a name="recipients"></a>Modtagere
 
-|betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|betingelse eller undtagelse i DLP|condition/exception parameters in Security & Compliance PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
 |Modtageren er|betingelse: *SentTo* <br/><br/> exception: *ExceptIfSentTo*|Adresser|Meddelelser, hvor en af modtagerne er den angivne postkasse, mailbruger eller mailkontakt i organisationen. Modtagerne kan være i felterne **Til**, **Cc** eller **Bcc** i meddelelsen.|
 |Modtagerdomænet er|condition: *RecipientDomainIs* <br/><br/> undtagelse: *ExceptIfRecipientDomainIs*|Domainname|Meddelelser, hvor domænet for modtagerens mailadresse stemmer overens med den angivne værdi.|
 |Modtageradressen indeholder ord|condition: *AnyOfRecipientAddressContainsWords* <br/><br/> undtagelse: *ExceptIfAnyOfRecipientAddressContainsWords*|Ord|Meddelelser, der indeholder de angivne ord i modtagerens mailadresse. <br/><br/>**Bemærk**! Denne betingelse tager ikke højde for meddelelser, der sendes til modtagerproxyadresser. Den svarer kun til meddelelser, der sendes til modtagerens primære mailadresse.|
 |Modtageradressen stemmer overens med mønstre|condition: *AnyOfRecipientAddressMatchesPatterns* <br/><br/> undtagelse: *ExceptIfAnyOfRecipientAddressMatchesPatterns*|Mønstre|Meddelelser, hvor en modtagers mailadresse indeholder tekstmønstre, der svarer til de angivne regulære udtryk. <br/><br/> **Bemærk**! Denne betingelse tager ikke højde for meddelelser, der sendes til modtagerproxyadresser. Den svarer kun til meddelelser, der sendes til modtagerens primære mailadresse.|
-|Sendt til medlem af|betingelse: *SentToMemberOf* <br/><br/> undtagelse: *ExceptIfSentToMemberOf*|Adresser|Meddelelser, der indeholder modtagere, der er medlemmer af den angivne distributionsgruppe, mailaktiverede sikkerhedsgruppe eller Microsoft 365 gruppe. Gruppen kan være i felterne **Til**, **Cc** eller **Bcc** i meddelelsen.|
+|Sendt til medlem af|betingelse: *SentToMemberOf* <br/><br/> undtagelse: *ExceptIfSentToMemberOf*|Adresser|Meddelelser, der indeholder modtagere, der er medlemmer af den angivne distributionsgruppe, mailaktiverede sikkerhedsgruppe eller Microsoft 365-gruppe. Gruppen kan være i felterne **Til**, **Cc** eller **Bcc** i meddelelsen.|
 |Modtagerens angivne egenskaber omfatter et af disse ord |*RecipientADAttributeContainsWords* <br/><br/> *ExceptIfRecipientADAttributeContainsWords*|Første egenskab: `ADAttribute` <br/><br/> Anden egenskab: `Words`|Meddelelser, hvor den angivne Active Directory-attribut for en modtager indeholder et af de angivne ord. <br/><br/> Bemærk, at attributten **Land** kræver landekodeværdien på to bogstaver (f.eks. DE for Tyskland).|
 |Modtagerens angivne egenskaber stemmer overens med disse tekstmønstre |*RecipientADAttributeMatchesPatterns* <br/><br/> *ExceptIfRecipientADAttributeMatchesPatterns*|Første egenskab: `ADAttribute` <br/><br/> Anden egenskab: `Patterns`|Meddelelser, hvor den angivne Active Directory-attribut for en modtager indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
 
 ### <a name="message-subject-or-body"></a>Meddelelsesemne eller meddelelsestekst
 
-|betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|betingelse eller undtagelse i DLP|condition/exception parameters in Security & Compliance PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
 |Emne indeholder ord eller udtryk|betingelse: *SubjectContainsWords* <br/> undtagelse: *ExceptIf SubjectContainsWords*|Ord|Meddelelser med de angivne ord i emnefeltet.|
 |Emne matcher mønstre|condition: *SubjectMatchesPatterns* <br/> undtagelse: *ExceptIf SubjectMatchesPatterns*|Mønstre|Meddelelser, hvor emnefeltet indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
-|Indholdet indeholder|betingelse: *ContentContainsSensitiveInformation* <br/> exception *ExceptIfContentContainsSensitiveInformation*|SensitiveInformationTypes|Meddelelser eller dokumenter, der indeholder følsomme oplysninger, som defineret af politikker til forebyggelse af datatab i Microsoft Purview (DLP).|
+|Indholdet indeholder|betingelse: *ContentContainsSensitiveInformation* <br/> exception *ExceptIfContentContainsSensitiveInformation*|SensitiveInformationTypes|Meddelelser eller dokumenter, der indeholder følsomme oplysninger, som defineret af Microsoft Purview Forebyggelse af datatab politikker (DLP).|
 |Mønster for match af emne eller brødtekst|condition: *SubjectOrBodyMatchesPatterns* <br/> undtagelse: *ExceptIfSubjectOrBodyMatchesPatterns*|Mønstre|Meddelelser, hvor emnefeltet eller meddelelsesteksten indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
 |Emne eller brødtekst indeholder ord|betingelse: *SubjectOrBodyContainsWords* <br/> undtagelse: *ExceptIfSubjectOrBodyContainsWords*|Ord|Meddelelser med de angivne ord i emnefeltet eller meddelelsesteksten|
 |
 
 ### <a name="attachments"></a>Vedhæftede filer
 
-|betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|betingelse eller undtagelse i DLP|condition/exception parameters in Security & Compliance PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
-|Den vedhæftede fil er beskyttet med adgangskode|condition: *DocumentIsPasswordProtected* <br/><br/> undtagelse: *ExceptIfDocumentIsPasswordProtected*|Ingen|Meddelelser, hvor en vedhæftet fil er beskyttet med adgangskode (og derfor ikke kan scannes). Registrering af adgangskoder fungerer kun for Office dokumenter, .zip filer og .7z-filer.|
+|Den vedhæftede fil er beskyttet med adgangskode|condition: *DocumentIsPasswordProtected* <br/><br/> undtagelse: *ExceptIfDocumentIsPasswordProtected*|Ingen|Meddelelser, hvor en vedhæftet fil er beskyttet med adgangskode (og derfor ikke kan scannes). Registrering af adgangskode fungerer kun for Office-dokumenter, .zip-filer og .7z-filer.|
 |Filtypenavnet for den vedhæftede fil er|condition: *ContentExtensionMatchesWords* <br/><br/> undtagelse: *ExceptIfContentExtensionMatchesWords*|Ord|Meddelelser, hvor filtypenavnet for en vedhæftet fil svarer til et af de angivne ord.|
 |Indhold fra en vedhæftet fil kunne ikke scannes|betingelse: *DocumentIsUnsupported* <br/><br/>undtagelse: *ExceptIf DocumentIsUnsupported*|Nielsen|Meddelelser, hvor en vedhæftet fil ikke genkendes oprindeligt af Exchange Online.|
 |Indholdet af en vedhæftet fil i en hvilken som helst mail blev ikke scannet|condition: *ProcessingLimitExceeded* <br/><br/> undtagelse: *ExceptIfProcessingLimitExceeded*|Nielsen|Meddelelser, hvor regelprogrammet ikke kunne fuldføre scanningen af de vedhæftede filer. Du kan bruge denne betingelse til at oprette regler, der arbejder sammen for at identificere og behandle meddelelser, hvor indholdet ikke kunne scannes fuldt ud.|
 |Dokumentnavnet indeholder ord|condition: *DocumentNameMatchesWords* <br/><br/> undtagelse: *ExceptIfDocumentNameMatchesWords*|Ord|Meddelelser, hvor navnet på en vedhæftet fil svarer til et af de angivne ord.|
 |Dokumentnavnet stemmer overens med mønstre|condition: *DocumentNameMatchesPatterns* <br/><br/> undtagelse: *ExceptIfDocumentNameMatchesPatterns*|Mønstre|Meddelelser, hvor en vedhæftet fils filnavn indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
-|Dokumentegenskaben er|condition: *ContentPropertyContainsWords* <br/><br/> undtagelse: *ExceptIfContentPropertyContainsWords*|Ord|Meddelelser eller dokumenter, hvor filtypenavnet for en vedhæftet fil svarer til et af de angivne ord.|
+|Dokumentegenskaben er|condition: *ContentPropertyContainsWords* <br/><br/> undtagelse: *ExceptIfContentPropertyContainsWords*|Ord|Meddelelser med dokumenter, hvor en vedhæftet fils brugerdefinerede egenskab svarer til den angivne værdi.|
 |Dokumentstørrelsen er lig med eller større end|betingelse: *DocumentSizeOver* <br/><br/> undtagelse: *ExceptIfDocumentSizeOver*|Størrelse|Meddelelser, hvor en vedhæftet fil er større end eller lig med den angivne værdi.|
 |Alle vedhæftede filers indhold indeholder et af disse ord|betingelse: *DocumentContainsWords* <br/><br/> undtagelse: *ExceptIfDocumentContainsWords*|`Words`|Meddelelser, hvor en vedhæftet fil indeholder de angivne ord.|
 |Alt indhold i vedhæftede filer svarer til disse tekstmønstre|condition: *DocumentMatchesPatterns* <br/><br/> undtagelse: *ExceptIfDocumentMatchesPatterns*|`Patterns`|Meddelelser, hvor en vedhæftet fil indeholder tekstmønstre, der svarer til de angivne regulære udtryk.|
 
 ### <a name="message-headers"></a>Brevhoveder
 
-|betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|betingelse eller undtagelse i DLP|condition/exception parameters in Security & Compliance PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
 |Sidehovedet indeholder ord eller udtryk|betingelse: *HeaderContainsWords* <br/><br/> undtagelse: *ExceptIfHeaderContainsWords*|Hashtabel|Meddelelser, der indeholder det angivne overskriftsfelt, og værdien af det pågældende overskriftsfelt indeholder de angivne ord.|
 |Header matcher mønstre|betingelse: *HeaderMatchesPatterns* <br/><br/> undtagelse: *ExceptIfHeaderMatchesPatterns*|Hashtabel|Meddelelser, der indeholder det angivne headerfelt, og værdien af det pågældende overskriftsfelt indeholder de angivne regulære udtryk.|
 
 ### <a name="message-properties"></a>Meddelelsesegenskaber
 
-|betingelse eller undtagelse i DLP|parametre for betingelse/undtagelse i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|betingelse eller undtagelse i DLP|condition/exception parameters in Security & Compliance PowerShell|egenskabstype|Beskrivelse|
 |---|---|---|---|
 |Med prioritet|betingelse: *WithImportance* <br/><br/> undtagelse: *ExceptIfWithImportance*|Betydning|Meddelelser, der er markeret med det angivne vigtighedsniveau.|
 |Indholdstegnsæt indeholder ord|betingelse: *ContentCharacterSetContainsWords* <br/><br/> *ExceptIfContentCharacterSetContainsWords*|Tegnsæt|Meddelelser, der har et af de angivne tegnsætnavne.|
@@ -139,7 +137,7 @@ Hvis du vil konfigurere afsenderens adresseplacering på et DLP-regelniveau, er 
 
 I denne tabel beskrives de handlinger, der er tilgængelige i DLP.
 
-|handling i DLP|handlingsparametre i Microsoft 365 PowerShell|egenskabstype|Beskrivelse|
+|handling i DLP|handlingsparametre i PowerShell til sikkerhed & overholdelse af angivne standarder|egenskabstype|Beskrivelse|
 |---|---|---|---|
 |Angiv sidehoved|SetHeader|Første egenskab: *Overskriftsnavn* <br/><br/> Anden egenskab: *Overskriftsværdi*|Parameteren SetHeader angiver en handling for DLP-reglen, der tilføjer eller ændrer et headerfelt og en værdi i meddelelsesoverskriften. Denne parameter bruger syntaksen "HeaderName:HeaderValue". Du kan angive flere overskriftsnavne og værdipar adskilt af kommaer|
 |Fjern sidehoved|Fjernoverskrift|Første egenskab: *MessageHeaderField*<br/><br/> Anden egenskab: *Streng*|Parameteren RemoveHeader angiver en handling for DLP-reglen, der fjerner et headerfelt fra meddelelsesoverskriften. Denne parameter bruger syntaksen "HeaderName" eller "HeaderName:HeaderValue". Du kan angive flere overskriftsnavne eller overskriftsnavne og værdipar adskilt af kommaer|

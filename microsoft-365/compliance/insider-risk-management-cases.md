@@ -1,7 +1,7 @@
 ---
 title: Sager vedrørende styring af insiderrisiko
 description: Få mere at vide om sager om styring af insiderrisiko i Microsoft Purview
-keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse af angivne standarder
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,16 +13,14 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 916fb67d8fb2376a1a59d3d2aa61a8e7d041f194
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: 678d500b5d523c2b656f4f30fa4ef4a4ed5015a7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65469376"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628699"
 ---
 # <a name="insider-risk-management-cases"></a>Sager vedrørende styring af insiderrisiko
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Sager er kernen i insiderrisikostyring og giver dig mulighed for at undersøge og reagere på problemer, der genereres af risikoindikatorer, der er defineret i dine politikker. Sager oprettes manuelt ud fra beskeder i situationer, hvor der er behov for yderligere handling for at løse et problem relateret til overholdelse af regler og standarder for en bruger. Hver sag er begrænset til en enkelt bruger, og flere beskeder for brugeren kan føjes til en eksisterende sag eller til en ny sag.
 
@@ -31,7 +29,7 @@ Når du har undersøgt detaljerne for en sag, kan du udføre en handling ved at:
 - sende brugeren en meddelelse
 - løsning af sagen som godartet
 - dele sagen med din ServiceNow-forekomst eller med en mailmodtager
-- eskalerer sagen for en eDiscovery-undersøgelse (Premium)
+- eSkalerer sagen i forbindelse med en eDiscovery-undersøgelse (Premium)
 
 Se [videoen Insider Risk Management Investigation and Escalation](https://www.youtube.com/watch?v=UONUSmkRC8s) for at få en oversigt over, hvordan sager undersøges og administreres i styring af insiderrisiko.
 
@@ -165,12 +163,12 @@ Sådan føjer du en bidragyder til en sag:
 1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Sager**.
 2. Vælg en sag, og vælg derefter fanen **Bidragydere** .
 3. Vælg **Tilføj bidragyder**.
-4. I dialogboksen **Tilføj bidragyder** skal du begynde at skrive navnet på den bruger, du vil tilføje, og derefter vælge brugeren på listen over foreslåede brugere. Denne liste oprettes ud fra Azure Active Directory for dit lejerabonnement.
+4. I dialogboksen **Tilføj bidragyder** skal du begynde at skrive navnet på den bruger, du vil tilføje, og derefter vælge brugeren på listen over foreslåede brugere. Denne liste genereres fra Azure Active Directory for dit lejerabonnement.
 5. Vælg **Tilføj** for at tilføje brugeren som bidragyder, eller vælg **Annuller** luk dialogboksen uden at tilføje brugeren som bidragyder.
 
 ## <a name="case-actions"></a>Sagshandlinger
 
-Risikoforskere kan handle på en sag på en af flere metoder, afhængigt af sagens alvorsgrad, historikken over risikoen for brugeren og retningslinjerne for risikoen i din organisation. I nogle situationer kan det være nødvendigt at eskalere en sag til en bruger eller en dataundersøgelse for at samarbejde med andre områder i din organisation og dykke dybere ned i risikoaktiviteter. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview løsninger for at hjælpe dig med administration af komplette løsninger.
+Risikoforskere kan handle på en sag på en af flere metoder, afhængigt af sagens alvorsgrad, historikken over risikoen for brugeren og retningslinjerne for risikoen i din organisation. I nogle situationer kan det være nødvendigt at eskalere en sag til en bruger eller en dataundersøgelse for at samarbejde med andre områder i din organisation og dykke dybere ned i risikoaktiviteter. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med administration af komplette løsninger.
 
 ### <a name="send-email-notice"></a>Send meddelelse via mail
 
@@ -188,7 +186,7 @@ Sådan sender du en meddelelse til den bruger, der er tildelt en sag:
 
 ### <a name="escalate-for-investigation"></a>Eskaler til undersøgelse
 
-Eskaler sagen for brugerundersøgelse i situationer, hvor yderligere juridisk gennemgang er nødvendig for brugerens risikoaktivitet. Denne eskalering åbner et nyt Microsoft Purview eDiscovery-tilfælde (Premium) i din Microsoft 365 organisation. eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne juridiske undersøgelser. Det giver også dit juridiske team mulighed for at administrere hele arbejdsprocessen for meddelelse om juridiske ventepositioner for at kommunikere med tilsynsførende, der er involveret i en sag. Eskalering til en eDiscovery-sag (Premium) fra en sag om administration af insiderrisiko hjælper dit juridiske team med at træffe de nødvendige foranstaltninger og administrere bevarelse af indhold. Du kan få mere at vide om eDiscovery-sager (Premium) under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+Eskaler sagen for brugerundersøgelse i situationer, hvor yderligere juridisk gennemgang er nødvendig for brugerens risikoaktivitet. Denne eskalering åbner en ny Microsoft Purview eDiscovery (Premium) sag i din Microsoft 365-organisation. eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne juridiske undersøgelser. Det giver også dit juridiske team mulighed for at administrere hele arbejdsprocessen for meddelelse om juridiske ventepositioner for at kommunikere med tilsynsførende, der er involveret i en sag. Eskalering til en eDiscovery-sag (Premium) fra en insiderrisikoadministrationssag hjælper dit juridiske team med at træffe de nødvendige foranstaltninger og administrere bevarelse af indhold. Du kan få mere at vide om eDiscovery(Premium)-sager under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 
 Sådan eskalerer du en sag til en brugerundersøgelse:
 
@@ -198,30 +196,30 @@ Sådan eskalerer du en sag til en brugerundersøgelse:
 4. Gennemse meddelelsesfelterne, og opdater efter behov. De værdier, der angives her, tilsidesætter værdierne i skabelonen.
 5. Vælg **Bekræft** for at oprette brugerundersøgelsessagen, eller vælg **Annuller** for at lukke dialogboksen uden at oprette en ny brugerundersøgelsessag.
 
-Når insiderrisikostyringscasen er eskaleret til en ny brugerundersøgelsessag, kan du gennemse den nye sag i området **eDiscoveryAdvanced** >  i Microsoft Purview-compliance-portal.
+Når insiderrisikostyringscasen er eskaleret til en ny brugerundersøgelsessag, kan du gennemse den nye sag i området **eDiscovery** > **Advanced** i Microsoft Purview-compliance-portal.
 
-### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Kør automatiserede opgaver med Power Automate flow for sagen
+### <a name="run-automated-tasks-with-power-automate-flows-for-the-case"></a>Kør automatiserede opgaver med Power Automate-flow for sagen
 
-Ved hjælp af anbefalede Power Automate flow kan risikoforskere og analytikere hurtigt gøre noget for at:
+Ved hjælp af anbefalede Power Automate-flow kan risikoforskere og analytikere hurtigt gøre noget for at:
 
 - Anmod HR eller virksomheden om oplysninger om en bruger i en insiderrisikosag
 - Giv lederen besked, når en bruger har en insiderrisikobesked
 - Opret en post for en sag om styring af insiderrisiko i ServiceNow
 - Giv brugerne besked, når de føjes til en insiderrisikopolitik
 
-Sådan kører, administrerer eller opretter du Power Automate flow for en insiderrisikostyringssag:
+Sådan kører, administrerer eller opretter du Power Automate-flow for en insiderrisikostyringssag:
 
 1. Vælg **Automatiser** på værktøjslinjen til sagshandling. 
-2. Vælg det Power Automate flow, der skal køres, og vælg derefter **Kør flow**. 
+2. Vælg det Power Automate-flow, der skal køres, og vælg derefter **Kør flow**. 
 3. Når flowet er fuldført, skal du vælge **Udført**.
 
-Hvis du vil vide mere om Power Automate flow til styring af insiderrisiko, skal [du se Introduktion til indstillinger for styring af insiderrisiko](insider-risk-management-settings.md#power-automate-flows-preview).
+Du kan få mere at vide om Power Automate-flow til styring af insiderrisiko under [Introduktion til indstillinger for styring af insiderrisiko](insider-risk-management-settings.md#power-automate-flows-preview).
 
-### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Få vist eller opret et Microsoft Teams team til sagen
+### <a name="view-or-create-a-microsoft-teams-team-for-the-case"></a>Få vist eller opret et Microsoft Teams-team til sagen
 
-Når Microsoft Teams integration til styring af insiderrisiko er aktiveret i indstillinger, oprettes der automatisk et Microsoft Teams team, hver gang en besked bekræftes, og der oprettes en sag. Risikoforskere og analytikere kan hurtigt åbne Microsoft Teams og navigere direkte til teamet for en sag ved at vælge **Vis Microsoft Teams team** på værktøjslinjen til sagshandling.
+Når Microsoft Teams-integration til styring af insiderrisiko er aktiveret i indstillinger, oprettes der automatisk et Microsoft Teams-team, hver gang en besked bekræftes, og der oprettes en sag. Risikoforskere og analytikere kan hurtigt åbne Microsoft Teams og navigere direkte til teamet for en sag ved at vælge **Vis Microsoft Teams-team** på værktøjslinjen til sagshandling.
 
-I forbindelse med sager, der er åbnet før aktivering af Microsoft Team-integration, kan risikoforskere og analytikere oprette et nyt Microsoft Teams team til en sag ved at vælge **Opret Microsoft Teams team** på værktøjslinjen til sagshandling.
+I forbindelse med sager, der er åbnet før aktivering af Microsoft Team-integration, kan risikoforskere og analytikere oprette et nyt Microsoft Teams-team til en sag ved at vælge **Opret Microsoft Teams-team** på værktøjslinjen til sagshandling.
 
 Når en sag er afsluttet, arkiveres det tilknyttede Microsoft-team automatisk (skjult og skrivebeskyttet).
 

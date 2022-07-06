@@ -22,18 +22,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab) for at give en bruger besked om, at vedkommende arbejder med indhold, der er i konflikt med en DLP-politik.
-ms.openlocfilehash: 13387890ca1096115c5c933627ae674aaad15581
-ms.sourcegitcommit: 1fa0b15f86470c49dddf0d6de59d553a38ae259b
+ms.openlocfilehash: 19ec7b5e359b32cc38310c51c6674968aecc666f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65863624"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630935"
 ---
 # <a name="send-email-notifications-and-show-policy-tips-for-dlp-policies"></a>Send mailmeddelelser, og vis politiktip til DLP-politikker
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan bruge en DLP-politik (forebyggelse af datatab) Microsoft Purview til at identificere, overvåge og beskytte følsomme oplysninger på tværs af Office 365. Du vil gerne have, at personer i din organisation, der arbejder med disse følsomme oplysninger, forbliver kompatible med dine DLP-politikker, men du vil ikke forhindre dem unødvendigt i at få deres arbejde fra hånden. Det er her, mailmeddelelser og politiktips kan hjælpe.
+Du kan bruge en Microsoft Purview DLP-politik (forebyggelse af datatab) til at identificere, overvåge og beskytte følsomme oplysninger på tværs af Office 365. Du vil gerne have, at personer i din organisation, der arbejder med disse følsomme oplysninger, forbliver kompatible med dine DLP-politikker, men du vil ikke forhindre dem unødvendigt i at få deres arbejde fra hånden. Det er her, mailmeddelelser og politiktips kan hjælpe.
 
 ![Meddelelseslinjen viser politiktip i Excel 2016](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
@@ -43,11 +41,11 @@ Når du opretter en DLP-politik, kan du konfigurere brugermeddelelserne til:
 
 - Vis et politiktip til indhold, der er i konflikt med DLP-politikken:
 
-  - I forbindelse med mail i Outlook på internettet og Outlook 2013 og nyere vises politiktippen øverst i en meddelelse over modtagerne, mens meddelelsen oprettes.
+  - I forbindelse med mail i Outlook på internettet og Outlook 2013 og nyere vises politiktips øverst i en meddelelse over modtagerne, mens meddelelsen oprettes.
 
-  - For dokumenter på en OneDrive for Business konto eller SharePoint Online-websted er politiktippen angivet med et advarselsikon, der vises på elementet. Hvis du vil have vist flere oplysninger, kan du vælge et element og derefter vælge ikon for ruden **Oplysninger**![.](../media/50b6d51b-92b4-4c5f-bb4b-4ca2d4aa3d04.png) i øverste højre hjørne af siden for at åbne detaljeruden.
+  - For dokumenter på en OneDrive for Business konto eller på et SharePoint Online-websted er politiktippen angivet med et advarselsikon, der vises på elementet. Hvis du vil have vist flere oplysninger, kan du vælge et element og derefter vælge ikon for ruden **Oplysninger**![.](../media/50b6d51b-92b4-4c5f-bb4b-4ca2d4aa3d04.png) i øverste højre hjørne af siden for at åbne detaljeruden.
 
-  - I forbindelse med Excel, PowerPoint og Word-dokumenter, der er gemt på et OneDrive for Business websted eller SharePoint Online-websted, der er inkluderet i DLP-politikken, vises politiktip på meddelelseslinjen og Backstage-visningen (**oplysninger** i menuen \>**Filer**).
+  - I forbindelse med Excel-, PowerPoint- og Word-dokumenter, der er gemt på et OneDrive for Business websted eller SharePoint Online-websted, der er inkluderet i DLP-politikken, vises politiktip til meddelelseslinjen og Backstage-visningen (**oplysninger** i menuen \>**Filer**).
 
 ## <a name="add-user-notifications-to-a-dlp-policy"></a>Føj brugermeddelelser til en DLP-politik
 
@@ -58,8 +56,6 @@ Når du opretter en DLP-politik, kan du aktivere **brugermeddelelser**. Når bru
 2. Log på med din arbejds- eller skolekonto.
 
 3. I den Microsoft Purview-compliance-portal \> venstre navigationspolitik \> **Politik til** \> **forebyggelse af** \> datatab **+ Opret en politik**.
-
-    ![Opret en politikknap.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
 
 4. Vælg den DLP-politikskabelon, der beskytter de typer følsomme oplysninger, du vil beskytte \> **Næste**.
 
@@ -73,9 +69,9 @@ Når du opretter en DLP-politik, kan du aktivere **brugermeddelelser**. Når bru
 
    - Vælg **Lad mig vælge bestemte placeringer** \> **Næste**.
 
-   Hvis du vil medtage eller udelade en hel placering, f.eks. alle Exchange mail eller alle OneDrive konti, skal du slå **Status** for den pågældende placering til eller fra.
+   Hvis du vil medtage eller udelade en hel placering, f.eks. alle Exchange-mails eller alle OneDrive-konti, skal du slå **Status** for den pågældende placering til eller fra.
 
-   Hvis du kun vil medtage bestemte SharePoint websteder eller OneDrive konti, skal du skifte **Status** til til og derefter klikke på linkene under **Medtag** for at vælge bestemte websteder eller konti.
+   Hvis du kun vil medtage bestemte SharePoint-websteder eller OneDrive-konti, skal du skifte **Status** til til og derefter klikke på linkene under **Medtag** for at vælge bestemte websteder eller konti.
 
 7. Vælg **Brug avancerede indstillinger** \> **Næste**.
 
@@ -112,7 +108,7 @@ Meddelelser har en emnelinje, der starter med den udførte handling, f.eks. "Med
 
 Meddelelser viser som standard tekst, der ligner følgende, for et element på et websted. Meddelelsesteksten konfigureres separat for hver regel, så den tekst, der vises, varierer, afhængigt af hvilken regel der matches.
 
-|Hvis DLP-politikreglen gør dette...|Derefter står der følgende i standardmeddelelsen for SharePoint eller OneDrive for Business dokumenter...|Derefter står der følgende i standardmeddelelsen for Outlook meddelelser...|
+|Hvis DLP-politikreglen gør dette...|Derefter står der følgende i standardmeddelelsen for SharePoint eller OneDrive for Business dokumenter...|Derefter står der følgende i standardmeddelelsen for Outlook-meddelelser...|
 |---|---|---|
 |Sender en meddelelse, men tillader ikke tilsidesættelse|Dette element er i konflikt med en politik i din organisation.|Din mail er i konflikt med en politik i din organisation.|
 |Blokerer adgang, sender en meddelelse og tillader tilsidesættelse|Dette element er i konflikt med en politik i din organisation. Hvis du ikke løser denne konflikt, kan adgangen til denne fil blive blokeret.|Din mail er i konflikt med en politik i din organisation. Meddelelsen blev ikke leveret til alle modtagere.|
@@ -129,6 +125,7 @@ Du kan også bruge følgende tokens til at tilpasse mailmeddelelsen. Disse token
 |%%AppliedActions%%|De handlinger, der er anvendt på indholdet.|
 |%%ContentURL%%|URL-adressen til dokumentet på SharePoint Online-webstedet eller OneDrive for Business-webstedet.|
 |%%MatchedConditions%%|De betingelser, der blev matchet med indholdet. Brug dette token til at informere andre om mulige problemer med indholdet.|
+|%%BlockedMessageInfo%%|Oplysningerne i den meddelelse, der blev blokeret. Brug dette token til at informere brugerne om detaljerne for den meddelelse, der blev blokeret.|
 
 ![Meddelelse, der viser, hvor tokens vises.](../media/cd3f36b3-40db-4f30-99e4-190750bd1955.png)
 
@@ -186,13 +183,13 @@ Her er nogle fine punkter, hvor du kan forstå, hvordan du bruger et politiktip 
 
 ## <a name="policy-tips-on-onedrive-for-business-sites-and-sharepoint-online-sites"></a>Politiktips til OneDrive for Business websteder og SharePoint Online-websteder
 
-Når et dokument på et OneDrive for Business websted eller SharePoint Online-websted stemmer overens med en regel i en DLP-politik, og denne regel bruger politiktip, viser politiktips specielle ikoner i dokumentet:
+Når et dokument på et OneDrive for Business websted eller et SharePoint Online-websted stemmer overens med en regel i en DLP-politik, og denne regel bruger politiktip, viser politiktips specielle ikoner i dokumentet:
 
 1. Hvis reglen sender en meddelelse om filen, vises advarselsikonet.
 
 2. Hvis reglen blokerer adgangen til dokumentet, vises det blokerede ikon.
 
-   ![Ikoner for politiktip til dokumenter på en OneDrive konto.](../media/d3e9f772-03f9-4d28-82f8-3064784332a2.png)
+   ![Ikoner for politiktip til dokumenter på en OneDrive-konto.](../media/d3e9f772-03f9-4d28-82f8-3064784332a2.png)
 
 Hvis du vil udføre en handling på et dokument, kan du vælge et element \> ved at vælge ikonet med ruden **Oplysninger**![.](../media/50b6d51b-92b4-4c5f-bb4b-4ca2d4aa3d04.png) i øverste højre hjørne af siden for at åbne detaljeruden \> **Få vist politiktip**.
 
@@ -236,9 +233,9 @@ Hvis politiktips er konfigureret til at tillade tilsidesættelse, kan du vælge 
 
 Bemærk, at når du føjer følsomme oplysninger til en mail, kan der være ventetid mellem det tidspunkt, hvor de følsomme oplysninger tilføjes, og hvornår politiktip vises. Når mails krypteres med Microsoft Purview-meddelelseskryptering, og den politik, der bruges til at registrere dem, bruger politiktip til registrering af krypteringstilstand, vises ikke.
 
-### <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions"></a>Outlook 2013 og nyere understøtter kun visning af politiktips for nogle betingelser
+### <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions"></a>Outlook 2013 og nyere understøtter kun visning af politiktip for nogle betingelser
 
-I øjeblikket understøtter Outlook 2013 og nyere kun politiktips for disse betingelser:
+I øjeblikket understøtter Outlook 2013 og nyere kun visning af politiktip for disse betingelser:
 
 - Indholdet indeholder
 - Indholdet er delt
@@ -246,13 +243,13 @@ I øjeblikket understøtter Outlook 2013 og nyere kun politiktips for disse beti
 Bemærk, at undtagelser betragtes som betingelser, og alle disse betingelser fungerer i Outlook, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Men visning af politiktip til brugere understøttes endnu ikke. 
 
 > [!NOTE]
-> Outlook understøtter ikke visning af politiktips til en DLP-politik, der anvendes på en dynamisk distributionsgruppe eller sikkerhedsgrupper, der ikke er mailaktiveret. 
+> Outlook understøtter ikke visning af politiktip til en DLP-politik, der anvendes på en dynamisk distributionsgruppe eller sikkerhedsgrupper, der ikke er mailaktiverede. 
 
-### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Tip til politikker i Exchange Administration i forhold til portalen Microsoft Purview overholdelse
+### <a name="policy-tips-in-the-exchange-admin-center-vs-the-microsoft-purview-compliance-portal"></a>Politiktips i Exchange Administration i forhold til Microsoft Purview Compliance-portalen
 
 Politiktips kan enten fungere med DLP-politikker og regler for mailflow, der er oprettet i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, eller med DLP-politikker, der er oprettet i overholdelsesportalen, men ikke begge dele. Det skyldes, at disse politikker er gemt forskellige steder, men politiktip kan kun hentes fra en enkelt placering.
 
-Hvis du har konfigureret politiktips i Exchange Administration, vises de politiktips, du konfigurerer på overholdelsesportalen, ikke for brugere i Outlook på internettet og Outlook 2013 og nyere, før du deaktiverer tipene i Exchange Administration. Dette sikrer, at dine aktuelle regler for Exchange mailflow (også kaldet transportregler) fortsat fungerer, indtil du vælger at skifte til overholdelsesportalen.
+Hvis du har konfigureret politiktips i Exchange Administration, vises de politiktip, du konfigurerer på overholdelsesportalen, ikke for brugere i Outlook på internettet og Outlook 2013 og nyere, før du deaktiverer tipene i Exchange Administration. Dette sikrer, at dine aktuelle regler for Exchange-mailflow (også kaldet transportregler) fortsat fungerer, indtil du vælger at skifte til overholdelsesportalen.
 
 Bemærk, at selvom politiktips kun kan hentes fra en enkelt placering, sendes der altid mailmeddelelser, selvom du bruger DLP-politikker i både overholdelsesportalen og Exchange Administration.
 
@@ -270,14 +267,14 @@ Politiktip viser som standard tekst, der ligner følgende for mail.
 
 Når personer arbejder med følsomt indhold i skrivebordsversionerne af Excel, PowerPoint og Word, kan politiktips give dem besked i realtid om, at indholdet er i konflikt med en DLP-politik. Dette kræver, at:
 
-- Det Office dokument er gemt på et OneDrive for Business websted eller på et SharePoint Online-websted.
+- Office-dokumentet gemmes på et OneDrive for Business websted eller på et SharePoint Online-websted.
 
 - Webstedet er inkluderet i en DLP-politik, der er konfigureret til at bruge politiktip.
 
-Office desktopprogrammer synkroniserer automatisk DLP-politikker direkte fra Office 365 og scanner derefter dine dokumenter for at sikre, at de ikke er i konflikt med dine DLP-politikker og viser politiktip i realtid.
+Office-skrivebordsprogrammer synkroniserer automatisk DLP-politikker direkte fra Office 365 og scanner derefter dine dokumenter for at sikre, at de ikke er i konflikt med dine DLP-politikker og viser politiktip i realtid.
 
 > [!NOTE]
-> Office desktopapps scanner dokumenter selv for at finde ud af, om tip til DLP-politikker skal vises. De viser ikke politiktips, som SharePoint onlinewebsteder eller OneDrive for Business websteder allerede har bestemt, skal vises i en fil. Derfor kan du muligvis ikke altid se et tip til en DLP-politik i de skrivebordsapps, du kan se på SharePoint Online-websteder eller på OneDrive for Business websteder. I modsætning hertil viser de Office programmer på internettet kun DLP-politiktips, som SharePoint onlinewebsteder eller OneDrive for Business websteder allerede har bestemt, skal vises.
+> Office Desktop-apps scanner dokumenter selv for at finde ud af, om tip til DLP-politikker skal vises. De viser ikke politiktip, som SharePoint Online-websteder eller OneDrive for Business websteder allerede har bestemt, skal vises i en fil. Derfor kan du muligvis ikke altid se et tip til en DLP-politik i skrivebordsapps, som du kan se på SharePoint Online-websteder eller på OneDrive for Business websteder. I modsætning hertil viser Office-programmerne på internettet kun tip til DLP-politikker, som SharePoint Online-websteder eller OneDrive for Business websteder allerede har bestemt, skal vises.
 
 Afhængigt af hvordan du konfigurerer politiktips i DLP-politikken, kan brugerne vælge blot at ignorere politiktips, tilsidesætte politikken med eller uden en forretningsberettigelse eller rapportere en falsk positiv.
 
@@ -293,7 +290,7 @@ Hvis politiktip i DLP-politikken er konfigureret med disse indstillinger, kan du
 
 ![Indstillinger for politiktip i Backstage i Excel 2016.](../media/5b3857ba-907e-456e-ae43-888b594c049c.png)
 
-I hvert af disse Office desktopprogrammer kan folk vælge at deaktivere politiktips. Hvis indstillingen er slået fra, vises politiktip, der er enkle meddelelser, ikke på meddelelseslinjen eller Backstage-visningen (under fanen **Filer** ). Politiktips om blokering og tilsidesættelse vises dog stadig, og de modtager stadig mailmeddelelsen. Desuden fritager deaktivering af politiktip ikke dokumentet fra de DLP-politikker, der er anvendt på det.
+I hvert af disse Office-skrivebordsprogrammer kan andre vælge at deaktivere politiktip. Hvis indstillingen er slået fra, vises politiktip, der er enkle meddelelser, ikke på meddelelseslinjen eller Backstage-visningen (under fanen **Filer** ). Politiktips om blokering og tilsidesættelse vises dog stadig, og de modtager stadig mailmeddelelsen. Desuden fritager deaktivering af politiktip ikke dokumentet fra de DLP-politikker, der er anvendt på det.
 
 ### <a name="default-text-for-policy-tips-in-excel-2016-powerpoint-2016-and-word-2016"></a>Standardtekst for politiktips i Excel 2016, PowerPoint 2016 og Word 2016
 

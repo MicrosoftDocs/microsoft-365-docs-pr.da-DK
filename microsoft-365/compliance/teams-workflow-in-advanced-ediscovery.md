@@ -14,16 +14,14 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du bevarer, indsamler, gennemser og eksporterer indhold fra Microsoft Teams i eDiscovery (Premium).
-ms.openlocfilehash: 754be254c4301fae9fdfff5edee3593e1333eb6c
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: ec3a1029c1a1b8de44a675d1856812aee0a77689
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839684"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629095"
 ---
 # <a name="ediscovery-premium-workflow-for-content-in-microsoft-teams"></a>eDiscovery-arbejdsgangen (Premium) til indhold i Microsoft Teams
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Denne artikel indeholder en række omfattende procedurer, retningslinjer og bedste praksis for brug af Microsoft Purview eDiscovery (Premium), så du kan bevare, indsamle, gennemgå og eksportere indhold fra Microsoft Teams. Målet med denne artikel er at hjælpe dig med at optimere din eDiscovery-arbejdsgang for indhold i Teams.
 

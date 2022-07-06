@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Opret nøjagtigt datamatch for typer/regelpakker af følsomme oplysninger
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ff493f7af88d377bcf008d13752969107cfd65e7
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 16da97f249eff856fd1b0e671d71d813b3cbac73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017180"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628501"
 ---
 # <a name="create-exact-data-match-sensitive-information-typerule-package"></a>Opret nøjagtigt datamatch for typer/regelpakker af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan oprette et nøjagtigt datamatch (EDM) sensitive information type (SIT) ved hjælp af [EDM-skemaet og GUIDEN SIT](#use-the-edm-schema-and-sit-wizard) i Overholdelsescenter eller oprette XML-filen til regelpakken [manuelt](#create-a-rule-package-manually). Du kan også kombinere begge ved hjælp af én metode til at oprette skemaet og senere redigere det ved hjælp af den anden metode.
 
@@ -60,7 +58,7 @@ Se [Objektdefinitioner for følsomme oplysninger og](sensitive-information-type-
 
 ### <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Brug guiden Med det nøjagtige datamatchskema og mønsteret for følsomme oplysninger
 
-1. På Microsoft Purview-overholdelsesportalen for din lejer skal du gå til **Dataklassificering** > **Præcise dataforekomster**.
+1. I Microsoft Purview-compliance-portal for din lejer skal du gå til **Dataklassificering** > **Præcise dataforekomster**.
 
 2. Vælg **EDM-følsomme infotyper** og **Opret EDM-følsom infotype** for at åbne konfigurationsguiden til konfiguration af følsomme oplysninger.
 
@@ -107,7 +105,7 @@ Dette vil stemme overens med hvert enkelt ord eller nummer i et dokument eller e
 
 **Mailadresser**: Mailadresser kan være nemme at identificere, men da de er så almindelige i indhold, kan de medføre en betydelig belastning i systemet, hvis de bruges som et primært felt. Brug dem kun som sekundære beviser. Hvis de skal bruges som det primære bevis, kan du forsøge at definere en brugerdefineret type følsomme oplysninger, der bruger logik til at udelukke brugen af dem som `From` eller `To` felter i mails og til at ekskludere dem med din virksomheds mailadresse for at reducere antallet af unødvendige strenge, der skal matches.
 
-**Telefon tal**: Telefon tal kan komme i mange forskellige formater, herunder eller udelade landepræfikser, områdekoder og separatorer. Hvis du vil reducere de falske negativer, samtidig med at belastningen holdes på et minimum, skal du kun bruge dem som sekundære elementer, udelade alle sandsynlige separatorer, f.eks. parenteser og tankestreger og kun inkludere den del i din følsomme datatabel, der altid vil være til stede i telefonnummeret.
+**Telefonnumre**: Telefonnumre kan fås i mange forskellige formater, herunder eller udelade landepræfikser, områdekoder og separatorer. Hvis du vil reducere de falske negativer, samtidig med at belastningen holdes på et minimum, skal du kun bruge dem som sekundære elementer, udelade alle sandsynlige separatorer, f.eks. parenteser og tankestreger og kun inkludere den del i din følsomme datatabel, der altid vil være til stede i telefonnummeret.
 
 **Personnavne**: Brug ikke personens navne som primære elementer, hvis du bruger en følsom oplysningstype baseret på et regulært udtryk som klassificeringselement for denne EDM-type, fordi de er svære at skelne fra almindelige ord.
 
@@ -143,7 +141,7 @@ I denne procedure kan du se, hvordan du opretter en fil i XML-format, der kaldes
 > [!NOTE]
 > Hvis det SIT, du tilknytter til, kan registrere bekræftende beviser med flere ord, kan de sekundære elementer, du definerer i en manuelt oprettet regelpakke, knyttes til SIT. Navnet `John Smith` ville f.eks. ikke matche som et sekundært element, fordi vi ville sammenligne `John` og `Smith` finde det i indholdet separat med det ord `John Smith` , der blev uploadet i et af felterne, hvis dette bekræftelsesfelt ikke var knyttet til et SIT, der kan registrere mønsteret.
 >
-> Der er en grænse på 10 regelpakker i en Microsoft 365 lejer. Da en regelpakke kan indeholde et vilkårligt antal følsomme oplysningstyper, kan du undgå at oprette en ny regelpakke, hver gang du vil definere en ny type følsomme oplysninger ved hjælp af denne metode. Eksportér i stedet en eksisterende regelpakke, og føj dine følsomme oplysningstyper til XML'en, før du overfører den igen.
+> Der er en grænse på 10 regelpakker i en Microsoft 365-lejer. Da en regelpakke kan indeholde et vilkårligt antal følsomme oplysningstyper, kan du undgå at oprette en ny regelpakke, hver gang du vil definere en ny type følsomme oplysninger ved hjælp af denne metode. Eksportér i stedet en eksisterende regelpakke, og føj dine følsomme oplysningstyper til XML'en, før du overfører den igen.
 
 1. Opret en regelpakke i XML-format (med Unicode-kodning) i stil med følgende eksempel. Du kan kopiere, redigere og bruge vores eksempel.
 

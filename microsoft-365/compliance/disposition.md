@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Overvåg og administrer bortskaffelsen af indhold, når du bruger en dispositionsgennemgang, eller elementer, der er markeret som poster, slettes automatisk i henhold til de indstillinger, du har konfigureret.
-ms.openlocfilehash: 34ac1a9d3b62cd0806318582f7baef76947d7670
-ms.sourcegitcommit: 37111bc0c5a6cc4690f7144a019bbff11d44858f
+ms.openlocfilehash: d72cc68bb093c3b49c7f79847916c5cbc5fe5a2d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65463252"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630097"
 ---
 # <a name="disposition-of-content"></a>Fordeling af indhold
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Brug siden **Disposition** fra **Datastyring** i Microsoft Purview-compliance-portal til at administrere dispositionsgennemgange og få vist metadataene for [poster](records-management.md#records), der automatisk er blevet slettet i slutningen af deres opbevaringsperiode.
 
@@ -51,9 +49,9 @@ Derudover:
 
 - Hvis du vil have vist indholdet af elementer under fordelingsprocessen, skal du føje brugere til rollegruppen **Indholdsfremviser i Indholdsoversigt** . Hvis brugerne ikke har tilladelserne fra denne rollegruppe, kan de stadig vælge en dispositionsgennemsynshandling for at fuldføre dispositionsgennemgangen, men de skal gøre det uden at kunne få vist elementets indhold fra ruden med minivisning i Microsoft Purview-compliance-portal.
 
-- Hver person, der får adgang til siden **Disposition** , kan som standard kun se elementer, de er tildelt til gennemsyn. For at en administrator af datastyring kan se alle elementer, der er tildelt alle brugere, og alle opbevaringsmærkater, der er konfigureret til gennemgang af disposition: Naviger til **indstillinger for** >  **datastyringFøj** for at vælge og derefter aktivere en mailaktiveret sikkerhedsgruppe, der indeholder administratorkontiene.
+- Hver person, der får adgang til siden **Disposition** , kan som standard kun se elementer, de er tildelt til gennemsyn. For at en administrator af datastyring kan se alle elementer, der er tildelt alle brugere, og alle opbevaringsmærkater, der er konfigureret til gennemgang af disposition: Naviger til **indstillinger for** >  datastyring **Disposition** for at vælge og derefter aktivere en mailaktiveret sikkerhedsgruppe, der indeholder administratorkontiene.
     
-    Microsoft 365 grupper og sikkerhedsgrupper, der ikke er mailaktiverede, understøtter ikke denne funktion og vises ikke på listen for at vælge. Hvis du har brug for at oprette en ny mailaktiveret sikkerhedsgruppe, skal du bruge linket til <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> til at oprette den nye gruppe. 
+    Microsoft 365-grupper og sikkerhedsgrupper, der ikke er mailaktiverede, understøtter ikke denne funktion og vises ikke på listen for at vælge. Hvis du har brug for at oprette en ny mailaktiveret sikkerhedsgruppe, skal du bruge linket til <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> til at oprette den nye gruppe. 
     
     > [!IMPORTANT]
     > Når du har aktiveret gruppen, kan du ikke ændre den i Microsoft Purview-compliance-portal. I næste afsnit kan du se, hvordan du aktiverer en anden gruppe ved hjælp af PowerShell.
@@ -88,7 +86,7 @@ Når en dispositionsgennemgang udløses i slutningen af opbevaringsperioden, mod
 
 Du kan tilpasse den meddelelsesmail, som korrekturlæsere modtager, herunder instruktioner på forskellige sprog. Hvis du vil understøtte flere sprog, skal du selv angive oversættelserne, og denne brugerdefinerede tekst vises for alle korrekturlæsere, uanset deres landestandard.
 
-Brugerne modtager en indledende mailmeddelelse pr. mærkat i slutningen af elementets opbevaringsperiode med en påmindelse pr. etiket én gang om ugen for alle dispositionsgennemgange, som de er tildelt. De kan klikke på linket i meddelelses- og påmindelsesmailene for at gå direkte til siden **DatastyringDisposition** >  i Microsoft Purview-compliance-portal for at gennemse indholdet og udføre en handling. Alternativt kan korrekturlæserne navigere til denne **dispositionsside** i Microsoft Purview-compliance-portal. Derefter:
+Brugerne modtager en indledende mailmeddelelse pr. mærkat i slutningen af elementets opbevaringsperiode med en påmindelse pr. etiket én gang om ugen for alle dispositionsgennemgange, som de er tildelt. De kan klikke på linket i meddelelses- og påmindelsesmailene for at gå direkte til siden **Disposition** for **datastyring** >  i Microsoft Purview-compliance-portal for at gennemse indholdet og udføre en handling. Alternativt kan korrekturlæserne navigere til denne **dispositionsside** i Microsoft Purview-compliance-portal. Derefter:
 
 - Korrekturlæsere kan kun se de dispositionsgennemgange, der er tildelt dem, hvorimod administratorer, der er føjet til den valgte sikkerhedsgruppe for datastyring, kan se alle dispositionsgennemgange.
 
@@ -98,7 +96,7 @@ Brugerne modtager en indledende mailmeddelelse pr. mærkat i slutningen af eleme
    - **Oplysninger om** visning af indekserede egenskaber, hvor de er placeret, hvem der har oprettet dem, hvornår og hvem der senest har ændret dem, og hvornår.
    - **Historik** , der viser historikken for alle dispositionsgennemgangshandlinger til dato med kommentarer fra korrekturlæseren, hvis de er tilgængelige.
 
-En dispositionsgennemgang kan omfatte indhold i Exchange postkasser, SharePoint websteder og OneDrive konti. Indhold, der afventer en dispositionsgennemsyn på disse placeringer, slettes kun permanent, når en validator for den sidste fase af dispositionen vælger at slette indholdet permanent.
+En dispositionsgennemsyn kan omfatte indhold i Exchange-postkasser, SharePoint-websteder og OneDrive-konti. Indhold, der afventer en dispositionsgennemsyn på disse placeringer, slettes kun permanent, når en validator for den sidste fase af dispositionen vælger at slette indholdet permanent.
 
 > [!NOTE]
 > En postkasse skal have mindst 10 MB data for at understøtte dispositionsgennemgange.
@@ -132,7 +130,7 @@ Når du har valgt indstillingen **Start en dispositionsgennemsyn** , skal du væ
 
 Vælg **+ Tilføj en fase**, og navngiv fasen med henblik på identifikation. Angiv derefter korrekturlæserne for den pågældende fase.
 
-For korrekturlæserne skal du angive op til 10 individuelle brugere eller mailaktiverede sikkerhedsgrupper. Microsoft 365 grupper ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) understøttes ikke for denne indstilling.
+For korrekturlæserne skal du angive op til 10 individuelle brugere eller mailaktiverede sikkerhedsgrupper. Microsoft 365-grupper ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) understøttes ikke for denne indstilling.
 
 Hvis du har brug for mere end én person til at gennemse et element i slutningen af opbevaringsperioden, skal du vælge **Tilføj en anden fase** og gentage konfigurationsprocessen for det antal faser, du har brug for, med højst fem faser. 
 
@@ -189,7 +187,7 @@ Som du kan se i det viste eksempel, er de understøttede handlinger:
   
 - **Godkend afsætning**:
     - Når denne handling er valgt til en midlertidig fase i dispositionsgennemgangen (du har konfigureret flere faser): Elementet flyttes til den næste dispositionsfase.
-    - Når denne handling er valgt til den sidste fase i dispositionsgennemgangen, eller der kun er én dispositionsfase: Elementet er markeret som berettiget til permanent sletning, som et timerjob derefter udfører inden for 7 dage. Det nøjagtige tidspunkt for det element, der skal slettes permanent, afhænger af arbejdsbelastningen. Du kan få flere oplysninger under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive) og [Sådan fungerer opbevaring for Exchange](retention-policies-exchange.md#how-retention-works-for-exchange).
+    - Når denne handling er valgt til den sidste fase i dispositionsgennemgangen, eller der kun er én dispositionsfase: Elementet er markeret som berettiget til permanent sletning, som et timerjob derefter udfører inden for 7 dage. Det nøjagtige tidspunkt for det element, der skal slettes permanent, afhænger af arbejdsbelastningen. Du kan finde flere oplysninger under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)[, og hvordan opbevaring fungerer for Exchange](retention-policies-exchange.md#how-retention-works-for-exchange).
 
 - **Relabel**:
     - Når denne handling er valgt, afslutter elementet processen til gennemgang af fordeling for den oprindelige etiket. Elementet er derefter underlagt opbevaringsindstillingerne for den nyligt valgte opbevaringsmærkat.

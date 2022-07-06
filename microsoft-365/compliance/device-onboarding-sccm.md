@@ -15,25 +15,25 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: Brug Configuration Manager til at installere konfigurationspakken på enheder, så de er onboardet til tjenesten.
-ms.openlocfilehash: 2cca9cc073ca08c7fabb19511a4253e4a682057a
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 3bfeadd0008b548b8193333b3509e82831b162c9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760707"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630009"
 ---
 # <a name="onboard-windows-10-and-windows-11-devices-using-configuration-manager"></a>Onboarde Windows 10- og Windows 11 enheder ved hjælp af Configuration Manager
 
 **Gælder for:**
 
-- [Microsoft 365 Endpoint DLP (forebyggelse af datatab)](./endpoint-dlp-learn-about.md)
-- [Styring af insider-risiko](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Forebyggelse af datatab for slutpunkt (DLP)](./endpoint-dlp-learn-about.md)
+- [Styring af insider-risiko](insider-risk-management.md)
 
 ### <a name="onboard-devices-using-system-center-configuration-manager"></a>Onboarde enheder ved hjælp af System Center Configuration Manager
 
-1. Hent konfigurationspakken .zip-filen (*DeviceComplianceOnboardingPackage.zip*) fra [Microsoft Compliance Center](https://compliance.microsoft.com/).
+1. Hent konfigurationspakken .zip filen (*DeviceComplianceOnboardingPackage.zip*) fra [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/).
 
-2. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> >  **Device OnboardingOnboarding** >  i navigationsruden.
+2. I navigationsruden skal du vælge <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger For**</a> > **onboarding af** >  enhed **.**
 
 3. I feltet **Installationsmetode** skal du vælge **Microsoft Endpoint Configuration Manager 2012/2012 R2/1511/1602**.
 
@@ -46,7 +46,7 @@ ms.locfileid: "64760707"
 7. Vælg en foruddefineret enhedsgruppe, som pakken skal installeres på.
 
 > [!NOTE]
-> Microsoft 365 information protection understøtter ikke onboarding under [OOBE-fasen (Out-Of-Box Experience).](https://answers.microsoft.com/en-us/windows/wiki/windows_10/how-to-complete-the-windows-10-out-of-box/47e3f943-f000-45e3-8c5c-9d85a1a0cf87) Sørg for, at brugerne fuldfører OOBE, når de har kørt Windows installation eller opgradering.
+> Microsoft 365 Information Protection understøtter ikke onboarding under [OOBE-fasen (Out-Of-Box Experience).](https://answers.microsoft.com/en-us/windows/wiki/windows_10/how-to-complete-the-windows-10-out-of-box/47e3f943-f000-45e3-8c5c-9d85a1a0cf87) Sørg for, at brugerne fuldfører OOBE, når de har kørt Windows-installation eller -opgradering.
 
 > [!TIP]
 > Når du har onboardet enheden, kan du vælge at køre en registreringstest for at bekræfte, at en enhed er onboardet korrekt til tjenesten. Du kan finde flere oplysninger under [Kør en registreringstest på en nyligt onboardet Microsoft Defender for Endpoint enhed](/windows/security/threat-protection/microsoft-defender-atp/run-detection-test).
@@ -138,15 +138,15 @@ Af sikkerhedsmæssige årsager udløber den pakke, der bruges til Offboard-enhed
 > [!NOTE]
 > Onboarding- og offboarding-politikker må ikke installeres på den samme enhed på samme tid, ellers vil det medføre uforudsigelige kollisioner.
 
-### <a name="offboard-devices-using-microsoft-endpoint-configuration-manager-current-branch"></a>Enheder uden for om bord, der bruger Microsoft Endpoint Configuration Manager aktuelle forgrening
+### <a name="offboard-devices-using-microsoft-endpoint-configuration-manager-current-branch"></a>Offboard-enheder, der bruger Microsoft Endpoint Configuration Manager aktuelle forgrening
 
 Hvis du bruger Microsoft Endpoint Configuration Manager aktuelle forgrening, skal du se [Opret en konfigurationsfil til offboarding](/configmgr/protect/deploy-use/windows-defender-advanced-threat-protection#create-an-offboarding-configuration-file).
 
 ### <a name="offboard-devices-using-system-center-2012-r2-configuration-manager"></a>Offboard-enheder, der bruger System Center 2012 R2 Configuration Manager
 
-1. Hent offboarding-pakken fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>:
+1. Hent offboarding-pakken fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>:
 
-2. Vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> >   **Device onboardingOffboarding**>  i navigationsruden.
+2. I navigationsruden skal du vælge <a href="https://go.microsoft.com/fwlink/p/?linkid=2174201" target="_blank">**Indstillinger**</a> >  **For onboarding af**>  enhed **i Offboarding**.
 
 3. Vælg Windows 10 som operativsystem.
 
@@ -171,7 +171,7 @@ Hvis du bruger System Center 2012 R2 Configuration Manager, består overvågning
 
 1. Bekræftelse af konfigurationspakken er installeret korrekt og kører (eller kører) på enhederne i netværket.
 
-2. Kontrollerer, at enhederne overholder Microsoft 365 onboardingtjeneste (dette sikrer, at enheden kan fuldføre onboardingprocessen og kan fortsætte med at rapportere data til tjenesten).
+2. Kontrollerer, at enhederne overholder Onboarding-tjenesten for Microsoft 365-enheder (dette sikrer, at enheden kan fuldføre onboardingprocessen og kan fortsætte med at rapportere data til tjenesten).
 
 ### <a name="confirm-the-configuration-package-has-been-correctly-deployed"></a>Bekræft, at konfigurationspakken er installeret korrekt
 
@@ -187,7 +187,7 @@ Hvis du bruger System Center 2012 R2 Configuration Manager, består overvågning
 
     ![Configuration Manager viser en vellykket installation uden fejl.](../media/sccm-deployment.png)
 
-### <a name="check-that-the-devices-are-compliant-with-the-microsoft-365-endpoint-data-loss-prevention-service"></a>Kontrollér, at enhederne overholder Microsoft 365 tjenesten til forebyggelse af datatab på slutpunktet
+### <a name="check-that-the-devices-are-compliant-with-the-endpoint-data-loss-prevention-service"></a>Kontrollér, at enhederne overholder slutpunktets tjeneste til forebyggelse af datatab
 
 Du kan angive en regel for overholdelse af regler og standarder for konfigurationselementet i System Center 2012 R2-Configuration Manager for at overvåge udrulningen.
 

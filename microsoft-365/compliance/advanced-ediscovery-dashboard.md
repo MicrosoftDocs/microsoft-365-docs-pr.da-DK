@@ -1,5 +1,5 @@
 ---
-title: eDiscovery-dashboard (Premium) til korrektursæt
+title: eDiscovery-dashboard (Premium) til gennemsynssæt
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -15,23 +15,21 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug Microsoft Purview eDiscovery-dashboardet (Premium) til gennemgangssæt til hurtigt at analysere dit corpus for at identificere tendenser eller nøglestatistikker, der kan hjælpe dig med at udvikle din korrekturstrategi.
-ms.openlocfilehash: 00d4c6648d74fdf459965ed410dd43c73e698c23
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Brug dashboardet Microsoft Purview eDiscovery (Premium) til gennemgangssæt til hurtigt at analysere dit corpus for at identificere tendenser eller vigtige statistikker, der kan hjælpe dig med at udvikle din korrekturstrategi.
+ms.openlocfilehash: 225cc0d732023322b87e0e04c2cca1455fb0ff87
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097860"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629051"
 ---
-# <a name="ediscovery-premium-dashboard-for-review-sets"></a>eDiscovery-dashboard (Premium) til korrektursæt
+# <a name="ediscovery-premium-dashboard-for-review-sets"></a>eDiscovery-dashboard (Premium) til gennemsynssæt
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I nogle tilfælde i Microsoft Purview eDiscovery (Premium) kan du have en stor mængde dokumenter og mails, der skal gennemses. Før du starter korrekturprocessen, kan det være en god idé hurtigt at analysere dit corpus for at identificere tendenser eller vigtige statistikker, der kan hjælpe dig med at udvikle din korrekturstrategi. Det gør du ved at bruge eDiscovery-dashboardet (Premium) til gennemgangssæt til hurtigt at analysere dit corpus.
+I nogle tilfælde i Microsoft Purview eDiscovery (Premium) kan du have en stor mængde dokumenter og mailmeddelelser, der skal gennemses. Før du starter korrekturprocessen, kan det være en god idé hurtigt at analysere dit corpus for at identificere tendenser eller vigtige statistikker, der kan hjælpe dig med at udvikle din korrekturstrategi. Det gør du ved at bruge eDiscovery(Premium)-dashboardet til gennemgangssæt til hurtigt at analysere dit corpus.
 
 ## <a name="step-1-create-a-widget-on-the-review-set-dashboard"></a>Trin 1: Opret en widget på dashboardet til gennemsynssæt
 
-1. På Microsoft Purview-overholdelsesportalen skal du gå til **eDiscovery > eDiscovery (Premium)** for at få vist listen over sager i din organisation.
+1. I Microsoft Purview-compliance-portal skal du gå til **eDiscovery > eDiscovery (Premium)** for at få vist listen over sager i din organisation.
   
 2. Vælg en eksisterende sag.
   
@@ -39,7 +37,7 @@ I nogle tilfælde i Microsoft Purview eDiscovery (Premium) kan du have en stor m
   
 4. Klik på **Søgeprofilvisning** på rullelisten **Individuelle resultater**. 
 
-   ![DashbordPivot.](../media/dashboardpivot.png)
+   ![DashboardPivot.](../media/dashboardpivot.png)
 
    Siden **Søgeprofilvisning** vises. første gang, du får vist denne side, vises der tre standardwidgets.
 
@@ -69,7 +67,7 @@ I nogle tilfælde i Microsoft Purview eDiscovery (Premium) kan du have en stor m
 
 1. Klik på **...** på titellinjen i widgetten, og klik derefter på **Anvend betingelse**.
 
-   ![Dashboard.](../media/searchprofilehome.png)
+   ![Startside for dashboard.](../media/searchprofilehome.png)
 
 2. På pop op-siden skal du klikke på et element i widgetnøglen eller widgetdiagrammet for at oprette et filter.
 

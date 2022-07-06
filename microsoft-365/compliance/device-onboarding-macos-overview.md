@@ -14,18 +14,16 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om onboarding af macOS-enheder i overholdelsesløsninger
-ms.openlocfilehash: 09a35e47a237639a722047b11c24f9b2d09cf51d
-ms.sourcegitcommit: 5b321693214e3859f5af8f1774d2a5ff685ab3b7
+ms.openlocfilehash: 59ccb78060c7749f5690015dc4bab948a88e5222
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/21/2022
-ms.locfileid: "65014974"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630032"
 ---
 # <a name="onboard-macos-devices-into-microsoft-365-overview"></a>Oversigt over onboarding af macOS-enheder i Microsoft 365
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-MacOS-enheder kan onboardes i Microsoft Purview-løsninger ved hjælp af enten Intune eller JAMF-Pro. Onboardingprocedurerne varierer, afhængigt af hvilken administrationsløsning du bruger. Hvis dine macOS-enheder allerede er blevet onboardet i Microsoft Defender for Endpoint (MDE), er der færre trin. Se [Næste trin](#next-steps) for at få links til de relevante procedurer for dig.
+MacOS-enheder kan onboardes i Microsoft Purview-løsninger ved hjælp af enten Intune eller JAMF Pro. Onboardingprocedurerne varierer, afhængigt af hvilken administrationsløsning du bruger. Hvis dine macOS-enheder allerede er blevet onboardet i Microsoft Defender for Endpoint (MDE), er der færre trin. Se [Næste trin](#next-steps) for at få links til de relevante procedurer for dig.
 
 **Gælder for:**
 
@@ -50,10 +48,10 @@ Hvis du ikke er bekendt med Insider Risk, bør du gøre dig bekendt med disse ar
  - [Styring af insider-risiko](insider-risk-management.md)
  - [Plan for styring af insider-risiko](insider-risk-management-plan.md#plan-for-insider-risk-management)
 
-Dine macOS-enheder skal allerede administreres via Intune eller JAMF-Pro.
+Dine macOS-enheder skal allerede administreres via Intune eller JAMF Pro.
  
 - Hvis du vil onboarde i Intune, skal du se [Installationsvejledning: Administrer macOS-enheder i Microsoft Intune](/mem/intune/fundamentals/deployment-guide-platform-macos) og [Tilmeld din Mac med Intune-firmaportal](/mem/intune/user-help/enroll-your-device-in-intune-macos-cp). 
-- For at komme ombord i JAMF Pro se, [JAMF Pro administratorvejledning](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) og [JAMF Pro installations- og konfigurationsvejledning til Mac](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
+- Hvis du vil onboarde i JAMF Pro se, [guider JAMF Pro-administratorer](https://www.jamf.com/resources/product-documentation/jamf-pro-administrators-guide/) og [JAMF Pro-installations- og konfigurationsvejledning til Mac](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/)
 <!--- Install the v95+ Edge browser on your macOS devices--> 
 
 ### <a name="supported-browsers"></a>Understøttede browsere
@@ -67,7 +65,7 @@ Slutpunkt DLP understøtter disse browsere på macOS Catalina 10.15 eller nyere:
 
 ## <a name="licensing-guidance"></a>Licensvejledning
 
-Se [Microsoft 365 licensvejledning til beskyttelse af oplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
+Se [Licensvejledning til Microsoft 365 for at få oplysninger om beskyttelse af oplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
 
 ## <a name="activities-that-can-be-restricted-on-macos"></a>Aktiviteter, der kan begrænses på macOS 
 
@@ -87,13 +85,13 @@ Når en macOS-enhed er onboardet i Microsoft Purview-løsninger, kan du overvåg
 
 ## <a name="onboarding-devices-into-device-management"></a>Onboarding af enheder i enhedshåndtering
 
-Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan overvåge og beskytte følsomme elementer på en enhed. Begge disse handlinger udføres på Microsoft Purview-overholdelsesportalen.
+Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan overvåge og beskytte følsomme elementer på en enhed. Begge disse handlinger udføres i Microsoft Purview-compliance-portal.
 
 Når du vil onboarde enheder, der endnu ikke er onboardet, skal du downloade det relevante script og installere det på disse enheder. <!--Follow the [Onboarding devices procedure](endpoint-dlp-getting-started.md#onboarding-devices).-->
 
 <!--If you already have devices onboarded into [Microsoft Defender for Endpoint](/windows/security/threat-protection/), they will already appear in the managed devices list.-->
 
-1. Åbn [microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) **Indstillinger** side, og vælg **Aktivér enhedsovervågning**.
+1. Åbn siden [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) **indstillinger,** og vælg **Aktivér enhedsovervågning**.
 
    > [!NOTE]
    > Selvom det normalt tager ca. 60 sekunder, før onboarding af enheder er aktiveret, skal du vente op til 30 minutter, før du engagerer dig i Microsoft-support.
@@ -108,8 +106,8 @@ Emne | Beskrivelse
 :---|:---
 |[Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune](device-onboarding-offboarding-macos-intune.md)|MacOS-enheder, der administreres via Intune
 |[Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-intune-mde.md) |MacOS-enheder, der administreres via Intune, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
-|[Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro](device-onboarding-offboarding-macos-jamfpro.md) | Til macOS-enheder, der administreres via JAMF-Pro
-|[Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-jamfpro-mde.md)|MacOS-enheder, der administreres via JAMF-Pro, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
+|[Onboard og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro](device-onboarding-offboarding-macos-jamfpro.md) | Til macOS-enheder, der administreres via JAMF Pro
+|[Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder](device-onboarding-offboarding-macos-jamfpro-mde.md)|MacOS-enheder, der administreres via JAMF Pro, og som har Microsoft Defender for Endpoint (MDE) installeret på dem
 
 
 ## <a name="related-topics"></a>Relaterede emner

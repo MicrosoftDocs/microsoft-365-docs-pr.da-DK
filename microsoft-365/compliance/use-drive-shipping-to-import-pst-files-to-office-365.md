@@ -18,23 +18,21 @@ search.appverid:
 - MET150
 ms.assetid: 40829b57-793c-4d41-b171-e9270129173d
 ms.custom: seo-marvel-apr2020
-description: Administratoren kan få mere at vide om, hvordan du masseimporterer PST-filer til Microsoft 365 postkasser ved at kopiere PST-filer til en harddisk og derefter sende dem til Microsoft.
-ms.openlocfilehash: 4f3c38c203b98fd4448657edfac6ee9b72a515be
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Administration kan få mere at vide om, hvordan du masseimporterer PST-filer til Microsoft 365-postkasser ved at kopiere PST-filer til en harddisk og derefter sende dem til Microsoft.
+ms.openlocfilehash: ac8b24c04823bf3635b7762d160cee71a356ebfd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095438"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626067"
 ---
 # <a name="use-drive-shipping-to-import-your-organizations-pst-files"></a>Brug drevforsendelse til at importere din organisations PST-filer
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-**Denne artikel er til administratorer. Forsøger du at importere PST-filer til din egen postkasse? Se [Importér mail, kontakter og kalender fra en .pst-fil Outlook](https://go.microsoft.com/fwlink/p/?LinkID=785075)**
+**Denne artikel er til administratorer. Forsøger du at importere PST-filer til din egen postkasse? Se [Importér mail, kontakter og kalender fra en Outlook.pst-fil](https://go.microsoft.com/fwlink/p/?LinkID=785075)**
    
 Brug Office 365 importtjenesten, og kør forsendelse til masseimport af PST-filer til brugerpostkasser. Forsendelse af drev betyder, at du kopierer PST-filerne til en harddisk og derefter fysisk sender drevet til Microsoft. Når Microsoft modtager din harddisk, kopierer datacenterafdelingen dataene fra harddisken til et lagerområde i Microsoft-cloudmiljøet. Derefter har du mulighed for at trimme de PST-data, der importeres til destinationspostkasserne, ved at angive filtre, der styrer, hvilke data der importeres. Når du har startet importjobbet, importerer importtjenesten PST-dataene fra lagerområdet til brugerpostkasser. Brug af drevforsendelse til at importere PST-filer til brugerpostkasser er en måde at overføre organisationens mail til Office 365 på.
   
-Her er de trin, der kræves for at bruge drevforsendelse til at importere PST-filer til Microsoft 365 postkasser:
+Her er de trin, der kræves for at bruge drevforsendelse til at importere PST-filer til Microsoft 365-postkasser:
   
 [Trin 1: Download pst-importværktøjet](#step-1-download-the-pst-import-tool)
 
@@ -55,7 +53,7 @@ Hvis du vil have mere at vide om, hvordan du bruger drevforsendelse til at impor
   
 ## <a name="before-you-import-pst-files"></a>Før du importerer PST-filer
 
-- Du skal have tildelt rollen Importér eksport af postkasse i Exchange Online for at oprette importjob på Microsoft Purview-overholdelsesportalen og importere PST-filer til brugerpostkasser. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration. Du kan også oprette en rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje dig selv som medlem. Du kan få flere oplysninger i afsnittene "Føj en rolle til en rollegruppe" eller "Opret en rollegruppe" i [Administrer rollegrupper](/Exchange/permissions-exo/role-groups).
+- Du skal have tildelt rollen Importér eksport af postkasse i Exchange Online for at oprette importjob i Microsoft Purview-compliance-portal og importere PST-filer til brugerpostkasser. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration. Du kan også oprette en rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje dig selv som medlem. Du kan få flere oplysninger i afsnittene "Føj en rolle til en rollegruppe" eller "Opret en rollegruppe" i [Administrer rollegrupper](/Exchange/permissions-exo/role-groups).
 
     Ud over rollen Importér eksport af postkasse skal du også tildeles rollen Mailmodtagere i Exchange Online. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Modtageradministration i Exchange Online.
 
@@ -71,9 +69,9 @@ Hvis du vil have mere at vide om, hvordan du bruger drevforsendelse til at impor
     > [!IMPORTANT]
     > Eksterne harddiske, der følger med en indbygget USB-adapter, understøttes ikke af tjenesten Office 365 Import. Disken i kabinettet på en ekstern harddisk kan ikke bruges. Undlad at sende eksterne harddiske. 
   
-- Den harddisk, du kopierer PST-filerne til, skal krypteres med BitLocker. Det WAImportExport.exe værktøj, du kører i trin 2, hjælper dig med at konfigurere BitLocker. Den genererer også en BitLocker-krypteringsnøgle, som Microsofts datacenterpersonale bruger til at få adgang til drevet for at uploade PST-filerne til det Azure Storage område i Microsoft-cloudmiljøet.
+- Den harddisk, du kopierer PST-filerne til, skal krypteres med BitLocker. Det WAImportExport.exe værktøj, du kører i trin 2, hjælper dig med at konfigurere BitLocker. Den genererer også en BitLocker-krypteringsnøgle, som Microsofts datacenterpersonale bruger til at få adgang til drevet for at uploade PST-filerne til Azure Storage-området i Microsoft-cloudmiljøet.
     
-- Drevforsendelse er tilgængelig via en Microsoft Enterprise Agreement (EA). Drevforsendelse er ikke tilgængelig via en MPSA (Microsoft Products and Services Agreement).
+- Drevforsendelse er tilgængelig via en Microsoft Enterprise Agreement (EA). Drevforsendelse er ikke tilgængelig via en Aftale om Microsoft-produkter og Services (MPSA).
     
 - Prisen for at importere PST-filer til Microsoft 365-postkasser ved hjælp af drevforsendelse er 2 USD pr. GB data. Hvis du f.eks. leverer en harddisk, der indeholder 1.000 GB (1 TB) PST-filer, er prisen USD 2.000 USD. Du kan samarbejde med en partner om at betale importgebyret. Du kan finde oplysninger om, hvordan du finder en partner, under [Find din Microsoft-partner eller -forhandler](../admin/manage/find-your-partner-or-reseller.md).
     
@@ -87,18 +85,18 @@ Hvis du vil have mere at vide om, hvordan du bruger drevforsendelse til at impor
     
 - Den harddisk, du sender til Microsoft, kan krydse internationale grænser. I dette tilfælde er du ansvarlig for at sikre, at harddisken og de data, den indeholder, importeres og/eller eksporteres i overensstemmelse med gældende lovgivning. Før du sender en harddisk, skal du kontakte dine rådgivere for at bekræfte, at dit drev og dine data lovligt kan sendes til det identificerede Microsoft-datacenter. Dette hjælper med at sikre, at det når Microsoft i tide.
     
-- Denne procedure omfatter kopiering og lagring af en BitLocker-krypteringsnøgle. Sørg for at tage forholdsregler for at beskytte disse nøgler, som du ville beskytte adgangskoder eller andre sikkerhedsrelaterede oplysninger. Du kan f.eks. gemme dem i et Microsoft Word dokument, der er beskyttet med adgangskode, eller gemme dem på et krypteret USB-drev. Se afsnittet [Flere oplysninger](#more-information) for at få et eksempel på disse nøgler. 
+- Denne procedure omfatter kopiering og lagring af en BitLocker-krypteringsnøgle. Sørg for at tage forholdsregler for at beskytte disse nøgler, som du ville beskytte adgangskoder eller andre sikkerhedsrelaterede oplysninger. Du kan f.eks. gemme dem i et microsoft Word-dokument, der er beskyttet med adgangskode, eller gemme dem på et krypteret USB-drev. Se afsnittet [Flere oplysninger](#more-information) for at få et eksempel på disse nøgler. 
     
-- Når PST-filer er importeret til en Microsoft 365 postkasse, aktiveres indstillingen for opbevaring af venteposition for postkassen i en ubestemt varighed. Det betyder, at den opbevaringspolitik, der er tildelt postkassen, ikke behandles, før du slår opbevarings ventepositionen fra eller angiver en dato for at slå ventepositionen fra. Hvorfor gør vi det? Hvis meddelelser, der er importeret til en postkasse, er gamle, kan de blive slettet permanent (slettet), fordi deres opbevaringsperiode er udløbet på baggrund af de opbevaringsindstillinger, der er konfigureret for postkassen. Hvis postkassen placeres i opbevaringsposition, kan ejeren af postkassen administrere disse nyligt importerede meddelelser eller give dig tid til at ændre opbevaringsindstillingerne for postkassen. Se afsnittet [Flere oplysninger](#more-information) for at få forslag til administration af opbevarings venteposition. 
+- Når PST-filer er importeret til en Microsoft 365-postkasse, aktiveres indstillingen for opbevaring af venteposition for postkassen i en ubestemt varighed. Det betyder, at den opbevaringspolitik, der er tildelt postkassen, ikke behandles, før du slår opbevarings ventepositionen fra eller angiver en dato for at slå ventepositionen fra. Hvorfor gør vi det? Hvis meddelelser, der er importeret til en postkasse, er gamle, kan de blive slettet permanent (slettet), fordi deres opbevaringsperiode er udløbet på baggrund af de opbevaringsindstillinger, der er konfigureret for postkassen. Hvis postkassen placeres i opbevaringsposition, kan ejeren af postkassen administrere disse nyligt importerede meddelelser eller give dig tid til at ændre opbevaringsindstillingerne for postkassen. Se afsnittet [Flere oplysninger](#more-information) for at få forslag til administration af opbevarings venteposition. 
     
-- Den maksimale meddelelsesstørrelse, der kan modtages af en Microsoft 365 postkasse, er som standard 35 MB. Det skyldes, at standardværdien for egenskaben  *MaxReceiveSize*  for en postkasse er angivet til 35 MB. Grænsen for den maksimale størrelse på meddelelser i Microsoft 365 er dog 150 MB. Så hvis du importerer en PST-fil, der indeholder et element, der er større end 35 MB, Office 365 importtjenesten, ændrer vi automatisk værdien af egenskaben *MaxReceiveSize* i målpostkassen til 150 MB. Dette gør det muligt at importere meddelelser op til 150 MB til brugerpostkasser. 
+- Som standard er den maksimale meddelelsesstørrelse, der kan modtages af en Microsoft 365-postkasse, 35 MB. Det skyldes, at standardværdien for egenskaben  *MaxReceiveSize*  for en postkasse er angivet til 35 MB. Grænsen for den maksimale størrelse på meddelelser i Microsoft 365 er dog 150 MB. Så hvis du importerer en PST-fil, der indeholder et element, der er større end 35 MB, Office 365 importtjenesten, ændrer vi automatisk værdien af egenskaben *MaxReceiveSize* i målpostkassen til 150 MB. Dette gør det muligt at importere meddelelser op til 150 MB til brugerpostkasser. 
     
     > [!TIP]
     > Hvis du vil identificere meddelelsens modtagelsesstørrelse for en postkasse, kan du køre denne kommando i Exchange Online PowerShell: `Get-Mailbox <user mailbox> | FL MaxReceiveSize`. 
   
 - Du kan importere PST-filer til en inaktiv postkasse i Office 365. Det gør du ved at angive GUID'et for den inaktive postkasse i parameteren  `Mailbox` i PST-importtilknytningsfilen. Se [Trin 3: Opret PST-importtilknytningsfilen](#step-3-create-the-pst-import-mapping-file) for at få flere oplysninger. 
     
-- I en Exchange hybridinstallation kan du importere PST-filer til en skybaseret arkivpostkasse for en bruger, hvis primære postkasse er i det lokale miljø. Det gør du ved at gøre følgende i tilknytningsfilen til PST-import:
+- I en Hybrid Exchange-udrulning kan du importere PST-filer til en skybaseret arkivpostkasse for en bruger, hvis primære postkasse er i det lokale miljø. Det gør du ved at gøre følgende i tilknytningsfilen til PST-import:
     
   - Angiv mailadressen for brugerens lokale postkasse i parameteren  `Mailbox` . 
     
@@ -111,7 +109,7 @@ Hvis du vil have mere at vide om, hvordan du bruger drevforsendelse til at impor
 Det første trin er at downloade værktøjet, og at du bruger trin 2 til at kopiere PST-filer til harddisken.
   
 > [!IMPORTANT]
-> Du skal bruge Azure Import/Export værktøjsversion 1 (WAimportExportV1) til at importere PST-filer ved hjælp af drevforsendelsesmetoden. Version 2 af Azure Import/Export-værktøjet understøttes ikke, og hvis du bruger det, vil det resultere i, at harddisken forberedes forkert til importjobbet. Sørg for at downloade Azure Import/Export-værktøjet fra Microsoft Purview-overholdelsesportalen ved at følge procedurerne i dette trin. 
+> Du skal bruge værktøjet Azure Import/Export version 1 (WAimportExportV1) til at importere PST-filer ved hjælp af drevforsendelsesmetoden. Version 2 af Azure Import/Export-værktøjet understøttes ikke, og hvis du bruger det, vil det resultere i, at harddisken forberedes forkert til importjobbet. Sørg for at downloade Azure Import/Export-værktøjet fra Microsoft Purview-compliance-portal ved at følge procedurerne i dette trin. 
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
@@ -130,7 +128,7 @@ Det første trin er at downloade værktøjet, og at du bruger trin 2 til at kopi
   
 6. Gør følgende på siden **Importér data** :     
     
-    **Download Azure Import/Export-værktøjet** for at downloade og installere Værktøjet Azure Import/Export (version 1).
+    **Download Værktøjet Azure Import/Export** for at downloade og installere Værktøjet Azure Import/Export (version 1).
     
     - Klik på **Gem** \> **som** i pop op-vinduet for at gemme den WaImportExportV1.zip fil i en mappe på din lokale computer.
     
@@ -165,12 +163,12 @@ Det næste trin er at bruge værktøjet WAImportExport.exe til at kopiere PST-fi
     
     |**Parameter**|**Beskrivelse**|**Eksempel**|
     |:-----|:-----|:-----|
-    | `/j:` <br/> |Angiver navnet på journalfilen. Denne fil gemmes i den samme mappe, hvor værktøjet WAImportExport.exe er placeret. Hver harddisk, du sender til Microsoft, skal have én journalfil. Hver gang du kører WAImportTool.exe for at kopiere PST-filer til en harddisk, føjes der oplysninger til journalfilen for det pågældende drev.  <br/> Microsofts datacenterpersonale bruger oplysningerne i journalfilen til at knytte harddisken til det importjob, du opretter i trin 4, og til at uploade PST-filerne til området Azure Storage i Microsoft-cloudmiljøet.  <br/> | `/j:PSTHDD1.jrn` <br/> |
+    | `/j:` <br/> |Angiver navnet på journalfilen. Denne fil gemmes i den samme mappe, hvor værktøjet WAImportExport.exe er placeret. Hver harddisk, du sender til Microsoft, skal have én journalfil. Hver gang du kører WAImportTool.exe for at kopiere PST-filer til en harddisk, føjes der oplysninger til journalfilen for det pågældende drev.  <br/> Microsofts datacenterpersonale bruger oplysningerne i journalfilen til at knytte harddisken til det importjob, du opretter i trin 4, og til at uploade PST-filerne til Azure Storage-området i Microsoft-cloudmiljøet.  <br/> | `/j:PSTHDD1.jrn` <br/> |
     | `/t:` <br/> |Angiver drevbogstavet for harddisken, når den er tilsluttet den lokale computer.  <br/> | `/t:h` <br/> |
     | `/id:` <br/> |Angiver navnet på kopisessionen. En session defineres som hver gang, du kører værktøjet WAImportExport.exe til at kopiere filer til harddisken. PST-filerne kopieres til en mappe med navnet med det sessionsnavn, der er angivet i denne parameter.  <br/> | `/id:driveship1` <br/> |
     | `/srcdir:` <br/> |Angiver den kildemappe i organisationen, der indeholder de PST-filer, der kopieres under sessionen. Sørg for at omgive værdien af denne parameter med dobbelte anførselstegn (" ").  <br/> | `/srcdir:"\\FILESERVER01\PSTs"` <br/> |
-    | `/dstdir:` <br/> |Angiver destinationsmappen i det Azure Storage område i Microsoft-cloudmiljøet, hvor psts uploades. Du skal bruge værdien  `ingestiondata/`. Sørg for at omgive værdien af denne parameter med dobbelte anførselstegn (" ").  <br/> Du kan også føje en ekstra filsti til værdien af denne parameter. Du kan f.eks. bruge filstien til kildemappen på harddisken (konverteret til et URL-format), som er angivet i parameteren  `/srcdir:` . Ændres f.eks  `\\FILESERVER01\PSTs` . til  `FILESERVER01/PSTs`. I dette tilfælde skal du stadig inkludere  `ingestiondata` i filstien. Så i dette eksempel ville værdien for parameteren  `/dstdir:` være  `"ingestiondata/FILESERVER01/PSTs"`.  <br/> En af grundene til at tilføje den ekstra filsti er, hvis du har PSTs-filer med det samme filnavn.  <br/> > [!NOTE]> Hvis du inkluderer det valgfri stinavn, indeholder navneområdet for en PST-fil, når den er uploadet til Azure Storage-området, stinavnet og navnet på PST-filen, `FILESERVER01/PSTs/annb.pst`f.eks. . Hvis du ikke inkluderer et stinavn, er navneområdet kun PST-filnavnet. for eksempel  `annb.pst`.           | `/dstdir:"ingestiondata/"` <br/> Eller  <br/>  `/dstdir:"ingestiondata/FILESERVER01/PSTs"` <br/> |
-    | `/blobtype:` <br/> |Angiver den type blobs i området Azure Storage, PST-filerne skal importeres til. Brug værdien **BlockBlob** til import af PST-filer. Denne parameter er påkrævet.   <br/> | `/blobtype:BlockBlob` <br/> |
+    | `/dstdir:` <br/> |Angiver destinationsmappen i Azure Storage-området i Microsoft-cloudmiljøet, hvor psts uploades. Du skal bruge værdien  `ingestiondata/`. Sørg for at omgive værdien af denne parameter med dobbelte anførselstegn (" ").  <br/> Du kan også føje en ekstra filsti til værdien af denne parameter. Du kan f.eks. bruge filstien til kildemappen på harddisken (konverteret til et URL-format), som er angivet i parameteren  `/srcdir:` . Ændres f.eks  `\\FILESERVER01\PSTs` . til  `FILESERVER01/PSTs`. I dette tilfælde skal du stadig inkludere  `ingestiondata` i filstien. Så i dette eksempel ville værdien for parameteren  `/dstdir:` være  `"ingestiondata/FILESERVER01/PSTs"`.  <br/> En af grundene til at tilføje den ekstra filsti er, hvis du har PSTs-filer med det samme filnavn.  <br/> > [!NOTE]> Hvis du inkluderer det valgfrie stinavn, indeholder navneområdet for en PST-fil, når den er uploadet til Azure Storage-området, stinavnet og navnet på PST-filen. f.eks.  `FILESERVER01/PSTs/annb.pst`. Hvis du ikke inkluderer et stinavn, er navneområdet kun PST-filnavnet. for eksempel  `annb.pst`.           | `/dstdir:"ingestiondata/"` <br/> Eller  <br/>  `/dstdir:"ingestiondata/FILESERVER01/PSTs"` <br/> |
+    | `/blobtype:` <br/> |Angiver den type blobs i Azure Storage-området, PST-filerne skal importeres til. Brug værdien **BlockBlob** til import af PST-filer. Denne parameter er påkrævet.   <br/> | `/blobtype:BlockBlob` <br/> |
     | `/encrypt` <br/> |Denne knap aktiverer BitLocker for harddisken. Denne parameter kræves, første gang du kører værktøjet WAImportExport.exe.  <br/> BitLocker-krypteringsnøglen kopieres til journalfilen og den logfil, der oprettes, hvis du bruger parameteren  `/logfile:` . Som tidligere forklaret gemmes journalfilen i den samme mappe, hvor værktøjet WAImportExport.exe er placeret.  <br/> | `/encrypt` <br/> |
     | `/logdir:` <br/> |Denne valgfri parameter angiver en mappe, som logfiler skal gemmes i. Hvis den ikke er angivet, gemmes logfilerne i den samme mappe, hvor værktøjet WAImportExport.exe er placeret. Sørg for at omgive værdien af denne parameter med dobbelte anførselstegn (" ").  <br/> | `/logdir:"c:\users\admin\desktop\PstImportLogs"` <br/> |
    
@@ -196,7 +194,7 @@ Det næste trin er at bruge værktøjet WAImportExport.exe til at kopiere PST-fi
 
 ## <a name="step-3-create-the-pst-import-mapping-file"></a>Trin 3: Opret PST-importtilknytningsfilen
 
-Når Microsofts datacenterpersonale har uploadet PST-filerne fra harddisken til området Azure Storage, bruger importtjenesten oplysningerne i PST-importtilknytningsfilen, som er en kommasepareret værdifil (CSV), som angiver, hvilke brugerpostkasser PST-filerne importeres til. Du skal sende denne CSV-fil i næste trin, når du opretter et PST-importjob.
+Når Microsofts datacenter-personale har uploadet PST-filerne fra harddisken til Azure Storage-området, bruger importtjenesten oplysningerne i PST-importtilknytningsfilen, som er en kommasepareret værdifil (CSV), der angiver, hvilke brugerpostkasser PST-filerne importeres til. Du skal sende denne CSV-fil i næste trin, når du opretter et PST-importjob.
   
 1. [Download en kopi af PST-importtilknytningsfilen](https://go.microsoft.com/fwlink/p/?LinkId=544717).
     
@@ -219,15 +217,15 @@ Når Microsofts datacenterpersonale har uploadet PST-filerne fra harddisken til 
     Den første række eller kolonneoverskrift i CSV-filen viser de parametre, der skal bruges af PST-importtjenesten til at importere PST-filerne til brugerpostkasser. Hvert parameternavn er adskilt af et komma. Hver række under overskriftsrækken repræsenterer parameterværdierne for import af en PST-fil til en bestemt postkasse. Du skal bruge en række for hver PST-fil, der blev kopieret til harddisken. Sørg for at erstatte pladsholderdataene i tilknytningsfilen med dine faktiske data.
 
     > [!NOTE]
-    > Undlad at ændre noget i overskriftsrækken, herunder parametrene for SharePoint. De ignoreres under PST-importprocessen. 
+    > Undlad at ændre noget i kolonneoverskriften, herunder SharePoint-parametrene. De ignoreres under PST-importprocessen. 
   
 3. Brug oplysningerne i følgende tabel til at udfylde CSV-filen med de påkrævede oplysninger.
     
     |**Parameter**|**Beskrivelse**|**Eksempel**|
     |:-----|:-----|:-----|
     | `Workload` <br/> |Angiver den tjeneste, som dataene skal importeres til. Hvis du vil importere PST-filer til brugerpostkasser, skal du bruge  `Exchange`.  <br/> | `Exchange` <br/> |
-    | `FilePath` <br/> | Angiver mappeplaceringen i det Azure Storage område, som PST-filer kopieres til, når harddisken leveres til Microsoft.  <br/>  Det, du tilføjer i denne kolonne i CSV-filen, afhænger af, hvad du angav i for parameteren  `/dstdir:` i det forrige trin. Hvis du har undermapper på kildeplaceringen, skal værdien i `FilePath` parameteren indeholde den relative sti til undermappen, f.eks. /folder1/user1/.  <br/>  Hvis du har brugt  `/dstdir:"ingestiondata/"`, skal du lade denne parameter være tom i CSV-filen.  <br/>  Hvis du har medtaget et valgfrit stinavn for værdien af  `/dstdir:` parameteren (f.eks.  `/dstdir:"ingestiondata/FILESERVER01/PSTs"`, skal du bruge dette stinavn (ikke inklusive "ingestiondata") for denne parameter i CSV-filen. Der skelnes mellem store og små bogstaver i værdien for denne parameter.  <br/>  Uanset hvad skal  *du ikke*  inkludere "data for indtagelse" i værdien for  `FilePath` parameteren. Lad denne parameter være tom, eller angiv kun det valgfri stinavn.  <br/> > [!IMPORTANT]> Hvis der er tale om filnavnet, skal det være det samme, som du angav i  `/dstdir:` parameteren i det forrige trin. Hvis du f.eks. brugte  `"ingestiondata/FILESERVER01/PSTs"` til navnet på undermappen i det forrige trin, men derefter brugte  `fileserver01/psts` den  `FilePath` i parameteren i CSV-filen, mislykkes importen af PST-filen. Sørg for at bruge det samme tilfælde i begge tilfælde.           |(lad argumentet være tomt)  <br/> Eller  <br/>  `FILESERVER01/PSTs` <br/> |
-    | `Name` <br/> |Angiver navnet på den PST-fil, der importeres til brugerpostkassen. Der skelnes mellem store og små bogstaver i værdien for denne parameter.  <br/> > [!IMPORTANT]> Sagen for PST-filnavnet i CSV-filen skal være den samme som den PST-fil, der blev uploadet til den Azure Storage placering i Trin 2. Hvis du f.eks. bruger  `annb.pst` parameteren i  `Name` CSV-filen, men navnet på den faktiske PST-fil er  `AnnB.pst`, mislykkes importen af den pågældende PST-fil. Sørg for, at navnet på PST i CSV-filen bruger samme sag som den faktiske PST-fil.           | `annb.pst` <br/> |
+    | `FilePath` <br/> | Angiver mappeplaceringen i Azure Storage-området, som PST-filer kopieres til, når harddisken leveres til Microsoft.  <br/>  Det, du tilføjer i denne kolonne i CSV-filen, afhænger af, hvad du angav i for parameteren  `/dstdir:` i det forrige trin. Hvis du har undermapper på kildeplaceringen, skal værdien i `FilePath` parameteren indeholde den relative sti til undermappen, f.eks. /folder1/user1/.  <br/>  Hvis du har brugt  `/dstdir:"ingestiondata/"`, skal du lade denne parameter være tom i CSV-filen.  <br/>  Hvis du har medtaget et valgfrit stinavn for værdien af  `/dstdir:` parameteren (f.eks.  `/dstdir:"ingestiondata/FILESERVER01/PSTs"`, skal du bruge dette stinavn (ikke inklusive "ingestiondata") for denne parameter i CSV-filen. Der skelnes mellem store og små bogstaver i værdien for denne parameter.  <br/>  Uanset hvad skal  *du ikke*  inkludere "data for indtagelse" i værdien for  `FilePath` parameteren. Lad denne parameter være tom, eller angiv kun det valgfri stinavn.  <br/> > [!IMPORTANT]> Hvis der er tale om filnavnet, skal det være det samme, som du angav i  `/dstdir:` parameteren i det forrige trin. Hvis du f.eks. brugte  `"ingestiondata/FILESERVER01/PSTs"` til navnet på undermappen i det forrige trin, men derefter brugte  `fileserver01/psts` den  `FilePath` i parameteren i CSV-filen, mislykkes importen af PST-filen. Sørg for at bruge det samme tilfælde i begge tilfælde.           |(lad argumentet være tomt)  <br/> Eller  <br/>  `FILESERVER01/PSTs` <br/> |
+    | `Name` <br/> |Angiver navnet på den PST-fil, der importeres til brugerpostkassen. Der skelnes mellem store og små bogstaver i værdien for denne parameter.  <br/> > [!IMPORTANT]> Sagen for PST-filnavnet i CSV-filen skal være den samme som den PST-fil, der blev uploadet til Azure Storage-placeringen i trin 2. Hvis du f.eks. bruger  `annb.pst` parameteren i  `Name` CSV-filen, men navnet på den faktiske PST-fil er  `AnnB.pst`, mislykkes importen af den pågældende PST-fil. Sørg for, at navnet på PST i CSV-filen bruger samme sag som den faktiske PST-fil.           | `annb.pst` <br/> |
     | `Mailbox` <br/> |Angiver mailadressen på den postkasse, som PST-filen importeres til. Du kan ikke angive en offentlig mappe, fordi PST-importtjenesten ikke understøtter import af PST-filer til offentlige mapper.  <br/> Hvis du vil importere en PST-fil til en inaktiv postkasse, skal du angive postkassens GUID for denne parameter. Hvis du vil hente dette GUID, skal du køre følgende PowerShell-kommando i Exchange Online:`Get-Mailbox <identity of inactive mailbox> -InactiveMailboxOnly | FL Guid` <br/> > [!NOTE]> Nogle gange kan du have flere postkasser med den samme mailadresse, hvor den ene postkasse er en aktiv postkasse, og den anden postkasse er i tilstanden blød slettet (eller inaktiv). I disse situationer skal du angive postkassens GUID for entydigt at identificere den postkasse, PST-filen skal importeres til. Hvis du vil hente dette GUID til aktive postkasser, skal du køre følgende PowerShell-kommando:  `Get-Mailbox <identity of active mailbox> | FL Guid`. Hvis du vil hente GUID'et for postkasser med blød sletning (eller inaktive), skal du køre denne kommando:  `Get-Mailbox <identity of soft-deleted or inactive mailbox> -SoftDeletedMailbox | FL Guid`.           | `annb@contoso.onmicrosoft.com` <br/> Eller  <br/>  `2d7a87fe-d6a2-40cc-8aff-1ebea80d4ae7` <br/> |
     | `IsArchive` <br/> | Angiver, om PST-filen skal importeres til brugerens arkivpostkasse. Der er to muligheder:  <br/> **FALSK** Importerer PST-filen til brugerens primære postkasse.  <br/> **SANDT** Importerer PST-filen til brugerens arkivpostkasse. Dette forudsætter, at [brugerens arkivpostkasse er aktiveret](enable-archive-mailboxes.md). Hvis du angiver denne parameter til  `TRUE` , og brugerens arkivpostkasse ikke er aktiveret, mislykkes importen for den pågældende bruger. Hvis en import mislykkes for én bruger (fordi vedkommendes arkiv ikke er aktiveret, og denne egenskab er angivet til  `TRUE`), påvirkes de andre brugere i importjobbet ikke.  <br/>  Hvis du lader denne parameter være tom, importeres PST-filen til brugerens primære postkasse.  <br/> **Bemærk:** Hvis du vil importere en PST-fil til en skybaseret arkivpostkasse for en bruger, hvis primære postkasse er i det lokale miljø, skal du blot angive  `TRUE` for denne parameter og angive mailadressen for brugerens lokale postkasse for  `Mailbox` parameteren.  <br/> | `FALSE` <br/> Eller  <br/>  `TRUE` <br/> |
     | `TargetRootFolder` <br/> | Angiver den postkassemappe, som PST-filen importeres til.  <br/>  Hvis du lader denne parameter være tom, importeres PST til en ny mappe med navnet **Importeret** , der er placeret på rodniveauet i postkassen (samme niveau som mappen Indbakke og de andre standardpostkassemapper).  <br/>  Hvis du angiver  `/`, importeres elementerne i PST-filen direkte i brugerens indbakkemappe.  <br/>  Hvis du angiver  `/<foldername>`, importeres elementer i PST-filen til en mappe med navnet  *\<foldername\>*. Hvis du f.eks. bruger  `/ImportedPst`, importeres elementer til en mappe med navnet **ImportedPst**. Denne mappe placeres i brugerens postkasse på samme niveau som mappen Indbakke.  <br/> |(lad argumentet være tomt)  <br/> Eller  <br/>  `/` <br/> Eller  <br/>  `/ImportedPst` <br/> |
@@ -238,7 +236,7 @@ Når Microsofts datacenterpersonale har uploadet PST-filerne fra harddisken til 
 
 ## <a name="step-4-create-a-pst-import-job-in-office-365"></a>Trin 4: Opret et PST-importjob i Office 365
 
-Det næste trin er at oprette PST-importjobbet i tjenesten Importér i Office 365. Som tidligere forklaret skal du sende den PST-importtilknytningsfil, du oprettede i trin 3. Når du har oprettet jobbet, bruger importtjenesten oplysningerne i tilknytningsfilen til at importere PST-filerne til den angivne brugerpostkasse, når PST-filerne er kopieret fra harddisken til området Azure Storage, og du opretter og starter importjobbet.
+Det næste trin er at oprette PST-importjobbet i tjenesten Importér i Office 365. Som tidligere forklaret skal du sende den PST-importtilknytningsfil, du oprettede i trin 3. Når du har oprettet jobbet, bruger importtjenesten oplysningerne i tilknytningsfilen til at importere PST-filerne til den angivne brugerpostkasse, når PST-filerne er kopieret fra harddisken til Azure Storage-området, og du opretter og starter importjobbet.
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
@@ -301,7 +299,7 @@ Det næste trin er at oprette PST-importjobbet i tjenesten Importér i Office 36
 
 ## <a name="step-5-ship-the-hard-drive-to-microsoft"></a>Trin 5: Send harddisken til Microsoft
 
-Næste trin er at sende harddisken til Microsoft og derefter angive sporingsnummeret for forsendelses- og returforsendelsesoplysningerne for drevforsendelsesjobbet. Når drevet er modtaget af Microsoft, tager det mellem 7 og 10 arbejdsdage for datacenterpersonalet at uploade dine PST-filer til Azure Storage område for din organisation.
+Næste trin er at sende harddisken til Microsoft og derefter angive sporingsnummeret for forsendelses- og returforsendelsesoplysningerne for drevforsendelsesjobbet. Når drevet er modtaget af Microsoft, tager det mellem 7 og 10 arbejdsdage for datacenterpersonalet at uploade dine PST-filer til Azure Storage-området for din organisation.
   
 > [!NOTE]
 > Hvis du ikke angiver sporingsnummeret og returvareleveranceoplysningerne inden for 14 dage efter oprettelsen af importjobbet, udløber importjobbet. Hvis det sker, skal du oprette et nyt drev for afsendelsesimportjob (se [Trin 4: Opret et PST-importjob i Office 365](#step-4-create-a-pst-import-job-in-office-365)) og sende drevfilen og PST-importtilknytningsfilen igen.
@@ -326,7 +324,7 @@ Når du har leveret harddisken til Microsoft, skal du fuldføre følgende proced
   
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. Klik på **DatalivscyklusstyringImportér** >  i venstre navigationsrude i overholdelsesportalen.
+2. Klik på **Import** af **datalivscyklusstyring** >  i venstre navigationsrude i overholdelsesportalen.
 
 3. Klik på jobbet for den drevleverance, du vil angive sporingsnummeret for, under fanen **Importér** .
 
@@ -346,7 +344,7 @@ Når du har leveret harddisken til Microsoft, skal du fuldføre følgende proced
 
 ## <a name="step-6-filter-data-and-start-the-pst-import-job"></a>Trin 6: Filtrer data, og start PST-importjobbet
 
-Når din harddisk er modtaget af Microsoft, ændres status for importjobbet på siden **Importér PST-filer** til **Modtagne drev**. Datacenterpersonalet bruger oplysningerne i journalfilen til at uploade dine PST-filer til det Azure Storage område for din organisation. På dette tidspunkt ændres status til **Import i gang**. Som tidligere nævnt tager det mellem 7 og 10 arbejdsdage efter modtagelse af din harddisk at uploade PST-filerne.
+Når din harddisk er modtaget af Microsoft, ændres status for importjobbet på siden **Importér PST-filer** til **Modtagne drev**. Datacenterpersonalet bruger oplysningerne i journalfilen til at uploade dine PST-filer til Azure Storage-området for din organisation. På dette tidspunkt ændres status til **Import i gang**. Som tidligere nævnt tager det mellem 7 og 10 arbejdsdage efter modtagelse af din harddisk at uploade PST-filerne.
   
 Når PST-filer er uploadet til Azure, ændres status til **Igangværende analyse**. Dette angiver, at Microsoft 365 analyserer dataene i PST-filerne (på en sikker og sikker måde) for at identificere elementernes alder og de forskellige meddelelsestyper, der er inkluderet i PST-filerne. Når analysen er fuldført, og dataene er klar til at blive importeret, ændres status for importjobbet til **Fuldført analyse**. På dette tidspunkt har du mulighed for at importere alle dataene i PST-filerne, eller du kan trimme de data, der importeres, ved at angive filtre, der styrer, hvilke data der importeres.
   
@@ -378,26 +376,26 @@ Når PST-filer er uploadet til Azure, ændres status til **Igangværende analyse
 
     Status for importjobbet vises på siden **Importér PST-filer** . Klik på ![ikonet Opdater.](../media/O365-MDM-Policy-RefreshIcon.gif) **Opdater** for at opdatere de statusoplysninger, der vises i kolonnen **Status** . Klik på importjobbet for at få vist status-pop op-siden, hvor der vises statusoplysninger om hver PST-fil, der importeres. Når importen er fuldført, og PST-filer er importeret til brugerpostkasser, ændres status til **Fuldført**.
 
-## <a name="view-a-list-of-the-pst-files-uploaded-to-microsoft-365"></a>Vis en liste over de PST-filer, der er overført til Microsoft 365
+## <a name="view-a-list-of-the-pst-files-uploaded-to-microsoft-365"></a>Få vist en liste over de PST-filer, der er overført til Microsoft 365
 
-Du kan installere og bruge Microsoft Azure Storage Explorer (som er et gratis værktøj med åben kildekode) til at få vist listen over de PST-filer, vi er uploadet (af Microsofts datacenterpersonale) til Azure Storage område for din organisation. Det kan du gøre for at bekræfte, at PST-filer fra de harddiske, du sendte til Microsoft, blev overført til området Azure Storage.
+Du kan installere og bruge Microsoft Azure Storage Explorer (som er et gratis værktøj med åben kildekode) til at få vist listen over de PST-filer, vi har uploadet (af Microsofts datacenterpersonale) til Azure Storage-området for din organisation. Du kan gøre dette for at bekræfte, at PST-filer fra de harddiske, du sendte til Microsoft, blev overført til Azure Storage-området.
   
 > [!IMPORTANT]
-> Du kan ikke bruge Azure Storage Explorer til at uploade eller redigere PST-filer. Den eneste understøttede metode til import af PST-filer til Microsoft 365 er at bruge AzCopy. Du kan heller ikke slette PST-filer, som du har uploadet til Azure-blob. Hvis du forsøger at slette en PST-fil, får du vist en fejlmeddelelse om, at du ikke har de nødvendige tilladelser. Alle PST-filer slettes automatisk fra dit Azure Storage område. Hvis der ikke er nogen igangværende importjob, slettes alle PST-filer i objektbeholderen ** ingestiondata ** 30 dage efter, at det seneste importjob blev oprettet.
+> Du kan ikke bruge Azure Storage Explorer til at uploade eller redigere PST-filer. Den eneste understøttede metode til import af PST-filer til Microsoft 365 er at bruge AzCopy. Du kan heller ikke slette PST-filer, som du har uploadet til Azure-blob. Hvis du forsøger at slette en PST-fil, får du vist en fejlmeddelelse om, at du ikke har de nødvendige tilladelser. Alle PST-filer slettes automatisk fra dit Azure Storage-område. Hvis der ikke er nogen igangværende importjob, slettes alle PST-filer i objektbeholderen ** ingestiondata ** 30 dage efter, at det seneste importjob blev oprettet.
   
-Udfør følgende trin for at hente URL-adressen til den delte adgangssignatur (SAS) for din organisation. Denne URL-adresse er en kombination af netværks-URL-adressen for den Azure Storage placering i Microsoft-cloudmiljøet for din organisation og en SAS-nøgle. Denne nøgle giver dig de nødvendige tilladelser til at få adgang til organisationens Azure Storage placering.
+Udfør følgende trin for at hente URL-adressen til den delte adgangssignatur (SAS) for din organisation. Denne URL-adresse er en kombination af netværks-URL-adressen til Azure Storage-placeringen i Microsoft-cloudmiljøet for din organisation og en SAS-nøgle. Denne nøgle giver dig de nødvendige tilladelser til at få adgang til din organisations Azure Storage-placering.
 
-Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azure Storage område:
+Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azure Storage-område:
 
 1. Gå til , <https://compliance.microsoft.com> og log på med legitimationsoplysningerne for en administratorkonto i din organisation.
 
-2. I venstre rude på overholdelsesportalen skal du klikke på Administration  >  af **datalivscyklusImportér**.
+2. Klik på **Import** af **datalivscyklusstyring** >  i ruden til venstre på overholdelsesportalen.
 
 3. Klik på ![Tilføj ikon under fanen **Importér**.](../media/ITPro-EAC-AddIcon.gif) **Nyt importjob**.
 
 4. Skriv et navn til PST-importjobbet i guiden til import af job, og klik derefter på **Næste**. Brug små bogstaver, tal, bindestreger og understregningstegn. Du kan ikke bruge store bogstaver eller medtage mellemrum i navnet.
 
-5. Klik på **Upload dine data** på siden **Vælg importjobtype**, og klik derefter på **Næste**.
+5. På siden **Vælg importjobtype** skal du klikke på **Overfør dine data** og derefter klikke på **Næste**.
 
 6. I trin 2 skal du klikke på **Vis SAS URL-adresse til netværksupload**.
 
@@ -410,34 +408,34 @@ Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azu
 
 9. Download og installér [værktøjet Microsoft Azure Storage Explorer](https://go.microsoft.com/fwlink/p/?LinkId=544842).
 
-10. Start Microsoft Azure Storage Explorer, højreklik **Storage Konti** i venstre rude, og klik derefter på **Forbind for at Azure Storage**.
+10. Start Microsoft Azure Storage Explorer, højreklik på **Lagerkonti** i venstre rude, og klik derefter på **Opret forbindelse til Azure Storage**.
 
-    ![Højreklik på Storage Konti, og klik derefter på Forbind for at Azure Storage.](../media/75b80cc3-c336-4f96-ad32-54ac9b96a7af.png)
+    ![Højreklik på Lagerkonti, og klik derefter på Opret forbindelse til Azure Storage.](../media/75b80cc3-c336-4f96-ad32-54ac9b96a7af.png)
   
 11. Klik på **Brug en SAS-URI (delt adgangssignatur) eller en forbindelsesstreng,** og klik på **Næste**.
 
 12. Klik på **Brug en SAS URI**, indsæt den SAS-URL-adresse, du fik i trin 1, i feltet under **URI**, og klik derefter på **Næste**.
 
-13. På siden **Forbindelsesoversigt** kan du gennemse forbindelsesoplysningerne og derefter klikke på **Forbind**.
+13. På siden **Forbindelsesoversigt** kan du gennemse forbindelsesoplysningerne og derefter klikke på **Opret forbindelse**.
 
-    Databeholderen **for dataindtagelse** åbnes. Den indeholder PST-filerne fra harddisken. Dataobjektbeholderen **til dataindtagelse** er placeret under **Blob-objektbeholdere** **til Storage konti** \> **(SAS-Attached Services).** \>
+    Databeholderen **for dataindtagelse** åbnes. Den indeholder PST-filerne fra harddisken. Objektbeholderen **ingestiondata** er placeret under **Blob-objektbeholdere** til **lagerkonti** \> **(SAS-Attached Services).** \>
 
-    ![Azure Storage Explorer viser en liste over de PST-filer, du har overført.](../media/12376fed-13a5-4a09-8fe6-e819e011b334.png)
+    ![Azure Storage Explorer viser en liste over de PST-filer, du har uploadet.](../media/12376fed-13a5-4a09-8fe6-e819e011b334.png)
   
-14. Når du er færdig med at bruge Microsoft Azure Storage Explorer, skal du højreklikke på **data om indtagelse** og derefter klikke på **Fjern forbindelse** for at afbryde forbindelsen til dit Azure Storage område. Ellers får du vist en fejl, næste gang du forsøger at vedhæfte. 
+14. Når du er færdig med at bruge Microsoft Azure Storage Explorer, skal du højreklikke på **data om indtagelse** og derefter klikke på **Afbryd forbindelsen** for at afbryde forbindelsen til dit Azure Storage-område. Ellers får du vist en fejl, næste gang du forsøger at vedhæfte. 
 
-    ![Højreklik på indtagelse, og klik på Afbryd forbindelsen for at afbryde forbindelsen til Azure Storage område.](../media/1e8e5e95-4215-4ce4-a13d-ab5f826a0510.png)
+    ![Højreklik på indtagelse, og klik på Afbryd forbindelsen for at afbryde forbindelsen til dit Azure Storage-område.](../media/1e8e5e95-4215-4ce4-a13d-ab5f826a0510.png)
 
 ## <a name="troubleshooting-tips"></a>Fejlfindingstip
 
-- **Hvad sker der, hvis importjobbet mislykkes på grund af fejl i CSV-tilknytningsfilen til PST-import?** Hvis et importjob mislykkes på grund af fejl i tilknytningsfilen, behøver du ikke at sende harddisken til Microsoft igen for at oprette et importjob. Det skyldes, at PST-filerne fra den harddisk, du har sendt til forsendelsesimportjobbet for drevet, allerede er blevet uploadet til Azure Storage område for din organisation. I dette tilfælde skal du kun rette fejlene i PST Import CSV-tilknytningsfilen og derefter oprette et nyt importjob til netværksupload og sende den reviderede CSV-tilknytningsfil. Hvis du vil oprette og starte et nyt job til import af netværksoverførsler, skal du se [Trin 5: Opret et PST-importjob i Microsoft 365](use-network-upload-to-import-pst-files.md#step-5-create-a-pst-import-job) og [trin 6: Filtrer data, og start jobbet PST-import](use-network-upload-to-import-pst-files.md#step-6-filter-data-and-start-the-pst-import-job) i emnet "Brug netværksupload til at importere PST-filer til Office 365". 
+- **Hvad sker der, hvis importjobbet mislykkes på grund af fejl i CSV-tilknytningsfilen til PST-import?** Hvis et importjob mislykkes på grund af fejl i tilknytningsfilen, behøver du ikke at sende harddisken til Microsoft igen for at oprette et importjob. Det skyldes, at PST-filerne fra den harddisk, du har sendt til forsendelsesimportjobbet for drevet, allerede er uploadet til Azure Storage-området for din organisation. I dette tilfælde skal du kun rette fejlene i PST Import CSV-tilknytningsfilen og derefter oprette et nyt importjob til netværksupload og sende den reviderede CSV-tilknytningsfil. Hvis du vil oprette og starte et nyt job til import af netværksoverførsler, skal du se [Trin 5: Opret et PST-importjob i Microsoft 365](use-network-upload-to-import-pst-files.md#step-5-create-a-pst-import-job) og [trin 6: Filtrer data, og start jobbet PST-import](use-network-upload-to-import-pst-files.md#step-6-filter-data-and-start-the-pst-import-job) i emnet "Brug netværksoverførsel til at importere PST-filer til Office 365". 
     
     > [!NOTE]
     > Hvis du vil foretage fejlfinding af PST Import CSV-tilknytningsfilen, skal du bruge værktøjet [Azure Storage Explorer](#view-a-list-of-the-pst-files-uploaded-to-microsoft-365) til at få vist mappestrukturen i objektbeholderen **ingestiondata** for PST-filerne fra din harddisk, der blev uploadet til Azure Storage-området. Tilknytning af filfejl skyldes typisk en forkert værdi i FilePath-parameteren. Denne parameter angiver placeringen af en PST-fil i Azure Storage-området. Se beskrivelsen af parameteren FilePath i tabellen i [trin 3](#step-3-create-the-pst-import-mapping-file). Som tidligere forklaret blev placeringen af PST-filer i Azure-lagerområdet angivet af  `/dstdir:` parameteren, da du kørte værktøjet WAImportExport.exe i [trin 2](#step-2-copy-the-pst-files-to-the-hard-drive). 
   
 ## <a name="more-information"></a>Flere oplysninger
 
-- Drive shipping er en effektiv måde at importere store mængder af arkiveringsmeddelelsesdata på for at Microsoft 365 at drage fordel af de funktioner til overholdelse af angivne standarder, der er tilgængelige for din organisation. Når arkiveringsdata er importeret til brugerpostkasser, kan du:
+- Drive shipping er en effektiv måde at importere store mængder af arkiveringsmeddelelsesdata til Microsoft 365 på for at drage fordel af de funktioner til overholdelse af angivne standarder, der er tilgængelige for din organisation. Når arkiveringsdata er importeret til brugerpostkasser, kan du:
 
   - Aktivér [arkivpostkasser](enable-archive-mailboxes.md) og [automatisk udvidelse af arkivering](enable-autoexpanding-archiving.md) for at give brugerne mere postkasselagerplads til dataene. 
 
@@ -445,7 +443,7 @@ Sådan installerer du Azure Storage Explorer og opretter forbindelse til dit Azu
 
   - Brug Microsoft [eDiscovery-værktøjer](search-for-content.md) til at søge i dataene. 
 
-  - Anvend [Microsoft 365 opbevaringspolitikker](retention.md) for at styre, hvor længe dataene bevares, og hvilken handling der skal udføres, når opbevaringsperioden udløber. 
+  - Anvend [Microsoft 365-opbevaringspolitikker](retention.md) for at styre, hvor længe dataene bevares, og hvilken handling der skal udføres, når opbevaringsperioden udløber. 
 
   - Søg i [overvågningsloggen](search-the-audit-log-in-security-and-compliance.md) efter hændelser, der er relateret til disse data. 
 

@@ -17,27 +17,25 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om poster, der kan hjælpe dig med at implementere en løsning til datastyring i Microsoft 365.
-ms.openlocfilehash: 9515622af6a6ddb5abe28d6fb920eed72f487f41
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 176e0a005d388681fcda119798fd838d73b7f733
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285056"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629349"
 ---
 # <a name="use-record-versioning-to-update-records-stored-in-sharepoint-or-onedrive"></a>Brug postversionsstyring til at opdatere poster, der er gemt i SharePoint eller OneDrive
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
 > Da lovmæssige poster blokerer redigering, er versionering af poster ikke tilgængelig for lovmæssige poster.
 >
-> Du kan også forhindre postversionsstyring for din lejer, selvom du ikke bruger lovmæssige poster: Gå til **Dataadministration** på Microsoft Purview-overholdelsesportalen > **indstillinger for administration af posterIndstillinger** >  for  >  administration af **posterKonfigurer postversionsstyring**, og slå derefter indstillingen for **Aktivér postversionsstyring** fra.
+> Du kan også forhindre postversionsstyring for din lejer, selvom du ikke bruger lovmæssige poster: Gå til **Datastyring** i **indstillingerne for** >  styring af Microsoft Purview-compliance-portal > poster **Opbevaringsmærkater** > **Konfigurer postversionsstyring**, og slå derefter indstillingen for **Aktivér postversionsstyring** fra.
 
 Muligheden for at markere et dokument som en [post](records-management.md#records) og begrænse handlinger, der kan udføres på posten, er et vigtigt mål for enhver løsning til datastyring. Der kan dog også være behov for samarbejde, for at personer kan oprette efterfølgende versioner.
 
-Du kan f.eks. markere en salgsaftale som en post, men derefter skal opdatere kontrakten med nye vilkår og markere den nyeste version som en ny post, mens du stadig bevarer den tidligere postversion. I forbindelse med disse typer scenarier understøtter SharePoint og OneDrive *postversioner*. OneNote notesbogmapper understøtter ikke postversionsstyring.
+Du kan f.eks. markere en salgsaftale som en post, men derefter skal opdatere kontrakten med nye vilkår og markere den nyeste version som en ny post, mens du stadig bevarer den tidligere postversion. I forbindelse med disse typer scenarier understøtter SharePoint og OneDrive *postversioner*. Mapper i OneNote-notesbøger understøtter ikke postversionsstyring.
 
 Hvis du vil bruge postversionsstyring, skal du først forsyne dokumentet med en [opbevaringsmærkat, der er konfigureret til at markere elementer som en post](declare-records.md). På dette tidspunkt vises en dokumentegenskab med navnet *Poststatus* ud for opbevaringsmærkaten. Afhængigt af om etiketten er konfigureret til at låse posten op som standard (udrulles i øjeblikket), er den indledende poststatus enten **Låst** eller **Ulåst**.
 
@@ -48,9 +46,9 @@ Du kan nu gøre følgende:
     > [!NOTE]
     > Hvis mærkaten som standard er konfigureret til at låse posten op, men versionsstyring ikke er aktiveret af administratoren eller forhindret af indstillingen for datastyring, kan brugerne ikke låse dokumentet op, når de har låst det.
 
-- **Få posterne automatisk gemt i et lager med poster på stedet, der er placeret på webstedet.** Hvert websted i SharePoint og OneDrive bevarer indhold i biblioteket til bevarelse af venteposition. Postversioner gemmes i mappen Poster i dette bibliotek. Du kan få flere oplysninger om, hvordan biblioteket bevarelsesposition fungerer, under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
+- **Få posterne automatisk gemt i et lager med poster på stedet, der er placeret på webstedet.** Hvert websted i SharePoint og OneDrive bevarer indhold i biblioteket til bevarelse af venteposition. Postversioner gemmes i mappen Poster i dette bibliotek. Du kan finde flere oplysninger om, hvordan biblioteket bevarelsesposition fungerer, under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
 
-- **Vedligehold et stedsegrønt dokument, der indeholder alle versioner.** Hvert SharePoint og OneDrive dokument har som standard en versionshistorik tilgængelig i elementmenuen. I denne versionshistorik kan du nemt se, hvilke versioner der er poster, og få vist disse dokumenter.
+- **Vedligehold et stedsegrønt dokument, der indeholder alle versioner.** Hvert SharePoint- og OneDrive-dokument har som standard en tilgængelig versionshistorik i elementmenuen. I denne versionshistorik kan du nemt se, hvilke versioner der er poster, og få vist disse dokumenter.
 
 > [!TIP]
 > Når du bruger versionering af poster med en opbevaringsmærkat, der har en sletningshandling, bør du overveje at konfigurere opbevaringsindstillingen **Start opbevaringsperioden baseret på:** til at være **Når elementer blev mærket**. Med denne mærkatindstilling nulstilles starten af opbevaringsperioden for hver nye postversion, hvilket sikrer, at ældre versioner slettes før nyere versioner.

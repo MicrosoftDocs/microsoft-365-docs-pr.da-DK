@@ -1,7 +1,7 @@
 ---
 title: Informationsbarrierer
 description: Få mere at vide om, hvordan du konfigurerer informationsbarrierer i Microsoft Purview.
-keywords: Microsoft 365, Microsoft Purview, overensstemmelse
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, informationsbarrierer
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -16,20 +16,18 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-scenario
-ms.openlocfilehash: aaba1c642d4615d3eb5163736450f3f8f3c27062
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: 21ad4f0cc6614bed3c579a8025d83200446fec18
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396173"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627233"
 ---
 # <a name="information-barriers"></a>Informationsbarrierer
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Microsoft 365 muliggør kommunikation og samarbejde på tværs af grupper og organisationer og understøtter metoder til at begrænse kommunikation og samarbejde mellem bestemte grupper af brugere, når det er nødvendigt. Dette kan omfatte situationer eller scenarier, hvor du vil begrænse kommunikation og samarbejde mellem to grupper for at undgå, at der opstår en interessekonflikt i din organisation. Dette kan også omfatte situationer, hvor du har brug for at begrænse kommunikation og samarbejde mellem visse personer i organisationen for at beskytte interne oplysninger.
 
-Microsoft Purview informationsbarrierer (IB) understøttes i Microsoft Teams, SharePoint Online og OneDrive for Business. En overholdelsesadministrator eller IB-administrator kan definere politikker for at tillade eller forhindre kommunikation mellem grupper af brugere i Microsoft Teams. IB-politikker kan bruges til situationer som disse:
+Microsoft Purview Information Barriers (IB) understøttes i Microsoft Teams, SharePoint Online og OneDrive for Business. En overholdelsesadministrator eller IB-administrator kan definere politikker for at tillade eller forhindre kommunikation mellem grupper af brugere i Microsoft Teams. IB-politikker kan bruges til situationer som disse:
 
 - Brugeren i dag erhvervsdrivende gruppe bør ikke kommunikere eller dele filer med markedsføring team
 - Økonomiafdelingen, der arbejder med fortrolige virksomhedsoplysninger, må ikke kommunikere eller dele filer med bestemte grupper i organisationen

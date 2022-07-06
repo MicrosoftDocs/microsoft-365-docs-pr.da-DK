@@ -15,17 +15,15 @@ ms.collection: M365-security-compliance
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du får adgang til og bruger statistikker og rapporter til kladdesamlinger og samlinger, der er blevet sendt til et korrektursæt i Microsoft Purview eDiscovery (Premium).
-ms.openlocfilehash: 54d5fde3ee9d75a0ad592a81d04b860267c16eeb
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du får adgang til og bruger statistikker og rapporter til kladdesamlinger og samlinger, der er blevet bekræftet til en gennemgang, der er angivet i Microsoft Purview eDiscovery (Premium).
+ms.openlocfilehash: 1f9047a047e5c2c4abd01f0cac39ab6cb97e27da
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092453"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626837"
 ---
-# <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Statistik og rapporter for samling i Microsoft Purview eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="collection-statistics-and-reports-in-microsoft-purview-ediscovery-premium"></a>Indsamlingsstatistik og -rapporter i Microsoft Purview eDiscovery (Premium)
 
 Når du har oprettet en kladdesamling, kan du få vist statistikker over de hentede elementer, f.eks. de indholdsplaceringer, der indeholder de fleste elementer, der opfylder søgekriterierne, og antallet af elementer, der returneres af søgeforespørgslen. Du kan også få vist et undersæt af resultaterne.
 
@@ -51,7 +49,7 @@ I dette afsnit vises en grafisk oversigt over de anslåede elementer, der return
 
 I dette afsnit vises statistik om søgeforespørgslen for samlingen og antallet af anslåede elementer, der matcher forskellige dele af søgeforespørgslen. Du kan bruge disse statistikker til at analysere antallet af elementer, der stemmer overens med hver komponent i søgeforespørgslen. Dette kan hjælpe dig med at tilpasse søgekriterierne for samlingen og om nødvendigt indsnævre omfanget af samlingen.
 
-- **Placeringstype**: Den type indholdsplacering, som forespørgselsstatistikken gælder for. Værdien af **Exchange** angiver placeringen af en postkasse. Værdien **SharePoint** angiver placeringen af webstedet.
+- **Placeringstype**: Den type indholdsplacering, som forespørgselsstatistikken gælder for. Værdien af **Exchange** angiver en postkasses placering. en værdi i **SharePoint** angiver en webstedsplacering.
 
 - **Del**: Den del af søgeforespørgslen, som statistikkerne gælder for. **Primary** angiver hele søgeforespørgslen. **Nøgleordet** angiver, at statistikkerne i rækken er for et bestemt nøgleord. Hvis du bruger en nøgleordsliste til søgeforespørgslen i samlingen, medtages statistik for hver komponent i forespørgslen i denne tabel.
 
@@ -130,16 +128,16 @@ Når du kører en kladdesamling, vises et estimat over antallet af elementer (og
 
 - **Konfigurationsindstillinger for samling**. Når du overfører en kladdesamling til et korrektursæt, skal du vælge at inkludere samtaletråde, vedhæftede filer i skyen og dokumentversioner. Alle disse elementer, der føjes til korrektursættet, medtages ikke i estimaterne for kladdesamlingen. De identificeres og indsamles kun, når du bekræfter samlingen. Hvis du vælger disse indstillinger, øges antallet af elementer, der føjes til korrektursættet, sandsynligvis. 
 
-    Flere versioner af SharePoint dokumenter medtages f.eks. ikke i estimatet for kladdesamlingen. Men hvis du vælger indstillingen for at medtage alle dokumentversioner, når du sender en kladdesamling, øges det faktiske antal (og den samlede størrelse) af elementer, der er føjet til korrektursættet.
+    Flere versioner af SharePoint-dokumenter er f.eks. ikke inkluderet i estimatet for kladdesamlingen. Men hvis du vælger indstillingen for at medtage alle dokumentversioner, når du sender en kladdesamling, øges det faktiske antal (og den samlede størrelse) af elementer, der er føjet til korrektursættet.
 
     Du kan få flere oplysninger om disse indstillinger under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md#commit-a-draft-collection-to-a-review-set-in-ediscovery-premium).
 
 Her er andre årsager til, at de anslåede resultater fra en kladdesamling kan være anderledes end de faktiske bekræftede resultater.
 
-- **Den måde, resultaterne anslås på for kladdesamlinger**. Et estimat over de søgeresultater, der returneres af en kladdesamling, er netop det, et estimat (og ikke et faktisk antal) af de elementer, der opfylder kriterierne for indsamlingsforespørgslen. Hvis du vil kompilere estimatet for mailelementer, anmodes der om en liste over de meddelelses-id'er, der opfylder søgekriterierne, fra den Exchange database. Men når du sender samlingen til et korrektursæt, kører samlingen igen, og de faktiske meddelelser hentes fra den Exchange database. Der kan derfor opstå forskelle på grund af, hvordan det anslåede antal elementer og det faktiske antal elementer bestemmes.
+- **Den måde, resultaterne anslås på for kladdesamlinger**. Et estimat over de søgeresultater, der returneres af en kladdesamling, er netop det, et estimat (og ikke et faktisk antal) af de elementer, der opfylder kriterierne for indsamlingsforespørgslen. Hvis du vil kompilere estimatet for mailelementer, anmodes der om en liste over de meddelelses-id'er, der opfylder søgekriterierne, fra Exchange-databasen. Men når du sender samlingen til et korrektursæt, kører samlingen igen, og de faktiske meddelelser hentes fra Exchange-databasen. Der kan derfor opstå forskelle på grund af, hvordan det anslåede antal elementer og det faktiske antal elementer bestemmes.
 
 - **Ændringer, der sker mellem det tidspunkt, hvor kladdesamlinger estimeres og bindes**. Når du sender en kladde af en samling til et gennemsynssæt, kører søgningen igen for at indsamle de nyeste elementer i søgeindekset, der opfylder søgekriterierne. Det er muligt, at der blev oprettet, sendt eller slettet flere elementer, der opfylder søgekriterierne i tiden mellem sidste kørsel af kladdesamlingen og det tidspunkt, hvor kladdesamlingen er sendt til et korrektursæt. Det er også muligt, at elementer, der var i søgeindekset, da resultaterne af kladdesamlingen blev anslået, ikke længere findes, fordi de blev fjernet fra en datakilde, før samlingen blev sendt. En måde at afhjælpe dette problem på er ved at angive et datointerval for en samling. En anden måde er at placere en venteposition på indholdsplaceringer, så elementer bevares og ikke kan fjernes.
 
-- **Ikke-indekserede elementer**. Hvis kladdesamlingen inkluderede søgning i alle Exchange postkasser eller alle SharePoint websteder, føjes der kun ikke-indekserede elementer fra indholdsplaceringer, der indeholder elementer, der opfylder indsamlingskriterierne, til korrektursættet. Det vil sige, at hvis der ikke findes nogen resultater i en postkasse eller et websted, føjes alle ikke-indekserede elementer i den pågældende postkasse eller det pågældende websted ikke til korrektursættet. Ikke-indekserede elementer fra alle indholdsplaceringer (også dem, der ikke indeholder elementer, der stemmer overens med forespørgslen om samling), medtages i de anslåede samlingsresultater.
+- **Ikke-indekserede elementer**. Hvis kladdesamlingen inkluderede søgning i alle Exchange-postkasser eller alle SharePoint-websteder, føjes der kun ikke-indekserede elementer fra indholdsplaceringer, der indeholder elementer, der opfylder indsamlingskriterierne, til gennemsynssættet. Det vil sige, at hvis der ikke findes nogen resultater i en postkasse eller et websted, føjes alle ikke-indekserede elementer i den pågældende postkasse eller det pågældende websted ikke til korrektursættet. Ikke-indekserede elementer fra alle indholdsplaceringer (også dem, der ikke indeholder elementer, der stemmer overens med forespørgslen om samling), medtages i de anslåede samlingsresultater.
 
     Hvis kladdesamlingen inkluderede specifikke indholdsplaceringer (hvilket betyder, at bestemte postkasser eller websteder, hvor det er angivet på siden **Yderligere placeringer** i guiden kladdesamling), eksporteres ikke-indekserede elementer (som ikke er udelukket af indsamlingskriterierne) fra de indholdsplaceringer, der er angivet i søgningen. I dette tilfælde skal det anslåede antal ikke-indekserede elementer og antallet af ikke-indekserede elementer, der føjes til korrektursættet, være det samme.

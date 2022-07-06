@@ -16,17 +16,15 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 3526fd06-b45f-445b-aed4-5ebd37b3762a
-description: Brug funktionen Søg og fjern på Microsoft Purview-overholdelsesportalen til at søge efter og slette en mail fra alle postkasser i organisationen.
-ms.openlocfilehash: f4cf7b3f6aeefc3af71739f91322736354c1b68e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Brug funktionen Søg og fjern i Microsoft Purview-compliance-portal til at søge efter og slette en mail fra alle postkasser i organisationen.
+ms.openlocfilehash: d6ff40dd5c74330bdcaeeb304c42665469003174
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017236"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628523"
 ---
 # <a name="search-for-and-delete-email-messages"></a>Søg efter og slet mails
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **Denne artikel er til administratorer. Forsøger du at finde elementer i postkassen, som du vil slette? Se [Find en meddelelse eller et element med Hurtigsøgning](https://support.office.com/article/69748862-5976-47b9-98e8-ed179f1b9e4d)**.
 
@@ -43,14 +41,14 @@ Du kan bruge funktionen Indholdssøgning til at søge efter og slette mails fra 
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Den arbejdsproces til søgning og tømning, der er beskrevet i denne artikel, sletter ikke chatbeskeder eller andet indhold fra Microsoft Teams. Hvis den indholdssøgning, du opretter i trin 2, returnerer elementer fra Microsoft Teams, slettes disse elementer ikke, når du fjerner elementer i trin 3. Hvis du vil søge efter og slette chatmeddelelser, skal du se [Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
+- Den arbejdsproces til søgning og tømning, der er beskrevet i denne artikel, sletter ikke chatbeskeder eller andet indhold fra Microsoft Teams. Hvis den indholdssøgning, du opretter i trin 2, returnerer elementer fra Microsoft Teams, slettes disse elementer ikke, når du fjerner elementer i trin 3. Hvis du vil søge efter og slette chatbeskeder, skal du se [Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
 
-- Hvis du vil oprette og køre en indholdssøgning, skal du være medlem af **rollegruppen eDiscovery Manager** eller være tildelt rollen **Søgning efter overholdelse** på Microsoft Purview-overholdelsesportalen. Hvis du vil slette meddelelser, skal du være medlem af rollegruppen **Organisationsadministration** eller tildeles rollen **Søg og fjern** i overholdelsescenteret Du kan finde oplysninger om, hvordan du føjer brugere til en rollegruppe, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
+- Hvis du vil oprette og køre en indholdssøgning, skal du være medlem af **rollegruppen eDiscovery Manager** eller være tildelt rollen **Søgning efter overholdelse** i Microsoft Purview-compliance-portal. Hvis du vil slette meddelelser, skal du være medlem af rollegruppen **Organisationsadministration** eller tildeles rollen **Søg og fjern** i overholdelsescenteret Du kan finde oplysninger om, hvordan du føjer brugere til en rollegruppe, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
   > [!NOTE]
   > Rollegruppen **Organisationsadministration** findes både i Exchange Online og på overholdelsesportalen. Dette er separate rollegrupper, der giver forskellige tilladelser. Når du er medlem af **Organisationsadministration** i Exchange Online giver du ikke de nødvendige tilladelser til at slette mails. Hvis du ikke har fået tildelt rollen **Søg og fjern** i Overholdelsescenter (enten direkte eller via en rollegruppe, f.eks **. Organisationsadministration**), får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** med meddelelsen "Der blev ikke fundet en parameter, der svarer til parameternavnet "Fjern".
 
-- Du skal bruge Security & Compliance PowerShell til at slette meddelelser. Se [Trin 1: Forbind til Sikkerhed & Overholdelse af PowerShell](#step-1-connect-to-security--compliance-powershell) for at få oplysninger om, hvordan du opretter forbindelse.
+- Du skal bruge Security & Compliance PowerShell til at slette meddelelser. Se [Trin 1: Opret forbindelse til Security & Compliance PowerShell](#step-1-connect-to-security--compliance-powershell) for at få oplysninger om, hvordan du opretter forbindelse.
 
 - Der kan maksimalt fjernes 10 elementer pr. postkasse på én gang. Da funktionen til at søge efter og fjerne meddelelser er beregnet til at være et værktøj til svar på hændelser, hjælper denne grænse med at sikre, at meddelelser hurtigt fjernes fra postkasser. Denne funktion er ikke beregnet til at rydde op i brugerpostkasser.
 
@@ -58,11 +56,11 @@ Du kan bruge funktionen Indholdssøgning til at søge efter og slette mails fra 
 
 - Proceduren i denne artikel kan kun bruges til at slette elementer i Exchange Online postkasser og offentlige mapper. Du kan ikke bruge den til at slette indhold fra SharePoint eller OneDrive for Business websteder.
 
-- Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er gemt på en Azure Storage placering og ikke i livetjenesten. Det betyder, at de ikke returneres af den indholdssøgning, du opretter i trin 1. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery-sag (Premium).](close-or-delete-case.md)
+- Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et anmeldelsessæt gemmes på en Azure Storage-placering og ikke i livetjenesten. Det betyder, at de ikke returneres af den indholdssøgning, du opretter i trin 1. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery (Premium)-sag](close-or-delete-case.md).
 
-## <a name="step-1-connect-to-security--compliance-powershell"></a>Trin 1: Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder
+## <a name="step-1-connect-to-security--compliance-powershell"></a>Trin 1: Opret forbindelse til PowerShell til & overholdelse af angivne standarder
 
-Det første trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det første trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til sikkerhed & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-create-a-content-search-to-find-the-message-to-delete"></a>Trin 2: Opret en indholdssøgning for at finde den meddelelse, der skal slettes
 
@@ -77,9 +75,9 @@ Det andet trin er at oprette og køre en indholdssøgning for at finde den medde
 - [Start-ComplianceSearch](/powershell/module/exchange/Start-ComplianceSearch)
 
 > [!NOTE]
-> De indholdsplaceringer, der søges i i den indholdssøgning, du opretter i dette trin, må ikke indeholde SharePoint eller OneDrive for Business websteder. Du kan kun inkludere postkasser og offentlige mapper i en indholdssøgning, der bruges til mails. Hvis indholdssøgningen indeholder websteder, får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** .
+> De indholdsplaceringer, der søges i i den indholdssøgning, du opretter i dette trin, kan ikke indeholde SharePoint eller OneDrive for Business websteder. Du kan kun inkludere postkasser og offentlige mapper i en indholdssøgning, der bruges til mails. Hvis indholdssøgningen indeholder websteder, får du vist en fejl i trin 3, når du kører Cmdlet'en **New-ComplianceSearchAction** .
 
-### <a name="tips-for-finding-messages-to-remove"></a>Tips til søgning efter meddelelser, der skal fjernes
+### <a name="tips-for-finding-messages-to-remove"></a>Tip til søgning efter meddelelser, der skal fjernes
 
 Målet med søgeforespørgslen er kun at begrænse resultaterne af søgningen til den eller de meddelelser, du vil fjerne. Her er nogle tip:
 
@@ -119,7 +117,7 @@ Start-ComplianceSearch -Identity $Search.Identity
 Når du har oprettet og tilpasset en indholdssøgning for at returnere de meddelelser, du vil fjerne, er det sidste trin at køre kommandoen **New-ComplianceSearchAction -Purge** i Security & Compliance PowerShell for at slette meddelelsen. Du kan blød- eller hard-slette meddelelsen. En blød slettet meddelelse flyttes til en brugers mappe med elementer, der kan gendannes, og bevares, indtil opbevaringsperioden for slettede elementer udløber. Hårdt slettede meddelelser er markeret til permanent fjernelse fra postkassen og fjernes permanent, næste gang postkassen behandles af Assistent til administrerede mapper. Hvis gendannelse af enkelt element er aktiveret for postkassen, fjernes hårdt slettede elementer permanent, når opbevaringsperioden for slettede elementer udløber. Hvis en postkasse sættes i venteposition, bevares slettede meddelelser, indtil elementets varighed af venteposition udløber, eller indtil ventepositionen fjernes fra postkassen.
 
 > [!NOTE]
-> Som tidligere nævnt slettes elementer fra Microsoft Teams, der returneres af indholdssøgning, ikke, når du kører kommandoen **New-ComplianceSearchAction -Purge**.
+> Som tidligere nævnt slettes elementer fra Microsoft Teams, der returneres af indholdssøgning, ikke, når du kører kommandoen **New-ComplianceSearchAction -Purge** .
 
 Hvis du vil køre følgende kommandoer til at slette meddelelser, skal du sørge for, at du har [forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
@@ -151,9 +149,9 @@ Du kan få flere oplysninger i [New-ComplianceSearchAction](/powershell/module/e
 
 - **Hvad sker der, når du har slettet en meddelelse?**
 
-  En meddelelse, der slettes med kommandoen,  `New-ComplianceSearchAction -Purge -PurgeType HardDelete` flyttes til mappen Rensede og kan ikke åbnes af brugeren. Når meddelelsen er flyttet til mappen Renser, bevares meddelelsen, så længe den slettede elementopbevaringsperiode varer, hvis genoprettelse af et enkelt element er aktiveret for postkassen. (I Microsoft 365 aktiveres genoprettelse af enkelte elementer som standard, når der oprettes en ny postkasse). Når opbevaringsperioden for slettede elementer udløber, markeres meddelelsen til permanent sletning og fjernes fra Microsoft 365 næste gang postkassen behandles af assistenten til administrerede mapper.
+  En meddelelse, der slettes med kommandoen,  `New-ComplianceSearchAction -Purge -PurgeType HardDelete` flyttes til mappen Rensede og kan ikke åbnes af brugeren. Når meddelelsen er flyttet til mappen Renser, bevares meddelelsen, så længe den slettede elementopbevaringsperiode varer, hvis genoprettelse af et enkelt element er aktiveret for postkassen. (I Microsoft 365 aktiveres genoprettelse af enkelte elementer som standard, når der oprettes en ny postkasse). Når opbevaringsperioden for slettede elementer udløber, markeres meddelelsen til permanent sletning og fjernes fra Microsoft 365, næste gang postkassen behandles af assistenten administreret mappe.
 
-  Hvis du bruger kommandoen `New-ComplianceSearchAction -Purge -PurgeType SoftDelete` , flyttes meddelelser til mappen Sletninger i brugerens mappe Genoprettelige elementer. Den fjernes ikke fra Microsoft 365 med det samme. Brugeren kan gendanne meddelelser i mappen Slettet post i varigheden baseret på den opbevaringsperiode for slettet element, der er konfigureret for postkassen. Når denne opbevaringsperiode udløber (eller hvis brugeren fjerner meddelelsen, før den udløber), flyttes meddelelsen til mappen Udtømning og kan ikke længere tilgås af brugeren. Når meddelelsen er i mappen Renser, bevares den i varigheden baseret på den opbevaringsperiode for slettet element, der er konfigureret for postkassen, hvis gendannelse af enkelte elementer er aktiveret for postkassen. (I Microsoft 365 aktiveres genoprettelse af enkelte elementer som standard, når der oprettes en ny postkasse). Når opbevaringsperioden for slettede elementer udløber, markeres meddelelsen til permanent sletning og fjernes fra Microsoft 365 næste gang, postkassen behandles af assistenten til administrerede mapper.
+  Hvis du bruger kommandoen `New-ComplianceSearchAction -Purge -PurgeType SoftDelete` , flyttes meddelelser til mappen Sletninger i brugerens mappe Genoprettelige elementer. Det fjernes ikke straks fra Microsoft 365. Brugeren kan gendanne meddelelser i mappen Slettet post i varigheden baseret på den opbevaringsperiode for slettet element, der er konfigureret for postkassen. Når denne opbevaringsperiode udløber (eller hvis brugeren fjerner meddelelsen, før den udløber), flyttes meddelelsen til mappen Udtømning og kan ikke længere tilgås af brugeren. Når meddelelsen er i mappen Renser, bevares den i varigheden baseret på den opbevaringsperiode for slettet element, der er konfigureret for postkassen, hvis gendannelse af enkelte elementer er aktiveret for postkassen. (I Microsoft 365 aktiveres genoprettelse af enkelte elementer som standard, når der oprettes en ny postkasse). Når opbevaringsperioden for slettede elementer udløber, markeres meddelelsen til permanent sletning og fjernes fra Microsoft 365, næste gang postkassen behandles af assistenten administreret mappe.
 
 - **Hvad nu, hvis du skal slette en meddelelse fra mere end 50.000 postkasser?**
 
@@ -163,7 +161,7 @@ Du kan få flere oplysninger i [New-ComplianceSearchAction](/powershell/module/e
 
   Nej, kommandoen 'New-ComplianceSearchAction -Purge sletter ikke ikke ikke-indekserede elementer.
 
-- **Hvad sker der, hvis en meddelelse slettes fra en postkasse, der er placeret i venteposition In-Place eller procesførelse, eller som er tildelt en Microsoft 365 opbevaringspolitik?**
+- **Hvad sker der, hvis en meddelelse slettes fra en postkasse, der er placeret i venteposition In-Place eller procesførelse, eller som er tildelt en Microsoft 365-opbevaringspolitik?**
 
   Når meddelelsen er fjernet og flyttet til mappen Renser, bevares meddelelsen, indtil varigheden af ventepositionen udløber. Hvis varigheden af ventepositionen er ubegrænset, bevares elementer, indtil ventepositionen fjernes, eller varigheden af ventepositionen ændres.
 

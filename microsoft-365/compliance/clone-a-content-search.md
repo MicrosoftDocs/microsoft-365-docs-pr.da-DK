@@ -17,19 +17,17 @@ search.appverid:
 ms.assetid: 7b40eeaa-544c-4534-b89b-9f79998e374c
 ms.custom:
 - seo-marvel-apr2020
-description: Brug PowerShell-scriptet i denne artikel til hurtigt at klone en eksisterende indholdssøgning på Microsoft Purview-overholdelsesportalen i Microsoft 365.
-ms.openlocfilehash: f5ec0433e445256865033b71082c92889972f827
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Brug PowerShell-scriptet i denne artikel til hurtigt at klone en eksisterende indholdssøgning i Microsoft Purview-compliance-portal i Microsoft 365.
+ms.openlocfilehash: 806705202865d97136713dba4afb263b605ef0f8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017416"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628809"
 ---
 # <a name="clone-a-content-search"></a>Klon en indholdssøgning
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Det kan tage et stykke tid at oprette en indholdssøgning på Microsoft Purview-overholdelsesportalen i Microsoft 365, der søger i mange postkasser eller SharePoint og OneDrive for Business websteder. Hvis du angiver de websteder, der skal søges efter, kan der også opstå fejl, hvis du angiver en URL-adresse forkert. Du kan undgå disse problemer ved at bruge scriptet Windows PowerShell i denne artikel til hurtigt at klone en eksisterende indholdssøgning. Når du kloner en søgning, oprettes der en ny søgning (med et andet navn), der indeholder de samme egenskaber (f.eks. indholdsplaceringer og søgeforespørgslen) som den oprindelige søgning. Derefter kan du redigere den nye søgning ved at ændre nøgleordsforespørgslen eller datointervallet og køre den.
+Det kan tage et stykke tid at oprette en indholdssøgning i Microsoft Purview-compliance-portal i Microsoft 365, der søger i mange postkasser eller SharePoint og OneDrive for Business websteder. Hvis du angiver de websteder, der skal søges efter, kan der også opstå fejl, hvis du angiver en URL-adresse forkert. Du kan undgå disse problemer ved at bruge scriptet Windows PowerShell i denne artikel til hurtigt at klone en eksisterende indholdssøgning. Når du kloner en søgning, oprettes der en ny søgning (med et andet navn), der indeholder de samme egenskaber (f.eks. indholdsplaceringer og søgeforespørgslen) som den oprindelige søgning. Derefter kan du redigere den nye søgning ved at ændre nøgleordsforespørgslen eller datointervallet og køre den.
 
 Hvorfor klone indholdssøgninger?
 
@@ -43,13 +41,13 @@ Hvorfor klone indholdssøgninger?
 
 - Du skal installere Exchange Online V2-modulet. Du kan finde instruktioner under [Installér og vedligehold EXO V2-modulet](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
-- Du skal være medlem af rollegruppen eDiscovery Manager på Microsoft Purview-overholdelsesportalen for at køre scriptet, der er beskrevet i dette emne.
+- Du skal være medlem af rollegruppen eDiscovery Manager i Microsoft Purview-compliance-portal for at køre scriptet, der er beskrevet i dette emne.
 
 - Scriptet indeholder minimal fejlhåndtering. Det primære formål med scriptet er hurtigt at klone en indholdssøgning.
 
 - Scriptet opretter en ny indholdssøgning, men starter den ikke.
 
-- Dette script tager højde for, om den indholdssøgning, du kloner, er knyttet til en eDiscovery-sag. Hvis søgningen er knyttet til en sag, knyttes den nye søgning også til den samme sag. Hvis den eksisterende søgning ikke er knyttet til en sag, vises den nye søgning på siden **Indholdssøgning** på Microsoft Purview-overholdelsesportalen.
+- Dette script tager højde for, om den indholdssøgning, du kloner, er knyttet til en eDiscovery-sag. Hvis søgningen er knyttet til en sag, knyttes den nye søgning også til den samme sag. Hvis den eksisterende søgning ikke er knyttet til en sag, vises den nye søgning på siden **Indholdssøgning** i Microsoft Purview-compliance-portal.
 
 - Det eksempelscript, der er angivet i dette emne, understøttes ikke i et hvilket som helst Microsoft-standardsupportprogram eller -tjeneste. Eksempelscriptet leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscriptet og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
@@ -57,7 +55,7 @@ Hvorfor klone indholdssøgninger?
 
 Scriptet i dette trin opretter en ny indholdssøgning ved at klone en eksisterende. Når du kører dette script, bliver du bedt om følgende oplysninger:
 
-- **Dine brugerlegitimationsoplysninger** – Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til PowerShell til sikkerhed & overholdelse. Som tidligere nævnt skal du være medlem af rollegruppen eDiscovery Manager på Microsoft Purview-overholdelsesportalen for at køre scriptet.
+- **Dine brugerlegitimationsoplysninger** – Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til PowerShell til sikkerhed & overholdelse. Som tidligere nævnt skal du være medlem af rollegruppen eDiscovery Manager i Microsoft Purview-compliance-portal for at køre scriptet.
 
 - **Navnet på den eksisterende søgning** – dette er den indholdssøgning, du vil klone.
 
@@ -113,7 +111,7 @@ Sådan kloner du en søgning:
    }
    ```
 
-2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell). I det samme PowerShell-vindue skal du gå til den mappe, hvor du gemte scriptet.
+2. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell). I det samme PowerShell-vindue skal du gå til den mappe, hvor du gemte scriptet.
 
 3. Kør scriptet. f.eks.:
 
@@ -126,11 +124,11 @@ Sådan kloner du en søgning:
      - Navnet på den eksisterende søgning.
      - Navnet på den nye søgning.
 
-     Scriptet opretter den nye indholdssøgning, men starter den ikke. Det giver dig mulighed for at redigere og køre søgningen i næste trin. Du kan få vist egenskaberne for den nye søgning ved at køre **Get-ComplianceSearch-cmdlet'en** eller ved at gå til **indholdssøgnings-** eller **eDiscovery-siden** på Microsoft Purview-overholdelsesportalen, afhængigt af om den nye søgning er knyttet til en sag.
+     Scriptet opretter den nye indholdssøgning, men starter den ikke. Det giver dig mulighed for at redigere og køre søgningen i næste trin. Du kan få vist egenskaberne for den nye søgning ved at køre **Get-ComplianceSearch-cmdlet'en** eller ved at gå til **indholdssøgnings-** eller **eDiscovery-siden** i Microsoft Purview-compliance-portal, afhængigt af om den nye søgning er knyttet til en sag.
 
-## <a name="step-2-edit-and-run-the-cloned-search-in-the-microsoft-purview-compliance-portal"></a>Trin 2: Rediger og kør den klonede søgning på Microsoft Purview-overholdelsesportalen
+## <a name="step-2-edit-and-run-the-cloned-search-in-the-microsoft-purview-compliance-portal"></a>Trin 2: Rediger og kør den klonede søgning i Microsoft Purview-compliance-portal
 
-Når du har kørt scriptet for at klone en eksisterende indholdssøgning, er det næste trin at gå til Microsoft Purview-overholdelsesportalen for at redigere og køre den nye søgning. Som tidligere angivet kan du redigere en søgning ved at ændre søgeforespørgslen med nøgleordet og tilføje eller fjerne søgebetingelser. Du kan finde flere oplysninger under:
+Når du har kørt scriptet for at klone en eksisterende indholdssøgning, er næste trin at gå til Microsoft Purview-compliance-portal for at redigere og køre den nye søgning. Som tidligere angivet kan du redigere en søgning ved at ændre søgeforespørgslen med nøgleordet og tilføje eller fjerne søgebetingelser. Du kan finde flere oplysninger under:
 
 - [Indholdssøgning i Office 365](content-search.md)
 

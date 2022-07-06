@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 description: Prøveversion af prøveversionen af Microsoft Purview Compliance Manager Premium Assessments.
 ms.custom: trial-playbook
-ms.openlocfilehash: 3d41cde8cbf7cb6158573ed158a41dfe42d28dd5
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 6f788bf3e69aa088e87b0d1e6dfc3e0356b7984e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530988"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626375"
 ---
 # <a name="trial-playbook-microsoft-purview-compliance-manager-premium-assessments"></a>Playbook til prøveversion: Premium-vurderinger fra Microsoft Purview Compliance Manager
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Velkommen til prøveversionen af Microsoft Purview Compliance Manager Premium assessment.
 

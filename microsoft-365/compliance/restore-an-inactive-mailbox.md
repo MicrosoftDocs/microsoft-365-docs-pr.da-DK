@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: 97e06a7a-ef9a-4ce8-baea-18b9e20449a3
 description: Få mere at vide om, hvordan du gendanner (eller fletter) indholdet af en inaktiv postkasse til en eksisterende postkasse.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 66f9e75a76b4fb1bda0f9ae0f70cfe12c816d2bb
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 7c1a976013f522e45b4e96d6b28653fa860fe16f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438219"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629217"
 ---
 # <a name="restore-an-inactive-mailbox"></a>Gendan en inaktiv postkasse
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 En inaktiv postkasse (som er en type blød slettet postkasse) bruges til at bevare en tidligere medarbejders mail, når vedkommende forlader din organisation. Hvis en anden medarbejder påtager sig ansvarsområderne for den fragåede medarbejder, eller hvis den pågældende medarbejder vender tilbage til din organisation, er der to måder, hvorpå du kan gøre indholdet af den inaktive postkasse tilgængeligt for en bruger:
 
@@ -44,7 +42,7 @@ Se afsnittet [Flere oplysninger](#more-information) i denne artikel for at få f
 
 ## <a name="requirements-to-restore-an-inactive-mailbox"></a>Krav til gendannelse af en inaktiv postkasse
 
-- Du skal bruge Exchange Online PowerShell til at gendanne en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til denne procedure. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du skal bruge Exchange Online PowerShell til at gendanne en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til denne procedure. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Kør følgende kommando i Exchange Online PowerShell for at få identitetsoplysninger for de inaktive postkasser i din organisation.
 
@@ -152,7 +150,7 @@ Hvis en inaktiv postkasse har en arkivpostkasse, kan du også gendanne den til a
   Get-Mailbox -InactiveMailboxOnly | Format-List Name,PrimarySMTPAddress,DistinguishedName,ExchangeGUID,LegacyExchangeDN,ArchiveStatus
   ```
 
-- **Brug en Microsoft 365 opbevaringspolitik eller procesførelsesholdning eller til at bevare inaktivt postkasseindhold.** Hvis du vil bevare tilstanden for en inaktiv postkasse, når den er gendannet, kan du anvende en [Microsoft 365 opbevaringspolitik](retention.md) på målpostkassen eller placere målpostkassen i [Litigation Venteposition](create-a-litigation-hold.md), før du gendanner den inaktive postkasse. Dette forhindrer permanent sletning af elementer fra den inaktive postkasse, når de er gendannet til målpostkassen.
+- **Brug en Opbevaringspolitik for Microsoft 365 eller Procesvist bevarelse eller til at bevare inaktivt postkasseindhold.** Hvis du vil bevare tilstanden for en inaktiv postkasse, når den er gendannet, kan du anvende en [Microsoft 365-opbevaringspolitik](retention.md) på målpostkassen eller placere målpostkassen i [Litigation Venteposition](create-a-litigation-hold.md) , før du gendanner den inaktive postkasse. Dette forhindrer permanent sletning af elementer fra den inaktive postkasse, når de er gendannet til målpostkassen.
 
 - **Aktivér bevarelse på målpostkassen, før du gendanner en inaktiv postkasse.** Da postkasseelementer fra en inaktiv postkasse kan være gamle, kan du overveje at aktivere opbevaringshold på målpostkassen, før du gendanner en inaktiv postkasse. Når du sætter en postkasse i opbevaringsventeposition, behandles den opbevaringspolitik, der er tildelt den, ikke, før opbevarings ventepositionen fjernes, eller indtil opbevaringsperioden udløber. Dette giver ejeren af målpostkassen tid til at administrere gamle meddelelser fra den inaktive postkasse. Ellers kan opbevaringspolitikken slette gamle elementer (eller flytte elementer til arkivpostkassen, hvis den er aktiveret), der er udløbet, baseret på de opbevaringsindstillinger, der er konfigureret for målpostkassen. Du kan få flere oplysninger under [Placer en postkasse i opbevaringsventeposition i Exchange Online](/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
 

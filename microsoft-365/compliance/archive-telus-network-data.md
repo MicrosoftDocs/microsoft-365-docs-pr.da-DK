@@ -11,25 +11,23 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS-data fra TELUS-netværket i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 9199c38960cbc3e238f6ea8a47a06935c7867b69
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Administratorer kan konfigurere en TeleMessage-connector til at importere og arkivere SMS-data fra TELUS-netværket i Microsoft 365. Det giver dig mulighed for at arkivere data fra tredjepartsdatakilder i Microsoft 365, så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
+ms.openlocfilehash: 215f185aa655f031151799f77889976bca799766
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099691"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628941"
 ---
 # <a name="set-up-a-connector-to-archive-telus-network-data"></a>Konfigurer en connector til arkivering af TELUS-netværksdata
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug TeleMessage-connectoren i Microsoft Purview-compliance-portal til at importere og arkivere sms-data fra organisationens TELUS-netværk. Når du har konfigureret en connector, opretter den forbindelse til organisationens TELUS-netværk én gang om dagen og importerer SMS-data til postkasser i Microsoft 365.
 
-Brug telemeddelelsesconnectoren i Microsoft Purview-overholdelsesportalen til at importere og arkivere sms-data (Short Messaging Service) fra organisationens TELUS Network. Når du har konfigureret en connector, opretter den forbindelse til organisationens TELUS-netværk én gang om dagen og importerer SMS-data til postkasser i Microsoft 365.
-
-Når sms-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, Content Search og Microsoft 365 opbevaringspolitikker på TELUS-data. Du kan f.eks. søge i TELUS-sms-meddelelser ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder TELUS-dataene, til en tilsynsførende i en eDiscovery-sag (Premium). Brug af en TELUS-netværksconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når sms-beskeder er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, Content Search og Microsoft 365 retention policies på TELUS-data. Du kan f.eks. søge i TELUS-sms'er ved hjælp af indholdssøgning eller knytte den postkasse, der indeholder TELUS-dataene, til en tilsynsførende i en eDiscovery-sag (Premium). Hvis du bruger en TELUS Network-connector til at importere og arkivere data i Microsoft 365, kan det hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-telus-network-data"></a>Oversigt over arkivering af TELUS-netværksdata
 
-I følgende oversigt forklares det, hvordan du bruger en connector til at arkivere TELUS-netværksdata i Microsoft 365.
+I følgende oversigt forklares processen med at bruge en connector til at arkivere TELUS-netværksdata i Microsoft 365.
 
 ![TELUS Arbejdsproces til arkivering af netværk.](../media/TelusNetworkConnectorWorkflow.png)
 
@@ -37,33 +35,33 @@ I følgende oversigt forklares det, hvordan du bruger en connector til at arkive
 
 2. I realtid kopieres sms-beskeder fra organisationens TELUS-netværk til telemeddelelseswebstedet.
 
-3. Den TELUS Network-connector, du opretter i overholdelsesportalen, opretter forbindelse til TeleMessage-webstedet hver dag og overfører SMS-meddelelserne fra de forrige 24 timer til en sikker Azure Storage placering i Microsoft-cloudmiljøet. Connectoren konverterer også indholdet af sms-beskeder til et mailformat.
+3. Den TELUS Network-connector, du opretter i overholdelsesportalen, opretter forbindelse til TeleMessage-webstedet hver dag og overfører SMS-meddelelserne fra de forrige 24 timer til en sikker Azure Storage-placering i Microsoft-cloudmiljøet. Connectoren konverterer også indholdet af sms-beskeder til et mailformat.
 
 4. Connectoren importerer mobilkommunikationselementerne til en bestemt brugers postkasse. Der oprettes en ny mappe med navnet **TELUS SMS Network Archiver** i den specifikke brugers postkasse, og elementerne importeres til den. Connectoren tilknytter ved hjælp af værdien for *brugerens mailadresseegenskab* . Alle sms-beskeder indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i sms'en.
 
-   Ud over automatisk brugertilknytning ved hjælp af værdien for *brugerens mailadresseegenskab* kan du også implementere brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Denne tilknytningsfil indeholder mobiltelefonnummeret og tilsvarende Microsoft 365 mailadresse for brugere i din organisation. Hvis du aktiverer både automatisk brugertilknytning og brugerdefineret tilknytning, kigger connectoren først på den brugerdefinerede tilknytningsfil for hvert TELUS-element. Hvis der ikke findes en gyldig Microsoft 365 bruger, der svarer til en brugers mobiltelefonnummer, bruger connectoren værdierne i egenskaben mailadresse for det element, den forsøger at importere. Hvis connectoren ikke finder en gyldig Microsoft 365 bruger i enten den brugerdefinerede tilknytningsfil eller i egenskaben mailadresse for TELUS-elementet, importeres elementet ikke.
+   Ud over automatisk brugertilknytning ved hjælp af værdien for *brugerens mailadresseegenskab* kan du også implementere brugerdefineret tilknytning ved at uploade en CSV-tilknytningsfil. Denne tilknytningsfil indeholder mobiltelefonnummeret og den tilsvarende Microsoft 365-mailadresse for brugere i din organisation. Hvis du aktiverer både automatisk brugertilknytning og brugerdefineret tilknytning, kigger connectoren først på den brugerdefinerede tilknytningsfil for hvert TELUS-element. Hvis der ikke findes en gyldig Microsoft 365-bruger, der svarer til en brugers mobiltelefonnummer, bruger connectoren værdierne i egenskaben mailadresse for det element, den forsøger at importere. Hvis connectoren ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller i mailadresseegenskaben for TELUS-elementet, importeres elementet ikke.
 
 ## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en connector
 
-Nogle af de implementeringstrin, der kræves for at arkivere TELUS-netværksdata, er eksterne i forhold til Microsoft 365 og skal fuldføres, før du kan oprette en connector i Overholdelsescenter.
+Nogle af de trin til implementering, der kræves for at arkivere TELUS-netværksdata, er eksterne i forhold til Microsoft 365 og skal fuldføres, før du kan oprette en connector i overholdelsescenteret.
 
 - Bestil [TELUS Network Archiver-tjenesten fra TeleMessage](https://www.telemessage.com/mobile-archiver/order-mobile-archiver-for-o365) , og få en gyldig administrationskonto til din organisation. Du skal logge på denne konto, når du opretter connectoren i Overholdelsescenter.
 
 - Få din TELUS Network-konto og faktureringskontaktoplysninger, så du kan udfylde onboardingformularerne for TeleMessage og bestille meddelelsesarkiveringstjenesten fra TELUS.
 
-- Registrer alle brugere, der kræver TELUS SMS Network-arkivering på TeleMessage-kontoen. Når du registrerer brugere, skal du sørge for at bruge den samme mailadresse, der bruges til deres Microsoft 365 konto.
+- Registrer alle brugere, der kræver TELUS SMS Network-arkivering på TeleMessage-kontoen. Når du registrerer brugere, skal du sørge for at bruge den samme mailadresse, der bruges til deres Microsoft 365-konto.
 
-- Dine medarbejdere skal have virksomhedsejede og virksomhedsansvarende mobiltelefoner påTELUS-mobilnetværket. Arkivering af meddelelser i Microsoft 365 er ikke tilgængelig for BYOD-enheder (Employee-owned) eller Bring Your Own Devices (Bring Your Own Devices).
+- Dine medarbejdere skal have virksomhedsejede og virksomhedsansvarende mobiltelefoner påTELUS-mobilnetværket. Arkivering af meddelelser i Microsoft 365 er ikke tilgængelig for medarbejderejede eller BYOD-enheder (Bring Your Own Devices).
 
-- Den bruger, der opretter en TELUS-netværksconnector, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter en TELUS-netværksconnector, skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne TeleMessage-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne TeleMessage-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="create-a-telus-network-connector"></a>Opret en TELUS-netværksconnector
 
 Når du har fuldført de forudsætninger, der er beskrevet i forrige afsnit, kan du oprette TELUS Network Connector på overholdelsesportalen. Connectoren bruger de oplysninger, du angiver, til at oprette forbindelse til telemeddelelseswebstedet og overføre SMS-meddelelser til de tilsvarende postkassefelter for brugere i Microsoft 365.
 
-1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **Data connectorsTELUS** >  **Network**.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **Dataconnectors** > **TELUS Network**.
 
 2. På siden med produktbeskrivelsen til **TELUS Network** skal du klikke på **Tilføj connector**
 

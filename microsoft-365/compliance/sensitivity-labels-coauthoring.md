@@ -13,22 +13,20 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: Slå en indstilling til, der muliggør samtidig redigering og automatisk lagring i skrivebordsapps for navngivne og krypterede dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: 72935a58931c1458466f145c17a9e423e6b6d31c
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: e82249f3d42eb71345bb998d16a6c2a24e11130c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286984"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628633"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Aktivér indstillingen for at understøtte [samtidig redigering af Office-skrivebordsapps](https://support.office.com/article/ee1509b4-1f6e-401e-b04a-782d26f564a4) , så flere brugere kan redigere disse dokumenter på samme tid, når dokumenter mærkes og krypteres af [følsomhedsmærkater](sensitivity-labels.md).
 
-Aktivér indstillingen for at understøtte [samtidig redigering](https://support.office.com/article/ee1509b4-1f6e-401e-b04a-782d26f564a4) af Office desktopapps, så flere brugere kan redigere disse dokumenter på samme tid, når dokumenter mærkes og krypteres af [følsomhedsmærkater](sensitivity-labels.md).
-
-Uden at denne indstilling er aktiveret for din lejer, skal brugerne tjekke et krypteret dokument, der er gemt i SharePoint eller OneDrive, når de bruger Office desktopapps. Derfor kan de ikke samarbejde i realtid. Eller de skal bruge Office på internettet, når [følsomhedsmærkater er aktiveret for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+Uden at denne indstilling er aktiveret for din lejer, skal brugerne tjekke et krypteret dokument, der er gemt i SharePoint eller OneDrive, når de bruger Office Desktop-apps. Derfor kan de ikke samarbejde i realtid. Eller de skal bruge Office på internettet, når [følsomhedsmærkater er aktiveret for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
 
 Aktivering af denne funktionalitet medfører desuden, at [funktionen AutoSave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) understøttes for disse navngivne og krypterede filer.
 
@@ -41,9 +39,9 @@ Hvis du vil læse udgivelsesmeddelelsen, skal du se blogindlægget [Samtidig red
 > 
 > Aktivér ikke denne indstilling, hvis du bruger apps, tjenester, scripts eller værktøjer, der læser eller skriver navngivne metadata til den gamle placering.
 
-Før du aktiverer indstillingen for at understøtte samtidig redigering af Office desktopapps, er det vigtigt at forstå, at denne handling foretager ændringer af de mærkatmetadata, der gemmes i og læses fra Office filer.
+Før du aktiverer indstillingen for at understøtte samtidig redigering af Office-skrivebordsapps, er det vigtigt at forstå, at denne handling foretager ændringer af de mærkatmetadata, der gemmes i og læses fra Office-filer.
 
-Mærkatmetadataene indeholder oplysninger, der identificerer din lejer og den anvendte følsomhedsmærkat. Den ændring, som denne indstilling foretager, er metadataformatet og -placeringen for Word-, Excel- og PowerPoint-filer. Du behøver ikke at foretage nogen handling for krypterede filer eller mails, fordi metadataændringen for krypterede filer er bagudkompatibel, og der er ingen ændringer for mails. Du skal dog være opmærksom på metadataændringerne for krypterede filer, der kan opgraderes automatisk, men som ikke er bagudkompatible.
+Mærkatmetadataene indeholder oplysninger, der identificerer din lejer og den anvendte følsomhedsmærkat. Den ændring, som denne indstilling foretager, er metadataformatet og placeringen for Word-, Excel- og PowerPoint-filer. Du behøver ikke at foretage nogen handling for krypterede filer eller mails, fordi metadataændringen for krypterede filer er bagudkompatibel, og der er ingen ændringer for mails. Du skal dog være opmærksom på metadataændringerne for krypterede filer, der kan opgraderes automatisk, men som ikke er bagudkompatible.
 
 Denne ændring påvirker både filer, der lige er navngivet, og filer, der allerede er forsynet med mærkater. Når du bruger apps og tjenester, der understøtter indstillingen for samtidig redigering:
 - I forbindelse med filer, der for nylig er forsynet med mærkater, er det kun det nye format og den nye placering, der bruges til at navngive metadata.
@@ -51,7 +49,7 @@ Denne ændring påvirker både filer, der lige er navngivet, og filer, der aller
 
 Du kan læse mere om denne ændring af metadata fra følgende ressourcer:
 
-- Blogindlæg: [Kommende ændringer af Microsoft Information Protection metadata Storage](https://techcommunity.microsoft.com/t5/microsoft-security-and/upcoming-changes-to-microsoft-information-protection-metadata/ba-p/1904418)
+- Blogindlæg: [Kommende ændringer af Microsoft Information Protection metadatalager](https://techcommunity.microsoft.com/t5/microsoft-security-and/upcoming-changes-to-microsoft-information-protection-metadata/ba-p/1904418)
 
 - Åbne specifikationer: [2.6.3 LabelInfo i forhold til brugerdefinerede dokumentegenskaber](/openspecs/office_file_formats/ms-offcrypto/13939de6-c833-44ab-b213-e0088bf02341)
 
@@ -61,9 +59,9 @@ På grund af disse ændringer skal du ikke aktivere denne indstilling, hvis du h
 
 - Et dokument viser en forældet mærkat til brugerne.
 
-- Samtidig redigering og Automatisk lagring fungerer ikke for et navngivet og krypteret dokument, hvis en anden bruger har det åbent i en Office desktopapp, der ikke understøtter de nye mærkatmetadata. Vær opmærksom på, at dette scenarie også kan forekomme for brugere uden for din organisation, hvis eksterne brugere og inviterede gæster har åbnet filen.
+- Samtidig redigering og Automatisk lagring fungerer ikke for et navngivet og krypteret dokument, hvis en anden bruger har det åbent i en Office-skrivebordsapp, der ikke understøtter de nye mærkatmetadata. Vær opmærksom på, at dette scenarie også kan forekomme for brugere uden for din organisation, hvis eksterne brugere og inviterede gæster har åbnet filen.
 
-- En Exchange Online regel for mailflow, der [identificerer mærkater som brugerdefinerede egenskaber i Office vedhæftede filer](/azure/information-protection/configure-exo-rules#example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization), krypterer ikke mailen og den vedhæftede fil eller krypterer dem forkert.
+- En Exchange Online regel for mailflow, der [identificerer mærkater som brugerdefinerede egenskaber i vedhæftede filer i Office](/azure/information-protection/configure-exo-rules#example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization), krypterer ikke mailen og den vedhæftede fil eller krypterer dem forkert.
 
 I følgende afsnit kan du se en liste over de apps og tjenester, der understøtter denne indstilling, og ændringerne af mærkatmetadataene.
 
@@ -73,7 +71,7 @@ Sørg for at forstå følgende forudsætninger, før du aktiverer denne funktion
 
 - Du skal være global administrator for at aktivere denne funktion.
 
-- Følsomhedsmærkater skal [være aktiveret for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) for lejeren. Hvis denne funktion ikke allerede er aktiveret, aktiveres den automatisk, når du vælger indstillingen for at aktivere samtidig redigering af filer med følsomhedsmærkater.
+- Følsomhedsmærkater skal være [aktiveret for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) for lejeren. Hvis denne funktion ikke allerede er aktiveret, aktiveres den automatisk, når du vælger indstillingen for at aktivere samtidig redigering af filer med følsomhedsmærkater.
 
 - Microsoft 365 Apps for enterprise:
     - **Windows**: Minimumversion 2107 fra Current Channel eller Monthly Enterprise Channel eller minimumversion 2202 fra Semi-Annual Enterprise Channel (prøveversion)
@@ -93,12 +91,12 @@ Sørg for at forstå følgende forudsætninger, før du aktiverer denne funktion
         - Windows 10 1809 med KB 4601383
         - Windows 10 1903 og 1909 med KB-4601380
         - Windows 10 2004 med kb 4601382
-        - Windows versioner, der er nyere end Windows 10 2004, understøttes uden KB-opdateringer
+        - Windows-versioner, der er nyere end Windows 10 2004, understøttes uden KB-opdateringer
     
     - **Apps og tjenester, der bruger Microsoft Information Protection SDK:** 
         - Minimumversion af 1.7 
 
-Microsoft 365 tjenester understøtter automatisk de nye mærkatmetadata, når du aktiverer denne funktion. Eksempel:
+Microsoft 365-tjenester understøtter automatisk de nye mærkatmetadata, når du aktiverer denne funktion. Eksempel:
 
 - [Politikker for automatisk mærkning](apply-sensitivity-label-automatically.md#how-to-configure-auto-labeling-policies-for-sharepoint-onedrive-and-exchange)
 - [DLP-politikker, der bruger følsomhedsmærkater som betingelser](dlp-sensitivity-label-as-condition.md)
@@ -118,14 +116,14 @@ Før du aktiverer lejerindstillingen for samtidig redigering af filer, der er kr
     
     Specifik for Excel: Metadata for en følsomhedsmærkat, der ikke anvender kryptering, kan slettes fra en fil, hvis nogen redigerer og gemmer filen ved hjælp af en version af Excel, der ikke understøtter metadataændringerne for følsomhedsmærkater.
 
-- Understøttelse af Office apps til iOS og Android fås i øjeblikket som [prøveversion](https://office.com/insider).
+- Understøttelse af Office-apps til iOS og Android fås i øjeblikket som [prøveversion](https://office.com/insider).
 
-- Samtidig redigering og Automatisk lagring understøttes ikke og fungerer ikke for navngivne og krypterede Office dokumenter, der bruger en af følgende [konfigurationer til kryptering](encryption-sensitivity-labels.md#configure-encryption-settings):
-    - **Lad brugerne tildele tilladelser, når de anvender etiketten**, og afkrydsningsfeltet **I Word, PowerPoint og Excel skal du bede brugerne om at angive tilladelser** er markeret. Denne konfiguration kaldes nogle gange "brugerdefinerede tilladelser".
+- Samtidig redigering og Automatisk lagring understøttes ikke og fungerer ikke for navngivne og krypterede Office-dokumenter, der bruger en af følgende [konfigurationer til kryptering](encryption-sensitivity-labels.md#configure-encryption-settings):
+    - **Lad brugerne tildele tilladelser, når de anvender etiketten** , og afkrydsningsfeltet **I Word, PowerPoint og Excel skal du bede brugerne om at angive tilladelser** er markeret. Denne konfiguration kaldes nogle gange "brugerdefinerede tilladelser".
     - **Brugeradgang til indhold, der udløber,** er angivet til en anden værdi end **Aldrig**.
     - **Kryptering af dobbelt nøgle** er valgt.
     
-    For mærkater med en af disse krypteringskonfigurationer vises mærkaterne i Office apps. Men når brugerne vælger disse mærkater, og ingen andre redigerer dokumentet, bliver de advaret om, at samtidig redigering og automatisk lagring ikke er tilgængelig. Hvis en anden redigerer dokumentet, får brugerne vist en meddelelse om, at mærkaterne ikke kan anvendes.
+    For mærkater med en af disse krypteringskonfigurationer vises mærkaterne i Office-apps. Men når brugerne vælger disse mærkater, og ingen andre redigerer dokumentet, bliver de advaret om, at samtidig redigering og automatisk lagring ikke er tilgængelig. Hvis en anden redigerer dokumentet, får brugerne vist en meddelelse om, at mærkaterne ikke kan anvendes.
 
 - Hvis du bruger Azure Information Protection Unified Labeling-klient: Se dokumentationen til denne navngivningsklient for [at få flere krav eller begrænsninger](/azure/information-protection/known-issues#known-issues-for-co-authoring). 
     > [!NOTE]
@@ -138,9 +136,9 @@ Før du aktiverer lejerindstillingen for samtidig redigering af filer, der er kr
 
 Hvis du allerede har aktiveret denne indstilling i prøveperioden, er der ikke behov for yderligere handling, og du kan springe denne procedure over.
 
-1. Log på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) som global administrator for din lejer.
+1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) som global administrator for din lejer.
 
-2. Vælg **Indstillinger** >  **Co-authoring for filer med følsomhedsfiler** i navigationsruden.
+2. Vælg **Indstillinger** > **Samtidig redigering af filer med følsomhedsfiler** i navigationsruden.
 
 2. På siden **Samtidig redigering af filer med følsomhedsmærkater** skal du læse oversigtsbeskrivelsen, forudsætningerne, hvad du kan forvente, og advarslen om, at du ikke kan slå denne indstilling fra, når du har slået den til.
     
@@ -165,8 +163,8 @@ Hvis en supporttekniker deaktiverer denne indstilling for din lejer:
 
 - For apps og tjenester, der understøtter de nye mærkatmetadata, vender de nu tilbage til det oprindelige metadataformat og den oprindelige placering, når mærkater læses eller gemmes.
 
-- Det nye metadataformat og den nye placering for Office dokumenter, der blev brugt, mens indstillingen blev aktiveret, kopieres ikke til det oprindelige format og den oprindelige placering. Derfor vil disse mærkater for ukrypterede Word-, Excel- og PowerPoint-filer gå tabt.
+- Det nye metadataformat og den nye placering for Office-dokumenter, der blev brugt, mens indstillingen blev aktiveret, kopieres ikke til det oprindelige format og den oprindelige placering. Derfor vil disse mærkater for ukrypterede Word-, Excel- og PowerPoint-filer gå tabt.
 
 - Samtidig redigering og Automatisk lagring fungerer ikke længere i din lejer for navngivne og krypterede dokumenter.
 
-- Følsomhedsmærkater forbliver aktiveret for Office filer i OneDrive og SharePoint.
+- Følsomhedsmærkater forbliver aktiveret for Office-filer i OneDrive og SharePoint.

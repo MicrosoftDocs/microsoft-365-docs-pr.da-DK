@@ -18,21 +18,19 @@ search.appverid:
 - MET150
 ms.custom:
 - seo-marvel-apr2020
-description: Få mere at vide om, hvordan du bruger PowerShell til at oprette og publicere opbevaringsmærkater fra kommandolinjen uafhængigt af Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: fb39e3dee9f1bd0492c443e4a3c5f5c878808990
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+description: Få mere at vide om, hvordan du bruger PowerShell til at oprette og publicere opbevaringsmærkater fra kommandolinjen uafhængigt af Microsoft Purview-compliance-portal.
+ms.openlocfilehash: c94c2c77ffc948aa55aa7f230e471957fdb2701f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043497"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626771"
 ---
 # <a name="create-and-publish-retention-labels-by-using-powershell"></a>Opret og publicer opbevaringsmærkater ved hjælp af PowerShell
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du har besluttet at bruge [opbevaringsmærkater](retention.md) som en hjælp til at opbevare eller slette dokumenter og mails i Microsoft 365, har du måske indset, at du har mange og muligvis hundredvis af opbevaringsmærkater til at oprette og publicere. Den anbefalede metode til at oprette opbevaringsmærkater i stor skala er ved hjælp af [en filplan](file-plan-manager.md) fra Microsoft Purview-overholdelsesportalen. Du kan dog også bruge [PowerShell](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels).
+Når du har besluttet at bruge [opbevaringsmærkater](retention.md) til at hjælpe dig med at beholde eller slette dokumenter og mails i Microsoft 365, har du måske indset, at du har mange og muligvis hundredvis af opbevaringsmærkater til at oprette og publicere. Den anbefalede metode til at oprette opbevaringsmærkater i stor skala er ved hjælp af [en filplan](file-plan-manager.md) fra Microsoft Purview-compliance-portal. Du kan dog også bruge [PowerShell](retention.md#powershell-cmdlets-for-retention-policies-and-retention-labels).
 
 Brug oplysningerne, skabelonfilerne og eksemplerne og scriptet i denne artikel til at hjælpe dig med at masseoprete opbevaringsmærkater og publicere dem i politikker for opbevaringsmærkater. Derefter kan opbevaringsmærkater [anvendes af administratorer og brugere](create-apply-retention-labels.md#how-to-apply-published-retention-labels).
 
@@ -40,7 +38,7 @@ De angivne instruktioner understøtter ikke opbevaringsmærkater, der anvendes a
 
 Oversigt over:
 
-1. I Excel skal du oprette en liste over dine opbevaringsmærkater og en liste over deres politikker for opbevaringsmærkater.
+1. Opret en liste over dine opbevaringsmærkater og en liste over deres politikker for opbevaringsmærkater i Excel.
 
 2. Brug PowerShell til at oprette politikker for opbevaringsmærkater og opbevaringsmærkater på disse lister.
 
@@ -50,7 +48,7 @@ De eksempelscripts, der er angivet i denne artikel, understøttes ikke i et hvil
 
 ## <a name="step-1-create-a-csv-file-for-the-retention-labels"></a>Trin 1: Opret en .csv fil til opbevaringsmærkater
 
-1. Kopiér følgende eksempelfil .csv for en skabelon og eksempelposter for fire forskellige opbevaringsmærkater, og indsæt dem i Excel.
+1. Kopiér følgende eksempelfil .csv til en skabelon og eksempelposter for fire forskellige opbevaringsmærkater, og indsæt dem i Excel.
 
 2. Konvertér teksten til kolonner: **Fanen** \> **Data Tekst til Kolonner** \> **afgrænset** \> **komma** \> **generelt**
 
@@ -736,7 +734,7 @@ if ($ResultCSV)
 
 ## <a name="step-4-run-the-powershell-script"></a>Trin 4: Kør PowerShell-scriptet
 
-Først [skal du Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Først [skal du oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 Kør derefter scriptet, der opretter og udgiver opbevaringsmærkater:
 

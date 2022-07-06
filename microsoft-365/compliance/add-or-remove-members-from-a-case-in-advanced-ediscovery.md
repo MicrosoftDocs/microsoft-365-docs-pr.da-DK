@@ -15,24 +15,22 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du tilføjer eller fjerner de medlemmer, der har adgang til en sag, når du administrerer en eDiscovery-sag (Premium).
+description: Få mere at vide om, hvordan du tilføjer eller fjerner de medlemmer, der kan få adgang til en sag, når du administrerer en eDiscovery-sag (Premium).
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 85a8673e7e3c31ab12cda0109f6c06762adeabf3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0b3ed53ee897e88d70a7b1322999e5b81de8ed81
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091869"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627707"
 ---
 # <a name="add-or-remove-members-from-a-case"></a>Tilføj eller fjern medlemmer fra en sag
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Du kan tilføje eller fjerne medlemmer for at administrere, hvem der har adgang til sagen. Før et medlem kan få adgang til en eDiscovery-sag (Premium) (og udføre opgaver i dette tilfælde), skal du dog føje brugeren til rollegruppen eDiscovery Manager på siden **Tilladelser** i Microsoft Purview-compliance-portal. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser](./assign-ediscovery-permissions.md).
 
-Du kan tilføje eller fjerne medlemmer for at administrere, hvem der har adgang til sagen. Før et medlem kan få adgang til en eDiscovery-sag (Premium) (og udføre opgaver i dette tilfælde), skal du dog føje brugeren til rollegruppen eDiscovery Manager på siden **Tilladelser** på Microsoft Purview-overholdelsesportalen. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser](./assign-ediscovery-permissions.md).
+1. På siden **eDiscovery (Premium)** skal du gå til den sag, du vil føje et medlem til.
 
-1. Gå til den sag, du vil føje et medlem til, på siden **eDiscovery (Premium**).
-
-2. Klik på fanen **Indstillinger**, og klik derefter på **Vælg** i feltet **Adgang & tilladelser**.
+2. Klik på fanen **Indstillinger,** og klik derefter på **Vælg** i feltet **Adgang & tilladelser** .
 
 3. Under **Administrer medlemmer** skal du klikke på **Tilføj** for at føje medlemmer til sagen. Du kan også vælge at føje en rollegruppe til sagen ved at klikke på  **Tilføj** under **Administrer rollegrupper**.
 

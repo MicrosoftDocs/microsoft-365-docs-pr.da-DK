@@ -15,22 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug værktøjet til administration af eDiscovery (Premium) til nemt at få adgang til og søge efter tilsynsførende i din sag.
+description: Brug værktøjet eDiscovery (Premium) Custodian Management til nemt at få adgang til og søge efter tilsynsførende i din sag.
 ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 6f55ad389fe24e87e693e6523c7008713c6bc54b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 3ead391eee7fc35a66a0d9472278ee75878de4df
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096562"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626991"
 ---
 # <a name="view-custodian-audit-activity"></a>Vis overvågningsaktivitet for ansvarlig
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Microsoft Purview eDiscovery (Premium) er nu integreret med det eksisterende søgeværktøj til overvågningslog på Microsoft Purview-overholdelsesportalen. Ved hjælp af denne integrerede oplevelse kan du bruge værktøjet eDiscovery (Premium) Custodian Management til at lette din undersøgelse ved nemt at få adgang til og søge efter tilsynsførende i din sag.
+Har du brug for at finde ud af, om en bruger fik vist et bestemt dokument eller fjernede et element fra sin postkasse? Microsoft Purview eDiscovery (Premium) er nu integreret med det eksisterende søgeværktøj til overvågningslog i Microsoft Purview-compliance-portal. Ved hjælp af denne integrerede oplevelse kan du bruge værktøjet eDiscovery (Premium) Custodian Management til at lette din undersøgelse ved nemt at få adgang til og søge efter tilsynsførende i din sag.
 
 ## <a name="get-permissions"></a>Hent tilladelser
 
@@ -41,7 +39,7 @@ Du skal have tildelt rollen View-Only overvågningslogge eller overvågningslogg
 
 ## <a name="step-1-search-the-audit-log-for-activities-performed-by-a-custodian"></a>Trin 1: Søg i overvågningsloggen efter aktiviteter, der udføres af en tilsynsførende
 
-1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
   
 2. Klik på fanen **Kilder** .
   
@@ -74,7 +72,7 @@ Resultaterne indeholder følgende oplysninger om hver hændelse, der returneres 
 
 - **Bruger**: Den bruger (eller tjenestekonto), der udførte den handling, der udløste hændelsen.
 
-- **Aktivitet**: Den aktivitet, der udføres af brugeren. Denne værdi svarer til de aktiviteter, du har valgt på rullelisten Aktiviteter. For en hændelse fra Exchange administratorens overvågningslog er værdien i denne kolonne en Exchange cmdlet.
+- **Aktivitet**: Den aktivitet, der udføres af brugeren. Denne værdi svarer til de aktiviteter, du har valgt på rullelisten Aktiviteter. For en hændelse fra Exchange-administratorens overvågningslog er værdien i denne kolonne en Exchange-cmdlet.
 
 - **Element**: Det objekt, der blev oprettet eller ændret som følge af den tilsvarende aktivitet. Det kan f.eks. være den fil, der blev vist eller ændret, eller den brugerkonto, der blev opdateret. Ikke alle aktiviteter har en værdi i denne kolonne.
 

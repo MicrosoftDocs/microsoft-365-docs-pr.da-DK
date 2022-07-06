@@ -13,20 +13,18 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 74194d4bca71350c180799e071936b75044a6b4e
-ms.sourcegitcommit: 612ce4d15d8a2fdbf7795393b50af477d81b6139
+ms.openlocfilehash: 631df77a6f10c15dafcb78e58a715a029d32bb73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65663684"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627541"
 ---
 # <a name="double-key-encryption"></a>Kryptering med dobbelt nøgle
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-> *Gælder for: kryptering med Microsoft Purview dobbelt nøgle, [Microsoft Purview](https://www.microsoft.com/microsoft-365/business/compliance-management), [Azure Information Protection](https://azure.microsoft.com/pricing/)*
+> *Gælder for: Microsoft Purview Double Key Encryption, [Microsoft Purview](https://www.microsoft.com/microsoft-365/business/compliance-management), [Azure Information Protection](https://azure.microsoft.com/pricing/)*
 >
-> *Instruktioner til: [Azure Information Protection Unified Labeling-klient til Windows](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
+> *Instruktioner til: [Azure Information Protection Unified Labeling Client til Windows](/azure/information-protection/faqs#whats-the-difference-between-the-azure-information-protection-classic-and-unified-labeling-clients)*
 
 > *Tjenestebeskrivelse af: [Microsoft Purview](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
@@ -60,11 +58,11 @@ Hvis din organisation har et af følgende krav, kan du bruge DKE til at hjælpe 
 
 ## <a name="system-and-licensing-requirements-for-dke"></a>System- og licenskrav til DKE
 
-**Kryptering med dobbelt nøgle** leveres med Microsoft 365 E5. Hvis du ikke har en Microsoft 365 E5 licens, kan du tilmelde dig en [prøveversion](https://aka.ms/M365E5ComplianceTrial). Du kan finde flere oplysninger om disse licenser [i Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+**Kryptering med dobbelt nøgle** leveres med Microsoft 365 E5. Hvis du ikke har en Microsoft 365 E5 licens, kan du tilmelde dig en [prøveversion](https://aka.ms/M365E5ComplianceTrial). Du kan finde flere oplysninger om disse licenser i [Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 **Azure Information Protection**. DKE fungerer med følsomhedsmærkater og kræver Azure Information Protection.
 
-DKE-følsomhedsmærkater gøres tilgængelige for slutbrugerne via følsomhedsknappen i AIP Unified Labeling-klienten i Office Desktop Apps. Installér disse forudsætninger på hver klientcomputer, hvor du vil beskytte og bruge beskyttede dokumenter.
+DKE-følsomhedsmærkater gøres tilgængelige for slutbrugere via følsomhedsknappen i AIP Unified Labeling-klienten i Office Desktop Apps. Installér disse forudsætninger på hver klientcomputer, hvor du vil beskytte og bruge beskyttede dokumenter.
 
 **Microsoft Office Apps for enterprise** version 2009 eller nyere (Desktop-versioner af Word, PowerPoint og Excel) på Windows.
 
@@ -92,12 +90,11 @@ Du kan udføre nogle af trinnene for at installere kryptering med dobbelt nøgle
 
 I denne artikel og i installationsvideoen bruges Azure som udrulningsdestination for DKE-tjenesten. Hvis du udruller til en anden placering, skal du angive dine egne værdier.
 
-Se [videoen om udrulning af dobbeltnøglekryptering](https://youtu.be/vDWfHN_kygg) for at se en trinvis oversigt over begreberne i denne artikel. Det tager ca. 18 minutter at fuldføre videoen.
 
 Du skal følge disse generelle trin for at konfigurere kryptering med dobbelt nøgle for din organisation.
 
 1. [Installér softwareforudsætningerne for DKE-tjenesten](#install-software-prerequisites-for-the-dke-service)
-1. [Klon lageret med dobbelt nøglekryptering GitHub](#clone-the-dke-github-repository)
+1. [Klon GitHub-lageret med dobbelt nøglekryptering](#clone-the-dke-github-repository)
 1. [Rediger programindstillinger](#modify-application-settings)
 1. [Generér testnøgler](#generate-test-keys)
 1. [Byg projektet](#build-the-project)
@@ -116,11 +113,11 @@ Installér disse forudsætninger på den computer, hvor du vil installere DKE-tj
 
 **.NET Core 3.1 SDK**. Download og installér SDK'et fra [Download .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
-**Visual Studio Kode**. Hent Visual Studio kode fra [https://code.visualstudio.com/](https://code.visualstudio.com). Når den er installeret, skal du køre Visual Studio Kode og vælge **Vis** \> **udvidelser**. Installér disse udvidelser.
+**Visual Studio Code**. Download Visual Studio Code fra [https://code.visualstudio.com/](https://code.visualstudio.com). Når Visual Studio Code er installeret, skal du vælge **Vis** \> **udvidelser**. Installér disse udvidelser.
 
-- C# for Visual Studio-kode
+- C# til Visual Studio Code
 
-- NuGet-Pakkestyring
+- NuGet Package Manager
 
 **Git-ressourcer**. Download og installér en af følgende.
 
@@ -132,11 +129,11 @@ Installér disse forudsætninger på den computer, hvor du vil installere DKE-tj
 
 **Openssl** Du skal have [OpenSSL](https://slproweb.com/products/Win32OpenSSL.html) installeret for at [kunne generere testnøgler](#generate-test-keys) , når du har installeret DKE. Sørg for, at du aktiverer den korrekt fra stien til dine miljøvariabler. Se f.eks. "Føj installationsmappen til PATH" på [https://www.osradar.com/install-openssl-windows/](https://www.osradar.com/install-openssl-windows/) for at få flere oplysninger.
 
-### <a name="clone-the-dke-github-repository"></a>Klon DKE-GitHub-lageret
+### <a name="clone-the-dke-github-repository"></a>Klon DKE GitHub-lageret
 
-Microsoft leverer DKE-kildefilerne i et GitHub lager. Du kloner lageret for at bygge projektet lokalt til din organisations brug. DKE GitHub lager er placeret på [https://github.com/Azure-Samples/DoubleKeyEncryptionService](https://github.com/Azure-Samples/DoubleKeyEncryptionService).
+Microsoft leverer DKE-kildefilerne i et GitHub-lager. Du kloner lageret for at bygge projektet lokalt til din organisations brug. DKE GitHub-lageret er placeret på [https://github.com/Azure-Samples/DoubleKeyEncryptionService](https://github.com/Azure-Samples/DoubleKeyEncryptionService).
 
-Følgende instruktioner er beregnet til uerfarne brugere af git eller Visual Studio kode:
+Følgende instruktioner er beregnet til uerfarne brugere af Git eller Visual Studio Code:
 
 1. I din browser skal du gå til: [https://github.com/Azure-Samples/DoubleKeyEncryptionService](https://github.com/Azure-Samples/DoubleKeyEncryptionService).
 
@@ -150,17 +147,17 @@ Følgende instruktioner er beregnet til uerfarne brugere af git eller Visual Stu
 3. I Visual Studio Code skal du vælge **Vis** \> **kommandopalet** og vælge **Git: Klon**. Hvis du vil gå til indstillingen på listen, skal du begynde at skrive `git: clone` for at filtrere posterne og derefter vælge det på rullelisten. Eksempel:
 
    > [!div class="mx-imgBorder"]
-   > ![Visual Studio indstillingen GIT:Clone.](../media/dke-vscode-clone.png)
+   > ![Indstillingen Visual Studio Code GIT:Clone.](../media/dke-vscode-clone.png)
 
-4. Indsæt den URL-adresse, du kopierede fra Git, i tekstfeltet, og vælg **Klon fra GitHub**.
+4. I tekstfeltet skal du indsætte den URL-adresse, du kopierede fra Git, og vælge **Klon fra GitHub**.
 
 5. I dialogboksen **Vælg mappe** , der vises, skal du gå til og vælge en placering, hvor lageret skal gemmes. Vælg **Åbn** ved prompten.
 
     Lageret åbnes i Visual Studio Code og viser den aktuelle Git-forgrening nederst til venstre. Forgreningen skal f.eks. være **den primære**. Eksempel:
 
-   ![Skærmbillede af DKE-lageret i Visual Studio kode, der viser hovedgrenen.](../media/dke-vscode-main-branch.jpg)
+   ![Skærmbillede af DKE-lageret i Visual Studio Code, der viser hovedgrenen.](../media/dke-vscode-main-branch.jpg)
 
-6. Hvis du ikke er på hovedgrenen, skal du vælge den. I Visual Studio Code skal du vælge forgreningen og vælge **hoved** på listen over viste forgreninger.
+6. Hvis du ikke er på hovedgrenen, skal du vælge den. I Visual Studio Code skal du vælge forgreningen og vælge **hoved** på listen over forgreninger, der vises.
 
    > [!IMPORTANT]
    > Hvis du vælger hovedgrenen, sikrer du, at du har de korrekte filer til at oprette projektet. Hvis du ikke vælger den korrekte forgrening, mislykkes installationen.
@@ -174,7 +171,7 @@ Hvis du vil installere DKE-tjenesten, skal du ændre følgende programindstillin
 - [Indstillinger for nøgleadgang](#key-access-settings)
 - [Lejer- og nøgleindstillinger](#tenant-and-key-settings)
 
-Du ændrer programindstillingerne i filen appsettings.json. Denne fil er placeret i det DoubleKeyEncryptionService-lager, du klonede lokalt under DoubleKeyEncryptionService\src\customer-key-store. I Visual Studio Kode kan du f.eks. gå til filen som vist på følgende billede.
+Du ændrer programindstillingerne i filen appsettings.json. Denne fil er placeret i det DoubleKeyEncryptionService-lager, du klonede lokalt under DoubleKeyEncryptionService\src\customer-key-store. I Visual Studio Code kan du f.eks. gå til filen som vist på følgende billede.
 
 ![Søgning efter filen appsettings.json for DKE.](../media/dke-appsettingsjson.png)
 
@@ -249,10 +246,10 @@ DKE-lejer- og nøgleindstillinger er placeret i **filen appsettings.json** .
 > [!NOTE]
 > Hvis du vil aktivere ekstern B2B-adgang til dit nøglelager, skal du også inkludere disse eksterne lejere som en del af listen over gyldige udstedere.
 
-`JwtAudience`Find . Erstat `<yourhostname>` med værtsnavnet på den computer, hvor DKE-tjenesten skal køre. Eksempel:
+`JwtAudience`Find . Erstat `<yourhostname>` med værtsnavnet på den computer, hvor DKE-tjenesten skal køre. Eksempel: "https://dkeservice.contoso.com"
 
   > [!IMPORTANT]
-  > Værdien for `JwtAudience` skal svare *nøjagtigt* til navnet på din vært. Du kan bruge **localhost:5001** under fejlfinding. Når du er færdig med at foretage fejlfinding, skal du dog sørge for at opdatere denne værdi til serverens værtsnavn.
+  > Værdien for `JwtAudience` skal svare *nøjagtigt* til navnet på din vært.  
 
 - `TestKeys:Name`. Angiv et navn til din nøgle. For eksempel: `TestKey1`
 - `TestKeys:Id`. Opret et GUID, og angiv det som `TestKeys:ID` værdien. Det kunne f.eks. være `DCE1CC21-FF9B-4424-8FF4-9914BD19A1BE`. Du kan bruge et websted som [Online GUID Generator](https://guidgenerator.com/) til tilfældigt at generere et GUID.
@@ -267,7 +264,7 @@ Når du har defineret dine programindstillinger, er du klar til at generere offe
 
 Sådan opretter du nøgler:
 
-1. Kør OpenSSL-kommandoprompten fra Windows menuen Start.
+1. Kør OpenSSL-kommandoprompten i Menuen Start i Windows.
 
 1. Skift til den mappe, hvor du vil gemme testnøglerne. De filer, du opretter ved at fuldføre trinnene i denne opgave, gemmes i den samme mappe.
 
@@ -305,7 +302,7 @@ Sådan opretter du nøgler:
     > [!IMPORTANT]
     > Når du kopierer dette indhold, skal du ikke slette nogen af PEM-dataene.
 
-1. I Visual Studio Code skal du gå til filen **Startup.cs**. Denne fil er placeret i det DoubleKeyEncryptionService-lager, du klonede lokalt under DoubleKeyEncryptionService\src\customer-key-store\.
+1. Gå til filen **Startup.cs** i Visual Studio Code. Denne fil er placeret i det DoubleKeyEncryptionService-lager, du klonede lokalt under DoubleKeyEncryptionService\src\customer-key-store\.
 
 1. Find følgende linjer:
 
@@ -361,17 +358,8 @@ Brug følgende instruktioner til at bygge DKE-projektet lokalt:
 
    Hvis der er røde fejl, skal du kontrollere konsoloutputtet. Sørg for, at du har fuldført alle tidligere trin korrekt, og at de korrekte buildversioner er til stede.
 
-4. Vælg **Kør** \> **Start fejlfinding** for at foretage fejlfinding af processen. Hvis du bliver bedt om at vælge et miljø, skal du vælge **.NET Core**.
 
-   .NET Core-fejlfindingsprogrammet starter typisk til `https://localhost:5001`. Hvis du vil have vist testnøglen, skal du gå til `https://localhost:5001` og tilføje en skråstreg (/) og navnet på din nøgle. Eksempel:
-
-   ```https
-   https://localhost:5001/TestKey1
-   ```
-
-   Nøglen skal vises i JSON-format.
-
-Konfigurationen er nu fuldført. Før du publicerer keystore i appsettings.json for indstillingen JwtAudience, skal du sikre, at værdien for værtsnavnet stemmer nøjagtigt overens med dit App Service værtsnavn. Du har muligvis ændret den til localhost for at foretage fejlfinding af buildet.
+Konfigurationen er nu fuldført. Før du publicerer keystore i appsettings.json for indstillingen JwtAudience, skal du sikre, at værdien for værtsnavnet stemmer nøjagtigt overens med dit App Service værtsnavn. 
 
 ### <a name="deploy-the-dke-service-and-publish-the-key-store"></a>Udrul DKE-tjenesten, og publicer nøglelageret
 
@@ -385,7 +373,7 @@ I forbindelse med pilotudrulninger kan du udrulle i Azure og komme i gang med de
 
 Hvis du vil publicere nøglelageret, skal du oprette en Azure App Service instans, der skal hoste din DKE-udrulning. Derefter skal du publicere dine genererede nøgler på Azure.
 
-1. Log på [Microsoft Azure-portalen](https://ms.portal.azure.com) i din browser, og gå til **Tilføj** **apptjenester** > .
+1. Log på [Microsoft Azure Portal](https://ms.portal.azure.com) i din browser, og gå til **Tilføj** **apptjenester** > .
 
 2. Vælg dit abonnement og din ressourcegruppe, og definer oplysninger om din forekomst.
 
@@ -410,7 +398,7 @@ Hvis du vil publicere nøglelageret, skal du oprette en Azure App Service instan
 
 1. Gå til `https://<WebAppInstanceName>.scm.azurewebsites.net/ZipDeployUI`.
 
-   For eksempel: `https://dkeservice.scm.azurewebsites.net/ZipDeployUI`
+   For eksempel: `https://dkeservice.contoso.scm.azurewebsites.net/ZipDeployUI`
 
 2. I kodebasen for nøglelageret skal du gå til mappen **customer-key-store\src\customer-key-store** og kontrollere, at denne mappe indeholder filen **customerkeystore.csproj** .
 
@@ -428,7 +416,7 @@ DKE er udrullet, og du kan gå til de testnøgler, du har oprettet. Fortsæt med
 
 #### <a name="publish-via-ftp"></a>Udgiv via FTP
 
-1. Forbind til de App Service, du oprettede [ovenfor](#deploy-the-dke-service-and-publish-the-key-store).
+1. Opret forbindelse til de App Service, du oprettede [ovenfor](#deploy-the-dke-service-and-publish-the-key-store).
 
    Gå til: **Azure Portal** >  **App Service** >  **Deployment Center** > **Manual Deployment** > **FTP** > **Dashboard** i browseren.
 
@@ -450,7 +438,7 @@ DKE er udrullet, og du kan gå til de testnøgler, du har oprettet. Fortsæt med
 
 6. Send alle filer i mappen Publicer til en zip-fil. Når du opretter den .zip fil, skal du sørge for, at alle filer i mappen er på rodniveau for .zip-filen.
 
-7. Brug de forbindelsesoplysninger, du kopierede, fra FTP-klienten til at oprette forbindelse til App Service. Upload den .zip fil, du oprettede i det forrige trin, til rodmappen for din Web App.
+7. Brug de forbindelsesoplysninger, du kopierede, fra FTP-klienten til at oprette forbindelse til App Service. Upload den .zip fil, du oprettede i det forrige trin, til rodmappen på din Web App.
 
 DKE er udrullet, og du kan gå til de testnøgler, du har oprettet. Derefter [skal du validere udrulningen](#validate-your-deployment).
 
@@ -467,7 +455,7 @@ src\customer-key-store\scripts\key_store_tester.ps1 dkeserviceurl/mykey
 Eksempel:
 
 ```powershell
-key_store_tester.ps1 https://mydkeservice.com/mykey
+key_store_tester.ps1 https://dkeservice.contoso.com/TestKey1
 ```
 
 Sørg for, at der ikke vises nogen fejl i outputtet. Når du er klar, [skal du registrere din nøglebutik](#register-your-key-store).
@@ -480,15 +468,13 @@ Følgende trin giver dig mulighed for at registrere din DKE-tjeneste. Registreri
 
 Sådan registrerer du DKE-tjenesten:
 
-1. Åbn [Microsoft Azure-portalen](https://ms.portal.azure.com/) i browseren, og gå til **Alle** **tjenesteidentitetsappregistreringer** \> \>.
+1. Åbn [Microsoft Azure Portal](https://ms.portal.azure.com/) i din browser, og gå til **Alle** **tjenesteidentitetsappregistreringer** \> \>.
 
 2. Vælg **Ny registrering**, og angiv et sigende navn.
 
 3. Vælg en kontotype i de viste indstillinger.
 
-   Hvis du bruger Microsoft Azure med et ikke-brugerdefineret domæne, f.eks **. onmicrosoft.com**, skal du vælge **Kun konti i denne organisationsmappe (kun Microsoft – Enkelt lejer).**
-
-   Eksempel:
+    Eksempel:
 
    > [!div class="mx-imgBorder"]
    > ![Ny appregistrering.](../media/dke-app-registration.png)
@@ -507,10 +493,9 @@ Sådan registrerer du DKE-tjenesten:
 
    - Den URL-adresse, du angiver, skal svare til det værtsnavn, hvor din DKE-tjeneste er installeret.
    - Domænet skal være et [bekræftet domæne](/azure/active-directory/develop/reference-breaking-changes#appid-uri-in-single-tenant-applications-will-require-use-of-default-scheme-or-verified-domains).
-   - Hvis du tester lokalt med Visual Studio, skal du bruge `https://localhost:5001`.
-   - I alle tilfælde skal skemaet være **https**.
+    - I alle tilfælde skal skemaet være **https**.
 
-   Sørg for, at værtsnavnet stemmer nøjagtigt overens med App Service værtsnavn. Du har muligvis ændret den for at `localhost` foretage fejlfinding af buildet. I **appsettings.json** er denne værdi det værtsnavn, du har angivet for `JwtAudience`.
+   Sørg for, at værtsnavnet stemmer nøjagtigt overens med App Service værtsnavn.
 
 9. Under **Implicit tildeling** skal du markere afkrydsningsfeltet **Id-tokens** .
 
@@ -534,7 +519,7 @@ Sådan registrerer du DKE-tjenesten:
 
     I det nye klientprogram:
 
-    1. Definer klient-id'et som `d3590ed6-52b3-4102-aeff-aad2292ab01c`. Denne værdi er det Microsoft Office klient-id og gør det muligt for Office at hente et adgangstoken til dit nøglelager.
+    1. Definer klient-id'et som `d3590ed6-52b3-4102-aeff-aad2292ab01c`. Denne værdi er Microsoft Office-klient-id'et og gør det muligt for Office at hente et adgangstoken til dit nøglelager.
 
     2. Vælg området **user_impersonation** under **Godkendte områder**.
 

@@ -1,7 +1,7 @@
 ---
-title: Brugerdashboard for Insiders til risikostyring
-description: Få mere at vide om insider-dashboardet Brugere i Microsoft 365
-keywords: Microsoft 365, insider-risikostyring, risikostyring, overholdelse af regler og standarder
+title: Dashboard for brugere af styring af insiderrisiko
+description: Få mere at vide om insiderrisikostyring Brugerdashboard i Microsoft Purview
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse af angivne standarder
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,108 +13,108 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: a690f007b05709b094edd0c9d72417715875dfaf
-ms.sourcegitcommit: efb333ce0772265da91632110acba39acfbe0bde
+ms.openlocfilehash: 05adeb86c5e4da5119a5aae184721ec667564b49
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/01/2021
-ms.locfileid: "63588763"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629481"
 ---
-# <a name="insider-risk-management-users-dashboard"></a>Brugerdashboard for Insiders til risikostyring
+# <a name="insider-risk-management-users-dashboard"></a>Dashboard for brugere af styring af insiderrisiko
 
-**Brugerdashboardet** er et vigtigt værktøj i arbejdsprocessen for insider-risikostyring og hjælper virksomheder og analytikere med at få en mere komplet forståelse af risikoaktiviteter. Dette dashboard indeholder visninger og administrationsfunktioner, der opfylder administrative behov mellem oprettelse af insider-politikker til risikostyring og administration af insider-risikostyringssager.
+**Dashboardet Brugere** er et vigtigt værktøj i arbejdsprocessen for styring af insiderrisiko og hjælper efterforskere og analytikere med at få en mere komplet forståelse af risikoaktiviteter. Dette dashboard indeholder visninger og administrationsfunktioner, der opfylder administrative behov mellem oprettelse af politikker for styring af insiderrisiko og administration af insiderrisikostyringssager.
 
-Når brugere er føjet til politikker for insider-risikostyring, evaluerer baggrundsprocesser automatisk brugeraktiviteter til [at udløse indikatorer](insider-risk-management-settings.md#indicators). Når der er udløst indikatorer, tildeles brugeraktiviteterne risikoresultater. Nogle af disse aktiviteter kan resultere i en insider-risikobesked, men nogle aktiviteter opfylder muligvis ikke et minimum for risikoscore, og der oprettes ikke en insider-risikobesked. Med **dashboardet Brugere** kan du få vist brugere med disse typer indikatorer og risikoresultater samt brugere, der har aktive Insider-risikobeskeder.
+Når brugerne er føjet til politikker for styring af insiderrisiko, evaluerer baggrundsprocesser automatisk brugeraktiviteter for [udløserindikatorer](insider-risk-management-settings.md#indicators). Når der er udløste indikatorer, tildeles brugeraktiviteterne risikoscores. Nogle af disse aktiviteter kan resultere i en insiderrisikoadvarsel, men nogle aktiviteter opfylder muligvis ikke et minimumniveau for risikoscore, og der oprettes ikke en insiderrisikobesked. **Dashboardet Brugere** giver dig mulighed for at få vist brugere med disse typer indikatorer og risikoscores samt brugere, der har aktive insiderrisikobeskeder.
 
 Få mere at vide om, hvordan dashboardet Brugere viser brugere i følgende scenarier:
 
-- Brugere med besked om aktiv insider-risikopolitik
+- Brugere med aktive beskeder om insiderrisikopolitik
 - Brugere med udløsende hændelser
 - Brugere, der er føjet midlertidigt til politikker
 
-## <a name="users-with-active-insider-risk-policy-alerts"></a>Brugere med besked om aktiv insider-risikopolitik
+## <a name="users-with-active-insider-risk-policy-alerts"></a>Brugere med aktive beskeder om insiderrisikopolitik
 
-**Dashboardet Brugere** viser automatisk alle brugere med aktive insider-risikopolitikbeskeder. Disse brugere med beskeder har både en udløsende indikator og en aktivitetsscore, der opfylder kravene til oprettelse af en Insider-risikobesked. Aktiviteter for disse brugere vises ved at vælge brugeren i **dashboardet Brugere** og navigere til **fanen Brugeraktivitet** .
+**Dashboardet Brugere** viser automatisk alle brugere med aktive beskeder om insiderrisikopolitik. Disse brugere med beskeder har både en udløserindikator og en aktivitetsrisikoscore, der opfylder kravene til oprettelse af en insiderrisikobesked. Aktiviteter for disse brugere vises ved at vælge brugeren på **dashboardet Brugere** og navigere til fanen **Brugeraktivitet** .
 
 ## <a name="users-with-triggering-events"></a>Brugere med udløsende hændelser
 
-**Brugerdashboardet** viser automatisk alle brugere med udløsende hændelser, men som ikke har en aktivitets risikoscore, som ville oprette en Insider-risikobesked. Eksempelvis vises en bruger med en rapporteret dato for udfald, fordi denne aktivitet er en udløsende hændelse, men ikke er en aktivitet, der har et risikoresultat. Aktiviteter for disse brugere vises ved at vælge brugeren i **dashboardet Brugere** og navigere til **fanen Brugeraktivitet** .
+**Dashboardet Brugere** viser automatisk alle brugere med udløsende hændelser, men som ikke har en aktivitetsrisikoscore, der ville oprette en insiderrisikobesked. En bruger med en rapporteret fratrædelsesdato vises f.eks., fordi denne aktivitet er en udløsende hændelse, men ikke en aktivitet, der har en risikoscore. Aktiviteter for disse brugere vises ved at vælge brugeren på **dashboardet Brugere** og navigere til fanen **Brugeraktivitet** .
 
 ## <a name="users-added-temporarily-to-policies"></a>Brugere, der er føjet midlertidigt til politikker
 
-**Brugerdashboardet** omfatter brugere, der er føjet til politikker for insider-risikostyring efter en usædvanlig begivenhed uden for insider-risikostyringsarbejdsprocessen. Midlertidig tilføjelse af brugere (fra dashboardet Politikker) er også en metode til at begynde at score brugeraktivitet for en insider-risikostyringspolitik til test af politikken, også selvom en påkrævet forbindelse ikke er konfigureret.
+**Dashboardet Brugere** indeholder brugere, der er føjet til politikker for styring af insiderrisiko efter en usædvanlig hændelse uden for arbejdsprocessen for styring af insiderrisiko. Midlertidig tilføjelse af brugere (fra dashboardet Politikker) er også en måde at starte scoring af brugeraktivitet for en politik for styring af insiderrisiko for at teste politikken, også selvom en påkrævet connector ikke er konfigureret.
 
-Når en bruger føjes manuelt til en politik, får brugerens aktiviteter de seneste 90 dage point og føjes til **tidslinjen for brugeraktivitet** . Du har f.eks. en bruger, der i øjeblikket ikke får tildelt risikoresultater for en Insider-risikopolitik, og brugeren har rapporteret datalækageaktiviteter til den juridiske afdeling i din organisation. Den juridiske afdeling anbefaler, at du konfigurerer nye kortvarige overvågningskrav til brugeren. Du kan midlertidigt tildele brugeren til din *politik for datalækager* i en bestemt periode (aktiveringsvindue). Alle brugere, der er tilføjet midlertidigt, vises i **brugerdashboardet** , fordi krav til udløserhændelser frafaldes.
+Når en bruger føjes manuelt til en politik, bliver brugeraktiviteterne for de forrige 90 dage scoret og føjet til tidslinjen **Brugeraktivitet** . Du har f.eks. en bruger, der i øjeblikket ikke er tildelt risikoscores for en insiderrisikopolitik, og brugeren har rapporteret datalækageaktiviteter til den juridiske afdeling i din organisation. Den juridiske afdeling anbefaler, at du konfigurerer nye kortfristede overvågningskrav for brugeren. Du kan midlertidigt tildele brugeren til din politik for *datalækager* i et angivet tidsrum (aktiveringsvindue). Alle brugere, der er tilføjet midlertidigt, vises i **dashboardet Brugere** , fordi der er givet afkald på krav om udløsende hændelser.
 
 > [!NOTE]
-> Det kan tage flere timer, før nye manuelt tilføjede brugere vises i **brugerdashboardet**. Det kan tage op til 24 timer at få vist aktiviteter for disse brugere i de foregående 90 dage. Hvis du vil have vist aktiviteter for manuelt tilføjede brugere, skal du vælge brugeren på **dashboardet** Brugere og åbne **fanen** Brugeraktivitet i detaljeruden.
+> Det kan tage flere timer, før nye manuelt tilføjede brugere vises i **dashboardet Brugere**. Det kan tage op til 24 timer at vise aktiviteter for de foregående 90 dage for disse brugere. Hvis du vil have vist aktiviteter for manuelt tilføjede brugere, skal du vælge brugeren på **dashboardet Brugere** og åbne fanen **Brugeraktivitet** i detaljeruden.
 
-Brugeren fjernes automatisk fra dashboardet Brugere, **og pointdeling** stopper, når den tid, der er angivet i **aktiveringsvinduet** , udløber, hvis:
+Brugeren fjernes automatisk fra **dashboardet Brugere** , og scoren stopper, når den tid, der er defineret i **aktiveringsvinduet** , udløber, hvis:
 
-- brugeren ikke har nogen yderligere udløsende hændelser eller insider-risikopolitikbeskeder, og
-- hvis den manuelt definerede varighed **af aktiveringsvinduet** er længere end varigheden af den globale politik **Aktiveringsvindue** .
+- brugeren ikke har yderligere udløserhændelser eller beskeder om insiderrisikopolitik, og
+- hvis den manuelt definerede varighed af **aktiveringsvinduet** er længere end varigheden af den globale politik **Aktiveringsvindue** .
 
-Indstillingen **Aktiveringsvindue** med den længste varighed tilsidesætter altid **indstillingen Aktiveringsvindue** med en kortere varighed. Du har f.eks. konfigureret vinduet  Aktivering under fanen Global **politiks** tidsrammer i de globale indstillinger for insider-risikostyring i 15 dage, som automatisk anvendes på alle dine Insider-risikopolitikker.
+Indstillingen **aktiveringsvindue** med den længstvarende varighed tilsidesætter altid indstillingen **aktiveringsvindue** med en kortere varighed. Du har f.eks. konfigureret **vinduet Aktivering** under fanen Globale **politiktidsrammer** i de globale indstillinger for styring af insiderrisiko i 15 dage, som automatisk anvendes på alle dine insiderrisikopolitikker.
 
-Du føjer midlertidigt en bruger til din *politik* for datalækager og definerer 30 dage som **aktiveringsvinduet** for denne bruger. Indstillingen for **den globale aktiveringsvindue** på 15 dage tilsidesættes ved at definere indstillingen  aktiveringsvindue på 30 dage for den midlertidigt tilføjede bruger. Den midlertidigt tilføjede bruger forbliver i **dashboardet Brugere** og er i 30 dage i politikkens område.
+Du føjer midlertidigt en bruger til politikken for insiderrisiko for *datalækager* og definerer 30 dage som **aktiveringsvinduet** for denne bruger. Den globale indstilling **for aktiveringsvinduet** på 15 dage tilsidesættes ved at definere indstillingen for **aktiveringsvinduet** på 30 dage for den midlertidigt tilføjede bruger. Den midlertidigt tilføjede bruger forbliver i **dashboardet Brugere** og er omfattet af politikken i 30 dage.
 
-I det modsatte scenarie, hvor indstillingen  for det globale aktiveringsvindue er  længere end indstillingen Aktiveringsvindue, der er defineret for en midlertidigt tilføjet bruger, tilsidesætter den globale indstilling af aktiveringsvinduet indstillingen for den midlertidigt tilføjede bruger.  Den midlertidigt tilføjede bruger forbliver i **dashboardet** Brugere og er i omfang for politikken i det antal dage, der er defineret i de globale indstillinger **for aktiveringsvindue** .
+I det modsatte scenarie, hvor den globale indstilling **for aktiveringsvinduet** er længere end den indstilling for **aktiveringsvinduet** , der er defineret for en bruger, der er tilføjet midlertidigt, tilsidesætter den globale indstilling for **aktiveringsvinduet** **indstillingen for** den midlertidigt tilføjede bruger. Den midlertidigt tilføjede bruger forbliver i **dashboardet Brugere** og er omfattet af politikken for det antal dage, der er defineret i indstillingerne for det globale **aktiveringsvindue** .
 
-## <a name="view-user-information-on-the-users-dashboard"></a>Få vist brugeroplysninger på dashboardet Brugere
+## <a name="view-user-information-on-the-users-dashboard"></a>Få vist brugeroplysninger på brugerdashboardet
 
-Hver enkelt bruger, der vises i **dashboardet Brugere** , har følgende oplysninger:
+Hver bruger, der vises i **dashboardet Brugere** , har følgende oplysninger:
 
-- **Brugere**: Brugernavnet for en bruger. Dette felt anonymiseres, hvis indstillingen for global anonymisering for Insider Risk Management er aktiveret.
-- **Risikoniveau**: Brugerens aktuelle beregnede risikoniveau. Dette resultat beregnes hver 24. time og bruger risikoresultater fra alle aktive beskeder, der er knyttet til brugeren. For brugere, der kun udløser indikatorer, er risikoniveauet nul.
+- **Brugere**: Brugernavnet for en bruger. Dette felt anonymiseres, hvis den globale indstilling for anonymisering af insiderrisikostyring er aktiveret.
+- **Risikoniveau**: Brugerens aktuelle beregnede risikoniveau. Denne score beregnes hvert 24. time og bruger scorerne for beskedrisikoen fra alle aktive beskeder, der er knyttet til brugeren. For brugere, der kun har udløserindikatorer, er risikoniveauet nul.
 - **Aktive beskeder**: Antallet af aktive beskeder for alle politikker.
-- **Bekræftede overtrædelser**: Antallet af tilfælde, der er blevet løst som *en bekræftet overtrædelse* af politikken for brugeren.
-- **Sag**: Den aktuelle aktive sag for brugeren.
+- **Bekræftede overtrædelser**: Antallet af sager, der er løst som *bekræftet politikovertrædelse* for brugeren.
+- **Case**: Den aktuelle aktive sag for brugeren.
 
-Hvis du hurtigt vil finde en bestemt bruger, **skal du** bruge Søg i øverste højre hjørne af brugerdashboardet. Når du søger efter brugere, skal du bruge brugerens hovednavn (UPN). Når du f.eks. søger efter en bruger ved navn "Tiara Hidayah", der har et UPN af 'thidayah' i organisationen, skal du skrive 'thidayah' eller en del af UPN'en i **søgning**.
+Hvis du hurtigt vil finde en bestemt bruger, skal du bruge **Søg** øverst til højre på brugerdashboardet. Når du søger efter brugere, skal du bruge brugerens hovednavn (UPN). Når du f.eks. søger efter en bruger med navnet 'Tiara Hidayah', der har et UPN med 'thidayah' i din organisation, skal du angive 'thidayah' eller en del af UPN'et i **Søg**.
 
-![Insider-dashboard for brugere af risikostyring.](../media/insider-risk-users-dashboard.png)
+![Dashboard for brugere af styring af insiderrisiko.](../media/insider-risk-users-dashboard.png)
 
 > [!NOTE]
-> Antallet af brugere, der vises på **dashboardet** Brugere, kan i nogle tilfælde være begrænset, afhængigt af mængden af aktive beskeder og politikker, der matcher. Brugere med aktive beskeder vises på dashboardet Brugere,  efterhånden som beskederne genereres, og der kan være sjældne tilfælde, hvor det maksimale antal viste brugere er nået. Hvis denne grænse forekommer, føjes brugere med aktive beskeder, der ikke vises, til brugerdashboardet, efterhånden som eksisterende brugerbeskeder om problemer ændres.
+> Antallet af brugere, der vises på **dashboardet Brugere** , kan være begrænset i nogle tilfælde, afhængigt af mængden af aktive beskeder og matchende politikker. Brugere med aktive beskeder vises på **dashboardet Brugere** , efterhånden som beskederne genereres, og der kan være sjældne tilfælde, hvor det maksimale antal viste brugere nås. Hvis denne grænse sker, føjes brugere med aktive beskeder, der ikke vises, til **brugerdashboardet** , efterhånden som eksisterende brugerbeskeder filtreres.
 
 ## <a name="view-user-details"></a>Vis brugeroplysninger
 
-Hvis du vil have vist flere oplysninger om risikoaktivitet for en bruger, skal du åbne ruden med brugeroplysninger ved at dobbeltklikke på en bruger i **dashboardet Brugere**. I detaljeruden kan du få vist følgende oplysninger:
+Hvis du vil have vist flere oplysninger om risikoaktivitet for en bruger, skal du åbne ruden med brugeroplysninger ved at dobbeltklikke på en bruger på **dashboardet Brugere**. I detaljeruden kan du få vist følgende oplysninger:
 
 - **Fanen Brugerprofil**
-  - **Navn og titel**: Brugerens navn og stilling i Azure Active Directory. Disse brugerfelter bliver anonymiserede eller tomme, hvis indstillingen for global anonymisering for insider-risikostyring er aktiveret.
+  - **Navn og titel**: Brugerens navn og stillingstitel fra Azure Active Directory. Disse brugerfelter anonymiseres eller tomme, hvis den globale indstilling for anonymisering af styring af insiderrisiko er aktiveret.
   - **Brugermail**: Brugerens mailadresse.
   - **Alias**: Brugerens netværksalias.
   - **Organisation eller afdeling**: Brugerens organisation eller afdeling.
 
 - **Fanen Brugeraktivitet**
-  - **Oversigt over de seneste brugeraktiviteter**: Viser både udløsende indikatorer og Insider-risikoindikatorer for brugeraktiviteter op til de seneste 180 dage. Alle aktiviteter, der er relevante for insider-risikoindikatorer, scores også, selvom aktiviteterne muligvis eller ikke har genereret en insider-risikobesked. Det kan være en dato eller den seneste planlagte arbejdsdato for brugeren, der udløser indikatorekseler. Insider-risikoindikatorer er aktiviteter, der er fastlagt til at have et risikoelement og er defineret i politikker, som brugeren er inkluderet i. Begivenheds- og risikoaktiviteter vises med det seneste element angivet først.
+  - **Oversigt over seneste brugeraktivitet**: Viser både udløsende indikatorer og insiderrisikoindikatorer for brugeraktiviteter op til de sidste 180 dage. Alle aktiviteter, der er relevante for insiderrisikoindikatorer, scores også, selvom aktiviteterne måske eller måske ikke har genereret en insiderrisikoadvarsel. Eksempler på udløsningsindikator kan være en fratrædelsesdato eller den seneste planlagte arbejdsdato for brugeren. Insiderrisikoindikatorer er aktiviteter, der bestemmes for at have et risikoelement og er defineret i politikker, som brugeren er inkluderet i. Hændelses- og risikoaktiviteter vises med det nyeste element angivet først.
 
-## <a name="remove-users-from-in-scope-assignment-to-policies"></a>Fjern brugere fra en omfangsbaseret tildeling til politikker
+## <a name="remove-users-from-in-scope-assignment-to-policies"></a>Fjern brugere fra tildeling i området til politikker
 
-Der kan være scenarier, hvor du er nødt til at stoppe med at tildele risikoresultater til en brugers aktivitet i insider-risikostyringspolitikker. Brug **Fjern brugere på** siden med **dashboardet** Brugere til at stoppe med at tildele risikoresultater for en eller flere brugere fra alle insider-risikostyringspolitikker, som de aktuelt er omfattet af. Denne handling fjerner ikke brugere fra den overordnede politiktildeling (når du føjer brugere eller grupper til en politikkonfiguration), men fjerner blot brugerne fra aktiv behandling af politikker efter aktuelle udløserhændelser. Hvis brugerne har en anden udløserhændelse i fremtiden, begynder risikoresultater fra politikker automatisk at blive tildelt til brugerne igen. Eventuelle eksisterende beskeder eller tilfælde for denne bruger fjernes ikke.
+Der kan være scenarier, hvor du skal stoppe med at tildele scorer for risici til en brugers aktivitet i politikker for styring af insiderrisiko. Brug **Fjern brugere** på **dashboardsiden Brugere** til at stoppe med at tildele scorer for en eller flere brugere fra alle politikker for styring af insiderrisiko, som de i øjeblikket er omfattet af. Denne handling fjerner ikke brugere fra den overordnede politiktildeling (når du føjer brugere eller grupper til en politikkonfiguration), men fjerner blot brugerne fra aktiv behandling af politikker efter aktuelle udløsende hændelser. Hvis brugerne har en anden udløsende hændelse i fremtiden, begynder risikoscores fra politikker automatisk at blive tildelt brugerne igen. Alle eksisterende beskeder eller sager for denne bruger fjernes ikke.
 
 > [!NOTE]
-> Det kan tage flere minutter at fjerne en bruger fra en politik. Når det er fuldført, vises brugeren ikke længere på siden Brugere. Hvis den fjernede bruger har aktive beskeder eller sager, forbliver brugeren på siden Brugere, og oplysningerne om brugeren viser, at de ikke længere er omfattet af en politik.
+> Det kan tage flere minutter at fuldføre fjernelsen af en bruger fra en politik. Når processen er fuldført, vises brugeren ikke længere på siden Brugere. Hvis den fjernede bruger har aktive beskeder eller sager, forbliver brugeren på siden Brugere, og oplysningerne om brugeren viser, at brugeren ikke længere er omfattet af en politik.
 
-Hvis du manuelt vil fjerne brugere fra en omfangsstatus i alle insider-politikker for risikostyring, skal du udføre følgende trin:
+Hvis du manuelt vil fjerne brugere fra in-scope-status i alle politikker for styring af insiderrisiko, skal du fuldføre følgende trin:
 
-1. I [Microsoft 365 Overholdelsescenter skal](https://compliance.microsoft.com) du gå **til Insider-risikostyring** og vælge **fanen** Brugere.
-2. På **dashboardet Brugere skal** du vælge den eller de brugere, du vil fjerne, så de ikke er omfattet af insider-risikostyringspolitikkerne.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge fanen **Brugere**.
+2. På **dashboardet Brugere** skal du vælge den eller de brugere, du vil fjerne fra at være omfattet af området i politikker for styring af insiderrisiko.
 3. Vælg **Fjern brugere**.
-4. I **ruden Fjern bruger** skal du vælge **Fjern** **eller Annuller** for at annullere ændringerne og lukke dialogboksen.
+4. Vælg **Fjern** eller **Annuller** i ruden **Fjern bruger** for at annullere ændringerne og lukke dialogboksen.
 5. Vælg **Fjern** i bekræftelsesruden for at fjerne brugeren.
 
-## <a name="run-automated-tasks-with-power-automate-flows-for-a-user"></a>Kør automatiserede opgaver med Power Automate flows for en bruger
+## <a name="run-automated-tasks-with-power-automate-flows-for-a-user"></a>Kør automatiserede opgaver med Power Automate-flow for en bruger
 
-Ved hjælp Power Automate dataflows kan risikoanalytikere og analytikere hurtigt reagere på:
+Ved hjælp af anbefalede Power Automate-flow kan risikoforskere og analytikere hurtigt gøre noget for at:
 
-- Giv brugerne besked, når de føjes til en Insider-risikopolitik
+- Giv brugerne besked, når de føjes til en insiderrisikopolitik
 
-At køre, administrere eller oprette Power Automate flows for en insider-bruger til risikostyring:
+Sådan kører, administrerer eller opretter du Power Automate-flow for en bruger af insiderrisikostyring:
 
-1. Vælg **Automatiser** på værktøjslinjen for brugerhandling.
-2. Vælg det Power Automate, der skal køres, og vælg **derefter Kør flow**.
+1. Vælg **Automatiser** på værktøjslinjen til brugerhandling.
+2. Vælg det Power Automate-flow, der skal køres, og vælg derefter **Kør flow**.
 3. Når flowet er fuldført, skal du vælge **Udført**.
 
-Du kan få mere at Power Automate om flow for insider-risikostyring under [Introduktion til indstillinger for insider-risikostyring](insider-risk-management-settings.md#power-automate-flows-preview).
+Du kan få mere at vide om Power Automate-flow til styring af insiderrisiko under [Introduktion til indstillinger for styring af insiderrisiko](insider-risk-management-settings.md#power-automate-flows-preview).

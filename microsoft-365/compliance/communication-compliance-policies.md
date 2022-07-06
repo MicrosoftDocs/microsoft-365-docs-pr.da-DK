@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 912254e5827815f796560bc6979856f4545b0ae9
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: c371de57ab6fdd4b7869b676680bb8f922798438
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556806"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626463"
 ---
 # <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 ## <a name="policies"></a>Politikker
 

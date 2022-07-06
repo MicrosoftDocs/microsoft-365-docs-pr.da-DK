@@ -20,30 +20,28 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Logføring af overvågning af postkasser er som standard slået til i Microsoft 365 (også kaldet "overvågning af standardpostkasser" eller "overvågning af postkasser slået til som standard"). Denne konfiguration betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres i en overvågningslog for postkassen, hvor du kan søge efter aktiviteter, der udføres i postkassen.
-ms.openlocfilehash: d5d966cf4d5b7c58c15df4ce8d4039331ebca8c4
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: c59e1e552f6598287c10adfb2661ec4d358529f9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972623"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627387"
 ---
 # <a name="manage-mailbox-auditing"></a>Administrer overvågning af postkasse
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Fra og med januar 2019 aktiverer Microsoft som standard logføring af overvågning af postkasser for alle organisationer. Det betyder, at visse handlinger, der udføres af postkasseejere, stedfortrædere og administratorer, automatisk logføres, og de tilsvarende overvågningsposter for postkassen vil være tilgængelige, når du søger efter dem i postkassens overvågningslog. Før overvågning af postkassen blev slået til som standard, skulle du aktivere den manuelt for hver brugerpostkasse i din organisation.
 
 Her er nogle fordele ved overvågning af postkasser som standard:
 
 - Overvågning aktiveres automatisk, når du opretter en ny postkasse. Du behøver ikke at aktivere den manuelt for nye brugere.
-- Du behøver ikke at administrere de postkassehandlinger, der overvåges. Et foruddefineret sæt postkassehandlinger overvåges som standard for hver logontype (administrator, stedfortræder og ejer).
+- Du behøver ikke at administrere de postkassehandlinger, der overvåges. Et foruddefineret sæt postkassehandlinger overvåges som standard for hver logontype (Administration, stedfortræder og ejer).
 - Når Microsoft frigiver en ny postkassehandling, føjes handlingen muligvis automatisk til listen over postkassehandlinger, der overvåges som standard (forudsat at brugeren har den relevante licens). Det betyder, at du ikke behøver at overvåge tilføj nye handlinger i postkasser.
 - Du har en konsekvent overvågningspolitik for postkasser på tværs af organisationen (fordi du overvåger de samme handlinger for alle postkasser).
 
 > [!NOTE]
 >
 > - Det er vigtigt at huske på, at overvågning af postkasser er aktiveret som standard: Du behøver ikke at foretage dig noget for at administrere overvågning af postkasser. Men hvis du vil vide mere, tilpasse overvågning af postkasser ud fra standardindstillingerne eller slå den helt fra, kan denne artikel hjælpe dig.
-> - Som standard er det kun overvågningshændelser for postkasser for E5-brugere, der er tilgængelige i søgninger i overvågningsloggen på Microsoft Purview-overholdelsesportalen eller via API'en til administration af Office 365. Du kan få flere oplysninger i afsnittet [Flere oplysninger](#more-information) i denne artikel.
+> - Som standard er det kun overvågningshændelser for postkasser for E5-brugere, der er tilgængelige i søgninger i overvågningsloggen i Microsoft Purview-compliance-portal eller via API'en til administration af Office 365. Du kan få flere oplysninger i afsnittet [Flere oplysninger](#more-information) i denne artikel.
 
 ## <a name="verify-mailbox-auditing-on-by-default-is-turned-on"></a>Kontrollér, at overvågning af postkassen som standard er slået til
 
@@ -68,7 +66,7 @@ I følgende tabel vises de postkassetyper, der i øjeblikket understøttes af ov
 |---|:---:|
 |Brugerpostkasser|![Markeret.](../media/checkmark.png)|
 |Delte postkasser|![Markeret.](../media/checkmark.png)|
-|Microsoft 365 gruppepostkasser|![Markeret.](../media/checkmark.png)|
+|Microsoft 365-gruppepostkasser|![Markeret.](../media/checkmark.png)|
 |Ressourcepostkasser||
 |Postkasser i offentlige mapper||
 
@@ -80,10 +78,10 @@ Logontyper klassificerer den bruger, der udførte de overvågede handlinger i po
 - **Stedfortræder**:
   - En bruger, der har fået tildelt tilladelsen SendAs, SendOnBehalf eller FullAccess til en anden postkasse.
   - En administrator, der har fået tildelt Tilladelsen FullAccess til en brugers postkasse.
-- **Administrator**:
+- **Administration**:
   - Der søges i postkassen med et af følgende Microsoft eDiscovery-værktøjer:
     - Indholdssøgning i Overholdelsescenter.
-    - eDiscovery eller eDiscovery (Premium) i Overholdelsescenter.
+    - eDiscovery eller eDiscovery (Premium) i Compliance Center.
     - In-Place eDiscovery i Exchange Online.
   - Du kan få adgang til postkassen ved hjælp af Microsoft Exchange Server MAPI-editor.
 
@@ -95,7 +93,7 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 - En stjerne ( <sup>\*</sup> ), når markeringen angiver, at postkassehandlingen som standard er logført for logontypen.
 - Husk, at en administrator med tilladelsen Fuld adgang til en postkasse betragtes som stedfortræder.
 
-|Postkassehandling|Beskrivelse|Admin|Uddelegere|Ejer|
+|Postkassehandling|Beskrivelse|Administration|Uddelegere|Ejer|
 |---|---|:---:|:---:|:---:|
 |**AddFolderPermissions**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
 |**AnvendPost**|Et element er mærket som en post.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|
@@ -104,15 +102,15 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 |**Mappebind**|Der blev åbnet en postkassemappe. Denne handling logføres også, når administratoren eller stedfortræderen åbner postkassen. <br/><br/> **Bemærk**! Overvåg poster for handlinger for mappebindinger, der udføres af stedfortrædere, konsolideres. Der genereres én overvågningspost for individuel mappeadgang inden for en 24-timers periode.|![Markeret.](../media/checkmark.png)|![Markeret.](../media/checkmark.png)||
 |**HardDelete**|En meddelelse blev fjernet fra mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|
 |**MailboxLogin**|Brugeren loggede på sin postkasse.|||![Markeret](../media/checkmark.png)|
-|**MailItemsAccessed**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer Microsoft Purview Audit (Premium)](set-up-advanced-audit.md). <br/><br/> Maildata tilgås af mailprotokoller og klienter.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
+|**MailItemsAccessed**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer Microsoft Purview-gennemgang (Premium)](set-up-advanced-audit.md). <br/><br/> Maildata tilgås af mailprotokoller og klienter.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Meddelelsebind**|**Bemærk**! Denne værdi er kun tilgængelig for brugere *uden* E5/A5/G5-licenser. <br/><br/> En meddelelse blev vist i indholdsruden eller åbnet af en administrator.|![Markeret](../media/checkmark.png)|||
 |**RedigerMapperTilladelser**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
 |**Flytte**|En meddelelse blev flyttet til en anden mappe.|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**FlyttilDeletedItems**|En meddelelse blev slettet og flyttet til mappen Slettet post.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Postsletning**|Et element, der er mærket som en post, blev slettet med blød sletning (flyttet til mappen Genoprettelige elementer). Elementer, der er mærket som poster, kan ikke slettes permanent (fjernes fra mappen Gendanbare elementer).|![Markeret.](../media/checkmark.png)|![Markeret](../media/checkmark.png)|![Markeret](../media/checkmark.png)|
 |**RemoveFolderPermissions**|Selvom denne værdi accepteres som en postkassehandling, er den allerede inkluderet i handlingen **UpdateFolderPermissions** og overvåges ikke separat. Brug med andre ord ikke denne værdi.||||
-|**SearchQueryInitiated**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer Microsoft Purview Audit (Premium)](set-up-advanced-audit.md). <br/><br/> En person bruger Outlook (Windows, Mac, iOS, Android eller Outlook på internettet) eller appen Mail til Windows 10 til at søge efter elementer i en postkasse.|||![Markeret](../media/checkmark.png)|
-|**Send**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer Microsoft Purview Audit (Premium)](set-up-advanced-audit.md). <br/><br/> Brugeren sender en mail, besvarer en mail eller videresender en mail.|![Markeret.](../media/checkmark.png)<sup>\*</sup>||![Markeret](../media/checkmark.png)<sup>\*</sup>|
+|**SearchQueryInitiated**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer Microsoft Purview-gennemgang (Premium)](set-up-advanced-audit.md). <br/><br/> En person bruger Outlook (Windows, Mac, iOS, Android eller Outlook på internettet) eller appen Mail til at Windows 10 til at søge efter elementer i en postkasse.|||![Markeret](../media/checkmark.png)|
+|**Send**|**Bemærk**! Denne værdi er kun tilgængelig for brugere med E5/A5/G5-licenser. Du kan få flere oplysninger under [Konfigurer Microsoft Purview-gennemgang (Premium)](set-up-advanced-audit.md). <br/><br/> Brugeren sender en mail, besvarer en mail eller videresender en mail.|![Markeret.](../media/checkmark.png)<sup>\*</sup>||![Markeret](../media/checkmark.png)<sup>\*</sup>|
 |**Send som**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendAs. Det betyder, at en anden bruger sendte meddelelsen, som om den kom fra ejeren af postkassen.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**SendOnBehalf**|Der blev sendt en meddelelse ved hjælp af tilladelsen SendOnBehalf. Det betyder, at en anden bruger sendte meddelelsen på vegne af ejeren af postkassen. Meddelelsen angiver til modtageren, hvem meddelelsen blev sendt på vegne af, og hvem der rent faktisk sendte meddelelsen.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**Blød sletning**|En meddelelse blev slettet eller slettet permanent fra mappen Slettet post. Elementer, der er slettet med blød sletning, flyttes til mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
@@ -125,15 +123,15 @@ I følgende tabel beskrives de postkassehandlinger, der er tilgængelige i logf�
 > [!IMPORTANT]
 > Hvis du har tilpasset de postkassehandlinger, der skal overvåges for en hvilken som helst logontype, *før* overvågning af postkassen som standard blev aktiveret i din organisation, bevares de brugerdefinerede indstillinger i postkassen og overskrives ikke af standardhandlingerne for postkassen, som beskrevet i dette afsnit. Hvis du vil gendanne handlingerne i overvågningspostkassen til deres standardværdier (hvilket du kan gøre når som helst), skal du se afsnittet [Gendan handlinger for standardpostkassen](#restore-the-default-mailbox-actions) senere i denne artikel.
 
-### <a name="mailbox-actions-for-microsoft-365-group-mailboxes"></a>Postkassehandlinger for Microsoft 365 gruppepostkasser
+### <a name="mailbox-actions-for-microsoft-365-group-mailboxes"></a>Postkassehandlinger for Microsoft 365-gruppepostkasser
 
-Overvågning af postkasser er som standard slået til, så logføring af overvågning af postkasser overføres til Microsoft 365 gruppepostkasser, men du kan ikke tilpasse det, der logføres (du kan ikke tilføje eller fjerne postkassehandlinger, der logføres for alle logontyper).
+Overvågning af postkasser er som standard slået til, og logføring af postkasser i Microsoft 365-grupper overføres til Microsoft 365-gruppepostkasser, men du kan ikke tilpasse det, der logføres (du kan ikke tilføje eller fjerne postkassehandlinger, der logføres for alle logontyper).
 
-I følgende tabel beskrives de postkassehandlinger, der som standard logføres på Microsoft 365 Gruppepostkasser for hver logontype.
+I følgende tabel beskrives de postkassehandlinger, der som standard logføres på Microsoft 365-gruppepostkasser for hver logontype.
 
-Husk, at en administrator med tilladelsen Fuld adgang til en Microsoft 365 gruppepostkasse betragtes som stedfortræder.
+Husk, at en administrator med tilladelsen Fuld adgang til en Microsoft 365-gruppepostkasse betragtes som stedfortræder.
 
-|Postkassehandling|Beskrivelse|Admin|Uddelegere|Ejer|
+|Postkassehandling|Beskrivelse|Administration|Uddelegere|Ejer|
 |---|---|:---:|:---:|:---:|
 |**Opret**|Oprettelse af et kalenderelement. Oprettelse, afsendelse eller modtagelse af en meddelelse overvåges ikke.|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>||
 |**HardDelete**|En meddelelse blev fjernet fra mappen Elementer, der kan gendannes.|![Markeret.](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|![Markeret](../media/checkmark.png)<sup>\*</sup>|
@@ -153,7 +151,7 @@ Hvis du vil have vist værdien for brugerpostkasser eller delte postkasser, skal
 Get-Mailbox -Identity <MailboxIdentity> | Format-List DefaultAuditSet
 ```
 
-Hvis du vil have vist værdien for Microsoft 365 gruppepostkasser, skal du erstatte \<MailboxIdentity\> med navnet, aliaset eller mailadressen på den delte postkasse og køre følgende kommando i Exchange Online PowerShell:
+Hvis du vil have vist værdien i Microsoft 365-gruppepostkasser, skal du erstatte \<MailboxIdentity\> med navnet, aliaset eller mailadressen på den delte postkasse og køre følgende kommando i Exchange Online PowerShell:
 
 ```PowerShell
 Get-Mailbox -Identity <MailboxIdentity> -GroupMailbox | Format-List DefaultAuditSet
@@ -161,7 +159,7 @@ Get-Mailbox -Identity <MailboxIdentity> -GroupMailbox | Format-List DefaultAudit
 
 Værdien `Admin, Delegate, Owner` angiver:
 
-- Standardhandlingerne for postkassen for alle tre logontyper overvåges. Dette er den eneste værdi, du kan se i Microsoft 365 gruppepostkasser.
+- Standardhandlingerne for postkassen for alle tre logontyper overvåges. Dette er den eneste værdi, du kan se i Microsoft 365-gruppepostkasser.
 - En administrator *har ikke* ændret de overvågede postkassehandlinger for nogen logontype på en brugerpostkasse eller en delt postkasse. Bemærk, at dette er standardtilstanden, efter at overvågning af postkassen er slået til som standard er aktiveret i din organisation.
 
 Hvis en administrator nogensinde har ændret de postkassehandlinger, der overvåges for en logontype (ved hjælp af parametrene *AuditAdmin*, *AuditDelegate* eller *AuditOwner* på cmdlet'en **Set-Mailbox** ), vil egenskabsværdien være anderledes.
@@ -180,7 +178,7 @@ Du kan finde flere oplysninger i afsnittet [Skift eller gendan postkassehandling
 Hvis du vil se de postkassehandlinger, der i øjeblikket logføres på brugerpostkasser eller delte postkasser, skal du erstatte \<MailboxIdentity\> med navnet, aliaset, mailadressen eller brugerens hovednavn (brugernavn) for postkassen og køre en eller flere af følgende kommandoer i Exchange Online PowerShell.
 
 > [!NOTE]
-> Selvom du kan føje `-GroupMailbox` parameteren til følgende **Get-Mailbox-kommandoer** for Microsoft 365 gruppepostkasser, skal du ikke tro de værdier, der returneres. De standardhandlinger og statiske postkassehandlinger, der overvåges for Microsoft 365 gruppepostkasser, er beskrevet i afsnittet [Postkassehandlinger for Microsoft 365 gruppepostkasser](#mailbox-actions-for-microsoft-365-group-mailboxes) tidligere i denne artikel.
+> Selvom du kan føje `-GroupMailbox` parameteren til følgende **Get-Mailbox-kommandoer** for Microsoft 365-gruppepostkasser, skal du ikke tro de værdier, der returneres. De standardhandlinger og statiske postkassehandlinger, der overvåges for Microsoft 365-gruppepostkasser, er beskrevet i afsnittet [Postkassehandlinger for Microsoft 365-gruppepostkasser](#mailbox-actions-for-microsoft-365-group-mailboxes) tidligere i denne artikel.
 
 #### <a name="owner-actions"></a>Ejerhandlinger
 
@@ -194,7 +192,7 @@ Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditOwn
 Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditDelegate
 ```
 
-#### <a name="admin-actions"></a>Administratorhandlinger
+#### <a name="admin-actions"></a>Administration handlinger
 
 ```PowerShell
 Get-Mailbox -Identity <MailboxIdentity> | Select-Object -ExpandProperty AuditAdmin
@@ -211,7 +209,7 @@ Din organisation kan dog blive bedt om at overvåge et andet sæt postkassehandl
 
 ### <a name="change-the-mailbox-actions-to-audit"></a>Skift postkassehandlinger, der skal overvåges
 
-Du kan bruge parametrene *AuditAdmin*, *AuditDelegate* eller *AuditOwner* på **set-mailbox-cmdlet'en** til at ændre de postkassehandlinger, der overvåges for brugerpostkasser og delte postkasser (overvågede handlinger for Microsoft 365 gruppepostkasser kan ikke tilpasses).
+Du kan bruge parametrene *AuditAdmin*, *AuditDelegate* eller *AuditOwner* på **set-mailbox-cmdlet'en** til at ændre de postkassehandlinger, der overvåges for brugerpostkasser og delte postkasser (overvågede handlinger for Microsoft 365-gruppepostkasser kan ikke tilpasses).
 
 Du kan bruge to forskellige metoder til at angive postkassehandlinger:
 
@@ -244,7 +242,7 @@ Uanset hvilken metode du bruger, har tilpasning af de overvågede postkassehandl
 ### <a name="restore-the-default-mailbox-actions"></a>Gendan standardhandlingerne for postkassen
 
 > [!NOTE]
-> Følgende procedurer gælder ikke for Microsoft 365 gruppepostkasser (de er begrænset til standardhandlingerne, som beskrevet [her](#mailbox-actions-for-microsoft-365-group-mailboxes)).
+> Følgende procedurer gælder ikke for Microsoft 365-gruppepostkasser (de er begrænset til standardhandlinger som beskrevet [her](#mailbox-actions-for-microsoft-365-group-mailboxes)).
 
 Hvis du har tilpasset de postkassehandlinger, der overvåges i en brugerpostkasse eller en delt postkasse, kan du gendanne standardhandlingerne for postkassen for en eller alle logontyper ved hjælp af denne syntaks:
 
@@ -260,7 +258,7 @@ I dette eksempel gendannes standardhandlingerne for overvågede postkasser for a
 Set-Mailbox -Identity mark@contoso.onmicrosoft.com -DefaultAuditSet Admin,Delegate,Owner
 ```
 
-I dette eksempel gendannes standardhandlingerne for overvågede postkasser for logontypen Administrator på postkassen chris@contoso.onmicrosoft.com, men de brugerdefinerede overvågede postkassehandlinger for logontyperne Stedfortræder og Ejer bevares.
+I dette eksempel gendannes standardhandlingerne for overvågede postkasser for den Administration logontype på postkassens chris@contoso.onmicrosoft.com, men lader de tilpassede overvågede postkassehandlinger være for logontyperne Stedfortræder og Ejer.
 
 ```PowerShell
 Set-Mailbox -Identity chris@contoso.onmicrosoft.com -DefaultAuditSet Admin
@@ -304,7 +302,7 @@ Du kan dog stadig bruge **Set-MailboxAuditBypassAssociation-cmdlet'en** i Exchan
 
 - Handlinger for postkasseejeren, der udføres af de forbigåede brugere, logføres ikke.
 - Stedfortræderhandlinger, der udføres af de forbigåede brugere på andre brugeres postkasser (herunder delte postkasser), logføres ikke.
-- Administratorhandlinger, der udføres af de forbigåede brugere, logføres ikke.
+- Administration handlinger, der udføres af de forbigåede brugere, logføres ikke.
 
 Hvis du vil tilsidesætte logføring af overvågning af postkassen for en bestemt bruger, skal du erstatte \<MailboxIdentity\> med brugerens navn, mailadresse, alias eller brugerens hovednavn (brugernavn) og køre følgende kommando:
 
@@ -322,11 +320,11 @@ Værdien **Sand** angiver, at logføring af overvågning af postkasser tilsides�
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Selvom logføring af overvågning af postkasser som standard er aktiveret for alle organisationer, er det kun brugere med E5-licenser, der returnerer overvågningsloghændelser for postkasser i [søgninger i overvågningsloggen på Microsoft Purview-overholdelsesportalen](search-the-audit-log-in-security-and-compliance.md) eller via [API'en til Office 365 administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-reference) **som standard**.
+- Selvom logføring af overvågning af postkasser som standard er aktiveret for alle organisationer, er det kun brugere med E5-licenser, der returnerer overvågningsloghændelser for postkasser i [søgninger i overvågningsloggen i Microsoft Purview-compliance-portal](search-the-audit-log-in-security-and-compliance.md) eller via [API'en for Office 365-administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-reference) **som standard**.
 
   Hvis du vil hente overvågningslogposter for postkasser for brugere uden E5/A5/G5-licenser, kan du bruge en af følgende løsninger:
 
-  - Aktivér overvågning af postkasser manuelt på individuelle postkasser (kør kommandoen `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`, ). Når du har gjort det, kan du bruge søgninger i overvågningsloggen på Microsoft Purview-overholdelsesportalen eller via API'en til Office 365 administration af aktivitet.
+  - Aktivér overvågning af postkasser manuelt på individuelle postkasser (kør kommandoen `Set-Mailbox -Identity <MailboxIdentity> -AuditEnabled $true`, ). Når du har gjort det, kan du bruge søgninger i overvågningsloggen i Microsoft Purview-compliance-portal eller via API'en til Office 365 managementaktivitet.
 
     > [!NOTE]
     > Hvis overvågning af postkassen allerede ser ud til at være aktiveret i postkassen, men dine søgninger ikke returnerer nogen resultater, skal du ændre værdien af parameteren *AuditEnabled* til `$false` og derefter tilbage til `$true`.
@@ -345,7 +343,7 @@ Værdien **Sand** angiver, at logføring af overvågning af postkasser tilsides�
 
 - Hvis du har ændret egenskaben *AuditLogAgeLimit* for en postkasse, før overvågning af postkassen som standard er slået til for organisationen, ændres postkassens eksisterende aldersgrænse for overvågningsloggen ikke. Overvågning af postkasser på påvirker med andre ord som standard ikke den aktuelle aldersgrænse for overvågningsposter i postkasser.
 
-- Hvis du vil ændre værdien *for AuditLogAgeLimit* i en Microsoft 365 gruppepostkasse, skal du medtage `-GroupMailbox` parameteren i kommandoen **Set-Mailbox**.
+- Hvis du vil ændre værdien *for AuditLogAgeLimit* i en Microsoft 365-gruppepostkasse, skal du inkludere `-GroupMailbox` parameteren i kommandoen **Set-Mailbox** .
 
 - Overvågningslogposter i postkassen gemmes i en undermappe (kaldet *Overvågninger*) i mappen Gendanbare elementer i hver brugers postkasse. Vær opmærksom på følgende ting i forbindelse med overvågningsposter i postkassen og mappen Elementer, der kan gendannes:
 
@@ -368,4 +366,4 @@ Værdien **Sand** angiver, at logføring af overvågning af postkasser tilsides�
 
 - Hvis en postkasse er sat i venteposition eller tildelt en opbevaringspolitik i Overholdelsescenter, bevares overvågningslogposter stadig i den varighed, der er defineret af egenskaben *AuditLogAgeLimit* for postkassen (som standard 90 dage). Hvis du vil bevare overvågningslogposter længere for postkasser i venteposition, skal du øge værdien for *AuditLogAgeLimit* for postkassen.
 
-- I et multi-geo-miljø understøttes overvågning af postkasser på tværs af geografiske områder ikke. Hvis en bruger f.eks. er tildelt tilladelser til at få adgang til en delt postkasse på en anden geografisk placering, logføres de postkassehandlinger, der udføres af den pågældende bruger, ikke i postkassens overvågningslog for den delte postkasse. Exchange administrationsovervågningshændelser er i øjeblikket kun tilgængelige for standardplaceringen.
+- I et multi-geo-miljø understøttes overvågning af postkasser på tværs af geografiske områder ikke. Hvis en bruger f.eks. er tildelt tilladelser til at få adgang til en delt postkasse på en anden geografisk placering, logføres de postkassehandlinger, der udføres af den pågældende bruger, ikke i postkassens overvågningslog for den delte postkasse. Exchange-administratorovervågningshændelser er i øjeblikket kun tilgængelige for standardplaceringen.

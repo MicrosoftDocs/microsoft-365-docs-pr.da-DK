@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du administrerer eDiscovery-sager (Standard). Dette omfatter lukning af en sag, genåbning af en lukket sag og sletning af en sag.
-ms.openlocfilehash: f527d206e7112534db557928daf6ab8942c60d1c
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 5c2efd96f563eb2947b17e1cc857613d27981dac
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318310"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628853"
 ---
 # <a name="close-reopen-and-delete-a-ediscovery-standard-case"></a>Luk, genåbn og slet en eDiscovery-sag (Standard)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I denne artikel beskrives det, hvordan du lukker, genåbner og sletter Microsoft Purview eDiscovery-sager (Standard) i Microsoft 365.
+I denne artikel beskrives det, hvordan du lukker, genåbner og sletter Microsoft Purview eDiscovery (Standard)-sager i Microsoft 365.
 
 ## <a name="close-a-case"></a>Luk en sag
 
@@ -44,7 +42,7 @@ Når den juridiske sag eller undersøgelse, der understøttes af en eDiscovery-s
 
 Sådan lukker du en sag:
   
-1. Klik på **eDiscoveryeDiscovery** >  **(Standard)** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
+1. Klik på **eDiscovery eDiscovery** > **(Standard)** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
 
 2. Klik på navnet på den sag, du vil lukke.
 
@@ -66,7 +64,7 @@ Sådan lukker du en sag:
 
 Når du genåbner en sag, genindsættes eDiscovery-ventepositioner, der var på plads, da sagen blev afsluttet, ikke automatisk. Når sagen er genåbnet, skal du gå til siden **Ventepositioner** og slå de forrige ventepositioner til. Hvis du vil slå en venteposition til, skal du vælge den for at få vist pop op-siden og derefter angive **Status** til **Til**.
   
-1. Klik på **eDiscoveryCore** >  på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
+1. Klik på **eDiscovery** > **Core** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
 
 2. Klik på navnet på den sag, du vil åbne igen.
 
@@ -104,7 +102,7 @@ Sådan sletter du en eDiscovery-venteposition:
 
 Sådan sletter du en sag:
 
-1. Klik på **eDiscoveryeDiscovery** >  **(Standard)** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
+1. Klik på **eDiscovery eDiscovery** > **(Standard)** på overholdelsesportalen for at få vist listen over eDiscovery-sager (Standard) i din organisation.
 
 2. Klik på navnet på den sag, du vil slette.
 

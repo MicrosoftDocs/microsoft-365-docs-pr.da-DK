@@ -16,18 +16,16 @@ search.appverid:
 - MOE150
 - MET150
 description: En kladde til en samling er en eDiscovery-søgning af datakilder med frihedsberøvelse og ingen frihedsberøvelse i en eDiscovery-sag (Premium), der returnerer et søgeestimat, der svarer til søgeforespørgslen i samlingen. Du kan gennemse søgestatistik, få vist et eksempel på et udsnit af elementer og revidere og køre samlingen igen, før du sender resultaterne til et korrektursæt.
-ms.openlocfilehash: 50fb63658541c07a312a502dbbe7d68a26467d14
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 979573503e448a731c487018b525d6ddb1d7d08f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096072"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630163"
 ---
 # <a name="create-a-draft-collection-in-ediscovery-premium"></a>Opret en kladdesamling i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du har identificeret tilsynsførende og andre datakilder, der ikke er tilsynsførende for sagen, er du klar til at identificere og finde et sæt dokumenter, der er relevante. Det gør du ved hjælp af værktøjet Samlinger til at søge efter relevant indhold fra datakilder. Det gør du ved at oprette en samling, der søger i angivne datakilder efter indhold, der opfylder dine søgekriterier. Du har mulighed for at oprette en *kladdesamling*, som er et estimat over elementerne, eller du kan oprette en samling, der automatisk føjer elementerne til et korrektursæt. Når du opretter en kladdesamling, kan du få vist oplysninger om de anslåede resultater, der matcher søgeforespørgslen, f.eks. det samlede antal og den samlede størrelse af fundne elementer, de forskellige datakilder, hvor de blev fundet, og statistikker om søgeforespørgslen. Du kan også få vist et eksempel på elementer, der blev returneret af samlingen. Ved hjælp af disse statistikker kan du ændre søgeforespørgslen og køre kladdesamlingen igen for at indsnævre dine resultater. Når du er tilfreds med resultaterne af samlingen, kan du bekræfte samlingen til et korrektursæt. Når du bekræfter en kladdesamling, føjes de elementer, der returneres af samlingen, til et gennemsynssæt til gennemsyn, analyse og eksport.
+Når du har identificeret tilsynsførende og andre datakilder, der ikke er tilsynsførende for sagen, er du klar til at identificere og finde et sæt dokumenter, der er relevante. Det gør du ved hjælp af værktøjet Samlinger til at søge efter relevant indhold fra datakilder. Det gør du ved at oprette en samling, der søger i angivne datakilder efter indhold, der opfylder dine søgekriterier. Du har mulighed for at oprette en *kladdesamling*, som er et estimat over elementerne, eller du kan oprette en samling, der automatisk føjer elementerne til et korrektursæt. Når du opretter en kladdesamling, kan du få vist oplysninger om de anslåede resultater, der matcher søgeforespørgslen, f.eks. det samlede antal og den samlede størrelse af fundne elementer, de forskellige datakilder, hvor de blev fundet, og statistikker om søgeforespørgslen. Du kan også få vist et eksempel på elementer, der blev returneret af datasættet. Ved hjælp af disse statistikker kan du ændre søgeforespørgslen og køre kladdesamlingen igen for at indsnævre dine resultater. Når du er tilfreds med resultaterne af samlingen, kan du bekræfte samlingen til et korrektursæt. Når du bekræfter et kladde-datasæt, føjes de elementer, der returneres af datasættet, til et valideringssæt til gennemsyn, analyse og eksport.
 
 ## <a name="before-you-create-a-draft-collection"></a>Før du opretter en kladdesamling
 
@@ -37,15 +35,15 @@ Når du har identificeret tilsynsførende og andre datakilder, der ikke er tilsy
 
   - [Føj datakilder uden ansvarlige til en sag](non-custodial-data-sources.md)
 
-- Du kan søge i flere datakilder (dem, der ikke er føjet til sagen som placeringer med frihedsberøvelse eller som ikke-frihedsberøvende) i en kladdesamling for indhold, der kan være relevant for sagen. Disse datakilder kan omfatte postkasser, SharePoint websteder og Teams. Hvis denne situation gælder for din sag, skal du kompilere en liste over disse datakilder, så du kan føje dem til samlingen.
+- Du kan søge i flere datakilder (dem, der ikke er føjet til sagen som placeringer med frihedsberøvelse eller som ikke-frihedsberøvende) i en kladdesamling for indhold, der kan være relevant for sagen. Disse datakilder kan omfatte postkasser, SharePoint-websteder og Teams. Hvis denne situation gælder for din sag, skal du kompilere en liste over disse datakilder, så du kan føje dem til samlingen.
 
 ## <a name="create-a-draft-collection"></a>Opret en kladdesamling
 
-1. Åbn eDiscovery-sagen (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Samlinger**.
+1. I Microsoft Purview-compliance-portal skal du åbne sagen eDiscovery (Premium) og derefter vælge fanen **Samlinger**.
 
-2. På siden **Samlinger** skal du vælge **Ny** **samlingStandardsamling** > .
+2. På siden **Datasæt** skal du vælge **Nyt datasæt** > **Standard datasæt**.
 
-3. Skriv et navn (obligatorisk) og en beskrivelse (valgfrit) for samlingen. Når samlingen er oprettet, kan du ikke ændre navnet, men du kan ændre beskrivelsen.
+3. Skriv et navn (påkrævet) og en beskrivelse (valgfrit) for datasættet. Når samlingen er oprettet, kan du ikke ændre navnet, men du kan ændre beskrivelsen.
 
 4. På siden **Frihedsberøvende datakilder** skal du gøre en af følgende ting for at identificere de datakilder, der er til indsamling af indhold fra:
 
@@ -61,16 +59,16 @@ Når du har identificeret tilsynsførende og andre datakilder, der ikke er tilsy
 
 6. På siden **Flere datakilder** kan du vælge andre postkasser og websteder, der skal søges i som en del af samlingen. Disse typer datakilder blev ikke tilføjet som dataplaceringer med frihedsberøvelse eller som ikke-frihedsberøvende i tilfælde. Du har også to muligheder, når du søger i flere datakilder:
 
-   - Hvis du vil søge i alle indholdsplaceringer efter en bestemt tjeneste (Exchange postkasser, SharePoint og OneDrive websteder eller Exchange offentlige mapper), skal du klikke på den tilsvarende til/**fra-knap Vælg alle** i kolonnen **Status**. Denne indstilling søger i alle indholdsplaceringer i den valgte tjeneste.
+   - Hvis du vil søge på alle indholdsplaceringer efter en bestemt tjeneste (Exchange-postkasser, SharePoint- og OneDrive-websteder eller offentlige Exchange-mapper), skal du klikke på den tilsvarende til/ **fra-knap Vælg alle** i kolonnen **Status** . Denne indstilling søger i alle indholdsplaceringer i den valgte tjeneste.
 
-   - Hvis du vil søge efter en bestemt indholdsplacering for en tjeneste, skal du klikke på til/fra-knappen **Vælg alle** i kolonnen **Status** og derefter klikke på **Brugere, grupper eller teams** (for Exchange postkasser) eller **Vælg websteder** til (SharePoint og OneDrive websteder) for at søge efter bestemte indholdsplaceringer.
+   - Hvis du vil søge efter en bestemt indholdsplacering for en tjeneste, skal du klikke på den tilsvarende Til/fra-knap **Vælg alle** i kolonnen **Status** og derefter klikke på **Brugere, grupper eller teams** (for Exchange-postkasser) eller **Vælg websteder** til (SharePoint- og OneDrive-websteder) for at søge efter bestemte indholdsplaceringer.
 
-7. På siden **Betingelser** kan du oprette den søgeforespørgsel, der bruges til at indsamle elementer fra de datakilder, du har identificeret på de forrige guidesider. Du kan søge efter nøgleord, egenskab:værdipar eller bruge en nøgleordsliste. Du kan også tilføje forskellige søgebetingelser for at indsnævre omfanget af samlingen. Du kan finde flere oplysninger under [Opret søgeforespørgsler for samlinger](building-search-queries.md).
+7. På siden **Betingelser** kan du oprette den søgeforespørgsel, der bruges til at indsamle elementer fra de datakilder, du har identificeret på de forrige guidesider. Du kan søge efter nøgleord, egenskab:værdipar eller bruge en nøgleordsliste. Du kan også tilføje forskellige søgebetingelser for at indsnævre omfanget af samlingen. Du kan finde flere oplysninger under [Opret søgeforespørgsler for datasæt](building-search-queries.md).
 
 8. På siden **Gem som kladde, eller tilføj for at gennemse sæt** skal du vælge **Gem samling som kladde**.
 
    > [!NOTE]
-   > Med den anden indstilling på denne side kan du indsamle elementer og føje dem direkte til et korrektursæt. I stedet for at oprette en kladdesamling, som du kan gennemse statistikker for og få vist et eksempel på resultaterne af samlingen, springer denne indstilling denne proces over og føjer automatisk samlingen til et gennemsynssæt. Hvis du vælger den anden indstilling for at føje samlingen til et korrektursæt, har du yderligere indstillinger, der skal konfigureres, f.eks. indsamling af hele chatsamtaletråde i Microsoft Teams og Yammer og indsamling af vedhæftede filer i skyen (også kaldet *moderne vedhæftede filer*). Du kan få flere oplysninger om disse indstillinger under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
+   > Med den anden indstilling på denne side kan du indsamle elementer og føje dem direkte til et korrektursæt. I stedet for at oprette en kladdesamling, som du kan gennemse statistikker for og få vist et eksempel på resultaterne af samlingen, springer denne indstilling denne proces over og føjer automatisk samlingen til et gennemsynssæt. Hvis du vælger den anden indstilling for at føje samlingen til et anmeldelsessæt, har du yderligere indstillinger, der skal konfigureres, f.eks. indsamling af hele chatsamtaletråde i Microsoft Teams og Yammer og indsamling af vedhæftede filer i skyen (også kaldet *moderne vedhæftede filer*). Du kan få flere oplysninger om disse indstillinger under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
 
 9. På siden **Gennemse din samling** kan du gennemse og opdatere de samlingsindstillinger, du konfigurerede på de forrige sider.
 
@@ -106,11 +104,11 @@ Her er en liste over ting, du kan gøre fra siden med samlingens pop op-vindue:
 
 - Vælg fanen **Datakilder** for at få vist en liste over tilsynsførende og ikke-frihedsberøvende datakilder, der blev søgt i i samlingen. Alle yderligere indholdsplaceringer, der blev søgt efter, er angivet under **Placeringer** under fanen **Oversigt** .
 
-- Vælg fanen **Søg efter statistik** for at få vist statistikker om samlingen. Dette omfatter det samlede antal og størrelsen af elementer, der blev fundet i hver tjeneste (f.eks. Exchange postkasser eller SharePoint websteder) og en betingelsesrapport, der viser statistikker over antallet af elementer, der returneres af forskellige komponenter i den søgeforespørgsel, der bruges af samlingen. Du kan få flere oplysninger under [Samlingsstatistik og -rapporter](collection-statistics-reports.md).
+- Vælg fanen **Søg efter statistik** for at få vist statistikker om samlingen. Dette omfatter det samlede antal og den samlede størrelse af elementer, der blev fundet i hver tjeneste (f.eks. Exchange-postkasser eller SharePoint-websteder) og en betingelsesrapport, der viser statistik om antallet af elementer, der returneres af forskellige komponenter i den søgeforespørgsel, der bruges af samlingen. Du kan få flere oplysninger under [Samlingsstatistik og -rapporter](collection-statistics-reports.md).
 
 - Klik på **Gennemse eksempel** (placeret nederst på pop op-siden) for at få vist et eksempel på de elementer, der returneres af samlingen.
 
-- Send kladdesamlingen til et korrektursæt (ved at klikke på **ActionsEdit** >  collection). Det betyder, at du kører samlingen igen (ved hjælp af de aktuelle indstillinger) og føjer de elementer, der returneres af samlingen, til et korrektursæt. Som tidligere forklaret kan du også konfigurere yderligere indstillinger (f.eks. samtaletrådning og cloudbaserede vedhæftede filer), når du føjer samlingen til et korrektursæt. Du kan finde flere oplysninger og trinvise instruktioner under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
+- Send kladdesamlingen til et korrektursæt (ved at klikke på **Handlinger** > **Rediger samling**). Det betyder, at du kører samlingen igen (ved hjælp af de aktuelle indstillinger) og føjer de elementer, der returneres af samlingen, til et korrektursæt. Som tidligere forklaret kan du også konfigurere yderligere indstillinger (f.eks. samtaletrådning og cloudbaserede vedhæftede filer), når du føjer samlingen til et korrektursæt. Du kan finde flere oplysninger og trinvise instruktioner under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
 
 ## <a name="manage-a-draft-collection"></a>Administrer en kladdesamling
 

@@ -21,23 +21,21 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 36d3ca7d820d31843df535eddd6c253d0c1f951e
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: ba5778ccf00525d78da05127d41ffd3f52a4bf83
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810938"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626421"
 ---
 # <a name="learn-about-communication-compliance"></a>Få mere at vide om kommunikationsoverholdelse
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview gratis løsninger?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Microsoft Purview Kommunikationsoverholdelse er en insiderrisikoløsning, der hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. Foruddefinerede og brugerdefinerede politikker giver dig mulighed for at scanne intern og ekstern kommunikation for politikkampe, så de kan undersøges af udpegede korrekturlæsere. Korrekturlæsere kan undersøge scannet mail, Microsoft Teams, Yammer eller tredjepartskommunikation i din organisation og udføre de nødvendige handlinger for at sikre, at de overholder organisationens meddelelsesstandarder.
 
-Microsoft Purview Kommunikationsoverholdelse er en insiderrisikoløsning, der hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. Foruddefinerede og brugerdefinerede politikker giver dig mulighed for at scanne intern og ekstern kommunikation for politikkampe, så de kan undersøges af udpegede korrekturlæsere. Korrekturlæsere kan undersøge scannede mails, Microsoft Teams, Yammer eller tredjepartskommunikation i din organisation og udføre relevante handlinger for at sikre, at de overholder organisationens meddelelsesstandarder.
-
-Politikker for kommunikation med overholdelse af angivne standarder i Microsoft 365 hjælpe dig med at overvinde mange moderne udfordringer, der er forbundet med overholdelse af angivne standarder og intern og ekstern kommunikation, herunder:
+Politikker for kommunikation med overholdelse af angivne standarder i Microsoft 365 hjælper dig med at overvinde mange moderne udfordringer, der er forbundet med overholdelse af angivne standarder og intern og ekstern kommunikation, herunder:
 
 - Scanning af stigende typer kommunikationskanaler
 - Den stigende mængde meddelelsesdata
@@ -52,7 +50,7 @@ Du kan se de seneste Ignite-præsentationer for overholdelse af angivne standard
 - [Fremme en kultur med sikkerhed og inklusion med overholdelse af kommunikationsreglerne](https://www.youtube.com/watch?v=oLVzxcaef3w)
 - [Få mere at vide om, hvordan du reducerer kommunikationsrisici i din organisation](https://www.youtube.com/watch?v=vzARb1YaxGo)
 - [Opfyldelse af lovmæssige overholdelseskrav med kommunikationsoverholdelse](https://www.youtube.com/watch?v=gagOhtCBfgU)
-- [Bedre med Microsoft Teams – Få mere at vide om de nyeste oprindelige Teams integrerede funktioner i kommunikation med overholdelse af angivne standarder](https://www.youtube.com/watch?v=m4jukD5Fh-o)
+- [Bedre med Microsoft Teams – Få mere at vide om de nyeste indbyggede Teams-integrerede funktioner i kommunikation med overholdelse af angivne standarder](https://www.youtube.com/watch?v=m4jukD5Fh-o)
 
 Hvis du vil have et hurtigt overblik over overholdelse af angivne standarder for kommunikation, skal du se videoen [Registrer chikane på arbejdspladsen, og besvar kommunikation med overholdelse af angivne standarder](https://youtu.be/z33ji7a7Zho) på [Kanalen Microsoft Mechanics](https://www.youtube.com/user/OfficeGarageSeries).
 
@@ -104,16 +102,16 @@ Intelligente skabeloner, der kan tilpasses i forbindelse med overholdelse af ang
 Indbyggede afhjælpningsarbejdsprocesser giver dig mulighed for hurtigt at identificere og udføre handlinger på meddelelser med politikforekomster i din organisation. Følgende nye funktioner øger effektiviteten i forbindelse med undersøgelses- og afhjælpningsaktiviteter:
 
 - **Fleksibel afhjælpningsarbejdsproces**: Ny afhjælpningsarbejdsproces hjælper dig med hurtigt at reagere på politikforekomster, herunder nye muligheder for at eskalere meddelelser til andre korrekturlæsere og sende mailmeddelelser til brugere med politikforekomster.
-- **Matchning af samtalepolitik**: Meddelelser i samtaler grupperes efter politikmatch for at give dig mere synlighed over, hvordan samtaler er relateret til dine kommunikationspolitikker. Matchning af samtalepolitikker i visningen *Ventende beskeder* viser f.eks. automatisk alle meddelelser i en Teams kanal, der har resultater for din politik for upassende indhold. Andre meddelelser i samtalen, der ikke stemmer overens med politikken for upassende indhold, vises ikke.
+- **Matchning af samtalepolitik**: Meddelelser i samtaler grupperes efter politikmatch for at give dig mere synlighed over, hvordan samtaler er relateret til dine kommunikationspolitikker. Matchning af samtalepolitik i visningen *Ventende beskeder* viser f.eks. automatisk alle meddelelser i en Teams-kanal, der har match til din politik for upassende indhold. Andre meddelelser i samtalen, der ikke stemmer overens med politikken for upassende indhold, vises ikke.
 - **Fremhævning af nøgleord**: Vilkår, der stemmer overens med politikbetingelser, er fremhævet i tekstvisningen i meddelelsen for at hjælpe korrekturlæsere med hurtigt at finde og afhjælpe politikbeskeder.
 - **Nøjagtig og næsten registrering af dubletter**: Ud over at søge efter nøjagtige termer, der stemmer overens med politikker for overholdelse af angivne standarder for kommunikation, grupperer næsten identiske ord og meddelelser tekstuelt for at gøre korrekturprocessen hurtigere.
-- **Optisk tegngenkendelse (OCR) (prøveversion)**: Scan, registrer og undersøg trykt og håndskrevet tekst i billeder, der er integreret eller vedhæftet til mail eller Microsoft Teams chatbeskeder.
+- **Optisk tegngenkendelse (OCR) (prøveversion)**: Scan, registrer og undersøg trykt og håndskrevet tekst i billeder, der er integreret eller knyttet til mail eller Microsoft Teams-chatmeddelelser.
 - **Nye filtre**: Undersøg og afhjælp politikbeskeder hurtigere med meddelelsesfiltre for flere felter, herunder afsender, modtager, dato, domæner og mange flere.
 - **Forbedrede meddelelsesvisninger**: Undersøgelses- og afhjælpningshandlinger er nu hurtigere med nye meddelelseskilde- og tekstvisninger. Vedhæftede filer i meddelelser kan nu ses for at give fuldstændig kontekst, når der udføres afhjælpningshandlinger.
 - **Brugerhistorik**: Oversigtsvisning af alle afhjælpningsaktiviteter for brugermeddelelser, f.eks. tidligere meddelelser og eskaleringer for politikforekomster, giver nu korrekturlæsere mere kontekst under afhjælpningsprocessen. Førstegangs- eller gentagelsesforekomster af politikforekomster for brugere arkiveres nu og kan nemt ses.
 - **Registreret mønstermeddelelse**: Mange chikane- og mobninghandlinger udføres over tid og involverer gentagne forekomster af den samme funktionsmåde af en bruger. Det nye mønster, der registreres, og som vises i detaljer om beskeder, hjælper med at henlede opmærksomheden på disse beskeder og denne type funktionsmåde.
 - **Oversættelse**: Undersøg hurtigt meddelelsesdetaljer på otte sprog ved hjælp af oversætunderstøttelse i afhjælpningsarbejdsprocessen. Meddelelser på andre sprog konverteres automatisk til korrekturlæserens visningssprog.
-- **Registrering af vedhæftede filer**: Scan, registrer og undersøg sammenkædet indhold (moderne vedhæftede filer) fra OneDrive og Microsoft Teams, der matcher politikklassifikationer og betingelser for Microsoft Teams meddelelser. Indhold af vedhæftede filer udtrækkes automatisk til en tekstfil for at få en detaljeret gennemgang og handling.
+- **Registrering af vedhæftede filer**: Scan, registrer og undersøg sammenkædet indhold (moderne vedhæftede filer) fra OneDrive og Microsoft Teams, der matcher politikklassifikationer og betingelser for Microsoft Teams-meddelelser. Indhold af vedhæftede filer udtrækkes automatisk til en tekstfil for at få en detaljeret gennemgang og handling.
 
 ### <a name="actionable-insights"></a>Indsigt, der kan handles på
 
@@ -127,11 +125,10 @@ Nye interaktive dashboards til beskeder, politikkampe, handlinger og tendenser h
 
 Politikker for kommunikation med overholdelse af angivne standarder scanner og registrerer meddelelser på tværs af flere kommunikationskanaler for at hjælpe dig med hurtigt at gennemse og løse problemer med overholdelse af angivne standarder:
 
-- **Microsoft Teams**: Chatkommunikation for offentlige og private [Microsoft Teams](/MicrosoftTeams/Teams-overview) kanaler og individuelle chats understøttes i kommunikation med overholdelse af angivne standarder som en separat kanalkilde eller med andre Microsoft 365 tjenester. Du skal manuelt tilføje individuelle brugere, distributionsgrupper eller specifikke Microsoft Teams kanaler, når du vælger brugere og grupper, der skal overvåges i en politik for overholdelse af kommunikation. Teams brugere kan også selv rapportere upassende meddelelser i private kanaler og gruppekanaler og chats til gennemsyn og afhjælpning.
-- **Exchange Online**: Alle postkasser, der hostes på [Exchange Online](/Exchange/exchange-online) i din Microsoft 365 organisation, er berettiget til scanning. Mails og vedhæftede filer, der matcher betingelser for kommunikation med overholdelse af angivne standarder, er øjeblikkeligt tilgængelige for overvågning og i rapporter om overholdelse af angivne standarder. Exchange Online er nu en valgfri kildekanal og er ikke længere påkrævet i politikker for kommunikation med overholdelse af angivne standarder.
-- **Yammer**: Private meddelelser og offentlige communitysamtaler i [Yammer](/yammer/yammer-landing-page) understøttes i politikker for kommunikation med overholdelse af angivne standarder. Yammer er en valgfri kanal og skal være i [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) for at understøtte scanning af meddelelser og vedhæftede filer.
-- **Skype for Business Online**: Politikker for overholdelse af angivne standarder for kommunikation understøtter scanning af chatkommunikation og tilknyttede vedhæftede filer i [Skype for Business Online](/SkypeForBusiness/skype-for-business-online).
-- **Kilder fra tredjepart**: Du kan scanne meddelelser fra [tredjepartskilder](archiving-third-party-data.md) for data, der er importeret til postkasser i din Microsoft 365 organisation. Kommunikationsoverholdelse understøtter forbindelser til flere populære platforme, herunder Instant Bloomberg og andre.
+- **Microsoft Teams**: Chatkommunikation for offentlige og private [Microsoft Teams-kanaler](/MicrosoftTeams/Teams-overview) og individuelle chats understøttes i overholdelse af kommunikation som en separat kanalkilde eller med andre Microsoft 365-tjenester. Du skal manuelt tilføje individuelle brugere, distributionsgrupper eller specifikke Microsoft Teams-kanaler, når du vælger brugere og grupper, der skal overvåges i en politik for overholdelse af kommunikation. Teams-brugere kan også selv rapportere upassende meddelelser i private kanaler og gruppekanaler og chats til gennemsyn og afhjælpning.
+- **Exchange Online**: Alle postkasser, der hostes på [Exchange Online](/Exchange/exchange-online) i din Microsoft 365-organisation, er berettiget til scanning. Mails og vedhæftede filer, der matcher betingelser for kommunikation med overholdelse af angivne standarder, er øjeblikkeligt tilgængelige for overvågning og i rapporter om overholdelse af angivne standarder. Exchange Online er nu en valgfri kildekanal og er ikke længere påkrævet i politikker for kommunikation med overholdelse af angivne standarder.
+- **Yammer**: Private meddelelser og offentlige communitysamtaler i [Yammer](/yammer/yammer-landing-page) understøttes i politikker for overholdelse af kommunikation. Yammer er en valgfri kanal og skal være i [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) for at understøtte scanning af meddelelser og vedhæftede filer.
+- **Kilder fra tredjepart**: Du kan scanne meddelelser fra [tredjepartskilder](archiving-third-party-data.md) for data, der er importeret til postkasser i din Microsoft 365-organisation. Kommunikationsoverholdelse understøtter forbindelser til flere populære platforme, herunder Instant Bloomberg og andre.
 
 Hvis du vil vide mere om understøttelse af meddelelseskanaler i politikker for overholdelse af kommunikation, skal du se [Registrer kanalsignaler med kommunikationsoverholdelse](communication-compliance-channels.md).
 
@@ -161,13 +158,13 @@ Du kan vælge mellem følgende politikskabeloner i Microsoft Purview-compliance-
 - **Politik for brugerrapporterede meddelelser**: Denne systempolitik understøtter brugerrapporterede meddelelser fra kanal-, gruppe- og private chatmeddelelser. Aktiveret som standard i Teams Administration.
 
 >[!TIP]
->Brug [anbefalede handlinger](communication-compliance-configure.md#recommended-actions-preview) som en hjælp til at afgøre, om du har brug for en politik for følsomme oplysninger, eller om du har brug for at opdatere eksisterende upassende indholdspolitikker.
+>Brug [anbefalede handlinger](communication-compliance-configure.md#recommended-actions) som en hjælp til at afgøre, om du har brug for en politik for følsomme oplysninger, eller om du har brug for at opdatere eksisterende upassende indholdspolitikker.
 
 ### <a name="investigate"></a>Undersøg
 
 I dette trin ser du nærmere på de problemer, der registreres som matchende politikker for kommunikation med overholdelse af angivne standarder. Dette trin indeholder følgende handlinger, der er tilgængelige i Microsoft Purview-compliance-portal:
 
-- **Beskeder**: Når en meddelelse svarer til en politikbetingelse, genereres der automatisk en besked. For hver besked kan du se status, alvorsgrad, registreret tid, og om en eDiscovery-sag (Premium) er tildelt, og dens status. Nye beskeder vises på startsiden for kommunikation med overholdelse af angivne standarder og på siden **Beskeder** og vises i rækkefølge efter alvorsgrad.
+- **Beskeder**: Når en meddelelse svarer til en politikbetingelse, genereres der automatisk en besked. For hver besked kan du se status, alvorsgrad, den registrerede tid, og om der er tildelt en eDiscovery-sag (Premium) og dens status. Nye beskeder vises på startsiden for kommunikation med overholdelse af angivne standarder og på siden **Beskeder** og vises i rækkefølge efter alvorsgrad.
 - **Problemadministration**: For hver besked kan du udføre undersøgelseshandlinger for at hjælpe med at løse det problem, der er registreret i meddelelsen.
 - **Dokumentgennemsyn**: Under undersøgelsen af et problem kan du bruge flere visninger af meddelelsen til at evaluere det registrerede problem korrekt. Visningerne omfatter en samtaleoversigt, kun tekst og detaljerede visninger af kommunikationssamtalen.
 - **Gennemse brugeraktivitetshistorik**: Få vist oversigten over aktiviteter i brugermeddelelser og afhjælpningshandlinger, f.eks. tidligere meddelelser og eskaleringer, for politikkampe.
@@ -182,8 +179,8 @@ Det næste trin er at løse problemer med kommunikation med overholdelse af angi
 - **Giv brugeren besked**: Ofte overtræder brugere ved et uheld eller ved et uheld en politik for kommunikation med overholdelse af angivne standarder. Du kan bruge funktionen Notify til at give brugeren en advarsel og løse problemet.
 - **Eskaler til en anden korrekturlæser**: Nogle gange har den første reviewer af et problem brug for input fra andre korrekturlæsere for at hjælpe med at løse hændelsen. Du kan nemt eskalere meddelelsesproblemer til korrekturlæsere i andre områder af organisationen som en del af løsningsprocessen.
 - **Rapportér som fejlklassificeret**: Meddelelser, der er registreret forkert som match af politikker for overholdelse af angivne standarder, vil undertiden gå videre til gennemsynsprocessen. Du kan markere disse typer beskeder som forkert klassificerede, sende feedback til Microsoft om fejlklassificeringen for at hjælpe med at forbedre globale klassificeringer og automatisk løse problemet.
-- **Fjern meddelelse i Teams (prøveversion)**: Upassende meddelelser kan blive fjernet fra visning i Microsoft Teams kanaler eller personlige chatbeskeder og gruppechatmeddelelser. Upassende meddelelser, der fjernes, erstattes af en meddelelse om, at meddelelsen er blevet fjernet for en politikovertrædelse.
-- **Eskaler til undersøgelse**: I de alvorligste situationer kan det være nødvendigt at dele oplysninger om overholdelse af angivne standarder for kommunikation med andre korrekturlæsere i din organisation. Kommunikationsoverholdelse er tæt integreret med andre Microsoft Purview funktioner for at hjælpe dig med løsning af risici fra ende til anden. Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til at bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Du kan få mere at vide om eDiscovery-sager (Premium) under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **Fjern meddelelse i Teams (prøveversion)**: Upassende meddelelser kan blive fjernet fra visning i Microsoft Teams-kanaler eller personlige chatbeskeder og gruppechatmeddelelser. Upassende meddelelser, der fjernes, erstattes af en meddelelse om, at meddelelsen er blevet fjernet for en politikovertrædelse.
+- **Eskaler til undersøgelse**: I de alvorligste situationer kan det være nødvendigt at dele oplysninger om overholdelse af angivne standarder for kommunikation med andre korrekturlæsere i din organisation. Kommunikationsoverholdelse er tæt integreret med andre Microsoft Purview-funktioner for at hjælpe dig med løsning af risici fra ende til anden. Hvis du eskalerer en sag til undersøgelse, kan du overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Du kan få mere at vide om eDiscovery(Premium)-sager under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
 
 ### <a name="monitor"></a>Skærm
 
@@ -194,5 +191,5 @@ Hvis du holder styr på og administrerer overholdelsesproblemer, der er identifi
 ## <a name="ready-to-get-started"></a>Er du klar til at komme i gang?
 
 - Du kan få planlægningsoplysninger under [Planlæg overholdelse af angivne standarder for kommunikation](communication-compliance-plan.md).
-- Se [casestudiet for Contoso,](communication-compliance-case-study.md) og se, hvordan de hurtigt konfigurerede en politik for overholdelse af angivne standarder for kommunikation for at overvåge upassende indhold i Microsoft Teams, Exchange Online og Yammer kommunikation.
-- Hvis du vil konfigurere overholdelse af angivne standarder for kommunikation for din Microsoft 365 organisation, skal du se [Konfigurer overholdelse af angivne standarder for kommunikation](communication-compliance-configure.md).
+- Se [casestudiet for Contoso,](communication-compliance-case-study.md) og se, hvordan de hurtigt konfigurerede en politik for overholdelse af angivne standarder for kommunikation for at overvåge upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation.
+- Hvis du vil konfigurere overholdelse af angivne standarder for kommunikation for din Microsoft 365-organisation, skal du se [Konfigurer overholdelse af kommunikation](communication-compliance-configure.md).

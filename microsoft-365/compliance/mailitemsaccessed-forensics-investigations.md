@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Brug overvågningshandlingen MailItemsAccessed-postkasse til at udføre tekniske undersøgelser af kompromitterede brugerkonti.
-ms.openlocfilehash: 5ff3c078dfd29b5b44bfac5f04b329bf014507ea
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a2c6d8030ba90f213f665036157b3efe0c267e80
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090933"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629459"
 ---
-# <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Brug Microsoft Purview Audit (Premium) til at undersøge kompromitterede konti
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="use-microsoft-purview-audit-premium-to-investigate-compromised-accounts"></a>Brug Microsoft Purview-gennemgang (Premium) til at undersøge kompromitterede konti
 
 En kompromitteret brugerkonto (også kaldet en *kontoovertagelse*) er en type angreb, når en hacker får adgang til en brugerkonto og fungerer som brugeren. Disse typer angreb forårsager nogle gange mere skade, end angriberen har til hensigt. Når du undersøger kompromitterede mailkonti, skal du antage, at flere maildata er blevet kompromitteret, end det kan være angivet, ved at spore personens faktiske tilstedeværelse. Afhængigt af typen af data i mails skal du antage, at følsomme oplysninger blev kompromitteret, eller at de blev pålagt lovmæssige bøder, medmindre du kan bevise, at følsomme oplysninger ikke blev eksponeret. HIPAA-regulerede organisationer står f.eks. over for betydelige bøder, hvis der er tegn på, at patientsundhedsmæssige oplysninger (PHI) blev eksponeret. I disse tilfælde er det usandsynligt, at hackere er interesseret i PHI, men organisationer skal stadig rapportere brud på datasikkerheden, medmindre de kan bevise andet.
 
@@ -33,7 +31,7 @@ For at hjælpe dig med at undersøge kompromitterede mailkonti overvågninger vi
 
 ## <a name="the-mailitemsaccessed-mailbox-auditing-action"></a>Overvågningshandlingen MailItemsAccessed for postkasse
 
-Den nye MailItemsAccessed-handling er en del af den nye [overvågningsfunktion (Premium).](advanced-audit.md) Det er en del af [overvågning af Exchange postkasse](/office365/securitycompliance/enable-mailbox-auditing#mailbox-auditing-actions) og er som standard aktiveret for brugere, der har fået tildelt en Office 365- eller Microsoft 365 E5-licens, eller for organisationer med et Microsoft 365 E5 Overholdelse tilføjelsesprogramabonnement.
+Den nye MailItemsAccessed-handling er en del af den nye [overvågningsfunktionalitet (Premium).](advanced-audit.md) Det er en del af [overvågning af Exchange-postkassen](/office365/securitycompliance/enable-mailbox-auditing#mailbox-auditing-actions) og er som standard aktiveret for brugere, der har fået tildelt en Office 365- eller Microsoft 365 E5-licens, eller for organisationer med et Microsoft 365 E5 Overholdelse tilføjelsesprogramabonnement.
 
 Handlingen MailItemsAccessed mailbox-auditing dækker alle mailprotokoller: POP, IMAP, MAPI, EWS, Exchange ActiveSync og REST. Den dækker også begge typer af adgang til mail: *synkroniser* og *bind*.
 
@@ -171,7 +169,7 @@ Duplikerede overvågningsposter for de samme bindingshandlinger, der forekommer 
 |ClientIPAddress|Klientcomputerens IP-adresse.|
 |ClientInfoString|Klientprotokollen, der bruges til at få adgang til postkassen.|
 |Overordnetmappe|Den fulde mappesti til det postelement, der blev åbnet.|
-|Logon_type|Logontypen for den bruger, der udførte handlingen. Logontyperne (og deres tilsvarende Enum-værdi) er Ejer (0), Administrator (1) eller Stedfortræder (2).|
+|Logon_type|Logontypen for den bruger, der udførte handlingen. Logontyperne (og deres tilsvarende Enum-værdi) er Ejer (0), Administration (1) eller Stedfortræder (2).|
 |MailAccessType|Angiver, om adgangen er en binding eller en synkroniseringshandling.|
 |PostkasseUPN|UPN'et for den postkasse, hvor meddelelsen, der læses, er placeret.|
 |Bruger|UPN for den bruger, der læser meddelelsen.|
@@ -188,8 +186,8 @@ Det er almindeligt, at en person med ondsindede hensigter kan få adgang til en 
 
 |Overvågningspost 1|Overvågningspost 2|Overvågningspost 3|
 |---|---|---|
-|ClientIPAddress1<br/>**SessionId2**|ClientIPAddress2<br/>**SessionId2**|ClientIPAddress1<br/>**SessionId3**|
-|InternetMessageIdA<br/>InternetMessageIdD<br/>InternetMessageIdE<br/>InternetMessageIdF<br/>|InternetMessageIdA<br/>InternetMessageIdC|InternetMessageIdB|
+|ClientIPAddress **1**<br/>SessionId **2**|ClientIPAddress **2**<br/>SessionId **2**|ClientIPAddress **1**<br/>SessionId **3**|
+|InternetMessageId **A**<br/>InternetMessageId **D**<br/>InternetMessageId **E**<br/>InternetMessageId **F**<br/>|InternetMessageId **A**<br/>InternetMessageId **C**|InternetMessageId **B**|
 |
 
 Hvis nogle af de egenskaber, der er angivet i tabellen i det [forrige afsnit](#filtering-of-duplicate-audit-records) , er forskellige, oprettes der en separat overvågningspost for at spore den nye kontekst. Adgange sorteres i de separate overvågningsposter afhængigt af den kontekst, som aktiviteten fandt sted i.

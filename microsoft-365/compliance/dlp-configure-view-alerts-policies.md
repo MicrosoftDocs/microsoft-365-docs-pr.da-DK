@@ -1,5 +1,5 @@
 ---
-title: Konfigurere og få vist beskeder om politikker til forebyggelse af datatab
+title: Konfigurer og få vist beskeder for DLP-politikker
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -20,139 +20,139 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-description: Få mere at vide om, hvordan du definerer og administrerer beskeder om politikker til forebyggelse af datatab.
-ms.openlocfilehash: 9b8ee897502f76dbdb63e3fbac99e4223f378a1a
-ms.sourcegitcommit: b6ab10ba95e4b986065c51179ead3810cc1e2a85
+description: Få mere at vide om, hvordan du definerer og administrerer beskeder for politikker til forebyggelse af datatab.
+ms.openlocfilehash: 60d5188b9288b1e131e36e145f7abb98a34d5ead
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63594350"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627641"
 ---
-# <a name="configure-and-view-alerts-for-data-loss-prevention-polices"></a>Konfigurere og få vist beskeder om politik til forebyggelse af datatab
+# <a name="configure-and-view-alerts-for-data-loss-prevention-polices"></a>Konfigurer og få vist beskeder for politikker til forebyggelse af datatab
 
-Politikker til forebyggelse af datatab (DLP) kan træffe beskyttende handlinger for at forhindre utilsigtet deling af følsomme elementer. Når der sker en handling på et følsomt element, kan du få besked ved at konfigurere beskeder for DLP. Denne artikel viser, hvordan du definerer omfattende politikker for påmindelser, der er knyttet til dine politikker til forebyggelse af datatab (DLP). Du kan se, hvordan du kan bruge det nye dashboard til administration af DLP-beskeder i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a> til at få vist beskeder, hændelser og tilknyttede metadata for DLP-politikbrud.
+Microsoft Purview Forebyggelse af datatab politikker (DLP) kan udføre beskyttende handlinger for at forhindre utilsigtet deling af følsomme elementer. Når der udføres en handling på et følsomt element, kan du få besked ved at konfigurere beskeder for DLP. I denne artikel kan du se, hvordan du definerer omfattende beskedpolitikker, der er knyttet til politikker til forebyggelse af datatab (DLP). Du kan se, hvordan du bruger det nye dashboard til administration af DLP-beskeder i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> til at få vist beskeder, hændelser og tilknyttede metadata for DLP-politikovertrædelser.
 
 ## <a name="features"></a>Funktioner
 
 Følgende funktioner er en del af dette:
 
--   **Dashboard til administration af DLP-beskeder**: <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">I Microsoft 365 Overholdelsescenter</a> viser dette dashboard beskeder for DLP-politikker, der håndhæves på følgende arbejdsbelastninger:
+-   **Dashboard til administration af DLP-beskeder**: I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> viser dette dashboard beskeder om DLP-politikker, der gennemtvinges for følgende arbejdsbelastninger:
 
     -   Exchange
     -   SharePoint
     -   OneDrive
     -   Teams
     -   Enheder
--   **Avancerede konfigurationsindstillinger for** beskeder: Disse indstillinger er en del af flowet til oprettelse af DLP-politikker. Brug dem til at oprette omfattende konfigurationer af beskeder. Du kan oprette en besked ved en enkelt begivenhed eller en samlet besked baseret på antallet af hændelser eller størrelsen af de sammensatte data.
+-   **Avancerede konfigurationsindstillinger for beskeder**: Disse indstillinger er en del af DLP-politikudviklerflowet. Brug dem til at oprette omfattende konfigurationer af beskeder. Du kan oprette en enkelt hændelsesbesked eller en samlet besked baseret på antallet af hændelser eller størrelsen af de lækkede data.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-Før du begynder, skal du kontrollere, at du har de nødvendige forudsætninger:
+Før du begynder, skal du sørge for, at du har de nødvendige forudsætninger:
 
--   Licensering til dashboardet til administration af DLP-beskeder
--   Licensering til konfigurationsindstillinger for beskeder
+-   Licenser til dashboardet til administration af DLP-beskeder
+-   Licenser til konfigurationsindstillinger for beskeder
 -   Roller
 
-### <a name="licensing-for-the-dlp-alert-management-dashboard"></a>Licensering til dashboardet til administration af DLP-beskeder
+### <a name="licensing-for-the-dlp-alert-management-dashboard"></a>Licenser til dashboardet til administration af DLP-beskeder
 
-Alle berettigede lejere til Office 365 DLP kan få adgang til det nye DLP-dashboard til administration af beskeder. For at komme i gang bør du være berettiget til Office 365 DLP til Exchange Online, SharePoint Online og OneDrive for Business. Du kan finde flere oplysninger om licenskravene for Office 365 DLP i Hvilke licenser giver en bruger rettigheder til at [drage fordel af tjenesten?](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-licenses-provide-the-rights-for-a-user-to-benefit-from-the-service-16).
+Alle berettigede lejere til Office 365 DLP kan få adgang til det nye dashboard til administration af DLP-beskeder. For at komme i gang skal du være berettiget til Office 365 DLP til Exchange Online, SharePoint Online og OneDrive for Business. Du kan få flere oplysninger om licenskravene til Office 365 DLP under [Hvilke licenser giver en bruger ret til at drage fordel af tjenesten?](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#which-licenses-provide-the-rights-for-a-user-to-benefit-from-the-service-16).
 
-Kunder, der bruger [Slutpunkt DLP](endpoint-dlp-learn-about.md), der er berettiget til [Teams DLP](dlp-microsoft-teams.md), vil få vist deres slutpunktsbeskeder om DLP-politik og Teams DLP-politikbeskeder i dashboardet til administration af DLP-beskeder.
+Kunder, der bruger [Slutpunkt DLP](endpoint-dlp-learn-about.md) , som er berettiget til [Teams DLP](dlp-microsoft-teams.md) , får vist deres DLP-politikbeskeder for slutpunkter og Teams DLP-politikbeskeder på dashboardet til administration af DLP-beskeder.
 
-### <a name="licensing-for-alert-configuration-options"></a>Licensering til konfigurationsindstillinger for beskeder
+### <a name="licensing-for-alert-configuration-options"></a>Licenser til konfigurationsindstillinger for beskeder
 
-- **Konfiguration af** en enkelt begivenhed: Organisationer, der har et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, kan kun oprette påmindelsespolitikker, når der udløses en besked, hver gang der sker en aktivitet.
-- **Konfiguration af aggregeret** påmindelse: Hvis du vil konfigurere aggregerede påmindelsespolitikker baseret på en grænseværdi, skal du have en af følgende konfigurationer:
+- **Konfiguration af en enkelt hændelsesbesked**: Organisationer, der har et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, kan kun oprette beskedpolitikker, hvis en besked udløses, hver gang der forekommer en aktivitet.
+- **Samlet konfiguration af beskeder**: Hvis du vil konfigurere samlede politikker for beskeder baseret på en tærskel, skal du have en af følgende konfigurationer:
   - Et E5- eller G5-abonnement
-  - Et E1-, F1- eller G1- eller E3- eller G3-abonnement, der indeholder en af følgende funktioner:
+  - Et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, der indeholder en af følgende funktioner:
     - Office 365 Advanced Threat Protection Plan 2
     - Microsoft 365 E5 Overholdelse
-    - Microsoft 365 licens til eDiscovery og overvågning af tilføjelsesprogrammet
+    - Licens til Microsoft 365 eDiscovery- og overvågningstilføjelsesprogram
 
 ### <a name="roles"></a>Roller
 
-Hvis du vil have vist dashboardet til administration af DLP-beskeder eller redigere konfigurationsindstillingerne for påmindelser i en DLP-politik, skal du være medlem af en af disse rollegrupper:
+Hvis du vil have vist dashboardet til administration af DLP-beskeder eller redigere indstillingerne for konfiguration af beskeder i en DLP-politik, skal du være medlem af en af disse rollegrupper:
 
--   Overholdelsesadministrator
--   Dataadministrator for overholdelse af regler og standarder
+-   Administrator for overholdelse af angivne standarder
+-   Administrator for overholdelsesdata
 -   Sikkerhedsadministrator
 -   Sikkerhedsoperator
 -   Sikkerhedslæser
 
-For at få adgang til dashboardet til administration af DLP-beskeder skal du have rollen Administrer vigtige beskeder og en af følgende roller:
+Hvis du vil have adgang til dashboardet til administration af DLP-beskeder, skal du have rollen Administrer beskeder og en af følgende roller:
 
 -   Administration af DLP-overholdelse
--   View-Only DLP-overholdelsesstyring
+-   administration af DLP-overholdelse af View-Only
 
-## <a name="alert-configuration-experience"></a>Påmindelseskonfigurationsoplevelse
+## <a name="alert-configuration-experience"></a>Oplevelse af konfiguration af beskeder
 
-Hvis du er berettiget til samlede [konfigurationsindstillinger](#licensing-for-alert-configuration-options) for beskeder, kan du se følgende indstillinger indbygget i DLP-politikforfatteroplevelsen.
+Hvis du er berettiget til [aggregerede konfigurationsindstillinger for beskeder](#licensing-for-alert-configuration-options), kan du se følgende indstillinger indbygget i oplevelsen til oprettelse af DLP-politik.
 
-:::image type="content" source="../media/incident-reports-options-aggregated-alerts.png" alt-text="Skærmbillede, der viser indstillinger for hændelsesrapporter for brugere, der er berettiget til samlede konfigurationsindstillinger for beskeder." border="false":::
+:::image type="content" source="../media/incident-reports-options-aggregated-alerts.png" alt-text="Skærmbillede, der viser indstillinger for hændelsesrapporter for brugere, der er berettiget til aggregerede konfigurationsindstillinger for beskeder." border="false":::
 
-Med denne konfiguration kan du konfigurere en politik til at generere en besked:
+Denne konfiguration giver dig mulighed for at konfigurere en politik til at generere en besked:
 
-- hver gang en aktivitet opfylder politikbetingelserne
-- når den definerede grænseværdi er nået eller overskredet
+- hver gang en aktivitet stemmer overens med politikbetingelserne
+- når den definerede grænse nås eller overskrides
 - baseret på antallet af aktiviteter
-- baseret på mængden af eksfiltrerede data
+- baseret på mængden af exfiltrated data
 
-For at forhindre en strøm af meddelelsesmails bliver alle forekomster, der forekommer inden for et minuttidsvindue, og som er for den samme DLP-regel og på den samme placering, grupperet sammen i den samme besked. Funktionen til et minuts aggregeringstidsvindue er tilgængelig i: 
+For at forhindre en strøm af meddelelsesmails grupperes alle match, der forekommer inden for et minuts tidsrum, og som er for den samme DLP-regel og på samme placering, sammen i den samme besked. Funktionen til aggregeringstid på ét minut er tilgængelig i: 
 
 - Et E5- eller G5-abonnement
-- Et E1-, F1- eller G1- eller E3- eller G3-abonnement, der indeholder en af følgende funktioner:
+- Et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, der indeholder en af følgende funktioner:
     - Office 365 Advanced Threat Protection Plan 2
     - Microsoft 365 E5 Overholdelse
-    - Microsoft 365 licens til eDiscovery og overvågning af tilføjelsesprogrammet
+    - Licens til Microsoft 365 eDiscovery- og overvågningstilføjelsesprogram
  
-For organisationer, der har et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, er aggregeringstidsvinduet 15 minutter.
+For organisationer, der har et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, er sammenlægningstidsvinduet 15 minutter.
 
 ## <a name="dlp-alert-management-dashboard"></a>Dashboard til administration af DLP-beskeder
 
 Sådan arbejder du med dashboardet til administration af DLP-beskeder:
 
-1.  I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter skal</a> du gå til **Forebyggelse af datatab**.
+1.  I <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal skal du</a> gå til **Forebyggelse af datatab**.
 
-2.  Vælg fanen **Beskeder for** at få vist DLP-beskeddashboardet.
+2.  Vælg fanen **Beskeder** for at få vist dashboardet med DLP-beskeder.
 
-    -   Vælg filtre for at afgrænse listen over beskeder. Vælg **Tilpas kolonner for** at få vist de egenskaber, du vil have vist. Du kan også vælge at sortere beskederne i stigende eller faldende rækkefølge i en hvilken som helst kolonne.
+    -   Vælg filtre for at tilpasse listen over beskeder. Vælg **Tilpas kolonner** for at få vist de egenskaber, du vil se. Du kan også vælge at sortere beskederne i stigende eller faldende rækkefølge i en hvilken som helst kolonne.
     -   Vælg en besked for at få vist detaljer:
 
         :::image type="content" source="../media/alert-details.png" alt-text="Skærmbillede, der viser beskedoplysninger på dashboardet til administration af DLP-beskeder." border="false":::
 
-1.  Vælg fanen **Hændelser** for at få vist alle de hændelser, der er knyttet til beskeden. Du kan vælge en bestemt hændelse for at få vist dens detaljer. I følgende tabel vises nogle af detaljerne om begivenheden.
+1.  Vælg fanen **Hændelser** for at få vist alle de hændelser, der er knyttet til beskeden. Du kan vælge en bestemt hændelse for at få vist dens detaljer. I følgende tabel vises nogle af hændelsesdetaljerne.
     
-    | Kategori          | Egenskabsnavn                 | Beskrivelse                                                                | Gældende hændelsestyper                   |
+    | Kategori          | Egenskabsnavn                 | Beskrivelse                                                                | Relevante hændelsestyper                   |
     |-------------------|-------------------------------|----------------------------------------------------------------------------|------------------------------------------|
     |*Oplysninger om begivenhed*||
-    |      | Id                            | Entydigt id, der er knyttet til begivenheden                                        | Alle begivenheder                               |
-    |                   | Placering                      | Arbejdsbelastning, hvor hændelsen blev registreret                                      | Alle begivenheder                               |
-    |                   | Aktivitetstid              | Klokkeslæt for den brugeraktivitet, der forårsagede DLP-overtrædelse                    | Alle begivenheder                               |
-    |*På påvirkede enheder*||
-    |  | Bruger                          | Bruger, der var skyld i DLP-overtrædelse                                          | Alle begivenheder                               |
-    |                   | Værtsnavn                      | Værtsnavn på den computer, hvor DLP-overtrædelse blev registreret              | Enheders begivenheder                           |
-    |                   | IP-adresse                    | Computerens IP-adresse                                                  | Enheders begivenheder                           |
-    |                   | Filsti                     | Absolut sti for den fil, der er involveret i overtrædelse                        | SharePoint, OneDrive og enheder |
-    |                   | Mailmodtagere              | Modtagere af mail, der overtræder DLP-politikken                       | Exchange begivenheder                          |
-    |                   | Mailens emne                 | Emnet for den mail, der overtræder DLP-politikken                          | Exchange begivenheder                          |
-    |                   | Vedhæftede filer i mails             | Navnene på de vedhæftede filer i den mail, der overtræder DLP-politikken         | Exchange begivenheder                          |
-    |                   | Webstedsejer                    | Navnet på ejeren af webstedet                                                     | SharePoint og OneDrive begivenheder           |
-    |                   | URL-adresse til websted                      | Den fulde URL-adresse til SharePoint eller OneDrive websted                                | SharePoint og OneDrive begivenheder           |
-    |                   | Fil oprettet                  | Tidspunkt for oprettelse af filer                                                      | SharePoint og OneDrive begivenheder           |
-    |                   | Filen er senest ændret            | Klokkeslæt for den seneste ændring af filen                                  | SharePoint og OneDrive begivenheder           |
-    |                   | Filstørrelse                     | Filens størrelse                                                           | SharePoint og OneDrive begivenheder           |
-    |                   | Filejer                    | Ejeren af filen                                                          | SharePoint og OneDrive begivenheder           |
-    |*Politikdetaljer*||
-    |     | DLP-politik matchet            | Navnet på den DLP-politik, der blev matchet                                    | Alle begivenheder                               |
-    |                   | Matchet regel                  | Navnet på DLP-reglen i DLP-politikken, der blev matchet                    | Alle begivenheder                               |
-    |                   | Der er registreret følsomme oplysningstyper | Typer af følsomme oplysninger, der blev registreret som en del af DLP-politikken | Alle begivenheder                               |
-    |                   | Handlinger, der er foretaget                 | Handlinger, der er taget som en del af den matchede DLP-politik                          | Alle begivenheder                               |
-    |                   | Politik for overrode af brugere          | Om brugeren overrokerer politikken via politiktip                | Alle begivenheder                               |
-    |                   | Tilsidesætte justeringstekst   | Begrundelse angivet for at tilsidesætte politiktip                          | Alle begivenheder                               |
+    |      | Id                            | Entydigt id, der er knyttet til hændelsen                                        | Alle hændelser                               |
+    |                   | Placering                      | Arbejdsbelastning, hvor hændelsen blev registreret                                      | Alle hændelser                               |
+    |                   | Tidspunkt for aktivitet              | Tidspunktet for den brugeraktivitet, der forårsagede DLP-fejlen                    | Alle hændelser                               |
+    |*Påvirkede enheder*||
+    |  | Bruger                          | Bruger, der forårsagede DLP-fejlen                                          | Alle hændelser                               |
+    |                   | Værtsnavn                      | Værtsnavnet på den computer, hvor DLP-fejlen blev registreret              | Enhedshændelser                           |
+    |                   | IP-adresse                    | Computerens IP-adresse                                                  | Enhedshændelser                           |
+    |                   | Filsti                     | Absolut sti til den fil, der er involveret i fejlen                        | Hændelser for SharePoint, OneDrive og enheder |
+    |                   | Mailmodtagere              | Modtagere af den mail, der har overtrådt DLP-politikken                       | Exchange-hændelser                          |
+    |                   | Mailemne                 | Emnet for den mail, der overtrådte DLP-politikken                          | Exchange-hændelser                          |
+    |                   | Vedhæftede filer i mails             | Navnene på de vedhæftede filer i den mail, der overtrådte DLP-politikken         | Exchange-hændelser                          |
+    |                   | Webstedsejer                    | Navnet på webstedets ejer                                                     | SharePoint- og OneDrive-hændelser           |
+    |                   | URL-adresse til websted                      | Fuldstændig URL-adresse til SharePoint- eller OneDrive-webstedet                                | SharePoint- og OneDrive-hændelser           |
+    |                   | Filen er oprettet                  | Tidspunkt for filoprettelse                                                      | SharePoint- og OneDrive-hændelser           |
+    |                   | Filen blev senest ændret            | Tidspunkt for seneste ændring af filen                                  | SharePoint- og OneDrive-hændelser           |
+    |                   | Filstørrelse                     | Filens størrelse                                                           | SharePoint- og OneDrive-hændelser           |
+    |                   | Filejer                    | Ejer af filen                                                          | SharePoint- og OneDrive-hændelser           |
+    |*Oplysninger om politik*||
+    |     | DLP-politik matcher            | Navnet på den DLP-politik, der blev matchet                                    | Alle hændelser                               |
+    |                   | Regel, der stemmer overens                  | Navnet på DLP-reglen i den DLP-politik, der blev matchet                    | Alle hændelser                               |
+    |                   | Der blev fundet følsomme infotyper | Følsomme oplysningstyper, der blev registreret som en del af DLP-politikken | Alle hændelser                               |
+    |                   | Udførte handlinger                 | Handlinger, der udføres som en del af den tilsvarende DLP-politik                          | Alle hændelser                               |
+    |                   | Politik for brugeroverrode          | Angiver, om brugeren tilsidesætter politikken via politiktip                | Alle hændelser                               |
+    |                   | Tilsidesæt justeringstekst   | Begrundelse for tilsidesættelse af politiktip                          | Alle hændelser                               |
     
-1.  Vælg fanen **Typer af følsomme oplysninger** for at få vist detaljer om de typer af følsomme oplysninger, der registreres i indholdet. Detaljer omfatter tillid og optælling.
+1.  Vælg fanen **Følsomme oplysningstyper** for at få vist oplysninger om de følsomme oplysningstyper, der er registreret i indholdet. Detaljer omfatter tillid og antal.
 
-2.  Når du har undersøgt beskeden, skal **du vælge Administrer** besked for at ændre status (**Aktiv**, **Undersøges**, **Afvist** eller **Løst**). Du kan også tilføje kommentarer og tildele beskeden til en person i organisationen.
+2.  Når du har undersøgt beskeden, skal du vælge **Administrer besked** for at ændre status (**aktiv**, **undersøgelse**, **afvist** eller **løst**). Du kan også tilføje kommentarer og tildele beskeden til en person i din organisation.
 
-    -   Hvis du vil se en oversigt over arbejdsprocesstyring, skal du **vælge Administrationslog**.
-    -   Når du har taget den nødvendige handling for beskeden, skal du angive status for beskeden **til Løst**.
+    -   Hvis du vil se historikken for administration af arbejdsprocesser, skal du vælge **Administrationslog**.
+    -   Når du har foretaget den nødvendige handling for beskeden, skal du angive status for beskeden til **Løst**.

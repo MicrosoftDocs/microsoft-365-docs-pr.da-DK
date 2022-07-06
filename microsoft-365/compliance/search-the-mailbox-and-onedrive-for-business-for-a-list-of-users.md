@@ -19,22 +19,20 @@ search.appverid:
 ms.assetid: 5f4f8206-2d6a-4cb2-bbc6-7a0698703cc0
 description: Brug Indholdssøgning og scriptet i denne artikel til at søge i postkasserne og OneDrive for Business websteder efter en gruppe af brugere.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 838e565d385077416d1001afc02e1aceeebb5188
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 02ee9790d35eca411a9e27607a7e99ca962ddf05
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011618"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629161"
 ---
 # <a name="use-content-search-to-search-the-mailbox-and-onedrive-for-business-site-for-a-list-of-users"></a>Brug indholdssøgning til at søge i postkassen og OneDrive for Business websted efter en liste over brugere
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-PowerShell & overholdelse af angivne standarder indeholder en række cmdlet'er, der giver dig mulighed for at automatisere tidskrævende eDiscovery-relaterede opgaver. I øjeblikket tager det tid og forberedelse at oprette en indholdssøgning på Microsoft Purview-overholdelsesportalen for at søge i et stort antal placeringer med tilsynsførende indhold. Før du opretter en søgning, skal du indsamle URL-adressen for hvert OneDrive for Business websted og derefter føje hver postkasse og OneDrive for Business websted til søgningen. I fremtidige versioner bliver det nemmere at gøre det på overholdelsesportalen. Indtil da kan du bruge scriptet i denne artikel til at automatisere denne proces. I dette script bliver du bedt om at angive navnet på din organisations MySite-domæne (f.eks. **contoso** i URL-adressen `https://contoso-my.sharepoint.com`), en liste over brugermailadresser, navnet på den nye indholdssøgning og den søgeforespørgsel, der skal bruges. Scriptet henter OneDrive for Business URL-adresse for hver bruger på listen og opretter og starter derefter en indholdssøgning, der søger i postkassen og OneDrive for Business websted for hver bruger på listen ved hjælp af den søgeforespørgsel, du angiver.
+PowerShell & overholdelse af angivne standarder indeholder en række cmdlet'er, der giver dig mulighed for at automatisere tidskrævende eDiscovery-relaterede opgaver. I øjeblikket tager det tid og forberedelse at oprette en indholdssøgning i Microsoft Purview-compliance-portal for at søge i et stort antal placeringer med tilsynsførende indhold. Før du opretter en søgning, skal du indsamle URL-adressen for hvert OneDrive for Business websted og derefter føje hver postkasse og OneDrive for Business websted til søgningen. I fremtidige versioner bliver det nemmere at gøre det på overholdelsesportalen. Indtil da kan du bruge scriptet i denne artikel til at automatisere denne proces. I dette script bliver du bedt om at angive navnet på din organisations MySite-domæne (f.eks. **contoso** i URL-adressen `https://contoso-my.sharepoint.com`), en liste over brugermailadresser, navnet på den nye indholdssøgning og den søgeforespørgsel, der skal bruges. Scriptet henter OneDrive for Business URL-adresse for hver bruger på listen og opretter og starter derefter en indholdssøgning, der søger i postkassen og OneDrive for Business websted for hver bruger på listen ved hjælp af den søgeforespørgsel, du angiver.
 
 ## <a name="permissions-and-script-information"></a>Tilladelser og scriptoplysninger
 
-- Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen og en SharePoint Global Online-administrator for at køre scriptet i trin 3.
+- Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen og en global SharePoint Online-administrator for at køre scriptet i trin 3.
 
 - Sørg for at gemme listen over brugere, du opretter i trin 2, og scriptet i trin 3 i den samme mappe. Det vil gøre det nemmere at køre scriptet.
 
@@ -46,11 +44,11 @@ PowerShell & overholdelse af angivne standarder indeholder en række cmdlet'er, 
 
 Det første trin er at installere SharePoint Online Management Shell. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
 
-Gå til [Konfigurer SharePoint Shell-miljøet til onlineadministration](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
+Gå til [Konfigurer SharePoint Online Management Shell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) , og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell.
 
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
-Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive konti for en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
+Scriptet i trin 3 opretter en indholdssøgning for at søge i postkasserne og OneDrive-kontiene efter en liste over brugere. Du kan blot skrive mailadresserne i en tekstfil, eller du kan køre en kommando i PowerShell for at få en liste over mailadresser og gemme dem i en fil (placeret i samme mappe, som du gemmer scriptet i i trin 3).
 
 Her er en [Exchange Online PowerShell-kommando](/powershell/exchange/connect-to-exchange-online-powershell), som du kan køre for at få en liste over mailadresser for alle brugere i din organisation og gemme den i en tekstfil med navnet `Users.txt`.
 
@@ -64,7 +62,7 @@ Når du har kørt denne kommando, skal du åbne filen og fjerne den header, der 
 
 Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. Sørg for at have disse oplysninger klar, før du kører scriptet.
 
-- **Dine brugerlegitimationsoplysninger** – Scriptet bruger dine legitimationsoplysninger til at få adgang til SharePoint Online for at hente OneDrive for Business URL-adresser og oprette forbindelse til Security & Compliance PowerShell.
+- **Dine brugerlegitimationsoplysninger** – Scriptet bruger dine legitimationsoplysninger til at få adgang til SharePoint Online for at få OneDrive for Business URL-adresser og oprette forbindelse til Security & Compliance PowerShell.
 
 - **Navnet på dit MySite-domæne** – MySite-domænet er det domæne, der indeholder alle de OneDrive for Business websteder i din organisation. Hvis URL-adressen for dit MySite-domæne f.eks. er **https://contoso-my.sharepoint.com**, skal du angive  `contoso` , når scriptet beder dig om navnet på dit MySite-domæne.
 

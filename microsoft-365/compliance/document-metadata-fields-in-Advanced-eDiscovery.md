@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Denne artikel definerer metadatafelterne for dokumenter i et gennemsynssæt i en sag i Microsoft Purview eDiscovery (Premium) i Microsoft 365.
-ms.openlocfilehash: d0e188d227e3000ba6811204c74cf746b00bc0e2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: a6fc8479d3ecd2b89c0331220fb7f88f46bda1e4
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097772"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629745"
 ---
 # <a name="document-metadata-fields-in-ediscovery-premium"></a>Dokumentmetadatafelter i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en sag i Microsoft Purview eDiscovery (Premium). Tabellen indeholder følgende oplysninger:
 
@@ -55,20 +53,20 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |Sammensat sti|Sammensat sti|Compound_path|Sti, der kan læses af mennesker, og som beskriver elementets kilde.|
 |Indhold*|Indhold||Udtrukket tekst til elementet.|
 |Brødtekst i samtale|Samtalebod||Elementets samtalebrødtekst.|
-|Samtale-id|Samtale-id|Conversation_ID|Samtale-id fra meddelelsen. For Teams 1:1 og gruppechats deler alle transskriptionsfiler og deres familieelementer i den samme samtale det samme samtale-id. Du kan finde flere oplysninger [i arbejdsprocessen for eDiscovery (Premium) for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md).|
+|Samtale-id|ConversationId|Conversation_ID|Samtale-id fra meddelelsen. I forbindelse med Teams 1:1- og gruppechats deler alle transskriptionsfiler og deres familieelementer i den samme samtale det samme samtale-id. Du kan finde flere oplysninger i [arbejdsprocessen for eDiscovery (Premium) for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md).|
 |Samtalefamilie-id|ConversationFamilyID|ConversationFamilyID|Det id, der identificerer individuelle elementer i en samtale samt de relaterede elementer i samtalen.|
 |Samtaleindeks||Conversation_index|Samtaleindeks fra meddelelsen.|
-|Samtalenavn||Samtalenavn|Dette felt afhænger af indholdstypen.<br>**Teams 1:1 chat:** første 40 tegn i første meddelelse.<br>**Teams 1:N chat:** Navnet på gruppechatten, og hvis den ikke er tilgængelig, de første 40 tegn i den første meddelelse.<br>**Teams Channel Post:** Posttitel eller meddelelsesunderoverskrift. Hvis den ikke er tilgængelig, de første 40 tegn i den første meddelelse.|
+|Samtalenavn||Samtalenavn|Dette felt afhænger af indholdstypen.<br>**Teams 1:1-chat:** første 40 tegn i den første meddelelse.<br>**Teams 1:N-chat:** Navn på gruppechat; hvis den ikke er tilgængelig, de første 40 tegn i den første meddelelse.<br>**Indlæg til Teams-kanal:** Underoverskrift for opslag eller meddelelse; hvis den ikke er tilgængelig, de første 40 tegn i den første meddelelse.|
 |Samtale-PDF-tid|ConversationPdfTime||Dato for oprettelse af PDF-versionen af samtalen.|
 |Brændtid for samtale-redigering|ConversationRedactionBurnTime||Den dato, hvor PDF-versionen af samtalen blev oprettet til Chat.|
 |Samtaleemne|SamtaleTopic||Samtaleemne for elementet.|
-|Samtaletype|Samtaletype|Samtaletype|Typen af chatsamtale. Værdierne er: <br>**Teams 1:1 og gruppechats og alle Yammer samtaler:** Gruppe<br>**Teams kanaler og private kanaler:** Kanal|
+|Samtaletype|Samtaletype|Samtaletype|Typen af chatsamtale. Værdierne er: <br>**Teams 1:1 og gruppechats og alle Yammer-samtaler:** Gruppe<br>**Teams-kanaler og private kanaler:** Kanal|
 |Indeholder slettet meddelelse|ContainsDeletedMessage|ContainsDeletedMessage|Angiver, om chatudskriften indeholder en slettet meddelelse|
 |Indeholder redigeret meddelelse|ContainsEditedMessage|ContainsEditedMessage|Angiver, om chatudskriften indeholder en redigeret meddelelse|
-|Teams meddelelsestitel|TeamsAnnouncementTitle|TeamsAnnouncementTitle|Titel fra en [teams-meddelelse](https://support.microsoft.com/office/send-an-announcement-to-a-channel-8f244ea6-235a-4dcc-9143-9c5b801b4992).|
+|Teams-meddelelsestitel|TeamsAnnouncementTitle|TeamsAnnouncementTitle|Titel fra en [teams-meddelelse](https://support.microsoft.com/office/send-an-announcement-to-a-channel-8f244ea6-235a-4dcc-9143-9c5b801b4992).|
 |||Converted_file_path|Stien til den konverterede eksportfil. Kun til intern Brug af Microsoft.|
 |Vogter|Vogter|Vogter|Navnet på den tilsynsførende, som elementet var knyttet til.|
-|Dato|Dato|Dato|Dato er et beregnet felt, der afhænger af filtypen.<p>**Mail**: Afsendelsesdato<br>**Vedhæftede filer i mails**: Dato for seneste ændring af dokumentet; Hvis den ikke er tilgængelig, sendes den overordnedes dato<br>**Integrerede dokumenter**: Dato for seneste ændring af dokumentet; Hvis den ikke er tilgængelig, den overordnedes seneste ændringsdato<br>**SPO-dokumenter (indeholder moderne vedhæftede filer)**: Dato for seneste ændring af dokumentet; hvis den ikke er tilgængelig, SharePoint dato for seneste ændring<br>**Ikke-Office 365 dokumenter**: Dato for seneste ændring<br>**Møder**: Mødets startdato<br>**Talebesked**: Sendt dato<br>**Chat**: Afsendelsesdato<br>**Teams**: Afsendelsesdato|
+|Dato|Dato|Dato|Dato er et beregnet felt, der afhænger af filtypen.<p>**Mail**: Afsendelsesdato<br>**Vedhæftede filer i mails**: Dato for seneste ændring af dokumentet; Hvis den ikke er tilgængelig, sendes den overordnedes dato<br>**Integrerede dokumenter**: Dato for seneste ændring af dokumentet; Hvis den ikke er tilgængelig, den overordnedes seneste ændringsdato<br>**SPO-dokumenter (indeholder moderne vedhæftede filer)**: Dato for seneste ændring af dokumentet; Hvis den ikke er tilgængelig, senest ændret i SharePoint<br>**Ikke-Office 365 dokumenter**: Dato for seneste ændring<br>**Møder**: Mødets startdato<br>**Talebesked**: Sendt dato<br>**Chat**: Afsendelsesdato<br>**Teams**: Afsendelsesdato|
 |Dokumentkommentarer|Dokumentkommentarer|Doc_comments|Kommentarer fra dokumentets metadata.|
 |Dokumentfirma||Doc_company|Firma fra dokumentets metadata.|
 |Oprettelsesdato for dokument|CreatedTime|Doc_date_created|Opret dato ud fra dokumentmetadata.|
@@ -100,7 +98,7 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |FamilyDuplicateSet*||Family_duplicate_set|Numerisk id for familier, der er nøjagtige dubletter af hinanden (samme indhold og alle de samme vedhæftede filer).|
 |Familie-id|FamilyId|Family_ID|Grupperer vedhæftede filer og udtrukne elementer fra mail og chats med dets overordnede element. Dette omfatter chat eller mail og alle vedhæftede filer og udtrukne elementer.|
 |Familiestørrelse||Family_size|Antallet af dokumenter i familien.|
-|Filklasse|FileClass|File_class|Indhold fra SharePoint og OneDrive: **Dokument**. <br>Indhold fra Exchange: **Mail** eller **Vedhæftet fil**. <br>Indhold fra Teams eller Yammer: **Samtaler**.|
+|Filklasse|FileClass|File_class|For indhold fra SharePoint og OneDrive: **Dokument**. <br>For indhold fra Exchange: **Mail** eller **Vedhæftet fil**. <br>For indhold fra Teams eller Yammer: **Samtaler**.|
 |Fil-id|Fil-id|File_ID|Dokument-id'et er entydigt i sagen.|
 |Oprettelsesdato for filsystem||File_system_date_created|Oprettelsesdato fra filsystem (gælder kun for data, der ikke er Office 365).|
 |Ændringsdato for filsystem||File_system_date_modified|Dato for ændring fra filsystem (gælder kun for data, der ikke er Office 365).|
@@ -122,13 +120,13 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |Elementklasse|ItemClass|Item_class|Elementklasse leveret af exchange-server; F.eks **. IPM. Bemærk**|
 |Dato for seneste ændring|Senest ændret dato|Doc_date_modified|Dato for seneste ændring fra dokumentmetadata.|
 |Indlæs id|LoadId|Load_ID|Id'et for det indlæsningssæt, som elementet blev føjet til et korrektursæt i.|
-|Placering|Placering|Placering|Streng, der angiver den type placering, som dokumenter blev hentet fra.<p>**Importerede data** – data, der ikke er Office 365<br>**Teams** - Microsoft Teams<br>**Exchange** – Exchange postkasser<br>**SharePoint** - SharePoint websteder<br>**OneDrive** - OneDrive konti|
-|Navn på placering|Placeringsnavn|Location_name|Streng, der identificerer elementets kilde. Til exchange vil dette være SMTP-adressen på postkassen. URL-adressen for gruppen af websteder for SharePoint og OneDrive.|
+|Placering|Placering|Placering|Streng, der angiver den type placering, som dokumenter blev hentet fra.<p>**Importerede data** – data, der ikke er Office 365<br>**Teams** – Microsoft Teams<br>**Exchange** – Exchange-postkasser<br>**SharePoint** - SharePoint-websteder<br>**OneDrive** – OneDrive-konti|
+|Navn på placering|Placeringsnavn|Location_name|Streng, der identificerer elementets kilde. Til exchange vil dette være SMTP-adressen på postkassen. for SharePoint og OneDrive, URL-adressen til gruppen af websteder.|
 |||Marked_as_pivot|Denne fil er pivotet i et næsten duplikeret sæt.|
 |Markeret som repræsentant|MarkAsRepresentative||Ét dokument fra hvert sæt nøjagtige dubletter markeres som repræsentanter.|
 |Mødets slutdato|Mødedato|Meeting_end_date|Mødets slutdato for møder.|
 |Mødets startdato|Mødestartdato|Meeting_start_date|Mødets startdato for møder.|
-|Meddelelsestype|Meddelelseskind|Message_kind|Den type meddelelse, der skal søges efter. Mulige værdier: **<p>kontakter <br>docs <br>email <br>externaldata <br>faxes <br>im <br>journals <br>møder <br>microsoftteams** (returnerer elementer fra chats, møder og opkald i Microsoft Teams) **<br>noter <br>indlæg <br>rssfeeds <br>opgaver <br>voicemail**|
+|Meddelelsestype|MessageKind|Message_kind|Den type meddelelse, der skal søges efter. Mulige værdier: **<p>kontakter <br>docs <br>email <br>externaldata <br>faxes <br>im <br>journals <br>møder <br>Microsoftteams** (returnerer elementer fra chats, møder og opkald i Microsoft Teams) **<br>noter indlæg <br><br>rssfeeds <br>opgaver <br>voicemail**|
 |Moderne overordnet id for vedhæftet fil||ModernAttachment_ParentId|Det uforanderlige id for dokumentets overordnede.|
 |Oprindelig udvidelse|NativeExtension|Native_extension|Oprindelig udvidelse af elementet.|
 |Oprindeligt filnavn|NativeFileName|Native_file_name|Elementets oprindelige filnavn.|
@@ -140,7 +138,7 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |O365-forfattere||O365_authors|Forfatter fra SharePoint.|
 |O365 oprettet af||O365_created_by|Oprettet af fra SharePoint.|
 |O365-dato for oprettelse||O365_date_created|Oprettelsesdato fra SharePoint.|
-|O365ModifiedDate||O365_date_modified|Den dato, hvor et dokument (eller en dokumentversion), der er indsamlet fra SharePoint eller OneDrive for Business, blev ændret. Dette er den samme ændringsdato som den, der vises i versionshistorikken i SharePoint og OneDrive brugeroplevelse.|
+|O365ModifiedDate||O365_date_modified|Den dato, hvor et dokument (eller en dokumentversion), der er indsamlet fra SharePoint eller OneDrive for Business, blev ændret. Dette er den samme ændringsdato som den, der vises i versionshistorikken i SharePoint- og OneDrive-brugeroplevelsen.|
 |O365 ændret af||O365_modified_by|Ændret af fra SharePoint eller OneDrive.|
 |Andre tilsynsførende|DedupedCustodians|Deduped_custodians|Liste over vogtere af dokumenter, der er nøjagtige dubletter (for mail, baseret på indhold, for dokumenter, baseret på hash).|
 |Andre fil-id'er|DedupedFileIds|Deduped_file_IDs|Liste over fil-id'er for dokumenter, der er nøjagtige dubletter (for mail, baseret på indhold, for dokumenter, baseret på hash).|
@@ -175,17 +173,17 @@ I følgende tabel vises metadatafelterne for dokumenter i et gennemsynssæt i en
 |Emne|Emne|Email_subject|Meddelelsens emne.|
 |Emne/titel|Emnenavn||Beregnet felt, der består af elementets emne eller titel.|
 |Tags|Tags|Tags|Mærker anvendt i et korrektursæt.|
-|Kanalnavn|Kanal|ChannelName|Dette er navnet på den Teams kanal. Gælder kun for Microsoft Teams indhold.|
-|Teamnavn|Teamnavn|Teamnavn|**Teams:** Navnet på teamet<br>**Yammer:** Communitynavn|
+|Kanalnavn|Kanal|ChannelName|Dette er Navnet på Teams-kanalen. Gælder kun for Microsoft Teams-indhold.|
+|Teamnavn|Teamnavn|Teamnavn|**Hold:** Navn på team<br>**Yammer:** Communitynavn|
 |Liste over temaer|Liste over temaer|Themes_list|Listen Temaer beregnet til analyse.|
-|Titel|Titel|Doc_title|Titel fra dokumentets metadata. Titel fra dokumentets metadata. For Teams og Yammer indhold er dette værdien fra egenskaben ConversationName.|
+|Titel|Titel|Doc_title|Titel fra dokumentets metadata. Titel fra dokumentets metadata. For Teams- og Yammer-indhold er dette værdien fra egenskaben ConversationName.|
 |Til|Til|Email_to|Til felt for meddelelsestyper. Formatet er **DisplayName\<SmtpAddress>**|
 |Entydig i mailsæt|UniqueInEmailSet||**Falsk** , hvis der er en dublet af den vedhæftede fil i mailsættet.|
 |Versionsgruppe-id||Version_Group_Id|Grupperer de forskellige versioner af det samme dokument.|
-|VersionNumber||Version_Number|Versionsnummeret på et dokument, der indsamles fra SharePoint eller OneDrive for Business. Dette er det samme versionsnummer som det, der vises i versionshistorikken i SharePoint og OneDrive brugeroplevelse.|
+|VersionNumber||Version_Number|Versionsnummeret på et dokument, der er indsamlet fra SharePoint eller OneDrive for Business. Dette er det samme versionsnummer som det, der vises i versionshistorikken i SharePoint- og OneDrive-brugeroplevelsen.|
 |Blev afhjulpet|WasRemediated|Was_Remediated|**Sand** , hvis elementet blev afhjælpet, ellers **false**.|
 |Ordoptælling|WordCount|Word_count|Antal ord i elementet.|
 |||||
 
 > [!NOTE]
-> Du kan finde flere oplysninger om egenskaber, der kan søges i, når du søger efter Office 365 indholdsplaceringer, når du indsamler data for en eDiscovery-sag (Premium), under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).
+> Du kan finde flere oplysninger om egenskaber, der kan søges i, når du søger efter Office 365 indholdsplaceringer, når du indsamler data for en eDiscovery (Premium)-sag, under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).

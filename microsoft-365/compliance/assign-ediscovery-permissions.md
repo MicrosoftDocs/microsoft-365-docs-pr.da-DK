@@ -1,5 +1,5 @@
 ---
-title: Tildel eDiscovery-tilladelser på Microsoft Purview-overholdelsesportalen
+title: Tildel eDiscovery-tilladelser i Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -16,33 +16,31 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 5b9a067b-9d2e-4aa5-bb33-99d8c0d0b5d7
-description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relaterede opgaver ved hjælp af Microsoft Purview-overholdelsesportalen.
+description: Tildel de tilladelser, der kræves for at udføre eDiscovery-relaterede opgaver ved hjælp af Microsoft Purview-compliance-portal.
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: facd219019aa7ad2bd6325da25a2e4da3db660b1
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: f8ba8873523372d599e6a40bccb5a1312b2bfe67
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013370"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66628897"
 ---
 # <a name="assign-ediscovery-permissions-in-the-compliance-portal"></a>Tildel eDiscovery-tilladelser på overholdelsesportalen
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Hvis du vil have, at brugerne skal bruge et af de [eDiscovery-relaterede værktøjer](ediscovery.md) på Microsoft Purview-overholdelsesportalen, skal du tildele dem de relevante tilladelser. Den nemmeste måde at gøre dette på er ved at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser på overholdelsesportalen** . I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
+Hvis andre skal bruge [eDiscovery-relaterede værktøjer](ediscovery.md) i Microsoft Purview-compliance-portal, skal du tildele dem de nødvendige tilladelser. Den nemmeste måde at gøre dette på er ved at tilføje den person, der er den relevante rollegruppe, på siden **Tilladelser på overholdelsesportalen** . I dette emne beskrives de tilladelser, der kræves for at udføre eDiscovery-opgaver.
 
 > [!TIP]
 > Du kan få vist dine egne tilladelser på oversigtssiden for eDiscovery (Premium) på overholdelsesportalen. Du skal have tildelt mindst én rolle, for at dine tilladelser kan vises.
 
 Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **eDiscovery Manager**. Der er to undergrupper i denne rollegruppe.
   
-- **eDiscovery Manager** – En eDiscovery Manager kan bruge eDiscovery-søgeværktøjer til at søge efter indholdsplaceringer i organisationen og udføre forskellige søgerelaterede handlinger, f.eks. få vist og eksportere søgeresultater. Medlemmer kan også oprette og administrere sager i Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium), tilføje og fjerne medlemmer til en sag, oprette ventepositioner for sager, køre søgninger, der er knyttet til en sag, og få adgang til sagsdata. eDiscovery-ledere kan kun få adgang til og administrere de sager, de opretter. De kan ikke få adgang til eller administrere sager, der er oprettet af andre eDiscovery-ledere.
+- **eDiscovery Manager** – En eDiscovery Manager kan bruge eDiscovery-søgeværktøjer til at søge efter indholdsplaceringer i organisationen og udføre forskellige søgerelaterede handlinger, f.eks. få vist og eksportere søgeresultater. Medlemmer kan også oprette og administrere sager i Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium), tilføje og fjerne medlemmer i en sag, oprette ventepositioner for sager, køre søgninger, der er knyttet til en sag, og få adgang til sagsdata. eDiscovery-ledere kan kun få adgang til og administrere de sager, de opretter. De kan ikke få adgang til eller administrere sager, der er oprettet af andre eDiscovery-ledere.
   
 - **eDiscovery-administrator** – En eDiscovery-administrator er medlem af rollegruppen eDiscovery Manager og kan udføre de samme indholdssøgnings- og sagsstyringsrelaterede opgaver, som en eDiscovery Manager kan udføre. En eDiscovery-administrator kan desuden:
   
-  - Få adgang til alle sager, der er angivet på siderne **eDiscovery (Standard)** og **eDiscovery (Premium)** på overholdelsesportalen.
+  - Få adgang til alle de sager, der er angivet på siderne **eDiscovery (Standard)** og **eDiscovery (Premium)** på overholdelsesportalen.
 
   - Få adgang til sagsdata i eDiscovery (Premium) for alle tilfælde i organisationen.
   
@@ -53,7 +51,7 @@ Den primære eDiscovery-relaterede rollegruppe i overholdelsesportalen kaldes **
   Hvis du vil have eDiscovery-administratorer i din organisation, skal du se [Flere oplysninger](#more-information).
 
 > [!NOTE]
-> Hvis du vil analysere en brugers data ved hjælp af eDiscovery (Premium), skal brugeren (datamyndigheden over dataene) tildeles en Office 365 E5 eller Microsoft 365 E5 licens. Alternativt kan brugere med en Office 365 E1 eller en Office 365- eller Microsoft 365 E3-licens tildeles en Microsoft 365 E5 Overholdelse eller Microsoft 365 eDiscovery- og overvågningstilføjelsesprogramlicens. Administratorer, overholdelsesansvarlige eller juridisk personale, der er tildelt sager som medlemmer, og bruger eDiscovery (Premium) til at indsamle, få vist og analysere data, behøver ikke en E5-licens. Du kan finde flere oplysninger om eDiscovery-licenser (Premium) [under Abonnementer og licenser i eDiscovery (Premium)](overview-ediscovery-20.md#subscriptions-and-licensing).
+> Hvis du vil analysere en brugers data ved hjælp af eDiscovery (Premium), skal brugeren (datavogteren) tildeles en Office 365 E5 eller Microsoft 365 E5 licens. Alternativt kan brugere med en Office 365 E1 eller en Office 365- eller Microsoft 365 E3-licens tildeles en Microsoft 365 E5 Overholdelse- eller Microsoft 365 eDiscovery- og Overvågningstilføjelsesprogramlicens. Administratorer, overholdelsesansvarlige eller juridiske medarbejdere, der er tildelt sager som medlemmer og bruger eDiscovery (Premium) til at indsamle, få vist og analysere data, behøver ikke en E5-licens. Du kan finde flere oplysninger om eDiscovery-licenser (Premium) [under Abonnementer og licenser i eDiscovery (Premium)](overview-ediscovery-20.md#subscriptions-and-licensing).
   
 ## <a name="before-you-assign-permissions"></a>Før du tildeler tilladelser
 
@@ -105,7 +103,7 @@ I følgende afsnit beskrives hver af de eDiscovery-relaterede RBAC-roller, der e
 
 ### <a name="case-management"></a>Sagsstyring
 
-Denne rolle giver brugerne mulighed for at oprette, redigere, slette og styre adgangen til sager med eDiscovery (Standard) og eDiscovery (Premium) i overholdelsesportalen. Som tidligere forklaret skal en bruger tildeles rollen Sagsstyring, før du kan bruge **cmdlet'en Add-eDiscoveryCaseAdmin** til at gøre vedkommende til eDiscovery-administrator.
+Denne rolle giver brugerne mulighed for at oprette, redigere, slette og styre adgangen til eDiscovery-sager (Standard) og eDiscovery (Premium) i overholdelsesportalen. Som tidligere forklaret skal en bruger tildeles rollen Sagsstyring, før du kan bruge **cmdlet'en Add-eDiscoveryCaseAdmin** til at gøre vedkommende til eDiscovery-administrator.
 
 Du kan finde flere oplysninger under:
 
@@ -115,13 +113,13 @@ Du kan finde flere oplysninger under:
 
 ### <a name="communication"></a>Kommunikation
 
-Denne rolle giver brugerne mulighed for at administrere al kommunikation med de tilsynsførende, der er identificeret i en eDiscovery-sag (Premium). Dette omfatter oprettelse af meddelelser om venteposition, påmindelser om venteposition og eskalering til administration. Brugeren kan også spore den tilsynsførendes anerkendelse af meddelelser om venteposition og administrere adgangen til den tilsynsførende portal, der bruges af hver tilsynsførende til at spore kommunikation i de tilfælde, hvor de blev identificeret som tilsynsførende.
+Denne rolle giver brugerne mulighed for at administrere al kommunikation med de tilsynsførende, der er identificeret i en eDiscovery(Premium)-sag. Dette omfatter oprettelse af meddelelser om venteposition, påmindelser om venteposition og eskalering til administration. Brugeren kan også spore den tilsynsførendes anerkendelse af meddelelser om venteposition og administrere adgangen til den tilsynsførende portal, der bruges af hver tilsynsførende til at spore kommunikation i de tilfælde, hvor de blev identificeret som tilsynsførende.
 
 Du kan finde flere oplysninger [under Arbejd med kommunikation i eDiscovery (Premium)](managing-custodian-communications.md).
 
 ### <a name="compliance-search"></a>Søgning efter overholdelse
 
-Denne rolle giver brugerne mulighed for at køre værktøjet indholdssøgning på overholdelsesportalen til søgepostkasser og offentlige mapper, SharePoint onlinewebsteder, OneDrive for Business websteder, Skype for Business samtaler, Microsoft 365 grupper og Microsoft Teams og Yammer grupper. Denne rolle giver en bruger mulighed for at få et estimat over søgeresultaterne og oprette eksportrapporter, men der kræves andre roller for at starte søgehandlinger for indhold, f.eks. visning, eksport eller sletning af søgeresultater.
+Denne rolle giver brugerne mulighed for at køre værktøjet indholdssøgning på overholdelsesportalen for at søge i postkasser og offentlige mapper, SharePoint Online-websteder, OneDrive for Business websteder, Skype for Business samtaler, Microsoft 365-grupper og Microsoft Teams og Yammer-grupper. Denne rolle giver en bruger mulighed for at få et estimat over søgeresultaterne og oprette eksportrapporter, men der kræves andre roller for at starte søgehandlinger for indhold, f.eks. visning, eksport eller sletning af søgeresultater.
 
 I Indholdssøgning og eDiscovery (Standard) kan brugere, der har fået tildelt rollen Søgning efter overholdelse, men ikke har rollen Eksempelvisning, få vist resultaterne af en søgning, hvor eksempelhandlingen er blevet startet af en bruger, der har fået tildelt eksempelrollen. Brugeren uden prøveversionsrollen kan få vist resultater i op til to uger, efter at den indledende eksempelhandling blev oprettet.
 
@@ -131,19 +129,19 @@ Den udvidede periode på to uger til visning og eksport af søgeresultater (uden
 
 ### <a name="custodian"></a>Vogter
 
-Denne rolle giver brugerne mulighed for at identificere og administrere tilsynsførende for eDiscovery-sager (Premium) og bruge oplysningerne fra Azure Active Directory og andre kilder til at finde datakilder, der er knyttet til tilsynsførende. Brugeren kan knytte andre datakilder, f.eks. postkasser, SharePoint websteder, og Teams med tilsynsførende i en sag. Brugeren kan også tilbageholde de datakilder, der er knyttet til tilsynsførende, for at bevare indhold i forbindelse med en sag.
+Denne rolle giver brugerne mulighed for at identificere og administrere tilsynsførende for eDiscovery-sager (Premium) og bruge oplysningerne fra Azure Active Directory og andre kilder til at finde datakilder, der er knyttet til tilsynsførende. Brugeren kan knytte andre datakilder, f.eks. postkasser, SharePoint-websteder og Teams, til tilsynsførende i en sag. Brugeren kan også tilbageholde de datakilder, der er knyttet til tilsynsførende, for at bevare indhold i forbindelse med en sag.
 
 Du kan finde flere oplysninger [under Arbejd med vogtere i eDiscovery (Premium)](managing-custodians.md).
 
 ### <a name="export"></a>eksportér
 
-Rollen giver brugerne mulighed for at eksportere resultaterne af en indholdssøgning til en lokal computer. Det giver dem også mulighed for at forberede søgeresultater til analyse i eDiscovery (Premium).
+Rollen giver brugerne mulighed for at eksportere resultaterne af en indholdssøgning til en lokal computer. Den gør det også muligt for dem at forberede søgeresultater til analyse i eDiscovery (Premium).
 
-Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-overholdelsesportalen](export-search-results.md).
+Du kan finde flere oplysninger om eksport af søgeresultater under [Eksportér søgeresultater fra Microsoft Purview-compliance-portal](export-search-results.md).
 
 ### <a name="hold"></a>Holde
 
-Denne rolle giver brugerne mulighed for at placere indhold i venteposition i postkasser, offentlige mapper, websteder, Skype for Business samtaler og Microsoft 365 grupper. Når indhold er i venteposition, kan indholdsejere stadig ændre eller slette det oprindelige indhold, men indholdet bevares, indtil ventepositionen fjernes, eller indtil varigheden af ventepositionen udløber.
+Denne rolle giver brugerne mulighed for at placere indhold i venteposition i postkasser, offentlige mapper, websteder, Skype for Business samtaler og Microsoft 365-grupper. Når indhold er i venteposition, kan indholdsejere stadig ændre eller slette det oprindelige indhold, men indholdet bevares, indtil ventepositionen fjernes, eller indtil varigheden af ventepositionen udløber.
 
 Du kan få flere oplysninger om ventepositioner i:
 
@@ -169,7 +167,7 @@ Denne rolle giver brugerne mulighed for at udføre massefjernelse af data, der o
 
 ## <a name="adding-role-groups-as-members-of-ediscovery-cases"></a>Tilføjelse af rollegrupper som medlemmer af eDiscovery-sager
 
-Du kan tilføje rollegrupper som medlemmer af eDiscovery-sager (Standard) og eDiscovery-sager (Premium), så medlemmer af rollegrupperne kan få adgang til og udføre opgaver i de tildelte sager. De roller, der er tildelt rollegruppen, definerer, hvad medlemmer af rollegruppen kan gøre. Hvis du derefter tilføjer en rollegruppe som medlem af sagen, kan medlemmerne få adgang til og udføre disse opgaver i en bestemt sag. Du kan få flere oplysninger om tilføjelse af rollegrupper som medlemmer af sager i:
+Du kan tilføje rollegrupper som medlemmer af eDiscovery-sager (Standard) og eDiscovery (Premium), så medlemmer af rollegrupperne kan få adgang til og udføre opgaver i de tildelte sager. De roller, der er tildelt rollegruppen, definerer, hvad medlemmer af rollegruppen kan gøre. Hvis du derefter tilføjer en rollegruppe som medlem af sagen, kan medlemmerne få adgang til og udføre disse opgaver i en bestemt sag. Du kan få flere oplysninger om tilføjelse af rollegrupper som medlemmer af sager i:
 
 - [Kom i gang med eDiscovery (Standard)](get-started-core-ediscovery.md#step-4-optional-add-members-to-a-ediscovery-standard-case)
 
@@ -197,7 +195,7 @@ Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
 
   - Hvis en person, der er det eneste medlem af en eDiscovery-sag, forlader organisationen, kan ingen (herunder medlemmer af rollegruppen Organisationsadministration eller et andet medlem af rollegruppen eDiscovery Manager) få adgang til denne eDiscovery-sag, fordi de ikke er medlem af en sag. I denne situation er der ingen måde at få adgang til dataene på i dette tilfælde. Men da en eDiscovery-administrator kan få adgang til alle eDiscovery-sager i organisationen, kan vedkommende få vist sagen og tilføje sig selv eller en anden eDiscovery-administrator som medlem af sagen.
 
-  - Da en eDiscovery-administrator kan få vist og få adgang til alle sager med eDiscovery (Standard) og eDiscovery (Premium), kan de overvåge og overvåge alle sager og tilknyttede søgninger efter overholdelse af angivne standarder. Dette kan hjælpe med at forhindre misbrug af søgninger i overholdelse af angivne standarder eller eDiscovery-sager. Og da eDiscovery-administratorer kan få adgang til potentielt følsomme oplysninger i resultaterne af en søgning efter overholdelse, skal du begrænse antallet af personer, der er eDiscovery-administratorer.
+  - Da en eDiscovery-administrator kan få vist og få adgang til alle eDiscovery- (Standard) og eDiscovery(Premium)-sager, kan de overvåge og overvåge alle sager og tilknyttede søgninger efter overholdelse af angivne standarder. Dette kan hjælpe med at forhindre misbrug af søgninger i overholdelse af angivne standarder eller eDiscovery-sager. Og da eDiscovery-administratorer kan få adgang til potentielt følsomme oplysninger i resultaterne af en søgning efter overholdelse, skal du begrænse antallet af personer, der er eDiscovery-administratorer.
 
 - **Kan jeg tilføje en gruppe som medlem af rollegruppen eDiscovery Manager?** Som tidligere forklaret kan du tilføje en mailaktiveret sikkerhedsgruppe som medlem af undergruppen eDiscovery-ledere i rollegruppen eDiscovery Manager ved hjælp af cmdlet'en **Add-RoleGroupMember** i Security & Compliance PowerShell. Du kan f.eks. køre følgende kommando for at føje en mailaktiveret sikkerhedsgruppe til rollegruppen eDiscovery Manager. 
 
@@ -205,7 +203,7 @@ Get-ComplianceCase -RoleGroup "Name of role group" -CaseType AdvancedEdiscovery
   Add-RoleGroupMember "eDiscovery Manager" -Member <name of security group>
   ```
 
-    Exchange distributionsgrupper og Microsoft 365-grupper understøttes ikke. Du skal bruge en mailaktiveret sikkerhedsgruppe, som du kan oprette i Exchange Online PowerShell ved at køre `New-DistributionGroup -Type Security`. Du kan også oprette en mailaktiveret sikkerhedsgruppe (og tilføje medlemmer) i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339). Det kan tage op til 60 minutter, efter du har oprettet den, for at en ny mailaktiveret sikkerhedsgruppe kan føjes til rollegruppen eDiscovery-ledere.
+    Exchange-distributionsgrupper og -Microsoft 365-grupper understøttes ikke. Du skal bruge en mailaktiveret sikkerhedsgruppe, som du kan oprette i Exchange Online PowerShell ved at køre `New-DistributionGroup -Type Security`. Du kan også oprette en mailaktiveret sikkerhedsgruppe (og tilføje medlemmer) i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> eller i [Microsoft 365 Administration](https://go.microsoft.com/fwlink/p/?linkid=2024339). Det kan tage op til 60 minutter, efter du har oprettet den, for at en ny mailaktiveret sikkerhedsgruppe kan føjes til rollegruppen eDiscovery-ledere.
 
     Som tidligere nævnt kan du heller ikke gøre en mailaktiveret sikkerhedsgruppe til eDiscovery-administrator ved hjælp af **Cmdlet'en Add-eDiscoveryCaseAdmin** i Security & Compliance PowerShell. Du kan kun tilføje individuelle brugere som eDiscovery-administratorer.
 

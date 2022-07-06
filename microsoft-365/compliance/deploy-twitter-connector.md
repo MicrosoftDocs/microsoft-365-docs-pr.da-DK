@@ -15,17 +15,15 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
-description: Administratorer kan konfigurere en oprindelig connector til at importere og arkivere Twitter-data for at Microsoft 365. Når disse data er importeret til Microsoft 365, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, indholdssøgning og opbevaringspolitikker til at administrere styringen af din organisations Twitter-data.
-ms.openlocfilehash: a928e24c73fcbb290bde2caa0f508610fc18728d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Administratorer kan konfigurere en oprindelig connector til at importere og arkivere Twitter-data til Microsoft 365. Når disse data er importeret til Microsoft 365, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, indholdssøgning og opbevaringspolitikker til at administrere styringen af din organisations Twitter-data.
+ms.openlocfilehash: bdc678fe1240b4b82a47d5cd091ee309a8153daa
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090955"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66627751"
 ---
 # <a name="deploy-a-connector-to-archive-twitter-data"></a>Udrul en connector for at arkivere Twitter-data
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Denne artikel indeholder den trinvise proces til installation af en connector, der bruger tjenesten Office 365 Import til at importere data fra din organisations Twitter-konto til Microsoft 365. Hvis du vil have en overordnet oversigt over denne proces og en liste over forudsætninger, der kræves for at installere en Twitter-connector, skal du se [Konfigurer en connector til arkivering af Twitter-data ](archive-twitter-data-with-sample-connector.md).
 
@@ -59,18 +57,18 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
    ![Skriv hemmeligheden, og vælg udløbsperiode.](../media/TCimage08.png)
 
-8. Kopiér værdien af hemmeligheden, og gem den i en tekstfil eller på en anden lagerplacering. Dette er den AAD programhemmelighed, du bruger i senere trin.
+8. Kopiér værdien af hemmeligheden, og gem den i en tekstfil eller på en anden lagerplacering. Dette er AAD-programhemmeligheden, som du bruger i senere trin.
 
    ![Kopiér og gem hemmeligheden.](../media/TCimage09.png)
 
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub til din Azure-konto
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub på din Azure-konto
 
-1. Gå til [dette GitHub websted](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet), og klik på **Udrul på Azure**.
+1. Gå til [dette GitHub-websted,](https://github.com/microsoft/m365-sample-twitter-connector-csharp-aspnet) og klik på **Udrul på Azure**.
 
     ![Gå til startsiden for Azure.](../media/FBCimage11.png)
 
-2. Når du har klikket på **Udrul på Azure**, omdirigeres du til en Azure Portal med en brugerdefineret skabelonside. Udfyld de **grundlæggende** oplysninger og **Indstillinger** oplysninger, og klik derefter på **Køb**.
+2. Når du har klikket på **Udrul på Azure**, omdirigeres du til en Azure Portal med en brugerdefineret skabelonside. Udfyld de **grundlæggende** oplysninger og **indstillinger,** og klik derefter på **Køb**.
 
    ![Klik på Opret en ressource, og skriv lagerkonto.](../media/FBCimage12.png)
 
@@ -82,13 +80,13 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
     - **Navn på webapp:** Angiv et entydigt navn til connectorwebappen. Navnet skal være mellem 3 og 18 tegn langt. Dette navn bruges til at oprette URL-adressen til Azure-apptjenesten. Hvis du f.eks. angiver navnet på webappen på **twitterconnectoren** , bliver URL-adressen til Azure-apptjenesten **twitterconnector.azurewebsites.net**.
 
-    - **tenantId:** Lejer-id'et for din Microsoft 365 organisation, som du kopierede efter oprettelse af Facebook-connectorappen i Azure Active Directory i trin 1.
+    - **tenantId:** Lejer-id'et for din Microsoft 365-organisation, som du kopierede efter oprettelse af Facebook-connectorappen i Azure Active Directory i trin 1.
 
    - **APISecretKey:** Du kan skrive en hvilken som helst værdi som hemmeligheden. Dette bruges til at få adgang til connectorwebappen i trin 5.
 
 3. Når installationen er fuldført, ligner siden følgende skærmbillede:
 
-    ![Klik på Storage, og klik derefter på Storage konto.](../media/FBCimage13.png)
+    ![Klik på Lager, og klik derefter på Lagerkonto.](../media/FBCimage13.png)
 
 ## <a name="step-3-create-the-twitter-app"></a>Trin 3: Opret Twitter-appen
 
@@ -141,7 +139,7 @@ Udviklerappen Twitter er nu klar til brug.
 
    ![Klik på Konfigurer for at få vist logonsiden.](../media/FBCimage42.png)
 
-3. I feltet Lejer-id skal du skrive eller indsætte dit lejer-id (som du fik i trin 2). Skriv eller indsæt APISecretKey (som du fik i trin 2) i feltet adgangskode, og klik derefter på **Angiv konfiguration Indstillinger** for at få vist siden med konfigurationsoplysninger.
+3. I feltet Lejer-id skal du skrive eller indsætte dit lejer-id (som du fik i trin 2). Skriv eller indsæt APISecretKey (som du fik i trin 2) i feltet adgangskode, og klik derefter på **Angiv konfigurationsindstillinger** for at få vist siden med konfigurationsoplysninger.
 
    ![Log på med lejer-id og API-hemmelig nøgle.](../media/TCimage35.png)
 
@@ -155,15 +153,15 @@ Udviklerappen Twitter er nu klar til brug.
 
    - **Twitter-adgangstokenhemmelighed:** Den adgangstokenhemmelighed, du oprettede i Trin 3.
 
-   - **AAD program-id:** Program-id'et for den Azure Active Directory app, du oprettede i trin 1
+   - **AAD-program-id:** Program-id'et for den Azure Active Directory-app, du oprettede i trin 1
 
-   - **AAD Programhemmelighed:** Værdien for den APISecretKey-hemmelighed, du oprettede i trin 1.
+   - **AAD-programhemmelighed:** Værdien for den APISecretKey-hemmelighed, du oprettede i trin 1.
 
 5. Klik på **Gem** for at gemme connectorindstillingerne.
 
 ## <a name="step-5-set-up-a-twitter-connector-in-the-compliance-portal"></a>Trin 5: Konfigurer en Twitter-connector på overholdelsesportalen
 
-1. Gå til Microsoft Purview-overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank"> siden **Dataconnectors**</a.
+1. Gå til Microsoft Purview-compliance-portal, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank"> siden **Dataconnectors**</a.
 
 2. Klik på **Vis** på siden **Dataconnectors** under **Twitter**.
 
@@ -185,7 +183,7 @@ Udviklerappen Twitter er nu klar til brug.
 
 6. Når forbindelsen er valideret, skal du klikke på **Næste**.
 
-7. På siden **Godkend Microsoft 365 at importere data** skal du skrive eller indsætte APISecretKey igen og derefter klikke på **Logonwebapp**.
+7. På siden **Godkend, at Microsoft 365 importerer data** skal du skrive eller indsætte APISecretKey igen og derefter klikke på  **Logon-webapp**.
 
 8. Klik på **Log på med Twitter**.
 
@@ -199,7 +197,7 @@ Udviklerappen Twitter er nu klar til brug.
 
 11. På siden **Angiv filtre** kan du anvende et filter til indledningsvist at importere elementer, der er af en bestemt alder. Vælg en alder, og klik derefter på **Næste**.
 
-12. På siden **Vælg lagerplacering** skal du skrive mailadressen på Microsoft 365 postkasse, som Twitter-elementerne importeres til, og derefter klikke på **Næste**.
+12. På siden **Vælg lagerplacering** skal du skrive mailadressen på den Microsoft 365-postkasse, som Twitter-elementerne importeres til, og derefter klikke på **Næste**.
 
 13. Klik på **Næste** for at gennemse connectorindstillingerne, og klik derefter på **Udfør** for at fuldføre connectorkonfigurationen.
 

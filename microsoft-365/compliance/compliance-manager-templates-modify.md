@@ -1,5 +1,5 @@
 ---
-title: Rediger vurderingsskabeloner i Microsoft Compliance Manager
+title: Rediger vurderingsskabeloner i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,25 +17,25 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Forstå, hvordan du redigerer vurderingsskabeloner i Microsoft Compliance Manager.
-ms.openlocfilehash: 589e13e766e35d38eed985a0e7bb9e21544c370d
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Forstå, hvordan du redigerer vurderingsskabeloner i Microsoft Purview Compliance Manager.
+ms.openlocfilehash: f21ff61f6bb06f00d1db8381e3760e7c4b5343aa
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64758525"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630405"
 ---
-# <a name="modify-assessment-templates-in-microsoft-compliance-manager"></a>Rediger vurderingsskabeloner i Microsoft Compliance Manager
+# <a name="modify-assessment-templates-in-microsoft-purview-compliance-manager"></a>Rediger vurderingsskabeloner i Microsoft Purview Compliance Manager
 
-Når du arbejder med vurderinger i Overholdelsesstyring, kan det være en god idé at ændre en vurderingsskabelon, som du har oprettet. Processen ligner processen til [oprettelse af skabelonen](compliance-manager-templates-create.md), da du uploader en formateret Excel fil med dine skabelondata.
+Når du arbejder med vurderinger i Overholdelsesstyring, kan det være en god idé at ændre en vurderingsskabelon, som du har oprettet. Processen ligner [processen til oprettelse af skabeloner](compliance-manager-templates-create.md) , da du uploader en formateret Excel-fil med dine skabelondata.
 
 Der er dog oplysninger, du skal være opmærksom på, når du formaterer filen med ændringer af eksisterende skabelondata. **Vi anbefaler, at du gennemser disse instruktioner omhyggeligt for at sikre, at du ikke overskriver eksisterende data, som du vil bevare.**
 
 Hvis du vil vide mere om formatet af dette regneark, skal du se [Formatér dine skabelondata med Excel](compliance-manager-templates-format-excel.md).
 
-## <a name="format-your-excel-file-to-modify-an-existing-template"></a>Formatér din Excel fil for at redigere en eksisterende skabelon
+## <a name="format-your-excel-file-to-modify-an-existing-template"></a>Formatér din Excel-fil for at redigere en eksisterende skabelon
 
-Vælg den skabelon, du vil ændre, på siden med **vurderingsskabeloner** , som viser siden med oplysninger. Vælg derefter **Eksportér til Excel**. Der downloades en Excel fil med alle dine skabelondata. Gem filen på din lokale computer.
+Vælg den skabelon, du vil ændre, på siden med **vurderingsskabeloner** , som viser siden med oplysninger. Vælg derefter **Eksportér til Excel**. En Excel-fil med alle dine skabelondata downloades. Gem filen på din lokale computer.
 
 Hvis du vil arbejde med denne fil, skal du gå til et afsnit nedenfor for hurtigt at finde de instruktioner, du skal bruge:
 
@@ -100,10 +100,10 @@ Når du importerer regnearket tilbage til skabelonen, fjernes kontrolelementet f
 
 ## <a name="modify-template-info-in-compliance-manager"></a>Rediger skabelonoplysninger i Overholdelsesstyring
 
-Når din Excel fil er fuldført og gemt, skal du følge disse trin.
+Når din Excel-fil er fuldført og gemt, skal du følge disse trin.
 
 1. Åbn siden med vurderingsskabelonen igen, og vælg skabelonen. Vælg **Rediger skabelon** på siden med oplysninger om skabelonen for at starte ændringsguiden.
-2. På skærmen **Upload fil** skal du vælge **Gennemse** for at finde og uploade din Excel fil.
+2. På skærmen **Upload fil** skal du vælge **Gennemse** for at finde og uploade din Excel-fil.
 3. Hvis der ikke er problemer med filen, vises navnet på den overførte fil på det næste skærmbillede. Vælg **Næste** for at fortsætte (hvis du har brug for at ændre filen, skal du vælge **Upload en anden fil**).
     - Hvis der er et problem med filen, forklares det i en fejlmeddelelse øverst, hvad der er galt. Du skal rette filen og overføre den igen. Der opstår fejl, hvis regnearket er formateret forkert, eller hvis der er ugyldige oplysninger i visse felter.
 
@@ -113,4 +113,4 @@ Når din Excel fil er fuldført og gemt, skal du følge disse trin.
 Skabelonen indeholder nu de ændringer, du har foretaget. Alle vurderinger, der bruger denne ændrede skabelon, viser nu ventende opdateringer, og du skal acceptere opdateringerne af vurderingerne, så de afspejler de ændringer, der er foretaget i skabelonen. Få mere at vide om [opdateringer til vurderinger](compliance-manager-assessments.md#accept-updates-to-assessments).
 
 > [!NOTE]
-> Hvis du bruger Overholdelsesstyring på et andet sprog end engelsk, vil du bemærke, at der vises noget tekst på engelsk, når du eksporterer en skabelon til Excel. Titlerne på handlinger (både dine forbedringshandlinger og, hvor det er relevant, Microsoft-handlinger), skal være på engelsk for at kunne genkendes af kontrolelementer. Hvis du foretager ændringer i en handlingstitel, skal du skrive den på engelsk, så filen importeres korrekt.
+> Hvis du bruger Overholdelsesstyring på et andet sprog end engelsk, vil du bemærke, at noget tekst vises på engelsk, når du eksporterer en skabelon til Excel. Titlerne på handlinger (både dine forbedringshandlinger og, hvor det er relevant, Microsoft-handlinger), skal være på engelsk for at kunne genkendes af kontrolelementer. Hvis du foretager ændringer i en handlingstitel, skal du skrive den på engelsk, så filen importeres korrekt.

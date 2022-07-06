@@ -18,18 +18,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du opretter en brugerdefineret type følsomme oplysninger, der giver dig mulighed for at bruge regler, der opfylder organisationens behov.
-ms.openlocfilehash: 69a9808cda2d30cc350da40f6c4f677598c6a000
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 14fb645a4b7f58f609995bc71edae24090c83cc7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016410"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630979"
 ---
 # <a name="customize-a-built-in-sensitive-information-type"></a>Tilpas en indbygget type af følsomme oplysninger
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du søger efter følsomme oplysninger i indhold, skal du beskrive disse oplysninger i det, der kaldes en *regel*. Microsoft Purview DLP (Forebyggelse af datatab) indeholder regler for de mest almindelige følsomme oplysningstyper, som du kan bruge med det samme. Hvis du vil bruge disse regler, skal du inkludere dem i en politik. Det kan være, at du vil justere disse indbyggede regler, så de opfylder organisationens specifikke behov, og det kan du gøre ved at oprette en brugerdefineret type følsomme oplysninger. I dette emne kan du se, hvordan du tilpasser den XML-fil, der indeholder den eksisterende regelsamling, for at registrere et større udvalg af potentielle kreditkortoplysninger.
+Når du søger efter følsomme oplysninger i indhold, skal du beskrive disse oplysninger i det, der kaldes en *regel*. Microsoft Purview Forebyggelse af datatab (DLP) indeholder regler for de mest almindelige typer følsomme oplysninger, som du kan bruge med det samme. Hvis du vil bruge disse regler, skal du inkludere dem i en politik. Det kan være, at du vil justere disse indbyggede regler, så de opfylder organisationens specifikke behov, og det kan du gøre ved at oprette en brugerdefineret type følsomme oplysninger. I dette emne kan du se, hvordan du tilpasser den XML-fil, der indeholder den eksisterende regelsamling, for at registrere et større udvalg af potentielle kreditkortoplysninger.
 
 Du kan tage dette eksempel og anvende det på andre indbyggede typer følsomme oplysninger. Du kan se en liste over standardtyper for følsomme oplysninger og XML-definitioner under [Objektdefinitioner for følsomme oplysninger.](sensitive-information-type-entity-definitions.md)
 
@@ -43,7 +41,7 @@ Hvis du vil eksportere XML-koden, skal du [oprette forbindelse til Security & Co
    Get-DlpSensitiveInformationTypeRulePackage
    ```
 
-2. Store organisationens regler i en variabel ved at skrive følgende. Lagring af noget i en variabel gør det let tilgængeligt senere i et format, der fungerer til PowerShell-kommandoer.
+2. Gem organisationens regler i en variabel ved at skrive følgende. Lagring af noget i en variabel gør det let tilgængeligt senere i et format, der fungerer til PowerShell-kommandoer.
 
    ```powershell
    $ruleCollections = Get-DlpSensitiveInformationTypeRulePackage
@@ -159,7 +157,7 @@ Nu har du noget, der ligner følgende XML. Da regelpakker og regler identificere
 
 ## <a name="remove-the-corroborative-evidence-requirement-from-a-sensitive-information-type"></a>Fjern det bekræftede beviskrav fra en type følsomme oplysninger
 
-Nu, hvor du har en ny type følsomme oplysninger, som du kan uploade til Microsoft Purview-overholdelsesportalen, er det næste trin at gøre reglen mere specifik. Rediger reglen, så den kun søger efter et 16-cifret tal, der består kontrolsummen, men som ikke kræver yderligere (bekræftende) beviser, f.eks. nøgleord. Hvis du vil gøre dette, skal du fjerne den del af XML, der søger efter bekræftende beviser. Korrative beviser er meget nyttige til at reducere falske positiver. I dette tilfælde er der normalt visse nøgleord eller en udløbsdato i nærheden af kreditkortnummeret. Hvis du fjerner disse beviser, skal du også justere, hvor sikker du er på, at du har fundet et kreditkortnummer ved at `confidenceLevel`sænke , hvilket er 85 i eksemplet.
+Nu, hvor du har en ny type følsomme oplysninger, som du kan uploade til Microsoft Purview-compliance-portal, er det næste trin at gøre reglen mere specifik. Rediger reglen, så den kun søger efter et 16-cifret tal, der består kontrolsummen, men som ikke kræver yderligere (bekræftende) beviser, f.eks. nøgleord. Hvis du vil gøre dette, skal du fjerne den del af XML, der søger efter bekræftende beviser. Korrative beviser er meget nyttige til at reducere falske positiver. I dette tilfælde er der normalt visse nøgleord eller en udløbsdato i nærheden af kreditkortnummeret. Hvis du fjerner disse beviser, skal du også justere, hvor sikker du er på, at du har fundet et kreditkortnummer ved at `confidenceLevel`sænke , hvilket er 85 i eksemplet.
 
 ```xml
 <Entity id="db80b3da-0056-436e-b0ca-1f4cf7080d1f" patternsProximity="300"
@@ -197,13 +195,13 @@ Du vil måske kræve bekræftende beviser, men ønsker forskellige eller yderlig
     </Keyword>
 ```
 
-## <a name="upload-your-rule"></a>Upload reglen
+## <a name="upload-your-rule"></a>Upload din regel
 
 Hvis du vil uploade din regel, skal du gøre følgende.
 
 1. Gem den som en .xml fil med Unicode-kodning. Dette er vigtigt, da reglen ikke fungerer, hvis filen gemmes med en anden kodning.
 
-2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+2. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 3. I PowerShell skal du skrive følgende.
 
@@ -239,7 +237,7 @@ Dette er definitionerne for de ord, du oplevede under denne procedure.
 |IdMatch|Dette er det id, som mønsteret skal forsøge at matche – f.eks. et kreditkortnummer.|
 |Nøgleordslister|XML-filen henviser også til `keyword_cc_verification` og `keyword_cc_name`, som er lister over nøgleord, som vi søger efter match fra i `patternsProximity` for objektet . Disse vises i øjeblikket ikke i XML-koden.|
 |Mønster|Mønsteret indeholder en liste over, hvad den følsomme type søger efter. Dette omfatter nøgleord, regexes og interne funktioner, der udfører opgaver som f.eks. at kontrollere kontrolsummene. Følsomme informationstyper kan have flere mønstre med entydige konfidenser. Dette er nyttigt, når du opretter en følsom informationstype, der returnerer en høj tillid, hvis der findes bekræftende beviser, og en lavere tillid, hvis der findes lidt eller ingen bekræftende beviser.|
-|Mønster konfidensniveau|Dette er graden af tillid til, at DLP-programmet fandt et match. Dette konfidensniveau er knyttet til et match for mønsteret, hvis mønsterets krav er opfyldt. Dette er den tillidsmåling, du bør overveje, når du bruger Exchange regler for mailflow (også kaldet transportregler).|
+|Mønster konfidensniveau|Dette er graden af tillid til, at DLP-programmet fandt et match. Dette konfidensniveau er knyttet til et match for mønsteret, hvis mønsterets krav er opfyldt. Dette er den tillidsmåling, du bør overveje, når du bruger exchange-regler for mailflow (også kaldet transportregler).|
 |patternsProximity|Når vi finder, hvad der ligner et kreditkortnummer mønster, `patternsProximity` er nærhed omkring det tal, hvor vi vil søge bekræftende beviser.|
 |recommendedConfidence|Dette er det tillidsniveau, vi anbefaler til denne regel. Den anbefalede tillid gælder for objekter og tilhørsforhold. For objekter evalueres dette tal aldrig i forhold til `confidenceLevel` mønsteret for . Det er blot et forslag, der kan hjælpe dig med at vælge et tillidsniveau, hvis du vil anvende et. I forbindelse `confidenceLevel` med tilhørsforhold skal mønsteret være højere end antallet for `recommendedConfidence` en regelhandling i et mailflow, der skal aktiveres. `recommendedConfidence` er det standardsikkerhedsniveau, der bruges i regler for mailflow, der aktiverer en handling. Hvis du vil, kan du manuelt ændre den regel for mailflowet, der skal aktiveres, på baggrund af mønsterets konfidensniveau i stedet.|
 |

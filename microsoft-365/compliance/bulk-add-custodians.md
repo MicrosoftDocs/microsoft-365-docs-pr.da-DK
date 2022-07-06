@@ -15,26 +15,24 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug masseimportværktøjet til hurtigt at føje flere tilsynsførende og deres tilknyttede datakilder til en sag i Microsoft Purview eDiscovery (Premium).
-ms.openlocfilehash: a9274ebd01a034af82eec510b4e16534150e2216
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: f50304711b12cbcf0b42f0cb185d29d085924108
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097794"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626859"
 ---
 # <a name="import-custodians-to-an-ediscovery-premium-case"></a>Importér tilsynsførende til en eDiscovery-sag (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer mange tilsynsførende, kan du importere flere tilsynsførende på én gang ved hjælp af en CSV-fil, der indeholder de oplysninger, der er nødvendige for at føje dem til en sag. Værktøjet til import af tilsynsførende validerer også CSV-filen, før importjobbet oprettes. Det betyder, at du kan rette eventuelle fejl i CSV-filen i stedet for at skulle vente, indtil importjobbet er fuldført, før du lærer, at der er fejl, der forhindrer en tilsynsførende i at blive føjet til sagen.
+I forbindelse med Microsoft Purview eDiscovery (Premium)-sager, der involverer mange tilsynsførende, kan du importere flere tilsynsførende på én gang ved hjælp af en CSV-fil, der indeholder de oplysninger, der er nødvendige for at føje dem til en sag. Værktøjet til import af tilsynsførende validerer også CSV-filen, før importjobbet oprettes. Det betyder, at du kan rette eventuelle fejl i CSV-filen i stedet for at skulle vente, indtil importjobbet er fuldført, før du lærer, at der er fejl, der forhindrer en tilsynsførende i at blive føjet til sagen.
 
 ## <a name="before-you-import-custodians"></a>Før du importerer vogtere
 
-- Du kan maksimalt importere 1.000 tilsynsførende (rækker) pr. CSV-fil.
+- Du kan maksimalt importere 1.000 tilsynsførende (rækker) pr. CSV-fil. Bemærk, at import af 1.000 tilsynsførende på samme tid kan resultere i timeoutfejl, og nogle tilsynsførende kan mislykke importen. Du afhjælper dette ved at gentage importen, og de mislykkede tilsynsførende skal importeres. For at undgå timeout anbefaler vi, at du importerer 200 tilsynsførende ad gangen.
 
 - Du kan tilknytte op til 500 datakilder for hver tilsynsførende.  
 
-- Du kan kun importere tilsynsførende, der er en del af organisationens Azure Active Directory.
+- Du kan kun importere tilsynsførende, der er en del af din organisations Azure Active Directory.
 
 - Hver tilsynsførende skal have en entydig mailadresse.
 
@@ -42,9 +40,9 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 ## <a name="import-custodians"></a>Importér tilsynsførende
 
-1. Åbn sagen eDiscovery (Premium), og vælg fanen **Datakilder**.
+1. Åbn sagen eDiscovery (Premium), og vælg fanen **Datakilder** .
 
-2. Klik på **Tilføj** **datakildeImportér** >  tilsynsførende.
+2. Klik på **Tilføj****datakildeimportvarsmænd** > .
 
 3. På siden **Hent skabelonguide** skal du klikke på **Download CSV-skabelonen** for at downloade en CSV-fil med en CSV-fil med frihedsberøvelsesskabelonen.
 
@@ -52,9 +50,9 @@ I forbindelse med Microsoft Purview eDiscovery-sager (Premium), der involverer m
 
 4. Føj oplysningerne om forældremyndigheden til CSV-filen, og gem dem på din lokale computer. Se afsnittet [Custodian CSV-fil](#custodian-csv-file) for at få detaljerede oplysninger om de påkrævede egenskaber i CSV-filen.
 
-5. Når du har forberedt CSV-filen med oplysninger om tilsynsførende, skal du gå tilbage til fanen **Datakilder** og klikke på **Tilføj** **datakildeImportér** >  tilsynsførende igen.
+5. Når du har forberedt CSV-filen med oplysningerne om vogteren, skal du gå tilbage til fanen **Datakilder** og klikke på **Tilføj****datakildeimportvogtere** >  igen.
 
-6. Klik på **Upload CSV-fil** på siden **med guiden Upload CSV-fil**, og upload derefter den CSV-fil, der indeholder oplysningerne om vogteren.
+6. På siden med guiden **Upload CSV-fil** skal du klikke på **Overfør csv-fil** og derefter overføre den CSV-fil, der indeholder oplysningerne om vogteren.
 
    Når du har uploadet CSV-filen, validerer importguiden CSV-filen. Hvis der findes valideringsfejl, viser guiden et fejlbanner med et link til at få vist fejlene.
 
@@ -81,11 +79,11 @@ Når du har downloadet skabelonen CSV-tilsynsførende, kan du tilføje tilsynsf�
 | Kolonnenavn|Beskrivelse|
 |:------- |:------------------------------------------------------------|
 |**TilsynsførendekontaktMail**     |Forældremyndighedens UPN-mailadresse. F.eks. sarad@contoso.onmicrosoft.com.           |
-|**Exchange aktiveret** | TRUE/FALSE-værdi, der skal medtages eller ikke medtages i tilsynsførendes postkasse.      |
-|**OneDrive aktiveret** | TRUE/FALSE-værdi, der skal inkluderes eller ikke inkludere tilsynsførendes OneDrive for Business-konto. |
+|**Exchange er aktiveret** | TRUE/FALSE-værdi, der skal medtages eller ikke medtages i tilsynsførendes postkasse.      |
+|**OneDrive er aktiveret** | TRUE/FALSE-værdi, der skal inkluderes eller ikke inkludere tilsynsførendes OneDrive for Business-konto. |
 |**Er OnHold**        | TRUE/FALSE-værdi til at angive, om datakilderne for tilsynsførende skal placeres i venteposition. <sup>1</sup>     |
-|**Arbejdsbelastning1-type**         |Strengværdi, der angiver den type datakilde, der skal knyttes til tilsynsførende. Mulige værdier omfatter: <br/>- ExchangeMailbox<br/> - SharePointSite<br/>- <sup>TeamsMailbox2</sup><br/>- <sup>YammerMailbox2</sup>. Der skelnes mellem store og små bogstaver i de tidligere værdier for disse arbejdsbelastningstyper. CSV-filen indeholder kolonner til tre arbejdsbelastningstyper og deres tilsvarende arbejdsbelastningsplaceringer. Du kan tilføje i alt 500 arbejdsbelastningstyper og -placeringer.|
-|**Placering af arbejdsbelastning1**     | Afhængigt af arbejdsbelastningstypen vil dette være placeringen af datakilden. Det kan f.eks. være mailadressen på en Exchange postkasse eller URL-adressen til et SharePoint websted. |
+|**Arbejdsbelastning1-type**         |Strengværdi, der angiver den type datakilde, der skal knyttes til tilsynsførende. Mulige værdier omfatter: <br/>- ExchangeMailbox<br/> - SharePointSite<br/>- TeamsMailbox<sup>2</sup><br/>- YammerMailbox<sup>2</sup>. Der skelnes mellem store og små bogstaver i de tidligere værdier for disse arbejdsbelastningstyper. CSV-filen indeholder kolonner til tre arbejdsbelastningstyper og deres tilsvarende arbejdsbelastningsplaceringer. Du kan tilføje i alt 500 arbejdsbelastningstyper og -placeringer.|
+|**Placering af arbejdsbelastning1**     | Afhængigt af arbejdsbelastningstypen vil dette være placeringen af datakilden. Det kan f.eks. være mailadressen på en Exchange-postkasse eller URL-adressen til et SharePoint-websted. |
 |||
 
 > [!NOTE]
@@ -95,7 +93,7 @@ Når du har downloadet skabelonen CSV-tilsynsførende, kan du tilføje tilsynsf�
 
 Her er et eksempel på en CSV-fil med oplysninger om tilsynsførende:<br/><br/>
 
-|TilsynsførendekontaktMail      | Exchange aktiveret | OneDrive aktiveret | Er OnHold | Arbejdsbelastning1-type | Placering af arbejdsbelastning1             |
+|TilsynsførendekontaktMail      | Exchange er aktiveret | OneDrive er aktiveret | Er OnHold | Arbejdsbelastning1-type | Placering af arbejdsbelastning1             |
 | ----------------- | ---------------- | ---------------- | --------- | -------------- | ------------------------------ |
 |robinc@contoso.onmicrosoft.com | SANDT             | SANDT             | SANDT      | SharePointSite | https://contoso.sharepoint.com |
 |pillarp@contoso.onmicrosoft.com | SANDT             | SANDT             | SANDT      | |  |

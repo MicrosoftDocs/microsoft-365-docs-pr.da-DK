@@ -19,22 +19,20 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at begynde at styre din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle præskriptive retningslinjer for at komme i gang.
-ms.openlocfilehash: 6fe80e32096fc4394ba15786ef378f4b7997af2b
-ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
+ms.openlocfilehash: 97890f7d873cf19ddc1050cc77f20aa2408c18af
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65864447"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66629659"
 ---
 # <a name="get-started-with-data-lifecycle-management"></a>Kom i gang med administration af datalivscyklus
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Er du klar til at begynde at styre din organisations data ved at bevare det indhold, du skal beholde, og slette det indhold, du ikke har? Du kommer i gang ved at bruge følgende vejledning til Administration af Microsoft Purview-datalivscyklus (tidligere Microsoft Information Governance):
 
-1. **Forstå, hvordan opbevaring og sletning fungerer** i Microsoft 365, og identificer derefter de arbejdsbelastninger, der skal bruge en opbevaringspolitik, og om du har brug for at oprette opbevaringsmærkater for undtagelser: [Få mere at vide om opbevaring](retention.md)
+1. **Forstå, hvordan opbevaring og sletning fungerer** i Microsoft 365, og identificer derefter de arbejdsbelastninger, der skal bruge en opbevaringspolitik, og om du skal oprette opbevaringsmærkater for undtagelser: [Få mere at vide om opbevaring](retention.md)
     
     > [!NOTE]
     > Hvis du har brug for at administrere elementer af høj værdi for forretningsrelaterede, juridiske eller lovmæssige krav til registrering: Brug opbevaringsmærkater med [datastyring](records-management.md) i stedet for administration af datalivscyklus.
@@ -59,13 +57,13 @@ Er du klar til at begynde at styre din organisations data ved at bevare det indh
 
 En række forskellige abonnementer understøtter funktioner til administration af datalivscyklus.
 
-Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft Purview funktioner, skal du se [vejledningen til Microsoft 365 licenser for at få hjælp til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Du kan se de funktioner, der er angivet på denne side, i afsnittet [Administration af Microsoft Purview-datalivscyklus](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management) og relateret [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få oplysninger om licenskrav på funktionsniveau.
+Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft Purview-funktioner, skal du se [Microsoft 365-licensvejledningen for at få hjælp til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance). Du kan se de funktioner, der er angivet på denne side, i afsnittet [Administration af Microsoft Purview-datalivscyklus](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-lifecycle-management) og relateret [PDF-download](https://go.microsoft.com/fwlink/?linkid=2139145) for at få oplysninger om licenskrav på funktionsniveau.
 
 ## <a name="permissions"></a>Tilladelser
 
-Se følgende afsnit for at få oplysninger om roller og rollegrupper til administration af Microsoft 365 opbevaring.
+Se følgende afsnit for at få oplysninger om roller og rollegrupper til administration af Microsoft 365-opbevaring.
 
-Hvis du vil have tilladelse til at administrere postkasser til arkivering, inaktive postkasser og import, kræver disse typisk Exchange tilladelser, f.eks. rollen Postmodtagere. Denne rolle tildeles som standard til rollegrupperne Modtageradministration og Organisationsadministration. Du kan finde de nøjagtige tilladelseskrav for hver administrationsopgave i den dokumentation, der følger med administratorvejledningen.
+Hvis du vil have tilladelse til at administrere postkasser til arkivering, inaktive postkasser og import, kræver disse typisk Exchange-tilladelser, f.eks. rollen Postmodtagere. Denne rolle tildeles som standard til rollegrupperne Modtageradministration og Organisationsadministration. Du kan finde de nøjagtige tilladelseskrav for hver administrationsopgave i den dokumentation, der følger med administratorvejledningen.
 
 ### <a name="permissions-for-retention-policies-and-retention-labels"></a>Tilladelser til opbevaringspolitikker og opbevaringsmærkater
 
@@ -83,25 +81,25 @@ Brug følgende tabel til at hjælpe dig med at knytte dine forretningskrav til d
 
 |Jeg vil...|Dokumentation|
 |----------------|---------------|
-|Gem eller slet data effektivt for Microsoft 365-tjenester: <br />- Exchange  <br />- SharePoint  <br />- OneDrive  <br />- Microsoft 365-grupper <br />- Teams <br />- Yammer <br />- Skype for Business |[Opret og konfigurer opbevaringspolitikker](create-retention-policies.md)|
+|Gem eller slet data til Microsoft 365-tjenester effektivt: <br />- Exchange  <br />- SharePoint  <br />- OneDrive  <br />- Microsoft 365-grupper <br />- Teams <br />- Yammer <br />- Skype for Business |[Opret og konfigurer opbevaringspolitikker](create-retention-policies.md)|
 |Giv brugerne ekstra postkasselager |[Aktivér arkivpostkasser i Microsoft Purview-overholdelsesportalen](enable-archive-mailboxes.md)|
 |Bevar postkassedata, når medarbejdere forlader organisationen |[Opret og administrer inaktive postkasser](create-and-manage-inactive-mailboxes.md)|
-|Upload postkassedata fra PST-filer |[Brug netværksupload til at importere PST-filer](use-network-upload-to-import-pst-files.md)|
+|Overfør postkassedata fra PST-filer |[Brug netværksupload til at importere PST-filer](use-network-upload-to-import-pst-files.md)|
 
 
 Hvis du har et scenarie, der kræver dataadministration af individuelle elementer, kan du se de [almindelige scenarier for datastyring](get-started-with-records-management.md#common-scenarios). 
 
 ## <a name="end-user-documentation"></a>Slutbrugerdokumentation
 
-Se følgende afsnit for at få oplysninger om slutbrugerdokumentation til understøttelse af Microsoft 365 opbevaring.
+Se følgende afsnit for at få oplysninger om slutbrugerdokumentation til understøttelse af Microsoft 365-opbevaring.
 
 Funktionerne til administration af datalivscyklus for inaktive postkasser og import af PST-filer kræver ikke slutbrugerdokumentation, da det kun er administratorhandlinger. Hvis du vil hjælpe brugerne med at forstå og interagere med deres arkivpostkasser i Outlook, når du har aktiveret denne funktion, skal du se [Administrer maillager med onlinearkivpostkasser](https://support.microsoft.com/office/manage-email-storage-with-online-archive-mailboxes-1cae7d17-7813-4fe8-8ca2-9a5494e9a721).
 
 ### <a name="end-user-documentation-for-retention-and-deletion"></a>Slutbrugerdokumentation til opbevaring og sletning
 
-De fleste opbevaringspolitikker fungerer diskret i baggrunden uden brugerinteraktion og har derfor kun lidt dokumentation til brugerne. Opbevaringspolitikker for Teams informere brugerne, når deres meddelelser er blevet slettet, med et link til [Teams meddelelser om opbevaringspolitikker](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b).
+De fleste opbevaringspolitikker fungerer diskret i baggrunden uden brugerinteraktion og har derfor kun lidt dokumentation til brugerne. Opbevaringspolitikker for Teams informerer brugerne, når deres meddelelser er blevet slettet med et link til [Teams-meddelelser om opbevaringspolitikker](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b).
 
-Men hvis du supplerer opbevaringspolitikker med opbevaringsmærkater, har disse mærkater en tilstedeværelse af brugergrænsefladen i Microsoft 365 apps. Før du installerer disse mærkater på dit produktionsnetværk, skal du sørge for at angive oplysninger og instruktioner til slutbrugerne og din helpdesk. Hvis du vil hjælpe brugerne med at anvende opbevaringsmærkater i SharePoint og OneDrive, skal du se [Anvend opbevaringsmærkater på filer i SharePoint eller OneDrive](https://support.microsoft.com/office/apply-retention-labels-to-files-in-sharepoint-or-onedrive-11a6835b-ec9f-40db-8aca-6f5ef18132df).
+Men hvis du supplerer opbevaringspolitikker med opbevaringsmærkater, har disse mærkater en tilstedeværelse af brugergrænsefladen i Microsoft 365-apps. Før du installerer disse mærkater på dit produktionsnetværk, skal du sørge for at angive oplysninger og instruktioner til slutbrugerne og din helpdesk. Hvis du vil hjælpe brugerne med at anvende opbevaringsmærkater i SharePoint og OneDrive, skal du se [Anvend opbevaringsmærkater på filer i SharePoint eller OneDrive](https://support.microsoft.com/office/apply-retention-labels-to-files-in-sharepoint-or-onedrive-11a6835b-ec9f-40db-8aca-6f5ef18132df).
 
 Den mest effektive dokumentation til slutbrugere vil altid være tilpasset vejledning og instruktioner, du angiver for de navne og konfigurationer for opbevaringsmærkater, du vælger. Se følgende side og downloads, som du kan bruge til at hjælpe med at oplære dine brugere: [Slutbrugeruddannelse for opbevaringsmærkater](https://microsoft.github.io/ComplianceCxE/enduser/retention/).
 

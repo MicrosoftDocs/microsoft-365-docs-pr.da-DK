@@ -14,16 +14,14 @@ search.appverid:
 - MET150
 ms.assetid: d945f7dd-f62f-4ca7-b3e7-469824cfd493
 description: Brug eDiscovery- og søgeværktøjer til at administrere og reagere på en dataspildhændelse i din organisation.
-ms.openlocfilehash: 9be20d6c8eab99206a5510be6f21d3ca24114e0e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b65d6057921d310c3e22e5494218271c7693c162
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65086947"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66630185"
 ---
 # <a name="ediscovery-solution-series-data-spillage-scenario---search-and-purge"></a>eDiscovery-løsningsserie: Dataspildscenarie – Søg og fjern
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  **Hvad er dataspild, og hvorfor skal du pleje det?** Dataspild er, når et fortroligt dokument frigives i et miljø, der ikke er tillid til. Når der registreres en dataspildhændelse, er det vigtigt hurtigt at vurdere størrelsen og placeringen af spildet, undersøge brugeraktiviteterne omkring den og derefter fjerne de spildte data permanent fra systemet.
   
@@ -52,13 +50,13 @@ Sådan administrerer du en dataspildhændelse:
 
 ## <a name="things-to-know-before-you-start"></a>Ting, du skal vide, før du starter
 
-- Den arbejdsproces for dataspild, der er beskrevet i denne artikel, sletter ikke chatbeskeder i Microsoft Teams. Hvis du vil søge efter og slette Teams chatbeskeder, skal du se [Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
+- Den arbejdsproces for dataspild, der er beskrevet i denne artikel, sletter ikke chatbeskeder i Microsoft Teams. Hvis du vil søge efter og slette Teams-chatmeddelelser, skal du se [Søg efter og fjern chatbeskeder i Teams](search-and-delete-Teams-chat-messages.md).
 
 - Når en postkasse er i venteposition, forbliver en slettet meddelelse i mappen Gendanbare elementer, indtil opbevaringsperioden udløber, eller ventepositionen frigives. [Trin 6](#step-6-prepare-the-mailboxes) beskriver, hvordan du fjerner venteposition fra postkasserne. Kontakt datastyringen eller de juridiske afdelinger, før du fjerner ventepositionen. Din organisation kan have en politik, der definerer, om en postkasse i venteposition eller en dataspildhændelse har prioritet. 
 
 - Hvis du vil styre, hvilke brugerpostkasser en dataspildsøger kan søge efter og administrere, hvem der kan få adgang til sagen, kan du konfigurere overholdelsesgrænser og oprette en brugerdefineret rollegruppe, som er beskrevet i [trin 1](#optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries). Hvis du vil gøre dette, skal du være medlem af rollegruppen Organisationsadministration eller tildeles rolleadministrationsrollen. Hvis du eller en administrator i din organisation allerede har angivet grænser for overholdelse af regler og standarder, kan du springe trin 1 over.
 
-- Hvis du vil oprette en sag, skal du være medlem af rollegruppen eDiscovery Manager eller være medlem af en brugerdefineret rollegruppe, der har fået tildelt rollen Sagsstyring. Hvis du ikke er medlem, kan du bede en Microsoft 365 administrator [om at føje dig til rollegruppen eDiscovery-leder](assign-ediscovery-permissions.md).
+- Hvis du vil oprette en sag, skal du være medlem af rollegruppen eDiscovery Manager eller være medlem af en brugerdefineret rollegruppe, der har fået tildelt rollen Sagsstyring. Hvis du ikke er medlem, skal du bede en Microsoft 365-administrator om at [føje dig til rollegruppen eDiscovery-leder](assign-ediscovery-permissions.md).
 
 - Hvis du vil oprette og køre en indholdssøgning, skal du være medlem af rollegruppen eDiscovery Manager eller tildeles rollen Styring af overholdelsessøgning. Hvis du vil slette meddelelser, skal du være medlem af rollegruppen Organisationsadministration eller tildeles administrationsrollen Søg og fjern. Du kan finde oplysninger om, hvordan du føjer brugere til en rollegruppe, under [Tildel eDiscovery-tilladelser](./assign-ediscovery-permissions.md).
 
@@ -66,7 +64,7 @@ Sådan administrerer du en dataspildhændelse:
 
 ## <a name="optional-step-1-manage-who-can-access-the-case-and-set-compliance-boundaries"></a>(Valgfrit) Trin 1: Administrer, hvem der kan få adgang til sagen, og angiv grænser for overholdelse af regler og standarder
 
-Afhængigt af din organisations praksis skal du styre, hvem der kan få adgang til eDiscovery-sagen, der bruges til at undersøge en dataspildhændelse og konfigurere overholdelsesgrænser. Den nemmeste måde at gøre dette på er at tilføje efterforskere som medlemmer af en eksisterende rollegruppe på Microsoft Purview-overholdelsesportalen og derefter tilføje rollegruppen som medlem af eDiscovery-sagen. Du kan finde oplysninger om de indbyggede eDiscovery-rollegrupper, og hvordan du føjer medlemmer til en eDiscovery-sag, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
+Afhængigt af din organisations praksis skal du styre, hvem der kan få adgang til eDiscovery-sagen, der bruges til at undersøge en dataspildhændelse og konfigurere overholdelsesgrænser. Den nemmeste måde at gøre dette på er at tilføje efterforskere som medlemmer af en eksisterende rollegruppe i Microsoft Purview-compliance-portal og derefter tilføje rollegruppen som medlem af eDiscovery-sagen. Du kan finde oplysninger om de indbyggede eDiscovery-rollegrupper, og hvordan du føjer medlemmer til en eDiscovery-sag, under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
   
 Du kan også oprette en ny rollegruppe, der opfylder organisationens behov. Det kan f.eks. være, at du gerne vil have, at en gruppe dataspildsøgere i organisationen får adgang til og samarbejder om alle dataspildsager. Det kan du gøre ved at oprette en rollegruppe af typen "Data Spillage Investigator", tildele de relevante roller (Eksport, RMS Decrypt, Review, Preview, Compliance Search og Case Management), føje dataspildetektiverne til rollegruppen og derefter tilføje rollegruppen som medlem af dataspillage-eDiscovery-sagen. Se [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser i Office 365](set-up-compliance-boundaries.md) for at få en detaljeret vejledning i, hvordan du gør dette. 
   
@@ -93,7 +91,7 @@ Hvis du har mere end 1.000 postkasser eller mere end 100 mails pr. postkasse, de
 
 Når du finder en mail, der indeholder spildte data, skal du kontrollere modtagerne af meddelelsen for at finde ud af, om den blev delt eksternt. Hvis du vil spore en meddelelse yderligere, kan du indsamle afsenderoplysninger og datointervaller, så du kan bruge meddelelsessporingslogfilerne. Denne proces er beskrevet i [trin 5](#step-5-use-message-trace-log-to-check-how-spilled-data-was-shared).
 
-Når du har bekræftet søgeresultaterne, kan du dele dine resultater med andre for at få en sekundær gennemgang. Personer, du har tildelt sagen i trin 1, kan gennemse sagsindholdet i både eDiscovery og Microsoft Purview eDiscovery (Premium) og godkende resultaterne af sagen. Du kan også generere en rapport uden at eksportere det faktiske indhold. Du kan også bruge den samme rapport som et bevis for sletning, som er beskrevet i [trin 8](#step-8-verify-provide-a-proof-of-deletion-and-audit).
+Når du har bekræftet søgeresultaterne, kan du dele dine resultater med andre for at få en sekundær gennemgang. Personer, du har tildelt til sagen i trin 1, kan gennemse sagsindholdet i både eDiscovery og Microsoft Purview eDiscovery (Premium) og godkende resultaterne af sagen. Du kan også generere en rapport uden at eksportere det faktiske indhold. Du kan også bruge den samme rapport som et bevis for sletning, som er beskrevet i [trin 8](#step-8-verify-provide-a-proof-of-deletion-and-audit).
   
  **Sådan opretter du en statistisk rapport:**
   
@@ -185,7 +183,7 @@ Vær opmærksom på følgende grænser, når du sletter spildte data:
 - Der kan maksimalt fjernes 10 elementer pr. postkasse på én gang. Da funktionen til at søge efter og fjerne meddelelser er beregnet til at være et værktøj til svar på hændelser, hjælper denne grænse med at sikre, at meddelelser hurtigt fjernes fra postkasser. Denne funktion er ikke beregnet til at rydde op i brugerpostkasser.
 
 > [!IMPORTANT]
-> Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er kopier af elementer i livetjenesten, der kopieres og gemmes på en Azure Storage placering. Det betyder, at de ikke returneres af en indholdssøgning, som du opretter i trin 3. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery-sag (Premium).](close-or-delete-case.md)
+> Mailelementer i et korrektursæt i en eDiscovery-sag (Premium) kan ikke slettes ved hjælp af procedurerne i denne artikel. Det skyldes, at elementer i et korrektursæt er kopier af elementer i livetjenesten, der kopieres og gemmes på en Azure Storage-placering. Det betyder, at de ikke returneres af en indholdssøgning, som du opretter i trin 3. Hvis du vil slette elementer i et korrektursæt, skal du slette eDiscovery-sagen (Premium), der indeholder korrektursættet. Du kan finde flere oplysninger under [Luk eller slet en eDiscovery (Premium)-sag](close-or-delete-case.md).
   
 ## <a name="step-8-verify-provide-a-proof-of-deletion-and-audit"></a>Trin 8: Kontrollér, angiv et bevis for sletning og overvågning
 

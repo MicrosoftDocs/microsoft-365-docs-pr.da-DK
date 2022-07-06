@@ -19,18 +19,16 @@ ms.collection:
 recommendations: false
 description: DLP-politikkomponent og konfigurationsreference
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: b62289cfe4d18b4c6e2e79bb9a308f8b88978451
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0d49cb1287453cb815bf1fe1ea01b6312c26d879
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015786"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66626573"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview DLP-politikker (Forebyggelse af datatab) indeholder mange komponenter, der skal konfigureres. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
+Microsoft Purview Forebyggelse af datatab politikker (DLP) har mange komponenter at konfigurere. Hvis du vil oprette en effektiv politik, skal du forstå, hvad formålet med hver komponent er, og hvordan dens konfiguration ændrer politikkens funktionsmåde. Denne artikel indeholder en detaljeret beskrivelse af en DLP-politik.
 
 ## <a name="policy-templates"></a>Politikskabeloner 
 
@@ -105,10 +103,10 @@ En DLP-politik kan finde og beskytte elementer, der indeholder følsomme oplysni
 
 |Placering  |Medtag/udelad område  |Datatilstand  |Yderligere forudsætninger |
 |---------|---------|---------|---------|
-|Exchange mail online |distributionsgruppe | data i bevægelse| Nej |
-|SharePoint onlinewebsteder   |Websteder       | data-at-rest </br> data i brug | Nej|
+|Exchange-mail online |distributionsgruppe | data i bevægelse| Nej |
+|SharePoint-onlinewebsteder   |Websteder       | data-at-rest </br> data i brug | Nej|
 |OneDrive for Business konti| konto eller distributionsgruppe |data-at-rest </br> data i brug|Nej|
-|Teams chat- og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
+|Teams-chat- og kanalmeddelelser     | konto eller distributionsgruppe |data i bevægelse </br> data i brug |  Nej       |
 |Microsoft Defender for Cloud Apps   | forekomst af cloudapp       |data-at-rest         | - [Brug politikker til forebyggelse af datatab til cloudapps, der ikke er fra Microsoft](dlp-use-policies-non-microsoft-cloud-apps.md#use-data-loss-prevention-policies-for-non-microsoft-cloud-apps)        |
 |Enheder  |bruger eller gruppe         |data-at-rest </br>  data i brug </br>  data i bevægelse         |- [Få mere at vide om forebyggelse af datatab for Slutpunkt](endpoint-dlp-learn-about.md) </br>- [Kom i gang med forebyggelse af datatab i Slutpunkt](endpoint-dlp-getting-started.md) </br>- [Konfigurer indstillingerne for enhedsproxy og internetforbindelse for Information Protection](device-onboarding-configure-proxy.md#configure-device-proxy-and-internet-connection-settings-for-information-protection) |
 |Lagre i det lokale miljø (filshares og SharePoint)    |Repository         | data-at-rest         | - [Få mere at vide om forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-learn.md) </br> - [Kom i gang med forebyggelse af datatab i det lokale miljø](dlp-on-premises-scanner-get-started.md#get-started-with-the-data-loss-prevention-on-premises-scanner)         |
@@ -116,23 +114,23 @@ En DLP-politik kan finde og beskytte elementer, der indeholder følsomme oplysni
 
 Hvis du vælger at inkludere bestemte distributionsgrupper i Exchange, begrænses DLP-politikken kun til medlemmerne af den pågældende gruppe. På samme måde udelukker udeladelse af en distributionsgruppe alle medlemmer af den pågældende distributionsgruppe fra politikevaluering. Du kan vælge at tilpasse en politik til medlemmer af distributionslister, dynamiske distributionsgrupper og sikkerhedsgrupper. En DLP-politik kan ikke indeholde mere end 50 sådanne medtagelser og udeladelser.
 
-Hvis du vælger at inkludere eller udelade bestemte SharePoint websteder eller OneDrive konti, kan en DLP-politik ikke indeholde mere end 100 sådanne medtagelser og udeladelser. Selvom denne grænse findes, kan du overskride denne grænse ved at anvende enten en politik for hele organisationen eller en politik, der gælder for hele placeringer.
+Hvis du vælger at inkludere eller udelade bestemte SharePoint-websteder eller OneDrive-konti, kan en DLP-politik ikke indeholde mere end 100 sådanne medtagelser og udeladelser. Selvom denne grænse findes, kan du overskride denne grænse ved at anvende enten en politik for hele organisationen eller en politik, der gælder for hele placeringer.
 
-Hvis du vælger at inkludere eller udelade bestemte OneDrive konti eller grupper, kan en DLP-politik ikke indeholde mere end 100 brugerkonti eller 50 grupper som medtagelse eller udeladelse.
+Hvis du vælger at inkludere eller udelade bestemte OneDrive-konti eller -grupper, kan en DLP-politik ikke indeholde mere end 100 brugerkonti eller 50 grupper som medtagelse eller udeladelse.
 
 ### <a name="location-support-for-how-content-can-be-defined"></a>Understøttelse af placering for, hvordan indhold kan defineres
 
 DLP-politikker registrerer følsomme elementer ved at matche dem med en følsom informationstype (SIT) eller med en følsomhedsmærkat eller en opbevaringsmærkat. Hver placering understøtter forskellige metoder til definition af følsomt indhold. Når du kombinerer placeringer i en politik, kan den måde, indholdet kan defineres på, ændres, fra hvordan det kan defineres af en enkelt placering. 
 
 > [!IMPORTANT]
-> Når du vælger flere placeringer for en politik, har en "nej"-værdi for en indholdsdefinitionskategori højere prioritet end værdien "ja". Når du f.eks. kun vælger SharePoint websteder, understøtter politikken registrering af følsomme elementer af et eller flere AFS, følsomhedsmærkat eller opbevaringsmærkat. Men når du vælger SharePoint websteder ***og*** Teams placering af chat- og kanalmeddelelser, understøtter politikken kun registrering af følsomme elementer af SIT.
+> Når du vælger flere placeringer for en politik, har en "nej"-værdi for en indholdsdefinitionskategori højere prioritet end værdien "ja". Når du f.eks. kun vælger SharePoint-websteder, understøtter politikken registrering af følsomme elementer af et eller flere SIT, af følsomhedsmærkat eller af opbevaringsmærkat. Men når du vælger SharePoint-websteder ***og*** Teams-chat- og kanalbeskedplaceringer, understøtter politikken kun registrering af følsomme elementer af SIT.
 
 |Placering| Indhold kan defineres af SIT| Indhold kan defineres som følsomhedsmærkat| Indhold kan defineres af opbevaringsmærkat|
 |---------|---------|---------|---------|
-|Exchange mail online|Ja| Ja| Nej|
-|SharePoint onlinewebsteder| Ja| Ja| Ja|
+|Exchange-mail online|Ja| Ja| Nej|
+|SharePoint-onlinewebsteder| Ja| Ja| Ja|
 |OneDrive for Business konti| Ja| Ja| Ja|
-|Teams chat- og kanalmeddelelser | Ja| Nej| Nej|
+|Teams-chat- og kanalmeddelelser | Ja| Nej| Nej|
 |Enheder |Ja | Ja|  Nej|
 |Microsoft Defender for Cloud Apps | Ja| Ja| Ja|
 |Lagre i det lokale miljø| Ja| Ja| Nej|
@@ -210,7 +208,7 @@ Alle de andre regler evalueres, men deres handlinger gennemtvinges ikke. Overvå
 Betingelser er inklusive, og det er her, du definerer, hvad reglen skal søge efter, og hvilken kontekst disse elementer bruges i. De fortæller reglen &#8212;, når du finder et element, der ser ud som *dette* og bruges på den måde *,* &#8212; er det et match, og resten af handlingerne i politikken skal udføres på det. Du kan bruge betingelser til at tildele forskellige handlinger til forskellige risikoniveauer. Følsomt indhold, der f.eks. deles internt, kan være lavere risiko og kræve færre handlinger end følsomt indhold, der deles med personer uden for organisationen.
 
 > [!NOTE]
-> Brugere, der har ikke-gæstekonti i en værtsorganisations Active Directory eller Azure Active Directory lejer, betragtes som personer i organisationen. 
+> Brugere, der har ikke-gæstekonti i en værtsorganisations Active Directory- eller Azure Active Directory-lejer, betragtes som personer i organisationen. 
 
 #### <a name="content-contains"></a>Indholdet indeholder
 
@@ -233,7 +231,7 @@ SIT'er har et foruddefineret [**konfidensniveau**](https://www.microsoft.com/vid
 
 De tilgængelige kontekstindstillinger ændres, afhængigt af hvilken placering du vælger. Hvis du vælger flere placeringer, er det kun de betingelser, som placeringerne har til fælles, der er tilgængelige.
 
-##### <a name="conditions-exchange-supports"></a>Betingelser Exchange understøtter
+##### <a name="conditions-exchange-supports"></a>Betingelser, som Exchange understøtter
 
 - Indholdet indeholder
 - Indhold deles fra Microsoft 365
@@ -275,7 +273,7 @@ De tilgængelige kontekstindstillinger ændres, afhængigt af hvilken placering 
 - Meddelelsestypen er
 - Meddelelsens prioritet er
 
-##### <a name="conditions-sharepoint-supports"></a>Betingelser SharePoint understøtter
+##### <a name="conditions-sharepoint-supports"></a>Betingelser, som SharePoint understøtter
  
 - Indholdet indeholder
 - Indhold deles fra Microsoft 365
@@ -287,7 +285,7 @@ De tilgængelige kontekstindstillinger ændres, afhængigt af hvilken placering 
 - Dokumentegenskaben er
 - Filtypenavnet er
 
-##### <a name="conditions-onedrive-accounts-supports"></a>Betingelser OneDrive konti understøtter
+##### <a name="conditions-onedrive-accounts-supports"></a>Betingelser, som OneDrive-konti understøtter
 
 - Indholdet indeholder
 - Indhold deles fra Microsoft 365
@@ -299,7 +297,7 @@ De tilgængelige kontekstindstillinger ændres, afhængigt af hvilken placering 
 - Dokumentegenskaben er
 - Filtypenavnet er
 
-##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Betingelser Teams chat- og kanalmeddelelser understøtter
+##### <a name="conditions-teams-chat-and-channel-messages-supports"></a>Betingelser Teams-chat- og kanalmeddelelser understøtter
 
 - Indholdet indeholder
 - Indhold deles fra Microsoft 365
@@ -368,9 +366,9 @@ undtagelsen ville være:
 
 ### <a name="actions"></a>Handlinger 
 
-Alle elementer, der foretager det via de inklusive ***betingelser** _ og eksklusive _*_undtagelser_*_ , har alle _*_handlinger_*_ , der er defineret i reglen, anvendt på det. Du skal konfigurere de påkrævede indstillinger for at understøtte handlingen. Hvis du f.eks. vælger Exchange med handlingen _ *Begræns adgang eller krypterer indholdet på Microsoft 365 placeringer**, skal du vælge mellem følgende indstillinger:
+Alle elementer, der foretager det via de inklusive ***betingelser** _ og eksklusive _*_undtagelser_*_ , har alle _*_handlinger_*_ , der er defineret i reglen, anvendt på det. Du skal konfigurere de påkrævede indstillinger for at understøtte handlingen. Hvis du f.eks. vælger Exchange med handlingen _ *Begræns adgang eller krypterer indholdet på Microsoft 365-placeringer**, skal du vælge mellem følgende indstillinger:
 
-- Bloker brugere, så de ikke kan få adgang til delt SharePoint, OneDrive og Teams indhold
+- Bloker brugere, så de ikke kan få adgang til delt SharePoint-, OneDrive- og Teams-indhold
     - Bloker alle. Det er kun indholdsejeren, den sidste ændringsadministrator og webstedsadministratoren, der fortsat har adgang
     - Bloker kun personer uden for din organisation. Brugere i organisationen vil fortsat have adgang.
 - Kryptér mails (gælder kun for indhold i Exchange)
@@ -380,9 +378,9 @@ De handlinger, der er tilgængelige i en regel, afhænger af de valgte placering
 > [!IMPORTANT]
 > For SharePoint Online og OneDrive for Business blokeres dokumenter proaktivt lige efter registrering af følsomme oplysninger, uanset om dokumentet er delt eller ej, for alle eksterne brugere, mens interne brugere fortsat vil have adgang til dokumentet.
 
-#### <a name="exchange-location-actions"></a>handlinger for Exchange placering
+#### <a name="exchange-location-actions"></a>Exchange-placeringshandlinger
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 - Angiv overskrifter
 - Fjern sidehoved
 - Omdiriger meddelelsen til bestemte brugere
@@ -397,27 +395,27 @@ De handlinger, der er tilgængelige i en regel, afhænger af de valgte placering
 - Rediger emne i mail
 - Tilføj HTML-ansvarsfraskrivelse
 
-#### <a name="sharepoint-sites-location-actions"></a>handlinger for placering af SharePoint websteder
+#### <a name="sharepoint-sites-location-actions"></a>Handlinger for placering af SharePoint-websteder
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 
-#### <a name="onedrive-account-location-actions"></a>handlinger for OneDrive kontoplacering
+#### <a name="onedrive-account-location-actions"></a>Handlinger for Placering af OneDrive-konto
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 
-#### <a name="teams-chat-and-channel-messages-actions"></a>handlinger Teams chat og kanalmeddelelser
+#### <a name="teams-chat-and-channel-messages-actions"></a>Handlinger for Teams-chat- og kanalmeddelelser
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 
 #### <a name="devices-actions"></a>Enhedshandlinger
 
-- Overvåg eller begræns aktiviteter på Windows enheder
+- Overvåg eller begræns aktiviteter på Windows-enheder
 
 Hvis du vil bruge disse indstillinger, skal du konfigurere indstillinger i **DLP-indstillinger** og i den politik, hvor du vil bruge dem. Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) for at få flere oplysninger.
 
 Enhedens placering indeholder mange underaktiviteter (betingelser) og handlinger. Du kan få mere at vide under [Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
 
-Når du vælger **Overvåg eller begræns aktiviteter på Windows enheder**, kan du begrænse brugeraktiviteterne efter tjenestedomæne eller browser og omfanget af de handlinger, som DLP udfører, ved at:
+Når du vælger **Overvåg eller begræns aktiviteter på Windows-enheder**, kan du begrænse brugeraktiviteterne efter tjenestedomæne eller browser og begrænse de handlinger, som DLP udfører, ved at:
 
 - Alle apps
 - Af en liste over begrænsede apps, som du definerer
@@ -435,7 +433,7 @@ Med indstillingen **Filaktiviteter for alle apps** vælger du enten **Begræns i
 - **Kopiér til et flytbart USB-drev** 
 - **Kopiér til et netværksshare**
 - **Udskrive**
-- **Kopiér eller flyt ved hjælp af en ikke-tilladt Bluetooth app**
+- **Kopiér eller flyt ved hjælp af en Bluetooth-app, der ikke er tilladt**
 - **Fjernskrivebord-tjenester**
 
 
@@ -457,7 +455,7 @@ Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricte
 
 #### <a name="microsoft-defender-for-cloud-apps-actions"></a>Microsoft Defender for Cloud Apps handlinger
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 - Begræns tredjepartsapps
 
 #### <a name="on-premises-repositories-actions"></a>Handlinger for lagre i det lokale miljø
@@ -471,35 +469,35 @@ Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricte
 
 #### <a name="actions-available-when-you-combine-locations"></a>Handlinger, der er tilgængelige, når du kombinerer placeringer
 
-Hvis du vælger Exchange og en hvilken som helst anden enkelt placering for den politik, der skal anvendes på,
+Hvis du vælger Exchange og en anden enkelt placering for den politik, der skal anvendes på,
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 
 Og
 
-- alle handlinger for den placering, der ikke er Exchange
+- alle handlinger for den ikke-Exchange-placering
 
 handlinger vil være tilgængelige.
 
-Hvis du vælger to eller flere placeringer, der ikke er Exchange for den politik, der skal anvendes på,
+Hvis du vælger to eller flere ikke-Exchange-placeringer for den politik, der skal anvendes på,
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
 
 OG
 
-- alle handlinger for placeringer, der ikke er Exchange 
+- alle handlinger for ikke-Exchange-placeringer 
 
 handlinger vil være tilgængelige.
 
 Hvis du f.eks. vælger Exchange og Enheder som placeringer, vil disse handlinger være tilgængelige:
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
-- Overvåg eller begræns aktiviteter på Windows enheder
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
+- Overvåg eller begræns aktiviteter på Windows-enheder
 
 Hvis du vælger Enheder og Microsoft Defender for Cloud Apps, vil disse handlinger være tilgængelige:
 
-- Begræns adgang til eller kryptér indholdet på Microsoft 365 placeringer
-- Overvåg eller begræns aktiviteter på Windows enheder
+- Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer
+- Overvåg eller begræns aktiviteter på Windows-enheder
 - Begræns tredjepartsapps
 
 Om en handling træder i kraft eller ej, afhænger af, hvordan du konfigurerer politikkens tilstand. Du kan vælge at køre politikken i testtilstand med eller uden at vise politiktip ved at vælge indstillingen **Test den først** . Du vælger at køre politikken, så snart en time efter den er oprettet, ved at vælge indstillingen **Slå den til med det samme** , eller du kan vælge blot at gemme den og vende tilbage til den senere ved at vælge indstillingen **Hold den fra** . 
@@ -521,13 +519,31 @@ for where they are used/expected behavior-->
 
 Når en bruger forsøger at udføre en handling på et følsomt element i en kontekst, der opfylder betingelserne og undtagelserne for en regel, kan du fortælle brugeren om det via mail med brugermeddelelser og i pop op-vinduet med kontekstpolitiktip. Disse meddelelser er nyttige, fordi de øger bevidstheden og hjælper med at uddanne personer i organisationens DLP-politikker.
 
-Indhold som f.eks. en Excel projektmappe på et OneDrive for Business websted, der indeholder personidentificerbare oplysninger og deles med en gæst.
+Indhold som f.eks. en Excel-projektmappe på et OneDrive for Business websted, der indeholder personlige oplysninger og deles med en gæst.
 
 ![Meddelelseslinjen viser politiktip i Excel 2016](../media/7002ff54-1656-4a6c-993f-37427d6508c8.png)
 
 > [!IMPORTANT]
 > - Meddelelsesmails sendes ubeskyttet.
-> - Mailmeddelelser understøttes kun for de Microsoft 365 tjenester.
+> - Mailmeddelelser understøttes kun for Microsoft 365-tjenesterne.
+
+#### <a name="email-notifications-support-by-selected-location"></a>Understøttelse af mailmeddelelser efter valgt placering
+
+|Valgt placering  |Mailmeddelelser understøttes  |
+|---------|---------|
+|Enheder     |- Understøttes ikke         |
+|Exchange + enheder     |– Understøttes til Exchange </br>- Ikke understøttet for enheder  |
+|Exchange    |- Understøttet        |
+|SharePoint + enheder  |- Understøttes for SharePoint </br>- Ikke understøttet for enheder         |
+|SharePoint    |- Understøttet |
+|Exchange + SharePoint    |– Understøttes til Exchange </br>- Understøttes for SharePoint  |
+|Enheder + SharePoint + Exchange    |- Ikke understøttet for enheder </br>- Understøttes for SharePoint </br> Understøttes for Exchange |
+|Teams    |- Understøttes ikke |
+|OneDrive for Business   |- Understøttet         |
+|OneDrive for Business + enheder     |- Understøttes for OneDrive for Business </br>- Ikke understøttet for enheder         |
+|Power-BI|- Understøttes ikke|
+|Microsoft Defender for Cloud Apps|- Understøttes ikke|
+|Lagre i det lokale miljø|- Understøttes ikke|
 
 Du kan også give personer mulighed for at [tilsidesætte politikken](#user-overrides), så de ikke blokeres, hvis de har et gyldigt forretningsbehov, eller hvis politikken registrerer et falsk positivt.
 
@@ -536,8 +552,11 @@ Konfigurationsindstillinger for brugermeddelelser og politiktip varierer afhæng
 - Exchange
 - SharePoint
 - OneDrive
-- Teams Chat og kanal
+- Teams-chat og -kanal
 - Defender for Cloud Apps
+
+
+
 
 
 Du kan aktivere/deaktivere brugermeddelelser for forskellige Microsoft-apps. [Se reference til tip til forebyggelse af datatab](dlp-policy-tips-reference.md#data-loss-prevention-policy-tips-reference)
@@ -548,9 +567,9 @@ Du kan aktivere/deaktivere brugermeddelelser for forskellige Microsoft-apps. [Se
 
 og tilpas mailteksten, emnet og teksten til politiktip.
 
-![Konfigurationsindstillinger for brugermeddelelser og politiktip, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og kanal og Defender for Cloud Apps](../media/dlp-user-notification-non-devices.png)
+![Konfigurationsindstillinger for brugermeddelelser og politiktip, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams-chat og -kanal og Defender for Cloud Apps](../media/dlp-user-notification-non-devices.png)
 
-Hvis du kun har valgt Enheder, får du alle de samme indstillinger, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og Kanal og Defender for Cloud Apps samt muligheden for at tilpasse meddelelsestitel og indhold, der vises på Windows 10 enhed.
+Hvis du kun har valgt Enheder, får du alle de samme indstillinger, der er tilgængelige for Exchange, SharePoint, OneDrive, Teams Chat og Kanal og Defender for Cloud Apps, samt muligheden for at tilpasse meddelelsestitel og indhold, der vises på den Windows 10 enhed.
 
 ![Konfigurationsindstillinger for brugermeddelelser og politiktip, der er tilgængelige for enheder](../media/dlp-user-notification-devices.png)  
 
@@ -572,7 +591,7 @@ Du kan tilpasse tekstens titel og brødtekst ved hjælp af disse parametre. Brø
 |kopiér til netværksshare     |*skriver til et netværksshare*         |
 |Udskrive     |*Udskrivning*         |
 |indsæt fra Udklipsholder  |*indsætte fra Udklipsholder*         |
-|kopiér via bluetooth   |*overførsel via Bluetooth*         |
+|kopiér via bluetooth   |*overfører via Bluetooth*         |
 |åbn med en ikke-tilladt app     |*åbner med denne app*         |
 |kopiér til et fjernskrivebord (RDP)     |*overfører til fjernskrivebord*         |
 |uploader til et websted, der ikke er tilladt     |*uploader til dette websted*         |
@@ -618,6 +637,19 @@ Here's what a policy tip looks like in a OneDrive for Business account.
 > The default behavior of a DLP policy, when there is no alert configured, is not to alert or trigger. This applies only to default information types. For custom information types, the system will alert even if there is no action defined in the policy.
 -->
 
+#### <a name="blocking-and-notifications-in-sharepoint-online-and-onedrive-for-business"></a>Blokering og meddelelser i SharePoint Online og OneDrive for Business
+
+I denne tabel vises DLP-blokerings- og meddelelsesfunktionsmåden for politikker, der er begrænset til SharePoint Online og OneDrive for Business.
+
+|Betingelser  |Konfiguration af handlinger |Konfiguration af brugermeddelelse|Konfiguration af hændelsesrapporter |Funktionsmåde for blokering og meddelelse|
+|---------|---------|---------|---------|---------|
+|- **Indhold deles fra Microsoft 365** </br>- **med personer uden for min organisation**     |Der er ikke konfigureret nogen handlinger         |- **Brugermeddelelser**, **der er slået** til </br>- **Giv brugerne i Office 365-tjenesten besked med et politiktip** valgt </br>- **Giv den bruger, der har sendt, delt eller senest ændret indholdet, besked om, at indholdet** er valgt         |- **Send en besked til administratorer, når et regelmatch forekommer** angivet til **Til** </br>- **Send en besked, hver gang en aktivitet stemmer overens med den regel** , der er angivet til **Til** </br>- **Brug rapporter over mailhændelser til at give dig besked, når et politikmatch er** angivet til **Til**         |– Meddelelser sendes kun, når en fil deles med en ekstern bruger, og en ekstern bruger får adgang til filen.  |
+|- **Indhold deles fra Microsoft 365** </br>- **kun med personer i min organisation**        | Der er ikke konfigureret nogen handlinger         |-  **Brugermeddelelser**, **der er slået** til   </br>- **Giv brugerne i Office 365-tjenesten besked med et politiktip** valgt  </br>- **Giv den bruger, der har sendt, delt eller senest ændret indholdet, besked om, at indholdet** er valgt    |  - **Send en besked til administratorer, når et regelmatch forekommer** angivet til **Til** </br>- **Send besked, hver gang en aktivitet stemmer overens med reglen** </br>- **Brug rapporter over mailhændelser til at give dig besked, når et politikmatch er** angivet til **Til**       |– Meddelelser sendes, når en fil uploades |
+|- **Indhold deles fra Microsoft 365** </br>- **med personer uden for min organisation**    | - **Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer** er valgt </br>- **Bloker brugere fra at modtage mail eller få adgang til delte SharePoint-, OndeDrive- og Teams-filer** er valgt </br>- **Bloker kun personer uden for din organisation** er valgt          |- **Brugermeddelelser**, **der er slået** til </br>- **Giv brugerne i Office 365-tjenesten besked med et politiktip** valgt </br>- **Giv den bruger, der har sendt, delt eller senest ændret indholdet, besked om, at indholdet** er valgt  |  - **Send en besked til administratorer, når et regelmatch forekommer** angivet til **Til** </br>- **Send besked, hver gang en aktivitet stemmer overens med reglen** </br>- **Brug rapporter over mailhændelser til at give dig besked, når et politikmatch er** angivet til **Til**             | – Adgangen til en følsom fil blokeres, så snart den uploades </br>– Meddelelser, der sendes, når indhold deles fra Microsoft 365 med personer uden for organisationen         |
+|- **Indhold deles fra Microsoft 365** </br>- **med personer uden for min organisation** |  - **Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer** er valgt </br>- **Bloker brugere fra at modtage mail eller få adgang til delte SharePoint-, OndeDrive- og Teams-filer** er valgt </br>- **Bloker alle** er markeret        | - **Brugermeddelelser**, **der er slået** til </br>- **Giv brugerne i Office 365-tjenesten besked med et politiktip** valgt </br>- **Giv den bruger, der har sendt, delt eller senest ændret indholdet, besked om, at indholdet** er valgt         | - **Send en besked til administratorer, når et regelmatch forekommer** angivet til **Til** </br>- **Send besked, hver gang en aktivitet stemmer overens med reglen** </br>- **Brug rapporter over mailhændelser til at give dig besked, når et politikmatch er** angivet til **Til**        |Der sendes meddelelser, når en fil deles med en ekstern bruger, og en ekstern bruger får adgang til filen.         |
+|- **Indhold deles fra Microsoft 365** </br>- **med personer uden for min organisation**     |- **Begræns adgang til eller kryptér indholdet på Microsoft 365-placeringer** er valgt </br>- **Bloker kun personer, der har fået adgang til indholdet, via indstillingen "Alle med linket"** er valgt.         |  - **Brugermeddelelser**, **der er slået** til </br>- **Giv brugere i Office 365 tjeneste besked med et politiktip** valgt.  </br>- **Giv den bruger, der har sendt, delt eller senest ændret indholdet, besked om, at indholdet** er valgt     |- **Send en besked til administratorer, når et regelmatch forekommer** angivet til **Til**   </br>- **Send besked, hver gang en aktivitet stemmer overens med reglen** </br>- **Brug rapporter over mailhændelser til at give dig besked, når et politikmatch er** angivet til **Til**       |Meddelelser sendes, så snart en fil uploades         |
+
+
 ### <a name="user-overrides"></a>Bruger tilsidesætter
 
 Hensigten med **brugertilsidesættelser** er at give brugerne mulighed for med begrundelse at tilsidesætte DLP-politikblokeringshandlinger på følsomme elementer i Exchange, SharePoint, OneDrive eller Teams, så de kan fortsætte deres arbejde. Brugertilsidesættelser er kun aktiveret, når **Giv brugere i Office 365 tjenester med et politiktip** er aktiveret, så brugertilsidesættelser går hånd i hånd med meddelelser og politiktips. 
@@ -657,7 +689,7 @@ Beskeder kan sendes, hver gang en aktivitet stemmer overens med en regel, hvilke
 
 ![send en besked, hver gang en regel stemmer overens eller samles over tid i færre rapporter](../media/dlp-incident-reports-aggregation.png)
 
-DLP scanner mail på en anden måde, end den gør SharePoint Online eller OneDrive for Business elementer. I SharePoint Online og OneDrive for Business scanner DLP eksisterende elementer samt nye og genererer en hændelsesrapport, når der findes et match. I Exchange Online scanner DLP kun nye mails og genererer en rapport, hvis der er et politikmatch. DLP scanner eller matcher ***ikke*** tidligere eksisterende mailelementer, der er gemt i en postkasse eller et arkiv.
+DLP scanner mail på en anden måde end SharePoint Online eller OneDrive for Business elementer. I SharePoint Online og OneDrive for Business scanner DLP eksisterende elementer samt nye og genererer en hændelsesrapport, når der findes et match. I Exchange Online scanner DLP kun nye mails og genererer en rapport, hvis der er et politikmatch. DLP scanner eller matcher ***ikke*** tidligere eksisterende mailelementer, der er gemt i en postkasse eller et arkiv.
 
 ### <a name="additional-options"></a>Yderligere indstillinger
 
