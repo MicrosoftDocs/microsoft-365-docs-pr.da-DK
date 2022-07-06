@@ -1,7 +1,7 @@
 ---
 title: Indstillinger for styring af insiderrisiko
 description: Få mere at vide om indstillinger for styring af insiderrisiko i Microsoft Purview
-keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse af angivne standarder
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -16,18 +16,16 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 571f716a68bcbe9746338aec0fd9a6a3e8e9f0ef
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: d830da841eb67db19e81cdf6a0e079c2161ae9d9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217602"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625187"
 ---
 # <a name="get-started-with-insider-risk-management-settings"></a>Kom i gang med indstillinger for styring af insiderrisiko
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Indstillinger for styring af insiderrisiko gælder for alle politikker for styring af insiderrisiko, uanset hvilken skabelon du vælger, når du opretter en politik. Indstillinger konfigureres ved hjælp af kontrolelementet **Insider-risikoindstillinger**, der er placeret øverst på alle sider til styring af insiderrisiko. Disse indstillinger styrer politikkomponenter for følgende områder:
+Indstillinger for styring af insiderrisiko gælder for alle politikker for styring af insiderrisiko, uanset hvilken skabelon du vælger, når du opretter en politik. Indstillinger konfigureres ved hjælp af kontrolelementet **Insider-risikoindstillinger** , der er placeret øverst på alle sider til styring af insiderrisiko. Disse indstillinger styrer politikkomponenter for følgende områder:
 
 - [Beskyttelse af personlige oplysninger](#privacy)
 - [Indikatorer](#indicators)
@@ -36,10 +34,10 @@ Indstillinger for styring af insiderrisiko gælder for alle politikker for styri
 - [Eksportér beskeder](#export-alerts)
 - [Prioriterede brugergrupper (prøveversion)](#priority-user-groups-preview)
 - [Prioriterede fysiske aktiver (prøveversion)](#priority-physical-assets-preview)
-- [Power Automate flow (prøveversion)](#power-automate-flows-preview)
+- [Power Automate-flow (prøveversion)](#power-automate-flows-preview)
 - [Microsoft Teams (prøveversion)](#microsoft-teams-preview)
 - [Analytics](#analytics)
-- [Administratormeddelelser](#admin-notifications)
+- [Administration meddelelser](#admin-notifications)
 
 Før du kommer i gang og opretter politikker for styring af insiderrisiko, er det vigtigt at forstå disse indstillinger og vælge de indstillingsniveauer, der passer bedst til organisationens behov for overholdelse af angivne standarder.
 
@@ -50,7 +48,7 @@ Det er vigtigt at beskytte beskyttelsen af personlige oplysninger for brugere, d
 - **Vis anonymiserede versioner af brugernavne**: Navne på brugere anonymiseres for at forhindre administratorer, dataundersøgere og korrekturlæsere i at se, hvem der er knyttet til politikbeskeder. En bruger "Grace Taylor" vises f.eks. med et randomiseret pseudonym, f.eks. "AnonIS8-988" på alle områder af insiderrisikostyringsoplevelsen. Hvis du vælger denne indstilling, anonymiseres alle brugere med aktuelle og tidligere politikforekomster og gælder for alle politikker. Brugerprofiloplysninger i insiderrisikobeskeden og sagsoplysningerne vil ikke være tilgængelige, når denne indstilling vælges. Brugernavne vises dog, når du føjer nye brugere til eksisterende politikker, eller når du tildeler brugere til nye politikker. Hvis du vælger at deaktivere denne indstilling, vises brugernavne for alle brugere, der har aktuelle eller tidligere politikforekomster.
 
     >[!IMPORTANT]
-    >Hvis du vil bevare referentiel integritet for brugere, der har insiderrisikobeskeder eller sager i Microsoft 365 eller andre systemer, bevares anonymisering af brugernavne ikke for eksporterede beskeder. Eksporterede beskeder viser brugernavne for hver besked.
+    >Hvis du vil bevare referentiel integritet for brugere, der har insiderrisikobeskeder eller -sager i Microsoft 365 eller andre systemer, bevares anonymisering af brugernavne ikke for eksporterede beskeder. Eksporterede beskeder viser brugernavne for hver besked.
 
 - **Vis ikke anonymiserede versioner af brugernavne**: Brugernavne vises for alle aktuelle og tidligere politikkampe for beskeder og sager. Brugerprofiloplysninger (navn, titel, alias og organisation eller afdeling) vises for brugeren for alle insiderrisikostyringsbeskeder og -sager.
 
@@ -62,15 +60,15 @@ Skabeloner til insiderrisikopolitik definerer den type risikoaktiviteter, du vil
 
 Beskeder udløses af politikker, når brugerne udfører aktiviteter, der er relateret til politikindikatorer, der opfylder en påkrævet tærskel. Insiderrisikostyring bruger to typer indikatorer:
 
-- **Udløsende hændelser**: Hændelser, der bestemmer, om en bruger er aktiv i en politik for styring af insiderrisiko. Hvis en bruger føjes til en politik for styring af insiderrisiko ikke har en udløsende hændelse, evalueres brugeraktiviteten ikke af politikken. Bruger A føjes f.eks. til en politik, der er oprettet ud fra politikskabelonen *Datatyveri af brugere,* og politikken og Microsoft 365 HR-connectoren er konfigureret korrekt. Indtil bruger A har en slutdato rapporteret af HR-connectoren, evalueres Bruger A-aktiviteter ikke af denne politik for styring af insiderrisiko for risici. Et andet eksempel på en udløsende hændelse er, hvis en bruger har en DLP-politikbesked med *høj* alvorsgrad, når der bruges politikker for *datalækager* .
+- **Udløsende hændelser**: Hændelser, der bestemmer, om en bruger er aktiv i en politik for styring af insiderrisiko. Hvis en bruger føjes til en politik for styring af insiderrisiko ikke har en udløsende hændelse, evalueres brugeraktiviteten ikke af politikken. Bruger A føjes f.eks. til en politik, der er oprettet *ud fra datatyveri ved hjælp af politikskabelonen for brugere, der forlader* virksomheden, og politikken og Microsoft 365 HR-connectoren er konfigureret korrekt. Indtil bruger A har en slutdato rapporteret af HR-connectoren, evalueres Bruger A-aktiviteter ikke af denne politik for styring af insiderrisiko for risici. Et andet eksempel på en udløsende hændelse er, hvis en bruger har en DLP-politikbesked med *høj* alvorsgrad, når der bruges politikker for *datalækager* .
 - **Politikindikatorer**: Indikatorer, der er inkluderet i politikker for styring af insiderrisiko, som bruges til at fastslå en risikoscore for en bruger i området. Disse politikindikatorer aktiveres kun, når der opstår en udløsende hændelse for en bruger. Nogle eksempler på politikindikatorer er, når en bruger kopierer data til personlige cloudlagertjenester eller bærbare lagerenheder, hvis en brugerkonto fjernes fra Azure Active Directory, eller hvis en bruger deler interne filer og mapper med uautoriserede eksterne parter.
 
 Visse politikindikatorer kan også bruges til at tilpasse udløsende hændelser for bestemte politikskabeloner. Når disse indikatorer er konfigureret i politikguiden for skabelonerne *Generelle datalækager* eller *Datalækager for prioriterede brugere* , giver disse indikatorer dig større fleksibilitet og tilpasning til dine politikker, og når brugerne er omfattet af en politik. Du kan også definere individuelle aktivitetstærskler for disse udløsende indikatorer for at få mere detaljeret kontrol i en politik.
 
 Politikindikatorer er opdelt i følgende områder. Du kan vælge de indikatorer, der skal aktivere og tilpasse indikatorhændelsesgrænserne for hvert indikatorniveau, når du opretter en insiderrisikopolitik:
 
-- **Office indikatorer**: Disse omfatter politikindikatorer for SharePoint websteder, Microsoft Teams og mailbeskeder.
-- **Enhedsindikatorer**: Disse omfatter politikindikatorer for aktiviteter, f.eks. deling af filer via netværket eller med enheder. Indikatorer omfatter aktiviteter, der involverer alle filtyper, bortset fra eksekverbar filaktivitet (.exe) og .dll. Hvis du vælger *Enhedsindikatorer*, behandles aktiviteten for enheder med Windows 10 Build 1809 eller nyere og macOS-enheder (Catalina 10.15 eller nyere). For både Windows- og macOS-enheder skal du først onboarde enheder til overholdelsesportalen. Enhedsindikatorer omfatter også browsersignalregistrering, der hjælper din organisation med at registrere og reagere på eksfiltrationssignaler for ikke-eksekverbare filer, der vises, kopieres, deles eller udskrives i Microsoft Edge og Google Chrome. Du kan få flere oplysninger om konfiguration af Windows enheder til integration med insiderrisiko i afsnittet [Aktivér enhedsindikatorer og onboarding Windows enheder](insider-risk-management-settings.md#OnboardDevices) i denne artikel. Du kan få flere oplysninger om konfiguration af macOS-enheder til integration med insiderrisiko i afsnittet Aktivér enhedsindikatorer og onboarde macOS-enheder i denne artikel. Du kan finde flere oplysninger om browsersignalregistrering under [Få mere at vide om og konfigurer browsersignalregistrering for styring af insiderrisiko](insider-risk-management-browser-support.md).
+- **Office-indikatorer**: Disse omfatter politikindikatorer for SharePoint-websteder, Microsoft Teams og mailbeskeder.
+- **Enhedsindikatorer**: Disse omfatter politikindikatorer for aktiviteter, f.eks. deling af filer via netværket eller med enheder. Indikatorer omfatter aktiviteter, der involverer alle filtyper, bortset fra eksekverbar filaktivitet (.exe) og .dll. Hvis du vælger *Enhedsindikatorer*, behandles aktiviteten for enheder med Windows 10 Build 1809 eller nyere og macOS-enheder (Catalina 10.15 eller nyere). For både Windows- og macOS-enheder skal du først onboarde enheder til overholdelsesportalen. Enhedsindikatorer omfatter også browsersignalregistrering, der hjælper din organisation med at registrere og reagere på exfiltrationssignaler for ikke-eksekverbare filer, der vises, kopieres, deles eller udskrives i Microsoft Edge og Google Chrome. Du kan få flere oplysninger om konfiguration af Windows-enheder til integration med insiderrisiko i afsnittet [Aktivér enhedsindikatorer og onboarding af Windows-enheder](insider-risk-management-settings.md#OnboardDevices) i denne artikel. Du kan få flere oplysninger om konfiguration af macOS-enheder til integration med insiderrisiko i afsnittet Aktivér enhedsindikatorer og onboarde macOS-enheder i denne artikel. Du kan finde flere oplysninger om browsersignalregistrering under [Få mere at vide om og konfigurer browsersignalregistrering for styring af insiderrisiko](insider-risk-management-browser-support.md).
 - **Indikator for overtrædelse af sikkerhedspolitik (prøveversion)**: Disse omfatter indikatorer fra Microsoft Defender for Endpoint, der er relateret til installation af ikke-godkendt eller skadelig software eller omgåelse af sikkerhedskontroller. Hvis du vil modtage beskeder i styring af insiderrisiko, skal du have aktiveret en aktiv Defender for Endpoint-licens og integration af insiderrisiko. Du kan finde flere oplysninger om konfiguration af Defender for Endpoint til integration af styring af insiderrisiko under [Konfigurer avancerede funktioner i Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/advanced-features\#share-endpoint-alerts-with-microsoft-compliance-center).
 - **Adgangsindikatorer for patientjournaler (prøveversion)**: Disse omfatter politikindikatorer for adgang til patientjournaler. Forsøg på at få adgang til patientjournaler i dine EMR-systemlogge (Electronic Medical Records) kan f.eks. deles med politikker for styring af insiderrisiko. Hvis du vil modtage disse typer beskeder i styring af insiderrisiko, skal du have konfigureret en sundhedsspecifik dataconnector og HR-dataconnectoren.
 - **Indikatorer for fysisk adgang (prøveversion)**: Disse omfatter politikindikatorer for fysisk adgang til følsomme aktiver. Forsøg på at få adgang til et begrænset område i dine fysiske systemlogge for dårligging kan f.eks. deles med politikker for styring af insiderrisiko. Hvis du vil modtage disse typer beskeder i styring af insiderrisiko, skal du have prioriteret fysiske aktiver aktiveret i styring af insiderrisiko og [den fysiske badging-dataconnector](import-physical-badging-data.md) konfigureret. Du kan få mere at vide om konfiguration af fysisk adgang i [afsnittet Prioritet for fysisk adgang](#priority-physical-assets-preview) i denne artikel.
@@ -79,36 +77,36 @@ Politikindikatorer er opdelt i følgende områder. Du kan vælge de indikatorer,
 
 I nogle tilfælde kan det være en god idé at begrænse de indikatorer for insiderrisikopolitik, der anvendes på insiderrisikopolitikker i din organisation. Du kan slå politikindikatorer for bestemte områder fra ved at deaktivere dem fra alle politikker for insiderrisiko. Udløsende hændelser kan kun ændres for politikker, der er oprettet ud fra skabelonerne *Generelle datalækager* eller *Datalækager af prioriterede brugere* . Politikker, der er oprettet ud fra alle andre skabeloner, har ikke udløserindikatorer eller -hændelser, der kan tilpasses.
 
-Hvis du vil definere de insiderrisikopolitikindikatorer, der er aktiveret i alle insiderrisikopolitikker, skal du navigere til **Insider-risikoindstillingerIndikatorer** >  og vælge en eller flere politikindikatorer. De indikatorer, der er valgt på siden Med indstillinger for indikatorer, kan ikke konfigureres individuelt, når du opretter eller redigerer en insiderrisikopolitik i guiden Politik.
+Hvis du vil definere indikatorer for insiderrisikopolitik, der er aktiveret i alle insiderrisikopolitikker, skal du gå til **Insiderrisikoindstillinger** > **Indikatorer** og vælge en eller flere politikindikatorer. De indikatorer, der er valgt på siden Med indstillinger for indikatorer, kan ikke konfigureres individuelt, når du opretter eller redigerer en insiderrisikopolitik i guiden Politik.
 
 > [!NOTE]
 > Det kan tage flere timer, før nye manuelt tilføjede brugere vises i **dashboardet Brugere**. Det kan tage op til 24 timer at vise aktiviteter for de foregående 90 dage for disse brugere. Hvis du vil have vist aktiviteter for manuelt tilføjede brugere, skal du vælge brugeren på **dashboardet Brugere** og åbne fanen **Brugeraktivitet** i detaljeruden.
 
-### <a name="enable-device-indicators-and-onboard-windows-devices"></a>Aktivér enhedsindikatorer, og onboarder Windows enheder
+### <a name="enable-device-indicators-and-onboard-windows-devices"></a>Aktivér enhedsindikatorer og onboarde Windows-enheder
 <a name="OnboardDevices"> </a>
 
-Hvis du vil aktivere overvågning af risikoaktiviteter på Windows enheder og inkludere politikindikatorer for disse aktiviteter, skal dine Windows enheder opfylde følgende krav, og du skal fuldføre følgende onboardingtrin.
+Hvis du vil aktivere overvågning af risikoaktiviteter på Windows-enheder og inkludere politikindikatorer for disse aktiviteter, skal dine Windows-enheder opfylde følgende krav, og du skal fuldføre følgende onboardingtrin.
 
 #### <a name="step-1-prepare-your-endpoints"></a>Trin 1: Forbered dine slutpunkter
 
 Sørg for, at de Windows 10 enheder, du planlægger at rapportere i insiderrisikostyring, opfylder disse krav.
 
 1. Skal køre Windows 10 x64 build 1809 eller nyere og skal have installeret [opdateringen til Windows 10 (OS Build 17763.1075)](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) fra den 20. februar 2020.
-2. Den brugerkonto, der bruges til at logge på den Windows 10 enhed, skal være en aktiv Azure Active Directory -konto (AAD). Den Windows 10 enhed kan være [AAD](/azure/active-directory/devices/concept-azure-ad-join), hybrid AAD eller Active Directory tilmeldt eller AAD registreret.
-3. Installér den Microsoft Edge browser på slutpunktsenheden for at overvåge handlinger for uploadaktiviteten i skyen. Se [Download de nye Microsoft Edge baseret på Chromium](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium).
+2. Den brugerkonto, der bruges til at logge på Windows 10 enhed, skal være en aktiv AAD-konto (Azure Active Directory). Den Windows 10 enhed kan være [tilmeldt AAD](/azure/active-directory/devices/concept-azure-ad-join), hybrid AAD eller Active Directory eller AAD registreret.
+3. Installér Microsoft Edge-browseren på slutpunktsenheden for at registrere handlinger for uploadaktiviteten i skyen. Se [Download den nye Microsoft Edge baseret på Chromium](https://support.microsoft.com/help/4501095/download-the-new-microsoft-edge-based-on-chromium).
 
 #### <a name="step-2-onboarding-devices"></a>Trin 2: Onboarding af enheder
 <a name="OnboardStep2"> </a>
 
-Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan overvåge for insiderrisikostyringsaktiviteter på en enhed. Begge handlinger udføres på Microsoft Purview-overholdelsesportalen.
+Du skal aktivere enhedsovervågning og onboarde dine slutpunkter, før du kan registrere insiderrisikostyringsaktiviteter på en enhed. Begge handlinger udføres i Microsoft Purview-compliance-portal.
 
 Når du vil onboarde enheder, der endnu ikke er onboardet, skal du downloade det relevante script og installere som beskrevet i følgende trin.
 
 Hvis du allerede har enheder onboardet i [Microsoft Defender for Endpoint](/windows/security/threat-protection/), vises de allerede på listen over administrerede enheder. Følg [trin 3: Hvis du har enheder onboardet i Microsoft Defender for Endpoint](insider-risk-management-settings.md#OnboardStep3) i næste afsnit.
 
-I dette installationsscenarie skal du onboarde enheder, der endnu ikke er onboardet, og du vil blot overvåge insiderrisikoaktiviteter på Windows 10 enheder.
+I dette installationsscenarie skal du onboarde enheder, der endnu ikke er onboardet, og du vil blot registrere insiderrisikoaktiviteter på Windows 10 enheder.
 
-1. Åbn [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com).
+1. Åbn [Microsoft Purview-compliance-portal](https://compliance.microsoft.com).
 2. Åbn siden med indstillinger for overholdelsesportalen, og vælg **Ombordværende enheder**.
 
    > [!NOTE]
@@ -119,7 +117,7 @@ I dette installationsscenarie skal du onboarde enheder, der endnu ikke er onboar
 5. Vælg, hvordan du vil installere på disse flere enheder, på listen **Installationsmetode** , og **download derefter pakken**.
 6. Følg de relevante procedurer i [Onboarding værktøjer og metoder til Windows 10 maskiner](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints). Dette link fører dig til en landingsside, hvor du kan få adgang til Microsoft Defender for Endpoint procedurer, der svarer til den installationspakke, du valgte i trin 5:
     - Onboarde Windows 10 maskiner ved hjælp af Gruppepolitik
-    - Onboarde Windows maskiner ved hjælp af Microsoft Endpoint Configuration Manager
+    - Onboarde Windows-maskiner ved hjælp af Microsoft Endpoint Configuration Manager
     - Onboarde Windows 10-maskiner ved hjælp af værktøjer til Enhedshåndtering til mobilenheder
     - Onboarde Windows 10-maskiner ved hjælp af et lokalt script
     - Onboarde VDI-maskiner (Virtual Desktop Infrastructure), der ikke er vedvarende.
@@ -134,14 +132,14 @@ Når du er færdig, og slutpunktet er onboardet, bør det være synligt på enhe
 
 Hvis Microsoft Defender for Endpoint allerede er installeret, og der er rapportering af slutpunkter i, vises alle disse slutpunkter på listen over administrerede enheder. Du kan fortsætte med at onboarde nye enheder i styring af insiderrisiko for at udvide dækningen ved hjælp af afsnittet [Trin 2: Onboarding-enheder](insider-risk-management-settings.md#OnboardStep2) .
 
-1. Åbn [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com).
+1. Åbn [Microsoft Purview-compliance-portal](https://compliance.microsoft.com).
 2. Åbn siden med indstillinger for overholdelsesportalen, og vælg **Aktivér enhedsovervågning**.
 3. Vælg **Enhedshåndtering** for at åbne listen **Enheder** . Du bør kunne se listen over enheder, der allerede rapporterer til Microsoft Defender for Endpoint.
 4. Vælg **Onboarding** , hvis du har brug for at onboarde flere enheder.
 5. Vælg, hvordan du vil installere på disse flere enheder, på listen **Installationsmetode** og derefter **Download pakke**.
 6. Følg de relevante procedurer i [Onboarding værktøjer og metoder til Windows 10 maskiner](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints). Dette link fører dig til en landingsside, hvor du kan få adgang til Microsoft Defender for Endpoint procedurer, der svarer til den installationspakke, du valgte i trin 5:
     - Onboarde Windows 10 maskiner ved hjælp af Gruppepolitik
-    - Onboarde Windows maskiner ved hjælp af Microsoft Endpoint Configuration Manager
+    - Onboarde Windows-maskiner ved hjælp af Microsoft Endpoint Configuration Manager
     - Onboarde Windows 10-maskiner ved hjælp af værktøjer til Enhedshåndtering til mobilenheder
     - Onboarde Windows 10-maskiner ved hjælp af et lokalt script
     - Onboarde VDI-maskiner (Virtual Desktop Infrastructure), der ikke er vedvarende.
@@ -153,24 +151,24 @@ Når du er færdig, og slutpunktet er onboardet, bør det være synligt under ta
 
 ### <a name="enable-device-indicators-and-onboard-macos-devices"></a>Aktivér enhedsindikatorer og onboarde macOS-enheder
 
-macOS-enheder (Catalina 10.15 eller nyere) kan onboardes i Microsoft 365 for at understøtte politikker for styring af insiderrisiko ved hjælp af enten Intune eller JAMF-Pro. Du kan finde flere oplysninger og konfigurationsvejledning under [Onboarder macOS-enheder i Microsoft 365 oversigt (prøveversion).](device-onboarding-macos-overview.md)
+macOS-enheder (Catalina 10.15 eller nyere) kan onboardes i Microsoft 365 for at understøtte politikker for styring af insiderrisiko ved hjælp af enten Intune eller JAMF Pro. Du kan finde flere oplysninger og konfigurationsvejledning i [Oversigt over onboarding af macOS-enheder i Microsoft 365 (prøveversion).](device-onboarding-macos-overview.md)
 
 ### <a name="indicator-level-settings-preview"></a>Indstillinger for indikatorniveau (prøveversion)
 
 Når du opretter en politik i politikguiden, kan du konfigurere, hvordan det daglige antal risikohændelser skal påvirke risikoscoren for insiderrisikobeskeder. Disse indikatorindstillinger hjælper dig med at styre, hvordan antallet af forekomster af risikohændelser i din organisation skal påvirke risikoscoren og dermed den tilknyttede alvorsgrad for disse hændelser. Hvis du foretrækker det, kan du også vælge at beholde de standardtærskelniveauer for hændelser, der anbefales af Microsoft, for alle aktiverede indikatorer.
 
-Du beslutter f.eks. at aktivere SharePoint indikatorer i indstillingerne for politikken for insiderrisiko og **angive brugerdefinerede tærskler** for SharePoint hændelser, når du konfigurerer indikatorer for en ny politik for insiderrisikodatalækager. I guiden for insiderrisikopolitik kan du konfigurere tre forskellige daglige hændelsesniveauer for hver SharePoint indikator for at påvirke risikoscoren for beskeder, der er knyttet til disse hændelser.
+Du beslutter f.eks. at aktivere SharePoint-indikatorer i indstillingerne for insiderrisikopolitik og **at angive brugerdefinerede tærskler** for SharePoint-hændelser, når du konfigurerer indikatorer for en ny politik for insiderrisikoDatalækager. I guiden til insiderrisikopolitik konfigurerer du tre forskellige daglige hændelsesniveauer for hver SharePoint-indikator for at påvirke risikoscoren for beskeder, der er knyttet til disse hændelser.
 
 ![Brugerdefinerede indikatorindstillinger for styring af insiderrisiko.](../media/insider-risk-custom-indicators.png)
 
 For det første daglige hændelsesniveau angiver du tærsklen til *10 eller flere hændelser pr. dag* for en lavere indvirkning på risikoscoren for hændelserne, *20 eller flere hændelser pr. dag* for en mellemstor påvirkning af risikoscoren for hændelserne, og *30 eller flere hændelser pr. dag* en højere indvirkning på risikoscoren for hændelserne. Disse indstillinger betyder på effektiv vis:
 
-- Hvis der er 1-9 SharePoint hændelser, der finder sted efter udløsende hændelse, påvirkes risikoscore minimalt og vil have en tendens til ikke at generere en besked.
-- Hvis der er 10-19 SharePoint hændelser, der finder sted efter en udløsende hændelse, er risikoscoren i sagens natur lavere, og alvorlighedsniveauer for beskeder vil have en tendens til at være på et lavt niveau.
-- Hvis der er 20-29 SharePoint hændelser, der finder sted efter en udløsning, er risikoscoren i sagens natur højere, og alvorsgradsniveauerne for beskeder vil have en tendens til at være på et mellemstort niveau.
-- Hvis der er 30 eller flere SharePoint hændelser, der finder sted efter en udløsning, er risikoscoren i sagens natur højere, og alvorlighedsniveauer for beskeder vil have en tendens til at være på et højt niveau.
+- Hvis der er 1-9 SharePoint-hændelser, der finder sted efter udløsende hændelse, påvirkes risikoscore minimalt og vil have en tendens til ikke at generere en besked.
+- Hvis der er 10-19 SharePoint-hændelser, der finder sted efter en udløsende hændelse, er risikoscoren i sagens natur lavere, og alvorlighedsniveauer for beskeder vil have en tendens til at være på et lavt niveau.
+- Hvis der er 20-29 SharePoint-hændelser, der finder sted efter en udløsning, er risikoscoren i sagens natur højere, og alvorlighedsniveauer for beskeder vil have en tendens til at være på et mellemstort niveau.
+- Hvis der er 30 eller flere SharePoint-hændelser, der finder sted efter en udløsning, er risikoscoren i sagens natur højere, og alvorsgradsniveauerne for beskeder vil have en tendens til at være på et højt niveau.
 
-En anden mulighed for politiktærskler er at tildele den hændelse, der udløser politikken, til aktiviteter, der er over det normale antal daglige aktiviteter for brugere. I stedet for at være defineret af specifikke indstillinger for tærskelværdi, tilpasses hver tærskel dynamisk for uregelmæssige aktiviteter, der registreres for brugere af politikker i området. Hvis tærskelaktivitet for unormale aktiviteter understøttes for en individuel indikator, kan du vælge **Aktivitet er over brugerens normale aktivitet for dagen** i politikguiden for den pågældende indikator. Hvis denne indstilling ikke er angivet, er udløseren af unormal aktivitet ikke tilgængelig for indikatoren. Hvis **aktiviteten er over brugerens sædvanlige aktivitet for dagen** er angivet for en indikator, men ikke kan vælges, skal du aktivere denne indstilling i **Insider-risikoindstillingerPolitikindikatorer** > .
+En anden mulighed for politiktærskler er at tildele den hændelse, der udløser politikken, til aktiviteter, der er over det normale antal daglige aktiviteter for brugere. I stedet for at være defineret af specifikke indstillinger for tærskelværdi, tilpasses hver tærskel dynamisk for uregelmæssige aktiviteter, der registreres for brugere af politikker i området. Hvis tærskelaktivitet for unormale aktiviteter understøttes for en individuel indikator, kan du vælge **Aktivitet er over brugerens normale aktivitet for dagen** i politikguiden for den pågældende indikator. Hvis denne indstilling ikke er angivet, er udløseren af unormal aktivitet ikke tilgængelig for indikatoren. Hvis **aktiviteten er over brugerens sædvanlige aktivitet for dagen** er angivet for en indikator, men ikke kan vælges, skal du aktivere denne indstilling i **Insider-risikoindstillinger** > **Politikindikatorer**.
 
 ## <a name="policy-timeframes"></a>Politiktidsrammer
 
@@ -232,7 +230,7 @@ For hver af følgende domæneindstillinger kan du angive op til 500 domæner:
 
     - Mail sendt til eksterne domæner
     - Filer, mapper, websteder, der deles med eksterne domæner
-    - Filer, der er overført til eksterne domæner (ved hjælp af Microsoft Edge browser)
+    - Filer, der er overført til eksterne domæner (ved hjælp af Microsoft Edge-browser)
 
     Ved at angive tilladte domæner i indstillinger behandles denne aktivitet med disse domæner på samme måde, som intern organisationsaktivitet behandles. Domæner, der føjes her kort til aktiviteter, kan f.eks. omfatte deling af indhold med nogen uden for din organisation (f.eks. afsendelse af mail til en person med en gmail.com adresse).
 
@@ -245,11 +243,11 @@ Beskedoplysninger om styring af insiderrisiko kan eksporteres til SIEM-løsninge
 Hvis din organisation bruger Microsoft Sentinel, kan du også bruge den indbyggede connector til styring af insiderrisikodata til at importere oplysninger om insiderrisikobeskeder til Sentinel. Du kan få flere oplysninger i [IRM (Insider Risk Management) (Preview)](/azure/sentinel/data-connectors-reference#microsoft-365-insider-risk-management-irm-preview) i artiklen Microsoft Sentinel.
 
 >[!IMPORTANT]
->Hvis du vil bevare referentiel integritet for brugere, der har insiderrisikobeskeder eller sager i Microsoft 365 eller andre systemer, bevares anonymisering af brugernavne ikke for eksporterede beskeder. Eksporterede beskeder viser brugernavne for hver besked.
+>Hvis du vil bevare referentiel integritet for brugere, der har insiderrisikobeskeder eller -sager i Microsoft 365 eller andre systemer, bevares anonymisering af brugernavne ikke for eksporterede beskeder. Eksporterede beskeder viser brugernavne for hver besked.
 
 Sådan bruger du API'erne til at gennemse oplysninger om insiderrisikobeskeder:
 
-1. Aktivér understøttelse af API til administration af Office 365 i **Styring af** >  insiderrisiko **Indstillinger** >  **Eksportér beskeder**. Denne indstilling er som standard deaktiveret for din Microsoft 365 organisation.
+1. Aktivér understøttelse af API til administration af Office 365 i **Indstillinger for** >  **styring af** >  insiderrisiko **Eksportér beskeder**. Denne indstilling er som standard deaktiveret for din Microsoft 365-organisation.
 2. Filtrer de almindelige Office 365 overvågningsaktiviteter efter *SecurityComplianceAlerts*.
 3. Filtrer *SecurityComplianceAlerts* efter kategorien *InsiderRiskManagement* .
 
@@ -292,15 +290,15 @@ Brugere i din organisation kan have forskellige risikoniveauer, afhængigt af de
 
 I stedet for at være åbne for gennemgang af alle analytikere og efterforskere kan prioritetsbrugergrupper også være nødt til at begrænse korrekturaktiviteter til bestemte brugere eller insiderrisikorollegrupper. Du kan vælge at tildele individuelle brugere og rollegrupper til at gennemse brugere, beskeder, sager og rapporter for hver prioriteret brugergruppe. Prioritetsbrugergrupper kan have tilladelse til at gennemse de indbyggede rollegrupper *Insider Risk Management*, *Insider Risk Management Og* *Insider Risk Management Investigators* , en eller flere af disse rollegrupper eller til et brugerdefineret udvalg af brugere.
 
-Du skal f.eks. beskytte mod datalækager for et meget fortroligt projekt, hvor brugerne har adgang til følsomme oplysninger. Du vælger at oprette *Fortroligt Project*  Brugerprioritetsbrugergruppe for brugere i din organisation, der arbejder på dette projekt. Desuden bør denne prioriterede brugergruppe ikke have brugere, beskeder, sager og rapporter, der er knyttet til gruppen, synlige for alle standardadministratorer, analytikere og efterforskere af insiderrisikostyring. I **Indstillinger** skal du oprette gruppen *Fortroligt Project brugere*, der prioriterer brugere, og tildele to brugere som korrekturlæser, der kan få vist data, der er relateret til grupperne. Ved hjælp af politikguiden og politikskabelonen *Datalækager efter prioriterede brugere* kan du oprette en ny politik og tildele gruppen *Fortroligt Project brugere* prioritetsbrugere til politikken. Aktiviteter, der undersøges af politikken for medlemmer af gruppen *Fortroligt Project Brugerprioritetsbruger*, er mere følsomme over for risici, og disse brugere vil med større sandsynlighed generere en besked og have beskeder med højere alvorsgradsniveauer.
+Du skal f.eks. beskytte mod datalækager for et meget fortroligt projekt, hvor brugerne har adgang til følsomme oplysninger. Du vælger at oprette en brugergruppe med *prioriteten Fortrolige projektbrugere*  for brugere i din organisation, der arbejder på dette projekt. Desuden bør denne prioriterede brugergruppe ikke have brugere, beskeder, sager og rapporter, der er knyttet til gruppen, synlige for alle standardadministratorer, analytikere og efterforskere af insiderrisikostyring. Under **Indstillinger** kan du oprette gruppen *Fortrolige projektbrugeres* prioritetsbrugere og tildele to brugere som korrekturlæser, der kan få vist data, der er relateret til grupperne. Ved hjælp af politikguiden og politikskabelonen *Datalækager efter prioriterede brugere* kan du oprette en ny politik og tildele gruppen *Fortrolige project-brugere* prioritetsbrugere til politikken. Aktiviteter, der undersøges af politikken for medlemmer af den prioriterede brugergruppe *Fortrolige projektbrugere* , er mere følsomme over for risici, og der vil være større sandsynlighed for, at disse brugere vil generere en besked og have beskeder med højere alvorsgradsniveauer.
 
 ### <a name="create-a-priority-user-group"></a>Opret en prioritetsbrugergruppe
 
-Hvis du vil oprette en ny prioriteret brugergruppe, skal du bruge indstillingskontrolelementer i løsningen **til styring af insiderrisiko** på Microsoft Purview-overholdelsesportalen. Hvis du vil oprette en prioriteret brugergruppe, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin* .
+Hvis du vil oprette en ny prioriteret brugergruppe, skal du bruge indstillingskontrolelementer i **insiderrisikoadministrationsløsningen** i Microsoft Purview-compliance-portal. Hvis du vil oprette en prioriteret brugergruppe, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*.
 
 Fuldfør følgende trin for at oprette en prioriteret brugergruppe:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for insiderrisiko**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af Insider-risici** og vælge **Indstillinger for insiderrisiko**.
 2. Vælg siden **Prioritetsbrugergrupper (prøveversion).**
 3. På siden **Prioritetsbrugergrupper (prøveversion)** skal du vælge **Opret brugergruppe med prioritet** for at starte guiden til oprettelse af gruppen.
 4. Udfyld følgende felter på siden **Navn og beskriv** :
@@ -316,11 +314,11 @@ Fuldfør følgende trin for at oprette en prioriteret brugergruppe:
 
 ### <a name="update-a-priority-user-group"></a>Opdater en prioritetsbrugergruppe
 
-Hvis du vil opdatere en eksisterende prioriteret brugergruppe, skal du bruge indstillingskontrolelementer i **insiderrisikoadministrationsløsningen** på Microsoft Purview-overholdelsesportalen. Hvis du vil opdatere en prioriteret brugergruppe, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin* .
+Hvis du vil opdatere en eksisterende prioriteret brugergruppe, skal du bruge indstillingskontrolelementer i **insiderrisikoadministrationsløsningen** i Microsoft Purview-compliance-portal. Hvis du vil opdatere en prioriteret brugergruppe, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*.
 
 Fuldfør følgende trin for at redigere en prioriteret brugergruppe:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for insiderrisiko**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af Insider-risici** og vælge **Indstillinger for insiderrisiko**.
 2. Vælg siden **Prioritetsbrugergrupper (prøveversion).**
 3. Vælg den prioritetsbrugergruppe, du vil redigere, og vælg **Rediger gruppe**.
 4. Opdater eventuelt feltet Beskrivelse på siden **Navn og beskriv** . Du kan ikke opdatere navnet på den prioriterede brugergruppe. Vælg **Næste** for at fortsætte.
@@ -332,14 +330,14 @@ Fuldfør følgende trin for at redigere en prioriteret brugergruppe:
 
 ### <a name="delete-a-priority-user-group"></a>Slet en prioritetsbrugergruppe
 
-Hvis du vil slette en eksisterende prioriteret brugergruppe, skal du bruge indstillingskontrolelementer i **insiderrisikoadministrationsløsningen** på Microsoft Purview-overholdelsesportalen. Hvis du vil slette en prioriteret brugergruppe, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin* .
+Hvis du vil slette en eksisterende prioriteret brugergruppe, skal du bruge indstillingskontrolelementer i løsningen **Insider Risk Management** i Microsoft Purview-compliance-portal. Hvis du vil slette en prioriteret brugergruppe, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*.
 
 > [!IMPORTANT]
 > Hvis du sletter en prioriteret brugergruppe, fjernes den fra alle aktive politikker, som den er tildelt. Hvis du sletter en prioriteret brugergruppe, der er tildelt til en aktiv politik, indeholder politikken ingen brugere i området og vil være inaktiv og vil ikke oprette beskeder.
 
 Fuldfør følgende trin for at slette en prioriteret brugergruppe:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for insiderrisiko**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af Insider-risici** og vælge **Indstillinger for insiderrisiko**.
 2. Vælg siden **Prioritetsbrugergrupper (prøveversion).**
 3. Vælg den prioritetsbrugergruppe, du vil redigere, og vælg **Slet** i dashboardmenuen.
 4. I dialogboksen **Slet** skal du vælge **Ja** for at slette den prioriterede brugergruppe eller vælge **Annuller** for at vende tilbage til dashboardet.
@@ -352,13 +350,13 @@ Når prioriteten af fysiske aktiver er aktiveret, og [dataconnectoren til fysisk
 
 Din organisation har f.eks. et badgingsystem for brugere, der overvåger og godkender fysisk adgang til normale arbejds- og følsomme projektområder. Du har flere brugere, der arbejder på et følsomt projekt, og disse brugere vender tilbage til andre områder i organisationen, når projektet er fuldført. Da det følsomme projekt er ved at blive fuldført, skal du sikre dig, at projektarbejde forbliver fortroligt, og at adgangen til projektområderne styres nøje.
 
-Du vælger at aktivere connectoren Fysisk badging-data i Microsoft 365 for at importere adgangsoplysninger fra dit fysiske badgingsystem og angive prioritet for fysiske aktiver i styring af insiderrisiko. Når du importerer oplysninger fra dit badgingsystem og korrelerer oplysninger om fysisk adgang med andre risikoaktiviteter, der er identificeret i insiderrisikostyring, bemærker du, at en af brugerne på projektet tilgår projektkontorerne efter normal arbejdstid og eksporterer også store mængder data til en personlig cloudlagertjeneste fra deres normale arbejdsområde. Denne fysiske adgangsaktivitet, der er knyttet til onlineaktiviteten, kan pege på mulige datatyveri og overholdelse af angivne standarder, som efterforskere og analytikere kan udføre relevante handlinger i henhold til omstændighederne for denne bruger.
+Du vælger at aktivere connectoren Fysisk badging-data i Microsoft 365 for at importere adgangsoplysninger fra dit fysiske badgingsystem og angive prioriterede fysiske aktiver i styring af insiderrisiko. Når du importerer oplysninger fra dit badgingsystem og korrelerer oplysninger om fysisk adgang med andre risikoaktiviteter, der er identificeret i insiderrisikostyring, bemærker du, at en af brugerne på projektet tilgår projektkontorerne efter normal arbejdstid og eksporterer også store mængder data til en personlig cloudlagertjeneste fra deres normale arbejdsområde. Denne fysiske adgangsaktivitet, der er knyttet til onlineaktiviteten, kan pege på mulige datatyveri og overholdelse af angivne standarder, som efterforskere og analytikere kan udføre relevante handlinger i henhold til omstændighederne for denne bruger.
 
 ![Insiderrisikostyring prioriterede fysiske aktiver.](../media/insider-risk-settings-priority-assets.png)
 
 ### <a name="configure-priority-physical-assets"></a>Konfigurer prioriterede fysiske aktiver
 
-Hvis du vil konfigurere prioriterede fysiske aktiver, skal du konfigurere connectoren Physical badging og bruge indstillingskontrolelementer i **Insider Risk Management-løsningen** på Microsoft Purview-overholdelsesportalen. Hvis du vil konfigurere prioriterede fysiske aktiver, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin*.
+Hvis du vil konfigurere prioriterede fysiske aktiver, skal du konfigurere connectoren Physical badging og bruge indstillingskontrolelementer i **Insider Risk Management-løsningen** i Microsoft Purview-compliance-portal. Hvis du vil konfigurere prioriterede fysiske aktiver, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*.
 
 Udfør følgende trin for at konfigurere prioriterede fysiske aktiver:
 
@@ -367,8 +365,8 @@ Udfør følgende trin for at konfigurere prioriterede fysiske aktiver:
     > [!IMPORTANT]
     > Hvis politikker for styring af insiderrisiko skal bruge og korrelere signaldata, der er relateret til afrejsende og afbrudte brugere med hændelsesdata fra dine fysiske kontrol- og adgangsplatforme, skal du også konfigurere Microsoft 365 HR-connectoren. Hvis du aktiverer den fysiske badging-connector uden at aktivere Microsoft 365 HR-connectoren, behandler politikker for styring af insiderrisiko kun hændelser for fysiske adgangsaktiviteter for brugere i din organisation.
 
-2. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Insider-risikoindstillingerPrioritér** >  **fysiske aktiver**.
-3. På siden **Prioritet af fysiske aktiver** kan du enten manuelt tilføje de fysiske aktiv-id'er, du vil overvåge for de aktivhændelser, der importeres af connectoren Fysisk badging, eller importere en .csv fil med alle fysiske aktiv-id'er, der er importeret af connectoren Fysisk badging: a) Hvis du vil tilføje id'er for fysiske aktiver manuelt, skal du vælge **Tilføj prioriterede fysiske aktiver**,  angiv et fysisk aktiv-id, og vælg derefter **Tilføj**. Angiv andre fysiske aktiv-id'er, og vælg derefter **Tilføj prioriterede fysiske aktiver** for at gemme alle de angivne aktiver.
+2. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af Insider-risici** og vælge **Indstillinger for** >  insiderrisiko **Prioritet af fysiske aktiver**.
+3. På siden **Prioritet af fysiske aktiver** kan du enten manuelt tilføje de fysiske aktiv-id'er, du vil registrere aktivhændelser, der importeres af connectoren fysisk badging, eller importere en .csv fil med alle fysiske aktiv-id'er, der er importeret af connectoren Fysisk badging: a) Hvis du vil tilføje id'er for fysiske aktiver manuelt, skal du vælge **Tilføj prioriterede fysiske aktiver**, angive et id for et fysisk aktiv,  vælg derefter **Tilføj**. Angiv andre fysiske aktiv-id'er, og vælg derefter **Tilføj prioriterede fysiske aktiver** for at gemme alle de angivne aktiver.
     b) Hvis du vil tilføje en liste over id'er for fysiske aktiver fra en .csv-fil, skal du vælge **Importér prioriterede fysiske aktiver**. Vælg den .csv fil, du vil importere, i dialogboksen Stifinder, og vælg derefter **Åbn**. Id'erne for de fysiske aktiver fra de .csv filer føjes til listen.
 4. Gå til siden **Politikindikatorer** i **Indstillinger**.
 5. På siden **Politikindikatorer** skal du navigere til afsnittet **Fysiske adgangsindikatorer** og markere afkrydsningsfeltet for **Fysisk adgang efter afslutning eller mislykket adgang til følsomt aktiv**.
@@ -376,64 +374,64 @@ Udfør følgende trin for at konfigurere prioriterede fysiske aktiver:
 
 ### <a name="delete-a-priority-physical-asset"></a>Slet et prioriteret fysisk aktiv
 
-Hvis du vil slette et eksisterende prioriteret fysisk aktiv, skal du bruge indstillingskontrolelementer i løsningen til styring af insiderrisiko på Microsoft Purview-overholdelsesportalen. Hvis du vil slette et prioriteret fysisk aktiv, skal du være medlem af rollegruppen Insider Risk Management eller Insider Risk Management Admin.
+Hvis du vil slette et eksisterende prioriteret fysisk aktiv, skal du bruge indstillingskontrolelementer i løsningen til styring af insiderrisiko i Microsoft Purview-compliance-portal. Hvis du vil slette et prioriteret fysisk aktiv, skal du være medlem af rollegruppen Insider Risk Management eller Insider Risk Management Administration.
 
 > [!IMPORTANT]
 > Hvis du sletter et prioriteret fysisk aktiv, fjernes det fra undersøgelse af en aktiv politik, som det tidligere blev inkluderet i. Beskeder, der genereres af aktiviteter, der er knyttet til det prioriterede fysiske aktiv, slettes ikke.
 
 Fuldfør følgende trin for at slette et prioriteret fysisk aktiv:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Insider-risikoindstillingerPrioritér** >  **fysiske aktiver**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af Insider-risici** og vælge **Indstillinger for** >  insiderrisiko **Prioritet af fysiske aktiver**.
 2. Vælg det aktiv, du vil slette, på siden **Prioritet for fysiske aktiver** .
 3. Vælg **Slet** i handlingsmenuen for at slette aktivet.
 
-## <a name="power-automate-flows-preview"></a>Power Automate flow (prøveversion)
+## <a name="power-automate-flows-preview"></a>Power Automate-flow (prøveversion)
 
-[Microsoft Power Automate](/power-automate/getting-started) er en arbejdsprocestjeneste, der automatiserer handlinger på tværs af programmer og tjenester. Ved hjælp af flow fra skabeloner eller oprettet manuelt kan du automatisere almindelige opgaver, der er knyttet til disse programmer og tjenester. Når du aktiverer Power Automate flow til styring af insiderrisiko, kan du automatisere vigtige opgaver for sager og brugere. Du kan konfigurere Power Automate flow til at hente bruger-, besked- og sagsoplysninger og dele disse oplysninger med interessenter og andre programmer samt automatisere handlinger i styring af insiderrisiko, f.eks. bogføring i sagsnoter. Power Automate flow gælder for sager og alle brugere, der er omfattet af en politik.
+[Microsoft Power Automate](/power-automate/getting-started) er en arbejdsprocestjeneste, der automatiserer handlinger på tværs af programmer og tjenester. Ved hjælp af flow fra skabeloner eller oprettet manuelt kan du automatisere almindelige opgaver, der er knyttet til disse programmer og tjenester. Når du aktiverer Power Automate-flow til styring af insiderrisiko, kan du automatisere vigtige opgaver for sager og brugere. Du kan konfigurere Power Automate-flow for at hente bruger-, besked- og sagsoplysninger og dele disse oplysninger med interessenter og andre programmer samt automatisere handlinger i styring af insiderrisiko, f.eks. at sende noter til sag. Power Automate-flow er gældende for sager og alle brugere, der er omfattet af en politik.
 
-Kunder med Microsoft 365 abonnementer, der omfatter styring af insiderrisiko, behøver ikke yderligere Power Automate licenser for at bruge de anbefalede skabeloner til styring af insiderrisiko Power Automate. Disse skabeloner kan tilpasses for at understøtte din organisation og dække kernescenarier for styring af insiderrisiko. Hvis du vælger at bruge Premium Power Automate-funktioner i disse skabeloner, oprette en brugerdefineret skabelon ved hjælp af Microsoft Purview-connectoren eller bruge Power Automate skabeloner til andre overholdelsesområder i Microsoft 365, har du muligvis brug for flere Power Automate licenser.
+Kunder med Microsoft 365-abonnementer, der indeholder insiderrisikostyring, behøver ikke yderligere Power Automate-licenser for at bruge de anbefalede skabeloner til styring af insiderrisikostyring i Power Automate. Disse skabeloner kan tilpasses for at understøtte din organisation og dække kernescenarier for styring af insiderrisiko. Hvis du vælger at bruge Premium Power Automate-funktioner i disse skabeloner, oprette en brugerdefineret skabelon ved hjælp af Microsoft Purview-connectoren eller bruge Power Automate-skabeloner til andre overholdelsesområder i Microsoft 365, har du muligvis brug for flere Power Automate-licenser.
 
-Følgende Power Automate skabeloner leveres til kunder for at understøtte procesautomatisering for brugere og sager med insiderrisikostyring:
+Følgende Power Automate-skabeloner leveres til kunder for at understøtte procesautomatisering for brugere og sager til styring af insiderrisiko:
 
-- **Giv brugerne besked, når de føjes til en insiderrisikopolitik**: Denne skabelon er til organisationer, der har interne politikker, beskyttelse af personlige oplysninger eller lovmæssige krav, som brugerne skal have besked om, når de er underlagt politikker for styring af insiderrisiko. Når dette flow er konfigureret og valgt for en bruger på siden **Brugere** , sendes brugerne og deres ledere en mail, når brugeren føjes til en insiderrisikostyringspolitik. Denne skabelon understøtter også opdatering af en SharePoint liste, der hostes på et SharePoint websted, for at hjælpe med at spore meddelelsesoplysninger, f.eks. dato/klokkeslæt og meddelelsesmodtageren. Hvis du har valgt at anonymisere brugere under **Indstillinger for beskyttelse af personlige oplysninger**, fungerer de flow, der oprettes ud fra denne skabelon, ikke som tiltænkt, så brugernes beskyttelse af personlige oplysninger bevares. Power Automate flow, der bruger denne skabelon, er tilgængelige på **dashboardet Brugere**.
-- **Anmod HR eller virksomheden om en bruger i en insiderrisikosag**: Når der reageres på en sag, kan insiderrisikoanalytikere og efterforskere være nødt til at rådføre sig med HR eller andre interessenter for at forstå konteksten for sagsaktiviteterne. Når dette flow er konfigureret og valgt for en sag, sender analytikere og efterforskere en mail til HR- og forretningsinteressenter, der er konfigureret for dette flow. Hver modtager får tilsendt en meddelelse med forudkonfigurerede eller tilpassede svarindstillinger. Når modtagerne vælger en svarindstilling, registreres svaret som en sagsnote og indeholder oplysninger om modtager og dato/klokkeslæt. Hvis du har valgt at anonymisere brugere under **Indstillinger for beskyttelse af personlige oplysninger**, fungerer de flow, der oprettes ud fra denne skabelon, ikke som tiltænkt, så brugernes beskyttelse af personlige oplysninger bevares. Power Automate flow, der bruger denne skabelon, er tilgængelige på **dashboardet Sager**.
+- **Giv brugerne besked, når de føjes til en insiderrisikopolitik**: Denne skabelon er til organisationer, der har interne politikker, beskyttelse af personlige oplysninger eller lovmæssige krav, som brugerne skal have besked om, når de er underlagt politikker for styring af insiderrisiko. Når dette flow er konfigureret og valgt for en bruger på siden **Brugere** , sendes brugerne og deres ledere en mail, når brugeren føjes til en insiderrisikostyringspolitik. Denne skabelon understøtter også opdatering af en SharePoint-liste, der hostes på et SharePoint-websted, for at hjælpe med at spore meddelelsesoplysninger, f.eks. dato/klokkeslæt og meddelelsens modtager. Hvis du har valgt at anonymisere brugere under **Indstillinger for beskyttelse af personlige oplysninger**, fungerer de flow, der oprettes ud fra denne skabelon, ikke som tiltænkt, så brugernes beskyttelse af personlige oplysninger bevares. Power Automate-flow, der bruger denne skabelon, er tilgængelige på **dashboardet Brugere**.
+- **Anmod HR eller virksomheden om en bruger i en insiderrisikosag**: Når der reageres på en sag, kan insiderrisikoanalytikere og efterforskere være nødt til at rådføre sig med HR eller andre interessenter for at forstå konteksten for sagsaktiviteterne. Når dette flow er konfigureret og valgt for en sag, sender analytikere og efterforskere en mail til HR- og forretningsinteressenter, der er konfigureret for dette flow. Hver modtager får tilsendt en meddelelse med forudkonfigurerede eller tilpassede svarindstillinger. Når modtagerne vælger en svarindstilling, registreres svaret som en sagsnote og indeholder oplysninger om modtager og dato/klokkeslæt. Hvis du har valgt at anonymisere brugere under **Indstillinger for beskyttelse af personlige oplysninger**, fungerer de flow, der oprettes ud fra denne skabelon, ikke som tiltænkt, så brugernes beskyttelse af personlige oplysninger bevares. Power Automate-flow, der bruger denne skabelon, er tilgængelige på **dashboardet Sager**.
 - **Giv lederen besked, når en bruger har en insiderrisikobesked**: Nogle organisationer skal muligvis have en øjeblikkelig besked om administration, når en bruger har en insiderrisikostyringsadvarsel. Når dette flow er konfigureret og valgt, sendes der en mail til sagsbrugerens chef med følgende oplysninger om alle sagsbeskeder:
     - Gældende politik for beskeden
     - Dato/klokkeslæt for beskeden
     - Alvorsgrad for beskeden
 
-    Flowet opdaterer automatisk sagen og bemærker, at meddelelsen blev sendt, og at flowet blev aktiveret. Hvis du har valgt at anonymisere brugere under **Indstillinger for beskyttelse af personlige oplysninger**, fungerer de flow, der oprettes ud fra denne skabelon, ikke som tiltænkt, så brugernes beskyttelse af personlige oplysninger bevares. Power Automate flow, der bruger denne skabelon, er tilgængelige på **dashboardet Sager**.
-- **Opret en post for insiderrisikocase i ServiceNow**: Denne skabelon er til organisationer, der vil bruge deres ServiceNow-løsning til at spore insiderrisikostyringssager.  Når insiderrisikoanalytikere og efterforskere i en sag kan oprette en post for sagen i ServiceNow. Du kan tilpasse denne skabelon for at udfylde de valgte felter i ServiceNow på baggrund af din organisations krav. Power Automate flow, der bruger denne skabelon, er tilgængelige på **dashboardet Sager**. Du kan få flere oplysninger om tilgængelige ServiceNow-felter i [referenceartiklen ServiceNow Connector](/connectors/service-now/) .
+    Flowet opdaterer automatisk sagen og bemærker, at meddelelsen blev sendt, og at flowet blev aktiveret. Hvis du har valgt at anonymisere brugere under **Indstillinger for beskyttelse af personlige oplysninger**, fungerer de flow, der oprettes ud fra denne skabelon, ikke som tiltænkt, så brugernes beskyttelse af personlige oplysninger bevares. Power Automate-flow, der bruger denne skabelon, er tilgængelige på **dashboardet Sager**.
+- **Opret en post for insiderrisikocase i ServiceNow**: Denne skabelon er til organisationer, der vil bruge deres ServiceNow-løsning til at spore insiderrisikostyringssager.  Når insiderrisikoanalytikere og efterforskere i en sag kan oprette en post for sagen i ServiceNow. Du kan tilpasse denne skabelon for at udfylde de valgte felter i ServiceNow på baggrund af din organisations krav. Power Automate-flow, der bruger denne skabelon, er tilgængelige på **dashboardet Sager**. Du kan få flere oplysninger om tilgængelige ServiceNow-felter i [referenceartiklen ServiceNow Connector](/connectors/service-now/) .
 
-### <a name="create-a-power-automate-flow-from-insider-risk-management-template"></a>Opret et Power Automate flow fra skabelonen styring af insiderrisiko
+### <a name="create-a-power-automate-flow-from-insider-risk-management-template"></a>Opret et Power Automate-flow fra skabelonen styring af insiderrisiko
 
-Hvis du vil oprette et Power Automate flow fra en anbefalet skabelon til styring af insiderrisiko, skal du bruge indstillingskontrolelementerne i **insiderrisikoadministrationsløsningen** på Microsoft Purview-overholdelsesportalen eller indstillingen **Administrer Power Automate flow** fra kontrolelementet **Automate**, når du arbejder direkte i **dashboards for** **sager** eller brugere.
+Hvis du vil oprette et Power Automate-flow fra en anbefalet skabelon til styring af insiderrisiko, skal du bruge indstillingskontrolelementerne i **insiderrisikoadministrationsløsningen** i Microsoft Purview-compliance-portal eller indstillingen **Administrer Power Automate-flow** fra kontrolelementet **Automate**, når du arbejder direkte i **dashboards** for **sager** eller brugere.
 
-Hvis du vil oprette et Power Automate flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin*. Hvis du vil oprette et Power Automate flow med indstillingen **Administrer Power Automate flow**, skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
+Hvis du vil oprette et Power Automate-flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*. Hvis du vil oprette et Power Automate-flow med indstillingen **Administrer Power Automate-flow** , skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
 
-Udfør følgende trin for at oprette et Power Automate flow fra en anbefalet skabelon til styring af insiderrisiko:
+Fuldfør følgende trin for at oprette et Power Automate-flow fra en anbefalet skabelon til styring af insiderrisiko:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **AutomateAdministrer** >  **Power Automate flow**.
-2. På siden **Power Automate flow** skal du vælge en anbefalet skabelon fra de **skabeloner til styring af insiderrisiko, du kan synes godt om** på siden.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate-flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **Automatiser** > **Administrer Power Automate-flow**.
+2. På siden **Power Automate-flow** skal du vælge en anbefalet skabelon i afsnittet **Insider Risk Management-skabeloner, som du kan synes godt om** på siden.
 3. Flowet viser de integrerede forbindelser, der er nødvendige for flowet, og vil bemærke, om forbindelsesstatusserne er tilgængelige. Opdater eventuelle forbindelser, der ikke vises som tilgængelige, hvis det er nødvendigt. Vælg **Fortsæt**.
-4. De anbefalede flow er som standard forudkonfigureret med den anbefalede styring af insiderrisiko og Microsoft 365 tjenestedatafelter, der kræves for at fuldføre den tildelte opgave for flowet. Tilpas om nødvendigt flowkomponenterne ved hjælp af kontrolelementet **Vis avancerede indstillinger** og konfiguration af de tilgængelige egenskaber for flowkomponenten.
+4. De anbefalede flow er som standard forudkonfigureret med den anbefalede styring af insiderrisiko og datafelter i Microsoft 365-tjenesten, der kræves for at fuldføre den tildelte opgave for flowet. Tilpas om nødvendigt flowkomponenterne ved hjælp af kontrolelementet **Vis avancerede indstillinger** og konfiguration af de tilgængelige egenskaber for flowkomponenten.
 5. Hvis det er nødvendigt, kan du føje andre trin til flowet ved at vælge knappen **Nyt trin** . I de fleste tilfælde bør dette ikke være nødvendigt for de anbefalede standardskabeloner.
 6. Vælg **Gem kladde** for at gemme flowet for yderligere konfiguration, eller vælg **Gem** for at fuldføre konfigurationen af flowet.
-7. Vælg **Luk** for at vende tilbage til **Power Automate flowside**. Den nye skabelon vises som et flow under fanerne **Mine flow** og er automatisk tilgængelig via kontrolelementet **Automate** , når der arbejdes med insiderrisikostyringssager for den bruger, der opretter flowet.
+7. Vælg **Luk** for at vende tilbage til siden **Power Automate-flow** . Den nye skabelon vises som et flow under fanerne **Mine flow** og er automatisk tilgængelig via kontrolelementet **Automate** , når der arbejdes med insiderrisikostyringssager for den bruger, der opretter flowet.
 
 > [!IMPORTANT]
 > Hvis andre brugere i organisationen skal have adgang til flowet, skal flowet deles.
 
-### <a name="create-a-custom-power-automate-flow-for-insider-risk-management"></a>Opret et brugerdefineret Power Automate flow til styring af insiderrisiko
+### <a name="create-a-custom-power-automate-flow-for-insider-risk-management"></a>Opret et brugerdefineret Power Automate-flow til styring af insiderrisiko
 
-Nogle processer og arbejdsprocesser for din organisation kan være uden for de anbefalede skabeloner til styring af insiderrisikostyring, og du har muligvis brug for at oprette brugerdefinerede Power Automate flow til insiderrisikostyringsområder. Power Automate flow er fleksible og understøtter omfattende tilpasning, men der er trin, der skal udføres for at integrere med insiderrisikostyringsfunktioner.
+Nogle processer og arbejdsprocesser for din organisation kan være uden for de anbefalede skabeloner til styring af insiderrisikostyring, og du har muligvis brug for at oprette brugerdefinerede Power Automate-flow til insiderrisikostyringsområder. Power Automate-flow er fleksible og understøtter omfattende tilpasning, men der er trin, der skal udføres for at integrere med insiderrisikostyringsfunktioner.
 
-Udfør følgende trin for at oprette en brugerdefineret Power Automate skabelon til styring af insiderrisiko:
+Udfør følgende trin for at oprette en brugerdefineret Power Automate-skabelon til styring af insiderrisiko:
 
-1. **Kontrollér din Power Automate flowlicens**: Hvis du vil oprette tilpassede Power Automate flow, der bruger insiderrisikostyringsudløsere, skal du bruge en Power Automate licens. De anbefalede flowskabeloner til styring af insiderrisiko kræver ikke ekstra licenser og er inkluderet som en del af din insiderrisikostyringslicens.
+1. **Kontrollér din Licens til Power Automate-flow**: Hvis du vil oprette tilpassede Power Automate-flow, der bruger insiderrisikostyringsudløsere, skal du have en Power Automate-licens. De anbefalede flowskabeloner til styring af insiderrisiko kræver ikke ekstra licenser og er inkluderet som en del af din insiderrisikostyringslicens.
 2. **Opret et automatiseret flow**: Opret et flow, der udfører en eller flere opgaver, når det udløses af en insiderrisikostyringshændelse. Du kan finde oplysninger om, hvordan du opretter et automatiseret flow, [under Opret et flow i Power Automate](/power-automate/get-started-logic-flow).
 3. **Vælg Microsoft Purview-connectoren**: Søg efter, og vælg Microsoft Purview-connectoren. Denne connector aktiverer udløsere og handlinger til styring af insiderrisiko. Du kan få flere oplysninger om connectors i artiklen [Oversigt over connectorreference](/connectors/connector-reference/) .
-4. **Vælg insiderrisikostyringsudløsere til dit flow**: Insiderrisikostyring har to tilgængelige udløsere for brugerdefinerede Power Automate flow:
+4. **Vælg insiderrisikostyringsudløsere til dit flow**: Insiderrisikostyring har to tilgængelige udløsere til brugerdefinerede Power Automate-flow:
     - **For en valgt sag om styring af insiderrisiko**: Flow med denne udløser kan vælges på dashboardsiden Sager om insiderrisikostyring.
     - **For en valgt bruger til styring af insiderrisiko**: Flow med denne udløser kan vælges på dashboardsiden Brugere af insiderrisikostyring.
 5. Vælg insiderrisikostyringshandlinger for dit flow: Du kan vælge mellem flere handlinger til styring af insiderrisiko, der skal inkluderes i dit brugerdefinerede flow:
@@ -443,86 +441,86 @@ Udfør følgende trin for at oprette en brugerdefineret Power Automate skabelon 
     - Få insiderrisikostyringsbeskeder for en sag
     - Tilføj note om insiderrisikostyringssag
 
-### <a name="share-a-power-automate-flow"></a>Del et Power Automate flow
+### <a name="share-a-power-automate-flow"></a>Del et Power Automate-flow
 
-Som standard er Power Automate flow, der er oprettet af en bruger, kun tilgængelige for den pågældende bruger. Hvis andre brugere af styring af insiderrisiko skal have adgang til og bruge et flow, skal flowet deles af opretteren af flowet. Hvis du vil dele et flow, skal du bruge indstillingskontrolelementerne i **løsningen styring af insiderrisiko** på Microsoft Purview-overholdelsesportalen eller indstillingen **Administrer Power Automate flow** fra kontrolelementet Automate, når du arbejder direkte på **dashboardsiderne** **Sager** eller Brugere. Når du har delt et flow, kan alle, som det er blevet delt med, få adgang til flowet på rullelisten **Automate-kontrolelementet** på **dashboardene** **Sag** og Bruger.
+Power Automate-flow, der er oprettet af en bruger, er som standard kun tilgængelige for den pågældende bruger. Hvis andre brugere af styring af insiderrisiko skal have adgang til og bruge et flow, skal flowet deles af opretteren af flowet. Hvis du vil dele et flow, skal du bruge indstillingskontrolelementerne i **løsningen Styring af insiderrisiko** i Microsoft Purview-compliance-portal eller indstillingen **Administrer Power Automate-flow** fra kontrolelementet Automate, når du arbejder direkte på **dashboardsiderne** **Sager** eller Brugere. Når du har delt et flow, kan alle, som det er blevet delt med, få adgang til flowet på rullelisten **Automate-kontrolelementet** på **dashboardene** **Sag** og Bruger.
 
-Hvis du vil dele et Power Automate flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin*. Hvis du vil dele et Power Automate flow med indstillingen **Administrer Power Automate flow**, skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
+Hvis du vil dele et Power Automate-flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*. Hvis du vil dele et Power Automate-flow med indstillingen **Administrer Power Automate-flow** , skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
 
-Fuldfør følgende trin for at dele et Power Automate flow:
+Fuldfør følgende trin for at dele et Power Automate-flow:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **AutomateAdministrer** >  **Power Automate flow**.
-2. På siden **Power Automate flow** skal du vælge fanen **Mine flows** eller **Teamflows**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate-flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **Automatiser** > **Administrer Power Automate-flow**.
+2. På siden **Power Automate-flow** skal du vælge fanen **Mine flow** eller **Teamflow** .
 3. Vælg det flow, der skal deles, og vælg derefter **Del** i menuen med flowindstillinger.
 4. Angiv navnet på den bruger eller gruppe, du vil tilføje som ejer af flowet, på siden til deling af flowet.
 5. I dialogboksen **Forbindelse brugt** skal du vælge **OK** for at bekræfte, at den tilføjede bruger eller gruppe har fuld adgang til flowet.
 
-### <a name="edit-a-power-automate-flow"></a>Rediger et Power Automate flow
+### <a name="edit-a-power-automate-flow"></a>Rediger et Power Automate-flow
 
-Hvis du vil redigere et flow, skal du bruge indstillingskontrolelementerne i løsningen **styring af insiderrisiko** på Microsoft Purview-overholdelsesportalen eller indstillingen **Administrer Power Automate flow** fra kontrolelementet **Automate**, når du arbejder direkte i **dashboards** for **sager** eller brugere.
+Hvis du vil redigere et flow, skal du bruge indstillingskontrolelementerne i løsningen **Styring af insiderrisiko** i Microsoft Purview-compliance-portal eller indstillingen **Administrer Power Automate-flow** fra kontrolelementet **Automate**, når du arbejder direkte i **dashboards** for **sager** eller brugere.
 
-Hvis du vil redigere et Power Automate flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin*. Hvis du vil redigere et Power Automate flow med indstillingen **Administrer Power Automate flow**, skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
+Hvis du vil redigere et Power Automate-flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*. Hvis du vil redigere et Power Automate-flow med indstillingen **Administrer Power Automate-flow** , skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
 
-Udfør følgende trin for at redigere et Power Automate flow:
+Fuldfør følgende trin for at redigere et Power Automate-flow:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **AutomateAdministrer** >  **Power Automate flow**.
-2. På siden **Power Automate flow** skal du vælge et flow, der skal redigeres, og vælge **Rediger** i menuen til flowstyring.
-3. Vælg **ellipsen** >  **Indstillinger** for at ændre en indstilling for en flowkomponent eller **ellipsenSlet** >  for at slette en flowkomponent.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate-flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **Automatiser** > **Administrer Power Automate-flow**.
+2. På siden **Power Automate-flow** skal du vælge et flow, der skal redigeres, og vælge **Rediger** i menuen til flowstyring.
+3. Vælg **ellipseindstillingerne** >  for at ændre indstillingen for en flowkomponent eller **ellipsen** > **Slet** for at slette en flowkomponent.
 4. Vælg **Gem** og derefter **Luk** for at fuldføre redigeringen af flowet.
 
-### <a name="delete-a-power-automate-flow"></a>Slet et Power Automate flow
+### <a name="delete-a-power-automate-flow"></a>Slet et Power Automate-flow
 
-Hvis du vil slette et flow, skal du bruge indstillingskontrolelementerne i løsningen **styring af insiderrisiko** på Microsoft Purview-overholdelsesportalen eller indstillingen **Administrer Power Automate flow** fra kontrolelementet **Automate**, når du arbejder direkte i **dashboards** for **sager** eller brugere. Når et flow slettes, fjernes det som en indstilling for alle brugere.
+Hvis du vil slette et flow, skal du bruge indstillingskontrolelementerne i løsningen **Styring af insiderrisiko** i Microsoft Purview-compliance-portal eller indstillingen **Administrer Power Automate-flow** fra kontrolelementet **Automate**, når du arbejder direkte i **dashboards** for **sager** eller brugere. Når et flow slettes, fjernes det som en indstilling for alle brugere.
 
-Hvis du vil slette et Power Automate flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Admin*. Hvis du vil slette et Power Automate flow med indstillingen **Administrer Power Automate flow**, skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
+Hvis du vil slette et Power Automate-flow i indstillingsområdet, skal du være medlem af rollegruppen *Insider Risk Management* eller *Insider Risk Management Administration*. Hvis du vil slette et Power Automate-flow med indstillingen **Administrer Power Automate-flow** , skal du være medlem af mindst én rollegruppe for styring af insiderrisiko.
 
-Fuldfør følgende trin for at slette et Power Automate flow:
+Fuldfør følgende trin for at slette et Power Automate-flow:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **AutomateAdministrer** >  **Power Automate flow**.
-2. På siden **Power Automate flow** skal du vælge et flow, der skal slettes, og vælge **Slet** i menuen til flowstyring.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Styring af insiderrisiko** og vælge **Indstillinger for** >  insiderrisiko **Power Automate-flow**. Du kan også få adgang fra **dashboardsiderne** **Sager** eller Brugere ved at vælge **Automatiser** > **Administrer Power Automate-flow**.
+2. På siden **Power Automate-flow** skal du vælge et flow, der skal slettes, og vælge **Slet** i menuen til flowstyring.
 3. Vælg **Slet** i bekræftelsesdialogboksen for sletning for at fjerne flowet, eller vælg **Annuller** for at afslutte sletningen.
 
 ## <a name="microsoft-teams-preview"></a>Microsoft Teams (prøveversion)
 
-Overholdelsesanalytikere og efterforskere kan nemt bruge Microsoft Teams til samarbejde om sager vedrørende insiderrisikostyring. De kan koordinere og kommunikere med andre interessenter i Microsoft Teams for at:
+Overholdelsesanalytikere og efterforskere kan nemt bruge Microsoft Teams til at samarbejde om insiderrisikostyringssager. De kan koordinere og kommunikere med andre interessenter i Microsoft Teams for at:
 
-- Koordinere og gennemse svaraktiviteter for sager i private Teams kanaler
+- Koordinere og gennemse svaraktiviteter for sager i private Teams-kanaler
 - Sikker deling og lagring af filer og beviser i forbindelse med individuelle sager
 - Spor og gennemse svaraktiviteter udført af analytikere og efterforskere
 
-Når Microsoft Teams er aktiveret til styring af insiderrisiko, oprettes der et dedikeret Microsoft Teams team, hver gang en besked bekræftes, og der oprettes en sag. Som standard inkluderer teamet automatisk alle medlemmer af rollegrupperne *Insider Risk Management*, *Insider Risk Management Analysts* og *Insider Risk Management Investigators* (op til 100 indledende brugere). Yderligere bidragydere til organisationen kan føjes til teamet, når de er oprettet og efter behov. I forbindelse med eksisterende sager, der er oprettet før aktivering af Microsoft Teams, kan analytikere og efterforskere vælge at oprette et nyt Microsoft Teams team, når de arbejder i en sag, hvis det er nødvendigt.  Når du har løst den tilknyttede sag i styring af insiderrisiko, arkiveres teamet automatisk (flyttet til skjult og skrivebeskyttet).
+Når Microsoft Teams er aktiveret til styring af insiderrisiko, oprettes der et dedikeret Microsoft Teams-team, hver gang en besked bekræftes, og der oprettes en sag. Som standard inkluderer teamet automatisk alle medlemmer af rollegrupperne *Insider Risk Management*, *Insider Risk Management Analysts* og *Insider Risk Management Investigators* (op til 100 indledende brugere). Yderligere bidragydere til organisationen kan føjes til teamet, når de er oprettet og efter behov. I forbindelse med eksisterende sager, der er oprettet før aktivering af Microsoft Teams, kan analytikere og efterforskere vælge at oprette et nyt Microsoft Teams-team, når de arbejder i en sag, hvis det er nødvendigt.  Når du har løst den tilknyttede sag i styring af insiderrisiko, arkiveres teamet automatisk (flyttet til skjult og skrivebeskyttet).
 
 Du kan få flere oplysninger om, hvordan du bruger teams og kanaler i Microsoft Teams, under [Oversigt over teams og kanaler i Microsoft Teams](/MicrosoftTeams/teams-channels-overview).
 
-Aktivering af Microsoft Teams understøttelse af sager er hurtig og nem at konfigurere. Hvis du vil aktivere Microsoft Teams til styring af insiderrisiko, skal du udføre følgende trin:
+Det er hurtigt og nemt at konfigurere aktivering af Microsoft Teams-understøttelse af sager. Hvis du vil aktivere Microsoft Teams til styring af insiderrisiko, skal du udføre følgende trin:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Insider Risk** **ManagementInsider-risikoindstillinger** > .
-2. Vælg siden **Microsoft Teams**.
-3. Aktivér Microsoft Teams integration til styring af insiderrisiko.
+1. I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com) gå til **Insider-risikostyring** > **Indstillinger for Insider-risiko**.
+2. Vælg siden **Microsoft Teams** .
+3. Aktivér Microsoft Teams-integration til styring af insiderrisiko.
 4. Vælg **Gem** for at konfigurere og afslutte.
 
 ![Styring af insiderrisiko Microsoft Teams.](../media/insider-risk-settings-teams.png)
 
-### <a name="create-a-microsoft-teams-team-for-existing-cases"></a>Opret et Microsoft Teams team til eksisterende sager
+### <a name="create-a-microsoft-teams-team-for-existing-cases"></a>Opret et Microsoft Teams-team til eksisterende sager
 
-Hvis du aktiverer Microsoft Teams understøttelse af styring af insiderrisiko, når du har eksisterende sager, skal du manuelt oprette et team for hver sag efter behov. Når du har aktiveret Microsoft Teams support i indstillinger for styring af insiderrisiko, opretter nye sager automatisk et nyt Microsoft Teams team.
+Hvis du aktiverer Understøttelse af insiderrisikostyring i Microsoft Teams, når du har eksisterende sager, skal du manuelt oprette et team for hver sag efter behov. Når du har aktiveret Understøttelse af Microsoft Teams i indstillinger for styring af insiderrisiko, opretter nye sager automatisk et nyt Microsoft Teams-team.
 
-Brugerne skal have tilladelse til at oprette Microsoft 365 grupper i organisationen for at oprette et Microsoft Teams team ud fra en sag. Du kan få flere oplysninger om administration af tilladelser til Microsoft 365-grupper under Administrer, [hvem der kan oprette Microsoft 365-grupper](../solutions/manage-creation-of-groups.md).
+Brugerne skal have tilladelse til at oprette Microsoft 365-grupper i din organisation for at oprette et Microsoft Teams-team ud fra en sag. Du kan få flere oplysninger om administration af tilladelser til Microsoft 365-grupper under Administrer, [hvem der kan oprette Microsoft 365-grupper](../solutions/manage-creation-of-groups.md).
 
 Hvis du vil oprette et team til en sag, skal du bruge kontrolelementet Opret Microsoft Team, når du arbejder direkte i en eksisterende sag. Fuldfør følgende trin for at oprette et nyt team:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Styring af** >  insiderrisikoCases og vælge en eksisterende sag.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Sager** om styring af  > **insiderrisiko** og vælge en eksisterende sag.
 2. I menuen sagshandling skal du vælge **Opret Microsoft Team**.
-3. Angiv et navn til det nye Microsoft Teams team i feltet **Teamnavn**.
+3. Angiv et navn til det nye Microsoft **Teams-team i feltet Teamnavn** .
 4. Vælg **Opret Microsoft-team,** og vælg derefter **Luk**.
 
-Afhængigt af antallet af brugere, der er tildelt rollegrupper for styring af insiderrisiko, kan det tage 15 minutter, før alle efterforskere og analytikere føjes til Microsoft Teams team for en sag.
+Afhængigt af antallet af brugere, der er tildelt rollegrupper for styring af insiderrisiko, kan det tage 15 minutter, før alle efterforskere og analytikere føjes til Microsoft Teams-teamet for en sag.
 
 ## <a name="analytics"></a>Analytics
 
 Insiderrisikoanalyse giver dig mulighed for at evaluere potentielle insiderrisici i din organisation uden at konfigurere nogen politikker for insiderrisiko. Denne evaluering kan hjælpe din organisation med at identificere potentielle områder med højere brugerrisiko og hjælpe med at bestemme typen og omfanget af politikker for styring af insiderrisiko, som du kan overveje at konfigurere. Analysescanninger giver følgende fordele for din organisation:
 
-- Let at konfigurere: For at komme i gang med analysescanninger kan du vælge Kør scanning, når du bliver bedt om det af anbefalingerne til analyse, eller gå til **Indstillinger for** >  Insider-risikoAnalytics og aktivere analyser.
+- Let at konfigurere: Hvis du vil i gang med analysescanninger, kan du vælge Kør scanning, når du bliver bedt om det af anbefalingerne til analyse, eller gå til **Insider-risikoindstillinger** > **Analytics** og aktivere analyse.
 - Beskyttelse af personlige oplysninger efter design: Scanningsresultater og indsigt returneres som aggregeret og anonymiseret brugeraktivitet. Individuelle brugernavne kan ikke identificeres af korrekturlæsere.
 - Forstå potentielle risici via konsolideret indsigt: Scanningsresultater kan hjælpe dig med hurtigt at identificere potentielle risikoområder for dine brugere, og hvilken politik der er bedst til at afhjælpe disse risici.
 
@@ -530,27 +528,27 @@ Se [videoen Insider Risk Management Analytics](https://www.youtube.com/watch?v=5
 
 Analysescanninger for risikoaktivitetshændelser fra flere kilder for at hjælpe med at identificere indsigt i potentielle risikoområder. Afhængigt af din aktuelle konfiguration søger analyse efter kvalificerede risikoaktiviteter på følgende områder:
 
-- **Microsoft 365 overvågningslogge**: Dette er den primære kilde til identifikation af de fleste af de potentielt risikable aktiviteter, der er inkluderet i alle scanninger.
+- **Microsoft 365-overvågningslogge**: Dette er den primære kilde til at identificere de fleste af de potentielt risikable aktiviteter, der er inkluderet i alle scanninger.
 - **Exchange Online**: Inkluderet i alle scanninger hjælper Exchange Online aktivitet med at identificere aktiviteter, hvor data i vedhæftede filer sendes via mail til eksterne kontakter eller tjenester.
-- **Azure Active Directory**: Inkluderet i alle scanninger hjælper Azure Active Directory historik med at identificere risikable aktiviteter, der er knyttet til brugere med slettede brugerkonti.
+- **Azure Active Directory**: Azure Active Directory-historikken er inkluderet i alle scanninger og hjælper med at identificere risikable aktiviteter, der er knyttet til brugere med slettede brugerkonti.
 - **Microsoft 365 HR-dataconnector**: Hvis de er konfigureret, hjælper HR-connectorhændelser med at identificere risikable aktiviteter, der er knyttet til brugere, der har fratræden eller kommende slutdatoer.
 
 Analyseindsigt fra scanninger er baseret på de samme risikoaktivitetssignaler, der bruges af politikker for styring af insiderrisiko, og rapportresultater baseret på både enkelt- og sekvensbrugeraktiviteter. Scoren for risiko for analyser er dog baseret på op til 10 dages aktivitet, mens insiderrisikopolitikker bruger daglig aktivitet til indsigt. Når du aktiverer og kører analyser i din organisation første gang, får du vist scanningsresultaterne for én dag. Hvis du lader analyse være aktiveret, kan du se resultaterne af hver daglig scanning, der føjes til indsigtsrapporterne, i et maksimalt interval på de forrige 10 dages aktivitet.
 
 ### <a name="enable-analytics-and-start-your-scan"></a>Aktivér analyser, og start scanningen
 
-Hvis du vil aktivere insiderrisikoanalyse, skal du være medlem af rollegruppen *Insider Risk Management*, *Insider Risk Management* Eller *Microsoft 365 Global administrator*.
+Hvis du vil aktivere insiderrisikoanalyse, skal du være medlem af rollegruppen *Insider Risk Management*, *Insider Risk Management Administration* eller *Microsoft 365 Global admin*.
 Fuldfør følgende trin for at aktivere insiderrisikoanalyse:
 
-1. Gå til **Styring af insiderrisiko** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com).
-2. Vælg **Kør scanning** på fanen **Scan for insiderrisici på dit organisationskort** under fanen **Oversigt over** styring af insiderrisiko. Dette aktiverer analysescanning for din organisation. Du kan også aktivere scanning i din organisation ved at gå til **Insider-risikoindstillingerAnalytics** >  og aktivere **Scan din lejers brugeraktivitet for at identificere potentielle insiderrisici**.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Insider Risk Management**.
+2. Vælg **Kør scanning** på fanen **Scan for insiderrisici på dit organisationskort** under fanen **Oversigt over** styring af insiderrisiko. Dette aktiverer analysescanning for din organisation. Du kan også aktivere scanning i din organisation ved at gå til **Insider-risikoindstillinger** > **Analytics** og aktivere **Scan din lejers brugeraktivitet for at identificere potentielle insiderrisici**.
 3. I ruden **Analysedetaljer** skal du vælge **Kør scanning** for at starte scanningen for din organisation. Resultaterne af analysescanningen kan tage op til 48 timer, før indsigt er tilgængelig som rapporter til gennemsyn.
 
 ![Indstillinger for analyse af styring af insiderrisiko.](../media/insider-risk-settings-analytics-enable.png)
 
 ### <a name="viewing-analytics-insights-and-creating-new-policies"></a>Visning af analyseindsigt og oprettelse af nye politikker
 
-Når den første analysescanning er fuldført for din organisation, modtager medlemmer af rollegruppen *Administration af insiderrisikostyring* automatisk en mail og kan få vist de første indsigter og anbefalinger til potentielt risikable aktiviteter fra dine brugere. Daglige scanninger fortsætter, medmindre du deaktiverer analyser for din organisation. Der gives mailmeddelelser til administratorer for hver af de tre kategorier i området til analyse (datalækager, tyveri og exfiltration) efter den første forekomst af aktivitet i din organisation. Mailmeddelelser sendes ikke til administratorer til registrering af opfølgningsaktivitet som følge af de daglige scanninger. Hvis analyser i **Insider-risikostyring** >  **Indstillinger** >  **Analytics** er deaktiveret og derefter aktiveret igen i din organisation, nulstilles automatiske mailmeddelelser, og der sendes mails til medlemmer af rollegruppen *Administration af insiderrisikostyring* for at få ny scanningsindsigt.
+Når den første analysescanning er fuldført for din organisation, modtager medlemmer af rollegruppen *Insider Risk Management Administration* automatisk en mailmeddelelse og kan få vist den første indsigt og anbefalinger til potentielt risikable aktiviteter fra dine brugere. Daglige scanninger fortsætter, medmindre du deaktiverer analyser for din organisation. Der gives mailmeddelelser til administratorer for hver af de tre kategorier i området til analyse (datalækager, tyveri og exfiltration) efter den første forekomst af aktivitet i din organisation. Mailmeddelelser sendes ikke til administratorer til registrering af opfølgningsaktivitet som følge af de daglige scanninger.  Hvis analyser i **Indstillinger for** >  **styring af** >  insiderrisiko er deaktiveret og derefter aktiveres igen i din organisation, nulstilles automatiske mailmeddelelser, og der sendes mails til medlemmer af rollegruppen *Insider Risk Management Administration* for at få ny scanningsindsigt.
 
 Hvis du vil have vist potentielle risici for din organisation, skal du gå til fanen **Oversigt** og vælge **Få vist resultater** på kortet **Insider Risk Analytics** . Hvis scanningen for din organisation ikke er fuldført, får du vist en meddelelse om, at scanningen stadig er aktiv.
 
@@ -559,7 +557,7 @@ Hvis du vil have vist potentielle risici for din organisation, skal du gå til f
 I forbindelse med fuldførte scanninger kan du se de potentielle risici, der er registreret i din organisation, samt indsigt og anbefalinger til at håndtere disse risici. Identificerede risici og specifik indsigt er inkluderet i rapporter grupperet efter område, det samlede antal brugere med identificerede risici, procentdelen af disse brugere med potentielt risikable aktiviteter og en anbefalet insiderrisikopolitik for at hjælpe med at afhjælpe disse risici. Rapporterne omfatter:
 
 - **Indsigt i datalækage**: Aktiviteter for alle brugere, der kan omfatte utilsigtet overdeling af oplysninger uden for din organisation eller datalækager fra brugere med ondsindede hensigter.
-- **Indsigt i datatyveri**: Aktiviteter for afgåede brugere eller brugere med slettede Azure Active Directory konti, der kan omfatte risiko for deling af oplysninger uden for din organisation eller datatyveri foretaget af brugere med ondsindede hensigter.
+- **Indsigt i datatyveri**: Aktiviteter for afrejsende brugere eller brugere med slettede Azure Active Directory-konti, der kan omfatte risiko for deling af oplysninger uden for din organisation eller datatyveri foretaget af brugere med ondsindede hensigter.
 - **Top indsigt i eksfiltration**: Aktiviteter for alle brugere, der kan omfatte deling af data uden for din organisation.
 
 ![Oversigtsrapport over analyse af styring af insiderrisiko.](../media/insider-risk-analytics-overview.png)
@@ -570,28 +568,28 @@ Hvis du vil have vist flere oplysninger om en indsigt, skal du vælge **Vis deta
 
 ### <a name="turn-off-analytics"></a>Deaktiver analyse
 
-Hvis du vil slå insiderrisikoanalyse fra, skal du være medlem af rollegruppen *Insider Risk Management*, *Insider Risk Management Eller* Microsoft 365 *Global administrator*. Når du deaktiverer analyse, forbliver indsigtsrapporter for analyse statiske og opdateres ikke for nye risici.
+Hvis du vil slå insiderrisikoanalyse fra, skal du være medlem af rollegruppen *Insider Risk Management*, *Insider Risk Management Administration* eller Microsoft 365 *Global admin*. Når du deaktiverer analyse, forbliver indsigtsrapporter for analyse statiske og opdateres ikke for nye risici.
 
 Udfør følgende trin for at slå insiderrisikoanalyse fra:
 
-1. Gå til **Styring af insiderrisiko** på [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com).
-2. Vælg **Indstillinger for** >  insiderrisikoAnalytikside.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du gå til **Insider Risk Management**.
+2. Vælg **Indstillinger for** >  insiderrisiko **Analytics-side**.
 3. På siden **Analytics** skal du slå **Scan din lejers brugeraktivitet fra for at identificere potentielle insiderrisici**.
 
-## <a name="admin-notifications"></a>Administratormeddelelser
+## <a name="admin-notifications"></a>Administration meddelelser
 
-Administratormeddelelser sender automatisk en mailmeddelelse til valgbare rollegrupper for styring af insiderrisiko. Du kan aktivere meddelelser og tildele, hvilke rollegrupper der modtager meddelelserne for følgende scenarier:
+Administration meddelelser sender automatisk en mailmeddelelse til valgbare rollegrupper for styring af insiderrisiko. Du kan aktivere meddelelser og tildele, hvilke rollegrupper der modtager meddelelserne for følgende scenarier:
 
 - Send en mail med besked, når den første besked genereres for en ny politik. Politikker kontrolleres hver 24. time for førstegangsbeskeder, og meddelelser sendes ikke for efterfølgende beskeder for politikken.
 - Send en daglig mail, når der genereres nye beskeder med høj alvorsgrad. Politikker kontrolleres hver 24. time for beskeder med høj alvorsgrad.
 - Send en ugentlig mail med en opsummering af politikker, der har uløste advarsler
 
-Hvis du har aktiveret insiderrisikostyringsanalyse for din organisation, modtager medlemmer af rollegruppen *Administration af insiderrisikostyring* automatisk en mailmeddelelse om indledende analyseindsigt for datalækager, tyveri og exfiltrationsaktiviteter.
+Hvis du har aktiveret insiderrisikostyringsanalyse for din organisation, modtager medlemmer af rollegruppen *Insider Risk Management Administration* automatisk en mailmeddelelse om indledende analyseindsigt for datalækager, tyveri og eksfiltrationsaktiviteter.
 
 Hvis du foretrækker at deaktivere administrator- og analysemeddelelser, skal du fuldføre følgende trin:
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com) skal du gå til **Insider Risk** **ManagementInsider-risikoindstillinger** > .
-2. Vælg siden **Administratormeddelelser** .
+1. I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com) gå til **Insider-risikostyring** > **Indstillinger for Insider-risiko**.
+2. Vælg siden **Administration meddelelser**.
 3. Fjern markeringen i afkrydsningsfeltet for at få vist følgende indstillinger efter indstillingerne:
     - **Send en mail med besked, når den første besked genereres for en ny politik**
     - **Send en mail, når der er en ny indsigt tilgængelig i Analytics**

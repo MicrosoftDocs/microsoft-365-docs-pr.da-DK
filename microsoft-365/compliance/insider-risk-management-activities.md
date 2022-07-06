@@ -1,7 +1,7 @@
 ---
 title: Undersøg insiderrisikostyringsaktiviteter
 description: Få mere at vide om undersøgelse af insiderrisikostyringsaktiviteter i Microsoft Purview
-keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse af angivne standarder
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -13,16 +13,14 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: a808e2d52692c44364e542cb8cd9e7a2b0c57cac
-ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
+ms.openlocfilehash: 53b56c8e96beb3e68c56fd968ac87e58994bc2ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759862"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622959"
 ---
 # <a name="investigate-insider-risk-management-activities"></a>Undersøg insiderrisikostyringsaktiviteter
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Undersøgelse af risikable brugeraktiviteter er et vigtigt første skridt til at minimere insiderrisici for din organisation. Disse risici kan være aktiviteter, der genererer beskeder fra politikker for styring af insiderrisiko eller risici fra aktiviteter, der registreres af politikker, men ikke straks opretter en insiderrisikostyringsbesked til brugerne. Du kan undersøge disse typer aktiviteter ved hjælp af **brugeraktivitetsrapporterne (prøveversion)** eller med **dashboardet Besked**.
 
@@ -30,7 +28,7 @@ Undersøgelse af risikable brugeraktiviteter er et vigtigt første skridt til at
 
 Brugeraktivitetsrapporter giver dig mulighed for at undersøge aktiviteter for bestemte brugere i en defineret tidsperiode uden at skulle tildele dem midlertidigt eller eksplicit til en insiderrisikostyringspolitik. I de fleste insiderrisikostyringsscenarier er brugerne eksplicit defineret i politikker, og de kan have politikbeskeder (afhængigt af udløsende hændelser) og risikoscores, der er knyttet til aktiviteterne. Men i nogle scenarier kan det være en god idé at undersøge aktiviteterne for brugere, der ikke udtrykkeligt er defineret i en politik. Disse aktiviteter kan være for brugere, som du har modtaget et tip om brugeren og potentielt risikable aktiviteter, eller brugere, der normalt ikke behøver at blive tildelt en insiderrisikostyringspolitik.
 
-Når du har konfigureret indikatorer på siden **styring af** insiderrisiko Indstillinger side, registreres brugeraktivitet for risikable aktiviteter, der er knyttet til de valgte indikatorer. Du behøver ikke at konfigurere en politik for brugeraktivitetsrapporter for at registrere og rapportere risikable aktiviteter for brugere i din organisation. Aktiviteter, der er inkluderet i brugeraktivitetsrapporter, kræver ikke, at udløsende hændelser for aktiviteterne vises. Denne konfiguration betyder, at al registreret aktivitet for brugeren er tilgængelig til gennemsyn, uanset om den har en udløsende hændelse, eller om den opretter en besked. Rapporter oprettes pr. bruger og kan omfatte alle aktiviteter for en brugerdefineret periode på 90 dage. Flere rapporter for den samme bruger understøttes ikke.
+Når du har konfigureret indikatorer på siden **Indstillinger for** styring af insiderrisiko, registreres brugeraktivitet for risikable aktiviteter, der er knyttet til de valgte indikatorer. Du behøver ikke at konfigurere en politik for brugeraktivitetsrapporter for at registrere og rapportere risikable aktiviteter for brugere i din organisation. Aktiviteter, der er inkluderet i brugeraktivitetsrapporter, kræver ikke, at udløsende hændelser for aktiviteterne vises. Denne konfiguration betyder, at al registreret aktivitet for brugeren er tilgængelig til gennemsyn, uanset om den har en udløsende hændelse, eller om den opretter en besked. Rapporter oprettes pr. bruger og kan omfatte alle aktiviteter for en brugerdefineret periode på 90 dage. Flere rapporter for den samme bruger understøttes ikke.
 
 Efter undersøgelse af aktiviteter for en bruger kan efterforskere afvise individuelle aktiviteter som godartede, dele eller sende et link til rapporten via mail med andre efterforskere eller vælge at tildele brugeren midlertidigt eller eksplicit til en insiderrisikostyringspolitik. Brugerne skal være tildelt rollegruppen *Insider Risk Management Investigators* for at få vist siden **Brugeraktivitetsrapporter** .  
 
@@ -163,7 +161,7 @@ Diagrammet **Brugeraktivitet** er et af de mest effektive værktøjer til intern
 1. **Tidsfiltre**: Som standard de sidste tre måneder med aktiviteter, der vises i diagrammet Brugeraktivitet. Du kan nemt filtrere diagramvisningen ved at vælge fanerne *6 måneder*, *3 måneder* eller *1 måned* i boblediagrammet.
 2. **Aktivitet og oplysninger om risikobeskeder**: Risikoaktiviteter vises visuelt som farvede bobler i diagrammet Brugeraktivitet. Bobler oprettes for forskellige kategorier af risici og. Vælg en boble for at få vist detaljerne for hver risikoaktivitet. Detaljer omfatter:
     - **Dato** for risikoaktiviteten.
-    - **Kategorien Risikoaktivitet**. Det kan f.eks. være *mails med vedhæftede filer, der er sendt uden for organisationen*, eller *filer, der er downloadet fra SharePoint Online*.
+    - **Kategorien Risikoaktivitet**. F.eks *. mails med vedhæftede filer, der er sendt uden for organisationen* eller *filer, der er downloadet fra SharePoint Online*.
     - **Risikoscore** for beskeden. Denne score er den numeriske score for alvorsgraden af beskedrisikoen.
     - Antal hændelser, der er knyttet til beskeden. Der er også links til hver fil eller mail, der er knyttet til risikoaktiviteten.
 3. **Filtre og sortering (prøveversion)**:

@@ -19,18 +19,16 @@ ms.custom:
 - seo-marvel-mar2020
 ms.assetid: 59414438-99f5-488b-975c-5023f2254369
 description: I denne artikel lærer du, hvordan du opretter, tester og finjusterer en DLP-politik i henhold til dine organisatoriske behov.
-ms.openlocfilehash: 8e4c96a1625e3e11995aed66fff4a289da5d059d
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: dff47d07a582be807d877471fb7621960b776f24
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016960"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624725"
 ---
 # <a name="create-test-and-tune-a-dlp-policy"></a>Opret, test og finjuster en DLP-politik
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview DLP (Forebyggelse af datatab) hjælper dig med at forhindre utilsigtet eller utilsigtet deling af følsomme oplysninger.
+Microsoft Purview Forebyggelse af datatab (DLP) hjælper dig med at forhindre utilsigtet eller utilsigtet deling af følsomme oplysninger.
 
 DLP undersøger mails og filer for følsomme oplysninger, f.eks. et kreditkortnummer. Ved hjælp af DLP kan du registrere følsomme oplysninger og udføre handlinger som:
 
@@ -44,11 +42,11 @@ Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have t
   
 1. Opret en gruppe i Microsoft 365, og føj overholdelsesansvarlige til den.
     
-2. Opret en rollegruppe på siden **Tilladelser** på Microsoft Purview-overholdelsesportalen. 
+2. Opret en rollegruppe på siden **Tilladelser** i Microsoft Purview-compliance-portal. 
 
 3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **DLP Compliance Management**.
     
-4. Brug afsnittet **Vælg medlemmer** til at føje den Microsoft 365 gruppe, du oprettede før, til rollegruppen.
+4. Brug afsnittet **Vælg medlemmer** til at føje den Microsoft 365-gruppe, du oprettede før, til rollegruppen.
 
 Brug rollen **Vis kun DLP-overholdelsesstyring** til at oprette en rollegruppe med skrivebeskyttede rettigheder til DLP-politikker og DLP-rapporter.
 
@@ -62,7 +60,7 @@ Der er roller og rollegrupper som prøveversion, som du kan teste for at finjust
 
 Her er en liste over relevante roller, der findes som prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection administrator
+- Information Protection Administration
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
@@ -94,9 +92,9 @@ Se [Objektdefinitioner for følsomme oplysninger,](sensitive-information-type-en
 
 Når risikoen for datalækage ikke er helt indlysende, er det svært at se, præcis hvor du skal starte med at implementere DLP. Heldigvis kan DLP-politikker køres i "testtilstand", så du kan måle deres effektivitet og nøjagtighed, før du slår dem til.
 
-DLP-politikker for Exchange Online kan administreres via Exchange Administration. Men du kan konfigurere DLP-politikker for alle arbejdsbelastninger via Microsoft Purview-overholdelsesportalen, så det er det, jeg skal bruge til demonstrationer i denne artikel. På Microsoft Purview-overholdelsesportalen kan du finde DLP-politikkerne under **Politik til** **forebyggelse af** >  datatab. Vælg **Opret en politik** for at starte.
+DLP-politikker for Exchange Online kan administreres via Exchange Administration. Men du kan konfigurere DLP-politikker for alle arbejdsbelastninger via Microsoft Purview-compliance-portal, så det er det, jeg skal bruge til demonstrationer i denne artikel. I Microsoft Purview-compliance-portal finder du DLP-politikkerne under **Politik til** **forebyggelse af** >  datatab. Vælg **Opret en politik** for at starte.
 
-Microsoft 365 indeholder en række [DLP-politikskabeloner](what-the-dlp-policy-templates-include.md), som du kan bruge til at oprette politikker. Lad os sige, at du er en australsk virksomhed. Du kan filtrere skabelonerne i Australien og vælge Økonomi, Medicinsk og Sundhed og Beskyttelse af personlige oplysninger.
+Microsoft 365 indeholder en række [DLP-politikskabeloner,](what-the-dlp-policy-templates-include.md) som du kan bruge til at oprette politikker. Lad os sige, at du er en australsk virksomhed. Du kan filtrere skabelonerne i Australien og vælge Økonomi, Medicinsk og Sundhed og Beskyttelse af personlige oplysninger.
 
 ![Mulighed for at vælge land eller område.](../media/DLP-create-test-tune-choose-country.png)
 
@@ -112,13 +110,13 @@ Vælg de placeringer, som politikken skal gælde for. DLP-politikker kan gælde 
 
 ![Mulighed for at vælge alle placeringer.](../media/DLP-create-test-tune-choose-locations.png)
 
-Ved det første **Indstillinger** trin for Politik skal du blot acceptere standardindstillingerne for nu. Du kan tilpasse DLP-politikker, men standardværdierne er et fint sted at starte.
+Ved det første trin **i Politikindstillinger** skal du blot acceptere standarderne for nu. Du kan tilpasse DLP-politikker, men standardværdierne er et fint sted at starte.
 
 ![Indstillinger for tilpasning af den type indhold, der skal beskyttes.](../media/DLP-create-test-tune-default-customization-settings.png)
 
-Når du har klikket på Næste,** får du vist en side med flere **indstillinger for politik Indstillinger**. For en politik, som du kun tester, kan du begynde at foretage nogle justeringer her.
+Når du har klikket på Næste,** får du vist en side med flere **politikindstillinger** med flere tilpasningsindstillinger. For en politik, som du kun tester, kan du begynde at foretage nogle justeringer her.
 
-- Jeg har slået politiktips fra for nu, hvilket er et rimeligt skridt at tage, hvis du bare tester ting og ikke ønsker at vise noget til brugerne endnu. Politiktip viser advarsler til brugerne om, at de er ved at overtræde en DLP-politik. En Outlook bruger får f.eks. vist en advarsel om, at den fil, brugeren har vedhæftet, indeholder kreditkortnumre og medfører, at vedkommendes mail afvises. Målet med politiktips er at stoppe funktionsmåden, der ikke overholder angivne standarder, før det sker.
+- Jeg har slået politiktips fra for nu, hvilket er et rimeligt skridt at tage, hvis du bare tester ting og ikke ønsker at vise noget til brugerne endnu. Politiktip viser advarsler til brugerne om, at de er ved at overtræde en DLP-politik. En Outlook-bruger får f.eks. vist en advarsel om, at den fil, vedkommende har vedhæftet, indeholder kreditkortnumre og medfører, at vedkommendes mail afvises. Målet med politiktips er at stoppe funktionsmåden, der ikke overholder angivne standarder, før det sker.
 - Jeg har også reduceret antallet af forekomster fra 10 til 1, så denne politik registrerer enhver deling af australske PII-data og ikke kun massedeling af dataene.
 - Jeg har også føjet en anden modtager til mailen med hændelsesrapporten.
 
@@ -194,7 +192,7 @@ Når jeg har gemt disse ændringer af politikindstillingerne, skal jeg også ven
 
 ![Mulighed for at få vist politiktip i testtilstand.](../media/DLP-create-test-tune-show-policy-tips.png)
 
-På serversiden (eller cloudsiden, hvis du foretrækker det), træder ændringen muligvis ikke i kraft med det samme på grund af forskellige behandlingsintervaller. Hvis du foretager en DLP-politikændring, der viser nye politiktips til en bruger, kan brugeren muligvis ikke se ændringerne træde i kraft med det samme i deres Outlook klient, som kontrollerer, om der er ændringer i politikken hver 24. time. Hvis du vil sætte fart på testen, kan du bruge denne rettelse i registreringsdatabasen til at [rydde tidsstemplet for seneste download fra nøglen PolicyNudges](https://support.microsoft.com/en-au/help/2823261/changes-to-a-data-loss-prevention-policy-don-t-take-effect-in-outlook?__hstc=18650278.46377037dc0a82baa8a30f0ef07a7b2f.1538687978676.1538693509953.1540315763430.3&__hssc=18650278.1.1540315763430&__hsfp=3446956451). Outlook henter de nyeste politikoplysninger, næste gang du genstarter dem, og begynder at oprette en mail.
+På serversiden (eller cloudsiden, hvis du foretrækker det), træder ændringen muligvis ikke i kraft med det samme på grund af forskellige behandlingsintervaller. Hvis du foretager en DLP-politikændring, der viser nye politiktips til en bruger, kan brugeren muligvis ikke se, at ændringerne træder i kraft med det samme i deres Outlook-klient, som kontrollerer, om der er politikændringer hver 24. time. Hvis du vil sætte fart på testen, kan du bruge denne rettelse i registreringsdatabasen til at [rydde tidsstemplet for seneste download fra nøglen PolicyNudges](https://support.microsoft.com/en-au/help/2823261/changes-to-a-data-loss-prevention-policy-don-t-take-effect-in-outlook?__hstc=18650278.46377037dc0a82baa8a30f0ef07a7b2f.1538687978676.1538693509953.1540315763430.3&__hssc=18650278.1.1540315763430&__hsfp=3446956451). Outlook henter de nyeste politikoplysninger, næste gang du genstarter dem, og begynder at oprette en mail.
 
 Hvis du har aktiveret politiktips, begynder brugeren at se tipene i Outlook og kan rapportere falske positiver til dig, når de opstår.
 
@@ -235,7 +233,7 @@ Når du er glad for, at din DLP-politik nøjagtigt og effektivt registrerer føl
 
 ![Mulighed for at aktivere politik.](../media/DLP-create-test-tune-turn-on-policy.png)
  
-Hvis du venter på at se, hvornår politikken træder i kraft, [skal du Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) og køre [cmdlet'en Get-DlpCompliancePolicy](/powershell/module/exchange/get-dlpcompliancepolicy) for at se DistributionStatus.
+Hvis du venter på at se, hvornår politikken træder i kraft, [skal du oprette forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) og køre [Cmdlet'en Get-DlpCompliancePolicy](/powershell/module/exchange/get-dlpcompliancepolicy) for at se DistributionStatus.
 
  ```powershell
  Get-DlpCompliancePolicy "Testing -Australia PII" -DistributionDetail | Select distributionstatus

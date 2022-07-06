@@ -15,18 +15,16 @@ ms.collection:
 - SPO_Content
 - m365initiative-compliance
 description: Identificer PowerShell-cmdlet'erne til opbevaring, der understøtter konfiguration i stor skala, automatisering eller kan være nødvendige til avancerede konfigurationsscenarier.
-ms.openlocfilehash: 5e31fb7b92dbc1dc83af8f7047041a7d0b4b23b2
-ms.sourcegitcommit: 0c87abc17fbfe8aa43d61510101acdad0d491cd2
+ms.openlocfilehash: 23dda0c7e5cdc2ce52c2dfca8e5ab575d5653b99
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "66612145"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625979"
 ---
 # <a name="powershell-cmdlets-for-retention-policies-and-retention-labels"></a>PowerShell-cmdlet'er til opbevaringspolitikker og opbevaringsmærkater
 
 >*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Brug følgende afsnit til at identificere de PowerShell-cmdlet'er, der er tilgængelige for opbevaringspolitikker og opbevaringsmærkater, som du muligvis skal bruge til konfiguration i stor skala, automatiserede scripts eller avancerede konfigurationsscenarier. Du kan se den komplette liste over cmdlet'er på [listen over opbevaring af politik og overholdelse af angivne standarder i PowerShell-dokumentationen](/powershell/module/exchange#policy-and-compliance-retention) .
 

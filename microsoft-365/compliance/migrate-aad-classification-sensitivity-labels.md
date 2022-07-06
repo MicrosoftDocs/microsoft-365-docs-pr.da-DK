@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory klassificerings- og følsomhedsetiketter for Microsoft 365 grupper
+title: AAD-klassificering og følsomhedsmærkater for Microsoft 365-grupper
 ms.reviewer: vijagan
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -9,88 +9,88 @@ f1.keywords: NOCSH
 ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-description: I denne artikel beskrives klassiske Azure Active Directory klassificerings- og følsomhedsmærkater.
-ms.openlocfilehash: 0a8c12d3d133000a880c58366a9f2b13ed8cbf49
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+description: I denne artikel beskrives klassisk Azure Active Directory-klassificering og følsomhedsmærkater.
+ms.openlocfilehash: 260b71d703f2534e5e2ddcf4ef45fe28a914eeab
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63589465"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623777"
 ---
-# <a name="azure-active-directory-classification-and-sensitivity-labels-for-microsoft-365-groups"></a>Azure Active Directory klassificerings- og følsomhedsetiketter for Microsoft 365 grupper
+# <a name="azure-active-directory-classification-and-sensitivity-labels-for-microsoft-365-groups"></a>Azure Active Directory-klassificering og følsomhedsmærkater for Microsoft 365-grupper
 
-I denne artikel beskrives klassiske Azure Active Directory klassificerings- og følsomhedsmærkater.
+I denne artikel beskrives klassisk Azure Active Directory-klassificering og følsomhedsmærkater.
 
-Følsomhedsmærkater understøttes [af disse tjenester](./sensitivity-labels-teams-groups-sites.md).
+Følsomhedsmærkater understøttes af [disse tjenester](./sensitivity-labels-teams-groups-sites.md).
 
-Du kan finde alle oplysninger om følsomhedsmærkater [under Få mere at vide om følsomhedsmærkater](sensitivity-labels.md).
+Du kan finde komplette oplysninger om følsomhedsmærkater under [Få mere at vide om følsomhedsmærkater](sensitivity-labels.md).
 
-Du kan få mere at vide om følsomhedsmærkater og deres funktionsmåde for websteder og Microsoft 365-grupper under Brug følsomhedsmærkater til at beskytte indhold [i Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md).
+Hvis du vil vide mere om følsomhedsmærkater og deres funktionsmåde for websteder og Microsoft 365-grupper, skal du se [Brug følsomhedsmærkater til at beskytte indhold i Microsoft Teams, Microsoft 365-grupper og SharePoint-websteder](sensitivity-labels-teams-groups-sites.md).
 
-Se følgende scenarier for bedste fremgangsmåder ved overførsel fra klassisk AAD klassificering til følsomhedsmærkaterne.
+Se følgende scenarier for at få de bedste fremgangsmåder ved overførsel fra klassisk AAD-klassificering til følsomhedsmærkater.
 
-## <a name="scenario-1-tenant-never-used-classic-aad-classifications-or-sensitivity-labels-for-documents-and-emails"></a>Scenarie 1: Lejer har aldrig brugt klassisk AAD klassificeringer eller følsomhedsetiketter til dokumenter og mails
+## <a name="scenario-1-tenant-never-used-classic-aad-classifications-or-sensitivity-labels-for-documents-and-emails"></a>Scenarie 1: Lejer har aldrig brugt klassiske AAD-klassificeringer eller følsomhedsmærkater til dokumenter og mails
 
-- Lejeradministrator aktiverer følsomhedsmærkater for grupper ved at indstille lejerflaget "EnableMIPLabels" til sand via AAD PowerShell-cmdlet.
-- Lejeradministrator opretter følsomhedsmærkaterne i [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com).
-    - Lejeradministrator kan vælge fil- og mailrelaterede handlinger som kryptering og vandmærker.
-    - Lejeradministrator kan vælge Microsoft 365 grupper og SharePoint Online-webstedsrelaterede handlinger til følsomhedsmærkaterne.
-- Lejeradministrator udgiver politikken.
-- **Kompatible arbejdsbelastninger viser følsomhedsmærkater** . Brug følsomhedsmærkaterne til at oprette grupper. Kompatible arbejdsbelastninger er de tjenester, der understøtter følsomhedsmærkater.
-- **Ikke-kompatible arbejdsbelastninger** er de tjenester, der endnu ikke understøtter følsomhedsmærkater. Grupper kan dog oprettes, men de kan ikke knyttes til følsomhedsmærkatet gennem ikke-kompatible arbejdsbelastninger. Lejeradministratorer kan køre PowerShell-cmdlet'er for at knytte disse grupper til følsomhedsmærkater.
+- Lejer Administration aktiverer følsomhedsmærkater for grupper ved at angive lejerflaget "EnableMIPLabels" til true via AAD powershell-cmdlet.
+- Lejer Administration opretter følsomhedsmærkater i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com).
+    - Lejeradministratoren kan vælge fil- og mailrelaterede handlinger, f.eks. kryptering og vandmærke.
+    - Lejeradministratoren kan vælge Microsoft 365-grupper- og SharePoint Online-webstedsrelaterede handlinger til følsomhedsmærkater.
+- Lejeren Administration publicerer politikken.
+- **Kompatible arbejdsbelastninger viser følsomhedsmærkater** . Brug følsomhedsmærkater til at oprette grupper. Kompatible arbejdsbelastninger er de tjenester, der understøtter følsomhedsmærkater.
+- **Ikke-kompatible arbejdsbelastninger** er de tjenester, der endnu ikke understøtter følsomhedsmærkater. Grupper kan oprettes, men de kan ikke knyttes til følsomhedsmærkaten via ikke-kompatible arbejdsbelastninger. Hvis du vil knytte sådanne grupper til følsomhedsmærkater, kan lejeradministratorer køre PowerShell-cmdlet'er.
 
 Tabel 1. Funktionsmåde for kompatible og ikke-kompatible arbejdsbelastninger – opret, rediger eller slet grupper
 
-|Arbejdsbelastning|Hvilken etiketliste kan brugeren se i gruppevinduet?|Opret ny gruppe |Rediger gruppe |Slet gruppe |
+|Arbejdsbyrde|Hvilken etiketliste kan brugeren se i gruppevinduet?|Opret ny gruppe |Rediger gruppe |Slet gruppe |
 |:-------|:-------|:--------|:--------|:--------|   
-|Kompatibel   |følsomhedsmærkater. |Ingen ændring i funktionsmåden. |Ingen ændring i funktionsmåden. |Ingen ændring i funktionsmåden. |
-|Ikke-kompatibel |Der er ingen synlige følsomhedsmærkater. |Brugeren kan oprette en gruppe uden at vælge følsomhedsmærkat. <br><br> Bemærk, at administratoren kan køre cmdlet'er for at anvende følsomhedsmærkater i baggrunden. |**Case 1**: Ingen følsomhedsmærkat tidligere valgt. Brugeren kan redigere en gruppe.<br><br> **Case 2**: følsomhedsmærkat anvendt tidligere i baggrunden ved hjælp af cmdlet. Brugeren kan redigere en gruppe korrekt, undtagen i tilfælde hvor brugeren vælger en ugyldig kombination af indstilling for beskyttelse af personlige oplysninger med hensyn til etiketten. |Ingen ændring i funktionsmåden.|
+|Kompatibel   |følsomhedsmærkater. |Der er ingen ændring i funktionsmåden. |Der er ingen ændring i funktionsmåden. |Der er ingen ændring i funktionsmåden. |
+|Ikke-kompatibel |Der er ingen synlige følsomhedsmærkater. |Brugeren kan oprette en gruppe uden at vælge følsomhedsmærkat. <br><br> Bemærk, at administratoren kan køre cmdlet'er for at anvende følsomhedsmærkater i baggrunden. |**Sag 1**: Der er ikke tidligere valgt nogen følsomhedsmærkat. Brugeren kan redigere en gruppe.<br><br> **Case 2**: Følsomhedsmærkat anvendt tidligere i baggrunden ved hjælp af cmdlet. Brugeren kan redigere en gruppe med undtagelse af det tilfælde, hvor brugeren vælger en ugyldig kombination af indstillinger for beskyttelse af personlige oplysninger med hensyn til mærkaten. |Der er ingen ændring i funktionsmåden.|
 
 > [!NOTE]
-> For Outlook-klienten til stationær pc (Win 32) aktiverer administratoren følsomhedsmærkaterne på deres lejer, og brugeren har en ældre version af Outlook-skrivebordsklienten (Win 32):
+> I forbindelse med Outlook Desktop-klienten (Win 32), når administratoren har aktiveret følsomhedsmærkater på deres lejer, og brugeren er på en ældre version af Outlook Desktop-klienten (Win 32):
 >
-> - Brugeren ser følsomhedsmærkaterne vises på den ældre version Outlook desktopklienten.
-> - Men når brugeren redigerer en gruppe og gemmer gruppen med et følsomhedsmærkat, tilsidesættes den valgte indstilling for beskyttelse af personlige oplysninger via indstillingen for beskyttelse af personlige oplysninger på den anvendte følsomhedsmærkat.
+> - Brugeren får vist følsomhedsmærkater i den ældre version af Outlook Desktop-klienten.
+> - Men når brugeren redigerer en gruppe og gemmer gruppen med en følsomhedsmærkat, tilsidesættes den valgte indstilling for beskyttelse af personlige oplysninger af indstillingen for beskyttelse af personlige oplysninger for den anvendte følsomhedsmærkat.
 >
-> Vi anbefaler, at dine brugere på en gammel version Outlook klient opgraderer til den nyere version.
+> Vi anbefaler, at brugerne på en gammel version af Outlook-klienten opgraderer til den nyere version.
 
-## <a name="scenario-2-tenant-is-already-using-classic-aad-classifications"></a>Scenarie 2: Lejer anvender allerede klassiske AAD [klassificeringer](../enterprise/manage-microsoft-365-groups-with-powershell.md)
+## <a name="scenario-2-tenant-is-already-using-classic-aad-classifications"></a>Scenarie 2: Lejer bruger allerede klassiske [AAD-klassificeringer](../enterprise/manage-microsoft-365-groups-with-powershell.md)
 
-### <a name="case-a-tenant-never-used-sensitivity-labels-for-documents-and-emails"></a>Case A: Lejer brugte aldrig følsomhedsmærkater til dokumenter og mails
+### <a name="case-a-tenant-never-used-sensitivity-labels-for-documents-and-emails"></a>Sag A: Lejeren har aldrig brugt følsomhedsmærkater til dokumenter og mails
 
-1. I den [Microsoft 365 Overholdelsescenter](https://compliance.microsoft.com), anbefaler vi, at du opretter følsomhedsmærkater med samme navn som de eksisterende klassiske Azure AD-etiketter.
-2. Brug PowerShell-cmdlet'en til at anvende disse følsomhedsmærkater på eksisterende Microsoft 365 grupper og SharePoint ved hjælp af navnetilknytning.
-3. Administratoren kan vælge at slette de klassiske Azure AD-etiketter:
-    - Kompatible arbejdsbelastninger viser disse følsomhedsmærkater og grupper, der oprettes med dem.
-    - Ikke-kompatible arbejdsbelastninger fungerer ved oprettelse af grupper, men der knyttes ingen følsomhedsmærkat til dem.
+1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) anbefaler vi, at du opretter følsomhedsmærkater med samme navn som de eksisterende klassiske Azure AD-mærkater.
+2. Brug PowerShell-cmdlet'en til at anvende disse følsomhedsmærkater på eksisterende Microsoft 365-grupper og SharePoint-websteder ved hjælp af navnetilknytning.
+3. Administration kan vælge at slette de klassiske Azure AD navne:
+    - Kompatible arbejdsbelastninger viser disse følsomhedsmærkater, og grupper oprettes sammen med dem.
+    - Arbejdsbelastninger, der ikke er kompatible, fungerer, når du opretter grupper, men der er ikke knyttet nogen følsomhedsmærkat til dem.
 4. Administratorer kan køre PowerShell-cmdlet'er for at anvende følsomhedsmærkater på disse grupper uden mærkater.
-    - Alternativt kan en administrator vælge at beholde de klassiske Azure AD-etiketter:
+    - En administrator kan også vælge at beholde de klassiske Azure AD mærkater:
         - Kompatible arbejdsbelastninger viser disse følsomhedsmærkater, og grupper oprettes med dem. Kompatible arbejdsbelastninger er de tjenester, der understøtter følsomhedsmærkater.
-        - Ikke-kompatible arbejdsbelastninger fungerer, når du opretter grupper, og vis klassiske Azure AD-etiketter. Disse klassiske Azure AD-etiketter er knyttet til disse grupper, der er oprettet med ikke-kompatible arbejdsbelastninger.
-5. Vi anbefaler på det kraftigste, at administratorer kører PowerShell-cmdlet'er for at anvende følsomhedsmærkater på disse grupper med klassiske Azure AD-etiketter.
+        - Arbejdsbelastninger, der ikke er kompatible, fungerer, når du opretter grupper, og viser klassiske Azure AD mærkater. Disse klassiske Azure AD mærkater er knyttet til disse grupper, der er oprettet med ikke-kompatible arbejdsbelastninger.
+5. Vi anbefaler på det kraftigste, at administratorer kører PowerShell-cmdlet'er for at anvende følsomhedsmærkater på disse grupper med klassiske Azure AD-mærkater.
 
 Tabel 2. Funktionsmåde for kompatible og ikke-kompatible arbejdsbelastninger – opret, rediger eller slet grupper
 
-|Arbejdsbelastning|Hvilken etiketliste kan brugeren se i gruppevinduet?|Opret ny gruppe |Rediger gruppe |Slet gruppe |
+|Arbejdsbyrde|Hvilken etiketliste kan brugeren se i gruppevinduet?|Opret ny gruppe |Rediger gruppe |Slet gruppe |
 |:-------|:-------|:--------|:--------|:--------|   
-|Kompatibel   |følsomhedsmærkater. |Ingen ændring i funktionsmåden. |Ingen ændring i funktionsmåden. |Ingen ændring i funktionsmåden. |
-|Ikke-kompatibel |Gamle klassiske AAD navne. |Brugeren kan oprette en gruppe med den klassiske Azure AD-etiket markeret. <br><br>Bemærk, at administratoren kan køre cmdlet'er for at anvende følsomhedsmærkater i baggrunden. |**Case 1**: Ingen følsomhedsmærkat tidligere valgt. Brugeren kan redigere en gruppe.<br><br> **Case 2**: Klassisk AAD tidligere valgt. Brugeren kan redigere en gruppe.<br><br> **Case 3**: følsomhedsmærkat, der tidligere er anvendt i baggrunden ved hjælp af cmdlet. Brugeren skal kunne redigere en gruppe, bortset fra et tilfælde, hvor brugeren vælger en ugyldig kombination af indstilling for beskyttelse af personlige oplysninger med hensyn til etiketten. |Brugeren kan slette en gruppe. |
+|Kompatibel   |følsomhedsmærkater. |Der er ingen ændring i funktionsmåden. |Der er ingen ændring i funktionsmåden. |Der er ingen ændring i funktionsmåden. |
+|Ikke-kompatibel |Gamle klassiske AAD-mærkater. |Brugeren kan oprette en gruppe med klassisk Azure AD markeret mærkat. <br><br>Bemærk, at administratoren kan køre cmdlet'er for at anvende følsomhedsmærkater i baggrunden. |**Sag 1**: Der er ikke tidligere valgt nogen følsomhedsmærkat. Brugeren kan redigere en gruppe.<br><br> **Sag 2**: Klassiske AAD-mærkater er tidligere valgt. Brugeren kan redigere en gruppe.<br><br> **Case 3**: Følsomhedsmærkat, der tidligere blev anvendt i baggrunden ved hjælp af cmdlet. Brugeren skal kunne redigere en gruppe, bortset fra ét tilfælde, hvor brugeren vælger en ugyldig kombination af indstillinger for beskyttelse af personlige oplysninger med hensyn til mærkaten. |Brugeren kan slette en gruppe. |
 
 > [!NOTE]
-> For Outlook-klienten til stationær pc (Win 32) aktiverer administratoren følsomhedsmærkaterne på deres lejer, og brugeren har en ældre version af Outlook-skrivebordsklienten (Win 32):
+> I forbindelse med Outlook Desktop-klienten (Win 32), når administratoren har aktiveret følsomhedsmærkater på deres lejer, og brugeren er på en ældre version af Outlook Desktop-klienten (Win 32):
 >
-> - Brugeren ser følsomhedsmærkaterne vises på den ældre version Outlook desktopklienten.
-> - Men når brugeren redigerer en gruppe og gemmer gruppen med et følsomhedsmærkat, tilsidesættes den valgte indstilling for beskyttelse af personlige oplysninger via indstillingen for beskyttelse af personlige oplysninger på den anvendte følsomhedsmærkat.
+> - Brugeren får vist følsomhedsmærkater i den ældre version af Outlook Desktop-klienten.
+> - Men når brugeren redigerer en gruppe og gemmer gruppen med en følsomhedsmærkat, tilsidesættes den valgte indstilling for beskyttelse af personlige oplysninger af indstillingen for beskyttelse af personlige oplysninger for den anvendte følsomhedsmærkat.
 >
-> Vi anbefaler, at dine brugere på en gammel version Outlook klient opgraderer til den nyere version.
+> Vi anbefaler, at brugerne på en gammel version af Outlook-klienten opgraderer til den nyere version.
 
-### <a name="case-b-tenant-used-sensitivity-labels-for-documents-and-emails"></a>Case B: Lejer brugte følsomhedsmærkater til dokumenter og mails
+### <a name="case-b-tenant-used-sensitivity-labels-for-documents-and-emails"></a>Sag B: Lejer brugte følsomhedsmærkater til dokumenter og mails
 
-1. Så snart administratoren aktiverer følsomhedsetiketfunktionen på lejeren ved at indstille lejerflaget "EnableMIPLabels" til sand, vises mærkaterne for dokument- og mailfølsomhed i gruppe/websted/team for oprettelse og redigering.
-2. En administrator kan bruge de samme mærkater for dokument- og mailfølsomhed til at gennemtvinge beskyttelse af personlige oplysninger og ekstern brugeradgang på gruppen/webstedet/teamet ved at angive relaterede gruppeindstillinger:
-    1. I [Microsoft 365 Overholdelsescenter du](https://compliance.microsoft.com) vælge **fanen Websteder og** grupper.
-    2. Rediger et dokument eller en mails følsomhedsmærkat.
+1. Så snart administratoren aktiverer funktionen for følsomhedsmærkat på lejeren ved at angive lejerflaget 'EnableMIPLabels' til sand, vises dialogboksene til oprettelse og redigering af dokument- og mailfølsomhed i dialogboksene til oprettelse og redigering af gruppe/websted/team.
+2. En administrator kan bruge de samme dokument- og mailfølsomhedsmærkater til at gennemtvinge beskyttelse af personlige oplysninger og ekstern brugeradgang på gruppen/webstedet/teamet ved at angive relaterede gruppeindstillinger:
+    1. I [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) skal du vælge fanen **Websteder og grupper**.
+    2. Rediger et dokuments eller en mailfølsomhedsmærkat.
 
-## <a name="sample-script"></a>Eksempel på script
+## <a name="sample-script"></a>Eksempelscript
 
-Hvis du vil have et eksempel på et script til at overføre grupper med klassiske AAD til følsomhedsmærkater, skal du [se Klassisk Azure AD-gruppeklassifikation](./sensitivity-labels-teams-groups-sites.md#classic-azure-ad-group-classification).
+Hvis du vil have et eksempelscript til at overføre grupper med klassiske AAD-mærkater til følsomhedsmærkater, skal [du se Klassisk Azure AD gruppeklassificering](./sensitivity-labels-teams-groups-sites.md#classic-azure-ad-group-classification).

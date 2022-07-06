@@ -15,19 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Du kan løse en behandlingsfejl i et dokument i et gennemsynssæt i eDiscovery (Premium) uden at skulle følge massefejlafhjælpningsprocessen.
-ms.openlocfilehash: e8ace66eefadf5ce959bc01150ba21e232429131
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Du kan rette en behandlingsfejl i et dokument i et gennemsynssæt i eDiscovery (Premium) uden at skulle følge massefejlafhjælpningsprocessen.
+ms.openlocfilehash: cb1b7248ff02a4aafce529b764efdf7408a05386
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092343"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622167"
 ---
-# <a name="single-item-error-remediation-in-ediscovery-premium"></a>Afhjælpning af fejl i et enkelt element i eDiscovery (Premium)
+# <a name="single-item-error-remediation-in-ediscovery-premium"></a>Afhjælpning af fejl i enkelt element i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Fejlafhjælpning giver brugere af Microsoft Purview eDiscovery (Premium) mulighed for at rette dataproblemer, der forhindrer eDiscovery (Premium) i at behandle indholdet korrekt. Filer, der er beskyttet med adgangskode, kan f.eks. ikke behandles, fordi disse filer er låst eller krypteret. Tidligere kunne du kun løse flere fejl ved hjælp af [denne arbejdsproces](error-remediation-when-processing-data-in-advanced-ediscovery.md). Men nogle gange giver det ikke mening at afhjælpe fejl i flere filer, når du er usikker på, om nogen af disse filer reagerer på den sag, du undersøger. Det giver muligvis heller ikke mening at afhjælpe fejl, før du har haft mulighed for at gennemse filmetadata (f.eks. filplacering, eller hvem der havde adgang) for at hjælpe dig med at træffe de første beslutninger om svartid. En ny funktion, der kaldes *afhjælpning af fejl med enkelt element* , giver eDiscovery-ledere mulighed for at få vist metadataene for filer med en behandlingsfejl og om nødvendigt afhjælpe fejlen direkte i korrektursættet. I artiklen beskrives det, hvordan du identificerer, ignorerer og afhjælper filer med behandlingsfejl i et korrektursæt.
+Fejlafhjælpning giver Microsoft Purview eDiscovery (Premium) brugere mulighed for at rette dataproblemer, der forhindrer eDiscovery (Premium) i at behandle indholdet korrekt. Filer, der er beskyttet med adgangskode, kan f.eks. ikke behandles, fordi disse filer er låst eller krypteret. Tidligere kunne du kun løse flere fejl ved hjælp af [denne arbejdsproces](error-remediation-when-processing-data-in-advanced-ediscovery.md). Men nogle gange giver det ikke mening at afhjælpe fejl i flere filer, når du er usikker på, om nogen af disse filer reagerer på den sag, du undersøger. Det giver muligvis heller ikke mening at afhjælpe fejl, før du har haft mulighed for at gennemse filmetadata (f.eks. filplacering, eller hvem der havde adgang) for at hjælpe dig med at træffe de første beslutninger om svartid. En ny funktion, der kaldes *afhjælpning af fejl med enkelt element* , giver eDiscovery-ledere mulighed for at få vist metadataene for filer med en behandlingsfejl og om nødvendigt afhjælpe fejlen direkte i korrektursættet. I artiklen beskrives det, hvordan du identificerer, ignorerer og afhjælper filer med behandlingsfejl i et korrektursæt.
 
 ## <a name="identify-documents-with-errors"></a>Identificer dokumenter med fejl
 
@@ -55,7 +53,7 @@ Nogle gange kan du blive bedt om at afhjælpe en behandlingsfejl i dokumenter (v
 
 Følg disse trin for at afhjælpe et enkelt dokument:
 
-1. Klik på **DownloadDownload**  >  original for at downloade en kopi af filen til en lokal computer.
+1. Klik på **Hent** > **original** for at hente en kopi af filen til en lokal computer.
 
    ![Download dokumentet med behandlingsfejlen.](../media/SIERimage5.png)
 

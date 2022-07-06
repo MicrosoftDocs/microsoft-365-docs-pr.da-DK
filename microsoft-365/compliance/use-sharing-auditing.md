@@ -19,24 +19,22 @@ ms.collection:
 - M365-security-compliance
 - SPO_Content
 ms.assetid: 50bbf89f-7870-4c2a-ae14-42635e0cfc01
-description: Administratoren kan få mere at vide om, hvordan du bruger deling af overvågning i Microsoft 365 overvågningslog til at identificere ressourcer, der deles med brugere uden for deres organisation.
+description: Administration kan få mere at vide om, hvordan du bruger deling af overvågning i Microsoft 365-overvågningsloggen til at identificere ressourcer, der deles med brugere uden for deres organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: eea4fa4dd32f6b89d2746d33f0fdfb206f251625
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 1eb780f79d0dc5beaab3afcc52261bf9a4ccc25b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092221"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625957"
 ---
 # <a name="use-sharing-auditing-in-the-audit-log"></a>Brug overvågning af deling i overvågningsloggen
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Deling er en vigtig aktivitet i SharePoint Online og OneDrive for Business, og den bruges i vid udstrækning i organisationer. Administratorer kan bruge deling af overvågning i overvågningsloggen til at bestemme, hvordan deling bruges i deres organisation. 
+Deling er en vigtig aktivitet i SharePoint Online og OneDrive for Business, og det bruges i vid udstrækning i organisationer. Administratorer kan bruge deling af overvågning i overvågningsloggen til at bestemme, hvordan deling bruges i deres organisation. 
   
-## <a name="the-sharepoint-sharing-schema"></a>Skemaet SharePoint deling
+## <a name="the-sharepoint-sharing-schema"></a>SharePoint-delingsskemaet
 
-Delingshændelser (ikke hændelser, der er relateret til delingspolitik og delingslinks) adskiller sig fra fil- og mapperelaterede hændelser på én primær måde: Én bruger udfører en handling, der har indflydelse på en anden bruger. Når en ressource f.eks. bruger A giver Bruger B adgang til en fil. I dette eksempel er Bruger A den  *fungerende bruger*  , og Bruger B er  *destinationsbrugeren*. I skemaet SharePoint fil påvirker den fungerende brugers handling kun selve filen. Når Bruger A åbner en fil, er den fungerende bruger de eneste oplysninger, der skal bruges i **hændelsen FileAccessed** . For at løse denne forskel er der et separat skema, der kaldes *SharePoint Delingsskema*, som henter flere oplysninger om delingshændelser. Dette sikrer, at administratorer har indblik i, hvem der delte en ressource, og den bruger, som ressourcen blev delt med. 
+Delingshændelser (ikke hændelser, der er relateret til delingspolitik og delingslinks) adskiller sig fra fil- og mapperelaterede hændelser på én primær måde: Én bruger udfører en handling, der har indflydelse på en anden bruger. Når en ressource f.eks. bruger A giver Bruger B adgang til en fil. I dette eksempel er Bruger A den  *fungerende bruger*  , og Bruger B er  *destinationsbrugeren*. I SharePoint-filskemaet påvirker den fungerende brugers handling kun selve filen. Når Bruger A åbner en fil, er den fungerende bruger de eneste oplysninger, der skal bruges i **hændelsen FileAccessed** . For at løse denne forskel er der et separat skema, der kaldes  *SharePoint-delingsskemaet*, som henter flere oplysninger om delingshændelser. Dette sikrer, at administratorer har indblik i, hvem der delte en ressource, og den bruger, som ressourcen blev delt med. 
   
 Delingsskemaet indeholder to ekstra felter i en overvågningspost, der er relateret til delingshændelser: 
   
@@ -46,11 +44,11 @@ Delingsskemaet indeholder to ekstra felter i en overvågningspost, der er relate
 
 Disse to felter kan ud over andre egenskaber fra overvågningslogskemaet, f.eks. Bruger, Handling og Dato, fortælle hele historien om  *, hvilken*  bruger  *der*  har delt hvilken ressource med  *hvem*  og  *hvornår*. 
   
-Der er en anden skemaegenskab, der er vigtig for delingshistorien. Når du eksporterer søgeresultater i overvågningsloggen, gemmes der oplysninger om deling af hændelser i kolonnen **AuditData** i den eksporterede CSV-fil. Når en bruger f.eks. deler et websted med en anden bruger, opnås dette ved at føje destinationsbrugeren til en SharePoint gruppe. Kolonnen **AuditData** henter disse oplysninger for at angive kontekst for administratorer. Se [Trin 2](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) for at få oplysninger om, hvordan du fortolker oplysningerne i kolonnen **AuditData** .
+Der er en anden skemaegenskab, der er vigtig for delingshistorien. Når du eksporterer søgeresultater i overvågningsloggen, gemmes der oplysninger om deling af hændelser i kolonnen **AuditData** i den eksporterede CSV-fil. Når en bruger f.eks. deler et websted med en anden bruger, opnås dette ved at føje destinationsbrugeren til en SharePoint-gruppe. Kolonnen **AuditData** henter disse oplysninger for at angive kontekst for administratorer. Se [Trin 2](#step-2-use-the-powerquery-editor-to-format-the-exported-audit-log) for at få oplysninger om, hvordan du fortolker oplysningerne i kolonnen **AuditData** .
 
-## <a name="sharepoint-sharing-events"></a>SharePoint delingshændelser
+## <a name="sharepoint-sharing-events"></a>SharePoint-delingshændelser
 
-Deling defineres ved, hvornår en bruger (den *fungerende* bruger) ønsker at dele en ressource med en anden bruger ( *målbrugeren* ). Overvåg poster, der er relateret til deling af en ressource med en ekstern bruger (en bruger uden for organisationen og ikke har en gæstekonto i organisationens Azure Active Directory) identificeres af følgende hændelser, som logføres i overvågningsloggen:
+Deling defineres ved, hvornår en bruger (den *fungerende* bruger) ønsker at dele en ressource med en anden bruger ( *målbrugeren* ). Overvågningsposter, der er relateret til deling af en ressource med en ekstern bruger (en bruger uden for din organisation og ikke har en gæstekonto i din organisations Azure Active Directory), identificeres af følgende hændelser, som logføres i overvågningsloggen:
 
 - **SharingInvitationCreated:** En bruger i organisationen forsøgte at dele en ressource (sandsynligvis et websted) med en ekstern bruger. Dette resulterer i en ekstern delingsinvitation, der sendes til destinationsbrugeren. Der gives ikke adgang til ressourcen på nuværende tidspunkt.
 
@@ -68,13 +66,13 @@ Deling defineres ved, hvornår en bruger (den *fungerende* bruger) ønsker at de
   
 Når en bruger (den fungerende bruger) ønsker at dele en ressource med en anden bruger (målbrugeren), kontrollerer SharePoint (eller OneDrive for Business) først, om målbrugerens mailadresse allerede er knyttet til en brugerkonto i organisationens mappe. Hvis målbrugeren er i mappen (og har en tilsvarende gæstebrugerkonto), gør SharePoint følgende:
   
--  Tildeler straks målbrugerens tilladelser til at få adgang til ressourcen ved at føje destinationsbrugeren til den relevante SharePoint gruppe og logfører en **AddedToGroup-hændelse**. 
+-  Tildeler straks destinationsbrugerens tilladelser til at få adgang til ressourcen ved at føje destinationsbrugeren til den relevante SharePoint-gruppe og logfører en **AddedToGroup-hændelse** . 
     
 - Sender en meddelelse om deling til destinationsbrugerens mailadresse.
     
 - Logfører en **SharingSet-hændelse** . Denne hændelse har et brugervenligt navn på "Delt fil, mappe eller websted" under **Aktiviteter for delings- og adgangsanmodninger** i aktivitetsvælgeren i søgeværktøjet til overvågningsloggen. Se skærmbilledet i [trin 1](#step-1-search-for-sharing-events-and-export-the-results-to-a-csv-file). 
     
-Hvis en brugerkonto for målbrugeren ikke findes i mappen, gør SharePoint følgende: 
+Hvis en brugerkonto for destinationsbrugeren ikke findes i mappen, gør SharePoint følgende: 
     
    - Logfører en af følgende hændelser baseret på, hvordan ressourcen deles:
    
@@ -86,7 +84,7 @@ Hvis en brugerkonto for målbrugeren ikke findes i mappen, gør SharePoint følg
 
       - **SharingInvitationCreated** (denne hændelse logføres kun, når den delte ressource er et websted)
     
-   - Når målbrugeren accepterer den invitation til deling, der sendes til vedkommende (ved at klikke på linket i invitationen), logfører SharePoint hændelsen **SharingInvitationAccepted** og tildeler destinationsbrugerens tilladelser til at få adgang til ressourcen. Hvis destinationsbrugeren får tilsendt et anonymt link, logføres hændelsen **AnonymousLinkUsed** , når destinationsbrugeren bruger linket til at få adgang til ressourcen. For sikre links logføres en **FileAccessed-hændelse** , når en ekstern bruger bruger linket til at få adgang til ressourcen.
+   - Når destinationsbrugeren accepterer den invitation til deling, der sendes til vedkommende (ved at klikke på linket i invitationen), logfører SharePoint en **SharingInvitationAccepted-hændelse** og tildeler destinationsbrugerens tilladelser til at få adgang til ressourcen. Hvis destinationsbrugeren får tilsendt et anonymt link, logføres hændelsen **AnonymousLinkUsed** , når destinationsbrugeren bruger linket til at få adgang til ressourcen. For sikre links logføres en **FileAccessed-hændelse** , når en ekstern bruger bruger linket til at få adgang til ressourcen.
 
 Yderligere oplysninger om destinationsbrugeren logføres også, f.eks. identiteten på den bruger, invitationen er til, og den bruger, der accepterer invitationen. I nogle tilfælde kan disse brugere (eller mailadresser) være forskellige. 
 
@@ -102,7 +100,7 @@ Det første trin er at søge i overvågningsloggen efter delingshændelser. Du k
 
 2. Log på med din arbejds- eller skolekonto.
 
-3. Klik på **Overvågning** i venstre rude på Microsoft Purview-overholdelsesportalen.
+3. Klik på **Overvågning** i venstre rude i Microsoft Purview-compliance-portal.
 
     Siden **Overvågning** vises.
 
@@ -128,11 +126,11 @@ Du kan finde en trinvis vejledning under "Trin 2: Formatér den eksporterede ove
 
 ### <a name="step-3-filter-the-csv-file-for-resources-shared-with-external-users"></a>Trin 3: Filtrer CSV-filen for ressourcer, der deles med eksterne brugere
 
-Det næste trin er at filtrere CSV-filen for de forskellige delingsrelaterede hændelser, der tidligere blev beskrevet i afsnittet [SharePoint delingshændelser](#sharepoint-sharing-events). Du kan også filtrere kolonnen **TargetUserOrGroupType** for at få vist alle poster, hvor værdien af denne egenskab er **Guest**. 
+Det næste trin er at filtrere CSV-filen for de forskellige delingsrelaterede hændelser, der tidligere er beskrevet i afsnittet [SharePoint-delingshændelser](#sharepoint-sharing-events) . Du kan også filtrere kolonnen **TargetUserOrGroupType** for at få vist alle poster, hvor værdien af denne egenskab er **Guest**. 
 
 Når du har fulgt instruktionerne i det forrige trin for at forberede CSV-filen ved hjælp af PowerQuery-editor, skal du gøre følgende:
     
-1. Åbn den Excel fil, du oprettede i trin 2. 
+1. Åbn den Excel-fil, du oprettede i trin 2. 
 
 2. Klik på **Sortér & Filter** under fanen **Hjem**, og klik derefter på **Filter**.
     
@@ -152,7 +150,7 @@ Når du har fulgt instruktionerne i det forrige trin for at forberede CSV-filen 
     
 5. På rullelisten **Sortér & Filter** skal du rydde alle valg og derefter vælge **TargetUserOrGroupType:Guest** og klikke på **OK**.
     
-    Nu viser Excel rækkerne for deling af hændelser, OG hvor målbrugeren er uden for din organisation, fordi eksterne brugere identificeres af værdien **TargetUserOrGroupType:Guest**. 
+    Nu viser Excel rækkerne for deling af hændelser, OG hvor målbrugeren er uden for organisationen, fordi eksterne brugere identificeres af værdien **TargetUserOrGroupType:Guest**. 
   
 > [!TIP]
 > For de viste overvågningsposter identificerer kolonnen **ObjectId** den ressource, der blev delt med destinationsbrugeren. for eksempel  `ObjectId:https:\/\/contoso-my.sharepoint.com\/personal\/sarad_contoso_com\/Documents\/Southwater Proposal.docx`.

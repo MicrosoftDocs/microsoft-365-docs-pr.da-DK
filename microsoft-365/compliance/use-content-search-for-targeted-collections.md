@@ -18,22 +18,20 @@ search.appverid:
 - MET150
 ms.assetid: e3cbc79c-5e97-43d3-8371-9fbc398cd92e
 ms.custom: seo-marvel-apr2020
-description: Brug Indholdssøgning på Microsoft Purview-overholdelsesportalen til at udføre en målrettet samling, som søger efter elementer i en bestemt postkasse eller webstedsmappe.
-ms.openlocfilehash: 224da8e651599d1d007684a069b0dbb9d30a6119
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Brug Indholdssøgning i Microsoft Purview-compliance-portal til at udføre en målrettet samling, som søger efter elementer i en bestemt postkasse eller en bestemt webstedsmappe.
+ms.openlocfilehash: ab4fda56e3ccbd04ac8b7b820c4305e9c6e45093
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015534"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623667"
 ---
 # <a name="use-content-search-for-targeted-collections"></a>Brug indholdssøgning til målrettede samlinger
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen giver ikke en direkte måde i brugergrænsefladen at søge i bestemte mapper i Exchange postkasser eller SharePoint og OneDrive for Business websteder. Det er dog muligt at søge i bestemte mapper (kaldet en *målrettet samling*) ved at angive egenskaben mappe-id for mail- eller stiegenskaben (DocumentLink) for websteder i den faktiske søgeforespørgselssyntaks. Brug af indholdssøgning til at udføre en målrettet samling er nyttigt, når du er sikker på, at elementer, der svarer til en sag eller privilegerede elementer, er placeret i en bestemt postkasse eller webstedsmappe. Du kan bruge scriptet i denne artikel til at hente mappe-id'et for postkassemapper eller stien (DocumentLink) til mapper på et SharePoint og OneDrive for Business websted. Derefter kan du bruge mappe-id'et eller stien i en søgeforespørgsel til at returnere elementer, der er placeret i mappen.
+Værktøjet indholdssøgning i Microsoft Purview-compliance-portal giver ikke en direkte måde i brugergrænsefladen at søge i bestemte mapper i Exchange-postkasser eller SharePoint og OneDrive for Business websteder. Det er dog muligt at søge i bestemte mapper (kaldet en *målrettet samling*) ved at angive egenskaben mappe-id for mail- eller stiegenskaben (DocumentLink) for websteder i den faktiske søgeforespørgselssyntaks. Brug af indholdssøgning til at udføre en målrettet samling er nyttigt, når du er sikker på, at elementer, der svarer til en sag eller privilegerede elementer, er placeret i en bestemt postkasse eller webstedsmappe. Du kan bruge scriptet i denne artikel til at hente mappe-id'et for postkassemapper eller stien (DocumentLink) til mapper på et SharePoint- og OneDrive for Business websted. Derefter kan du bruge mappe-id'et eller stien i en søgeforespørgsel til at returnere elementer, der er placeret i mappen.
 
 > [!NOTE]
-> Hvis du vil returnere indhold, der er placeret i en mappe på et SharePoint eller OneDrive for Business websted, bruger scriptet i dette emne den administrerede egenskab DocumentLink i stedet for egenskaben Path. Egenskaben DocumentLink er mere robust end egenskaben Path, fordi den returnerer alt indhold i en mappe, mens egenskaben Path ikke returnerer nogle mediefiler.
+> Hvis du vil returnere indhold, der er placeret i en mappe på et SharePoint- eller OneDrive for Business websted, bruger scriptet i dette emne den administrerede egenskab DocumentLink i stedet for egenskaben Path. Egenskaben DocumentLink er mere robust end egenskaben Path, fordi den returnerer alt indhold i en mappe, mens egenskaben Path ikke returnerer nogle mediefiler.
 
 ## <a name="before-you-run-a-targeted-collection"></a>Før du kører en målrettet samling
 
@@ -41,7 +39,7 @@ Indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen giver ikke 
 
 - Du skal også have tildelt rollen Mailmodtagere i din Exchange Online organisation. Dette er påkrævet for at køre cmdlet'en **Get-MailboxFolderStatistics** , som er inkluderet i scriptet. Rollen Mailmodtagere tildeles som standard til rollegrupperne Administration af organisation og Modtageradministration i Exchange Online. Du kan få flere oplysninger om tildeling af tilladelser i Exchange Online under [Administrer medlemmer af rollegruppen](/exchange/manage-role-group-members-exchange-2013-help). Du kan også oprette en brugerdefineret rollegruppe, tildele rollen Mailmodtagere til den og derefter tilføje de medlemmer, der skal køre scriptet i trin 1. Du kan få flere oplysninger under [Administrer rollegrupper](/Exchange/permissions-exo/role-groups).
 
-- Scriptet i denne artikel understøtter moderne godkendelse. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-ExchangeOnline` og bruge parameteren *ExchangeEnvironmentName* (og den relevante værdi for din organisationstype) til at oprette forbindelse til Exchange Online PowerShell.  Du skal også redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance PowerShell. Du kan få flere oplysninger i eksemplerne i [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) og [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
+- Scriptet i denne artikel understøtter moderne godkendelse. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365- eller Microsoft 365 GCC-organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-ExchangeOnline` og bruge parameteren *ExchangeEnvironmentName* (og den relevante værdi for din organisationstype) til at oprette forbindelse til Exchange Online PowerShell.  Du skal også redigere linjen `Connect-IPPSSession` og bruge parametrene *ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance PowerShell. Du kan få flere oplysninger i eksemplerne i [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-without-using-mfa) og [Opret forbindelse til sikkerhed & PowerShell til overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
 - Hver gang du kører scriptet, oprettes der en ny ekstern PowerShell-session. Det betyder, at du kan bruge alle de eksterne PowerShell-sessioner, der er tilgængelige for dig. Du kan forhindre, at dette sker, ved at køre følgende kommandoer for at afbryde forbindelsen til dine aktive PowerShell-fjernsessioner.
 
@@ -49,7 +47,7 @@ Indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen giver ikke 
   Get-PSSession | Remove-PSSession; Disconnect-ExchangeOnline
   ```
 
-    Du kan få flere oplysninger under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+    Du kan få flere oplysninger under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Scriptet indeholder minimal fejlhåndtering. Det primære formål med scriptet er hurtigt at få vist en liste over mappe-id'er for postkasser eller webstedsstier, der kan bruges i søgeforespørgslens syntaks i en indholdssøgning til at udføre en målrettet samling.
 
@@ -57,13 +55,13 @@ Indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen giver ikke 
 
 ## <a name="step-1-run-the-script-to-get-a-list-of-folders-for-a-mailbox-or-site"></a>Trin 1: Kør scriptet for at få en liste over mapper for en postkasse eller et websted
 
-Det script, du kører i dette første trin, returnerer en liste over postkassemapper eller SharePoint og OneDrive for Business mapper samt det tilsvarende mappe-id eller den tilsvarende mappe-sti for hver mappe. Når du kører dette script, bliver du bedt om følgende oplysninger.
+Det script, du kører i dette første trin, returnerer en liste over postkassemapper eller SharePoint- og OneDrive for Business-mapper samt det tilsvarende mappe-id eller den tilsvarende mappesti for hver mappe. Når du kører dette script, bliver du bedt om følgende oplysninger.
 
-- **Mailadresse eller URL-adresse til websted**: Skriv en mailadresse til vogteren for at returnere en liste over Exchange postkassemapper og mappe-id'er. Du kan også skrive URL-adressen til et SharePoint websted eller et OneDrive for Business websted for at returnere en liste over stier for det angivne websted. Her er nogle eksempler:
+- **Mailadresse eller URL-adresse til websted**: Skriv en mailadresse til vogteren for at returnere en liste over Exchange-postkassemapper og mappe-id'er. Du kan også skrive URL-adressen til et SharePoint-websted eller et OneDrive for Business websted for at returnere en liste over stier for det angivne websted. Her er nogle eksempler:
 
-  - **Exchange**:`stacig@contoso.onmicrosoft.com`
+  - **Exchange**: `stacig@contoso.onmicrosoft.com`
 
-  - **SharePoint**:`https://contoso.sharepoint.com/sites/marketing`
+  - **SharePoint**: `https://contoso.sharepoint.com/sites/marketing`
 
   - **OneDrive for Business**:`https://contoso-my.sharepoint.com/personal/stacig_contoso_onmicrosoft_com`
 
@@ -236,11 +234,11 @@ Når du har kørt scriptet for at indsamle en liste over mappe-id'er eller dokum
 
 5. Gør et af følgende, afhængigt af om du søger i en postkassemappe eller en webstedsmappe:
 
-    - Ud for **Exchange mail** skal du klikke på **Vælg brugere, grupper eller teams** og derefter tilføje den samme postkasse, som du angav, da du kørte scriptet i trin 1.
+    - Ud for **Exchange-mail** skal du klikke på **Vælg brugere, grupper eller teams** og derefter tilføje den samme postkasse, som du angav, da du kørte scriptet i trin 1.
 
       Eller
 
-    - Ud for **SharePoint websteder** skal du klikke på **Vælg websteder** og derefter tilføje den samme URL-adresse til webstedet, som du angav, da du kørte scriptet i Trin 1.
+    - Ud for **SharePoint-websteder** skal du klikke på **Vælg websteder** og derefter tilføje den samme URL-adresse til webstedet, som du angav, da du kørte scriptet i trin 1.
 
 6. Når du har gemt indholdsplaceringen til søgning, skal du klikke på **Gem & køre**, skrive et navn til indholdssøgningen og derefter klikke på **Gem** for at starte søgningen efter målrettede samlinger.
 

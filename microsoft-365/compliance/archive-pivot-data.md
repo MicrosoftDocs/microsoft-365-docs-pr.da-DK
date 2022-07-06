@@ -1,5 +1,5 @@
 ---
-title: Konfigurer en connector til at arkivere pivotdata i Microsoft 365
+title: Konfigurer en connector til arkivering af pivotdata i Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -11,21 +11,19 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en connector til at importere og arkivere pivotdata fra Veritas i Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365 så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
-ms.openlocfilehash: 1564a434657e1f35a6da6ea55e2abc4f3b334a50
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Administratorer kan konfigurere en connector til at importere og arkivere pivotdata fra Veritas i Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365, så du kan bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, indholdssøgning og opbevaringspolitikker til at administrere din organisations tredjepartsdata.
+ms.openlocfilehash: 6b2515e9ac9fe38204ad44f37f2d99eced527da9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65317090"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625913"
 ---
 # <a name="set-up-a-connector-to-archive-pivot-data"></a>Konfigurer en connector til arkivering af pivotdata
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Pivot-platformen til brugerpostkasser i din Microsoft 365-organisation. Veritas giver dig en [Pivot-connector](https://globanet.com/pivot/) , der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og derefter importere disse elementer til Microsoft 365. Pivot er en chatplatform, der muliggør samarbejde med deltagere på det finansielle marked. Connectoren konverterer elementer som f.eks. chatmeddelelser fra en brugers pivotkonti til et mailformat og importerer derefter disse elementer til brugerpostkasserne i Microsoft 365.
 
-Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Pivot-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas giver dig en [Pivot-connector](https://globanet.com/pivot/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (regelmæssigt) og derefter importere disse elementer til Microsoft 365. Pivot er en chatplatform, der muliggør samarbejde med deltagere på det finansielle marked. Connectoren konverterer elementer som f.eks. chatbeskeder fra en brugers pivotkonti til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
-
-Når pivotdata er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. proceshold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikationsoverholdelse. Brug af en Pivot-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når pivotdata er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation venteposition, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikationsoverholdelse. Brug af en Pivot-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-pivot-data"></a>Oversigt over arkivering af pivotdata
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24. time kopieres pivotelementer til Veritas Merge1-webstedet. Connectoren konverterer også pivotelementerne til et mailformat.
 
-3. Den Pivot-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører pivotelementerne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den Pivot-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører pivotelementerne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Connectoren importerer pivotelementerne til bestemte brugeres postkasser ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning, som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Pivot** i brugerpostkasserne, og elementerne importeres til den pågældende mappe. Connectoren gør dette ved hjælp af værdien af egenskaben *Mail* . Hvert pivotelement indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
@@ -45,15 +43,15 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret en Veritas Merge1-konto til Microsoft-connectors. Hvis du vil oprette denne konto, skal du kontakte [Veritas-kundesupport](https://www.veritas.com/content/support/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter pivotconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter pivotconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Dataconnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-pivot-connector"></a>Trin 1: Konfigurer pivotconnectoren
 
 Det første trin er at få adgang til siden **Dataconnectors** i Microsoft Compliance Center og oprette en connector til pivotdata.
 
-1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsPivot** > .
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **Dataconnectors** > **Pivot**.
 
 2. Klik på **Tilføj connector** på siden **Med pivotproduktbeskrivelse**.
 
@@ -73,7 +71,7 @@ Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i co
 
 Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen i Microsoft 356 Compliance Center, skal du følge disse trin:
 
-1. Aktivér automatisk brugertilknytning på siden **Tilknyt pivotbrugere til Microsoft 365 brugere**. Pivotelementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+1. Aktivér automatisk brugertilknytning på siden **Knyt pivotbrugere til Microsoft 365-brugere** . Pivotelementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365-bruger, importeres elementerne til den pågældende brugers postkasse.
 
 2. Klik på **Næste**, gennemse dine indstillinger, og gå til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 

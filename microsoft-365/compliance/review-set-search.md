@@ -15,18 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du opretter og kører en forespørgsel i et korrektursæt for at organisere indhold for at få en mere effektiv korrektur i en Microsoft Purview eDiscovery-sag (Premium).
+description: Få mere at vide om, hvordan du opretter og kører en forespørgsel i et korrektursæt for at organisere indhold for at få en mere effektiv gennemgang i en Microsoft Purview eDiscovery (Premium)-sag.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 44f4b9d6aed92a6593f5c6c70322656e4c770c3d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: b40ab6818b4063a0b160ab9a41fdded6f7e7d37e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090911"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623755"
 ---
 # <a name="query-and-filter-content-in-a-review-set"></a>Forespørg om og filtrer indhold i et valideringssæt
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I de fleste tilfælde vil det være nyttigt at gå dybere ned i indholdet i et anmeldelsessæt og organisere det for at lette en mere effektiv korrektur. Brug af filtre og forespørgsler i et korrektursæt hjælper dig med at fokusere på et undersæt af dokumenter, der opfylder kriterierne i din anmeldelse.
 
@@ -131,7 +129,7 @@ På nuværende tidspunkt er der ikke en filterindstilling i en korrektur, der er
 
 3. Send den nye samling til det samme korrektursæt. Men denne gang skal du tilføje de delvist indekserede elementer fra de yderligere datakilder. Da elementer fra den samling, du oprettede i trin 1, allerede er føjet til korrektursættet, er det kun de delvist indekserede elementer fra den anden samling, der føjes til korrektursættet.
 
-4. Når begge samlinger er føjet til korrektursættet, skal du gå til korrektursættet og vælge **AdministrerIndlæs** >  sæt.
+4. Når begge samlinger er føjet til korrektursættet, skal du gå til korrektursættet og vælge **Administrer** > **indlæsningssæt**.
 
 5. Kopiér eller notér **indlæsnings-id'et** for den anden samling (den, du oprettede i trin 2). Samlingens navn identificeres i kolonnen **Kildeoplysninger** .
 

@@ -20,20 +20,18 @@ ms.custom:
 - seo-marvel-mar2020
 - admindeeplinkCOMPLIANCE
 description: I denne artikel får du mere at vide om, hvordan du opretter DLP-politikker ved hjælp af en af de skabeloner, der er inkluderet i Office 365.
-ms.openlocfilehash: 952a552210b00061717c24db5de5e5a47b84d72b
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 67d21d3e5a057960a4d3fa92bfaa709345cf38ff
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754670"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624581"
 ---
 # <a name="create-a-dlp-policy-from-a-template"></a>Opret en DLP-politik ud fra en skabelon
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Den nemmeste og mest almindelige måde at komme i gang med DLP-politikker på er at bruge en af de skabeloner, der er inkluderet i Microsoft Purview-compliance-portal. Du kan bruge en af disse skabeloner, som den er, eller tilpasse reglerne, så de opfylder organisationens specifikke krav til overholdelse af angivne standarder.
 
-Microsoft 365 indeholder over 40 brugsklare skabeloner, der kan hjælpe dig med at opfylde en lang række almindelige lovgivnings- og forretningspolitiske behov. Se; [Politikskabeloner](dlp-policy-reference.md#policy-templates) for en komplet liste. 
+Microsoft 365 indeholder mere end 40 brugsklare skabeloner, der kan hjælpe dig med at opfylde en lang række almindelige lovmæssige og forretningspolitiske behov. Se; [Politikskabeloner](dlp-policy-reference.md#policy-templates) for en komplet liste. 
 
 Du kan finjustere en skabelon ved at ændre en af dens eksisterende regler eller tilføje nye. Du kan f.eks. føje nye typer følsomme oplysninger til en regel, ændre antallet i en regel for at gøre det sværere eller nemmere at udløse, give personer tilladelse til at tilsidesætte handlingerne i en regel ved at angive en forretningsberettigelse eller ændre, hvem meddelelser og hændelsesrapporter sendes til. En DLP-politikskabelon er et fleksibelt udgangspunkt for mange almindelige scenarier for overholdelse af angivne standarder.
 
@@ -49,11 +47,11 @@ Medlemmer af dit overholdelsesteam, der skal oprette DLP-politikker, skal have t
 
 3. Når du opretter rollegruppen, skal du bruge afsnittet **Vælg roller** til at føje følgende rolle til rollegruppen: **DLP Compliance Management**.
     
-4. Brug afsnittet **Vælg medlemmer** til at føje den Microsoft 365 gruppe, du oprettede før, til rollegruppen.
+4. Brug afsnittet **Vælg medlemmer** til at føje den Microsoft 365-gruppe, du oprettede før, til rollegruppen.
 
 Brug rollen **Vis kun DLP-overholdelsesstyring** til at oprette en rollegruppe med skrivebeskyttede rettigheder til DLP-politikker og DLP-rapporter.
 
-Du kan få flere oplysninger [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal).
+Du kan få flere oplysninger [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md).
   
 Disse tilladelser kræves for at oprette og anvende en DLP-politik for ikke at gennemtvinge politikker.
 
@@ -61,14 +59,14 @@ Disse tilladelser kræves for at oprette og anvende en DLP-politik for ikke at g
 
 Der er roller og rollegrupper som prøveversion, som du kan teste for at finjustere dine adgangskontrolelementer.
 
-Her er en liste over relevante roller, der findes som prøveversion. Du kan få mere at vide om dem [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal).
+Her er en liste over relevante roller. Du kan få mere at vide om dem [under Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md)
 
 - Information Protection Administration
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
 
-Her er en liste over relevante rollegrupper, der findes som prøveversion. Du kan få mere at vide om under [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#permissions-in-the-microsoft-purview-compliance-portal)
+Her er en liste over relevante rollegrupper. Du kan få mere at vide om under [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md)
 
 - Information Protection
 - Information Protection administratorer
@@ -82,8 +80,6 @@ Her er en liste over relevante rollegrupper, der findes som prøveversion. Du ka
 
 2. I den Microsoft Purview-compliance-portal \> venstre navigationsrude \> **Løsninger** \> **Politikker til** \> **forebyggelse af** \> datatab **+ Opret politik**.
 
-    ![Opret en politikknap.](../media/b1e48a08-92e2-47ca-abdc-4341694ddc7c.png)
-          
 3. Vælg den DLP-politikskabelon, der beskytter de typer følsomme oplysninger, du skal bruge \> **Næste**.
 
 4. Navngiv politikken \> **Næste**.
@@ -103,13 +99,13 @@ Her er en liste over relevante rollegrupper, der findes som prøveversion. Du ka
    - Vælg **Alle placeringer i Office 365** \> **Næste**.
    - Vælg **Lad mig vælge bestemte placeringer** \> **Næste**. I dette eksempel skal du vælge dette.
 
-   Hvis du vil medtage eller udelade en hel placering, f.eks. alle Exchange mail eller alle OneDrive konti, skal du slå **Status** for den pågældende placering til eller fra.
+   Hvis du vil medtage eller udelade en hel placering, f.eks. alle Exchange-mails eller alle OneDrive-konti, skal du slå **Status** for den pågældende placering til eller fra.
 
-   Hvis du kun vil medtage bestemte SharePoint websteder eller OneDrive for Business konti, skal du skifte **status** til til og derefter klikke på linkene under **Medtag** for at vælge bestemte websteder eller konti. Når du anvender en politik på et websted, anvendes de regler, der er konfigureret i den pågældende politik, automatisk på alle underordnede websteder på det pågældende websted.
+   Hvis du kun vil medtage bestemte SharePoint-websteder eller OneDrive for Business konti, skal du skifte **Status** til til og derefter klikke på linkene under **Medtag** for at vælge bestemte websteder eller konti. Når du anvender en politik på et websted, anvendes de regler, der er konfigureret i den pågældende politik, automatisk på alle underordnede websteder på det pågældende websted.
 
    ![Indstillinger for placeringer, hvor en DLP-politik kan anvendes.](../media/all-locations.png)
 
-   I dette eksempel skal du deaktivere **Status** for både **Exchange mail**- og **SharePoint-websteder** for at beskytte følsomme oplysninger, der er gemt på alle OneDrive for Business konti, og lade **Status** være aktiveret for **OneDrive konti**.
+   I dette eksempel skal du deaktivere **Status** for både **Exchange-mail**- og **SharePoint-websteder** for at beskytte følsomme oplysninger, der er gemt på alle OneDrive for Business konti, og lade **Status** være aktiveret for **OneDrive-konti**.
 
 7. Vælg **Gennemse, og tilpas standardindstillingerne i skabelonen** \> **Næste**.
 
@@ -121,7 +117,7 @@ Her er en liste over relevante rollegrupper, der findes som prøveversion. Du ka
     1. Exchange
     1. SharePoint
     1. OneDrive
-    1. Teams chat- og kanalmeddelelser 
+    1. Teams-chat- og kanalmeddelelser 
 
 10. Vælg **Næste**.
 

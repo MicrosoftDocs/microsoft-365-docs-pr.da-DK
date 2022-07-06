@@ -15,12 +15,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du designer en DLP-politik (forebyggelse af datatab)
-ms.openlocfilehash: 2d7c370ab34eea2c708769674495a2c51f1a3fcf
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 32204659da3adcc2fd868568bf3a7bd909e5f2f9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782033"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623003"
 ---
 # <a name="design-a-data-loss-prevention-policy"></a>Design en politik til forebyggelse af datatab
 
@@ -30,9 +30,9 @@ Hvis du tager dig tid til at designe en politik, før du implementerer den, får
 
  if you have to do a lot of tuning to get a policy to yield the intended results can be time consuming .-->
 
-Hvis du ikke har Microsoft 365 DLP før, er det nyttigt at gennemgå disse artikler, før du begynder at designe en politik:
+Hvis du ikke kender Microsoft Purview DLP, er det nyttigt at gennemgå disse artikler, før du begynder at designe en politik:
 
-- [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) – i denne artikel introduceres du til disciplin til forebyggelse af datatab og Microsofts implementering af DLP
+- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) – i denne artikel introduceres du til disciplin til forebyggelse af datatab og Microsofts implementering af DLP
 - [Planlæg forebyggelse af datatab (DLP)](dlp-overview-plan-for-dlp.md#plan-for-data-loss-prevention-dlp) – ved at gennemgå denne artikel kan du:
   - [Identificer interessenter](dlp-overview-plan-for-dlp.md#identify-stakeholders)
   - [Beskriv kategorierne af følsomme oplysninger, der skal beskyttes](dlp-overview-plan-for-dlp.md#describe-the-categories-of-sensitive-information-to-protect)
@@ -56,7 +56,7 @@ Husk fra [oversigten over konfiguration af DLP-politikker](dlp-learn-about-dlp.m
 
 Her er f.eks. et fiktivt første udkast til en hensigtserklæring, der giver svar på alle fire spørgsmål:
 
-*"Vi er en amerikansk baseret organisation, og vi har brug for at registrere Office dokumenter, der indeholder følsomme sundhedsoplysninger, der er omfattet af HIPPA, og som er gemt i OneDrive/SharePoint og beskytte mod, at disse oplysninger deles i Teams chat- og kanalmeddelelser, og forhindre alle i at dele dem med uautoriserede tredjeparter".*
+*"Vi er en amerikansk organisation, og vi er nødt til at registrere Office-dokumenter, der indeholder følsomme sundhedsoplysninger, der er omfattet af HIPPA, og som er gemt i OneDrive/SharePoint, og beskytte mod, at disse oplysninger deles i Teams-chat- og kanalmeddelelser, og begrænse alle fra at dele dem med uautoriserede tredjeparter".*
 
 Når du udvikler et politikdesign, vil du sandsynligvis ændre og udvide sætningen.
 
@@ -66,9 +66,9 @@ Lad os opdele eksempeludkastet og knytte den til konfigurationspunkter for DLP-p
 
 |Erklæring|Svar på konfigurationsspørgsmål og konfigurationstilknytning|
 |---|---|
-|"Vi er en amerikansk baseret organisation, og vi har brug for at registrere Office dokumenter, der indeholder følsomme sundhedsoplysninger, der er omfattet af HIPPA ...|- **Hvad skal du overvåge**: Office dokumentation, skal du bruge skabelonen [HIPAA (US Health Insurance Act)](what-the-dlp-policy-templates-include.md#us-health-insurance-act-hipaa) </br>- **Betingelser for et match**: (forudkonfigureret, men redigerbart) - element indeholder nummer på US SSN og Drug Enforcement Agency (DEA), International Classification of Diseases (ICD-9-CM), International Classification of Diseases (ICD-10-CM), indhold deles med personer uden for min organisation  </br> – styrer samtaler for at tydeliggøre den udløsende grænse for registrering, f.eks [. tillidsniveauer](sensitive-information-type-learn-about.md#more-on-confidence-levels) og [antal forekomster](dlp-policy-reference.md#content-contains) (kaldet lækagetolerance).|
-|... der er gemt i OneDrive/SharePoint og beskytter mod, at disse oplysninger deles Teams chat- og kanalmeddelelser...|- **Overvågning**: [Placeringsinterval ved](dlp-policy-reference.md#locations) at inkludere eller udelade OneDrive og SharePoint websteder og Teams chat-/kanalkonti eller distributionsgrupper.|
-|... og begrænse alle fra at dele disse elementer med uautoriserede tredjeparter."|- **Handlinger, der skal udføres**: [Du tilføjer](dlp-policy-reference.md#actions) *Begræns adgang eller krypterer indholdet på Microsoft 365 placeringer* </br> – styrer samtale om, hvilke handlinger der skal udføres, når en politik udløses, herunder beskyttende handlinger, f.eks. delingsbegrænsninger, opmærksomhedshandlinger som meddelelser og beskeder, og handlinger til brugeraktivering, f.eks. tillad brugertilsidesættelser af en blokeringshandling|
+|"Vi er en amerikansk organisation, og vi har brug for at registrere Office-dokumenter, der indeholder følsomme sundhedsoplysninger, der er omfattet af HIPPA...|- **Hvad skal du overvåge**: Office-dokumenter, skal du bruge skabelonen [HIPAA (U.S. Health Insurance Act)](what-the-dlp-policy-templates-include.md#us-health-insurance-act-hipaa) </br>- **Betingelser for et match**: (forudkonfigureret, men redigerbart) - element indeholder nummer på US SSN og Drug Enforcement Agency (DEA), International Classification of Diseases (ICD-9-CM), International Classification of Diseases (ICD-10-CM), indhold deles med personer uden for min organisation  </br> – styrer samtaler for at tydeliggøre den udløsende grænse for registrering, f.eks [. tillidsniveauer](sensitive-information-type-learn-about.md#more-on-confidence-levels) og [antal forekomster](dlp-policy-reference.md#content-contains) (kaldet lækagetolerance).|
+|... der er gemt i OneDrive/SharePoint, og som beskytter mod, at disse oplysninger deles i Teams-chat- og kanalmeddelelser...|- **Hvor skal du overvåge**:  [Placeringsinterval ved](dlp-policy-reference.md#locations) at inkludere eller udelade OneDrive- og SharePoint-websteder og Teams-chat-/kanalkonti eller distributionsgrupper.|
+|... og begrænse alle fra at dele disse elementer med uautoriserede tredjeparter."|- **Handlinger, der skal udføres**: [Du tilføjer](dlp-policy-reference.md#actions) *Begræns adgang eller krypterer indholdet på Microsoft 365-placeringer* </br> – styrer samtale om, hvilke handlinger der skal udføres, når en politik udløses, herunder beskyttende handlinger, f.eks. delingsbegrænsninger, opmærksomhedshandlinger som meddelelser og beskeder, og handlinger til brugeraktivering, f.eks. tillad brugertilsidesættelser af en blokeringshandling|
 
 Dette eksempel dækker ikke alle konfigurationspunkterne for en DLP-politik. Det skal udvides. Men det bør få dig til at tænke i den rigtige retning, når du udvikler dine egne DLP-politikhensigtserklæringer.
 

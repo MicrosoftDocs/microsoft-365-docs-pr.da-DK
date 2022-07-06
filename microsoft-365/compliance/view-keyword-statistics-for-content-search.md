@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du bruger funktionen til søgestatistik til at få vist statistik for indholdssøgninger og søgninger, der er knyttet til en eDiscovery-sag (Standard) i Microsoft Purview-compliance-portal.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: cc8e249f62b0dbfbeaa6bcf32e7873ca2ff5b36d
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: df1ebeeb7b420be3dbe6ccac6174078008b7f0e8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318066"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623579"
 ---
 # <a name="view-statistics-for-ediscovery-search-results"></a>Vis statistik for eDiscovery-søgeresultater
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har oprettet og kørt en indholdssøgning eller en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard), kan du få vist statistikker om de anslåede søgeresultater. Dette omfatter en oversigt over søgeresultaterne (svarende til oversigten over de anslåede søgeresultater, der vises på søgevinduets side), forespørgselsstatistikken, f.eks. antallet af indholdsplaceringer med elementer, der stemmer overens med søgeforespørgslen, og identiteten af indholdsplaceringer, der har de mest matchende elementer.
   
@@ -43,7 +41,7 @@ Sådan får du vist statistikker for en indholdssøgning eller en søgning, der 
 
      ELLER
 
-   - Klik på **eDiscoveryeDiscovery** >  **(Standard),** vælg en sag, og vælg derefter en søgning på fanen **Søgninger** for at få vist pop op-siden.
+   - Klik på **eDiscovery** > **eDiscovery (Standard),** vælg en sag, og vælg derefter en søgning på fanen **Søgninger** for at få vist pop op-siden.
 
 2. Klik på fanen **Søg efter statistik** på pop op-siden i den valgte søgning.
   
@@ -69,7 +67,7 @@ I dette afsnit vises statistik om søgeforespørgslen og antallet af anslåede e
 
 ![Betingelsesrapport.](../media/SearchContentReportNoKeywordList.png)
 
-- **Placeringstype**: Den type indholdsplacering, som forespørgselsstatistikken gælder for. Værdien af **Exchange** angiver placeringen af en postkasse. Værdien **SharePoint** angiver placeringen af webstedet.
+- **Placeringstype**: Den type indholdsplacering, som forespørgselsstatistikken gælder for. Værdien af **Exchange** angiver en postkasses placering. en værdi i **SharePoint** angiver en webstedsplacering.
 
 - **Del**: Den del af søgeforespørgslen, som statistikkerne gælder for. **Primary** angiver hele søgeforespørgslen. **Nøgleordet** angiver, at statistikkerne i rækken er for et bestemt nøgleord. Hvis du bruger en nøgleordsliste til søgeforespørgslen, medtages statistik for hver komponent i forespørgslen i denne tabel. Du kan finde flere oplysninger under [Hent nøgleordsstatistik for søgninger](#get-keyword-statistics-for-searches).
 

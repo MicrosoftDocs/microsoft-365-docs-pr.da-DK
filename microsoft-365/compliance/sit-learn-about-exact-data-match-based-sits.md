@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Få mere at vide om præcise datamatchbaserede følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0574c11751898b31b22da4642f2d5dd415991732
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 5d4a45e7ecdb143187b9d90fdedbaf1f235c7d52
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65415920"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621991"
 ---
 # <a name="learn-about-exact-data-match-based-sensitive-information-types"></a>Få mere at vide om nøjagtigt datamatch baseret på typer af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Følsomme oplysningstyper](sensitive-information-type-learn-about.md) bruges til at hjælpe med at identificere følsomme elementer, så du kan forhindre, at de deles utilsigtet eller upassende, for at hjælpe med at finde relevante data i eDiscovery og anvende styringshandlinger på visse typer oplysninger. Du definerer en brugerdefineret type følsomme oplysninger (SIT) baseret på:
 
@@ -46,7 +44,7 @@ Men hvad nu, hvis du vil have en brugerdefineret type følsomme oplysninger (SIT
 
 ![EDM-baseret klassificering.](../media/EDMClassification.png)
 
-Med EDM-baseret klassificering kan du oprette brugerdefinerede typer følsomme oplysninger, der refererer til præcise værdier i en database med følsomme oplysninger. Databasen kan opdateres dagligt og indeholde op til 100 millioner rækker med data. Så efterhånden som medarbejdere, patienter eller klienter kommer og går, og registrerer ændringer, forbliver dine brugerdefinerede følsomme oplysningstyper aktuelle og relevante. Og du kan bruge EDM-baseret klassificering med politikker, f.eks. [Microsoft Purview politikker til forebyggelse af datatab](dlp-learn-about-dlp.md) eller [Microsoft Cloud App Security filpolitikker](/cloud-app-security/data-protection-policies).
+Med EDM-baseret klassificering kan du oprette brugerdefinerede typer følsomme oplysninger, der refererer til præcise værdier i en database med følsomme oplysninger. Databasen kan opdateres dagligt og indeholde op til 100 millioner rækker med data. Så efterhånden som medarbejdere, patienter eller klienter kommer og går, og registrerer ændringer, forbliver dine brugerdefinerede følsomme oplysningstyper aktuelle og relevante. Og du kan bruge EDM-baseret klassificering med politikker, f.eks[. Microsoft Purview-politikker til forebyggelse af datatab](dlp-learn-about-dlp.md) eller [Microsoft Cloud App Security filpolitikker](/cloud-app-security/data-protection-policies).
 
 > [!NOTE]
 > Microsoft Purview Information Protection understøtter sprog med dobbeltbytetegnsæt for:
@@ -101,13 +99,25 @@ Proximity – Antallet af tegn mellem primært og understøttende element
 
 Når du opretter et EDM SIT, definerer du et *primært elementfelt* i regelpakken. Primære felter er de elementer, som alt dit indhold søges efter, og som skal følge et defineret mønster for at kunne identificeres. Når det primære element findes i scannede elementer, søger EDM derefter efter de *sekundære* eller understøttende elementer, som ikke behøver at følge et mønster, og deres nærhed til det primære element. EDM kræver, at det primære element først kan findes via et eksisterende SIT. Se [Objektdefinitioner for følsomme oplysninger for](sensitive-information-type-entity-definitions.md) at få en komplet liste over de tilgængelige SIT'er. Du bliver nødt til at finde en af dem, der registrerer den klasse, du vil have din EDM SIT til at registrere. Hvis dit EDM SIT-skema f.eks. har det amerikanske cpr-nummer som det primære element, ville du knytte EDM-skemaet til det [amerikanske CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn) SIT.
 
-
 ## <a name="how-matching-works"></a>Sådan fungerer matchende
 
 EDM finder resultater ved at sammenligne indhold, der findes, med en tabel med følsomme data, som du definerer. Matchtestene udføres ved hjælp af en kombination af traditionelle regler og mønstre for at sikre, at de matchede data er en faktisk forekomst af data, du vil finde og beskytte. EDM arbejder i sin kerne ved at sammenligne strenge i dine dokumenter og mails med værdier i en tabel med følsomme data, du angiver, for at finde ud af, om værdierne i dit indhold findes i tabellen, ved at sammenligne kryptografiske envejshashs.
 
 > [!TIP]
 > En almindelig praksis er at kombinere brugen af EDM Følsomme informationstyper og de almindelige følsomme oplysningstyper, som de er baseret på i DLP-regler, med forskellige tærskler. Du kan f.eks. bruge en EDM-følsom informationstype, der søger efter cpr-numre og andre data, med strenge krav og lav tolerance, hvor et eller flere matches vil forårsage en DLP-besked, og bruge den almindelige følsomme informationstype, f.eks. det indbyggede CPR-nummer til højere antal.  
+
+## <a name="services-that-edm-supports"></a>Tjenester, som EDM understøtter
+
+
+|Tjeneste  |Steder  |
+|---------|---------|
+| Microsoft Purview Forebyggelse af datatab    | - SharePoint Online </br>- OneDrive for Business </br>- Teams-chat </br>- Exchange Online </br>- Enheder       |
+|Microsoft Defender for Cloud Apps     | - SharePoint Online </br>- OneDrive for Business        |
+|Automatisk mærkning (tjenesteside)     |- SharePoint Online </br>- OneDrive for Business </br>- Exchange Online         |
+|Automatisk mærkning (klientside)     |- Ord </br>- Excel </br>- PowerPoint </br>- Exchange Desktop-klienter         |
+|Kundeadministrer nøgle     |- SharePoint Online </br>- OneDrive for Business </br>- Teams-chat </br>- Exchange Online </br>- Ord </br>- Excel </br>- PowerPoint </br>- Exchange Desktop-klienter </br>- Enheder         |
+|eDiscovery     |- SharePoint Online </br>- OneDrive for Business </br>- Teams-chat </br>- Exchange Online </br>- Ord </br>- Excel </br>- PowerPoint </br>- Exchange Desktop-klienter  |
+|Styring af insiderrisiko     |- SharePoint Online </br>- OneDrive for Business </br>- Teams-chat </br>- Exchange Online </br>- Ord </br>- Excel </br>- PowerPoint </br>- Exchange Desktop-klienter      |
 
 ## <a name="see-also"></a>Se også
 

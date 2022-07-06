@@ -21,19 +21,17 @@ ms.assetid: bad352ff-d5d2-45d8-ac2a-6cb832f10e73
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkSPO
-description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 04d41936e437740a39ab73aeafb9ca40b914dd2f
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Få mere at vide om, hvordan du kører et script for at føje postkasser & OneDrive for Business websteder til en ny venteposition, der er knyttet til en eDiscovery-sag i Microsoft Purview-compliance-portal.
+ms.openlocfilehash: ebfe9bf2fc2784e8c590b949912aa15c1b773cc0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012742"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621639"
 ---
 # <a name="use-a-script-to-add-users-to-a-hold-in-a-ediscovery-standard-case"></a>Brug et script til at føje brugere til en venteposition i en eDiscovery-sag (Standard)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-PowerShell & overholdelse af angivne standarder indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge Microsoft Purview eDiscovery-sagen (Standard) i Microsoft Purview-overholdelsesportalen til at placere et stort antal placeringer med tilsynsførende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
+PowerShell & overholdelse af angivne standarder indeholder cmdlet'er, der giver dig mulighed for at automatisere tidskrævende opgaver, der er relateret til oprettelse og administration af eDiscovery-sager. I øjeblikket tager det tid og forberedelse at bruge sagen Microsoft Purview eDiscovery (Standard) i Microsoft Purview-compliance-portal til at placere et stort antal placeringer med frihedsberøvende indhold i venteposition. Før du f.eks. opretter en venteposition, skal du indsamle URL-adressen for hvert OneDrive for Business websted, du vil placere i venteposition. Derefter skal du for hver bruger, du vil placere i venteposition, føje deres postkasse og deres OneDrive for Business websted til venteposition. Du kan bruge scriptet i denne artikel til at automatisere denne proces.
 
 Scriptet beder dig om navnet på organisationens Mit websted-domæne (f.eks `contoso` . i URL-adressen https://contoso-my.sharepoint.com), navnet på en eksisterende eDiscovery-sag, navnet på den nye venteposition, der er knyttet til sagen, en liste over mailadresser på de brugere, du vil sætte i venteposition, og en søgeforespørgsel, der skal bruges, hvis du vil oprette en forespørgselsbaseret venteposition. Scriptet henter derefter URL-adressen for det OneDrive for Business websted for hver bruger på listen, opretter den nye venteposition og føjer derefter postkassen og OneDrive for Business websted for hver bruger på listen til ventepositionen. Scriptet genererer også logfiler, der indeholder oplysninger om den nye venteposition.
 
@@ -47,7 +45,7 @@ Her er de trin, du skal udføre for at få dette til at ske:
 
 ## <a name="before-you-add-users-to-a-hold"></a>Før du føjer brugere til en venteposition
 
-- Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen og en SharePoint Online-administrator for at køre scriptet i trin 3. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
+- Du skal være medlem af rollegruppen eDiscovery Manager på overholdelsesportalen og en SharePoint Online-administrator for at kunne køre scriptet i trin 3. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser i Office 365 Security & Compliance Center](assign-ediscovery-permissions.md).
 
 - Der kan maksimalt føjes 1.000 postkasser og 100 websteder til en venteposition, der er knyttet til en eDiscovery-sag i overholdelsesportalen. Hvis du antager, at alle brugere, du vil placere i venteposition, har et OneDrive for Business websted, kan du føje maksimalt 100 brugere til venteposition ved hjælp af scriptet i denne artikel.
 
@@ -55,7 +53,7 @@ Her er de trin, du skal udføre for at få dette til at ske:
 
 - Scriptet føjer listen over brugere til en ny venteposition, der er knyttet til en eksisterende sag. Sørg for, at det tilfælde, du vil knytte ventepositionen til, oprettes, før du kører scriptet.
 
-- Scriptet i denne artikel understøtter moderne godkendelse, når der oprettes forbindelse til Security & Compliance PowerShell og SharePoint Online Management Shell. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365 eller en Microsoft 365 GCC organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-IPPSSession` og bruge *parametrene ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance PowerShell. Du kan få flere oplysninger i eksemplerne i [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
+- Scriptet i denne artikel understøtter moderne godkendelse, når der oprettes forbindelse til Security & Compliance PowerShell og SharePoint Online Management Shell. Du kan bruge scriptet, som det er, hvis du er en Microsoft 365- eller Microsoft 365 GCC-organisation. Hvis du er en Office 365 Germany-organisation, en Microsoft 365 GCC High-organisation eller en Microsoft 365 DoD-organisation, skal du redigere scriptet for at kunne køre det. Du skal specifikt redigere linjen `Connect-IPPSSession` og bruge *parametrene ConnectionUri* og *AzureADAuthorizationEndpointUri* (og de relevante værdier for din organisationstype) til at oprette forbindelse til Security & Compliance PowerShell. Du kan få flere oplysninger i eksemplerne i [Opret forbindelse til sikkerhed & PowerShell til overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell#connect-to-security--compliance-center-powershell-without-using-mfa).
 
 - Scriptet afbryder automatisk forbindelsen til Security & Compliance PowerShell og SharePoint Online Management Shell.
 
@@ -67,7 +65,7 @@ Her er de trin, du skal udføre for at få dette til at ske:
 
 Det første trin er at installere SharePoint Online Management Shell, hvis den ikke allerede er installeret på din lokale computer. Du behøver ikke at bruge shell'en i denne procedure, men du skal installere den, fordi den indeholder forudsætninger, der kræves af det script, du kører i trin 3. Disse forudsætninger gør det muligt for scriptet at kommunikere med SharePoint Online for at hente URL-adresserne til de OneDrive for Business websteder.
 
-Gå til [Konfigurer shellmiljøet SharePoint onlineadministration](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell på din lokale computer.
+Gå til [Konfigurer SharePoint Online Management Shell-miljøet](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) , og udfør trin 1 og trin 2 for at installere SharePoint Online Management Shell på din lokale computer.
 
 ## <a name="step-2-generate-a-list-of-users"></a>Trin 2: Opret en liste over brugere
 
@@ -85,9 +83,9 @@ Når du har kørt denne kommando, skal du åbne tekstfilen og fjerne den header,
 
 Når du kører scriptet i dette trin, bliver du bedt om følgende oplysninger. Sørg for at have disse oplysninger klar, før du kører scriptet.
 
-- **Dine brugerlegitimationsoplysninger:** Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til PowerShell til sikkerhed & overholdelse af angivne standarder. Den bruger også disse legitimationsoplysninger til at få adgang SharePoint Online til at få OneDrive for Business URL-adresser til listen over brugere.
+- **Dine brugerlegitimationsoplysninger:** Scriptet bruger dine legitimationsoplysninger til at oprette forbindelse til PowerShell til sikkerhed & overholdelse af angivne standarder. Den bruger også disse legitimationsoplysninger til at få adgang til SharePoint Online for at få OneDrive for Business URL-adresser til listen over brugere.
 
-- **Navnet på dit SharePoint domæne:** Scriptet beder dig om at angive dette navn, så det kan oprette forbindelse til <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>. Det bruger også domænenavnet til OneDrive URL-adresser i din organisation. Hvis URL-adressen for dit administration f.eks. er `https://contoso-admin.sharepoint.com` , og URL-adressen for OneDrive er `https://contoso-my.sharepoint.com`, skal du angive `contoso` , når scriptet beder dig om dit domænenavn.
+- **Navnet på dit SharePoint-domæne:** Scriptet beder dig om at angive dette navn, så det kan oprette forbindelse til <a href="https://go.microsoft.com/fwlink/?linkid=2185219" target="_blank">SharePoint Administration</a>. Det bruger også domænenavnet for OneDrive-URL-adresserne i din organisation. Hvis URL-adressen for dit administration f.eks. er `https://contoso-admin.sharepoint.com` , og URL-adressen til OneDrive er `https://contoso-my.sharepoint.com`, skal du angive `contoso` , når scriptet beder dig om dit domænenavn.
 
 - **Navn på sag:** Navnet på en eksisterende sag. Scriptet opretter en ny venteposition, der er knyttet til denne sag.
 

@@ -15,16 +15,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan du opretter og importerer en brugerdefineret type følsomme oplysninger for politikker i Overholdelsescenter.
-ms.openlocfilehash: 8678b7c218844d9963bd610b66e8b6c2c2647dea
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b71893afad2d68f9820f23e60ae9c3b15531f976
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014514"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625583"
 ---
 # <a name="create-a-custom-sensitive-information-type-using-powershell"></a>Opret en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel kan du se, hvordan du opretter en *XML-regelpakkefil* , der definerer brugerdefinerede [følsomme oplysningstyper](sensitive-information-type-entity-definitions.md). I denne artikel beskrives en brugerdefineret type følsomme oplysninger, der identificerer et medarbejder-id. Du kan bruge XML-eksempelfilen i denne artikel som udgangspunkt for din egen XML-fil.
 
@@ -33,7 +31,7 @@ Du kan finde flere oplysninger om typer af følsomme oplysninger under [Få mere
 Når du har oprettet en korrekt udformet XML-fil, kan du uploade den til Microsoft 365 ved hjælp af PowerShell. Derefter er du klar til at bruge din brugerdefinerede type følsomme oplysninger i politikker. Du kan teste dens effektivitet ved at registrere de følsomme oplysninger, som du havde tiltænkt.
 
 > [!NOTE]
-> Hvis du ikke har brug for det detaljerede kontrolelement, som PowerShell indeholder, kan du oprette brugerdefinerede følsomme oplysningstyper på Microsoft Purview-overholdelsesportalen. Du kan få flere oplysninger under [Opret en brugerdefineret type følsomme oplysninger](create-a-custom-sensitive-information-type.md).
+> Hvis du ikke har brug for det detaljerede kontrolelement, som PowerShell indeholder, kan du oprette brugerdefinerede typer følsomme oplysninger i Microsoft Purview-compliance-portal. Du kan få flere oplysninger under [Opret en brugerdefineret type følsomme oplysninger](create-a-custom-sensitive-information-type.md).
 
 ## <a name="important-disclaimer"></a>Vigtig ansvarsfraskrivelse
 
@@ -327,7 +325,7 @@ Ud over confidenceLevel for hvert mønster har enheden en anbefalet attribut for
 
 ## <a name="do-you-want-to-support-other-languages-in-the-ui-of-the-compliance-center-localizedstrings-element"></a>Vil du understøtte andre sprog i brugergrænsefladen i Overholdelsescenter? [Elementet LocalizedStrings]
 
-Hvis dit overholdelsesteam bruger Microsoft Purview-overholdelsesportalen til at oprette politikker i forskellige landestandarder og på forskellige sprog, kan du angive lokaliserede versioner af navnet og beskrivelsen af din brugerdefinerede type følsomme oplysninger. Når dit overholdelsesteam bruger Microsoft 365 på et sprog, som du understøtter, får de vist det oversatte navn i brugergrænsefladen.
+Hvis dit overholdelsesteam bruger Microsoft Purview-compliance-portal til at oprette politikker i forskellige landestandarder og på forskellige sprog, kan du angive lokaliserede versioner af navnet og beskrivelsen af din brugerdefinerede type følsomme oplysninger. Når dit overholdelsesteam bruger Microsoft 365 på et sprog, som du understøtter, får de vist det lokaliserede navn i brugergrænsefladen.
 
 ![Konfiguration af forekomstantal og matchnøjagtighed.](../media/11d0b51e-7c3f-4cc6-96d8-b29bcdae1aeb.png)
 
@@ -372,7 +370,7 @@ Når du er færdig, bør dit RulePack-element se sådan ud.
 
 ## <a name="validators"></a>Validatorer
 
-Microsoft 365 fremviser funktionsprocessorer for almindeligt anvendte SIT'er som validatorer. Her er en liste over dem.
+Microsoft 365 fremviser funktionsprocessorer til almindeligt anvendte SIT'er som validatorer. Her er en liste over dem.
 
 ### <a name="list-of-currently-available-validators"></a>Liste over validatorer, der er tilgængelige i øjeblikket
 
@@ -454,15 +452,15 @@ I dette eksempel er der defineret en datovalidator for en RegEx-del, hvor er dat
 
 Tidligere har du måske brugt Exchange Online PowerShell til at importere dine brugerdefinerede følsomme oplysningstyper til DLP. Nu kan dine brugerdefinerede typer følsomme oplysninger bruges i både <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> og Overholdelsescenter. Som en del af denne forbedring skal du bruge Security & Compliance PowerShell til at importere dine brugerdefinerede følsomme oplysningstyper – du kan ikke længere importere dem fra Exchange Online PowerShell. Dine brugerdefinerede typer følsomme oplysninger fungerer fortsat på samme måde som før. Det kan dog tage op til én time, før ændringer af brugerdefinerede følsomme oplysningstyper i Overholdelsescenter vises i Exchange Administration.
 
-Bemærk, at du i Overholdelsescenter bruger **[New-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage)** til at uploade en regelpakke. Tidligere brugte du cmdlet'en **ClassificationRuleCollection** i Exchange Administration.
+Bemærk, at du i Overholdelsescenter bruger **[New-DlpSensitiveInformationTypeRulePackage-cmdlet'en](/powershell/module/exchange/new-dlpsensitiveinformationtyperulepackage)** til at uploade en regelpakke. Tidligere brugte du cmdlet'en  **ClassificationRuleCollection** i Exchange Administration.
 
-## <a name="upload-your-rule-package"></a>Upload regelpakken
+## <a name="upload-your-rule-package"></a>Upload din regelpakke
 
 Benyt følgende fremgangsmåde for at uploade regelpakken:
 
 1. Gem den som en .xml fil med Unicode-kodning.
 
-2. [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/exchange-online-powershell)
+2. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/exchange-online-powershell)
 
 3. Brug følgende syntaks:
 
@@ -495,7 +493,7 @@ Benyt følgende fremgangsmåde for at uploade regelpakken:
      Get-DlpSensitiveInformationType
      ```
 
-     I forbindelse med brugerdefinerede følsomme oplysningstyper vil egenskabsværdien for Publisher være noget andet end Microsoft Corporation.
+     I forbindelse med brugerdefinerede typer følsomme oplysninger er egenskabsværdien i Publisher noget andet end Microsoft Corporation.
 
    - Erstat \<Name\> med værdien Name for den følsomme oplysningstype (f.eks. Medarbejder-id), og kør cmdlet'en [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) :
 
@@ -559,9 +557,9 @@ Hvis en brugerdefineret type følsomme oplysninger indeholder et problem, der ka
 
 ## <a name="recrawl-your-content-to-identify-the-sensitive-information"></a>Gensøg dit indhold for at identificere de følsomme oplysninger
 
-Microsoft 365 bruger søgecrawleren til at identificere og klassificere følsomme oplysninger i webstedets indhold. Indhold på SharePoint Online- og OneDrive for Business-websteder gensøges automatisk, når det opdateres. Men hvis du vil identificere din nye brugerdefinerede type følsomme oplysninger i alt eksisterende indhold, skal dette indhold søges igen.
+Microsoft 365 bruger søgecrawleren til at identificere og klassificere følsomme oplysninger i webstedets indhold. Indhold på SharePoint Online- og OneDrive for Business-websteder bliver automatisk gentaget, når det opdateres. Men hvis du vil identificere din nye brugerdefinerede type følsomme oplysninger i alt eksisterende indhold, skal dette indhold søges igen.
 
-I Microsoft 365 kan du ikke manuelt anmode om en nycrawl af en hel organisation, men du kan manuelt anmode om en ny forespørgsel for en gruppe af websteder, en liste eller et bibliotek. Du kan få flere oplysninger under [Anmod manuelt om gennemsøgning og omformatering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
+I Microsoft 365 kan du ikke manuelt anmode om en ny søgning i en hel organisation, men du kan manuelt anmode om en søgning efter en gruppe af websteder, en liste eller et bibliotek. Du kan få flere oplysninger under [Anmod manuelt om gennemsøgning og omformatering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
 
 ## <a name="reference-rule-package-xml-schema-definition"></a>Reference: XML-skemadefinition for regelpakke
 
@@ -912,6 +910,6 @@ Du kan kopiere denne markering, gemme den som en XSD-fil og bruge den til at val
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md)
+- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md)
 - [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
 - [Funktioner for type af følsomme oplysninger](sit-functions.md)

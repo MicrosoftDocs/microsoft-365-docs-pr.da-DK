@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Opret skemaet for nøjagtigt datamatch baseret på typer af følsomme oplysninger
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 080bdff37893bcf0d41414c066b51727d2650f7a
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: d5c2038dd7f3b4a6a96ad5e320e73254b21519f8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017158"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622013"
 ---
 # <a name="create-the-schema-for-exact-data-match-based-sensitive-information-types"></a>Opret skemaet for nøjagtigt datamatch baseret på typer af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan oprette skemaet og EDM SIT ved hjælp af [guiden Brug det nøjagtige datamatreringsskema og mønsteret for følsomme oplysninger eller](#use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard) [manuelt](#create-exact-data-match-schema-manually-and-upload). Du kan også kombinere begge ved hjælp af én metode til at oprette skemaet og senere redigere det ved hjælp af den anden metode.
 
@@ -36,7 +34,7 @@ Hvis du ikke er bekendt med EDM-baseret SITS eller deres implementering, skal du
 - [Få mere at vide om nøjagtigt datamatch baseret på typer af følsomme oplysninger](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types)
 - [Kom i gang med nøjagtigt datamatch baseret på typer af følsomme oplysninger](sit-get-started-exact-data-match-based-sits-overview.md#get-started-with-exact-data-match-based-sensitive-information-types)
 
-Et enkelt EDM-skema kan bruges i flere følsomme informationstyper, der bruger den samme følsomme datatabel. Du kan oprette op til 10 forskellige EDM-skemaer i en Microsoft 365 lejer.
+Et enkelt EDM-skema kan bruges i flere følsomme informationstyper, der bruger den samme følsomme datatabel. Du kan oprette op til 10 forskellige EDM-skemaer i en Microsoft 365-lejer.
 
 
 
@@ -50,7 +48,7 @@ Du kan bruge denne guide til at forenkle processen til oprettelse af skemafiler.
 
 ## <a name="use-the-exact-data-match-schema-and-sensitive-information-type-pattern-wizard"></a>Brug guiden Med det nøjagtige datamatchskema og mønsteret for følsomme oplysninger
 
-1. På Microsoft Purview-overholdelsesportalen for din lejer skal du gå til **Dataklassificering** > **Nøjagtige data matcher** > **EDM-skemaer**.
+1. I Microsoft Purview-compliance-portal for din lejer skal du gå til **Dataklassificering** > **Nøjagtige data matcher** > **EDM-skemaer**.
 
 2. Vælg **Opret EDM-skema** for at åbne konfigurationsvinduet til skemaguiden.
 
@@ -80,7 +78,7 @@ Du kan bruge denne guide til at forenkle processen til oprettelse af skemafiler.
 
 Hvis du har oprettet EDM-skemaet i guiden EDM-skema, skal du eksportere EDM-skemafilen i XML-format. Du skal bruge den i fasen [Hash og uploade den følsomme informationskildetabel for at finde præcise data, der matcher følsomme informationstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types) .
 
-1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Hvis du vil eksportere EDM-skemafilen, skal du bruge denne syntaks:
 
@@ -153,7 +151,7 @@ Flaget `ignoredDelimiters` understøtter ikke:
       - Brug kolonnenavne til *feltnavneværdier* .
       - Brug *searchable="true"* for de felter, der skal kunne søges i, og primære felter op til maksimalt 5 felter. Der skal kunne søges i mindst ét felt.
 
-      Følgende XML-fil definerer f.eks. skemaet for en database med patientposter med fem felter, der er angivet som søgbare: *PatientID*, *MRN*, *SSN*, *Telefon* og *DOB*.
+      Følgende XML-fil definerer f.eks. skemaet for en database med patientposter med fem felter angivet som søgbare: *PatientID*, *MRN*, *SSN*, *Phone* og *DOB*.
 
       Du kan kopiere, redigere og bruge vores eksempel.
 
@@ -175,7 +173,7 @@ Flaget `ignoredDelimiters` understøtter ikke:
 
    Når du har oprettet EDM-skemafilen i XML-format, skal du uploade den til cloudtjenesten.
 
-2. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+2. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 3. Kør følgende kommando for at uploade databaseskemaet:
 

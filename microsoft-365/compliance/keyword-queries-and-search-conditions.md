@@ -22,21 +22,19 @@ ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om mail- og dokumentegenskaber, som du kan søge i ved hjælp af eDiscovery-søgeværktøjerne i Microsoft 365.
-ms.openlocfilehash: ebea983caedc73c8471d6e460b58314bd76f1861
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 3ff2143a170531b527850b4805cb9a79f10afb5e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012334"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623865"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>Nøgleordsforespørgsler og søgebetingelser for eDiscovery
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I denne artikel beskrives de mail- og dokumentegenskaber, du kan søge efter i mailelementer og Microsoft Teams chatsamtaler i Exchange Online, og dokumenter, der er gemt på SharePoint og OneDrive for Business websteder, ved hjælp af eDiscovery-søgeværktøjerne på Microsoft Purview-overholdelsesportalen. Dette omfatter indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) (eDiscovery-søgninger i eDiscovery (Premium) kaldes *samlinger*). Du kan også bruge **\*-ComplianceSearch-cmdlet'erne** i Security & Compliance PowerShell til at søge efter disse egenskaber. I artiklen beskrives også:
+I denne artikel beskrives de mail- og dokumentegenskaber, du kan søge efter i mailelementer og Microsoft Teams-chatsamtaler i Exchange Online, og dokumenter, der er gemt på SharePoint og OneDrive for Business websteder ved hjælp af eDiscovery-søgeværktøjerne i Microsoft Purview-compliance-portal. Dette omfatter indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) (eDiscovery-søgninger i eDiscovery (Premium) kaldes *samlinger*). Du kan også bruge **\*-ComplianceSearch-cmdlet'erne** i Security & Compliance PowerShell til at søge efter disse egenskaber. I artiklen beskrives også:
 
 - Brug booleske søgeoperatorer, søgebetingelser og andre teknikker til søgeforespørgslen til at tilpasse søgeresultaterne.
-- Søgning efter følsomme datatyper og brugerdefinerede følsomme datatyper i SharePoint og OneDrive for Business.
+- Søger efter følsomme datatyper og brugerdefinerede følsomme datatyper i SharePoint og OneDrive for Business.
 - Søger efter webstedsindhold, der er delt med brugere uden for din organisation
 
 Du kan finde en trinvis vejledning i, hvordan du opretter forskellige eDiscovery-søgninger, under:
@@ -67,7 +65,7 @@ I følgende tabel vises de egenskaber for mailmeddelelser, der kan søges i ved 
 |Betydning|Vigtigheden af en mail, som en afsender kan angive, når der sendes en meddelelse. Meddelelser sendes som standard med normal prioritet, medmindre afsenderen angiver prioriteten som **høj** eller **lav**.|`importance:high` <p> `importance:medium` <p> `importance:low`|Meddelelser, der er markeret som høj prioritet, mellem prioritet eller lav prioritet.|
 |Er læst|Angiver, om meddelelser er blevet læst. Brug værdierne **true** eller **false**.|`isread:true` <p> `isread:false`|I det første eksempel returneres meddelelser, hvor egenskaben IsRead er angivet til **Sand**. I det andet eksempel returneres meddelelser, hvor egenskaben IsRead er angivet til **Falsk**.|
 |ItemClass|Brug denne egenskab til at søge efter bestemte tredjepartsdatatyper, som din organisation har importeret til Office 365. Brug følgende syntaks til denne egenskab:  `itemclass:ipm.externaldata.<third-party data type>*`|`itemclass:ipm.externaldata.Facebook* AND subject:contoso` <p> `itemclass:ipm.externaldata.Twitter* AND from:"Ann Beebe" AND "Northwind Traders"`|I det første eksempel returneres Facebook-elementer, der indeholder ordet "contoso" i egenskaben Subject. I det andet eksempel returneres Twitter-elementer, der er postet af Ann Beebe, og som indeholder nøgleordsudtrykket "Northwind Traders". <p> Du kan finde en komplet liste over værdier, der skal bruges til tredjepartsdatatyper for egenskaben ItemClass, under [Brug indholdssøgning til at søge efter tredjepartsdata, der blev importeret til Office 365](use-content-search-to-search-third-party-data-that-was-imported.md).|
-|Form|Den type mail, der skal søges efter. Mulige værdier: <p>  Kontakter <p>  Docs <p>  E-mail <p>  eksterne data <p>  Faxer <p>  Im <p>  Tidsskrifter <p>  Møder <p>  microsoftteams (returnerer elementer fra chats, møder og opkald i Microsoft Teams) <p>  Noter <p>  Indlæg <p>  rssfeeds <p>  Opgaver <p>  Voicemail|`kind:email` <p> `kind:email OR kind:im OR kind:voicemail` <p> `kind:externaldata`|Det første eksempel returnerer mails, der opfylder søgekriterierne. I det andet eksempel returneres mails, chatsamtaler (herunder Skype for Business samtaler og chats i Microsoft Teams) og talebeskeder, der opfylder søgekriterierne. I det tredje eksempel returneres elementer, der er importeret til postkasser i Microsoft 365 fra datakilder fra tredjepart, f.eks. Twitter, Facebook og Cisco Jabber, som opfylder søgekriterierne. Du kan få flere oplysninger under [Arkivering af tredjepartsdata i Office 365](https://www.microsoft.com/?ref=go).|
+|Form|Den type mail, der skal søges efter. Mulige værdier: <p>  Kontakter <p>  Docs <p>  E-mail <p>  eksterne data <p>  Faxer <p>  Im <p>  Tidsskrifter <p>  Møder <p>  microsoftteams (returnerer elementer fra chats, møder og opkald i Microsoft Teams) <p>  Noter <p>  Indlæg <p>  rssfeeds <p>  Opgaver <p>  Voicemail|`kind:email` <p> `kind:email OR kind:im OR kind:voicemail` <p> `kind:externaldata`|Det første eksempel returnerer mails, der opfylder søgekriterierne. I det andet eksempel returneres mails, chatsamtaler (herunder Skype for Business samtaler og chats i Microsoft Teams) og talebeskeder, der opfylder søgekriterierne. I det tredje eksempel returneres elementer, der er importeret til postkasser i Microsoft 365, fra datakilder fra tredjepart, f.eks. Twitter, Facebook og Cisco Jabber, som opfylder søgekriterierne. Du kan få flere oplysninger under [Arkivering af tredjepartsdata i Office 365](https://www.microsoft.com/?ref=go).|
 |Deltagere|Alle personfelterne i en mail. Disse felter er Fra, Til, Cc og Bcc.1<sup></sup>|`participants:garthf@contoso.com` <p> `participants:contoso.com`|Meddelelser, der er sendt af eller sendt til garthf@contoso.com. I det andet eksempel returneres alle meddelelser, der er sendt af eller sendt til en bruger i contoso.com domæne.<br>([Se Modtagerudvidelse](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Modtaget|Den dato, hvor en mail blev modtaget af en modtager.|`received:2021-04-15` <p> `received>=2021-01-01 AND received<=2021-03-31`|Meddelelser, der blev modtaget den 15. april 2021. I det andet eksempel returneres alle meddelelser, der er modtaget mellem den 1. januar 2021 og den 31. marts 2021.|
 |Modtagere|Alle modtagerfelter i en mail. Disse felter er Til, Cc og Bcc.1<sup></sup>|`recipients:garthf@contoso.com` <p> `recipients:contoso.com`|Meddelelser, der er sendt til garthf@contoso.com. I det andet eksempel returneres meddelelser, der er sendt til en hvilken som helst modtager i contoso.com domæne.<br>([Se Modtagerudvidelse](keyword-queries-and-search-conditions.md#recipient-expansion))|
@@ -92,27 +90,27 @@ Vær dog opmærksom på, at hvis du forhindrer modtagerudvidelse i søgeforespø
 
 ## <a name="searchable-site-properties"></a>Egenskaber for websted, der kan søges i
 
-I følgende tabel vises nogle af de SharePoint og OneDrive for Business egenskaber, der kan søges i ved hjælp af eDiscovery-søgeværktøjerne på Microsoft Purview-overholdelsesportalen eller ved hjælp af **New-ComplianceSearch** eller **Set-ComplianceSearch-cmdlet'en**. Tabellen indeholder et eksempel på syntaksen  _property:value_ for hver egenskab og en beskrivelse af de søgeresultater, der returneres af eksemplerne.
+I følgende tabel vises nogle af de SharePoint- og OneDrive for Business-egenskaber, der kan søges i ved hjælp af eDiscovery-søgeværktøjerne i Microsoft Purview-compliance-portal eller ved hjælp af **New-ComplianceSearch** eller **Set-ComplianceSearch-cmdlet'en**. Tabellen indeholder et eksempel på syntaksen  _property:value_ for hver egenskab og en beskrivelse af de søgeresultater, der returneres af eksemplerne.
 
-Du kan finde en komplet liste over SharePoint egenskaber, der kan søges [i, under Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Der kan søges i egenskaber, der er markeret med **Ja** i kolonnen **Forespørgselstabel** .
+Du kan finde en komplet liste over SharePoint-egenskaber, der kan søges [i, under Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Der kan søges i egenskaber, der er markeret med **Ja** i kolonnen **Forespørgselstabel** .
 
 |Ejendom|Beskrivelse af egenskab|Eksempel|Søgeresultater, der returneres af eksemplerne|
 |---|---|---|---|
-|Forfatter|Forfatterfeltet fra Office dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter. Sørg for at bruge brugerens viste navn til denne egenskab.|`author:"Garth Fort"`|Alle dokumenter, der er oprettet af Garth Fort.|
-|Contenttype|Den SharePoint indholdstype for et element, f.eks. element, dokument eller video.|`contenttype:document`|Alle dokumenter returneres.|
+|Forfatter|Forfatterfeltet fra Office-dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter. Sørg for at bruge brugerens viste navn til denne egenskab.|`author:"Garth Fort"`|Alle dokumenter, der er oprettet af Garth Fort.|
+|Contenttype|SharePoint-indholdstypen for et element, f.eks. element, dokument eller video.|`contenttype:document`|Alle dokumenter returneres.|
 |Lavet|Den dato, hvor et element oprettes.|`created>=2021-06-01`|Alle elementer, der er oprettet den 1. juni 2021 eller efter den 1. juni 2021.|
 |Oprettet af|Den person, der har oprettet eller uploadet et element. Sørg for at bruge brugerens viste navn til denne egenskab.|`createdby:"Garth Fort"`|Alle elementer, der er oprettet eller uploadet af Garth Fort.|
 |DetectedLanguage|Sproget for et element.|`detectedlanguage:english`|Alle elementer på engelsk.|
-|Dokumentlink|Stien (URL-adressen) til en bestemt mappe på et SharePoint eller OneDrive for Business websted. Hvis du bruger denne egenskab, skal du sørge for at søge på det websted, hvor den angivne mappe er placeret. <p> Hvis du vil returnere elementer, der er placeret i undermapper til den mappe, du angiver for egenskaben documentlink, skal du føje /\* til URL-adressen til den angivne mappe, f.eks. `documentlink: "https://contoso.sharepoint.com/Shared Documents/*"` <p> <br/>Du kan finde flere oplysninger om at søge efter egenskaben documentlink og bruge et script til at hente DOKUMENTlink-URL-adresserne til mapper på et bestemt websted under [Brug indholdssøgning til målrettede samlinger](use-content-search-for-targeted-collections.md).|`documentlink:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Private"` <p> `documentlink:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Shared with Everyone/*" AND filename:confidential`|I det første eksempel returneres alle elementer i den angivne OneDrive for Business mappe. I det andet eksempel returneres dokumenter i den angivne webstedsmappe (og alle undermapper), der indeholder ordet "fortroligt" i filnavnet.|
-|Filudvidelse|Filtypenavnet for en fil. f.eks. docx, one, pptx eller xlsx.|`fileextension:xlsx`|Alle Excel filer (Excel 2007 og nyere)|
+|Dokumentlink|Stien (URL-adressen) til en bestemt mappe på et SharePoint- eller OneDrive for Business websted. Hvis du bruger denne egenskab, skal du sørge for at søge på det websted, hvor den angivne mappe er placeret. <p> Hvis du vil returnere elementer, der er placeret i undermapper til den mappe, du angiver for egenskaben documentlink, skal du føje /\* til URL-adressen til den angivne mappe, f.eks. `documentlink: "https://contoso.sharepoint.com/Shared Documents/*"` <p> <br/>Du kan finde flere oplysninger om at søge efter egenskaben documentlink og bruge et script til at hente DOKUMENTlink-URL-adresserne til mapper på et bestemt websted under [Brug indholdssøgning til målrettede samlinger](use-content-search-for-targeted-collections.md).|`documentlink:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Private"` <p> `documentlink:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/Documents/Shared with Everyone/*" AND filename:confidential`|I det første eksempel returneres alle elementer i den angivne OneDrive for Business mappe. I det andet eksempel returneres dokumenter i den angivne webstedsmappe (og alle undermapper), der indeholder ordet "fortroligt" i filnavnet.|
+|Filudvidelse|Filtypenavnet for en fil. f.eks. docx, one, pptx eller xlsx.|`fileextension:xlsx`|Alle Excel-filer (Excel 2007 og nyere)|
 |Filnavn|Navnet på en fil.|`filename:"marketing plan"` <p> `filename:estimate`|Det første eksempel returnerer filer med det nøjagtige udtryk "marketingplan" i titlen. I det andet eksempel returneres filer med ordet "estimat" i filnavnet.|
 |LastModifiedTime|Den dato, hvor et element sidst blev ændret.|`lastmodifiedtime>=2021-05-01` <p> `lastmodifiedtime>=2021-05-01 AND lastmodifiedtime<=2021-06-01`|I det første eksempel returneres elementer, der blev ændret den 1. maj 2021 eller efter den 1. maj 2021. I det andet eksempel returneres elementer, der er ændret mellem den 1. maj 2021 og den 1. juni 2021.|
 |Ændret af|Den person, der senest har ændret et element. Sørg for at bruge brugerens viste navn til denne egenskab.|`modifiedby:"Garth Fort"`|Alle elementer, der senest blev ændret af Garth Fort.|
-|Sti|Stien (URL-adressen) til et bestemt websted på et SharePoint eller OneDrive for Business websted. <p> Hvis du kun vil returnere elementer fra det angivne websted, skal du føje det efterfølgende `/` til slutningen af URL-adressen, f.eks. `path: "https://contoso.sharepoint.com/sites/international/"` <p> Hvis du vil returnere elementer, der er placeret i mapper på det websted, du angiver i stiegenskaben, skal du føje `/*` til slutningen af URL-adressen, f.eks.  `path: "https://contoso.sharepoint.com/Shared Documents/*"` <p> **Bemærk:** Hvis du bruger egenskaben `Path` til at søge OneDrive placeringer, returneres mediefiler, f.eks. .png, .tiff- eller .wav-filer, ikke i søgeresultaterne. Brug en anden webstedsegenskab i søgeforespørgslen til at søge efter mediefiler i OneDrive mapper. <br/>|`path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/"` <p> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/*" AND filename:confidential`|I det første eksempel returneres alle elementer på det angivne OneDrive for Business websted. I det andet eksempel returneres dokumenter på det angivne websted (og mapper på webstedet), der indeholder ordet "fortroligt" i filnavnet.|
+|Sti|Stien (URL-adressen) til et bestemt websted på et SharePoint- eller OneDrive for Business websted. <p> Hvis du kun vil returnere elementer fra det angivne websted, skal du føje det efterfølgende `/` til slutningen af URL-adressen, f.eks. `path: "https://contoso.sharepoint.com/sites/international/"` <p> Hvis du vil returnere elementer, der er placeret i mapper på det websted, du angiver i stiegenskaben, skal du føje `/*` til slutningen af URL-adressen, f.eks.  `path: "https://contoso.sharepoint.com/Shared Documents/*"` <p> **Bemærk:** Hvis du bruger egenskaben `Path` til at søge efter OneDrive-placeringer, returneres mediefiler, f.eks. .png, .tiff- eller .wav-filer, ikke i søgeresultaterne. Brug en anden webstedsegenskab i søgeforespørgslen til at søge efter mediefiler i OneDrive-mapper. <br/>|`path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/"` <p> `path:"https://contoso-my.sharepoint.com/personal/garthf_contoso_com/*" AND filename:confidential`|I det første eksempel returneres alle elementer på det angivne OneDrive for Business websted. I det andet eksempel returneres dokumenter på det angivne websted (og mapper på webstedet), der indeholder ordet "fortroligt" i filnavnet.|
 |SharedWithUsersOWSUser|Dokumenter, der er blevet delt med den angivne bruger og vist på siden **Delt med mig** på brugerens OneDrive for Business websted. Dette er dokumenter, der udtrykkeligt er blevet delt med den angivne bruger af andre personer i organisationen. Når du eksporterer dokumenter, der svarer til en søgeforespørgsel, der bruger egenskaben SharedWithUsersOWSUser, eksporteres dokumenterne fra den oprindelige indholdsplacering for den person, der delte dokumentet med den angivne bruger. Du kan finde flere oplysninger under [Søgning efter webstedsindhold, der deles i din organisation](#searching-for-site-content-shared-within-your-organization).|`sharedwithusersowsuser:garthf` <p> `sharedwithusersowsuser:"garthf@contoso.com"`|Begge eksempler returnerer alle interne dokumenter, der udtrykkeligt er blevet delt med Garth Fort, og som vises på siden **Delt med mig** på Garth Forts OneDrive for Business-konto.|
 |Websted|URL-adressen på et websted eller en gruppe af websteder i din organisation.|`site:"https://contoso-my.sharepoint.com"` <p> `site:"https://contoso.sharepoint.com/sites/teams"`|I det første eksempel returneres elementer fra de OneDrive for Business websteder for alle brugere i organisationen. I det andet eksempel returneres elementer fra alle teamwebsteder.|
 |Størrelse|Størrelsen på et element i byte.|`size>=1` <p> `size:1..10000`|I det første eksempel returneres elementer, der er større end 1 byte. I det andet eksempel returneres elementer fra 1 til og med 10.000 byte.|
-|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Microsoft Office dokumenter. Det er forskelligt fra dokumentets filnavn.|`title:"communication plan"`|Alle dokumenter, der indeholder udtrykket "kommunikationsplan" i egenskaben Title metadata for et Office dokument.|
+|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Microsoft Office-dokumenter. Det er forskelligt fra dokumentets filnavn.|`title:"communication plan"`|Alle dokumenter, der indeholder udtrykket "kommunikationsplan" i egenskaben Title metadata for et Office-dokument.|
 
 ## <a name="searchable-contact-properties"></a>Egenskaber for kontakt, der kan søges i
 
@@ -124,7 +122,7 @@ I følgende tabel vises de egenskaber for kontakter, der er indekseret, og som d
 |Ejendom|Beskrivelse af egenskab|
 |---|---|
 |Adresse (arbejde)|Adressen i egenskaben **Forretningsadresse** . Egenskaben kaldes **også arbejdsadressen** på siden med kontaktegenskaber.|
-|Telefon (arbejde)|Telefonnummeret i en af egenskaberne **business Telefon** number.|
+|Telefon (arbejde)|Telefonnummeret i en af egenskaberne for **firmatelefonnummeret** .|
 |Firmanavn|Navnet i egenskaben **Firma** .|
 |Institut|Navnet i egenskaben **Afdeling** .|
 |Displayname|Kontaktens viste navn. Dette er navnet i egenskaben **Full Name** for kontakten.|
@@ -137,14 +135,14 @@ I følgende tabel vises de egenskaber for kontakter, der er indekseret, og som d
 |MiddleName|Navnet i egenskaben **Mellemnavn** .|
 |Mobiltelefon|Telefonnummeret i egenskaben **Mobiltelefonnummer** .|
 |Brugernavn|Navnet i egenskaben **Kaldenavn** .|
-|OfficeLocation|Værdien i **egenskaben Office** eller **Office placering**.|
+|OfficeLocation|Værdien **i office** - eller **Office-placeringsegenskaben** .|
 |Andre adresser|Værdien for egenskaben **Anden** adresse.|
 |Efternavn|Navnet i egenskaben **Efternavn** .|
 |Titel|Titlen i egenskaben **Stillingsbetegnelse** .|
 
 ## <a name="searchable-sensitive-data-types"></a>Følsomme datatyper, der kan søges i
 
-Du kan bruge eDiscovery-søgeværktøjer i overholdelsesportalen til at søge efter følsomme data, f.eks. kreditkortnumre eller cpr-numre, der er gemt i dokumenter på SharePoint og OneDrive for Business websteder. Det kan du gøre ved hjælp af egenskaben `SensitiveType` og navnet (eller id'et) for en følsom oplysningstype i en nøgleordsforespørgsel. Forespørgslen `SensitiveType:"Credit Card Number"` returnerer f.eks. dokumenter, der indeholder et kreditkortnummer. Forespørgslen  `SensitiveType:"U.S. Social Security Number (SSN)"` returnerer dokumenter, der indeholder et AMERIKANSK CPR-nummer.
+Du kan bruge eDiscovery-søgeværktøjer på overholdelsesportalen til at søge efter følsomme data, f.eks. kreditkortnumre eller cpr-numre, der er gemt i dokumenter på SharePoint og OneDrive for Business websteder. Det kan du gøre ved hjælp af egenskaben `SensitiveType` og navnet (eller id'et) for en følsom oplysningstype i en nøgleordsforespørgsel. Forespørgslen `SensitiveType:"Credit Card Number"` returnerer f.eks. dokumenter, der indeholder et kreditkortnummer. Forespørgslen  `SensitiveType:"U.S. Social Security Number (SSN)"` returnerer dokumenter, der indeholder et AMERIKANSK CPR-nummer.
 
 Hvis du vil se en liste over de følsomme oplysningstyper, du kan søge efter, skal du gå til **Dataklassificeringer** \> **Følsomme infotyper** på overholdelsesportalen. Du kan også bruge cmdlet'en **Get-DlpSensitiveInformationType** i PowerShell til sikkerhed & overholdelse til at få vist en liste over følsomme oplysningstyper.
 
@@ -152,7 +150,7 @@ Du kan finde flere oplysninger om oprettelse af forespørgsler ved hjælp af ege
 
 ### <a name="limitations-for-searching-sensitive-data-types"></a>Begrænsninger for søgning i følsomme datatyper
 
-- Hvis du vil søge efter brugerdefinerede følsomme oplysningstyper, skal du angive id'et for typen af følsomme oplysninger i `SensitiveType` egenskaben. Hvis du bruger navnet på en brugerdefineret type følsomme oplysninger (som vist i eksemplet for indbyggede følsomme oplysningstyper i det forrige afsnit), returneres der ingen resultater. Brug kolonnen **Publisher** på siden **Følsomme infotyper** i Overholdelsescenter (eller egenskaben **Publisher** i PowerShell) til at skelne mellem indbyggede og brugerdefinerede følsomme oplysningstyper. Indbyggede følsomme datatyper har en værdi for `Microsoft Corporation` egenskaben **Publisher**.
+- Hvis du vil søge efter brugerdefinerede følsomme oplysningstyper, skal du angive id'et for typen af følsomme oplysninger i `SensitiveType` egenskaben. Hvis du bruger navnet på en brugerdefineret type følsomme oplysninger (som vist i eksemplet for indbyggede følsomme oplysningstyper i det forrige afsnit), returneres der ingen resultater. Brug kolonnen **Publisher** på siden **Følsomme infotyper** i Overholdelsescenter (eller egenskaben **Publisher** i PowerShell) til at skelne mellem indbyggede og brugerdefinerede typer følsomme oplysninger. Indbyggede følsomme datatyper har værdien `Microsoft Corporation` for egenskaben **Publisher** .
 
   Hvis du vil have vist navnet og id'et for de brugerdefinerede følsomme datatyper i din organisation, skal du køre følgende kommando i Security & Compliance PowerShell:
 
@@ -213,9 +211,9 @@ Opret en betingelse ved hjælp af almindelige egenskaber, når du søger i postk
 |Betingelse|Beskrivelse|
 |---|---|
 |Dato|For mail den dato, hvor en meddelelse blev modtaget af en modtager eller sendt af afsenderen. For dokumenter den dato, hvor et dokument sidst blev ændret.|
-|Afsender/forfatter|Den person, der sendte en meddelelse i forbindelse med en mail. For dokumenter er den person, der er nævnt i forfatterfeltet, fra Office dokumenter. Du kan skrive mere end ét navn adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** .<br>([Se Modtagerudvidelse](keyword-queries-and-search-conditions.md#recipient-expansion))|
+|Afsender/forfatter|Den person, der sendte en meddelelse i forbindelse med en mail. For dokumenter: den person, der er nævnt i forfatterfeltet, fra Office-dokumenter. Du kan skrive mere end ét navn adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** .<br>([Se Modtagerudvidelse](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Størrelse (i byte)|Størrelsen på elementet (i byte) for både mail og dokumenter.|
-|Emne/titel|I forbindelse med mail er teksten i emnelinjen i en meddelelse. Titlen på dokumentet for dokumenter. Som tidligere forklaret er egenskaben Title metadata angivet i Microsoft Office dokumenter. Du kan skrive navnet på mere end én værdi for emne/titel adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** . <p> **Bemærk**! Medtag ikke dobbelte anførselstegn til værdierne for denne betingelse, fordi anførselstegn tilføjes automatisk, når denne søgebetingelse bruges. Hvis du føjer anførselstegn til værdien, føjes der to par dobbelte anførselstegn til betingelsesværdien, og søgeforespørgslen returnerer en fejl.|
+|Emne/titel|I forbindelse med mail er teksten i emnelinjen i en meddelelse. Titlen på dokumentet for dokumenter. Som tidligere forklaret er egenskaben Title metadata angivet i Microsoft Office-dokumenter. Du kan skrive navnet på mere end én værdi for emne/titel adskilt af kommaer. To eller flere værdier er logisk forbundet af operatoren **OR** . <p> **Bemærk**! Medtag ikke dobbelte anførselstegn til værdierne for denne betingelse, fordi anførselstegn tilføjes automatisk, når denne søgebetingelse bruges. Hvis du føjer anførselstegn til værdien, føjes der to par dobbelte anførselstegn til betingelsesværdien, og søgeforespørgslen returnerer en fejl.|
 |Opbevaringsmærkat|Opbevaringsmærkater for både mail og dokumenter, der kan anvendes automatisk eller manuelt på meddelelser og dokumenter. Opbevaringsmærkater kan bruges til at deklarere poster og hjælpe dig med at administrere datalevetidscyklussen for indhold ved at gennemtvinge regler for opbevaring og sletning, der er angivet af mærkaten. Du kan skrive en del af navnet på opbevaringsmærkaten og bruge et jokertegn eller skrive det komplette navn. Du kan finde flere oplysninger om opbevaringsmærkater under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).|
 
 ### <a name="conditions-for-mail-properties"></a>Betingelser for mailegenskaber
@@ -226,7 +224,7 @@ Opret en betingelse ved hjælp af postegenskaber, når du søger i postkasser el
 |---|---|
 |Meddelelsestype|Den meddelelsestype, der skal søges i. Dette er den samme egenskab som mailegenskaben Kind. Mulige værdier: <ul><li>Kontakter</li><li>Docs</li><li>E-mail</li><li>eksterne data</li><li>Fax</li><li>Im</li><li>Tidsskrifter</li><li>Møder</li><li>microsoftteams</li><li>Noter</li><li>Indlæg</li><li>rssfeeds</li><li>Opgaver</li><li>Voicemail</li></ul>|
 |Deltagere|Alle personfelterne i en mail. Disse felter er Fra, Til, Cc og Bcc. ([Se Modtagerudvidelse](keyword-queries-and-search-conditions.md#recipient-expansion))|
-|Type|Egenskaben meddelelsesklasse for et mailelement. Dette er den samme egenskab som mailegenskaben ItemClass. Det er også en betingelse med flere værdier. Hvis du vil vælge flere meddelelsesklasser, skal du holde **Ctrl nede** og derefter klikke på to eller flere meddelelsesklasser på den rulleliste, du vil føje til betingelsen. Hver meddelelsesklasse, du vælger på listen, forbindes logisk af operatoren **OR** i den tilsvarende søgeforespørgsel. <p> Du kan se en liste over de meddelelsesklasser (og deres tilsvarende meddelelsesklasse-id), der bruges af Exchange, og som du kan vælge på listen **Meddelelsesklasse**, under [Elementtyper og Meddelelsesklasser](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
+|Type|Egenskaben meddelelsesklasse for et mailelement. Dette er den samme egenskab som mailegenskaben ItemClass. Det er også en betingelse med flere værdier. Hvis du vil vælge flere meddelelsesklasser, skal du holde **Ctrl nede** og derefter klikke på to eller flere meddelelsesklasser på den rulleliste, du vil føje til betingelsen. Hver meddelelsesklasse, du vælger på listen, forbindes logisk af operatoren **OR** i den tilsvarende søgeforespørgsel. <p> Du kan se en liste over de meddelelsesklasser (og deres tilsvarende meddelelsesklasse-id), der bruges af Exchange, og som du kan vælge på listen **Meddelelsesklasse** , under [Elementtyper og Meddelelsesklasser](/office/vba/outlook/Concepts/Forms/item-types-and-message-classes).|
 |Modtaget|Den dato, hvor en mail blev modtaget af en modtager. Dette er den samme egenskab som egenskaben Modtaget mail.|
 |Modtagere|Alle modtagerfelter i en mail. Disse felter er Til, Cc og Bcc. ([Se Modtagerudvidelse](keyword-queries-and-search-conditions.md#recipient-expansion))|
 |Afsender|Afsenderen af en mail.|
@@ -240,8 +238,8 @@ Opret en betingelse ved hjælp af dokumentegenskaber, når du søger efter dokum
 
 |Betingelse|Beskrivelse|
 |---|---|
-|Forfatter|Forfatterfeltet fra Office dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter.|
-|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Office dokumenter. Den er forskellig fra dokumentets filnavn.|
+|Forfatter|Forfatterfeltet fra Office-dokumenter, som bevares, hvis et dokument kopieres. Hvis en bruger f.eks. opretter et dokument og sender mails med det til en anden, der derefter uploader det til SharePoint, bevarer dokumentet stadig den oprindelige forfatter.|
+|Titel|Dokumentets titel. Egenskaben Title er metadata, der er angivet i Office-dokumenter. Den er forskellig fra dokumentets filnavn.|
 |Lavet|Den dato, hvor et dokument oprettes.|
 |Senest ændret|Den dato, hvor et dokument sidst blev ændret.|
 |Filtype|Filtypenavnet for en fil. f.eks. docx, one, pptx eller xlsx. Dette er den samme egenskab som webstedsegenskaben FileExtension. <p> **Bemærk:** Hvis du medtager en betingelse af typen Filtype ved hjælp af operatoren **Equals** eller **Equals** i en søgeforespørgsel, kan du ikke bruge en præfikssøgning (ved at medtage jokertegnet ( \* ) i slutningen af filtypen) til at returnere alle versioner af en filtype. Hvis du gør det, ignoreres jokertegnet. Hvis du f.eks. inkluderer betingelsen `Equals any of doc*`, returneres der kun filer med filtypenavnet `.doc` . Filer med filtypenavnet `.docx` returneres ikke. Hvis du vil returnere alle versioner af en filtype, skal du bruge *egenskab:værdiparret* i en nøgleordsforespørgsel. f.eks. `filetype:doc*`.|
@@ -302,7 +300,7 @@ Følgende eksempler viser den GUI-baserede version af en søgeforespørgsel med 
 
 #### <a name="example-1"></a>Eksempel 1
 
-I dette eksempel returneres dokumenter på SharePoint og OneDrive for Business websteder, der indeholder et kreditkortnummer, og som senest blev ændret før den 1. januar 2021.
+I dette eksempel returneres dokumenter på SharePoint- og OneDrive for Business-websteder, der indeholder et kreditkortnummer, og som senest blev ændret før den 1. januar 2021.
 
 **GUI**:
 
@@ -358,7 +356,7 @@ Nogle specialtegn er ikke inkluderet i søgeindekset og kan derfor ikke søges i
 
 ## <a name="searching-for-site-content-shared-with-external-users"></a>Søger efter webstedsindhold, der er delt med eksterne brugere
 
-Du kan også bruge eDiscovery-søgeværktøjer i Overholdelsescenter til at søge efter dokumenter, der er gemt på SharePoint og OneDrive for Business websteder, der er blevet delt med personer uden for din organisation. Dette kan hjælpe dig med at identificere følsomme eller beskyttede oplysninger, der deles uden for din organisation. Det kan du gøre ved hjælp af egenskaben  `ViewableByExternalUsers` i en nøgleordsforespørgsel. Denne egenskab returnerer dokumenter eller websteder, der er blevet delt med eksterne brugere ved hjælp af en af følgende delingsmetoder:
+Du kan også bruge eDiscovery-søgeværktøjerne i Overholdelsescenter til at søge efter dokumenter, der er gemt på SharePoint, og OneDrive for Business websteder, der er blevet delt med personer uden for din organisation. Dette kan hjælpe dig med at identificere følsomme eller beskyttede oplysninger, der deles uden for din organisation. Det kan du gøre ved hjælp af egenskaben  `ViewableByExternalUsers` i en nøgleordsforespørgsel. Denne egenskab returnerer dokumenter eller websteder, der er blevet delt med eksterne brugere ved hjælp af en af følgende delingsmetoder:
 
 - En invitation til deling, der kræver, at brugerne logger på din organisation som en godkendt bruger.
 - Et anonymt gæstelink, som gør det muligt for alle med dette link at få adgang til ressourcen uden at skulle godkendes.
@@ -371,7 +369,7 @@ Her er nogle eksempler:
 > [!TIP]
 > En søgeforespørgsel, f.eks  `ViewableByExternalUsers:true AND ContentType:document` . kan returnere en masse .aspx-filer i søgeresultaterne. Hvis du vil fjerne disse (eller andre filtyper), kan du bruge egenskaben  `FileExtension` til at udelade bestemte filtyper, f.eks  `ViewableByExternalUsers:true AND ContentType:document NOT FileExtension:aspx`. .
 
-Hvad betragtes som indhold, der deles med personer uden for din organisation? Dokumenter på organisationens SharePoint og OneDrive for Business websteder, der deles ved at sende en invitation til deling, eller som er delt på offentlige placeringer. Følgende brugeraktiviteter resulterer f.eks. i indhold, der kan ses af eksterne brugere:
+Hvad betragtes som indhold, der deles med personer uden for din organisation? Dokumenter på din organisations SharePoint- og OneDrive for Business-websteder, der deles ved at sende en invitation til deling, eller som er delt på offentlige placeringer. Følgende brugeraktiviteter resulterer f.eks. i indhold, der kan ses af eksterne brugere:
 
 - En bruger deler en fil eller mappe med en person uden for din organisation.
 - En bruger opretter og sender et link til en delt fil til en person uden for organisationen. Dette link gør det muligt for den eksterne bruger at få vist (eller redigere) filen.
@@ -382,7 +380,7 @@ Hvad betragtes som indhold, der deles med personer uden for din organisation? Do
 Selvom egenskaben  `ViewableByExternalUsers` repræsenterer statussen for, om et dokument eller et websted deles med eksterne brugere, er der nogle advarsler om, hvad denne egenskab gør og ikke afspejler. I følgende scenarier opdateres værdien af  `ViewableByExternalUsers` egenskaben ikke, og resultaterne af en søgeforespørgsel, der bruger denne egenskab, kan være unøjagtige.
 
 - Ændringer i delingspolitikken, f.eks. deaktivering af ekstern deling for et websted eller for organisationen. Egenskaben viser stadig tidligere delte dokumenter som værende eksternt tilgængelige, selvom ekstern adgang kan være blevet tilbagekaldt.
-- Ændringer af gruppemedlemskab, f.eks. tilføjelse eller fjernelse af eksterne brugere til Microsoft 365-grupper eller Microsoft 365 sikkerhedsgrupper. Egenskaben opdateres ikke automatisk for elementer, som gruppen har adgang til.
+- Ændringer af gruppemedlemskab, f.eks. tilføjelse eller fjernelse af eksterne brugere til Microsoft 365-grupper eller Microsoft 365-sikkerhedsgrupper. Egenskaben opdateres ikke automatisk for elementer, som gruppen har adgang til.
 - Sender invitationer til deling til eksterne brugere, hvor modtageren ikke har accepteret invitationen, og derfor endnu ikke har adgang til indholdet.
 
 I disse scenarier afspejler egenskaben  `ViewableByExternalUsers` ikke den aktuelle delingsstatus, før webstedet eller dokumentbiblioteket gennemsøges igen og indekseres igen.
@@ -391,7 +389,7 @@ I disse scenarier afspejler egenskaben  `ViewableByExternalUsers` ikke den aktue
 
 Som tidligere forklaret kan du bruge egenskaben  `SharedWithUsersOWSUser` , så du kan søge efter dokumenter, der er blevet delt mellem personer i din organisation. Når en person deler en fil (eller mappe) med en anden bruger i din organisation, vises der et link til den delte fil på siden **Delt med mig** på den OneDrive for Business konto for den person, som filen blev delt med. Hvis du f.eks. vil søge efter de dokumenter, der er blevet delt med Sara Davis, kan du bruge forespørgslen  `SharedWithUsersOWSUser:"sarad@contoso.com"`. Hvis du eksporterer resultaterne af denne søgning, downloades de oprindelige dokumenter (placeret på indholdsplaceringen for den person, der delte dokumenterne med Sara).
 
-Dokumenter skal udtrykkeligt deles med en bestemt bruger for at blive returneret i søgeresultater, når egenskaben  `SharedWithUsersOWSUser` bruges. Når en person f.eks. deler et dokument på sin OneDrive konto, har vedkommende mulighed for at dele det med nogen (i eller uden for organisationen), kun dele det med personer i organisationen eller dele det med en bestemt person. Her er et skærmbillede af vinduet **Del** i OneDrive, der viser de tre delingsindstillinger.
+Dokumenter skal udtrykkeligt deles med en bestemt bruger for at blive returneret i søgeresultater, når egenskaben  `SharedWithUsersOWSUser` bruges. Når en person f.eks. deler et dokument på sin OneDrive-konto, har vedkommende mulighed for at dele det med nogen (i eller uden for organisationen), kun dele det med personer i organisationen eller dele det med en bestemt person. Her er et skærmbillede af vinduet **Del** i OneDrive, der viser de tre delingsindstillinger.
 
 ![Det er kun filer, der deles med bestemte personer, der returneres af en søgeforespørgsel, der bruger egenskaben SharedWithUsersOWSUser.](../media/469a4b61-68bd-4ab0-b612-ab6302973886.png)
 
@@ -421,11 +419,11 @@ kind:im AND subject:conversation AND (received=startdate..enddate)
 
 ## <a name="character-limits-for-searches"></a>Tegngrænser for søgninger
 
-Der er en grænse på 4.000 tegn for søgeforespørgsler, når du søger efter indhold på SharePoint websteder og OneDrive konti.
+Der er en grænse på 4.000 tegn for søgeforespørgsler, når du søger efter indhold på SharePoint-websteder og OneDrive-konti.
 Sådan beregnes det samlede antal tegn i søgeforespørgslen:
 
 - Tegnene i søgeforespørgslen med nøgleord (herunder både bruger- og filterfelter) tæller i forhold til denne grænse.
-- Tegnene i en hvilken som helst placeringsegenskab (f.eks. URL-adresserne for alle de SharePoint websteder eller OneDrive placeringer, der søges efter) tæller i forhold til denne grænse.
+- Tegnene i en hvilken som helst placeringsegenskab (f.eks. URL-adresserne for alle SharePoint-websteder eller OneDrive-placeringer, der søges efter) tæller i forhold til denne grænse.
 - Tegnene i alle filtre for søgetilladelser, der anvendes på den bruger, der kører søgeantallet i forhold til grænsen.
 
 Du kan finde flere oplysninger om tegngrænser i [eDiscovery-søgegrænser](limits-for-content-search.md#search-limits).
@@ -451,6 +449,6 @@ Du kan finde flere oplysninger om tegngrænser i [eDiscovery-søgegrænser](limi
 
 - Hvis du vil udelade indhold, der er markeret med en bestemt egenskabsværdi, fra dine søgeresultater, skal du placere et minustegn (-) før navnet på egenskaben. Udelukker f.eks. meddelelser, `-from:"Sara Davis"` der er sendt af Sara Davis.
 
-- Du kan eksportere elementer baseret på meddelelsestype. Hvis du f.eks. vil eksportere Skype samtaler og chats i Microsoft Teams, skal du bruge syntaksen `kind:im`. Hvis du kun vil returnere mails, skal du bruge `kind:email`. Hvis du vil returnere chats, møder og opkald i Microsoft Teams, skal du bruge `kind:microsoftteams`.
+- Du kan eksportere elementer baseret på meddelelsestype. Hvis du f.eks. vil eksportere Skype-samtaler og chats i Microsoft Teams, skal du bruge syntaksen `kind:im`. Hvis du kun vil returnere mails, skal du bruge `kind:email`. Hvis du vil returnere chats, møder og opkald i Microsoft Teams, skal du bruge `kind:microsoftteams`.
 
 - Som tidligere forklaret skal du, når du søger på websteder, føje det efterfølgende `/` til slutningen af URL-adressen, når du bruger egenskaben `path` til kun at returnere elementer på et angivet websted. Hvis du ikke medtager de efterstillede `/`, returneres elementer fra et websted med et lignende stinavn også. Hvis du f.eks. bruger `path:sites/HelloWorld` elementer fra websteder med navnet `sites/HelloWorld_East` eller `sites/HelloWorld_West` også returneres. Hvis du kun vil returnere elementer fra HelloWorld-webstedet, skal du bruge `path:sites/HelloWorld/`.

@@ -14,16 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du onboarder og om bord på macOS-enheder i Microsoft Purview-løsninger ved hjælp af Microsoft Intune til MDE-kunder
-ms.openlocfilehash: c6b374ad3c35ba3441e82412d9897132006d0559
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 3e6947483a4d3320b61211edeb0f9fdc3e31095d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952836"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623025"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers"></a>Onboarde og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint kunder
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-intune-for-microsoft-defender-for-endpoint-customers"></a>Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af Intune til Microsoft Defender for Endpoint-kunder
 
 > [!IMPORTANT]
 > Brug denne procedure ***, hvis du har*** installeret Microsoft Defender for Endpoint (MDE) på dine macOS-enheder
@@ -63,7 +61,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 ### <a name="create-system-configuration-profiles"></a>Opret systemkonfigurationsprofiler
 
-1. Åbn **profilerne Microsoft Endpoint Manager** **centerDevicesConfiguration** >  > .
+1. Åbn **konfigurationsprofilerne** **for Microsoft Endpoint Manager centerenheder** >  > .
 
 1. Vælg: **Opret profil**. 
 
@@ -84,7 +82,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 1. Gennemse dine indstillinger, og vælg **Opret** for at installere konfigurationen.
 
-1. Åbn **DevicesConfiguration-profiler** > . Du kan se dine oprettede profiler der.
+1. Åbn **Enhedskonfigurationsprofiler** > . Du kan se dine oprettede profiler der.
 
 1. På siden **Konfigurationsprofiler** skal du vælge den profil, du lige har oprettet, i dette eksempel *AccessibilityformacOS* og vælge **Enhedsstatus** for at få vist en liste over enheder og installationsstatussen for konfigurationsprofilen.
 
@@ -109,7 +107,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 > [!IMPORTANT]
 > Offboarding medfører, at enheden stopper med at sende sensordata til portalen, men data fra enheden, herunder reference til eventuelle beskeder, den har haft, bevares i op til seks måneder.
 
-1. I **Microsoft Endpoint Manager center** skal du åbne **DevicesConfiguration-profiler** > . Du kan se dine oprettede profiler der.
+1. Åbn **Profiler til konfiguration af** **enheder** >  i **Microsoft Endpoint Manager center**. Du kan se dine oprettede profiler der.
 
 2. Vælg profilen **MDE-indstillinger på siden Konfigurationsprofiler** .
 

@@ -1,5 +1,5 @@
 ---
-title: Overfør ældre eDiscovery-søgninger og ventepositioner til Microsoft Purview-overholdelsesportalen
+title: Overfør ældre eDiscovery-søgninger og ventepositioner til Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -15,20 +15,18 @@ ms.collection: M365-security-compliance
 ms.custom: admindeeplinkEXCHANGE
 ROBOTS: NOINDEX, NOFOLLOW
 description: ''
-ms.openlocfilehash: 3b80db06faea9c76c7df671468b94fc11f0c63df
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 607b66d863c0584ce1bb06c069de7870245cb167
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66010082"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622585"
 ---
 # <a name="migrate-legacy-ediscovery-searches-and-holds-to-the-compliance-portal"></a>Overfør ældre eDiscovery-søgninger og ventepositioner til overholdelsesportalen
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+De Microsoft Purview-compliance-portal giver en forbedret oplevelse i forbindelse med eDiscovery-brug, herunder: højere pålidelighed, bedre ydeevne og mange funktioner, der er skræddersyet til eDiscovery-arbejdsprocesser, herunder sager til at organisere dit indhold efter sag, gennemgå sæt for at gennemse indhold og analyser for at hjælpe med at gennemse data til gennemsyn, f.eks. gruppering af næsten dubletter, mailtråde, temaanalyse og forudsigende kodning.
 
-Microsoft Purview-overholdelsesportalen giver en forbedret oplevelse i forbindelse med eDiscovery-brug, herunder: højere pålidelighed, bedre ydeevne og mange funktioner, der er skræddersyet til eDiscovery-arbejdsprocesser, herunder sager til at organisere dit indhold efter sag, gennemgå sæt for at gennemse indhold og analyser for at hjælpe med at kassere data til gennemsyn, f.eks. næsten identisk gruppering, mailtrådning, temaanalyse og forudsigende kodning.
-
-Denne artikel indeholder en grundlæggende vejledning i, hvordan du overfører In-Place eDiscovery-søgninger og ventepositioner fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> til overholdelsesportalen for at hjælpe kunder med at drage fordel af den nye og forbedrede funktionalitet.
+For at hjælpe kunder med at drage fordel af den nye og forbedrede funktionalitet indeholder denne artikel en grundlæggende vejledning i, hvordan du overfører In-Place eDiscovery-søgninger og ventepositioner fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> til overholdelsesportalen.
 
 > [!NOTE]
 > Da der er mange forskellige scenarier, indeholder denne artikel en generel vejledning til at overføre søgninger og ventepositioner til en eDiscovery(Standard)-sag i overholdelsesportalen. Brug af eDiscovery-sager er ikke altid påkrævet, men de tilføjer et ekstra lag af sikkerhed ved at give dig tilladelse til at tildele tilladelser til at styre, hvem der har adgang til eDiscovery-sager i din organisation.
@@ -41,7 +39,7 @@ Denne artikel indeholder en grundlæggende vejledning i, hvordan du overfører I
 
 - Denne artikel indeholder en vejledning i, hvordan du opretter en eDiscovery-venteposition. Politikken for venteposition anvendes på postkasser via en asynkron proces. Når du opretter en eDiscovery-venteposition, skal du oprette både en CaseHoldPolicy og CaseHoldRule, ellers oprettes ventepositionen ikke, og indholdsplaceringer sættes ikke i venteposition.
 
-## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-powershell"></a>Trin 1: Forbind at Exchange Online PowerShell og PowerShell til & overholdelse af angivne standarder
+## <a name="step-1-connect-to-exchange-online-powershell-and-security--compliance-powershell"></a>Trin 1: Opret forbindelse til Exchange Online PowerShell og sikkerhed & Overholdelse af PowerShell
 
 Det første trin er at oprette forbindelse til Exchange Online PowerShell og Sikkerhed & Overholdelse af PowerShell i det samme PowerShell-vindue. Du kan kopiere følgende kommandoer, indsætte dem i et PowerShell-vindue og derefter køre dem. Du bliver bedt om at angive legitimationsoplysninger.
 
@@ -50,7 +48,7 @@ Connect-IPPSSession
 Connect-ExchangeOnline -UseRPSSession
 ```
 
-Du kan finde detaljerede instruktioner [under Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell) og [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Du kan finde detaljerede instruktioner under [Opret forbindelse til sikkerhed & Overholdelse af powerShell](/powershell/exchange/connect-to-scc-powershell) og [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-get-a-list-of-in-place-ediscovery-searches-by-using-get-mailboxsearch"></a>Trin 2: Hent en liste over In-Place eDiscovery-søgninger ved hjælp af Get-MailboxSearch
 
@@ -85,7 +83,7 @@ Outputtet af disse to kommandoer svarer til følgende:
 > [!NOTE]
 > Varigheden af den In-Place venteposition i dette eksempel er ubestemt (*ItemHoldPeriod: Unlimited*). Dette er typisk for eDiscovery- og juridiske undersøgelsesscenarier. Hvis varigheden af ventepositionen har en anden værdi end ubestemt, skyldes det sandsynligvis, at ventepositionen bruges til at bevare indhold i et opbevaringsscenarie. I stedet for at bruge eDiscovery-cmdlet'erne i Security & Compliance PowerShell til opbevaringsscenarier anbefaler vi, at du bruger [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy) og [New-RetentionComplianceRule](/powershell/module/exchange/new-retentioncompliancerule) til at bevare indhold. Resultatet af at bruge disse cmdlet'er svarer til at bruge **New-CaseHoldPolicy** og **New-CaseHoldRule**, men du kan angive en opbevaringsperiode og en opbevaringshandling, f.eks. sletning af indhold, når opbevaringsperioden udløber. Brug af opbevarings-cmdlet'er kræver heller ikke, at du knytter opbevaringsholdningerne til en eDiscovery-sag.
 
-## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>Trin 4: Opret en sag på Microsoft Purview-overholdelsesportalen
+## <a name="step-4-create-a-case-in-the-microsoft-purview-compliance-portal"></a>Trin 4: Opret en sag i Microsoft Purview-compliance-portal
 
 Hvis du vil oprette en eDiscovery-venteposition, skal du oprette en eDiscovery-sag, som ventepositionen skal knyttes til. I følgende eksempel oprettes der en eDiscovery-sag ved hjælp af et navn efter eget valg. Vi gemmer egenskaberne for den nye sag i en variabel til senere brug. Du kan få vist disse egenskaber ved at køre `$case | FL` kommandoen , når du har oprettet sagen.
 
@@ -139,7 +137,7 @@ New-ComplianceSearch -Name $search.Name -ExchangeLocation $search.SourceMailboxe
 
 Hvis du vil sikre dig, at alt er konfigureret korrekt, skal du gå til overholdelsesportalen på [https://compliance.microsoft.com](https://compliance.microsoft.com)og klikke på **eDiscovery > Core**.
 
-![Microsoft Purview-overholdelsesportal eDiscovery.](../media/MigrateLegacyeDiscovery7.png)
+![Microsoft Purview-compliance-portal eDiscovery.](../media/MigrateLegacyeDiscovery7.png)
 
 Den sag, du oprettede i trin 3, vises på siden **eDiscovery (Standard).** Åbn sagen, og læg derefter mærke til den venteposition, du oprettede i trin 4 på listen under fanen **Venteposition** . Du kan vælge ventepositionen for at få vist detaljer på pop op-siden, herunder antallet af postkasser, som ventepositionen anvendes på, og distributionsstatus.
 
@@ -175,4 +173,4 @@ Hvis du overfører en In-Place eDiscovery-søgning, men ikke knytter den til en 
 
   - [Start-ComplianceSearch](/powershell/module/exchange/start-compliancesearch)
 
-- Du kan få flere oplysninger om overholdelsesportalen under [Oversigt over Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center.md).
+- Du kan få flere oplysninger om portalen til overholdelse af angivne standarder [under Oversigt over Microsoft Purview-compliance-portal](microsoft-365-compliance-center.md).

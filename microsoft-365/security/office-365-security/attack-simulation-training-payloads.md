@@ -1,5 +1,5 @@
 ---
-title: Nyttedata i oplæring i simulering af angreb
+title: Kursus i nyttedata til angrebssimulering
 ms.author: chrisda
 author: chrisda
 manager: dansimp
@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter og administrerer nyttedata til oplæring i simulering af angreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 38e9e60c50a7bc0dec4e8f9f75845fdc34e4b237
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 6cb3f2b2edb3c55063db2640eab1dd888f9aa5b7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487218"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621287"
 ---
 # <a name="payloads-in-attack-simulation-training-in-defender-for-office-365"></a>Nyttedata i oplæring af simulering af angreb i Defender for Office 365
 
@@ -101,7 +101,7 @@ Når du vælger en nyttedata på listen, vises der et pop op-vindue med følgend
    ![Opret en nyttedata på fanen Lejernyttedata i Oplæring af nyttedata i simulering af angreb på Microsoft 365 Defender-portalen.](../../media/attack-sim-training-payload-create.png)
 
    > [!NOTE]
-   > ![Opret et ikon for nyttedata.](../../media/m365-cc-sc-create-icon.png) **Opret en nyttedata** er også tilgængelig på siden **Vælg nyttedata** i guiden til oprettelse af simulering. Du kan få flere oplysninger under [Simuler et phishing-angreb i Defender for Office 365](attack-simulation-training.md).
+   > ![Opret et ikon for nyttedata.](../../media/m365-cc-sc-create-icon.png) **Opret en nyttedata** er også tilgængelig på trinnet **Vælg nyttedata og logonside** i guiden til oprettelse af simulering. Du kan få flere oplysninger under [Opret en simulering: Vælg en nyttedata- og logonside](attack-simulation-training.md#select-a-payload-and-login-page).
    >
    > Når som helst under oprettelsesguiden kan du klikke på **Gem og luk** for at gemme dine fremskridt og fortsætte med at konfigurere nyttedataene senere. Du kan fortsætte, hvor du slap, ved at vælge meddelelsen under fanen **Lejernyttedata** i **Nyttedata** og derefter klikke på ![ikonet Rediger nyttedata.](../../media/m365-cc-sc-edit-icon.png) **Rediger nyttedata**. Den del fuldførte nyttedata har **statusværdien** **Kladde**.
 

@@ -19,16 +19,14 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: Der er mange følsomme oplysningstyper, der er klar til brug i dine DLP-politikker. I denne artikel vises alle disse typer følsomme oplysninger, og du kan se, hvad en DLP-politik søger efter, når hver type registreres.
-ms.openlocfilehash: af2cbd03de426aa34b9db82691a22684c4c1df0b
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 2d81410b86ca9a90b12dbaa850e36d8803af0d79
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130796"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622419"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Enhedsdefinitioner for type af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel vises alle objektdefinitioner for følsomme oplysninger. Hver definition viser, hvad en DLP-politik søger efter for at registrere hver type. Du kan få mere at vide om typer af følsomme oplysninger under [Typer af følsomme oplysninger](sensitive-information-type-learn-about.md)
 
@@ -1538,7 +1536,7 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-## <a name="azure-iaas-database-connection-string-and-azure-sql-connection-string"></a>Azure IAAS-databaseforbindelsesstreng og Azure SQL forbindelsesstreng
+## <a name="azure-iaas-database-connection-string-and-azure-sql-connection-string"></a>Forbindelsesstreng til Azure IAAS-database og Azure SQL-forbindelsesstreng
 
 ### <a name="format"></a>Format
 
@@ -1930,7 +1928,7 @@ En DLP-politik har stor tillid til, at den har registreret denne type følsomme 
 - testacs.<!--no-hyperlink-->Com
 - s-int.<!--no-hyperlink-->Nettet
 
-## <a name="azure-storage-account-key-generic"></a>Azure Storage kontonøgle (generisk)
+## <a name="azure-storage-account-key-generic"></a>Azure Storage-kontonøgle (generisk)
 
 ### <a name="format"></a>Format
 

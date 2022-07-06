@@ -15,16 +15,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan du fjerner en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
-ms.openlocfilehash: e935c9340c353561e71e25fdadfec5509da041e5
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: ba29c2f20133b94d87c14f527d454980c41373c9
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014734"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621683"
 ---
 # <a name="remove-a-custom-sensitive-information-type-using-powershell"></a>Fjern en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I PowerShell & overholdelse af angivne standarder er der to metoder til at fjerne brugerdefinerede følsomme oplysningstyper:
 
@@ -33,7 +31,7 @@ I PowerShell & overholdelse af angivne standarder er der to metoder til at fjern
 - **Fjern en brugerdefineret regelpakke og alle brugerdefinerede følsomme oplysningstyper, den indeholder**: Denne metode er dokumenteret i dette afsnit.
 
 > [!NOTE]
-> Før du fjerner en brugerdefineret type følsomme oplysninger, skal du kontrollere, at ingen DLP-politikker eller Exchange regler for mailflow (også kaldet transportregler) stadig refererer til typen af følsomme oplysninger.
+> Før du fjerner en brugerdefineret type følsomme oplysninger, skal du kontrollere, at ingen DLP-politikker eller Exchange-regler for mailflow (også kaldet transportregler) stadig refererer til typen af følsomme oplysninger.
 
 1. [PowerShell til & overholdelse af angivne standarder](/powershell/exchange/exchange-online-powershell)
 
@@ -67,7 +65,7 @@ I PowerShell & overholdelse af angivne standarder er der to metoder til at fjern
      Get-DlpSensitiveInformationType
      ```
 
-     I forbindelse med brugerdefinerede følsomme oplysningstyper vil egenskabsværdien for Publisher være noget andet end Microsoft Corporation.
+     I forbindelse med brugerdefinerede typer følsomme oplysninger er egenskabsværdien i Publisher noget andet end Microsoft Corporation.
 
    - Erstat \<Name\> med værdien Name for den følsomme oplysningstype (f.eks. Medarbejder-id), og kør cmdlet'en [Get-DlpSensitiveInformationType](/powershell/module/exchange/get-dlpsensitiveinformationtype) for at kontrollere, at typen af følsomme oplysninger ikke længere er angivet:
 
@@ -77,7 +75,7 @@ I PowerShell & overholdelse af angivne standarder er der to metoder til at fjern
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md)
+- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md)
 
 - [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
 

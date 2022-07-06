@@ -15,22 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ec2677ff-c4d7-4363-a9e7-22c80e015688
-description: Brug eDiscovery-værktøjet til indholdssøgning til at søge efter elementer, der er importeret til postkasser i Microsoft 365 fra en datakilde fra en tredjepart, ved at oprette forespørgsler.
+description: Brug eDiscovery-værktøjet indholdssøgning til at søge efter elementer, der er importeret til postkasser i Microsoft 365 fra en datakilde fra tredjepart, ved at oprette forespørgsler.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 73967c8897ee0fd5143b8e15dfe8874fc0c85755
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 6d4475987cddb04e0ad49394eda14d638774c22e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095394"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624835"
 ---
 # <a name="use-content-search-to-search-third-party-data-imported-by-a-custom-partner-connector"></a>Brug indholdssøgning til at søge efter tredjepartsdata, der er importeret af en brugerdefineret partnerconnector
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan bruge [eDiscovery-værktøjet til indholdssøgning](content-search.md) på Microsoft Purview-overholdelsesportalen til at søge efter elementer, der er importeret til postkasser i Microsoft 365 fra en datakilde fra en tredjepart. Du kan oprette en forespørgsel for at søge i alle importerede dataelementer fra tredjepart, eller du kan oprette en forespørgsel for at søge efter bestemte dataelementer fra tredjepart. Du kan også oprette en forespørgselsbaseret opbevaringspolitik eller en forespørgselsbaseret eDiscovery-venteposition for at bevare tredjepartsdata.
+Du kan bruge [eDiscovery-værktøjet til indholdssøgning](content-search.md) i Microsoft Purview-compliance-portal til at søge efter elementer, der er importeret til postkasser i Microsoft 365, fra en datakilde fra en tredjepart. Du kan oprette en forespørgsel for at søge i alle importerede dataelementer fra tredjepart, eller du kan oprette en forespørgsel for at søge efter bestemte dataelementer fra tredjepart. Du kan også oprette en forespørgselsbaseret opbevaringspolitik eller en forespørgselsbaseret eDiscovery-venteposition for at bevare tredjepartsdata.
   
-Du kan få flere oplysninger om, hvordan du arbejder med en partner for at importere tredjepartsdata og en liste over de datatyper fra tredjepart, som du kan importere til Microsoft 365, [under Arbejd med en partner for at arkivere data fra tredjepart i Office 365](work-with-partner-to-archive-third-party-data.md).
+Du kan få flere oplysninger om at arbejde sammen med en partner om at importere tredjepartsdata og en liste over de datatyper fra tredjepart, som du kan importere til Microsoft 365, [under Arbejd med en partner for at arkivere tredjepartsdata i Office 365](work-with-partner-to-archive-third-party-data.md).
 
 > [!IMPORTANT]
 > Vejledningen i denne artikel gælder kun for tredjepartsdata, der er importeret af en brugerdefineret partnerconnector. Denne artikel gælder ikke for tredjepartsdata, der importeres ved hjælp af [dataconnectors fra tredjepart](archiving-third-party-data.md#third-party-data-connectors) i Microsofts overholdelsescenter.
@@ -71,7 +69,7 @@ I følgende tabel vises de datatyper fra tredjepart, som du kan søge efter, og 
 |Æblejuice  <br/> | `ipm.externaldata.AppleJuice*` <br/> |
 |Ares  <br/> | `ipm.externaldata.Ares*` <br/> |
 |Akser krypteret  <br/> | `ipm.externaldata.AxsEncrypted*` <br/> |
-|Akser Exchange  <br/> | `ipm.externaldata.AxsExchange*` <br/> |
+|Udveksling af akser  <br/> | `ipm.externaldata.AxsExchange*` <br/> |
 |Akser lokalt arkiv  <br/> | `ipm.externaldata.AxsLocalArchive*` <br/> |
 |Pladsholder til akser  <br/> | `ipm.externaldata.AxsPlaceHolder*` <br/> |
 |Akser signeret  <br/> | `ipm.externaldata.AxsSigned*` <br/> |
@@ -90,9 +88,9 @@ I følgende tabel vises de datatyper fra tredjepart, som du kan søge efter, og 
 |Cisco IM-tilstedeværelsesserver &amp;  <br/> | `ipm.externaldata.Jabber.IM` <br/> |
 |Cisco Jabber  <br/> | `ipm.externaldata.Jabber*` <br/> |
 |CipherCloud til Salesforce Chatter  <br/> | `ipm.externaldata.Chatter.Post` <br/>  `ipm.externaldata.Chatter.Comment` <br/> |
-|Direkte Forbind  <br/> | `ipm.externaldata.DirectConnect*` <br/> |
+|Direkte forbindelse  <br/> | `ipm.externaldata.DirectConnect*` <br/> |
 |Facebook  <br/> | `ipm.externaldata.Facebook*` <br/> |
-|FastTrack  <br/> | `ipm.externaldata.FastTrack*` <br/> |
+|Fasttrack  <br/> | `ipm.externaldata.FastTrack*` <br/> |
 |FXConnect  <br/> | `ipm.externaldata.FXConnect.chat` <br/> |
 |Flickr  <br/> | `ipm.externaldata.Flickr*` <br/> |
 |Gnutella  <br/> | `ipm.externaldata.Gnutella*` <br/> |

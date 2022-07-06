@@ -1,5 +1,5 @@
 ---
-title: Onboarde og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF-Pro til Microsoft Defender for Endpoint kunder
+title: Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder
 f1.keywords: NOCSH
 ms.author: chrfox
 author: chrfox
@@ -13,19 +13,17 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Få mere at vide om, hvordan du onboarder og om bord på macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF-Pro til Microsoft Defender for Endpoint kunder
-ms.openlocfilehash: ba2ff7723e54451ace46823fafb5323dcb35069e
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro til Microsoft Defender for Endpoint kunder
+ms.openlocfilehash: 97ab1dbccc28cd1f9d14635c2fa351d0295202c1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953377"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622915"
 ---
-# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers"></a>Onboarde og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF-Pro til Microsoft Defender for Endpoint kunder
+# <a name="onboard-and-offboard-macos-devices-into-compliance-solutions-using-jamf-pro-for-microsoft-defender-for-endpoint-customers"></a>Onboard og offboard macOS-enheder i overholdelsesløsninger ved hjælp af JAMF Pro for Microsoft Defender for Endpoint-kunder
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan bruge JAMF-Pro til at integrere macOS-enheder i Microsoft Purview-løsninger.
+Du kan bruge JAMF Pro til at integrere macOS-enheder i Microsoft Purview-løsninger.
 
 > [!IMPORTANT]
 > Brug denne procedure ***, hvis du har*** installeret Microsoft Defender for Endpoint (MDE) på dine macOS-enheder
@@ -39,10 +37,10 @@ Du kan bruge JAMF-Pro til at integrere macOS-enheder i Microsoft Purview-løsnin
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Sørg for, at dine [macOS-enheder administreres via JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) og er knyttet til en identitet (Azure AD joinforbundet UPN) via JAMF-Forbind eller Intune.
+- Sørg for, at dine [macOS-enheder administreres via JAMF Pro](https://www.jamf.com/resources/product-documentation/jamf-pro-installation-guide-for-mac/) og er knyttet til en identitet (Azure AD tilsluttet UPN) via JAMF Connect eller Intune.
 - Installér v95+ Edge-browseren på dine macOS-enheder
 
-## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>Onboarde enheder i Microsoft Purview-løsninger ved hjælp af JAMF-Pro
+## <a name="onboard-devices-into-microsoft-purview-solutions-using-jamf-pro"></a>Onboarder enheder i Microsoft Purview-løsninger ved hjælp af JAMF Pro
 
 Onboarding af en macOS-enhed i overholdelsesløsninger er en proces med flere faser.
 
@@ -82,7 +80,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 1. Opdater den eksisterende fulde diskadgangsprofil med **filen fulldisk.mobileconfig** .
 
-1. Upload filen **fulldisk.mobileconfig** til JAMF. Se [Udrulning af brugerdefinerede konfigurationsprofiler ved hjælp af JAMF-Pro](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html).
+1. Overfør filen **fulldisk.mobileconfig** til JAMF. Se [Udrulning af brugerdefinerede konfigurationsprofiler ved hjælp af JAMF Pro](https://docs.jamf.com/technical-articles/Deploying_Custom_Configuration_Profiles_Using_Jamf_Pro.html).
 
 ### <a name="grant-accessibility-access-to-dlp"></a>Tildel tilgængelighedsadgang til DLP
 
@@ -94,7 +92,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 1. Genstart macOS-enheden.
 
-1. Åbn **SystemindstillingerProfiler** > .
+1. Åbn **Profiler for systemindstillinger** > .
 
 1. Du burde kunne se:
     - Accessiblity
@@ -108,7 +106,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
     - Meddelelser
     - Profil for systemudvidelse
 
-## <a name="offboard-macos-devices-using-jamf-pro"></a>MacOS-enheder, der bruger JAMF-Pro
+## <a name="offboard-macos-devices-using-jamf-pro"></a>MacOS-enheder på offboard ved hjælp af JAMF Pro
 
 > [!IMPORTANT]
 > Offboarding medfører, at enheden stopper med at sende sensordata til portalen, men data fra enheden, herunder reference til eventuelle beskeder, den har haft, bevares i op til seks måneder.

@@ -374,7 +374,6 @@
       items:
         - name: Metoder til beskyttelse af enheds- og appdata
           href: devices/choose-device-security.md
-        - name: Valider indstillinger på Android eller iOS
         - name: Basic Mobility og Security
           items:
             - name: Oversigt over Basic Mobility og Security

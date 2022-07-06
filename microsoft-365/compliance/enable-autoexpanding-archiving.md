@@ -19,16 +19,14 @@ search.appverid:
 ms.assetid: e2a789f2-9962-4960-9fd4-a00aa063559e
 description: 'Administratorer: Få mere at vide om, hvordan du aktiverer automatisk udvidelse af arkivering, hvilket giver dine brugere ekstra lagerplads til deres Exchange Online postkasser. Du kan aktivere automatisk udvidelse af arkivering for hele organisationen eller kun for bestemte brugere.'
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 7f1155eaf95a8cf814561650acee4784e8c469df
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 16fa0a1a53572d0680160441b237cc7ceb27f712
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012755"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622871"
 ---
 # <a name="enable-auto-expanding-archiving"></a>Aktivér automatisk udvidelse af arkiv
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan bruge Exchange Online arkiveringsfunktion, der automatisk udvides, til at give ekstra lagerplads til arkivpostkasser. Når automatisk udvidelse af arkivering er slået til, føjes der automatisk ekstra lagerplads til en brugers arkivpostkasse, indtil den når lagergrænsen på 1,5 TB. Du kan aktivere automatisk udvidelse af arkivering for alle i din organisation eller kun for bestemte brugere. Du kan finde flere oplysninger om automatisk udvidelse af arkivering under [Få mere at vide om automatisk udvidelse af arkivering](autoexpanding-archiving.md).
 
@@ -46,15 +44,15 @@ Du kan bruge Exchange Online arkiveringsfunktion, der automatisk udvides, til at
 
 - Arkivering, der automatisk udvides, understøtter også delte postkasser. Hvis du vil aktivere arkivet for en delt postkasse, kræves der en Exchange Online Plan 2-licens eller en Exchange Online Plan 1-licens med en Exchange Online-arkivering licens.
 
-- Automatisk udvidelse af arkivering forhindrer dig i at gendanne eller gendanne en [inaktiv postkasse](inactive-mailboxes-in-office-365.md#what-are-inactive-mailboxes). Det betyder, at hvis du aktiverer automatisk udvidelse af arkivering for en postkasse, og postkassen gøres inaktiv på et senere tidspunkt, kan du ikke [gendanne den inaktive postkasse](recover-an-inactive-mailbox.md) (ved at konvertere den til en aktiv postkasse) eller [gendanne den](restore-an-inactive-mailbox.md) (ved at flette indholdet til en eksisterende postkasse). Hvis automatisk udvidelse af arkivering er aktiveret i en inaktiv postkasse, kan du kun gendanne data ved at bruge søgeværktøjet Indhold på Microsoft Purview-overholdelsesportalen til at eksportere dataene fra postkassen og importere dem til en anden postkasse. Du kan finde flere oplysninger i afsnittet "Inaktive postkasser og arkiver til automatisk udvidelse" i [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-auto-expanding-archives).
+- Automatisk udvidelse af arkivering forhindrer dig i at gendanne eller gendanne en [inaktiv postkasse](inactive-mailboxes-in-office-365.md#what-are-inactive-mailboxes). Det betyder, at hvis du aktiverer automatisk udvidelse af arkivering for en postkasse, og postkassen gøres inaktiv på et senere tidspunkt, kan du ikke [gendanne den inaktive postkasse](recover-an-inactive-mailbox.md) (ved at konvertere den til en aktiv postkasse) eller [gendanne den](restore-an-inactive-mailbox.md) (ved at flette indholdet til en eksisterende postkasse). Hvis automatisk udvidelse af arkivering er aktiveret i en inaktiv postkasse, kan du kun gendanne data ved at bruge søgeværktøjet Indhold i Microsoft Purview-compliance-portal til at eksportere dataene fra postkassen og importere dem til en anden postkasse. Du kan finde flere oplysninger i afsnittet "Inaktive postkasser og arkiver til automatisk udvidelse" i [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-auto-expanding-archives).
 
-- Du kan ikke bruge Exchange Administration eller Microsoft Purview-overholdelsesportalen til at aktivere automatisk udvidelse af arkivering. Du skal bruge Exchange Online PowerShell. Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til at aktivere automatisk udvidelse af arkivering. Du skal bruge Exchange Online PowerShell. Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="enable-auto-expanding-archiving-for-your-entire-organization"></a>Aktivér automatisk udvidelse af arkivering for hele organisationen
 
 Du kan aktivere automatisk udvidelse af arkivering for hele organisationen. Når du har slået den til, aktiveres automatisk udvidelse af arkivering for eksisterende brugerpostkasser og for nye brugerpostkasser, der oprettes. Når du opretter brugerpostkasser, skal du sørge for at aktivere brugerens primære arkivpostkasse, så funktionen til automatisk udvidelse af arkivering fungerer for den nye brugerpostkasse.
   
-1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Kør følgende kommando i Exchange Online PowerShell for at aktivere automatisk udvidelse af arkivering for hele organisationen.
 
@@ -74,7 +72,7 @@ Når du aktiverer automatisk udvidelse af arkivering for en bestemt bruger og br
 
 Denne ekstra plads tilføjes for at forhindre eventuelle lagerproblemer, der kan opstå, før arkivet til automatisk udvidelse klargøres. Der  *tilføjes ikke*  ekstra lagerplads, når du aktiverer automatisk udvidelse af arkivering for hele organisationen, som beskrevet i forrige afsnit.
   
-1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Kør følgende kommando i Exchange Online PowerShell for at aktivere automatisk udvidelse af arkivering for en bestemt bruger. Som tidligere forklaret skal brugerens arkivpostkasse (hovedarkiv) være aktiveret, før du kan aktivere automatisk udvidelse af arkivering for den pågældende bruger.
 
@@ -83,7 +81,7 @@ Denne ekstra plads tilføjes for at forhindre eventuelle lagerproblemer, der kan
     ```
 
 > [!IMPORTANT]
-> I en Exchange hybridinstallation kan du ikke bruge kommandoen **Enable-Mailbox -AutoExpandingArchive** til at aktivere automatisk udvidelse af arkivering for en bestemt bruger, hvis primære postkasse er i det lokale miljø, og hvis arkivpostkasse er cloudbaseret. Hvis du vil aktivere automatisk udvidelse af arkivering for skybaserede arkivpostkasser i en Exchange hybridinstallation, skal du køre kommandoen **Set-OrganizationConfig -AutoExpandingArchive** i Exchange Online PowerShell for at aktivere automatisk udvidelse af arkivering for hele organisationen. Hvis en brugers primære postkasser og arkivpostkasser begge er skybaserede, kan du bruge kommandoen **Enable-Mailbox -AutoExpandingArchive** til at aktivere automatisk udvidelse af arkivering for den pågældende bruger.
+> I en Exchange-hybridinstallation kan du ikke bruge kommandoen **Enable-Mailbox -AutoExpandingArchive** til at aktivere automatisk udvidelse af arkivering for en bestemt bruger, hvis primære postkasse er i det lokale miljø, og hvis arkivpostkasse er cloudbaseret. Hvis du vil aktivere automatisk udvidelse af arkivering for skybaserede arkivpostkasser i en Exchange-hybridinstallation, skal du køre kommandoen **Set-OrganizationConfig -AutoExpandingArchive** i Exchange Online PowerShell for at aktivere automatisk udvidelse af arkivering for hele organisationen. Hvis en brugers primære postkasser og arkivpostkasser begge er skybaserede, kan du bruge kommandoen **Enable-Mailbox -AutoExpandingArchive** til at aktivere automatisk udvidelse af arkivering for den pågældende bruger.
   
 ## <a name="verify-that-auto-expanding-archiving-is-enabled"></a>Kontrollér, at arkivering, der automatisk udvides, er aktiveret
 
@@ -127,9 +125,9 @@ Vær opmærksom på følgende ting, når du har aktiveret automatisk udvidelse a
     Get-Mailbox -Filter {ArchiveStatus -Eq "None" -AND RecipientTypeDetails -eq "UserMailbox"} | Enable-Mailbox -Archive
     ```
 
-- Automatisk udvidelse af arkivering understøttes for skybaserede arkivpostkasser i en Exchange hybridinstallation for brugere, der har en primær postkasse i det lokale miljø. Men når automatisk udvidelse af arkivering er aktiveret for en skybaseret arkivpostkasse, kan du ikke gå uden for arkivpostkassen tilbage til den lokale Exchange organisation. Automatisk udvidelse af arkivering understøttes ikke for postkasser i det lokale miljø i nogen version af Exchange Server.
+- Automatisk udvidelse af arkivering understøttes for skybaserede arkivpostkasser i en Exchange-hybridinstallation for brugere, der har en primær postkasse i det lokale miljø. Men når automatisk udvidelse af arkivering er aktiveret for en skybaseret arkivpostkasse, kan du ikke gå uden for arkivpostkassen tilbage til Exchange-organisationen i det lokale miljø. Automatisk udvidelse af arkivering understøttes ikke for postkasser i det lokale miljø i nogen version af Exchange Server.
 
-- Du kan finde en liste over Outlook klienter, som brugerne kan bruge til at få adgang til elementer i det ekstra lagerområde i deres arkivpostkasse, i afsnittet "Outlook krav til adgang til elementer i et automatisk udvidet arkiv" i [Få mere at vide om arkivering, der automatisk udvides](autoexpanding-archiving.md#outlook-requirements-for-accessing-items-in-an-auto-expanded-archive).
+- Du kan finde en liste over Outlook-klienter, som brugerne kan bruge til at få adgang til elementer i det ekstra lagerområde i deres arkivpostkasse, i afsnittet "Outlook-krav til adgang til elementer i et automatisk udvidet arkiv" i [Få mere at vide om automatisk udvidelse af arkivering](autoexpanding-archiving.md#outlook-requirements-for-accessing-items-in-an-auto-expanded-archive).
 
 - Som tidligere forklaret føjes 10 GB til lagerkvoten for brugerens primære arkivpostkasse (og til mappen Gendan elementer, hvis postkassen er i venteposition), når du kører kommandoen **Enable-Mailbox -AutoExpandingArchive** . Dette giver ekstra lagerplads, indtil den automatisk udvidede lagerplads er klargjort (hvilket kan tage op til 30 dage). Denne ekstra lagerplads tilføjes ikke, når du kører **Set-OrganizationConfig -AutoExpandingArchive** for at aktivere automatisk udvidelse af arkivering for alle postkasser i din organisation. Hvis du har aktiveret automatisk udvidelse af arkivering for hele organisationen, men har brug for at tilføje yderligere 10 GB lagerplads til en bestemt bruger, kan du køre kommandoen **Enable-Mailbox -AutoExpandingArchive** på den pågældende postkasse. Du får vist en fejlmeddelelse om, at automatisk udvidelse af arkivering allerede er aktiveret, men den ekstra lagerplads føjes til postkassen.
 

@@ -20,22 +20,20 @@ ms.assetid: cca08d26-6fbf-4b2c-b102-b226e4cd7381
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du opretter en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager.
-ms.openlocfilehash: 9db08335ff023172092e7bf8bada7a3976956d29
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 9820eba0e29a510a1881a9349f63c7e2d9650728
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017004"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625473"
 ---
 # <a name="use-a-script-to-create-a-report-on-holds-in-ediscovery-cases"></a>Brug et script til at oprette en rapport om ventepositioner i eDiscovery-sager
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Scriptet i denne artikel gør det muligt for eDiscovery-administratorer og eDiscovery-ledere at generere en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager (Standard) og eDiscovery-sager (Premium) i Microsoft Purview-overholdelsesportalen. Rapporten indeholder oplysninger som f.eks. navnet på den sag, som en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er sager, der ikke har nogen ventepositioner, opretter scriptet en ekstra rapport med en liste over sager uden venteposition.
+Scriptet i denne artikel gør det muligt for eDiscovery-administratorer og eDiscovery-ledere at generere en rapport, der indeholder oplysninger om alle ventepositioner, der er knyttet til sager med eDiscovery (Standard) og eDiscovery (Premium) i Microsoft Purview-compliance-portal. Rapporten indeholder oplysninger som f.eks. navnet på den sag, som en venteposition er knyttet til, de indholdsplaceringer, der er sat i venteposition, og om ventepositionen er forespørgselsbaseret. Hvis der er sager, der ikke har nogen ventepositioner, opretter scriptet en ekstra rapport med en liste over sager uden venteposition.
 
 Se afsnittet [Flere oplysninger](#more-information) for at få en detaljeret beskrivelse af de oplysninger, der er inkluderet i rapporten.
 
-## <a name="admin-requirements-and-script-information"></a>Administratorkrav og scriptoplysninger
+## <a name="admin-requirements-and-script-information"></a>Administration krav og scriptoplysninger
 
 - Hvis du vil generere en rapport over alle eDiscovery-sager i din organisation, skal du være eDiscovery-administrator i din organisation. Hvis du er eDiscovery Manager, indeholder rapporten kun oplysninger om de sager, du har adgang til. Du kan finde flere oplysninger om eDiscovery-tilladelser under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
@@ -43,9 +41,9 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en detaljeret bes
 
 - De eksempelscripts, der er angivet i dette emne, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscripts leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscripts og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts ophavsmænd eller andre, der er involveret i oprettelse, produktion eller levering af scripts, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscripts eller dokumentation,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-## <a name="step-1-connect-to-security--compliance-powershell"></a>Trin 1: Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder
+## <a name="step-1-connect-to-security--compliance-powershell"></a>Trin 1: Opret forbindelse til PowerShell til & overholdelse af angivne standarder
 
-Det første trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det første trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til sikkerhed & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-2-run-the-script-to-report-on-holds-associated-with-ediscovery-cases"></a>Trin 2: Kør scriptet for at rapportere om ventepositioner, der er knyttet til eDiscovery-sager
 
@@ -203,7 +201,7 @@ Sagen indeholder en rapport, der oprettes, når du kører scriptet i denne artik
 
 - Navnet på ventepositionen og navnet på den eDiscovery-sag, som ventepositionen er knyttet til.
 
-- Angiver, om ventepositionen er knyttet til en eDiscovery-sag (Standard) eller eDiscovery-sag (Premium).
+- Angiver, om ventepositionen er knyttet til en eDiscovery-sag (Standard) eller eDiscovery (Premium).
 
 - Hvorvidt eDiscovery-sagen er aktiv eller lukket.
 
@@ -215,7 +213,7 @@ Sagen indeholder en rapport, der oprettes, når du kører scriptet i denne artik
 
 - Hvis en sag lukkes, den person, der lukkede den, og tidspunktet og datoen for den blev lukket.
 
-- De Exchange postkasser og SharePoint websteder, der er i venteposition.
+- Exchange-postkasser og SharePoint-websteder, der er i venteposition.
 
 - Hvis ventepositionen er forespørgselsbaseret, er forespørgselssyntaksen.
 

@@ -17,20 +17,18 @@ search.appverid:
 - MET150
 description: Opdater din tabelfil med følsomme oplysninger.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: a846f22b866b4b8adf75c44e55fde4b9d56b8ac4
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 310663caae55bb9b5e0d07cb38ba9fa4b45e8a73
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66008839"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621661"
 ---
 # <a name="refresh-your-exact-data-match-sensitive-information-source-table-file"></a>Opdater den nøjagtige datamatchtabelfil til følsomme oplysninger 
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Du kan opdatere din følsomme informationsdatabase op til 5 gange i hver 24-timers periode. Du skal gemme og uploade din følsomme informationskildetabel igen.
 
-1. Eksportér de følsomme data til en app, f.eks. Microsoft Excel, og gem filen i .csv, .tsv-format eller pipeformat (|) afgrænset format. Behold det samme filnavn og den placering, du brugte, da du tidligere hashkodede og overførte filen. Se [Eksportér kildedata for præcise datamatch baseret på følsomme oplysninger for](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type) at få oplysninger om eksport af dine følsomme data og om at få dem til det korrekte format.
+1. Eksportér de følsomme data igen til en app, f.eks. Microsoft Excel, og gem filen i .csv, .tsv-format eller pipeformat (|) afgrænset format. Behold det samme filnavn og den placering, du brugte, da du tidligere hashkodede og overførte filen. Se [Eksportér kildedata for præcise datamatch baseret på følsomme oplysninger for](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type) at få oplysninger om eksport af dine følsomme data og om at få dem til det korrekte format.
 
       > [!NOTE]
       > Hvis der ikke er nogen ændringer af strukturen (feltnavne) i den følsomme informationskildetabelfil, behøver du ikke at foretage ændringer i databaseskemafilen, når du opdaterer dataene. Men hvis du skal foretage ændringer, skal du sørge for at redigere databaseskemaet og regelpakken i overensstemmelse hermed. Se [Administrer det nøjagtige datamatchskema](sit-use-exact-data-manage-schema.md#manage-your-exact-data-match-schema) for trinnene til redigering eller fjernelse af et skema. Se [Opret præcise data, der stemmer overens med typen af følsomme oplysninger/regelpakke](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) for trinnene til redigering eller fjernelse af din EDM SIT/rule-pakke.
@@ -43,7 +41,7 @@ Du kan opdatere din følsomme informationsdatabase op til 5 gange i hver 24-time
    |---|---|
    |PowerShell|Se dokumentationen [til ScheduledTasks](/powershell/module/scheduledtasks/) og [eksemplet med PowerShell-scriptet](#example-powershell-script-for-task-scheduler) i denne artikel|
    |Opgavestyrings-API|Se dokumentationen til [Opgavestyring](/windows/desktop/TaskSchd/using-the-task-scheduler)|
-   |Windows brugergrænseflade|Klik på **Start** i Windows, og skriv Opgavestyring. Højreklik derefter på **Opgavestyring** på listen over resultater, og vælg **Kør som administrator**.|
+   |Windows-brugergrænseflade|Klik på **Start** i Windows, og skriv Opgavestyring. Højreklik derefter på **Opgavestyring** på listen over resultater, og vælg **Kør som administrator**.|
 
 ## <a name="example-powershell-script-for-task-scheduler"></a>Eksempel på PowerShell-script til Opgavestyring
 

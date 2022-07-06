@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: konfigurer tjenester
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 9078748e1f0106de72257a11333f2a4c34732dd6
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 31f51a0bfe3833fb45132d1a9f9093b1dcccf285
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078452"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622079"
 ---
 # <a name="test-an-exact-data-match-sensitive-information-type"></a>Test et nøjagtigt datamatch for typen af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når din EDM (Sensitive Information Type) er blevet oprettet, og en time efter at have kontrolleret, at tabellen med følsomme oplysninger er færdig med at uploade og indeksere, kan du teste, at den registrerer de oplysninger, du vil registrere, ved hjælp af testfunktionen i afsnittet Følsomme informationstyper i Compliance Center.
  
@@ -38,7 +36,7 @@ Når din EDM (Sensitive Information Type) er blevet oprettet, og en time efter a
 
 2. Vælg dit EDM SIT på listen, og vælg derefter **Test** i pop op-ruden. Denne indstilling findes kun under følsomme oplysningstyper.
  
-3. Upload et element, der indeholder data, du vil registrere. Du kan f.eks. oprette et element, der indeholder et undersæt af rækkerne i tabellen med følsomme oplysninger. Hvis du har brugt den konfigurerbare matchfunktion i skemaet til at definere ignorerede afgrænsere, skal du sørge for, at elementet indeholder eksempler med og uden disse afgrænsere.
+3. Overfør et element, der indeholder data, du vil registrere. Du kan f.eks. oprette et element, der indeholder et undersæt af rækkerne i tabellen med følsomme oplysninger. Hvis du har brugt den konfigurerbare matchfunktion i skemaet til at definere ignorerede afgrænsere, skal du sørge for, at elementet indeholder eksempler med og uden disse afgrænsere.
 
 4. Når filen er blevet uploadet og scannet, skal du kontrollere, om den passer til dit EDM SIT.
 
@@ -53,7 +51,7 @@ Test-DataClassification  -ClassificationNames “[Your EDM sensitive info type]�
 > [!NOTE]
  Når du opretter eller redigerer en EDM-følsom informationstype eller det primære SIT, som en EDM-type er baseret på, gennemsøges alt nyt indhold og indhold, der ændres efter ændringerne af SIT'erne, efter tekst, der svarer til de nye definitioner, men eksisterende indhold gennemsøges ikke, før det ændres eller gendexes. 
 
-Hvis du vil gennemtvinge gengennemsøgning af eksisterende indhold på et SharePoint websted eller -bibliotek eller i OneDrive, skal du følge vejledningen i [Manuelt anmode om gennemsøgning og omdexering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
+Hvis du vil gennemtvinge gengennemsøgning af eksisterende indhold på et SharePoint-websted eller -bibliotek eller i OneDrive, skal du følge vejledningen i [Manuelt anmode om gennemsøgning og omdexering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
 
 ## <a name="test-your-edm-sit-with-information-protection-policies"></a>Test dit EDM SIT med politikker for beskyttelse af oplysninger
 
@@ -85,6 +83,6 @@ Hvis du ikke finder nogen resultater, er her nogle tip til fejlfinding.
 |Det primære element SIT finder forekomster i et element, men det gør EDM SIT ikke.     | – Kontrollér, om dine REGEX-sætninger starter eller afslutter hentning af mellemrumsafgrænsere, f.eks. \s. Mellemrumstegnene stemmer ikke overens med den hashkodede værdi i datatabellen. Brug i stedet et ordafgrænser, f.eks. \b. </br> – Kontrollér dine REGEX-sætninger for at sikre, at de registrerer hele den streng, du vil registrere, ikke kun en understreng. Dette mønster for mailadresser \b[a-zA-Z]{2,30}@[a-zA-Z]{2,20}.[ a-zA-Z]{2,3}\b matcher *user@contoso.com* korrekt, men registrerer kun *user@contoso.co.jp* i ufuldstændig form.
 |Et EDM SIT med primære elementer og ingen definerede sekundære elementer registrerer elementer, men registrerer ikke eller registrerer færre match end forventet, når der kræves primære og sekundære elementer.  | Hvis værdier i en kolonne, der bruges til sekundært bevis, ikke består af et enkelt ord eller strenge, der ikke indeholder mellemrum, kommaer eller andre ordseparatorer, skal du knytte dem til en følsom infotype, der bruger enten en REGEX, der er udviklet til at registrere strenge med flere ord, der følger det ønskede mønster (f.eks. et fast antal ord efter hinanden, der starter med et stort tegn),  eller en nøgleordsordbog, der viser alle de entydige værdier i den pågældende kolonne. Hvis der f.eks. er en ekstra beviskolonne for en persons by eller bopæl, kan du oprette en liste med alle de entydige bynavne fra tabellen og bruge den til at oprette en ordbogsbaseret følsom oplysningstype. Brug dette SIT som klassificeringselement for den tilsvarende kolonne i din følsomme EDM-oplysningstype ved at eksportere og redigere EDM SIT-definitionen i XML. Se [Opret en regelpakke manuelt](sit-get-started-exact-data-match-create-rule-package.md#create-a-rule-package-manually).|
 |Testfunktionen SIT registrerer slet ikke nogen match.   | Kontrollér, om det SIT, du har valgt, indeholder krav til yderligere nøgleord eller andre valideringer. Hvis du vil se de indbyggede SIT'er, skal du se [Objektdefinitioner for følsomme oplysninger](sensitive-information-type-entity-definitions.md#sensitive-information-type-entity-definitions) for at kontrollere, hvad minimumskravene er for at matche hver type.        |
-|Testfunktionen fungerer, men dine SharePoint eller OneDrive elementer registreres ikke i DLP- eller regler for automatisk mærkning     | Kontrollér, om de dokumenter, du forventer at matche, vises i Indholdsoversigt. Hvis de ikke er der, skal du huske, at kun indhold, der er oprettet efter ændringerne af typen af følsomme oplysninger, vises som match. Du skal gennemsøg webstederne og bibliotekerne igen, før eksisterende elementer vises. Du kan finde oplysninger om, hvordan du [gennemsøger SharePoint og OneDrive, under Manuel anmodning om gennemsøgning og omdexering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).        |
+|Testfunktionen fungerer, men dine SharePoint- eller OneDrive-elementer registreres ikke i DLP- eller regler for automatisk mærkning     | Kontrollér, om de dokumenter, du forventer at matche, vises i Indholdsoversigt. Hvis de ikke er der, skal du huske, at kun indhold, der er oprettet efter ændringerne af typen af følsomme oplysninger, vises som match. Du skal gennemsøg webstederne og bibliotekerne igen, før eksisterende elementer vises. Se [Anmodning om gennemsøgning og gensøgning af et websted, et bibliotek eller en liste manuelt](/sharepoint/crawl-site-content) for at få oplysninger om gennemsøgning af SharePoint og OneDrive.        |
 |DLP- eller regler for automatisk mærkning, der kræver flere forekomster, udløses ikke     |Kontrollér, at nærhedskravene for både din EDM-type og de grundlæggende følsomme oplysningstyper er opfyldt. Hvis den maksimale afstand mellem det primære element og de understøttende nøgleord f.eks. er 300 tegn, men nøgleordene kun findes i den første række i en lang tabel, er det sandsynligvis kun de første få rækker med tilsvarende værdier, der opfylder nærhedskravene. Rediger dine SIT-definitioner for at understøtte mere afslappede nærhedsregler, eller brug indstillingen hvor som helst i dokumentet til yderligere bevisbetingelser.         |
 |Registrering af en EDM-type er inkonsistent eller uregelmæssig     |Kontrollér, at den type følsomme oplysninger, du brugte som basis for det primære element i din EDM-type, ikke registrerer unødvendigt indhold. Hvis du bruger et SIT, der matcher for meget ikke-relateret indhold, f.eks. et hvilket som helst ord, et vilkårligt tal eller alle mailadresser, kan tjenesten blive mættet og ignorere relevante matches. Kontrollér antallet af indholdsdele, der svarer til den følsomme type, du brugte til dine primære elementer i Indholdsoversigt. </br> Sådan estimerer du, om SIT matcher for meget indhold: </br> – Opdeling af antallet af indholdselementer i Indholdsoversigt med antallet af dage, siden den følsomme type blev oprettet. </br> – Hvis antallet af matches pr. dag er inden for intervallet hundredtusindvis eller millioner, er det muligt, at det primære SIT er for bredt. Se [Få mere at vide om præcise datamatchbaserede følsomme informationstyper](sit-learn-about-exact-data-match-based-sits.md#learn-about-exact-data-match-based-sensitive-information-types) for at få anbefalinger og bedste praksis for valg af den rette type følsomme oplysninger til en EDM-type.         |

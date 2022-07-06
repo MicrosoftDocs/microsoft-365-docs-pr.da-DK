@@ -16,16 +16,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Brug disse procedurer til at drage fordel af navngivne enheder i dine politikker til forebyggelse af datatab
-ms.openlocfilehash: 85d3d11704ea238f6c1acff64193d8aaba8994b8
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+ms.openlocfilehash: 0cdf544eddf873f3bbf761bd613641433dd2da6b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65637180"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623695"
 ---
 # <a name="use-named-entities-in-your-data-loss-prevention-policies"></a>Brug navngivne enheder i dine politikker til forebyggelse af datatab
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Læs [Mere om navngivne objekter](named-entities-learn.md) , før du begynder at bruge dem.
 
@@ -44,11 +42,11 @@ Den konto, du bruger til at oprette og redigere DLP-politikker (forebyggelse af 
 
 Du kan bruge navngivne objekt-SIT'er og forbedrede politikker til at registrere og beskytte følsomme elementer på disse placeringer:
 
-- SharePoint websteder
-- OneDrive konti
-- Teams chat- og kanalmeddelelser
+- SharePoint-websteder
+- OneDrive-konti
+- Teams-chat- og kanalmeddelelser
 - Enheder (Windows 10 og 11 slutpunktsenheder)
-- Exchange postkasser
+- Exchange-postkasser
 - Microsoft Defender for Cloud Apps
 
 Navngivne objekt-SIT'er og forbedrede politikker understøttes ikke for:
@@ -62,7 +60,7 @@ Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i 
 
 ## <a name="workloads-and-services-that-support-named-entities"></a>Arbejdsbelastninger og tjenester, der understøtter navngivne enheder
 
-- **Microsoft 365 eDiscovery** understøtter brugen af navngivne objekter i Substrate-tjenester.
+- **Microsoft 365 eDiscovery** understøtter brugen af navngivne enheder i Substrate-tjenester.
 - **Microsoft Defender for Cloud Apps** understøtter brugen af navngivne objekter i Defender for Cloud Apps-politikker på Defender for Cloud Apps-portalen.
 - **Insider Risk Management** understøtter brugen af navngivne objekter i Substrate-tjenester.
 - **Datastyring** understøtter brugen af navngivne objekter.
@@ -74,15 +72,15 @@ Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i 
 
 |Arbejdsbelastning/tjenester  |Understøttelse af navngivne enheder  |
 |---------|---------|
-|politiktip til Office Win32-klienter    |Understøttes ikke  |
-|politiktip til Office WAC-klienter    |Understøttes         |
+|Politiktip til Office Win32-klienter    |Understøttes ikke  |
+|Politiktip til Office WAC-klienter    |Understøttes         |
 |Tip til OWA-politik     |Understøttes ikke         |
-|Outlook politiktip     |Understøttes ikke |
+|Tip til Outlook-politik     |Understøttes ikke |
 |Slutpunkter (Windows 10 og 11 enheder)     |Understøttes  |
-|Exchange transportregler     |Understøttes |
+|Exchange-transportregler     |Understøttes |
 |OneDrive for Business hviledata     |Understøttes         |
 |SharePoint Online-data-at-rest     |Understøttes         |
-|Teams hviledata     |Understøttes         |
+|Teams-data-at-rest     |Understøttes         |
 |Data-at-rest i mails     |Understøttes for lejere med Plan for beskyttelse af personlige oplysninger         |
 |Microsoft Defender for Cloud Apps     |Understøttes         |
 
@@ -92,10 +90,10 @@ Hvis du vil oprette eller redigere en DLP-politik, skal du bruge procedurerne i 
 |---------|---------|
 |Office Win32-klienter offline   |Understøttet. Brugeren skal vælge mærkat og anvende det manuelt |
 |Online Office Win32-klienter online|Understøttes med gammel tillidsskema |
-|Outlook online   |Understøttes med gammel tillidsskema  |
+|Outlook Online   |Understøttes med gammel tillidsskema  |
 |Office WAC-klient     |Understøttes |
 |OWA     |Understøttes |
-|Exchange transport     |Understøttes |
+|Exchange-transport     |Understøttes |
 |OneDrive for Business hviledata     |Understøttes |
 |SharePoint Online-data-at-rest|Understøttes|
 |AIP-scanner (Azure Information Protection)|Understøttes ikke|
@@ -122,7 +120,7 @@ Her er nogle fremgangsmåder, du kan bruge, når du opretter eller redigerer en 
 - Du kan bruge [simuleringer med automatisk mærkat](apply-sensitivity-label-automatically.md#learn-about-simulation-mode) til at teste nøjagtigheden af navngivne objekt-SIT'er. Kør en simulering ved hjælp af et navngivet objekt SIT for at se, hvilke elementer der stemmer overens med politikken. Med disse oplysninger kan du finjustere nøjagtigheden ved at justere antallet af forekomster og tillidsniveauer i dine brugerdefinerede politikker eller de forbedrede skabelonbetingelser. Du kan gentage simuleringer, indtil nøjagtigheden er, hvor du ønsker det, før du udruller en DLP- eller politik for automatisk mærkning, der indeholder navngivne enheder i produktionen. Her er en oversigt over flowet:
 
 1. Identificer DEN SIT eller kombination af SIT'er, du vil teste i simuleringstilstand, enten brugerdefineret eller klonet og redigeret.
-1. Identificer eller opret en følsomhedsmærkat, der skal anvendes, når politikken for automatisk mærkning finder et match i Exchange, SharePoint websteder eller OneDrive konti.
+1. Identificer eller opret en følsomhedsmærkat, der skal anvendes, når politikken for automatisk mærkning finder et match i Exchange-, SharePoint-websteder eller OneDrive-konti.
 1. Opret en politik for automatisk følsomhedsmærkater, der bruger SIT fra trin 1 og med de samme betingelser og undtagelser, som bruges i din DLP-politik
 1. Kør simulering af politik
 1. Få vist resultaterne

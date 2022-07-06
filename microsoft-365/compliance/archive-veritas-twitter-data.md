@@ -11,21 +11,19 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en connector til at importere og arkivere Twitter-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, eDiscovery- og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 04a478628fc8b0a9732044d44883211d924fd2f2
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+description: Administratorer kan konfigurere en connector til at importere og arkivere Twitter-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, eDiscovery- og opbevaringspolitikker til at administrere tredjepartsdata.
+ms.openlocfilehash: c6a372bab014b8dee37935052b1a669efe64318b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416436"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624603"
 ---
 # <a name="set-up-a-connector-to-archive-twitter-data-preview"></a>Konfigurer en connector til arkivering af Twitter-data (prøveversion)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Twitter-platformen til brugerpostkasser i din Microsoft 365-organisation. Veritas leverer en [Twitter-connector](https://www.veritas.com/insights/merge1/twitter) , der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Connectoren konverterer indhold som tweets, retweets og kommentarer fra Twitter til et mailmeddelelsesformat og importerer derefter disse elementer til brugerpostkasserne i Microsoft 365.
 
-Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Twitter-platformen til brugerpostkasser i din Microsoft 365 organisation. Veritas leverer en [Twitter-connector](https://www.veritas.com/insights/merge1/twitter), der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Connectoren konverterer indhold som tweets, retweets og kommentarer fra Twitter til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
-
-Når Twitter-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Twitter-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Twitter-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater. Brug af en Twitter-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-twitter-data"></a>Oversigt over arkivering af Twitter-data
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24 timer kopieres Twitter-elementer til Veritas Merge1-webstedet. Connectoren konverterer også Twitter-elementer til et mailformat.
 
-3. Den Twitter-connector, du opretter i overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører Twitter-indholdet til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den Twitter-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører Twitter-indholdet til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Connectoren importerer de konverterede elementer til postkasserne for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytning som beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Der oprettes en undermappe i mappen Indbakke med navnet **Twitter** i brugerpostkasserne, og elementer importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle Twitter-elementer indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i elementet.
 
@@ -47,15 +45,15 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Opret et Twitter-program på <https://developer.twitter.com> for at hente data fra din Twitter-konto. Du kan finde en trinvis vejledning i, hvordan du opretter programmet, under [Brugervejledning til flette1 tredjepartsconnectors](https://docs.ms.merge1.globanetportal.com/Merge1%20Third-Party%20Connectors%20Twitter%20User%20Guide.pdf).
 
-- Den bruger, der opretter YouTube-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter YouTube-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen DataConnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-twitter-connector"></a>Trin 1: Konfigurer Twitter-connectoren
 
 Det første trin er at få adgang til siden **DataConnectors på overholdelsesportalen** og oprette en connector til Twitter-data.
 
-1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsWitter** > .
+1. Gå til <https://compliance.microsoft.com> , og klik derefter på **Dataconnectors** > **Twitter**.
 
 2. Klik på **Tilføj connector** på siden **Med produktbeskrivelse på Twitter**.
 
@@ -75,7 +73,7 @@ Når du klikker på **Gem & Udfør,** vises siden **Brugertilknytning** i connec
 
 Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen, skal du følge disse trin:
 
-1. Aktivér automatisk brugertilknytning på siden **Tilknyt Twitter-brugere til Microsoft 365 brugere**. Twitter-elementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+1. Aktivér automatisk brugertilknytning på siden **Knyt Twitter-brugere til Microsoft 365-brugere** . Twitter-elementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365-bruger, importeres elementerne til den pågældende brugers postkasse.
 
 2. Klik på **Næste**, gennemse dine indstillinger, og gå derefter til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 

@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Microsoft Purview Extension udvider overvågning og kontrol af filaktiviteter og beskyttende handlinger til Google Chrome-browseren
-ms.openlocfilehash: a74cfeb734f41622d491c8aaffe3a5e054479a2a
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: 08078871765a75577475c93ba35cabda9ee3fd6a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65172246"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622893"
 ---
 # <a name="learn-about-the-microsoft-purview-extension"></a>Få mere at vide om Microsoft Purview-udvidelsen
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 [Forebyggelse af datatab for slutpunkter (slutpunkt DLP)](endpoint-dlp-learn-about.md) udvider aktivitetsovervågnings- og beskyttelsesfunktionerne i [Microsoft Purview DLP (forebyggelse af datatab)](dlp-learn-about-dlp.md) til følsomme elementer, der findes på Windows 10 enheder. Når enheder er onboardet i Microsoft Purview-løsninger, bliver oplysningerne om, hvad brugerne foretager sig med følsomme elementer, synlige i [Aktivitetsoversigt](data-classification-activity-explorer.md) , og du kan gennemtvinge beskyttende handlinger på disse elementer via [DLP-politikker](create-test-tune-dlp-policy.md).
 

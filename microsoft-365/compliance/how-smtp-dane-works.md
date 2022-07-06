@@ -14,16 +14,14 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan SMTP DNS-baseret godkendelse af navngivne enheder (DANE) fungerer til at sikre mailkommunikation mellem mailservere.
-ms.openlocfilehash: 200dde9c62fb9825ce36eea7416304727bd6b598
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 2202cccc3c1feb9f50cc35dbb3e38d6b443675fd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015764"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625143"
 ---
 # <a name="how-smtp-dns-based-authentication-of-named-entities-dane-works"></a>Sådan fungerer SMTP DNS-baseret godkendelse af navngivne enheder (DANE)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 SMTP-protokollen er den primære protokol, der bruges til at overføre meddelelser mellem mailservere og er som standard ikke sikker. TLS-protokollen (Transport Layer Security) blev introduceret for år siden for at understøtte krypteret overførsel af meddelelser via SMTP. Det bruges ofte opportunistisk snarere end som et krav, hvilket efterlader meget e-mail-trafik i klartekst, sårbar over for opfangelse af forbryderiske aktører. SMTP bestemmer desuden IP-adresserne på destinationsservere via den offentlige DNS-infrastruktur, som er udsat for spoofing- og MITM-angreb (Man-in-the-Middle). Dette har medført, at der er blevet oprettet mange nye standarder for at øge sikkerheden for afsendelse og modtagelse af mail, en af dem er DNS-baseret godkendelse af navngivne enheder (DANE). 
 
@@ -93,7 +91,7 @@ I øjeblikket understøttes indgående SMTP-DANE ikke for Exchange Online. Suppo
 
 Pr. RFC-implementeringsvejledning til SMTP DANE, en TLSA-post, der består af feltet Certifikatanvendelse, der er angivet til 3, feltet Selector, der er angivet til 1, og feltet Matchende type, der er angivet til 1, anbefales.
 
-## <a name="exchange-online-mail-flow-with-smtp-dane"></a>Exchange Online Mail-Flow med SMTP-DANE
+## <a name="exchange-online-mail-flow-with-smtp-dane"></a>Exchange Online Mail Flow med SMTP-DANE
 
 Mailflowprocessen for Exchange Online med SMTP-DANE, der vises i flowdiagrammet nedenfor, validerer domæne- og ressourcepostsikkerhed via DNSSEC, TLS-understøttelse på destinationsmailserveren, og at destinationsmailserverens certifikat stemmer overens med det, der forventes baseret på dens tilknyttede TLSA-post.
 
@@ -103,7 +101,7 @@ Der er kun to scenarier, hvor en SMTP-DANE-fejl medfører, at mailen blokeres:
 
 - Alle MX-poster for destinationsdomænet har TLSA-poster, og ingen af destinationsserverens certifikater svarer til det, der var forventet for TSLA-postdataene, eller en TLS-forbindelse understøttes ikke af destinationsserveren.
 
-:::image type="content" source="../media/compliance-trial/mail-flow-smtp-dane.png" alt-text="Exchange onlinemailflow med SMTP DANE" lightbox="../media/compliance-trial/mail-flow-smtp-dane.png":::
+:::image type="content" source="../media/compliance-trial/mail-flow-smtp-dane.png" alt-text="Exchange-onlinemailflow med SMTP-DANE" lightbox="../media/compliance-trial/mail-flow-smtp-dane.png":::
 
 ## <a name="related-technologies"></a>Relaterede teknologier
 
@@ -118,7 +116,7 @@ Der er kun to scenarier, hvor en SMTP-DANE-fejl medfører, at mailen blokeres:
 
 Der er i øjeblikket fire fejlkoder til DANE, når du sender mails med Exchange Online. Microsoft opdaterer aktivt denne fejlkodeliste. Fejlene vil være synlige i:
 
-1. Portalen Exchange Administration via visningen Meddelelsessporingsdetaljer.
+1. Exchange Administration Center-portalen via visningen Meddelelsessporingsoplysninger.
 2. NDR'er genereres, når en meddelelse ikke sendes på grund af en DANE- eller DNSSEC-fejl.
 3. Værktøjet Remote Connectivity Analyzer [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
 
@@ -142,14 +140,14 @@ Dette angiver normalt et problem med destinationsmailserveren. Efter modtagelse 
 
 1. Kontrollér, at destinationsmailadressen er angivet korrekt.
 2. Giv destinationsmailadministratoren besked om, at du har modtaget denne fejlkode, så de kan afgøre, om destinationsserveren er konfigureret korrekt til at modtage meddelelser ved hjælp af TLS.
-3. Prøv at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen på Exchange Administrationsportal.
+3. Prøv at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen på Exchange Administration Center-portalen.
 
 ### <a name="troubleshooting-57322-certificate-expired"></a>Fejlfinding 5.7.322 certifikat er udløbet
 
 Et gyldigt X.509-certifikat, der ikke er udløbet, skal præsenteres på den sendende mailserver. X.509-certifikater skal fornys efter deres udløb, ofte årligt. Efter modtagelse af meddelelsen:
 
 1. Giv destinationsmailadministratoren besked om, at du har modtaget denne fejlkode, og angiv fejlkodestrengen.
-2. Tillad, at tiden for destinationens servercertifikat fornys, og at TLSA-posten opdateres, så den refererer til det nye certifikat. Prøv derefter at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen på Exchange Administrationsportal.
+2. Tillad, at tiden for destinationens servercertifikat fornys, og at TLSA-posten opdateres, så den refererer til det nye certifikat. Prøv derefter at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen i Exchange Administration Center-portalen.
 
 ### <a name="troubleshooting-57323-tlsa-invalid"></a>Fejlfinding 5.7.323 tlsa-invalid
 
@@ -163,7 +161,7 @@ Denne fejlkode er relateret til en forkert konfiguration af en TLSA-post og kan 
 Efter modtagelse af meddelelsen:
 
 1. Giv destinationsmailadministratoren besked om, at du har modtaget denne fejlkode, og giv dem fejlkodestrengen.
-2. Giv administratoren af destinationsmailen tid til at gennemse deres DANE-konfiguration og mailservercertifikatets gyldighed. Prøv derefter at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen på Exchange Administrationsportal.
+2. Giv administratoren af destinationsmailen tid til at gennemse deres DANE-konfiguration og mailservercertifikatets gyldighed. Prøv derefter at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen i Exchange Administration Center-portalen.
 
 ### <a name="troubleshooting-57324-dnssec-invalid"></a>Fejlfinding af 5.7.324 dnssec-invalid
 
@@ -172,7 +170,7 @@ Denne fejlkode genereres, når destinationsdomænet angav, at det var DNSSEC-aut
 Efter modtagelse af meddelelsen:
 
 1. Giv destinationsmailadministratoren besked om, at du har modtaget denne fejlkode, og giv dem fejlkodestrengen.
-2. Giv administratoren af destinationsmailen tid til at gennemse domænets DNSSEC-konfiguration. Prøv derefter at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen på Exchange Administrationsportal.
+2. Giv administratoren af destinationsmailen tid til at gennemse domænets DNSSEC-konfiguration. Prøv derefter at sende mailen igen, og gennemse meddelelsessporingsoplysningerne for meddelelsen i Exchange Administration Center-portalen.
 
 ## <a name="troubleshooting-receiving-emails-with-smtp-dane"></a>Fejlfinding i forbindelse med modtagelse af mails med SMTP-DANE
 

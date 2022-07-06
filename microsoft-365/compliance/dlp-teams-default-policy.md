@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om standardpolitikken til forebyggelse af datatab i Microsoft Teams (forhåndsvisning)
+title: Få mere at vide om DLP-standardpolitikken i Microsoft Teams (prøveversion)
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -16,32 +16,32 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: Få mere at vide om standardpolitikken til forebyggelse af datatab i Microsoft Teams
-ms.openlocfilehash: 61443cdfdc116e9c25d9dad24c968876ae5d0349
-ms.sourcegitcommit: db2ed146b46ade9ea62eed9cb8efff5fea7a35e6
+ms.openlocfilehash: 5c3a5a116da90a41abcc459808e83176dc750fe1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/26/2022
-ms.locfileid: "64481358"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624217"
 ---
-# <a name="learn-about-the-default-data-loss-prevention-policy-in-microsoft-teams-preview"></a>Få mere at vide om standardpolitikken til forebyggelse af datatab i Microsoft Teams (forhåndsvisning)
+# <a name="learn-about-the-default-data-loss-prevention-policy-in-microsoft-teams-preview"></a>Få mere at vide om standardpolitikken for forebyggelse af datatab i Microsoft Teams (prøveversion)
 
-[Funktioner til forebyggelse af](dlp-learn-about-dlp.md) datatab er blevet udvidet til at omfatte Microsoft Teams chat- og kanalmeddelelser, herunder private kanalmeddelelser. Som en del af denne version har vi oprettet en DLP-standardpolitik for Microsoft Teams for første gang til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft 365 Overholdelsescenter</a>.
+[Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md) funktioner er blevet udvidet til at omfatte Microsoft Teams-chat- og kanalmeddelelser, herunder private kanalmeddelelser. Som en del af denne version har vi oprettet en DLP-standardpolitik for Microsoft Teams for førstegangskunder til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
 ## <a name="licensing"></a>Licensering
 
-Du kan finde komplette licensoplysninger for DLP Microsoft Teams i [Information Protection: Forebyggelse af datatab for Teams](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-teams).
+Du kan få komplette licensoplysninger om DLP i Microsoft Teams under [Information Protection: Forebyggelse af datatab i Teams](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-teams).
 
 ## <a name="what-does-the-default-policy-do"></a>Hvad gør standardpolitikken?
 
-Standard-DLP-politikken for Teams registrerer alle de kreditkortnumre, der deles internt og eksternt i organisationen. Denne politik er som standard til for alle brugere af lejeren. Den genererer ikke politiktip til slutbrugere, men genererer en beskedhændelse og udløser også en mail med lav alvorsgrad til administratoren (tilføjet i politikken). Administratoren kan se aktiviteterne og redigere politikkerne ved at logge på Overholdelsescenter.
+Standard-DLP-politikken for Teams sporer alle de kreditkortnumre, der deles internt og eksternt med organisationen. Denne politik er som standard slået til for alle brugere af lejeren. Den genererer ikke nogen politiktip til slutbrugere, men genererer en beskedhændelse og udløser også en mail med lav alvorsgrad til administratoren (tilføjet i politikken). Administratoren kan få vist aktiviteterne og redigere oplysningerne om politikker ved at logge på Overholdelsescenter.
 
-Administratorer kan få vist denne politik på siden [Politikker for](https://compliance.microsoft.com/compliancesettings) > til forebyggelse af datatab.
+Administratorer kan få vist denne politik på siden [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/compliancesettings) > politikker til forebyggelse af datatab.
 
 
 > [!div class="mx-imgBorder"]
-> ![standardpolitik Teams DLP.](../media/default-teams-dlp-policy.png)
+> ![standardpolitik for Teams DLP.](../media/default-teams-dlp-policy.png)
 
 ## <a name="edit-or-delete-the-default-policy"></a>Rediger eller slet standardpolitikken
 
-Hvis [du vil redigere standardpolitikken for bedre ydeevne eller slette den, skal](create-test-tune-dlp-policy.md#tune-a-dlp-policy) du blot bruge en konto med **DLP-overholdelsesstyringstilladelser** . Du kan finde flere oplysninger [under Tilladelser](create-test-tune-dlp-policy.md#permissions).
+Hvis du vil [redigere standardpolitikken for at opnå en bedre ydeevne eller slette den](create-test-tune-dlp-policy.md#tune-a-dlp-policy), skal du blot bruge en konto med tilladelser til **administration af DLP-overholdelse** . Du kan få flere oplysninger under [Tilladelser](create-test-tune-dlp-policy.md#permissions).
 

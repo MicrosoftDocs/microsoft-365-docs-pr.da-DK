@@ -18,24 +18,22 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 7124d97c56e414a7c5a47488805bb4134426f073
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: c78bcae040ae1c210c58923b924f099a5ec396bc
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018024"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622519"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Hvis du får vist meddelelser om opbevaringspolitikker i Teams eller har spørgsmål om opbevaringsmærkater i dine apps, skal du kontakte it-afdelingen for at få oplysninger om, hvordan de er konfigureret for dig. I mellemtiden kan følgende artikler være nyttige:
 >
-> - [Teams meddelelser om opbevaringspolitikker](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b)
+> - [Teams-meddelelser om opbevaringspolitikker](https://support.microsoft.com/office/teams-messages-about-retention-policies-c151fa2f-1558-4cf9-8e51-854e925b483b)
 > - [Anvend opbevaringsmærkater på filer i SharePoint eller OneDrive](https://support.microsoft.com/office/apply-retention-labels-to-files-in-sharepoint-or-onedrive-11a6835b-ec9f-40db-8aca-6f5ef18132df)
 >
 > Oplysningerne på denne side er til it-administratorer, der kan oprette opbevaringspolitikker og opbevaringsmærkater af hensyn til overholdelse af angivne standarder.
@@ -69,23 +67,23 @@ Brug følgende afsnit til at få mere at vide om, hvordan opbevaringspolitikker 
 
 Når indhold har fået tildelt opbevaringsindstillinger, forbliver dette indhold på den oprindelige placering. For det meste fortsætter folk med at arbejde med deres dokumenter eller mail, som om intet er ændret. Men hvis de redigerer eller sletter indhold, der er inkluderet i opbevaringspolitikken, bevares der automatisk en kopi af indholdet.
 
-- For SharePoint og OneDrive websteder: Kopien bevares i biblioteket **Bevarelsesvente.**
+- For SharePoint- og OneDrive-websteder: Kopien bevares i biblioteket **til bevarelse af venteposition** .
 
-- For Exchange postkasser: Kopien bevares i mappen **Gendanbare elementer**.
+- For Exchange-postkasser: Kopien bevares i mappen **Elementer, der kan gendannes** .
 
-- I forbindelse med Teams og Yammer meddelelser: Kopien bevares i en skjult mappe med navnet **SubstrateHolds** som en undermappe i mappen Exchange **Elementer, der kan gendannes**.
+- For Teams- og Yammer-meddelelser: Kopien bevares i en skjult mappe med navnet **SubstrateHolds** som en undermappe i exchange-mappen **Gendanbare elementer** .
 
 > [!NOTE]
-> Da biblioteket til bevarelse af venteposition er inkluderet i webstedets lagerkvote, skal du muligvis øge dit lager, når du bruger opbevaringsindstillinger for SharePoint og Microsoft 365 grupper.
+> Da biblioteket til bevarelse af venteposition er inkluderet i webstedets lagerkvote, skal du muligvis øge dit lager, når du bruger opbevaringsindstillinger for SharePoint- og Microsoft 365-grupper.
 >
 Disse sikre placeringer og det bevarede indhold er ikke synlige for de fleste. I de fleste tilfælde behøver folk ikke engang at vide, at deres indhold er underlagt opbevaringsindstillinger.
 
 Du kan finde flere detaljerede oplysninger om, hvordan opbevaringsindstillinger fungerer for forskellige arbejdsbelastninger, i følgende artikler:
 
 - [Få mere at vide om opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md)
-- [Få mere at vide om opbevaring for Microsoft Teams](retention-policies-teams.md)
-- [Få mere at vide om opbevaring for Yammer](retention-policies-yammer.md)
-- [Få mere at vide om opbevaring for Exchange](retention-policies-exchange.md)
+- [Få mere at vide om opbevaring til Microsoft Teams](retention-policies-teams.md)
+- [Få mere at vide om opbevaring til Yammer](retention-policies-yammer.md)
+- [Få mere at vide om opbevaring til Exchange](retention-policies-exchange.md)
 
 ## <a name="retention-policies-and-retention-labels"></a>Opbevaringspolitikker og opbevaringsmærkater
 
@@ -93,15 +91,15 @@ Hvis du vil tildele dine opbevaringsindstillinger til indhold, skal du bruge **o
 
 Brug en opbevaringspolitik til at tildele de samme opbevaringsindstillinger for indhold på websteds- eller postkasseniveau, og brug en opbevaringsmærkat til at tildele opbevaringsindstillinger på elementniveau (mappe, dokument, mail).
 
-Hvis alle dokumenter på et SharePoint websted f.eks. skal bevares i fem år, er det mere effektivt at gøre dette med en opbevaringspolitik end at anvende den samme opbevaringsmærkat på alle dokumenter på det pågældende websted. Men hvis nogle dokumenter på dette websted skal opbevares i 5 år, og andre opbevares i 10 år, vil en opbevaringspolitik ikke være i stand til at gøre dette. Når du har brug for at angive opbevaringsindstillinger på elementniveau, skal du bruge opbevaringsmærkater.
+Hvis alle dokumenter på et SharePoint-websted f.eks. skal bevares i fem år, er det mere effektivt at gøre dette med en opbevaringspolitik end at anvende den samme opbevaringsmærkat på alle dokumenter på det pågældende websted. Men hvis nogle dokumenter på dette websted skal opbevares i 5 år, og andre opbevares i 10 år, vil en opbevaringspolitik ikke være i stand til at gøre dette. Når du har brug for at angive opbevaringsindstillinger på elementniveau, skal du bruge opbevaringsmærkater.
 
-I modsætning til opbevaringspolitikker følger opbevaringsindstillinger fra opbevaringsmærkater indholdet, hvis det flyttes til en anden placering i din Microsoft 365 lejer. Derudover har opbevaringsmærkater følgende funktioner, som opbevaringspolitikker ikke understøtter:
+I modsætning til opbevaringspolitikker følger opbevaringsindstillinger fra opbevaringsmærkater indholdet, hvis det flyttes til en anden placering i din Microsoft 365-lejer. Derudover har opbevaringsmærkater følgende funktioner, som opbevaringspolitikker ikke understøtter:
 
 - Muligheder for at starte opbevaringsperioden fra det tidspunkt, hvor indholdet blev mærket eller baseret på en hændelse, ud over indholdets alder, eller hvornår det sidst blev ændret.
 
 - Brug [klassificeringer, der kan oplæres](classifier-learn-about.md) , til at identificere indhold, der skal navngives.
 
-- Anvend et standardnavn for SharePoint elementer eller Exchange meddelelser.
+- Anvend et standardnavn for SharePoint-elementer eller Exchange-meddelelser.
 
 - Understøttede handlinger i slutopbevaringsperioden:
   - [Gennemgang af fordeling](./disposition.md) for at gennemse indholdet, før det slettes permanent.
@@ -113,24 +111,24 @@ I modsætning til opbevaringspolitikker følger opbevaringsindstillinger fra opb
 
 Opbevaringspolitikker kan anvendes på følgende placeringer:
 
-- Exchange mail
-- SharePoint websted
-- OneDrive konti
+- Exchange-mail
+- SharePoint-websted
+- OneDrive-konti
 - Microsoft 365-grupper
 - Skype for Business
-- Exchange offentlige mapper
-- Teams kanalmeddelelser
-- Teams chats
-- Teams private kanalmeddelelser
-- Yammer communitymeddelelser
-- Yammer brugermeddelelser
+- Offentlige Exchange-mapper
+- Teams-kanalmeddelelser
+- Teams-chats
+- Teams-meddelelser om privat kanal
+- Yammer-communitymeddelelser
+- Yammer-brugermeddelelser
 
 > [!NOTE]
-> Teams kanalmeddelelser omfatter nu [delte kanaler](/MicrosoftTeams/shared-channels) (i øjeblikket en prøveversion) samt standardkanaler.
+> Teams-kanalmeddelelser omfatter nu [delte kanaler](/MicrosoftTeams/shared-channels) (i øjeblikket en prøveversion) samt standardkanaler.
 
 Du kan meget effektivt anvende en enkelt politik på flere placeringer eller på bestemte placeringer eller brugere.
 
-I starten af opbevaringsperioden kan du vælge, hvornår indholdet blev oprettet, eller kun understøttes for filer og SharePoint, OneDrive og Microsoft 365-grupper placeringer, hvornår indholdet sidst blev ændret.
+I starten af opbevaringsperioden kan du vælge, hvornår indholdet blev oprettet eller kun understøttes for filer og SharePoint, OneDrive og Microsoft 365-grupper placeringer, hvornår indholdet sidst blev ændret.
 
 Elementer nedarver opbevaringsindstillingerne fra deres objektbeholder, der er angivet i opbevaringspolitikken. Hvis de derefter flyttes uden for denne objektbeholder, når politikken er konfigureret til at bevare indhold, bevares en kopi af dette element på arbejdsbelastningens sikre placering. Opbevaringsindstillingerne følger dog ikke med indholdet på den nye placering. Hvis det er påkrævet, skal du bruge opbevaringsmærkater i stedet for opbevaringspolitikker.
 
@@ -150,18 +148,18 @@ I alle disse tilfælde kan du bruge opbevaringsmærkater til at anvende opbevari
 
 Med opbevaringsmærkater kan du:
 
-- **Giv personer i din organisation mulighed for at anvende en opbevaringsmærkat manuelt** på indhold i grupperne Outlook og Outlook på internettet, OneDrive, SharePoint og Microsoft 365. Brugerne ved ofte bedst, hvilken type indhold de arbejder med, så de kan klassificere det og anvende de relevante opbevaringsindstillinger.
+- **Giv personer i din organisation mulighed for at anvende en opbevaringsmærkat manuelt** på indhold i Outlook- og Outlook på internettet-, OneDrive-, SharePoint- og Microsoft 365-grupper. Brugerne ved ofte bedst, hvilken type indhold de arbejder med, så de kan klassificere det og anvende de relevante opbevaringsindstillinger.
 
-- **Anvend opbevaringsmærkater på indhold automatisk**, hvis det opfylder bestemte betingelser, som omfatter vedhæftede filer i skyen, som deles i en mail eller Teams, eller når indholdet indeholder:
+- **Anvend opbevaringsmærkater på indhold automatisk** , hvis det opfylder bestemte betingelser, som omfatter vedhæftede filer i skyen, som deles i en mail eller i Teams, eller når indholdet indeholder:
   - Specifikke typer følsomme oplysninger.
   - Specifikke nøgleord, der svarer til en forespørgsel, du opretter.
   - Mønsterforekomster for en klassificering, der kan oplæres.
 
-- **Start opbevaringsperioden fra det tidspunkt, hvor indholdet blev mærket** for dokumenter på SharePoint websteder og OneDrive konti og for mailelementer.
+- **Start opbevaringsperioden fra det tidspunkt, hvor indholdet blev mærket** for dokumenter på SharePoint-websteder og OneDrive-konti og for mailelementer.
 
 - **Start opbevaringsperioden, når der opstår en hændelse**, f.eks. medarbejdere, der forlader organisationen, eller kontrakterne udløber.
 
-- **Anvend en standardopbevaringsmærkat på et dokumentbibliotek, en mappe eller et dokumentsæt** i SharePoint, så alle dokumenter, der er gemt på denne placering, nedarver standardopbevaringsetiket.
+- **Anvend en standardopbevaringsmærkat på et dokumentbibliotek, en mappe eller et dokumentsæt** i SharePoint, så alle dokumenter, der er gemt på denne placering, nedarver standardopbevaringsmærkaten.
 
 - **Markér elementer som en post som en** del af din strategi [for datastyring](records-management.md) . Når dette navngivne indhold forbliver i Microsoft 365, er der yderligere begrænsninger for det indhold, der kan være nødvendigt af lovmæssige årsager. Du kan få flere oplysninger under [Sammenlign begrænsninger for, hvilke handlinger der er tilladt eller blokeret](records-management.md#compare-restrictions-for-what-actions-are-allowed-or-blocked).
 
@@ -177,7 +175,7 @@ Du kan f.eks. oprette og anvende en opbevaringsmærkat med navnet "Gennemse sene
 
 #### <a name="using-a-retention-label-as-a-condition-in-a-dlp-policy"></a>Brug af en opbevaringsmærkat som en betingelse i en DLP-politik
 
-Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Data Loss Prevention) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
+Du kan angive en opbevaringsmærkat som en betingelse i en DLP-politik (Microsoft Purview Forebyggelse af datatab) for dokumenter i SharePoint. Konfigurer f.eks. en DLP-politik for at forhindre, at dokumenter deles uden for organisationen, hvis der er anvendt en angivet opbevaringsmærkat på dem.
 
 Du kan få flere oplysninger under [Brug af en opbevaringsmærkat som en betingelse i en DLP-politik](data-loss-prevention-policies.md#using-a-retention-label-as-a-condition-in-a-dlp-policy).
 
@@ -199,12 +197,12 @@ Opbevaringsmærkater kan publiceres på forskellige placeringer, afhængigt af h
 
 | Hvis opbevaringsmærkaten er... | Derefter kan mærkatpolitikken anvendes på... |
 |:-----|:-----|
-|Publiceret til administratorer og slutbrugere  |Exchange, SharePoint, OneDrive, Microsoft 365-grupper  |
+|Publiceret til administratorer og slutbrugere  |Exchange, SharePoint, OneDrive Microsoft 365-grupper  |
 |Automatisk anvendt baseret på følsomme oplysningstyper eller klassificeringer, der kan oplæres  |Exchange, SharePoint, OneDrive  |
-|Anvendes automatisk baseret på nøgleord eller en forespørgsel  |Exchange, SharePoint, OneDrive, Microsoft 365-grupper  |
-|Automatisk anvendt på vedhæftede filer i skyen  |SharePoint, OneDrive, Microsoft 365-grupper  |
+|Anvendes automatisk baseret på nøgleord eller en forespørgsel  |Exchange, SharePoint, OneDrive Microsoft 365-grupper  |
+|Automatisk anvendt på vedhæftede filer i skyen  |SharePoint, OneDrive Microsoft 365-grupper  |
 
-Exchange offentlige mapper, Skype, Teams og Yammer meddelelser understøtter ikke opbevaringsmærkater. Hvis du vil bevare og slette indhold fra disse placeringer, skal du i stedet bruge opbevaringspolitikker.
+Offentlige Exchange-mapper, Skype, Teams og Yammer-meddelelser understøtter ikke opbevaringsmærkater. Hvis du vil bevare og slette indhold fra disse placeringer, skal du i stedet bruge opbevaringspolitikker.
 
 #### <a name="only-one-retention-label-at-a-time"></a>Kun én opbevaringsmærkat ad gangen
 
@@ -212,8 +210,8 @@ Der kan kun anvendes en enkelt opbevaringsmærkat på en mail eller et dokument 
 
 - [Anvend automatisk mærkatpolitik](apply-retention-labels-automatically.md)
 - [Dokumentforståelsesmodel for SharePoint Syntex](../contentunderstanding/apply-a-retention-label-to-a-model.md)
-- [Standardnavn for SharePoint](create-apply-retention-labels.md#applying-a-default-retention-label-to-all-content-in-a-sharepoint-library-folder-or-document-set) eller [Outlook](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
-- [Outlook regler](create-apply-retention-labels.md#automatically-applying-a-retention-label-to-email-by-using-rules)
+- [Standardetiket til SharePoint](create-apply-retention-labels.md#applying-a-default-retention-label-to-all-content-in-a-sharepoint-library-folder-or-document-set) eller [Outlook](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+- [Outlook-regler](create-apply-retention-labels.md#automatically-applying-a-retention-label-to-email-by-using-rules)
 
 For standardopbevaringsmærkater (de markerer ikke elementer som en [post eller lovmæssig post](records-management.md#records)):
 
@@ -228,8 +226,8 @@ For standardopbevaringsmærkater (de markerer ikke elementer som en [post eller 
 
   Du kan finde flere oplysninger om funktionsmåden for mærkater, når den anvendes ved hjælp af et standardnavn:
 
-  - Standardnavn for SharePoint: [Funktionsmåde for navne, når du bruger en standardetiket til SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
-  - Standardnavn til Outlook: [Anvendelse af en standardopbevaringsmærkat på en Outlook mappe](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
+  - Standardnavn til SharePoint: [Funktionsmåde for navne, når du bruger et standardnavn til SharePoint](create-apply-retention-labels.md#label-behavior-when-you-use-a-default-label-for-sharepoint)
+  - Standardetiket til Outlook: [Anvendelse af en standardopbevaringsmærkat i en Outlook-mappe](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder)
 
 - Hvis der er flere politikker for automatisk anvendelse af mærkater, der kan anvende en opbevaringsmærkat, og indhold opfylder betingelserne i flere politikker, anvendes opbevaringsmærkaten for den ældste politik for automatisk anvendelse af mærkater (efter oprettelsesdato).
 
@@ -237,7 +235,7 @@ Når opbevaringsmærkater markerer elementer som en post eller en lovmæssig pos
 
 #### <a name="monitoring-retention-labels"></a>Overvågning af opbevaringsmærkater
 
-På Microsoft Purview-overholdelsesportalen skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
+På Microsoft Purview-compliance-portal skal du vælge **Dataklassificering** og siden **Oversigt** for at overvåge, hvordan dine opbevaringsmærkater bruges i din lejer, og identificere, hvor dine mærkede elementer er placeret. Du kan finde flere oplysninger, herunder vigtige forudsætninger, under [Få mere at vide om dataklassificering](data-classification-overview.md).
 
 Du kan derefter foretage detailudledning i detaljer ved hjælp af [Indholdsoversigt](data-classification-content-explorer.md) og [Aktivitetsoversigt](data-classification-activity-explorer.md).
 
@@ -259,13 +257,13 @@ Brug følgende tabel til at hjælpe dig med at identificere, om du vil bruge en 
 |Kapacitet|Opbevaringspolitik |Opbevaringsmærkat|
 |:-----|:-----|:-----|:-----|
 |Opbevaringsindstillinger, der kan bevare og derefter slette, kun bevare eller slette |Ja |Ja |
-|Understøttede arbejdsbelastninger: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />- Microsoft 365 grupper <br />- Skype for Business <br />- Teams<br />- Yammer|<br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja | <br /> Ja, undtagen offentlige mapper <br /> Ja <br /> Ja <br /> Ja <br /> Nej <br /> Nej <br /> Nej |
+|Understøttede arbejdsbelastninger: <br />- Exchange <br />- SharePoint <br />- OneDrive <br />– Microsoft 365-grupper <br />- Skype for Business <br />- Teams<br />- Yammer|<br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja <br /> Ja | <br /> Ja, undtagen offentlige mapper <br /> Ja <br /> Ja <br /> Ja <br /> Nej <br /> Nej <br /> Nej |
 |Opbevaring anvendes automatisk | Ja | Ja |
 |Anvend automatisk forskellige opbevaringsindstillinger i slutningen af opbevaringsperioden | Nej | Ja |
 |Opbevaring anvendt på baggrund af betingelser <br /> – følsomme infotyper, KQL-forespørgsler og -nøgleord, klassificeringer, der kan oplæres, vedhæftede filer i cloudmiljøet| Nej | Ja |
 |Opbevaring anvendes manuelt | Nej | Ja |
 |Slutbrugerinteraktion | Nej | Ja |
-|Bevares, hvis indholdet flyttes | Nej | Ja, i din Microsoft 365 lejer |
+|Bevares, hvis indholdet flyttes | Nej | Ja, i din Microsoft 365-lejer |
 |Erklær element som en post| Nej | Ja |
 |Start opbevaringsperioden, når den er mærket eller baseret på en hændelse | Nej | Ja |
 |Dispositionsgennemgang | Nej| Ja |
@@ -276,7 +274,7 @@ Brug følgende tabel til at hjælpe dig med at identificere, om du vil bruge en 
 
 **Fodnote:**
 
-<sup>\*</sup>For opbevaringsmærkater, der ikke markerer indholdet som en post eller lovgivningsmæssig post, er overvågningshændelser begrænset til, når et element i SharePoint eller OneDrive har en mærkat anvendt, ændret eller fjernet. Du kan finde overvågningsoplysninger for opbevaringsmærkater i afsnittet [Overvågningsopbevaringshandlinger](#auditing-retention-actions) på denne side.
+<sup>\*</sup> For opbevaringsmærkater, der ikke markerer indholdet som en post eller lovmæssig post, er overvågningshændelser begrænset til, når et element i SharePoint eller OneDrive har en mærkat, der er anvendt, ændret eller fjernet. Du kan finde overvågningsoplysninger for opbevaringsmærkater i afsnittet [Overvågningsopbevaringshandlinger](#auditing-retention-actions) på denne side.
 
 ### <a name="combining-retention-policies-and-retention-labels"></a>Kombination af opbevaringspolitikker og opbevaringsmærkater
 
@@ -288,30 +286,30 @@ Du kan finde flere oplysninger om, hvordan opbevaringspolitikker og opbevaringsm
 
 #### <a name="example-for-users-to-override-automatic-deletion"></a>Eksempel på, at brugere tilsidesætter automatisk sletning
 
-Scenarie: Indhold i brugernes OneDrive-konti slettes som standard automatisk efter fem år, men brugerne skal have mulighed for at tilsidesætte dette for bestemte dokumenter.
+Scenarie: Som standard slettes indhold i brugernes OneDrive-konti automatisk efter fem år, men brugerne skal have mulighed for at tilsidesætte dette for bestemte dokumenter.
 
-1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk sletter indhold fem år efter den seneste ændring, og anvender politikken på alle OneDrive konti.
+1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk sletter indhold fem år efter den seneste ændring, og anvender politikken på alle OneDrive-konti.
 
-2. Du opretter og konfigurerer en opbevaringsmærkat, der bevarer indhold for evigt, og føjer dette til en mærkatpolitik, som du publicerer til alle OneDrive konti. Du forklarer brugerne, hvordan de manuelt anvender denne mærkat på bestemte dokumenter, der skal udelukkes fra automatisk sletning, hvis de ikke ændres efter fem år.
+2. Du opretter og konfigurerer en opbevaringsmærkat, der bevarer indhold for evigt, og føjer dette til en mærkatpolitik, som du publicerer til alle OneDrive-konti. Du forklarer brugerne, hvordan de manuelt anvender denne mærkat på bestemte dokumenter, der skal udelukkes fra automatisk sletning, hvis de ikke ændres efter fem år.
 
 Eksempel på bevarelse af elementer i længere tid**
 
-Scenarie: Som standard bevares SharePoint elementer automatisk og slettes derefter efter fem år, men dokumenter i bestemte biblioteker skal opbevares i 10 år.
+Scenarie: SharePoint-elementer bevares som standard automatisk og slettes derefter efter fem år, men dokumenter i bestemte biblioteker skal bevares i 10 år.
 
-1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk bevarer og derefter sletter indhold efter fem år og anvender politikken på alle SharePoint og Microsoft 365-grupper instanser.
+1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk bevarer og derefter sletter indhold efter fem år og anvender politikken på alle SharePoint- og Microsoft 365-grupper-instanser.
 
-2. Du opretter og konfigurerer en opbevaringsmærkat, der automatisk bevarer indhold i 10 år. Du publicerer dette navn til SharePoint webstedsadministratorer, så de kan anvende det som en standardetiket, der nedarves af alle elementer i bestemte dokumentbiblioteker.
+2. Du opretter og konfigurerer en opbevaringsmærkat, der automatisk bevarer indhold i 10 år. Du publicerer dette navn til administratorer af SharePoint-websteder, så de kan anvende det som standardetiket, der nedarves af alle elementer i bestemte dokumentbiblioteker.
 
 #### <a name="example-to-delete-items-in-a-shorter-time-period"></a>Eksempel på sletning af elementer i en kortere tidsperiode
 
 Scenarie: Mails bevares som standard ikke, men slettes automatisk efter 10 år. Mails relateret til et bestemt projekt, der har et kodenavn for forhåndsudgivelse, skal dog slettes automatisk efter et år.
 
-1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk sletter indhold efter ti år, og anvender politikken på alle Exchange modtagere.
+1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk sletter indhold efter ti år, og anvender politikken på alle Exchange-modtagere.
 
 2. Du opretter og konfigurerer en opbevaringsmærkat, der automatisk sletter indhold efter et år. Indstillinger for anvendelse af dette mærkat på relevante mails omfatter:
-    - Du opretter en politik for automatisk mærkning, der identificerer indhold ved hjælp af projektkodenavnet som nøgleordet, og anvender politikken på alle Exchange modtagere
-    - Du publicerer etiketten og instruerer de brugere, der er involveret i projektet, om, hvordan du opretter en automatisk regel i Outlook, der anvender denne mærkat
-    - Du publicerer etiketten og instruerer brugerne i at oprette en mappe i Outlook for alle mails, der er relateret til projektet, og de anvender den publicerede mærkat på mappen og opretter derefter en Outlook regel for at flytte alle projektrelaterede mails til denne mappe
+    - Du opretter en politik for automatisk mærkning, der identificerer indhold ved hjælp af projektkodenavnet som nøgleordet, og anvender politikken på alle Exchange-modtagere
+    - Du publicerer etiketten og instruerer de brugere, der er involveret i projektet, om, hvordan du opretter en automatisk regel i Outlook, der anvender dette navn
+    - Du publicerer etiketten og instruerer brugerne i at oprette en mappe i Outlook for alle mails, der er relateret til projektet, og de anvender den publicerede etiket i mappen og opretter derefter en Outlook-regel for at flytte alle projektrelaterede mails til denne mappe
 
 ## <a name="how-long-it-takes-for-retention-settings-to-apply"></a>Hvor lang tid det tager at anvende opbevaringsindstillinger
 
@@ -332,13 +330,13 @@ Når du opretter en politik for opbevaringspolitik eller opbevaringsmærkat, ska
 
 - Et **adaptivt område** bruger en forespørgsel, som du angiver, så medlemskabet er ikke statisk, men dynamisk ved at køre dagligt i forhold til de attributter eller egenskaber, du angiver for de valgte placeringer. Du kan bruge flere tilpassede områder med en enkelt politik.
 
-    Eksempel: Mails og OneDrive dokumenter til direktører kræver en længere opbevaringsperiode end standardbrugere. Du opretter en opbevaringspolitik med et adaptivt omfang, der bruger den Azure AD attributjobtitel for "Direktør", og derefter vælger Exchange mail og OneDrive kontoplaceringer for politikken. Det er ikke nødvendigt at angive mailadresser eller OneDrive URL-adresser for disse brugere, fordi det tilpassede område automatisk henter disse værdier. For nye direktører er det ikke nødvendigt at konfigurere opbevaringspolitikken igen, fordi disse nye brugere med deres tilsvarende værdier for mail og OneDrive hentes automatisk.
+    Eksempel: Mails og OneDrive-dokumenter til direktører kræver en længere opbevaringsperiode end standardbrugere. Du opretter en opbevaringspolitik med et adaptivt omfang, der bruger Azure AD attributjobtitel for "Direktør", og derefter vælger exchange-mail- og OneDrive-kontoplaceringerne for politikken. Det er ikke nødvendigt at angive mailadresser eller OneDrive-URL-adresser for disse brugere, fordi det tilpassede område automatisk henter disse værdier. For nye direktører er det ikke nødvendigt at konfigurere opbevaringspolitikken igen, fordi disse nye brugere med deres tilsvarende værdier for mail og OneDrive automatisk hentes.
 
 - Et **statisk område** bruger ikke forespørgsler og er begrænset i konfigurationen, da det kan anvendes på alle instanser for en angivet placering eller bruge medtagelse og udeladelser for bestemte instanser for den pågældende placering. Disse tre valgmuligheder omtales nogle gange som henholdsvis "organisationsdækkende", "include", og "excludes".
 
-    Eksempel: Mails og OneDrive dokumenter til direktører kræver en længere opbevaringsperiode end standardbrugere. Du opretter en opbevaringspolitik med et statisk område, der vælger Exchange mail og OneDrive kontoplaceringer for politikken. For den Exchange mailplacering kan du identificere en gruppe, der kun indeholder direktørerne, så du angiver denne gruppe for opbevaringspolitikken, og gruppemedlemskabet med de respektive mailadresser hentes, når politikken oprettes. For placeringen af OneDrive-konti skal du identificere og derefter angive URL-adresser for individuelle OneDrive for hver leder. For nye direktører skal du konfigurere opbevaringspolitikken igen for at tilføje de nye mailadresser og OneDrive URL-adresser. Du skal også opdatere OneDrive URL-adresser, når der er en ændring i en leders UPN.
+    Eksempel: Mails og OneDrive-dokumenter til direktører kræver en længere opbevaringsperiode end standardbrugere. Du opretter en opbevaringspolitik med et statisk område, der vælger placeringen af Exchange-mailen og OneDrive-kontiene for politikken. For Exchange-mailplaceringen kan du identificere en gruppe, der kun indeholder direktørerne, så du angiver denne gruppe for opbevaringspolitikken, og gruppemedlemskabet med de respektive mailadresser hentes, når politikken oprettes. For placeringen af OneDrive-konti skal du identificere og derefter angive individuelle OneDrive-URL-adresser for hver chef. For nye direktører skal du konfigurere opbevaringspolitikken igen for at tilføje de nye mailadresser og URL-adresser til OneDrive. Du skal også opdatere OneDrive-URL-adresserne, når der er en ændring i en leders UPN.
 
-    OneDrive URL-adresser er særligt udfordrende at angive pålideligt, da disse URL-adresser som standard ikke oprettes, før brugeren får adgang til deres OneDrive første gang. Og hvis en brugers UPN ændres, hvilket du måske ikke kender til, ændres vedkommendes OneDrive URL-adresse automatisk.
+    Det er især udfordrende at angive URL-adresser til OneDrive, fordi disse URL-adresser som standard ikke oprettes, før brugeren får adgang til deres OneDrive for første gang. Og hvis en brugers UPN ændres, hvilket du måske ikke kender til, ændres vedkommendes URL-adresse til OneDrive automatisk.
 
 Fordele ved at bruge tilpassede områder:
 
@@ -348,7 +346,7 @@ Fordele ved at bruge tilpassede områder:
 
 - Forespørgselsbaseret medlemskab sikrer robusthed over for forretningsændringer, der muligvis ikke afspejles pålideligt i gruppemedlemskab eller eksterne processer, der er afhængige af kommunikation på tværs af afdelinger.
 
-- En enkelt opbevaringspolitik kan omfatte placeringer for både Microsoft Teams og Yammer, hvorimod disse placeringer kræver deres egen opbevaringspolitik, når du bruger et statisk område.
+- En enkelt opbevaringspolitik kan omfatte placeringer for både Microsoft Teams og Yammer, hvorimod når du bruger et statisk omfang, kræver disse placeringer deres egen opbevaringspolitik.
 
 - Du kan kun anvende specifikke opbevaringsindstillinger for inaktive postkasser. Denne konfiguration er ikke mulig med et statisk område, fordi statiske områder ikke understøtter specifik medtagelse af modtagere med inaktive postkasser på det tidspunkt, hvor politikken tildeles.
 
@@ -358,7 +356,7 @@ Fordele ved at bruge statiske områder:
 
     For "include" og "excludes" kan dette valg være en enklere konfiguration i starten, hvis antallet af forekomster, du skal angive, er lavt og ikke ændres. Men når dette antal forekomster begynder at stige, og du ofte ændrer i din organisation, som kræver, at du omkonfigurerer dine politikker, kan tilpassede områder være nemmere at konfigurere og meget nemmere at vedligeholde.
 
-- Placeringerne **Skype for Business** og **Exchange offentlige mapper** understøtter ikke tilpassede områder. For disse placeringer skal du bruge et statisk område.
+- Placeringerne **af de offentlige Skype for Business** og **Exchange-mapper** understøtter ikke tilpassede områder. For disse placeringer skal du bruge et statisk område.
 
 Du kan finde konfigurationsoplysninger under [Konfiguration af tilpassede områder](retention-settings.md#configuration-information-for-adaptive-scopes).
 
@@ -369,15 +367,15 @@ Hvis du vil se et optaget webinar (kræver registrering), skal du gå [til Detal
 
 ## <a name="policy-lookup"></a>Politikopslag
 
-Du kan konfigurere flere opbevaringspolitikker for Microsoft 365 placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde de politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper, skal du bruge **Politikopslag** fra løsningerne til **administration af datalivscyklus** eller **Dataadministration** på Microsoft Purview-overholdelsesportalen.
+Du kan konfigurere flere opbevaringspolitikker for Microsoft 365-placeringer samt flere politikker for opbevaringsmærkater, som du publicerer eller anvender automatisk. Hvis du vil finde politikkerne for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365-grupper, skal du bruge **politikopslag** fra løsningerne til **administration af datalivscyklus** eller **datastyring** i Microsoft Purview-compliance-portal.
 
 Eksempel:
 
-![Politikopslag for at finde politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365 grupper ](../media/policy-lookup.png)
+![Politikopslag for at finde politikker for opbevaring, der er tildelt bestemte brugere, websteder og Microsoft 365-grupper ](../media/policy-lookup.png)
 
-Du skal angive den nøjagtige mailadresse for en bruger, den nøjagtige URL-adresse for et websted eller den nøjagtige mailadresse for en Microsoft 365 gruppe. Du kan f.eks. ikke bruge jokertegn eller delvise matches.
+Du skal angive den nøjagtige mailadresse for en bruger, den nøjagtige URL-adresse for et websted eller den nøjagtige mailadresse for en Microsoft 365-gruppe. Du kan f.eks. ikke bruge jokertegn eller delvise matches.
 
-Indstillingen for websteder omfatter OneDrive konti. Du kan få oplysninger om, hvordan du angiver URL-adressen for en brugers OneDrive-konto, under [Hent en liste over alle bruger-OneDrive URL-adresser i din organisation](/onedrive/list-onedrive-urls).
+Indstillingen for websteder indeholder OneDrive-konti. Du kan få oplysninger om, hvordan du angiver URL-adressen for en brugers OneDrive-konto, under [Hent en liste over alle bruger-URL-adresser til OneDrive i din organisation](/onedrive/list-onedrive-urls).
 
 ## <a name="the-principles-of-retention-or-what-takes-precedence"></a>Principperne for opbevaring, eller hvad har forrang?
 
@@ -409,11 +407,11 @@ Forklaring af de fire forskellige principper:
 1. **Opbevaring vinder over sletning.** Indhold slettes ikke permanent, når det også har opbevaringsindstillinger til at bevare det. Selvom dette princip sikrer, at indhold bevares af hensyn til overholdelse af angivne standarder, kan sletningsprocessen stadig startes (brugerinitieret eller systeminitieret) og kan derfor fjerne indholdet fra brugernes primære visning. Permanent sletning er dog suspenderet. Du kan få flere oplysninger om, hvordan og hvor indhold bevares, ved at bruge følgende links for hver arbejdsbelastning:
 
     - [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive)
-    - [Sådan fungerer opbevaring sammen med Microsoft Teams](retention-policies-teams.md#how-retention-works-with-microsoft-teams)
-    - [Sådan fungerer opbevaring sammen med Yammer](retention-policies-yammer.md#how-retention-works-with-yammer)
+    - [Sådan fungerer opbevaring med Microsoft Teams](retention-policies-teams.md#how-retention-works-with-microsoft-teams)
+    - [Sådan fungerer opbevaring med Yammer](retention-policies-yammer.md#how-retention-works-with-yammer)
     - [Sådan fungerer opbevaring for Exchange](retention-policies-exchange.md#how-retention-works-for-exchange)
 
-    **Eksempel på dette første princip**: En mail er underlagt en opbevaringspolitik for Exchange, der er konfigureret til at slette elementer tre år efter oprettelsen, og der er også anvendt en opbevaringsmærkat, der er konfigureret til at bevare elementer fem år efter oprettelsen.
+    **Eksempel på dette første princip**: En mail er underlagt en opbevaringspolitik for Exchange, der er konfigureret til at slette elementer tre år efter oprettelsen, og der anvendes også en opbevaringsmærkat, der er konfigureret til at bevare elementer fem år efter, at de er oprettet.
 
     Mailen bevares i fem år, fordi denne opbevaringshandling har forrang frem for sletning. Mailen slettes permanent ved udgangen af de fem år på grund af den slettehandling, der blev suspenderet, mens opbevaringshandlingen var i kraft.
 
@@ -422,9 +420,9 @@ Forklaring af de fire forskellige principper:
     > [!NOTE]
     > Det er muligt for en opbevaringsperiode på 5 år i en opbevaringspolitik eller mærkat vinder over en opbevaringsperiode på 7 år i en opbevaringspolitik eller en mærkat, fordi 5-års perioden er konfigureret til at starte på baggrund af, hvornår filen senest er ændret, og perioden på 7 år er konfigureret til at starte fra det tidspunkt, hvor filen oprettes.
 
-    **Eksempel på dette andet princip**: Dokumenter på webstedet marketing SharePoint er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er konfigureret for alle SharePoint websteder for at bevare elementer i fem år, efter at de er oprettet. Den anden opbevaringspolitik er konfigureret for bestemte SharePoint websteder for at bevare elementer i ti år, efter at de er oprettet.
+    **Eksempel på dette andet princip**: Dokumenter på SharePoint-marketingwebstedet er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er konfigureret for alle SharePoint-websteder for at bevare elementer i fem år, efter at de er oprettet. Den anden opbevaringspolitik er konfigureret for bestemte SharePoint-websteder til at bevare elementer i ti år, efter at de er oprettet.
 
-    Dokumenter på dette marketingwebsted SharePoint opbevares i 10 år, fordi det er den længste opbevaringsperiode for elementet.
+    Dokumenter på dette SharePoint-marketingwebsted bevares i ti år, fordi det er den længste opbevaringsperiode for elementet.
 
 3. **Eksplicitte gevinster over implicitte for sletninger.** Med konflikter, der nu er løst i forbindelse med opbevaring, er det kun konflikterne for sletninger, der forbliver:
 
@@ -434,15 +432,15 @@ Forklaring af de fire forskellige principper:
 
         Dokumentet slettes permanent efter syv år, fordi sletningen fra opbevaringsmærkaten har forrang.
 
-    2. Når du kun har opbevaringspolitikker: Hvis en opbevaringspolitik for en placering bruger et adaptivt omfang eller et statisk område, der indeholder bestemte instanser (f.eks. specifikke brugere for Exchange mail), har opbevaringspolitikken forrang over et statisk område, der er konfigureret for alle instanser for den samme placering.
+    2. Når du kun har opbevaringspolitikker: Hvis en opbevaringspolitik for en placering bruger et adaptivt område eller et statisk område, der indeholder bestemte instanser (f.eks. specifikke brugere til Exchange-mail), har opbevaringspolitikken forrang over et statisk område, der er konfigureret for alle instanser for den samme placering.
 
-        Et statisk område, der er konfigureret for alle instanser for en placering, kaldes nogle gange for en "politik for hele organisationen". Du kan f.eks. **Exchange mail** og standardindstillingen for **Alle modtagere**. Eller **SharePoint websteder** og standardindstillingen for **Alle websteder**. Når opbevaringspolitikker ikke er i hele organisationen, men er konfigureret med et adaptivt omfang eller et statisk omfang, der omfatter bestemte instanser, har de samme prioritet på dette niveau.
+        Et statisk område, der er konfigureret for alle instanser for en placering, kaldes nogle gange for en "politik for hele organisationen". For eksempel **Exchange-mail** og standardindstillingen for **Alle modtagere**. Eller **SharePoint-websteder** og standardindstillingen for **Alle websteder**. Når opbevaringspolitikker ikke er i hele organisationen, men er konfigureret med et adaptivt omfang eller et statisk omfang, der omfatter bestemte instanser, har de samme prioritet på dette niveau.
 
         **Eksempel 1 til dette tredje princip (politikker):** En mail er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er uden for området og sletter elementer efter ti år. Den anden opbevaringspolitik er begrænset til bestemte postkasser og sletter elementer efter fem år.
 
         Mailen slettes permanent efter fem år, fordi sletningen fra den områdebaserede opbevaringspolitik har forrang over opbevaringspolitikken for hele organisationen.
 
-        **Eksempel 2 til dette tredje princip (politikker):** Et dokument på en brugers OneDrive konto er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive konto og har en sletningshandling efter 10 år. Den anden opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive konto og har en sletningshandling efter syv år.
+        **Eksempel 2 til dette tredje princip (politikker):** Et dokument på en brugers OneDrive-konto er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive-konto og har en sletningshandling efter 10 år. Den anden opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive-konto og har en sletningshandling efter syv år.
 
         Når dette dokument slettes permanent, kan det ikke bestemmes på dette niveau, fordi begge opbevaringspolitikker er begrænset til at omfatte bestemte instanser.
 
@@ -451,7 +449,7 @@ Forklaring af de fire forskellige principper:
     > [!NOTE]
     > Det er muligt, at en opbevaringspolitik, der har en opbevaringsperiode på 7 år, vinder i forhold til en opbevaringspolitik på 5 år, fordi den første politik er konfigureret til at starte opbevaringsperioden baseret på, hvornår filen oprettes, og den anden opbevaringspolitik fra, hvornår filen senest ændres.
 
-    **Eksempel på dette fjerde princip**: Et dokument på en brugers OneDrive konto er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive konto og har en sletningshandling på 10 år, efter at filen er oprettet. Den anden opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive-konto og har en sletningshandling på syv år, efter at filen er oprettet.
+    **Eksempel på dette fjerde princip**: Et dokument på en brugers OneDrive-konto er underlagt to opbevaringspolitikker. Den første opbevaringspolitik er begrænset til at omfatte denne brugers OneDrive-konto og har en sletningshandling på 10 år, efter at filen er oprettet. Den anden opbevaringspolitik er beregnet til at omfatte denne brugers OneDrive-konto og har en sletningshandling på syv år, efter at filen er oprettet.
 
     Dette dokument slettes permanent efter syv år, fordi det er den korteste opbevaringsperiode for elementet fra disse to områdeopbevaringspolitikker.
 
@@ -481,7 +479,7 @@ Følgende eksempler er mere komplekse for at illustrere principperne for opbevar
 
 ## <a name="use-preservation-lock-to-restrict-changes-to-policies"></a>Brug Bevarelseslås til at begrænse ændringer af politikker
 
-Nogle organisationer skal muligvis overholde regler, der er defineret af regulerende organer, f.eks. Sikkerhed og Exchange Commission (SEC) Rule 17a-4, hvilket kræver, at når en politik for opbevaring er slået til, kan den ikke slås fra eller gøres mindre restriktiv.
+Nogle organisationer skal muligvis overholde regler, der er defineret af regulerende organer, f.eks. regel 17a-4 (Securities and Exchange Commission– SEC), som kræver, at en opbevaringspolitik er slået til, ikke kan slås fra eller gøres mindre restriktiv.
 
 Bevarelseslås sikrer, at din organisation kan opfylde sådanne lovmæssige krav, fordi den låser en opbevaringspolitik eller en opbevaringsmærkatpolitik, så ingen – herunder en administrator – kan slå politikken fra, slette politikken eller gøre den mindre restriktiv.
 
@@ -495,17 +493,17 @@ Du kan også beholde en politik, men ændre placeringsstatus til Fra eller deakt
 
 Yderligere oplysninger om bestemte placeringer:
 
-- **SharePoint websteder og OneDrive konti:**
+- **SharePoint-websteder og OneDrive-konti:**
 
-    Når du frigiver en opbevaringspolitik for SharePoint websteder og OneDrive konti, bevares alt indhold, der er underlagt opbevaring fra politikken, i 30 dage for at forhindre utilsigtet datatab. I løbet af denne 30-dages udvidede periode bevares slettede filer stadig (filer føjes fortsat til biblioteket bevarelsesventeposition), men det timerjob, der jævnligt rydder op i biblioteket Bevarelsesposition, er midlertidigt afbrudt for disse filer, så du kan gendanne dem, hvis det er nødvendigt.
+    Når du frigiver en opbevaringspolitik for SharePoint-websteder og OneDrive-konti, bevares alt indhold, der er underlagt opbevaring fra politikken, i 30 dage for at forhindre utilsigtet tab af data. I løbet af denne 30-dages udvidede periode bevares slettede filer stadig (filer føjes fortsat til biblioteket bevarelsesventeposition), men det timerjob, der jævnligt rydder op i biblioteket Bevarelsesposition, er midlertidigt afbrudt for disse filer, så du kan gendanne dem, hvis det er nødvendigt.
 
-    En undtagelse til denne 30-dages respitperiode er, når du opdaterer politikken for at udelade et eller flere websteder for SharePoint eller konti for OneDrive. I dette tilfælde sletter timerjobbet filer for disse placeringer i biblioteket bevarelsesposition uden den 30-dages forsinkelse.
+    En undtagelse til denne 30-dages respitperiode er, når du opdaterer politikken for at udelade et eller flere websteder til SharePoint eller konti for OneDrive. I dette tilfælde sletter timerjobbet filer for disse placeringer i biblioteket bevarelsesposition uden en 30-dages forsinkelse.
 
-    Du kan få flere oplysninger om biblioteket bevarelsesposition under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
+    Du kan finde flere oplysninger om biblioteket til bevarelse af venteposition under [Sådan fungerer opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md#how-retention-works-for-sharepoint-and-onedrive).
 
     Hvis du genaktiverer politikken eller ændrer placeringsstatus til inden for 30 dage, fortsætter politikken på grund af funktionsmåden i den udvidede periode uden permanent tab af data i denne periode.
 
-- **Exchange mail og Microsoft 365-grupper**
+- **Exchange-mail og Microsoft 365-grupper**
 
   Når du frigiver en opbevaringspolitik for postkasser, der er [inaktive](inactive-mailboxes-in-office-365.md) på det tidspunkt, hvor politikken udgives:
 
@@ -513,11 +511,11 @@ Yderligere oplysninger om bestemte placeringer:
 
     En eksplicit opbevaringspolitik kræver enten et adaptivt politikomfang eller et statisk politikomfang med en "include"-konfiguration, der angav en aktiv postkasse på det tidspunkt, hvor politikken blev anvendt og senere blev inaktiv
 
-  - Hvis opbevaringspolitikken implicit anvendes på en postkasse, og den konfigurerede opbevaringshandling skal bevares, gælder opbevaringspolitikken fortsat, og en inaktiv postkasse bliver aldrig berettiget til automatisk sletning. Når opbevaringshandlingen ikke længere gælder, fordi opbevaringsperioden er udløbet, kan den Exchange administrator nu [slette den inaktive postkasse manuelt](delete-an-inactive-mailbox.md)
+  - Hvis opbevaringspolitikken implicit anvendes på en postkasse, og den konfigurerede opbevaringshandling skal bevares, gælder opbevaringspolitikken fortsat, og en inaktiv postkasse bliver aldrig berettiget til automatisk sletning. Når opbevaringshandlingen ikke længere gælder, fordi opbevaringsperioden er udløbet, kan Exchange-administratoren nu [slette den inaktive postkasse manuelt](delete-an-inactive-mailbox.md)
 
-    En implicit opbevaringspolitik kræver et statisk politikområde med konfigurationen **Alle modtagere** (for Exchange mail) eller **Alle grupper** (for Microsoft 365-grupper).
+    En implicit opbevaringspolitik kræver et statisk politikområde med konfigurationen **Alle modtagere** (til Exchange-mail) eller **Alle grupper** (for Microsoft 365-grupper).
 
-    Du kan finde flere oplysninger om inaktive postkasser, hvor der er anvendt opbevaringspolitikker, under [Inaktive postkasser og Microsoft 365 opbevaring](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-microsoft-365-retention).
+    Du kan finde flere oplysninger om inaktive postkasser, hvor der er anvendt opbevaringspolitikker, under [Inaktive postkasser og Opbevaring i Microsoft 365](inactive-mailboxes-in-office-365.md#inactive-mailboxes-and-microsoft-365-retention).
 
 ## <a name="auditing-retention-configuration-and-actions"></a>Konfiguration af overvågningsopbevaring og handlinger
 
@@ -540,9 +538,9 @@ Opbevaringshandlinger, der logføres som overvågningshændelser, er kun tilgæn
   - Fra **Fil- og sideaktiviteter** skal du vælge **Ændret poststatus til ulåst** og **Ændret poststatus til låst**
 
 - Når en opbevaringsmærkat, der markerer indhold som en post eller lovmæssig post, anvendes på et element i Exchange:
-  - Fra **Exchange postkasseaktiviteter** skal du vælge **Markeret meddelelse som en post**
+  - Fra **Aktiviteter i Exchange-postkasse skal** du vælge **Markeret meddelelse som en post**
 
-- Når et navngivet element i SharePoint, OneDrive eller Exchange er markeret som en post eller lovmæssig post, og det slettes permanent:
+- Når et element, der er mærket i SharePoint, OneDrive eller Exchange, er markeret som en post eller lovmæssig post, og det slettes permanent:
   - Fra **Fil- og sideaktiviteter** skal du vælge **Slettet fil, der er markeret som en post**
 
 - Når en dispositionslæser udfører en handling for et element, der har nået slutningen af opbevaringsperioden:
@@ -550,39 +548,9 @@ Opbevaringshandlinger, der logføres som overvågningshændelser, er kun tilgæn
 
 ## <a name="powershell-cmdlets-for-retention-policies-and-retention-labels"></a>PowerShell-cmdlet'er til opbevaringspolitikker og opbevaringsmærkater
 
-Hvis du vil bruge opbevarings-cmdlet'erne, skal du først [oprette forbindelse til Office 365 Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell). Brug derefter en af følgende cmdlet'er:
+Brug [Office 365 Security & Compliance Center PowerShell](/powershell/exchange/scc-powershell) til Purview-opbevarings-cmdlet'er, der understøtter konfiguration i stor skala, scripting til automatisering eller kan være nødvendige i forbindelse med avancerede konfigurationsscenarier.
 
-- [Get-ComplianceTag](/powershell/module/exchange/get-compliancetag)
-
-- [New-ComplianceTag](/powershell/module/exchange/new-compliancetag)
-
-- [Remove-ComplianceTag](/powershell/module/exchange/remove-compliancetag)
-
-- [Set-ComplianceTag](/powershell/module/exchange/set-compliancetag)
-
-- [Enable-ComplianceTagStorage](/powershell/module/exchange/enable-compliancetagstorage)
-
-- [Get-ComplianceTagStorage](/powershell/module/exchange/get-compliancetagstorage)
-
-- [Get-RecordReviewNotificationTemplateConfig](/powershell/module/exchange/get-recordreviewnotificationtemplateconfig)
-
-- [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy)
-
-- [New-RetentionCompliancePolicy](/powershell/module/exchange/new-retentioncompliancepolicy)
-
-- [Remove-RetentionCompliancePolicy](/powershell/module/exchange/remove-retentioncompliancepolicy)
-
-- [Set-RecordReviewNotificationTemplateConfig](/powershell/module/exchange/set-recordreviewnotificationtemplateconfig)
-
-- [Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy)
-
-- [Get-RetentionComplianceRule](/powershell/module/exchange/get-retentioncompliancerule)
-
-- [Overholdelse af overholdelse af ny opbevaring](/powershell/module/exchange/new-retentioncompliancerule)
-
-- [Remove-RetentionComplianceRule](/powershell/module/exchange/remove-retentioncompliancerule)
-
-- [Set-RetentionComplianceRule](/powershell/module/exchange/set-retentioncompliancerule)
+Du kan finde en liste over tilgængelige cmdlet'er og for at identificere, hvilke der understøttes for de forskellige placeringer, i [PowerShell-cmdlet'er til opbevaringspolitikker og opbevaringsmærkater](retention-cmdlets.md).
 
 ## <a name="when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds"></a>Hvornår skal du bruge opbevaringspolitikker og opbevaringsmærkater eller eDiscovery-ventepositioner?
 
@@ -590,7 +558,7 @@ Selvom opbevaringsindstillinger og [ventepositioner, som du opretter med en eDis
 
 - Opbevaringsindstillinger, som du angiver i opbevaringspolitikker og opbevaringsmærkater, er designet til en langsigtet strategi for administration af datalivscyklus for at bevare eller slette data med henblik på overholdelse af angivne standarder. Omfanget er normalt bredt, hvor hovedfokus er placeringen og indholdet i stedet for individuelle brugere. Start og afslutning af opbevaringsperioden kan konfigureres med mulighed for automatisk at slette indhold uden yderligere administratorinput.
 
-- Ventepositioner for eDiscovery-sager (enten eDiscovery (Standard) eller eDiscovery-sager (Premium) er designet til en begrænset varighed for at bevare data til en juridisk undersøgelse. Omfanget er specifikt med fokus på indhold, der ejes af identificerede brugere. Starten og slutningen af bevarelsesperioden kan ikke konfigureres, men afhænger af individuelle administratorhandlinger uden mulighed for automatisk at slette indhold, når ventepositionen frigives.
+- Ventepositioner for eDiscovery-sager (enten eDiscovery (Standard) eller eDiscovery (Premium) er designet til en begrænset varighed for at bevare data til en juridisk undersøgelse. Omfanget er specifikt med fokus på indhold, der ejes af identificerede brugere. Starten og slutningen af bevarelsesperioden kan ikke konfigureres, men afhænger af individuelle administratorhandlinger uden mulighed for automatisk at slette indhold, når ventepositionen frigives.
 
 Oversigt, der sammenligner opbevaring med ventepositioner:
 
@@ -620,21 +588,21 @@ Hvis du bruger ældre eDiscovery-værktøjer til at bevare data, kan du se følg
 
 Hvis du har brug for proaktivt at bevare eller slette indhold i Microsoft 365 til administration af datalivscyklus, anbefaler vi, at du bruger opbevaringspolitikker og opbevaringsmærkater i stedet for følgende ældre funktioner.
 
-Hvis du i øjeblikket bruger disse ældre funktioner, vil de fortsat fungere side om side med Microsoft 365 opbevaringspolitikker og opbevaringsmærkater. Vi anbefaler dog, at du fremover bruger Microsoft 365 opbevaringspolitikker og opbevaringsmærkater til at drage fordel af en enkelt løsning til at administrere både opbevaring og sletning af indhold på tværs af flere arbejdsbelastninger i Microsoft 365.
+Hvis du i øjeblikket bruger disse ældre funktioner, vil de fortsat fungere side om side med Microsoft 365-opbevaringspolitikker og opbevaringsmærkater. Vi anbefaler dog, at du fremover bruger Microsoft 365-opbevaringspolitikker og opbevaringsmærkater til at drage fordel af en enkelt løsning til at administrere både opbevaring og sletning af indhold på tværs af flere arbejdsbelastninger i Microsoft 365.
 
 **Ældre funktioner fra Exchange Online:**
 
 - [Opbevaringstags og opbevaringspolitikker](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies), også kendt som [mrm (messaging records management)](/exchange/security-and-compliance/messaging-records-management/messaging-records-management) (kun sletning)
 
-  Men hvis du bruger følgende MRM-funktioner, skal du være opmærksom på, at de i øjeblikket ikke understøttes af Microsoft 365 opbevaringspolitikker:
+  Men hvis du bruger følgende MRM-funktioner, skal du være opmærksom på, at de i øjeblikket ikke understøttes af Microsoft 365-opbevaringspolitikker:
 
-  - En arkivpolitik for [, at arkivpostkasser](enable-archive-mailboxes.md) automatisk flytter mails fra en brugers primære postkasse til deres arkivpostkasse efter et angivet tidsrum. En arkivpolitik (med alle indstillinger) kan bruges sammen med en opbevaringspolitik for Microsoft 365, der gælder for en brugers primære postkasse og arkivpostkasse.
+  - En arkivpolitik for [, at arkivpostkasser](enable-archive-mailboxes.md) automatisk flytter mails fra en brugers primære postkasse til deres arkivpostkasse efter et angivet tidsrum. En arkivpolitik (med alle indstillinger) kan bruges sammen med en Microsoft 365-opbevaringspolitik, der gælder for en brugers primære postkasse og arkivpostkasse.
 
-  - Opbevaringspolitikker, der anvendes af en administrator på bestemte mapper i en postkasse. En Microsoft 365 opbevaringspolitik gælder for alle mapper i postkassen. En administrator kan dog konfigurere forskellige opbevaringsindstillinger ved hjælp af opbevaringsmærkater, som en bruger kan anvende på mapper i Outlook som [standardopbevaringsmærkat](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder).
+  - Opbevaringspolitikker, der anvendes af en administrator på bestemte mapper i en postkasse. En Microsoft 365-opbevaringspolitik gælder for alle mapper i postkassen. En administrator kan dog konfigurere forskellige opbevaringsindstillinger ved hjælp af opbevaringsmærkater, som en bruger kan anvende på mapper i Outlook som en [standardopbevaringsmærkat](create-apply-retention-labels.md#applying-a-default-retention-label-to-an-outlook-folder).
 
 - [Procesførelse (](create-a-litigation-hold.md) kun opbevaring)
 
-   Selvom tvister stadig understøttes, anbefaler vi, at du bruger Microsoft 365 opbevaring eller eDiscovery-bevarelse efter [behov](#when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds).
+   Selvom litigation-bevarelser stadig understøttes, anbefaler vi, at du bruger Microsoft 365-opbevaring eller eDiscovery-ventepositioner efter [behov](#when-to-use-retention-policies-and-retention-labels-or-ediscovery-holds).
 
 **Ældre funktioner fra SharePoint og OneDrive:**
 
@@ -646,11 +614,11 @@ Hvis du i øjeblikket bruger disse ældre funktioner, vil de fortsat fungere sid
 
 - [Politikker for administration af oplysninger](intro-to-info-mgmt-policies.md) (kun sletning)
 
-Hvis du har konfigureret SharePoint websteder for politikker for indholdstyper eller politikker for administration af oplysninger for at bevare indhold for en liste eller et bibliotek, ignoreres disse politikker, mens en opbevaringspolitik er i kraft.
+Hvis du har konfigureret SharePoint-websteder for politikker for indholdstyper eller politikker for administration af oplysninger for at bevare indhold for en liste eller et bibliotek, ignoreres disse politikker, mens en opbevaringspolitik er i kraft.
 
 ## <a name="related-information"></a>Relaterede oplysninger
 
-- [SharePoint onlinegrænser](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
+- [SharePoint Online-grænser](/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-limits)
 - [Grænser og specifikationer for Microsoft Teams](/microsoftteams/limits-specifications-teams) 
 - [Ressourcer, der kan hjælpe dig med at opfylde lovmæssige krav til administration af datalivscyklus og datastyring](retention-regulatory-requirements.md)
 

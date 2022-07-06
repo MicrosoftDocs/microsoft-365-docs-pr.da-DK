@@ -1,5 +1,5 @@
 ---
-title: Arkivér data fra CellTrust SL2-platformen for at Microsoft 365
+title: Arkivér data fra CellTrust SL2-platformen til Microsoft 365
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -12,20 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en CellTrust SL2-dataconnector til at importere og arkivere mobilkommunikationsdata.
-ms.openlocfilehash: 0ac1137c8b6ee2d2267421c80adbbf65eaf9e5b7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8c31f349f25702e88a260025ef69475f44f96a0e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100891"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624703"
 ---
 # <a name="archive-data-from-celltrust-sl2-to-microsoft-365"></a>Arkivér data fra CellTrust SL2 til Microsoft 365
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+CellTrust SL2 henter mobilkommunikationsdata og integreres med de førende arkiveringsteknologier for at opfylde kravene til elektronisk registrering i forbindelse med regler som FINRA, HIPAA, FOIA og TCPA. SL2 Data Connector importerer elementer til mobilkommunikation til Microsoft 365. I denne artikel beskrives processen til integration af SL2 med Microsoft 365 ved hjælp af CellTrust SL2 Data Connector til arkivering. Fuldførelse af denne proces forudsætter, at du abonnerer på CellTrust SL2-tjenesten og har kendskab til SL2-arkitekturen. Du kan få oplysninger om CellTrust SL2 under <https://www.celltrust.com>.
 
-CellTrust SL2 henter mobilkommunikationsdata og integreres med de førende arkiveringsteknologier for at opfylde kravene til elektronisk registrering i forbindelse med regler som FINRA, HIPAA, FOIA og TCPA. SL2 Data Connector importerer elementer til mobilkommunikation for at Microsoft 365. I denne artikel beskrives processen til integration af SL2 med Microsoft 365 ved hjælp af CellTrust SL2 Data Connector til arkivering. Fuldførelse af denne proces forudsætter, at du abonnerer på CellTrust SL2-tjenesten og har kendskab til SL2-arkitekturen. Du kan få oplysninger om CellTrust SL2 under <https://www.celltrust.com>.
-
-Når data er importeret til brugerpostkasser i Microsoft 365, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, Microsoft 365 opbevaringspolitikker og kommunikation med overholdelse af angivne standarder. Brug af CellTrust SL2 Data Connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når data er importeret til brugerpostkasser i Microsoft 365, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, Microsoft 365-opbevaringspolitikker og kommunikation med overholdelse af angivne standarder. Brug af CellTrust SL2 Data Connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-with-the-celltrust-sl2-data-connector"></a>Oversigt over arkivering med CellTrust SL2 Data Connector
 
@@ -35,9 +33,9 @@ CellTrusts SL2-platform henter kommunikationsdata fra flere kilder. SL2-datakild
 
 1. SL2-brugere sender og modtager data til og fra SL2-tjenester i Microsoft Azure.
 
-2. Din organisation har et SL2-domæne i CellTrust's SL2 Cloud Service-miljø. Dit domæne kan have en eller flere organisationsenheder . SL2 Cloud Service overfører dine data til et meget sikkert område på den Microsoft Azure platform, så dine data aldrig forlader Microsoft Azure miljø. Afhængigt af din SL2-plan (Enterprise, SMB eller Government) hostes dit domæne enten på Microsoft Azure Global eller Microsoft Azure Government.
+2. Din organisation har et SL2-domæne i CellTrust's SL2 Cloud Service-miljø. Dit domæne kan have en eller flere organisationsenheder . SL2 Cloud Service overfører dine data til et yderst sikkert område på Microsoft Azure-platformen, så dine data aldrig forlader Microsoft Azure-miljøet. Afhængigt af din SL2-plan (Enterprise, SMB eller Government) hostes dit domæne enten på Microsoft Azure Global eller Microsoft Azure Government.
 
-3. Når du har oprettet CellTrust SL2-dataconnectoren, begynder dit domæne og dine eksterne enheder (uanset din SL2-plan) at sende data til Microsoft 365. Datafeedet er struktureret til at understøtte rapportering baseret på datakilder, AFHÆNGIGE'er eller domænet i sig selv. Derfor har din organisation kun brug for én connector til at sende alle dine datakilder til Microsoft 365.
+3. Når du har oprettet CellTrust SL2-dataconnectoren, begynder dit domæne og DINE ENHEDER (uanset din SL2-plan) at sende data til Microsoft 365. Datafeedet er struktureret til at understøtte rapportering baseret på datakilder, AFHÆNGIGE'er eller domænet i sig selv. Derfor har din organisation kun brug for én connector til at sende alle dine datakilder til Microsoft 365.
 
 4. Connectoren opretter en mappe under hver tilknyttet bruger med en passende Office 365 licens med titlen **CellTrust SL2**. Denne tilknytning forbinder en CellTrust SL2-bruger med en Office 365 postkasse ved hjælp af en mailadresse. Hvis et bruger-id i CellTrust SL2 ikke stemmer overens i Office 365, arkiveres brugerens data ikke.
 
@@ -47,9 +45,9 @@ CellTrusts SL2-platform henter kommunikationsdata fra flere kilder. SL2-datakild
 
 - Hent legitimationsoplysningerne for at få adgang til administratorkontoen for dit SL2-domæne.
 
-- Den bruger, der opretter CellTrust SL2-dataconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** på Microsoft Purview-overholdelsesportalen. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter CellTrust SL2-dataconnectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen DataConnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft Purview-compliance-portal. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne CellTrust-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af Microsofts forpligtelser til beskyttelse af personlige oplysninger og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne CellTrust-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-create-a-celltrust-sl2-connector"></a>Trin 1: Opret en CellTrust SL2-connector
 
@@ -69,7 +67,7 @@ Det første trin er at oprette en dataconnector på overholdelsesportalen.
 
 6. Angiv et entydigt navn, der identificerer connectoren, og klik derefter på **Næste**. Det navn, du angiver, identificerer connectoren på siden **Dataconnectors,** når du har oprettet den.
 
-7. Klik på **Log på CellTrust** på siden **Log på din CellTrust-konto**. Du bliver omdirigeret til **CellTrust-portalen for Microsoft 365** i et nyt browservindue.
+7. Klik på **Log på CellTrust** på siden **Log på din CellTrust-konto**. Du omdirigeres til **CellTrust-portalen for Microsoft 365** i et nyt browservindue.
 
 ## <a name="step-2-select-the-domains-or-ous-to-archive"></a>Trin 2: Vælg de domæner eller GV'er, der skal arkiveres
 
@@ -93,7 +91,7 @@ Det næste trin er at logge på en administratorkonto for dit CellTrust SL2-dom�
 
 Det sidste trin er at tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen.
 
-1. På siden **Brugertilknytning** skal du vælge **Aktivér automatisk brugertilknytning**, hvis mailadressen for brugerne er den samme i både SL2 og Microsoft 365. Ellers skal du manuelt bruge mailadresser ved at uploade en CSV-fil, der knytter brugernes SL2-adresse til deres Microsoft 365 adresse.
+1. På siden **Brugertilknytning** skal du vælge **Aktivér automatisk brugertilknytning** , hvis mailadressen for brugere er den samme i både SL2 og Microsoft 365. Ellers skal du manuelt bruge mailadresser ved at uploade en CSV-fil, der knytter brugernes SL2-adresse til deres Microsoft 365-adresse.
 
 2. Klik på **Næste**, gennemse indstillingerne, og klik derefter på **Udfør** for at oprette connectoren.
 
@@ -107,9 +105,9 @@ Se [siden CellTrust Kundesupport](https://www.celltrust.com/contact-us/#support)
 
 - En domæneadministrator kan konfigurere en connector for domænet eller en hvilken som helst anden domænecontroller i det pågældende domæne. Hvis du bruger OU-administratorkontoen, kan du kun konfigurere en connector for den pågældende OU.
 
-- Hvis du vil fuldføre ovenstående trin, skal du have tildelt en Microsoft 365 E5-licens og have de korrekte Microsoft Office administratorrettigheder.
+- Hvis du vil fuldføre ovenstående trin, skal du have tildelt en Microsoft 365 E5 licens og have de korrekte administratorrettigheder til Microsoft Office.
 
-- Hvis du vil teste den nye connector, skal du sende en sms ved hjælp af sl2-mobilappen eller fra SL2-portalen. Gå til din Microsoft 365 postkasse, og åbn mappen **CellTrust SL2** i indbakken. Det kan tage et par minutter, før tekstmeddelelserne vises i din postkasse.
+- Hvis du vil teste den nye connector, skal du sende en sms ved hjælp af sl2-mobilappen eller fra SL2-portalen. Gå til din Microsoft 365-postkasse, og åbn mappen **CellTrust SL2** i indbakken. Det kan tage et par minutter, før tekstmeddelelserne vises i din postkasse.
 
 - Mange love og bestemmelser kræver, at elektronisk kommunikation bevares på en sådan måde, at den kan fremstilles som bevis, når der anmodes om det. EDiscovery (Electronic Discovery) bruges til at overholde produktionen af elektronisk kommunikation. EIA-løsninger (Enterprise Information Archiving) er udviklet til at udføre eDiscovery og indeholder funktioner som administration af opbevaringspolitik, dataklassificering og indholdsovervågning. Microsoft 365 tilbyder en langsigtet opbevaringsløsning til overholdelse af de regler og standarder, der påvirker din organisation.
 

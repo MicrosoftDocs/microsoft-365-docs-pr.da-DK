@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Deklarer poster ved hjælp af opbevaringsmærkater.
-ms.openlocfilehash: 0e8453bee843131a5781318f7adde8d19bb04d92
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 6a68f63c3f304ed4a5f3d79445cd713125327bd2
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016806"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624283"
 ---
 # <a name="declare-records-by-using-retention-labels"></a>Erklær data ved hjælp af opbevaringsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Hvis du vil deklarere dokumenter og mails som [poster](records-management.md#records), skal du bruge [opbevaringsmærkater](retention.md#retention-labels) , der markerer indholdet som en **post** eller en **lovmæssig post**.
 
@@ -43,7 +41,7 @@ Du kan derefter enten publicere disse mærkater i en politik for opbevaringsmær
 
 Indstillingen for opbevaringsmærkat til markering af indhold som en lovmæssig post vises som standard ikke i guiden til opbevaringsmærkater. Hvis du vil have vist denne indstilling, skal du først køre en PowerShell-kommando:
 
-1. [Forbind til PowerShell & Office 365 security & compliance](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
+1. [Opret forbindelse til PowerShell Office 365 Security & Compliance](/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell).
 
 2. Kør følgende cmdlet:
 
@@ -57,13 +55,13 @@ Hvis du skifter mening om at få vist denne indstilling i guiden til opbevarings
 
 ## <a name="configuring-retention-labels-to-declare-records"></a>Konfiguration af opbevaringsmærkater for at deklarere poster
 
-Når du opretter en opbevaringsmærkat fra løsningen **Datastyring** på Microsoft Purview-overholdelsesportalen, har du mulighed for at markere elementer som en post. Hvis du kørte PowerShell-kommandoen fra det forrige afsnit, kan du alternativt markere elementer som en lovmæssig post.
+Når du opretter en opbevaringsmærkat fra løsningen **Datastyring** i Microsoft Purview-compliance-portal, har du mulighed for at markere elementer som en post. Hvis du kørte PowerShell-kommandoen fra det forrige afsnit, kan du alternativt markere elementer som en lovmæssig post.
 
 Eksempel:
 
 ![Konfigurer en opbevaringsmærkat for at markere indhold som en post eller lovgivningsmæssig.](../media/declare-records.png)
 
-Ved hjælp af denne opbevaringsmærkat kan du nu anvende den på SharePoint eller OneDrive dokumenter og Exchange mails efter behov.
+Ved hjælp af denne opbevaringsmærkat kan du nu anvende den på SharePoint- eller OneDrive-dokumenter og Exchange-mails efter behov.
 
 Hvis du vil have en komplet vejledning:
 
@@ -73,9 +71,9 @@ Hvis du vil have en komplet vejledning:
 
 ## <a name="tenant-setting-for-editing-record-properties"></a>Lejerindstilling for redigering af postegenskaber
 
-Hvis du vil bruge opbevaringsmærkater til at deklarere elementer som poster (i stedet for lovmæssige poster) i SharePoint og OneDrive skal du overveje, om du skal ændre standardindstillingen for lejeren, der giver brugerne mulighed for at redigere egenskaberne for en [låst post](record-versioning.md), når filer er større end 0 byte.
+Hvis du skal bruge opbevaringsmærkater til at deklarere elementer som poster (i stedet for lovmæssige poster) i SharePoint og OneDrive, skal du overveje, om du skal ændre standardlejerindstillingen, der giver brugerne mulighed for at redigere egenskaberne for en [låst post](record-versioning.md) , når filer er større end 0 byte.
 
-Hvis du vil ændre denne standard, skal du gå til [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) > **Datastyring** > **Indstillinger for** >  administration af poster **Opbevaringsmærkater** > **Tillad redigering af postegenskaber** og derefter slå indstillingen **Tillad brugere at redigere postegenskaber** fra.
+Hvis du vil ændre denne standard, skal du gå til **indstillinger** >  for [administration af poster i Microsoft Purview-compliance-portal](https://compliance.microsoft.com/) >  **Postadministration** > **Opbevaringsmærkater** > **Tillad redigering af postegenskaber** og derefter deaktivere indstillingen **Tillad brugere at redigere postegenskaber**.
 
 ## <a name="applying-the-configured-retention-label-to-content"></a>Anvendelse af den konfigurerede opbevaringsmærkat på indhold
 
@@ -92,11 +90,11 @@ Eksempel på et dokument, der er markeret som en post ved hjælp af en opbevarin
 
 Handlingerne for at navngive for at deklarere elementer som poster logføres i overvågningsloggen.
 
-For SharePoint elementer:
+For SharePoint-elementer:
 - Fra **Fil- og sideaktiviteter** skal du vælge **Ændret opbevaringsmærkat for en fil**. Denne overvågningshændelse er for opbevaringsmærkater, der markerer elementer som poster, lovmæssige poster, eller som er standardopbevaringsmærkater.
 
-For Exchange elementer:
-- Fra **Exchange postkasseaktiviteter** skal du vælge **Markeret meddelelse som en post**. Denne overvågningshændelse er for opbevaringsmærkater, der markerer elementer som poster eller lovmæssige poster.
+For Exchange-elementer:
+- Fra **Aktiviteter i Exchange-postkassen** skal du vælge **Navngivet meddelelse som en post**. Denne overvågningshændelse er for opbevaringsmærkater, der markerer elementer som poster eller lovmæssige poster.
 
 Du kan finde flere oplysninger om søgning efter disse hændelser i [Søg i overvågningsloggen i Security & Compliance Center](search-the-audit-log-in-security-and-compliance.md#file-and-page-activities).
 

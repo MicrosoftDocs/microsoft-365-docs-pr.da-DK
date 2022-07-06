@@ -15,16 +15,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan du redigerer brugerdefinerede følsomme oplysninger ved hjælp af PowerShell.
-ms.openlocfilehash: deb50679702cec69187392337511b4dde2d1ceb3
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 639a52526924d3068ce2d1cd38006a1773b6d098
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014382"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621953"
 ---
 # <a name="modify-a-custom-sensitive-information-type-using-powershell"></a>Rediger en brugerdefineret type følsomme oplysninger ved hjælp af PowerShell
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I PowerShell til & overholdelse af angivne standarder kræver ændring af en brugerdefineret type følsomme oplysninger, at du:
 
@@ -90,6 +88,6 @@ Du kan finde detaljerede syntaks- og parameteroplysninger under [Set-DlpSensitiv
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Få mere at vide om Forebyggelse af datatab i Microsoft Purview](dlp-learn-about-dlp.md)
+- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md)
 - [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
 - [Funktioner for type af følsomme oplysninger](sit-functions.md)

@@ -18,18 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Beskriver, hvordan du kommer i gang med at bruge eDiscovery (Standard) i Microsoft Purview. Når du har tildelt eDiscovery-tilladelser og oprettet en sag, kan du tilføje medlemmer, oprette eDiscovery-ventepositioner og derefter søge efter og eksportere indhold, der er relevant for din undersøgelse.
-ms.openlocfilehash: c8a3ca883191c450ebc20ddb555018b8b480199b
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 2bbd7c0bdeb1a23274deacb5b70e83ba45aacdc5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115867"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624305"
 ---
 # <a name="get-started-with-ediscovery-standard-in-microsoft-purview"></a>Kom i gang med eDiscovery (Standard) i Microsoft Purview
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eDiscovery (Standard) i Microsoft Purview indeholder et grundlæggende eDiscovery-værktøj, som organisationer kan bruge til at søge efter og eksportere indhold i Microsoft 365 og Office 365. Du kan også bruge eDiscovery (Standard) til at placere en eDiscovery-venteposition på indholdsplaceringer, f.eks. Exchange postkasser, SharePoint websteder, OneDrive konti og Microsoft Teams. Der kræves intet for at udrulle eDiscovery (Standard), men der er nogle forudsætningsopgaver, som en it-administrator og eDiscovery-chef skal udføre, før din organisation kan begynde at bruge eDiscovery (Standard) til at søge efter, eksportere og bevare indhold.
+Microsoft Purview eDiscovery (Standard) i Microsoft Purview indeholder et grundlæggende eDiscovery-værktøj, som organisationer kan bruge til at søge efter og eksportere indhold i Microsoft 365 og Office 365. Du kan også bruge eDiscovery (Standard) til at placere en eDiscovery-venteposition på indholdsplaceringer, f.eks. Exchange-postkasser, SharePoint-websteder, OneDrive-konti og Microsoft Teams. Der kræves intet for at udrulle eDiscovery (Standard), men der er nogle forudsætningsopgaver, som en it-administrator og eDiscovery-chef skal udføre, før din organisation kan begynde at bruge eDiscovery (Standard) til at søge efter, eksportere og bevare indhold.
 
 I denne artikel beskrives de trin, der er nødvendige for at konfigurere eDiscovery (Standard). Dette omfatter sikring af den korrekte licens, der kræves for at få adgang til eDiscovery (Standard), og placere eDiscovery-venteposition på indholdsplaceringer samt tildeling af tilladelser til it-, juridiske og undersøgelsesteamet, så de kan få adgang til og administrere sager. Denne artikel indeholder også en overordnet oversigt over, hvordan du bruger sager til at søge efter og eksportere indhold.
 
@@ -37,11 +35,11 @@ I denne artikel beskrives de trin, der er nødvendige for at konfigurere eDiscov
 
 Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement og licenser pr. bruger.
 
-- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Standard) i Microsoft Purview-compliance-portal og bruge ventepositions- og eksportfunktionerne, skal din organisation have et Exchange onlineabonnement på Plan 2 eller Microsoft 365 E3 eller Office 365 E3 abonnement eller nyere. Microsoft 365 Frontline-organisationer skal have et F5-abonnement.
+- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Standard) i Microsoft Purview-compliance-portal og bruge ventepositions- og eksportfunktionerne, skal din organisation have et Exchange Online Plan 2- eller Microsoft 365 E3- eller Office 365 E3-abonnement eller nyere. Microsoft 365 Frontline-organisationer skal have et F5-abonnement.
 
 - **Licenser pr. bruger:** Hvis du vil placere en eDiscovery-venteposition på postkasser og websteder, skal brugerne tildeles en af følgende licenser, afhængigt af dit organisationsabonnement:
 
-  -  Exchange online Plan 2-licens
+  -  Exchange Online Plan 2-licens
 
    ELLER
    
@@ -53,7 +51,7 @@ Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement
 
    ELLER
 
-  - Microsoft 365 licens til Frontline F5 Compliance eller F5 Security & Compliance  
+  - Microsoft 365 Frontline F5 Compliance eller F5 Security & Compliance-tilføjelsesprogramlicens  
 
   OG
 
@@ -63,9 +61,9 @@ Licenser til eDiscovery (Standard) kræver det relevante organisationsabonnement
 
 Du kan finde oplysninger og vejledning om sikkerhed og overholdelse af angivne standarder:
 
-- Download og se afsnittet eDiscovery og overvågning i tabellen [Microsoft 365 Sammenligning](https://aka.ms/M365EnterprisePlans).
+- Download og se afsnittet eDiscovery og overvågning i [Microsoft 365-sammenligningstabellen](https://aka.ms/M365EnterprisePlans).
 
-- Se [Microsoft 365 vejledning til overholdelse af & sikkerhed – tjenestebeskrivelser | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+- Se [Vejledningen til Microsoft 365 om overholdelse af sikkerheds- & – tjenestebeskrivelser | Microsoft Docs](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## <a name="step-2-assign-ediscovery-permissions"></a>Trin 2: Tildel eDiscovery-tilladelser
 
@@ -73,7 +71,7 @@ Hvis du vil have adgang til eDiscovery (Standard) eller tilføjes som medlem af 
 
 Fuldfør følgende trin for at føje brugere til rollegruppen eDiscovery Manager:
 
-1. Gå til overholdelsesportalen, og log på med legitimationsoplysningerne for en administratorkonto i din Microsoft 365 eller Office 365 organisation.
+1. Gå til overholdelsesportalen, og log på med legitimationsoplysningerne for en administratorkonto i din Microsoft 365- eller Office 365 organisation.
 
 2. Vælg rollegruppen **eDiscovery Manager** på siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2173597" target="_blank">**Tilladelser**</a>.
 
@@ -152,7 +150,7 @@ Her er en enkel arbejdsproces, hvor du kan oprette eDiscovery-ventepositioner fo
 
 ![eDiscovery-arbejdsproces (Standard).](../media/CoreEdiscoveryWorkflow.png)
 
-1. **[Opret en eDiscovery-venteposition](create-ediscovery-holds.md)**. Det første trin, når du har oprettet en sag, er at placere en venteposition (også kaldet *eDiscovery-venteposition*) på indholdsplaceringerne for de personer, der er interesseret i din undersøgelse. Indholdsplaceringer omfatter Exchange postkasser, SharePoint websteder, OneDrive konti og de postkasser og websteder, der er knyttet til Microsoft Teams og Microsoft 365-grupper. Selvom dette trin er valgfrit, bevarer oprettelse af eDiscovery-venteposition indhold, der kan være relevant for sagen under undersøgelsen. Når du opretter en eDiscovery-venteposition, kan du bevare alt indhold på bestemte indholdsplaceringer, eller du kan oprette en forespørgselsbaseret venteposition for kun at bevare det indhold, der svarer til en ventepositionsforespørgsel. Ud over at bevare indhold er en anden god grund til at oprette eDiscovery-ventepositioner hurtigt at søge efter indholdsplaceringer i venteposition (i stedet for at skulle vælge hver placering, der skal søges efter), når du opretter og kører søgninger i næste trin. Når du har fuldført din undersøgelse, kan du frigive enhver venteposition, du har oprettet.
+1. **[Opret en eDiscovery-venteposition](create-ediscovery-holds.md)**. Det første trin, når du har oprettet en sag, er at placere en venteposition (også kaldet *eDiscovery-venteposition*) på indholdsplaceringerne for de personer, der er interesseret i din undersøgelse. Indholdsplaceringer omfatter Exchange-postkasser, SharePoint-websteder, OneDrive-konti og de postkasser og websteder, der er knyttet til Microsoft Teams og Microsoft 365-grupper. Selvom dette trin er valgfrit, bevarer oprettelse af eDiscovery-venteposition indhold, der kan være relevant for sagen under undersøgelsen. Når du opretter en eDiscovery-venteposition, kan du bevare alt indhold på bestemte indholdsplaceringer, eller du kan oprette en forespørgselsbaseret venteposition for kun at bevare det indhold, der svarer til en ventepositionsforespørgsel. Ud over at bevare indhold er en anden god grund til at oprette eDiscovery-ventepositioner hurtigt at søge efter indholdsplaceringer i venteposition (i stedet for at skulle vælge hver placering, der skal søges efter), når du opretter og kører søgninger i næste trin. Når du har fuldført din undersøgelse, kan du frigive enhver venteposition, du har oprettet.
 
 2. **[Søg efter indhold](search-for-content-in-core-ediscovery.md)**. Når du har oprettet eDiscovery-ventepositioner, skal du bruge det indbyggede søgeværktøj til at søge efter indholdsplaceringer i venteposition. Du kan også søge på andre indholdsplaceringer efter data, der kan være relevante for sagen. Du kan oprette og køre forskellige søgninger, der er knyttet til sagen. Du kan bruge nøgleord, egenskaber og betingelser til at [oprette søgeforespørgsler](keyword-queries-and-search-conditions.md) , der returnerer søgeresultater med de data, der er mest relevante for sagen. Du kan også:
 
@@ -162,4 +160,4 @@ Her er en enkel arbejdsproces, hvor du kan oprette eDiscovery-ventepositioner fo
 
    - Rediger en forespørgsel, og kør søgningen igen.
 
-3. **[Eksportér og download søgeresultater](export-content-in-core-ediscovery.md)**. Når du har søgt efter og fundet data, der er relevante for din undersøgelse, kan du eksportere dem ud af Office 365 til gennemsyn af personer uden for undersøgelsesteamet. Eksport af data er en proces med to trin. Det første trin er at eksportere resultaterne af en søgning i tilfælde af Office 365. Dette opnås ved at kopiere resultaterne af en søgning til en Microsoft-leveret Azure Storage placering. Det næste trin er at bruge værktøjet eDiscovery-eksport til at downloade indholdet til en lokal computer. Ud over de eksporterede datafiler indeholder eksportpakken en eksportrapport, en oversigtsrapport og en fejlrapport.
+3. **[Eksportér og download søgeresultater](export-content-in-core-ediscovery.md)**. Når du har søgt efter og fundet data, der er relevante for din undersøgelse, kan du eksportere dem ud af Office 365 til gennemsyn af personer uden for undersøgelsesteamet. Eksport af data er en proces med to trin. Det første trin er at eksportere resultaterne af en søgning i tilfælde af Office 365. Dette opnås ved at kopiere resultaterne af en søgning til en Microsoft-leveret Azure Storage-placering. Det næste trin er at bruge værktøjet eDiscovery-eksport til at downloade indholdet til en lokal computer. Ud over de eksporterede datafiler indeholder eksportpakken en eksportrapport, en oversigtsrapport og en fejlrapport.

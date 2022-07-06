@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Kom i gang med at oprette præcise datamatchbaserede følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 592a4c7342af9ffe5c18d0d25b99b12cd1b3e212
-ms.sourcegitcommit: f723ebbc56db8013598a88b0d7f13214d9d3eb10
+ms.openlocfilehash: 27a4f113e401076374ef0e52cd54133e46a21b52
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/10/2022
-ms.locfileid: "65294663"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622035"
 ---
 # <a name="get-started-with-exact-data-match-based-sensitive-information-types"></a>Kom i gang med nøjagtigt datamatch baseret på typer af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Oprettelse og oprettelse af et nøjagtigt datamatch (EDM) baseret på sin følsomme informationstype (SIT) er en flerfaset proces. De kan bruges i microsoft Purview-politikker til forebyggelse af datatab, eDiscovery og visse indholdsstyringsopgaver Denne artikel beskriver arbejdsprocessen og links til procedurerne for hver af faserne
 
@@ -58,10 +56,10 @@ Nøjagtigt datamatch er tilgængeligt i disse områder:
 - Storbritannien
 - USA
 - US DoD
-- Amerikanske GCC
+- AMERIKANSK GCC
 - US GCCH
 
-Du kan finde ud af, hvilket område din lejer hoster inaktive data i, ved at følge procedurerne i [Hvor dine Microsoft 365 kundedata er gemt](../enterprise/o365-data-locations.md), og henvise til byplaceringerne for datacenteret i samme artikel.
+Du kan finde ud af, hvilket område din lejer hoster inaktive data i, ved at følge procedurerne i [Hvor dine Microsoft 365-kundedata er gemt](../enterprise/o365-data-locations.md) og henvise til byplaceringerne for datacenteret i den samme artikel.
 
 ## <a name="required-licenses-and-permissions"></a>Påkrævede licenser og tilladelser
 
@@ -71,7 +69,7 @@ Se [beskrivelsen af tjenesten til forebyggelse af datatab](/office365/servicedes
 
 ## <a name="portal-links-for-your-subscription"></a>Portallinks til dit abonnement
 
-|Portal|Verdensomspændende/GCC|GCC-High|DOD|
+|Portal|World Wide/GCC|GCC-High|DOD|
 |---|---|---|---|
 |Office SCC|compliance.microsoft.com|scc.office365.us|scc.protection.apps.mil|
 |Microsoft 365 Defender portal|security.microsoft.com|security.microsoft.us|security.apps.mil|
@@ -86,9 +84,9 @@ Se [beskrivelsen af tjenesten til forebyggelse af datatab](/office365/servicedes
 |---|---|
 |[Fase 1: Eksportér kildedata for præcise datamatchbaserede følsomme oplysninger](sit-get-started-exact-data-match-export-data.md#export-source-data-for-exact-data-match-based-sensitive-information-type)|– Læseadgang til følsomme data|
 |[Fase 2: Opret skemaet for præcise datamatchbaserede følsomme oplysningstyper](sit-get-started-exact-data-match-create-schema.md#create-the-schema-for-exact-data-match-based-sensitive-information-types)|- Adgang til guiden til følsomme oplysninger i Microsoft 365 Administration </br>– adgang til [Microsoft 365 Administration via PowerShell til sikkerheds & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell) |
-|[Fase 3: Hash og upload den følsomme informationskildetabel for præcise data matcher følsomme informationstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types)|- Brugerdefineret sikkerhedsgruppe og brugerkonto </br>- **Hash og upload fra én computer**: lokal administratoradgang til en computer med direkte internetadgang og vært for EDM-Upload Agent </br>- **Hash og upload fra separate computere**: lokal administratoradgang til en computer med direkte internetadgang og vært for EDM-Upload Agent for upload og lokal administratoradgang til en sikker computer som vært for EDM-Upload Agent for at hashkode den følsomme informationskildetabel </br>- Læseadgang til den følsomme informationskildetabelfil </br> skemafilen |
-|[Fase 4: Opret præcise data, der stemmer overens med følsomme oplysningers type/regelpakke](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) |- Adgang til Microsoft Purview-overholdelsesportalen |
-|[Test et nøjagtigt datamatch for typen af følsomme oplysninger](sit-get-started-exact-data-match-test.md#test-an-exact-data-match-sensitive-information-type)| - Adgang til Microsoft Purview-overholdelsesportalen
+|[Fase 3: Hash og upload den følsomme informationskildetabel for præcise data matcher følsomme informationstyper](sit-get-started-exact-data-match-hash-upload.md#hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types)|- Brugerdefineret sikkerhedsgruppe og brugerkonto </br>- **Hash og upload fra én computer**: lokal administratoradgang til en computer med direkte internetadgang og vært for EDM Upload Agent </br>- **Hash og upload fra separate computere**: lokal administratoradgang til en computer med direkte internetadgang og vært for EDM Upload Agent for upload og lokal administratoradgang til en sikker computer som vært for EDM-uploadagenten for at hashkode den følsomme informationskildetabel </br>- Læseadgang til den følsomme informationskildetabelfil </br> skemafilen |
+|[Fase 4: Opret præcise data, der stemmer overens med følsomme oplysningers type/regelpakke](sit-get-started-exact-data-match-create-rule-package.md#create-exact-data-match-sensitive-information-typerule-package) |- Adgang til Microsoft Purview-compliance-portal |
+|[Test et nøjagtigt datamatch for typen af følsomme oplysninger](sit-get-started-exact-data-match-test.md#test-an-exact-data-match-sensitive-information-type)| - Adgang til Microsoft Purview-compliance-portal
 
 ## <a name="see-also"></a>Se også
 

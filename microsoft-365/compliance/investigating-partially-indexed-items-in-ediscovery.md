@@ -18,18 +18,16 @@ ms.assetid: 4e8ff113-6361-41e2-915a-6338a7e2a1ed
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du administrerer delvist indekserede elementer (også kaldet ikke-indekserede elementer) fra Exchange, SharePoint og OneDrive for Business i din organisation.
-ms.openlocfilehash: 528693febbb6d02f6ea143d94aaae154d3dfde7e
-ms.sourcegitcommit: 1c8f54f9e7a7665bc10b5ef4a3d8c36e3e48f44c
+ms.openlocfilehash: 1e048cece931ecefe395a5a26bbfb840c8b831f6
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66078738"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625099"
 ---
 # <a name="investigating-partially-indexed-items-in-ediscovery"></a>Undersøger delvist indekserede elementer i eDiscovery
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-En eDiscovery-søgning, som du kører fra Microsoft Purview-compliance-portal inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. De fleste mails og webstedsdokumenter indekseres, fordi de falder inden [for indekseringsgrænserne for mails](limits-for-content-search.md#indexing-limits-for-email-messages). Nogle elementer kan dog overskride disse indekseringsgrænser og vil blive delvist indekseret. Her er andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
+En eDiscovery-søgning, som du kører fra Microsoft Purview-compliance-portal inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange-postkasseelementer og -dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. De fleste mails og webstedsdokumenter indekseres, fordi de falder inden [for indekseringsgrænserne for mails](limits-for-content-search.md#indexing-limits-for-email-messages). Nogle elementer kan dog overskride disse indekseringsgrænser og vil blive delvist indekseret. Her er andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
   
 - Mails har en vedhæftet fil, der ikke kan åbnes. dette er den mest almindelige årsag til delvist indekserede mailelementer.
 
@@ -47,7 +45,7 @@ Når du har kørt en eDiscovery-søgning, vises det samlede antal og den samlede
   
 - Hvis et element er delvist indekseret og stemmer overens med søgeforespørgslen, medtages det både i antallet (og størrelsen) af søgeresultatelementer og delvist indekserede elementer. Men når resultaterne af den samme søgning eksporteres, medtages elementet kun sammen med et sæt søgeresultater. det er ikke inkluderet som et delvist indekseret element.
 
-- Delvist indekserede elementer, der er placeret på SharePoint og OneDrive websteder, *medtages ikke* i estimatet af delvist indekserede elementer, der vises i den detaljerede statistik for søgningen. Delvist indekserede elementer kan dog eksporteres, når du eksporterer resultaterne af en eDiscovery-søgning. Hvis du f.eks. kun søger på websteder, vil det anslåede antal delvist indekserede elementer være nul.
+- Delvist indekserede elementer, der er placeret på SharePoint- og OneDrive-websteder, *medtages ikke* i estimatet af delvist indekserede elementer, der vises i den detaljerede statistik for søgningen. Delvist indekserede elementer kan dog eksporteres, når du eksporterer resultaterne af en eDiscovery-søgning. Hvis du f.eks. kun søger på websteder, vil det anslåede antal delvist indekserede elementer være nul.
   
 ## <a name="calculating-the-ratio-of-partially-indexed-items-in-your-organization"></a>Beregning af forholdet mellem delvist indekserede elementer i din organisation
 

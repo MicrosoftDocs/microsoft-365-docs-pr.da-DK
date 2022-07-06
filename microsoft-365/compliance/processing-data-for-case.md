@@ -18,20 +18,18 @@ ms.assetid: ''
 ms.custom:
 - seo-marvel-apr2020
 description: Oversigt over behandling af forskellige former for data i eDiscovery (Premium).
-ms.openlocfilehash: cefacd8fc4039e820a4fa899eb16f3cefdb22a87
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 8ccc87c7961618f8239c130decfc8d1ff5693180
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090889"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624989"
 ---
 # <a name="work-with-processing-errors-in-ediscovery-premium"></a>Arbejd med behandlingsfejl i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 *Behandling* er processen med filidentifikation, udvidelse af integrerede dokumenter og vedhæftede filer, tekstudtrækning og OCR (Optical Character Recognition) af billedfiler og den efterfølgende indeksering af dette indhold.  
 
-Når du føjer tilsynsførende og ikke-tilsynsførende datakilder til en sag under fanen **Kilder**, behandles alle delvist indekserede elementer fra Microsoft 365 for at gøre dem fuldt søgbare. Når indhold føjes til et korrektursæt fra både Microsoft 365 og ikke-Microsoft 365 datakilder, behandles dette indhold også.
+Når du føjer tilsynsførende og ikke-tilsynsførende datakilder til en sag under fanen **Kilder** , behandles alle delvist indekserede elementer fra Microsoft 365 for at gøre dem fuldt søgbare. Når indhold føjes til et korrektursæt fra både Microsoft 365- og ikke-Microsoft 365-datakilder, behandles dette indhold også.
 
 Fanen **Behandling** i eDiscovery (Premium) giver indsigt i status for avanceret indeksering i forskellige behandlingsscenarier.
 

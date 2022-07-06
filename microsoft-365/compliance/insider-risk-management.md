@@ -15,21 +15,19 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 3a2d678f8e653d65007369c2db5ddd8c72a71c66
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: 2055d5ce71766a3c1cd1846c6287e5c15c8d621c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65923275"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622827"
 ---
 # <a name="learn-about-insider-risk-management"></a>Få mere at vide om styring af insider-risiko
 
 > [!TIP]
-> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3- og Office 365 E3-kunder kan starte nu på [Microsoft Purview-portalen med prøveversioner](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
+> *Vidste du, at du kan prøve premiumversionerne af alle ni Microsoft Purview-løsninger gratis?* Brug den 90-dages prøveversion af Purview-løsninger til at udforske, hvordan robuste Purview-funktioner kan hjælpe din organisation med at opfylde sine behov for overholdelse af angivne standarder. Microsoft 365 E3 og Office 365 E3 kunder kan starte nu ved [Microsoft Purview-compliance-portal prøvehubben](https://compliance.microsoft.com/trialHorizontalHub?sku=ComplianceE5&ref=DocsRef). Få mere at vide om [, hvem der kan tilmelde sig og prøvevilkår](compliance-easy-trials.md).
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview Insider Risk Management er en løsning til overholdelse af angivne standarder, der hjælper med at minimere interne risici ved at gøre det muligt for dig at registrere, undersøge og reagere på skadelige og utilsigtede aktiviteter i din organisation. Politikker for insiderrisiko giver dig mulighed for at definere de typer risici, der skal identificeres og registreres i din organisation, herunder at reagere på sager og eskalere sager til Microsoft eDiscovery (Premium), hvis det er nødvendigt. Risikoanalytikere i din organisation kan hurtigt udføre de nødvendige handlinger for at sikre, at brugerne overholder organisationens standarder for overholdelse af angivne standarder.
+Microsoft Purview Styring af insider-risiko er en løsning til overholdelse af angivne standarder, der hjælper med at minimere interne risici ved at gøre det muligt for dig at registrere, undersøge og reagere på skadelige og utilsigtede aktiviteter i din organisation. Politikker for insiderrisiko giver dig mulighed for at definere de typer risici, der skal identificeres og registreres i din organisation, herunder at reagere på sager og eskalere sager til Microsoft eDiscovery (Premium), hvis det er nødvendigt. Risikoanalytikere i din organisation kan hurtigt udføre de nødvendige handlinger for at sikre, at brugerne overholder organisationens standarder for overholdelse af angivne standarder.
 
 Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
@@ -149,8 +147,8 @@ Når sager er undersøgt, kan korrekturlæsere hurtigt løse sagen eller samarbe
 
 I mere alvorlige situationer kan det være nødvendigt at dele sagsoplysninger om insiderrisikostyring med andre korrekturlæsere eller -tjenester i din organisation. Styring af insiderrisiko er tæt integreret med andre Microsoft Purview-løsninger for at hjælpe dig med løsning af risici fra ende til anden.
 
-- **eDiscovery (Premium)**: Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Hvis du vil vide mere om eDiscovery(Premium)-sager, skal du se [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
-- **Integration af API'er til Office 365 Management (prøveversion)**: Styring af insiderrisiko understøtter eksport af beskedoplysninger til SIEM-tjenester (security information and event management) via API'erne til Office 365 Management. Hvis du har adgang til beskedoplysninger på platformen, så de passer bedst til din organisations risikoprocesser, får du større fleksibilitet i forhold til, hvordan du reagerer på risikoaktiviteter. Hvis du vil vide mere om eksport af beskedoplysninger med API'er til Office 365 Administration, skal du se [Eksportér beskeder](insider-risk-management-settings.md#export-alerts).
+- **eDiscovery (Premium):** Eskalering af en sag til undersøgelse giver dig mulighed for at overføre data og administration af sagen til Microsoft Purview eDiscovery (Premium). eDiscovery (Premium) indeholder en komplette arbejdsproces til bevarelse, indsamling, gennemgang, analyse og eksport af indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det gør det muligt for juridiske teams at administrere hele arbejdsprocessen for meddelelser om juridiske ventepositioner. Du kan få mere at vide om eDiscovery(Premium)-sager under [Oversigt over Microsoft Purview eDiscovery (Premium)](overview-ediscovery-20.md).
+- **Office 365 integration af API'er til administration (prøveversion)**: Styring af insiderrisiko understøtter eksport af beskedoplysninger til SIEM-tjenester (Security Information Information and Event Management) via API'erne til administration af Office 365. Hvis du har adgang til beskedoplysninger på platformen, så de passer bedst til din organisations risikoprocesser, får du større fleksibilitet i forhold til, hvordan du reagerer på risikoaktiviteter. Hvis du vil vide mere om eksport af beskedoplysninger med API'er til administration af Office 365, skal du se [Eksportér beskeder](insider-risk-management-settings.md#export-alerts).
 
 > [!NOTE]
 > Tak for din feedback og support under prøveversionen af ServiceNow-connectoren. Vi har besluttet at afslutte prøveversionen af ServiceNow-connectoren og ophører support i styring af insiderrisiko den 30. november 2020. Vi evaluerer aktivt alternative metoder for at give kunderne serviceNow-integration i styring af insiderrisiko.
@@ -173,7 +171,7 @@ I de fleste tilfælde gør brugerne deres bedste for at håndtere følsomme elle
 
 ## <a name="intentional-or-unintentional-security-policy-violations-preview"></a>Tilsigtede eller utilsigtede sikkerhedspolitiske overtrædelser (prøveversion)
 
-Brugerne har typisk en stor grad af kontrol, når de administrerer deres enheder på den moderne arbejdsplads. Dette kontrolelement kan indeholde tilladelser til at installere eller fjerne programmer, der er nødvendige i forbindelse med udførelsen af deres opgaver, eller mulighed for midlertidigt at deaktivere sikkerhedsfunktioner for enheden. Uanset om denne aktivitet er utilsigtet, utilsigtet eller ondsindet, kan denne adfærd udgøre en risiko for din organisation og er vigtig at identificere og handle for at minimere. For at hjælpe med at identificere disse risikable sikkerhedsaktiviteter scorer følgende skabeloner for sikkerhedspolitik for styring af insiderrisiko ved at score indikatorer for sikkerhedsrisiko og bruger Microsoft Defender for Endpoint-beskeder til at give indsigt i sikkerhedsrelaterede aktiviteter:
+Brugerne har typisk en stor grad af kontrol, når de administrerer deres enheder på den moderne arbejdsplads. Dette kontrolelement kan indeholde tilladelser til at installere eller fjerne programmer, der er nødvendige i forbindelse med udførelsen af deres opgaver, eller mulighed for midlertidigt at deaktivere sikkerhedsfunktioner for enheden. Uanset om denne aktivitet er utilsigtet, utilsigtet eller ondsindet, kan denne adfærd udgøre en risiko for din organisation og er vigtig at identificere og handle for at minimere. For at hjælpe med at identificere disse risikable sikkerhedsaktiviteter scorer følgende skabeloner til sikkerhedspolitik for styring af insiderrisiko ved at score indikatorer for sikkerhedsrisiko og bruger Microsoft Defender for Endpoint beskeder til at give indsigt i sikkerhedsrelaterede aktiviteter:
 
 - [Generelle sikkerhedspolitiske overtrædelser (prøveversion)](insider-risk-management-policies.md#general-security-policy-violations-preview)
 - [Sikkerhedspolitikovertrædelser af afgåede brugere (prøveversion)](insider-risk-management-policies.md#security-policy-violations-by-departing-users-preview)

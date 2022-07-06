@@ -16,17 +16,15 @@ search.appverid:
 ms.assetid: 2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e
 ms.custom:
 - seo-marvel-apr2020
-description: Brug eDiscovery-sager på Microsoft Purview-overholdelsesportalen til at administrere organisationens juridiske undersøgelse.
-ms.openlocfilehash: f75d59e58ae51e5cb525044edb775c87b52686d1
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Brug eDiscovery-sager i Microsoft Purview-compliance-portal til at administrere organisationens juridiske undersøgelse.
+ms.openlocfilehash: 9db3a1e9ad831c74c9468121eaa0800875c74e5a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66010060"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623799"
 ---
 # <a name="manage-legal-investigations-in-microsoft-365"></a>Administrer juridiske undersøgelser i Microsoft 365
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Organisationer har mange grunde til at reagere på en sag, der involverer bestemte direktører eller andre medarbejdere i organisationen. Dette kan omfatte hurtigt at finde og gemme yderligere undersøgelsesspecifikke oplysninger i mail, dokumenter, chatsamtaler og andre indholdsplaceringer, der bruges af personer i deres daglige arbejdsopgaver. Du kan udføre disse og mange andre lignende aktiviteter ved hjælp af eDiscovery-sagsværktøjerne i Security and Compliance Center.
   
@@ -50,19 +48,19 @@ Ligesom i det forrige afsnit, hvor der blev angivet scripts til indholdssøgning
   
 - [Opret en eDiscovery-ventepositionsrapport](create-a-report-on-holds-in-ediscovery-cases.md) , der indeholder oplysninger om alle ventepositioner, der er knyttet til eDiscovery-sager i din organisation.
 
-- [Føj postkasser og OneDrive placeringer](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) for en liste over brugere til eDiscovery-venteposition.
+- [Føj postkasser og OneDrive-placeringer](use-a-script-to-add-users-to-a-hold-in-ediscovery.md) for en liste over brugere til en eDiscovery-venteposition.
   
 ## <a name="manage-legal-investigations-with-the-ediscovery-premium-solution-in-microsoft-365"></a>Administrer juridiske undersøgelser med eDiscovery-løsningen (Premium) i Microsoft 365
 
-Microsoft Purview eDiscovery-løsningen (Premium) i Microsoft 365 bygger på de eksisterende eDiscovery- og analysefunktioner i Office 365. Denne nye løsning, der kaldes *eDiscovery (Premium)*, indeholder en komplette arbejdsproces, hvor du kan bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det giver også juridiske teams mulighed for at administrere hele arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag.
+Løsningen Microsoft Purview eDiscovery (Premium) i Microsoft 365 bygger på de eksisterende eDiscovery- og analysefunktioner i Office 365. Denne nye løsning, *der kaldes eDiscovery (Premium),* indeholder en komplette arbejdsproces, hvor du kan bevare, indsamle, gennemse, analysere og eksportere indhold, der reagerer på din organisations interne og eksterne undersøgelser. Det giver også juridiske teams mulighed for at administrere hele arbejdsprocessen for meddelelse om juridisk venteposition for at kommunikere med tilsynsførende, der er involveret i en sag.
 
-eDiscovery (Premium) kræver et E5-abonnement til din Microsoft 365 eller Office 365 organisation. Du kan finde flere oplysninger om licenser under [Konfigurer eDiscovery (Premium)](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
+eDiscovery (Premium) kræver et E5-abonnement til din Microsoft 365- eller Office 365 organisation. Du kan finde flere oplysninger om licenser under [Konfigurer eDiscovery (Premium)](get-started-with-advanced-ediscovery.md#step-1-verify-and-assign-appropriate-licenses).
 
 Her er et hurtigt overblik over den indbyggede arbejdsproces i eDiscovery (Premium). Du kan finde flere oplysninger under [Administrer arbejdsprocessen for eDiscovery (Premium).](create-and-manage-advanced-ediscoveryv2-case.md#manage-the-workflow)
 
 - [Opret en sag](create-and-manage-advanced-ediscoveryv2-case.md#create-a-case) for at komme i gang.
 
-- [Administrer vogtere](managing-custodians.md) ved at føje dem til en sag og placere indhold i deres postkasse, OneDrive konto og Microsoft Teams, de er medlemmer af.
+- [Administrer vogtere](managing-custodians.md) ved at føje dem til en sag og placere indhold i deres postkasse, OneDrive-konto og Microsoft Teams, de er medlemmer af.
 
 - [Administrer kommunikation](managing-custodian-communications.md) med tilsynsførende ved at automatisere meddelelsesprocessen for juridisk venteposition.
 

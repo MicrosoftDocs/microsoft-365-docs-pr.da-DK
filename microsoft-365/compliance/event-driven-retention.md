@@ -20,18 +20,16 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Som regel en del af en løsning til datastyring, kan du konfigurere en opbevaringsmærkat for at starte opbevaringsperioden baseret på en hændelse, som du identificerer.
-ms.openlocfilehash: 753188e187bd3a80cd83c10d41b373b1507a1e24
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 953661a63c961273d54fde1041e4d85c5d786c26
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603142"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622981"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Start opbevaring, når der opstår en hændelse
 
 >*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du bevarer indhold, er opbevaringsperioden ofte baseret på indholdets alder. Du kan f.eks. bevare dokumenter i syv år, efter at de er oprettet, og derefter slette dem. Men når du konfigurerer [opbevaringsmærkater](retention.md#retention-labels), kan du også basere en opbevaringsperiode på, hvornår der opstår en bestemt type hændelse. Hændelsen udløser starten af opbevaringsperioden, og alt indhold med en opbevaringsmærkat, der er anvendt for den pågældende type hændelse, gennemtvinger mærkatens opbevaringshandlinger på dem.
   

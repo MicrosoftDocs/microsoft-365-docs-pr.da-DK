@@ -15,17 +15,15 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug modellen til registrering af rettigheder for advokatklienten til at bruge den maskinel indlæringsbaserede registrering af privilegeret indhold, når du gennemgår indhold i en Microsoft Purview eDiscovery-sag (Premium).
-ms.openlocfilehash: 359dccc041a0655ade291a37e511038a50148f7b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Brug modellen til registrering af rettigheder for advokatklienten til at bruge den maskinel indlæringsbaserede registrering af privilegeret indhold, når du gennemgår indhold i en Microsoft Purview eDiscovery (Premium)-sag.
+ms.openlocfilehash: 9f81ff216ecf0045aec69191b3a61916b6ea3081
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094025"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624625"
 ---
 # <a name="set-up-attorney-client-privilege-detection-in-ediscovery-premium"></a>Konfigurer registrering af rettigheder for advokater og klienter i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Et vigtigt og dyrt aspekt af gennemsynsfasen af en eDiscovery-proces er gennemsyn af dokumenter for privilegeret indhold. Microsoft Purview eDiscovery (Premium) leverer maskinel indlæringsbaseret registrering af privilegeret indhold for at gøre denne proces mere effektiv. Denne funktion kaldes *registrering af rettigheder for advokater og klienter*.
 
@@ -57,13 +55,13 @@ Hvis du vil aktivere modellen til registrering af rettighedsregistrering for adv
 
 ### <a name="step-1-turn-on-attorney-client-privilege-detection"></a>Trin 1: Slå registrering af rettighedsregistrering for advokater og klienter til
 
-En person, der er eDiscovery-administrator i din organisation (medlem af undergruppen eDiscovery-administrator i rollegruppen eDiscovery Manager), skal gøre modellen tilgængelig i dine eDiscovery-sager (Premium).
+En person, der er eDiscovery-administrator i din organisation (medlem af undergruppen eDiscovery-administrator i rollegruppen eDiscovery Manager), skal gøre modellen tilgængelig i dine eDiscovery-tilfælde (Premium).
 
-1. Gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) på Microsoft Purview-overholdelsesportalen, og klik derefter på **indstillinger for eDiscovery (Premium).**
+1. I Microsoft Purview-compliance-portal skal du gå til [eDiscovery (Premium)](https://go.microsoft.com/fwlink/p/?linkid=2173764) og derefter klikke på **indstillinger for eDiscovery (Premium).**
 
    ![Vælg indstillinger for eDiscovery (Premium)](..\media\HistoricalVersions1.png)
 
-2. På siden **Indstillinger** skal du vælge fanen **Analytics** og derefter slå **registrering af rettigheder for advokat/klient** til til.
+2. På siden **Indstillinger** skal du vælge fanen **Analytics** og derefter slå **rettighedsregistreringen for advokat/klient** til til.
 
    ![Klik på Til/fra for at slå rettighedsregistrering for advokat/klient til](..\media\TurnOnAttorneyClientPrivilegeDetection.png)
 
@@ -77,7 +75,7 @@ Sådan uploader du en advokatliste til brug for modellen til registrering af ret
 
 1. Opret en .csv fil (uden en overskriftsrække), og tilføj mailadressen for hver relevant person på en separat linje. Gem filen på den lokale computer.
 
-2. Vælg fanen **Analytics** på siden eDiscovery (**Premium) Indstillinger**.
+2. På siden **Indstillinger for** eDiscovery (Premium) skal du vælge fanen **Analytics** .
 
    Siden **Med rettigheder for advokat/klient** vises, og til/ **fra-knappen for rettighedsregistrering for advokat/klient** er slået til.
 

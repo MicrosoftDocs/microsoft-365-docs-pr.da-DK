@@ -21,18 +21,16 @@ search.appverid:
 - MET150
 ms.assetid: d1691de4-ca0d-446f-a0d0-373a4fc8487b
 description: Få mere at vide om ikke-indekserede elementer i Exchange og SharePoint, som du kan inkludere i en eDiscovery-søgning, som du kører i Microsoft Purview-compliance-portal.
-ms.openlocfilehash: 0f3d7d4b2e2a7d4c3c23d89ad6c2b8ba20fd6afb
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: e4bca9995dd173ef972522f273765db03dff3524
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65468826"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622475"
 ---
 # <a name="partially-indexed-items-in-ediscovery"></a>Delvist indekserede elementer i eDiscovery
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-En Microsoft Purview eDiscovery-søgning, du kører fra Microsoft Purview-compliance-portal inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange postkasseelementer og dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. I Exchange indeholder et delvist indekseret element typisk en fil (af en filtype, der ikke kan indekseres), som er knyttet til en mail. Her er nogle andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
+En Microsoft Purview eDiscovery søgning, du kører fra Microsoft Purview-compliance-portal, inkluderer automatisk delvist indekserede elementer i de anslåede søgeresultater, når du kører en søgning. Delvist indekserede elementer er Exchange-postkasseelementer og -dokumenter på SharePoint og OneDrive for Business websteder, der af en eller anden grund ikke er fuldt indekseret til søgning. I Exchange indeholder et delvist indekseret element typisk en fil (af en filtype, der ikke kan indekseres), som er knyttet til en mail. Her er nogle andre årsager til, at elementer ikke kan indekseres til søgning og returneres som delvist indekserede elementer, når du kører en eDiscovery-søgning:
   
 - Filtypen kan ikke genkendes eller understøttes ikke til indeksering.
 
@@ -59,15 +57,15 @@ Visse filtyper, f.eks. bitmapfiler eller MP3-filer, indeholder ikke indhold, der
   
 Du kan se en liste over understøttede og deaktiverede filformater i følgende emner:
   
--  -  Exchange [File-formater, der er indekseret af Exchange Search](/exchange/file-formats-indexed-by-exchange-search-exchange-2013-help)
+- **Exchange** -  [Filformater indekseret af Exchange Search](/exchange/file-formats-indexed-by-exchange-search-exchange-2013-help)
 
--  -  Exchange [Hent-SearchDocumentFormat](/powershell/module/exchange/get-searchdocumentformat)
+- **Exchange** -  [Get-SearchDocumentFormat](/powershell/module/exchange/get-searchdocumentformat)
 
--  -  SharePoint [Standard-gennemsøgte filtypenavne og fortolkede filtyper i SharePoint](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types)
+- **Sharepoint** -  [Standardfilnavneudvidelser og fortolkede filtyper i SharePoint](/SharePoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types)
   
 ## <a name="messages-and-documents-with-partially-indexed-file-types-can-be-returned-in-search-results"></a>Meddelelser og dokumenter med delvist indekserede filtyper kan returneres i søgeresultater
 
-Det er ikke alle mails med en delvist indekseret vedhæftet fil eller alle delvist indekserede SharePoint dokument, der returneres automatisk som et delvist indekseret element. Det skyldes, at andre meddelelses- eller dokumentegenskaber, f.eks. egenskaben **Emne** i mails og egenskaberne **Titel** eller **Forfatter** for dokumenter, indekseres og kan søges i. En nøgleordssøgning efter "økonomisk" returnerer f.eks. elementer med en delvist indekseret vedhæftet fil, hvis nøgleordet vises i emnet i en mail eller i filnavnet eller titlen på et dokument. Men hvis nøgleordet kun vises i filens brødtekst, returneres meddelelsen eller dokumentet som et delvist indekseret element.
+Det er ikke alle mails med en delvist indekseret vedhæftet fil eller alle delvist indekserede SharePoint-dokumenter, der returneres automatisk som et delvist indekseret element. Det skyldes, at andre meddelelses- eller dokumentegenskaber, f.eks. egenskaben **Emne** i mails og egenskaberne **Titel** eller **Forfatter** for dokumenter, indekseres og kan søges i. En nøgleordssøgning efter "økonomisk" returnerer f.eks. elementer med en delvist indekseret vedhæftet fil, hvis nøgleordet vises i emnet i en mail eller i filnavnet eller titlen på et dokument. Men hvis nøgleordet kun vises i filens brødtekst, returneres meddelelsen eller dokumentet som et delvist indekseret element.
   
 På samme måde medtages meddelelser med delvist indekserede vedhæftede filer og dokumenter af en delvist indekseret filtype i søgeresultaterne, når andre meddelelses- eller dokumentegenskaber, der er indekserede og søgbare, stemmer overens med søgekriterierne. Meddelelsesegenskaber, der er indekseret til søgning, omfatter datoer for afsendelse og modtagelse, afsender og modtager, filnavnet på en vedhæftet fil og tekst i meddelelsens brødtekst. Dokumentegenskaber, der er indekseret til søgning, omfatter oprettelses- og ændringsdatoer. Selvom en vedhæftet meddelelse kan være et delvist indekseret element, medtages meddelelsen i de almindelige søgeresultater, hvis værdien af andre meddelelses- eller dokumentegenskaber stemmer overens med søgekriterierne.
   
@@ -78,11 +76,11 @@ Du kan finde en liste over mail- og dokumentegenskaber, som du kan søge efter v
 
 ## <a name="partially-indexed-items-included-in-the-search-results"></a>Delvist indekserede elementer, der er inkluderet i søgeresultaterne
 
-Din organisation skal muligvis identificere og udføre yderligere analyser af delvist indekserede elementer for at bestemme, hvad de er, hvad de indeholder, og om de er relevante for en bestemt undersøgelse. Som tidligere forklaret medtages de delvist indekserede elementer på de indholdsplaceringer, der søges efter, automatisk med de anslåede søgeresultater. Du har mulighed for at medtage disse delvist indekserede elementer, når du eksporterer søgeresultater eller forbereder søgeresultaterne til eDiscovery (Premium).
+Din organisation skal muligvis identificere og udføre yderligere analyser af delvist indekserede elementer for at bestemme, hvad de er, hvad de indeholder, og om de er relevante for en bestemt undersøgelse. Som tidligere forklaret medtages de delvist indekserede elementer på de indholdsplaceringer, der søges efter, automatisk med de anslåede søgeresultater. Du har mulighed for at inkludere disse delvist indekserede elementer, når du eksporterer søgeresultater eller forbereder søgeresultaterne til eDiscovery (Premium).
   
 Vær opmærksom på følgende i forbindelse med delvist indekserede elementer:
   
-- Når du kører en eDiscovery-søgning, vises det samlede antal og den samlede størrelse af delvist indekserede Exchange elementer (returneret af søgeforespørgslen) i søgestatistikken på pop op-siden og navngives som **ikke-indekserede elementer**. Statistikker over delvist indekserede elementer, der vises på pop op-siden, omfatter ikke delvist indekserede elementer på SharePoint websteder eller OneDrive konti.
+- Når du kører en eDiscovery-søgning, vises det samlede antal og den samlede størrelse af delvist indekserede Exchange-elementer (returneret af søgeforespørgslen) i søgestatistikken på pop op-siden og navngives som **ikke-indekserede elementer**. Statistik over delvist indekserede elementer, der vises på pop op-siden, indeholder ikke delvist indekserede elementer på SharePoint-websteder eller OneDrive-konti.
 
 - Hvis den søgning, du eksporterer resultater fra, var en søgning efter bestemte indholdsplaceringer eller alle indholdsplaceringer i din organisation, eksporteres kun de ikke-indekserede elementer fra indholdsplaceringer, der indeholder elementer, der opfylder søgekriterierne. Det vil sige, at hvis der ikke findes nogen søgeresultater i en postkasse eller et websted, eksporteres alle ikke-indekserede elementer i den pågældende postkasse eller det pågældende websted ikke. Årsagen til dette er, at eksport af delvist indekserede elementer fra mange placeringer i organisationen kan øge sandsynligheden for eksportfejl og øge den tid, det tager at eksportere og downloade søgeresultaterne.
 
@@ -92,7 +90,7 @@ Vær opmærksom på følgende i forbindelse med delvist indekserede elementer:
 
 - Delvist indekserede elementer kan ikke vises. Du skal eksportere søgeresultaterne for at få vist delvist indekserede elementer, der returneres af søgningen.
 
-   Når du eksporterer søgeresultater og medtager delvist indekserede elementer i eksporten, eksporteres der desuden delvist indekserede elementer fra SharePoint elementer til en mappe med navnet **Uncrawlable**. Når du eksporterer delvist indekserede Exchange elementer, eksporteres de forskelligt, afhængigt af om de delvist indekserede elementer svarede til søgeforespørgslen og konfigurationen af eksportindstillingerne. 
+   Når du eksporterer søgeresultater og medtager delvist indekserede elementer i eksporten, eksporteres delvist indekserede elementer fra SharePoint-elementer desuden til en mappe med navnet **Uncrawlable**. Når du eksporterer delvist indekserede Exchange-elementer, eksporteres de forskelligt, afhængigt af om de delvist indekserede elementer svarede til søgeforespørgslen og konfigurationen af eksportindstillingerne. 
 
 - I følgende tabel vises eksportfunktionsmåden for indekserede og delvist indekserede elementer, og om de hver især er inkluderet i de forskellige konfigurationsindstillinger for eksport.
 
@@ -138,12 +136,12 @@ Brug den anden søgning, du oprettede i trin 3, og den tilsvarende eksport til a
 
 I følgende tabel beskrives de indekseringsgrænser, der kan resultere i, at en mail returneres som et delvist indekseret element i en eDiscovery-søgning i Microsoft 365.
   
-Du kan finde en liste over indekseringsgrænser for SharePoint dokumenter under [Søgegrænser for SharePoint Online](/sharepoint/search-limits).
+Du kan finde en liste over indekseringsgrænser for SharePoint-dokumenter under [Søgegrænser for SharePoint Online](/sharepoint/search-limits).
   
 |**Indekseringsgrænse**|**Maksimumværdi**|**Beskrivelse**|
 |:-----|:-----|:-----|
-|Maksimal størrelse på vedhæftede filer (undtagen Excel filer)  <br/> |150 MB  <br/> |Den maksimale størrelse af en vedhæftet fil, der fortolkes til indeksering. Alle vedhæftede filer, der er større end denne grænse, fortolkes ikke til indeksering, og meddelelsen med den vedhæftede fil markeres som delvist indekseret.  <br/><br/> **Bemærk:** Fortolkning er den proces, hvor indekseringstjenesten udtrækker tekst fra den vedhæftede fil, fjerner unødvendige tegn som tegnsætning og mellemrum og derefter opdeler teksten i ord (i en proces kaldet tokenisering), der derefter gemmes i indekset.           |
-|Maksimal størrelse på Excel filer  <br/> |4 MB  <br/> |Den maksimale størrelse på en Excel fil, der er placeret på et websted eller knyttet til en mail, som skal analyseres til indeksering. Alle Excel filer, der er større end denne grænse, fortolkes ikke, og filen eller mailen med den vedhæftede fil markeres som ikke-indekseret.  <br/> |
+|Maksimal størrelse på vedhæftede filer (undtagen Excel-filer)  <br/> |150 MB  <br/> |Den maksimale størrelse af en vedhæftet fil, der fortolkes til indeksering. Alle vedhæftede filer, der er større end denne grænse, fortolkes ikke til indeksering, og meddelelsen med den vedhæftede fil markeres som delvist indekseret.  <br/><br/> **Bemærk:** Fortolkning er den proces, hvor indekseringstjenesten udtrækker tekst fra den vedhæftede fil, fjerner unødvendige tegn som tegnsætning og mellemrum og derefter opdeler teksten i ord (i en proces kaldet tokenisering), der derefter gemmes i indekset.           |
+|Maksimal størrelse på Excel-filer  <br/> |4 MB  <br/> |Den maksimale størrelse på en Excel-fil, der er placeret på et websted eller knyttet til en mail, som skal analyseres til indeksering. Excel-filer, der er større end denne grænse, fortolkes ikke, og filen eller mailen med den vedhæftede fil markeres som ikke-indekseret.  <br/> |
 |Maksimalt antal vedhæftede filer  <br/> |250  <br/> |Det maksimale antal filer, der er knyttet til en mail, som skal fortolkes til indeksering. Hvis en meddelelse indeholder mere end 250 vedhæftede filer, fortolkes og indekseres de første 250 vedhæftede filer, og meddelelsen markeres som delvist indekseret, fordi der var flere vedhæftede filer, der ikke blev fortolket.  <br/> |
 |Maksimal dybde på vedhæftede filer  <br/> |30  <br/> |Det maksimale antal indlejrede vedhæftede filer, der fortolkes. Hvis en mail f.eks. har en anden meddelelse vedhæftet, og den vedhæftede meddelelse har et vedhæftet Word-dokument, indekseres Word-dokumentet og den vedhæftede meddelelse. Denne funktionsmåde fortsætter i op til 30 indlejrede vedhæftede filer.  <br/> |
 |Maksimalt antal vedhæftede billeder  <br/> |0  <br/> |Et billede, der er knyttet til en mail, springes over af fortolkeren og er ikke indekseret.  <br/> |
@@ -160,7 +158,7 @@ Du kan finde en liste over indekseringsgrænser for SharePoint dokumenter under 
 
 - Hvis et delvist indekseret element medtages i søgeresultaterne, fordi det opfylder søgeforespørgselskriterierne, medtages det ikke som et delvist indekseret element i den anslåede søgestatistik. Den medtages heller ikke i delvist indekserede elementer, når du eksporterer søgeresultater.
 
-- Selvom en filtype understøttes til indeksering og er indekseret, kan der være indekserings- eller søgefejl, der medfører, at en fil returneres som et delvist indekseret element. Det kan f.eks. være en delvis succes at søge i en stor Excel fil (fordi de første 4 MB indekseres), men det mislykkes derefter, fordi grænsen for filstørrelsen er overskredet. I dette tilfælde er det muligt, at den samme fil returneres sammen med søgeresultaterne og som et delvist indekseret element.
+- Selvom en filtype understøttes til indeksering og er indekseret, kan der være indekserings- eller søgefejl, der medfører, at en fil returneres som et delvist indekseret element. Det kan f.eks. være en delvis succes at søge i en stor Excel-fil (fordi de første 4 MB indekseres), men det mislykkes derefter, fordi grænsen for filstørrelsen er overskredet. I dette tilfælde er det muligt, at den samme fil returneres sammen med søgeresultaterne og som et delvist indekseret element.
 
 - Filer, der er krypteret med [Microsoft-krypteringsteknologier](encryption.md) og er knyttet til en mail, der opfylder kriterierne i en søgning, kan gennemses og dekrypteres, når der eksporteres. På nuværende tidspunkt indekseres filer, der er krypteret med Microsofts krypteringsteknologier (og gemt i SharePoint eller OneDrive for Business), delvist. 
 

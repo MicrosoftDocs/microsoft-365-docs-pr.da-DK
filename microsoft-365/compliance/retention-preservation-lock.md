@@ -15,18 +15,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug bevarelseslås med politikker for opbevaring og politikker for opbevaringsmærkat for at hjælpe dig med at opfylde lovmæssige krav og beskytte mod rogue-administratorer.
-ms.openlocfilehash: 228d4cd1a7778b5352df6d10d31b7e4c25af915f
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 88f875b201dbfdb633985506aee29acf99e2adb7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016278"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66622607"
 ---
 # <a name="use-preservation-lock-to-restrict-changes-to-retention-policies-and-retention-label-policies"></a>Brug Bevarelseslås til at begrænse ændringer af opbevaringspolitikker og politikker for opbevaringsmærkater
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!IMPORTANT]
 > I øjeblikket understøtter [tilpassede politikområder](retention.md#adaptive-or-static-policy-scopes-for-retention) ikke Bevarelseslås.
@@ -58,7 +56,7 @@ Du skal bruge PowerShell, hvis du har brug for bevarelseslås. Da administratore
 
 Alle opbevaringspolitikker med en hvilken som helst konfiguration understøtter Bevarelseslås. Hvis du vil anvende bevarelseslås på en politik for opbevaringsmærkater, må den kun indeholde etiketter, der markerer elementer som lovmæssige poster.
 
-1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Find navnet på den politik, du vil låse, ved at køre [Get-RetentionCompliancePolicy](/powershell/module/exchange/get-retentioncompliancepolicy). Eksempel:
     

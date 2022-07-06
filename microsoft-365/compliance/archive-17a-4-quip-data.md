@@ -12,20 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 Quip DataParser-connector til at importere og arkivere Quip-data i Microsoft 365.
-ms.openlocfilehash: 86c8dfd737cef2064b7d0fbf2660f5744373b530
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 5d2b0153be40d0f2f168e37b78836b57573c477e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65319717"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66623369"
 ---
 # <a name="set-up-a-connector-to-archive-quip-data"></a>Konfigurer en connector til arkivering af quipdata
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug [Quip DataParser](https://www.17a-4.com/quip-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Quip til brugerpostkasser i din Microsoft 365-organisation. DataParser indeholder en Quip-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. Quip DataParser-connectoren konverterer Quip-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Brug [Quip DataParser](https://www.17a-4.com/quip-dataparser/) fra 17a-4 LLC til at importere og arkivere data fra Quip til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en Quip-connector, der er konfigureret til at hente elementer fra en datakilde fra tredjepart og importere disse elementer til Microsoft 365. Quip DataParser-connectoren konverterer Quip-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
-
-Når quip-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation venteposition, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikationsoverholdelse. Brug af en Quip-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når quip-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner som f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og overholdelse af kommunikation. Brug af en Quip-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-quip-data"></a>Oversigt over arkivering af quipdata
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 2. Quip-elementer indsamles regelmæssigt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
-3. Den Quip DataParser-connector, du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den Quip DataParser-connector, du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Der oprettes en undermappe i mappen Indbakke med navnet **Quip DataParser** i brugerpostkasserne, og Quip-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hvert quipelement indeholder denne egenskab, som udfyldes med mailadressen på hver deltager.
 
@@ -45,15 +43,15 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Opret en DataParser-konto til Microsoft-connectors. For at gøre dette skal du kontakte [17a-4 LLC](https://www.17a-4.com/contact/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter Quip DataParser-connectoren i Trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Quip DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-quip-dataparser-connector"></a>Trin 1: Konfigurer en Quip DataParser-connector
 
 Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til quipdata.
 
-1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsQuip** >  **DataParser**.
+1. Gå til , <https://compliance.microsoft.com> og klik derefter på **Dataconnectors** > **Quip DataParser**.
 
 2. Klik på **Tilføj connector** på siden **Quip DataParser-produktbeskrivelse**.
 
@@ -69,7 +67,7 @@ Arbejd med 17a-4-understøttelse for at konfigurere Quip DataParser-connectoren.
 
 ## <a name="step-3-map-users"></a>Trin 3: Tilknyt brugere
 
-Quip DataParser-connectoren knytter automatisk brugere til deres Microsoft 365 mailadresser, før de importerer data til Microsoft 365.
+Quip DataParser-connectoren knytter automatisk brugere til deres Microsoft 365-mailadresser, før de importerer data til Microsoft 365.
 
 ## <a name="step-4-monitor-the-quip-dataparser-connector"></a>Trin 4: Overvåg Quip DataParser-connectoren
 

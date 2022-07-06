@@ -20,20 +20,18 @@ search.appverid:
 - MBS150
 - MET150
 ms.assetid: 5c8c1db6-d8ac-4dbb-8a7a-f65d452169b9
-description: I stedet for at eksportere de faktiske resultater af en indholdssøgning på Microsoft Purview-overholdelsesportalen kan du eksportere en rapport med søgeresultater. Rapporten indeholder en oversigt over søgeresultaterne og et dokument med detaljerede oplysninger om hvert element, der skal eksporteres.
+description: I stedet for at eksportere de faktiske resultater af en indholdssøgning i Microsoft Purview-compliance-portal kan du eksportere en rapport med søgeresultater. Rapporten indeholder en oversigt over søgeresultaterne og et dokument med detaljerede oplysninger om hvert element, der skal eksporteres.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 35e0a0b13594a6396ae1f757e3a1fc8a3e952173
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 294ea5ec35e141606c1197613bf5e7dc908a4ac7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093059"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624261"
 ---
 # <a name="export-a-content-search-report"></a>Eksportér en indholdssøgningsrapport
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I stedet for at eksportere det fulde sæt søgeresultater fra en indholdssøgning på Microsoft Purview-overholdelsesportalen (eller fra en søgning, der er knyttet til en Microsoft Purview eDiscovery(Standard)-sag), kan du eksportere de samme rapporter, der genereres, når du eksporterer de faktiske søgeresultater.
+I stedet for at eksportere det fulde sæt søgeresultater fra en indholdssøgning i Microsoft Purview-compliance-portal (eller fra en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard)-sag), kan du eksportere de samme rapporter, der genereres, når du eksporterer de faktiske søgeresultater.
   
 Når du eksporterer en rapport, downloades rapportfilerne til en mappe på din lokale computer, der har samme navn som indholdssøgningen, men som tilføjes med *_ReportsOnly*. Hvis indholdssøgningen f.eks. hedder  *ContosoCase0815*, downloades rapporten til en mappe med navnet *ContosoCase0815_ReportsOnly*. Du kan se en liste over dokumenter, der er inkluderet i rapporten, under [Hvad er inkluderet i rapporten](#whats-included-in-the-report).
 
@@ -41,7 +39,7 @@ Når du eksporterer en rapport, downloades rapportfilerne til en mappe på din l
 
 - Hvis du vil eksportere en søgerapport, skal du have tildelt rollen Styring af overholdelsessøgning på overholdelsesportalen. Denne rolle er som standard tildelt de indbyggede rollegrupper eDiscovery Manager og Organization Management. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
-- Når du eksporterer en rapport, gemmes dataene midlertidigt på en Azure Storage placering i Microsofts cloud, før de downloades til din lokale computer. Sørg for, at din organisation kan oprette forbindelse til slutpunktet i Azure, som er **\*.blob.core.windows.net** (jokertegnet repræsenterer et entydigt id for din eksport). Søgeresultaterne slettes fra Azure Storage placering to uger efter, at de er oprettet.
+- Når du eksporterer en rapport, gemmes dataene midlertidigt på en Azure Storage-placering i Microsoft-cloudmiljøet, før de downloades til din lokale computer. Sørg for, at din organisation kan oprette forbindelse til slutpunktet i Azure, som er **\*.blob.core.windows.net** (jokertegnet repræsenterer et entydigt id for din eksport). Søgeresultaterne slettes fra Azure Storage-placeringen to uger efter, at de er oprettet.
 
 - Den computer, du bruger til at eksportere søgerapporten, skal opfylde følgende systemkrav:
   
@@ -49,12 +47,12 @@ Når du eksporterer en rapport, downloades rapportfilerne til en mappe på din l
   
   - Microsoft .NET Framework 4.7 eller nyere
   
-- Du skal bruge Microsoft Edge <sup>1</sup> til at køre eDiscovery-eksportværktøjet. Brug af Internet Explorer 11 til at eksportere søgeresultater understøttes ikke <sup>længere2</sup>.
+- Du skal bruge Microsoft Edge<sup>1</sup> til at køre eDiscovery-eksportværktøjet. Brug af Internet Explorer 11 til at eksportere søgeresultater understøttes ikke længere<sup>2</sup>.
   
   > [!NOTE]
-  > <sup>1</sup> Som følge af de seneste ændringer af Microsoft Edge er understøttelse af ClickOnce ikke længere aktiveret som standard. Du kan finde oplysninger om, hvordan du aktiverer understøttelse af ClickOnce i Edge, under [Brug eDiscovery-eksportværktøjet i Microsoft Edge](configure-edge-to-export-search-results.md). Desuden producerer Microsoft ikke udvidelser eller tilføjelsesprogrammer fra tredjepart til ClickOnce programmer. Eksport af søgeresultater ved hjælp af en browser, der ikke understøttes, med udvidelser eller tilføjelsesprogrammer fra tredjepart understøttes ikke.
+  > <sup>1</sup> Som følge af de seneste ændringer af Microsoft Edge er ClickOnce-understøttelse ikke længere aktiveret som standard. Du kan finde en vejledning i, hvordan du aktiverer ClickOnce-understøttelse i Edge, under [Brug eDiscovery-eksportværktøjet i Microsoft Edge](configure-edge-to-export-search-results.md). Desuden producerer Microsoft ikke udvidelser eller tilføjelsesprogrammer fra tredjepart til ClickOnce-programmer. Eksport af søgeresultater ved hjælp af en browser, der ikke understøttes, med udvidelser eller tilføjelsesprogrammer fra tredjepart understøttes ikke.
   > 
-  > <sup>2</sup> Fra august 2021 understøtter Microsoft 365 apps og tjenester ikke længere Internet Explorer 11 (IE11), og brugerne kan have en forringet oplevelse eller ikke kunne oprette forbindelse til disse apps og tjenester. Disse apps og tjenester udfases i løbet af de kommende uger og måneder for at sikre en problemfri ophør af support. Hver app og tjeneste udfases efter uafhængige tidsplaner. Du kan få flere oplysninger i dette [blogindlæg](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
+  > <sup>2</sup> Fra august 2021 understøtter Microsoft 365-apps og -tjenester ikke længere Internet Explorer 11 (IE11), og brugerne kan have en forringet oplevelse eller ikke kunne oprette forbindelse til disse apps og tjenester. Disse apps og tjenester udfases i løbet af de kommende uger og måneder for at sikre en problemfri ophør af support. Hver app og tjeneste udfases efter uafhængige tidsplaner. Du kan få flere oplysninger i dette [blogindlæg](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 - Hvis den anslåede samlede størrelse af de resultater, der returneres af søgningen, overstiger 2 TB, mislykkes eksporten af rapporterne. Hvis du vil eksportere rapporterne, skal du forsøge at indsnævre omfanget og køre søgningen igen, så den anslåede størrelse af resultaterne er mindre end 2 TB.
 
@@ -64,7 +62,7 @@ Når du eksporterer en rapport, downloades rapportfilerne til en mappe på din l
   
 ## <a name="step-1-generate-the-report-for-export"></a>Trin 1: Generér rapporten til eksport
 
-Det første trin er at forberede rapporten til download til din computereksport. Når du eksporterer rapporten, uploades rapportdokumenterne til et Azure Storage område i Microsoft-cloudmiljøet.
+Det første trin er at forberede rapporten til download til din computereksport. Når du eksporterer rapporten, uploades rapportdokumenterne til et Azure Storage-område i Microsoft-cloudmiljøet.
   
 1. Vælg den indholdssøgning, du vil eksportere rapporten fra, på overholdelsesportalen.
   
@@ -84,7 +82,7 @@ Det første trin er at forberede rapporten til download til din computereksport.
   
     - **Kun elementer, der har et ukendt format, krypteres eller ikke er indekseret af andre årsager**. Denne indstilling eksporterer kun oplysninger om ikke-indekserede elementer.
 
-4. Konfigurer indstillingen **Aktivér deduplikering for Exchange indhold**.
+4. Konfigurer indstillingen **Aktivér deduplikering for Exchange-indhold** .
   
    - Hvis du vælger denne indstilling, medtages antallet af dublerede meddelelser (før deduplikering og efter deduplikering) i rapporten med eksportoversigten. Desuden medtages kun én kopi af en meddelelse i filen manifest.xml. Men rapporten med eksportresultater indeholder en række for hver kopi af en dubletmeddelelse, så du kan identificere de postkasser, der indeholder en kopi af den dublerede meddelelse. Du kan få flere oplysninger om de eksporterede rapporter under [Hvad er inkluderet i rapporten](#whats-included-in-the-report).
 
@@ -94,13 +92,13 @@ Det første trin er at forberede rapporten til download til din computereksport.
 
 5. Klik på **Generér rapport**.
 
-   Søgerapporterne er forberedt til download, hvilket betyder, at rapportdokumenterne uploades til en Azure Storage placering i Microsoft-cloudmiljøet. Dette kan tage flere minutter.
+   Søgerapporterne er forberedt til download, hvilket betyder, at rapportdokumenterne uploades til en Azure Storage-placering i Microsoft-cloudmiljøet. Dette kan tage flere minutter.
 
 Se næste afsnit for at få oplysninger om, hvordan du downloader de eksporterede søgerapporter.
   
 ## <a name="step-2-download-the-report"></a>Trin 2: Download rapporten
 
-Det næste trin er at downloade rapporten fra området Azure Storage til din lokale computer.
+Det næste trin er at downloade rapporten fra Azure Storage-området til din lokale computer.
 
 > [!NOTE]
 > Den eksporterede søgerapport skal downloades inden for 14 dage, efter at du oprettede rapporten i trin 1.
@@ -136,13 +134,13 @@ Det næste trin er at downloade rapporten fra området Azure Storage til din lok
 
 Når du genererer og eksporterer en rapport om resultaterne af en indholdssøgning, downloades følgende dokumenter:
   
-- **Eksportoversigt:** Et Excel dokument, der indeholder en oversigt over eksporten. Dette omfatter oplysninger som f.eks. antallet af indholdskilder, der blev søgt efter, antallet af søgeresultater fra hver indholdsplacering, det anslåede antal elementer, det faktiske antal elementer, der ville blive eksporteret, og den anslåede og faktiske størrelse af elementer, der ville blive eksporteret.
+- **Eksportoversigt:** Et Excel-dokument, der indeholder en oversigt over eksporten. Dette omfatter oplysninger som f.eks. antallet af indholdskilder, der blev søgt efter, antallet af søgeresultater fra hver indholdsplacering, det anslåede antal elementer, det faktiske antal elementer, der ville blive eksporteret, og den anslåede og faktiske størrelse af elementer, der ville blive eksporteret.
 
    Hvis du medtager ikke-indekserede elementer, når du eksporterer rapporten, medtages antallet af ikke-indekserede elementer i det samlede antal anslåede søgeresultater og i det samlede antal downloadede søgeresultater (hvis du eksporterer søgeresultaterne), som er angivet i rapporten med eksportoversigten. Det samlede antal elementer, der downloades, er med andre ord lig med det samlede antal anslåede resultater og det samlede antal ikke-indekserede elementer.
   
 - **Manifestere:** En manifestfil (i XML-format), der indeholder oplysninger om hvert element, der er inkluderet i søgeresultaterne. Hvis du har aktiveret indstillingen deduplikering, medtages dublerede meddelelser ikke i manifestfilen.
 
-- **Resultater:** Et Excel dokument, der indeholder en række med oplysninger om hvert indekseret element, der eksporteres med søgeresultaterne. I forbindelse med mail indeholder resultatloggen oplysninger om hver meddelelse, herunder: 
+- **Resultater:** Et Excel-dokument, der indeholder en række med oplysninger om hvert indekseret element, der eksporteres med søgeresultaterne. I forbindelse med mail indeholder resultatloggen oplysninger om hver meddelelse, herunder: 
 
   - Placeringen af meddelelsen i kildepostkassen (herunder om meddelelsen er i den primære postkasse eller arkivpostkassen).
 
@@ -167,4 +165,4 @@ Når du genererer og eksporterer en rapport om resultaterne af en indholdssøgni
   
 - **Trace.log:** En sporingslog, der indeholder detaljerede logføringsoplysninger om eksportprocessen, og som kan hjælpe med at afdække problemer under eksporten. Hvis du åbner en anmodning med Microsoft Support om et problem, der er relateret til eksport af søgerapporter, kan du blive bedt om at angive denne sporingslogfil.
 
-- **Ikke-indekserede elementer:** Et Excel dokument, der indeholder oplysninger om alle ikke-indekserede elementer, der er inkluderet i søgeresultaterne. Hvis du ikke medtager ikke-indekserede elementer, når du genererer rapporten med søgeresultater, downloades denne rapport stadig, men den er tom.
+- **Ikke-indekserede elementer:** Et Excel-dokument, der indeholder oplysninger om alle ikke-indekserede elementer, der er inkluderet i søgeresultaterne. Hvis du ikke medtager ikke-indekserede elementer, når du genererer rapporten med søgeresultater, downloades denne rapport stadig, men den er tom.

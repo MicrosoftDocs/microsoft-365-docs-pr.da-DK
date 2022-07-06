@@ -17,18 +17,16 @@ search.appverid:
 ms.assetid: ''
 ms.custom: seo-marvel-mar2020
 description: Konfigurer indstillinger for Microsoft Purview eDiscovery (Premium), der gælder for alle korrektursæt i en sag. Dette omfatter indstillinger for analyse og optisk tegngenkendelse.
-ms.openlocfilehash: 0ef76833d18b44a2a1c39db41f7d6fa31f99293e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 315448606e99a768bacd8d7d4ac7f858c79c7bed
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097134"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66624559"
 ---
 # <a name="configure-search-and-analytics-settings-in-ediscovery-premium"></a>Konfigurer søge- og analyseindstillinger i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan konfigurere indstillinger for hver Microsoft Purview eDiscovery-sag (Premium) for at styre følgende funktionalitet.
+Du kan konfigurere indstillinger for hver Microsoft Purview eDiscovery (Premium) sag for at styre følgende funktionalitet.
 
 - Næsten dubletter og mailtråde
 
@@ -74,7 +72,7 @@ I dette afsnit kan du angive parametre for temaer. Du kan få flere oplysninger 
 
 ## <a name="review-set-query"></a>Gennemse sætforespørgsel
 
-Hvis du markerer afkrydsningsfeltet **Opret automatisk en gemt søgning til gennemsyn efter analyse**, genererer eDiscovery (Premium) automatisk en forespørgsel med navnet **Til gennemsyn.** 
+Hvis du markerer afkrydsningsfeltet **Opret automatisk en gemt søgning til gennemsyn efter analyse** , genererer eDiscovery (Premium) automatisk forespørgsel, der er angivet til gennemsyn, med navnet **Til gennemsyn.** 
 
 ![Den automatisk genererede forespørgsel til gennemsyn.](../media/AeDForReviewQuery.png)
 

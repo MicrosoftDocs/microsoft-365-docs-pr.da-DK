@@ -18,18 +18,16 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Et krav til alle Microsoft Purview Information Protection løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: 0f920c91e1e844a4feaab7f9d1d58e88da6791ca
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: ad7e9c9aeea0a1ef05f79214afd60ac479ba2e66
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66573863"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625517"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
 >*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Alle Microsoft Purview Information Protection løsninger implementeres ved hjælp af [følsomhedsmærkater](sensitivity-labels.md). Hvis du vil oprette og publicere disse mærkater, skal du gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 

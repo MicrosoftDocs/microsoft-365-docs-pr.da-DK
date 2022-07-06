@@ -18,22 +18,20 @@ ms.assetid: 1d33d4fb-91ed-41c0-b72e-5a26eca3a2a7
 description: Få et overblik over vurderingsfasen og dens rolle i forbindelse med bestemmelse af de mange problemer under relevanstræning i Microsoft Purview eDiscovery (Premium).
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 3bfd6087bbcade2c7e4d9afdcda0f47bbea6f53d
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 19d518e116fbd86dc0f781443ba16c21890c4346
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096110"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625549"
 ---
 # <a name="assessment-in-the-relevance-module-in-ediscovery-premium"></a>Vurdering i relevansmodulet i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-Microsoft Purview eDiscovery (Premium) muliggør tidlig vurdering, f.eks. for de definerede problemer og de data, der er importeret for en sag. eDiscovery (Premium) gør det muligt for eksperten at træffe beslutninger om en vedtaget tilgang og anvende disse beslutninger på projektet til dokumentgennemgang.
+Microsoft Purview eDiscovery (Premium) muliggør tidlig vurdering, f.eks. for de definerede problemer og de data, der er importeret for en sag. Med eDiscovery (Premium) kan eksperten træffe beslutninger om en vedtaget tilgang og anvende disse beslutninger på projektet til dokumentgennemgang.
   
 ## <a name="understanding-assessment"></a>Om vurdering
 
-I vurderingen gennemgår eksperten et tilfældigt sæt på mindst 500 filer, som bruges til at fastslå, hvor omfattende problemerne er, og til at udarbejde statistikker, der afspejler uddannelsesresultater. Vurderingen lykkes, når der findes nok relevante filer til at nå et statistisk niveau, der hjælper eDiscovery (Premium) Relevans til at levere nøjagtige statistikker og til effektivt at bestemme stabiliseringspunktet i oplæringsprocessen. 
+I vurderingen gennemgår eksperten et tilfældigt sæt på mindst 500 filer, som bruges til at fastslå, hvor omfattende problemerne er, og til at udarbejde statistikker, der afspejler uddannelsesresultater. Vurderingen lykkes, når der findes nok relevante filer til at nå et statistisk niveau, der hjælper eDiscovery (Premium) Relevans til at levere nøjagtige statistikker og til effektivt at bestemme stabiliseringspunktet i uddannelsesprocessen. 
   
 Jo højere antal relevante filer i vurderingssættet, jo mere nøjagtige statistikker og effektivitet af stabilitetsalgoritmen. Antallet af relevante filer i vurderingsfilerne afhænger af problemets rigdom. Richness er den anslåede procentdel af relevante filer i sættet, der er relevant for et problem. Problemer med større rigdom vil hurtigere nå et højere antal relevante filer end problemer med lavere rigdom. Problemer med meget lav rigdom (f.eks. 2 % eller mindre) kræver et meget stort vurderingssæt for at nå et betydeligt antal relevante filer.
   

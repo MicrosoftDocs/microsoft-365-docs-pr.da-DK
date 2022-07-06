@@ -1,5 +1,5 @@
 ---
-title: Føj datakilder uden frihedsberøvelse til en eDiscovery-sag (Premium)
+title: Føj kilder til ikke-datakilder med ansvarlige til en eDiscovery-sag (Premium)
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -15,37 +15,35 @@ search.appverid:
 - MOE150
 - MET150
 description: Du kan føje datakilder uden frihedsberøvelse til en eDiscovery-sag (Premium) og placere en venteposition på datakilden. Datakilder, der ikke er frihedsberøvende, genbehandles, så alt indhold, der er markeret som delvist indekseret, behandles igen for at gøre det fuldt ud og hurtigt søgbart.
-ms.openlocfilehash: 86011a0f19dcb8f46041f4c0aa7c91d89e4e2198
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: bb5ff8a4a58e62d3f4bf36f7c7e1e9001d829036
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097970"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625121"
 ---
-# <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>Føj datakilder uden frihedsberøvelse til en eDiscovery-sag (Premium)
+# <a name="add-non-custodial-data-sources-to-an-ediscovery-premium-case"></a>Føj kilder til ikke-datakilder med ansvarlige til en eDiscovery-sag (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I Premium-sager (Microsoft Purview eDiscovery) opfylder det ikke altid dine behov at knytte en Microsoft 365 datakilde til en tilsynsførende i tilfælde af dette. Men du skal muligvis stadig knytte disse data til en sag, så du kan søge i dem, føje dem til et korrektursæt og analysere og gennemse dem. Funktionen i eDiscovery (Premium) kaldes *ikke-frihedsberøvende datakilder* og giver dig mulighed for at føje data til en sag uden at skulle knytte dem til en tilsynsførende. Den anvender også den samme eDiscovery-funktionalitet (Premium) på ikke-frihedsberøvende data, der er tilgængelige for data, der er knyttet til tilsynsførende. To af de mest nyttige ting, du kan anvende på ikke-frihedsberøvende data, er at sætte dem i venteposition og behandle dem ved hjælp af [avanceret indeksering](indexing-custodian-data.md).
+I Microsoft Purview eDiscovery (Premium)-sager opfylder den ikke altid dine behov for at knytte en Microsoft 365-datakilde til en tilsynsførende i sagen. Men du skal muligvis stadig knytte disse data til en sag, så du kan søge i dem, føje dem til et korrektursæt og analysere og gennemse dem. Funktionen i eDiscovery (Premium) kaldes *datakilder uden frihedsberøvelse* og giver dig mulighed for at føje data til en sag uden at skulle knytte dem til en tilsynsførende. Den anvender også den samme eDiscovery-funktionalitet (Premium) på ikke-frihedsberøvende data, der er tilgængelige for data, der er knyttet til tilsynsførende. To af de mest nyttige ting, du kan anvende på ikke-frihedsberøvende data, er at sætte dem i venteposition og behandle dem ved hjælp af [avanceret indeksering](indexing-custodian-data.md).
 
 ## <a name="add-a-non-custodial-data-source"></a>Tilføj en datakilde, der ikke er frihedsberøvende
 
-Følg disse trin for at tilføje og administrere datakilder, der ikke er frihedsberøvende, i en eDiscovery-sag (Premium).
+Følg disse trin for at tilføje og administrere ikke-frihedsberøvende datakilder i en eDiscovery-sag (Premium).
 
-1. Klik på den sag, du vil føje dataene til, på startsiden **for eDiscovery (Premium**).
+1. På startsiden **for eDiscovery (Premium)** skal du klikke på den sag, du vil føje dataene til.
 
-2. Klik på fanen **Datakilder,** og klik derefter på **Tilføj datakildeTilføj** >  **dataplaceringer**.
+2. Klik på fanen **Datakilder** , og klik derefter på **Tilføj datakilde** > **Tilføj dataplaceringer**.
 
-3. På pop **op-siden Nye ikke-frihedsberøvende dataplaceringer** skal du vælge de datakilder, du vil føje til sagen. Du kan tilføje flere postkasser og websteder ved at udvide sektionerne **SharePoint** eller **Exchange** og derefter klikke på **Rediger**.
+3. På pop **op-siden Nye ikke-frihedsberøvende dataplaceringer** skal du vælge de datakilder, du vil føje til sagen. Du kan tilføje flere postkasser og websteder ved at udvide **SharePoint** - eller **Exchange-sektionerne** og derefter klikke på **Rediger**.
 
-   ![Tilføj SharePoint websteder og Exchange postkasser som datakilder uden frihedsberøvelse.](../media/NonCustodialDataSources1.png)
+   ![Tilføj SharePoint-websteder og Exchange-postkasser som datakilder, der ikke er frihedsberøvende.](../media/NonCustodialDataSources1.png)
 
    - **SharePoint** – Klik på **Rediger** for at tilføje websteder. Vælg et websted på listen, eller du kan søge efter et websted ved at skrive URL-adressen til webstedet i søgelinjen. Vælg de websteder, du vil tilføje som datakilder uden tilsynsførende, og klik på **Tilføj**.
 
    - **Exchange** – Klik på **Rediger** for at tilføje postkasser. Skriv et navn eller et alias (mindst tre tegn) i søgefeltet for postkasser eller distributionsgrupper. Vælg de postkasser, du vil tilføje som datakilder uden frihedsberøvelse, og klik på **Tilføj**.
 
    > [!NOTE]
-   > Du kan bruge afsnittene **SharePoint** og **Exchange** til at tilføje websteder og postkasser, der er knyttet til et team eller Yammer gruppe, som datakilder uden frihedsberøvelse. Du skal tilføje den postkasse og det websted, der er knyttet til en gruppe eller Yammer gruppe.<br/><br/> Tilføjelse af en URL-adresse til rodwebstedet (f.eks. `https://contoso-my.sharepoint.com/personal/` eller `https://contoso-my.sharepoint.com/`) som en SharePoint datakilde understøttes heller ikke. Du skal tilføje bestemte websteder.
+   > Du kan bruge **afsnittene SharePoint** og **Exchange** til at tilføje websteder og postkasser, der er knyttet til et team eller en Yammer-gruppe, som datakilder uden frihedsberøvelse. Du skal tilføje den postkasse og det websted, der er knyttet til en team- eller Yammer-gruppe, separat.<br/><br/> Tilføjelse af en URL-adresse til rodwebstedet (f.eks. `https://contoso-my.sharepoint.com/personal/` eller  `https://contoso-my.sharepoint.com/`) som en SharePoint-datakilde understøttes heller ikke. Du skal tilføje bestemte websteder.
 
 4. Når du har tilføjet datakilder, der ikke er frihedsberøvende, har du mulighed for at placere disse placeringer i venteposition eller ej. Markér eller fjern markeringen i afkrydsningsfeltet **Venteposition** ud for datakilden for at placere den i venteposition.
 
@@ -61,7 +59,7 @@ Når du føjer datakilder, der ikke er frihedsberøvende, til sagen, oprettes de
 
 Når du har sat en venteposition på en datakilde, der ikke er frihedsberøvende, oprettes der automatisk en politik for bevarelse, der indeholder de datakilder, der ikke er frihedsberøvende for sagen. Når du placerer andre datakilder, der ikke er frihedsberøvende, i venteposition, føjes de til denne politik for bevarelse.
 
-1. Åbn sagen eDiscovery (Premium), og vælg fanen **Venteposition**.
+1. Åbn sagen eDiscovery (Premium), og vælg fanen **Venteposition** .
 
 2. Klik på **NCDSHold-, hvor GUID-værdien\<GUID\>** er entydig for sagen.
 

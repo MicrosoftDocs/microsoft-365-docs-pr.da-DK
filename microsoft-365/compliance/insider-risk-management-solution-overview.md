@@ -1,7 +1,7 @@
 ---
-title: Insider-risikostyring i Microsoft 365
-description: Få mere at vide om, hvordan du konfigurerer Insider Risk Management Microsoft 365.
-keywords: Microsoft 365, insider-risiko, overholdelse
+title: Styring af insider-risiko
+description: Få mere at vide om, hvordan du konfigurerer styring af insiderrisiko.
+keywords: Microsoft 365, Microsoft Purview, insiderrisiko, risikostyring, overholdelse af angivne standarder
 ms.localizationpriority: medium
 ms.service: O365-seccomp
 ms.topic: article
@@ -16,44 +16,44 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 - m365solution-scenario
-ms.openlocfilehash: c58a0022ed618cdcbd6c81c9d39d9a387d8f1007
-ms.sourcegitcommit: c6a97f2a5b7a41b74ec84f2f62fabfd65d8fd92a
+ms.openlocfilehash: efa2872d7dbece729bd45cfc890fead44b8162d3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 01/12/2022
-ms.locfileid: "63602960"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621133"
 ---
-# <a name="insider-risk-management-in-microsoft-365"></a>Insider-risikostyring i Microsoft 365
+# <a name="insider-risk-management"></a>Styring af insider-risiko
 
-Flere og flere medarbejdere har mere adgang til at oprette, administrere og dele data på tværs af et bredt spektrum af platforme og tjenester. I de fleste tilfælde har organisationer begrænsede ressourcer og værktøjer til at identificere og reducere risici i hele organisationen og samtidig overholde overholdelseskravene og medarbejdernes standarder for beskyttelse af personlige oplysninger. Disse risici kan omfatte datatyveri ved at fjerne medarbejdere og datalækage af oplysninger uden for organisationen ved utilsigtet overdeling eller ondsindede hensigter.
+Medarbejderne har i stigende grad mere adgang til at oprette, administrere og dele data på tværs af en bred vifte af platforme og tjenester. I de fleste tilfælde har organisationer begrænsede ressourcer og værktøjer til at identificere og afhjælpe risici i hele organisationen, samtidig med at de opfylder kravene til overholdelse af angivne standarder og standarder for beskyttelse af personlige oplysninger for medarbejdere. Disse risici kan omfatte datatyveri ved at afgå fra medarbejdere og datalækager af oplysninger uden for din organisation ved utilsigtet overdeling eller ondsindede hensigter.
 
-Insider-risikostyring i Microsoft 365 bruger den fulde bredde af tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og handle på risikabel brugeraktivitet. Når du bruger logfiler fra Microsoft 365 og Microsoft Graph, giver Insider-risikostyring dig mulighed for at definere specifikke politikker for at identificere risikoindikatorer. Når du har identificeret risici, kan du gøre noget for at reducere disse risici.
+Microsoft Purview Styring af insider-risiko bruger den fulde bredde af tjenesten og tredjepartsindikatorer til at hjælpe dig med hurtigt at identificere, triage og reagere på risikable brugeraktivitet. Ved hjælp af logge fra Microsoft 365 og Microsoft Graph giver insiderrisikostyring dig mulighed for at definere specifikke politikker for at identificere risikoindikatorer. Når du har identificeret risiciene, kan du afhjælpe disse risici.
 
-Se nedenstående videoer for at få mere at vide om, hvordan insider-risikostyring kan hjælpe din organisation med at forebygge, registrere og indeholde risici:
+Se videoerne nedenfor for at få mere at vide om, hvordan styring af insiderrisiko kan hjælpe din organisation med at forebygge, registrere og indeholde risici:
 <br>
 <br>
 
-**Insider-løsninger til risikostyring & udvikling**:
+**Løsning til styring af insiderrisiko & udvikling**:
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4j9CN]
 <br>
 
-**Insider-arbejdsproces for risikostyring**:
+**Arbejdsproces til styring af insiderrisiko**:
 >[!VIDEO https://www.microsoft.com/videoplayer/embed/RE4OUXB]
 
-## <a name="configure-insider-risk-management-for-microsoft-365"></a>Konfigurer insider-risikostyring for Microsoft 365
+## <a name="configure-insider-risk-management"></a>Konfigurer styring af insiderrisiko
 
-Brug følgende trin til at konfigurere Insider Risk Management for din organisation:
+Brug følgende trin til at konfigurere styring af insiderrisiko for din organisation:
 
-![Insider-risikoløsning insider-trin til risikostyring.](../media/ir-solution-ir-steps.png)
+![Insiderrisikoløsning med insiderrisikostyringstrin.](../media/ir-solution-ir-steps.png)
 
-1. Få mere at [vide om insider-risikostyring](insider-risk-management.md) i Microsoft 365
-2. Planlæg [insider-risikostyring, og bekræft licensering](insider-risk-management-plan.md)
-3. Konfigurer [indstillinger for insider-risikostyring](insider-risk-management-settings.md)
-4. Konfigurere [tilladelser og](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management) [politikfor forudsætninger & forbindelsesforbindelser](insider-risk-management-configure.md#step-4-recommended-configure-prerequisites-for-policies)
-5. Opret og konfigurer [politikker for insider-risikostyring](insider-risk-management-configure.md#step-6-required-create-an-insider-risk-management-policy)
+1. Få mere at vide om [styring af insiderrisiko](insider-risk-management.md)
+2. Planlæg [styring af insiderrisiko og bekræft licensering](insider-risk-management-plan.md)
+3. Konfigurer [indstillinger for styring af insiderrisiko](insider-risk-management-settings.md)
+4. Konfigurer [tilladelser](insider-risk-management-configure.md#step-1-required-enable-permissions-for-insider-risk-management) og [politikforudsætningerne & connectors](insider-risk-management-configure.md#step-4-recommended-configure-prerequisites-for-policies)
+5. Opret og konfigurer [politikker for styring af insiderrisiko](insider-risk-management-configure.md#step-6-required-create-an-insider-risk-management-policy)
 
-## <a name="more-information-about-insider-risk-management"></a>Flere oplysninger om insider-risikostyring
+## <a name="more-information-about-insider-risk-management"></a>Flere oplysninger om styring af insiderrisiko
 
-- [Administrer insider-risikopolitikker](insider-risk-management-policies.md)
-- [Undersøg insider-risikoaktiviteter](insider-risk-management-activities.md)
-- [Act on insider risk cases](insider-risk-management-cases.md)
+- [Administrer politikker for insiderrisiko](insider-risk-management-policies.md)
+- [Undersøg aktiviteter i insider-risiko](insider-risk-management-activities.md)
+- [Handle på insiderrisikosager](insider-risk-management-cases.md)

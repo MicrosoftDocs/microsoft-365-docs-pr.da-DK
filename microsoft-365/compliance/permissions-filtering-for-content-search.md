@@ -20,20 +20,18 @@ search.appverid:
 ms.assetid: 1adffc35-38e5-4f7d-8495-8e0e8721f377
 description: Brug filtrering af søgetilladelser til kun at lade eDiscovery-ledere søge i et undersæt af postkasser og websteder i din organisation.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 067e1a3c785d624579af80f92476d2641266f4dc
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 4ebd42882c7b914fe661df589382482d9f0595bc
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018047"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625011"
 ---
 # <a name="configure-permissions-filtering-for-ediscovery"></a>Konfigurer filtrering af tilladelser for eDiscovery
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Du kan bruge filtrering af søgetilladelser til kun at lade en eDiscovery-leder søge i et undersæt af postkasser og websteder i din organisation. Du kan også bruge filtrering af tilladelser til at lade den samme eDiscovery-administrator søge efter postkasse eller webstedsindhold, der opfylder et bestemt søgekriterium. Du kan f.eks. lade en eDiscovery-leder søge i postkasser for brugere på en bestemt placering eller afdeling. Det gør du ved at oprette et filter, der bruger et understøttet modtagerfilter til at begrænse, hvilke postkasser en bestemt bruger eller gruppe af brugere kan søge i. Du kan også oprette et filter, der angiver, hvilket postkasseindhold en bruger kan søge efter. Dette gøres ved at oprette et filter, der bruger en meddelelsesegenskab, der kan søges i. På samme måde kan du lade en eDiscovery-leder søge på bestemte SharePoint-websteder i din organisation. Det gør du ved at oprette et filter, der begrænser, hvilket websted der kan søges på. Du kan også oprette et filter, der angiver, hvilket webstedsindhold der kan søges i. Dette gøres ved at oprette et filter, der bruger en webstedsegenskab, der kan søges i.
 
-Du kan bruge filtrering af søgetilladelser til kun at lade en eDiscovery-leder søge i et undersæt af postkasser og websteder i din organisation. Du kan også bruge filtrering af tilladelser til at lade den samme eDiscovery-administrator søge efter postkasse eller webstedsindhold, der opfylder et bestemt søgekriterium. Du kan f.eks. lade en eDiscovery-leder søge i postkasser for brugere på en bestemt placering eller afdeling. Det gør du ved at oprette et filter, der bruger et understøttet modtagerfilter til at begrænse, hvilke postkasser en bestemt bruger eller gruppe af brugere kan søge i. Du kan også oprette et filter, der angiver, hvilket postkasseindhold en bruger kan søge efter. Dette gøres ved at oprette et filter, der bruger en meddelelsesegenskab, der kan søges i. På samme måde kan du lade en eDiscovery-leder søge efter bestemte SharePoint websteder i din organisation. Det gør du ved at oprette et filter, der begrænser, hvilket websted der kan søges på. Du kan også oprette et filter, der angiver, hvilket webstedsindhold der kan søges i. Dette gøres ved at oprette et filter, der bruger en webstedsegenskab, der kan søges i.
-
-Der anvendes filtre for søgetilladelser, når du søger efter indhold ved hjælp af indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen. Når der anvendes et filter for søgetilladelser for en bestemt bruger, kan den pågældende bruger udføre følgende søgerelaterede handlinger:
+Der anvendes filtre for søgetilladelser, når du søger efter indhold ved hjælp af Indholdssøgning, Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium) i Microsoft Purview-compliance-portal. Når der anvendes et filter for søgetilladelser for en bestemt bruger, kan den pågældende bruger udføre følgende søgerelaterede handlinger:
 
 - Søg efter indhold
 
@@ -43,7 +41,7 @@ Der anvendes filtre for søgetilladelser, når du søger efter indhold ved hjæl
 
 - Fjern elementer, der returneres af en søgning
 
-Du kan også bruge filtrering af søgetilladelser til at oprette logiske grænser (kaldet *overholdelsesgrænser*) i en organisation, der styrer placeringen af brugerindhold (f.eks. postkasser, SharePoint websteder og OneDrive konti), som bestemte eDiscovery-ledere kan søge efter. Du kan finde flere oplysninger under [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser](set-up-compliance-boundaries.md).
+Du kan også bruge filtrering af søgetilladelser til at oprette logiske grænser (kaldet *overholdelsesgrænser*) i en organisation, der styrer placeringen af brugerindhold (f.eks. postkasser, SharePoint-websteder og OneDrive-konti), som bestemte eDiscovery-ledere kan søge efter. Du kan finde flere oplysninger under [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser](set-up-compliance-boundaries.md).
   
 Følgende fire cmdlet'er i Security & Compliance PowerShell giver dig mulighed for at konfigurere og administrere filtre for søgetilladelser:
   
@@ -69,7 +67,7 @@ Følgende fire cmdlet'er i Security & Compliance PowerShell giver dig mulighed f
 
 - Der er ingen grænse for antallet af filtre for søgetilladelser, der kan oprettes i en organisation. En søgeforespørgsel kan dog højst have 100 betingelser. I dette tilfælde defineres en betingelse som noget, der er forbundet til forespørgslen af en boolesk operator (f.eks **. AND**, **OR** og **NEAR**). Grænsen for antallet af betingelser omfatter selve søgeforespørgslen plus alle filtre for søgetilladelser, der anvendes på den bruger, der kører søgningen. Jo flere søgetilladelser du har (især hvis disse filtre anvendes på den samme bruger eller gruppe af brugere), jo større er chancen for at overskride det maksimale antal betingelser for en søgning. Hvis du vil forhindre din organisation i at nå betingelsesgrænsen, skal du holde antallet af søgetilladelsersfiltre i din organisation så få som muligt, så de opfylder dine forretningskrav. Du kan finde flere oplysninger under [Konfigurer overholdelsesgrænser for eDiscovery-undersøgelser](set-up-compliance-boundaries.md#frequently-asked-questions).
 
-## <a name="connect-to-exchange-online-and-security--compliance-powershell-in-a-single-session"></a>Forbind til Exchange Online og sikkerhed & Overholdelse af angivne standarder i PowerShell i en enkelt session
+## <a name="connect-to-exchange-online-and-security--compliance-powershell-in-a-single-session"></a>Opret forbindelse til Exchange Online og sikkerhed & PowerShell til overholdelse af angivne standarder i en enkelt session
 
 Før du kan køre scriptet i dette afsnit, skal du downloade og installere Exchange Online PowerShell V2-modulet. Du kan få flere oplysninger [under Om Exchange Online PowerShell V2-modulet](/powershell/exchange/exchange-online-powershell-v2#install-and-maintain-the-exo-v2-module).
 
@@ -93,9 +91,9 @@ Hvordan ved du, om det virkede? Når du har kørt scriptet, er cmdlet'er fra Exc
 
 Hvis du vil foretage fejlfinding af PowerShell-forbindelsesfejl, skal du se:
 
-- [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#how-do-you-know-this-worked)
+- [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell#how-do-you-know-this-worked)
 
-- [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
+- [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell#how-do-you-know-this-worked)
 
 ## <a name="new-compliancesecurityfilter"></a>New-ComplianceSecurityFilter
 
@@ -115,9 +113,9 @@ Parameteren  _FilterName_ angiver navnet på tilladelsesfilteret. Dette navn bru
 
 Parameteren  _Filters_ angiver søgekriterierne for sikkerhedsfilteret for overholdelse. Du kan oprette tre forskellige typer filtre:  
 
-- **Postkasse eller OneDrive filtrering:** Denne type filter angiver, hvilke postkasser og OneDrive konti de tildelte brugere (angivet af parameteren _Brugere_) kan søge efter. Denne type filter kaldes et filter *for indholdsplacering* , fordi det definerer de indholdsplaceringer, som en bruger kan søge efter. Syntaksen for denne type filter er **Mailbox_** _MailboxPropertyName_, hvor _MailboxPropertyName_ angiver en postkasseegenskab, der bruges til at omfatte postkasserne og OneDrive konti, der kan søges i. Postkassefilteret `"Mailbox_CustomAttribute10 -eq 'OttawaUsers'"` gør det f.eks. muligt for brugeren, der er tildelt dette filter, kun at søge i de postkasser og OneDrive konti, der har værdien "OttawaUsers" i egenskaben CustomAttribute10.
+- **Filtrering af postkasse eller OneDrive:** Denne type filter angiver de postkasser og OneDrive-konti, som de tildelte brugere (angivet af parameteren  _Brugere_ ) kan søge efter. Denne type filter kaldes et filter *for indholdsplacering* , fordi det definerer de indholdsplaceringer, som en bruger kan søge efter. Syntaksen for denne type filter er **Mailbox_** _MailboxPropertyName_, hvor  _MailboxPropertyName_ angiver en postkasseegenskab, der bruges til at omfatte de postkasser og OneDrive-konti, der kan søges i. Postkassefilteret  `"Mailbox_CustomAttribute10 -eq 'OttawaUsers'"` giver f.eks. brugeren, der er tildelt dette filter, tilladelse til kun at søge i de postkasser og OneDrive-konti, der har værdien "OttawaUsers" i egenskaben CustomAttribute10.
 
-  Alle understøttede modtageregenskaber, der kan filtreres, kan bruges til egenskaben _MailboxPropertyName_ i en postkasse eller OneDrive filter. I følgende tabel vises fire almindeligt anvendte modtageregenskaber, der bruges til at oprette en postkasse eller et OneDrive filter. Tabellen indeholder også et eksempel på brug af egenskaben i et filter.
+  Alle understøttede modtageregenskaber, der kan filtreres, kan bruges til egenskaben  _MailboxPropertyName_ i en postkasse eller et OneDrive-filter. I følgende tabel vises fire almindeligt anvendte modtageregenskaber, der bruges til at oprette en postkasse eller et OneDrive-filter. Tabellen indeholder også et eksempel på brug af egenskaben i et filter.
 
   |Egenskabsnavn  |Eksempel  |
   |---------|---------|
@@ -138,16 +136,16 @@ Parameteren  _Filters_ angiver søgekriterierne for sikkerhedsfilteret for overh
   
   - **SiteContent_**_Søgebart webstedEgenskab_
   
-   Disse to filtre er udskiftelige. Og returnerer f.eks `"Site_Path -like 'https://contoso.sharepoint.com/sites/doctors'"`  `"SiteContent_Path -like 'https://contoso.sharepoint.com/sites/doctors'"` . de samme resultater. Du kan finde en liste over søgbare webstedsegenskaber under [Nøgleordsforespørgsler og søgebetingelser for eDiscovery](keyword-queries-and-search-conditions.md#searchable-site-properties) Du finder en mere komplet liste under [Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Egenskaber, der er markeret med **Ja** i kolonnen **Kan forespørges** , kan bruges til at oprette et websteds- eller webstedsindholdsfilter.  
+   Disse to filtre er udskiftelige. Og returnerer f.eks `"Site_Path -like 'https://contoso.sharepoint.com/sites/doctors'"`  `"SiteContent_Path -like 'https://contoso.sharepoint.com/sites/doctors'"` . de samme resultater. Du kan finde en liste over søgbare webstedsegenskaber under [Nøgleordsforespørgsler og søgebetingelser for eDiscovery](keyword-queries-and-search-conditions.md#searchable-site-properties)  Du finder en mere komplet liste under [Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Egenskaber, der er markeret med **Ja** i kolonnen **Kan forespørges** , kan bruges til at oprette et websteds- eller webstedsindholdsfilter.  
 
   > [!IMPORTANT]
   > Konfiguration af et webstedsfilter med en af de understøttede egenskaber betyder ikke, at webstedsegenskaben i filteret overføres til alle dokumenter på det pågældende websted. Det betyder, at brugeren stadig er ansvarlig for at udfylde de specifikke egenskabsfelter, der er knyttet til dokumenterne på det pågældende websted, for at webstedsfilteret kan fungere og registrere det rigtige indhold. Hvis brugeren f.eks. har anvendt et sikkerhedsfilter "Site_RefineableString00 -eq 'abc'", og derefter kører brugeren en søgning ved hjælp af nøgleordsforespørgslen "xyz". Sikkerhedsfilteret føjes til forespørgslen, og den faktiske forespørgsel, der kører, vil være "xyz **AND RefineableString0:'abc'**". Brugeren skal sikre, at dokumenter på webstedet har værdier i feltet RefineableString00 som "abc". Hvis ikke, returnerer søgeforespørgslen ikke nogen resultater.
 
 Vær opmærksom på følgende, når du konfigurerer parameteren *Filtre* for filtre for filtre for søgetilladelser:
 
-- I modsætning til postkasser er der ikke et indholdsplaceringsfilter for websteder, selvom filteret *Websted* ligner et placeringsfilter. Alle filtre for SharePoint og OneDrive er indholdsfiltre (hvilket også er grunden til *, at Site_* og *SiteContent_* filtre er synonyme), fordi webstedsrelaterede egenskaber som *Path* stemples direkte på dokumenterne. Hvorfor er det her? Det er et resultat af den måde, SharePoint er designet på. I SharePoint findes der ikke et "webstedsobjekt" med egenskaber, f.eks. med Exchange postkasser. Derfor stemples egenskaben *Path* på dokumentet og indeholder URL-adressen på det websted, hvor dokumentet er placeret. Derfor anses et *webstedsfilter* for at være et indholdsfilter og ikke et filter for indholdsplacering.
+- I modsætning til postkasser er der ikke et indholdsplaceringsfilter for websteder, selvom filteret *Websted* ligner et placeringsfilter. Alle filtre for SharePoint og OneDrive er indholdsfiltre (hvilket også er grunden til, *at Site_* og *SiteContent_* filtre er udskiftelige), fordi webstedsrelaterede egenskaber som *Path* stemples direkte på dokumenterne. Hvorfor er det her? Det er et resultat af den måde, SharePoint er designet på. I SharePoint er der ikke et "webstedsobjekt" med egenskaber, som det er med Exchange-postkasser. Derfor stemples egenskaben *Path* på dokumentet og indeholder URL-adressen på det websted, hvor dokumentet er placeret. Derfor anses et *webstedsfilter* for at være et indholdsfilter og ikke et filter for indholdsplacering.
 
-- Du skal oprette et filter for søgetilladelser for udtrykkeligt at forhindre brugerne i at søge i indholdsplaceringer i en bestemt tjeneste (f.eks. forhindre en bruger i at søge i en Exchange postkasse eller et SharePoint websted). Det vil sige, at oprettelse af et filter for søgetilladelser, der giver en bruger mulighed for at søge på alle SharePoint websteder i organisationen, ikke forhindrer brugeren i at søge i postkasser. Hvis du f.eks. vil tillade, at SharePoint administratorer kun søger SharePoint websteder, skal du oprette et filter, der forhindrer dem i at søge i postkasser. På samme måde skal du oprette et filter, der forhindrer Exchange administratorer i kun at søge i postkasser, så de ikke kan søge på websteder.
+- Du skal oprette et filter for søgetilladelser for udtrykkeligt at forhindre brugerne i at søge i indholdsplaceringer i en bestemt tjeneste (f.eks. forhindre en bruger i at søge i en Exchange-postkasse eller et SharePoint-websted). Med andre ord forhindrer oprettelse af et filter for søgetilladelser, der giver en bruger mulighed for at søge på alle SharePoint-websteder i organisationen, ikke den pågældende bruger i at søge i postkasser. Hvis du f.eks. vil give SharePoint-administratorer tilladelse til kun at søge på SharePoint-websteder, skal du oprette et filter, der forhindrer dem i at søge i postkasser. Hvis exchange-administratorer kun skal have tilladelse til at søge i postkasser, skal du på samme måde oprette et filter, der forhindrer dem i at søge på websteder.
 
 ### <a name="users"></a>*Brugere*
 
@@ -181,34 +179,34 @@ Vær opmærksom på følgende, når du bruger en filterliste:
 
 Her er eksempler på, hvordan du bruger cmdlet'en **New-ComplianceSecurityFilter** til at oprette et filter for søgetilladelser.
 
-I dette eksempel kan medlemmer af rollegruppen "US Discovery Managers" kun søge i postkasser og OneDrive konti i USA.
+I dette eksempel kan medlemmer af rollegruppen "US Discovery Managers" kun søge i postkasser og OneDrive-konti i USA.
   
 ```powershell
 New-ComplianceSecurityFilter -FilterName USDiscoveryManagers  -Users "US Discovery Managers" -Filters "Mailbox_CountryOrRegion  -eq 'United States'"
 ```
   
-I dette eksempel kan brugeren annb@contoso.com kun udføre søgehandlinger for postkasser og OneDrive konti i Canada. Dette filter indeholder den trecifrede numeriske landekode for Canada fra ISO 3166-1.
+I dette eksempel kan brugeren annb@contoso.com kun udføre søgehandlinger for postkasser og OneDrive-konti i Canada. Dette filter indeholder den trecifrede numeriske landekode for Canada fra ISO 3166-1.
 
 ```powershell
 New-ComplianceSecurityFilter -FilterName CountryFilter  -Users annb@contoso.com -Filters "Mailbox_CountryCode  -eq '124'"
 ```
 
-I dette eksempel kan brugerne kun søge i de postkasser og OneDrive konti, der har værdien 'Marketing' for postkasseegenskaben CustomAttribute1.
+I dette eksempel kan brugerne kun søge i de postkasser og OneDrive-konti, der har værdien 'Marketing' for egenskaben CustomAttribute1 for postkassen.
 
 ```powershell
 New-ComplianceSecurityFilter -FilterName MarketingFilter  -Users donh,suzanf -Filters "Mailbox_CustomAttribute1  -eq 'Marketing'"
 ```
 
-I dette eksempel kan medlemmer af rollegruppen "Fourth Coffee eDiscovery Managers" kun søge i de postkasser og OneDrive konti, der har værdien 'FourthCoffee' for egenskaben Afdelingspostkasse. Filteret gør det også muligt for medlemmer af rollegruppen at søge efter dokumenter på webstedet fjerde kaffe SharePoint.
+I dette eksempel kan medlemmer af rollegruppen "Fourth Coffee eDiscovery Managers" kun søge i de postkasser og OneDrive-konti, der har værdien 'FourthCoffee' for egenskaben Afdelingspostkasse. Filteret gør det også muligt for medlemmer af rollegruppen at søge efter dokumenter på SharePoint-webstedet fjerde kaffe.
 
 ```powershell
 New-ComplianceSecurityFilter -FilterName "Fourth Coffee Security Filter" -Users "Fourth Coffee eDiscovery Managers", "Fourth Coffee Investigators" -Filters "Mailbox_Department -eq 'FourthCoffee'", "SiteContent_Path -like 'https://contoso.sharepoint.com/sites/FourthCoffee' -or SiteContent_Path -like 'https://contoso-my.sharepoint.com/personal'"
 ```
 
 > [!NOTE]
-> I det forrige eksempel skal der medtages et ekstra webstedsindholdsfilter (`SiteContent_Path -like 'https://contoso-my.sharepoint.com/personal'`), så medlemmer af rollegruppen kan søge efter dokumenter i OneDrive konti. Hvis dette filter ikke er inkluderet, tillader filteret kun, at medlemmer af rollegruppen søger efter dokumenter, der er placeret i `https://contoso.sharepoint.com/sites/FourthCoffee`.
+> I det forrige eksempel skal der inkluderes et ekstra webstedsindholdsfilter (`SiteContent_Path -like 'https://contoso-my.sharepoint.com/personal'`), så medlemmer af rollegruppen kan søge efter dokumenter i OneDrive-konti. Hvis dette filter ikke er inkluderet, tillader filteret kun, at medlemmer af rollegruppen søger efter dokumenter, der er placeret i `https://contoso.sharepoint.com/sites/FourthCoffee`.
 
-I dette eksempel kan medlemmer af rollegruppen eDiscovery Manager kun søge i postkasser og OneDrive konti for medlemmer af ottawa-brugerdistributionsgruppen. Den Get-DistributionGroup cmdlet i Exchange Online PowerShell bruges til at finde medlemmerne af Ottawa Users-gruppen.
+I dette eksempel kan medlemmer af rollegruppen eDiscovery Manager kun søge i postkasser og OneDrive-konti for medlemmer af distributionsgruppen Ottawa-brugere. Den Get-DistributionGroup cmdlet i Exchange Online PowerShell bruges til at finde medlemmerne af Ottawa Users-gruppen.
   
 ```powershell
 $DG = Get-DistributionGroup "Ottawa Users"
@@ -218,7 +216,7 @@ $DG = Get-DistributionGroup "Ottawa Users"
 New-ComplianceSecurityFilter -FilterName DGFilter  -Users eDiscoveryManager -Filters "Mailbox_MemberOfGroup -eq '$($DG.DistinguishedName)'"
 ```
 
-Dette eksempel forhindrer alle brugere i at udføre søgehandlinger på postkasserne og OneDrive konti for medlemmer af distributionsgruppen Executive Team. Det betyder, at brugerne kan slette indhold fra disse postkasser. Get-DistributionGroup-cmdlet'en i Exchange Online PowerShell bruges til at finde medlemmerne af gruppen Executive Team.
+Dette eksempel forhindrer alle brugere i at udføre søgehandlinger på postkasser og OneDrive-konti for medlemmer af distributionsgruppen Executive Team. Det betyder, at brugerne kan slette indhold fra disse postkasser. Get-DistributionGroup-cmdlet'en i Exchange Online PowerShell bruges til at finde medlemmerne af gruppen Executive Team.
 
 ```powershell
 $DG = Get-DistributionGroup "Executive Team"
@@ -228,7 +226,7 @@ $DG = Get-DistributionGroup "Executive Team"
 New-ComplianceSecurityFilter -FilterName NoExecutivesPreview  -Users All -Filters "Mailbox_MemberOfGroup -ne '$($DG.DistinguishedName)'" 
 ```
 
-I dette eksempel kan medlemmer af den brugerdefinerede rollegruppe OneDrive eDiscovery-ledere kun søge efter indhold i OneDrive konti i organisationen.
+I dette eksempel kan medlemmer af den brugerdefinerede rollegruppe OneDrive eDiscovery Managers kun søge efter indhold i OneDrive-konti i organisationen.
 
 ```powershell
 New-ComplianceSecurityFilter -FilterName OneDriveOnly  -Users "OneDrive eDiscovery Managers" -Filters "SiteContent_Path -like 'https://contoso-my.sharepoint.com/personal'"
@@ -246,7 +244,7 @@ I lighed med det forrige eksempel begrænser dette eksempel brugeren til kun at 
 New-ComplianceSecurityFilter -FilterName DocumentDateRestrictionFilter -Users donh@contoso.com -Filters "SiteContent_LastModifiedTime -ge '01-01-2015' -and SiteContent_LastModifiedTime -le '12-31-2015'" 
 ```
 
-I dette eksempel forhindres medlemmer af rollegruppen "OneDrive registreringsadministratorer" i at udføre søgehandlinger på en hvilken som helst postkasse i organisationen.
+Dette eksempel forhindrer medlemmer af rollegruppen "OneDrive Discovery Managers" i at udføre søgehandlinger på alle postkasser i organisationen.
 
 ```powershell
 New-ComplianceSecurityFilter -FilterName NoEXO -Users "OneDrive Discovery Managers" -Filters "Mailbox_Alias -notlike '*'"
@@ -286,16 +284,16 @@ Du kan også bruge parameteren  _Brugere_ til at angive en rollegruppe for overh
 
 Parameteren  _Filters_ angiver søgekriterierne for sikkerhedsfilteret for overholdelse. Du kan oprette tre forskellige typer filtre:
 
-- **Filtrering af postkasser og OneDrive:** Denne type filter angiver, hvilke postkasser og OneDrive konti de tildelte brugere (angivet af parameteren _Brugere_) kan søge efter. Syntaksen for denne type filter er **Mailbox_** _MailboxPropertyName_, hvor  _MailboxPropertyName_ angiver en postkasseegenskab, der bruges til at omfatte de postkasser, der kan søges i. Postkassefilteret  `"Mailbox_CustomAttribute10 -eq 'OttawaUsers'"` giver f.eks. brugeren, der er tildelt dette filter, tilladelse til kun at søge i de postkasser, der har værdien "OttawaUsers" i egenskaben CustomAttribute10.  Alle understøttede modtageregenskaber, der kan filtreres, kan bruges til egenskaben  _MailboxPropertyName_ . Du kan se en liste over understøttede egenskaber under [Egenskaber, der kan filtreres for parameteren -RecipientFilter](/powershell/exchange/recipientfilter-properties).
+- **Filtrering af postkasse og OneDrive:** Denne type filter angiver de postkasser og OneDrive-konti, som de tildelte brugere (angivet af parameteren  _Brugere_ ) kan søge efter. Syntaksen for denne type filter er **Mailbox_** _MailboxPropertyName_, hvor  _MailboxPropertyName_ angiver en postkasseegenskab, der bruges til at omfatte de postkasser, der kan søges i. Postkassefilteret  `"Mailbox_CustomAttribute10 -eq 'OttawaUsers'"` giver f.eks. brugeren, der er tildelt dette filter, tilladelse til kun at søge i de postkasser, der har værdien "OttawaUsers" i egenskaben CustomAttribute10.  Alle understøttede modtageregenskaber, der kan filtreres, kan bruges til egenskaben  _MailboxPropertyName_ . Du kan se en liste over understøttede egenskaber under [Egenskaber, der kan filtreres for parameteren -RecipientFilter](/powershell/exchange/recipientfilter-properties).
 
 - **Filtrering af postkasseindhold:** Denne type filter anvendes på det indhold, der kan søges i. Den angiver det postkasseindhold, som de tildelte brugere kan søge efter. Syntaksen for denne type filter er **MailboxContent_**_SearchablePropertyName_, hvor  _SearchablePropertyName_ angiver en KQL-egenskab (Keyword Query Language), som kan angives i en søgning. Indholdsfilteret `"MailboxContent_Recipients  -like 'contoso.com'"` for postkassen gør det f.eks. muligt for brugeren at tildele dette filter til kun at søge efter meddelelser, der er sendt til modtagere i det contoso.com domæne.  Du kan finde en liste over søgbare mailegenskaber under [Nøgleordsforespørgsler og søgebetingelser for eDiscovery](keyword-queries-and-search-conditions.md).
 
-- **Filtrering af websteds- og webstedsindhold:** Der er to SharePoint og OneDrive for Business webstedsrelaterede filtre, som du kan bruge til at angive, hvilket websted eller webstedsindhold de tildelte brugere kan søge efter:
+- **Filtrering af websteds- og webstedsindhold:** Der er to SharePoint- og OneDrive for Business webstedsrelaterede filtre, som du kan bruge til at angive, hvilket websted eller webstedsindhold de tildelte brugere kan søge efter:
 
   - **Site_** *SearchableSiteProperty* 
   - **SiteContent** _ *SearchableSiteProperty*
   
-  Disse to filtre er udskiftelige. Og returnerer f.eks  `"Site_Path -like 'https://contoso.spoppe.com/sites/doctors*'"`  `"SiteContent_Path -like 'https://contoso.spoppe.com/sites/doctors*'"` . de samme resultater. Du kan finde en liste over søgbare webstedsegenskaber [under Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Egenskaber, der er markeret med **Ja** i kolonnen **Kan forespørges** , kan bruges til at oprette et websteds- eller webstedsindholdsfilter.
+  Disse to filtre er udskiftelige. Og returnerer f.eks  `"Site_Path -like 'https://contoso.spoppe.com/sites/doctors*'"`  `"SiteContent_Path -like 'https://contoso.spoppe.com/sites/doctors*'"` . de samme resultater. Du kan finde en liste over søgbare webstedsegenskaber under [Oversigt over gennemsøgte og administrerede egenskaber i SharePoint](/SharePoint/technical-reference/crawled-and-managed-properties-overview). Egenskaber, der er markeret med **Ja** i kolonnen **Kan forespørges** , kan bruges til at oprette et websteds- eller webstedsindholdsfilter.
 
 ### <a name="examples-of-changing-search-permissions-filters"></a>Eksempler på ændring af filtre for søgetilladelser
 
@@ -355,7 +353,7 @@ Set-ComplianceSecurityFilter -FilterName OttawaUsersFilter -Users $filterusers.u
   
 - **Fungerer filtrering af søgetilladelser for offentlige mapper?** Nej. Som tidligere forklaret kan filtrering af søgetilladelser ikke bruges til at begrænse, hvem der kan søge i offentlige mapper i Exchange. Elementer på placeringer med offentlige mapper kan f.eks. ikke udelades fra søgeresultaterne af et tilladelsesfilter.
 
-- **Forhindrer det også, at en bruger kan søge på alle indholdsplaceringer i en bestemt tjeneste, i at søge efter indholdsplaceringer i en anden tjeneste?** Nej. Som tidligere forklaret skal du oprette et filter for søgetilladelser for udtrykkeligt at forhindre brugerne i at søge i indholdsplaceringer i en bestemt tjeneste (f.eks. forhindre en bruger i at søge i en Exchange postkasse eller et SharePoint websted). Det vil sige, at oprettelse af et filter for søgetilladelser, der giver en bruger mulighed for at søge på alle SharePoint websteder i organisationen, ikke forhindrer brugeren i at søge i postkasser. Hvis du f.eks. vil tillade, at SharePoint administratorer kun søger SharePoint websteder, skal du oprette et filter, der forhindrer dem i at søge i postkasser. På samme måde skal du oprette et filter, der forhindrer Exchange administratorer i kun at søge i postkasser, så de ikke kan søge på websteder.
+- **Forhindrer det også, at en bruger kan søge på alle indholdsplaceringer i en bestemt tjeneste, i at søge efter indholdsplaceringer i en anden tjeneste?** Nej. Som tidligere forklaret skal du oprette et filter for søgetilladelser for eksplicit at forhindre brugerne i at søge i indholdsplaceringer i en bestemt tjeneste (f.eks. forhindre en bruger i at søge i en Exchange-postkasse eller et SharePoint-websted). Med andre ord forhindrer oprettelse af et filter for søgetilladelser, der giver en bruger mulighed for at søge på alle SharePoint-websteder i organisationen, ikke den pågældende bruger i at søge i postkasser. Hvis du f.eks. vil give SharePoint-administratorer tilladelse til kun at søge på SharePoint-websteder, skal du oprette et filter, der forhindrer dem i at søge i postkasser. Hvis exchange-administratorer kun skal have tilladelse til at søge i postkasser, skal du på samme måde oprette et filter, der forhindrer dem i at søge på websteder.
 
 - **Tæller filtre for søgetilladelser i forhold til tegngrænser for søgeforespørgsler?** Ja. Filtre for søgetilladelser tæller i forhold til tegngrænsen for søgeforespørgsler. Du kan finde flere oplysninger [under Grænser i eDiscovery (Premium)](limits-ediscovery20.md).
 
@@ -381,6 +379,6 @@ Det er muligt, at selve søgeforespørgslen består af flere betingelser, der er
 
 Antallet af filtre for søgetilladelser, der føjes til en forespørgsel, afhænger også af den bruger, der kører søgningen. Når en bestemt bruger kører en søgning, føjes de søgetilladelser, der er anvendt på brugeren (som er defineret af parameteren *Users* i filteret), til forespørgslen. Din organisation kan have hundredvis af søgetilladelsesfiltre, men hvis der anvendes mere end 100 filtre på de samme brugere, er det sandsynligt, at grænsen på 100 betingelser overskrides, når disse brugere kører søgninger.
 
-Der er én ting mere, du skal være opmærksom på angående betingelsesgrænsen. Antallet af specifikke SharePoint websteder, der er inkluderet i søgeforespørgslen eller filtrene for søgetilladelser, tæller også i forhold til denne grænse. 
+Der er én ting mere, du skal være opmærksom på angående betingelsesgrænsen. Antallet af specifikke SharePoint-websteder, der er inkluderet i søgeforespørgslen eller filtrene for søgetilladelser, tæller også med i denne grænse. 
 
 Hvis du vil forhindre din organisation i at nå betingelsesgrænsen, skal du holde antallet af søgetilladelsersfiltre i din organisation så få som muligt, så de opfylder dine forretningskrav.

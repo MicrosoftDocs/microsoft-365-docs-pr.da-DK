@@ -19,16 +19,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Klassificerere, der kan oplæres, kan genkende forskellige typer indhold til mærkning eller politikanvendelse ved at give dem positive og negative eksempler at se på.
-ms.openlocfilehash: 03c0c0991188982fbfc4fb9ec908f6e5f4ab3bba
-ms.sourcegitcommit: b0b1be67de8f40b199bb9b51eb3568e59377e93a
+ms.openlocfilehash: 0c47d019b3508bdd8d8fba1f1b4303c7f4c9579d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/18/2022
-ms.locfileid: "66159570"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66621199"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Få mere at vide om trænbare klassificeringer
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Klassificering og mærkning af indhold, så det kan beskyttes og håndteres korrekt, er starttidspunktet for disciplinen information protection. Microsoft 365 har tre måder at klassificere indhold på.
 
@@ -57,7 +55,7 @@ Denne klassificeringsmetode er velegnet til indhold, der ikke nemt identificeres
 
 ### <a name="where-you-can-use-classifiers"></a>Her kan du bruge klassificeringer
 
-Klassificeringer er tilgængelige til brug som en betingelse for [Office automatisk mærkning med følsomhedsmærkater](apply-sensitivity-label-automatically.md), [politik for automatisk anvendelse af opbevaringsmærkat baseret på en betingelse](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) og i [kommunikation med overholdelse af angivne standarder](communication-compliance.md).
+Klassificeringer er tilgængelige til brug som en betingelse for [office-automatisk mærkning med følsomhedsmærkater](apply-sensitivity-label-automatically.md), [politik for automatisk anvendelse af opbevaringsmærkat baseret på en betingelse](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) og i [kommunikation med overholdelse af angivne standarder](communication-compliance.md).
 
 Følsomhedsmærkater kan bruge klassificeringer som betingelser. Se [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md).
 
@@ -73,7 +71,7 @@ Følsomhedsmærkater kan bruge klassificeringer som betingelser. Se [Anvend auto
 
 Microsoft 365 leveres med flere færdiguddannede klassificeringer:
 
-- **Voksen, racy og gory**: Registrerer billeder af disse typer. Billederne skal have en størrelse på mellem 50 KB og 4 mb og være større end 50 x 50 pixel i højden x bredde. Scanning og registrering understøttes for Exchange Online mails og Microsoft Teams kanaler og chats. Registrerer indhold i .jpeg-, .png-, .gif- og .bmp-filer.
+- **Voksen, racy og gory**: Registrerer billeder af disse typer. Billederne skal have en størrelse på mellem 50 KB og 4 mb og være større end 50 x 50 pixel i højden x bredde. Scanning og registrering understøttes for Exchange Online mails og Microsoft Teams-kanaler og -chats. Registrerer indhold i .jpeg-, .png-, .gif- og .bmp-filer.
 
 - **Aftaler**: Registrerer indhold, der er relateret til juridiske aftaler, f.eks. aftaler om hemmeligholdelse, arbejdserklæringer, låne- og leasingaftaler, ansættelses- og konkurrenceklausuler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, .txt, .one, .msg, .eml-filer.
 
@@ -142,7 +140,7 @@ Når de færdiguddannede klassificeringer ikke opfylder dine behov, kan du opret
 
 Du begynder at oprette en brugerdefineret klassificering, der kan oplæres, ved at give den eksempler, der helt sikkert er i kategorien. Når den behandler disse eksempler, tester du den ved at give den en blanding af både matchende og ikke-matchende eksempler. Klassificeringen foretager derefter forudsigelser om, hvorvidt et bestemt element falder ind under den kategori, du bygger. Du kan derefter bekræfte resultaterne og sortere de sande positiver, sande negativer, falske positiver og falske negative for at øge nøjagtigheden af forudsigelserne.
 
-Når du publicerer klassificeringen, sorteres elementerne på placeringer, f.eks. SharePoint Online, Exchange og OneDrive, og indholdet klassificeres. Når du har publiceret klassificeringen, kan du fortsætte med at oplære den ved hjælp af en feedbackproces, der svarer til den indledende oplæringsproces.
+Når du publicerer klassificeringen, sorteres elementerne på placeringer som SharePoint Online, Exchange og OneDrive, og indholdet klassificeres. Når du har publiceret klassificeringen, kan du fortsætte med at oplære den ved hjælp af en feedbackproces, der svarer til den indledende oplæringsproces.
 
 Du kan f.eks. oprette klassificeringer, der kan oplæres, for:
 

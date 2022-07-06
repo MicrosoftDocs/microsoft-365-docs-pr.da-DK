@@ -17,16 +17,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om, hvordan du implementerer og tester kontrolelementer ved at arbejde med forbedringshandlinger i Microsoft Purview Compliance Manager. Tildel arbejde, gem dokumentation og eksportér rapporter.
-ms.openlocfilehash: ed52b6e9b3f6c817430383beebcb57f9c4dcf613
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: ca6855c544451661f9a8bd3cc9f59a111eeed360
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574272"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66625495"
 ---
 # <a name="working-with-improvement-actions-in-compliance-manager"></a>Arbejde med forbedringshandlinger i Overholdelsesstyring
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** I denne artikel forklares det, hvordan **du administrerer din arbejdsproces for overholdelse af angivne standarder** med forbedringshandlinger. Få mere at vide om, hvordan **du tildeler forbedringshandlinger** til implementering og test, **administrerer opdateringer** og **eksporterer rapporter**.
 
