@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Søg efter indhold, der kan være relevant for en eDiscovery-sag (Standard).
-ms.openlocfilehash: d0c565e46860329c4dc6dac741fb0312ddccfd2c
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 1c51475602e3a0807932501325e12d93a89fcba3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318918"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638119"
 ---
 # <a name="search-for-content-in-a-ediscovery-standard-case"></a>Søg efter indhold i en eDiscovery-sag (Standard)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når der er oprettet en Microsoft Purview eDiscovery-sag (Standard), og personer af interesse for sagen er sat i venteposition, kan du oprette og køre en eller flere søgninger efter indhold, der er relevant for sagen. Søgninger, der er knyttet til en eDiscovery-sag (Standard), vises ikke på siden **Indholdssøgning** i Microsoft Purview-compliance-portal. Disse søgninger vises på siden **Søgninger** i eDiscovery (Standard), hvis søgninger er knyttet til. Det betyder også, at sagsmedlemmer kun kan få adgang til søgninger, der er knyttet til en sag.
+Når der er oprettet en Microsoft Purview eDiscovery (Standard)-sag, og personer af interesse for sagen er sat i venteposition, kan du oprette og køre en eller flere søgninger efter indhold, der er relevant for sagen. Søgninger, der er knyttet til en eDiscovery-sag (Standard), vises ikke på siden **Indholdssøgning** i Microsoft Purview-compliance-portal. Disse søgninger vises på siden **Søgninger** i eDiscovery (Standard), hvis søgninger er knyttet til. Det betyder også, at sagsmedlemmer kun kan få adgang til søgninger, der er knyttet til en sag.
 
 Sådan opretter du en eDiscovery-søgning (Standard):
   
@@ -48,13 +46,13 @@ Sådan opretter du en eDiscovery-søgning (Standard):
 
     ![Vælg de indholdsplaceringer, der skal placeres i venteposition.](../media/ContentSearchLocations.png)
   
-   1. **Exchange postkasser**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg brugere, grupper eller teams** for at angive de postkasser, der skal sættes i venteposition. Brug søgefeltet til at finde brugerpostkasser og distributionsgrupper (til at placere en venteposition på gruppemedlemmernes postkasser) til at placere dem i venteposition. Du kan også søge i den postkasse, der er knyttet til et Microsoft-team (efter kanalmeddelelser), Office 365 gruppe og Yammer gruppe. Du kan finde flere oplysninger om de programdata, der er gemt i postkasser, [under Indhold, der er gemt i postkasser til eDiscovery](what-is-stored-in-exo-mailbox.md).
+   1. **Exchange-postkasser**: Angiv til/fra-knappen til **Til** , og klik derefter på **Vælg brugere, grupper eller teams** for at angive de postkasser, der skal sættes i venteposition. Brug søgefeltet til at finde brugerpostkasser og distributionsgrupper (til at placere en venteposition på gruppemedlemmernes postkasser) til at placere dem i venteposition. Du kan også søge i den postkasse, der er knyttet til et Microsoft-team (efter kanalmeddelelser), Office 365-gruppe og Yammer-gruppe. Du kan finde flere oplysninger om de programdata, der er gemt i postkasser, [under Indhold, der er gemt i postkasser til eDiscovery](what-is-stored-in-exo-mailbox.md).
 
-   2. **SharePoint websteder**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg websteder** for at angive, SharePoint websteder og OneDrive konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Office 365-gruppe eller en Yammer-gruppe.
+   2. **SharePoint-websteder**: Angiv til/fra-knappen til **Til** , og klik derefter på **Vælg websteder** for at angive SharePoint-websteder og OneDrive-konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til SharePoint-webstedet for et Microsoft-team, en Office 365-gruppe eller en Yammer-gruppe.
   
-   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
+   3. **Offentlige Exchange-mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
   
-   4. Markér dette afkrydsningsfelt for at søge efter Teams indhold til brugere i det lokale miljø. Hvis du f.eks. søger i alle Exchange postkasser i organisationen, og dette afkrydsningsfelt er markeret, medtages det skybaserede lager, der bruges til at gemme Teams chatdata for brugere i det lokale miljø, i søgeområdet. Du kan finde flere oplysninger under [Søg efter Teams chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
+   4. Hold dette afkrydsningsfelt markeret for at søge efter Teams-indhold for brugere i det lokale miljø. Hvis du f.eks. søger i alle Exchange-postkasser i organisationen, og dette afkrydsningsfelt er markeret, medtages det skybaserede lager, der bruges til at gemme Teams-chatdata for brugere i det lokale miljø, i søgeområdet. Du kan finde flere oplysninger under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
 
 7. På siden **Definer dine søgebetingelser** skal du skrive en nøgleordsforespørgsel og føje betingelser til søgeforespørgslen, hvis det er nødvendigt.
 
@@ -79,6 +77,6 @@ Når søgningen er fuldført, kan du få vist søgeresultaterne. Hvis det er nø
 
 - Når du klikker på **Vælg brugere, grupper eller teams** for at angive postkasser, der skal søges i, er den postkassevælger, der vises, tom. Dette er tilsigtet for at forbedre ydeevnen. Hvis du vil føje modtagere til denne liste, skal du klikke på **Vælg brugere, grupper eller teams**, skrive et navn (mindst tre tegn) i søgefeltet, markere afkrydsningsfeltet ud for navnet og derefter klikke på **Vælg**.
 
-- Du kan føje inaktive postkasser, Microsoft Teams, Yammer Grupper, Office 365 Grupper og distributionsgrupper til listen over postkasser, der skal søges i. Dynamiske distributionsgrupper understøttes ikke. Hvis du tilføjer Microsoft Teams, Yammer grupper eller Office 365 grupper, søges der i gruppens eller teampostkassen. Der søges ikke i gruppemedlemmernes postkasser.
+- Du kan føje inaktive postkasser, Microsoft Teams, Yammer-grupper, Office 365 grupper og distributionsgrupper til listen over postkasser, der skal søges i. Dynamiske distributionsgrupper understøttes ikke. Hvis du tilføjer Microsoft Teams, Yammer-grupper eller Office 365 grupper, søges der i gruppens eller teamets postkasse. Gruppemedlemmernes postkasser søges ikke.
 
-- Hvis du vil føje websteder til søgningen, skal du slå til/fra-knappen til og derefter klikke på **Vælg websteder**. Skriv URL-adressen for hvert websted, du vil søge efter. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Yammer-gruppe eller en Office 365 gruppe.
+- Hvis du vil føje websteder til søgningen, skal du slå til/fra-knappen til og derefter klikke på **Vælg websteder**. Skriv URL-adressen for hvert websted, du vil søge efter. Du kan også tilføje URL-adressen til SharePoint-webstedet for et Microsoft-team, en Yammer-gruppe eller en Office 365 gruppe.

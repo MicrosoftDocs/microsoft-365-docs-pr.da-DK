@@ -19,16 +19,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Med Indholdsoversigt kan du få vist elementer, der er forsynet med mærkater i det oprindelige miljø.
-ms.openlocfilehash: fdc67df9819054eedbe84ce647d77177039cd4a8
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: ca3fc3deb542af582f2c38457bbd460c1241b5ee
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65623281"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637345"
 ---
 # <a name="get-started-with-content-explorer"></a>Kom i gang med Indholdsviser
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Med Indholdsoversigt kan du oprindeligt få vist de elementer, der er opsummeret på oversigtssiden.
 
@@ -40,7 +38,7 @@ Du kan få mere at vide om licenskrav under [Information Protection: Analyse af 
 
 Hvis du vil have adgang til fanen indholdsoversigt, skal en konto tildeles medlemskab i en af disse roller eller rollegrupper. 
 
-**Microsoft 365 rollegrupper**
+**Microsoft 365-rollegrupper**
 
 - Global administrator
 - Overholdelsesadministrator
@@ -78,7 +76,7 @@ Der er roller og rollegrupper som prøveversion, som du kan teste for at finjust
 
 Her er en liste over relevante roller, der findes som prøveversion. Hvis du vil vide mere om dem, skal du se [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Information Protection administrator
+- Information Protection Administration
 - Information Protection analytiker
 - Information Protection investigator
 - Information Protection-læser
@@ -97,13 +95,13 @@ Indholdsoversigt viser et aktuelt snapshot af de elementer, der har en følsomhe
 
 ### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
 
-En [DLP-politik](dlp-learn-about-dlp.md) kan hjælpe med at beskytte følsomme oplysninger, der defineres som en **type følsomme oplysninger**. Microsoft 365 indeholder [definitioner til mange almindelige følsomme oplysningstyper](sensitive-information-type-entity-definitions.md) fra mange forskellige områder, der er klar til brug. Det kan f.eks. være et kreditkortnummer, bankkontonumre, nationale id-numre og Windows live-id-tjenestenumre.
+En [DLP-politik](dlp-learn-about-dlp.md) kan hjælpe med at beskytte følsomme oplysninger, der defineres som en **type følsomme oplysninger**. Microsoft 365 indeholder [definitioner til mange almindelige følsomme oplysningstyper](sensitive-information-type-entity-definitions.md) fra mange forskellige områder, der er klar til brug. Det kan f.eks. være et kreditkortnummer, bankkontonumre, nationale id-numre og windows Live ID-tjenestenumre.
 
 ### <a name="sensitivity-labels"></a>Følsomhedsmærkater
 
 En [følsomhedsmærkat](sensitivity-labels.md) er blot et mærke, der angiver værdien af elementet i din organisation. Den kan anvendes manuelt eller automatisk. Når etiketten er anvendt, integreres den i dokumentet og følger dokumentet overalt, hvor det går. En følsomhedsmærkat muliggør forskellige beskyttende funktionsmåder, f.eks. obligatorisk vandmærke eller kryptering.
 
-Følsomhedsmærkater skal være aktiveret for filer, der er i SharePoint og OneDrive, for at de tilsvarende data vises på siden til dataklassificering. Du kan få flere oplysninger under [Aktivér følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+Følsomhedsmærkater skal være aktiveret for filer, der er i SharePoint og OneDrive, for at de tilsvarende data vises på siden til dataklassificering. Du kan finde flere oplysninger under [Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
 
 ### <a name="retention-labels"></a>Opbevaringsmærkater
 
@@ -111,7 +109,7 @@ En [opbevaringsmærkat](retention.md) giver dig mulighed for at definere, hvor l
 
 ### <a name="how-to-use-content-explorer"></a>Sådan bruger du Indholdsoversigt
 
-1. Åbn **Microsoft Purview-compliance-portal**  >  **DataklassificeringIndholdoversigt** > .
+1. Åbn **Microsoft Purview-compliance-portal**  >  **Dataklassificering Indholdsoversigt** > .
 2. Hvis du kender navnet på etiketten eller typen af følsomme oplysninger, kan du skrive det i filterfeltet.
 3. Du kan også søge efter elementet ved at udvide mærkattypen og vælge etiketten på listen.
 4. Vælg en placering under **Alle placeringer,** og analysér mappestrukturen ned til elementet.
@@ -128,15 +126,15 @@ En [opbevaringsmærkat](retention.md) giver dig mulighed for at definere, hvor l
 
 ### <a name="filter"></a>Filter
 
-Når du foretager detailudledning på en placering, f.eks. en Exchange eller en Teams mappe eller et SharePoint eller OneDrive websted, **vises filterværktøjet**.
+Når du foretager detailudledning på en placering, f.eks. en Exchange- eller Teams-mappe eller et SharePoint- eller **OneDrive-websted** , vises filterværktøjet.
 
 ![søgeværktøjet indholdsoversigt.](../media/data_classification_search_tool.png)
 
 Søgeværktøjets område er det, der vises i ruden **Alle placeringer,** og det, du kan søge efter, varierer afhængigt af den valgte placering. 
 
-Når **Exchange** eller **Teams** er den valgte placering, kan du søge efter den fulde mailadresse for postkassen, f.eks`user@domainname.com`. .
+Når **Exchange** eller **Teams** er den valgte placering, kan du søge efter den fulde mailadresse for postkassen, f.eks `user@domainname.com`. .
 
-Når enten **SharePoint** eller **OneDrive** er valgt, vises søgeværktøjet, når du foretager detailudledning til webstedsnavne, mapper og filer. 
+Når enten **SharePoint** eller **OneDrive** er valgt placering, vises søgeværktøjet, når du foretager detailudledning til webstedsnavne, mapper og filer. 
 
 Du kan søge på:
 

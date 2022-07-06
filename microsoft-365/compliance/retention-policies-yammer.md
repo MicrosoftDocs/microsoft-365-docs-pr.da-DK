@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om opbevaring for Yammer
+title: Få mere at vide om opbevaring til Yammer
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,78 +17,76 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Yammer.
-ms.openlocfilehash: 25a746fcd5fe5dfd0e17edf08c9e7d3f722ce676
-ms.sourcegitcommit: aff1732dfa21e9283b173d8e5ca5bcbeeaaa26d8
+ms.openlocfilehash: d2703947d2cebc5818793362e55b8eae9cec2ed8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "65810566"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639616"
 ---
-# <a name="learn-about-retention-for-yammer"></a>Få mere at vide om opbevaring for Yammer
+# <a name="learn-about-retention-for-yammer"></a>Få mere at vide om opbevaring til Yammer
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md), fordi den indeholder oplysninger, der er specifikke for Yammer.
+Oplysningerne i denne artikel supplerer [Få mere at vide om opbevaring](retention.md) , fordi den indeholder oplysninger, der er specifikke for Yammer.
 
 For andre arbejdsbelastninger skal du se:
 
 - [Få mere at vide om opbevaring for SharePoint og OneDrive](retention-policies-sharepoint.md)
-- [Få mere at vide om opbevaring for Microsoft Teams](retention-policies-teams.md)
-- [Få mere at vide om opbevaring for Exchange](retention-policies-exchange.md)
+- [Få mere at vide om opbevaring til Microsoft Teams](retention-policies-teams.md)
+- [Få mere at vide om opbevaring til Exchange](retention-policies-exchange.md)
 
 ## <a name="whats-included-for-retention-and-deletion"></a>Hvad er inkluderet i forbindelse med opbevaring og sletning
 
-Yammer brugermeddelelser og communitymeddelelser kan slettes ved hjælp af opbevaringspolitikker for Yammer, og ud over teksten i disse meddelelser kan følgende elementer bevares af hensyn til overholdelse af angivne standarder: Hypertekstlinks og links til andre Yammer meddelelser.
+Yammer-brugermeddelelser og communitymeddelelser kan slettes ved hjælp af opbevaringspolitikker for Yammer, og ud over teksten i disse meddelelser kan følgende elementer bevares af hensyn til overholdelse af angivne standarder: Hypertekstlinks og links til andre Yammer-meddelelser.
 
 > [!NOTE]
 > Som forklaret i følgende afsnit omfatter brugermeddelelser private meddelelser for en enkelt bruger og alle communitymeddelelser, der er knyttet til den pågældende bruger.
 
 Brugermeddelelser omfatter alle navnene på personerne i samtalen, og communitymeddelelser omfatter communitynavnet og meddelelsestitlen (hvis det er angivet).
 
-Reaktioner fra andre i form af humørikoner bevares ikke, når du bruger opbevaringspolitikker til Yammer.
+Reaktioner fra andre i form af humørikoner bevares ikke, når du bruger opbevaringspolitikker for Yammer.
 
-Filer, du bruger sammen med Yammer, er ikke inkluderet i opbevaringspolitikker for Yammer. Disse elementer har deres egne opbevaringspolitikker.
+Filer, du bruger med Yammer, er ikke inkluderet i opbevaringspolitikker for Yammer. Disse elementer har deres egne opbevaringspolitikker.
 
-## <a name="how-retention-works-with-yammer"></a>Sådan fungerer opbevaring sammen med Yammer
+## <a name="how-retention-works-with-yammer"></a>Sådan fungerer opbevaring med Yammer
 
-Brug dette afsnit til at forstå, hvordan kravene til overholdelse af angivne standarder opfyldes af backendlager og -processer, og de skal bekræftes af eDiscovery-værktøjer i stedet for af meddelelser, der i øjeblikket er synlige i Yammer-appen.
+Brug dette afsnit til at forstå, hvordan dine krav til overholdelse af angivne standarder opfyldes af backendlager og -processer, og de skal bekræftes af eDiscovery-værktøjer i stedet for af meddelelser, der i øjeblikket er synlige i Yammer-appen.
 
-Du kan bruge en opbevaringspolitik til at gemme data fra communitymeddelelser og brugermeddelelser i Yammer og slette disse meddelelser. I baggrunden bruges Exchange postkasser til at gemme data, der er kopieret fra disse meddelelser. Data fra Yammer brugermeddelelser gemmes i en skjult mappe i postkassen for hver bruger, der er inkluderet i brugermeddelelsen, og en lignende skjult mappe i en gruppepostkasse bruges til communitymeddelelser.
+Du kan bruge en opbevaringspolitik til at gemme data fra communitymeddelelser og brugermeddelelser i Yammer og slette disse meddelelser. I baggrunden bruges Exchange-postkasser til at gemme data, der er kopieret fra disse meddelelser. Data fra Yammer-brugermeddelelser gemmes i en skjult mappe i postkassen for hver bruger, der er inkluderet i brugermeddelelsen, og en lignende skjult mappe i en gruppepostkasse bruges til communitymeddelelser.
 
-Kopier af communitymeddelelser kan også gemmes i den skjulte mappe med brugerpostkasser, når de @nævner brugere eller giver brugeren besked om et svar. Selvom disse meddelelser stammer fra en communitymeddelelse, vil en opbevaringspolitik for Yammer brugermeddelelser ofte indeholde kopier af communitymeddelelser. Det betyder, at brugermeddelelser ikke er begrænset til private meddelelser.
+Kopier af communitymeddelelser kan også gemmes i den skjulte mappe med brugerpostkasser, når de @nævner brugere eller giver brugeren besked om et svar. Selvom disse meddelelser stammer fra en communitymeddelelse, vil en opbevaringspolitik for Yammer-brugermeddelelser ofte indeholde kopier af communitymeddelelser. Det betyder, at brugermeddelelser ikke er begrænset til private meddelelser.
 
 Disse skjulte mapper er ikke designet til at være direkte tilgængelige for brugere eller administratorer, men i stedet gemme data, som overholdelsesadministratorer kan søge efter med eDiscovery-værktøjer.
 
-Selvom de gemmes i Exchange, medtages Yammer meddelelser kun i en opbevaringspolitik, der er konfigureret for **de Yammer communitymeddelelser** eller Yammer placeringer af **brugermeddelelser**.
+Selvom de gemmes i Exchange, er Yammer-meddelelser kun inkluderet i en opbevaringspolitik, der er konfigureret for **Yammer-communitymeddelelser** eller **Yammer-brugermeddelelsers** placeringer.
 
 > [!NOTE]
-> Hvis en bruger er inkluderet i en aktiv opbevaringspolitik, der bevarer Yammer data, og du sletter en postkasse for en bruger, der er inkluderet i denne politik, for at bevare de Yammer data, konverteres postkassen til en [inaktiv postkasse](inactive-mailboxes-in-office-365.md). Hvis du ikke har brug for at gemme denne Yammer data for brugeren, skal du udelade brugerkontoen fra opbevaringspolitikken, før du sletter brugerens postkasse.
+> Hvis en bruger er inkluderet i en aktiv opbevaringspolitik, der bevarer Yammer-data, og du sletter en postkasse for en bruger, der er inkluderet i denne politik, for at bevare Yammer-dataene, konverteres postkassen til en [inaktiv postkasse](inactive-mailboxes-in-office-365.md). Hvis du ikke behøver at gemme disse Yammer-data for brugeren, skal du udelade brugerkontoen fra opbevaringspolitikken, før du sletter vedkommendes postkasse.
 
-Når en opbevaringspolitik er konfigureret for Yammer meddelelser, evaluerer et timerjob fra tjenesten Exchange jævnligt elementer i den skjulte mappe, hvor disse Yammer meddelelser gemmes. Det tager op til syv dage at køre timerjobbet. Når disse elementer har udløbet deres opbevaringsperiode, flyttes de til mappen SubstrateHolds – en skjult mappe, der er i alle bruger- eller gruppepostkasser, hvor de kan gemme "blød slettede" elementer, før de slettes permanent.
+Når en opbevaringspolitik er konfigureret for Yammer-meddelelser, evaluerer et timerjob fra Exchange-tjenesten jævnligt elementer i den skjulte mappe, hvor disse Yammer-meddelelser gemmes. Det tager op til syv dage at køre timerjobbet. Når disse elementer har udløbet deres opbevaringsperiode, flyttes de til mappen SubstrateHolds – en skjult mappe, der er i alle bruger- eller gruppepostkasser, hvor de kan gemme "blød slettede" elementer, før de slettes permanent.
 
 > [!IMPORTANT]
-> På grund [af det første princip om opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Yammer meddelelser er gemt i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden Yammer opbevaringspolitik for samme placering, Procesførelsesposition, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
+> På grund af det [første princip om opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), og da Yammer-meddelelser gemmes i Exchange Online postkasser, afbrydes permanent sletning fra mappen SubstrateHolds altid midlertidigt, hvis postkassen påvirkes af en anden Yammer-opbevaringspolitik for den samme placering, Procesførelseshold, forsinkelse i venteposition, eller hvis der anvendes eDiscovery-venteposition på postkassen af juridiske eller undersøgelsesmæssige årsager.
 >
-> Selvom postkassen er inkluderet i en relevant venteposition, vil Yammer meddelelser, der er blevet slettet, ikke længere være synlige i Yammer, men vil fortsat kunne findes med eDiscovery.
+> Selvom postkassen er inkluderet i en relevant venteposition, vil Yammer-meddelelser, der er blevet slettet, ikke længere være synlige i Yammer, men vil fortsat kunne findes med eDiscovery.
 
-Når en opbevaringspolitik er konfigureret for Yammer meddelelser, afhænger de stier, som indholdet følger, af, om opbevaringspolitikken skal bevares og derefter slettes, kun bevares eller slettes.
+Når en opbevaringspolitik er konfigureret for Yammer-meddelelser, afhænger de stier, som indholdet følger, af, om opbevaringspolitikken skal bevares og derefter slettes, kun bevares eller slettes.
 
 Når opbevaringspolitikken skal bevares og derefter slettes:
 
-![Diagram over opbevaringsflow for Yammer meddelelser.](../media/yammerretentionlifecycle.png)
+![Diagram over opbevaringsflow for Yammer-meddelelser.](../media/yammerretentionlifecycle.png)
 
 For de to stier i diagrammet:
 
-1. **Hvis en Yammer meddelelse redigeres eller slettes** af brugeren i opbevaringsperioden, kopieres den oprindelige meddelelse straks (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Meddelelsen gemmes der, indtil opbevaringsperioden udløber, og derefter slettes meddelelsen straks permanent.
+1. **Hvis en Yammer-meddelelse redigeres eller slettes** af brugeren i løbet af opbevaringsperioden, kopieres den oprindelige meddelelse straks (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Meddelelsen gemmes der, indtil opbevaringsperioden udløber, og derefter slettes meddelelsen straks permanent.
 
-2. **Hvis en Yammer meddelelse ikke slettes**, og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager op til syv dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, slettes den straks permanent. 
+2. **Hvis en Yammer-meddelelse ikke slettes** , og for aktuelle meddelelser efter redigering flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager op til syv dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, slettes den straks permanent. 
 
 > [!NOTE]
 > Der kan søges i meddelelser i mappen SubstrateHolds af eDiscovery-værktøjer. Indtil meddelelser slettes permanent fra mappen SubstrateHolds, kan der stadig søges i dem af eDiscovery-værktøjer.
 
-Når opbevaringsperioden udløber og flytter en meddelelse til mappen SubstrateHolds, kommunikeres der en slettehandling til den Yammer tjeneste, som derefter videresender den samme handling til Yammer klientappen. Forsinkelser i denne kommunikation eller cachelagring kan forklare, hvorfor brugerne i en kort periode fortsat kan se disse meddelelser i deres Yammer app.
+Når opbevaringsperioden udløber og flytter en meddelelse til mappen SubstrateHolds, kommunikeres der en slettehandling til Yammer-tjenesten, som derefter videresender den samme handling til Yammer-klientappen. Forsinkelser i denne kommunikation eller cachelagring kan forklare, hvorfor brugerne i en kort periode fortsat kan se disse meddelelser i deres Yammer-app.
 
 I dette scenarie, hvor Yammer-tjenesten modtager en slettekommando på grund af en opbevaringspolitik, slettes den tilsvarende meddelelse i Yammer-appen for alle brugere i samtalen. Nogle af disse brugere kan være fra en anden organisation, have en opbevaringspolitik med en længere opbevaringsperiode eller ingen opbevaringspolitik tildelt dem. For disse brugere gemmes kopier af meddelelserne stadig i deres postkasser og forbliver søgbare efter eDiscovery, indtil meddelelserne slettes permanent af en anden opbevaringspolitik.
 
@@ -99,15 +97,15 @@ Når opbevaringspolitikken er bevar eller kun sletter, er indholdets stier varia
 
 ### <a name="content-paths-for-retain-only-retention-policy"></a>Indholdsstier til opbevaringspolitik kun for bevarelse
 
-1. **Hvis en Yammer meddelelse redigeres eller slettes**: Der oprettes straks en kopi af den oprindelige meddelelse i mappen SubstrateHolds og gemmes der, indtil opbevaringsperioden udløber. Derefter slettes meddelelsen straks permanent fra mappen SubstrateHolds.
+1. **Hvis en Yammer-meddelelse redigeres eller slettes**: Der oprettes straks en kopi af den oprindelige meddelelse i mappen SubstrateHolds og opbevares der, indtil opbevaringsperioden udløber. Derefter slettes meddelelsen straks permanent fra mappen SubstrateHolds.
 
-2. **Hvis den Yammer meddelelse ikke ændres eller slettes** og for aktuelle meddelelser efter redigering i løbet af opbevaringsperioden: Der sker intet før og efter opbevaringsperioden. Meddelelsen forbliver på den oprindelige placering.
+2. **Hvis Yammer-meddelelsen ikke ændres eller slettes** og for aktuelle meddelelser efter redigering i løbet af opbevaringsperioden: Der sker intet før og efter opbevaringsperioden; meddelelsen forbliver på den oprindelige placering.
 
 ### <a name="content-paths-for-delete-only-retention-policy"></a>Indholdsstier til opbevaringspolitik, der kun gælder for sletning
 
-1. **Hvis den Yammer meddelelse ikke slettes** i løbet af opbevaringsperioden: Ved slutningen af opbevaringsperioden flyttes meddelelsen til mappen SubstrateHolds. Denne handling tager op til syv dage fra udløbsdatoen. Derefter slettes meddelelsen straks permanent fra mappen SubstrateHolds.
+1. **Hvis Yammer-meddelelsen ikke slettes** i løbet af opbevaringsperioden: I slutningen af opbevaringsperioden flyttes meddelelsen til mappen SubstrateHolds. Denne handling tager op til syv dage fra udløbsdatoen. Derefter slettes meddelelsen straks permanent fra mappen SubstrateHolds.
 
-2. **Hvis den Yammer meddelelse slettes af brugeren** i løbet af perioden, flyttes elementet straks til mappen SubstrateHolds, hvor det slettes med det samme permanent.
+2. **Hvis Yammer-meddelelsen slettes af brugeren** i perioden, flyttes elementet straks til mappen SubstrateHolds, hvor det slettes med det samme permanent.
 
 #### <a name="example-flows-and-timings-for-retention-policies"></a>Eksempel på flow og tidsindstillinger for opbevaringspolitikker
 
@@ -121,7 +119,7 @@ For alle eksempler, der refererer til permanent sletning på grund [af princippe
 
 ##### <a name="example-1-retain-only-for-7-years"></a>Eksempel 1: Bevar kun i 7 år
 
-På dag 1 sender en bruger en ny Yammer meddelelse.
+På dag 1 sender en bruger en ny Yammer-meddelelse.
 
 Den 5. dag redigerer brugeren meddelelsen.
 
@@ -139,7 +137,7 @@ Hvis brugeren havde slettet den aktuelle meddelelse efter den angivne opbevaring
 
 ##### <a name="example-2-retain-for-30-days-and-then-delete"></a>Eksempel 2: Bevar i 30 dage, og slet derefter
 
-På dag 1 sender en bruger en ny Yammer meddelelse.
+På dag 1 sender en bruger en ny Yammer-meddelelse.
 
 Den 10. dag redigerer brugeren meddelelsen.
 
@@ -160,7 +158,7 @@ Opbevaringsresultater:
 > [!NOTE]
 > På grund af den korte varighed på én dag af denne konfiguration og opbevaringsprocesser, der fungerer inden for en tidsperiode på 1-7 dage, viser dette afsnit eksempler på tidsindstillinger, der ligger inden for de typiske tidsintervaller.
 
-På dag 1 sender en bruger en ny Yammer meddelelse.
+På dag 1 sender en bruger en ny Yammer-meddelelse.
 
 Eksempel på resultat af opbevaring, hvis brugeren ikke redigerer eller sletter meddelelsen:
 
@@ -174,21 +172,21 @@ Som dette eksempel viser, gennemgår tjenesten flere processer for at sikre en k
 
 ## <a name="messages-and-external-users"></a>Meddelelser og eksterne brugere
 
-En opbevaringspolitik for Yammer brugermeddelelser gælder som standard for alle brugere i organisationen, men ikke for eksterne brugere. Du kan anvende en opbevaringspolitik på eksterne brugere, hvis du bruger indstillingen **Rediger** for de brugere, der er inkluderet, og angive deres konto.
+Som standard gælder en opbevaringspolitik for Yammer-brugermeddelelser for alle brugere i din organisation, men ikke eksterne brugere. Du kan anvende en opbevaringspolitik på eksterne brugere, hvis du bruger indstillingen **Rediger** for de brugere, der er inkluderet, og angive deres konto.
 
 På nuværende tidspunkt understøttes Azure B2B-gæstebrugere ikke.
 
 ## <a name="when-a-user-leaves-the-organization"></a>Når en bruger forlader organisationen 
 
-Hvis en bruger forlader organisationen, og vedkommendes Microsoft 365 konto slettes, gemmes de Yammer brugermeddelelser, der skal opbevares, i en inaktiv postkasse. Disse meddelelser forbliver underlagt en hvilken som helst opbevaringspolitik, der blev placeret på brugeren, før postkassen blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan finde flere oplysninger under [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md).
+Hvis en bruger forlader din organisation, og vedkommendes Microsoft 365-konto slettes, gemmes vedkommendes Yammer-brugermeddelelser, der er underlagt opbevaring, i en inaktiv postkasse. Disse meddelelser forbliver underlagt en hvilken som helst opbevaringspolitik, der blev placeret på brugeren, før postkassen blev gjort inaktiv, og indholdet er tilgængeligt for en eDiscovery-søgning. Du kan finde flere oplysninger under [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md).
 
 Hvis brugeren har gemt filer i Yammer, skal du se det [tilsvarende afsnit](retention-policies-sharepoint.md#when-a-user-leaves-the-organization) for SharePoint og OneDrive.
 
 ## <a name="limitations"></a>Begrænsninger
 
-Vær opmærksom på følgende begrænsning, når du bruger opbevaring til Yammer communitymeddelelser og brugermeddelelser:
+Vær opmærksom på følgende begrænsning, når du bruger opbevaring til Yammer-communitymeddelelser og brugermeddelelser:
 
-- Når du vælger **Rediger** for **placeringen af Yammer brugermeddelelser**, kan du se gæster og brugere, der ikke har postkasse. Opbevaringspolitikker er ikke udviklet til disse brugere, så vælg dem ikke.
+- Når du vælger **Rediger** for placeringen af **Yammer-brugermeddelelser** , kan du se gæster og brugere, der ikke har postkasse. Opbevaringspolitikker er ikke udviklet til disse brugere, så vælg dem ikke.
 
 ## <a name="configuration-guidance"></a>Konfigurationsvejledning
 

@@ -15,21 +15,19 @@ search.appverid:
 - MET150
 ms.assetid: 04e9de2d-765b-457b-a98a-d0f60bfb13f2
 description: Du kan ændre standardstørrelsen for PST-filer, der downloades til din computer, når du eksporterer eDiscovery-søgeresultater.
-ms.openlocfilehash: 135c83f734e0687c8d477ab434d0aa539224f39a
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e2387f403854561c9906f252ad39be740c62ae19
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100825"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638780"
 ---
 # <a name="change-the-size-of-pst-files-when-exporting-ediscovery-search-results"></a>Skift størrelsen på PST-filer, når du eksporterer eDiscovery-søgeresultater
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du bruger værktøjet eDiscovery-eksport til at eksportere mailresultaterne af en eDiscovery-søgning fra de forskellige Microsoft eDiscovery-værktøjer, er standardstørrelsen på en PST-fil, der kan eksporteres, 10 GB. Hvis du vil ændre denne standardstørrelse, kan du redigere Windows-registreringsdatabasen på den computer, du bruger til at eksportere søgeresultaterne. En af grundene til dette er, at en PST-fil kan være på flytbare medier, en dvd, en cd eller et USB-drev. 
   
 > [!NOTE]
-> Værktøjet eDiscovery-eksport bruges til at eksportere søgeresultaterne, når du bruger søgeværktøjet Indhold på Microsoft Purview-overholdelsesportalen.
+> Værktøjet eDiscovery-eksport bruges til at eksportere søgeresultaterne, når du bruger søgeværktøjet Indhold i Microsoft Purview-compliance-portal.
   
 ## <a name="create-a-registry-setting-to-change-the-size-of-pst-files-when-you-export-ediscovery-search-results"></a>Opret en indstilling i registreringsdatabasen for at ændre størrelsen på PST-filer, når du eksporterer eDiscovery-søgeresultater
 
@@ -56,7 +54,7 @@ Udfør følgende procedure på den computer, du vil bruge til at eksportere resu
    
 3. Ret værdien `PstSizeLimitInBytes` til den ønskede maksimumstørrelse for en PST-fil, når du eksporterer søgeresultater, og gem derefter filen. 
     
-4. I Windows Explorer skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
+4. I Windows Stifinder skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
     
 5. Klik på **Ja** i vinduet Bruger Access Control for at lade registreringseditoren foretage ændringen. 
     

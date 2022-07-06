@@ -11,21 +11,19 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en connector til at importere og arkivere EML-data fra Veritas i Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 31092a7349ec032f47874a882b926dd84226bafb
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Administratorer kan konfigurere en connector til at importere og arkivere EML-data fra Veritas til Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
+ms.openlocfilehash: 2d0d0afec6bfb35700ee8b22727f8732f111286a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320190"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636661"
 ---
 # <a name="set-up-a-connector-to-archive-eml-data"></a>Konfigurer en connector til arkivering af EML-data
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere EML-data til brugerpostkasser i din Microsoft 365-organisation. EML er filtypenavnet for en mail, der er gemt i en fil. Connectoren konverterer indholdet af et element fra kildeformatet til et mailformat og importerer derefter elementet til en brugerpostkasse.
 
-Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere EML-data til brugerpostkasser i din Microsoft 365 organisation. EML er filtypenavnet for en mail, der er gemt i en fil. Connectoren konverterer indholdet af et element fra kildeformatet til et mailformat og importerer derefter elementet til en brugerpostkasse.
-
-Når EML-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation hold, eDiscovery og opbevaringspolitikker og opbevaringsmærkater. Brug af en EML-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når EML-meddelelser er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery og opbevaringspolitikker og opbevaringsmærkater. Brug af en EML-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-eml-data"></a>Oversigt over arkivering af EML-data
 
@@ -37,23 +35,23 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24 timer kopieres indholdselementer fra EML-kilden til Veritas Merge1-webstedet. Under denne proces konverteres indholdet af en EML-fil til et mailformat.
 
-3. Den EML-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den EML-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører meddelelserne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
-4. Connectoren importerer de konverterede meddelelseselementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytningsproces, der er beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Under denne proces oprettes en undermappe i mappen Indbakke med navnet **EMLis** i brugerpostkasserne, og EML-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hver meddelelse indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i indholdselementet.
+4. Connectoren importerer de konverterede meddelelseselementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben *Mail* for den automatiske brugertilknytningsproces, der er beskrevet i [trin 3](#step-3-map-users-and-complete-the-connector-setup). Under denne proces oprettes der en undermappe i mappen Indbakke med navnet **EML** i brugerpostkasserne, og EML-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Hver meddelelse indeholder denne egenskab, som udfyldes med mailadressen på alle deltagere i indholdselementet.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
 - Opret en Veritas Merge1-konto til Microsoft-connectors. Hvis du vil oprette en konto, skal du kontakte [Veritas Kundesupport](https://globanet.com/ms-connectors-contact). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter EML-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter EML-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-an-eml-connector"></a>Trin 1: Konfigurer en EML-connector
 
 Det første trin er at få adgang til siden **DataConnectors på overholdelsesportalen** og oprette en connector til EML-data.
 
-1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsEML** > .
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **Dataconnectors** > **EML**.
 
 2. Klik på **Tilføj connector** på siden **med beskrivelsen af EML-produktet**.
 
@@ -73,7 +71,7 @@ Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i co
 
 Hvis du vil tilknytte brugere og fuldføre connectorkonfigurationen på overholdelsesportalen, skal du følge disse trin:
 
-1. Aktivér automatisk brugertilknytning på siden **Knyt eksterne brugere til Microsoft 365 brugere**. EML-kildeelementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres EML-elementerne til den pågældende brugers postkasse.
+1. Aktivér automatisk brugertilknytning på siden **Knyt eksterne brugere til Microsoft 365-brugere** . EML-kildeelementerne indeholder en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365-bruger, importeres EML-elementerne til den pågældende brugers postkasse.
 
 2. Klik på **Næste**, gennemse dine indstillinger, og gå derefter til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 

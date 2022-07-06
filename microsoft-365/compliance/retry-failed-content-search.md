@@ -16,16 +16,14 @@ search.appverid:
 ms.assetid: ''
 description: Under en undersøgelse kan du bruge knappen Prøv igen for at løse indholdssøgninger, der har fejl i indholdsplaceringen.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5345b346e8c66f6983d67081839248e4c66be7d8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: c524be95ac72f44e58b03958694d26c52a401e40
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090423"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638163"
 ---
 # <a name="retry-a-content-search-to-resolve-a-content-location-error"></a>Prøv en indholdssøgning igen for at løse en fejl i indholdsplaceringen
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du bruger indholdssøgning i Security and Compliance Center til at søge i et stort antal postkasser, kan du få søgefejl, der svarer til fejlen:
 
@@ -54,7 +52,7 @@ Genstart af søgningen vil ofte resultere i lignende fejl på forskellige server
 
 Dette medfører, at søgningen kun forsøges igen for de postkasser, der mislykkedes. Når du prøver søgningen igen, bevares de andre resultater, der blev returneret.
 
-## <a name="tips-to-avoid-content-location-errors"></a>Tips for at undgå fejl i indholdsplacering
+## <a name="tips-to-avoid-content-location-errors"></a>Tip til at undgå fejl i placering af indhold
 
 Her er nogle yderligere årsager til fejl i placering af indhold og nogle tip, der kan hjælpe dig med at undgå dem, når du søger i et stort antal postkasser.
 

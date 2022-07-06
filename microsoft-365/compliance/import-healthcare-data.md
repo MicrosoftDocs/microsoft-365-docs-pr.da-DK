@@ -14,18 +14,16 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataconnector til at importere EHR-data (Electronic Healthcare Records) fra deres sundhedssystem til Microsoft 365. Dette giver dig mulighed for at bruge EHR-data i politikker for styring af insiderrisiko til at hjælpe dig med at registrere uautoriseret adgang til patientdata af dine medarbejdere.
-ms.openlocfilehash: 90f50628e255267baeff7d39c776f9a6bf8cc426
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: be5429ea1a5fb4e2e2be6a7029f2401fcbdab94e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077903"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641378"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Konfigurer en connector til import af ehr-overvågningsdata til sundhedssektoren (prøveversion)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen for at importere overvågningsdata for brugeraktivitet i organisationens EHR-system (Electronic Healthcare Records). Overvågningsdata fra dit ehr-system til sundhedssektoren omfatter data for hændelser, der er relateret til at få adgang til en patients sundhedsjournaler. Sundheds-EHR-overvågningsdata kan bruges af Microsoft 365 [løsning til styring af insiderrisiko](insider-risk-management.md) for at beskytte din organisation mod uautoriseret adgang til patientoplysninger.
+Du kan konfigurere en dataconnector i Microsoft Purview-compliance-portal til at importere overvågningsdata for brugeraktivitet i organisationens EHR-system (Electronic Healthcare Records). Overvågningsdata fra dit ehr-system til sundhedssektoren omfatter data for hændelser, der er relateret til at få adgang til en patients sundhedsjournaler. Ehr-overvågningsdata til sundhedssektoren kan bruges af Microsoft [365-løsningen til styring af insiderrisiko](insider-risk-management.md) for at beskytte din organisation mod uautoriseret adgang til patientoplysninger.
 
 Konfiguration af en Healthcare-connector består af følgende opgaver:
 
@@ -41,7 +39,7 @@ Konfiguration af en Healthcare-connector består af følgende opgaver:
 
 ## <a name="before-you-set-up-the-connector"></a>Før du konfigurerer connectoren
 
-- Den bruger, der opretter healthcare-connectoren i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter healthcare-connectoren i trin 3, skal tildeles rollen Dataconnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 - Du skal finde ud af, hvordan du henter eller eksporterer dataene fra organisationens EHR-system (dagligt) og opretter en tekstfil, der er beskrevet i trin 2. Det script, du kører i trin 4, overfører dataene i tekstfilen til API-slutpunktet.
 
@@ -49,11 +47,11 @@ Konfiguration af en Healthcare-connector består af følgende opgaver:
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>Trin 1: Opret en app i Azure Active Directory
 
-Det første trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den Healthcare-connector, du opretter i trin 3. Oprettelse af denne app gør det muligt for Azure AD at godkende pushanmodningen for tekstfilen, der indeholder ehr-overvågningsdata til sundhedssektoren. Under oprettelsen af denne Azure AD-app skal du gemme følgende oplysninger. Disse værdier bruges i senere trin.
+Det første trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den Healthcare-connector, du opretter i trin 3. Oprettelse af denne app gør det muligt for Azure AD at godkende pushanmodningen for tekstfilen, der indeholder sundheds-EHR-overvågningsdata. Under oprettelsen af denne Azure AD app skal du gemme følgende oplysninger. Disse værdier bruges i senere trin.
 
-- Azure AD-program-id (også kaldet *app-id* eller *klient-id*)
+- Azure AD program-id (også kaldet *app-id* eller *klient-id*)
 
-- Azure AD-programhemmelighed (også kaldet *klienthemmeligheden*)
+- Azure AD programhemmelighed (også kaldet *klienthemmeligheden*)
 
 - Lejer-id (også kaldet *mappe-id*)
 
@@ -70,8 +68,8 @@ I følgende tabel vises de felter, der kræves for at aktivere insiderrisikostyr
 
 |Feltet|Kategori|
 |:----|:----------|
-| *Oprettelsestidspunktsnavn<br/>*<br/>Arbejdsstations-id<br/>Hændelsessektion<br/>Hændelseskategori |Disse felter bruges til at identificere adgangsaktivitetshændelser i dit ehr-system til sundhedssektoren.|
-| Patient reg-id<br/>Patient *fornavnPatient<br/> Mellemnavn <br/>Patient Efternavn* <br/>Patientadresselinje 1* <br/>Patientadresselinje 2<br/>Patientby* <br/>Postnummer til patient*  <br/>Patienttilstand <br/>Patientland <br/>Patientafdeling              | Disse felter bruges til at identificere patientprofiloplysninger.|
+| *Navn på oprettelsestidshændelse<br/>*<br/>Arbejdsstations-id<br/>Hændelsessektion<br/>Hændelseskategori |Disse felter bruges til at identificere adgangsaktivitetshændelser i dit ehr-system til sundhedssektoren.|
+| Patient reg-id<br/>Patient fornavn *<br/>Patients mellemnavn <br/>Patient Efternavn* <br/>Patientadresselinje 1* <br/>Patientadresselinje 2<br/>Patientby* <br/>Postnummer til patient*  <br/>Patienttilstand <br/>Patientland <br/>Patientafdeling              | Disse felter bruges til at identificere patientprofiloplysninger.|
 | Årsag til begrænset adgang*<br/> Kommentar med begrænset adgang | Disse felter bruges til at identificere adgang til begrænsede poster.|
 | Mailadresse (UPN) eller SamAccountName*<br/>Brugernavn for medarbejder <br/> Medarbejder-id <br/> Medarbejderens efternavn <sup>1</sup> <br/> Medarbejderens fornavn <sup>1</sup> | Disse felter bruges til at identificere oplysninger om medarbejderprofil for adresse- og navnematchning, der kræves for at bestemme adgangen til poster af typen Family/Neighbor/Employee. |
 |||
@@ -93,7 +91,7 @@ Det næste trin er at oprette en Healthcare-connector på overholdelsesportalen.
 
 5. Gør følgende på siden **Legitimationsoplysninger til godkendelse** , og klik derefter på **Næste**:
 
-    1. Skriv eller indsæt Azure AD-program-id'et for den Azure-app, du oprettede i trin 1.
+    1. Skriv eller indsæt Azure AD program-id for den Azure-app, du oprettede i trin 1.
 
     2. Skriv et navn til sundhedsconnectoren.
 
@@ -119,7 +117,7 @@ Det næste trin er at oprette en Healthcare-connector på overholdelsesportalen.
 
     - **Job-id.** Du skal bruge dette job-id for at køre scriptet i næste trin. Du kan kopiere den fra denne side eller fra connector-pop op-siden.
 
-    - **Link til eksempelscript.** Klik på linket **her** for at gå til GitHub websted for at få adgang til eksempelscriptet (linket åbner et nyt vindue). Hold dette vindue åbent, så du kan kopiere scriptet i trin 4. Du kan også angive et bogmærke for destinationen eller kopiere URL-adressen, så du kan få adgang til den igen, når du kører scriptet. Dette link er også tilgængeligt på connector-pop op-siden.
+    - **Link til eksempelscript.** Klik på **linket her** for at gå til GitHub-webstedet for at få adgang til eksempelscriptet (linket åbner et nyt vindue). Hold dette vindue åbent, så du kan kopiere scriptet i trin 4. Du kan også angive et bogmærke for destinationen eller kopiere URL-adressen, så du kan få adgang til den igen, når du kører scriptet. Dette link er også tilgængeligt på connector-pop op-siden.
 
 9. Klik på **Udført**.
 
@@ -133,12 +131,12 @@ Du kan også klikke på **Rediger** for at ændre Det Azure App-id eller de kolo
 
 ## <a name="step-4-run-the-sample-script-to-upload-your-healthcare-ehr-auditing-data"></a>Trin 4: Kør eksempelscriptet for at uploade dine EHR-overvågningsdata for sundhedssektoren
 
-Det sidste trin i forbindelse med konfiguration af en Healthcare-connector er at køre et eksempelscript, der uploader sundhedsjJJR-overvågningsdataene i tekstfilen (som du oprettede i trin 1) til Microsoft-cloudmiljøet. Scriptet uploader specifikt dataene til Healthcare-connectoren. Når du har kørt scriptet, importerer den Healthcare-connector, du oprettede i trin 3, sundheds-EHR-overvågningsdataene til din Microsoft 365 organisation, hvor andre værktøjer til overholdelse af angivne standarder kan få adgang til dem, f.eks. Insider Risk Management-løsningen. Når du har kørt scriptet, kan du overveje at planlægge en opgave for at køre den automatisk dagligt, så de mest aktuelle data om medarbejderafslutning uploades til Microsoft-cloudmiljøet. Se [(valgfrit) Trin 6: Planlæg, at scriptet skal køre automatisk](#optional-step-6-schedule-the-script-to-run-automatically).
+Det sidste trin i forbindelse med konfiguration af en Healthcare-connector er at køre et eksempelscript, der uploader sundhedsjJJR-overvågningsdataene i tekstfilen (som du oprettede i trin 1) til Microsoft-cloudmiljøet. Scriptet uploader specifikt dataene til Healthcare-connectoren. Når du har kørt scriptet, importerer den Healthcare-connector, du oprettede i trin 3, sundheds-EHR-overvågningsdataene til din Microsoft 365-organisation, hvor andre værktøjer til overholdelse af angivne standarder kan få adgang til dem, f.eks. insiderrisikostyringsløsningen. Når du har kørt scriptet, kan du overveje at planlægge en opgave for at køre den automatisk dagligt, så de mest aktuelle data om medarbejderafslutning uploades til Microsoft-cloudmiljøet. Se [(valgfrit) Trin 6: Planlæg, at scriptet skal køre automatisk](#optional-step-6-schedule-the-script-to-run-automatically).
 
 > [!NOTE]
 > Som tidligere nævnt er den maksimale størrelse på den tekstfil, der indeholder overvågningsdataene, 3 GB. Det maksimale antal rækker er 5 millioner. Det script, du kører i dette trin, tager ca. 30-40 minutter at importere overvågningsdataene fra store tekstfiler. Derudover opdeler scriptet store tekstfiler i mindre blokke på 100.000 rækker og importerer derefter disse blokke sekventielt.
 
-1. Gå til det vindue, du lod åbne fra det forrige trin, for at få adgang til GitHub websted med eksempelscriptet. Du kan også åbne webstedet med bogmærker eller bruge den URL-adresse, du kopierede. Du kan også få adgang til scriptet [her](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1).
+1. Gå til det vindue, du lod åbne fra det forrige trin, for at få adgang til GitHub-webstedet med eksempelscriptet. Du kan også åbne webstedet med bogmærker eller bruge den URL-adresse, du kopierede. Du kan også få adgang til scriptet [her](https://github.com/microsoft/m365-compliance-connector-sample-scripts/blob/main/sample_script.ps1).
 
 2. Klik på knappen **Rå** for at få vist scriptet i tekstvisning.
 
@@ -160,9 +158,9 @@ I følgende tabel beskrives de parametre, der skal bruges sammen med dette scrip
 
 |Parameter  |Beskrivelse|
 |:----------|:----------|
-|tenantId|Dette er id'et for din Microsoft 365 organisation, som du fik i trin 1. Du kan også hente lejer-id'et for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
-|Appid|Dette er Azure AD-program-id'et for den app, du oprettede i Azure AD i trin 1. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365 organisation.|
-|appSecret|Dette er Azure AD-programhemmeligheden for den app, du oprettede i Azure AD i trin 1. Dette bruges også til godkendelse.|
+|tenantId|Dette er id'et for din Microsoft 365-organisation, som du fik i trin 1. Du kan også hente lejer-id'et for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
+|Appid|Dette er det Azure AD program-id for den app, du oprettede i Azure AD i trin 1. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365-organisation.|
+|appSecret|Dette er Azure AD programhemmeligheden for den app, du oprettede i Azure AD i trin 1. Dette bruges også til godkendelse.|
 |job-id|Dette er job-id'et for den Healthcare-connector, du oprettede i trin 3. Dette bruges til at knytte sundheds-EHR-overvågningsdata, der uploades til Microsoft-cloudmiljøet, med healthcare-connectoren.|
 |filePath|Dette er filstien til tekstfilen (gemt i det samme system som scriptet), som du oprettede i trin 2. Prøv at undgå mellemrum i filstien. ellers skal du bruge enkelte anførselstegn.|
 |||
@@ -173,7 +171,7 @@ Her er et eksempel på syntaksen for connectorscriptet healthcare ved hjælp af 
 .\HealthcareConnector.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -filePath 'C:\Users\contosoadmin\Desktop\Data\healthcare_audit_records.csv'
 ```
 
-Hvis overførslen lykkes, viser scriptet **meddelelsen Upload fuldført**.
+Hvis overførslen lykkes, viser scriptet meddelelsen **Upload fuldført** .
 
 > [!NOTE]
 > Hvis du har problemer med at køre den forrige kommando på grund af kørselspolitikker, skal du se [Om kørselspolitikker](/powershell/module/microsoft.powershell.core/about/about_execution_policies) og [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) for at få vejledning til, hvordan du angiver kørselspolitikker.
@@ -198,7 +196,7 @@ Hvis du vil sikre dig, at de nyeste overvågningsdata fra dit ehr-system til sun
 
 Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver dag.
 
-1. Klik på knappen Windows **Start** på den lokale computer, og skriv derefter **Opgavestyring**.
+1. Klik på knappen **Start** i Windows på den lokale computer, og skriv derefter **Opgavestyring**.
 
 2. Klik på appen **Opgavestyring** for at åbne den.
 
@@ -214,7 +212,7 @@ Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver
 
 6. Vælg fanen **Udløsere** , klik på **Ny**, og gør derefter følgende:
 
-    1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt, hvor scriptet skal køres første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
+    1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt for at køre scriptet for første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
 
     2. Under **Avancerede indstillinger** skal du kontrollere, at afkrydsningsfeltet **Aktiveret** er markeret.
 

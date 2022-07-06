@@ -20,16 +20,14 @@ ms.assetid: 5af334b6-a15d-4f73-97f8-1423457d9f6b
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du fjerner dublerede eDiscovery-søgeresultater, så der kun eksporteres én kopi af en mail.
-ms.openlocfilehash: 4456ecfb4684562d8ddf7da21c463859f2d9bec2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 6a0d4e2b52c6f32b3142414a761a2447805cd58a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090999"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640648"
 ---
 # <a name="de-duplication-in-ediscovery-search-results"></a>Deduplikering i eDiscovery-søgeresultater
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel beskrives det, hvordan deduplikering af eDiscovery-søgeresultater fungerer, og det forklares, hvilke begrænsninger der er i algoritmen for deduplikering.
   
@@ -43,11 +41,11 @@ eDiscovery-værktøjer bruger en kombination af følgende mailegenskaber til at 
 
 - **ConversationTopic** – Denne egenskab angiver emnet i en meddelelses samtaletråd. Værdien af egenskaben **ConversationTopic** er den streng, der beskriver det overordnede emne i samtalen. En samtale består af en indledende meddelelse og alle meddelelser, der sendes som svar på den første meddelelse. Meddelelser i den samme samtale har samme værdi for egenskaben **ConversationTopic** . Værdien af denne egenskab er typisk emnelinjen fra den indledende meddelelse, der forgrenede samtalen. 
 
-- **BodyTagInfo** – Dette er en intern Exchange store-egenskab. Værdien af denne egenskab beregnes ved at kontrollere forskellige attributter i meddelelsens brødtekst. Denne egenskab bruges til at identificere forskelle i meddelelsesteksten. 
+- **BodyTagInfo** – Dette er en intern exchange-lageregenskab. Værdien af denne egenskab beregnes ved at kontrollere forskellige attributter i meddelelsens brødtekst. Denne egenskab bruges til at identificere forskelle i meddelelsesteksten. 
 
 Under eDiscovery-eksportprocessen sammenlignes disse tre egenskaber for hver meddelelse, der opfylder søgekriterierne. Hvis disse egenskaber er identiske for to (eller flere) meddelelser, bestemmes det, at disse meddelelser er dubletter, og resultatet er, at kun én kopi af meddelelsen eksporteres, hvis deduplikering er aktiveret. Den eksporterede meddelelse kaldes "kildeelementet". Oplysninger om dublerede meddelelser er inkluderet i **deResults.csv** og **Manifest.xml** rapporter, der er inkluderet i de eksporterede søgeresultater. I den **Results.csv** fil identificeres en dubletmeddelelse ved at have en værdi i kolonnen **Dupliker til element** . Værdien i denne kolonne svarer til værdien i kolonnen **Elementidentitet** for den meddelelse, der blev eksporteret. 
   
-Følgende grafik viser, hvordan duplikerede meddelelser vises i **Results.csv** og **Manifest.xml** rapporter, der eksporteres med søgeresultaterne. Disse rapporter indeholder ikke de mailegenskaber, der tidligere er beskrevet, som bruges i algoritmen til deduplikering. Rapporterne indeholder i stedet egenskaben **Elementidentitet**, der er tildelt elementer af Exchange butik. 
+Følgende grafik viser, hvordan duplikerede meddelelser vises i **Results.csv** og **Manifest.xml** rapporter, der eksporteres med søgeresultaterne. Disse rapporter indeholder ikke de mailegenskaber, der tidligere er beskrevet, som bruges i algoritmen til deduplikering. Rapporterne indeholder i stedet egenskaben **Elementidentitet** , der er tildelt elementer af Exchange-lageret. 
   
  ### <a name="resultscsv-report-viewed-in-excel"></a>Results.csv rapport (vist i Excel)
   

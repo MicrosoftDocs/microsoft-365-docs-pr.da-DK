@@ -17,37 +17,35 @@ ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer IRM (Information Rights Management) i Exchange Online til at bruge en AD RMS-server (Active Directory Rights Management Service).
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: dac33407a9a45da59d0b3a766ab8a695a0f5a076
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 5bd4a104d4cceedbdb82c1ff2baac0b547b74fbe
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018135"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637499"
 ---
 # <a name="configure-irm-to-use-an-on-premises-ad-rms-server"></a>Konfigurer IRM til at bruge en lokal AD RMS-server
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Til brug med udrulninger i det lokale miljø bruger IRM (Information Rights Management) i Exchange Online AD RMS (Active Directory Rights Management Services), som er en teknologi til beskyttelse af oplysninger i Windows Server 2008 og nyere. IRM-beskyttelse anvendes på mail ved at anvende en SKABELON for AD RMS-rettigheder på en mail. Rettigheder vedhæftes selve meddelelsen, så beskyttelsen sker online og offline og i og uden for organisationens firewall.
 
-IRM (Information Rights Management) i Exchange Online bruger Active Directory Rights Management-tjenester (AD RMS) til brug sammen med udrulninger i det lokale miljø, som er en teknologi til beskyttelse af oplysninger i Windows Server 2008 og nyere. IRM-beskyttelse anvendes på mail ved at anvende en SKABELON for AD RMS-rettigheder på en mail. Rettigheder vedhæftes selve meddelelsen, så beskyttelsen sker online og offline og i og uden for organisationens firewall.
+I dette emne kan du se, hvordan du konfigurerer IRM til at bruge en AD RMS-server. Du kan få oplysninger om brug af Microsoft Purview-meddelelseskryptering med Azure Active Directory og Azure Rights Management i [Ofte stillede spørgsmål om meddelelseskryptering](./ome-faq.yml).
 
-I dette emne kan du se, hvordan du konfigurerer IRM til at bruge en AD RMS-server. Du kan få oplysninger om brug af Microsoft Purview Message Encryption med Azure Active Directory og Azure Rights Management under [Ofte stillede spørgsmål om meddelelseskryptering](./ome-faq.yml).
-
-Du kan få mere at vide om IRM i Exchange Online under [Oplysninger Rights Management i Exchange Online](information-rights-management-in-exchange-online.md).
+Du kan få mere at vide om IRM i Exchange Online [under Information Rights Management i Exchange Online](information-rights-management-in-exchange-online.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
 - Anslået tid til at fuldføre denne opgave: 30 minutter
 
-- Du skal have tildelt tilladelser, før du kan udføre denne procedure eller disse procedurer. Hvis du vil se, hvilke tilladelser du har brug for, skal du se posten "Oplysninger Rights Management" under emnet [Meddelelsespolitik og tilladelser til overholdelse af angivne standarder](/Exchange/permissions/feature-permissions/policy-and-compliance-permissions).
+- Du skal have tildelt tilladelser, før du kan udføre denne procedure eller disse procedurer. Hvis du vil se, hvilke tilladelser du har brug for, skal du se emnet "Information Rights Management" under emnet [Meddelelsespolitik og tilladelser til overholdelse af angivne standarder](/Exchange/permissions/feature-permissions/policy-and-compliance-permissions) .
 
 - AD RMS-serveren skal køre Windows Server 2008 eller nyere. Du kan finde oplysninger om, hvordan du installerer AD RMS, under [Installation af en AD RMS-klynge](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc726041(v=ws.11)).
 
-- Du kan finde oplysninger om, hvordan du installerer og konfigurerer Windows PowerShell og opretter forbindelse til tjenesten, [under Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du kan finde oplysninger om, hvordan du installerer og konfigurerer Windows PowerShell og opretter forbindelse til tjenesten, under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Du kan finde oplysninger om tastaturgenveje, der kan gælde for procedurerne i dette emne, under [Tastaturgenveje til Exchange Administration i Exchange Online](/Exchange/accessibility/keyboard-shortcuts-in-admin-center).
 
 > [!TIP]
-> Har du problemer? Bed om hjælp i Exchange fora. Besøg forummerne på [Exchange Server,Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=60612) eller[](https://go.microsoft.com/fwlink/p/?linkId=267542) [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
+> Har du problemer? Bed om hjælp i Exchange-forummerne. Besøg forummerne på [Exchange Server,Exchange Online](https://go.microsoft.com/fwlink/p/?linkId=60612) eller[](https://go.microsoft.com/fwlink/p/?linkId=267542) [Exchange Online Protection](https://go.microsoft.com/fwlink/p/?linkId=285351).
 
 ## <a name="how-do-you-do-this"></a>Hvordan gør du det?
 <a name="sectionSection1"> </a>
@@ -64,7 +62,7 @@ Det første trin er at eksportere et TPD (Publishing Domain), der er tillid til,
 
 Når du importerer TPD, gemmes og beskyttes den i Exchange Online.
 
-1. Åbn Active Directory Rights Management-tjenester konsollen, og udvid derefter AD RMS-klyngen.
+1. Åbn Active Directory Rights Management Services-konsollen, og udvid derefter AD RMS-klyngen.
 
 2. Udvid **Tillidspolitikker** i konsoltræet, og klik derefter på **Publiceringsdomæner, der er tillid til**.
 
@@ -86,7 +84,7 @@ Hvis du vil importere TPD, skal du køre følgende kommando i Exchange Online Po
 Import-RMSTrustedPublishingDomain -FileData ([System.IO.File]::ReadAllBytes('<path to exported TPD file>')) -Name "<name of TPD>" -ExtranetLicensingUrl <URL> -IntranetLicensingUrl <URL>
 ```
 
-Du kan hente værdierne for parametrene _ExtranetLicensingUrl_ og _IntranetLicensingUrl_ i Active Directory Rights Management-tjenester-konsollen. Vælg AD RMS-klyngen i konsoltræet. URL-adresserne til licenser vises i resultatruden. Disse URL-adresser bruges af mailklienter, når indhold skal dekrypteres, og når Exchange Online skal afgøre, hvilken TPD der skal bruges.
+Du kan hente værdierne for parametrene _ExtranetLicensingUrl_ og _IntranetLicensingUrl_ i Active Directory Rights Management Services-konsollen. Vælg AD RMS-klyngen i konsoltræet. URL-adresserne til licenser vises i resultatruden. Disse URL-adresser bruges af mailklienter, når indhold skal dekrypteres, og når Exchange Online skal afgøre, hvilken TPD der skal bruges.
 
 Når du kører denne kommando, bliver du bedt om at angive en adgangskode. Angiv den adgangskode, du angav, da du eksporterede TPD fra AD RMS-serveren.
 
@@ -102,7 +100,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Import-RMSTr
 
 Kør **cmdlet'en Get-RMSTrustedPublishingDomain** for at hente TPD'er i din Exchange Online organisation for at kontrollere, at du har importeret TPD'en. Du kan finde flere oplysninger i eksemplerne i [Get-RMSTrustedPublishingDomain](/powershell/module/exchange/get-rmstrustedpublishingdomain).
 
-### <a name="step-3-use-the-exchange-management-shell-to-distribute-an-ad-rms-rights-policy-template"></a>Trin 3: Brug skabelonen Exchange Management Shell til at distribuere en AD RMS-rettighedspolitikskabelon
+### <a name="step-3-use-the-exchange-management-shell-to-distribute-an-ad-rms-rights-policy-template"></a>Trin 3: Brug Exchange Management Shell til at distribuere en SKABELON for AD RMS-rettigheder
 
 Når du har importeret TPD'et, skal du sikre dig, at der distribueres en SKABELON for AD RMS-rettigheder. En distribueret skabelon er synlig for Outlook på internettet brugere (tidligere kaldet Outlook Web App), som derefter kan anvende skabelonerne på en mail.
 

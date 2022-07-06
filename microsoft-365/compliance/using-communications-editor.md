@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: ''
 description: Brug kommunikationseditoren til at ændre variabler for tekst og fletfelter, når du formaterer dit indhold.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: b44f6090f4a8bc9b09bb7934477741effc30ff6e
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 910d25b80775284b8b12d803e722579d987558cd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098400"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636959"
 ---
 # <a name="use-the-communications-editor"></a>Brug kommunikationseditoren
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du definerer indholdet af portalindholdet, meddelelser om juridisk venteposition og relaterede påmindelser/eskaleringer, kan du bruge Kommunikationseditor til at formatere og tilpasse dit indhold dynamisk.
 

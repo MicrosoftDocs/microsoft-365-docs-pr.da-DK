@@ -16,16 +16,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug samlinger i Microsoft Purview eDiscovery (Premium) til at indsamle vedhæftede filer i skyen til gennemsyn i en undersøgelse eller sag.
-ms.openlocfilehash: 4af28744525db52f446bf6d5f1b5de2121111050
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: e59b4720613572763b300517c0b603493ab5a9de
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893201"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636937"
 ---
 # <a name="collect-cloud-attachments-in-microsoft-purview-ediscovery-premium"></a>Indsaml vedhæftede filer i skyen i Microsoft Purview eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Vedhæftede filer i skyen er links til dokumenter, der typisk gemmes på SharePoint-webstedet og OneDrive. Så i stedet for at vedhæfte en faktisk kopi af et dokument i en mail eller en Teams-chatsamtale, har du mulighed for at dele et link til filen. Vedhæftede filer i skyen er en effektiv måde at dele dokumenter og samarbejde med andre i din organisation på. Men vedhæftede filer i skyen udgør udfordringer under eDiscovery-arbejdsprocessen, fordi det kun er linket til vedhæftede filer i skyen og ikke det faktiske indhold i det delte dokument, der returneres i en eDiscovery-søgning. For at løse denne udfordring indeholder eDiscovery (Premium) to løsninger til indsamling af vedhæftede filer i skyen:  
 

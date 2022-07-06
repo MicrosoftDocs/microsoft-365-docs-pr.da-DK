@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 61541cf74640035845ac04889834d12ea6730ad8
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 604938426dfd8818647a5fa7b71069b4527ec877
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530302"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636441"
 ---
 # <a name="protect-your-network"></a>Beskyt dit netværk
 
@@ -144,20 +144,6 @@ En bruger besøger et websted:
 I sin oprindelige form er ransomware en råvaretrussel, forudprogrammeret og fokuseret på begrænsede, specifikke resultater (for eksempel kryptering af en computer). Dog, ransomware har udviklet sig til en sofistikeret trussel, der er menneskeligt drevne, adaptive, og fokuserede på større skala og mere udbredte resultater; som at opbevare en hel organisations aktiver eller data som løsesum.
 
 Understøttelse af kommando- og kontrolservere (C2) er en vigtig del af denne ransomware-udvikling og er det, der gør det muligt for disse angreb at tilpasse sig det miljø, de er målrettet mod. Hvis du afbryder linket til kommando- og kontrolinfrastrukturen, stopper det et angrebs forløb til næste fase.
-
-#### <a name="detecting-and-remediating-cobaltstrike-public-preview"></a>Registrering og afhjælpning af CobaltStrike (offentlig prøveversion)
-
-En af de mest almindelige rammer efter udnyttelse, der bruges i menneskeligt drevne ransomware-angreb, er CobaltStrike. Threat Intelligence-teams på tværs af Microsoft spor _taktik, teknikker og procedurer_ (TTP'er) på flere aktivitetsgrupper, der installerer ransomware for at identificere adfærdsmønstre, der kan bruges til at forsvare sig mod specifikke strategier og trusselsvektorer, der bruges af ondsindede aktører. Disse ransomware aktivitetsgrupper alle, på et tidspunkt i angrebet livscyklus, involverer installation af en CobaltStrike Beacon til et offer computer for at aktivere praktisk tastaturaktivitet.
-
-CobaltStrike muliggør tilpasning af flere aspekter af angrebet, fra evnen til at hoste flere lyttere, der reagerer på forskellige protokoller, til hvordan hovedkomponenten på klientsiden (Beacon) skal udføre kodeinjektion og køre job efter udnyttelse. Når Microsoft Defender registrerer CobaltStrike, kan den på intelligent vis finde og indsamle nøgleindikatorer for kompromis (IoC). Når disse indikatorer er registreret, deles de i Microsofts produktstak med henblik på registrering og beskyttelse.
-
-Defender for Endpoints kommando- og kontrolregistrering er ikke begrænset til CobaltStrike. Defender for Endpoint kan registrere vigtige IoCs for flere malwarefamilier. Indikatorerne deles på tværs af Microsofts beskyttelsesstak for at beskytte kunder og advare dem, hvis der er et kompromis.
-
-Blokering af kommando- og kontrolkommunikation kan hæmme et målrettet angreb alvorligt, hvilket giver dit sikkerhedsteam tid til at finde de indledende indgangsvektorer og lukke dem ned før et andet forsøg på angreb.
-
-<!-- Hide {this intro with no subsequent list items}
-[For additional details about Microsoft Defender's command and control detection, see **ADD LINK TO BLOG**.]
--->
 
 ## <a name="smartscreen-unblock"></a>Fjern blokering af SmartScreen
 

@@ -10,19 +10,17 @@ audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-description: Brug eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business.
-ms.openlocfilehash: cf5c6b61e9b4cc041d9f8e315321c63c78415a63
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Brug eDiscovery-værktøjet til indholdssøgning i Microsoft Purview-compliance-portal til hurtigt at finde mails i Exchange-postkasser, dokumenter på SharePoint-websteder og OneDrive-placeringer og chatsamtaler i Skype for Business.
+ms.openlocfilehash: 42084e764ffaf93f59e0225194db331c2ac952db
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66009425"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637855"
 ---
 # <a name="search-for-content-using-the-content-search-tool"></a>Søg efter indhold ved hjælp af indholdssøgeværktøjet
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Brug indholdssøgeværktøjet på Microsoft Purview-overholdelsesportalen til hurtigt at finde mails i Exchange postkasser, dokumenter på SharePoint websteder og på OneDrive placeringer samt chatsamtaler i Skype for Business. Du kan bruge værktøjet til indholdssøgning til at søge efter mail, dokumenter og chatsamtaler i samarbejdsværktøjer, f.eks. Microsoft Teams og Microsoft 365-grupper.
+Brug søgeværktøjet indhold i Microsoft Purview-compliance-portal til hurtigt at finde mails i Exchange-postkasser, dokumenter på SharePoint-websteder og OneDrive-placeringer og chatsamtaler i Skype for Business. Du kan bruge værktøjet til indholdssøgning til at søge efter mail, dokumenter og chatsamtaler i samarbejdsværktøjer, f.eks. Microsoft Teams og Microsoft 365-grupper.
   
 ## <a name="search-for-content"></a>Søg efter indhold
 
@@ -40,7 +38,7 @@ Det første trin er at begynde at bruge indholdssøgeværktøjet til at vælge i
 
 - [Få vist nøgleordsstatistik](view-keyword-statistics-for-content-search.md) for resultaterne af en søgning, og afgræns derefter forespørgslen, hvis det er nødvendigt
 
-- [Søg efter tredjepartsdata](use-content-search-to-search-third-party-data-that-was-imported.md), som din organisation har importeret til Microsoft 365
+- [Søg efter tredjepartsdata](use-content-search-to-search-third-party-data-that-was-imported.md) , som din organisation har importeret til Microsoft 365
 
 - [Bevar Bcc-modtagere](/exchange/policy-and-compliance/holds/preserve-bcc-recipients-and-group-members) , så du kan søge efter dem
 
@@ -62,7 +60,7 @@ Indholdssøgning er nem at bruge, men det er også et effektivt værktøj. Bag k
 
 - [Anslåede og faktiske søgeresultater](differences-between-estimated-and-actual-ediscovery-search-results.md) og årsagerne til, at der kan være forskelle mellem dem, når du eksporterer og downloader søgeresultater
 
-- [Delvist indekserede elementer i Exchange og SharePoint](partially-indexed-items-in-content-search.md), og hvordan de medtages eller udelades, når du eksporterer og downloader søgeresultater
+- [Delvist indekserede elementer i Exchange og SharePoint](partially-indexed-items-in-content-search.md) , og hvordan de skal medtages eller udelades, når du eksporterer og downloader søgeresultater
 
 - [Undersøg delvist indekserede elementer](investigating-partially-indexed-items-in-ediscovery.md) , og fastlæg din organisations eksponering over for dem
 
@@ -74,7 +72,7 @@ Nogle gange skal du udføre mere avancerede, komplekse og gentagne søgeopgaver 
 
 - [Søg i bestemte postkasser og webstedsmapper](use-content-search-for-targeted-collections.md) (kaldet en  *målrettet* samling), når du er sikker på, at elementer, der svarer til en sag, er placeret i den pågældende mappe
 
-- [Søg i postkassen og OneDrive placering](search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md) efter en liste over brugere
+- [Søg i postkassen og OneDrive-placeringen](search-the-mailbox-and-onedrive-for-business-for-a-list-of-users.md) efter en liste over brugere
 
 - [Opret, rapportér om og slet flere søgninger](create-report-on-and-delete-multiple-content-searches.md) for hurtigt og effektivt at identificere og slette søgedata
 

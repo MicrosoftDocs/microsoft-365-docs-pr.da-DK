@@ -14,98 +14,94 @@ metadata:
   search.appverid:
   - MET150
   ms.assetid: 0432dce9-d9b6-4e73-8a13-4a932eb0081e
-  description: Har du spørgsmål om, hvordan Microsoft Purview Message Encryption fungerer? Se efter et svar her.
+  description: Har du spørgsmål om, hvordan Microsoft Purview-meddelelseskryptering fungerer? Se efter et svar her.
   ms.custom: seo-marvel-apr2020
-  ms.openlocfilehash: 4d365174ff7fa7db71939a10de0a57e50dbd4d46
-  ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+  ms.openlocfilehash: 0c20c671352c62b5c71f6c5369fd89aab99528ae
+  ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 06/13/2022
-  ms.locfileid: "66043025"
+  ms.lasthandoff: 07/06/2022
+  ms.locfileid: "66640582"
 title: Ofte stillede spørgsmål om meddelelseskryptering
-summary: >
-  [!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-
-  Har du et spørgsmål om, hvordan de nye funktioner til beskyttelse af meddelelser fungerer? Se efter et svar her. Se også [Ofte stillede spørgsmål om databeskyttelse i Azure Information Protection](/information-protection/get-started/faqs-rms) for at få svar på spørgsmål om databeskyttelsestjenesten, Azure Rights Management, i Azure Information Protection.
+summary: "\nHar du et spørgsmål om, hvordan de nye funktioner til beskyttelse af meddelelser fungerer? Se efter et svar her. Se også [Ofte stillede spørgsmål om databeskyttelse i Azure Information Protection](/information-protection/get-started/faqs-rms) for at få svar på spørgsmål om databeskyttelsestjenesten, Azure Rights Management, i Azure Information Protection.\n"
 sections:
 - name: Ignoreret
   questions:
-  - question: Hvad er OME (Microsoft Purview Message Encryption)?
-    answer: Microsoft Purview Message Encryption kombinerer funktioner til kryptering af mail og funktioner til administration af rettigheder. Funktioner til administration af rettigheder leveres af Azure Information Protection.
+  - question: Hvad er Microsoft Purview-meddelelseskryptering (OME)?
+    answer: Microsoft Purview-meddelelseskryptering kombinerer funktioner til kryptering af mail og funktioner til administration af rettigheder. Funktioner til administration af rettigheder leveres af Azure Information Protection.
   - question: >
-      Who kan bruge Microsoft Purview Message Encryption?
-    answer: "Du kan bruge Microsoft Purview Message Encryption under følgende betingelser:\n  \n- Hvis du aldrig har konfigureret OME (Office 365 Message Encryption) eller IRM til Exchange Online i Office 365.\n\n- Hvis du har konfigureret OME og IRM, kan du bruge disse trin, hvis du bruger Azure Rights Management-tjenesten fra Azure Information Protection.\n\n- Hvis du bruger Exchange Online med AD RMS (Active Directory Rights Management Service), kan du ikke aktivere disse nye funktioner med det samme. Du skal i stedet [overføre AD RMS til Azure Information Protection](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) først. Når du er færdig med overførslen, kan du konfigurere Microsoft Purview Message Encryption.\n\n  Hvis du vælger at fortsætte med at bruge AD RMS i det lokale miljø med Exchange Online i stedet for at overføre til Azure Information Protection, kan du ikke bruge Microsoft Purview Message Encryption.\n"
+      Hvem kan bruge Microsoft Purview-meddelelseskryptering?
+    answer: "Du kan bruge Microsoft Purview-meddelelseskryptering under følgende betingelser:\n  \n- Hvis du aldrig har konfigureret OME (Office 365 Message Encryption) eller IRM til Exchange Online i Office 365.\n\n- Hvis du har konfigureret OME og IRM, kan du bruge disse trin, hvis du bruger tjenesten Azure Rights Management fra Azure Information Protection.\n\n- Hvis du bruger Exchange Online med AD RMS (Active Directory Rights Management Service), kan du ikke aktivere disse nye funktioner med det samme. Du skal i stedet [overføre AD RMS til Azure Information Protection](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) først. Når du er færdig med overførslen, kan du konfigurere Microsoft Purview-meddelelseskryptering.\n\n  Hvis du vælger at fortsætte med at bruge AD RMS i det lokale miljø med Exchange Online i stedet for at overføre til Azure Information Protection, kan du ikke bruge Microsoft Purview-meddelelseskryptering.\n"
   - question: >
-      Hvilke abonnementer skal jeg bruge for at bruge Microsoft Purview Message Encryption?
+      Hvilke abonnementer skal jeg bruge for at bruge Microsoft Purview-meddelelseskryptering?
     answer: >
-      Hvis du vil bruge Microsoft Purview Message Encryption, skal du bruge en af følgende planer:
+      Hvis du vil bruge Microsoft Purview-meddelelseskryptering, skal du bruge en af følgende planer:
 
 
-      - Microsoft Purview Message Encryption tilbydes som en del af Office 365 Enterprise E3 og E5, Microsoft 365 Enterprise E3 og E5, Microsoft 365 Business Premium, Office 365 A1, A3 og A5 og Office 365 Government G3 og G5. Du behøver ikke yderligere licenser for at modtage de nye beskyttelsesfunktioner, der leveres af Azure Information Protection.
+      - Microsoft Purview-meddelelseskryptering tilbydes som en del af Office 365 Enterprise E3 og E5, Microsoft 365 Enterprise E3 og E5, Microsoft 365 Business Premium, Office 365 A1, A3 og A5 samt Office 365 Government G3 og G5. Du behøver ikke yderligere licenser for at modtage de nye beskyttelsesfunktioner, der leveres af Azure Information Protection.
 
 
-      - Du kan også føje Azure Information Protection Plan 1 til følgende planer for at modtage Microsoft Purview Message Encryption: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F3, Microsoft 365 Business Basic, Microsoft 365 Business Standard eller Office 365 Enterprise E1.
+      - Du kan også føje Azure Information Protection Plan 1 til følgende planer for at modtage Microsoft Purview-meddelelseskryptering: Exchange Online Plan 1, Exchange Online Plan 2, Office 365 F3, Microsoft 365 Business Basic, Microsoft 365 Business Standard eller Office 365 Enterprise E1.
 
 
-      - Hver bruger, der drager fordel af Microsoft Purview Message Encryption, skal have licens for at være omfattet af funktionen.
+      - Hver bruger, der nyder godt af Microsoft Purview-meddelelseskryptering, skal have licens for at være omfattet af funktionen.
 
 
-      - Du kan se den komplette liste under [Exchange Online tjenestebeskrivelser](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) til Microsoft Purview Message Encryption.
+      - Du kan se en komplet liste under [Exchange Online tjenestebeskrivelser](/office365/servicedescriptions/exchange-online-service-description/exchange-online-service-description) for Microsoft Purview-meddelelseskryptering.
   - question: >
       Kan jeg bruge Exchange Online med BYOK (Bring Your Own Key) i Azure Information Protection?
-    answer: "Ja! Microsoft anbefaler, at du fuldfører trinnene til konfiguration af BYOK, før du konfigurerer Microsoft Purview Message Encryption.\n  \nDu kan få flere oplysninger om BYOK under [Planlægning og implementering af din Azure Information Protection-lejernøgle](/information-protection/plan-design/plan-implement-tenant-key).\n  \n"
+    answer: "Ja! Microsoft anbefaler, at du fuldfører trinnene til konfiguration af BYOK, før du konfigurerer Microsoft Purview-meddelelseskryptering.\n  \nDu kan få flere oplysninger om BYOK under [Planlægning og implementering af din Azure Information Protection-lejernøgle](/information-protection/plan-design/plan-implement-tenant-key).\n  \n"
   - question: >
-      Ændrer Microsoft Purview Message Encryption og BYOK med Azure Information Protection Microsofts tilgang til dataanmodninger fra tredjepart, f.eks. stævninger?
-    answer: "Nej. Microsoft Purview Message Encryption og muligheden for at levere og styre dine egne krypteringsnøgler, kaldet BYOK, fra Azure Information Protection var ikke designet til at svare på stævninger fra de retshåndhævende myndigheder. OME med BYOK til Azure Information Protection er udviklet til organisationer med fokus på overholdelse af angivne standarder. Microsoft tager tredjepartsanmodninger om kundedata alvorligt. Som cloudtjenesteudbyder er vi altid fortalere for beskyttelse af dine data. I tilfælde af at vi får en stævning, forsøger vi altid at omdirigere tredjeparten direkte til dig for at få oplysningerne. (Læs Brad Smiths blog: [Beskyttelse af kundedata mod offentlige snooping](https://blogs.microsoft.com/blog/2013/12/04/protecting-customer-data-from-government-snooping/)). Vi publicerer jævnligt detaljerede oplysninger om den anmodning, vi modtager. Du kan få flere oplysninger om dataanmodninger fra tredjepart under [Besvarelse af anmodninger fra offentlige myndigheder og retshåndhævende myndigheder om adgang til kundedata](https://www.microsoft.com/trustcenter/privacy/govt-requests-for-data) i Microsoft Center for sikkerhed og rettighedsadministration. Se også \"Offentliggørelse af kundedata\" i [Vilkår for onlinetjenester (OST)](https://www.microsoft.com/Licensing/product-licensing/products.aspx).\n  \n"
+      Ændrer Microsoft Purview-meddelelseskryptering og BYOK med Azure Information Protection Microsofts tilgang til dataanmodninger fra tredjepart, f.eks. stævninger?
+    answer: "Nej. Microsoft Purview-meddelelseskryptering og muligheden for at levere og styre dine egne krypteringsnøgler, kaldet BYOK, fra Azure Information Protection var ikke designet til at svare på stævninger fra de retshåndhævende myndigheder. OME med BYOK til Azure Information Protection er udviklet til organisationer med fokus på overholdelse af angivne standarder. Microsoft tager tredjepartsanmodninger om kundedata alvorligt. Som cloudtjenesteudbyder er vi altid fortalere for beskyttelse af dine data. I tilfælde af at vi får en stævning, forsøger vi altid at omdirigere tredjeparten direkte til dig for at få oplysningerne. (Læs Brad Smiths blog: [Beskyttelse af kundedata mod offentlige snooping](https://blogs.microsoft.com/blog/2013/12/04/protecting-customer-data-from-government-snooping/)). Vi publicerer jævnligt detaljerede oplysninger om den anmodning, vi modtager. Du kan få flere oplysninger om dataanmodninger fra tredjepart under [Besvarelse af anmodninger fra offentlige myndigheder og retshåndhævende myndigheder om adgang til kundedata](https://www.microsoft.com/trustcenter/privacy/govt-requests-for-data) i Microsoft Center for sikkerhed og rettighedsadministration. Se også \"Offentliggørelse af kundedata\" i [Vilkår for onlinetjenester (OST)](https://www.microsoft.com/Licensing/product-licensing/products.aspx).\n  \n"
   - question: >
-      Hvordan er denne funktion relateret til ældre funktioner Office 365 OME (Message Encryption) og IRM-funktioner (Information Rights Management)?
-    answer: "Microsoft Purview Message Encryption er en udvikling af de eksisterende IRM- og ældre OME-løsninger. Følgende tabel indeholder flere oplysninger.\n  \n**Sammenligning af ældre OME, IRM og Microsoft Purview Message Encryption**\n\n| Kapacitet | Tidligere versioner af OME | IRM | Microsoft Purview-meddelelsekryptering |\n|:-----|:-----|:-----|:-----|\n|**Sender en krypteret mail**|Kun via regler for Exchange mailflow|Slutbrugeren startede fra Outlook for Windows, Outlook til Mac eller Outlook på internettet eller via Exchange regler for mailflow|Slutbrugeren startede fra Outlook for Windows, Outlook til Mac eller Outlook på internettet eller via regler for mailflow|\n|**Rights Management**|-|Indstillingen Videresend ikke og brugerdefinerede skabeloner|Indstillingen Videresend ikke, indstillingen Kun krypteret, standardskabeloner og brugerdefinerede skabeloner|\n|**Understøttet modtagertype**|Kun eksterne modtagere|Kun interne modtagere|Interne og eksterne modtagere|\n|**Oplevelse for modtageren**|Eksterne modtagere modtog en HTML-meddelelse om, at de har downloadet og åbnet i en browser eller en downloadet mobilapp.|Interne modtagere har kun modtaget krypteret mail i Outlook for Windows, Outlook til Mac og Outlook på internettet.|Interne og eksterne modtagere modtager mail i Outlook til Windows, Outlook til Mac, Outlook på internettet, Outlook til Android og Outlook til iOS eller via en webportal, uanset om de er i samme organisation eller i en hvilken som helst Organisation. OME-portalen kræver ingen separat download.|\n|**Medbring din egen nøglesupport**|Ikke tilgængelig|Ikke tilgængelig| BYOK understøttes|\n"
+      Hvordan er denne funktion relateret til ældre funktioner Office 365 OME (Message Encryption) og IRM (Information Rights Management)?
+    answer: "Microsoft Purview-meddelelseskryptering er en udvikling af de eksisterende IRM- og ældre OME-løsninger. Følgende tabel indeholder flere oplysninger.\n  \n**Sammenligning af ældre OME, IRM og Microsoft Purview-meddelelseskryptering**\n\n| Kapacitet | Tidligere versioner af OME | IRM | Microsoft Purview-meddelelseskryptering |\n|:-----|:-----|:-----|:-----|\n|**Sender en krypteret mail**|Kun via regler for Exchange-mailflow|Slutbrugeren startede fra Outlook til Windows, Outlook til Mac eller Outlook på internettet eller via exchange-regler for mailflow|Slutbruger startet fra Outlook til Windows, Outlook til Mac eller Outlook på internettet eller via regler for mailflow|\n|**Rights Management**|-|Indstillingen Videresend ikke og brugerdefinerede skabeloner|Indstillingen Videresend ikke, indstillingen Kun krypteret, standardskabeloner og brugerdefinerede skabeloner|\n|**Understøttet modtagertype**|Kun eksterne modtagere|Kun interne modtagere|Interne og eksterne modtagere|\n|**Oplevelse for modtageren**|Eksterne modtagere modtog en HTML-meddelelse om, at de har downloadet og åbnet i en browser eller en downloadet mobilapp.|Interne modtagere modtog kun krypteret mail i Outlook til Windows, Outlook til Mac og Outlook på internettet.|Interne og eksterne modtagere modtager mail i Outlook til Windows, Outlook til Mac, Outlook på internettet, Outlook til Android og Outlook til iOS eller via en webportal, uanset om de er i samme organisation eller en hvilken som helst organisation. OME-portalen kræver ingen separat download.|\n|**Medbring din egen nøglesupport**|Ikke tilgængelig|Ikke tilgængelig| BYOK understøttes|\n"
   - question: >
-      Hvordan gør jeg aktivere Microsoft Purview Message Encryption for min organisation?
-    answer: "Se [Konfigurer Microsoft Purview-meddelelsekryptering](set-up-new-message-encryption-capabilities.md).\n  \n"
+      Hvordan gør jeg aktivere Microsoft Purview-meddelelseskryptering for min organisation?
+    answer: "Se [Konfigurer Microsoft Purview-meddelelseskryptering](set-up-new-message-encryption-capabilities.md).\n  \n"
   - question: >
       Frarådes den tidligere version af OME?
     answer: >
       Du kan stadig bruge den tidligere version af OME. Den frarådes ikke på nuværende tidspunkt. Vi opfordrer dog kraftigt organisationer til at bruge den nye og forbedrede løsning til kryptering af meddelelser. Hvis du ikke allerede har installeret OME, kan du ikke konfigurere en ny installation af den tidligere version af OME.
   - question: >
-      Min organisation bruger Active Directory-Rights Management. Kan jeg bruge denne funktionalitet?
+      Min organisation bruger Active Directory Rights Management. Kan jeg bruge denne funktion?
     answer: "Nej. Hvis du bruger Exchange Online med AD RMS (Active Directory Rights Management Service), kan du ikke aktivere disse nye funktioner med det samme. Du skal i stedet [overføre AD RMS til Azure Information Protection](/information-protection/plan-design/migrate-from-ad-rms-to-azure-rms) først.\n  \n"
   - question: >
-      Min organisation har en Exchange Hybrid-udrulning. Kan jeg bruge denne funktion?
-    answer: "Brugere i det lokale miljø kan sende krypteret mail ved hjælp af Exchange Online regler for mailflow. For at gøre dette skal du distribuere mail via Exchange Online. Du kan få flere oplysninger under [Del 2: Konfigurer mail til at blive sendt fra din mailserver til Microsoft 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365).\n  \n"
+      Min organisation har en Exchange Hybrid-installation. Kan jeg bruge denne funktion?
+    answer: "Brugere i det lokale miljø kan sende krypteret mail ved hjælp af Exchange Online regler for mailflow. For at gøre dette skal du distribuere mail via Exchange Online. Du kan få flere oplysninger i [Del 2: Konfigurer mail til at blive sendt fra din mailserver til Microsoft 365](/exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail#part-2-configure-mail-to-flow-from-your-email-server-to-office-365).\n  \n"
   - question: >
       Hvilken mailklient skal jeg bruge for at oprette en krypteret meddelelse? Hvilke programmer understøttes til afsendelse af beskyttede meddelelser?
-    answer: "Du kan oprette beskyttede meddelelser fra Outlook 2016, Outlook 2013 til Windows og Mac og fra Outlook på internettet. Du kan få flere oplysninger om, hvordan du sender krypterede meddelelser, [under Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980?ui=en-us&rs=en-us&ad=us).\n  \n"
+    answer: "Du kan oprette beskyttede meddelelser fra Outlook 2016, Outlook 2013 til Windows og Mac og fra Outlook på internettet. Du kan få flere oplysninger om, hvordan du sender krypterede meddelelser, under [Send, få vist og besvar krypterede meddelelser i Outlook til pc](https://support.microsoft.com/office/send-view-and-reply-to-encrypted-messages-in-outlook-for-pc-eaa43495-9bbb-4fca-922a-df90dee51980?ui=en-us&rs=en-us&ad=us).\n  \n"
   - question: >
       Hvilke mailklienter understøttes til at læse og besvare beskyttede mails?
     answer: >
-      Microsoft 365 brugere kan læse og svare fra Outlook til Windows og Mac (2013 og 2016), Outlook på internettet og Outlook mobil (Android og iOS). Du kan også bruge den oprindelige iOS-mailklient, hvis din organisation tillader det. Hvis du ikke er en Microsoft 365 bruger, kan du læse og besvare krypterede meddelelser på internettet via din webbrowser.
+      Microsoft 365-brugere kan læse og svare fra Outlook til Windows og Mac (2013 og 2016), Outlook på internettet og Outlook Mobile (Android og iOS). Du kan også bruge den oprindelige iOS-mailklient, hvis din organisation tillader det. Hvis du ikke er Microsoft 365-bruger, kan du læse og besvare krypterede meddelelser på internettet via din webbrowser.
   - question: >
       Hvilke mailklienter understøtter krypterede beskyttede mails?
     answer: >
-      Microsoft 365 brugere kan bruge Outlook til pc-version 2019 og Microsoft 365 til at oprette mails, der er beskyttet med politikken kun krypteret.  Det betyder, at meddelelser, hvor den nye politik kun krypteres, kan læses direkte i Outlook på internettet, i Outlook til iOS og Android og nu Outlook til pc-version 2019 og Microsoft 365.
+      Microsoft 365-brugere kan bruge Outlook til pc-versionerne 2019 og Microsoft 365 til at oprette mails, der er beskyttet med politikken kun krypteret.  Det betyder, at meddelelser, hvor den nye politik kun er krypteret, kan læses direkte i Outlook på internettet, i Outlook til iOS og Android og nu Outlook til pc version 2019 og Microsoft 365.
   - question: >
       Er der en størrelsesgrænse for meddelelser, du kan sende med OME?
     answer: >
-      Ja. Den maksimale meddelelsesstørrelse, du kan sende med Microsoft Purview Message Encryption, herunder vedhæftede filer, er 25 MB. Du kan få flere oplysninger under [Meddelelsesgrænser](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits-1).
+      Ja. Den maksimale meddelelsesstørrelse, du kan sende med Microsoft Purview-meddelelseskryptering, herunder vedhæftede filer, er 25 MB. Du kan få flere oplysninger under [Meddelelsesgrænser](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#message-limits-1).
   - question: >
       Hvilken type meddelelser understøtter OME-portalen?
     answer: >
       OME-portalen understøtter kun post. Portalen understøtter ikke andre meddelelsestyper, f.eks. kalender eller talebeskeder.
   - question: >
       Hvilke filtyper understøttes som vedhæftede filer i beskyttede mails? Arver vedhæftede filer de beskyttelsespolitikker, der er knyttet til beskyttede mails?
-    answer: "Du kan vedhæfte en hvilken som helst filtype til en beskyttet mail. Med én undtagelse anvendes beskyttelsespolitikker kun på de filformater, der er nævnt i [Filtyper, der understøttes af Azure Information Protection-klienten](/information-protection/rms-client/client-admin-guide-file-types). Microsoft Purview Message Encryption understøtter ikke 97-2003-versioner af følgende Office programmer: Word (.doc), Excel (.xls) og PowerPoint (.ppt).\n\nHvis et filformat understøttes, f.eks. en Word-, Excel- eller PowerPoint-fil, er filen altid beskyttet, også selvom den vedhæftede fil er hentet af modtageren. Lad os f.eks. sige, at en vedhæftet fil er beskyttet af Videresend ikke. Den oprindelige modtager downloader filen, opretter en meddelelse til en ny modtager og vedhæfter filen. Når den nye modtager modtager filen, kan modtageren ikke åbne den beskyttede fil.\n  \n"
+    answer: "Du kan vedhæfte en hvilken som helst filtype til en beskyttet mail. Med én undtagelse anvendes beskyttelsespolitikker kun på de filformater, der er nævnt i [Filtyper, der understøttes af Azure Information Protection-klienten](/information-protection/rms-client/client-admin-guide-file-types). Microsoft Purview-meddelelseskryptering understøtter ikke 97-2003-versioner af følgende Office-programmer: Word (.doc), Excel (.xls) og PowerPoint (.ppt).\n\nHvis et filformat understøttes, f.eks. en Word-, Excel- eller PowerPoint-fil, er filen altid beskyttet, selvom den vedhæftede fil er blevet downloadet af modtageren. Lad os f.eks. sige, at en vedhæftet fil er beskyttet af Videresend ikke. Den oprindelige modtager downloader filen, opretter en meddelelse til en ny modtager og vedhæfter filen. Når den nye modtager modtager filen, kan modtageren ikke åbne den beskyttede fil.\n  \n"
   - question: >
       Understøttes vedhæftede PDF-filer?
     answer: >
-      Det korte svar er ja! Hvis indstillingen er aktiveret, giver PDF-kryptering dig mulighed for at beskytte følsomme PDF-dokumenter via sikker kommunikation eller sikkert samarbejde. Når du sender en mail, krypterer tjenesten Office 365 vedhæftede filer i PDF. Den Outlook klient krypterer ikke vedhæftede PDF-filer.
+      Det korte svar er ja! Hvis indstillingen er aktiveret, giver PDF-kryptering dig mulighed for at beskytte følsomme PDF-dokumenter via sikker kommunikation eller sikkert samarbejde. Når du sender en mail, krypterer tjenesten Office 365 vedhæftede filer i PDF. Outlook-klienten krypterer ikke vedhæftede PDF-filer.
 
 
       For Outlook på internettet, Outlook til iOS og Outlook til Android kan du kryptere PDF-filer, du sender, uden flere trin. Disse klienter understøtter oprindeligt PDF-kryptering.
 
 
-      Outlook desktop understøtter ikke kryptering af vedhæftede PDF-filer oprindeligt. Du skal i stedet konfigurere Exchange regler for mailflow eller DLP for først at anvende kryptering på vedhæftede PDF-filer. Når du sender en mail fra Outlook Desktop med en vedhæftet PDF-fil, sender klienten først meddelelsen med den vedhæftede fil til tjenesten. Når tjenesten modtager filen, anvender tjenesten Beskyttelse af Microsoft Purview Message Encryption for politikken til forebyggelse af datatab (DLP) eller mailflowreglen i Exchange Online. Derefter sender Exchange Online meddelelsen med den beskyttede vedhæftede PDF-fil.
+      Outlook Desktop understøtter ikke kryptering af vedhæftede PDF-filer oprindeligt. Du skal i stedet konfigurere regler for Exchange-mailflow eller DLP for først at anvende kryptering på vedhæftede PDF-filer. Når du sender en mail fra Outlook Desktop med en vedhæftet PDF-fil, sender klienten først meddelelsen med den vedhæftede fil til tjenesten. Når tjenesten modtager filen, anvender tjenesten Microsoft Purview-meddelelseskryptering beskyttelse af politikken til forebyggelse af datatab (DLP) eller reglen for mailflow i Exchange Online. Derefter sender Exchange Online meddelelsen med den beskyttede vedhæftede PDF-fil.
 
 
       Hvis du vil aktivere kryptering af vedhæftede PDF-filer, skal du køre følgende kommando i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
@@ -118,19 +114,19 @@ sections:
       ```
 
 
-      PDF-kryptering giver dig mulighed for at beskytte følsomme PDF-dokumenter via sikker kommunikation eller sikkert samarbejde. For alle Outlook klienter nedarver meddelelser og ubeskyttede vedhæftede PDF-filer Microsoft Purview Message Encryption-beskyttelsen af politikken til forebyggelse af datatab (DLP) eller reglen for mailflow i Exchange Online. Hvis en Outlook på internettet bruger vedhæfter et ubeskyttet PDF-dokument og anvender beskyttelse på meddelelse, arver meddelelsen desuden beskyttelsen af meddelelsen. Brugerne kan kun åbne de krypterede vedhæftede filer i programmer, der understøtter beskyttede PDF-filer (f.eks. OME-portalen og Azure Information Protection Viewer).
+      PDF-kryptering giver dig mulighed for at beskytte følsomme PDF-dokumenter via sikker kommunikation eller sikkert samarbejde. For alle Outlook-klienter arver meddelelser og ubeskyttede vedhæftede PDF-filer Microsoft Purview-meddelelseskryptering beskyttelse af politikken til forebyggelse af datatab (DLP) eller reglen for mailflow i Exchange Online. Hvis en Outlook på internettet bruger vedhæfter et ubeskyttet PDF-dokument og anvender beskyttelse på meddelelse, arver meddelelsen desuden beskyttelsen af meddelelsen. Brugerne kan kun åbne de krypterede vedhæftede filer i programmer, der understøtter beskyttede PDF-filer (f.eks. OME-portalen og Azure Information Protection Viewer).
 
 
       > [!IMPORTANT]
 
-      > Outlook desktopklient understøtter ikke PDF-kryptering.
+      > Outlook Desktop-klienten understøtter ikke PDF-kryptering.
   - question: >
-      Understøttes SharePoint Online eller OneDrive for Business vedhæftede filer?
+      Understøttes vedhæftede filer i SharePoint Online eller OneDrive for Business?
     answer: >
-      Ikke endnu. SharePoint Online eller OneDrive for Business vedhæftede filer understøttes ikke, og slutbrugerne kan kryptere en mail, men ikke de vedhæftede filer i skyen.
+      Ikke endnu. Vedhæftede filer i SharePoint Online eller OneDrive for Business understøttes ikke, og slutbrugerne kan kryptere en mail, men ikke de vedhæftede filer i skyen.
   - question: >
       Hvilke mailklienter understøtter eksempelvisning af krypterede vedhæftede filer i beskyttede mails?
-    answer: "Når vedhæftede filer er beskyttet med en beskyttet post, giver Outlook klienter mulighed for at få vist dokumentet direkte. Outlook understøtter eksempelvisning af Office dokumenter (docx, xlsx, pptx, doc, xls, ppt). Outlook på internettet understøtter eksempelvisning af Office dokumenter (docx, xlsx, pptx) og PDF.  \n"
+    answer: "Når vedhæftede filer er beskyttet med en beskyttet post, giver Outlook-klienter mulighed for at få vist dokumentet direkte. Outlook understøtter eksempelvisning af Office-dokumenter (docx, xlsx, pptx, doc, xls, ppt). Outlook på internettet understøtter prøveversion af Office-dokumenter (docx, xlsx, pptx) og PDF.  \n"
   - question: >
       Hvilke mailklienter understøtter tilbagekaldelse af beskyttede mails?
     answer: >
@@ -146,9 +142,9 @@ sections:
     answer: >
       Administratorer kan konfigurere en regel for mailflow for at fjerne kryptering for udgående mails. Du kan kun konfigurere en regel for at fjerne kryptering for indgående mails, der stammer fra din organisation.
   - question: >
-      Kan jeg kryptere meddelelser automatisk ved at konfigurere politikker i DLP (Forebyggelse af datatab) via Microsoft Purview-overholdelsesportalen?
+      Kan jeg kryptere meddelelser automatisk ved at konfigurere politikker i DLP (Forebyggelse af datatab) via Microsoft Purview-compliance-portal?
     answer: >
-      Ja! Du kan konfigurere regler for mailflow i Exchange Online eller ved hjælp af DLP på Microsoft Purview-overholdelsesportalen.
+      Ja! Du kan konfigurere regler for mailflow i Exchange Online eller ved hjælp af DLP i Microsoft Purview-compliance-portal.
   - question: >
       Kan jeg tilpasse krypterede meddelelser med firmabranding?
     answer: "Ja, for mails, der er sendt fra en Exchange Online postkasse i din organisation! Du kan få oplysninger om tilpasning af mails og OME-portalen under [Føj organisationens brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md).\n  \n"
@@ -158,7 +154,7 @@ sections:
   - question: >
       Kan jeg bruge meddelelseskryptering med funktioner til overholdelse af angivne standarder, f.eks. eDiscovery?
     answer: >
-      Ja, de fleste meddelelser, der er beskyttet af Microsoft Purview Message Encryption, kan findes. Microsoft Purview Message Encryption-beskyttede mails, som du modtager fra en anden Microsoft 365 organisation, som har brugerdefineret branding anvendt via en regel i et mailflow, kan ikke findes af din eDiscovery-tjeneste. Med andre ord, hvis mailen ikke er tilgængelig via brugerens postkasse, men kun vises via et link til OME-portalen, kan der ikke søges i mailen. Se [eDiscovery-aktiviteter, der understøtter krypterede elementer](/microsoft-365/compliance/ediscovery-decryption#ediscovery-activities-that-support-encrypted-items) , for at få flere oplysninger.
+      Ja, de fleste meddelelser, der er beskyttet af Microsoft Purview-meddelelseskryptering, kan findes. Microsoft Purview-meddelelseskryptering beskyttede mails, du modtager fra en anden Microsoft 365-organisation, som har brugerdefineret branding anvendt via en regel for mailflow, kan ikke findes af din eDiscovery-tjeneste. Med andre ord, hvis mailen ikke er tilgængelig via brugerens postkasse, men kun vises via et link til OME-portalen, kan der ikke søges i mailen. Se [eDiscovery-aktiviteter, der understøtter krypterede elementer](/microsoft-365/compliance/ediscovery-decryption#ediscovery-activities-that-support-encrypted-items) , for at få flere oplysninger.
   - question: >
       Kan jeg fjerne kryptering fra mail?
     answer: >
@@ -170,7 +166,7 @@ sections:
   - question: >
       Kan jeg åbne krypterede meddelelser, der sendes til en delt postkasse?
     answer: >
-      Ja! Du kan åbne krypterede meddelelser for en delt postkasse, når du er logget på en understøttet Outlook klient.
+      Ja! Du kan åbne krypterede meddelelser for en delt postkasse, når du er logget på en understøttet Outlook-klient.
 
 
       - Brugerne kan åbne beskyttede mails i en delt postkasse, hvor den delte postkasse har modtaget en beskyttet mail som en del af en distributionsgruppe.
@@ -199,13 +195,13 @@ sections:
 
       > [!NOTE]
 
-      > Android og iOS ville bruge Office-mobilappen til at få vist de krypterede vedhæftede filer og ikke direkte i Outlook mobil.
+      > Android og iOS ville bruge Office-mobilappen til at få vist de krypterede vedhæftede filer og ikke direkte i Outlook Mobile.
 
 
       Der er i øjeblikket to kendte begrænsninger:
 
 
-      - Du kan ikke åbne vedhæftede filer i mails, som du modtager på mobilenheder, ved hjælp af Outlook mobil.
+      - Du kan ikke åbne vedhæftede filer i mails, som du modtager på mobilenheder ved hjælp af Outlook Mobile.
 
 
       - I Outlook Win32 får brugere, der er tildelt en delt postkasse via en mailaktiveret sikkerhedsgruppe, vist en meddelelsesmail for at få vist den krypterede mail ved hjælp af en webbrowser.  Hvis du vil have vist den krypterede mail direkte i Outlook Win32, kræver Outlook og Azure Information Protection unified labeling-klienter, at brugeren tildeles direkte til den delte postkasse med fuld adgangstilladelser og automatisk konfiguration aktiveret. Automapping er som standard aktiveret for Exchange Online.
@@ -214,7 +210,7 @@ sections:
       **Sådan tildeler du en bruger til den delte postkasse**
 
 
-      1. [Forbind til Exchange Online PowerShell.aspx](/powershell/exchange/connect-to-exchange-online-powershell?v=exchg.150)).
+      1. [Opret forbindelse til Exchange Online PowerShell.aspx](/powershell/exchange/connect-to-exchange-online-powershell?v=exchg.150)).
 
 
       2. Kør Add-MailboxPermission-cmdlet'en med parameteren Automapping. I dette eksempel får Ayla fuld adgangstilladelse til en supportpostkasse.

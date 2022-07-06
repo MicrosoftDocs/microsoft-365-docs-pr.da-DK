@@ -19,24 +19,22 @@ search.appverid:
 ms.assetid: 1d463dda-a3b5-4675-95d4-83db19c9c4a3
 description: Få mere at vide om, hvordan du automatiserer opgaver til indholdssøgning, f.eks. oprettelse af søgninger og kørsel af rapporter ved hjælp af PowerShell til sikkerhed & overholdelse af angivne standarder.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 50d0a66957e4bdca1e39cb42c837aa0f992bad98
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: be456c737188f02cfad245d4a1dc4661f2c611a5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018069"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638582"
 ---
 # <a name="create-report-on-and-delete-multiple-content-searches"></a>Opret, rapportér om og slet flere indholdssøgninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
  Hurtig oprettelse og rapportering af registreringssøgninger er ofte et vigtigt skridt i eDiscovery og undersøgelser, når du forsøger at få mere at vide om de underliggende data og dine søgningers rigdom og kvalitet. For at hjælpe dig med at gøre dette tilbyder PowerShell & overholdelse af angivne standarder et sæt cmdlet'er, der kan automatisere tidskrævende opgaver i forbindelse med indholdssøgning. Disse scripts giver en hurtig og nem måde at oprette en række søgninger på og derefter køre rapporter over de anslåede søgeresultater, der kan hjælpe dig med at bestemme mængden af pågældende data. Du kan også bruge scripts til at oprette forskellige versioner af søgninger for at sammenligne de resultater, som hver enkelt producerer. Disse scripts kan hjælpe dig med hurtigt og effektivt at identificere og slagte dine data.
 
 ## <a name="before-you-create-a-content-search"></a>Før du opretter en indholdssøgning
 
-- Du skal være medlem af rollegruppen eDiscovery Manager på Microsoft Purview-overholdelsesportalen for at køre de scripts, der er beskrevet i dette emne.
+- Du skal være medlem af rollegruppen eDiscovery Manager i Microsoft Purview-compliance-portal for at køre de scripts, der er beskrevet i dette emne.
 
-- Hvis du vil indsamle en liste over URL-adresserne for de OneDrive for Business websteder i din organisation, som du kan føje til CSV-filen i Trin 1, skal du se [Opret en liste over alle OneDrive placeringer i din organisation](/onedrive/list-onedrive-urls).
+- Hvis du vil indsamle en liste over URL-adresserne for de OneDrive for Business websteder i din organisation, som du kan føje til CSV-filen i Trin 1, skal du se [Opret en liste over alle OneDrive-placeringer i din organisation](/onedrive/list-onedrive-urls).
 
 - Sørg for at gemme alle de filer, du opretter i dette emne, i den samme mappe. Det vil gøre det nemmere at køre scripts.
 
@@ -71,15 +69,15 @@ Den fil med kommaseparerede værdier (CSV), som du opretter i dette trin, indeho
    |`ExchangeLocation`|SMTP-adressen på brugerens postkasse.|
    |`SharePointLocation`|URL-adressen for brugerens OneDrive for Business websted eller URL-adressen for et hvilket som helst websted i din organisation. Til URL-adressen til OneDrive for Business websteder skal du bruge dette format: ` https://<your organization>-my.sharepoint.com/personal/<user alias>_<your organization>_onmicrosoft_com `. For eksempel  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft_com`.|
    |`ContentMatchQuery`|Søgeforespørgslen for søgningen. Du kan finde flere oplysninger om oprettelse af en søgeforespørgsel under [Nøgleordsforespørgsler og søgebetingelser for indholdssøgning](keyword-queries-and-search-conditions.md).|
-   |`StartDate`|I forbindelse med mail er datoen på eller efter, at en meddelelse blev modtaget af en modtager eller sendt af afsenderen. For dokumenter på SharePoint eller OneDrive for Business websteder, datoen på eller efter, at et dokument sidst blev ændret.|
-   |`EndDate`|I forbindelse med mail er datoen på eller før en meddelelse sendt af brugeren. For dokumenter på SharePoint eller OneDrive for Business websteder, datoen på eller før et dokument sidst blev ændret.|
+   |`StartDate`|I forbindelse med mail er datoen på eller efter, at en meddelelse blev modtaget af en modtager eller sendt af afsenderen. For dokumenter på SharePoint- eller OneDrive for Business-websteder er datoen på eller efter, at et dokument sidst blev ændret.|
+   |`EndDate`|I forbindelse med mail er datoen på eller før en meddelelse sendt af brugeren. For dokumenter på SharePoint- eller OneDrive for Business-websteder, datoen på eller før et dokument sidst blev ændret.|
    |
 
 3. Gem Excel-filen som en CSV-fil i en mappe på din lokale computer. Det script, du opretter i trin 3, bruger oplysningerne i denne CSV-fil til at oprette søgninger.
 
-## <a name="step-2-connect-to-security--compliance-powershell"></a>Trin 2: Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder
+## <a name="step-2-connect-to-security--compliance-powershell"></a>Trin 2: Opret forbindelse til PowerShell til & overholdelse af angivne standarder
 
-Det næste trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Forbind til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
+Det næste trin er at oprette forbindelse til Security & Compliance PowerShell for din organisation. Du kan finde en trinvis vejledning under [Opret forbindelse til sikkerhed & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 ## <a name="step-3-run-the-script-to-create-and-start-the-searches"></a>Trin 3: Kør scriptet for at oprette og starte søgninger
 

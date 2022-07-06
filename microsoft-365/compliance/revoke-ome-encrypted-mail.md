@@ -16,33 +16,31 @@ ms.collection:
 search.appverid:
 - MET150
 description: Som administrator og som afsender af en meddelelse kan du tilbagekalde visse mails, der er krypteret med avanceret meddelelseskryptering i Microsoft Purview.
-ms.openlocfilehash: 79d09c13755c0c73e4d68598e83ac41344b9281a
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: b27ea41d1d91b825450d39ade96afdef04c0fdea
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187937"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639418"
 ---
 # <a name="revoke-email-encrypted-by-advanced-message-encryption"></a>Tilbagekald mail, der er krypteret af avanceret meddelelseskryptering
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Tilbagekaldelse af mail tilbydes som en del af avanceret meddelelseskryptering i Microsoft Purview. Microsoft Purview Advanced Message Encryption er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (prisfastsættelse for personale til nonprofitorganisationer), Office 365 Enterprise E5 (priser på personale til nonprofitorganisationer) og Office 365 Education A5. Hvis du vil bruge funktionerne til tilbagekaldelse og udløb af avanceret meddelelseskryptering, skal du aktivere indstillingen **Premium Kryptering i Office 365** i din E5-licens.
+Tilbagekaldelse af mail tilbydes som en del af avanceret meddelelseskryptering i Microsoft Purview. Microsoft Purview Advanced Message Encryption er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (prisfastsættelse for personale til nonprofitorganisationer), Office 365 Enterprise E5 (priser på personale til nonprofitorganisationer) og Office 365 Education A5. Hvis du vil bruge funktionerne til tilbagekaldelse og udløb af avanceret meddelelseskryptering, skal du aktivere indstillingen **Premium-kryptering i Office 365** i din E5-licens.
 
 Hvis din organisation har et abonnement, der ikke indeholder avanceret meddelelseskryptering fra Microsoft Purview, kan du købe det med tilføjelsesprogrammet Microsoft 365 E5 Overholdelse SKU til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for personale til nonprofitorganisationer), eller Avanceret overholdelse i Office 365 SKU-tilføjelsesprogram til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for nonprofit-medarbejdere) eller Office 365 SKU'er.
 
 Denne artikel er en del af en større serie af artikler om [Office 365 meddelelseskryptering](ome.md).
 
-Hvis en meddelelse blev krypteret ved hjælp af Avanceret meddelelseskryptering i Microsoft Purview, og du er Microsoft 365 administrator, eller du er afsender af meddelelsen, kan du tilbagekalde meddelelsen under visse betingelser. Administratorer tilbagekalder meddelelser ved hjælp af PowerShell. Som afsender tilbagekalder du en meddelelse, du har sendt direkte fra Outlook på internettet. I denne artikel beskrives de omstændigheder, hvor tilbagekaldelse er mulig, og hvordan du gør det.
+Hvis en meddelelse blev krypteret ved hjælp af Avanceret meddelelseskryptering i Microsoft Purview, og du er Microsoft 365-administrator, eller du er afsender af meddelelsen, kan du tilbagekalde meddelelsen under visse betingelser. Administratorer tilbagekalder meddelelser ved hjælp af PowerShell. Som afsender tilbagekalder du en meddelelse, du har sendt direkte fra Outlook på internettet. I denne artikel beskrives de omstændigheder, hvor tilbagekaldelse er mulig, og hvordan du gør det.
 
 > [!NOTE]
 > Hvis du vil garantere, at muligheden for at spore og tilbagekalde OME-meddelelser er tilgængelig, skal du tilføje en brugerdefineret brandingskabelon. Se [Føj din organisations brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md)
   
 ## <a name="encrypted-emails-that-you-can-revoke"></a>Krypterede mails, som du kan tilbagekalde
 
-Administratorer og meddelelsessendere kan tilbagekalde krypterede mails, hvis modtageren har modtaget en linkbaseret, brandet krypteret mail. Hvis modtageren har modtaget en indbygget oplevelse i en understøttet Outlook klient, kan du ikke tilbagekalde meddelelsen.
+Administratorer og meddelelsessendere kan tilbagekalde krypterede mails, hvis modtageren har modtaget en linkbaseret, brandet krypteret mail. Hvis modtageren har modtaget en indbygget oplevelse i en understøttet Outlook-klient, kan du ikke tilbagekalde meddelelsen.
 
-Om en modtager modtager en linkbaseret oplevelse eller en indbygget oplevelse, afhænger af modtagerens identitetstype: Office 365 og Microsoft-kontomodtagere (f.eks. outlook.com brugere) får en indbygget oplevelse i understøttede Outlook klienter. Alle andre modtagertyper, f.eks. Gmail- og Yahoo-modtagere, får en linkbaseret oplevelse.
+Om en modtager modtager en linkbaseret oplevelse eller en indbygget oplevelse, afhænger af modtagerens identitetstype: Office 365 og Microsoft-kontomodtagere (f.eks. outlook.com brugere) får en indbygget oplevelse i understøttede Outlook-klienter. Alle andre modtagertyper, f.eks. Gmail- og Yahoo-modtagere, får en linkbaseret oplevelse.
 
 Administratorer og afsendere af meddelelser kan tilbagekalde meddelelser, der er krypteret ved hjælp af kryptering, som anvendes direkte fra Outlook på internettet. Meddelelser, der f.eks. er krypteret med indstillingen Krypter kun.
 
@@ -76,7 +74,7 @@ Hvis du vil tilbagekalde en krypteret meddelelse, du har sendt, skal du udføre 
 
 ## <a name="how-to-revoke-an-encrypted-message-as-an-administrator"></a>Sådan tilbagekalder du en krypteret meddelelse som administrator
 
-Microsoft 365 administratorer følger disse generelle trin for at tilbagekalde en berettiget krypteret mail:
+Microsoft 365-administratorer følger disse generelle trin for at tilbagekalde en berettiget krypteret mail:
 
 - Hent mailens meddelelses-id.
 - Kontrollér, at du kan tilbagekalde meddelelsen.
@@ -110,7 +108,7 @@ Hvis du vil kontrollere, om du kan tilbagekalde en meddelelse, skal du kontrolle
 
 Udfør disse trin for at bekræfte, om du kan tilbagekalde en bestemt mail ved hjælp af Windows PowerShell.
 
-1. Hvis du bruger en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, skal du starte en Windows PowerShell session og oprette forbindelse til Exchange Online. Du kan finde instruktioner [under Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Hvis du bruger en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, skal du starte en Windows PowerShell session og oprette forbindelse til Exchange Online. Du kan finde en vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør Get-OMEMessageStatus-cmdlet'en på følgende måde:
 
@@ -138,7 +136,7 @@ Sådan tilbagekaldes meddelelsen ved hjælp af Security &amp; Compliance Center
 
 Hvis du vil tilbagekalde en mail ved hjælp af Windows PowerShell, skal du bruge cmdlet'en Set-OMEMessageRevocation.
 
-1. Hvis du bruger en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. Hvis du bruger en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, [skal du oprette forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør Set-OMEMessageRevocation-cmdlet'en på følgende måde:
 

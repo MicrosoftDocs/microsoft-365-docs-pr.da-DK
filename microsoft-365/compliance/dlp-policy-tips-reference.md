@@ -19,18 +19,16 @@ ms.collection:
 recommendations: false
 description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab). Giv en bruger besked om, at brugeren arbejder med indhold, der er i konflikt med en DLP-politik.
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: f9702916831839ac384cd262854fd0a88f90a8ea
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 04743bdabba4089a7cfdbb46fbb25d427927f6c0
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953655"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638339"
 ---
 # <a name="data-loss-prevention-policy-tips-reference"></a>Reference til politiktips til forebyggelse af datatab
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Tip til DLP-politikker i Outlook Web Access understøttes for alle de betingelser, undtagelser og handlinger, der gælder for Exchange arbejdsbelastning i en DLP-politik, undtagen følgende:
+Tip til DLP-politikker i Outlook Web Access understøttes for alle de betingelser, undtagelser og handlinger, der gælder for Exchange-arbejdsbelastninger i en DLP-politik, undtagen følgende:
 
 **Betingelser:**
 
@@ -64,18 +62,18 @@ Tip til DLP-politikker i Outlook Web Access understøttes for alle de betingelse
 - Forudindstillet mailemne
 - Fjern O365-meddelelseskryptering og rettighedsbeskyttelse
 
-## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 og nyere understøtter visning af politiktips for kun nogle betingelser og undtagelser
+## <a name="outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions"></a>Outlook 2013 og nyere understøtter visning af politiktip for kun nogle betingelser og undtagelser
 
-Outlook 2013 og nyere understøtter i øjeblikket visning af politiktips til politikker, der ikke indeholder nogen betingelse eller undtagelser bortset fra nedenstående betingelser og tilsvarende undtagelser:
+I øjeblikket understøtter Outlook 2013 og nyere visning af politiktip til politikker, der ikke indeholder nogen betingelse eller undtagelser bortset fra nedenstående betingelser og tilsvarende undtagelser:
 
 - Indhold indeholder (fungerer kun for typer af følsomme oplysninger. Følsomhedsmærkater understøttes ikke)
 - Indholdet er delt
 
-Bemærk, at alle betingelser fungerer for mails, der er oprettet i Outlook klientapp, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Visning af politiktip til brugere understøttes dog ikke for nogen betingelser, der bruges ud over dem, der er nævnt ovenfor.
+Bemærk, at alle betingelser fungerer for mails, der er oprettet i Outlook-klientappen, hvor de matcher indhold og gennemtvinger beskyttende handlinger på indhold. Visning af politiktip til brugere understøttes dog ikke for nogen betingelser, der bruges ud over dem, der er nævnt ovenfor.
 
-## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Outlook 2013 og nyere og Office apps på Desktop support, der viser politiktips til kun nogle følsomme oplysningstyper
+## <a name="outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types"></a>Understøttelse af Outlook 2013 og nyere og Office-apps på Desktop, der viser politiktip til kun nogle følsomme oplysningstyper
 
-Listen over indbyggede følsomme oplysningstyper, der registreres til visning af tip til DLP-politikker i Outlook på Desktop (2013 og nyere) og Office apps (Word, Excel, PowerPoint) på Desktop er følgende:
+Listen over indbyggede følsomme oplysningstyper, der registreres til visning af tip til DLP-politik i Outlook på Desktop (2013 og nyere) og Office-apps (Word, Excel, PowerPoint) på Desktop er følgende:
 
 - ABA-routingnummer
 - Argentinas nationale identitet (DNI)-nummer
@@ -84,21 +82,21 @@ Listen over indbyggede følsomme oplysningstyper, der registreres til visning af
 - Australiens passport-nummer
 - Australiens skattefilnummer
 - Godkendelsesnøgle til Azure DocumentDB  
-- Azure IAAS-databaseforbindelsesstreng og Azure SQL forbindelsesstreng  
+- Azure IAAS-databaseforbindelsesstreng og Azure SQL-forbindelsesstreng  
 - Azure IoT-forbindelsesstreng  
 - Adgangskode til indstilling for Azure Publish  
 - Forbindelsesstreng til Azure Redis-cache  
 - Azure SAS  
 - Azure Service Bus forbindelsesstreng  
-- Azure Storage kontonøgle  
-- Azure Storage kontonøgle (generisk)  
+- Azure Storage-kontonøgle  
+- Azure Storage-kontonøgle (generisk)  
 - Belgiens nationale nummer
 - BrasilienS CPF-nummer
 - Juridisk enhedsnummer for Brasilien (CNPJ)
 - Nationalt id-kort for Brasilien (RG)
 - Canadas bankkontonummer
 - Canadas kørekortsnummer
-- Canada Tilstandstjeneste-nummer
+- Canada Health Service-nummer
 - Canada Passport-nummer
 - Canada Personal Health Identification Number (PHIN)
 - Canada Social Insurance Number
@@ -169,7 +167,7 @@ Listen over indbyggede følsomme oplysningstyper, der registreres til visning af
 - Tyrkisk nationalt identifikationsnummer
 - STORBRITANNIEN. Kørekortsnummer
 - STORBRITANNIEN. Valgrullenummer
-- STORBRITANNIEN. Nationalt Tilstandstjeneste nummer
+- STORBRITANNIEN. Nummer på det nationale sundhedsvæsen
 - STORBRITANNIEN. NINO (National Insurance Number)
 - Amerikansk/britisk Passport-nummer
 - Amerikansk bankkontonummer
@@ -198,14 +196,14 @@ Listen over indbyggede følsomme oplysningstyper, der registreres i dokumenter, 
 - Østrigs skatteidentifikationsnummer 
 - Momsnummer for Østrig 
 - Godkendelsesnøgle til Azure DocumentDB 
-- Azure IAAS-databaseforbindelsesstreng og Azure SQL forbindelsesstreng 
+- Azure IAAS-databaseforbindelsesstreng og Azure SQL-forbindelsesstreng 
 - Azure IoT-forbindelsesstreng 
 - Adgangskode til indstilling for Azure Publish 
 - Forbindelsesstreng til Azure Redis-cache 
 - Azure SAS 
 - Azure Service Bus forbindelsesstreng 
-- Azure Storage kontonøgle 
-- Azure Storage kontonøgle (generisk) 
+- Azure Storage-kontonøgle 
+- Azure Storage-kontonøgle (generisk) 
 - Belgiens kørekortsnummer 
 - Belgiens nationale nummer 
 - Belgien Passport-nummer 
@@ -218,7 +216,7 @@ Listen over indbyggede følsomme oplysningstyper, der registreres i dokumenter, 
 - Bulgariens ensartede civilnummer 
 - Canadas bankkontonummer 
 - Canadas kørekortsnummer 
-- Canada Tilstandstjeneste-nummer 
+- Canada Health Service-nummer 
 - Canada Passport-nummer 
 - Canada Personal Health Identification Number (PHIN) 
 - Canada Social Insurance Number 
@@ -230,7 +228,7 @@ Listen over indbyggede følsomme oplysningstyper, der registreres i dokumenter, 
 - Nationalt id-kortnummer for Kroatien 
 - Kroatiens pasnummer 
 - Personidentifikationsnummer for Kroatien (OIB) 
-- CSCAN-AZURE0060 Azure Storage-kontos delte adgangssignatur 
+- CSCAN-AZURE0060 Azure Storage-konto med delt adgangssignatur 
 - CSCAN-GENERAL0140 Generel symmetrisk nøgle 
 - Cyperns kørekortsnummer 
 - Cyperns identitetskort 
@@ -376,7 +374,7 @@ Listen over indbyggede følsomme oplysningstyper, der registreres i dokumenter, 
 - Tyrkisk nationalt identifikationsnummer 
 - STORBRITANNIEN. Kørekortsnummer 
 - STORBRITANNIEN. Valgrullenummer 
-- STORBRITANNIEN. Nationalt Tilstandstjeneste nummer 
+- STORBRITANNIEN. Nummer på det nationale sundhedsvæsen 
 - STORBRITANNIEN. NINO (National Insurance Number) 
 - STORBRITANNIEN. Entydigt referencenummer for skatteborger 
 - Amerikansk/britisk Passport-nummer 
@@ -393,17 +391,17 @@ Bemærk, at brugerdefinerede følsomme informationstyper også vil blive registr
 
 |**App og platform**|**Understøttelse af DLP-politiktip**|**Understøttede typer følsomme oplysninger**|**Understøttede prædikater og handlinger**|**Kommentarer**|
 |:--|:--|:--|:--|:--|
-|**Outlook på internettet**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|Undersæt||
-|**Outlook Win32 (ver. 2105 build 14026.20000 og halvårlig kanalvers. 2102 build 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Undersæt|Undersæt|Se [Outlook 2013 og nyere understøtter visning af politiktips for kun nogle betingelser og undtagelser](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) og [Outlook 2013 og nyere og Office apps på Desktop-support, der viser politiktips for kun nogle følsomme oplysningstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for at få oplysninger om understøttelse af følsomme informationstyper og DLP-betingelser og handlinger, der understøttes for at vise tip til DLP-politik på Outlook  Win32.|
-|**Outlook Mobile (iOS, Android)/Outlook Mac**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke på Outlook mobil|
-|**webklienten SharePoint online/OneDrive for Business**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle SPO/ODB-prædikater og handlinger i DLP||
-|**SharePoint Win32/OneDrive for Business Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke i SharePoint eller OneDrive klientapps til stationære computere|
-|**Webklienten Word, Excel PowerPoint**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle SPO/ODB-prædikater og handlinger i DLP|DLP-politiktip understøttes, hvis dokumentet hostes på SPO- eller ODB-webappen, og DLP-politikken allerede er stemplet.|
-|**Word, Excel, PowerPoint Mobile Client**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke i mobilapps til Office.|
-|**Teams Web/Teams Desktop/Teams Mobile/Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle Teams prædikater i DLP-politik|Politiktips vises, når en meddelelse er markeret som "Denne meddelelse er blevet markeret med flag. Hvad kan jeg gøre?" Når brugeren klikker på linket, kan vedkommende gennemse de registrerede følsomme oplysningstyper og tilsidesætte eller rapportere et problem, hvis det er tilladt af administratoren. Bemærk, at der ikke vises nogen politiktip til filer. Når modtageren forsøger at få adgang til dokumentet, kan vedkommende blive nægtet adgang, hvis den ikke er tilladt.|
+|**Outlook på world wide web**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|Undersæt||
+|**Outlook Win32 (ver. 2105 build 14026.20000 og halvårlig kanal ver. 2102 build 13801.20862)**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Undersæt|Undersæt|Se [Outlook 2013 og nyere understøtter visning af politiktips for kun nogle betingelser og undtagelser](#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions) og [Outlook 2013 og nyere og understøttelse af Office-apps på Desktop, der viser politiktips til kun nogle følsomme oplysningstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for at få oplysninger om understøttelse af følsomme oplysningstyper og DLP-betingelser og understøttede handlinger til visning af DLP-politiktip i Outlook Win32.|
+|**Outlook Mobile (iOS, Android)/Outlook Mac**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke på Outlook Mobile|
+|**SharePoint Online/OneDrive for Business webklient**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle SPO/ODB-prædikater og handlinger i DLP||
+|**SharePoint Win32/OneDrive for Business Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke i Klientapps til SharePoint eller OneDrive-skrivebord|
+|**Word, Excel, PowerPoint-webklient**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle SPO/ODB-prædikater og handlinger i DLP|DLP-politiktip understøttes, hvis dokumentet hostes på SPO- eller ODB-webappen, og DLP-politikken allerede er stemplet.|
+|**Word, Excel PowerPoint Mobile Client**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til DLP-politikker understøttes ikke i mobilapps til Office.|
+|**Teams Web/Teams Desktop/Teams Mobile/Teams Mac**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Alle|alle Teams-prædikater i DLP-politik|Politiktips vises, når en meddelelse er markeret som "Denne meddelelse er blevet markeret med flag. Hvad kan jeg gøre?" Når brugeren klikker på linket, kan vedkommende gennemse de registrerede følsomme oplysningstyper og tilsidesætte eller rapportere et problem, hvis det er tilladt af administratoren. Bemærk, at der ikke vises nogen politiktip til filer. Når modtageren forsøger at få adgang til dokumentet, kan vedkommende blive nægtet adgang, hvis den ikke er tilladt.|
 |**Win32-slutpunktsenheder**|:::image type="icon" source="../media/rightmrk.png" border="false":::|Undersæt|alle DLP-prædikater og handlinger for slutpunkter i DLP-politikken|Se [Forebyggelse af datatab på Slutpunkt understøtter politiktip for kun nogle følsomme oplysningstyper](#data-loss-prevention-on-endpoint-devices-supports-policy-tips-for-only-some-sensitive-information-types)|
 |**macOS-enheder**|kun standardtip|Alle|Undersæt|Politikker til forebyggelse af datatab kan gennemtvinges på macOS-enheder. Brugerdefinerede politiktip understøttes ikke.|
 |**Tredjepartscloudapps**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til politikker til forebyggelse af datatab understøttes ikke i tredjepartscloudapps|
 |**I det lokale miljø**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen||
-|**Word, Excel, PowerPoint Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Undersæt|Undersæt|Se [Outlook 2013 og nyere og Office apps på Desktop Support, der viser politiktip til kun nogle følsomme informationstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for listen over understøttede følsomme oplysningstyper</br></br>Politiktips til WXP-klientapps fungerer for dokumenter, der er gemt på SharePoint Online eller OneDrive for Business-websteder for alle DLP-politikker, som har præcis nedenstående eller et undersæt af betingelser eller handlinger i DLP-politikken:</br> <ul><li>Indhold indeholder følsomme oplysningstyper</li><li>Adgangsområde (indhold deles internt/eksternt)</li><li>Giv brugeren besked (politiktip/brugermeddelelser)</li><li>Bloker alle</li><li>Hændelsesrapporter</li></ul></br> Hvis der findes en anden betingelse eller handling, vises DLP-politiktip for den pågældende politik ikke i Desktop-apps i Word, Excel eller PowerPoint.</br>Se [Politiktips i Excel, PowerPoint og Word for at](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word) få flere oplysninger|
+|**Word, Excel, PowerPoint Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Undersæt|Undersæt|Se [Support til Outlook 2013 og nyere og Office-apps på Desktop, der viser politiktips til kun nogle følsomme oplysningstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for listen over understøttede typer følsomme oplysninger</br></br>Politiktips til WXP-klientapps fungerer for dokumenter, der er gemt på SharePoint Online eller OneDrive for Business-websteder for alle DLP-politikker, som har præcis nedenstående eller et undersæt af betingelser eller handlinger i DLP-politikken:</br> <ul><li>Indhold indeholder følsomme oplysningstyper</li><li>Adgangsområde (indhold deles internt/eksternt)</li><li>Giv brugeren besked (politiktip/brugermeddelelser)</li><li>Bloker alle</li><li>Hændelsesrapporter</li></ul></br> Hvis der findes en anden betingelse eller handling, vises DLP-politiktip for den pågældende politik ikke i skrivebordsappsene i Word, Excel eller PowerPoint.</br>Se [Politiktips i Excel, PowerPoint og Word for at](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word) få flere oplysninger|
 ||||||

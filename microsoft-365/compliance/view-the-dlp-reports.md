@@ -19,18 +19,16 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Brug DLP-rapporterne i Office 365 til at få vist antallet af DLP-politikforekomster, -tilsidesættelser eller falske positiver, og se, om de er opad- eller nedadgående over tid.
-ms.openlocfilehash: b264a0e0b76397be99d7586ac793dac501b6672e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 6f60aefaa1548e3c3aed2ca1643de42f412cf5cf
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011609"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641092"
 ---
 # <a name="view-the-reports-for-data-loss-prevention"></a>Få vist rapporterne til forebyggelse af datatab
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du har oprettet dine DLP-politikker (Forebyggelse af datatab i Microsoft Purview), skal du bekræfte, at de fungerer efter hensigten og hjælper dig med at overholde angivne standarder. Med DLP-rapporterne på Microsoft Purview-overholdelsesportalen kan du hurtigt få vist:
+Når du har oprettet dine DLP-politikker (Forebyggelse af datatab i Microsoft Purview), skal du bekræfte, at de fungerer efter hensigten og hjælper dig med at overholde angivne standarder. Med DLP-rapporterne i Microsoft Purview-compliance-portal kan du hurtigt få vist:
 
 - **DLP-politikforekomster** Denne rapport viser antallet af DLP-politikforekomster over tid. Du kan filtrere rapporten efter dato, placering, politik eller handling. Du kan bruge denne rapport til at:
 
@@ -62,7 +60,7 @@ Når du har oprettet dine DLP-politikker (Forebyggelse af datatab i Microsoft Pu
 
 Alle DLP-rapporter kan vise data fra den seneste firemåneders tidsperiode. Det kan tage op til 24 timer, før de nyeste data vises i rapporterne.
 
-Du kan finde disse rapporter på **Microsoft** Purview-overholdelsesportalen \> **Dashboard til rapporter**\>.
+Du kan finde disse rapporter i **dashboardet** Microsoft Purview-compliance-portal \> **rapporter**\>.
 
 ![DLP-politik stemmer overens med rapporten.](../media/117d20c9-d379-403f-ad68-1f5cd6c4e5cf.png)
 
@@ -82,7 +80,7 @@ Rapporter kan vise indsigt og anbefalinger, hvor du kan klikke på det røde adv
 
 Hvis du vil have vist DLP-rapporter i Security & Compliance Center, skal du være tildelt:
 
-- **Rollen Sikkerhedslæser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Denne rolle er som standard tildelt rollegrupperne Organisationsadministration og Sikkerhedslæser i Exchange Administration.
+- **Rollen Sikkerhedslæser** i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>. Denne rolle tildeles som standard til rollegrupperne Organisationsadministration og Sikkerhedslæser i Exchange Administration.
 
 - **Vis kun rollen DLP Compliance Management** i Security & Compliance Center. Denne rolle tildeles som standard rollegrupperne Overholdelsesadministrator, Organisationsadministration, Sikkerhedsadministrator og Sikkerhedslæser i Security & Compliance Center.
 
@@ -92,7 +90,7 @@ Hvis du vil have vist DLP-rapporter i Security & Compliance Center, skal du vær
 
 Hvis du vil bruge cmdlet'erne til DLP-rapportering, skal du gøre følgende:
 
-1. [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell)
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell)
 
 2. Brug disse cmdlet'er:
 
@@ -102,7 +100,7 @@ Hvis du vil bruge cmdlet'erne til DLP-rapportering, skal du gøre følgende:
 
 DLP-rapporter skal dog hente data fra hele Microsoft 365, herunder Exchange Online. Derfor er følgende cmdlet'er til DLP-rapporter tilgængelige i Exchange Online Powershell. Hvis du vil bruge cmdlet'erne til disse DLP-rapporter, skal du gøre følgende:
 
-1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 2. Brug disse cmdlet'er:
 

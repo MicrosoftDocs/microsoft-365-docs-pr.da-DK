@@ -12,26 +12,24 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan du kan rulle de kunderodnøgler, der er gemt i Azure Key Vault, som bruges sammen med kundenøglen. Tjenesterne omfatter filer af typen Exchange Online, Skype for Business, SharePoint Online, OneDrive for Business og Teams.
-ms.openlocfilehash: f34e79ee772df1a88058625c0b2df5f62413bcfd
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 474df9b4776df09b4a46ca002f506155606bdb52
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017328"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636485"
 ---
 # <a name="roll-or-rotate-a-customer-key-or-an-availability-key"></a>Rul eller roter en kundenøgle eller en tilgængelighedsnøgle
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 > [!CAUTION]
-> Opløft kun en krypteringsnøgle, som du bruger sammen med Kundenøgle, når dine krav til sikkerhed eller overholdelse af angivne standarder kræver, at du skal rulle nøglen. Du må desuden ikke slette nogen nøgler, der er eller er knyttet til politikker. Når du ruller dine nøgler, vil der være indhold, der er krypteret med de forrige nøgler. Selvom aktive postkasser f.eks. krypteres igen ofte, kan inaktive, afbrudte og deaktiverede postkasser stadig krypteres med de forrige nøgler. SharePoint Online sikkerhedskopierer indhold til gendannelses- og gendannelsesformål, så der kan stadig være arkiveret indhold ved hjælp af ældre nøgler.
+> Opløft kun en krypteringsnøgle, som du bruger sammen med Kundenøgle, når dine krav til sikkerhed eller overholdelse af angivne standarder kræver, at du skal rulle nøglen. Du må desuden ikke slette nogen nøgler, der er eller er knyttet til politikker. Når du ruller dine nøgler, vil der være indhold, der er krypteret med de forrige nøgler. Selvom aktive postkasser f.eks. krypteres igen ofte, kan inaktive, afbrudte og deaktiverede postkasser stadig krypteres med de forrige nøgler. SharePoint Online udfører sikkerhedskopiering af indhold til gendannelses- og gendannelsesformål, så der kan stadig være arkiveret indhold ved hjælp af ældre nøgler.
 
 ## <a name="about-rolling-the-availability-key"></a>Om at rulle tilgængelighedsnøglen
 
-Microsoft fremviser ikke direkte kontrol over tilgængelighedsnøglen for kunder. Du kan f.eks. kun rulle (rotere) de nøgler, du ejer i Azure Key Vault. Microsoft 365 akkumulerer tilgængelighedsnøglerne efter en internt defineret tidsplan. Der er ingen serviceniveauaftale (SLA) på kundeniveau for disse vigtige kast. Microsoft 365 roterer tilgængelighedsnøglen ved hjælp af Microsoft 365 servicekode i en automatiseret, ikke-manuel proces. Microsoft-administratorer kan starte rulleprocessen. Nøglen rulles ved hjælp af automatiserede mekanismer uden direkte adgang til nøglelageret. Adgang til det hemmelige lager for tilgængelighedsnøgler er ikke klargjort til Microsoft-administratorer. Rullende tilgængelighedsnøgle udnytter den samme mekanisme, der bruges til indledningsvist at generere nøglen. Du kan få flere oplysninger om tilgængelighedsnøglen under [Forstå tilgængelighedsnøglen](customer-key-availability-key-understand.md).
+Microsoft fremviser ikke direkte kontrol over tilgængelighedsnøglen for kunder. Du kan f.eks. kun rulle (rotere) de nøgler, du ejer i Azure Key Vault. Microsoft 365 akkumulerer tilgængelighedsnøglerne efter en internt defineret tidsplan. Der er ingen serviceniveauaftale (SLA) på kundeniveau for disse vigtige kast. Microsoft 365 roterer tilgængelighedsnøglen ved hjælp af Microsoft 365-tjenestekode i en automatiseret, ikke-manuel proces. Microsoft-administratorer kan starte rulleprocessen. Nøglen rulles ved hjælp af automatiserede mekanismer uden direkte adgang til nøglelageret. Adgang til det hemmelige lager for tilgængelighedsnøgler er ikke klargjort til Microsoft-administratorer. Rullende tilgængelighedsnøgle udnytter den samme mekanisme, der bruges til indledningsvist at generere nøglen. Du kan få flere oplysninger om tilgængelighedsnøglen under [Forstå tilgængelighedsnøglen](customer-key-availability-key-understand.md).
 
 > [!IMPORTANT]
-> Exchange Online og Skype for Business tilgængelighedsnøgler kan rulles effektivt af kunder, der opretter en ny dep, da der genereres en entydig tilgængelighedsnøgle for hver enkelt deP, du opretter. Tilgængelighedsnøgler til SharePoint Online-, OneDrive for Business- og Teams-filer findes på områdeniveau og deles på tværs af DEP'er og kunder, hvilket betyder, at rullende kun forekommer efter en internt defineret tidsplan fra Microsoft. Hvis du vil afhjælpe risikoen for ikke at rulle tilgængelighedsnøglen, hver gang der oprettes en ny forhindring af dataforbrug, skal du SharePoint, OneDrive og Teams rulle lejerens mellemliggende nøgle (TIK), den nøgle, der er ombrudt af kundens rodnøgle og tilgængelighedsnøgle, hver gang der oprettes en ny dep.
+> Exchange Online og Skype for Business tilgængelighedsnøgler kan rulles effektivt af kunder, der opretter en ny dep, da der genereres en entydig tilgængelighedsnøgle for hver enkelt deP, du opretter. Tilgængelighedsnøgler til SharePoint Online-, OneDrive for Business- og Teams-filer findes på skovniveau og deles på tværs af DEP'er og kunder, hvilket betyder, at rullende kun finder sted i en internt defineret Microsoft-tidsplan. For at afhjælpe risikoen for ikke at rulle tilgængelighedsnøglen, hver gang der oprettes en ny forhindring af datakørsel, ruller SharePoint, OneDrive og Teams lejerens mellemliggende nøgle (TIK), den nøgle, der er ombrudt af kundens rodnøgler og tilgængelighedsnøgle, hver gang der oprettes en ny forhindring af datakørsel.
 
 ## <a name="request-a-new-version-of-each-existing-root-key-you-want-to-roll"></a>Anmod om en ny version af hver eksisterende rodnøgle, du vil rulle
 
@@ -95,7 +93,7 @@ SharePoint Online giver dig kun mulighed for at rulle én nøgle ad gangen. Hvis
    Update-SPODataEncryptionPolicy  <SPOAdminSiteUrl> -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType <Primary | Secondary>
    ```
 
-   Selvom denne cmdlet starter handlingen med nøglerullen for SharePoint Online og OneDrive for Business, fuldføres handlingen ikke med det samme.
+   Selvom denne cmdlet starter handlingen for nøgle roll for SharePoint Online og OneDrive for Business, fuldføres handlingen ikke med det samme.
 
 2. Kør Get-SPODataEncryptionPolicy-cmdlet'en på følgende måde for at se status for handlingen til kast af nøgler:
 

@@ -1,5 +1,5 @@
 ---
-title: Sådan identificeres indhold med anbefalinger vedrørende datastyring
+title: Sådan identificeres indhold for anbefalinger til datastyring
 f1.keywords:
 - NOCSH
 ms.author: brendonb
@@ -17,40 +17,40 @@ search.appverid:
 - MOE150
 - MET150
 ROBOTS: NOINDEX, NOFOLLOW
-description: Portalen Microsoft 365 Defender-portalen og Microsoft 365 Overholdelsescenter anbefalinger til datastyring baseret på din organisations aktuelle konfiguration og gør det muligt at konfigurere ting med nogle få klik. Nogle af disse anbefalinger registrerer specifikt indhold i organisationen og giver derefter anbefalede trin til at administrere indholdet. Eksempelvis kan en anbefaling registrere elementer, der indeholder forretningskritisk indhold (f.eks. advokat-klientrettigheder eller NDA-oplysninger), og derefter lade dig automatisk anvende en opbevaringsmærkat på disse elementer for at sikre, at de er klassificeret og bevaret efter behov. I dette emne vises de anbefalinger til datastyring, du kan få vist, og det beskrives, hvilket indhold der registreres for at udløse hver enkelt.
-ms.openlocfilehash: cddd73fdd0c21605549450968db182883ab7e6ad
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: Microsoft 365 Defender-portalen og Microsoft Purview-compliance-portal komme med anbefalinger til datastyring baseret på din organisations aktuelle konfiguration og giver dig mulighed for at konfigurere ting med nogle få klik. Nogle af disse anbefalinger registrerer specifikt indhold i din organisation og angiver derefter anbefalede trin til administration af dette indhold. En anbefaling kan f.eks. registrere elementer, der indeholder forretningskritisk indhold (f.eks. rettigheden advokat-klient eller NDA-oplysninger), og derefter lade dig automatisk anvende en opbevaringsmærkat på disse elementer for at sikre, at de klassificeres og opbevares efter behov. I dette emne beskrives de anbefalinger til datastyring, du kan få vist, og som beskriver, hvilket indhold der registreres for at udløse hver enkelt.
+ms.openlocfilehash: 27fcc5dd07695be355fc15ba2145ffa5540673ca
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63587689"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637301"
 ---
-# <a name="how-content-is-identified-for-data-governance-recommendations"></a>Sådan identificeres indhold med anbefalinger vedrørende datastyring
+# <a name="how-content-is-identified-for-data-governance-recommendations"></a>Sådan identificeres indhold for anbefalinger til datastyring
 
-Portalen <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">og Microsoft 365 Overholdelsescenter</a> anbefalinger til datastyring baseret på din organisations aktuelle konfiguration og lader dig konfigurere ting med et par klik. Nogle af disse anbefalinger registrerer specifikt indhold i organisationen og giver derefter anbefalede trin til at administrere indholdet. Eksempelvis kan en anbefaling registrere elementer, der indeholder forretningskritisk indhold (f.eks. advokat-klientrettigheder eller NDA-oplysninger), og derefter lade dig automatisk anvende en opbevaringsmærkat på disse elementer for at sikre, at de er klassificeret og bevaret efter behov.
+<a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> og <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> komme med anbefalinger til datastyring baseret på din organisations aktuelle konfiguration og giver dig mulighed for at konfigurere ting med et par klik. Nogle af disse anbefalinger registrerer specifikt indhold i din organisation og angiver derefter anbefalede trin til administration af dette indhold. En anbefaling kan f.eks. registrere elementer, der indeholder forretningskritisk indhold (f.eks. rettigheden advokat-klient eller NDA-oplysninger), og derefter lade dig automatisk anvende en opbevaringsmærkat på disse elementer for at sikre, at de klassificeres og opbevares efter behov.
 
-I dette emne vises de anbefalinger til datastyring, du kan få vist, og det beskrives, hvilket indhold der registreres for at udløse hver enkelt.
+I dette emne beskrives de anbefalinger til datastyring, du kan få vist, og som beskriver, hvilket indhold der registreres for at udløse hver enkelt.
 
-## <a name="clean-up-voicemail"></a>Ryd op i telefonsvareren
+## <a name="clean-up-voicemail"></a>Ryd op i talebesked
 
-Denne anbefaling vises, når mails, der identificeres som meddelelsestypen "voicemail", registreres i brugernes postkasser. Få mere at vide [om meddelelsesegenskaber Exchange](/exchange/policy-and-compliance/ediscovery/message-properties-and-search-operators#searchable-properties-in-exchange).
+Denne anbefaling vises, når mails, der er identificeret som meddelelsestypen 'voicemail', registreres i brugernes postkasser. Få mere at vide om [meddelelsesegenskaber i Exchange](/exchange/policy-and-compliance/ediscovery/message-properties-and-search-operators#searchable-properties-in-exchange).
 
-## <a name="label-attorney-client-privilege-content"></a>Label attorney-client privilege content
+## <a name="label-attorney-client-privilege-content"></a>Navn på rettighedsindhold for advokat/klient
 
 Denne anbefaling vises, når et af følgende kriterier er opfyldt.
 
-- En vilkårlig kombination af disse nøgleord registreres i brødteksten i en mail:
-  - LYDMØDER
-  - Attorney Client Privilege
+- En kombination af disse nøgleord registreres i brødteksten i en mail:
+  - AVS
+  - Rettighed som advokatklient
   - Attorney-Client rettighed
-  - Attorney-Client privilegeret
+  - privilegeret Attorney-Client
 
-- Enhver kombination af disse nøgleord registreres i SharePoint eller OneDrive filer:
-  - LYDMØDER
-  - Attorney Client Privilege*
-  - AC-rettigheder
+- Alle kombinationer af disse nøgleord registreres i SharePoint- eller OneDrive-filer:
+  - AVS
+  - Advokatklientrettigheder*
+  - Ac-rettigheder
 
-## <a name="retain-audio-files"></a>Behold lydfiler
+## <a name="retain-audio-files"></a>Bevar lydfiler
 
 Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint eller OneDrive.
 
@@ -60,15 +60,15 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - . RA
 - . RAM
 - .RM
-- . MID
+- . MIDTEN
 - . OGG
 - . AIFF
 - . PCM
 - . AAC
 - . FLAC
-- . AOPERALYS
+- . ALAC
 
-## <a name="retain-cad-files"></a>Behold CAD-filer
+## <a name="retain-cad-files"></a>Bevar CAD-filer
 
 Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint eller OneDrive.
 
@@ -90,7 +90,7 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - . NEU
 - . PAR
 - . PKG
-- . Kina
+- . KINA
 - . PRT
 - . PSM
 - . PWD
@@ -101,13 +101,13 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - . U3D
 - . UNV
 - . VRML
-- . WRL
+- . Sikkerhed på rækkeniveau
 - . X_*
 - . XAS
 - . XMT*
 - . XPR
 
-## <a name="retain-image-files"></a>Behold billedfiler
+## <a name="retain-image-files"></a>Bevar billedfiler
 
 Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint eller OneDrive.
 
@@ -116,7 +116,7 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - . TIF*
 - .BMP
 - .PNG
-- . RAW
+- . RÅ
 - .PSD
 - . PSP
 - .JPG
@@ -127,20 +127,20 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - . PNM
 - . WEBP
 
-## <a name="retain-nda-content"></a>Behold NDA-indhold
+## <a name="retain-nda-content"></a>Bevar NDA-indhold
 
 Denne anbefaling vises, når et af følgende kriterier er opfyldt.
 
-- En vilkårlig kombination af disse nøgleord registreres i brødteksten i en mail:
+- En kombination af disse nøgleord registreres i brødteksten i en mail:
   - NDA
   - "Fortrolighedsaftale"
   - "Fortrolighedsaftale"
 
-- Enhver kombination af disse nøgleord registreres i .PDF eller .DOC i SharePoint eller OneDrive:
+- Enhver kombination af disse nøgleord registreres i .PDF- eller .DOC-filer i SharePoint eller OneDrive:
   - NDA
   - Fortrolighedsaftale
 
-## <a name="retain-software-development-files"></a>Behold softwareudviklingsfiler
+## <a name="retain-software-development-files"></a>Bevar filer til softwareudvikling
 
 Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint eller OneDrive.
 
@@ -151,7 +151,7 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - .CONFIG
 - .CS
 - . CSS
-- . 1.
+- . DISCO
 - .HTM*
 - . INC
 - . JAD
@@ -173,7 +173,7 @@ Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint e
 - . XSD
 - . XSL*
 
-## <a name="retain-video-files"></a>Behold videofiler
+## <a name="retain-video-files"></a>Bevar videofiler
 
 Denne anbefaling vises, når en af følgende filtyper registreres i SharePoint eller OneDrive.
 

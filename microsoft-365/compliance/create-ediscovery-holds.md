@@ -17,19 +17,17 @@ ms.custom: admindeeplinkMAC
 search.appverid:
 - MOE150
 - MET150
-description: Du kan oprette en venteposition, der er knyttet til en eDiscovery-sag (Standard), i Microsoft 365 for at bevare indhold, der er relevant for en undersøgelse eller en juridisk sag.
-ms.openlocfilehash: ddd1b2e62c2ec63dbd2303cadcef6a1d12f4dfc7
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+description: Du kan oprette en venteposition, der er knyttet til en eDiscovery(Standard)-sag i Microsoft 365, for at bevare indhold, der er relevant for en undersøgelse eller en retssag.
+ms.openlocfilehash: c395c1bae2a4640c98133bc3bd89d2762a493661
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65130905"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637411"
 ---
 # <a name="create-an-ediscovery-hold"></a>Opret en eDiscovery-venteposition
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan bruge en Microsoft Purview eDiscovery-sag (Standard) til at oprette ventepositioner for at bevare indhold, der kan være relevant for sagen. Du kan placere en venteposition på de Exchange postkasser og OneDrive for Business konti for personer, du undersøger i sagen. Du kan også placere en venteposition på de postkasser og websteder, der er knyttet til Microsoft Teams, Office 365 grupper og Yammer grupper. Når du placerer indholdsplaceringer i venteposition, bevares indholdet, indtil du fjerner indholdsplaceringen fra ventepositionen, eller indtil du sletter ventepositionen.
+Du kan bruge en Microsoft Purview eDiscovery (Standard)-sag til at oprette ventepositioner for at bevare indhold, der kan være relevant for sagen. Du kan placere en venteposition på Exchange-postkasserne og OneDrive for Business konti for personer, du undersøger i sagen. Du kan også placere en venteposition på de postkasser og websteder, der er knyttet til Microsoft Teams, Office 365 grupper og Yammer-grupper. Når du placerer indholdsplaceringer i venteposition, bevares indholdet, indtil du fjerner indholdsplaceringen fra ventepositionen, eller indtil du sletter ventepositionen.
 
 Når du har oprettet en eDiscovery-venteposition, kan det tage op til 24 timer, før ventepositionen træder i kraft.
 
@@ -43,7 +41,7 @@ Når du opretter en venteposition, har du følgende muligheder for at tilpasse o
 
 Sådan opretter du en eDiscovery-venteposition, der er knyttet til en eDiscovery-sag (Standard):
   
-1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> , og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
+1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
 
 2. Klik på **Vis alle** i navigationsruden til venstre, og klik derefter på **eDiscovery > Core**.
 
@@ -59,14 +57,14 @@ Sådan opretter du en eDiscovery-venteposition, der er knyttet til en eDiscovery
 
     ![Vælg de indholdsplaceringer, der skal placeres i venteposition.](../media/eDiscoveryHoldLocations.png)
   
-   1. **Exchange postkasser**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg brugere, grupper eller teams** for at angive de postkasser, der skal sættes i venteposition. Brug søgefeltet til at finde brugerpostkasser og distributionsgrupper (til at placere en venteposition på gruppemedlemmernes postkasser) til at placere dem i venteposition. Du kan også placere en venteposition på den tilknyttede postkasse for et Microsoft-team, Office 365-gruppe og Yammer-gruppe. Du kan finde flere oplysninger om de programdata, der bevares, når en postkasse er sat i venteposition, under Indhold, der er [gemt i postkasser til eDiscovery](what-is-stored-in-exo-mailbox.md).
+   1. **Exchange-postkasser**: Angiv til/fra-knappen til **Til** , og klik derefter på **Vælg brugere, grupper eller teams** for at angive de postkasser, der skal sættes i venteposition. Brug søgefeltet til at finde brugerpostkasser og distributionsgrupper (til at placere en venteposition på gruppemedlemmernes postkasser) til at placere dem i venteposition. Du kan også placere en venteposition på den tilknyttede postkasse for et Microsoft-team, Office 365-gruppe og Yammer-gruppe. Du kan finde flere oplysninger om de programdata, der bevares, når en postkasse er sat i venteposition, under Indhold, der er [gemt i postkasser til eDiscovery](what-is-stored-in-exo-mailbox.md).
 
-   2. **SharePoint websteder**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg websteder** for at angive, SharePoint websteder og OneDrive konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Office 365-gruppe eller en Yammer gruppe.
+   2. **SharePoint-websteder**: Angiv til/fra-knappen til **Til** , og klik derefter på **Vælg websteder** for at angive SharePoint-websteder og OneDrive-konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til SharePoint-webstedet for et Microsoft-team, Office 365-gruppe eller en Yammer-gruppe.
   
-   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
+   3. **Offentlige Exchange-mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
 
    > [!IMPORTANT]
-   > Når du føjer Exchange postkasser eller SharePoint websteder til venteposition, skal du eksplicit føje mindst én indholdsplacering til ventepositionen. Hvis du med andre ord angiver til/fra-knappen til **Til** for postkasser eller websteder, skal du vælge bestemte postkasser eller websteder, der skal føjes til ventepositionen. Ellers oprettes eDiscovery-ventepositionen, men der føjes ingen postkasser eller websteder til ventepositionen.
+   > Når du føjer Exchange-postkasser eller SharePoint-websteder til venteposition, skal du udtrykkeligt føje mindst én indholdsplacering til ventepositionen. Hvis du med andre ord angiver til/fra-knappen til **Til** for postkasser eller websteder, skal du vælge bestemte postkasser eller websteder, der skal føjes til ventepositionen. Ellers oprettes eDiscovery-ventepositionen, men der føjes ingen postkasser eller websteder til ventepositionen.
 
 8. Når du er færdig med at føje placeringer til ventepositionen, skal du klikke på **Næste**.
 
@@ -89,7 +87,7 @@ Sådan opretter du en eDiscovery-venteposition, der er knyttet til en eDiscovery
 
 ## <a name="query-based-holds-placed-on-sites"></a>Forespørgselsbaserede ventepositioner, der er placeret på websteder
 
-Vær opmærksom på følgende ting, når du placerer en forespørgselsbaseret eDiscovery-venteposition på dokumenter, der er placeret på SharePoint websteder:
+Vær opmærksom på følgende ting, når du placerer en forespørgselsbaseret eDiscovery-venteposition på dokumenter, der er placeret på SharePoint-websteder:
 
 - En forespørgselsbaseret venteposition bevarer alle dokumenter på et websted i en kort periode, efter at de er slettet. Det betyder, at når et dokument slettes, flyttes det til biblioteket bevarelsesposition, selvom det ikke stemmer overens med kriterierne for den forespørgselsbaserede venteposition. Slettede dokumenter, der ikke svarer til en forespørgselsbaseret venteposition, fjernes dog af et timerjob, der behandler biblioteket bevarelsesventeposition. Timerjobbet kører jævnligt og sammenligner alle dokumenter i biblioteket bevarelsesposition med dine forespørgselsbaserede eDiscovery-ventepositioner (og andre typer ventepositioner og opbevaringspolitikker). Timerjobbet sletter de dokumenter, der ikke stemmer overens med en forespørgselsbaseret venteposition, og bevarer de dokumenter, der gør det.
 
@@ -113,22 +111,22 @@ Her er nogle andre ting, du skal være opmærksom på, når du søger efter plac
 
 ## <a name="preserve-content-in-microsoft-teams"></a>Bevar indhold i Microsoft Teams
 
-Samtaler, der er en del af en Microsoft Teams kanal, gemmes i den postkasse, der er knyttet til Microsoft-teamet. På samme måde gemmes filer, som teammedlemmer deler i en kanal, på teamets SharePoint websted. Derfor skal du placere gruppepostkassen og SharePoint websted i eDiscovery-venteposition for at bevare samtaler og filer i en kanal.
+Samtaler, der er en del af en Microsoft Teams-kanal, gemmes i den postkasse, der er knyttet til Microsoft-teamet. På samme måde gemmes filer, som teammedlemmer deler i en kanal, på teamets SharePoint-websted. Derfor skal du placere gruppepostkassen og SharePoint-webstedet i eDiscovery-venteposition for at bevare samtaler og filer i en kanal.
 
-Alternativt gemmes samtaler, der er en del af chatlisten i Teams (kaldet *1:1 chats* eller *1:N gruppechats*), i postkasserne for de brugere, der deltager i chatten. Og filer, som brugerne deler i chatsamtaler, gemmes på den OneDrive konto for den bruger, der deler filen. Derfor skal du føje de enkelte brugerpostkasser og OneDrive konti til en eDiscovery-venteposition for at bevare samtaler og filer på chatlisten. Det er en god idé at sætte en venteposition på postkasserne for medlemmer af et Microsoft-team ud over at sætte gruppepostkassen og webstedet i venteposition.
+Alternativt gemmes samtaler, der er en del af chatlisten i Teams (kaldet *1:1 chats* eller *1:N gruppechats*), i postkasserne for de brugere, der deltager i chatten. Og filer, som brugerne deler i chatsamtaler, gemmes på OneDrive-kontoen for den bruger, der deler filen. Derfor skal du føje de enkelte brugerpostkasser og OneDrive-konti til en eDiscovery-venteposition for at bevare samtaler og filer på chatlisten. Det er en god idé at sætte en venteposition på postkasserne for medlemmer af et Microsoft-team ud over at sætte gruppepostkassen og webstedet i venteposition.
 
 > [!NOTE]
-> Hvis din organisation har en Exchange hybridinstallation (eller din organisation synkroniserer en Exchange organisation i det lokale miljø med Office 365) og har aktiveret Microsoft Teams, kan brugere i det lokale miljø bruge Teams chatprogrammet og deltage i 1:1-chats og 1:N-gruppechats. Disse samtaler gemmes i et cloudbaseret lager, der er knyttet til en bruger i det lokale miljø. Hvis en bruger i det lokale miljø er sat i eDiscovery-venteposition, bevares det Teams chatindhold i det skybaserede lager. Du kan finde flere oplysninger under [Søg efter Teams chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
+> Hvis din organisation har en Hybrid Exchange-installation (eller din organisation synkroniserer en Exchange-organisation i det lokale miljø med Office 365) og har aktiveret Microsoft Teams, kan brugere i det lokale miljø bruge Teams-chatprogrammet og deltage i 1:1-chats og 1:N-gruppechats. Disse samtaler gemmes i et cloudbaseret lager, der er knyttet til en bruger i det lokale miljø. Hvis en bruger i det lokale miljø er sat i eDiscovery-venteposition, bevares Teams-chatindholdet i det cloudbaserede lager. Du kan finde flere oplysninger under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
 
-Du kan finde flere oplysninger om bevarelse af Teams indhold under [Placer en Microsoft Teams bruger eller et team i juridisk venteposition](/MicrosoftTeams/legal-hold).
+Du kan finde flere oplysninger om bevarelse af Teams-indhold under [Placer en Microsoft Teams-bruger eller et Microsoft Teams-team i juridisk venteposition](/MicrosoftTeams/legal-hold).
 
 ### <a name="preserve-card-content"></a>Bevar kortindhold
 
-På samme måde gemmes kortindhold, der genereres af apps i Teams kanaler, 1:1 chats og 1:N-gruppechat, i postkasser og bevares, når en postkasse placeres i eDiscovery-venteposition. Et *kort* er en brugergrænsefladeobjektbeholder til korte indholdselementer. Kort kan have flere egenskaber og vedhæftede filer og kan indeholde knapper, der udløser korthandlinger. Du kan få flere oplysninger under [Kort](/microsoftteams/platform/task-modules-and-cards/what-are-cards). På samme måde som med andet Teams indhold, hvor kortindholdet gemmes, er det baseret på, hvor kortet blev brugt. Indhold for kort, der bruges i en Teams kanal, gemmes i Teams gruppepostkasse. Kortindhold for 1:1- og 1xN-chats gemmes i chatdeltagernes postkasser.
+På samme måde gemmes kortindhold, der genereres af apps i Teams-kanaler, 1:1 chats og 1:N-gruppechat, i postkasser og bevares, når en postkasse placeres i eDiscovery-venteposition. Et *kort* er en brugergrænsefladeobjektbeholder til korte indholdselementer. Kort kan have flere egenskaber og vedhæftede filer og kan indeholde knapper, der udløser korthandlinger. Du kan få flere oplysninger under [Kort](/microsoftteams/platform/task-modules-and-cards/what-are-cards). På samme måde som med andet Teams-indhold, hvor kortindhold gemmes, er det baseret på, hvor kortet blev brugt. Indhold for kort, der bruges i en Teams-kanal, gemmes i Teams-gruppepostkassen. Kortindhold for 1:1- og 1xN-chats gemmes i chatdeltagernes postkasser.
 
 ### <a name="preserve-meeting-and-call-information"></a>Bevar møde- og opkaldsoplysninger
 
-Oversigtsoplysninger for møder og opkald i en Teams kanal gemmes også i postkasserne for de brugere, der ringede til mødet eller opkaldet. Dette indhold bevares også, når en eDiscovery-venteposition er placeret i brugerpostkasser.
+Oversigtsoplysninger for møder og opkald i en Teams-kanal gemmes også i postkasserne for de brugere, der har ringet til mødet eller opkaldet. Dette indhold bevares også, når en eDiscovery-venteposition er placeret i brugerpostkasser.
 
 ### <a name="preserve-content-in-private-channels"></a>Bevar indhold i private kanaler
 
@@ -136,18 +134,18 @@ Fra og med februar 2020 har vi også aktiveret muligheden for at bevare indhold 
 
 ### <a name="preserve-wiki-content"></a>Bevar wikiindhold
 
-Alle team- eller teamkanaler indeholder også en wiki til notetagning og samarbejde. Wikiindholdet gemmes automatisk i en fil med et .mht-format. Denne fil er gemt i dokumentbiblioteket Teams wikidata på teamets SharePoint websted. Du kan bevare wikiindholdet ved at føje teamets SharePoint websted til eDiscovery-venteposition.
+Alle team- eller teamkanaler indeholder også en wiki til notetagning og samarbejde. Wikiindholdet gemmes automatisk i en fil med et .mht-format. Denne fil er gemt i Teams Wikidata-dokumentbiblioteket på teamets SharePoint-websted. Du kan bevare wikiindholdet ved at føje teamets SharePoint-websted til eDiscovery-venteposition.
 
 > [!NOTE]
-> Muligheden for at bevare wikiindhold for en team- eller teamkanal (når du placerer teamets SharePoint websted i venteposition) blev udgivet den 22. juni 2017. Hvis et teamwebsted er i venteposition, bevares wikiindholdet fra den pågældende dato. Men hvis et teamwebsted er i venteposition, og wikiindholdet blev slettet før den 22. juni 2017, blev wikiindholdet ikke bevaret.
+> Muligheden for at bevare wikiindhold for en team- eller teamkanal (når du placerer teamets SharePoint-websted i venteposition) blev udgivet den 22. juni 2017. Hvis et teamwebsted er i venteposition, bevares wikiindholdet fra den pågældende dato. Men hvis et teamwebsted er i venteposition, og wikiindholdet blev slettet før den 22. juni 2017, blev wikiindholdet ikke bevaret.
 
 ### <a name="office-365-groups"></a>Office 365 grupper
 
-Teams er baseret på Office 365 grupper. Derfor er det det samme at placere Office 365 grupper i eDiscovery-venteposition Teams indhold i venteposition.
+Teams er baseret på Office 365 grupper. Derfor er det det samme at placere Office 365 grupper i eDiscovery-venteposition, når Teams-indhold sættes i venteposition.
 
-Vær opmærksom på følgende ting, når du placerer både Teams og Office 365 grupper i eDiscovery-venteposition:
+Vær opmærksom på følgende ting, når du placerer både Teams og Office 365 Grupper i eDiscovery-venteposition:
 
-- Som tidligere forklaret skal du angive postkassen og SharePoint websted, der er knyttet til en gruppe eller et team, for at placere indhold i Teams og Office 365 grupper i venteposition.
+- Som tidligere forklaret skal du angive den postkasse og det SharePoint-websted, der er knyttet til en gruppe eller et team, for at placere indhold i Teams og Office 365 grupper i venteposition.
 
 - Kør **Get-UnifiedGroup-cmdlet'en** i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) for at få vist egenskaber for Teams og Office 365 Grupper. Dette er en god måde at få URL-adressen til det websted, der er knyttet til et team eller en Office 365 gruppe. Følgende kommando viser f.eks. de valgte egenskaber for en Office 365 gruppe med navnet Senior Leadership Team:
 
@@ -163,7 +161,7 @@ Vær opmærksom på følgende ting, når du placerer både Teams og Office 365 g
     > [!NOTE]
     > Hvis du vil køre **Cmdlet'en Get-UnifiedGroup**, skal du have tildelt rollen View-Only modtagere i Exchange Online eller være medlem af en rollegruppe, der har fået tildelt rollen View-Only modtagere. 
   
-- Når der søges i en brugers postkasse, bliver der ikke søgt i team eller Office 365 gruppe, som brugeren er medlem af. På samme måde er det kun gruppepostkassen og gruppewebstedet, der sættes i venteposition, når du placerer en gruppe eller Office 365 gruppe i eDiscovery-venteposition. Postkasserne og OneDrive for Business websteder for gruppemedlemmer sættes ikke i venteposition, medmindre du udtrykkeligt føjer dem til eDiscovery-ventepositionen. Så hvis du af juridiske årsager skal sætte et team eller en Office 365 gruppe i venteposition, kan du overveje at tilføje postkasserne og OneDrive konti for team- eller gruppemedlemmer i samme venteposition.
+- Når der søges i en brugers postkasse, bliver der ikke søgt i team eller Office 365 gruppe, som brugeren er medlem af. På samme måde er det kun gruppepostkassen og gruppewebstedet, der sættes i venteposition, når du placerer en gruppe eller Office 365 gruppe i eDiscovery-venteposition. Postkasserne og OneDrive for Business websteder for gruppemedlemmer sættes ikke i venteposition, medmindre du udtrykkeligt føjer dem til eDiscovery-ventepositionen. Så hvis du af juridiske årsager skal sætte et team eller en Office 365 gruppe i venteposition, kan du overveje at tilføje postkasser og OneDrive-konti for team- eller gruppemedlemmer i samme venteposition.
 
 - Hvis du vil hente en liste over medlemmerne af et team eller en Office 365 gruppe, kan du få vist egenskaberne på siden <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**Grupper**</a> i Microsoft 365 Administration. Du kan også køre følgende kommando i Exchange Online PowerShell:
 
@@ -174,28 +172,28 @@ Vær opmærksom på følgende ting, når du placerer både Teams og Office 365 g
     > [!NOTE]
     > Hvis du vil køre cmdlet'en **Get-UnifiedGroupLinks**, skal du have tildelt rollen View-Only modtagere i Exchange Online eller være medlem af en rollegruppe, der har tildelt rollen View-Only modtagere.
 
-## <a name="preserve-content-in-onedrive-accounts"></a>Bevar indhold i OneDrive konti
+## <a name="preserve-content-in-onedrive-accounts"></a>Bevar indhold i OneDrive-konti
 
-Hvis du vil indsamle en liste over URL-adresserne for de OneDrive for Business websteder i din organisation, så du kan føje dem til en venteposition eller søgning, der er knyttet til en eDiscovery-sag, skal du se [Opret en liste over alle OneDrive placeringer i din organisation](/onedrive/list-onedrive-urls). Scriptet i denne artikel opretter en tekstfil, der indeholder en liste over alle OneDrive websteder i din organisation. Hvis du vil køre dette script, skal du installere og bruge SharePoint Online Management Shell. Sørg for at føje URL-adressen til organisationens MySite-domæne til hvert OneDrive websted, du vil søge på. Dette er det domæne, der indeholder alle dine OneDrive, `https://contoso-my.sharepoint.com`f.eks. . Her er et eksempel på en URL-adresse til en brugers OneDrive websted: `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft.com`.
+Hvis du vil indsamle en liste over URL-adresserne for de OneDrive for Business websteder i din organisation, så du kan føje dem til en venteposition eller søgning, der er knyttet til en eDiscovery-sag, skal du se [Opret en liste over alle OneDrive-placeringer i din organisation](/onedrive/list-onedrive-urls). Scriptet i denne artikel opretter en tekstfil, der indeholder en liste over alle OneDrive-websteder i din organisation. Hvis du vil køre dette script, skal du installere og bruge SharePoint Online Management Shell. Sørg for at føje URL-adressen til organisationens MySite-domæne til hvert OneDrive-websted, du vil søge efter. Dette er det domæne, der indeholder hele dit OneDrive. f.eks.  `https://contoso-my.sharepoint.com`. Her er et eksempel på en URL-adresse til en brugers OneDrive-websted:  `https://contoso-my.sharepoint.com/personal/sarad_contoso_onmicrosoft.com`.
 
 > [!IMPORTANT]
-> URL-adressen til en brugers OneDrive-konto indeholder brugerens hovednavn (UPN) (f.eks. `https://alpinehouse-my.sharepoint.com/personal/sarad_alpinehouse_onmicrosoft_com`). I det sjældne tilfælde, at en persons UPN ændres, ændres vedkommendes OneDrive URL-adresse også for at inkorporere det nye UPN. Hvis en brugers OneDrive konto er en del af en eDiscovery-venteposition, gammel, og vedkommendes UPN ændres, skal du opdatere ventepositionen, og du skal opdatere ventepositionen og tilføje brugerens nye ONEDRIVE URL-adresse og fjerne den gamle. Du kan få flere oplysninger under [Sådan påvirker UPN-ændringer OneDrive URL-adressen](/onedrive/upn-changes).
+> URL-adressen til en brugers OneDrive-konto indeholder brugerens hovednavn (UPN) (f.eks. `https://alpinehouse-my.sharepoint.com/personal/sarad_alpinehouse_onmicrosoft_com`). I det sjældne tilfælde, at en persons UPN ændres, ændres vedkommendes URL-adresse til OneDrive også for at inkorporere det nye UPN. Hvis en brugers OneDrive-konto er en del af en eDiscovery-venteposition, gammel, og brugerens UPN ændres, skal du opdatere ventepositionen, og du skal opdatere ventepositionen og tilføje brugerens nye URL-adresse til OneDrive og fjerne den gamle. Du kan få flere oplysninger under [Sådan påvirker UPN-ændringer URL-adressen til OneDrive](/onedrive/upn-changes).
 
 ## <a name="removing-content-locations-from-an-ediscovery-hold"></a>Fjerner indholdsplaceringer fra en eDiscovery-venteposition
 
-Når en postkasse, SharePoint websted eller OneDrive konto er fjernet fra eDiscovery-venteposition, anvendes der en *forsinkelse i venteposition*. Det betyder, at den faktiske fjernelse af ventepositionen forsinkes i 30 dage for at forhindre, at data slettes permanent (fjernes) fra en indholdsplacering. Dette giver administratorer mulighed for at søge efter eller gendanne indhold, der fjernes, når en eDiscovery-venteposition fjernes. Detaljerne om, hvordan forsinkelsesventepositionen fungerer for postkasser og websteder, er forskellige.
+Når en postkasse, Et SharePoint-websted eller en OneDrive-konto er fjernet fra eDiscovery-venteposition, anvendes der en *forsinkelse i venteposition* . Det betyder, at den faktiske fjernelse af ventepositionen forsinkes i 30 dage for at forhindre, at data slettes permanent (fjernes) fra en indholdsplacering. Dette giver administratorer mulighed for at søge efter eller gendanne indhold, der fjernes, når en eDiscovery-venteposition fjernes. Detaljerne om, hvordan forsinkelsesventepositionen fungerer for postkasser og websteder, er forskellige.
 
 - **Postkasser:** Der placeres en forsinkelse i en postkasse, næste gang Assistent til administreret mappe behandler postkassen og registrerer, at en eDiscovery-venteposition er fjernet. Der anvendes specifikt forsinkelse på en postkasse, når Assistent til administreret mappe angiver en af følgende postkasseegenskaber til **Sand**:
 
-   - **DelayHoldApplied:** Denne egenskab gælder for mailrelateret indhold (genereret af personer, der bruger Outlook og Outlook på internettet), der er gemt i en brugers postkasse.
+   - **DelayHoldApplied:** Denne egenskab gælder for mailrelateret indhold (genereret af personer, der bruger Outlook og Outlook på internettet), som er gemt i en brugers postkasse.
 
-   - **DelayReleaseHoldApplied:** Denne egenskab gælder for skybaseret indhold (genereret af apps, der ikke er Outlook, f.eks. Microsoft Teams, Microsoft Forms og Microsoft Yammer), der er gemt i en brugers postkasse. Clouddata, der genereres af en Microsoft-app, gemmes typisk i en skjult mappe i en brugers postkasse.
+   - **DelayReleaseHoldApplied:** Denne egenskab gælder for skybaseret indhold (genereret af ikke-Outlook-apps, f.eks. Microsoft Teams, Microsoft Forms og Microsoft Yammer), der er gemt i en brugers postkasse. Clouddata, der genereres af en Microsoft-app, gemmes typisk i en skjult mappe i en brugers postkasse.
 
-   Når der er placeret en forsinkelse i postkassen (når en af de forrige egenskaber er angivet til **Sand**), anses postkassen stadig for at være i venteposition i ubegrænset varighed, som om postkassen var i procesretlig venteposition. Efter 30 dage udløber forsinkelsesventetiden, og Microsoft 365 forsøger automatisk at fjerne forsinkelsesventetiden (ved at angive egenskaben DelayHoldApplied eller DelayReleaseHoldApplied til **Falsk**), så ventepositionen fjernes. Når en af disse egenskaber er angivet til **Falsk**, fjernes de tilsvarende elementer, der er markeret til fjernelse, næste gang postkassen behandles af Assistent til administrerede mapper.
+   Når der er placeret en forsinkelse i postkassen (når en af de forrige egenskaber er angivet til **Sand**), anses postkassen stadig for at være i venteposition i ubegrænset varighed, som om postkassen var i procesretlig venteposition. Efter 30 dage udløber forsinkelsesventetiden, og Microsoft 365 forsøger automatisk at fjerne forsinkelsen (ved at angive egenskaben DelayHoldApplied eller DelayReleaseHoldApplied til **Falsk**), så ventepositionen fjernes. Når en af disse egenskaber er angivet til **Falsk**, fjernes de tilsvarende elementer, der er markeret til fjernelse, næste gang postkassen behandles af Assistent til administrerede mapper.
 
    Du kan få flere oplysninger under [Administration af postkasser i forsinkelsesventeposition](identify-a-hold-on-an-exchange-online-mailbox.md#managing-mailboxes-on-delay-hold).
 
-- **SharePoint og OneDrive websteder:** Alt SharePoint eller OneDrive indhold, der bevares i biblioteket bevarelsesposition, slettes ikke i løbet af 30-dages forsinkelsesperioden, efter at et websted er fjernet fra eDiscovery-venteposition. Dette svarer til det, der sker, når et websted frigives fra en opbevaringspolitik. Derudover kan du ikke manuelt slette dette indhold i biblioteket bevarelsesventetid i løbet af den 30-dages forsinkelsesperiode. 
+- **SharePoint- og OneDrive-websteder:** Alt SharePoint- eller OneDrive-indhold, der bevares i biblioteket til bevarelse af venteposition, slettes ikke i løbet af en 30-dages forsinkelsesperiode, efter at et websted er fjernet fra en eDiscovery-venteposition. Dette svarer til det, der sker, når et websted frigives fra en opbevaringspolitik. Derudover kan du ikke manuelt slette dette indhold i biblioteket bevarelsesventetid i løbet af den 30-dages forsinkelsesperiode. 
 
    Du kan få flere oplysninger under [Frigivelse af en politik til opbevaring](retention.md#releasing-a-policy-for-retention).
 
@@ -208,10 +206,10 @@ I følgende tabel vises grænserne for eDiscovery-sager og ventepositioner for s
   | Beskrivelse af grænse | Grænse |
   |:-----|:-----|
   |Maksimalt antal sager for en organisation.  <br/> |Ingen grænse  <br/> |
-  |Det maksimale antal politikker for eDiscovery-venteposition for en organisation. Denne grænse omfatter det samlede antal ventepositionspolitikker i sager med eDiscovery (Standard) og eDiscovery (Premium).  <br/> |10.0001<sup></sup>  <br/> |
-  |Det maksimale antal postkasser i en enkelt eDiscovery-venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer Grupper.  <br/> |1,000  <br/> |
-  |Det maksimale antal websteder i en enkelt eDiscovery-venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer grupper.  <br/> |100  <br/> |
-  |Det maksimale antal sager, der vises på eDiscovery-startsiden, og det maksimale antal elementer, der vises på fanerne Ventepositioner, Søgninger og Eksportér i en sag.  |1.0001<sup></sup>|
+  |Det maksimale antal politikker for eDiscovery-venteposition for en organisation. Denne grænse omfatter det samlede antal ventepositionspolitikker i sager med eDiscovery (Standard) og eDiscovery (Premium).  <br/> |10.000<sup>1</sup>  <br/> |
+  |Det maksimale antal postkasser i en enkelt eDiscovery-venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer-grupper.  <br/> |1,000  <br/> |
+  |Det maksimale antal websteder i en enkelt eDiscovery-venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint-websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer-grupper.  <br/> |100  <br/> |
+  |Det maksimale antal sager, der vises på eDiscovery-startsiden, og det maksimale antal elementer, der vises på fanerne Ventepositioner, Søgninger og Eksportér i en sag.  |1.000<sup>1</sup>|
 
    > [!NOTE]
    > <sup>1</sup> Hvis du vil have vist en liste over mere end 1.000 sager, ventepositioner, søgninger eller eksporter, kan du bruge den tilsvarende PowerShell-cmdlet til sikkerhed & overholdelse:

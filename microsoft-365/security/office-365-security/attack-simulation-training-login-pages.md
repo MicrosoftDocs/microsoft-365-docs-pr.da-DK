@@ -12,12 +12,12 @@ ms.collection:
 - m365initiative-defender-office365
 description: Administratorer kan få mere at vide om, hvordan de opretter og administrerer logonsider for simulerede phishingangreb i Microsoft Defender for Office 365 Plan 2.
 ms.technology: mdo
-ms.openlocfilehash: 5ecbdddfff4d528c1af8e20cf4d3831d3250eacc
-ms.sourcegitcommit: 03543c27c33427ac7f11af4c04fff35a181a2524
+ms.openlocfilehash: 7057f443675cb0715a41f78c80feb69cdc75d22c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66609285"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640305"
 ---
 # <a name="login-pages-in-attack-simulation-training"></a>Logonsider i kursus i angrebssimulering
 
@@ -73,7 +73,7 @@ Du kan oprette brugerdefinerede logonsider på følgende placeringer:
    Klik på ![Opret nyt ikon.](../../media/m365-cc-sc-create-icon.png) **Opret ny** for at starte guiden Opret slutbrugerlogonside.
 
    > [!NOTE]
-   > Ikonet ![Opret ny.](../../media/m365-cc-sc-create-icon.png) **Opret ny** er også tilgængelig under trinnet til valg af nyttedata til oprettelse af en simulering. Du kan få flere oplysninger under [Simuler et phishing-angreb med oplæring i simulering af angreb i Defender for Office 365](attack-simulation-training.md).
+   > ![Opret nyt ikon.](../../media/m365-cc-sc-create-icon.png) **Opret ny** er også tilgængelig under trinnet til valg af nyttedata til oprettelse af en simulerings- eller simuleringsautomatisering. Du kan få flere oplysninger under [Opret en simulering: Vælg en nyttedata- og logonside](attack-simulation-training.md#select-a-payload-and-login-page) , og [opret en automatisering af simulering: Vælg en nyttedata- og logonside](attack-simulation-training-simulation-automations.md#select-a-payload-and-login-page).
    >
    > Når som helst under oprettelsesguiden kan du klikke på **Gem og luk** for at gemme dine fremskridt og fortsætte med at konfigurere logonsiden senere. Du kan fortsætte, hvor du slap, ved at vælge logonsiden under fanen **Lejerlogonsider** på **logonsider** og derefter klikke på ![ikonet Rediger.](../../media/m365-cc-sc-edit-icon.png) **Rediger**. Den delvist fuldførte logonside **har statusværdien** **Kladde**.
 

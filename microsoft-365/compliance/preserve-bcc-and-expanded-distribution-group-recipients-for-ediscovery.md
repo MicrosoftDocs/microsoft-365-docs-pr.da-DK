@@ -11,19 +11,17 @@ ms.topic: article
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.assetid: eb8ddf15-0080-457e-9d83-e73e193da334
-description: In-Place venteposition, procesretsholdning og Microsoft 365 opbevaringspolitikker giver dig mulighed for at bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og krav til eDiscovery.
-ms.openlocfilehash: 1a9ac5e19350fd2a98ecc20e94dcdcdcc84a71c7
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: In-Place venteposition, procesretsholdning og Microsoft 365-opbevaringspolitikker giver dig mulighed for at bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og eDiscovery-krav.
+ms.openlocfilehash: de1a04c223856e1257e03e5dd47ae6d5e88033eb
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093015"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637081"
 ---
 # <a name="preserve-bcc-and-expanded-distribution-group-recipients-for-ediscovery"></a>Bevar Bcc- og udvidede distributionsgruppemodtagere for eDiscovery
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
-I forbindelse med procesførelser, eDiscovery-ventepositioner og [Microsoft 365 opbevaringspolitikker](./retention.md) (oprettet i Microsoft Purview-overholdelsesportalen) kan du bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og eDiscovery-krav. Oplysninger om modtagere, der er direkte adresseret i felterne Til og Cc i en meddelelse, medtages som standard i alle meddelelser. Men din organisation kan kræve muligheden for at søge efter og gengive oplysninger om alle modtagere af en meddelelse. Dette omfatter:
+Med procesførelser, eDiscovery-ventepositioner og [Microsoft 365-opbevaringspolitikker](./retention.md) (oprettet i Microsoft Purview-compliance-portal) kan du bevare postkasseindhold, så det opfylder de lovmæssige krav til overholdelse af angivne standarder og krav til eDiscovery. Oplysninger om modtagere, der er direkte adresseret i felterne Til og Cc i en meddelelse, medtages som standard i alle meddelelser. Men din organisation kan kræve muligheden for at søge efter og gengive oplysninger om alle modtagere af en meddelelse. Dette omfatter:
   
 - **Modtagere, der er adresseret ved hjælp af Bcc-feltet i en meddelelse:** Bcc-modtagere gemmes i meddelelsen i afsenderens postkasse, men medtages ikke i brevhoveder i meddelelsen, der leveres til modtagere. 
     
@@ -35,13 +33,13 @@ Exchange Online og Exchange Server 2013 (kumulativ opdatering 7 og nyere version
 
 Som tidligere nævnt gemmes oplysninger om Bcc-modtagere sammen med meddelelsen i afsenderens postkasse. Disse oplysninger er indekseret og tilgængelige for eDiscovery-søgninger og ventepositioner.
 
-Oplysninger om udvidede modtagere af distributionsgrupper gemmes sammen med meddelelsen, når du har placeret en postkasse i In-Place venteposition eller procesførelsesventeposition. I Office 365 gemmes disse oplysninger også, når der anvendes en Microsoft 365 opbevaringspolitik på en postkasse. Medlemskab af distributionsgruppe bestemmes på det tidspunkt, hvor meddelelsen sendes. Den udvidede modtagerliste, der er gemt sammen med meddelelsen, påvirkes ikke af ændringer af medlemskabet af gruppen, når meddelelsen er sendt.
+Oplysninger om udvidede modtagere af distributionsgrupper gemmes sammen med meddelelsen, når du har placeret en postkasse i In-Place venteposition eller procesførelsesventeposition. I Office 365 gemmes disse oplysninger også, når der anvendes en Microsoft 365-opbevaringspolitik på en postkasse. Medlemskab af distributionsgruppe bestemmes på det tidspunkt, hvor meddelelsen sendes. Den udvidede modtagerliste, der er gemt sammen med meddelelsen, påvirkes ikke af ændringer af medlemskabet af gruppen, når meddelelsen er sendt.
 
 |Oplysninger om...|Er gemt i...|Er gemt som standard?|Er tilgængelig for...|
 |---|---|---|---|
 |Modtagere af til og Cc|Meddelelsesegenskaber i afsenderens og modtagernes postkasser.|Ja|Afsender, modtagere og overholdelsesofficerer|
 |Bcc-modtagere|Egenskaben Message i afsenderens postkasse.|Ja|Afsendere og overholdelsesofficerer|
-|Udvidede distributionsgruppemodtagere|Meddelelsesegenskaber i afsenderens postkasse.|Nej. Udvidede modtageroplysninger for distributionsgruppen gemmes, når en postkasse er placeret i venteposition In-Place eller procesførelse eller tildelt en Microsoft 365 opbevaringspolitik.|Overholdelsesofficerer|
+|Udvidede distributionsgruppemodtagere|Meddelelsesegenskaber i afsenderens postkasse.|Nej. Udvidede modtageroplysninger for distributionsgruppen gemmes, når en postkasse er placeret i venteposition In-Place eller procesførelse eller tildelt en Microsoft 365-opbevaringspolitik.|Overholdelsesofficerer|
 
 ## <a name="searching-for-messages-sent-to-bcc-and-expanded-distribution-group-recipients"></a>Søger efter meddelelser, der er sendt til Bcc, og udvidede modtagere af distributionsgrupper
 
@@ -74,11 +72,11 @@ Scenarie 2: Bob sender en mail til John (Til/Cc) og Jack (Bcc direkte eller indi
 
  **Q. Hvornår og hvor gemmes Bcc-modtageroplysningerne?**
 
-A. Bcc-modtageroplysningerne bevares som standard i den oprindelige meddelelse i afsenderens postkasse. Hvis Bcc-modtageren er en distributionsgruppe, udvides medlemskabet af distributionsgruppen kun, hvis afsenderens postkasse er i venteposition eller er tildelt til en Microsoft 365 opbevaringspolitik.
+A. Bcc-modtageroplysningerne bevares som standard i den oprindelige meddelelse i afsenderens postkasse. Hvis Bcc-modtageren er en distributionsgruppe, udvides medlemskabet af distributionsgruppen kun, hvis afsenderens postkasse er i venteposition eller er tildelt til en Microsoft 365-opbevaringspolitik.
 
  **Q. Hvornår og hvor gemmes listen over udvidede modtagere af distributionsgrupper?**
 
-A. Gruppemedlemskab udvides, når meddelelsen sendes. Listen over medlemmer af den udvidede distributionsgruppe gemmes i den oprindelige meddelelse i afsenderens postkasse. Afsenderens postkasse skal være i venteposition In-Place, procesførelsesventeposition eller være tildelt en Microsoft 365 opbevaringspolitik.
+A. Gruppemedlemskab udvides, når meddelelsen sendes. Listen over medlemmer af den udvidede distributionsgruppe gemmes i den oprindelige meddelelse i afsenderens postkasse. Afsenderens postkasse skal være på In-Place venteposition, procesførelsesholdning eller tildelt en Microsoft 365-opbevaringspolitik.
 
  **Q. Kan modtagerne af To/Cc se, hvilke modtagere der blev Bcc'ed?**
 
@@ -86,7 +84,7 @@ A. Nej. Disse oplysninger er ikke inkluderet i brevhoveder og er ikke synlige fo
 
  **Q. Hvordan kan jeg sikre, at udvidede modtagere af distributionsgrupper altid bevares?**
 
-A. Hvis du vil sikre, at udvidede medlemmer af distributionsgruppen altid bevares med en meddelelse, skal [du placere alle postkasser i venteposition](/Exchange/policy-and-compliance/holds/place-all-mailboxes-on-hold) eller oprette en politik for Microsoft 365 hele organisationen.
+A. Hvis du vil sikre, at udvidede medlemmer af distributionsgruppen altid bevares med en meddelelse, skal [du placere alle postkasser i venteposition](/Exchange/policy-and-compliance/holds/place-all-mailboxes-on-hold) eller oprette en Microsoft 365-opbevaringspolitik for hele organisationen.
 
  **Q. Hvilke typer grupper understøttes?**
 

@@ -19,33 +19,31 @@ search.appverid:
 - MET150
 ms.assetid: e893b19a-660c-41f2-9074-d3631c95a014
 ms.custom: seo-marvel-apr2020
-description: Sådan slår du søgefunktionen Overvågningslog til eller fra på Microsoft Purview-overholdelsesportalen for at aktivere eller deaktivere muligheden for, at administratorer kan søge i overvågningsloggen.
-ms.openlocfilehash: 3602a35169670b61a124cda40c9ab50b481571d8
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Sådan slår du søgefunktionen Overvågningslog til eller fra i Microsoft Purview-compliance-portal for at aktivere eller deaktivere muligheden for, at administratorer kan søge i overvågningsloggen.
+ms.openlocfilehash: 7a757b07796f2b25fc6269a41d51f27e696e77cd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65078861"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640264"
 ---
 # <a name="turn-auditing-on-or-off"></a>Slå overvågning til eller fra
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Overvågningslogføring aktiveres som standard for Microsoft 365 og Office 365 virksomhedsorganisationer. Når du konfigurerer en ny Microsoft 365- eller Office 365-organisation, skal du dog kontrollere overvågningsstatussen for din organisation. Du kan finde instruktioner i afsnittet [Kontrollér overvågningsstatus for din organisation](#verify-the-auditing-status-for-your-organization) i denne artikel. 
 
-Overvågningslogføring er som standard slået til for Microsoft 365 og Office 365 virksomhedsorganisationer. Når du konfigurerer en ny Microsoft 365 eller Office 365 organisation, skal du dog kontrollere overvågningsstatussen for din organisation. Du kan finde instruktioner i afsnittet [Kontrollér overvågningsstatus for din organisation](#verify-the-auditing-status-for-your-organization) i denne artikel. 
-
-Når overvågning i Microsoft Purview-overholdelsesportalen er slået til, registreres bruger- og administratoraktivitet fra din organisation i overvågningsloggen og opbevares i 90 dage og op til et år afhængigt af den licens, der er tildelt til brugerne. Din organisation kan dog have grunde til ikke at ville registrere og gemme overvågningslogdata. I disse tilfælde kan en global administrator beslutte at deaktivere overvågning i Microsoft 365.
+Når overvågning i Microsoft Purview-compliance-portal er slået til, registreres bruger- og administratoraktivitet fra din organisation i overvågningsloggen og opbevares i 90 dage og op til et år afhængigt af den licens, der er tildelt brugerne. Din organisation kan dog have grunde til ikke at ville registrere og gemme overvågningslogdata. I disse tilfælde kan en global administrator beslutte at deaktivere overvågning i Microsoft 365.
 
 > [!IMPORTANT]
 > Hvis du slår overvågning fra i Microsoft 365, kan du ikke bruge API'en Office 365 Management Activity eller Microsoft Sentinel til at få adgang til overvågningsdata for din organisation. Hvis du deaktiverer overvågning ved at følge trinnene i denne artikel, returneres der ingen resultater, når du søger i overvågningsloggen ved hjælp af overholdelsesportalen, eller når du kører cmdlet'en **Search-UnifiedAuditLog** i Exchange Online PowerShell. Det betyder også, at overvågningslogge ikke er tilgængelige via API'en til administration af Office 365 eller Microsoft Sentinel.
   
 ## <a name="before-you-turn-auditing-on-or-off"></a>Før du slår overvågning til eller fra
 
-- Du skal have tildelt rollen Overvågningslogfiler i Exchange Online for at aktivere eller deaktivere overvågning i din Microsoft 365 organisation. Denne rolle tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i Exchange Administration. Globale administratorer i Microsoft 365 er medlemmer af rollegruppen Organisationsadministration i Exchange Online.
+- Du skal have tildelt rollen Overvågningslogge i Exchange Online for at aktivere eller deaktivere overvågning i din Microsoft 365-organisation. Denne rolle tildeles som standard til rollegrupperne Administration af overholdelse og Organisationsadministration på siden **Tilladelser** i Exchange Administration. Globale administratorer i Microsoft 365 er medlemmer af rollegruppen Organisationsadministration i Exchange Online.
 
     > [!NOTE]
     > Brugerne skal have tildelt tilladelser i Exchange Online for at aktivere eller deaktivere overvågning. Hvis du tildeler brugere rollen Overvågningslogge på siden **Tilladelser på overholdelsesportalen** , kan de ikke slå overvågning til eller fra. Det skyldes, at den underliggende cmdlet er en PowerShell-cmdlet Exchange Online.
 
-- Du kan finde en trinvis vejledning i, hvordan du søger i overvågningsloggen, [under Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md). Du kan få flere oplysninger om API'en til administration af Microsoft 365 under [Kom i gang med api'er til administration af Microsoft 365](/office/office-365-management-api/get-started-with-office-365-management-apis).
+- Du kan finde en trinvis vejledning i, hvordan du søger i overvågningsloggen, [under Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md). Du kan få flere oplysninger om MICROSOFT 365 Management Activity API under [Kom i gang med API'er til administration af Microsoft 365](/office/office-365-management-api/get-started-with-office-365-management-apis).
 
 ## <a name="verify-the-auditing-status-for-your-organization"></a>Kontrollér overvågningsstatus for din organisation
 
@@ -66,7 +64,7 @@ Hvis overvågning ikke er slået til for din organisation, kan du aktivere den p
   
 ### <a name="use-the-compliance-center-to-turn-on-auditing"></a>Brug Overholdelsescenter til at aktivere overvågning
 
-1. Gå til , <https://compliance.microsoft.com> og log på.
+1. Gå til <https://compliance.microsoft.com>, og log på.
 
 2. Klik på **Overvåg** i navigationsruden til venstre på overholdelsesportalen.
 
@@ -80,7 +78,7 @@ Hvis overvågning ikke er slået til for din organisation, kan du aktivere den p
 
 ### <a name="use-powershell-to-turn-on-auditing"></a>Brug PowerShell til at aktivere overvågning
 
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør følgende PowerShell-kommando for at aktivere overvågning.
 
@@ -94,7 +92,7 @@ Hvis overvågning ikke er slået til for din organisation, kan du aktivere den p
 
 Du skal bruge Exchange Online PowerShell til at slå overvågning fra.
   
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør følgende PowerShell-kommando for at deaktivere overvågning.
 
@@ -118,9 +116,9 @@ Du skal bruge Exchange Online PowerShell til at slå overvågning fra.
 
 ## <a name="audit-records-when-auditing-status-is-changed"></a>Overvåg poster, når overvågningsstatus ændres
 
-Ændringer af overvågningsstatus i din organisation overvåges selv. Det betyder, at overvågningsposter logføres, når overvågning er slået til eller fra. Du kan søge i Exchange administratorens overvågningslog for disse overvågningsposter.
+Ændringer af overvågningsstatus i din organisation overvåges selv. Det betyder, at overvågningsposter logføres, når overvågning er slået til eller fra. Du kan søge i Exchange-administratorens overvågningslog for disse overvågningsposter.
 
-Hvis du vil søge i Exchange administratorovervågningslog for overvågningsposter, der genereres, når overvågning aktiveres eller deaktiveres, skal du køre følgende kommando i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+Hvis du vil søge i Exchange-administratorens overvågningslog for overvågningsposter, der genereres, når overvågning aktiveres eller deaktiveres, skal du køre følgende kommando i [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
 ```powershell
 Search-AdminAuditLog -Cmdlets Set-AdminAuditLogConfig -Parameters UnifiedAuditLogIngestionEnabled
@@ -140,4 +138,4 @@ Værdien af `Confirm` i egenskaben *CmdletParameters* angiver, at unified overv�
 
 Værdien af `Confirm` er ikke inkluderet i egenskaben *CmdletParameters* . Dette angiver, at unified overvågningslogføring blev slået fra ved at køre kommandoen **Set-AdminAuditLogConfig -UnifiedAuditLogIngestionEnabled $false** .
 
-Du kan finde flere oplysninger om søgning i Exchange administratorens overvågningslog i [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog).
+Du kan finde flere oplysninger om søgning i Exchange-administratorens overvågningslog under [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog).

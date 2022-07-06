@@ -11,21 +11,19 @@ ms.topic: how-to
 ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
-description: Administratorer kan konfigurere en connector til at importere og arkivere data fra Veritas Slack eDiscovery til Microsoft 365. Med denne connector kan du arkivere data fra datakilder fra tredjepart i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
-ms.openlocfilehash: 83eb87bf4c3380b07e47bf36ccb55668b55c1152
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Administratorer kan konfigurere en connector til at importere og arkivere data fra Veritas Slack eDiscovery til Microsoft 365. Med denne connector kan du arkivere data fra tredjepartsdatakilder i Microsoft 365. Når du har arkiveret disse data, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridisk bevarelse, indholdssøgning og opbevaringspolitikker til at administrere tredjepartsdata.
+ms.openlocfilehash: e48bd25b5f444ce17eba08677f5bd1c1171af1ff
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318718"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637743"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data"></a>Konfigurer en connector til arkivering af Slack eDiscovery-data
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere tredjepartsdata fra sociale medier, chat- og dokumentsamarbejdesplatforme til postkasser i din Microsoft 365-organisation. Veritas leverer en [Slack-connector](https://globanet.com/slack/) , der er konfigureret til at hente elementer fra tredjepartsdatakilden (regelmæssigt) og derefter importere disse elementer til Microsoft 365. Slack henter meddelelser og filer fra Slack-API'en og konverterer dem til et mailmeddelelsesformat og importerer derefter elementet til brugerpostkasser.
 
-Brug en Veritas-connector i Microsoft Purview-compliance-portal til at importere og arkivere tredjepartsdata fra sociale medier, chat- og dokumentsamarbejdesplatforme til postkasser i din Microsoft 365 organisation. Veritas leverer en [Slack-connector](https://globanet.com/slack/), der er konfigureret til at hente elementer fra tredjepartsdatakilden (med jævne mellemrum) og derefter importere disse elementer for at Microsoft 365. Slack henter meddelelser og filer fra Slack-API'en og konverterer dem til et mailmeddelelsesformat og importerer derefter elementet til brugerpostkasser.
-
-Når Slack eDiscovery-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Slack-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Når Slack eDiscovery-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en Slack-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 ## <a name="overview-of-archiving-slack-ediscovery-data"></a>Oversigt over arkivering af Slack eDiscovery-data
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 2. En gang hver 24 timer kopieres chatbeskeder fra Slack eDiscovery til Veritas Merge1-webstedet. Connectoren konverterer også indholdet af en chatmeddelelse til et mailformat.
 
-3. Den Slack eDiscovery-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører chatmeddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den Slack eDiscovery-connector, du opretter på overholdelsesportalen, opretter forbindelse til Veritas Merge1-webstedet hver dag og overfører chatbeskederne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Connectoren importerer de konverterede chatbeskedelementer til postkasser for bestemte brugere ved hjælp af værdien af egenskaben *Mail* og automatisk brugertilknytning, som beskrevet i trin 3. Der oprettes en ny undermappe i mappen Indbakke med navnet **Slack eDiscovery** i brugerpostkasserne, og chatmeddelelseselementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle chatbeskeder indeholder denne egenskab, som udfyldes med mailadressen på hver deltager i chatmeddelelsen.
 
@@ -47,15 +45,15 @@ I følgende oversigt forklares processen med at bruge en connector til at arkive
 
 - Hent brugernavnet og adgangskoden til din organisations Slack-virksomhedskonto. Du skal logge på denne konto i trin 2, når du konfigurerer Slack.
 
-- Den bruger, der opretter Slack eDiscovery-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Slack eDiscovery-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne Veritas-dataconnector fås som offentlig prøveversion i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-the-slack-ediscovery-connector"></a>Trin 1: Konfigurer Slack eDiscovery-connectoren
 
 Det første trin er at få adgang til siden **Dataconnectors på overholdelsesportalen** og oprette en connector til Slack-data.
 
-1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **DataconnectorsSlack** >  **eDiscovery**.
+1. Gå til , [https://compliance.microsoft.com](https://compliance.microsoft.com/) og klik derefter på **Dataconnectors** > **Slack eDiscovery**.
 
 2. Klik på **Tilføj connector** på siden **Slack eDiscovery-produktbeskrivelse**.
 
@@ -73,9 +71,9 @@ Når du har klikket på **Gem & Udfør**, vises siden **Brugertilknytning** i co
 
 ## <a name="step-3-map-users-and-complete-the-connector-setup"></a>Trin 3: Tilknyt brugere, og fuldfør connectorkonfigurationen
 
-1. Aktivér automatisk brugertilknytning på siden **Knyt eksterne brugere til Microsoft 365 brugere**.
+1. Aktivér automatisk brugertilknytning på siden **Knyt eksterne brugere til Microsoft 365-brugere** .
 
-   Slack eDiscovery-elementer omfatter en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365 bruger, importeres elementerne til den pågældende brugers postkasse.
+   Slack eDiscovery-elementer omfatter en egenskab kaldet *Mail*, som indeholder mailadresser til brugere i din organisation. Hvis connectoren kan knytte denne adresse til en Microsoft 365-bruger, importeres elementerne til den pågældende brugers postkasse.
 
 2. Klik på **Næste**, gennemse dine indstillinger, og gå til siden **Dataconnectors** for at se status for importprocessen for den nye connector.
 

@@ -23,16 +23,14 @@ ms.custom:
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan Office 365 globale administratorer kan anvende organisationens branding på krypterede mails & indholdet af krypteringsportalen.
-ms.openlocfilehash: fb0525b112137bf57007b4188bc461abbb0c3f27
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: bf6f3b9de64185778be7eeb4da6cc8e537f0305a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016850"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637015"
 ---
-# <a name="add-your-organizations-brand-to-your-microsoft-365-for-business-message-encryption-encrypted-messages"></a>Føj organisationens brand til dine Microsoft 365 til virksomheder Krypterede meddelelser om meddelelseskryptering
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="add-your-organizations-brand-to-your-microsoft-365-for-business-message-encryption-encrypted-messages"></a>Føj organisationens brand til dine krypterede meddelelser i Meddelelseskryptering i Microsoft 365 til virksomheder
 
 Du kan anvende virksomhedens branding til at tilpasse udseendet af organisationens mailmeddelelser og krypteringsportalen. Du skal anvende globale administratortilladelser på din arbejds- eller skolekonto, før du kan komme i gang. Når du har disse tilladelser, kan du bruge Get-OMEConfiguration og Set-OMEConfiguration-cmdlet'er i Exchange Online PowerShell til at tilpasse disse dele af krypterede mails:
 
@@ -53,7 +51,7 @@ Hvis du vil have mere kontrol, skal du bruge Avanceret meddelelseskryptering i M
 - Om du vil tillade, at mails tilbagekaldes
 - Angiver, om mails, der sendes til eksterne modtagere, skal udløbe efter et angivet antal dage.
 
-Når du har oprettet skabelonerne, kan du anvende dem på krypterede mails ved hjælp af Exchange regler for mailflow. Hvis du har Microsoft Purview Advanced Message Encryption, kan du tilbagekalde alle mails, du har mærket, ved hjælp af disse skabeloner.
+Når du har oprettet skabelonerne, kan du anvende dem på krypterede mails ved hjælp af regler for Exchange-mailflow. Hvis du har Microsoft Purview Advanced Message Encryption, kan du tilbagekalde alle mails, du har mærket, ved hjælp af disse skabeloner.
 
 ## <a name="work-with-ome-branding-templates"></a>Arbejd med OME-brandingskabeloner
 
@@ -146,23 +144,23 @@ Sådan fjerner du en brugerdefineret brandingskabelon:
 
    Du kan få flere oplysninger under [Remove-OMEConfiguration](/powershell/module/exchange/remove-omeconfiguration).
 
-## <a name="create-an-exchange-mail-flow-rule-that-applies-your-custom-branding-to-encrypted-emails"></a>Opret en Exchange regel for mailflow, der anvender din brugerdefinerede branding på krypterede mails
+## <a name="create-an-exchange-mail-flow-rule-that-applies-your-custom-branding-to-encrypted-emails"></a>Opret en regel for Exchange-mailflow, der anvender din brugerdefinerede branding på krypterede mails
 
 > [!IMPORTANT]
 > Tredjepartsprogrammer, der scanner og ændrer mails, kan forhindre, at OME-branding anvendes korrekt.
 
-Når du enten har ændret standardskabelonen eller oprettet nye brandingskabeloner, kan du oprette Exchange regler for mailflow for at anvende din brugerdefinerede branding baseret på visse betingelser. Vigtigst af alt skal mailen krypteres. En sådan regel anvender brugerdefineret branding i følgende scenarier:
+Når du enten har ændret standardskabelonen eller oprettet nye brandingskabeloner, kan du oprette exchange-regler for mailflow for at anvende din brugerdefinerede branding på baggrund af visse betingelser. Vigtigst af alt skal mailen krypteres. En sådan regel anvender brugerdefineret branding i følgende scenarier:
 
 - Hvis mailen blev krypteret manuelt af slutbrugeren ved hjælp af Outlook eller Outlook på internettet, tidligere Outlook Web App
-- Hvis mailen automatisk blev krypteret af en Exchange mailflowregel eller Microsoft Purview-politik til forebyggelse af datatab
+- Hvis mailen automatisk blev krypteret af en exchange-mailflowregel eller Microsoft Purview Forebyggelse af datatab politik
 
-Hvis du vil sikre, at Microsoft Purview-meddelelseskryptering anvender din brugerdefinerede branding, skal du konfigurere en regel for mailflow for at kryptere dine mails. Prioriteten for krypteringsreglen skal være højere end brandingreglen, så krypteringsreglen behandles først. Hvis du opretter krypteringsreglen før brandingreglen, har krypteringsreglen som standard en højere prioritet. Du kan finde oplysninger om, hvordan du opretter en Exchange regel for mailflow, der anvender kryptering, under [Definer regler for mailflow til kryptering af mails i Office 365](define-mail-flow-rules-to-encrypt-email.md). Du kan få oplysninger om, hvordan du angiver prioriteten for en regel for et mailflow, under [Administrer regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#set-the-priority-of-a-mail-flow-rule).
+Hvis du vil sikre, at Microsoft Purview-meddelelseskryptering anvender din brugerdefinerede branding, skal du konfigurere en regel for mailflow for at kryptere dine mails. Prioriteten for krypteringsreglen skal være højere end brandingreglen, så krypteringsreglen behandles først. Hvis du opretter krypteringsreglen før brandingreglen, har krypteringsreglen som standard en højere prioritet. Du kan finde oplysninger om, hvordan du opretter en Exchange-regel for mailflow, der anvender kryptering, under [Definer regler for mailflow til kryptering af mails i Office 365](define-mail-flow-rules-to-encrypt-email.md). Du kan få oplysninger om, hvordan du angiver prioriteten for en regel for et mailflow, under [Administrer regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#set-the-priority-of-a-mail-flow-rule).
 
 1. Log [på Office 365](https://support.office.com/article/b9582171-fd1f-4284-9846-bdd72bb28426#ID0EAABAAA=Web_browser) ved hjælp af en arbejds- eller skolekonto, der er tildelt globale administratortilladelser, i en webbrowser.
 
-2. Vælg feltet **Administrator** .
+2. Vælg feltet **Administration**.
 
-3. Vælg **Administrationscentre** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Exchange</a> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**i Microsoft 365 Administration**</a>.
+3. I <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a> skal du vælge **Administration centre** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">**Exchange**</a>.
 
 4. I EAC skal du gå til **Regler for** **mailflow** \> og vælge **Nyt** ![ikon.](../media/457cd93f-22c2-4571-9f83-1b129bcfb58e.gif) \>**Opret en ny regel**. Du kan få flere oplysninger om brug af EAC [i Exchange Administration i Exchange Online](/exchange/exchange-admin-center).
 
@@ -176,7 +174,7 @@ Hvis du vil sikre, at Microsoft Purview-meddelelseskryptering anvender din bruge
 
 7. Hvis du allerede har defineret en regel for mailflow for at anvende kryptering, skal du springe dette trin over. Ellers skal du konfigurere reglen for mailflowet til at anvende kryptering ved at vælge **Rediger meddelelsessikkerheden** i **Gør følgende** og derefter vælge **Anvend Office 365 Meddelelsekryptering og rettighedsbeskyttelse**. Vælg en RMS-skabelon på listen, og vælg derefter **Tilføj handling**.
 
-   Listen over skabeloner indeholder standardskabeloner og -indstillinger og eventuelle brugerdefinerede skabeloner, du opretter. Hvis listen er tom, skal du kontrollere, at du har konfigureret Microsoft Purview Message Encryption. Du kan finde instruktioner under [Konfigurer Microsoft Purview-meddelelseskryptering](set-up-new-message-encryption-capabilities.md). Du kan få oplysninger om standardskabelonerne under [Konfiguration og administration af skabeloner til Azure Information Protection](/information-protection/deploy-use/configure-policy-templates). Du kan få oplysninger om indstillingen **Videresend ikke** under [Videresend ikke for mails](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). Du kan få oplysninger om indstillingen **Kun kryptering** under [Kryptér kun for mails](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
+   Listen over skabeloner indeholder standardskabeloner og -indstillinger og eventuelle brugerdefinerede skabeloner, du opretter. Hvis listen er tom, skal du kontrollere, at du har konfigureret Microsoft Purview-meddelelseskryptering. Du kan finde en vejledning under [Konfigurer Microsoft Purview-meddelelseskryptering](set-up-new-message-encryption-capabilities.md). Du kan få oplysninger om standardskabelonerne under [Konfiguration og administration af skabeloner til Azure Information Protection](/information-protection/deploy-use/configure-policy-templates). Du kan få oplysninger om indstillingen **Videresend ikke** under [Videresend ikke for mails](/information-protection/deploy-use/configure-usage-rights#do-not-forward-option-for-emails). Du kan få oplysninger om indstillingen **Kun kryptering** under [Kryptér kun for mails](/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails).
 
 8. **Fra Gør følgende** skal du vælge **Rediger meddelelsessikkerheden** \> **Anvend brugerdefineret branding på OME-meddelelser**. Vælg derefter en brandingskabelon på rullelisten.
 

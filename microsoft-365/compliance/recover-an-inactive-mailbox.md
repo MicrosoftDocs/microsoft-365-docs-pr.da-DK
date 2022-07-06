@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: 35d0ecdb-7cb0-44be-ad5c-69df2f8f8b25
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan du gendanner indholdet af en inaktiv postkasse i Office 365 ved at konvertere den til en ny postkasse, der indeholder indholdet af den inaktive postkasse.
-ms.openlocfilehash: 2c679407cb4f7203bb69d88c871bd844694a7c47
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: f09104703807532770c7ea5b660e1088589883ec
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66101542"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639660"
 ---
 # <a name="recover-an-inactive-mailbox"></a>Gendan en inaktiv postkasse
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 En inaktiv postkasse (som er en type blød slettet postkasse) bruges til at bevare en tidligere medarbejders mail, når vedkommende forlader din organisation. Hvis medarbejderen vender tilbage til din organisation, eller hvis en anden medarbejder påtager sig ansvarsområderne for den tidligere medarbejder, er der to måder, hvorpå du kan gøre indholdet af den inaktive postkasse tilgængeligt for en bruger:
 
@@ -44,7 +42,7 @@ Se afsnittet [Flere oplysninger](#more-information) for at få flere oplysninger
 
 ## <a name="requirements-to-recover-an-inactive-mailbox"></a>Krav til gendannelse af en inaktiv postkasse
 
-- Du skal bruge Exchange Online PowerShell til at gendanne en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til denne procedure. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du skal bruge Exchange Online PowerShell til at gendanne en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til denne procedure. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Kør følgende kommando for at hente identitetsoplysninger for de inaktive postkasser i din organisation.
 
@@ -85,9 +83,9 @@ Når du har gendannet en inaktiv postkasse, oprettes der også en ny brugerkonto
 
   - Den venteposition, der blev anvendt på en inaktiv postkasse, ændres eller fjernes på baggrund af den type venteposition, der blev anvendt på den inaktive postkasse, før den blev gendannet.
     
-    - **Microsoft 365 opbevaringspolitik med bevarelseslås.** Hvis den inaktive postkasse er inkluderet i en opbevaringspolitik, der har [Bevarelseslås](retention-preservation-lock.md), tildeles den genoprettede postkasse til den samme opbevaringspolitik.
+    - **Microsoft 365-opbevaringspolitik med bevarelseslås.** Hvis den inaktive postkasse er inkluderet i en opbevaringspolitik, der har [Bevarelseslås](retention-preservation-lock.md), tildeles den genoprettede postkasse til den samme opbevaringspolitik.
     
-    - **Microsoft 365 opbevaringspolitik uden bevarelseslås.** Den inaktive postkasse fjernes fra Microsoft 365 opbevaringspolitik. Procesførelse er dog aktiveret for den gendannede postkasse for at forhindre sletning af postkasseindhold baseret på alle opbevaringspolitikker for hele organisationen, der sletter indhold, der er ældre end en bestemt alder. Du kan beholde procesførelsen eller fjerne den. Du kan få flere oplysninger under [Opret en procesførelsesventeposition](create-a-litigation-hold.md).
+    - **Microsoft 365-opbevaringspolitik uden bevarelseslås.** Den inaktive postkasse fjernes fra Microsoft 365-opbevaringspolitikken. Procesførelse er dog aktiveret for den gendannede postkasse for at forhindre sletning af postkasseindhold baseret på alle opbevaringspolitikker for hele organisationen, der sletter indhold, der er ældre end en bestemt alder. Du kan beholde procesførelsen eller fjerne den. Du kan få flere oplysninger under [Opret en procesførelsesventeposition](create-a-litigation-hold.md).
 
     - **Procesførelse i venteposition.** Hvis Procesførelsesventeposition er aktiveret for den inaktive postkasse, fjernes den fra den gendannede postkasse.
 
@@ -95,7 +93,7 @@ Når du har gendannet en inaktiv postkasse, oprettes der også en ny brugerkonto
 
   - Genoprettelsesperioden for et enkelt element (som er defineret af egenskaben **RetainDeletedItemsFor** postkasse) er angivet til 30 dage. Når der oprettes en ny postkasse i Exchange Online, angives denne opbevaringsperiode typisk til 14 dage. Hvis du angiver dette til den maksimale værdi på 30 dage, får du mere tid til at gendanne data, der er blevet slettet permanent (eller fjernet) fra den inaktive postkasse. Du kan også deaktivere genoprettelse af enkelt element eller angive genoprettelsesperioden for et enkelt element tilbage til standarden på 14 dage. Du kan få flere oplysninger under [Aktivér eller deaktiver genoprettelse af enkeltelement for en postkasse](/exchange/recipients-in-exchange-online/manage-user-mailboxes/enable-or-disable-single-item-recovery).
 
-  - Opbevaringsbevaring er aktiveret, og varigheden af opbevaringsventetiden er angivet til 30 dage. Det betyder, at standardopbevaringspolitikken for Exchange og alle Exchange Microsoft 365 opbevaringspolitikker, der er tildelt den nye postkasse, ikke behandles i 30 dage. Dette giver den returnerende medarbejder eller den nye ejer af den gendannede inaktive postkasse tid til at administrere de gamle meddelelser. Ellers kan den Exchange eller Microsoft 365 opbevaringspolitik slette gamle postkasseelementer (eller flytte elementer til arkivpostkassen, hvis den er aktiveret), der er udløbet, på baggrund af de indstillinger, der er konfigureret for de Exchange eller Microsoft 365 opbevaringspolitikker. Efter 30 dage udløber opbevaringsventetiden, egenskaben **RetentionHoldEnabled** i postkassen er angivet til **Falsk**, og Assistent til administreret mappe starter behandlingen af de politikker, der er tildelt postkassen. Hvis du ikke har brug for denne ekstra tid, kan du blot fjerne opbevaringsventetiden. Du kan også øge varigheden af opbevaringen ved hjælp af kommandoen **Set-Mailbox -EndDateForRetentionHold** . Du kan få flere oplysninger under [Placer en postkasse i opbevaringsventeposition](/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
+  - Opbevaringsbevaring er aktiveret, og varigheden af opbevaringsventetiden er angivet til 30 dage. Det betyder, at standardpolitikken for Exchange-opbevaring og alle Microsoft 365-opbevaringspolitikker for hele organisationen eller Exchange, der er tildelt den nye postkasse, ikke behandles i 30 dage. Dette giver den returnerende medarbejder eller den nye ejer af den gendannede inaktive postkasse tid til at administrere de gamle meddelelser. Ellers kan Exchange- eller Microsoft 365-opbevaringspolitikken slette gamle postkasseelementer (eller flytte elementer til arkivpostkassen, hvis den er aktiveret), der er udløbet, baseret på de indstillinger, der er konfigureret for Exchange- eller Microsoft 365-opbevaringspolitikkerne. Efter 30 dage udløber opbevaringsventetiden, egenskaben **RetentionHoldEnabled** i postkassen er angivet til **Falsk**, og Assistent til administreret mappe starter behandlingen af de politikker, der er tildelt postkassen. Hvis du ikke har brug for denne ekstra tid, kan du blot fjerne opbevaringsventetiden. Du kan også øge varigheden af opbevaringen ved hjælp af kommandoen **Set-Mailbox -EndDateForRetentionHold** . Du kan få flere oplysninger under [Placer en postkasse i opbevaringsventeposition](/exchange/security-and-compliance/messaging-records-management/mailbox-retention-hold).
 
 - **Sæt en venteposition på den gendannede postkasse, hvis du har brug for at bevare den oprindelige tilstand for den inaktive postkasse.** Hvis du vil forhindre den nye postkasseejer eller opbevaringspolitik i permanent at slette meddelelser fra den gendannede inaktive postkasse, kan du placere postkassen i procesventeposition. Du kan få flere oplysninger under [Opret en procesførelsesventeposition](./create-a-litigation-hold.md).
 
@@ -112,4 +110,4 @@ Når du har gendannet en inaktiv postkasse, oprettes der også en ny brugerkonto
     - Hvis der ikke er nogen værdi for egenskaben **ExternalDirectoryObjectId** , er postkassens opbevaringsperiode udløbet, og du kan gendanne den inaktive postkasse ved at køre kommandoen **New-Mailbox -InactiveMailbox** .
     - Hvis der er en værdi for egenskaben **ExternalDirectoryObjectId** , er opbevaringsperioden for den slettede postkasse ikke udløbet, og du skal gendanne postkassen ved at [gendanne brugerkontoen](../admin/add-users/delete-a-user.md).
 
-- **Overvej at aktivere arkivpostkassen, når du har gendannet en inaktiv postkasse.** Dette gør det muligt for den returnerende bruger eller nye medarbejder at flytte gamle meddelelser til arkivpostkassen. Og når opbevaringsventepositionen udløber, flytter den arkivpolitik, der er en del af standardpolitikken Exchange MRM-opbevaringspolitik, der er tildelt Exchange Online postkasser, elementer, der er to år eller ældre, til arkivpostkassen. Hvis du ikke aktiverer arkivpostkassen, forbliver elementer, der er ældre end to år, i brugerens primære postkasse. Du kan få flere oplysninger under [Aktivér arkivpostkasser](enable-archive-mailboxes.md).
+- **Overvej at aktivere arkivpostkassen, når du har gendannet en inaktiv postkasse.** Dette gør det muligt for den returnerende bruger eller nye medarbejder at flytte gamle meddelelser til arkivpostkassen. Og når opbevaringsventepositionen udløber, flyttes elementer, der er to år eller ældre, til arkivpostkassen i den arkivpolitik, der er tildelt Exchange Online postkasser, som er en del af exchange-standardpolitikken for MRM-opbevaring. Hvis du ikke aktiverer arkivpostkassen, forbliver elementer, der er ældre end to år, i brugerens primære postkasse. Du kan få flere oplysninger under [Aktivér arkivpostkasser](enable-archive-mailboxes.md).

@@ -16,22 +16,20 @@ ms.collection: M365-security-compliance
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Få mere at vide om, hvordan du konfigurerer en brugerdefineret connector til import af tredjepartsdata fra datakilder, f.eks. Salesforce Chatter, Yahoo Messenger eller Yammer.
-ms.openlocfilehash: 02c0d8a61668a0d3dd3e663c1cb4915be15d9a08
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Få mere at vide om, hvordan du konfigurerer en brugerdefineret connector til import af tredjepartsdata fra datakilder som Salesforce Chatter, Yahoo Messenger eller Yammer.
+ms.openlocfilehash: 7b66c16da344a0254ecbc704311c6de5fe92c232
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015512"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637811"
 ---
 # <a name="work-with-a-partner-to-archive-third-party-data"></a>Arbejd sammen med en partner om at arkivere tredjepartsdata
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan samarbejde med en Microsoft-partner om at importere og arkivere data fra en datakilde fra tredjepart for at Microsoft 365. En partner kan give dig en brugerdefineret connector, der er konfigureret til at udtrække elementer fra tredjepartsdatakilden (regelmæssigt) og derefter importere disse elementer. Partnerconnectoren konverterer indholdet af et element fra datakilden til et mailformat og gemmer derefter elementerne i postkasser. Når data fra tredjepart er importeret, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, eDiscovery, In-Place Arkivering, Overvågning og Microsoft 365 opbevaringspolitikker på disse data.
+Du kan arbejde sammen med en Microsoft-partner om at importere og arkivere data fra en tredjepartsdatakilde til Microsoft 365. En partner kan give dig en brugerdefineret connector, der er konfigureret til at udtrække elementer fra tredjepartsdatakilden (regelmæssigt) og derefter importere disse elementer. Partnerconnectoren konverterer indholdet af et element fra datakilden til et mailformat og gemmer derefter elementerne i postkasser. Når data fra tredjepart er importeret, kan du anvende Microsoft Purview-funktioner som Litigation Hold, eDiscovery, In-Place Arkivering, Overvågning og Microsoft 365-opbevaringspolitikker på disse data.
 
 > [!IMPORTANT]
-> Løsningen [til overholdelse af kommunikation](communication-compliance.md) i Microsoft 365 kan ikke anvendes på de tredjepartsdata, der importeres af partnerconnectors, som er nævnt i denne artikel.
+> Løsningen [til overholdelse af angivne standarder for kommunikation](communication-compliance.md) i Microsoft 365 kan ikke anvendes på de tredjepartsdata, der importeres af partnerconnectors, som er nævnt i denne artikel.
 
 Her er en oversigt over processen og de trin, der er nødvendige for at arbejde sammen med en Microsoft-partner om at importere tredjepartsdata.
 
@@ -55,7 +53,7 @@ Følgende illustration og beskrivelse beskriver, hvordan dataimportprocessen fra
 
 2. Partnerconnectoren opretter forbindelse til datakilder fra tredjepart via en API fra tredjepart (planlagt eller som konfigureret) og udtrækker elementer fra datakilden. Partnerconnectoren konverterer indholdet af et element til et mailformat. Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af skemaet i meddelelsesformat.
 
-3. Partnerconnectoren opretter forbindelse til Azure-tjenesten i Microsoft 365 ved hjælp af EWS (Exchange Web Service) via et velkendt slutpunkt.
+3. Partnerconnectoren opretter forbindelse til Azure-tjenesten i Microsoft 365 ved hjælp af Exchange Web Service (EWS) via et velkendt slutpunkt.
 
 4. Elementer importeres til en bestemt brugers postkasse eller til en datapostkasse fra tredjepart, der "fanger alle". Om et element importeres til en bestemt brugerpostkasse eller til en datapostkasse fra tredjepart, er baseret på følgende kriterier:
 
@@ -65,9 +63,9 @@ Følgende illustration og beskrivelse beskriver, hvordan dataimportprocessen fra
 
 ## <a name="step-1-find-a-third-party-data-partner"></a>Trin 1: Find en tredjepartsdatapartner
 
-En vigtig komponent til arkivering af tredjepartsdata i Microsoft 365 er at finde og arbejde sammen med en Microsoft-partner, der er specialiseret i hentning af data fra en datakilde fra tredjepart og import af dem til Microsoft 365. Når dataene er importeret, kan de arkiveres og bevares sammen med din organisations andre Microsoft-data, f.eks. mail fra Exchange og dokumenter fra SharePoint og OneDrive for Business. En partner opretter en connector, der udtrækker data fra din organisations tredjepartsdatakilder (f.eks. BlackBerry, Facebook, Google+, Thomson Reuters, Twitter og YouTube), og overfører disse data til en Microsoft 365 API, der importerer elementer til Exchange postkasser som mailmeddelelser.
+En vigtig komponent til arkivering af tredjepartsdata i Microsoft 365 er at finde og arbejde sammen med en Microsoft-partner, der er specialiseret i hentning af data fra en datakilde fra tredjepart og import af dem til Microsoft 365. Når dataene er importeret, kan de arkiveres og bevares sammen med din organisations andre Microsoft-data, f.eks. mail fra Exchange og dokumenter fra SharePoint og OneDrive for Business. En partner opretter en connector, der udtrækker data fra din organisations tredjepartsdatakilder (f.eks. BlackBerry, Facebook, Google+, Thomson Reuters, Twitter og YouTube), og overfører disse data til en Microsoft 365-API, der importerer elementer til Exchange-postkasser som mailmeddelelser.
 
-I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart, de understøtter), som deltager i programmet til arkivering af tredjepartsdata i Microsoft 365.
+I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart, de understøtter), der deltager i programmet til arkivering af tredjepartsdata i Microsoft 365.
 
 [17a-4 LLC](#17a-4-llc)
 
@@ -87,7 +85,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Blackberry
 
-- Bloomberg-data Strømme
+- Bloomberg-datastrømme
 
 - Cisco Jabber
 
@@ -99,7 +97,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - LivePerson
 
-- MessageLabs Data Strømme
+- MessageLabs Data Streams
 
 - Åbn tekst
 
@@ -117,7 +115,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Skype for Business Online (Lync Online)
 
-- SQL databaser
+- SQL-databaser
 
 - Squawker
 
@@ -167,7 +165,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Cisco IM &amp; Presence Server (v10, v10.5.1 SU1, v11.0, v11.5 SU2)
 
-- Cisco Webex-Teams
+- Cisco Webex Teams
 
 - Citrix Workspace &amp; ShareFile
 
@@ -229,7 +227,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Akser krypteret
 
-- Akser Exchange
+- Udveksling af akser
 
 - Akser lokalt arkiv
 
@@ -287,13 +285,13 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Logføring af samarbejde i realtid
 
-- Direkte Forbind
+- Direkte forbindelse
 
 - Facebook
 
 - FactSet
 
-- FastTrack
+- Fasttrack
 
 - Gnutella
 
@@ -369,7 +367,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - Microsoft 365 Lync Dedicated
 
-- Microsoft 365 delt chatbesked
+- Delt chatbesked til Microsoft 365
 
 - Pinterest
 
@@ -469,7 +467,7 @@ I følgende afsnit vises de Microsoft-partnere (og de datakilder fra tredjepart,
 
 - TwistedPair Radio
 
-- Windows stationær computerskærm
+- Windows-skrivebordscomputerskærm
 
 ## <a name="step-2-create-and-configure-a-third-party-data-mailbox-in-microsoft-365"></a>Trin 2: Opret og konfigurer en datapostkasse fra tredjepart i Microsoft 365
 
@@ -479,7 +477,7 @@ Her er trinnene til oprettelse og konfiguration af en tredjepartsdatapostkasse t
 
 1. Opret en brugerkonto, og tildel den en Exchange Online Plan 2-licens. Se [Føj brugere til Microsoft 365](../admin/add-users/add-users.md). Der kræves en Plan 2-licens for at placere postkassen i litigation-venteposition eller aktivere en arkivpostkasse, der har en lagerkvote på op til 1,5 TB.
 
-2. Føj brugerkontoen for tredjepartsdatapostkassen til rollen **Exchange administrator** i Microsoft 365. Se [Tildel administratorroller i Microsoft 365](../admin/add-users/assign-admin-roles.md).
+2. Føj brugerkontoen for tredjepartsdatapostkassen til administratorrollen **Exchange** i Microsoft 365. se [Tildel administratorroller i Microsoft 365](../admin/add-users/assign-admin-roles.md).
 
     > [!TIP]
     > Skriv legitimationsoplysningerne for denne brugerkonto ned. Du skal give dem til din partner, som beskrevet i trin 4.
@@ -492,13 +490,13 @@ Her er trinnene til oprettelse og konfiguration af en tredjepartsdatapostkasse t
     Set-Mailbox -Identity <identity of third-party data mailbox> -HiddenFromAddressListsEnabled $true
     ```
 
-2. Tildel **FullAccess-tilladelsen** til tredjepartsdatapostkassen, så administratorer eller overholdelsesansvarlige kan åbne tredjepartsdatapostkassen i Outlook desktopklient. Se [Administrer tilladelser for modtagere](https://go.microsoft.com/fwlink/p/?LinkId=692104).
+2. Tildel **FullAccess-tilladelsen** til tredjepartsdatapostkassen, så administratorer eller overholdelsesansvarlige kan åbne datapostkassen fra tredjepart i Outlook Desktop-klienten. se [Administrer tilladelser for modtagere](https://go.microsoft.com/fwlink/p/?LinkId=692104).
 
 3. Aktivér følgende funktioner, der er relateret til overholdelse af angivne standarder, for tredjepartsdatapostkassen:
 
     - Aktivér arkivpostkassen. se [Aktivér arkivpostkasser](enable-archive-mailboxes.md) og [Aktivér automatisk udvidelse af arkivering](enable-autoexpanding-archiving.md). Det giver dig mulighed for at frigøre lagerplads i den primære postkasse ved at konfigurere en arkivpolitik, der flytter dataelementer fra tredjepart til arkivpostkassen. Dette giver dig op til 1,5 TB lagerplads til tredjepartsdata.
 
-    - Placer datapostkassen fra tredjepart i procesventeposition. Du kan også anvende en Microsoft 365 opbevaringspolitik i Security and Compliance Center. Hvis denne postkasse sættes i venteposition, bevares tredjepartsdataelementer (på ubestemt tid eller i en bestemt varighed) og forhindrer, at de fjernes fra postkassen. Se et af følgende emner:
+    - Placer datapostkassen fra tredjepart i procesventeposition. Du kan også anvende en Microsoft 365-opbevaringspolitik i Security and Compliance Center. Hvis denne postkasse sættes i venteposition, bevares tredjepartsdataelementer (på ubestemt tid eller i en bestemt varighed) og forhindrer, at de fjernes fra postkassen. Se et af følgende emner:
 
       - [Placer en postkasse i venteposition for procesførelse](./create-a-litigation-hold.md)
 
@@ -512,7 +510,7 @@ Det næste trin er at konfigurere brugerpostkasser til at understøtte tredjepar
 
 1. Aktivér arkivpostkassen for hver bruger. se [Aktivér arkivpostkasser](enable-archive-mailboxes.md) og [Aktivér automatisk udvidelse af arkivering](enable-autoexpanding-archiving.md).
 
-2. Placer brugerpostkasser i retslig venteposition, eller anvend en Microsoft 365 opbevaringspolitik. Se et af følgende emner:
+2. Placer brugerpostkasser i retslig venteposition, eller anvend en Microsoft 365-opbevaringspolitik. se et af følgende emner:
 
     - [Placer en postkasse i venteposition for procesførelse](./create-a-litigation-hold.md)
 
@@ -530,13 +528,13 @@ Det sidste trin er at give din partner følgende oplysninger, så de kan konfigu
     https://office365ingestionsvc.gble1.protection.outlook.com/service/ThirdPartyIngestionService.svc
     ```
 
-- Logonlegitimationsoplysninger (Microsoft 365 bruger-id og adgangskode) for den tredjepartsdatapostkasse, du oprettede i trin 2. Disse legitimationsoplysninger er påkrævet, så partnerconnectoren kan få adgang til og importere elementer til brugerpostkasser og til tredjepartsdatapostkassen.
+- Logonlegitimationsoplysninger (Bruger-id og adgangskode til Microsoft 365) for den datapostkasse fra tredjepart, du oprettede i trin 2. Disse legitimationsoplysninger er påkrævet, så partnerconnectoren kan få adgang til og importere elementer til brugerpostkasser og til tredjepartsdatapostkassen.
 
 ## <a name="step-5-register-the-third-party-data-connector-in-azure-active-directory"></a>Trin 5: Registrer dataconnectoren fra tredjepart i Azure Active Directory
 
 Fra og med den 30. september 2018 begynder Azure-tjenesten i Microsoft 365 at bruge moderne godkendelse i Exchange Online til at godkende tredjepartsdataconnectors, der forsøger at oprette forbindelse til din organisation for at importere data. Årsagen til denne ændring er, at moderne godkendelse giver mere sikkerhed end den aktuelle metode, som var baseret på en liste over tilladte forbindelser for tredjepartsconnectorer, der bruger det tidligere beskrevne slutpunkt til at oprette forbindelse til Azure-tjenesten.
 
-Hvis en dataconnector fra tredjepart skal kunne oprette forbindelse til Microsoft 365 ved hjælp af den nye moderne godkendelsesmetode, skal en administrator i din organisation give samtykke til at registrere connectoren som et tjenesteprogram, der er tillid til, i Azure Active Directory. Dette gøres ved at acceptere en anmodning om tilladelse for at give connectoren adgang til organisationens data i Azure Active Directory. Når du har accepteret denne anmodning, tilføjes dataconnectoren fra tredjepart som et virksomhedsprogram for at Azure Active Directory og repræsenteres som en tjenesteprincipal. Du kan få flere oplysninger om samtykkeprocessen under  [Lejeradministratorsamtykke](/skype-sdk/trusted-application-api/docs/tenantadminconsent).
+Hvis en dataconnector fra tredjepart skal kunne oprette forbindelse til Microsoft 365 ved hjælp af den nye moderne godkendelsesmetode, skal en administrator i din organisation give samtykke til at registrere connectoren som et tjenesteprogram, der er tillid til, i Azure Active Directory. Dette gøres ved at acceptere en anmodning om tilladelse for at give connectoren adgang til din organisations data i Azure Active Directory. Når du har accepteret denne anmodning, tilføjes dataconnectoren fra tredjepart som et virksomhedsprogram til Azure Active Directory og repræsenteres som en tjenesteprincipal. Du kan få flere oplysninger om samtykkeprocessen under [Lejer Administration Samtykke](/skype-sdk/trusted-application-api/docs/tenantadminconsent).
 
 Her er trinnene til at få adgang til og acceptere anmodningen om at registrere connectoren:
 
@@ -548,24 +546,24 @@ Her er trinnene til at få adgang til og acceptere anmodningen om at registrere 
 
 2. Klik på **Acceptér**.
 
-Når du har accepteret anmodningen, vises [Azure Portal](https://portal.azure.com). Hvis du vil have vist listen over programmer for din organisation, skal du klikke **på Azure Active Directory** >  **Enterprise-programmer**. Den Microsoft 365 dataconnector fra tredjepart er angivet på bladet **Virksomhedsprogrammer**.
+Når du har accepteret anmodningen, vises [Azure Portal](https://portal.azure.com). Hvis du vil have vist listen over programmer for din organisation, skal du klikke på **Azure Active Directory** > **Enterprise-programmer**. Dataconnectoren fra tredjepart til Microsoft 365 er angivet på bladet **Virksomhedsprogrammer** .
 
 > [!IMPORTANT]
 > Efter den 30. september 2018 importeres tredjepartsdata ikke længere i postkasser i din organisation, hvis du ikke registrerer en dataconnector fra tredjepart i Azure Active Directory. Bemærk, at eksisterende dataconnectors fra tredjepart (dem, der er oprettet før den 30. september 2018) også skal registreres i Azure Active Directory ved at følge proceduren i trin 5.
 
 ### <a name="revoking-consent-for-a-third-party-data-connector"></a>Tilbagekalder samtykke til en dataconnector fra tredjepart
 
-Når din organisation har givet samtykke til anmodningen om tilladelser til at registrere en dataconnector fra tredjepart i Azure Active Directory, kan din organisation til enhver tid tilbagekalde dette samtykke. Hvis du tilbagekalder samtykket for en connector, betyder det dog, at data fra datakilden fra tredjepart ikke længere importeres til Microsoft 365.
+Når din organisation har givet samtykke til anmodningen om tilladelse til at registrere en dataconnector fra tredjepart i Azure Active Directory, kan din organisation tilbagekalde dette samtykke når som helst. Hvis du tilbagekalder samtykket for en connector, betyder det dog, at data fra tredjepartsdatakilden ikke længere importeres til Microsoft 365.
 
 Hvis du vil tilbagekalde samtykket for en dataconnector fra tredjepart, kan du slette programmet (ved at slette den tilsvarende tjenesteprincipal) fra Azure Active Directory ved hjælp af bladet **Virksomhedsprogrammer** i Azure Portal eller ved hjælp af [Remove-MsolServicePrincipal](/powershell/module/msonline/remove-msolserviceprincipal) i Microsoft 365 PowerShell. Du kan også bruge cmdlet'en [Remove-AzureADServicePrincipal](/powershell/module/azuread/remove-azureadserviceprincipal) i Azure Active Directory PowerShell.
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- Som tidligere forklaret importeres elementer fra datakilder fra tredjepart til Exchange postkasser som mailmeddelelser. Partnerconnectoren importerer elementet ved hjælp af et skema, der kræves af API'en til Microsoft 365. I følgende tabel beskrives meddelelsesegenskaberne for et element fra en datakilde fra en tredjepart, når det er importeret til en Exchange postkasse som en mail. Tabellen angiver også, om meddelelsesegenskaben er obligatorisk. Obligatoriske egenskaber skal udfyldes. Hvis et element mangler en obligatorisk egenskab, importeres det ikke til Microsoft 365. Importprocessen returnerer en fejlmeddelelse, der forklarer, hvorfor et element ikke blev importeret, og hvilken egenskab der mangler.
+- Som tidligere forklaret importeres elementer fra datakilder fra tredjepart til Exchange-postkasser som mailmeddelelser. Partnerconnectoren importerer elementet ved hjælp af et skema, der kræves af Microsoft 365 API. I følgende tabel beskrives meddelelsesegenskaberne for et element fra en datakilde fra en tredjepart, når det er importeret til en Exchange-postkasse som en mail. Tabellen angiver også, om meddelelsesegenskaben er obligatorisk. Obligatoriske egenskaber skal udfyldes. Hvis et element mangler en obligatorisk egenskab, importeres det ikke til Microsoft 365. Importprocessen returnerer en fejlmeddelelse, der forklarer, hvorfor et element ikke blev importeret, og hvilken egenskab der mangler.
 
   |Meddelelsesegenskab|Obligatorisk?|Beskrivelse|Eksempelværdi|
   |---|---|---|---|
-  |**FRA**|Ja|Den bruger, der oprindeligt oprettede eller sendte elementet i datakilden fra tredjepart. Partnerconnectoren forsøger at knytte bruger-id'et fra kildeelementet (f.eks. et Twitter-håndtag) til en brugerkonto for alle deltagere (brugere i felterne FRA og TIL). Der importeres en kopi af meddelelsen til hver enkelt deltagers postkasse. Hvis ingen af deltagerne fra elementet kan knyttes til en brugerkonto, importeres elementet til tredjepartsarkiveringspostkassen i Microsoft 365.  <br/> <br/> Den deltager, der er identificeret som afsender af elementet, skal have en aktiv postkasse i organisationen, som elementet importeres til. Hvis afsenderen ikke har en aktiv postkasse, returneres følgende fejl:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`|`bob@contoso.com`|
+  |**FRA**|Ja|Den bruger, der oprindeligt oprettede eller sendte elementet i datakilden fra tredjepart. Partnerconnectoren forsøger at knytte bruger-id'et fra kildeelementet (f.eks. et Twitter-håndtag) til en brugerkonto for alle deltagere (brugere i felterne FRA og TIL). Der importeres en kopi af meddelelsen til hver enkelt deltagers postkasse. Hvis ingen af deltagerne fra elementet kan knyttes til en brugerkonto, importeres elementet til arkiveringspostkassen fra tredjepart i Microsoft 365.  <br/> <br/> Den deltager, der er identificeret som afsender af elementet, skal have en aktiv postkasse i organisationen, som elementet importeres til. Hvis afsenderen ikke har en aktiv postkasse, returneres følgende fejl:<br/><br/>  `One or more messages in the Request failed to be delivered to either From or Sender email address. You will need to resend your entire Request. Error: The request failed. The remote server returned an error: (401) Unauthorized.`|`bob@contoso.com`|
   |**TIL**|Ja|Den bruger, der har modtaget et element, hvis det er relevant for et element i datakilden.|`bob@contoso.com`|
   |**EMNE**|Nej|Emnet fra kildeelementet.|`"Mega deals with Contoso coming your way! #ContosoHolidayDeals"`|
   |**DATO**|Ja|Den dato, hvor elementet oprindeligt blev oprettet eller bogført i kundens datakilde. Det kan f.eks. være den dato, hvor en Twitter-meddelelse blev tweetet.|`01 NOV 2015`|
@@ -591,7 +589,7 @@ Hvis du vil tilbagekalde samtykket for en dataconnector fra tredjepart, kan du s
 
   - **`itemclass:ipm.externaldata.<third-party data type>`**: Brug dette egenskabsværdipar til kun at søge efter en bestemt type tredjepartsdata. Hvis du f.eks. kun vil søge efter Facebook-data, der indeholder ordet "contoso" i egenskaben Emne, skal du bruge nøgleordsforespørgslen  `itemclass:ipm.externaldata.Facebook* AND subject:contoso`.
 
-  Du kan finde en komplet liste over værdier, der skal bruges til tredjepartsdatatyper for `itemclass` egenskaben, under [Brug indholdssøgning til at søge efter tredjepartsdata, der blev importeret til Microsoft 365](use-content-search-to-search-third-party-data-that-was-imported.md).
+  Hvis du vil have vist en komplet liste over værdier, der skal bruges til datatyper fra tredjepart for  `itemclass` egenskaben, skal du se [Brug indholdssøgning til at søge efter tredjepartsdata, der blev importeret til Microsoft 365](use-content-search-to-search-third-party-data-that-was-imported.md).
 
    Du kan finde flere oplysninger om brug af indholdssøgning og oprettelse af nøgleordssøgningsforespørgsler i:
 

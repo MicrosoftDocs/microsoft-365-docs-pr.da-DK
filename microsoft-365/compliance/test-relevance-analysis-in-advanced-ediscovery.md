@@ -17,16 +17,14 @@ search.appverid:
 ms.assetid: 1b092f7c-ea55-44f5-b419-63f3458fd7e0
 ROBOTS: NOINDEX, NOFOLLOW
 description: Få mere at vide om, hvordan du bruger fanen Test efter batchberegning i eDiscovery (Premium) til at teste, sammenligne og validere den overordnede kvalitet af behandlingen.
-ms.openlocfilehash: 0b3d6c70bdfef4dec8e8a5d08d4e72f80d6fec77
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 5c1fabf677dd305fb91d77e94af0e18304280d45
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65095460"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637037"
 ---
 # <a name="test-relevance-analysis-in-ediscovery-premium"></a>Test relevansanalyse i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 Fanen Test i Microsoft Purview eDiscovery (Premium) giver dig mulighed for at teste, sammenligne og validere den overordnede kvalitet af behandlingen. Disse test udføres efter batchberegningen. Ved at tagge filerne i samlingen træffer en ekspert den endelige vurdering af, om hver mærkede fil er relevant for sagen.
   
@@ -34,7 +32,7 @@ I scenarier med enkelt- og flere problemer udføres der typisk test pr. problem.
   
 ## <a name="testing-the-rest"></a>Test af resten
 
-Testen "Test resten" bruges til at validere beslutninger om aflivning, f.eks. til kun at gennemse filer over en bestemt score for relevansafskæring baseret på de endelige resultater for eDiscovery (Premium). Eksperten gennemgår en stikprøve af filer under en valgt skæringsscore for at evaluere antallet af relevante filer i det pågældende sæt.
+Test resttesten bruges til at validere beslutninger om aflivning, f.eks. til kun at gennemse filer over en bestemt score for relevansafskæring baseret på de endelige resultater for eDiscovery (Premium). Eksperten gennemgår en stikprøve af filer under en valgt skæringsscore for at evaluere antallet af relevante filer i det pågældende sæt.
   
 Denne test indeholder statistikker og en sammenligning mellem reviewsættet og restpopulationen Test. Resultaterne af korrektursættet er dem, der beregnes af Relevans under oplæringen. Resultaterne omfatter beregninger baseret på indstillinger og inputparametre, f.eks.:
   

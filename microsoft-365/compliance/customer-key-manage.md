@@ -12,16 +12,14 @@ search.appverid:
 ms.collection:
 - M365-security-compliance
 description: Når du har konfigureret Kundenøgle, kan du få mere at vide om, hvordan du administrerer den ved at gendanne AKV-nøgler og administrere tilladelser samt oprette og tildele politikker for datakryptering.
-ms.openlocfilehash: 08fae19a5f0f27ff530c734c46453f885ea9043e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: d9f9e992b78b673df08d0c0d5b12ba09cfa9ea84
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015742"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66637323"
 ---
 # <a name="manage-customer-key"></a>Administrer kundenøgle
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har konfigureret kundenøgle, skal du oprette og tildele en eller flere politikker for datakryptering. Når du har tildelt dine dep'er, kan du administrere dine nøgler som beskrevet i denne artikel. Få mere at vide om Kundenøgle i de relaterede emner.
 
@@ -75,7 +73,7 @@ Set-M365DataAtRestEncryptionPolicyAssignment -DataEncryptionPolicy "Contoso_Glob
 
 Før du begynder, skal du sikre dig, at du har fuldført de opgaver, der kræves for at konfigurere Azure Key Vault. Du kan få flere oplysninger under [Konfigurer kundenøgle](customer-key-set-up.md). Du skal fuldføre disse trin i Exchange Online PowerShell.
 
-En dep er knyttet til et sæt nøgler, der er gemt i Azure Key Vault. Du kan tildele en deaktiveringspostkasse i Microsoft 365. Microsoft 365 bruger derefter de nøgler, der er identificeret i politikken, til at kryptere postkassen. Du skal bruge de Key Vault URI'er, du fik under installationen, for at oprette programmet. Du kan finde flere oplysninger [under Hent URI'en for hver Azure Key Vault-nøgle](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
+En dep er knyttet til et sæt nøgler, der er gemt i Azure Key Vault. Du kan tildele en deaktivering af data til en postkasse i Microsoft 365. Microsoft 365 bruger derefter de nøgler, der er identificeret i politikken, til at kryptere postkassen. Du skal bruge de Key Vault URI'er, du fik under installationen, for at oprette programmet. Du kan finde flere oplysninger [under Hent URI'en for hver Azure Key Vault-nøgle](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
 Huske! Når du opretter en forhindring af dataafhænging, angiver du to nøgler i to forskellige Azure Key Vaults. Opret disse nøgler i to separate Azure-områder for at sikre georedundans.
 
@@ -125,11 +123,11 @@ Set-MailUser -Identity <MailUserIdParameter> -DataEncryptionPolicy <PolicyName>
 
 Hvor *MailUserIdParameter* angiver en mailbruger (også kendt som en mailaktiveret bruger). Du kan få flere oplysninger om Set-MailUser cmdlet under [Set-MailUser](/powershell/module/exchange/set-mailuser).
 
-## <a name="create-a-dep-for-use-with-sharepoint-online-onedrive-for-business-and-teams-files"></a>Opret en deaktiveringsfil til brug sammen med SharePoint Online-, OneDrive for Business- og Teams-filer
+## <a name="create-a-dep-for-use-with-sharepoint-online-onedrive-for-business-and-teams-files"></a>Opret en dep til brug sammen med SharePoint Online-, OneDrive for Business- og Teams-filer
 
 Før du begynder, skal du sikre dig, at du har fuldført de opgaver, der kræves for at konfigurere Azure Key Vault. Du kan få flere oplysninger under [Konfigurer kundenøgle](customer-key-set-up.md).
 
-Hvis du vil konfigurere kundenøglen til SharePoint Online, OneDrive for Business og Teams filer, skal du fuldføre disse trin i SharePoint Online PowerShell.
+Hvis du vil konfigurere kundenøgle til SharePoint Online-, OneDrive for Business- og Teams-filer, skal du fuldføre disse trin i SharePoint Online PowerShell.
 
 Du knytter en forhindring af dataforbindelse til et sæt nøgler, der er gemt i Azure Key Vault. Du anvender en forhindring af dataaf data på alle dine data på én geografisk placering, også kaldet et geografisk område. Hvis du bruger multi-geo-funktionen i Office 365, kan du oprette én DEP pr. geo med mulighed for at bruge forskellige nøgler pr. geo. Hvis du ikke bruger multi-geo, kan du oprette én forhindring af dataanvendelse i din organisation til brug sammen med SharePoint Online-, OneDrive for Business- og Teams-filer. Microsoft 365 bruger de nøgler, der er identificeret i forhindring af dataafklaring, til at kryptere dine data i det pågældende geografiske område. Du skal bruge de Key Vault URI'er, du fik under installationen, for at oprette programmet. Du kan finde flere oplysninger [under Hent URI'en for hver Azure Key Vault-nøgle](customer-key-set-up.md#obtain-the-uri-for-each-azure-key-vault-key).
 
@@ -169,7 +167,7 @@ Hvis du vil have vist en liste over alle de DEP'er, du har oprettet til postkass
 
 ### <a name="assign-a-dep-before-you-migrate-a-mailbox-to-the-cloud"></a>Tildel en forhindring af datadata, før du overfører en postkasse til cloudmiljøet
 
-Når du tildeler forhindring af dataoverførsel, krypterer Microsoft 365 indholdet af postkassen ved hjælp af den tildelte forhindring af dataoverførsel under overførslen. Denne proces er mere effektiv end overførsel af postkassen, tildeling af programmet til datalagring og derefter afventer kryptering, hvilket kan tage timer eller muligvis dage.
+Når du tildeler programmet til forhindring af dataoverførsel, krypterer Microsoft 365 indholdet af postkassen ved hjælp af den tildelte forhindring af dataoverførsel under overførslen. Denne proces er mere effektiv end overførsel af postkassen, tildeling af programmet til datalagring og derefter afventer kryptering, hvilket kan tage timer eller muligvis dage.
 
 Hvis du vil tildele en dep til en postkasse, før du overfører den til Office 365, skal du køre Set-MailUser-cmdlet'en i Exchange Online PowerShell:
 
@@ -348,7 +346,14 @@ Hvis du har brug for at vende tilbage til Microsoft-administrerede nøgler, kan 
 > [!IMPORTANT]
 > Offboarding er ikke det samme som en datarensning. En datarensning sletter din organisations data permanent fra Microsoft 365, og det gør offboarding ikke. Du kan ikke udføre en datarensning for en politik for flere arbejdsbelastninger.
 
-Hvis du beslutter ikke længere at bruge Kundenøgle til at tildele dep'er med flere arbejdsbelastninger, skal du kontakte Microsoft Support med en anmodning om at "offboard" fra Kundenøgle. Bed supportteamet om at sende en serviceanmodning til Microsoft Purview-kundenøgleteamet. Kontakt m365-ck@service.microsoft.com, hvis du har spørgsmål.
+**Hvis du beslutter ikke længere at bruge Kundenøgle til at tildele dep'er med flere arbejdsbelastninger, skal du oprette en supportanmodning ved hjælp af din Microsoft-administrationsportal og angive følgende oplysninger i din anmodning:**
+
+1. Lejer-FQDN
+2. Lejerkontakt for anmodning om offboarding
+3. Årsag til offboarding
+4. Medtag en note i servicebilletten om, at anmodningen skal sendes til M365-kundenøgleteamet, og medtag hændelsen #
+
+Du skal stadig bevare dine AKV'er for kundenøgler og krypteringsnøgler med de rette tilladelser til, at data kan omwrappes ved hjælp af Administrerede Microsoft-nøgler. Kontakt m365-ck@service.microsoft.com, hvis du har spørgsmål.
 
 Hvis du ikke længere vil kryptere individuelle postkasser ved hjælp af DEP'er på postkasseniveau, kan du fjerne tildelingen af deP'er på postkasseniveau fra alle dine postkasser.
 
@@ -365,7 +370,7 @@ Hvis du vil fjerne tildelingen af deP'er til postkasser, skal du bruge PowerShel
 Når du kører denne cmdlet, ophæves tildelingen af den aktuelt tildelte forhindring af dataafgang, og postkassen krypteres igen ved hjælp af den DEP, der er knyttet til microsoft-administrerede standardnøgler. Du kan ikke fjerne tildelingen af den dep, der bruges af Microsoft-administrerede nøgler. Hvis du ikke vil bruge Microsoft-administrerede nøgler, kan du tildele en anden kundenøgle til postkassen.
 
 > [!IMPORTANT]
-> Gå tilbage fra kundenøgle til administrerede microsoft-nøgler understøttes ikke for filer af typen SharePoint Online, OneDrive for Business og Teams.
+> Gå tilbage fra kundenøgle til Microsoft-administrerede nøgler understøttes ikke for SharePoint Online-, OneDrive for Business- og Teams-filer.
 
 ## <a name="revoke-your-keys-and-start-the-data-purge-path-process"></a>Tilbagekald dine nøgler, og start processen til fjernelse af data
 
@@ -377,7 +382,7 @@ Microsoft 365 overvåger og validerer stien til datarensning. Du kan få flere o
 
 - [Overvejelser i forbindelse med O365-afslutningsplanlægning](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=77ea7ebf-ce1b-4a5f-9972-d2d81a951d99&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers)
 
-Sletning af forhindring af dataafhænging med flere arbejdsbelastninger understøttes ikke for kundenøgle. Forhindring af datatab med flere arbejdsbelastninger bruges til at kryptere data på tværs af flere arbejdsbelastninger på tværs af alle lejerbrugere. Hvis du fjerner en sådan forhindring af data, vil det resultere i, at der ikke er adgang til data på tværs af flere arbejdsbelastninger. Hvis du beslutter dig for helt at afslutte Microsoft 365 tjenester, kan du forfølge stien til sletning af lejer i henhold til den dokumenterede proces. Se[, hvordan du sletter en lejer i Azure Active Directory](/azure/active-directory/enterprise-users/directory-delete-howto).
+Sletning af forhindring af dataafhænging med flere arbejdsbelastninger understøttes ikke for kundenøgle. Forhindring af datatab med flere arbejdsbelastninger bruges til at kryptere data på tværs af flere arbejdsbelastninger på tværs af alle lejerbrugere. Hvis du fjerner en sådan forhindring af data, vil det resultere i, at der ikke er adgang til data på tværs af flere arbejdsbelastninger. Hvis du beslutter dig for helt at afslutte Microsoft 365-tjenester, kan du forfølge stien til sletning af lejer i henhold til den dokumenterede proces. Se [, hvordan du sletter en lejer i Azure Active Directory](/azure/active-directory/enterprise-users/directory-delete-howto).
 
 ### <a name="revoke-your-customer-keys-and-the-availability-key-for-exchange-online-and-skype-for-business"></a>Tilbagekald dine kundenøgler og tilgængelighedsnøglen for Exchange Online og Skype for Business
 
@@ -404,7 +409,7 @@ Hvis du vil starte stien til datarensning, skal du udføre disse trin:
 
 4. Kontakt Microsoft Support, og anmod om eDocument til datarensning.
 
-    På din anmodning sender Microsoft dig et juridisk dokument for at bekræfte og godkende sletning af data. Den person i din organisation, der har tilmeldt sig som godkender i FastTrack tilbud under onboarding, skal signere dette dokument. Normalt er dette en leder eller en anden udpeget person i din virksomhed, der er lovligt autoriseret til at underskrive papirarbejdet på vegne af din organisation.
+    På din anmodning sender Microsoft dig et juridisk dokument for at bekræfte og godkende sletning af data. Den person i din organisation, der tilmeldte sig som godkender i FastTrack-tilbuddet under onboarding, skal signere dette dokument. Normalt er dette en leder eller en anden udpeget person i din virksomhed, der er lovligt autoriseret til at underskrive papirarbejdet på vegne af din organisation.
 
 5. Når din repræsentant har signeret det juridiske dokument, skal du returnere det til Microsoft (normalt via en eDoc-signatur).
 
@@ -412,7 +417,7 @@ Hvis du vil starte stien til datarensning, skal du udføre disse trin:
 
 ### <a name="revoke-your-customer-keys-and-the-availability-key-for-sharepoint-online-onedrive-for-business-and-teams-files"></a>Tilbagekald dine kundenøgler og tilgængelighedsnøglen for SharePoint Online-, OneDrive for Business- og Teams-filer
 
-Rensning af SharePoint, OneDrive til arbejde eller skole og Teams filer understøttes ikke i Kundenøgle. Disse dep'er med flere arbejdsbelastninger bruges til at kryptere data på tværs af flere arbejdsbelastninger på tværs af alle lejerbrugere. Hvis du fjerner en sådan forhindring af dataadgang, vil det medføre, at data på tværs af flere arbejdsbelastninger bliver utilgængelige. Hvis du beslutter dig for helt at afslutte Microsoft 365 tjenester, kan du forfølge stien til sletning af lejer i henhold til den dokumenterede proces. Se, hvordan [du sletter en lejer i Azure Active Directory](/azure/active-directory/enterprise-users/directory-delete-howto).
+Sletning af SharePoint-, OneDrive-for-arbejde- eller skolefiler og Teams-filer-DEP'er understøttes ikke i kundenøglen. Disse dep'er med flere arbejdsbelastninger bruges til at kryptere data på tværs af flere arbejdsbelastninger på tværs af alle lejerbrugere. Hvis du fjerner en sådan forhindring af dataadgang, vil det medføre, at data på tværs af flere arbejdsbelastninger bliver utilgængelige. Hvis du beslutter dig for helt at afslutte Microsoft 365-tjenester, kan du forfølge stien til sletning af lejer i henhold til den dokumenterede proces. Se, hvordan [du sletter en lejer i Azure Active Directory](/azure/active-directory/enterprise-users/directory-delete-howto).
 
 ## <a name="related-articles"></a>Relaterede artikler
 

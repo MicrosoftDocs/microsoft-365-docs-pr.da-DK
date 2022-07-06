@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Hash og upload tabellen med følsomme oplysninger for at få præcise data til at matche følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: d3c45c618caad24084ee9c85410be886863dd733
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: dd484f10cf8dad76132ed2a68a34f87b253e76b3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65437629"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641290"
 ---
 # <a name="hash-and-upload-the-sensitive-information-source-table-for-exact-data-match-sensitive-information-types"></a>Hash og upload kildetabellen med følsomme oplysninger for at få nøjagtige data, der stemmer overens med typer af følsomme oplysninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel kan du se, hvordan du hashkode og uploader din tabel med følsomme oplysninger.
 
@@ -40,15 +38,15 @@ I denne fase skal du:
 
 Hash- og uploadhandlingen kan udføres ved hjælp af én computer, eller du kan adskille hashtrinnet fra overførselstrinnet for større sikkerhed.
 
-Hvis du vil hashen og uploade fra én computer, skal du gøre det fra en computer, der kan oprette direkte forbindelse til din Microsoft 365 lejer. Dette kræver, at filen med datakildetabellen til følsomme oplysninger i klartekst findes på computeren til hashen.
+Hvis du vil hashen og uploade fra én computer, skal du gøre det fra en computer, der kan oprette direkte forbindelse til din Microsoft 365-lejer. Dette kræver, at filen med datakildetabellen til følsomme oplysninger i klartekst findes på computeren til hashen.
 
-Hvis du ikke vil vise din fil med datakilder med klartekst på computeren med direkte adgang, kan du hashkode den på en computer, der er på en sikker placering, og derefter kopiere hashfilen og saltfilen til en computer, der kan oprette direkte forbindelse til din Microsoft 365 lejer til upload. I det adskilte hash- og uploadscenarie skal du bruge EDMUploadAgent på begge computere.
+Hvis du ikke vil vise din fil med en klartekstfølsom datakilde på computeren med direkte adgang, kan du hashkode den på en computer, der er på en sikker placering, og derefter kopiere hashfilen og saltfilen til en computer, der kan oprette direkte forbindelse til din Microsoft 365-lejer til upload. I det adskilte hash- og uploadscenarie skal du bruge EDMUploadAgent på begge computere.
 
 > [!IMPORTANT]
 > Hvis du har brugt guiden Nøjagtigt datamatch-skema og følsomme oplysninger til at oprette skemafilen, ***skal*** du hente skemaet til denne procedure, hvis du ikke allerede har gjort det. Se [Eksport af EDM-skemafilen i XML-format](sit-get-started-exact-data-match-create-schema.md#export-of-the-edm-schema-file-in-xml-format).
 
 > [!NOTE]
-> Hvis din organisation har konfigureret [kundenøgle for Microsoft 365 på lejerniveau](customer-key-overview.md), bruger nøjagtigt datamatch automatisk krypteringsfunktionen. Dette er kun tilgængeligt for E5-licenserede lejere i Commercial-cloudmiljøet.
+> Hvis din organisation har konfigureret [kundenøgle til Microsoft 365 på lejerniveau](customer-key-overview.md), bruger Nøjagtigt datamatch automatisk krypteringsfunktionen. Dette er kun tilgængeligt for E5-licenserede lejere i Commercial-cloudmiljøet.
 
 ### <a name="best-practices"></a>Anbefalede fremgangsmåder
 
@@ -75,26 +73,26 @@ Hvis værktøjet angiver en uoverensstemmelse i antallet af kolonner, kan det sk
 
 ### <a name="prerequisites"></a>Forudsætninger
 
-- en arbejds- eller skolekonto for Microsoft 365, der føjes til sikkerhedsgruppen **EDMDataUploaders\_**
+- en arbejds- eller skolekonto til Microsoft 365, der føjes til sikkerhedsgruppen **EDM\_DataUploaders**
 - en Windows 10- eller Windows Server 2016-computer med .NET version 4.6.2 <!--4.7.2 un comment this around 9/29-->til kørsel af EDMUploadAgent
 - en mappe på overførselscomputeren til:
-  - [EDM Upload Agent](#links-to-edm-upload-agent-by-subscription-type)
+  - [EDM-uploadagent](#links-to-edm-upload-agent-by-subscription-type)
   - din fil med følsomme elementer i .csv-, .tsv- eller pipeformat (|), **PatientRecords.csv** i vores eksempler
   - outputhash- og saltfiler, der er oprettet i denne procedure
   - datalagernavnet fra **denedm.xml** fil, f.eks. `PatientRecords`
 
 #### <a name="set-up-the-security-group-and-user-account"></a>Konfigurer sikkerhedsgruppen og brugerkontoen
 
-1. Som global administrator skal du gå til Administration ved hjælp af det relevante [link til dit abonnement](sit-get-started-exact-data-match-based-sits-overview.md#portal-links-for-your-subscription) og [oprette en sikkerhedsgruppe](/office365/admin/email/create-edit-or-delete-a-security-group) med navnet **EDMDataUploaders\_**.
+1. Som global administrator skal du gå til Administration ved hjælp af det relevante [link til dit abonnement](sit-get-started-exact-data-match-based-sits-overview.md#portal-links-for-your-subscription) og [oprette en sikkerhedsgruppe](/office365/admin/email/create-edit-or-delete-a-security-group) med navnet **EDM\_DataUploaders**.
 
-2. Føj en eller flere brugere til sikkerhedsgruppen **EDMDataUploaders\_**. Disse brugere administrerer databasen med følsomme oplysninger.
+2. Føj en eller flere brugere til sikkerhedsgruppen **EDM\_DataUploaders** . Disse brugere administrerer databasen med følsomme oplysninger.
 
 ### <a name="hash-and-upload-from-one-computer"></a>Hash og upload fra én computer
 
-Denne computer skal have direkte adgang til din Microsoft 365 lejer.
+Denne computer skal have direkte adgang til din Microsoft 365-lejer.
 
 > [!NOTE]
-> Før du starter denne procedure, skal du sørge for, at du er medlem af sikkerhedsgruppen **EDMDataUploaders\_**.
+> Før du begynder på denne procedure, skal du sørge for, at du er medlem af sikkerhedsgruppen **EDM\_DataUploaders** .
 
 > [!TIP]
 >Du kan eventuelt køre en validering mod din følsomme datakildetabelfil for at kontrollere, om der er fejl i den, før du overfører den, ved at køre:
@@ -107,27 +105,27 @@ Denne computer skal have direkte adgang til din Microsoft 365 lejer.
 
 #### <a name="links-to-edm-upload-agent-by-subscription-type"></a>Links til EDM-uploadagent efter abonnementstype
 
-- [Kommercielle + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) – de fleste kommercielle kunder skal bruge dette
-- [GCC-Høj](https://go.microsoft.com/fwlink/?linkid=2137521) – Dette er specielt beregnet til cloudabonnenter med høj sikkerhed for offentlige myndigheder
+- [Commercial + GCC](https://go.microsoft.com/fwlink/?linkid=2088639) – de fleste kommercielle kunder skal bruge dette
+- [GCC-High](https://go.microsoft.com/fwlink/?linkid=2137521) – Dette er specielt beregnet til cloudabonnenter med høj sikkerhed for offentlige myndigheder
 - [DoD](https://go.microsoft.com/fwlink/?linkid=2137807) – dette er specifikt til USA cloudkunder i forsvarsministeriet
 
 1. Opret en arbejdsmappe til EDMUploadAgent. F.eks. **C:\EDM\Data**. Placer **denPatientRecords.csv** fil der.
 
-2. Download og installér den relevante [EDM-Upload Agent](#links-to-edm-upload-agent-by-subscription-type) for dit abonnement i den mappe, du oprettede i trin 1.
+2. Download og installér den relevante [EDM-uploadagent](#links-to-edm-upload-agent-by-subscription-type) for dit abonnement i den mappe, du oprettede i trin 1.
 
    > [!NOTE]
    > EDMUploadAgent på ovenstående links er blevet opdateret for automatisk at føje en saltværdi til hashkodedataene. Alternativt kan du angive din egen saltværdi. Når du har brugt denne version, kan du ikke bruge den tidligere version af EDMUploadAgent.
    >
    > Du kan kun uploade data med EDMUploadAgent til et givent datalager to gange om dagen.
 
-3. Godkend EDM-Upload Agent, åbn kommandopromptvinduet som administrator, skift til mappen **C:\EDM\Data**, og kør derefter følgende kommando:
+3. Godkend EDM-uploadagenten, åbn vinduet Kommandoprompt som administrator, skift til mappen **C:\EDM\Data** , og kør derefter følgende kommando:
 
    `EdmUploadAgent.exe /Authorize`
 
    > [!IMPORTANT]
    > Du skal køre **EdmUploadAgent** fra den mappe, hvor den er installeret, og angive den fulde sti til dine datafiler.
 
-4. Log på med din arbejds- eller skolekonto for Microsoft 365, der blev føjet til sikkerhedsgruppen EDM_DataUploaders. Dine lejeroplysninger udtrækkes fra brugerkontoen for at oprette forbindelse.
+4. Log på med din arbejds- eller skolekonto til Microsoft 365, der blev føjet til sikkerhedsgruppen EDM_DataUploaders. Dine lejeroplysninger udtrækkes fra brugerkontoen for at oprette forbindelse.
 
    VALGFRIT: Hvis du har brugt guiden Nøjagtigt datamatch-skema og følsomme oplysninger til at oprette skemaet, ***skal*** du hente det til brug i disse procedurer, hvis du ikke allerede har brugt det. Kør denne kommando i et kommandopromptvindue:
 
@@ -195,7 +193,7 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
 
 2. Kopiér disse filer på en sikker måde til den computer, du vil bruge til at uploade din følsomme kildetabelfil (PatientRecords) til din lejer.
 
-3. Godkend EDM-Upload Agent, åbn kommandopromptvinduet som administrator, skift til mappen **C:\EDM\Data**, og kør derefter følgende kommando:
+3. Godkend EDM-uploadagenten, åbn vinduet Kommandoprompt som administrator, skift til mappen **C:\EDM\Data** , og kør derefter følgende kommando:
 
    ```dos
    EdmUploadAgent.exe /Authorize
@@ -204,9 +202,9 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
    > [!IMPORTANT]
    > Du skal køre **EdmUploadAgent** fra den mappe, hvor den er installeret, og angive den fulde sti til dine datafiler.
 
-4. Log på med din arbejds- eller skolekonto for Microsoft 365, der blev føjet til sikkerhedsgruppen EDM_DataUploaders. Dine lejeroplysninger udtrækkes fra brugerkontoen for at oprette forbindelse.
+4. Log på med din arbejds- eller skolekonto til Microsoft 365, der blev føjet til sikkerhedsgruppen EDM_DataUploaders. Dine lejeroplysninger udtrækkes fra brugerkontoen for at oprette forbindelse.
 
-5. Hvis du vil overføre de hashkodede data, skal du køre følgende kommando i Windows kommandoprompt:
+5. Hvis du vil overføre de hashkodede data, skal du køre følgende kommando i Windows-kommandoprompten:
 
    ```dos
    EdmUploadAgent.exe /UploadHash /DataStoreName \<DataStoreName\> /HashFile \<HashedSourceFilePath\ /ColumnSeparator ["{Tab}"|"|"]
@@ -226,7 +224,7 @@ EdmUploadAgent.exe /SaveSchema /DataStoreName <schema name> /OutputDir <path to 
 
    Du får vist en liste over datalagre, og hvornår de sidst blev opdateret.
 
-7. Hvis du vil se alle dataoverførsler til et bestemt lager, skal du køre følgende kommando i en Windows kommandoprompt for at få vist en liste over alle datalagrene, og hvornår de blev opdateret:
+7. Hvis du vil se alle dataoverførsler til et bestemt lager, skal du køre følgende kommando i en Windows-kommandoprompt for at få vist en liste over alle datalagrene, og hvornår de blev opdateret:
 
    ```dos
    EdmUploadAgent.exe /GetSession /DataStoreName <DataStoreName>

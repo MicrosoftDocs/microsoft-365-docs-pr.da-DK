@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a4a46225b911c3272baa66772a0cf9ab63f1a1da
-ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
+ms.openlocfilehash: c4faa6ce80a885ecea864cc2fa51be29553c4a3d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66607581"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636419"
 ---
 # <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
@@ -51,9 +51,9 @@ Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så b
 
 - [Identificer den brugerdefinerede postkasse som en SecOps-postkasse](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
-- [Opret en antimalwarepolitik](configure-your-spam-filter-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) for den brugerdefinerede postkasse, hvor
-  - Automatisk udrensning (ZAP) på nul timer for malware er deaktiveret (afsnittet **Beskyttelsesindstillinger** > **Aktivér automatisk nul-tøm for malware** er ikke valgt).
-  - Den fælles indstilling for filtrering af vedhæftede filer er deaktiveret (afsnittet **Beskyttelsesindstillinger** > **Aktivér filteret til fælles vedhæftede filer** er ikke valgt).
+- [Opret en antimalwarepolitik](configure-anti-malware-policies.md#use-the-microsoft-365-defender-portal-to-create-anti-malware-policies) for den brugerdefinerede postkasse med følgende indstillinger:
+  - Automatisk udrensning (ZAP) på nul timer for malware er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér automatisk tøm af malware på nul timer** er ikke valgt).
+  - Den fælles indstilling for filtrering af vedhæftede filer er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér filteret for fælles vedhæftede filer** er ikke valgt).
 
 Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de rapporterede meddelelser:
 

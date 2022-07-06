@@ -17,16 +17,14 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du opretter, redigerer, fjerner og tester brugerdefinerede typer følsomme oplysninger i Overholdelsescenter.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 0d93259cfe76419e253c450c4cd5ed7f03f3b85c
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 733e043ed92e601812046dd5e50405ee28ee33da
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753497"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638604"
 ---
 # <a name="create-custom-sensitive-information-types-in-the-compliance-center"></a>Opret brugerdefinerede typer følsomme oplysninger i Overholdelsescenter
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvis de forudkonfigurerede typer af følsomme oplysninger ikke opfylder dine behov, kan du oprette dine egne brugerdefinerede typer følsomme oplysninger, som du definerer fuldt ud, eller du kan kopiere en af de forudkonfigurerede og redigere den.
 
@@ -41,7 +39,7 @@ Der er to måder at oprette en ny type følsomme oplysninger på:
 ## <a name="before-you-begin"></a>Før du begynder
 
 - Du bør have kendskab til følsomme informationstyper, og hvad de er sammensat af. Se Få [mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md). Det er vigtigt at forstå rollerne for:
-  - [regulære udtryk – Microsoft 365 følsomme oplysningstyper](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/) bruger Boost.RegEx 5.1.3-programmet
+  - [regulære udtryk](https://www.boost.org/doc/libs/1_68_0/libs/regex/doc/html/) – Microsoft 365-følsomme informationstyper bruger Boost.RegEx 5.1.3-programmet
   - nøgleordslister – du kan oprette dine egne, når du definerer din type følsomme oplysninger eller vælger fra eksisterende nøgleordslister
   - [nøgleordsordbog](create-a-keyword-dictionary.md)
   - [Funktioner for type af følsomme oplysninger](sit-functions.md)
@@ -83,7 +81,7 @@ Brug denne procedure til at oprette en ny type følsomme oplysninger, som du def
 12. Kontrollér din indstilling, og vælg **Send**.
 
     > [!IMPORTANT]
-    > Microsoft 365 bruger søgecrawleren til at identificere og klassificere følsomme oplysninger på SharePoint Online- og OneDrive for Business-websteder. Hvis du vil identificere den nye brugerdefinerede type følsomme oplysninger i eksisterende indhold, skal indholdet gennemsøges igen. Indhold gennemsøges efter en tidsplan, men du kan manuelt gennemsøge indhold for en gruppe af websteder, en liste eller et bibliotek. Du kan få flere oplysninger under [Anmod manuelt om gennemsøgning og genindeksering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
+    > Microsoft 365 bruger søgecrawleren til at identificere og klassificere følsomme oplysninger på SharePoint Online- og OneDrive for Business websteder. Hvis du vil identificere den nye brugerdefinerede type følsomme oplysninger i eksisterende indhold, skal indholdet gennemsøges igen. Indhold gennemsøges efter en tidsplan, men du kan manuelt gennemsøge indhold for en gruppe af websteder, en liste eller et bibliotek. Du kan få flere oplysninger under [Anmod manuelt om gennemsøgning og genindeksering af et websted, et bibliotek eller en liste](/sharepoint/crawl-site-content).
 
 13. På siden **Dataklassificering** kan du se alle typer følsomme oplysninger på listen. Vælg **Opdater** , og søg derefter efter eller brug søgeværktøjet til at finde den type følsomme oplysninger, du har oprettet.
 

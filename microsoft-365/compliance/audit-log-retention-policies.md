@@ -16,27 +16,25 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Opbevaringspolitikker for overvågningslog er en del af de nye funktioner i Microsoft Purview Audit (Premium). En opbevaringspolitik for overvågningslog giver dig mulighed for at angive, hvor længe overvågningslogge skal bevares i din organisation.
-ms.openlocfilehash: e75c88ba3ddd47b433e733984b76716532ab3ffa
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Politikker for opbevaring af overvågningslog er en del af de nye funktioner i Microsoft Purview-gennemgang (Premium). En opbevaringspolitik for overvågningslog giver dig mulighed for at angive, hvor længe overvågningslogge skal bevares i din organisation.
+ms.openlocfilehash: bf9f06fbce71af479ed089f912d440ba6c840b29
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012422"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639198"
 ---
 # <a name="manage-audit-log-retention-policies"></a>Administrer opbevaringspolitikker for overvågningslog
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Du kan oprette og administrere politikker for opbevaring af overvågningslog i Microsoft Purview-compliance-portal. Politikker for opbevaring af overvågningslog er en del af de nye funktioner i Microsoft Purview-gennemgang (Premium). En opbevaringspolitik for overvågningslog giver dig mulighed for at angive, hvor længe overvågningslogge skal bevares i din organisation. Du kan bevare overvågningslogge i op til 10 år. Du kan oprette politikker baseret på følgende kriterier:
 
-Du kan oprette og administrere opbevaringspolitikker for overvågningslog på Microsoft Purview-overholdelsesportalen. Opbevaringspolitikker for overvågningslog er en del af de nye funktioner i Microsoft Purview Audit (Premium). En opbevaringspolitik for overvågningslog giver dig mulighed for at angive, hvor længe overvågningslogge skal bevares i din organisation. Du kan bevare overvågningslogge i op til 10 år. Du kan oprette politikker baseret på følgende kriterier:
-
-- Alle aktiviteter i en eller flere Microsoft 365 tjenester
-- Specifikke aktiviteter (i en Microsoft 365 tjeneste), der udføres af alle brugere eller bestemte brugere
+- Alle aktiviteter i en eller flere Microsoft 365-tjenester
+- Specifikke aktiviteter (i en Microsoft 365-tjeneste), der udføres af alle brugere eller af bestemte brugere
 - Et prioritetsniveau, der angiver, hvilken politik der har forrang i du har flere politikker i din organisation
 
 ## <a name="default-audit-log-retention-policy"></a>Standard opbevaringspolitik for overvågningslog
 
-Overvågning (Premium) i Microsoft 365 indeholder en standardopbevaringspolitik for overvågningslog for alle organisationer. Denne politik bevarer alle Exchange Online, SharePoint Online, OneDrive for Business og Azure Active Directory overvågningsposter i ét år. Denne standardpolitik bevarer overvågningsposter, der indeholder værdien **af Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** for egenskaben **Arbejdsbelastning** (som er den tjeneste, aktiviteten fandt sted i). Standardpolitikken kan ikke ændres. Se afsnittet [Flere oplysninger](#more-information) i denne artikel for at få en liste over posttyper for hver arbejdsbelastning, der er inkluderet i standardpolitikken.
+Overvågning (Premium) i Microsoft 365 indeholder en standardopbevaringspolitik for overvågningslog for alle organisationer. Denne politik bevarer alle overvågningsposter for Exchange Online, SharePoint Online, OneDrive for Business og Azure Active Directory i ét år. Denne standardpolitik bevarer overvågningsposter, der indeholder værdien af **Exchange**, **SharePoint**, **OneDrive**, **AzureActiveDirectory** for egenskaben **Arbejdsbelastning** (som er den tjeneste, hvor aktiviteten fandt sted). Standardpolitikken kan ikke ændres. Se afsnittet [Flere oplysninger](#more-information) i denne artikel for at få en liste over posttyper for hver arbejdsbelastning, der er inkluderet i standardpolitikken.
 
 > [!NOTE]
 > Standard opbevaringspolitikken for overvågningsloggen gælder kun for overvågningsposter for aktivitet, der udføres af brugere, der har fået tildelt en Office 365 eller Microsoft 365 E5 licens eller har en Microsoft 365 E5 Overholdelse eller E5 eDiscovery- og overvågningstilføjelsesprogramlicens. Hvis du har ikke-E5-brugere eller gæstebrugere i din organisation, bevares deres tilsvarende overvågningsposter i 90 dage.
@@ -49,7 +47,7 @@ Overvågning (Premium) i Microsoft 365 indeholder en standardopbevaringspolitik 
 
 - Hvis du vil bevare en overvågningslog i mere end 90 dage (og op til 1 år), skal den bruger, der genererer overvågningsloggen (ved at udføre en overvåget aktivitet), tildeles en Office 365 E5 eller en Microsoft 365 E5 licens eller have en Microsoft 365 E5 Overholdelse- eller E5 eDiscovery- og audit-licens. Hvis du vil bevare overvågningslogge i 10 år, skal den bruger, der genererer overvågningsloggen, også tildeles en tiårig licens til tilføjelsesprogrammet til opbevaring af overvågningslog ud over en E5-licens.
 
-- Alle brugerdefinerede opbevaringspolitikker for overvågningslog (oprettet af din organisation) har forrang frem for standardopbevaringspolitikken. Hvis du f.eks. opretter en opbevaringspolitik for overvågningsloggen for Exchange postkasseaktivitet, der har en opbevaringsperiode, der er kortere end ét år, bevares overvågningsposter for Exchange postkasseaktiviteter i den kortere varighed, der er angivet i den brugerdefinerede politik.
+- Alle brugerdefinerede opbevaringspolitikker for overvågningslog (oprettet af din organisation) har forrang frem for standardopbevaringspolitikken. Hvis du f.eks. opretter en opbevaringspolitik for overvågningsloggen for Exchange-postkasseaktivitet, der har en opbevaringsperiode, der er kortere end ét år, bevares overvågningsposterne for Exchange-postkasseaktiviteter i den kortere varighed, der er angivet i den brugerdefinerede politik.
 
 ## <a name="create-an-audit-log-retention-policy"></a>Opret en opbevaringspolitik for overvågningslog
 
@@ -102,7 +100,7 @@ Hvis du vil redigere en politik, skal du vælge den for at få vist pop op-siden
 
 > [!IMPORTANT]
 >
-> Hvis du bruger **Cmdlet'en New-UnifiedAuditLogRetentionPolicy** , er det muligt at oprette en opbevaringspolitik for overvågningslog for posttyper eller aktiviteter, der ikke er tilgængelige i værktøjet **Opret overvågningspolitik** på dashboardet. I dette tilfælde kan du ikke redigere politikken (f.eks. ændre opbevaringsvarigheden eller tilføje og fjerne aktiviteter) fra dashboardet **Overvågning af opbevaringspolitikker** . Du kan kun få vist og slette politikken på Microsoft Purview-overholdelsesportalen. Hvis du vil redigere politikken, skal du bruge Cmdlet'en [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) i Security & Compliance PowerShell.>
+> Hvis du bruger **Cmdlet'en New-UnifiedAuditLogRetentionPolicy** , er det muligt at oprette en opbevaringspolitik for overvågningslog for posttyper eller aktiviteter, der ikke er tilgængelige i værktøjet **Opret overvågningspolitik** på dashboardet. I dette tilfælde kan du ikke redigere politikken (f.eks. ændre opbevaringsvarigheden eller tilføje og fjerne aktiviteter) fra dashboardet **Overvågning af opbevaringspolitikker** . Du kan kun få vist og slette politikken i Microsoft Purview-compliance-portal. Hvis du vil redigere politikken, skal du bruge Cmdlet'en [Set-UnifiedAuditLogRetentionPolicy](/powershell/module/exchange/set-unifiedauditlogretentionpolicy) i Security & Compliance PowerShell.>
 >
 > **Tip:** Der vises en meddelelse øverst på pop op-siden for politikker, der skal redigeres ved hjælp af PowerShell.
 
@@ -118,7 +116,7 @@ Du kan også bruge Security & Compliance PowerShell til at oprette og administre
 
 Følg disse trin for at oprette en opbevaringspolitik for overvågningslog i PowerShell:
 
-1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende kommando for at oprette en opbevaringspolitik for overvågningslog:
 
@@ -129,8 +127,8 @@ Følg disse trin for at oprette en opbevaringspolitik for overvågningslog i Pow
    I dette eksempel oprettes der en opbevaringspolitik for overvågningsloggen med navnet "Microsoft Teams Overvågningspolitik" med disse indstillinger:
 
    - En beskrivelse af politikken.
-   - Bevarer alle Microsoft Teams aktiviteter (som defineret af parameteren *RecordType*).
-   - Bevarer Microsoft Teams overvågningslogge i 10 år.
+   - Bevarer alle Microsoft Teams-aktiviteter (som defineret af parameteren *RecordType* ).
+   - Bevarer Microsoft Teams-overvågningslogge i 10 år.
    - En prioritet på 100.
 
 Her er et andet eksempel på oprettelse af en opbevaringspolitik for overvågningslog. Denne politik bevarer overvågningslogge for aktiviteten "Bruger, der er logget på" i seks måneder for brugerens admin@contoso.onmicrosoft.com.
@@ -174,7 +172,7 @@ Som tidligere angivet bevares overvågningsposter for handlinger i Azure Active 
 |---|---|---|
 |AzureActiveDirectory (8)|ExchangeAdmin (1)|ComplianceDLPSharePoint (11)|
 |AzureActiveDirectoryAccountLogon (9)|ExchangeItem (2)|ComplianceDLPSharePointClassification (33)|
-|AzureActiveDirectoryStsLogon (15)|Kampagne (62)|Project (35)|
+|AzureActiveDirectoryStsLogon (15)|Kampagne (62)|Projekt (35)|
 ||ComplianceDLPExchange (13)|SharePoint (4)|
 ||ComplianceSupervisionExchange (68)|SharePointCommentOperation (37)|
 ||CustomerKeyServiceEncryption (69)|SharePointContentTypeOperation (55)|

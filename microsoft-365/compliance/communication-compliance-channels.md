@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: b60337226a12f7395b4a5664b5a11b0d88ed4790
-ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+ms.openlocfilehash: 0769dd3cfd64f611162803952a1e39b9241ac2ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65893366"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66638658"
 ---
 # <a name="detect-channel-signals-with-communication-compliance"></a>Registrer kanalsignaler med kommunikationsoverholdelse
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Med politikker for overholdelse af kommunikation kan du vælge at scanne meddelelser på en eller flere af følgende kommunikationsplatforme som en gruppe eller som separate kilder. Oprindelige meddelelser, der registreres på tværs af disse platforme, bevares på den oprindelige platformplacering i overensstemmelse med organisationens [politikker for opbevaring og bevarelse](/microsoft-365/compliance/information-governance). Kopier af meddelelser, der bruges af politikker for kommunikation med overholdelse af angivne standarder til analyse og undersøgelse, bevares, så længe politikken er på plads, selvom brugerne forlader organisationen, og deres postkasser slettes. Når en kommunikationspolitik slettes, slettes der også kopier af meddelelser, der er knyttet til politikken.
 
@@ -60,8 +58,8 @@ Vælg den udtrukne vedhæftede tekst for at få vist detaljerne i *visningerne K
 Brug følgende konfigurationer til gruppeadministration til at overvåge individuelle brugerchats og kanalkommunikation i Teams:
 
 - **Til Teams-chatkommunikation:** Tildel individuelle brugere, eller tildel en [distributionsgruppe](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) til politikken for kommunikation med overholdelse af angivne standarder. Denne indstilling er for en til en- eller en til mange-bruger-/chatrelationer.
-- **For Teams-kanalkommunikation:** Tildel hver Microsoft Teams-kanal eller Microsoft 365-gruppe, du vil scanne, som indeholder en bestemt bruger, til politikken for kommunikation med overholdelse af angivne standarder. Hvis du føjer den samme bruger til andre Microsoft Teams-kanaler eller Microsoft 365-grupper, skal du sørge for at føje disse nye kanaler og grupper til politikken for kommunikation med overholdelse af angivne standarder. Hvis et medlem af kanalen er en overvåget bruger i en politik, og den *indgående* retning er konfigureret i en politik, kan alle meddelelser, der sendes i kanalen, gennemses, og potentielle politikforekomster (selv for brugere i kanalen, der ikke udtrykkeligt overvåges). Bruger A er f.eks. ejer eller medlem af en kanal. Bruger B og Bruger C er medlemmer af den samme kanal og bruger sprog, der matches med den upassende indholdspolitik, der kun fører tilsyn med Bruger A. Bruger B og Bruger C opretter politikkampe for samtaler i kanalen, selvom de ikke overvåges direkte i den upassende indholdspolitik. Teams-samtaler mellem Bruger B og Bruger C, der er uden for kanalen, som indeholder Bruger A, vil ikke være underlagt den upassende indholdspolitik, der omfatter Bruger A. Hvis du vil udelukke kanalmedlemmer fra overvågning, når andre medlemmer af kanalen overvåges eksplicit, skal du slå indstillingen *Indgående* kommunikationsretning fra i den relevante politik for overholdelse af kommunikation.
-- **I forbindelse med Teams-chatkommunikation med hybride mailmiljøer**: Overholdelse af kommunikation kan overvåge chatmeddelelser for brugere for organisationer med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, der har aktiveret Microsoft Teams. Du skal oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Når du opretter en politik for overholdelse af angivne standarder for kommunikation, skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
+- **For Teams-kanalkommunikation:** Tildel hver Microsoft Teams-kanal eller Microsoft 365-gruppe, du vil scanne, som indeholder en bestemt bruger, til politikken for kommunikation med overholdelse af angivne standarder. Hvis du føjer den samme bruger til andre Microsoft Teams-kanaler eller Microsoft 365-grupper, skal du sørge for at føje disse nye kanaler og grupper til politikken for kommunikation med overholdelse af angivne standarder. Hvis et medlem af kanalen er en overvåget bruger i en politik, og den *indgående* retning er konfigureret i en politik, kan alle meddelelser, der sendes i kanalen, gennemses, og potentielle politikforekomster (selv for brugere i kanalen, der ikke overvåges eksplicit). Bruger A er f.eks. ejer eller medlem af en kanal. Bruger B og Bruger C er medlemmer af den samme kanal og bruger sprog, der matches med den upassende indholdspolitik, der kun fører tilsyn med Bruger A. Bruger B og Bruger C opretter politikkampe for samtaler i kanalen, selvom de ikke overvåges direkte i den upassende indholdspolitik. Teams-samtaler mellem Bruger B og Bruger C, der er uden for kanalen, som indeholder Bruger A, vil ikke være underlagt den upassende indholdspolitik, der omfatter Bruger A. Hvis du vil udelukke kanalmedlemmer fra overvågning, når andre medlemmer af kanalen overvåges eksplicit, skal du slå indstillingen *Indgående* kommunikationsretning fra i den relevante politik for overholdelse af kommunikation.
+- **For Teams-chatkommunikation med hybride mailmiljøer**: Overholdelse af kommunikation kan registrere chatbeskeder for brugere for organisationer med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, der har aktiveret Microsoft Teams. Du skal oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Når du opretter en politik for overholdelse af angivne standarder for kommunikation, skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
 
 ## <a name="exchange-email"></a>Exchange-mail
 
@@ -71,15 +69,7 @@ Postkasser, der hostes på Exchange Online som en del af dit Microsoft 365- elle
 
 Private meddelelser og offentlige samtaler og tilknyttede vedhæftede filer i Yammer-communities kan scannes. Når en bruger føjes til politikken for overholdelse af kommunikation, der omfatter Yammer som en defineret kanal, medtages kommunikation på tværs af alle Yammer-communities, som brugeren er medlem af, i scanningsprocessen. Det kan tage op til 24 timer at behandle yammer-chats og vedhæftede filer, der opfylder betingelserne i politikken for overholdelse af angivne standarder for kommunikation. 
 
-Yammer skal være i [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) for politikker for overholdelse af kommunikation for at overvåge Yammer-kommunikation og vedhæftede filer. I oprindelig tilstand er alle Yammer-brugere i Azure Active Directory (AAD), alle grupper er Office 365-grupper, og alle filer gemmes i SharePoint Online.
-
-## <a name="skype-for-business-online"></a>Skype for Business Online
-
-Chatkommunikation og tilknyttede vedhæftede filer i Skype for Business Online kan overvåges. Det kan tage op til 24 timer at behandle Skype for Business Online-chats, der opfylder betingelserne i politikken for overholdelse af angivne standarder for kommunikation. Overvågede chatsamtaler stammer fra [tidligere samtaler, der er gemt i Skype for Business Online](https://support.office.com/article/Find-a-previous-Skype-for-Business-conversation-18892eba-5f18-4281-8c87-fd48bd72e6a2).  
-
-Brug følgende konfiguration af gruppeadministration til at overvåge kommunikation med brugerchat i Skype for Business Online:
-
-- **I forbindelse med Chatkommunikation i Skype for Business Online**: Tildel individuelle brugere, eller tildel en [distributionsgruppe](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) til politikken for kommunikation med overholdelse af angivne standarder. Denne indstilling er for en til en- eller en til mange-bruger-/chatrelationer.
+Yammer skal være i [oprindelig tilstand](/yammer/configure-your-yammer-network/overview-native-mode) for politikker for overholdelse af kommunikation for at overvåge Yammer-kommunikation og vedhæftede filer. I oprindelig tilstand er alle Yammer-brugere i Azure Active Directory (AAD), alle grupper er Office 365 grupper, og alle filer gemmes i SharePoint Online.
 
 ## <a name="third-party-sources"></a>Kilder fra tredjepart
 

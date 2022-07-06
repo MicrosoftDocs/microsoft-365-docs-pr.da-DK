@@ -1,7 +1,7 @@
 ---
 title: Attributter for informationsbarrierer
-description: Denne artikel er en reference til de Azure Active Directory brugerkontoattributter, som du kan bruge til at definere informationsbarrieresegmenter.
-keywords: Microsoft 365, Microsoft Purview, overensstemmelse
+description: Denne artikel er en reference til attributterne for Azure Active Directory-brugerkontoen, som du kan bruge til at definere informationsbarrieresegmenter.
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, informationsbarrierer
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -14,16 +14,14 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: e09331fb819d2b00764cd6dacd1687ade8ee116c
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: a1549a0cb3bf03056b37a75175c3b24416bec7b5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396261"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639770"
 ---
 # <a name="information-barriers-attributes"></a>Attributter for informationsbarrierer
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Visse attributter i Azure Active Directory kan bruges til at segmentere brugere i informationsbarrierer (IB). Når segmenter er defineret, kan disse segmenter bruges som filtre for IB-politikker. Du kan f.eks. bruge **Afdeling** til at definere segmenter af brugere efter afdeling i din organisation (forudsat at ingen enkelt medarbejder arbejder for to afdelinger på samme tid).
 
@@ -60,7 +58,7 @@ De attributter, der er angivet i denne artikel, kan bruges til at definere eller
 
 I følgende tabel vises de attributter, du kan bruge sammen med informationsbarrierer.
 
-|**Azure Active Directory egenskabsnavn<br/> (vist navn på LDAP)**|**Exchange egenskabsnavn**|
+|**Azure Active Directory-egenskabsnavn<br/> (vist navn på LDAP)**|**Navn på Exchange-egenskab**|
 |:---------------------------------------------------------------|:-------------------------|
 | Co | Co |
 | Virksomhed | Virksomhed |

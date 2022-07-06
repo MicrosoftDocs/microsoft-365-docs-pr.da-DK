@@ -17,23 +17,21 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret politikker for opbevaring af automatisk mærkning, så du automatisk kan anvende mærkater for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: 87328b69f2649a1e6a6c6755892e17e7c04aac53
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 570f2a6e684dbe160f8de2f43817fde996f0b92c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128819"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66640892"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 > [!NOTE]
-> Dette scenarie understøttes ikke for [lovmæssige poster](records-management.md#records) eller standardnavne for en organiseringsstruktur, f.eks. et dokumentsæt eller et bibliotek i SharePoint eller en mappe i Exchange. Disse scenarier kræver en [publiceret politik for opbevaringsmærkat](create-apply-retention-labels.md).
+> Dette scenarie understøttes ikke for [lovmæssige poster](records-management.md#records) eller standardnavne for en organisationsstruktur, f.eks. et dokumentsæt eller et bibliotek i SharePoint eller en mappe i Exchange. Disse scenarier kræver en [publiceret politik for opbevaringsmærkat](create-apply-retention-labels.md).
 
-En af de mest effektive funktioner i [opbevaringsmærkater](retention.md) er muligheden for automatisk at anvende dem på indhold, der opfylder de angivne betingelser. I dette tilfælde behøver personer i din organisation ikke at anvende opbevaringsmærkater. Microsoft 365 gør arbejdet for dem.
+En af de mest effektive funktioner i [opbevaringsmærkater](retention.md) er muligheden for automatisk at anvende dem på indhold, der opfylder de angivne betingelser. I dette tilfælde behøver personer i din organisation ikke at anvende opbevaringsmærkater. Microsoft 365 udfører arbejdet for dem.
 
 Automatisk anvendelse af opbevaringsmærkater er effektive, fordi:
 
@@ -44,7 +42,7 @@ Automatisk anvendelse af opbevaringsmærkater er effektive, fordi:
 Du kan automatisk anvende opbevaringsmærkater på indhold, når der ikke allerede er anvendt en opbevaringsmærkat for dette indhold, og det indeholder følsomme oplysninger, nøgleord eller søgbare egenskaber eller et match for [klassificeringer, der kan oplæres](classifier-get-started-with.md). Nu som prøveversion kan du også automatisk anvende en opbevaringsmærkat på vedhæftede filer i skyen, der er gemt i SharePoint eller OneDrive.
 
 > [!TIP]
-> Brug søgbare egenskaber til at identificere [Teams mødeoptagelser](#microsoft-teams-meeting-recordings) og [elementer, hvor der er anvendt en følsomhedsmærkat](#identify-files-and-emails-that-have-a-sensitivity-label).
+> Brug søgbare egenskaber til at identificere [Teams-mødeoptagelser](#microsoft-teams-meeting-recordings) og [elementer, hvor der er anvendt en følsomhedsmærkat](#identify-files-and-emails-that-have-a-sensitivity-label).
 
 De processer, der automatisk anvender en opbevaringsmærkat baseret på disse betingelser:
 
@@ -57,7 +55,7 @@ Brug følgende instruktioner til de to administratortrin.
 >
 > - Anvend en opbevaringsmærkat på en model til dokumentforståelse i SharePoint Syntex
 > - Anvend en standardopbevaringsmærkat for SharePoint og Outlook
-> - Anvend en opbevaringsmærkat på mail ved hjælp af Outlook regler
+> - Anvend en opbevaringsmærkat på mail ved hjælp af Outlook-regler
 >
 > I disse scenarier skal du se [Publicer opbevaringsmærkater og anvende dem i apps](create-apply-retention-labels.md).
 
@@ -91,7 +89,7 @@ Når du opretter en politik, der automatisk skal anvendes, vælger du en opbevar
 
 5. Afhængigt af dit valgte område:
 
-    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Exchange mail**, men ikke **SharePoint websteder**.
+    - Hvis du vælger **Adaptiv**: På siden **Vælg tilpassede politikområder og -placeringer** skal du vælge **Tilføj områder** og vælge et eller flere tilpassede områder, der er blevet oprettet. Vælg derefter en eller flere placeringer. De placeringer, du kan vælge, afhænger af de [tilføjede områdetyper](retention-settings.md#configuration-information-for-adaptive-scopes) . Hvis du f.eks. kun har tilføjet områdetypen **Bruger**, kan du vælge **Exchange-mail** , men ikke **SharePoint-websteder**.
 
     - Hvis du vælger **Statisk**: På siden **Vælg placeringer** skal du slå en af placeringerne til eller fra. For hver placering kan du lade den være som standard for at [anvende politikken på hele placeringen](retention-settings.md#a-policy-that-applies-to-entire-locations), eller du kan [angive medtag og ekskludering](retention-settings.md#a-policy-with-specific-inclusions-or-exclusions)
 
@@ -138,14 +136,14 @@ SharePoint og OneDrive:
 |Specifikke nøgleord eller egenskaber, der kan søges efter| Ja |Ja |
 |Trænbare klassificeringer| Ja | Ja (kun de seneste seks måneder) |
 
-Derudover understøttes SharePoint elementer, der er kladder, eller som aldrig er blevet publiceret, ikke i dette scenarie.
+Desuden understøttes SharePoint-elementer, der er kladder, eller som aldrig er blevet publiceret, ikke i dette scenarie.
 
 #### <a name="auto-apply-labels-to-content-with-specific-types-of-sensitive-information"></a>Anvend automatisk mærkater på indhold med bestemte typer følsomme oplysninger
 
 > [!IMPORTANT]
-> For mails, som du automatisk anvender ved at identificere følsomme oplysninger, medtages alle postkasser automatisk, hvilket omfatter postkasser fra Microsoft 365 grupper.
+> For mails, som du automatisk anvender ved at identificere følsomme oplysninger, medtages alle postkasser automatisk, hvilket omfatter postkasser fra Microsoft 365-grupper.
 >
-> Selvom gruppepostkasser normalt medtages ved at vælge den **Microsoft 365-grupper** placering, omfatter gruppeplaceringen kun SharePoint websteder, der er forbundet med en Microsoft 365 gruppe, for denne specifikke politikkonfiguration.
+> Selvom gruppepostkasser normalt medtages ved at vælge den **Microsoft 365-grupper** placering, omfatter gruppeplaceringen for denne specifikke politikkonfiguration kun SharePoint-websteder, der er forbundet med en Microsoft 365-gruppe.
 
 Når du opretter politikker for automatisk anvendelse af opbevaringsmærkater for følsomme oplysninger, får du vist den samme liste over politikskabeloner, som når du opretter en DLP-politik (Microsoft Purview Forebyggelse af datatab). Hver skabelon er forudkonfigureret til at søge efter bestemte typer følsomme oplysninger. I følgende eksempel er de følsomme oplysningstyper fra kategorien **Beskyttelse af personlige oplysninger** og dataskabelonen Personlige **oplysninger (PII** ):
 
@@ -168,7 +166,7 @@ Sådan overvejer du, når du bruger følsomme oplysningstyper til automatisk at 
 
 - Hvis du bruger brugerdefinerede følsomme oplysningstyper, kan disse ikke automatisk navngive eksisterende elementer i SharePoint og OneDrive.
 
-- I forbindelse med mails kan du ikke vælge bestemte modtagere, der skal inkluderes eller udelades. Kun indstillingen **Alle modtagere** understøttes, og for denne konfiguration omfatter den kun postkasser fra Microsoft 365 grupper.
+- I forbindelse med mails kan du ikke vælge bestemte modtagere, der skal inkluderes eller udelades. Kun indstillingen **Alle modtagere** understøttes, og for denne konfiguration omfatter den kun postkasser fra Microsoft 365-grupper.
 
 #### <a name="auto-apply-labels-to-content-with-keywords-or-searchable-properties"></a>Anvend automatisk mærkater på indhold med nøgleord eller søgbare egenskaber
 
@@ -182,11 +180,11 @@ Forespørgselsbaserede politikker til automatisk anvendelse bruger det samme sø
 
 Nogle ting, du skal overveje, når du bruger nøgleord eller egenskaber, der kan søges efter, til automatisk at anvende opbevaringsmærkater:
 
-- I forbindelse med SharePoint understøttes gennemsøgte egenskaber og brugerdefinerede egenskaber ikke for disse KQL-forespørgsler, og du må kun bruge foruddefinerede administrerede egenskaber for dokumenter. Du kan dog bruge tilknytninger på lejerniveau med de foruddefinerede administrerede egenskaber, der som standard er aktiveret som afgrænsninger (RefinableDate00-19, RefinableString00-99, RefinableInt00-49, RefinableDecimals00-09 og RefinableDouble00-09). Du kan finde flere oplysninger [under Oversigt over gennemsøgte og administrerede egenskaber i SharePoint Server](/SharePoint/technical-reference/crawled-and-managed-properties-overview), og du kan finde instruktioner under [Opret en ny administreret egenskab](/sharepoint/manage-search-schema#create-a-new-managed-property).
+- For SharePoint understøttes gennemsøgte egenskaber og brugerdefinerede egenskaber ikke for disse KQL-forespørgsler, og du skal kun bruge foruddefinerede administrerede egenskaber for dokumenter. Du kan dog bruge tilknytninger på lejerniveau med de foruddefinerede administrerede egenskaber, der som standard er aktiveret som afgrænsninger (RefinableDate00-19, RefinableString00-99, RefinableInt00-49, RefinableDecimals00-09 og RefinableDouble00-09). Du kan finde flere oplysninger under [Oversigt over gennemsøgte og administrerede egenskaber i SharePoint Server](/SharePoint/technical-reference/crawled-and-managed-properties-overview), og du kan finde instruktioner under [Opret en ny administreret egenskab](/sharepoint/manage-search-schema#create-a-new-managed-property).
 
 - Hvis du knytter en brugerdefineret egenskab til en af afgrænsningsegenskaberne, skal du vente 24 timer, før du bruger den i din KQL-forespørgsel for en opbevaringsmærkat.
 
-- Selvom SharePoint administrerede egenskaber kan omdøbes ved hjælp af aliasser, skal du ikke bruge disse til KQL-forespørgsler i dine navne. Angiv altid det faktiske navn på den administrerede egenskab, f.eks. "RefinableString01".
+- Selvom SharePoint-administrerede egenskaber kan omdøbes ved hjælp af aliasser, skal du ikke bruge disse til KQL-forespørgsler i dine navne. Angiv altid det faktiske navn på den administrerede egenskab, f.eks. "RefinableString01".
 
 - Hvis du vil søge efter værdier, der indeholder mellemrum eller specialtegn, skal du bruge dobbelte anførselstegn (`" "`) til at indeholde udtrykket, `subject:"Financial Statements"`f.eks. .
 
@@ -210,19 +208,19 @@ Eksempler på forespørgsler:
 
 Mere komplekse eksempler:
 
-Følgende forespørgsel om SharePoint identificerer Word-dokumenter eller Excel regneark, når disse filer indeholder **nøgleordsadgangskoden**, **adgangskoder** eller **pw**:
+Følgende forespørgsel til SharePoint identificerer Word-dokumenter eller Excel-regneark, når disse filer indeholder **nøgleordsadgangskoden**, **adgangskoder** eller **pw**:
 
 ```KQL
 (password OR passwords OR pw) AND (filetype:doc* OR filetype:xls*)
 ```
 
-Følgende forespørgsel om Exchange identificerer alle Word-dokumenter eller PDF-dokumenter, der indeholder ordet **nda** eller sætningen **fortrolighedsaftale**, når disse dokumenter er knyttet til en mail:
+Følgende forespørgsel til Exchange identificerer alle Word-dokumenter eller PDF-dokumenter, der indeholder ordet **nda** eller sætningen **fortrolighedsaftale** , når disse dokumenter er knyttet til en mail:
 
 ```KQL
 (nda OR "non disclosure agreement") AND (attachmentnames:.doc* OR attachmentnames:.pdf)
 ```
 
-Følgende forespørgsel om SharePoint identificerer dokumenter, der indeholder et kreditkortnummer:
+Følgende forespørgsel til SharePoint identificerer dokumenter, der indeholder et kreditkortnummer:
 
 ```KQL
 sensitivetype:"credit card number"
@@ -242,22 +240,22 @@ Følgende forespørgsel indeholder typiske nøgleord, der kan hjælpe med at ide
 
 Bemærk, at i dette sidste eksempel bruges bedste praksis for altid at inkludere operatorer mellem nøgleord. Et mellemrum mellem nøgleord (eller to property:value-udtryk) er det samme som at bruge AND. Når du altid tilføjer operatorer, er det nemmere at se, at denne eksempelforespørgsel kun identificerer indhold, der indeholder alle disse nøgleord, i stedet for indhold, der indeholder nøgleordene. Hvis du har til hensigt at identificere indhold, der indeholder et af nøgleordene, skal du angive ELLER i stedet for AND. Som vist i dette eksempel er det nemmere at fortolke forespørgslen korrekt, når du altid angiver operatorerne.
 
-##### <a name="microsoft-teams-meeting-recordings"></a>Microsoft Teams mødeoptagelser
+##### <a name="microsoft-teams-meeting-recordings"></a>Microsoft Teams-mødeoptagelser
 
 > [!NOTE]
-> Muligheden for at bevare og slette Teams mødeoptagelser fungerer ikke, før optagelser gemmes på OneDrive eller SharePoint. Du kan få flere oplysninger under [Brug OneDrive for Business og SharePoint Online eller Stream til mødeoptagelser](/MicrosoftTeams/tmr-meeting-recording-change).
+> Muligheden for at bevare og slette Teams-mødeoptagelser fungerer ikke, før optagelser gemmes på OneDrive eller SharePoint. Du kan finde flere oplysninger under [Brug OneDrive for Business og SharePoint Online eller Stream til mødeoptagelser](/MicrosoftTeams/tmr-meeting-recording-change).
 
-Hvis du vil identificere Microsoft Teams mødeoptagelser, der er gemt i brugernes OneDrive konti eller i SharePoint, skal du angive følgende for **forespørgselseditoren med nøgleord**:
+Hvis du vil identificere Microsoft Teams-mødeoptagelser, der er gemt i brugernes OneDrive-konti eller i SharePoint, skal du angive følgende for **forespørgselseditoren med nøgleord**:
 
 ```KQL
 ProgID:Media AND ProgID:Meeting
 ```
 
-For det meste gemmes mødeoptagelser for at OneDrive. Men for kanalmøder gemmes de i SharePoint.
+For det meste gemmes mødeoptagelser på OneDrive. Men for kanalmøder gemmes de i SharePoint.
 
 ##### <a name="identify-files-and-emails-that-have-a-sensitivity-label"></a>Identificer filer og mails, der har en følsomhedsmærkat
 
-Hvis du vil identificere filer i SharePoint eller OneDrive og Exchange mails, hvor der er anvendt en bestemt [følsomhedsmærkat](sensitivity-labels.md), skal du angive følgende for **forespørgselseditoren med nøgleord**:
+Hvis du vil identificere filer i sharePoint- eller OneDrive- og Exchange-mails, der har en bestemt [følsomhedsmærkat](sensitivity-labels.md) , skal du angive følgende for **forespørgselseditoren med nøgleord**:
 
 ```KQL
 InformationProtectionLabelId:<GUID>
@@ -278,7 +276,7 @@ Når du vælger indstillingen for en klassificering, der kan oplæres, kan du v�
 > [!CAUTION]
 > Vi udfaser den prækvalificerede klassificering af **stødende sprog** , fordi den har produceret et højt antal falske positiver. Brug ikke denne klassificering, og hvis du i øjeblikket bruger den, anbefaler vi, at du fjerner dine forretningsprocesser fra den og i stedet bruger de forududlærte klassificeringer **målrettet chikane**, **bandeord** og **trussel** .
 
-Hvis du vil anvende en mærkat automatisk ved hjælp af denne indstilling, skal SharePoint websteder samt postkasser have mindst 10 MB data.
+Hvis du vil anvende en mærkat automatisk ved hjælp af denne indstilling, skal SharePoint-websteder og postkasser have mindst 10 MB data.
 
 Du kan finde flere oplysninger om klassificeringer, der kan oplæres, under [Få mere at vide om klassificeringer, der kan oplæres](classifier-learn-about.md).
 
@@ -287,14 +285,14 @@ Du kan finde flere oplysninger om klassificeringer, der kan oplæres, under [Få
 
 Sådan overvejer du, når du bruger klassificeringer, der kan oplæres, til automatisk at anvende opbevaringsmærkater:
 
-- Du kan ikke automatisk navngive SharePoint og OneDrive elementer, der er ældre end seks måneder.
+- Du kan ikke automatisk navngive SharePoint- og OneDrive-elementer, der er ældre end seks måneder.
 
 #### <a name="auto-apply-labels-to-cloud-attachments"></a>Anvend automatisk mærkater på vedhæftede filer i skyen
 
 > [!NOTE]
 > Denne indstilling udrulles gradvist som prøveversion og kan ændres.
 
-Du skal muligvis bruge denne indstilling, hvis du skal hente og bevare alle kopier af filer i din lejer, der sendes via kommunikation af brugere. Du kan bruge denne indstilling sammen med opbevaringspolitikker for selve kommunikationstjenesterne, Exchange og Teams.
+Du skal muligvis bruge denne indstilling, hvis du skal hente og bevare alle kopier af filer i din lejer, der sendes via kommunikation af brugere. Du bruger denne indstilling sammen med opbevaringspolitikker for selve kommunikationstjenesterne, Exchange og Teams.
 
 > [!IMPORTANT]
 > Når du vælger en etiket, der skal bruges til automatisk anvendelse af opbevaringsmærkater for vedhæftede filer i skyen, skal du sikre, at indstillingen for opbevaring af mærkater **Start opbevaringsperioden baseret på** **er Når elementer blev navngivet**.
@@ -305,33 +303,33 @@ Når du vælger muligheden for at anvende en opbevaringsmærkat på vedhæftede 
 
 Hvis filen ændres og deles igen, gemmes en ny kopi af filen som en ny version i biblioteket bevarelsesposition. Du kan få flere oplysninger, herunder hvorfor du skal bruge **mærkatindstillingen Når elementer blev mærket** , under [Sådan fungerer opbevaring med vedhæftede filer i skyen](retention-policies-sharepoint.md#how-retention-works-with-cloud-attachments).
 
-De vedhæftede filer i skyen, der understøttes for denne indstilling, er filer som dokumenter, videoer og billeder, der er gemt i SharePoint og OneDrive. I forbindelse med Teams understøttes vedhæftede filer i skyen, der deles i chatbeskeder, samt standardkanaler og private kanaler. Vedhæftede filer i skyen, der deles via mødeindkaldelser, og andre apps end Teams eller Outlook understøttes ikke. Vedhæftede filer i skyen skal deles af brugerne. vedhæftede filer i skyen, der sendes via robotter, understøttes ikke.
+De vedhæftede filer i skyen, der understøttes for denne indstilling, er filer som dokumenter, videoer og billeder, der er gemt i SharePoint og OneDrive. I Teams understøttes vedhæftede filer i skyen, der deles i chatbeskeder, og standardkanaler og private kanaler. Vedhæftede filer i skyen, der deles via mødeindkaldelser, og andre apps end Teams eller Outlook understøttes ikke. Vedhæftede filer i skyen skal deles af brugerne. vedhæftede filer i skyen, der sendes via robotter, understøttes ikke.
 
-Selvom det ikke kræves til denne indstilling, anbefaler vi, at du sikrer, at versionsstyring er aktiveret for dine SharePoint websteder og OneDrive konti, så den delte version kan registreres nøjagtigt. Hvis versionsstyring ikke er aktiveret, bevares den senest tilgængelige version. Dokumenter i kladden, eller som aldrig er blevet publiceret, understøttes ikke.
+Selvom det ikke kræves til denne indstilling, anbefaler vi, at du sikrer, at versionsstyring er aktiveret for dine SharePoint-websteder og OneDrive-konti, så den delte version kan registreres nøjagtigt. Hvis versionsstyring ikke er aktiveret, bevares den senest tilgængelige version. Dokumenter i kladden, eller som aldrig er blevet publiceret, understøttes ikke.
 
 Når du vælger en etiket, der skal bruges til automatisk anvendelse af opbevaringsmærkater for vedhæftede filer i skyen, skal du sørge for, at indstillingen for opbevaring af mærkater **Start opbevaringsperioden baseret på** **er Når elementer blev mærket**.
 
 Når du konfigurerer placeringerne for denne indstilling, kan du vælge:
 
-- **SharePoint websteder** til delte filer, der er gemt på SharePoint kommunikationswebsteder, teamwebsteder, der ikke er forbundet af Microsoft 365 grupper, og klassiske websteder.
-- **Microsoft 365-grupper** til delte filer, der er gemt på teamwebsteder, som Microsoft 365 grupper har oprettet forbindelse til.
-- **OneDrive konti** for delte filer, der er gemt i brugernes OneDrive.
+- **SharePoint-websteder** til delte filer, der er gemt på SharePoint-kommunikationswebsteder, teamwebsteder, der ikke er forbundet af Microsoft 365-grupper, og klassiske websteder.
+- **Microsoft 365-grupper** til delte filer, der er gemt på teamwebsteder, der er forbundet af Microsoft 365-grupper.
+- **OneDrive-konti** for delte filer, der er gemt på brugernes OneDrive.
 
-Du skal oprette separate opbevaringspolitikker, hvis du vil bevare eller slette de oprindelige filer, mails eller Teams meddelelser.
+Du skal oprette separate opbevaringspolitikker, hvis du vil bevare eller slette de oprindelige filer, mails eller Teams-meddelelser.
 
 > [!NOTE]
-> Hvis vedhæftede filer i skyen skal udløbe samtidig med de meddelelser, der indeholdt dem, skal du konfigurere opbevaringsmærkaten, så den har den samme bevarelse og derefter slette handlinger og tidsindstillinger som dine opbevaringspolitikker for Exchange og Teams.
+> Hvis vedhæftede filer i skyen skal udløbe samtidig med de meddelelser, der indeholdt dem, skal du konfigurere opbevaringsmærkaten, så den har samme bevarelse og derefter slette handlinger og tidsindstillinger som dine opbevaringspolitikker for Exchange og Teams.
 
 Sådan overvejer du, hvornår opbevaringsmærkater automatisk anvendes på vedhæftede filer i skyen:
 
 - Det er kun nyligt delte vedhæftede filer i skyen, der automatisk mærkes til opbevaring.
 
-- Når en bruger føjes til en Teams samtale og får adgang til hele samtalens historik, kan denne historik omfatte vedhæftede filer i skyen. Hvis de blev delt inden for 48 timer, efter at brugeren har føjet til samtalen, forsynes de aktuelle kopier af de vedhæftede filer i skyen automatisk med henblik på opbevaring. Vedhæftede filer i skyen, der er delt før denne tidsperiode, understøttes ikke for nyligt tilføjede brugere.
+- Når en bruger føjes til en Teams-samtale og får adgang til hele samtalens historik, kan denne historik omfatte vedhæftede filer i skyen. Hvis de blev delt inden for 48 timer, efter at brugeren har føjet til samtalen, forsynes de aktuelle kopier af de vedhæftede filer i skyen automatisk med henblik på opbevaring. Vedhæftede filer i skyen, der er delt før denne tidsperiode, understøttes ikke for nyligt tilføjede brugere.
 
 - Vedhæftede filer i skyen, der deles uden for Teams og Outlook, understøttes ikke.
 
 - Følgende elementer understøttes ikke som vedhæftede filer i skyen, der kan bevares:
-  - SharePoint websteder, sider, lister, formularer, mapper, dokumentsæt og OneNote sider.
+  - SharePoint-websteder, sider, lister, formularer, mapper, dokumentsæt og OneNote-sider.
   - Filer, der deles af brugere, som ikke har adgang til disse filer.
   - Filer, der slettes eller flyttes, før den vedhæftede fil i skyen sendes. En bruger kopierer og indsætter f.eks. en tidligere delt vedhæftet fil fra en anden meddelelse uden først at bekræfte, at filen stadig er tilgængelig. Eller nogen videresender en gammel meddelelse, når filen nu slettes.
   - Filer, der deles af gæster eller brugere uden for din organisation.
@@ -346,7 +344,7 @@ Når du anvender opbevaringsmærkater automatisk på baggrund af følsomme oplys
 
 Hvis de forventede mærkater ikke vises efter syv dage, skal du kontrollere **status** for politikken for automatisk anvendelse ved at vælge den på siden **Mærkatpolitikker** i Microsoft Purview-compliance-portal. Hvis du får vist status for **Fra (fejl),** og du i oplysningerne om placeringerne får vist en meddelelse om, at det tager længere tid end forventet at installere politikken (for SharePoint) eller at forsøge at geninstallere politikken (for OneDrive), kan du prøve at køre [PowerShell-kommandoen Set-RetentionCompliancePolicy](/powershell/module/exchange/set-retentioncompliancepolicy) for at forsøge at distribuere politikken igen:
 
-1. [Forbind til PowerShell til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell).
+1. [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell).
 
 2. Kør følgende kommando:
 
@@ -385,4 +383,4 @@ Som en hjælp til at spore de mærkater, der anvendes fra politikker for automat
 - [Brug af indholdssøgning til at finde alt indhold med en bestemt opbevaringsmærkat](retention.md#using-content-search-to-find-all-content-with-a-specific-retention-label)
 - [Overvågningsopbevaringshandlinger](retention.md#auditing-retention-actions)
 
-Se [Brug opbevaringsmærkater til at administrere livscyklussen for dokumenter, der er gemt i SharePoint](auto-apply-retention-labels-scenario.md) i et eksempelscenarie, hvor der bruges en politik for automatisk anvendelse af opbevaringsmærkat med administrerede egenskaber i SharePoint, og hændelsesbaseret opbevaring for at starte opbevaringsperioden.
+Se [Brug opbevaringsmærkater til at administrere livscyklussen for dokumenter, der er gemt i SharePoint](auto-apply-retention-labels-scenario.md) , for et eksempelscenarie, der bruger en politik for automatisk anvendelse af opbevaringsmærkat med administrerede egenskaber i SharePoint, og hændelsesbaseret opbevaring for at starte opbevaringsperioden.

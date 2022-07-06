@@ -16,16 +16,14 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Denne artikel indeholder en oversigt over typer af følsomme oplysninger, og hvordan de registrerer følsomme oplysninger som f.eks. social sikring, kreditkort eller bankkontonumre for at identificere følsomme elementer
-ms.openlocfilehash: d814bd413fc95a02bc35ab05a804c544d9b84b1e
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 34c40c99cf759341ece1948164a5f7d904996b44
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014228"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66639374"
 ---
 # <a name="learn-about-sensitive-information-types"></a>Få mere at vide om typer af følsomme oplysninger.
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Identificering og klassificering af følsomme elementer, der er under din organisations kontrol, er det første skridt i [Information Protection disciplin](./information-protection.md).  Microsoft Purview indeholder tre måder at identificere elementer på, så de kan klassificeres:
 
@@ -39,7 +37,7 @@ Microsoft leverer et stort antal forudkonfigurerede SIT'er, eller du kan oprette
 
 ## <a name="sensitive-information-types-are-used-in"></a>Følsomme oplysningstyper bruges i
 
-- [Microsoft Purview Politikker til forebyggelse af datatab](dlp-learn-about-dlp.md)
+- [Microsoft Purview Forebyggelse af datatab politikker](dlp-learn-about-dlp.md)
 - [Følsomhedsmærkater](sensitivity-labels.md)
 - [Opbevaringsmærkater](retention.md)
 - [Styring af insider-risiko](insider-risk-management.md)
@@ -206,6 +204,6 @@ Du kan vælge mellem flere muligheder for at oprette brugerdefinerede typer føl
 - [Opret en brugerdefineret type følsomme oplysninger](create-a-custom-sensitive-information-type.md)
 - [Opret en brugerdefineret type følsomme oplysninger i PowerShell](create-a-custom-sensitive-information-type-in-scc-powershell.md)
 
-Hvis du vil vide mere om, hvordan du bruger følsomme informationstyper til at overholde regler om beskyttelse af personlige oplysninger, skal du se [Udrul regler om beskyttelse af personlige oplysninger for Microsoft 365](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy).
+Du kan få mere at vide om, hvordan du bruger følsomme informationstyper til at overholde regler om beskyttelse af personlige oplysninger under [Udrul regler om beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md)  (aka.ms/m365dataprivacy).
 
 <!-- fwlink for this topic https://go.microsoft.com/fwlink/?linkid=2135644-->
