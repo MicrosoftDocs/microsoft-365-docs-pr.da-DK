@@ -19,16 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Forebyggelse af datatab for slutpunkter udvider overvågningen af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer er gjort synlige i løsningerne til overholdelse af angivne standarder '
-ms.openlocfilehash: 015e219d1b3ed41605ae3b331488d8dec6e7751f
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: d711a61c1c61df94311dfd409e94330bb8696d88
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530898"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641740"
 ---
 # <a name="learn-about-endpoint-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab ved slutpunkt
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan bruge Microsoft Purview Forebyggelse af datatab (DLP) til at overvåge de handlinger, der udføres på elementer, du har besluttet dig for at være følsomme, og til at forhindre utilsigtet deling af disse elementer. Du kan finde flere oplysninger om DLP under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md).
 

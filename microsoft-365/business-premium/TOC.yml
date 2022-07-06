@@ -106,6 +106,8 @@
   items:
     - name: Oversigt
       href: m365bp-maintain-environment.md
+    - name: Vejledning til sikkerhedshandlinger
+      href: m365bp-security-incident-quick-start.md
     - name: Fjern brugere
       href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Tilføj brugere

@@ -17,12 +17,12 @@ ms.collection:
 description: Administratorer kan få mere at vide om de forskellige måder at rapportere gode og forkerte meddelelser, URL-adresser, vedhæftede filer i mails og administratorer til Microsoft til analyse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 4c967eec1f0bb13523c3e8bdbe2f7a312f35ef27
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 071e6329e16ecfce0e55649869d93ff31dfc9664
+ms.sourcegitcommit: 4a1efedd15146744511378a44a307d44b16f3fb5
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/06/2022
-ms.locfileid: "66621089"
+ms.locfileid: "66643998"
 ---
 # <a name="report-items-to-microsoft"></a>Rapportér elementer til Microsoft
 
@@ -39,11 +39,11 @@ Derudover har Microsoft 365-organisationer med Microsoft Defender for Endpoint a
 
 |Metode|Beskrivelse|
 |---|---|
-|[Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og vedhæftede filer i mails til Microsoft](admin-submission.md)|Den anbefalede rapporteringsmetode for administratorer i organisationer med Exchange Online postkasser (ikke tilgængelig i enkeltstående EOP).|
+|[Brug portalen Indsendelser til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md)|Den anbefalede rapporteringsmetode for administratorer i organisationer med Exchange Online postkasser (ikke tilgængelig i enkeltstående EOP).|
 |[Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing](enable-the-report-message-add-in.md)|Fungerer sammen med Outlook og Outlook på internettet (tidligere kaldet Outlook Web App). <br/><br/> Afhængigt af dit abonnement er meddelelser, som brugere har rapporteret med tilføjelsesprogrammer, tilgængelige på [portalen Administration Indsendelser](admin-submission.md), [resultaterne af automatiseret undersøgelse og svar (AIR),](air-view-investigation-results.md) [rapporten over brugerrapporterede meddelelser](view-email-security-reports.md#user-reported-messages-report) og [Stifinder](threat-explorer-views.md#email--submissions). <br/><br/> Du kan konfigurere rapporterede meddelelser til at blive kopieret eller omdirigeret til en postkasse, som du angiver. Du kan få flere oplysninger under [Politikker for brugerindsendelser](user-submission.md).
 |[Rapportér falske positiver og falske negativer i Outlook](report-false-positives-and-false-negatives.md)|Send falske positiver (god mail, der er blokeret eller sendt til mappen med uønsket post) og falske negativer (uønsket mail eller phish, der blev leveret til indbakken) for at Exchange Online Protection (EOP) ved hjælp af funktionen Rapportmeddelelse.|
 |[Brug regler for mailflow til at se, hvad brugerne rapporterer til Microsoft](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-see-what-users-are-reporting-to-microsoft)|Få mere at vide om, hvordan du opretter en regel for mailflow (også kaldet en transportregel), der giver dig besked, når brugerne rapporterer meddelelser til Microsoft til analyse.|
-|[Send mistænkelige filer til Microsoft til analyse](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)|Brug det Microsoft Sikkerhedsviden websted til at sende vedhæftede filer og andre filer.|
+|[Send malware og ikke-malware til Microsoft til analyse](submitting-malware-and-non-malware-to-microsoft-for-analysis.md)|Brug det Microsoft Sikkerhedsviden websted til at sende vedhæftede filer og andre filer.|
 
 > [!NOTE]
 > Når du rapporterer en mailenhed til Microsoft, opretter vi en kopi af alt, der er knyttet til mailen, for at inkludere den i vores løbende algoritmegennemgange. Denne kopi indeholder mailindholdet, mailheaderne og relaterede data om maildistributionen. Vedhæftede filer i meddelelsen er også inkluderet.

@@ -18,28 +18,26 @@ search.appverid:
 - MET150
 ms.assetid: 72bbad69-035b-4d33-b8f4-549a2743e97d
 ROBOTS: NOINDEX, NOFOLLOW
-description: Tilføj og administrer aktivitetsbeskeder på Microsoft Purview-overholdelsesportalen, så Microsoft 365 sender dig mailmeddelelser, når brugerne udfører bestemte aktiviteter
-ms.openlocfilehash: b08c23ec80562418112266d03c58f4b764a128ba
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Tilføj og administrer aktivitetsbeskeder i Microsoft Purview-compliance-portal, så Microsoft 365 sender dig mailmeddelelser, når brugerne udfører bestemte aktiviteter
+ms.openlocfilehash: a2f93ed9c0c73dfb6886e0860e63ec38e49294a5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66018091"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642256"
 ---
 # <a name="create-activity-alerts"></a>Opret aktivitetsbeskeder
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Du kan oprette en aktivitetsbesked, der sender dig en mailmeddelelse, når brugerne udfører bestemte aktiviteter i Office 365. Aktivitetsbeskeder svarer til at søge efter hændelser i overvågningsloggen, bortset fra at du får tilsendt en mail, når der sker en hændelse for en aktivitet, som du har oprettet en besked for.
 
- **Hvorfor bruge aktivitetsbeskeder i stedet for at søge i overvågningsloggen?** Der kan være visse typer aktiviteter eller aktiviteter, der udføres af bestemte brugere, som du virkelig vil vide noget om. I stedet for at skulle huske at søge i overvågningsloggen efter disse aktiviteter kan du bruge aktivitetsbeskeder til at få Microsoft 365 sende dig en mail, når brugerne udfører disse aktiviteter. Du kan f.eks. oprette en aktivitetsbesked for at give dig besked, når en bruger sletter filer i SharePoint, eller du kan oprette en besked for at give dig besked, når en bruger sletter meddelelser permanent fra sin postkasse. Den mailmeddelelse, der sendes til dig, indeholder oplysninger om, hvilken aktivitet der blev udført, og den bruger, der udførte den.
+ **Hvorfor bruge aktivitetsbeskeder i stedet for at søge i overvågningsloggen?** Der kan være visse typer aktiviteter eller aktiviteter, der udføres af bestemte brugere, som du virkelig vil vide noget om. I stedet for at skulle huske at søge i overvågningsloggen efter disse aktiviteter kan du bruge aktivitetsbeskeder til at få Microsoft 365 til at sende dig en mail, når brugerne udfører disse aktiviteter. Du kan f.eks. oprette en aktivitetsbesked for at give dig besked, når en bruger sletter filer i SharePoint, eller du kan oprette en besked, der giver dig besked, når en bruger sletter meddelelser permanent fra deres postkasse. Den mailmeddelelse, der sendes til dig, indeholder oplysninger om, hvilken aktivitet der blev udført, og den bruger, der udførte den.
 
 > [!NOTE]
 > Aktivitetsbeskeder frarådes. Vi anbefaler, at du begynder at bruge beskedpolitikker i Security and Compliance Center i stedet for at oprette nye aktivitetsbeskeder. Politikker for beskeder indeholder yderligere funktionalitet, f.eks. muligheden for at oprette en beskedpolitik, der udløser en besked, når en bruger udfører en angivet aktivitet, og visning af beskeder på siden **Vis beskeder** i Sikkerheds- og overholdelsescenter. Du kan få flere oplysninger under [Beskedpolitikker](alert-policies.md).
 
 ## <a name="confirm-roles-and-configure-audit-logging"></a>Bekræft roller, og konfigurer overvågningslogføring
 
-- Du skal være tildelt rollen Organisationskonfiguration på Microsoft Purview-overholdelsesportalen for at administrere aktivitetsbeskeder. Denne rolle tildeles som standard til rollegrupperne Overholdelsesadministrator og Organisationsadministration. Du kan få flere oplysninger om, hvordan du føjer medlemmer til rollegrupper, under [Giv brugere adgang til Microsoft Purview-overholdelsesportalen](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
+- Du skal være tildelt rollen Organisationskonfiguration i Microsoft Purview-compliance-portal for at administrere aktivitetsbeskeder. Denne rolle tildeles som standard til rollegrupperne Overholdelsesadministrator og Organisationsadministration. Du kan få flere oplysninger om, hvordan du føjer medlemmer til rollegrupper, under [Giv brugere adgang til Microsoft Purview-compliance-portal](../security/office-365-security/grant-access-to-the-security-and-compliance-center.md).
 
 - Du (eller en anden administrator) skal først aktivere overvågningslogføring for din organisation, før du kan begynde at bruge aktivitetsbeskeder. Det gør du ved at klikke på **Start optagelse af bruger- og administratoraktivitet** på siden **Aktivitetsbeskeder** . Hvis du ikke kan se dette link, er overvågning allerede slået til for din organisation. Du kan også aktivere overvågning på **søgesiden Overvågningslog** på overholdelsesportalen (gå til **Overvågning**). Det skal du kun gøre én gang for din organisation.
 
@@ -125,8 +123,8 @@ Hvis du vil slå en aktivitetsbesked til igen, skal du blot gentage disse trin o
 
     | Når en bruger gør dette... | Opret en besked for denne aktivitet | Aktivitetsgruppe |
     |:-----|:-----|:-----|
-    |Sletter (fjerner) permanent en mail fra deres postkasse.  |Fjernede meddelelser fra postkasse  | Exchange postkasseaktiviteter  |
-    |Sender en mail fra en delt postkasse.  |Sendt meddelelse med tilladelserne Send som  <br/> Og  <br/> Sendt meddelelse med tilladelsen Send på vegne  | Exchange postkasseaktiviteter  |
+    |Sletter (fjerner) permanent en mail fra deres postkasse.  |Fjernede meddelelser fra postkasse  | Aktiviteter i Exchange-postkassen  |
+    |Sender en mail fra en delt postkasse.  |Sendt meddelelse med tilladelserne Send som  <br/> Og  <br/> Sendt meddelelse med tilladelsen Send på vegne  | Aktiviteter i Exchange-postkassen  |
 
 - Du kan også bruge Cmdlet'erne **New-ActivityAlert** og **Set-ActivityAlert** i Security & Compliance PowerShell til at oprette og redigere aktivitetsbeskeder. Vær opmærksom på følgende ting, hvis du bruger disse cmdlet'er til at oprette eller redigere aktivitetsbeskeder:
 

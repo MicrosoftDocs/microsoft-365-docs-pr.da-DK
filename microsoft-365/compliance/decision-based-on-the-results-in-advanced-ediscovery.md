@@ -17,16 +17,14 @@ ms.assetid: aed65bcd-0a4f-43e9-b5e5-b98cc376bdf8
 description: Få mere at vide om, hvordan fanen Beslut i eDiscovery (Premium) indeholder data, der kan hjælpe dig med at bestemme den korrekte størrelse af korrektursættet af sagsfiler.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 50acdd36a536c417485d441e14c5d155f9de2f94
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: abf5ef38f253a99709ad3cb3c02793e36db5e8fd
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65621785"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642036"
 ---
 # <a name="decisions-based-on-relevance-results-in-ediscovery-premium"></a>Beslutninger baseret på relevansresultater i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
   
 I relevansmodulet i eDiscovery (Premium) indeholder fanen Beslut yderligere oplysninger til visning og brug af statistik for beslutningssupport til at bestemme størrelsen af korrektursættet af sagsfiler.
   

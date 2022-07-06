@@ -2,8 +2,8 @@
 title: Føj en ny bruger til dit netværk og dine systemer
 f1.keywords:
 - NOCSH
-ms.author: v-kcirillo
-author: cirilk
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 audience: Admin
 ms.topic: how-to
@@ -25,12 +25,12 @@ search.appverid:
 - MET150
 ms.assetid: 80bdae57-f8bc-4e40-a58c-956007117ecb
 description: Sådan føjer du en ny medarbejder eller bruger til organisationens netværk og interne systemer. Når en ny medarbejder tilmelder sig din virksomhed, skal du føje dem sikkert til netværket.
-ms.openlocfilehash: 89fa012f86abef00567026f27f61e2649ac2ce5b
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 08f1201a720050ad682faae87d572a1efe5794c7
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66491032"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642625"
 ---
 # <a name="add-a-new-employee-in-microsoft-365-business-premium"></a>Tilføj en ny medarbejder i Microsoft 365 Business Premium
 

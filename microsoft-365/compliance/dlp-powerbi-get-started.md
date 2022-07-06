@@ -20,16 +20,14 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 description: Forbered og udrul DLP på PowerBI-placeringer.
-ms.openlocfilehash: f831d42898e491258a53423c1d59b9f50c0b289d
-ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
+ms.openlocfilehash: e94ab7bce1fefc7ab370425a269f6e304aee165f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "66616930"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641847"
 ---
 # <a name="get-started-with-data-loss-prevention-policies-for-power-bi-preview"></a>Kom i gang med politikker til forebyggelse af datatab for Power BI (prøveversion)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 For at hjælpe organisationer med at registrere og beskytte deres følsomme data understøtter [Microsoft Purview politikker til forebyggelse af datatab (DLP)](/microsoft-365/compliance/dlp-learn-about-dlp) Power BI. Når et PowerBI-datasæt stemmer overens med kriterierne i en DLP-politik, kan en besked, der forklarer arten af det følsomme indhold, udløses. Denne besked er også registreret på fanen **beskeder** til forebyggelse af datatab på Microsofts overholdelsesportal til overvågning og administration af administratorer. Desuden kan mailbeskeder sendes til administratorer og angivne brugere.
 

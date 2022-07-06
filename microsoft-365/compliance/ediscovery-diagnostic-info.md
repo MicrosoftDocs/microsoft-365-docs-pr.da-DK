@@ -17,16 +17,14 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du indsamler eDiscovery-diagnosticeringsoplysninger for en Microsoft Support-sag.
-ms.openlocfilehash: f5dba88a598a73441c67e3eaa08a59b7258ea712
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 46c85e822daf82cc88e6bf89ceea97dede3e2276
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014426"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641806"
 ---
 # <a name="collect-ediscovery-diagnostic-information"></a>Indsaml diagnosticeringsoplysninger i eDiscovery
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Nogle gange kræver Microsofts supportteknikere specifikke oplysninger om dit problem, når du åbner en supportsag, der er relateret til Microsoft Purview eDiscovery (Standard) eller Microsoft Purview eDiscovery (Premium). Denne artikel indeholder en vejledning i, hvordan du indsamler diagnosticeringsoplysninger for at hjælpe supportteknikere med at undersøge og løse problemer. Du behøver normalt ikke at indsamle disse oplysninger, før du bliver bedt om det af en Microsoft Support-tekniker.
 
@@ -42,7 +40,7 @@ Hvis du vil køre følgende cmdlet'er, skal du [oprette forbindelse til Security
 Når du har gennemset den genererede tekstfil og redigeret følsomme oplysninger, skal du sende dem til Den Microsoft Support-tekniker, der arbejder på din sag.
 
 > [!NOTE]
-> Du kan også køre kommandoerne i dette afsnit for at indsamle diagnosticeringsoplysninger for de søgninger og eksporter, der er angivet på siden **Indholdssøgning** på Microsoft Purview-overholdelsesportalen.
+> Du kan også køre kommandoerne i dette afsnit for at indsamle diagnosticeringsoplysninger for de søgninger og eksporter, der er angivet på siden **Indholdssøgning** i Microsoft Purview-compliance-portal.
 
 ### <a name="collect-information-about-searches"></a>Indsaml oplysninger om søgninger
 
@@ -78,11 +76,11 @@ Get-ComplianceCase "<eDiscovery (Standard) case name>"| %{$_|fl;"`t==Searches=="
 
 ## <a name="collect-diagnostic-information-for-ediscovery-premium"></a>Indsaml diagnosticeringsoplysninger for eDiscovery (Premium)
 
-Under fanen **Indstillinger** i en eDiscovery-sag (Premium) kan du hurtigt kopiere diagnosticeringsoplysningerne for sagen. Diagnosticeringsoplysningerne gemmes i Udklipsholder, så du kan indsætte dem i en tekstfil og sende dem til Microsoft Support.
+Under fanen **Indstillinger** i en eDiscovery(Premium)-sag kan du hurtigt kopiere diagnosticeringsoplysningerne for sagen. Diagnosticeringsoplysningerne gemmes i Udklipsholder, så du kan indsætte dem i en tekstfil og sende dem til Microsoft Support.
 
 1. Gå til overholdelsesportalen, og vælg **eDiscovery** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174006" target="_blank">**Advanced**</a>.
 
-2. Vælg en sag, og klik derefter på fanen **Indstillinger**.
+2. Vælg en sag, og klik derefter på fanen **Indstillinger** .
 
 3. Klik på **Vælg** under **Sagsoplysninger**.
 

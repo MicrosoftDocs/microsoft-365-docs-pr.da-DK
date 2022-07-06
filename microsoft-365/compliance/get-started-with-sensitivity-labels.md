@@ -19,18 +19,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Er du klar til at udrulle følsomhedsmærkater for at beskytte din organisations data, men er du ikke sikker på, hvor du skal starte? Læs nogle praktiske vejledninger, der kan hjælpe dig med at komme på din mærkatrejse.
-ms.openlocfilehash: 2998c993cd605f0371e728bba1cdea555b5e51e0
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: 0161071c1dbfb8941c4f89a45ac2de52d58a2236
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574206"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641510"
 ---
 # <a name="get-started-with-sensitivity-labels"></a>Kom i gang med følsomhedsmærkater
 
 >*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan finde oplysninger om, hvad følsomhedsmærkater er, og hvordan de kan hjælpe dig med at beskytte din organisations data, under [Få mere at vide om følsomhedsmærkater](sensitivity-labels.md).
 

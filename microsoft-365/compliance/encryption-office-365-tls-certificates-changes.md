@@ -1,6 +1,6 @@
 ---
-title: Office ændringer af TLS-certifikat
-description: Sådan forberedes du til kommende ændringer Office TLS-certifikater.
+title: Office TLS-certifikatændringer
+description: Sådan forbereder du kommende ændringer af Office TLS-certifikater.
 author: pshelton-skype
 ms.author: pshelton
 manager: toddbeckett
@@ -9,27 +9,27 @@ audience: Developer
 ms.date: 3/7/2022
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.openlocfilehash: 075fb8f4c27401a4622f4ce639c897f2e98bb3e9
-ms.sourcegitcommit: 2697938d2d4fec523b501c5e7b0b8ec8f34e59b0
+ms.openlocfilehash: 65b0ffd5d605302dd62369471b65c1ac10aacd40
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63593064"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641762"
 ---
-# <a name="office-tls-certificate-changes"></a>Office ændringer af TLS-certifikat
+# <a name="office-tls-certificate-changes"></a>Ændringer i Office TLS-certifikatet
 
-Microsoft 365 er at opdatere tjenester, der bruger sms-beskeder, møder, telefoni, tale og video til at bruge TLS-certifikater fra et andet sæt rodnøglecertifikater. Denne ændring foretages, fordi det aktuelle rodnøglecenter udløber i maj 2025.
+Microsoft 365 opdaterer tjenester, der giver mulighed for beskeder, møder, telefoni, stemme og video, for at bruge TLS-certifikater fra et andet sæt rodcertifikatcentre. Denne ændring foretages, fordi det aktuelle rodnøglecenter udløber i maj 2025.
 
-Påvirkede produkter omfatter:
+Berørte produkter omfatter:
 - Microsoft Teams
 - Skype
 - Skype for Business Online
 - Microsoft Dynamics 365
-- GroupMe
+- Gruppér
 - Kaizala
 - Azure Communication Services
 
-Påvirkede slutpunkter omfatter (men er ikke begrænset til):
+Berørte slutpunkter omfatter (men er ikke begrænset til):
 - *.teams.microsoft.com
 - *.skype.com
 - *.skypeforbusiness.com
@@ -37,7 +37,7 @@ Påvirkede slutpunkter omfatter (men er ikke begrænset til):
 - *.communication.azure.com
 - *.operatorconnect.microsoft.com
 
-Desuden vil Teams og Skype for Business Online-slutpunkter i den amerikanske regerings nationale skybaserede forekomster af Microsoft 365 foretage den samme ændring og påvirke slutpunkter som f.eks.:
+Derudover foretager Teams og Skype for Business Online-slutpunkter i nationale cloudforekomster af Microsoft 365 i US Government den samme ændring, hvilket påvirker slutpunkter som f.eks.:
 - *.gcc.teams.microsoft.com
 - *.dod.teams.microsoft.us
 - *.gov.teams.microsoft.us
@@ -46,74 +46,74 @@ Desuden vil Teams og Skype for Business Online-slutpunkter i den amerikanske reg
 - *.um-dod.office365.us
 - *.um.office365.us
 
-Denne ændring påvirker ikke certifikater, domæner eller tjenester, der bruges i de nationale skybaserede skybaserede skyforekomster i Kina eller Microsoft 365.
+Denne ændring påvirker ikke certifikater, domæner eller tjenester, der bruges i de nationale cloudforekomster af Microsoft 365 i Kina eller Tyskland.
 
-Alle certifikatoplysninger i denne artikel blev tidligere leveret i [Microsoft 365 krypteringskæder](./encryption-office-365-certificate-chains.md) senest oktober 2020.
+Alle certifikatoplysninger i denne artikel blev tidligere leveret i [Microsoft 365-krypteringskæder](./encryption-office-365-certificate-chains.md) senest i oktober 2020.
 
 ## <a name="when-will-this-change-happen"></a>Hvornår sker denne ændring?
 
-Tjenester begyndte overgangen til de nye rod-CA'er i januar 2022 og vil fortsætte til og med oktober 2022.
+Tjenesterne begyndte overgangen til de nye rodnøglecentre i januar 2022 og fortsætter til oktober 2022.
 
-## <a name="what-is-changing"></a>Hvad ændres?
+## <a name="what-is-changing"></a>Hvad ændrer sig?
 
-I dag kæder de fleste af de TLS-certifikater, Microsoft 365, sammen med følgende rodnøglecenter:
+I dag kædes de fleste af de TLS-certifikater, der bruges af Microsoft 365-tjenester, sammen med følgende rodnøglecenter:
 
-| Nøglecenternavn | Thumbprint (SHA1) |
+| Almindeligt navn på nøglecenteret | Aftryk (SHA1) |
 |--|--|
-| [Baltimore CyberTrust Root](https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt) | d4de20d05e66fc53fe1a50882c78db2852cae474 |
+| [Baltimore CyberTrust-rod](https://cacerts.digicert.com/BaltimoreCyberTrustRoot.crt) | d4de20d05e66fc53fe1a50882c78db2852cae474 |
 
-med en af følgende Mellemliggende CAs:
+med en af følgende mellemliggende nøglecentre:
 
-| Nøglecenternavn | Thumbprint (SHA1) |
+| Almindeligt navn på nøglecenteret | Aftryk (SHA1) |
 |--|--|
 | [Microsoft RSA TLS CA 01](https://www.microsoft.com/pki/mscorp/Microsoft%20RSA%20TLS%20CA%2001.crt) | 703d7a8f0ebf55aaa59f98eaf4a206004eb2516a |
 | [Microsoft RSA TLS CA 02](https://www.microsoft.com/pki/mscorp/Microsoft%20RSA%20TLS%20CA%2002.crt) | b0c2d2d13cdd56cdaa6ab6e2c04440be4a429c75 |
 
-Nye TLS-certifikater, der bruges Microsoft 365 tjenester, vil nu kæde op til et af følgende rod-CAs:
+Nye TLS-certifikater, der bruges af Microsoft 365-tjenester, kædes nu sammen med en af følgende rodnøglecentre:
 
-| Nøglecenternavn | Thumbprint (SHA1) |
+| Almindeligt navn på nøglecenteret | Aftryk (SHA1) |
 |--|--|
 | [DigiCert Global Root G2](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt) | df3c24f9bfd666761b268073fe06d1cc8d4f82a4 |
 | [Microsoft RSA Root Certificate Authority 2017](https://www.microsoft.com/pkiops/certs/Microsoft%20RSA%20Root%20Certificate%20Authority%202017.crt) | 73a5e64a3bff8316ff0edccc618a906e4eae4d74 | 
 | [Microsoft ECC Root Certificate Authority 2017](https://www.microsoft.com/pkiops/certs/Microsoft%20ECC%20Root%20Certificate%20Authority%202017.crt) | 999a64c37ff47d9fab95f14769891460eec4c3c5 |
 
-med en af følgende Mellemliggende CAs:
+med en af følgende mellemliggende nøglecentre:
 
-| Nøglecenternavn | Thumbprint (SHA1) |
+| Almindeligt navn på nøglecenteret | Aftryk (SHA1) |
 |--|--|
-| [Microsoft Azure TLS-udstedelse ca. 01](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2001%20-%20xsign.crt) | 2f2877c5d778c31e0f29c7e371df5471bd673173 |
-| [Microsoft Azure TLS-udstedelse ca. 02](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2002%20-%20xsign.crt) | e7eea674ca718e3befd90858e09f8372ad0ae2aa |
-| [Microsoft Azure TLS-udstedelse af CA 05](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2005%20-%20xsign.crt) | 6c3af02e7f269aa73afd0eff2a88a4a1f04ed1e5 |
-| [Microsoft Azure TLS-udstedelse ca. 06](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2006%20-%20xsign.crt) | 30e01761ab97e59a06b41ef20af6f2de7ef4f7b0 |
+| [Microsoft Azure TLS udstedende CA 01](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2001%20-%20xsign.crt) | 2f2877c5d778c31e0f29c7e371df5471bd673173 |
+| [Microsoft Azure TLS udstedende CA 02](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2002%20-%20xsign.crt) | e7eea674ca718e3befd90858e09f8372ad0ae2aa |
+| [Microsoft Azure TLS udstedende CA 05](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2005%20-%20xsign.crt) | 6c3af02e7f269aa73afd0eff2a88a4a1f04ed1e5 |
+| [Microsoft Azure TLS udstedende CA 06](https://www.microsoft.com/pkiops/certs/Microsoft%20Azure%20TLS%20Issuing%20CA%2006%20-%20xsign.crt) | 30e01761ab97e59a06b41ef20af6f2de7ef4f7b0 |
 
-Som et eksempel er dette et gyldigt certifikat med en af de nye certifikatkæder:
+Dette er f.eks. et gyldigt certifikat med en af de nye certifikatkæder:
 
 ![Teams TLS-certifikatkæde](../media/teams-tls-certificate-chain.png)
 
 ## <a name="will-this-change-affect-me"></a>Vil denne ændring påvirke mig?
 
-Rodnøglecenter "DigiCert Global Root G2" har stor tillid til operativsystemer, herunder Windows, macOS, Android og iOS samt browsere som Microsoft Edge, Chrome, Safari og Firefox. Vi forventer, **at Microsoft 365 kunder ikke påvirkes**. 
+Der er stor tillid til rodnøglecenteret "DigiCert Global Root G2" fra operativsystemer, herunder Windows, macOS, Android og iOS og browsere som f.eks. Microsoft Edge, Chrome, Safari og Firefox. Vi forventer, at **de fleste Microsoft 365-kunder ikke påvirkes**. 
 
-Dit program **kan dog blive påvirket, hvis det udtrykkeligt angiver en liste over acceptable CAs**. Denne fremgangsmåde kaldes "certifikatpinning". Kunder, der ikke har de nye rod-CAs på deres liste over acceptable CAs, modtager certifikatvalideringsfejl, der kan påvirke dit programs tilgængelighed eller funktion.
+Dit **program kan dog blive påvirket, hvis det eksplicit angiver en liste over acceptable nøglecentre**. Denne fremgangsmåde kaldes "fastgørelse af certifikat". Kunder, der ikke har de nye rodnøglecentre på deres liste over acceptable nøglecentre, modtager certifikatvalideringsfejl, som kan påvirke tilgængeligheden eller funktionen af dit program.
 
-Her er nogle metoder til at registrere, om dit program kan blive påvirket:
+Her er nogle måder at registrere, om dit program kan blive påvirket:
 
-- Søg i din kildekode efter thumbprint, Common Name eller andre egenskaber for en hvilken som helst af de mellemliggende CAs, der findes [her](https://www.microsoft.com/pki/mscorp/cps/default.htm). Hvis der findes et match, så påvirkes dit program. For at løse dette problem skal du opdatere kildekoden for at tilføje egenskaberne for de nye CAs. Som bedste fremgangsmåde skal du sørge for, at CAs kan tilføjes eller redigeres med kort varsel. Branchebestemmelser kræver, at nøglecentercertifikater erstattes inden for syv dage under visse omstændigheder, så programmer, der implementerer certifikatpinning, hurtigt skal reagere på disse ændringer.
+- Søg i kildekoden efter aftryk, almindeligt navn eller andre egenskaber for en af de mellemliggende nøglecentre, der findes [her](https://www.microsoft.com/pki/mscorp/cps/default.htm). Hvis der er et match, påvirkes dit program. Du kan løse dette problem ved at opdatere kildekoden for at tilføje egenskaberne for de nye nøglecentre. Som bedste praksis skal du sikre, at nøglecentre kan tilføjes eller redigeres med kort varsel. I nogle tilfælde kræver brancheregler, at CA-certifikater erstattes inden for syv dage, så programmer, der implementerer fastgørelse af certifikater, skal reagere hurtigt på disse ændringer.
 
-- .NET viser funktionerne `System.Net.ServicePointManager.ServerCertificateValidationCallback` `System.Net.HttpWebRequest.ServerCertificateValidationCallback` og tilbagekaldsfunktionerne, som giver udviklere mulighed for at bruge brugerdefineret logik til at afgøre, om certifikater er gyldige, i stedet for at være afhængige af standardcertifikatlageret Windows certifikater. En udvikler kan tilføje logik, der kontrollerer, om et bestemt Common Name eller thumbprint eller kun tillader et bestemt rodnøglecenter, f.eks. "Baltimore CyberTrust Root". Hvis dit program bruger disse callback-funktioner, skal du sørge for, at det accepterer både den gamle og den nye rod- og mellemliggende CAs.
+- .NET viser `System.Net.ServicePointManager.ServerCertificateValidationCallback` tilbagekaldsfunktionerne `System.Net.HttpWebRequest.ServerCertificateValidationCallback` og , som gør det muligt for udviklere at bruge brugerdefineret logik til at afgøre, om certifikater er gyldige i stedet for at være afhængige af Windows-standardcertifikatlageret. En udvikler kan tilføje logik, der søger efter et bestemt almindeligt navn eller aftryk eller kun tillader et bestemt rodnøglecenter, f.eks. "Baltimore CyberTrust Root". Hvis dit program bruger disse tilbagekaldsfunktioner, skal du sørge for, at det accepterer både de gamle og nye rod- og mellemliggende nøglecentre.
 
-- Oprindelige programmer bruger muligvis , hvilket tillader `WINHTTP_CALLBACK_STATUS_SENDING_REQUEST`, at oprindelige programmer implementerer brugerdefineret certifikatvalideringslogik. Brugen af denne meddelelse er sjælden og kræver en betydelig mængde brugerdefineret kode for at implementere. Som det er beskrevet ovenfor, skal du sikre dig, at dit program accepterer både den gamle og nye rod- og mellemliggende CAs. 
+- Oprindelige programmer bruger `WINHTTP_CALLBACK_STATUS_SENDING_REQUEST`muligvis , som gør det muligt for oprindelige programmer at implementere brugerdefineret certifikatvalideringslogik. Brugen af denne meddelelse er sjælden og kræver en betydelig mængde brugerdefineret kode at implementere. På samme måde som ovenstående skal du sikre, at dit program accepterer både de gamle og nye rodnøglecentre og mellemliggende nøglecentre. 
 
-- Hvis du bruger et program, der er integreret med Microsoft Teams, Skype, Skype for Business Online eller Microsoft Dynamics-API'er, og du er i tvivl, om den bruger certifikatpinning, skal du kontakte programleverandøren.
+- Hvis du bruger et program, der kan integreres med Microsoft Teams, Skype, Skype for Business Online eller Microsoft Dynamics-API'er, og du er usikker på, om der bruges certifikatfastgørelse, skal du kontakte programleverandøren.
 
-- Forskellige operativsystemer og sprogkørsel, der kommunikerer med Azure-tjenester, kan kræve andre trin for at opbygge og validere de nye certifikatkæder korrekt:
-   - **Linux**: Mange distributioner kræver, at du føjer CAs til `/etc/ssl/certs`. Se fordelingens dokumentation for at få specifikke instruktioner.
-   - **Java**: Sørg for, at Java-nøglelageret indeholder de CAs, der er angivet ovenfor.
-   - **Windows kører** i afbrudte miljøer: Systemer, der kører i afbrudte miljøer, skal have de nye rod-CAs `Trusted Root Certification Authorities` føjet til deres lager og de nye Midlertidige CAs `Intermediate Certification Authorities` føjet til deres lager.
-   - **Android**: Kontrollér dokumentationen til din enhed og version af Android.
-   - **IoT eller integrerede** enheder: Integrerede enheder som f.eks. tv-sættets topfelter leveres ofte med et begrænset sæt rodnøglecentercertifikater og har ingen nem måde at opdatere certifikatlageret på. Hvis du skriver kode til eller administrerer installationer af brugerdefinerede integrerede eller IoT-enheder, skal du sikre dig, at enhederne har tillid til de nye rod-CAs. Det kan være nødvendigt at kontakte enhedsproducenten.
+- Forskellige operativsystemer og sprogkørsler, der kommunikerer med Azure-tjenester, kan kræve andre trin for at bygge og validere de nye certifikatkæder korrekt:
+   - **Linux**: Mange distributioner kræver, at du føjer nøglecentre til `/etc/ssl/certs`. Du kan finde specifikke instruktioner i dokumentationen til distributionen.
+   - **Java**: Sørg for, at Java-nøglelageret indeholder de nøglecentre, der er angivet ovenfor.
+   - **Windows, der kører i afbrudte miljøer**: Systemer, der kører i frakoblede miljøer, skal have de nye rodnøglecentre føjet til deres `Trusted Root Certification Authorities` lager, og de nye mellemliggende nøglecentre skal føjes til deres `Intermediate Certification Authorities` lager.
+   - **Android**: Se dokumentationen til din enhed og version af Android.
+   - **IoT- eller integrerede enheder**: Integrerede enheder, f.eks. tv-sættopbokse, leveres ofte med et begrænset sæt rodnøglecentercertifikater og har ingen nem måde at opdatere certifikatlageret på. Hvis du skriver kode til eller administrerer installationer af brugerdefinerede integrerede enheder eller IoT-enheder, skal du sørge for, at enhederne har tillid til de nye rodnøglecentre. Du skal muligvis kontakte enhedsproducenten.
 
-- Hvis du har et miljø, hvor firewallregler kun tillader udgående opkald til bestemte slutpunkter, skal du tillade følgende URL-adresser for Liste over tilbagekaldte certifikater eller OCSP-adresser (Online Certificate Status Protocol):
+- Hvis du har et miljø, hvor firewallregler kun tillader udgående opkald til bestemte slutpunkter, skal du tillade følgende URL-adresser til certifikattilbagekaldelsesliste (CRL) eller OCSP (Online Certificate Status Protocol):
    - `http://crl3.digicert.com`
    - `http://crl4.digicert.com`
    - `http://ocsp.digicert.com`
@@ -122,7 +122,7 @@ Her er nogle metoder til at registrere, om dit program kan blive påvirket:
    - `http://ocsp.msocsp.com`
    - `http://www.microsoft.com/pkiops`
 
-- Hvis du er påvirket af denne ændring, får du muligvis vist fejlmeddelelser, der afhænger af den type miljø, du kører i, og scenarie, som du er påvirket af. Kontrollér Windows programhændelseslogfiler, CAPI2-hændelseslogfiler og brugerdefinerede programlogfiler for meddelelser, der ser sådan ud:
+- Hvis du påvirkes af denne ændring, kan du få vist fejlmeddelelser, der afhænger af den type miljø, du kører i, og det scenarie, du er påvirket af. Kontrollér Windows Application-hændelseslogge, CAPI2-hændelseslogge og brugerdefinerede programlogge for meddelelser, der ligner:
    ```output
    An operation failed because the following certificate has validation errors:
    
@@ -134,6 +134,55 @@ Her er nogle metoder til at registrere, om dit program kan blive påvirket:
    The root of the certificate chain is not a trusted root authority.
    ```
 
-## <a name="when-can-i-retire-the-old-ca-information"></a>Hvornår kan jeg lade de gamle nøglecenteroplysninger udgå?
+## <a name="when-can-i-retire-the-old-ca-information"></a>Hvornår kan jeg trække de gamle ca-oplysninger tilbage?
 
-Det aktuelle Rodnøglecenter, Mellemliggende nøglecenter og bladcertifikater tilbagekaldes ikke. De eksisterende ca Common Names og/eller thumbprints vil være nødvendige til mindst oktober 2023 baseret på levetiden for eksisterende certifikater.
+Det aktuelle rodnøglecenter, det mellemliggende nøglecenter og bladcertifikaterne tilbagekaldes ikke. De eksisterende fælles nøglecenternavne og/eller aftryk vil være påkrævet indtil mindst oktober 2023 baseret på eksisterende certifikaters levetid.
+
+## <a name="known-issues"></a>Kendte problemer
+
+I meget sjældne tilfælde kan virksomhedsbrugere få vist certifikatvalideringsfejl, hvor rodnøglecenteret "DigiCert Global Root G2" vises som tilbagekaldt. Dette skyldes en kendt Windows-fejl under begge følgende betingelser:
+
+- Rodnøglecenteret findes i [CurrentUser\Root-certifikatlageret](/windows/win32/seccrypto/system-store-locations#cert_system_store_current_user) og mangler `NotBeforeFileTime` egenskaberne og `NotBeforeEKU`
+- Rodnøglecenteret findes også i [certifikatlageret LocalMachine\AuthRoot,](/windows/win32/seccrypto/system-store-locations#cert_system_store_local_machine) men har både egenskaberne `NotBeforeFileTime` og `NotBeforeEKU`
+
+Alle bladcertifikater, der er udstedt fra dette rodnøglecenter efter , `NotBeforeFileTime` vises tilbagekaldt. 
+
+Administratorer kan identificere og foretage fejlfinding af problemet ved at undersøge CAPI2-logfilen for denne fejl:
+
+```text
+Log Name:      Microsoft-Windows-CAPI2/Operational
+Source:        Microsoft-Windows-CAPI2
+Date:          6/23/2022 8:36:39 AM
+Event ID:      11
+Task Category: Build Chain
+Level:         Error
+[...]
+        <ChainElement>
+          <Certificate fileRef="DF3C24F9BFD666761B268073FE06D1CC8D4F82A4.cer" subjectName="DigiCert Global Root G2" />
+          [...]
+          <TrustStatus>
+            <ErrorStatus value="4000024" CERT_TRUST_IS_REVOKED="true" CERT_TRUST_IS_UNTRUSTED_ROOT="true" CERT_TRUST_IS_EXPLICIT_DISTRUST="true" />
+            <InfoStatus value="10C" CERT_TRUST_HAS_NAME_MATCH_ISSUER="true" CERT_TRUST_IS_SELF_SIGNED="true" CERT_TRUST_HAS_PREFERRED_ISSUER="true" />
+          </TrustStatus>
+          [...]
+          <RevocationInfo freshnessTime="PT0S">
+            <RevocationResult value="80092010">The certificate is revoked.</RevocationResult>
+          </RevocationInfo>
+        </ChainElement>
+      </CertificateChain>
+      <EventAuxInfo ProcessName="Teams.exe" />
+      <Result value="80092010">The certificate is revoked.</Result>
+```
+Bemærk tilstedeværelsen af elementet `CERT_TRUST_IS_EXPLICIT_DISTRUST="true"` . 
+
+Du kan bekræfte, at der findes to kopier af rodnøglecenteret med forskellige `NotBeforeFileTime` egenskaber, ved at køre følgende `certutil` kommandoer og sammenligne outputtet:
+
+```
+certutil -store -v authroot DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+certutil -user -store -v root DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+```
+
+En bruger kan løse problemet ved at slette kopien af rodnøglecenteret i certifikatlageret `CurrentUser\Root` :
+```
+certutil -user -delstore root DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
+```

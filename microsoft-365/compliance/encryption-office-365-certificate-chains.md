@@ -17,32 +17,30 @@ ms.collection:
 - M365-security-compliance
 - Strat_O365_IP
 description: Få vist en komplet liste over rodcertifikater og nøglecentre i Microsoft 365.
-ms.openlocfilehash: a15c22218d481f62e1363e3ef4d521bd59283f10
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+ms.openlocfilehash: e131aa1c56890289735fd7605db7ace95d24fd7a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467992"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641784"
 ---
 # <a name="microsoft-365-encryption-chains"></a>Microsoft 365-krypteringskæder
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft 365 udnytter en række forskellige certifikatudbydere. I det følgende beskrives den komplette liste over kendte Microsoft 365 rodcertifikater, som kunder kan støde på, når de får adgang til Microsoft 365. Du kan få oplysninger om de certifikater, du skal installere i din egen infrastruktur, under [Planlæg SSL-certifikater fra tredjepart for at få Microsoft 365](../enterprise/plan-for-third-party-ssl-certificates.md). Følgende certifikatoplysninger gælder for alle globale og nationale cloudforekomster af Microsoft 365.
+Microsoft 365 anvender en række forskellige certifikatudbydere. I det følgende beskrives den komplette liste over kendte Microsoft 365-rodcertifikater, som kunder kan støde på, når de får adgang til Microsoft 365. Du kan få oplysninger om de certifikater, du skal installere i din egen infrastruktur, under [Planlæg SSL-certifikater fra tredjepart til Microsoft 365](../enterprise/plan-for-third-party-ssl-certificates.md). Følgende certifikatoplysninger gælder for alle globale og nationale cloudforekomster af Microsoft 365.
 
 Senest opdateret: **25/4/2022**
 
 > [!NOTE]
-> Du kan få certifikatoplysninger, der gælder for **DOD- og GCC High-kunder**, [under Microsoft 365 krypteringskæder – DOD og GCC High](encryption-office-365-certificate-chains-itar.md).
+> Du kan få certifikatoplysninger, der gælder for **DOD- og GCC High-kunder** , i [Microsoft 365-krypteringskæder – DOD og GCC High](encryption-office-365-certificate-chains-itar.md).
 
 | **Certifikattype** | **P7b download** | **Slutpunkter for liste over tilbagekaldte certifikater** | **OCSP-slutpunkter** | **AIA-slutpunkter** |
 | --- | --- | --- | --- | --- |
-| Rodcertifikater, der er offentligt tillid til | [Microsoft 365 rodcertifikatbundt (P7B)](https://download.microsoft.com/download/4/a/b/4ab1c940-826b-444b-b287-b7a902e68da0/m365_root_certs_20220331.p7b) | crl.globalsign.net<br>www.d-trust.net | NIELSEN | NIELSEN |
-| Mellemliggende certifikater, der er offentligt tillid til | [Microsoft 365 mellemliggende certifikatbundt (P7B)](https://download.microsoft.com/download/1/4/7/14777f28-3fde-4958-aebf-bd192a4a7fac/m365_intermediate_certs_20201013.p7b) | cdp1.public-trust.com<br>crl.cnnic.cn<br>crl.entrust.net<br>crl.globalsign.com<br>crl.globalsign.net<br>crl.identrust.com<br>crl.thawte.com<br>crl3.digicert.com<br>crl4.digicert.com<br>s1.symcb.com<br>www.d-trust.net | isrg.trustid.ocsp.identrust.com<br>ocsp.digicert.com<br>ocsp.entrust.net<br>ocsp.globalsign.com<br>ocsp.omniroot.com<br>ocsp.startssl.com<br>ocsp.thawte.com<br>ocsp2.globalsign.com<br>ocspcnnicroot.cnnic.cn<br>root-c3-ca2-2009.ocsp.d-trust.net<br>root-c3-ca2-ev-2009.ocsp.d-trust.net<br>s2.symcb.com | aia.startssl.com<br>apps.identrust.com<br>cacert.omniroot.com<br>www.cnnic.cn |
+| Rodcertifikater, der er offentligt tillid til | [Microsoft 365 Root Certificate Bundle (P7B)](https://download.microsoft.com/download/4/a/b/4ab1c940-826b-444b-b287-b7a902e68da0/m365_root_certs_20220331.p7b) | crl.globalsign.net<br>www.d-trust.net | NIELSEN | NIELSEN |
+| Mellemliggende certifikater, der er offentligt tillid til | [Microsoft 365 Intermediate Certificate Bundle (P7B)](https://download.microsoft.com/download/1/4/7/14777f28-3fde-4958-aebf-bd192a4a7fac/m365_intermediate_certs_20201013.p7b) | cdp1.public-trust.com<br>crl.cnnic.cn<br>crl.entrust.net<br>crl.globalsign.com<br>crl.globalsign.net<br>crl.identrust.com<br>crl.thawte.com<br>crl3.digicert.com<br>crl4.digicert.com<br>s1.symcb.com<br>www.d-trust.net | isrg.trustid.ocsp.identrust.com<br>ocsp.digicert.com<br>ocsp.entrust.net<br>ocsp.globalsign.com<br>ocsp.omniroot.com<br>ocsp.startssl.com<br>ocsp.thawte.com<br>ocsp2.globalsign.com<br>ocspcnnicroot.cnnic.cn<br>root-c3-ca2-2009.ocsp.d-trust.net<br>root-c3-ca2-ev-2009.ocsp.d-trust.net<br>s2.symcb.com | aia.startssl.com<br>apps.identrust.com<br>cacert.omniroot.com<br>www.cnnic.cn |
 
 Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere oplysninger om certifikatudbyderne.
 
-## <a name="microsoft-365-root-certificate-details"></a>**oplysninger om Microsoft 365 rodcertifikat**
+## <a name="microsoft-365-root-certificate-details"></a>**Oplysninger om Microsoft 365-rodcertifikat**
 
 ### <a name="baltimore-cybertrust-root"></a>**Baltimore CyberTrust-rod**
 
@@ -164,7 +162,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 
 ### <a name="entrustnet-certification-authority-2048"></a>**Entrust.net nøglecenter (2048)**
 
-| **Emne** | CN=Entrust.net-nøglecenter (2048)<br>OU=(c) 1999 Entrust.net Limited<br>OU=www.entrust.net/CPS2048\_ incorp. efter ref. (limit s liab.)<br>O=Entrust.net |
+| **Emne** | CN=Entrust.net-nøglecenter (2048)<br>OU=(c) 1999 Entrust.net Limited<br>OU=www.entrust.net/CPS\_2048 incorp. efter ref. (limit s liab.)<br>O=Entrust.net |
 | --- | --- |
 | **Serienummer** | 38:63:DE:F8 |
 | **Længde på offentlig nøgle** | RSA 2048-bit (e 65537) |
@@ -247,7 +245,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 | **Aftryk (SHA-256)** | 9ACFAB7E43C8D880D06B262A94DEEEE4B4659989C3D0CAF19BAF6405E41AB7DF |
 | **Pin (SHA-256)** | JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg= |
 
-## <a name="microsoft-365-intermediate-certificate-details"></a>**Microsoft 365 oplysninger om mellemliggende certifikat**
+## <a name="microsoft-365-intermediate-certificate-details"></a>**Oplysninger om mellemliggende certifikat i Microsoft 365**
 
 ### <a name="cnnic-sha256-ssl"></a>**CNNIC SHA256 SSL**
 
@@ -450,7 +448,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 
 | **Emne** | CN=Betro nøglecenter – L1C<br>OU=&quot;(c) 2009 Entrust, Inc.&quot;<br>OU=www.entrust.net/rpa er indarbejdet som reference<br>O=&quot;Entrust, Inc.&quot;<br>C=USA |
 | --- | --- |
-| **Udstederen** | CN=Entrust.net-nøglecenter (2048)<br>OU=(c) 1999 Entrust.net Limited<br>OU=www.entrust.net/CPS2048\_ incorp. efter ref. (limits liab.)<br>O=Entrust.net |
+| **Udstederen** | CN=Entrust.net-nøglecenter (2048)<br>OU=(c) 1999 Entrust.net Limited<br>OU=www.entrust.net/CPS\_2048 incorp. efter ref. (limits liab.)<br>O=Entrust.net |
 | **Serienummer** | 4C:0E:8C:39 |
 | **Længde på offentlig nøgle** | RSA 2048-bit (e 65537) |
 | **Signaturalgoritme** | sha1RSA |
@@ -609,7 +607,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 
 ### <a name="microsoft-azure-tls-issuing-ca-01"></a>**Microsoft Azure TLS udstedende CA 01**
 
-| **Emne** | CN=Microsoft Azure TLS-udstedende NØGLECENTER 01<br>O=Microsoft Corporation<br>C=USA |
+| **Emne** | CN=Microsoft Azure TLS Issuing CA 01<br>O=Microsoft Corporation<br>C=USA |
 | --- | --- |
 | **Udstederen** | CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US |
 | **Serienummer** | 0A:AF:A6:C5:CA:63:C4:51:41:EA:3B:E1:F7:C7:53:17 |
@@ -626,7 +624,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 
 ### <a name="microsoft-azure-tls-issuing-ca-02"></a>**Microsoft Azure TLS udstedende CA 02**
 
-| **Emne** | CN=Microsoft Azure TLS udstedende CA 02<br>O=Microsoft Corporation<br>C=USA |
+| **Emne** | CN=Microsoft Azure TLS Issuing CA 02<br>O=Microsoft Corporation<br>C=USA |
 | --- | --- |
 | **Udstederen** | CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US |
 | **Serienummer** | 0C:6A:E9:7C:CE:D5:99:83:86:90:A0:0A:9E:A5:32:14 |
@@ -643,7 +641,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 
 ### <a name="microsoft-azure-tls-issuing-ca-05"></a>**Microsoft Azure TLS udstedende CA 05**
 
-| **Emne** | CN=Microsoft Azure TLS udstedende CA 05<br>O=Microsoft Corporation<br>C=USA |
+| **Emne** | CN=Microsoft Azure TLS Issuing CA 05<br>O=Microsoft Corporation<br>C=USA |
 | --- | --- |
 | **Udstederen** | CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US |
 | **Serienummer** | 0D:7B:ED:E9:7D:82:09:96:7A:52:63:1B:8B:DD:18:BD |
@@ -660,7 +658,7 @@ Udvid rodsektionen og de mellemliggende afsnit nedenfor for at få vist flere op
 
 ### <a name="microsoft-azure-tls-issuing-ca-06"></a>**Microsoft Azure TLS udstedende CA 06**
 
-| **Emne** | CN=Microsoft Azure TLS udstedende CA 06<br>O=Microsoft Corporation<br>C=USA |
+| **Emne** | CN=Microsoft Azure TLS Issuing CA 06<br>O=Microsoft Corporation<br>C=USA |
 | --- | --- |
 | **Udstederen** | CN=DigiCert Global Root G2, OU=www.digicert.com, O=DigiCert Inc, C=US |
 | **Serienummer** | 02:E7:91:71:FB:80:21:E9:3F:E2:D9:83:83:4C:50:C0 |

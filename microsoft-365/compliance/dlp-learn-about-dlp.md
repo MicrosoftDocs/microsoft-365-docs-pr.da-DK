@@ -14,33 +14,31 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Få mere at vide om, hvordan du beskytter dine følsomme oplysninger ved hjælp af Microsoft Purview politikker og værktøjer til forebyggelse af datatab og få en rundvisning i DLP-livscyklussen.
-ms.openlocfilehash: 1d05eb2ae7b7071a79448596832eb6594ab680ef
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+description: Få mere at vide om, hvordan du beskytter dine følsomme oplysninger ved hjælp af microsoft Purview-politikker og -værktøjer til forebyggelse af datatab og får en rundvisning i DLP-livscyklussen.
+ms.openlocfilehash: 2bcc82f0609f617219d626f8180e7f4c9df51060
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669688"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641904"
 ---
 # <a name="learn-about-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Organisationer har følsomme oplysninger under deres kontrol, f.eks. finansielle data, beskyttede data, kreditkortnumre, sundhedsjournaler eller cpr-numre. For at beskytte disse følsomme data og reducere risikoen har de brug for en metode til at forhindre deres brugere i at dele dem upassende med personer, der ikke skulle have dem. Denne praksis kaldes forebyggelse af datatab (DLP).
 
 I Microsoft Purview implementerer du forebyggelse af datatab ved at definere og anvende DLP-politikker. Med en DLP-politik kan du identificere, overvåge og automatisk beskytte følsomme elementer på tværs af:
 
-- Microsoft 365 tjenester som Teams, Exchange, SharePoint og OneDrive
-- Office programmer som Word, Excel og PowerPoint
-- Windows 10, Windows 11 og macOS (Catalina 10,15 eller nyere) slutpunkter
+- Microsoft 365-tjenester som Teams, Exchange, SharePoint og OneDrive
+- Office-programmer som f.eks. Word, Excel og PowerPoint
+- Windows 10, Windows 11 og macOS-slutpunkter (Catalina 10.15 eller nyere)
 - cloudapps, der ikke er fra Microsoft
 - filshares i det lokale miljø og SharePoint i det lokale miljø.
 
 DLP registrerer følsomme elementer ved hjælp af detaljeret indholdsanalyse og ikke kun ved en simpel tekstscanning. Indhold analyseres for primære data, der svarer til nøgleord, ved evaluering af regulære udtryk, ved intern funktionsvalidering og efter sekundære datamatch, der er i nærheden af det primære datamatch. Ud over dette bruger DLP også algoritmer til maskinel indlæring og andre metoder til at registrere indhold, der stemmer overens med dine DLP-politikker.
 
-## <a name="dlp-is-part-of-the-larger-microsoft-purview-offering"></a>DLP er en del af de større Microsoft Purview
+## <a name="dlp-is-part-of-the-larger-microsoft-purview-offering"></a>DLP er en del af det større Microsoft Purview-tilbud
 
-DLP er blot et af de Microsoft Purview værktøjer, du vil bruge til at beskytte dine følsomme elementer, uanset hvor de bor eller rejser. Du bør forstå de andre værktøjer i det Microsoft Purview værktøjssæt, hvordan de hænger sammen og arbejder bedre sammen.  Se [Microsoft Purview værktøjer](protect-information.md) for at få mere at vide om beskyttelsesprocessen for oplysninger.
+DLP er blot et af de Microsoft Purview-værktøjer, du skal bruge til at beskytte dine følsomme elementer, uanset hvor de bor eller rejser. Du bør forstå de andre værktøjer i microsoft Purview-værktøjerne, hvordan de hænger sammen og arbejder bedre sammen.  Se [Microsoft Purview-værktøjer](protect-information.md) for at få mere at vide om beskyttelsesprocessen for oplysninger.
 
 ## <a name="protective-actions-of-dlp-policies"></a>Beskyttende handlinger for DLP-politikker
 
@@ -50,9 +48,9 @@ DLP-politikker er den måde, du overvåger de aktiviteter, som brugerne foretage
 - blokere delingen og via et politiktip tillade brugeren at tilsidesætte blokken og registrere brugernes begrundelse
 - blokere delingen uden tilsidesættelsesindstillingen
 - I forbindelse med inaktive data kan følsomme elementer låses og flyttes til en sikker karantæneplacering
-- for Teams chat vises de følsomme oplysninger ikke
+- for Teams-chat vises de følsomme oplysninger ikke
 
-Alle DLP-overvågede aktiviteter registreres som standard i [Microsoft 365 Overvågningslog](search-the-audit-log-in-security-and-compliance.md) og dirigeres til [Aktivitetsoversigt](data-classification-activity-explorer.md). Når en bruger udfører en handling, der opfylder kriterierne i en DLP-politik, og du har konfigureret beskeder, leverer DLP beskeder på [dashboardet til administration af DLP-beskeder](dlp-configure-view-alerts-policies.md).
+Alle DLP-overvågede aktiviteter registreres som standard i [Microsoft 365-overvågningsloggen](search-the-audit-log-in-security-and-compliance.md) og dirigeres til [Aktivitetsoversigt](data-classification-activity-explorer.md). Når en bruger udfører en handling, der opfylder kriterierne i en DLP-politik, og du har konfigureret beskeder, leverer DLP beskeder på [dashboardet til administration af DLP-beskeder](dlp-configure-view-alerts-policies.md).
 
 ## <a name="dlp-lifecycle"></a>DLP-livscyklus
 
@@ -71,7 +69,7 @@ DLP-overvågning og -beskyttelse er indbygget i de programmer, som brugerne brug
 
 **Teknologiplanlægning til DLP**
 
-Vær opmærksom på, at DLP som teknologi kan overvåge og beskytte inaktive data, data i brug og data i bevægelse på tværs af Microsoft 365 tjenester, Windows 10, Windows 11 og macOS (Catalina 10.15 og nyere) enheder, filshares i det lokale miljø og SharePoint i det lokale miljø. Der er planlægningsmæssige konsekvenser for de forskellige placeringer, den type data, du vil overvåge og beskytte, og de handlinger, der skal udføres, når en politik matcher.
+Vær opmærksom på, at DLP som teknologi kan overvåge og beskytte inaktive data, data i brug og data i bevægelse på tværs af Microsoft 365-tjenester, Windows 10, Windows 11 og macOS-enheder (Catalina 10.15 og nyere), filshares i det lokale miljø og SharePoint i det lokale miljø. Der er planlægningsmæssige konsekvenser for de forskellige placeringer, den type data, du vil overvåge og beskytte, og de handlinger, der skal udføres, når en politik matcher.
 
 **Planlægning af forretningsprocesser for DLP**
 
@@ -88,15 +86,15 @@ En vellykket DLP-implementering er lige så meget afhængig af at få dine bruge
 Du kan anvende DLP-politikker på inaktive data, data i brug og data i gang på placeringer, f.eks.:
 
 - Exchange Online mail
-- SharePoint onlinewebsteder
-- OneDrive konti
-- Teams chat- og kanalmeddelelser
-- Microsoft Cloud App Security
-- enheder med Windows 10, Windows 11 og macOS (Catalina 10.15 eller nyere)
+- SharePoint Online-websteder
+- OneDrive-konti
+- Teams-chat- og kanalmeddelelser
+- Microsoft Defender for Cloud Apps
+- Windows 10-, Windows 11- og macOS-enheder (Catalina 10.15 eller nyere)
 - Lagre i det lokale miljø
 - PowerBI-websteder
 
-Hver har forskellige forudsætninger. Følsomme elementer på nogle steder, f.eks. Exchange online, kan overføres under DLP-paraplyen ved blot at konfigurere en politik, der gælder for dem. Andre, f.eks. fillagre i det lokale miljø, kræver en udrulning af AIP-scanner (Azure Information Protection). Du skal forberede dit miljø, kodeudkast til politikker og teste dem grundigt, før du aktiverer eventuelle blokeringshandlinger.
+Hver har forskellige forudsætninger. Følsomme elementer på nogle placeringer, f.eks. Exchange Online, kan overføres under DLP-paraplyen ved blot at konfigurere en politik, der gælder for dem. Andre, f.eks. fillagre i det lokale miljø, kræver en udrulning af AIP-scanner (Azure Information Protection). Du skal forberede dit miljø, kodeudkast til politikker og teste dem grundigt, før du aktiverer eventuelle blokeringshandlinger.
 
 ### <a name="deploy-your-policies-in-production"></a>Udrul dine politikker i produktion
 
@@ -145,11 +143,11 @@ Du har fleksibilitet i den måde, du opretter og konfigurerer dine DLP-politikke
 
 Placering | include/exclude by|
 |---------|---------|
-|Exchange mail| distributionsgrupper|
-|SharePoint websteder |Websteder |
-|OneDrive konti |konti eller distributionsgrupper |
-|Teams chat- og kanalmeddelelser |konto eller distributionsgruppe |
-|enheder med Windows 10, Windows 11 og macOS (Catalina 10.15 eller nyere) |bruger eller gruppe |
+|Exchange-mail| distributionsgrupper|
+|SharePoint-websteder |Websteder |
+|OneDrive-konti |konti eller distributionsgrupper |
+|Teams-chat- og kanalmeddelelser |konto eller distributionsgruppe |
+|Windows 10-, Windows 11- og macOS-enheder (Catalina 10.15 eller nyere) |bruger eller gruppe |
 |Microsoft Cloud App Security |Eksempel |
 |Lagre i det lokale miljø| filsti til lager|
 
@@ -162,9 +160,9 @@ Placering | include/exclude by|
 4. **Vælg den handling, der skal udføres, når politikbetingelserne er opfyldt** – Handlingerne afhænger af den placering, hvor aktiviteten finder sted.  Nogle eksempler er:
 
 - SharePoint/Exchange/OneDrive: Bloker personer uden for din organisationsformular, der har adgang til indholdet. Vis brugeren et tip, og send brugeren en mailmeddelelse om, at vedkommende foretager en handling, der er forbudt i forbindelse med DLP-politikken.
-- Teams chat og kanal: Bloker følsomme oplysninger fra at blive delt i chatten eller kanalen
-- Windows 10-, Windows 11- og macOS-enheder (Catalina 10.15 eller nyere): Overvåg eller begræns kopiering af et følsomt element til en USB-enhed, der kan fjernes
-- Office apps: Vis et pop op-vindue, der giver brugeren besked om, at brugeren er involveret i en risikabel funktionsmåde og blokerer eller blokerer, men tillader tilsidesættelse.
+- Teams-chat og -kanal: Bloker følsomme oplysninger fra at blive delt i chatten eller kanalen
+- Windows 10, Windows 11 og macOS-enheder (Catalina 10.15 eller nyere): Overvåg eller begræns kopiering af et følsomt element til en USB-enhed, der kan fjernes
+- Office-apps: Vis et pop op-vindue, der giver brugeren besked om, at brugeren er involveret i en risikabel funktionsmåde, og blokerer eller blokerer, men tillader tilsidesættelse.
 - Filshares i det lokale miljø: Flyt filen fra det sted, hvor den er gemt, til en karantænemappe
 
 > [!NOTE]
@@ -176,17 +174,17 @@ All DLP policies are created and maintained in the Microsoft Purview center. See
 
 Når du har oprettet en DLP-politik i Overholdelsescenter, gemmes den i et centralt politiklager og synkroniseres derefter med de forskellige indholdskilder, herunder:
 
-- Exchange Online, og derfra til Outlook på internettet og Outlook.
+- Exchange Online og derfra til Outlook på internettet og Outlook.
 - OneDrive for Business websteder.
-- SharePoint onlinewebsteder.
-- Office skrivebordsprogrammer (Excel, PowerPoint og Word).
-- Microsoft Teams kanaler og chatbeskeder.
+- SharePoint Online-websteder.
+- Office-skrivebordsprogrammer (Excel, PowerPoint og Word).
+- Microsoft Teams-kanaler og chatbeskeder.
 
 Når politikken er synkroniseret til de rigtige placeringer, begynder den at evaluere indhold og gennemtvinge handlinger.
 
 ## <a name="viewing-policy-application-results"></a>Visning af resultater for politikprogram
 
-DLP rapporterer en stor mængde oplysninger i Microsoft Purview fra overvågning, politikkampe og handlinger og brugeraktiviteter. Du skal bruge og reagere på disse oplysninger for at justere dine politikker og triage handlinger, der udføres på følsomme elementer. Telemetrien går først ind i [Microsoft Purview-compliance-portal Overvågningslogge](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) behandles og gør sin vej til forskellige rapporteringsværktøjer. Hvert rapporteringsværktøj har forskellige formål.
+DLP rapporterer en stor mængde oplysninger til Microsoft Purview fra overvågning, politikkampe og handlinger og brugeraktiviteter. Du skal bruge og reagere på disse oplysninger for at justere dine politikker og triage handlinger, der udføres på følsomme elementer. Telemetrien går først ind i [Microsoft Purview-compliance-portal Overvågningslogge](search-the-audit-log-in-security-and-compliance.md#search-the-audit-log-in-the-compliance-portal) behandles og gør sin vej til forskellige rapporteringsværktøjer. Hvert rapporteringsværktøj har forskellige formål.
 
 ### <a name="dlp-alerts-dashboard"></a>DLP-beskeddashboard
 
@@ -224,7 +222,7 @@ Hvis du vil vide mere om Microsoft Purview DLP, skal du se:
 - [Få mere at vide om Microsoft Overholdelsesudvidelse](dlp-chrome-learn-about.md)
 - [Få mere at vide om dashboardet til forebyggelse af datatab](dlp-alerts-dashboard-learn.md)
 
-Hvis du vil vide mere om, hvordan du bruger forebyggelse af datatab til at overholde reglerne om beskyttelse af personlige oplysninger, skal du se [Installér bestemmelser om beskyttelse af personlige oplysninger i Microsoft Purview](../solutions/information-protection-deploy.md) (aka.ms/m365dataprivacy).
+Hvis du vil vide mere om, hvordan du bruger forebyggelse af datatab til at overholde reglerne for beskyttelse af personlige oplysninger, skal du se [Udrul regler om beskyttelse af personlige oplysninger med Microsoft Purview](../solutions/information-protection-deploy.md)  (aka.ms/m365dataprivacy).
 
 ## <a name="licensing-and-subscriptions"></a>Licenser og abonnementer
 

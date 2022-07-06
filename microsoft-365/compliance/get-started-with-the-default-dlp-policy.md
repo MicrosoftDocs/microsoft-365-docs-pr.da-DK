@@ -19,16 +19,14 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om, hvordan du bruger rapporten til at tilpasse din organisations standardpolitik til forebyggelse af datatab .
-ms.openlocfilehash: 893aae6dfbc4e5c9fcf48a8eec53694352ead4f2
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: d47568f009745edaa8205ce65b4de9b481f58139
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753446"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66641488"
 ---
 # <a name="get-started-with-the-default-dlp-policy"></a>Kom i gang med DLP-standardpolitikken
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Før du selv opretter din første DLP-politik (Microsoft Purview Forebyggelse af datatab), hjælper DLP med at beskytte dine følsomme oplysninger med en standardpolitik. Denne standardpolitik og dens anbefaling (vist nedenfor) hjælper med at beskytte dit følsomme indhold ved at give dig besked, når mail eller dokumenter, der indeholder et kreditkortnummer, blev delt med en person uden for din organisation. Du kan se denne anbefaling **på startsiden** for Microsoft Purview-compliance-portal. 
   

@@ -13,31 +13,29 @@ ms.localizationpriority: medium
 search.appverid:
 - MET150
 ms.collection: M365-security-compliance
-description: ''
-ms.openlocfilehash: 1f94f49f93310ea4b40d588c7c43ecce7ec535cc
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du udfører den første træningsrunde for forudsigende kodning.
+ms.openlocfilehash: 509e47372655691130be9a4621c973b5e6575f80
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091451"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642344"
 ---
 # <a name="train-a-predictive-coding-model-preview"></a>Oplær en forudsigende kodemodel (prøveversion)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Når du har oprettet en forudsigende kodemodel i Microsoft Purview eDiscovery (Premium), er det næste trin at udføre den første træningsrunde for at oplære modellen i, hvad der er relevant og ikke-relevant indhold i dit anmeldelsessæt. Når du har fuldført den første træningsrunde, kan du udføre efterfølgende oplæringsrunder for at forbedre modellens evne til at forudsige relevant og ikke-relevant indhold.
 
-Når du har oprettet en forudsigende kodemodel i Microsoft Purview eDiscovery (Premium), er det næste trin at udføre den første oplæringsrunde for at oplære modellen i, hvad der er relevant og ikke-relevant indhold i dit anmeldelsessæt. Når du har fuldført den første træningsrunde, kan du udføre efterfølgende oplæringsrunder for at forbedre modellens evne til at forudsige relevant og ikke-relevant indhold.
-
-Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal du se [Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
+Hvis du vil gennemse arbejdsprocessen for forudsigende kodning, skal [du se Få mere at vide om forudsigende kodning i eDiscovery (Premium)](predictive-coding-overview.md#the-predictive-coding-workflow)
 
 ## <a name="before-you-train-a-model"></a>Før du oplærer en model
 
-- Under en træningsrunde skal du markere elementer som **Relevante** eller **Ikke relevante** , afhængigt af relevansen af indholdet i dokumentet. Du skal ikke basere din beslutning på værdierne i metadatafelterne. For mails eller Teams samtaler skal du f.eks. ikke basere din beslutning om mærkat på deltagerne i meddelelsen.
+- Under en træningsrunde skal du markere elementer som **Relevante** eller **Ikke relevante** , afhængigt af relevansen af indholdet i dokumentet. Du skal ikke basere din beslutning på værdierne i metadatafelterne. For mails eller Teams-samtaler skal du f.eks. ikke basere din navngivningsbeslutning på meddelelsesdeltagerne.
 
 ## <a name="train-a-model-for-the-first-time"></a>Oplær en model første gang
 
-1. Åbn en eDiscovery-sag (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Gennemse sæt**.
+1. Åbn en eDiscovery-sag (Premium) i Microsoft Purview-compliance-portal, og vælg derefter fanen **Gennemse sæt**.
 
-2. Åbn et korrektursæt, og klik derefter på **AnalyticsAdministrer forudsigende kodning (prøveversion)**. > 
+2. Åbn et korrektursæt, og klik derefter på **Administrer forudsigende kodning (prøveversion)** i **Analytics** > .
 
 3. På siden **Forudsigende kodningsmodeller (prøveversion)** skal du vælge den model, du vil oplære.
 

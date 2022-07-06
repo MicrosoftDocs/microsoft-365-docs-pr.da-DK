@@ -1,5 +1,5 @@
 ---
-title: Microsoft Purview politikker for overholdelse af regler og standarder
+title: Besked- og beskedpolitikker i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,17 +17,15 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om, hvordan du opretter beskeder for aktiviteter i Microsoft Purview Overholdelsesstyring, der kan påvirke din score for overholdelse af angivne standarder.
-ms.openlocfilehash: c69e56c693a2994a93b1faccfe6f69fa317d8390
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+description: Få mere at vide om, hvordan du opretter beskeder for aktiviteter i Microsoft Purview Compliance Manager, der kan påvirke din score for overholdelse af angivne standarder.
+ms.openlocfilehash: 499d1f005b67b2a9583d7138ce784b2e7ae1c8ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65839443"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642234"
 ---
-# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Microsoft Purview politikker for overholdelse af regler og standarder
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+# <a name="microsoft-purview-compliance-manager-alerts-and-alert-policies"></a>Besked- og beskedpolitikker i Microsoft Purview Compliance Manager
 
 **I denne artikel:** Få mere at vide om, hvordan **du angiver beskeder** for visse aktiviteter i Overholdelsesstyring, hvordan du administrerer beskeder, og hvordan **du opretter beskedpolitikker** for at definere betingelser for beskeder.
 

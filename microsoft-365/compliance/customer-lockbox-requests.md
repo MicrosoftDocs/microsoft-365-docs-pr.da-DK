@@ -18,20 +18,18 @@ search.appverid:
 - MOE150
 ms.custom: admindeeplinkMAC
 description: Få mere at vide om kunde lockbox-anmodninger, der giver dig mulighed for at styre, hvordan en Microsoft-supporttekniker kan få adgang til dine data, når du støder på et problem.
-ms.openlocfilehash: cf9a2a6d682ca87e97986389f640a536775ca014
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: 7094de30722c4419e3c1c33d0c06f2cdb6d37290
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953820"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66642168"
 ---
 # <a name="microsoft-purview-customer-lockbox"></a>Microsoft Purview Customer Lockbox
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Denne artikel indeholder en installations- og konfigurationsvejledning til Customer Lockbox. Kundelåsekasse understøtter anmodninger om at få adgang til data i Exchange Online, SharePoint Online, OneDrive for Business og Teams. Hvis du vil anbefale support til andre tjenester, skal du sende en anmodning på [feedbackportalen](https://feedbackportal.microsoft.com).
 
-Denne artikel indeholder en installations- og konfigurationsvejledning til Customer Lockbox. Customer Lockbox understøtter anmodninger om at få adgang til data i Exchange Online, SharePoint Online, OneDrive for Business og Teams. Hvis du vil anbefale support til andre tjenester, skal du sende en anmodning på [feedbackportalen](https://feedbackportal.microsoft.com).
-
-Hvis du vil se indstillingerne for licensering af dine brugere, så de kan drage fordel af Microsoft Purview-tilbud, skal du se [Microsoft 365 licensvejledning for at få hjælp til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Hvis du vil se mulighederne for at licensere dine brugere, så de kan drage fordel af Microsoft Purview-tilbud, skal du se [Microsoft 365-licensvejledningen for at få oplysninger om sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 Kundelåsekasse sikrer, at Microsoft ikke kan få adgang til dit indhold for at udføre servicehandlinger uden din eksplicitte godkendelse. Customer Lockbox fører dig ind i den arbejdsproces for godkendelse, som Microsoft bruger til at sikre, at kun godkendte anmodninger giver adgang til dit indhold. Du kan få mere at vide om Microsofts arbejdsproces under [Privilegeret adgangsstyring](privileged-access-management-solution-overview.md).
 
@@ -45,7 +43,7 @@ Nogle gange hjælper Microsoft-teknikere med at foretage fejlfinding og løse pr
 
 I disse trin beskrives den typiske arbejdsproces, når en Microsoft-tekniker starter en kundelåsekasseanmodning:
 
-1. En person i en organisation oplever et problem med deres Microsoft 365 postkasse.
+1. En person i en organisation oplever et problem med deres Microsoft 365-postkasse.
 
 2. Når brugeren har lokaliseret problemet, men ikke kan løse det, åbner vedkommende en supportanmodning hos Microsoft Support.
 
@@ -77,7 +75,7 @@ Du kan slå Customer Lockbox-kontrolelementer til i Microsoft 365 Administration
 
 1. Ved hjælp af en arbejds- eller skolekonto, der enten har rollen global administrator eller **rollen Kundelåskasseadgangsgodkender** tildelt, skal du gå til [https://admin.microsoft.com](https://admin.microsoft.com) og logge på.
 
-2. Vælg **Indstillinger** >  **Ellerg Indstillinger** >  **Sikkerhed & Beskyttelse af personlige oplysninger**.
+2. Vælg **Indstillinger** > **Organisationsindstillinger** > **Sikkerhed & Beskyttelse af personlige oplysninger**.
 
 3. Vælg **Sikkerhed & Beskyttelse af personlige oplysninger**, og vælg derefter **Kundelåseboks** i venstre kolonne. Markér afkrydsningsfeltet **Kræv godkendelse af alle anmodninger om dataadgang** , og gem ændringerne for at aktivere funktionen.
 
@@ -108,11 +106,11 @@ Du kan slå Customer Lockbox-kontrolelementer til i Microsoft 365 Administration
 
 ## <a name="auditing-customer-lockbox-requests"></a>Overvågning af kundelåsekasseanmodninger
 
-Overvågningsposter, der svarer til kundelåsekasseanmodninger, logføres i Microsoft 365 overvågningslog. Du kan få adgang til disse logge ved hjælp af [søgeværktøjet til overvågningslogfiler](search-the-audit-log-in-security-and-compliance.md) på Microsoft Purview-overholdelsesportalen. Handlinger, der er relateret til at acceptere eller afvise en kundelåsekasseanmodning, og handlinger, der udføres af Microsoft-teknikere (når adgangsanmodninger godkendes), logføres også i overvågningsloggen. Du kan søge efter og gennemse disse overvågningsposter.
+Overvågningsposter, der svarer til kundelåsekasseanmodninger, logføres i Microsoft 365-overvågningsloggen. Du kan få adgang til disse logge ved hjælp af [søgeværktøjet til overvågningslogfiler](search-the-audit-log-in-security-and-compliance.md) i Microsoft Purview-compliance-portal. Handlinger, der er relateret til at acceptere eller afvise en kundelåsekasseanmodning, og handlinger, der udføres af Microsoft-teknikere (når adgangsanmodninger godkendes), logføres også i overvågningsloggen. Du kan søge efter og gennemse disse overvågningsposter.
 
 ### <a name="search-the-audit-log-for-activity-related-to-customer-lockbox-requests"></a>Søg i overvågningsloggen efter aktivitet, der er relateret til kundelåsekasseanmodninger
 
-Før du kan bruge overvågningsloggen til at spore anmodninger om Customer Lockbox, er der nogle trin, du skal udføre for at konfigurere overvågningslogføring, herunder tildeling af tilladelser til at søge i overvågningsloggen. Du kan få flere oplysninger under [Konfigurer Microsoft Purview Audit (Standard)](set-up-basic-audit.md). Når du har fuldført konfigurationen, skal du bruge disse trin til at oprette en søgeforespørgsel i overvågningsloggen for at returnere overvågningsposter, der er relateret til Customer Lockbox:
+Før du kan bruge overvågningsloggen til at spore anmodninger om Customer Lockbox, er der nogle trin, du skal udføre for at konfigurere overvågningslogføring, herunder tildeling af tilladelser til at søge i overvågningsloggen. Du kan få flere oplysninger under [Konfigurer Microsoft Purview-gennemgang (Standard)](set-up-basic-audit.md). Når du har fuldført konfigurationen, skal du bruge disse trin til at oprette en søgeforespørgsel i overvågningsloggen for at returnere overvågningsposter, der er relateret til Customer Lockbox:
 
 1. Gå til <https://compliance.microsoft.com>.
   
@@ -154,14 +152,14 @@ Du kan også eksportere søgeresultaterne i overvågningsloggen til en CSV-fil o
 
 Hvis du vil eksportere overvågningsposter, skal du bruge de forrige trin til at søge i overvågningsloggen. Når søgningen er fuldført, skal du vælge **Eksportér > Download alle resultater** øverst på siden med søgeresultater. Når eksporten er fuldført, kan du downloade CSV-filen til din lokale computer. Du kan finde mere detaljerede instruktioner under [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
 
-Når du har downloadet filen, kan du åbne den i Excel og derefter filtrere kolonnen **Handlinger** for at få vist overvågningsposter for aktiviteter af typen **Set-AccessToCustomerDataRequest**. Du kan også filtrere på kolonnen **UserIds** (ved hjælp af værdien **Microsoft Operator**) for at få vist overvågningsposter for aktiviteter, der udføres af Microsoft-teknikere.
+Når du har downloadet filen, kan du åbne den i Excel og derefter filtrere kolonnen **Handlinger** for at få vist overvågningsposter for aktiviteter af typen **Set-AccessToCustomerDataRequest** . Du kan også filtrere på kolonnen **UserIds** (ved hjælp af værdien **Microsoft Operator**) for at få vist overvågningsposter for aktiviteter, der udføres af Microsoft-teknikere.
 
 > [!NOTE]
 > Når du får vist overvågningsposter i CSV-filen, findes der flere oplysninger i kolonnen **AuditData** . Oplysningerne i denne kolonne findes i et JSON-objekt, som indeholder flere egenskaber, der er konfigureret som *property:value-par* adskilt af kommaer. Du kan bruge transformationsfunktionen JSON i Power Query-editor i Excel til at opdele hver egenskab i JSON-objektet i kolonnen **AuditData** i flere kolonner, så hver egenskab har sin egen kolonne. Det gør det lettere at fortolke disse oplysninger. Du kan finde flere instruktioner under [Formatér den eksporterede overvågningslog ved hjælp af Power Query-editor](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor).
 
 ### <a name="use-powershell-to-search-and-export-audit-records"></a>Brug PowerShell til at søge efter og eksportere overvågningsposter
 
-Et alternativ til at bruge værktøjet til overvågningssøgning på Microsoft Purview-overholdelsesportalen er at køre cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell. En fordel ved at bruge PowerShell er, at du specifikt kan søge efter **Set-AccessToCustomerDataRequest-aktiviteter** eller aktiviteter, der udføres af Microsoft-teknikere, som er relateret til en kundelåskasseanmodning.
+Et alternativ til at bruge værktøjet til overvågningssøgning i Microsoft Purview-compliance-portal er at køre cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell. En fordel ved at bruge PowerShell er, at du specifikt kan søge efter **Set-AccessToCustomerDataRequest-aktiviteter** eller aktiviteter, der udføres af Microsoft-teknikere, som er relateret til en kundelåskasseanmodning.
 
 Når du [har oprettet forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), skal du køre en af følgende kommandoer. Erstat pladsholderne med et bestemt datointerval.
 
@@ -211,43 +209,43 @@ De handlinger, der udføres af en Microsoft-tekniker, efter at en kundes Lockbox
 
 ## <a name="frequently-asked-questions"></a>Ofte stillede spørgsmål
 
-### <a name="which-microsoft-365-services-does-customer-lockbox-apply-to"></a>Hvilke Microsoft 365 tjenester gælder Customer Lockbox for?
+### <a name="which-microsoft-365-services-does-customer-lockbox-apply-to"></a>Hvilke Microsoft 365-tjenester gælder Customer Lockbox for?
 
-Customer Lockbox understøttes i øjeblikket i Exchange Online, SharePoint Online, OneDrive for Business og Teams.
+Kundelåsekasse understøttes i øjeblikket i Exchange Online, SharePoint Online, OneDrive for Business og Teams.
 
 ### <a name="is-customer-lockbox-available-to-all-customers"></a>Er Customer Lockbox tilgængelig for alle kunder?
 
-Kundelåseboksen er inkluderet i abonnementerne på Microsoft 365 eller Office 365 E5 og kan føjes til andre planer med et abonnement på Information Protection og overholdelse eller et tilføjelsesprogram til avanceret overholdelse. Se [Planer og priser](https://products.office.com/business/office-365-enterprise-e5-business-software) for at få flere oplysninger.
+Customer Lockbox er inkluderet i abonnementerne på Microsoft 365 eller Office 365 E5 og kan føjes til andre planer med et abonnement på Information Protection og overholdelse eller et abonnement på et tilføjelsesprogram til avanceret overholdelse. Se [Planer og priser](https://products.office.com/business/office-365-enterprise-e5-business-software) for at få flere oplysninger.
 
 ### <a name="what-is-customer-content"></a>Hvad er kundeindhold?
 
-Kundeindhold er de data, der oprettes af brugere af Microsoft 365 tjenester og programmer. Eksempler på kundeindhold omfatter:
+Kundeindhold er de data, der oprettes af brugere af Microsoft 365-tjenester og -programmer. Eksempler på kundeindhold omfatter:
 
 - Brødtekst eller vedhæftede filer i mails
 
-- SharePoint webstedsindhold
+- Indhold på SharePoint-websted
 
-- Oplysninger i brødteksten i en SharePoint fil
+- Oplysninger i brødteksten i en SharePoint-fil
 
 - brødtekst i Skype for Business præsentationsfil
 
 - Chatsamtaler eller talesamtaler
 
-- Tekst, der er angivet i Teams chats og Teams kanaler, f.eks. 1:1 chats, gruppechats, delte kanaler, private kanaler og mødechat
+- Tekst, der indtastes i Teams-chats og Teams-kanaler, f.eks. 1:1 chats, gruppechats, delte kanaler, private kanaler og mødechat
 
-- Andre data, der er indsat i Teams chattråde, f.eks. kodestykker, billeder, lyd- og videomeddelelser og links
+- Andre data, der er indsat i Teams-chattråde, f.eks. kodestykker, billeder, lyd- og videomeddelelser og links
 
-- App- og bot-data i Teams chats og Teams kanaler
+- App- og botdata i Teams-chats og Teams-kanaler
 
-- Teams aktivitetsopdatering
+- Teams-aktivitetsopdatering
 
-- Teams mødeoptagelser og transskriptioner
+- Teams-mødeoptagelser og -transskriptioner
 
 - Voicemail
 
-- Filer, der er sendt til Teams chats og Teams kanaler
+- Filer, der er sendt til Teams-chats og Teams-kanaler
 
-- Kundegenererede blob- eller strukturerede lagerdata (f.eks. SQL objektbeholdere)
+- Kundegenererede blob- eller strukturerede lagerdata (f.eks. SQL-objektbeholdere)
 
 - Kundeejede sikkerhedsoplysninger (f.eks. certifikater, krypteringsnøgler og adgangskoder)
 
@@ -255,11 +253,11 @@ Kundeindhold er de data, der oprettes af brugere af Microsoft 365 tjenester og p
 
 Du kan få flere oplysninger om kundeindhold i Office 365 i [Office 365 Center for sikkerhed og rettighedsadministration](https://products.office.com/business/office-365-trust-center-privacy/).
 
-### <a name="who-is-notified-when-there-is-a-request-to-access-my-content"></a>Who får besked, når der er en anmodning om at få adgang til mit indhold?
+### <a name="who-is-notified-when-there-is-a-request-to-access-my-content"></a>Hvem får besked, når der er en anmodning om at få adgang til mit indhold?
 
 Globale administratorer og alle, der har fået tildelt administratorrollen Kundelåskasseadgangsadministrator, får besked. Det er også de samme brugere, der kan godkende kundelåsekasseanmodninger.
 
-### <a name="who-can-approve-or-reject-these-requests-in-my-organization"></a>Who kan godkende eller afvise disse anmodninger i min organisation?
+### <a name="who-can-approve-or-reject-these-requests-in-my-organization"></a>Hvem kan godkende eller afvise disse anmodninger i min organisation?
 
 Globale administratorer og alle, der har fået tildelt administratorrollen Kundelåskasseadgang, kan godkende kundelåsningsanmodninger. Kunder styrer disse rolletildelinger i deres organisationer.
 
@@ -283,7 +281,7 @@ Det er kun en global administrator i din organisation, der kan angive, hvem der 
 
 ### <a name="what-if-i-need-more-information-about-a-content-access-request-to-approve-it"></a>Hvad gør jeg, hvis jeg har brug for flere oplysninger om en anmodning om adgang til indhold for at godkende den?
 
-Hver kundelåsekasseanmodning indeholder et Microsoft 365 serviceanmodningsnummer. Du kan kontakte Microsoft Support og henvise til dette tjenestenummer for at få flere oplysninger om anmodningen.
+Hver kundelåsekasseanmodning indeholder et microsoft 365-serviceanmodningsnummer. Du kan kontakte Microsoft Support og henvise til dette tjenestenummer for at få flere oplysninger om anmodningen.
 
 ### <a name="when-a-customer-lockbox-request-is-approved-how-long-are-the-permissions-valid"></a>Hvor længe er tilladelserne gyldige, når en kundes Lockbox-anmodning godkendes?
 
@@ -317,7 +315,7 @@ Se [Microsoft Center for sikkerhed og rettighedsadministration](https://www.micr
 
 ### <a name="how-does-microsoft-ensure-that-a-member-of-its-staff-doesnt-have-standing-access-to-customer-content-in-office-365-applications"></a>Hvordan sikrer Microsoft, at en medarbejder ikke har stående adgang til kundeindhold i Office 365 programmer?
 
-Microsoft implementerer omfattende forebyggende foranstaltninger via adgangskontrolsystemer og detektivforanstaltninger for at identificere og løse forsøg på at omgå disse adgangskontrolsystemer. Microsoft 365 opererer med principperne om færrest mulige rettigheder og just-in-time-adgang. Derfor har ingen Microsoft-medarbejdere tilladelse til at få adgang til kundeindhold løbende. Hvis der gives tilladelse, er det af begrænset varighed.
+Microsoft implementerer omfattende forebyggende foranstaltninger via adgangskontrolsystemer og detektivforanstaltninger for at identificere og løse forsøg på at omgå disse adgangskontrolsystemer. Microsoft 365 fungerer med principperne om færrest mulige rettigheder og just-in-time-adgang. Derfor har ingen Microsoft-medarbejdere tilladelse til at få adgang til kundeindhold løbende. Hvis der gives tilladelse, er det af begrænset varighed.
 
 Microsoft 365 bruger et adgangskontrolsystem kaldet *Lockbox* til at behandle anmodninger om tilladelser, der giver mulighed for at udføre driftsmæssige og administrative funktioner i tjenesten. En operator skal anmode om adgang til kundeindhold ved hjælp af Lockbox, som derefter kræver, at en anden person foretager sig noget på anmodningen (f.eks. godkender den), før der gives adgang. Den anden person kan ikke være anmoderen og skal være udpeget til at godkende adgang til kundeindhold. Det er kun, hvis anmodningen er godkendt, at operatøren får midlertidig adgang til kundeindhold. Når udvidede rettigheder udløber, tilbagekalder Lockbox adgangen.
 
