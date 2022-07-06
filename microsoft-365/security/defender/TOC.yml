@@ -4,8 +4,10 @@
   items:
     - name: Oversigt
       items:
-        - name: Microsoft 365 Defender
+        - name: Hvad er Microsoft 365 Defender
           href: microsoft-365-defender.md
+        - name: Microsoft 365 Defender-portal
+          href: microsoft-365-defender-portal.md
         - name: Nyheder i Microsoft 365 Defender
           href: whats-new.md
         - name: Microsoft 365 Defender-tjenester
