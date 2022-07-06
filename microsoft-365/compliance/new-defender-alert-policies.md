@@ -19,16 +19,14 @@ ms.custom:
 - admindeeplinkDEFENDER
 ROBOTS: noindex,nofollow
 description: Vi frigiver nye beskedpolitikker for Microsoft Defender for Office 365. Vi udfaser også to eksisterende beskedpolitikker, der er blevet erstattet af de nye.
-ms.openlocfilehash: c883a352bad5af918d605bd8fa95112a7df07bd3
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0f9a8b74febe3ea59d022baceff7c15c3ee2e5d1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097992"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634000"
 ---
 # <a name="new-alert-policies-in-microsoft-defender-for-office-365"></a>Nye beskedpolitikker i Microsoft Defender for Office 365
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Defender for Office 365 introducerer nye og forbedrede advarselspolitikker i forbindelse med registreringer efter levering. Dette omfatter forbedringer af de air-playbooks (Automated Investigation & Response), der er knyttet til dem. Derudover ændrer vi klassificeringen af alvorsgrad for seks standardbeskedpolitikker for bedre at justere de beskeder, der genereres af disse politikker, med deres indvirkning på din organisation.
 
@@ -56,7 +54,7 @@ I følgende tabel identificeres de standardpolitikker for beskeder, hvis klassif
 |**Mistænkelig aktivitet for videresendelse af mail**|BFD48F06-0865-41A6-85FF-ADB746423EBF|Medium|Høj|
 |**Mail, der er rapporteret af brugeren som malware eller phish**|B26A5770-0C38-434A-9380-3A3C2C27BBB3|Informative|Lav|
 |**Usædvanlig stigning i e-mail rapporteret som phish**|A00D8C62-9320-4EEA-A7E5-966B9AC09558|Høj|Medium|
-|**Resultat af administratorindsendelse er fuldført**|AE9B83DD-6039-4EA9-B675-6B0AC3BF4A41|Lav|Informative|
+|**Administration afsendelsesresultatet er fuldført**|AE9B83DD-6039-4EA9-B675-6B0AC3BF4A41|Lav|Informative|
 |**Oprettelse af regel for videresendelse/omdirigering**|D59A8FD4-1272-41EE-9408-86F7BCF72479|Lav|Informative|
 |**eDiscovery-søgning er startet eller eksporteret**|6FDC5710-3998-47F0-AFBB-57CEFD7378A|Meduim|Informative|
 
@@ -99,7 +97,7 @@ De nye beskeder begynder at udløse og udløse AIR-undersøgelserne i din organi
 
 ## <a name="what-you-need-to-do-to-prepare-for-these-changes"></a>Det skal du gøre for at forberede dig på disse ændringer
 
-Den måde, din organisation bruger disse beskeder på, bestemmer, hvad du skal gøre for at forberede dig. Hvis du har driftsklargjort beskederne og bruger eller bruger dem enten via en API, en besked via mail eller i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, skal du ændre dine arbejdsprocesser.
+Den måde, din organisation bruger disse beskeder på, bestemmer, hvad du skal gøre for at forberede dig. Hvis du har driftsklargjort beskederne og bruger eller bruger dem enten via en API, en besked via mail eller i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, skal du ændre dine arbejdsprocesser.
 
 **Hvis du ikke har operationaliseret disse beskeder, kan du gøre et af følgende:**
 

@@ -18,16 +18,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Angiv brugertilladelser og roller til Microsoft Purview Compliance Manager, og konfigurer automatisk test af handlinger. Administrer brugerhistorik, og filtrer dashboardvisningen.
-ms.openlocfilehash: 76126f9a13716e3ebf48309f8129de6ede4d11e9
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: 1053ff60416a80d88e29e8a8f4bc9ac3fdfc133b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574041"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634759"
 ---
 # <a name="get-started-with-compliance-manager"></a>Kom i gang med Overholdelsesstyring
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** Denne artikel hjælper dig med at konfigurere Overholdelsesstyring. Få mere at vide om, hvordan du **får adgang til** Overholdelsesstyring, **angiver roller og tilladelser** og konfigurerer **automatisk test af forbedringshandlinger**. Gennemgå **dashboardet Overholdelsesstyring** , og forstå hovedsiderne: siden forbedringshandlinger, løsningssiden, vurderingssiden og siden med vurderingsskabeloner.
 

@@ -21,16 +21,14 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 description: Opret og administrer inaktive postkasser, der bevarer indholdet af slettede postkasser i Microsoft 365.
-ms.openlocfilehash: b7a33101135b43357b095af6864b54c618abd84d
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 15a9db1099eb687195d5c54b12d5bfca9a8c6f22
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65417396"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634615"
 ---
 # <a name="create-and-manage-inactive-mailboxes"></a>Opret og administrer inaktive postkasser
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Inaktive postkasser giver dig mulighed for at bevare tidligere medarbejderes mail, når de forlader organisationen, og du kan få adgang til dem af godkendte personer, der har fået tildelt [eDiscovery-tilladelser](assign-ediscovery-permissions.md) af hensyn til overholdelse af angivne standarder eller juridiske årsager. Det kan f.eks. være administratorer, overholdelsesansvarlige og dataadministratorer, der derefter kan bruge Indholdssøgning til at søge efter og eksportere indholdet af en inaktiv postkasse. Inaktive postkasser kan ikke modtage mail og vises ikke i organisationens delte adressekartotek eller andre lister.
 
@@ -42,7 +40,7 @@ Hvis en postkasse skal være inaktiv, skal postkassen være i venteposition, og 
 
 Hvis du vil gøre en postkasse inaktiv, skal den tildeles en Exchange Online Plan 2-licens (eller en Exchange Online Plan 1-licens med en Exchange Online-arkivering licens til tilføjelsesprogrammet), så der kan anvendes en venteposition på postkassen, før den slettes. Når brugerkontoen er slettet, vil alle Exchange Online licenser, der er knyttet til brugerkontoen, være tilgængelige for en ny bruger.
 
-Vi anbefaler, at du bruger Microsoft 365 opbevaring til at anvende ventepositionen på postkassen. Andre metoder beskrives i [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md).
+Vi anbefaler, at du bruger Microsoft 365-opbevaring til at anvende ventepositionen på postkassen. Andre metoder beskrives i [Få mere at vide om inaktive postkasser](inactive-mailboxes-in-office-365.md).
 
 Den bedste måde at slette en postkasse på er ved at slette den tilsvarende brugerkonto i <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 Administration</a>. Du kan få oplysninger om sletning af brugerkonti under [Slet en bruger fra din organisation](../admin/add-users/delete-a-user.md). Du kan dog også slette postkassen ved hjælp af cmdlet'en **Fjern postkasse** i Exchange Online PowerShell. Du kan finde flere oplysninger under [Slet eller gendan brugerpostkasser i Exchange Online](/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes).
 
@@ -52,12 +50,12 @@ I følgende tabel opsummeres processen med at oprette en inaktiv postkasse til f
 
 |Til...|Gør dette...|Resultat|
 |---|---|---|
-|Bevar postkasseindholdet på ubestemt tid, når en medarbejder forlader organisationen|1. Anvend Microsoft 365 opbevaringsindstillinger med opbevaringshandlinger for postkassen (en opbevaringspolitik) eller bestemte mailelementer (et eller flere opbevaringsmærkater). <br /><br> 2. Vent på, at opbevaringsindstillingerne anvendes. <br /><br> 3. Fjern brugerens Microsoft 365 konto.|Alt indhold i den inaktive postkasse, hvor der er anvendt opbevaringsindstillinger, herunder elementer i mappen Gendanbare elementer, bevares på ubestemt tid.|
-|Bevar alt postkasseindhold i en bestemt periode, når en medarbejder forlader organisationen, og slet derefter postkassen|1. Anvend en Microsoft 365 opbevaringspolitik på postkassen med opbevaringsindstillinger, der bevarer og derefter sletter elementer, når opbevaringsperioden udløber. <br /><br> 2. Vent på, at opbevaringsindstillingerne anvendes. <br /><br> 3. Fjern brugerens Microsoft 365 konto.|Når opbevaringsperioden for et postkasseelement udløber, flyttes elementet til mappen Gendanbare elementer, og det slettes permanent (fjernes) fra den inaktive postkasse, når opbevaringsperioden for slettede elementer (for Exchange postkasser) udløber. Opbevaringsperioden for den Microsoft 365 opbevaringspolitik er altid baseret på den oprindelige dato, hvor et postkasseelement blev modtaget eller oprettet.|
+|Bevar postkasseindholdet på ubestemt tid, når en medarbejder forlader organisationen|1. Anvend Microsoft 365-opbevaringsindstillinger med opbevaringshandlinger for postkassen (en opbevaringspolitik) eller specifikke mailelementer (et eller flere opbevaringsmærkater). <br /><br> 2. Vent på, at opbevaringsindstillingerne anvendes. <br /><br> 3. Fjern brugerens Microsoft 365-konto.|Alt indhold i den inaktive postkasse, hvor der er anvendt opbevaringsindstillinger, herunder elementer i mappen Gendanbare elementer, bevares på ubestemt tid.|
+|Bevar alt postkasseindhold i en bestemt periode, når en medarbejder forlader organisationen, og slet derefter postkassen|1. Anvend en Microsoft 365-opbevaringspolitik på postkassen med opbevaringsindstillinger, der bevarer og derefter sletter elementer, når opbevaringsperioden udløber. <br /><br> 2. Vent på, at opbevaringsindstillingerne anvendes. <br /><br> 3. Fjern brugerens Microsoft 365-konto.|Når opbevaringsperioden for et postkasseelement udløber, flyttes elementet til mappen Gendan elementer, og derefter slettes det permanent (fjernes) fra den inaktive postkasse, når opbevaringsperioden for slettede elementer (for Exchange-postkasser) udløber. Opbevaringsperioden for Microsoft 365-opbevaringspolitikken er altid baseret på den oprindelige dato, hvor et postkasseelement blev modtaget eller oprettet.|
 
 
 > [!NOTE]
-> Hvis Microsoft 365 opbevaringsindstillinger, der er konfigureret til at bevare eller bevare og derefter slette indhold, allerede er anvendt på postkassen eller postkasseelementerne, eller der allerede er placeret en retslig venteposition på en postkasse, eller så skal du kun slette den tilsvarende brugerkonto for at oprette en inaktiv postkasse.
+> Hvis Microsoft 365-opbevaringsindstillinger, der er konfigureret til at bevare eller bevare og derefter slette indhold, allerede er anvendt på postkassen eller postkasseelementerne, eller der allerede er placeret en retslig venteposition på en postkasse, eller så skal du blot slette den tilsvarende brugerkonto for at oprette en inaktiv postkasse.
 
 
 ## <a name="view-a-list-of-inactive-mailboxes"></a>Få vist en liste over inaktive postkasser
@@ -66,15 +64,15 @@ Sådan får du vist en liste over de inaktive postkasser i din organisation:
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og log på med legitimationsoplysningerne for en Global administrator- eller en overholdelsesadministratorkonto i din organisation.
 
-2. Vælg **Vis alle** i navigationsruden til venstre, og vælg derefter **Administration af** >  datalivscyklusRetentionspolitikker.
+2. Vælg **Vis alle** i navigationsruden til venstre, og vælg derefter **Opbevaringspolitikker** for **datalivscyklusstyring** > .
 
 3. Vælg indstillingen **Inaktiv postkasse** :
 
    ![Indstillingen Inaktiv postkasse på siden Opbevaringspolitikker fra administration af datalivscyklus.](../media/inactive-mailbox-option.png)
 
-4. På siden **Inaktive postkasser** vises en liste over inaktive postkasser. Vælg en for at få vist oplysninger om den inaktive postkasse. Oplysningerne omfatter Exchange-id'et for postkassen, og om den er [i en procesførelsesventeposition](create-a-litigation-hold.md).
+4. På siden **Inaktive postkasser** vises en liste over inaktive postkasser. Vælg en for at få vist oplysninger om den inaktive postkasse. Oplysningerne omfatter Exchange-id'et for postkassen, og om den er [i procesposition](create-a-litigation-hold.md).
     
-    Du kan ikke se andre typer ventepositioner i detaljeruden, f.eks. en Microsoft 365 opbevaringspolitik eller eDiscovery-venteposition. Hvis du vil finde disse oplysninger, skal du se [Sådan identificerer du den type venteposition, der er placeret i en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
+    Du kan ikke se andre typer ventepositioner i detaljeruden, f.eks. en Microsoft 365-opbevaringspolitik eller eDiscovery-venteposition. Hvis du vil finde disse oplysninger, skal du se [Sådan identificerer du den type venteposition, der er placeret i en Exchange Online postkasse](identify-a-hold-on-an-exchange-online-mailbox.md).
 
 Hvis du har mange inaktive postkasser, kan det være nemmere at søge efter og sortere en CSV-fil efter de oplysninger, du får vist på listen: Vælg :::image type="icon" source="../media/47205c65-babd-4b3a-bd7b-98dfd92883ba.png"::: **Eksportér** på siden **Inaktive postkasser**.
 
@@ -95,7 +93,7 @@ Get-Mailbox -InactiveMailboxOnly | Select Displayname,PrimarySMTPAddress,Disting
   
 ## <a name="search-and-export-the-contents-of-an-inactive-mailbox"></a>Søg i og eksportér indholdet af en inaktiv postkasse
 
-Du kan få adgang til indholdet af den inaktive postkasse ved hjælp af værktøjet Indholdssøgning i Microsoft Purview-compliance-portal. Når du søger i en inaktiv postkasse, kan du oprette en nøgleordssøgningsforespørgsel for at søge efter bestemte elementer, eller du kan returnere hele indholdet af den inaktive postkasse. Du kan få vist søgeresultaterne eller eksportere søgeresultaterne til en pst-fil (Outlook Data) eller som individuelle mails. Du kan finde trinvise procedurer for søgning i postkasser og eksport af søgeresultater i følgende emner:
+Du kan få adgang til indholdet af den inaktive postkasse ved hjælp af værktøjet Indholdssøgning i Microsoft Purview-compliance-portal. Når du søger i en inaktiv postkasse, kan du oprette en nøgleordssøgningsforespørgsel for at søge efter bestemte elementer, eller du kan returnere hele indholdet af den inaktive postkasse. Du kan få vist søgeresultaterne eller eksportere søgeresultaterne til en Outlook-datafil (PST) eller som individuelle mails. Du kan finde trinvise procedurer for søgning i postkasser og eksport af søgeresultater i følgende emner:
   
 - [Indholdssøgning](content-search.md)
 

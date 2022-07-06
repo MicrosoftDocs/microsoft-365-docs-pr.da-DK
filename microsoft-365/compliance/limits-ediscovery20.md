@@ -16,18 +16,16 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om de sagsgrænser, indekseringsgrænser og søgegrænser, der gælder for eDiscovery-løsningen (Premium) i Microsoft 365.
-ms.openlocfilehash: 3b52b36ebdaca429b37cf5784281d22d4dd4be74
-ms.sourcegitcommit: 5fe7f2954a89406245416fc1a218cf4bf19abb85
+ms.openlocfilehash: 5bf7e2be459f6238802b28da66650e238b2c4926
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65864454"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636023"
 ---
 # <a name="limits-in-ediscovery-premium"></a>Grænser i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I denne artikel beskrives grænserne i Microsoft Purview eDiscovery-løsning (Premium) i Microsoft 365.
+I denne artikel beskrives grænserne i Microsoft Purview eDiscovery (Premium)-løsningen i Microsoft 365.
 
 ## <a name="case-and-review-set-limits"></a>Grænser for sags- og gennemgangssæt
 
@@ -51,9 +49,9 @@ I følgende tabel vises grænserne for de ventepositioner, der er knyttet til en
 
 | Beskrivelse af grænse | Grænse |
 |:-----|:-----|
-|Det maksimale antal politikker for bevarelse af en organisation. Denne grænse omfatter det samlede antal ventepositionspolitikker i Microsoft Purview eDiscovery-sager (Standard) og Microsoft Purview eDiscovery-sager (Premium). <br/> |10.000<sup>3</sup>  <br/> |
-|Det maksimale antal postkasser i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer Grupper. <br/> |1,000  <br/> |
-|Det maksimale antal websteder i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer grupper.  <br/> |100  <br/> |
+|Det maksimale antal politikker for bevarelse af en organisation. Denne grænse omfatter det samlede antal politikker for bevarelse af ventepositioner i Microsoft Purview eDiscovery (Standard) og Microsoft Purview eDiscovery (Premium)-sager. <br/> |10.000<sup>3</sup>  <br/> |
+|Det maksimale antal postkasser i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal brugerpostkasser og de postkasser, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer-grupper. <br/> |1,000  <br/> |
+|Det maksimale antal websteder i en enkelt sag i venteposition. Denne grænse omfatter det samlede antal OneDrive for Business websteder, SharePoint-websteder og de websteder, der er knyttet til Microsoft 365-grupper, Microsoft Teams og Yammer-grupper.  <br/> |100  <br/> |
 
 ## <a name="indexing-limits"></a>Indekseringsgrænser
 
@@ -69,7 +67,7 @@ I følgende tabel vises indekseringsgrænserne i eDiscovery (Premium).
 
 ## <a name="search-limits"></a>Søgegrænser
 
-De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger [under Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
+De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgeværktøjet under fanen **Søgninger** til at indsamle data for en sag. Du kan finde flere oplysninger under [Indsaml data for en sag i eDiscovery (Premium)](collecting-data-for-ediscovery.md).
 
 |Beskrivelse af grænse|Grænse|
 |---|---|
@@ -77,14 +75,14 @@ De grænser, der er beskrevet i dette afsnit, er relateret til at bruge søgevæ
 |Det maksimale antal søgninger, der kan køre på samme tid.|Ingen grænse|
 |Det maksimale antal søgninger, som en enkelt bruger kan starte på samme tid.|10|
 |Det maksimale antal tegn for en søgeforespørgsel (herunder operatorer og betingelser).|10.000<sup>5</sup>|
-|Det maksimale antal tegn for en søgeforespørgsel for SharePoint og OneDrive for Business websteder (herunder operatorer og betingelser).|10,000<br>4.000 med jokertegn<sup>5</sup>|
+|Maksimalt antal tegn for en søgeforespørgsel for SharePoint- og OneDrive for Business-websteder (herunder operatorer og betingelser).|10,000<br>4.000 med jokertegn<sup>5</sup>|
 |Det mindste antal alfategn for præfiks jokertegn. f.eks. **one\**_ eller _* set\***.|3|
 |Det maksimale antal varianter, der returneres, når der bruges præfiks jokertegn til at søge efter et nøjagtigt udtryk, eller når der bruges et præfiks jokertegn og operatoren **NEAR** Boolesk.|10.000<sup>6</sup>|
 |Det maksimale antal elementer pr. brugerpostkasse, der vises på eksempelsiden for søgninger. De nyeste elementer vises.|100|
 |Det maksimale antal elementer fra alle postkasser, der vises på eksempelsiden for søgninger.|1,000|
 |Det maksimale antal postkasser, der kan vises i søgeresultaterne.  Hvis der er mere end 1.000 postkasser, der indeholder elementer, der svarer til søgeforespørgslen, er det kun de øverste 1.000 postkasser med de fleste resultater, der er tilgængelige som prøveversion.|1,000|
 |Det maksimale antal elementer fra SharePoint og OneDrive for Business websteder, der vises på eksempelsiden for søgninger. De nyeste elementer vises.|200|
-|Det maksimale antal SharePoint og OneDrive for Business websteder, der kan gennemses for søgeresultater. Hvis der er mere end 200 websteder, der indeholder elementer, der svarer til søgeforespørgslen, er det kun de øverste 200 websteder med de fleste resultater, der er tilgængelige som prøveversion.|200|
+|Det maksimale antal SharePoint- og OneDrive for Business-websteder, der kan gennemses for søgeresultater. Hvis der er mere end 200 websteder, der indeholder elementer, der svarer til søgeforespørgslen, er det kun de øverste 200 websteder med de fleste resultater, der er tilgængelige som prøveversion.|200|
 |Det maksimale antal elementer pr. postkasse med offentlige mapper, der vises på eksempelsiden for søgninger.|100|
 |Det maksimale antal elementer, der blev fundet i alle elementer i postkassen med offentlige mapper, som vises på eksempelsiden for søgninger.|200|
 |Det maksimale antal offentlige mappepostkasser, der kan vises som eksempel for søgeresultater. Hvis der er mere end 500 offentlige mappepostkasser, der indeholder elementer, der svarer til søgeforespørgslen, er det kun de øverste 500 postkasser med de fleste resultater, der er tilgængelige som prøveversion.|500|
@@ -107,7 +105,7 @@ Microsoft indsamler oplysninger om ydeevnen for søgninger, der køres af alle o
 
 |Beskrivelse af grænse|Grænse|
 |---|---|
-|Den maksimale størrelse på Excel fil, der kan vises i den oprindelige fremviser.|4 MB|
+|Den maksimale størrelse af Excel-fil, der kan vises i den oprindelige fremviser.|4 MB|
 
 ## <a name="export-limits---final-export-out-of-review-set"></a>Eksportgrænser – Endelig eksport uden for gennemsynssættet
 
@@ -138,10 +136,10 @@ De grænser, der er beskrevet i dette afsnit, er relateret til eksport af dokume
 
   - Alle tegn i både felterne Brugere og Filtre.
   - Alle filtre for søgetilladelser, der gælder for brugeren.
-  - Tegnene fra alle placeringsegenskaber i søgningen, herunder ExchangeLocation, PublicFolderLocation, SharPointLocation, ExchangeLocationExclusion, PublicFolderLocationExclusion, SharePointLocationExclusion og OneDriveLocationExclusion. Hvis du f.eks. medtager alle SharePoint websteder og OneDrive konti i søgningen, tælles det med seks tegn, da ordet "ALL" vises for både feltet SharePointLocation og OneDriveLocation.
+  - Tegnene fra alle placeringsegenskaber i søgningen, herunder ExchangeLocation, PublicFolderLocation, SharPointLocation, ExchangeLocationExclusion, PublicFolderLocationExclusion, SharePointLocationExclusion og OneDriveLocationExclusion. Hvis du f.eks. inkluderer alle SharePoint-websteder og OneDrive-konti i søgningen, tælles det med seks tegn, da ordet "ALL" vises for både feltet SharePointLocation og OneDriveLocation.
 
 <sup>6</sup> Til forespørgsler uden udtryk (en nøgleordsværdi, der ikke bruger dobbelte anførselstegn) bruger vi et særligt præfiksindeks. Dette fortæller os, at der forekommer et ord i et dokument, men ikke der, hvor det forekommer i dokumentet. Hvis du vil udføre en udtryksforespørgsel (en nøgleordsværdi med dobbelte anførselstegn), skal vi sammenligne placeringen i dokumentet med ordene i udtrykket. Det betyder, at vi ikke kan bruge præfiksindekset til udtryksforespørgsler. I dette tilfælde udvider vi forespørgslen internt med alle de mulige ord, som præfikset udvides til. time_ kan f.eks. ***udvides til _*"time OR timer OR times OR timex OR timeboxed OR ...".\*** Grænsen på 10.000 er det maksimale antal varianter, ordet kan udvides til, ikke antallet af dokumenter, der svarer til forespørgslen. Der er ingen øvre grænse for ord, der ikke er udtryk.
 
-<sup>7</sup> Udældelsesperioden for de Azure Blobs, der gemmer eDiscovery-samlinger (Premium), er ét år. Alle samlinger, der er oprettet for et år siden, er muligvis ikke længere tilgængelige.
+<sup>7</sup> Udældelsesperioden for de Azure Blobs, der gemmer eDiscovery (Premium)-samlinger, er ét år. Alle samlinger, der er oprettet for et år siden, er muligvis ikke længere tilgængelige.
  
 <sup>8</sup> Denne grænse gælder for hentning af valgte dokumenter fra et gennemsynssæt. Det gælder ikke for eksport af dokumenter fra et korrektursæt. Du kan finde flere oplysninger om hentning og eksport af dokumenter [under Eksportér sagsdata i eDiscovery (Premium)](exporting-data-ediscover20.md).

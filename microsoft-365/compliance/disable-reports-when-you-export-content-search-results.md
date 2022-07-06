@@ -16,19 +16,17 @@ search.appverid:
 ms.assetid: c9b0ff0c-282b-4a44-b43f-cfc5b96557f9
 ms.custom:
 - seo-marvel-apr2020
-description: Rediger Windows-registreringsdatabasen på din lokale computer for at deaktivere rapporter, når du eksporterer resultaterne af en indholdssøgning fra Microsoft Purview-overholdelsesportalen.
-ms.openlocfilehash: 3f44c30b2fe3459e44f2d1c5a2d372e57774eeb2
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Rediger Windows-registreringsdatabasen på din lokale computer for at deaktivere rapporter, når du eksporterer resultaterne af en indholdssøgning fra Microsoft Purview-compliance-portal.
+ms.openlocfilehash: 55a5405d516b0bf3daaca5970a25794b468a5119
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094962"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636177"
 ---
 # <a name="disable-reports-when-you-export-content-search-results"></a>Deaktiver rapporter, når du eksporterer resultater af indholdssøgning
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du bruger værktøjet eDiscovery-eksport til at eksportere resultaterne af en indholdssøgning på Microsoft Purview-overholdelsesportalen, opretter og eksporterer værktøjet automatisk to rapporter, der indeholder yderligere oplysninger om det eksporterede indhold. Disse rapporter er Results.csv-filen og Manifest.xml-filen .Se afsnittet [Ofte stillede spørgsmål om deaktivering af eksportrapporter](#frequently-asked-questions-about-disabling-export-reports) i dette emne for at få detaljerede beskrivelser af disse rapporter). Da disse filer kan være meget store, kan du fremskynde downloadtiden og spare diskplads ved at forhindre, at disse filer eksporteres. Det kan du gøre ved at ændre Windows-registreringsdatabasen på den computer, du bruger til at eksportere søgeresultaterne. Hvis du vil medtage rapporterne på et senere tidspunkt, kan du redigere indstillingen i registreringsdatabasen. 
+Når du bruger værktøjet eDiscovery-eksport til at eksportere resultaterne af en indholdssøgning i Microsoft Purview-compliance-portal, opretter og eksporterer værktøjet automatisk to rapporter, der indeholder yderligere oplysninger om det eksporterede indhold. Disse rapporter er Results.csv-filen og Manifest.xml-filen .Se afsnittet [Ofte stillede spørgsmål om deaktivering af eksportrapporter](#frequently-asked-questions-about-disabling-export-reports) i dette emne for at få detaljerede beskrivelser af disse rapporter). Da disse filer kan være meget store, kan du fremskynde downloadtiden og spare diskplads ved at forhindre, at disse filer eksporteres. Det kan du gøre ved at ændre Windows-registreringsdatabasen på den computer, du bruger til at eksportere søgeresultaterne. Hvis du vil medtage rapporterne på et senere tidspunkt, kan du redigere indstillingen i registreringsdatabasen. 
   
 ## <a name="create-registry-settings-to-disable-the-export-reports"></a>Opret indstillinger i registreringsdatabasen for at deaktivere eksportrapporterne
 
@@ -40,7 +38,7 @@ Udfør følgende procedure på den computer, du vil bruge til at eksportere resu
     
     - **Results.csv**
     
-      Gem følgende tekst i en Windows registreringsdatabasefil ved hjælp af et filnavnssuffiks med .reg, f.eks. DisableResultsCsv.reg.
+      Gem følgende tekst i en Windows-registreringsdatabasefil ved hjælp af et filnavnssuffiks af .reg. f.eks. DisableResultsCsv.reg.
     
       ```text
       Windows Registry Editor Version 5.00
@@ -49,14 +47,14 @@ Udfør følgende procedure på den computer, du vil bruge til at eksportere resu
 
     - **Manifest.xml**
     
-      Gem følgende tekst i en Windows registreringsdatabasefil ved hjælp af et filnavnssuffiks af .reg, f.eks. DisableManifestXml.reg.
+      Gem følgende tekst i en Windows-registreringsdatabasefil ved hjælp af et filnavnssuffiks af .reg. f.eks. DisableManifestXml.reg.
     
       ```text
       Windows Registry Editor Version 5.00
       reg add HKLM\SOFTWARE\Microsoft\Exchange\Client\eDiscovery\ExportTool /v ResultEdrmEnabled /t REG_SZ /d False 
       ```
 
-3. I Windows Explorer skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
+3. I Windows Stifinder skal du klikke eller dobbeltklikke på den .reg-fil, du oprettede i de forrige trin.
     
 4. Klik på **Ja** i vinduet Bruger Access Control for at lade registreringseditoren foretage ændringen. 
     
@@ -74,7 +72,7 @@ Hvis du har deaktiveret Results.csv og Manifest.xml rapporter ved at oprette .re
     
     - **Results.csv**
     
-        Åbn filen DisableResultsCsv.reg i Notesblok, ret værdien `False` til `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
+        Åbn filen DisableResultsCsv.reg i Notesblok, skift værdien  `False` til  `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
     
         ```text
         Windows Registry Editor Version 5.00
@@ -83,14 +81,14 @@ Hvis du har deaktiveret Results.csv og Manifest.xml rapporter ved at oprette .re
 
     - **Manifest.xml**
     
-        Åbn filen DisableManifestXml.reg i Notesblok, ret værdien `False` til `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
+        Åbn filen DisableManifestXml.reg i Notesblok, ret værdien  `False` til  `True`, og gem derefter filen. Når du f.eks. har redigeret filen, ser den sådan ud:
     
       ```text
       Windows Registry Editor Version 5.00
       reg add HKLM\SOFTWARE\Microsoft\Exchange\Client\eDiscovery\ExportTool /v ResultEdrmEnabled /t REG_SZ /d True
       ```
 
-3. I Windows Explorer skal du klikke eller dobbeltklikke på en .reg-fil, som du redigerede i det forrige trin.
+3. I Windows Stifinder skal du klikke eller dobbeltklikke på en .reg-fil, som du redigerede i det forrige trin.
     
 4. Klik på **Ja** i vinduet Bruger Access Control for at lade registreringseditoren foretage ændringen. 
     
@@ -104,7 +102,7 @@ Hvis du har deaktiveret Results.csv og Manifest.xml rapporter ved at oprette .re
   
 Filerne Results.csv og Manifest.xml indeholder flere oplysninger om det indhold, der blev eksporteret.
   
-- **Results.csv** Et Excel dokument, der indeholder oplysninger om hvert element, der downloades som et søgeresultat. I forbindelse med mail indeholder resultatloggen oplysninger om hver meddelelse, herunder: 
+- **Results.csv** Et Excel-dokument, der indeholder oplysninger om hvert element, der downloades som et søgeresultat. I forbindelse med mail indeholder resultatloggen oplysninger om hver meddelelse, herunder: 
     
   - Placeringen af meddelelsen i kildepostkassen (herunder om meddelelsen er i den primære postkasse eller arkivpostkassen).
     
@@ -116,7 +114,7 @@ Filerne Results.csv og Manifest.xml indeholder flere oplysninger om det indhold,
     
   - Angiver, om meddelelsen er en dubletmeddelelse, hvis du har aktiveret deduplikering, da du eksporterede søgeresultaterne. Duplikerede meddelelser har en værdi i kolonnen **Overordnet ItemId** , der identificerer meddelelsen som en dublet. Værdien i kolonnen **Overordnet ItemId** er den samme som værdien i kolonnen **Item DocumentId** i den meddelelse, der blev eksporteret. 
     
-    For dokumenter fra SharePoint og OneDrive for Business websteder indeholder resultatloggen oplysninger om hvert dokument, herunder:
+    For dokumenter fra SharePoint- og OneDrive for Business-websteder indeholder resultatloggen oplysninger om hvert dokument, herunder:
     
   - DOKUMENTETs URL-adresse.
     

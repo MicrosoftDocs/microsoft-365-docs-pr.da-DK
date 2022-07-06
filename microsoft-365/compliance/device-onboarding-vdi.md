@@ -13,29 +13,29 @@ ms.collection:
 - M365-security-compliance
 search.appverid:
 - MET150
-description: Udrul konfigurationspakken på VDI-enheden (Virtual Desktop Infrastructure), så de er onboardet til tjenesten til forebyggelse af datatab i Microsoft 365 Endpoint.
-ms.openlocfilehash: 6bfb0f69198afbcc9d2949d583e151631cc7953b
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+description: Udrul konfigurationspakken på VDI-enheden (Virtual Desktop Infrastructure), så de er onboardet til tjenesten til forebyggelse af datatab for Slutpunkt.
+ms.openlocfilehash: 8a54d4ce3cfb4b3ba6571f2aee63cd60c2a6d71f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760619"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636133"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-devices"></a>Onboarde enheder til ikke-vedvarende virtuelle skrivebordsinfrastrukturer
 
 **Gælder for:**
 
-- [Microsoft 365 Endpoint DLP (forebyggelse af datatab)](./endpoint-dlp-learn-about.md)
-- [Styring af insider-risiko](insider-risk-management.md#learn-about-insider-risk-management-in-microsoft-365)
+- [Forebyggelse af datatab for slutpunkt (DLP)](./endpoint-dlp-learn-about.md)
+- [Styring af insider-risiko](insider-risk-management.md)
 
 - VDI-enheder (Virtual Desktop Infrastructure)
 
 > [!WARNING]
-> Microsoft 365 understøttelse af forebyggelse af datatab for Windows Virtual Desktop understøtter enkeltsessionsscenarier. Scenarier med flere sessioner på Windows Virtual Desktop understøttes ikke i øjeblikket.
+> Understøttelse af forebyggelse af datatab for Slutpunkt for Windows Virtual Desktop understøtter scenarier med en enkelt session. Scenarier med flere sessioner på Windows Virtual Desktop understøttes ikke i øjeblikket.
 
 ## <a name="onboard-vdi-devices"></a>Indbyggede VDI-enheder
 
-Microsoft 365 understøtter onboarding af ikke-vedvarende VDI-session (Virtual Desktop Infrastructure).
+Microsoft 365 understøtter onboarding af virtuelle skrivebordsinfrastrukturer (VDI).
 
 > [!NOTE]
 > Hvis du vil onboarde ikke-vedvarende VDI-sessioner, skal VDI-enheder være på Windows 10 1809 eller nyere.
@@ -45,7 +45,7 @@ Der kan være tilknyttede udfordringer, når du onboarder VM'er. Følgende er ty
 - Øjeblikkelig tidlig onboarding af kortvarige sessioner, som skal onboardes til Microsoft 365 før den faktiske klargøring.
 - Enhedsnavnet genbruges typisk til nye sessioner.
 
-VDI-enheder kan vises i Microsoft 365 Compliance Center som enten:
+VDI-enheder kan vises i Microsoft Purview-compliance-portal som enten:
 
 - Enkelt post for hver enhed.
 Bemærk, at i dette tilfælde skal det *samme* enhedsnavn konfigureres, når sessionen oprettes, f.eks. ved hjælp af en automatisk svarfil.
@@ -56,9 +56,9 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 > [!WARNING]
 > I miljøer, hvor der er konfigurationer med få ressourcer, kan VDI-startproceduren gøre onboardingprocessen for enheden langsommere.
 
-1. Hent VDI-konfigurationspakken .zip-filen (*DeviceCompliancePackage.zip*) fra [Microsoft Compliance Center](https://compliance.microsoft.com).
+1. Hent VDI-konfigurationspakken .zip-filen (*DeviceCompliancePackage.zip*) fra [Microsoft Purview-compliance-portal](https://compliance.microsoft.com).
 
-2. Vælg **Indstillinger** >  **Device onboardingOnboarding** >  i navigationsruden.
+2. I navigationsruden skal du vælge **Indstillinger For** > **onboarding af** >  enhed **.**
 
 3. I feltet **Installationsmetode** skal du vælge **VDI-onboardingscripts for ikke-faste slutpunkter**.
 
@@ -73,7 +73,7 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
     > [!NOTE]
     > Hvis du ikke kan se mappen `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` , kan den være skjult. Du skal vælge indstillingen **Vis skjulte filer og mapper** fra Stifinder.
 
-8. Åbn vinduet Lokal Gruppepolitik Editor, og naviger til **Computerkonfiguration** >  **Windows Indstillinger** >  **ScriptsStartup** > .
+8. Åbn vinduet Lokal Gruppepolitik Editor, og naviger til **Computerkonfiguration** > **Windows-indstillinger Scripts** >  > **Start**.
 
    > [!NOTE]
    > Domæne Gruppepolitik kan også bruges til onboarding af ikke-faste VDI-enheder.
@@ -82,11 +82,11 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 
    **Til en enkelt post for hver enhed**
 
-   Vælg fanen **PowerShell-scripts**, og klik derefter på **Tilføj** (Windows Explorer åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding af PowerShell-script `Onboard-NonPersistentMachine.ps1`.
+   Vælg fanen **PowerShell-scripts** , og klik derefter på **Tilføj** (Windows Stifinder åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding af PowerShell-script `Onboard-NonPersistentMachine.ps1`.
 
    **For flere poster for hver enhed**:
 
-   Vælg fanen **Scripts**, og klik derefter på **Tilføj** (Windows Explorer åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding-bash-scriptet `DeviceComplianceOnboardingScript.cmd`.
+   Vælg fanen **Scripts** , og klik derefter på **Tilføj** (Windows Stifinder åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding-bash-scriptet `DeviceComplianceOnboardingScript.cmd`.
 
 10. Test din løsning:
     1. Opret en pulje med én enhed.
@@ -114,13 +114,13 @@ DISM /Unmount-Image /MountDir:"C:\Temp\OfflineServicing" /commit
 
 Du kan finde flere oplysninger om DISM-kommandoer og offlineservicering i nedenstående artikler:
 
-- [Rediger et Windows billede ved hjælp af DISM](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
+- [Rediger en Windows-afbildning ved hjælp af DISM](/windows-hardware/manufacture/desktop/mount-and-modify-a-windows-image-using-dism)
 - [Indstillinger for DISM-Command-Line til administration af afbildninger](/windows-hardware/manufacture/desktop/dism-image-management-command-line-options-s14)
-- [Reducer størrelsen på komponenten Store i et offlinebillede Windows](/windows-hardware/manufacture/desktop/reduce-the-size-of-the-component-store-in-an-offline-windows-image)
+- [Reducer størrelsen på komponentlageret i en offline Windows-afbildning](/windows-hardware/manufacture/desktop/reduce-the-size-of-the-component-store-in-an-offline-windows-image)
 
 Hvis offlineservicering ikke er en levedygtig mulighed for dit ikke-vedvarende VDI-miljø, skal du gøre følgende for at sikre konsistens og sensortilstand:
 
-1. Når du har startet det gyldne billede til onlineservicering eller programrettelse, skal du køre et offboarding-script for at slå Microsoft 365-overvågningssensoren fra. Du kan få flere oplysninger under [Offboard-enheder, der bruger et lokalt script](device-onboarding-script.md#offboard-devices-using-a-local-script).
+1. Når du har startet det gyldne billede til onlineservicering eller programrettelse, skal du køre et offboarding-script for at slå Microsoft 365-enhedens overvågningssensor fra. Du kan få flere oplysninger under [Offboard-enheder, der bruger et lokalt script](device-onboarding-script.md#offboard-devices-using-a-local-script).
 
 2. Sørg for, at sensoren stoppes ved at køre kommandoen nedenfor i et CMD-vindue:
 

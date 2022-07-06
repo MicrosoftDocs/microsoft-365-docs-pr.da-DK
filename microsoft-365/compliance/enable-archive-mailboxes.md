@@ -23,16 +23,14 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkEXCHANGE
 description: Få mere at vide om, hvordan du aktiverer eller deaktiverer arkivpostkasser for at understøtte organisationens krav til opbevaring af meddelelser, eDiscovery og venteposition.
-ms.openlocfilehash: f95da36b48389bba2bd640825071dbff5c6ddb3d
-ms.sourcegitcommit: 38a18b0195d99222c2c6da0c80838d24b5f66b97
+ms.openlocfilehash: 0fef0db0af845a0e3e03f7747775eb41591002a3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/28/2022
-ms.locfileid: "65772418"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635529"
 ---
 # <a name="enable-archive-mailboxes-in-the-microsoft-purview-compliance-portal"></a>Aktivér arkivpostkasser i Microsoft Purview-overholdelsesportalen
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Arkivering i Microsoft 365 (også kaldet *Direkte arkivering*) giver brugerne mere lagerplads til postkassen. Du kan finde flere oplysninger under [Få mere at vide om arkivpostkasser](archive-mailboxes.md).
 

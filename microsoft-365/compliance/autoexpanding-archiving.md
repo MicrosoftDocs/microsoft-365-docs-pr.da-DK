@@ -16,26 +16,24 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: 37cdbb02-a24a-4093-8bdb-2a7f0b3a19ee
-description: Få mere at vide om automatisk udvidelse af arkivering, som giver ekstra arkivlager til Exchange Online-postkasser.
-ms.openlocfilehash: fc3e40e72ad287e7d7e696557422420cccbd4ee1
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+description: Få mere at vide om automatisk udvidelse af arkivering, som giver ekstra arkivlager til Exchange Online postkasser.
+ms.openlocfilehash: d039e63310ed7db92f2e625f8bbdd0ff4d0c97cf
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65922433"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632679"
 ---
 # <a name="learn-about-auto-expanding-archiving"></a>Få mere at vide om automatisk udvidelse af arkivering
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I Office 365 giver arkivpostkasser brugerne ekstra lagerplads på postkassen. Når en brugers arkivpostkasse er aktiveret, er der op til 100 GB ekstra lagerplads tilgængelig. Tidligere, da lagerkvoten på 100 GB blev nået, måtte organisationer kontakte Microsoft for at anmode om ekstra lagerplads til en arkivpostkasse. Det er ikke længere tilfældet.
+I Office 365 giver arkivpostkasser brugerne yderligere lagerplads på postkassen. Når en brugers arkivpostkasse er aktiveret, er der op til 100 GB ekstra lagerplads tilgængelig. Tidligere, da lagerkvoten på 100 GB blev nået, måtte organisationer kontakte Microsoft for at anmode om ekstra lagerplads til en arkivpostkasse. Det er ikke længere tilfældet.
 
 Arkiveringsfunktionen i Microsoft 365 (kaldet *automatisk udvidelse af arkivering*) leverer op til 1,5 TB ekstra lagerplads i arkivpostkasser. Når lagerkvoten i arkivpostkassen er nået, øger Microsoft 365 automatisk (og trinvist) arkivets størrelse, indtil arkivpostkassen når 1,5 TB.
 
 Du kan finde en trinvis vejledning i, hvordan du aktiverer automatisk udvidelse af arkivering, under [Aktivér automatisk udvidelse af arkivering](enable-autoexpanding-archiving.md).
 
 > [!NOTE]
-> Arkivering, der automatisk udvides, understøtter også delte postkasser. Hvis du vil aktivere arkivet for en delt postkasse, kræves der en Exchange Online Plan 2-licens eller en Exchange Online Plan 1-licens med en Exchange Online-arkiveringslicens.
+> Arkivering, der automatisk udvides, understøtter også delte postkasser. Hvis du vil aktivere arkivet for en delt postkasse, kræves der en Exchange Online Plan 2-licens eller en Exchange Online Plan 1-licens med en Exchange Online-arkivering licens.
 
 ## <a name="how-auto-expanding-archiving-works"></a>Sådan fungerer automatisk udvidelse af arkivering
 
@@ -62,7 +60,7 @@ Mapper kan blive flyttet for at gøre effektiv brug af automatisk udvidelse af a
 
 - **yyyy** er det år, meddelelserne i mappen blev modtaget.
 
-- **mmm dd, yyyy h_m** er den dato og det klokkeslæt, hvor undermappen blev oprettet af Office 365 i UTC-format, baseret på brugerens tidszone og internationale indstillinger i Outlook.
+- **mmm dd, yyyy h_m** er den dato og det klokkeslæt, undermappen blev oprettet af Office 365, i UTC-format, baseret på brugerens tidszone og internationale indstillinger i Outlook.
 
 På følgende skærmbilleder vises en mappeliste før og efter, at meddelelser flyttes til et arkiv, der automatisk er udvidet.
 
@@ -101,7 +99,7 @@ Her er nogle ting, du skal overveje, når du bruger Outlook eller Outlook på in
 
 - Søg efter automatisk udvidet arkivering er tilgængelig i Outlook til internettet (OWA). På samme måde som med Onlinearkiv kan du søge efter elementer, der er flyttet til et ekstra lagerområde. Når arkivet er valgt som søgeområde i OWA, søges der i alle arkiver (herunder automatisk udvidede arkiver) og deres tilsvarende undermapper. Bemærk, at søgning ikke understøttes for funktionen automatisk udvidet arkiv i en arkivsituation, der kun findes i skyen (primær postkasse stadig i det lokale miljø).
 
-- Automatisk udvidet arkivsøgning er tilgængelig i Outlook til Windows i Månedlig Enterprise-kanal. Med denne opdatering er området Aktuel postkasse tilgængeligt, så du kan søge i det automatisk udvidede arkiv. Bemærk, at søgning ikke understøttes for funktionen automatisk udvidet arkiv i en arkivsituation, der kun findes i skyen (primær postkasse stadig i det lokale miljø). Du kan finde flere oplysninger om dette og andre supportfunktioner til Microsoft Search under [Sådan bruger Outlook til Windows forbindelse til Exchange Online Microsoft Search](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-for-windows-connected-to-exchange-online-utilizes/ba-p/1715045). 
+- Automatisk udvidet arkivsøgning er tilgængelig i Outlook til Windows i Månedlig Enterprise-kanal. Med denne opdatering er området Aktuel postkasse tilgængeligt, så du kan søge i det automatisk udvidede arkiv. Bemærk, at søgning ikke understøttes for funktionen automatisk udvidet arkiv i en arkivsituation, der kun findes i skyen (primær postkasse stadig i det lokale miljø). Du kan finde flere oplysninger om dette og andre supportfunktioner til Microsoft Search under [Sådan har Outlook til Windows oprettet forbindelse til Exchange Online bruger Microsoft Search](https://techcommunity.microsoft.com/t5/outlook-global-customer-service/how-outlook-for-windows-connected-to-exchange-online-utilizes/ba-p/1715045). 
 
 - Antallet af elementer i Outlook og antal læste/ulæste (i Outlook og Outlook på internettet) i et arkiv, der automatisk udvides, er muligvis ikke nøjagtige.
 
@@ -111,11 +109,11 @@ I dette afsnit forklares funktionaliteten mellem automatisk udvidelse af arkiver
 
 - **eDiscovery:** Når du bruger et eDiscovery-værktøj, f.eks. indholdssøgning eller In-Place eDiscovery, søges der også i de ekstra lagerområder i et automatisk udvidet arkiv.
 
-- **Fastholdelse:** Når du sætter en postkasse i venteposition ved hjælp af værktøjer som f.eks. Litigation Hold i Exchange Online eller eDiscovery-sagsbevaring og opbevaringspolitikker på Microsoft Purview-overholdelsesportalen, sættes indhold, der er placeret i et automatisk udvidet arkiv, også i venteposition.
+- **Fastholdelse:** Når du sætter en postkasse i venteposition ved hjælp af værktøjer som f.eks. procesretsholdning i Exchange Online eller eDiscovery-sagsbevaring og opbevaringspolitikker i Microsoft Purview-compliance-portal, sættes indhold, der er placeret i et automatisk udvidet arkiv, også i venteposition.
 
 - **Administration af meddelelsesposter (MRM):** Hvis du bruger POLITIKKER for MRM-sletning i Exchange Online til permanent at slette udløbne postkasseelementer, slettes udløbne elementer, der er placeret i det automatisk udvidede arkiv, også.
 
-- **Importér tjeneste:** Du kan bruge office 365-importtjenesten til at importere PST-filer til en brugers automatisk udvidede arkiv. Du kan importere op til 100 GB data fra PST-filer til brugerens arkivpostkasse.
+- **Importér tjeneste:** Du kan bruge tjenesten Office 365 import til at importere PST-filer til en brugers automatisk udvidede arkiv. Du kan importere op til 100 GB data fra PST-filer til brugerens arkivpostkasse.
 
 ## <a name="next-steps"></a>Næste trin
 

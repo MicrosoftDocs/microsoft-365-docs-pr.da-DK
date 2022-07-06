@@ -17,20 +17,18 @@ search.appverid:
 - MET150
 ms.assetid: af398293-c69d-465e-a249-d74561552d30
 description: Filplanen indeholder avancerede administrationsfunktioner til opbevaringsmærkater.
-ms.openlocfilehash: 67844e521aeec2257440aea34a79f0b96333f7f9
-ms.sourcegitcommit: e6443eb3a4c826792806873428c0c17b59f4fde5
+ms.openlocfilehash: 4257f7306767f1ede04edfc949419b1ab7477d8b
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65889361"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635365"
 ---
 # <a name="use-file-plan-to-create-and-manage-retention-labels"></a>Brug filplanen til at oprette og administrere opbevaringsmærkater
 
 >*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Selvom du kan oprette og administrere opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
+Selvom du kan oprette og administrere opbevaringsmærkater fra **datalivscyklusstyring** i Microsoft Purview-compliance-portal, har filplanen fra **Datastyring** yderligere administrationsfunktioner:
 
 - Du kan masseoprete opbevaringsmærkater ved at importere de relevante oplysninger fra et regneark.
 
@@ -51,7 +49,7 @@ Hvis du vil have adgang til filplanen, skal du have en af følgende administrato
 - Opbevaringsstyring
 - Kun visningsstyring
 
-På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du gå til **Filplan** for administration af **løsninger** > **til datastyring** > :
+I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com/) gå til **Filplan** for **administration af løsningsposter** >  > :
 
 ![Filplanside](../media/compliance-file-plan.png). 
 
@@ -59,7 +57,7 @@ Hvis **Datastyring** ikke vises i navigationsruden, skal du først rulle ned og 
 
 ## <a name="navigating-your-file-plan"></a>Navigering i filplanen
 
-Hvis du allerede har oprettet opbevaringsmærkater fra **administration af datalivscyklus** på Microsoft Purview-overholdelsesportalen, vises disse mærkater automatisk i din filplan. 
+Hvis du allerede har oprettet opbevaringsmærkater fra **datalivscyklusstyring** i Microsoft Purview-compliance-portal, vises disse mærkater automatisk i filplanen. 
 
 Hvis du nu opretter opbevaringsmærkater i filplanen, er de også tilgængelige fra **administration af datalivscyklus** , hvis mærkaterne ikke er konfigureret til at markere indhold som en post.
 
@@ -203,11 +201,11 @@ Brug følgende oplysninger som en hjælp til at udfylde den downloadede skabelon
 |Ejendom|Type|Påkrævet|Gyldige værdier|
 |:-----|:-----|:-----|:-----|
 |Navn|String|Ja|Denne egenskab angiver navnet på opbevaringsmærkaten og skal være entydig i din lejer. Understøttede tegn til import: a-z, A-Z, 0-9, bindestreg (-) og mellemrumstegnet.|
-|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten på Microsoft Purview-overholdelsesportalen.|
+|Kommenter|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for administratorer. Denne beskrivelse vises kun for administratorer, der administrerer opbevaringsmærkaten i Microsoft Purview-compliance-portal.|
 |Bemærkninger|String|Nej|Brug denne egenskab til at tilføje en beskrivelse af opbevaringsmærkaten for brugerne. Denne beskrivelse vises, når brugerne holder markøren over mærkaten i apps som Outlook, SharePoint og OneDrive. Hvis du lader denne egenskab være tom, vises der en standardbeskrivelse, som forklarer indstillingerne for opbevaring af mærkaten. |
 |IsRecordLabel|String|Nej, medmindre **lovgivningen** er **SAND**|Denne egenskab angiver, om etiketten markerer indholdet som en post. Gyldige værdier er: </br>**TRUE**: Etiketten markerer elementet som en post, og elementet kan derfor ikke slettes. </br>**FALSE**: Etiketten markerer ikke indholdet som en post. Dette er standardværdien. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction, RetentionDuration og RetentionType også angives.|
 |Opbevaringshandling|String|Nej, medmindre **RetentionDuration**, **RetentionType** eller **ReviewerEmail** er angivet|Denne egenskab angiver, hvilken handling der skal udføres, når den værdi, der er angivet af egenskaben RetentionDuration (hvis angivet), udløber. Gyldige værdier er: </br>**Slet**: Elementer, der er ældre end den værdi, der er angivet af egenskaben RetentionDuration, slettes.</br>**Bevar**: Bevar elementer i den varighed, der er angivet af egenskaben RetentionDuration, og gør derefter ingenting, når varighedsperioden udløber. </br>**KeepAndDelete**: Bevar elementer i den varighed, der er angivet i egenskaben RetentionDuration, og slet dem derefter, når varighedsperioden udløber. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionDuration og RetentionType også angives. |
-|Opbevaringsvarighed|String|Nej, medmindre **RetentionAction** eller **RetentionType** er angivet|Denne egenskab angiver det antal dage, indholdet skal bevares. Gyldige værdier er: </br>**Ubegrænset**: Elementer bevares på ubestemt tid. </br>**_n_*: Et positivt heltal i dage. for eksempel **365**. Det maksimale antal, der understøttes, er 24.855, hvilket er 68 år. Hvis du har brug for længere tid end denne maksimumværdi, skal du i stedet bruge Ubegrænset.</br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction og RetentionType også angives.
+|Opbevaringsvarighed|String|Nej, medmindre **RetentionAction** eller **RetentionType** er angivet|Denne egenskab angiver det antal dage, indholdet skal bevares. Gyldige værdier er: </br>**Ubegrænset**: Elementer bevares på ubestemt tid. </br>**_n_*: Et positivt heltal i dage. for eksempel **365**. Det maksimale antal, der understøttes, er 36.525, hvilket er 100 år. Hvis du har brug for længere tid end denne maksimumværdi, skal du i stedet bruge Ubegrænset.</br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction og RetentionType også angives.
 |RetentionType|String|Nej, medmindre **RetentionAction** eller **RetentionDuration** er angivet|Denne egenskab angiver, om opbevaringsvarigheden (hvis det er angivet) beregnes ud fra datoen for oprettelse af indhold, hændelsesdatoen, hvornår der er angivet en dato eller datoen for seneste ændring. Gyldige værdier er: </br>**CreationAgeInDays**</br>**EventAgeInDays**</br>**TaggedAgeInDays**</br>**ModificationAgeInDays** </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal RetentionAction og RetentionDuraction også angives.|
 |KorrekturlæserMail|SmtpAddress|Nej|Når denne egenskab er angivet, udløses der en dispositionsgennemgang, når opbevaringsvarigheden udløber. Denne egenskab angiver mailadressen på en korrekturlæser i din lejer for opbevaringshandlingen **KeepAndDelete** . </br> </br> Du kan inkludere mailadressen på individuelle brugere, distributionsgrupper eller sikkerhedsgrupper i din lejer. Angiv flere mailadresser ved at adskille dem med semikolon. </br> </br> Gruppeafhængigheder: Når denne egenskab er angivet, skal **RetentionAction** (skal være **KeepAndDelete**), **RetentionDuration** og **RetentionType** også være angivet.|
 |ReferenceId|String|Nej|Denne egenskab angiver den værdi, der vises i filplanbeskrivelsen **Reference-id** , som du kan bruge som en entydig værdi for din organisation.| 

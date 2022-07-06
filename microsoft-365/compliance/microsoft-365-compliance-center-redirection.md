@@ -1,5 +1,5 @@
 ---
-title: Omdirigering af brugere fra Office 365 Security and Compliance Center til Microsoft Purview-overholdelsesportalen
+title: Omdirigering af brugere fra Office 365 Security and Compliance Center til Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: robmazz
@@ -9,21 +9,19 @@ ms.service: O365-seccomp
 audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
-description: Få mere at vide om automatisk omdirigering af brugere fra brugere af Office 365 Security and Compliance Center til Microsoft Purview-overholdelsesportalen.
+description: Få mere at vide om automatisk omdirigering af brugere fra brugere af Office 365 Security and Compliance Center til Microsoft Purview-compliance-portal.
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: b88c5f5915944c813f5c803e3526f1bf42040159
-ms.sourcegitcommit: 292de1a7e5ecc2e9e6187126aebba6d3b9416dff
+ms.openlocfilehash: e1c079eda89033dee05eae9b9059521d625b2f5c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/06/2022
-ms.locfileid: "65243002"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635781"
 ---
-# <a name="redirection-of-users-from-the-office-365-security-and-compliance-center-to-the-microsoft-purview-compliance-portal"></a>Omdirigering af brugere fra Office 365 Security and Compliance Center til Microsoft Purview-overholdelsesportalen
+# <a name="redirection-of-users-from-the-office-365-security-and-compliance-center-to-the-microsoft-purview-compliance-portal"></a>Omdirigering af brugere fra Office 365 Security and Compliance Center til Microsoft Purview-compliance-portal
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-I denne artikel forklares det, hvordan automatisk omdirigering fungerer for brugere, der tilgår løsninger til overholdelse af angivne standarder, fra Office 365 Security and Compliance Center (protection.office.com) til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a>.
+I denne artikel forklares det, hvordan automatisk omdirigering fungerer for brugere, der tilgår løsninger til overholdelse af angivne standarder, fra Office 365 Security and Compliance Center (protection.office.com) til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>.
 
 ## <a name="what-to-expect"></a>Hvad kan du forvente?
 
@@ -45,4 +43,4 @@ Denne funktion og tilknyttede kontrolelementer aktiverer ikke automatisk omdirig
 
 ## <a name="related-information"></a>Relaterede oplysninger
 
-- [Oversigt over Microsoft Purview-overholdelsesportalen](/microsoft-365/compliance/microsoft-365-compliance-center)
+- [oversigt over Microsoft Purview-compliance-portal](/microsoft-365/compliance/microsoft-365-compliance-center)

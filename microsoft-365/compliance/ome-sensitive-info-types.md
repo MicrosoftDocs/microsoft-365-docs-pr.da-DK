@@ -20,22 +20,20 @@ description: Få mere at vide om, hvordan du opretter en politik for følsomme o
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 908ec1cf55d8bee06ce9b3b6ccc8eb699d2ba291
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 0974c30882177eb9fc46c2a2fcf65bc2edb43078
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012274"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633427"
 ---
 # <a name="create-a-sensitive-information-type-policy-for-your-organization-using-message-encryption"></a>Opret en politik for følsomme oplysninger for din organisation ved hjælp af meddelelseskryptering
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan bruge enten Exchange regler for mailflow eller Forebyggelse af datatab i Microsoft Purview (DLP) til at oprette en politik for følsomme oplysninger med Office 365 meddelelseskryptering. Hvis du vil oprette en Exchange mailflowregel, kan du enten bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> eller PowerShell.
+Du kan bruge enten Exchange-regler for mailflow eller Microsoft Purview DLP (forebyggelse af datatab) til at oprette en politik for følsomme oplysninger med Office 365 meddelelseskryptering. Hvis du vil oprette en regel for Et Exchange-mailflow, kan du enten bruge <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration (EAC)</a> eller PowerShell.
 
 ## <a name="to-create-the-policy-by-using-mail-flow-rules-in-the-eac"></a>Sådan opretter du politikken ved hjælp af regler for mailflow i EAC
 
-Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, og gå til **Regler for** **mailflow** > . På siden Regler skal du oprette en regel, der anvender Office 365 Meddelelseskryptering. Du kan oprette en regel baseret på betingelser, f.eks. tilstedeværelsen af bestemte nøgleord eller følsomme oplysningstyper i meddelelsen eller den vedhæftede fil.
+Log på <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a>, og gå til **Regler** for **mailflow** > . På siden Regler skal du oprette en regel, der anvender Office 365 Meddelelseskryptering. Du kan oprette en regel baseret på betingelser, f.eks. tilstedeværelsen af bestemte nøgleord eller følsomme oplysningstyper i meddelelsen eller den vedhæftede fil.
 
 ### <a name="to-create-the-policy-by-using-mail-flow-rules-in-powershell"></a>Sådan opretter du politikken ved hjælp af regler for mailflow i PowerShell
 
@@ -43,7 +41,7 @@ Brug en arbejds- eller skolekonto, der har globale administratortilladelser i di
 
 ## <a name="example-mail-flow-rule-created-with-powershell"></a>Eksempel på en regel for mailflow, der er oprettet med PowerShell
 
-Kør følgende kommandoer i PowerShell for at oprette en regel for Exchange mailflow, der automatisk krypterer mails, der sendes uden for din organisation, med indstillingen Kun krypteret, hvis mails eller deres vedhæftede filer indeholder følgende typer følsomme oplysninger:
+Kør følgende kommandoer i PowerShell for at oprette en Exchange-mailflowregel, der automatisk krypterer mails, der sendes uden for din organisation, med indstillingen Kun krypteret, hvis mails eller deres vedhæftede filer indeholder følgende følsomme oplysningstyper:
 
 - ABA-routingnummer
 - Kreditkortnummer
@@ -81,4 +79,4 @@ Microsoft 365 overvåger denne aktivitet og gør den tilgængelig for administra
 
 ## <a name="to-disable-or-customize-the-sensitive-information-types-policy"></a>Sådan deaktiverer eller tilpasser du politikken for følsomme oplysningstyper
 
-Når du har oprettet reglen for Exchange mailflow, kan du [deaktivere eller redigere reglen](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#enable-or-disable-a-mail-flow-rule) ved at gå til **Regler for** **mailflow** >  i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> og deaktivere reglen "*Kryptér udgående følsomme mails (standardregel)*".
+Når du har oprettet reglen for Exchange-mailflowet, kan du [deaktivere eller redigere reglen](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules#enable-or-disable-a-mail-flow-rule) ved at gå til **Regler for** **mailflow** >  i <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" target="_blank">Exchange Administration</a> og deaktivere reglen "*Kryptér udgående følsomme mails (standardregel)*".

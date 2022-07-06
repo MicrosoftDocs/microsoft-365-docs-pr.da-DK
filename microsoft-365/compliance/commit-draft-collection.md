@@ -16,22 +16,20 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du har oprettet og gentaget en kladdesamling, kan du bekræfte den til et korrektursæt. Når du bekræfter en kladde til en samling, tilføjes de indsamlede elementer for at gennemse dem, der er angivet i sagen. Når de indsamlede elementer er i korrektursættet, kan du analysere, gennemse og eksportere dem.
-ms.openlocfilehash: c798981d485b6128e76ea3f0c0fbf189b4f9634a
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e635489383026df0d8097a300eb49178dcffb6b5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090467"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632701"
 ---
 # <a name="commit-a-draft-collection-to-a-review-set-in-ediscovery-premium"></a>Send en kladdesamling til et korrektursæt i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du er tilfreds med de elementer, du har indsamlet i en kladdesamling, og er klar til at analysere, mærke og gennemse dem, kan du føje en samling til et korrektursæt i tilfælde af. Når du bekræfter en kladde af en samling til et korrektursæt, kopieres indsamlede elementer fra deres oprindelige indholdsplacering i Microsoft 365 til et korrektursæt. Et anmeldelsessæt er en sikker, Microsoft-leveret Azure Storage placering i Microsoft-cloudmiljøet.
+Når du er tilfreds med de elementer, du har indsamlet i en kladdesamling, og er klar til at analysere, mærke og gennemse dem, kan du føje en samling til et korrektursæt i tilfælde af. Når du bekræfter en kladde af en samling til et korrektursæt, kopieres indsamlede elementer fra deres oprindelige indholdsplacering i Microsoft 365 til et korrektursæt. Et anmeldelsessæt er en sikker Azure Storage-placering, der leveres af Microsoft, i Microsoft-cloudmiljøet.
 
 ## <a name="commit-a-draft-collection-to-a-review-set"></a>Bekræft en kladdesamling til et valideringssæt
 
-1. Åbn sagen Microsoft Purview eDiscovery (Premium) på Microsoft Purview-overholdelsesportalen, og vælg derefter fanen **Samlinger** for at få vist en liste over samlingerne i sagen.
+1. I Microsoft Purview-compliance-portal skal du åbne sagen Microsoft Purview eDiscovery (Premium) og derefter vælge fanen **Samlinger** for at få vist en liste over samlingerne i sagen.
 
    ![Liste over samlinger i en sag.](../media/CommitDraftCollections1.png)
 
@@ -40,7 +38,7 @@ Når du er tilfreds med de elementer, du har indsamlet i en kladdesamling, og er
 
 2. På siden **Samlinger** skal du vælge den kladdesamling, du vil bekræfte til et gennemsynssæt.
 
-3. Nederst på pop op-siden skal du vælge **HandlingerVælg** >  samling.
+3. Vælg **Handlinger** > **Rediger samling** nederst på pop op-siden.
 
 4. Klik på **Næste** i guiden til redigering af samlinger, indtil siden **Gem kladde eller indsaml** vises.
 
@@ -54,16 +52,16 @@ Når du er tilfreds med de elementer, du har indsamlet i en kladdesamling, og er
 
       ![Konfigurer yderligere indstillinger for samling.](../media/AeDAdditionalCollectionSettings.png).
 
-       a. **Teams og Yammer meddelelser**: Vælg denne indstilling for at føje samtaletråde til den samling, der indeholder de chatelementer, der returneres af søgeforespørgslen i samlingen. Det betyder, at chatsamtalen, der indeholder elementer, der stemmer overens med søgekriterierne, rekonstrueres. Dette giver dig mulighed for at gennemse chatelementer i konteksten af samtalen frem og tilbage. Du kan finde flere oplysninger [under Samtaletråd i eDiscovery (Premium)](conversation-review-sets.md).
+       a. **Teams- og Yammer-meddelelser**: Vælg denne indstilling for at føje samtaletråde til den samling, der indeholder de chatelementer, der returneres af søgeforespørgslen i samlingen. Det betyder, at chatsamtalen, der indeholder elementer, der stemmer overens med søgekriterierne, rekonstrueres. Dette giver dig mulighed for at gennemse chatelementer i konteksten af samtalen frem og tilbage. Du kan finde flere oplysninger under [Samtaletråd i eDiscovery (Premium)](conversation-review-sets.md).
 
        b. **Vedhæftede filer i skyen**: Vælg denne indstilling for at inkludere moderne vedhæftede filer eller sammenkædede filer, når samlingsresultaterne føjes til korrektursættet. Det betyder, at målfilen for en moderne vedhæftet fil eller sammenkædet fil føjes til korrektursættet.
 
        > [!NOTE]
-       > De to muligheder for at indsamle kontekstafhængige Teams og Yammer meddelelser og vedhæftede filer i skyen er valgt som standard (og nedtonet) for sager, der blev oprettet ved hjælp af det nye sagsformat. Du kan få flere oplysninger under [Brug det nye sagsformat](advanced-ediscovery-new-case-format.md).
+       > De to muligheder for at indsamle kontekstafhængige Teams- og Yammer-meddelelser og vedhæftede filer i skyen er som standard valgt (og nedtonet) for sager, der er oprettet ved hjælp af det nye sagsformat. Du kan få flere oplysninger under [Brug det nye sagsformat](advanced-ediscovery-new-case-format.md).
 
        c. **Delvist indekserede elementer**: Vælg denne indstilling for at føje delvist indekserede elementer fra flere datakilder til korrektursættet. Hvis samlingen søgte i flere datakilder (som angivet på siden **Yderligere placeringer** i guiden Samlinger), kan der være delvist indekserede elementer fra disse placeringer, som du vil føje til korrektursættet. Datakilder med frihedsberøvelse og ingen varetægtsfængsling har typisk ikke delvist indekserede elementer. Det skyldes, at den avancerede indekseringsproces omindekserer elementer, når datakilder med frihedsberøvelse og ingen varetægtsfængsling føjes til en sag. Hvis du tilføjer delvist indekserede elementer, øges antallet af elementer, der føjes til korrektursættet. <p> Når delvist indekserede elementer er føjet til korrektursættet, kan du anvende et filter for specifikt at få vist disse elementer. Du kan få flere oplysninger under [Filtrer delvist indekserede elementer](review-set-search.md#filter-partially-indexed-items)
 
-      d. **SharePoint versioner**: Vælg denne indstilling for at aktivere samlingen af alle versioner af et SharePoint dokument i henhold til versionsgrænserne og søgeparametrene for samlingen. Hvis du vælger denne indstilling, øges størrelsen af elementer, der føjes til korrektursættet, markant. Når dokumentversionerne er føjet til korrektursættet, 
+      d. **SharePoint-versioner**: Vælg denne indstilling for at aktivere samlingen af alle versioner af et SharePoint-dokument i henhold til versionsgrænserne og søgeparametrene for samlingen. Hvis du vælger denne indstilling, øges størrelsen af elementer, der føjes til korrektursættet, markant. Når dokumentversionerne er føjet til korrektursættet, 
 
    4. Konfigurer indstillingerne for at definere skaleringen af samlingen, der skal føjes til korrektursættet:
 
@@ -87,9 +85,9 @@ Når du overfører en kladdesamling til et korrektursæt, sker der følgende:
 
 - Søgeforespørgslen for samlingen køres igen. Det betyder, at de faktiske søgeresultater, der kopieres til korrektursættet, kan være anderledes end de anslåede resultater, der blev returneret, da samlingens søgning sidst blev kørt.
 
-- Alle elementer i søgeresultaterne kopieres fra den oprindelige datakilde i livetjenesten og kopieres til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+- Alle elementer i søgeresultaterne kopieres fra den oprindelige datakilde i livetjenesten og kopieres til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
-- Krypterede SharePoint og OneDrive dokumenter og krypterede filer, der er vedhæftet mails, som returneres i søgeresultaterne, dekrypteres, når du sender samlingen til et gennemsynssæt. Du kan gennemse og forespørge de dekrypterede filer i korrektursættet. Du kan finde flere oplysninger [under Dekryptering i Microsoft 365 eDiscovery-værktøjer](ediscovery-decryption.md).
+- Krypterede SharePoint- og OneDrive-dokumenter og krypterede filer, der vedhæftes mails, som returneres i søgeresultaterne, dekrypteres, når du sender samlingen til et gennemsynssæt. Du kan gennemse og forespørge de dekrypterede filer i korrektursættet. Du kan finde flere oplysninger [under Dekryptering i Microsoft 365 eDiscovery-værktøjer](ediscovery-decryption.md).
 
 - OCR-funktionen (Optical Character Recognition) udtrækker tekst fra billeder og inkluderer billedteksten med det indhold, der er føjet til et korrektursæt. Du kan få flere oplysninger i afsnittet [Optisk tegngenkendelse](#optical-character-recognition) i denne artikel.
 

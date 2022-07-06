@@ -15,20 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Brug kommunikationsværktøjet i en eDiscovery-sag (Premium) til at sende, indsamle og spore meddelelser om juridiske ventepositioner.
+description: Brug kommunikationsværktøjet i en eDiscovery-sag (Premium) til at sende, indsamle og spore meddelelser om juridisk venteposition.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 21090274f385d6a3354852134764a1f53a311f10
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: e97630c75c05412e22afa17daaa1897f8627adf1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65094984"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634671"
 ---
 # <a name="create-a-legal-hold-notice"></a>Opret en meddelelse om juridisk venteposition
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Ved hjælp af eDiscovery-kommunikation (Premium) kan organisationer administrere deres arbejdsproces omkring kommunikation med tilsynsførende. Gennem kommunikationsværktøjet kan juridiske teams systematisk sende, indsamle og spore meddelelser om juridiske ventepositioner. Den fleksible oprettelsesproces giver også teams mulighed for at tilpasse arbejdsprocessen for meddelelse om venteposition og indholdet i de meddelelser, der sendes til tilsynsførende.
+Organisationer kan ved hjælp af eDiscovery (Premium)-forældremyndighedskommunikation administrere deres arbejdsproces omkring kommunikation med vogtere. Gennem kommunikationsværktøjet kan juridiske teams systematisk sende, indsamle og spore meddelelser om juridiske ventepositioner. Den fleksible oprettelsesproces giver også teams mulighed for at tilpasse arbejdsprocessen for meddelelse om venteposition og indholdet i de meddelelser, der sendes til tilsynsførende.
 
 ![Kommunikationsside.](../media/CommunicationPage.PNG)
 
@@ -40,7 +38,7 @@ Det første trin er at angive de relevante oplysninger om meddelelser om juridis
 
 ![Siden Navnkommunikation.](../media/NameCommunication.PNG)
 
-1. På Microsoft Purview-overholdelsesportalen skal du gå til **eDiscovery > Avanceret** for at få vist listen over sager i din organisation.
+1. I Microsoft Purview-compliance-portal skal du gå til **eDiscovery > Avanceret** for at få vist listen over sager i din organisation.
 
 2. Vælg en sag, klik på fanen **Kommunikation** , og klik derefter på **Ny kommunikation**.
 
@@ -48,7 +46,7 @@ Det første trin er at angive de relevante oplysninger om meddelelser om juridis
 
     - **Navn**: Dette er navnet på kommunikationen.
 
-    - **Udstedende officer**: På rullelisten vises de brugere i organisationen, der kan vælges som udstedende officer for kommunikationen. Hver kommunikation, der sendes til tilsynsførende, sendes på vegne af den valgte udstedende officer. Listen over brugere på rullelisten består af sagsmedlemmer og udstedende myndigheder i hele organisationen. Disse udstedende medarbejdere tilføjes af en eDiscovery-administrator og er tilgængelige i alle eDiscovery-sager (Premium) i din organisation. Du kan få flere oplysninger under [Administrer udstedende medarbejdere](advanced-ediscovery-issuing-officers.md).
+    - **Udstedende officer**: På rullelisten vises de brugere i organisationen, der kan vælges som udstedende officer for kommunikationen. Hver kommunikation, der sendes til tilsynsførende, sendes på vegne af den valgte udstedende officer. Listen over brugere på rullelisten består af sagsmedlemmer og udstedende myndigheder i hele organisationen. Disse udstedende medarbejdere tilføjes af en eDiscovery-administrator og er tilgængelige i alle eDiscovery(Premium)-sager i din organisation. Du kan få flere oplysninger under [Administrer udstedende medarbejdere](advanced-ediscovery-issuing-officers.md).
 
     - **Vælg kommunikationsskabelon**: På rullelisten vises skabelonerne fra kommunikationsbiblioteket på siden med indstillinger for eDiscovery (Premium). Hvis du vælger en skabelon, vises den i **Definer portalindhold** som udgangspunkt for teksten i den meddelelse, du opretter. Hvis du ikke vælger en skabelon, skal du selv oprette meddelelsen fra bunden. Du kan få flere oplysninger om kommunikationsskabeloner under [Administrer skabeloner til tilsynsførende kommunikation](advanced-ediscovery-communications-library.md).
 

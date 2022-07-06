@@ -1,5 +1,5 @@
 ---
-title: Arkivér Slack eDiscovery-data for at Microsoft 365 ved hjælp af en dataconnector, der leveres af Microsoft
+title: Arkivér Slack eDiscovery-data til Microsoft 365 ved hjælp af en dataconnector fra Microsoft
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -12,18 +12,16 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en Slack eDiscovery-dataconnector, der leveres af Microsoft, til at importere og arkivere chatdata.
-ms.openlocfilehash: 65d7b666390c132995882ca4e8d027064482df13
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 138a93449b4b2a9ce7b57b4c240f2e42c553d818
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65320670"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631475"
 ---
 # <a name="set-up-a-connector-to-archive-slack-ediscovery-data-preview"></a>Konfigurer en connector til at arkivere Slack eDiscovery-data (prøveversion)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Slack eDiscovery-dataconnectoren, der leveres af Microsoft, hjælper dig med at importere og arkivere chatdata (f.eks. meddelelser, vedhæftede filer, links og revisioner) fra organisationens Slack-arbejdsområder til Microsoft 365. Dataconnectoren henter data fra Slack-API'en, konverterer den til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365. Når Slack-dataene er importeret, kan du anvende løsninger til overholdelse af regler og standarder, f.eks. procesførelse, Microsoft Purview eDiscovery (Premium), overholdelse af kommunikation og opbevaringsindstillinger for Slack-indholdet. Brug af en Slack eDiscovery-dataconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+Slack eDiscovery-dataconnectoren, der leveres af Microsoft, hjælper dig med at importere og arkivere chatdata (f.eks. meddelelser, vedhæftede filer, links og revisioner) fra organisationens Slack-arbejdsområder til Microsoft 365. Dataconnectoren henter data fra Slack-API'en, konverterer den til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365. Når Slack-dataene er importeret, kan du anvende løsninger til overholdelse af regler og standarder, f.eks. procesførelse, Microsoft Purview eDiscovery (Premium), kommunikation og opbevaringsindstillinger til Slack-indholdet. Brug af en Slack eDiscovery-dataconnector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde de offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-slack-ediscovery-data"></a>Oversigt over arkivering af Slack eDiscovery-data
 
@@ -45,7 +43,7 @@ I følgende oversigt forklares processen med at bruge en Microsoft-dataconnector
 
 - Hent brugernavnet og adgangskoden til din organisations Slack-virksomhedskonto. Du kan bruge disse legitimationsoplysninger til at logge på denne konto, når du opretter dataconnectoren. Det anbefales også, at du har automatiseret brugerklargøring i din Slack-organisation konfigureret til at bruge enkeltlogon (SSO). [Roller i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center)
 
-- Den bruger, der opretter Slack eDiscovery-connectoren, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft Purview-compliance-portal. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter Slack eDiscovery-connectoren, skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors** i Microsoft Purview-compliance-portal. Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
 ## <a name="step-1-create-a-slack-ediscovery-connector"></a>Trin 1: Opret en Slack eDiscovery-connector
 
@@ -77,7 +75,7 @@ I følgende oversigt forklares processen med at bruge en Microsoft-dataconnector
 
 5. Klik på **Tillad** for at tillade, at appen administrerer din organisation.
 
-   Når du har klikket på **Tillad**, lukkes slack-siden, og **eDiscovery-brugerne af Map Slack Microsoft 365 brugersiden** i connectorguiden, vises.
+   Når du har klikket på **Tillad**, lukkes slack-siden og **eDiscovery-brugernes Map Slack-brugere til Microsoft 365-brugere** i connectorguiden.
 
 ## <a name="step-3-specify-the-users-to-import-data-for"></a>Trin 3: Angiv de brugere, der skal importeres data for
 
@@ -89,11 +87,11 @@ Vælg en af følgende indstillinger for at angive, hvilke brugere hvis Slack eDi
 
 ## <a name="step-4-map-users-and-select-data-types-to-import"></a>Trin 4: Tilknyt brugere, og vælg de datatyper, der skal importeres
 
-1. Konfigurer en eller begge af følgende indstillinger for at knytte Slack-brugere til deres Microsoft 365 postkasser.
+1. Konfigurer en eller begge af følgende indstillinger for at knytte Slack-brugere til deres Microsoft 365-postkasser.
 
-   - **Automatisk brugertilknytning**. Vælg denne indstilling for automatisk at knytte Slack-brugernavne til Microsoft 365 postkasser. Det gør connectoren ved hjælp af værdien af egenskaben Mail, som alle *Slack-meddelelser* eller -elementer indeholder. Denne egenskab udfyldes med en mailadresse på hver deltager i meddelelsen. Hvis connectoren kan knytte mailadresserne til tilsvarende Microsoft 365 brugere, importeres elementet til disse brugeres Microsoft 365 postkasse. Hvis du vil bruge denne indstilling, skal du have SSO konfigureret for din Slack-organisation.
+   - **Automatisk brugertilknytning**. Vælg denne indstilling for automatisk at knytte Slack-brugernavne til Microsoft 365-postkasser. Det gør connectoren ved hjælp af værdien af egenskaben Mail, som alle *Slack-meddelelser* eller -elementer indeholder. Denne egenskab udfyldes med en mailadresse på hver deltager i meddelelsen. Hvis connectoren kan knytte mailadresserne til de tilsvarende Microsoft 365-brugere, importeres elementet til disse brugeres Microsoft 365-postkasse. Hvis du vil bruge denne indstilling, skal du have SSO konfigureret for din Slack-organisation.
 
-   - **Brugerdefineret brugertilknytning**. Du har også mulighed for at bruge brugerdefineret brugertilknytning i stedet for (eller ud over) automatisk brugertilknytning. Med denne indstilling skal du oprette og derefter uploade en CSV-fil, der knytter brugernes Slack-medlems-id til deres Microsoft 365 mailadresse. Det gør du ved at klikke på **Download CSV-tilknytningsskabelonen**, udfylde CSV-filen med Slack-medlems-id'et og Microsoft 365 mailadresse for alle brugere i din organisation og derefter vælge og overføre CSV-filen til guiden. Sørg for ikke at ændre kolonneoverskrifterne i CSV-filen. Her er et eksempel på CSV-tilknytningsfilen:
+   - **Brugerdefineret brugertilknytning**. Du har også mulighed for at bruge brugerdefineret brugertilknytning i stedet for (eller ud over) automatisk brugertilknytning. Med denne indstilling skal du oprette og derefter uploade en CSV-fil, der knytter brugernes Slack-medlems-id til deres Microsoft 365-mailadresse. Det gør du ved at klikke på **Download CSV-tilknytningsskabelon**, udfylde CSV-filen med Slack-medlems-id'et og Microsoft 365-mailadressen for alle brugere i din organisation og derefter vælge og overføre CSV-filen til guiden. Sørg for ikke at ændre kolonneoverskrifterne i CSV-filen. Her er et eksempel på CSV-tilknytningsfilen:
 
      |**ExternalUserId**  | **O365UserMailbox**   |
      |:-------------------|:-----------------------|
@@ -105,7 +103,7 @@ Vælg en af følgende indstillinger for at angive, hvilke brugere hvis Slack eDi
    > [!TIP]
    > Medlems-id'er for brugere kan fås ved at klikke på ... Knappen Mere i en brugers profil, og vælg derefter **Kopiér medlems-id**. Du kan også bruge [metoden Slack users.list API](https://api.slack.com/methods/users.list) til at hente id'erne for alle medlemmer af et Slack-team.
 
-   Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytningsfil, kigger connectoren først på den brugerdefinerede tilknytningsfil for at knytte Slack-brugeren til en Microsoft 365 postkasse. Hvis connectoren ikke finder en gyldig Microsoft 365 bruger, der svarer til Slack-brugeren, bruger connectoren egenskaben *Mail for Slack-elementet*. Hvis connectoren ikke finder en gyldig Microsoft 365 bruger i enten den brugerdefinerede tilknytningsfil eller egenskaben *Mail* for meddelelseselementet, importeres elementet ikke.
+   Hvis du aktiverer automatisk brugertilknytning og angiver en brugerdefineret tilknytningsfil, kigger connectoren først på den brugerdefinerede tilknytningsfil for at knytte Slack-brugeren til en Microsoft 365-postkasse. Hvis connectoren ikke finder en gyldig Microsoft 365-bruger, der svarer til Slack-brugeren, bruger connectoren egenskaben Mail for *Slack-elementet* . Hvis connectoren ikke finder en gyldig Microsoft 365-bruger i enten den brugerdefinerede tilknytningsfil eller egenskaben *Mail* for meddelelseselementet, importeres elementet ikke.
 
 2. Vælg de Slack-datatyper, du vil importere, på siden **Vælg datatyper, der skal importeres** . Hvis du vil importere meddelelser fra alle kanaler, skal du vælge alle indstillinger. Ellers skal du kun vælge de datatyper, du vil importere.
 

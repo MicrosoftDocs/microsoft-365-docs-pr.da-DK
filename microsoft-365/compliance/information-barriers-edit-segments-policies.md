@@ -13,16 +13,14 @@ ms.collection:
 ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
-ms.openlocfilehash: eaaa98233a839f41c008052ab91c5c0f45f8eb13
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: a84b8e712de53b0abae81a05bbe1b2bef3237beb
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014162"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635299"
 ---
 # <a name="manage-information-barriers-policies"></a>Administrer politikker for informationsbarrierer
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du har [defineret politikker for informationsbarrierer (IB),](information-barriers-policies.md) skal du muligvis foretage ændringer af disse politikker eller af dine brugersegmenter som en del af [fejlfinding](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting) eller som regelmæssig vedligeholdelse.
 

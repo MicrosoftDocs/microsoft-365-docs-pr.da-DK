@@ -17,25 +17,23 @@ search.appverid:
 - MOE150
 - MET150
 ms.custom: admindeeplinkCOMPLIANCE
-description: Beskriver, hvordan du eksporterer og downloader indhold fra en eDiscovery -sag (Standard) i Microsoft 365.
-ms.openlocfilehash: 550bdda2c8b2f8afb0e7b4934f5337d7ee323d3a
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+description: Beskriver, hvordan du eksporterer og downloader indhold fra et eDiscovery-tilfælde (Standard) i Microsoft 365.
+ms.openlocfilehash: 144bb7248753894c72accebbf3e87ab2d7d82d2d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65318652"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634263"
 ---
 # <a name="export-content-from-a-ediscovery-standard-case"></a>Eksportér indhold fra en eDiscovery-sag (Standard)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard) sag, er blevet kørt, kan du eksportere søgeresultaterne. Når du eksporterer søgeresultater, downloades postkasseelementer i PST-filer eller som individuelle meddelelser. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office dokumenter og andre dokumenter. En Results.csv fil, der indeholder oplysninger om hvert element, der eksporteres, og en manifestfil (i XML-format), der indeholder oplysninger om hvert søgeresultat, eksporteres også.
+Når en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard), er blevet kørt, kan du eksportere søgeresultaterne. Når du eksporterer søgeresultater, downloades postkasseelementer i PST-filer eller som individuelle meddelelser. Når du eksporterer indhold fra SharePoint og OneDrive for Business websteder, eksporteres der kopier af oprindelige Office-dokumenter og andre dokumenter. En Results.csv fil, der indeholder oplysninger om hvert element, der eksporteres, og en manifestfil (i XML-format), der indeholder oplysninger om hvert søgeresultat, eksporteres også.
   
 ## <a name="export-search-results"></a>Eksportér søgeresultater
 
 1. Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a>, og log på med legitimationsoplysningerne for den brugerkonto, der er tildelt de relevante eDiscovery-tilladelser.
 
-2. I venstre navigationsrude i overholdelsesportalen skal du vælge **Vis alle** og derefter vælge **eDiscoveryeDiscovery** >  <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**(Standard)**</a>.
+2. Vælg **Vis alle** i navigationsruden til venstre på overholdelsesportalen, og vælg derefter **eDiscovery** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2174007" target="_blank">**eDiscovery (Standard).**</a>
 
 3. Klik på navnet på den sag, du vil oprette venteposition for, på siden **eDiscovery (Standard** ).
 
@@ -50,7 +48,7 @@ Når en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard) 
    > [!NOTE]
    > Når du eksporterer søgeresultater, har du mulighed for at aktivere deduplikering, så der kun eksporteres én kopi af en mail, selvom der er fundet flere forekomster af den samme meddelelse i de postkasser, der blev søgt i. Du kan finde flere oplysninger om deduplikering, og hvordan dubletter identificeres, [under De-duplikering i eDiscovery-søgeresultater](de-duplication-in-ediscovery-search-results.md).
 
-   Når du starter eksporten, er søgeresultaterne forberedt til download, hvilket betyder, at de overføres til en Azure Storage placering, der leveres af Microsoft, i Microsoft-cloudmiljøet.
+   Når du starter eksporten, er søgeresultaterne forberedt til download, hvilket betyder, at de overføres til en Microsoft-leveret Azure Storage-placering i Microsoft-cloudmiljøet.
   
 6. Klik på fanen **Eksporter** i sagen for at få vist listen over eksportjob.
   
@@ -58,7 +56,7 @@ Når en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard) 
 
    Du skal muligvis klikke på **Opdater** for at opdatere listen over eksportjob, så den viser det eksportjob, du har oprettet. Eksportjob har samme navn som den tilsvarende søgning med **_Export** føjet til søgenavnet.
 
-7. Klik på det eksportjob, du har oprettet, for at få vist statusoplysninger på pop op-siden. Disse oplysninger omfatter procentdelen af elementer, der er overført til den Azure Storage placering.
+7. Klik på det eksportjob, du har oprettet, for at få vist statusoplysninger på pop op-siden. Disse oplysninger omfatter procentdelen af elementer, der er overført til Azure Storage-placeringen.
 
 8. Når alle elementer er blevet overført, skal du klikke på **Download resultater** for at downloade søgeresultaterne til din lokale computer. Du kan finde flere oplysninger om hentning af søgeresultater under Trin 2 i [Eksportér søgeresultater for indhold](export-search-results.md#step-2-download-the-search-results)
 
@@ -71,4 +69,4 @@ Når en søgning, der er knyttet til en Microsoft Purview eDiscovery (Standard) 
 
 - Hvis du genstarter eksporten, påvirker eventuelle ændringer af forespørgslerne for de søgninger, der udgør eksportjobbet, ikke de søgeresultater, der hentes. Når du genstarter en eksport, køres det samme kombinerede søgeforespørgselsjob, som blev kørt, da eksportjobbet blev oprettet, igen.
 
-- Hvis du genstarter en eksport, overskriver de søgeresultater, der kopieres til den Azure Storage placering, også de forrige resultater. De tidligere resultater, der blev kopieret, kan ikke hentes.
+- Hvis du genstarter en eksport, overskriver de søgeresultater, der kopieres til Azure Storage-placeringen, også de tidligere resultater. De tidligere resultater, der blev kopieret, kan ikke hentes.

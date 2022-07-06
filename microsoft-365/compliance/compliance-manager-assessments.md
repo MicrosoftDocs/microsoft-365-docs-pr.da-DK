@@ -1,5 +1,5 @@
 ---
-title: Byg og administrer vurderinger i Microsoft Purview Overholdelsesstyring
+title: Byg og administrer vurderinger i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,17 +16,15 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Byg vurderinger i Microsoft Purview Overholdelsesstyring for at hjælpe dig med at opfylde de krav til forskrifter og certificeringer, der er vigtige for din organisation.
-ms.openlocfilehash: cb2d90bf8dfbdcb2ec2ca534d1659a19d27998bc
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+description: Opret vurderinger i Microsoft Purview Compliance Manager for at hjælpe dig med at opfylde de krav til forskrifter og certificeringer, der er vigtige for din organisation.
+ms.openlocfilehash: 6eeb77e1e5d6adea3489764626910e63ce443a2d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115735"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633559"
 ---
 # <a name="build-and-manage-assessments-in-compliance-manager"></a>Byg og administrer vurderinger i Overholdelsesstyring
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** Få mere at vide om, hvordan du tilpasser Overholdelsesstyring for din organisation ved at oprette og administrere **vurderinger**. I denne artikel gennemgår vi, hvordan du opretter vurderinger, hvordan du organiserer dem i **grupper**, arbejder med **kontrolelementer**, accepterer **opdateringer** og eksporterer **vurderingsrapporter**.
 
@@ -41,9 +39,9 @@ Alle dine vurderinger er angivet under fanen Vurderinger i Overholdelsesstyring.
 
 ## <a name="data-protection-baseline-default-assessment"></a>Vurdering af standardvurdering af grundlæggende databeskyttelse
 
-For at komme i gang giver Microsoft en **standardvurdering** i Overholdelsesstyring for **Microsoft 365 baseline til databeskyttelse**. Denne grundlæggende vurdering har et sæt kontroller af vigtige bestemmelser og standarder for databeskyttelse og generel datastyring. Denne baseline henter elementer primært fra NIST CSF (National Institute of Standards and Technology Cybersecurity Framework) og ISO (International Organization for Standardization) samt fra FedRAMP (Federal Risk and Authorization Management Program) og GDPR (General Data Protection Regulation of the European Union).
+For at komme i gang giver Microsoft en **standardvurdering** i Overholdelsesstyring for **Microsoft 365 Baseline til databeskyttelse**. Denne grundlæggende vurdering har et sæt kontroller af vigtige bestemmelser og standarder for databeskyttelse og generel datastyring. Denne baseline henter elementer primært fra NIST CSF (National Institute of Standards and Technology Cybersecurity Framework) og ISO (International Organization for Standardization) samt fra FedRAMP (Federal Risk and Authorization Management Program) og GDPR (General Data Protection Regulation of the European Union).
 
-Denne vurdering bruges til at beregne din første overholdelsesscore, første gang du kommer til Overholdelsesstyring, før du konfigurerer andre vurderinger. Overholdelsesstyring indsamler indledende signaler fra dine Microsoft 365 løsninger. Du kan hurtigt se, hvordan din organisation klarer sig i forhold til vigtige standarder og bestemmelser for databeskyttelse, og se foreslåede forbedringshandlinger.
+Denne vurdering bruges til at beregne din første overholdelsesscore, første gang du kommer til Overholdelsesstyring, før du konfigurerer andre vurderinger. Overholdelsesstyring indsamler indledende signaler fra dine Microsoft 365-løsninger. Du kan hurtigt se, hvordan din organisation klarer sig i forhold til vigtige standarder og bestemmelser for databeskyttelse, og se foreslåede forbedringshandlinger.
 
 Overholdelsesstyring bliver mere nyttig, når du opretter og administrerer dine egne vurderinger, så de opfylder organisationens særlige behov.
 
@@ -115,7 +113,7 @@ Hvis du vil oprette en eller flere vurderinger baseret på vores anbefalinger, s
 
 4. **Produkt, navn og gruppe:** Angiv disse egenskaber for at identificere din vurdering, vælg, hvilket produkt den skal evaluere, og tildel den til en gruppe.
 
-    - **Produkt**: Vælg det produkt, din vurdering skal gælde for. Hvis du bruger en Microsoft-skabelon, f.eks. en, der er designet til Microsoft 365, udfyldes dette felt, så du kan angive det relevante produkt, og det kan ikke ændres. Hvis du bruger en universel skabelon, skal du vælge, om du opretter denne vurdering for et nyt produkt eller et brugerdefineret produkt, du allerede har defineret i Overholdelsesstyring. Hvis du vælger et nyt produkt, skal du angive dets navn. Bemærk, at du ikke kan vælge et foruddefineret Microsoft-produkt, når du bruger en universel skabelon.
+    - **Produkt**: Vælg det produkt, din vurdering skal gælde for. Hvis du bruger en Microsoft-skabelon, f.eks. en, der er designet til Microsoft 365, udfyldes dette felt, så du kan angive det relevante produkt og kan ikke ændres. Hvis du bruger en universel skabelon, skal du vælge, om du opretter denne vurdering for et nyt produkt eller et brugerdefineret produkt, du allerede har defineret i Overholdelsesstyring. Hvis du vælger et nyt produkt, skal du angive dets navn. Bemærk, at du ikke kan vælge et foruddefineret Microsoft-produkt, når du bruger en universel skabelon.
     - **Vurderingsnavn**: Angiv et navn til din vurdering i feltet **Vurderingsnavn** . Vurderingsnavne skal være entydige i grupper. Hvis navnet på din vurdering stemmer overens med navnet på en anden vurdering i en given gruppe, får du vist en fejl, hvor du bliver bedt om at oprette et andet navn.
     - **Gruppe**: Tildel din vurdering til en gruppe. Du kan enten:
         - Vælg **Brug eksisterende gruppe** til at tildele den til en gruppe, du allerede har oprettet. Eller
@@ -183,7 +181,7 @@ Få mere at vide om [, hvordan kontrolelementer og forbedringshandlinger spores 
 
 Når en opdatering er tilgængelig til en vurdering, får du vist en meddelelse og har mulighed for at acceptere opdateringen eller udskyde den et senere tidspunkt.
 
-Der er tilgængelige opdateringer til vurderinger, der er baseret på Microsoft-skabeloner, f.eks. dem, der er designet til brug sammen med Microsoft 365. Hvis din organisation bruger universelle skabeloner til at vurdere andre produkter, understøttes nedarvning muligvis ikke. Du kan få flere oplysninger under [Udvid vurderingsskabeloner](compliance-manager-templates-extend.md).
+Opdateringer er tilgængelige for vurderinger, der er baseret på Microsoft-skabeloner, f.eks. dem, der er designet til brug sammen med Microsoft 365. Hvis din organisation bruger universelle skabeloner til at vurdere andre produkter, understøttes nedarvning muligvis ikke. Du kan få flere oplysninger under [Udvid vurderingsskabeloner](compliance-manager-templates-extend.md).
 
 ### <a name="what-causes-an-update"></a>Hvad er årsagen til en opdatering
 
@@ -214,7 +212,7 @@ Når du har valgt **Gennemse opdatering** på siden med vurderingsoplysninger, v
 - En oversigt, der forklarer opdateringen
 - Specifikke oplysninger om ændringerne, herunder indvirkningen på din overholdelsesscore, mængden af fremskridt mod afslutningen af vurderingen og det specifikke antal ændringer af forbedringshandlinger og kontroller.
 
-Hvis du vælger linket **Opdateret skabelon, downloades** en Excel fil, der indeholder kontroldata, til versionen af skabelonen med de ventende opdateringer. Hvis du vælger linket **Aktuel skabelon** , hentes en fil med den eksisterende skabelon uden ændringerne.
+Hvis du vælger linket **Opdateret skabelon, downloades** en Excel-fil, der indeholder kontroldata til den version af skabelonen, der indeholder de ventende opdateringer. Hvis du vælger linket **Aktuel skabelon** , hentes en fil med den eksisterende skabelon uden ændringerne.
 
 Hvis du vil acceptere opdateringen og foretage ændringer i din vurdering, skal du vælge **Acceptér opdatering**. Accepterede ændringer er permanente.
 
@@ -230,7 +228,7 @@ Hvis du er ved at fuldføre en vurdering, kan det være en god idé at sikre dig
 
 ## <a name="export-an-assessment-report"></a>Eksportér en vurderingsrapport
 
-Du kan eksportere en vurdering til en Excel fil for interessenter i forbindelse med overholdelse af angivne standarder i din organisation eller for eksterne auditører og regulatorer. På siden med vurderingsoplysninger skal du vælge knappen **Generér rapport** øverst på siden, hvor der oprettes en Excel fil, du kan gemme og dele.
+Du kan eksportere en vurdering til en Excel-fil for interessenter i forbindelse med overholdelse af angivne standarder i din organisation eller for eksterne auditører og regulatorer. På siden med vurderingsoplysninger skal du vælge knappen **Generér rapport** øverst på siden, som opretter en Excel-fil, som du kan gemme og dele.
 
 Rapporten er et snapshot af vurderingen fra og med datoen og klokkeslættet for eksporten. Den indeholder oplysninger om kontrolelementer, der administreres af både dig og Microsoft, herunder implementeringsstatus, testdato og testresultater.
 

@@ -15,26 +15,24 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
-description: Administratorer i US Government-cloudmiljøet kan konfigurere en dataconnector til at importere medarbejderdata fra organisationens HR-system for at Microsoft 365. Dette giver dig mulighed for at bruge HR-data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere aktiviteter fra bestemte brugere, der kan udgøre en intern trussel for din organisation.
-ms.openlocfilehash: 4404eb9cd70ed41616fa5ed9b775b55c4c59e192
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Administratorer i US Government-cloudmiljøet kan konfigurere en dataconnector til at importere medarbejderdata fra organisationens HR-system til Microsoft 365. Dette giver dig mulighed for at bruge HR-data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere aktiviteter fra bestemte brugere, der kan udgøre en intern trussel for din organisation.
+ms.openlocfilehash: df9932af0588e95ea35fef24c8b9508676433d22
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65092371"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634307"
 ---
 # <a name="set-up-a-connector-to-import-hr-data-in-us-government"></a>Konfigurer en connector for at importere HR-data i US Government
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen for at importere HR-data til din US Government-organisation. HR-relaterede data omfatter den dato, hvor en medarbejder sendte sin fratræden og dato for medarbejderens sidste dag. Disse HR-data kan derefter bruges af Microsofts løsninger til beskyttelse af oplysninger, f.eks [. løsningen til styring af insiderrisiko](insider-risk-management.md), til at beskytte din organisation mod ondsindet aktivitet eller datatyveri i din organisation. Konfiguration af en HR-connector består i at oprette en app i Azure Active Directory, der bruges til godkendelse af connectoren, oprette en CSV-tilknytningsfil, der indeholder dine HR-data, oprette en dataconnector i overholdelsescenteret og derefter køre et script (efter en tidsplan), der henter HR-dataene i CSV-filen til Microsoft-cloudmiljøet. Derefter bruges dataconnectoren af værktøjet til styring af insiderrisiko til at få adgang til de HR-data, der blev importeret til din Microsoft 365 US Government-organisation.
+Du kan konfigurere en dataconnector i Microsoft Purview-compliance-portal til at importere HR-data til din US Government-organisation. HR-relaterede data omfatter den dato, hvor en medarbejder sendte sin fratræden og dato for medarbejderens sidste dag. Disse HR-data kan derefter bruges af Microsofts løsninger til beskyttelse af oplysninger, f.eks [. løsningen til styring af insiderrisiko](insider-risk-management.md), til at beskytte din organisation mod ondsindet aktivitet eller datatyveri i din organisation. Konfiguration af en HR-connector består i at oprette en app i Azure Active Directory, der bruges til godkendelse af connector, oprette en CSV-tilknytningsfil, der indeholder dine HR-data, oprette en dataconnector i Overholdelsescenter og derefter køre et script (efter en tidsplan), der overfører HR-dataene i CSV-filen til Microsoft-cloudmiljøet. Derefter bruges dataconnectoren af værktøjet til styring af insiderrisiko til at få adgang til de HR-data, der blev importeret til din Microsoft 365 US Government-organisation.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Den bruger, der opretter HR-connectoren i trin 3, skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser på Microsoft Purview-overholdelsesportalen](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter HR-connectoren i trin 3, skal tildeles rollen Dataconnector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
    > [!NOTE]
-   > Rollen dataconnectoradministrator understøttes i øjeblikket ikke i US Government-GCC high- og dod-miljøer. Derfor skal den bruger, der opretter HR-connectoren i GCC high- og dod-miljøer, tildeles rollen Importér eksport af postkasse i Exchange Online. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration i Exchange Online. Du kan også oprette en ny rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje de relevante brugere som medlemmer. Du kan få flere oplysninger i afsnittene [Opret rollegrupper](/Exchange/permissions-exo/role-groups#create-role-groups) eller [Rediger rollegrupper](/Exchange/permissions-exo/role-groups#modify-role-groups) i artiklen "Administrer rollegrupper i Exchange Online".
+   > Rollen Data Connector Administration understøttes i øjeblikket ikke i GCC High- og DoD-miljøer for US Government. Derfor skal den bruger, der opretter HR-connectoren i GCC High- og DoD-miljøer, tildeles rollen Importeksport af postkasse i Exchange Online. Denne rolle er som standard ikke tildelt nogen rollegruppe i Exchange Online. Du kan føje rollen Importér eksport af postkasse til rollegruppen Organisationsadministration i Exchange Online. Du kan også oprette en ny rollegruppe, tildele rollen Importér eksport af postkasse og derefter tilføje de relevante brugere som medlemmer. Du kan få flere oplysninger i afsnittene [Opret rollegrupper](/Exchange/permissions-exo/role-groups#create-role-groups) eller [Rediger rollegrupper](/Exchange/permissions-exo/role-groups#modify-role-groups) i artiklen "Administrer rollegrupper i Exchange Online".
 
 - Du skal afgøre, hvordan du henter eller eksporterer dataene fra organisationens HR-system (regelmæssigt) og føjer dem til den CSV-fil, der er beskrevet i trin 2. Det script, du kører i trin 4, uploader HR-dataene i CSV-filen til Microsoft-cloudmiljøet.
 
@@ -42,11 +40,11 @@ Du kan konfigurere en dataconnector på Microsoft Purview-overholdelsesportalen 
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>Trin 1: Opret en app i Azure Active Directory
 
-Det første trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den HR-connector, du opretter i trin 3. Når du opretter denne app, kan Azure AD godkende HR-connectoren, når den kører, og forsøger at få adgang til din organisation. Denne app bruges også til at godkende det script, du kører i trin 4, for at uploade dine HR-data til Microsoft-cloudmiljøet. Under oprettelsen af denne Azure AD-app skal du gemme følgende oplysninger. Disse værdier bruges i senere trin.
+Det første trin er at oprette og registrere en ny app i Azure Active Directory (Azure AD). Appen svarer til den HR-connector, du opretter i trin 3. Når du opretter denne app, kan Azure AD godkende HR-connectoren, når den kører, og forsøger at få adgang til din organisation. Denne app bruges også til at godkende det script, du kører i trin 4, for at uploade dine HR-data til Microsoft-cloudmiljøet. Under oprettelsen af denne Azure AD app skal du gemme følgende oplysninger. Disse værdier bruges i senere trin.
 
-- Azure AD-program-id (også kaldet *app-id* eller *klient-id*)
+- Azure AD program-id (også kaldet *app-id* eller *klient-id*)
 
-- Azure AD-programhemmelighed (også kaldet *klienthemmeligheden*)
+- Azure AD programhemmelighed (også kaldet *klienthemmeligheden*)
 
 - Lejer-id (også kaldet *mappe-id*)
 
@@ -77,7 +75,7 @@ Når du har oprettet CSV-filen med de påkrævede HR-data, skal du gemme dem på
 
 ## <a name="step-3-create-the-hr-connector"></a>Trin 3: Opret HR-connectoren
 
-Det næste trin er at oprette en HR-connector på overholdelsesportalen. Når du har kørt scriptet i trin 4, overfører den HR-connector, du opretter, HR-dataene fra CSV-filen til din Microsoft 365 organisation. I dette trin skal du sørge for at kopiere det job-id, der genereres, når du opretter connectoren. Du skal bruge job-id'et, når du kører scriptet.
+Det næste trin er at oprette en HR-connector på overholdelsesportalen. Når du har kørt scriptet i trin 4, overfører den HR-connector, du opretter, HR-dataene fra CSV-filen til din Microsoft 365-organisation. I dette trin skal du sørge for at kopiere det job-id, der genereres, når du opretter connectoren. Du skal bruge job-id'et, når du kører scriptet.
 
 1. Gå til overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank">siden **Dataconnectors**</a>.
 
@@ -87,7 +85,7 @@ Det næste trin er at oprette en HR-connector på overholdelsesportalen. Når du
 
 4. Gør følgende på siden **Legitimationsoplysninger til godkendelse** , og klik derefter på **Næste**:
 
-   1. Skriv eller indsæt Azure AD-program-id'et for den Azure-app, du oprettede i trin 1.
+   1. Skriv eller indsæt Azure AD program-id for den Azure-app, du oprettede i trin 1.
 
    1. Skriv et navn til HR-connectoren.
 
@@ -103,7 +101,7 @@ Det næste trin er at oprette en HR-connector på overholdelsesportalen. Når du
 
    1. **Job-id.** Du skal bruge dette job-id for at køre scriptet i næste trin. Du kan kopiere den fra denne side eller fra connector-pop op-siden.
    
-   1. **Link til eksempelscript.** Klik på linket **her** for at gå til GitHub websted for at få adgang til eksempelscriptet (linket åbner et nyt vindue). Hold dette vindue åbent, så du kan kopiere scriptet i trin 4. Du kan også angive et bogmærke for destinationen eller kopiere URL-adressen, så du kan få adgang til den igen i trin 4. Dette link er også tilgængeligt på connector-pop op-siden.
+   1. **Link til eksempelscript.** Klik på **linket her** for at gå til GitHub-webstedet for at få adgang til eksempelscriptet (linket åbner et nyt vindue). Hold dette vindue åbent, så du kan kopiere scriptet i trin 4. Du kan også angive et bogmærke for destinationen eller kopiere URL-adressen, så du kan få adgang til den igen i trin 4. Dette link er også tilgængeligt på connector-pop op-siden.
 
 7. Klik på **Udført**.
 
@@ -119,9 +117,9 @@ Det næste trin er at oprette en HR-connector på overholdelsesportalen. Når du
 
 ## <a name="step-4-run-the-sample-script-to-upload-your-hr-data"></a>Trin 4: Kør eksempelscriptet for at uploade dine HR-data
 
-Det sidste trin i konfiguration af en HR-connector er at køre et eksempelscript, der uploader HR-dataene i CSV-filen (som du oprettede i trin 2) til Microsoft-cloudmiljøet. Scriptet uploader specifikt dataene til HR-connectoren. Når du har kørt scriptet, importerer den HR-connector, du oprettede i trin 3, HR-dataene til din Microsoft 365 organisation, hvor andre værktøjer til overholdelse af angivne standarder kan få adgang til dem, f.eks. Insider Risk Management-løsningen. Når du har kørt scriptet, kan du overveje at planlægge en opgave for at køre den automatisk dagligt, så de mest aktuelle data om medarbejderafslutning uploades til Microsoft-cloudmiljøet. Se [Planlæg, at scriptet skal køre automatisk](#optional-step-6-schedule-the-script-to-run-automatically).
+Det sidste trin i konfiguration af en HR-connector er at køre et eksempelscript, der uploader HR-dataene i CSV-filen (som du oprettede i trin 2) til Microsoft-cloudmiljøet. Scriptet uploader specifikt dataene til HR-connectoren. Når du har kørt scriptet, importerer den HR-connector, du oprettede i trin 3, HR-dataene til din Microsoft 365-organisation, hvor andre værktøjer til overholdelse af angivne standarder kan få adgang til dem, f.eks. Insider Risk Management-løsningen. Når du har kørt scriptet, kan du overveje at planlægge en opgave for at køre den automatisk dagligt, så de mest aktuelle data om medarbejderafslutning uploades til Microsoft-cloudmiljøet. Se [Planlæg, at scriptet skal køre automatisk](#optional-step-6-schedule-the-script-to-run-automatically).
 
-1. Gå til det vindue, du lod åbne fra det forrige trin, for at få adgang til GitHub websted med eksempelscriptet. Du kan også åbne webstedet med bogmærker eller bruge den URL-adresse, du kopierede.
+1. Gå til det vindue, du lod åbne fra det forrige trin, for at få adgang til GitHub-webstedet med eksempelscriptet. Du kan også åbne webstedet med bogmærker eller bruge den URL-adresse, du kopierede.
 
 2. Klik på knappen **Rå** for at få vist scriptet i tekstvisning.
 
@@ -143,9 +141,9 @@ Det sidste trin i konfiguration af en HR-connector er at køre et eksempelscript
 
    | Parameter | Beskrivelse |
    |:-----|:-----|:-----|
-   |`tenantId`|Id'et for din Microsoft 365 organisation, som du fik i trin 1. Du kan også hente lejer-id'et for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
-   |`appId` |Azure AD-program-id'et for den app, du oprettede i Azure AD i trin 1. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365 organisation. |
-   |`appSecret`|Azure AD-programhemmeligheden for den app, du oprettede i Azure AD i trin 1. Dette bruges også til godkendelse.|
+   |`tenantId`|Id'et for din Microsoft 365-organisation, som du fik i trin 1. Du kan også hente lejer-id'et for din organisation på bladet **Oversigt** i Azure AD Administration. Dette bruges til at identificere din organisation.|
+   |`appId` |Det Azure AD program-id for den app, du oprettede i Azure AD i trin 1. Dette bruges af Azure AD til godkendelse, når scriptet forsøger at få adgang til din Microsoft 365-organisation. |
+   |`appSecret`|Den Azure AD programhemmelighed for den app, du oprettede i Azure AD i trin 1. Dette bruges også til godkendelse.|
    |`jobId`|Job-id'et for den HR-connector, du oprettede i trin 3. Dette bruges til at knytte de HR-data, der uploades til Microsoft-cloudmiljøet, til HR-connectoren.|
    |`csvFilePath`|Filstien til CSV-filen (gemt på det samme system som scriptet), som du oprettede i trin 2. Prøv at undgå mellemrum i filstien. ellers skal du bruge enkelte anførselstegn.|
    |||
@@ -156,7 +154,7 @@ Det sidste trin i konfiguration af en HR-connector er at køre et eksempelscript
     .\HRConnector.ps1 -tenantId d5723623-11cf-4e2e-b5a5-01d1506273g9 -appId 29ee526e-f9a7-4e98-a682-67f41bfd643e -appSecret MNubVGbcQDkGCnn -jobId b8be4a7d-e338-43eb-a69e-c513cd458eba -csvFilePath 'C:\Users\contosoadmin\Desktop\Data\employee_termination_data.csv'
     ```
 
-   Hvis overførslen lykkes, viser scriptet **meddelelsen Upload fuldført**.
+   Hvis overførslen lykkes, viser scriptet meddelelsen **Upload fuldført** .
 
    > [!NOTE]
    > Hvis du har problemer med at køre den forrige kommando på grund af kørselspolitikker, skal du se [Om kørselspolitikker](/powershell/module/microsoft.powershell.core/about/about_execution_policies) og [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy) for at få vejledning til, hvordan du angiver kørselspolitikker.
@@ -185,7 +183,7 @@ Hvis du vil sikre dig, at de nyeste HR-data fra din organisation er tilgængelig
 
 Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver dag.
 
-1. Klik på knappen Windows **Start** på den lokale computer, og skriv derefter **Opgavestyring**.
+1. Klik på knappen **Start** i Windows på den lokale computer, og skriv derefter **Opgavestyring**.
 
 2. Klik på appen **Opgavestyring** for at åbne den.
 
@@ -201,7 +199,7 @@ Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver
 
 6. Vælg fanen **Udløsere** , klik på **Ny**, og gør derefter følgende:
 
-   1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt, hvor scriptet skal køres første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
+   1. Under **Indstillinger** skal du vælge indstillingen **Dagligt** og derefter vælge en dato og et klokkeslæt for at køre scriptet for første gang. Scriptet kører hver dag på det samme angivne tidspunkt.
    
    1. Under **Avancerede indstillinger** skal du kontrollere, at afkrydsningsfeltet **Aktiveret** er markeret.
    
@@ -217,7 +215,7 @@ Du kan bruge appen Opgavestyring i Windows til automatisk at køre scriptet hver
 
    1. I feltet **Tilføj argumenter (valgfrit)** skal du indsætte den samme scriptkommando, som du kørte i trin 4. Det kan f.eks. `.\HRConnector.ps1 -tenantId "d5723623-11cf-4e2e-b5a5-01d1506273g9" -appId "c12823b7-b55a-4989-faba-02de41bb97c3" -appSecret "MNubVGbcQDkGCnn"  -jobId "e081f4f4-3831-48d6-7bb3-fcfab1581458" -csvFilePath "C:\Users\contosoadmin\Desktop\Data\employee_termination_data.csv"`
 
-   1. I feltet **Start i (valgfrit)** skal du indsætte mappeplaceringen for det script, du kørte i trin 4. For eksempel `C:\Users\contosoadmin\Desktop\Scripts`.
+   1. I feltet **Start i (valgfrit)** skal du indsætte mappeplaceringen for det script, du kørte i trin 4. Det kunne f.eks. være `C:\Users\contosoadmin\Desktop\Scripts`.
 
    1. Klik på **OK** for at gemme indstillingerne for den nye handling.
 

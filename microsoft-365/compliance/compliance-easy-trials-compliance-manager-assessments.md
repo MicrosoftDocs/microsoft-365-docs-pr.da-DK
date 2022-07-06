@@ -14,16 +14,14 @@ search.appverid:
 - MOE150
 - MET150
 description: Om Premium-vurderingstestene i Microsoft Purview Compliance Manager.
-ms.openlocfilehash: b5d653626eadbfcc6e58d2be36a7ed8899c02eeb
-ms.sourcegitcommit: 7e0094ddff54bcbe5d691dba58d4c4fb86f8b1a9
+ms.openlocfilehash: 50950cc39d9a987239a7b10c70f68aece5647085
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187750"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631265"
 ---
 # <a name="about-the-free-trial-for-microsoft-purview-compliance-manager-premium-assessments"></a>Om den gratis prøveversion af Premium-vurderinger til Microsoft Purview-overholdelsesstyring
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Overholdelsesstyring hjælper dig med at administrere din organisations overholdelseskrav og vurdere og forbedre din score for overholdelse af angivne standarder. De vurderinger, du bygger, er baseret på skabeloner, der svarer til statslige regler og branchestandarder i hele verden.  
 
@@ -31,13 +29,13 @@ Din licensaftale om at bruge Overholdelsesstyring kan indeholde en eller flere i
 
 ## <a name="terms-and-conditions"></a>Vilkår og betingelser
 
-Se [vilkår og betingelser](/legal/microsoft-365/microsoft-365-trial) for Microsoft 365 prøveversioner.
+Se [vilkår og betingelser](/legal/microsoft-365/microsoft-365-trial) for Microsoft 365-prøveversioner.
 
 ## <a name="set-up-a-premium-assessment-trial"></a>Konfigurer en Prøveversion af Premium-vurdering
 
-Du kan tilmelde dig en prøveversion på Microsoft Purview-overholdelsesportalen ved hjælp af linket **Prøveversioner** i venstre navigationsrude. Vælg **prøveversionen af Premium Assessment for Overholdelsesstyring** for at starte en prøveversion af Premium-vurderingsskabeloner.
+Du kan tilmelde dig en prøveversion i Microsoft Purview-compliance-portal ved hjælp af linket **Prøveversioner** i navigationsruden til venstre. Vælg **prøveversionen af Premium Assessment for Overholdelsesstyring** for at starte en prøveversion af Premium-vurderingsskabeloner.
 
-Denne prøveversion af Premium Assessment er tilgængelig for organisationer, der bruger Overholdelsesstyring under en kommerciel licens. Du kan få GCC- og DOD-oplysninger og -prøveversionsindstillinger under [Arbejde med skabeloner i Overholdelsesstyring](compliance-manager-templates.md).
+Denne prøveversion af Premium Assessment er tilgængelig for organisationer, der bruger Overholdelsesstyring under en kommerciel licens. Du kan få oplysninger om GCC og DOD og prøveversionsmuligheder under [Arbejde med skabeloner i Overholdelsesstyring](compliance-manager-templates.md).
 
 Fuld adgang til funktioner i Overholdelsesstyring kan afhænge af din licensaftale for Overholdelsesstyring. Hvis du vil vide mere om den gratis prøveversion af overholdelse af angivne standarder, der omfatter Overholdelsesstyring, skal du se [Om den gratis prøveversion til Microsoft Purview](compliance-easy-trials.md).
 

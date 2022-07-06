@@ -16,16 +16,14 @@ search.appverid:
 - MET150
 description: Prøveversion af Microsoft Purview-løsninger.
 ms.custom: trial-playbook
-ms.openlocfilehash: 981f4d619eeef380625d6de8194e9cb0c42e2011
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 2b84a3e5636edad78a9d221a0d088b84392cf49e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530274"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633779"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Playbook til prøveversion: Microsoft Purview-løsninger
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Velkommen til prøveversionen af Microsoft Purview-løsninger. Denne playbook hjælper dig med at få mest ud af din 90-dages gratis prøveversion ved at hjælpe dig med at finde robuste og omfattende funktioner i Microsoft Purview- og sikkerhedsprodukter.
 

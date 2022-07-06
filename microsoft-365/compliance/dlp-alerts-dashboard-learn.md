@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om dashboardet til forebyggelse af datatab
+title: Få mere at vide om dashboardet med DLP-beskeder
 f1.keywords:
 - CSH
 ms.author: chrfox
@@ -20,23 +20,23 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-description: Få mere at vide om beskeder om forebyggelse af datatab og dashboardet for påmindelser.
-ms.openlocfilehash: 375b16a3072f40ef8f366f7c1c4e8f714f195d63
-ms.sourcegitcommit: dc26169e485c3a31e1af9a5f495be9db75c49760
+description: Få mere at vide om beskeder til forebyggelse af datatab og dashboardet for beskeder.
+ms.openlocfilehash: 1551b247e3302af6dc8ed9af62a88f2c24415122
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "63592379"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66636155"
 ---
 # <a name="learn-about-the-data-loss-prevention-alerts-dashboard"></a>Få mere at vide om dashboardet til forebyggelse af datatab
 
-Når kriterierne i en politik til forebyggelse af datatab (DLP) matches af de handlinger, en bruger tager på et følsomt element, kan politikken generere en besked. Denne situation kan resultere i en stor mængde beskeder. DLP-beskeder indsamles i dashboardet for vigtige beskeder. Dashboardet til vigtige beskeder giver dig et enkelt sted at gå i gang med en grundig undersøgelse af alle detaljer om match af politik.  
+Når kriterierne i en DLP-politik (Microsoft Purview Forebyggelse af datatab) matches af de handlinger, en bruger foretager på et følsomt element, kan politikken generere en besked. Denne situation kan resultere i en stor mængde beskeder. DLP-beskeder indsamles i beskeddashboardet. Dashboardet med beskeder giver dig et enkelt sted, hvor du kan foretage en grundig undersøgelse af alle detaljer om politikmatch.  
 
-<!-- [Microsoft 365 compliance center](https://compliance.microsoft.com/)-->
+<!-- [Microsoft Purview compliance portal](https://compliance.microsoft.com/)-->
 
-## <a name="workloads"></a>Arbejdsbelastninger
+## <a name="workloads"></a>Arbejdsbyrde
 
-[Dashboardet til administration af DLP-beskeder](https://compliance.microsoft.com/datalossprevention?viewid=dlpalerts) <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">i Microsoft 365 Overholdelsescenter</a> viser beskeder for DLP-politikker for disse arbejdsbelastninger:
+Dashboardet [DLP til administration af beskeder](https://compliance.microsoft.com/datalossprevention?viewid=dlpalerts) i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> viser beskeder om DLP-politikker for disse arbejdsbelastninger:
 
 - Exchange
 - SharePoint
@@ -45,15 +45,15 @@ Når kriterierne i en politik til forebyggelse af datatab (DLP) matches af de ha
 - Windows 10 enheder 
 
 > [!TIP]
-> Kunder, der bruger [Slutpunkt DLP](endpoint-dlp-learn-about.md), der er berettiget til [Teams DLP](dlp-microsoft-teams.md), vil få vist deres slutpunktsbeskeder om DLP-politik og Teams DLP-politikbeskeder i dashboardet til administration af DLP-beskeder.
+> Kunder, der bruger [Slutpunkt DLP](endpoint-dlp-learn-about.md) , som er berettiget til [Teams DLP](dlp-microsoft-teams.md) , får vist deres DLP-politikbeskeder for slutpunkter og Teams DLP-politikbeskeder på dashboardet til administration af DLP-beskeder.
 
 ## <a name="single-alert-and-aggregate-alert"></a>Enkelt besked og samlet besked
 
-Der findes to typer af beskeder, der kan konfigureres i DLP-politikker.
+Der er to typer beskeder, der kan konfigureres i DLP-politikker.
 
-**Beskeder** om enkeltstående begivenheder bruges typisk i politikker, der overvåger meget følsomme begivenheder, der forekommer i en lav mængde, f.eks. en enkelt mail, hvor der sendes 10 eller flere kundekreditkortnumre uden for organisationen.
+**Enkelthændelsesbeskeder** bruges typisk i politikker, der overvåger meget følsomme hændelser, der forekommer i en lav mængde, f.eks. en enkelt mail med 10 eller flere kundekreditkortnumre, der sendes uden for din organisation.
 
-**Beskeder om sammenlægninger** bruges typisk i politikker, der overvåger for hændelser, der forekommer i en højere mængde over en tidsperiode. Der kan f.eks. blive udløst en samlet besked, når der sendes 10 individuelle mails hver med ét kundekreditkortnummer uden for din organisation over 48 timer.
+**Aggregerede hændelsesbeskeder** bruges typisk i politikker, der overvåger hændelser, der forekommer i en højere mængde over en tidsperiode. En samlet besked kan f.eks. udløses, når der sendes 10 individuelle mails hver med ét kundekreditkortnummer uden for din organisation over 48 timer.
 
 ## <a name="types-of-events"></a>Typer af hændelser
 
@@ -63,45 +63,45 @@ Her er nogle af de hændelser, der er knyttet til en besked. I brugergrænseflad
 
 |Egenskabsnavn  |Beskrivelse  |Hændelsestyper  |
 |---------|---------|---------|
-|Id |entydigt id, der er knyttet til begivenheden |alle begivenheder |
-|Placering |arbejdsbelastning, hvor hændelsen blev registreret|alle begivenheder |
-|aktivitetstid     |tid for den brugeraktivitet, der opfylder kriterierne i DLP-politikken |
+|ID |entydigt id, der er knyttet til hændelsen |alle hændelser |
+|Placering |arbejdsbelastning, hvor hændelsen blev registreret|alle hændelser |
+|tidspunkt for aktivitet     |tidspunktet for den brugeraktivitet, der opfylder kriterierne i DLP-politikken |
 
-### <a name="affected-entities"></a>Påvirkede enheder
+### <a name="affected-entities"></a>Berørte enheder
 
 |Egenskabsnavn |Beskrivelse| Hændelsestyper|
 |---------|---------|---------|
-|bruger | bruger, der har taget den handling, der forårsagede politikmatchet | alle begivenheder|
-|værtsnavn | værtsnavn på den computer, hvor DLP-politikoverensstemmelsen opstod | enhedshændelser|
-|IP-adresse | IP-adressen på den computer, hvor DLP-politikoverensstemmelsen opstod | enhedshændelser|
-|sha1 |SHA-1-hash på filen | enhedshændelser|
-|sha256 | SHA-256-hash på filen | enhedshændelser|
+|Bruger | bruger, der har foretaget den handling, der forårsagede, at politikken blev matchet | alle hændelser|
+|Værtsnavn | værtsnavn på den computer, hvor DLP-politikken blev matchet | enhedshændelser|
+|IP-adresse | IP-adressen på den computer, hvor DLP-politikken blev matchet | enhedshændelser|
+|sha1 |SHA-1-hash for filen | enhedshændelser|
+|sha256 | SHA-256-hash for filen | enhedshændelser|
 |MDATP-enheds-id | MDATP-id for slutpunktsenhed|
-|filstørrelse | størrelse på filen| SharePoint, OneDrive og enhedshændelser|
-|filsti | den absolutte sti for det element, der er involveret i DLP-politik match | SharePoint, OneDrive og enheder|
-|mailmodtagere |hvis en mail var det følsomme element, der matchede DLP-politikken, omfatter dette felt modtagerne af den pågældende mail| Exchange begivenheder|
-|mail-emne |emne for den mail, der matchede DLP-politikken |Exchange begivenheder|
-|vedhæftede filer i mails | navnene på de vedhæftede filer i den mail, der matchede DLP-politikken| Exchange begivenheder|
-|webstedsejer |navnet på ejeren af webstedet| SharePoint og OneDrive begivenheder|
-|URL-adresse til websted |fuld af URL-adressen på det SharePoint eller OneDrive websted, hvor DLP-politikoverensstemmelsen forekom |SharePoint og OneDrive begivenheder|
-|fil oprettet |tidspunktet for oprettelse af den fil, der matchede DLP-politikken |SharePoint og OneDrive begivenheder|
-|filen senest ændret | sidste gang, den fil, der matchede DLP-politikken, blev ændret | SharePoint og OneDrive begivenheder|
-|filstørrelse | størrelsen på den fil, der matchede DLP-politikken |SharePoint og OneDrive begivenheder|
-|filejer |ejeren af den fil, der matchede DLP-politikken |SharePoint og OneDrive begivenheder|  
+|filstørrelse | filens størrelse| SharePoint-, OneDrive- og enhedshændelser|
+|filsti | den absolutte sti til det element, der er involveret i DLP-politikmatch | Hændelser for SharePoint, OneDrive og enheder|
+|mailmodtagere |Hvis en mail var det følsomme element, der svarede til DLP-politikken, indeholder dette felt modtagerne af den pågældende mail| Exchange-hændelser|
+|mailemne |emne i den mail, der svarede til DLP-politikken |Exchange-hændelser|
+|vedhæftede filer i mails | navnene på de vedhæftede filer i den mail, der matcher DLP-politikken| Exchange-hændelser|
+|webstedsejer |navnet på webstedets ejer| SharePoint- og OneDrive-hændelser|
+|URL-adresse til websted |fuld af URL-adressen til det SharePoint- eller OneDrive-websted, hvor DLP-politikken fandt sted |SharePoint- og OneDrive-hændelser|
+|filen er oprettet |tidspunktet for oprettelsen af den fil, der svarede til DLP-politikken |SharePoint- og OneDrive-hændelser|
+|senest ændret i filen | sidste gang, den fil, der svarede til DLP-politikken, blev ændret | SharePoint- og OneDrive-hændelser|
+|filstørrelse | størrelsen på den fil, der svarede til DLP-politikken |SharePoint- og OneDrive-hændelser|
+|filejer |ejer af den fil, der svarede til DLP-politikken |SharePoint- og OneDrive-hændelser|  
 
-### <a name="policy-details"></a>Politikdetaljer
+### <a name="policy-details"></a>Oplysninger om politik
 
 |Egenskabsnavn |Beskrivelse |Hændelsestyper |
 |---------|---------|---------|
-|DLP-politik matchet |navnet på den matchede DLP-politik |alle begivenheder|
-|regel matchet |navnet på den matchede DLP-politikregel |alle begivenheder|
-|registrerede følsomme oplysningstyper (SIT)|SIT'er, der blev registreret som en del af DLP-politik match |alle begivenheder|
-|handlinger, der er foretaget |handlinger, der blev foretaget, der forårsagede DLP-politikmatch| alle begivenheder|
-|overtrædelse af handling | handling på slutpunktsenheden, der hævede DLP-beskeden| enhedshændelser | 
-|politik for brugeroverrode |tilsidesættede brugeren politikken via et politiktip | alle begivenheder|
-|brug tilsidesættelsesberettigelse |teksten til årsagen, der er angivet af brugeren til tilsidesættelsen | alle begivenheder|   
+|DLP-politik matcher |navnet på den tilsvarende DLP-politik |alle hændelser|
+|regel, der stemmer overens |navnet på den tilsvarende DLP-politikregel |alle hændelser|
+|registrerede følsomme informationstyper (SIT)|SIT'er, der blev registreret som en del af DLP-politikmatch |alle hændelser|
+|handlinger, der er foretaget |handlinger, der blev udført, som forårsagede, at DLP-politikken blev matchet| alle hændelser|
+|overtræder handling | handling på slutpunktsenheden, der har hævet DLP-beskeden| enhedshændelser | 
+|politik for brugeroverrode |tilsidesættede brugeren politikken via et politiktip | alle hændelser|
+|brug justering af tilsidesættelse |teksten til den årsag, som brugeren har angivet for tilsidesættelsen | alle hændelser|   
 
 ## <a name="see-also"></a>Se også
 
-- [Introduktion til dashboardet til forebyggelse af datatab](dlp-alerts-dashboard-get-started.md)
-- [Hvor starter jeg med forebyggelse af datatab?](create-test-tune-dlp-policy.md#where-to-start-with-data-loss-prevention)
+- [Kom i gang med dashboardet til advarsel om forebyggelse af datatab](dlp-alerts-dashboard-get-started.md)
+- [Her skal du starte med forebyggelse af datatab](create-test-tune-dlp-policy.md#where-to-start-with-data-loss-prevention)

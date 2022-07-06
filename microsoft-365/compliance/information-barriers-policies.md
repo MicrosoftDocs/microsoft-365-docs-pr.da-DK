@@ -1,7 +1,7 @@
 ---
 title: Kom i gang med informationsbarrierer
 description: Få mere at vide om, hvordan du kommer i gang med informationsbarrierer i Microsoft Purview.
-keywords: Microsoft 365, Microsoft Purview, overensstemmelse
+keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, informationsbarrierer
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -16,16 +16,14 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 74da3ee1c2b3339a66ff205989dd978fdd00a530
-ms.sourcegitcommit: 99494a5530ad64802f341573ad42796134190296
+ms.openlocfilehash: fde4db2d646ccb9c7535096ec001c0371e78da8f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65396222"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632261"
 ---
 # <a name="get-started-with-information-barriers"></a>Kom i gang med informationsbarrierer
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel beskrives det, hvordan du konfigurerer IB-politikker (Information Barriers) i din organisation. Der er flere trin involveret, så sørg for at gennemse hele processen, før du begynder at konfigurere IB-politikker.
 
@@ -38,7 +36,7 @@ Du kan finde flere oplysninger om IB-scenarier og -funktioner under [Få mere at
 
 ## <a name="required-subscriptions-and-permissions"></a>Påkrævede abonnementer og tilladelser
 
-Før du kommer i gang med IB, skal du bekræfte dit Microsoft 365 abonnement og eventuelle tilføjelsesprogrammer. Hvis du vil have adgang til og bruge IB, skal din organisation have et af følgende abonnementer eller tilføjelsesprogrammer:
+Før du går i gang med IB, skal du bekræfte dit Microsoft 365-abonnement og eventuelle tilføjelsesprogrammer. Hvis du vil have adgang til og bruge IB, skal din organisation have et af følgende abonnementer eller tilføjelsesprogrammer:
 
 - Microsoft 365 E5/A5-abonnement (betalt version eller prøveversion)
 - Office 365 E5/A5/A3/A1-abonnement (betalt version eller prøveversion)
@@ -46,11 +44,11 @@ Før du kommer i gang med IB, skal du bekræfte dit Microsoft 365 abonnement og 
 - Microsoft 365 E3/A3/A1-abonnement + tilføjelsesprogrammet Microsoft 365 E5/A5 Overholdelse
 - Microsoft 365 E3/A3/A1-abonnement + tilføjelsesprogrammet Microsoft 365 E5/A5 Insider Risk Management
 
-Du kan finde flere oplysninger [under Microsoft 365 licensvejledning til sikkerheds- & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
+Du kan finde flere oplysninger i [Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection).
 
 Hvis du vil [administrere politikker for IB](information-barriers-policies.md), skal du være tildelt en af følgende roller:
 
-- Microsoft 365 global administrator
+- Global Microsoft 365-administrator
 - Office 365 global administrator
 - Overholdelsesadministrator
 - Administration af IB-overholdelse
@@ -73,39 +71,39 @@ Når du konfigurerer IB, arbejder du med flere objekter og begreber.
 - **Politikprogrammet** udføres, når alle IB-politikker er defineret, og du er klar til at anvende dem i din organisation.
 - **Synlighed for ikke-IB-brugere og -grupper**. Ikke-IB-brugere og -grupper er brugere og grupper, der er udelukket fra IB-segmenter og -politikker. Afhængigt af typen af IB-politikker (blokere eller tillade) vil funktionsmåden for disse brugere og grupper variere i Microsoft Teams, SharePoint, OneDrive og på din globale adresseliste. For brugere, der er defineret i *tillad* politikker, vil ikke-IB-grupper og brugere ikke være synlige for brugere, der er inkluderet i IB-segmenter og -politikker. For brugere, der er defineret i *blokpolitikker* , vil ikke-IB-grupper og brugere være synlige for brugere, der er inkluderet i IB-segmenter og -politikker.
 - **Gruppesupport**. Det er i øjeblikket kun moderne grupper, der understøttes i IB, og distributionslister/sikkerhedsgrupper behandles som ikke-IB-grupper.
-- **Skjulte/deaktiverede brugerkonti**. For skjulte/deaktiverede konti i din organisation angives parameteren *HiddenFromAddressListEnabled* automatisk til *Sand* , når brugerkontiene skjules eller deaktiveres. I IB-aktiverede organisationer forhindres disse konti i at kommunikere med alle andre brugerkonti. I Microsoft Teams låses alle chats, herunder disse konti, eller brugerne fjernes automatisk fra samtaler.
+- **Skjulte/deaktiverede brugerkonti**. For skjulte/deaktiverede konti i din organisation angives parameteren *HiddenFromAddressListEnabled* automatisk til *Sand* , når brugerkontiene skjules eller deaktiveres. I IB-aktiverede organisationer forhindres disse konti i at kommunikere med alle andre brugerkonti. I Microsoft Teams er alle chats, herunder disse konti, låst, eller brugerne fjernes automatisk fra samtaler.
 
 ## <a name="configuration-overview"></a>Konfigurationsoversigt
 
 | **Trin** | **Hvad er involveret** |
 |:------|:----------------|
-| **Trin 1**: [Sørg for, at forudsætninger er opfyldt](#step-1-make-sure-prerequisites-are-met) | – Kontrollér, at du har de påkrævede abonnementer og tilladelser <br/>– Kontrollér, at mappen indeholder data til segmentering af brugere<br/>- Aktivér [søgning efter navn for Microsoft Teams](/microsoftteams/teams-scoped-directory-search)<br/>- Sørg for, at logføring af overvågning er slået til<br/>- Sørg for, at der ikke er nogen Exchange politikker for adressekartoteket <br/>– Angiv administratorsamtykke for Microsoft Teams (trinnene er inkluderet) |
+| **Trin 1**: [Sørg for, at forudsætninger er opfyldt](#step-1-make-sure-prerequisites-are-met) | – Kontrollér, at du har de påkrævede abonnementer og tilladelser <br/>– Kontrollér, at mappen indeholder data til segmentering af brugere<br/>- Aktivér [søgning efter navn for Microsoft Teams](/microsoftteams/teams-scoped-directory-search)<br/>- Sørg for, at logføring af overvågning er slået til<br/>- Sørg for, at der ikke er nogen politikker for Exchange-adressekartoteket på plads <br/>– Giv administratorsamtykke til Microsoft Teams (trinnene er inkluderet) |
 | **Trin 2**: [Segmentér brugere i din organisation](#step-2-segment-users-in-your-organization) | – Fastlæg, hvilke politikker der er behov for<br/>– Opret en liste over segmenter, der skal defineres<br/>- Identificer, hvilke attributter der skal bruges<br/>– Definer segmenter med hensyn til politikfiltre |
 | **Trin 3**: [Opret politikker for informationsbarrierer](#step-3-create-ib-policies) | – Opret dine politikker (gælder ikke endnu)<br/>- Vælg mellem to typer (blok eller tillad) |
 | **Trin 4**: [Anvendelse af politikker for informationsbarrierer](#step-4-apply-ib-policies) | – Angiv politikker til aktiv status<br/>- Kør politikprogrammet<br/>- Få vist politikstatus |
-| **Trin 5**: [Konfiguration af informationsbarrierer på SharePoint og OneDrive (valgfrit)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | – Konfigurer IB for SharePoint og OneDrive |
+| **Trin 5**: [Konfiguration af informationsbarrierer på SharePoint og OneDrive (valgfrit)](#step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive) | – Konfigurer IB til SharePoint og OneDrive |
 | **Trin 6**: [Informationsbarrierer (valgfrit)](#step-6-information-barriers-modes) | – Opdater IB-tilstande, hvis det er relevant |
 
 ## <a name="step-1-make-sure-prerequisites-are-met"></a>Trin 1: Sørg for, at forudsætninger er opfyldt
 
 Ud over de påkrævede abonnementer og tilladelser skal du sørge for, at følgende krav er opfyldt, før du konfigurerer IB:
 
-- **Mappedata**: Sørg for, at organisationens struktur afspejles i katalogdata. Hvis du vil udføre denne handling, skal du kontrollere, at brugerkontoattributterne (f.eks. gruppemedlemskab, afdelingsnavn osv.) er udfyldt korrekt i Azure Active Directory (eller Exchange Online). Du kan få mere at vide i følgende ressourcer:
+- **Mappedata**: Sørg for, at organisationens struktur afspejles i katalogdata. Hvis du vil udføre denne handling, skal du sørge for, at brugerkontoattributterne (f.eks. gruppemedlemskab, afdelingsnavn osv.) er udfyldt korrekt i Azure Active Directory (eller Exchange Online). Du kan få mere at vide i følgende ressourcer:
   - [Attributter for politikker for informationsbarrierer](information-barriers-attributes.md)
   - [Tilføj eller opdater en brugers profiloplysninger ved hjælp af Azure Active Directory](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal)
   - [Konfigurer egenskaber for brugerkonto med Office 365 PowerShell](../enterprise/configure-user-account-properties-with-microsoft-365-powershell.md)
 
-- **Områdebaseret katalogsøgning**: Før du definerer organisationens første IB-politik, skal du [aktivere områdebaseret katalogsøgning i Microsoft Teams](/MicrosoftTeams/teams-scoped-directory-search). Vent mindst 24 timer efter aktivering af områdebaseret katalogsøgning, før du konfigurerer eller definerer IB-politikker.
+- **Områdebaseret katalogsøgning**: Før du definerer din organisations første IB-politik, skal du [aktivere områdebaseret katalogsøgning i Microsoft Teams](/MicrosoftTeams/teams-scoped-directory-search). Vent mindst 24 timer efter aktivering af områdebaseret katalogsøgning, før du konfigurerer eller definerer IB-politikker.
 
-- **Kontrollér, at overvågningslogføring er aktiveret**: Hvis du vil slå status for et IB-politikprogram op, skal logføring af overvågning være aktiveret. Overvågning er som standard aktiveret for Microsoft 365 organisationer. Nogle organisationer kan have deaktiveret overvågning af bestemte årsager. Hvis overvågning er deaktiveret for din organisation, kan det skyldes, at en anden administrator har deaktiveret den. Vi anbefaler, at du bekræfter, at det er OK at aktivere overvågning igen, når du fuldfører dette trin. Du kan finde flere oplysninger under [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md).
+- **Kontrollér, at overvågningslogføring er aktiveret**: Hvis du vil slå status for et IB-politikprogram op, skal logføring af overvågning være aktiveret. Overvågning er som standard aktiveret for Microsoft 365-organisationer. Nogle organisationer kan have deaktiveret overvågning af bestemte årsager. Hvis overvågning er deaktiveret for din organisation, kan det skyldes, at en anden administrator har deaktiveret den. Vi anbefaler, at du bekræfter, at det er OK at aktivere overvågning igen, når du fuldfører dette trin. Du kan finde flere oplysninger under [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md).
 
 - **Fjern eksisterende Exchange Online politikker for adressekartoteket**: Før du definerer og anvender politikker for IB, skal du fjerne alle eksisterende Exchange Online politikker for adressekartoteket i din organisation. IB-politikker er baseret på politikker for adressekartoteker, og eksisterende ABP-politikker er ikke kompatible med de ABP'er, der er oprettet af IB. Hvis du vil fjerne dine eksisterende politikker for adressekartoteker, skal du se [Fjern en adressekartotekspolitik i Exchange Online](/exchange/address-books/address-book-policies/remove-an-address-book-policy). Du kan få flere oplysninger om IB-politikker og -Exchange Online under [Informationsbarrierer og Exchange Online](information-barriers.md#information-barriers-and-exchange-online).
 
 - **Administrer ved hjælp af PowerShell (valgfrit):** IB-segmenter og -politikker kan defineres og administreres i Office 365 Security & Compliance PowerShell. Selvom der er angivet flere eksempler i denne artikel, skal du have kendskab til PowerShell-cmdlet'er og -parametre, hvis du vælger at bruge PowerShell til at konfigurere og administrere IB-segmenter og -politikker. Du skal også bruge Azure Active Directory PowerShell-modulet, hvis du vælger denne konfigurationsindstilling.
-  - [PowerShell Forbind til sikkerhed & overholdelse af angivne standarder](/powershell/exchange/connect-to-scc-powershell)
+  - [Opret forbindelse til Security & Compliance PowerShell](/powershell/exchange/connect-to-scc-powershell)
   - [Installér Azure Active Directory PowerShell til Graph](/powershell/azure/active-directory/install-adv2)
 
-- **Administratorsamtykke for IB i Microsoft Teams**: Når dine IB-politikker er på plads, kan de fjerne brugere, der ikke overholder IB-politikken, fra Grupper (f.eks. Teams kanaler, der er baseret på grupper). Denne konfiguration hjælper med at sikre, at din organisation fortsat overholder politikker og regler. Brug følgende procedure til at aktivere, at IB-politikker fungerer som forventet i Microsoft Teams.
+- **Administration samtykke til IB i Microsoft Teams**: Når dine IB-politikker er på plads, kan de fjerne brugere, der ikke overholder IB-politikken, fra Grupper (f.eks. Teams-kanaler, der er baseret på grupper). Denne konfiguration hjælper med at sikre, at din organisation fortsat overholder politikker og regler. Brug følgende procedure til at aktivere, at IB-politikker fungerer som forventet i Microsoft Teams.
 
    1. Forudsætning: [Installér Azure Active Directory PowerShell til Graph](/powershell/azure/active-directory/install-adv2).
 
@@ -161,7 +159,7 @@ Find ud af, hvilke attributter i organisationens katalogdata du skal bruge til a
 Hvis du vil definere segmenter på overholdelsesportalen, skal du udføre følgende trin:
 
 1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
-2. På overholdelsesportalen skal du vælge **InformationsbarriererSegmenter** > .
+2. På overholdelsesportalen skal du vælge **Informationsbarrieresegmenter** > .
 3. På siden **Segmenter** skal du vælge **Nyt segment** for at oprette og konfigurere et nyt segment.
 4. Angiv et navn til segmentet på siden **Navn** . Du kan ikke omdøbe et segment, når det først er oprettet.
 5. Vælg **Næste**.
@@ -247,7 +245,7 @@ Lad os f.eks. antage, at du vil blokere kommunikation mellem Segment A og Segmen
 Hvis du vil definere politikker på overholdelsesportalen, skal du udføre følgende trin:
 
 1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
-2. På portalen til overholdelse skal du vælge **Politikker for informationsbarrierer** > .
+2. På overholdelsesportalen skal du vælge **Politikker for informationsbarrierer** > .
 3. På siden **Politikker** skal du vælge **Opret politik** for at oprette og konfigurere en ny IB-politik.
 4. Angiv et navn til politikken på siden **Navn** , og vælg derefter **Næste**.
 5. På siden **Tildelt segment** skal du vælge **Vælg segment**. Brug søgefeltet til at søge efter et segment efter navn, eller rul for at vælge segmentet på den viste liste. Vælg **Tilføj** for at føje det valgte segment til politikken. Du kan kun vælge ét segment.
@@ -294,7 +292,7 @@ Når du vil tillade, at et segment kun kommunikerer med ét andet segment, defin
 Hvis du vil definere politikker på overholdelsesportalen, skal du udføre følgende trin:
 
 1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
-2. På portalen til overholdelse skal du vælge **Politikker for informationsbarrierer** > .
+2. På overholdelsesportalen skal du vælge **Politikker for informationsbarrierer** > .
 3. På siden **Politikker** skal du vælge **Opret politik** for at oprette og konfigurere en ny IB-politik.
 4. Angiv et navn til politikken på siden **Navn** , og vælg derefter **Næste**.
 5. På siden **Tildelt segment** skal du vælge **Vælg segment**. Brug søgefeltet til at søge efter et segment efter navn, eller rul for at vælge segmentet på den viste liste. Vælg **Tilføj** for at føje det valgte segment til politikken. Du kan kun vælge ét segment.
@@ -341,7 +339,7 @@ IB-politikker er ikke i kraft, før du angiver dem til aktiv status og anvender 
 Hvis du vil anvende politikker på overholdelsesportalen, skal du udføre følgende trin:
 
 1. Log på [overholdelsesportalen](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din organisation.
-2. På overholdelsesportalen skal du vælge **Information barriersPolicy** >  **application**.
+2. På overholdelsesportalen skal du vælge **Program for politik for** **informationsbarrierer** > .
 3. På siden **Politikker-program** skal du vælge **Anvend alle politikker** for at anvende alle IB-politikker i din organisation.
 
     >[!NOTE]
@@ -388,30 +386,30 @@ Der findes ressourcer, der kan hjælpe dig med at administrere dine IB-politikke
 - Hvis du vil redigere, stoppe eller fjerne IB-politikker, skal du se [Administrer politikker for informationsbarrierer](information-barriers-edit-segments-policies.md).
 - Hvis noget går galt med IB, kan du se [Fejlfinding af informationsbarrierer](/office365/troubleshoot/information-barriers/information-barriers-troubleshooting).
 
-## <a name="step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive"></a>Trin 5: Konfiguration af informationsbarrierer for SharePoint og OneDrive
+## <a name="step-5-configuration-for-information-barriers-on-sharepoint-and-onedrive"></a>Trin 5: Konfiguration af informationsbarrierer på SharePoint og OneDrive
 
-Hvis du konfigurerer IB til SharePoint og OneDrive, skal du aktivere IB på disse tjenester. Du skal også aktivere IB på disse tjenester, hvis du konfigurerer IB til Microsoft Teams. Når der oprettes et team i Microsoft Teams team, oprettes der automatisk et SharePoint websted, som knyttes til Microsoft Teams til filoplevelsen. IB-politikker er ikke hædret på denne nye SharePoint websted og filer som standard.
+Hvis du konfigurerer IB til SharePoint og OneDrive, skal du aktivere IB på disse tjenester. Du skal også aktivere IB på disse tjenester, hvis du konfigurerer IB til Microsoft Teams. Når der oprettes et team i Microsoft Teams-teamet, oprettes der automatisk et SharePoint-websted, som knyttes til Microsoft Teams for filoplevelsen. IB-politikker anvendes ikke som standard på dette nye SharePoint-websted og de nye Filer.
 
-Hvis du vil aktivere IB i SharePoint og OneDrive, skal du følge vejledningen og trinnene i artiklen [Brug informationsbarrierer med SharePoint](/sharepoint/information-barriers).
+Hvis du vil aktivere IB i SharePoint og OneDrive, skal du følge vejledningen og trinnene i artiklen [Brug informationsbarrierer med SharePoint](/sharepoint/information-barriers) .
 
 ## <a name="step-6-information-barriers-modes"></a>Trin 6: Informationsbarrierer
 
-Tilstande kan hjælpe med at styrke adgang, deling og medlemskab af en Microsoft 365 ressource baseret på ressourcens IB-tilstand. Tilstande understøttes på Microsoft 365-grupper, Microsoft Teams, OneDrive og SharePoint websteder og aktiveres automatisk i din nye eller eksisterende IB-konfiguration.
+Tilstande kan hjælpe med at styrke adgang, deling og medlemskab af en Microsoft 365-ressource baseret på ressourcens IB-tilstand. Tilstande understøttes på Microsoft 365-grupper-, Microsoft Teams-, OneDrive- og SharePoint-websteder og aktiveres automatisk i din nye eller eksisterende IB-konfiguration.
 
-Følgende IB-tilstande understøttes i Microsoft 365 ressourcer:
+Følgende IB-tilstande understøttes på Microsoft 365-ressourcer:
 
 | **Tilstand** | **Beskrivelse** | **Eksempel** |
 |:-----|:------------|:--------|
-| **Åbne** | Der er ikke knyttet nogen IB-politikker eller -segmenter til den Microsoft 365 ressource. Alle kan inviteres til at være medlem af ressourcen. | Et teamwebsted, der er oprettet til picnicbegivenhed for din organisation. |
-| **Ejer ændret (prøveversion)** | IB-politikken for den Microsoft 365 ressource bestemmes ud fra ressourceejerens IB-politik. Ressourceejerne kan invitere alle brugere til ressourcen på baggrund af deres IB-politikker. Denne tilstand er nyttig, når din virksomhed ønsker at tillade samarbejde mellem inkompatible segmentbrugere, der er ændret af ejeren. Det er kun ressourceejeren, der kan tilføje nye medlemmer i henhold til deres IB-politik. | HR-vicedirektøren ønsker at samarbejde med VP'erne til salg og forskning. Et nyt SharePoint websted, der er angivet med Ejer i IB-tilstand *Begrænset* for at føje både brugere af salgs- og opslagssegmentet til det samme websted. Det er ejerens ansvar at sikre, at de relevante medlemmer føjes til ressourcen. |
-| **Implicit** | IB-politikken eller -segmenterne for den Microsoft 365 ressource nedarves fra ressourcemedlemmernes IB-politik. Ejeren kan tilføje medlemmer, så længe de er kompatible med de eksisterende medlemmer af ressourcen. Denne tilstand er standard-IB-tilstand for Microsoft Teams. | Brugeren af salgssegmentet opretter et Microsoft Teams team til at samarbejde med andre kompatible segmenter i organisationen. |
-| **Eksplicit** | IB-politikken for den Microsoft 365 ressource er pr. de segmenter, der er knyttet til ressourcen. Ressourceejeren eller SharePoint-administratoren har mulighed for at administrere segmenterne på ressourcen.  | Et websted, der kun er oprettet for medlemmer af salgssegmentet for at samarbejde ved at knytte segmentet Salg til webstedet.   |
+| **Åbne** | Der er ikke knyttet nogen IB-politikker eller -segmenter til Microsoft 365-ressourcen. Alle kan inviteres til at være medlem af ressourcen. | Et teamwebsted, der er oprettet til picnicbegivenhed for din organisation. |
+| **Ejer ændret (prøveversion)** | IB-politikken for Microsoft 365-ressourcen bestemmes ud fra ressourceejerens IB-politik. Ressourceejerne kan invitere alle brugere til ressourcen på baggrund af deres IB-politikker. Denne tilstand er nyttig, når din virksomhed ønsker at tillade samarbejde mellem inkompatible segmentbrugere, der er ændret af ejeren. Det er kun ressourceejeren, der kan tilføje nye medlemmer i henhold til deres IB-politik. | HR-vicedirektøren ønsker at samarbejde med VP'erne til salg og forskning. Et nyt SharePoint-websted, der er angivet med Ejer i IB-tilstand *Begrænset* for at føje både brugere af salgs- og forskningssegmentet til det samme websted. Det er ejerens ansvar at sikre, at de relevante medlemmer føjes til ressourcen. |
+| **Implicit** | IB-politikken eller -segmenterne i Microsoft 365-ressourcen nedarves fra ressourcemedlemmernes IB-politik. Ejeren kan tilføje medlemmer, så længe de er kompatible med de eksisterende medlemmer af ressourcen. Denne tilstand er standard-IB-tilstand for Microsoft Teams. | Brugeren af salgssegmentet opretter et Microsoft Teams-team for at samarbejde med andre kompatible segmenter i organisationen. |
+| **Eksplicit** | IB-politikken for Microsoft 365-ressourcen er pr. de segmenter, der er knyttet til ressourcen. Ressourceejeren eller SharePoint-administratoren har mulighed for at administrere segmenterne på ressourcen.  | Et websted, der kun er oprettet for medlemmer af salgssegmentet for at samarbejde ved at knytte segmentet Salg til webstedet.   |
 
 Du kan få flere oplysninger om IB-tilstande, og hvordan de er konfigureret på tværs af tjenester, i følgende artikler:
 
-- [Informationsbarrierer og -Microsoft Teams](/microsoftteams/information-barriers-in-teams)
-- [Informationsbarrierer og -OneDrive](/onedrive/information-barriers)
-- [Informationsbarrierer og -SharePoint](/sharepoint/information-barriers)
+- [Tilstande for informationsbarrierer og Microsoft Teams](/microsoftteams/information-barriers-in-teams)
+- [Informationsbarrieretilstande og OneDrive](/onedrive/information-barriers)
+- [Informationsbarrieretilstande og SharePoint](/sharepoint/information-barriers)
 
 ## <a name="example-scenario-contosos-departments-segments-and-policies"></a>Eksempelscenarie: Contosos afdelinger, segmenter og politikker
 

@@ -1,5 +1,5 @@
 ---
-title: liste over skabeloner Microsoft Purview Overholdelsesstyring
+title: Liste over skabeloner i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -16,17 +16,15 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Microsoft Purview Overholdelsesstyring indeholder skabeloner til oprettelse af vurderinger, der er i overensstemmelse med nationale, regionale og brancheregler, standarder og love.
-ms.openlocfilehash: 1ee28bc4ef79e6565086ba087055b8e00a0fe034
-ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+description: Microsoft Purview Compliance Manager indeholder skabeloner til oprettelse af vurderinger, der er i overensstemmelse med nationale, regionale og branchemæssige bestemmelser, standarder og love.
+ms.openlocfilehash: bfac79126f167b6ec8faaacb0134f97aaea0fe4d
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65692777"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631199"
 ---
 # <a name="compliance-manager-templates-list"></a>Liste over skabeloner til Overholdelsesstyring
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** Få vist den omfattende liste over **skabeloner** , der er tilgængelige til oprettelse af vurderinger i Overholdelsesstyring.
 
@@ -35,7 +33,7 @@ ms.locfileid: "65692777"
 
 ## <a name="overview"></a>Oversigt
 
-[Microsoft Purview Overholdelsesstyring](compliance-manager.md) indeholder et omfattende sæt skabeloner til oprettelse af vurderinger. Disse skabeloner kan hjælpe din organisation med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af data.
+[Microsoft Purview Compliance Manager](compliance-manager.md) indeholder et omfattende sæt skabeloner til oprettelse af vurderinger. Disse skabeloner kan hjælpe din organisation med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af data.
 
 Skabeloner føjes til Overholdelsesstyring, efterhånden som nye love og bestemmelser bliver vedtaget. Overholdelsesstyring opdaterer også sine skabeloner, når de underliggende love eller bestemmelser ændres. Få mere at vide om, hvordan [du gennemser og accepterer opdateringer](compliance-manager-assessments.md#accept-updates-to-assessments).
 
@@ -43,7 +41,7 @@ Skabeloner føjes til Overholdelsesstyring, efterhånden som nye love og bestemm
 
 Nedenfor er den komplette liste over skabeloner i Overholdelsesstyring. Skabelonnavne stemmer overens med den tilknyttede forordning eller certificering. Hvor det er muligt, fører links i skabelonnavnene nedenfor dig til relateret dokumentation om den pågældende standard, regulering eller lovgivning.
 
-Hver skabelon (undtagen [standardskabelonen microsoft Data Protection Baseline](compliance-manager-assessments.md#data-protection-baseline-default-assessment)) er tilgængelig i mindst én version, der er designet til brug sammen med et bestemt produkt, f.eks. Microsoft 365, sammen med en universel version, som du kan bruge til at vurdere andre produkter efter eget valg. Du kan få mere at vide om skabelonindstillinger under [Få mere at vide om vurderingsskabeloner](compliance-manager-templates.md).
+Hver skabelon (undtagen [standardskabelonen Microsoft Data Protection Baseline](compliance-manager-assessments.md#data-protection-baseline-default-assessment) ) er tilgængelig i mindst én version, der er designet til brug sammen med et bestemt produkt, f.eks. Microsoft 365, sammen med en universel version, som du kan bruge til at vurdere andre produkter efter eget valg. Du kan få mere at vide om skabelonindstillinger under [Få mere at vide om vurderingsskabeloner](compliance-manager-templates.md).
 
 Du kan også vælge individuelle skabeloner i Overholdelsesstyring for at få vist flere oplysninger om dem, herunder en beskrivelse af forordningen og egenskaberne for skabelonen. Læs afsnittet **Om** for at få en oversigt.
 
@@ -72,7 +70,7 @@ En eller flere af de skabeloner, der er angivet nedenfor, er inkluderet som en d
 - NIST 800-53 Revs. 4 og 5
 
 > [!NOTE]
-> For kunder med GCC (US Government Community) Moderate, GCC High og DoD (Department of Defense): CmMC-skabelonerne (Cybersecurity Maturity Model Certification) på niveau 1 til 5 er inkluderet ud over de skabeloner, der er angivet ovenfor.
+> For GCC-kunder (US Government Community) Moderate, GCC High og DoD (Department of Defense): CmMC-skabelonerne (Cybersecurity Maturity Model Certification) på niveau 1 til 5 er inkluderet ud over de skabeloner, der er angivet ovenfor.
 
 ## <a name="preview-templates"></a>Eksempelskabeloner
 
@@ -89,7 +87,7 @@ De skabeloner, der er angivet nedenfor, er i øjeblikket tilgængelige som prøv
 - ISO 27018:2019 til Azure (prøveversion)
 - ISO 27018:2019 til Dynamics 365 (prøveversion)
 
-## <a name="premium-templates"></a>Premium skabeloner
+## <a name="premium-templates"></a>Premium-skabeloner
 
 De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 
@@ -140,7 +138,7 @@ De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 - Forordning om beskyttelse af personlige oplysninger om forbrugeroplysninger, NAIC MDL-672, 2. kvartal 2017  
 - Revision af principperne for forsvarlig forvaltning af driftsrisici (Basel III Ops-risici)  
 - Standardiseret spørgeskema om indsamling af oplysninger (SIG)  
-- [Sikkerhedsvurdering af oplysninger, der er tillid til, Exchange](/compliance/regulatory/offering-tisax-germany)
+- [Udveksling af sikkerhedsvurderinger af oplysninger, der er tillid til](/compliance/regulatory/offering-tisax-germany)
 
 ### <a name="us-government"></a>US Government
 
@@ -287,7 +285,7 @@ De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 - Australien – ASD Essential 8 Maturity Level 2
 - Australien – ASD Essential 8 Maturity Level 3
 - Australien – nationalarkivloven
-- Australien – offentlige poster Office Victoria Recordkeeping Standards  
+- Australien – Offentlige poster Office Victoria Recordkeeping Standards  
 - Australien - Spam Act 2003  
 - Kode for beskyttelse af personlige oplysninger i Australien (kreditrapportering)  
 - Australiens lov om beskyttelse af personlige oplysninger  
@@ -440,7 +438,7 @@ De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 
 - Canada - Sikkerhedskontrolforseelse  
 - Canada – British Columbia – Information Privacy & Security – FOIPPA  
-- [Canada – Office af vejledningen til overintendent for finansielle institutioner Self-Assessment for cybersikkerhed](/compliance/regulatory/offering-osfi-canada)  
+- [Canada – Vejledning til tilsynet med finansielle institutioner Cyber Security Self-Assessment](/compliance/regulatory/offering-osfi-canada)  
 - Canada – Loven om Information Protection om personlig sundhed (PHIPA) 2020  
 - Canada – loven om personlige Information Protection og elektroniske dokumenter (PIPEDA)  
 - Canada – beskyttet B

@@ -11,13 +11,13 @@ ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.localizationpriority: medium
 ROBOTS: ''
-description: Få mere at vide om, hvordan du bruger SharePoint Syntex til at identificere kontraktfiler og udtrække data ved hjælp af en Microsoft 365 løsning.
-ms.openlocfilehash: 7d2874260ce7a307aa42c67ba571104ed4c4da87
-ms.sourcegitcommit: 344a254ca268a2f65cf199d9158a47e08861ffa5
+description: Få mere at vide om, hvordan du bruger SharePoint Syntex til at identificere kontraktfiler og udtrække data ved hjælp af en Microsoft 365-løsning.
+ms.openlocfilehash: 2d9967cc432cb4d75bebbc67b7b9b0a812baa031
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "65368083"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631975"
 ---
 # <a name="step-1-use-sharepoint-syntex-to-identify-contract-files-and-extract-data"></a>Trin 1. Brug SharePoint Syntex til at identificere kontraktfiler og udtrække data
 
@@ -35,7 +35,7 @@ Modeller til dokumentforståelse bruger OCR-teknologien (Optical Character Recog
 
 3. I din model kan du [oprette en udtrækningsmaskine](create-an-extractor.md) for at udtrække bestemte data fra hver kontrakt. For hver kontrakt er de oplysninger, du er mest bekymret for, f.eks. hvem kunden er, navnet på underleverandøren og de samlede omkostninger.
 
-4. Når du har oprettet din model, [kan du anvende den på et SharePoint dokumentbibliotek](apply-a-model.md). Når du uploader dokumenter til dokumentbiblioteket, kører modellen til dokumentforståelse og identificerer og klassificerer alle filer, der svarer til den kontraktindholdstype, du har defineret i din model. Alle filer, der er klassificeret som kontrakter, vises i en brugerdefineret biblioteksvisning. Filerne viser også værdierne fra hver kontrakt, du har defineret i udtrækningen.
+4. Når du har oprettet din model, [kan du anvende den på et SharePoint-dokumentbibliotek](apply-a-model.md). Når du uploader dokumenter til dokumentbiblioteket, kører modellen til dokumentforståelse og identificerer og klassificerer alle filer, der svarer til den kontraktindholdstype, du har defineret i din model. Alle filer, der er klassificeret som kontrakter, vises i en brugerdefineret biblioteksvisning. Filerne viser også værdierne fra hver kontrakt, du har defineret i udtrækningen.
 
    ![Kontrakter i dokumentbiblioteket.](../media/content-understanding/doc-lib-solution.png)
 
@@ -65,7 +65,7 @@ Det første trin er at oprette din kontraktmodel.
 
 Du skal tilføje mindst fem eksempelfiler, der er kontraktdokumenter, og én eksempelfil, der ikke er et kontraktdokument (f.eks. en arbejdserklæring). 
 
-1. Vælg **Tilføj filer** under **NøglehandlingerTilføj** >  **eksempelfiler** på siden **Modeller > Kontrakt**.
+1. Vælg **Tilføj** filer under **Nøglehandlinger** > **Tilføj eksempelfiler** på siden **Modeller > Kontrakt**.
 
    ![Skærmbillede, der viser siden Kontrakter med indstillingen Tilføj eksempelfiler fremhævet.](../media/content-understanding/key-actions-add-example-files.png)
 
@@ -73,7 +73,7 @@ Du skal tilføje mindst fem eksempelfiler, der er kontraktdokumenter, og én eks
 
 #### <a name="label-the-files-as-positive-or-negative-examples"></a>Mærk filerne som positive eller negative eksempler
 
-1. På siden **Modeller > Kontrakt** under **NøglehandlingerKlassificer** >  filer, og kør oplæring skal du vælge **Oplær klassificering**.
+1. Vælg **Oplær klassificering** under **Nøglehandlinger** > **Klassificer filer og kør oplæring** på siden **Modeller > Kontrakt**.
 
    ![Skærmbillede, der viser siden Kontrakter med indstillingen Klassificer filer og kør oplæring fremhævet.](../media/content-understanding/key-actions-classify-files.png)
 
@@ -117,7 +117,7 @@ Du kan teste din Kontraktmodel på eksempelfiler, den ikke har set før. Dette e
 
 ### <a name="create-and-train-an-extractor"></a>Opret og oplær en udtrækningsmaskine
 
-1. På siden **Modeller > Kontrakt** under **NøglehandlingerOpret** >  **og oplær udtræksmaskiner** skal du vælge **Opret udtrækningsmaskine**.
+1. På siden **Modeller > Kontrakt** under **Nøglehandlinger** > **Opret og oplær udtrækninger** skal du vælge **Opret udtrækningsmaskine**.
 
    ![Skærmbillede, der viser siden Kontrakter med indstillingen Opret og oplær udtræk fremhævet.](../media/content-understanding/key-actions-create-extractors.png)
 
@@ -149,7 +149,7 @@ Du kan oprette en forklaring, der giver et tip om selve enhedsformatet og de var
 - 14. oktober 2019
 - Mandag den 14. oktober 2019
 
-Hvis du vil identificere *kontraktens startdato*, kan du oprette en mønsterforklaring.
+Hvis du vil identificere *kontraktens startdato*, kan du oprette en forklaring.
 
 1. I afsnittet **Forklaringer** skal du vælge **Ny** og derefter **Tom**.
 
@@ -157,7 +157,7 @@ Hvis du vil identificere *kontraktens startdato*, kan du oprette en mønsterfork
 
     a. I feltet **Navn** skal du skrive navnet på forklaringen (f.eks *. Dato*).
 
-    b. Vælg **Mønsterliste** i feltet **Forklaringstype**.
+    b. I feltet **Forklaringstype** skal du vælge **Sætningsliste**.
 
     c. I feltet **Værdi** skal du angive datovariationen, som de vises i eksempelfilerne. Hvis du f.eks. har datoformater, der vises som 00/00/0000, skal du angive eventuelle variationer, der vises i dine dokumenter, f.eks.:
 
@@ -180,13 +180,13 @@ Du kan teste din Kontraktmodel på eksempelfiler, den ikke har set før. Dette e
 
 ### <a name="apply-your-model-to-a-document-library"></a>Anvend din model på et dokumentbibliotek
 
-Sådan anvender du din model på et SharePoint dokumentbibliotek:
+Sådan anvender du din model på et SharePoint-dokumentbibliotek:
 
-1. Vælg **Anvend model** under **NøglehandlingerAnvend** >  **model til biblioteker** på siden **Modeller > Kontrakt**.
+1. Vælg **Anvend model** under **Nøglehandlinger** > **Anvend model på biblioteker** på siden **Modeller > Kontrakt**.
 
    ![Skærmbillede, der viser siden Kontrakter med indstillingen Anvend model på biblioteker fremhævet.](../media/content-understanding/key-actions-apply-model.png)
 
-2. I panelet **Tilføj kontrakt** skal du vælge det SharePoint websted, der indeholder det dokumentbibliotek, du vil anvende modellen på. Hvis webstedet ikke vises på listen, skal du bruge søgefeltet til at finde det. Vælg **Tilføj**.
+2. I panelet **Tilføj kontrakt** skal du vælge det SharePoint-websted, der indeholder det dokumentbibliotek, du vil anvende modellen på. Hvis webstedet ikke vises på listen, skal du bruge søgefeltet til at finde det. Vælg **Tilføj**.
 
     > [!NOTE]
     > Du skal have *tilladelserne Administrer liste* eller *Rediger* til det dokumentbibliotek, du anvender modellen på.
@@ -197,11 +197,11 @@ Sådan anvender du din model på et SharePoint dokumentbibliotek:
 
 5. Vælg **Tilføj** for at anvende modellen på biblioteket.
 
-6. På siden **Modeller > kontrakt** kan du i afsnittet **Biblioteker med denne model** se URL-adressen til det SharePoint websted, der er angivet.
+6. På siden **Modeller > kontrakt** kan du i afsnittet **Biblioteker med denne model** se URL-adressen til det SharePoint-websted, der er angivet.
 
     ![Skærmbillede af startsiden kontrakt, der viser sektionen Biblioteker med denne model.](../media/content-understanding/contract-libraries-with-this-model.png)
 
-7. Under **Indstillinger** >  **Library-indstillinger**:
+7. Under **Indstillinger for** > **biblioteksindstillinger**:
 
    - Tilføj en kolonne med navnet **Status,** og vælg **Valg** som kolonnetype.
    - Anvend værdierne **I gennemsyn**, **Godkendt** og **Afvist** .

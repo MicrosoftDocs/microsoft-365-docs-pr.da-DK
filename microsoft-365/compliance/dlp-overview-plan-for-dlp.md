@@ -15,16 +15,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Oversigt over planlægningsprocessen for forebyggelse af datatab
-ms.openlocfilehash: 68e2b3145521433dd8e0f602b8edb571c45ed9df
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: afda017b2cc627876134888a83f70e9464aba2c8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64953443"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634439"
 ---
 # <a name="plan-for-data-loss-prevention-dlp"></a>Plan for forebyggelse af datatab (DLP)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hver organisation planlægger og implementerer DLP (forebyggelse af datatab) forskelligt, fordi hver organisations forretningsmæssige behov, mål, ressourcer og situation er unikke for dem. Der er dog elementer, der er fælles for alle vellykkede DLP-implementeringer. Denne artikel præsenterer de bedste fremgangsmåder, der bruges af organisationer i deres DLP-planlægning.
 
@@ -34,17 +32,17 @@ Mange organisationer vælger at implementere DLP for at overholde forskellige st
 
 Organisationer kan starte deres DLP-rejse:
 
-- fra et platformfokus, f.eks. at ville beskytte oplysninger i Teams chat- og kanalmeddelelser eller på Windows 10 enheder
+- fra et platformfokus, f.eks. at ville beskytte oplysninger i Teams Chat- og Kanalmeddelelser eller på Windows 10 enheder
 - at vide, hvilke følsomme oplysninger de ønsker at prioritere beskyttelse, f.eks. sundhedsjournaler, og gå direkte til at definere politikker for at beskytte dem
 - uden at vide, hvad deres følsomme oplysninger er, hvor de er, og hvem der gør hvad med det, så de starter med opdagelse og kategorisering og tager en mere metodisk tilgang
 - uden at vide, hvad deres følsomme oplysninger er, hvor de er, eller hvem der gør hvad med dem, men de vil gå direkte til at definere politikker og bruge disse resultater som udgangspunkt og derefter tilpasse deres politikker derfra
-- vel vidende, at de har brug for at implementere hele Microsoft Purview Information Protection stakken og derfor har til hensigt at tage en længere sigt, metodisk tilgang
+- ved at vide, at de har brug for at implementere hele Microsoft Purview Information Protection stakken og derfor har til hensigt at tage en længere, metodisk tilgang
 
 Dette er blot nogle eksempler på, hvordan kunder kan nærme sig DLP, og det betyder ikke noget, hvor du starter fra, DLP er fleksibel nok til at imødekomme forskellige typer af informationsbeskyttelsesrejser fra start til en fuldt realiseret strategi til forebyggelse af datatab. 
 
 ## <a name="overview-of-planning-process"></a>Oversigt over planlægningsprocessen
 
-[I Learn about Microsoft Purview Data Loss Prevention](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) introduceres de tre forskellige aspekter af [DLP-planlægningsprocessen](dlp-learn-about-dlp.md#plan-for-dlp). Vi går mere i detaljer her om de elementer, der er fælles for alle DLP-planer.
+[I Learn about Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md#learn-about-data-loss-prevention) introduceres de tre forskellige aspekter af [DLP-planlægningsprocessen](dlp-learn-about-dlp.md#plan-for-dlp). Vi går mere i detaljer her om de elementer, der er fælles for alle DLP-planer.
 
 ### <a name="identify-stakeholders"></a>Identificer interessenter
 
@@ -142,15 +140,15 @@ Når din organisation ved, hvor den står med hensyn til lovmæssige overholdels
 
 De elementer, der indeholder dine organisationers følsomme oplysninger, bruges hver dag i forbindelse med forretning. Du skal vide, hvor forekomster af disse følsomme oplysninger kan forekomme, og hvilke forretningsprocesser de bruges i. Dette hjælper dig med at vælge de rigtige placeringer, som dine DLP-politikker skal anvendes på. DLP-politikker anvendes på placeringer:
 
-- Exchange mail
-- SharePoint websteder
-- OneDrive konti
-- Teams chat- og kanalmeddelelser
+- Exchange-mail
+- SharePoint-websteder
+- OneDrive-konti
+- Teams-chat- og kanalmeddelelser
 - Windows 10 enheder
 - Microsoft Defender for Cloud Apps
 - Lagre i det lokale miljø
 
-**Eksempel** Din organisations interne auditører sporer et sæt kreditkortnumre. De opbevarer et regneark med dem på et sikkert SharePoint websted. Flere af medarbejderne kopierer og gemmer dem på deres arbejds OneDrive for Business websted, som synkroniseres med deres Windows 10 enhed. En af dem indsætter en liste over 14 af dem i en mail og forsøger at sende den til eksterne revisorer til gennemsyn. Du vil anvende politikken på webstedet for sikre SharePoint, alle interne revisorer OneDrive for Business konti, deres Windows 10 enheder og Exchange mail.
+**Eksempel** Din organisations interne auditører sporer et sæt kreditkortnumre. De opbevarer et regneark med dem på et sikkert SharePoint-websted. Flere af medarbejderne kopierer og gemmer dem på deres arbejds OneDrive for Business websted, som synkroniseres med deres Windows 10 enhed. En af dem indsætter en liste over 14 af dem i en mail og forsøger at sende den til eksterne revisorer til gennemsyn. Du vil anvende politikken på det sikre SharePoint-websted, alle interne revisorer OneDrive for Business konti, deres Windows 10 enheder og Exchange-mail.
 
 ##### <a name="what-is-your-organizations-tolerance-for-leakage"></a>Hvad er din organisations tolerance for lækage?
 
@@ -173,9 +171,9 @@ Når du opretter dine DLP-politikker, bør du overveje at udrulle dem gradvist f
   
 Hvis du opretter DLP-politikker med stor potentiel indvirkning, anbefaler vi, at du følger denne sekvens:
   
-1. **Start i testtilstand uden Tips politik**, og brug derefter DLP-rapporterne og eventuelle hændelsesrapporter til at vurdere virkningen. Du kan bruge DLP-rapporter til at få vist antallet, placeringen, typen og alvorsgraden af politikforekomster. Baseret på resultaterne kan du finjustere politikkerne efter behov. I testtilstand påvirker DLP-politikker ikke produktiviteten hos personer, der arbejder i din organisation. Brug også denne fase til at teste din arbejdsproces til gennemsyn af DLP-hændelser og problemafhjælpning.
+1. **Start i testtilstand uden politiktips** , og brug derefter DLP-rapporterne og eventuelle hændelsesrapporter til at vurdere virkningen. Du kan bruge DLP-rapporter til at få vist antallet, placeringen, typen og alvorsgraden af politikforekomster. Baseret på resultaterne kan du finjustere politikkerne efter behov. I testtilstand påvirker DLP-politikker ikke produktiviteten hos personer, der arbejder i din organisation. Brug også denne fase til at teste din arbejdsproces til gennemsyn af DLP-hændelser og problemafhjælpning.
     
-2. **Flyt til testtilstand med meddelelser og politik Tips**, så du kan begynde at lære brugerne om dine politikker for overholdelse af angivne standarder og forberede dem på de politikker, der skal anvendes. Det er nyttigt at have et link til en side med organisationspolitik, der indeholder flere oplysninger om politikken i politiktippen. I denne fase kan du også bede brugerne om at rapportere falske positiver, så du kan tilpasse politikkerne yderligere. Gå til denne fase, når du har tillid til, at resultaterne af politikprogrammet stemmer overens med det, de interessenter havde i tankerne. 
+2. **Flyt til testtilstand med meddelelser og politiktips** , så du kan begynde at lære brugerne om dine politikker for overholdelse af angivne standarder og forberede dem på de politikker, der skal anvendes. Det er nyttigt at have et link til en side med organisationspolitik, der indeholder flere oplysninger om politikken i politiktippen. I denne fase kan du også bede brugerne om at rapportere falske positiver, så du kan tilpasse politikkerne yderligere. Gå til denne fase, når du har tillid til, at resultaterne af politikprogrammet stemmer overens med det, de interessenter havde i tankerne. 
     
 3. **Start fuld håndhævelse af politikkerne** , så handlingerne i reglerne anvendes, og indholdet er beskyttet. Fortsæt med at overvåge DLP-rapporterne og eventuelle hændelsesrapporter eller meddelelser for at sikre, at resultaterne er, hvad du har tænkt dig. 
 
@@ -201,9 +199,9 @@ De forordninger, love og branchestandarder, som din organisation er underlagt, �
 
 |Beskrivelse af kundeforretningsbehov  | Tilgang  |
 |---------|---------|
-|**Contoso Bank** er i en yderst reguleret branche og har mange forskellige typer følsomme varer på mange forskellige placeringer. </br> - ved, hvilke typer følsomme oplysninger der har førsteprioritet. </br> - skal minimere afbrydelser i virksomheden, efterhånden som politikkerne udrulles. </br> – har it-ressourcer og kan hyre eksperter til at hjælpe med at planlægge, designe udrulning </br> - har en Premier Support-kontrakt med Microsoft| - Tag dig tid til at forstå, hvilke regler de skal overholde, og hvordan de skal overholde. </br> -Tag dig tid til at forstå værdien af Microsoft Purview Information Protection-stakken </br> – Udvikl skemaet for følsomhedsmærkater for prioriterede elementer, og anvend </br> - Involver ejere af forretningsprocesser </br>- Design-/kodepolitikker, udrul i testtilstand, oplær brugere </br>- gentag|
-|**TailSpin Toys** ved ikke, hvad de har, eller hvor det er, og har kun lidt eller ingen ressourcedybde. De bruger Teams, OneDrive for Business og Exchange omfattende.     |– Start med enkle politikker for de prioriterede placeringer. </br>- Overvåge, hvad der bliver identificeret </br>- Anvend følsomhedsmærkater i overensstemmelse hermed </br>– Afgræns politikker, oplær brugere       |
-|**Fabrikam** er en lille nystartet virksomhed og ønsker at beskytte sin intellektuelle ejendom og skal bevæge sig hurtigt. De er villige til at dedikere nogle ressourcer, men har ikke råd til at ansætte eksterne eksperter. </br>- Følsomme elementer findes alle i Microsoft 365 OneDrive for Business/SharePoint </br>- Indførelse af OneDrive for Business og SharePoint er langsom, medarbejdere / skygge IT bruger DropBox og Google drev til at dele / gemme elementer </br>- Medarbejdere sætter pris på, hvor hurtigt arbejdet går i forhold til databeskyttelsesdisciplinen </br>- Kunde splurged og købte alle 18 medarbejdere nye Windows 10 enheder     |– Udnyt standardpolitikken for forebyggelse af databegivenheden i Teams </br>– Brug begrænset som standardindstilling for SharePoint elementer </br>– Udrul politikker, der forhindrer ekstern deling </br>– Udrul politikker på prioriterede placeringer </br>– Udrul politikker på Windows 10 enheder </br>– Bloker uploads til et cloudlager, der ikke er OneDrive for Business      |
+|**Contoso Bank** er i en yderst reguleret branche og har mange forskellige typer følsomme varer på mange forskellige placeringer. </br> - ved, hvilke typer følsomme oplysninger der har førsteprioritet. </br> - skal minimere afbrydelser i virksomheden, efterhånden som politikkerne udrulles. </br> – har it-ressourcer og kan hyre eksperter til at hjælpe med at planlægge, designe udrulning </br> - har en Premier Support-kontrakt med Microsoft| - Tag dig tid til at forstå, hvilke regler de skal overholde, og hvordan de skal overholde. </br> -Tag dig tid til at forstå værdien af Microsoft Purview Information Protection stakken </br> – Udvikl skemaet for følsomhedsmærkater for prioriterede elementer, og anvend </br> - Involver ejere af forretningsprocesser </br>- Design-/kodepolitikker, udrul i testtilstand, oplær brugere </br>- gentag|
+|**TailSpin Toys** ved ikke, hvad de har, eller hvor det er, og har kun lidt eller ingen ressourcedybde. De bruger Teams, OneDrive for Business og Exchange i vid udstrækning.     |– Start med enkle politikker for de prioriterede placeringer. </br>- Overvåge, hvad der bliver identificeret </br>- Anvend følsomhedsmærkater i overensstemmelse hermed </br>– Afgræns politikker, oplær brugere       |
+|**Fabrikam** er en lille nystartet virksomhed og ønsker at beskytte sin intellektuelle ejendom og skal bevæge sig hurtigt. De er villige til at dedikere nogle ressourcer, men har ikke råd til at ansætte eksterne eksperter. </br>– Følsomme elementer findes alle i Microsoft 365 OneDrive for Business/SharePoint </br>- Ibrugtagningen af OneDrive for Business og SharePoint er langsom, medarbejdere/skygge-it bruger DropBox og Google-drev til at dele/gemme elementer </br>- Medarbejdere sætter pris på, hvor hurtigt arbejdet går i forhold til databeskyttelsesdisciplinen </br>- Kunde splurged og købte alle 18 medarbejdere nye Windows 10 enheder     |– Udnyt standardpolitikken for forebyggelse af databegivenheden i Teams </br>– Brug begrænset som standardindstilling for SharePoint-elementer </br>– Udrul politikker, der forhindrer ekstern deling </br>– Udrul politikker på prioriterede placeringer </br>– Udrul politikker på Windows 10 enheder </br>– Bloker uploads til et cloudlager, der ikke er OneDrive for Business      |
 
 <!--
 

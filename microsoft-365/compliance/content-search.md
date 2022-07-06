@@ -1,5 +1,5 @@
 ---
-title: Opret og kør en indholdssøgning på Microsoft Purview-overholdelsesportalen
+title: Opret og kør en indholdssøgning i Microsoft Purview-compliance-portal
 f1.keywords:
 - NOCSH
 ms.author: v-tophillips
@@ -20,29 +20,27 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-description: Brug eDiscovery-værktøjet til indholdssøgning i Overholdelsescenter til at søge efter indhold i forskellige Microsoft 365 tjenester.
-ms.openlocfilehash: 90b1ce142b5d629be86ba058071af906485e765f
-ms.sourcegitcommit: b16520d8bfe04b29274f7a129d90ef116bb77f69
+description: Brug eDiscovery-værktøjet til indholdssøgning i Overholdelsescenter til at søge efter indhold i forskellige Microsoft 365-tjenester.
+ms.openlocfilehash: 3c5e4191c34db9d31ce54494f2677e75f3cae3bf
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65231709"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632613"
 ---
 # <a name="create-a-content-search"></a>Opret en indholdssøgning
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Du kan bruge eDiscovery-værktøjet til indholdssøgning på Microsoft Purview-overholdelsesportalen til at søge efter indhold på stedet, f.eks. mail, dokumenter og chatsamtaler i din organisation. Brug dette værktøj til at søge efter indhold i disse skybaserede Microsoft 365 datakilder:
+Du kan bruge eDiscovery-værktøjet til indholdssøgning i Microsoft Purview-compliance-portal til at søge efter indhold på stedet, f.eks. mail, dokumenter og chatsamtaler i din organisation. Brug dette værktøj til at søge efter indhold i disse skybaserede Microsoft 365-datakilder:
   
 - Exchange Online postkasser
 
-- SharePoint onlinewebsteder og OneDrive for Business konti
+- SharePoint Online-websteder og -OneDrive for Business-konti
 
 - Microsoft Teams
 
 - Microsoft 365-grupper
 
-- Yammer grupper
+- Yammer-grupper
 
 Når du har kørt en søgning, vises antallet af indholdsplaceringer og et anslået antal søgeresultater på søgevinduet. Du kan hurtigt få vist statistikker, f.eks. de indholdsplaceringer, der har flest elementer, der svarer til søgeforespørgslen. Når du har kørt en søgning, kan du få vist resultaterne eller eksportere dem til en lokal computer.
 
@@ -50,9 +48,9 @@ Når du har kørt en søgning, vises antallet af indholdsplaceringer og et ansl�
 
 - Hvis du vil have adgang til indholdssøgeværktøjet på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">overholdelsesportalen</a> (for at køre søgninger og få vist resultater og eksportere resultater), skal en administrator, overholdelsesofficer eller eDiscovery-leder være medlem af rollegruppen eDiscovery Manager i overholdelsesportalen. Du kan finde flere oplysninger under [Tildel eDiscovery-tilladelser](assign-ediscovery-permissions.md).
 
-- I en Exchange hybridinstallation kan du ikke bruge søgeværktøjet Indhold til at søge efter mails i postkasser i det lokale miljø. Du kan kun bruge værktøjet til at søge i skybaserede postkasser.
+- I en Exchange-hybridinstallation kan du ikke bruge søgeværktøjet Indhold til at søge i mails i postkasser i det lokale miljø. Du kan kun bruge værktøjet til at søge i skybaserede postkasser.
 
-- I en Exchange hybridinstallation kan du søge efter Teams chatdata i postkasser i det lokale miljø. Du kan få flere oplysninger under [Teams chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users?view=o365-worldwide).
+- I en Exchange-hybridinstallation kan du søge efter Teams-chatdata i lokale postkasser. Du kan få flere oplysninger under [Teams-chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users).
 
 ## <a name="create-and-run-a-search"></a>Opret og kør en søgning
   
@@ -68,13 +66,13 @@ Når du har kørt en søgning, vises antallet af indholdsplaceringer og et ansl�
 
     ![Vælg de indholdsplaceringer, der skal placeres i venteposition.](../media/ContentSearchLocations.png)
   
-   1. **Exchange postkasser**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg brugere, grupper eller teams** for at angive de postkasser, der skal sættes i venteposition. Brug søgefeltet til at finde brugerpostkasser og distributionsgrupper. Du kan også søge i den postkasse, der er knyttet til et Microsoft-team (efter kanalmeddelelser), Office 365 gruppe og Yammer gruppe. Du kan finde flere oplysninger om de programdata, der er gemt i postkasser, [under Indhold, der er gemt i postkasser til eDiscovery](what-is-stored-in-exo-mailbox.md).
+   1. **Exchange-postkasser**: Angiv til/fra-knappen til **Til** , og klik derefter på **Vælg brugere, grupper eller teams** for at angive de postkasser, der skal sættes i venteposition. Brug søgefeltet til at finde brugerpostkasser og distributionsgrupper. Du kan også søge i den postkasse, der er knyttet til et Microsoft-team (efter kanalmeddelelser), Office 365-gruppe og Yammer-gruppe. Du kan finde flere oplysninger om de programdata, der er gemt i postkasser, [under Indhold, der er gemt i postkasser til eDiscovery](what-is-stored-in-exo-mailbox.md).
 
-   2. **SharePoint websteder**: Angiv til/fra-knappen til **Til**, og klik derefter på **Vælg websteder** for at angive, SharePoint websteder og OneDrive konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til det SharePoint websted for et Microsoft-team, en Office 365-gruppe eller en Yammer-gruppe.
+   2. **SharePoint-websteder**: Angiv til/fra-knappen til **Til** , og klik derefter på **Vælg websteder** for at angive SharePoint-websteder og OneDrive-konti, der skal sættes i venteposition. Skriv URL-adressen for hvert websted, du vil placere i venteposition. Du kan også tilføje URL-adressen til SharePoint-webstedet for et Microsoft-team, en Office 365-gruppe eller en Yammer-gruppe.
   
-   3. **Exchange offentlige mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
+   3. **Offentlige Exchange-mapper**: Indstil til/fra-knappen til **Til** for at sætte alle offentlige mapper i din Exchange Online organisation i venteposition. Du kan ikke vælge bestemte offentlige mapper, der skal sættes i venteposition. Lad til/fra-knappen være slået fra, hvis du ikke vil sætte offentlige mapper i venteposition.
   
-   4. Markér dette afkrydsningsfelt for at søge efter Teams indhold til brugere i det lokale miljø. Hvis du f.eks. søger i alle Exchange postkasser i organisationen, og dette afkrydsningsfelt er markeret, medtages det skybaserede lager, der bruges til at gemme Teams chatdata for brugere i det lokale miljø, i søgeområdet. Du kan finde flere oplysninger under [Søg efter Teams chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
+   4. Hold dette afkrydsningsfelt markeret for at søge efter Teams-indhold for brugere i det lokale miljø. Hvis du f.eks. søger i alle Exchange-postkasser i organisationen, og dette afkrydsningsfelt er markeret, medtages det skybaserede lager, der bruges til at gemme Teams-chatdata for brugere i det lokale miljø, i søgeområdet. Du kan finde flere oplysninger under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
 
 6. På siden **Definer dine søgebetingelser** skal du skrive en nøgleordsforespørgsel og føje betingelser til søgeforespørgslen, hvis det er nødvendigt.
 
@@ -109,4 +107,4 @@ Her er en liste over de næste trin, du skal udføre, når du har oprettet og k�
 
 ## <a name="more-information"></a>Flere oplysninger
 
-Du kan finde flere oplysninger om indholdssøgning, f.eks. søgning efter indhold i forskellige Microsoft 365 tjenester, under [Reference til funktion for indholdssøgning](content-search-reference.md).
+Du kan finde flere oplysninger om indholdssøgning, f.eks. søgning efter indhold i forskellige Microsoft 365-tjenester, i [Funktionsreference for indholdssøgning](content-search-reference.md).

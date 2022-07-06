@@ -18,19 +18,17 @@ ms.custom: admindeeplinkDEFENDER
 search.appverid:
 - MOE150
 - MET150
-description: En Microsoft 365 klassificering er et værktøj, du kan oplære til at genkende forskellige typer indhold ved at give det eksempler, du kan se på. I denne artikel kan du se, hvordan du opretter og oplærer en brugerdefineret klassificering, og hvordan du omskoler dem for at øge nøjagtigheden.
-ms.openlocfilehash: d3a7639ed31dc42688cffbffb151049659a41660
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+description: En Microsoft 365-klassificering er et værktøj, du kan oplære til at genkende forskellige typer indhold ved at give den eksempler, du kan se på. I denne artikel kan du se, hvordan du opretter og oplærer en brugerdefineret klassificering, og hvordan du omskoler dem for at øge nøjagtigheden.
+ms.openlocfilehash: ff23f24145cee1b694f96e933919dddf779dfd9a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65173187"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631375"
 ---
 # <a name="get-started-with-trainable-classifiers"></a>Kom i gang med trænbare klassificeringer
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-En Microsoft 365 klassificering, der kan oplæres, er et værktøj, du kan oplære til at genkende forskellige typer indhold ved at give det eksempler, du kan se på. Når du har oplært, kan du bruge den til at identificere elementer til anvendelse af Office følsomhedsmærkater, politikker for kommunikation med overholdelse af angivne standarder og politikker for opbevaringsmærkater.
+En Klassificering, der kan oplæres i Microsoft 365, er et værktøj, du kan oplære til at genkende forskellige typer indhold ved at give den eksempler, du kan se på. Når du har oplært, kan du bruge den til at identificere elementer til anvendelse af Office-følsomhedsmærkater, politikker for overholdelse af kommunikation og politikker for opbevaringsmærkater.
 
 Oprettelse af en brugerdefineret klassificering, der kan oplæres, omfatter først at give den eksempler, der er valgt af mennesker, og som stemmer positivt overens med kategorien. Derefter tester du klassificeringens evne til at forudsige ved at give den en blanding af positive og negative prøver, når den har behandlet dem. I denne artikel kan du se, hvordan du opretter og oplærer en brugerdefineret klassificering, og hvordan du kan forbedre ydeevnen for brugerdefinerede klassificeringer og færdiguddannede klassificeringer gennem omskoling.
 
@@ -60,7 +58,7 @@ Du skal bruge konti med disse tilladelser for at bruge klassificeringer i disse 
 
 - Politikscenarie for opbevaringsmærkat: Roller til administration af poster og opbevaringsstyring 
 - Politikscenarie for følsomhedsmærkat: Sikkerhedsadministrator, overholdelsesadministrator, administrator af overholdelsesdata
-- Scenarie for politik for overholdelse af kommunikation: Administrator af styring af insiderrisiko, administrator af tilsynsgennemsyn 
+- Scenarie for politik for overholdelse af kommunikation: Insider Risk Management Administration, administrator af tilsynsgennemsyn 
 
 > [!IMPORTANT]
 > Som standard er det kun den bruger, der opretter en brugerdefineret klassificering, der kan oplære og gennemse forudsigelser foretaget af den pågældende klassificering.
@@ -76,7 +74,7 @@ Denne tidslinje afspejler et eksempel på udrulning af klassificeringer, der kan
 ![trainable-classifier-timeline.](../media/trainable-classifier-deployment-timeline_border.png)
 
 > [!TIP]
-> Tilmelding er påkrævet første gang for klassificerere, der kan oplæres. Det tager 12 dage, før Microsoft 365 har gennemført en grundlæggende evaluering af organisationens indhold. Kontakt din globale administrator for at starte tilmeldingsprocessen.
+> Tilmelding er påkrævet første gang for klassificerere, der kan oplæres. Det tager tolv dage for Microsoft 365 at gennemføre en grundlæggende evaluering af indholdet i din organisation. Kontakt din globale administrator for at starte tilmeldingsprocessen.
 
 ### <a name="overall-workflow"></a>Overordnet arbejdsproces
 
@@ -98,17 +96,17 @@ Når klassificeringen, der kan oplæres, har behandlet tilstrækkeligt mange pos
 
 ## <a name="how-to-create-a-trainable-classifier"></a>Sådan opretter du en klassificering, der kan oplæres
 
-1. Indsaml mellem 50-500 basisindholdselementer. Det må kun være eksempler, der på det kraftigste repræsenterer den type indhold, du ønsker, at den klassificering, der kan oplæres, skal identificeres positivt som værende i klassificeringskategorien. Se [Standardsøgede filtypenavne og fortolkede filtyper i SharePoint Server](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) for de understøttede filtyper.
+1. Indsaml mellem 50-500 basisindholdselementer. Det må kun være eksempler, der på det kraftigste repræsenterer den type indhold, du ønsker, at den klassificering, der kan oplæres, skal identificeres positivt som værende i klassificeringskategorien. Se [Standardgennemsøgte filtypenavne og fortolkede filtyper i SharePoint Server](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) for de understøttede filtyper.
 
    > [!IMPORTANT]
    > Sørg for, at elementerne i dit frøsæt er **stærke** eksempler på kategorien. Den klassificering, der kan oplæres, bygger i første omgang sin model ud fra, hvad du bruger til at bruge den. Klassificeringen antager, at alle frøprøver er stærke positive og ikke har nogen måde at vide, om en prøve er et svagt eller negativt match til kategorien.
 
-2. Placer frøindholdet i en SharePoint Online-mappe, der er dedikeret til kun at indeholde *frøindholdet*. Notér URL-adressen for webstedet, biblioteket og mappen.
+2. Placer frøindholdet i en SharePoint Online-mappe, der er dedikeret til kun at indeholde *seedindholdet*. Notér URL-adressen for webstedet, biblioteket og mappen.
 
    > [!TIP]
    > Hvis du opretter et nyt websted og en ny mappe til dine seed-data, skal du tillade, at mindst en time for denne placering indekseres, før du opretter den klassificering, der kan oplæres, og som skal bruge disse basisdata.
 
-3. Log på Microsoft Purview-overholdelsesportalen med rollen overholdelsesadministrator eller sikkerhedsadministrator, og åbn <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-overholdelsesportalen</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a> **portalDataklassificering** > .
+3. Log på for at Microsoft Purview-compliance-portal med rollen overholdelsesadministrator eller sikkerhedsadministrator, og åbn <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>**portaldataklassificering** > .
 
 4. Vælg fanen **Klassificeringskomponenter, der kan oplæres** .
 
@@ -116,7 +114,7 @@ Når klassificeringen, der kan oplæres, har behandlet tilstrækkeligt mange pos
 
 6. Udfyld de relevante værdier for felterne og `Description` for `Name` den kategori af elementer, som denne klassificering, der kan oplæres, skal identificere.
 
-7. Vælg URL-adressen SharePoint onlinewebsted, -bibliotek og -mappe for webstedet med frøindhold på trin 2. Vælg `Add`.
+7. Vælg URL-adressen til SharePoint Online-webstedet, -biblioteket og -mappen for webstedet med basisindhold på trin 2. Vælg `Add`.
 
 8. Gennemse indstillingerne, og vælg `Create trainable classifier`.
 
@@ -127,16 +125,16 @@ Når klassificeringen, der kan oplæres, har behandlet tilstrækkeligt mange pos
     > [!div class="mx-imgBorder"]
     > ![klassificering, der kan oplæres, klar til test.](../media/classifier-trainable-ready-to-test-detail.png)
 
-11. Indsaml mindst 200 testindholdselementer (maks. 10.000) for at få de bedste resultater. Disse bør være en blanding af elementer, der er stærke positive, stærke negativer og nogle, der er lidt mindre indlysende i deres natur. Se [Standardsøgede filtypenavne og fortolkede filtyper i SharePoint Server](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) for de understøttede filtyper.
+11. Indsaml mindst 200 testindholdselementer (maks. 10.000) for at få de bedste resultater. Disse bør være en blanding af elementer, der er stærke positive, stærke negativer og nogle, der er lidt mindre indlysende i deres natur. Se [Standardgennemsøgte filtypenavne og fortolkede filtyper i SharePoint Server](/sharepoint/technical-reference/default-crawled-file-name-extensions-and-parsed-file-types) for de understøttede filtyper.
 
-12. Placer testindholdet i en SharePoint Online-mappe, der kun skal indeholde *testindholdet*. Notér SharePoint URL-adressen til webstedet, biblioteket og mappen.
+12. Placer testindholdet i en SharePoint Online-mappe, der er dedikeret til kun at indeholde *testindholdet*. Notér URL-adressen til SharePoint Online-webstedet, -biblioteket og -mappen.
 
     > [!TIP]
     > Hvis du opretter et nyt websted og en ny mappe til dine testdata, skal du tillade, at mindst en time for denne placering indekseres, før du opretter den klassificering, der kan oplæres, og som skal bruge disse basisdata.
 
 13. Vælg `Add items to test`.
 
-14. Vælg URL-adressen SharePoint onlinewebsted, -bibliotek og -mappe for webstedet med testindhold på trin 12. Vælg `Add`.
+14. Vælg URL-adressen til sharePoint Online-webstedet, -biblioteket og -mappen for webstedet med testindhold fra trin 12. Vælg `Add`.
 
 15. Afslut guiden ved at vælge `Done`. Det tager op til en time at behandle testfilerne med den klassificering, der kan oplæres.
 
@@ -159,4 +157,4 @@ Når klassificeringen, der kan oplæres, har behandlet tilstrækkeligt mange pos
 
 20. Publicer klassificeringen.
 
-21. Når klassificeringen er publiceret, vil den være tilgængelig som en betingelse i [Office automatisk mærkning med følsomhedsmærkater](apply-sensitivity-label-automatically.md), [automatisk anvende politik for opbevaringsmærkat baseret på en betingelse](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) og i [Kommunikationstilstand](communication-compliance.md).
+21. Når din klassificering er publiceret, vil den være tilgængelig som en betingelse i [Office-automatisk mærkning med følsomhedsmærkater](apply-sensitivity-label-automatically.md). [Politik for automatisk anvendelse af opbevaringsmærkat baseret på en betingelse](apply-retention-labels-automatically.md#configuring-conditions-for-auto-apply-retention-labels) og [kommunikationstilstand](communication-compliance.md).

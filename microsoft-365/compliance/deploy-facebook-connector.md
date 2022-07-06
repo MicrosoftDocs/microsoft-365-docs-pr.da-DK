@@ -15,25 +15,23 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 ROBOTS: NOINDEX, NOFOLLOW
-description: Administratorer kan konfigurere en oprindelig connector til at importere og arkivere Facebook Business-sider for at Microsoft 365. Når disse data er importeret til Microsoft 365, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, indholdssøgning og opbevaringspolitikker til at administrere styringen af din organisations Facebook-data.
-ms.openlocfilehash: b3f3770b4e3cf8415111ebdd1881905ae21f4739
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Administratorer kan konfigurere en oprindelig connector til at importere og arkivere Facebook Business-sider til Microsoft 365. Når disse data er importeret til Microsoft 365, kan du bruge funktioner til overholdelse af angivne standarder, f.eks. juridiske ventepositioner, indholdssøgning og opbevaringspolitikker til at administrere styringen af din organisations Facebook-data.
+ms.openlocfilehash: 0b2d37859941cc0e1ae5c49fad6fd72312cc03cf
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098862"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632547"
 ---
 # <a name="deploy-a-connector-to-archive-facebook-business-pages-data"></a>Udrul en connector for at arkivere data på Facebook-virksomhedssider
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Denne artikel indeholder den trinvise proces til installation af en connector, der bruger tjenesten Office 365 Import til at importere data fra Facebook Business-sider for at Microsoft 365. Hvis du vil have en overordnet oversigt over denne proces og en liste over forudsætninger, der kræves for at installere en Facebook-connector, skal du se [Konfigurer en connector til arkivering af Facebook-data](archive-facebook-data-with-sample-connector.md).
+Denne artikel indeholder den trinvise proces til installation af en connector, der bruger tjenesten Office 365 import til at importere data fra Facebook Business-sider til Microsoft 365. Hvis du vil have en overordnet oversigt over denne proces og en liste over forudsætninger, der kræves for at installere en Facebook-connector, skal du se [Konfigurer en connector til arkivering af Facebook-data](archive-facebook-data-with-sample-connector.md).
 
 ## <a name="step-1-create-an-app-in-azure-active-directory"></a>Trin 1: Opret en app i Azure Active Directory
 
 1. Gå til , <https://portal.azure.com> og log på med legitimationsoplysningerne for en global administratorkonto.
 
-    ![Opret en app i AAD.](../media/FBCimage1.png)
+    ![Opret app i AAD.](../media/FBCimage1.png)
 
 2. Klik på **Azure Active Directory** i navigationsruden til venstre.
 
@@ -63,17 +61,17 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
     ![Skriv hemmeligheden, og vælg derefter en udløbsperiode.](../media/FBCimage8.png)
 
-9. Kopiér værdien af hemmeligheden, og gem den i en tekstfil eller på en anden lagerplacering. Dette er den AAD programhemmelighed, du bruger i senere trin.
+9. Kopiér værdien af hemmeligheden, og gem den i en tekstfil eller på en anden lagerplacering. Dette er AAD-programhemmeligheden, som du bruger i senere trin.
 
    ![Kopiér værdien af hemmeligheden, og gem den.](../media/FBCimage9.png)
 
-## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub til din Azure-konto
+## <a name="step-2-deploy-the-connector-web-service-from-github-to-your-azure-account"></a>Trin 2: Udrul connectorwebtjenesten fra GitHub på din Azure-konto
 
-1. Gå til [dette GitHub websted](https://github.com/microsoft/m365-sample-connector-csharp-aspnet), og klik på **Udrul på Azure**.
+1. Gå til [dette GitHub-websted,](https://github.com/microsoft/m365-sample-connector-csharp-aspnet) og klik på **Udrul på Azure**.
 
     ![Klik på Udrul på Azure.](../media/FBCGithubApp.png)
 
-2. Når du har klikket på **Udrul på Azure**, omdirigeres du til en Azure Portal med en brugerdefineret skabelonside. Udfyld de **grundlæggende** oplysninger og **Indstillinger** oplysninger, og klik derefter på **Køb**.
+2. Når du har klikket på **Udrul på Azure**, omdirigeres du til en Azure Portal med en brugerdefineret skabelonside. Udfyld de **grundlæggende** oplysninger og **indstillinger,** og klik derefter på **Køb**.
 
    - **Abonnement:** Vælg dit Azure-abonnement, som du vil udrulle webtjenesten for Facebook Business-sider-connectoren til.
 
@@ -83,7 +81,7 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
    - **Navn på webapp:** Angiv et entydigt navn til connectorwebappen. Navnet skal være mellem 3 og 18 tegn langt. Dette navn bruges til at oprette URL-adressen til Azure-apptjenesten. Hvis du f.eks. angiver navnet på **webappen fbconnector** , bliver URL-adressen til Azure-apptjenesten **fbconnector.azurewebsites.net**.
 
-   - **tenantId:** Lejer-id'et for din Microsoft 365 organisation, som du kopierede, da du oprettede Facebook-connectorappen i Azure Active Directory i trin 1.
+   - **tenantId:** Lejer-id'et for din Microsoft 365-organisation, som du kopierede efter oprettelse af Facebook-connectorappen i Azure Active Directory i trin 1.
 
    - **APISecretKey:** Du kan skrive en hvilken som helst værdi som hemmeligheden. Dette bruges til at få adgang til connectorwebappen i trin 5.
 
@@ -91,7 +89,7 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
 3. Når installationen er fuldført, ligner siden følgende skærmbillede:
 
-   ![Klik på Storage, og klik derefter på Storage konto.](../media/FBCimage13.png)
+   ![Klik på Lager, og klik derefter på Lagerkonto.](../media/FBCimage13.png)
 
 ## <a name="step-3-register-the-facebook-app"></a>Trin 3: Registrer Facebook-appen
 
@@ -171,7 +169,7 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
    ![Klik på Konfigurer for at få vist en logonside.](../media/FBCimage42.png)
 
-3. I feltet Lejer-id skal du skrive eller indsætte dit lejer-id (som du fik i trin 2). Skriv eller indsæt APISecretKey (som du fik i trin 2) i feltet adgangskode, og klik derefter på **Angiv konfiguration Indstillinger** for at få vist siden med konfigurationsoplysninger.
+3. I feltet Lejer-id skal du skrive eller indsætte dit lejer-id (som du fik i trin 2). Skriv eller indsæt APISecretKey (som du fik i trin 2) i feltet adgangskode, og klik derefter på **Angiv konfigurationsindstillinger** for at få vist siden med konfigurationsoplysninger.
 
     ![Log på med dit lejer-id og din adgangskode, og gå til siden med konfigurationsoplysninger.](../media/FBCimage43.png)
 
@@ -183,15 +181,15 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
    - **Token til bekræftelse af facebook-webhooks:** Det bekræftelsestoken, du oprettede i trin 3.
 
-   - **AAD program-id:** Program-id'et for den Azure Active Directory app, du oprettede i trin 1.
+   - **AAD-program-id:** Program-id'et for den Azure Active Directory-app, du oprettede i trin 1.
 
-   - **AAD programhemmelighed:** Værdien for den APISecretKey-hemmelighed, du oprettede i trin 1.
+   - **AAD-programhemmelighed:** Værdien for den APISecretKey-hemmelighed, du oprettede i trin 1.
 
 5. Klik på **Gem** for at gemme connectorindstillingerne.
 
 ## <a name="step-5-set-up-a-facebook-connector-in-the-compliance-portal"></a>Trin 5: Konfigurer en Facebook-connector på overholdelsesportalen
 
-1. Gå til Microsoft Purview-overholdelsesportalen, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank"> derefter **Dataconnectors**</a.
+1. Gå til Microsoft Purview-compliance-portal, og vælg <a href="https://go.microsoft.com/fwlink/p/?linkid=2173865" target="_blank"> derefter **Dataconnectors**</a.
 
 2. På siden **Dataconnectors** under **Facebook Business-sider** skal du klikke på **Vis**.
 
@@ -209,11 +207,11 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
    - I feltet **Adgangskode** skal du skrive eller indsætte værdien af den APISecretKey, du tilføjede i trin 2.
 
-   - I feltet **Azure App ID** skal du skrive eller indsætte værdien af det program-id (klient), der også kaldes som AAD program-id, som du oprettede i trin 1.
+   - I feltet **Azure App ID** skal du skrive eller indsætte værdien af det program-id (klient),der også kaldes som AAD-program-id, som du oprettede i trin 1.
 
 6. Når forbindelsen er valideret, skal du klikke på **Næste**.
 
-7. På siden **Godkend Microsoft 365 at importere data** skal du skrive eller indsætte APISecretKey igen og derefter klikke på **Logonwebapp**.
+7. På siden **Godkend, at Microsoft 365 importerer data** skal du skrive eller indsætte APISecretKey igen og derefter klikke på **Logon-webapp**.
 
 8. På siden **Konfigurer Facebook-connectorapp** skal du klikke på **Log på med Facebook** og logge på ved hjælp af legitimationsoplysningerne for kontoen for din organisations Facebook Business-sider. Sørg for, at den Facebook-konto, du loggede på, er tildelt administratorrollen for din organisations Facebook-virksomhedssider.
 
@@ -227,7 +225,7 @@ Denne artikel indeholder den trinvise proces til installation af en connector, d
 
 11. På siden **Angiv filtre** kan du anvende et filter til indledningsvist at importere elementer, der er af en bestemt alder. Vælg en alder, og klik derefter på **Næste**.
 
-12. På siden **Vælg lagerplacering** skal du skrive mailadressen på Microsoft 365 postkasse, som Facebook-elementerne importeres til, og derefter klikke på **Næste**.
+12. På siden **Vælg lagerplacering** skal du skrive mailadressen på den Microsoft 365-postkasse, som Facebook-elementerne importeres til, og derefter klikke på **Næste**.
 
 13. Klik på **Næste** for at gennemse connectorindstillingerne, og klik derefter på **Udfør** for at fuldføre connectorkonfigurationen.
 

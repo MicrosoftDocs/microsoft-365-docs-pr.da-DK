@@ -17,28 +17,26 @@ search.appverid:
 ms.assetid: f5caf497-5e8d-4b7a-bfff-d02942f38150
 ms.custom:
 - seo-marvel-apr2020
-description: Når du ikke længere har brug for at bevare indholdet af en Microsoft 365 inaktiv postkasse, kan du slette den inaktive postkasse permanent.
-ms.openlocfilehash: 1f45e5ce3aca79e4f5abbc13442876ecbb22e90c
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: Når du ikke længere har brug for at bevare indholdet af en inaktiv microsoft 365-postkasse, kan du slette den inaktive postkasse permanent.
+ms.openlocfilehash: a8bdd0cb98d744b6c64f651b7b7bb1754ff4f12e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66017936"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634483"
 ---
 # <a name="delete-an-inactive-mailbox"></a>Slet en inaktiv postkasse
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-En inaktiv postkasse bruges til at bevare en tidligere medarbejders mail, når vedkommende forlader din organisation. Når du ikke længere har brug for at bevare indholdet af en inaktiv postkasse, kan du slette den inaktive postkasse permanent ved at fjerne ventepositionen. Det er også muligt, at flere ventepositioner placeres i en inaktiv postkasse. En inaktiv postkasse kan f.eks. placeres i venteposition for procesførelse og på en eller flere In-Place ventepositioner. Derudover kan Microsoft 365 opbevaring anvendes på den inaktive postkasse. Du skal fjerne alle bevarelsespolitikker og opbevaringspolitikker fra en inaktiv postkasse for at slette den. Når du har fjernet politikkerne for bevarelse og opbevaring, markeres den inaktive postkasse til sletning og slettes permanent, når den er behandlet.
+En inaktiv postkasse bruges til at bevare en tidligere medarbejders mail, når vedkommende forlader din organisation. Når du ikke længere har brug for at bevare indholdet af en inaktiv postkasse, kan du slette den inaktive postkasse permanent ved at fjerne ventepositionen. Det er også muligt, at flere ventepositioner placeres i en inaktiv postkasse. En inaktiv postkasse kan f.eks. placeres i venteposition for procesførelse og på en eller flere In-Place ventepositioner. Derudover kan Microsoft 365-opbevaring anvendes på den inaktive postkasse. Du skal fjerne alle bevarelsespolitikker og opbevaringspolitikker fra en inaktiv postkasse for at slette den. Når du har fjernet politikkerne for bevarelse og opbevaring, markeres den inaktive postkasse til sletning og slettes permanent, når den er behandlet.
   
 > [!IMPORTANT]
-> Da vi fortsætter med at investere på forskellige måder for at bevare postkasseindhold, annoncerer vi, at In-Place Ventepositioner udgår i Exchange Administration. Det betyder, at du skal bruge politikker for retsførelse og opbevaring til at oprette en inaktiv postkasse. Fra og med den 1. juli 2020 kan du ikke oprette nye In-Place Ventepositioner i Exchange Online. Men du kan stadig ændre varigheden af ventepositionen for en In-Place venteposition, der er placeret i en inaktiv postkasse. Fra og med den 1. oktober 2020 kan du dog ikke ændre varigheden af ventepositionen. Du kan kun slette en inaktiv postkasse ved at fjerne In-Place Venteposition. Eksisterende inaktive postkasser, der er på In-Place venteposition, bevares stadig, indtil ventepositionen fjernes. Du kan finde flere oplysninger om udfasning af In-Place ventepositioner under [Udfasning af ældre eDiscovery-værktøjer](legacy-ediscovery-retirement.md).
+> Da vi fortsætter med at investere på forskellige måder for at bevare postkasseindhold, annoncerer vi, at In-Place ventepositioner udgår i Exchange Administration. Det betyder, at du skal bruge politikker for retsførelse og opbevaring til at oprette en inaktiv postkasse. Fra og med den 1. juli 2020 kan du ikke oprette nye In-Place Ventepositioner i Exchange Online. Men du kan stadig ændre varigheden af ventepositionen for en In-Place venteposition, der er placeret i en inaktiv postkasse. Fra og med den 1. oktober 2020 kan du dog ikke ændre varigheden af ventepositionen. Du kan kun slette en inaktiv postkasse ved at fjerne In-Place Venteposition. Eksisterende inaktive postkasser, der er på In-Place venteposition, bevares stadig, indtil ventepositionen fjernes. Du kan finde flere oplysninger om udfasning af In-Place ventepositioner under [Udfasning af ældre eDiscovery-værktøjer](legacy-ediscovery-retirement.md).
   
 Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af, hvad der sker, når ventepositioner er fjernet fra en inaktiv postkasse.
   
 ## <a name="before-you-delete-an-inactive-mailbox"></a>Før du sletter en inaktiv postkasse
 
-- Du skal bruge Exchange Online PowerShell til at fjerne ventepositioner fra en inaktiv postkasse. Du kan ikke bruge EAC (Exchange Administration) eller Microsoft Purview-overholdelsesportalen til disse procedurer. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Du skal bruge Exchange Online PowerShell til at fjerne ventepositioner fra en inaktiv postkasse. Du kan ikke bruge Exchange Administration eller Microsoft Purview-compliance-portal til disse procedurer. Du kan finde en trinvis vejledning i at bruge Exchange Online PowerShell under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Du kan kopiere indholdet af en inaktiv postkasse til en anden postkasse, før du fjerner ventepositionen og sletter en inaktiv postkasse. Du kan finde flere oplysninger under [Gendan en inaktiv postkasse i Office 365](restore-an-inactive-mailbox.md).
 
@@ -50,7 +48,7 @@ Se afsnittet [Flere oplysninger](#more-information) for at få en beskrivelse af
 
 Som tidligere nævnt kan en politik for procesførelse, In-Place venteposition eller opbevaring være placeret i en inaktiv postkasse. Det første trin er at identificere ventepositionerne i en inaktiv postkasse.
   
-[Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)og derefter køre følgende kommando for at få vist oplysninger om venteposition for alle inaktive postkasser i din organisation.
+[Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), og kør derefter følgende kommando for at få vist oplysninger om venteposition for alle inaktive postkasser i din organisation.
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | FL DisplayName,Name,IsInactiveMailbox,LitigationHoldEnabled,InPlaceHolds
@@ -94,7 +92,7 @@ Set-Mailbox -InactiveMailbox -Identity <identity of inactive mailbox> -Litigatio
   
 ### <a name="remove-an-inactive-mailbox-from-a-retention-policy"></a>Fjern en inaktiv postkasse fra en opbevaringspolitik
 
-Proceduren for fjernelse af en inaktiv postkasse fra en opbevaringspolitik for Microsoft 365 afhænger af, om den opbevaringspolitik, der er tildelt den inaktive postkasse, er organisationsbaseret eller eksplicit:
+Proceduren for fjernelse af en inaktiv postkasse fra en Opbevaringspolitik for Microsoft 365 afhænger af, om den opbevaringspolitik, der er tildelt den inaktive postkasse, er eksplicit for hele organisationen eller eksplicit:
 
 - Opbevaringspolitikker for hele organisationen, der er tildelt alle postkasser i organisationen. Brug **Cmdlet'en Get-OrganizationConfig** i Exchange Online PowerShell til at få oplysninger om opbevaringspolitikker for hele organisationen.
 

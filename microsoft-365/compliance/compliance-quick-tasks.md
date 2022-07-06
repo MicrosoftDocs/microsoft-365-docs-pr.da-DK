@@ -16,16 +16,14 @@ ms.custom:
 - admindeeplinkDEFENDER
 - intro-get-started
 ms.localizationpriority: medium
-ms.openlocfilehash: cb8471ffea418ac47921777a0ee9594fa73fe4ac
-ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
+ms.openlocfilehash: 5e5b0aa9efb5d00602bba39ca18ef582cf34271a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65930213"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632635"
 ---
 # <a name="quick-tasks-for-getting-started-with-compliance-in-microsoft-purview"></a>Hurtige opgaver for at komme i gang med overholdelse af angivne standarder i Microsoft Purview
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Hvis du ikke kender Microsoft Purview og undrer dig over, hvor du skal starte, indeholder denne artikel en vejledning i de grundlæggende funktioner og prioriterer vigtige opgaver i forbindelse med overholdelse af angivne standarder. Denne artikel hjælper dig med hurtigt at komme i gang med at administrere og overvåge dine data, beskytte oplysninger og minimere insiderrisici.
 
@@ -35,7 +33,7 @@ Når du har fuldført disse grundlæggende overholdelsesopgaver, kan du overveje
 
 ## <a name="task-1-configure-compliance-permissions"></a>Opgave 1: Konfigurer tilladelser til overholdelse af regler og standarder
 
-Det er vigtigt at administrere, hvem i din organisation der har adgang til Microsoft Purview-overholdelsesportalen for at få vist indhold og udføre administrationsopgaver. Microsoft 365 indeholder administrative roller, der er specifikke for overholdelse af angivne standarder, og til brug af de værktøjer, der er inkluderet i Microsoft Purview-overholdelsesportalen.
+Det er vigtigt at administrere, hvem i din organisation der har adgang til Microsoft Purview-compliance-portal for at få vist indhold og udføre administrationsopgaver. Microsoft 365 indeholder administrative roller, der er specifikke for overholdelse af angivne standarder og for brug af de værktøjer, der er inkluderet i Microsoft Purview-compliance-portal.
 
 Start med at tildele overholdelsestilladelser til personer i din organisation, så de kan udføre disse opgaver og forhindre uautoriserede personer i at få adgang til områder uden for deres ansvar. Du skal sikre dig, at du har tildelt de rette personer til administratorrollerne **overholdelsesdata** og administratorrollerne for **overholdelsesadministratoren** , før du begynder at konfigurere og implementere overholdelsesløsninger, der er inkluderet i Microsoft 365. Du skal også tildele brugere rollen Global læser i Azure Active Directory for at få vist data i Overholdelsesstyring.
 
@@ -52,7 +50,7 @@ Du kan finde en trinvis vejledning til, hvordan du kommer i gang med Overholdels
 > [!IMPORTANT]
 > Sikkerhed og overholdelse af angivne standarder er tæt integreret i de fleste organisationer. Det er vigtigt, at din organisation håndterer grundlæggende sikkerheds-, trusselsbeskyttelses- og identitets- og adgangsstyringsområder for at hjælpe med at levere en dybdegående forsvarstilgang til både sikkerhed og overholdelse af angivne standarder.
 >
-> Kontrollér din [Microsoft 365 Secure Score](/microsoft-365/security/defender/microsoft-secure-score) på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a> , og fuldføre de opgaver, der er beskrevet i følgende artikler:
+> Kontrollér din [Microsoft 365 Secure Score](/microsoft-365/security/defender/microsoft-secure-score) på <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og fuldføre de opgaver, der er beskrevet i følgende artikler:
 >
 > - [Oversigt over sikkerhed – topprioriteter for de første 30 dage, 90 dage og derefter](/microsoft-365/security/office-365-security/security-roadmap)
 > - [Top 12-opgaver til sikkerhedsteams, der understøtter at arbejde hjemmefra](/microsoft-365/security/top-security-tasks-for-remote-work)
@@ -152,7 +150,7 @@ Du kan finde en trinvis vejledning til, hvordan du definerer brugerdefinerede ty
 
 ### <a name="prevent-data-loss"></a>Undgå datatab
 
-[Microsoft Purview DLP-politikker (Forebyggelse af datatab)](/microsoft-365/compliance/dlp-learn-about-dlp) giver dig mulighed for at identificere, overvåge og automatisk beskytte følsomme oplysninger på tværs af din Microsoft 365-organisation. Brug DLP-politikker til at identificere følsomme elementer på tværs af Microsoft-tjenester, forhindre utilsigtet deling af følsomme elementer og hjælpe brugerne med at lære, hvordan de forbliver kompatible uden at afbryde deres arbejdsproces.
+[Microsoft Purview Forebyggelse af datatab politikker (DLP)](/microsoft-365/compliance/dlp-learn-about-dlp) giver dig mulighed for at identificere, overvåge og automatisk beskytte følsomme oplysninger på tværs af din Microsoft 365-organisation. Brug DLP-politikker til at identificere følsomme elementer på tværs af Microsoft-tjenester, forhindre utilsigtet deling af følsomme elementer og hjælpe brugerne med at lære, hvordan de forbliver kompatible uden at afbryde deres arbejdsproces.
 
 Hvis du vil have en trinvis vejledning i at konfigurere DLP-politikker, [skal du oprette, teste og justere en DLP-politik](/microsoft-365/compliance/create-test-tune-dlp-policy). Du kan finde oplysninger om licenser til administration af datatab i [Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#office-365-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
 

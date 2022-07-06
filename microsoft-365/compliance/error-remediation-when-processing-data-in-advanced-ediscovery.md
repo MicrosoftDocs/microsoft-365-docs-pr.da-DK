@@ -17,27 +17,25 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du bruger fejlafhjælpning til at rette dataproblemer i eDiscovery (Premium), der kan forhindre korrekt behandling af indhold.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: e119458281a81ab41f8034ce76e65a5946536204
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 2052e60e1c27e2b3e138124e5d268477f6a9cd18
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093103"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634351"
 ---
 # <a name="error-remediation-when-processing-data"></a>Fejlafhjælpning under behandling af data
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
 Fejlafhjælpning giver eDiscovery-administratorer mulighed for at rette dataproblemer, der forhindrer Microsoft Purview eDiscovery (Premium) i at behandle indholdet korrekt. Filer, der er beskyttet med adgangskode, kan f.eks. ikke behandles, da filerne er låst eller krypteret. Ved hjælp af fejlafhjælpning kan eDiscovery-administratorer downloade filer med sådanne fejl, fjerne adgangskodebeskyttelsen og derefter uploade de afhjælpede filer.
 
-Brug følgende arbejdsproces til at afhjælpe filer med fejl i eDiscovery-sager (Premium).
+Brug følgende arbejdsproces til at afhjælpe filer med fejl i eDiscovery-tilfælde (Premium).
 
 ## <a name="create-an-error-remediation-session-to-remediate-files-with-processing-errors"></a>Opret en fejlafhjælpningssession for at afhjælpe filer med behandlingsfejl
 
 > [!NOTE]
 > Hvis guiden til fejlafhjælpning lukkes når som helst under følgende procedure, kan du vende tilbage til fejlafhjælpningssessionen under fanen **Behandling** ved at vælge **Afhjælpninger** i rullemenuen **Vis** .
 
-1. Under fanen **Behandling** i eDiscovery-sagen (Premium) skal du vælge **Fejl** i rullemenuen **Vis** og derefter vælge et korrektursæt eller hele sagen i rullemenuen **Område**. I dette afsnit vises alle fejl fra sagen eller fejlen fra et bestemt korrektursæt.
+1. Under fanen **Behandling** i eDiscovery (Premium)-sagen skal du vælge **Fejl** i rullemenuen **Vis** og derefter vælge et korrektursæt eller hele sagen i rullemenuen **Område** . I dette afsnit vises alle fejl fra sagen eller fejlen fra et bestemt korrektursæt.
 
    ![Fejlafhjælpning.](../media/8c2faf1a-834b-44fc-b418-6a18aed8b81a.png)
 
@@ -45,7 +43,7 @@ Brug følgende arbejdsproces til at afhjælpe filer med fejl i eDiscovery-sager 
 
 3. Klik på **Ny fejlafhjælpning**.
 
-    Arbejdsprocessen for fejlafhjælpning starter med en forberedelsesfase, hvor filerne med fejl kopieres til en Azure Storage placering, der er leveret af Microsoft, så du kan downloade dem til din lokale computer for at afhjælpe problemet.
+    Arbejdsprocessen for fejlafhjælpning starter med en forberedelsesfase, hvor filerne med fejl kopieres til en Azure Storage-placering, der leveres af Microsoft, så du kan downloade dem til din lokale computer for at afhjælpe problemet.
 
     ![Forbereder fejlafhjælpning.](../media/390572ec-7012-47c4-a6b6-4cbb5649e8a8.png)
 
@@ -57,7 +55,7 @@ Brug følgende arbejdsproces til at afhjælpe filer med fejl i eDiscovery-sager 
 
    Stien til den overordnede mappe føjes automatisk til kommandoen AzCopy (som værdien for parameteren **/Dest** ).
 
-6. Kopiér den foruddefinerede kommando ved at klikke på **Kopiér til Udklipsholder**. Åbn en Windows kommandoprompt, indsæt kommandoen AzCopy, og tryk derefter på **Enter**.
+6. Kopiér den foruddefinerede kommando ved at klikke på **Kopiér til Udklipsholder**. Åbn en Windows-kommandoprompt, indsæt kommandoen AzCopy, og tryk derefter på **Enter**.
 
     ![Forbered fejlafhjælpning.](../media/f364ab4d-31c5-4375-b69f-650f694a2f69.png)
 
@@ -85,15 +83,15 @@ Brug følgende arbejdsproces til at afhjælpe filer med fejl i eDiscovery-sager 
 
 7. Når du har downloadet filerne, kan du afhjælpe dem med et passende værktøj. For adgangskodebeskyttede filer er der flere værktøjer til at knække adgangskoder, du kan bruge. Hvis du kender adgangskoderne til filerne, kan du åbne dem og fjerne adgangskodebeskyttelsen.
 
-8. Vend tilbage til eDiscovery (Premium) og guiden til fejlafhjælpning, og klik derefter på **Næste: Upload filer**.  Dette flyttes til næste side, hvor du nu kan uploade filerne.
+8. Vend tilbage til eDiscovery (Premium) og guiden til fejlafhjælpning, og klik derefter på **Næste: Overfør filer**.  Dette flyttes til næste side, hvor du nu kan uploade filerne.
 
-    ![Upload Filer.](../media/af3d8617-1bab-4ecd-8de0-22e53acba240.png)
+    ![Overfør filer.](../media/af3d8617-1bab-4ecd-8de0-22e53acba240.png)
 
 9. Angiv den overordnede mappe, hvor de afhjælpede filer er placeret i tekstfeltet **Sti til placering af filer** . Den overordnede mappe skal igen have den samme undermappestruktur, som blev oprettet, da du downloadede filerne.
 
     Stien til den overordnede mappe føjes automatisk til kommandoen AzCopy (som værdien for parameteren **/Source** ).
 
-10. Kopiér den foruddefinerede kommando ved at klikke på **Kopiér til Udklipsholder**. Åbn en Windows kommandoprompt, indsæt kommandoen AzCopy, og tryk derefter på **Enter**. uploade filerne.
+10. Kopiér den foruddefinerede kommando ved at klikke på **Kopiér til Udklipsholder**. Åbn en Windows-kommandoprompt, indsæt kommandoen AzCopy, og tryk derefter på **Enter**. uploade filerne.
 
     ![Resultater af vellykket upload af afhjælpede filer i Azcopy.](../media/ff2ff691-629f-4065-9b37-5333f937daf6.png)
 
@@ -107,7 +105,7 @@ I situationer, hvor indholdet af en objektbeholderfil (f.eks. en .zip fil) ikke 
 
 ## <a name="remediating-errors-by-uploading-the-extracted-text"></a>Afhjælpning af fejl ved at overføre den udtrukne tekst
 
-Nogle gange er det ikke muligt at afhjælpe en fil til et oprindeligt format, som eDiscovery (Premium) kan fortolke. Men du kan erstatte den oprindelige fil med en tekstfil, der indeholder den oprindelige tekst i den oprindelige fil (i en proces, der kaldes *tekstoverlejring*). Det gør du ved at følge de trin, der er beskrevet i denne artikel, men i stedet for at afhjælpe den oprindelige fil i det oprindelige format skal du oprette en tekstfil, der indeholder den udtrukne tekst fra den oprindelige fil, og derefter uploade tekstfilen ved hjælp af det oprindelige filnavn, der er vedhæftet et .txt suffiks. Du downloader f.eks. en fil under fejlafhjælpning med filnavnet 335850cc-6602-4af0-acfa-1d14d9128ca2.abc. Du åbner filen i det oprindelige program, kopierer teksten og indsætter den derefter i en ny fil med navnet 335850cc-6602-4af0-acfa-1d14d9128ca2.abc.txt. Når du gør dette, skal du sørge for at fjerne den oprindelige fil i det oprindelige format fra den afhjælpede filplacering på din lokale computer, før du overfører den afhjælpede tekstfil til eDiscovery (Premium).
+Nogle gange er det ikke muligt at afhjælpe en fil til et oprindeligt format, som eDiscovery (Premium) kan fortolke. Men du kan erstatte den oprindelige fil med en tekstfil, der indeholder den oprindelige tekst i den oprindelige fil (i en proces, der kaldes *tekstoverlejring*). Det gør du ved at følge de trin, der er beskrevet i denne artikel, men i stedet for at afhjælpe den oprindelige fil i det oprindelige format skal du oprette en tekstfil, der indeholder den udtrukne tekst fra den oprindelige fil, og derefter uploade tekstfilen ved hjælp af det oprindelige filnavn, der er vedhæftet et .txt suffiks. Du downloader f.eks. en fil under fejlafhjælpning med filnavnet 335850cc-6602-4af0-acfa-1d14d9128ca2.abc. Du åbner filen i det oprindelige program, kopierer teksten og indsætter den derefter i en ny fil med navnet 335850cc-6602-4af0-acfa-1d14d9128ca2.abc.txt. Når du gør dette, skal du sørge for at fjerne den oprindelige fil i det oprindelige format fra placeringen af den afhjælpede fil på din lokale computer, før du overfører den afhjælpede tekstfil til eDiscovery (Premium).
 
 ## <a name="what-happens-when-files-are-remediated"></a>Hvad sker der, når filer afhjælpes?
 

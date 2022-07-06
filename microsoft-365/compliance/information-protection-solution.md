@@ -18,18 +18,16 @@ ms.collection:
 - m365solution-mip
 - m365initiative-compliance
 description: Præskriptive vejledning til installation af Microsoft Purview Information Protection til din organisation.
-ms.openlocfilehash: fa826e7b9761ebcff34dd9ae6f7c2ee1b268bade
-ms.sourcegitcommit: d9842a9fcaead280bb704e92d44c1f4c201f9eb4
+ms.openlocfilehash: 3b62cf6165447288275a7a8c02a64ab27b41d607
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65759825"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635255"
 ---
 # <a name="deploy-an-information-protection-solution-with-microsoft-purview"></a>Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview
 
->*[Licenser til overholdelse af & for Microsoft 365 sikkerhed](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Licenser til Microsoft 365 Security & Compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance)*
 
 Din strategi til beskyttelse af oplysninger er baseret på dine forretningsmæssige behov. Mange organisationer skal overholde regler, love og forretningspraksisser. Organisationer skal desuden beskytte beskyttede oplysninger, f.eks. data til bestemte projekter.
 
@@ -47,7 +45,7 @@ Hvis du vil have datastyring, skal du se [Installér en løsning til datastyring
 
 ## <a name="licensing"></a>Licensering
 
-Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview. Licenskravene kan variere, selv inden for funktionaliteten, afhængigt af konfigurationsmulighederne. Hvis du vil identificere licenskrav og -muligheder, skal du se [Microsoft 365 vejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
+Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview. Licenskravene kan variere, selv inden for funktionaliteten, afhængigt af konfigurationsmulighederne. Du kan finde licenskrav og -muligheder i [Microsoft 365-vejledningen til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
 ## <a name="know-your-data"></a>Kend dine data
 
@@ -71,10 +69,10 @@ Brug oplysningerne fra at vide, hvor dine følsomme data er placeret, for at hj�
 |Trin|Beskrivelse|Flere oplysninger|
 |:---|-----------|:---------------|
 | 1|Definer dine [følsomhedsmærkater](sensitivity-labels.md) og politikker, der beskytter organisationens data. <br /><br />Ud over at identificere indholdets følsomhed kan disse mærkater anvende beskyttelseshandlinger, f.eks. sidehoveder, sidefødder, vandmærker og kryptering. | [Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md) <br /><br /> [Opret og konfigurer følsomhedsmærkater og deres politikker](create-sensitivity-labels.md) <br /><br /> [Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering](encryption-sensitivity-labels.md) |
-| 2|Mærk og beskyt elementer til Microsoft 365 apps og tjenester. <br /><br />Følsomhedsmærkater understøttes for Microsoft 365 Word-, Excel-, PowerPoint-, Outlook- og objektbeholdere, der omfatter SharePoint og OneDrive websteder og Microsoft 365 grupper. Brug en kombination af metoder til mærkning, f.eks. manuel mærkning, automatisk mærkning, en standardmærkat og obligatorisk mærkning.| [Administrer følsomhedsmærkater i Office apps](sensitivity-labels-office-apps.md) <br /><br /> [Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) <br /><br /> [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md) <br /><br /> [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /><br /> [Brug følsomhedsmærkater med Microsoft Teams, Microsoft 365 grupper og SharePoint websteder](sensitivity-labels-teams-groups-sites.md) <br /><br /> [Brug følsomhedsmærkater til at angive standardlinket til deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md) <br /><br /> [Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model) <br /><br /> [Følsomhedsmærkater i Power BI](/power-bi/admin/service-security-sensitivity-label-overview) |
+| 2|Mærk og beskyt elementer til Microsoft 365-apps og -tjenester. <br /><br />Følsomhedsmærkater understøttes for Microsoft 365 Word, Excel, PowerPoint, Outlook og objektbeholdere, der omfatter SharePoint- og OneDrive-websteder og Microsoft 365-grupper. Brug en kombination af metoder til mærkning, f.eks. manuel mærkning, automatisk mærkning, en standardmærkat og obligatorisk mærkning.| [Administrer følsomhedsmærkater i Office apps](sensitivity-labels-office-apps.md) <br /><br /> [Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) <br /><br /> [Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater](sensitivity-labels-coauthoring.md) <br /><br /> [Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /><br /> [Brug følsomhedsmærkater med Microsoft Teams, Microsoft 365-grupper og SharePoint-websteder](sensitivity-labels-teams-groups-sites.md) <br /><br /> [Brug følsomhedsmærkater til at angive standardlinket til deling for websteder og dokumenter i SharePoint og OneDrive](sensitivity-labels-default-sharing-link.md) <br /><br /> [Anvend en følsomhedsmærkat på en model i Microsoft SharePoint Syntex](/microsoft-365/contentunderstanding/apply-a-sensitivity-label-to-a-model) <br /><br /> [Følsomhedsmærkater i Power BI](/power-bi/admin/service-security-sensitivity-label-overview) |
 |3|Opdag, mærkat og beskyt følsomme elementer, der er placeret i datalagre i cloudmiljøet, ved hjælp af [Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security) med dine følsomhedsmærkater.| [Opdag, klassificer, mærk og beskyt regulerede og følsomme data, der er gemt i cloudmiljøet](/cloud-app-security/best-practices#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)|
 |4|Find, mærkat og beskyt følsomme elementer, der er placeret i datalagre i det lokale miljø, ved at udrulle [Azure Information Protection unified labeling scanner](/azure/information-protection/deploy-aip-scanner) med dine følsomhedsmærkater.| [Konfiguration og installation af Azure Information Protection Unified Labeling Scanner](/azure/information-protection/deploy-aip-scanner-configure-install)|
-|5|Udvid dine følsomhedsmærkater til Azure ved hjælp af [Microsoft Purview Datakort](/azure/purview/overview) for at finde og mærke elementer til Azure Blob Storage, Azure-filer, Azure Data Lake Storage Gen1 og Azure Data Lake Storage Gen12. | [Navne i Microsoft Purview datatilknytning](/azure/purview/create-sensitivity-label)|
+|5|Udvid dine følsomhedsmærkater til Azure ved hjælp af [Microsoft Purview Data Map](/azure/purview/overview) for at finde og navngive elementer til Azure Blob Storage, Azure-filer, Azure Data Lake Storage Gen1 og Azure Data Lake Storage Gen12. | [Mærkat i Microsoft Purview-datatilknytning](/azure/purview/create-sensitivity-label)|
 
 Hvis du er udvikler og ønsker at udvide følsomhedsmærkater til line of business-apps eller SaaS-apps fra tredjepart, [skal du se konfiguration og konfiguration af Microsoft Information Protection (MIP) SDK](/information-protection/develop/setup-configure-mip). 
 
@@ -82,7 +80,7 @@ Hvis du er udvikler og ønsker at udvide følsomhedsmærkater til line of busine
 
 Microsoft Purview indeholder yderligere funktioner, der kan hjælpe med at beskytte data. Det er ikke alle kunder, der har brug for disse funktioner, og nogle af dem tilsidesættes muligvis af nyere versioner.
 
-Brug siden [Beskyt dine data med Microsoft Purview](information-protection.md) for at få vist en komplet liste over beskyttelsesfunktioner.
+Brug siden [Beskyt dine data med Microsoft Purview](information-protection.md) til at få vist en komplet liste over beskyttelsesfunktioner.
 
 ## <a name="prevent-data-loss"></a>Undgå datatab
 
@@ -100,13 +98,13 @@ Udrul DLP-politikker (Microsoft Purview Forebyggelse af datatab) for at styre og
 
 ## <a name="training-resources"></a>Oplæringsressourcer
 
-Learning moduler til konsulenter og administratorer:
+Læringsmoduler til konsulenter og administratorer:
 
-- [Introduktion til information beskyttelse og administration af datalivscyklus i Microsoft Purview](/learn/modules/m365-compliance-information-governance)
+- [Introduktion til beskyttelse af oplysninger og administration af datalivscyklus i Microsoft Purview](/learn/modules/m365-compliance-information-governance)
 - [Klassificer data til beskyttelse og styring](/learn/modules/m365-compliance-information-classify-data)
 - [Beskyt oplysninger i Microsoft Purview](/learn/modules/m365-compliance-information-protect-information)
 - [Undgå tab af data i Microsoft Purview](/learn/modules/m365-compliance-information-prevent-data-loss)
 
 Hvis du vil have hjælp til at oplære dine brugere til at anvende og bruge de følsomhedsmærkater, du konfigurerer for dem, skal du se [Slutbrugerdokumentation for følsomhedsmærkater](get-started-with-sensitivity-labels.md#end-user-documentation-for-sensitivity-labels).
 
-Når du installerer politikker til forebyggelse af datatab for Teams, kan du finde nyttige i følgende slutbrugervejledning som en introduktion til denne teknologi med nogle potentielle meddelelser, som de kan se: [Teams meddelelser om DLP (forebyggelse af datatab) og politikker for overholdelse af kommunikation ](https://support.microsoft.com/office/teams-messages-about-data-loss-prevention-dlp-and-communication-compliance-policies-c5631c3f-f61b-4306-a6ac-6603d9fc5ff0).
+Når du udruller politikker til forebyggelse af datatab i Teams, kan du finde nyttige i følgende slutbrugervejledning som en introduktion til denne teknologi med nogle potentielle meddelelser, som de kan se: [Teams-meddelelser om forebyggelse af datatab (DLP) og politikker for kommunikation med overholdelse af angivne standarder ](https://support.microsoft.com/office/teams-messages-about-data-loss-prevention-dlp-and-communication-compliance-policies-c5631c3f-f61b-4306-a6ac-6603d9fc5ff0).

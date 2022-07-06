@@ -15,32 +15,30 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om, hvordan du vælger og eksporterer indhold fra et eDiscovery-korrektursæt (Premium) til præsentationer eller eksterne korrekturer.
+description: Få mere at vide om, hvordan du vælger og eksporterer indhold fra et eDiscovery(Premium)-korrektursæt til præsentationer eller eksterne korrekturer.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: a2cc2b5f528c7573c255e05cea4b512416711462
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 249990915cb012ca71a40ef074d8a1f5044b8d6e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65096958"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635343"
 ---
 # <a name="export-documents-from-a-review-set-in-ediscovery-premium"></a>Eksportér dokumenter fra et korrektursæt i eDiscovery (Premium)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Eksport giver brugerne mulighed for at tilpasse det indhold, der er inkluderet i downloadpakken, når du eksporterer dokumentet fra et korrektursæt i eDiscovery (Premium).
 
 Sådan eksporterer du dokumenter fra et gennemsynssæt:
 
-1. Åbn eDiscovery-sagen (Premium) på Microsoft Purview-overholdelsesportalen, vælg fanen **Gennemse sæt**, og vælg derefter det korrektursæt, du vil eksportere.
+1. I Microsoft Purview-compliance-portal skal du åbne sagen eDiscovery (Premium), vælge fanen **Gennemse sæt** og derefter vælge det korrektursæt, du vil eksportere.
 
-2. Klik på **ActionExport** >  i korrektursættet.
+2. Klik på **Handlingseksport** >  i korrektursættet.
 
    Værktøjet Eksportér viser pop op-siden med indstillingerne for at konfigurere eksporten. Nogle indstillinger er valgt som standard, men du kan ændre disse. Se følgende afsnit for at få beskrivelser af de eksportindstillinger, du kan konfigurere.
 
    ![Konfigurationsindstillinger til eksport af elementer fra et korrektursæt.](../media/bcfc72c7-4a01-4697-9e16-2965b7f04fdb.png)
 
-3. Når du har konfigureret eksporten, skal du klikke på **Eksportér** for at starte eksportprocessen. Afhængigt af den indstilling, du har valgt i afsnittet **Outputindstillinger**, kan du få adgang til eksportfilerne ved at downloade direkte eller på din organisations Azure Storage konto.
+3. Når du har konfigureret eksporten, skal du klikke på **Eksportér** for at starte eksportprocessen. Afhængigt af den indstilling, du har valgt i afsnittet **Outputindstillinger** , kan du få adgang til eksportfilerne ved at downloade direkte eller på din organisations Azure Storage-konto.
 
 > [!NOTE]
 > Eksportjob bevares i hele sagen. Du skal dog hente indholdet fra et eksportjob inden for 30 dage, efter at eksportjobbet er fuldført.
@@ -61,7 +59,7 @@ Brug følgende indstillinger til at konfigurere eksporten. Ikke alle indstilling
   
   - Alle dokumenter i korrektursættet: Denne indstilling eksporterer alle dokumenter i korrektursættet.
 
-- **Outputindstillinger**: Eksporteret indhold kan enten downloades direkte via en webbrowser eller kan sendes til en Azure Storage konto. De første to indstillinger muliggør direkte download.
+- **Outputindstillinger**: Eksporteret indhold kan enten downloades direkte via en webbrowser eller kan sendes til en Azure Storage-konto. De første to indstillinger muliggør direkte download.
   
   - Kun rapporter: Det er kun oversigts- og indlæsningsfilen, der oprettes.
   
@@ -69,7 +67,7 @@ Brug følgende indstillinger til at konfigurere eksporten. Ikke alle indstilling
   
   - Komprimeret mappestruktur: Filer eksporteres og inkluderes i downloaden.
   
-  - Komprimeret mappestruktur, der eksporteres til din Azure Storage-konto: Filer eksporteres til organisationens Azure Storage konto. Til denne indstilling skal du angive URL-adressen for objektbeholderen på din Azure Storage konto, som filerne skal eksporteres til. Du skal også angive SAS-tokenet (Shared Access Signature) for din Azure Storage konto. Du kan finde flere oplysninger [under Eksportér dokumenter i et gennemsynssæt til en Azure Storage konto](download-export-jobs.md).
+  - Komprimeret mappestruktur, der eksporteres til din Azure Storage-konto: Filer eksporteres til din organisations Azure Storage-konto. Til denne indstilling skal du angive URL-adressen for objektbeholderen på din Azure Storage-konto for at eksportere filerne til. Du skal også angive SAS-tokenet (Shared Access Signature) for din Azure Storage-konto. Du kan finde flere oplysninger [under Eksportér dokumenter i et gennemsynssæt til en Azure Storage-konto](download-export-jobs.md).
 
 - **Omfatter**
   
@@ -97,12 +95,12 @@ Hvis du vælger denne eksportindstilling, er det eksporterede indhold organisere
   
   - Exchange: Denne mappe indeholder alt indhold fra Exchange, der er gemt i PST-filer. Redigerede PDF-filer kan ikke inkluderes i denne indstilling. Hvis der er valgt en vedhæftet fil i korrektursættet, eksporteres den overordnede mail med den vedhæftede fil.
   
-    Den Exchange mappe kan også indeholde en undermappe med navnet mailboxname_loosefiles.zip, som indeholder følgende elementer:
+    Exchange-mappen kan også indeholde en undermappe med navnet mailboxname_loosefiles.zip, som indeholder følgende elementer:
 
     - IRM-beskyttede meddelelser (Information Rights Management), der er afkodet.
     - Fejlmeddelelser.
     - Moderne vedhæftede filer eller links, der refereres til i meddelelser.
-    - Krypterede elementer (som ikke er inkluderet i PST-filerne i mappen Exchange).
+    - Krypterede elementer (som ikke er inkluderet i PST-filerne i Exchange-mappen).
   
   - SharePoint: Denne mappe indeholder alt oprindeligt indhold fra SharePoint i et oprindeligt filformat. Redigerede PDF-filer kan ikke inkluderes i denne indstilling.
 
@@ -122,6 +120,6 @@ Hvis du vælger denne eksportindstilling, er det eksporterede indhold organisere
 
   - Extracted_text_files: Denne mappe indeholder alle de udtrukne tekstfiler, der blev genereret under behandlingen.
 
-### <a name="condensed-directory-structure-exported-to-your-azure-storage-account"></a>Komprimeret mappestruktur, der er eksporteret til din Azure Storage-konto
+### <a name="condensed-directory-structure-exported-to-your-azure-storage-account"></a>Komprimeret mappestruktur, der eksporteres til din Azure Storage-konto
 
-Denne indstilling bruger den samme generelle struktur som *mappestrukturen Condensed*, men indholdet zippers ikke, og dataene gemmes på din Azure Storage konto. Denne indstilling bruges generelt, når du arbejder med en tredjepartsudbyder af eDiscovery. Du kan finde oplysninger om, hvordan du bruger denne indstilling, [under Eksportér dokumenter i et gennemsynssæt til en Azure Storage konto](download-export-jobs.md).
+Denne indstilling bruger den samme generelle struktur som *mappen Condensed*, men indholdet zippers ikke, og dataene gemmes på din Azure Storage-konto. Denne indstilling bruges generelt, når du arbejder med en tredjepartsudbyder af eDiscovery. Du kan finde oplysninger om, hvordan du bruger denne indstilling, [under Eksportér dokumenter i en anmeldelse, der er angivet til en Azure Storage-konto](download-export-jobs.md).

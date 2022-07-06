@@ -2,8 +2,8 @@
 title: Nulstil adgangskoder
 f1.keywords:
 - NOCSH
-ms.author: v-kcirillo
-author: cirilk
+ms.author: deniseb
+author: denisebmsft
 manager: dansimp
 audience: Admin
 ms.topic: how-to
@@ -20,12 +20,12 @@ search.appverid:
 - BEA160
 - GEA150
 description: Nulstil adgangskoder for brugere i Microsoft 365 Business Premium.
-ms.openlocfilehash: a2841c3819011237fcb0dce3af58b4009d537904
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: baa83c54eafbee5f53ac59c9769b802e11485af3
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489683"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633204"
 ---
 # <a name="reset-passwords-in-microsoft-365-business-premium"></a>Nulstil adgangskoder i Microsoft 365 Business Premium
 

@@ -18,17 +18,15 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
-description: Få mere at vide om, hvordan du bruger søgeværktøjet Microsoft 365 overvågningslog til at foretage fejlfinding af almindelige supportproblemer for mailkonti.
-ms.openlocfilehash: 57d8cfd1cbb07300b7cd69fb78ff6a0b33b302f5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: Få mere at vide om, hvordan du bruger søgeværktøjet til Microsoft 365-overvågningslog til at foretage fejlfinding af almindelige supportproblemer for mailkonti.
+ms.openlocfilehash: d97e8e074c2d0e14bb75fd46a512cacb6827047a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097178"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633845"
 ---
 # <a name="search-the-audit-log-to-investigate-common-support-issues"></a>Søg i overvågningsloggen for at undersøge almindelige supportproblemer
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 I denne artikel beskrives det, hvordan du bruger søgeværktøjet til overvågningslog til at hjælpe dig med at undersøge almindelige supportproblemer. Dette omfatter brug af overvågningsloggen til at:
 
@@ -42,7 +40,7 @@ I denne artikel beskrives det, hvordan du bruger søgeværktøjet til overvågni
 
 ## <a name="using-the-audit-log-search-tool"></a>Brug af søgeværktøjet til overvågningslog
 
-Hvert af de fejlfindingsscenarier, der er beskrevet i denne artikel, er baseret på brug af søgeværktøjet til overvågningslog på Microsoft Purview-overholdelsesportalen. I dette afsnit vises de tilladelser, der kræves for at søge i overvågningsloggen, og det beskrives, hvordan du får adgang til og kører søgninger i overvågningsloggen. I hvert scenarieafsnit forklares det, hvordan du konfigurerer en søgeforespørgsel i overvågningsloggen, og hvad du skal søge efter i de detaljerede oplysninger i de overvågningsposter, der opfylder søgekriterierne.
+Hvert af de fejlfindingsscenarier, der er beskrevet i denne artikel, er baseret på brug af søgeværktøjet til overvågningslog i Microsoft Purview-compliance-portal. I dette afsnit vises de tilladelser, der kræves for at søge i overvågningsloggen, og det beskrives, hvordan du får adgang til og kører søgninger i overvågningsloggen. I hvert scenarieafsnit forklares det, hvordan du konfigurerer en søgeforespørgsel i overvågningsloggen, og hvad du skal søge efter i de detaljerede oplysninger i de overvågningsposter, der opfylder søgekriterierne.
 
 ### <a name="permissions-required-to-use-the-audit-log-search-tool"></a>Tilladelser, der kræves for at bruge søgeværktøjet til overvågningslog
 
@@ -84,10 +82,10 @@ Den IP-adresse, der svarer til en aktivitet udført af en hvilken som helst brug
 
 Sådan konfigurerer du en søgeforespørgsel i overvågningsloggen for dette scenarie:
 
-**Aktiviteter:** Hvis det er relevant for din sag, skal du vælge en bestemt aktivitet, du vil søge efter. I forbindelse med fejlfinding af kompromitterede konti kan du overveje at vælge den bruger, der **er logget på postkasseaktiviteten** under **Exchange postkasseaktiviteter**. Dette returnerer overvågningsposter, der viser den IP-adresse, der blev brugt, da du logger på postkassen. Ellers skal du lade feltet være tomt for at returnere overvågningsposter for alle aktiviteter. 
+**Aktiviteter:** Hvis det er relevant for din sag, skal du vælge en bestemt aktivitet, du vil søge efter. I forbindelse med fejlfinding af kompromitterede konti kan du overveje at vælge den bruger, der **er logget på postkasseaktiviteten** under **Exchange-postkasseaktiviteter**. Dette returnerer overvågningsposter, der viser den IP-adresse, der blev brugt, da du logger på postkassen. Ellers skal du lade feltet være tomt for at returnere overvågningsposter for alle aktiviteter. 
 
 > [!TIP]
-> Hvis du lader feltet være tomt, **returneres UserLoggedIn-aktiviteter**, som er en Azure Active Directory aktivitet, der angiver, at en person har logget på en brugerkonto. Brug filtrering i søgeresultaterne til at få vist **UserLoggedIn-overvågningsposterne** .
+> Hvis du lader feltet være tomt, **returneres UserLoggedIn-aktiviteter** , som er en Azure Active Directory-aktivitet, der angiver, at nogen har logget på en brugerkonto. Brug filtrering i søgeresultaterne til at få vist **UserLoggedIn-overvågningsposterne** .
 
 **Startdato** og **slutdato:** Vælg et datointerval, der skal gælde for din undersøgelse.
 
@@ -143,7 +141,7 @@ De postkassehandlinger, der logføres som standard, omfatter handlingerne SoftDe
 
 Sådan konfigurerer du en søgeforespørgsel i overvågningsloggen for dette scenarie:
 
-**Aktiviteter:** Under **Exchange postkasseaktiviteter** skal du vælge en eller begge af følgende aktiviteter:
+**Aktiviteter:** Under **Aktiviteter i Exchange-postkasse skal** du vælge en eller begge af følgende aktiviteter:
 
 - **Slettede meddelelser fra mappen Slettet post:** Denne aktivitet svarer til overvågningshandlingen **for SoftDelete-postkassen** . Denne aktivitet logføres også, når en bruger sletter et element permanent ved at markere det og trykke på **Skift+Slet**. Når et element er slettet permanent, kan brugeren gendanne det, indtil opbevaringsperioden for slettede elementer udløber.
 
@@ -183,11 +181,11 @@ Når brugerne opretter en indbakkeregel for deres Exchange Online postkasse, gem
 
 Sådan konfigurerer du en søgeforespørgsel i overvågningsloggen for dette scenarie:
 
-**Aktiviteter:** Under **Exchange postkasseaktiviteter** skal du vælge en eller begge af følgende aktiviteter:
+**Aktiviteter:** Under **Aktiviteter i Exchange-postkasse skal** du vælge en eller begge af følgende aktiviteter:
 
 - **New-InboxRule Opret en ny indbakkeregel fra Outlook Web App**. Denne aktivitet returnerer overvågningsposter, når der oprettes indbakkeregler ved hjælp af Outlook webapp eller Exchange Online PowerShell.
 
-- **Opdaterede indbakkeregler fra Outlook klient**. Denne aktivitet returnerer overvågningsposter, når indbakkeregler oprettes, ændres eller fjernes ved hjælp af Outlook desktopklient.
+- **Opdaterede indbakkeregler fra Outlook-klienten**. Denne aktivitet returnerer overvågningsposter, når indbakkeregler oprettes, ændres eller fjernes ved hjælp af Outlook Desktop-klienten.
 
 **Startdato** og **slutdato:** Vælg et datointerval, der skal gælde for din undersøgelse.
 
@@ -209,9 +207,9 @@ d. Feltet **UserId** angiver den bruger, der oprettede den indbakkeregel, der er
 
 ## <a name="investigate-why-there-was-a-successful-login-by-a-user-outside-your-organization"></a>Undersøg, hvorfor en bruger uden for organisationen lykkedes med at logge på
 
-Når du gennemser overvågningsposter i overvågningsloggen, kan du se poster, der angiver, at en ekstern bruger er blevet godkendt af Azure Active Directory og er logget på din organisation. En administrator i contoso.onmicrosoft.com kan f.eks. se en overvågningspost, der viser, at en bruger fra en anden organisation (f.eks. fabrikam.onmicrosoft.com) er logget på contoso.onmicrosoft.com. På samme måde kan du muligvis se overvågningsposter, der angiver, at brugere med en Microsoft-konto (MSA), f.eks. en Outlook.com eller Live.com, er logget på din organisation. I disse situationer er den overvågede aktivitet **bruger logget på**. 
+Når du gennemser overvågningsposter i overvågningsloggen, kan du få vist poster, der angiver, at en ekstern bruger er blevet godkendt af Azure Active Directory og er logget på din organisation. En administrator i contoso.onmicrosoft.com kan f.eks. se en overvågningspost, der viser, at en bruger fra en anden organisation (f.eks. fabrikam.onmicrosoft.com) er logget på contoso.onmicrosoft.com. På samme måde kan du muligvis se overvågningsposter, der angiver, at brugere med en Microsoft-konto (MSA), f.eks. en Outlook.com eller Live.com, er logget på din organisation. I disse situationer er den overvågede aktivitet **bruger logget på**. 
 
-Denne funktionsmåde er tilsigtet. Azure Active Directory (Azure AD), katalogtjenesten, tillader noget, der kaldes *pass-through-godkendelse*, når en ekstern bruger forsøger at få adgang til et SharePoint websted eller en OneDrive placering i din organisation. Når den eksterne bruger forsøger at gøre dette, bliver vedkommende bedt om at angive sine legitimationsoplysninger. Azure AD bruger legitimationsoplysningerne til at godkende brugeren, hvilket betyder, at det kun er Azure AD, der bekræfter, at brugeren er den, de siger, de er. Indikationen af det vellykkede logon i overvågningsposten er resultatet af, at Azure AD godkender brugeren. Det vellykkede logon betyder ikke, at brugeren kunne få adgang til ressourcer eller udføre andre handlinger i din organisation. Det angiver kun, at brugeren blev godkendt af Azure AD. Hvis en pass-through-bruger skal have adgang til SharePoint eller OneDrive ressourcer, skal en bruger i organisationen udtrykkeligt dele en ressource med den eksterne bruger ved at sende vedkommende en invitation til deling eller et anonymt delingslink. 
+Denne funktionsmåde er tilsigtet. Azure Active Directory (Azure AD), katalogtjenesten, tillader noget, der kaldes *pass-through-godkendelse*, når en ekstern bruger forsøger at få adgang til et SharePoint-websted eller en OneDrive-placering i din organisation. Når den eksterne bruger forsøger at gøre dette, bliver vedkommende bedt om at angive sine legitimationsoplysninger. Azure AD bruger legitimationsoplysningerne til at godkende brugeren, hvilket betyder, at det kun er Azure AD bekræfter, at brugeren er den, vedkommende siger, at vedkommende er. Indikationen af det vellykkede logon i overvågningsposten er resultatet af Azure AD godkendelse af brugeren. Det vellykkede logon betyder ikke, at brugeren kunne få adgang til ressourcer eller udføre andre handlinger i din organisation. Det angiver kun, at brugeren blev godkendt af Azure AD. Hvis en pass-through-bruger skal have adgang til SharePoint- eller OneDrive-ressourcer, skal en bruger i organisationen udtrykkeligt dele en ressource med den eksterne bruger ved at sende vedkommende en invitation til deling eller et anonymt delingslink. 
 
 > [!NOTE]
 > Azure AD tillader kun pass-through-godkendelse for *førstepartsprogrammer*, f.eks. SharePoint Online og OneDrive for Business. Det er ikke tilladt for andre tredjepartsprogrammer.
@@ -220,7 +218,7 @@ Her er et eksempel på og beskrivelser af relevante egenskaber i en overvågning
 
 ![Eksempel på overvågningspost for vellykket pass-through-godkendelse.](../media/PassThroughAuth1.png)
 
-   a. Dette felt angiver, at den bruger, der forsøgte at få adgang til en ressource i din organisation, ikke blev fundet i din organisations Azure AD.
+   a. Dette felt angiver, at den bruger, der forsøgte at få adgang til en ressource i din organisation, ikke blev fundet i organisationens Azure AD.
 
    b. I dette felt vises UPN'et for den eksterne bruger, der forsøgte at få adgang til en ressource i organisationen. Dette bruger-id identificeres også i egenskaberne **User** og **UserId** i overvågningsposten.
 
@@ -228,17 +226,17 @@ Her er et eksempel på og beskrivelser af relevante egenskaber i en overvågning
 
    d. Dette angiver, at pass-through-godkendelsen lykkedes. Med andre ord blev brugeren godkendt af Azure AD. 
 
-   e. **Værdien af RecordType** **på 15** angiver, at den overvågede aktivitet (UserLoggedIn) er en STS-logonhændelse (Secure Token Service) i Azure AD.
+   e. **RecordType-værdien** **15** angiver, at den overvågede aktivitet (UserLoggedIn) er en STS-logonhændelse (Secure Token Service) i Azure AD.
 
-Du kan få flere oplysninger om de andre egenskaber, der vises i en UserLoggedIn-overvågningspost, i azure AD-relaterede skemaoplysninger i [API-skemaet til administration af Office 365](/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema).
+Du kan få flere oplysninger om de andre egenskaber, der vises i en UserLoggedIn-overvågningspost, i Azure AD-relaterede skemaoplysninger i [Office 365 API-skema til administrationsaktivitet](/office/office-365-management-api/office-365-management-activity-api-schema#azure-active-directory-base-schema).
 
 Her er to eksempler på scenarier, der kan resultere i en vellykket bruger, der er **logget på** overvågningsaktivitet på grund af pass-through-godkendelse: 
 
   - En bruger med en Microsoft-konto (f.eks. SaraD@outlook.com) har forsøgt at få adgang til et dokument på en OneDrive for Business konto i fourthcoffee.onmicrosoft.com, og der er ikke en tilsvarende gæstebrugerkonto til SaraD@outlook.com i fourthcoffee.onmicrosoft.com.
 
-  - En bruger med en arbejds- eller skolekonto i en organisation (f.eks. pilarp@fabrikam.onmicrosoft.com) har forsøgt at få adgang til et SharePoint websted i contoso.onmicrosoft.com, og der er ikke en tilsvarende gæstebrugerkonto til pilarp@fabrikam.com i contoso.onmicrosoft.com.
+  - En bruger med en arbejds- eller skolekonto i en organisation (f.eks. pilarp@fabrikam.onmicrosoft.com) har forsøgt at få adgang til et SharePoint-websted i contoso.onmicrosoft.com, og der er ikke en tilsvarende gæstebrugerkonto til pilarp@fabrikam.com i contoso.onmicrosoft.com.
 
-### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Tips til undersøgelse af vellykkede logon som følge af pass-through-godkendelse
+### <a name="tips-for-investigating-successful-logins-resulting-from-pass-through-authentication"></a>Tip til undersøgelse af vellykkede logon som følge af pass-through-godkendelse
 
 - Søg i overvågningsloggen efter aktiviteter, der er udført af den eksterne bruger, som er identificeret i den **bruger, der er logget på** overvågningsposten. Skriv UPN'et for den eksterne bruger i feltet **Brugere** , og brug et datointerval, hvis det er relevant for dit scenarie. Du kan f.eks. oprette en søgning ved hjælp af følgende søgekriterier:
 
@@ -246,7 +244,7 @@ Her er to eksempler på scenarier, der kan resultere i en vellykket bruger, der 
 
     Ud over den bruger, der er **logget på** aktiviteter, kan andre overvågningsposter blive returneret, f.eks. dem, der angiver, at en bruger i organisationen delte ressourcer med den eksterne bruger, og om den eksterne bruger har åbnet, ændret eller downloadet et dokument, der er delt med dem.
 
-- Søg efter SharePoint delingsaktiviteter, der angiver, at en fil er delt med den eksterne bruger, der er identificeret af en bruger, der **er logget på** overvågningsposten. Du kan få flere oplysninger under [Brug overvågning af deling i overvågningsloggen](use-sharing-auditing.md).
+- Søg efter SharePoint-delingsaktiviteter, der angiver, at en fil er delt med den eksterne bruger, der er identificeret af en bruger, der **er logget på** overvågningsposten. Du kan få flere oplysninger under [Brug overvågning af deling i overvågningsloggen](use-sharing-auditing.md).
 
 - Eksportér søgeresultaterne i overvågningsloggen, der indeholder poster, der er relevante for din undersøgelse, så du kan bruge Excel til at søge efter andre aktiviteter, der er relateret til den eksterne bruger. Du kan finde flere oplysninger under  [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md).
 

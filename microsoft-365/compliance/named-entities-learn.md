@@ -16,21 +16,19 @@ ms.localizationpriority: medium
 ms.collection:
 - M365-security-compliance
 description: Få mere at vide om, hvordan navngivne enheder hjælper dig med at registrere følsomme elementer, der indeholder navne på personer, fysiske adresser og medicinske vilkår, via politikker til forebyggelse af datatab
-ms.openlocfilehash: 6c20932216953d64abe4515b529bba66b2561647
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 013d2453190c692eeb3ae9a0dfd48437bded1f0c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64973195"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633493"
 ---
 # <a name="learn-about-named-entities"></a>Få mere at vide om navngivne enheder
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-*Navngivne enheder* er [følsomme informationstyper](sensitive-information-type-learn-about.md) (SIT). De er komplekse ordbogs- og mønsterbaserede klassificeringer, som du kan bruge til at registrere personnavne, fysiske adresser og medicinske vilkår og betingelser. Du kan se dem på **Microsoft Purview-overholdelsesportalen > Dataklassificering > Typer af følsomme oplysninger**. Her er en delvis liste over, hvor du kan bruge SIT'er:
+*Navngivne enheder* er [følsomme informationstyper](sensitive-information-type-learn-about.md) (SIT). De er komplekse ordbogs- og mønsterbaserede klassificeringer, som du kan bruge til at registrere personnavne, fysiske adresser og medicinske vilkår og betingelser. Du kan se dem i **Microsoft Purview-compliance-portal > Dataklassificering > Typer af følsomme oplysninger**. Her er en delvis liste over, hvor du kan bruge SIT'er:
 
 
-- [Politikker til forebyggelse af datatab i Microsoft Purview (DLP)](dlp-learn-about-dlp.md) 
+- [Microsoft Purview Forebyggelse af datatab politikker (DLP)](dlp-learn-about-dlp.md) 
 - [Følsomhedsmærkater](sensitivity-labels.md)
 - [Styring af insider-risiko](insider-risk-management-solution-overview.md)
 - [Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)
@@ -68,7 +66,7 @@ Her er nogle eksempler på navngivne objekt-SIT'er. Du kan finde dem alle i [obj
 
 ## <a name="examples-of-enhanced-dlp-policies"></a>Eksempler på forbedrede DLP-politikker
 
-Her er nogle eksempler på forbedrede DLP-politikker, der bruger navngivne objekt-SIT'er. Du kan finde alle 10 af dem på **Microsoft Purview-overholdelsesportalen > Forebyggelse af datatab > Opret politik**. Forbedrede skabeloner kan bruges i DLP og automatisk mærkning.
+Her er nogle eksempler på forbedrede DLP-politikker, der bruger navngivne objekt-SIT'er. Du kan finde alle 10 af dem i **Microsoft Purview-compliance-portal > Forebyggelse af datatab > Opret politik**. Forbedrede skabeloner kan bruges i DLP og automatisk mærkning.
 
 |Politikkategori  |Skabelon  |Beskrivelse  |
 |---------|---------|---------|

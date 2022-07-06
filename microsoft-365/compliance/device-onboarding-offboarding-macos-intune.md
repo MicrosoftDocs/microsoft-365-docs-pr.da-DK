@@ -14,16 +14,14 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du onboarder og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Microsoft Intune
-ms.openlocfilehash: 99a407b2b0c8d6a506cd138078b3f35cf9e5a232
-ms.sourcegitcommit: e911dd506ea066795e418daf7b84c1e11381a21c
+ms.openlocfilehash: e5cc3ff25895f3eb7557566eb8a38722a1aee35f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64952968"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632349"
 ---
 # <a name="onboard-and-offboard-macos-devices-into-microsoft-purview-solutions-using-intune"></a>Onboarde og offboard macOS-enheder i Microsoft Purview-løsninger ved hjælp af Intune
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan bruge Intune til at integrere macOS-enheder i Microsoft Purview-løsninger.
 
@@ -142,7 +140,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 ```
 -->
 
-2. Åbn **profilerne Microsoft Endpoint Manager** **centerDevicesConfiguration** >  > .
+2. Åbn **konfigurationsprofilerne** **for Microsoft Endpoint Manager centerenheder** >  > .
 
 1. Vælg: **Opret profil** 
 
@@ -170,13 +168,13 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
         1. set Antivirusprogram `passive mode` = `true` eller `false`. Bruges `true`kun, hvis der installeres DLP. Brug `false` eller tildel ikke en værdi, hvis du installerer DLP og Microsoft Defender for Endpoint (MDE).
     1. **netfilter.mobileconfig**
  
-1. Åbn **DevicesConfiguration-profiler** > . Du kan se dine oprettede profiler der.
+1. Åbn **Enhedskonfigurationsprofiler** > . Du kan se dine oprettede profiler der.
 
 1. På siden **Konfigurationsprofiler** skal du vælge den profil, du lige har oprettet, i dette eksempel *AccessibilityformacOS* og vælge **Enhedsstatus** for at få vist en liste over enheder og installationsstatussen for konfigurationsprofilen.
 
 ### <a name="get-the-device-onboarding-package"></a>Hent onboardingpakken til enheden
 
-1. I **Compliance Center** skal **du åbne Indstillinger** >  **Device Onboarding** og vælge **Onboarding**.
+1. Åbn **Indstillinger** > **For onboarding af enhed** i **Overholdelsescenter**, og vælg **Onboarding**.
  
 1. Vælg **macOS** **for Vælg operativsystem for at starte onboardingprocessen**.
  
@@ -186,7 +184,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 ### <a name="deploy-the-onboarding-package"></a>Udrul onboardingpakken
 
-1. Åbn **profilerne Microsoft Endpoint Manager** **centerDevicesConfiguration** >  > .
+1. Åbn **konfigurationsprofilerne** **for Microsoft Endpoint Manager centerenheder** >  > .
 
 1. Vælg: **Opret profil**. 
 
@@ -209,7 +207,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 ### <a name="enable-system-extension"></a>Aktivér systemudvidelse
 
-1. I **Microsoft Endpoint Manager skal** du vælge **Opret profil** under **Konfigurationsprofiler**
+1. I **Microsoft Endpoint Manager center** skal du vælge **Opret profil** under **Konfigurationsprofiler**
 
 1. Vælge:
     1. **Platform = macOS**
@@ -236,7 +234,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 
 ### <a name="get-the-installation-package"></a>Hent installationspakken
 
-1. I **Compliance Center** skal **du åbne Indstillinger** >  **Device Onboarding** og vælge **Onboarding**.
+1. Åbn **Indstillinger** > **For onboarding af enhed** i **Overholdelsescenter**, og vælg **Onboarding**.
  
 1. **Vælg macOS for Vælg operativsystem for at starte onboardingprocessen** 
  
@@ -257,7 +255,7 @@ fuld diskadgang     |[fulldisk.mobileconfig](https://github.com/microsoft/mdatp-
 > [!NOTE]
 > Offboarding medfører, at enheden stopper med at sende sensordata til portalen, men data fra enheden, herunder reference til eventuelle beskeder, den har haft, bevares i op til seks måneder.
 
-2. I **Microsoft Endpoint Manager center** skal du åbne **DevicesConfiguration-profiler** > . Du kan se dine oprettede profiler der.
+2. Åbn **Profiler til konfiguration af** **enheder** >  i **Microsoft Endpoint Manager center**. Du kan se dine oprettede profiler der.
 
 1. På siden **Konfigurationsprofiler** skal du vælge profilen *wdav.pkg.intunemac* .
 

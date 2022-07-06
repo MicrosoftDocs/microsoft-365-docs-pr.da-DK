@@ -12,20 +12,18 @@ ms.service: O365-seccomp
 ms.localizationpriority: medium
 ms.collection: M365-security-compliance
 description: Få mere at vide om, hvordan du konfigurerer og bruger en 17a-4 ServiceNow DataParser-connector til at importere og arkivere ServiceNow-data i Microsoft 365.
-ms.openlocfilehash: c160decc5e9516816b4dc1baa28ba4f5aa7f029a
-ms.sourcegitcommit: 7dc7e9fd76adf848f941919f86ca25eecc704015
+ms.openlocfilehash: 27939ec3e8bf9120986ed7151ac1c84d599e3c7a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "65316804"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631645"
 ---
 # <a name="set-up-a-connector-to-archive-data-from-servicenow"></a>Konfigurer en connector til arkivering af data fra ServiceNow
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Brug [ServiceNow DataParser](https://www.17a-4.com/dataparser/) fra 17a-4 LLC til at importere og arkivere data fra ServiceNow til brugerpostkasser i din Microsoft 365-organisation. DataParser indeholder en ServiceNow-connector, der er konfigureret til at hente elementer fra en datakilde fra en tredjepart og importere disse elementer til Microsoft 365. ServiceNow DataParser-connectoren konverterer ServiceNow-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
 
-Brug [ServiceNow DataParser](https://www.17a-4.com/dataparser/) fra 17a-4 LLC til at importere og arkivere data fra ServiceNow til brugerpostkasser i din Microsoft 365 organisation. DataParser indeholder en ServiceNow-connector, der er konfigureret til at hente elementer fra en tredjepartsdatakilde og importere disse elementer til Microsoft 365. ServiceNow DataParser-connectoren konverterer ServiceNow-data til et mailformat og importerer derefter disse elementer til brugerpostkasser i Microsoft 365.
-
-Når ServiceNow-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview funktioner som f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og overholdelse af kommunikation. Brug af en ServiceNow-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
+Når ServiceNow-data er gemt i brugerpostkasser, kan du anvende Microsoft Purview-funktioner, f.eks. litigation hold, eDiscovery, opbevaringspolitikker og opbevaringsmærkater og kommunikation med overholdelse af angivne standarder. Brug af en ServiceNow-connector til at importere og arkivere data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovgivningsmæssige politikker.
 
 ## <a name="overview-of-archiving-servicenow-data"></a>Oversigt over arkivering af ServiceNow-data
 
@@ -37,7 +35,7 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 2. ServiceNow-elementer indsamles regelmæssigt af DataParser. DataParser konverterer også indholdet af en meddelelse til et mailformat.
 
-3. Den ServiceNow DataParser-connector, du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage placering i Microsoft-cloudmiljøet.
+3. Den ServiceNow DataParser-connector, du opretter i Microsoft Purview-compliance-portal opretter forbindelse til DataParser og overfører meddelelserne til en sikker Azure Storage-placering i Microsoft-cloudmiljøet.
 
 4. Der oprettes en undermappe i mappen Indbakke med navnet **ServiceNow DataParser** i brugerpostkasserne, og ServiceNow-elementerne importeres til den pågældende mappe. Connectoren bestemmer, hvilken postkasse der skal importeres elementer til ved hjælp af værdien for egenskaben *Mail* . Alle ServiceNow-elementer indeholder denne egenskab, som udfyldes med mailadressen på hver enkelt deltager.
 
@@ -45,15 +43,15 @@ I følgende oversigt forklares processen med at bruge en dataconnector til at ar
 
 - Opret en DataParser-konto til Microsoft-connectors. For at gøre dette skal du kontakte [17a-4 LLC](https://www.17a-4.com/contact/). Du skal logge på denne konto, når du opretter connectoren i trin 1.
 
-- Den bruger, der opretter ServiceNow DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Administrator af dataconnector. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Administrator af dataconnector og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
+- Den bruger, der opretter ServiceNow DataParser-connectoren i trin 1 (og fuldfører den i trin 3), skal tildeles rollen Data Connector Administration. Denne rolle er påkrævet for at tilføje forbindelser på siden **Dataconnectors på overholdelsesportalen** . Denne rolle føjes som standard til flere rollegrupper. Du kan se en liste over disse rollegrupper i afsnittet "Roller i sikkerheds- og overholdelsescentre" i [Tilladelser i Security & Compliance Center](../security/office-365-security/permissions-in-the-security-and-compliance-center.md#roles-in-the-security--compliance-center). En administrator i din organisation kan også oprette en brugerdefineret rollegruppe, tildele rollen Data Connector Administration og derefter tilføje de relevante brugere som medlemmer. Du kan finde instruktioner i afsnittet "Opret en brugerdefineret rollegruppe" i [Tilladelser i Microsoft Purview-compliance-portal](microsoft-365-compliance-center-permissions.md#create-a-custom-role-group).
 
-- Denne 17a-4-dataconnector er tilgængelig i GCC miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365 infrastruktur og derfor ikke er omfattet af forpligtelserne til Microsoft Purview og databeskyttelse. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
+- Denne 17a-4-dataconnector er tilgængelig i GCC-miljøer i Microsoft 365 US Government-cloudmiljøet. Tredjepartsprogrammer og -tjenester kan omfatte lagring, overførsel og behandling af din organisations kundedata på tredjepartssystemer, der er uden for Microsoft 365-infrastrukturen og derfor ikke er omfattet af Microsoft Purview- og databeskyttelsesforpligtelserne. Microsoft gør ingen repræsentation af, at brugen af dette produkt til at oprette forbindelse til tredjepartsprogrammer indebærer, at disse tredjepartsprogrammer er FEDRAMP-kompatible.
 
 ## <a name="step-1-set-up-a-servicenow-dataparser-connector"></a>Trin 1: Konfigurer en ServiceNow DataParser-connector
 
 Det første trin er at få adgang til siden Dataconnectors på overholdelsesportalen og oprette en 17a-4-connector til ServiceNow-data.
 
-1. Gå til , <https://compliance.microsoft.com> og klik derefter på **DataconnectorsServiceNow** >  **DataParser**.
+1. Gå til <https://compliance.microsoft.com> , og klik derefter på **Dataconnectors** > **ServiceNow DataParser**.
 
 2. Klik på **Tilføj connector** på siden **ServiceNow DataParser-produktbeskrivelse**.
 
@@ -69,7 +67,7 @@ Arbejd med 17a-4-understøttelse for at konfigurere ServiceNow DataParser-connec
 
 ## <a name="step-3-map-users"></a>Trin 3: Tilknyt brugere
 
-ServiceNow DataParser-connectoren knytter automatisk brugere til deres Microsoft 365 mailadresser, før de importerer data til Microsoft 365.
+ServiceNow DataParser-connectoren knytter automatisk brugere til deres Microsoft 365-mailadresser, før de importerer data til Microsoft 365.
 
 ## <a name="step-4-monitor-the-servicenow-dataparser-connector"></a>Trin 4: Overvåg ServiceNow DataParser-connectoren
 

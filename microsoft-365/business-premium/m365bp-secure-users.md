@@ -10,9 +10,6 @@ ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
 ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
@@ -24,16 +21,16 @@ search.appverid:
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan Microsoft 365 Business Premium hjælper din virksomhed med produktivitet og sikkerhed.
-ms.openlocfilehash: 851abcfc2e7d6b55c4c6d201132dabafc56a898e
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: c8620bd687e297151fd6ccabac7f8d01a66457ad
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574150"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631744"
 ---
-# <a name="how-microsoft-365-security-recommendations-affect-your-users"></a>Sådan påvirker Microsoft 365-sikkerhedsanbefalinger dine brugere
+# <a name="how-microsoft-365-business-premium-helps-your-business"></a>Sådan hjælper Microsoft 365 Business Premium din virksomhed
 
-Microsoft 365 Business Premium er en omkostningseffektiv løsning, der sætter små og mellemstore virksomheder i stand til at arbejde mere effektivt og sikkert end tidligere. I denne artikel beskrives det, hvordan Microsoft 365 Business Premium kan hjælpe din virksomhed, og den indeholder følgende afsnit:
+Microsoft 365 Business Premium er en omkostningseffektiv løsning, der sætter små og mellemstore virksomheder i stand til at arbejde mere effektivt og sikkert end tidligere. I denne artikel beskrives det, hvordan Microsoft 365 Business Premium kan hjælpe din virksomhed eller kampagne. Denne artikel indeholder følgende afsnit:
 
 - [Video: Top 5 fordele ved Microsoft 365 Business Premium](#video-top-5-benefits-of-microsoft-365-business-premium)
 - [Produktivitet og avancerede sikkerhedsfunktioner](#productivity-and-security) , der gør det muligt for dig at køre din virksomhed mere sikkert på tværs af enheder og fra stort set alle steder
@@ -87,6 +84,8 @@ Vores vejledning til digitale trusler beskriver forskellige former for trusler, 
 
 ## <a name="next-steps"></a>Næste trin
 
-1. Få [Microsoft 365 Business Premium](get-microsoft-365-business-premium.md) eller [Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
+1. Få enten [Microsoft 365 Business Premium](get-microsoft-365-business-premium.md) eller [Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
 
 2. [Start konfigurationsprocessen](m365bp-setup-overview.md).
+
+3. [Stød op i sikkerheden](m365bp-security-overview.md).

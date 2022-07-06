@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om vurderingsskabeloner i Microsoft Purview Overholdelsesstyring
+title: Få mere at vide om vurderingsskabeloner i Microsoft Purview Compliance Manager
 f1.keywords:
 - NOCSH
 ms.author: chvukosw
@@ -17,17 +17,15 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Forstå, hvordan du bruger og administrerer skabeloner til oprettelse af vurderinger i Microsoft Purview Overholdelsesstyring. Opret og rediger skabeloner ved hjælp af en formateret Excel-fil.
-ms.openlocfilehash: e83e079ba47a9e9ab33b3219ca648d1b4af9f124
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+description: Forstå, hvordan du bruger og administrerer skabeloner til oprettelse af vurderinger i Microsoft Purview Compliance Manager. Opret og rediger skabeloner ved hjælp af en formateret Excel-fil.
+ms.openlocfilehash: ac4d3fb6f7a43aa642b9d8b343a68c9f38f29e25
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115999"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635639"
 ---
 # <a name="learn-about-assessment-templates-in-compliance-manager"></a>Få mere at vide om vurderingsskabeloner i Overholdelsesstyring
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 **I denne artikel:** Forstå **, hvordan skabeloner fungerer****, og hvordan du administrerer dem** fra siden med vurderingsskabeloner. Få instruktioner til **oprettelse af** nye skabeloner, **udvidelse** og **ændring af** eksisterende skabeloner, **formatering af dine skabelondata med Excel** og eksport af **skabelonrapporter**.
 
@@ -47,14 +45,14 @@ Overholdelsesstyring kan bruges til at vurdere forskellige produkttyper. Alle sk
 
 Vurderinger fra universelle skabeloner er mere generelle, men tilbyder udvidet alsidighed, da de kan hjælpe dig med nemt at spore din organisations overholdelse af angivne standarder på tværs af flere produkter.
 
-Bemærk, at kunder med GCC (US Government Community) Moderate, GCC High og DoD i øjeblikket ikke kan bruge universelle skabeloner.
+Bemærk, at kunder med en moderat GCC (US Government Community), GCC High og DoD (Department of Defense) i øjeblikket ikke kan bruge universelle skabeloner.
 
 ## <a name="template-availability-and-licensing"></a>Skabelontilgængelighed og licensering
 
 Der er to kategorier af skabeloner i Overholdelsesstyring: inkluderet og Premium.
 
 1. **Inkluderede skabeloner** tildeles af din Compliance Manager-licens og dækker vigtige regler og krav. Du kan få mere at vide om, hvilke skabeloner der er tilgængelige under din licensaftale, under [Licensoplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#compliance-manager).
-2. **Premium skabeloner** til at dække yderligere behov og scenarier kan opnås ved at købe skabelonlicenser.
+2. **Premium-skabeloner** , der dækker yderligere behov og scenarier, kan opnås ved at købe skabelonlicenser.
 
 Når du begynder at oprette vurderinger, sporer Overholdelsesstyring, hvor mange skabeloner der er aktive, så du kan overvåge dit forbrug. Du kan få mere at vide under [Aktive og inaktive skabeloner](compliance-manager-templates.md#active-and-inactive-templates).
 
@@ -64,31 +62,31 @@ Få vist den [komplette liste over skabeloner](compliance-manager-templates-list
 
 Skabelonlicenser kan hentes ved hjælp af en eller flere af disse metoder, afhængigt af din licensaftale for Overholdelsesstyring. Når dit køb er fuldført, bør skabelonerne blive tilgængelige i din lejer inden for 48 timer.
 
-**Kommerciel og GCC moderat**
+**Commercial og GCC Moderate**
 
-Kommercielle og GCC Moderate konti kan købe skabelonlicenser i Administration ([få mere at vide om abonnementer, licenser og fakturering](/microsoft-365/commerce/)). Vælg det antal licenser, du vil købe, og din betalingsplan.
+Kommercielle konti og GCC Moderate-konti kan købe skabelonlicenser i Administration ([få mere at vide om abonnementer, licenser og fakturering](/microsoft-365/commerce/)). Vælg det antal licenser, du vil købe, og din betalingsplan.
 
 Købslinks:
 
 - [Kommercielle](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/46E9BF2A-3C8D-4A69-A7E7-3DA04687636D)
-- [GCC moderat](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/3129986d-5f4b-413b-a34b-b706db5a7669)
+- [GCC Moderat](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/3129986d-5f4b-413b-a34b-b706db5a7669)
 
-Du kan også erhverve licenser via din deltagelse i [Cloud Solution Provider-programmet](https://partner.microsoft.com/membership/cloud-solution-provider) eller [volumenlicens](https://www.microsoft.com/licensing/licensing-programs/licensing-programs).
+Du kan også få licenser via din deltagelse i [Cloud Solution Provider-programmet](https://partner.microsoft.com/membership/cloud-solution-provider) eller [volumenlicenser](https://www.microsoft.com/licensing/licensing-programs/licensing-programs).
 
-**GCC Konti med høj og DOD**
+**GCC High- og DOD-konti**
 
-GCC Høj- og DOD-konti skal købe skabelonlicenser via [volumenlicenser](https://www.microsoft.com/licensing/licensing-programs/licensing-programs).
+GCC High- og DOD-konti skal købe skabelonlicenser via [volumenlicenser](https://www.microsoft.com/licensing/licensing-programs/licensing-programs).
 
 ### <a name="try-out-premium-templates"></a>Prøv Premium-skabeloner
 
 Hvis du vil prøve Premium-skabeloner, før du foretager et køb, kan du også få prøveversioner af licenserne. Prøvelicenser er gode i op til 25 skabeloner i 90 dage. Når du har fået din prøvelicens, skal skabelonerne være tilgængelige i din lejer inden for 48 timer.
 
-Hvis din organisation har en kommerciel licens til Overholdelsesstyring, kan du få mere at vide om, hvordan du starter din prøveversion på [About the free trial for Microsoft Purview Compliance Manager premium assessments](compliance-easy-trials-compliance-manager-assessments.md).
+Hvis din organisation har en kommerciel licens til Overholdelsesstyring, kan du få mere at vide om, hvordan du starter din prøveversion på [Om den gratis prøveversion til Premium-vurderinger fra Microsoft Purview Compliance Manager](compliance-easy-trials-compliance-manager-assessments.md).
 
 Hvis din organisation er under en GCC- eller DOD-licens, skal du vælge det relevante prøveversionslink til din organisation:
 
-- [GCC moderat](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/87ed2908-0a8d-430a-9635-558ed42b581f)
-- [GCC Høj](https://portal.office365.us/SubscriptionDetails?OfferId=e14362d7-2c11-4a43-9c92-59f1b499b96a)
+- [GCC Moderat](https://admin.microsoft.com/Adminportal/Home?#/catalog/offer-details/compliance-manager-premium-assessment-add-on/87ed2908-0a8d-430a-9635-558ed42b581f)
+- [GCC High](https://portal.office365.us/SubscriptionDetails?OfferId=e14362d7-2c11-4a43-9c92-59f1b499b96a)
 - [DOD](https://portal.apps.mil/Commerce/Trial.aspx?OfferId=17e28290-7de6-41a9-af30-f6497396ab2e)
 
 #### <a name="active-and-inactive-templates"></a>Aktive og inaktive skabeloner
@@ -120,11 +118,11 @@ Vælg en skabelon på rækken for at få vist detaljesiden. Denne side indeholde
 
 ## <a name="create-an-assessment-template"></a>Opret en vurderingsskabelon
 
-Hvis du vil oprette din egen nye skabelon til brugerdefinerede vurderinger i Overholdelsesstyring, skal du bruge et særligt formateret Excel regneark til at samle de nødvendige kontroldata. Når regnearket er fuldført, skal du importere det i Overholdelsesstyring. Du kan få mere at vide under [Opret en vurderingsskabelon](compliance-manager-templates-create.md).
+Hvis du vil oprette din egen nye skabelon til brugerdefinerede vurderinger i Overholdelsesstyring, skal du bruge et særligt formateret Excel-regneark til at samle de nødvendige kontroldata. Når regnearket er fuldført, skal du importere det i Overholdelsesstyring. Du kan få mere at vide under [Opret en vurderingsskabelon](compliance-manager-templates-create.md).
 
 ## <a name="modify-an-assessment-template"></a>Rediger en vurderingsskabelon
 
-Når du arbejder med vurderinger i Overholdelsesstyring, kan det være en god idé at ændre en vurderingsskabelon, som du har oprettet. Processen ligner processen til oprettelse af skabelonen, da du uploader en formateret Excel fil med dine skabelondata. Hvis du vil vide mere om, hvordan du foretager ændringer, og hvordan du bevarer de data, du stadig vil bevare, skal du se [Rediger en vurderingsskabelon](compliance-manager-templates-modify.md).
+Når du arbejder med vurderinger i Overholdelsesstyring, kan det være en god idé at ændre en vurderingsskabelon, som du har oprettet. Processen ligner processen til oprettelse af skabeloner, da du uploader en formateret Excel-fil med dine skabelondata. Hvis du vil vide mere om, hvordan du foretager ændringer, og hvordan du bevarer de data, du stadig vil bevare, skal du se [Rediger en vurderingsskabelon](compliance-manager-templates-modify.md).
 
 ## <a name="extend-an-assessment-template"></a>Udvid en vurderingsskabelon
 
@@ -132,12 +130,12 @@ Overholdelsesstyring giver dig mulighed for at føje dine egne kontrolelementer 
 
 ## <a name="format-assessment-template-data-in-excel"></a>Formatér vurderingsskabelondata i Excel
 
-Når du opretter, ændrer eller udvider vurderingsskabeloner i Overholdelsesstyring, skal du arbejde med Excel regneark, der bruger et bestemt format og skema. Disse specifikationer skal følges, for at filerne kan importeres korrekt. Du kan få mere at vide under [Formatér skabelondata for vurdering i Excel](compliance-manager-templates-format-excel.md).
+Når du opretter, ændrer eller udvider vurderingsskabeloner i Overholdelsesstyring, skal du arbejde med Excel-regneark, der bruger et bestemt format og skema. Disse specifikationer skal følges, for at filerne kan importeres korrekt. Du kan få mere at vide under [Formatér data til vurderingsskabeloner i Excel](compliance-manager-templates-format-excel.md).
 
 ## <a name="export-a-template"></a>Eksportér en skabelon
 
-Du kan eksportere en Excel fil, der indeholder alle en skabelons data. Du skal eksportere en skabelon for at kunne redigere den, da det er den Excel fil, du redigerer og uploader i [ændringsprocessen](compliance-manager-templates-modify.md). Du kan også eksportere en skabelon til reference, hvis du vil bruge data fra den, mens du opretter en ny brugerdefineret skabelon.
+Du kan eksportere en Excel-fil, der indeholder alle en skabelons data. Du skal eksportere en skabelon for at redigere den, da det er den Excel-fil, du redigerer og uploader i [ændringsprocessen](compliance-manager-templates-modify.md). Du kan også eksportere en skabelon til reference, hvis du vil bruge data fra den, mens du opretter en ny brugerdefineret skabelon.
 
-Hvis du vil eksportere skabelonen, skal du gå til siden med skabelonoplysninger og vælge knappen **Eksportér til Excel**.
+Hvis du vil eksportere skabelonen, skal du gå til siden med skabelonoplysninger og vælge knappen **Eksportér til Excel** .
 
 Bemærk, at når du eksporterer en skabelon, du har udvidet fra en overholdelsesstyringsskabelon, indeholder den eksporterede fil kun de attributter, du har føjet til skabelonen. Den eksporterede fil indeholder ikke de oprindelige skabelondata, der er leveret af Microsoft. Hvis du vil have en sådan rapport, skal du se instruktionerne til [eksport af en vurderingsrapport](compliance-manager-assessments.md#export-an-assessment-report).

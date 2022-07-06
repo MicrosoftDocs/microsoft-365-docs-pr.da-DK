@@ -15,19 +15,17 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: eDiscovery (Premium) gør det nemt at administrere arbejdsprocessen for meddelelser om juridiske ventepositioner for at give tilsynsførende besked i juridiske undersøgelser.
-ms.openlocfilehash: 59acf9dd561b46a7e7b970ffcd2c4c505f0b5a1c
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+description: eDiscovery (Premium) gør det nemt at administrere arbejdsprocessen for meddelelser om juridiske ventepositioner omkring at give tilsynsførende besked i juridiske undersøgelser.
+ms.openlocfilehash: 371ede05fc1d17caf8ec8a449dab2f386ac53628
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097728"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635211"
 ---
 # <a name="work-with-communications-in-ediscovery-premium"></a>Arbejd med kommunikation i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Microsoft Purview eDiscovery (Premium) gør det muligt for juridiske afdelinger at forenkle deres processer med sporing og distribution af meddelelser om juridiske ventepositioner. Værktøjet til tilsynsførende kommunikation gør det muligt for juridiske afdelinger at administrere og automatisere hele den juridiske ventepositionsproces, fra indledende meddelelser, til påmindelser og til eskaleringer, alt sammen på ét sted.
+Microsoft Purview eDiscovery (Premium) gør det muligt for juridiske afdelinger at forenkle deres processer omkring sporing og distribution af meddelelser om juridisk venteposition. Værktøjet til tilsynsførende kommunikation gør det muligt for juridiske afdelinger at administrere og automatisere hele den juridiske ventepositionsproces, fra indledende meddelelser, til påmindelser og til eskaleringer, alt sammen på ét sted.
 
 ## <a name="what-is-a-legal-hold-notification"></a>Hvad er en meddelelse om juridisk venteposition?
 

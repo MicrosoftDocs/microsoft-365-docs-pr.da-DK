@@ -17,16 +17,14 @@ ms.collection:
 - M365-security-compliance
 description: Brug Avanceret meddelelseskryptering i Microsoft Purview til at udvide din mailsikkerhed ved at angive en udløbsdato for mails via en brugerdefineret brandet skabelon.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 78855ae8906367293b69406ba74246619b5af465
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b93aad4f217f956561b686b1415c64456a4360db
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015556"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635145"
 ---
 # <a name="set-an-expiration-date-for-email-encrypted-by-microsoft-purview-advanced-message-encryption"></a>Angiv en udløbsdato for mail, der er krypteret med Avanceret meddelelseskryptering i Microsoft Purview
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Microsoft Purview Advanced Message Encryption er inkluderet i [Microsoft 365 Enterprise E5](https://www.microsoft.com/microsoft-365/enterprise/home), Office 365 E5, Microsoft 365 E5 (prisfastsættelse for personale til nonprofitorganisationer), Office 365 Enterprise E5 (priser på personale til nonprofitorganisationer) og Office 365 Education A5. Microsoft 365 E5 Overholdelse SKU-tilføjelsesprogram til Microsoft 365 E3, Microsoft 365 E3 (prisfastsættelse for nonprofitmedarbejdere) eller tilføjelsesprogrammet Avanceret overholdelse i Office 365 SKU for Microsoft 365 E3, Microsoft 365 E3 (pris på personale til nonprofitorganisationer) eller Office 365 SKU'er.
 
@@ -44,7 +42,7 @@ Med Avanceret meddelelseskryptering i Microsoft Purview anvender Office 365 ombr
 
 ## <a name="create-a-custom-branding-template-to-force-mail-expiration-by-using-powershell"></a>Opret en brugerdefineret brandingskabelon for at gennemtvinge mailudløb ved hjælp af PowerShell
 
-1. [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) med en konto, der har globale administratortilladelser i din organisation.
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) med en konto, der har globale administratortilladelser i din organisation.
 
 2. Kør cmdlet'en New-OMEConfiguration.
 

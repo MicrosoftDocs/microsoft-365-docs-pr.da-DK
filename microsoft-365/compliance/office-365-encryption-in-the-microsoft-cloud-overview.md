@@ -15,50 +15,50 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-security-compliance
 - Strat_O365_Enterprise
-description: I denne artikel kan du læse en oversigt over de forskellige former for kryptering, der bruges til at holde kundedata sikre i Microsoft-skyen.
+description: I denne artikel kan du læse en oversigt over de forskellige former for kryptering, der bruges til at beskytte kundedata i Microsoft-cloudmiljøet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: c888c1958eb5265c31ae981e42a96eeeeb57f3ef
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: 3105da5d17b1656ffa0d29da4f4aa02c9a9f9064
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63587315"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633911"
 ---
 # <a name="encryption-in-the-microsoft-cloud"></a>Kryptering i Microsoft Cloud
 
-Kundedata inden for Microsofts skybaserede virksomhedstjenester er beskyttet af flere teknologier og processer, herunder forskellige former for kryptering. (Kundedata i dette dokument omfatter Exchange Online-postkasseindhold, brødtekst i mails, kalenderposter og indholdet af vedhæftede filer i mails og om relevant Skype for Business-indhold), SharePoint onlinewebstedsindhold og de filer, der er gemt på websteder, og filer, der er overført til OneDrive for Business  eller Skype for Business). Microsoft bruger flere krypteringsmetoder, protokoller og kryptering på tværs af sine produkter og tjenester for at sikre, at kundedata kan passere gennem vores skytjenester, og for at beskytte fortroligheden af kundedata, der er gemt i vores skytjenester. Microsoft bruger nogle af de stærkeste, mest sikre krypteringsprotokoller, der er tilgængelige, til at skabe hindringer for uautoriseret adgang til kundedata. Ordentlig nøgleadministration er også et vigtigt element i bedste praksis for kryptering, og Microsoft arbejder på at sikre, at alle Microsoft-administrerede krypteringsnøgler er korrekt sikret.
+Kundedata i Microsofts cloudtjenester til virksomheder er beskyttet af flere teknologier og processer, herunder forskellige former for kryptering. (Kundedata i dette dokument omfatter Exchange Online postkasseindhold, mailbrødtekst, kalenderposter og indholdet af vedhæftede filer i mails, og hvis det er relevant, Skype for Business indhold), indhold på SharePoint Online-webstedet og de filer, der er gemt på websteder, og filer, der er uploadet til OneDrive for Business eller Skype for Business.) Microsoft bruger flere krypteringsmetoder, protokoller og ciffer på tværs af sine produkter og tjenester for at hjælpe med at levere en sikker sti til kundedata til at rejse gennem vores cloudtjenester og til at beskytte fortroligheden af kundedata, der er gemt i vores cloudtjenester. Microsoft bruger nogle af de stærkeste og mest sikre krypteringsprotokoller, der er tilgængelige, til at skabe barrierer mod uautoriseret adgang til kundedata. Korrekt administration af nøgler er også et vigtigt element i bedste praksis for kryptering, og Microsoft arbejder for at sikre, at alle Microsoft-administrerede krypteringsnøgler sikres korrekt.
 
-Kundedata, der er gemt i Microsofts skybaserede virksomhedstjenester, er beskyttet ved hjælp af en eller flere former for kryptering. Validering af vores cryptopolitik og håndhævelsen bekræftes uafhængigt af flere tredjepartsrevisorer, og rapporter om disse revisioner er tilgængelige på [Service Trust Portal](https://aka.ms/stp).
+Kundedata, der er gemt i Microsofts cloudtjenester til virksomheder, beskyttes ved hjælp af en eller flere former for kryptering. Validering af vores kryptografipolitik og dens håndhævelse bekræftes uafhængigt af flere tredjepartsrevisorer, og rapporter om disse revisioner er tilgængelige på [Service Trust Portal](https://aka.ms/stp).
 
-Microsoft leverer serviceteknologier, der krypterer kundedata under transport og under overførsel. For eksempel bruger Microsoft Azure [BitLocker](/windows/device-security/bitlocker/bitlocker-overview) og [DM-Crypt](https://en.wikipedia.org/wiki/Dm-crypt) til kundens data i hvile, og Microsoft 365 bruger BitLocker, [Azure Storage-tjenestekryptering](/azure/), [DISTRIBUTED Key Manager](./exchange-online-secures-email-secrets.md) (DKM) og Microsoft 365-tjenestekryptering. For kundedata under overførsel bruger Azure, Office 365, Microsofts kommercielle support, Microsoft Dynamics 365, Microsoft Power BI og Visual Studio Team Services branchestandardsikkerheds transportprotokoller, f.eks Internet Protocol Security (IPsec) og Transport Layer Security (TLS), mellem Microsoft-datacentre og mellem brugerenheder og Microsoft-datacentre.
+Microsoft leverer teknologier på tjenestesiden, der krypterer inaktive og under overførsel af kundedata. For inaktive kundedata bruger Microsoft Azure [f.eks. BitLocker](/windows/device-security/bitlocker/bitlocker-overview) og [DM-Crypt](https://en.wikipedia.org/wiki/Dm-crypt), og Microsoft 365 bruger BitLocker, [Azure Storage Service Encryption](/azure/), [Distributed Key Manager](./exchange-online-secures-email-secrets.md) (DKM) og Microsoft 365-tjenestekryptering. I forbindelse med kundedata under overførsel bruger Azure, Office 365, Microsoft Commercial Support, Microsoft Dynamics 365, Microsoft Power BI og Visual Studio Team Services branchestandardsikre transportprotokoller, f.eks. Internet Protocol Security (IPsec) og TLS (Transport Layer Security) mellem Microsoft-datacentre og mellem brugerenheder og Microsoft-datacentre.
 
-Ud over det oprindelige niveau for krypteret sikkerhed leveret af Microsoft, indeholder vores skytjenester også indstillinger for kryptering, som du kan administrere. Du kan f.eks. aktivere kryptering af trafik mellem deres virtuelle Azure-computere (VMs) og deres brugere. Med [Azure Virtual Networks](https://azure.microsoft.com/services/virtual-network/) kan du bruge branchestandarden IPsec-protokol til at kryptere trafik mellem din virksomheds VPN-gateway og Azure. Du kan også kryptere trafik mellem VM'er på dit virtuelle netværk. Desuden giver [de nye Office 365-meddelelseskryptering dig mulighed](set-up-new-message-encryption-capabilities.md) for at sende krypterede mails til alle.
+Ud over det grundlæggende niveau for kryptografisk sikkerhed, der leveres af Microsoft, omfatter vores cloudtjenester også kryptografiske indstillinger, som du kan administrere. Du kan f.eks. aktivere kryptering for trafik mellem deres virtuelle Azure-maskiner (VM'er) og deres brugere. Med [Azure Virtual Networks](https://azure.microsoft.com/services/virtual-network/) kan du bruge branchestandarden iPsec-protokollen til at kryptere trafikken mellem din virksomheds VPN-gateway og Azure. Du kan også kryptere trafik mellem VM'er på dit virtuelle netværk. Derudover giver [nye Office 365 funktioner til meddelelseskryptering](set-up-new-message-encryption-capabilities.md) dig mulighed for at sende krypterede mails til alle.
 
-Efter Den offentlige infrastrukturs driftssikkerhedsstandard, som er en komponent i [Microsofts](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=5868ecc8-50b7-4f91-b43f-640e2b99e86e&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ%20and%20White%20Papers) sikkerhedspolitik, bruger Microsoft de krypterede funktioner, der er inkluderet i Windows-operativsystemet til certifikater og godkendelsesmekanismer. Disse mekanismer omfatter brugen af krypterede moduler, der opfylder den amerikanske regerings føderale standarder for behandling af [oplysninger (](https://csrc.nist.gov/publications/PubsFIPS.html) FIPS) 140-2-standarden. Du kan søge efter de relevante NIST-certifikatnumre til Microsoft ved hjælp af [cmvp'et for det krypterede modulvalideringsprogram](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
+Efter standarden for driftsmæssig sikkerhed for infrastruktur for offentlige nøgler, som er en komponent i [Microsofts sikkerhedspolitik](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=5868ecc8-50b7-4f91-b43f-640e2b99e86e&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ%20and%20White%20Papers), bruger Microsoft de kryptografiske funktioner, der er inkluderet i Windows-operativsystemet, til certifikater og godkendelsesmekanismer. Disse mekanismer omfatter brug af kryptografiske moduler, der opfylder den amerikanske regerings FIPS 140-2-standard ( [Federal Information Processing Standards](https://csrc.nist.gov/publications/PubsFIPS.html) ). Du kan søge efter de relevante NIST-certifikatnumre for Microsoft ved hjælp af [CMVP'en til kryptografisk modulvalideringsprogram](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search).
 
-> [BEMÆRK] For at få adgang til Microsofts sikkerhedspolitik som en ressource skal du logge på med din arbejds- eller skolekonto. Hvis du endnu ikke har et abonnement, [kan du tilmelde dig en gratis prøveversion](https://servicetrust.microsoft.com/Home/TrialSubscriptions).
+> [NOTE] Hvis du vil have adgang til Microsofts sikkerhedspolitik som en ressource, skal du logge på med din arbejds- eller skolekonto. Hvis du endnu ikke har et abonnement, [kan du tilmelde dig en gratis prøveversion](https://servicetrust.microsoft.com/Home/TrialSubscriptions).
 
-FIPS 140-2 er en standard, der er udviklet specielt til validering af produktmoduler, der implementerer kryptering i stedet for de produkter, der bruger dem. Krypterede moduler, der implementeres i en tjeneste, kan certificeres til at opfylde kravene til hashstyrke, nøglestyring og lignende. De krypterede moduler og krypteringer, der bruges til at beskytte fortroligheden, integriteten eller tilgængeligheden af data i Microsofts skytjenester, opfylder FIPS 140-2-standarden.
+FIPS 140-2 er en standard, der er udviklet specielt til validering af produktmoduler, der implementerer kryptografi i stedet for de produkter, der bruger dem. Kryptografiske moduler, der implementeres i en tjeneste, kan certificeres som opfylder kravene til hashstyrke, nøgleadministration og lignende. De kryptografiske moduler og ciffer, der bruges til at beskytte fortroligheden, integriteten eller tilgængeligheden af data i Microsofts cloudtjenester, opfylder FIPS 140-2-standarden.
 
-Microsoft certificerer de underliggende krypterede moduler, der bruges i vores skytjenester, med hver ny version Windows operativsystemet:
+Microsoft certificerer de underliggende kryptografiske moduler, der bruges i vores cloudtjenester, med hver ny version af Windows-operativsystemet:
 
 - Azure og Azure U.S. Government
-- Dynamics 365 og Dynamics 365 U.S. Government
-- Office 365, Office 365 amerikanske myndigheder og det Office 365 amerikanske forsvar
+- Dynamics 365 og Dynamics 365 US Government
+- Office 365, Office 365 amerikanske regering og Office 365 amerikanske regeringsforsvar
 
-Kryptering af kundens data in rest leveres af flere teknologier på tjenestesiden, herunder BitLocker, DKM, Azure Storage-tjenestekryptering og tjenestekryptering i Exchange Online, Skype for Business, OneDrive for Business og SharePoint Online. Office 365 indeholder en mulighed for at bruge kunde-administrerede krypteringsnøgler, der er gemt i Azure Key Vault. Denne indstilling for kunde-administreret nøgle, kaldet Kundenøgle[, er](./customer-key-overview.md) tilgængelig Exchange Online, SharePoint Online, Skype for Business og OneDrive for Business.
+Kryptering af inaktive kundedata leveres af flere teknologier på tjenestesiden, herunder BitLocker, DKM, Azure Storage Service Encryption og tjenestekryptering i Exchange Online, Skype for Business, OneDrive for Business og SharePoint Online. Office 365 tjenestekryptering indeholder en mulighed for at bruge kundeadministrerede krypteringsnøgler, der er gemt i Azure Key Vault. Denne kundeadministrerede nøgleindstilling kaldet [Kundenøgle](./customer-key-overview.md) er tilgængelig for Exchange Online, SharePoint Online, Skype for Business og OneDrive for Business.
 
-For kundedata under overførsel forhandler alle Office 365 sikre sessioner med TLS som standard med klientcomputere for at sikre kundedata. Eksempelvis vil Office 365 forhandle sikre sessioner med Skype for Business, Outlook og Outlook på internettet, mobilklienter og webbrowsere.
+For kundedata under overførsel forhandler alle Office 365 servere som standard sikre sessioner ved hjælp af TLS med klientcomputere for at beskytte kundedata. Office 365 forhandler f.eks. sikre sessioner til Skype for Business, Outlook og Outlook på internettet, mobilklienter og webbrowsere.
 
-(Alle kunderettede servere forhandler med TLS 1.2 som standard).
+(Alle kundeorienterede servere forhandler som standard til TLS 1.2).
 
 ## <a name="related-links"></a>Relaterede links
 
 - [Kryptering i Azure](office-365-azure-encryption.md)
-- [BitLocker og Distributed Key Manager (DKM) til kryptering](office-365-bitlocker-and-distributed-key-manager-for-encryption.md)
-- [Office 365 af tjeneste](office-365-service-encryption.md)
-- [Office 365 kryptering til Skype for Business, OneDrive for Business, SharePoint Online og Exchange Online](/compliance/assurance/assurance-encryption-for-microsoft-365-services) 
+- [BitLocker og DKM (Distributed Key Manager) til kryptering](office-365-bitlocker-and-distributed-key-manager-for-encryption.md)
+- [Office 365-tjenestekryptering](office-365-service-encryption.md)
+- [Office 365 Kryptering af Skype for Business, OneDrive for Business, SharePoint Online og Exchange Online](/compliance/assurance/assurance-encryption-for-microsoft-365-services) 
 - [Kryptering af data under overførsel](/compliance/assurance/assurance-encryption-in-transit)
-- [Kunde-administrerede krypteringsfunktioner](office-365-customer-managed-encryption-features.md)
-- [Krypteringsrisici og beskyttelse](office-365-encryption-risks-and-protections.md)
+- [Kundeadministrerede krypteringsfunktioner](office-365-customer-managed-encryption-features.md)
+- [Krypteringsrisici og -beskyttelser](office-365-encryption-risks-and-protections.md)
 - [Kryptering i Microsoft Dynamics 365](office-365-encryption-in-microsoft-dynamics-365.md)

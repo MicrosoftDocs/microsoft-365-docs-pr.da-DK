@@ -17,26 +17,24 @@ search.appverid:
 - MOE150
 - MET150
 description: Instruktioner til oprettelse af opbevaringsmærkater for undtagelser fra opbevaringspolitikker for administration af datalivscyklus, så du kan bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 082297e7d967493dc2ca4bb73be408b320e1775c
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 0951ce1fea2f9324c19ec0bf17451d458b4914d1
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65285918"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632569"
 ---
 # <a name="create-retention-labels-for-exceptions-to-your-retention-policies"></a>Opret opbevaringsmærkater for undtagelser fra dine opbevaringspolitikker
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Som en del af din strategi for datastyring for at bevare det, du har brug for, og slette det, du ikke har brug for, skal du muligvis oprette et par opbevaringsmærkater for elementer, der har brug for undtagelser fra dine opbevaringspolitikker.
 
-Opbevaringspolitikker gælder automatisk for alle elementer på objektbeholderniveau (f.eks. SharePoint websteder, brugerpostkasser osv.), og opbevaringsmærkater gælder for individuelle elementer, f.eks. et SharePoint dokument eller en mail.
+Opbevaringspolitikker gælder automatisk for alle elementer på objektbeholderniveau (f.eks. SharePoint-websteder, brugerpostkasser osv.), og opbevaringsmærkater gælder for individuelle elementer, f.eks. et SharePoint-dokument eller en mail.
 
-Sørg for at forstå [principperne for opbevaring](retention.md#the-principles-of-retention-or-what-takes-precedence), før du bruger opbevaringsmærkater til at supplere en opbevaringspolitik for bestemte SharePoint, OneDrive eller Exchange elementer. Du bruger typisk opbevaringsmærkater til at bevare bestemte elementer, der er længere end en anvendt opbevaringspolitik, men de kan også bruges til at tilsidesætte automatisk sletning ved slutningen af opbevaringsperioden eller anvende en anden periode for sletning.
+Sørg for at forstå [principperne for opbevaring,](retention.md#the-principles-of-retention-or-what-takes-precedence) før du bruger opbevaringsmærkater til at supplere en opbevaringspolitik for bestemte SharePoint-, OneDrive- eller Exchange-elementer. Du bruger typisk opbevaringsmærkater til at bevare bestemte elementer, der er længere end en anvendt opbevaringspolitik, men de kan også bruges til at tilsidesætte automatisk sletning ved slutningen af opbevaringsperioden eller anvende en anden periode for sletning.
 
-Som et typisk eksempel: Størstedelen af indholdet på dine SharePoint websteder skal opbevares i tre år, hvilket er omfattet af en opbevaringspolitik. Men du har nogle kontraktdokumenter, der skal opbevares i syv år. Disse undtagelser kan håndteres med opbevaringsmærkater. Når du har tildelt opbevaringspolitikken til alle SharePoint websteder, skal du anvende opbevaringsbeskrivelserne på kontraktdokumenterne. Alle SharePoint varer opbevares i tre år, og kun kontraktdokumenterne opbevares i syv år.
+Som et typisk eksempel: Størstedelen af indholdet på dine SharePoint-websteder skal bevares i tre år, hvilket er omfattet af en opbevaringspolitik. Men du har nogle kontraktdokumenter, der skal opbevares i syv år. Disse undtagelser kan håndteres med opbevaringsmærkater. Når du har tildelt opbevaringspolitikken til alle SharePoint-websteder, skal du anvende opbevaringsbeskrivelserne på kontraktdokumenterne. Alle SharePoint-elementer opbevares i tre år, og kun kontraktdokumenterne opbevares i syv år.
 
 Du kan få flere eksempler på, hvordan opbevaringsmærkater kan bruges som undtagelser til opbevaringspolitikker, under [Kombiner opbevaringspolitikker og opbevaringsmærkater](retention.md#combining-retention-policies-and-retention-labels).
 
@@ -53,13 +51,13 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
 ## <a name="how-to-create-retention-labels-for-data-lifecycle-management"></a>Sådan opretter du opbevaringsmærkater til administration af datalivscyklus
 
-1. På [Microsoft Purview-overholdelsesportalen](https://compliance.microsoft.com/) skal du navigere til: **SolutionsData** >  **livscyklusstyringLabels** >  fane > + **Opret en mærkat**
+1. I [Microsoft Purview-compliance-portal skal du](https://compliance.microsoft.com/) navigere til: Fanen **Labels** til **administration af** >  **løsningers** >  datalivscyklus > + **Opret en mærkat**
     
     Kan du ikke se løsningen til **administration af datalivscyklus** med det samme? Vælg først **Vis alle**. 
 
 2. Følg prompterne for at oprette opbevaringsmærkaten. Vær forsigtig med, hvilket navn du vælger, da dette ikke kan ændres, når etiketten er gemt.
     
-    Du kan få flere oplysninger om opbevaringsindstillingerne under [Indstillinger til at bevare og slette indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
+    Du kan få flere oplysninger om opbevaringsindstillingerne under [Indstillinger for opbevaring og sletning af indhold](retention-settings.md#settings-for-retaining-and-deleting-content).
 
 3. Når du har oprettet etiketten, og du kan se indstillingerne for publicering af etiketten, skal du anvende etiketten automatisk eller blot gemme etiketten: Vælg **Gem blot etiketten nu**, og vælg derefter **Udført**.
 

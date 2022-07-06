@@ -15,37 +15,37 @@ ms.collection:
 - Strat_O365_Enterprise
 - M365-security-compliance
 - Strat_O365_Enterprise
-description: Få mere at vide Office 365, hvordan du bruger BitLocker-kryptering, hvilket reducerer risikoen for datatyveri på grund af mistede eller stjålne computere og diske.
+description: Få mere at vide om, hvordan Office 365 bruger BitLocker-kryptering, hvilket reducerer risikoen for datatyveri på grund af mistede eller stjålne computere og diske.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 343a5966dc24954e98d7d31977aacbc09daaba11
-ms.sourcegitcommit: d4b867e37bf741528ded7fb289e4f6847228d2c5
+ms.openlocfilehash: dec62da7bc4d29891dcd86ec378faeb52a2d3d9f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "63588953"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633889"
 ---
-# <a name="bitlocker-and-distributed-key-manager-dkm-for-encryption"></a>BitLocker og Distributed Key Manager (DKM) til kryptering
+# <a name="bitlocker-and-distributed-key-manager-dkm-for-encryption"></a>BitLocker og DKM (Distributed Key Manager) til kryptering
 
-Microsoft-servere bruger BitLocker til at kryptere de diskdrev, der indeholder kundens in rest-data, på volumenniveau. BitLocker-kryptering er en funktion til databeskyttelse, der er indbygget i Windows. BitLocker er en af de teknologier, der bruges til at beskytte mod trusler i tilfælde af, at der er udløbet andre processer eller kontroller (f.eks. adgangskontrol eller genbrug af hardware), der kan føre til, at en person får fysisk adgang til diske, der indeholder kundedata. I dette tilfælde fjerner BitLocker risikoen for datatyveri eller eksponering på grund af mistet, stjålet eller upassende udkørede computere og diske.
+Microsoft-servere bruger BitLocker til at kryptere de diskdrev, der indeholder kundedata som inaktive data på diskenhedsniveau. BitLocker-kryptering er en databeskyttelsesfunktion, der er indbygget i Windows. BitLocker er en af de teknologier, der bruges til at beskytte mod trusler i tilfælde af bortfald i andre processer eller kontrolelementer (f.eks. adgangskontrol eller genanvendelse af hardware), der kan føre til, at nogen får fysisk adgang til diske, der indeholder kundedata. I dette tilfælde fjerner BitLocker risikoen for datatyveri eller eksponering på grund af mistede, stjålne eller upassende udrangerede computere og diske.
 
-BitLocker installeres med AES (Advanced Encryption Standard) (AES) 256-bit kryptering på diske, der indeholder kundedata i Exchange Online, SharePoint Online og Skype for Business. Diskdrivelse er krypteret med en FVEK (Full Volume Encryption Key), som er krypteret med VMK (Volume Master Key), som igen er bundet til TPM (Trusted Platform Module) på serveren. VMK beskytter FVEK direkte og beskytter derfor VMK'en bliver kritisk. Følgende figur illustrerer et eksempel på BitLocker-nøglebeskyttelseskæden for en given server (i dette tilfælde ved hjælp af en Exchange Online server).
+BitLocker installeres med AES (Advanced Encryption Standard) 256-bit kryptering på diske, der indeholder kundedata i Exchange Online, SharePoint Online og Skype for Business. Disksektorer krypteres med en FVEK (Full Volume Encryption Key), som krypteres med VMK (Volume Master Key), som igen er bundet til TPM (Trusted Platform Module) på serveren. VMK beskytter direkte FVEK, og derfor bliver beskyttelsen af VMK kritisk. Følgende figur illustrerer et eksempel på BitLocker-nøglebeskyttelseskæden for en given server (i dette tilfælde ved hjælp af en Exchange Online-server).
 
-I følgende tabel beskrives BitLocker-nøglebeskyttelseskæden for en given server (i dette tilfælde en Exchange Online server).
+I følgende tabel beskrives BitLocker-nøglebeskyttelseskæden for en given server (i dette tilfælde en Exchange Online-server).
 
-| KEY 2016-TAST | GRANULARITET | HVORDAN GENERERET? | HVOR GEMMES DEN? | BESKYTTELSE |
+| NØGLEBESKYTTER | GRANULERING | HVORDAN GENERERET? | HVOR GEMMES DEN? | BESKYTTELSE |
 |--------------------------------------------------------------------------------|-------------------------------------------------|----------------|-------------------------|--------------------------------------------------------------------------------------------------|
-| AES 256-bit ekstern nøgle | Pr. server | BitLocker-API'er | TPM eller Secret Pengeskab | Lockbox /Access Control |
+| Ekstern AES 256-bit nøgle | Pr. server | BitLocker-API'er | TPM eller Secret Safe | Lockbox/Access Control |
 |  |  |  | Registreringsdatabase for postkasseserver | TPM-krypteret |
-| 48-cifret numerisk adgangskode | Pr. disk | BitLocker-API'er | Active Directory | Lockbox /Access Control |
-| X.509-certifikat som Agent til genoprettelse af data (DRA) kaldes også Public Key Recovery | Miljø (f.eks. Exchange Online multitenant) | Microsoft CA | Buildsystem | Ingen brugere har den fulde adgangskode til den private nøgle. Adgangskoden er under fysisk beskyttelse. |
+| 48-cifret numerisk adgangskode | Pr. disk | BitLocker-API'er | Active Directory | Lockbox/Access Control |
+| X.509 Certifikat som DRA (Data Recovery Agent) kaldes også offentlig nøglebeskytter | Miljø (f.eks. Exchange Online multitenant) | Microsoft CA | Byg system | Ingen bruger har den fulde adgangskode til den private nøgle. Adgangskoden er under fysisk beskyttelse. |
 
 
-BitLocker-nøgleadministration indebærer administration af genoprettelsesnøgler, der bruges til at låse op/gendanne krypterede diske i et Microsoft-datacenter. Microsoft 365 gemmer masternøglerne i en sikret deling, der kun er tilgængelig for personer, der er blevet screenet og godkendt. Legitimationsoplysningerne til tasterne gemmes i et sikkert lager til adgangskontroldata (det vi kalder et "hemmeligt lager"), hvilket kræver et højt niveau af udvidelses- og administrationsgodkendelser for at få adgang ved hjælp af et just-in-time-adgangs elevationsværktøj.
+BitLocker-nøgleadministration omfatter administration af genoprettelsesnøgler, der bruges til at låse/genoprette krypterede diske i et Microsoft-datacenter. Microsoft 365 gemmer masternøglerne på et sikkert share, som kun er tilgængelige for personer, der er blevet screenet og godkendt. Legitimationsoplysningerne for nøglerne gemmes i et sikkert lager til adgangskontroldata (det, vi kalder et "hemmeligt lager"), hvilket kræver et højt niveau af udvidede rettigheder og administrationsgodkendelser for at få adgang ved hjælp af et just-in-time-værktøj til adgangs udvidede rettigheder.
 
-BitLocker understøtter nøgler, som falder inden for to administrationskategorier:
+BitLocker understøtter nøgler, der falder i to administrationskategorier:
 
-- BitLocker-administrerede nøgler, som generelt er kortvarige og knyttet til levetiden for en operativsystemforekomst, der er installeret på en server eller en given disk. Disse taster slettes og nulstilles under serverinstallation eller diskformatering.
+- BitLocker-administrerede nøgler, der generelt er kortvarige og knyttet til levetiden for en operativsystemforekomst, der er installeret på en server eller på en given disk. Disse nøgler slettes og nulstilles under geninstallation af serveren eller diskformatering.
 
-- BitLocker-genoprettelsesnøgler, som administreres uden for BitLocker, men som bruges til diskkryptering. BitLocker bruger genoprettelsesnøgler til det scenarie, hvor operativsystemet er geninstalleret, og der allerede findes krypterede datadisks. Genoprettelsesnøgler bruges også af overvågning af tilgængelighed i Exchange Online hvor en svarer muligvis skal låse en disk op.
+- BitLocker-genoprettelsesnøgler, der administreres uden for BitLocker, men bruges til diskdekryptering. BitLocker bruger genoprettelsesnøgler til det scenarie, hvor et operativsystem geninstalleres, og der findes allerede krypterede datadisketter. Genoprettelsesnøgler bruges også af overvågningstest af administreret tilgængelighed i Exchange Online hvor en responder muligvis skal låse en disk op.
 
-BitLocker-beskyttede volumener krypteres med en nøgle til kryptering af fuld volumen, som igen er krypteret med en volumenmasternøgle. BitLocker anvender FIPS-kompatible algoritmer for at sikre, at krypteringsnøgler aldrig gemmes eller sendes via kablet i rydning. Den Microsoft 365 implementering af kundedata-at-rest-protection, afviger ikke fra standard-BitLocker-implementeringen.
+BitLocker-beskyttede diskenheder krypteres med en fuld krypteringsnøgle til diskenheden, som igen krypteres med en diskenhedsmasternøgle. BitLocker bruger FIPS-kompatible algoritmer til at sikre, at krypteringsnøgler aldrig gemmes eller sendes via kablet i klargøring. Microsoft 365-implementeringen af customer data-at-rest-protection afviger ikke fra standardimplementering af BitLocker.

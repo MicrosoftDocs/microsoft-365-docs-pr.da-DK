@@ -20,16 +20,14 @@ search.appverid:
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om de tjenester og elementtyper, du kan bruge følsomhedsmærkater som betingelser i DLP-politikker
-ms.openlocfilehash: bf0fcb327b2869e21a54de22822d0d51c72e25b8
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 55803a2c354890264f99753af2aa6337cf49182a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438450"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632393"
 ---
 # <a name="use-sensitivity-labels-as-conditions-in-dlp-policies"></a>Brug følsomhedsmærkater som betingelser i DLP-politikker
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Du kan bruge [følsomhedsmærkater](sensitivity-labels.md) som en betingelse i DLP-politikker for disse placeringer:
 
@@ -44,7 +42,7 @@ Følsomhedsmærkater vises som en indstilling på listen **Indhold indeholder** 
 > ![følsomhedsmærkat som en betingelse.](../media/dlp-sensitivity-label-as-a-condition.png)
 
 > [!IMPORTANT]
-> **Følsomhedsmærkater** som en betingelse vil ikke være tilgængelige, hvis du har valgt **Teams chat- og kanalmeddelelser** som en placering, hvor DLP-politikken skal anvendes.
+> **Følsomhedsmærkater** som en betingelse vil ikke være tilgængelige, hvis du har valgt **Teams-chat og kanalmeddelelser** som en placering til at anvende DLP-politikken.
 
 
 ## <a name="supported-items-scenarios-and-policy-tips"></a>Understøttede elementer, scenarier og politiktip
@@ -59,21 +57,21 @@ Du kan bruge følsomhedsmærkater som betingelser for disse elementer og i disse
 |Exchange    |vedhæftet fil         |Nej         |Ja *         |
 |SharePoint Online     |elementer i SharePoint Online         |Ja         |Ja         |
 |OneDrive for Business     |Elementer         |Ja         |Ja         |
-|Teams     |Teams og kanalmeddelelser         |ikke tilgængelig         |ikke tilgængelig         |
+|Teams     |Teams- og kanalmeddelelser         |ikke tilgængelig         |ikke tilgængelig         |
 |Teams     |Vedhæftede filer         |ja **         |ja **         |
 |Windows 10 enheder     |Elementer         |Ja         |Ja         |
 |MCAS (prøveversion) |Elementer         |Ja         |Ja         |
 
-\*DLP-registrering af vedhæftede filer i mails med følsomhedsmærkater understøttes kun for Open XML-baserede Office filtyper.
+\* DLP-registrering af følsomhedsmærkater for vedhæftede filer i mails understøttes kun for Open XML-baserede Office-filtyper.
 
 \** Vedhæftede filer, der sendes i Teams over 1:1 chat eller kanaler, uploades automatisk til OneDrive for Business og SharePoint. Så hvis SharePoint Online eller OneDrive for Business er inkluderet som placeringer i din DLP-politik, medtages navngivne vedhæftede filer, der sendes i Teams, automatisk i omfanget af denne betingelse. Teams som en placering behøver ikke at blive valgt i DLP-politikken.
 
 > [!NOTE]
-> DLP's evne til at registrere følsomhedsmærkater i SharePoint og OneDrive til virksomheder er begrænset. Du kan få flere oplysninger under [Aktivér følsomhedsmærkater for Office filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md#limitations).
+> DLP's mulighed for at registrere følsomhedsmærkater i SharePoint og OneDrive for business er begrænset. Du kan finde flere oplysninger under [Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md#limitations).
 
 ### <a name="supported-scenarios"></a>Understøttede scenarier
 
-- DLP-administratoren kan se en liste over alle følsomhedsmærkater i lejeren, når de vælger at inkludere en eller flere følsomhedsmærkater som en betingelse.
+- DLP-Administration kan se en liste over alle følsomhedsmærkater i lejeren, når de vælger at inkludere en eller flere følsomhedsmærkater som en betingelse.
 
 - Brug af følsomhedsmærkater som en betingelse understøttes på tværs af alle arbejdsbelastninger som angivet i supportmatrixen ovenfor.
 

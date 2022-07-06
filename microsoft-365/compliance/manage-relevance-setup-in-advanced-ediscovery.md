@@ -16,23 +16,21 @@ search.appverid:
 ms.assetid: fd6be6d3-2e8d-449d-9851-03ab7546e6aa
 ROBOTS: NOINDEX, NOFOLLOW
 description: Læs anbefalingerne til konfiguration af relevanstræning i eDiscovery (Premium) for at score filer efter relevans og generere analytiske resultater.
-ms.openlocfilehash: be9347468ef39fd5d6ae254ff4eb662a795f4f0b
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 6c6d1b88f9cbb92d44a040f1f060b860252df263
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65098510"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635233"
 ---
 # <a name="manage-relevance-setup-in-ediscovery-premium-classic"></a>Administrer opsætning af relevans i eDiscovery (Premium) (klassisk)
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 > [!NOTE]
 > Microsoft Purview eDiscovery (Premium) kræver et Office 365 E3 med tilføjelsesprogrammet Avanceret overholdelse eller et E5-abonnement for din organisation. Hvis du ikke har denne plan og vil prøve eDiscovery (Premium), kan du [tilmelde dig en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279). 
   
- eDiscovery (Premium) Relevansteknologi anvender ekspertstyret software til scoring af filer efter relevans. eDiscovery (Premium) Relevans kan bruges til vurdering af tidlige sager (ECA), nedslagning og gennemsyn af fileksemplet. 
+ eDiscovery (Premium) Relevansteknologi anvender ekspertstyret software til scoring af filer ud fra deres relevans. eDiscovery (Premium) Relevans kan bruges til vurdering af tidlige sager (ECA), gennemsyn af nedslagning og fileksempel. 
   
- eDiscovery (Premium) indeholder komponenter til relevanstræning og mærkning af filer, der er relevante for en sag. eDiscovery (Premium) lærer fra de oplærte eksempler på relevante og ikke relevante filer for at levere relevansscores for hver fil og genererer analytiske resultater, der kan bruges under og efter filgennemsynsprocessen. 
+ eDiscovery (Premium) indeholder komponenter til relevanstræning og mærkning af filer, der er relevante for en sag. eDiscovery (Premium) lærer fra de oplærte eksempler på relevante og ikke relevante filer for at levere relevansscores for hver fil og genererer analyseresultater, der kan bruges under og efter filgennemsynsprocessen. 
   
 ## <a name="guidelines-for-setting-up-relevance-training"></a>Retningslinjer for konfiguration af relevanstræning
 
@@ -48,7 +46,7 @@ ms.locfileid: "65098510"
 
   - Hvis et problem er defineret for generelt, kan eDiscovery (Premium) give for mange filer, der ikke er relevante. Hvis et problem er defineret for snævert, kan relevanstræningsprocessen tage længere tid. 
 
-  - I hver relevanstræningscyklus fokuserer eDiscovery (Premium) på et enkelt aktivt problem, og midlertidige eksempelresultater vises tilsvarende.
+  - I hver relevanstræningscyklus fokuserer eDiscovery (Premium) på et enkelt aktivt problem, og midlertidige eksempelresultater vises i overensstemmelse hermed.
 
   - I et scenarie med flere problemer gør samplingstilstanden det muligt at inkludere valg af problemer i behandlingen. Problemer, der er defineret som "fra", håndteres ikke, før samplingstilstanden ændres. Et problem kan være "inaktivt" eller "aktiveret" for kun én ekspert.
 

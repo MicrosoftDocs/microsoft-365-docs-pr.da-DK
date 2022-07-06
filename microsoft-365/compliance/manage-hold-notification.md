@@ -16,18 +16,16 @@ search.appverid:
 - MET150
 ms.assetid: ''
 description: Brug arbejdsprocessen for kommunikation i eDiscovery (Premium) til at spore status for dine meddelelser om juridisk venteposition og om nødvendigt opdatere og sende dem igen.
-ms.openlocfilehash: 95417d54f7a84439b0321e31f0d6c0f2236af047
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 161628061d27c17e9e606cb7f88fbbe52d22be8f
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65093959"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632239"
 ---
 # <a name="manage-hold-notifications"></a>Administrer meddelelser om fastfrysning
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når du har startet arbejdsprocessen for meddelelse om juridisk venteposition, kan du bruge arbejdsprocessen for kommunikation i Microsoft Purview eDiscovery (Premium) til at spore status for din kommunikation. Fanen Kommunikation indeholder en liste over alle meddelelser i din eDiscovery-sag (Premium). Du kan se detaljer som f.eks. antallet af tilsynsførende, der er blevet tildelt eller har bekræftet meddelelsen.
+Når du har startet arbejdsprocessen for meddelelse om juridisk venteposition, kan du bruge arbejdsprocessen for kommunikation i Microsoft Purview eDiscovery (Premium) til at spore status for din kommunikation. Fanen Kommunikation indeholder en liste over alle meddelelser i din eDiscovery (Premium)-sag. Du kan se detaljer som f.eks. antallet af tilsynsførende, der er blevet tildelt eller har bekræftet meddelelsen.
 
 ## <a name="monitor-acknowledgments"></a>Overvåg bekræftelser
 
@@ -47,7 +45,7 @@ Indimellem mister vogtere overblikket over mails i deres daglige arbejde. Eller 
 
 Sådan sender du en meddelelse om venteposition til en tilsynsførende:
 
-1. Vælg en sag i eDiscovery (Premium), og klik derefter på fanen **Kommunikation**.
+1. I eDiscovery (Premium) skal du vælge en sag og derefter klikke på fanen **Kommunikation** .
 
 2. Vælg en kommunikation for at få vist pop op-siden **Tilsynsførende kommunikation** .
 
@@ -68,7 +66,7 @@ Efterhånden som sagen skrider frem, kan tilsynsførende blive bedt om at bevare
 
 Sådan opdaterer du indholdet af den indledende meddelelse om venteposition:
 
-1. Vælg en sag i eDiscovery (Premium), og klik derefter på fanen **Kommunikation**.
+1. I eDiscovery (Premium) skal du vælge en sag og derefter klikke på fanen **Kommunikation** .
 
 2. Vælg den meddelelse om venteposition, du vil opdatere, og klik på **Rediger** på siden **Forældremyndighedskommunikation** .
 

@@ -16,17 +16,16 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: a9d16cb82354bcb44e817de3207cb49de66dbf91
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 2b960141b8f6da710b7ef3cbbf812ac0f00f1ce5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873044"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634065"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-linux-manually"></a>Udrul Microsoft Defender for Endpoint på Linux manuelt
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
-
 
 **Gælder for:**
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
@@ -34,17 +33,16 @@ ms.locfileid: "65873044"
 
 > Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-investigateip-abovefoldlink)
 
-
 I denne artikel beskrives det, hvordan du installerer Microsoft Defender for Endpoint på Linux manuelt. En vellykket installation kræver fuldførelse af alle følgende opgaver:
 
-  - [Forudsætninger og systemkrav](#prerequisites-and-system-requirements)
-  - [Konfigurer Linux-softwarelageret](#configure-the-linux-software-repository)
-    - [RHEL og varianter (CentOS, Fedora, Oracle Linux og Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
-    - [SLES og varianter](#sles-and-variants)
-    - [Ubuntu- og Debian-systemer](#ubuntu-and-debian-systems)
-  - [Programinstallation](#application-installation)
-  - [Download onboardingpakken](#download-the-onboarding-package)
-  - [Klientkonfiguration](#client-configuration)
+- [Forudsætninger og systemkrav](#prerequisites-and-system-requirements)
+- [Konfigurer Linux-softwarelageret](#configure-the-linux-software-repository)
+  - [RHEL og varianter (CentOS, Fedora, Oracle Linux og Amazon Linux 2)](#rhel-and-variants-centos-fedora-oracle-linux-and-amazon-linux-2)
+  - [SLES og varianter](#sles-and-variants)
+  - [Ubuntu- og Debian-systemer](#ubuntu-and-debian-systems)
+- [Programinstallation](#application-installation)
+- [Download onboardingpakken](#download-the-onboarding-package)
+- [Klientkonfiguration](#client-configuration)
 
 ## <a name="prerequisites-and-system-requirements"></a>Forudsætninger og systemkrav
 
@@ -77,20 +75,16 @@ For at få forhåndsvist nye funktioner og give tidlig feedback anbefales det, a
 
     Brug følgende tabel til at hjælpe dig med at finde pakken:
 
-    <br>
-
-    ****
-
     |Distro & version|Pakke|
     |---|---|
     |Til RHEL/Centos/Oracle 8.0-8.5|<https://packages.microsoft.com/config/rhel/8/[channel].repo>|
-    |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2 |</azure/cognitive-services/speech-service/how-to-configure-rhel-centos-7>|
-    <!--|For RHEL/Centos 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|-->
+    |For RHEL/Centos/Oracle 7.2-7.9 & Amazon Linux 2|</azure/cognitive-services/speech-service/how-to-configure-rhel-centos-7>|
     |Til Fedora 33|<https://packages.microsoft.com/config/fedora/33/prod.repo>|
     |Til Fedora 34|<https://packages.microsoft.com/config/fedora/34/prod.repo>|
 
-    I følgende kommandoer skal du erstatte *[version]* og *[channel]* med de oplysninger, du har identificeret:
+    <!--|For RHEL/Centos 6.7-6.10|<https://packages.microsoft.com/config/rhel/6/[channel].repo>|-->
 
+    I følgende kommandoer skal du erstatte *[version]* og *[channel]* med de oplysninger, du har identificeret:
 
     ```bash
     sudo yum-config-manager --add-repo=https://packages.microsoft.com/config/rhel/[version]/[channel].repo
@@ -341,7 +335,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 
     > [!NOTE]
     > Hvis du vil køre denne kommando, skal du have `python`  eller `python3` installeret på enheden, afhængigt af disto og versionen. Hvis det er nødvendigt, skal du se [Trinvis vejledning til installation af Python på Linux](https://opensource.com/article/20/4/install-python-linux).
-    
+
     Hvis du kører RHEL 8.x eller Ubuntu 20.04 eller nyere, skal du bruge `python3`.
 
     ```bash
@@ -349,11 +343,11 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
     ```
 
     I resten af distributioner og versioner skal du bruge `python`.
-    
+
     ```bash
     sudo python MicrosoftDefenderATPOnboardingLinuxServer.py
     ```
-    
+
 3. Bekræft, at enheden nu er knyttet til din organisation, og rapporterer et gyldigt organisations-id:
 
     ```bash
@@ -382,9 +376,9 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
         ```bash
         mdatp health --field real_time_protection_enabled
         ```
-        
+
       Hvis den ikke er aktiveret, skal du udføre følgende kommando:
-      
+
        ```bash
         mdatp config real-time-protection --value enabled
         ```
@@ -401,7 +395,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
         mdatp threat list
         ```
 
-6. Kør en Slutpunktsregistrering og -svar registreringstest, og simuler en registrering for at bekræfte, at enheden er onboardet korrekt, og rapportere til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
+6. Kør en EDR-registreringstest, og simuler en registrering for at bekræfte, at enheden er onboardet korrekt, og rapportere til tjenesten. Udfør følgende trin på den nyligt onboardede enhed:
 
     - Bekræft, at den onboardede Linux-server vises i Microsoft 365 Defender. Hvis dette er den første onboarding af maskinen, kan det tage op til 20 minutter, indtil det vises.
 
@@ -413,7 +407,7 @@ Download onboardingpakken fra Microsoft 365 Defender portal.
 
 ## <a name="installer-script"></a>Installationsscript
 
-Du kan også bruge et automatiseret [bash-installationsscript](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) i vores [offentlige GitHub lager](https://github.com/microsoft/mdatp-xplat/).
+Du kan også bruge et automatiseret [bash-installationsscript](https://github.com/microsoft/mdatp-xplat/blob/master/linux/installation/mde_installer.sh) i vores [offentlige GitHub-lager](https://github.com/microsoft/mdatp-xplat/).
 Scriptet identificerer distributionen og versionen, forenkler valget af det rigtige lager, konfigurerer enheden til at trække den nyeste pakke og kombinerer produktinstallationen og onboardingtrinnene.
 
 ```bash

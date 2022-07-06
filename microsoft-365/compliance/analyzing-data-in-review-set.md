@@ -15,20 +15,18 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om de værktøjer, der er tilgængelige til at organisere dokumentgrupper, når du analyserer en Microsoft Purview eDiscovery-sag (Premium).
+description: Få mere at vide om de værktøjer, der er tilgængelige til at organisere dokumentgrupper, når du analyserer en Microsoft Purview eDiscovery (Premium)-sag.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: af34a790881cad2af5d278cf187b963f0aa58146
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 822c21c05b865bdf1208f7679eaff9ea35b10a9e
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65099823"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634825"
 ---
 # <a name="analyze-data-in-a-review-set-in-ediscovery-premium"></a>Analysér data i et korrektursæt i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Når antallet af indsamlede dokumenter er stort, kan det være svært at gennemse dem alle. Microsoft Purview eDiscovery (Premium) indeholder en række værktøjer til at analysere dokumenterne for at reducere mængden af dokumenter, der skal gennemses uden tab af oplysninger, og til at hjælpe dig med at organisere dokumenterne på en sammenhængende måde. Du kan få mere at vide om disse funktioner under:
+Når antallet af indsamlede dokumenter er stort, kan det være svært at gennemse dem alle. Microsoft Purview eDiscovery (Premium) indeholder en række værktøjer til at analysere dokumenterne for at reducere mængden af dokumenter, der skal gennemses uden tab af oplysninger, og for at hjælpe dig med at organisere dokumenterne på en sammenhængende måde. Du kan få mere at vide om disse funktioner under:
 
 - [Registrering af næsten dubletter](near-duplicate-detection-in-advanced-ediscovery.md)
 
@@ -44,7 +42,7 @@ Sådan analyserer du data i et korrektursæt:
 
 2. Åbn det korrektursæt, du vil analysere.
 
-3. Klik på **AnalyticsRun** >  **dokument & mailanalyse**.
+3. Klik på **Kør** > **dokument & mailanalyse**.
 
    ![Vælg Kør dokument & mailanalyse på rullelisten Analytics](..\media\RunAnalytics1.png)
 
@@ -72,12 +70,12 @@ På følgende liste beskrives resultatet af filterforespørgslen med hensyn til,
 
 - **Dokumenter og andet**. Filtrerer dublerede dokumenter fra. Det er kun dokumenter, der er entydige i korrektursættet, der vises.
 
-- **Teams samtaler**. Alle Teams (og Yammer) samtaler i korrektursættet vises.
+- **Teams-samtaler**. Alle Teams- (og Yammer)-samtaler i anmeldelsessættet vises.
 
 Du kan finde flere oplysninger om inkluderende typer og dokumentets entydighed [under Mailtrådning i eDiscovery (Premium)](email-threading-in-advanced-ediscovery.md).
 
 > [!NOTE]
-> I den offentlige prøveversion af [det nye sagsformat](advanced-ediscovery-new-case-format.md) i eDiscovery (Premium) returnerede filterforespørgslen til **gennemsyn** ikke Teams eller Yammer samtaler til korrektursæt (i tilfælde, hvor store sager bruges) oprettet før den 4. november 2021. Problemet er løst. Det betyder, at hvis du anvender forespørgslen **Til gennemsyn** igen på et korrektursæt i et tilfælde, der bruger store og små bogstaver, kan flere elementer, der stemmer overens med filterforespørgslen, blive vist, fordi alle Teams eller Yammer samtaler er inkluderet.
+> I den offentlige prøveversion af [det nye sagsformat](advanced-ediscovery-new-case-format.md) i eDiscovery (Premium) returnerede filterforespørgslen **til gennemsyn** ikke Teams- eller Yammer-samtaler til korrektursæt (i tilfælde, hvor der bruges store sagsformat), som blev oprettet før den 4. november 2021. Problemet er løst. Det betyder, at hvis du anvender forespørgslen **til gennemsyn** igen på et anmeldelsessæt i et tilfælde, der bruger formatet Store bogstaver, kan flere elementer, der stemmer overens med filterforespørgslen, blive vist, fordi alle Teams- eller Yammer-samtaler er inkluderet.
 
 ## <a name="analytics-report"></a>Analyserapport
 
@@ -85,7 +83,7 @@ Sådan får du vist analyserapporten for et gennemsynssæt:
 
 1. Åbn korrektursættet.
 
-2. Klik på **AnalyticsShowrapporter** > .
+2. Klik på **Vis rapporter** **i analyse** > .
 
 **Analyserapporten** indeholder syv komponenter fra analysen:
 

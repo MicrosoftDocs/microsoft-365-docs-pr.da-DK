@@ -20,18 +20,16 @@ search.appverid:
 - MOE150
 - MET150
 description: I denne artikel beskrives det, hvordan du konfigurerer Overvågning (Standard), så du kan begynde at søge efter overvågningsaktiviteter, der udføres af brugere og administratorer i din organisation.
-ms.openlocfilehash: d9f685bd0438faa785f070b6b03707cda0184305
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 17f9e24f4c3159186011d3faefbd8796f51cc5ce
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65091693"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632195"
 ---
-# <a name="set-up-microsoft-purview-audit-standard"></a>Konfigurer Microsoft Purview Audit (Standard)
+# <a name="set-up-microsoft-purview-audit-standard"></a>Konfigurer Microsoft Purview-gennemgang (Standard)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Med Microsoft Purview Audit (Standard) i Microsoft 365 kan du søge efter overvågningsposter for aktiviteter, der udføres i de forskellige Microsoft 365 tjenester af brugere og administratorer. Da Overvågning (Standard) er aktiveret som standard for de fleste Microsoft 365 og Office 365 organisationer, er der kun nogle få ting, du skal gøre, før du og andre i din organisation kan søge i overvågningsloggen.
+med Microsoft Purview-gennemgang (Standard) i Microsoft 365 kan du søge efter overvågningsposter for aktiviteter, der udføres i de forskellige Microsoft 365-tjenester af brugere og administratorer. Da Overvågning (Standard) er aktiveret som standard for de fleste Microsoft 365- og Office 365 organisationer, er der kun nogle få ting, du skal gøre, før du og andre i din organisation kan søge i overvågningsloggen.
 
 I denne artikel beskrives følgende trin, der er nødvendige for at konfigurere overvågning (Standard).
 
@@ -39,7 +37,7 @@ I denne artikel beskrives følgende trin, der er nødvendige for at konfigurere 
 
 Disse trin omfatter sikring af de korrekte organisationsabonnementer og brugerlicenser, der kræves for at generere og bevare overvågningsposter og tildele tilladelser til teammedlemmer af dine sikkerhedshandlinger, it, overholdelse af angivne standarder og juridiske teams, så de kan søge i overvågningsloggen.
 
-Du kan få flere oplysninger [under Overvågning (Standard) i Microsoft 365](auditing-solutions-overview.md#audit-standard).
+Du kan få flere oplysninger under [Overvågning (Standard) i Microsoft 365](auditing-solutions-overview.md#audit-standard).
 
 ## <a name="step-1-verify-organization-subscription-and-user-licensing"></a>Trin 1: Bekræft organisationsabonnement og brugerlicenser
 
@@ -59,7 +57,7 @@ På følgende skærmbillede kan du se de to overvågningsrelaterede roller, der 
 
 ## <a name="step-3-search-the-audit-log"></a>Trin 3: Søg i overvågningsloggen
 
-Nu er du klar til at søge i overvågningsloggen på Microsoft Purview-overholdelsesportalen.
+Nu er du klar til at søge i overvågningsloggen i Microsoft Purview-compliance-portal.
 
 1. Gå til , <https://compliance.microsoft.com> og log på med en konto, der er tildelt de relevante overvågningstilladelser.
 

@@ -1,5 +1,5 @@
 ---
-title: Reference til brugerdefinerede filtre af typen Følsomme oplysninger
+title: Reference til filtre for brugerdefinerede følsomme oplysninger
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -14,32 +14,32 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: I denne artikel vises en liste over de filtre, der kan kodes til brugerdefinerede typer af følsomme oplysninger.
-ms.openlocfilehash: bcecc13776b20f8b4c61eaf499a99397931fe498
-ms.sourcegitcommit: bb493f12701f6d6ee7d5e64b541adb87470bc7bc
+description: I denne artikel vises en liste over de filtre, der kan kodes til brugerdefinerede følsomme oplysningstyper.
+ms.openlocfilehash: 79e4a2520ab922248f65adf1b0506219987fe832
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/18/2022
-ms.locfileid: "63597994"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66631953"
 ---
-# <a name="custom-sensitive-information-type-filters-reference"></a>Reference til brugerdefinerede filtre af typen følsomme oplysninger
+# <a name="custom-sensitive-information-type-filters-reference"></a>Reference til filtre for brugerdefinerede følsomme oplysninger
 
-I Microsoft kan du definere filtre eller andre kontroller, mens du opretter en brugerdefineret type af følsomme oplysninger (SIT).
+I Microsoft kan du definere filtre eller andre kontroller, mens du opretter brugerdefinerede typer følsomme oplysninger (SIT).
 
 ## <a name="list-of-supported-filters-and-use-cases"></a>Liste over understøttede filtre og use cases
 
 ### <a name="alldigitssame-exclude"></a>AllDigitsSame Exclude
 
-Beskrivelse: Gør det muligt at udelade matches, der har alle cifre som dublerede cifre, f.eks. 111111111 eller 111-111-111
+Beskrivelse: Giver dig mulighed for at udelade match, der har alle cifre som dublerede cifre, f.eks. 111111111 eller 111-111-111
 
-Definere filtre
+Definition af filtre
 ```xml
 <Filters id="ssn_filters">
     <Filter type="AllDigitsSameFilter"></Filter>
 </Filters>
 ```
 
-Brug af den i regelpakken på enhedsniveau
+Brug den i regelpakken på enhedsniveau
 ```xml
 <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85"  filters="ssn_filters">
       <Pattern confidenceLevel="85">
@@ -48,7 +48,7 @@ Brug af den i regelpakken på enhedsniveau
 </Entity>
 ```
 
-Brug af den i regelpakken på mønsterniveau
+Brug den i regelpakken på mønsterniveau
 ```xml
 <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85">
       <Pattern confidenceLevel="85"  filters="ssn_filters">
@@ -59,9 +59,9 @@ Brug af den i regelpakken på mønsterniveau
 
 ### <a name="textmatchfilter-startswith"></a>TextMatchFilter StartsWith 
 
-Beskrivelse: Gør det muligt at definere starttegnene for enheden. Den har to varianter, medtag og udelad.
+Beskrivelse: Giver dig mulighed for at definere starttegnene for enheden. Den har to varianter, inkluder og udelad.
 
-Hvis du f.eks. vil udelade tallene fra 0500, 91, 091, 010 på en liste som denne:
+Hvis du f.eks. vil udelade tal, der starter med 0500, 91, 091, 010 på en liste som denne:
 
 - 0500-4500-027
 - 91564721450
@@ -70,7 +70,7 @@ Hvis du f.eks. vil udelade tallene fra 0500, 91, 091, 010 på en liste som denne
 - 1000-3265-9874
 - 0100-7892-3012
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="phone_number_filters_exc">
@@ -87,7 +87,7 @@ Du kan bruge følgende xml
     </Group>
   </Keyword>
 ```
-Hvis du f.eks. vil medtage tallene fra 0500, 91, 091, 0100 på en liste som denne: 
+Hvis du f.eks. vil inkludere tal, der starter med 0500, 91, 091, 0100, på en liste som denne: 
 
 - 0500-4500-027
 - 91564721450
@@ -96,7 +96,7 @@ Hvis du f.eks. vil medtage tallene fra 0500, 91, 091, 0100 på en liste som denn
 - 1000-3265-9874
 - 0100-7892-3012
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="phone_filters_inc">
@@ -104,18 +104,18 @@ Du kan bruge følgende xml
 </Filter>
 ```
 
-### <a name="textmatchfilter-endswith"></a>TextMatchFilter EndsWith 
+### <a name="textmatchfilter-endswith"></a>TextMatchFilter slutter Med 
 
-Beskrivelse: Gør det muligt at definere sluttegnene for enheden. 
+Beskrivelse: Giver dig mulighed for at definere sluttegnene for enheden. 
 
-Hvis du f.eks. vil udelade tal, der slutter med 0500.91.091,0100, på en liste som denne:
+Hvis du f.eks. vil udelade de tal, der slutter med 0500.91.091, 0100 på en liste som denne:
 
 - 1234567891
 - 1234-5678-0091
 - 1234.4567.7091
 - 1234-8091-4564
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="phone_number_filters_exc">
@@ -132,14 +132,14 @@ Du kan bruge følgende xml
   </Keyword>
 ```
 
-Hvis du f.eks. vil medtage de tal, der slutter med 0500, 91, 091, 0100, på en liste som denne:
+Hvis du f.eks. vil medtage tal, der slutter med 0500, 91, 091, 0100, på en liste som denne:
 
 - 1234567891
 - 1234-5678-0091
 - 1234.4567.7091
 - 1234-8091-4564
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="phone_filters_inc">
@@ -149,7 +149,7 @@ Du kan bruge følgende xml
 
 ### <a name="textmatchfilter-full"></a>TextMatchFilter Fuld
 
-Beskrivelse: Gør det muligt at forbyde bestemte matches for at forhindre dem i at udløse reglen. Du kan f.eks 4111111111111111 du udelader oplysninger fra listen over gyldige kreditkorts matches.
+Beskrivelse: Giver dig mulighed for at forbyde visse forekomster for at forhindre dem i at udløse reglen. Udelad f.eks. 4111111111111111 fra listen over gyldige kreditkortforekomster.
 
 Hvis du f.eks. vil udelade kreditkortnumre som 4111111111111111 og 3241891031113111 på en liste som denne:
 
@@ -157,7 +157,7 @@ Hvis du f.eks. vil udelade kreditkortnumre som 4111111111111111 og 3241891031113
 - 4111111111111111
 - 3241891031113111
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -178,7 +178,7 @@ Hvis du f.eks. vil medtage kreditkortnumre som 4111111111111111 og 3241891031113
 - 4111111111111111
 - 3241891031113111
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="cc_filters_inc">
@@ -186,17 +186,17 @@ Du kan bruge følgende xml
 </Filter>
 ```
 
-### <a name="textmatchfilter-prefix"></a>TekstMatchFilterpræfiks
+### <a name="textmatchfilter-prefix"></a>Præfiks for TextMatchFilter
 
-Beskrivelse: Gør det muligt at definere de foregående tegn, der altid skal medtages eller udelades. Hvis f.eks. kreditkortnummeret indledes med "Ordre-id:", skal du fjerne matchet fra de gyldige matches.
+Beskrivelse: Giver dig mulighed for at definere de foregående tegn, der altid skal medtages eller udelades. Hvis kreditkortnummeret f.eks. har 'Order ID:' foranstillet, skal du fjerne matchet fra de gyldige matches.
 
-Hvis du f.eks. vil udelukke forekomster af telefonnumre, der har **et Telefon-nummer**, og ringe til mig i strenge før telefonnummeret på en liste som denne:
+Hvis du f.eks. vil udelade forekomster af telefonnumre, der har **et telefonnummer** , og **ringe til mig i** strenge før telefonnummeret, skal du på en liste som denne:
 
-- Telefon tal 091-8974-653278
+- Telefonnummer 091-8974-653278
 - Telefon 45-124576532-123
 - 45-124576532-123
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -210,12 +210,12 @@ Du kan bruge følgende xml
   </Keyword>
 ```
 
-Hvis du f.eks. **vil medtage forekomster**, der  har kreditkort- og kortnr. strenge før kreditkortnummeret, skal du på en liste, der ser sådan ud:
+Hvis du f.eks. vil medtage forekomster, der har **kreditkort-** og **kortnummerstrenge** før kreditkortnummeret, på en liste som denne:
 
 - Kreditkort 45-124576532-123 
-- 45-124576532-123 (hvilket kan være telefonnummer)
+- 45-124576532-123 (som kan være telefonnummer)
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="cc_filters_inc">
@@ -230,16 +230,16 @@ Du kan bruge følgende xml
   </Keyword
 ```
 
-### <a name="textmatchfilter-suffix"></a>TextMatchFilter-suffiks
+### <a name="textmatchfilter-suffix"></a>Suffiks til TextMatchFilter
 
-Beskrivelse: Gør det muligt at definere følgende tegn, der altid skal medtages eller udelades. Hvis f.eks. kreditkortnummer efterfølges af '/xuid', skal du fjerne matchet fra de gyldige matches.
+Beskrivelse: Giver dig mulighed for at definere følgende tegn, der altid skal medtages eller udelades. Hvis kreditkortnummeret f.eks. efterfølges af '/xuid', skal du fjerne matchet fra de gyldige matches.
 
-F.eks. udelader de øverste forekomster, hvis der er yderligere fem forekomster af fire cifre som suffiks på en liste som denne:
+De vigtigste ekskluderingsforekomster, hvis der f.eks. er fem forekomster af fire cifre som suffiks på en liste som denne:
 
 - 1234-5678-9321 4500 9870 6321 48925566
 - 1234-5678-9321
 
-Du kan bruge følgende xml
+Du kan bruge følgende XML
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -248,12 +248,12 @@ Du kan bruge følgende xml
 
   <Regexid="Regex_false_positives_suffix">(\d{4}){5,}</Regex>
 ```
-Hvis du f.eks. vil udelade forekomster, hvis de **efterfølges af /xuidsuffiks**, f.eks. et på denne liste:
+Hvis du f.eks. vil udelade forekomster, hvis de efterfølges af **/xuidsuffix**, som en på denne liste:
 
 - 1234-5678-9321 /xuid
 - 1234-5678-9321
 
-Du kan bruge denne xml
+Du kan bruge denne XML
 
 ```xml
 <Filters id="cc_number_filters_exc">
@@ -267,13 +267,13 @@ Du kan bruge denne xml
   </Keyword>
 ```
 
-Hvis du f.eks. kun vil medtage en forekomst, hvis den **efterfølges** af **CVV** eller udløber, f.eks. to på denne liste:
+Hvis du f.eks. kun vil medtage en forekomst, hvis den **efterfølges** af **cvv** eller udløber, f.eks. to på denne liste:
 
 - 45-124576532-123 
 - 45-124576532-123 cvv 966
-- 45-124576532-123 udløber 23-03
+- 45-124576532-123 udløber 23/03
 
-Du kan bruge denne xml
+Du kan bruge denne XML
 
 ```xml
 <Filters id="cc_filters_inc">
@@ -292,11 +292,11 @@ Du kan bruge denne xml
 
 Filtre kan defineres på hele SIT eller på et mønster. Her er nogle eksempler på kodestykker. 
 
-### <a name="at-sensitive-information-type-level"></a>På niveauet for følsomme oplysninger
+### <a name="at-sensitive-information-type-level"></a>På niveau med følsomme oplysninger
 
-Filtre på enhed – vil dække alle underordnede mønstre
+Filtre på enhed – dækker alle underordnede mønstre
 
-Filtrene anvendes på alle de **forekomster,** der er klassificeret af mønstrene i den pågældende enhed/følsomme type
+Filtrene anvendes på **alle** de instanser, der er klassificeret af et af mønstrene i den pågældende enhed/følsomme type
 
 ```xml
 <Entity id="6443b88f-2808-482a-8e1a-3ae5026645e1" patternsProximity="300" recommendedConfidence="85" filters="CompositeFiltersAtEntityLevel">
@@ -306,11 +306,11 @@ Filtrene anvendes på alle de **forekomster,** der er klassificeret af mønstren
 </Entity>
 ```
 
-### <a name="at-the-individual-pattern-of-the-sensitive-information-type-level"></a>På det individuelle mønster for niveauet for typen af følsomme oplysninger
+### <a name="at-the-individual-pattern-of-the-sensitive-information-type-level"></a>På det individuelle mønster for niveauet for følsomme oplysninger
 
-Filtre kun på mønsterniveau.
+Filtrerer kun på mønsterniveau.
 
-Filteret anvendes på de forekomster, der matcher mønsteret.
+Filteret anvendes på de forekomster, der matches af mønsteret.
 
 ```xml
 <Entity id="50842eb7-edc8-4019-85dd-5a5c1f2bb085" patternsProximity="300" recommendedConfidence="85">
@@ -321,11 +321,11 @@ Filteret anvendes på de forekomster, der matcher mønsteret.
 ```
 
 
-### <a name="at-sensitive-information-type-level-and-an-additional-filter-on-some-of-the-patterns-of-that-entity"></a>På niveauet for følsomme oplysninger og et ekstra filter på nogle af mønstrene i den pågældende enhed
+### <a name="at-sensitive-information-type-level-and-an-additional-filter-on-some-of-the-patterns-of-that-entity"></a>På niveau med følsomme oplysninger og et ekstra filter på nogle af mønstrene for den pågældende enhed
 
-Filtre på enhed + mønster
+Filtre ved Enhed + mønster
 
-Filtrene anvendes på alle de **forekomster,** der er klassificeret af mønstrene i den pågældende enhed/følsomme type. Filteret på mønsterniveau filtrerer de forekomster, der passer til det pågældende mønster.
+Filtrene anvendes på **alle** de instanser, der er klassificeret af et af mønstrene i den pågældende enhed/følsomme type. Filteret på mønsterniveau filtrerer de forekomster, der matches af mønsteret.
 
 ```xml
 <Entity id="6443b88f-2808-482a-8e1a-3ae5026645e1" patternsProximity="300" recommendedConfidence="85" filters="CompositeFiltersAtEntityLevel">
@@ -339,8 +339,8 @@ Filtrene anvendes på alle de **forekomster,** der er klassificeret af mønstren
 
 ## <a name="more-information"></a>Flere oplysninger
 
-- [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md)
+- [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md)
 
-- [Enhedsdefinitioner for følsomme oplysningstyper](sensitive-information-type-entity-definitions.md)
+- [Enhedsdefinitioner for type af følsomme oplysninger](sensitive-information-type-entity-definitions.md)
 
-- [Funktioner af typen Følsomme oplysninger](sit-functions.md)
+- [Funktioner for type af følsomme oplysninger](sit-functions.md)

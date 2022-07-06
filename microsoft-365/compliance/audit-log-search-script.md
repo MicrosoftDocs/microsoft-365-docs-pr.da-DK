@@ -19,22 +19,20 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkEXCHANGE
 description: Brug et PowerShell-script, der kører Search-UnifiedAuditLog-cmdlet'en i Exchange Online til at søge i overvågningsloggen. Dette script er optimeret til at returnere et stort sæt overvågningsposter, hver gang du kører det. Scriptet eksporterer disse poster til en CSV-fil, som du kan få vist eller transformere ved hjælp af Power Query i Excel.
-ms.openlocfilehash: 8799f1a4ddf2ef7dd536ccb3e6e70a4b731b4cd6
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 0c1d8d6ab8f6a2c8a0dc6a1c858a164c2f4ff494
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65100847"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66632833"
 ---
 # <a name="use-a-powershell-script-to-search-the-audit-log"></a>Brug et PowerShell-script til at søge i overvågningsloggen
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Sikkerhed, overholdelse af angivne standarder og overvågning er blevet en topprioritet for it-administratorer i dagens verden. Microsoft 365 har flere indbyggede funktioner, der kan hjælpe organisationer med at administrere sikkerhed, overholdelse af angivne standarder og overvågning. Unified Audit Logging kan især hjælpe dig med at undersøge sikkerhedshændelser og problemer med overholdelse af angivne standarder. Du kan hente overvågningslogge ved hjælp af følgende metoder:
 
 - [API'en til administration af Office 365](/office/office-365-management-api/office-365-management-activity-api-reference)
 
-- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) på Microsoft Purview-overholdelsesportalen
+- [Søgeværktøjet til overvågningslog](search-the-audit-log-in-security-and-compliance.md) i Microsoft Purview-compliance-portal
 
 - Cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) i Exchange Online PowerShell
 
@@ -58,9 +56,9 @@ Når der er situationer, hvor du skal hente overvågningsdata manuelt for en bes
 
 - Eksempelscriptet, der er angivet i denne artikel, understøttes ikke i microsofts standardsupportprogram eller -tjeneste. Eksempelscriptet leveres SOM IS uden nogen form for garanti. Microsoft fraskriver sig yderligere alle stiltiende garantier, herunder, uden begrænsning, eventuelle stiltiende garantier for salgbarhed eller egnethed til et bestemt formål. Hele risikoen som følge af brugen eller ydeevnen af eksempelscriptet og dokumentationen forbliver hos dig. Under ingen omstændigheder må Microsoft, microsofts forfattere eller andre, der er involveret i oprettelse, produktion eller levering af scriptet, være ansvarlige for eventuelle skader overhovedet (herunder, uden begrænsning, skader for tab af forretningsoverskud, forretningsafbrydelser, tab af forretningsoplysninger eller andre økonomiske tab), der opstår som følge af brugen af eller manglende evne til at bruge eksempelscriptet eller dokumentationen,  selv om Microsoft er blevet underrettet om muligheden for sådanne skader.
 
-## <a name="step-1-connect-to-exchange-online-powershell"></a>Trin 1: Forbind at Exchange Online PowerShell
+## <a name="step-1-connect-to-exchange-online-powershell"></a>Trin 1: Opret forbindelse til Exchange Online PowerShell
 
-Det første trin er at oprette forbindelse til Exchange Online PowerShell. Du kan oprette forbindelse ved hjælp af moderne godkendelse eller med multifaktorgodkendelse (MFA). Du kan finde en trinvis vejledning under [Forbind til at Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+Det første trin er at oprette forbindelse til Exchange Online PowerShell. Du kan oprette forbindelse ved hjælp af moderne godkendelse eller med multifaktorgodkendelse (MFA). Du kan finde en trinvis vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 ## <a name="step-2-modify-and-run-the-script-to-retrieve-audit-records"></a>Trin 2: Rediger og kør scriptet for at hente overvågningsposter
 
@@ -176,4 +174,4 @@ Scriptet viser statusmeddelelser, mens det kører. Når scriptet er færdigt, op
 
 ## <a name="step-3-format-and-view-the-audit-records"></a>Trin 3: Formatér og få vist overvågningsposterne
 
-Når du har kørt scriptet og eksporteret overvågningsposterne til en CSV-fil, kan du formatere CSV-filen for at gøre det nemmere at gennemse og analysere overvågningsposterne. En måde at gøre dette på er ved at Power Query JSON-transformeringsfunktion i Excel at opdele hver egenskab i JSON-objektet i kolonnen **AuditData** i sin egen kolonne. Du kan finde en trinvis vejledning under "Trin 2: Formatér den eksporterede overvågningslog ved hjælp af Power Query-editor" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor).
+Når du har kørt scriptet og eksporteret overvågningsposterne til en CSV-fil, kan du formatere CSV-filen for at gøre det nemmere at gennemse og analysere overvågningsposterne. En måde at gøre dette på er ved at Power Query JSON-transformeringsfunktion i Excel for at opdele hver egenskab i JSON-objektet i kolonnen **AuditData** i sin egen kolonne. Du kan finde en trinvis vejledning under "Trin 2: Formatér den eksporterede overvågningslog ved hjælp af Power Query-editor" i [Eksportér, konfigurer og få vist overvågningslogposter](export-view-audit-log-records.md#step-2-format-the-exported-audit-log-using-the-power-query-editor).

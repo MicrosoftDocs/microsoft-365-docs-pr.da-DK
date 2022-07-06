@@ -15,22 +15,20 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: ''
-description: Få mere at vide om funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) (kaldet samtaletrådning) for at genskabe, gennemse og eksportere chatsamtaler i Microsoft Teams og Yammer grupper.
+description: Få mere at vide om funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) (kaldet samtaletrådning) til at genskabe, gennemse og eksportere chatsamtaler i Microsoft Teams og Yammer-grupper.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 075424bc6db144e86406b10ce9a4f4d28c1b937f
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 43b9bccd06ab9ca5ac94f48efa40b1c06707dde5
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65097068"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634781"
 ---
 # <a name="conversation-threading-in-ediscovery-premium"></a>Samtaletrådning i eDiscovery (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+Chat er en nem måde at stille spørgsmål, dele ideer eller hurtigt kommunikere på tværs af store målgrupper. I takt med at chatplatforme, f.eks. Microsoft Teams og Yammer-grupper, bliver kerne i virksomhedssamarbejde, skal organisationer evaluere, hvordan deres eDiscovery-arbejdsproces håndterer disse nye former for kommunikation og samarbejde.
 
-Chat er en nem måde at stille spørgsmål, dele ideer eller hurtigt kommunikere på tværs af store målgrupper. Efterhånden som chatplatforme, f.eks. Microsoft Teams og Yammer grupper, bliver kerne i virksomhedssamarbejde, skal organisationer evaluere, hvordan deres eDiscovery-arbejdsproces håndterer disse nye former for kommunikation og samarbejde.
-
-Funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) er designet til at hjælpe dig med at identificere kontekstuelt indhold og oprette forskellige samtalevisninger. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (også kaldet *trådede samtaler*), der genereres på platforme som Microsoft Teams.
+Funktionen til genopbygning af samtaler i Microsoft Purview eDiscovery (Premium) er designet til at hjælpe dig med at identificere kontekstuelt indhold og producere forskellige samtalevisninger. Denne funktion giver dig mulighed for effektivt og hurtigt at gennemse komplette chatsamtaler (også kaldet *trådede samtaler*), der genereres på platforme som Microsoft Teams.
 
 Med genopbygning af samtaler kan du bruge indbyggede funktioner til at genskabe, gennemse og eksportere gevindsamtaler. Brug genopbygning af eDiscovery-samtaler (Premium) til at:
 
@@ -50,17 +48,17 @@ Her er nogle definitioner, der kan hjælpe dig med at komme i gang med at bruge 
 
 - **Samtale:** Repræsenterer en gruppering af en eller flere meddelelser. Samtaler kan repræsenteres på forskellige måder på tværs af forskellige programmer. I nogle programmer er der en eksplicit handling, der skyldes svar på en eksisterende meddelelse. Samtaler dannes eksplicit som et resultat af denne brugerhandling. Her er f.eks. et skærmbillede af en kanalsamtale i Microsoft Teams.
 
-   ![Microsoft Teams kanalsamtale.](../media/threadedchat.png)
+   ![Microsoft Teams-kanalsamtale.](../media/threadedchat.png)
 
-   I andre apps (f.eks. gruppechatbeskeder i Teams) er der ikke en formel svarkæde, og meddelelser vises i stedet som en "flad flod af meddelelser" i en enkelt tråd. I disse typer apps udledes samtaler fra en gruppe meddelelser, der forekommer inden for et bestemt tidspunkt. Denne "blød gruppering" af meddelelser (i modsætning til en svarkæde) repræsenterer "frem og tilbage"-samtalen om et bestemt emne af interesse.
+   I andre apps (f.eks. gruppechatbeskeder i Teams) er der ikke en formel svarkæde, og i stedet vises meddelelser som en "flad flod af meddelelser" i en enkelt tråd. I disse typer apps udledes samtaler fra en gruppe meddelelser, der forekommer inden for et bestemt tidspunkt. Denne "blød gruppering" af meddelelser (i modsætning til en svarkæde) repræsenterer "frem og tilbage"-samtalen om et bestemt emne af interesse.
 
 ## <a name="step-1-create-a-draft-collection"></a>Trin 1: Opret en kladdesamling
 
-Når du har identificeret relevante tilsynsførende og indholdsplaceringer, kan du oprette en søgning for at finde potentielt relevant indhold. Under fanen **Samlinger** i eDiscovery-sagen (Premium) kan du oprette en samling ved at klikke på **Ny samling** og følge guiden. Du kan finde oplysninger om, hvordan du kan oprette en samling, oprette en søgeforespørgsel og få vist søgeresultaterne i [Opret en kladdesamling](create-draft-collection.md).
+Når du har identificeret relevante tilsynsførende og indholdsplaceringer, kan du oprette en søgning for at finde potentielt relevant indhold. Under fanen **Samlinger** i eDiscovery (Premium)-sagen kan du oprette en samling ved at klikke på **Ny samling** og følge guiden. Du kan finde oplysninger om, hvordan du kan oprette en samling, oprette en søgeforespørgsel og få vist søgeresultaterne i [Opret en kladdesamling](create-draft-collection.md).
 
 ## <a name="step-2-commit-a-draft-collection-to-a-review-set"></a>Trin 2: Send en kladdesamling til et gennemsynssæt
 
-Når du har gennemset og færdiggjort søgeforespørgslen i en samling, kan du føje søgeresultaterne til et korrektursæt. Når du føjer dine søgeresultater til et korrektursæt, kopieres de oprindelige data til et Azure Storage område for at lette korrektur- og analyseprocessen. Du kan finde flere oplysninger om, hvordan du føjer søgeresultater til et korrektursæt, under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
+Når du har gennemset og færdiggjort søgeforespørgslen i en samling, kan du føje søgeresultaterne til et korrektursæt. Når du føjer dine søgeresultater til et korrektursæt, kopieres de oprindelige data til et Azure Storage-område for at lette gennemgangs- og analyseprocessen. Du kan finde flere oplysninger om, hvordan du føjer søgeresultater til et korrektursæt, under [Send en kladdesamling til et korrektursæt](commit-draft-collection.md).
 
 Når du føjer elementer fra samtaler til et korrektursæt, kan du bruge indstillingen gevindsamtaler til at indsamle kontekstafhængige meddelelser fra samtaler, der indeholder elementer, der opfylder søgekriterierne i samlingen. Når du har valgt indstillingen trådsamtaler, kan følgende ting ske:
 

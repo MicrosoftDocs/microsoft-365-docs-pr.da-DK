@@ -17,18 +17,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug et rutediagram til at bestemme resultatet, når et element har flere opbevaringspolitikker eller en opbevaringsmærkat og opbevaringspolitikker
-ms.openlocfilehash: cf35a89faf3ed526c94acf362f1a927eb36420f0
-ms.sourcegitcommit: 5c64002236561000c5bd63c71423e8099e803c2d
+ms.openlocfilehash: 4e5c1cf887144f89764e88a39ba14a95a2df576c
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/09/2022
-ms.locfileid: "65286796"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66633449"
 ---
 # <a name="flowchart-to-determine-when-an-item-will-be-retained-or-permanently-deleted"></a>Rutediagram, der bestemmer, hvornår et element bevares eller slettes permanent
 
->*[Microsoft 365 licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
+>*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
 Brug følgende rutediagram til at anvende [principperne for opbevaring af](retention.md#the-principles-of-retention-or-what-takes-precedence) et element for at afgøre, om systemet vil bevare eller slette det permanent som følge af en opbevaringsmærkat eller opbevaringspolitik.
 

@@ -17,18 +17,16 @@ search.appverid:
 ms.assetid: ''
 description: Få mere at vide om, hvordan du får vist detaljer, redigerer og masserediger listen over tilsynsførende i en eDiscovery-sag (Premium).
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 6ea05e2f0b19c23b236f7b64eb3a425fdb29cc39
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: baffcb9d601d95d4be78cf47fcbc3037daff86c8
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077938"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66634022"
 ---
 # <a name="manage-custodians-in-an-ediscovery-premium-case"></a>Administrer tilsynsførende i en eDiscovery-sag (Premium)
 
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
-
-Siden **Tilsynsførende** under fanen **Datakilder** i en Microsoft Purview eDiscovery-sag (Premium) indeholder en liste over alle tilsynsførende, der er føjet til sagen. Når du har føjet tilsynsførende til en sag, indsamles oplysninger om hver enkelt tilsynsførende automatisk fra Azure Active Directory og kan ses i eDiscovery (Premium).
+Siden **Tilsynsførende** under fanen **Datakilder** i en Microsoft Purview eDiscovery (Premium) indeholder en liste over alle tilsynsførende, der er føjet til sagen. Når du har føjet tilsynsførende til en sag, indsamles oplysninger om hver enkelt tilsynsførende automatisk fra Azure Active Directory og kan ses i eDiscovery (Premium).
 
 ## <a name="view-custodian-details"></a>Vis oplysninger om tilsynsførende
 
@@ -58,7 +56,7 @@ Hvis du vil have vist oplysninger om en tilsynsførende, skal du klikke på tils
 
   ![Dataplaceringer og oplysninger om bevarelse af data i varetægtsfængsling.](../media/CustodianHoldDetails.PNG)
 
-  - **Varetægtsfængslede steder**. Viser antallet og typen af datakilder (postkasser, websteder og Teams), der er knyttet til tilsynsførende og er en del af sagen.
+  - **Varetægtsfængslede steder**. Viser antallet og typen af datakilder (postkasser, websteder og Teams), der er knyttet til vogteren og er en del af sagen.
 
     - Hver dataplacering viser status for venteposition. Mulige værdier for status for venteposition: **I venteposition**, **Ikke i venteposition** og **Igangværende**.
 
@@ -70,7 +68,7 @@ Efterhånden som din sag skrider frem, kan du opdage, at der kan være yderliger
 
 Sådan opdaterer du de datakilder, der er knyttet til en tilsynsførende:
 
-1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
   
 2. Klik på fanen **Datakilder** .
   
@@ -78,26 +76,26 @@ Sådan opdaterer du de datakilder, der er knyttet til en tilsynsførende:
 
     ![Rediger datakilder.](../media/EditCustodianDataSource.PNG)
   
-4. Sådan tilføjer eller fjerner du den primære postkasse og OneDrive konto til den tilsynsførende:
+4. Sådan tilføjer eller fjerner du den primære postkasse og OneDrive-konto for vogteren:
 
     - Udvid tilsynsførende for at få vist de primære dataplaceringer, der tidligere er knyttet til tilsynsførende.
 
-    - Klik på **Rediger** ud for **Postkasse** eller **OneDrive** for at tilføje den tilsynsførendes postkasse eller OneDrive placering.
+    - Klik på **Rediger** ud for **Postkasse** eller **OneDrive** for at tilføje forældremyndighedens postkasse eller OneDrive-placering.
 
-    - Vælg **Ryd** ud for **Postkasse** eller **OneDrive** for at fjerne den tilsynsførendes postkasse eller OneDrive konto fra at blive tilknyttet som en dataplacering for denne tilsynsførende.
+    - Vælg **Ryd** ud for **Postkasse** eller **OneDrive** for at fjerne den tilsynsførendes postkasse eller OneDrive-konto fra at blive tilknyttet som en dataplacering for denne tilsynsførende.
 
-5. Hvis du vil tilføje eller fjerne andre postkasser, websteder, Teams eller Yammer grupper til en bestemt tilsynsførende, skal du klikke på **Rediger** ud for tjenesten for at tilføje en dataplacering.
+5. Hvis du vil føje eller fjerne andre postkasser, websteder, Teams eller Yammer-grupper til en bestemt tilsynsførende, skal du klikke på **Rediger** ud for tjenesten for at tilføje en dataplacering.
 
    - **Exchange**: Bruges til at knytte andre postkasser til tilsynsførende. Skriv navnet eller aliasset (mindst tre tegn) for brugerpostkasser eller distributionsgrupper i søgefeltet. Vælg de postkasser, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**.
 
-   - **SharePoint**: Bruges til at knytte SharePoint websteder til vogteren. Vælg et websted på listen, eller søg efter et websted ved at skrive en URL-adresse i søgefeltet. Vælg de websteder, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**.
+   - **SharePoint**: Bruges til at knytte SharePoint-websteder til tilsynsførende. Vælg et websted på listen, eller søg efter et websted ved at skrive en URL-adresse i søgefeltet. Vælg de websteder, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**.
 
-   - **Teams**: Bruges til at tildele det Microsoft Teams, som vogteren i øjeblikket er medlem af. Vælg de teams, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**. Når du har tilføjet et team, identificerer og finder systemet automatisk det SharePoint websted og gruppepostkasse, der er knyttet til teamet, og tildeler dem til tilsynsførende.
+   - **Teams**: Bruges til at tildele de Microsoft Teams, som frihedsberøveren i øjeblikket er medlem af. Vælg de teams, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**. Når du har tilføjet et team, identificerer og finder systemet automatisk det SharePoint-websted og den gruppepostkasse, der er knyttet til teamet, og tildeler dem til tilsynsførende.
 
-   - **Yammer**: Bruges til at tildele de Yammer grupper, som vogteren i øjeblikket er medlem af. Vælg de grupper, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**. Når du har tilføjet et team, identificerer og finder systemet automatisk det SharePoint websted og gruppepostkasse, der er knyttet til gruppen, og tildeler dem til tilsynsførende.
+   - **Yammer**: Bruges til at tildele de Yammer-grupper, som tilsynsførende i øjeblikket er medlem af. Vælg de grupper, der skal tildeles til tilsynsførende, og klik derefter på **Tilføj**. Når du har tilføjet et team, identificerer og finder systemet automatisk den SharePoint-websteds- og gruppepostkasse, der er knyttet til gruppen, og tildeler dem til tilsynsførende.
 
    > [!NOTE]
-   > Du kan bruge **Exchange** og **SharePoint** placeringsvælgere til at knytte alle postkasser eller websteder i din organisation, herunder teams eller Yammer grupper, som en tilsynsførende ikke er medlem af, til en tilsynsførende. Det gør du ved at tilføje både den postkasse og det websted, der er knyttet til hvert team eller Yammer gruppe.
+   > Du kan bruge **Exchange** - og **SharePoint-placeringsvælgere** til at knytte alle postkasser eller websteder i din organisation, herunder teams eller Yammer-grupper, som en tilsynsførende ikke er medlem af, til en tilsynsførende. Hvis du vil gøre dette, skal du tilføje både den postkasse og det websted, der er knyttet til hvert team eller hver Yammer-gruppe.
 
 6. Når du har redigeret dataplaceringerne for tilsynsførende, skal du klikke på **Næste** for at gå til siden **Indstillinger for venteposition** .  
 
@@ -105,13 +103,13 @@ Sådan opdaterer du de datakilder, der er knyttet til en tilsynsførende:
 
 ## <a name="reindex-custodian-data"></a>Gendæd data om tilsynsførende
 
-I de fleste eDiscovery-arbejdsprocesser til juridiske undersøgelser søges der i et undersæt af en tilsynsførendes data, når tilsynsførende er føjet til en juridisk sag. På grund af meget store filstørrelser eller mulig beskadigelse af data kan nogle elementer i de datakilder, der er knyttet til en tilsynsførende, blive delvist indekseret. Ved hjælp af den [avancerede indekseringsfunktion](indexing-custodian-data.md) i eDiscovery (Premium) kan de fleste delvist indekserede elementer afhjælpes automatisk ved at omindeksere disse elementer efter behov.
+I de fleste eDiscovery-arbejdsprocesser til juridiske undersøgelser søges der i et undersæt af en tilsynsførendes data, når tilsynsførende er føjet til en juridisk sag. På grund af meget store filstørrelser eller mulig beskadigelse af data kan nogle elementer i de datakilder, der er knyttet til en tilsynsførende, blive delvist indekseret. Ved hjælp af den [avancerede indekseringsfunktionalitet](indexing-custodian-data.md) i eDiscovery (Premium) kan de fleste delvist indekserede elementer afhjælpes automatisk ved at omindeksere disse elementer efter behov.
 
 Når en tilsynsførende føjes til en sag, genindekseres de data, der er placeret i de datakilder, der er knyttet til vogteren, automatisk (af den avancerede indekseringsproces). Det betyder, at du kan lade dataene være på stedet i stedet for at skulle downloade og afhjælpe dem og derefter søge i dem offline). Men i løbet af livscyklussen for en juridisk sag kan nye datakilder være knyttet til en tilsynsførende. I dette tilfælde kan du omindeksere tilsynsførendes data ved at køre den avancerede indekseringsproces igen for at afhjælpe eventuelle delvist indekserede elementer og opdatere indekset for tilsynsførendes data.
 
 Sådan udløser du den omindekseringsproces, der skal håndtere delvist indekserede elementer:
 
-1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
 
 2. Klik på fanen **Kilder** .
 
@@ -137,7 +135,7 @@ Hvis du frigiver en varetægtsfængslet efter en meddelelse om frihedsberøvelse
 
 Sådan frigiver du en tilsynsførende:
 
-1. Gå til **eDiscovery > eDiscovery (Premium),** og åbn sagen.
+1. Gå til  **eDiscovery > eDiscovery (Premium),** og åbn sagen.
 
 2. Klik på fanen **Kilder** .
 
@@ -145,7 +143,7 @@ Sådan frigiver du en tilsynsførende:
 
 4. Klik på **Frigiv tilsynsførende** på pop op-siden.
 
-   Der vises en advarselsside, der forklarer, at hvis en venteposition er placeret på en datakilde, der er knyttet til vogteren, fjernes ventepositionen, og at alle andre ventepositioner, der er knyttet til en anden eDiscovery-sag (Premium), stadig gælder. Det omfatter andre typer opbevarings- og opbevaringsfunktioner (f.eks. en politik for Microsoft 365 opbevaring).
+   Der vises en advarselsside, der forklarer, at hvis en venteposition er placeret på en datakilde, der er knyttet til vogteren, fjernes ventepositionen, og at alle andre ventepositioner, der er knyttet til en anden eDiscovery (Premium)-sag, stadig gælder. Det omfatter andre typer bevarelses- og opbevaringsfunktioner (f.eks. en Microsoft 365-opbevaringspolitik).
 
 5. Klik på **Ja** for at bekræfte, at du vil frigive tilsynsførende. 
 

@@ -19,16 +19,14 @@ ms.collection:
 ms.custom:
 - seo-marvel-apr2020
 description: Når du er færdig med at konfigurere Office 365 OME (Message Encryption), kan du få mere at vide om, hvordan du tilpasser installationen på flere måder.
-ms.openlocfilehash: 2e39f811ec23b2f3b068ef5684fca479850a8744
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: b3d7ffe5db987b9fb3bd29682c8e101ffd99946a
+ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014822"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "66635277"
 ---
 # <a name="manage-office-365-message-encryption"></a>Fjern Office 365-meddelelseskryptering
-
-[!include[Purview banner](../includes/purview-rebrand-banner.md)]
 
 Når du er færdig med at konfigurere Office 365 OME (Message Encryption), kan du tilpasse konfigurationen af installationen på flere måder. Du kan f.eks. konfigurere, om du vil aktivere engangspaskoder, få vist knappen **Kryptér** i Outlook på internettet og meget mere. Opgaverne i denne artikel beskriver hvordan.
 
@@ -38,7 +36,7 @@ Når du konfigurerer de nye funktioner Office 365 Meddelelsekryptering, kan brug
 
 ### <a name="to-manage-whether-recipients-can-use-social-ids-to-sign-in-to-the-ome-portal"></a>Sådan administreres, om modtagere kan bruge sociale id'er til at logge på OME-portalen
 
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 2. Kør Set-OMEConfiguration-cmdlet'en med parameteren SocialIdSignIn på følgende måde:
 
@@ -112,7 +110,7 @@ Som administrator kan du administrere, om denne knap skal vises for slutbrugere.
 
 ## <a name="enable-service-side-decryption-of-email-messages-for-ios-mail-app-users"></a>Aktivér dekryptering af mails på tjenestesiden for brugere af iOS-mailappen
 
-IOS-mailappen kan ikke dekryptere meddelelser, der er beskyttet med Office 365 meddelelseskryptering. Som Microsoft 365 administrator kan du anvende dekryptering på tjenestesiden for meddelelser, der leveres til iOS-mailappen. Når du vælger at bruge dekryptering på tjenestesiden, sender tjenesten en dekrypteret kopi af meddelelsen til iOS-enheden. Klientenheden gemmer en dekrypteret kopi af meddelelsen. Meddelelsen bevarer også oplysninger om brugsrettigheder, selvom iOS-mailappen ikke anvender brugsrettigheder på klientsiden for brugeren. Brugeren kan kopiere eller udskrive meddelelsen, selvom vedkommende ikke oprindeligt har ret til at gøre det. Men hvis brugeren forsøger at fuldføre en handling, der kræver den Microsoft 365 mailserver, f.eks. videresendelse af meddelelsen, tillader serveren ikke handlingen, hvis brugeren ikke oprindeligt har brugsret til at gøre det. Slutbrugere kan dog omgå anvendelsesbegrænsningen "Videresend ikke" ved at videresende meddelelsen fra en anden konto i iOS-mailappen. Uanset om du konfigurerer dekryptering af mails på tjenestesiden, kan vedhæftede filer i krypterede og rettighedsbeskyttede mails ikke ses i iOS-mailappen.
+IOS-mailappen kan ikke dekryptere meddelelser, der er beskyttet med Office 365 meddelelseskryptering. Som Microsoft 365-administrator kan du anvende dekryptering på tjenestesiden for meddelelser, der leveres til iOS-mailappen. Når du vælger at bruge dekryptering på tjenestesiden, sender tjenesten en dekrypteret kopi af meddelelsen til iOS-enheden. Klientenheden gemmer en dekrypteret kopi af meddelelsen. Meddelelsen bevarer også oplysninger om brugsrettigheder, selvom iOS-mailappen ikke anvender brugsrettigheder på klientsiden for brugeren. Brugeren kan kopiere eller udskrive meddelelsen, selvom vedkommende ikke oprindeligt har ret til at gøre det. Men hvis brugeren forsøger at fuldføre en handling, der kræver Microsoft 365-mailserveren, f.eks. videresendelse af meddelelsen, tillader serveren ikke handlingen, hvis brugeren ikke oprindeligt har brugsret til at gøre det. Slutbrugere kan dog omgå anvendelsesbegrænsningen "Videresend ikke" ved at videresende meddelelsen fra en anden konto i iOS-mailappen. Uanset om du konfigurerer dekryptering af mails på tjenestesiden, kan vedhæftede filer i krypterede og rettighedsbeskyttede mails ikke ses i iOS-mailappen.
 
 Hvis du vælger ikke at tillade, at dekrypterede meddelelser sendes til brugere af iOS-mailappen, modtager brugerne en meddelelse om, at de ikke har rettigheder til at få vist meddelelsen. Som standard er dekryptering af mails på tjenestesiden ikke aktiveret.
 
@@ -147,13 +145,13 @@ Du kan få flere oplysninger og få vist klientoplevelsen under [Få vist krypte
 
 Når du bruger Office 365 meddelelsekryptering, krypteres vedhæftede filer normalt automatisk. Som administrator kan du anvende dekryptering på tjenestesiden for vedhæftede filer i mails, som brugerne downloader fra en webbrowser.
 
-Når du bruger dekryptering på tjenestesiden, sender tjenesten en dekrypteret kopi af filen til enheden. Meddelelsen er stadig krypteret. Den vedhæftede fil indeholder også oplysninger om brugsrettigheder, selvom browseren ikke anvender brugsrettigheder på klientsiden for brugeren. Brugeren kan kopiere eller udskrive den vedhæftede fil, selvom vedkommende ikke oprindeligt har rettigheder til at gøre det. Men hvis brugeren forsøger at fuldføre en handling, der kræver den Microsoft 365 mailserver, f.eks. videresendelse af den vedhæftede fil, tillader serveren ikke handlingen, hvis brugeren ikke oprindeligt har brugsret til at gøre det.
+Når du bruger dekryptering på tjenestesiden, sender tjenesten en dekrypteret kopi af filen til enheden. Meddelelsen er stadig krypteret. Den vedhæftede fil indeholder også oplysninger om brugsrettigheder, selvom browseren ikke anvender brugsrettigheder på klientsiden for brugeren. Brugeren kan kopiere eller udskrive den vedhæftede fil, selvom vedkommende ikke oprindeligt har rettigheder til at gøre det. Men hvis brugeren forsøger at fuldføre en handling, der kræver Microsoft 365-mailserveren, f.eks. videresendelse af den vedhæftede fil, tillader serveren ikke handlingen, hvis brugeren ikke oprindeligt har brugsret til at gøre det.
 
 Uanset om du konfigurerer dekryptering af vedhæftede filer på tjenestesiden, kan brugerne ikke få vist vedhæftede filer i krypterede og rettighedsbeskyttede mails i iOS-mailappen.
 
 Hvis du vælger ikke at tillade dekrypterede vedhæftede filer i mails, som er standarden, modtager brugerne en meddelelse om, at de ikke har rettigheder til at få vist den vedhæftede fil.
 
-Du kan få flere oplysninger om, hvordan Microsoft 365 implementerer kryptering for mails og vedhæftede filer i mails med indstillingen Encrypt-Only, under [Indstillingen Kryptér kun for mails.](/azure/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails)
+Du kan få flere oplysninger om, hvordan Microsoft 365 implementerer kryptering for mails og vedhæftede filer i mails med indstillingen Encrypt-Only, under [Kryptér kun for mails.](/azure/information-protection/deploy-use/configure-usage-rights#encrypt-only-option-for-emails)
 
 ### <a name="to-manage-whether-email-attachments-are-decrypted-on-download-from-a-web-browser"></a>Sådan administreres, om vedhæftede filer i mails dekrypteres ved download fra en webbrowser
 
@@ -179,7 +177,7 @@ Du kan få flere oplysninger om, hvordan Microsoft 365 implementerer kryptering 
 
 ## <a name="ensure-all-external-recipients-use-the-ome-portal-to-read-encrypted-mail"></a>Sørg for, at alle eksterne modtagere bruger OME-portalen til at læse krypterede mails
 
-Du kan bruge brugerdefinerede brandingskabeloner til at tvinge modtagere til at modtage en ombrydermail, der dirigerer dem til at læse krypterede mails på OME-portalen i stedet for at bruge Outlook eller Outlook på internettet. Det kan være en god idé at gøre dette, hvis du bruger større kontrol over, hvordan modtagerne bruger den mail, de modtager. Hvis eksterne modtagere f.eks. får vist mail på webportalen, kan du angive en udløbsdato for mailen, og du kan tilbagekalde mailen. Disse funktioner understøttes kun via OME-portalen. Du kan bruge indstillingen Kryptér og indstillingen Videresend ikke, når du opretter reglerne for mailflowet.
+Du kan bruge brugerdefinerede brandingskabeloner til at tvinge modtagere til at modtage en ombrydermail, der sender dem en besked om at læse krypterede mails på OME-portalen i stedet for at bruge Outlook eller Outlook på internettet. Det kan være en god idé at gøre dette, hvis du bruger større kontrol over, hvordan modtagerne bruger den mail, de modtager. Hvis eksterne modtagere f.eks. får vist mail på webportalen, kan du angive en udløbsdato for mailen, og du kan tilbagekalde mailen. Disse funktioner understøttes kun via OME-portalen. Du kan bruge indstillingen Kryptér og indstillingen Videresend ikke, når du opretter reglerne for mailflowet.
 
 ### <a name="use-a-custom-template-to-force-all-external-recipients-to-use-the-ome-portal-and-for-encrypted-email"></a>Brug en brugerdefineret skabelon til at tvinge alle eksterne modtagere til at bruge OME-portalen og til krypteret mail
 
@@ -213,13 +211,13 @@ Du kan bruge brugerdefinerede brandingskabeloner til at tvinge modtagere til at 
 
 ## <a name="customize-the-appearance-of-email-messages-and-the-ome-portal"></a>Tilpas udseendet af mails og OME-portalen
 
-Du kan finde detaljerede oplysninger om, hvordan du tilpasser Microsoft Purview Message Encryption for din organisation, under [Føj organisationens brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md). Hvis du vil aktivere muligheden for at spore og tilbagekalde krypterede meddelelser, skal du føje din brugerdefinerede branding til OME-portalen.
+Du kan finde detaljerede oplysninger om, hvordan du tilpasser Microsoft Purview-meddelelseskryptering for din organisation, under [Føj organisationens brand til dine krypterede meddelelser](add-your-organization-brand-to-encrypted-messages.md). Hvis du vil aktivere muligheden for at spore og tilbagekalde krypterede meddelelser, skal du føje din brugerdefinerede branding til OME-portalen.
 
-## <a name="disable-microsoft-purview-message-encryption"></a>Deaktiver Kryptering af Microsoft Purview-meddelelse
+## <a name="disable-microsoft-purview-message-encryption"></a>Deaktiver Microsoft Purview-meddelelseskryptering
 
-Vi håber, at det ikke kommer til det, men hvis du har brug for det, deaktivering af Microsoft Purview Message Encryption er meget ligetil. Først skal du fjerne de regler for mailflow, du har oprettet, og som bruger Microsoft Purview Message Encryption. Du kan få oplysninger om, hvordan du fjerner regler for mailflow, under [Administrer regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules). Udfør derefter disse trin i Exchange Online PowerShell.
+Vi håber, at det ikke kommer til det, men hvis du har brug for det, er det meget ligetil at deaktivere Microsoft Purview-meddelelseskryptering. Først skal du fjerne de regler for mailflow, du har oprettet, og som bruger Microsoft Purview-meddelelseskryptering. Du kan få oplysninger om, hvordan du fjerner regler for mailflow, under [Administrer regler for mailflow](/exchange/security-and-compliance/mail-flow-rules/manage-mail-flow-rules). Udfør derefter disse trin i Exchange Online PowerShell.
 
-### <a name="to-disable-microsoft-purview-message-encryption"></a>Sådan deaktiveres Microsoft Purview-meddelelsekryptering
+### <a name="to-disable-microsoft-purview-message-encryption"></a>Sådan deaktiverer du Microsoft Purview-meddelelseskryptering
 
 1. Hvis du bruger en arbejds- eller skolekonto, der har globale administratortilladelser i din organisation, kan du oprette forbindelse til Exchange Online PowerShell. Du kan finde en vejledning under [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -229,7 +227,7 @@ Vi håber, at det ikke kommer til det, men hvis du har brug for det, deaktiverin
    Set-IRMConfiguration -SimplifiedClientAccessEnabled $false
    ```
 
-3. Deaktiver Microsoft Purview Message Encryption ved at køre Set-IRMConfiguration-cmdlet'en med parameteren AzureRMSLicensingEnabled angivet til falsk:
+3. Deaktiver Microsoft Purview-meddelelseskryptering ved at køre Set-IRMConfiguration-cmdlet'en med parameteren AzureRMSLicensingEnabled angivet til falsk:
 
    ```powershell
    Set-IRMConfiguration -AzureRMSLicensingEnabled $false
