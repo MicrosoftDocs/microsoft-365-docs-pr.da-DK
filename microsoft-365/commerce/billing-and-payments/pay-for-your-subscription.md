@@ -23,12 +23,12 @@ ms.custom:
 - business_assist
 - AdminTemplateSet
 ms.date: 05/26/2022
-ms.openlocfilehash: 05edb03d34644d1f09acaad22bbcff01b3654ac3
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: 113905d76864fecdc4fc38d46e4dc6f3e625348f
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65753842"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663806"
 ---
 # <a name="how-to-pay-for-your-subscription"></a>Sådan betaler du for dit abonnement
 
@@ -53,7 +53,7 @@ Fra og med den 1. oktober 2021 kan automatiske betalinger i Indien blokere nogle
 
 [Få mere at vide om Reserve Bank of India-bestemmelserne for tilbagevendende betalinger](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668&Mode=0).
 
-Den 1. juli 2022 gemmer Microsoft og andre onlineforhandlere ikke længere kreditkortoplysninger. For at overholde denne regel fjerner Microsoft alle gemte kortoplysninger fra Microsoft 365 Administration. Hvis du vil undgå tjenesteafbrydelser, skal du tilføje en betalingsmetode og foretage en engangsbetaling for alle abonnementer og faktureringsprofiler.
+Den 30. september 2022 gemmer Microsoft og andre onlineforhandlere ikke længere kreditkortoplysninger. For at overholde denne regel fjerner Microsoft alle gemte kortoplysninger fra Microsoft 365 Administration. Hvis du vil undgå tjenesteafbrydelser, skal du tilføje en betalingsmetode og foretage en engangsbetaling for alle abonnementer og faktureringsprofiler.
 
 [Få mere at vide om Reserve Bank of India-betingelserne for kortlagring](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12211).
 
