@@ -14,12 +14,12 @@ metadata:
   author: denisebmsft
   ms.author: deniseb
   ms.date: 05/12/2022
-  ms.openlocfilehash: f2a74c3acb08dba0e4964b75b25a4da2a4439eb9
-  ms.sourcegitcommit: c216ffa5da8f431e4380bb133a234ae7d94144c7
+  ms.openlocfilehash: c2ea7c498badd191c6553c84502233ac6e17a02b
+  ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 06/04/2022
-  ms.locfileid: "65893099"
+  ms.lasthandoff: 07/06/2022
+  ms.locfileid: "66642585"
 productDirectory:
   title: Produktivitet og sikkerhed med Microsoft 365 Business Premium
   items:
@@ -63,15 +63,15 @@ conceptualContent:
     - url: ../business-premium/get-microsoft-365-business-premium.md
       itemType: how-to-guide
       text: Få Microsoft 365 Business Premium
-    - url: ../business-premium/get-microsoft-365-business-premium.md
+    - url: ../business-premium/m365bp-setup.md
       itemType: how-to-guide
       text: 1. Fuldfør den grundlæggende konfigurationsproces
     - url: ../business-premium/m365bp-security-overview.md
       itemType: overview
-      text: 2. Opgrader sikkerhed
+      text: 2. Konfigurer sikkerhedsfunktioner
     - url: ../business-premium/m365bp-devices-overview.md
       itemType: overview
-      text: 3. Konfigurer ikke-administrerede (BYOD) enheder
+      text: 3. Beskyt ikke-administrerede (BYOD)-enheder
     - url: ../business-premium/m365bp-protect-email-overview.md
       itemType: overview
       text: 4. Brug mail på en mere sikker måde

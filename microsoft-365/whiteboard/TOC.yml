@@ -1,13 +1,27 @@
 - name: Microsoft Whiteboard
   href: index.md
-- name: Administrer adgang
-  href: manage-whiteboard-access-organizations.md
-- name: Administrer data
-  href: manage-data-organizations.md
-- name: Administrer deling
-  href: manage-sharing-organizations.md
-- name: Udrul på Windows-enheder
-  href: deploy-on-windows-organizations.md
+- name: Konfigurer whiteboard
+  items:
+    - name: Konfigurer og brug
+      href: /surface-hub/whiteboard-collaboration
+    - name: Udrul på Windows-enheder
+      href: deploy-on-windows-organizations.md
+- name: Administrer whiteboard
+  items:
+    - name: Administrer adgang
+      href: manage-whiteboard-access-organizations.md
+    - name: Administrer data
+      href: manage-data-organizations.md
+    - name: Administrer deling
+      href: manage-sharing-organizations.md
+    - name: Udrul på Windows-enheder
+      href: deploy-on-windows-organizations.md
+- name: Beskyttelse af personlige oplysninger og overholdelse af angivne standarder
+  items:
+    - name: Konfigurer indstillinger for beskyttelse af personlige oplysninger
+      href: configure-privacy-settings.md
+    - name: GDPR-anmodninger
+      href: gdpr-requests.md
 - name: Whiteboard til offentlige myndigheder
   items:
     - name: Administrer deling – GCC høj
