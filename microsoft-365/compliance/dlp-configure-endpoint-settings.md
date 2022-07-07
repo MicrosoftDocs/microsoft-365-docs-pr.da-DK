@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer centrale indstillinger for forebyggelse af datatab for slutpunkter (DLP).
-ms.openlocfilehash: 99598880515dd14bc453ebd61a633be7eb66a9fc
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 6265cb39c496a75ebc1bebed494a27798552417b
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66629943"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686223"
 ---
 # <a name="configure-endpoint-data-loss-prevention-settings"></a>Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt
 
@@ -63,7 +63,7 @@ Før du går i gang, skal du konfigurere dine DLP-indstillinger.
 
 Avanceret klassificeringsscanning og -beskyttelse gør det muligt for den mere avancerede cloudbaserede Microsoft Purview-dataklassificeringstjeneste at scanne elementer, klassificere dem og returnere resultaterne til den lokale computer. Det betyder, at du kan drage fordel af klassificeringsteknikker som [nøjagtig datamatchklassificering](create-custom-sensitive-information-types-with-exact-data-match-based-classification.md) og [navngivne enheder](named-entities-learn.md) i dine DLP-politikker.
 
-Når avanceret klassificering er slået til, sendes indhold fra den lokale enhed til cloudtjenesterne med henblik på scanning og klassificering. Hvis båndbreddeudnyttelsen er et problem, kan du angive en grænse for, hvor meget der kan bruges i en rullende 24-timers periode. Grænsen er konfigureret i Endpoint DLP-indstillinger og anvendes pr. enhed. Hvis du angiver en forbrugsgrænse for båndbredde, og den overskrides, holder DLP op med at sende brugerindholdet til cloudmiljøet. På dette tidspunkt fortsætter dataklassificeringen lokalt på enheden, men klassificering ved hjælp af præcise datamatch, navngivne enheder og klassificeringer, der kan oplæres, er ikke tilgængelige. Når den akkumulerede båndbreddeforbrug falder til under grænsen for rullende 24 timer, genoptages kommunikationen med cloudtjenesterne.
+Når avanceret klassificering er slået til, sendes indhold fra den lokale enhed til cloudtjenesterne med henblik på scanning og klassificering. Hvis båndbreddeudnyttelsen er et problem, kan du angive en grænse for, hvor meget der kan bruges i en rullende 24-timers periode. Grænsen er konfigureret i Endpoint DLP-indstillinger og anvendes pr. enhed. Hvis du angiver en forbrugsgrænse for båndbredde, og den overskrides, holder DLP op med at sende brugerindholdet til cloudmiljøet. På dette tidspunkt fortsætter dataklassificeringen lokalt på enheden, men klassificering ved hjælp af præcise datamatch, navngivne enheder og klassificeringer, der kan oplæres, er ikke tilgængelige. Når den akkumulerede båndbreddeforbrug falder til under grænsen på rullende 24 timer, genoptages kommunikationen med cloudtjenesterne.
 
 Hvis båndbreddeudnyttelsen ikke er et problem, skal du vælge **Ingen grænse** for at tillade ubegrænset båndbreddeudnyttelse.
 
@@ -251,9 +251,12 @@ Brug FQDN-formatet for tjenestedomænet uden at afslutte `.`
 
 Eksempel:
 
- `www.contoso.com` 
 
-Jokertegn understøttes ikke.
+| Input | Funktionsmåde for matchning af URL-adresser |
+|---|---|
+| **CONTOSO.COM** |**Matcher det angivne domænenavn og et hvilket som helst underordnet websted**: <p>*://contoso.com<p>*:/ /contoso.com/ <p>*://contoso.com/anysubsite1 <p>*:/ /contoso.com/anysubsite1/anysubsite2 (osv.) <p>**Svarer ikke til underdomæner eller uspecificerede domæner**: <p>*://anysubdomain.contoso.com <p>*:/ /anysubdomain.contoso.com.AU |
+| ***.CONTOSO.COM** |**Matcher det angivne domænenavn, et hvilket som helst underdomæne og et hvilket som helst websted**: <p>*://contoso.com <p>*:/ /contoso.com/anysubsite <p>*://contoso.com/anysubsite1/anysubsite2 <p>*:/ /anysubdomain.contoso.com/ <p>*://anysubdomain.contoso.com/anysubsite/ <p>*:/ /anysubdomain1.anysubdomain2.contoso.com/anysubsite/ <p>*://anysubdomain1.anysubdomain2.contoso.com/anysubsite1/anysubsite2 (osv.) <p>**Svarer ikke til uspecificerede domæner** <p>*://anysubdomain.contoso.com.AU/ |
+| **`www.contoso.com`** |**Matcher det angivne domænenavn**: <p>`www.contoso.com` <p>**Svarer ikke til uspecificerede domæner eller underdomæner** <p>*://anysubdomain.contoso.com/, i dette tilfælde, skal du sætte selve domænenavnet FQDN `www.contoso.com`|
 
 ### <a name="additional-settings-for-endpoint-dlp"></a>Yderligere indstillinger for slutpunkt DLP
 

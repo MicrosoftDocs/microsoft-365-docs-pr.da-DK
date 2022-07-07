@@ -24,25 +24,25 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: d5a26aaa78b1a67acf3dd39ec3fbfa0b3fcb26b9
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 17b80d00cfb8c5855dda7d21371097dd413fb707
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66638886"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66685651"
 ---
 # <a name="case-study---contoso-quickly-configures-an-inappropriate-text-policy-for-microsoft-teams-exchange-and-yammer-communications"></a>Casestudie – Contoso konfigurerer hurtigt en upassende tekstpolitik for Microsoft Teams-, Exchange- og Yammer-kommunikation
 
-Microsoft Purview Kommunikationsoverholdelse hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på meddelelser med upassende tekst i din organisation. upassende tekst kan omfatte bandeord, trusler, chikane og upassende billeder. Foruddefinerede og brugerdefinerede politikker giver dig mulighed for at scanne intern og ekstern kommunikation for politikkampe, så de kan undersøges af udpegede korrekturlæsere. Korrekturlæsere kan undersøge scannede mails, Microsoft Teams, Yammer eller tredjepartskommunikation i din organisation og udføre de nødvendige afhjælpningshandlinger for at sikre, at de overholder organisationens meddelelsesstandarder.
+[Microsoft Purview Kommunikationsoverholdelse](/microsoft-365/compliance/communication-compliance) hjælper med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på meddelelser med upassende tekst i din organisation. upassende tekst kan omfatte bandeord, trusler, chikane og upassende billeder. Foruddefinerede og brugerdefinerede [politikker](/microsoft-365/compliance/communication-compliance-policies) giver dig mulighed for at scanne intern og ekstern kommunikation for politikkampe, så de kan undersøges af udpegede korrekturlæsere. Korrekturlæsere kan [undersøge beskeder](/microsoft-365/compliance/communication-compliance-investigate-remediate#investigate-alerts) for mail, Microsoft Teams, Yammer eller tredjepartskommunikation i din organisation og udføre de nødvendige [afhjælpningshandlinger](/microsoft-365/compliance/communication-compliance-investigate-remediate#remediate-alerts) for at sikre, at de overholder organisationens meddelelsesstandarder.
 
 Contoso Corporation er en fiktiv organisation, der hurtigt skal konfigurere en politik for at registrere upassende tekst. De har primært brugt Microsoft 365 til mail, Microsoft Teams og Yammer-support til deres brugere, men har nye krav til at håndhæve virksomhedens politik vedrørende chikane på arbejdspladsen. Contoso-it-administratorer og overholdelsesspecialister har en grundlæggende forståelse af de grundlæggende funktioner i at arbejde med Microsoft 365 og er på udkig efter komplette vejledninger til, hvordan du hurtigt kommer i gang med overholdelse af angivne standarder for kommunikation.
 
 I denne casestudie beskrives de grundlæggende funktioner til hurtigt at konfigurere en politik for overholdelse af angivne standarder for kommunikation for at registrere upassende tekst. Denne vejledning omfatter:
 
-- Trin 1 – Planlægning af overholdelse af kommunikation
-- Trin 2 – Adgang til overholdelse af kommunikation
-- Trin 3 – Konfiguration af forudsætninger og oprettelse af en politik for kommunikation med overholdelse af angivne standarder
-- Trin 4 – Undersøgelse og afhjælpning af beskeder
+- [Trin 1: Planlægning af overholdelse af kommunikation](#step-1-planning-for-communication-compliance)
+- [Trin 2: Adgang til overholdelse af kommunikation](#step-2-accessing-communication-compliance)
+- [Trin 3: Konfiguration af forudsætninger og oprettelse af en politik for kommunikation med overholdelse af angivne standarder](#step-3-configuring-prerequisites-and-creating-a-communication-compliance-policy)
+- [Trin 4: Undersøg og afhjælp beskeder](#step-4-investigate-and-remediate-alerts)
 
 ## <a name="step-1-planning-for-communication-compliance"></a>Trin 1: Planlægning af overholdelse af kommunikation
 
@@ -71,9 +71,9 @@ Brugere, der er inkluderet i politikker for kommunikation med overholdelse af an
 
 Contoso-it-administratorer gør følgende for at bekræfte licensunderstøttelse for Contoso:
 
-1. It-administratorer logger på Microsoft 365 Administration <https://admin.microsoft.com> og går til Microsoft 365 Administration > **faktureringslicenser** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
+1. It-administratorer logger på [Microsoft 365 Administration](https://admin.microsoft.com) og går til Microsoft 365 Administration > **faktureringslicenser** > .<a href="https://go.microsoft.com/fwlink/p/?linkid=842264" target="_blank"></a>
 
-2. Her bekræfter de, at de har en af de [licensmuligheder](communication-compliance-configure.md#subscriptions-and-licensing) , der omfatter understøttelse af kommunikation med overholdelse af angivne standarder.
+2. Her bekræfter de, at de har en af de [licensmuligheder](/microsoft-365/compliance/communication-compliance-configure#subscriptions-and-licensing) , der omfatter understøttelse af kommunikation med overholdelse af angivne standarder.
 
 ![Licenser til kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-case-licenses.png)
 
@@ -110,7 +110,7 @@ Når du har konfigureret tilladelserne til overholdelse af kommunikationsoverhol
 
 ### <a name="starting-directly-from-the-communication-compliance-solution"></a>Starter direkte fra løsningen til overholdelse af kommunikationsoverholdelse
 
-Den hurtigste måde at få adgang til løsningen på er ved at logge direkte på løsningen **til overholdelse af kommunikation** (<https://compliance.microsoft.com/supervisoryreview>). Ved hjælp af dette link bliver Contoso-it-administratorer og overholdelsesspecialister dirigeret til startsiden for kommunikation med overholdelse af angivne standarder, hvor du hurtigt kan gennemse status for beskeder og oprette nye politikker ud fra de foruddefinerede skabeloner.
+Den hurtigste måde at få adgang til løsningen på er ved at logge direkte på [løsningen til kommunikation med overholdelse af angivne standarder](https://compliance.microsoft.com/supervisoryreview). Ved hjælp af dette link bliver Contoso-it-administratorer og overholdelsesspecialister dirigeret til startsiden for kommunikation med overholdelse af angivne standarder, hvor du hurtigt kan gennemse status for beskeder og oprette nye politikker ud fra de foruddefinerede skabeloner.
 
 ![Startside for overholdelse af angivne standarder for kommunikation.](../media/communication-compliance-home.png)
 
@@ -128,7 +128,7 @@ Contoso-it-administratorer og overholdelsesspecialister kan også vælge at få 
 
 ### <a name="starting-from-the-microsoft-365-admin-center"></a>Fra og med Microsoft 365 Administration
 
-Contoso-it-administratorer og overholdelsesspecialister logger på Microsoft 365 Administration ( for at få adgang til overholdelse af angivne standarder, når de starter fra Microsoft 365 Administration[,https://admin.microsoft.com)](https://admin.microsoft.com) og gå til [ Microsoft Purview-compliance-portal](https://compliance.microsoft.com)
+Contoso-it-administratorer og overholdelsesspecialister logger på [Microsoft 365 Administration](https://admin.microsoft.com) for at få adgang til overholdelse af angivne standarder, når de starter fra Microsoft 365 Administration, og gå til [Microsoft Purview-compliance-portal ](https://compliance.microsoft.com)
 
 ![Link til kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-case-compliance-link.png)
 
@@ -152,7 +152,7 @@ For at komme i gang med en politik for overholdelse af angivne standarder for ko
 
 Kommunikationsoverholdelse kræver overvågningslogge for at vise beskeder og spore afhjælpningshandlinger, der udføres af korrekturlæsere. Overvågningsloggene er en oversigt over alle aktiviteter, der er knyttet til en defineret organisationspolitik, eller når der sker en ændring af en politik for kommunikation med overholdelse af angivne standarder.
 
-Contoso-it-administratorer gennemser og [fuldfører den trinvise vejledning](turn-audit-log-search-on-or-off.md) for at aktivere overvågning. Når de har slået overvågning til, vises der en meddelelse om, at overvågningsloggen er ved at blive forberedt, og at de kan udføre en søgning om et par timer, efter at forberedelsen er fuldført. Contoso-it-administratorer behøver kun at udføre denne handling én gang.
+Contoso-it-administratorer gennemser og [fuldfører den trinvise vejledning](/microsoft-365/compliance/turn-audit-log-search-on-or-off) for at aktivere overvågning. Når de har slået overvågning til, vises der en meddelelse om, at overvågningsloggen er ved at blive forberedt, og at de kan udføre en søgning om et par timer, efter at forberedelsen er fuldført. Contoso-it-administratorer behøver kun at udføre denne handling én gang.
 
 ### <a name="configuring-yammer-tenant-for-native-mode"></a>Konfiguration af Yammer-lejer til oprindelig tilstand
 
@@ -166,12 +166,12 @@ Specialister i Contoso-overholdelse vil gerne føje alle brugere til kommunikati
 
 De skal oprette en ny gruppe for at inkludere alle Contoso-brugere, så de gør følgende:
 
-1. Contoso-it-administratorer logger på Microsoft 365 Administration [(https://admin.microsoft.com)](https://admin.microsoft.com) og går til Microsoft 365 Administration > **grupper** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**.**</a>
+1. Contoso It-administratorer logger på [Microsoft 365 Administration](https://admin.microsoft.com) og går til Microsoft 365 Administration > **grupper** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2052855" target="_blank">**.**</a>
 2. De vælger **Tilføj en gruppe** og fuldfører guiden for at oprette en ny *Microsoft 365-gruppe* eller *distributionsgruppe*.
 
     ![Grupper.](../media/communication-compliance-case-all-employees.png)
 
-3. Når den nye gruppe er oprettet, skal de føje alle Contoso-brugere til den nye gruppe. De åbner **Exchange Administration** [(https://outlook.office365.com/ecp)](https://outlook.office365.com/ecp) og navigerer til **Exchange Administration-modtagere** >  > <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">**Grupper**</a>. Contoso-it-administratorer vælger området Medlemskab og den nye gruppe *Alle medarbejdere* , de har oprettet, og vælger kontrolelementet **Rediger** for at føje alle Contoso-brugere til den nye gruppe i guiden.
+3. Når den nye gruppe er oprettet, skal de føje alle Contoso-brugere til den nye gruppe. De åbner [Exchange Administration](https://outlook.office365.com/ecp) og navigerer til **Exchange Administration-modtagere** >  > <a href="https://go.microsoft.com/fwlink/?linkid=2183233" target="_blank">**Grupper**</a>. Contoso-it-administratorer vælger området Medlemskab og den nye gruppe *Alle medarbejdere* , de har oprettet, og vælger kontrolelementet **Rediger** for at føje alle Contoso-brugere til den nye gruppe i guiden.
 
     ![Exchange Administration.](../media/communication-compliance-case-eac.png)
 
@@ -192,4 +192,4 @@ Når alle forudsætninger er fuldført, er it-administratorer og overholdelsessp
 
 Nu, hvor politikken for overholdelse af angivne standarder for kommunikation til registrering af upassende tekst er konfigureret, vil det næste trin for Contosos overholdelsesspecialister være at undersøge og afhjælpe eventuelle beskeder, der genereres af politikken. Det tager op til en time, før politikken fuldt ud behandler kommunikation i alle kommunikationskanalerne, og at beskeder vises på **dashboardet Besked**.
 
-Når der er genereret beskeder, følger specialister i Overholdelse af Contoso [arbejdsprocesvejledningen](communication-compliance-investigate-remediate.md) for at undersøge og afhjælpe upassende tekstproblemer.
+Når der er genereret beskeder, følger specialister i Overholdelse af Contoso [arbejdsprocesvejledningen](/microsoft-365/compliance/communication-compliance-investigate-remediate) for at undersøge og afhjælpe upassende tekstproblemer.

@@ -20,20 +20,20 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvordan faktureringsprofiler understøtter fakturaer.
 ms.date: 04/02/2021
-ms.openlocfilehash: 92c8bd302d65bc9f7c9376ac148fd49a0ac18e04
-ms.sourcegitcommit: 3b194dd6f9ce531ae1b33d617ab45990d48bd3d0
+ms.openlocfilehash: 18e1eb23d0fcbdfd6eb374032f780a4f89a48cee
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66102542"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66685871"
 ---
 # <a name="understand-billing-profiles"></a>Forstå faktureringsprofiler
 
-En faktureringsprofil indeholder en betalingsmetode, faktureringsoplysninger og andre fakturaindstillinger, f.eks. indkøbsordrenummer og mailfakturaindstillinger. Du kan bruge en faktureringsprofil til at betale for de produkter, du køber fra Microsoft. Der oprettes automatisk en faktureringsprofil, når en bruger foretager et køb via selvbetjening. Hver faktureringsprofil faktureres separat.
+En faktureringsprofil indeholder en betalingsmetode, faktureringsoplysninger og andre fakturaindstillinger, f.eks. indkøbsordrenummer og mailfakturaindstillinger. Du kan bruge en faktureringsprofil til at betale for de produkter, du køber fra Microsoft. Faktureringsprofiler oprettes automatisk, og hver faktureres separat. 
 
 > [!NOTE]
 >
-> Faktureringsprofiler er ikke tilgængelige for kunder, der køber produkter og tjenester fra Microsoft.com eller på siden **Køb tjenester** på Microsoft 365 Administration.
+> Ikke alle konti har en faktureringsprofil. Hvis du ikke er sikker på, om du har en, kan du [få vist en liste over dine faktureringsprofiler] (administrer-faktureringsprofiler.md#view-my-fakturering-profiles).
 
 ## <a name="what-are-billing-profile-roles"></a>Hvad er faktureringsprofilroller?
 

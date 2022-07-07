@@ -16,17 +16,18 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: fc5944be9fd209898b53203533f568ae7ccec70e
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 37cea2e88afacb14285e10960fba81989ffb387f
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554527"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686413"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalysen på macOS og Linux
 
 
 **Gælder for:**
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 
 ## <a name="running-the-analyzer-through-gui-scenario"></a>Kørsel af analysefunktionen via ET GUI-scenarie

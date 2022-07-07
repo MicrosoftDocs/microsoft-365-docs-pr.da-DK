@@ -19,16 +19,16 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 1efb3a1f4ea0f699e5dbb92c0ef2f4c6c56f8398
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 71364ebf68d6167666ec993fd15e0288f7ab30b2
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66630559"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686179"
 ---
 # <a name="plan-for-communication-compliance"></a>Plan for kommunikationsoverholdelse
 
-Før du går i gang med [overholdelse af angivne standarder for kommunikation](communication-compliance.md) i din organisation, er der vigtige planlægningsaktiviteter og overvejelser, der bør gennemgås af dine it- og overholdelsesadministrationsteams. En grundig forståelse og planlægning af udrulningen på følgende områder hjælper med at sikre, at implementering og brug af funktioner til kommunikation med overholdelse af angivne standarder går problemfrit og er i overensstemmelse med bedste praksis for løsningen.
+Før du går i gang med [overholdelse af angivne standarder for kommunikation](/microsoft-365/compliance/communication-compliance) i din organisation, er der vigtige planlægningsaktiviteter og overvejelser, der bør gennemgås af dine it- og overholdelsesadministrationsteams. En grundig forståelse og planlægning af udrulningen på følgende områder hjælper med at sikre, at implementering og brug af funktioner til kommunikation med overholdelse af angivne standarder går problemfrit og er i overensstemmelse med bedste praksis for løsningen.
 
 Du kan finde flere oplysninger og en oversigt over planlægningsprocessen for at håndtere overholdelse af angivne standarder og risikable aktiviteter i din organisation under [Start af et program til styring af insiderrisiko](https://download.microsoft.com/download/b/2/0/b208282a-2482-4986-ba07-15a9b9286df0/pwc-starting-an-insider-risk-management-program-with-pwc-and-microsoft.pdf).
 
@@ -49,7 +49,7 @@ Du kan finde flere oplysninger i [Microsoft 365 Roadmap](https://www.microsoft.c
 
 ## <a name="work-with-stakeholders-in-your-organization"></a>Arbejd med interessenter i din organisation
 
-Identificer de relevante interessenter i din organisation for at samarbejde om at udføre handlinger i forbindelse med beskeder om kommunikation med overholdelse af angivne standarder. Nogle af de anbefalede interessenter, der bør overvejes, herunder i den indledende planlægning og [arbejdsprocessen for overholdelse af angivne standarder for kommunikation](communication-compliance.md#workflow) fra ende til anden, er personer fra følgende områder i organisationen:
+Identificer de relevante interessenter i din organisation for at samarbejde om at udføre handlinger i forbindelse med beskeder om kommunikation med overholdelse af angivne standarder. Nogle af de anbefalede interessenter, der bør overvejes, herunder i den indledende planlægning og [arbejdsprocessen for overholdelse af angivne standarder for kommunikation](/microsoft-365/compliance/communication-compliance#workflow) fra ende til anden, er personer fra følgende områder i organisationen:
 
 - Informationsteknologi
 - Overholdelse af regler og standarder
@@ -100,7 +100,7 @@ Vælg mellem disse indstillinger for løsningsrollegruppen, når du konfigurerer
 
 ### <a name="supervised-users"></a>Overvågede brugere
 
-Før du begynder at bruge overholdelse af kommunikation, skal du afgøre, hvem der har brug for, at deres kommunikation gennemses. I politikken identificerer brugermailadresser enkeltpersoner eller grupper af personer, der skal overvåges. Nogle eksempler på disse grupper er Microsoft 365-grupper, Exchange-baserede distributionslister, Yammer-communities og Microsoft Teams-kanaler. Du kan også udelukke bestemte brugere eller grupper fra scanning med en bestemt udeladelsesgruppe eller en liste over grupper. Du kan få flere oplysninger om de gruppertyper, der understøttes i politikker for kommunikation med overholdelse af [angivne standarder, under Kom i gang med overholdelse af angivne standarder for kommunikation](communication-compliance-configure.md#step-3-optional-set-up-groups-for-communication-compliance).
+Før du begynder at bruge overholdelse af kommunikation, skal du afgøre, hvem der har brug for, at deres kommunikation gennemses. I politikken identificerer brugermailadresser enkeltpersoner eller grupper af personer, der skal overvåges. Nogle eksempler på disse grupper er Microsoft 365-grupper, Exchange-baserede distributionslister, Yammer-communities og Microsoft Teams-kanaler. Du kan også udelukke bestemte brugere eller grupper fra scanning med en bestemt udeladelsesgruppe eller en liste over grupper. Du kan få flere oplysninger om de gruppertyper, der understøttes i politikker for kommunikation med overholdelse af [angivne standarder, under Kom i gang med overholdelse af angivne standarder for kommunikation](/microsoft-365/compliance/communication-compliance-configure#step-3-optional-set-up-groups-for-communication-compliance).
 
 > [!IMPORTANT]
 > Brugere, der er omfattet af politikker for overholdelse af angivne standarder for kommunikation, skal enten have en Microsoft 365 E5 Overholdelse licens, en Office 365 Enterprise E3-licens med tilføjelsesprogrammet Avanceret overholdelse eller være inkluderet i et Office 365 Enterprise E5-abonnement. Hvis du ikke har en eksisterende Enterprise E5-plan og vil prøve overholdelse af angivne standarder for kommunikation, kan du [tilmelde dig en prøveversion af Office 365 Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279).
@@ -133,15 +133,15 @@ For brugere med overholdelse af angivne standarder for kommunikation kan du væl
 
 ## <a name="plan-for-policies"></a>Planlæg politikker
 
-Det er hurtigt og nemt at oprette politikker for overholdelse af angivne standarder for kommunikation med de [foruddefinerede skabeloner](communication-compliance-policies.md#policy-templates) til upassende indhold, følsomme oplysninger og lovmæssig overholdelse af angivne standarder. Brugerdefinerede politikker for overholdelse af kommunikation giver fleksibiliteten til at registrere og undersøge problemer, der er specifikke for din organisation og dine krav.
+Det er hurtigt og nemt at oprette politikker for overholdelse af angivne standarder for kommunikation med de [foruddefinerede skabeloner](/microsoft-365/compliance/communication-compliance-policies#policy-templates) til upassende indhold, følsomme oplysninger og lovmæssig overholdelse af angivne standarder. Brugerdefinerede politikker for overholdelse af kommunikation giver fleksibiliteten til at registrere og undersøge problemer, der er specifikke for din organisation og dine krav.
 
 Når du planlægger politikker for kommunikation med overholdelse af angivne standarder, skal du overveje følgende områder:
 
 - Overvej at tilføje alle brugere i din organisation som in-scope for dine politikker for kommunikation med overholdelse af angivne standarder. Det er nyttigt i nogle tilfælde at identificere bestemte brugere som omfattet af individuelle politikker, men de fleste organisationer bør inkludere alle brugere i politikker for overholdelse af kommunikation, der er optimeret til chikane eller registrering af diskrimination.
 - Konfigurer den procentdel af kommunikationen, der skal gennemses, til 100 % for at sikre, at politikker indhenter alle problemer, der giver anledning til bekymring i forbindelse med kommunikation for din organisation.
-- Du kan scanne kommunikation fra [tredjepartskilder](communication-compliance-channels.md#third-party-sources) for data, der er importeret til postkasser i din Microsoft 365-organisation. Hvis du vil inkludere gennemgang af kommunikation på disse platforme, skal du konfigurere en connector til disse tjenester, før meddelelser, der opfylder politikbetingelser, overvåges af kommunikationspolitikken.
-- Politikker kan understøtte overvågning af andre sprog end engelsk i brugerdefinerede politikker for overholdelse af kommunikation. Opret en [brugerordbog med nøgleord](communication-compliance-policies.md#custom-keyword-dictionaries) med stødende ord på det sprog, du vælger, eller byg din egen model til maskinel indlæring ved hjælp af [klassificeringsmaskiner, der kan oplæres](classifier-get-started-with.md) i Microsoft 365.
-- Alle organisationer har forskellige kommunikationsstandarder og politikbehov. Registrer bestemte nøgleord ved hjælp af [betingelser for politikken](communication-compliance-policies.md#conditional-settings) for kommunikation med overholdelse af angivne standarder, eller registrer bestemte typer oplysninger med [brugerdefinerede følsomme oplysningstyper](create-a-custom-sensitive-information-type.md).
+- Du kan scanne kommunikation fra [tredjepartskilder](/microsoft-365/compliance/communication-compliance-channels#third-party-sources) for data, der er importeret til postkasser i din Microsoft 365-organisation. Hvis du vil inkludere gennemgang af kommunikation på disse platforme, skal du konfigurere en connector til disse tjenester, før meddelelser, der opfylder politikbetingelser, overvåges af kommunikationspolitikken.
+- Politikker kan understøtte overvågning af andre sprog end engelsk i brugerdefinerede politikker for overholdelse af kommunikation. Opret en [brugerordbog med nøgleord](/microsoft-365/compliance/communication-compliance-policies#custom-keyword-dictionaries) med stødende ord på det sprog, du vælger, eller byg din egen model til maskinel indlæring ved hjælp af [klassificeringsmaskiner, der kan oplæres](/microsoft-365/compliance/classifier-get-started-with) i Microsoft 365.
+- Alle organisationer har forskellige kommunikationsstandarder og politikbehov. Registrer bestemte nøgleord ved hjælp af [betingelser for politikken](/microsoft-365/compliance/communication-compliance-policies#conditional-settings) for kommunikation med overholdelse af angivne standarder, eller registrer bestemte typer oplysninger med [brugerdefinerede følsomme oplysningstyper](/microsoft-365/compliance/create-a-custom-sensitive-information-type).
 
 ## <a name="creating-a-communication-compliance-policy-walkthrough"></a>Gennemgang af oprettelse af en politik for overholdelse af angivne standarder for kommunikation
 
@@ -154,4 +154,4 @@ Vil du se en detaljeret gennemgang af, hvordan du konfigurerer en ny politik for
 
 ## <a name="ready-to-get-started"></a>Er du klar til at komme i gang?
 
-Hvis du vil konfigurere overholdelse af kommunikation for din Microsoft 365-organisation, skal du se [Konfigurer overholdelse af kommunikation](communication-compliance-configure.md) eller se [casestudiet for Contoso](communication-compliance-case-study.md), og hvordan de hurtigt konfigurerede en politik for kommunikation med overholdelse af angivne standarder for at registrere upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation.
+Hvis du vil konfigurere overholdelse af kommunikation for din Microsoft 365-organisation, skal du se [Konfigurer overholdelse af kommunikation](/microsoft-365/compliance/communication-compliance-configure) eller se [casestudiet for Contoso](/microsoft-365/compliance/communication-compliance-case-study), og hvordan de hurtigt konfigurerede en politik for kommunikation med overholdelse af angivne standarder for at registrere upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation.

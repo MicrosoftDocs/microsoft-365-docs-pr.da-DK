@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 0769dd3cfd64f611162803952a1e39b9241ac2ad
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 21897bcfc21cac7e6eb2ceeff3e20280595c539b
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66638658"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686457"
 ---
 # <a name="detect-channel-signals-with-communication-compliance"></a>Registrer kanalsignaler med kommunikationsoverholdelse
 
@@ -59,7 +59,7 @@ Brug følgende konfigurationer til gruppeadministration til at overvåge individ
 
 - **Til Teams-chatkommunikation:** Tildel individuelle brugere, eller tildel en [distributionsgruppe](https://support.office.com/article/Distribution-groups-E8BA58A8-FAB2-4AAF-8AA1-2A304052D2DE) til politikken for kommunikation med overholdelse af angivne standarder. Denne indstilling er for en til en- eller en til mange-bruger-/chatrelationer.
 - **For Teams-kanalkommunikation:** Tildel hver Microsoft Teams-kanal eller Microsoft 365-gruppe, du vil scanne, som indeholder en bestemt bruger, til politikken for kommunikation med overholdelse af angivne standarder. Hvis du føjer den samme bruger til andre Microsoft Teams-kanaler eller Microsoft 365-grupper, skal du sørge for at føje disse nye kanaler og grupper til politikken for kommunikation med overholdelse af angivne standarder. Hvis et medlem af kanalen er en overvåget bruger i en politik, og den *indgående* retning er konfigureret i en politik, kan alle meddelelser, der sendes i kanalen, gennemses, og potentielle politikforekomster (selv for brugere i kanalen, der ikke overvåges eksplicit). Bruger A er f.eks. ejer eller medlem af en kanal. Bruger B og Bruger C er medlemmer af den samme kanal og bruger sprog, der matches med den upassende indholdspolitik, der kun fører tilsyn med Bruger A. Bruger B og Bruger C opretter politikkampe for samtaler i kanalen, selvom de ikke overvåges direkte i den upassende indholdspolitik. Teams-samtaler mellem Bruger B og Bruger C, der er uden for kanalen, som indeholder Bruger A, vil ikke være underlagt den upassende indholdspolitik, der omfatter Bruger A. Hvis du vil udelukke kanalmedlemmer fra overvågning, når andre medlemmer af kanalen overvåges eksplicit, skal du slå indstillingen *Indgående* kommunikationsretning fra i den relevante politik for overholdelse af kommunikation.
-- **For Teams-chatkommunikation med hybride mailmiljøer**: Overholdelse af kommunikation kan registrere chatbeskeder for brugere for organisationer med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, der har aktiveret Microsoft Teams. Du skal oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Når du opretter en politik for overholdelse af angivne standarder for kommunikation, skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
+- **For Teams-chatkommunikation med hybride mailmiljøer**: Overholdelse af kommunikation kan registrere chatbeskeder for brugere for organisationer med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, der har aktiveret Microsoft Teams. Du skal oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Når du opretter en politik for overholdelse af angivne standarder for kommunikation, skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users).
 
 ## <a name="exchange-email"></a>Exchange-mail
 
@@ -73,6 +73,6 @@ Yammer skal være i [oprindelig tilstand](/yammer/configure-your-yammer-network/
 
 ## <a name="third-party-sources"></a>Kilder fra tredjepart
 
-Du kan scanne kommunikation for data, der er importeret til postkasser i din Microsoft 365-organisation, fra tredjepartskilder som [Instant Bloomberg](archive-instant-bloomberg-data.md), [Slack](archive-slack-data.md), [Zoom](archive-zoommeetings-data.md), SMS og mange andre. Du kan se en komplet liste over de connectors, der understøttes i forbindelse med overholdelse af kommunikation, under [Arkivér tredjepartsdata](archiving-third-party-data.md).
+Du kan scanne kommunikation for data, der er importeret til postkasser i din Microsoft 365-organisation, fra tredjepartskilder som [Instant Bloomberg](/microsoft-365/compliance/archive-instant-bloomberg-data), [Slack](/microsoft-365/compliance/archive-slack-data), [Zoom](/microsoft-365/compliance/archive-zoommeetings-data), SMS og mange andre. Du kan se en komplet liste over de connectors, der understøttes i forbindelse med overholdelse af kommunikation, under [Arkivér tredjepartsdata](/microsoft-365/compliance/archiving-third-party-data).
 
 Du skal konfigurere en tredjepartsconnector til din Microsoft 365-organisation, før du kan tildele connectoren til en politik for kommunikation med overholdelse af angivne standarder. Afsnittet **Kilder fra tredjepart** i guiden til kommunikation med overholdelse af regler og standarder viser kun aktuelt konfigurerede tredjepartsconnectors.

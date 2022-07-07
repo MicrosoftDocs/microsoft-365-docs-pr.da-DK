@@ -1,5 +1,5 @@
 ---
-title: Kommunikationsoverholdelse med SIEM-løsninger
+title: Brug kommunikation med SIEM-løsninger
 description: Få mere at vide om integration af overholdelse af kommunikation med SIEM-løsninger.
 keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, kommunikation
 f1.keywords:
@@ -19,16 +19,16 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 4d9ee561e033e98919063d1f344aa3207a6bb6cd
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 247999954e6ff69fdfbd2ff681bb79c0bf22c8bc
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66626529"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686113"
 ---
-# <a name="communication-compliance-with-siem-solutions"></a>Kommunikationsoverholdelse med SIEM-løsninger
+# <a name="use-communication-compliance-with-siem-solutions"></a>Brug kommunikation med SIEM-løsninger
 
-[Overholdelse af angivne standarder for kommunikation](communication-compliance.md) er en insiderrisikoløsning i Microsoft Purview, der hjælper dig med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. SIEM-løsninger (Security Information and Event Management), f.eks [. Microsoft Sentinel](https://azure.microsoft.com/services/azure-sentinel) eller [Splunk](https://www.splunk.com/) , bruges ofte til at aggregere og spore trusler i en organisation.
+[Overholdelse af angivne standarder for kommunikation](/microsoft-365/compliance/communication-compliance) er en insiderrisikoløsning i Microsoft Purview, der hjælper dig med at minimere kommunikationsrisici ved at hjælpe dig med at registrere, registrere og reagere på upassende meddelelser i din organisation. SIEM-løsninger (Security Information and Event Management), f.eks [. Microsoft Sentinel](https://azure.microsoft.com/services/azure-sentinel) eller [Splunk](https://www.splunk.com/) , bruges ofte til at aggregere og spore trusler i en organisation.
 
 Et almindeligt behov for organisationer er at integrere beskeder om overholdelse af angivne standarder for kommunikation og disse SIEM-løsninger. Med denne integration kan organisationer få vist beskeder om overholdelse af angivne standarder i deres SIEM-løsning og derefter afhjælpe beskeder i arbejdsprocessen for overholdelse af kommunikation og brugeroplevelsen. En medarbejder sender f.eks. en stødende meddelelse til en anden medarbejder, og denne meddelelse registreres af en overvågning af politikken for overholdelse af kommunikation for upassende indhold. Disse hændelser spores i Microsoft 365 Audit (også kendt som "unified audit log") af løsningen til kommunikationsoverholdelse og importeres til SIEM-løsningen. Der udløses derefter en besked i SIEM-løsningen for organisationen fra hændelser, der overvåges i Microsoft 365 Audit, som er knyttet til beskeder om kommunikation med overholdelse af angivne standarder. Efterforskere får besked om advarslen i SIEM-løsningerne, og de undersøger og afhjælper derefter advarslen i løsningen til kommunikationsoverholdelse.
 
@@ -133,6 +133,6 @@ Search-UnifiedAuditLog -StartDate $startDate -EndDate $endDate -RecordType Compl
 ```
 ## <a name="resources"></a>Ressourcer
 
-- [Overvågning af kommunikation med overholdelse af angivne standarder](communication-compliance-reports-audits.md#audit)
-- [Microsoft Purview-gennemgang (Premium)](advanced-audit.md)
+- [Overvågning af kommunikation med overholdelse af angivne standarder](/microsoft-365/compliance/communication-compliance-reports-audits#audit)
+- [Microsoft Purview-gennemgang (Premium)](/microsoft-365/compliance/advanced-audit)
 - [Reference til Office 365 Management Activity API](/office/office-365-management-api/office-365-management-activity-api-reference)

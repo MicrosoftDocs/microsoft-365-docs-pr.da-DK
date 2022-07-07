@@ -14,15 +14,15 @@ search.appverid:
 ms.assetid: 4250c4bc-6102-420b-9e0a-a95064837676
 ms.collection:
 - M365-security-compliance
-description: Få mere at vide om, hvordan du aktiverer tilføjelsesprogrammer til rapportmeddelelse eller rapport phishing for Outlook og Outlook på internettet, for individuelle brugere eller for hele organisationen.
+description: Få mere at vide om, hvordan du aktiverer tilføjelsesprogrammer til rapportmeddelelse eller rapport phishing til Outlook og Outlook på internettet, til individuelle brugere eller til hele organisationen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b0882a37161989248b8c970a5dbe01efc0bcff65
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 636effd1f3d9f0fd824ead4ed59e48fdee26ef20
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043757"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66685695"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing
 
@@ -34,9 +34,9 @@ ms.locfileid: "66043757"
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!NOTE]
-> Hvis du er administrator i en Microsoft 365 organisation med Exchange Online postkasser, anbefaler vi, at du bruger siden **Indsendelser** på Microsoft 365 Defender-portalen. Du kan få flere oplysninger under [Brug indsendelse af administratorer til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
+> Hvis du er administrator i en Microsoft 365-organisation med Exchange Online postkasser, anbefaler vi, at du bruger siden **Indsendelser** på portalen Microsoft 365 Defender. Du kan få flere oplysninger under [Brug Administration Indsendelse til at sende mistanke om spam, phish, URL-adresser og filer til Microsoft](admin-submission.md).
 
-Tilføjelsesprogrammerne Rapportmeddelelse og Rapport phishing til Outlook og Outlook på internettet (tidligere kendt som Outlook Web App) gør det nemt at rapportere falske positiver (god mail markeret som dårlige) eller falske negativer (dårlig mail er tilladt) til Analyse til Microsoft og microsofts associerede virksomheder.
+Tilføjelsesindstillingerne Rapportmeddelelse og Rapport phishing til Outlook og Outlook på internettet (tidligere kaldet Outlook Web App) gør det nemt at rapportere falske positiver (god mail markeret som dårlige) eller falske negativer (dårlig mail er tilladt) til Microsoft og microsofts associerede virksomheder til analyse.
 
 Microsoft bruger disse indsendelser til at forbedre effektiviteten af mailbeskyttelsesteknologier. Antag f.eks., at folk rapporterer mange meddelelser ved hjælp af tilføjelsesprogrammet Rapport phishing. Disse oplysninger vises i sikkerhedsdashboardet og andre rapporter. Organisationens sikkerhedsteam kan bruge disse oplysninger som en indikation af, at politikker til bekæmpelse af phishing muligvis skal opdateres.
 
@@ -52,16 +52,16 @@ Hvis du er global administrator eller Exchange Online administrator, og Exchange
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Både tilføjelsesprogrammet Rapportmeddelelse og tilføjelsesprogrammet Rapport phishing fungerer sammen med de fleste Microsoft 365 abonnementer og følgende produkter:
+- Både tilføjelsesprogrammet Rapportmeddelelse og tilføjelsesprogrammet Rapport phishing fungerer sammen med de fleste Microsoft 365-abonnementer og følgende produkter:
   - Outlook på internettet
   - Outlook 2013 SP1 eller nyere
   - Outlook 2016 til Mac
-  - Outlook inkluderet i Microsoft 365 apps til Enterprise
-  - Outlook app til iOS og Android
+  - Outlook inkluderet i Microsoft 365-apps til Enterprise
+  - Outlook-app til iOS og Android
 
 - Begge tilføjelsesprogrammer er ikke tilgængelige for delte, gruppe- eller delegerede postkasser (tilføjelsesprogrammer er nedtonet).
 
-- Begge tilføjelsesprogrammer er ikke tilgængelige for postkasser i det lokale miljø Exchange.
+- Begge tilføjelsesprogrammer er ikke tilgængelige for Exchange-postkasser i det lokale miljø.
 
 - Din eksisterende webbrowser bør fungere med tilføjelsesprogrammer til rapportmeddelelse og rapport phishing. Men hvis du bemærker, at tilføjelsesprogrammet ikke er tilgængeligt eller ikke fungerer som forventet, kan du prøve en anden browser.
 
@@ -72,6 +72,9 @@ Hvis du er global administrator eller Exchange Online administrator, og Exchange
 - Du kan få flere oplysninger om, hvordan du rapporterer en meddelelse ved hjælp af funktionen Rapportér meddelelse under [Rapportér falske positiver og falske negativer i Outlook](report-false-positives-and-false-negatives.md).
 
 - Organisationer, der har en URL-filtrerings- eller sikkerhedsløsning (f.eks. en proxy og/eller firewall), skal have ipagave.azurewebsites.net og outlook.office.com slutpunkter, der kan nås på HTTPS-protokollen.
+
+> [!IMPORTANT]
+> Hvis du vil have vist meddelelser, der er rapporteret til Microsoft på fanen **Brugerrapporterede meddelelser** på <https://security.microsoft.com/reportsubmission>, skal du ikke deaktivere den indbyggede rapporteringsoplevelse.
 
 ## <a name="get-the-report-message-add-in"></a>Hent tilføjelsesprogrammet Rapportmeddelelse
 
@@ -92,7 +95,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 - I Outlook ser ikonet sådan ud:
 
     > [!div class="mx-imgBorder"]
-    > :::image type="content" source="../../media/OutlookReportMessageIcon.png" alt-text="Ikonet for tilføjelsesprogrammet Rapportmeddelelse for Outlook." lightbox="../../media/OutlookReportMessageIcon.png":::
+    > :::image type="content" source="../../media/OutlookReportMessageIcon.png" alt-text="Tilføjelsesprogrammet Rapportmeddelelse til Outlook." lightbox="../../media/OutlookReportMessageIcon.png":::
 
 - I Outlook på internettet ser ikonet sådan ud:
 
@@ -104,7 +107,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 > [!NOTE]
 > Det kan tage op til 12 timer, før tilføjelsesprogrammet vises i din organisation.
 
-1. I [Microsoft 365 Administration](https://admin.microsoft.com/AdminPortal/Home?#/homepage) skal du gå til **Indstillinger** \> **integrerede apps**. Klik på **Hent apps**.
+1. I [Microsoft 365 Administration skal du](https://admin.microsoft.com/AdminPortal/Home?#/homepage) gå til **Indstillinger** \> **Integrerede apps**. Klik på **Hent apps**.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="De Microsoft 365 Administration integrerede apps." lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
@@ -142,7 +145,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 
 ## <a name="edit-settings-for-the-report-message-add-in"></a>Rediger indstillinger for tilføjelsesprogrammet Rapportmeddelelse
 
-1. I Microsoft 365 Administration skal du gå til **Indstillinger** \> **integrerede apps** \. Find og vælg derefter **tilføjelsesprogrammet Rapportmeddelelse** .
+1. I Microsoft 365 Administration skal du gå til **Indstillinger** \> **Integrerede apps** \. Find og vælg derefter **tilføjelsesprogrammet Rapportmeddelelse** .
 
 2. I det pop op-vindue, der vises, skal du vælge **Rediger brugere** for at redigere brugerindstillinger.
 
@@ -167,7 +170,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 
 - I Outlook ser ikonet sådan ud:
 
-  ![Ikon for phishing-tilføjelsesprogram til rapporter for Outlook.](../../media/Outlook-ReportPhishing.png)
+  ![Ikon for rapport phishing-tilføjelsesprogram til Outlook.](../../media/Outlook-ReportPhishing.png)
 
 - I Outlook på internettet ser ikonet sådan ud:
 
@@ -179,7 +182,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 > [!NOTE]
 > Det kan tage op til 12 timer, før tilføjelsesprogrammet vises i din organisation.
 
-1. I [Microsoft 365 Administration](https://admin.microsoft.com/AdminPortal/Home?#/homepage) skal du gå til **Indstillinger** \> **integrerede apps**. Klik på **Hent apps**.
+1. I [Microsoft 365 Administration skal du](https://admin.microsoft.com/AdminPortal/Home?#/homepage) gå til **Indstillinger** \> **Integrerede apps**. Klik på **Hent apps**.
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="../../media/microsoft-365-admin-center-integrated-apps.png" alt-text="De Microsoft 365 Administration integrerede apps." lightbox="../../media/microsoft-365-admin-center-integrated-apps.png":::
@@ -194,7 +197,7 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
 
 ## <a name="edit-settings-for-the-report-phishing-add-in"></a>Rediger indstillinger for tilføjelsesprogrammet Rapport phishing
 
-1. I Microsoft 365 Administration skal du gå til **Indstillinger** \> **integrerede apps** \. Find og vælg derefter tilføjelsesprogrammet **Rapport phishing** .
+1. I Microsoft 365 Administration skal du gå til **Indstillinger** \> **Integrerede apps** \. Find og vælg derefter tilføjelsesprogrammet **Rapport phishing** .
 
 2. I det pop op-vindue, der vises, skal du vælge **Rediger brugere** for at redigere brugerindstillinger.
 

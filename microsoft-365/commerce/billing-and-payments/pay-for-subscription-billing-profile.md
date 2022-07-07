@@ -20,12 +20,12 @@ ms.custom:
 - okr_SMB
 - AdminSurgePortfolio
 ms.date: 05/26/2022
-ms.openlocfilehash: a20b576a5ce988bc23bd3be0ede1961a008085ca
-ms.sourcegitcommit: 6a981ca15bac84adbbed67341c89235029aad476
+ms.openlocfilehash: cb7d4bec9ae41d05be5b588f78a5197ed9ccbac0
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "65754619"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66685629"
 ---
 # <a name="how-to-pay-for-your-subscription-with-a-billing-profile"></a>Sådan betaler du for dit abonnement med en faktureringsprofil
 
@@ -39,15 +39,15 @@ Tilbagevendende fakturering er som standard automatisk slået til for alle betal
 
 Hvis tilbagevendende fakturering er slået fra for en faktureringsprofil, kan du bruge knappen **Betal nu** på din faktura til at betale for den hver faktureringsperiode, uanset hvilken betalingsmetode der er knyttet til faktureringsprofilen. Du kan også betale med check eller elektronisk pengeoverførsel. Instruktioner til, hvordan du gør det, er inkluderet i PDF-kopien af din faktura.
 
-## <a name="new-regulations-from-the-reserve-bank-of-india"></a>Nye forordninger fra Reserve Bank of India
+## <a name="new-regulations-from-the-reserve-bank-of-india"></a>Nye bestemmelser fra Reserve Bank of India
 
-Fra og med den 1. oktober 2021 kan automatiske betalinger i Indien blokere nogle kreditkorttransaktioner, især transaktioner, der overstiger 5.000 INR. På grund af denne forordning skal du muligvis foretage betalinger manuelt i Microsoft 365 Administration. Disse regler påvirker ikke det samlede beløb, du opkræver for dit forbrug.
+Fra og med den 1. oktober 2021 kan automatiske betalinger i Indien blokere nogle kreditkorttransaktioner, især transaktioner, der overstiger 5.000 INR. På grund af denne regel skal du muligvis foretage betalinger manuelt i Microsoft 365 Administration. Disse bestemmelser påvirker ikke det samlede beløb, du opkræves for dit forbrug.
 
-[Få mere at vide om forordningen om Reserve Bank of India for tilbagevendende betalinger](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668&Mode=0).
+[Få mere at vide om Reserve Bank of India-bestemmelserne for tilbagevendende betalinger](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668&Mode=0).
 
-Den 1. juli 2022 gemmer Microsoft og andre onlinehandlere ikke længere kreditkortoplysninger. For at overholde denne forordning fjerner Microsoft alle gemte kortoplysninger fra Microsoft 365 Administration. For at undgå tjenesteafbrydelser skal du tilføje en betalingsmetode og foretage en engangsbetaling for alle abonnementer og faktureringsprofiler.
+Den 30. september 2022 gemmer Microsoft og andre onlineforhandlere ikke længere kreditkortoplysninger. For at overholde denne regel fjerner Microsoft alle gemte kortoplysninger fra Microsoft 365 Administration. Hvis du vil undgå tjenesteafbrydelser, skal du tilføje en betalingsmetode og foretage en engangsbetaling for alle abonnementer og faktureringsprofiler.
 
-[Få mere at vide om Reserve Bank of India-forordningen for kortlagring](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12211).
+[Få mere at vide om Reserve Bank of India-betingelserne for kortlagring](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12211).
 
 ## <a name="paying-by-invoice"></a>Betaling via faktura
 

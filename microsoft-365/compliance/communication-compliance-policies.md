@@ -1,6 +1,6 @@
 ---
-title: Politikker for kommunikation med overholdelse af angivne standarder
-description: Få mere at vide om politikker for overholdelse af kommunikation.
+title: Opret og administrer politikker for kommunikationsoverholdelse
+description: Få mere at vide om oprettelse og administration af politikker for kommunikation med overholdelse af angivne standarder.
 keywords: Microsoft 365, Microsoft Purview, overholdelse af angivne standarder, kommunikation
 f1.keywords:
 - NOCSH
@@ -19,14 +19,14 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: c371de57ab6fdd4b7869b676680bb8f922798438
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: a865cec3ed136dcde84aa5ed0d93754fbbf6ac22
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66626463"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686369"
 ---
-# <a name="communication-compliance-policies"></a>Politikker for kommunikation med overholdelse af angivne standarder
+# <a name="create-and-manage-communication-compliance-policies"></a>Opret og administrer politikker for kommunikationsoverholdelse
 
 ## <a name="policies"></a>Politikker
 
@@ -167,7 +167,7 @@ Som standard vises betingelsen **Retning er** , og den kan ikke fjernes. Indstil
 
 ### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
 
-Du har mulighed for at inkludere følsomme informationstyper som en del af politikken for overholdelse af angivne standarder for kommunikation. Følsomme oplysningstyper er enten foruddefinerede eller brugerdefinerede datatyper, der kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre og meget mere. Som en del af [Få mere at vide om Microsoft Purview Forebyggelse af datatab](dlp-learn-about-dlp.md) kan konfigurationen af følsomme oplysninger bruge mønstre, tegn nærhed, tillidsniveauer og endda brugerdefinerede datatyper til at identificere og markere indhold, der kan være følsomt. Standardtyperne for følsomme oplysninger er:
+Du har mulighed for at inkludere følsomme informationstyper som en del af politikken for overholdelse af angivne standarder for kommunikation. Følsomme oplysningstyper er enten foruddefinerede eller brugerdefinerede datatyper, der kan hjælpe med at identificere og beskytte kreditkortnumre, bankkontonumre, pasnumre og meget mere. Som en del af [Få mere at vide om Microsoft Purview Forebyggelse af datatab](/microsoft-365/compliance/dlp-learn-about-dlp) kan konfigurationen af følsomme oplysninger bruge mønstre, tegn nærhed, tillidsniveauer og endda brugerdefinerede datatyper til at identificere og markere indhold, der kan være følsomt. Standardtyperne for følsomme oplysninger er:
 
 - Finansielle
 - Medicinsk og sundhed
@@ -175,13 +175,13 @@ Du har mulighed for at inkludere følsomme informationstyper som en del af polit
 - Brugerdefineret oplysningstype
 
 > [!IMPORTANT]
-> SIT'er har to forskellige måder at definere de maksimale antal parametre for entydige forekomster på. Hvis du vil vide mere, skal du se [Antal understøttede værdier for SIT.](create-a-custom-sensitive-information-type.md#instance-count-supported-values-for-sit)
+> SIT'er har to forskellige måder at definere de maksimale antal parametre for entydige forekomster på. Hvis du vil vide mere, skal du se [Antal understøttede værdier for SIT.](/microsoft-365/compliance/create-a-custom-sensitive-information-type#instance-count-supported-values-for-sit)
 
-Hvis du vil vide mere om oplysninger om følsomme oplysninger og de mønstre, der er inkluderet i standardtyperne, skal du se [Objektdefinitioner for følsomme oplysninger](sensitive-information-type-entity-definitions.md).
+Hvis du vil vide mere om oplysninger om følsomme oplysninger og de mønstre, der er inkluderet i standardtyperne, skal du se [Objektdefinitioner for følsomme oplysninger](/microsoft-365/compliance/sensitive-information-type-entity-definitions).
 
 ### <a name="custom-keyword-dictionaries"></a>Brugerordbøger med nøgleord
 
-Konfigurer brugerordbøger med nøgleord (eller leksikoner) for at give enkel administration af nøgleord, der er specifikke for din organisation eller branche. Nøgleordsordbøger understøtter op til 100 KB ord (efter komprimering) i ordbogen og understøtter ethvert sprog. Lejergrænsen er også 100 KB efter komprimering. Hvis det er nødvendigt, kan du anvende flere brugerdefinerede nøgleordsordbøger på en enkelt politik eller have en enkelt nøgleordsordbog pr. politik. Disse ordbøger er tildelt i en politik for overholdelse af angivne standarder for kommunikation og kan hentes fra en fil (f.eks en .csv eller en .txt liste) eller fra en liste, du kan [importere på overholdelsesportalen](create-a-keyword-dictionary.md). Brug brugerdefinerede ordbøger, når du har brug for at understøtte begreber eller sprog, der er specifikke for din organisation og politikker.
+Konfigurer brugerordbøger med nøgleord (eller leksikoner) for at give enkel administration af nøgleord, der er specifikke for din organisation eller branche. Nøgleordsordbøger understøtter op til 100 KB ord (efter komprimering) i ordbogen og understøtter ethvert sprog. Lejergrænsen er også 100 KB efter komprimering. Hvis det er nødvendigt, kan du anvende flere brugerdefinerede nøgleordsordbøger på en enkelt politik eller have en enkelt nøgleordsordbog pr. politik. Disse ordbøger er tildelt i en politik for overholdelse af angivne standarder for kommunikation og kan hentes fra en fil (f.eks en .csv eller en .txt liste) eller fra en liste, du kan [importere på overholdelsesportalen](/microsoft-365/compliance/create-a-keyword-dictionary). Brug brugerdefinerede ordbøger, når du har brug for at understøtte begreber eller sprog, der er specifikke for din organisation og politikker.
 
 ### <a name="classifiers"></a>Klassificeringer
 
@@ -221,7 +221,6 @@ Billeder fra 50 KB til 4 MB i følgende billedformater scannes og behandles:
 Når du gennemser ventende beskeder for politikker, hvor OCR er aktiveret, vises de billeder, der er identificeret og matchet med politikbetingelser, som underordnede elementer for tilknyttede beskeder. Du kan få vist det oprindelige billede for at evaluere den identificerede tekst i kontekst med den oprindelige meddelelse. Det kan tage op til 48 timer, før registrerede billeder er tilgængelige med beskeder.
 
 ### <a name="conditional-settings"></a>Betingede indstillinger
-<a name="ConditionalSettings"> </a>
 
 De betingelser, du vælger for politikken, gælder for kommunikation fra både mailkilder og tredjepartskilder i din organisation (f.eks. fra Instant Bloomberg).
 
@@ -229,19 +228,18 @@ I følgende tabel forklares mere om hver betingelse.
 
 |**Betingelse**|**Sådan bruges denne betingelse**|
 |:-----|:-----|
-| **Indhold stemmer overens med en af disse klassificeringer** | Anvend på politikken, når klassificeringer medtages eller udelades i en meddelelse. Nogle klassificeringer er foruddefinerede i din organisation, og brugerdefinerede klassificeringer skal konfigureres separat, før de er tilgængelige for denne betingelse. Der kan kun defineres én klassificering som en betingelse i en politik. Du kan finde flere oplysninger om konfiguration af klassificeringer under [Få mere at vide om klassificeringer, der kan oplæres (prøveversion).](classifier-learn-about.md) |
-| **Indhold indeholder en af disse følsomme infotyper** | Anvend på politikken, når følsomme oplysningstyper medtages eller udelades i en meddelelse. Nogle klassificeringer er foruddefinerede i din lejer, og brugerdefinerede klassificeringer kan konfigureres separat eller som en del af betingelsestildelingsprocessen. Hver type følsomme oplysninger, du vælger, anvendes separat, og kun én af disse følsomme oplysningstyper skal gælde, for at politikken kan anvendes på meddelelsen. Du kan finde flere oplysninger om brugerdefinerede typer følsomme oplysninger under [Få mere at vide om typer af følsomme oplysninger](sensitive-information-type-learn-about.md). |
+| **Indhold stemmer overens med en af disse klassificeringer** | Anvend på politikken, når klassificeringer medtages eller udelades i en meddelelse. Nogle klassificeringer er foruddefinerede i din organisation, og brugerdefinerede klassificeringer skal konfigureres separat, før de er tilgængelige for denne betingelse. Der kan kun defineres én klassificering som en betingelse i en politik. Du kan finde flere oplysninger om konfiguration af klassificeringer under [Få mere at vide om klassificeringer, der kan oplæres (prøveversion).](/microsoft-365/compliance/classifier-learn-about) |
+| **Indhold indeholder en af disse følsomme infotyper** | Anvend på politikken, når følsomme oplysningstyper medtages eller udelades i en meddelelse. Nogle klassificeringer er foruddefinerede i din lejer, og brugerdefinerede klassificeringer kan konfigureres separat eller som en del af betingelsestildelingsprocessen. Hver type følsomme oplysninger, du vælger, anvendes separat, og kun én af disse følsomme oplysningstyper skal gælde, for at politikken kan anvendes på meddelelsen. Du kan finde flere oplysninger om brugerdefinerede typer følsomme oplysninger under [Få mere at vide om typer af følsomme oplysninger](/microsoft-365/compliance/sensitive-information-type-learn-about). |
 | **Der modtages en meddelelse fra et af disse domæner**  <br><br> **Meddelelsen modtages ikke fra nogen af disse domæner** | Anvend politikken på at inkludere eller udelade bestemte domæner eller mailadresser i modtagne meddelelser. Angiv hvert domæne eller hver mailadresse, og adskil flere domæner eller mailadresser med et komma. Hvert domæne eller hver mailadresse, der angives, anvendes separat. Der må kun gælde ét domæne eller én mailadresse, for at politikken kan anvendes på meddelelsen. <br><br> Hvis du vil scanne alle mails fra et bestemt domæne, men vil udelade meddelelser, der ikke skal gennemses (nyhedsbreve, meddelelser osv.), skal du konfigurere, at der **ikke modtages en meddelelse fra nogen af disse domæner-betingelse,** der udelukker mailadressen (f.eks. "newsletter@contoso.com"). |
 | **Meddelelsen sendes til et af disse domæner**  <br><br> **Meddelelsen sendes ikke til nogen af disse domæner** | Anvend politikken til at inkludere eller udelade bestemte domæner i sendte meddelelser. Angiv hvert domæne, og adskil flere domæner med et komma. Hvert domæne anvendes separat, og der må kun gælde ét domæne, for at politikken kan anvendes på meddelelsen. <br><br> Hvis du vil udelade alle mails, der er sendt til to specifikke domæner, skal du konfigurere, **at Meddelelsen ikke sendes til nogen af disse domæner** med de to domæner (f.eks. 'contoso.com,wingtiptoys.com'). |
-| **Meddelelsen er klassificeret med et af disse navne**  <br><br> **Meddelelsen er ikke klassificeret med nogen af disse mærkater** | At anvende politikken, når visse opbevaringsmærkater medtages eller udelades i en meddelelse. Opbevaringsmærkater skal konfigureres separat, og konfigurerede mærkater vælges som en del af denne betingelse. Hver etiket, du vælger, anvendes separat (kun ét af disse mærkater skal gælde, for at politikken kan anvendes på meddelelsen). Du kan finde flere oplysninger om opbevaringsmærkater under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).|
-| **Meddelelsen indeholder et af disse ord**  <br><br> **Meddelelsen indeholder ingen af disse ord** | Hvis du vil anvende politikken, når bestemte ord eller udtryk medtages eller udelades i en meddelelse, skal du angive hvert ord adskilt med et komma. I forbindelse med udtryk med to ord eller mere skal du bruge anførselstegn omkring udtrykket. Hvert ord eller udtryk, du angiver, anvendes separat (kun ét ord skal gælde, for at politikken kan anvendes på meddelelsen). Du kan finde flere oplysninger om indtastning af ord eller udtryk i næste afsnit [Matchning af ord og udtryk til mails eller vedhæftede filer](communication-compliance-policies.md#Matchwords).|
-| **Den vedhæftede fil indeholder et af disse ord**  <br><br> **Den vedhæftede fil indeholder ingen af disse ord** | Hvis du vil anvende politikken, når bestemte ord eller udtryk medtages eller udelades i en vedhæftet fil i en meddelelse (f.eks. et Word-dokument), skal du skrive hvert ord adskilt med et komma. I forbindelse med udtryk med to ord eller mere skal du bruge anførselstegn omkring udtrykket. Hvert ord eller udtryk, du angiver, anvendes separat (kun ét ord skal gælde, for at politikken kan anvendes på den vedhæftede fil). Du kan finde flere oplysninger om indtastning af ord eller udtryk i næste afsnit [Matchning af ord og udtryk til mails eller vedhæftede filer](communication-compliance-policies.md#Matchwords).|
+| **Meddelelsen er klassificeret med et af disse navne**  <br><br> **Meddelelsen er ikke klassificeret med nogen af disse mærkater** | At anvende politikken, når visse opbevaringsmærkater medtages eller udelades i en meddelelse. Opbevaringsmærkater skal konfigureres separat, og konfigurerede mærkater vælges som en del af denne betingelse. Hver etiket, du vælger, anvendes separat (kun ét af disse mærkater skal gælde, for at politikken kan anvendes på meddelelsen). Du kan finde flere oplysninger om opbevaringsmærkater under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](/microsoft-365/compliance/retention).|
+| **Meddelelsen indeholder et af disse ord**  <br><br> **Meddelelsen indeholder ingen af disse ord** | Hvis du vil anvende politikken, når bestemte ord eller udtryk medtages eller udelades i en meddelelse, skal du angive hvert ord adskilt med et komma. I forbindelse med udtryk med to ord eller mere skal du bruge anførselstegn omkring udtrykket. Hvert ord eller udtryk, du angiver, anvendes separat (kun ét ord skal gælde, for at politikken kan anvendes på meddelelsen). Du kan finde flere oplysninger om indtastning af ord eller udtryk i næste afsnit [Matchning af ord og udtryk til mails eller vedhæftede filer](#matching-words-and-phrases-to-emails-or-attachments).|
+| **Den vedhæftede fil indeholder et af disse ord**  <br><br> **Den vedhæftede fil indeholder ingen af disse ord** | Hvis du vil anvende politikken, når bestemte ord eller udtryk medtages eller udelades i en vedhæftet fil i en meddelelse (f.eks. et Word-dokument), skal du skrive hvert ord adskilt med et komma. I forbindelse med udtryk med to ord eller mere skal du bruge anførselstegn omkring udtrykket. Hvert ord eller udtryk, du angiver, anvendes separat (kun ét ord skal gælde, for at politikken kan anvendes på den vedhæftede fil). Du kan finde flere oplysninger om indtastning af ord eller udtryk i næste afsnit [Matchning af ord og udtryk til mails eller vedhæftede filer](#matching-words-and-phrases-to-emails-or-attachments).|
 | **Vedhæftet fil er en af disse filtyper**  <br><br> **Vedhæftet fil er ingen af disse filtyper** | Hvis du vil overvåge kommunikation, der omfatter eller udelukker bestemte typer vedhæftede filer, skal du angive filtypenavnene (f.eks. .exe eller .pdf). Hvis du vil medtage eller udelade flere filtypenavne, skal du angive filtyper adskilt af et komma (f.eks *..exe,.pdf,.zip*). Der må kun være én filtypenavn for vedhæftede filer, der svarer til den politik, der skal anvendes.|
 | **Meddelelsesstørrelsen er større end**  <br><br> **Meddelelsesstørrelsen er ikke større end** | Hvis du vil gennemse meddelelser baseret på en bestemt størrelse, skal du bruge disse betingelser til at angive den maksimale eller mindste størrelse, en meddelelse kan være, før den kan gennemses. Hvis du f.eks. angiver **, at Meddelelsesstørrelse er større end** \> **1,0 MB**, kan alle meddelelser, der er 1,01 MB og større, gennemses. Du kan vælge byte, kilobyte, megabyte eller gigabyte til denne betingelse.|
 | **Den vedhæftede fil er større end**  <br><br> **Den vedhæftede fil er ikke større end** | Hvis du vil gennemse meddelelser baseret på størrelsen på deres vedhæftede filer, skal du angive den maksimale eller mindste størrelse, en vedhæftet fil kan være, før meddelelsen og dens vedhæftede filer kan gennemses. Hvis du f.eks. angiver, at **Vedhæftet fil er større end** \> **2,0 MB**, kan alle meddelelser med vedhæftede filer på 2,01 MB og derover gennemses. Du kan vælge byte, kilobyte, megabyte eller gigabyte til denne betingelse.|
 
 #### <a name="matching-words-and-phrases-to-emails-or-attachments"></a>Matchende ord og udtryk til mails eller vedhæftede filer
-<a name="Matchwords"> </a>
 
 Hvert ord, du indtaster og adskiller med et komma, anvendes separat (kun ét ord skal gælde, for at politikbetingelsen kan anvendes på mailen eller den vedhæftede fil). Lad os f.eks. bruge betingelsen **Meddelelse indeholder et af disse ord** med nøgleordene "banker", "fortroligt" og "insiderhandel" adskilt af et komma (bankmand, fortroligt,"insiderhandel"). Politikken gælder for alle meddelelser, der indeholder ordet "bankmand", "fortroligt" eller udtrykket "insiderhandel". Kun ét af disse ord eller udtryk må forekomme, for at denne politikbetingelse kan anvendes. Ordene i meddelelsen eller den vedhæftede fil skal svare nøjagtigt til det, du angiver.
 
@@ -253,7 +251,7 @@ Hvert ord, du indtaster og adskiller med et komma, anvendes separat (kun ét ord
 > *Fortrolige* <br>
 > *insiderhandel*
 
-Hvis du vil scanne både mails og vedhæftede filer for de samme nøgleord, skal du oprette en [brugerordbog med nøgleord](create-a-keyword-dictionary.md) for de ord, du vil scanne i meddelelser. Denne politikkonfiguration identificerer definerede nøgleord, der enten vises i mailen **eller** i den vedhæftede fil. Hvis du bruger standardindstillingerne for betinget politik (*Meddelelse indeholder et af disse ord* , og *vedhæftet fil indeholder et af disse ord*) til at identificere ord i meddelelser og i vedhæftede filer, kræver det, at vilkårene er til **stede både i** meddelelsen og den vedhæftede fil.
+Hvis du vil scanne både mails og vedhæftede filer for de samme nøgleord, skal du oprette en [brugerordbog med nøgleord](/microsoft-365/compliance/create-a-keyword-dictionary) for de ord, du vil scanne i meddelelser. Denne politikkonfiguration identificerer definerede nøgleord, der enten vises i mailen **eller** i den vedhæftede fil. Hvis du bruger standardindstillingerne for betinget politik (*Meddelelse indeholder et af disse ord* , og *vedhæftet fil indeholder et af disse ord*) til at identificere ord i meddelelser og i vedhæftede filer, kræver det, at vilkårene er til **stede både i** meddelelsen og den vedhæftede fil.
 
 #### <a name="enter-multiple-conditions"></a>Angiv flere betingelser
 

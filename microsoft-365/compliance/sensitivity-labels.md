@@ -22,12 +22,12 @@ description: Brug følsomhedsmærkater fra Microsoft Purview Information Protect
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: b7deebb8f745c3b43f82093412e291ab304b4794
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: 879b412ff6efa743756a6c41b322516952dec93c
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/07/2022
-ms.locfileid: "66663452"
+ms.locfileid: "66685959"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Få mere at vide om følsomhedsmærkater
 
@@ -71,7 +71,7 @@ Du kan bruge følsomhedsmærkater til at:
 
 - **Klassificer indhold uden at bruge nogen beskyttelsesindstillinger.** Du kan også blot tildele en mærkat som følge af klassificeringen af indholdet. Dette giver brugerne en visuel tilknytning af klassificering til organisationens navne og kan bruge mærkaterne til at generere forbrugsrapporter og se aktivitetsdata for dit følsomme indhold. På baggrund af disse oplysninger kan du altid vælge at anvende beskyttelsesindstillinger senere.
 
-I alle disse tilfælde kan følsomhedsmærkater i Microsoft 365 hjælpe dig med at træffe de rigtige handlinger på det rigtige indhold. Med følsomhedsmærkater kan du klassificere data på tværs af din organisation og gennemtvinge beskyttelsesindstillinger baseret på denne klassificering.
+I alle disse tilfælde kan følsomhedsmærkater fra Microsoft Purview hjælpe dig med at træffe de rigtige handlinger på det rigtige indhold. Med følsomhedsmærkater kan du klassificere data på tværs af din organisation og gennemtvinge beskyttelsesindstillinger baseret på denne klassificering. Denne beskyttelse forbliver derefter sammen med indholdet.
 
 Du kan få flere oplysninger om disse og andre scenarier, der understøttes af følsomhedsmærkater, under [Almindelige scenarier for følsomhedsmærkater](get-started-with-sensitivity-labels.md#common-scenarios-for-sensitivity-labels). Der udvikles hele tiden nye funktioner, der understøtter følsomhedsmærkater, så det kan også være nyttigt at henvise til [Microsoft 365-køreplanen](https://aka.ms/MIPC/Roadmap).
 
@@ -83,9 +83,9 @@ Når du tildeler et følsomhedsmærkat til indhold, er det som et stempel, der a
 
 - **Ryd tekst.** Da en mærkat er gemt i klartekst i metadataene for filer og mails, kan tredjepartsapps og -tjenester læse den og derefter anvende deres egne beskyttende handlinger, hvis det er nødvendigt.
 
-- **Vedvarende.** Da mærkaten er gemt i metadata for filer og mails, følger etiketten med indholdet, uanset hvor den gemmes eller gemmes. Det entydige mærkat-id bliver grundlaget for anvendelse og håndhævelse af de politikker, du konfigurerer.
+- **Vedvarende.** Da mærkaten er gemt i metadata for filer og mails, forbliver etiketten sammen med indholdet, uanset hvor den gemmes eller gemmes. Det entydige mærkat-id bliver grundlaget for anvendelse og håndhævelse af politikker, som du konfigurerer.
 
-Når brugerne får vist en følsomhedsmærkat, vises den som et mærke for de apps, de bruger, og de kan nemt integreres i deres eksisterende arbejdsprocesser.
+Når brugerne i din organisation får vist en følsomhedsmærkat, vises den som et mærke for de apps, de bruger, og den kan nemt integreres i deres eksisterende arbejdsprocesser.
 
 Hvert element, der understøtter følsomhedsmærkater, kan have en enkelt følsomhedsmærkat anvendt på det. Dokumenter og mails kan både have en følsomhedsmærkat og en [opbevaringsmærkat](retention.md#retention-labels) anvendt på dem.
 
@@ -247,8 +247,7 @@ Hvis du bruger AIP-klienten, skal du se [Hvorfor vælge indbygget mærkat over A
 
 ### <a name="azure-information-protection-labels"></a>Azure Information Protection-mærkater
 
-> [!NOTE]
-> Label management for Azure Information Protection mærkater i Azure Portal frarådes **31. marts 2021**. Få mere at vide fra den officielle [meddelelse om udfasning](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179).
+Label management for Azure Information Protection mærkater i Azure Portal frarådes **31. marts 2021**. Få mere at vide fra den officielle [meddelelse om udfasning](https://techcommunity.microsoft.com/t5/azure-information-protection/announcing-timelines-for-sunsetting-label-management-in-the/ba-p/1226179).
 
 Hvis din lejer endnu ikke er på [unified labeling-platformen](/azure/information-protection/faqs#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), skal du først aktivere unified labeling, før du kan bruge følsomhedsmærkater. Du kan finde instruktioner under [Sådan overfører du Azure Information Protection-mærkater til samlede følsomhedsmærkater](/azure/information-protection/configure-policy-migrate-labels).
 
@@ -262,4 +261,4 @@ Du kan også få mere at vide om [partnerløsninger, der er integreret med Micro
 
 Hvis du vil have planlægning af udrulning og vejledning, der indeholder licensoplysninger, tilladelser, udrulningsstrategi, en liste over understøttede scenarier og dokumentation til slutbrugere, skal [du se Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md).
 
-Hvis du vil vide mere om, hvordan du bruger følsomhedsmærkater til at overholde reglerne for beskyttelse af personlige oplysninger, skal du se [Installér bestemmelser om beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md)  (aka.ms/m365dataprivacy).
+Hvis du vil vide mere om, hvordan du bruger følsomhedsmærkater til at overholde reglerne for beskyttelse af personlige oplysninger, skal du se [Installér bestemmelser om beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md).

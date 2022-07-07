@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 27c166f3c9df0dead57f977b00cab41eb82347ad
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 4810f76d2d0fc7446c15c3c52fd6577e763918fe
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66630495"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686391"
 ---
 # <a name="use-communication-compliance-reports-and-audits"></a>Brug rapporter og overvågninger for kommunikation med overholdelse af angivne standarder
 
@@ -141,7 +141,7 @@ Rapporter med meddelelsesoplysninger indeholder følgende oplysninger for hvert 
 I nogle tilfælde skal du give oplysninger til revisorer for lovgivning eller overholdelse af angivne standarder for at bevise overvågning af brugeraktiviteter og kommunikation. Disse oplysninger kan være en oversigt over alle aktiviteter, der er knyttet til en defineret organisationspolitik, eller når en politik for kommunikation med overholdelse af angivne standarder ændres. Politikker for kommunikation med overholdelse af angivne standarder har indbyggede overvågningsspor til komplet parathed til interne eller eksterne revisioner. Detaljerede overvågningshistorikker for hver oprettelses-, redigerings- og sletningshandling registreres af dine kommunikationspolitikker for at give bevis for tilsynsprocedurer.
 
 > [!IMPORTANT]
-> Overvågning skal være aktiveret for din organisation, før hændelser for overholdelse af angivne standarder registreres. Hvis du vil aktivere overvågning, skal du se [Aktivér overvågningsloggen](communication-compliance-configure.md#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365-overvågningsloggen, kan det tage op til 48 timer, før disse hændelser kan ses i politikker for kommunikation med overholdelse af angivne standarder.
+> Overvågning skal være aktiveret for din organisation, før hændelser for overholdelse af angivne standarder registreres. Hvis du vil aktivere overvågning, skal du se [Aktivér overvågningsloggen](/microsoft-365/compliance/communication-compliance-configure#step-2-required-enable-the-audit-log). Når aktiviteter udløser hændelser, der registreres i Microsoft 365-overvågningsloggen, kan det tage op til 48 timer, før disse hændelser kan ses i politikker for kommunikation med overholdelse af angivne standarder.
 
 Hvis du vil have vist opdateringsaktiviteter for politikken for kommunikation, skal du vælge kontrolelementet **Eksportér politikopdateringer** på hovedsiden for en hvilken som helst politik. Du skal være tildelt rollerne *Global Administration* eller *Communication Compliance Administration* for at eksportere opdateringsaktiviteter. Denne handling genererer en overvågningsfil i .csv-format, der indeholder følgende oplysninger:
 
@@ -161,7 +161,7 @@ Hvis du vil have vist aktiviteter til gennemgang af overholdelse af angivne stan
 | **Operationer** | De korrekturhandlinger, der er udført på politikken. |
 | **Overvågningsdata** | Dette felt er den primære datakilde for alle aktiviteter til gennemsyn af politikker. Alle korrekturaktiviteter registreres og adskilles af kommaafgrænsere. |
 
-Du kan også få vist overvågningsaktiviteter i den samlede overvågningslog eller med PowerShell-cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) . Du kan få mere at vide om politikker for opbevaring af overvågningslog under [Administrer opbevaringspolitikker for overvågningslog](audit-log-retention-policies.md).
+Du kan også få vist overvågningsaktiviteter i den samlede overvågningslog eller med PowerShell-cmdlet'en [Search-UnifiedAuditLog](/powershell/module/exchange/search-unifiedauditlog) . Du kan få mere at vide om politikker for opbevaring af overvågningslog under [Administrer opbevaringspolitikker for overvågningslog](/microsoft-365/compliance/audit-log-retention-policies).
 
 Følgende eksempel returnerer f.eks. aktiviteterne for alle overvågningsaktiviteter (politikker og regler):
 

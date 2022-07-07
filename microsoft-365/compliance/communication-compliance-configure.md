@@ -22,16 +22,16 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: cd7ff5819f2d3927c9315e96b440a215a6e889eb
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 8030a842f36f30fdc267a81e4736abdf8f4328f5
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66633757"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66685893"
 ---
 # <a name="get-started-with-communication-compliance"></a>Kom i gang med kommunikationsoverholdelse
 
-Brug politikker for overholdelse af kommunikation til at identificere brugerkommunikation, der skal undersøges af interne eller eksterne korrekturlæsere. Du kan finde flere oplysninger om, hvordan politikker for kommunikation med overholdelse af angivne standarder kan hjælpe dig med at registrere kommunikation i din organisation, under [Politikker for kommunikation med overholdelse af angivne standarder](communication-compliance.md). Hvis du vil gennemgå, hvordan Contoso hurtigt konfigurerede en politik for overholdelse af angivne standarder for kommunikation for at registrere upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation, kan du se dette [casestudie](communication-compliance-case-study.md).
+Brug politikker for overholdelse af kommunikation til at identificere brugerkommunikation, der skal undersøges af interne eller eksterne korrekturlæsere. Du kan finde flere oplysninger om, hvordan politikker for kommunikation med overholdelse af angivne standarder kan hjælpe dig med at registrere kommunikation i din organisation, under [Politikker for kommunikation med overholdelse af angivne standarder](/microsoft-365/compliance/communication-compliance-policies). Hvis du vil gennemgå, hvordan Contoso hurtigt konfigurerede en politik for overholdelse af angivne standarder for kommunikation for at registrere upassende indhold i Microsoft Teams, Exchange Online og Yammer-kommunikation, kan du se dette [casestudie](/microsoft-365/compliance/communication-compliance-case-study).
 
 ## <a name="subscriptions-and-licensing"></a>Abonnementer og licenser
 
@@ -56,7 +56,7 @@ Hvis du ikke har en eksisterende Office 365 Enterprise E5-plan og vil prøve ove
 
 ## <a name="recommended-actions"></a>Anbefalede handlinger
 
-Anbefalede handlinger kan hjælpe din organisation med at komme i gang med funktioner til overholdelse af kommunikation og få mest muligt ud af dine eksisterende politikker. Inkluderet på siden **Politikker** giver anbefalede handlinger indsigt og opsummerer følsomme informationstyper og upassende indholdsaktiviteter i kommunikation i din organisation. Indsigt understøttes af [dataklassificering](data-classification-overview.md) og anvendelse af følsomhedsmærkater, opbevaringsmærkater og klassificering af følsomme oplysninger. Disse indsigter omfatter ikke nogen personidentificerbare oplysninger for brugere i din organisation.
+Anbefalede handlinger kan hjælpe din organisation med at komme i gang med funktioner til overholdelse af kommunikation og få mest muligt ud af dine eksisterende politikker. Inkluderet på siden **Politikker** giver anbefalede handlinger indsigt og opsummerer følsomme informationstyper og upassende indholdsaktiviteter i kommunikation i din organisation. Indsigt understøttes af [dataklassificering](/microsoft-365/compliance/data-classification-overview) og anvendelse af følsomhedsmærkater, opbevaringsmærkater og klassificering af følsomme oplysninger. Disse indsigter omfatter ikke nogen personidentificerbare oplysninger for brugere i din organisation.
 
 ![Handlinger, der anbefales i forbindelse med kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-recommended-actions.png)
 
@@ -146,7 +146,7 @@ Kommunikationsoverholdelse kræver overvågningslogge for at vise beskeder og sp
 
 Overvågning er som standard aktiveret for Microsoft 365-organisationer. Nogle organisationer kan have deaktiveret overvågning af bestemte årsager. Hvis overvågning er deaktiveret for din organisation, kan det skyldes, at en anden administrator har deaktiveret den. Vi anbefaler, at du bekræfter, at det er OK at aktivere overvågning igen, når du fuldfører dette trin.
 
-Du kan finde en trinvis vejledning til, hvordan du slår overvågning til, under [Slå søgning i overvågningslog til eller fra](turn-audit-log-search-on-or-off.md). Når du har slået overvågning til, vises der en meddelelse om, at overvågningsloggen er ved at blive forberedt, og at du kan køre en søgning om et par timer, efter at forberedelsen er fuldført. Du behøver kun at gøre denne handling én gang. Du kan finde flere oplysninger om, hvordan du bruger overvågningsloggen, [under Søg i overvågningsloggen](search-the-audit-log-in-security-and-compliance.md).
+Du kan finde en trinvis vejledning til, hvordan du slår overvågning til, under [Slå søgning i overvågningslog til eller fra](/microsoft-365/compliance/turn-audit-log-search-on-or-off). Når du har slået overvågning til, vises der en meddelelse om, at overvågningsloggen er ved at blive forberedt, og at du kan køre en søgning om et par timer, efter at forberedelsen er fuldført. Du behøver kun at gøre denne handling én gang. Du kan finde flere oplysninger om, hvordan du bruger overvågningsloggen, [under Søg i overvågningsloggen](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance).
 
 ## <a name="step-3-optional-set-up-groups-for-communication-compliance"></a>Trin 3 (valgfrit): Konfigurer grupper til overholdelse af kommunikation
 
@@ -161,7 +161,7 @@ Brug følgende diagram til at hjælpe dig med at konfigurere grupper i din organ
 
 Når du tildeler en *distributionsgruppe* i politikken, overvåger politikken alle mails og Teams-chats fra hver bruger i *distributionsgruppen*. Når du tildeler en *Microsoft 365-gruppe* i politikken, registrerer politikken alle mails og Teams-chats, der sendes til *Microsoft 365-gruppen**, ikke de enkelte mails og chats, der modtages af hvert gruppemedlem. Brug af distributionsgrupper i politikker for overholdelse af kommunikation anbefales, så individuelle mails og Teams-chats fra hver bruger overvåges automatisk.
 
-Hvis du er en organisation med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, og du vil registrere Microsoft Teams-chats for dine brugere, skal du oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Senere i disse trin skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](search-cloud-based-mailboxes-for-on-premises-users.md).
+Hvis du er en organisation med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, og du vil registrere Microsoft Teams-chats for dine brugere, skal du oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Senere i disse trin skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users).
 
 Hvis du vil administrere overvågede brugere i store virksomhedsorganisationer, skal du muligvis overvåge alle brugere på tværs af store grupper. Du kan bruge PowerShell til at konfigurere en distributionsgruppe for en global politik for overholdelse af kommunikation for den tildelte gruppe. Dette giver dig mulighed for at overvåge tusindvis af brugere med en enkelt politik og holde politikken for kommunikation med overholdelse af angivne standarder opdateret, efterhånden som nye medarbejdere tilmelder sig din organisation.
 
@@ -212,7 +212,7 @@ Du kan få flere oplysninger om konfiguration af Yammer i oprindelig tilstand un
 >Brug af PowerShell til at oprette og administrere politikker for kommunikation med overholdelse af angivne standarder understøttes ikke. Hvis du vil oprette og administrere disse politikker, skal du bruge kontrolelementerne til administration af politikker i [kommunikationsoverholdelsesløsningen](https://compliance.microsoft.com/supervisoryreview).
 
 >[!TIP]  
->Vil du se en detaljeret gennemgang af, hvordan du konfigurerer en ny politik for overholdelse af angivne standarder for kommunikation og afhjælper en besked? Se [denne 15-minutters video](communication-compliance-plan.md#creating-a-communication-compliance-policy-walkthrough) for at se en demonstration af, hvordan politikker for kommunikation med overholdelse af angivne standarder kan hjælpe dig med at registrere upassende meddelelser, undersøge potentielle overtrædelser og afhjælpe problemer med overholdelse af angivne standarder.
+>Vil du se en detaljeret gennemgang af, hvordan du konfigurerer en ny politik for overholdelse af angivne standarder for kommunikation og afhjælper en besked? Se [denne 15-minutters video](/microsoft-365/compliance/communication-compliance-plan#creating-a-communication-compliance-policy-walkthrough) for at se en demonstration af, hvordan politikker for kommunikation med overholdelse af angivne standarder kan hjælpe dig med at registrere upassende meddelelser, undersøge potentielle overtrædelser og afhjælpe problemer med overholdelse af angivne standarder.
 
 1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365-organisation.
 
@@ -233,7 +233,7 @@ Du kan få flere oplysninger om konfiguration af Yammer i oprindelig tilstand un
     - Vælg et felt med begrænsede betingelser, som normalt er en følsom infotype eller nøgleordsordbog, der skal anvendes på politikken.
 
     > [!NOTE]
-    > Hvis du vil aktivere [optisk tegngenkendelse (OCR)](communication-compliance-policies.md#optical-character-recognition-ocr) for at scanne integrerede eller vedhæftede billeder i meddelelser til trykt eller håndskrevet tekst, der svarer til politikbetingelser, skal du vælge **Tilpas politikbetingelser** > **og procentdel** og aktivere **Udtræk trykt eller håndskrevet tekst fra billeder til evaluering**.
+    > Hvis du vil aktivere [optisk tegngenkendelse (OCR)](/microsoft-365/compliance/communication-compliance-policies#optical-character-recognition-ocr) for at scanne integrerede eller vedhæftede billeder i meddelelser til trykt eller håndskrevet tekst, der svarer til politikbetingelser, skal du vælge **Tilpas politikbetingelser** > **og procentdel** og aktivere **Udtræk trykt eller håndskrevet tekst fra billeder til evaluering**.
 
     Hvis du vælger at bruge politikguiden til at oprette en brugerdefineret politik, skal du gøre følgende:
 
@@ -247,13 +247,13 @@ Du kan få flere oplysninger om konfiguration af Yammer i oprindelig tilstand un
 
     - Vælg kommunikationsretningen for at registrere, herunder indgående, udgående eller intern kommunikation.
 
-    - Definer betingelserne for politikken for kommunikation med overholdelse af [regler og standarder](communication-compliance-policies.md#ConditionalSettings). Du kan vælge mellem betingelser for meddelelsesadresse, nøgleord, filtyper og størrelsesmatch.
+    - Definer betingelserne for politikken for kommunikation med overholdelse af [regler og standarder](/microsoft-365/compliance/communication-compliance-policies#conditional-settings). Du kan vælge mellem betingelser for meddelelsesadresse, nøgleord, filtyper og størrelsesmatch.
 
     - Vælg, om du vil medtage følsomme oplysningstyper. I dette trin kan du vælge standardtyper og brugerdefinerede følsomme oplysninger. Vælg mellem eksisterende brugerdefinerede typer følsomme oplysninger eller brugerdefinerede nøgleordsordbøger i guiden til kommunikation med overholdelse af regler og standarder. Du kan oprette disse elementer, før du kører guiden, hvis det er nødvendigt. Du kan også oprette nye typer følsomme oplysninger fra guiden til kommunikation med overholdelse af regler og standarder.
 
     - Vælg, om du vil aktivere klassificeringer. Klassificeringer kan registrere upassende sprog og billeder, der sendes eller modtages i brødteksten i mails eller andre typer tekst. Du kan vælge følgende indbyggede klassificeringer: *Threat*, *Profanity*, *Målrettet chikane*, *Voksenbilleder*, *Racy-billeder* og *Gory-billeder*.
 
-    - Aktivér [optisk tegngenkendelse (OCR)](communication-compliance-policies.md#optical-character-recognition-ocr) for at scanne integrerede eller vedhæftede billeder i meddelelser for trykt eller håndskrevet tekst, der opfylder politikbetingelserne. I forbindelse med brugerdefinerede politikker skal en eller flere betingede indstillinger, der er knyttet til tekst, nøgleord, klassificeringer eller følsomme infotyper, konfigureres i politikken for at muliggøre valg af scanning af optisk tegngenkendelse.
+    - Aktivér [optisk tegngenkendelse (OCR)](/microsoft-365/compliance/communication-compliance-policies#optical-character-recognition-ocr) for at scanne integrerede eller vedhæftede billeder i meddelelser for trykt eller håndskrevet tekst, der opfylder politikbetingelserne. I forbindelse med brugerdefinerede politikker skal en eller flere betingede indstillinger, der er knyttet til tekst, nøgleord, klassificeringer eller følsomme infotyper, konfigureres i politikken for at muliggøre valg af scanning af optisk tegngenkendelse.
 
     - Definer den procentdel af kommunikationen, der skal gennemses.
 
@@ -310,7 +310,7 @@ Du kan også vælge at aktivere anonymisering for viste brugernavne, når du und
 
 ## <a name="step-8-optional-test-your-communication-compliance-policy"></a>Trin 8 (valgfrit): Test politikken for overholdelse af angivne standarder for kommunikation
 
-Når du har oprettet en politik for overholdelse af angivne standarder for kommunikation, er det en god idé at teste den for at sikre, at de betingelser, du har defineret, håndhæves korrekt af politikken. Det kan også være en god idé at [teste dine DLP-politikker (Microsoft Purview Forebyggelse af datatab),](create-test-tune-dlp-policy.md) hvis politikkerne for kommunikation med overholdelse af angivne standarder omfatter følsomme oplysningstyper. Sørg for, at du giver dine politikker tid til at aktivere, så den kommunikation, du vil teste, registreres.
+Når du har oprettet en politik for overholdelse af angivne standarder for kommunikation, er det en god idé at teste den for at sikre, at de betingelser, du har defineret, håndhæves korrekt af politikken. Det kan også være en god idé at [teste dine DLP-politikker (Microsoft Purview Forebyggelse af datatab),](/microsoft-365/compliance/create-test-tune-dlp-policy) hvis politikkerne for kommunikation med overholdelse af angivne standarder omfatter følsomme oplysningstyper. Sørg for, at du giver dine politikker tid til at aktivere, så den kommunikation, du vil teste, registreres.
 
 Følg disse trin for at teste politikken for overholdelse af angivne standarder for kommunikation:
 
@@ -329,6 +329,6 @@ Følg disse trin for at teste politikken for overholdelse af angivne standarder 
 
 Når du har fuldført disse trin for at oprette din første politik for overholdelse af angivne standarder for kommunikation, begynder du at modtage beskeder fra aktivitetsindikatorer efter 24-48 timer. Konfigurer yderligere politikker efter behov ved hjælp af vejledningen i trin 5 i denne artikel.
 
-Hvis du vil vide mere om undersøgelse af beskeder om kommunikation med overholdelse af angivne standarder, skal du se [Undersøg og afhjælp beskeder om kommunikation med overholdelse af angivne standarder](communication-compliance-investigate-remediate.md).
+Hvis du vil vide mere om undersøgelse af beskeder om kommunikation med overholdelse af angivne standarder, skal du se [Undersøg og afhjælp beskeder om kommunikation med overholdelse af angivne standarder](/microsoft-365/compliance/communication-compliance-investigate-remediate).
 
 Hvis du vil holde dig ajour med de seneste opdateringer af kommunikationsoverholdelse, skal du vælge **Nyheder** i [overholdelse af kommunikation](https://compliance.microsoft.com/) for din organisation.

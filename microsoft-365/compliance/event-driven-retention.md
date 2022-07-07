@@ -20,12 +20,12 @@ ms.custom:
 - seo-marvel-may2020
 - seo-marvel-jun2020
 description: Som regel en del af en løsning til datastyring, kan du konfigurere en opbevaringsmærkat for at starte opbevaringsperioden baseret på en hændelse, som du identificerer.
-ms.openlocfilehash: 953661a63c961273d54fde1041e4d85c5d786c26
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: ac4e80872cbe377025e213a387c7be7f89a208b7
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66622981"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66685937"
 ---
 # <a name="start-retention-when-an-event-occurs"></a>Start opbevaring, når der opstår en hændelse
 
@@ -34,22 +34,22 @@ ms.locfileid: "66622981"
 Når du bevarer indhold, er opbevaringsperioden ofte baseret på indholdets alder. Du kan f.eks. bevare dokumenter i syv år, efter at de er oprettet, og derefter slette dem. Men når du konfigurerer [opbevaringsmærkater](retention.md#retention-labels), kan du også basere en opbevaringsperiode på, hvornår der opstår en bestemt type hændelse. Hændelsen udløser starten af opbevaringsperioden, og alt indhold med en opbevaringsmærkat, der er anvendt for den pågældende type hændelse, gennemtvinger mærkatens opbevaringshandlinger på dem.
   
 Eksempler på brug af hændelsesbaseret opbevaring:
-  
+
 - **Medarbejdere, der forlader organisationen** Lad os antage, at medarbejderposter skal opbevares i 10 år fra det tidspunkt, hvor en medarbejder forlader organisationen. Efter 10 år skal alle dokumenter vedrørende ansættelse, præstation og opsigelse af den pågældende medarbejder bortskaffes. Hændelsen, der udløser opbevaringsperioden på 10 år, er den medarbejder, der forlader organisationen. 
-    
+
 - **Kontraktudløb** Lad os antage, at alle poster, der er relateret til kontrakter, skal opbevares i fem år fra det tidspunkt, hvor kontrakten udløber. Den hændelse, der udløser opbevaringsperioden på fem år, er kontraktens udløb. 
-    
+
 - **Produktlevetid** Din organisation kan have opbevaringskrav, der er relateret til den sidste produktionsdato for produkter for indhold, f.eks. tekniske specifikationer. I dette tilfælde er den sidste produktionsdato den hændelse, der udløser opbevaringsperioden. 
-    
-Hændelsesbaseret opbevaring bruges typisk som en del af en datastyringsproces. Det betyder, at:
+
+Hændelsesbaseret opbevaring, også kaldet "hændelsesbaseret opbevaring", bruges typisk sammen med processer til administration af poster. Det betyder, at:
 
 - Opbevaringsmærkater, der er baseret på hændelser, markerer også normalt elementer som en post som en del af en løsning til datastyring. Du kan finde flere oplysninger under [Få mere at vide om datastyring](records-management.md).
 
 - Et dokument, der er blevet erklæret som en post, men hvis hændelsesudløser endnu ikke er sket, bevares på ubestemt tid. Indtil en hændelse udløser opbevaringsperioden for dette dokument, som derefter udløber, kan poster ikke slettes permanent.
 
-- Opbevaringsmærkater, der er baseret på hændelser, udløser normalt en dispositionsgennemgang i slutningen af opbevaringsperioden, så en dataadministrator manuelt kan gennemse og fjerne indholdet. Du kan få flere oplysninger under [Fordeling af indhold](disposition.md).
+- Opbevaringsmærkater, der er baseret på hændelser, udløser ofte en dispositionsgennemgang i slutningen af opbevaringsperioden, så en dataadministrator manuelt kan gennemse og fjerne indholdet. Du kan få flere oplysninger under [Fordeling af indhold](disposition.md).
 
-En opbevaringsmærkat, der er baseret på en hændelse, har de samme egenskaber som enhver opbevaringsmærkat i Microsoft 365. Du kan finde flere oplysninger under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).
+En opbevaringsmærkat, der er baseret på en hændelse, har de samme egenskaber som enhver opbevaringsmærkat i Microsoft Purview. Du kan finde flere oplysninger under [Få mere at vide om opbevaringspolitikker og opbevaringsmærkater](retention.md).
 
 ## <a name="understanding-the-relationship-between-event-types-labels-events-and-asset-ids"></a>Om relationen mellem hændelsestyper, mærkater, hændelser og aktiv-id'er
 
@@ -77,7 +77,7 @@ Det er vigtigt at forstå, at hvis du ikke angiver et aktiv-id eller nøgleord f
 
 Til sidst skal du huske, at hver opbevaringsmærkat har sine egne opbevaringsindstillinger. I dette eksempel angiver de alle 10 år, men det er muligt for en hændelse at udløse opbevaringsmærkater, hvor hver etiket har en anden opbevaringsperiode.
   
-## <a name="how-to-set-up-event-driven-retention"></a>Sådan konfigurerer du hændelsesbaseret opbevaring
+## <a name="how-to-set-up-event-based-retention"></a>Sådan konfigurerer du hændelsesbaseret opbevaring
 
 Arbejdsproces på højt niveau for hændelsesbaseret opbevaring:
   

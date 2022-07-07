@@ -15,12 +15,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: 6edfd60b5f5a3d10200191cd676fb66fa72ec1ba
-ms.sourcegitcommit: 4c7b34fc46be8f5faf33139c6c7b6efaf43def27
+ms.openlocfilehash: b76735130d768edfa9c71b25081040a7f4b6718c
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66556762"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66686003"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 
@@ -38,7 +38,7 @@ Sørg for, at du opfylder følgende krav, før du starter konfigurationsprocesse
 | Abonnement | Microsoft 365 Business Premium eller Microsoft 365 til kampagner <br/><br/> Hvis du vil starte en prøveversion eller købe dit abonnement, skal du se følgende artikler: <br/>- [Hent Microsoft 365 Business Premium](get-microsoft-365-business-premium.md)<br/>- [Hent Microsoft 365 til kampagner](get-microsoft-365-campaigns.md) |
 | Tilladelser  | Hvis du vil fuldføre den indledende konfigurationsproces, skal du være global Administration. [Få mere at vide om administratorroller](../admin/add-users/about-admin-roles.md). |
 | Krav til browser | Microsoft Edge, Safari, Chrome eller Firefox. [Få mere at vide om krav til browser](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources#coreui-heading-uyetipy).  |
-| Operativsystem | **Windows**: Windows 11, Windows 10, Windows 8.1, Windows Server 2019 eller nyere eller Windows Server 2016<br/><br/>**macOS**: En af de tre nyeste versioner af macOS |
+| Operativsystem | **Windows**: Windows 11, Windows 10, Windows 8.1<br/>**macOS**: En af de tre nyeste versioner af macOS <br/>I øjeblikket understøtter Microsoft 365 Business Premium og den separate version af Microsoft Defender til virksomheder ikke servere.  |
 
 > [!TIP]
 > Du kan finde flere detaljerede oplysninger om Microsoft 365, Office og systemkrav under [Microsoft 365- og Office-ressourcer](https://www.microsoft.com/microsoft-365/microsoft-365-and-office-resources).
