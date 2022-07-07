@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at beskytte indhold på SharePoint- og Microsoft Teams-websteder og Microsoft 365-grupper.
-ms.openlocfilehash: 17b1a2aab1da0e2c901aac14b3bf675cbbabe740
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 53278feccc7b2741453c20d37bbd995226a21dbe
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66628677"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662534"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsmærkater til at beskytte indhold i Microsoft Teams, Microsoft 365-grupper og SharePoint-websteder
 
@@ -50,7 +50,7 @@ Indholdet i disse objektbeholdere arver dog ikke mærkaterne til klassificeringe
 
 Før du aktiverer følsomhedsmærkater for objektbeholdere og konfigurerer følsomhedsmærkater for de nye indstillinger, kan brugerne se og anvende følsomhedsmærkater i deres apps. Fra Word:
 
-![En følsomhedsmærkat, der vises i Word Desktop-appen.](../media/sensitivity-label-word.png)
+:::image type="content" source=".. /media/sensitivity-label-word.png" alt-text="En følsomhedsmærkat, der vises i Word Desktop-appen." lightbox=".. /media/sensitivity-label-word.png"
 
 Når du har aktiveret og konfigureret følsomhedsmærkater for objektbeholdere, kan brugerne derudover se og anvende følsomhedsmærkater på Microsoft-teamwebsteder, Microsoft 365-grupper og SharePoint-websteder. Når du f.eks. opretter et nyt teamwebsted fra SharePoint:
 
@@ -301,7 +301,7 @@ På rullelisten vises navnenavnene for markeringen, og hjælpikonet viser alle n
 
 Når mærkaten anvendes, og brugerne navigerer til webstedet, får de vist navnet på mærkaten og anvendte politikker. Dette websted er f.eks. markeret som **Fortroligt**, og indstillingen for beskyttelse af personlige oplysninger er angivet til **Privat**:
 
-![Et websted, hvor der er anvendt en følsomhedsmærkat.](../media/sensitivity-label-site.png)
+:::image type ="content" source="../media/sensitivity-label-site.png" alt-text="Et websted, hvor der er anvendt en følsomhedsmærkat." lightbox="../media/sensitivity-label-site.png":::
 
 ### <a name="use-powershell-to-apply-a-sensitivity-label-to-multiple-sites"></a>Brug PowerShell til at anvende en følsomhedsmærkat på flere websteder
 
@@ -341,7 +341,7 @@ Med denne række kommandoer kan du mærke flere websteder på tværs af din leje
 
 Hvis du vil have vist, sortere og søge i de anvendte følsomhedsmærkater, skal du bruge <a href="https://go.microsoft.com/fwlink/?linkid=2185220" target="_blank">**Aktive websteder**</a> i det nye SharePoint Administration. Du skal muligvis først tilføje kolonnen **Følsomhed** :
 
-![Kolonnen Følsomhed på siden Aktive websteder.](../media/manage-site-sensitivity-labels.png)
+:::image type="content" source=".. /media/manage-site-sensitivity-labels.png" alt-text="Kolonnen Følsomhed på siden Aktive websteder." lightbox=".. /media/manage-site-sensitivity-labels.png"
 
 Du kan finde flere oplysninger om administration af websteder fra siden Aktive websteder, herunder hvordan du tilføjer en kolonne, [under Administrer websteder i det nye SharePoint Administration](/sharepoint/manage-sites-in-new-admin-center).
 
@@ -451,7 +451,7 @@ For at hjælpe dig med at administrere sameksistensen af følsomhedsmærkater og
 ## <a name="auditing-sensitivity-label-activities"></a>Overvågning af aktiviteter for følsomhedsmærkater
 
 > [!IMPORTANT]
-> Hvis du kun bruger mærkatadskillelse ved kun at vælge **området Grupper & websteder** for etiketter, der beskytter objektbeholdere: På grund af den registrerede overvågningshændelse for følsomhedsovertrædelse for **dokumenter** og mail, der er beskrevet i dette afsnit, bør du overveje at [sortere mærkater](sensitivity-labels.md#label-priority-order-matters) før etiketter, der har et område for **Filer & mails**. 
+> Hvis du kun bruger mærkatadskillelse ved kun at vælge **området Grupper & websteder** for etiketter, der beskytter objektbeholdere: På grund af den registrerede overvågningshændelse for **følsomhedsovertrædelse for dokumenter** og mail, der er beskrevet i dette afsnit, bør du overveje at [sortere mærkater](sensitivity-labels.md#label-priority-order-matters) før etiketter, der har et område for **Elementer**. 
 
 Hvis nogen uploader et dokument til et websted, der er beskyttet med en følsomhedsmærkat, og deres dokument har en følsomhedsmærkat med [højere prioritet](sensitivity-labels.md#label-priority-order-matters) end den følsomhedsmærkat, der er anvendt på webstedet, blokeres denne handling ikke. Du har f.eks. anvendt mærkaten **Generelt** på et SharePoint-websted, og nogen uploader et dokument med navnet **Fortroligt** til dette websted. Da en følsomhedsmærkat med en højere prioritet identificerer indhold, der er mere følsomhed end indhold, der har en lavere prioritet, kan denne situation være et sikkerhedsproblem.
 

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Administration Teams brugeraktivitetsrapporter
+title: Microsoft 365 Administration Teams-brugeraktivitetsrapporter
 ms.author: kwekua
 author: kwekua
 manager: scotv
@@ -18,33 +18,35 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du får Microsoft Teams brugeraktivitetsrapport og får indsigt i Teams-aktiviteten i din organisation.
-ms.openlocfilehash: adf9952f27c5605c54f6fa31710b44519cf8684c
-ms.sourcegitcommit: db1e48af88995193f15bbd5962f5101a6088074b
+description: Få mere at vide om, hvordan du henter Microsoft Teams-brugeraktivitetsrapporten og får indsigt i Teams-aktiviteten i din organisation.
+ms.openlocfilehash: a799ef42fb0ecfd3b1c6aae6d4daa8a8da8415ab
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/23/2022
-ms.locfileid: "65636542"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662740"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365 rapporter i Administration – Microsoft Teams brugeraktivitet
+# <a name="microsoft-365-reports-in-the-admin-center---microsoft-teams-user-activity"></a>Microsoft 365-rapporter i Administration – Microsoft Teams-brugeraktivitet
 
-Dashboardet Microsoft 365 Rapporter viser dig aktivitetsoversigten på tværs af produkterne i din organisation. Det giver dig mulighed for at få detaljeadgang til individuelle rapporter på produktniveau for at give dig mere detaljeret indsigt i aktiviteterne i hvert produkt. Se [emnet Oversigt over rapporter](activity-reports.md). I Microsoft Teams brugeraktivitetsrapport kan du få indsigt i den Microsoft Teams aktivitet i din organisation.
+Dashboardet Microsoft 365-rapporter viser dig aktivitetsoversigten på tværs af produkterne i din organisation. Det giver dig mulighed for at få detaljeadgang til individuelle rapporter på produktniveau for at give dig mere detaljeret indsigt i aktiviteterne i hvert produkt. Se [emnet Oversigt over rapporter](activity-reports.md). I Microsoft Teams-brugeraktivitetsrapporten kan du få indsigt i Microsoft Teams-aktiviteten i din organisation.
  
-## <a name="how-to-get-to-the-microsoft-teams-user-activity-report"></a>Sådan får du adgang til rapporten over Microsoft Teams brugeraktivitet
+## <a name="how-to-get-to-the-microsoft-teams-user-activity-report"></a>Sådan får du adgang til Microsoft Teams-brugeraktivitetsrapporten
 
-1. I Administration skal du gå til siden **Rapportanvendelse**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank"></a>
+1. I Administration skal du gå til **Rapporter** og derefter vælge **Forbrug**.
 
-2. Klik på knappen **Vis mere** på Microsoft Teams aktivitetskortet på startsiden for dashboardet.
+2. Klik på knappen **Vis mere** på aktivitetskortet i Microsoft Teams på startsiden for dashboardet.
 
-## <a name="interpret-the-microsoft-teams-user-activity-report"></a>Fortolkning af rapporten over Microsoft Teams brugeraktivitet
+## <a name="interpret-the-microsoft-teams-user-activity-report"></a>Fortolkning af Microsoft Teams-brugeraktivitetsrapporten
 
-Du kan få vist brugeraktiviteten i Teams rapport ved at vælge fanen **Brugeraktivitet**. <br/>![Microsoft 365 rapporter – Microsoft Teams brugeraktivitet.](../../media/user-activity-charts.png)
+Du kan få vist brugeraktiviteten i Teams-rapporten ved at vælge fanen **Brugeraktivitet** . <br/>![Microsoft 365-rapporter – Microsoft Teams-brugeraktivitet.](../../media/user-activity-charts.png)
 
-Vælg **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.  <br/> ![Teams brugeraktivitetsrapport – vælg kolonner.](../../media/user-activity-columns.png)
+Vælg **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.  
 
-Du kan også eksportere rapportdataene til en Excel .csv fil ved at vælge linket **Eksportér**. Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. Hvis du har mindre end 2.000 brugere, kan du sortere og filtrere i tabellen i selve rapporten. Hvis du har mere end 2.000 brugere, skal du eksportere dataene for at kunne filtrere og sortere dem. Det eksporterede format for **lydtid**, **videotid** og **skærmdelingstid** følger ISO8601-varighedsformatet.
+![Rapport over Teams-brugeraktivitet – vælg kolonner.](../../media/user-activity-columns.png)
 
-Den **Microsoft Teams brugeraktivitetsrapport** kan ses for tendenser for de seneste 7 dage, 30 dage, 90 dage eller 180 dage. Men hvis du vælger en bestemt dag i rapporten, viser tabellen data for op til 28 dage fra dags dato (ikke den dato, hvor rapporten blev genereret).
+Du kan også eksportere rapportdataene til en Excel-.csv-fil ved at vælge linket **Eksportér** . Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. Det eksporterede format for **lydtid**, **videotid** og **skærmdelingstid** følger ISO8601-varighedsformatet.
+
+**Microsoft Teams-brugeraktivitetsrapporten** kan ses for tendenser for de seneste 7 dage, 30 dage, 90 dage eller 180 dage. Men hvis du vælger en bestemt dag i rapporten, viser tabellen data for op til 28 dage fra dags dato (ikke den dato, hvor rapporten blev genereret).
 
 For at sikre datakvaliteten udfører vi daglige datavalideringskontroller i de seneste tre dage og udfylder eventuelle huller, der er registreret. Du kan bemærke forskelle i historiske data under processen.
 
@@ -61,7 +63,7 @@ For at sikre datakvaliteten udfører vi daglige datavalideringskontroller i de s
 |Chatbeskeder   <br/> |Antallet af entydige meddelelser, som brugeren har sendt i en privat chat i den angivne tidsperiode.  <br/> |
 |Møder i alt   <br/> |Antallet af onlinemøder, som brugeren har deltaget i i den angivne tidsperiode.  <br/> |
 |1:1 opkald   <br/> | Antallet af 1:1-opkald, som brugeren har deltaget i i den angivne tidsperiode.  <br/> |
-|Seneste aktivitetsdato (UTC)  <br/> |Den sidste dato, hvor brugeren deltog i en Microsoft Teams aktivitet.<br/> |
+|Seneste aktivitetsdato (UTC)  <br/> |Den sidste dato, hvor brugeren deltog i en Microsoft Teams-aktivitet.<br/> |
 |Møder deltog ad hoc   <br/> | Antallet af ad hoc-møder, som en bruger har deltaget i i den angivne tidsperiode.  <br/> |
 |Møder organiseret ad hoc <br/> |Antallet af ad hoc-møder, som en bruger har arrangeret i den angivne tidsperiode. <br/>|
 |Samlede organiserede møder  <br/> |Summen af engangs planlagte, tilbagevendende, ad hoc- og ikke-klassificerede møder, som en bruger har organiseret i løbet af den angivne tidsperiode.  <br/> |
@@ -71,14 +73,14 @@ For at sikre datakvaliteten udfører vi daglige datavalideringskontroller i de s
 |Møder deltog i planlagte engangsmøder  <br/> |Antallet af engangsmøder, som en bruger har deltaget i i løbet af den angivne tidsperiode.  <br/> |
 |Møder, der har deltaget i planlagte tilbagevendende møder  <br/> |Antallet af tilbagevendende møder, som en bruger deltog i i den angivne tidsperiode.  <br/> |
 |Er licenseret  <br/> |Valgt, hvis brugeren har licens til at bruge Teams. <br/>|
-|Anden aktivitet  <br/>|Brugeren er aktiv, men har udført andre aktiviteter end de eksponerede handlingstyper, der tilbydes i rapporten (afsendelse eller svar på kanalmeddelelser og chatbeskeder, planlægning eller deltagelse i 1:1-opkald og -møder). Eksempler på handlinger er, når en bruger ændrer status for Teams eller Teams statusmeddelelse eller åbner et kanalmeddelelsesindlæg, men ikke svarer.  <br/>|
+|Anden aktivitet  <br/>|Brugeren er aktiv, men har udført andre aktiviteter end de eksponerede handlingstyper, der tilbydes i rapporten (afsendelse eller svar på kanalmeddelelser og chatbeskeder, planlægning eller deltagelse i 1:1-opkald og -møder). Eksempler på handlinger er, når en bruger ændrer Status for Teams eller Teams-statusmeddelelsen eller åbner et kanalmeddelelsesindlæg, men ikke svarer.  <br/>|
 
 
 ## <a name="make-the-user-specific-data-anonymous"></a>Gør de brugerspecifikke data anonyme
 
-Hvis du vil gøre dataene i Teams brugeraktivitetsrapport anonyme, skal du være global administrator. Dette skjuler identificerbare oplysninger (ved hjælp af MD5-hashen), f.eks. vist navn, mail og Azure Active Directory objekt-id i rapporten og deres eksport.
+Hvis du vil gøre dataene i Teams-brugeraktivitetsrapporten anonyme, skal du være global administrator. Dette skjuler identificerbare oplysninger (ved hjælp af MD5-hashen), f.eks. vist navn, mail og Azure Active Directory-objekt-id i rapporten og deres eksport.
 
-1. I Microsoft 365 Administration skal du gå til **Indstillinger** >  **Ellerg Indstillinger**, og under fanen **Tjenester** skal du vælge **Rapporter**.
+1. I Microsoft 365 Administration skal du gå til **Indstillinger** > **Organisationsindstillinger** og vælge **Rapporter** under fanen **Tjenester**.
 
 2. Vælg **Rapporter**, og vælg derefter Vis **anonyme id'er**. Denne indstilling anvendes både på forbrugsrapporterne i Microsoft 365 Administration og Teams Administration.
 
@@ -86,6 +88,6 @@ Hvis du vil gøre dataene i Teams brugeraktivitetsrapport anonyme, skal du være
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Microsoft Teams rapport over enhedsforbrug](../activity-reports/microsoft-teams-device-usage-preview.md)
+[Rapport over enhedsforbrug i Microsoft Teams](../activity-reports/microsoft-teams-device-usage-preview.md)
 
-[Microsoft Teams forbrugsaktivitetsrapport](../activity-reports/microsoft-teams-usage-activity.md) 
+[Microsoft Teams-rapport over forbrugsaktivitet](../activity-reports/microsoft-teams-usage-activity.md) 

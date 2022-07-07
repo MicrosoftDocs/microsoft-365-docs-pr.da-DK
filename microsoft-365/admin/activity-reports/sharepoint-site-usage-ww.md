@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Administration SharePoint rapporter over webstedsforbrug
+title: Microsoft 365 Administration anvendelsesrapporter for SharePoint-websteder
 f1.keywords:
 - NOCSH
 ms.author: kwekua
@@ -21,22 +21,22 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få rapporten over SharePoint webstedsforbrug for at finde ud af, hvor mange filer brugerne gemmer på SharePoint websteder, hvor mange der aktivt bruges, og hvor meget lagerplads der bruges i alt.
-ms.openlocfilehash: a99884863db3ffc1f2577358abef6d287d01e2d1
-ms.sourcegitcommit: a7e1d155939e862337271fbe38bf26f62bd49bdd
+description: Hent forbrugsrapporten for SharePoint-webstedet for at vide, hvor mange filer brugerne gemmer på SharePoint-websteder, hvor mange der aktivt bruges, og hvor meget lagerplads der bruges i alt.
+ms.openlocfilehash: 0be00d712ba4a65ff14b10aadd6f74f2d5f82b43
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/14/2022
-ms.locfileid: "64846987"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662696"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Microsoft 365 Rapporter i Administration – SharePoint brug af websted
+# <a name="microsoft-365-reports-in-the-admin-center---sharepoint-site-usage"></a>Microsoft 365-rapporter i Administration – Brug af SharePoint-websted
 
-Som Microsoft 365 administrator viser dashboardet Rapporter aktivitetsoversigten på tværs af forskellige produkter i din organisation. Det giver dig mulighed for at foretage detailudledning for at få mere detaljeret indsigt i de aktiviteter, der er specifikke for hvert produkt. Du kan f.eks. få en overordnet visning af den værdi, du får fra SharePoint med hensyn til det samlede antal filer, som brugerne gemmer på SharePoint websteder, hvor mange filer der aktivt bruges, og det lager, der forbruges på alle disse websteder. Derefter kan du analysere rapporten over SharePoint webstedsforbrug for at forstå tendenser og oplysninger på webstedsniveau for alle websteder. 
+Som Microsoft 365-administrator viser dashboardet Rapporter dig aktivitetsoversigten på tværs af forskellige produkter i din organisation. Det giver dig mulighed for at foretage detailudledning for at få mere detaljeret indsigt i de aktiviteter, der er specifikke for hvert produkt. Du kan f.eks. få en overordnet visning af den værdi, du får fra SharePoint, i forhold til det samlede antal filer, som brugerne gemmer på SharePoint-websteder, hvor mange filer der aktivt bruges, og det lager, der forbruges på tværs af alle disse websteder. Derefter kan du analysere forbrugsrapporten for SharePoint-webstedet for at forstå tendenser og oplysninger på webstedsniveau for alle websteder. 
 
-## <a name="how-to-get-to-the-sharepoint-site-usage-report"></a>Sådan får du vist rapporten over brug af SharePoint websted
+## <a name="how-to-get-to-the-sharepoint-site-usage-report"></a>Sådan kommer du til forbrugsrapporten for SharePoint-webstedet
 
 1. I Administration skal du gå til siden **Rapportanvendelse**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank"></a> 
-2. På startsiden for dashboardet skal du klikke på knappen **Vis mere** på kortet SharePoint.
+2. Klik på knappen **Vis mere** på SharePoint-kortet på startsiden for dashboardet.
 
 ## <a name="show-user-details-in-the-reports"></a>Vis brugeroplysninger i rapporterne
 
@@ -48,25 +48,25 @@ Brugerlisten vil se sådan ud:
   
 Globale administratorer kan gendanne denne ændring for deres lejer og vise identificerbare brugeroplysninger, hvis organisationens praksis for beskyttelse af personlige oplysninger tillader det. Det kan opnås i Microsoft 365 Administration ved at følge disse trin:
   
-1. I Administration skal du gå til siden **Indstillinger** \> **Org Indstillinger** \> **Services**.
+1. I Administration skal du gå til siden **Indstillinger** \> **for organisationsindstillingertjenester**\>.
 
 2. Vælg **Rapporter**. 
   
 3. Fjern markeringen af sætningen **Vis de identificerede navne for brugere, grupper og websteder i alle rapporter,** og gem derefter dine ændringer. 
   
-## <a name="interpret-the-sharepoint-site-usage-report"></a>Fortolkning af rapporten over anvendelse af SharePoint websted
+## <a name="interpret-the-sharepoint-site-usage-report"></a>Fortolkning af forbrugsrapporten for SharePoint-webstedet
 
-Du kan få vist brugen af webstedet i SharePoint rapport ved at vælge fanen **Webstedsforbrug**.
+Du kan få vist brugen af webstedet i SharePoint-rapporten ved at vælge fanen **Webstedsforbrug** .
 
-:::image type="content" alt-text="Microsoft 365 rapporter – Microsoft SharePoint rapport over webstedsforbrug." source="../../media/d1cb6200-e81c-460b-9d05-53f4bd7cf5ee.png" lightbox="../../media/d1cb6200-e81c-460b-9d05-53f4bd7cf5ee.png":::
+:::image type="content" alt-text="Microsoft 365-rapporter – Forbrugsrapport for Microsoft SharePoint-websted." source="../../media/d1cb6200-e81c-460b-9d05-53f4bd7cf5ee.png" lightbox="../../media/d1cb6200-e81c-460b-9d05-53f4bd7cf5ee.png":::
 
 Vælg **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.
 
-:::image type="content" alt-text="SharePoint rapport over brug af websted – vælg kolonner." source="../../media/71ac3195-c494-40c1-9346-a858125ef6df.png":::
+:::image type="content" alt-text="Rapport over anvendelse af SharePoint-websted – vælg kolonner." source="../../media/71ac3195-c494-40c1-9346-a858125ef6df.png":::
 
-Du kan også eksportere rapportdataene til en Excel .csv fil ved at vælge linket **Eksportér**. Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. Hvis du har mindre end 2.000 brugere, kan du sortere og filtrere i tabellen i selve rapporten. Hvis du har mere end 2.000 brugere, skal du eksportere dataene for at kunne filtrere og sortere dem. 
+Du kan også eksportere rapportdataene til en Excel-.csv-fil ved at vælge linket **Eksportér** . Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. 
 
-Den **SharePoint webstedsforbrugsrapport** kan ses for tendenser for de seneste 7 dage, 30 dage, 90 dage eller 180 dage. Men hvis du vælger en bestemt dag i rapporten, viser tabellen data for op til 28 dage fra dags dato (ikke den dato, hvor rapporten blev genereret).
+Brugsrapporten for **SharePoint-webstedet** kan ses for tendenser for de seneste 7 dage, 30 dage, 90 dage eller 180 dage. Men hvis du vælger en bestemt dag i rapporten, viser tabellen data for op til 28 dage fra dags dato (ikke den dato, hvor rapporten blev genereret).
   
 |Metriske|Beskrivelse|
 |:-----|:-----|
@@ -81,8 +81,8 @@ Den **SharePoint webstedsforbrugsrapport** kan ses for tendenser for de seneste 
 |Geografisk placering  | Webstedets Geo-placering.  |
 |Filer  |Antallet af filer på webstedet. |
 |Aktive filer  | Antallet af aktive filer på webstedet. En fil anses for at være aktiv, hvis den er blevet gemt, synkroniseret, ændret eller delt inden for den angivne tidsperiode.<br/> BEMÆRK! Hvis filer blev fjernet i den angivne tidsperiode for rapporten, kan antallet af aktive filer, der vises i rapporten, være større end det aktuelle antal filer på webstedet.  |
-|Storage brugt (MB)  |Den mængde lagerplads, der i øjeblikket bruges på webstedet.  |
-|Storage allokeret (MB)  |Den maksimale lagermængde, der er allokeret til webstedet.  |
+|Anvendt lager (MB)  |Den mængde lagerplads, der i øjeblikket bruges på webstedet.  |
+|Allokeret lagerplads (MB)  |Den maksimale lagermængde, der er allokeret til webstedet.  |
 |Sidevisninger  |Antallet af gange, sider blev vist på webstedet.  |
 |Besøgte sider  |Antallet af entydige sider, der blev besøgt på webstedet.  |
 |Antal anonyme links  |Det antal gange, dokumenter eller mapper deles ved hjælp af "Alle med linket" på webstedet.  |

@@ -23,12 +23,12 @@ ms.custom:
 search.appverid: MET150
 description: Den metode, du bruger til at fjerne tildelingen af produktlicenser, afhænger af, om du fjerner tildelingen af licenser fra bestemte brugere eller fra et bestemt produkt.
 ms.date: 06/23/2022
-ms.openlocfilehash: 87e62b8c39e5ba0a8f61caeea3560438a716881d
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 956391e8eeda1d17fdba76cf406a0291d1850b6f
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486170"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663498"
 ---
 # <a name="unassign-microsoft-365-licenses-from-users"></a>Fjern tildeling af Microsoft 365-licenser fra brugere
 
@@ -129,7 +129,7 @@ Når du bruger siden **Aktive brugere** til at fjerne tildelingen af licenser, f
 
 ## <a name="next-steps"></a>Næste trin
 
-Hvis du ikke vil [overdrage ubrugte licenser til andre brugere](../../managed-desktop/get-started/assign-licenses.md), kan du overveje at [fjerne licenserne fra dit abonnement](../../commerce/licenses/buy-licenses.md) , så du ikke betaler for flere licenser, end du har brug for.
+Hvis du ikke vil [overdrage ubrugte licenser til andre brugere](assign-licenses-to-users.md), kan du overveje at [fjerne licenserne fra dit abonnement](../../commerce/licenses/buy-licenses.md) , så du ikke betaler for flere licenser, end du har brug for.
 
 ## <a name="related-content"></a>Relateret indhold
 

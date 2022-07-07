@@ -18,12 +18,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du konfigurerer domænebaseret meddelelsesgodkendelse, -rapportering og -overensstemmelse (DMARC) for at validere meddelelser, der er sendt fra din organisation.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: a3e5cc711aef4e81833540572027b8d06087c510
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 55fd24a033526053e8006c3d70f3abeeef1c94d2
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486923"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663388"
 ---
 # <a name="use-dmarc-to-validate-email"></a>Brug DMARC til at validere mail
 
@@ -100,7 +100,7 @@ Du behøver ikke at gøre noget for at konfigurere DMARC for mails, du modtager 
 
 ## <a name="set-up-dmarc-for-outbound-mail-from-microsoft-365"></a>Konfigurer DMARC til udgående mail fra Microsoft 365
 
-Hvis du bruger Microsoft 365, men du ikke bruger et brugerdefineret domæne (du bruger onmicrosoft.com), behøver du ikke at foretage dig andet. SPF er allerede konfigureret til dig, og Microsoft 365 genererer automatisk en DKIM-signatur for din udgående post. Der er ikke mere at gøre for at konfigurere DMARC for din organisation. Du kan få flere oplysninger om denne signatur under [Standardfunktionsmåde for DKIM og Microsoft 365](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior).
+Hvis du bruger Microsoft 365, men du ikke bruger et brugerdefineret domæne (du bruger onmicrosoft.com), er SPF allerede konfigureret for dig, og Microsoft 365 genererer automatisk en DKIM-signatur til dine udgående mails (du kan få flere oplysninger om denne signatur under [Standardfunktionsmåde for DKIM og Microsoft 365](use-dkim-to-validate-outbound-email.md#DefaultDKIMbehavior)). Hvis du vil konfigurere DMARC for din organisation, skal du [oprette DMARC TXT-posten](#step-4-form-the-dmarc-txt-record-for-your-domain) for det onmicrosoft.com domæne og publicere den til DNS via [Office 365 Admin Center](https://admin.microsoft.com) > Indstillinger > Domæner > klikke på onmicrosoft.com domæne > Tilføj post.
 
  Hvis du har et brugerdefineret domæne eller bruger Exchange-servere i det lokale miljø sammen med Microsoft 365, skal du manuelt konfigurere DMARC til dine udgående mails. Konfiguration af DMARC for dit brugerdefinerede domæne omfatter følgende trin:
 
@@ -281,4 +281,4 @@ Vil du have flere oplysninger om DMARC? Disse ressourcer kan hjælpe.
 
 [**Brug DKIM til at validere udgående mail, der er sendt fra dit brugerdefinerede domæne i Microsoft 365**](use-dkim-to-validate-outbound-email.md)
 
-[Brug ARC-afsendere, der er tillid til, til legitime mailflow](/microsoft-365/security/office-365-security/use-arc-exceptions-to-mark-trusted-arc-senders?view=o365-21vianet&branch=tracyp_emailauth)
+[Brug ARC-afsendere, der er tillid til, til legitime mailflow](/microsoft-365/security/office-365-security/use-arc-exceptions-to-mark-trusted-arc-senders?view=o365-21vianet)

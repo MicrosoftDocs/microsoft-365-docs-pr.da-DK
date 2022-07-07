@@ -21,12 +21,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: b80bbb747ab9a0aefebaa4dd5721370ba56a3890
-ms.sourcegitcommit: f181e110cdb983788a86f30d5bb018e53c83e64d
+ms.openlocfilehash: b0c9e5793ec0ffc97cbbac0308a7e362da279e1b
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66057709"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663585"
 ---
 # <a name="investigate-alerts-in-microsoft-365-defender"></a>Undersøg underretninger i Microsoft 365 Defender
 
@@ -67,7 +67,7 @@ Du kan filtrere beskeder i henhold til disse kriterier:
 
 Du skal have en af følgende roller for at få adgang til Microsoft Defender for Office 365 beskeder:
 
-- For globale Azure Active Directory (Azure AD) roller:
+- For globale Azure Active Directory-roller (Azure AD):
 
    - Global administrator
 
@@ -178,6 +178,86 @@ Fanen **Anbefalinger** indeholder næste trins handlinger og råd til undersøge
 
 :::image type="content" source="../../media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" lightbox="../../media/investigate-alerts/alerts-ss-alerts-recommendations-example.png" alt-text="Eksempel på anbefalinger til beskeder":::
 
+ 
+## <a name="suppress-an-alert"></a>Skjul en besked
+
+Som SOC-analytiker (Security Operations Center) er et af de største problemer at triaging det eneste antal beskeder, der udløses dagligt. I forbindelse med beskeder med lavere prioritet skal en analytiker stadig prioritere og løse den besked, der normalt er en manuel proces. En SOC-analytikers tid er værdifuld og vil kun fokusere på vigtige beskeder med høj alvorsgrad og høj prioritet.
+
+Undertrykkelse af beskeder giver mulighed for at justere og administrere beskeder på forhånd. Dette strømliner beskedkøen og sparer triagetid ved at skjule eller løse beskeder automatisk, hver gang der opstår en bestemt forventet organisationsfunktionsmåde, og regelbetingelserne er opfyldt. 
+
+Du kan oprette regelbetingelser baseret på "bevistyper", f.eks. filer, processer, planlagte opgaver og mange andre bevistyper, der udløser beskeden. Når du har oprettet reglen, kan brugeren anvende reglen på den valgte besked eller en hvilken som helst beskedtype, der opfylder regelbetingelserne, for at undertrykke beskeden. 
+
+> [!NOTE]
+> Det anbefales ikke at undertrykke beskeder. I visse situationer udløser et kendt internt virksomhedsprogram eller sikkerhedstest dog en forventet aktivitet, og du vil ikke se disse beskeder. Så du kan oprette en undertrykkelsesregel for beskeden. 
+
+### <a name="create-rule-conditions-to-suppress-alerts"></a>Opret regelbetingelser for at undertrykke beskeder
+
+Sådan opretter du en regel for undertrykkelse for beskeder:
+
+1. Vælg den undersøgte besked. På hovedbeskedsiden skal du vælge **Opret regel for undertrykkelse** i afsnittet med oversigtsoplysninger på beskedsiden. 
+
+    :::image type="content" source="../../media/investigate-alerts/suppression-click.png" lightbox="../../media/investigate-alerts/suppression-click.png" alt-text="Skærmbillede af handlingen Opret adskillelsesregel.":::
+
+2. I ruden **Opret regel for undertrykkelse** skal du **kun vælge denne beskedtype** for at anvende reglen på den valgte besked.
+
+    Hvis du vil anvende reglen på en hvilken som helst beskedtype, der opfylder regelbetingelserne, skal du dog vælge **En hvilken som helst beskedtype baseret på IOC-betingelser**.
+ 
+    IOC'er er indikatorer som f.eks. filer, processer, planlagte opgaver og andre bevistyper, der udløser beskeden.
+     
+3. I afsnittet **IOC'er** skal du vælge **En hvilken som helst IOC** for at undertrykke beskeden, uanset hvad "beviser" har forårsaget beskeden. 
+
+    Hvis du vil angive flere regelbetingelser, skal du vælge **Vælg IOCs**. Brug **AND**, **OR** og grupperingsindstillinger til at oprette relationer mellem disse flere "bevistyper", der forårsager beskeden.
+ 
+    1. I afsnittet **Betingelser** skal du f.eks. vælge den udløsende **bevisenhedsrolle: Triggering**, **Equals** og vælge bevistypen på rullelisten. 
+
+    :::image type="content" source="../../media/investigate-alerts/evidence-types-drop-down-list.png" alt-text="Skærmbillede af rullelisten Med bevistyper." lightbox="../../media/investigate-alerts/evidence-types-drop-down-list.png":::
+
+    2. Alle egenskaberne for dette 'bevis' udfyldes automatisk som en ny undergruppe i de respektive felter nedenfor.
+    :::image type="content" source="../../media/investigate-alerts/properties-evidence.png" alt-text="Skærmbillede af egenskaber for automatisk udfyldning af bevismateriale." lightbox="../../media/investigate-alerts/properties-evidence.png" :::
+
+    > [!NOTE]
+    > Der skelnes ikke mellem store og små bogstaver i betingelsesværdier. 
+
+    3. Du kan redigere og/eller slette egenskaberne for dette bevis i henhold til dit krav (ved hjælp af jokertegn, når det understøttes).
+
+    4. Andre end filer og processer, AMSI-script, WMI-hændelse og planlagte opgaver er nogle af de nyligt tilføjede bevistyper, som du kan vælge på rullelisten med bevistyper.
+    :::image type="content" source="../../media/investigate-alerts/other-evidence-types.png" alt-text="Skærmbillede af andre typer beviser." lightbox="../../media/investigate-alerts/other-evidence-types.png":::
+
+    5. Klik på **Tilføj filter** for at tilføje endnu en IOC. 
+    > [!NOTE]
+    > Hvis du vil føje mindst én IOC til regelbetingelsen, skal du undertrykke en hvilken som helst beskedtype.
+    
+4. Du kan også vælge **Udfyld automatisk alle beskeder 7 relaterede IOC'er** i afsnittet **IOC** for at tilføje alle beskedrelaterede bevistyper og deres egenskaber på én gang i afsnittet **Betingelser** .
+    :::image type="content" source="../../media/investigate-alerts/autofill-iocs.png" alt-text="Skærmbillede af automatisk udfyldning af alle beskedrelaterede IOCs." lightbox="../../media/investigate-alerts/autofill-iocs.png":::
+
+5. I afsnittet **Omfang** skal du angive omfanget i underafsnittet **Betingelser** ved at vælge en bestemt enhed, flere enheder, enhedsgrupper, hele organisationen eller efter bruger.
+    > [!NOTE]
+    > Du skal have Administration tilladelse, når **området** kun er angivet for **Bruger**. Administration tilladelse er ikke påkrævet, når **omfanget** er angivet for **Bruger** sammen med **enhed**, **enhedsgrupper**.
+
+:::image type="content" source="../../media/investigate-alerts/suppression-choose-scope.png" lightbox="../../media/investigate-alerts/suppression-choose-scope.png" alt-text="Skærmbillede af ruden til oprettelse af undertrykkelsesregel: Betingelser, Omfang, Handling.":::
+ 
+6. I afsnittet **Handling** skal du udføre den relevante handling af enten **Skjul besked** eller **Løs besked**.
+    Angiv **Navn**, **Kommentar**, og klik på **Gem**.
+
+7. **Undgå, at IOC'erne bliver blokeret i fremtiden:**<br>
+Når du gemmer undertrykkelsesreglen, kan du på siden **Oprettelse af regel for vellykket undertrykkelse** , der vises, føje de valgte IOC'er som indikatorer til "listen over tilladte" og forhindre dem i at blive blokeret i fremtiden. <br>
+Alle beskedrelaterede IOC'er vises på listen. <br>
+IOCs, der blev valgt under undertrykkelsesbetingelserne, vælges som standard.
+      1. Du kan f.eks. tilføje filer, der skal have tilladelse til at **vælge beviser (IOC), der skal tillades**. Som standard vælges den fil, der udløste beskeden.
+      1. Angiv området i det **Vælg område, der skal anvendes på**. Som standard er området for den relaterede besked valgt.
+      1. Klik på **Gem**. Nu er filen ikke blokeret, som den er på listen over tilladte.
+
+    :::image type="content" source="../../media/investigate-alerts/suppression-2-choose-iocs.png" lightbox="../../media/investigate-alerts/suppression-2-choose-iocs.png" alt-text="Skærmbillede af vellykket oprettelse af regel for undertrykkelse. ":::
+
+8.  Den nye funktionalitet til undertrykkelsesbeskeder er tilgængelig som standard. <br> Du kan dog skifte tilbage til den tidligere oplevelse i Microsoft 365 Defender portal ved at gå til **Indstillinger > Slutpunkter > Advarselsundertrykkelse** og derefter slå til/fra-knappen **Oprettelse af nye undertrykkelsesregler aktiveret**. 
+ 
+    :::image type="content" source="../../media/investigate-alerts/suppression-toggle.png" lightbox="../../media/investigate-alerts/suppression-toggle.png" alt-text="Skærmbillede af til/fra-funktionen til at slå funktionen til oprettelse af undertrykkelsesregel til/fra.":::
+
+9.  **Rediger eksisterende regler:** <br> Du kan altid tilføje eller ændre regelbetingelser og omfanget af nye eller eksisterende regler i Microsoft Defender-portalen ved at vælge den relevante regel og klikke på **Rediger regel**.    
+    Hvis du vil redigere eksisterende regler, skal du sikre, at til/fra-knappen **Oprettelse af nye undertrykkelsesregler** er aktiveret.         
+
+    :::image type="content" source="../../media/investigate-alerts/suppression-toggle-on-edit.png" lightbox="../../media/investigate-alerts/suppression-toggle-on-edit.png" alt-text="Skærmbillede af redigeringsregel for undertrykkelse.":::
+  
 ## <a name="resolve-an-alert"></a>Løs en besked
 
 Når du er færdig med at analysere en besked, og den kan løses, skal du gå til ruden **Administrer beskeder** for beskeden eller lignende beskeder og markere statussen som **Løst** og derefter klassificere den som en **Sand positiv** med en type trussel, en **oplysende, forventet aktivitet** med en aktivitetstype eller falsk **positiv**.
@@ -186,7 +266,7 @@ Klassificering af beskeder hjælper Microsoft 365 Defender med at forbedre regis
 
 ## <a name="use-power-automate-to-triage-alerts"></a>Brug Power Automate til at triage beskeder
 
-SecOps-teams (Modern Security Operations) har brug for automatisering for at fungere effektivt. For at fokusere på jagt efter og undersøge virkelige trusler bruger SecOps-teams Power Automate til at gennemgå listen over beskeder og fjerne dem, der ikke er trusler.  
+SecOps-teams (Modern Security Operations) har brug for automatisering for at fungere effektivt. For at fokusere på jagt efter og undersøge reelle trusler bruger SecOps-teams Power Automate til at gennemgå listen over beskeder og fjerne dem, der ikke er trusler.  
 
 ### <a name="criteria-for-resolving-alerts"></a>Kriterier for løsning af beskeder
 
@@ -196,17 +276,17 @@ SecOps-teams (Modern Security Operations) har brug for automatisering for at fun
 
 Hvis begge er sande, markerer SecOps beskeden som legitim rejse og løser den. Der sendes en meddelelse i Microsoft Teams, når beskeden er løst.
 
-### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Forbind Power Automate til Microsoft Defender for Cloud Apps
+### <a name="connect-power-automate-to-microsoft-defender-for-cloud-apps"></a>Forbind Power Automate med Microsoft Defender for Cloud Apps
 
-Hvis du vil oprette automatiseringen, skal du bruge et API-token, før du kan oprette forbindelse Power Automate til Microsoft Defender for Cloud Apps.
+Hvis du vil oprette automatiseringen, skal du bruge et API-token, før du kan oprette forbindelse mellem Power Automate og Microsoft Defender for Cloud Apps.
 
-1. Klik på **Indstillinger**, vælg **Sikkerhedsudvidelser**, og klik derefter på **Tilføj token** under fanen **API-tokens**.
+1. Klik på **Indstillinger**, vælg **Sikkerhedsudvidelser**, og klik derefter på **Tilføj token** under fanen **API-tokens** .
 
 2. Angiv et navn til dit token, og klik derefter på **Generér**. Gem tokenet, som du skal bruge det senere.
 
 ### <a name="create-an-automated-flow"></a>Opret et automatiseret flow
 
-Se denne korte video for at få mere at vide om, hvordan automatisering fungerer effektivt for at oprette en problemfri arbejdsproces, og hvordan du opretter forbindelse Power Automate til Defender for Cloud Apps. 
+Se denne korte video for at få mere at vide om, hvordan automatisering fungerer effektivt for at oprette en problemfri arbejdsproces, og hvordan du opretter forbindelse mellem Power Automate og Defender for Cloud Apps. 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWFIRn]
 
 ## <a name="next-steps"></a>Næste trin

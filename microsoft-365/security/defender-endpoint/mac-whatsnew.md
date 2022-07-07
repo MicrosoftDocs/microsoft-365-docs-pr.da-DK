@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 8cf11c82abf23d8041a8a7453e3e58082777a040
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: c33c0d9da44aa40c31c7f59de8304cc759fc0be2
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089232"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662214"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Nyheder i Microsoft Defender for Endpoint på Mac
 
@@ -31,6 +31,14 @@ ms.locfileid: "66089232"
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+
+## <a name="1017118-20122052171180"></a>101.71.18 (20.122052.17118.0)
+
+- `mdatp connectivity test` blev udvidet med en ekstra URL-adresse, som produktet kræver for at fungere korrekt. Den nye URL-adresse er [https://go.microsoft.com/fwlink/?linkid=2144709](https://go.microsoft.com/fwlink/?linkid=2144709).
+- Indtil nu har niveauet for produktloggen ikke været vedvarende mellem genstart af produktet. Fra og med denne version er der en ny kommandolinjeværktøjsparameter, der fastholder logniveauet. Den nye kommando er `mdatp log level persist --level <level>`.
+- Løste en fejl i produktinstallationspakken, der i sjældne tilfælde kan medføre tab af produkttilstand under opdateringer
+- Forbedringer af ydeevnen for filkopieringshandlinger og indbyggede macOS-programmer
+- Fejlrettelser
 
 ## <a name="1017019-20122051170190"></a>101.70.19 (20.122051.17019.0)
 
@@ -65,9 +73,9 @@ ms.locfileid: "66089232"
 
 ## <a name="1015950-20122021159500"></a>101.59.50 (20.122021.15950.0)
 
-- Denne version tilføjer understøttelse af macOS 12.3. Fra og med macOS 12.3 [fjerner Apple Python 2.7](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). Der forudinstalleres ingen Python-version på macOS som standard. **HANDLING ER NØDVENDIG**: 
+- Denne version tilføjer understøttelse af macOS 12.3. Fra og med macOS 12.3 [fjerner Apple Python 2.7](https://developer.apple.com/documentation/macos-release-notes/macos-12_3-release-notes). Der vil som standard ikke være installeret nogen Python-version på macOS. **HANDLING ER NØDVENDIG**: 
   - Brugerne skal opdatere Microsoft Defender for Endpoint til Mac til version 101.59.50 (eller nyere), før de opdaterer deres enheder til macOS Monterey 12.3 (eller nyere). Denne minimale version 101.59.50 er en forudsætning for at fjerne Python-relaterede problemer med Microsoft Defender for Endpoint til Mac på macOS Monterey.
-  - I forbindelse med fjerninstallationer skal eksisterende MDM-konfigurationer opdateres til Microsoft Defender for Endpoint til Mac version 101.59.50 (eller nyere). Hvis du pusher via MDM, vil en ældre Microsoft Defender for Endpoint til Mac-version til macOS Monterey 12.3 (eller nyere) resultere i en installationsfejl.
+  - I forbindelse med fjerninstallationer skal eksisterende MDM-konfigurationer opdateres til Microsoft Defender for Endpoint til Mac version 101.59.50 (eller nyere). Hvis du sender en ældre Microsoft Defender for Endpoint til Mac-versionen via MDM til macOS Monterey 12.3 (eller nyere), medfører det en installationsfejl.
 
 ## <a name="1015910-20122012159100"></a>101.59.10 (20.122012.15910.0)
 
@@ -86,7 +94,7 @@ ms.locfileid: "66089232"
   - Stien til programinstallationen er ændret fra `/Application/Microsoft Defender ATP.app` til `/Applications/Microsoft Defender.app`.
   - I brugeroplevelsen er forekomster af "Microsoft Defender ATP" blevet erstattet med "Microsoft Defender"
 - Løste et problem, hvor nogle VPN-programmer ikke kunne oprette forbindelse på grund af netværksindholdsfilteret, der distribueres med Microsoft Defender for Endpoint til Mac
-- Løste et problem, der blev fundet i macOS 12.2 beta 2, hvor installationspakken ikke kunne åbnes på grund af en ændring i operativsystemet, som forhindrer installation af pakker med visse egenskaber. Selvom det ser ud til, at denne ændring af operativsystemet ikke er inkluderet i den endelige version af macOS 12.2, er det sandsynligt, at den vil blive genindført i en fremtidig macOS version. Derfor opfordrer vi alle virksomhedsadministratorer til at opdatere Microsoft Defender for Endpoint-pakken i deres administrationskonsol til denne produktversion (eller en nyere version).
+- Løste et problem, der blev fundet i macOS 12.2 beta 2, hvor installationspakken ikke kunne åbnes på grund af en ændring i operativsystemet, som forhindrer installation af pakker med visse egenskaber. Selvom det ser ud til, at denne os-ændring ikke er inkluderet i den endelige version af macOS 12.2, er det sandsynligt, at den vil blive genindført i en fremtidig macOS-version. Derfor opfordrer vi alle virksomhedsadministratorer til at opdatere Microsoft Defender for Endpoint-pakken i deres administrationskonsol til denne produktversion (eller en nyere version).
 - Løste et problem, der kan ses på nogle M1-enheder, hvor produktet sidder fast med ugyldige antimalwaredefinitioner og ikke kunne opdateres til et arbejdssæt af definitioner.
 - `mdatp health`output er blevet udvidet med en ekstra attribut kaldet `full_disk_access_enabled` , der kan bruges til at afgøre, om Full Disk Access er tildelt til alle komponenter i Microsoft Defender for Endpoint til Mac.
 - Forbedringer af ydeevnen & fejlrettelser
@@ -104,7 +112,7 @@ ms.locfileid: "66089232"
 
 ## <a name="1014727-20121082147270"></a>101.47.27 (20.121082.14727.0)
 
-- Rettelse af en systemfrysning, der forekommer ved lukning på macOS Mojave og macOS Catalina
+- Rettelse til en systemfrysning, der forekommer ved lukning på macOS Mojave og macOS Catalina
 
 ## <a name="1014384-20121082143840"></a>101.43.84 (20.121082.14384.0)
 
@@ -138,7 +146,7 @@ ms.locfileid: "66089232"
 
 ## <a name="1013420-20121051134200"></a>101.34.20 (20.121051.13420.0)
 
-- [Enhedsstyring for macOS](mac-device-control-overview.md) er nu offentlig tilgængelig
+- [Enhedsstyring til macOS](mac-device-control-overview.md) er nu offentlig tilgængelig
 - Løste et problem, hvor en hurtig scanning ikke kunne startes fra statusmenuen på macOS 11 (Big Sur)
 - Andre fejlrettelser
 
@@ -156,11 +164,11 @@ ms.locfileid: "66089232"
 
 ## <a name="1012750-20121022127500"></a>101.27.50 (20.121022.12750.0)
 
-- Rettelse for at imødekomme udløb af Apple-certifikat for macOS Catalina og tidligere. Denne rettelse gendanner TVM-funktionalitet (Threat & Vulnerability Management).
+- Rettelse for at imødekomme udløb af Apple-certifikat til macOS Catalina og tidligere. Denne rettelse gendanner TVM-funktionalitet (Threat & Vulnerability Management).
 
 ## <a name="1012569-20121022125690"></a>101.25.69 (20.121022.12569.0)
 
-- Microsoft Defender for Endpoint på macOS er nu tilgængelig som prøveversion for kunder i de amerikanske offentlige myndigheder. Du kan få flere oplysninger [under Microsoft Defender for Endpoint til US Government-kunder](gov.md).
+- Microsoft Defender for Endpoint på macOS er nu tilgængelig som prøveversion for us government-kunder. Du kan få flere oplysninger [under Microsoft Defender for Endpoint til US Government-kunder](gov.md).
 - Forbedringer af ydeevnen (især i forbindelse med brug af XCode Simulator-appen) & fejlrettelser.
 
 ## <a name="1012364-20121021123640"></a>101.23.64 (20.121021.12364.0)
@@ -196,7 +204,7 @@ ms.locfileid: "66089232"
 
 ## <a name="1011375-20120101113750"></a>101.13.75 (20.120101.11375.0)
 
-- Fjernede betingelser, da Microsoft Defender for Endpoint udløste en macOS 11 (Big Sur) fejl, der manifesterer sig i en kerne panik
+- Fjernede betingelser, da Microsoft Defender for Endpoint udløste en macOS 11 (Big Sur)-fejl, der manifesterer sig i kerne panik
 - Løste en hukommelsesfejl i endpoint Security-systemudvidelsen, når den kører på mac 11 (Big Sur)
 - Fejlrettelser
 
@@ -230,7 +238,7 @@ ms.locfileid: "66089232"
 
 ## <a name="1010723"></a>101.07.23
 
-- Nye felter er føjet til outputtet for `mdatp --health` til kontrol af status for passiv tilstand og Slutpunktsregistrering og -svar gruppe-id
+- Nye felter er føjet til outputtet for `mdatp --health` til kontrol af status for passiv tilstand og EDR-gruppe-id
 
   > [!NOTE]
   > `mdatp --health` erstattes med `mdatp health` i en fremtidig produktopdatering.
@@ -273,7 +281,7 @@ ms.locfileid: "66089232"
 
 - Forbedret [produkt onboarding-oplevelse for Intune brugere](/mem/intune/apps/apps-advanced-threat-protection-macos)
 - [Antivirusudeladelser understøtter nu jokertegn](mac-exclusions.md#supported-exclusion-types)
-- Tilføjede muligheden for at udløse antivirusscanninger fra genvejsmenuen macOS. Du kan nu højreklikke på en fil eller en mappe i Finder og vælge **Scan med Microsoft Defender for Endpoint**
+- Muligheden for at udløse antivirusscanninger er blevet tilføjet fra macOS-genvejsmenuen. Du kan nu højreklikke på en fil eller en mappe i Finder og vælge **Scan med Microsoft Defender for Endpoint**
 - Nedgradering af produkter på stedet er nu udtrykkeligt ikke tilladt af installationsprogrammet. Hvis du har brug for at nedgradere, skal du først fjerne den eksisterende version og konfigurere din enhed igen
 - Andre forbedringer af ydeevnen & fejlrettelser
 
@@ -294,9 +302,9 @@ ms.locfileid: "66089232"
 ## <a name="1008691"></a>100.86.91
 
 > [!CAUTION]
-> For at sikre den mest komplette beskyttelse af dine macOS enheder og i overensstemmelse med Apple-stopleveringen af macOS oprindelige sikkerhedsopdateringer til os-versioner, der er ældre end [aktuel - 2], understøttes udrulning og opdateringer af MDATP til Mac ikke længere på macOS Sierra [10.12]. MDATP til Mac-opdateringer og -forbedringer leveres til enheder, der kører versioner Catalina [10.15], Mojave [10.14] og High Sierra [10.13].
+> For at sikre den mest komplette beskyttelse af dine macOS-enheder og i overensstemmelse med Apple stopper leveringen af indbyggede sikkerhedsopdateringer fra MacOS til os-versioner, der er ældre end [aktuel - 2], understøttes udrulning og opdateringer af MDATP til Mac ikke længere på macOS Sierra [10.12]. MDATP til Mac-opdateringer og -forbedringer leveres til enheder, der kører versioner Catalina [10.15], Mojave [10.14] og High Sierra [10.13].
 >
-> Hvis du allerede har MDATP til Mac installeret på dine Sierra [10.12]-enheder, skal du opgradere til den nyeste macOS version for at fjerne risikoen for at miste beskyttelsen.
+> Hvis du allerede har MDATP til Mac installeret på dine Sierra [10.12]-enheder, skal du opgradere til den nyeste macOS-version for at fjerne risikoen for at miste beskyttelse.
 
 - Forbedringer af ydeevnen & fejlrettelser
 

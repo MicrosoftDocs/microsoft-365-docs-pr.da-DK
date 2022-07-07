@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Konfigurer følsomhedsmærkater til kryptering, der beskytter dine data ved at begrænse adgang og brug.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 2f41fbec0018008d2a59ad8960a7a0cd89f1a556
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: ef00ca10ca932322e51d71449e42f45842ce4c97
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66625385"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663786"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
 
@@ -81,13 +81,13 @@ Før du kan bruge kryptering, skal du muligvis udføre nogle konfigurationsopgav
 
 ## <a name="how-to-configure-a-label-for-encryption"></a>Sådan konfigurerer du en mærkat til kryptering
 
-1. Følg de generelle instruktioner for at [oprette eller redigere en følsomhedsmærkat](create-sensitivity-labels.md#create-and-configure-sensitivity-labels) , og sørg for **, at Filer & mails** er valgt til mærkatens område: 
+1. Følg den generelle vejledning for at [oprette eller redigere en følsomhedsmærkat](create-sensitivity-labels.md#create-and-configure-sensitivity-labels) , og sørg for **, at Elementer** er valgt til etikettens område: 
     
     ![Indstillinger for følsomhedsmærkatområde for filer og mails.](../media/filesandemails-scope-options-sensitivity-label.png)
 
-2. På siden **Vælg beskyttelsesindstillinger for filer og mails** skal du derefter sørge for at vælge **Kryptér filer og mails**
+2. På siden **Vælg beskyttelsesindstillinger for navngivne elementer** skal du derefter sørge for at vælge **Kryptér elementer**
     
-    ![Indstillinger for beskyttelse af følsomhedsmærkater for filer og mails.](../media/protection-options-sensitivity-label.png)
+    :::image type="content" source="../media/protection-options-sensitivity-label.png" alt-text="Indstillinger for beskyttelse af følsomhedsmærkater for elementer." Lightbox="../media/protection-options-sensitivity-label.png":::
 
 4.  Vælg en af følgende indstillinger på siden **Kryptering** :
     
@@ -97,7 +97,7 @@ Før du kan bruge kryptering, skal du muligvis udføre nogle konfigurationsopgav
     
     - **Konfigurer krypteringsindstillinger**: Slår kryptering til og gør krypteringsindstillingerne synlige:
         
-        ![Indstillinger for følsomhedsmærkat til kryptering.](../media/encrytion-options-sensitivity-label.png)
+        :::image type="content" source="../media/encrytion-options-sensitivity-label.png" alt-text="Indstillinger for følsomhedsmærkat til kryptering. "lightbox="../media/encrytion-options-sensitivity-label.png":::
         
         Instruktioner til disse indstillinger findes i følgende afsnit [Konfigurer krypteringsindstillinger](#configure-encryption-settings) .
 
@@ -412,7 +412,7 @@ De nye brugere, du tilføjer, kan åbne dokumenter og mails, der allerede er bes
 
 Denne konfiguration har den fordel, at du ikke behøver at angive brugere, grupper eller domæner for at kryptere en mail eller et dokument. Indholdet krypteres stadig, og du kan stadig angive brugsrettigheder, en udløbsdato og offlineadgang.
 
-Brug kun denne konfiguration, når du ikke behøver at begrænse, hvem der kan åbne det beskyttede dokument eller den beskyttede mail. [Flere oplysninger om denne indstilling](#requirements-and-limitations-for-add-any-authenticated-users)
+Brug kun denne konfiguration, når du ikke behøver at begrænse, hvem der kan åbne det beskyttede dokument eller den beskyttede mail. Se [flere oplysninger om denne indstilling](#requirements-and-limitations-for-add-any-authenticated-users).
 
 1. På siden **Kryptering** : Hvis du vil **tildele tilladelser nu, eller lade brugerne bestemme,** skal du sørge for **, at Tildel tilladelser nu** er valgt.
 

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: ca4b74c2fb25c4f1f1ef96b8ae0241481358797d
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 0e2fbe762483ff3997484b32448ce96711147e43
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66628567"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663168"
 ---
 # <a name="use-sensitivity-labels-to-configure-the-default-sharing-link-type-for-sites-and-documents-in-sharepoint-and-onedrive"></a>Brug følsomhedsmærkater til at konfigurere standardlinktypen for deling for websteder og dokumenter i SharePoint og OneDrive
 
@@ -92,11 +92,11 @@ PowerShell-eksempler, hvor følsomhedsmærkaten GUID er **8faca7b8-8d20-48a3-8ea
 
 Du kan finde mere hjælp til at angive avancerede PowerShell-indstillinger under [PowerShell-tip til angivelse af avancerede indstillinger](create-sensitivity-labels.md#powershell-tips-for-specifying-the-advanced-settings).
 
-Hvis du vil konfigurere indstillingerne for standardlinktypen for deling for et websted, skal [følsomhedsmærkatens omfang](sensitivity-labels.md#label-scopes) omfatte **Grupper & websteder**, når du opretter følsomhedsmærkaten i Microsoft Purview-compliance-portal. Når den er oprettet, kan du se dette vist som **Site, UnifiedGroup** i kolonnen **Scope** på siden **Labels** , og indstillingen PowerShell *ContentType* viser også den samme værdi. For dokumenter skal området indeholde **Filer & mails**, der vises som **Filer, Mail**. Derefter:
+Hvis du vil konfigurere indstillingerne for standardlinktypen for deling for et websted, skal [følsomhedsmærkatens omfang](sensitivity-labels.md#label-scopes) omfatte **Grupper & websteder**, når du opretter følsomhedsmærkaten i Microsoft Purview-compliance-portal. Når den er oprettet, kan du se dette vist som **Site, UnifiedGroup** i kolonnen **Scope** på siden **Labels** , og indstillingen PowerShell *ContentType* viser også den samme værdi. For dokumenter skal området indeholde **Elementer**, der vises som **Fil, Mail**. Derefter:
 
 - Når området omfatter **Grupper & websteder**, kan du anvende etiketten på et websted, som angiver standardlinktypen for deling for det pågældende websted. Du kan finde oplysninger om, hvordan du anvender en følsomhedsmærkat på et websted, under [Sådan anvender du følsomhedsmærkater på objektbeholdere](sensitivity-labels-teams-groups-sites.md#how-to-apply-sensitivity-labels-to-containers).
 
-- Når følsomhedsmærkatens omfang omfatter **Filer & mails**, kan du anvende mærkaten på dokumenter, hvilket angiver standardtypen for delingslinket for det pågældende dokument. Etiketten kan anvendes [manuelt](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) eller [automatisk](apply-sensitivity-label-automatically.md).
+- Når følsomhedsmærkatens område omfatter **Elementer**, kan du anvende mærkaten på dokumenter, hvilket angiver standardlinktypen for deling for det pågældende dokument. Etiketten kan anvendes [manuelt](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) eller [automatisk](apply-sensitivity-label-automatically.md).
 
 > [!TIP]
 > Du kan også angive, at mærkaten er standardfølsomhedsmærkaten, der skal anvendes for nye websteder eller nye dokumenter som en [politikindstilling for mærkater](sensitivity-labels.md#what-label-policies-can-do).

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: 'Et krav til alle Microsoft Purview Information Protection løsninger: Opret, konfigurer og publicer følsomhedsmærkater for at klassificere og beskytte din organisations data.'
-ms.openlocfilehash: ad7e9c9aeea0a1ef05f79214afd60ac479ba2e66
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 486cc10888ebb66a657aa21930fe306073ac1868
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66625517"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663520"
 ---
 # <a name="create-and-configure-sensitivity-labels-and-their-policies"></a>Opret og konfigurer følsomhedsmærkater og deres politikker
 
@@ -50,7 +50,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
 2. På siden **Etiketter** skal du vælge **+ Opret en mærkat** for at starte den nye konfiguration af følsomhedsmærkat: 
     
-    ![Opret en følsomhedsmærkat.](../media/create-sensitivity-label-full.png)
+    :::image type="content" source="../media/create-sensitivity-label-full.png" alt-text="Opret en følsomhedsmærkat." lightbox="../media/create-sensitivity-label-full.png":::
 
     > [!NOTE]
     > Lejere har som standard ingen mærkater, og du skal oprette dem. Etiketterne i eksempelbilledet viser de standardmærkater, der er [overført fra Azure Information Protection](/azure/information-protection/configure-policy-migrate-labels).
@@ -59,7 +59,7 @@ Den globale administrator for din organisation har fuld tilladelse til at oprett
 
     ![Områder for følsomhedsmærkater.](../media/sensitivity-labels-scopes.png)
 
-    - Hvis **Filer & mails** er valgt, kan du konfigurere indstillinger, der gælder for apps, der understøtter følsomhedsmærkater, f.eks. Office Word og Outlook. Hvis denne indstilling ikke er valgt, kan du se den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge i disse apps.
+    - Hvis **Elementer** er valgt, kan du konfigurere indstillinger, der gælder for apps, der understøtter følsomhedsmærkater, f.eks. Office Word og Outlook. Hvis denne indstilling ikke er valgt, kan du se den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge i disse apps.
 
     - Hvis **Grupper & websteder** er valgt, kan du konfigurere indstillinger, der gælder for Microsoft 365-grupper, og websteder for Teams og SharePoint. Hvis denne indstilling ikke er valgt, får du vist den første side med disse indstillinger, men du kan ikke konfigurere dem, og mærkaterne vil ikke være tilgængelige for brugerne at vælge for grupper og webstedet.
 
@@ -153,7 +153,7 @@ Hvis du vil kontrollere etikettens konfiguration, herunder avancerede indstillin
 
 2. På siden **Mærkatpolitikker** skal du vælge **Publicer etiket** for at starte konfigurationen **af politikken Opret** :
     
-    ![Publicer navne.](../media/publish-sensitivity-labels-full.png)
+   :::image type="content" source="../media/publish-sensitivity-labels-full.png" alt-text="Publicer navne." lightbox="../media/publish-sensitivity-labels-full.png":::
     
     > [!NOTE]
     > Lejere har som standard ingen mærkatpolitikker, og du skal oprette dem. 
@@ -167,7 +167,7 @@ Hvis du vil kontrollere etikettens konfiguration, herunder avancerede indstillin
 
 5. Følg prompterne for at konfigurere politikindstillingerne.
 
-    De politikindstillinger, du får vist, svarer til omfanget af de valgte mærkater. Hvis du f.eks. har valgt navne, der kun har området **Filer & mails** , kan du ikke se politikindstillingerne **Anvend denne mærkat som standard på grupper og websteder og** **Kræv, at brugerne anvender en mærkat på deres grupper og websteder**.
+    De politikindstillinger, du får vist, svarer til omfanget af de valgte mærkater. Hvis du f.eks. har valgt navne, der kun har området **Elementer** , kan du ikke se politikindstillingerne **Anvend denne mærkat som standard på grupper og websteder og** **Kræv, at brugerne anvender en mærkat på deres grupper og websteder**.
 
     Du kan finde flere oplysninger om disse indstillinger under [Hvad mærkatpolitikker kan gøre](sensitivity-labels.md#what-label-policies-can-do) ud fra oversigtsoplysningerne og bruge hjælpen i brugergrænsefladen til individuelle indstillinger.
 

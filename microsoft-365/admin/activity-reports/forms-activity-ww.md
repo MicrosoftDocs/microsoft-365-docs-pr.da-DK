@@ -19,40 +19,44 @@ search.appverid:
 - MST160
 - MET150
 - MOE150
-description: Få mere at vide om, hvordan du får en Microsoft Forms aktivitetsrapport ved hjælp af dashboardet Microsoft 365 Rapporter og finder ud af, hvordan brugere med licens interagerer med formularer.
-ms.openlocfilehash: ccfacbfb7450aef7c1880e7022b374799ac8307b
-ms.sourcegitcommit: da6b3cb3b2ccfcdcd5091efce8290b6c486547db
+description: Få mere at vide om, hvordan du får en Microsoft Forms aktivitetsrapport ved hjælp af dashboardet Microsoft 365-rapporter og finder ud af, hvordan brugere med licens interagerer med formularer.
+ms.openlocfilehash: 106baca93a3cd7078c97d3ca3f5430efc540d4af
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "65467640"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662100"
 ---
-# <a name="microsoft-365-reports-in-the-admin-center---forms-activity"></a>Microsoft 365 rapporter i Administration – Formularaktivitet
+# <a name="microsoft-365-reports-in-the-admin-center---forms-activity"></a>Microsoft 365-rapporter i Administration – Formularaktivitet
 
-Dashboardet Microsoft 365 Rapporter viser dig aktivitetsoversigten på tværs af produkterne i din organisation. Det giver dig mulighed for at zoome ind på individuelle rapporter på produktniveau for at give dig mere detaljeret indsigt i aktiviteterne i hvert produkt. Se [emnet Oversigt over rapporter](activity-reports.md).
+Dashboardet Microsoft 365-rapporter viser dig aktivitetsoversigten på tværs af produkterne i din organisation. Det giver dig mulighed for at zoome ind på individuelle rapporter på produktniveau for at give dig mere detaljeret indsigt i aktiviteterne i hvert produkt. Se [emnet Oversigt over rapporter](activity-reports.md).
   
 Du kan f.eks. forstå aktiviteten for alle brugere, der har licens til at bruge Microsoft Forms, ved at se på deres interaktion med formularer. Det hjælper dig også med at forstå det samarbejdsniveau, der foregår, ved at se på antallet af formularer, der er oprettet, og formularer, som brugeren besvarede.
   
 ## <a name="how-to-get-to-the-forms-activity-report"></a>Sådan får du vist aktivitetsrapporten Formularer
 
-1. I Administration skal du gå til siden **Rapportanvendelse**\>.<a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank"></a> 
+1. I Administration skal du gå til **Rapporter** og derefter vælge **Forbrug**. 
 2. Klik på knappen **Vis mere** på kortet Formularer på startsiden for dashboardet.
   
 ## <a name="interpret-the-forms-activity-report"></a>Fortolkning af aktivitetsrapporten Formularer
 
-Du kan få vist aktiviteterne i rapporten Formularer ved at vælge fanen **Aktivitet** .<br/>![Microsoft 365 rapporter – Microsoft Forms aktivitetsrapport.](../../media/275fb0a1-b9d9-4233-8aaf-e7df73cc705f.png)
+Du kan få vist aktiviteterne i rapporten Formularer ved at vælge fanen **Aktivitet** .
 
-Vælg **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.  <br/> ![Rapport over formularaktivitet – vælg kolonner.](../../media/0c9b0b69-5dc7-43ea-8e2c-54407b6ce2ab.png)
+![Microsoft 365-rapporter – Microsoft Forms aktivitetsrapport.](../../media/275fb0a1-b9d9-4233-8aaf-e7df73cc705f.png)
 
-Du kan også eksportere rapportdataene til en Excel .csv fil ved at vælge linket **Eksportér**. Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. Hvis du har mindre end 2.000 brugere, kan du sortere og filtrere i tabellen i selve rapporten. Hvis du har mere end 2.000 brugere, skal du eksportere dataene for at kunne filtrere og sortere dem. 
+Vælg **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten. 
+
+![Rapport over formularaktivitet – vælg kolonner.](../../media/0c9b0b69-5dc7-43ea-8e2c-54407b6ce2ab.png)
+
+Du kan også eksportere rapportdataene til en Excel-.csv-fil ved at vælge linket **Eksportér** . Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. 
 
 Aktivitetsrapporten **Formularer** kan ses for tendenser for de seneste 7 dage, 30 dage, 90 dage eller 180 dage. Men hvis du vælger en bestemt dag i rapporten, viser tabellen data for op til 28 dage fra dags dato (ikke den dato, hvor rapporten blev genereret).
   
 |Element|Beskrivelse|
 |:-----|:-----|
-|**Metriske**|**Definition**|
-|Brugernavn  <br/> |Mailadressen på den bruger, der udførte aktiviteten på Microsoft Forms.  <br/> |
-|Seneste aktivitetsdato (UTC)  <br/> |Den seneste dato, hvor en formularaktivitet blev udført af brugeren for det valgte datointerval. Hvis du vil se en aktivitet, der fandt sted på en bestemt dato, skal du vælge datoen direkte i diagrammet.<br/><br/>Dette filtrerer tabellen, så der kun vises filaktivitetsdata for de brugere, der udførte aktiviteten på den pågældende dag.  <br/> |
-|Antal formularer, der er oprettet  <br/> |Antallet af formularer, som brugeren har oprettet.   <br/> |
-|Antal formularer, der er besvaret  <br/> |Det antal formularer, som brugeren har sendt svar til.|
-|||
+|Metriske|Definition|
+|Brugernavn   |Mailadressen på den bruger, der udførte aktiviteten på Microsoft Forms.   |
+|Seneste aktivitetsdato (UTC)   |Den seneste dato, hvor en formularaktivitet blev udført af brugeren for det valgte datointerval. Hvis du vil se en aktivitet, der fandt sted på en bestemt dato, skal du vælge datoen direkte i diagrammet.<br/><br/>Dette filtrerer tabellen, så der kun vises filaktivitetsdata for de brugere, der udførte aktiviteten på den pågældende dag.   |
+|Antal formularer, der er oprettet   |Antallet af formularer, som brugeren har oprettet.    |
+|Antal formularer, der er besvaret  |Det antal formularer, som brugeren har sendt svar til.|
+

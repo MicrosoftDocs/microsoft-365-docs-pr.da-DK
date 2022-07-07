@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: 48affe223db5f2c1a63246b7d4ff473188cabd63
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 06e769f3e6aa616d8b725ec37c52e2a24289ceb2
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66640914"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662310"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -148,7 +148,7 @@ Hvis du vil have indbygget mærkat i Office-apps, skal du kontrollere de [minimu
 
 Azure Information Protection unified labeling-klienten understøtter kun automatisk mærkning for indbyggede og brugerdefinerede følsomme infotyper og understøtter ikke klassificeringstyper, der kan oplæres, eller følsomme infotyper, der bruger EDM (Exact Data Match) eller navngivne enheder.
 
-Indstillingerne for automatisk mærkning af Office-apps er tilgængelige, når du [opretter eller redigerer en følsomhedsmærkat](create-sensitivity-labels.md). Sørg for **, at Filer & mails** er valgt for etikettens område:
+Indstillingerne for automatisk mærkning af Office-apps er tilgængelige, når du [opretter eller redigerer en følsomhedsmærkat](create-sensitivity-labels.md). Sørg for, at **Items (Elementer)** er valgt for etikettens område:
 
 ![Indstillinger for følsomhedsmærkatområde for filer og mails.](../media/filesandemails-scope-options-sensitivity-label.png)
 

@@ -21,12 +21,12 @@ search.appverid:
 - GEA150
 ms.assetid: a27f1a99-3557-4f85-9560-a28e3d822a40
 description: Få en Microsoft 365-grupper rapport for at få indsigt i aktiviteterne for grupper i din organisation og se, hvor mange grupper der oprettes og bruges.
-ms.openlocfilehash: ec9f544214345de0cacd00580772867bd1e5312d
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: dce585ddb496be67b1045baa4b7cea0dc3b7fc24
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66486269"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662674"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-365-groups"></a>Microsoft 365-rapporter i Administration – Microsoft 365-grupper
 
@@ -48,7 +48,7 @@ Vælg **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.
 
 :::image type="content" alt-text="Office 365 grupper aktivitetsrapport – vælg kolonner." source="../../media/1600556a-f5f1-47d9-b325-cd77c78f4004.png":::
 
-Du kan også eksportere rapportdataene til en Excel-.csv-fil ved at vælge linket **Eksportér** . Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. Hvis du har mindre end 2.000 brugere, kan du sortere og filtrere i tabellen i selve rapporten. Hvis du har mere end 2.000 brugere, skal du eksportere dataene for at kunne filtrere og sortere dem.
+Du kan også eksportere rapportdataene til en Excel-.csv-fil ved at vælge linket **Eksportér** . Dette eksporterer data for alle brugere og giver dig mulighed for at foretage enkel sortering og filtrering for yderligere analyse. 
 
 **Grupperapporten** kan ses for tendenser for de seneste 7 dage, 30 dage, 90 dage eller 180 dage. Men hvis du vælger en bestemt dag i rapporten, viser tabellen data for op til 28 dage fra dags dato (ikke den dato, hvor rapporten blev genereret).
 

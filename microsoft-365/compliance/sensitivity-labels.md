@@ -22,12 +22,12 @@ description: Brug følsomhedsmærkater fra Microsoft Purview Information Protect
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: db050d3e26f19901e98052be5051b9eebce21990
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: b7deebb8f745c3b43f82093412e291ab304b4794
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66637943"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66663452"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Få mere at vide om følsomhedsmærkater
 
@@ -134,13 +134,13 @@ Med denne områdekonfiguration kan du have følsomhedsmærkater, der kun er til 
 
 ![Områdeindstillinger for følsomhedsmærkater.](../media/sensitivity-labels-scopes.png)
 
-Som standard er området **Filer & mails** altid valgt. De andre områder vælges som standard, når funktionerne er aktiveret for din lejer:
+Som standard er området **Elementer** altid valgt. De andre områder vælges som standard, når funktionerne er aktiveret for din lejer:
 
 - **Grupper & websteder**: [Aktivér følsomhedsmærkater for objektbeholdere, og synkroniser mærkater](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
 
 - **Skematiserede dataaktiver**: [Mærk automatisk dit indhold i Microsoft Purview Data Map](/azure/purview/create-sensitivity-label)
 
-Hvis du ændrer standardindstillingerne, så ikke alle områder er valgt, kan du se den første side i konfigurationsindstillingerne for områder, du ikke har valgt, men du kan ikke konfigurere indstillingerne. Hvis omfanget for filer og mails f.eks. ikke er valgt, kan du ikke vælge indstillingerne på næste side:
+Hvis du ændrer standardindstillingerne, så ikke alle områder er valgt, kan du se den første side i konfigurationsindstillingerne for områder, du ikke har valgt, men du kan ikke konfigurere indstillingerne. Hvis området for elementer f.eks. ikke er markeret, kan du ikke vælge indstillingerne på næste side:
 
 ![Indstillinger for følsomhedsmærkater er ikke tilgængelige.](../media/sensitivity-labels-unavailable-settings.png)
 
@@ -148,7 +148,7 @@ For de sider, der ikke har tilgængelige indstillinger, skal du vælge **Næste*
 
 ### <a name="label-priority-order-matters"></a>Mærkatprioritet (rækkefølgen har betydning)
 
-Når du opretter dine følsomhedsmærkater i administrationen, vises de på en liste under fanen **Følsomhed** på siden **Mærkater** . På denne liste er rækkefølgen af mærkater vigtig, fordi den afspejler deres prioritet. Din mest restriktive følsomhedsmærkat, f.eks. Meget fortroligt, skal vises **nederst** på listen, og din mindst restriktive følsomhedsmærkat, f.eks. Offentlig, skal vises **øverst**.
+Når du opretter dine følsomhedsmærkater i Microsoft Purview Compliance Center, vises de på en liste under fanen **Følsomhed** på siden **Etiketter** . På denne liste er rækkefølgen af mærkater vigtig, fordi den afspejler deres prioritet. Din mest restriktive følsomhedsmærkat, f.eks. Meget fortroligt, skal vises **nederst** på listen, og din mindst restriktive følsomhedsmærkat, f.eks. Offentlig, skal vises **øverst**.
 
 Du kan kun anvende én følsomhedsmærkat på et element, f.eks. et dokument, en mail eller en objektbeholder. Hvis du angiver en indstilling, der kræver, at brugerne skal angive en begrundelse for at ændre en mærkat til en lavere klassificering, identificerer rækkefølgen af denne liste de lavere klassificeringer. Denne indstilling gælder dog ikke for undermærkater, der deler prioriteten for deres overordnede mærkat.
 

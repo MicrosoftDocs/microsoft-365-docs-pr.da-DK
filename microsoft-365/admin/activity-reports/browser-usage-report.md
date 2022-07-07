@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - GEA150
 description: Få mere at vide om, hvordan du får en brugsrapport for Microsoft-browseren ved hjælp af dashboardet Microsoft 365-rapporter i Microsoft 365 Administration.
-ms.openlocfilehash: 67abf461102fe56f8515db0b0a73a8c852a2224e
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: bd247e839c69726039fb80531444eb7b4b650346
+ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66601537"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66662151"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-browser-usage"></a>Microsoft 365-rapporter i Administration – Brug af Microsoft-browser
 
@@ -44,14 +44,14 @@ Dashboardet Microsoft 365-rapporter viser dig en aktivitetsoversigt på tværs a
 
 Diagrammet **Daglige aktive brugere** viser det daglige antal brugere for Microsoft Edge, når det bruges til at få adgang til Microsoft 365-tjenester.
 
-Diagrammet **Aktive brugere** viser det samlede antal brugere, der bruger Microsoft Edge, når de bruges til at få adgang til Microsoft 365-tjenester i den valgte tidsperiode.
+Diagrammet **Aktive brugere** viser det samlede antal brugere, der tilgår Microsoft 365-tjenester, mens du bruger Microsoft Edge i den valgte tidsperiode.
 
 I tabellen kan du se en opdeling af data på niveauet pr. bruger. Du kan tilføje eller fjerne kolonner fra tabellen.
 
 |Element|Beskrivelse|
 |:-----|:-----|
 |**Brugernavn** | Mailadressen på den bruger, der oprettede forbindelse til Microsoft 365-tjenester ved hjælp af Microsoft Edge.|
-| **Brugt Microsoft Edge**| Viser aksemærke, hvis brugeren brugte Microsoft Edge til at oprette forbindelse til Microsoft 365-tjenester.|
+| **Brugt Microsoft Edge**| DDisplays et aksemærke, hvis Microsoft 365-tjenesterne bruger tilsluttet Microsoft Edge.|
 
 Vælg ikonet **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.
 
