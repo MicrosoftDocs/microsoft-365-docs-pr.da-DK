@@ -20,16 +20,16 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 39a30b7fcc853ac96d14df4fa04f9e727f98628c
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: 4dc790b780b6c066eda635b081d412654468b52f
+ms.sourcegitcommit: 244ab1b8fe98363f2bfeec337bf68e88ab31d789
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/07/2022
-ms.locfileid: "66686025"
+ms.locfileid: "66687120"
 ---
 # <a name="investigate-and-remediate-communication-compliance-alerts"></a>Undersøg og afhjælp underretninger om kommunikationsoverholdelse
 
-Når du har konfigureret politikkerne for overholdelse af angivne standarder for kommunikation, modtager du beskeder i Microsoft Purview-compliance-portal om meddelelsesproblemer, der opfylder dine politikbetingelser. Følg vejledningen i arbejdsprocessen her for at undersøge og løse problemer med beskeder.
+Når du har konfigureret [politikkerne for overholdelse af angivne standarder for kommunikation](/microsoft-365/compliance/communication-compliance-policies), modtager du beskeder i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) om meddelelsesproblemer, der opfylder dine politikbetingelser. Følg vejledningen i arbejdsprocessen her for at undersøge og løse problemer med beskeder.
 
 ## <a name="investigate-alerts"></a>Undersøg beskeder
 
