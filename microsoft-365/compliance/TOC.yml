@@ -238,7 +238,7 @@
           href: communication-compliance-policies.md
         - name: Undersøg og afhjælp underretninger om kommunikationsoverholdelse
           href: communication-compliance-investigate-remediate.md
-        - name: Få mere at vide om kommunikationsoverholdelsesrapporter og overvågninger
+        - name: Brug kommunikationsoverholdelsesrapporter og overvågninger
           href: communication-compliance-reports-audits.md
         - name: Kommunikationsoverholdelse med SIEM-løsninger
           href: communication-compliance-siem.md

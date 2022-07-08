@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 - MET150
 description: Få mere at vide om, hvordan du implementerer cybersikkerhed for små eller mellemstore virksomheder med Microsoft 365 Business Premium. Cybersikkerhedsegenskaberne og -funktionerne er optimeret til at forhindre cyberangreb og sikkerhedsbrud og hjælper dig med at beskytte data, enheder og oplysninger med førsteklasses cyberbeskyttelse.
-ms.openlocfilehash: f3752393e32ab151edcaa8166eabe862ad3f90c2
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: 0fec3c5117759cc0cdb5d13fe8c04809cfcf8356
+ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
 ms.translationtype: HT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/07/2022
-ms.locfileid: "66663102"
+ms.locfileid: "66685915"
 ---
 # <a name="microsoft-365-business-premium-mdash-cybersecurity-for-small-business"></a>Microsoft 365 Business Premium &mdash; cybersikkerhed for små virksomheder
 
@@ -47,11 +47,11 @@ I disse første opgaver logger du på og konfigurerer dine indledende forsvar, s
 
 2. [**Opgrader cybersikkerhedsbeskyttelse**](m365bp-security-overview.md). Konfigurer kritiske frontlinjesikkerhedsforanstaltninger for at forhindre cyberangreb.
 
-[:::image type="content" source="media/m365bp-fortify-environment.jpg" alt-text="Diagram, der skitserer dine mission med Styrk dit miljø valgt.":::](m365bp-setup-overview.md)
+[:::image type="content" source="media/m365bp-fortify-environment.jpg" alt-text="Diagram, der skitserer dine opgaver med Styrk dit miljø valgt.":::](m365bp-setup-overview.md)
 
 ## <a name="train-your-team"></a>Oplær dit team
 
-Vi har inkluderet et sæt af opgaver her med nogle mål, der skal fuldføres af dit team. Du skal sikre dig, at teamets enheder er beskyttet, samt at teamet er trænet til at bruge mail og fildeling på en sikker måde og til at genkende og rapportere trusler.
+Vi har inkluderet et sæt af opgaver her med nogle mål, der skal fuldføres af dit team (alle medarbejdere). Du skal sikre dig, at teamets enheder er beskyttet, samt at dit team er trænet til at bruge mail og fildeling på en sikker måde og til at genkende og rapportere trusler.
 
 1. [**Konfigurer BYOD-enheder**](m365bp-protect-pcs-macs.md). I denne opgave konfigurerer du alle de ikke-administrerede enheder (BYOD), så de er en sikker del af økosystemet.
 
@@ -59,15 +59,15 @@ Vi har inkluderet et sæt af opgaver her med nogle mål, der skal fuldføres af 
 
 3. [**Samarbejd og del sikkert**](m365bp-collaborate-share-securely.md). Formålet med denne opgave kræver, at du konfigurerer sikker fildeling for alle medlemmer af organisationen.
 
-[:::image type="content" source="media/m365bp-train-team.jpg" alt-text="Diagram, der beskriver dine missioner med Oplær dit team valgt.":::](m365bp-devices-overview.md)
+[:::image type="content" source="media/m365bp-train-team.jpg" alt-text="Diagram, der skitserer dine opgaver med Træn dit team valgt.":::](m365bp-devices-overview.md)
 
 ## <a name="safeguard-managed-devices"></a>Beskyt administrerede enheder
 
 Administrerede enheder er mere sikre, fordi de overvåges for trusselsregistreringer. I denne sidste vigtige mission onboarder og tilmelder du enheder i Defender for Business, så de er sikret og beskyttet med de bedste værktøjer, der er tilgængelige.
 
-- [**Konfigurér og beskyt administrerede enheder**](m365bp-protect-devices.md). Udfør trinnene for at sikre disse enheder, så de overvåges og beskyttes af organisationen!
+- [**Konfigurér og beskyt administrerede enheder**](m365bp-protect-devices.md). Udfør trinnene for at sikre disse enheder, så de overvåges og beskyttes af organisationen.
 
-[:::image type="content" source="media/m365bp-safeguard-managed-devices.jpg" alt-text="Diagram, der beskriver dine missioner med Beskyt administrerede enheder valgt.":::](m365bp-protect-devices.md)
+[:::image type="content" source="media/m365bp-safeguard-managed-devices.jpg" alt-text="Diagram, der skitserer dine opgaver med Beskyt administrerede enheder valgt.":::](m365bp-protect-devices.md)
 
 ## <a name="cybersecurity-playbook"></a>Strategiplan for cybersikkerhed
 
