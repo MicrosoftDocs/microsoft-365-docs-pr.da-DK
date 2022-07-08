@@ -20,7 +20,7 @@
   items:
     - name: Konfigurer indstillinger for beskyttelse af personlige oplysninger
       href: configure-privacy-settings.md
-    - name: GDPR-anmodninger
+    - name: Administrer GDPR-anmodninger
       href: gdpr-requests.md
 - name: Whiteboard til offentlige myndigheder
   items:
