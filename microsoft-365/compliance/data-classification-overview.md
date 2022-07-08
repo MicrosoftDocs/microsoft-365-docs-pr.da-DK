@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Dashboardet til dataklassificering giver dig indsigt i, hvor mange følsomme data der er blevet fundet og klassificeret i din organisation.
-ms.openlocfilehash: e84205a0357e87f28a77f5186265cf421add1483
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 828a5c5d61c1b662f42e34ae95825dbc5994c816
+ms.sourcegitcommit: 019e8a62ab07a42d4ede4a87ccfaed527914412d
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66640758"
+ms.lasthandoff: 07/08/2022
+ms.locfileid: "66689146"
 ---
 # <a name="learn-about-data-classification"></a>Om klassificering af data
 
@@ -46,9 +46,9 @@ Du kan også administrere disse funktioner på siden til dataklassificering:
 
 Du kan finde dataklassificering i <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_blank">Microsoft Purview-compliance-portal</a> eller <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender</a>**portalklassificeringsdataklassificering** >  > .
 
-Få en videorundvisning af vores dataklassificeringsfunktioner.
+<!--Take a video tour of our data classification features.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vx8x]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vx8x]-->
 
 Dataklassificering scanner dit følsomme indhold og mærket indhold, før du opretter nogen politikker. Dette kaldes **nul ændringsstyring**. Dette giver dig mulighed for at se den indvirkning, som alle opbevarings- og følsomhedsmærkater har i dit miljø, og giver dig mulighed for at begynde at vurdere dine behov for beskyttelse og styringspolitik.
 
