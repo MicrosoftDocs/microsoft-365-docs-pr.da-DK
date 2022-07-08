@@ -22,12 +22,12 @@ description: Brug følsomhedsmærkater fra Microsoft Purview Information Protect
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: 879b412ff6efa743756a6c41b322516952dec93c
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: f06b4a2f40987481c3870ee512e60497f57d851a
+ms.sourcegitcommit: ebaa70d0da4a600efe52b5008eaddb511d36df8c
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/07/2022
-ms.locfileid: "66685959"
+ms.locfileid: "66687800"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Få mere at vide om følsomhedsmærkater
 
@@ -134,11 +134,11 @@ Med denne områdekonfiguration kan du have følsomhedsmærkater, der kun er til 
 
 ![Områdeindstillinger for følsomhedsmærkater.](../media/sensitivity-labels-scopes.png)
 
-Som standard er området **Elementer** altid valgt. De andre områder vælges som standard, når funktionerne er aktiveret for din lejer:
+Som standard er området **Elementer** (tidligere kaldet **Filer & mails**) altid valgt. De andre områder vælges som standard, når funktionerne er aktiveret for din lejer:
 
-- **Grupper & websteder**: [Aktivér følsomhedsmærkater for objektbeholdere, og synkroniser mærkater](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
+- **Grupper & websteder**: Se [Aktivér følsomhedsmærkater for objektbeholdere, og synkroniser mærkater](sensitivity-labels-teams-groups-sites.md#how-to-enable-sensitivity-labels-for-containers-and-synchronize-labels)
 
-- **Skematiserede dataaktiver**: [Mærk automatisk dit indhold i Microsoft Purview Data Map](/azure/purview/create-sensitivity-label)
+- **Skematiserede dataaktiver**: Se [Mærk automatisk dit indhold i Microsoft Purview-dataoversigt](/azure/purview/create-sensitivity-label)
 
 Hvis du ændrer standardindstillingerne, så ikke alle områder er valgt, kan du se den første side i konfigurationsindstillingerne for områder, du ikke har valgt, men du kan ikke konfigurere indstillingerne. Hvis området for elementer f.eks. ikke er markeret, kan du ikke vælge indstillingerne på næste side:
 

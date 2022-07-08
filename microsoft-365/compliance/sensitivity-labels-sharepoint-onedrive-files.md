@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Administratorer kan aktivere understøttelse af følsomhedsmærkater for Word-, Excel- og PowerPoint-filer i SharePoint og OneDrive.
-ms.openlocfilehash: cc5a72a3e36c36ec752699f488450adee4a037aa
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 15985ea95c3e4a562a4cbc51f84a10af2592d53f
+ms.sourcegitcommit: ebaa70d0da4a600efe52b5008eaddb511d36df8c
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66637833"
+ms.lasthandoff: 07/07/2022
+ms.locfileid: "66687690"
 ---
 # <a name="enable-sensitivity-labels-for-office-files-in-sharepoint-and-onedrive"></a>Aktivér følsomhedsmærkater for Office-filer i SharePoint og OneDrive
 
@@ -123,7 +123,9 @@ Brug OneDrive-synkronisering appversion 19.002.0121.0008 eller nyere på Windows
 
 ## <a name="how-to-enable-sensitivity-labels-for-sharepoint-and-onedrive-opt-in"></a>Sådan aktiverer du følsomhedsmærkater for SharePoint og OneDrive (tilmelder dig)
 
-Du kan aktivere de nye funktioner ved hjælp af Microsoft Purview-compliance-portal eller ved hjælp af PowerShell. Som med alle konfigurationsændringer på lejerniveau for SharePoint og OneDrive tager det ca. 15 minutter, før ændringen træder i kraft.
+Du kan aktivere de nye funktioner ved hjælp af Microsoft Purview-compliance-portal eller ved hjælp af PowerShell. Se følgende afsnit for at få en vejledning.
+
+Som med alle konfigurationsændringer på lejerniveau for SharePoint og OneDrive tager det ca. 15 minutter, før ændringen træder i kraft.
 
 ### <a name="use-the-microsoft-purview-compliance-portal-to-enable-support-for-sensitivity-labels"></a>Brug Microsoft Purview-compliance-portal til at aktivere understøttelse af følsomhedsmærkater
 
