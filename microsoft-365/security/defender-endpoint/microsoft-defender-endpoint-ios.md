@@ -17,19 +17,19 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: dcc67b2d2a9ad03dc1235eebd577e3525ab07a03
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: ac2c34359686da45998fab1076b7501357651318
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64665926"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695856"
 ---
 # <a name="microsoft-defender-for-endpoint-on-ios"></a>Microsoft Defender for Endpoint på iOS
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
 **Gælder for:**
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
@@ -40,7 +40,7 @@ ms.locfileid: "64665926"
 > [!CAUTION]
 > Kørsel af andre tredjepartsbeskyttelsesprodukter til slutpunkter sammen med Defender for Endpoint på iOS vil sandsynligvis medføre problemer med ydeevnen og uforudsigelige systemfejl.
 
-## <a name="pre-requisites"></a>Forudsætninger
+## <a name="prerequisites"></a>Forudsætninger
 
 **Til slutbrugere**
 
@@ -52,10 +52,11 @@ ms.locfileid: "64665926"
     
     >[!NOTE]
     >Apple tillader ikke, at omdirigering af brugere downloader andre apps fra appbutikken, så dette trin skal udføres af brugeren, før brugeren onboarder til Microsoft Defender for Endpoint app.)
-    
-    - Enheder er registreret i Azure Active Directory. Dette kræver, at slutbrugeren er logget på via [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
-- **For ikke-tilmeldte enheder**: Enheder er registreret med Azure Active Directory. Dette kræver, at slutbrugeren er logget på via [Microsoft Authenticator app](https://apps.apple.com/app/microsoft-authenticator/id983156458).
+
+    - Enheder er registreret i Azure Active Directory. Dette kræver, at slutbrugeren er logget på via [Microsoft Authenticator-appen](https://apps.apple.com/app/microsoft-authenticator/id983156458).
+
+- **For ikke-tilmeldte enheder**: Enheder er registreret i Azure Active Directory. Dette kræver, at slutbrugeren er logget på via [Microsoft Authenticator-appen](https://apps.apple.com/app/microsoft-authenticator/id983156458).
 
 - Du kan få flere oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/azure/active-directory/users-groups-roles/licensing-groups-assign).
 
@@ -76,13 +77,16 @@ ms.locfileid: "64665926"
 
 - iOS-enhed, der kører iOS 12.0 og nyere. iPads understøttes også. *Bemærk, at fra den 31. marts 2022 er den mindste understøttede iOS-version fra Microsoft Defender for Endpoint iOS 13.0.*
 
-- Enheden er enten tilmeldt [Intune-firmaportal-appen](https://apps.apple.com/us/app/intune-company-portal/id719171358), eller den er registreret i Azure Active Directory via [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) med den samme konto.
+- Enheden er enten tilmeldt [Intune-firmaportal-appen](https://apps.apple.com/us/app/intune-company-portal/id719171358) eller er registreret i Azure Active Directory via [Microsoft Authenticator](https://apps.apple.com/app/microsoft-authenticator/id983156458) med den samme konto.
+
+ > [!NOTE]
+ > Microsoft Defender for Endpoint på iOS understøttes ikke i øjeblikket, når du bruger iOS-brugertilmelding.
 
 ## <a name="installation-instructions"></a>Installationsvejledning
 
 Installation af Microsoft Defender for Endpoint på iOS kan udføres via Microsoft Endpoint Manager (MEM), og både overvågede og ikke-overvågede enheder understøttes. Slutbrugere kan også installere appen direkte fra [Apple App Store](https://aka.ms/mdatpiosappstore).
 
-- Du kan få oplysninger om udrulning på tilmeldte enheder via Microsoft Endpoint Manager eller Intune under [Installér Microsoft Defender for Endpoint på iOS](ios-install.md).
+- Du kan få oplysninger om installation på tilmeldte enheder via Microsoft Endpoint Manager eller Intune under [Udrul Microsoft Defender for Endpoint på iOS](ios-install.md).
 - Du kan finde oplysninger om brug af Defender for Endpoint i MAM (App Protection Policy) under [Konfigurer beskyttelsespolitik for apps til at inkludere MAM (Defender for Endpoint Risk Signals)](ios-install-unmanaged.md)
 
 ## <a name="resources"></a>Ressourcer

@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office-apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: 0a521dbabd6a9db52dd8405beabab29400d38d82
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 69bef8c18398a371f53fc88e17d261790b3ab16f
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66628611"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66696156"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office-apps
 
@@ -109,6 +109,8 @@ Installér denne indstilling ved hjælp af Gruppepolitik eller ved hjælp af [tj
 Du kan også deaktivere eller fjerne **Tilføjelsesprogrammet Microsoft Azure Information Protection** Office interaktivt fra Word, Excel, PowerPoint og Outlook. Denne metode er velegnet til en enkelt computer og ad hoc-test. Du kan finde instruktioner under [Få vist, administrer og installér tilføjelsesprogrammer i Office-programmer](https://support.office.com/article/16278816-1948-4028-91e5-76dca5380f8d).
 
 Uanset hvilken metode du vælger, træder ændringerne i kraft, når Office-apps genstartes.
+
+Hvis knappen **Følsomhed** ikke vises på Office-båndet, når du har foretaget disse ændringer, skal du kontrollere, om følsomhedsmærkater er [slået fra](sensitivity-labels-office-apps.md#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows).  Selvom dette ikke er standardkonfigurationen, kan en administrator eksplicit have angivet denne konfiguration ved hjælp af Gruppepolitik eller ved at redigere registreringsdatabasen direkte.
 
 > [!NOTE]
 > Indbyggede mærkater kræver en abonnementsversion af Office-apps. Hvis du har separate versioner af Office, der nogle gange kaldes "Office Perpetual", anbefaler vi, at du opgraderer til Microsoft 365 Apps for Enterprise for at drage fordel af de [nyeste mærkatfunktioner](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).

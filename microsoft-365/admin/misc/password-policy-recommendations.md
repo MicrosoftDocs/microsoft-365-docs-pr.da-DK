@@ -22,22 +22,22 @@ search.appverid:
 - MOE150
 ms.assetid: 9fa2539a-2211-41fd-85a0-bc37b9619ca4
 description: Gør din organisation mere sikker mod adgangskodeangreb, og forbud mod almindelige adgangskoder, og aktivér risikobaseret multifaktorgodkendelse.
-ms.openlocfilehash: bd33d98a33d136f06bfe8e7741bb14c79f0a6160
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 474dbaf6877c3b4da9cd9d345e53cd95b2f42452
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66043204"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695566"
 ---
-# <a name="password-policy-recommendations-for-microsoft-365-passwords"></a>Anbefalinger til adgangskodepolitik for Microsoft 365 adgangskoder
+# <a name="password-policy-recommendations-for-microsoft-365-passwords"></a>Anbefalinger til adgangskodepolitik for Microsoft 365-adgangskoder
 
 Som administrator af en organisation er du ansvarlig for at angive adgangskodepolitikken for brugere i din organisation. Angivelse af adgangskodepolitikken kan være kompliceret og forvirrende, og denne artikel indeholder anbefalinger til at gøre din organisation mere sikker mod adgangskodeangreb.
 
 Microsoft-konti kun i skyen har en foruddefineret adgangskodepolitik, der ikke kan ændres. De eneste elementer, du kan ændre, er antallet af dage, indtil en adgangskode udløber, og om adgangskoder overhovedet udløber. 
   
-Hvis du vil finde ud af, hvor ofte Microsoft 365 adgangskoder udløber i din organisation, skal du se [Angiv politik for udløb af adgangskode for Microsoft 365](../manage/set-password-expiration-policy.md).
+Hvis du vil finde ud af, hvor ofte Microsoft 365-adgangskoder udløber i din organisation, skal du se [Angiv politik for udløb af adgangskode for Microsoft 365](../manage/set-password-expiration-policy.md).
 
-Du kan få flere oplysninger om Microsoft 365 adgangskoder under:
+Du kan få flere oplysninger om Adgangskoder til Microsoft 365 under:
 
 [Nulstil adgangskoder](../add-users/reset-passwords.md) (artikel)
 
@@ -45,7 +45,7 @@ Du kan få flere oplysninger om Microsoft 365 adgangskoder under:
 
 [Lad brugerne nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)
 
-[Send en brugers adgangskode igen – Hjælp til administratorer](../add-users/resend-user-password.md) (artikel)
+[Send en brugers adgangskode igen – Administration Hjælp](../add-users/resend-user-password.md) (artikel)
   
 ## <a name="understanding-password-recommendations"></a>Om anbefalinger til adgangskoder
 
@@ -61,7 +61,7 @@ God praksis for adgangskoder kan opdeles i nogle få brede kategorier:
 
 Det primære mål med et mere sikkert adgangskodesystem er mangfoldighed af adgangskoder. Din adgangskodepolitik skal indeholde mange forskellige adgangskoder, som er svære at gætte. Her er nogle anbefalinger til, hvordan du holder din organisation så sikker som muligt.
   
-- Bevar et minimumlængdekrav på 14 tegn
+- Bevar et minimumlængdekrav på otte tegn
 
 - Kræver ikke krav til tegnkomposition. F.eks. \*&amp;(^%$
 
@@ -156,4 +156,4 @@ Vil du vide mere om administration af adgangskoder? Her er nogle anbefalede læs
 [Nulstil adgangskoder](../add-users/reset-passwords.md) (artikel)\
 [Angiv en individuel brugers adgangskode til aldrig at udløbe](../add-users/set-password-to-never-expire.md) (artikel)\
 [Lad brugerne nulstille deres egne adgangskoder](../add-users/let-users-reset-passwords.md) (artikel)\
-[Send en brugers adgangskode igen – Hjælp til administratorer](../add-users/resend-user-password.md) (artikel)
+[Send en brugers adgangskode igen – Administration Hjælp](../add-users/resend-user-password.md) (artikel)

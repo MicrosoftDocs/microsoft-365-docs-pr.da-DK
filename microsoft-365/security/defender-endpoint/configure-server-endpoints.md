@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 4c21d0bdf8a96347e60b79d998c0b8c64fd507a1
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: 547b41deceae01045baf119aeba1c15b8573a23f
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66531094"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695857"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -53,7 +53,7 @@ Du skal udføre følgende generelle trin for at kunne onboarde servere.
 
 :::image type="content" source="images/server-onboarding-tools-methods.png" alt-text="En illustration af onboardingflow til Windows-servere og Windows 10 enheder" lightbox="images/server-onboarding-tools-methods.png":::
 
-## <a name="integration-with-microsoft-defender-for-cloud"></a>Integration med Microsoft Defender for Cloud
+## <a name="integration-with-microsoft-defender-for-servers"></a>Integration med Microsoft Defender for Servers
 
 Microsoft Defender for Endpoint integreres problemfrit med Microsoft Defender for Servers. Du kan onboarde servere automatisk, få servere overvåget af Microsoft Defender for Cloud vist i Defender for Endpoint og udføre detaljerede undersøgelser som Microsoft Defender for Cloud-kunde.
 
@@ -196,6 +196,9 @@ Hvis du bruger Windows Server Update Services (WSUS) og/eller Microsoft Endpoint
 ### <a name="step-1-download-installation-and-onboarding-packages"></a>TRIN 1: Download installations- og onboardingpakker
 
 Du skal downloade både **installations** - og **onboardingpakker** fra portalen.
+
+> [!NOTE]
+> Installationspakken opdateres månedligt. Sørg for at downloade den nyeste pakke, før du bruger den.
 
 > [!div class="mx-imgBorder"]
 > ![Billede af onboardingdashboard](images/install-agent-onboard.png)

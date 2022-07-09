@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Prøveversion af Microsoft Purview-løsninger.
 ms.custom: trial-playbook
-ms.openlocfilehash: 2b84a3e5636edad78a9d221a0d088b84392cf49e
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 1ab54e60dbb127ac5f5cdffc835d0d00dc423d38
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66633779"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66696244"
 ---
 # <a name="trial-playbook-microsoft-purview-solutions"></a>Playbook til prøveversion: Microsoft Purview-løsninger
 
@@ -184,7 +184,7 @@ Tilpassede politikområder giver dig mulighed for dynamisk at målrette en polit
 
 Politikker, der bruger tilpassede politikområder, forbliver opdaterede, efterhånden som organisationen ændres, når nye medarbejdere tilmelder sig eller forlader virksomheden. Derudover er de ikke underlagt de tidligere grænser på 100/1.000 placeringer, der er inkluderet i en politik.
 
-- Opret et adaptivt politikområde, og brug det sammen med en opbevaringspolitik
+- Opret et [adaptivt politikområde](retention.md#adaptive-or-static-policy-scopes-for-retention), og brug det sammen med en opbevaringspolitik
 
 ### <a name="step-2-automate-labeling-to-apply-a-label-to-all-items-by-default"></a>Trin 2: Automatiser mærkning for at anvende en etiket på alle elementer som standard
 
@@ -193,7 +193,7 @@ Politikker, der bruger tilpassede politikområder, forbliver opdaterede, efterh�
 
 Standardnavne giver dig mulighed for automatisk at anvende en opbevaringsmærkat på alle elementer i et angivet bibliotek, en angivet mappe eller et angivet dokumentsæt i SharePoint.
 
-- Publicer en etiket, og anvend den som standard i SharePoint
+- Publicer en etiket, og anvend den som standard i [SharePoint](create-apply-retention-labels.md#applying-a-default-retention-label-to-all-content-in-a-sharepoint-library-folder-or-document-set)
 
 ## <a name="data-loss-prevention"></a>Forebyggelse af datatab
 
@@ -384,7 +384,7 @@ Hvis du vil aktivere insiderrisikoanalyse, skal du være medlem af Insider Risk 
 
 **Administrer elementer af høj værdi for forretnings-, juridiske eller lovmæssige krav til registrering**:
 
-Brug Microsoft Purview-datastyring funktioner til at automatisere opbevaringsplanen for organisatoriske lovmæssige, juridiske og forretningskritiske poster. Udnyt automatiseringsfunktioner fra oprettelse gennem samarbejde for at deklarere poster, bevare indhold og fjerne dem til sidst.
+Brug integrerede Microsoft Purview-datastyring funktioner til at automatisere opbevaringsplanen for organisatoriske lovmæssige, juridiske og forretningskritiske poster. Udnyt automatiseringsfunktioner fra oprettelse gennem samarbejde for at deklarere poster, bevare indhold og fjerne dem til sidst.
 
 ### <a name="step-1-mark-contents-as-records"></a>Trin 1: Markér indhold som poster  
 
@@ -393,7 +393,7 @@ Brug Microsoft Purview-datastyring funktioner til at automatisere opbevaringspla
 
 Når indhold erklæres som en post, er der begrænsninger for elementet med hensyn til, hvilke handlinger der er tilladt eller blokeret, yderligere aktiviteter om elementerne logføres, og du har bevis for fordeling, hvis elementerne slettes ved slutningen af deres opbevaringsperiode.
 
-- Opret en opbevaringsmærkat, der deklarerer indhold som en post eller en lovmæssig post
+- Opret en opbevaringsmærkat, der [deklarerer indhold som en post eller en lovmæssig post](declare-records.md)
 
 ### <a name="step-2-review-content-to-approve-before-its-permanently-deleted"></a>Trin 2: Gennemse indhold, der skal godkendes, før det slettes permanent
 
@@ -402,7 +402,7 @@ Når indhold erklæres som en post, er der begrænsninger for elementet med hens
 
 Når opbevaringsperioden udløber, kan de brugere, du angiver ("validatorer"), få besked om at gennemse indholdet og godkende den permanente bortskaffelse. Dette understøtter, hvis en anden handling end sletning er mere relevant, f.eks. tildeling af en anden opbevaringsperiode til indholdet eller suspendering af sletning i forbindelse med en overvågning.
 
-- Opret en opbevaringsmærkat, der bruger dispositionsgennemgang
+- [Opret en opbevaringsmærkat, der bruger dispositionsgennemgang](disposition.md#disposition-reviews)
 
 ### <a name="step-3-apply-labels-automatically-to-content-that-matches-specific-conditions"></a>Trin 3: Anvend automatisk mærkater på indhold, der opfylder bestemte betingelser
 
@@ -411,9 +411,9 @@ Når opbevaringsperioden udløber, kan de brugere, du angiver ("validatorer"), f
 
 Automatisk anvendelse af mærkater fjerner behovet for, at brugerne manuelt udfører mærkataktiviteterne. Du kan automatisk anvende opbevaringsmærkater på indhold, når der ikke allerede er anvendt en opbevaringsmærkat for dette indhold, og det indeholder følsomme oplysninger, nøgleord eller søgbare egenskaber eller et match for klassificeringer, der kan oplæres.
 
-- Anvend automatisk opbevaringsmærkater på indhold med bestemte typer følsomme oplysninger
-- Anvend automatisk opbevaringsmærkater på indhold ved hjælp af klassificeringer, der kan oplæres
-- Anvend automatisk opbevaringsmærkater med nøgleord eller søgbare egenskaber
+- [Anvend automatisk opbevaringsmærkater på indhold med bestemte typer følsomme oplysninger](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-specific-types-of-sensitive-information)
+- [Anvend automatisk opbevaringsmærkater på indhold ved hjælp af klassificeringer, der kan oplæres](apply-retention-labels-automatically.md#auto-apply-labels-to-content-by-using-trainable-classifiers)
+- [Anvend automatisk opbevaringsmærkater med nøgleord eller søgbare egenskaber](apply-retention-labels-automatically.md#auto-apply-labels-to-content-with-keywords-or-searchable-properties)
 
 ## <a name="additional-trials-and-add-ons"></a>Yderligere prøveversioner og tilføjelsesprogrammer
 

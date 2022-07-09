@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du opretter en følsomhedsmærkat, kan du automatisk tildele en mærkat til filer og mails, eller du kan bede brugerne om at vælge den mærkat, du anbefaler.
-ms.openlocfilehash: 06e769f3e6aa616d8b725ec37c52e2a24289ceb2
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: bdf45f614434c5097a9c5ce656c94cab01a462b6
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66662310"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66696049"
 ---
 # <a name="apply-a-sensitivity-label-to-content-automatically"></a>Anvend automatisk en følsomhedsmærkat på indhold
 
@@ -194,8 +194,7 @@ Når du vælger indstillingen **Klassificeringer, der kan oplæres** , skal du v
 
 ![Indstillinger for klassificeringer og følsomhedsmærkater, der kan oplæres.](../media/sensitivity-labels-classifers.png)
 
-> [!CAUTION]
-> Vi udfaser den prækvalificerede klassificering af **stødende sprog** , fordi den har produceret et højt antal falske positiver. Brug ikke denne klassificering, og hvis du i øjeblikket bruger den, anbefaler vi, at du fjerner dine forretningsprocesser fra den og i stedet bruger de forududlærte klassificeringer **målrettet chikane**, **bandeord** og **trussel** .
+De tilgængelige forudoplærte klassificeringer opdateres ofte, så der kan være flere poster at vælge end dem, der vises på dette skærmbillede.
 
 Du kan finde flere oplysninger om disse klassificeringer under [Få mere at vide om klassificeringer, der kan oplæres](classifier-learn-about.md).
 

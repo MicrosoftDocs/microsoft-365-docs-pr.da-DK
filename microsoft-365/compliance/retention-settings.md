@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Forstå de indstillinger, du kan konfigurere i en opbevaringspolitik eller opbevaringsmærkatpolitik for at bevare det, du ønsker, og slippe af med det, du ikke ønsker.
-ms.openlocfilehash: 87ecdc932932befc24441a59fb0dd8c023e982c2
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 34d71c0ae96c09dc2ac4569ae1de5fe386509550
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66639638"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695742"
 ---
 # <a name="common-settings-for-retention-policies-and-retention-label-policies"></a>Almindelige indstillinger for opbevaringspolitikker og politikker for opbevaringsmærkater
 
@@ -407,7 +407,7 @@ Før du konfigurerer opbevaring, skal du først blive fortrolig med kapacitets- 
 #### <a name="relabeling-at-the-end-of-the-retention-period"></a>Genmærkning ved slutningen af opbevaringsperioden
 
 > [!NOTE]
-> Denne indstilling udrulles i øjeblikket som prøveversion og kan ændres.
+> Denne indstilling er en prøveversion og kan ændres.
 
 Når du konfigurerer en opbevaringsmærkat til automatisk at anvende en anden opbevaringsmærkat i slutningen af opbevaringsperioden, er elementet underlagt opbevaringsindstillingerne for det nyligt valgte opbevaringsmærkat. Med denne indstilling kan du automatisk ændre opbevaringsindstillingerne for elementet.
 

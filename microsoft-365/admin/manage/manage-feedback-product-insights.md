@@ -17,18 +17,18 @@ search.appverid:
 - MET150
 - MOE150
 description: Brug NPS (Net promoter scores) fra dine slutbrugere for at se, hvordan de har det med Microsoft-produkter og -tjenester.
-ms.openlocfilehash: ec261553a5713d9e12205cbf4c88611a128bc48b
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: c7afd214359922c7946e3cb972ec6aced90857e0
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217348"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66696200"
 ---
 # <a name="microsoft-product-nps-feedback-and-insights-for-your-organization"></a>Feedback og indsigt i Microsofts NPS-produkt for din organisation
 
-Som administrator af en Microsoft 365 organisation kan du få adgang til og få indsigt fra NPS-produktundersøgelser, der er sendt af Microsoft.  
+Som administrator af en Microsoft 365-organisation kan du få adgang til og få indsigt fra NPS-produktundersøgelser, der er sendt af Microsoft.  
 
-NPS-undersøgelser (Net Promoter Score) indsamler brugerfeedback og måler, hvor sandsynlige brugere siger, at de vil anbefale produkter og tjenester til venner og kolleger. Disse data kan bruges i din organisation til at fastlægge strategier for indføring og udrulning af Microsoft 365 produkter og tjenester.
+NPS-undersøgelser (Net Promoter Score) indsamler brugerfeedback og måler, hvor sandsynlige brugere siger, at de vil anbefale produkter og tjenester til venner og kolleger. Disse data kan bruges i din organisation til at fastlægge strategier for implementering og udrulning af Microsoft 365-produkter og -tjenester.
 
 Vi bruger NPS-undersøgelser og feedback fra dine slutbrugere til at give dig indsigt i Microsoft-produkter og -tjenester. Disse oplysninger kan hjælpe dig med at finde ud af, hvilke produkter og tjenester slutbrugerne i din organisation bruger, samt hjælpe dig med at identificere problemer og hurtigt løse dem. Med disse oplysninger kan du:
 
@@ -49,16 +49,16 @@ Du skal være [administrator](../add-users/about-admin-roles.md) for at få vist
 
 ## <a name="nps-survey-insights"></a>INDSIGT I NPS-undersøgelse
 
-1. I Administration skal du gå til indsigt i **healthproduct-feedbackNPS-undersøgelse** >  > .
+1. I [Microsoft 365 Administration](https://admin.microsoft.com/) skal du gå til **Indsigt i NPS-undersøgelse** om **produktfeedback** >  for **tilstand** > .
 2. På siden **NPS-undersøgelsesindsigt** skal du navigere på siden for at se undersøgelsesindsigt, der er relateret til NPS for din organisation.
 
-:::image type="content" source="../../media/product-feedback-main-page.png" alt-text="Skærmbillede: Hoveddiagrammet Net Promoter Score (NPS)":::
+:::image type="content" source="../../media/product-feedback-main-page.png" alt-text="Skærmbillede: Hoveddiagrammet Net Promoter Score (NPS)" lightbox="../../media/product-feedback-main-page.png":::
 
 ### <a name="top-topic-filters"></a>Mest populære emnefiltre
 
 Vi har identificeret de fælles temaer fra brugerfeedback. Derefter brugte vi modeller til maskinel indlæring, der oplærer datasættene og automatisk organiserer feedbacken i **De mest populære emner**. Du kan derefter identificere de øverste fem emner med den mest mængde ordret feedback.  
 
-:::image type="content" source="../../media/top-topics-filter.png" alt-text="Skærmbillede: Top fem emner med mest ordret feedback":::
+:::image type="content" source="../../media/top-topics-filter.png" alt-text="Skærmbillede: Top fem emner med mest ordret feedback" lightbox="../../media/top-topics-filter.png":::
 
 > [!NOTE]
 > Vi publicerer kun et intelligent emne, når det opfylder en minimumskvalitetsbjælke, der er sat i partnerskab med eksperter inden for emnet. Præcisions- og genkaldelsesmålepunkter bruges til at bestemme det samme.
@@ -84,7 +84,7 @@ De emner, der i øjeblikket er tilgængelige på følgende måde:
 - Ordret præcision - 92%
 - Ordret genkaldelse - 89%
 
-**Generelle Ros** henviser til kunders kommentarer, der har et positivt synspunkt og ikke passer ind i andre emner.
+**Generel ros** refererer til kunders kommentarer, der har et positivt synspunkt og ikke passer ind i et andet emne.
 
 - Ordret præcision - 93%
 - Ordret genkaldelse - 98%
@@ -138,7 +138,7 @@ Diagrammer filtreres efter NPS-bedømmelsen på følgende måde:
 - Passive er kunder, der er tilfredse med tjenesten, men ikke nok til at anbefale dit produkt eller din tjeneste.
 - Promotorer- Glade kunder, der er loyale, entusiastiske og sandsynligvis vil anbefale dit produkt eller din serviceydelse.
 
-:::image type="content" source="../../media/how-likely-recommend.png" alt-text="Skærmbillede: Diagram, der viser, hvor sandsynligt det er, at du anbefaler en app til en ven eller kollega":::
+:::image type="content" source="../../media/how-likely-recommend.png" alt-text="Skærmbillede: Diagram, der viser, hvor sandsynligt det er, at du anbefaler en app til en ven eller kollega" lightbox="../../media/how-likely-recommend.png":::
 
 ### <a name="export-to-csv-and-search"></a>Eksportér til CSV og søgning
 
@@ -157,11 +157,11 @@ Du kan filtrere efter **kanaler**, **produkter**, **platforme** og **feedbacktyp
 
 Feedback kan indsendes på forskellige **platforme** som Android, iOS, Mac og Windows. Dette filter giver dig mulighed for at filtrere feedback baseret på den platform, det blev sendt på.
 
-Størstedelen af Microsoft 365 til **forretningsprodukter** findes under dette filter. Brug dette filter til at vælge de produkter, der har fået feedback sendt.
+Størstedelen af Microsoft 365 til **virksomheder-produkter** findes under dette filter. Brug dette filter til at vælge de produkter, der har fået feedback sendt.
 
 Brug **feedbacktyper** (kun angivet til NPS-feedbacktyper) til at filtrere feedback, som vi indsamler.
 
-:::image type="content" source="../../media/feedback-filters.png" alt-text="Skærmbillede: Diagram, der viser feedbacktyper":::
+:::image type="content" source="../../media/feedback-filters.png" alt-text="Skærmbillede: Diagram, der viser feedbacktyper" lightbox="../../media/feedback-filters.png":::
 
 ### <a name="we-want-to-hear-from-you"></a>Vi vil gerne høre fra dig
 

@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 461a3e4ebb97d809bf61c11591f40448ef97f8cb
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: dca4745b5058ed7b98bf0821e2b715393f7bf77f
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490525"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695960"
 ---
 # <a name="server-migration-scenarios-from-the-previous-mma-based-microsoft-defender-for-endpoint-solution"></a>Serveroverførselsscenarier fra den forrige MMA-baserede Microsoft Defender for Endpoint løsning
 
@@ -39,14 +39,13 @@ ms.locfileid: "66490525"
 
 Disse instruktioner gælder for den nye MSI-pakke (Unified Solution and Installer) med Microsoft Defender for Endpoint til Windows Server 2012 R2 og Windows Server 2016. Denne artikel indeholder instruktioner på højt niveau til forskellige mulige overførselsscenarier fra den forrige til den aktuelle løsning. Disse trin på højt niveau er beregnet som retningslinjer, der skal justeres til de udrulnings- og konfigurationsværktøjer, der er tilgængelige i dit miljø. 
 
-**Hvis du bruger Microsoft Defender for Cloud til at udføre udrulning, kan du automatisere installationen og opgraderingen. Se [Defender for Servers Plan 2 kan nu integreres med MDE-samlet løsning] (https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)**
+**Hvis du bruger Microsoft Defender for Cloud til at udføre udrulning, kan du automatisere installationen og opgraderingen. Se [Defender for Servers Plan 2 kan nu integreres med MDE Unified Solution](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)**
 
 > [!NOTE]
 > Opgraderinger af operativsystemet med Microsoft Defender for Endpoint installeret understøttes ikke. Fjern derefter offboard, før du fortsætter med en opgradering.
 
 > [!NOTE]
 > Fuld Microsoft Endpoint Configuration Manager automatisering og integration til at udføre en automatisk opgradering vil være tilgængelig i en senere version af MECM. Fra 2107-versionen med den seneste hotfix-akkumulering kan du bruge noden Endpoint Protection til konfiguration samt Gruppepolitik, PowerShell, Microsoft Endpoint Manager lejertilknyttelse eller lokal konfiguration. Derudover kan du udnytte eksisterende funktionalitet i Microsoft Endpoint Configuration Manager til at automatisere manuelle opgraderingstrin. Metoder, som er beskrevet nedenfor.
-
 
 ## <a name="installer-script"></a>Installationsscript
 
@@ -107,6 +106,7 @@ Hvis du vil flytte en computer ud af passiv tilstand, skal du angive følgende n
 
 Sti: HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection Name: ForceDefenderPassiveMode Type: REG_DWORD Værdi: 0
 
+Du kan få flere oplysninger om overførsel af servere fra MMA til samlet løsning under [Overførsel af servere fra Microsoft Monitoring Agent til den samlede løsning](application-deployment-via-mecm.md).
 
 ## <a name="other-migration-scenarios"></a>Andre overførselsscenarier
 

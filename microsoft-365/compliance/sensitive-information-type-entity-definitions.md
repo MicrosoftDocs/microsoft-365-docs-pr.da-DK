@@ -19,12 +19,12 @@ hideEdit: true
 feedback_system: None
 recommendations: false
 description: Der er mange følsomme oplysningstyper, der er klar til brug i dine DLP-politikker. I denne artikel vises alle disse typer følsomme oplysninger, og du kan se, hvad en DLP-politik søger efter, når hver type registreres.
-ms.openlocfilehash: 2d81410b86ca9a90b12dbaa850e36d8803af0d79
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 45ec1e04181de6bb6d3a7c15b9efa219fbe2d43e
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66622419"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66696113"
 ---
 # <a name="sensitive-information-type-entity-definitions"></a>Enhedsdefinitioner for type af følsomme oplysninger
 
@@ -132,7 +132,6 @@ Hertil kommer, at mønstre, som et menneske ville se som tegn på navne, også m
 
 - English
 - Bulgarian
-- Kinesisk
 - Croatian
 - Czech
 - Danish

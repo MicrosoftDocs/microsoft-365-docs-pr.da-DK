@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Opret politikker for opbevaring af automatisk mærkning, så du automatisk kan anvende mærkater for at bevare det, du har brug for, og slette det, du ikke har brug for
-ms.openlocfilehash: f3af46b59134a815f3ba3a02154f9ecfd6f95627
-ms.sourcegitcommit: 019e8a62ab07a42d4ede4a87ccfaed527914412d
+ms.openlocfilehash: 7530b50aca1ed50ad5735f12f12b48b06d539b2e
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/08/2022
-ms.locfileid: "66689192"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695982"
 ---
 # <a name="automatically-apply-a-retention-label-to-retain-or-delete-content"></a>Anvend automatisk en opbevaringsmærkat for at bevare eller slette indhold
 
@@ -273,9 +273,11 @@ Når du vælger indstillingen for en klassificering, der kan oplæres, kan du v�
 
 ![Vælg klassificering, der kan oplæres.](../media/retention-label-classifers.png)
 
-Hvis du vil anvende en mærkat automatisk ved hjælp af denne indstilling, skal SharePoint-websteder og postkasser have mindst 10 MB data.
+De tilgængelige forudoplærte klassificeringer opdateres ofte, så der kan være flere poster at vælge end dem, der vises på dette skærmbillede.
 
 Du kan finde flere oplysninger om klassificeringer, der kan oplæres, under [Få mere at vide om klassificeringer, der kan oplæres](classifier-learn-about.md).
+
+Hvis du vil anvende en mærkat automatisk ved hjælp af denne indstilling, skal SharePoint-websteder og postkasser have mindst 10 MB data.
 
 > [!TIP]
 > Hvis du bruger klassificeringer, der kan oplæres til Exchange, skal du se [Sådan oplæres en klassificering igen i Indholdsoversigt](classifier-how-to-retrain-content-explorer.md).

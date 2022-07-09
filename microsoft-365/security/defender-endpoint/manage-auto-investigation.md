@@ -17,12 +17,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.technology: mde
-ms.openlocfilehash: 06e2c6c5269b32b29be87f44635d65b9c610c344
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 122b216a07bdd70ab5619903ba049b4fb507179e
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535862"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695610"
 ---
 # <a name="review-remediation-actions-following-an-automated-investigation"></a>Gennemse afhjælpningshandlinger efter en automatiseret undersøgelse
 
@@ -102,7 +102,7 @@ Hvis du har fastslået, at en enhed eller en fil ikke er en trussel, kan du fort
 > - Stop og sæt en fil i karantæne
 > - Tilføj en indikator for at blokere eller tillade en fil
 >
-> Du kan få mere at vide under [Sammenlign Microsoft Defender for Endpoint planer](defender-endpoint-plan-1-2.md) og [Sammenlign sikkerhedsfunktioner i Microsoft 365 planer for små og mellemstore virksomheder](../defender-business/compare-mdb-m365-plans.md).
+> Du kan få mere at vide under [Sammenlign Microsoft Defender for Endpoint-planer](defender-endpoint-plan-1-2.md) og [Sammenlign sikkerhedsfunktioner i Microsoft 365-planer til små og mellemstore virksomheder](../defender-business/compare-mdb-m365-plans.md).
 
 ### <a name="to-undo-multiple-actions-at-one-time"></a>Sådan fortryder du flere handlinger på én gang
 
@@ -127,9 +127,9 @@ Automatiseringsniveauer påvirker, om visse afhjælpningshandlinger udføres aut
 |Indstilling for enhedsgruppe|Automatiserede undersøgelsesresultater|Sådan gør du|
 |---|---|---|
 |**Fuld – afhjælp trusler automatisk**<br/>(anbefales)|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Der udføres automatisk relevante afhjælpningshandlinger.|[Gennemse fuldførte handlinger](#review-completed-actions)|
-|**Fuld – afhjælp trusler automatisk**|En mistænkelig *dom er nået* for et bevis. <p> Afhjælpningshandlinger afventer godkendelse for at fortsætte.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions)|
+|**Fuld – afhjælp trusler automatisk**|En mistænkelig *dom er nået* for et bevis. <p> Der udføres automatisk relevante afhjælpningshandlinger.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions)|
 |**Semi – kræver godkendelse til enhver afhjælpning**|En dom af enten *Ondsindet* eller *Mistænkelig* er nået for et stykke af beviser. <p> Afhjælpningshandlinger afventer godkendelse for at fortsætte.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions)|
-|**Semi – kræver godkendelse til afhjælpning af kernemapper**|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Hvis artefaktet er en fil eller eksekverbar og er i en operativsystemmappe, f.eks. mappen Windows eller mappen Programfiler, afventer afhjælpningshandlinger godkendelse. <p> Hvis artefaktet *ikke* findes i en operativsystemmappe, udføres afhjælpningshandlinger automatisk.|<ol><li>[Godkend (eller afvis) ventende handlinger](#review-pending-actions)</li><li>[Gennemse fuldførte handlinger](#review-completed-actions)</li></ol>|
+|**Semi – kræver godkendelse til afhjælpning af kernemapper**|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Hvis artefaktet er en fil eller eksekverbar og er i en operativsystemmappe, f.eks. Windows-mappen eller mappen Programfiler, afventer afhjælpningshandlinger godkendelse. <p> Hvis artefaktet *ikke* findes i en operativsystemmappe, udføres afhjælpningshandlinger automatisk.|<ol><li>[Godkend (eller afvis) ventende handlinger](#review-pending-actions)</li><li>[Gennemse fuldførte handlinger](#review-completed-actions)</li></ol>|
 |**Semi – kræver godkendelse til afhjælpning af kernemapper**|En mistænkelig *dom er nået* for et bevis. <p> Afhjælpningshandlinger afventer godkendelse.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions).|
 |**Semi – kræver godkendelse til afhjælpning af mapper, der ikke er midlertidige**|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Hvis artefaktet er en fil eller eksekverbar, der ikke findes i en midlertidig mappe, f.eks. brugerens mappe til downloads eller temp, afventer afhjælpningshandlinger godkendelse. <p> Hvis artefaktet er en fil eller eksekverbar fil, der *er* i en midlertidig mappe, udføres afhjælpningshandlinger automatisk.|<ol><li>[Godkend (eller afvis) ventende handlinger](#review-pending-actions)</li><li>[Gennemse fuldførte handlinger](#review-completed-actions)</li></ol>|
 |**Semi – kræver godkendelse til afhjælpning af mapper, der ikke er midlertidige**|En mistænkelig *dom er nået* for et bevis. <p> Afhjælpningshandlinger afventer godkendelse.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions)|

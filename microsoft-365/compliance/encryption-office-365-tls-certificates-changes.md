@@ -9,12 +9,12 @@ audience: Developer
 ms.date: 3/7/2022
 ms.service: O365-seccomp
 ms.localizationpriority: medium
-ms.openlocfilehash: 65b0ffd5d605302dd62369471b65c1ac10aacd40
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: d5390c97c097bdbf52e496336e3a239d975a88aa
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66641762"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66696222"
 ---
 # <a name="office-tls-certificate-changes"></a>Ændringer i Office TLS-certifikatet
 
@@ -143,7 +143,8 @@ Det aktuelle rodnøglecenter, det mellemliggende nøglecenter og bladcertifikate
 I meget sjældne tilfælde kan virksomhedsbrugere få vist certifikatvalideringsfejl, hvor rodnøglecenteret "DigiCert Global Root G2" vises som tilbagekaldt. Dette skyldes en kendt Windows-fejl under begge følgende betingelser:
 
 - Rodnøglecenteret findes i [CurrentUser\Root-certifikatlageret](/windows/win32/seccrypto/system-store-locations#cert_system_store_current_user) og mangler `NotBeforeFileTime` egenskaberne og `NotBeforeEKU`
-- Rodnøglecenteret findes også i [certifikatlageret LocalMachine\AuthRoot,](/windows/win32/seccrypto/system-store-locations#cert_system_store_local_machine) men har både egenskaberne `NotBeforeFileTime` og `NotBeforeEKU`
+- Rodnøglecenteret findes i [certifikatlageret LocalMachine\AuthRoot,](/windows/win32/seccrypto/system-store-locations#cert_system_store_local_machine) men har både egenskaberne `NotBeforeFileTime` og `NotBeforeEKU`
+- Rodnøglecenteret er IKKE i [LocalMachine\Root Certificate Store](/windows/win32/seccrypto/system-store-locations#cert_system_store_local_machine)
 
 Alle bladcertifikater, der er udstedt fra dette rodnøglecenter efter , `NotBeforeFileTime` vises tilbagekaldt. 
 
@@ -182,7 +183,12 @@ certutil -store -v authroot DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
 certutil -user -store -v root DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
 ```
 
-En bruger kan løse problemet ved at slette kopien af rodnøglecenteret i certifikatlageret `CurrentUser\Root` :
+En bruger kan løse problemet ved at slette kopien af rodnøglecenteret i certifikatlageret `CurrentUser\Root` ved at gøre følgende:
 ```
 certutil -user -delstore root DF3C24F9BFD666761B268073FE06D1CC8D4F82A4
 ```
+Eller 
+```
+reg delete HKCU\SOFTWARE\Microsoft\SystemCertificates\Root\Certificates\DF3C24F9BFD666761B268073FE06D1CC8D4F82A4 /f
+```
+Den første tilgang opretter en Windows-dialogboks, som en bruger skal klikke sig igennem, mens den anden fremgangsmåde ikke gør det. 
