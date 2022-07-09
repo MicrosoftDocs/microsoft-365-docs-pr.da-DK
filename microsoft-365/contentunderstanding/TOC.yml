@@ -18,6 +18,8 @@
           href: duplicate-a-model.md
         - name: Omdøb en model
           href: rename-a-model.md
+        - name: Slet en model
+          href: delete-a-model.md
         - name: Opret en udtrækningsfunktion
           href: create-an-extractor.md
         - name: Omdøb en udtrækningsfunktion
