@@ -43,6 +43,7 @@
 #### [Brug Gruppepolitik](manage-mde-post-migration-group-policy-objects.md)
 #### [Brug PowerShell, WMI eller MPCmdRun.exe](manage-mde-post-migration-other-tools.md)
 #### [Server-migreringsscenarier](server-migration.md)
+##### [Overførsel af servere fra Microsoft Monitoring Agent til den samlede løsning](application-deployment-via-mecm.md)
 
 ## [Onboard og konfigurer enheder]()
 ### [Onboard enheder, og konfigurer Microsoft Defender for Endpoint-funktioner](onboard-configure.md)

@@ -20,24 +20,24 @@ ms.custom:
 - admindeeplinkMAC
 search.appverid: MET150
 description: Få mere at vide om, hvordan du annullerer din prøveversion af Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder eller betalte abonnementer i Microsoft 365 Administration.
-ms.date: 06/02/2022
-ms.openlocfilehash: 962553d620b9cc3477f5eb7c91fa0b822dc5de07
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.date: 07/07/2022
+ms.openlocfilehash: f7d967d14f7f0e23e3d422318bddf25eb6772dcf
+ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490359"
+ms.lasthandoff: 07/09/2022
+ms.locfileid: "66695698"
 ---
 # <a name="cancel-your-microsoft-subscription"></a>Annuller dit Microsoft-abonnement
 
 Hvis du vil annullere dit abonnement, er den nemmeste måde at gøre det på at [slå tilbagevendende fakturering fra](renew-your-subscription.md). Når du slår tilbagevendende fakturering fra, kan du fortsætte med at bruge dit abonnement, indtil det udløber i slutningen af abonnementsperioden. Hvis du vil annullere med det samme, kan du bruge oplysningerne og trinnene i denne artikel til at gøre det.
 
+Du kan til enhver tid annullere din gratis prøveversion for at stoppe fremtidige opkrævninger. Når din 1-måneders gratis prøveversion udløber, opkræves du det gældende abonnementsgebyr.
+
 > [!IMPORTANT]
-> - Denne artikel gælder kun for abonnementer på Dynamics 365, Intune, Power Platform og Microsoft 365 til virksomheder. Hvis du har Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365-abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
+> - Denne artikel gælder kun for abonnementer på Dynamics 365, Intune, Power Platform, Windows 365 og Microsoft 365 til virksomheder. Hvis du har Microsoft 365 Family eller Personal, skal du se [Annuller et Microsoft 365-abonnement](https://support.microsoft.com/office/cancel-a-microsoft-365-subscription-46e2634c-c64b-4c65-94b9-2cc9c960e91b?OCID=M365_DocsCancel_Link).
 > - Hvis du har købt dit abonnement via en Microsoft-repræsentant eller en forhandler, har du syv dage til at annullere og få en forholdsmæssig refusion. Kontakt din sælger eller partner for at få hjælp til at opsige dit abonnement. [Få mere at vide om partnere](../manage-partners.md#what-can-a-partner-do-for-my-organization-or-school).
 > - Hvis din organisation er placeret i Chile, og du har købt dit abonnement via en partner i Chile, har du 10 dage til at annullere og få en forholdsmæssig refusion.
-
-Hvis du vil annullere dit abonnement, er den nemmeste måde at gøre det på at [slå tilbagevendende fakturering fra](renew-your-subscription.md). Når du slår tilbagevendende fakturering fra, kan du fortsætte med at bruge dit abonnement, indtil det udløber i slutningen af abonnementsperioden. Hvis du vil annullere med det samme, kan du bruge oplysningerne og trinnene i denne artikel til at gøre det.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
@@ -58,9 +58,6 @@ Du kan kun annullere og modtage en forholdsmæssig kredit eller refusion, hvis d
 Hvis du har brug for at annullere inden for syv dage efter starten eller fornyelsen af dit abonnement, skal du gå til [Trin til at annullere dit abonnement](#steps-to-cancel-your-subscription) senere i denne artikel.
 
 Hvis der er gået mere end syv dage, skal du [slå tilbagevendende fakturering](renew-your-subscription.md)fra. Dette forhindrer, at dit abonnement fornys ved periodens udløb.  Dubeholder din adgang til dine produkter og tjenester i resten af din abonnementsperiode. Hvis du har et årsabonnement og betaler månedligt, opkræves du hver måned for resten af din abonnementsperiode.
-
-> [!NOTE]
-> Du kan når som helst annullere for at stoppe fremtidige opkrævninger. Efter din 1-måneders gratis prøveversion opkræves du det gældende abonnementsgebyr.
 
 ### <a name="if-you-dont-have-a-billing-profile"></a>Hvis du ikke har en faktureringsprofil
 
