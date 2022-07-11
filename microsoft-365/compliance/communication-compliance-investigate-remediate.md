@@ -20,12 +20,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 4dc790b780b6c066eda635b081d412654468b52f
-ms.sourcegitcommit: 244ab1b8fe98363f2bfeec337bf68e88ab31d789
+ms.openlocfilehash: daa8eeab7f62b760b45e6c1571972dcd0ee83ae6
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66687120"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714481"
 ---
 # <a name="investigate-and-remediate-communication-compliance-alerts"></a>Undersøg og afhjælp underretninger om kommunikationsoverholdelse
 
@@ -87,28 +87,6 @@ I følgende tabel beskrives filterdetaljer:
 8. Hvis du vil gemme de valgte filtre som en filterforespørgsel, skal du vælge **Gem forespørgselskontrolelementet** , når du har konfigureret mindst én filterværdi. Angiv et navn til filterforespørgslen, og vælg **Gem**. Dette filter er kun tilgængeligt til brug for denne politik og er angivet i afsnittet **Gemte filterforespørgsler** på siden **med oplysninger om filtre** .
 
     ![Kontrolelementer til filtrering af kommunikation med overholdelse af angivne standarder.](../media/communication-compliance-filter-detail-controls.png)
-
-### <a name="using-near-and-exact-duplicate-analysis"></a>Brug af nær- og nøjagtig dubletanalyse
-
-Politikker for kommunikation med overholdelse af angivne standarder scanner og forbehandler automatisk dubletter af meddelelser nær og nøjagtigt uden yderligere konfigurationstrin. Denne visning giver dig mulighed for hurtigt at reagere på lignende meddelelser én for én eller som en gruppe, hvilket reducerer byrden med undersøgelse af meddelelser for korrekturlæsere. Når der registreres dubletter, vises **kontrolelementerne Near Duplicates** og/eller **Exact Duplicates** på værktøjslinjen til afhjælpningshandling. Denne visning er ikke tilgængelig, hvis der ikke findes nær eller nøjagtige dubletter.
-
-#### <a name="to-remediate-duplicates"></a>Sådan afhjælpes dubletter
-
-1. Log på [Microsoft Purview-compliance-portal](https://compliance.microsoft.com) ved hjælp af legitimationsoplysninger for en administratorkonto i din Microsoft 365-organisation.
-
-2. I Microsoft Purview-compliance-portal skal du gå til **Kommunikation med overholdelse af angivne standarder**.
-
-3. Vælg fanen **Politikker,** og vælg derefter en politik til undersøgelse. Dobbeltklik for at åbne siden **Politik** .
-
-4. På siden **Politik** skal du vælge enten fanen **Ventende** eller **Løst** for at få vist dublerede meddelelser.
-
-5. Vælg **kontrolelementerne Nær dubletter** eller **Nøjagtige dubletter** for at åbne siden med oplysninger om dubletter.
-
-6. Vælg en eller flere meddelelser til afhjælpningshandlingskontrolelementer for disse meddelelser.
-
-7. Vælg **Løs**, **Giv besked**, **Eskaler** eller **Hent** for at anvende handlingen på de valgte dubletmeddelelser som standardfilter.
-
-8. Vælg **Luk** , når du har fuldført afhjælpningshandlingerne på meddelelserne.
 
 ## <a name="remediate-alerts"></a>Afhjælp beskeder
 

@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-evalutatemtp
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 3d13c3b126f4aae75ff775ac3170049dfc9c0a2e
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: 8a369aba012d7de23f72501ef1ce042750c57f7d
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679434"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714591"
 ---
 # <a name="microsoft-defender-for-endpoint-evaluation-lab"></a>Microsoft Defender for Endpoint evalueringslaboratorium
 
@@ -43,7 +43,7 @@ Med den forenklede konfiguration kan du fokusere på at køre dine egne testscen
 
 Du har fuld adgang til platformens effektive funktioner, f.eks. automatiserede undersøgelser, avanceret jagt og trusselsanalyse, så du kan teste den omfattende beskyttelsesstak, som Defender for Endpoint tilbyder.
 
-Du kan tilføje enheder af typen Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 og Linux (Ubuntu), der er forudkonfigureret til at have de nyeste operativsystemversioner og de rigtige sikkerhedskomponenter installeret samt Office 2019 Standard installeret.
+Du kan tilføje enheder af typen Windows 10, Windows 11, Windows Server 2019, Windows Server 2016 og Linux (Ubuntu), der er forudkonfigureret til at have de nyeste operativsystemversioner og de rette sikkerhedskomponenter installeret samt Office 2019 Standard installeret.
 
 Du kan også installere trusselssimulatorer. Defender for Endpoint har indgået partnerskab med brancheførende trusselssimuleringsplatforme for at hjælpe dig med at teste Defender for Endpoint-funktionerne uden at skulle forlade portalen.
 
@@ -111,7 +111,7 @@ Enheden konfigureres med den nyeste version af operativsystemet og Office 2019 S
 
 Hvis du vælger at tilføje en trusselssimulator under opsætningen af laboratoriet, vil alle enheder have trusselssimulatoragenten installeret på de enheder, du tilføjer.
 
-Enheden føjes automatisk til din lejer med de anbefalede Windows sikkerhedskomponenter slået til og i overvågningstilstand – uden at du behøver at gøre noget.
+Enheden bliver automatisk onboardet til din lejer med de anbefalede Windows-sikkerhedskomponenter slået til og i overvågningstilstand – uden at du behøver at gøre noget.
 
 Følgende sikkerhedskomponenter er forudkonfigureret på testenhederne:
 
@@ -125,7 +125,7 @@ Følgende sikkerhedskomponenter er forudkonfigureret på testenhederne:
 - [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
 
 > [!NOTE]
-> Microsoft Defender Antivirus er slået til (ikke i overvågningstilstand). Hvis Microsoft Defender Antivirus blokerer dig for at køre din simulering, kan du slå beskyttelse i realtid fra på enheden via Windows Sikkerhed. Du kan få flere oplysninger under [Konfigurer altid aktiveret beskyttelse](configure-real-time-protection-microsoft-defender-antivirus.md).
+> Microsoft Defender Antivirus er slået til (ikke i overvågningstilstand). Hvis Microsoft Defender Antivirus blokerer dig fra at køre din simulering, kan du slå beskyttelse i realtid fra på enheden via Windows Sikkerhed. Du kan få flere oplysninger under [Konfigurer altid aktiveret beskyttelse](configure-real-time-protection-microsoft-defender-antivirus.md).
 
 Automatiserede undersøgelsesindstillinger afhænger af lejerindstillingerne. Den konfigureres som standard til at være semiautomatisk. Du kan få flere oplysninger under [Oversigt over automatiserede undersøgelser](automated-investigations.md).
 
@@ -159,10 +159,7 @@ Automatiserede undersøgelsesindstillinger afhænger af lejerindstillingerne. De
    > I kolonnen **Simulatorstatus** kan du holde markøren over oplysningsikonet for at få kendskab til installationsstatussen for en agent.
 
 
-## <a name="add-a-domain-controller-preview"></a>Tilføj en domænecontroller (prøveversion)
-
-> [!IMPORTANT]
-> Nogle oplysninger er relateret til et forhåndsudgivet produkt, som kan blive ændret væsentligt, før det udgives kommercielt. Microsoft giver ingen garantier, udtrykkelige eller stiltiende, med hensyn til de oplysninger, der er angivet her.
+## <a name="add-a-domain-controller"></a>Tilføj en domænecontroller 
 
 Tilføj en domænecontroller for at køre komplekse scenarier, f.eks. tværgående flytning og angreb på fleretage på tværs af flere enheder.
 
@@ -219,9 +216,9 @@ Hvis du er på udkig efter en færdig simulering, kan du bruge vores ["Gør det 
 > [!NOTE]
 > Forbindelsen til testenhederne udføres ved hjælp af RDP. Sørg for, at firewallindstillingerne tillader RDP-forbindelser.
 
-1. Forbind på enheden, og kør en simulering af angreb ved at vælge **Forbind**.
+1. Opret forbindelse til din enhed, og kør en simulering af angreb ved at vælge **Opret forbindelse**.
 
-    :::image type="content" source="images/test-machine-table.png" alt-text="Knappen Forbind for testenhederne" lightbox="images/test-machine-table.png":::
+    :::image type="content" source="images/test-machine-table.png" alt-text="Knappen Opret forbindelse for testenhederne" lightbox="images/test-machine-table.png":::
 
 
    :::image type="content" source="images/remote-connection.png" alt-text="Forbindelsesskærmen til fjernskrivebord" lightbox="images/remote-connection.png":::

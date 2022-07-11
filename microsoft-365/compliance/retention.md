@@ -1,5 +1,5 @@
 ---
-title: Få mere at vide om opbevaringspolitikker & mærkater til automatisk at bevare eller slette indhold
+title: Få mere at vide om opbevaringspolitikker & mærkater, der skal bevares eller slettes
 f1.keywords:
 - NOCSH
 ms.author: cabailey
@@ -17,13 +17,13 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater, der hjælper dig med at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: c78bcae040ae1c210c58923b924f099a5ec396bc
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater for at bevare det, du har brug for, og slette det, du ikke har brug for.
+ms.openlocfilehash: 2fd1d2e792a7b1d0635ff59ad5e63ce963e38ccc
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66622519"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714525"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 

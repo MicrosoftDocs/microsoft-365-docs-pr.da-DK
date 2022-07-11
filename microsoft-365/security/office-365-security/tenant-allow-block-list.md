@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ea60746554c9ad52c3e8b6d23989b2b7659cd0ad
-ms.sourcegitcommit: 52e2a67a1badd7faaabbcf99c65f464e23a47805
+ms.openlocfilehash: ad8920ae83b99528c47b00d375affb0fbfa6c330
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "66060932"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714503"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -33,9 +33,9 @@ ms.locfileid: "66060932"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser kan du være uenig i dommen om EOP-filtrering. En god meddelelse kan f.eks. være markeret som dårlig (et falsk positivt), eller der kan tillades en forkert meddelelse via (falsk negativ).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser kan du være uenig i dommen om EOP-filtrering. En god meddelelse kan f.eks. være markeret som dårlig (et falsk positivt), eller der kan tillades en forkert meddelelse via (falsk negativ).
 
-Listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen giver dig mulighed for manuelt at tilsidesætte de Microsoft 365 filtreringsdomme. Lejerlisten tillad/bloker bruges under mailflow til indgående meddelelser (gælder ikke for meddelelser i organisationen) og på tidspunktet for brugerens klik. Du kan angive følgende typer tilsidesættelser:
+Listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen giver dig mulighed for manuelt at tilsidesætte Microsoft 365-filtreringsdommene. Lejerlisten tillad/bloker bruges under mailflow til indgående meddelelser (gælder ikke for meddelelser i organisationen) og på tidspunktet for brugerens klik. Du kan angive følgende typer tilsidesættelser:
 
 - URL-adresser, der skal blokeres.
 - Filer, der skal blokeres.
@@ -45,7 +45,10 @@ Listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen giver 
 - Filer, der skal tillades.
 - Sender mails eller domæner, der skal tillades.
 
-I denne artikel beskrives det, hvordan du konfigurerer poster på listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
+I denne artikel beskrives det, hvordan du konfigurerer poster på listen over tilladte/blokerede lejere på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online  postkasser).
+
+> [!NOTE]
+> [Listen "Bloker følgende URL-adresser" i politikker for sikre links](safe-links.md#block-the-following-urls-list-for-safe-links) frarådes. Du kan nu administrere blokerings-URL-adresser på listen over tilladte/blokerede lejere. Vi forsøger at overføre eksisterende poster fra listen "Bloker følgende URL-adresser" for at blokere URL-adresser på listen over tilladte/blokerede lejere. Meddelelser, der indeholder den blokerede URL-adresse, sættes i karantæne.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -71,7 +74,7 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 
 - Poster på listen over tilladte/blokerede lejere udløber som standard efter 30 dage. Du kan angive en dato eller indstille dem til aldrig at udløbe.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil tilføje og fjerne poster fra listen over tilladte/blokerede lejere, skal du være medlem af en af følgende rollegrupper:
@@ -88,7 +91,7 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 
   > [!NOTE]
   >
-  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser *og* tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser *og* tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   > - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 ## <a name="configure-the-tenant-allowblock-list"></a>Konfigurer listen over tilladte/blokerede lejere

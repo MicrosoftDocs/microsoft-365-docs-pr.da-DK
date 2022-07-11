@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: 04/08/2022
+ms.date: 07/08/2022
 audience: Admin
 ms.topic: overview
 ms.service: O365-seccomp
@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om eDiscovery-løsningen (Premium) i Microsoft Purview. Denne artikel indeholder en oversigt over eDiscovery (Premium) i Microsoft Purview, et værktøj, der kan hjælpe dig med at administrere interne og eksterne undersøgelser. Den rammer også de forretningsmæssige årsager til at bruge eDiscovery (Premium) til at administrere dine juridiske undersøgelser.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5331ada9baf364f62c44c63a5e2e5b2b4d060292
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 95dbeb33ad054845b7d2a7a5bc019ce0cd727093
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66639836"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714569"
 ---
 # <a name="overview-of-microsoft-purview-ediscovery-premium"></a>Oversigt over Microsoft Purview eDiscovery (Premium)
 
@@ -93,38 +93,9 @@ På et højt niveau understøtter eDiscovery (Premium) EDRM-arbejdsprocessen:
 
 ## <a name="subscriptions-and-licensing"></a>Abonnementer og licenser
 
-Licenser til eDiscovery (Premium) kræver det relevante organisationsabonnement og licenser pr. bruger.
+Du kan finde oplysninger om, hvilke licenser der giver en bruger rettigheder til at drage fordel af eDiscovery (Premium), i [Microsoft 365-vejledningen til overholdelse af & sikkerhed](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-ediscovery) og se afsnittet "eDiscovery og overvågning" i [sammenligningstabellen til Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2139145). 
 
-- **Organisationsabonnement:** Hvis du vil have adgang til eDiscovery (Premium) i Microsoft Purview-compliance-portal, skal din organisation have en af følgende:
-
-  - Microsoft 365 E5- eller Office 365 E5-abonnement
-  
-  - Microsoft 365 E3-abonnement med tilføjelsen E5-overholdelse
-
-  - Microsoft 365 E3 abonnement med tilføjelsesprogrammet E5 eDiscovery og Overvågning
-
-  - Microsoft 365 Education A5- eller Office 365 Education A5-abonnement
-
-   Hvis du ikke har en eksisterende Microsoft 365 E5 plan og vil prøve eDiscovery (Premium), kan du [føje Microsoft 365](/office365/admin/try-or-buy-microsoft-365) til dit eksisterende abonnement eller [tilmelde dig en prøveversion](https://www.microsoft.com/microsoft-365/enterprise) af Microsoft 365 E5.
-
-- **Licenser pr. bruger:** Hvis du vil tilføje en bruger som tilsynsførende i en eDiscovery-sag på forhånd, skal brugeren tildeles en af følgende licenser, afhængigt af dit organisationsabonnement:
-
-  - Microsoft 365: Brugere skal tildeles en af følgende:
-  
-    - Microsoft 365 E5 licens, en E5 Compliance-tilføjelseslicens eller et E5-tilføjelsesprogram til eDiscovery og overvågning
-
-    - Frontlinebrugere af Microsoft 365 skal tildeles et tilføjelsesprogram til F5-overholdelse eller F5 Security & Compliance
-
-    - Microsoft 365 Education brugere skal tildeles en A5-licens
-
-  - Office 365: Brugerne skal tildeles en Office 365 E5- eller Office 365 Education A5-licens.
-
-Du kan finde oplysninger om licenser ved at downloade og se afsnittet "eDiscovery og overvågning" i [tabellen Sammenligning i Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2139145).
-
-Du kan få oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users).
-
-> [!NOTE]
-> Brugerne skal kun have en E5- eller A5-licens (eller den relevante licens til tilføjelsesprogrammet) for at blive føjet til en eDiscovery-sag (Premium) som vogtere. It-administratorer, eDiscovery-ledere, advokater, paralegals eller efterforskere, der bruger eDiscovery (Premium) til at administrere sager og gennemse sagsdata, behøver ikke en E5-, A5- eller tilføjelsesprogramlicens.
+Du kan få oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 ## <a name="get-started-with-ediscovery-premium"></a>Kom i gang med eDiscovery (Premium)
 

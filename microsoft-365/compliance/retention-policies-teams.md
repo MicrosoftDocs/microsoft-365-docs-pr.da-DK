@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Microsoft Teams.
-ms.openlocfilehash: c7f60dbb29d2755ba41661ab3aea6b20b97cef06
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 6935f82830aa8a6700d4088ee4954cf11f67adef
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66640516"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714678"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Få mere at vide om opbevaring til Microsoft Teams
 
@@ -93,7 +93,7 @@ Når opbevaringspolitikken skal bevares og derefter slettes:
 
 For de to stier i diagrammet:
 
-1. **Hvis en chat- eller kanalmeddelelse redigeres eller slettes** af en bruger i løbet af opbevaringsperioden, kopieres den oprindelige meddelelse (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Meddelelsen gemmes der i mindst 1 dag. Når opbevaringsperioden udløber, slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
+1. **Hvis en chat- eller kanalmeddelelse redigeres eller slettes** af en bruger i løbet af opbevaringsperioden, kopieres den oprindelige meddelelse (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Når en bruger sletter en Teams-meddelelse, selvom meddelelsen forsvinder fra Teams-appen, sendes meddelelsen ikke til mappen SubstrateHolds i 21 dage. Meddelelsen gemmes i mappen SubstrateHolds i mindst én dag. Når opbevaringsperioden udløber, slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
 
 2. **Hvis en chat- eller kanalmeddelelse ikke slettes** af en bruger og for aktuelle meddelelser efter redigering, flyttes meddelelsen til mappen SubstrateHolds, når opbevaringsperioden udløber. Denne handling tager typisk mellem 1-7 dage fra udløbsdatoen. Når meddelelsen er i mappen SubstrateHolds, gemmes den der i mindst 1 dag, og derefter slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage). 
 
@@ -111,13 +111,13 @@ Når opbevaringspolitikken er bevar eller kun sletter, er indholdets stier varia
 
 ### <a name="content-paths-for-retain-only-retention-policy"></a>Indholdsstier til opbevaringspolitik kun for bevarelse
 
-1. **Hvis en chat- eller kanalmeddelelse redigeres eller slettes** af en bruger i løbet af opbevaringsperioden: Den oprindelige meddelelse kopieres (hvis redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds og opbevares der i mindst 1 dag. Hvis opbevaringspolitikken er konfigureret til at bevare for evigt, forbliver elementet der. Hvis opbevaringspolitikken har en slutdato for opbevaringsperioden, og den udløber, slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
+1. **Hvis en chat- eller kanalmeddelelse redigeres eller slettes** af en bruger i opbevaringsperioden: Den oprindelige meddelelse kopieres (hvis den redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Når en bruger sletter en Teams-meddelelse, selvom meddelelsen forsvinder fra Teams-appen, sendes meddelelsen ikke til mappen SubstrateHolds i 21 dage. Meddelelsen gemmes i mappen SubstrateHolds i mindst én dag. Hvis opbevaringspolitikken er konfigureret til at bevare for evigt, forbliver elementet der. Hvis opbevaringspolitikken har en slutdato for opbevaringsperioden, og den udløber, slettes meddelelsen permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
 
 2. **Hvis chat- eller kanalmeddelelsen ikke ændres eller slettes** af en bruger og for aktuelle meddelelser efter redigering i opbevaringsperioden: Der sker intet før og efter opbevaringsperioden. meddelelsen forbliver på den oprindelige placering.
 
 ### <a name="content-paths-for-delete-only-retention-policy"></a>Indholdsstier til opbevaringspolitik, der kun gælder for sletning
 
-1. **Hvis chat- eller kanalmeddelelsen redigeres eller slettes** af en bruger i opbevaringsperioden: Den oprindelige meddelelse kopieres (hvis redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds. Meddelelsen opbevares der i mindst 1 dag og slettes permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
+1. **Hvis chat- eller kanalmeddelelsen redigeres eller slettes** af en bruger i opbevaringsperioden: Den oprindelige meddelelse kopieres (hvis redigeres) eller flyttes (hvis den slettes) til mappen SubstrateHolds.  Når en bruger sletter en Teams-meddelelse, selvom meddelelsen forsvinder fra Teams-appen, sendes meddelelsen ikke til mappen SubstrateHolds i 21 dage. Meddelelsen gemmes i mappen SubstrateHolds i mindst én dag og slettes permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
 
 2. **Hvis en chat- eller kanalmeddelelse ikke slettes** af en bruger i løbet af opbevaringsperioden: I slutningen af opbevaringsperioden flyttes meddelelsen til mappen SubstrateHolds. Denne handling tager typisk mellem 1-7 dage fra udløbsdatoen. Meddelelsen opbevares der i mindst 1 dag og slettes derefter permanent, næste gang timerjobbet kører (typisk mellem 1-7 dage).
 
@@ -145,9 +145,9 @@ Opbevaringsresultater:
     - På dag 5 kopieres meddelelsen til mappen SubstrateHolds, hvor der stadig kan søges i den med eDiscovery-værktøjer i mindst syv år fra dag 1 (opbevaringsperioden).
 
 - For den aktuelle (redigerede) meddelelse:
-    - På dag 30 flyttes meddelelsen til mappen SubstrateHolds, hvor der stadig kan søges i den med eDiscovery-værktøjer i mindst 7 år fra dag 1 (opbevaringsperioden).
+    - På dag 30 vises meddelelsen ikke længere i Teams-appen og flyttes til mappen SubstrateHolds efter 21 dage, hvor der fortsat kan søges i den med eDiscovery-værktøjer i mindst syv år fra dag 1 (opbevaringsperioden).
 
-Hvis brugeren havde slettet den aktuelle meddelelse efter den angivne opbevaringsperiode i stedet for inden for opbevaringsperioden, ville meddelelsen stadig blive flyttet til mappen SubstrateHolds. Men nu, hvor opbevaringsperioden er udløbet, slettes meddelelsen permanent efter minimum 1 dag og derefter typisk inden for 1-7 dage.
+Hvis brugeren havde slettet den aktuelle meddelelse efter den angivne opbevaringsperiode i stedet for inden for opbevaringsperioden, ville meddelelsen stadig blive flyttet til mappen SubstrateHolds efter 21 dage. Men nu, hvor opbevaringsperioden er udløbet, slettes meddelelsen permanent der efter minimum 1 dag og derefter typisk inden for 1-7 dage.
 
 ##### <a name="example-2-retain-for-30-days-and-then-delete"></a>Eksempel 2: Bevar i 30 dage, og slet derefter
 

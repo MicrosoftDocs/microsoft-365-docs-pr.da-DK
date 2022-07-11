@@ -1,5 +1,5 @@
 ---
-title: Opret et sikkert gæstedelingsmiljø
+title: Opret et mere sikkert gæstedelingsmiljø
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: serdars
@@ -18,17 +18,17 @@ ms.custom:
 ms.localizationpriority: high
 f1.keywords: NOCSH
 recommendations: false
-description: Få mere at vide om tilgængelige muligheder for at oprette et sikkert gæstedelingsmiljø i Microsoft 365, hvilket giver gæsteadgang til forbedret samarbejde.
-ms.openlocfilehash: 26daea8795084a87a2891a5dd04da172692990cb
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+description: Få mere at vide om tilgængelige muligheder for at oprette et mere sikkert gæstedelingsmiljø i Microsoft 365, hvilket giver gæsteadgang til forbedret samarbejde.
+ms.openlocfilehash: ce635d96cf793b0c655b02ccdb9e7077cd245bb4
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490913"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714722"
 ---
-# <a name="create-a-secure-guest-sharing-environment"></a>Opret et sikkert gæstedelingsmiljø
+# <a name="create-a-more-secure-guest-sharing-environment"></a>Opret et mere sikkert gæstedelingsmiljø
 
-I denne artikel gennemgår vi en række muligheder for at oprette et sikkert gæstedelingsmiljø i Microsoft 365. Dette er eksempler, der giver dig en idé om de tilgængelige indstillinger. Du kan bruge disse procedurer i forskellige kombinationer for at imødekomme organisationens behov for sikkerhed og overholdelse af angivne standarder.
+I denne artikel gennemgår vi en række muligheder for at oprette et mere sikkert gæstedelingsmiljø i Microsoft 365. Dette er eksempler, der giver dig en idé om de tilgængelige indstillinger. Du kan bruge disse procedurer i forskellige kombinationer for at imødekomme organisationens behov for sikkerhed og overholdelse af angivne standarder.
 
 Denne artikel indeholder:
 

@@ -22,12 +22,12 @@ description: Brug følsomhedsmærkater fra Microsoft Purview Information Protect
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: f06b4a2f40987481c3870ee512e60497f57d851a
-ms.sourcegitcommit: ebaa70d0da4a600efe52b5008eaddb511d36df8c
+ms.openlocfilehash: 4d1c0f590535691f0ac7c10fdff8c67261753577
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66687800"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714130"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Få mere at vide om følsomhedsmærkater
 
@@ -130,7 +130,7 @@ Når du opretter en følsomhedsmærkat, bliver du bedt om at konfigurere mærkat
 - Hvilke navneindstillinger du kan konfigurere for det pågældende navn
 - Hvor mærkaten er synlig for brugerne
 
-Med denne områdekonfiguration kan du have følsomhedsmærkater, der kun er til dokumenter og mails og ikke kan vælges for objektbeholdere. Og på samme måde er følsomhedsmærkater, der kun er beregnet til objektbeholdere og ikke kan vælges til dokumenter og mails. Du kan også vælge området for Microsoft Purview Data Map-aktiver:
+Denne områdekonfiguration giver dig mulighed for at have følsomhedsmærkater, der kun er til elementer, f.eks. dokumenter og mails, og som ikke kan vælges for objektbeholdere. Og på samme måde er følsomhedsmærkater, der kun er beregnet til objektbeholdere og ikke kan vælges til dokumenter og mails. Du kan også vælge området for skematiserede dataaktiver for Microsoft Purview-datakort:
 
 ![Områdeindstillinger for følsomhedsmærkater.](../media/sensitivity-labels-scopes.png)
 

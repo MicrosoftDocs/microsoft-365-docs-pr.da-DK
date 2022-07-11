@@ -21,12 +21,12 @@ search.appverid:
 description: Få mere at vide om, hvordan du bruger PowerShell-cmdlet'en AllowSelfServicePurchase til at slå køb via selvbetjening til eller fra.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.date: 4/7/2022
-ms.openlocfilehash: 7c9ac6a1e58049d188d4cd29441d8e0689f2c787
-ms.sourcegitcommit: c6f1486617b39565bfd8f662ee6ad65a9cefd3e3
+ms.openlocfilehash: d9be7179ed26a35b2e04af8386f161de935b1ae1
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66530832"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714700"
 ---
 # <a name="use-allowselfservicepurchase-for-the-mscommerce-powershell-module"></a>Brug AllowSelfServicePurchase til MSCommerce PowerShell-modulet
 
@@ -108,6 +108,10 @@ I følgende tabel vises de tilgængelige produkter og deres **ProductId**.
 | Windows 365 Business | CFQ7TTC0J203 |
 | Windows 365 Business med Windows Hybrid-fordel | CFQ7TTC0HX99 |
 | Microsoft 365 F3 | CFQ7TTC0LH05 |
+| Dynamics 365 Marketing | CFQ7TTC0LH3N |
+| Dynamics 365 Marketing Attach | CFQ7TTC0LHWP | 
+| Yderligere program til Dynamics 365 Marketing | CFQ7TTC0LHVK |
+| Dynamics 365 Marketing – ekstra ikke-prod.program | CFQ7TTC0LHWM |
 
 *Disse id'er er blevet ændret. Hvis du tidligere har blokeret produkter ved hjælp af de gamle id'er, blokeres de automatisk ved hjælp af de nye id'er. Der kræves ikke yderligere arbejde.
 

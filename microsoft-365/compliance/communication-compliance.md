@@ -21,12 +21,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 0b8b285573c9a2f78037e2d29ea3a57ddfa2b306
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: 1cb523725eee6f8eec2330dee3ccd8bb8d6ab0f7
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66686289"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714459"
 ---
 # <a name="learn-about-communication-compliance"></a>Få mere at vide om kommunikationsoverholdelse
 
@@ -104,7 +104,6 @@ Indbyggede afhjælpningsarbejdsprocesser giver dig mulighed for hurtigt at ident
 - **Fleksibel afhjælpningsarbejdsproces**: Ny afhjælpningsarbejdsproces hjælper dig med hurtigt at reagere på politikforekomster, herunder nye muligheder for at eskalere meddelelser til andre korrekturlæsere og sende mailmeddelelser til brugere med politikforekomster.
 - **Matchning af samtalepolitik**: Meddelelser i samtaler grupperes efter politikmatch for at give dig mere synlighed over, hvordan samtaler er relateret til dine kommunikationspolitikker. Matchning af samtalepolitik i visningen *Ventende beskeder* viser f.eks. automatisk alle meddelelser i en Teams-kanal, der har match til din politik for upassende indhold. Andre meddelelser i samtalen, der ikke stemmer overens med politikken for upassende indhold, vises ikke.
 - **Fremhævning af nøgleord**: Vilkår, der stemmer overens med politikbetingelser, er fremhævet i tekstvisningen i meddelelsen for at hjælpe korrekturlæsere med hurtigt at finde og afhjælpe politikbeskeder.
-- **Nøjagtig og næsten registrering af dubletter**: Ud over at søge efter nøjagtige termer, der stemmer overens med politikker for overholdelse af angivne standarder for kommunikation, grupperer næsten identiske ord og meddelelser tekstuelt for at gøre korrekturprocessen hurtigere.
 - **Optisk tegngenkendelse (OCR) (prøveversion)**: Scan, registrer og undersøg trykt og håndskrevet tekst i billeder, der er integreret eller knyttet til mail eller Microsoft Teams-chatmeddelelser.
 - **Nye filtre**: Undersøg og afhjælp politikbeskeder hurtigere med meddelelsesfiltre for flere felter, herunder afsender, modtager, dato, domæner og mange flere.
 - **Forbedrede meddelelsesvisninger**: Undersøgelses- og afhjælpningshandlinger er nu hurtigere med nye meddelelseskilde- og tekstvisninger. Vedhæftede filer i meddelelser kan nu ses for at give fuldstændig kontekst, når der udføres afhjælpningshandlinger.

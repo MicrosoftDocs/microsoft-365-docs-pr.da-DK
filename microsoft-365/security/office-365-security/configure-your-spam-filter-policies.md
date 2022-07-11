@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette politikker til bekæmpelse af spam i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d72b99b73a7c399147360364fc2de0a6cee6435b
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+ms.openlocfilehash: 780b7bc788cb38578e3729fac88a7c9d081f6732
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128717"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714744"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>Konfigurer politikker mod spam i EOP
 
@@ -34,11 +34,11 @@ ms.locfileid: "66128717"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser beskyttes indgående mails automatisk mod spam af EOP. EOP bruger politikker til bekæmpelse af spam (også kendt som politikker for spamfilter eller politikker for indholdsfiltrering) som en del af organisationens overordnede forsvar mod spam. Du kan få flere oplysninger under [Beskyttelse mod spam](anti-spam-protection.md).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser beskyttes indgående mails automatisk mod spam af EOP. EOP bruger politikker til bekæmpelse af spam (også kendt som politikker for spamfilter eller politikker for indholdsfiltrering) som en del af organisationens overordnede forsvar mod spam. Du kan få flere oplysninger under [Beskyttelse mod spam](anti-spam-protection.md).
 
 Administratorer kan få vist, redigere og konfigurere (men ikke slette) standardpolitikken for spam. For at opnå større granularitet kan du også oprette brugerdefinerede anti-spam-politikker, der gælder for bestemte brugere, grupper eller domæner i din organisation. Brugerdefinerede politikker har altid forrang frem for standardpolitikken, men du kan ændre prioriteten (kører rækkefølge) for dine brugerdefinerede politikker.
 
-Du kan konfigurere politikker til bekæmpelse af spam på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online  postkasser).
+Du kan konfigurere politikker til bekæmpelse af spam på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser).
 
 De grundlæggende elementer i en politik mod spam er:
 
@@ -65,7 +65,7 @@ For at øge effektiviteten af spamfiltrering kan du oprette brugerdefinerede ant
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Politikker mod spam** , skal du bruge <https://security.microsoft.com/antispam>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil tilføje, redigere og slette politikker til bekæmpelse af spam, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
@@ -75,12 +75,12 @@ For at øge effektiviteten af spamfiltrering kan du oprette brugerdefinerede ant
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for politikker til bekæmpelse af spam under [Politikindstillinger for eOP for spam](recommended-settings-for-eop-and-office365.md#eop-anti-spam-policy-settings).
 
-- Du kan ikke slå filtrering af spam helt fra, men du kan bruge en regel for mailflow (også kendt som en transportregel) til at omgå de fleste spamfiltrering på indgående meddelelser (f.eks. hvis du distribuerer mail via en tredjepartsbeskyttelsestjeneste eller enhed, før den leveres til Microsoft 365). Du kan få flere oplysninger under [Brug regler for mailflow til at angive niveauet for spamsikkerhed i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
+- Du kan ikke slå filtrering af spam helt fra, men du kan bruge en regel for mailflow (også kendt som en transportregel) til at omgå de fleste spamfiltrering på indgående meddelelser (f.eks. hvis du distribuerer mail via en beskyttelsestjeneste fra tredjepart eller en enhed, før den leveres til Microsoft 365). Du kan få flere oplysninger under [Brug regler for mailflow til at angive niveauet for spamsikkerhed i meddelelser](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl).
   - Phishing-meddelelser med høj genkendelsessikkerhed filtreres stadig. Andre funktioner i EOP påvirkes ikke (f.eks. scannes meddelelser altid for malware).
   - Hvis du har brug for at omgå spamfiltrering for SecOps-postkasser eller phishingsimuleringer, skal du ikke bruge regler for mailflow. Du kan få flere oplysninger under [Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser](configure-advanced-delivery.md).
 
@@ -172,7 +172,7 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
 
      > <sup>1</sup> EOP bruger nu sin egen mailflowleveringsagent til at distribuere meddelelser til mappen Uønsket mail i stedet for at bruge reglen for uønsket mail. Parameteren _Enabled_ på Cmdlet'en **Set-MailboxJunkEmailConfiguration** har ikke længere nogen effekt på mailflowet. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser](configure-junk-email-settings-on-exo-mailboxes.md).
      >
-     > I hybridmiljøer, hvor EOP beskytter Exchange postkasser i det lokale miljø, skal du konfigurere regler for mailflow (også kaldet transportregler) i Exchange i det lokale miljø. Disse regler for mailflow oversætter dommen til filtrering af uønsket mail, så reglen for uønsket mail i postkassen kan flytte meddelelsen til mappen Uønsket mail. Du kan finde flere oplysninger under [Konfigurer EOP til at levere spam til mappen Uønsket mail i hybridmiljøer](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
+     > I hybridmiljøer, hvor EOP beskytter Exchange-postkasser i det lokale miljø, skal du konfigurere regler for mailflow (også kaldet transportregler) i Exchange i det lokale miljø. Disse regler for mailflow oversætter dommen til filtrering af uønsket mail, så reglen for uønsket mail i postkassen kan flytte meddelelsen til mappen Uønsket mail. Du kan finde flere oplysninger under [Konfigurer EOP til at levere spam til mappen Uønsket mail i hybridmiljøer](/exchange/standalone-eop/configure-eop-spam-protection-hybrid).
      >
      > <sup>2</sup> Du kan bruge værdien som en betingelse i regler for mailflow til at filtrere eller distribuere meddelelsen.
      >
@@ -199,7 +199,7 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
 
    - **Omdiriger til denne mailadresse**: Dette felt er kun påkrævet og tilgængeligt, hvis du har valgt **omdirigeringsmeddelelsen til mailadressen** som handlingen for en dom for filtrering af spam. Angiv den mailadresse, hvor du vil levere meddelelsen. Du kan angive flere værdier adskilt af semikolon (;).
 
-   - **Aktivér sikkerhed Tips**: Sikkerhed Tips er som standard aktiveret, men du kan deaktivere dem ved at fjerne markeringen i afkrydsningsfeltet.
+   - **Aktivér sikkerhedstip**: Sikkerhedstip er som standard aktiveret, men du kan deaktivere dem ved at fjerne markeringen i afkrydsningsfeltet.
 
    - **Aktivér automatisk sletning på nul timer: ZAP** registrerer og reagerer på meddelelser, der allerede er leveret til Exchange Online postkasser. Du kan få flere oplysninger under [Automatisk tømninger på nul timer – beskyttelse mod spam og malware](zero-hour-auto-purge.md).
 
@@ -225,7 +225,7 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
    >
    > Det er ikke farligt at blokere domæner manuelt ved at føje domænerne til listen over blokerede domæner, men det kan øge den administrative arbejdsbelastning. Du kan få flere oplysninger under [Opret lister over afsenderblokering i EOP](create-block-sender-lists-in-office-365.md).
    >
-   > Der vil være tidspunkter, hvor vores filtre vil gå glip af en meddelelse, du ikke er enig i filtrering dommen, eller det tager tid for vores systemer at indhente det. I disse tilfælde er listen over tilladte og blokerede til at tilsidesætte de aktuelle filtreringsdomme. Men du bør bruge disse lister sparsomt og midlertidigt: Longs-lister kan blive ikke-administrerelige, og vores filtreringsstak skal gøre, hvad det skal gøre. Hvis du vil beholde et tilladt domæne i en længere periode, skal du bede afsenderen om at bekræfte, at deres domæne er godkendt og indstillet til DMARC-afvisning, hvis det ikke er.
+   > Der vil være tidspunkter, hvor vores filtre vil gå glip af en meddelelse, du ikke er enig i filtrering dommen, eller det tager tid for vores systemer at indhente det. I disse tilfælde er listen over tilladte og blokerede til at tilsidesætte de aktuelle filtreringsdomme. Men du bør bruge disse lister sparsomt og midlertidigt: Longs-lister kan blive ikke-administrerelige, og vores filtreringsstak skal gøre, hvad det skal gøre. Hvis du vil beholde et tilladt domæne i en længere periode, skal du bede afsenderen om at bekræfte, at deres domæne er godkendt og indstillet til DMARC-afvisning korrekt.
 
    Fremgangsmåden til at føje poster til en af listerne er de samme:
 
@@ -355,7 +355,7 @@ Følgende indstillinger for politik for spam er kun tilgængelige i PowerShell:
 
 - Parameteren _MarkAsSpamBulkMail_ , der er `On` som standard. Effekten af denne indstilling blev forklaret i afsnittet [Brug portalen Microsoft 365 Defender til at oprette politikker mod spam](#use-the-microsoft-365-defender-portal-to-create-anti-spam-policies) tidligere i denne artikel.
 - Følgende indstillinger for meddelelser om spamkarantæne for slutbrugere:
-  - Parameteren _DownloadLink_, der viser eller skjuler linket til rapporteringsværktøjet til uønsket mail for Outlook.
+  - Parameteren _DownloadLink_ , der viser eller skjuler linket til rapporteringsværktøjet til uønsket mail til Outlook.
   - Parameteren _EndUserSpamNotificationCustomSubject_ , som du kan bruge til at tilpasse emnelinjen i meddelelsen.
 
 ### <a name="use-powershell-to-create-anti-spam-policies"></a>Brug PowerShell til at oprette politikker mod spam

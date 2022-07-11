@@ -22,12 +22,12 @@ ms.assetid: c4639c2e-7223-4302-8e0d-b6e10f1c3be3
 ms.custom:
 - seo-marvel-apr2020
 description: Få mere at vide om mail- og dokumentegenskaber, som du kan søge i ved hjælp af eDiscovery-søgeværktøjerne i Microsoft 365.
-ms.openlocfilehash: 3ff2143a170531b527850b4805cb9a79f10afb5e
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 4de131ea9dc8b1f7df486dd5c6ead7eee677869e
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66623865"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714547"
 ---
 # <a name="keyword-queries-and-search-conditions-for-ediscovery"></a>Nøgleordsforespørgsler og søgebetingelser for eDiscovery
 
@@ -140,27 +140,27 @@ I følgende tabel vises de egenskaber for kontakter, der er indekseret, og som d
 |Efternavn|Navnet i egenskaben **Efternavn** .|
 |Titel|Titlen i egenskaben **Stillingsbetegnelse** .|
 
-## <a name="searchable-sensitive-data-types"></a>Følsomme datatyper, der kan søges i
+<!--## Searchable sensitive data types
 
-Du kan bruge eDiscovery-søgeværktøjer på overholdelsesportalen til at søge efter følsomme data, f.eks. kreditkortnumre eller cpr-numre, der er gemt i dokumenter på SharePoint og OneDrive for Business websteder. Det kan du gøre ved hjælp af egenskaben `SensitiveType` og navnet (eller id'et) for en følsom oplysningstype i en nøgleordsforespørgsel. Forespørgslen `SensitiveType:"Credit Card Number"` returnerer f.eks. dokumenter, der indeholder et kreditkortnummer. Forespørgslen  `SensitiveType:"U.S. Social Security Number (SSN)"` returnerer dokumenter, der indeholder et AMERIKANSK CPR-nummer.
+You can use eDiscovery search tools in the compliance portal to search for sensitive data, such as credit card numbers or social security numbers, that is stored in documents on SharePoint and OneDrive for Business sites. You can do this by using the `SensitiveType` property and the name (or ID) of a sensitive information type in a keyword query. For example, the query `SensitiveType:"Credit Card Number"` returns documents that contain a credit card number. The query  `SensitiveType:"U.S. Social Security Number (SSN)"` returns documents that contain a U.S. social security number.
 
-Hvis du vil se en liste over de følsomme oplysningstyper, du kan søge efter, skal du gå til **Dataklassificeringer** \> **Følsomme infotyper** på overholdelsesportalen. Du kan også bruge cmdlet'en **Get-DlpSensitiveInformationType** i PowerShell til sikkerhed & overholdelse til at få vist en liste over følsomme oplysningstyper.
+To see a list of the sensitive information types that you can search for, go to **Data classifications** \> **Sensitive info types** in the compliance portal. Or you can use the **Get-DlpSensitiveInformationType** cmdlet in Security & Compliance PowerShell to display a list of sensitive information types.
 
-Du kan finde flere oplysninger om oprettelse af forespørgsler ved hjælp af egenskaben `SensitiveType` under [Formularér en forespørgsel for at finde følsomme data, der er gemt på websteder](form-a-query-to-find-sensitive-data-stored-on-sites.md).
+For more information about creating queries using the `SensitiveType` property, see [Form a query to find sensitive data stored on sites](form-a-query-to-find-sensitive-data-stored-on-sites.md).
 
-### <a name="limitations-for-searching-sensitive-data-types"></a>Begrænsninger for søgning i følsomme datatyper
+<!--### Limitations for searching sensitive data types
 
-- Hvis du vil søge efter brugerdefinerede følsomme oplysningstyper, skal du angive id'et for typen af følsomme oplysninger i `SensitiveType` egenskaben. Hvis du bruger navnet på en brugerdefineret type følsomme oplysninger (som vist i eksemplet for indbyggede følsomme oplysningstyper i det forrige afsnit), returneres der ingen resultater. Brug kolonnen **Publisher** på siden **Følsomme infotyper** i Overholdelsescenter (eller egenskaben **Publisher** i PowerShell) til at skelne mellem indbyggede og brugerdefinerede typer følsomme oplysninger. Indbyggede følsomme datatyper har værdien `Microsoft Corporation` for egenskaben **Publisher** .
+- To search for custom sensitive information types, you have to specify the ID of the sensitive information type in the `SensitiveType` property. Using the name of a custom sensitive information type (as shown in the example for built-in sensitive information types in the previous section) will return no results. Use the **Publisher** column on the **Sensitive info types** page in the compliance center (or the **Publisher** property in PowerShell) to differentiate between built-in and custom sensitive information types. Built-in sensitive data types have a value of `Microsoft Corporation` for the **Publisher** property.
 
-  Hvis du vil have vist navnet og id'et for de brugerdefinerede følsomme datatyper i din organisation, skal du køre følgende kommando i Security & Compliance PowerShell:
+  To display the name and ID for the custom sensitive data types in your organization, run the following command in Security & Compliance PowerShell:
 
   ```powershell
   Get-DlpSensitiveInformationType | Where-Object {$_.Publisher -ne "Microsoft Corporation"} | FT Name,Id
   ```
 
-  Derefter kan du bruge id'et i søgeegenskaben `SensitiveType` til at returnere dokumenter, der indeholder den brugerdefinerede følsomme datatype, f.eks. `SensitiveType:7e13277e-6b04-3b68-94ed-1aeb9d47de37`
+  Then you can use the ID in the `SensitiveType` search property to return documents that contain the custom sensitive data type; for example, `SensitiveType:7e13277e-6b04-3b68-94ed-1aeb9d47de37`
 
-- Du kan ikke bruge følsomme oplysningstyper og søgeegenskaben `SensitiveType` til at søge efter inaktive følsomme data i Exchange Online postkasser. Dette omfatter 1:1 chatbeskeder, 1:N gruppechatbeskeder og teamkanalsamtaler i Microsoft Teams, fordi alt dette indhold er gemt i postkasser. Du kan dog bruge DLP-politikker (forebyggelse af datatab) til at beskytte følsomme maildata under overførsel. Du kan finde flere oplysninger under [Få mere at vide om forebyggelse af datatab](dlp-learn-about-dlp.md) og [Søg efter og find personlige data](/compliance/regulatory/gdpr).
+- You can't use sensitive information types and the `SensitiveType` search property to search for sensitive data at-rest in Exchange Online mailboxes. This includes 1:1 chat messages, 1:N group chat messages, and team channel conversations in Microsoft Teams because all of this content is stored in mailboxes. However, you can use data loss prevention (DLP) policies to protect sensitive email data in transit. For more information, see [Learn about data loss prevention](dlp-learn-about-dlp.md) and [Search for and find personal data](/compliance/regulatory/gdpr).-->
 
 ## <a name="search-operators"></a>Søgeoperatorer
 

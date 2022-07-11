@@ -17,12 +17,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 9cc85dc768696169c8da164975278a661c755f94
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 0949e979bfc2f0e2f784342e2a7c2f326908b49d
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492419"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714613"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint"></a>Nyheder i Microsoft Defender for Endpoint
 
@@ -60,13 +60,19 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 - [Nyheder i Defender for Endpoint på iOS](ios-whatsnew.md)
 - [Nyheder i Defender for Endpoint på Linux](linux-whatsnew.md)
 
+
+## <a name="july-2022"></a>Juli 2022
+- - [Tilføj domænecontrollerenheder – forbedring af evalueringslaboratorium](evaluation-lab.md#add-a-domain-controller)<br>Nu offentlig tilgængelig – Tilføj en domænecontroller for at køre komplekse scenarier, f.eks. tværgående flytning og angreb på flere forskellige enheder.
+
+
+
 ## <a name="june-2022"></a>Juni 2022
 - [Defender for Servers Plan 2 kan nu integreres med MDE-samlet løsning](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/defender-for-servers-plan-2-now-integrates-with-mde-unified/ba-p/3527534)<br>Du kan nu begynde at installere den moderne, samlede løsning til Windows Server 2012 R2 og 2016 på servere, der er omfattet af Defender for Servers Plan 2, ved hjælp af en enkelt knap.
 
 ## <a name="may-2022"></a>Maj 2022
 - [Manipulationsbeskyttelse til macOS (prøveversion)](tamperprotection-macos.md)<br>Manipulationsbeskyttelse hjælper med at forhindre uautoriseret fjernelse af Microsoft Defender for Endpoint på macOS.
 
-- [Tilføj domænecontrollerenheder – forbedring af evalueringslaboratorium (prøveversion)](evaluation-lab.md#add-a-domain-controller-preview)<br>Tilføj en domænecontroller for at køre komplekse scenarier, f.eks. tværgående flytning og angreb på fleretage på tværs af flere enheder.
+- [Tilføj domænecontrollerenheder – forbedring af evalueringslaboratorium (prøveversion)](evaluation-lab.md#add-a-domain-controller)<br>Tilføj en domænecontroller for at køre komplekse scenarier, f.eks. tværgående flytning og angreb på fleretage på tværs af flere enheder.
 
 ## <a name="april-2022"></a>April 2022
 - [Opdateret onboarding og funktionsparitet for Windows Server 2012 R2 og Windows Server 2016)](configure-server-endpoints.md)<br/> Den nye samlede løsningspakke er nu offentlig tilgængelig og gør det nemmere at onboarde servere ved at fjerne afhængigheder og installationstrin. Desuden leveres denne samlede løsningspakke med mange nye funktionsforbedringer.

@@ -19,21 +19,21 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om forslag, der kan hjælpe dig med at købe Microsoft-produkter og -tjenester.
 ROBOTS: NOINDEX
-ms.date: 04/28/2022
-ms.openlocfilehash: e54b68b5090287d7a61e9dea70726b7ec9e83c72
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.date: 07/11/2022
+ms.openlocfilehash: e6e24d56346f67c40f114cf7ab23345d4511b026
+ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66485973"
+ms.lasthandoff: 07/11/2022
+ms.locfileid: "66714065"
 ---
 # <a name="understand-the-microsoft-proposal-workflow"></a>Forstå arbejdsprocessen for Microsoft-forslag
 
-Et forslag er et formelt tilbud fra Microsoft om, at din organisation kan købe Microsoft-produkter og -tjenester. Du arbejder direkte sammen med en Microsoft-repræsentant om at fastlægge de specifikke produkter, tjenester og vilkår for dit forslag.
+Et forslag er et formelt tilbud fra Microsoft om, at din organisation kan købe Microsoft-produkter og -tjenester. Forslag repræsenterer store ordrer, som organisationens indkøbs- eller it-afdeling placerer hos Microsoft.
 
-En Microsoft-repræsentant udarbejder et forslag, der indeholder de elementer, som du og din repræsentant har diskuteret. Repræsentanten sender dig en mail, der har et link til Azure Marketplace-portalen. Webstedet indeholder det forslag, der er udarbejdet specielt til dig og din organisation.
+Før arbejdsprocessen for forslag starter, arbejder din indkøbsafdeling direkte sammen med en udpeget Microsoft-repræsentant om at bestemme, hvilke specifikke produkter og tjenester din organisation har brug for. Derefter udarbejder din Microsoft-repræsentant et forslag og sender din indkøbsafdeling en mail med et link for at acceptere forslaget på Azure Marketplace-portalen. Webstedet indeholder det forslag, der er udarbejdet specielt til dig og din organisation.
 
-Når du har modtaget meddelelsesmailen, skal du følge linket til forslagswebstedet. Når du logger på webstedet, kan du starte processen til gennemsyn af forslag.
+Når du har fulgt linket og logget på forslagswebstedet, kan du starte processen til gennemsyn af forslaget. Når du har fuldført gennemgangen og udtjekningen af forslaget, modtager du en faktura for de købte produkter i henhold til den faktureringsplan, du har valgt. Du kan få mere at vide om, hvordan fakturering fungerer for forslag, under [Forstå fakturering](#understand-invoicing) nedenfor.
 
 ## <a name="prerequisites-for-buying-items-with-a-proposal"></a>Forudsætninger for køb af varer med et forslag
 
@@ -53,7 +53,7 @@ Med Microsoft-kundeaftale (MCA) kan en organisation købe Microsoft-produkter og
 
 ## <a name="permissions-needed-to-sign-an-agreement-or-pay-for-items"></a>Tilladelser, der er nødvendige for at signere en aftale eller betale for elementer
 
-Du skal være ejer af faktureringskontoen eller bidragyder til faktureringskontoen for at kunne underskrive en aftale eller købe produkter og tjenester. Hvis du er global administrator, men ikke har en af disse roller, kan du tildele rollerne til dig selv. Hvis du ikke er global administrator, skal du bede ejeren af din globale administrator eller faktureringskonto om at tildele dig en af rollerne.
+Du skal være ejer af faktureringskontoen eller bidragyder til faktureringskontoen for at kunne underskrive en aftale eller købe produkter og tjenester. Hvis du er global administrator, men ikke har en af disse roller, kan du tildele rollerne til dig selv. Hvis du ikke er global administrator, skal du bede din globale administrator eller ejeren af faktureringskontoen om at tildele dig en af rollerne.
 
 Rollerne ejer af faktureringskontoen og bidragydere til faktureringskontoen tildeles ved hjælp af en af følgende metoder.
 
@@ -75,7 +75,7 @@ Du kan få flere oplysninger om faktureringskontoroller under [Forstå adgang ti
 
 Hvis dette er en ny faktureringskonto, og ingen har accepteret en aftale, bliver du automatisk ejeren af faktureringskontoen, forudsat at du:
 
-- Er den person, der er nævnt i forslaget **, eller**
+- Er den person, der er nævnt i forslaget, eller
 - Er allerede [global Azure Active Directory-administrator](/azure/active-directory/roles/permissions-reference#global-administrator) for din organisation
 
 ## <a name="what-is-the-overall-workflow"></a>Hvad er den overordnede arbejdsproces?
@@ -88,7 +88,7 @@ Arbejdsprocessen for det overordnede forslag ser sådan ud:
 - Du gennemser forslaget, accepterer MCA'en, hvis det er nødvendigt, og afslutter udtjekningsprocessen.
   > [!IMPORTANT]
   > Du skal have tilladelse til at signere en MCA på vegne af din organisation. Hvis du ikke har denne autoritet, så en person, der gør, skal gøre dette trin.
-- Når udtjekningen er fuldført, får du yderligere links til at konfigurere dine produkter og tjenester.
+- Når udtjekningen er fuldført, får du flere links til at konfigurere dine produkter og tjenester.
 
 ## <a name="proposal-terms"></a>Vilkår for forslag
 
@@ -98,7 +98,7 @@ Følgende tabel indeholder ord og definitioner, der vises i dit forslag og på f
 |---|---|
 | Faktureringskonto | En konto, der bruges til at administrere dine kontoindstillinger, fakturaer, betalingsmetoder og produkter. |
 | Faktureringsprofil | Oplysninger om din organisation, der giver dig mulighed for at tilpasse, hvilke elementer der er inkluderet på din faktura, og hvordan du betaler for dine fakturaer. Faktureringsprofilen indeholder navnet på faktureringskontoen, de betalingsmetoder, der bruges til den specifikke faktureringsprofil, kontaktoplysninger, fakturaindstillinger og tilladelser, der giver dig mulighed for at ændre faktureringsprofilen, betale regninger og købe produkter og tjenester. |
-| Eksisterende aftaler | Alle aftaler, som din organisation allerede har indgået med Microsoft. Dette kan omfatte, men er ikke begrænset til, en Enterprise Agreement, Microsoft-produkt &-serviceaftale eller Microsoft-kundeaftale. |
+| Eksisterende aftaler | Alle aftaler, som din organisation allerede har indgået med Microsoft. Aftalerne kan omfatte, men er ikke begrænset til, en Enterprise Agreement, Microsoft-produkt &-serviceaftale eller Microsoft-kundeaftale. |
 | Microsoft-kundeaftale (MCA) | En aftale, der beskriver vilkårene og betingelserne for den konto, som din organisation har, med Microsoft. |
 | Microsoft-repræsentant | En autoriseret Microsoft-repræsentant, der forbereder et forslag til dig og din organisation. |
 | Organisation | En juridisk enhed, der bruger Microsoft-produkter, -teknologier eller -tjenester. |
@@ -113,7 +113,7 @@ Når du har logget på, skal du først gennemse din organisations oplysninger.
 
 I afsnittet **Din organisation** vises den faktureringskonto, der er knyttet til den. Oplysningerne om faktureringskontoen hentes enten fra en eksisterende faktureringskonto eller oprettes for dig af Microsoft-repræsentanten. Hvis din organisation er partner i en anden organisation, kan du også se afsnittet **Kundeemneorganisation** med navnet og adressen på den pågældende organisation.
 
-Hvis det er første gang, din organisation etablerer en kommerciel relation med Microsoft, og du endnu ikke har signeret en MCA, skal du kontakte repræsentanten for at foretage ændringer for dig, hvis oplysningerne under **Din organisation** eller **Kundeemneorganisation** er forkerte. Når du har accepteret en MCA, kan du gennemse og ændre din organisations adresse og kontaktoplysninger på siden [Faktureringskonti](https://go.microsoft.com/fwlink/p/?linkid=2084771) i Microsoft 365 Administration. Hvis organisationens navn ændres, skal du åbne en serviceanmodning for at få den opdateret. [Få mere at vide om, hvordan du åbner en serviceanmodning](../admin/get-help-support.md).
+Hvis denne rækkefølge er første gang, din organisation etablerer en kommerciel relation med Microsoft, og du endnu ikke har signeret en MCA, hvis oplysningerne under **Organisationen** eller **Kundeemneorganisation** er forkerte, skal du kontakte repræsentanten for at foretage ændringer for dig. Når du har accepteret en MCA, kan du gennemse og ændre din organisations adresse og kontaktoplysninger på siden [Faktureringskonti](https://go.microsoft.com/fwlink/p/?linkid=2084771) i Microsoft 365 Administration. Hvis organisationens navn ændres, skal du åbne en supportanmodning for at få den opdateret. [Få mere at vide om, hvordan du åbner en supportanmodning](../admin/get-help-support.md).
 
 ### <a name="your-information"></a>Dine oplysninger
 
@@ -154,7 +154,7 @@ Udtjekningssiden indeholder følgende afsnit:
 
 I dette afsnit vises den faktureringskonto, der bruges til forslaget. Hvis du har brug for at ændre oplysninger, skal du vælge linket **Rediger** . Du kan også bruge linket **Rediger** til at tilføje din organisations skatte-id. Skatte-id'et skal være relateret til det land, der er angivet i afsnittet **Solgt til** . Hvis du har en skattefritagelse, skal du åbne en supportanmodning for at anmode om momsfritagelsesstatus.
 
-Hvis du vil vide mere om skatte-id'er, og hvordan du ansøger om momsfritagelsesstatus, skal du se [Skatteoplysninger](billing-and-payments/tax-information.md).
+Hvis du vil vide mere om skatte-id'er, og hvordan du ansøger om momsfritagelsesstatus, skal du se [Microsoft 365-skatteoplysninger](billing-and-payments/tax-information.md).
 
 ### <a name="billed-to"></a>Faktureres til
 
@@ -164,7 +164,7 @@ Du kan få oplysninger om faktureringsprofiler under [Administrer faktureringspr
 
 ### <a name="proposal-items-in-this-order"></a>Forslagselementer i denne rækkefølge
 
-I dette afsnit vises en liste over alle elementer, der er inkluderet i forslaget. Listen kan indeholde en eller flere af følgende kategorier:
+I dette afsnit vises en liste over alle elementer i forslaget, som kan indeholde en eller flere af følgende kategorier:
 
 - **Supplerende vilkår** En liste over eventuelle ændringer af MCA, der indeholder vilkår for din organisation. Denne liste kan f.eks. indeholde HIPAA- eller GDPR-vilkår.
 - **Køb nu** En liste over elementer, du betaler for under udtjekning i slutningen af arbejdsprocessen for accept af forslag.
@@ -190,6 +190,6 @@ Hvis du er eksisterende Azure-kunde med en Enterprise Agreement, og du signerer 
 
 ## <a name="understand-invoicing"></a>Forstå fakturering
 
-Når du har tjekket ud og gennemført din ordre, sendes en indledende faktura inden for 24-48 timer. Derefter modtager du fakturaer omkring den 5. i hver måned. Den månedlige faktura indeholder gebyrer fra den forrige måned. Hvis du har kreditter til din konto, trækkes de fra din faktureringsprofils pengekreditter og anvendes på din fakturasaldo. Den resterende saldo, efter at kreditterne er anvendt, er den skyldige saldo. Du har 30 dage fra faktureringsdatoen til at betale fakturaen.
+Når du har tjekket ud og gennemført din ordre, sendes en indledende faktura inden for 24-48 timer. Derefter modtager du fakturaer ca. den femte i hver måned. Den månedlige faktura indeholder gebyrer fra den forrige måned. Hvis du har kreditter til din konto, trækkes de fra din faktureringsprofils pengekreditter og anvendes på din fakturasaldo. Den resterende saldo, efter at kreditterne er anvendt, er den skyldige saldo. Du har 30 dage fra faktureringsdatoen til at betale fakturaen.
 
 Betalingsanvisninger for, hvor check eller bankoverførsler skal sendes hen, er inkluderet i PDF-kopien af din faktura. Hvis du vil have vist eller downloade din faktura, skal du se [Få vist din faktura eller faktura](billing-and-payments/view-your-bill-or-invoice.md).
