@@ -11,12 +11,12 @@ ms.service: o365-administration
 ms.localizationpriority: medium
 ms.collection: Adm_TOC
 description: Angiv, hvor lang tid brugerens session skal vare i Microsoft 365, før brugeren får timeout.
-ms.openlocfilehash: 611541ebc16c3ee8c187b8fc1a5b33661b221897
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 3dd845d5488d2385297a87908253740ef774eb5d
+ms.sourcegitcommit: 8101c12df67cfd9c15507b0133c23ce4cca1c6ba
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487471"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66720407"
 ---
 # <a name="idle-session-timeout-for-microsoft-365"></a>Timeout for inaktiv session for Microsoft 365
 
@@ -31,7 +31,7 @@ Når en bruger når den inaktive timeoutsession, du har angivet, får vedkommend
 
 ## <a name="turn-on-idle-session-timeout"></a>Slå timeout for inaktiv session til
 
-Hvis du ikke er Microsoft 365 eller Office 365 global administrator, kan du ikke se fanen **Sikkerhed & beskyttelse af personlige oplysninger**.
+Du skal være medlem af rollerne Global administrator, Sikkerhedsadministrator, Programadministrator eller Cloudprogram for at se timeoutindstillingen for inaktiv session.
 
 1. I Microsoft 365 Administration skal du vælge **Organisationsindstillinger** **->**[Sikkerhed & fanen beskyttelse af personlige oplysninger](https://go.microsoft.com/fwlink/p/?linkid=2072756) og vælge **Timeout for inaktiv session**.  
 

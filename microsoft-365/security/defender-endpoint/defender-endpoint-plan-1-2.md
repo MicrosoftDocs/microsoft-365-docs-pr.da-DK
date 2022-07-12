@@ -8,7 +8,7 @@ ms.author: deniseb
 manager: dansimp
 audience: ITPro
 ms.topic: overview
-ms.date: 06/17/2022
+ms.date: 07/11/2022
 ms.prod: m365-security
 ms.technology: mdep1
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: 34a5bd740b50eba561e2e138366ac05e732b016f
-ms.sourcegitcommit: ad30b6bfccb402a338a198cb13e250b6ea21d545
+ms.openlocfilehash: d90e39028f563c7b3913f6fd0dbf97222d1068d2
+ms.sourcegitcommit: 8101c12df67cfd9c15507b0133c23ce4cca1c6ba
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "66612769"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66720429"
 ---
 # <a name="compare-microsoft-defender-for-endpoint-plans"></a>Sammenlign Microsoft Defender for Endpoint planer
 
@@ -48,6 +48,16 @@ I følgende tabel opsummeres det, der er inkluderet i hver Defender for Endpoint
 
 > [!IMPORTANT]
 > De separate versioner af Defender for Endpoint Plan 1 og Plan 2 indeholder ikke serverlicenser. Hvis du vil onboarde servere, f.eks. slutpunkter, der kører Windows Server eller Linux, skal du bruge Defender for Servers Plan 1 eller Plan 2 som en del af [Defender for Cloud-tilbuddet](/azure/defender-for-cloud/defender-for-cloud-introduction) . For at få mere at vide. se [Oversigt over Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
+
+Microsoft Defender for Endpoint Plan 1 er tilgængelig som en separat brugerabonnementslicens til kommercielle kunder og uddannelseskunder. Den er også inkluderet som en del af Microsoft 365 E3/A3.
+
+Microsoft Defender for Endpoint Plan 2, som tidligere blev kaldt Microsoft Defender for Endpoint, er tilgængelig som en separat licens og som en del af følgende planer:
+
+- Windows 11 Enterprise E5/A5
+- Windows 10 Enterprise E5/A5
+- Microsoft 365 E5/A5/G5 (herunder Windows 10 eller Windows 11 Enterprise E5)
+- Microsoft 365 E5/A5/G5/F5 Security
+- Microsoft 365 F5 Security & Compliance
 
 ## <a name="mixed-licensing-scenarios"></a>Blandede licensscenarier
 
