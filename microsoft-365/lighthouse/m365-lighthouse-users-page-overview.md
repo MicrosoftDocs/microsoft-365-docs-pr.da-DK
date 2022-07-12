@@ -1,5 +1,5 @@
 ---
-title: Oversigt over siden Brugere i Microsoft 365 Fyrtårn
+title: Oversigt over siden Brugere i Microsoft 365 Lighthouse
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -17,20 +17,20 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Brugere for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: d817ab74d6dd24e644561684073189e68cf7e072
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 05c889167cc7359900c0dea3396e657c0aa93fba
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66007278"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717538"
 ---
-# <a name="overview-of-the-users-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Brugere i Microsoft 365 Fyrtårn 
+# <a name="overview-of-the-users-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Brugere i Microsoft 365 Lighthouse 
 
-Microsoft 365 Fyrtårn kan du administrere brugere på tværs af kundelejerkonti ved at vælge **Brugere** i navigationsruden til venstre for at åbne siden Brugere. Fra denne side kan du søge efter brugere og vurdere og reagere på sikkerhedstilstanden for dine brugerkonti. Du kan også få vist indsigt i risikable brugere og status for multifaktorgodkendelse og selvbetjent nulstilling af adgangskode.  
+Med Microsoft 365 Lighthouse kan du administrere brugere på tværs af kundelejerkonti ved at vælge et af linkene under **Brugere** i venstre navigationsrude. Fra siden Brugere kan du søge efter brugere og vurdere og reagere på sikkerhedstilstanden for dine brugerkonti. Du kan også få vist indsigt i risikable brugere og status for multifaktorgodkendelse og selvbetjent nulstilling af adgangskode.  
   
 ## <a name="search-users-tab"></a>Fanen Søg efter brugere  
   
-Under fanen Søg efter brugere kan du hurtigt søge efter bestemte brugere på tværs af lejere og udføre grundlæggende brugeradministrationshandlinger, f.eks. nulstille en kontoadgangskode.
+Under fanen Søg efter brugere kan du hurtigt søge efter bestemte brugere på tværs af lejere og udføre almindelige brugeradministrationsopgaver, f.eks. opdatere brugerkontooplysninger, nulstille adgangskoder, tildele licenser og administrere en brugers grupper, postkasse eller OneDrive.
 
 :::image type="content" source="../media/m365-lighthouse-users-page-overview/users-search-users-tab.png" alt-text="Skærmbillede af fanen Søg efter brugere.":::
 
@@ -39,7 +39,7 @@ Under fanen Søg efter brugere kan du hurtigt søge efter bestemte brugere på t
 Fanen Risikable brugere viser brugerkonti på tværs af dine lejere, der er markeret med risiko for risiko. Vælg en af brugerne for at få vist flere oplysninger om en registreret risiko eller for at afhjælpe en risiko ved at nulstille en brugers adgangskode eller blokere for logon. Du kan få flere oplysninger om risikotyper og registrering under [Hvad er risikoen?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
 
 Fanen Risikable brugere indeholder også følgende indstillinger:
-- **Eksport:** Vælg at eksportere data om enhedens overholdelse af angivne standarder til en Excel fil med kommaseparerede værdier (.csv).
+- **Eksport:** Vælg at eksportere data om enhedens overholdelse af angivne standarder til en Excel-fil med kommaseparerede værdier (.csv).
 - **Opdatere:** Vælg at hente de nyeste data om enhedens overholdelse af angivne standarder.
 - **Bekræft, at en eller flere brugere er kompromitteret:** Vælg for at bekræfte, at brugeren er blevet kompromitteret.
 - **Afvis brugerrisici:** Vælg at afvise brugerrisikoen.  
@@ -62,5 +62,5 @@ Fanen Nulstil adgangskode viser detaljerede oplysninger om status for selvbetjen
 
 ## <a name="related-content"></a>Relateret indhold
 
-[oversigt over Microsoft 365 siden med overholdelse af angivne standarder for lighthouse-enheder](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
-[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Oversigt over siden med overholdelse af angivne standarder for Microsoft 365 Lighthouse-enhed](m365-lighthouse-device-compliance-page-overview.md) (artikel)\
+[Ofte stillede spørgsmål om Microsoft 365 Lighthouse](m365-lighthouse-faq.yml) (artikel)

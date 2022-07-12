@@ -1,5 +1,5 @@
 ---
-title: Rapportér spam, ikke-spam, phishing og mistænkelige mails til Microsoft
+title: Rapportér spam, ikke-spam, phishing, mistænkelige mails og filer til Microsoft
 f1.keywords:
 - NOCSH
 ms.author: dansimp
@@ -14,17 +14,17 @@ search.appverid:
 ms.assetid: c31406ea-2979-4fac-9288-f835269b9d2f
 ms.collection:
 - M365-security-compliance
-description: Hvordan gør jeg rapportere en mistænkelig mail til Microsoft? Rapportmeddelelser, URL-adresser, vedhæftede filer i mails til Microsoft til analyse. Få mere at vide om, hvordan du rapporterer spammails og phishing-mails.
+description: Hvordan gør jeg rapportere en mistænkelig mail eller fil til Microsoft? Rapportmeddelelser, URL-adresser, vedhæftede filer i mails og filer til Analyse til Microsoft. Få mere at vide om, hvordan du rapporterer spammails og phishing-mails.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 67b4d0a2dc3f52c66c1fea406a51005daa43093a
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 3ccb01e63011b48fa341b7ce3198b05505940a01
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714437"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717774"
 ---
-# <a name="how-do-i-report-a-suspicious-email-to-microsoft"></a>Hvordan gør jeg rapportere en mistænkelig mail til Microsoft?
+# <a name="how-do-i-report-a-suspicious-email-or-file-to-microsoft"></a>Hvordan gør jeg rapportere en mistænkelig mail eller fil til Microsoft?
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -33,7 +33,7 @@ ms.locfileid: "66714437"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Spekulerer du på, hvad du skal gøre med mistænkelige mails? I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser har *brugere* og *administratorer* forskellige måder at rapportere en mistænkelig mail, URL-adresse eller vedhæftet mail til Microsoft på.
+Spekulerer du på, hvad du skal gøre med mistænkelige mails eller filer? I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser har *brugere* og *administratorer* forskellige måder at rapportere en mistænkelig mail, URL-adresse eller vedhæftet mail til Microsoft på.
 
 Derudover har Microsoft 365-organisationer med Microsoft Defender for Endpoint administratorer også flere metoder til rapportering af filer.
 

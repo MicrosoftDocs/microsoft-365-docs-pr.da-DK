@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 4ccb91f0a8c181697eb525dd8f5576e6f6cdc0d1
-ms.sourcegitcommit: 4f56b4b034267b28c7dd165e78ecfb4b5390087d
+ms.openlocfilehash: 8e251222d71ad9559084ec39d7fa65a18b9e2c1a
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64789816"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717124"
 ---
 # <a name="evaluate-controlled-folder-access"></a>Evaluer styret mappeadgang
 
@@ -37,17 +37,11 @@ ms.locfileid: "64789816"
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-enablesiem-abovefoldlink)
 
 
-[Kontrolleret mappeadgang](controlled-folders.md) er en funktion, der hjælper med at beskytte dine dokumenter og filer mod at blive ændret af mistænkelige eller skadelige apps. Kontrolleret mappeadgang understøttes på Windows Server 2019, Windows Server 2022, Windows 10 og Windows 11 klienter.
+[Kontrolleret mappeadgang](controlled-folders.md) er en funktion, der hjælper med at beskytte dine dokumenter og filer mod at blive ændret af mistænkelige eller skadelige apps. Kontrolleret mappeadgang understøttes på Windows Server 2019-, Windows Server 2022-, Windows 10- og Windows 11-klienter.
 
 Det er især nyttigt i at hjælpe med at beskytte mod [ransomware](https://www.microsoft.com/wdsi/threats/ransomware) , der forsøger at kryptere dine filer og holde dem som gidsler.
 
 Denne artikel hjælper dig med at evaluere kontrolleret mappeadgang. Den forklarer, hvordan du aktiverer overvågningstilstand, så du kan teste funktionen direkte i din organisation.
-
-> [!TIP]
-> Du kan også besøge webstedet for Microsoft Defender for Endpoint demoscenarie på [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at bekræfte, at funktionen fungerer, og se, hvordan den fungerer.
-
-> [!NOTE]
-> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
 
 ## <a name="use-audit-mode-to-measure-impact"></a>Brug overvågningstilstand til at måle indvirkning
 
@@ -65,7 +59,7 @@ Du kan også bruge Gruppepolitik, Intune, administration af mobilenheder (MDM) e
 
 ## <a name="review-controlled-folder-access-events-in-windows-event-viewer"></a>Gennemse hændelser for kontrolleret mappeadgang i Windows Logbog
 
-Følgende hændelser for adgang til styrede mapper vises i Windows Logbog under Mappen Microsoft/Windows/Windows Defender/Operations.
+Følgende hændelser for adgang til styrede mapper vises i Windows Logbog under mappen Microsoft/Windows/Windows Defender/Operational.
 
 Hændelses-id | Beskrivelse
 -|-
@@ -74,7 +68,7 @@ Hændelses-id | Beskrivelse
  1123 | Hændelse for adgang til blokeret kontrolleret mappe
 
 > [!TIP]
-> Du kan konfigurere et [abonnement på videresendelse af Windows hændelse](/windows/win32/wec/setting-up-a-source-initiated-subscription) for at indsamle loggene centralt. 
+> Du kan konfigurere et [abonnement på videresendelse af Windows-hændelser](/windows/win32/wec/setting-up-a-source-initiated-subscription) for at indsamle loggene centralt. 
 
 ## <a name="customize-protected-folders-and-apps"></a>Tilpas beskyttede mapper og apps
 

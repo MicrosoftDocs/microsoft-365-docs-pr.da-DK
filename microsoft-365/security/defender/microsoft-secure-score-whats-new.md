@@ -21,20 +21,45 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 9acc7cd4147f2fdf29b82ecb2d211ef30ea4e6dc
-ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
+ms.openlocfilehash: 8c2472456feb21662e48a5b377a16a1c539569cc
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "66616974"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717178"
 ---
 # <a name="whats-new-in-microsoft-secure-score"></a>Nyheder i Microsoft Secure Score
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender.md)]
 
-Vi har foretaget nogle ændringer for at gøre Microsoft Secure Score til en bedre repræsentant for din sikkerhedsholdning. Du kan få mere at vide om planlagte ændringer [under Hvad kommer der i Microsoft Secure Score?](microsoft-secure-score-whats-coming.md)
+For at gøre Microsoft Secure Score til en bedre repræsentant for din sikkerhedsholdning fortsætter vi med at tilføje nye funktioner og forbedringshandlinger.
+
+Jo flere forbedringer du foretager, jo højere er din Secure Score. Du kan få flere oplysninger under [Microsoft Secure Score](microsoft-secure-score.md).
 
 Microsoft Secure Score findes på https://security.microsoft.com/securescore [portalen Microsoft 365 Defender](microsoft-365-defender-portal.md).
+
+## <a name="june-2022"></a>Juni 2022
+
+- Nye Microsoft Defender for Endpoint og Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender anbefalinger er nu tilgængelige som en forbedring af sikker score:
+
+  - Tillad ikke offlineadgang til shares
+  - Fjern deling af skrivetilladelse indstillet til **Alle**
+  - Fjern shares fra rodmappen
+  - Angiv mappeadgangsbaseret optælling for shares
+  - Opdater Microsoft Defender for Endpoint kernekomponenter
+
+- En ny Microsoft Defender for Identity anbefaling er tilgængelig som en handling til forbedring af sikker score:
+
+  - Løs usikre domænekonfigurationer
+
+- En ny anbefaling til [styring af apps](/defender-cloud-apps/app-governance-manage-app-governance) er nu tilgængelig som en handling til forbedring af sikker score:
+
+  - Regulerer apps med samtykke fra prioritetskonti
+
+- Nye Salesforce- og ServiceNow-anbefalinger er nu tilgængelige som handlinger til forbedring af secure score for Microsoft Defender for Cloud Apps kunder. Du kan få flere oplysninger under [Oversigt over Administration af saaS-sikkerhedsholdning](https://aka.ms/saas_security_posture_management).
+
+>[!Note]
+>Kontrolelementer af typen Salesforce og ServiceNow er nu tilgængelige som offentlig prøveversion.
 
 ## <a name="april-2022"></a>April 2022
 

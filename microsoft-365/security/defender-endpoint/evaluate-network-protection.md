@@ -16,12 +16,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 2826c623437760d86aad54e4aa36900bdad68082
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 4c9c0618db34df38168dca881117288832abf4a5
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603918"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717840"
 ---
 # <a name="evaluate-network-protection"></a>Evaluer netværksbeskyttelse
 
@@ -35,12 +35,6 @@ ms.locfileid: "66603918"
 [Netværksbeskyttelse](network-protection.md) hjælper med at forhindre medarbejdere i at bruge alle programmer til at få adgang til farlige domæner, der kan hoste phishing-svindel, udnyttelser og andet skadeligt indhold på internettet.
 
 Denne artikel hjælper dig med at evaluere netværksbeskyttelse ved at aktivere funktionen og føre dig til et testwebsted. Webstederne i denne evalueringsartikel er ikke skadelige. De er specielt oprettede websteder, der foregiver at være ondsindede. Webstedet replikerer den funktionsmåde, der ville ske, hvis en bruger besøgte et skadeligt websted eller domæne.
-
-> [!TIP]
-> Du kan også besøge webstedet for Microsoft Defender-demoscenarier på [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at se, hvordan andre beskyttelsesfunktioner fungerer.
-
-> [!NOTE]
-> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
 
 ## <a name="enable-network-protection-in-audit-mode"></a>Aktivér netværksbeskyttelse i overvågningstilstand
 

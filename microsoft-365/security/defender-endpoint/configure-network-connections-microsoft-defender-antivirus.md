@@ -16,12 +16,12 @@ ms.date: 06/28/2022
 ms.reviewer: mkaminska; pahuijbr
 manager: dansimp
 ms.collection: M365-security-compliance
-ms.openlocfilehash: e06b2a37f45ccf0febc35e31d33ece55c03e3303
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: c38136aa8d6616613968de5ef352e326c41c4137
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492054"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717818"
 ---
 # <a name="configure-and-validate-microsoft-defender-antivirus-network-connections"></a>Konfigurer og valider Microsoft Defender Antivirus netværksforbindelser
 
@@ -38,10 +38,6 @@ For at sikre at Microsoft Defender Antivirus cloud-leveret beskyttelse fungerer 
 
 > [!IMPORTANT]
 > Denne artikel indeholder oplysninger om konfiguration af netværksforbindelser kun til Microsoft Defender Antivirus. Hvis du bruger Microsoft Defender for Endpoint (hvilket omfatter Microsoft Defender Antivirus), skal du se [Konfigurer indstillinger for enhedsproxy og internetforbindelse for Defender for Endpoint](configure-proxy-internet.md).
-
-
-> [!NOTE]
-> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
 
 ## <a name="allow-connections-to-the-microsoft-defender-antivirus-cloud-service"></a>Tillad forbindelser til cloudtjenesten Microsoft Defender Antivirus
 

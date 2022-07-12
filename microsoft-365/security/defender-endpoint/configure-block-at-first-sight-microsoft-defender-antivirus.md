@@ -11,22 +11,22 @@ ms.author: deniseb
 ms.reviewer: marcmcc
 manager: dansimp
 ms.custom: nextgen
-ms.date: 10/18/2021
+ms.date: 07/11/2022
 ms.technology: mde
 ms.topic: article
 ms.collection: M365-security-compliance
-ms.openlocfilehash: fb65e1ad898427c3f0a2fc1ba9a13685c1617bc1
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: c41b463c7262c5be6df43d1c9e808060a75d15c0
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "65416272"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717662"
 ---
 # <a name="turn-on-block-at-first-sight"></a>Slå Bloker når den ses første gang til
 
 **Gælder for:**
 
-- [Microsoft Defender for Endpoint plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
+- [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - Microsoft Defender Antivirus 
 
@@ -36,21 +36,21 @@ ms.locfileid: "65416272"
 I denne artikel beskrives en antivirus-/antimalwarefunktion, der kaldes "blok ved første øjekast", og den beskriver, hvordan du aktiverer blok ved første øjekast for din organisation.
 
 > [!TIP]
-> Denne artikel er beregnet til virksomhedsadministratorer og it-teknikere, der administrerer sikkerhedsindstillinger for organisationer. Hvis du ikke er en enteprise-administrator eller it-Pro, men du har spørgsmål om blok ved første øjekast, skal du se afsnittet [Ikke en virksomhedsadministrator eller it-Pro?](#not-an-enterprise-admin-or-it-pro)
+> Denne artikel er beregnet til virksomhedsadministratorer og it-teknikere, der administrerer sikkerhedsindstillinger for organisationer. Hvis du ikke er en enteprise-administrator eller IT Pro, men du har spørgsmål om blok ved første øjekast, skal du se afsnittet [Ikke en virksomhedsadministrator eller IT Pro?](#not-an-enterprise-admin-or-it-pro)
 
 ## <a name="what-is-block-at-first-sight"></a>Hvad er "blok ved første øjekast"?
 
 Blok ved første øjekast er en trusselsbeskyttelsesfunktion i næste generations beskyttelse, der registrerer ny malware og blokerer den inden for få sekunder. Blok ved første øjekast er aktiveret, når visse sikkerhedsindstillinger er aktiveret. Disse indstillinger omfatter:
 
-- Skybaseret beskyttelse;
+- [Skybeskyttelse](cloud-protection-microsoft-defender-antivirus.md);
 - Et angivet eksempel på timeout for afsendelse (f.eks. 50 sekunder); Og
 - Et højt filblokeringsniveau.
 
-I de fleste virksomhedsorganisationer er de indstillinger, der er nødvendige for at aktivere blok ved første øjekast, konfigureret med Microsoft Defender Antivirus udrulninger.
+I de fleste virksomhedsorganisationer er de indstillinger, der er nødvendige for at aktivere blok ved første øjekast, konfigureret med Microsoft Defender Antivirus-installationer.
 
 ## <a name="how-it-works"></a>Sådan fungerer det
 
-Når Microsoft Defender Antivirus støder på en mistænkelig, men uopdaget fil, forespørger den vores cloudbeskyttelsesbackend. Cloud backend anvender heuristik, maskinel indlæring og automatiseret analyse af filen for at afgøre, om filerne er skadelige eller ej, eller om de er en trussel.
+Når Microsoft Defender Antivirus støder på en mistænkelig, men uopdaget fil, forespørger den vores cloudbeskyttelses backend. Cloud backend anvender heuristik, maskinel indlæring og automatiseret analyse af filen for at afgøre, om filerne er skadelige eller ej, eller om de er en trussel.
 
 Microsoft Defender Antivirus bruger flere opdagelses- og forebyggelsesteknologier til at levere nøjagtig, intelligent og realtidsbeskyttelse.
 
@@ -65,7 +65,7 @@ Microsoft Defender Antivirus bruger flere opdagelses- og forebyggelsesteknologie
 
 - Block bruger ved første øjekast kun skybeskyttelsesbackend til eksekverbare filer og ikke-bærbare eksekverbare filer, der downloades fra internettet, eller som stammer fra internetzonen. En hashværdi for den .exe fil kontrolleres via cloud-backend for at afgøre, om filen tidligere ikke er registreret.
 
-- Hvis cloudbackend ikke kan træffe en beslutning, låser Microsoft Defender Antivirus filen og uploader en kopi til cloudmiljøet. Clouden udfører mere analyse for at nå frem til en afgørelse, før den enten tillader, at filen kører eller blokerer den i alle fremtidige møder, afhængigt af om det afgør, om filen er ondsindet eller ikke en trussel.
+- Hvis cloudbackend ikke kan træffe en afgørelse, låser Microsoft Defender Antivirus filen og uploader en kopi til cloudmiljøet. Clouden udfører mere analyse for at nå frem til en afgørelse, før den enten tillader, at filen kører eller blokerer den i alle fremtidige møder, afhængigt af om det afgør, om filen er ondsindet eller ikke en trussel.
 
 - I mange tilfælde kan denne proces reducere svartiden for ny malware fra timer til sekunder.
 
@@ -80,7 +80,7 @@ Microsoft Defender Antivirus bruger flere opdagelses- og forebyggelsesteknologie
 
 2. Vælg eller opret en profil ved hjælp af profiltypen **Enhedsbegrænsninger** .
 
-3. I profilen **Konfigurationsindstillinger** for enhedens begrænsninger skal du angive eller bekræfte følgende indstillinger under **Microsoft Defender Antivirus**:
+3. I **profilen Konfigurationsindstillinger** for enhedens begrænsninger skal du angive eller bekræfte følgende indstillinger under **Microsoft Defender Antivirus**:
 
    - **Skybaseret beskyttelse**: Aktiveret
    - **Filblokeringsniveau**: Høj
@@ -94,27 +94,27 @@ Microsoft Defender Antivirus bruger flere opdagelses- og forebyggelsesteknologie
 > [!TIP]
 >
 > - Indstilling af filblokeringsniveauet til **Høj** anvender et stærkt registreringsniveau. I det usandsynlige tilfælde, at filblokering medfører en falsk positiv registrering af legitime filer, kan dit sikkerhedsteam gendanne filer, der er [sat i karantæne](./restore-quarantined-files-microsoft-defender-antivirus.md).
-> - Du kan få flere oplysninger om konfiguration af Microsoft Defender Antivirus enhedsbegrænsninger i Intune [under Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure).
-> - Du kan se en liste over Microsoft Defender Antivirus enhedsbegrænsninger i Intune under [Enhedsbegrænsning for Windows 10 (og nyere) indstillinger i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
+> - Du kan få flere oplysninger om konfiguration af Microsoft Defender Antivirus-enhedsbegrænsninger i Intune [under Konfigurer indstillinger for enhedsbegrænsning i Microsoft Intune](/intune/device-restrictions-configure).
+> - Du kan se en liste over microsoft Defender Antivirus-enhedsbegrænsninger i Intune under [Enhedsbegrænsning for Windows 10 (og nyere) indstillinger i Intune](/intune/device-restrictions-windows-10#microsoft-defender-antivirus).
 
-## <a name="turn-on-block-at-first-sight-with-microsoft-endpoint-manager"></a>Slå blok ved første øjekast til med Microsoft Endpoint Manager
+## <a name="turn-on-block-at-first-sight-with-microsoft-endpoint-manager"></a>Aktivér blok ved første øjekast med Microsoft Endpoint Manager
 
 > [!TIP]
 > Hvis du leder efter Microsoft Endpoint Configuration Manager, er det nu en del af Microsoft Endpoint Manager.
 
 1. I Microsoft Endpoint Manager (<https://endpoint.microsoft.com>) skal du gå til **Endpoint security** \> **Antivirus**.
 
-2. Vælg en eksisterende politik, eller opret en ny politik ved hjælp af **profiltypen Microsoft Defender Antivirus**.
+2. Vælg en eksisterende politik, eller opret en ny politik ved hjælp af profiltypen **Microsoft Defender Antivirus** .
 
 3. Angiv eller bekræft følgende konfigurationsindstillinger:
 
    - **Slå skybaseret beskyttelse** til: Ja
    - **Skybaseret beskyttelsesniveau**: Høj
-   - **Microsoft Defender Antivirus forlænget timeout i sekunder**: 50
+   - **Udvidet timeout for Microsoft Defender Antivirus i sekunder**: 50
 
-   :::image type="content" source="images/endpointmgr-antivirus-cloudprotection.png" alt-text="Indstillinger for blok ved første øjekast på Microsoft Endpoint Manager-portalen" lightbox="images/endpointmgr-antivirus-cloudprotection.png":::
+   :::image type="content" source="images/endpointmgr-antivirus-cloudprotection.png" alt-text="Bloker indstillinger ved første øjekast på Microsoft Endpoint Manager-portalen" lightbox="images/endpointmgr-antivirus-cloudprotection.png":::
 
-4. Anvend den Microsoft Defender Antivirus profil på en gruppe, f.eks **Alle brugere**, **Alle enheder** eller **Alle brugere og enheder**.
+4. Anvend Microsoft Defender Antivirus-profilen på en gruppe, f.eks **. Alle brugere**, **Alle enheder** eller **Alle brugere og enheder**.
 
 ## <a name="turn-on-block-at-first-sight-with-group-policy"></a>Slå blok ved første øjekast til med Gruppepolitik
 
@@ -123,7 +123,7 @@ Microsoft Defender Antivirus bruger flere opdagelses- og forebyggelsesteknologie
 
 1. Åbn [administrationskonsollen Gruppepolitik](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731212(v=ws.11)) Gruppepolitik, højreklik på det Gruppepolitik objekt, du vil konfigurere, og vælg **Rediger**.
 
-2. Brug **redigeringsprogrammet til Gruppepolitik administration** til at gå til **Computerkonfiguration** \> **Administrative skabeloner** \> **Windows Komponenter** \> **Microsoft Defender Antivirus** \> **KORT**.
+2. Ved hjælp af **administrationseditoren Gruppepolitik** gå til **Computerkonfiguration** \> **Administrative skabeloner** \> **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
 3. Dobbeltklik på **Konfigurer funktionen 'Blok ved første øjekast'** i sektionen KORT, angiv den til **Aktiveret**, og vælg derefter **OK**.
 
@@ -140,7 +140,7 @@ Du kan bekræfte, at blokering ved første øjekast er aktiveret på individuell
 
 1. Åbn appen Windows Sikkerhed.
 
-2. Vælg **Virus & trusselsbeskyttelse**, og vælg derefter **Administrer Indstillinger** under **Indstillinger for beskyttelse mod virus & trusselsbeskyttelse**.
+2. Vælg **Virus & trusselsbeskyttelse**, og vælg derefter **Administrer indstillinger** under **Indstillinger for beskyttelse mod virus & trusselsbeskyttelse**.
 
    :::image type="content" source="../../media/wdav-protection-settings-wdsc.png" alt-text="Mærkaten Virus & threat Protection i Windows Sikkerhed-appen" lightbox="../../media/wdav-protection-settings-wdsc.png":::
 
@@ -149,16 +149,7 @@ Du kan bekræfte, at blokering ved første øjekast er aktiveret på individuell
 > [!NOTE]
 >
 > - Hvis de nødvendige indstillinger konfigureres og installeres ved hjælp af Gruppepolitik, nedtones de indstillinger, der er beskrevet i dette afsnit, og de er ikke tilgængelige til brug på individuelle slutpunkter.
-> - Ændringer, der foretages via et Gruppepolitik objekt, skal først installeres på individuelle slutpunkter, før indstillingen opdateres i Windows Indstillinger.
-
-## <a name="validate-block-at-first-sight-is-working"></a>Valider, at blok ved første øjekast fungerer
-
-Hvis du vil validere, at funktionen fungerer, skal du downloade [eksempelfilen Blok ved første øjekast](https://demo.wd.microsoft.com/Page/BAFS). Hvis du vil downloade filen, skal du have en konto i Azure AD, der har tildelt rollen Sikkerhedsadministrator eller Global administrator.
-
-Hvis du vil validere, at skyaktiveret beskyttelse fungerer, skal du følge vejledningen i [Valider forbindelser mellem dit netværk og cloudmiljøet](configure-network-connections-microsoft-defender-antivirus.md#validate-connections-between-your-network-and-the-cloud).
-
-> [!NOTE]
-> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
+> - Ændringer, der foretages via et Gruppepolitik objekt, skal først installeres på individuelle slutpunkter, før indstillingen opdateres i Windows-indstillinger.
 
 ## <a name="turn-off-block-at-first-sight"></a>Slå blok ved første øjekast fra
 
@@ -171,7 +162,7 @@ Du kan vælge at deaktivere blok ved første øjekast, hvis du vil bevare de nø
 
 1. Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com>), og log på.
 
-2. Gå til **Endpoint security** \> **Antivirus**, og vælg derefter din Microsoft Defender Antivirus politik.
+2. Gå til **Endpoint security** \> **Antivirus**, og vælg derefter din Microsoft Defender Antivirus-politik.
 
 3. Under **Administrer** skal du vælge **Egenskaber**.
 
@@ -181,7 +172,7 @@ Du kan vælge at deaktivere blok ved første øjekast, hvis du vil bevare de nø
 
    - Angiv **Slå skybaseret beskyttelse** til **Nej** eller **Ikke konfigureret**.
    - Indstil **Skybaseret beskyttelsesniveau** til **Ikke konfigureret**.
-   - Fjern markeringen i afkrydsningsfeltet for **Microsoft Defender Antivirus forlænget timeout i sekunder**.
+   - Fjern markeringen i afkrydsningsfeltet for **udvidet timeout for Microsoft Defender Antivirus i sekunder**.
 
 6. Gennemse og gem dine indstillinger.
 
@@ -191,16 +182,16 @@ Du kan vælge at deaktivere blok ved første øjekast, hvis du vil bevare de nø
 
 2. Ved hjælp af **administrationseditoren til Gruppepolitik** skal du gå til **Computerkonfiguration** og vælge **Administrative skabeloner**.
 
-3. Udvid træet via **Windows komponenter** \> **Microsoft Defender Antivirus** \> **MAPS**.
+3. Udvid træet via **Windows-komponenter** \> **Microsoft Defender Antivirus** \> **MAPS**.
 
 4. Dobbeltklik på **Konfigurer funktionen 'Blok ved første øjekast'** , og angiv indstillingen til **Deaktiveret**.
 
     > [!NOTE]
     > Deaktivering af blokering ved første øjekast deaktiverer eller ændrer ikke de påkrævede gruppepolitikker.
 
-## <a name="not-an-enterprise-admin-or-it-pro"></a>Er du ikke virksomhedsadministrator eller it-Pro?
+## <a name="not-an-enterprise-admin-or-it-pro"></a>Er du ikke virksomhedsadministrator eller it-tekniker?
 
-Hvis du ikke er virksomhedsadministrator eller it-Pro, men du har spørgsmål om blok ved første øjekast, er dette afsnit noget for dig. Blok ved første øjekast er en trusselsbeskyttelsesfunktion, der registrerer og blokerer malware inden for få sekunder. Selvom der ikke er en bestemt indstilling, der kaldes "Bloker ved første øjekast", aktiveres funktionen, når visse indstillinger er konfigureret på din enhed.
+Hvis du ikke er virksomhedsadministrator eller it-pro, men har spørgsmål om blok ved første øjekast, er dette afsnit noget for dig. Blok ved første øjekast er en trusselsbeskyttelsesfunktion, der registrerer og blokerer malware inden for få sekunder. Selvom der ikke er en bestemt indstilling, der kaldes "Bloker ved første øjekast", aktiveres funktionen, når visse indstillinger er konfigureret på din enhed.
 
 ### <a name="how-to-manage-block-at-first-sight-on-or-off-on-your-own-device"></a>Sådan administrerer du blok ved første øjekast til eller fra på din egen enhed
 
@@ -222,7 +213,7 @@ Hvis du har en personlig enhed, der ikke administreres af en organisation, undre
      > Hvis du slår blok ved første øjekast fra, sænkes beskyttelsesniveauet for din enhed. Vi anbefaler ikke, at blok deaktiveres permanent ved første øjekast.
 
 > [!TIP]
-> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, kan du se:
+> Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
 > - [Angiv indstillinger for Microsoft Defender for Endpoint på macOS-](mac-preferences.md)
 > - [Microsoft Defender for Endpoint på Mac](microsoft-defender-endpoint-mac.md)
 > - [Politikindstillinger for macOS Antivirus for Microsoft Defender Antivirus for Intune](/mem/intune/protect/antivirus-microsoft-defender-settings-macos)

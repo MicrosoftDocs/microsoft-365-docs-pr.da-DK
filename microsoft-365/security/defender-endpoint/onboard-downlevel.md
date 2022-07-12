@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: c330d3c8210ea0c83605a2b5e9f9f43d1c930442
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 4d8665f379683ccc113a10e6308c6fa4026616c6
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554395"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717202"
 ---
 # <a name="onboard-previous-versions-of-windows"></a>Onboard tidligere versioner af Windows
 
@@ -73,20 +73,20 @@ Følgende trin er påkrævet for at aktivere denne integration:
 
 Gennemse følgende oplysninger for at bekræfte minimumsystemkrav:
 
-- Installér den [månedlige opdateringspakke fra februar 2018](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598)
+- Installér den [månedlige opdateringspakke fra februar 2018](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598) – Link til direkte download fra det Windows Update katalog er tilgængeligt [her](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4074598)
+
+- Installér [opdateringen af servicestakken fra 12. marts 2019 (eller nyere)](https://support.microsoft.com/topic/servicing-stack-update-for-windows-7-sp1-and-windows-server-2008-r2-sp1-march-12-2019-b4dc0cff-d4f2-a408-0cb1-cb8e918feeba) – link til direkte download fra Windows Update kataloget er tilgængeligt [her](https://www.catalog.update.microsoft.com/search.aspx?q=4490628)
+
+- Installér [supportopdateringen til SHA-2-kodesignering](https://support.microsoft.com/topic/sha-2-code-signing-support-update-for-windows-server-2008-r2-windows-7-and-windows-server-2008-september-23-2019-84a8aad5-d8d9-2d5c-6d78-34f9aa5f8339) – Link til direkte download fra Windows Update kataloget er tilgængeligt [her](https://www.catalog.update.microsoft.com/search.aspx?q=kb4474419)
 
   > [!NOTE]
   > Gælder kun for Windows Server 2008 R2, Windows 7 SP1 Enterprise og Windows 7 SP1 Pro.
 
 - Installér [opdateringen til kundeoplevelse og diagnosticeringstelemetri](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
 
-- Installér enten [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) (eller nyere) eller [KB3154518](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the-net-framework)
+- Installér [Microsoft .Net Framework 4.5.2 eller nyere](https://www.microsoft.com/en-US/download/details.aspx?id=42642)
 
     > [!NOTE]
-    > Gælder kun for Windows Server 2008 R2, Windows 7 SP1 Enterprise og Windows 7 SP1 Pro.
-    >
-    > Installer ikke .NET Framework 4.0.x, da det ophæver ovenstående installation.
-    >
     > Installationen af .NET 4.5 kan kræve, at du genstarter computeren efter installationen.
 
 - Opfylder minimumsystemkravene til Azure Log Analytics-agenten. Du kan finde flere oplysninger under [Indsaml data fra computere i dit miljø med Log Analytics](/azure/log-analytics/log-analytics-concept-hybrid#prerequisites)

@@ -17,12 +17,12 @@ ms.technology: mde
 ms.topic: how-to
 ms.collection: m365-security-compliance
 ms.date: ''
-ms.openlocfilehash: 02017a614544cfb10eb43d375212fc7e37124ad3
-ms.sourcegitcommit: a7cd723fd62b4b0aae9c2c2df04ead3c28180084
+ms.openlocfilehash: 00c2f6f490a09e76e097a20419f8d8137b32a467
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/02/2022
-ms.locfileid: "65840381"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717274"
 ---
 # <a name="protect-important-folders-with-controlled-folder-access"></a>Beskyt vigtige mapper med kontrolleret mappeadgang
 
@@ -42,7 +42,7 @@ ms.locfileid: "65840381"
 
 ## <a name="what-is-controlled-folder-access"></a>Hvad er kontrolleret mappeadgang?
 
-Kontrolleret mappeadgang hjælper med at beskytte dine værdifulde data mod skadelige apps og trusler, f.eks. ransomware. Kontrolleret mappeadgang beskytter dine data ved at kontrollere apps mod en liste over kendte apps, der er tillid til. Understøttes på Windows Server 2019, Windows Server 2022, Windows 10 og Windows 11 klienter, kan kontrolleret mappeadgang slås til ved hjælp af appen Windows Sikkerhed, Microsoft Endpoint Configuration Manager eller Intune (til administrerede enheder).
+Kontrolleret mappeadgang hjælper med at beskytte dine værdifulde data mod skadelige apps og trusler, f.eks. ransomware. Kontrolleret mappeadgang beskytter dine data ved at kontrollere apps mod en liste over kendte apps, der er tillid til. Understøttes på Windows Server 2019-, Windows Server 2022-, Windows 10- og Windows 11-klienter, kan kontrolleret mappeadgang aktiveres ved hjælp af Windows Sikkerhed-appen, Microsoft Endpoint Configuration Manager eller Intune (for administrerede enheder).
 
 > [!NOTE]
 > Der er ikke tillid til scriptprogrammer, og du kan ikke give dem adgang til beskyttede mapper. Der er f.eks. ikke tillid til PowerShell af kontrolleret mappeadgang, selvom du tillader det med [certifikat- og filindikatorer](/microsoft-365/security/defender-endpoint/indicator-certificates).
@@ -68,10 +68,7 @@ Kontrolleret mappeadgang er især nyttig til at hjælpe med at beskytte dine dok
 
 De [beskyttede mapper](#review-controlled-folder-access-events-in-windows-event-viewer) omfatter almindelige systemmapper (herunder startsektorer), og du kan [tilføje flere mapper](customize-controlled-folders.md#protect-additional-folders). Du kan også [give apps tilladelse](customize-controlled-folders.md#allow-specific-apps-to-make-changes-to-controlled-folders) til at give dem adgang til de beskyttede mapper.
 
-Du kan bruge [overvågningstilstand](audit-windows-defender.md) til at evaluere, hvordan kontrolleret mappeadgang ville påvirke din organisation, hvis den blev aktiveret. Du kan også besøge webstedet Windows Defender Test ground på [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at bekræfte, at funktionen fungerer og se, hvordan den fungerer.
-
-> [!NOTE]
-> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
+Du kan bruge [overvågningstilstand](audit-windows-defender.md) til at evaluere, hvordan kontrolleret mappeadgang ville påvirke din organisation, hvis den blev aktiveret.
 
 Kontrolleret mappeadgang understøttes i følgende versioner af Windows:
 
@@ -82,11 +79,11 @@ Kontrolleret mappeadgang understøttes i følgende versioner af Windows:
 - [Windows Server 2019](/windows-server/get-started-19/whats-new-19)
 - Windows Server 2022
 
-## <a name="windows-system-folders-are-protected-by-default"></a>Windows systemmapper er som standard beskyttet
+## <a name="windows-system-folders-are-protected-by-default"></a>Windows-systemmapper er som standard beskyttet
 
-Windows systemmapper er som standard beskyttet sammen med flere andre mapper:
+Windows-systemmapper er som standard beskyttet sammen med flere andre mapper:
 
-De beskyttede mapper omfatter almindelige systemmapper (herunder startsektorer), og du kan tilføje flere mapper. Du kan også give apps tilladelse til at give dem adgang til de beskyttede mapper.  De Windows systemmapper, der er beskyttet som standard, er:
+De beskyttede mapper omfatter almindelige systemmapper (herunder startsektorer), og du kan tilføje flere mapper. Du kan også give apps tilladelse til at give dem adgang til de beskyttede mapper.  De Windows-systemmapper, der er beskyttet som standard, er:
 
 - `c:\Users\<username>\Documents`
 - `c:\Users\Public\Documents`
@@ -100,14 +97,14 @@ De beskyttede mapper omfatter almindelige systemmapper (herunder startsektorer),
 
 Standardmapper vises i brugerens profil under **Denne pc**.
    > [!div class="mx-imgBorder"]
-   > ![Beskyttede Windows standardsystemmapper](images/defaultfolders.png)
+   > ![Beskyttede Windows-standardsystemmapper](images/defaultfolders.png)
 
 > [!NOTE]
-> Du kan konfigurere flere mapper som beskyttede, men du kan ikke fjerne de Windows systemmapper, der er beskyttet som standard.
+> Du kan konfigurere flere mapper som beskyttede, men du kan ikke fjerne de Windows-systemmapper, der er beskyttet som standard.
 
 ## <a name="requirements-for-controlled-folder-access"></a>Krav til adgang til styrede mapper
 
-Kontrolleret mappeadgang kræver aktivering [Microsoft Defender Antivirus beskyttelse i realtid](configure-real-time-protection-microsoft-defender-antivirus.md).
+Kontrolleret mappeadgang kræver aktivering af [Microsoft Defender Antivirus-beskyttelse i realtid](configure-real-time-protection-microsoft-defender-antivirus.md).
 
 ## <a name="review-controlled-folder-access-events-in-the-microsoft-365-defender-portal"></a>Gennemse hændelser for kontrolleret mappeadgang på Microsoft 365 Defender-portalen
 
@@ -124,7 +121,7 @@ DeviceEvents
 
 ## <a name="review-controlled-folder-access-events-in-windows-event-viewer"></a>Gennemse hændelser for kontrolleret mappeadgang i Windows Logbog
 
-Du kan gennemse Windows hændelsesloggen for at se hændelser, der oprettes, når adgangsblokke (eller overvågninger) for styrede mapper i en app:
+Du kan gennemse Windows-hændelsesloggen for at se hændelser, der oprettes, når adgangsblokke (eller overvågning) for styrede mapper blokerer (eller overvåger) en app:
 
 1. Download [evalueringspakken](https://aka.ms/mp7z2w) , og udtræk filen *cfa-events.xml* til en placering, der er let tilgængelig på enheden.
 2. Skriv **Logbog** i menuen Start for at åbne Windows Logbog.
@@ -155,4 +152,4 @@ Du kan bruge appen Windows Sikkerhed til at få vist listen over mapper, der er 
    - Hvis du vil fjerne en mappe, skal du markere den og derefter vælge **Fjern**.
 
 > [!NOTE]
-> [Windows systemmapper](#windows-system-folders-are-protected-by-default) er som standard beskyttet, og du kan ikke fjerne dem fra listen.
+> [Windows-systemmapper](#windows-system-folders-are-protected-by-default) er som standard beskyttet, og du kan ikke fjerne dem fra listen.

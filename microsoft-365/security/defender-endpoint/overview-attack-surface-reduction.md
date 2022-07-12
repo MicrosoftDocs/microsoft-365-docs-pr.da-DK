@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 05/16/2022
-ms.openlocfilehash: ec39e02b48471857932a63ba19547ff2ad1b3390
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 0bcc45907cc5d57b592f96296282f65cc3e3d772
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438078"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717123"
 ---
 # <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Forstå og brug funktioner til reduktion af angrebsoverfladen
 
@@ -93,19 +93,13 @@ I overvågningstilstand kan du se en post over, hvad der *ville* være sket, hvi
 
 Du kan aktivere overvågningstilstand, når du tester, hvordan funktionerne fungerer. Hvis du kun aktiverer overvågningstilstand til test, hjælper det med at forhindre, at overvågningstilstanden påvirker dine line of business-apps. Du kan også få en idé om, hvor mange mistænkelige filændringsforsøg der forekommer over en bestemt periode.
 
-Funktionerne blokerer eller forhindrer ikke, at apps, scripts eller filer ændres. Hændelsesloggen for Windows registrerer dog hændelser, som om funktionerne var fuldt aktiveret. Med overvågningstilstand kan du gennemse hændelsesloggen for at se, hvilken indvirkning funktionen ville have haft, hvis den var aktiveret.
+Funktionerne blokerer eller forhindrer ikke, at apps, scripts eller filer ændres. Windows-hændelsesloggen registrerer dog hændelser, som om funktionerne var fuldt aktiveret. Med overvågningstilstand kan du gennemse hændelsesloggen for at se, hvilken indvirkning funktionen ville have haft, hvis den var aktiveret.
 
 Hvis du vil finde de overvågede poster, skal du gå til **Programmer og tjenester** \> **Microsoft** \> **Windows** \> **Windows Defender** \> **Operational**.
 
 Brug Defender for Endpoint til at få flere oplysninger om hver enkelt hændelse. Disse oplysninger er især nyttige til undersøgelse af regler for reduktion af angrebsoverfladen. Ved hjælp af Defender for Endpoint-konsollen kan du [undersøge problemer som en del af tidslinjen for beskeder og undersøgelsesscenarier](investigate-alerts.md).
 
 Du kan aktivere overvågningstilstand ved hjælp af Gruppepolitik, PowerShell og udbydere af konfigurationstjenester.
-
-> [!TIP]
-> Du kan også besøge webstedet Windows Defender Testground på [demo.wd.microsoft.com](https://demo.wd.microsoft.com?ocid=cx-wddocs-testground) for at bekræfte, at funktionerne fungerer, og se, hvordan de fungerer.
-
-> [!NOTE]
-> Demowebstedet Defender for Endpoint på demo.wd.microsoft.com frarådes og fjernes fremover.
 
 | Overvågningsindstillinger | Sådan aktiverer du overvågningstilstand | Sådan får du vist hændelser |
 |---|---|---|
@@ -236,7 +230,7 @@ Alle hændelser for reduktion af angrebsoverfladen er placeret under **Program- 
 Du kan få adgang til disse hændelser i Windows Logbog:
 
 1. Åbn menuen **Start,** skriv **Logbog**, og vælg derefter **Logbog** resultat.
-2. Udvid **Logfiler for programmer og tjenester > Microsoft > Windows**, og gå derefter til den mappe, der er angivet under **Provider/source** i tabellen nedenfor.
+2. Udvid **Logfiler for programmer og tjenester > Microsoft > Windows** , og gå derefter til den mappe, der er angivet under **Provider/source** i tabellen nedenfor.
 3. Dobbeltklik på underelementet for at se hændelser. Rul gennem hændelserne for at finde den, du leder efter.
 
    ![Animation, der viser ved hjælp af Logbog.](images/event-viewer.gif)
@@ -286,7 +280,7 @@ Du kan få adgang til disse hændelser i Windows Logbog:
 |Reduktion af angrebsoverfladen|Windows Defender (driftsklar)|1121|Hændelse, når reglen udløses i bloktilstand|
 
 >[!NOTE]
-> Fra brugerens perspektiv sendes meddelelser om ASR-advarselstilstand som en Windows toastmeddelelse for regler for reduktion af angrebsoverfladen.
+> Fra brugerens perspektiv sendes meddelelser om ASR-advarselstilstand som en Windows Toast-meddelelse for regler for reduktion af angrebsoverfladen.
 >
 > I ASR leverer Network Protection kun overvågnings- og bloktilstande.
 
@@ -298,7 +292,7 @@ Som nævnt i videoen indeholder Defender for Endpoint flere funktioner til reduk
 |:---|:---|
 | [Hardwarebaseret isolation](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview) | Beskyt og bevar integriteten af et system, efterhånden som det starter, og mens det kører. Valider systemintegritet via lokal og ekstern attestation. Brug objektbeholderisolation til Microsoft Edge som en hjælp til at beskytte mod skadelige websteder. |
 | [Programkontrolelement](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) | Brug programkontrolelementet, så dine programmer skal have tillid til at kunne køre. |
-| [Styret mappeadgang](controlled-folders.md) | Hjælp med at forhindre skadelige eller mistænkelige apps (herunder filkryptering af ransomware malware) i at foretage ændringer af filer i dine centrale systemmapper (kræver Microsoft Defender Antivirus). |
+| [Styret mappeadgang](controlled-folders.md) | Hjælp med at forhindre skadelige eller mistænkelige apps (herunder filkryptering af ransomware-malware) i at foretage ændringer af filer i dine centrale systemmapper (kræver Microsoft Defender Antivirus). |
 | [Netværksbeskyttelse](network-protection.md) | Udvid beskyttelsen til netværkstrafik og -forbindelse på organisationens enheder. (Kræver Microsoft Defender Antivirus). |
 | [Exploit Protection](exploit-protection.md) | Hjælp med at beskytte de operativsystemer og apps, din organisation bruger, så de ikke kan udnyttes. Udnyttelse af beskyttelse fungerer også med antivirusløsninger fra tredjepart. |
 | [Enhedsstyring](device-control-report.md) | Beskytter mod tab af data ved at overvåge og styre medier, der bruges på enheder, f.eks. flytbart lager og USB-drev, i din organisation. |

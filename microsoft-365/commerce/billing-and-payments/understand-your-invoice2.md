@@ -22,12 +22,12 @@ ms.custom:
 search.appverid: MET150
 description: Få mere at vide om, hvordan du fortolker gebyrer, fakturering og betalingsoplysninger på din faktura eller faktura for Microsoft 365 til virksomheder.
 ms.date: 05/24/2022
-ms.openlocfilehash: 594ad923c186410ad17085425fc0702d1a245ef9
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+ms.openlocfilehash: 57120632cfe0b3543b228dfaca5955dfa31e4358
+ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65670240"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66717862"
 ---
 # <a name="understand-your-bill-or-invoice-for-microsoft-365-for-business"></a>Forstå din regning eller faktura for Microsoft 365 til virksomheder
 
@@ -38,7 +38,7 @@ Din regning eller faktura indeholder en oversigt over gebyrer for dit abonnement
 
 ## <a name="how-often-and-when-am-i-billed"></a>Hvor ofte og hvornår faktureres jeg?
 
-Afhængigt af den faktureringshyppighed, du valgte, da du købte dit abonnement, modtager du en faktura enten månedligt, kvartalsvist, halvårligt eller årligt. Den tid, der er gået siden sidste fakturadato, kaldes *Faktureringsperioden* og er på side et af fakturaen. Dette tidspunkt repræsenterer det datointerval, hvor den aktuelle faktura tilskrives gebyrer. Hvis du har foretaget en ændring af dit abonnement uden for dette datointerval, f.eks. tilføjelse eller fjernelse af licenser, vises de tilknyttede gebyrer på fakturaen for den næste faktureringsperiode.
+Afhængigt af den faktureringshyppighed, du valgte, da du købte dit abonnement, modtager du en faktura enten månedligt eller årligt. Den tid, der er gået siden sidste fakturadato, kaldes *Faktureringsperioden* og er på side et af fakturaen. Dette tidspunkt repræsenterer det datointerval, hvor den aktuelle faktura tilskrives gebyrer. Hvis du har foretaget en ændring af dit abonnement uden for dette datointerval, f.eks. tilføjelse eller fjernelse af licenser, vises de tilknyttede gebyrer på fakturaen for den næste faktureringsperiode.
 
 Fra og med side to i fakturaen kan du se gebyrerne grupperet efter deres *Serviceperiode*. Tjenesteperioden er det datointerval, hvor du faktureres for at bruge tjenesten.
 
