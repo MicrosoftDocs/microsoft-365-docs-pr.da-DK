@@ -14,12 +14,12 @@ description: Følg stien til en indgående meddelelse via trusselsfiltreringssta
 ms.technology: mdo
 ms.prod: m365-security
 ms.collection: M365-security-compliance
-ms.openlocfilehash: 4548beaf8d3071006114a65fd95c16b06e8a875d
-ms.sourcegitcommit: 725a92b0b1555572b306b285a0e7a7614d34e5e5
+ms.openlocfilehash: d6697652754792b3beb87b7bcafc0846ca51c53d
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "65648167"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772034"
 ---
 # <a name="step-by-step-threat-protection-in-microsoft-defender-for-office-365"></a>Trinvis trusselsbeskyttelse i Microsoft Defender for Office 365
 
@@ -90,7 +90,7 @@ I denne fase begynder filtreringsstakken at håndtere det specifikke indhold af 
 
 :::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png" alt-text="Fase 3-filtrering i MDO er indholdsfiltrering" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase3.png":::
 
-1. **Transportregler** (også kaldet regler for mailflow eller Exchange transportregler) gør det muligt for en administrator at udføre en lang række handlinger, når en meddelelse opfylder en lige så lang række betingelser. Alle meddelelser, der sendes gennem din organisation, evalueres i forhold til de aktiverede regler for mailflow/transport.
+1. **Transportregler** (også kaldet regler for mailflow eller Exchange-transportregler) gør det muligt for en administrator at udføre en lang række handlinger, når en meddelelse har en lige så lang række betingelser. Alle meddelelser, der sendes gennem din organisation, evalueres i forhold til de aktiverede regler for mailflow/transport.
 
 2. **Microsoft Defender Antivirus** og to *antivirusprogrammer fra tredjepart* bruges til at registrere al kendt malware i vedhæftede filer.
 
@@ -106,7 +106,7 @@ I denne fase begynder filtreringsstakken at håndtere det specifikke indhold af 
 
 8. **Indholds-heuristik** kan registrere mistænkelige meddelelser baseret på struktur og ordhyppighed i meddelelsens brødtekst ved hjælp af modeller til maskinel indlæring.
 
-9. **Pengeskab sandkasser til vedhæftede filer** for Defender for Office 365 kunder ved hjælp af dynamisk analyse til at registrere trusler, der aldrig før er set.
+9. **Sikker vedhæftede filer** sandkasser alle vedhæftede filer til Defender for Office 365 kunder, ved hjælp af dynamisk analyse til at registrere aldrig før sete trusler.
 
 10. **Detonation af sammenkædet indhold** behandler alle URL-adresser, der linker til en fil i en mail, som en vedhæftet fil, som asynkront sandboxing af filen på leveringstidspunktet.
 
@@ -114,11 +114,11 @@ I denne fase begynder filtreringsstakken at håndtere det specifikke indhold af 
 
 ## <a name="phase-4---post-delivery-protection"></a>Fase 4 – beskyttelse efter levering
 
-Den sidste fase finder sted efter mail eller fillevering, der handler på mail, der er i forskellige postkasser og filer og links, der vises i klienter som Microsoft Teams.
+Den sidste fase finder sted efter levering af mail eller fil, der handler på mail, der er i forskellige postkasser og filer og links, der vises i klienter som Microsoft Teams.
 
 :::image type="content" source="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png" alt-text="Fase 4-filtrering i Defender for Office 365 er beskyttelse efter levering" lightbox="../../media/mdo-filtering-stack/mdo-filter-stack-phase4.png":::
 
-1. **Pengeskab Links** er Defender for Office 365 beskyttelsestid for klik. Alle URL-adresser i hver meddelelse ombrydes, så de peger på Microsoft Pengeskab Links-servere. Når der klikkes på en URL-adresse, kontrolleres den i forhold til det seneste omdømme, før brugeren omdirigeres til destinationswebstedet. URL-adressen er asynkront sandkasse for at opdatere dens omdømme.
+1. **Sikre links** er Defender for Office 365 beskyttelsestid. Alle URL-adresser i hver meddelelse ombrydes, så de peger på Microsoft Safe Links-servere. Når der klikkes på en URL-adresse, kontrolleres den i forhold til det seneste omdømme, før brugeren omdirigeres til destinationswebstedet. URL-adressen er asynkront sandkasse for at opdatere dens omdømme.
 
 2. **Zap (automatisk fjernelse på nul timer) for phishing** med tilbagevirkende kraft registrerer og neutraliserer skadelige phishing-meddelelser, der allerede er blevet leveret til Exchange Online postkasser.
 
@@ -130,9 +130,9 @@ Den sidste fase finder sted efter mail eller fillevering, der handler på mail, 
 
 6. **Tilføjelsesprogrammer til rapportmeddelelse** gør det nemt for brugerne at rapportere falske positiver (god mail, der ved en fejl er markeret som *dårlige*) eller falske negativer (dårlig mail markeret som *god*) til Microsoft for yderligere analyse.
 
-7. **Pengeskab Links til Office-klienter** tilbyder den samme Pengeskab Link-tid til klik-beskyttelse i Office klienter, f.eks. Word, PowerPoint og Excel.
+7. **Safe Links til Office-klienter** tilbyder den samme beskyttelsestid, hvor der klikkes på Sikre links, indbygget i understøttede Office-apps, f.eks. Word, PowerPoint og Excel.
 
-8. **Beskyttelse af OneDrive, SharePoint og Teams** giver den samme Pengeskab beskyttelse mod vedhæftede filer, indbygget i OneDrive, SharePoint og Microsoft Teams.
+8. **Beskyttelse af OneDrive, SharePoint og Teams** giver den samme beskyttelse mod vedhæftede filer, der er beskyttet mod skadelige filer, indbygget i OneDrive, SharePoint og Microsoft Teams.
 
 9. Når en URL-adresse, der peger på en fil, vælges efter levering, viser **detonation af sammenkædet indhold** en advarselsside, indtil sandkassen for filen er fuldført, og URL-adressen er sikker.
 

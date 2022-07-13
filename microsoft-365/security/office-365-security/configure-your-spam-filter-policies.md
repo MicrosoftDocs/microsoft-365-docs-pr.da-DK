@@ -18,12 +18,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette politikker til bekæmpelse af spam i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 780b7bc788cb38578e3729fac88a7c9d081f6732
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 6e62b4f2f0dc5eaf106c689a3eb05f78508ef1b0
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714744"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66771279"
 ---
 # <a name="configure-anti-spam-policies-in-eop"></a>Konfigurer politikker mod spam i EOP
 
@@ -119,9 +119,9 @@ Når du opretter en brugerdefineret politik til bekæmpelse af spam på Microsof
    > - Modtageren er: romain@contoso.com
    > - Modtageren er medlem af: Direktører
    >
-   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
    >
-   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 

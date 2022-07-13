@@ -16,16 +16,16 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: c5606c19e4cef64e701d34a5e4ccc2143f51f394
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 209af419462d6894e80b1d05955a58a78572e525
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090360"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772735"
 ---
 # <a name="view-or-edit-policies-in-microsoft-defender-for-business"></a>Få vist eller rediger politikker i Microsoft Defender til virksomheder
 
-I Microsoft Defender til virksomheder konfigureres sikkerhedsindstillinger via politikker, der anvendes på enheder. For at hjælpe med at forenkle din konfigurationsoplevelse indeholder Defender for Business forudkonfigurerede politikker, der hjælper med at beskytte din virksomheds enheder, så snart de er onboardet. Du kan bruge standardpolitikkerne, redigere politikker eller oprette dine egne politikker.
+I Defender for Business konfigureres sikkerhedsindstillinger via politikker, der anvendes på enheder. For at hjælpe med at forenkle din konfigurationsoplevelse indeholder Defender for Business forudkonfigurerede politikker, der hjælper med at beskytte din virksomheds enheder, så snart de er onboardet. Du kan bruge standardpolitikkerne, redigere politikker eller oprette dine egne politikker.
 
 **I denne artikel beskrives det, hvordan du**:
 
@@ -47,9 +47,9 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på. 
 
-2. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**). 
+2. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows-klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**). 
 
-3. Vælg en operativsystemfane (f.eks. **Windows klienter**), og gennemse derefter listen over politikker under kategorierne **Næste generation af beskyttelse** og **Firewall**. 
+3. Vælg en operativsystemfane (f.eks **. Windows-klienter**), og gennemse derefter listen over politikker under kategorierne **Beskyttelse af næste generation** og **Firewall** . 
 
 4. Hvis du vil have vist flere oplysninger om en politik, skal du vælge dens navn. Der åbnes en siderude, der indeholder flere oplysninger om den pågældende politik, f.eks. hvilke enheder der er beskyttet af den pågældende politik.
 
@@ -57,9 +57,9 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på. 
 
-2. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**). 
+2. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows-klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**). 
 
-3. Vælg en operativsystemfane (f.eks. **Windows klienter**), og gennemse derefter listen over politikker under kategorierne **Næste generation af beskyttelse** og **Firewall**. 
+3. Vælg en operativsystemfane (f.eks **. Windows-klienter**), og gennemse derefter listen over politikker under kategorierne **Beskyttelse af næste generation** og **Firewall** . 
 
 4. Hvis du vil redigere en politik, skal du vælge dens navn og derefter vælge **Rediger**.
 
@@ -69,7 +69,7 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 
    - Hvis du vil beholde den valgte enhedsgruppe, som den er, skal du vælge **Næste**.
    - Hvis du vil fjerne en enhedsgruppe fra politikken, skal du vælge **Fjern**.
-   - Hvis du vil konfigurere en ny enhedsgruppe, skal du vælge **Opret ny gruppe** og derefter konfigurere din enhedsgruppe. Hvis du vil have hjælp til denne opgave, skal [du se Enhedsgrupper i Microsoft Defender til virksomheder](mdb-create-edit-device-groups.md).
+   - Hvis du vil konfigurere en ny enhedsgruppe, skal du vælge **Opret ny gruppe** og derefter konfigurere din enhedsgruppe. Hvis du vil have hjælp til denne opgave, skal du se [Enhedsgrupper i Defender for Business](mdb-create-edit-device-groups.md).
    - Hvis du vil anvende politikken på en anden enhedsgruppe, skal du vælge **Brug eksisterende gruppe**.
 
    Når du har angivet, hvilke enhedsgrupper der skal modtage politikken, skal du vælge **Næste**.
@@ -90,9 +90,9 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på. 
 
-2. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**). 
+2. Vælg **Enhedskonfiguration** i navigationsruden. Politikker er organiseret efter operativsystem (f.eks **. Windows-klient**) og politiktype (f.eks **. næste generations beskyttelse** og **firewall**). 
 
-3. Vælg en operativsystemfane (f.eks. **Windows klienter**), og gennemse derefter listen over **næste generations beskyttelsespolitikker**. 
+3. Vælg en operativsystemfane (f.eks **. Windows-klienter**), og gennemse derefter listen over **næste generations beskyttelsespolitikker** . 
 
 4. Under **Næste generation af beskyttelse** eller **Firewall** skal du vælge **+ Tilføj**.
 
@@ -111,7 +111,7 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 
    Du kan få mere at vide om enhedsgrupper [under Enhedsgrupper i Defender for Business](mdb-create-edit-device-groups.md).
 
-8. Under fanen **Konfigurationsindstillinger** skal du angive indstillingerne for din politik og derefter vælge **Næste**. Du kan få flere oplysninger om de individuelle indstillinger under [Konfigurationsindstillinger for Microsoft Defender til virksomheder](mdb-next-gen-configuration-settings.md).
+8. Under fanen **Konfigurationsindstillinger** skal du angive indstillingerne for din politik og derefter vælge **Næste**. Du kan få flere oplysninger om de individuelle indstillinger under [Konfigurationsindstillinger for Defender for Business](mdb-next-gen-configuration-settings.md).
 
 9. Gennemse de generelle oplysninger, målrettede enheder og konfigurationsindstillinger under fanen **Gennemse din politik** . 
 
@@ -124,7 +124,7 @@ I Defender for Business er der to primære typer politikker, der beskytter din v
 Vælg en eller flere af følgende opgaver:
 
 - [Administrer enheder](mdb-manage-devices.md)
-- [Opret en ny politik i Microsoft Defender til virksomheder](mdb-create-new-policy.md)
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
+- [Opret en ny politik i Defender for Business](mdb-create-new-policy.md)
+- [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md)
+- [Reager på og afhjælp trusler i Defender for Business](mdb-respond-mitigate-threats.md)
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter, redigerer og sletter de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection organisationer (EOP) med eller uden Exchange Online postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 384494fdd625fe050079ecd99f59b68d1ba87cad
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 8545eed078a676055206870e5c55ed3ca2e82a9a
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115691"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66773229"
 ---
 # <a name="configure-anti-phishing-policies-in-eop"></a>Konfigurer politikker for antiphishing i EOP
 
@@ -30,7 +30,7 @@ ms.locfileid: "66115691"
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser er der en standardpolitik for anti-phishing, der indeholder et begrænset antal anti-spoofing-funktioner, der er aktiveret som standard. Du kan få flere oplysninger under [Spoof-indstillinger i politikker til bekæmpelse af phishing](set-up-anti-phishing-policies.md#spoof-settings).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser er der en standardpolitik for anti-phishing, der indeholder et begrænset antal anti-spoofing-funktioner, der er aktiveret som standard. Du kan få flere oplysninger under [Spoof-indstillinger i politikker til bekæmpelse af phishing](set-up-anti-phishing-policies.md#spoof-settings).
 
 Administratorer kan få vist, redigere og konfigurere (men ikke slette) standardpolitikken til bekæmpelse af phishing. For at opnå større granularitet kan du også oprette brugerdefinerede anti-phishing-politikker, der gælder for bestemte brugere, grupper eller domæner i din organisation. Brugerdefinerede politikker har altid forrang frem for standardpolitikken, men du kan ændre prioriteten (kører rækkefølge) for dine brugerdefinerede politikker.
 
@@ -63,7 +63,7 @@ Hvis du vil øge effektiviteten af beskyttelse mod phishing, kan du oprette brug
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
   Du kan ikke administrere anti-phishing-politikker i enkeltstående EOP PowerShell.
 
@@ -75,7 +75,7 @@ Hvis du vil øge effektiviteten af beskyttelse mod phishing, kan du oprette brug
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen <sup>\*</sup>.
 
 - Du kan se vores anbefalede indstillinger for politikker til anti-phishing under [Politikindstillinger for EOP til anti-phishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings).
@@ -119,9 +119,9 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
    > - Modtageren er: romain@contoso.com
    > - Modtageren er medlem af: Direktører
    >
-   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
    >
-   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 
@@ -130,7 +130,7 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
    Hvis du vil slå spoof intelligence fra, skal du fjerne markeringen i afkrydsningsfeltet.
 
    > [!NOTE]
-   > Du behøver ikke at slå beskyttelse mod spoofing fra, hvis din MX-post ikke peger på Microsoft 365. Du aktiverer i stedet Udvidet filtrering for forbindelser. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+   > Du behøver ikke at slå beskyttelse mod spoofing fra, hvis din MX-post ikke peger på Microsoft 365. du aktiverer forbedret filtrering for forbindelser i stedet. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 
    Klik på **Næste**, når du er færdig.
 
@@ -142,8 +142,8 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
        En tom værdi for **Anvend karantænepolitik** betyder, at standardkarantænepolitikken bruges (DefaultFullAccessPolicy for spoof intelligence-registreringer). Når du senere redigerer politikken til bekæmpelse af phishing eller får vist indstillingerne, vises standardnavnet for karantænepolitikken. Du kan få flere oplysninger om standard karantænepolitikker, der bruges til understøttede beskyttelsesfiltreringssigelser, i [denne tabel](quarantine-policies.md#step-2-assign-a-quarantine-policy-to-supported-features).
 
    - **Sikkerhedstips & indikatorer**:
-     - **Vis første kontakt sikkerhedstip**: Du kan få flere oplysninger under [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).
-     - **Vis (?) for ikke-godkendte afsendere til spoof**<sup>\*</sup>: Føjer et spørgsmålstegn (?) til afsenderens foto i feltet Fra i Outlook hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication).
+     - **Vis sikkerhedstip til første kontakt**: Du kan få flere oplysninger under [Første kontaktsikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).
+     - **Vis (?) for ikke-godkendte afsendere til spoof**<sup>\*</sup>: Føjer et spørgsmålstegn (?) til afsenderens foto i feltet Fra i Outlook, hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC- eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication).
      - **Vis "via"-mærket**<sup>\*</sup>: Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** .
 
      Hvis du vil aktivere en indstilling, skal du markere afkrydsningsfeltet. Hvis du vil slå den fra, skal du fjerne markeringen i afkrydsningsfeltet.

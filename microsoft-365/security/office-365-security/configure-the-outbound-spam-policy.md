@@ -19,12 +19,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om, hvordan de får vist, opretter, ændrer og sletter udgående spampolitikker i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 690d4def4081812653cb533765f6c61cca7d1e90
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: 3c3c6fd32d03e5df84d35d399d963c28c3d745a6
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115823"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772078"
 ---
 # <a name="configure-outbound-spam-filtering-in-eop"></a>Konfigurer filtrering af udgående spam i EOP
 
@@ -35,15 +35,15 @@ ms.locfileid: "66115823"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection organisationer (EOP) uden Exchange Online postkasser, kontrolleres udgående mails, der sendes via EOP, automatisk for spam og usædvanlig afsendelsesaktivitet.
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser kontrolleres udgående mails, der sendes via EOP, automatisk for spam og usædvanlig afsendelsesaktivitet.
 
-Udgående spam fra en bruger i din organisation angiver typisk en kompromitteret konto. Mistænkelige udgående meddelelser er markeret som spam (uanset niveauet for spamsikkerhed eller SCL) og dirigeres gennem den [risikobetonede leveringspulje](high-risk-delivery-pool-for-outbound-messages.md) for at hjælpe med at beskytte tjenestens omdømme (dvs. hold Microsoft 365 kildemailservere væk fra IP-bloklister). Administratorer får automatisk besked om mistænkelig udgående mailaktivitet og blokerede brugere via [advarselspolitikker](../../compliance/alert-policies.md).
+Udgående spam fra en bruger i din organisation angiver typisk en kompromitteret konto. Mistænkelige udgående meddelelser er markeret som spam (uanset niveauet for spamsikkerhed eller SCL) og dirigeres gennem den [risikobetonede leveringspulje](high-risk-delivery-pool-for-outbound-messages.md) for at hjælpe med at beskytte tjenestens omdømme (dvs. hold Microsoft 365-kildemailservere væk fra IP-bloklister). Administratorer får automatisk besked om mistænkelig udgående mailaktivitet og blokerede brugere via [advarselspolitikker](../../compliance/alert-policies.md).
 
 EOP bruger politikker for udgående spam som en del af organisationens overordnede forsvar mod spam. Du kan få flere oplysninger under [Beskyttelse mod spam](anti-spam-protection.md).
 
 Administratorer kan få vist, redigere og konfigurere (men ikke slette) standardpolitikken for udgående spam. For at opnå større granularitet kan du også oprette brugerdefinerede udgående spampolitikker, der gælder for bestemte brugere, grupper eller domæner i din organisation. Brugerdefinerede politikker har altid forrang frem for standardpolitikken, men du kan ændre prioriteten (kører rækkefølge) for dine brugerdefinerede politikker.
 
-Du kan konfigurere udgående spampolitikker på Microsoft 365 Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser).
+Du kan konfigurere udgående spampolitikker på Microsoft 365 Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
 
 De grundlæggende elementer i en politik for udgående spam i EOP er:
 
@@ -70,7 +70,7 @@ Hvis du vil øge effektiviteten af filtrering af udgående spam, kan du oprette 
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Indstillinger for spam** , skal du bruge <https://security.microsoft.com/antispam>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil tilføje, redigere og slette udgående spampolitikker, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
@@ -80,7 +80,7 @@ Hvis du vil øge effektiviteten af filtrering af udgående spam, kan du oprette 
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for politikker for udgående spam under [Politikindstillinger for udgående spamfilter for EOP](recommended-settings-for-eop-and-office365.md#eop-outbound-spam-policy-settings).
@@ -122,9 +122,9 @@ Når du opretter en brugerdefineret politik for udgående spam på Microsoft 365
    > - Modtageren er: romain@contoso.com
    > - Modtageren er medlem af: Direktører
    >
-   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
    >
-   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 
@@ -305,7 +305,7 @@ New-HostedOutboundSpamFilterPolicy -Name "<PolicyName>" [-AdminDisplayName "<Com
 
 I dette eksempel oprettes der en ny filterpolitik for udgående spam med navnet Contoso Executives med følgende indstillinger:
 
-- Grænserne for modtagerfrekvensen er begrænset til mindre værdier, som standardværdierne er. Du kan få flere oplysninger under [Afsendelse af grænser på tværs af Microsoft 365 indstillinger](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
+- Grænserne for modtagerfrekvensen er begrænset til mindre værdier, som standardværdierne er. Du kan få flere oplysninger under [Afsendelse af grænser på tværs af Microsoft 365-indstillinger](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#sending-limits-across-office-365-options).
 
 - Når en af grænserne er nået, forhindres brugeren i at sende meddelelser.
 

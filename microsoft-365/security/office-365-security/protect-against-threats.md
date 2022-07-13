@@ -1,5 +1,5 @@
 ---
-title: Beskyt mod trusler i Microsoft Defender for Office 365, antimalware, anti-phishing, anti-spam, Pengeskab links, Pengeskab vedhæftede filer, zap (automatisk udrensning på nul timer), konfiguration af MDO-sikkerhed
+title: Beskyt mod trusler i Microsoft Defender for Office 365, antimalware, anti-phishing, anti-spam, sikre links, sikre vedhæftede filer, zap (automatisk sletning på nul timer), konfiguration af MDO-sikkerhed
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -20,16 +20,16 @@ description: Administratorer kan få mere at vide om trusselsbeskyttelse i Micro
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: d067035d5eaf3c7a4febac6feeab0c56cd707728
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: f4a7dd91dde78e816ed579d2f16744ec90b67675
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64941429"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772122"
 ---
 # <a name="protect-against-threats"></a>Beskyt mod trusler
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Exchange Online Protection](exchange-online-protection-overview.md)
@@ -58,7 +58,7 @@ Trusselsbeskyttelsesfunktioner er inkluderet i *alle* Microsoft- eller Office 36
 |Beskyttelse mod malware|[Exchange Online Protection](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description) (**EOP**)|
 |Beskyttelse mod phishing|[Exchange Online Protection](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description)|
 |Beskyttelse mod spam|[Exchange Online Protection](/office365/servicedescriptions/exchange-online-protection-service-description/exchange-online-protection-service-description)|
-|Beskyttelse mod skadelige URL-adresser og filer i mails og Office dokumenter (Pengeskab links og Pengeskab vedhæftede filer)|[Microsoft Defender for Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)|
+|Beskyttelse mod skadelige URL-adresser og filer i mails og Office-dokumenter (sikre links og vedhæftede filer, der er tillid til)|[Microsoft Defender for Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description)|
 
 ### <a name="roles-and-permissions"></a>Roller og tilladelser
 
@@ -66,8 +66,8 @@ Hvis du vil konfigurere Defender for Office 365 politikker, skal du have tildelt
 
 |Rolle eller rollegruppe|Her kan du få mere at vide|
 |---|---|
-|global administrator|[Om Microsoft 365 administratorroller](../../admin/add-users/about-admin-roles.md)|
-|Sikkerhedsadministrator|[Indbyggede roller i Azure AD](/azure/active-directory/roles/permissions-reference#security-administrator)
+|global administrator|[Om Microsoft 365-administratorroller](../../admin/add-users/about-admin-roles.md)|
+|Sikkerhedsadministrator|[Azure AD indbyggede roller](/azure/active-directory/roles/permissions-reference#security-administrator)
 |Exchange Online organisationsstyring|[Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo)|
 
 Du kan få mere at vide under [Tilladelser på portalen Microsoft 365 Defender](permissions-microsoft-365-security-center.md).
@@ -103,7 +103,7 @@ Du kan finde detaljerede instruktioner til konfiguration af politikker for antim
 
 Du kan få flere oplysninger om de anbefalede indstillinger for politikker til bekæmpelse af phishing under [Indstillinger for EOP-politik for anti-phishing](recommended-settings-for-eop-and-office365.md#eop-anti-phishing-policy-settings) og [Indstillinger for politik for anti-phishing i Microsoft Defender for Office 365](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
 
-I følgende procedure beskrives det, hvordan du konfigurerer standardpolitikken for anti-phishing. Indstillinger, der kun er tilgængelige i Defender for Office 365, er markeret tydeligt.
+I følgende procedure beskrives det, hvordan du konfigurerer standardpolitikken for anti-phishing. Indstillinger, der kun er tilgængelige i Defender for Office 365, er tydeligt markeret.
 
 1. Åbn siden **Anti-phishing** på Microsoft 365 Defender-portalen på <https://security.microsoft.com/antiphishing>.
 
@@ -130,10 +130,10 @@ I følgende procedure beskrives det, hvordan du konfigurerer standardpolitikken 
        - **Hvis postkasseintelligens registrerer en repræsenteret bruger**<sup>\*</sup>: Vælg **Flyt meddelelse til modtagernes mapper med uønsket mail** (Standard) eller **Sæt meddelelsen i karantæne** (Strict). Hvis du vælger **Sæt meddelelsen i karantæne**, vises feltet **Anvend karantænepolitik** , hvor du vælger den [karantænepolitik](quarantine-policies.md) , der gælder for meddelelser, der er sat i karantæne af Mailbox Intelligence Protection.
        - **Hvis meddelelsen registreres som spoof**: Vælg **Flyt meddelelse til modtagernes mapper med uønsket mail** (Standard) eller **Sæt meddelelsen i karantæne** (Strict).  Hvis du vælger **Sæt meddelelsen i karantæne**, vises feltet **Anvend karantænepolitik** , hvor du vælger den [karantænepolitik](quarantine-policies.md) , der gælder for meddelelser, der er sat i karantæne af spoof intelligence-beskyttelse.
      - **Afsnittet Sikkerhedstip & indikatorer** : Konfigurer følgende indstillinger:
-       - **Vis første kontakt sikkerhedstip**: Vælg (aktivér).
-       - **Vis bruger repræsenter sikkerhedstip**<sup>\*</sup>: Vælg (aktivér).
-       - **Vis repræsentation af domænet sikkerhedstip**<sup>\*</sup>: Vælg (slå til).
-       - **Vis usædvanlige tegn for brugerpræsentation sikkerhedstip**<sup>\*</sup>: Vælg (aktivér).
+       - **Vis sikkerhedstip til første kontakt**: Vælg (aktivér).
+       - **Vis sikkerhedstip**<sup>\*</sup> til brugerpræsentation: Vælg (slå til).
+       - Vis tip <sup>\*</sup>til **sikkerhed ved repræsentation af domæne**: Vælg (slå til).
+       - Vis tip <sup>\*</sup>om **usædvanlig tegnsikkerhed for brugerpræsentation**: Vælg (aktivér).
        - **Vis (?) for ikke-godkendte afsendere for spoof**: Vælg (aktivér).
        - **Vis mærket "via"**: Vælg (aktivér).
 
@@ -186,39 +186,39 @@ Du kan få flere oplysninger om de anbefalede indstillinger for anti-spam under 
 
 Du kan finde detaljerede instruktioner til, hvordan du konfigurerer politikker mod spam, under [Konfigurer politikker til bekæmpelse af spam i EOP](configure-your-spam-filter-policies.md).
 
-## <a name="part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365"></a>Del 4 – Beskyttelse mod skadelige URL-adresser og filer (Pengeskab links og Pengeskab vedhæftede filer i Defender for Office 365)
+## <a name="part-4---protection-from-malicious-urls-and-files-safe-links-and-safe-attachments-in-defender-for-office-365"></a>Del 4 – Beskyttelse mod skadelige URL-adresser og filer (Sikre links og vedhæftede filer i Defender for Office 365)
 
-Beskyttelsestid for klik fra skadelige URL-adresser og filer er tilgængelig i abonnementer, der omfatter [Microsoft Defender for Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). Den konfigureres via [politikker for vedhæftede filer Pengeskab](safe-attachments.md) og [Pengeskab links](safe-links.md).
+Beskyttelsestid for klik fra skadelige URL-adresser og filer er tilgængelig i abonnementer, der omfatter [Microsoft Defender for Office 365](/office365/servicedescriptions/office-365-advanced-threat-protection-service-description). Det konfigureres via politikker for [sikre vedhæftede filer](safe-attachments.md) og [Sikre links](safe-links.md) .
 
-### <a name="safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Pengeskab politikker for vedhæftede filer i Microsoft Defender for Office 365
+### <a name="safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Politikker for vedhæftede filer, der er tillid til, i Microsoft Defender for Office 365
 
-Du kan få flere oplysninger om de anbefalede indstillinger for Pengeskab Vedhæftede filer under .[ Pengeskab indstillinger for vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
+Du kan få flere oplysninger om de anbefalede indstillinger for Sikre vedhæftede filer under . [Indstillinger for vedhæftede filer, der er tillid til](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
 
-1. Åbn siden **Pengeskab vedhæftede filer** på Microsoft 365 Defender-portalen på <https://security.microsoft.com/safeattachmentv2>.
+1. Åbn siden **Vedhæftede filer, der er tillid** til, på portalen Microsoft 365 Defender på <https://security.microsoft.com/safeattachmentv2>.
 
-2. På siden **Pengeskab Vedhæftede filer** skal du klikke på **Globale indstillinger** og derefter konfigurere følgende indstillinger på det pop op-vindue, der vises:
+2. Klik på **Globale indstillinger** på siden **Vedhæftede filer, der er tillid** til, og konfigurer derefter følgende indstillinger på det pop op-vindue, der vises:
    - **Slå Defender for Office 365 til for SharePoint, OneDrive og Microsoft Teams**: Slå denne indstilling til (![Slå til).](../../media/scc-toggle-on.png)
 
      > [!IMPORTANT]
-     > **Før du aktiverer Pengeskab Vedhæftede filer for SharePoint, OneDrive og Microsoft Teams, skal du kontrollere, at logføring af overvågning er slået til i din organisation**. Denne handling udføres typisk af en person, der har rollen Overvågningslogger tildelt i Exchange Online. Du kan finde flere oplysninger under [Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md)!
+     > **Før du slår Sikre vedhæftede filer til for SharePoint, OneDrive og Microsoft Teams, skal du kontrollere, at logføring af overvågning er slået til i din organisation**. Denne handling udføres typisk af en person, der har rollen Overvågningslogger tildelt i Exchange Online. Du kan finde flere oplysninger under [Slå søgning i overvågningslog til eller fra](../../compliance/turn-audit-log-search-on-or-off.md)!
 
-   - **Slå Pengeskab dokumenter til for Office klienter**: Slå denne indstilling til (![Slå til).](../../media/scc-toggle-on.png)). Bemærk, at denne funktion kun er tilgængelig og giver mening med de påkrævede licenstyper. Du kan få flere oplysninger [under Pengeskab dokumenter i Microsoft 365 E5](safe-docs.md).
-   - **Tillad, at andre klikker gennem beskyttet visning, selvom Pengeskab dokumenter har identificeret filen som skadelig**: Kontrollér, at denne indstilling er slået fra (![Slå til/fra](../../media/scc-toggle-off.png)).
+   - **Slå Sikre dokumenter til for Office-klienter**: Slå denne indstilling til (![Slå til](../../media/scc-toggle-on.png)).). Bemærk, at denne funktion kun er tilgængelig og giver mening med de påkrævede licenstyper. Du kan få flere oplysninger [under Sikre dokumenter i Microsoft 365 E5](safe-docs.md).
+   - **Tillad, at personer klikker gennem Beskyttet visning, selvom sikre dokumenter har identificeret filen som skadelig**: Kontrollér, at denne indstilling er slået fra (![Slå til/fra](../../media/scc-toggle-off.png)).
 
    Når du er færdig, skal du klikke på **Gem**
 
-3. Klik på Opret ikon på siden **vedhæftede filer på siden** ![Pengeskab vedhæftede filer.](../../media/m365-cc-sc-create-icon.png)
+3. Klik på Opret ikon på siden **Vedhæftede filer** , ![der er tillid til.](../../media/m365-cc-sc-create-icon.png).
 
-4. Konfigurer følgende indstillinger i **guiden Opret Pengeskab vedhæftede filer**, der åbnes:
+4. Konfigurer følgende indstillinger i **guiden Opret sikre vedhæftede filer** , der åbnes:
    - **Navngiv din politikside** :
      - **Navn**: Angiv noget entydigt og beskrivende.
      - **Beskrivelse**: Angiv en valgfri beskrivelse.
    - Siden **Brugere og domæner**: Da dette er din første politik, og du sandsynligvis vil maksimere dækningen, kan du overveje at angive dine [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i feltet **Domæner**. Ellers kan du bruge felterne **Brugere** og **Grupper** til mere detaljeret kontrol. Du kan angive undtagelser ved at vælge **Udelad disse brugere, grupper og domæner** og angive værdier.
-   - **Indstillinger** side:
-     - **Pengeskab Vedhæftede filer ukendt malware-svar**: Vælg **Bloker**.
+   - **Indstillingsside** :
+     - **Sikre vedhæftede filer ukendt malwaresvar**: Vælg **Bloker**.
      - **Karantænepolitik**: Standardværdien er tom, hvilket betyder, at politikken AdminOnlyAccessPolicy bruges. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
      - **Omdiriger vedhæftet fil med registrerede vedhæftede filer** : **Aktivér omdirigering**: Slå denne indstilling til (vælg), og angiv en mailadresse for at modtage registrerede meddelelser.
-     - **Anvend Pengeskab registreringssvar for vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)**: Kontrollér, at denne indstilling er valgt.
+     - **Anvend registreringssvaret Sikre vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)**: Kontrollér, at denne indstilling er valgt.
 
 5. Når du er færdig, skal du klikke på **Send** og derefter klikke på **Udført**.
 
@@ -226,58 +226,45 @@ Du kan få flere oplysninger om de anbefalede indstillinger for Pengeskab Vedhæ
    - `$true` blokerer alle handlinger (undtagen Slet) for registrerede filer. Personer kan ikke åbne, flytte, kopiere eller dele registrerede filer.
    - `$false` blokerer alle handlinger undtagen Slet og Download. Folk kan vælge at acceptere risikoen og downloade en registreret fil.
 
-7. Det kan tage op til 30 minutter, før dine ændringer kan spredes til alle Microsoft 365 datacentre.
+7. Der kan gå op til 30 minutter, før dine ændringer kan spredes til alle Microsoft 365-datacentre.
 
-Du kan finde detaljerede instruktioner til konfiguration af politikker for vedhæftede filer Pengeskab og globale indstillinger for Pengeskab Vedhæftede filer i følgende emner:
+Du kan finde detaljerede instruktioner til konfiguration af politikker for sikre vedhæftede filer og globale indstillinger for Sikre vedhæftede filer i følgende emner:
 
-- [Konfigurer politikker for vedhæftede filer Pengeskab i Microsoft Defender for Office 365](set-up-safe-attachments-policies.md)
+- [Konfigurer politikker for vedhæftede filer, der er tillid til, i Microsoft Defender for Office 365](set-up-safe-attachments-policies.md)
 - [Aktiver Sikre vedhæftede filer i SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md)
 - [Sikre dokumenter i Microsoft 365 E5](safe-docs.md)
 
-### <a name="safe-links-policies-in-microsoft-defender-for-office-365"></a>politikker for Pengeskab links i Microsoft Defender for Office 365
+### <a name="safe-links-policies-in-microsoft-defender-for-office-365"></a>Politikker for sikre links i Microsoft Defender for Office 365
 
-Du kan få flere oplysninger om de anbefalede indstillinger for Pengeskab Links under [Pengeskab Indstillinger for links](recommended-settings-for-eop-and-office365.md#safe-links-settings).
+Du kan få flere oplysninger om de anbefalede indstillinger for Sikre links under [Indstillinger for sikre links](recommended-settings-for-eop-and-office365.md#safe-links-settings).
 
-1. Åbn siden **Pengeskab links** på portalen Microsoft 365 Defender på <https://security.microsoft.com/safelinksv2>.
+1. Åbn siden **Sikre links** på Microsoft 365 Defender-portalen på <https://security.microsoft.com/safelinksv2>, og klik derefter på ![Opret-ikon.](../../media/m365-cc-sc-create-icon.png)
 
-2. På siden **Pengeskab Links** skal du klikke på **Globale indstillinger** og derefter konfigurere følgende indstillinger på det pop op-vindue, der vises:
-   - **Indstillinger, der gælder for indhold i afsnittet understøttede Office 365 apps**:
-     - **Brug Pengeskab links i Office 365 apps**: Kontrollér, at denne indstilling er slået til (![Til/](../../media/scc-toggle-on.png)fra).
-     - **Spor ikke, når brugere klikker på beskyttede links i Office 365 apps**: Slå denne indstilling fra (![Slå til/fra](../../media/scc-toggle-off.png)).
-     - **Lad ikke brugerne klikke sig igennem til den oprindelige URL-adresse i Office 365 apps**: Kontrollér, at denne indstilling er slået til (![Slå til](../../media/scc-toggle-on.png)).
-
-   Når du er færdig, skal du klikke på **Gem**
-
-3. Klik på Opret ikon på siden ![**links Pengeskab** igen.](../../media/m365-cc-sc-create-icon.png)
-
-4. Konfigurer følgende indstillinger i **guiden Opret Pengeskab links-politik**, der åbnes:
+2. Konfigurer følgende indstillinger i **politikguiden Opret sikre links** , der åbnes:
    - **Navngiv din politikside** :
      - **Navn**: Angiv noget entydigt og beskrivende.
      - **Beskrivelse**: Angiv en valgfri beskrivelse.
    - Siden **Brugere og domæner**: Da dette er din første politik, og du sandsynligvis vil maksimere dækningen, kan du overveje at angive dine [accepterede domæner](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains) i feltet **Domæner**. Ellers kan du bruge felterne **Brugere** og **Grupper** til mere detaljeret kontrol. Du kan angive undtagelser ved at vælge **Udelad disse brugere, grupper og domæner** og angive værdier.
    - **URL-adresse & klik på siden med beskyttelsesindstillinger** :
      - **Handling på potentielt skadelige URL-adresser i sektionen Mails** :
-       - **On: Pengeskab Links kontrollerer en liste over kendte, ondsindede links, når brugerne klikker på links i mail**: Vælg hans indstilling (slå til).
-       - **Anvend Pengeskab Links på mails, der er sendt i organisationen**: Vælg denne indstilling (aktivér).
+       - **On: Safe Links kontrollerer en liste over kendte, ondsindede links, når brugerne klikker på links i mail**: Vælg hans indstilling (slå til).
+       - **Anvend sikre links på mails, der er sendt i organisationen**: Vælg denne indstilling (slå til).
        - **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**: Vælg denne indstilling (aktivér).
-       - **Vent, indtil scanningen af URL-adressen er fuldført, før du leverer meddelelsen**: Vælg denne indstilling (aktivér).
-       - **Undlad at omskrive URL-adresser. Kontrollér kun via API'en Pengeskab Links**: Kontrollér, at denne indstilling ikke er valgt (deaktiver).
-     - **Omskriv ikke følgende URL-adresser i en mail**: Vi har ingen specifik anbefaling til denne indstilling. Du kan få flere oplysninger på [listerne "Omskriv ikke følgende URL-adresser" i politikker for Pengeskab links](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).
-     - **Handling for potentielt skadelige URL-adresser i Microsoft Teams** afsnit:
-       - ***Til: Pengeskab Links kontrollerer en liste over kendte, skadelige links, når brugere klikker på links i Microsoft Teams**: Vælg denne indstilling (aktivér).
+         - **Vent, indtil scanningen af URL-adressen er fuldført, før du leverer meddelelsen**: Vælg denne indstilling (aktivér).
+       - **Undlad at omskrive URL-adresser. Kontrollér kun via API'en til sikre links**: Kontrollér, at denne indstilling ikke er valgt (deaktiver).
+     - **Omskriv ikke følgende URL-adresser i en mail**: Vi har ingen specifik anbefaling til denne indstilling. Du kan få flere oplysninger på [listerne "Omskriv ikke følgende URL-adresser" i politikker for sikre links](safe-links.md#do-not-rewrite-the-following-urls-lists-in-safe-links-policies).
+     - **Handling for potentielt skadelige URL-adresser i Afsnittet Microsoft Teams** :
+       - ***Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugerne klikker på links i Microsoft Teams**: Vælg denne indstilling (slå til).
      - **Klik på sektionen Beskyttelsesindstillinger** :
        - **Spor bruger clicks**: Kontrollér, at denne indstilling er valgt (slået til).
-       - **Lad brugerne klikke sig igennem til den oprindelige URL-adresse**: Slå denne indstilling fra (ikke valgt).
-       - **Vis organisationsbranding på meddelelses- og advarselssider**: Valg af denne indstilling (aktivering af den) giver kun mening, når du har fulgt vejledningen i [Tilpas det Microsoft 365 tema, som din organisation](../../admin/setup/customize-your-organization-theme.md) skal bruge til at uploade virksomhedens logo.
+         - **Lad brugerne klikke sig igennem til den oprindelige URL-adresse**: Slå denne indstilling fra (ikke valgt).
+         - **Vis organisationsbranding på meddelelses- og advarselssider**: Hvis du vælger denne indstilling (aktiverer den), giver det kun mening, når du har fulgt vejledningen i [Tilpas Microsoft 365-temaet, så din organisation](../../admin/setup/customize-your-organization-theme.md) kan uploade dit firmalogo.
    - **Meddelelsesside** :
-     - **Hvordan vil du give brugerne besked?** sektion: Du kan også vælge **Brug brugerdefineret meddelelsestekst** til at angive tilpasset meddelelsestekst, der skal bruges. Du kan også vælge **Brug Microsoft Oversætter til automatisk lokalisering for** at oversætte den brugerdefinerede meddelelsestekst til brugerens sprog. Ellers skal du lade **Brug standardmeddelelsesteksten** være markeret.
+     - **Hvordan vil du give brugerne besked?** sektion: Du kan også vælge **Brug brugerdefineret meddelelsestekst** til at angive tilpasset meddelelsestekst, der skal bruges. Du kan også vælge **Brug Microsoft Translator til automatisk lokalisering for** at oversætte den brugerdefinerede meddelelsestekst til brugerens sprog. Ellers skal du lade **Brug standardmeddelelsesteksten** være markeret.
 
-5. Når du er færdig, skal du klikke på **Send** og derefter klikke på **Udført**.
+3. Når du er færdig, skal du klikke på **Send** og derefter klikke på **Udført**.
 
-Du kan finde detaljerede instruktioner til konfiguration af politikker for Pengeskab links og globale indstillinger for Pengeskab Links i følgende emner:
-
-- [Konfigurer politikker for Pengeskab links i Microsoft Defender for Office 365](set-up-safe-links-policies.md)
-- [Konfigurer globale indstillinger for Pengeskab links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md)
+Du kan finde detaljerede instruktioner til konfiguration af politikker for sikre links og globale indstillinger for Sikre links [under Konfigurer politikker for sikre links i Microsoft Defender for Office 365](set-up-safe-links-policies.md).
 
 ### <a name="now-set-up-alerts-for-detected-files-in-sharepoint-online-or-onedrive-for-business"></a>Konfigurer nu beskeder for registrerede filer i SharePoint Online eller OneDrive for Business
 
@@ -310,14 +297,14 @@ Hvis du vil modtage en meddelelse, når en fil i SharePoint Online eller OneDriv
 
 6. Gennemse indstillingerne på siden **Gennemse dine indstillinger** , kontrollér **Ja, slå det til med det samme** er markeret, og klik derefter på **Udfør**
 
-Hvis du vil vide mere om politikker for beskeder, skal du se [Beskedpolitikker på Microsoft Purview-overholdelsesportalen](../../compliance/alert-policies.md).
+Hvis du vil vide mere om politikker for beskeder, skal du se [Beskedpolitikker i Microsoft Purview-compliance-portal](../../compliance/alert-policies.md).
 
 > [!NOTE]
 > Når du er færdig med at konfigurere, kan du bruge disse links til at starte arbejdsbelastningsundersøgelser:
 >
 > - [Statusrapport om trusselsbeskyttelse](view-email-security-reports.md#threat-protection-status-report)
 > - [Brug Microsoft 365 Defender-portalen til at administrere filer i karantæne i Defender for Office 365](manage-quarantined-messages-and-files.md#use-the-microsoft-365-defender-portal-to-manage-quarantined-files-in-defender-for-office-365)
-> - [Sådan gør du, når du finder en skadelig fil i SharePoint Online, OneDrive eller Microsoft Teams](https://support.microsoft.com/office/01e902ad-a903-4e0f-b093-1e1ac0c37ad2)
+> - [Sådan gør du, når der findes en skadelig fil i SharePoint Online, OneDrive eller Microsoft Teams](https://support.microsoft.com/office/01e902ad-a903-4e0f-b093-1e1ac0c37ad2)
 > - [Administrer karantænemeddelelser og filer som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
 
 ## <a name="post-setup-tasks-and-next-steps"></a>Opgaver efter konfiguration og næste trin
@@ -327,5 +314,5 @@ Når du har konfigureret funktionerne til trusselsbeskyttelse, skal du sørge fo
 |Sådan gør du|Ressourcer til at få mere at vide|
 |---|---|
 |Se, hvordan trusselsbeskyttelsesfunktioner fungerer for din organisation, ved at få vist rapporter|[Mailsikkerhedsrapporter](view-email-security-reports.md) <p> [Rapporter til Microsoft Defender for Office 365](view-reports-for-mdo.md) <p> [Trusselsoversigt](threat-explorer.md)|
-|Gennemse og revider jævnligt dine politikker for trusselsbeskyttelse efter behov|[Sikker score](../defender/microsoft-secure-score.md) <p> [funktioner til Microsoft 365 trusselsundersøgelse og svar](./office-365-ti.md)|
+|Gennemse og revider jævnligt dine politikker for trusselsbeskyttelse efter behov|[Sikker score](../defender/microsoft-secure-score.md) <p> [Microsoft 365-funktioner til undersøgelse af trusler og svar](./office-365-ti.md)|
 |Hold øje med nye funktioner og tjenesteopdateringer|[Standardindstillinger og målrettede udgivelsesmuligheder](../../admin/manage/release-options-in-office-365.md) <p> [Meddelelsescenter](../../admin/manage/message-center.md) <p> [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=advanced%2Cthreat%2Cprotection) <p> [Tjenestebeskrivelser](/office365/servicedescriptions/office-365-service-descriptions-technet-library)|

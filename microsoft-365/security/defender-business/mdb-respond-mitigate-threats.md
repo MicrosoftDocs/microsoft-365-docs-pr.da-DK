@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: b7a911991935407f9d512213c9d76c92106b74c8
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 9330584979bc6c47204809a0408be7950c0d5612
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089556"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772811"
 ---
 # <a name="respond-to-and-mitigate-threats-in-microsoft-defender-for-business"></a>Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder
 
@@ -55,5 +55,5 @@ På Microsoft 365 Defender-portalen kan dit sikkerhedsteam reagere på og afhjæ
 ## <a name="next-steps"></a>Næste trin
 
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)
-- [Administrer enheder i Microsoft Defender til virksomheder](mdb-manage-devices.md)
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
+- [Administrer enheder i Defender for Business](mdb-manage-devices.md)
+- [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md)

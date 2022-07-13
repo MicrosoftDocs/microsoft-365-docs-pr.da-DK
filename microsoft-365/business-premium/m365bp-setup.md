@@ -15,12 +15,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: b76735130d768edfa9c71b25081040a7f4b6718c
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: f769d79baa2dc17abe179f09af3bdb6f4571440c
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66686003"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66771323"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 
@@ -45,12 +45,13 @@ Sørg for, at du opfylder følgende krav, før du starter konfigurationsprocesse
 
 ## <a name="guided-setup-process"></a>Automatiseret konfigurationsproces
 
-Microsoft 365 Business Premium omfatter en guidet proces. Følgende video viser den guidede konfigurationsproces for Microsoft 365 Business Standard, som også gælder for Microsoft 365 Business Premium.<br/><br/>
+Microsoft 365 Business Premium omfatter en guidet proces. Følgende video viser den guidede konfigurationsproces for Microsoft 365 Business Standard, som også gælder for Microsoft 365 Business Premium. Så snart du har fuldført den automatiserede konfigurationsproces, skal du sørge for at gå videre til at [støde på sikkerheden](m365bp-security-overview.md).<br/><br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE471FJ]
 
 > [!TIP]
 > Når du har tilføjet brugere, skal du give dem et link til [vejledningen til hurtig konfiguration af medarbejdere](../admin/setup/employee-quick-setup.md). I vejledningen gennemgås, hvordan du logger på, henter Office-apps og gemmer, kopierer og deler filer.
+> Sørg for at fortsætte til [Bump up sikkerhed](m365bp-security-overview.md).
 
 ## <a name="work-with-a-microsoft-partner"></a>Arbejd sammen med en Microsoft-partner
 

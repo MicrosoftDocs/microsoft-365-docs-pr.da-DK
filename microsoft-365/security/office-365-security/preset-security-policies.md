@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de anvender Standard- og Strict-politikindstillinger på tværs af beskyttelsesfunktionerne i Exchange Online Protection (EOP) og Microsoft Defender for Office 365
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ffce562fbcbdf8ca9d6c19265166400163be7acf
-ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
+ms.openlocfilehash: ce4113b06c27cb288bcecce6a668a7da4bd46615
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66607647"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772056"
 ---
 # <a name="preset-security-policies-in-eop-and-microsoft-defender-for-office-365"></a>Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365
 
@@ -71,9 +71,9 @@ En profil bestemmer beskyttelsesniveauet. Følgende profiler er tilgængelige:
   > - Modtageren er: romain@contoso.com
   > - Modtageren er medlem af: Direktører
   >
-  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
   >
-  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
 - **Indbygget beskyttelse** (kun Defender for Office 365): En profil, der kun aktiverer beskyttelse af sikre links og vedhæftede filer. Denne profil indeholder effektivt standardpolitikker for Sikre links og Vedhæftede filer, som aldrig har haft standardpolitikker.
 

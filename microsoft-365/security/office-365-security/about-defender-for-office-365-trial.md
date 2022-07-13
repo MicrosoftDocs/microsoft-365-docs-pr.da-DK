@@ -19,12 +19,12 @@ ms.custom:
 - seo-marvel-apr2020
 ROBOTS: NOINDEX, NOFOLLOW
 description: Administratorer kan få mere at vide om prøveversionen af Microsoft Defender for Office 365
-ms.openlocfilehash: 086ea200b6f8519c487622d02ba2d2fc8347f68a
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 9cce1e910f5497ce2dfe265923f66e87306fb90e
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66554197"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66773251"
 ---
 # <a name="about-the-microsoft-defender-for-office-365-trial"></a>Om prøveversionen af Microsoft Defender for Office 365
 
@@ -64,7 +64,7 @@ Disse politikker er som standard begrænset til alle brugere i organisationen, m
 > [!NOTE]
 > Dine eksisterende politikker til bekæmpelse af spam er sandsynligvis konfigureret med handlingen **Flyt meddelelse til mappen Uønsket mail** for at få en dom med høj tillid til spam i politikker til bekæmpelse af spam. Standardskabelonen til forudindstillede sikkerhedspolitikker bruger handlingen **Karantænemeddelelse** for spam med høj sikkerhed, og forudindstillede sikkerhedspolitikker anvendes altid før brugerdefinerede politikker til bekæmpelse af spam eller standardpolitikken for spam. Du kan få flere oplysninger om standard-, Standard- og Strict-indstillinger under [Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed](recommended-settings-for-eop-and-office365.md).
 
-Andre arbejdsbelastninger er også tilgængelige til beskyttelse (f.eks. [sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md) og [sikre links til understøttede Office 365 apps](safe-links.md#safe-links-settings-for-office-365-apps).
+Andre arbejdsbelastninger er også tilgængelige til beskyttelse (f.eks. [Sikre vedhæftede filer til SharePoint, OneDrive og Microsoft Teams](mdo-for-spo-odb-and-teams.md) og [Sikre links til understøttede Office-apps](safe-links.md#safe-links-settings-for-office-apps).
 
 Under konfigurationen af prøveversionen er svarfunktionalitet, der udelukkende gælder for Defender for Office 365 Plan 2 (f.eks. [AIR](office-365-air.md) og [Threat Explorer](threat-explorer.md), også konfigureret for hele organisationen. Der kræves ingen politikudformning.
 

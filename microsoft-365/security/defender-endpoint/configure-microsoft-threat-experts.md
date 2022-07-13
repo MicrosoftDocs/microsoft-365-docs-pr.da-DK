@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 7661619ccb60bb55020a8e241c341b11fe45abd1
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 5883b5af4101f9227e43009a148344b82fdfb5ef
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487327"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772681"
 ---
 # <a name="configure-and-manage-microsoft-threat-experts-capabilities"></a>Konfigurer og administrer Microsoft Threat Experts-funktioner
 
@@ -38,17 +38,17 @@ ms.locfileid: "66487327"
 ## <a name="before-you-begin"></a>Før du begynder
 
 > [!NOTE]
-> Diskuter berettigelseskravene med din Microsoft Technical Service-udbyder og dit kontoteam, før du ansøger om Microsoft-trusselseksperter – Managed Threat Hunting Service til målrettet angrebsmeddelelse.
+> Diskuter berettigelseskravene med din Microsoft Technical Service-udbyder og dit kontoteam, før du ansøger om administreret trusselsjagttjeneste for Endpoint Attack Notifications.
 
 Sørg for, at Defender for Endpoint er installeret i dit miljø med de enheder, der er tilmeldt, og ikke kun på et laboratorie.
 
-Hvis du er Defender for Endpoint-kunde, skal du ansøge om **Microsoft-trusselseksperter – målrettede angrebsmeddelelser** for at få særlig indsigt og analyse, der kan hjælpe med at identificere de mest kritiske trusler, så du hurtigt kan reagere på dem. Kontakt dit kontoteam eller din Microsoft-repræsentant for at abonnere **på Microsoft-trusselseksperter – Eksperter on Demand for** at rådføre sig med vores trusselseksperter om relevante opdagelser og modstandere.
+Hvis du er Defender for Endpoint-kunde, skal du ansøge om **Endpoint Attack Notifications** for at få særlig indsigt og analyse for at hjælpe med at identificere de mest kritiske trusler, så du hurtigt kan reagere på dem. Kontakt dit kontoteam eller din Microsoft-repræsentant for at abonnere **på Microsoft-trusselseksperter – Eksperter on Demand for** at rådføre sig med vores trusselseksperter om relevante opdagelser og modstandere.
 
-## <a name="apply-for-microsoft-threat-experts---targeted-attack-notifications-service"></a>Ansøg om Microsoft-trusselseksperter – tjenesten for meddelelser om målrettede angreb
+## <a name="apply-for-endpoint-attack-notifications-service"></a>Ansøg om tjenesten For meddelelser om slutpunktsangreb
 
 Hvis du allerede er Defender for Endpoint-kunde, kan du søge via Microsoft 365 Defender-portalen.
 
-1. Gå til **Indstillinger > Generelle > Avancerede funktioner > Microsoft-trusselseksperter – Meddelelser om målrettede angreb** i navigationsruden.
+1. I navigationsruden skal du gå til **Indstillinger > Generelle > Avancerede funktioner > Endpoint Attack Notifications**.
 
 2. Klik på **Anvend**.
 
@@ -62,9 +62,9 @@ Hvis du allerede er Defender for Endpoint-kunde, kan du søge via Microsoft 365 
 
    :::image type="content" source="images/mte-applicationconfirmation.png" alt-text="Bekræftelsesmeddelelsen Microsoft-trusselseksperter program" lightbox="images/mte-applicationconfirmation.png":::
 
-Når du er accepteret, modtager du en velkomstmail, og du kan se, at knappen **Anvend** ændres til en til/fra-knap, der er "slået til". Hvis du vil tage dig selv ud af tjenesten Målrettet angrebsmeddelelser, skal du skubbe til/fra-knappen "fra" og klikke på **Gem indstillinger** nederst på siden.
+Når du er accepteret, modtager du en velkomstmail, og du kan se, at knappen **Anvend** ændres til en til/fra-knap, der er "slået til". Hvis du vil fjerne dig fra tjenesten Endpoint Attack Notifications, skal du skubbe til/fra-knappen "fra" og klikke på **Gem indstillinger** nederst på siden.
 
-## <a name="where-youll-see-the-targeted-attack-notifications-from-microsoft-threat-experts"></a>Her kan du se meddelelser om målrettede angreb fra Microsoft-trusselseksperter
+## <a name="where-youll-see-the-endpoint-attack-notifications-from-microsoft-threat-experts"></a>Her kan du se meddelelser om slutpunktsangreb fra Microsoft-trusselseksperter
 
 Du kan modtage målrettede angrebsmeddelelser fra Microsoft-trusselseksperter via følgende medie:
 
@@ -74,15 +74,15 @@ Du kan modtage målrettede angrebsmeddelelser fra Microsoft-trusselseksperter vi
 - [DeviceAlertEvents-tabel](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-devicealertevents-table) i avanceret jagt
 - Din mail, hvis du vælger at konfigurere den
 
-Hvis du vil modtage målrettede angrebsmeddelelser via mail, skal du oprette en regel for meddelelse via mail.
+Hvis du vil modtage meddelelser om slutpunktsangreb via mail, skal du oprette en regel for meddelelse via mail.
 
 ### <a name="create-an-email-notification-rule"></a>Opret en regel for mailmeddelelser
 
 Du kan oprette regler for at sende mailmeddelelser til meddelelsesmodtagere. Se  [Konfigurer beskeder om](configure-email-notifications.md) oprettelse, redigering, sletning eller fejlfinding af mailmeddelelser for at få flere oplysninger.
 
-## <a name="view-the-targeted-attack-notification"></a>Få vist meddelelsen om målrettede angreb
+## <a name="view-the-endpoint-attack-notifications"></a>Få vist meddelelser om slutpunktsangreb
 
-Du begynder at modtage målrettet besked om angreb fra Microsoft-trusselseksperter i din mail, når du har konfigureret dit system til at modtage en meddelelse via mail.
+Du begynder at modtage meddelelser om slutpunktangreb fra Microsoft-trusselseksperter i din mail, når du har konfigureret dit system til at modtage mailmeddelelser.
 
 1. Klik på linket i mailen for at gå til den tilsvarende beskedkontekst på dashboardet, der er mærket med **Threat-eksperter**.
 
@@ -137,21 +137,21 @@ Se denne video for at få et hurtigt overblik over Microsoft Services Hub.
 - Jeg modtager en ulige besked i dag om unormalt antal mislykkede logons fra en højtprofileret brugers enhed. Jeg kan ikke finde flere beviser omkring disse logonforsøg. Hvordan kan Defender for Endpoint se disse forsøg? Hvilken type logon overvåges?
 - Kan du give mere kontekst eller indsigt i denne besked: "Der blev observeret mistænkelig adfærd fra et systemprogram".
 
-### <a name="possible-machine-compromise"></a>Muligt computer kompromitteret
+### <a name="possible-device-compromise"></a>Mulig kompromitteret enhed
 
 - Kan du hjælpe med at svare på, hvorfor vi ser "Ukendt proces observeret?" Denne meddelelse eller besked vises ofte på mange enheder. Vi sætter pris på ethvert input for at afklare, om denne meddelelse eller besked er relateret til skadelig aktivitet.
 - Kan du hjælpe med at validere et muligt kompromis på følgende system på [date] med lignende funktionsmåder som den forrige [malwarenavn] malwareregistrering på det samme system i [måned]?
 
 ### <a name="threat-intelligence-details"></a>Oplysninger om trusselsintelligens
 
-- Vi har fundet en phishing-mail, der har leveret et skadeligt Word-dokument til en bruger. Det skadelige Word-dokument forårsagede en række mistænkelige hændelser, som udløste flere Defender for Endpoint-beskeder for [malwarenavn] malware. Har du nogen oplysninger om denne malware? Hvis ja, kan du så sende mig et link?
+- Vi har fundet en phishing-mail, der har leveret et skadeligt Word-dokument til en bruger. Det skadelige Word-dokument forårsagede en række mistænkelige hændelser, som udløste flere beskeder om slutpunktsangreb for [malwarenavn] malware. Har du nogen oplysninger om denne malware? Hvis ja, kan du så sende mig et link?
 - Jeg har for nylig set en [sociale medier reference, for eksempel Twitter eller blog] indlæg om en trussel, der er rettet mod min branche. Kan du hjælpe mig med at forstå, hvilken beskyttelse Defender for Endpoint yder mod denne trusselsaktør?
 
 ### <a name="microsoft-threat-experts-alert-communications"></a>Microsoft-trusselseksperter beskedkommunikation
 
-- Kan dit team for svar på hændelser hjælpe os med at håndtere den målrettede angrebsmeddelelse, vi fik?
-- Jeg modtog denne målrettede angrebsmeddelelse fra Microsoft-trusselseksperter. Vi har ikke vores eget team for svar på hændelser. Hvad kan vi gøre nu, og hvordan kan vi begrænse hændelsen?
-- Jeg modtog en målrettet angrebsmeddelelse fra Microsoft-trusselseksperter. Hvilke data kan du give os, som vi kan videregive til vores team for svar på hændelser?
+- Kan dit team for svar på hændelser hjælpe os med at håndtere de meddelelser om slutpunktsangreb, vi fik?
+- Jeg har modtaget disse meddelelser om slutpunktsangreb fra Microsoft-trusselseksperter. Vi har ikke vores eget team for svar på hændelser. Hvad kan vi gøre nu, og hvordan kan vi begrænse hændelsen?
+- Jeg har modtaget meddelelser om slutpunktsangreb fra Microsoft-trusselseksperter. Hvilke data kan du give os, som vi kan videregive til vores team for svar på hændelser?
 
   > [!NOTE]
   > Microsoft-trusselseksperter er en administreret jagttjeneste for cybersikkerhed og ikke en hændelsessvartjeneste. Du kan dog interagere med dit eget team for svar på hændelser for at løse problemer, der kræver et svar på en hændelse. Hvis du ikke har dit eget team for svar på hændelser og gerne vil have Microsofts hjælp, kan du interagere med CSS Cybersecurity Incident Response Team (CIRT). De kan åbne en billet for at hjælpe med at løse din forespørgsel.

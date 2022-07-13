@@ -16,12 +16,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de opretter, redigerer og sletter de avancerede politikker til bekæmpelse af phishing, der er tilgængelige i organisationer med Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 78eab2c8c6624764f65ed5db9abf5a6a0621af83
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: f36ed4c02c333480ed5cff5dc21db43d432ce5aa
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115581"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772395"
 ---
 # <a name="configure-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365
 
@@ -64,7 +64,7 @@ Hvis du vil øge effektiviteten af beskyttelse mod phishing i Defender for Offic
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
   - Hvis du vil tilføje, redigere og slette anti-phishing-politikker, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** .
@@ -74,7 +74,7 @@ Hvis du vil øge effektiviteten af beskyttelse mod phishing i Defender for Offic
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du kan se vores anbefalede indstillinger for politikker til anti-phishing i Defender for Office 365 [under Politik til bekæmpelse af phishing i Defender for Office 365 indstillinger](recommended-settings-for-eop-and-office365.md#anti-phishing-policy-settings-in-microsoft-defender-for-office-365).
@@ -118,9 +118,9 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
    > - Modtageren er: romain@contoso.com
    > - Modtageren er medlem af: Direktører
    >
-   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
    >
-   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 
@@ -209,7 +209,7 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
      Hvis du vil slå spoof intelligence fra, skal du fjerne markeringen i afkrydsningsfeltet.
 
      > [!NOTE]
-     > Du behøver ikke at slå beskyttelse mod spoofing fra, hvis din MX-post ikke peger på Microsoft 365. Du aktiverer i stedet Udvidet filtrering for forbindelser. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+     > Du behøver ikke at slå beskyttelse mod spoofing fra, hvis din MX-post ikke peger på Microsoft 365. du aktiverer forbedret filtrering for forbindelser i stedet. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
 
    Klik på **Næste**, når du er færdig.
 
@@ -256,11 +256,11 @@ Når du opretter en brugerdefineret anti-phishing-politik på Microsoft 365 Defe
          En tom værdi for **Anvend karantænepolitik** betyder, at standardkarantænepolitikken bruges (DefaultFullAccessPolicy for spoof intelligence-registreringer). Når du senere redigerer politikken til bekæmpelse af phishing eller får vist indstillingerne, vises standardnavnet for karantænepolitikken.
 
    - **Sikkerhedstips & indikatorer**: Konfigurer følgende indstillinger:
-     - **Vis første kontakt sikkerhedstip**: Du kan få flere oplysninger under [Første kontakt sikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).
-     - **Vis bruger repræsenter sikkerhedstip**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér brugere for at beskytte** på den forrige side.
-     - **Vis repræsentation af domæner sikkerhedstip**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér domæner for at beskytte** på den forrige side.
-     - **Vis usædvanlige tegn for brugerrepræsentation sikkerhedstip** Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér brugere for at beskytte** eller **Aktivér domæner for at beskytte på den forrige** side.
-     - **Vis (?) for ikke-godkendte afsendere til spoof**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Føjer et spørgsmålstegn (?) til afsenderens foto i feltet Fra i Outlook hvis meddelelsen ikke består SPF- eller DKIM-kontrol, **og** meddelelsen ikke består DMARC- eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication).
+     - **Vis sikkerhedstip til første kontakt**: Du kan få flere oplysninger under [Første kontaktsikkerhedstip](set-up-anti-phishing-policies.md#first-contact-safety-tip).
+     - **Vis sikkerhedstip til brugerpræsentation**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér brugere for at beskytte** på den forrige side.
+     - **Vis tip til beskyttelse af domænerepræsentation**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér domæner for at beskytte** på den forrige side.
+     - **Vis sikkerhedstip til usædvanlige tegn i brugeridentificeret repræsentation** Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér brugere til at beskytte** eller **Aktivér domæner for at beskytte** på den forrige side.
+     - **Vis (?) for ikke-godkendte afsendere til spoof**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Føjer et spørgsmålstegn (?) til afsenderens foto i feltet Fra i Outlook, hvis meddelelsen ikke sender SPF- eller DKIM-kontroller, **og** meddelelsen ikke består DMARC-godkendelse eller [sammensat godkendelse](email-validation-and-authentication.md#composite-authentication).
      - **Vis koden "via"**: Denne indstilling er kun tilgængelig, hvis du har valgt **Aktivér spoof intelligence** på den forrige side. Føjer en via-kode (chris@contoso.com via fabrikam.com) til Fra-adressen, hvis den er forskellig fra domænet i **DKIM-signaturen eller MAIL FROM-adressen** . Standardværdien er slået til (valgt). Hvis du vil slå den fra, skal du fjerne markeringen i afkrydsningsfeltet.
 
      Hvis du vil aktivere en indstilling, skal du markere afkrydsningsfeltet. Hvis du vil slå den fra, skal du fjerne markeringen i afkrydsningsfeltet.

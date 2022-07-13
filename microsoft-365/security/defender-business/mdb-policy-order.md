@@ -15,20 +15,20 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 8490793794d7cbd1ad7b3e660e2394edf870e2a7
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 361a1a08569f24c83498fddeb0e4c2b9bd8c5d02
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089622"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66770871"
 ---
 # <a name="understand-policy-order-in-microsoft-defender-for-business"></a>Forstå politikrækkefølgen i Microsoft Defender til virksomheder
 
-## <a name="policy-order-in-microsoft-defender-for-business"></a>Politikrækkefølge i Microsoft Defender til virksomheder
+## <a name="policy-order-in-defender-for-business"></a>Politikrækkefølge i Defender for Business
 
-Microsoft Defender til virksomheder indeholder foruddefinerede politikker, der hjælper med at sikre, at de enheder, dine medarbejdere bruger, er beskyttet. Dit sikkerhedsteam kan også tilføje nye politikker. Lad os f.eks. antage, at du vil anvende visse indstillinger på nogle enheder og andre indstillinger på andre enheder. Det kan du gøre ved at tilføje politikker, f.eks. næste generations beskyttelsespolitikker eller firewallpolitikker.
+Defender for Business indeholder foruddefinerede politikker, der hjælper med at sikre, at de enheder, dine medarbejdere bruger, er beskyttet. Dit sikkerhedsteam kan også tilføje nye politikker. Lad os f.eks. antage, at du vil anvende visse indstillinger på nogle enheder og andre indstillinger på andre enheder. Det kan du gøre ved at tilføje politikker, f.eks. næste generations beskyttelsespolitikker eller firewallpolitikker.
 
-Når politikker tilføjes, kan du se, at der tildeles en prioritetsrækkefølge. Du kan redigere prioritetsrækkefølgen for de politikker, du definerer, men du kan ikke ændre prioritetsrækkefølgen for standardpolitikker. Lad os f.eks. antage, at du har tre beskyttelsespolitikker i næste generation for dine Windows klientenheder. I dette tilfælde er din standardpolitik nummer 3 i prioritet. Du kan ændre rækkefølgen af dine politikker med nummer 1 og 2, men standardpolitikken forbliver nummer 3 på listen. 
+Når politikker tilføjes, kan du se, at der tildeles en prioritetsrækkefølge. Du kan redigere prioritetsrækkefølgen for de politikker, du definerer, men du kan ikke ændre prioritetsrækkefølgen for standardpolitikker. Lad os f.eks. antage, at du har tre beskyttelsespolitikker af næste generation til dine Windows-klientenheder. I dette tilfælde er din standardpolitik nummer 3 i prioritet. Du kan ændre rækkefølgen af dine politikker med nummer 1 og 2, men standardpolitikken forbliver nummer 3 på listen. 
 
 **Det vigtigste at huske på ved flere politikker er, at enheder kun modtager den første anvendte politik.** Med henvisning til vores tidligere eksempel på tre næste generations politikker kan du antage, at du har enheder, der er målrettet af alle tre politikker. I dette tilfælde modtager disse enheder politiknummer 1, men modtager ikke politikker nummer 2 og 3. 
 
@@ -44,6 +44,6 @@ Når politikker tilføjes, kan du se, at der tildeles en prioritetsrækkefølge.
 
 - [Kom i gang med at bruge Defender for Business](mdb-get-started.md)
 - [Administrer enheder](mdb-manage-devices.md)
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
+- [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md)
+- [Reager på og afhjælp trusler i Defender for Business](mdb-respond-mitigate-threats.md)
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

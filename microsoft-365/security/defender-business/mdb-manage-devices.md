@@ -16,16 +16,16 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 099cddf662b58f918af5aa3b8cc2cb1fea26b0f8
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 735f9e04a9176ce1b6626a050429c0b7323a7c0b
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090008"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772921"
 ---
 # <a name="manage-devices-in-microsoft-defender-for-business"></a>Administrer enheder i Microsoft Defender til virksomheder
 
-I Microsoft Defender til virksomheder kan du administrere enheder på følgende måde:
+I Defender for Business kan du administrere enheder på følgende måde:
 
 - [Få vist en liste over onboardede enheder](#view-the-list-of-onboarded-devices) for at se deres risikoniveau, eksponeringsniveau og tilstand
 - [Udfør handlinger på en enhed](#take-action-on-a-device-that-has-threat-detections) , der har trusselsregistreringer
@@ -43,7 +43,7 @@ I Microsoft Defender til virksomheder kan du administrere enheder på følgende 
 
 3. Vælg en enhed for at åbne dens pop op-panel, hvor du kan få mere at vide om dens status og udføre handlinger. 
 
-   Hvis du endnu ikke har nogen enheder på listen, [kan du onboarde enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md)
+   Hvis du endnu ikke har nogen enheder angivet, kan du [onboarde enheder til Defender for Business](mdb-onboard-devices.md)
 
 ## <a name="take-action-on-a-device-that-has-threat-detections"></a>Udfør handlinger på en enhed, der har trusselsregistreringer
 
@@ -59,7 +59,7 @@ I Microsoft Defender til virksomheder kan du administrere enheder på følgende 
 
 ## <a name="onboard-a-device"></a>Ombord på en enhed
 
-Se [Onboard-enheder for at Microsoft Defender til virksomheder](mdb-onboard-devices.md).
+Se [Om bord på enheder til Defender for Business](mdb-onboard-devices.md).
 
 ## <a name="offboard-a-device"></a>Uden for en enhed
 
@@ -67,7 +67,7 @@ Se [Offboarding af en enhed](mdb-offboard-devices.md).
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
+- [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md)
+- [Reager på og afhjælp trusler i Defender for Business](mdb-respond-mitigate-threats.md)
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)
 - [Opret eller rediger enhedsgrupper](mdb-create-edit-device-groups.md)

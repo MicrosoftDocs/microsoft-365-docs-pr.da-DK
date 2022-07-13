@@ -28,12 +28,12 @@ ms.assetid: dd6a1fef-ec4a-4cf4-a25a-bb591c5811e3
 description: Få mere at vide om Beskyttelse af sikre links i Defender for Office 365 for at beskytte en organisation mod phishing og andre angreb, der bruger skadelige URL-adresser. Find Teams Safe Links, og se grafik af meddelelser om sikre links.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b3eb2ee76beb106d26d5b7b65d13c7aa0a0d5c1e
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 64fd5ec3086647c3cfa8a5719becc2e92af9867f
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487043"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772144"
 ---
 # <a name="safe-links-in-microsoft-defender-for-office-365"></a>Sikre links i Microsoft Defender for Office 365
 
@@ -48,32 +48,34 @@ ms.locfileid: "66487043"
 
 Sikre links er en funktion i [Defender for Office 365](defender-for-office-365.md), der leverer URL-scanning og -omskrivning af indgående mails i et mailflow og bekræftelse af URL-adresser og links i mails og andre placeringer. Scanning af sikre links sker ud over de almindelige [e-mail-meddelelser om uønsket spam](anti-spam-protection.md) og [antimalware](anti-malware-protection.md) i Exchange Online Protection (EOP). Scanning af sikre links kan hjælpe med at beskytte din organisation mod skadelige links, der bruges i phishing og andre angreb.
 
-Se denne korte video om, hvordan du beskytter mod skadelige links med Sikre links i Microsoft Defender for Office 365.  
+Se denne korte video om, hvordan du beskytter mod skadelige links med Sikre links i Microsoft Defender for Office 365.
+
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGzjb]
+
+> [!NOTE]
+> Selvom der ikke er nogen standardpolitik for Sikre links, giver den **indbyggede sikkerhedspolitik** forudindstillet beskyttelse af Sikre links i mails, Microsoft Teams og filer i understøttede Office-apps til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for Sikre links eller Standard- eller Strenge forudindstillede sikkerhedspolitikker), som har licens til Defender for Office 365. Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md). Du kan også oprette politikker for sikre links, der gælder for bestemte brugere, grupper eller domæner. Du kan finde instruktioner [under Konfigurer politikker for sikre links i Microsoft Defender for Office 365](set-up-safe-links-policies.md).
 
 Beskyttelse af sikre links er tilgængelig på følgende placeringer:
 
-- **Mails**: Selvom der ikke er nogen standardpolitik for Sikre links, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** beskyttelse af sikre links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for sikre links). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md). Du kan også oprette politikker for sikre links, der gælder for bestemte brugere, grupper eller domæner. Du kan finde instruktioner [under Konfigurer politikker for sikre links i Microsoft Defender for Office 365](set-up-safe-links-policies.md).
+- **Mails**: Beskyttelse af sikre links for links i mails styres af politikker for sikre links.
 
   Du kan få flere oplysninger om beskyttelse af sikre links for mails i afsnittet [Indstillinger for sikre links til mails](#safe-links-settings-for-email-messages) senere i denne artikel.
-  
+
   > [!NOTE]
   > Sikre links fungerer ikke på mailaktiverede offentlige mapper.
   >
   > Safe Links understøtter kun FORMATerne HTTP(S) og FTP.
 
-- **Microsoft Teams**: Beskyttelse af sikre links for links i Teams-samtaler, gruppechats eller fra kanaler styres også af politikker for Sikre links.
+- **Microsoft Teams**: Beskyttelse af sikre links for links i Teams-samtaler, gruppechats eller fra kanaler styres af politikker for sikre links.
 
   Du kan få flere oplysninger om beskyttelse af sikre links i Teams i afsnittet [Indstillinger for sikre links til Microsoft Teams](#safe-links-settings-for-microsoft-teams) senere i denne artikel.
 
   > [!NOTE]
   > Beskyttelse af Sikre links til Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
 
-- **Office 365 apps**: Beskyttelse mod sikre links for Office 365 apps er tilgængelig i understøttede skrivebords-, mobil- og webapps. Du **kan konfigurere** Beskyttelse af sikre links for Office 365 apps i den globale indstilling, der er **uden for** politikkerne for sikre links. Du kan finde en vejledning [under Konfigurer globale indstillinger for indstillinger for Sikre links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
+- **Office-apps**: Beskyttelse mod sikre links for understøttede Office-skrivebords-, mobil- og webapps styres af politikker for sikre links.
 
-  Beskyttelse af sikre links for Office 365 apps anvendes på alle brugere i organisationen, der har licens til Defender for Office 365, uanset om brugerne er inkluderet i aktive politikker for Sikre links eller ej.
-
-  Du kan få flere oplysninger om beskyttelse af sikre links i Office 365 apps i afsnittet [Indstillinger for sikre links til Office 365 apps](#safe-links-settings-for-office-365-apps) senere i denne artikel.
+  Du kan få flere oplysninger om beskyttelse af Sikre links i Office-apps i afsnittet [Indstillinger for sikre links til Office-apps](#safe-links-settings-for-office-apps) senere i denne artikel.
 
 Denne artikel indeholder detaljerede beskrivelser af følgende typer indstillinger for sikre links:
 
@@ -81,80 +83,71 @@ Denne artikel indeholder detaljerede beskrivelser af følgende typer indstilling
 
   - [Indstillinger for sikre links for mails](#safe-links-settings-for-email-messages)
   - [Indstillinger for sikre links til Microsoft Teams](#safe-links-settings-for-microsoft-teams)
+  - [Indstillinger for sikre links til Office-apps](#safe-links-settings-for-office-apps)
   - [Lister over "Undlad at omskrive følgende URL-adresser" i politikker, der er tillid til](#do-not-rewrite-the-following-urls-lists-in-safe-links-policies)
 
 - **Globale indstillinger for sikre links**: Disse indstillinger er konfigureret globalt, ikke i politikker for sikre links. Disse indstillinger omfatter:
 
-  - [Indstillinger for Sikre links for Office 365 apps](#safe-links-settings-for-office-365-apps)
   - [Listen "Bloker følgende URL-adresser" for sikre links](#block-the-following-urls-list-for-safe-links)
 
 I følgende tabel beskrives scenarier for Sikre links i Microsoft 365 og Office 365 organisationer, der omfatter Defender for Office 365 (bemærk, at manglende licenser aldrig er et problem i eksemplerne).
 
 |Scenario|Resultat|
 |---|---|
-|Jean er medlem af marketingafdelingen. Beskyttelse af sikre links for Office 365 apps er slået til i de globale indstillinger for Sikre links, og der findes en politik for Sikre links, der gælder for medlemmer af marketingafdelingen. Jean åbner en PowerPoint-præsentation i en mail og klikker derefter på en URL-adresse i præsentationen.|Jean er beskyttet af Safe Links. <p> Jean er inkluderet i en politik for sikre links, og Beskyttelse af sikre links for Office 365 apps er slået til. <p> Du kan få flere oplysninger om kravene til beskyttelse af sikre links i Office 365 apps i afsnittet [Indstillinger for sikre links til Office 365 apps](#safe-links-settings-for-office-365-apps) senere i denne artikel.|
-|Chris' Microsoft 365 E5 organisation har ikke konfigureret nogen politikker for sikre links. Chris modtager en mail fra en ekstern afsender, der indeholder en URL-adresse til et skadeligt websted, som han i sidste ende klikker på.|Chris er ikke beskyttet af Sikre links. <p> En administrator skal oprette mindst én politik for sikre links, for at alle kan få beskyttelse mod sikre links i indgående mails. Chris skal være inkluderet i betingelserne for politikken for at få beskyttelse mod Sikre links.|
-|I Pats organisation har ingen administratorer oprettet nogen politikker for sikre links, men Beskyttelse af sikre links for Office 365 apps er slået til. Pat åbner et Word-dokument og klikker på en URL-adresse i filen.|Pat er ikke beskyttet af Sikre links. <p> Selvom Beskyttelse af sikre links for Office 365 apps er slået til globalt, er Pat ikke inkluderet i nogen aktive politikker for Sikre links, så beskyttelsen kan ikke anvendes.|
+|Jean er medlem af marketingafdelingen. Beskyttelse af Sikre links for Office-apps er slået til i en politik for sikre links, der gælder for medlemmer af marketingafdelingen. Jean åbner en PowerPoint-præsentation i en mail og klikker derefter på en URL-adresse i præsentationen.|Jean er beskyttet af Safe Links. <p> Jean er inkluderet i en politik for sikre links, hvor Beskyttelse af sikre links for Office-apps er slået til. <p> Du kan få flere oplysninger om kravene til beskyttelse af sikre links i Office-apps i afsnittet [Indstillinger for sikre links til Office-apps](#safe-links-settings-for-office-apps) senere i denne artikel.|
+|Chris' Microsoft 365 E5 organisation har ikke konfigureret nogen politikker for sikre links. Chris modtager en mail fra en ekstern afsender, der indeholder en URL-adresse til et skadeligt websted, som han i sidste ende klikker på.|Chris er beskyttet af Sikre links. <p> Den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** giver beskyttelse af sikre links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for Sikre links eller Standard eller Strenge forudindstillede sikkerhedspolitikker). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).|
+|I Pats organisation har administratorer oprettet en politik for sikre links, der anvender Pat, men Beskyttelse af sikre links for Office-apps er deaktiveret. Pat åbner et Word-dokument og klikker på en URL-adresse i filen.|Pat er ikke beskyttet af Sikre links. <p> Selvom Pat er inkluderet i en aktiv politik for sikre links, er Beskyttelse af sikre links for Office-apps slået fra i denne politik, så beskyttelsen kan ikke anvendes.|
 |I Lees organisation `https://tailspintoys.com` er konfigureret på listen **Bloker følgende URL-adresser** i de globale indstillinger for Sikre links. Der findes allerede en politik for sikre links, der indeholder Lee. Lee modtager en mail, der indeholder URL-adressen `https://tailspintoys.com/aboutus/trythispage`. Lee klikker på URL-adressen.|URL-adressen kan være blokeret automatisk for Lee. Det afhænger af URL-adressen på listen og den anvendte mailklient Lee. Du kan få flere oplysninger på [listen "Bloker følgende URL-adresser" for afsnittet Sikre links](#block-the-following-urls-list-for-safe-links) senere i denne artikel.|
 |Jamie og Julia arbejder begge for contoso.com. For lang tid siden konfigurerede administratorer Safe Links-politikker, der gælder for både Jamie og Julia. Jamie sender en mail til Julia uden at vide, at mailen indeholder en skadelig URL-adresse.|Julia er beskyttet af Sikre links **, hvis** politikken Sikre links, der gælder for hende, er konfigureret til at gælde for meddelelser mellem interne modtagere. Du kan få flere oplysninger i afsnittet [Indstillinger for sikre links til mails](#safe-links-settings-for-email-messages) senere i denne artikel.|
+
+## <a name="recipient-filters-in-safe-links-policies"></a>Modtagerfiltre i politikker for sikre links
+
+Du skal angive de betingelser og undtagelser for modtageren, der bestemmer, hvem politikken gælder for. Du kan bruge disse egenskaber til betingelser og undtagelser:
+
+- **Modtageren er**
+- **Modtagerdomænet er**
+- **Modtageren er medlem af**
+
+Du kan kun bruge en betingelse eller undtagelse én gang, men betingelsen eller undtagelsen kan indeholde flere værdier. Flere værdier med samme betingelse eller undtagelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser eller undtagelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
+
+> [!IMPORTANT]
+> Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
+>
+> - Modtageren er: romain@contoso.com
+> - Modtageren er medlem af: Direktører
+>
+> Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+>
+> Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
 ## <a name="safe-links-settings-for-email-messages"></a>Indstillinger for sikre links for mails
 
 Safe Links scanner indgående mail for kendte skadelige links. Scannede URL-adresser omskrives ved hjælp af Præfikset for URL-adresser i Microsoft standard: `https://nam01.safelinks.protection.outlook.com`. Når linket er blevet omskrevet, analyseres det for potentielt skadeligt indhold.
 
-Når Safe Links omskriver en URL-adresse, omskrives URL-adressen stadig, selvom meddelelsen videresendes eller besvares _manuelt_ (både til interne og eksterne modtagere). Yderligere links, der føjes til den videresendte eller besvarede meddelelse, omskrives ikke. Hvis der er tale om _automatisk_ videresendelse efter indbakkeregler eller smtp-videresendelse, omskrives URL-adressen dog ikke i den meddelelse, der er beregnet til den endelige modtager, _medmindre_ den pågældende modtager også er beskyttet af Sikre links, eller URL-adressen allerede er blevet omskrevet i en tidligere meddelelse. Så længe Sikre links er aktiveret, scannes URL-adresser stadig før levering, uanset om de er blevet omskrevet eller ej. Ikke-ombrudte URL-adresser kontrolleres også stadig af et API-kald på klientsiden til Sikre links, når der klikkes i Outlook til Desktop version 16.0.12513 eller nyere.
+Når Safe Links omskriver en URL-adresse, omskrives URL-adressen stadig, selvom meddelelsen videresendes eller besvares _manuelt_ (både til interne og eksterne modtagere). Yderligere links, der føjes til den videresendte eller besvarede meddelelse, omskrives ikke. Hvis der er tale om _automatisk_ videresendelse efter indbakkeregler eller smtp-videresendelse, omskrives URL-adressen dog ikke i den meddelelse, der er beregnet til den endelige modtager, _medmindre_ den pågældende modtager også er beskyttet af Sikre links, eller URL-adressen allerede er blevet omskrevet i en tidligere meddelelse. Så længe Sikre links er slået til, scannes URL-adresser stadig før levering, uanset om de er blevet omskrevet eller ej. Ikke-ombrudte URL-adresser kontrolleres også stadig af et API-kald på klientsiden til Sikre links, når der klikkes i Outlook til Desktop version 16.0.12513 eller nyere.
 
 Indstillingerne i Politikker for sikre links, der gælder for mails, er beskrevet på følgende liste:
 
-- **Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugerne klikker på links i mail**: Aktiverer eller deaktiverer scanning af sikre links i mails. Den anbefalede værdi er valgt (slået til) og resulterer i følgende handlinger:
-  - Scanning af sikre links er aktiveret i Outlook (C2R) på Windows.
+- **Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugere klikker på links i mail**: Slå scanning af sikre links til eller fra i mails. Den anbefalede værdi er valgt (slået til) og resulterer i følgende handlinger:
+  - Scanning af sikre links er slået til i Outlook (C2R) på Windows.
   - URL-adresser omskrives, og brugerne dirigeres gennem Beskyttelse af sikre links, når de klikker på URL-adresser i meddelelser.
   - Når der klikkes på URL-adresserne, kontrolleres de i forhold til en liste over kendte skadelige URL-adresser og [listen "Bloker følgende URL-adresser"](#block-the-following-urls-list-for-safe-links).
   - URL-adresser, der ikke har et gyldigt omdømme, detoneres asynkront i baggrunden.
 
-  Følgende indstillinger er kun tilgængelige, hvis scanning af Sikre links er slået til i mails:
+  Følgende indstillinger er kun tilgængelige, hvis scanning af sikre links i mails er slået til:
 
-  - **Anvend sikre links på mails, der sendes i organisationen**: Aktiverer eller deaktiverer scanning af sikre links for meddelelser, der sendes mellem interne afsendere og interne modtagere i samme Exchange Online organisation. Den anbefalede værdi er valgt (slået til).
+  - **Anvend sikre links på mails, der sendes i organisationen**: Slå scanning af sikre links til eller fra for meddelelser, der er sendt mellem interne afsendere og interne modtagere i den samme Exchange Online organisation. Den anbefalede værdi er valgt (slået til).
 
-  - **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**: Aktiverer scanning i realtid af links, herunder links i mails, der peger på indhold, der kan downloades. Den anbefalede værdi er valgt (slået til).
+  - **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**: Slår scanning af links i realtid til, herunder links i mails, der peger på indhold, der kan downloades. Den anbefalede værdi er valgt (slået til).
 
-  - **Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres**:
-    - Valgt (slået til): Meddelelser, der indeholder URL-adresser, gemmes, indtil scanningen er fuldført. Meddelelser leveres først, når URL-adresserne er bekræftet til at være sikre. Dette er den anbefalede værdi.
-    - Ikke valgt (slået fra): Hvis scanningen af URL-adressen ikke kan fuldføres, skal du levere meddelelsen alligevel.
+    - **Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres**:
+      - Valgt (slået til): Meddelelser, der indeholder URL-adresser, gemmes, indtil scanningen er fuldført. Meddelelser leveres først, når URL-adresserne er bekræftet til at være sikre. Dette er den anbefalede værdi.
+      - Ikke valgt (slået fra): Hvis scanningen af URL-adressen ikke kan fuldføres, skal du levere meddelelsen alligevel.
 
-  - **Undlad at omskrive URL-adresser. Kontroller kun via SafeLinks API**: Hvis denne indstilling er aktiveret, sker der ingen OMbrydning af URL-adresser. Sikre links kaldes udelukkende via API'er på det tidspunkt, hvor URL-adressen klikkes af Outlook-klienter, der understøtter det. Anbefalet værdi er deaktiveret.
-
-- **Spor bruger klik**: Aktiverer eller deaktiverer lagring af sikre links klikdata for URL-adresser, der klikkes på i mails. Anbefalet værdi er at lade denne indstilling være markeret (spor bruger klik).
-
-  Sporing af URL-klik for links i mails, der sendes mellem interne afsendere og interne modtagere, understøttes ikke i øjeblikket.
-
-- **Lad brugerne klikke sig videre til den oprindelige URL-adresse**: Tillader eller blokerer brugere fra at klikke gennem [advarselssiden](#warning-pages-from-safe-links) til den oprindelige URL-adresse. Anbefalet værdi er deaktiveret.
-
-- **Vis organisationsbranding på meddelelses- og advarselssider**: Denne indstilling viser organisationens branding på advarselssider. Branding hjælper brugerne med at identificere legitime advarsler, fordi Microsofts standardadvarselssider ofte bruges af hackere. Du kan få flere oplysninger om brugerdefineret branding [under Tilpas Microsoft 365-temaet for din organisation](../../admin/setup/customize-your-organization-theme.md).
+  - **Undlad at omskrive URL-adresser. Kontroller kun via SafeLinks API**: Hvis denne indstilling er valgt (slået til), finder der ingen URL-ombrydning sted. Sikre links kaldes udelukkende via API'er på det tidspunkt, hvor URL-adressen klikkes af Outlook-klienter, der understøtter det. Anbefalet værdi er valgt (slået til).
 
   Du kan få flere oplysninger om de anbefalede værdier for Standard- og Strict-politikindstillinger for politikker for sikre links under [Politikindstillinger for sikre links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
-- **Modtagerfiltre**: Du skal angive de betingelser og undtagelser for modtageren, der bestemmer, hvem politikken gælder for. Du kan bruge disse egenskaber til betingelser og undtagelser:
-  - **Modtageren er**
-  - **Modtagerdomænet er**
-  - **Modtageren er medlem af**
-
-  Du kan kun bruge en betingelse eller undtagelse én gang, men betingelsen eller undtagelsen kan indeholde flere værdier. Flere værdier med samme betingelse eller undtagelse bruger OR-logik (f.eks. _\<recipient1\>_ eller _\<recipient2\>_). Forskellige betingelser eller undtagelser bruger AND-logik (f.eks. _\<recipient1\>_ og _\<member of group 1\>_).
-
-  > [!IMPORTANT]
-  > Flere forskellige betingelser eller undtagelser er ikke additive; de er inkluderende. Politikken anvendes _kun_ på de modtagere, der stemmer overens med _alle_ de angivne modtagerfiltre. Du kan f.eks. konfigurere en modtagerfilterbetingelse i politikken med følgende værdier:
-  >
-  > - Modtageren er: romain@contoso.com
-  > - Modtageren er medlem af: Direktører
-  >
-  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
-  >
-  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
-
-- **Prioritet**: Hvis du opretter flere politikker, kan du angive den rækkefølge, de anvendes i. Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
-
-  Du kan finde flere oplysninger om prioritetsrækkefølgen, og hvordan flere politikker evalueres og anvendes, under [Beskyttelse af mailrækkefølge og prioritet](how-policies-and-protections-are-combined.md).
-  
 ### <a name="how-safe-links-works-in-email-messages"></a>Sådan fungerer sikre links i mails
 
 På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer på URL-adresser i mails:
@@ -169,34 +162,26 @@ På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer på U
 
    - Hvis URL-adressen peger på et websted, der er blevet fastslået som skadeligt, åbnes der en [advarselsside for et skadeligt websted](#malicious-website-warning) (eller en anden advarselsside).
 
-   - Hvis URL-adressen peger på en fil, der kan downloades, og indstillingen **Anvend URL-adressescanning i realtid for mistænkelige links og links, der peger på filer** , er aktiveret i den politik, der gælder for brugeren, kontrolleres den fil, der kan downloades.
+   - Hvis URL-adressen peger på en fil, der kan downloades, og indstillingen **Anvend URL-scanning i realtid for mistænkelige links og links, der peger på filer** , er slået til i den politik, der gælder for brugeren, kontrolleres den fil, der kan downloades.
 
    - Hvis URL-adressen er bestemt til at være sikker, åbnes webstedet.
 
 ## <a name="safe-links-settings-for-microsoft-teams"></a>Indstillinger for sikre links til Microsoft Teams
 
-Du aktiverer eller deaktiverer sikker links-beskyttelse for Microsoft Teams i politikker for sikre links. Du bruger specifikt indstillingen **Vælg handlingen for ukendte eller potentielt skadelige URL-adresser i Microsoft Teams** . Den anbefalede værdi er **Slået til**.
+Du slår beskyttelse mod sikre links til eller fra for Microsoft Teams i politikker for sikre links. Du bruger specifikt indstillingen **Til: Sikre links, der kontrollerer en liste over kendte, skadelige links, når brugerne klikker på links i Microsoft Teams** . Den anbefalede værdi er slået til (valgt).
 
 > [!NOTE]
 > Når du slår Beskyttelse af sikre links til eller fra for Teams, kan det tage op til 24 timer, før ændringen træder i kraft.
 >
 > Beskyttelse af Sikre links til Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
 
-Følgende indstillinger i Politikker for sikre links, der gælder for links i mails, gælder også for links i Teams:
-
-- **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**
-- **Spor ikke bruger klik**
-- **Tillad ikke, at brugerne klikker sig igennem til den oprindelige URL-adresse**
-
-Disse indstillinger er tidligere forklaret under [Indstillinger for sikre links for mails](#safe-links-settings-for-email-messages).
-
 Når du har slået beskyttelse mod sikre links til for Microsoft Teams, kontrolleres URL-adresser i Teams mod en liste over kendte skadelige links, når den beskyttede bruger klikker på linket (beskyttelsestid for klik). URL-adresser omskrives ikke. Hvis det konstateres, at et link er skadeligt, får brugerne følgende oplevelser:
 
 - Hvis der klikkes på linket i en Teams-samtale, gruppechat eller fra kanaler, vises advarselssiden som vist på skærmbilledet nedenfor i standardwebbrowseren.
 - Hvis der klikkes på linket fra en fastgjort fane, vises advarselssiden i Teams-grænsefladen under den pågældende fane. Muligheden for at åbne linket i en webbrowser er deaktiveret af sikkerhedsmæssige årsager.
-- Afhængigt af hvordan indstillingen **Tillad ikke brugere at klikke sig igennem til den oprindelige URL-adresse** i politikken er konfigureret, vil brugeren eller vil ikke få tilladelse til at klikke sig igennem til den oprindelige URL-adresse (**Fortsæt alligevel (anbefales ikke) på skærmbilledet** . Vi anbefaler, at du aktiverer indstillingen **Tillad ikke, at brugere klikker sig videre til den oprindelige URL-adresse,** så brugerne ikke kan klikke sig videre til den oprindelige URL-adresse.
+- Afhængigt af hvordan **Indstillingen Lad brugere klikke sig igennem til den oprindelige URL-indstilling** i politikken er konfigureret, vil brugeren eller vil ikke få tilladelse til at klikke sig igennem til den oprindelige URL-adresse (**Fortsæt alligevel (anbefales ikke)** på skærmbilledet). Vi anbefaler, at du ikke vælger indstillingen **Lad brugere klikke sig igennem til den oprindelige URL-adresse,** så brugerne ikke kan klikke sig videre til den oprindelige URL-adresse.
 
-Hvis den bruger, der har sendt linket, ikke er inkluderet i en politik for Sikre links, hvor Teams-beskyttelse er aktiveret, kan brugeren frit klikke sig videre til den oprindelige URL-adresse på sin computer eller enhed.
+Hvis den bruger, der har sendt linket, ikke er beskyttet af en politik for Sikre links, hvor Teams-beskyttelse er slået til, kan brugeren frit klikke sig videre til den oprindelige URL-adresse på sin computer eller enhed.
 
 :::image type="content" source="../../media/tp-safe-links-for-teams-malicious.png" alt-text="En side med sikre links til Teams, der rapporterer et skadeligt link" lightbox="../../media/tp-safe-links-for-teams-malicious.png":::
 
@@ -208,15 +193,17 @@ På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer for U
 
 1. En bruger starter Teams-appen.
 
-2. Microsoft 365 kontrollerer, at brugerens organisation inkluderer Microsoft Defender for Office 365, og at brugeren er inkluderet i en aktiv politik for Sikre links, hvor beskyttelse af Microsoft Teams er aktiveret.
+2. Microsoft 365 kontrollerer, at brugerens organisation inkluderer Microsoft Defender for Office 365, og at brugeren er inkluderet i en aktiv politik for Sikre links, hvor beskyttelse af Microsoft Teams er slået til.
 
 3. URL-adresser valideres, når brugeren klikker, i chats, gruppechats, kanaler og faner.
 
-## <a name="safe-links-settings-for-office-365-apps"></a>Indstillinger for Sikre links for Office 365 apps
+## <a name="safe-links-settings-for-office-apps"></a>Indstillinger for sikre links til Office-apps
 
-Beskyttelse af sikre links for Office 365 apps kontrollerer links i Office-dokumenter, ikke links i mails (men det kan kontrollere links i vedhæftede Office-dokumenter i mails, når dokumentet er åbnet).
+Beskyttelse af sikre links til Office-apps kontrollerer links i Office-dokumenter, ikke links i mails. Men den kan tjekke links ind i vedhæftede Office-dokumenter i mails, når dokumentet er åbnet.
 
-Beskyttelse af sikre links for Office 365 apps har følgende klientkrav:
+Du slår Beskyttelse af sikre links til eller fra for Office-apps i politikker for sikre links. Du bruger specifikt indstillingen **Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugerne klikker på links i Microsoft Office-apps** . Den anbefalede værdi er slået til (valgt).
+
+Beskyttelse af Sikre links til Office-apps har følgende klientkrav:
 
 - Microsoft 365 Apps eller Microsoft 365 Business Premium.
   - Aktuelle versioner af Word, Excel og PowerPoint på Windows, Mac eller i en webbrowser.
@@ -225,27 +212,15 @@ Beskyttelse af sikre links for Office 365 apps har følgende klientkrav:
   - OneNote i en webbrowser.
   - Outlook til Windows, når du åbner gemte EML- eller MSG-filer.
 
-- Office 365 apps er konfigureret til at bruge moderne godkendelse. Du kan få flere oplysninger under [Sådan fungerer moderne godkendelse for Office 2013-, Office 2016- og Office 2019-klientapps](../../enterprise/modern-auth-for-office-2013-and-2016.md).
+- Office-apps er konfigureret til at bruge moderne godkendelse. Du kan få flere oplysninger under [Sådan fungerer moderne godkendelse for Office 2013-, Office 2016- og Office 2019-klientapps](../../enterprise/modern-auth-for-office-2013-and-2016.md).
 
 - Brugerne er logget på med deres arbejds- eller skolekonti. Du kan få flere oplysninger under [Log på Office](https://support.microsoft.com/office/b9582171-fd1f-4284-9846-bdd72bb28426).
 
-Du kan konfigurere beskyttelse af sikre links for Office 365 apps i de globale indstillinger for Sikre links og ikke i politikker for sikre links. Beskyttelsen gælder for alle brugere i organisationen, der har licens til Defender for Office 365, uanset om brugerne er inkluderet i aktive politikker for Sikre links eller ej.
-
-Følgende indstillinger for Sikre links er tilgængelige for Office 365 apps:
-
-- **Office 365 programmer**: Aktiverer eller deaktiverer scanning af sikre links i understøttede Office 365 apps. Standardværdien og den anbefalede værdi er **Slået til**.
-
-- **Spor ikke, når brugere klikker på Sikre links**: Aktiverer eller deaktiverer lagring af Sikre links klikdata for URL-adresser, der klikkes på i skrivebordsversionerne Word, Excel, PowerPoint og Visio. Den anbefalede værdi er **Fra**, hvilket betyder, at bruger klik spores.
-
-- **Lad ikke brugere klikke gennem sikre links til den oprindelige URL-adresse**: Tillader eller blokerer brugere fra at klikke gennem [advarselssiden](#warning-pages-from-safe-links) til den oprindelige URL-adresse i desktopversionerne Word, Excel, PowerPoint og Visio. Standardværdien og den anbefalede værdi er **Slået til**.
-
-Hvis du vil konfigurere indstillingerne for Sikre links for Office 365 apps, skal du se [Konfigurer beskyttelse af sikre links for Office 365 apps](configure-global-settings-for-safe-links.md#configure-safe-links-protection-for-office-365-apps-in-the-microsoft-365-defender-portal).
-
 Du kan få flere oplysninger om de anbefalede værdier for Standard- og Strict-politikindstillinger under [Globale indstillinger for Sikre links](recommended-settings-for-eop-and-office365.md#global-settings-for-safe-links).
 
-### <a name="how-safe-links-works-in-office-365-apps"></a>Sådan fungerer sikre links i Office 365 apps
+### <a name="how-safe-links-works-in-office-apps"></a>Sådan fungerer Sikre links i Office-apps
 
-På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer for URL-adresser i Office 365 apps. De understøttede Office 365 apps er beskrevet i forrige afsnit.
+På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer for URL-adresser i Office-apps. De understøttede Office-apps er beskrevet i forrige afsnit.
 
 1. En bruger logger på med at bruge sin arbejds- eller skolekonto i en organisation, der omfatter Microsoft 365 Apps eller Microsoft 365 Business Premium.
 
@@ -264,7 +239,31 @@ På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer for U
    - Hvis scanningen af Sikre links ikke kan fuldføres, udløses beskyttelsen af sikre links ikke. I Office Desktop-klienter bliver brugeren advaret, før vedkommende fortsætter til destinationswebstedet.
 
 > [!NOTE]
-> Det kan tage flere sekunder i starten af hver session at bekræfte, at brugeren har Safe Links til Office aktiveret.
+> Det kan tage flere sekunder i starten af hver session at bekræfte, at Sikre links til Office-apps er tilgængelige for brugeren.
+
+## <a name="click-protection-settings-in-safe-links-policies"></a>Klik på Beskyttelsesindstillinger i Politikker for sikre links
+
+Disse indstillinger gælder for Sikre links i mail-, Teams- og Office-apps:
+
+- **Spor bruger klik**: Slå lagring af Sikre links til eller fra klikdata for de URL-adresser, der klikkes på. Vi anbefaler, at du lader denne indstilling være markeret (slået til).
+
+  I Sikre links til Office-apps gælder denne indstilling for skrivebordsversionerne Word, Excel, PowerPoint og Visio.
+
+  Sporing af URL-klik for links i mails, der sendes mellem interne afsendere og interne modtagere, understøttes ikke i øjeblikket.
+
+  Hvis du vælger denne indstilling, er følgende indstillinger tilgængelige:
+
+  - **Lad brugerne klikke sig videre til den oprindelige URL-adresse**: Styrer, om brugerne kan klikke gennem [advarselssiden](#warning-pages-from-safe-links) til den oprindelige URL-adresse. Anbefalet værdi er ikke valgt (slået fra).
+
+    I Sikre links til Office-apps gælder denne indstilling for den oprindelige URL-adresse i skrivebordsversionerne Word, Excel, PowerPoint og Visio.
+
+  - **Vis organisationsbranding på meddelelses- og advarselssider**: Denne indstilling viser organisationens branding på advarselssider. Branding hjælper brugerne med at identificere legitime advarsler, fordi Microsofts standardadvarselssider ofte bruges af hackere. Du kan få flere oplysninger om brugerdefineret branding [under Tilpas Microsoft 365-temaet for din organisation](../../admin/setup/customize-your-organization-theme.md).
+
+## <a name="priority-of-safe-links-policies"></a>Prioritet af politikker for sikre links
+
+Når du har oprettet flere politikker, kan du angive den rækkefølge, de anvendes i. Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt. Den **indbyggede beskyttelsespolitik** anvendes altid sidst. De politikker for sikre links, der er knyttet til **standard** - og **strenge** forudindstillede sikkerhedspolitikker, anvendes altid før brugerdefinerede politikker for Sikre links.
+
+Du kan finde flere oplysninger om prioritetsrækkefølgen, og hvordan flere politikker evalueres og anvendes, under [Prioritetsrækkefølge for forudindstillede sikkerhedspolitikker og andre politikker](preset-security-policies.md#order-of-precedence-for-preset-security-policies-and-other-policies) og [Rækkefølgen og prioriteten af mailbeskyttelse](how-policies-and-protections-are-combined.md).
 
 ## <a name="block-the-following-urls-list-for-safe-links"></a>Listen "Bloker følgende URL-adresser" for sikre links
 
@@ -274,7 +273,7 @@ På et højt niveau kan du se, hvordan beskyttelse af sikre links fungerer for U
 Listen **Bloker følgende URL-adresser** definerer de links, der altid blokeres af scanning af sikre links på følgende placeringer:
 
 - Mailmeddelelser.
-- Dokumenter i Office 365 apps i Windows og Mac.
+- Dokumenter i Office-apps i Windows og Mac.
 - Dokumenter i Office til iOS og Android.
 
 Når en bruger i en aktiv politik for sikre links klikker på et blokeret link i en understøttet app, føres vedkommende til [advarselssiden blokeret URL-adresse](#blocked-url-warning) .

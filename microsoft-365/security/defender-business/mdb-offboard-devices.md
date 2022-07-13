@@ -16,21 +16,21 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 00b9b8b9a4ac1cfad07741de84bd99db5403ef1a
-ms.sourcegitcommit: f30616b90b382409f53a056b7a6c8be078e6866f
+ms.openlocfilehash: bd6ea78daa1a19d84efc23c34bdb58704484c0d1
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/03/2022
-ms.locfileid: "65174453"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772414"
 ---
 # <a name="offboard-a-device-from-microsoft-defender-for-business"></a>Om bord på en enhed fra Microsoft Defender til virksomheder
 
 Hvis du vil være ombord på en enhed, skal du bruge en af følgende procedurer:
 
-- [På en Windows enhed](#offboard-a-windows-device)
-- [Ombord på en macOS-computer](#offboard-a-macos-computer)
+- [Uden for en Windows-enhed](#offboard-a-windows-device)
+- [På en Mac](#offboard-a-mac)
 
-## <a name="offboard-a-windows-device"></a>På en Windows enhed
+## <a name="offboard-a-windows-device"></a>Uden for en Windows-enhed
 
 1. Gå til Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), og log på.
 
@@ -46,11 +46,11 @@ Hvis du vil være ombord på en enhed, skal du bruge en af følgende procedurer:
 
 7. Kør scriptet på hver enhed, du vil offboarde.
 
-## <a name="offboard-a-macos-computer"></a>Ombord på en macOS-computer
+## <a name="offboard-a-mac"></a>På en Mac
 
-1. Gå til **FinderApplications** > . 
+1. Gå til **Søgeprogrammer** > . 
 
-2. Højreklik på Microsoft Defender til virksomheder, og vælg derefter **Flyt til papirkurv**. <br/>--- eller --- <br/> Brug følgende kommando: `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`.
+2. Højreklik på **Microsoft Defender til virksomheder**, og vælg derefter **Flyt til papirkurven**. <br/>--- eller --- <br/> Brug følgende kommando: `sudo '/Library/Application Support/Microsoft/Defender/uninstall/uninstall'`.
 
 > [!IMPORTANT]
 > Hvis du om bord på en enhed holder op med at sende data til Defender for Business. Data, der modtages før offboarding, opbevares dog i op til seks (6) måneder.

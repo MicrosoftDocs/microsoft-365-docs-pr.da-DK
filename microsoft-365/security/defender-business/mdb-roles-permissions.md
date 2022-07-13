@@ -15,16 +15,16 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 5b321b15e608c96a18e756c2f6634b5fb4f69e6f
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: a21c3b1779c3a8ffa32ca4bbd777b377536ec870
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089456"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772615"
 ---
 # <a name="assign-roles-and-permissions-in-microsoft-defender-for-business"></a>Tildel roller og tilladelser i Microsoft Defender til virksomheder
 
-Hvis du vil udføre opgaver på Microsoft 365 Defender-portalen, f.eks. konfiguration af Microsoft Defender til virksomheder, visning af rapporter eller svarhandlinger på registrerede trusler, skal sikkerhedsteamet tildeles de relevante tilladelser. Tilladelser tildeles via roller, der er tildelt på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller i [Azure Active Directory](/azure/active-directory/roles/manage-roles-portal). 
+Hvis du vil udføre opgaver på Microsoft 365 Defender-portalen, f.eks. konfiguration af Defender for Business, visning af rapporter eller svarhandlinger på registrerede trusler, skal sikkerhedsteamet tildeles de relevante tilladelser. Tilladelser tildeles via roller, der er tildelt i Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) eller i [Azure Active Directory](/azure/active-directory/roles/manage-roles-portal). 
 
 ## <a name="what-to-do"></a>Sådan gør du
 
@@ -39,9 +39,9 @@ I følgende tabel beskrives de tre roller, der kan tildeles i Defender for Busin
 
 | Tilladelsesniveau | Beskrivelse |
 |:---|:---|
-| **Globale administratorer** (også kaldet globale administratorer) <br/><br/> *Som bedste praksis skal du begrænse antallet af globale administratorer.* | Globale administratorer kan udføre alle slags opgaver. Den person, der har tilmeldt dit firma til Microsoft 365 eller Microsoft Defender til virksomheder, er som standard global administrator. <br/><br/> Globale administratorer kan få adgang til/ændre indstillinger på tværs af alle Microsoft 365 portaler, f.eks.: <br/>- Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com)) <br/>- Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com)) |
-| **Sikkerhedsadministratorer** (også kaldet sikkerhedsadministratorer) | Sikkerhedsadministratorer kan udføre følgende opgaver: <br/>- Få vist og administrer sikkerhedspolitikker <br/>– Få vist og administrer sikkerhedstrusler og -beskeder (disse aktiviteter omfatter at tage svarhandlinger på slutpunkter) <br/>- Få vist sikkerhedsoplysninger og -rapporter |
-| **Sikkerhedslæser** | Sikkerhedslæsere kan udføre følgende opgaver: <br/>- Få vist sikkerhedspolitikker <br/>– Få vist sikkerhedstrusler og -beskeder <br/>- Få vist sikkerhedsoplysninger og -rapporter  |
+| **Globale administratorer** (også kaldet globale administratorer) <p> *Som bedste praksis skal du begrænse antallet af globale administratorer.* | Globale administratorer kan udføre alle slags opgaver. Den person, der har tilmeldt sig din virksomhed til Microsoft 365 eller Defender for Business, er som standard global administrator. <p> Globale administratorer kan ændre indstillinger på tværs af alle Microsoft 365-portaler, f.eks.: <ul><li>Microsoft 365 Administration ([https://admin.microsoft.com](https://admin.microsoft.com))</li><li>Microsoft 365 Defender portal ([https://security.microsoft.com](https://security.microsoft.com))</li></ul> |
+| **Sikkerhedsadministratorer** (også kaldet sikkerhedsadministratorer) | Sikkerhedsadministratorer kan udføre følgende opgaver: <ul><li>Få vist og administrer sikkerhedspolitikker</li><li>Få vist og administrer sikkerhedstrusler og -beskeder (disse aktiviteter omfatter svarhandlinger på slutpunkter)</li><li>Få vist sikkerhedsoplysninger og -rapporter</li></ul> |
+| **Sikkerhedslæser** | Sikkerhedslæsere kan udføre følgende opgaver:<ul><li>Vis sikkerhedspolitikker</li><li>Vis sikkerhedstrusler og -beskeder</li><li>Få vist sikkerhedsoplysninger og -rapporter</li></ul>  |
 
 
 ## <a name="view-or-edit-role-assignments"></a>Få vist eller rediger rolletildelinger
@@ -57,7 +57,7 @@ I følgende tabel beskrives de tre roller, der kan tildeles i Defender for Busin
    - Sikkerhedslæser
 
    > [!IMPORTANT]
-   > Microsoft anbefaler, at personer kun får adgang til det, de har brug for til at udføre deres opgaver. Vi kalder dette begreb *færrest rettigheder* for tilladelser. Du kan få mere at vide under [Bedste praksis for mindst privilegeret adgang til programmer](/azure/active-directory/develop/secure-least-privileged-access). 
+   > Microsoft anbefaler, at du kun giver personer adgang til det, de har brug for til at udføre deres opgaver. Vi kalder dette begreb *færrest rettigheder* for tilladelser. Du kan få mere at vide under [Bedste praksis for mindst privilegeret adgang til programmer](/azure/active-directory/develop/secure-least-privileged-access). 
 
 4. I sideruden skal du vælge linket **Administrer medlemmer i Azure AD**. Denne handling fører dig til Azure Active Directory (Azure AD), hvor du kan få vist og administrere dine rolletildelinger.
 
@@ -72,7 +72,7 @@ Hvis du ikke allerede har føjet brugere til dit abonnement, skal du se [Tilføj
 
 ## <a name="next-steps"></a>Næste trin
 
-Fortsæt til:
+Gå til:
 
 - [Trin 3: Konfigurer mailmeddelelser](mdb-email-notifications.md)
-- [Trin 4: Onboard enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md)
+- [Trin 4: Onboarder enheder til Defender for Business](mdb-onboard-devices.md)

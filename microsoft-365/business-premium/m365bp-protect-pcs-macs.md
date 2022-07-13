@@ -24,12 +24,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Beskyt ikke-administrerede eller byod-enheder (bring-your-own devices) mod cyberangreb med Microsoft 365 Business Premium. Sådan konfigurerer du cybersikkerhed til Windows-pc'er og Macs.
-ms.openlocfilehash: 5a1239f84e801c6327eb18c1049e410cc0859bdb
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 033fdd41c8df09f983e1abc296bd0b33de20a61a
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66631766"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66773075"
 ---
 # <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Beskyt ikke-administrerede Windows-pc'er og Macs i Microsoft 365 Business Premium
 
@@ -66,9 +66,9 @@ Du bør altid køre Windows Defender Firewall, selvom du har en anden firewall s
 
 Okay, missionen er fuldført! Lad os nu arbejde på [at beskytte mailsystemet](m365bp-protect-email-overview.md) mod phishing og andre angreb.
 
-## <a name="macos"></a>[Macos](#tab/macOS)
+## <a name="mac"></a>[Mac](#tab/Mac)
 
-## <a name="macos"></a>Macos
+## <a name="mac"></a>Mac
 
 ### <a name="use-filevault-to-encrypt-your-mac-disk"></a>Brug FileVault til at kryptere din Mac-disk
 

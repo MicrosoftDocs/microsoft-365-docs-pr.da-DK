@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 5d28d8b7d0a95d7b8f4311f064729198628881ca
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 0072cd6088d7fa560e5dbd6f449b766cb6afb694
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66089898"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772637"
 ---
 # <a name="view-and-manage-incidents-in-microsoft-defender-for-business"></a>Få vist og administrer hændelser i Microsoft Defender til virksomheder
 
@@ -47,22 +47,21 @@ Når der registreres trusler, og beskeder udløses, oprettes der hændelser. Vir
 3. I pop op-ruden kan du se beskedens titel, få vist en liste over aktiver (f.eks. slutpunkter eller brugerkonti), der er berørt, udføre tilgængelige handlinger og bruge links til at få vist flere oplysninger og endda åbne detaljesiden for den valgte besked. 
 
 > [!TIP]
-> Microsoft Defender til virksomheder er designet til at hjælpe dig med at håndtere registrerede trusler ved at tilbyde anbefalede handlinger. Når du får vist en besked, skal du søge efter de anbefalede handlinger. Vær også opmærksom på den vigtige alvorsgrad, som ikke kun bestemmes på baggrund af truslens alvorsgrad, men også på risikoniveauet for din virksomhed. 
+> Defender for Business er designet til at hjælpe dig med at håndtere registrerede trusler ved at tilbyde anbefalede handlinger. Når du får vist en besked, skal du søge efter de anbefalede handlinger. Vær også opmærksom på den vigtige alvorsgrad, som ikke kun bestemmes på baggrund af truslens alvorsgrad, men også på risikoniveauet for din virksomhed. 
 
 ## <a name="alert-severity"></a>Alvorsgrad af vigtig besked
 
-Når Microsoft Defender Antivirus tildeler en besked alvorsgrad baseret på den absolutte alvorsgrad af en registreret trussel (malware) og den potentielle risiko for et individuelt slutpunkt (hvis den er inficeret).
-Microsoft Defender til virksomheder tildeler en besked alvorsgrad baseret på alvorsgraden af den registrerede funktionsmåde, den faktiske risiko for et slutpunkt (enhed) og endnu vigtigere den potentielle risiko for din virksomhed. I følgende tabel vises nogle eksempler:
+Når Microsoft Defender Antivirus tildeler en besked alvorsgrad baseret på den absolutte alvorsgrad af en registreret trussel (malware) og den potentielle risiko for et individuelt slutpunkt (hvis den er inficeret). Defender for Business tildeler en besked alvorsgrad baseret på alvorsgraden af den registrerede funktionsmåde, den faktiske risiko for et slutpunkt (enhed) og endnu vigtigere den potentielle risiko for din virksomhed. I følgende tabel vises nogle eksempler:
 
-| Scenario | Alvorsgrad af vigtig besked | Grund |
-|:---|:---|:---|
-| Microsoft Defender Antivirus registrerer og stopper en trussel, før den gør nogen skade. | Informative | Truslen blev stoppet, før nogen skade blev gjort. |
-| Microsoft Defender Antivirus registrerer malware, der blev udført i din virksomhed. Malwaren stoppes og afhjælpes. | Lav | Selv om nogle skader kan have været gjort til et individuelt slutpunkt, malware nu udgør ingen trussel for din virksomhed. |
-| Malware, der udføres, registreres af Microsoft Defender til virksomheder. Malwaren er blokeret næsten med det samme. | Mellem eller høj | Malwaren udgør en trussel mod individuelle slutpunkter og din virksomhed. |
-| Mistænkelig funktionsmåde registreres, men der udføres endnu ingen afhjælpningshandlinger. | Lav, Mellem eller Høj | Alvorsgraden afhænger af, i hvor høj grad adfærden udgør en trussel for din virksomhed. |
+| Scenario | Alvorsgrad og årsag for vigtig besked |
+|:---|:---|
+| Microsoft Defender Antivirus registrerer og stopper en trussel, før den gør nogen skade. | Informative <br/><br/>Truslen blev stoppet, før nogen skade blev gjort. |
+| Microsoft Defender Antivirus registrerer malware, der blev udført i din virksomhed. Malwaren stoppes og afhjælpes. | Lav <br/><br/>Selv om nogle skader kan have været gjort til et individuelt slutpunkt, malware nu udgør ingen trussel for din virksomhed. |
+| Malware, der udføres, registreres af Defender for Business. Malwaren er blokeret næsten med det samme. | Mellem eller høj <br/><br/>Malwaren udgør en trussel mod individuelle slutpunkter og din virksomhed. |
+| Mistænkelig funktionsmåde registreres, men der udføres endnu ingen afhjælpningshandlinger. | Lav, Mellem eller Høj <br/><br/>Alvorsgraden afhænger af, i hvor høj grad adfærden udgør en trussel for din virksomhed. |
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
+- [Reager på og afhjælp trusler i Defender for Business](mdb-respond-mitigate-threats.md)
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)
-- [Få vist eller rediger enhedspolitikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md)
+- [Få vist eller rediger enhedspolitikker i Defender for Business](mdb-view-edit-policies.md)

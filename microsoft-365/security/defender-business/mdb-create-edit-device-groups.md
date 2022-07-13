@@ -16,16 +16,16 @@ ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 9d788ee4dac2e922898204fdd13e977c50e66b2e
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 84029946abe064219622fdd1b9ce0dd9a6dfc048
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090426"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66773191"
 ---
 # <a name="device-groups-in-microsoft-defender-for-business"></a>Enhedsgrupper i Microsoft Defender til virksomheder
 
-I Microsoft Defender til virksomheder anvendes politikker på enheder via visse samlinger, der kaldes enhedsgrupper. 
+I Defender for Business anvendes politikker på enheder via visse samlinger, der kaldes enhedsgrupper. 
 
 **I denne artikel beskrives**:  
 
@@ -37,14 +37,14 @@ I Microsoft Defender til virksomheder anvendes politikker på enheder via visse 
 
 ## <a name="what-is-a-device-group"></a>Hvad er en enhedsgruppe?
 
-En enhedsgruppe er en samling af enheder, der er grupperet på grund af visse angivne kriterier, f.eks. operativsystemversionen. Enheder, der opfylder kriterierne, er inkluderet i den pågældende enhedsgruppe, medmindre du ekskluderer dem. I Microsoft Defender til virksomheder anvendes politikker på enheder ved hjælp af enhedsgrupper.
+En enhedsgruppe er en samling af enheder, der er grupperet på grund af visse angivne kriterier, f.eks. operativsystemversionen. Enheder, der opfylder kriterierne, er inkluderet i den pågældende enhedsgruppe, medmindre du ekskluderer dem. I Defender for Business anvendes politikker på enheder ved hjælp af enhedsgrupper.
 
-Defender for Business indeholder standardenhedsgrupper, som du kan bruge. Standardenhedsgrupperne omfatter alle de enheder, der er onboardet til Defender for Business. Der er f.eks. en standardenhedsgruppe for Windows enheder. Når du onboarder Windows enheder, føjes de automatisk til standardenhedsgruppen.
+Defender for Business indeholder standardenhedsgrupper, som du kan bruge. Standardenhedsgrupperne omfatter alle de enheder, der er onboardet til Defender for Business. Der er f.eks. en standardenhedsgruppe til Windows-enheder. Når du onboarder Windows-enheder, føjes de automatisk til standardenhedsgruppen.
 
-Du kan også oprette nye enhedsgrupper for at tildele politikker med bestemte indstillinger til bestemte enheder. Du kan f.eks. have tildelt en firewallpolitik til ét sæt Windows enheder og en anden firewallpolitik, der er tildelt et andet sæt Windows enheder. Du kan definere specifikke enhedsgrupper, der skal bruges sammen med dine politikker.
+Du kan også oprette nye enhedsgrupper for at tildele politikker med bestemte indstillinger til bestemte enheder. Du kan f.eks. have tildelt en firewallpolitik til ét sæt Windows-enheder og en anden firewallpolitik, der er tildelt et andet sæt Windows-enheder. Du kan definere specifikke enhedsgrupper, der skal bruges sammen med dine politikker.
 
 > [!NOTE]
-> Når du opretter politikker i Defender for Business, tildeles en prioritetsrækkefølge. Hvis du anvender flere politikker på et bestemt sæt enheder, modtager disse enheder kun den første anvendte politik. Du kan få flere oplysninger [under Forstå politikrækkefølgen i Microsoft Defender til virksomheder](mdb-policy-order.md).
+> Når du opretter politikker i Defender for Business, tildeles en prioritetsrækkefølge. Hvis du anvender flere politikker på et bestemt sæt enheder, modtager disse enheder kun den første anvendte politik. Du kan få flere oplysninger under [Forstå politikrækkefølgen i Defender for Business](mdb-policy-order.md).
 
 Alle enhedsgrupper, herunder dine standardenhedsgrupper og brugerdefinerede enhedsgrupper, som du definerer, gemmes i [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) (Azure AD).
 
@@ -62,7 +62,7 @@ I Øjeblikket kan du i Defender for Business oprette en ny enhedsgruppe, mens du
     2. Vælg **+ Tilføj** for at oprette en ny politik.
 
     > [!TIP]
-    > Hvis du vil have hjælp til at oprette eller redigere en politik, skal du se [Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md).
+    > Hvis du vil have hjælp til at oprette eller redigere en politik, skal du se [Få vist eller rediger politikker i Defender for Business](mdb-view-edit-policies.md).
 
 4. Gennemse oplysningerne i trinnet **Generelle oplysninger** , rediger dem, hvis det er nødvendigt, og vælg derefter **Næste**.
 
@@ -92,7 +92,7 @@ I Defender for Business kan du i øjeblikket få vist dine eksisterende enhedsgr
     2. Vælg **+ Tilføj** for at oprette en ny politik.
 
     > [!TIP]
-    > Hvis du vil have hjælp til at oprette eller redigere en politik, skal du se [Få vist eller rediger politikker i Microsoft Defender til virksomheder](mdb-view-edit-policies.md).
+    > Hvis du vil have hjælp til at oprette eller redigere en politik, skal du se [Få vist eller rediger politikker i Defender for Business](mdb-view-edit-policies.md).
 
 4. Gennemse oplysningerne i trinnet **Generelle oplysninger** , rediger dem, hvis det er nødvendigt, og vælg derefter **Næste**.
 
@@ -112,6 +112,6 @@ Vælg en eller flere af følgende opgaver:
 
 - [Få vist eller rediger politikker](mdb-view-edit-policies.md)
 - [Opret en ny politik](mdb-create-new-policy.md)
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
+- [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md)
+- [Reager på og afhjælp trusler i Defender for Business](mdb-respond-mitigate-threats.md)
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

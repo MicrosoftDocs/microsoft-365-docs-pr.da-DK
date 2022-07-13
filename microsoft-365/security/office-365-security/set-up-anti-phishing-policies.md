@@ -17,12 +17,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om de politikker til bekæmpelse af phishing, der er tilgængelige i Exchange Online Protection (EOP) og Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 1a1265e70c0d22182e8ee4db865eeb53ac8168b7
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: cb33af08174890565994ffc253cf2332c01c31eb
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115889"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66770993"
 ---
 # <a name="anti-phishing-policies-in-microsoft-365"></a>Politikker til bekæmpelse af phishing i Microsoft 365
 
@@ -33,13 +33,13 @@ ms.locfileid: "66115889"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-Politikker til konfiguration af indstillinger for beskyttelse mod phishing er tilgængelige i Microsoft 365 organisationer med Exchange Online postkasser, enkeltstående Exchange Online Protection organisationer (EOP) uden Exchange Online postkasser, og Microsoft Defender for Office 365 organisationer.
+Politikker til konfiguration af indstillinger for beskyttelse mod phishing er tilgængelige i Microsoft 365-organisationer med Exchange Online postkasser, enkeltstående Exchange Online Protection organisationer (EOP) uden Exchange Online postkasser, og Microsoft Defender for Office 365 organisationer.
 
 Eksempler på Microsoft Defender for Office 365 organisationer omfatter:
 
 - Microsoft 365 Enterprise E5, Microsoft 365 Education A5 osv.
 - [Microsoft 365 Enterprise](https://www.microsoft.com/microsoft-365/enterprise/home)
-- [Microsoft 365 virksomhed](https://www.microsoft.com/microsoft-365/business)
+- [Microsoft 365 Business](https://www.microsoft.com/microsoft-365/business)
 - [Microsoft Defender for Office 365 som et tilføjelsesprogram](https://products.office.com/exchange/advance-threat-protection)
 
 Forskellene på højt niveau mellem anti-phishing-politikker i EOP og anti-phishing-politikker i Defender for Office 365 er beskrevet i følgende tabel:
@@ -50,7 +50,7 @@ Forskellene på højt niveau mellem anti-phishing-politikker i EOP og anti-phish
 |Opret brugerdefinerede politikker|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
 |Almindelige politikindstillinger<sup>\*</sup>|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
 |Spoof-indstillinger|![Markeret.](../../media/checkmark.png)|![Markeret.](../../media/checkmark.png)|
-|Første kontakt sikkerhedstip|![Markeret.](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)|
+|Sikkerhedstip til første kontakt|![Markeret.](../../media/checkmark.png)|![Markeret](../../media/checkmark.png)|
 |Repræsentationsindstillinger||![Markeret](../../media/checkmark.png)|
 |Avancerede tærskler for phishing||![Markeret](../../media/checkmark.png)|
 
@@ -92,9 +92,9 @@ Følgende politikindstillinger er tilgængelige i politikker til bekæmpelse af 
   > - Modtageren er: romain@contoso.com
   > - Modtageren er medlem af: Direktører
   >
-  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+  > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
   >
-  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+  > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
 ## <a name="spoof-settings"></a>Spoof-indstillinger
 
@@ -112,16 +112,16 @@ Følgende spoof-indstillinger er tilgængelige i politikker til bekæmpelse af p
   > [!NOTE]
   >
   > - Beskyttelse mod spoofing er som standard aktiveret i standardpolitikken mod phishing og i alle nye brugerdefinerede politikker til bekæmpelse af phishing, som du opretter.
-  > - Du behøver ikke at deaktivere beskyttelse mod spoofing, hvis din MX-post ikke peger på Microsoft 365. Du aktiverer forbedret filtrering for forbindelser i stedet. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
+  > - Du behøver ikke at deaktivere beskyttelse mod spoofing, hvis din MX-post ikke peger på Microsoft 365. du aktiverer forbedret filtrering for forbindelser i stedet. Du kan finde instruktioner [under Udvidet filtrering for forbindelser i Exchange Online](/Exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/enhanced-filtering-for-connectors).
   > - Deaktivering af beskyttelse mod spoofing deaktiverer kun _implicit_ spoofing-beskyttelse fra [kontrol af sammensatte godkendelser](email-validation-and-authentication.md#composite-authentication) . Hvis afsenderen ikke kan _udføre eksplicit_ [DMARC-kontrol](use-dmarc-to-validate-email.md) , hvor politikken er indstillet til at sætte den i karantæne eller afvises, er meddelelsen stadig sat i karantæne eller afvist.
 
 - **Ikke-godkendte afsenderindikatorer**: Tilgængelige i afsnittet **Tip til sikkerhed & kun indikatorer** , når spoof intelligence er slået til. Se detaljerne i næste afsnit.
 - **Handlinger**: For meddelelser fra blokerede spoofede afsendere (automatisk blokeret af spoof intelligence eller manuelt blokeret på listen over tilladte/blokerede lejere) kan du også angive den handling, der skal udføres på meddelelserne:
   - **Flyt meddelelser til modtagernes mapper med uønsket mail**: Dette er standardværdien. Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
   - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de ønskede modtagere. Du kan få oplysninger om karantæne i følgende artikler:
-    - [Sæt Microsoft 365 i karantæne](quarantine-email-messages.md)
+    - [Sæt karantæne i Microsoft 365](quarantine-email-messages.md)
     - [Administrer karantænemeddelelser og filer som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
-    - [Find og frigiv karantænemeddelelser som bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
+    - [Find og frigiv karantænemeddelelser som en bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
 
     Hvis du vælger **Sæt meddelelsen i karantæne**, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af spoof intelligence Protection. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
@@ -140,25 +140,25 @@ Hvis du vil forhindre, at spørgsmålstegnet eller via -mærket føjes til medde
   - For spørgsmålstegnet på afsenderens billede er SPF eller DKIM det vigtigste.
   - For via-koden skal du bekræfte, at domænet i **DKIM-signaturen eller MAIL FROM-adressen** matcher (eller er et underdomæne af) domænet i Fra-adressen.
 
-Du kan finde flere oplysninger [under Identificer mistænkelige meddelelser på Outlook.com og Outlook på internettet](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
+Du kan finde flere oplysninger [under Identificer mistænkelige meddelelser i Outlook.com og Outlook på internettet](https://support.microsoft.com/office/3d44102b-6ce3-4f7c-a359-b623bec82206)
 
-## <a name="first-contact-safety-tip"></a>Første kontakt sikkerhedstip
+## <a name="first-contact-safety-tip"></a>Sikkerhedstip til første kontakt
 
-Indstillingerne **Vis første kontakt sikkerhedstip** er tilgængelige i EOP og Defender for Office 365 organisationer og er ikke afhængige af indstillinger for spoof intelligence eller repræsentationsbeskyttelse. Den sikkerhedstip vises til modtagere i følgende scenarier:
+Indstillingerne **Vis sikkerhedstip til første kontakt** er tilgængelige i EOP og Defender for Office 365 organisationer og er ikke afhængige af indstillinger for spoof intelligence eller repræsentationsbeskyttelse. Sikkerhedstip vises til modtagere i følgende scenarier:
 
 - Første gang, de modtager en meddelelse fra en afsender
 - De modtager ikke ofte meddelelser fra afsenderen.
 
-:::image type="content" source="../../media/safety-tip-first-contact-one-recipient.png" alt-text="Den første kontakt sikkerhedstip for meddelelser med én modtager" lightbox="../../media/safety-tip-first-contact-one-recipient.png":::
+:::image type="content" source="../../media/safety-tip-first-contact-one-recipient.png" alt-text="Sikkerhedstip til første kontakt for meddelelser med én modtager" lightbox="../../media/safety-tip-first-contact-one-recipient.png":::
 
-:::image type="content" source="../../media/safety-tip-first-contact-multiple-recipients.png" alt-text="Den første kontakt sikkerhedstip for meddelelser med flere modtagere" lightbox="../../media/safety-tip-first-contact-multiple-recipients.png":::
+:::image type="content" source="../../media/safety-tip-first-contact-multiple-recipients.png" alt-text="Sikkerhedstip til første kontakt for meddelelser med flere modtagere" lightbox="../../media/safety-tip-first-contact-multiple-recipients.png":::
 
 Denne funktion tilføjer et ekstra lag af sikkerhedsbeskyttelse mod potentielle repræsentationsangreb, så vi anbefaler, at du slår den til.
 
-Den første kontakt sikkerhedstip erstatter også behovet for at oprette regler for mailflow (også kaldet transportregler), der tilføjer headeren med navnet **X-MS-Exchange-EnableFirstContactSafetyTip** med værdien **Aktivér** til meddelelser (selvom denne funktion stadig er tilgængelig).
+Det første kontaktsikkerhedstip erstatter også behovet for at oprette regler for mailflow (også kaldet transportregler), der tilføjer headeren med navnet **X-MS-Exchange-EnableFirstContactSafetyTip** med værdien **Aktivér** til meddelelser (selvom denne funktion stadig er tilgængelig).
 
 > [!NOTE]
-> Hvis meddelelsen har flere modtagere, om tip vises, og til hvem der er baseret på en flertalsmodel. Hvis størstedelen af modtagerne aldrig eller ofte modtager meddelelser fra afsenderen, modtager de berørte modtagere tipet **Nogle personer, der har modtaget denne meddelelse...** Hvis du er bekymret for, at denne funktionsmåde viser en modtagers kommunikationsvaner for en anden, bør du ikke aktivere den første kontakt sikkerhedstip og fortsætte med at bruge regler for mailflow i stedet.
+> Hvis meddelelsen har flere modtagere, om tip vises, og til hvem der er baseret på en flertalsmodel. Hvis størstedelen af modtagerne aldrig eller ofte modtager meddelelser fra afsenderen, modtager de berørte modtagere tipet **Nogle personer, der har modtaget denne meddelelse...** Hvis du er bekymret for, at denne funktionsmåde viser en modtagers kommunikationsvaner for en anden, bør du ikke aktivere det første kontaktsikkerhedstip og fortsætte med at bruge regler for mailflow i stedet.
 
 ## <a name="exclusive-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365"></a>Eksklusive indstillinger i anti-phishing-politikker i Microsoft Defender for Office 365
 
@@ -208,9 +208,9 @@ Følgende repræsentationsindstillinger er kun tilgængelige i politikker til be
   - **Omdiriger meddelelse til andre mailadresser**: Sender meddelelsen til de angivne modtagere i stedet for de ønskede modtagere.
   - **Flyt meddelelser til modtagernes mapper med uønsket mail**: Meddelelsen leveres til postkassen og flyttes til mappen Uønsket mail. Du kan få flere oplysninger under [Konfigurer indstillinger for uønsket mail på Exchange Online postkasser i Microsoft 365](configure-junk-email-settings-on-exo-mailboxes.md).
   - **Sæt meddelelsen i karantæne**: Sender meddelelsen til karantæne i stedet for de ønskede modtagere. Du kan få oplysninger om karantæne i følgende artikler:
-    - [Sæt Microsoft 365 i karantæne](quarantine-email-messages.md)
+    - [Sæt karantæne i Microsoft 365](quarantine-email-messages.md)
     - [Administrer karantænemeddelelser og filer som administrator i Microsoft 365](manage-quarantined-messages-and-files.md)
-    - [Find og frigiv karantænemeddelelser som bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
+    - [Find og frigiv karantænemeddelelser som en bruger i Microsoft 365](find-and-release-quarantined-messages-as-a-user.md)
 
     Hvis du vælger **Sæt meddelelsen i karantæne**, kan du også vælge den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af beskyttelse mod brugerpræsentation eller domæne repræsentation. Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 

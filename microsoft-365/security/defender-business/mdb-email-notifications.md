@@ -13,12 +13,12 @@ ms.localizationpriority: medium
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection: M365-security-compliance
-ms.openlocfilehash: b6ffc1325eb71bf366761545c8e21bfe5da3b4fa
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: 62f21a13578850b1d66f7ff26b0b360adecb7875
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090096"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66770915"
 ---
 # <a name="set-up-email-notifications"></a>Konfigurer mailmeddelelser
 
@@ -46,7 +46,7 @@ Når du konfigurerer mailmeddelelser, kan du vælge mellem to typer, som beskrev
 > 
 > Mailmeddelelser er en praktisk måde at holde dit sikkerhedsteam informeret på i realtid. Men der er andre! Når dit sikkerhedsteam f.eks. logger på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)), får de vist kort, der fremhæver nye trusler, beskeder og sårbarheder. Defender for Business er designet til at fremhæve vigtige oplysninger, som dit sikkerhedsteam bekymrer sig om, så snart de logger på.
 > 
-> Dit sikkerhedsteam kan også vælge **Hændelser** i navigationsruden for at få vist oplysninger. Du kan få mere at vide under [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md).
+> Dit sikkerhedsteam kan også vælge **Hændelser** i navigationsruden for at få vist oplysninger. Du kan få mere at vide under [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md).
 
 ## <a name="view-and-edit-email-notifications"></a>Få vist og rediger mailmeddelelser
 
@@ -71,4 +71,4 @@ Hvis du vil have vist eller redigere indstillinger for mailbeskeder for dit firm
 
 Fortsæt til:
 
-- [Trin 4: Onboard enheder til Microsoft Defender til virksomheder](mdb-onboard-devices.md)
+- [Trin 4: Onboarder enheder til Defender for Business](mdb-onboard-devices.md)

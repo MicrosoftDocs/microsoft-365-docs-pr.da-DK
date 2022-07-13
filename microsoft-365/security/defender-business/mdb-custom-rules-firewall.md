@@ -15,18 +15,18 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: e8ab0981b2e4cfbcd5d885bdfc26f42c6f432aa6
-ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+ms.openlocfilehash: cb584d01f2ca135a25ef715fe7152c1fe33ce0f3
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66090382"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66772703"
 ---
 # <a name="manage-your-custom-rules-for-firewall-policies-in-microsoft-defender-for-business"></a>Administrer dine brugerdefinerede regler for firewallpolitikker i Microsoft Defender til virksomheder
 
-Microsoft Defender til virksomheder indeholder firewallpolitikker, der hjælper med at beskytte dine enheder mod uønsket netværkstrafik. Du kan bruge brugerdefinerede regler til at definere undtagelser for firewallpolitikker. Du kan f.eks. bruge brugerdefinerede regler til at blokere eller tillade bestemte forbindelser.
+Defender for Business indeholder firewallpolitikker, der hjælper med at beskytte dine enheder mod uønsket netværkstrafik. Du kan bruge brugerdefinerede regler til at definere undtagelser for firewallpolitikker. Du kan f.eks. bruge brugerdefinerede regler til at blokere eller tillade bestemte forbindelser.
 
-Du kan få mere at vide om firewallpolitikker og -indstillinger [under Firewall i Microsoft Defender til virksomheder](mdb-firewall.md).
+Du kan få mere at vide om firewallpolitikker og -indstillinger [under Firewall i Defender for Business](mdb-firewall.md).
 
 **I denne artikel beskrives det, hvordan du**:
 
@@ -99,6 +99,6 @@ Du kan få mere at vide om firewallpolitikker og -indstillinger [under Firewall 
 
 ## <a name="next-steps"></a>Næste trin
 
-- [Få vist og administrer hændelser i Microsoft Defender til virksomheder](mdb-view-manage-incidents.md)
-- [Reagere på og afhjælpe trusler i Microsoft Defender til virksomheder](mdb-respond-mitigate-threats.md)
+- [Få vist og administrer hændelser i Defender for Business](mdb-view-manage-incidents.md)
+- [Reager på og afhjælp trusler i Defender for Business](mdb-respond-mitigate-threats.md)
 - [Gennemse afhjælpningshandlinger i Løsningscenter](mdb-review-remediation-actions.md)

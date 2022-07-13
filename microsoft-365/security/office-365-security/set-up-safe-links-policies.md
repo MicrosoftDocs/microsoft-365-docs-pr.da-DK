@@ -19,12 +19,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de kan få vist, oprette, redigere og slette politikker for sikre links og globale indstillinger for Sikre links i Microsoft Defender for Office 365.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 2d006cd49392b80c826e23ef0d63f954d81249c0
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 7151099b44947bf71f181802ea57ef732ec26858
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487021"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66771389"
 ---
 # <a name="set-up-safe-links-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for sikre links i Microsoft Defender for Office 365
 
@@ -39,13 +39,13 @@ ms.locfileid: "66487021"
 
 Sikre links i [Microsoft Defender for Office 365](defender-for-office-365.md) indeholder URL-scanning af indgående mails i et mailflow og tidspunktet for klikbekræftelse af URL-adresser og links i mails og andre steder. Du kan få flere oplysninger [under Sikre links i Microsoft Defender for Office 365](safe-links.md).
 
-Selvom der ikke er nogen standardpolitik for Sikre links, giver den forudindstillede sikkerhedspolitik for **indbygget beskyttelse** beskyttelse af sikre links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for sikre links). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
+Selvom der ikke er nogen standardpolitik for Sikre links, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** beskyttelse af sikre links til alle modtagere (brugere, der ikke er defineret i brugerdefinerede sikre links eller standard- eller strenge forudindstillede sikkerhedspolitikker). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md).
 
 Du kan også bruge procedurerne i denne artikel til at oprette politikker for sikre links, der gælder for bestemte brugere, grupper eller domæner.
 
 > [!NOTE]
 >
-> Du kan konfigurere de globale indstillinger for beskyttelse af sikre links **uden for** politikkerne for sikre links. Du kan finde instruktioner under [Konfigurer globale indstillinger for Sikre links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
+> Du kan konfigurere listen "Bloker følgende URL-adresser" under de globale indstillinger for beskyttelse af sikre links **uden for** politikkerne for sikre links. Du kan finde instruktioner under [Konfigurer globale indstillinger for Sikre links i Microsoft Defender for Office 365](configure-global-settings-for-safe-links.md).
 >
 > Administratorer bør overveje de forskellige konfigurationsindstillinger for Sikre links. En af de tilgængelige muligheder er at inkludere brugeridentificerbare oplysninger i Sikre links. Denne funktion gør det muligt for sikkerhedshandlinger (SecOps)-teams at undersøge potentielle bruger kompromitterer, foretage korrigerende handlinger og begrænse dyre brud.
 
@@ -123,36 +123,69 @@ Når du opretter en brugerdefineret politik for sikre links på Microsoft 365 De
    > - Modtageren er: romain@contoso.com
    > - Modtageren er medlem af: Direktører
    >
-   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
    >
-   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 
-5. Konfigurer følgende indstillinger på siden **Beskyttelsesindstillinger** , der vises:
-   - **Vælg handlingen for ukendte potentielt skadelige URL-adresser i meddelelser**: Vælg **Til** for at aktivere beskyttelse af sikre links for links i mails. Hvis du slår denne indstilling til, er følgende indstillinger tilgængelige:
-     - **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**: Vælg denne indstilling for at aktivere scanning i realtid af links i mails. Hvis du slår denne indstilling til, er følgende indstilling tilgængelig:
-       - **Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres**: Vælg denne indstilling for at vente på, at scanningen af URL-adresser i realtid fuldføres, før meddelelsen leveres.
-     - **Anvend sikre links på mails, der er sendt i organisationen**: Vælg denne indstilling for at anvende politikken Sikre links på meddelelser mellem interne afsendere og interne modtagere.
-   - **Vælg handlingen for ukendte eller potentielt skadelige URL-adresser i Microsoft Teams**: Vælg **Til** for at aktivere beskyttelse af sikre links for links i Teams. Bemærk, at det kan tage op til 24 timer, før denne indstilling træder i kraft.
+5. Konfigurer følgende indstillinger **på siden Med indstillinger for beskyttelse på siden MED URL-adressen &** :
+
+   - **Handling på potentielt skadelige URL-adresser i sektionen Mails** :
+     - **Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugere klikker på links i mail**: Vælg denne indstilling for at aktivere beskyttelse mod sikre links for links i mails. Hvis du vælger denne indstilling, er følgende indstillinger tilgængelige:
+       - **Anvend sikre links på mails, der er sendt i organisationen**: Vælg denne indstilling for at anvende politikken Sikre links på meddelelser mellem interne afsendere og interne modtagere.
+       - **Anvend scanning af URL-adresser i realtid for mistænkelige links og links, der peger på filer**: Vælg denne indstilling for at slå scanning af links i realtid til i mails. Hvis du vælger denne indstilling, er følgende indstilling tilgængelig:
+         - **Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres**: Vælg denne indstilling for at vente på, at scanningen af URL-adresser i realtid fuldføres, før meddelelsen leveres.
+       - **Undlad at omskrive URL-adresser. Kontroller kun via SafeLinks API**: Vælg denne indstilling for at forhindre ombrydning af URL-adresser. Sikre links kaldes udelukkende via API'er på det tidspunkt, hvor URL-adressen klikkes af Outlook-klienter, der understøtter det.
+
+       - **Undlad at omskrive følgende URL-adresser i mailsektionen** : Klik på **Administrer (nn) URL-adresser** for at give adgang til bestemte URL-adresser, der ellers ville blive blokeret af sikre links.
+
+     > [!NOTE]
+     > Formålet med listen "Omskriv ikke følgende URL-adresser" er at springe ombrydningen af sikre links over for disse URL-adresser. I stedet for at bruge denne liste kan du nu [oprette tilladte URL-adresser på listen over tilladte/blokerede lejere](allow-block-urls.md#create-allow-url-entries).
+
+     1. I pop **op-vinduet Administrer URL-adresser til ikke at omskrive** , der vises, skal du klikke på ![ikonet Tilføj URL-adresser.](../../media/m365-cc-sc-create-icon.png) **Tilføj URL-adresser**.
+     2. I pop **op-vinduet Tilføj URL-adresser** , der vises, skal du skrive den ønskede URL-adresse eller værdi, vælge den post, der vises under feltet, og derefter klikke på **Gem**. Gentag dette trin så mange gange, det er nødvendigt.
+
+        Du kan få mere at vide om syntaksen under [Postsyntaks for listen "Omskriv ikke følgende URL-adresser"](safe-links.md#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
+
+        Hvis du vil fjerne en post, skal du klikke på ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for posten.
+
+        Klik på **Gem**, når du er færdig.
+
+     3. Tilbage på pop **op-vinduet Administrer URL-adresser til ikke at omskrive** skal du klikke på **Udført** eller udfør vedligeholdelse på listen over poster:
+
+        Hvis du vil fjerne poster fra listen, kan du bruge søgeikonet ![.](../../media/m365-cc-sc-search-icon.png) **Søgefelt** for at finde posten.
+
+        Hvis du vil vælge en enkelt post, skal du klikke på værdien i kolonnen **URL-adresser** .
+
+        Hvis du vil markere flere poster én ad gangen, skal du klikke på det tomme område til venstre for værdien.
+
+        Hvis du vil markere alle poster på én, skal du klikke på det tomme område til venstre for kolonneoverskriften **URL-adresser** .
+
+        Når en eller flere poster er markeret, skal du klikke på ![Ikonet Tilføj URL-adresser.](../../media/m365-cc-sc-create-icon.png) Eller ![Ikonet Slet.](../../media/m365-cc-sc-delete-icon.png) ikoner, der vises.
+
+        Klik på **Udført**, når du er færdig.
+
+   - **Afsnittet Handlinger for potentielt skadelige URL-adresser i Microsoft Teams** :
+     - **Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugere klikker på links i Microsoft Teams**: Vælg denne indstilling for at aktivere beskyttelse af sikre links for links i Teams. Bemærk, at det kan tage op til 24 timer, før denne indstilling træder i kraft.
 
      > [!NOTE]
      > Beskyttelse af Sikre links til Microsoft Teams er i øjeblikket ikke tilgængelig i Microsoft 365 GCC High eller Microsoft 365 DoD.
 
-   - **Spor bruger clicks**: Lad denne indstilling være markeret for at aktivere sporing af brugerens klik på URL-adresser i mails.
-   - **Lad brugerne klikke sig videre til den oprindelige URL-adresse**: Fjern markeringen i denne indstilling for at forhindre brugere i at klikke sig videre til den oprindelige URL-adresse på [advarselssider](safe-links.md#warning-pages-from-safe-links).
-   - **Undlad at omskrive følgende URL-adresser**: Giver adgang til de angivne URL-adresser, der ellers ville blive blokeret af Sikre links.
+   - **Afsnittet Handlinger for potentielt skadelige URL-adresser i Microsoft Office-apps** :
+     - **Til: Sikre links kontrollerer en liste over kendte, skadelige links, når brugere klikker på links i Microsoft Office-apps**: Vælg denne indstilling for at aktivere beskyttelse af sikre links for links i filer i understøttede Office-skrivebords-, mobil- og webapps.
 
-     > [!NOTE]
-     > Formålet med listen "Omskriv ikke følgende URL-adresser" er at springe ombrydningen Af sikre links over for de angivne URL-adresser. I stedet for at bruge denne liste kan du nu [oprette tilladte URL-adresser på listen over tilladte/blokerede lejere](allow-block-urls.md#create-allow-url-entries).
+   - **Klik på sektionen Beskyttelsesindstillinger** :
+     - **Spor bruger clicks**: Lad denne indstilling være markeret for at aktivere sporing af brugerens klik på URL-adresser. Hvis du vælger denne indstilling, er følgende indstillinger tilgængelige:
+       - **Lad brugerne klikke sig videre til den oprindelige URL-adresse**: Fjern markeringen i denne indstilling for at forhindre brugere i at klikke sig videre til den oprindelige URL-adresse på [advarselssider](safe-links.md#warning-pages-from-safe-links).
+       - **Vis organisationsbranding på meddelelses- og advarselssider**: Du kan få flere oplysninger om tilpasset branding under [Tilpas Microsoft 365-temaet for din organisation](../../admin/setup/customize-your-organization-theme.md).
 
-     Skriv den ønskede URL-adresse eller værdi i feltet, og klik derefter på **Tilføj**. Gentag dette trin så mange gange, det er nødvendigt.
+   Du kan finde detaljerede oplysninger om disse indstillinger under:
 
-     Hvis du vil fjerne en eksisterende post, skal du klikke på ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for posten.
-
-     Du kan få mere at vide om syntaksen under [Postsyntaks for listen "Omskriv ikke følgende URL-adresser"](safe-links.md#entry-syntax-for-the-do-not-rewrite-the-following-urls-list).
-
-   Du kan finde detaljerede oplysninger om disse indstillinger under [Indstillinger for sikre links for mails](safe-links.md#safe-links-settings-for-email-messages) og [Indstillinger for Sikre links til Microsoft Teams](safe-links.md#safe-links-settings-for-microsoft-teams).
+   - [Indstillinger for sikre links for mails](safe-links.md#safe-links-settings-for-email-messages).
+   - [Indstillinger for sikre links til Microsoft Teams](safe-links.md#safe-links-settings-for-microsoft-teams).
+   - [Indstillinger for sikre links til Office-apps](safe-links.md#safe-links-settings-for-office-apps).
+   - [Klik på Beskyttelsesindstillinger i Politikker for sikre links](safe-links.md#click-protection-settings-in-safe-links-policies)
 
    Du kan få mere at vide om de anbefalede værdier for Standard- og Strict-politikindstillinger under [Politikindstillinger for sikre links](recommended-settings-for-eop-and-office365.md#safe-links-policy-settings).
 
@@ -160,9 +193,9 @@ Når du opretter en brugerdefineret politik for sikre links på Microsoft 365 De
 
 6. På siden **Meddelelse** , der vises, skal du vælge en af følgende værdier for **Hvordan vil du give brugerne besked?**:
    - **Brug standardmeddelelsesteksten**
-   - **Brug brugerdefineret meddelelsestekst**: Hvis du vælger denne værdi (længden må ikke overstige 200 tegn), vises følgende indstillinger:
+   - **Brug brugerdefineret meddelelsestekst**: Hvis du vælger denne værdi, vises følgende indstillinger:
      - **Brug Microsoft Translator til automatisk lokalisering**
-     - **Brugerdefineret meddelelsestekst**: Angiv den brugerdefinerede meddelelsestekst i dette felt.
+     - **Brugerdefineret meddelelsestekst**: Angiv den brugerdefinerede meddelelsestekst i dette felt (længden må ikke overstige 200 tegn).
 
    Klik på **Næste**, når du er færdig.
 
@@ -273,7 +306,7 @@ Oprettelse af en politik for sikre links i PowerShell er en proces med to trin:
 Brug denne syntaks til at oprette en politik for sikre links:
 
 ```PowerShell
-New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-EnableSafeLinksForEmail <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-AllowClickThrough <$true | $false>] [-TrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
+New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-EnableSafeLinksForEmail <$true | $false>] [-EnableSafeLinksForOffice <$true | $false>] [-EnableSafeLinksForTeams <$true | $false>] [-ScanUrls <$true | $false>] [-DeliverMessageAfterScan <$true | $false>] [-EnableForInternalSenders <$true | $false>] [-AllowClickThrough <$true | $false>] [-TrackUserClicks <$true | $false>] [-DoNotRewriteUrls "Entry1","Entry2",..."EntryN"]
 ```
 
 > [!NOTE]
@@ -284,16 +317,17 @@ New-SafeLinksPolicy -Name "<PolicyName>" [-AdminDisplayName "<Comments>"] [-Enab
 
 I dette eksempel oprettes en politik for sikre links med navnet Contoso All med følgende værdier:
 
-- Slå scanning af URL-adresser til og omskrivning i mails.
+- Slå scanning af URL-adresser og omskrivning af URL-adresser til i mails.
+  - Slå scanning af URL-adresser til og omskrivning af interne meddelelser.
+  - Slå scanning i realtid af url-adresser, der klikkes på, til, herunder links, der peger på filer.
+    - Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres.
 - Slå scanning af URL-adresser til i Teams.
-- Slå scanning i realtid af url-adresser, der klikkes på, til, herunder links, der peger på filer.
-- Vent på, at scanningen af URL-adressen fuldføres, før meddelelsen leveres.
-- Slå scanning af URL-adresser til og omskrivning af interne meddelelser.
+- Slå scanning af URL-adresser til i understøttede Office-apps.
 - Spor brugerklik, der er relateret til beskyttelse af sikre links (vi bruger ikke parameteren _TrackUserClicks_ , og standardværdien er $true).
 - Tillad ikke, at brugerne klikker sig igennem til den oprindelige URL-adresse.
 
 ```PowerShell
-New-SafeLinksPolicy -Name "Contoso All" -EnableSafeLinksForEmail $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -AllowClickThrough $false
+New-SafeLinksPolicy -Name "Contoso All" -EnableSafeLinksForEmail $true -EnableSafeLinksForOffice $true -EnableSafeLinksForTeams $true -ScanUrls $true -DeliverMessageAfterScan $true -EnableForInternalSenders $true -AllowClickThrough $false
 ```
 
 Du kan finde detaljerede oplysninger om syntaks og parametre under [New-SafeLinksPolicy](/powershell/module/exchange/new-safelinkspolicy).

@@ -1,5 +1,5 @@
 ---
-title: Konfigurer politikker for vedhæftede filer Pengeskab i Microsoft Defender for Office 365
+title: Konfigurer politikker for vedhæftede filer, der er tillid til, i Microsoft Defender for Office 365
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -14,18 +14,18 @@ search.appverid:
 ms.assetid: 078eb946-819a-4e13-8673-fe0c0ad3a775
 ms.collection:
 - M365-security-compliance
-description: Få mere at vide om, hvordan du definerer politikker for vedhæftede filer Pengeskab for at beskytte din organisation mod skadelige filer i mails.
+description: Få mere at vide om, hvordan du definerer politikker for vedhæftede filer, der er tillid til, for at beskytte din organisation mod skadelige filer i mails.
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 46b69c1bea0f967fe22c031397a8887f3399c99b
-ms.sourcegitcommit: 18bc521a88b7b521bccb0e69d02deac764218087
+ms.openlocfilehash: f93f264ac22be594bfb34601c3f243a2c7c145b4
+ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66115559"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66773153"
 ---
-# <a name="set-up-safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for vedhæftede filer Pengeskab i Microsoft Defender for Office 365
+# <a name="set-up-safe-attachments-policies-in-microsoft-defender-for-office-365"></a>Konfigurer politikker for vedhæftede filer, der er tillid til, i Microsoft Defender for Office 365
 
 [!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
@@ -34,58 +34,58 @@ ms.locfileid: "66115559"
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
 > [!IMPORTANT]
-> Denne artikel er beregnet til erhvervskunder, der har [Microsoft Defender for Office 365](whats-new-in-defender-for-office-365.md). Hvis du er privat bruger og leder efter oplysninger om scanning af vedhæftede filer i Outlook, skal du se [Avanceret Outlook.com-sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
+> Denne artikel er beregnet til erhvervskunder, der har [Microsoft Defender for Office 365](whats-new-in-defender-for-office-365.md). Hvis du er privat bruger og leder efter oplysninger om scanning af vedhæftede filer i Outlook, skal du se [Avanceret Outlook.com sikkerhed](https://support.microsoft.com/office/882d2243-eab9-4545-a58a-b36fee4a46e2).
 
-Pengeskab Vedhæftede filer er en funktion i [Microsoft Defender for Office 365](whats-new-in-defender-for-office-365.md), der bruger et virtuelt miljø til at kontrollere vedhæftede filer i indgående mails, når de er blevet scannet af [beskyttelse mod skadelig software i Exchange Online Protection (EOP),](anti-malware-protection.md) men før de leveres til modtagere. Du kan få flere oplysninger [under Pengeskab Vedhæftede filer i Microsoft Defender for Office 365](safe-attachments.md).
+Sikre vedhæftede filer er en funktion i [Microsoft Defender for Office 365](whats-new-in-defender-for-office-365.md), der bruger et virtuelt miljø til at kontrollere vedhæftede filer i indgående mails, når de er blevet scannet af [antimalwarebeskyttelse i Exchange Online Protection (EOP),](anti-malware-protection.md) men før de leveres til modtagere. Du kan få flere oplysninger [under Sikre vedhæftede filer i Microsoft Defender for Office 365](safe-attachments.md).
 
-Selvom der ikke er nogen standardpolitik for Pengeskab Vedhæftede filer, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** Pengeskab beskyttelse af vedhæftede filer til alle modtagere (brugere, der ikke er defineret i brugerdefinerede Pengeskab politikker for vedhæftede filer). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md). Du kan også bruge procedurerne i denne artikel til at oprette politikker for Pengeskab vedhæftede filer, der gælder for bestemte brugere, grupper eller domæner.
+Selvom der ikke er nogen standardpolitik for vedhæftede filer, giver den forudindstillede sikkerhedspolitik for indbygget **beskyttelse** beskyttelse af vedhæftede filer til alle modtagere (brugere, der ikke er defineret i brugerdefinerede politikker for vedhæftede filer, der er tillid til). Du kan få flere oplysninger [under Forudindstillede sikkerhedspolitikker i EOP og Microsoft Defender for Office 365](preset-security-policies.md). Du kan også bruge procedurerne i denne artikel til at oprette politikker for vedhæftede filer, der er tillid til, og som gælder for bestemte brugere, grupper eller domæner.
 
-Du kan konfigurere politikker for vedhæftede filer Pengeskab på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til berettigede Microsoft 365 organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser, men med Defender for Office 365 abonnementer på tilføjelsesprogrammer).
+Du kan konfigurere politikker for vedhæftede filer, der er tillid til, på Microsoft 365 Defender-portalen eller i PowerShell (Exchange Online PowerShell til berettigede Microsoft 365-organisationer med postkasser i Exchange Online; separat EOP PowerShell til organisationer uden Exchange Online postkasser , men med Defender for Office 365 abonnementer på tilføjelsesprogrammer).
 
-De grundlæggende elementer i en politik for Pengeskab vedhæftede filer er:
+De grundlæggende elementer i en politik for sikre vedhæftede filer er:
 
-- **Politikken for sikker vedhæftede filer**: Angiver handlingerne for ukendte malwareregistreringer, om der skal sendes meddelelser med vedhæftede filer med malware til en angivet mailadresse, og om der skal leveres meddelelser, hvis Pengeskab scanning af vedhæftede filer ikke kan fuldføres.
+- **Politikken for sikre vedhæftede filer**: Angiver handlingerne for ukendte malwareregistreringer, om der skal sendes meddelelser med vedhæftede filer med malware til en angivet mailadresse, og om der skal leveres meddelelser, hvis scanningen af sikre vedhæftede filer ikke kan fuldføres.
 - **Reglen for sikker vedhæftet fil**: Angiver prioritets- og modtagerfiltrene (hvem politikken gælder for).
 
-Forskellen mellem disse to elementer er ikke indlysende, når du administrerer politikker for Pengeskab vedhæftede filer på Microsoft 365 Defender portalen:
+Forskellen mellem disse to elementer er ikke indlysende, når du administrerer politikker for vedhæftede filer i Microsoft 365 Defender portalen:
 
-- Når du opretter en politik for vedhæftede filer Pengeskab, opretter du faktisk en regel for sikre vedhæftede filer og den tilknyttede politik for vedhæftede filer på samme tid ved hjælp af det samme navn for begge.
-- Når du ændrer en politik for vedhæftede filer i Pengeskab, ændrer indstillinger, der er relateret til navn, prioritet, aktiveret eller deaktiveret, og modtagerfiltre reglen for sikre vedhæftede filer. Alle andre indstillinger ændrer den tilknyttede politik for sikre vedhæftede filer.
-- Når du fjerner en politik for vedhæftede filer Pengeskab, fjernes reglen for sikre vedhæftede filer og den tilknyttede politik for sikre vedhæftede filer.
+- Når du opretter en politik for sikre vedhæftede filer, opretter du faktisk en regel for sikre vedhæftede filer og den tilknyttede politik for sikre vedhæftede filer samtidig med det samme navn for begge.
+- Når du ændrer en politik for vedhæftede filer, ændrer indstillinger, der er relateret til navn, prioritet, aktiveret eller deaktiveret, og modtagerfiltre reglen for sikre vedhæftede filer. Alle andre indstillinger ændrer den tilknyttede politik for sikre vedhæftede filer.
+- Når du fjerner en politik for sikre vedhæftede filer, fjernes reglen for sikre vedhæftede filer og den tilknyttede politik for sikre vedhæftede filer.
 
-I Exchange Online PowerShell eller enkeltstående EOP PowerShell kan du administrere politikken og reglen separat. Du kan få flere oplysninger i afsnittet [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for Pengeskab vedhæftede filer](#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies) senere i denne artikel.
+I Exchange Online PowerShell eller enkeltstående EOP PowerShell kan du administrere politikken og reglen separat. Du kan få flere oplysninger i afsnittet [Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for vedhæftede filer, der er tillid til](#use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies) senere i denne artikel.
 
 > [!NOTE]
-> I området med globale indstillinger i Pengeskab indstillinger for vedhæftede filer konfigurerer du funktioner, der ikke er afhængige af Pengeskab politikker for vedhæftede filer. Du kan finde instruktioner under [Slå vedhæftede filer til Pengeskab for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md) og [Pengeskab dokumenter i Microsoft 365 E5](safe-docs.md).
+> I området med globale indstillinger under indstillinger for sikre vedhæftede filer kan du konfigurere funktioner, der ikke er afhængige af politikker for vedhæftede filer, der er tillid til. Du kan finde instruktioner under [Slå sikre vedhæftede filer til for SharePoint, OneDrive og Microsoft Teams](turn-on-mdo-for-spo-odb-and-teams.md) og [Sikre dokumenter i Microsoft 365 E5](safe-docs.md).
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Pengeskab Vedhæftede filer**, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Vedhæftede filer, der er tillid** til, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tilladelser, før du kan udføre procedurerne i denne artikel:
-  - Hvis du vil oprette, redigere og slette Pengeskab politikker for vedhæftede filer, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** på Microsoft 365 Defender portalen **og** medlem af rollegruppen **Organisationsadministration** i Exchange Online.
-  - Hvis du vil have skrivebeskyttet adgang til Pengeskab politikker for vedhæftede filer, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser** på Microsoft 365 Defender-portalen.
+  - Hvis du vil oprette, redigere og slette politikker for vedhæftede filer, skal du være medlem af rollegrupperne **Organisationsadministration** eller **Sikkerhedsadministrator** på Microsoft 365 Defender portalen **og** medlem af rollegruppen **Organisationsadministration** i Exchange Online.
+  - Hvis du vil have skrivebeskyttet adgang til politikker for sikre vedhæftede filer, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser** på Microsoft 365 Defender-portalen.
 
   Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md) og [Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   **Noter**:
 
-  - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
-- Du kan se vores anbefalede indstillinger for Pengeskab politikker for vedhæftede filer [under Pengeskab Indstillinger for vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
+- Du kan se vores anbefalede indstillinger for politikker for sikre [vedhæftede filer under Indstillinger for vedhæftede filer, der er tillid](recommended-settings-for-eop-and-office365.md#safe-attachments-settings) til.
 
 - Der kan gå op til 30 minutter, før en ny eller opdateret politik anvendes.
 
-## <a name="use-the-microsoft-365-defender-portal-to-create-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at oprette Pengeskab politikker for vedhæftede filer
+## <a name="use-the-microsoft-365-defender-portal-to-create-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at oprette politikker for vedhæftede filer, der er tillid til
 
-Når du opretter en brugerdefineret politik for vedhæftede filer Pengeskab på portalen Microsoft 365 Defender, oprettes reglen for sikre vedhæftede filer og den tilknyttede politik for sikre vedhæftede filer samtidig med det samme navn for begge.
+Når du opretter en brugerdefineret politik for vedhæftede filer, der er tillid til, på portalen Microsoft 365 Defender oprettes reglen for sikker vedhæftede filer og den tilknyttede politik for sikre vedhæftede filer samtidig med det samme navn for begge.
 
-1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab Vedhæftede filer**, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Vedhæftede filer, der er tillid** til, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. Klik på ![Opret ikon **på siden Pengeskab vedhæftede filer**.](../../media/m365-cc-sc-create-icon.png) **Opret**.
+2. Klik på Ikonet Opret på ![siden **Vedhæftede filer, der er tillid** til.](../../media/m365-cc-sc-create-icon.png) **Opret**.
 
 3. Politikguiden åbnes. Konfigurer følgende indstillinger på siden **Navngiv din politik** :
    - **Navn**: Angiv et entydigt, beskrivende navn til politikken.
@@ -114,32 +114,32 @@ Når du opretter en brugerdefineret politik for vedhæftede filer Pengeskab på 
    > - Modtageren er: romain@contoso.com
    > - Modtageren er medlem af: Direktører
    >
-   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af koncernerne Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
+   > Politikken anvendes _kun_ på romain@contoso.com, hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, anvendes politikken ikke på ham.
    >
-   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _kun_ på romain@contoso.com, hvis han også er medlem af grupperne Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
+   > Hvis du på samme måde bruger det samme modtagerfilter som en undtagelse til politikken, anvendes politikken ikke _på romain@contoso.com kun_ , hvis han også er medlem af gruppen Direktører. Hvis han ikke er medlem af gruppen, gælder politikken stadig for ham.
 
    Klik på **Næste**, når du er færdig.
 
-5. Konfigurer følgende indstillinger på siden **Indstillinger**:
+5. Konfigurer følgende indstillinger på siden **Indstillinger** :
 
-   - **Pengeskab vedhæftede filer ukendt malware-svar**: Vælg en af følgende værdier:
+   - **Ukendte malwaresvar for vedhæftede filer, der er tillid** til: Vælg en af følgende værdier:
      - **Fra**: Vi anbefaler normalt ikke denne værdi.
      - **Skærm**
      - **Blok**: Dette er standardværdien og den anbefalede værdi i standard- og [strenge forudindstillede sikkerhedspolitikker](preset-security-policies.md).
      - **Erstatte**
      - **Dynamisk levering (prøveversion)**
 
-     Disse værdier er forklaret i [Pengeskab politikindstillinger for vedhæftede filer](safe-attachments.md#safe-attachments-policy-settings).
+     Disse værdier er forklaret i [politikindstillingerne for vedhæftede filer, der er tillid til](safe-attachments.md#safe-attachments-policy-settings).
 
-   - **Karantænepolitik**: Vælg den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af Pengeskab Vedhæftede filer (**Bloker**, **Erstat** eller **Dynamisk levering**). Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
+   - **Karantænepolitik**: Vælg den karantænepolitik, der gælder for meddelelser, der er sat i karantæne af Sikre vedhæftede filer (**Bloker**, **Erstat** eller **Dynamisk levering**). Karantænepolitikker definerer, hvad brugerne kan gøre for at sætte meddelelser i karantæne, og om brugerne modtager karantænemeddelelser. Du kan få flere oplysninger under [Karantænepolitikker](quarantine-policies.md).
 
-     En tom værdi betyder, at standard karantænepolitikken bruges (AdminOnlyAccessPolicy til registrering af mails af Pengeskab Attachments). Når du senere redigerer politikken for Pengeskab vedhæftede filer eller får vist indstillingerne, vises standardnavnet for karantænepolitikken.
+     En tom værdi betyder, at standard karantænepolitikken bruges (AdminOnlyAccessPolicy til mailregistreringer af sikre vedhæftede filer). Når du senere redigerer politikken for vedhæftede filer, eller du får vist indstillingerne, vises standardnavnet for karantænepolitikken.
 
    - **Omdiriger meddelelser med registrerede vedhæftede filer**: Hvis du vælger **Aktivér omdirigering**, kan du angive en mailadresse i feltet **Send meddelelser, der indeholder blokerede, overvågede eller erstattede vedhæftede filer til den angivne mailadresse** for at sende meddelelser, der indeholder vedhæftede malwarefiler, til analyse og undersøgelse.
 
-     Anbefalingen for Standard- og Strict-politikindstillinger er at aktivere omdirigering. Du kan få flere oplysninger under [Pengeskab indstillinger for vedhæftede filer](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
+     Anbefalingen for Standard- og Strict-politikindstillinger er at aktivere omdirigering. Du kan få flere oplysninger under [Indstillinger for vedhæftede filer, der er tillid til](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
 
-   - **Anvend Pengeskab registreringssvar for vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)**: Den handling, der er angivet af **Pengeskab Vedhæftede filer ukendt malwaresvar**, udføres på meddelelser, selvom Pengeskab scanning af vedhæftede filer ikke kan fuldføres. Hvis du har valgt denne indstilling, skal du altid vælge **Aktivér omdirigering** og angive en mailadresse for at sende meddelelser, der indeholder vedhæftede filer med skadelig software. Ellers kan meddelelser gå tabt.
+   - **Anvend registreringssvaret Sikre vedhæftede filer, hvis scanningen ikke kan fuldføres (timeout eller fejl)**: Den handling, der er angivet af **Sikre vedhæftede filer, ukendt malwaresvar** , udføres på meddelelser, selvom scanningen af sikre vedhæftede filer ikke kan fuldføres. Hvis du har valgt denne indstilling, skal du altid vælge **Aktivér omdirigering** og angive en mailadresse for at sende meddelelser, der indeholder vedhæftede filer med skadelig software. Ellers kan meddelelser gå tabt.
 
    Klik på **Næste**, når du er færdig.
 
@@ -149,32 +149,32 @@ Når du opretter en brugerdefineret politik for vedhæftede filer Pengeskab på 
 
 7. Klik på **Udført** på den bekræftelsesside, der vises.
 
-## <a name="use-the-microsoft-365-defender-portal-to-view-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at få vist politikker for vedhæftede filer Pengeskab
+## <a name="use-the-microsoft-365-defender-portal-to-view-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at få vist politikker for vedhæftede filer, der er tillid til
 
-1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab Vedhæftede filer**, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Vedhæftede filer, der er tillid** til, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. På siden **Pengeskab Vedhæftede filer** vises følgende egenskaber på listen over politikker:
+2. På siden **Vedhæftede filer** , der er tillid til vises følgende egenskaber på listen over politikker:
    - **Navn**
    - **Status**
    - **Prioritet**
 
 3. Når du vælger en politik ved at klikke på navnet, vises politikindstillingerne i et pop op-vindue.
 
-## <a name="use-the-microsoft-365-defender-portal-to-modify-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at redigere Pengeskab politikker for vedhæftede filer
+## <a name="use-the-microsoft-365-defender-portal-to-modify-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at redigere politikker for vedhæftede filer, der er tillid til
 
-1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab Vedhæftede filer**, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Vedhæftede filer, der er tillid** til, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. På siden **Pengeskab Vedhæftede filer** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Vedhæftede filer, der er tillid til** skal du vælge en politik på listen ved at klikke på navnet.
 
-3. I det pop op-vindue med politikoplysninger, der vises, skal du vælge **Rediger** i hvert afsnit for at redigere indstillingerne i sektionen. Du kan få flere oplysninger om indstillingerne i afsnittet [Brug portalen Microsoft 365 Defender til at oprette Pengeskab vedhæftede filer](#use-the-microsoft-365-defender-portal-to-create-safe-attachments-policies) tidligere i denne artikel.
+3. I det pop op-vindue med politikoplysninger, der vises, skal du vælge **Rediger** i hvert afsnit for at redigere indstillingerne i sektionen. Du kan få flere oplysninger om indstillingerne i afsnittet [Brug portalen Microsoft 365 Defender til at oprette politikker for vedhæftede filer, der er tillid til](#use-the-microsoft-365-defender-portal-to-create-safe-attachments-policies) tidligere i denne artikel.
 
 Hvis du vil aktivere eller deaktivere en politik eller angive prioritetsrækkefølgen for politikken, skal du se følgende afsnit.
 
-### <a name="enable-or-disable-safe-attachments-policies"></a>Aktivér eller deaktiver politikker for vedhæftede filer Pengeskab
+### <a name="enable-or-disable-safe-attachments-policies"></a>Aktivér eller deaktiver politikker for vedhæftede filer, der er tillid til
 
-1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab Vedhæftede filer**, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Vedhæftede filer, der er tillid** til, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. På siden **Pengeskab Vedhæftede filer** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Vedhæftede filer, der er tillid til** skal du vælge en politik på listen ved at klikke på navnet.
 
 3. Øverst i pop op-vinduet med politikoplysninger, der vises, kan du se en af følgende værdier:
    - **Politik slået fra**: Hvis du vil aktivere politikken, skal du klikke på ![Slå ikonet til.](../../media/m365-cc-sc-turn-on-off-icon.png) **Aktivér** .
@@ -186,21 +186,21 @@ Hvis du vil aktivere eller deaktivere en politik eller angive prioritetsrækkef�
 
 Tilbage på hovedpolitiksiden **vil statusværdien** for politikken være **Til** eller **Fra**.
 
-### <a name="set-the-priority-of-safe-attachments-policies"></a>Angiv prioriteten for politikker for vedhæftede filer Pengeskab
+### <a name="set-the-priority-of-safe-attachments-policies"></a>Angiv prioriteten for politikker for sikre vedhæftede filer
 
-Som standard får Pengeskab politikker for vedhæftede filer en prioritet, der er baseret på den rækkefølge, de blev oprettet i (nyere politikker har lavere prioritet end ældre politikker). Et lavere prioritetsnummer angiver en højere prioritet for politikken (0 er den højeste), og politikker behandles i prioriteret rækkefølge (politikker med højere prioritet behandles før politikker med lavere prioritet). Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
+Politikker for sikre vedhæftede filer får som standard en prioritet, der er baseret på den rækkefølge, de blev oprettet i (nyere politikker har lavere prioritet end ældre politikker). Et lavere prioritetsnummer angiver en højere prioritet for politikken (0 er den højeste), og politikker behandles i prioriteret rækkefølge (politikker med højere prioritet behandles før politikker med lavere prioritet). Der kan ikke være to politikker, der har samme prioritet, og behandlingen af politikker stopper, når den første politik er anvendt.
 
 Du kan finde flere oplysninger om prioritetsrækkefølgen, og hvordan flere politikker evalueres og anvendes, under [Beskyttelse af mailrækkefølge og prioritet](how-policies-and-protections-are-combined.md).
 
-Pengeskab Politikker for vedhæftede filer vises i den rækkefølge, de behandles i (den første politik har **prioritetsværdien** 0).
+Politikker for vedhæftede filer, der er tillid til, vises i den rækkefølge, de behandles (den første politik har **prioritetsværdien** 0).
 
-**Bemærk**! I Microsoft 365 Defender-portalen kan du kun ændre prioriteten for politikken Pengeskab Vedhæftede filer, når du har oprettet den. I PowerShell kan du tilsidesætte standardprioriteten, når du opretter reglen for sikker vedhæftede filer (hvilket kan påvirke prioriteten af eksisterende regler).
+**Bemærk**! På Microsoft 365 Defender-portalen kan du kun ændre prioriteten for politikken Vedhæftede filer, der er tillid til, når du har oprettet den. I PowerShell kan du tilsidesætte standardprioriteten, når du opretter reglen for sikker vedhæftede filer (hvilket kan påvirke prioriteten af eksisterende regler).
 
 Hvis du vil ændre prioriteten for en politik, skal du klikke på **Forøg prioritet** eller **Formindsk prioritet** i egenskaberne for politikken (du kan ikke direkte ændre **prioritetsnummeret** på portalen Microsoft 365 Defender). Det giver kun mening at ændre prioriteten for en politik, hvis du har flere politikker.
 
-1. På Microsoft 365 Defender-portalen skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**.
+1. I Microsoft 365 Defender-portalen skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**.
 
-2. På siden **Pengeskab Vedhæftede filer** skal du vælge en politik på listen ved at klikke på navnet.
+2. På siden **Vedhæftede filer, der er tillid til** skal du vælge en politik på listen ved at klikke på navnet.
 
 3. Øverst i pop op-vinduet med politikoplysninger, der vises, kan du se **Forøg prioritet** eller **Formindsk prioritet** baseret på den aktuelle prioritetsværdi og antallet af politikker:
    - Politikken med **prioritetsværdien** **0** har kun indstillingen **Formindsk prioritet** tilgængelig.
@@ -211,19 +211,19 @@ Hvis du vil ændre prioriteten for en politik, skal du klikke på **Forøg prior
 
 4. Når du er færdig, skal du klikke på **Luk** i pop op-vinduet med politikoplysninger.
 
-## <a name="use-the-microsoft-365-defender-portal-to-remove-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at fjerne politikker for vedhæftede filer Pengeskab
+## <a name="use-the-microsoft-365-defender-portal-to-remove-safe-attachments-policies"></a>Brug Microsoft 365 Defender-portalen til at fjerne politikker for vedhæftede filer, der er tillid til
 
-1. På portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Pengeskab Vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Pengeskab Vedhæftede filer**, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Sikre vedhæftede filer** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Vedhæftede filer, der er tillid** til, skal du bruge <https://security.microsoft.com/safeattachmentv2>.
 
-2. På siden **Pengeskab Vedhæftede filer** skal du vælge en brugerdefineret politik på listen ved at klikke på navnet på politikken.
+2. På siden **Vedhæftede filer, der er tillid** til skal du vælge en brugerdefineret politik på listen ved at klikke på navnet på politikken.
 
 3. Øverst i pop op-vinduet med politikoplysninger, der vises, skal du klikke på ![ikonet Flere handlinger.](../../media/m365-cc-sc-more-actions-icon.png) **Flere handlinger** \> ![Ikonet](../../media/m365-cc-sc-delete-icon.png) Slet politik **Slet politik**.
 
 4. Klik på **Ja** i den bekræftelsesdialogboks, der vises.
 
-## <a name="use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies"></a>Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for vedhæftede filer Pengeskab
+## <a name="use-exchange-online-powershell-or-standalone-eop-powershell-to-configure-safe-attachments-policies"></a>Brug Exchange Online PowerShell eller enkeltstående EOP PowerShell til at konfigurere politikker for sikre vedhæftede filer
 
-Som tidligere beskrevet består en politik for Pengeskab Vedhæftede filer af en politik for sikker vedhæftede filer og en regel for sikker vedhæftede filer.
+Som tidligere beskrevet består en politik for sikre vedhæftede filer af en politik for sikker vedhæftede filer og en regel for sikker vedhæftede filer.
 
 I PowerShell er forskellen mellem politikker for sikre vedhæftede filer og regler for sikker vedhæftede filer synlig. Du administrerer politikker for sikre vedhæftede filer ved hjælp **\*af cmdlet'erne -SafeAttachmentPolicy** , og du administrerer regler for sikre vedhæftede filer ved hjælp **\*af -SafeAttachmentRule-cmdlet'erne** .
 
@@ -231,9 +231,9 @@ I PowerShell er forskellen mellem politikker for sikre vedhæftede filer og regl
 - I PowerShell kan du ændre indstillingerne i politikken for sikker vedhæftede filer og reglen for sikker vedhæftet fil separat.
 - Når du fjerner en politik for sikker vedhæftede filer fra PowerShell, fjernes den tilsvarende regel for sikre vedhæftede filer ikke automatisk og omvendt.
 
-### <a name="use-powershell-to-create-safe-attachments-policies"></a>Brug PowerShell til at oprette politikker for Pengeskab vedhæftede filer
+### <a name="use-powershell-to-create-safe-attachments-policies"></a>Brug PowerShell til at oprette politikker for sikre vedhæftede filer
 
-Oprettelse af en politik for vedhæftede filer Pengeskab i PowerShell er en proces med to trin:
+Oprettelse af en politik for sikre vedhæftede filer i PowerShell er en proces med to trin:
 
 1. Opret politikken for sikker vedhæftede filer.
 2. Opret reglen for sikker vedhæftet fil, der angiver politikken for sikker vedhæftet fil, som reglen gælder for.
@@ -258,10 +258,10 @@ New-SafeAttachmentPolicy -Name "<PolicyName>" -Enable $true [-AdminDisplayName "
 
 I dette eksempel oprettes en politik for sikre vedhæftede filer med navnet Contoso All med følgende værdier:
 
-- Bloker meddelelser, der findes at indeholde malware ved Pengeskab scanning af dokumenter (vi bruger ikke parameteren _Action_, og standardværdien er `Block`).
+- Bloker meddelelser, der findes at indeholde malware ved scanning af sikre dokumenter (vi bruger ikke parameteren _Action_ , og standardværdien er `Block`).
 - Standard [karantænepolitikken](quarantine-policies.md) bruges (AdminOnlyAccessPolicy), fordi vi ikke bruger parameteren _QuarantineTag_ .
 - Omdirigering er aktiveret, og meddelelser, der indeholder malware, sendes til sec-ops@contoso.com til analyse og undersøgelse.
-- Hvis Pengeskab scanning af vedhæftede filer ikke er tilgængelig eller støder på fejl, skal du ikke levere meddelelsen (vi bruger ikke parameteren _ActionOnError_, og standardværdien er `$true`).
+- Hvis scanning af vedhæftede filer, der er tillid til, ikke er tilgængelig eller støder på fejl, skal du ikke levere meddelelsen (vi bruger ikke parameteren _ActionOnError_ , og standardværdien er `$true`).
 
 ```PowerShell
 New-SafeAttachmentPolicy -Name "Contoso All" -Enable $true -Redirect $true -RedirectAddress sec-ops@contoso.com
@@ -270,7 +270,7 @@ New-SafeAttachmentPolicy -Name "Contoso All" -Enable $true -Redirect $true -Redi
 Du kan finde detaljerede oplysninger om syntaks og parametre under [New-SafeAttachmentPolicy](/powershell/module/exchange/new-safeattachmentpolicy).
 
 > [!NOTE]
-> Du kan finde detaljerede instruktioner til, hvordan du angiver den [karantænepolitik](quarantine-policies.md), der skal bruges i en politik for sikre [vedhæftede filer, under Brug PowerShell til at angive karantænepolitikken i Pengeskab politikker for vedhæftede filer](quarantine-policies.md#safe-attachments-policies-in-powershell).
+> Du kan finde detaljerede instruktioner til, hvordan du angiver den [karantænepolitik](quarantine-policies.md) , der skal bruges i en politik for sikre vedhæftede filer, under [Brug PowerShell til at angive karantænepolitikken i Politikker for vedhæftede filer, der er tillid til](quarantine-policies.md#safe-attachments-policies-in-powershell).
 
 #### <a name="step-2-use-powershell-to-create-a-safe-attachment-rule"></a>Trin 2: Brug PowerShell til at oprette en sikker regel for vedhæftede filer
 
@@ -349,7 +349,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Get-SafeAtta
 
 ### <a name="use-powershell-to-modify-safe-attachment-policies"></a>Brug PowerShell til at ændre politikker for sikre vedhæftede filer
 
-Du kan ikke omdøbe en politik for sikre vedhæftede filer i PowerShell ( **Cmdlet'en Set-SafeAttachmentPolicy** har ingen _navneparameter_ ). Når du omdøber en politik for vedhæftede filer Pengeskab på Microsoft 365 Defender-portalen, omdøber du kun _reglen_ for sikre vedhæftede filer.
+Du kan ikke omdøbe en politik for sikre vedhæftede filer i PowerShell ( **Cmdlet'en Set-SafeAttachmentPolicy** har ingen _navneparameter_ ). Når du omdøber en politik for sikre vedhæftede filer på Microsoft 365 Defender-portalen, omdøber du kun _reglen_ for sikre vedhæftede filer.
 
 Ellers er de samme indstillinger tilgængelige, når du opretter en politik for sikker vedhæftede filer, som beskrevet i [trin 1: Brug PowerShell til at oprette en politik for sikker vedhæftede filer](#step-1-use-powershell-to-create-a-safe-attachment-policy) tidligere i denne artikel.
 
@@ -362,7 +362,7 @@ Set-SafeAttachmentPolicy -Identity "<PolicyName>" <Settings>
 Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-SafeAttachmentPolicy](/powershell/module/exchange/set-safeattachmentpolicy).
 
 > [!NOTE]
-> Du kan finde detaljerede instruktioner til, hvordan du angiver den [karantænepolitik](quarantine-policies.md), der skal bruges i en politik for sikre [vedhæftede filer, under Brug PowerShell til at angive karantænepolitikken i Pengeskab politikker for vedhæftede filer](quarantine-policies.md#safe-attachments-policies-in-powershell).
+> Du kan finde detaljerede instruktioner til, hvordan du angiver den [karantænepolitik](quarantine-policies.md) , der skal bruges i en politik for sikre vedhæftede filer, under [Brug PowerShell til at angive karantænepolitikken i Politikker for vedhæftede filer, der er tillid til](quarantine-policies.md#safe-attachments-policies-in-powershell).
 
 ### <a name="use-powershell-to-modify-safe-attachment-rules"></a>Brug PowerShell til at ændre regler for sikre vedhæftede filer
 
@@ -380,7 +380,7 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Set-SafeAtta
 
 ### <a name="use-powershell-to-enable-or-disable-safe-attachment-rules"></a>Brug PowerShell til at aktivere eller deaktivere regler for sikre vedhæftede filer
 
-Aktivering eller deaktivering af en regel for sikre vedhæftede filer i PowerShell aktiverer eller deaktiverer hele politikken for vedhæftede filer Pengeskab (reglen for sikre vedhæftede filer og den tildelte politik for sikre vedhæftede filer).
+Aktivering eller deaktivering af en regel for sikre vedhæftede filer i PowerShell aktiverer eller deaktiverer hele politikken for vedhæftede filer, der er tillid til (reglen for sikker vedhæftede filer og den tildelte politik for sikker vedhæftede filer).
 
 Hvis du vil aktivere eller deaktivere en regel for sikre vedhæftede filer i PowerShell, skal du bruge denne syntaks:
 
@@ -460,9 +460,9 @@ Du kan finde detaljerede oplysninger om syntaks og parametre under [Remove-SafeA
 
 ## <a name="how-do-you-know-these-procedures-worked"></a>Hvordan ved du, at disse procedurer virkede?
 
-Benyt en af følgende fremgangsmåder for at bekræfte, at du har oprettet, ændret eller fjernet Pengeskab politikker for vedhæftede filer:
+Benyt en af følgende fremgangsmåder for at bekræfte, at du har oprettet, ændret eller fjernet politikker for vedhæftede filer, der er tillid til:
 
-- Kontrollér listen over politikker, deres **statusværdier** og deres **prioritetsværdier** på siden **Pengeskab vedhæftede filer** på portalen Microsoft 365 Defender på <https://security.microsoft.com/safeattachmentv2>. Hvis du vil have vist flere oplysninger, skal du vælge politikken på listen ved at klikke på navnet og få vist detaljerne i fluesedlen.
+- Kontrollér listen over politikker, deres **Statusværdier** og deres **prioritetsværdier** på siden **Vedhæftede filer, der er tillid** til på portalen Microsoft 365 Defender på <https://security.microsoft.com/safeattachmentv2>. Hvis du vil have vist flere oplysninger, skal du vælge politikken på listen ved at klikke på navnet og få vist detaljerne i fluesedlen.
 
 - I Exchange Online PowerShell eller Exchange Online Protection PowerShell skal du erstatte \<Name\> med navnet på politikken eller reglen, køre følgende kommando og kontrollere indstillingerne:
 
@@ -474,4 +474,4 @@ Benyt en af følgende fremgangsmåder for at bekræfte, at du har oprettet, ænd
   Get-SafeAttachmentRule -Identity "<Name>" | Format-List
   ```
 
-Hvis du vil kontrollere, at Pengeskab Vedhæftede filer scanner meddelelser, skal du kontrollere de tilgængelige Defender for Office 365 rapporter. Du kan få flere oplysninger under [Få vist rapporter for Defender for Office 365](view-reports-for-mdo.md) og [Brug Stifinder på Microsoft 365 Defender-portalen](threat-explorer.md).
+Hvis du vil kontrollere, at Sikre vedhæftede filer scanner meddelelser, skal du kontrollere de tilgængelige Defender for Office 365 rapporter. Du kan få flere oplysninger under [Få vist rapporter for Defender for Office 365](view-reports-for-mdo.md) og [Brug Stifinder på Microsoft 365 Defender-portalen](threat-explorer.md).
