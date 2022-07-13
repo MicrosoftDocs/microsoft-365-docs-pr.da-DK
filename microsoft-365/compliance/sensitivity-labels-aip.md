@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office-apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: 69bef8c18398a371f53fc88e17d261790b3ab16f
-ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
+ms.openlocfilehash: 79d4ed4f81c3768ec85c17699257a18678ef82d1
+ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66696156"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66756666"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office-apps
 
@@ -176,6 +176,7 @@ Følgende konfigurationer fra AIP-tilføjelsesprogrammet understøttes endnu ikk
 Selvom der hele tiden tilføjes nye funktioner til indbygget mærkning, understøtter Office-tilføjelsesprogrammet AIP følgende funktioner, der ikke er planlagt til at være tilgængelige i fremtidige versioner til indbygget mærkning:
 
 - Anvendelse af mærkater i Microsoft Office 97-2003-formater, f.eks. .doc filer
+- Logføring af lokalt forbrug i Windows-hændelsesloggen
 - Computere, der er afbrudt permanent
 - Enkeltstående udgaver af Office (også kaldet "Office Perpetual") i stedet for abonnementsbaserede
 

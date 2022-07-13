@@ -19,12 +19,12 @@ ms.collection:
 description: Hvad er bedste praksis for Exchange Online Protection (EOP) og Defender for Office 365 sikkerhedsindstillinger? Hvad er de aktuelle anbefalinger til standardbeskyttelse? Hvad skal bruges, hvis du vil være mere streng? Og hvad ekstra får du, hvis du også bruger Defender for Office 365?
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 7798bc177cf6d3a864644fdfa6563ced14cd0ab8
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 4abfee62caea6e11b525f558bb4e6e8408655c17
+ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489766"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66756821"
 ---
 # <a name="recommended-settings-for-eop-and-microsoft-defender-for-office-365-security"></a>Anbefalede indstillinger for EOP og Microsoft Defender for Office 365 sikkerhed
 
@@ -283,9 +283,6 @@ I PowerShell skal du bruge [Set-AtpPolicyForO365-cmdlet'en](/powershell/module/e
 |Navn på sikkerhedsfunktion|Standard|Indbygget beskyttelse|Kommenter|
 |---|:---:|:---:|---|
 |**Bloker følgende URL-adresser** <p> _ExcludedUrls_|Tom <p> `$null`|Tom <p> `$null`|Vi har ingen specifik anbefaling til denne indstilling. <p> Du kan få flere oplysninger på [listen "Bloker følgende URL-adresser" for Sikre links](safe-links.md#block-the-following-urls-list-for-safe-links). <p> **Bemærk**! Du kan nu administrere blokerings-URL-adresser på [listen over tilladte/blokerede lejere](allow-block-urls.md#create-block-url-entries-in-the-tenant-allowblock-list). Listen "Bloker følgende URL-adresser" frarådes. Vi forsøger at overføre eksisterende poster fra listen "Bloker følgende URL-adresser" for at blokere URL-adresser på listen over tilladte/blokerede lejere. Meddelelser, der indeholder den blokerede URL-adresse, sættes i karantæne.|
-|**Brug sikre links i Office 365 apps** <p> _EnableSafeLinksForO365Clients_|På <p> `$true`|På <p> `$true`|Brug Sikre links i understøttede Office 365 skrivebords- og mobilapps (iOS og Android). Du kan få flere oplysninger under [Indstillinger for sikre links for Office 365 apps](safe-links.md#safe-links-settings-for-office-365-apps).|
-|**Spor ikke, hvornår brugere klikker på beskyttede links i Office 365 apps** <p> _TrackClicks_|På <p> `$false`|Ud <p> `$true`|Hvis du deaktiverer denne indstilling (indstilling _af TrackClicks_ til `$true`), spores brugerklik i understøttede Office 365 apps.|
-|**Lad ikke brugere klikke sig igennem til den oprindelige URL-adresse i Office 365 apps** <p> _AllowClickThrough_|På <p> `$false`|På <p> `$false`|Hvis du aktiverer denne indstilling (indstilling _AllowClickThrough_ til ), forhindres det, at `$false`der klikkes videre til den oprindelige URL-adresse i understøttede Office 365 apps.|
 
 #### <a name="safe-links-policy-settings"></a>Politikindstillinger for sikre links
 
@@ -310,6 +307,9 @@ I PowerShell skal du bruge cmdlet'erne [New-SafeLinksPolicy](/powershell/module/
 |**Omskriv ikke følgende URL-adresser i mail** <p> _DoNotRewriteUrls_|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Ikke markeret <p> Tom|Vi har ingen specifik anbefaling til denne indstilling. <p> **Bemærk**! Formålet med listen "Omskriv ikke følgende URL-adresser" er at springe ombrydningen Af sikre links over for de angivne URL-adresser. I stedet for at bruge denne liste kan du nu [oprette tilladte URL-adresser på listen over tilladte/blokerede lejere](allow-block-urls.md#create-allow-url-entries).|
 |**Handling for potentielt skadelige URL-adresser i Microsoft Teams**||||||
 |**Om: Sikre links kontrollerer en liste over kendte, skadelige links, når brugerne klikker på links i Microsoft Teams** <p> _EnableSafeLinksForTeams_|Ikke markeret <p> `$false`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
+|**Brug sikre links i Office 365 apps** <p> _EnableSafeLinksForO365Clients_|På <p> `$true`|På <p> `$true`|Brug Sikre links i understøttede Office 365 skrivebords- og mobilapps (iOS og Android). Du kan få flere oplysninger under [Indstillinger for sikre links for Office 365 apps](safe-links.md#safe-links-settings-for-office-365-apps).|
+|**Spor ikke, hvornår brugere klikker på beskyttede links i Office 365 apps** <p> _TrackClicks_|På <p> `$false`|Ud <p> `$true`|Hvis du deaktiverer denne indstilling (indstilling _af TrackClicks_ til `$true`), spores brugerklik i understøttede Office 365 apps.|
+|**Lad ikke brugere klikke sig igennem til den oprindelige URL-adresse i Office 365 apps** <p> _AllowClickThrough_|På <p> `$false`|På <p> `$false`|Hvis du aktiverer denne indstilling (indstilling _AllowClickThrough_ til ), forhindres det, at `$false`der klikkes videre til den oprindelige URL-adresse i understøttede Office 365 apps.|
 |**Klik på beskyttelsesindstillinger**||||||
 |**Spor bruger klik** <p> _TrackUserClicks_|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`|Valgte <p> `$true`||
 |**Lad brugerne klikke sig videre til den oprindelige URL-adresse** <p> _AllowClickThrough_|Valgte <p> `$true`|Valgte <p> `$true`|Ikke markeret <p> `$false`|Ikke markeret <p> `$false`|Hvis du slår denne indstilling fra (indstilling _AllowClickThrough_ til ), forhindres det, at `$false`der klikkes videre til den oprindelige URL-adresse.|

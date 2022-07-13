@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: d3b6cee3212ea7d98782a9e073343321c31c8990
-ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
+ms.openlocfilehash: 860c1cd36568705b2646cf14b6fea071af4a19a5
+ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66750314"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66756599"
 ---
 # <a name="microsoft-defender-antivirus-compatibility-with-other-security-products"></a>Microsoft Defender Antivirus-kompatibilitet med andre sikkerhedsprodukter
 
@@ -107,6 +107,8 @@ I følgende tabel opsummeres tilstanden for Microsoft Defender Antivirus i flere
 - Type: `REG_DWORD`
 - Værdi: `1`
 
+Du kan få vist din beskyttelsesstatus i PowerShell ved hjælp af kommandoen [Get-MpComputerStatus](/powershell/module/defender/get-mpcomputerstatus). Kontrollér værdien for `AMRunningMode`. Du bør kunne se **Normal**, **Passiv** eller **EDR-blokeringstilstand** , hvis Microsoft Defender Antivirus er aktiveret på slutpunktet. 
+
  > [!NOTE]
  > Hvis passiv tilstand skal fungere på slutpunkter, der kører Windows Server 2016 og Windows Server 2012 R2, skal disse slutpunkter onboardes med den moderne, samlede løsning, der er beskrevet i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016). 
 
@@ -176,9 +178,14 @@ Defender for Endpoint påvirker, om Microsoft Defender Antivirus kan køre i pas
 
 ## <a name="how-to-confirm-the-state-of-microsoft-defender-antivirus"></a>Sådan bekræfter du tilstanden for Microsoft Defender Antivirus
 
-Du kan bruge en af flere metoder til at bekræfte tilstanden af Microsoft Defender Antivirus:
+Du kan bruge en af flere metoder til at bekræfte tilstanden af Microsoft Defender Antivirus. Du kan:
 
-### <a name="use-the-windows-security-app"></a>Brug appen Windows Sikkerhed
+- [Brug appen Windows Sikkerhed til at identificere dit antivirusprogram](#use-the-windows-security-app-to-identify-your-antivirus-app).
+- [Brug Jobliste til at bekræfte, at Microsoft Defender Antivirus kører](#use-task-manager-to-confirm-that-microsoft-defender-antivirus-is-running).
+- [Brug Windows PowerShell til at bekræfte, at Microsoft Defender Antivirus kører](#use-windows-powershell-to-confirm-that-microsoft-defender-antivirus-is-running).
+- [Brug Windows PowerShell til at bekræfte, at antivirusbeskyttelsen kører](#use-windows-powershell-to-confirm-that-antivirus-protection-is-running).
+
+### <a name="use-the-windows-security-app-to-identify-your-antivirus-app"></a>Brug Windows Sikkerhed-appen til at identificere dit antivirusprogram
 
 1. Åbn appen Windows Sikkerhed på en Windows-enhed.
 
@@ -188,7 +195,7 @@ Du kan bruge en af flere metoder til at bekræfte tilstanden af Microsoft Defend
 
 4. På siden **Sikkerhedsudbydere** under **Antivirus** kan du se, at **Microsoft Defender Antivirus er slået til**.
 
-### <a name="use-task-manager"></a>Brug Jobliste
+### <a name="use-task-manager-to-confirm-that-microsoft-defender-antivirus-is-running"></a>Brug Jobliste til at bekræfte, at Microsoft Defender Antivirus kører
 
 1. Åbn appen Jobliste på en Windows-enhed.
 

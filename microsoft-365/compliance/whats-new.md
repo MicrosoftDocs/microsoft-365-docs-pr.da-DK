@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt foranderlige overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: 828389ded4e62b7cc7f7bbb1a0da8ef3534b6a58
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: fc553b60132da31dbcc6e131ddb29bcbfa99548b
+ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66637777"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66756743"
 ---
 # <a name="whats-new-in-microsoft-purview-risk-and-compliance-solutions"></a>Nyheder i Microsoft Purview-risiko- og overholdelsesløsninger
 
@@ -40,6 +40,47 @@ Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-compliance
 > - [Nyheder i Microsoft 365 Defender](../security/defender/whats-new.md)
 >
 > Og besøg [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap) for at få mere at vide om Microsoft 365-funktioner, der blev lanceret, udrulles, er under udvikling, er blevet annulleret eller tidligere udgivet.
+
+## <a name="june-2022"></a>Juni 2022
+
+### <a name="compliance-manager"></a>Overholdelsesstyring
+
+- [Microsoft Purview Compliance Manager-politikker for beskeder og beskeder](compliance-manager-alert-policies.md) – tilføjede tre ADD-roller, der har tilladelser til at oprette eller redigere politikker for beskeder.
+- [Configuration Analyzer til Microsoft Purview](compliance-manager-mcca.md) – nyt navn og opdaterede referencelinks til dette introduktionsværktøj til Overholdelsesstyring, der tidligere hed "Microsoft Compliance Configuration Analyzer".
+
+### <a name="data-loss-prevention"></a>Forebyggelse af datatab
+
+- Talrige sideopdateringer til Microsoft Purview-brandede skærmbilleder.
+
+### <a name="data-lifecycle-management-and-records-management"></a>Administration af datalivscyklus og datastyring
+
+- Prøveversion: [Microsoft Graph API til datastyring](compliance-extensibility.md#microsoft-graph-api-for-records-management-preview)
+
+### <a name="microsoft-priva"></a>Microsoft Priva
+
+- [Anmodninger om emnerettigheder](/privacy/priva/subject-rights-requests) – betydelige opdateringer og omstrukturering af SRR-indhold for bedre at hjælpe brugerne gennem hvert statustrin. nedenstående oplysninger.
+  - [Få mere at vide om Priva Anmodninger om den registreredes rettigheder](/privacy/priva/subject-rights-requests) – tydeligere artikulation af kundeværdiprop og generel oversigt over SRR-processen.
+  - [Forstå arbejdsprocessen og detaljesiderne](/privacy/priva/subject-rights-requests-workflow) – formulerer trinnene i fuldførelse af en anmodning, der angiver manuel vs. automatisk progression og linker til detaljeret indhold. i et afsnit forklares det, hvordan du fortolker og arbejder med en anmodnings detaljeside, herunder den nye fane "Oversigt".
+  - [Opret en anmodning, og definer søgeindstillinger](/privacy/priva/subject-rights-requests-create) – ny indramning med underoverskrifter, der forklarer, at der nu er to måder at oprette en anmodning på: via en brugerdefineret metode ved hjælp af en guidet proces og via den nye funktion med brug af en skabelon, hvis søgeparametre har til formål at hente det mest relevante indhold til situationen.
+  - [Dataestimat og hentning](/privacy/priva/subject-rights-requests-data-retrieval) – forklarer, hvorfor nogle anmodninger afbrydes midlertidigt i dataestimatfasen, og hvordan søgningen justeres som et resultat. forklarer også, hvordan en anmodning indstilles til midlertidigt først, før der automatisk fortsættes til datahentning.
+  - [Gennemse data for en anmodning om emnerettigheder](/privacy/priva/subject-rights-requests-data-review) – nye funktioner til import af filer giver brugerne mulighed for at hente filer fra placeringer, der ikke er Fra Microsoft 365, eller filer, der på anden måde ikke er hentet under søgningen, til fanen Data indsamlet.
+  - [Generér rapporter og luk anmodninger](/privacy/priva/subject-rights-requests-reports) – viser, hvornår endelige datapakker genereres, og hvilke filtyper de inkluderer.
+  - [Integrer og udvid via Microsoft Graph API og Power Automate](/privacy/priva/subject-rights-requests-automate) – revideret titlen på denne tidligere Power Automate-side og udvidet sideindhold for at inkludere Graph API-indhold og referencelinks, der tidligere fandtes på en anden side.
+
+### <a name="sensitive-information-types"></a>Typer af følsomme oplysninger
+
+- [Få mere at vide om præcise datamatchbaserede følsomme oplysningstyper](sit-learn-about-exact-data-match-based-sits.md) – tilføjet afsnit om tjenester, som EDM understøtter.
+
+### <a name="sensitivity-labels"></a>Følsomhedsmærkater
+
+- Prøveversion: [Understøttelse af PDF til Office-apps](sensitivity-labels-office-apps.md#pdf-support), som omfatter konvertering af dokumenter til PDF-format, nedarvning af mærkaten med eventuelle visuelle markeringer og kryptering. Udskriv til PDF understøttes ikke, og denne indstilling bliver ikke tilgængelig for brugere, hvis deres mærkatpolitik er konfigureret til obligatorisk mærkning.
+- Som prøveversion: Den dialogboks, som brugerne får vist, når deres mærkatpolitik er konfigureret til at kræve begrundelse for at fjerne eller nedgradere en mærkat, opdateres for at advare brugerne om, at deres indtastede svar ikke må indeholde følsomme data. Skærmbilledet i afsnittet [Hvad mærkatpolitikker kan gøre](sensitivity-labels.md#what-label-policies-can-do) viser denne opdaterede dialogboks, der kommer ind i Office-udrulningskanalerne til produktionsbrug.
+- Prøveversion: [Understøttelse af Outlook til anvendelse af S/MIME-beskyttelse](sensitivity-labels-office-apps.md#configure-a-label-to-apply-smime-protection-in-outlook) er lige begyndt at blive udrullet på tværs af klientplatforme.
+- I forbindelse [med politikker til automatisk mærkning](apply-sensitivity-label-automatically.md#creating-an-auto-labeling-policy) er det en ny indstilling, der automatisk kan aktivere politikken, hvis den ikke redigeres inden for et angivet antal dage.
+
+### <a name="trainable-classifiers"></a>Klassificeringer, der kan oplæres
+
+- [Få mere at vide om klassificeringer, der kan oplæres](classifier-learn-about.md) – tilføjede Voksen, Racy, Gory-billeder, der kan oplæres.
 
 ## <a name="may-2022"></a>Maj 2022
 
@@ -293,32 +334,3 @@ Vi introducerer [Microsoft Purview](https://aka.ms/microsoftpurview), som er et 
 - Nye [overvågningsfunktioner](apply-sensitivity-label-automatically.md#monitoring-your-auto-labeling-policy) til politikker for automatisk mærkning.
 - Udrulles nu: standardetiket for eksisterende dokumenter og justeringstekst for Office på internettet.
 - Annonceret for juli Semi-Annual Enterprise Channel med version 2202+: Samtidig redigering og overvågning i Outlook.
-
-## <a name="december-2021"></a>December 2021
-
-### <a name="compliance-and-service-assurance"></a>Overholdelse og tjenestesikkerhed
-
-- [Meddelelse om brud på Azure, Dynamics 365 og Windows i henhold til GDPR](/compliance/regulatory/gdpr-breach-notification) – opdateret for at tydeliggøre, at kunderne ikke behøver at bruge en løntjeneste, f.eks. Defender for Cloud, for at modtage meddelelser om sikkerhed og beskyttelse af personlige oplysninger
-
-### <a name="ediscovery"></a>eDiscovery
-
-- [eDiscovery-arbejdsproces (Premium) for indhold i Microsoft Teams](teams-workflow-in-advanced-ediscovery.md#reference-guide) – opdateret med en ny vejledning til hurtig reference, der kan downloades, til administration af Teams-indhold i eDiscovery (Premium)
-
-### <a name="data-lifecycle-management"></a>Administration af datalivscyklus
-
-- [Aktivér arkivpostkasser i Overholdelsescenter](enable-archive-mailboxes.md#run-diagnostics-on-archive-mailboxes) – tilføjet afsnit om nyt diagnosticeringsværktøj til arkivpostkasser
-- [Brug netværksoverførsel til at importere din organisations PST-filer til Microsoft 365](use-network-upload-to-import-pst-files.md#step-2-upload-your-pst-files-to-microsoft-365) – PST-import understøtter nu AzCopy v10
-- [Gendan en inaktiv postkasse](restore-an-inactive-mailbox.md) – revideret procedure til gendannelse af en inaktiv postkasse ved først at føje LegacyExchangeDN for inaktiv postkasse til destinationspostkassen
-
-### <a name="information-protection"></a>Beskyttelse af oplysninger
-
-- [Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview](information-protection-solution.md) – Ny trinvis vejledning til kunder, der leder efter en præskriptiv oversigt til installation Microsoft Purview Information Protection
-
-### <a name="retention-and-records-management"></a>Opbevarings- og datastyring
-
-- Ny vejledning til [, hvor lang tid det tager, før opbevaringspolitikker træder i kraft](create-retention-policies.md#how-long-it-takes-for-retention-policies-to-take-effect)
-- Nye lejerindstillinger udrulles: En indstilling for datastyring, der forhindrer redigering af egenskaber for navngivne SharePoint-elementer, der er markeret som en post og låst, og andre indstillinger, der forhindrer brugerne i at låse elementer, der er markeret som en post, op
-
-### <a name="sensitivity-labels"></a>Følsomhedsmærkater
-
-- Obligatorisk mærkning og en standardmærkat til Power BI er nu offentlig tilgængelig (GA)

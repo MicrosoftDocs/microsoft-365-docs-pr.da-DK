@@ -20,12 +20,12 @@ ms.custom:
 description: Administratorer kan få mere at vide om spoof intelligence-indsigt i Exchange Online Protection (EOP).
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 9455ddf17d26e33ed5b2669a27ee93cf5f56b8f9
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 3be83ee7174934439643320f2ac9d0db72d745bd
+ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016048"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66756643"
 ---
 # <a name="spoof-intelligence-insight-in-eop"></a>Spoof intelligence-indsigt i EOP
 
@@ -36,7 +36,7 @@ ms.locfileid: "66016048"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365 organisationer med postkasser i Exchange Online eller enkeltstående Exchange Online Protection-organisationer (EOP) uden Exchange Online postkasser beskyttes indgående mails automatisk mod spoofing. EOP bruger **spoof intelligence** som en del af din organisations overordnede forsvar mod phishing. Du kan få flere oplysninger under [Beskyttelse mod spoofing i EOP](anti-spoofing-protection.md).
+I Microsoft 365-organisationer med postkasser i Exchange Online eller enkeltstående EOP-organisationer (Exchange Online Protection) uden Exchange Online postkasser beskyttes indgående mails automatisk mod spoofing. EOP bruger **spoof intelligence** som en del af din organisations overordnede forsvar mod phishing. Du kan få flere oplysninger under [Beskyttelse mod spoofing i EOP](anti-spoofing-protection.md).
 
 Når en afsender spoofs en mailadresse, ser de ud til at være en bruger i et af organisationens domæner eller en bruger i et eksternt domæne, der sender mail til din organisation. Personer med ondsindede hensigter, der forfalsker afsendere for at sende spam eller phishing-mail, skal blokeres. Men der er scenarier, hvor legitime afsendere er spoofing. Eksempel:
 
@@ -56,7 +56,7 @@ Hvis du tillader kendte afsendere at sende spoofede meddelelser fra kendte place
 
 På samme måde kan du gennemse spoofed-afsendere, der blev tilladt af spoof intelligence, og manuelt blokere disse afsendere fra indsigten spoof intelligence.
 
-I resten af denne artikel forklares det, hvordan du bruger indsigt i spoof intelligence i Microsoft 365 Defender-portalen og i PowerShell (Exchange Online PowerShell til Microsoft 365 organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online postkasser).
+I resten af denne artikel forklares det, hvordan du bruger indsigt i spoof intelligence i Microsoft 365 Defender-portalen og i PowerShell (Exchange Online PowerShell til Microsoft 365-organisationer med postkasser i Exchange Online; enkeltstående EOP PowerShell til organisationer uden Exchange Online  postkasser).
 
 > [!NOTE]
 >
@@ -64,25 +64,27 @@ I resten af denne artikel forklares det, hvordan du bruger indsigt i spoof intel
 >
 > - Indsigten spoof intelligence og fanen **Spoof** på listen Over tilladte/blokerede lejere erstatter funktionaliteten af den spoof intelligence-politik, der var tilgængelig på siden politik til bekæmpelse af spam i Security & Compliance Center.
 >
->- Indsigten spoof intelligence viser data for 7 dage. **Cmdlet'en Get-SpoofIntelligenceInsight** viser data for 30 dage.
+> - Indsigten spoof intelligence viser data for 7 dage. **Cmdlet'en Get-SpoofIntelligenceInsight** viser data for 30 dage.
+>
+> - De senest tilgængelige data er 3 til 4 dage gamle.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
 - Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til fanen **Spoofing** på siden **Tillad/bloker lejerliste** , skal du bruge <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>. Hvis du vil gå direkte til siden **Spoof intelligence-indsigt** , skal du bruge <https://security.microsoft.com/spoofintelligence>.
 
-- Hvis du vil oprette forbindelse til Exchange Online PowerShell, [skal du se Forbind til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, [skal du se Forbind til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
+- Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
 - Du skal have tildelt tilladelser i **Exchange Online**, før du kan udføre procedurerne i denne artikel:
-  - Hvis du vil ændre spoof intelligence-politikken eller aktivere eller deaktivere spoof intelligence, skal du være medlem af 
-    -   **Organisationsadministration**
-    -   **Konfiguration af sikkerhedsadministrator** <u>og</u> kun **visning** eller **kun visning af organisationsadministration**.
+  - Hvis du vil ændre spoof intelligence-politikken eller aktivere eller deaktivere spoof intelligence, skal du være medlem af en af følgende rollegrupper:
+    - **Organisationsadministration**
+    - **Konfiguration af sikkerhedsadministrator** <u>og</u> kun **visning** eller **kun visning af organisationsadministration**.
   - Hvis du vil have skrivebeskyttet adgang til spoof intelligence-politikken, skal du være medlem af rollegrupperne **Global læser** eller **Sikkerhedslæser** .
 
   Du kan få flere oplysninger [under Tilladelser i Exchange Online](/exchange/permissions-exo/permissions-exo).
 
   > [!NOTE]
   >
-  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  > - Tilføjelse af brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration giver brugerne de nødvendige tilladelser _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
   > - Rollegruppen **Vis kun organisationsadministration** i [Exchange Online](/Exchange/permissions-exo/permissions-exo#role-groups) giver også skrivebeskyttet adgang til funktionen.
 
 - Du aktiverer og deaktiverer spoof intelligence i politikker til bekæmpelse af phishing i EOP og Microsoft Defender for Office 365. Spoof intelligence er aktiveret som standard. Du kan få flere oplysninger under [Konfigurer politikker til bekæmpelse af phishing i EOP](configure-anti-phishing-policies-eop.md) eller [Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).

@@ -2,7 +2,7 @@
 title: Microsoft Threat Experts
 ms.reviewer: ''
 description: Microsoft-trusselseksperter giver et ekstra lag af ekspertise til Microsoft Defender for Endpoint.
-keywords: managed threat hunting service, managed threat hunting, managed detection and response (MDR) service, MTE, Microsoft-trusselseksperter, MTE-TAN, målrettet angrebsmeddelelse, målrettet angrebsmeddelelse
+keywords: managed threat hunting service, managed threat hunting, managed detection and response (MDR) service, MTE, Microsoft-trusselseksperter, endpoint attack notification, Endpoint Attack Notification
 search.product: Windows 10
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: 38e0145d1df971d651aab0be02c08e46ea70fe70
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: b301a0bd62e0826a9ae089f51f591f575a918e0f
+ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490316"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "66756765"
 ---
 # <a name="microsoft-threat-experts"></a>Microsoft Threat Experts
 
@@ -37,7 +37,7 @@ ms.locfileid: "66490316"
 
 Microsoft-trusselseksperter er en administreret trusselsjagttjeneste, der giver dine sikkerhedsoperationscentre (SOC'er) overvågning og analyse på ekspertniveau for at hjælpe dem med at sikre, at kritiske trusler i dine unikke miljøer ikke overses.
 
-Denne administrerede trusselsjagttjeneste giver ekspertdrevet indsigt og data via disse to funktioner: målrettet angrebsmeddelelse og adgang til eksperter efter behov.
+Denne administrerede trusselsjagttjeneste giver ekspertdrevet indsigt og data via disse to funktioner: meddelelse om slutpunktsangreb og adgang til eksperter efter behov.
 
 Se denne video for at få mere at vide om, hvordan Microsoft-trusselseksperter leverer sikkerhedsoperationscentre med overvågning og analyse på ekspertniveau og sikrer, at ingen kritiske trusler overses. 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4qZ0B]
@@ -48,17 +48,17 @@ Se denne video for at få mere at vide om, hvordan Microsoft-trusselseksperter l
 > Diskuter berettigelseskravene med din Microsoft Technical Service-udbyder og dit kontoteam, før du ansøger om den administrerede trusselsjagttjeneste.
 > Threat Experts er i øjeblikket ikke tilgængelig i Microsoft 365 til U.S. Government-cloudmiljøer.
 
-Hvis du er Microsoft Defender for Endpoint kunde, skal du ansøge om **Microsoft-trusselseksperter – målrettede angrebsmeddelelser** for at få særlig indsigt og analyse, der hjælper med at identificere de mest kritiske trusler i dit miljø, så du kan reagere hurtigt på dem.
+Hvis du er Microsoft Defender for Endpoint kunde, skal du ansøge om **endpoint Attack Notifications** for at få særlig indsigt og analyse, der hjælper med at identificere de mest kritiske trusler i dit miljø, så du hurtigt kan reagere på dem.
 
-Hvis du vil tilmelde dig Microsoft-trusselseksperter – fordele ved meddelelser om målrettede angreb, skal du gå til **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** \> **Microsoft-trusselseksperter – Målrettede angrebsmeddelelser**, der skal anvendes. Når du har accepteret, får du fordelene ved målrettede angrebsmeddelelser.
+Hvis du vil tilmelde dig fordele ved endpoint-angrebsmeddelelser, skal du gå til **Indstillinger** \> **Slutpunkter** \> **Generelle** \> **avancerede funktioner** \> **Slutpunkt Angrebsmeddelelser** , der skal anvendes. Når du har accepteret, får du fordelene ved Endpoint Attack Notifications.
 
 Kontakt dit kontoteam eller din Microsoft-repræsentant for at abonnere **på Microsoft-trusselseksperter – Eksperter on Demand for** at rådføre sig med vores trusselseksperter om relevante opdagelser og modstandere, som din organisation står overfor.
 
 Se [Konfigurer Microsoft-trusselseksperter funktioner for at](/microsoft-365/security/defender-endpoint/configure-microsoft-threat-experts#before-you-begin) få flere oplysninger.
 
-## <a name="microsoft-threat-experts---targeted-attack-notification"></a>Microsoft-trusselseksperter – Meddelelse om målrettede angreb
+## <a name="endpoint-attack-notification"></a>Meddelelse om slutpunktsangreb
 
-Microsoft-trusselseksperter – Målrettet angrebsmeddelelse giver proaktiv jagt på de vigtigste trusler mod dit netværk, herunder angreb på mennesker, praktiske tastaturangreb eller avancerede angreb som cyberspionage. Disse meddelelser vises som en ny besked. Den administrerede jagttjeneste omfatter:
+Meddelelse om slutpunktangreb giver proaktiv jagt efter de vigtigste trusler mod dit netværk, herunder angreb på mennesker, angreb på tastaturet eller avancerede angreb som cyberspionage. Disse meddelelser vises som en ny besked. Den administrerede jagttjeneste omfatter:
 
 - Trusselsovervågning og -analyse, reduktion af dvæletid og risiko for virksomheden
 - Hunter-trænet kunstig intelligens til at opdage og prioritere både kendte og ukendte angreb
@@ -67,9 +67,9 @@ Microsoft-trusselseksperter – Målrettet angrebsmeddelelse giver proaktiv jagt
 
 ## <a name="microsoft-threat-experts---experts-on-demand"></a>Microsoft-trusselseksperter - Eksperter efter behov
 
-Kunderne kan engagere vores sikkerhedseksperter direkte fra Microsoft 365 Defender portal for at få deres svar. Eksperter giver indsigt, der er nødvendige for bedre at forstå de komplekse trusler, der påvirker din organisation, fra alarmforespørgsler, potentielt kompromitterede enheder, hovedårsagen til en mistænkelig netværksforbindelse til yderligere trusselsintelligens vedrørende igangværende vedvarende trusselskampagner. Med denne funktion kan du:
+Kunderne kan engagere vores sikkerhedseksperter direkte fra Microsoft 365 Defender portal for at få deres svar. Eksperter giver indsigt, der er nødvendige for bedre at forstå de komplekse trusler, der påvirker din organisation, fra vigtige forespørgsler, potentielt kompromitterede enheder, hovedårsagen til en mistænkelig netværksforbindelse til mere trusselsintelligens i forbindelse med igangværende avancerede vedvarende trusselskampagner. Med denne funktion kan du:
 
-- Få yderligere afklaring af beskeder, herunder den egentlige årsag til eller omfanget af hændelsen
+- Få mere afklaring om vigtige beskeder, herunder den egentlige årsag til eller omfanget af hændelsen
 - Få klarhed over mistænkelig enhedsadfærd og næste trin, hvis du står over for en avanceret hacker
 - Fastlæg risiko og beskyttelse vedrørende trusselsaktører, kampagner eller nye hackerteknikker
 
@@ -98,6 +98,6 @@ Se denne video for at få et hurtigt overblik over Microsoft Services Hub.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4pk9f]
 
-## <a name="related-topic"></a>Relateret emne
+## <a name="see-also"></a>Se også
 
 - [Konfigurer Microsoft-trusselseksperter funktioner](configure-microsoft-threat-experts.md)
