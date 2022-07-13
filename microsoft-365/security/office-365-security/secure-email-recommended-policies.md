@@ -1,5 +1,5 @@
 ---
-title: Anbefalede politikker for sikre mails – Microsoft 365 til virksomheds | Microsoft Docs
+title: Anbefalede politikker for sikre mails – Microsoft 365 for enterprise-| Microsoft Docs
 description: Beskriver politikkerne for Microsoft-anbefalinger om, hvordan du anvender mailpolitikker og -konfigurationer.
 ms.author: dansimp
 author: dansimp
@@ -19,13 +19,14 @@ ms.collection:
 - remotework
 - m365solution-identitydevice
 - m365solution-scenario
+- zerotrust-solution
 ms.technology: mdo
-ms.openlocfilehash: 592b5733844dc6a3df1a1d207e3a2c3deda7d7b7
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 1b3afc4988dc5d20a1c6c3e0b1a51c1ef1cf9987
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66015208"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750160"
 ---
 # <a name="policy-recommendations-for-securing-email"></a>Politikanbefalinger til sikring af mail
 
@@ -33,7 +34,7 @@ I denne artikel beskrives det, hvordan du implementerer de anbefalede Nul tillid
 
 Disse anbefalinger er baseret på tre forskellige niveauer af sikkerhed og beskyttelse, der kan anvendes på baggrund af granulariteten af dine behov: **udgangspunkt**, **virksomhed** og **specialiseret sikkerhed**. Du kan få mere at vide om disse sikkerhedsniveauer og de anbefalede klientoperativsystemer, som disse anbefalinger refererer til i [introduktionen til de anbefalede sikkerhedspolitikker og konfigurationer](microsoft-365-policies-configurations.md).
 
-Disse anbefalinger kræver, at brugerne bruger moderne mailklienter, herunder Outlook til iOS og Android på mobilenheder. Outlook til iOS og Android understøtter de bedste funktioner i Office 365. Disse mobil-Outlook-apps er også udviklet med sikkerhedsfunktioner, der understøtter mobilbrug og arbejder sammen med andre Microsofts cloudsikkerhedsfunktioner. Du kan få flere oplysninger [under Ofte stillede spørgsmål om Outlook til iOS og Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq).
+Disse anbefalinger kræver, at dine brugere bruger moderne mailklienter, herunder Outlook til iOS og Android på mobilenheder. Outlook til iOS og Android understøtter de bedste funktioner i Office 365. Disse Outlook-mobilapps er også udviklet med sikkerhedsfunktioner, der understøtter mobilbrug og arbejder sammen med andre Microsofts cloudsikkerhedsfunktioner. Du kan få flere oplysninger under [Ofte stillede spørgsmål om Outlook til iOS og Android](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq).
 
 ## <a name="update-common-policies-to-include-email"></a>Opdater almindelige politikker for at inkludere mail
 
@@ -41,7 +42,7 @@ For at beskytte mails illustrerer følgende diagram, hvilke politikker der skal 
 
 :::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png" alt-text="Oversigten over politikopdateringer til beskyttelse af adgang til Microsoft Exchange" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-mail.png":::
 
-Bemærk tilføjelsen af en ny politik for Exchange Online til at blokere ActiveSync-klienter. Dette tvinger brugen af Outlook mobil.
+Bemærk tilføjelsen af en ny politik for Exchange Online til at blokere ActiveSync-klienter. Dette tvinger brugen af Outlook Mobile.
 
 Hvis du inkluderede Exchange Online og Outlook i området for politikkerne, da du konfigurerede dem, skal du kun oprette den nye politik for at blokere ActiveSync-klienter. Gennemse de politikker, der er angivet i følgende tabel, og foretag enten de anbefalede tilføjelser, eller bekræft, at disse allerede er inkluderet. Hver politik linker til de tilknyttede konfigurationsinstruktioner i [Almindelige politikker for identitets- og enhedsadgang](identity-access-policies.md).
 
@@ -72,7 +73,7 @@ Du kan begrænse brugernes mulighed for at downloade vedhæftede filer fra Outlo
 
 Her er trinnene:
 
-1. [Forbind til Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
+1. [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 2. Hvis du ikke allerede har en OWA-postkassepolitik, skal du oprette en med cmdlet'en [New-OwaMailboxPolicy](/powershell/module/exchange/new-owamailboxpolicy) .
 3. Hvis du vil tillade visning af vedhæftede filer, men ingen download, skal du bruge denne kommando:
 
@@ -98,17 +99,17 @@ Her er trinnene:
 
 Hvis du vil sikre, at brugere af iOS- og Android-enheder kun kan få adgang til arbejds- eller skoleindhold ved hjælp af Outlook til iOS og Android, skal du have en politik for betinget adgang, der er målrettet disse potentielle brugere.
 
-Se trinnene til konfiguration af denne politik i [Administrer samarbejdsadgang til beskeder ved hjælp af Outlook til iOS og Android](/mem/intune/apps/app-configuration-policies-outlook#apply-conditional-access).
+Se trinnene til konfiguration af denne politik i [Administrer chatsamarbejde ved hjælp af Outlook til iOS og Android](/mem/intune/apps/app-configuration-policies-outlook#apply-conditional-access).
 
 ## <a name="set-up-message-encryption"></a>Konfigurer meddelelsekryptering
 
-Med Microsoft Purview Message Encryption, som udnytter beskyttelsesfunktionerne i Azure Information Protection, kan din organisation nemt dele beskyttede mails med alle på alle enheder. Brugerne kan sende og modtage beskyttede meddelelser med andre Microsoft 365 organisationer samt ikke-kunder ved hjælp af Outlook.com, Gmail og andre mailtjenester.
+Med Microsoft Purview-meddelelseskryptering, som udnytter beskyttelsesfunktionerne i Azure Information Protection, kan din organisation nemt dele beskyttede mails med alle på alle enheder. Brugerne kan sende og modtage beskyttede meddelelser med andre Microsoft 365-organisationer samt ikke-kunder, der bruger Outlook.com, Gmail og andre mailtjenester.
 
 Du kan få flere oplysninger under [Konfigurer nye Office 365 funktioner til meddelelsekryptering](../../compliance/set-up-new-message-encryption-capabilities.md).
 
 ## <a name="next-steps"></a>Næste trin
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Politikkerne for Microsoft 365 cloudapps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Politikkerne for Microsoft 365-cloudapps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Konfigurer politikker for betinget adgang for:
 

@@ -15,18 +15,19 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365solution-infoprotection
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 description: Brug politikker for overvågning og beskeder og anmodninger fra den registrerede til at overvåge og besvare personlige datahændelser.
-ms.openlocfilehash: 5954fc193f6071dbf94277ff57f599e3bb98f7d2
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 2a19154b9b0602eded09e6521dc285c00fd56a10
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66013260"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748280"
 ---
 # <a name="monitor-and-respond-to-data-privacy-incidents-in-your-organization"></a>Overvåg og besvar hændelser om beskyttelse af personlige oplysninger i din organisation
 
-Microsoft 365 funktioner er tilgængelige, som kan hjælpe dig med at overvåge, undersøge og reagere på hændelser om beskyttelse af personlige oplysninger i din organisation, når du anvender relaterede funktioner. Det kan også være vigtigt at have processer, procedurer og anden dokumentation til hver af disse for at vise overholdelse over for tilsynsorganer.
+Microsoft 365-funktioner er tilgængelige, så du kan overvåge, undersøge og reagere på hændelser om beskyttelse af personlige oplysninger i din organisation, når du anvender relaterede funktioner. Det kan også være vigtigt at have processer, procedurer og anden dokumentation til hver af disse for at vise overholdelse over for tilsynsorganer.
 
 Disse omfatter: 
 
@@ -56,12 +57,12 @@ Reglerne om beskyttelse af personlige oplysninger kræver generelt følgende for
 
 Din organisation ønsker måske også at udføre overvågnings- og svaraktiviteter til andre formål, f.eks. andre behov for overholdelse af angivne standarder eller af forretningsmæssige årsager. Oprettelse af din overvågnings- og svarordning for beskyttelse af personlige oplysninger skal udføres som en del af den overordnede planlægning, implementering og administration af overvågning og svar.
 
-For at hjælpe dig med at komme i gang med et overvågnings- og svarskema i Microsoft 365 til bestemmelser om beskyttelse af personlige oplysninger indeholder denne artikel en liste over nyttige funktioner i Microsoft 365 til at besvare spørgsmål som f.eks.: 
+Denne artikel indeholder nyttige funktioner i Microsoft 365 til at besvare spørgsmål som f.eks.: 
 
 - Hvilken slags daglige overvågnings-, undersøgelses- og rapporteringsteknikker er tilgængelige for de forskellige datatyper og kilder?
 - Hvilke mekanismer skal der bruges til at håndtere DSR-anmodninger (data subject requests) og eventuelle afhjælpende handlinger, f.eks. anonymisering, redaction og sletning.
 
-## <a name="auditing-and-alert-policies-in-the-microsoft-purview-compliance-portal"></a>Politikker for overvågning og beskeder på Microsoft Purview-overholdelsesportalen
+## <a name="auditing-and-alert-policies-in-the-microsoft-purview-compliance-portal"></a>Politikker for overvågning og beskeder i Microsoft Purview-compliance-portal
 
 Se disse artikler om konfiguration af overvågning, avanceret overvågning og beskedpolitikker:
 
@@ -80,4 +81,4 @@ For Microsoft Stream, når en bruger slettes fra Azure Active Directory (Azure A
 
 ## <a name="insider-risk-management-as-an-investigative-tool"></a>Insiderrisikostyring som undersøgelsesværktøj
 
-[Styring af insiderrisiko](../compliance/insider-risk-management.md) er en funktion i Microsoft Purview-overholdelsesportalen, der hjælper dig med at minimere den interne risiko ved at gøre det muligt for dig at registrere, undersøge og reagere på risikable aktiviteter i din organisation.
+[Styring af insiderrisiko](../compliance/insider-risk-management.md) er en funktion i Microsoft Purview-compliance-portal, der hjælper dig med at minimere den interne risiko ved at gøre det muligt for dig at registrere, undersøge og udføre handlinger på risikable aktiviteter i din organisation.

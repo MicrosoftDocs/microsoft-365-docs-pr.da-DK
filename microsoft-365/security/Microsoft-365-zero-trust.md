@@ -18,22 +18,23 @@ ms.collection:
 - m365solution-zerotrust
 - m365solution-overview
 - M365-security-compliance
-ms.openlocfilehash: 4056310eb8e0d22a9758dfa2a572a473c83a0775
-ms.sourcegitcommit: 6c2ab5e8efe74d0dc2df610e2d9d2fdda8aaf074
+- zerotrust-solution
+ms.openlocfilehash: fb11c74e1369ec81ad3bc54008e9391e462f583d
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65669732"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748049"
 ---
 # <a name="microsoft-365-zero-trust-deployment-plan"></a>Nul tillid udrulningsplan i Microsoft 365
 
-Denne artikel indeholder en udrulningsplan til opbygning **Nul tillid** sikkerhed med Microsoft 365. Nul tillid er en ny sikkerhedsmodel, der forudsætter brud og kontrollerer hver anmodning, som om den stammer fra et ikke-kontrolleret netværk. Uanset hvor anmodningen stammer fra, eller hvilken ressource den får adgang til, lærer Nul tillid-modellen os at "hav aldrig tillid til, bekræft altid".
+Denne artikel indeholder en udrulningsplan til oprettelse **Nul tillid** sikkerhed med Microsoft 365. Nul tillid er en ny sikkerhedsmodel, der forudsætter brud og kontrollerer hver anmodning, som om den stammer fra et ikke-kontrolleret netværk. Uanset hvor anmodningen stammer fra, eller hvilken ressource den får adgang til, lærer Nul tillid-modellen os at "hav aldrig tillid til, bekræft altid".
 
 Brug denne artikel sammen med denne plakat.
 
 | Element | Beskrivelse |
 |:-----|:-----|
-|[![Illustration af Microsoft 365 Nul tillid udrulningsplan.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Opdateret marts 2022 | **Relaterede løsningsvejledninger** <br/> <ul><li>[Udrul din identitetsinfrastruktur til Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Anbefalede konfigurationer for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Administrer enheder med Intune](../solutions/manage-devices-with-intune-overview.md)</li><li>[Evaluer og test Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview](../compliance/information-protection-solution.md)</li><li>[Udrul beskyttelse af oplysninger i forbindelse med bestemmelser om beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md)</li></ul>
+|[![Illustration af Udrulningsplanen for Microsoft 365 Nul tillid.](../media/solutions-architecture-center/m365-zero-trust-deployment-plan-thumb.png) ](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) <br/> [PDF](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.pdf) \| [Visio](https://download.microsoft.com/download/f/d/b/fdb6ab0c-34bb-4cb8-84e6-5de8f13298da/m365-zero-trust-deployment-plan.vsdx) <br/> Opdateret marts 2022 | **Relaterede løsningsvejledninger** <br/> <ul><li>[Udrul din identitetsinfrastruktur til Microsoft 365](/microsoft-365/enterprise/deploy-identity-solution-overview)</li><li>[Anbefalede konfigurationer for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md)</li><li>[Administrer enheder med Intune](../solutions/manage-devices-with-intune-overview.md)</li><li>[Evaluer og test Microsoft 365 Defender](../security/defender/eval-overview.md)</li><li>[Udrul en løsning til beskyttelse af oplysninger med Microsoft Purview](../compliance/information-protection-solution.md)</li><li>[Udrul beskyttelse af oplysninger i forbindelse med regler for beskyttelse af personlige oplysninger med Microsoft 365](../solutions/information-protection-deploy.md)</li></ul>
 
 ## <a name="zero-trust-security-architecture"></a>Nul tillid sikkerhedsarkitektur
 
@@ -57,13 +58,13 @@ For more information about this architecture, including deployment objectives fo
 
 
 
-## <a name="deploying-zero-trust-for-microsoft-365"></a>Installerer Nul tillid til Microsoft 365
+## <a name="deploying-zero-trust-for-microsoft-365"></a>Udrulning af Nul tillid til Microsoft 365
 
-Microsoft 365 er bygget bevidst med mange funktioner til beskyttelse af sikkerhed og oplysninger, der kan hjælpe dig med at bygge Nul tillid i dit miljø. Mange af funktionerne kan udvides for at beskytte adgangen til andre SaaS-apps, som din organisation bruger, og dataene i disse apps.
+Microsoft 365 er udviklet med vilje med mange funktioner til beskyttelse af sikkerhed og oplysninger for at hjælpe dig med at bygge Nul tillid i dit miljø. Mange af funktionerne kan udvides for at beskytte adgangen til andre SaaS-apps, som din organisation bruger, og dataene i disse apps.
 
 Denne illustration repræsenterer arbejdet med at udrulle Nul tillid egenskaber. Dette arbejde opdeles i arbejdsenheder, der kan konfigureres sammen fra bunden og arbejder til toppen for at sikre, at det påkrævede arbejde er fuldført.
 
-:::image type="content" source="../media/zero-trust/m365-zero-trust-deployment-stack.png" alt-text="Den Microsoft 365 Nul tillid udrulningsstak" lightbox="../media/zero-trust/m365-zero-trust-deployment-stack.png":::
+:::image type="content" source="../media/zero-trust/m365-zero-trust-deployment-stack.png" alt-text="Microsoft 365 Nul tillid udrulningsstak" lightbox="../media/zero-trust/m365-zero-trust-deployment-stack.png":::
 
 I denne illustration:
 
@@ -80,7 +81,7 @@ Det første trin er at opbygge dit Nul tillid fundament ved at konfigurere besky
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-step-1b.png" alt-text="Processen til konfiguration af Nul tillid identitets- og enhedsadgangsbeskyttelse" lightbox="../media/zero-trust/m365-zero-trust-architecture-step-1b.png":::
 
-Gå til [**_Nul tillid beskyttelse af identitet og enhedsadgang_**](office-365-security/microsoft-365-policies-configurations.md) for at få en præskriptiv vejledning til at opnå dette. I denne artikelserie beskrives et sæt konfigurationer af forudsætninger for identitet og adgang til enheden og et sæt Azure Active Directory (Azure AD) betinget adgang, Microsoft Intune og andre politikker, der sikrer adgang til Microsoft 365  til cloudapps og -tjenester til virksomheder, andre SaaS-tjenester og programmer i det lokale miljø, der er publiceret med Azure AD Programproxy.
+Gå til [**_Nul tillid beskyttelse af identitet og enhedsadgang_**](office-365-security/microsoft-365-policies-configurations.md) for at få en præskriptiv vejledning til at opnå dette. I denne artikelserie beskrives et sæt konfigurationer af forudsætninger for identitet og adgang til enheden og et sæt betinget adgang til Azure Active Directory (Azure AD), Microsoft Intune og andre politikker til sikker adgang til Microsoft 365 til cloudapps og -tjenester til virksomheder, andre SaaS-tjenester og programmer i det lokale miljø, der er publiceret med Azure AD Programproxy.
 
 |Omfatter|Forudsætninger|Omfatter ikke|
 |---------|---------|---------|
@@ -114,7 +115,7 @@ Vend tilbage til [**_Almindelige politikker for identitets- og enhedsadgang_**](
 
 ## <a name="step-4-evaluate-pilot-and-deploy-microsoft-365-defender"></a>Trin 4. Evaluer, pilot og udrul Microsoft 365 Defender
 
-Microsoft 365 Defender er en udvidet løsning til registrering og svar (XDR), der automatisk indsamler, korrelerer og analyserer signal-, trussels- og beskeddata fra hele dit Microsoft 365 miljø, herunder slutpunkt, mail, programmer og identiteter.
+Microsoft 365 Defender er en udvidet løsning til registrering og svar (XDR), der automatisk indsamler, korrelerer og analyserer signal-, trussels- og beskeddata fra hele Dit Microsoft 365-miljø, herunder slutpunkt, mail, programmer og identiteter.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-defender.png" alt-text="Processen med at føje Microsoft 365 Defender til Nul tillid-arkitekturen" lightbox="../media/zero-trust/m365-zero-trust-architecture-defender.png":::
 
@@ -128,7 +129,7 @@ Gå til [**_Evaluer og pilot Microsoft 365 Defender_**](defender/eval-overview.m
 
 Implementer Microsoft Purview Information Protection for at hjælpe dig med at finde, klassificere og beskytte følsomme oplysninger, uanset hvor de bor eller rejser.
 
-Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview og giver dig værktøjer til at kende dine data, beskytte dine data og forhindre tab af data.
+Microsoft Purview Information Protection funktioner er inkluderet i Microsoft Purview og giver dig værktøjerne til at kende dine data, beskytte dine data og forhindre tab af data.
 
 :::image type="content" source="../media/zero-trust/m365-zero-trust-architecture-info-protect.png" alt-text="Funktionerne til beskyttelse af oplysninger, der beskytter data gennem håndhævelse af politikker" lightbox="../media/zero-trust/m365-zero-trust-architecture-info-protect.png":::
 
@@ -140,4 +141,4 @@ Microsoft Purview Information Protection indeholder en struktur, proces og egens
 
 Du kan få flere oplysninger om, hvordan du planlægger og installerer beskyttelse af oplysninger, under [**_Installér en Microsoft Purview Information Protection løsning_**](../compliance/information-protection-solution.md). 
 
-Hvis du udruller beskyttelse af oplysninger i forbindelse med regler for beskyttelse af personlige oplysninger, indeholder denne løsningsvejledning en anbefalet struktur for hele processen: [**_Udrul bestemmelser om beskyttelse af personlige oplysninger i forbindelse med Microsoft 365_**](../solutions/information-protection-deploy.md).
+Hvis du udruller beskyttelse af oplysninger i forbindelse med regler for beskyttelse af personlige oplysninger, indeholder denne løsningsvejledning en anbefalet struktur for hele processen: [**_Udrul regler om beskyttelse af personlige oplysninger med Microsoft 365_**](../solutions/information-protection-deploy.md).

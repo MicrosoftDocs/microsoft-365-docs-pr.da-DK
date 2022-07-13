@@ -11,6 +11,9 @@ ms.localizationpriority: medium
 ms.collection:
 - Strat_O365_IP
 - m365initiative-coredeploy
+- m365solution-m365-identity
+- m365solution-scenario
+- zerotrust-solution
 search.appverid:
 - MET150
 - MOE150
@@ -22,16 +25,16 @@ f1.keywords:
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
 description: Denne artikel indeholder oplysninger om beskyttelse af privilegeret adgang til din Microsoft 365-lejer.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 3da8a6279d122a056a168485145c171f9d3d7f5f
-ms.sourcegitcommit: a5e75d7f7651313818bd2de292d5c38b290d8975
+ms.openlocfilehash: 6aebdd79f2870ca25ab866bccb66c1d1f680f701
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65930191"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749325"
 ---
 # <a name="step-2-protect-your-microsoft-365-privileged-accounts"></a>Trin 2. Beskyt dine privilegerede Microsoft 365-konti
 
-*Denne artikel gælder for både Microsoft 365 Enterprise og Office 365 Enterprise.*
+*Denne artikel gælder både for Microsoft 365 Enterprise og Office 365 Enterprise.*
 
 Sikkerhedsbrud i en Microsoft 365-lejer, herunder indsamling af oplysninger og phishing-angreb, sker typisk ved at kompromittere legitimationsoplysningerne for en privilegeret Microsoft 365-konto. Sikkerhed i cloudmiljøet er et partnerskab mellem dig og Microsoft:
   
@@ -45,23 +48,23 @@ Microsoft leverer funktioner, der kan hjælpe med at beskytte din organisation, 
     
 2. Konfigurer multifaktorgodkendelse (MFA) for dine dedikerede Microsoft 365-privilegerede konti, og brug den stærkeste form for sekundær godkendelse.
 
-3. Beskyt privilegerede konti med Zero Trust-identitet og anbefalinger til enhedsadgang.
+3. Beskyt privilegerede konti med anbefalinger til Nul tillid identitet og enhedsadgang.
 
 > [!NOTE]
-> Hvis du vil sikre dine privilegerede roller, skal du se [Bedste fremgangsmåder for Azure AD-roller for](/azure/active-directory/roles/best-practices) at sikre privilegeret adgang til din lejer.
+> Hvis du vil sikre dine privilegerede roller, skal du se [Bedste fremgangsmåder for Azure AD roller](/azure/active-directory/roles/best-practices) for at sikre privilegeret adgang til din lejer.
 
 ## <a name="1-create-dedicated-privileged-cloud-based-user-accounts-and-use-them-only-when-necessary"></a>1. Opret dedikerede, privilegerede, skybaserede brugerkonti, og brug dem kun, når det er nødvendigt
 
-I stedet for at bruge daglige brugerkonti, der er blevet tildelt administratorroller, skal du oprette dedikerede brugerkonti, der har administratorrollerne i Azure AD. 
+I stedet for at bruge daglige brugerkonti, der er blevet tildelt administratorroller, kan du oprette dedikerede brugerkonti, der har administratorrollerne i Azure AD. 
 
 Fra nu af logger du kun på med de dedikerede privilegerede konti for opgaver, der kræver administratorrettigheder. Al anden Microsoft 365-administration skal udføres ved at tildele andre administrationsroller til brugerkonti.
   
 > [!NOTE]
 > Dette kræver yderligere trin for at logge af som din daglige brugerkonto og logge på med en dedikeret administratorkonto. Men det skal kun gøres lejlighedsvis i forbindelse med administratorhandlinger. Overvej at gendanne dit Microsoft 365-abonnement efter brud på en administratorkonto kræver mange flere trin.
 
-Du skal også oprette [akutadgangskonti](/azure/active-directory/roles/security-emergency-access) for at forhindre, at azure AD låses utilsigtet.
+Du skal også oprette [akutadgangskonti](/azure/active-directory/roles/security-emergency-access) for at forhindre, at du ved et uheld låses ude af Azure AD.
 
-Du kan beskytte dine privilegerede konti yderligere med Azure AD Privileged Identity Management (PIM) til tildeling efter behov af administratorroller efter behov. 
+Du kan beskytte dine privilegerede konti yderligere med Azure AD Privileged Identity Management (PIM) til tildeling af administratorroller efter behov. 
  
 ## <a name="2-configure-multi-factor-authentication-for-your-dedicated-microsoft-365-privileged-accounts"></a>2. Konfigurer multifaktorgodkendelse for dine dedikerede Privilegerede Microsoft 365-konti
 
@@ -86,7 +89,7 @@ Hvis sikkerhedsinfrastrukturen for den ønskede stærkere bekræftelsesmetode ik
   
 Du kan få flere oplysninger under [MFA til Microsoft 365](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md).
   
-## <a name="3-protect-administrator-accounts-with-zero-trust-identity-and-device-access-recommendations"></a>3. Beskyt administratorkonti med Zero Trust-identitet og anbefalinger til enhedsadgang
+## <a name="3-protect-administrator-accounts-with-zero-trust-identity-and-device-access-recommendations"></a>3. Beskyt administratorkonti med Nul tillid anbefalinger til identitet og enhedsadgang
 
 For at hjælpe med at sikre en sikker og produktiv arbejdsstyrke giver Microsoft en række anbefalinger til [identitets- og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md). I forbindelse med identitet skal du bruge anbefalingerne og indstillingerne i disse artikler:
 
@@ -103,11 +106,11 @@ Hvis du vil sikre, at udførelsen af yderst privilegerede opgaver er så sikker 
   
 Du kan finde oplysninger om, hvordan du konfigurerer en PAW, under [https://aka.ms/cyberpaw](/security/compass/privileged-access-devices).
 
-Hvis du vil aktivere Azure PIM for dine Azure AD-lejer- og administratorkonti, skal du se [trinnene til konfiguration af PIM](/azure/active-directory/active-directory-privileged-identity-management-configure).
+Hvis du vil aktivere Azure PIM for dine Azure AD lejer- og administratorkonti, skal du se [trinnene til konfiguration af PIM](/azure/active-directory/active-directory-privileged-identity-management-configure).
 
 Hvis du vil udvikle en omfattende køreplan for at sikre privilegeret adgang mod cyberangreb, skal du se [Sikring af privilegeret adgang til hybrid- og cloudinstallationer i Azure AD](/azure/active-directory/admin-roles-best-practices).
 
-### <a name="azure-ad-privileged-identity-management"></a>Privilegeret identitetsstyring i Azure AD
+### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
 
 I stedet for at få tildelt en administratorrolle permanent til dine privilegerede konti kan du bruge Azure AD PIM til at aktivere tildeling efter behov af administratorrollen efter behov.
   
@@ -115,15 +118,15 @@ Dine administratorkonti går fra at være permanente administratorer til beretti
   
 Brug af PIM og denne proces reducerer betydeligt den tid, dine privilegerede konti er sårbare over for angreb og brug af ondsindede brugere.
 
-PIM fås med Azure Active Directory Premium P2, som er inkluderet i Microsoft 365 E5. Du kan også købe individuelle Azure Active Directory Premium P2-licenser til dine administratorkonti.
+PIM fås med Azure Active Directory Premium P2, som følger med Microsoft 365 E5. Du kan også købe individuelle Azure Active Directory Premium P2-licenser til dine administratorkonti.
   
 Du kan finde flere oplysninger under:
 
-- [Privilegeret identitetsstyring i Azure AD](/azure/active-directory/active-directory-privileged-identity-management-configure).
+- [Azure AD Privileged Identity Management](/azure/active-directory/active-directory-privileged-identity-management-configure).
 - [Sikring af privilegeret adgang til hybrid- og cloudinstallationer i Azure AD](/azure/active-directory/roles/security-planning)
   
 
-### <a name="privileged-access-management"></a>Privilegeret adgangsstyring
+### <a name="privileged-access-management"></a>Privileged Access Management
 
 Privilegeret adgangsstyring aktiveres ved at konfigurere politikker, der angiver just-in-time-adgang for opgavebaserede aktiviteter i din lejer. Det kan hjælpe med at beskytte din organisation mod brud, der kan bruge eksisterende privilegerede administratorkonti med stående adgang til følsomme data eller adgang til vigtige konfigurationsindstillinger. Du kan f.eks. konfigurere en politik for privilegeret adgangsstyring, der kræver eksplicit godkendelse for at få adgang til og ændre indstillingerne for organisationspostkasser i din lejer.
 

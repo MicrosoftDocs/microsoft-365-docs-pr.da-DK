@@ -1,5 +1,5 @@
 ---
-title: Almindelige politikker for identitets- og enhedsadgang for Nul tillid – Microsoft 365 for virksomheds-| Microsoft Docs
+title: Almindelige Nul tillid politikker for identitet og enhedsadgang – Microsoft 365 for enterprise-| Microsoft Docs
 description: Beskriver de anbefalede almindelige Nul tillid politikker og konfigurationer for identitets- og enhedsadgang.
 ms.author: dansimp
 author: dansimp
@@ -19,17 +19,18 @@ ms.collection:
 - remotework
 - m365solution-identitydevice
 - m365solution-scenario
+- zerotrust-solution
 ms.technology: mdo
-ms.openlocfilehash: 0c7facc2ac5a20b21a6862b115b62c576ebaeb1f
-ms.sourcegitcommit: 45bc65972d4007b2aa7760d4457a0d2699f81926
+ms.openlocfilehash: 35acb32c9a27ec32c78f4f247257d589a9fefc04
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/20/2022
-ms.locfileid: "64972183"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750050"
 ---
 # <a name="common-zero-trust-identity-and-device-access-policies"></a>Almindelige politikker for identitet og enhedsadgang Nul tillid
 
-I denne artikel beskrives de almindelige anbefalede Nul tillid politikker for identitets- og enhedsadgang til sikring af adgang til Microsoft 365 cloudtjenester, herunder programmer i det lokale miljø, der er publiceret med Azure Active Directory (Azure AD) Programproxy.
+I denne artikel beskrives de almindelige anbefalede Nul tillid politikker for identitets- og enhedsadgang til sikring af adgang til Microsoft 365-cloudtjenester, herunder programmer i det lokale miljø, der er publiceret med Azure Active Directory (Azure AD) Programproxy.
 
 I denne vejledning beskrives det, hvordan du installerer de anbefalede politikker i et nyligt klargjort miljø. Når du konfigurerer disse politikker i et separat laboratoriemiljø, kan du forstå og evaluere de anbefalede politikker, før udrulningen gemmes i dine præproduktions- og produktionsmiljøer. Dit nyligt klargjorte miljø kan være skybaseret eller hybridt, så det afspejler dine evalueringsbehov.
 
@@ -59,7 +60,7 @@ For at give dig tid til at udføre disse opgaver anbefaler vi, at du implementer
 |**Udgangspunkt**|[Kræv MFA, når logonrisikoen er *mellem* eller *høj*](#require-mfa-based-on-sign-in-risk)||Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Security|
 ||[Bloker klienter, der ikke understøtter moderne godkendelse](#block-clients-that-dont-support-multi-factor)|Klienter, der ikke bruger moderne godkendelse, kan tilsidesætte politikker for betinget adgang, så det er vigtigt at blokere disse.|Microsoft 365 E3 eller E5|
 ||[Brugere med høj risiko skal ændre adgangskode](#high-risk-users-must-change-password)|Tvinger brugerne til at ændre deres adgangskode, når de logger på, hvis der registreres højrisikoaktivitet for deres konto.|Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Security|
-||[Anvend app-databeskyttelse (Application Protection Policies)](#apply-app-data-protection-policies)|En Intune appbeskyttelsespolitik pr. platform (Windows, iOS/iPadOS, Android).|Microsoft 365 E3 eller E5|
+||[Anvend app-databeskyttelse (Application Protection Policies)](#apply-app-data-protection-policies)|Én Intune appbeskyttelsespolitik pr. platform (Windows, iOS/iPadOS, Android).|Microsoft 365 E3 eller E5|
 ||[Kræv godkendt app- og appbeskyttelse](#require-approved-apps-and-app-protection)|Gennemtvinger beskyttelse af mobilapps til telefoner og tablets ved hjælp af iOS, iPadOS eller Android.|Microsoft 365 E3 eller E5|
 |**Enterprise**|[Kræv MFA, når logonrisikoen er *lav*, *mellem* eller *høj*](#require-mfa-based-on-sign-in-risk)||Microsoft 365 E5 eller Microsoft 365 E3 med tilføjelsesprogrammet E5 Security|
 ||[Definer politikker for enhedsoverholdelse](#define-device-compliance-policies)|Én politik for hver platform.|Microsoft 365 E3 eller E5|
@@ -68,9 +69,9 @@ For at give dig tid til at udføre disse opgaver anbefaler vi, at du implementer
 
 ## <a name="assigning-policies-to-groups-and-users"></a>Tildeling af politikker til grupper og brugere
 
-Før du konfigurerer politikker, skal du identificere de Azure AD-grupper, du bruger til hvert beskyttelsesniveau. Startpunktbeskyttelse gælder typisk for alle i organisationen. En bruger, der er inkluderet til både startpunkt og virksomhedsbeskyttelse, anvender alle startpunktspolitikker samt virksomhedspolitikkerne. Beskyttelse er kumulativ, og den mest restriktive politik gennemtvinges.
+Før du konfigurerer politikker, skal du identificere de Azure AD grupper, du bruger til hvert beskyttelsesniveau. Startpunktbeskyttelse gælder typisk for alle i organisationen. En bruger, der er inkluderet til både startpunkt og virksomhedsbeskyttelse, anvender alle startpunktspolitikker samt virksomhedspolitikkerne. Beskyttelse er kumulativ, og den mest restriktive politik gennemtvinges.
 
-En anbefalet praksis er at oprette en Azure AD-gruppe til udeladelse af betinget adgang. Føj denne gruppe til alle dine politikker for betinget adgang i indstillingen **Udelad** for indstillingen **Brugere og grupper** i afsnittet **Tildelinger** . Dette giver dig en metode til at give adgang til en bruger, mens du foretager fejlfinding af adgangsproblemer. Dette anbefales kun som en midlertidig løsning. Overvåg denne gruppe for ændringer, og sørg for, at udeladelsesgruppen kun bruges efter hensigten.
+En anbefalet praksis er at oprette en Azure AD gruppe til udeladelse af betinget adgang. Føj denne gruppe til alle dine politikker for betinget adgang i indstillingen **Udelad** for indstillingen **Brugere og grupper** i afsnittet **Tildelinger** . Dette giver dig en metode til at give adgang til en bruger, mens du foretager fejlfinding af adgangsproblemer. Dette anbefales kun som en midlertidig løsning. Overvåg denne gruppe for ændringer, og sørg for, at udeladelsesgruppen kun bruges efter hensigten.
 
 Her er et eksempel på gruppetildelinger og udeladelser, der kræver MFA.
 
@@ -84,15 +85,15 @@ Her er resultaterne:
 
   I dette tilfælde matcher medlemmer af gruppen Ledende medarbejdere både startpunktet og virksomhedens politikker for betinget adgang. Adgangskontrollerne for begge politikker kombineres, hvilket i dette tilfælde svarer til virksomhedens politik for betinget adgang.
 
-- Medlemmer af gruppen Tophemmelighed Project X skal altid bruge MFA
+- Medlemmer af den tophemmelige Project X-gruppe skal altid bruge MFA
 
-  I dette tilfælde matcher medlemmer af gruppen Tophemmelighed Project X både startpunktet og de specialiserede politikker for betinget adgang til sikkerhed. Adgangskontrolelementerne for begge politikker kombineres. Da adgangskontrol for den specialiserede politik for betinget adgang til sikkerhed er mere restriktiv, bruges den.
+  I dette tilfælde matcher medlemmer af den tophemmelige Project X-gruppe både startpunktet og de specialiserede politikker for betinget adgang til sikkerhed. Adgangskontrolelementerne for begge politikker kombineres. Da adgangskontrol for den specialiserede politik for betinget adgang til sikkerhed er mere restriktiv, bruges den.
 
-Vær forsigtig, når du anvender højere beskyttelsesniveauer på grupper og brugere. Medlemmer af gruppen Tophemmelighed Project X skal f.eks. bruge MFA, hver gang de logger på, selvom de ikke arbejder med det specialiserede sikkerhedsindhold til Project X.
+Vær forsigtig, når du anvender højere beskyttelsesniveauer på grupper og brugere. Medlemmer af den tophemmelige Project X-gruppe skal f.eks. bruge MFA, hver gang de logger på, selvom de ikke arbejder med det specialiserede sikkerhedsindhold til Project X.
 
-Alle Azure AD-grupper, der er oprettet som en del af disse anbefalinger, skal oprettes som Microsoft 365 grupper. Dette er vigtigt for udrulningen af følsomhedsmærkater, når dokumenter beskyttes i Microsoft Teams og SharePoint.
+Alle Azure AD grupper, der er oprettet som en del af disse anbefalinger, skal oprettes som Microsoft 365-grupper. Dette er vigtigt for udrulningen af følsomhedsmærkater, når dokumenter beskyttes i Microsoft Teams og SharePoint.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png" alt-text="Oprettelse af en Microsoft 365 gruppe" lightbox="../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png" alt-text="Oprettelse af en Microsoft 365-gruppe" lightbox="../../media/microsoft-365-policies-configurations/identity-device-AAD-groups.png":::
 
 ## <a name="require-mfa-based-on-sign-in-risk"></a>Kræv MFA baseret på logonrisiko
 
@@ -101,7 +102,7 @@ Du skal have dine brugere til at tilmelde sig MFA, før de skal bruge den. Hvis 
 Når dine brugere er registreret, kan du kræve MFA til logon med en ny politik for betinget adgang.
 
 1. Gå til [Azure Portal](https://portal.azure.com), og log på med dine legitimationsoplysninger.
-2. Vælg **Azure Active Directory** på listen over Azure-tjenester.
+2. Vælg **Azure Active Directory på listen over Azure-tjenester**.
 3. Vælg **Sikkerhed** på listen **Administrer**, og vælg derefter **Betinget adgang**.
 4. Vælg **Ny politik** , og skriv navnet på den nye politik.
 
@@ -175,7 +176,7 @@ I forbindelse med Exchange Online kan du bruge godkendelsespolitikker til at [de
 
 Hvis du vil sikre, at alle kompromitterede konti for brugere med høj risiko tvinges til at udføre en adgangskodeændring, når du logger på, skal du anvende følgende politik.
 
-Log på [Microsoft Azure-portalen (https://portal.azure.com)](https://portal.azure.com/) med dine administratorlegitimationsoplysninger, og naviger derefter til **Azure AD Identity Protection > User Risk Policy**.
+Log på [Microsoft Azure Portal (https://portal.azure.com)](https://portal.azure.com/) med dine administratorlegitimationsoplysninger, og naviger derefter til **Azure AD Identity Protection > User Risk Policy**.
 
 I afsnittet **Tildelinger** :
 
@@ -197,7 +198,7 @@ Til sidst skal du vælge **Til** for **Gennemtving politik** og derefter vælge 
 
 Overvej at bruge [What if-værktøjet](/azure/active-directory/active-directory-conditional-access-whatif) til at teste politikken.
 
-Brug denne politik sammen med [Konfigurer Adgangskodebeskyttelse i Azure AD](/azure/active-directory/authentication/concept-password-ban-bad), som registrerer og blokerer kendte svage adgangskoder og deres varianter og yderligere svage ord, der er specifikke for din organisation. Brug af Adgangskodebeskyttelse i Azure AD sikrer, at ændrede adgangskoder er stærke adgangskoder.
+Brug denne politik sammen med [Konfigurer Azure AD adgangskodebeskyttelse](/azure/active-directory/authentication/concept-password-ban-bad), som registrerer og blokerer kendte svage adgangskoder og deres varianter og yderligere svage ord, der er specifikke for din organisation. Brug af Azure AD adgangskodebeskyttelse sikrer, at ændrede adgangskoder er stærke adgangskoder.
 
 ## <a name="apply-app-data-protection-policies"></a>Anvend politikker for databeskyttelse i APP
 
@@ -230,10 +231,10 @@ Hvis du vil gennemtvinge de Appbeskyttelse politikker, du anvendte i Intune, ska
 
 Gennemtvingelse af Appbeskyttelse politikker kræver et sæt politikker, der er beskrevet i [Kræv beskyttelsespolitik for apps til cloudapps med betinget adgang](/azure/active-directory/conditional-access/app-protection-based-conditional-access). Disse politikker er hver især inkluderet i dette anbefalede sæt politikker for konfiguration af identitet og adgang.
 
-Hvis du vil oprette politikken Betinget adgang, der kræver godkendte apps og appbeskyttelse, skal du følge trinnene i [Kræv godkendte klientapps eller politik for appbeskyttelse på mobilenheder](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), som kun tillader konti i mobilapps, der er beskyttet af Appbeskyttelse politikker, at få adgang til Microsoft 365 slutpunkter.
+Hvis du vil oprette politikken Betinget adgang, der kræver godkendte apps og appbeskyttelse, skal du følge trinnene i [Kræv godkendte klientapps eller politik for appbeskyttelse på mobilenheder](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), som kun tillader konti i mobilapps, der er beskyttet af Appbeskyttelse politikker, at få adgang til Microsoft 365-slutpunkter.
 
    > [!NOTE]
-   > Denne politik sikrer, at mobilbrugere kan få adgang til alle Microsoft 365 slutpunkter ved hjælp af de relevante apps.
+   > Denne politik sikrer, at mobilbrugere kan få adgang til alle Microsoft 365-slutpunkter ved hjælp af de relevante apps.
 
 Denne politik blokerer også Exchange ActiveSync klienter på mobilenheder fra at oprette forbindelse til Exchange Online. Du kan dog oprette en separat politik til håndtering af Exchange ActiveSync på tværs af alle enheder. Du kan få flere oplysninger under [Bloker ActiveSync-klienter](secure-email-recommended-policies.md#block-activesync-clients), hvilket forhindrer, at Exchange ActiveSync klienter, der benytter basisgodkendelse, opretter forbindelse til Exchange Online. Denne politik er ikke afbildet i illustrationen øverst i denne artikel. Den er beskrevet og afbilledet i [Politikanbefalinger til sikring af mail](secure-email-recommended-policies.md).
 
@@ -258,7 +259,7 @@ With Conditional Access, organizations can restrict access to approved (modern a
 
 ## <a name="define-device-compliance-policies"></a>Definer politikker for enhedsoverholdelse
 
-Politikker for enhedsoverholdelse definerer de krav, som enhederne skal opfylde for at blive bestemt som kompatible. Du kan oprette Intune politikker for enhedsoverholdelse fra Microsoft Endpoint Manager Administration.
+Politikker for enhedsoverholdelse definerer de krav, som enhederne skal opfylde for at blive bestemt som kompatible. Du opretter Intune politikker for enhedsoverholdelse fra Microsoft Endpoint Manager Administration.
 
 Du skal oprette en politik for hver pc, telefon eller tabletplatform:
 
@@ -269,7 +270,7 @@ Du skal oprette en politik for hver pc, telefon eller tabletplatform:
 - Windows 8.1 og nyere
 - Windows 10 og nyere
 
-Hvis du vil oprette politikker for enhedsoverholdelse, skal du logge på [Microsoft Endpoint Manager Administration](https://endpoint.microsoft.com) med dine administratorlegitimationsoplysninger og derefter **navigere til** Politikker for \> **enheders overholdelse af regler** \> og **standarder**. Vælg **Opret politik**.
+Hvis du vil oprette politikker for enhedsoverholdelse, [skal du logge på Microsoft Endpoint Manager Administration Center](https://endpoint.microsoft.com) med dine administratorlegitimationsoplysninger og derefter **navigere til** Politikker for \> **enheders overholdelse af** \> regler og **standarder**. Vælg **Opret politik**.
 
 Hvis politikker for enhedsoverholdelse skal installeres, skal de tildeles til brugergrupper. Du tildeler en politik, når du har oprettet og gemt den. Vælg politikken i Administration, og vælg derefter **Tildelinger**. Når du har valgt de grupper, du vil modtage politikken for, skal du vælge **Gem** for at gemme gruppetildelingen og installere politikken.
 
@@ -344,7 +345,7 @@ Hvis du vil se de specifikke anbefalinger til enhedsoverholdelse og enhedsbegræ
 
 Følgende indstillinger anbefales til pc'er, der kører Windows 10 og nyere, som konfigureret i **trin 2: Indstillinger for overholdelse af angivne standarder** for processen til oprettelse af politikker.
 
-Du **kan se regler for evaluering af enhedstilstand > Windows tilstands attestationstjeneste** i denne tabel.
+Se denne tabel for regler **for evaluering af enhedstilstand > Windows Health Attestation Service**.
 
 |Egenskaber|Værdi|Handling|
 |---|---|---|
@@ -419,7 +420,7 @@ To require compliant PCs:
 Sådan kræver du overholdelse af angivne standarder for alle enheder:
 
 1. Gå til [Azure Portal](https://portal.azure.com), og log på med dine legitimationsoplysninger.
-2. Vælg **Azure Active Directory** på listen over Azure-tjenester.
+2. Vælg **Azure Active Directory på listen over Azure-tjenester**.
 3. Vælg **Sikkerhed** på listen **Administrer**, og vælg derefter **Betinget adgang**.
 4. Vælg **Ny politik** , og skriv navnet på den nye politik.
 

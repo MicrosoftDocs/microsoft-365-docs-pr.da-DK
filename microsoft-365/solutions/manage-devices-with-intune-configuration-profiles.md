@@ -16,14 +16,15 @@ ms.collection:
 - M365-security-compliance
 - m365solution-managedevices
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: fe137e626d5199f1709504d025411586965ae9fd
-ms.sourcegitcommit: 6fefc15dd78139316597083b702286097d45d4dd
+ms.openlocfilehash: 3b8993c02ce6a5c1885997f6c56c40c22ee85321
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/09/2022
-ms.locfileid: "64737415"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749303"
 ---
 # <a name="step-5-deploy-device-profiles-in-microsoft-intune"></a>Trin 5. Udrul enhedsprofiler i Microsoft Intune
 
@@ -38,17 +39,17 @@ Konfigurationsprofiler giver dig mulighed for at konfigurere vigtig beskyttelse 
 
 Hvis du vil have en idé om, hvilken type konfigurationsprofiler du kan oprette, skal du se [Anvend funktioner og indstillinger på dine enheder ved hjælp af enhedsprofiler i Microsoft Intune](/mem/intune/configuration/device-profiles).
 
-## <a name="deploy-windows-security-baselines-for-intune"></a>Installer Windows grundlæggende sikkerhedsgrundlinjer for Intune
+## <a name="deploy-windows-security-baselines-for-intune"></a>Installer Windows security baselines for Intune
 
-Hvis du vil justere dine enhedskonfigurationer i forhold til Microsofts grundlinjer for sikkerhed, anbefaler vi som udgangspunkt de grundlæggende sikkerhedslinjer inden for Microsoft Endpoint Manager. Fordelen ved denne fremgangsmåde er, at du kan stole på, at Microsoft holder grundlinjerne opdateret, efterhånden som Windows 10 og 11 funktioner udgives. 
+Hvis du vil justere dine enhedskonfigurationer i forhold til Microsofts sikkerhedsbase baselines, anbefaler vi som udgangspunkt de grundlæggende sikkerhedsindstillingerne i Microsoft Endpoint Manager. Fordelen ved denne fremgangsmåde er, at du kan stole på, at Microsoft holder grundlinjerne opdateret, efterhånden som Windows 10 og 11 funktioner udgives. 
 
-Hvis du vil udrulle de Windows grundlæggende sikkerhedsgrundlinjer for Intune, skal du være tilgængelig for Windows 10 og Windows 11. Se [Brug grundlæggende sikkerhedslinjer til at konfigurere Windows enheder i Intune](/mem/intune/protect/security-baselines) for at få mere at vide om de tilgængelige grundlinjer.
+Hvis du vil installere Windows Security Baselines for Intune, skal du være tilgængelig for Windows 10 og Windows 11. Se [Brug sikkerhedsbaser til at konfigurere Windows-enheder i Intune](/mem/intune/protect/security-baselines) for at få mere at vide om de tilgængelige grundlinjer.
 
 I øjeblikket skal du blot installere den mest relevante MDM-sikkerhedsbaselinje. Se [Administrer profiler for grundlæggende sikkerhedsgrundlinjer i Microsoft Intune ](/mem/intune/protect/security-baselines-configure)for at oprette profilen og vælge den oprindelige version.
 
 Når Microsoft Defender for Endpoint er konfigureret senere, og du har oprettet forbindelse Intune, skal du installere Defender for Endpoint baselines. Dette emne behandles i den næste artikel i denne serie: [Trin 6. Overvåg enhedsrisici og overholdelse af angivne standarder i forhold til grundlæggende sikkerhedslinjer](manage-devices-with-intune-monitor-risk.md).
 
-Det er vigtigt at forstå, at disse sikkerhedsbaser ikke er CIS- eller NIST-kompatible, men nøje afspejler deres anbefalinger. Du kan få flere oplysninger under [Er cis- eller NIST-Intune-sikkerhedsbaser kompatible?](https://docs.microsoft.com/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
+Det er vigtigt at forstå, at disse sikkerhedsbaser ikke er CIS- eller NIST-kompatible, men nøje afspejler deres anbefalinger. Du kan få flere oplysninger under [Er cis- eller NIST-Intune-sikkerhedsbaser kompatible?](/mem/intune/protect/security-baselines#are-the-intune-security-baselines-cis-or-nist-compliant)
 
 ## <a name="customize-configuration-profiles-for-your-organization"></a>Tilpas konfigurationsprofiler for din organisation
 
@@ -73,21 +74,21 @@ Når du tilpasser konfigurationsprofiler for din organisation, skal du bruge fø
 - Gør din strategi for styring af sikkerhed mere enkel ved at begrænse det samlede antal politikker.
 - Gruppér indstillinger i de kategorier, der er angivet ovenfor, eller kategorier, der giver mening for din organisation.
 - Når du flytter sikkerhedskontrolelementer fra Gruppepolitik Objekter til Intune konfigurationsprofiler, skal du overveje, om de indstillinger, der er konfigureret af hvert gruppepolitikobjekt, stadig er relevante og nødvendige for at bidrage til din overordnede cloudsikkerhedsstrategi. Betinget adgang og de mange politikker, der kan konfigureres på tværs af cloudtjenester, herunder Intune, giver mere avanceret beskyttelse, end det kunne konfigureres i et lokalt miljø, hvor brugerdefinerede gruppepolitikobjekter oprindeligt blev designet.
-- Brug Gruppepolitik Analytics til at sammenligne og knytte dine aktuelle GPO-indstillinger til funktioner i Microsoft Endpoint Manager. Se [Analysér dine gruppepolitikobjekter i det lokale miljø ved hjælp af Gruppepolitik analyser](/mem/intune/configuration/group-policy-analytics) i Microsoft Endpoint Manager.
+- Brug Gruppepolitik Analytics til at sammenligne og knytte dine aktuelle GPO-indstillinger til funktioner i Microsoft Endpoint Manager. Se [Analysér dine gruppepolitikobjekter i det lokale miljø ved hjælp af Gruppepolitik-analyser](/mem/intune/configuration/group-policy-analytics) i Microsoft Endpoint Manager.
 - Når du bruger brugerdefinerede konfigurationsprofiler, skal du bruge vejledningen her: [Opret en profil med brugerdefinerede indstillinger i Intune](/mem/intune/configuration/custom-settings-configure).
 
-## <a name="additional-resources"></a>Flere ressourcer
+## <a name="additional-resources"></a>Yderligere ressourcer
 
 Hvis du ikke er sikker på, hvor du skal starte med enhedsprofiler, kan følgende hjælpe:
 
 - [Automatiserede scenarier](/mem/intune/fundamentals/guided-scenarios-overview) 
-- [Grundlæggende sikkerhedslinjer](/mem/intune/protect/security-baselines)
+- [Sikkerhedsbaselines](/mem/intune/protect/security-baselines)
 
 Hvis dit miljø indeholder gruppepolitikobjekter i det lokale miljø, er følgende funktioner en god overgang til cloudmiljøet:
 
 - [Gruppepolitik analyse](/mem/intune/configuration/group-policy-analytics)
-- [Administratorskabeloner (ADMX)](/mem/intune/configuration/administrative-templates-windows)
-- [Indstillinger katalog](/mem/intune/configuration/settings-catalog)
+- [Administration skabeloner (ADMX)](/mem/intune/configuration/administrative-templates-windows)
+- [Indstillingskatalog](/mem/intune/configuration/settings-catalog)
 
 
 ## <a name="next-steps"></a>Næste trin

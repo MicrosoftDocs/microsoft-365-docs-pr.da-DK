@@ -19,14 +19,15 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
+- zerotrust-solution
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: d5588a71995a36981662f7560c1d022fd55858a9
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: ef513856b796cf22b7ad2609e09f7eba03dfae6a
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66602508"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750423"
 ---
 # <a name="step-2-evaluate-microsoft-defender-for-identity-overview"></a>Trin 2. Oversigt over evaluer Microsoft Defender for Identity
 

@@ -1,5 +1,5 @@
 ---
-title: 'Trin 3: Beskyt dine Microsoft 365 brugerkonti'
+title: 'Trin 3: Beskyt dine Microsoft 365-brugerkonti'
 f1.keywords:
 - NOCSH
 author: kelleyvice-msft
@@ -14,37 +14,40 @@ ms.collection:
 - M365-security-compliance
 - Strat_O365_Enterprise
 - m365initiative-coredeploy
+- m365solution-m365-identity
+- m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 description: Kræv, at brugerne logger sikkert på med multifaktorgodkendelse (MFA) og andre funktioner.
-ms.openlocfilehash: 4566b2c8c73ce258899e1de6ef621715092e50a5
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.openlocfilehash: 56ccd1df24bbfb09920cb0c7138ed2e5dc9ca3cb
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65090269"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749962"
 ---
-# <a name="step-3-protect-your-microsoft-365-user-accounts"></a>Trin 3: Beskyt dine Microsoft 365 brugerkonti
+# <a name="step-3-protect-your-microsoft-365-user-accounts"></a>Trin 3: Beskyt dine Microsoft 365-brugerkonti
 
 Sådan øger du sikkerheden for brugerlogon:
 
 - Brug Windows Hello til virksomheder
-- Brug Azure Active Directory (Azure AD) Adgangskodebeskyttelse
+- Brug Adgangskodebeskyttelse i Azure Active Directory (Azure AD)
 - Brug multifaktorgodkendelse (MFA)
 - Udrul konfigurationer for identitets- og enhedsadgang
 - Beskyt mod kompromitterede legitimationsoplysninger med Azure AD Identity Protection
 
 ## <a name="windows-hello-for-business"></a>Windows Hello til virksomheder
 
-Windows Hello til virksomheder i Windows 10 Enterprise erstatter adgangskoder med stærk tofaktorgodkendelse, når der logges på en Windows enhed. De to faktorer er en ny type brugerlegitimationsoplysninger, der er knyttet til en enhed og en biometrisk eller pinkode.
+Windows Hello til virksomheder i Windows 10 Enterprise erstatter adgangskoder med stærk tofaktorgodkendelse, når der logges på en Windows-enhed. De to faktorer er en ny type brugerlegitimationsoplysninger, der er knyttet til en enhed og en biometrisk eller pinkode.
 
 Du kan få flere oplysninger [under Windows Hello til virksomheder Oversigt](/windows/security/identity-protection/hello-for-business/hello-overview).
 
 
-## <a name="azure-ad-password-protection"></a>Azure AD-adgangskodebeskyttelse
+## <a name="azure-ad-password-protection"></a>Azure AD adgangskodebeskyttelse
 
-Azure AD Password Protection registrerer og blokerer kendte svage adgangskoder og deres varianter og kan også blokere yderligere svage ord, der er specifikke for din organisation. Standardlister over globale forbudte adgangskoder anvendes automatisk for alle brugere i en Azure AD-lejer. Du kan definere yderligere poster på en brugerdefineret liste over forbudte adgangskoder. Når brugerne ændrer eller nulstiller deres adgangskoder, kontrolleres disse lister over forbudte adgangskoder for at gennemtvinge brugen af stærke adgangskoder.
+Azure AD Adgangskodebeskyttelse registrerer og blokerer kendte svage adgangskoder og deres varianter og kan også blokere yderligere svage ord, der er specifikke for din organisation. Standardlister over globale forbudte adgangskoder anvendes automatisk på alle brugere i en Azure AD lejer. Du kan definere yderligere poster på en brugerdefineret liste over forbudte adgangskoder. Når brugerne ændrer eller nulstiller deres adgangskoder, kontrolleres disse lister over forbudte adgangskoder for at gennemtvinge brugen af stærke adgangskoder.
 
-Du kan få flere oplysninger under [Konfigurer Adgangskodebeskyttelse i Azure AD](/azure/active-directory/authentication/concept-password-ban-bad).
+Du kan få flere oplysninger under [Konfigurer Azure AD adgangskodebeskyttelse](/azure/active-directory/authentication/concept-password-ban-bad).
 
 ## <a name="mfa"></a>MFA
 
@@ -54,13 +57,13 @@ MFA kræver, at brugerlogon er underlagt en yderligere bekræftelse ud over adga
 
 Dit første trin i brugen af MFA er at [kræve det for alle administratorkonti](protect-your-global-administrator-accounts.md), der også kaldes privilegerede konti. Ud over dette første trin anbefaler Microsoft MFA for alle brugere.
 
-Der er tre måder, du kan kræve, at dine brugere bruger MFA på baseret på din Microsoft 365 plan.
+Der er tre måder at kræve, at dine brugere bruger MFA på baseret på din Microsoft 365-plan.
 
 | Plan | Anbefaling |
 |---------|---------|
-|Alle Microsoft 365 planer (uden Azure AD Premium P1- eller P2-licenser)     |[Aktivér sikkerhedsstandarder i Azure AD](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Sikkerhedsstandarder i Azure AD omfatter MFA for brugere og administratorer.   |
+|Alle Microsoft 365-planer (uden Azure AD Premium P1- eller P2-licenser)     |[Aktivér sikkerhedsstandarder i Azure AD](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults). Sikkerhedsstandarder i Azure AD omfatter MFA for brugere og administratorer.   |
 |Microsoft 365 E3 (omfatter Azure AD Premium P1-licenser)     | Brug de [almindelige politikker for betinget adgang](/azure/active-directory/conditional-access/concept-conditional-access-policy-common) til at konfigurere følgende politikker: <br>- [Kræv MFA for administratorer](/azure/active-directory/conditional-access/howto-conditional-access-policy-admin-mfa) <br>- [Kræv MFA for alle brugere](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa) <br> - [Bloker ældre godkendelse](/azure/active-directory/conditional-access/howto-conditional-access-policy-block-legacy)       |
-|Microsoft 365 E5 (omfatter Azure AD Premium P2-licenser)     | Udnyt Azure AD Identity Protection ved at begynde at implementere Microsofts anbefalede sæt betinget adgang og relaterede politikker ved at oprette disse to politikker:<br> - [Kræv MFA, når logonrisikoen er mellem eller høj](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk) <br>- [Brugere med høj risiko skal ændre adgangskode](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user)       |
+|Microsoft 365 E5 (omfatter Azure AD Premium P2-licenser)     | Ved at udnytte Azure AD identitetsbeskyttelse kan du begynde at implementere Microsofts anbefalede sæt betinget adgang og relaterede politikker ved at oprette disse to politikker:<br> - [Kræv MFA, når logonrisikoen er mellem eller høj](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk) <br>- [Brugere med høj risiko skal ændre adgangskode](/azure/active-directory/conditional-access/howto-conditional-access-policy-risk-user)       |
 | | |
 
 ### <a name="security-defaults"></a>Sikkerhedsstandarder
@@ -77,7 +80,7 @@ Du kan få flere oplysninger i [oversigten over sikkerhedsstandarder](/azure/act
 
 Politikker for betinget adgang er et sæt regler, der angiver de betingelser, som logon evalueres under, og adgang tildeles. Du kan f.eks. oprette en politik for betinget adgang, der angiver:
 
-- Hvis brugerkontonavnet er medlem af en gruppe for brugere, der har fået tildelt rollerne Exchange, bruger, adgangskode, sikkerhed, SharePoint, **Exchange administrator**, **SharePoint administrator** eller **Global administrator**, skal du bruge MFA, før du tillader adgang.
+- Hvis brugerkontonavnet er medlem af en gruppe for brugere, der har fået tildelt rollerne Exchange, bruger, adgangskode, sikkerhed, SharePoint, **Exchange-administrator**, **SharePoint-administrator** eller **Global administrator** , skal du bruge MFA, før du giver adgang.
 
 Denne politik giver dig mulighed for at kræve MFA baseret på gruppemedlemskab i stedet for at forsøge at konfigurere individuelle brugerkonti til MFA, når de tildeles eller ikke tildeles fra disse administratorroller.
 
@@ -100,13 +103,13 @@ I denne tabel vises resultaterne af aktivering af MFA med sikkerhedsstandarder o
 
 | Metode | Aktiveret | Deaktiveret | Yderligere godkendelsesmetode |
 |:-------|:-----|:-------|:-------|
-| **Sikkerhedsstandarder**  | Politikker for betinget adgang kan ikke bruges | Kan bruge politikker for betinget adgang | Microsoft Authenticator app |
+| **Sikkerhedsstandarder**  | Politikker for betinget adgang kan ikke bruges | Kan bruge politikker for betinget adgang | Microsoft Authenticator-app |
 | **Politikker for betinget adgang** | Hvis nogen er aktiveret, kan du ikke aktivere sikkerhedsstandarder | Hvis alle er deaktiveret, kan du aktivere sikkerhedsstandarder  | Brugeren angiver under MFA-registrering  |
 ||||
 
 ## <a name="zero-trust-identity-and-device-access-configurations"></a>Konfigurationer af Nul tillid-identitet og enhedsadgang
 
-Nul tillid indstillinger og politikker for identitets- og enhedsadgang anbefales, og deres indstillinger kombineres med politikker for betinget adgang, Intune og Azure AD Identity Protection, der bestemmer, om en given adgangsanmodning skal tildeles og under hvilke betingelser. Denne bestemmelse er baseret på brugerkontoen for logon, den enhed, der bruges, den app, som brugeren bruger til at få adgang, den placering, hvorfra adgangsanmodningen foretages, og en vurdering af risikoen for anmodningen. Denne funktion hjælper med at sikre, at kun godkendte brugere og enheder kan få adgang til dine vigtige ressourcer.
+Nul tillid indstillinger og politikker for identitets- og enhedsadgang anbefales påkrævede funktioner og deres indstillinger kombineret med politikker for betinget adgang, Intune og Azure AD identitetsbeskyttelse, der bestemmer, om en given adgangsanmodning skal gives, og under hvilke betingelser. Denne bestemmelse er baseret på brugerkontoen for logon, den enhed, der bruges, den app, som brugeren bruger til at få adgang, den placering, hvorfra adgangsanmodningen foretages, og en vurdering af risikoen for anmodningen. Denne funktion hjælper med at sikre, at kun godkendte brugere og enheder kan få adgang til dine vigtige ressourcer.
 
 >[!Note]
 >Azure AD Identity Protection kræver Azure AD Premium P2-licenser, som er inkluderet i Microsoft 365 E5.
@@ -124,14 +127,14 @@ Microsoft anbefaler på det kraftigste, at du konfigurerer og udruller Nul tilli
 
 ## <a name="azure-ad-identity-protection"></a>Azure AD Identity Protection
 
-I dette afsnit får du mere at vide om, hvordan du konfigurerer politikker, der beskytter mod kompromitterede legitimationsoplysninger, hvor en hacker bestemmer en brugers kontonavn og adgangskode for at få adgang til en organisations cloudtjenester og -data. Azure AD Identity Protection indeholder en række måder, du kan hjælpe med at forhindre, at en hacker kompromitterer en brugerkontos legitimationsoplysninger.
+I dette afsnit får du mere at vide om, hvordan du konfigurerer politikker, der beskytter mod kompromitterede legitimationsoplysninger, hvor en hacker bestemmer en brugers kontonavn og adgangskode for at få adgang til en organisations cloudtjenester og -data. Azure AD Identity Protection indeholder en række måder, du kan forhindre en hacker i at kompromittere en brugerkontos legitimationsoplysninger på.
 
 Med Azure AD Identity Protection kan du:
 
 |Kapacitet|Beskrivelse|
 |:---------|:---------|
-| Fastlæg og løs potentielle sikkerhedsrisici i din organisations identiteter | Azure AD bruger maskinel indlæring til at registrere uregelmæssigheder og mistænkelig aktivitet, f.eks. logon og aktiviteter efter logon. Ved hjælp af disse data genererer Azure AD Identity Protection rapporter og beskeder, der hjælper dig med at evaluere problemerne og udføre handlinger.|
-|Registrer mistænkelige handlinger, der er relateret til din organisations identiteter, og reager automatisk på dem|Du kan konfigurere risikobaserede politikker, der automatisk reagerer på registrerede problemer, når et angivet risikoniveau er nået. Disse politikker kan ud over andre kontrolelementer for betinget adgang, der leveres af Azure AD og Microsoft Intune, enten automatisk blokere adgang eller udføre korrigerende handlinger, herunder nulstilling af adgangskode og kræve Azure AD Multi-Factor Authentication for efterfølgende logon. |
+| Fastlæg og løs potentielle sikkerhedsrisici i din organisations identiteter | Azure AD bruger maskinel indlæring til at registrere uregelmæssigheder og mistænkelig aktivitet, f.eks. logonaktivitet og aktiviteter efter logon. Ved hjælp af disse data genererer Azure AD Identity Protection rapporter og beskeder, der hjælper dig med at evaluere problemerne og udføre handlinger.|
+|Registrer mistænkelige handlinger, der er relateret til din organisations identiteter, og reager automatisk på dem|Du kan konfigurere risikobaserede politikker, der automatisk reagerer på registrerede problemer, når et angivet risikoniveau er nået. Disse politikker kan ud over andre kontrolelementer for betinget adgang, der leveres af Azure AD og Microsoft Intune, enten automatisk blokere adgang eller udføre korrigerende handlinger, herunder nulstilling af adgangskode og kræve Azure AD multifaktorgodkendelse for efterfølgende logon. |
 | Undersøg mistænkelige hændelser, og løs dem med administrative handlinger | Du kan undersøge risikohændelser ved hjælp af oplysninger om sikkerhedshændelsen. Grundlæggende arbejdsprocesser er tilgængelige til at spore undersøgelser og starte afhjælpningshandlinger, f.eks. nulstilling af adgangskode. |
 |||
 
@@ -139,12 +142,12 @@ Se [flere oplysninger om Azure AD Identity Protection](/azure/active-directory/i
 
 Se [trinnene til aktivering af Azure AD Identity Protection](/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies).
 
-## <a name="admin-technical-resources-for-mfa-and-secure-sign-ins"></a>Administrator tekniske ressourcer til MFA og sikre logons
+## <a name="admin-technical-resources-for-mfa-and-secure-sign-ins"></a>Administration tekniske ressourcer til MFA og sikre logons
 
-- [MFA for Microsoft 365](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md)
-- [Udrul identitet for Microsoft 365](deploy-identity-solution-overview.md)
-- [Azure Academy Azure AD-træningsvideoer](https://www.youtube.com/watch?v=pN8o0owHfI0&list=PL-V4YVm6AmwUFpC3rXr2i2piRQ708q_ia)
-- [Konfigurer azure AD-politikken for registrering af multifaktorgodkendelse](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy)
+- [MFA til Microsoft 365](../admin/security-and-compliance/multi-factor-authentication-microsoft-365.md)
+- [Udrul identitet til Microsoft 365](deploy-identity-solution-overview.md)
+- [Azure Academy Azure AD træningsvideoer](https://www.youtube.com/watch?v=pN8o0owHfI0&list=PL-V4YVm6AmwUFpC3rXr2i2piRQ708q_ia)
+- [Konfigurer politikken for registrering af Azure AD multifaktorgodkendelse](/azure/active-directory/identity-protection/howto-identity-protection-configure-mfa-policy)
 - [Konfigurationer af identitets- og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md)
 
 ## <a name="next-step"></a>Næste trin

@@ -22,22 +22,22 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Den metode, du bruger til at fjerne tildelingen af produktlicenser, afhænger af, om du fjerner tildelingen af licenser fra bestemte brugere eller fra et bestemt produkt.
-ms.date: 06/23/2022
-ms.openlocfilehash: 956391e8eeda1d17fdba76cf406a0291d1850b6f
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.date: 07/12/2022
+ms.openlocfilehash: b6459030c376bb891ea32b9cb096d26449dfa0d1
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66663498"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748379"
 ---
 # <a name="unassign-microsoft-365-licenses-from-users"></a>Fjern tildeling af Microsoft 365-licenser fra brugere
 
 Du kan fjerne tildelingen af licenser fra brugere på siden **Aktive brugere** eller på siden **Licenser** . Den metode, du bruger, afhænger af, om du vil fjerne tildelingen af produktlicenser fra bestemte brugere eller fjerne tildelingen af brugerlicenser fra et bestemt produkt.
 
 > [!NOTE]
-> 
+>
 > - Som administrator kan du ikke tildele eller fjerne tildeling af licenser til et selvbetjeningskøbsabonnement, der er købt af en bruger i din organisation. Du kan [overtage et selvbetjeningskøbsabonnement](../../commerce/subscriptions/manage-self-service-purchases-admins.md#take-over-a-self-service-purchase-subscription) og derefter tildele eller fjerne tildeling af licenser.
-> 
+>
 > - For nogle abonnementer kan du kun annullere i løbet af et begrænset tidsrum, når du har købt eller fornyet dit abonnement. Hvis annulleringsvinduet er gået, skal du deaktivere tilbagevendende fakturering for at annullere abonnementet i slutningen af dets løbetid.
 
 ## <a name="before-you-begin"></a>Før du begynder
@@ -48,9 +48,9 @@ Du kan fjerne tildelingen af licenser fra brugere på siden **Aktive brugere** e
 
 ## <a name="use-the-licenses-page-to-unassign-licenses"></a>Brug siden Licenser til at fjerne tildelingen af licenser
 
-På siden **Licenser** kan du tildele eller fjerne tildeling af licenser for op til 20 brugere ad gangen. På siden vises de produkter, du ejer, antallet af tilgængelige licenser for hvert produkt og antallet af tildelte licenser ud af det samlede antal tilgængelige licenser. Antallet af licenser er et samlet antal licenser for alle abonnementer for det samme produktnavn.
+På siden **Licenser** kan du tildele eller fjerne tildeling af licenser for op til 20 brugere ad gangen. På siden vises de produkter, du ejer, antallet af tilgængelige licenser for hvert produkt og antallet af tildelte licenser ud af det samlede antal tilgængelige licenser.
 
-Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fem licenser, og et andet abonnement, der har 8 licenser til det samme produkt. På siden **Licenser** kan du se, at du har i alt 13 licenser til Microsoft 365 Business Premium på tværs af alle dine abonnementer. Dette adskiller sig fra det, du ser på siden **Dine produkter** , som viser en række for hvert abonnement, du ejer, selvom de er for det samme produkt.
+På siden **Licenser** vises et samlet antal licenser for alle abonnementer for det samme produktnavn. Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fem licenser, og et andet abonnement, der har 8 licenser til det samme produkt. På siden **Licenser** kan du se, at du har i alt 13 licenser til Microsoft 365 Business Premium på tværs af alle dine abonnementer. Dette adskiller sig fra det, du ser på siden **Dine produkter** , som viser en række for hvert abonnement, du ejer, selvom de er for det samme produkt.
 
 ::: moniker range="o365-worldwide"
 
@@ -64,13 +64,13 @@ Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fe
 
 ::: moniker-end
 
-1. Vælg et produkt.
+2. Vælg et produkt.
 
-2. Markér afkrydsningsfelterne for de brugere, du vil fjerne tildelingen af licenser til.
+3. Markér afkrydsningsfelterne for de brugere, du vil fjerne tildelingen af licenser for.
 
-3. Vælg **Fjern tildeling af licenser**.
+4. Vælg **Fjern tildeling af licenser**.
 
-4. I feltet **Fjern tildeling af licenser** skal du vælge **Fjern tildeling**.
+5. I feltet **Fjern tildeling af licenser** skal du vælge **Fjern tildeling**.
 
 ## <a name="use-the-active-users-page-to-unassign-licenses"></a>Brug siden Aktive brugere til at fjerne tildelingen af licenser
 

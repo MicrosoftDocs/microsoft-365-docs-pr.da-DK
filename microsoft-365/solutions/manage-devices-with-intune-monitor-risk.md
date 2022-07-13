@@ -18,18 +18,19 @@ ms.collection:
 - deploy security baselines
 - m365solution-managedevices
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: 68ce5f263f24d4ab3271425815834870c71f2a4a
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: eab30a8a0801dcbdf95bee3c33f54a920850a6db
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64938966"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749237"
 ---
 # <a name="step-6-monitor-device-risk-and-compliance-to-security-baselines"></a>Trin 6. Overvåg enhedens risiko og overholdelse af regler og standarder i forhold til sikkerhedsbaseline
 
-Når din organisation har udrullet Microsoft Defender for Endpoint, kan du få større indsigt i og beskyttelse af dine enheder ved at integrere Microsoft Intune med Defender for Endpoint. For mobilenheder omfatter dette muligheden for at overvåge enhedsrisikoen som en betingelse for adgang. For Windows enheder kan du overvåge disse enheders overholdelse af grundlæggende sikkerhedsgrundlinjer. 
+Når din organisation har udrullet Microsoft Defender for Endpoint, kan du få større indsigt i og beskyttelse af dine enheder ved at integrere Microsoft Intune med Defender for Endpoint. For mobilenheder omfatter dette muligheden for at overvåge enhedsrisikoen som en betingelse for adgang. For Windows-enheder kan du overvåge disse enheders overholdelse af grundlæggende sikkerhedslinjer. 
 
 Udrulning af Microsoft Defender for Endpoint omfatter onboarding af slutpunkter. Hvis du har brugt Intune til at onboarde slutpunkter (anbefales), har du allerede oprettet forbindelse Microsoft Intune til Defender for Endpoint. Hvis du har brugt en anden metode til at onboarde slutpunkter til Defender for Endpoint, skal du se [Konfigurer Microsoft Defender for Endpoint i Intune](/mem/intune/protect/advanced-threat-protection-configure) for at sikre, at du har konfigureret service til tjeneste-forbindelsen mellem Intune og Microsoft Defender for Endpoint. 
 
@@ -59,9 +60,9 @@ For alle platforme kan du angive risikoniveauet i de eksisterende politikker for
 
 Gælder for: Windows 10, Windows 11
 
-Artiklen Trin [5. Udrul konfigurationsprofiler](manage-devices-with-intune-configuration-profiles.md), anbefaler, at du kommer i gang med konfigurationsprofiler ved hjælp af de grundlæggende sikkerhedsdata, der er tilgængelige for Windows 10 og Windows 11. Microsoft Defender for Endpoint indeholder også grundlæggende sikkerhedsindstillinger, der indeholder indstillinger, der optimerer alle sikkerhedskontrolelementer i Defender for Endpoint-stakken, herunder indstillinger for slutpunktsregistrering og -svar (Slutpunktsregistrering og -svar). Disse installeres også ved hjælp af Microsoft Intune.
+Artiklen Trin [5. Udrul konfigurationsprofiler](manage-devices-with-intune-configuration-profiles.md), anbefaler, at du kommer i gang med konfigurationsprofiler ved hjælp af de grundlæggende sikkerhedsdata, der er tilgængelige for Windows 10 og Windows 11. Microsoft Defender for Endpoint indeholder også grundlæggende sikkerhedsindstillinger, der indeholder indstillinger, der optimerer alle sikkerhedskontrolelementer i Defender for Endpoint-stakken, herunder indstillinger for EDR (Endpoint Detection and Response). Disse installeres også ved hjælp af Microsoft Intune.
 
-Ideelt set udrulles enheder, der er onboardet til Defender for Endpoint, begge grundlinjer: den Windows Intune sikkerhedsbaselinje til at starte med sikre Windows og derefter defender for Endpoint-sikkerhedsbasebaselinjen øverst for at konfigurere sikkerhedskontrolelementerne for Defender for Endpoint optimalt.
+Ideelt set udrulles enheder, der er onboardet til Defender for Endpoint, begge grundlinjer: Windows Intune sikkerhedsbaselinje til at starte med sikre Windows og derefter Defender for Endpoint security baseline layered øverst for at konfigurere Defender for Endpoint-sikkerhedskontrolelementerne optimalt.
 
 Hvis du vil drage fordel af de nyeste data om risici og trusler og for at minimere konflikter i takt med, at grundlinjerne udvikler sig, skal du altid anvende de nyeste versioner af grundlinjerne på tværs af alle produkter, så snart de udgives. 
 
@@ -74,8 +75,8 @@ Hvis du vil installere grundlæggende sikkerhedsindstillinger og overvåge overh
 
 |Trin  |Beskrivelse  |
 |---------|---------|
-|1     |Gennemse vigtige begreber, og sammenlign Microsoft Defender for Endpoint og Windows Intune grundlæggende sikkerhedsbegreber. <br><br>Se [Øg overholdelse af Microsoft Defender for Endpoint sikkerhedsbaselinje](../security/defender-endpoint/configure-machines-security-baseline.md) for at få anbefalinger.<br><br>Se [Brug grundlæggende sikkerhedstilgange til at konfigurere Windows enheder i Intune ](/mem/intune/protect/security-baselines) for at gennemse listen over tilgængelige grundlæggende sikkerhedsgrundlinjer, og hvordan du undgår konflikter.         |
-|2     |  Installer Windows indstillinger for grundlæggende sikkerhedsindstillinger for Intune. Du har muligvis allerede gennemført dette, hvis du har fulgt vejledningen i [trin 5. Udrul konfigurationsprofiler](manage-devices-with-intune-configuration-profiles.md).        |
+|1     |Gennemse vigtige begreber, og sammenlign Microsoft Defender for Endpoint og Windows Intune grundlæggende sikkerhedsbegreber. <br><br>Se [Øg overholdelse af Microsoft Defender for Endpoint sikkerhedsbaselinje](../security/defender-endpoint/configure-machines-security-baseline.md) for at få anbefalinger.<br><br>Se [Brug grundlæggende sikkerhedslinjer til at konfigurere Windows-enheder i Intune ](/mem/intune/protect/security-baselines) for at gennemse listen over tilgængelige grundlæggende sikkerhedslinjer, og hvordan du undgår konflikter.         |
+|2     |  Installer indstillinger for Windows Security Baseline for Intune. Du har muligvis allerede gennemført dette, hvis du har fulgt vejledningen i [trin 5. Udrul konfigurationsprofiler](manage-devices-with-intune-configuration-profiles.md).        |
 |3    |  Installer defender for Endpoint baseline settings for Intune. Se [Administrer profiler for grundlæggende sikkerhedsgrundlinjer i Microsoft Intune](/mem/intune/protect/security-baselines-configure) for at oprette profilen og vælge den oprindelige version.<br><br>Du kan også følge vejledningen her: [Gennemse, og tildel Microsoft Defender for Endpoint grundlæggende sikkerhedsplan](../security/defender-endpoint/configure-machines-security-baseline.md#review-and-assign-the-microsoft-defender-for-endpoint-security-baseline).     |
 |4     | I Defender for Endpoint skal du gennemse [kortet Security baseline i administration af enhedskonfiguration](../security/defender-endpoint/configure-machines.md).          |
 

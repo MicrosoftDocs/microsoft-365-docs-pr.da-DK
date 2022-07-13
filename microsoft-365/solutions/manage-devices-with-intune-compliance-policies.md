@@ -15,14 +15,15 @@ ms.collection:
 - M365-security-compliance
 - m365solution-managedevices
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: f93642984ecb2439ab6e4ad484ea4f6f3303c0ce
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: ae2866d2cabf21616b7aea74220dcf5ce8e4d4eb
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651361"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750292"
 ---
 # <a name="step-3-set-up-compliance-policies-for-devices-with-intune"></a>Trin 3. Konfigurer politikker for overholdelse af angivne standarder for enheder med Intune
 
@@ -30,7 +31,7 @@ Tilmelding af enheder til Intune giver dig mulighed for at opnå endnu større s
 
 ![Trin til administration af enheder](../media/devices/intune-mdm-step-2.png#lightbox)
 
-Du vil være sikker på, at enheder, der tilgår dine apps og data, opfylder minimumskravene, f.eks. at de er beskyttet med adgangskode eller pinkode, og at operativsystemet er opdateret. Politikker for overholdelse af regler og standarder er den måde, hvorpå du kan definere de krav, enhederne skal opfylde. MEM bruger disse politikker for overholdelse af angivne standarder til at markere en enhed som kompatibel eller ikke-kompatibel. Denne binære status overføres til Azure AD, som kan bruge denne status i regler for betinget adgang til at tillade eller forhindre en enhed i at få adgang til ressourcer. 
+Du vil være sikker på, at enheder, der tilgår dine apps og data, opfylder minimumskravene, f.eks. at de er beskyttet med adgangskode eller pinkode, og at operativsystemet er opdateret. Politikker for overholdelse af regler og standarder er den måde, hvorpå du kan definere de krav, enhederne skal opfylde. MEM bruger disse politikker for overholdelse af angivne standarder til at markere en enhed som kompatibel eller ikke-kompatibel. Denne binære status overføres til Azure AD som kan bruge denne status i regler for betinget adgang til at tillade eller forhindre en enhed i at få adgang til ressourcer. 
 
 ## <a name="configuring-device-compliance-policies"></a>Konfiguration af politikker for enhedsoverholdelse
 

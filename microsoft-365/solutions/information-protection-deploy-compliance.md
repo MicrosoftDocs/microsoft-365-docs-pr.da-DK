@@ -15,14 +15,15 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365solution-infoprotection
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du bruger Overholdelsesscore og Overholdelsesstyring til at forbedre dit beskyttelsesniveau for personlige data.
-ms.openlocfilehash: 469584abbf784fe6c556aab14a49a5ed44280a69
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: bd0ae7f748a2a3cd5ff52b6363780032033ead44
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64947445"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748687"
 ---
 # <a name="use-compliance-manager-to-manage-improvement-actions"></a>Brug Overholdelsesstyring til at administrere forbedringshandlinger
 
@@ -31,13 +32,13 @@ Microsoft Purview Compliance Manager kan hjælpe dig med at administrere forbedr
 Denne artikel indeholder en vejledning i brugen af dette værktøj til beskyttelse af personlige oplysninger.
 
 > [!NOTE]
-> Anbefalinger fra Overholdelsesstyring skal ikke fortolkes som en garanti for overholdelse. Det er op til dig at evaluere og validere effektiviteten af kundekontroller i henhold til dit lovgivningsmæssige miljø. Disse tjenester er underlagt vilkårene og betingelserne i [vilkår og betingelser for onlinetjenester](https://go.microsoft.com/fwlink/?linkid=2108910). Se også [Microsoft 365 licensvejledning for sikkerhed og overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#compliance-manager)
+> Anbefalinger fra Overholdelsesstyring bør ikke fortolkes som en garanti for overholdelse af angivne standarder. Det er op til dig at evaluere og validere effektiviteten af kundekontroller i henhold til dit lovgivningsmæssige miljø. Disse tjenester er underlagt vilkårene og betingelserne i [vilkår og betingelser for onlinetjenester](https://go.microsoft.com/fwlink/?linkid=2108910). Se også [Microsoft 365-licensvejledning for sikkerhed og overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#compliance-manager)
 
 ## <a name="getting-started-with-compliance-manager"></a>Introduktion til Overholdelsesstyring
 
 #### <a name="what-is-compliance-manager"></a>Hvad er Overholdelsesstyring
 
-[Overholdelsesstyring](../compliance/compliance-manager.md) er et arbejdsprocesbaseret risikovurderingsværktøj på Microsoft Purview-overholdelsesportalen til administration af aktiviteter for lovmæssig overholdelse af angivne standarder, der er relateret til Microsoft-cloudtjenester. Som en del af dit azure AD-abonnement (Microsoft 365 eller Azure Active Directory) hjælper Overholdelsesstyring dig med at administrere lovmæssig overholdelse inden for modellen med delt ansvar for Microsofts cloudtjenester.
+[Overholdelsesstyring](../compliance/compliance-manager.md) er et arbejdsprocesbaseret risikovurderingsværktøj i Microsoft Purview-compliance-portal til administration af aktiviteter for lovmæssig overholdelse af angivne standarder, der er relateret til Microsofts cloudtjenester. Som en del af dit Abonnement på Microsoft 365 eller Azure Active Directory (Azure AD) hjælper Overholdelsesstyring dig med at administrere lovmæssig overholdelse inden for modellen med delt ansvar for Microsoft-cloudtjenester.
 
 **Klar til brug af vurderinger**
 
@@ -58,14 +59,14 @@ Vejledning til [hurtig start i Overholdelsesstyring](../compliance/compliance-ma
 - [Første besøg: Bliv fortrolig med Overholdelsesstyring](../compliance/compliance-manager-quickstart.md#first-visit-get-to-know-compliance-manager)
     - Arbejde med dashboardet Overholdelsesstyring
     - Om din overholdelsesscore
-    - Learning om forbedringshandlinger
+    - Få mere at vide om forbedringshandlinger
     - Om vurderinger og skabeloner
 - [Oprulning: Konfigurer Overholdelsesstyring til at administrere dine aktiviteter for overholdelse af angivne standarder](../compliance/compliance-manager-quickstart.md#ramping-up-configure-compliance-manager-to-manage-your-compliance-activities)
     - Oprettelse og administration af din første vurdering
     - Udførelse af implementerings- og testarbejde på forbedringshandlinger for at fuldføre kontrolelementer i dine vurderinger
     - Forstå, hvordan forskellige handlinger påvirker din score for overholdelse af angivne standarder
 - [Opskalering: Brug avanceret funktionalitet til at opfylde dine brugerdefinerede behov](../compliance/compliance-manager-quickstart.md#scaling-up-use-advanced-functionality-to-meet-your-custom-needs)
-    - Oprettelse af dine brugerdefinerede vurderinger for at spore produkter, der ikke er Microsoft 365
+    - Oprettelse af dine brugerdefinerede vurderinger for at spore ikke-Microsoft 365-produkter
     - Ændring af eksisterende skabeloner for at tilføje eller fjerne kontrolelementer
     - Konfiguration af automatiseret test af forbedringshandlinger
 
@@ -79,9 +80,9 @@ Som vist i artiklen om beregning af overholdelsesscoren får forebyggende kontro
 
 Brugergrænsefladen for administration af overholdelsesscorer indeholder ikke disse parametre og giver heller ikke mulighed for at filtrere efter dem. Men hvis du downloader den tilknyttede skabelon fra Overholdelsesstyring, vises disse parametre for de fleste regler i det resulterende datasæt.
 
-I forbindelse med tekniske kontrolelementer opdaterer Overholdelsesstyring automatisk forbedringshandlingsscoren, når handlingen er blevet implementeret og testet. Andre ikke-tekniske kontrolhandlinger&mdash;, f.eks. handlinger, der er driftsrelaterede eller relateret til dokumentation&mdash;, skal registreres manuelt som implementeret, før punkter tæller med i din score.
+I forbindelse med tekniske kontrolelementer opdaterer Overholdelsesstyring automatisk forbedringshandlingsscoren, når handlingen er blevet implementeret og testet. Andre ikke-tekniske kontrolhandlinger&mdash;, f.eks. handlinger, der er driftsrelaterede eller relateret til dokumentation&mdash;, skal registreres manuelt som implementeret, før point tælles med i din score.
 
-Du mange implementerer også visse forbedringshandlinger til andre formål&mdash;, f.eks. brug af opbevaringsmærkater af andre årsager end overholdelse af regler&mdash; for beskyttelse af personlige oplysninger, så du ville få kredit for at bruge en sådan funktion, selvom den bruges til andre formål og ikke er en del af en bevidst overholdelseshandling.
+Du mange implementerer også visse forbedringshandlinger til andre formål&mdash;, f.eks. brug af opbevaringsmærkater af andre årsager end overholdelse af regler&mdash;for beskyttelse af personlige oplysninger, så du ville få kredit for at bruge en sådan funktion, selvom den bruges til andre formål og ikke er en del af en bevidst handling for overholdelse af angivne standarder.
 
 Din overholdelsesscore bør betragtes som en relativ måling til sporing af forbedringer i stor skala. Du bør ikke forfølge en perfekt score.
 

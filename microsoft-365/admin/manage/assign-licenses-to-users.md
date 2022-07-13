@@ -25,13 +25,13 @@ ms.custom:
 - AdminTemplateSet
 search.appverid: MET150
 description: Tildel licenser, afhængigt af om du vil tildele produktlicenser til bestemte brugere eller tildele brugerlicenser til et bestemt produkt.
-ms.date: 06/23/2022
-ms.openlocfilehash: ecca89deaadd55182875e8d3a5d8d74e2aec17eb
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.date: 07/12/2022
+ms.openlocfilehash: bf315b0a13bdf0eebb2e38afa3eafb35d4a0361c
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66487515"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748401"
 ---
 # <a name="assign-microsoft-365-licenses-to-users"></a>Tildel Microsoft 365-licenser til brugere
 
@@ -54,12 +54,11 @@ Du kan tildele licenser til brugere på siden **Aktive brugere** eller på siden
 - Hvis du vil bruge gruppebaserede licenser, skal du se [Tildel licenser til brugere efter gruppemedlemskab i Azure Active Directory](/azure/active-directory/users-groups-roles/licensing-groups-assign)
 - Nogle tjenester, f.eks. Sway, tildeles automatisk til brugere og behøver ikke at blive tildelt individuelt.
 
-
 ## <a name="use-the-licenses-page-to-assign-licenses-to-users"></a>Brug siden Licenser til at tildele licenser til brugere
 
-På siden **Licenser** kan du tildele eller fjerne tildeling af licenser for op til 20 brugere ad gangen. På siden vises de produkter, du ejer, antallet af tilgængelige licenser for hvert produkt og antallet af tildelte licenser ud af det samlede antal tilgængelige licenser. Antallet af licenser er et samlet antal licenser for alle abonnementer for det samme produktnavn.
+På siden **Licenser** kan du tildele eller fjerne tildeling af licenser for op til 20 brugere ad gangen. På siden vises de produkter, du ejer, antallet af tilgængelige licenser for hvert produkt og antallet af tildelte licenser ud af det samlede antal tilgængelige licenser.
 
-Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fem licenser, og et andet abonnement, der har 8 licenser til det samme produkt. På siden **Licenser** kan du se, at du har i alt 13 licenser til Microsoft 365 Business Premium på tværs af alle dine abonnementer. Dette adskiller sig fra det, du ser på siden **Dine produkter** , som viser en række for hvert abonnement, du ejer, selvom de er for det samme produkt.
+På siden **Licenser** vises et samlet antal licenser for alle abonnementer for det samme produktnavn. Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fem licenser, og et andet abonnement, der har 8 licenser til det samme produkt. På siden **Licenser** kan du se, at du har i alt 13 licenser til Microsoft 365 Business Premium på tværs af alle dine abonnementer. Dette adskiller sig fra det, du ser på siden **Dine produkter** , som viser en række for hvert abonnement, du ejer, selvom de er for det samme produkt.
 
 ::: moniker range="o365-worldwide"
 
@@ -79,7 +78,7 @@ Du kan f.eks. have ét abonnement på Microsoft 365 Business Premium, der har fe
 
 4. I ruden **Tildel licenser til brugere** skal du begynde at skrive et navn og derefter vælge det fra resultaterne for at føje det til listen. Du kan tilføje op til 20 brugere ad gangen.
 
-4. Vælg **Slå apps og tjenester til eller fra** for at tildele eller fjerne adgang til bestemte elementer.
+5. Vælg **Slå apps og tjenester til eller fra** for at tildele eller fjerne adgang til bestemte elementer.
 
 6. Når du er færdig, skal du vælge **Tildel** og derefter lukke ruden til højre.
 

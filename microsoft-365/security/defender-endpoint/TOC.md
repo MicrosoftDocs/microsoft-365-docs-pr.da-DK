@@ -262,6 +262,12 @@
 ##### [Evaluer styret mappeadgang](evaluate-controlled-folder-access.md)
 ##### [Aktivér styret mappeadgang](enable-controlled-folders.md)
 ##### [Tilpas styret mappeadgang](customize-controlled-folders.md)
+#### [Enhedsstyring]()
+##### [Flytbar lagringsbeskyttelse](device-control-removable-storage-protection.md)
+##### [Styring af adgang til flytbar lagring](device-control-removable-storage-access-control.md)
+##### [Installation af enhed](mde-device-control-device-installation.md)
+##### [Printerbeskyttelse til enhedsstyring](printer-protection.md)
+##### [Rapporter om enhedsstyring](device-control-report.md)
 #### [Exploit Protection]()
 ##### [Beskyt enheder mod misbrug](exploit-protection.md)
 ##### [Evaluering af Exploit Protection](evaluate-exploit-protection.md)
@@ -273,6 +279,14 @@
 ##### [Beskyt dit netværk](network-protection.md)
 ##### [Evaluer netværksbeskyttelse](evaluate-network-protection.md)
 ##### [Slå netværksbeskyttelse til](enable-network-protection.md)
+#### [Webbeskyttelse]()
+##### [Oversigt over webbeskyttelse](web-protection-overview.md)
+##### [Beskyttelse mod webtrusler]()
+###### [Oversigt over beskyttelse mod webtrusler](web-threat-protection.md)
+###### [Overvåge websikkerhed](web-protection-monitoring.md)
+###### [Svar på webtrusler](web-protection-response.md)
+##### [Filtrering af webindhold](web-content-filtering.md)
+
 
 ### Næste generations beskyttelse
 #### [Oversigt over næste generations beskyttelse](next-generation-protection.md)
@@ -353,21 +367,6 @@
 ##### [Gennemse hændelseslogge og fejlkoder for at foretage fejlfinding af problemer med Microsoft Defender Antivirus](troubleshoot-microsoft-defender-antivirus.md)
 ##### [Fejlfinding af Microsoft Defender Antivirus under overførsel fra en tredjepartsløsning](troubleshoot-microsoft-defender-antivirus-when-migrating.md)
 
-#### [Webbeskyttelse]()
-##### [Oversigt over webbeskyttelse](web-protection-overview.md)
-##### [Beskyttelse mod webtrusler]()
-###### [Oversigt over beskyttelse mod webtrusler](web-threat-protection.md)
-###### [Overvåge websikkerhed](web-protection-monitoring.md)
-###### [Svar på webtrusler](web-protection-response.md)
-##### [Filtrering af webindhold](web-content-filtering.md)
-
-#### [Enhedsstyring]()
-##### [Flytbar lagringsbeskyttelse](device-control-removable-storage-protection.md)
-##### [Styring af adgang til flytbar lagring](device-control-removable-storage-access-control.md)
-##### [Installation af enhed](mde-device-control-device-installation.md)
-##### [Printerbeskyttelse til enhedsstyring](printer-protection.md)
-##### [Rapporter om enhedsstyring](device-control-report.md)
-
 #### [Blokering og opbevaring af funktionsmåder]()
 ##### [Blokering og opbevaring af funktionsmåder](behavioral-blocking-containment.md)
 ##### [blokering af klientfunktionsmåder](client-behavioral-blocking.md)
@@ -379,9 +378,6 @@
 
 #### [Øg overholdelsen af sikkerhedsbaseline](configure-machines-security-baseline.md)
 #### [Optimer udrulning af regler for reduktion af angrebsoverfladen og registreringer](configure-machines-asr.md)
-
-## [Vejledning til aktive trusler og kampagner]()
-### [Administrer Log4Shell-sårbarheden](tvm-manage-log4shell-guidance.md)
 
 ## [Undersøg og reager på trusler]()
 ### [Slutpunktsregistrering og -svar]()

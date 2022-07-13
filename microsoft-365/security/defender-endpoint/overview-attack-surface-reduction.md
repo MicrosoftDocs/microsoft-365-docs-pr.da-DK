@@ -19,12 +19,12 @@ ms.collection:
 - m365initiative-m365-defender
 - M365-security-compliance
 ms.date: 05/16/2022
-ms.openlocfilehash: 0bcc45907cc5d57b592f96296282f65cc3e3d772
-ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
+ms.openlocfilehash: 7c09db2138502ee8c1b491028308c56f23687a0d
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/12/2022
-ms.locfileid: "66717123"
+ms.locfileid: "66748995"
 ---
 # <a name="understand-and-use-attack-surface-reduction-capabilities"></a>Forstå og brug funktioner til reduktion af angrebsoverfladen
 
@@ -53,21 +53,25 @@ Hvis du vil konfigurere reduktion af angrebsoverfladen i dit miljø, skal du fø
 
 1. [Aktivér hardwarebaseret isolation for Microsoft Edge](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard).
 
-2. Aktivér programkontrol.
+2. [Aktivér regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment.md)
+
+3. Aktivér programkontrol.
 
    1. Gennemse grundlæggende politikker i Windows. Se [eksempel på grundlæggende politikker](/windows/security/threat-protection/windows-defender-application-control/example-wdac-base-policies).
    2. Se [designvejledningen til Windows Defender application control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-design-guide).
    3. Se [Installation Windows Defender WDAC-politikker (Application Control).](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
-3. [Aktivér kontrolleret mappeadgang](enable-controlled-folders.md).
+4. [Aktivér kontrolleret mappeadgang](enable-controlled-folders.md).
 
-4. [Slå Netværksbeskyttelse til](enable-network-protection.md).
+5. [Flytbar lagringsbeskyttelse](device-control-removable-storage-protection.md)
 
-5. [Aktivér beskyttelse mod udnyttelse](enable-exploit-protection.md).
+6. [Slå Netværksbeskyttelse til](enable-network-protection.md).
 
-6. [Udrul regler for reduktion af angrebsoverfladen](attack-surface-reduction-rules-deployment.md).
+7. Aktivér [oversigt over webbeskyttelse](web-protection-overview.md)
 
-7. Konfigurer din netværksfirewall.
+8. [Aktivér beskyttelse mod udnyttelse](enable-exploit-protection.md).
+
+9. Konfigurer din netværksfirewall.
 
    1. Få et overblik over [Windows Defender Firewall med avanceret sikkerhed](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
    2. Brug [Windows Defender Firewall designvejledning](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide) til at beslutte, hvordan du vil designe firewallpolitikker.
@@ -296,7 +300,7 @@ Som nævnt i videoen indeholder Defender for Endpoint flere funktioner til reduk
 | [Netværksbeskyttelse](network-protection.md) | Udvid beskyttelsen til netværkstrafik og -forbindelse på organisationens enheder. (Kræver Microsoft Defender Antivirus). |
 | [Exploit Protection](exploit-protection.md) | Hjælp med at beskytte de operativsystemer og apps, din organisation bruger, så de ikke kan udnyttes. Udnyttelse af beskyttelse fungerer også med antivirusløsninger fra tredjepart. |
 | [Enhedsstyring](device-control-report.md) | Beskytter mod tab af data ved at overvåge og styre medier, der bruges på enheder, f.eks. flytbart lager og USB-drev, i din organisation. |
-| [Udrulningsvejledning til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md) | Præsenterer oversigtsoplysninger og forudsætninger for installation af regler for reduktion af angrebsoverfladen. |
+| [Udrulningsvejledning til reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment.md) | Præsenterer oversigtsoplysninger og forudsætninger for installation af regler for reduktion af angrebsoverfladen efterfulgt af en trinvis vejledning i test, aktivering og overvågning. |
 | [Planlæg udrulning af reduktion af angrebsoverflade (ASR)](attack-surface-reduction-rules-deployment-plan.md) | Viser de anbefalede trin til installation af regler for reduktion af angrebsoverfladen. |
 | [Regler for testreduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-test.md) | Indeholder trin til at bruge overvågningstilstand til at teste regler for reduktion af angrebsoverfladen. |
 | [Aktiver regler for reduktion af angrebsoverflade](attack-surface-reduction-rules-deployment-implement.md) | Viser trinnene til overgang af regler for reduktion af angrebsoverfladen fra testtilstand (overvågning) til aktiv, aktiveret tilstand (bloktilstand). |

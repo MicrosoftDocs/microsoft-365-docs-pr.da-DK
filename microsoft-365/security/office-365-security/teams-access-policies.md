@@ -1,6 +1,6 @@
 ---
-title: Anbefalede Teams politikker – Microsoft 365 for virksomheds | Microsoft Docs
-description: Beskriver politikkerne for Microsofts anbefalinger til, hvordan du sikrer Teams kommunikation og filadgang.
+title: Anbefalede Teams-politikker – Microsoft 365 for enterprise-| Microsoft Docs
+description: Beskriver politikkerne for Microsofts anbefalinger til, hvordan du sikrer Teams-kommunikation og filadgang.
 author: MicrosoftHeidi
 manager: serdars
 ms.prod: m365-security
@@ -19,37 +19,38 @@ ms.collection:
 - M365-security-compliance
 - m365solution-identitydevice
 - m365solution-scenario
+- zerotrust-solution
 ms.technology: mdo
-ms.openlocfilehash: 25f70d3ccdf11daa6a52d16b66d612c04ab8876a
-ms.sourcegitcommit: fdd0294e6cda916392ee66f5a1d2a235fb7272f8
+ms.openlocfilehash: 0e26923925416db48b0547bd9d044e367b56cef7
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/29/2022
-ms.locfileid: "65131168"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750024"
 ---
-# <a name="policy-recommendations-for-securing-teams-chats-groups-and-files"></a>Politikanbefalinger til sikring af Teams chats, grupper og filer
+# <a name="policy-recommendations-for-securing-teams-chats-groups-and-files"></a>Politikanbefalinger til sikring af Teams-chats, -grupper og -filer
 
-I denne artikel beskrives det, hvordan du implementerer de anbefalede Nul tillid identitets- og enhedsadgangspolitikker for at beskytte Microsoft Teams chats, grupper og indhold, f.eks. filer og kalendere. Denne vejledning bygger på de [fælles politikker for identitets- og enhedsadgang](identity-access-policies.md) med yderligere oplysninger, der er Teams specifikke. Da Teams integreres med vores andre produkter, kan du også se [Politikanbefalinger til sikring af SharePoint websteder og filer](sharepoint-file-access-policies.md) og [politikanbefalinger til sikring af mail](secure-email-recommended-policies.md).
+I denne artikel beskrives det, hvordan du implementerer de anbefalede Nul tillid politikker for identitets- og enhedsadgang for at beskytte Microsoft Teams-chats, -grupper og -indhold, f.eks. filer og kalendere. Denne vejledning bygger på de [fælles politikker for identitets- og enhedsadgang](identity-access-policies.md) med yderligere oplysninger, der er Teams-specifikke. Da Teams kan integreres med vores andre produkter, kan du også se [Politikanbefalinger til sikring af SharePoint-websteder og -filer](sharepoint-file-access-policies.md) og [Politikanbefalinger til sikring af mail](secure-email-recommended-policies.md).
 
-Disse anbefalinger er baseret på tre forskellige niveauer af sikkerhed og beskyttelse af Teams, der kan anvendes baseret på granulariteten af dine behov: udgangspunkt, virksomhed og specialiseret sikkerhed. Du kan få mere at vide om disse sikkerhedsniveauer og de anbefalede politikker, der henvises til af disse anbefalinger, i [konfigurationerne Identitet og enhedsadgang](microsoft-365-policies-configurations.md).
+Disse anbefalinger er baseret på tre forskellige niveauer af sikkerhed og beskyttelse for Teams, der kan anvendes på baggrund af granulariteten af dine behov: udgangspunkt, virksomhed og specialiseret sikkerhed. Du kan få mere at vide om disse sikkerhedsniveauer og de anbefalede politikker, der henvises til af disse anbefalinger, i [konfigurationerne Identitet og enhedsadgang](microsoft-365-policies-configurations.md).
 
-Der er flere anbefalinger, der er specifikke for Teams udrulning, i denne artikel for at dække specifikke godkendelsesforhold, herunder for brugere uden for din organisation. Du skal følge denne vejledning for at få en komplet sikkerhedsoplevelse.
+Der er flere anbefalinger, der er specifikke for Udrulning af Teams, i denne artikel for at dække specifikke godkendelsesforhold, herunder for brugere uden for din organisation. Du skal følge denne vejledning for at få en komplet sikkerhedsoplevelse.
 
 ## <a name="getting-started-with-teams-before-other-dependent-services"></a>Introduktion til Teams før andre afhængige tjenester
 
 Du behøver ikke at aktivere afhængige tjenester for at komme i gang med Microsoft Teams. Disse tjenester vil alle "bare fungere". Du skal dog være forberedt på at administrere følgende tjenesterelaterede elementer:
 
-- Microsoft 365 grupper
-- SharePoint teamwebsteder
+- Microsoft 365-grupper
+- SharePoint-teamwebsteder
 - OneDrive for Business
-- Exchange postkasser
+- Exchange-postkasser
 - Stream-videoer og Planner-planer (hvis disse tjenester er aktiveret)
 
 ## <a name="updating-common-policies-to-include-teams"></a>Opdatering af almindelige politikker, så de omfatter Teams
 
-For at beskytte chat, grupper og indhold i Teams viser følgende diagram, hvilke politikker der skal opdateres fra de fælles politikker for identitets- og enhedsadgang. For hver politik, der skal opdateres, skal du sørge for, at Teams og afhængige tjenester er inkluderet i tildelingen af cloudapps.
+For at beskytte chat, grupper og indhold i Teams viser følgende diagram, hvilke politikker der skal opdateres fra de almindelige politikker for identitets- og enhedsadgang. For hver politik, der skal opdateres, skal du sørge for, at Teams og afhængige tjenester er inkluderet i tildelingen af cloudapps.
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="Oversigten over politikopdateringer til beskyttelse af adgang til Teams og de afhængige tjenester" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png" alt-text="Oversigten over politikopdateringer til beskyttelse af adgang til Teams og dets afhængige tjenester" lightbox="../../media/microsoft-365-policies-configurations/identity-access-ruleset-teams.png":::
 
 Disse tjenester er de afhængige tjenester, der skal medtages i tildelingen af cloudapps til Teams:
 
@@ -60,24 +61,24 @@ Disse tjenester er de afhængige tjenester, der skal medtages i tildelingen af c
 - Microsoft Stream (mødeoptagelser)
 - Microsoft Planner (planlægningsopgaver og plandata)
 
-I denne tabel vises de politikker, der skal besøges igen, og links til hver politik i de [fælles politikker for identitets- og enhedsadgang](identity-access-policies.md), som har den bredere politik, der er angivet for alle Office programmer.
+I denne tabel vises de politikker, der skal besøges igen, og links til hver politik i de [fælles politikker for identitets- og enhedsadgang](identity-access-policies.md), som har den bredere politik, der er angivet for alle Office-programmer.
 
-|Beskyttelsesniveau|Politikker|Yderligere oplysninger om Teams implementering|
+|Beskyttelsesniveau|Politikker|Yderligere oplysninger om Teams-implementering|
 |---|---|---|
-|**Udgangspunkt**|[Kræv MFA, når logonrisikoen er *mellem* eller *høj*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Sørg for, at Teams og afhængige tjenester er inkluderet på listen over apps. Teams har regler for gæsteadgang og ekstern adgang, som du også skal overveje, får du mere at vide om disse regler senere i denne artikel.|
+|**Udgangspunkt**|[Kræv MFA, når logonrisikoen er *mellem* eller *høj*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Sørg for, at Teams og afhængige tjenester er inkluderet på listen over apps. Teams har regler for gæsteadgang og ekstern adgang, som du også skal overveje. Du får mere at vide om disse regler senere i denne artikel.|
 ||[Bloker klienter, der ikke understøtter moderne godkendelse](identity-access-policies.md#block-clients-that-dont-support-multi-factor)|Medtag Teams og afhængige tjenester i tildelingen af cloudapps.|
-||[Brugere med høj risiko skal ændre adgangskode](identity-access-policies.md#high-risk-users-must-change-password)|Tvinger Teams brugere til at ændre deres adgangskode, når de logger på, hvis der registreres højrisikoaktivitet for deres konto. Sørg for, at Teams og afhængige tjenester er inkluderet på listen over apps.|
+||[Brugere med høj risiko skal ændre adgangskode](identity-access-policies.md#high-risk-users-must-change-password)|Tvinger Teams-brugere til at ændre deres adgangskode, når de logger på, hvis der registreres højrisikoaktivitet for deres konto. Sørg for, at Teams og afhængige tjenester er inkluderet på listen over apps.|
 ||[Anvend politikker for databeskyttelse i APP](identity-access-policies.md#apply-app-data-protection-policies)|Sørg for, at Teams og afhængige tjenester er inkluderet på listen over apps. Opdater politikken for hver platform (iOS, Android, Windows).|
-|**Enterprise**|[Kræv MFA, når logonrisikoen er *lav*, *mellem* eller *høj*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Teams har regler for gæsteadgang og ekstern adgang, som du også skal overveje, får du mere at vide om disse regler senere i denne artikel. Medtag Teams og afhængige tjenester i denne politik.|
+|**Enterprise**|[Kræv MFA, når logonrisikoen er *lav*, *mellem* eller *høj*](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Teams har regler for gæsteadgang og ekstern adgang, som du også skal overveje. Du får mere at vide om disse regler senere i denne artikel. Medtag Teams og afhængige tjenester i denne politik.|
 ||[Definer politikker for enhedsoverholdelse](identity-access-policies.md#define-device-compliance-policies)|Medtag Teams og afhængige tjenester i denne politik.|
 ||[Kræv kompatible pc'er *og* mobilenheder](identity-access-policies.md#require-compliant-pcs-and-mobile-devices)|Medtag Teams og afhængige tjenester i denne politik.|
 |**Specialiseret sikkerhed**|[*Kræv altid* MFA](identity-access-policies.md#require-mfa-based-on-sign-in-risk)|Uanset brugeridentitet bruges MFA af din organisation. Medtag Teams og afhængige tjenester i denne politik. |
 
-## <a name="teams-dependent-services-architecture"></a>arkitektur for Teams afhængige tjenester
+## <a name="teams-dependent-services-architecture"></a>Teams-arkitektur for afhængige tjenester
 
-Som reference illustrerer følgende diagram de tjenester, Teams er afhængig af. Du kan få flere oplysninger og illustrationer [under Microsoft Teams og relaterede produktivitetstjenester i Microsoft 365 til it-arkitekter](../../solutions/productivity-illustrations.md).
+Som reference illustrerer følgende diagram de tjenester, som Teams er afhængig af. Du kan få flere oplysninger og illustrationer [i Microsoft Teams og relaterede produktivitetstjenester i Microsoft 365 til it-arkitekter](../../solutions/productivity-illustrations.md).
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Diagrammet, der viser Teams afhængigheder af SharePoint, OneDrive for Business og Exchange" lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png" alt-text="Diagrammet, der viser Teams-afhængigheder af SharePoint, OneDrive for Business og Exchange" lightbox="../../media/microsoft-365-policies-configurations/identity-access-logical-architecture-teams.png":::
 
 ## <a name="guest-and-external-access-for-teams"></a>Gæsteadgang og ekstern adgang til Teams
 
@@ -98,25 +99,25 @@ Hvis du vil have anbefalet politikker, der giver adgang for gæstebrugere og eks
 
 ### <a name="guest-access-in-teams"></a>Gæsteadgang i Teams
 
-Ud over politikkerne for brugere, der er interne i din virksomhed eller organisation, kan administratorer give gæsteadgang til at give brugere, der er eksterne for din virksomhed eller organisation, adgang til Teams ressourcer og interagere med interne personer for ting som gruppesamtaler, chat og møder.
+Ud over politikkerne for brugere, der er interne i din virksomhed eller organisation, kan administratorer give gæsteadgang, så brugere, der er eksterne for din virksomhed eller organisation, kan få adgang til Teams-ressourcer og interagere med interne personer til ting som gruppesamtaler, chat og møder.
 
-Du kan få flere oplysninger om gæsteadgang, og hvordan du implementerer den, [under Teams gæsteadgang](/microsoftteams/guest-access).
+Du kan få flere oplysninger om gæsteadgang, og hvordan du implementerer den, under  [Gæsteadgang i Teams](/microsoftteams/guest-access).
 
 ### <a name="external-access-in-teams"></a>Ekstern adgang i Teams
 
 Ekstern adgang forveksles nogle gange med gæsteadgang, så det er vigtigt at være klar over, at disse to ikke-interne adgangsmekanismer er forskellige typer adgang.
 
-Ekstern adgang er en måde, hvorpå Teams brugere fra et helt eksternt domæne kan finde, ringe til, chatte og konfigurere møder med dine brugere i Teams. Teams administratorer konfigurere ekstern adgang på organisationsniveau. Du kan få flere oplysninger under [Administrer ekstern adgang i Microsoft Teams](/microsoftteams/manage-external-access).
+Ekstern adgang er en måde, hvorpå Teams-brugere fra et helt eksternt domæne kan finde, ringe til, chatte og konfigurere møder med dine brugere i Teams. Teams-administratorer konfigurerer ekstern adgang på organisationsniveau. Du kan få flere oplysninger under [Administrer ekstern adgang i Microsoft Teams](/microsoftteams/manage-external-access).
 
 Brugere med ekstern adgang har mindre adgang og funktionalitet end en person, der er blevet tilføjet via gæsteadgang. Brugere med ekstern adgang kan f.eks. chatte med dine interne brugere med Teams, men de kan ikke få adgang til teamkanaler, filer eller andre ressourcer.
 
 Ekstern adgang bruger ikke Azure AD B2B-brugerkonti og bruger derfor ikke politikker for betinget adgang.
 
-## <a name="teams-policies"></a>Teams politikker
+## <a name="teams-policies"></a>Teams-politikker
 
-Uden for de fælles politikker, der er angivet ovenfor, er der Teams specifikke politikker, der kan og bør konfigureres til at administrere forskellige Teams funktioner.
+Uden for de fælles politikker, der er angivet ovenfor, er der Teams-specifikke politikker, der kan og skal konfigureres til at administrere forskellige Teams-funktioner.
 
-### <a name="teams-and-channels-policies"></a>politikker for Teams og kanaler
+### <a name="teams-and-channels-policies"></a>Politikker for Teams og kanaler
 
 Teams og kanaler er to almindeligt anvendte elementer i Microsoft Teams, og der er politikker, du kan indføre for at styre, hvad brugerne kan og ikke kan gøre, når de bruger teams og kanaler. Selvom du kan oprette et globalt team, vil det sandsynligvis være nyttigt at have mindre teams og kanaler til bestemte formål i overensstemmelse med organisationens behov, hvis din organisation har 5000 brugere eller derunder.
 
@@ -128,7 +129,7 @@ Beskeder eller chat kan også administreres via den globale standardpolitik elle
 
 ### <a name="meeting-policies"></a>Mødepolitikker
 
-Ingen diskussion af Teams ville være fuldført uden planlægning og implementering af politikker omkring Teams møder. Møder er en vigtig del af Teams, så folk formelt kan mødes og præsentere for mange brugere på én gang og dele indhold, der er relevant for mødet. Det er vigtigt at angive de rette politikker for din organisation omkring møder.
+Ingen diskussion af Teams kan fuldføres uden planlægning og implementering af politikker i forbindelse med Teams-møder. Møder er en vigtig komponent i Teams, så folk formelt kan mødes og præsentere for mange brugere på én gang og dele indhold, der er relevant for mødet. Det er vigtigt at angive de rette politikker for din organisation omkring møder.
 
 Du kan få flere oplysninger ved at gennemse [Administrer mødepolitikker i Teams](/microsoftteams/meeting-policies-in-teams).
 
@@ -140,7 +141,7 @@ Hvis du vil have mere at vide om politikker for apptilladelser, skal du se [Admi
 
 ## <a name="next-steps"></a>Næste trin
 
-:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Trin 4: Politikker for Microsoft 365 cloudapps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
+:::image type="content" source="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png" alt-text="Trin 4: Politikker for Microsoft 365-cloudapps" lightbox="../../media/microsoft-365-policies-configurations/identity-device-access-steps-next-step-4.png":::
 
 Konfigurer politikker for betinget adgang for:
 

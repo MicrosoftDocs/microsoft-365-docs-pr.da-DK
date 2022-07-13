@@ -19,14 +19,15 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
+- zerotrust-solution
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 2acde87daaff88ec9ce7458218919342a9f1edd8
-ms.sourcegitcommit: ac0ae5c2888e2b323e36bad041a4abef196c9c96
+ms.openlocfilehash: 0e3cd7a16b45a7dfd78011d7753866069d3144dc
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/12/2022
-ms.locfileid: "64782495"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748863"
 ---
 # <a name="enable-microsoft-defender-for-endpoint-evaluation-environment"></a>Aktivér Microsoft Defender for Endpoint evalueringsmiljø
 
@@ -47,25 +48,25 @@ Brug følgende trin til at aktivere evalueringen for Microsoft Defender for Endp
 
 ## <a name="step-1-check-license-state"></a>Trin 1. Kontrollér licenstilstand
 
-Du skal først kontrollere licenstilstanden for at bekræfte, at den er korrekt klargjort. Det kan du gøre via Administration eller via **Microsoft Azure-portalen**.
+Du skal først kontrollere licenstilstanden for at bekræfte, at den er korrekt klargjort. Du kan gøre dette via Administration eller via **Microsoft Azure Portal**.
 
 
-1. Hvis du vil have vist dine licenser, skal du gå til **Microsoft Azure-portalen** og navigere til [afsnittet Microsoft Azure portallicens](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
+1. Hvis du vil have vist dine licenser, **skal du gå til Microsoft Azure Portal** og navigere til [afsnittet Microsoft Azure Portal licens](https://portal.azure.com/#blade/Microsoft_AAD_IAM/LicensesMenuBlade/Products).
 
    :::image type="content" source="../../media/defender/atp-licensing-azure-portal.png" alt-text="Siden Azure Licensing på Microsoft 365 Defender-portalen" lightbox="../../media/defender/atp-licensing-azure-portal.png":::
 
-1. Alternativt kan du gå til **FaktureringAbonnementer** >  i Administration.
+1. Alternativt kan du i Administration navigere til **Faktureringsabonnementer** > .
 
     På skærmen kan du se alle de klargjorte licenser og deres aktuelle **status**.
 
-    :::image type="content" source="../../media/defender/atp-billing-subscriptions.png" alt-text="Siden Faktureringslicenser på Microsoft Azure-portalen" lightbox="../../media/defender/atp-billing-subscriptions.png":::
+    :::image type="content" source="../../media/defender/atp-billing-subscriptions.png" alt-text="Siden Faktureringslicenser i Microsoft Azure Portal" lightbox="../../media/defender/atp-billing-subscriptions.png":::
     
 
 ## <a name="step-2-onboard-endpoints-using-any-of-the-supported-management-tools"></a>Trin 2. Onboarde slutpunkter ved hjælp af et af de understøttede administrationsværktøjer
 
 Når du har bekræftet, at licenstilstanden er klargjort korrekt, kan du begynde at onboarde enheder til tjenesten. 
 
-Med henblik på evaluering af Microsoft Defender for Endpoint anbefaler vi, at du vælger et par Windows enheder til at udføre evalueringen på.
+Med henblik på evaluering af Microsoft Defender for Endpoint anbefaler vi, at du vælger et par Windows-enheder til at udføre evalueringen på.
 
 Du kan vælge at bruge et hvilket som helst af de understøttede administrationsværktøjer, men Intune sikrer optimal integration. Du kan få flere oplysninger under [Konfigurer Microsoft Defender for Endpoint i Microsoft Intune](/mem/intune/protect/advanced-threat-protection-configure#enable-microsoft-defender-for-endpoint-in-intune).
 
@@ -81,8 +82,8 @@ I følgende tabel vises de tilgængelige værktøjer, der er baseret på det slu
 
 Slutpunkt | Værktøjsindstillinger
 :---|:---
-**Windows** | [Lokalt script (op til 10 enheder),](../defender-endpoint/configure-endpoints-script.md) [Gruppepolitik](../defender-endpoint/configure-endpoints-gp.md), [Microsoft Endpoint Manager/Mobil-Enhedshåndtering](../defender-endpoint/configure-endpoints-mdm.md), [Microsoft Endpoint Configuration Manager](../defender-endpoint/configure-endpoints-sccm.md), [VDI-scripts](../defender-endpoint/configure-endpoints-vdi.md), [ Integration med Microsoft Defender for Cloud](../defender-endpoint/configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)
-**Macos** | [Lokale scripts](../defender-endpoint/mac-install-manually.md), [Microsoft Endpoint Manager](../defender-endpoint/mac-install-with-intune.md), [JAMF Pro](../defender-endpoint/mac-install-with-jamf.md), [Mobil Enhedshåndtering](../defender-endpoint/mac-install-with-other-mdm.md)
+**Windows** | [Lokalt script (op til 10 enheder),](../defender-endpoint/configure-endpoints-script.md) [Gruppepolitik](../defender-endpoint/configure-endpoints-gp.md), [Microsoft Endpoint Manager/Mobile Enhedshåndtering](../defender-endpoint/configure-endpoints-mdm.md), [Microsoft Endpoint Configuration Manager](../defender-endpoint/configure-endpoints-sccm.md), [VDI-scripts](../defender-endpoint/configure-endpoints-vdi.md), [integration med Microsoft Defender for Cloud](../defender-endpoint/configure-server-endpoints.md#integration-with-microsoft-defender-for-cloud)
+**Macos** | [Lokale scripts](../defender-endpoint/mac-install-manually.md), [Microsoft Endpoint Manager](../defender-endpoint/mac-install-with-intune.md), [JAMF Pro](../defender-endpoint/mac-install-with-jamf.md), [Mobile Enhedshåndtering](../defender-endpoint/mac-install-with-other-mdm.md)
 **Linux Server** | [Lokalt script](../defender-endpoint/linux-install-manually.md),  [dukke](../defender-endpoint/linux-install-with-puppet.md),  [ansibel](../defender-endpoint/linux-install-with-ansible.md)
 **Ios** | [Appbaseret](../defender-endpoint/ios-install.md)
 **Android** | [Microsoft Endpoint Manager](../defender-endpoint/android-intune.md)

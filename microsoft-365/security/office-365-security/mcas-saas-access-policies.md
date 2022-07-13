@@ -14,13 +14,14 @@ ms.custom:
 ms.collection:
 - M365-identity-device-management
 - M365-security-compliance
+- zerotrust-solution
 ms.prod: m365-security
-ms.openlocfilehash: 8386b01da6d0db5703d74d96f4e22de18b1f7d70
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 3a0c5b3cbc34bf24c04a476091e3dc08b0655a74
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65873616"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750248"
 ---
 # <a name="recommended-microsoft-defender-for-cloud-apps-policies-for-saas-apps"></a>Anbefalede Microsoft Defender for Cloud Apps politikker for SaaS-apps
 
@@ -32,7 +33,7 @@ Denne vejledning indeholder anbefalinger til disse scenarier:
 
 - Overfør SaaS-apps til it-administration
 - Juster beskyttelse for bestemte SaaS-apps
-- Konfigurer Microsoft Purview forebyggelse af datatab (DLP) for at hjælpe med at overholde databeskyttelsesreglerne
+- Konfigurer Microsoft Purview DLP (forebyggelse af datatab) for at hjælpe med at overholde databeskyttelsesreglerne
 
 ## <a name="bring-saas-apps-into-it-management"></a>Overfør SaaS-apps til it-administration
 

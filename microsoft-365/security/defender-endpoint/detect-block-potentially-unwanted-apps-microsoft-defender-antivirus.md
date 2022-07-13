@@ -15,12 +15,12 @@ manager: dansimp
 ms.technology: mde
 ms.topic: article
 ms.collection: m365-security-compliance
-ms.openlocfilehash: defccd8d570ec54cd033dcf7fbe29df8254661c8
-ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
+ms.openlocfilehash: 43cb2c4230bd48260ecd1cf4e4f6f92518a47b43
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/12/2022
-ms.locfileid: "66717752"
+ms.locfileid: "66747917"
 ---
 # <a name="detect-and-block-potentially-unwanted-applications"></a>Find og bloker potentielt uønskede programmer
 
@@ -44,7 +44,9 @@ Her er nogle eksempler:
 > [!TIP]
 > Hvis du vil have flere eksempler og en diskussion af de kriterier, vi bruger til at mærke programmer med særlig opmærksomhed fra sikkerhedsfunktioner, skal du se [Sådan identificerer Microsoft malware og potentielt uønskede programmer](/windows/security/threat-protection/intelligence/criteria).
 
-Potentielt uønskede programmer kan øge risikoen for, at dit netværk bliver inficeret med faktisk malware, gøre malwareinfektioner sværere at identificere eller spilde it-ressourcer i at rense dem op. PUA-beskyttelse understøttes på Windows 10, Windows 11, Windows Server 2019, Windows Server 2022 og Windows Server 2016. I Windows 10 (version 2004 og nyere) blokerer Microsoft Defender Antivirus apps, der som standard betragtes som PUA for Enterprise-enheder (E5).
+Potentielt uønskede programmer kan øge risikoen for, at dit netværk bliver inficeret med faktisk malware, gøre malwareinfektioner sværere at identificere eller koste din it- og sikkerhedsteams tid og kræfter på at rense dem op. PUA-beskyttelse understøttes på Windows 11, Windows 10, Windows Server 2022, Windows Server 2019 og Windows Server 2016. Hvis din organisations abonnement omfatter [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md), blokerer Microsoft Defender Antivirus apps, der som standard anses for at være PUA på Windows-enheder. 
+
+[Få mere at vide om Windows Enterprise-abonnementer](https://www.microsoft.com/microsoft-365/windows/windows-11-enterprise).
 
 ## <a name="microsoft-edge"></a>Microsoft Edge
 
@@ -76,7 +78,7 @@ Selvom Microsoft Defender for Endpoint har sin egen blokliste baseret på et dat
 Den potentielt uønskede funktion til programbeskyttelse i Microsoft Defender Antivirus kan registrere og blokere PUA på slutpunkter i dit netværk.
 
 > [!NOTE]
-> Denne funktion er tilgængelig i Windows 10, Windows 11, Windows Server 2019, Windows Server 2022 og Windows Server 2016.
+> Denne funktion er tilgængelig i Windows 11, Windows 10, Windows Server 2022, Windows Server 2019 og Windows Server 2016.
 
 Microsoft Defender Antivirus blokerer registrerede PUA-filer og forsøg på at downloade, flytte, køre eller installere dem. Blokerede PUA-filer flyttes derefter til karantæne. Når der registreres en PUA-fil på et slutpunkt, sender Microsoft Defender Antivirus en meddelelse til brugeren ([medmindre meddelelser er blevet deaktiveret](configure-notifications-microsoft-defender-antivirus.md) i samme format som andre trusselsregistreringer. Meddelelsen er på forhånd med `PUA:` for at angive dens indhold.
 
@@ -86,9 +88,7 @@ Meddelelsen vises på den sædvanlige [karantæneliste i Windows Sikkerhed-appen
 
 Du kan aktivere PUA-beskyttelse med [Microsoft Intune](/mem/intune/protect/device-protect), [Microsoft Endpoint Configuration Manager](/mem/configmgr/protect/deploy-use/endpoint-protection), [Gruppepolitik](/azure/active-directory-domain-services/manage-group-policy) eller via [PowerShell-cmdlet'er](/powershell/module/defender/?preserve-view=true&view=win10-ps).
 
-Du kan også bruge PUA-beskyttelse i overvågningstilstand til at registrere potentielt uønskede programmer uden at blokere dem. Registreringerne registreres i Windows-hændelsesloggen.
-
-PUA-beskyttelse i overvågningstilstand er nyttig, hvis din virksomhed udfører en intern kontrol af softwaresikkerhedsoverholdelse, og du gerne vil undgå falske positiver.
+Du kan også bruge PUA-beskyttelse i overvågningstilstand til at registrere potentielt uønskede programmer uden at blokere dem. Registreringerne registreres i Windows-hændelsesloggen. PUA-beskyttelse i overvågningstilstand er nyttig, hvis din virksomhed udfører en intern kontrol af softwaresikkerhedsoverholdelse, og du gerne vil undgå falske positiver.
 
 ### <a name="use-intune-to-configure-pua-protection"></a>Brug Intune til at konfigurere PUA-beskyttelse
 

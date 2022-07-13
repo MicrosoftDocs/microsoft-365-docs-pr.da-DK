@@ -1,6 +1,6 @@
 ---
-title: Evaluer og Microsoft 365 Defender, en XDR-løsning
-description: Hvad er XDR-sikkerhed? Hvordan kan du evaluere en Microsoft XDR i Microsoft 365 Defender? Brug denne blogserie til at planlægge dit Microsoft 365 Defender-prøvelaboratorium eller pilotmiljø for at teste og prøve en sikkerhedsløsning, der er udviklet til at beskytte enheder, identitet, data og programmer. Start din XDR-cybersikkerhedsrejse her, og tag testen til produktion.
+title: Evaluer og pilot Microsoft 365 Defender, en XDR-løsning
+description: Hvad er XDR-sikkerhed? Hvordan kan du evaluere en Microsoft XDR i Microsoft 365 Defender? Brug denne blogserie til at planlægge dit Microsoft 365 Defender prøvelaboratorium eller et pilotmiljø for at teste og styre en sikkerhedsløsning, der er udviklet til at beskytte enheder, identitet, data og programmer. Start din XDR-cybersikkerhedsrejse her, og tag denne test til produktion.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -19,16 +19,17 @@ ms.collection:
 - M365-security-compliance
 - m365solution-overview
 - m365solution-evalutatemtp
+- zerotrust-solution
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: f7830bb25f2572c43d665d059e0a36bc1fdaa172
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 5256a578abb515f7d8d2d6e73b5a01fe71404dd0
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64500777"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750072"
 ---
-# <a name="evaluate-and-pilot-microsoft-365-defender"></a>Evaluer og Microsoft 365 Defender
+# <a name="evaluate-and-pilot-microsoft-365-defender"></a>Evaluer og test Microsoft 365 Defender
 
 **Gælder for:**
 
@@ -36,102 +37,102 @@ ms.locfileid: "64500777"
 
 ## <a name="how-this-article-series-works"></a>Sådan fungerer denne artikelserie
 
-Denne serie af artikler er udviklet til at hjælpe dig gennem hele processen med at konfigurere et *XDR-miljø* med prøveversioner, fra slutpunkt til slutpunkt, så du kan evaluere funktionerne og egenskaberne i Microsoft 365 Defender og endda fremme evalueringsmiljøet direkte til produktion, når og hvis du er klar.
+Denne serie af artikler er designet til at hjælpe dig gennem hele processen med at konfigurere et XDR-prøveversionsmiljø fra *slutpunkt til slutpunkt*, så du kan evaluere funktionerne og egenskaberne i Microsoft 365 Defender og endda fremme evalueringsmiljøet direkte til produktion, når og hvis du er klar.
 
-Hvis du ikke har tænkt på XDR før, kan du scanne disse 7 artikler, der linkes til, for at få en fornemmelse for, hvor omfattende løsningen er.
+Hvis du ikke har tænkt på XDR, kan du scanne disse syv sammenkædede artikler for at få en fornemmelse af, hvor omfattende løsningen er.
 
-- [Sådan oprettes miljøet](eval-create-eval-environment.md)
+- [Sådan opretter du miljøet](eval-create-eval-environment.md)
 - Konfigurer eller få mere at vide om hver teknologi i denne Microsoft XDR
   - [Microsoft Defender for Identity](eval-defender-identity-overview.md)
   - [Microsoft Defender til Office](eval-defender-office-365-overview.md)
   - [Microsoft Defender for Endpoint](eval-defender-endpoint-overview.md)
   - [Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
-- [Sådan undersøger og reagerer du ved hjælp af denne XDR](eval-defender-investigate-respond.md)
-- [Yd prøveversionsmiljøet til produktion](eval-defender-promote-to-production.md)
+- [Sådan undersøges og reageres der ved hjælp af denne XDR](eval-defender-investigate-respond.md)
+- [Hæv prøvemiljøet til produktion](eval-defender-promote-to-production.md)
 
-## <a name="microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution"></a>Microsoft 365 Defender er en Microsoft XDR-cybersikkerhedsløsning
+## <a name="microsoft-365-defender-is-a-microsoft-xdr-cyber-security-solution"></a>Microsoft 365 Defender er en Microsoft XDR-løsning til cybersikkerhed
 
-Microsoft 365 Defender er en **XDR-løsning (EXtended Detection and Response**), der automatisk indsamler, korrelerer og analyserer signal-, trussels- og advarselsdata fra hele Microsoft 365-miljøet, herunder *slutpunkter, mail, programmer og identiteter*. Den udnytter kunstig intelligens og automatisering til automatisk at stoppe angreb og  afhjælpe påvirkede aktiver i en sikker tilstand.
+Microsoft 365 Defender er en **XDR-løsning (eXtended detection and response),** der automatisk indsamler, korrelerer og analyserer signal-, trussels- og beskeddata fra *hele* dit Microsoft 365-miljø, herunder *slutpunkt, mail, programmer og identiteter*. Den udnytter kunstig intelligens og automatisering til *automatisk* at stoppe angreb og afhjælpe berørte aktiver i en sikker tilstand.
 
-Tænk på XDR som det næste trin i sikkerhed, ens slutpunkt (slutpunktsregistrering og -svar eller Slutpunktsregistrering og -svar), mail-, app- og identitetssikkerhed på ét sted.
+Tænk på XDR som det næste trin i sikkerhed, samlende slutpunkt (registrering af slutpunkt og svar eller EDR), mail, app og identitetssikkerhed på ét sted.
 
-## <a name="microsoft-recommendations-for-evaluating-microsoft-365-defender"></a>Microsoft-anbefalinger til evaluering af Microsoft 365 Defender
+## <a name="microsoft-recommendations-for-evaluating-microsoft-365-defender"></a>Microsofts anbefalinger til evaluering af Microsoft 365 Defender
 
-Microsoft anbefaler, at du opretter din evaluering i et eksisterende produktionsabonnement på Office 365. På den måde får du indsigt i den virkelige verden med det samme, og du kan finjustere indstillingerne, så du kan arbejde mod aktuelle trusler i dit miljø. Når du har fået erfaring og er fortrolig med platformen, skal du blot promovere hver komponent, én ad gangen, til produktion.
+Microsoft anbefaler, at du opretter din evaluering i et eksisterende produktionsabonnement på Office 365. På denne måde får du øjeblikkelig indsigt i den virkelige verden og kan indstille indstillingerne for at arbejde mod aktuelle trusler i dit miljø. Når du har fået erfaring og er fortrolig med platformen, skal du blot hæve hver komponent, én ad gangen, til produktion.
 
-## <a name="the-anatomy-of-a-cyber-security-attack"></a>En cybersikkerhedsangrebs enatomy
+## <a name="the-anatomy-of-a-cyber-security-attack"></a>Anatomien i et cybersikkerhedsangreb
 
-Microsoft 365 Defender er en skybaseret, samlet, forudbebudt og efter brud på enterprise-forsvarspakken. Det koordinerer *forebyggelse*, *registrering**, undersøgelse* og *svar* på tværs af slutpunkter, identiteter, apps, mail, samarbejdsprogrammer og alle deres data.
+Microsoft 365 Defender er en cloudbaseret, samlet, før- og efter sikkerhedsbrud virksomhedsforsvarspakke. Den koordinerer *forebyggelse*, *registrering*, *undersøgelse* og *svar* på tværs af slutpunkter, identiteter, apps, mail, samarbejdsprogrammer og alle deres data.
 
-I denne illustration er et angreb i gang. Phishingmail ankommer til indbakken for en medarbejder i organisationen, som ukendt åbner den vedhæftede fil i en mail. Dette installerer malware, hvilket fører til en kæde af hændelser, der kan ende med tyveriet af følsomme data. Men i dette tilfælde er Defender for Office 365 i gang.
+I denne illustration er et angreb i gang. Phishing-mail modtages i indbakken for en medarbejder i din organisation, som ubevidst åbner den vedhæftede fil. Dette installerer malware, hvilket fører til en kæde af hændelser, der kan ende med tyveri af følsomme data. Men i dette tilfælde er Defender for Office 365 i funktion.
 
 :::image type="content" source="../../media/defender/m365-defender-eval-threat-chain.png" alt-text="De forskellige angrebsforsøg" lightbox="../../media/defender/m365-defender-eval-threat-chain.png":::
 
 I illustrationen:
 
-- **Exchange Online Protection**, en del Microsoft Defender for Office 365, kan registrere phishing-mailen og bruge regler for mailflow til at sikre, at den aldrig ankommer i indbakken.
-- **Defender for Office 365**, der er sikre, tester den vedhæftede fil og fastslår, at den er skadelig, så der kan ikke foretages handling i de mails, der modtages, eller politikker forhindrer, at mailen ankommer.
-- **Defender til Slutpunkt administrerer** enheder, der opretter forbindelse til virksomhedens netværk og registrerer enheds- og netværksrisici, der ellers kunne udnyttes.
-- **Defender for Identity** noterer sig pludselige kontoændringer som eskalering af rettigheder eller lateral bevægelse med høj risiko. Den rapporterer også om nemt udnyttede identitetsproblemer, f.eks. ikke-sammenkædede Kerberos-delegation, så sikkerhedsteamet kan rette det.
-- **Microsoft Defender for Cloud Apps meddelelser** om unormal adfærd som umulig rejse, adgang til legitimationsoplysninger og usædvanlig download, fildeling eller videresendelse af mail og rapporterer disse til sikkerhedsteamet.
+- **Exchange Online Protection**, som er en del af Microsoft Defender for Office 365, kan registrere phishingmailen og bruge regler for mailflow til at sikre, at den aldrig modtages i indbakken.
+- **Defender for Office 365** sikre vedhæftede filer tester den vedhæftede fil og fastslår, at den er skadelig, så den mail, der modtages, enten ikke kan handles af brugeren, eller politikker forhindrer, at mailen ankommer til alle.
+- **Defender for Endpoint** administrerer enheder, der opretter forbindelse til virksomhedens netværk, og registrerer sikkerhedsrisici for enheder og netværk, der ellers kan udnyttes.
+- **Defender for Identity** noterer sig pludselige ændringer som rettighedseskalering eller højrisiko tværgående bevægelse. Den rapporterer også om letudnyttede identitetsproblemer, f.eks. begrænset Kerberos-delegering, til rettelse af sikkerhedsteamet.
+- **Microsoft Defender for Cloud Apps** bemærker unormal adfærd som f.eks. umulig rejse, adgang til legitimationsoplysninger og usædvanlig download, fildeling eller videresendelse af mail og rapporterer disse til sikkerhedsteamet.
 
-### <a name="microsoft-365-defender-components-secure-devices-identity-data-and-applications"></a>Microsoft 365 Defender komponenter gør enheder, identitet, data og programmer sikre
+### <a name="microsoft-365-defender-components-secure-devices-identity-data-and-applications"></a>Microsoft 365 Defender komponenter sikre enheder, identitet, data og programmer
 
-Microsoft 365 Defender består af disse sikkerhedsteknologier, som arbejder sammen. Du behøver ikke alle disse komponenter for at drage fordel af funktionerne i XDR og Microsoft 365 Defender. Du vil også opdage, at der vil komme en gevinst og effektivitet ved at bruge en eller to.
+Microsoft 365 Defender består af disse sikkerhedsteknologier, der fungerer parallelt. Du behøver ikke alle disse komponenter for at drage fordel af funktionerne i XDR og Microsoft 365 Defender. Du vil realisere gevinster og effektivitet ved hjælp af en eller to samt.
 
 |Komponent|Beskrivelse|Referencemateriale|
 |---|---|---|
-|Microsoft Defender for Identity|Microsoft Defender for Identity bruger Active Directory-signaler til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og ondsindede Insider-handlinger rettet mod din organisation.|[Hvad er Microsoft Defender for Identity?](/defender-for-identity/what-is)|
-|Exchange Online Protection|Exchange Online Protection er den oprindelige skybaserede SMTP relay- og filtreringstjeneste, der hjælper med at beskytte din organisation mod spam og malware.|[Exchange Online Protection (EOP) – Office 365](../office-365-security/overview.md)|
-|Microsoft Defender for Office 365|Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer.|[Microsoft Defender for Office 365 – Office 365](../office-365-security/overview.md)|
-|Microsoft Defender for Endpoint|Microsoft Defender for Endpoint er en samlet platform til enhedsbeskyttelse, registrering efter brud, automatisk undersøgelse og anbefalet svar.|[Microsoft Defender for Endpoint – Windows sikkerhed](../defender-endpoint/microsoft-defender-endpoint.md)|
-|Microsoft Defender for Cloud Apps|Microsoft Defender for Cloud Apps er en omfattende løsning på tværs af SaaS, der giver stor synlighed, stærke datakontrolelementer og forbedret trusselsbeskyttelse til dine skyapps.|[Hvad er Defender til skyapps?](/cloud-app-security/what-is-cloud-app-security)|
-|Azure AD Identity Protection|Azure AD Identity Protection evaluerer risikodata fra millioner af logonforsøg og bruger disse data til at evaluere risikoen for hvert logon til dit miljø. Disse data bruges af Azure AD til at tillade eller forhindre kontoadgang, afhængigt af hvordan politikkerne for Betinget adgang er konfigureret. Azure AD Identity Protection gives i licens separat Microsoft 365 Defender. Den er inkluderet i Azure Active Directory Premium P2.|[Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)|
+|Microsoft Defender for Identity|Microsoft Defender for Identity bruger Active Directory-signaler til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og skadelige insiderhandlinger, der er rettet mod din organisation.|[Hvad er Microsoft Defender for Identity?](/defender-for-identity/what-is)|
+|Exchange Online Protection|Exchange Online Protection er det oprindelige skybaserede SMTP-relæ og den oprindelige filtreringstjeneste, der hjælper med at beskytte din organisation mod spam og malware.|[oversigt over Exchange Online Protection (EOP) – Office 365](../office-365-security/overview.md)|
+|Microsoft Defender for Office 365|Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer.|[Microsoft Defender for Office 365 - Office 365](../office-365-security/overview.md)|
+|Microsoft Defender for Endpoint|Microsoft Defender for Endpoint er en samlet platform til enhedsbeskyttelse, registrering efter sikkerhedsbrud, automatiseret undersøgelse og anbefalet svar.|[Microsoft Defender for Endpoint – Windows-sikkerhed](../defender-endpoint/microsoft-defender-endpoint.md)|
+|Microsoft Defender for Cloud Apps|Microsoft Defender for Cloud Apps er en omfattende saaS-løsning, der giver dig dyb synlighed, stærke datakontroller og forbedret trusselsbeskyttelse af dine cloudapps.|[Hvad er Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)|
+|Azure AD Identity Protection|Azure AD Identity Protection evaluerer risikodata fra milliarder af logonforsøg og bruger disse data til at evaluere risikoen for hvert logon til dit miljø. Disse data bruges af Azure AD til at tillade eller forhindre kontoadgang, afhængigt af hvordan politikker for betinget adgang er konfigureret. Azure AD Identity Protection gives i licens separat fra Microsoft 365 Defender. Det er inkluderet i Azure Active Directory Premium P2.|[Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)|
 ||||
 
 ## <a name="microsoft-365-defender-architecture"></a>Microsoft 365 Defender arkitektur
 
-Nedenstående diagram illustrerer en arkitektur på højt niveau for Microsoft 365 Defender komponenter og integrationer. *I* denne serie af artikler gives detaljeret arkitektur for hver Defender-komponent og use-case-scenarier.
+Nedenstående diagram illustrerer arkitektur på højt niveau for vigtige Microsoft 365 Defender komponenter og integrationer. Der er angivet *en detaljeret* arkitektur for hver Defender-komponent og use case-scenarier i hele denne artikelserie.
 
-:::image type="content" source="../../media/defender/m365-defender-eval-architecture.png" alt-text="En arkitektur på højt niveau af Microsoft 365 Defender portalen" lightbox="../../media/defender/m365-defender-eval-architecture.png":::
+:::image type="content" source="../../media/defender/m365-defender-eval-architecture.png" alt-text="En arkitektur på højt niveau i Microsoft 365 Defender-portalen" lightbox="../../media/defender/m365-defender-eval-architecture.png":::
 
 I denne illustration:
 
-- Microsoft 365 Defender kombinerer signaler fra alle Defender-komponenterne for at give udvidet registrering og respons (XDR) på tværs af domæner. Dette omfatter en samlet hændelseskøen, automatiseret svar til stop af angreb, selvbetjening (for kompromitterede enheder, brugeridentiteter og postkasser), krydstruslens jagt og trusselsanalyser.
-- Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer. Den deler signaler, der følger af disse aktiviteter, Microsoft 365 Defender. Exchange Online Protection (EOP) er integreret, så der er en ende-til-ende-beskyttelse til indgående mails og vedhæftede filer.
-- Microsoft Defender for Identity indsamler signaler fra servere, der kører AD FS (Active Directory Federated Services) og Active Directory i det lokale miljø Domain Services (AD DS). It uses these signals to protect your hybrid identity environment, including protect against hackers that use compromised accounts to move laterally across workstations in the on-premises environment.
+- Microsoft 365 Defender kombinerer signalerne fra alle Defender-komponenterne for at levere udvidet registrering og svar (XDR) på tværs af domæner. Dette omfatter en samlet hændelseskø, automatiseret svar på stopangreb, selvreparerende (for kompromitterede enheder, brugeridentiteter og postkasser), jagt på tværs af trusler og trusselsanalyser.
+- Microsoft Defender for Office 365 beskytter din organisation mod skadelige trusler fra mails, links (URL-adresser) og samarbejdsværktøjer. Den deler signaler fra disse aktiviteter med Microsoft 365 Defender. Exchange Online Protection (EOP) er integreret for at give end-to-end-beskyttelse af indgående mails og vedhæftede filer.
+- Microsoft Defender for Identity indsamler signaler fra servere, der kører AD FS (Active Directory Federated Services) og AD DS (Active Directory i det lokale miljø Domain Services). Den bruger disse signaler til at beskytte dit hybride identitetsmiljø, herunder beskyttelse mod hackere, der bruger kompromitterede konti til at flytte tværgående på tværs af arbejdsstationer i det lokale miljø.
 - Microsoft Defender for Endpoint indsamler signaler fra og beskytter enheder, der bruges af din organisation.
-- Microsoft Defender for Cloud Apps indsamler signaler fra din organisations brug af skyapps og beskytter data, der flyder mellem dit miljø og disse apps, herunder både målrettede og ikke-tilladte skyapps.
-- Azure AD Identity Protection evaluerer risikodata fra millioner af logonforsøg og bruger disse data til at evaluere risikoen for hvert logon til dit miljø. Disse data bruges af Azure AD til at tillade eller forhindre kontoadgang, afhængigt af hvordan politikkerne for Betinget adgang er konfigureret. Azure AD Identity Protection gives i licens separat Microsoft 365 Defender. Den er inkluderet i Azure Active Directory Premium P2.
+- Microsoft Defender for Cloud Apps indsamler signaler fra din organisations brug af cloudapps og beskytter data, der flyder mellem dit miljø og disse apps, herunder både godkendte og ikke-godkendte cloudapps.
+- Azure AD Identity Protection evaluerer risikodata fra milliarder af logonforsøg og bruger disse data til at evaluere risikoen for hvert logon til dit miljø. Disse data bruges af Azure AD til at tillade eller forhindre kontoadgang, afhængigt af hvordan politikker for betinget adgang er konfigureret. Azure AD Identity Protection gives i licens separat fra Microsoft 365 Defender. Det er inkluderet i Azure Active Directory Premium P2.
 
 ## <a name="microsoft-siem-and-soar-can-use-data-from-microsoft-365-defender"></a>Microsoft SIEM og SOAR kan bruge data fra Microsoft 365 Defender
 
-Yderligere valgfri arkitekturkomponenter, der ikke er inkluderet i denne illustration:
+Yderligere valgfrie arkitekturkomponenter, der ikke er inkluderet i denne illustration:
 
-- **Detaljerede signaldata fra alle Microsoft 365 Defender-komponenter kan integreres i Microsoft Sentinel** og kombineres med andre logføringskilder for at tilbyde fulde funktioner og indsigter i SIEM og SOAR.
-- Du kan finde flere oplysninger om brug af **Microsoft Sentinel, et Azure SIEM med Microsoft 365 Defender** som XDR, i denne Oversigtsartikel samt [](/azure/sentinel/microsoft-365-defender-sentinel-integration) trinnene til Microsoft Sentinel og Microsoft 365 Defender [integration](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE).
+- **Detaljerede signaldata fra alle Microsoft 365 Defender komponenter kan integreres i Microsoft Sentinel** og kombineres med andre logføringskilder for at tilbyde fuld SIEM- og SOAR-funktioner og -indsigt.
+- Hvis du vil **have mere at vide om, hvordan du bruger Microsoft Sentinel, en Azure SIEM med Microsoft 365 Defender** som XDR, kan du se denne [oversigtsartikel](/azure/sentinel/microsoft-365-defender-sentinel-integration) og [trinnene til integration](/azure/sentinel/connect-microsoft-365-defender?tabs=MDE) af Microsoft Sentinel og Microsoft 365 Defender.
 - Du kan få mere at vide om SOAR i Microsoft Sentinel (herunder links til playbooks i Microsoft Sentinel GitHub Repository) ved at læse [denne artikel](/azure/sentinel/automate-responses-with-playbooks).
 
 ## <a name="the-evaluation-process-for-microsoft-365-defender-cyber-security"></a>Evalueringsprocessen for Microsoft 365 Defender cybersikkerhed
 
-Microsoft anbefaler, at du aktiverer komponenterne i Microsoft 365 rækkefølge illustreret:
+Microsoft anbefaler, at du aktiverer komponenterne i Microsoft 365 i den illustrerede rækkefølge:
 
-:::image type="content" source="../../media/defender/m365-defender-eval-process.png" alt-text="En evalueringsproces på højt niveau i Microsoft 365 Defender portal" lightbox="../../media/defender/m365-defender-eval-process.png":::
+:::image type="content" source="../../media/defender/m365-defender-eval-process.png" alt-text="En evalueringsproces på højt niveau på Microsoft 365 Defender-portalen" lightbox="../../media/defender/m365-defender-eval-process.png":::
 
 I følgende tabel beskrives denne illustration.
 
 |  Serienummer   |Trin  |Beskrivelse  |
 |------|---------|---------|
-|1     | [Opret evalueringsmiljøet](eval-create-eval-environment.md)       |Dette trin sikrer, at du har prøveversionen af Microsoft 365 Defender.         |
-|2     | [Aktivér Defender for Identity](eval-defender-identity-overview.md)        | Gennemgå arkitekturkravene, aktivér evalueringen, og gennemgå selvstudier til at identificere og afhjælpe forskellige angrebstyper.   |
-|3     | [Aktivér Defender for Office 365 ](eval-defender-office-365-overview.md)       | Sørg for, at du opfylder arkitekturkravene, aktiverer evalueringen og opretter derefter pilotmiljøet. Denne komponent indeholder Exchange Online Protection så du rent faktisk *evaluerer begge* her.      |
-|4     | [Aktivér Defender til Slutpunkt ](eval-defender-endpoint-overview.md)       | Sørg for, at du opfylder arkitekturkravene, aktiverer evalueringen og opretter derefter pilotmiljøet.         |
-|5     | [Aktivér Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)        |  Sørg for, at du opfylder arkitekturkravene, aktiverer evalueringen og opretter derefter pilotmiljøet.        |
-|6     | [Undersøg og svar på trusler](eval-defender-investigate-respond.md)        |   Simulere et angreb og begynde at bruge egenskaber for hændelsesrespons.      |
-|7     | [Hæve prøveabonnementet til produktion](eval-defender-promote-to-production.md)        | Promote the Microsoft 365 components to production one-by-one.        |
+|1     | [Opret evalueringsmiljøet](eval-create-eval-environment.md)       |Dette trin sikrer, at du har prøvelicensen til Microsoft 365 Defender.         |
+|2     | [Aktivér Defender for Identity](eval-defender-identity-overview.md)        | Gennemse arkitekturkravene, aktivér evalueringen, og gennemgå selvstudier til identifikation og afhjælpning af forskellige angrebstyper.   |
+|3     | [Aktivér Defender for Office 365 ](eval-defender-office-365-overview.md)       | Sørg for, at du opfylder arkitekturkravene, aktivér evalueringen, og opret derefter pilotmiljøet. Denne komponent indeholder Exchange Online Protection, så du skal faktisk evaluere *begge* her.      |
+|4     | [Aktivér Defender for Slutpunkt ](eval-defender-endpoint-overview.md)       | Sørg for, at du opfylder arkitekturkravene, aktivér evalueringen, og opret derefter pilotmiljøet.         |
+|5     | [Aktivér Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)        |  Sørg for, at du opfylder arkitekturkravene, aktivér evalueringen, og opret derefter pilotmiljøet.        |
+|6     | [Undersøg og reager på trusler](eval-defender-investigate-respond.md)        |   Simuler et angreb, og begynd at bruge funktioner til svar på hændelser.      |
+|7     | [Hæv prøveversionen til produktion](eval-defender-promote-to-production.md)        | Hæv Microsoft 365-komponenterne til produktion én for én.        |
 
-Dette er en ofte anbefalet rækkefølge, der er udviklet til at udnytte værdien af egenskaberne hurtigt baseret på, hvor meget indsats der typisk kræves for at installere og konfigurere egenskaberne. Eksempelvis kan Defender for Office 365 konfigureres på kortere tid, end det tager at tilmelde enheder i Defender til slutpunkt. Du skal selvfølgelig prioritere komponenterne, så de opfylder virksomhedens behov, og du kan aktivere dem i en anden rækkefølge.
+Dette er en almindeligt anbefalet rækkefølge, der er designet til hurtigt at udnytte værdien af egenskaberne baseret på, hvor meget indsats der typisk kræves for at udrulle og konfigurere egenskaberne. Defender for Office 365 kan f.eks. konfigureres på mindre tid, end det tager at tilmelde enheder til Defender for Endpoint. Du skal selvfølgelig prioritere komponenterne, så de opfylder dine forretningsbehov, og du kan aktivere dem i en anden rækkefølge.
 
 ## <a name="go-to-the-next-step"></a>Gå til næste trin
 
-[Få mere at vide om og/eller opret Microsoft 365 Defender Evaluation Environment](eval-create-eval-environment.md)
+[Få mere at vide om og/eller opret det Microsoft 365 Defender evalueringsmiljø](eval-create-eval-environment.md)

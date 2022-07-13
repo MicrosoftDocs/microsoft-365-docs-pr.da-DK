@@ -15,18 +15,19 @@ ms.collection:
 - Strat_O365_Enterprise
 - m365solution-infoprotection
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
-description: Bestem reglerne for beskyttelse af personlige oplysninger, de relevante scenarier, din parathed og de følsomme oplysningstyper, der findes i dit Microsoft 365 miljø.
-ms.openlocfilehash: a09e447733baa352a5302490b88e95a08a2775a4
-ms.sourcegitcommit: 997eb64f80da99b1099daba62994c722bbb25d72
+description: Bestem reglerne for beskyttelse af personlige oplysninger, de relevante scenarier, din parathed og de følsomme oplysningstyper, der findes i dit Microsoft 365-miljø.
+ms.openlocfilehash: e881ff4eb9561525fed42775d8f56b6842dc1719
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66129047"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748302"
 ---
 # <a name="assess-data-privacy-risks-and-identify-sensitive-items-with-microsoft-365"></a>Vurder risici for beskyttelse af personlige oplysninger, og identificer følsomme elementer med Microsoft 365
 
-Vurdering af reglerne for beskyttelse af personlige oplysninger og risici, som din organisation er underlagt, er et første skridt, før du implementerer relaterede forbedringshandlinger, herunder handlinger, der kan opnås med Microsoft 365 funktioner og tjenester.
+Vurdering af reglerne for beskyttelse af personlige oplysninger og de risici, som din organisation er underlagt, er et første skridt, før du implementerer relaterede forbedringshandlinger, herunder handlinger, der kan opnås med Microsoft 365-funktioner og -tjenester.
 
 ## <a name="potentially-applicable-data-privacy-regulations"></a>Gældende regler for beskyttelse af personlige oplysninger
 
@@ -52,7 +53,7 @@ I USA omfatter disse loven om forbrugerbeskyttelse i Californien ([CCPA](/compli
 
 Rundt om i verden kan du finde yderligere eksempler på Germany's National GDPR Implementation Act (BDSG), LGPD (Brasilien Data Protection Act) og mange andre.
 
-## <a name="regulation-mapping-to-microsoft-365-technical-control-categories"></a>Tilknytning af regulering til Microsoft 365 tekniske kontrolkategorier
+## <a name="regulation-mapping-to-microsoft-365-technical-control-categories"></a>Tilknytning af regulering til kategorier for teknisk kontrol i Microsoft 365
 
 Mange af de bestemmelser, der vedrører beskyttelse af personlige oplysninger, har overlappende krav, så du skal forstå, hvilke regler de er underlagt, før du udvikler en teknisk kontrolordning.
 
@@ -95,7 +96,7 @@ Data flyttes også rundt over tid, efterhånden som de behandles, finjusteres og
 
 ### <a name="where-the-personal-data-is"></a>Hvor de personlige data er
 
-For at håndtere regler for beskyttelse af personlige oplysninger kan du ikke stole på generelle begreber om, hvor du mener, at der findes personlige data, hverken nu eller i fremtiden. Bestemmelser om beskyttelse af personlige oplysninger kræver, at organisationer beviser, at de ved, hvor personlige data er løbende. Det gør det vigtigt at tage et indledende snapshot af alle dine datakilder for at få mulighed for at lagre personlige oplysninger, herunder dit Microsoft 365 miljø, og etablere mekanismer til løbende overvågning og registrering.
+For at håndtere regler for beskyttelse af personlige oplysninger kan du ikke stole på generelle begreber om, hvor du mener, at der findes personlige data, hverken nu eller i fremtiden. Bestemmelser om beskyttelse af personlige oplysninger kræver, at organisationer beviser, at de ved, hvor personlige data er løbende. Det gør det vigtigt at tage et indledende snapshot af alle dine datakilder for at få mulighed for at lagre personlige oplysninger, herunder dit Microsoft 365-miljø, og etablere mekanismer til løbende overvågning og registrering.
 
 Hvis du ikke allerede har vurderet din overordnede parathed og risiko i forbindelse med regler for beskyttelse af personlige oplysninger, skal du bruge følgende tretrinsramme for at komme i gang.
 
@@ -108,7 +109,7 @@ Hvis du ikke allerede har vurderet din overordnede parathed og risiko i forbinde
 
 Du skal måle eksponeringen for risikoen for beskyttelse af personlige oplysninger på baggrund af den type personlige data, der i øjeblikket administreres, hvor de er gemt, hvilke beskyttende kontrolelementer der er placeret på dem, hvordan livscyklussen administreres, og hvem der har adgang til dem.
 
-Som udgangspunkt er det vigtigt at gøre status over, hvilke typer personlige data der findes i dit Microsoft 365 miljø. Brug disse kategorier:
+Som udgangspunkt er det vigtigt at gøre status over, hvilke typer personlige data der findes i dit Microsoft 365-miljø. Brug disse kategorier:
 
 - Medarbejderdata, der kræves for at udføre daglige forretningsfunktioner
 - Data, som organisationen har om sine forretningskunder, partnere og andre relationer i B2B-scenariet (business-to-business)
@@ -118,7 +119,7 @@ Her er et eksempel på de forskellige datatyper for typiske afdelinger i en orga
 
 ![Typer af personlige data.](../media/information-protection-deploy-assess/information-protection-deploy-assess-data-types.png)
 
-Mange af de personlige data, der er underlagt lovgivningen om beskyttelse af personlige oplysninger, indsamles typisk og gemmes uden for Microsoft 365. Alle personlige data fra forbrugerorienterede web- eller mobilapps skal være blevet eksporteret fra sådanne applikationer for at Microsoft 365 for at være underlagt kontrol af beskyttelse af personlige oplysninger inden for Microsoft 365.
+Mange af de personlige data, der er underlagt lovgivningen om beskyttelse af personlige oplysninger, indsamles typisk og gemmes uden for Microsoft 365. Alle personlige data fra forbrugerorienterede web- eller mobilprogrammer skal være blevet eksporteret fra sådanne programmer til Microsoft 365 for at være underlagt kontrol af beskyttelse af personlige oplysninger i Microsoft 365.
 
 Eksponeringen af beskyttelse af personlige oplysninger i Microsoft 365 kan være mere begrænset i forhold til dine webprogrammer og CRM-systemer, som denne løsning ikke løser.
 
@@ -141,7 +142,7 @@ Hvis en person forlader en virksomhed, har organisationer typisk processer, proc
 For at imødekomme sådanne behov bør organisationer have indført processer og procedurer, der håndterer forebyggende, detektiviske og afhjælpende behov for at lette sådanne anmodninger, idet det bemærkes, at nogle oplysninger om en medarbejder med rimelighed kan anses for at være afgørende for forretningskontinuitet. Det kan f.eks. være oplysninger, som en person har oprettet en fil eller udført en funktion.
 
 > [!NOTE]
-> Du kan få oplysninger om undersøgelses- og afhjælpningsteknikker i forbindelse med personlige data i Microsoft 365 i [artiklen Overvåg og besvar](information-protection-deploy-monitor-respond.md). Det kan også være en god idé at anvende automatiserede klassificerings- og beskyttelsesordninger for at sikre, at personlige data styres i organisationen, samt forhindre den i at forlade organisationen i ondsindede agentsituationer. Du kan få flere oplysninger i [artiklen om beskyttelse af oplysninger](information-protection-deploy-protect-information.md) .
+> Hvis du vil have oplysninger om undersøgelses- og afhjælpningsteknikker for personlige data i Microsoft 365, skal du se [artiklen Overvåg og besvar](information-protection-deploy-monitor-respond.md). Det kan også være en god idé at anvende automatiserede klassificerings- og beskyttelsesordninger for at sikre, at personlige data styres i organisationen, samt forhindre den i at forlade organisationen i ondsindede agentsituationer. Du kan få flere oplysninger i [artiklen om beskyttelse af oplysninger](information-protection-deploy-protect-information.md) .
 
 ### <a name="data-the-organization-has-about-its-business-customers-in-the-b2b-scenario"></a>Data, som organisationen har om sine forretningskunder i B2B-scenariet
 
@@ -164,7 +165,7 @@ Hvis din organisation ikke foretager en masse indsamling af data direkte fra for
 
 At forstå din eksponering for risici og regler for beskyttelse af personlige oplysninger er et vigtigt første skridt, der er baseret på en grundlæggende forståelse af organisationens personlige datascenarier.
 
-Hvis du ikke har personlige data fra forbrugere i dit Microsoft 365 miljø, eller hvis de er begrænset til visse dele af miljøet, og behovet for en teknisk kontrol er baseret på eksponering af data af forbrugertypen, skal denne tekniske kontrol muligvis kun anvendes i dele af miljøet med høj risiko, ikke overalt.
+Hvis du ikke har personlige data fra forbrugere i dit Microsoft 365-miljø, eller hvis de er begrænset til visse dele af miljøet, og behovet for teknisk kontrol er baseret på eksponering af data af forbrugertypen, skal denne tekniske kontrol muligvis kun anvendes i risikofyldte dele af miljøet, ikke overalt.
 
 Selvom en ekstern organisation eller anbefaling af standardkontrolsæt, f.eks. fra Overholdelsesstyring i Microsoft 365, kan hjælpe med at informere din kontrolstrategi, bør dit valg af implementering styres af datalagerbevidstheden for at kvantificere din reelle risikoeksponering.
 
@@ -186,11 +187,11 @@ GDPR-vurderingen består af følgende afsnit:
 |Politikadministration|<ol><li>Hvordan administrerer du dine bindingsregler for virksomheder? </li><li>Sporer du samtykke til data? </li><li> Dækker dine kontrakter dataklassificeringer og håndteringskrav på en skala fra 1 til 5, hvor 5 er helt dækket? </li><li>Har du og tester regelmæssigt en plan for svar på hændelser? </li><li>Hvilken politik bruger du til at administrere adgang? </li></ol>|
 |||
 
-## <a name="step-3-identify-sensitive-information-types-that-occur-in-your-microsoft-365-environment"></a>Trin 3: Identificer følsomme oplysningstyper, der forekommer i dit Microsoft 365 miljø
+## <a name="step-3-identify-sensitive-information-types-that-occur-in-your-microsoft-365-environment"></a>Trin 3: Identificer følsomme oplysningstyper, der forekommer i dit Microsoft 365-miljø
 
-Dette trin omfatter identifikation af bestemte følsomme informationstyper, der er underlagt specifikke lovmæssige kontroller, samt forekomsten af dem i dit Microsoft 365 miljø.
+Dette trin omfatter identifikation af bestemte følsomme informationstyper, der er underlagt specifikke lovmæssige kontroller, samt forekomsten af dem i dit Microsoft 365-miljø.
 
-Det kan være en stor opgave at finde indhold i dit miljø, der indeholder personlige oplysninger, og det kan tidligere omfatte en kombination af at bruge Søgning efter overholdelse, eDiscovery, eDiscovery (Premium), DLP og overvågning.
+Det kan være en stor opgave at finde indhold i dit miljø, der indeholder personlige oplysninger, tidligere med en kombination af at bruge Søgning efter overholdelse, eDiscovery, eDiscovery (Premium), DLP og overvågning.
 
 Med den nye **dataklassificeringsløsning** i Microsoft Purview-compliance-portal er dette blevet meget lettere med funktionen [Indholdsoversigt](../compliance/data-classification-content-explorer.md), som fungerer sammen med enten indbyggede eller brugerdefinerede typer følsomme oplysninger, herunder dem, der er relateret til personlige data.
 
@@ -202,7 +203,7 @@ Hvis du har brug for at identificere og beskytte en organisationsspecifik eller 
 
 - PowerShell til & overholdelse af angivne standarder
 - Brugerdefinerede regler med nøjagtigt datamatch (EDM)
-- Via Microsoft 365 Purview-overholdelsesportal, som det er fremhævet i [artiklen Brug overholdelsesscore og Overholdelsesstyring](information-protection-deploy-compliance.md)
+- Via Microsoft 365 Purview-overholdelsesportalen, som fremhævet i [artiklen Brug overholdelsesscore og Overholdelsesstyring](information-protection-deploy-compliance.md)
 
 Du kan også tilpasse en eksisterende indbygget type følsomme oplysninger.
 
@@ -216,11 +217,11 @@ Se disse artikler for at få flere oplysninger:
 
 ### <a name="content-explorer"></a>Indholdsoversigt
 
-Et vigtigt værktøj, der til bestemmelse af forekomsten af følsomme elementer i dit miljø er den nye [Indholdsoversigt](../compliance/data-classification-content-explorer.md) i Microsoft Purview Administration. Det er et automatiseret værktøj til indledende og løbende scanning af hele dit Microsoft 365 abonnement for forekomsten af følsomme informationstyper og visning af resultaterne.
+Et vigtigt værktøj, der til bestemmelse af forekomsten af følsomme elementer i dit miljø er den nye [Indholdsoversigt](../compliance/data-classification-content-explorer.md) i Microsoft Purview Administration. Det er et automatiseret værktøj til indledende og løbende scanning af hele dit Microsoft 365-abonnement for forekomsten af følsomme informationstyper og visning af resultaterne.
 
 Med det nye værktøj i Indholdsoversigt kan du hurtigt identificere placeringen af følsomme elementer i dit miljø ved hjælp af enten indbyggede typer følsomme oplysninger eller brugerdefinerede. Dette kan omfatte oprettelse af en proces og ansvar for regelmæssigt at undersøge tilstedeværelsen og placeringen af følsomme elementer.
 
-Sammen med de andre trin, der er fremhævet i denne artikel, giver dette et udgangspunkt for at identificere din samlede risikoeksponering, parathed og placering af følsomme elementer, der skal beskyttes gennem planlagt Microsoft 365 konfiguration og overvågning.
+Sammen med de andre trin, der er fremhævet i denne artikel, giver dette et udgangspunkt for at identificere din samlede risikoeksponering, parathed og placering af følsomme elementer, der skal beskyttes via planlagt Konfiguration og overvågning af Microsoft 365.
 
 ### <a name="other-methods-to-identify-personal-data-in-your-environment"></a>Andre metoder til at identificere personlige data i dit miljø
 
@@ -228,7 +229,7 @@ Ud over Indholdsoversigt har organisationer adgang til funktionen Indholdssøgni
 
 Denne [artikel](/compliance/regulatory/gdpr) indeholder en detaljeret vejledning i brugen af indholdssøgning til registrering af personlige data. Indholdssøgning og andre opdagelsesteknikker udforskes også i [DSR-anmodninger om GDPR og CCPA](/compliance/regulatory/gdpr-dsr-Office365#introduction-to-dsrs).
 
-Yderligere indsigt i undersøgelses- og afhjælpningsteknikker for personlige data i Microsoft 365 er angivet i [artiklen Overvåg og reager](information-protection-deploy-monitor-respond.md).
+Yderligere indsigt i undersøgelses- og afhjælpningsteknikker for personlige data i Microsoft 365 findes i [artiklen Overvåg og reager](information-protection-deploy-monitor-respond.md).
 
 > [!NOTE]
 > Hvis du vil finde ud af, hvilke følsomme oplysninger du har i filer, der er gemt i det lokale miljø, skal du se [Azure Information Protection](/azure/information-protection/quickstart-findsensitiveinfo).

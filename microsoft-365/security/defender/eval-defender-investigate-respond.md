@@ -1,6 +1,6 @@
 ---
-title: Undersøg og svar ved Microsoft 365 Defender i et pilotmiljø
-description: Konfigurer angrebssimulering i Microsoft 365 Defender-prøvelaboratorium eller pilotmiljø for at afprøve sikkerhedsløsningen, der er udviklet til at lære brugerne at beskytte enheder, identitet, data og programmer.
+title: Undersøg og besvar ved hjælp af Microsoft 365 Defender i et pilotmiljø
+description: Konfigurer angrebssimuleringer i Microsoft 365 Defender prøveversionslaboratorium eller et pilotmiljø for at afprøve sikkerhedsløsningen, der er designet til at lære brugerne at beskytte enheder, identitet, data og programmer.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -19,34 +19,35 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
+- zerotrust-solution
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: b382b1cd096f57f5667db7661b1ef4b69acc1451
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 71ba536b3d93a4bff003e9094a1e6fab83660253
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64499897"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66748005"
 ---
-# <a name="step-6-investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>Trin 6. Undersøg og svar ved Microsoft 365 Defender i et pilotmiljø
+# <a name="step-6-investigate-and-respond-using-microsoft-365-defender-in-a-pilot-environment"></a>Trin 6. Undersøg og besvar ved hjælp af Microsoft 365 Defender i et pilotmiljø
 
 **Gælder for:**
 - Microsoft 365 Defender
 
-I denne artikel beskrives processen til at oprette hændelser med angrebssimuleringer og selvstudier, og Microsoft 365 Defender til at undersøge og reagere. Før du starter denne proces, skal du sørge for, at du har gennemgået den overordnede [proces til evaluering af Microsoft 365 Defender](eval-overview.md), og at du har [oprettet Microsoft 365 Defender evalueringsmiljøet](eval-create-eval-environment.md).
+I denne artikel beskrives processen til oprettelse af hændelser med angrebssimuleringer og selvstudier og brug Microsoft 365 Defender til at undersøge og svare. Før du starter denne proces, skal du sørge for, at du har gennemgået den overordnede proces til [evaluering af Microsoft 365 Defender](eval-overview.md), og du har [oprettet Microsoft 365 Defender evalueringsmiljø](eval-create-eval-environment.md).
 
 Benyt følgende fremgangsmåde.
 
-:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="Trinnene til at udføre simuleret hændelsesrespons i Microsoft 365 Defender evalueringsmiljøet" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
+:::image type="content" source="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png" alt-text="Trinnene til udførelse af simuleret hændelsessvar i evalueringsmiljøet for Microsoft 365 Defender" lightbox="../../media/eval-defender-investigate-respond/eval-defender-eval-investigate-respond-steps.png":::
 
 I følgende tabel beskrives trinnene i illustrationen.
 
 |Trin  |Beskrivelse  |
 |---------|---------|
-| 1. [Simulere angreb](eval-defender-investigate-respond-simulate-attack.md)     |   Simulere angreb på dit evalueringsmiljø og bruge Microsoft 365 Defender-portalen til at udføre hændelsesrespons.      |
-| 2. [Prøv egenskaber for hændelsesrespons ](eval-defender-investigate-respond-additional.md)    |    Prøv yderligere funktioner til hændelsesrespons i Microsoft 365 Defender.     |
+| 1. [Simuler angreb](eval-defender-investigate-respond-simulate-attack.md)     |   Simuler angreb på dit evalueringsmiljø, og brug portalen Microsoft 365 Defender til at udføre svar på hændelser.      |
+| 2. [Prøv funktioner til svar på hændelser ](eval-defender-investigate-respond-additional.md)    |    Prøv yderligere funktioner og egenskaber for svar på hændelser i Microsoft 365 Defender.     |
 |||
 
-### <a name="navigation-you-may-need"></a>Navigation, du skal muligvis bruge
+### <a name="navigation-you-may-need"></a>Navigation, du muligvis har brug for
 
-[Oprette Microsoft 365 Defender Evalueringsmiljø](eval-create-eval-environment.md)
+[Opret det Microsoft 365 Defender evalueringsmiljø](eval-create-eval-environment.md)

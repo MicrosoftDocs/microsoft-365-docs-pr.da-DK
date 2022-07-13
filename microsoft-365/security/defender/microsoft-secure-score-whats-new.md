@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 8c2472456feb21662e48a5b377a16a1c539569cc
-ms.sourcegitcommit: c314e989202dc1c9c260fffd459d53bc1f08514e
+ms.openlocfilehash: 25860b27ee5d677f3349f82f63f64983255d2d32
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/12/2022
-ms.locfileid: "66717178"
+ms.locfileid: "66750204"
 ---
 # <a name="whats-new-in-microsoft-secure-score"></a>Nyheder i Microsoft Secure Score
 
@@ -40,7 +40,7 @@ Microsoft Secure Score findes på https://security.microsoft.com/securescore [po
 
 ## <a name="june-2022"></a>Juni 2022
 
-- Nye Microsoft Defender for Endpoint og Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender anbefalinger er nu tilgængelige som en forbedring af sikker score:
+- Nye Microsoft Defender for Endpoint og Admininstration af håndtering af sikkerhedsrisici til Microsoft Defender anbefalinger er nu tilgængelige som handlinger til forbedring af sikker score:
 
   - Tillad ikke offlineadgang til shares
   - Fjern deling af skrivetilladelse indstillet til **Alle**

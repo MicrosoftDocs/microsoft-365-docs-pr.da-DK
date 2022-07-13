@@ -18,15 +18,16 @@ ms.collection:
 - M365-security-compliance
 - m365solution-managedevices
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 keywords: ''
 description: Implementer Slutpunkt DLP ved at arbejde sammen med dit informationsbeskyttelses- og styringsteam for at oprette DLP-politikker for din organisation.
-ms.openlocfilehash: 3670dd7e204562d2974ae815babe541c608bfacf
-ms.sourcegitcommit: 52eea2b65c0598ba4a1b930c58b42dbe62cdaadc
+ms.openlocfilehash: d8544a0ddeb0327d50baa87407a152c559afcb74
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/19/2022
-ms.locfileid: "64943211"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749215"
 ---
 # <a name="step-7-implement-data-loss-prevention-dlp-with-information-protection-capabilities"></a>Trin 7. Implementer forebyggelse af datatab (DLP) med funktioner til beskyttelse af oplysninger
 
@@ -41,7 +42,7 @@ DLP-politikker oprettes af dit informationsbeskyttelses- og styringsteam. Hver D
 
 En DLP-politik kan f.eks. søge efter personlige data som et pasnummer. DLP-politikken indeholder en betingelse, der udløser politikken til at handle, f.eks. når et pasnummer deles med personer uden for organisationen. Den handling, som politikken udfører, kan også konfigureres. Mulighederne spænder fra blot at rapportere handlingen til administratorer, advare brugere eller endda forhindre, at dataene deles.
 
-DLP-politikken angiver også den placering, politikken skal anvendes på, f.eks. Exchange mail og SharePoint websteder. En af de placeringer, der er tilgængelige for administratorer, er enheder. Hvis der er valgt enheder, kan du angive, hvilke brugere og brugergrupper politikken skal anvendes på. Du kan også angive brugere og brugergrupper, der skal udelades fra politikken.
+DLP-politikken angiver også den placering, politikken skal anvendes på, f.eks. Exchange-mail og SharePoint-websteder. En af de placeringer, der er tilgængelige for administratorer, er enheder. Hvis der er valgt enheder, kan du angive, hvilke brugere og brugergrupper politikken skal anvendes på. Du kan også angive brugere og brugergrupper, der skal udelades fra politikken.
 
 Hvis dit informationsbeskyttelses- og styringsteam er klar til at udvide DLP-politikker til slutpunkter, skal du koordinere med dem for at aktivere enheder for Endpoint DLP, teste og justere DLP-politikker, oplære brugere og overvåge resultaterne. 
 

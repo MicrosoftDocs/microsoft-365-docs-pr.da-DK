@@ -1,6 +1,6 @@
 ---
-title: Aktivere evalueringsmiljøet for Microsoft Defender for Cloud Apps
-description: Lær arkitekturen i Defender til skyapps i Microsoft Defender for Office 365 og forstå interaktioner mellem Microsoft 365 Defender-produkter.
+title: Aktivér evalueringsmiljøet for Microsoft Defender for Cloud Apps
+description: Få mere at vide om arkitekturen i Defender for Cloud Apps i Microsoft Defender for Office 365 og forstå interaktioner mellem de Microsoft 365 Defender produkter.
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,48 +18,49 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
+- zerotrust-solution
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: a66a3563d01e8e4239a0f4815fec9234fd46e1fc
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 0c9f4687cf36d4db5f22cd6e1b95f55eebc84cf9
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498973"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749918"
 ---
-# <a name="enable-the-evaluation-environment-for-microsoft-defender-for-cloud-apps"></a>Aktivere evalueringsmiljøet for Microsoft Defender for Cloud Apps
+# <a name="enable-the-evaluation-environment-for-microsoft-defender-for-cloud-apps"></a>Aktivér evalueringsmiljøet for Microsoft Defender for Cloud Apps
 
 **Gælder for:**
 
 - Microsoft 365 Defender
 
-Denne artikel er [trin 2 af 2](eval-defender-mcas-overview.md) i oprettelsen af evalueringsmiljøet til Microsoft Defender for Cloud Apps. Du kan finde flere oplysninger om denne proces i [oversigtsartikel](eval-defender-mcas-overview.md).
+Denne artikel er [trin 2 af 2](eval-defender-mcas-overview.md) i processen med at konfigurere evalueringsmiljøet for Microsoft Defender for Cloud Apps. Du kan få flere oplysninger om denne proces i [oversigtsartiklen](eval-defender-mcas-overview.md).
 
-I denne artikel bliver du vejet gennem processen med at få adgang til portalen for Defender til skyapps og konfigurere den nødvendige integration til at indsamle trafikdata for skyapps.
+I denne artikel gennemgår vi processen med at få adgang til Defender for Cloud Apps-portalen og konfigurere den nødvendige integration for at indsamle trafikdata for cloudapps.
 
-Hvis du vil finde skyapps, der bruges i dit miljø, kan du implementere en eller begge af følgende metoder:
+Hvis du vil finde cloudapps, der bruges i dit miljø, kan du implementere en eller begge af følgende metoder:
 
-- Kom hurtigt i gang med Cloud Discovery ved at integrere med Microsoft Defender for Endpoint. Denne oprindelige integration giver dig mulighed for straks at begynde at indsamle data på skytrafik på tværs af dine Windows 10- Windows 11-enheder på og uden for dit netværk.
-- Hvis du vil finde alle skyapps, der tilgås af alle enheder, der har forbindelse til dit netværk, skal du installere Logindsamler til Defender for Cloud Apps på dine firewalls og andre proxyer. Denne installation hjælper med at indsamle data fra dine slutpunkter og sender dem til Defender til skyapps til analyse. Defender til skyapps integreres oprindeligt med nogle tredjeparts-proxyer for at få endnu flere egenskaber.
+- Kom hurtigt i gang med Cloud Discovery ved at integrere med Microsoft Defender for Endpoint. Med denne oprindelige integration kan du straks begynde at indsamle data om cloudtrafik på tværs af dine Windows 10 og Windows 11 enheder, på og uden for dit netværk.
+- Hvis du vil finde alle cloudapps, der tilgås af alle enheder, der har forbindelse til dit netværk, skal du installere defender for Cloud Apps-logopsamleren på dine firewalls og andre proxyer. Denne udrulning hjælper med at indsamle data fra dine slutpunkter og sender dem til Defender for Cloud Apps til analyse. Defender for Cloud Apps integreres oprindeligt med nogle proxyer fra tredjepart for at få endnu flere funktioner.
 
-Denne artikel indeholder vejledning til begge metoder.
+Denne artikel indeholder en vejledning til begge metoder.
 
 Brug følgende trin til at konfigurere Microsoft Defender for Cloud Apps.
 
-:::image type="content" source="../../media/defender/m365-defender-mcas-eval-enable-steps.png" alt-text="Disse trin til at aktivere Microsoft Microsoft Defender for Cloud Apps i Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-mcas-eval-enable-steps.png":::
+:::image type="content" source="../../media/defender/m365-defender-mcas-eval-enable-steps.png" alt-text="Trinnene til aktivering af Microsoft Microsoft Defender for Cloud Apps i Microsoft Defender-evalueringsmiljøet" lightbox="../../media/defender/m365-defender-mcas-eval-enable-steps.png":::
 
-- [Trin 1. Forbind til Defender for Cloud Apps-portalen](#step-1)
+- [Trin 1. Opret forbindelse til Defender for Cloud Apps-portalen](#step-1)
 - [Trin 2. Integrer med Microsoft Defender for Endpoint](#step-2)
-- [Trin 3. Installér logindsamleren Defender for Cloud Apps på dine firewalls og andre proxyer](#step-3)
+- [Trin 3. Udrul Defender for Cloud Apps-logopsamleren på dine firewalls og andre proxyer](#step-3)
 - [Trin 4. Få vist dashboardet Cloud Discovery for at se, hvilke apps der bruges i din organisation](#step-4)
 
 <a name="step-1"></a>
 
-## <a name="step-1-connect-to-the-defender-for-cloud-apps-portal"></a>Trin 1. Forbind til Defender for Cloud Apps-portalen
+## <a name="step-1-connect-to-the-defender-for-cloud-apps-portal"></a>Trin 1. Opret forbindelse til Defender for Cloud Apps-portalen
 
-Hvis du vil bekræfte licenser og oprette forbindelse til Defender for Cloud Apps-portalen, skal du se [Hurtig start: Introduktion til Microsoft Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security).
+Hvis du vil bekræfte licenser og oprette forbindelse til Defender for Cloud [Apps-portalen, skal du se Hurtig start: Kom i gang med Microsoft Defender for Cloud Apps](/cloud-app-security/getting-started-with-cloud-app-security).
 
-Hvis du ikke kan oprette forbindelse til portalen med det samme, skal du muligvis føje IP-adressen til den tilladte liste over din firewall. Se [Grundlæggende konfiguration for Defender til skyapps](/cloud-app-security/general-setup).
+Hvis du ikke kan oprette forbindelse til portalen med det samme, skal du muligvis føje IP-adressen til listen over tilladte i din firewall. Se [Grundlæggende konfiguration af Defender for Cloud Apps](/cloud-app-security/general-setup).
 
 Hvis du stadig har problemer, skal du gennemse [Netværkskrav](/cloud-app-security/network-requirements).
 
@@ -67,39 +68,39 @@ Hvis du stadig har problemer, skal du gennemse [Netværkskrav](/cloud-app-securi
 
 ## <a name="step-2-integrate-with-microsoft-defender-for-endpoint"></a>Trin 2. Integrer med Microsoft Defender for Endpoint
 
-Microsoft Defender for Cloud Apps integreret med Microsoft Defender for Endpoint oprindelige. Integrationen forenkler udrulningen af Cloud Discovery, udvider cloud Discovery-funktioner uden for virksomhedens netværk og muliggør enhedsbaseret undersøgelse. Denne integration viser skyapps og -tjenester, der tilgås via it-administrerede Windows 10 og Windows 11-enheder.
+Microsoft Defender for Cloud Apps integreres med Microsoft Defender for Endpoint som standard. Integrationen forenkler udrulningen af Cloud Discovery, udvider Cloud Discovery-funktionerne ud over virksomhedens netværk og muliggør enhedsbaseret undersøgelse. Denne integration viser, at cloudapps og -tjenester tilgås fra it-administrerede Windows 10 og Windows 11 enheder.
 
-Hvis du allerede har konfigureret Microsoft Defender for Endpoint, kan du konfigurere integration med Defender til skyapps i Microsoft 365 Defender. Når integration er slået til, kan du vende tilbage til portalen for Defender for Cloud Apps og få vist omfattende data i Cloud Discovery Dashboard.
+Hvis du allerede har konfigureret Microsoft Defender for Endpoint, er konfiguration af integration med Defender for Cloud Apps en til/fra-knap i Microsoft 365 Defender. Når integration er slået til, kan du vende tilbage til Defender for Cloud Apps-portalen og få vist omfattende data i Dashboard til cloudregistrering.
 
-For at udføre disse opgaver skal [du Microsoft Defender for Endpoint integration med Microsoft Defender for Cloud Apps](/cloud-app-security/mde-integration).
+Hvis du vil udføre disse opgaver, [skal du se Microsoft Defender for Endpoint integration med Microsoft Defender for Cloud Apps](/cloud-app-security/mde-integration).
 
 <a name="step-3"></a>
 
-## <a name="step-3-deploy-the-defender-for-cloud-apps-log-collector-on-your-firewalls-and-other-proxies"></a>Trin 3. Installér logindsamleren Defender for Cloud Apps på dine firewalls og andre proxyer
+## <a name="step-3-deploy-the-defender-for-cloud-apps-log-collector-on-your-firewalls-and-other-proxies"></a>Trin 3. Udrul Defender for Cloud Apps-logopsamleren på dine firewalls og andre proxyer
 
-For dækning på alle enheder, der har forbindelse til dit netværk, skal du installere Defender for Cloud Apps Log Collector på dine firewalls og andre proxyer for at indsamle data fra dine slutpunkter og sende dem til Defender for Cloud Apps til analyse.
+Hvis du vil have dækning på alle de enheder, der er forbundet til dit netværk, skal du installere defender for Cloud Apps-logopsamleren på dine firewalls og andre proxyer for at indsamle data fra dine slutpunkter og sende dem til Defender for Cloud Apps til analyse.
 
-Hvis du bruger en af følgende Secure Web Gateways (SWG), giver Defender til skyapps problemfri udrulning og integration:
+Hvis du bruger en af følgende SWG (Secure Web Gateways), leverer Defender for Cloud Apps problemfri udrulning og integration:
 
 - Zscaler
 - iboss
-- Corrata
+- Korrugeret
 - Menlo Security
 
-Du kan finde flere oplysninger om integration med disse netværksenheder under [Konfigurer skyregistrering](/cloud-app-security/set-up-cloud-discovery).
+Du kan finde flere oplysninger om integration med disse netværksenheder under [Konfigurer Cloudregistrering](/cloud-app-security/set-up-cloud-discovery).
 
 <a name="step-4"></a>
 
 ## <a name="step-4-view-the-cloud-discovery-dashboard-to-see-what-apps-are-being-used-in-your-organization"></a>Trin 4. Få vist dashboardet Cloud Discovery for at se, hvilke apps der bruges i din organisation
 
-Cloud Discovery-dashboardet er designet til at give dig mere indsigt i, hvordan skyapps bruges i din organisation. Den giver et hurtigt overblik over, hvilke typer apps der bruges, dine åbne beskeder og risikoniveauer for apps i din organisation.
+Cloud Discovery-dashboardet er designet til at give dig mere indsigt i, hvordan cloudapps bruges i din organisation. Den giver et hurtigt overblik over, hvilke typer apps der bruges, dine åbne beskeder og risikoniveauerne for apps i din organisation.
 
-For at komme i gang med at bruge cloud Discovery-dashboardet skal du [se Arbejde med fundne apps](/cloud-app-security/discovered-apps).
+Hvis du vil i gang med at bruge dashboardet Cloud Discovery, skal du se [Arbejde med fundne apps](/cloud-app-security/discovered-apps).
 
 ## <a name="next-steps"></a>Næste trin
 
-Trin 3 af 3: [Microsoft Defender for Cloud Apps](eval-defender-mcas-pilot.md)
+Trin 3 af 3: [Pilot Microsoft Defender for Cloud Apps](eval-defender-mcas-pilot.md)
 
-Gå tilbage til oversigten for [Evaluer Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
+Vend tilbage til oversigten for [Evaluate Microsoft Defender for Cloud Apps](eval-defender-mcas-overview.md)
 
-Gå tilbage til oversigten for [Evaluer og Microsoft 365 Defender](eval-overview.md)
+Vend tilbage til oversigten for [Evaluate og pilot Microsoft 365 Defender](eval-overview.md)

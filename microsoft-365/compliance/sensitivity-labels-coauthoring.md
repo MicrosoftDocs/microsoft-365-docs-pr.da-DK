@@ -13,12 +13,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: article
 description: Slå en indstilling til, der muliggør samtidig redigering og automatisk lagring i skrivebordsapps for navngivne og krypterede dokumenter i SharePoint og OneDrive.
-ms.openlocfilehash: e82249f3d42eb71345bb998d16a6c2a24e11130c
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: f2a1bffdc156d5c3ae35ac38fb92f1f88c3af3ea
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66628633"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749193"
 ---
 # <a name="enable-co-authoring-for-files-encrypted-with-sensitivity-labels"></a>Aktivér samtidig redigering af filer, der er krypteret med følsomhedsmærkater
 
@@ -74,10 +74,10 @@ Sørg for at forstå følgende forudsætninger, før du aktiverer denne funktion
 - Følsomhedsmærkater skal være [aktiveret for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md) for lejeren. Hvis denne funktion ikke allerede er aktiveret, aktiveres den automatisk, når du vælger indstillingen for at aktivere samtidig redigering af filer med følsomhedsmærkater.
 
 - Microsoft 365 Apps for enterprise:
-    - **Windows**: Minimumversion 2107 fra Current Channel eller Monthly Enterprise Channel eller minimumversion 2202 fra Semi-Annual Enterprise Channel (prøveversion)
+    - **Windows**: Minimumversion 2107 fra Current Channel eller Monthly Enterprise Channel eller minimumversion 2202 fra Semi-Annual Enterprise Channel
     - **macOS**: Minimumversion 16.51
-    - **iOS**: Nu som prøveversion, når du [tilmelder](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig med minimum version 2.58
-    - **Android**: Nu i prøveversion, når du [tilmelder](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig med minimum version 16.0.14931
+    - **iOS**: Som prøveversion, når du [tilmelder](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig med minimum version 2.58
+    - **Android**: Som prøveversion, når du [tilmelder](#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig med minimumversion 16.0.14931
 
 - Alle apps, tjenester og driftsværktøjer i din lejer skal understøtte de nye [mærkatmetadata](#metadata-changes-for-sensitivity-labels). Hvis du bruger en af følgende, skal du kontrollere de påkrævede minimumversioner:
     

@@ -18,14 +18,15 @@ ms.collection:
 - M365-security-compliance
 - m365solution-managedevices
 - m365solution-scenario
+- zerotrust-solution
 ms.custom: ''
 keywords: ''
-ms.openlocfilehash: e421a62d3b1fa60df7a64a5b9a94e6e46b0a139f
-ms.sourcegitcommit: a06bb81fbd727a790a8fe6a3746b8a3cf62a6b24
+ms.openlocfilehash: 829d650b6d815a84203e43e7256442bfee6bac0d
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/05/2022
-ms.locfileid: "64651505"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66749281"
 ---
 # <a name="step-1-implement-app-protection-policies"></a>Trin 1. Implementer politikker for appbeskyttelse
 
@@ -44,7 +45,7 @@ Hvis du har brugerdefinerede Line of Business-programmer, der kræver beskyttels
 
 ## <a name="configuring-mobile-app-protection"></a>Konfiguration af beskyttelse af mobilapps
 
-Denne vejledning er tæt koordineret med de anbefalede [Nul tillid politikker for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md). Når du har oprettet politikkerne for Appbeskyttelse mobil i Intune, skal du arbejde sammen med dit identitetsteam for at konfigurere politikken for betinget adgang i Azure AD, der gennemtvinger beskyttelse af mobilapps. 
+Denne vejledning er tæt koordineret med de anbefalede [Nul tillid politikker for identitet og enhedsadgang](../security/office-365-security/microsoft-365-policies-configurations.md). Når du har oprettet politikkerne for mobil Appbeskyttelse i Intune, skal du arbejde sammen med dit identitetsteam for at konfigurere politikken for betinget adgang i Azure AD, der gennemtvinger beskyttelse af mobilapps. 
 
 Denne illustration fremhæver de to politikker (også beskrevet i tabellen nedenfor illustrationen).
 
@@ -55,7 +56,7 @@ Hvis du vil konfigurere disse politikker, skal du bruge den anbefalede vejlednin
 
 |Trin  |Politikker  |Flere oplysninger  |Licensering  |
 |---------|---------|---------|---------|
-|1   |  [Anvend app-databeskyttelse (Application Protection Policies)](../security/office-365-security/identity-access-policies.md#apply-app-data-protection-policies)       | En Intune appbeskyttelsespolitik pr. platform (Windows, iOS/iPadOS, Android).        | Microsoft 365 E3 eller E5        |
+|1   |  [Anvend app-databeskyttelse (Application Protection Policies)](../security/office-365-security/identity-access-policies.md#apply-app-data-protection-policies)       | Én Intune appbeskyttelsespolitik pr. platform (Windows, iOS/iPadOS, Android).        | Microsoft 365 E3 eller E5        |
 |2     | [Kræv godkendt app- og appbeskyttelse ](../security/office-365-security/identity-access-policies.md#require-approved-apps-and-app-protection)       |  Gennemtvinger beskyttelse af mobilapps til telefoner og tablets ved hjælp af iOS, iPadOS eller Android.   |  Microsoft 365 E3 eller E5       |
 | | | | |
 

@@ -18,14 +18,15 @@ ms.collection:
 - M365-security-compliance
 - m365solution-scenario
 - m365solution-evalutatemtp
+- zerotrust-solution
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 51e441dbebd247e041768e02875e635c9dfa7098
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 5a5b1e6a08b91eba8ecd256a5ba80954305853ee
+ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66602464"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66750116"
 ---
 # <a name="step-3-enable-and-pilot-microsoft-defender-for-office-365"></a>Trin 3. Aktivér og pilot Microsoft Defender for Office 365
 
