@@ -17,12 +17,12 @@ ms.technology: mde
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: e344c98fd136569015a032bcc83569bc38e06621
-ms.sourcegitcommit: 9255a7e8b398f92d8dae09886ae95dc8577bf29a
+ms.openlocfilehash: 0efacb67cb3ba6b5126bbe5de327fa0b9f2092cf
+ms.sourcegitcommit: 8101c12df67cfd9c15507b0133c23ce4cca1c6ba
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "65438789"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "66720385"
 ---
 # <a name="microsoft-defender-antivirus-in-windows"></a>Microsoft Defender Antivirus i Windows
 
@@ -47,8 +47,6 @@ Hvis du bruger et antivirus-/antimalwareprodukt, der ikke er fra Microsoft, på 
 
 I følgende tabel beskrives, hvad du kan forvente, når Microsoft Defender Antivirus er i aktiv tilstand, passiv tilstand eller deaktiveret.
 
-<br/><br/>
-
 | Tilstand | Hvad sker der |
 |---|---|
 | Aktiv tilstand | I aktiv tilstand bruges Microsoft Defender Antivirus som den primære antivirusapp på enheden. Filer scannes, trusler afhjælpes, og registrerede trusler er angivet i din organisations sikkerhedsrapporter og i din Windows Sikkerhed-app. |
@@ -59,21 +57,21 @@ Du kan få mere at vide under [Microsoft Defender Antivirus kompatibilitet](micr
 
 ## <a name="check-the-state-of-microsoft-defender-antivirus-on-your-device"></a>Kontrollér tilstanden for Microsoft Defender Antivirus på din enhed
 
-Hvis du vil kontrollere tilstanden af Microsoft Defender Antivirus på din enhed, kan du bruge en af flere metoder, f.eks. Windows Sikkerhed-appen eller Windows PowerShell.
+Du kan bruge en af flere metoder, f.eks. Windows Sikkerhed-appen eller Windows PowerShell. til at tjekke tilstanden for Microsoft Defender Antivirus på din enhed.
 
-### <a name="use-the-windows-security-app-to-check-status-of-microsoft-defender-antivirus"></a>Brug appen Windows Sikkerhed til at kontrollere status for Microsoft Defender Antivirus
+### <a name="use-the-windows-security-app-to-check-the-status-of-microsoft-defender-antivirus"></a>Brug appen Windows Sikkerhed til at kontrollere statussen for Microsoft Defender Antivirus
 
-1. Vælg menuen Start på din Windows-enhed, og begynd at skrive `Security`. Åbn derefter Windows Sikkerhed-appen i resultaterne.
+1. På din Windows-enhed skal du vælge **Start**-menuen og begynde at skrive `Security`. Åbn derefter Windows Sikkerhed-appen i resultaterne.
 
 2. Vælg **Virus- og trusselsbeskyttelse**.
 
-3. Under **Indstillinger for virus- og trusselsbeskyttelse** skal du vælge **Administrer indstillinger**.
+3. Under **Hvem beskytter mig?** skal du vælge **Administrer udbydere**.
 
-Du kan se navnet på din antivirus-/antimalwareløsning på indstillingssiden.
+Du kan se navnet på din antivirus-/antimalwareløsning på sikkerhedsudbyderens webside..
 
-### <a name="use-powershell-to-check-status-of-microsoft-defender-antivirus"></a>Brug PowerShell til at kontrollere status for Microsoft Defender Antivirus
+### <a name="use-powershell-to-check-the-status-of-microsoft-defender-antivirus"></a>Brug PowerShell til at tjekke status for Microsoft Defender Antivirus
 
-1. Vælg menuen Start, og begynd at skrive `PowerShell`. Åbn derefter Windows PowerShell i resultaterne.
+1. Vælg menuen **Start**, og begynd at skrive `PowerShell`. Åbn derefter Windows PowerShell i resultaterne.
 
 2. Type `Get-MpComputerStatus`.
 
@@ -92,7 +90,7 @@ Du kan se navnet på din antivirus-/antimalwareløsning på indstillingssiden.
 
 ## <a name="get-your-antivirusantimalware-platform-updates"></a>Hent opdateringer til din antivirus-/antimalwareplatform
 
-Det er vigtigt at holde Microsoft Defender Antivirus eller en antivirus-/antimalwareløsning opdateret. Microsoft udgiver regelmæssige opdateringer for at sikre, at dine enheder har den nyeste teknologi til at beskytte mod ny malware og angrebsteknikker. Du kan få mere at vide under [Administrer opdateringer til Microsoft Defender Antivirus og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md).
+Det er vigtigt at holde Microsoft Defender Antivirus eller (eller enhver antivirus-/antimalwareløsning) opdateret. Microsoft udgiver regelmæssige opdateringer for at sikre, at dine enheder har den nyeste teknologi til at beskytte mod ny malware og angrebsteknikker. Du kan få mere at vide under [Administrer opdateringer til Microsoft Defender Antivirus og anvend oprindelige planer](manage-updates-baselines-microsoft-defender-antivirus.md).
 
 > [!TIP]
 > Hvis du leder efter antivirusrelaterede oplysninger til andre platforme, skal du se:
