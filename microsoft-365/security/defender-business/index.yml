@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Defender for Business
-summary: Enkel, omfattende slutpunktssikkerhed, der kan hjælpe dig med at beskytte din virksomhed, så du kan fokusere på det, der er vigtigt. Microsoft Defender til virksomheder er tilgængeligt som et separat abonnement og er inkluderet i Microsoft 365 Business Premium.
+summary: Enkel, omfattende slutpunktssikkerhed, der kan hjælpe dig med at beskytte din virksomhed, så du kan fokusere på det, der er vigtigt. Defender for Business er tilgængelig som et separat abonnement og er inkluderet i Microsoft 365 Business Premium.
 metadata:
   title: Dokumentation for Microsoft Defender for Business
   description: Defender for Business er en cybersikkerhedsløsning til små og mellemstore virksomheder. Beskyt enheder med sikkerhed i virksomhedsklasse til en overkommelig pris.
@@ -14,12 +14,12 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: denisebmsft
   ms.author: deniseb
-  ms.openlocfilehash: d94aeed225105bf16f2fa057d7c0caf1730eec09
-  ms.sourcegitcommit: 66228a5506fdceb4cbf0d55b9de3f2943740134f
+  ms.openlocfilehash: 0db947d3a791618db0e6316f09dcd760b35d5c0b
+  ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 06/15/2022
-  ms.locfileid: "66090514"
+  ms.lasthandoff: 07/13/2022
+  ms.locfileid: "66771345"
 landingContent:
 - title: Oversigt
   linkLists:
@@ -31,6 +31,8 @@ landingContent:
       url: mdb-simplified-configuration.md
     - text: Sammenlign planer for små og mellemstore virksomheder
       url: compare-mdb-m365-plans.md
+    - text: Ressourcer til Microsoft-partnere
+      url: mdb-partners.md
     - text: Integration med Microsoft 365 Lighthouse
       url: mdb-lighthouse-integration.md
   - linkListType: how-to-guide
@@ -49,6 +51,8 @@ landingContent:
       url: trial-playbook-defender-business.md
     - text: Brug konfigurationsguiden
       url: mdb-use-wizard.md
+    - text: Aktivér prøveversionsfunktioner
+      url: mdb-preview.md
 - title: Hjælp og flere ressourcer
   linkLists:
   - linkListType: how-to-guide
