@@ -11,10 +11,12 @@
           href: trial-playbook-defender-business.md
         - name: Sammenlign planer for små og mellemstore virksomheder
           href: compare-mdb-m365-plans.md
-        - name: Integration med Microsoft 365 Lighthouse
-          href: mdb-lighthouse-integration.md
+        - name: Visningsfunktioner
+          href: mdb-preview.md
         - name: Ressourcer til partnere
           href: mdb-partners.md
+        - name: Integration med Microsoft 365 Lighthouse
+          href: mdb-lighthouse-integration.md
     - name: Kom i gang
       items:
         - name: Hent Defender for Business
@@ -75,6 +77,8 @@
           href: mdb-offboard-devices.md
     - name: Referenceoplysninger
       items:
+        - name: Sådan får du Microsoft Defender for Business-servere (prøveversion)
+          href: get-defender-business-servers.md
         - name: Sådan får du hjælp eller kontakter support
           href: mdb-get-help.md
         - name: Ofte stillede spørgsmål
