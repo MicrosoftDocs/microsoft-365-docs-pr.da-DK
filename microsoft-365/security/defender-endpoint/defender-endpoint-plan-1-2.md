@@ -8,7 +8,7 @@ ms.author: deniseb
 manager: dansimp
 audience: ITPro
 ms.topic: overview
-ms.date: 07/11/2022
+ms.date: 07/14/2022
 ms.prod: m365-security
 ms.technology: mdep1
 ms.localizationpriority: medium
@@ -17,47 +17,60 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: d90e39028f563c7b3913f6fd0dbf97222d1068d2
-ms.sourcegitcommit: 8101c12df67cfd9c15507b0133c23ce4cca1c6ba
+ms.openlocfilehash: d41c228ceeae0dcd373f98c6dcd89bf88b0feacd
+ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66720429"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66795394"
 ---
-# <a name="compare-microsoft-defender-for-endpoint-plans"></a>Sammenlign Microsoft Defender for Endpoint planer
+# <a name="compare-microsoft-endpoint-security-plans"></a>Sammenlign Sikkerhedsplaner for Microsoft-slutpunkter
 
-Microsoft Defender for Endpoint er en sikkerhedsplatform til virksomhedsslutpunkter, der er udviklet til at hjælpe virksomhedsnetværk med at forhindre, registrere, undersøge og reagere på avancerede trusler. Defender for Endpoint giver avanceret trusselsbeskyttelse, der omfatter antivirus, antimalware, afhjælpning af ransomware og meget mere samt central administration og rapportering. Du kan vælge mellem følgende indstillinger for Microsoft Defender for Endpoint:
+Microsofts sikkerhedsplaner for slutpunkter, f.eks. Microsoft Defender for Endpoint og Microsoft 365 Defender, er udviklet til at hjælpe virksomhedsorganisationer med at forhindre, registrere, undersøge og reagere på avancerede trusler. Microsoft Defender til virksomheder og Microsoft 365 Business Premium leverer lignende funktioner, der er optimeret til små og mellemstore virksomheder. Disse planer giver avanceret trusselsbeskyttelse med antivirus- og antimalwarebeskyttelse, ransomware-afhjælpning og meget mere sammen med centraliseret administration og rapportering. 
+
+Denne artikel hjælper med at tydeliggøre, hvad der er inkluderet i følgende planer: 
 
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender Vulnerability Management](../defender-vulnerability-management/index.yml)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
+- [Microsoft Defender for Business](../defender-business/mdb-overview.md)
+- [Microsoft 365 Business Premium](../../business-premium/index.md)
 
-Du kan bruge denne artikel til at tydeliggøre, hvilken beskyttelse der leveres af de forskellige funktioner, der er tilgængelige i Defender for Endpoint Plan 1, Defender for Endpoint Plan 2, det nye tilføjelsesprogram til administration af sårbarheder i defender og Microsoft 365 Defender.
+> [!IMPORTANT]
+> Denne artikel indeholder en oversigt over funktioner til trusselsbeskyttelse i Microsofts sikkerhedsplaner for slutpunkter. Det er dog ikke meningen, at det skal være en tjenestebeskrivelse eller et licenskontraktdokument. Du kan finde flere detaljerede oplysninger i [Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 
-## <a name="compare-defender-for-endpoint-plans"></a>Sammenlign Defender for Endpoint-planer
+## <a name="compare-microsoft-endpoint-security-plans"></a>Sammenlign Sikkerhedsplaner for Microsoft-slutpunkter
 
-I følgende tabel opsummeres det, der er inkluderet i hver Defender for Endpoint-plan.
+I følgende tabel opsummeres det, hvad der er inkluderet i Microsoft-slutpunktssikkerhedsplaner.
 
 | Plan | Hvad er inkluderet |
 |:---|:---|
-| [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) | <ul><li>[Næste generations beskyttelse](defender-endpoint-plan-1.md#next-generation-protection) (omfatter antimalware og antivirus)</li><li>[Reduktion af angrebsoverfladen](defender-endpoint-plan-1.md#attack-surface-reduction)</li><li> [Handlinger for manuelt svar](defender-endpoint-plan-1.md#manual-response-actions)</li><li>[Centraliseret administration](defender-endpoint-plan-1.md#centralized-management)</li><li>[Sikkerhedsrapporter](defender-endpoint-plan-1.md#reporting)</li><li>[Api'er](defender-endpoint-plan-1.md#apis)</li><li>[Understøttelse af Windows 10-, iOS-, Android OS- og macOS-enheder](defender-endpoint-plan-1.md#cross-platform-support)</li></ul>|
-| [Defender for Endpoint Plan 2](microsoft-defender-endpoint.md) | Alle funktionerne i Defender for Endpoint Plan 1 plus:<ul><li>[Enhedssøgning](device-discovery.md)</li><li>[Enhedslager](machines-view-overview.md)</li><li>[Grundlæggende funktioner til administration af sårbarheder i Defender](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md)</li><li>[Threat Analytics](threat-analytics.md)</li><li>[Automatiseret undersøgelse og svar](automated-investigations.md)</li><li>[Avanceret jagt](advanced-hunting-overview.md)</li><li>[Slutpunktsregistrering og -svar](overview-endpoint-detection-response.md)</li><li>[Microsoft Threat Experts](microsoft-threat-experts.md)</li><li>Understøttelse af [Windows-platforme](configure-endpoints.md) (klient og server) og [ikke-Windows-platforme](configure-endpoints-non-windows.md) (macOS, iOS, Android og Linux)</li></ul> |
-| [Tilføjelsesprogram til administration af sårbarheder i Defender](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md) | Yderligere funktioner til administration af sårbarheder i Defender for Endpoint Plan 2:<ul><li>[Vurdering af sikkerhedsgrundlinjer](../defender-vulnerability-management/tvm-security-baselines.md)</li><li>[Bloker sårbare programmer](../defender-vulnerability-management/tvm-block-vuln-apps.md)</li><li>[Browserudvidelser](../defender-vulnerability-management/tvm-browser-extensions.md)</li><li>[Vurdering af digitalt certifikat](../defender-vulnerability-management/tvm-certificate-inventory.md)</li><li>[Analyse af netværksshare](../defender-vulnerability-management/tvm-network-share-assessment.md)</li><li>Understøttelse af [Windows-platforme](configure-endpoints.md) (klient og server) og [ikke-Windows-platforme](configure-endpoints-non-windows.md) (macOS, iOS, Android og Linux)</li></ul> |
 | [Microsoft 365 Defender](../defender/microsoft-365-defender.md) | Tjenesterne omfatter: <ul><li>[Defender for Endpoint Plan 2](microsoft-defender-endpoint.md)</li><li>[Microsoft Defender Vulnerability Management](../defender-vulnerability-management/defender-vulnerability-management.md)</li><li>[Microsoft Defender for Office 365](../office-365-security/overview.md)</li><li>[Microsoft Defender for Identity](/defender-for-identity/)</li><li>[Microsoft Defender for Cloud Apps](/cloud-app-security/)</li></ul>|
+| [Defender for Endpoint Plan 1](defender-endpoint-plan-1.md) <sup>[[1](#fn1)]</sup> | <ul><li>[Næste generations beskyttelse](defender-endpoint-plan-1.md#next-generation-protection) (omfatter antimalware og antivirus)</li><li>[Reduktion af angrebsoverfladen](defender-endpoint-plan-1.md#attack-surface-reduction)</li><li> [Handlinger for manuelt svar](defender-endpoint-plan-1.md#manual-response-actions)</li><li>[Centraliseret administration](defender-endpoint-plan-1.md#centralized-management)</li><li>[Sikkerhedsrapporter](defender-endpoint-plan-1.md#reporting)</li><li>[Api'er](defender-endpoint-plan-1.md#apis)</li><li>[Understøttelse af Windows 10-, iOS-, Android OS- og macOS-enheder](defender-endpoint-plan-1.md#cross-platform-support)</li></ul>|
+| [Defender for Endpoint Plan 2](microsoft-defender-endpoint.md) <sup>[[2](#fn2)]</sup> | Alle funktionerne i Defender for Endpoint Plan 1 plus:<ul><li>[Enhedssøgning](device-discovery.md)</li><li>[Enhedslager](machines-view-overview.md)</li><li>[Grundlæggende funktioner til administration af sårbarheder i Defender](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md)</li><li>[Threat Analytics](threat-analytics.md)</li><li>[Automatiseret undersøgelse og svar](automated-investigations.md)</li><li>[Avanceret jagt](advanced-hunting-overview.md)</li><li>[Slutpunktsregistrering og -svar](overview-endpoint-detection-response.md)</li><li>[Microsoft Threat Experts](microsoft-threat-experts.md)</li><li>Understøttelse af [Windows-platforme](configure-endpoints.md) (klient og server) og [ikke-Windows-platforme](configure-endpoints-non-windows.md) (macOS, iOS, Android og Linux)</li></ul> |
+| [Tilføjelsesprogram til administration af sårbarheder i Defender](../defender-vulnerability-management/defender-vulnerability-management-capabilities.md) | Yderligere funktioner til administration af sårbarheder i Defender for Endpoint Plan 2:<ul><li>[Vurdering af sikkerhedsgrundlinjer](../defender-vulnerability-management/tvm-security-baselines.md)</li><li>[Bloker sårbare programmer](../defender-vulnerability-management/tvm-block-vuln-apps.md)</li><li>[Browserudvidelser](../defender-vulnerability-management/tvm-browser-extensions.md)</li><li>[Vurdering af digitalt certifikat](../defender-vulnerability-management/tvm-certificate-inventory.md)</li><li>[Analyse af netværksshare](../defender-vulnerability-management/tvm-network-share-assessment.md)</li><li>Understøttelse af [Windows-platforme](configure-endpoints.md) (klient og server) og [ikke-Windows-platforme](configure-endpoints-non-windows.md) (macOS, iOS, Android og Linux)</li></ul> |
+| [Defender for Business](../defender-business/mdb-overview.md) <sup>[[3](#fn3)]</sup> <br/>Og<br/>[Microsoft 365 Business Premium](../../business-premium/index.md) | [Tjenester, der er optimeret til små og mellemstore virksomheder](../defender-business/compare-mdb-m365-plans.md) , omfatter: <ul><li>Mailbeskyttelse</li><li>Antispambeskyttelse</li><li>Beskyttelse modmalware</li><li>Næste generations beskyttelse</li><li>Reduktion af angrebsoverfladen</li><li>Slutpunktsregistrering og -svar</li><li>Automatiseret undersøgelse og svar </li><li>Håndtering af trusler og sikkerhedsrisici</li><li>Centraliseret rapportering</li><li>API'er (til integration med brugerdefinerede apps eller rapporteringsløsninger)</li><li>[Integration med Microsoft 365 Lighthouse](../defender-business/mdb-lighthouse-integration.md)</li></ul> |
 
-> [!IMPORTANT]
-> De separate versioner af Defender for Endpoint Plan 1 og Plan 2 indeholder ikke serverlicenser. Hvis du vil onboarde servere, f.eks. slutpunkter, der kører Windows Server eller Linux, skal du bruge Defender for Servers Plan 1 eller Plan 2 som en del af [Defender for Cloud-tilbuddet](/azure/defender-for-cloud/defender-for-cloud-introduction) . For at få mere at vide. se [Oversigt over Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
+(<a id="fn1">1</a>) Microsoft Defender for Endpoint Plan 1 er tilgængeligt som et separat abonnement for erhvervs- og uddannelseskunder. Den er også inkluderet som en del af Microsoft 365 E3/A3.
 
-Microsoft Defender for Endpoint Plan 1 er tilgængelig som en separat brugerabonnementslicens til kommercielle kunder og uddannelseskunder. Den er også inkluderet som en del af Microsoft 365 E3/A3.
-
-Microsoft Defender for Endpoint Plan 2, som tidligere blev kaldt Microsoft Defender for Endpoint, er tilgængelig som en separat licens og som en del af følgende planer:
+(<a id="fn2">2</a>) Microsoft Defender for Endpoint Plan 2, der tidligere blev kaldt Microsoft Defender for Endpoint, er tilgængelig som et separat abonnement. Det er også inkluderet som en del af følgende planer:
 
 - Windows 11 Enterprise E5/A5
 - Windows 10 Enterprise E5/A5
 - Microsoft 365 E5/A5/G5 (herunder Windows 10 eller Windows 11 Enterprise E5)
 - Microsoft 365 E5/A5/G5/F5 Security
 - Microsoft 365 F5 Security & Compliance
+
+(<a id="fn3">3</a>) Microsoft Defender til virksomheder er tilgængeligt som et selvstændigt abonnement for små og mellemstore virksomheder. Den er også inkluderet som en del af Microsoft 365 Business Premium. Disse planer indeholder avancerede sikkerhedsfunktioner med en forenklet konfigurationsoplevelse.
+
+## <a name="options-for-onboarding-servers"></a>Indstillinger for onboarding af servere
+
+De separate versioner af Defender for Business, Defender for Endpoint Plan 1 og 2 og Microsoft 365 Business Premium omfatter ikke serverlicenser. Hvis du vil onboarde servere, skal du vælge mellem følgende indstillinger:
+
+- **Defender for Servers Plan 1 eller Plan 2** som en del af [Defender for Cloud-tilbuddet](/azure/defender-for-cloud/defender-for-cloud-introduction) . For at få mere at vide. se [Oversigt over Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
+
+- **Microsoft Defender til virksomheder servere (prøveversion)** til små og mellemstore virksomheder. Se [Sådan får du Microsoft Defender til virksomheder servere (prøveversion)](../defender-business/get-defender-business-servers.md).
 
 ## <a name="mixed-licensing-scenarios"></a>Blandede licensscenarier
 

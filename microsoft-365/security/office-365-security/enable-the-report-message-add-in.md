@@ -17,12 +17,12 @@ ms.collection:
 description: Få mere at vide om, hvordan du aktiverer tilføjelsesprogrammer til rapportmeddelelse eller rapport phishing til Outlook og Outlook på internettet, til individuelle brugere eller til hele organisationen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 636effd1f3d9f0fd824ead4ed59e48fdee26ef20
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: f1d51499558780f1b20fa5f6955e7c4a7c2ff5e8
+ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66685695"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66795438"
 ---
 # <a name="enable-the-report-message-or-the-report-phishing-add-ins"></a>Aktivér rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing
 
@@ -205,3 +205,24 @@ Når tilføjelsesprogrammet er installeret og aktiveret, får du vist følgende 
     > :::image type="content" source="../../media/microsoft-365-admin-center-report-phishing-edit.png" alt-text="Pop op-vinduet Rapport phishing." lightbox="../../media/microsoft-365-admin-center-report-phishing-edit.png":::
 
 3. Hvis du vil fjerne tilføjelsesprogrammet, skal du vælge **Fjern app** under **Handlinger** i det samme pop op-vindue.
+
+## <a name="get-the-report-message-or-the-report-phishing-add-ins-for-the-gcc-and-gcch-users"></a>Hent rapportmeddelelsen eller tilføjelsesprogrammer til rapport phishing for GCC- og GCCH-brugerne
+
+Hvis du er GCCH-administrator (Government Community Cloud High) eller GCC-administrator (Government Community Cloud), skal du følge disse trin for at få rapportmeddelelsen eller tilføjelses-tilføjelserne Rapport phishing til din organisation. Bemærk, at hvis du er individuel bruger, kan du ikke hente tilføjelsesprogrammet ved hjælp af Microsoft AppSource.
+
+> [!NOTE]
+> Det kan tage op til 24 timer, før tilføjelsesprogrammet vises i din organisation. 
+
+1. I Microsoft 365 Administration skal du gå til **Indstillinger** \> **Tilføjelsesprogrammer** og vælge **Installer tilføjelsesprogram**. 
+
+2. Pop **op-vinduet Installér et nyt tilføjelsesprogram** åbnes. Klik på **Næste**, og vælg derefter **Upload brugerdefinerede apps**.  
+
+3. Vælg **Jeg har en URL-adresse til manifestfilen**. Brug følgende URL-adresser til at hente [rapportmeddelelsen](https://ipagave.azurewebsites.net/ReportMessageManifest/ReportMessageAzure.xml) og tilføjelsesprogrammer til [rapport phishing](https://ipagave.azurewebsites.net/ReportMessageManifest/ReportPhishingAzure.xml) . 
+
+4. Vælg, hvilke brugere der skal have adgang til tilføjelsesprogrammet, og vælg en installationsmetode, og vælg derefter **Udrul**. 
+
+5. Hvis du vil konfigurere indstillingerne fuldt ud, skal du se [Brugerrapporterede meddelelsesindstillinger](user-submission.md). 
+
+## <a name="use-the-report-message-or-the-report-phishing-add-ins"></a>Brug tilføjelsesprogrammer til rapportmeddelelse eller rapport phishing
+
+Du kan bruge tilføjelsesprogrammet Rapportmeddelelse eller Rapport phishing til at sende falske positiver (god mail, der blev blokeret eller sendt til mappen Uønsket mail) og falske negativer (uønsket mail eller phish, der blev leveret til indbakken) i Outlook. Du kan få flere oplysninger under [Rapportér falske positiver og falske negativer i Outlook](report-false-positives-and-false-negatives.md).

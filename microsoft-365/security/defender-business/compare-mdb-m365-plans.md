@@ -16,12 +16,12 @@ ms.collection:
 - SMB
 - m365-initiative-defender-business
 - m365-security-compliance
-ms.openlocfilehash: 9c3c4cf2914e268abeabc199e72ef28dac81a0f1
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: be57910a1f6b2387a1b826e6cff17e418ec3da2b
+ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66771990"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66795372"
 ---
 # <a name="compare-security-features-in-microsoft-365-plans-for-small-and-medium-sized-businesses"></a>Sammenlign sikkerhedsfunktioner i Microsoft 365-planer for små og mellemstore virksomheder
 
@@ -48,7 +48,7 @@ Defender for Business er også tilgængelig som et separat abonnement og er ogs�
 |Mailbeskyttelse|Ja <br/>[Mailscanning med Microsoft Defender Antivirus](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md)|Ja <ul><li>[Exchange Online Protection](../office-365-security/exchange-online-protection-overview.md)</li><li>[Mailscanning med Microsoft Defender Antivirus](../defender-endpoint/configure-advanced-scan-types-microsoft-defender-antivirus.md)</li></ul>|
 |Antispambeskyttelse|Ja<br/>Til enheder|Ja <ul><li>Til enheder</li><li>For Microsoft 365-mailindhold, f.eks. meddelelser og vedhæftede filer</li></ul>|
 |Beskyttelse modmalware|Ja<br/>Til enheder|Ja<ul><li>Til enheder</li><li>For Microsoft 365-mailindhold, f.eks. meddelelser og vedhæftede filer</li></ul>|
-|[Næste generations beskyttelse](../defender-endpoint/microsoft-defender-antivirus-in-windows-10.md) <br/> (beskyttelse mod antivirus og antimalware)|Ja<br/>Microsoft Defender Antivirus er inkluderet i Windows 10 og nyere|Ja <ul><li>Microsoft Defender Antivirus er inkluderet i Windows 10 og nyere</li><li>Næste generations beskyttelsespolitikker for onboardede enheder</li></ul>|
+|[Næste generations beskyttelse](../defender-endpoint/microsoft-defender-antivirus-in-windows-10.md) <br/> (beskyttelse mod antivirus og antimalware for onboardede enheder)|Ja |Ja |
 |[Reduktion af angrebsoverfladen](../defender-endpoint/overview-attack-surface-reduction.md) <br/>(ASR-regler i Windows 10 eller nyere og firewallbeskyttelse)|Ja|Ja|
 |[Slutpunktsregistrering og -svar](../defender-endpoint/overview-endpoint-detection-response.md) <br/>(handlingsbaseret registrering og manuelle svarhandlinger)|Ja|Ja|
 |[Automatiseret undersøgelse og svar](../defender-endpoint/automated-investigations.md)|Ja|Ja|

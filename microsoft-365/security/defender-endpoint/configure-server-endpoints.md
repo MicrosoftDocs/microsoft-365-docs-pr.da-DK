@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 547b41deceae01045baf119aeba1c15b8573a23f
-ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
+ms.openlocfilehash: ac40dcc986dfb4c66b9030cdf8c22ebabe1bd3d2
+ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695857"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66795416"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -298,11 +298,10 @@ Du kan bruge [installationsscriptet](server-migration.md#installer-script) til a
     ```
 
     > [!NOTE]
-    > Hvis du har brug for at foretage fejlfinding af agentinstallationsproblemer, skal du føje '-etl -log' til install.ps1 scriptparametre.
-    >
+
     > Den anbefalede politikindstilling for udførelse er `Allsigned`. Dette kræver, at scriptets signeringscertifikat importeres til det lokale udgiverlager, der er tillid til, hvis scriptet kører som SYSTEM på slutpunktet.
 
-    Erstat \\servernavn-eller-dfs-space\share-name med UNC-stien ved hjælp af filserverens fulde domænenavn (FQDN) for den delte *install.ps1* fil. Installationspakken md4ws.msi skal placeres i den samme mappe.  Sørg også for, at tilladelserne for UNC-stien giver læseadgang til den computerkonto, der installerer platformen.
+    Erstat \\servernavn-eller-dfs-space\share-name med UNC-stien ved hjælp af filserverens fulde domænenavn (FQDN) for den delte *install.ps1* fil. Installationspakken md4ws.msi skal placeres i den samme mappe.  Sørg for, at tilladelserne til UNC-stien tillader skriveadgang til den computerkonto, der installerer pakken, for at understøtte oprettelse af logfiler. Hvis du vil deaktivere oprettelsen af logfiler (anbefales ikke), kan du bruge parametrene -noETL -noETW.
 
     I scenarier, hvor Microsoft Defender Antivirus skal fungere sammen med ikke-Microsoft-antimalwareløsninger, skal du tilføje parameteren $Passive for at angive passiv tilstand under installationen.
 

@@ -16,12 +16,12 @@ metadata:
   ms.collection:
   - SMB
   - M365-security-compliance
-  ms.openlocfilehash: 3b11cd3fa74d822baf0d4662fea43e53c6e5ef3e
-  ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+  ms.openlocfilehash: 405f96858ece26d624ad53db5a49b27bf538dbe4
+  ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
   ms.translationtype: MT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 07/13/2022
-  ms.locfileid: "66772188"
+  ms.lasthandoff: 07/14/2022
+  ms.locfileid: "66795350"
 title: Microsoft Defender til virksomheder – Ofte stillede spørgsmål og svar
 summary: >
   Brug denne artikel til at få svar på spørgsmål, du kan have om Defender for Business.
@@ -49,10 +49,12 @@ sections:
   - question: Hvor mange enheder kan jeg onboarde og sikre med Defender for Business?
     answer: >
       Du kan onboarde og sikre op til fem klientenheder pr. brugerlicens.
-  - question: Understøtter Defender for Business servere?
-    answer: "Serversupport fås nu som prøveversion! Se [Sådan får du Microsoft Defender til virksomheder servere (prøveversion)](get-defender-business-servers.md).  \n"
   - question: Beskytter Defender for Business Mac-, Android- og iOS-/iPadOS-klientenheder?
     answer: "Ja. Defender for Business understøtter beskyttelse af Mac-, Android- og iOS-/iPadOS-enheder. Se [Indbyggede enheder](mdb-onboard-devices.md).\n\n- Du kan onboarde Mac-enheder ved hjælp af et lokalt script på Microsoft 365 Defender-portalen. \n- Hvis du vil onboarde Android- og iOS-/iPadOS-enheder, skal du have en licens til [Microsoft Intune](/mem/intune/). Intune er inkluderet i Microsoft 365 Business Premium og kan købes til Defender for Business (separat).\n\nMere forenkling af Mac-, iOS-/iPadOS- og Android-enheder er på vej. \n"
+  - question: Understøtter Defender for Business servere?
+    answer: "Serversupport fås nu som prøveversion! Se [Sådan får du Microsoft Defender til virksomheder servere (prøveversion)](get-defender-business-servers.md).  \n\nNår licensen til Microsoft Defender til virksomheder servere bliver offentlig tilgængelig, tilbydes den som et tilføjelsesprogram til Microsoft 365 Business Premium og den separate version af Defender for Business. På offentlig adgang vil Microsoft Defender til virksomheder servere blive prissat til $3 pr. serverforekomst. På det tidspunkt kan du enten købe en licens for hver onboardet server eller vælge at offboard-servere fra Defender for Business.\n"
+  - question: Hvad er forskellen mellem Microsoft Defender til virksomheder servere og Microsoft Defender for Servers Plan 1 og Plan 2?
+    answer: "Defender for Business-servere er et tilføjelsesprogram til Defender for Business og kun Microsoft 365 Business Premium. Det giver en enkelt sikkerhedsoplevelse for både klienter og servere på Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) til virksomheder med op til 300 medarbejdere. Med en forenklet konfigurationsproces og onboardingmuligheder for enheder giver Defender for Business kunder, der ikke nødvendigvis har en sikkerhedsbaggrund, mulighed for at konfigurere og bruge Defender for Servers eller Defender for Cloud til at beskytte virksomhedsenheder. \n\nDefender for Servers Plan 1/Plan 2 er et virksomhedsfokuseret tilbud, der kan købes sammen med en hvilken som helst anden Microsoft-cloudplan. Defender for Servers Plan 1 og Plan 2 er en del af [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Avanceret trusselsjagt med seks måneders dataopbevaring og Microsoft-trusselseksperter-tjenesten er tilgængelig med Defender for Servers Plan 1 eller Plan 2.\n\nDefender for Cloud er en CSPM (Cloud Security Posture Management) og CWPP (Cloud Workload Protection Platform) til alle dine Ressourcer til Azure, det lokale miljø og multicloud (Amazon AWS og Google GCP). Administratoroplevelsen for Defender for Cloud findes i Azure Portal ([https://portal.azure.com](https://portal.azure.com)).\n"
   - question: Kan jeg konfigurere mere end én politik for filtrering af webindhold i Defender for Business?
     answer: "I øjeblikket understøtter Defender for Business kun én ensartet webfiltreringspolitik pr. Defender for Business-lejer. \n\nSe [Konfigurer filtrering af webindhold](mdb-configure-security-settings.md#set-up-web-content-filtering).\n"
   - question: Kan jeg bruge ikke-Microsoft-antivirus-/antimalwaresoftware med Defender for Business?
