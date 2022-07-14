@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Få mere at vide om opbevaringspolitikker, der gælder for Microsoft Teams.
-ms.openlocfilehash: 6935f82830aa8a6700d4088ee4954cf11f67adef
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 08385988da41d633d864a28637f9667887e6269e
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714678"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787094"
 ---
 # <a name="learn-about-retention-for-microsoft-teams"></a>Få mere at vide om opbevaring til Microsoft Teams
 
@@ -102,7 +102,7 @@ For de to stier i diagrammet:
 
 Når opbevaringsperioden udløber og flytter en meddelelse til mappen SubstrateHolds, kommunikeres der en slettehandling til backend-Azure-chattjenesten, som derefter videresender den samme handling til Teams-klientappen. Forsinkelser i denne kommunikation eller cachelagring kan forklare, hvorfor brugerne i en kort periode fortsat kan se disse meddelelser i deres Teams-app.
 
-I dette scenarie, hvor Azure-chattjenesten modtager en slettekommando på grund af en opbevaringspolitik, slettes den tilsvarende meddelelse i Teams-klientappen for alle brugere i samtalen. Nogle af disse brugere kan være fra en anden organisation, have en opbevaringspolitik med en længere opbevaringsperiode eller ingen opbevaringspolitik tildelt dem. For disse brugere gemmes kopier af meddelelserne stadig i deres postkasser og forbliver søgbare efter eDiscovery, indtil meddelelserne slettes permanent af en anden opbevaringspolitik.
+I dette scenarie, hvor Azure-chattjenesten modtager en slettekommando på grund af en opbevaringspolitik, slettes den tilsvarende meddelelse i Teams-klientappen for alle brugere i samtalen. Nogle gange [kan denne funktionsmåde virke uventet](/microsoftteams/troubleshoot/teams-im-presence/messages-unexpectedly-deleted-retention-policy) , fordi nogle af disse brugere kan være fra en anden organisation, have en opbevaringspolitik med en længere opbevaringsperiode eller ingen opbevaringspolitik tildelt dem. For disse brugere gemmes kopier af meddelelserne stadig i deres postkasser og forbliver søgbare efter eDiscovery, indtil meddelelserne slettes permanent af en anden opbevaringspolitik.
 
 > [!IMPORTANT]
 > Meddelelser, der er synlige i Teams-appen, er ikke en nøjagtig afspejling af, om de bevares eller slettes permanent i forbindelse med overholdelseskrav.

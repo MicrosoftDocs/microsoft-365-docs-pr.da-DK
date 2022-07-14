@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 8afb59606f4d13e96db5d4f03ffd8126c6ee9ba2
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: fc812b399cb6c80dfd41cc5ff4840a8288daac1f
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66642563"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787468"
 ---
 # <a name="get-started-with-insider-risk-management"></a>Kom i gang med styring af insider-risiko
 
@@ -231,7 +231,7 @@ Se artiklen [Konfigurer avancerede funktioner i Defender for Endpoint](/windows/
 
 ## <a name="step-5-required-configure-insider-risk-settings"></a>Trin 5 (påkrævet): Konfigurer indstillinger for insiderrisiko
 
-[Indstillinger for insiderrisiko](insider-risk-management-settings.md) gælder for alle politikker for styring af insiderrisiko, uanset hvilken skabelon du vælger, når du opretter en politik. Indstillinger konfigureres ved hjælp af kontrolelementet **Insider-risikoindstillinger** , der er placeret øverst på alle faner til styring af insiderrisiko. Disse indstillinger styrer beskyttelse af personlige oplysninger, indikatorer, overvågningsvinduer og intelligente registreringer.
+[Indstillinger for insiderrisiko](insider-risk-management-settings.md) gælder for alle politikker for styring af insiderrisiko, uanset hvilken skabelon du vælger, når du opretter en politik. Indstillinger konfigureres ved hjælp af kontrolelementet **Insider-risikoindstillinger** , der er placeret øverst på alle faner til styring af insiderrisiko. Disse indstillinger styrer beskyttelse af personlige oplysninger, indikatorer, intelligente registreringer og meget mere.
 
 Før du konfigurerer en politik, skal du definere følgende indstillinger for insiderrisiko:
 

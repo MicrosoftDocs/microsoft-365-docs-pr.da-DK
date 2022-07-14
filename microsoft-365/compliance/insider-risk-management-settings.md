@@ -16,12 +16,12 @@ ms.collection:
 - m365solution-insiderrisk
 - m365initiative-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: d830da841eb67db19e81cdf6a0e079c2161ae9d9
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 5e9f9eb04d2fb239c69aacd8927cde7f295c7716
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66625187"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787534"
 ---
 # <a name="get-started-with-insider-risk-management-settings"></a>Kom i gang med indstillinger for styring af insiderrisiko
 
@@ -85,7 +85,7 @@ Hvis du vil definere indikatorer for insiderrisikopolitik, der er aktiveret i al
 ### <a name="enable-device-indicators-and-onboard-windows-devices"></a>Aktivér enhedsindikatorer og onboarde Windows-enheder
 <a name="OnboardDevices"> </a>
 
-Hvis du vil aktivere overvågning af risikoaktiviteter på Windows-enheder og inkludere politikindikatorer for disse aktiviteter, skal dine Windows-enheder opfylde følgende krav, og du skal fuldføre følgende onboardingtrin.
+Hvis du vil aktivere registrering af risikoaktiviteter på Windows-enheder og inkludere politikindikatorer for disse aktiviteter, skal dine Windows-enheder opfylde følgende krav, og du skal fuldføre følgende onboardingtrin.
 
 #### <a name="step-1-prepare-your-endpoints"></a>Trin 1: Forbered dine slutpunkter
 
@@ -348,7 +348,7 @@ Identificering af adgang til prioriterede fysiske aktiver og korrelering af adga
 
 Når prioriteten af fysiske aktiver er aktiveret, og [dataconnectoren til fysisk badging](import-physical-badging-data.md) er konfigureret, integrerer styring af insiderrisiko signaler fra din fysiske kontrol og adgangssystemer med andre aktiviteter for brugerrisiko. Ved at undersøge adfærdsmønstre på tværs af fysiske adgangssystemer og korrelere disse aktiviteter med andre insiderrisikohændelser kan styring af insiderrisiko hjælpe med at fastslå overholdelse af angivne standarder og analytikere træffe mere informerede svarbeslutninger for beskeder. Adgang til prioriterede fysiske aktiver bedømmes og identificeres i indsigter på en anden måde end adgang til ikke-prioriterede aktiver.
 
-Din organisation har f.eks. et badgingsystem for brugere, der overvåger og godkender fysisk adgang til normale arbejds- og følsomme projektområder. Du har flere brugere, der arbejder på et følsomt projekt, og disse brugere vender tilbage til andre områder i organisationen, når projektet er fuldført. Da det følsomme projekt er ved at blive fuldført, skal du sikre dig, at projektarbejde forbliver fortroligt, og at adgangen til projektområderne styres nøje.
+Din organisation har f.eks. et badgingsystem for brugere, der styrer og godkender fysisk adgang til normale arbejds- og følsomme projektområder. Du har flere brugere, der arbejder på et følsomt projekt, og disse brugere vender tilbage til andre områder i organisationen, når projektet er fuldført. Da det følsomme projekt er ved at blive fuldført, skal du sikre dig, at projektarbejde forbliver fortroligt, og at adgangen til projektområderne styres nøje.
 
 Du vælger at aktivere connectoren Fysisk badging-data i Microsoft 365 for at importere adgangsoplysninger fra dit fysiske badgingsystem og angive prioriterede fysiske aktiver i styring af insiderrisiko. Når du importerer oplysninger fra dit badgingsystem og korrelerer oplysninger om fysisk adgang med andre risikoaktiviteter, der er identificeret i insiderrisikostyring, bemærker du, at en af brugerne på projektet tilgår projektkontorerne efter normal arbejdstid og eksporterer også store mængder data til en personlig cloudlagertjeneste fra deres normale arbejdsområde. Denne fysiske adgangsaktivitet, der er knyttet til onlineaktiviteten, kan pege på mulige datatyveri og overholdelse af angivne standarder, som efterforskere og analytikere kan udføre relevante handlinger i henhold til omstændighederne for denne bruger.
 

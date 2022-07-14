@@ -12,12 +12,12 @@ author: robmazz
 manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 544c31205469bcb810bd3f05d9f686d650df6269
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: a671e25dabf5dc9c526e6e3a931a71035b908cc3
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66638185"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787820"
 ---
 # <a name="insider-risk-management-audit-log"></a>Overvågningslog for styring af insiderrisiko
 
@@ -25,9 +25,9 @@ Overvågningsloggen for styring af insiderrisiko giver dig mulighed for at holde
 
 ![Overvågningslog for styring af insiderrisiko.](../media/insider-risk-audit-log.png)
 
-Overvågningsloggen opdateres automatisk og straks, når overvågede aktiviteter finder sted, og loggen bevarer oplysninger om aktiviteten i 180 dage (ca. seks måneder). Efter 180 dage slettes dataene for aktiviteten permanent fra loggen.
+Overvågningsloggen opdateres automatisk og straks, når der forekommer registrerede aktiviteter, og loggen bevarer oplysninger om aktiviteten i 180 dage (ca. seks måneder). Efter 180 dage slettes dataene for aktiviteten permanent fra loggen.
 
-Områder, der er omfattet af aktivitetsovervågning, omfatter:
+Områder, der er inkluderet i aktivitetsregistrering, omfatter:
 
 - Politikker
 - Tilfælde
@@ -43,7 +43,7 @@ Hvis du vil have vist og eksportere data fra overvågningsloggen, skal brugerne 
 
 ## <a name="view-activity-in-the-insider-risk-audit-log"></a>Vis aktivitet i overvågningsloggen for insiderrisiko
 
-Hvis du vil have vist funktionsaktivitet, der overvåges for styring af insiderrisiko, skal du navigere til og vælge linket **Insider-risikoovervågningslog** i øverste højre område på en hvilken som helst fane med styring af insiderrisiko. Som standard får du vist følgende oplysninger for insiderrisikostyringsaktiviteter:
+Hvis du vil have vist funktionsaktivitet, der er registreret til styring af insiderrisiko, skal du navigere til og vælge linket **Insider Risk Audit Log** i øverste højre område på en hvilken som helst fane med styring af insiderrisiko. Som standard får du vist følgende oplysninger for insiderrisikostyringsaktiviteter:
 
 - **Aktivitet:** En beskrivelse af den aktivitet, en bruger har foretaget i løsningen til styring af insiderrisiko.
 - **Kategori:** Det område eller element, hvor aktiviteten blev udført. Du kan f.eks. se *Politikker* som kategorien, når aktiviteter til ændring af politik blev udført.

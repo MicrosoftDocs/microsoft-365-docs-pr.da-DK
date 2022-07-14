@@ -22,12 +22,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 8030a842f36f30fdc267a81e4736abdf8f4328f5
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: c641a8699f59454bcc756cb0910f18a125d953e6
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66685893"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787666"
 ---
 # <a name="get-started-with-communication-compliance"></a>Kom i gang med kommunikationsoverholdelse
 
@@ -159,11 +159,11 @@ Brug følgende diagram til at hjælpe dig med at konfigurere grupper i din organ
 |Overvågede brugere <br> Udeladte brugere | Distributionsgrupper <br> Microsoft 365-grupper | Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper <br> Microsoft 365-grupper med dynamisk medlemskab |
 | Korrekturlæsere | Ingen | Distributionsgrupper <br> Dynamiske distributionsgrupper <br> Indlejrede distributionsgrupper <br> Mailaktiverede sikkerhedsgrupper |
 
-Når du tildeler en *distributionsgruppe* i politikken, overvåger politikken alle mails og Teams-chats fra hver bruger i *distributionsgruppen*. Når du tildeler en *Microsoft 365-gruppe* i politikken, registrerer politikken alle mails og Teams-chats, der sendes til *Microsoft 365-gruppen**, ikke de enkelte mails og chats, der modtages af hvert gruppemedlem. Brug af distributionsgrupper i politikker for overholdelse af kommunikation anbefales, så individuelle mails og Teams-chats fra hver bruger overvåges automatisk.
+Når du tildeler en *distributionsgruppe* i politikken, registrerer politikken alle mails og Teams-chats fra hver bruger i *distributionsgruppen*. Når du tildeler en *Microsoft 365-gruppe* i politikken, registrerer politikken alle mails og Teams-chats, der sendes til *Microsoft 365-gruppen**, ikke de enkelte mails og chats, der modtages af hvert gruppemedlem. Brug af distributionsgrupper i politikker for overholdelse af kommunikation anbefales, så individuelle mails og Teams-chats fra hver bruger automatisk registreres.
 
-Hvis du er en organisation med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, og du vil registrere Microsoft Teams-chats for dine brugere, skal du oprette en distributionsgruppe, som brugerne med lokale eller eksterne postkasser kan overvåge. Senere i disse trin skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users).
+Hvis du er en organisation med en Exchange-installation i det lokale miljø eller en ekstern mailudbyder, og du vil registrere Microsoft Teams-chats for dine brugere, skal du oprette en distributionsgruppe for brugerne med lokale eller eksterne postkasser. Senere i disse trin skal du tildele denne distributionsgruppe som valg af **overvågede brugere og grupper** i politikguiden. Du kan finde flere oplysninger om kravene og begrænsningerne for aktivering af skybaseret lager og Teams-understøttelse for brugere i det lokale miljø under [Søg efter Teams-chatdata for brugere i det lokale miljø](/microsoft-365/compliance/search-cloud-based-mailboxes-for-on-premises-users).
 
-Hvis du vil administrere overvågede brugere i store virksomhedsorganisationer, skal du muligvis overvåge alle brugere på tværs af store grupper. Du kan bruge PowerShell til at konfigurere en distributionsgruppe for en global politik for overholdelse af kommunikation for den tildelte gruppe. Dette giver dig mulighed for at overvåge tusindvis af brugere med en enkelt politik og holde politikken for kommunikation med overholdelse af angivne standarder opdateret, efterhånden som nye medarbejdere tilmelder sig din organisation.
+Hvis du vil administrere overvågede brugere i store virksomhedsorganisationer, skal du muligvis registrere meddelelser for alle brugere på tværs af store grupper. Du kan bruge PowerShell til at konfigurere en distributionsgruppe for en global politik for overholdelse af kommunikation for den tildelte gruppe. Dette giver dig mulighed for at registrere meddelelser til tusindvis af brugere med en enkelt politik og holde politikken for kommunikation med overholdelse af angivne standarder opdateret, når nye medarbejdere tilmelder sig din organisation.
 
 1. Opret en dedikeret [distributionsgruppe](/powershell/module/exchange/new-distributiongroup) for din globale politik for overholdelse af angivne standarder for kommunikation med følgende egenskaber: Sørg for, at denne distributionsgruppe ikke bruges til andre formål eller andre Office 365 tjenester.
 
@@ -226,7 +226,7 @@ Du kan få flere oplysninger om konfiguration af Yammer i oprindelig tilstand un
 
     - Bekræft eller opdater politiknavnet. Politiknavne kan ikke ændres, når politikken er oprettet.
 
-    - Vælg de brugere eller grupper, der skal overvåges, herunder valg af brugere eller grupper, du vil udelade. Når du bruger skabelonen interessekonflikt, skal du vælge to grupper eller to brugere, der skal overvåges for intern kommunikation.
+    - Vælg de brugere eller grupper, der skal overvåges, herunder valg af brugere eller grupper, du vil udelade. Når du bruger skabelonen interessekonflikt, skal du vælge to grupper eller to brugere til at registrere intern kommunikation.
 
     - Vælg korrekturlæserne for politikken. Korrekturlæsere er individuelle brugere, og alle korrekturlæsere skal have postkasser, der hostes på Exchange Online. De korrekturlæsere, der tilføjes her, er de korrekturlæsere, du kan vælge imellem, når du eskalerer en besked i undersøgelses- og afhjælpningsarbejdsprocessen. Når validatorer føjes til en politik, modtager de automatisk en mail, der giver dem besked om tildelingen til politikken og indeholder links til oplysninger om korrekturprocessen.
 

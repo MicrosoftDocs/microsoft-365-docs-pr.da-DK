@@ -13,12 +13,12 @@ manager: laurawi
 audience: itpro
 ms.collection: m365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
-ms.openlocfilehash: 05adeb86c5e4da5119a5aae184721ec667564b49
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 14c0d5127f4b370d78b54512d8780d1cc7dfbf67
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66629481"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787644"
 ---
 # <a name="insider-risk-management-users-dashboard"></a>Dashboard for brugere af styring af insiderrisiko
 
@@ -44,7 +44,7 @@ Få mere at vide om, hvordan dashboardet Brugere viser brugere i følgende scena
 
 **Dashboardet Brugere** indeholder brugere, der er føjet til politikker for styring af insiderrisiko efter en usædvanlig hændelse uden for arbejdsprocessen for styring af insiderrisiko. Midlertidig tilføjelse af brugere (fra dashboardet Politikker) er også en måde at starte scoring af brugeraktivitet for en politik for styring af insiderrisiko for at teste politikken, også selvom en påkrævet connector ikke er konfigureret.
 
-Når en bruger føjes manuelt til en politik, bliver brugeraktiviteterne for de forrige 90 dage scoret og føjet til tidslinjen **Brugeraktivitet** . Du har f.eks. en bruger, der i øjeblikket ikke er tildelt risikoscores for en insiderrisikopolitik, og brugeren har rapporteret datalækageaktiviteter til den juridiske afdeling i din organisation. Den juridiske afdeling anbefaler, at du konfigurerer nye kortfristede overvågningskrav for brugeren. Du kan midlertidigt tildele brugeren til din politik for *datalækager* i et angivet tidsrum (aktiveringsvindue). Alle brugere, der er tilføjet midlertidigt, vises i **dashboardet Brugere** , fordi der er givet afkald på krav om udløsende hændelser.
+Når en bruger føjes manuelt til en politik, bliver brugeraktiviteterne for de forrige 90 dage scoret og føjet til tidslinjen **Brugeraktivitet** . Du har f.eks. en bruger, der i øjeblikket ikke er tildelt risikoscores for en insiderrisikopolitik, og brugeren har rapporteret datalækageaktiviteter til den juridiske afdeling i din organisation. Den juridiske afdeling anbefaler, at du konfigurerer nye krav til registrering på kort sigt for brugeren. Du kan midlertidigt tildele brugeren til din politik for *datalækager* i et angivet tidsrum (aktiveringsvindue). Alle brugere, der er tilføjet midlertidigt, vises i **dashboardet Brugere** , fordi der er givet afkald på krav om udløsende hændelser.
 
 > [!NOTE]
 > Det kan tage flere timer, før nye manuelt tilføjede brugere vises i **dashboardet Brugere**. Det kan tage op til 24 timer at vise aktiviteter for de foregående 90 dage for disse brugere. Hvis du vil have vist aktiviteter for manuelt tilføjede brugere, skal du vælge brugeren på **dashboardet Brugere** og åbne fanen **Brugeraktivitet** i detaljeruden.

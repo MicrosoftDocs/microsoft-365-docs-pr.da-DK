@@ -20,12 +20,12 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: daa8eeab7f62b760b45e6c1571972dcd0ee83ae6
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 8db03cbae752481166055a7b84a0dc248a1b3e84
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714481"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787842"
 ---
 # <a name="investigate-and-remediate-communication-compliance-alerts"></a>Undersøg og afhjælp underretninger om kommunikationsoverholdelse
 
@@ -120,7 +120,7 @@ Nu, hvor du har gennemset oplysningerne i meddelelsen for beskeden, kan du vælg
 - **Tag som**: Mærk meddelelsen som *kompatibel*, *ikke-kompatibel* eller så *tvivlsom* , som den er relateret til politikker og standarder for din organisation. Tilføjelse af mærker og mærkningskommentarer hjælper dig med at filtrere politikbeskeder for eskalering eller som en del af andre interne korrekturprocesser. Når mærkningen er fuldført, kan du også vælge at løse problemet med meddelelsen for at flytte den ud af køen til ventende gennemsyn.
 - **Notify**: Du kan bruge kontrolelementet **Notify** til at tildele en brugerdefineret meddelelsesskabelon til beskeden og til at sende en advarsel til brugeren. Vælg den relevante meddelelsesskabelon, der er konfigureret i området **Indstillinger for kommunikation med overholdelse af angivne standarder** , og vælg **Send** for at sende en påmindelse til den bruger, der sendte meddelelsen, og for at løse problemet.
 - **Eskaler**: Ved hjælp af kontrolelementet **Eskaler** kan du vælge, hvem i organisationen der skal gennemse meddelelsen. Vælg på en liste over korrekturlæsere, der er konfigureret i politikken for kommunikation med overholdelse af angivne standarder, for at sende en mail med anmodning om yderligere gennemgang af meddelelsesbeskeden. Den valgte korrekturlæser kan bruge et link i mailmeddelelsen til at gå direkte til elementer, der eskaleres til dem til gennemsyn.
-- **Eskaler til undersøgelse**: Hvis du bruger kontrolelementet **Eskaler til undersøgelse** , kan du oprette en ny [eDiscovery (Premium)-sag](/microsoft-365/compliance/overview-ediscovery-20) for enkelte eller flere meddelelser. Du skal angive et navn og noter til den nye sag, og den bruger, der har sendt den meddelelse, der stemmer overens med politikken, tildeles automatisk som sagsvagt. Du behøver ikke yderligere tilladelser til at administrere sagen. Oprettelse af en sag løser ikke eller opretter ikke et nyt mærke for meddelelsen. Du kan vælge i alt 100 meddelelser, når du opretter en eDiscovery-sag (Premium) under afhjælpningsprocessen. Meddelelser i alle kommunikationskanaler, der overvåges af overholdelse af angivne standarder for kommunikation, understøttes. Du kan f.eks. vælge 50 Microsoft Teams-chats, 25 Exchange Online mails og 25 Yammer-meddelelser, når du åbner en ny eDiscovery(Premium)-sag for en bruger.
+- **Eskaler til undersøgelse**: Hvis du bruger kontrolelementet **Eskaler til undersøgelse** , kan du oprette en ny [eDiscovery (Premium)-sag](/microsoft-365/compliance/overview-ediscovery-20) for enkelte eller flere meddelelser. Du skal angive et navn og noter til den nye sag, og den bruger, der har sendt den meddelelse, der stemmer overens med politikken, tildeles automatisk som sagsvagt. Du behøver ikke yderligere tilladelser til at administrere sagen. Oprettelse af en sag løser ikke eller opretter ikke et nyt mærke for meddelelsen. Du kan vælge i alt 100 meddelelser, når du opretter en eDiscovery-sag (Premium) under afhjælpningsprocessen. Meddelelser i alle kommunikationskanaler, der er inkluderet i overholdelse af angivne standarder for kommunikation, understøttes. Du kan f.eks. vælge 50 Microsoft Teams-chats, 25 Exchange Online mails og 25 Yammer-meddelelser, når du åbner en ny eDiscovery(Premium)-sag for en bruger.
 - **Fjern meddelelse i Teams**: Ved hjælp af kontrolelementet **Fjern meddelelse i Teams** kan du blokere upassende meddelelser og indhold, der er identificeret i beskeder fra Microsoft Teams-kanaler og 1:1 og gruppechats. Dette omfatter Teams-chatmeddelelser, der rapporteres af brugere, og chatmeddelelser, der registreres ved hjælp af machine learning og klassificeringsbaserede politikker for overholdelse af kommunikation. Fjernede meddelelser og indhold erstattes af et politiktip, der forklarer, at den er blokeret, og den politik, der gælder for fjernelsen af den. Modtagerne får vist et link i politiktippen for at få mere at vide om den relevante politik og korrekturprocessen. Afsenderen modtager et politiktip til den blokerede meddelelse og det blokerede indhold, men kan gennemse oplysningerne om den blokerede meddelelse og det blokerede indhold for at se konteksten vedrørende fjernelsen.
 
 ### <a name="step-4-determine-if-message-details-should-be-archived-outside-of-communication-compliance"></a>Trin 4: Find ud af, om meddelelsesdetaljer skal arkiveres uden for kommunikation med overholdelse af angivne standarder
