@@ -16,12 +16,12 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: fde4db2d646ccb9c7535096ec001c0371e78da8f
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: d2f2eb77dd143f82ced98f8fce424cc729e26df7
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66632261"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787798"
 ---
 # <a name="get-started-with-information-barriers"></a>Kom i gang med informationsbarrierer
 
@@ -403,7 +403,8 @@ Følgende IB-tilstande understøttes på Microsoft 365-ressourcer:
 | **Åbne** | Der er ikke knyttet nogen IB-politikker eller -segmenter til Microsoft 365-ressourcen. Alle kan inviteres til at være medlem af ressourcen. | Et teamwebsted, der er oprettet til picnicbegivenhed for din organisation. |
 | **Ejer ændret (prøveversion)** | IB-politikken for Microsoft 365-ressourcen bestemmes ud fra ressourceejerens IB-politik. Ressourceejerne kan invitere alle brugere til ressourcen på baggrund af deres IB-politikker. Denne tilstand er nyttig, når din virksomhed ønsker at tillade samarbejde mellem inkompatible segmentbrugere, der er ændret af ejeren. Det er kun ressourceejeren, der kan tilføje nye medlemmer i henhold til deres IB-politik. | HR-vicedirektøren ønsker at samarbejde med VP'erne til salg og forskning. Et nyt SharePoint-websted, der er angivet med Ejer i IB-tilstand *Begrænset* for at føje både brugere af salgs- og forskningssegmentet til det samme websted. Det er ejerens ansvar at sikre, at de relevante medlemmer føjes til ressourcen. |
 | **Implicit** | IB-politikken eller -segmenterne i Microsoft 365-ressourcen nedarves fra ressourcemedlemmernes IB-politik. Ejeren kan tilføje medlemmer, så længe de er kompatible med de eksisterende medlemmer af ressourcen. Denne tilstand er standard-IB-tilstand for Microsoft Teams. | Brugeren af salgssegmentet opretter et Microsoft Teams-team for at samarbejde med andre kompatible segmenter i organisationen. |
-| **Eksplicit** | IB-politikken for Microsoft 365-ressourcen er pr. de segmenter, der er knyttet til ressourcen. Ressourceejeren eller SharePoint-administratoren har mulighed for at administrere segmenterne på ressourcen.  | Et websted, der kun er oprettet for medlemmer af salgssegmentet for at samarbejde ved at knytte segmentet Salg til webstedet.   |
+| **Eksplicit** | IB-politikken for Microsoft 365-ressourcen er pr. de segmenter, der er knyttet til ressourcen. Ressourceejeren eller SharePoint-administratoren har mulighed for at administrere segmenterne på ressourcen. | Et websted, der kun er oprettet for medlemmer af salgssegmentet for at samarbejde ved at knytte segmentet Salg til webstedet. |
+| **Blandet (prøveversion)** | Gælder kun for OneDrive. OneDrives IB-politik gælder for de segmenter, der er knyttet til OneDrive. Ressourceejeren eller OneDrive-administratoren har mulighed for at administrere segmenterne på ressourcen. | Et OneDrive, der er oprettet til salgssegmentmedlemmer for at samarbejde, må deles med ikke-segmenterede brugere. |
 
 Du kan få flere oplysninger om IB-tilstande, og hvordan de er konfigureret på tværs af tjenester, i følgende artikler:
 
@@ -419,8 +420,8 @@ Hvis du vil se, hvordan en organisation kan nærme sig definere segmenter og pol
 
 Contoso har fem afdelinger: *HR*, *Salg*, *Marketing*, *Forskning* og *Produktion*. For at overholde brancheregler skal brugere i nogle afdelinger ikke kommunikere med andre afdelinger, som vist i følgende tabel:
 
-| Segment | Kan kommunikere med | Kan ikke kommunikere med |
-|:----------|:--------------|:-----------------|
+| **Segment** | **Kan kommunikere med** | **Kan ikke kommunikere med** |
+|:------------|:-------------------------|:---------------------------|
 | HR | Alle | (ingen begrænsninger) |
 | Salg | HR, marketing, produktion | Opslag |
 | Marketing | Alle | (ingen begrænsninger) |

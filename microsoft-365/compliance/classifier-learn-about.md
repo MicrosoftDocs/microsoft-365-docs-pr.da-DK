@@ -19,12 +19,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Klassificerere, der kan oplæres, kan genkende forskellige typer indhold til mærkning eller politikanvendelse ved at give dem positive og negative eksempler at se på.
-ms.openlocfilehash: 0c47d019b3508bdd8d8fba1f1b4303c7f4c9579d
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 8cba27dc3ac3ee16373423fb68acc2d5808de31b
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66621199"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787512"
 ---
 # <a name="learn-about-trainable-classifiers"></a>Få mere at vide om trænbare klassificeringer
 
@@ -105,8 +105,6 @@ Microsoft 365 leveres med flere færdiguddannede klassificeringer:
   > Kildekode oplæres til at registrere, når størstedelen af teksten er kildekode. Den registrerer ikke kildekodetekst, der er afbrudt med almindelig tekst.
 
 - **Skat**: Registrerer indhold af skatteforhold, f.eks. skatteplanlægning, skatteformularer, skatteregistrering, skatteregler. Registrerer indhold i .docx, .docm, .doc, .dotx, .dotm, .dot, .pdf, .rtf, filer af typen .txt, .one, .msg, .eml, .pptx, .pptm, .ppt, .potx, .potm, .pot, .ppsx, .ppsm, .pps, .ppam, .ppa, .xlsx, .xlsm, .xlsb, .xls, .csv, .xltx, .xltm, .xlt, .xlam, xla filer.
-
-- **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom.
 
 - **Threat**: Registrerer en bestemt kategori af stødende tekstelementer på sprog relateret til trusler om at begå vold eller udføre fysisk skade på en person eller ejendom. Registrerer indhold i filer af typen .msg, .docx, .pdf, .txt, .rtf, .jpeg, .jpg, .png, .gif, .bmp, .svg.
 

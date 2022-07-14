@@ -1,9 +1,9 @@
 ---
-title: Microsoft 365 dataplaceringer
+title: Microsoft 365-dataplaceringer
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 06/02/2022
+ms.date: 07/13/2022
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,27 +17,27 @@ ms.custom:
 - Ent_TLGs
 - admindeeplinkMAC
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
-description: Find ud af, hvor dine Microsoft 365 kundedata gemmes over hele verden
-ms.openlocfilehash: 07d137c6eda243a1ffa33b486d7cdbea5b37f9d9
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+description: Find ud af, hvor dine Microsoft 365-kundedata gemmes over hele verden
+ms.openlocfilehash: 6652d9076a5b2ecd11b0793104924690d14a1f98
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65874053"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787622"
 ---
-# <a name="where-your-microsoft-365-customer-data-is-stored"></a>Hvor dine Microsoft 365 kundedata er gemt
+# <a name="where-your-microsoft-365-customer-data-is-stored"></a>Hvor dine Microsoft 365-kundedata er gemt
 
-I nedenstående tabeller kan du se, hvor kundedata gemmes inaktive for Microsoft 365 tjenester på tværs af alle Microsofts globale cloudplaceringer. Udvid placeringen af dit faktureringsadresseland for at finde ud af, hvor kundedata for hver tjeneste skal gemmes.
+I nedenstående tabeller kan du se, hvor kundedata gemmes inaktive for Microsoft 365-tjenester på tværs af alle Microsofts globale cloudplaceringer. Udvid placeringen af dit faktureringsadresseland for at finde ud af, hvor kundedata for hver tjeneste skal gemmes.
 
 Hvis din virksomhed er placeret i DEN Europæiske Union, kan du finde flere oplysninger [under Dataplaceringer for Den Europæiske Union](EU-data-storage-locations.md) .
 
-Kunder skal få vist lejerspecifikke oplysninger om dataplacering i dit Microsoft 365 Administration i **Indstillinger** >  **Ellerg-indstillinger** >  fanen  > <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**OrganisationsprofilDataplacering**</a>. Hvis du [har anmodet om at flytte til en ny Geo](request-your-data-move.md), viser oplysningerne om dataplaceringen i Microsoft 365 Administration muligvis kun din nye Geo, selvom nogle data midlertidigt gemmes i din tidligere Geo under overgangen.
+Kunder skal få vist lejerspecifikke oplysninger om dataplacering i dit Microsoft 365 Administration under **Indstillinger** > **Organisationsindstillinger** >  fanen  > <a href="https://go.microsoft.com/fwlink/p/?linkid=2067339" target="_blank">**Organisationsprofil**</a> **Dataplacering**. Hvis du [har anmodet om at flytte til en ny Geo](request-your-data-move.md), viser oplysningerne om dataplaceringen i Microsoft 365 Administration muligvis kun din nye Geo, selvom nogle data midlertidigt gemmes i din tidligere Geo under overgangen.
 
-Nye Microsoft 365 lejere er som standard Geo baseret på landet for den transaktion, der er knyttet til den pågældende lejers første abonnement.
+Nye Microsoft 365-lejere er som standard Geo baseret på landet for den transaktion, der er knyttet til den pågældende lejers første abonnement.
 
 Du kan finde oplysninger om de kontraktlige forpligtelser til opbevaring af inaktive kundedata i [DPA (Microsoft Products and Services Data Protection Addendum).](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA)
 
-Hvis du vil have Azure Active Directory dataplaceringer, skal du besøge [AAD-datakort](https://go.microsoft.com/fwlink/p/?linkid=2092972).
+For Azure Active Directory-dataplaceringer skal du gå til [Dataopbevaring i Azure](https://azure.microsoft.com/global-infrastructure/data-residency/#overview).
 
 Hvis kundens faktureringsadresse er uden for Europa, og kunden har et Office 365 Education abonnement, kan Microsoft klargøre kundens Office 365 lejer i, overføre kundedata til og gemme kundedata inaktive overalt i Europa eller Nordamerika uanset kundens faktureringsadresse.  Hvis kundens faktureringsadresse er i Europa, og kunden har et Office 365 Education abonnement, kan Microsoft klargøre kundens Office 365 lejer i, overføre kundedata til og gemme kundedata som inaktive overalt i EU uanset hvor i EU kunden er.
 
@@ -61,18 +61,18 @@ Microsoft oplyser ikke de nøjagtige adresser på sine datacentre. Vi har etable
 ### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>Har placeringen af dine kundedata direkte indflydelse på dine slutbrugeres oplevelse?
 <details><summary>Klik for at udvide</summary>
 
-Ydeevnen for Microsoft 365 er ikke blot proportional med en brugers afstand til datacenterplaceringer. Microsofts fortsatte investeringer i dets globale cloudnetværk, globale cloudinfrastruktur og arkitekturen for Microsoft 365-tjenester hjælper med at give brugerne en enkeltstående og ensartet oplevelse, uafhængigt af hvor kundedata gemmes som inaktive data. Hvis dine brugere oplever problemer med ydeevnen, bør du foretage dybdegående fejlfinding af disse. Microsoft har udgivet en vejledning til Microsoft 365 kunder til at planlægge og optimere slutbrugerens ydeevne på [webstedet Office Support](./network-planning-and-performance.md).
+Ydeevnen for Microsoft 365 er ikke blot proportional med en brugers afstand til datacenterplaceringer. Microsofts fortsatte investeringer i dets globale cloudnetværk, globale cloudinfrastruktur og Arkitekturen for Microsoft 365-tjenester hjælper med at give brugerne en entals og ensartet oplevelse uafhængigt af, hvor kundedata gemmes som inaktive data. Hvis dine brugere oplever problemer med ydeevnen, bør du foretage dybdegående fejlfinding af disse. Microsoft har udgivet en vejledning til Microsoft 365-kunder om at planlægge og optimere slutbrugerens ydeevne på [webstedet Office Support](./network-planning-and-performance.md).
 
 </details>
 
 ### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Hvordan hjælper Microsoft mig med at overholde mine nationale, regionale og branchespecifikke bestemmelser?
 <details><summary>Klik for at udvide</summary>
 
-For at hjælpe dig med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af enkeltpersoners data tilbyder Microsoft 365 det mest omfattende sæt af tilbud om overholdelse af angivne standarder for alle globale cloudproduktivitetsudbydere. Gennemse [vores tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home), og få flere oplysninger i afsnittet [Microsoft Purview](https://go.microsoft.com/fwlink/p/?linkid=862317) i Microsoft Trust Center. Visse Microsoft 365 planer tilbyder også yderligere løsninger til overholdelse af angivne standarder, der kan hjælpe dig med at administrere dine data, overholde juridiske og lovmæssige krav og overvåge de handlinger, der udføres på dine data.
+For at hjælpe dig med at overholde nationale, regionale og branchespecifikke krav til indsamling og brug af enkeltpersoners data tilbyder Microsoft 365 det mest omfattende sæt af tilbud om overholdelse af angivne standarder for alle globale cloudproduktivitetsudbydere. Gennemse [vores tilbud om overholdelse af angivne standarder](/compliance/regulatory/offering-home) og flere oplysninger i afsnittet [Microsoft Purview](https://go.microsoft.com/fwlink/p/?linkid=862317) på Microsoft Trust Center. Visse Microsoft 365-planer tilbyder yderligere løsninger til overholdelse af angivne standarder for at hjælpe dig med at administrere dine data, overholde juridiske og lovmæssige krav og overvåge de handlinger, der udføres på dine data.
 
 </details>
 
-### <a name="who-can-access-your-data-and-according-to-what-rules"></a>Who kan få adgang til dine data og efter hvilke regler?
+### <a name="who-can-access-your-data-and-according-to-what-rules"></a>Hvem kan få adgang til dine data og i henhold til hvilke regler?
 <details><summary>Klik for at udvide</summary>
 
  Microsoft implementerer stærke foranstaltninger for at hjælpe med at beskytte dine kundedata mod upassende adgang eller brug af uautoriserede personer. Dette omfatter begrænsning af Microsoft-medarbejderes og underleverandørers adgang og nøje definition af krav til besvarelse af offentlige anmodninger om kundedata. Du kan dog til enhver tid og af en hvilken som helst grund få adgang til dine egne kundedata. Du kan finde flere oplysninger i [Microsoft Center for sikkerhed og rettighedsadministration](https://go.microsoft.com/fwlink/p/?linkid=864392).
@@ -82,35 +82,35 @@ For at hjælpe dig med at overholde nationale, regionale og branchespecifikke kr
 ### <a name="does-microsoft-access-your-data"></a>Har Microsoft adgang til dine data?
 <details><summary>Klik for at udvide</summary>
 
-Microsoft automatiserer de fleste Microsoft 365 handlinger og begrænser bevidst sin egen adgang til kundedata. Dette hjælper os med at administrere Microsoft 365 i stor skala og håndtere risikoen for interne trusler mod kundedata. Som standard har Microsoft-teknikere ingen stående administrative rettigheder og ingen stående adgang til kundedata i Microsoft 365. En Microsoft-tekniker kan have begrænset og logført adgang til kundedata i et begrænset tidsrum, men kun når det er nødvendigt i forbindelse med normale servicehandlinger, og kun når den er godkendt af et medlem af den øverste ledelse hos Microsoft (og, for kunder, der har licens til funktionen Kundelåskasse, af kunden).
+Microsoft automatiserer de fleste Microsoft 365-handlinger og begrænser bevidst sin egen adgang til kundedata. Dette hjælper os med at administrere Microsoft 365 i stor skala og håndtere risikoen for interne trusler mod kundedata. Som standard har Microsoft-teknikere ingen stående administrative rettigheder og ingen stående adgang til kundedata i Microsoft 365. En Microsoft-tekniker kan have begrænset og logført adgang til kundedata i et begrænset tidsrum, men kun når det er nødvendigt i forbindelse med normale servicehandlinger, og kun når den er godkendt af et medlem af den øverste ledelse hos Microsoft (og, for kunder, der har licens til funktionen Kundelåskasse, af kunden).
 
 </details>
 
 ### <a name="how-does-microsoft-secure-your-data"></a>Hvordan sikrer Microsoft dine data?
 <details><summary>Klik for at udvide</summary>
 
-Microsoft har robuste politikker, kontrolelementer og systemer, der er indbygget i Microsoft 365 for at hjælpe med at beskytte dine oplysninger. Gennemse [afsnittet Microsoft 365 sikkerhed](https://go.microsoft.com/fwlink/p/?linkid=864393) i Microsoft Center for sikkerhed og rettighedsadministration for at få mere at vide.
+Microsoft har robuste politikker, kontrolelementer og systemer, der er indbygget i Microsoft 365, for at hjælpe med at beskytte dine oplysninger. Gennemse [afsnittet Sikkerhed i Microsoft 365](https://go.microsoft.com/fwlink/p/?linkid=864393) i Microsoft Center for sikkerhed og rettighedsadministration for at få mere at vide.
 
 </details>
 
 ### <a name="does-microsoft-365-encrypt-your-data"></a>Krypterer Microsoft 365 dine data?
 <details><summary>Klik for at udvide</summary>
 
-Microsoft 365 bruger teknologier på tjenestesiden, der krypterer inaktive og midlertidige kundedata under overførsel. I forbindelse med inaktive kundedata bruger Microsoft 365 kryptering på diskenhedsniveau og filniveau. I forbindelse med kundedata under overførsel bruger Microsoft 365 flere krypteringsteknologier til kommunikation mellem datacentre og mellem klienter og servere, f.eks. TLS (Transport Layer Security) og IPsec (Internet Protocol Security). Microsoft 365 indeholder også kundeadministrerede krypteringsfunktioner.
+Microsoft 365 bruger tjenestebaserede teknologier, der krypterer inaktive kundedata og under overførsel. I forbindelse med inaktive kundedata bruger Microsoft 365 kryptering på diskenhedsniveau og filniveau. I forbindelse med kundedata under overførsel bruger Microsoft 365 flere krypteringsteknologier til kommunikation mellem datacentre og mellem klienter og servere, f.eks. TLS (Transport Layer Security) og IPsec (Internet Protocol Security). Microsoft 365 indeholder også kundeadministrerede krypteringsfunktioner.
 
 </details>
 
-### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>Hvor kan jeg finde oplysninger om dataopbevaring for Microsoft Azure?
+### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>Hvor kan jeg finde oplysninger om dataopbevaring til Microsoft Azure?
 <details><summary>Klik for at udvide</summary>
 
-Gennemse siden [Produkter, der er tilgængelige efter område](https://go.microsoft.com/fwlink/p/?linkid=2093451) for at finde oplysninger om dataopbevaring for Microsoft Azure.
+Gennemse siden [Produkter, der er tilgængelige efter område](https://go.microsoft.com/fwlink/p/?linkid=2093451) for at finde oplysninger om dataopbevaring til Microsoft Azure.
 
 </details>
 
 ### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>Hvad er Multi-Geo-funktioner i Microsoft 365?
 <details><summary>Klik for at udvide</summary>
 
-[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) giver kunderne mulighed for at tildele inaktive kernekundedata til vores tilgængelige placeringer i Microsoft 365 cloudmiljøet.
+[Multi-Geo](https://go.microsoft.com/fwlink/p/?linkid=872033) giver kunderne mulighed for at tildele inaktive kernekundedata til vores tilgængelige placeringer i Microsoft 365-cloudmiljøet.
 
 </details>  
 
@@ -121,7 +121,7 @@ Gennemse siden [Produkter, der er tilgængelige efter område](https://go.micros
 
 </details>
 
-### <a name="why-do-i-see-my-microsoft-365-service-requests-for-my-data-at-rest-connecting-to-servers-in-countries-outside-of-my-region"></a>Hvorfor kan jeg se mine Microsoft 365 serviceanmodninger for mine data som inaktive forbindelse til servere i lande uden for mit område?
+### <a name="why-do-i-see-my-microsoft-365-service-requests-for-my-data-at-rest-connecting-to-servers-in-countries-outside-of-my-region"></a>Hvorfor kan jeg se mine Microsoft 365-tjenesteanmodninger for mine data som inaktive forbindelse til servere i lande uden for mit område?
 <details><summary>Klik for at udvide</summary>
 
 Nogle gange kan en kundeanmodning håndteres af servere i et andet område end det sted, hvor dine data er gemt som inaktive. Dette kan ske, når beslutninger om netværksrouting vælger en anden server til behandling af anmodningen, men i disse tilfælde flyttes dine data ikke til en ny inaktiv placering.
@@ -143,7 +143,7 @@ Uanset hvad styrer eller begrænser Microsoft ikke geoen, hvorfra kunder eller d
 
 </details>
 
-### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Hvad er overvejelserne i forbindelse med Microsoft Viva dataplaceringer?
+### <a name="what-are-the-considerations-for-microsoft-viva-data-locations"></a>Hvad er overvejelserne i forbindelse med Microsoft Viva-dataplaceringer?
 <details><summary>Klik for at udvide</summary>
 
 - Viva Connections
@@ -192,7 +192,7 @@ For lande-/områdespecifikke datacentre definerer følgende byer, hvor kundedata
 | Storbritannien | Durham, London, Cardiff |
 | USA |  Boydton, Cheyenne, Chicago, Des Moines, Quincy, San Antonio, Santa Clara, San Jose |
 
-Nye Microsoft 365 lejere er som standard Geo baseret på landet for den faktureringsadresse, der er knyttet til den pågældende lejers første abonnement. Hvis du vil bekræfte, hvor kundedata er gemt for eksisterende Office 365 tjenester, skal du se lejerspecifikke oplysninger om dataplacering i dit Office 365 Admin Center i Indstillinger | Organisationsindstillinger | | organisationsprofil Dataplaceringskort. Alternativt kan du udvide det land, som din virksomhed er baseret på, fra listen nedenfor for at finde ud af, hvor kundedata ville blive gemt, hvis du skulle begynde at bruge en Microsoft 365 Service i dag.
+Nye Microsoft 365-lejere er som standard Geo baseret på landet for den faktureringsadresse, der er knyttet til den pågældende lejers første abonnement. Hvis du vil bekræfte, hvor kundedata er gemt for eksisterende Office 365 tjenester, skal du se lejerspecifikke oplysninger om dataplacering i dit Office 365 Admin Center i Indstillinger | Organisationsindstillinger | | organisationsprofil Dataplaceringskort. Alternativt kan du udvide det land, som din virksomhed er baseret i, fra listen nedenfor for at finde ud af, hvor kundedata ville blive gemt, hvis du skulle begynde at bruge en Microsoft 365-tjeneste i dag.
 
 ## <a name="afghanistan"></a>Afghanistan
 <details><summary>Klik for at udvide</summary><p>
@@ -5590,13 +5590,13 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Stream | Global geografi 1 – EMEA |
 | Whiteboard | USA |
 | Former | Global geografi 1 – EMEA |
-| Viva-forbindelser | Global geografi 1 – EMEA |
-| Viva-emner | Global geografi 1 – EMEA |
+| Viva Connections | Global geografi 1 – EMEA |
+| Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
-| Viva Insights – Personlig | Global geografi 1 – EMEA |
+| Viva Insights - Personlig | Global geografi 1 – EMEA |
 | Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
-| Viva Insights – Kun leder/leder med HR-data fra tredjepart | USA |
-| Viva Insights – Avanceret | USA |
+| Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
+| Viva Insights – avanceret | USA |
 </p></details>
 
 ## <a name="sao-tome-and-principe"></a>São Tomé og Príncipe
@@ -5618,13 +5618,13 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Stream | Global geografi 1 – EMEA |
 | Whiteboard | USA |
 | Former | Global geografi 1 – EMEA |
-| Viva-forbindelser | Global geografi 1 – EMEA |
-| Viva-emner | Global geografi 1 – EMEA |
+| Viva Connections | Global geografi 1 – EMEA |
+| Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
-| Viva Insights – Personlig | Global geografi 1 – EMEA |
+| Viva Insights - Personlig | Global geografi 1 – EMEA |
 | Viva Insights – kun AAD-organisationsdata for leder/leder | Global geografi 1 – EMEA |
-| Viva Insights – Kun leder/leder med HR-data fra tredjepart | USA |
-| Viva Insights – Avanceret | USA |
+| Viva Insights – kun leder/leder med HR-data fra tredjepart | USA |
+| Viva Insights – avanceret | USA |
 </p></details>
 
 ## <a name="saudi-arabia"></a>Saudi-Arabien
@@ -5646,7 +5646,7 @@ Nye Microsoft 365 lejere er som standard Geo baseret på landet for den fakturer
 | Stream | Global geografi 1 – EMEA |
 | Whiteboard | USA |
 | Former | Global geografi 1 – EMEA |
-| Viva-forbindelser | Global geografi 1 – EMEA |
+| Viva Connections | Global geografi 1 – EMEA |
 | Viva Topics | Global geografi 1 – EMEA |
 | Viva Learning | Global geografi 1 – EMEA |
 | Viva Insights - Personlig | Global geografi 1 – EMEA |

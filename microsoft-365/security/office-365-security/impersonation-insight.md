@@ -1,5 +1,5 @@
 ---
-title: Repræsentationsindsigt
+title: Indsigt i efterligning
 f1.keywords:
 - NOCSH
 ms.author: chrisda
@@ -15,136 +15,130 @@ search.appverid:
 ms.assetid: ''
 ms.collection:
 - M365-security-compliance
-description: Administratorer kan lære, hvordan repræsentationsindsigtet fungerer. De kan hurtigt afgøre, hvilke afsendere der legitimt sender mails til deres organisationer fra domæner, der ikke består mailgodkendelseskontroller (SPF, DKIM eller DMARC).
+description: Administratorer kan få mere at vide om, hvordan repræsentationsindsigten fungerer. De kan hurtigt afgøre, hvilke afsendere der lovligt sender mail til deres organisationer fra domæner, der ikke består kontrol af mailgodkendelse (SPF, DKIM eller DMARC).
 ms.custom:
 - seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: dbaf395f10eaac7ff508b03f6f079f94bdd6cebd
-ms.sourcegitcommit: b0c3ffd7ddee9b30fab85047a71a31483b5c649b
+ms.openlocfilehash: c54bdbb4ee8c3bf068b40df8cd5ca0a58da2392f
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/25/2022
-ms.locfileid: "64475801"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787742"
 ---
 # <a name="impersonation-insight-in-defender-for-office-365"></a>Repræsentationsindsigt i Defender for Office 365
 
-[!INCLUDE [Microsoft 365 Defender rebranding](../includes/microsoft-defender-for-office.md)]
+[!INCLUDE [MDO Trial banner](../includes/mdo-trial-banner.md)]
 
 **Gælder for**
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-> [!NOTE]
-> De funktioner, der er beskrevet i denne artikel, findes i Preview, kan blive ændret og er ikke tilgængelige i alle organisationer.
+Repræsentation er det område, hvor afsenderen af en mail ligner en rigtig eller forventet afsendermailadresse. Personer med ondsindede hensigter repræsenterer ofte afsendermailadresser i phishing eller andre typer angreb for at opnå modtagerens tillid. Der er grundlæggende to typer repræsentation:
 
-Efterligning er der, hvor afsenderen af en mail ligner meget en rigtig eller forventet afsendermailadresse. Hackere bruger ofte efterligninger af afsendermailadresser i phishing eller andre typer angreb for at opnå modtagerens tillid. Der er grundlæggende to former for efterligning:
+- **Repræsentation af domæne**: I stedet for lila@contoso.com er den repræsenterede afsenders mailadresse lila@ćóntoso.com.
+- **Brugerpræsentation**: I stedet for michelle@contoso.com er den repræsenterede afsenders mailadresse rnichell@contoso.com.
 
-- **Domæne efterligning**: I lila@contoso.com er den efterligning af afsenderens mailadresse lila@ćóntoso.com.
-- **Bruger efterligning**: I michelle@contoso.com er den efterligning af afsenderens mailadresse rnichell@contoso.com.
+Repræsentation af domæner adskiller sig fra [domænepoofing](anti-spoofing-protection.md), fordi det repræsenterede domæne typisk er et reelt, registreret domæne. Meddelelser fra afsendere i det repræsenterede domæne kan og kan ofte bestå almindelige kontroller af godkendelse via mail, der ellers ville identificere spoofingforsøg (SPF, DKIM og DMARC).
 
-Domæne efterligning er anderledes end [domænespoofing](anti-spoofing-protection.md), fordi det efterlignede domæne typisk er et rigtigt, registreret domæne. Meddelelser fra afsendere i det efterligne domæne kan og ofte bestå almindelige kontroller til godkendelse af mails, som ellers ville identificere spoofingforsøg (SPF, DKIM og DMARC).
+Repræsentationsbeskyttelse er en del af de indstillinger for anti-phishing-politik, der kun gælder for Microsoft Defender for Office 365. Du kan få flere oplysninger om disse indstillinger [under Repræsentationsindstillinger i politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
 
-Beskyttelse mod efterligning er en del af politikindstillingerne for phishing, der er eksklusive Microsoft Defender for Office 365. Du kan finde flere oplysninger om disse indstillinger [under Indstillinger for repræsentation i antiphishing-politikker Microsoft Defender for Office 365](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365).
-
-Du kan bruge repræsentationsindsigtet i Microsoft 365 Defender-portalen til hurtigt at identificere meddelelser fra efterligninger af afsendere eller afsenderdomæner, som du har konfigureret til repræsentationsbeskyttelse.
+Du kan bruge repræsentationsindsigten på Microsoft 365 Defender-portalen til hurtigt at identificere meddelelser fra repræsenterede afsendere eller afsenderdomæner, som du har konfigureret til repræsentationsbeskyttelse.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
-- Du åbner Microsoft 365 Defender på <https://security.microsoft.com>. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>. For at gå direkte til **siden Repræsentationsindsigt** skal du bruge <https://security.microsoft.com/impersonationinsight>.
+- Du åbner Microsoft 365 Defender-portalen på <https://security.microsoft.com>. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>. Hvis du vil gå direkte til siden **Repræsentationsindsigt** , skal du bruge <https://security.microsoft.com/impersonationinsight>.
 
-- Du skal have tildelt tilladelser i Microsoft 365 Defender, før du kan udføre procedurerne i denne artikel:
+- Du skal have tildelt tilladelser på Microsoft 365 Defender-portalen, før du kan udføre procedurerne i denne artikel:
   - **Organisationsadministration**
   - **Sikkerhedsadministrator**
   - **Sikkerhedslæser**
   - **Global læser**
 
-  Du kan finde flere [oplysninger i Tilladelser i Microsoft 365 Defender portal](permissions-microsoft-365-security-center.md).
+  Du kan få flere oplysninger [under Tilladelser på Microsoft 365 Defender-portalen](permissions-microsoft-365-security-center.md).
 
-  **Bemærk**! Når du føjer brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration, får brugerne de nødvendige tilladelser i _Microsoft 365 Defender-portalen og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide [under Om administratorroller](../../admin/add-users/about-admin-roles.md).
+  **Bemærk**! Hvis du føjer brugere til den tilsvarende Azure Active Directory-rolle i Microsoft 365 Administration får brugerne de nødvendige tilladelser på Microsoft 365 Defender-portalen _og_ tilladelser til andre funktioner i Microsoft 365. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 
-- Du aktiverer og konfigurerer repræsentationsbeskyttelse i antiphishing-politikker i Microsoft Defender for Office 365. Repræsentationsbeskyttelse er ikke aktiveret som standard. Få mere at vide under [Konfigurer antiphishing-politikker Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
+- Du aktiverer og konfigurerer repræsentationsbeskyttelse i politikker til bekæmpelse af phishing i Microsoft Defender for Office 365. Repræsentationsbeskyttelse er ikke aktiveret som standard. Du kan få flere oplysninger under [Konfigurer politikker til bekæmpelse af phishing i Microsoft Defender for Office 365](configure-mdo-anti-phishing-policies.md).
 
-## <a name="open-the-impersonation-insight-in-the-microsoft-365-defender-portal"></a>Åbn repræsentationsindsigtet i Microsoft 365 Defender portalen
+## <a name="open-the-impersonation-insight-in-the-microsoft-365-defender-portal"></a>Åbn repræsentationsindsigten i Microsoft 365 Defender-portalen
 
-1. I portalen Microsoft 365 Defender på <https://security.microsoft.com>skal du gå til  & **politikker** \> for **samarbejde & Politikker** \> \> for trussel mod **phishing** i **sektionen** Politikker. For at gå direkte til **antiphishing-siden** skal du bruge <https://security.microsoft.com/antiphishing>.
+1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Mail & Samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Anti-phishing** i afsnittet **Politikker**. Hvis du vil gå direkte til siden **Anti-phishing** , skal du bruge <https://security.microsoft.com/antiphishing>.
 
-2. På siden **Antiphishing** ser efterligningsindsigt således ud:
+2. På siden **Anti-phishing** ser repræsentationsindsigten sådan ud:
 
-   :::image type="content" source="../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png" alt-text="Repræsentationsindsigt og efterlignet intelligens på siden med antiphishing-politik" lightbox="../../media/m365-sc-impersonation-and-spoof-intelligence-insight.png":::
+   :::image type="content" source="../../media/m365-sc-impersonation-insight.png" alt-text="Repræsentationsindsigten på siden Anti-phishing-politik på portalen Microsoft 365 Defender." lightbox="../../media/m365-sc-impersonation-insight.png":::
 
    Indsigten har to tilstande:
 
-    - **Insight-tilstand**: Hvis repræsentationsbeskyttelse er aktiveret og konfigureret i antiphishing-politikker, viser indsigten antallet af registrerede meddelelser fra efterligninger af domæner og efterligninger af brugere (afsendere) i løbet af de seneste syv dage. Dette er det samlede antal registrerede efterligninger af afsendere fra alle antiphishing-politikker.
-    - Hvad hvis-tilstand **: Hvis** repræsentationsbeskyttelse ikke er aktiveret og konfigureret i nogen aktiv antiphishing-politik, viser indsigten,  hvor mange meddelelser der ville være blevet registreret af vores funktioner til repræsentationsbeskyttelse i løbet af de seneste syv dage.
+    - **Indsigtstilstand**: Hvis repræsentationsbeskyttelse er aktiveret og konfigureret i nogen anti-phishing-politikker, viser indsigten antallet af registrerede meddelelser fra repræsenterede domæner og repræsenterede brugere (afsendere) i løbet af de seneste syv dage. Dette er det samlede antal registrerede repræsenterede afsendere fra alle politikker til bekæmpelse af phishing.
+    - **What if-tilstand**: Hvis repræsentationsbeskyttelse ikke er aktiveret og konfigureret i nogen aktive anti-phishing-politikker, viser indsigten, hvor mange meddelelser der *ville* være blevet registreret af vores repræsentationsbeskyttelsesfunktioner i løbet af de seneste syv dage.
 
-Hvis du vil have vist oplysninger om repræsentationsregistreringerne, skal du klikke på Vis **repræsentationer** i repræsentationsindsigtet.
+Hvis du vil have vist oplysninger om repræsentationsregistreringer, skal du klikke på **Vis repræsentationer** i repræsentationsindsigten.
 
-   > [!NOTE]
-   > Du kan finde oplysninger om efterlignet intelligensindsigt i [Spoof intelligence-indsigt i EOP](learn-about-spoof-intelligence.md).
+## <a name="view-information-about-messages-from-senders-in-impersonated-domains"></a>Få vist oplysninger om meddelelser fra afsendere i repræsenterede domæner
 
-## <a name="view-information-about-messages-from-senders-in-impersonated-domains"></a>Få vist oplysninger om meddelelser fra afsendere i efterligninger af domæner
+På siden **Repræsentationsindsigt** , der vises, når du har klikket på **Vis repræsentationer** i repræsentationsindsigten, skal du kontrollere, at fanen **Domæner** er valgt. Fanen **Domæner** indeholder følgende oplysninger:
 
-På siden **Impersonation Insight**, der vises, når du  har klikket på Vis repræsentationer i **repræsentationsindsigtet**, skal du kontrollere, at fanen Domæner er markeret. Fanen **Domæner** indeholder følgende oplysninger:
+- **Afsenderdomæne**: Det repræsenterende domæne, som er det domæne, der blev brugt til at sende mailen.
+- **Antal meddelelser**: Antallet af meddelelser fra repræsentation af afsenderdomæne i løbet af de seneste 7 dage.
+- **Repræsentationstype**: Denne værdi viser den registrerede placering af repræsentationen (f.eks **. Domæne i adresse**).
+- **Repræsenterede domæner**: Det repræsenterede domæne, som skal ligne det domæne, der er konfigureret til repræsentationsbeskyttelse i politikken til bekæmpelse af phishing.
+- **Domænetype**: Denne værdi er **Firmadomæne** for interne domæner eller **Brugerdefineret domæne** for brugerdefinerede domæner.
+- **Politik**: Politikken til bekæmpelse af phishing, der registrerede det repræsenterede domæne.
+- **Tilladt at repræsentere**: En af følgende værdier:
+  - **Ja**: Domænet blev konfigureret som et domæne, der er tillid til (en undtagelse for repræsentationsbeskyttelse) i politikken til bekæmpelse af phishing. Meddelelser fra afsendere i det repræsenterede domæne blev registreret, men tilladt.
+  - **Nej**: Domænet er konfigureret til repræsentationsbeskyttelse i politikken til bekæmpelse af phishing. Meddelelser fra afsendere i det repræsenterede domæne blev registreret og handlet på baggrund af handlingen for repræsenterede domæner i politikken til bekæmpelse af phishing.
 
-- **Afsenderdomæne**: Det efterligning af domæne, som er det domæne, der blev brugt til at sende mailen.
-- **Antal meddelelser**: Antallet af meddelelser fra at udgive sig for at være afsenderdomæne i løbet af de seneste 7 dage.
-- **Repræsentationstype**: Denne værdi viser den registrerede placering af efterligningen (f.eks. **Domæne i adresse**).
-- **Efterligning** af domæne:Det efterligne domæne, der ligner det domæne, der er konfigureret til beskyttelse mod efterligning i antiphishing-politikken.
-- **Domænetype**: Denne værdi er **Firmadomæne** for interne domæner eller **Brugerdefineret domæne** til brugerdefinerede domæner.
-- **Politik**: Politikken for antiphishing, der har registreret det efterligning af domænet.
-- **Tilladelse til at repræsentere**: En af følgende værdier:
-  - **Ja**: Domænet blev konfigureret som et domæne, der er tillid til (en undtagelse for efterligning af beskyttelse) i antiphishing-politikken. Meddelelser fra afsendere i det efterligne domæne blev registreret, men tilladt.
-  - **Nej**: Domænet er konfigureret til beskyttelse mod efterligning i antiphishing-politikken. Meddelelser fra afsendere i det efterligninger domæne blev registreret og reageret på baseret på handlingen for efterligninger af domæner i antiphishing-politikken.
+Du kan klikke på de markerede kolonneoverskrifter for at sortere resultaterne.
 
-Du kan klikke på markerede kolonneoverskrifter for at sortere resultaterne.
+Hvis du vil filtrere resultaterne, kan du bruge søgeikonet ![.](../../media/m365-cc-sc-search-icon.png) **Søgefelt** til at angive en kommasepareret liste over værdier for at filtrere resultaterne.
 
-Hvis du vil filtrere resultaterne, kan du bruge ![ikonet Søg.](../../media/m365-cc-sc-search-icon.png) **Søgefelt** til at angive en kommasepareret liste over værdier for at filtrere resultaterne.
+### <a name="view-details-about-messages-from-senders-in-impersonated-domains"></a>Få vist oplysninger om meddelelser fra afsendere i repræsenterede domæner
 
-### <a name="view-details-about-messages-from-senders-in-impersonated-domains"></a>Få vist oplysninger om meddelelser fra afsendere i efterligninger af domæner
+Under fanen **Domæner** på siden **Repræsentationsindsigt** skal du vælge en af de tilgængelige repræsentationsregistreringer. Det pop op-vindue med detaljer, der vises, indeholder følgende oplysninger og funktioner:
 
-På fanen **Domæner på siden Repræsentationsindsigt** skal du vælge en af de tilgængelige repræsentationsregistreringer. Pop op-vindue med oplysninger, der vises, indeholder følgende oplysninger og funktioner:
-
-- **Valg af repræsentationspolitik, der skal ændres**: Vælg den pågældende antiphishing-politik, du vil ændre. Det er kun de politikker, hvor det efterligne domæne er defineret i politikken, der er tilgængelige. Se den forrige side for at se, hvilken politik der faktisk var ansvarlig for at registrere det efterligne domæne (sandsynligvis baseret på modtageren og politikkens prioritet).
-- **Føj til** listen over tilladte repræsentationer: Brug denne til/fra-knap til at tilføje eller fjerne afsenderen fra de Afsendere og domæner, der er tillid til ( **repræsentationsundtagelser** ) for den antiphishingpolitik, du har valgt:
-  - Hvis værdien **Tilladt at repræsentere** for denne post var **Nej**, er til/fra-knappen slået fra. Hvis du vil undtage alle afsendere på dette domæne fra evaluering ved at angive beskyttelse efter efterligning, skal du skubbe til/fra-knappen til Til: ![Til.](../../media/scc-toggle-on.png). Domænet føjes til **listen Domæner, der** er tillid til under indstillingerne for beskyttelse mod phishing i antiphishing-politikken.
-  - Hvis værdien **Tilladt at repræsentere** for denne indtastning var **Ja**, er til/fra-knappen til. Hvis du vil have alle afsendere på dette domæne tilbage, så de kan evalueres via repræsentationsbeskyttelse, skal du skubbe til/fra-knappen til fra: ![Slå fra.](../../media/scc-toggle-off.png). Domænet fjernes fra listen **Domæner, der er tillid** til under indstillingerne for beskyttelse mod phishing i antiphishing-politikken.
-- Derfor har vi opdaget dette.
-- Det skal du gøre.
-- En domæneoversigt, der viser det efterligne domæne.
-- WhoIs data about the sender.
+- **Valg repræsenteringspolitik, der skal ændres**: Vælg den berørte anti-phishing-politik, du vil ændre. Det er kun politikker, hvor det repræsenterede domæne er defineret i politikken, der er tilgængelige. Se den forrige side for at se, hvilken politik der faktisk var ansvarlig for at registrere det repræsenterede domæne (sandsynligvis baseret på modtageren og politikkens prioritet).
+- **Føj til listen over tilladte repræsentationer**: Brug denne til/fra-knap til at tilføje eller fjerne afsenderen fra **afsendere og domæner** , der er tillid til (repræsentationsundtagelser) for den valgte politik til bekæmpelse af phishing:
+  - Hvis værdien **tilladt at repræsentere** denne post var **Nej**, er til/fra-knappen slået fra. Hvis du vil fritage alle afsendere i dette domæne fra evaluering af repræsentationsbeskyttelse, skal du skubbe til/fra-knappen til: ![Slå til.](../../media/scc-toggle-on.png). Domænet føjes til listen over **domæner,** der er tillid til, i indstillingerne for beskyttelse mod phishing i politikken til beskyttelse mod phishing.
+  - Hvis værdien **tilladt at repræsentere** denne post var **Ja**, er til/fra-knappen slået til. Hvis du vil returnere alle afsendere i dette domæne til evaluering af repræsentationsbeskyttelse, skal du skubbe til/fra-knappen: ![Slå til/fra.](../../media/scc-toggle-off.png). Domænet fjernes fra listen over **domæner, der er tillid til** , i indstillingerne for beskyttelse mod phishing i politikken til beskyttelse mod phishing.
+- Hvorfor vi fangede det her.
+- Hvad du skal gøre.
+- En domæneoversigt, der viser det repræsenterede domæne.
+- WhoIs-data om afsenderen.
 - Et link til at åbne [Threat Explorer](threat-explorer.md) for at få vist flere oplysninger om afsenderen.
 - Lignende meddelelser fra den samme afsender, der blev leveret til din organisation.
 
-## <a name="view-information-about-messages-from-impersonated-senders"></a>Få vist oplysninger om meddelelser fra efterligninger af afsendere
+## <a name="view-information-about-messages-from-impersonated-senders"></a>Få vist oplysninger om meddelelser fra repræsenterede afsendere
 
-På siden **Impersonation insight**, der vises, når du  klikker på Vis repræsentationer i repræsentationsindsigtet, skal du klikke på **fanen** Brugere. Fanen **Brugere** indeholder følgende oplysninger:
+Klik på fanen **Brugere** på siden **Repræsentationsindsigt**, der vises, når du klikker på **Vis repræsentationer** i repræsentationsindsigten. Fanen **Brugere** indeholder følgende oplysninger:
 
-- **Afsender**: Mailadressen på den efterligning af afsender, der har sendt mailen.
-- **Antal meddelelser**: Antallet af meddelelser fra den efterligning af afsender i løbet af de seneste 7 dage.
-- **Repræsentationstype: Denne** værdi er **Bruger i vist navn**.
-- **Efterligning** af brugere: Mailadressen på den efterligning af afsender, der skal ligne den bruger, der er konfigureret til beskyttelse mod efterligning i antiphishing-politikken.
-- **Brugertype**: Denne værdi viser den type beskyttelse, der anvendes (f.eks. **Beskyttet bruger-** eller **Postkasseintelligens**).
-- **Politik**: Antiphishing-politikken, der har registreret den efterligning af afsenderen.
-- **Tilladelse til at repræsentere**: En af følgende værdier:
-  - **Ja**: Afsenderen blev konfigureret som en bruger, der er tillid til (en undtagelse for repræsentationsbeskyttelse) i antiphishingpolitikken. Meddelelser fra den efterligning af afsenderen blev fundet, men tilladt.
-  - **Nej**: Afsenderen er konfigureret til beskyttelse mod efterligning i antiphishing-politikken. Meddelelser fra den efterligning af afsenderen blev registreret og reageret på baseret på handlingen for efterligne brugere i antiphishingpolitikken.
+- **Afsender**: Mailadressen på den repræsenterende afsender, der sendte mailen.
+- **Antal meddelelser**: Antallet af meddelelser fra den repræsenterende afsender i løbet af de seneste 7 dage.
+- **Repræsentationstype**: Denne værdi er **Bruger i vist navn**.
+- **Repræsenterede brugere**: Mailadressen på den repræsenterede afsender, som skal ligne den bruger, der er konfigureret til repræsentationsbeskyttelse i politikken til bekæmpelse af phishing.
+- **Brugertype**: Denne værdi viser den anvendte type beskyttelse (f.eks. **Beskyttet bruger** eller **Postkasseintelligens**).
+- **Politik**: Den anti-phishing-politik, der registrerede den repræsenterede afsender.
+- **Tilladt at repræsentere**: En af følgende værdier:
+  - **Ja**: Afsenderen blev konfigureret som bruger, der er tillid til (en undtagelse for repræsentationsbeskyttelse) i politikken til bekæmpelse af phishing. Meddelelser fra den repræsenterede afsender blev registreret, men tilladt.
+  - **Nej**: Afsenderen er konfigureret til repræsentationsbeskyttelse i politikken til bekæmpelse af phishing. Meddelelser fra den repræsenterede afsender blev registreret og handlet på baggrund af handlingen for repræsenterede brugere i politikken til bekæmpelse af phishing.
 
-Du kan klikke på markerede kolonneoverskrifter for at sortere resultaterne.
+Du kan klikke på de markerede kolonneoverskrifter for at sortere resultaterne.
 
-Hvis du vil filtrere resultaterne, kan du bruge feltet **Filtrer** afsender til at angive en kommasepareret liste over værdier til at filtrere resultaterne.
+Hvis du vil filtrere resultaterne, kan du bruge feltet **Filter afsender** til at angive en kommasepareret liste over værdier for at filtrere resultaterne.
 
-### <a name="view-details-about-messages-from-impersonated-senders"></a>Få vist oplysninger om meddelelser fra efterligninger af afsendere
+### <a name="view-details-about-messages-from-impersonated-senders"></a>Få vist oplysninger om meddelelser fra repræsenterede afsendere
 
-På fanen **Brugere** på siden **Repræsentationsindsigt** skal du vælge en af de tilgængelige repræsentationsregistreringer. Pop op-vindue med oplysninger, der vises, indeholder følgende oplysninger og funktioner:
+På fanen **Brugere** på siden **Repræsentationsindsigt** skal du vælge en af de tilgængelige repræsentationsregistreringer. Det pop op-vindue med detaljer, der vises, indeholder følgende oplysninger og funktioner:
 
-- **Valg af repræsentationspolitik, der skal ændres**: Vælg den pågældende antiphishing-politik, du vil ændre. Det er kun politikker, hvor den efterligning af afsenderen, der er defineret i politikken, er tilgængelige. Se den forrige side for at se, hvilken politik der faktisk var ansvarlig for at registrere den efterligning af afsenderen (sandsynligvis baseret på modtageren og politikkens prioritet).
-- **Føj til** listen over tilladte repræsentationer: Brug denne til/fra-knap til at tilføje eller fjerne afsenderen fra de Afsendere og domæner, der er tillid til ( **repræsentationsundtagelser** ) for den antiphishingpolitik, du har valgt:
-  - Hvis værdien **Tilladt at repræsentere** for denne post var **Nej**, er til/fra-knappen slået fra. For at undtage afsenderen fra evaluering ved repræsentationsbeskyttelse skal du skubbe til/fra-knappen til Til: ![Til/fra.](../../media/scc-toggle-on.png). Afsenderen føjes til listen **Brugere, der er** tillid til i indstillingerne for beskyttelse mod efterligning i antiphishing-politikken.
-  - Hvis værdien **Tilladt at repræsentere** for denne indtastning var **Ja**, er til/fra-knappen til. Hvis du vil returnere afsenderen til evaluering ved repræsentationsbeskyttelse, skal du skubbe til/fra-knappen til fra: ![Slå fra.](../../media/scc-toggle-off.png). Afsenderen fjernes fra listen Brugere **, der er tillid** til i indstillingerne for beskyttelse mod efterligning i antiphishing-politikken.
-- Derfor har vi opdaget dette.
-- Det skal du gøre.
-- En afsenderoversigt, der viser den efterligning af afsenderen.
-- WhoIs data about the sender.
+- **Valg repræsenteringspolitik, der skal ændres**: Vælg den berørte anti-phishing-politik, du vil ændre. Det er kun politikker, hvor den repræsenterede afsender er defineret i politikken, der er tilgængelige. Se den forrige side for at se, hvilken politik der faktisk var ansvarlig for at registrere den repræsenterede afsender (sandsynligvis baseret på modtageren og politikkens prioritet).
+- **Føj til listen over tilladte repræsentationer**: Brug denne til/fra-knap til at tilføje eller fjerne afsenderen fra **afsendere og domæner** , der er tillid til (repræsentationsundtagelser) for den valgte politik til bekæmpelse af phishing:
+  - Hvis værdien **tilladt at repræsentere** denne post var **Nej**, er til/fra-knappen slået fra. Hvis du vil fritage afsenderen fra evaluering af repræsentationsbeskyttelse, skal du slå til/fra-knappen til: ![Slå til.](../../media/scc-toggle-on.png). Afsenderen føjes til listen over **brugere, der er tillid** til, i indstillingerne for beskyttelse mod phishing i politikken til beskyttelse mod phishing.
+  - Hvis værdien **tilladt at repræsentere** denne post var **Ja**, er til/fra-knappen slået til. Hvis du vil returnere afsenderen til evaluering efter repræsentationsbeskyttelse, skal du skubbe til/fra-knappen til fra: ![Slå til/fra.](../../media/scc-toggle-off.png). Afsenderen fjernes fra listen over **brugere, der er tillid til** , i indstillingerne for beskyttelse mod phishing i politikken til beskyttelse mod phishing.
+- Hvorfor vi fangede det her.
+- Hvad du skal gøre.
+- En afsenderoversigt, der viser den repræsenterede afsender.
+- WhoIs-data om afsenderen.
 - Et link til at åbne [Threat Explorer](threat-explorer.md) for at få vist flere oplysninger om afsenderen.
 - Lignende meddelelser fra den samme afsender, der blev leveret til din organisation.

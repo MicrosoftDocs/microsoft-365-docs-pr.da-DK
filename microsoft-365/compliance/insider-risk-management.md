@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 - m365solution-insiderrisk
 - m365initiative-compliance
-ms.openlocfilehash: 2055d5ce71766a3c1cd1846c6287e5c15c8d621c
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: db99267bc7d55e6e069e984dc4b419ed379fd088
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66622827"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787200"
 ---
 # <a name="learn-about-insider-risk-management"></a>Få mere at vide om styring af insider-risiko
 
@@ -89,7 +89,7 @@ Identificering og løsning af interne risikoaktiviteter og problemer med overhol
 
 ### <a name="policies"></a>Politikker
 
-[Politikker for styring af insiderrisiko](insider-risk-management-policies.md) oprettes ved hjælp af foruddefinerede skabeloner og politikbetingelser, der definerer, hvilke udløsende hændelser og risikoindikatorer der undersøges i din organisation. Disse betingelser omfatter, hvordan risikoindikatorer bruges til beskeder, hvilke brugere der er inkluderet i politikken, hvilke tjenester der prioriteres, og overvågningsperioden.
+[Politikker for styring af insiderrisiko](insider-risk-management-policies.md) oprettes ved hjælp af foruddefinerede skabeloner og politikbetingelser, der definerer, hvilke udløsende hændelser og risikoindikatorer der undersøges i din organisation. Disse betingelser omfatter, hvordan risikoindikatorer bruges til beskeder, hvilke brugere der er inkluderet i politikken, hvilke tjenester der prioriteres, og tidsperioden for registrering.
 
 Du kan vælge mellem følgende politikskabeloner for hurtigt at komme i gang med styring af insiderrisiko:
 

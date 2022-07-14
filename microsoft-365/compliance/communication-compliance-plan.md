@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 - MOE150
-ms.openlocfilehash: 71364ebf68d6167666ec993fd15e0288f7ab30b2
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: 71537e949d68d2171d3c3fb0f6dff5d55fe5b3bf
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66686179"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787072"
 ---
 # <a name="plan-for-communication-compliance"></a>Plan for kommunikationsoverholdelse
 
@@ -62,7 +62,7 @@ Identificer de relevante interessenter i din organisation for at samarbejde om a
 
 ### <a name="permissions"></a>Tilladelser
 
-Vælg dedikerede interessenter for at overvåge og gennemse beskeder og sager regelmæssigt i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/). Sørg for, at du forstår, hvordan du tildeler brugere og interessenter til forskellige rollegrupper for kommunikation med overholdelse af angivne standarder i din organisation.
+Vælg dedikerede interessenter for at undersøge og gennemse beskeder og sager med jævne mellemrum i [Microsoft Purview-compliance-portal](https://compliance.microsoft.com/). Sørg for, at du forstår, hvordan du tildeler brugere og interessenter til forskellige rollegrupper for kommunikation med overholdelse af angivne standarder i din organisation.
 
 > [!IMPORTANT]
 > Når du har konfigureret dine rollegrupper, kan det tage op til 30 minutter, før rollegruppens tilladelser gælder for tildelte brugere på tværs af organisationen.
@@ -111,7 +111,7 @@ Når du opretter en politik for overholdelse af angivne standarder for kommunika
 
 ### <a name="groups-for-supervised-users-and-reviewers"></a>Grupper til overvågede brugere og korrekturlæsere
 
-Hvis du vil forenkle konfigurationen, skal du oprette grupper til personer, der har brug for, at deres kommunikation gennemses, og grupper til personer, der gennemser denne kommunikation. Hvis du bruger grupper, har du muligvis brug for flere. Hvis du f.eks. vil scanne kommunikation mellem to forskellige grupper af personer, eller hvis du vil angive en gruppe, der ikke overvåges. Når du tildeler en distributionsgruppe i politikken, overvåger politikken alle mails fra hver bruger i distributionsgruppen. Når du tildeler en Microsoft 365-gruppe i politikken, overvåger politikken alle mails, der sendes til den pågældende gruppe, og ikke de enkelte mails, der modtages af hvert gruppemedlem.
+Hvis du vil forenkle konfigurationen, skal du oprette grupper til personer, der har brug for, at deres kommunikation gennemses, og grupper til personer, der gennemser denne kommunikation. Hvis du bruger grupper, har du muligvis brug for flere. Hvis du f.eks. vil scanne kommunikation mellem to forskellige grupper af personer, eller hvis du vil angive en gruppe, der ikke overvåges. Når du tildeler en distributionsgruppe i politikken, registrerer politikken alle mails fra hver bruger i distributionsgruppen. Når du tildeler en Microsoft 365-gruppe i politikken, registrerer politikken alle mails, der sendes til den pågældende gruppe, og ikke de individuelle mails, der modtages af hvert gruppemedlem.
 
 Tilføjelse af grupper og distributionslister til politikker for overholdelse af kommunikation er en del af de overordnede betingelser og regler, der er angivet, så det maksimale antal grupper og distributionslister, som en politik understøtter, varierer afhængigt af det antal betingelser, der også føjes til politikken. Hver politik skal understøtte ca. 20 grupper eller distributionslister, afhængigt af antallet af yderligere betingelser, der findes i politikken.
 
@@ -139,8 +139,8 @@ Når du planlægger politikker for kommunikation med overholdelse af angivne sta
 
 - Overvej at tilføje alle brugere i din organisation som in-scope for dine politikker for kommunikation med overholdelse af angivne standarder. Det er nyttigt i nogle tilfælde at identificere bestemte brugere som omfattet af individuelle politikker, men de fleste organisationer bør inkludere alle brugere i politikker for overholdelse af kommunikation, der er optimeret til chikane eller registrering af diskrimination.
 - Konfigurer den procentdel af kommunikationen, der skal gennemses, til 100 % for at sikre, at politikker indhenter alle problemer, der giver anledning til bekymring i forbindelse med kommunikation for din organisation.
-- Du kan scanne kommunikation fra [tredjepartskilder](/microsoft-365/compliance/communication-compliance-channels#third-party-sources) for data, der er importeret til postkasser i din Microsoft 365-organisation. Hvis du vil inkludere gennemgang af kommunikation på disse platforme, skal du konfigurere en connector til disse tjenester, før meddelelser, der opfylder politikbetingelser, overvåges af kommunikationspolitikken.
-- Politikker kan understøtte overvågning af andre sprog end engelsk i brugerdefinerede politikker for overholdelse af kommunikation. Opret en [brugerordbog med nøgleord](/microsoft-365/compliance/communication-compliance-policies#custom-keyword-dictionaries) med stødende ord på det sprog, du vælger, eller byg din egen model til maskinel indlæring ved hjælp af [klassificeringsmaskiner, der kan oplæres](/microsoft-365/compliance/classifier-get-started-with) i Microsoft 365.
+- Du kan scanne kommunikation fra [tredjepartskilder](/microsoft-365/compliance/communication-compliance-channels#third-party-sources) for data, der er importeret til postkasser i din Microsoft 365-organisation. Hvis du vil inkludere gennemgang af kommunikation på disse platforme, skal du konfigurere en connector til disse tjenester, før meddelelser, der opfylder politikbetingelser, registreres af kommunikationspolitikken.
+- Politikker kan understøtte registrering af andre sprog end engelsk i brugerdefinerede politikker for overholdelse af kommunikation. Opret en [brugerordbog med nøgleord](/microsoft-365/compliance/communication-compliance-policies#custom-keyword-dictionaries) med stødende ord på det sprog, du vælger, eller byg din egen model til maskinel indlæring ved hjælp af [klassificeringsmaskiner, der kan oplæres](/microsoft-365/compliance/classifier-get-started-with) i Microsoft 365.
 - Alle organisationer har forskellige kommunikationsstandarder og politikbehov. Registrer bestemte nøgleord ved hjælp af [betingelser for politikken](/microsoft-365/compliance/communication-compliance-policies#conditional-settings) for kommunikation med overholdelse af angivne standarder, eller registrer bestemte typer oplysninger med [brugerdefinerede følsomme oplysningstyper](/microsoft-365/compliance/create-a-custom-sensitive-information-type).
 
 ## <a name="creating-a-communication-compliance-policy-walkthrough"></a>Gennemgang af oprettelse af en politik for overholdelse af angivne standarder for kommunikation
