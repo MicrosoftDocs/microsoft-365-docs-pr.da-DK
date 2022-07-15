@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Microsoft Defender for Business
-summary: Enkel, omfattende slutpunktssikkerhed, der kan hjælpe dig med at beskytte din virksomhed, så du kan fokusere på det, der er vigtigt. Defender for Business er tilgængelig som et separat abonnement og er inkluderet i Microsoft 365 Business Premium.
+summary: Enkel, omfattende slutpunktssikkerhed, der kan hjælpe dig med at beskytte din virksomhed, så du kan fokusere på det, der er vigtigt. Defender for Business er tilgængelig som et separat abonnement og er inkluderet i Microsoft 365 Business Premium. Microsoft Defender for Business-servere fås nu som prøveversion! Læs mere på https://aka.ms/mdb-servers.
 metadata:
   title: Dokumentation for Microsoft Defender for Business
   description: Defender for Business er en cybersikkerhedsløsning til små og mellemstore virksomheder. Beskyt enheder med sikkerhed i virksomhedsklasse til en overkommelig pris.
@@ -14,12 +14,12 @@ metadata:
   ms.custom: intro-hub-or-landing
   author: denisebmsft
   ms.author: deniseb
-  ms.openlocfilehash: 0db947d3a791618db0e6316f09dcd760b35d5c0b
-  ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+  ms.openlocfilehash: b4862dee1c790e2a0b16975b48df516f73d1a2d0
+  ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
   ms.translationtype: HT
   ms.contentlocale: da-DK
-  ms.lasthandoff: 07/13/2022
-  ms.locfileid: "66771345"
+  ms.lasthandoff: 07/14/2022
+  ms.locfileid: "66787776"
 landingContent:
 - title: Oversigt
   linkLists:
@@ -53,6 +53,8 @@ landingContent:
       url: mdb-use-wizard.md
     - text: Aktivér prøveversionsfunktioner
       url: mdb-preview.md
+    - text: Hent Microsoft Defender til Business-servere (prøveversion)
+      url: get-defender-business-servers.md
 - title: Hjælp og flere ressourcer
   linkLists:
   - linkListType: how-to-guide

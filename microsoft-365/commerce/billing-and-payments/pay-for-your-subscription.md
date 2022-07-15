@@ -23,12 +23,12 @@ ms.custom:
 - business_assist
 - AdminTemplateSet
 ms.date: 05/26/2022
-ms.openlocfilehash: 113905d76864fecdc4fc38d46e4dc6f3e625348f
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: c8847915fdf9ed587fea410670f5b37194dfa8ae
+ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66663806"
+ms.lasthandoff: 07/14/2022
+ms.locfileid: "66787116"
 ---
 # <a name="how-to-pay-for-your-subscription"></a>Sådan betaler du for dit abonnement
 
@@ -47,15 +47,15 @@ Du kan bruge et kredit- eller debetkort eller en bankkonto til at betale for dit
 - Du skal være global administrator eller faktureringsadministrator for at udføre de trin, der er beskrevet i denne artikel. Du kan få mere at vide under [Om administratorroller](../../admin/add-users/about-admin-roles.md).
 - Den betalingsmetode, du vælger under udtjekning, er den betalingsmetode, vi bruger til alle fremtidige faktureringsperioder. Du kan ændre det når som helst.
 
-## <a name="new-regulations-from-the-reserve-bank-of-india"></a>Nye bestemmelser fra Reserve Bank of India
+## <a name="directives-from-the-reserve-bank-of-india"></a>Direktiver fra The Reserve Bank of India
 
-Fra og med den 1. oktober 2021 kan automatiske betalinger i Indien blokere nogle kreditkorttransaktioner, især transaktioner, der overstiger 5.000 INR. På grund af denne regel skal du muligvis foretage betalinger manuelt i Microsoft 365 Administration. Disse bestemmelser påvirker ikke det samlede beløb, du opkræves for dit forbrug.
+I øjeblikket blokeres nogle kreditkorttransaktioner, især transaktioner, der overstiger 5.000 INR, på grund af et direktiv fra The Reserve Bank of India. Dette kan påvirke automatiske betalinger, hvilket betyder, at du muligvis skal foretage betalinger manuelt i Microsoft 365 Administration. Dette direktiv påvirker ikke anvendelsesgebyrer. 
 
-[Få mere at vide om Reserve Bank of India-bestemmelserne for tilbagevendende betalinger](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668&Mode=0).
+[Få mere at vide om The Reserve Bank of India-direktivet vedrørende tilbagevendende betalinger](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=11668&Mode=0).
 
-Den 30. september 2022 gemmer Microsoft og andre onlineforhandlere ikke længere kreditkortoplysninger. For at overholde denne regel fjerner Microsoft alle gemte kortoplysninger fra Microsoft 365 Administration. Hvis du vil undgå tjenesteafbrydelser, skal du tilføje en betalingsmetode og foretage en engangsbetaling for alle abonnementer og faktureringsprofiler.
+Den 30. september 2022 gemmer Microsoft og andre onlineforhandlere ikke længere kreditkortoplysninger. Microsoft fjerner alle gemte kortoplysninger fra Microsoft 365 Administration. Hvis du vil undgå tjenesteafbrydelser, skal du tilføje og bekræfte en betalingsmetode for alle abonnementer og faktureringsprofiler.
 
-[Få mere at vide om Reserve Bank of India-betingelserne for kortlagring](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12211).
+[Få mere at vide The Reserve Bank of India-direktivet vedrørende kortlagring](https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12211).
 
 ## <a name="paying-by-credit-or-debit-card-or-bank-account"></a>Betaling med kredit- eller debetkort eller bankkonto
 
