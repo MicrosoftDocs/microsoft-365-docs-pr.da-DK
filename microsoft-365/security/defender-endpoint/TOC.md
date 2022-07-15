@@ -80,7 +80,7 @@
 ##### [Nyheder](mac-whatsnew.md)
 
 ##### [Udrul]()
-###### [Microsoft Intune-baseret udrulning](mac-install-with-intune.md).
+###### [Microsoft Intune-baseret udrulning](mac-install-with-intune.md)
 ###### [JAMF Pro-baseret udrulning]()
 ####### [Udrulning af Microsoft Defender for Endpoint på macOS ved hjælp af Jamf Pro](mac-install-with-jamf.md)
 ####### [Log på Jamf Pro](mac-install-jamfpro-login.md)
