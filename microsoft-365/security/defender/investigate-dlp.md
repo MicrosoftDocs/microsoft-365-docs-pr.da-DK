@@ -16,12 +16,12 @@ ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: a92e3b206b10b68ecc3ff2f94870a9174185b63b
-ms.sourcegitcommit: 85799f0efc06037c1ff309fe8e609bbd491f9b68
+ms.openlocfilehash: 1f81a9c4cc3bbd77d7269f04c4a6854d1370d5bb
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66574291"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822760"
 ---
 # <a name="investigate-data-loss-incidents-with-microsoft-365-defender"></a>Undersøg datatabshændelser med Microsoft 365 Defender
 
@@ -101,12 +101,13 @@ Du kan bruge connectoren Microsoft 365 Defender i Microsoft Sentinel til at impo
 3. Du kan bruge **AlertType**, **startTime** og **endTime** til at forespørge tabellen **CloudAppEvents** for at få alle de brugeraktiviteter, der har bidraget til beskeden. Brug denne forespørgsel til at identificere de underliggende aktiviteter:
 
 ```kusto
-let Alert = SecurityAlert 
-| where TimeGenerated  > ago(30d) 
-| where SystemAlertId == "" // insert the systemAlertID here 
-CloudAppEvents 
-| extend correlationId = parse_json(tostring(RawEventData.Data)).cid
-| join kind=inner Alert on $left.correlationId == $right.AlertType 
+let Alert = SecurityAlert
+| where TimeGenerated > ago(30d)
+| where SystemAlertId == ""; // insert the systemAlertID here
+CloudAppEvents
+| extend correlationId1 = parse_json(tostring(RawEventData.Data)).cid
+| extend correlationId = tostring(correlationId1)
+| join kind=inner Alert on $left.correlationId == $right.AlertType
 | where RawEventData.CreationTime > StartTime and RawEventData.CreationTime < EndTime
 ```
 

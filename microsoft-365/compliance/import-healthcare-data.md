@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 07/15/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataconnector til at importere EHR-data (Electronic Healthcare Records) fra deres sundhedssystem til Microsoft 365. Dette giver dig mulighed for at bruge EHR-data i politikker for styring af insiderrisiko til at hjælpe dig med at registrere uautoriseret adgang til patientdata af dine medarbejdere.
-ms.openlocfilehash: be5429ea1a5fb4e2e2be6a7029f2401fcbdab94e
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: dd34fc1e14680a5189c74443211f50fa51b87132
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66641378"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822951"
 ---
 # <a name="set-up-a-connector-to-import-healthcare-ehr-audit-data-preview"></a>Konfigurer en connector til import af ehr-overvågningsdata til sundhedssektoren (prøveversion)
 
@@ -36,6 +36,8 @@ Konfiguration af en Healthcare-connector består af følgende opgaver:
 - Kørsel af et script til push af EHR-overvågningsdata for sundhedssektoren til API-slutpunktet.
 
 - Du kan eventuelt planlægge, at scriptet køres automatisk for at importere overvågningsdataene.
+
+Hvis du vil deltage i prøveversionen, skal du kontakte teamet på dcfeedback@microsoft.com.
 
 ## <a name="before-you-set-up-the-connector"></a>Før du konfigurerer connectoren
 

@@ -55,7 +55,6 @@
 #### [Onboard Windows-klient ved hjælp af et lokalt script](configure-endpoints-script.md)
 #### [Indbyggede VDI-enheder (Virtual Desktop Infrastructure)](configure-endpoints-vdi.md)
 #### [Onboard Windows 10 enheder med flere sessioner i Windows Virtual Desktop](onboard-windows-multi-session-device.md)
-#### [Onboard enheder uden internetadgang](onboard-offline-machines.md)
 #### [Onboard tidligere versioner af Windows](onboard-downlevel.md)
 
 
@@ -80,7 +79,7 @@
 ##### [Nyheder](mac-whatsnew.md)
 
 ##### [Udrul]()
-###### [Microsoft Intune-baseret udrulning](mac-install-with-intune.md)
+###### [Microsoft Intune-baseret udrulning](mac-install-with-intune.md).
 ###### [JAMF Pro-baseret udrulning]()
 ####### [Udrulning af Microsoft Defender for Endpoint på macOS ved hjælp af Jamf Pro](mac-install-with-jamf.md)
 ####### [Log på Jamf Pro](mac-install-jamfpro-login.md)
@@ -182,6 +181,7 @@
 ### [Integration med Microsoft Defender for Cloud](azure-server-integration.md)
 ### [Kør en registreringstest på en ny onboardet enhed](run-detection-test.md)
 ### [Kør simulerede angreb på enheder](attack-simulations.md)
+### [Onboard enheder uden internetadgang](onboard-offline-machines.md)
 ### [Konfigurer indstillinger for proxy- og internetforbindelse](configure-proxy-internet.md)
 ### [Opret en beskedregel for onboarding eller offboarding](onboarding-notification.md)
 

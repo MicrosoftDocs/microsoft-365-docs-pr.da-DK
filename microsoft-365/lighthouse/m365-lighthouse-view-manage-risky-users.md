@@ -1,5 +1,5 @@
 ---
-title: Få vist og administrer risikable brugere i Microsoft 365 Fyrtårn
+title: Få vist og administrer risikable brugere i Microsoft 365 Lighthouse
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,19 +16,19 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: For MSP'er (Managed Service Providers) ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist og administrerer risikable brugere.
-ms.openlocfilehash: 45c91ec0871393f69e7a166cc8582f149479ad1b
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: For udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om, hvordan du får vist og administrerer risikable brugere.
+ms.openlocfilehash: b4f34ccfafa1a002a9c798924641eaeeebdb04fe
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66011832"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823413"
 ---
-# <a name="view-and-manage-risky-users-in-microsoft-365-lighthouse"></a>Få vist og administrer risikable brugere i Microsoft 365 Fyrtårn
+# <a name="view-and-manage-risky-users-in-microsoft-365-lighthouse"></a>Få vist og administrer risikable brugere i Microsoft 365 Lighthouse
 
-Microsoft indsamler og analyserer billioner af brugerlogonsignaler hver dag. Disse signaler bruges til at hjælpe med at skabe gode funktionsmådemønstre for brugerlogon og identificere potentielle risikable logonforsøg. Azure Active Directory (Azure AD) Identity Protection bruger disse signaler til at gennemse brugerlogonforsøg og udføre handlinger, hvis der er mistænkelig aktivitet.
+Microsoft indsamler og analyserer billioner af brugerlogonsignaler hver dag. Disse signaler bruges til at hjælpe med at skabe gode funktionsmådemønstre for brugerlogon og identificere potentielle risikable logonforsøg. Identitetsbeskyttelse i Azure Active Directory (Azure AD) bruger disse signaler til at gennemse brugerlogonforsøg og udføre handlinger, hvis der er mistænkelig aktivitet.
 
-Microsoft 365 Lighthouse hjælper med at administrere risici, der registreres af Azure AD Identity Protection, ved at give en enkelt visning af risikable brugere på tværs af alle dine administrerede lejere. Du kan hurtigt sikre risikable brugere ved enten at nulstille deres adgangskode eller blokere dem fra at logge på deres Microsoft 365 konto. Du kan også få vist indsigt for bedre at forstå en brugers risiko og fastlægge de næste trin.
+Microsoft 365 Lighthouse hjælper med at administrere risici, der registreres af Azure AD Identity Protection, ved at give en enkelt visning af risikable brugere på tværs af alle dine administrerede lejere. Du kan hurtigt sikre risikable brugere ved enten at nulstille deres adgangskode eller blokere dem fra at logge på deres Microsoft 365-konto. Du kan også få vist indsigt for bedre at forstå en brugers risiko og fastlægge de næste trin.
 
 Azure AD Identitetsbeskyttelse identificerer risici af mange typer, herunder:
 
@@ -43,7 +43,7 @@ Azure AD Identitetsbeskyttelse identificerer risici af mange typer, herunder:
 
 Følgende betingelser skal være opfyldt, før brugerne kan blive vist på listen over risikable brugere:
 
-- Kundelejer skal have en Azure AD Premium licens for hver bruger. Du kan få flere oplysninger om, hvilke licenser der understøtter Azure AD Identity Protection, under [Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)
+- Kundelejer skal have en Azure AD Premium-licens for hver bruger. Du kan få flere oplysninger om, hvilke licenser der understøtter Azure AD Identity Protection, under [Hvad er identitetsbeskyttelse?](/azure/active-directory/identity-protection/overview-identity-protection)
 
 - Kundelejer skal være aktiv i Microsoft 365 Lighthouse. Hvis du vil finde ud af, om en lejer er aktiv, skal du se [Oversigt over siden Windows 365 (cloud-pc'er) i Microsoft 365 Lighthouse](m365-lighthouse-tenant-list-overview.md).
 
@@ -51,15 +51,13 @@ Følgende betingelser skal være opfyldt, før brugerne kan blive vist på liste
 
 I Azure AD Identity Protection omfatter risikoregistreringer eventuelle identificerede mistænkelige handlinger, der er relateret til brugerkonti i Azure AD.
 
-1. Vælg **Brugere** i navigationsruden til venstre i Lighthouse.
+1. I venstre navigationsrude i Lighthouse skal du vælge **Brugere** > **, der er risiko for brugere**.
 
-2. Vælg fanen **Risikable brugere** .
+2. Gennemse brugerne på listen under fanen **Risikable brugere** med **risikotilstand**.
 
-3. Gennemse brugerne på listen med **risikotilstanden Risiko.**
+3. Vælg **Vis risikoregistreringer** for at få detaljerede oplysninger om de registrerede risici for hver bruger. Du kan få flere oplysninger om risikotyper og registrering under [Hvad er risikoen?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
 
-4. Vælg **Vis risikoregistreringer** for at få detaljerede oplysninger om de registrerede risici for hver bruger. Du kan få flere oplysninger om risikotyper og registrering under [Hvad er risikoen?](/azure/active-directory/identity-protection/concept-identity-protection-risks).
-
-5. For hver bruger skal du vurdere risikoregistreringerne og vælge en af følgende handlinger efter behov:
+4. For hver bruger skal du vurdere risikoregistreringerne og vælge en af følgende handlinger efter behov:
 
     - Nulstil adgangskode – skift eller nulstil brugeradgangskoden.
 
@@ -73,9 +71,11 @@ I Azure AD Identity Protection omfatter risikoregistreringer eventuelle identifi
 
 Sådan reagerer du på flere berørte brugere på én gang:
 
-1. Vælg det sæt af brugere, du vil foretage en handling på, under fanen **Risikable brugere** .
+1. I venstre navigationsrude i Lighthouse skal du vælge **Brugere** > **, der er risiko for brugere**.
 
-2. Vælg en af følgende handlinger, der skal udføres:
+2. På fanen **Risikable brugere** skal du vælge det sæt brugere, du vil udføre en handling på.
+
+3. Vælg en af følgende handlinger, der skal udføres:
 
     - Nulstil adgangskode
 

@@ -17,12 +17,12 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Windows 365 (cloud-pc'er) for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: dded3bc455a66a77ae325f1d6a54660a88846c1e
-ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
+ms.openlocfilehash: 1698c9298981778cb01e01715b794dd43a4daf3c
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66787226"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823457"
 ---
 # <a name="overview-of-the-windows-365-cloud-pcs-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Windows 365 (cloud-pc'er) i Microsoft 365 Lighthouse  
   
@@ -33,7 +33,7 @@ Du kan få flere oplysninger om Windows 365 under [Hvad er Windows 365?](/window
 > [!IMPORTANT]
 > Du skal gå til [MEM](https://go.microsoft.com/fwlink/p/?linkid=2150463) for at klargøre cloud-pc'er for hver kundelejer, før du kan administrere dem i Lighthouse. Du kan ikke klargøre inde fra Lighthouse.
 
-Når du har klargjort cloud-pc'er til din kundelejer, indeholder kortet Windows 365 på microsoft 365-startsiden en kort besked om de cloud-pc'er, der har brug for handling, f.eks. antallet af cloud-pc'er, der ikke kunne klargøres, og azure-netværkstilslutningsfejl. Hvis du vil have en detaljeret status, skal du vælge knappen på kortet Windows 365 (eller vælge **Windows 365** i navigationsruden til venstre) for at åbne den Windows 365 side. Fra denne side kan du få en statusoversigt over de Cloud-pc'er, der er tildelt dine kundelejere, få vist en liste over alle de Cloud-pc'er, du administrerer, og de lejere, de er tildelt, og få vist Azure-netværksforbindelserne mellem dine kundelejere og Azure Active Directory (Azure AD) og deres status.
+Når du har klargjort cloud-pc'er til din kundelejer, indeholder kortet Windows 365 på microsoft 365-startsiden en kort besked om de cloud-pc'er, der har brug for handling, f.eks. antallet af cloud-pc'er, der ikke kunne klargøres, og azure-netværkstilslutningsfejl. Hvis du vil have en detaljeret status, skal du vælge knappen på kortet Windows 365 (eller vælge **Enheder** >  **Windows 365** i venstre navigationsrude) for at åbne siden Windows 365. Fra denne side kan du få en statusoversigt over de Cloud-pc'er, der er tildelt dine kundelejere, få vist en liste over alle de Cloud-pc'er, du administrerer, og de lejere, de er tildelt, og få vist Azure-netværksforbindelserne mellem dine kundelejere og Azure Active Directory (Azure AD) og deres status.
 
 ## <a name="overview-tab"></a>Fanen Oversigt
 

@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: c743b54e27bc9caa60bb6b4e24191d626ece6fcf
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 9c00ea16bddb7aa9094b41b30692493b530acbb3
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490503"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823158"
 ---
 # <a name="deploy-microsoft-defender-for-endpoint-on-android-with-microsoft-intune"></a>Installér Microsoft Defender for Endpoint på Android med Microsoft Intune
 
@@ -154,7 +154,14 @@ Følg nedenstående trin for at føje Microsoft Defender for Endpoint app til di
         - Vælg **kun arbejdsprofil** som profiltype.
         - Klik på **Vælg app**, vælg **Microsoft Defender ATP**, vælg **OK** og derefter **Næste**.
 
-        :::image type="content" source="images/android-create-app.png" alt-text=" Ruden Tilknyttede appoplysninger" lightbox="images/android-create-app.png":::
+        :::image type="content" source="images/android-create-app.png" alt-text=" Skærmbillede af ruden Med tilknyttede appoplysninger." lightbox="images/android-create-app.png":::
+     
+    1. Vælg **Tilladelser > Tilføj**. Vælg de tilgængelige apptilladelser > **OK** på listen.
+    2. Vælg en indstilling for hver tilladelse, der skal tildeles med denne politik:
+
+       - **Prompt** – beder brugeren om at acceptere eller afvise.
+       - **Automatisk tildeling** – godkender automatisk uden at give brugeren besked.
+       - **Afvis automatisk** – afviser automatisk uden at give brugeren besked. 
 
     1. På siden **Indstillinger** skal du gå til afsnittet **Konfigurationsindstillinger** og vælge **"Brug konfigurationsdesigner"** i konfigurationsindstillingsformat. 
 
@@ -231,7 +238,7 @@ Defender for Endpoint understøtter politikker for enhedskonfiguration for admin
 
    På siden **Tildelinger** skal du vælge den brugergruppe, som denne appkonfigurationspolitik skal tildeles til. Vælg **Vælg de grupper** , der skal medtages, og vælg den relevante gruppe, og vælg derefter **Næste**. Den gruppe, der vælges her, er normalt den samme gruppe, som du tildeler Microsoft Defender for Endpoint Android-app.
 
-   :::image type="content" source="images/4autosetupofvpn.png" alt-text="Ruden Tildeling af enhedskonfigurationsprofil i Enhedsbegrænsninger" lightbox="images/4autosetupofvpn.png":::
+   :::image type="content" source="images/4autosetupofvpn.png" alt-text="Skærmbillede af ruden Tildeling af enhedskonfigurationsprofil i Enhedsbegrænsninger." lightbox="images/4autosetupofvpn.png":::
 
 5. Gennemse **+ opret** på den næste side, gennemse alle oplysningerne, og vælg derefter **Opret**.
 Enhedskonfigurationsprofilen er nu tildelt den valgte brugergruppe.

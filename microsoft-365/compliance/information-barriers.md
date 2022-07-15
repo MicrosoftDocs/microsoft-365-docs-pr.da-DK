@@ -17,16 +17,16 @@ ms.localizationpriority: ''
 f1.keywords:
 - NOCSH
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: b302231d7dbdcc92ee2e8e2e0564cedb27a4218e
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 4b2a45a667aa654a8ff3111313b542433e692f1f
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66621111"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823379"
 ---
 # <a name="learn-about-information-barriers"></a>Få mere at vide om informationsbarrierer
 
-Microsoft Purview Information Barriers (IB) er en løsning til overholdelse af angivne standarder, der giver dig mulighed for at begrænse tovejskommunikation og samarbejde mellem grupper og brugere i Microsoft Teams, SharePoint Online og OneDrive for Business. IB bruges ofte i stærkt regulerede brancher og kan hjælpe med at undgå interessekonflikter og beskytte interne oplysninger mellem brugere og organisatoriske områder.
+Microsoft Purview Information Barriers (IB) er en løsning til overholdelse af angivne standarder, der giver dig mulighed for at begrænse tovejskommunikation og samarbejde mellem grupper og brugere i Microsoft Teams, SharePoint og OneDrive. IB bruges ofte i stærkt regulerede brancher og kan hjælpe med at undgå interessekonflikter og beskytte interne oplysninger mellem brugere og organisatoriske områder.
 
 Når IB-politikker er på plads, kan brugere, der ikke skal kommunikere eller dele filer med andre specifikke brugere, ikke finde, vælge, chatte eller ringe til disse brugere. IB-politikker placerer automatisk kontroller for at registrere og forhindre uautoriseret kommunikation og samarbejde mellem definerede grupper og brugere. IB-politikker er uafhængige af [overholdelsesgrænser](/microsoft-365/compliance/set-up-compliance-boundaries) for eDiscovery-undersøgelser, der styrer placering af brugerindhold, som eDiscovery-ledere kan søge efter.
 
@@ -61,7 +61,7 @@ Du kan få flere oplysninger [under Informationsbarrierer i Microsoft Teams](/Mi
 
 ## <a name="information-barriers-and-sharepoint-and-onedrive"></a>Informationsbarrierer og SharePoint og OneDrive
 
-I SharePoint Online og OneDrive registrerer og forhindrer IB-politikker følgende former for uautoriseret samarbejde:
+I SharePoint og OneDrive registrerer og forhindrer IB-politikker følgende former for uautoriseret samarbejde:
 
 - Tilføjelse af et medlem til et websted
 - Adgang til webstedet eller indhold af en bruger

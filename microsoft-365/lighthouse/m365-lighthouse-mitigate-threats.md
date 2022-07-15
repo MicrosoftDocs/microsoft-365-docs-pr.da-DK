@@ -1,5 +1,5 @@
 ---
-title: Afhjælpning af trusler i Microsoft 365 Fyrtårn med Microsoft Defender Antivirus
+title: Afhjælpning af trusler i Microsoft 365 Lighthouse med Microsoft Defender Antivirus
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -16,21 +16,21 @@ ms.custom:
 - AdminSurgePortfolio
 - M365-Lighthouse
 search.appverid: MET150
-description: Få mere at vide om afhjælpning af trusler med Microsoft Defender Antivirus for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 3c600c8119ba3d4a252efcf5675ab58138a69b83
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+description: For udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse kan du få mere at vide om afhjælpning af trusler med Microsoft Defender Antivirus.
+ms.openlocfilehash: 13583b66ab1251ae5cb5db1122813783ff3b861e
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66016674"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822041"
 ---
-# <a name="mitigate-threats-in-microsoft-365-lighthouse-with-microsoft-defender-antivirus"></a>Afhjælpning af trusler i Microsoft 365 Fyrtårn med Microsoft Defender Antivirus
+# <a name="mitigate-threats-in-microsoft-365-lighthouse-with-microsoft-defender-antivirus"></a>Afhjælpning af trusler i Microsoft 365 Lighthouse med Microsoft Defender Antivirus
 
-Microsoft 365 Lighthouse gør det muligt for partnere at undersøge og afhjælpe trusler på tværs af alle dine lejere. Du kan også starte antivirusscanninger på enheder, kontrollere, at enheder får de nyeste opdateringer til Microsoft Defender Antivirus, og gennemse ventende handlinger efter antivirusscanninger. Lighthouse understøtter kun enheder, der kører Windows 10 eller nyere.
+Med Microsoft 365 Lighthouse kan partnere undersøge og afhjælpe trusler på tværs af alle dine lejere. Du kan også starte antivirusscanninger på enheder, kontrollere, at enheder får de nyeste opdateringer til Microsoft Defender Antivirus, og gennemse ventende handlinger efter antivirusscanninger. Lighthouse understøtter kun enheder, der kører Windows 10 eller nyere.
 
 ## <a name="before-you-begin"></a>Før du begynder
 
-- Microsoft 365 Lighthouse udrulles kun i partnerlejer – ikke i kundelejerne, men sørg for, at du og dine kundelejere opfylder de krav, der er angivet i [Microsoft 365 Lighthouse-krav](m365-lighthouse-requirements.md).
+- Microsoft 365 Lighthouse udrulles kun i partnerlejer – ikke i kundelejere, men sørg for, at du og dine kundelejere opfylder de krav, der er angivet i [Kravene i Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).
 
 - Brugerne skal køre Microsoft Defender Antivirus (inkluderet i Windows). Lighthouse understøtter ikke antivirusprogrammer, der ikke er fra Microsoft. Du kan få flere oplysninger under [Slå Microsoft Defender Antivirus](/mem/intune/user-help/turn-on-defender-windows) til.
 
@@ -40,7 +40,7 @@ Microsoft 365 Lighthouse gør det muligt for partnere at undersøge og afhjælpe
 
 Sådan undersøges en bestemt trussel:
 
-1. Vælg **Trusselsadministration** i venstre navigationsrude i Lighthouse.
+1. Vælg **Devices** > **Threat Management** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg fanen **Trusler** .
 
@@ -62,7 +62,7 @@ Ruden med trusselsoplysninger indeholder følgende oplysninger:
 
 Sådan undersøges trusler på en bestemt enhed:
 
-1. Vælg **Trusselsadministration** i venstre navigationsrude i Lighthouse.
+1. Vælg **Devices** > **Threat Management** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg fanen **Antivirusbeskyttelse** .
 
@@ -76,7 +76,7 @@ Lighthouse viser alle trusler, der findes på enheden. Hvis du vil se detaljer, 
 
 En hurtig scanning søger på almindelige placeringer, hvor malware kan være, f.eks. registreringsdatabasenøgler og kender startmapper. En fuld scanning søger på hele enheden. I de fleste tilfælde er en hurtig scanning tilstrækkelig og er den anbefalede mulighed for planlagte scanninger.
 
-1. Vælg **Trusselsadministration** i venstre navigationsrude i Lighthouse.
+1. Vælg **Devices** > **Threat Management** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg fanen **Antivirusbeskyttelse** .
 
@@ -90,7 +90,7 @@ Du kan også scanne flere enheder ved at markere afkrydsningsfeltet ud for hvert
 
 Sådan opdaterer du Microsoft Defender Antivirus på en enkelt enhed:
 
-1. Vælg **Trusselsadministration** i venstre navigationsrude i Lighthouse.
+1. Vælg **Devices** > **Threat Management** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg fanen **Antivirusbeskyttelse** .
 
@@ -106,7 +106,7 @@ Hvis du har brug for at oprette en ny politik, skal du vælge **Opdater politik*
 
 Når der anvendes fortløbende handlinger på en enhed, modtager du en meddelelse, der afventer handling. Sådan kontrollerer du, hvilke handlinger der venter på en enhed:
 
-1. Vælg **Trusselsadministration** i venstre navigationsrude i Lighthouse.
+1. Vælg **Devices** > **Threat Management** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg fanen **Antivirusbeskyttelse** .
 
@@ -118,7 +118,7 @@ Når der anvendes fortløbende handlinger på en enhed, modtager du en meddelels
 
 Nogle opdateringer kan kræve, at en enhed genstartes for at installere korrekt.
 
-1. Vælg **Trusselsadministration** i venstre navigationsrude i Lighthouse.
+1. Vælg **Devices** > **Threat Management** i navigationsruden til venstre i Lighthouse.
 
 2. Vælg fanen **Antivirusbeskyttelse** .
 
@@ -130,8 +130,8 @@ Du kan også genstarte flere enheder ved at markere afkrydsningsfeltet ud for hv
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Krav til Microsoft 365 Fyrtårn](m365-lighthouse-requirements.md) (artikel)\
-[Oversigt over siden Threat management i Microsoft 365 Lighthouse](m365-lighthouse-threat-management-page-overview.md) (artikel)\
+[Krav til Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) (artikel)\
+[Oversigt over siden Threat Management i Microsoft 365 Lighthouse](m365-lighthouse-threat-management-page-overview.md) (artikel)\
 [Opret en politik for overholdelse af regler og standarder i Microsoft Intune](/mem/intune/protect/create-compliance-policy) (artikel)\
 [Slå Microsoft Defender Antivirus](/mem/intune/user-help/turn-on-defender-windows) (artikel)\ til
 [Microsoft Sikkerhedsviden](https://www.microsoft.com/wdsi/threats) (webside)

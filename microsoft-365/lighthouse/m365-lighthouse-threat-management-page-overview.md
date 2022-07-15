@@ -1,5 +1,5 @@
 ---
-title: Oversigt over siden Threat Management i Microsoft 365 Lighthouse
+title: Oversigt over siden Trusselsadministration i Microsoft 365 Lighthouse
 f1.keywords: NOCSH
 ms.author: sharik
 author: SKjerland
@@ -17,22 +17,22 @@ ms.custom:
 - M365-Lighthouse
 search.appverid: MET150
 description: Få mere at vide om siden Trusselsstyring for udbydere af administrerede tjenester ved hjælp af Microsoft 365 Lighthouse.
-ms.openlocfilehash: 3d7376b2438ca24cdcf9b6e73d8bfb2cc7daa6de
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: 2bf9a778e5a8c9c22ea290356bb5e16d6553b009
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66012554"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823469"
 ---
-# <a name="overview-of-the-threat-management-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Threat Management i Microsoft 365 Lighthouse 
+# <a name="overview-of-the-threat-management-page-in-microsoft-365-lighthouse"></a>Oversigt over siden Trusselsadministration i Microsoft 365 Lighthouse 
 
 **Gælder for:**
 
 - Windows
 
-Microsoft Defender Antivirus beskytter lejere, brugere og enheder mod softwaretrusler, herunder virus, malware og spyware. Den er robust og løbende beskyttelse, der er indbygget i Windows.  
+Microsoft Defender Antivirus beskytter lejere, brugere og enheder mod softwaretrusler, herunder virus, malware og spyware. Det er robust, løbende beskyttelse, der er indbygget i Windows.  
   
-Hvis du vil have adgang til siden Trusselsadministration i Microsoft 365 Lighthouse, skal du vælge **Threat Management** i venstre navigationsrude for at få vist dine kundelejere' sikkerhedsholdning mod trusler. Du får vist lejere, brugere og enheder, der kræver din opmærksomhed og anbefalinger, som kan hjælpe dig med at reducere risikoen.  
+Hvis du vil have adgang til siden Trusselsstyring i Microsoft 365 Lighthouse, skal du vælge **Devices** > **Threat Management** i venstre navigationsrude for at få vist dine kundelejere' sikkerhedsholdning mod trusler. Du får vist lejere, brugere og enheder, der kræver din opmærksomhed og anbefalinger, som kan hjælpe dig med at reducere risikoen.  
   
 ## <a name="overview-tab"></a>Fanen Oversigt  
   
@@ -58,7 +58,7 @@ I følgende tabel vises de forskellige trusselsstatusser og deres definition:<br
 | Trusselsstatus | Definition |
 |---|---|
 | Aktive | Threat er aktiv på enheden. |
-| Ingen status | Trusselsstatus er ikke tilgængelig. Kør en fuld scanning på enheden for at få Microsoft Defender Antivirus at identificere truslen igen. |
+| Ingen status | Trusselsstatus er ikke tilgængelig. Kør en fuld scanning på enheden for at få Microsoft Defender Antivirus til at gentektere truslen. |
 | Handlingen mislykkedes | Enheden er ikke i fare. En handling mislykkedes, men en potentiel trussel er stoppet og er ikke aktiv på enheden. Kør en fuld scanning på enheden. |
 | Manuelle trin er påkrævet | Truslen er blevet stoppet, men det kræver et manuelt trin at fuldføre, f.eks. en fuld scanning eller en genstart af enheden. |
 | Fuld scanning er påkrævet | En fuld scanning af enheden er påkrævet. |
@@ -71,11 +71,11 @@ I følgende tabel vises de forskellige trusselsstatusser og deres definition:<br
 
 ## <a name="antivirus-protection-tab"></a>Fanen Antivirusbeskyttelse
 
-Fanen Antivirusbeskyttelse på siden Administration af trusler viser enhederne på tværs af alle dine lejere og deres Microsoft Defender Antivirus beskyttelsestilstand. Du kan vurdere status og handle for en eller flere enheder, der kan være sårbare. Du kan også vælge en enhed for at få vist flere oplysninger, f.eks. enhedsoversigt, aktuelle trusler og statusser for enhedshandlinger.
+Fanen Antivirusbeskyttelse på siden Administration af trusler viser enhederne på tværs af alle dine lejere og deres beskyttelsestilstand for Microsoft Defender Antivirus. Du kan vurdere status og handle for en eller flere enheder, der kan være sårbare. Du kan også vælge en enhed for at få vist flere oplysninger, f.eks. enhedsoversigt, aktuelle trusler og statusser for enhedshandlinger.
 
 :::image type="content" source="../media/m365-lighthouse-threat-management-page-overview/threatmanagement-antivirus-tab.png" alt-text="Skærmbillede af fanen Antivirus.":::
 
 ## <a name="related-content"></a>Relateret indhold
 
-[Udrul Microsoft 365 Lighthouse baselines](m365-lighthouse-deploy-baselines.md) (artikel)\
-[ofte stillede spørgsmål om Microsoft 365 fyrtårn](m365-lighthouse-faq.yml) (artikel)
+[Installér Microsoft 365 Lighthouse baselines](m365-lighthouse-deploy-baselines.md) (artikel)\
+[Ofte stillede spørgsmål om Microsoft 365 Lighthouse](m365-lighthouse-faq.yml) (artikel)

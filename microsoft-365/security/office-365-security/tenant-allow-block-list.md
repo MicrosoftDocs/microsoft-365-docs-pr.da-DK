@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de administrerer tillader og blokke på listen over tilladte/blokerede lejere på sikkerhedsportalen.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: ad8920ae83b99528c47b00d375affb0fbfa6c330
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 1267c0316150f36562b145b14633d9d6562ad196
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714503"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822219"
 ---
 # <a name="manage-the-tenant-allowblock-list"></a>Administrer listen over tilladte/blokerede lejere
 
@@ -72,7 +72,7 @@ I denne artikel beskrives det, hvordan du konfigurerer poster på listen over ti
 
 - En post skal være aktiv inden for 30 minutter.
 
-- Poster på listen over tilladte/blokerede lejere udløber som standard efter 30 dage. Du kan angive en dato eller indstille dem til aldrig at udløbe.
+- Poster på listen over tilladte/blokerede lejere udløber som standard efter 30 dage. Du kan angive en dato eller indstille dem til aldrig at udløbe (kun for blokke).
 
 - Hvis du vil oprette forbindelse til Exchange Online PowerShell, skal du se [Opret forbindelse til Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell). Hvis du vil oprette forbindelse til enkeltstående EOP PowerShell, skal du se [Opret forbindelse til Exchange Online Protection PowerShell](/powershell/exchange/connect-to-exchange-online-protection-powershell).
 
@@ -490,6 +490,6 @@ Det er kun meddelelser fra dette domæne *og* det afsendende infrastrukturpar, d
 
 ## <a name="what-to-expect-after-you-add-an-allow-or-block-entry"></a>Hvad kan du forvente, når du har tilføjet en tilladelses- eller blokindtastning?
 
-Når du har tilføjet en tilladelsespost via indsendelsesportalen eller en blokpost på lejerlisten tillad/bloker, skal posten begynde at fungere med det samme.
+Når du har tilføjet en tilladelsespost via indsendelsesportalen eller en blokpost på lejerlisten tillad/bloker, skal posten begynde at fungere med det samme, når posten er aktiv. Posten vil for det meste være aktiv inden for 30 minutter, men nogle gange kan det tage op til 24 timer.
 
 Vi anbefaler, at du lader poster udløbe automatisk efter 30 dage for at se, om systemet har lært om tillad eller blok. Hvis ikke, skal du angive en ny post for at give systemet yderligere 30 dage til at lære.

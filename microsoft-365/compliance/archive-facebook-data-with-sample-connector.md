@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 07/15/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -15,18 +15,20 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan du konfigurerer & bruger en connector i Microsoft Purview-compliance-portal til at importere & arkivere data fra Facebook Business-sider til Microsoft 365.
-ms.openlocfilehash: d8b951e7f0b9733dacca7cfd16eed1042d84c460
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 79238bbbdcea71cf83342894d3b61e8047f5897a
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66623347"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822873"
 ---
 # <a name="set-up-a-connector-to-archive-facebook-data-preview"></a>Konfigurer en connector til arkivering af Facebook-data (prøveversion)
 
 Brug en connector i Microsoft Purview-compliance-portal til at importere og arkivere data fra Facebook Business-sider til Microsoft 365. Når du har konfigureret connectoren, opretter den forbindelse til Facebook Business-siden (efter en tidsplan), konverterer indholdet af Facebook-elementer til et mailformat og importerer derefter disse elementer til en postkasse i Microsoft 365.
 
 Når Facebook-dataene er importeret, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Content Search, In-Place Arkivering, Overvågning, Kommunikation og Microsoft 365-opbevaringspolitikker på Facebook-dataene. Når en postkasse f.eks. er sat i venteposition for procesførelse eller er tildelt en opbevaringspolitik, bevares Facebook-dataene. Du kan søge i tredjepartsdata ved hjælp af indholdssøgning eller knytte den postkasse, hvor Facebook-dataene er gemt, til en tilsynsførende i en Microsoft Purview eDiscovery (Premium)-sag. Brug af en connector til at importere og arkivere Facebook-data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+
+Hvis du vil deltage i prøveversionen, skal du kontakte teamet på dcfeedback@microsoft.com.
 
 ## <a name="prerequisites-for-setting-up-a-connector-for-facebook-business-pages"></a>Forudsætninger for konfiguration af en connector til Facebook Business-sider
 

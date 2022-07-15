@@ -13,12 +13,12 @@ ms.collection:
 search.appverid: MET150
 ms.localizationpriority: high
 description: Få mere at vide om licenser til SharePoint Syntex
-ms.openlocfilehash: 31b10c0107bf871f827244889ac7ec77f7958e1f
-ms.sourcegitcommit: 221212fff9737e0ea386755deb8fed62ae9c254b
+ms.openlocfilehash: 86776af3184e44cb88f17e0164859f0ba0e2f334
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66787490"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822263"
 ---
 # <a name="licensing-for-sharepoint-syntex"></a>Licenser til SharePoint Syntex
 
@@ -52,8 +52,8 @@ Hvis du planlægger at bruge et brugerdefineret Power Platform-miljø, skal du [
 Gå til [Power Platform Administration](https://admin.powerplatform.microsoft.com/resources/capacity) for at kontrollere dine kreditter og dit forbrug.
   
 ## <a name="additional-term-store-features"></a>Yderligere funktioner i ordbanken
- 
-Et abonnement på SharePoint Syntex indeholder følgende yderligere funktioner i ordbanken:
+
+Hvis du har en eller flere SharePoint Syntex licenser i din organisation, kan du bruge følgende funktioner til ordbank for SharePoint-administratorer:
  
 - Import af SKOS-baseret ordsæt
 - Push af virksomhedsindholdstyper til et hubwebsted, som også føjer dem til de tilknyttede websteder og eventuelle nyoprettede lister eller biblioteker

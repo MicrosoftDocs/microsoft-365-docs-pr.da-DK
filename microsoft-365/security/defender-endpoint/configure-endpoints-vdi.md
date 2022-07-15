@@ -18,18 +18,18 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: article
 ms.date: 04/15/2022
 ms.technology: mde
-ms.openlocfilehash: b3f27f0fc5b4b6d0a8d23c7fac112597fed381ad
-ms.sourcegitcommit: b3f5fe84a319741583954ef8ff2ec9ec6da69bcf
+ms.openlocfilehash: 7ef410beaacbc899c6f52e688ee38b3b545b8997
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/05/2022
-ms.locfileid: "65217436"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823081"
 ---
 # <a name="onboard-non-persistent-virtual-desktop-infrastructure-vdi-devices-in-microsoft-365-defender"></a>Onboarde VDI-enheder (Virtual Desktop Infrastructure) i Microsoft 365 Defender
 
 VDI (Virtual Desktop Infrastructure) er et koncept for it-infrastruktur, der gør det muligt for slutbrugere at få adgang til virtuelle virksomhedsskriveborde fra næsten alle enheder (f.eks. din personlige computer, smartphone eller tablet), hvilket fjerner behovet for, at organisationen giver brugerne fysiske maskiner. Brug af VDI-enheder reducerer omkostningerne, da it-afdelinger ikke længere er ansvarlige for at administrere, reparere og erstatte fysiske slutpunkter. Godkendte brugere kan få adgang til de samme virksomhedsservere, filer, apps og tjenester fra alle godkendte enheder via en sikker desktopklient eller -browser.
 
-Som ethvert andet system i et it-miljø skal disse også have en løsning til registrering og svar af slutpunkter (Slutpunktsregistrering og -svar) og antivirus for at beskytte mod avancerede trusler og angreb.
+Som ethvert andet system i et it-miljø skal disse også have en EDR- (Endpoint Detection and Response) og Antivirus-løsning for at beskytte mod avancerede trusler og angreb.
 
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
@@ -40,10 +40,11 @@ Som ethvert andet system i et it-miljø skal disse også have en løsning til re
 - VDI-enheder (Virtual Desktop Infrastructure)
 - Windows 10, Windows 11, Windows Server 2019, Windows Server 2022, Windows Server 2008R2/2012R2/2016
 
-> Vil du gerne opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
+
+> Vil du opleve Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-configvdi-abovefoldlink)
 
  > [!NOTE]
-  > **Faste VDI'er** -  [Onboarding af en vedvarende VDI-maskine](configure-endpoints.md) i Microsoft Defender for Endpoint håndteres på samme måde, som du ville onboarde en fysisk maskine, f.eks. en stationær eller bærbar computer. Gruppepolitik, Microsoft Endpoint Manager og andre metoder kan bruges til at onboarde en vedvarende maskine. På Microsoft 365 Defender-portalen (https://security.microsoft.com) under onboarding skal du vælge din foretrukne onboardingmetode og følge instruktionerne for den pågældende type. 
+  > **Faste VDI'er** – Onboarding af en vedvarende VDI-maskine i Microsoft Defender for Endpoint håndteres på samme måde, som du ville onboarde en fysisk maskine, f.eks. en stationær eller bærbar computer. Gruppepolitik, Microsoft Endpoint Manager og andre metoder kan bruges til at onboarde en vedvarende maskine. På Microsoft 365 Defender-portalen (https://security.microsoft.com) under onboarding skal du vælge din foretrukne onboardingmetode og følge instruktionerne for den pågældende type. Du kan få flere oplysninger under [Onboarding Windows-klient](onboard-windows-client.md).
 
 ## <a name="onboarding-non-persistent-virtual-desktop-infrastructure-vdi-devices"></a>Onboarding af VDI-enheder (Virtual Desktop Infrastructure), der ikke er vedvarende
 
@@ -70,14 +71,14 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 > [!WARNING]
 > I miljøer, hvor der er konfigurationer med få ressourcer, kan VDI-startproceduren nedsætte onboarding af Defender for Endpoint-sensoren.
 
-### <a name="for-windows-10-or-windows-11-or-windows-server-2012-r2-and-later"></a>Til Windows 10 eller Windows 11 eller Windows Server 2012 R2 og nyere
+### <a name="onboarding-steps"></a>Onboardingtrin
 
 > [!NOTE]
-> Windows Server 2016 og Windows Server 2012 R2 skal forberedes ved først at anvende installationspakken ved hjælp af vejledningen i [Onboard Windows-servere](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016), før denne funktion fungerer.
+> Windows Server 2016 og Windows Server 2012 R2 skal forberedes ved først at anvende installationspakken ved hjælp af vejledningen i [Onboard Windows-servere](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016) , for at denne funktion fungerer.
 
 1.  Åbn VDI-konfigurationspakken .zip fil (*WindowsDefenderATPOnboardingPackage.zip*), som du har downloadet fra guiden til onboarding af tjenesten. Du kan også hente pakken fra <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>:
 
-    1. I navigationsruden skal du vælge **Indstillinger** >  **EndpointsDevice** >  **managementOnboarding** > .
+    1. I navigationsruden skal du vælge **Indstillinger** > **Endpoints** > **Onboarding til enhedshåndtering** > .
 
     1. Vælg operativsystemet.
 
@@ -92,7 +93,7 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
     > [!NOTE]
     > Hvis du ikke kan se mappen `C:\WINDOWS\System32\GroupPolicy\Machine\Scripts\Startup` , kan den være skjult. Du skal vælge indstillingen **Vis skjulte filer og mapper** fra Stifinder.
 
-3. Åbn vinduet Lokal Gruppepolitik Editor, og naviger til **Computerkonfiguration** \> **Windows Indstillinger** \> **Start** **scripts**\>.
+3. Åbn vinduet Lokal Gruppepolitik editor, og naviger til **Computerkonfiguration** \> **Windows-indstillinger Scripts** \>  \> **Start**.
 
    > [!NOTE]
    > Domæne Gruppepolitik kan også bruges til onboarding af ikke-faste VDI-enheder.
@@ -100,11 +101,11 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 4. Afhængigt af den metode, du vil implementere, skal du følge de relevante trin:
     - For en enkelt post for hver enhed:
 
-         Vælg fanen **PowerShell-scripts**, og klik derefter på **Tilføj** (Windows Explorer åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding af PowerShell-script `Onboard-NonPersistentMachine.ps1`. Det er ikke nødvendigt at angive den anden fil, da den udløses automatisk.
+         Vælg fanen **PowerShell-scripts** , og klik derefter på **Tilføj** (Windows Stifinder åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding af PowerShell-script `Onboard-NonPersistentMachine.ps1`. Det er ikke nødvendigt at angive den anden fil, da den udløses automatisk.
 
     - For flere poster for hver enhed:
 
-         Vælg fanen **Scripts**, og klik derefter på **Tilføj** (Windows Explorer åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding-bash-scriptet `WindowsDefenderATPOnboardingScript.cmd`.
+         Vælg fanen **Scripts** , og klik derefter på **Tilføj** (Windows Stifinder åbnes direkte i den sti, hvor du kopierede onboardingscriptet tidligere). Naviger til onboarding-bash-scriptet `WindowsDefenderATPOnboardingScript.cmd`.
 
 5. Test din løsning:
    1. Opret en pulje med én enhed.
@@ -122,7 +123,7 @@ Følgende trin fører dig gennem onboarding af VDI-enheder og fremhæver trin fo
 ## <a name="for-downlevel-skus-windows-server-2008-r2"></a>For sku'er på et lavere niveau (Windows Server 2008 R2)
 
 > [!NOTE]
-> Disse instruktioner til andre Windows serverversioner gælder også, hvis du kører den tidligere Microsoft Defender for Endpoint til Windows Server 2016 og Windows Server 2012 R2, der kræver MMA. Instruktioner til migrering til den nye samlede løsning finder du [i Server migrationsscenarier i Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
+> Disse instruktioner til andre Windows-serverversioner gælder også, hvis du kører den tidligere Microsoft Defender for Endpoint til Windows Server 2016 og Windows Server 2012 R2, der kræver MMA. Instruktioner til migrering til den nye samlede løsning finder du [i Server migrationsscenarier i Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/server-migration).
 
 > [!NOTE]
 > Følgende registreringsdatabase er kun relevant, når målet er at opnå en "enkelt post for hver enhed".
@@ -163,6 +164,101 @@ Du kan finde flere oplysninger ved at følge vejledningen i [Installationsvejled
    >  REG DELETE "HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection" /v senseGuid /f
    >  exit
    >  ```
+
+
+## <a name="other-recommended-configuration-settings"></a>Andre anbefalede konfigurationsindstillinger
+
+Når du har onboardet enheder til tjenesten, er det vigtigt at drage fordel af de inkluderede trusselsbeskyttelsesfunktioner ved at aktivere dem med følgende anbefalede konfigurationsindstillinger.
+
+
+### <a name="next-generation-protection-configuration"></a>Næste generation af konfiguration af beskyttelse
+
+Følgende konfigurationsindstillinger anbefales:
+
+#### <a name="cloud-protection-service"></a>Cloud Protection Service
+
+- Slå skybaseret beskyttelse til: Ja
+- Skybaseret beskyttelsesniveau: Ikke konfigureret
+- Udvidet timeout for Defender Cloud i sekunder: 20
+
+
+#### <a name="exclusions"></a>Udeladelser
+- Deaktiver lokal administratorfletning: Ikke konfigureret
+- Defender-processer, der skal udelades:
+  - `%Programfiles%\FSLogix\Apps\frxccd.exe`
+  - `%Programfiles%\FSLogix\Apps\frxccds.exe`
+  - `%Programfiles%\FSLogix\Apps\frxsvc.exe`
+
+
+- Filtypenavne, der skal udelades fra scanninger og beskyttelse i realtid:
+  -  `%Programfiles%\FSLogix\Apps\frxccd.sys`
+  - `%Programfiles%\FSLogix\Apps\frxdrv.sys`
+  - `%Programfiles%\FSLogix\Apps\frxdrvvt.sys`
+  - `%TEMP%*.VHD`
+  - `%TEMP%*.VHDX`
+  - `%Windir%\TEMP*.VHD`
+  - `%Windir%\TEMP*.VHDX`
+  - `\\stroageaccount.file.core.windows.net\share**.VHD`
+  -  `\\stroageaccount.file.core.windows.net\share**.VHDX`
+
+
+#### <a name="real-time-protection"></a>Beskyttelse i realtid
+
+- Slå alle indstillinger til, og angiv til at overvåge alle filer
+
+#### <a name="remediation"></a>Oprydning
+- Antal dage, malware skal bevares i karantæne: 30
+- Indsend samtykke til eksempler: Send alle eksempler automatisk
+- Handling, der skal udføres på potentielt uønskede apps: Aktivér
+- Handlinger for registrerede trusler:
+  - Lav trussel: Ren
+  - Moderat trussel, høj trussel, alvorlig trussel: Karantæne
+
+
+
+#### <a name="scan"></a>Skan
+
+- Scan arkiverede filer: Ja
+- Brug lav CPU-prioritet til planlagte scanninger: Ikke konfigureret
+- Deaktiver komplet søgning efter indfangning: Ikke konfigureret
+- Deaktiver hurtig scanning af opfangning: Ikke konfigureret
+- Grænse for CPU-forbrug pr. scanning: 50
+- Scan tilknyttede netoword-drev under fuld scanning: Ikke konfigureret
+- Kør daglig hurtig scanning kl. 12
+- Scanningstype: Ikke konfigureret
+- Ugedag til kørsel af planlagt scanning: Ikke konfigureret
+- Tidspunkt på dagen til kørsel af en planlagt scanning: Ikke konfigureret
+- Kontrollér, om der er signaturopdateringer, før du kører scanningen: Ja
+
+#### <a name="updates"></a>Opdateringer
+- Angiv, hvor ofte der skal søges efter opdateringer til sikkerhedsintelligens: 8
+- Lad andre indstillinger være i standardtilstand
+
+#### <a name="user-experience"></a>Brugeroplevelse
+- Tillad brugeradgang til Microsoft Defender-appen: Ikke konfigureret
+
+
+#### <a name="enable-tamper-protection"></a>Aktivér beskyttelse mod manipulation
+- Aktivér beskyttelse mod ændring for at forhindre, at Microsoft Defender deaktiveres: Aktivér
+
+#### <a name="attack-surface-reduction"></a>Reduktion af angrebsoverfladen
+
+- Aktivér netværksbeskyttelse: Overvågningstilstand
+- Kræv SmartScreen til Microsoft Edge: Ja
+- Bloker maclious webstedsadgang: Ja
+- Bloker ikke-bekræftet fildownload: Ja
+
+#### <a name="attack-surface-reduction-rules"></a>Regler for reduktion af angrebsoverflade
+- Konfigurer alle tilgængelige regler til Overvågning.
+
+
+> [!NOTE]
+> Blokering af disse aktiviteter kan afbryde legitime forretningsprocesser. Den bedste fremgangsmåde er at indstille alt til overvågning, identificere, hvilke der er sikre at aktivere, og derefter aktivere disse indstillinger på slutpunkter, der ikke har falske positive registreringer.
+
+
+
+
+
 
 ## <a name="related-topics"></a>Relaterede emner
 - [Onboard Windows-enheder ved hjælp af Gruppepolitik](configure-endpoints-gp.md)

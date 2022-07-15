@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: seo-marvel-apr2020
 description: Få mere at vide om, hvordan administratorer kan konfigurere og bruge en oprindelig connector til at importere Twitter-data til Microsoft 365.
-ms.openlocfilehash: 1dd5de91484d04411b5216f6801589b32ef381ce
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 83558b4a2f188853b4deac31cf636476480a2557
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66625540"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822241"
 ---
 # <a name="set-up-a-microsoft-connector-to-archive-twitter-data-preview"></a>Konfigurer en Microsoft-connector til arkivering af Twitter-data (prøveversion)
 
@@ -29,6 +29,8 @@ Brug en connector i Microsoft Purview-compliance-portal til at importere og arki
 Når Twitter-dataene er importeret, kan du anvende Microsoft Purview-funktioner som Litigation Hold, Content Search, In-Place Arkivering, Overvågning og Microsoft 365-opbevaringspolitikker på Twitter-dataene. Når en postkasse f.eks. er sat i venteposition for procesførelse eller er tildelt en opbevaringspolitik, bevares Twitter-dataene. Du kan søge i tredjepartsdata ved hjælp af indholdssøgning eller knytte den postkasse, hvor Twitter-dataene er gemt, til en tilsynsførende i en Microsoft Purview eDiscovery (Premium)-sag. Brug af en connector til at importere og arkivere Twitter-data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
 
 Når Twitter-data er importeret, kan du anvende Microsoft Purview-funktioner, f.eks. Litigation Hold, Content Search, In-Place Archiving, Auditing, Communication compliance og Microsoft 365 retention policies, på de data, der er gemt i postkassen. Du kan f.eks. søge efter Twitter-data ved hjælp af indholdssøgning eller knytte den postkasse, hvor dataene er gemt, til en tilsynsførende i en eDiscovery-sag (Premium). Brug af en connector til at importere og arkivere Twitter-data i Microsoft 365 kan hjælpe din organisation med at overholde offentlige og lovmæssige politikker.
+
+Hvis du vil deltage i prøveversionen, skal du kontakte teamet på dcfeedback@microsoft.com.
 
 ## <a name="before-you-set-up-a-connector"></a>Før du konfigurerer en connector
 

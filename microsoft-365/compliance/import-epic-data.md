@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 07/15/2022
 audience: Admin
 ms.topic: how-to
 ms.service: O365-seccomp
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.collection: M365-security-compliance
 description: Administratorer kan konfigurere en dataconnector til at importere EHR-data (Electronic Healthcare Records) fra organisationens Epic-system til Microsoft 365. Dette giver dig mulighed for at bruge Epic EHR-data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere uautoriseret adgang til patientdata af dine medarbejdere.
-ms.openlocfilehash: c2caef93a8bb1c5cb272e0420b0c3ab8cfe4499b
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: d12dd85fb084813e730c4c1e02e8e440d3acc16f
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66624041"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822773"
 ---
 # <a name="set-up-a-connector-to-import-epic-ehr-audit-data-preview"></a>Konfigurer en connector for at importere Epic EHR-overvågningsdata (prøveversion)
 
@@ -36,6 +36,8 @@ Konfiguration af en Epic-connector består af følgende opgaver:
 - Kørsel af et script for at pushe Epic EHR-overvågningsposter til API-slutpunktet.
 
 - Du kan eventuelt planlægge, at scriptet køres automatisk for at importere overvågningsposter.
+
+Hvis du vil deltage i prøveversionen, skal du kontakte teamet på dcfeedback@microsoft.com.
 
 ## <a name="before-you-set-up-the-connector"></a>Før du konfigurerer connectoren
 

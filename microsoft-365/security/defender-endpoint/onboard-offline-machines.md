@@ -1,8 +1,8 @@
 ---
-title: Onboard-enheder uden internetadgang til Microsoft Defender til Slutpunkt
+title: Onboarde enheder uden internetadgang til Microsoft Defender for Endpoint
 ms.reviewer: ''
-description: Onboard-enheder uden internetadgang, så de kan sende sensordata til Microsoft Defender til slutpunkts sensoren
-keywords: onboard, servers, VM, on-premises, oms gateway, log analytics, azure log analytics,  gateway
+description: Onboarde enheder uden internetadgang, så de kan sende sensordata til den Microsoft Defender for Endpoint sensor
+keywords: onboard, servers, vm, on-premises, oms gateway, log analytics, azure log analytics, mma
 ms.prod: m365-security
 ms.mktglfcycl: deploy
 ms.sitesec: library
@@ -15,14 +15,14 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: db219fe7ce39ae59668cedff10f03e931ddba416
-ms.sourcegitcommit: eb8c600d3298dca1940259998de61621e6505e69
+ms.openlocfilehash: 33b539018f479c1b023a656ab056ca892d27e526
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "63597480"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66822175"
 ---
-# <a name="onboard-devices-without-internet-access-to-microsoft-defender-for-endpoint"></a>Onboard-enheder uden internetadgang til Microsoft Defender til Slutpunkt
+# <a name="onboard-devices-without-internet-access-to-microsoft-defender-for-endpoint"></a>Onboarde enheder uden internetadgang til Microsoft Defender for Endpoint
 
 [!INCLUDE [Microsoft 365 Defender rebranding](../../includes/microsoft-defender.md)]
 
@@ -31,48 +31,36 @@ ms.locfileid: "63597480"
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
-> Vil du opleve Microsoft Defender til slutpunkt? [Tilmeld dig for at få en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
+> Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+For enheder uden direkte internetforbindelse er brugen af en proxyløsning den anbefalede fremgangsmåde. For ældre Windows-enheder, der er onboardet ved hjælp af den tidligere MMA-baserede løsning, giver brugen af OMS-gatewayløsningen en alternativ tilgang. Du kan få flere oplysninger om onboardingmetoder i følgende artikler:
+- [Onboard tidligere versioner af Windows](/microsoft-365/security/defender-endpoint/onboard-downlevel)
+- [Onboarder servere til Microsoft Defender for Endpoint-tjenesten](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2008-r2-sp1--windows-server-2012-r2-and-windows-server-2016)
 
-Hvis du vil onboarde enheder uden adgang til internettet, skal du gøre følgende generelle trin:
+> [!IMPORTANT]
+> - Windows eller Windows Server i afbrudte miljøer skal kunne opdatere lister over tillidscertifikater offline via en intern fil eller webserver.
+> - Du kan få flere oplysninger om, hvordan du opdaterer CTLs offline, under [Konfigurer en fil eller webserver til at hente CTL-filerne](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265983(v=ws.11)#configure-a-file-or-web-server-to-download-the-ctl-files).
 
-> [!IMPORTANT] 
-> Nedenstående trin gælder kun for enheder, der kører tidligere versioner Windows f.eks.: Windows Server 2016 og tidligere eller Windows 8.1 og tidligere.
+## <a name="devices-running-windows-10-or-later-windows-server-2012-r2-or-later-linux-and-macos"></a>Enheder, der kører Windows 10 eller nyere, Windows Server 2012 R2 eller nyere, Linux og macOS
+
+Afhængigt af operativsystemet kan den proxy, der skal bruges til Microsoft Defender for Endpoint konfigureres automatisk, typisk ved hjælp af autodiscovery eller en fil til automatisk konfiguration eller statisk specifik for Defender for Endpoint-tjenester, der kører på enheden.
+
+- For Windows-enheder skal du se [Konfigurer indstillingerne for enhedsproxy og internetforbindelse](/microsoft-365/security/defender-endpoint/configure-proxy-internet)
+- For Linux-enheder skal du se [Konfigurer Microsoft Defender for Endpoint på Linux til registrering af statisk proxy](/microsoft-365/security/defender-endpoint/linux-static-proxy-configuration)
+- For macOS-enheder henvises [der til Microsoft Defender for Endpoint på Mac](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#network-connections)
+
+## <a name="windows-devices-running-the-previous-mma-based-solution"></a>Windows-enheder, der kører den tidligere MMA-baserede løsning
 
 > [!NOTE]
-> - En OMS-gatewayserver kan ikke bruges som proxy for afbrudte Windows- eller Windows-serverenheder, når den er konfigureret via registreringsdatabasen 'TelemetryProxyServer' eller gruppepolitikobjekt.
-> - For Windows eller Windows server – mens du kan bruge TelemetryProxyServer, skal den pege på en standardproxyenhed eller -maskine.
-> - Desuden skal Windows eller Windows Server i afbrudte miljøer kunne opdatere lister over certifikattillide offline via en intern fil eller webserver.
-> - Du kan finde flere oplysninger om opdatering af [CTL-filer offline under Konfigurere en fil eller webserver til at hente CTL-filerne](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265983(v=ws.11)#configure-a-file-or-web-server-to-download-the-ctl-files).
+> - En OMS-gatewayserver kan ikke bruges som proxy for frakoblede Windows- eller Windows Server-enheder, når den er konfigureret via registreringsdatabasen 'TelemetryProxyServer' eller GPO.
+> - Til Windows eller Windows Server – selvom du kan bruge TelemetryProxyServer, skal den pege på en standardproxyenhed eller -apparat.
 
-Du kan finde flere oplysninger om onboardingmetoder i følgende artikler:
-- [Onboard tidligere versioner af Windows](/microsoft-365/security/defender-endpoint/onboard-downlevel)
-- [Onboard-servere til Microsoft Defender for Endpoint-tjenesten](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2008-r2-sp1--windows-server-2012-r2-and-windows-server-2016)
-- [Konfigurere indstillinger for enhedsproxy og internetforbindelse](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy)
-
-## <a name="on-premises-devices"></a>Lokale enheder
-
-- Konfigurer Azure Log Analytics (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
-  - [Azure Log Analytics-agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
-  - [Installér og konfigurer Microsoft Overvågningsagent (MANUELT)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) peger på Defender for Endpoint Workspace-&-id
+- Konfigurer Azure Log Analytics (tidligere kaldet OMS Gateway), så den fungerer som proxy eller hub:
+  - [Azure Log Analytics Agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
+  - [Installér og konfigurer Microsoft Monitoring Agent (MMA)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) peg på Defender for Endpoint Workspace-nøglen & id
 
 [Onboard tidligere versioner af Windows](onboard-downlevel.md)
 
-- Offlineenheder i det samme netværk af Azure Log Analytics
-  - Konfigurer  ÆLDRE til at pege på:
-    - Azure Log Analytics IP som proxy
-    - Defender til endpoint-arbejdsområdets nøgle & id
+### <a name="microsoft-defender-for-cloud"></a>Microsoft Defender for Cloud
 
-## <a name="azure-virtual-machines"></a>Virtuelle Azure-maskiner
-
-- Konfigurer Azure Log Analytics Gateway (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
-    - [Azure Log Analytics Gateway](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
-    - [Installér og konfigurer Microsoft Overvågningsagent (MANUELT)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) peger på Defender for Endpoint Workspace-&-id
-- Offline Azure-VM'er i det samme netværk af OMS-gateway
-    - Konfigurere Azure Log Analytics IP som en proxy
-    - Azure Log Analytics-arbejdsområdenøgle til &-id
-- Microsoft Defender til skyen
-    - [Arbejdsområde til logfiler \> for sikkerhedspolitik](/azure/security-center/security-center-wdatp#enable-windows-defender-atp-integration)
-    - [Trusselsregistrering \> Gør det muligt for Defender til slutpunkt at få adgang til mine data](/azure/security-center/security-center-wdatp#enable-windows-defender-atp-integration)
-
-    Få mere at vide under [Arbejde med sikkerhedspolitikker](/azure/security-center/tutorial-security-policy).
+- Gennemse afsnittet forudsætninger i [Beskyt dine slutpunkter med Defender for Clouds integrerede EDR-løsning: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#prerequisites)

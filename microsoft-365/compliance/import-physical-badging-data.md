@@ -15,12 +15,12 @@ search.appverid:
 ms.collection: M365-security-compliance
 ms.custom: admindeeplinkCOMPLIANCE
 description: Administratorer kan konfigurere en dataconnector til at importere data fra deres organisations fysiske badgingsystem til Microsoft 365. Dette giver dig mulighed for at bruge disse data i politikker for styring af insiderrisiko for at hjælpe dig med at registrere adgang til dine fysiske bygninger af bestemte brugere, der kan indikere en mulig intern trussel mod din organisation.
-ms.openlocfilehash: 90e0a421397683fe05161b27b1743354713de516
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: e34706e7fc6be5d813d718e0d927859ca91d9ee8
+ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66641422"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66823103"
 ---
 # <a name="set-up-a-connector-to-import-physical-badging-data-preview"></a>Konfigurer en connector for at importere data om dårlig fysisk skrivning (eksempelvisning)
 
@@ -37,6 +37,8 @@ Konfiguration af en fysisk dårlig connector består af følgende opgaver:
 - Kørsel af et script for at overføre de fysiske badging-data til API-slutpunktet.
 
 - Du kan eventuelt planlægge, at scriptet køres automatisk for at importere data om aktuelt fysisk dårligging.
+
+Hvis du vil deltage i prøveversionen, skal du kontakte teamet på dcfeedback@microsoft.com.
 
 ## <a name="before-you-set-up-the-connector"></a>Før du konfigurerer connectoren
 
