@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger til it-administratorer om administration af følsomhedsmærkater i Office-apps til stationære computere, mobilenheder og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: c0557f53ee50189969f7e2225cabd74354b28055
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: f5f404df8d8cbf5d4ac755c17c2a6c07717d8360
+ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66640472"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797967"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -104,7 +104,7 @@ De angivne tal er det mindste antal Office-programversioner, der kræves for hve
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassificeringer, der kan oplæres                    | Aktuel kanal: 2105+ <br /><br> Månedlig Enterprise-kanal: 2105+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.49+ | Under gennemgang           | Under gennemgang               | Ja |
 |[Forskellige indstillinger for standardmærkat og obligatorisk mærkning](#outlook-specific-options-for-default-label-and-mandatory-labeling)                    | Aktuel kanal: 2105+ <br /><br> Månedlig Enterprise-kanal: 2105+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.43+ <sup>\*</sup>                   | 4.2111+           | 4.2111+               | Ja |
 |[Understøttelse af PDF](#pdf-support) | Under gennemgang|  Under gennemgang | Under gennemgang | Under gennemgang | Under gennemgang |
-|[Anvend S/MIME-beskyttelse](#configure-a-label-to-apply-smime-protection-in-outlook)                    | Under gennemgang | Udrulning: 16,61+ <sup>\*</sup>                   | Udrulning: 4.2208+ | Udrulning: 4.2203+ | Under gennemgang |
+|[Anvend S/MIME-beskyttelse](#configure-a-label-to-apply-smime-protection-in-outlook)                    | Under gennemgang | Udrulning: 16,61+ <sup>\*</sup>                   | Udrulning: 4.2226+ | Udrulning: 4.2203+ | Under gennemgang |
 
 **Fodnoter:**
 

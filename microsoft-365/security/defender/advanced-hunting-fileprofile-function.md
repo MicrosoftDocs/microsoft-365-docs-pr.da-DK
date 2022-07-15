@@ -1,7 +1,7 @@
 ---
-title: Funktionen FileProfile() i avanceret jagt på Microsoft 365 Defender
-description: Få mere at vide om, hvordan du bruger FileProfile() til at berige oplysninger om filer i dine avancerede resultater af en forespørgsel
-keywords: avanceret jagt, trusselssøgning, cybertrusler på jagt, Microsoft 365 Defender, microsoft 365, m365, søgning, forespørgsel, telemetri, skemareference, kusto, FileProfile, filprofil, funktion, berigende
+title: Funktionen FileProfile() i avanceret jagt efter Microsoft 365 Defender
+description: Få mere at vide om, hvordan du bruger FileProfile() til at forbedre oplysninger om filer i dine avancerede resultater af jagtforespørgslen
+keywords: avanceret jagt, trusselsjagt, cybertrusselsjagt, Microsoft 365 Defender, microsoft 365, m365, søgning, forespørgsel, telemetri, skemareference, kusto, FileProfile, filprofil, funktion, berigelse
 search.product: eADQiWindows 10XVcnh
 search.appverid: met150
 ms.prod: m365-security
@@ -18,12 +18,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: article
 ms.technology: m365d
-ms.openlocfilehash: 2cd8c91717af8390160bf45a625ae3a3044ee387
-ms.sourcegitcommit: 6dcc3b039e0f0b9bae17c386f14ed2b577b453a6
+ms.openlocfilehash: 3e530bd9c1e6af58c83a88fc16b5ac4f9aee60e0
+ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "63591157"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797923"
 ---
 # <a name="fileprofile"></a>FileProfile()
 
@@ -33,26 +33,26 @@ ms.locfileid: "63591157"
 **Gælder for:**
 - Microsoft 365 Defender
 
-Funktionen `FileProfile()` er en berigende funktion i [avanceret jagt,](advanced-hunting-overview.md) der føjer følgende data til filer, der findes af forespørgslen.
+Funktionen `FileProfile()` er en berigelsesfunktion i [avanceret jagt](advanced-hunting-overview.md) , der føjer følgende data til filer, der blev fundet af forespørgslen.
 
 | Kolonne | Datatype | Beskrivelse |
 |------------|---------------|-------------|
-| `SHA1` | `string` | SHA-1 i den fil, som den optagede handling blev anvendt på |
-| `SHA256` | `string` | SHA-256 af den fil, som den optagede handling blev anvendt på |
-| `MD5` | `string` | MD5-hash for den fil, som den optagede handling blev anvendt på |
+| `SHA1` | `string` | SHA-1 for den fil, som den registrerede handling blev anvendt på |
+| `SHA256` | `string` | SHA-256 af den fil, som den registrerede handling blev anvendt på |
+| `MD5` | `string` | MD5-hash for den fil, som den registrerede handling blev anvendt på |
 | `FileSize` | `int` | Filens størrelse i byte |
 | `GlobalPrevalence` | `int` | Antal forekomster af enheden, der er observeret af Microsoft globalt |
-| `GlobalFirstSeen` | `datetime` | Dato og klokkeslæt, hvor enheden første gang observeres af Microsoft globalt |
-| `GlobalLastSeen` | `datetime` | Dato og klokkeslæt, hvor enheden sidst blev observeret af Microsoft globalt |
+| `GlobalFirstSeen` | `datetime` | Dato og klokkeslæt for første gang, hvor enheden blev observeret globalt af Microsoft |
+| `GlobalLastSeen` | `datetime` | Den dato og det klokkeslæt, hvor enheden sidst blev observeret af Microsoft globalt |
 | `Signer` | `string` | Oplysninger om underskriveren af filen |
 | `Issuer` | `string` | Oplysninger om det udstedende nøglecenter |
-| `SignerHash` | `string` | Entydig hash-værdi, der identificerer underskriveren |
-| `IsCertificateValid` | `boolean` | Om det certifikat, der bruges til at signere filen, er gyldigt |
-| `IsRootSignerMicrosoft` | `boolean` | Angiver, om underskriveren af rodcertifikatet er Microsoft |
-| `SignatureState` | `string` | Tilstanden for filsignaturen: SignedValid – filen er signeret med en gyldig signatur, SignedInvalid – filen er signeret, men certifikatet er ugyldigt, Usigneret – filen er ikke signeret, Ukendt – oplysninger om filen kan ikke hentes
-| `IsExecutable` | `boolean` | Om filen er en bærbar eksekverbar fil (PE) |
-| `ThreatName` | `string` | Registreringsnavn for malware eller andre trusler, der er fundet |
-| `Publisher` | `string` | Navnet på den organisation, der har publiceret filen |
+| `SignerHash` | `string` | Entydig hashværdi, der identificerer underskriveren |
+| `IsCertificateValid` | `boolean` | Om det certifikat, der blev brugt til at signere filen, er gyldigt |
+| `IsRootSignerMicrosoft` | `boolean` | Angiver, om underskriveren af rodcertifikatet er Microsoft, og om filen er indbygget i Windows OS |
+| `SignatureState` | `string` | Tilstand for filsignatur: SignedValid – filen er signeret med en gyldig signatur, SignedInvalid - filen er signeret, men certifikatet er ugyldigt, Usigneret - filen er ikke signeret, Ukendt - oplysninger om filen kan ikke hentes
+| `IsExecutable` | `boolean` | Om filen er en PE-fil (Portable Executable) |
+| `ThreatName` | `string` | Registreringsnavn for malware eller andre trusler, der findes |
+| `Publisher` | `string` | Navnet på den organisation, der publicerede filen |
 | `SoftwareName` | `string` | Navnet på softwareproduktet |
 
 ## <a name="syntax"></a>Syntaks
@@ -63,16 +63,16 @@ invoke FileProfile(x,y)
 
 ## <a name="arguments"></a>Argumenter
 
-- **x** – kolonnen fil-id, der skal bruges: `SHA1`, `SHA256`, `InitiatingProcessSHA1`eller `InitiatingProcessSHA256`; funktion bruger, `SHA1` hvis ikke-angivet
-- **y** – begræns antallet af poster, der kan beriges, 1-1000; funktion bruger 100, hvis ikke-angivet
+- **x** – den fil-id-kolonne, der skal bruges: `SHA1`, `SHA256`, `InitiatingProcessSHA1`eller `InitiatingProcessSHA256`; funktionen bruger `SHA1` , hvis den ikke er angivet
+- **y** – begrænsning til antallet af poster, der skal beriges, 1-1000; funktionen bruger 100, hvis den ikke er angivet
 
 
 >[!TIP]
-> Berigende funktioner viser kun supplerende oplysninger, når de er tilgængelige. Tilgængeligheden af oplysninger er varieret og afhænger af en masse faktorer. Sørg for at overveje dette, når du bruger FileProfile() i dine forespørgsler eller til at oprette brugerdefinerede registreringer. For at få de bedste resultater anbefaler vi, at du bruger funktionen FileProfile() med SHA1.
+> Berigelsesfunktioner viser kun supplerende oplysninger, når de er tilgængelige. Tilgængeligheden af oplysninger er forskellig og afhænger af mange faktorer. Sørg for at overveje dette, når du bruger FileProfile() i dine forespørgsler eller ved oprettelse af brugerdefinerede registreringer. Vi anbefaler, at du bruger funktionen FileProfile() med SHA1 for at opnå de bedste resultater.
 
 ## <a name="examples"></a>Eksempler
 
-### <a name="project-only-the-sha1-column-and-enrich-it"></a>Project kun SHA1-kolonnen og gør den bedre
+### <a name="project-only-the-sha1-column-and-enrich-it"></a>Projektér kun SHA1-kolonnen, og gør den bedre
 
 ```kusto
 DeviceFileEvents
@@ -82,7 +82,7 @@ DeviceFileEvents
 | invoke FileProfile()
 ```
 
-### <a name="enrich-the-first-500-records-and-list-low-prevalence-files"></a>Gør de første 500 poster bedre, og opliste svagtseende filer
+### <a name="enrich-the-first-500-records-and-list-low-prevalence-files"></a>Enrich de første 500 poster og liste filer med lav prævalens
 
 ```kusto
 DeviceFileEvents
@@ -93,7 +93,7 @@ DeviceFileEvents
 ```
 
 ## <a name="related-topics"></a>Relaterede emner
-- [Avanceret jagtoversigt](advanced-hunting-overview.md)
-- [Lær forespørgselssproget](advanced-hunting-query-language.md)
+- [Oversigt over avanceret jagt](advanced-hunting-overview.md)
+- [Få mere at vide om forespørgselssproget](advanced-hunting-query-language.md)
 - [Forstå skemaet](advanced-hunting-schema-tables.md)
-- [Få flere forespørgselsekse eksempler](advanced-hunting-shared-queries.md)
+- [Få flere eksempler på forespørgsler](advanced-hunting-shared-queries.md)

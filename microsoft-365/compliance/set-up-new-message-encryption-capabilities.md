@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkMAC
 - admindeeplinkEXCHANGE
-ms.openlocfilehash: 828588491c3efbc696994f6073ca4ce849a64be5
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: a77dcb557901f8a159e0c82a084dd02255193c72
+ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66622123"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797945"
 ---
 # <a name="set-up-message-encryption"></a>Konfigurer meddelelsekryptering
 
@@ -52,10 +52,9 @@ Du kan finde flere oplysninger under:
 
 ### <a name="manually-activating-azure-rights-management"></a>Manuel aktivering af Azure Rights Management
 
-Hvis du har deaktiveret Azure RMS, eller hvis det af en eller anden grund ikke blev aktiveret automatisk, kan du aktivere det manuelt i:
+Hvis du har deaktiveret Azure RMS, eller hvis det af en eller anden grund ikke blev aktiveret automatisk, kan du aktivere det manuelt. 
 
-- **Microsoft 365 Administration**: Se [Sådan aktiverer du Azure Rights Management fra Administration for at få](/azure/information-protection/activate-office365) instruktioner.
-- **Azure Portal**: Se [Sådan aktiverer du Azure Rights Management fra Azure Portal for at](/azure/information-protection/activate-azure) få instruktioner.
+Du kan finde instruktioner under [Sådan aktiverer eller bekræfter du status for beskyttelsestjeneste](/azure/information-protection/activate-service#how-to-activate-or-confirm-the-status-of-the-protection-service).
 
 ## <a name="configure-management-of-your-azure-information-protection-tenant-key"></a>Konfigurer administration af din Azure Information Protection-lejernøgle
 

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger karantænepolitikker til at styre, hvad brugerne kan gøre for at sætte meddelelser i karantæne.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 780d2bade0713bac295cf9597662c5ef2313a093
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 9d23083927d50d226692afe19223ed93aceb0b7b
+ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490094"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66798140"
 ---
 # <a name="quarantine-policies"></a>Karantænepolitik
 
@@ -99,6 +99,8 @@ For nye organisationer eller ældre organisationer, der aldrig har haft meddelel
 ## <a name="step-1-create-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Trin 1: Opret karantænepolitikker på Microsoft 365 Defender-portalen
 
 1. På [Microsoft 365 Defender portal skal](https://security.microsoft.com) du gå til **Mail & samarbejdspolitikker** \> **& Regler** \> **Trusselspolitikker** \> **Karantænepolitikker** i afsnittet **Regler**. Du kan også gå direkte til siden **Karantænepolitikker** ved at bruge <https://security.microsoft.com/quarantinePolicies>.
+
+   :::image type="content" source="../../media/mdo-quarantine-policy-page.png" alt-text="Siden Med karantænepolitik på portalen Microsoft 365 Defender." lightbox="../../media/mdo-quarantine-policy-page.png":::
 
 2. Klik på Ikonet Tilføj brugerdefineret politik på ![siden **Karantænepolitikker**.](../../media/m365-cc-sc-create-icon.png) **Tilføj brugerdefineret politik**.
 
@@ -530,6 +532,8 @@ De globale indstillinger for karantænepolitikker giver dig mulighed for at tilp
    - **Send slutbrugerens spammeddelelse hver (dag)**: Vælg hyppigheden for karantænemeddelelser. Standardværdien er 3 dage, men du kan vælge 1 til 15 dage.
 
 4. Klik på **Gem**, når du er færdig.
+
+   :::image type="content" source="../../media/mdo-quarantine-policy-quarantine-notification-settings.png" alt-text="Pop op-vinduet Indstillinger for karantænemeddelelse på Microsoft 365 Defender-portalen." lightbox="../../media/mdo-quarantine-policy-quarantine-notification-settings.png":::
 
 ## <a name="view-quarantine-policies-in-the-microsoft-365-defender-portal"></a>Få vist karantænepolitikker på Microsoft 365 Defender-portalen
 

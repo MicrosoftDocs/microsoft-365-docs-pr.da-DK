@@ -16,12 +16,12 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.technology: mde
 ms.collection: m365-security-compliance
-ms.openlocfilehash: 06bcba129646eb7c3f820d95dae5fd3fc77805dd
-ms.sourcegitcommit: 8a0de6240facfe26ee391a14076b7fe534ee6598
+ms.openlocfilehash: fbcad753d88b3ead3c6a9b37330f29b1b1fbb7a9
+ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "65923162"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66798099"
 ---
 # <a name="troubleshoot-performance-issues-related-to-real-time-protection"></a>Fejlfinding af problemer med ydeevnen i forbindelse med beskyttelse i realtid
 
@@ -36,7 +36,7 @@ ms.locfileid: "65923162"
 **Platforme**
 - Windows
 
-Hvis dit system har et højt CPU-forbrug eller ydeevneproblemer, der er relateret til beskyttelsestjenesten i realtid i Microsoft Defender for Endpoint, kan du sende en billet til Microsoft Support. Følg trinnene i [Indsaml Microsoft Defender Antivirus-diagnosticeringsdata](collect-diagnostic-data.md).
+Hvis dit system har et højt CPU-forbrug eller ydeevneproblemer, der er relateret til beskyttelsestjenesten i realtid i Microsoft Defender for Endpoint, kan du indsende en anmodning til Microsoft Support. Følg trinnene i [Indsaml Microsoft Defender Antivirus-diagnosticeringsdata](collect-diagnostic-data.md).
 
 Som administrator kan du også selv foretage fejlfinding af disse problemer.
 
@@ -51,9 +51,9 @@ Du kan også angive yderligere logge til din indsendelse til Microsoft Support v
 
 ## <a name="check-with-vendor-for-antivirus-exclusions"></a>Kontakt forhandleren for at få antivirusudeladelser
 
-Hvis du nemt kan identificere den software, der påvirker systemets ydeevne, skal du gå til softwareleverandørens vidensbase eller supportcenter. Søg, hvis de har anbefalinger om antivirusudeladelser. Hvis leverandørens websted ikke har dem, kan du åbne en supportanmodning sammen med vedkommende og bede vedkommende om at publicere en.
+Hvis du nemt kan identificere den software, der påvirker systemets ydeevne, skal du gå til softwareleverandørens videnbase eller supportcenter. Søg, hvis de har anbefalinger om antivirusudeladelser. Hvis leverandørens websted ikke har dem, kan du åbne en supportanmodning sammen med vedkommende og bede vedkommende om at publicere en.
 
-Vi anbefaler, at softwareleverandører følger de forskellige retningslinjer i [Partnering med branchen for at minimere falske positiver](https://www.microsoft.com/security/blog/2018/08/16/partnering-with-the-industry-to-minimize-false-positives/). Leverandøren kan indsende deres software via [Microsoft Security Intelligence-portalen](https://www.microsoft.com/wdsi/filesubmission?persona=SoftwareDeveloper).
+Vi anbefaler, at softwareleverandører følger de forskellige retningslinjer i [Partnering med branchen for at minimere falske positiver](https://www.microsoft.com/security/blog/2018/08/16/partnering-with-the-industry-to-minimize-false-positives/). Leverandøren kan indsende sin software via [Microsoft Sikkerhedsviden-portalen](https://www.microsoft.com/wdsi/filesubmission?persona=SoftwareDeveloper).
 
 ## <a name="analyze-the-microsoft-protection-log"></a>Analysér Microsoft Protection Log
 Du kan finde Microsoft-logfilen til beskyttelse i **C:\ProgramData\Microsoft\Windows Defender\Support**.
@@ -84,7 +84,7 @@ Hvis det forrige trin ikke løser problemet, kan du indsamle flere oplysninger v
 
 Procesovervågning (ProcMon) er et avanceret overvågningsværktøj, der kan vise processer i realtid. Du kan bruge dette til at registrere problemet med ydeevnen, efterhånden som det opstår.
 
-1. Download [Process Monitor v3.60](/sysinternals/downloads/procmon) til en mappe som `C:\temp`.
+1. Download [Process Monitor v3.89](/sysinternals/downloads/procmon) til en mappe som `C:\temp`.
 
 2. Sådan fjernes filens webmærke:
     1. Højreklik **ProcessMonitor.zip** , og vælg **Egenskaber**.
@@ -165,7 +165,7 @@ WPR er en del af Windows Assessment and Deployment Kit (Windows ADK) og kan down
 
 Du kan bruge WPR-brugergrænsefladen ved at følge trinnene i [Hent ydelseslogge ved hjælp af brugergrænsefladen for WPR](#capture-performance-logs-using-the-wpr-ui).
 
-Du kan også bruge kommandolinjeværktøjet *wpr.exe*, som er tilgængeligt i Windows 8 og nyere versioner, ved at følge trinnene i [Registrer ydeevnelogge ved hjælp af kommandolinjegrænsefladen for WPR](#capture-performance-logs-using-the-wpr-cli).
+Du kan også bruge kommandolinjeværktøjet *wpr.exe*, som er tilgængeligt i Windows 8 og nyere versioner, ved at følge trinnene i [Registrer ydelseslogge ved hjælp af kommandolinjegrænsefladen for WPR](#capture-performance-logs-using-the-wpr-cli).
 
 ### <a name="capture-performance-logs-using-the-wpr-ui"></a>Hent ydelseslogge ved hjælp af WPR-brugergrænsefladen
 
@@ -184,7 +184,7 @@ Du kan også bruge kommandolinjeværktøjet *wpr.exe*, som er tilgængeligt i Wi
 
    :::image type="content" source="images/wpt-yes.png" alt-text="UAC-siden" lightbox="images/wpt-yes.png":::
 
-4. Derefter skal du downloade [Microsoft Defender for Endpoint-analyseprofilen](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp) og gemme som `MDAV.wprp` i en mappe som `C:\temp`.
+4. Download derefter [Microsoft Defender for Endpoint analyseprofilen](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp), og gem som `MDAV.wprp` i en mappe som .`C:\temp`
 
 5. Vælg **Flere indstillinger** i dialogboksen WPR.
 
@@ -193,7 +193,7 @@ Du kan også bruge kommandolinjeværktøjet *wpr.exe*, som er tilgængeligt i Wi
 
 6. Vælg **Tilføj profiler...** , og gå til stien `MDAV.wprp` til filen.
 
-7. Derefter får du vist en ny profil, der er angivet under *Brugerdefinerede målinger* med navnet *Microsoft Defender for Endpoint-analyse* under den.
+7. Derefter får du vist en ny profil, der er angivet under *Brugerdefinerede målinger* med navnet *Microsoft Defender for Endpoint analyse* under den.
 
    :::image type="content" source="images/wpr-infile.png" alt-text="Filen i" lightbox="images/wpr-infile.png":::
 
@@ -201,11 +201,11 @@ Du kan også bruge kommandolinjeværktøjet *wpr.exe*, som er tilgængeligt i Wi
     > Hvis din Windows Server har 64 GB RAM eller mere, skal du bruge den brugerdefinerede måling `Microsoft Defender for Endpoint analysis for large servers` i stedet for `Microsoft Defender for Endpoint analysis`. Ellers kan dit system forbruge en stor mængde hukommelse eller buffere, der ikke er sideopdelt, hvilket kan medføre ustabile systemer. Du kan vælge, hvilke profiler der skal tilføjes, ved at udvide **Ressourceanalyse**.
     Denne brugerdefinerede profil giver den nødvendige kontekst til dybdegående ydeevneanalyse.
 
-8. Sådan bruger du den brugerdefinerede måling Microsoft Defender for Endpoint detaljeret analyseprofil i WPR-brugergrænsefladen:
+8. Sådan bruger du den brugerdefinerede måling Microsoft Defender for Endpoint detaljeret analyseprofil i brugergrænsefladen for WPR:
 
     1. Sørg for, at der ikke er valgt nogen profiler under grupperne *Første niveau*, *Ressourceanalyse* og *Scenarieanalyse* .
     2. Vælg **Brugerdefinerede målinger**.
-    3. Vælg **Microsoft Defender til analyse af slutpunkter**.
+    3. Vælg **Microsoft Defender for Endpoint analyse**.
     4. Vælg **Detaljeret** under *detaljeniveau* .
     5. Vælg **Fil** eller **hukommelse** under Logføringstilstand.
 
@@ -255,13 +255,13 @@ Du kan også bruge kommandolinjeværktøjet *wpr.exe*, som er tilgængeligt i Wi
 
 Kommandolinjeværktøjet *wpr.exe* er en del af operativsystemet, der starter med Windows 8. Sådan indsamler du en WPR-sporing ved hjælp af kommandolinjeværktøjet wpr.exe:
 
-1. Download **[Microsoft Defender for Endpoint-analyseprofilen](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** for at få oplysninger om ydeevnesporinger til en fil, der er navngivet `MDAV.wprp` i en lokal mappe, f.eks `C:\traces`. .
+1. Download **[Microsoft Defender for Endpoint analyseprofil](https://github.com/YongRhee-MDE/Scripts/blob/master/MDAV.wprp)** for ydeevnesporinger til en fil, der er navngivet `MDAV.wprp` i en lokal mappe, f.eks`C:\traces`. .
 
-2. Højreklik på ikonet **Menuen Start,** og vælg **Windows PowerShell (administrator)** eller **kommandoprompt (administrator)** for at åbne et kommandopromptvindue for administratorer.
+2. Højreklik på ikonet **Menuen Start,** og vælg **Windows PowerShell (Administration)** eller **kommandoprompt (Administration)** for at åbne et Administration kommandopromptvindue.
 
 3. Når dialogboksen Brugerkontokontrol vises, skal du vælge **Ja**.
 
-4. Kør følgende kommando i prompten med administratorrettigheder for at starte en Microsoft Defender for Endpoint-ydeevnesporing:
+4. Kør følgende kommando i prompten med administratorrettigheder for at starte en Microsoft Defender for Endpoint ydeevnesporing:
 
     ```console
     wpr.exe -start C:\traces\MDAV.wprp!WD.Verbose -filemode

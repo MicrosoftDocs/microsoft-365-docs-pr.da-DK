@@ -20,12 +20,12 @@ ms.custom:
 - admindeeplinkCOMPLIANCE
 - admindeeplinkDEFENDER
 description: Opret politikker for beskeder på Microsoft Purview-compliance-portal- eller Microsoft 365 Defender-portalen for at overvåge potentielle trusler, problemer med datatab og tilladelser.
-ms.openlocfilehash: 6c5f045d40a0c82ed70c6903e41628e2b520020e
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: bf896a5c6b801631a96779ad2b1c099c6b89c6a8
+ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66633229"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "66797989"
 ---
 # <a name="alert-policies-in-microsoft-365"></a>Beskedpolitikker i Microsoft 365
 
@@ -70,7 +70,7 @@ Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077149" target="_bla
 
 ![I Microsoft Purview-compliance-portal skal du vælge Politikker og under Besked vælge Beskedpolitikker for at få vist og oprette politikker for beskeder.](../media/LaunchAlertPoliciesMCC.png)
 
-### <a name="microsoft-365-defender-portal"></a>Microsoft 365 Defender portal
+### <a name="microsoft-365-defender-portal"></a>Microsoft 365 Defender-portal
 
 Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender-portalen</a>, og vælg **Politikker & regler** > **Beskedpolitik** under **Mail & samarbejde**. Du kan også gå direkte til <https://security.microsoft.com/alertpolicies>.
 
@@ -134,7 +134,7 @@ Tabellen angiver også den Office 365 Enterprise og Office 365 US Government-pla
  
 | Standardbeskedpolitik | Beskrivelse | Kategori | Automatiseret undersøgelse | Enterprise-abonnement |
 |:-----|:-----|:-----|:-----|:-----|
-|**Der blev registreret et potentielt skadeligt klik på URL-adressen**|Genererer en besked, når en bruger, der er beskyttet af [sikre links](../security/office-365-security/safe-links.md) i din organisation, klikker på et skadeligt link. Denne hændelse udløses, når ændringer i URL-adressens dom identificeres af Microsoft Defender for Office 365, eller når brugerne tilsidesætter siderne i Safe Links (baseret på organisationens microsoft 365 for business Safe Links-politik). Denne beskedpolitik har en indstilling **med høj** alvorsgrad. For Defender for Office 365 P2-, E5- og G5-kunder udløser denne besked automatisk [automatiseret undersøgelse og svar i Office 365](../security/office-365-security/office-365-air.md). Du kan få flere oplysninger om hændelser, der udløser denne besked, under [Konfigurer politikker for sikre links](../security/office-365-security/set-up-safe-links-policies.md).|Trusselsstyring|Ja|E5/G5- eller Defender for Office 365 P2-tilføjelsesprogramabonnement|
+|**En bruger har klikket sig igennem til en potentielt skadelig URL-adresse**|Genererer en besked, når en bruger, der er beskyttet af [sikre links](/microsoft-365/security/office-365-security/safe-links) i din organisation, klikker på et skadeligt link. Denne hændelse udløses, når brugeren klikker på en URL-adresse (der identificeres som skadelig eller afventer validering) og tilsidesætter advarselssiden Sikre links (baseret på organisationens politik for Sikre links til virksomheder i Microsoft 365 for business) for at fortsætte til den URL-hostede side/indhold. Denne beskedpolitik har en indstilling **med høj** alvorsgrad. For Defender for Office 365 P2-, E5- og G5-kunder udløser denne besked automatisk [automatiseret undersøgelse og svar i Office 365](/microsoft-365/security/office-365-security/office-365-air). Du kan få flere oplysninger om hændelser, der udløser denne besked, under [Konfigurer politikker for sikre links](/microsoft-365/security/office-365-security/set-up-safe-links-policies).|Trusselsstyring|Ja|E5/G5- eller Defender for Office 365 P2-tilføjelsesprogramabonnement|
 |**Administration afsendelsesresultatet er fuldført**|Genererer en besked, når en [Administration Indsendelse](../security/office-365-security/admin-submission.md) fuldfører scanningen af den sendte enhed. Der udløses en besked, hver gang et genscannet resultat gengives fra en Administration Indsendelse. Disse beskeder er beregnet til at minde dig om at [gennemse resultaterne af tidligere indsendelser](https://compliance.microsoft.com/reportsubmission), sende brugerrapporterede meddelelser for at få den seneste politikkontrol og scanne domme igen og hjælpe dig med at afgøre, om filtreringspolitikkerne i din organisation har den tilsigtede virkning. Denne politik har en indstilling **for oplysningers** alvorsgrad.|Trusselsstyring|Nej|E1/F1, E3/F3 eller E5|
 |**Administration udløst manuel undersøgelse af mail**|Genererer en besked, når en administrator udløser den manuelle undersøgelse af en mail fra Threat Explorer. Du kan få flere oplysninger under [Eksempel: En sikkerhedsadministrator udløser en undersøgelse fra Threat Explorer](../security/office-365-security/automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer). Denne besked giver din organisation besked om, at undersøgelsen blev startet. Beskeden indeholder oplysninger om, hvem der har udløst den, og indeholder et link til undersøgelsen. Denne politik har en indstilling **for oplysningers** alvorsgrad.|Trusselsstyring|Ja|E5/G5- eller Microsoft Defender for Office 365 P2-tilføjelsesprogramabonnement|
 |**Administration udløste en undersøgelse af bruger kompromitteret**|Genererer en besked, når en administrator udløser den manuelle bruger kompromitterende undersøgelse af enten en mail afsender eller modtager fra Threat Explorer. Du kan få flere oplysninger under [Eksempel: En sikkerhedsadministrator udløser en undersøgelse fra Threat Explorer](../security/office-365-security/automated-investigation-response-office.md#example-a-security-administrator-triggers-an-investigation-from-threat-explorer), som viser den relaterede manuelle udløsning af en undersøgelse i en mail. Denne besked giver din organisation besked om, at undersøgelsen af bruger kompromitteret blev startet. Beskeden indeholder oplysninger om, hvem der har udløst den, og indeholder et link til undersøgelsen. Denne politik har en indstilling for **mellem** alvorsgrad.|Trusselsstyring|Ja|E5/G5- eller Microsoft Defender for Office 365 P2-tilføjelsesprogramabonnement|
@@ -193,7 +193,7 @@ Sådan får du vist beskeder:
 
 ![Vælg Beskeder på overholdelsesportalen.](../media/ViewAlertsMCC.png)
 
-### <a name="microsoft-365-defender-portal"></a>Microsoft 365 Defender portal
+### <a name="microsoft-365-defender-portal"></a>Microsoft 365 Defender-portal
 
 Gå til <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft 365 Defender portal,</a> og vælg derefter **Hændelser & beskeder** > **Beskeder**. Du kan også gå direkte til <https://security.microsoft.com/alerts>.
 
