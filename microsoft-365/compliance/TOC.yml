@@ -66,7 +66,7 @@
           href: archive-bloomberg-message-data.md
         - name: Episk EPJ-sundhedsdata (prøveversion)
           href: import-epic-data.md
-        - name: Facebook Business
+        - name: Facebook Business (prøveversion)
           href: archive-facebook-data-with-sample-connector.md
         - name: Generiske EPJ-sundhedsdata (prøveversion)
           href: import-healthcare-data.md
@@ -78,11 +78,11 @@
           href: archive-instant-bloomberg-data.md
         - name: LinkedIn
           href: archive-linkedin-data.md
-        - name: Fysiske badgedata
+        - name: Fysiske badgeuddelingsdata (prøveversion)
           href: import-physical-badging-data.md
         - name: Slack eDiscovery (prøveversion)
           href: archive-slack-data-microsoft.md
-        - name: Twitter
+        - name: Twitter (prøveversion)
           href: archive-twitter-data-with-sample-connector.md
     - name: Veritas-dataforbindelser
       items:
