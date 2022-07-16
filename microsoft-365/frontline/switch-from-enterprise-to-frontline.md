@@ -1,5 +1,5 @@
 ---
-title: Skift fra en Microsoft 365 E-plan til en Microsoft F-plan
+title: Skift fra en Microsoft 365 E-plan til en Microsoft 365 F-plan
 author: LanaChin
 ms.author: v-lanachin
 ms.reviewer: ''
@@ -17,14 +17,14 @@ ms.collection:
 appliesto:
 - Microsoft Teams
 - Microsoft 365 for frontline workers
-ms.openlocfilehash: 496cb1b80cedf48cf24bdd49aae792275417f367
-ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
+ms.openlocfilehash: 90e29a5ec2ddf70afb299398113be034580eda85
+ms.sourcegitcommit: 1efb75d033860977239b479f92e7eaf274b5fbf0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66823885"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66827151"
 ---
-# <a name="changing-from-a-microsoft-365-e-plan-to-a-microsoft-f-plan"></a>Skift fra en Microsoft 365 E-plan til en Microsoft F-plan
+# <a name="changing-from-a-microsoft-365-e-plan-to-a-microsoft-365-f-plan"></a>Skift fra en Microsoft 365 E-plan til en Microsoft 365 F-plan
 
 Hvis du overvejer at skifte nogle af dine brugere fra en Microsoft 365 E-plan til en Microsoft 365 [F3](https://www.microsoft.com/microsoft-365/enterprise/f3) - eller [F1-plan](https://www.microsoft.com/microsoft-365/enterprise/f1) , indeholder denne artikel en vejledning, der hjælper dig med at forberede din organisation på ændringen. Hvis du skifter fra en E-plan til en F-plan, påvirker det de tjenester og funktioner, som brugerne har adgang til.
 

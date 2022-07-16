@@ -21,12 +21,12 @@ search.appverid:
 - MET150
 ms.technology: m365d
 ms.custom: api
-ms.openlocfilehash: e485bcf400dbaf36c63e3a0ed8677c9bf7c8f23a
-ms.sourcegitcommit: 852075d8d8a4ca052f69e854396d1565ef713500
+ms.openlocfilehash: 4b8a8e67bc7bd69b9ae20648ad66eb539101441e
+ms.sourcegitcommit: 1efb75d033860977239b479f92e7eaf274b5fbf0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "65692755"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66827174"
 ---
 # <a name="microsoft-365-defender-advanced-hunting-api"></a>api til avanceret jagt Microsoft 365 Defender
 
@@ -67,7 +67,7 @@ Uddelegeret (arbejds- eller skolekonto) | AdvancedHunting.Read | Kør avancerede
 >[!Note]
 > Når du henter et token ved hjælp af brugerlegitimationsoplysninger:
 >
->- Brugeren skal have AD-rollen 'Vis data'
+>- Brugeren skal have rollen 'Vis data'.
 >- Brugeren skal have adgang til enheden baseret på indstillingerne for enhedsgruppe.
 
 ## <a name="http-request"></a>HTTP-anmodning

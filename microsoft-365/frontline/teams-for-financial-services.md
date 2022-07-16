@@ -13,8 +13,8 @@ ms.collection:
 - M365-collaboration
 - microsoftcloud-financial-services
 - m365-frontline
-- m365solution-frontline
-- m365solution-scenario
+- m365solution-financialservices
+- m365solution-overview
 ms.localizationpriority: high
 search.appverid: MET150
 searchScope:
@@ -23,12 +23,12 @@ searchScope:
 appliesto:
 - Microsoft Teams
 - Microsoft 365 for frontline workers
-ms.openlocfilehash: 54cb1832e661a844019e6cab66bb8490fbaa51e2
-ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
+ms.openlocfilehash: 67be94b826011160715917a8b37a964e88d4a48a
+ms.sourcegitcommit: 1efb75d033860977239b479f92e7eaf274b5fbf0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66823945"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66827141"
 ---
 # <a name="get-started-with-microsoft-365-for-financial-services"></a>Kom i gang med Microsoft 365 for Financial Services
 

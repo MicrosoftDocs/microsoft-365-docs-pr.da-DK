@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: ac40dcc986dfb4c66b9030cdf8c22ebabe1bd3d2
-ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
+ms.openlocfilehash: 3d742733903faf876257e42a9ea9d15a648f9984
+ms.sourcegitcommit: 1efb75d033860977239b479f92e7eaf274b5fbf0
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66795416"
+ms.lasthandoff: 07/16/2022
+ms.locfileid: "66827196"
 ---
 # <a name="onboard-windows-servers-to-the-microsoft-defender-for-endpoint-service"></a>Onboarde Windows-servere til Microsoft Defender for Endpoint-tjenesten
 
@@ -150,7 +150,7 @@ Du kan bruge PowerShell-kommandoen: Import-Certificate -FilePath .\InterCA.cer -
 
 Microsoft Defender for Endpoint integreres problemfrit med Microsoft Defender for Cloud. Du kan onboarde servere automatisk, få servere overvåget af Microsoft Defender for Cloud vist i Defender for Endpoint og udføre detaljerede undersøgelser som Microsoft Defender for Cloud-kunde. 
 
-Du kan få flere oplysninger under [Integration med Microsoft Defender for Cloud](azure-server-integration.md). Servere, der er onboardet via Microsoft Defender for Cloud, får deres indledende konfiguration indstillet til at køre Defender Antivirus i [passiv tilstand](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
+Du kan få flere oplysninger under [Integration med Microsoft Defender for Cloud](azure-server-integration.md). Linux-servere, der er onboardet via Microsoft Defender for Cloud, får deres indledende konfiguration indstillet til at køre Defender Antivirus i [passiv tilstand](/defender-endpoint/microsoft-defender-antivirus-compatibility#microsoft-defender-antivirus-and-non-microsoft-antivirusantimalware-solutions).
 
 > [!NOTE]
 > - Integrationen mellem Microsoft Defender til servere og Microsoft Defender for Endpoint er blevet udvidet til at understøtte Windows Server 2022, [Windows Server 2019 og Windows Virtual Desktop (WVD).](/azure/security-center/release-notes#microsoft-defender-for-endpoint-integration-with-azure-defender-now-supports-windows-server-2019-and-windows-10-virtual-desktop-wvd-in-preview)
