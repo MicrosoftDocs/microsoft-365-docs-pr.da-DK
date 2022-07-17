@@ -1,0 +1,149 @@
+- name: Microsoft 365 til frontlinjearbejdere
+  href: index.yml
+  items:
+    - name: Kom i gang med Microsoft 365 til frontlinjemedarbejdere
+      href: flw-overview.md
+    - name: Vælg dine scenarier
+      href: flw-choose-scenarios.md
+    - name: Prøv Microsoft 365 til frontlinjearbejdere
+      href: flw-trial.md
+    - name: Konfigurer
+      items:
+        - name: Oversigt
+          href: flw-deploy-overview.md
+        - name: Ledere – få dit team i gang
+          href: get-up-and-running.md
+        - name: Start med en pilotudrulning
+          href: flw-pilot.md
+        - name: Konfigurer Microsoft 365 og Teams
+          items:
+            - name: Konfigurer Microsoft 365 og relaterede tjenester
+              href: flw-setup-microsoft-365.md
+            - name: Udrul teams i stor skala
+              href: deploy-teams-at-scale.md
+            - name: Onboarder dine brugere med onboardingguiden
+              href: flw-onboarding-wizard.md
+        - name: Administrer enheder
+          items:
+            - name: Administrer delte og personlige enheder
+              href: flw-devices.md
+            - name: Log på Teams
+              href: /microsoftteams/sign-in-teams?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+            - name: Log af Teams
+              href: /microsoftteams/sign-out-of-teams?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Konfigurer Teams-indstillinger for frontlinemedarbejdere
+          items:
+            - name: Tilpas Teams-apps til dine frontlinjearbejdere
+              href: pin-teams-apps-based-on-license.md
+            - name: Teams-politikpakker til frontlinjeledere og -medarbejdere
+              href: /microsoftteams/policy-packages-flw?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+            - name: Sikre beskeder
+              href: messaging-policies-hc.md
+            - name: Meddelelsesdelegering
+              href: hc-delegates.md
+        - name: Skift fra virksomhed til frontlinjemedarbejder
+          items:
+            - name: Licensmuligheder for frontlinjemedarbejdere
+              href: flw-licensing-options.md
+            - name: Overvejelser i forbindelse med skift fra E til F
+              href: switch-from-enterprise-to-frontline.md
+    - name: Kommunikation
+      items:
+        - name: Samarbejde i frontlinjeteam
+          href: flw-team-collaboration.md
+        - name: Virksomhedskommunikation med frontlinjearbejdere
+          href: flw-corp-comms.md
+    - name: Trivsel & engagement
+      items:
+        - name: Engagér dine medarbejdere og fokuser på trivsel
+          href: flw-wellbeing-engagement.md
+    - name: Oplæring & onboarding
+      items:
+        - name: Onboard og oplær medarbejdere
+          href: flw-onboarding-training.md
+    - name: Tidsstyring
+      items:
+        - name: Kom i gang med Vagter til Teams
+          href: shifts-for-teams-landing-page.md
+        - name: Administrer tidsplanejere for vagtstyring
+          href: schedule-owner-for-shift-management.md
+        - name: Administrer vagtbaseret adgang i Teams
+          href: manage-shift-based-access-flw.md
+        - name: Vagtforbindelser
+          items:
+            - name: Oversigt
+              href: shifts-connectors.md
+            - name: Brug den trinvise vejledning i vagtforbindelse til at konfigurere en forbindelse til Blue Yonder WFM
+              href: shifts-connector-wizard.md
+            - name: Brug PowerShell til at konfigurere en forbindelse til Blue Yonder-WFM
+              href: shifts-connector-blue-yonder-powershell-setup.md
+            - name: Brug PowerShell til at administrere dine vagter til Blue Yonder WFM-forbindelsen
+              href: shifts-connector-powershell-manage.md
+    - name: Digitaliserede processer
+      items:
+        - name: Gør forretningsprocesserne mere forenklede
+          href: simplify-business-processes.md
+    - name: Virtuelle aftaler
+      items:
+        - name: Oversigt
+          href: virtual-appointments.md
+        - name: Virtuelle aftaler med Microsoft Teams og Bookings.
+          href: bookings-virtual-visits.md
+        - name: Virtuelle aftaler med Teams og Cerner EHR
+          href: ehr-admin-cerner.md
+        - name: Virtuelle aftaler med Teams og Epic EHR
+          href: ehr-admin-epic.md
+        - name: Rapport om EHR-connector Virtuelle Aftaler
+          href: ehr-connector-report.md
+        - name: Brugsrapport for virtuelle besøg
+          href: virtual-visits-usage-report.md
+        - name: Administrer tilmeldingsoplevelsen i browsere
+          href: browser-join.md
+        - name: Hjælp dine kunder med at bruge virtuelle aftaler
+          href: virtual-appointments-toolkit.md
+    - name: Branchespecifikke løsninger
+      items:
+        - name: Finansielle tjenester
+          href: teams-for-financial-services.md
+        - name: Sundhedspleje
+          items:
+            - name: Oversigt
+              href: teams-in-hc.md
+            - name: Skabeloner til sundhedsteams
+              href: /microsoftteams/expand-teams-across-your-org/healthcare/healthcare-templates-admin-console?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+            - name: Teams-politikpakker til sundhedssektoren
+              href: /microsoftteams/policy-packages-healthcare?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Detailhandel
+          items:
+            - name: Oversigt
+              href: teams-for-retail-landing-page.md
+            - name: Brug skabeloner til detailteams
+              href: /microsoftteams/get-started-with-retail-teams-templates?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Produktion
+          href: teams-for-manufacturing.md
+    - name: Apps til frontlinjearbejdere
+      items:
+        - name: Om apps i Microsoft Teams
+          href: /microsoftteams/deploy-apps-microsoft-teams-landing-page?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Oversigt over administration af apps i Microsoft Teams
+          href: /microsoftteams/manage-apps?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Godkendelser
+          href: /microsoftteams/approval-admin?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Bookings
+          href: /microsoftteams/bookings-app-admin?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Opdateringer
+          href: /microsoftteams/manage-updates-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Lister
+          href: /microsoftteams/manage-lists-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Ros
+          href: /microsoftteams/manage-praise-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Microsoft Teams til RealWear
+          href: /microsoftteams/flw-realwear?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Vagter
+          href: /microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Ofte stillede spørgsmål om vagtdata
+          href: /microsoftteams/expand-teams-across-your-org/shifts/shifts-data-faq?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Opgaver
+          href: /microsoftteams/manage-tasks-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+        - name: Administrer appen Walkie Talkie
+          href: /microsoftteams/walkie-talkie?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
