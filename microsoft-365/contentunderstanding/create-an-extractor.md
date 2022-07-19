@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du opretter en udtrækningsmaskine i Microsoft SharePoint Syntex.
-ms.openlocfilehash: 5bfca45442386c15fb8418e306a5631795204c5f
-ms.sourcegitcommit: 872ab0b6a225c20274916e07ed4cc4944be9509a
+ms.openlocfilehash: f1e50b7eaeaaf669c682741c0e02df883523d888
+ms.sourcegitcommit: a0b78895d92cf3b8321b5282b5f4ff8984e95c06
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/25/2022
-ms.locfileid: "65679608"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842116"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Opret en udtrækningsmaskine i Microsoft SharePoint Syntex
 
@@ -48,6 +48,8 @@ Du skal oprette en udtrækningsenhed for hver enhed i det dokument, du vil udtr�
 
     > [!NOTE]
     > For uddrage med kolonnetypen **Enkelt tekstlinje** er den maksimale tegngrænse 255. Alle tegn, du vælger, som overskrider grænsen, afkortes. Hvis du vil vælge mere end 255 tegn, skal du vælge kolonnetypen **Flere tekstlinjer** , når du opretter udtrækningen.
+    >
+    >Som standard oprettes **der flere tekstlinjer** med en grænse for, hvor meget tekst der kan tilføjes. I dette tilfælde kan den udtrukne tekst blive afkortet. Hvis dette sker, kan kolonneindstillingen **Tillad ubegrænset længde i dokumentbiblioteker** bruges til at fjerne grænsen.
 
 3. Når du er færdig, skal du vælge **Opret**.
 

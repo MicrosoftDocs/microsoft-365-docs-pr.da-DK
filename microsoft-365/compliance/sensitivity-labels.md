@@ -22,12 +22,12 @@ description: Brug følsomhedsmærkater fra Microsoft Purview Information Protect
 ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
-ms.openlocfilehash: 4d1c0f590535691f0ac7c10fdff8c67261753577
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 57dcda57c29c15d8bf3896e983a95f358fd6ac1c
+ms.sourcegitcommit: a0b78895d92cf3b8321b5282b5f4ff8984e95c06
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714130"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66842152"
 ---
 # <a name="learn-about-sensitivity-labels"></a>Få mere at vide om følsomhedsmærkater
 
@@ -148,7 +148,7 @@ For de sider, der ikke har tilgængelige indstillinger, skal du vælge **Næste*
 
 ### <a name="label-priority-order-matters"></a>Mærkatprioritet (rækkefølgen har betydning)
 
-Når du opretter dine følsomhedsmærkater i Microsoft Purview Compliance Center, vises de på en liste under fanen **Følsomhed** på siden **Etiketter** . På denne liste er rækkefølgen af mærkater vigtig, fordi den afspejler deres prioritet. Din mest restriktive følsomhedsmærkat, f.eks. Meget fortroligt, skal vises **nederst** på listen, og din mindst restriktive følsomhedsmærkat, f.eks. Offentlig, skal vises **øverst**.
+Når du opretter dine følsomhedsmærkater i Microsoft Purview-compliance-portal, vises de på en liste under fanen **Følsomhed** på siden **Etiketter**. På denne liste er rækkefølgen af mærkater vigtig, fordi den afspejler deres prioritet. Din mest restriktive følsomhedsmærkat, f.eks. Meget fortroligt, skal vises **nederst** på listen, og din mindst restriktive følsomhedsmærkat, f.eks. Offentlig, skal vises **øverst**.
 
 Du kan kun anvende én følsomhedsmærkat på et element, f.eks. et dokument, en mail eller en objektbeholder. Hvis du angiver en indstilling, der kræver, at brugerne skal angive en begrundelse for at ændre en mærkat til en lavere klassificering, identificerer rækkefølgen af denne liste de lavere klassificeringer. Denne indstilling gælder dog ikke for undermærkater, der deler prioriteten for deres overordnede mærkat.
 
@@ -222,7 +222,7 @@ Der er ingen grænse for, hvor mange følsomhedsmærkater du kan oprette og publ
 
 ### <a name="label-policy-priority-order-matters"></a>Prioritet for mærkatpolitik (order matters)
 
-Du gør dine følsomhedsmærkater tilgængelige for brugere ved at publicere dem i en politik for følsomhedsmærkater, der vises på en liste under fanen **Følsomhedspolitikker** på siden **Mærkatpolitikker** . På samme måde som følsomhedsmærkater (se [Mærkatprioritet (order matters))](#label-priority-order-matters) er rækkefølgen af politikker for følsomhedsmærkater vigtig, fordi den afspejler deres prioritet. Etiketpolitikken med den laveste prioritet vises **øverst**, og mærkatpolitikken med den højeste prioritet vises **nederst**.
+Du gør dine følsomhedsmærkater tilgængelige for brugerne ved at publicere dem i en politik for følsomhedsmærkater, der vises på en liste på siden **Mærkatpolitikker** . På samme måde som med følsomhedsmærkater (se [Mærkatprioritet (order matters))](#label-priority-order-matters) er rækkefølgen af politikkerne for følsomhedsmærkater vigtig, fordi den afspejler deres prioritet: Mærkatpolitikken med den laveste prioritet vises øverst på listen med det **laveste** ordrenummer, og mærkatpolitikken med den højeste prioritet vises nederst på listen med det **højeste** ordrenummer.
 
 En mærkatpolitik består af:
 
@@ -230,14 +230,18 @@ En mærkatpolitik består af:
 - De brugere og grupper, der får tildelt politikken med mærkater.
 - Omfanget af politik- og politikindstillingerne for det pågældende område (f.eks. standardmærkat for filer og mails).
 
-Du kan inkludere en bruger i flere mærkatpolitikker, så får brugeren alle følsomhedsmærkater og -indstillinger fra disse politikker. Hvis der er en konflikt i indstillinger fra flere politikker, anvendes indstillingerne fra politikken med den højeste prioritet (laveste placering). Med andre ord vinder den højeste prioritet for hver indstilling.
+Du kan inkludere en bruger i flere mærkatpolitikker, så får brugeren alle følsomhedsmærkater og -indstillinger fra disse politikker. Hvis der er en konflikt i indstillinger fra flere politikker, anvendes indstillingerne fra politikken med den højeste prioritet (højeste ordrenummer). Med andre ord vinder den højeste prioritet for hver indstilling.
 
-Hvis du ikke kan se funktionsmåden for politikindstillingen for mærkater eller mærkater, som du forventer for en bruger eller gruppe, skal du kontrollere rækkefølgen af politikkerne for følsomhedsmærkater. Du skal muligvis flytte politikken ned. Hvis du vil ændre rækkefølgen af mærkatpolitikkerne, skal du vælge en politik for følsomhedsmærkater > vælge ellipsen til højre > **Flyt ned** eller **Flyt op**.
+Hvis du ikke kan se den funktionsmåde for mærkatpolitikken, som du forventer for en bruger eller gruppe, skal du kontrollere rækkefølgen af politikkerne for følsomhedsmærkater. Du skal muligvis flytte politikken ned. Hvis du vil ændre rækkefølgen af mærkatpolitikkerne, skal du vælge en politik for følsomhedsmærkat > vælge ellipsen Handlinger for den pågældende post > **Flyt ned** eller **Flyt op**. Eksempel:
 
 ![Flyt indstillingen på siden for politikker for følsomhedsmærkater.](../media/sensitivity-label-policy-priority.png)
 
+I vores skærmbilledeeksempel, der viser tre mærkatpolitikker, tildeles alle brugere standardnavnpolitikken, så det er passende, at den har den laveste prioritet (det laveste ordrenummer på 0). Kun brugere i it-afdelingen tildeles den anden politik, der har ordrenummeret 1. Hvis der er konflikter mellem deres politik og standardpolitikken for disse brugere, vinder indstillingerne fra deres politik, fordi de har et højere ordrenummer. 
+
+På samme måde for brugere i den juridiske afdeling, der er tildelt den tredje politik med særskilte indstillinger. Det er sandsynligt, at disse brugere har strengere indstillinger, så det er passende, at deres politik har det højeste ordrenummer. Det er usandsynligt, at en bruger fra den juridiske afdeling er i en gruppe, der også er tildelt politikken for it-afdelingen. Men hvis de er det, sikrer ordrenummeret 2 (højeste ordrenummer), at indstillingerne fra den juridiske afdeling altid prioriteres, hvis der er en konflikt.
+
 > [!NOTE]
-> Husk: Når der er en konflikt mellem indstillinger for en bruger, der har flere politikker tildelt, anvendes indstillingen fra politikken med den højeste prioritet (laveste placering).
+> Husk: Hvis der er en konflikt mellem indstillinger for en bruger, der har flere politikker tildelt dem, anvendes indstillingen fra den tildelte politik med det højeste ordrenummer.
 
 ## <a name="sensitivity-labels-and-azure-information-protection"></a>Følsomhedsmærkater og Azure Information Protection
 
