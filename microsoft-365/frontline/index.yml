@@ -1,0 +1,88 @@
+### YamlMime:Hub
+title: Microsoft 365 til frontlinjearbejdere
+summary: Microsoft 365 til frontlinjearbejdere leverer enkle, intuitive og sikre løsninger, du kan udrulle for at understøtte frontlinjemedarbejdere, der er vigtige for din virksomhed.
+brand: m365
+metadata:
+  title: Microsoft 365 til frontlinjearbejdere
+  description: Udrul og administrer enkle, intuitive og sikre løsninger til dine vigtige frontlinjemedarbejdere med Microsoft 365 til frontlinjearbejdere.
+  ms.service: microsoft-365-frontline
+  ms.topic: hub-page
+  author: samanro
+  ms.author: samanro
+  manager: pamgreen
+  audience: Admin
+  ms.date: 04/07/2022
+  ms.collection:
+  - m365-frontline
+  ms.openlocfilehash: 068032c38215dfbfbef0d77d25ccf097ee233dd2
+  ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
+  ms.translationtype: MT
+  ms.contentlocale: da-DK
+  ms.lasthandoff: 07/15/2022
+  ms.locfileid: "66859022"
+highlightedContent:
+  items:
+  - title: Hvad er Microsoft 365 til frontlinjearbejdere?
+    itemType: overview
+    url: flw-overview.md
+  - title: Vælg dine scenarier til Microsoft 365 til frontlinjemedarbejdere
+    itemType: get-started
+    url: flw-choose-scenarios.md
+  - title: Prøv Microsoft 365 til frontlinemedarbejdere (start en gratis prøveversion)
+    itemType: whats-new
+    url: flw-trial.md
+productDirectory:
+  items:
+  - title: Løsninger til at transformere din virksomhed
+    imageSrc: https://docs.microsoft.com/office/media/icons/lightbulb-idea-capture-blue.svg
+    links:
+    - url: flw-team-collaboration.md
+      text: Kommunikation
+    - url: flw-wellbeing-engagement.md
+      text: Trivsel & engagement
+    - url: flw-onboarding-training.md
+      text: Oplæring & onboarding
+    - url: shifts-for-teams-landing-page.md
+      text: Tidsstyring
+    - url: simplify-business-processes.md
+      text: Digitaliserede processer
+    - url: virtual-appointments.md
+      text: Virtuelle aftaler
+  - title: Løsninger til din branche
+    imageSrc: https://docs.microsoft.com/office/media/icons/walkthrough-map-blue.svg
+    links:
+    - url: teams-in-hc.md
+      text: Sundhedspleje
+    - url: teams-for-retail-landing-page.md
+      text: Detailhandel
+    - url: teams-for-financial-services.md
+      text: Finansielle tjenester
+    - url: teams-for-manufacturing.md
+      text: Produktion
+  - title: Administrer apps
+    imageSrc: https://docs.microsoft.com/office/media/icons/blocks-blue.svg
+    links:
+    - url: /microsoftteams/approval-admin?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+      text: Godkendelser
+    - url: /microsoftteams/bookings-app-admin?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+      text: Bookinger
+    - url: /microsoftteams/expand-teams-across-your-org/shifts/manage-the-shifts-app-for-your-organization-in-teams?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+      text: Skift
+    - url: /microsoftteams/manage-tasks-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+      text: Opgaver
+    - url: /microsoftteams/manage-updates-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+      text: Opdateringer
+    - url: /microsoftteams/deploy-apps-microsoft-teams-landing-page?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json
+      text: Mere >
+  - title: Konfigurer Microsoft 365 til frontlinjemedarbejdere
+    imageSrc: https://docs.microsoft.com/office/media/icons/settings.svg
+    summary: Konfigurer et prøveteam, start med en pilotinstallation, eller udrul i stor skala med denne vejledning.
+    url: flw-deploy-overview.md
+  - title: Indføringsressourcer
+    imageSrc: https://docs.microsoft.com/office/media/icons/users-group.svg
+    summary: Gå fra inspiration til udførelse med disse adoptionsressourcer.
+    url: https://adoption.microsoft.com/microsoft-teams/frontline-workers/
+  - title: Slutbrugeruddannelse
+    imageSrc: https://docs.microsoft.com/office/media/icons/video-play.svg
+    summary: Få din frontlinjearbejdsstyrke hurtigt i gang med disse træningsvideoer.
+    url: https://support.microsoft.com/office/microsoft-teams-video-training-4f108e54-240b-4351-8084-b1089f0d21d7#bkmk_flwscenarios

@@ -1,5 +1,5 @@
 ---
-title: Oversigt over konfiguration af Microsoft 365 til kampagner
+title: Oversigt over konfiguration for Microsoft 365 til kampagner
 f1.keywords:
 - NOCSH
 ms.author: deniseb
@@ -26,13 +26,13 @@ search.appverid:
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Oversigt over konfiguration for Microsoft 365 Business Premium til kampagner eller andre virksomheder
 ms.openlocfilehash: 0dc5fcda0d2f3ece91e294fea3a59d5e536c8088
-ms.sourcegitcommit: e50c13d9be3ed05ecb156d497551acf2c9da9015
+ms.sourcegitcommit: e6443eb3a4c826792806873428c0c17b59f4fde5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65086969"
+ms.lasthandoff: 06/05/2022
+ms.locfileid: "66858666"
 ---
-# <a name="set-up-microsoft-365-for-campaigns"></a>Konfigurer Microsoft 365 til kampagner
+# <a name="set-up-microsoft-365-for-campaigns"></a>Konfigurer Microsoft 365 for kampagner
 
 ## <a name="overview"></a>Oversigt
 
@@ -51,4 +51,4 @@ Når du har nået disse mål, kan du gå videre til den [næste mission](m365bp-
 
  **Hvis du har brug for at kontakte support:**
   
-Som Microsoft 365 administrator har du adgang til vores kundesupportteam, **[Kontakt support til forretningsprodukter – hjælp til administratorer](../business-video/get-help-support.md)**
+Som Microsoft 365-administrator har du adgang til vores kundesupportteam, **[Kontakt support til forretningsprodukter – Administration Hjælp](../business-video/get-help-support.md)**

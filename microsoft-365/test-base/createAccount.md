@@ -1,9 +1,9 @@
 ---
-title: Opret en ny Test Base-konto
-description: Oplysninger om, hvordan du opretter en ny konto på Test Base
+title: Oprettelse af en Test Base-konto
+description: Oplysninger om, hvordan du opretter en ny konto på testbasen
 search.appverid: MET150
-author: mansipatel-usl
-ms.author: mapatel
+author: Tinacyt
+ms.author: tinachen
 manager: rshastri
 audience: Software-Vendor
 ms.topic: how-to
@@ -14,47 +14,73 @@ ms.collection: TestBase-M365
 ms.custom: ''
 ms.reviewer: mapatel
 f1.keywords: NOCSH
-ms.openlocfilehash: ba2625f94411dbb00a7e56cde991957242fc2486
-ms.sourcegitcommit: babc2dad1c0e08a9237dbe4956ffd21c0214db83
+ms.openlocfilehash: bf1830e1f166a3ecef1c7d50cf1f54f4c5b39dec
+ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "63606612"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "66858714"
 ---
-# <a name="step-1-create-a-test-base-account"></a>Trin 1: Opret en Test Base-konto
+# <a name="creating-a-test-base-account"></a>Oprettelse af en Test Base-konto
 
-Hvis du ikke har et Azure-abonnement, skal du oprette en [gratis konto,](https://azure.microsoft.com/free/) før du går i gang.
+Hvis du vil oprette en **testbasekonto** , skal du udføre de efterfølgende trin. 
 
-## <a name="enter-details-for-test-base-account"></a>Angiv detaljer for testbasekonto
+> [!IMPORTANT]
+> Du skal bruge et abonnement for at tilmelde dig en **Test Base-konto** . Hvis du ikke har et Azure-abonnement, kan du se **Abonnementer** på [Azure-startsiden](https://ms.portal.azure.com/#home) for at få mere at vide om, hvordan du opretter et. 
+
+## <a name="to-create-a-test-base-account"></a>Sådan opretter du en testbasekonto
  
-1. Søg efter **"Testbase"** i Azure-portalen.
+1. På startsiden for [Azure Portal skal](https://ms.portal.azure.com/#home) du søge i **testbasen efter Microsoft 365** på Azure Marketplace for at få vist kontrolelementerne til oprettelse af en **Test Base-konto**. 
 
-![Opret et testbasekonto-søgebillede.](Media/CreateTestAccount1.png)
+   > [!div class="mx-imgBorder"]
+   > [![Søgetestbase](Media/creatingaccount01-search.png) ](Media/creatingaccount01-search.png#lightbox)
 
-2. Klik **på "Opret"** for at oprette en Test Base-konto.
+2. I feltet kontrolelementer på siden **Test base for Microsoft 365** skal du vælge knappen **Opret** på følgende måde for at åbne siden **Opret testbasiskonto** . 
 
-![Klik på Tilføj for at oprette kontoen.](Media/CreateTestAccount2.png)
+   > [!div class="mx-imgBorder"]
+   > [![Testgrundside](Media/creatingaccount02-testbase.png) ](Media/creatingaccount02-testbase.png#lightbox)
 
-3.  Læs afkrydsningsfeltet ```Terms of Use``` igennem, og markér derefter afkrydsningsfeltet for at bekræfte, at du er tilfreds med ```Terms of Use```.
+3. På siden **Opret testbasiskonto** skal du føje dine oplysninger til følgende påkrævede inputfelter på siden **Opret testbasiskonto** : 
 
-![Gennemse vilkårene for anvendelse.](Media/CreateTestAccount3.png)
+   - **Abonnement** – find dit Azure-abonnements-id på rullelisten, og vælg det. 
+   - **Ressourcegruppe** – opret en ny ressourcegruppe ved at vælge **Opret ny** og angive et valgt navn i tekstfeltet **Navninput** , der vises. Vælg **OK** , når du er færdig. Hvis du allerede har en **ressourcegruppe**, skal du finde dens navn på rullelisten og vælge den. 
+   - **Testbasiskonto** – under **Kontooplysninger** som vist i følgende figur skal du angive et valgt navn til din **testbasekonto** ved at skrive det i tekstfeltet til input. 
 
-4.  Udfyld de korrekte oplysninger under følgende krav: 
-    -   Abonnement: Ressourcegruppe
-    -   Oplysninger om forekomst: Navn.
+   > [!NOTE]
+   > Du skal angive input for alle obligatoriske felter (*). 
 
-**I øjeblikket understøtter Testbase kun niveau for standardpriser.**
+   > [!div class="mx-imgBorder"]
+   > [![Grundlæggende oplysninger](Media/creatingaccount03-basics.png) ](Media/creatingaccount03-basics.png#lightbox)
 
-![Vælg abonnement, ressourcegruppe, og skriv oplysningerne.](Media/CreateTestAccount4.png)
+   > [!NOTE]
+   > Fra og med april 2022 understøtter **Test Base** kun prisniveauet **Standard** . **Prisniveauet** bestemmer de ressource- og tjenesteomkostninger pr. time, der opkræves for dit Azure-abonnement. 
 
-5.  Til sidst skal du klikke på ```Review + Create``` for at validere og aktivere din nyoprettede konto.
+   > [!div class="mx-imgBorder"]
+   > ![Prisniveau](Media/creatingaccount04-pricing-tier.png)
 
-## <a name="next-steps"></a>Næste trin
+4. Læs **Vilkår for anvendelse**. Hvis vilkårene er acceptable, skal du markere afkrydsningsfeltet for at bekræfte, at du har læst og accepteret vilkårene for anvendelse. 
 
-Gå videre til næste artikel for at komme i gang med trin 2: **Få mere at vide om, hvordan du uploader din pakke.**
-> [!div class="nextstepaction"]
-> [Næste trin](uploadApplication.md)
+   > [!div class="mx-imgBorder"]
+   > ![Vilkår for anvendelse](Media/creatingaccount05-terms.png)
 
-<!---
-Add button for next page
--->
+5. I den nederste sektor på siden **Opret testbasiskonto** skal du vælge **Gennemse + opret** for at validere de inputdata, du har angivet. 
+
+   Hvis valideringsprocessen lykkes, kan du gennemse konfigurationen af dine inputdata på siden **Opret testbasiskonto** . 
+
+   > [!div class="mx-imgBorder"]
+   > [![Gennemse oprettelse](Media/creatingaccount06-review.png) ](Media/creatingaccount06-review.png#lightbox)
+
+6. Vælg knappen **Opret** , der vises i den nederste sektor på den forrige side **Opret testbasiskonto** . 
+
+   > [!div class="mx-imgBorder"]
+   > ![Knappen Opret](Media/creatingaccount07-create.png)
+
+7. På din **brugerinstallationsside** skal du vælge **Gå til ressource** for at åbne siden Oversigt over din nye **testbasekonto** og begynde din udforskning, konfiguration og rejse i **testbasen**. 
+
+   > [!div class="mx-imgBorder"]
+   > [![Fuldfør oprettelsen](Media/creatingaccount08-complete.png) ](Media/creatingaccount08-complete.png#lightbox)
+
+
+
+
+
