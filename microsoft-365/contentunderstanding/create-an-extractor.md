@@ -13,12 +13,12 @@ ms.collection:
 - m365initiative-syntex
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du opretter en udtrækningsmaskine i Microsoft SharePoint Syntex.
-ms.openlocfilehash: f1e50b7eaeaaf669c682741c0e02df883523d888
-ms.sourcegitcommit: a0b78895d92cf3b8321b5282b5f4ff8984e95c06
+ms.openlocfilehash: 20edce834ee9a55a9c748d59751a2f38ed08f85f
+ms.sourcegitcommit: 180da7b39cfda7263a89bda0c3b93d9d6e55f3c2
 ms.translationtype: MT
 ms.contentlocale: da-DK
 ms.lasthandoff: 07/19/2022
-ms.locfileid: "66842116"
+ms.locfileid: "66843516"
 ---
 # <a name="create-an-extractor-in-microsoft-sharepoint-syntex"></a>Opret en udtrækningsmaskine i Microsoft SharePoint Syntex
 
@@ -47,9 +47,9 @@ Du skal oprette en udtrækningsenhed for hver enhed i det dokument, du vil udtr�
     ![Skærmbillede af delen Avancerede indstillinger i panelet Udtræk af ny enhed, der viser indstillingen Kolonnetype.](../media/content-understanding/advanced-settings-column-type.png)
 
     > [!NOTE]
-    > For uddrage med kolonnetypen **Enkelt tekstlinje** er den maksimale tegngrænse 255. Alle tegn, du vælger, som overskrider grænsen, afkortes. Hvis du vil vælge mere end 255 tegn, skal du vælge kolonnetypen **Flere tekstlinjer** , når du opretter udtrækningen.
+    > For uddrage med kolonnetypen **Enkelt tekstlinje** er den maksimale tegngrænse 255. Alle tegn, du vælger, som overskrider grænsen, afkortes. Hvis du vil markere mere end 255 tegn, skal du vælge kolonnetypen **Flere tekstlinjer** , når udtrækningen oprettes.
     >
-    >Som standard oprettes **der flere tekstlinjer** med en grænse for, hvor meget tekst der kan tilføjes. I dette tilfælde kan den udtrukne tekst blive afkortet. Hvis dette sker, kan kolonneindstillingen **Tillad ubegrænset længde i dokumentbiblioteker** bruges til at fjerne grænsen.
+    >Som standard oprettes **der flere tekstlinjer** med en grænse for, hvor meget tekst der kan tilføjes. I dette tilfælde kan udtrukken tekst blive afkortet. Hvis dette sker, kan kolonneindstillingen **Tillad ubegrænset længde i dokumentbiblioteker** bruges til at fjerne grænsen.
 
 3. Når du er færdig, skal du vælge **Opret**.
 

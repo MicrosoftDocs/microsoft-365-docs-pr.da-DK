@@ -17,12 +17,12 @@ ms.topic: article
 ms.collection:
 - M365-security-compliance
 - m365initiative-m365-defender
-ms.openlocfilehash: e61a59e769052d69494d327b2e1770f643375ab9
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: d8938c06e42a546b4cf28bf55fc2b6ba49269492
+ms.sourcegitcommit: 180da7b39cfda7263a89bda0c3b93d9d6e55f3c2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66772100"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66843451"
 ---
 # <a name="configure-and-manage-microsoft-threat-experts-capabilities-through-microsoft-365-defender"></a>Konfigurer og administrer Microsoft-trusselseksperter funktioner via Microsoft 365 Defender
 
@@ -51,8 +51,6 @@ Hvis du allerede har Microsoft Defender for Endpoint og Microsoft 365 Defender, 
 1. I navigationsruden skal du gå til **Indstillinger > Slutpunkter > Generelle > Avancerede funktioner > Endpoint Attack Notifications**.
 
 2. Vælg **Anvend**.
-
-    :::image type="content" source="../../media/mte/mte-collaboratewithmte.png" alt-text="Siden med indstillinger for Microsoft-trusselseksperter på Microsoft 365 Defender-portalen" lightbox="../../media/mte/mte-collaboratewithmte.png":::
 
 3. Angiv din mailadresse, så Microsoft kan kontakte dig om dit program.
 
@@ -94,7 +92,7 @@ Hvis du allerede er Microsoft Defender for Endpoint kunde, kan du kontakte din M
 
 ## <a name="consult-a-microsoft-threat-expert-about-suspicious-cybersecurity-activities-in-your-organization"></a>Kontakt en Microsoft-trusselsekspert om mistænkelige cybersikkerhedsaktiviteter i din organisation
 
-Du kan kontakte Microsoft-trusselseksperter inde fra Microsoft 365 Defender-portalen. Eksperter kan hjælpe dig med at forstå komplekse trusler og målrettede angrebsmeddelelser. Partner med eksperter for at få yderligere oplysninger om beskeder og hændelser eller rådgivning om håndtering af kompromiser. Få indsigt i konteksten for trusselsintelligens, der er beskrevet af dit portaldashboard.
+Du kan kontakte Microsoft-trusselseksperter inde fra Microsoft 365 Defender-portalen. Eksperter kan hjælpe dig med at forstå komplekse trusler og meddelelser om slutpunktsangreb. Partner med eksperter for at få yderligere oplysninger om beskeder og hændelser eller rådgivning om håndtering af kompromiser. Få indsigt i konteksten for trusselsintelligens, der er beskrevet af dit portaldashboard.
 
 > [!NOTE]
 >

@@ -18,12 +18,12 @@ ms.topic: article
 ms.collection:
 - M365-security-compliance
 - m365initiative-m365-defender
-ms.openlocfilehash: bf40aa8ede1f65d22bd319b3a2fcfe82c778e754
-ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
+ms.openlocfilehash: 3d60edd7747bddf6afd9d075c051a29a11594edb
+ms.sourcegitcommit: 180da7b39cfda7263a89bda0c3b93d9d6e55f3c2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66756699"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66843429"
 ---
 # <a name="microsoft-threat-experts-in-microsoft-365-overview"></a>oversigt over Microsoft-trusselseksperter i Microsoft 365
 
@@ -45,8 +45,6 @@ Microsoft-trusselseksperter – Eksperter on Demand giver dig ekspertråd om de 
 > Før du ansøger, skal du sørge for at diskutere berettigelseskravene til Endpoint Attack Notifications med din Microsoft Technical Service-udbyder og dit kontoteam.
 
 Hvis du allerede har Microsoft Defender for Endpoint og Microsoft 365 Defender, kan du ansøge om meddelelser om slutpunktsangreb via deres Microsoft 365 Defender portal. Gå til **Indstillinger > Slutpunkter > Generelle > Avancerede funktioner > Meddelelser om slutpunktsangreb**, og vælg **Anvend**. Se [Konfigurer Microsoft-trusselseksperter funktioner](./configure-microsoft-threat-experts.md) for at få en komplet beskrivelse.
-
-:::image type="content" source="../../media/mte/mte-collaboratewithmte.png" alt-text="Indstillingen Avancerede funktioner i venstre navigationsrude på siden Slutpunkter på Microsoft 365 Defender-portalen" lightbox="../../media/mte/mte-collaboratewithmte.png":::
 
 Når dit program er godkendt, begynder du at modtage meddelelser om slutpunktsangreb, når Threat Experts registrerer en trussel mod dit miljø.
 
@@ -74,24 +72,10 @@ Du kan også kontakte Microsoft-trusselseksperter direkte fra Microsoft 365-sikk
 Muligheden for at **kontakte en trusselsekspert** er tilgængelig flere steder på portalen:
 
 - <i>**Menuen Handlinger på enhedens side**</i><BR>
-
-:::image type="content" source="../../media/mte/device-actions-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD i handlingsmenuen Enhed på Microsoft 365 Defender-portalen" lightbox="../../media/mte/device-actions-mte-highlighted.png":::
-
 - <i>**Pop op-menu til enhedens lagerside**</i><BR>
-
-:::image type="content" source="../../media/mte/device-inventory-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på siden Enhedslager på portalen Microsoft 365 Defender" lightbox="../../media/mte/device-inventory-mte-highlighted.png":::
-
 - <i>**Pop op-menu til siden Beskeder**</i><BR>
-
-:::image type="content" source="../../media/mte/alerts-actions-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på siden Beskeder på portalen Microsoft 365 Defender" lightbox="../../media/mte/alerts-actions-mte-highlighted.png":::
-
 - <i>**Handlingsmenu på hændelsessiden**</i><BR>
-
-:::image type="content" source="../../media/mte/incidents-action-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på siden Hændelser på portalen Microsoft 365 Defender" lightbox="../../media/mte/incidents-action-mte-highlighted.png":::
-
 - <i>**Siden Hændelsesoversigt**</i><BR>
-
-:::image type="content" source="../../media/mte/incidents-inventory-mte-highlighted.png" alt-text="Menuindstillingen MTE-EOD på hændelsesoversigtssiden på Microsoft 365 Defender-portalen" lightbox="../../media/mte/incidents-inventory-mte-highlighted.png":::
 
 > [!NOTE]
 > Hvis du har et Premier Support-abonnement, der er knyttet til din Microsoft Defender for Office 365 licens, kan du spore status for dine Eksperter on Demand-sager via Microsoft Services Hub.

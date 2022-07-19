@@ -17,12 +17,12 @@ ms.collection:
 - M365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 4f2ab696b728244e495ec04933b83eaafeeb3db0
-ms.sourcegitcommit: 44ece87e3e0c0c851dfc1e77211ac3e5e4a5b973
+ms.openlocfilehash: b9689cb0a3470a19e4ceeeb80cd3e77f2d2d8edf
+ms.sourcegitcommit: 180da7b39cfda7263a89bda0c3b93d9d6e55f3c2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "66616973"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66843559"
 ---
 # <a name="whats-new-in-microsoft-365-defender"></a>Nyheder i Microsoft 365 Defender
 
@@ -44,6 +44,9 @@ Du kan få flere oplysninger om nyheder i andre Microsoft Defender-sikkerhedspro
 - [Nyheder i Microsoft Defender for Cloud Apps](/cloud-app-security/release-notes)
 
 Du kan også få produktopdateringer og vigtige meddelelser via [meddelelsescenteret](https://admin.microsoft.com/Adminportal/Home#/MessageCenter). 
+
+## <a name="july-2022"></a>Juli 2022
+- (eksempelvisning) Microsoft Defender Experts for Hunting public preview-deltagere kan nu se frem til at modtage månedlige rapporter for at hjælpe dem med at forstå de trusler, som jagttjenesten fremviser i deres miljø, sammen med de beskeder, der genereres af deres Microsoft 365 Defender produkter. Du kan finde flere oplysninger [i Forstå rapporten Om Defender Experts for Hunting i Microsoft 365 Defender](defender-experts-report.md).
 
 ## <a name="june-2022"></a>Juni 2022
 - (eksempelvisning) Tabellerne [DeviceTvmInfoGathering](advanced-hunting-devicetvminfogathering-table.md) og [DeviceTvmInfoGatheringKB](advanced-hunting-devicetvminfogatheringkb-table.md) er nu tilgængelige i det avancerede jagtskema. Brug disse tabeller til at jage gennem vurderingshændelser i Defender Vulnerability Management, herunder status for forskellige konfigurationer og enheders tilstande for angrebsoverfladen.

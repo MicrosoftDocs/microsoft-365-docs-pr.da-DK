@@ -1,7 +1,7 @@
 ---
-title: Sammenlign Microsoft Defender for Endpoint planer
-description: Sammenlign Defender for Endpoint Plan 1 med Plan 2. Få mere at vide om forskellene mellem planerne, og vælg den plan, der passer til din organisations behov.
-keywords: Defender for Endpoint, advanced threat protection, endpoint protection
+title: Sammenlign Sikkerhedsplaner for Microsoft-slutpunkter
+description: Sammenlign Microsoft-slutpunktssikkerhedsplaner, f.eks. Defender for Endpoint Plan 1, med Defender for Endpoint Plan 2. Få mere at vide om forskellene mellem planerne, og vælg den plan, der passer til din organisations behov.
+keywords: Defender for Endpoint, advanced threat protection, endpoint protection, endpoint security, device security, cybersecurity
 search.appverid: MET150
 author: denisebmsft
 ms.author: deniseb
@@ -17,12 +17,12 @@ f1.keywords: NOCSH
 ms.collection:
 - M365-security-compliance
 - m365initiative-defender-endpoint
-ms.openlocfilehash: d41c228ceeae0dcd373f98c6dcd89bf88b0feacd
-ms.sourcegitcommit: 5463d4518c269d9c125bb66836a780df292b4854
+ms.openlocfilehash: 1b18bc6ed3f7992a774bfd90fd2913cfe4e9c050
+ms.sourcegitcommit: 180da7b39cfda7263a89bda0c3b93d9d6e55f3c2
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/14/2022
-ms.locfileid: "66795394"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66843473"
 ---
 # <a name="compare-microsoft-endpoint-security-plans"></a>Sammenlign Sikkerhedsplaner for Microsoft-slutpunkter
 
@@ -68,8 +68,7 @@ I følgende tabel opsummeres det, hvad der er inkluderet i Microsoft-slutpunktss
 
 De separate versioner af Defender for Business, Defender for Endpoint Plan 1 og 2 og Microsoft 365 Business Premium omfatter ikke serverlicenser. Hvis du vil onboarde servere, skal du vælge mellem følgende indstillinger:
 
-- **Defender for Servers Plan 1 eller Plan 2** som en del af [Defender for Cloud-tilbuddet](/azure/defender-for-cloud/defender-for-cloud-introduction) . For at få mere at vide. se [Oversigt over Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
-
+- **Microsoft Defender for Servers Plan 1 eller Plan 2** som en del af [Defender for Cloud-tilbuddet](/azure/defender-for-cloud/defender-for-cloud-introduction) . For at få mere at vide. se [Oversigt over Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-introduction).
 - **Microsoft Defender til virksomheder servere (prøveversion)** til små og mellemstore virksomheder. Se [Sådan får du Microsoft Defender til virksomheder servere (prøveversion)](../defender-business/get-defender-business-servers.md).
 
 ## <a name="mixed-licensing-scenarios"></a>Blandede licensscenarier
@@ -94,5 +93,5 @@ Du **kan dog kontakte support og anmode om en tilsidesættelse af din lejeroplev
 ## <a name="see-also"></a>Se også
 
 - [Kom i gang med Microsoft Security (prøveversionstilbud)](https://www.microsoft.com/security/business/get-started/start-free-trial)
-
+- [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md)
 - [Microsoft Defender til virksomheder](../defender-business/mdb-overview.md) (beskyttelse af slutpunkter for små og mellemstore virksomheder)

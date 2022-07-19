@@ -348,6 +348,8 @@
           items:
             - name: Oversigt
               href: defenderexpertsforhuntingprev.md
+            - name: Forstå rapporter om Defender Experts for Hunting
+              href: defender-experts-report.md
         - name: Ransomware-strategiplaner
           items:
             - name: Registrering af menneskestyrede ransomware-angreb med Microsoft 365 Defender
