@@ -18,12 +18,12 @@ ms.collection:
 - m365-initiative-defender-endpoint
 ms.topic: conceptual
 ms.technology: mde
-ms.openlocfilehash: b301a0bd62e0826a9ae089f51f591f575a918e0f
-ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
+ms.openlocfilehash: 4fe66987f9b8ea5c2f0b27ae9fb594a198da2e9b
+ms.sourcegitcommit: 75d0403b4114bdd1d228ca05a284b9e514f6f2f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66756765"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66855037"
 ---
 # <a name="microsoft-threat-experts"></a>Microsoft Threat Experts
 
@@ -58,7 +58,7 @@ Se [Konfigurer Microsoft-trusselseksperter funktioner for at](/microsoft-365/sec
 
 ## <a name="endpoint-attack-notification"></a>Meddelelse om slutpunktsangreb
 
-Meddelelse om slutpunktangreb giver proaktiv jagt efter de vigtigste trusler mod dit netværk, herunder angreb på mennesker, angreb på tastaturet eller avancerede angreb som cyberspionage. Disse meddelelser vises som en ny besked. Den administrerede jagttjeneste omfatter:
+Endpoint Attack Notifications (tidligere kaldet Microsoft-trusselseksperter – Målrettet angrebsmeddelelse) giver proaktiv jagt på de vigtigste trusler mod dit netværk, herunder angreb på mennesker, praktiske tastaturangreb eller avancerede angreb som cyberspionage. Disse meddelelser vises som en ny besked. Den administrerede jagttjeneste omfatter:
 
 - Trusselsovervågning og -analyse, reduktion af dvæletid og risiko for virksomheden
 - Hunter-trænet kunstig intelligens til at opdage og prioritere både kendte og ukendte angreb

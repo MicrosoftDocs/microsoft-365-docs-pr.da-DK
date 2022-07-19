@@ -20,12 +20,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om eDiscovery-løsningen (Premium) i Microsoft Purview. Denne artikel indeholder en oversigt over eDiscovery (Premium) i Microsoft Purview, et værktøj, der kan hjælpe dig med at administrere interne og eksterne undersøgelser. Den rammer også de forretningsmæssige årsager til at bruge eDiscovery (Premium) til at administrere dine juridiske undersøgelser.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 95dbeb33ad054845b7d2a7a5bc019ce0cd727093
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+ms.openlocfilehash: 7d534012466300675a7143cdada0b43468027104
+ms.sourcegitcommit: 75d0403b4114bdd1d228ca05a284b9e514f6f2f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714569"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66855081"
 ---
 # <a name="overview-of-microsoft-purview-ediscovery-premium"></a>Oversigt over Microsoft Purview eDiscovery (Premium)
 
@@ -83,7 +83,7 @@ På et højt niveau understøtter eDiscovery (Premium) EDRM-arbejdsprocessen:
 
 - **Samling.** Når du har identificeret (og bevaret) de datakilder, der er relevante for undersøgelsen, kan du bruge det indbyggede søgeværktøj i eDiscovery (Premium) til at søge efter og indsamle dynamiske data fra datakilder med frihedsberøvelse (og datakilder uden frihedsberøvelse, hvis det er relevant), som kan være relevante for sagen.
 
-- **Behandling.** Når du har indsamlet alle de data, der er relevante for sagen, er næste trin at behandle dem med henblik på yderligere gennemgang og analyse. I eDiscovery (Premium) kopieres de lokale data, som du identificerede i indsamlingsfasen, til en Azure Storage-placering (kaldet et *anmeldelsessæt*), hvilket giver dig en statisk visning af sagsdataene. 
+- **Behandling.** Når du har indsamlet alle de data, der er relevante for sagen, er næste trin at behandle dem med henblik på yderligere gennemgang og analyse. I eDiscovery (Premium) kopieres de lokale data, som du identificerede i indsamlingsfasen, til en Azure Storage-placering (kaldet et *anmeldelsessæt*), hvilket giver dig en statisk visning af sagsdataene.
 
 - **Anmeld.** Når data er føjet til et korrektursæt, kan du få vist bestemte dokumenter og køre yderligere forespørgsler for at reducere dataene til det, der er mest relevant for sagen. Du kan også anmærke og mærke bestemte dokumenter.
 
@@ -93,9 +93,9 @@ På et højt niveau understøtter eDiscovery (Premium) EDRM-arbejdsprocessen:
 
 ## <a name="subscriptions-and-licensing"></a>Abonnementer og licenser
 
-Du kan finde oplysninger om, hvilke licenser der giver en bruger rettigheder til at drage fordel af eDiscovery (Premium), i [Microsoft 365-vejledningen til overholdelse af & sikkerhed](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-ediscovery) og se afsnittet "eDiscovery og overvågning" i [sammenligningstabellen til Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2139145). 
+Du kan finde oplysninger om, hvilke licenser der giver en bruger rettigheder til at drage fordel af eDiscovery (Premium), i [Microsoft 365-vejledningen til overholdelse af & sikkerhed](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-ediscovery) og se afsnittet "eDiscovery og overvågning" i [Sammenligningstabellen til Microsoft 365](https://go.microsoft.com/fwlink/?linkid=2139145).
 
-Du kan få oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users).
+Du kan få oplysninger om, hvordan du tildeler licenser, under [Tildel licenser til brugere](/microsoft-365/admin/manage/assign-licenses-to-users).
 
 ## <a name="get-started-with-ediscovery-premium"></a>Kom i gang med eDiscovery (Premium)
 

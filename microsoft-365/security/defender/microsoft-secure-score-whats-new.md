@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - seo-marvel-jun2020
 ms.technology: m365d
-ms.openlocfilehash: 25860b27ee5d677f3349f82f63f64983255d2d32
-ms.sourcegitcommit: 61b22df76e0f81e5ef11c587b129287886151c79
+ms.openlocfilehash: e869317a8a88545c058075909a95ead02177ff10
+ms.sourcegitcommit: 75d0403b4114bdd1d228ca05a284b9e514f6f2f3
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "66750204"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66855015"
 ---
 # <a name="whats-new-in-microsoft-secure-score"></a>Nyheder i Microsoft Secure Score
 
@@ -36,7 +36,7 @@ For at gøre Microsoft Secure Score til en bedre repræsentant for din sikkerhed
 
 Jo flere forbedringer du foretager, jo højere er din Secure Score. Du kan få flere oplysninger under [Microsoft Secure Score](microsoft-secure-score.md).
 
-Microsoft Secure Score findes på https://security.microsoft.com/securescore [portalen Microsoft 365 Defender](microsoft-365-defender-portal.md).
+Microsoft Secure Score findes på <https://security.microsoft.com/securescore> [portalen Microsoft 365 Defender](microsoft-365-defender-portal.md).
 
 ## <a name="june-2022"></a>Juni 2022
 
@@ -58,8 +58,8 @@ Microsoft Secure Score findes på https://security.microsoft.com/securescore [po
 
 - Nye Salesforce- og ServiceNow-anbefalinger er nu tilgængelige som handlinger til forbedring af secure score for Microsoft Defender for Cloud Apps kunder. Du kan få flere oplysninger under [Oversigt over Administration af saaS-sikkerhedsholdning](https://aka.ms/saas_security_posture_management).
 
->[!Note]
->Kontrolelementer af typen Salesforce og ServiceNow er nu tilgængelige som offentlig prøveversion.
+> [!NOTE]
+> Kontrolelementer af typen Salesforce og ServiceNow er nu tilgængelige som offentlig prøveversion.
 
 ## <a name="april-2022"></a>April 2022
 
