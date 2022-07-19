@@ -969,6 +969,8 @@
               href: permissions-filtering-for-content-search.md
             - name: 'Indhold, der er gemt i postkasser for eDiscovery'
               href: what-is-stored-in-exo-mailbox.md
+            - name: eDiscovery Graph-forbindelse
+              href: ediscovery-graph-connector.md
             - name: Dekryptering i eDiscovery-værktøjer
               href: ediscovery-decryption.md
             - name: 'Valideringssæt for samtaler '

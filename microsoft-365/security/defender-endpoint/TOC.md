@@ -3,7 +3,7 @@
 ## [Oversigt]()
 ### [Hvad er Microsoft Defender for Endpoint?](microsoft-defender-endpoint.md)
 ### [Gratis prøveversion af strategiplan: Få mest muligt ud af din gratis prøveversion](defender-endpoint-trial-playbook.md)
-### [Sammenlign Defender for Endpoint-planer](defender-endpoint-plan-1-2.md)
+### [Sammenlign Microsoft Endpoint-sikkerhedsplaner](defender-endpoint-plan-1-2.md)
 ### [Minimumskrav](minimum-requirements.md)
 ### [Nyheder i Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md)
 ### [Visningsfunktioner](preview.md)
