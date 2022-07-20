@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer DLP-politikker (forebyggelse af datatab) til at bruge placeringer til forebyggelse af datatab for Slutpunkt.
-ms.openlocfilehash: 9107759e137d7b8dd86253f9c6567b76686d2518
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: f58c7aec00a91ebc63b410abdd4c6342eef47a0e
+ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66632371"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66881989"
 ---
 # <a name="using-endpoint-data-loss-prevention"></a>Brug forebyggelse af datatab ved slutpunkt
 
@@ -128,7 +128,6 @@ Disse scenarier kræver, at du allerede har enheder onboardet og rapporterer i A
 I dette scenarie blokeres synkronisering af filer med følsomhedsmærkaten **Meget fortroligt** til OneDrive. Dette er et komplekst scenarie med flere komponenter og procedurer. Du skal bruge:
 
 - En AAD-brugerkonto, der skal målrettes, og en onboardet Windows 10 computer, der allerede synkroniserer en lokal OneDrive-mappe med OneDrive-cloudlager.
-- Microsoft Word, der er installeret på destinationscomputeren Windows 10
 - Følsomhedsmærkater konfigureret og publiceret – se [Kom i gang med følsomhedsmærkater](get-started-with-sensitivity-labels.md#get-started-with-sensitivity-labels) og [Opret og konfigurer følsomhedsmærkater og deres politikker](create-sensitivity-labels.md#create-and-configure-sensitivity-labels-and-their-policies).
 
 Der er tre procedurer.
@@ -234,7 +233,7 @@ Der er tre procedurer.
 
 ## <a name="scenario-5-restrict-unintentional-sharing-to-unallowed-cloud-apps-and-services"></a>Scenarie 5: Begræns utilsigtet deling til ikke-tilladte cloudapps og -tjenester
 
-Med Endpoint DLP og Edge-webbrowseren kan du begrænse utilsigtet deling af følsomme elementer til ikke-tilladte cloudapps og -tjenester. Edge forstår, hvornår et element er begrænset af en DLP-politik for slutpunkter, og gennemtvinger adgangsbegrænsninger.
+Med Endpoint DLP- og Microisoft Edge-webbrowseren kan du begrænse utilsigtet deling af følsomme elementer til ikke-tilladte cloudapps og -tjenester. Edge forstår, hvornår et element er begrænset af en DLP-politik for slutpunkter, og gennemtvinger adgangsbegrænsninger.
 
 Når du vælger **Enheder** som en placering i en korrekt konfigureret DLP-politik og bruger Microsoft Edge-browseren, forhindres de ikke-tilladte browsere, du har defineret i disse indstillinger, i at få adgang til de følsomme elementer, der stemmer overens med dine DLP-politikkontrolelementer. I stedet omdirigeres brugerne til at bruge Microsoft Edge, som med sin forståelse af DLP-pålagte begrænsninger kan blokere eller begrænse aktiviteter, når betingelserne i DLP-politikken er opfyldt.
 
@@ -249,6 +248,58 @@ Hvis du vil bruge denne begrænsning, skal du konfigurere tre vigtige dele:
 Du kan fortsætte med at tilføje nye tjenester, apps og politikker for at udvide og udvide dine begrænsninger, så de opfylder dine forretningsmæssige behov og beskytte følsomme data. 
 
 Denne konfiguration hjælper med at sikre, at dine data forbliver sikre, samtidig med at du undgår unødvendige begrænsninger, der forhindrer eller begrænser brugerne i at få adgang til og dele ikke-følsomme elementer.
+
+## <a name="scenario-6-monitor-or-restrict-user-activities-on-sensitive-service-domains-preview"></a>Scenarie 6 Overvåger eller begrænser brugeraktiviteter på følsomme tjenestedomæner (prøveversion)
+
+Brug dette scenarie, når du vil overvåge, blokere med tilsidesættelse eller blokere disse brugeraktiviteter på et websted.
+
+- udskriv fra et websted
+- kopiér data fra et websted
+- gem et websted som lokale filer
+
+Brugeren skal have adgang til webstedet via Microsoft Edge.
+
+### <a name="supported-syntax-for-designating-websites-in-a-website-group"></a>Understøttet syntaks til design af websteder i en webstedsgruppe
+
+Du kan bruge en fleksibel syntaks til at inkludere og udelade domæner, underdomæner, websteder og underordnede websteder i dine webstedsgrupper.
+
+- brug `*` som jokertegn til at angive alle domæner eller alle underdomæner
+- brug `/` som terminalpunkt i slutningen af en URL-adresse til kun at omfatte det pågældende websted.
+
+Når du tilføjer en URL-adresse uden at afslutte `/`, er denne URL-adresse begrænset til dette websted og alle underordnede websteder.
+
+Denne syntaks gælder for alle http/https-websteder.
+
+Her er nogle eksempler:
+
+
+|URL-adresse, du føjer til webstedsgruppen  |URL-adressen vil stemme overens  | URL-adressen stemmer ikke overens|
+|---------|---------|---------|
+|contoso.com  | //<!--nourl-->contoso.com </br> //<!--nourl-->contoso.com/ </br> //<!--nourl-->contoso.com/allsubsites1 </br> //<!--nourl-->contoso.com/allsubsites1/allsubsites2|        //<!--nourl-->allsubdomains.contoso.com </br> //<!--nourl-->allsubdomains.contoso.com.au    |
+|contoso.com/     |//<!--nourl-->contoso.com </br> //<!--nourl-->contoso.com/         |//<!--nourl-->contoso.com/allsubsites1 </br> //<!--nourl-->contoso.com/allsubsites1/allsubsites2 </br> //<!--nourl-->allsubdomains.contoso.com </br> //<!--nourl-->allsubdomains.contoso.com/au   |
+|*.contoso.com   | //<!--nourl-->contoso.com </br> //<!--nourl-->contoso.com/allsubsites </br> //<!--nourl-->contoso.com/allsubsites1/allsubsites2 </br> //<!--nourl-->allsubdomains.contoso.com </br> //<!--nourl-->allsubdomains.contoso.com/allsubsites </br> //<!--nourl-->allsubdomains1/allsubdomains2/contoso.com/allsubsites1/allsubsites2         | //<!--nourl-->allsubdomains.contoso.com.au|
+|*.contoso.com/xyz     |//<!--nourl-->contoso.com </br> //<!--nourl-->contoso.com/xyz </br> //<!--nourl-->contoso.con/xyz/allsubsites/ </br> //<!--nourl-->allsubdomains.contoso.com/xyz </br> //<!--nourl-->allsubdomains.contoso.com/xyz/allsubsites </br> //<!--nourl-->allsubdomains1.allsubdomains2.contoso.com/xyz/allsubsites </br> //<!--nourl-->allsubdomains1.allsubdomains2.contoso.com/xyz/allsubsites1/allsubsites2         | //<!--nourl-->contoso.com/xyz </br> //<!--nourl-->allsubdomains.contoso.com/xyz/|
+|*.contoso.com/xyz/     |//<!--nourl-->contoso.com/xyz </br> //<!--nourl-->allsubdomains.contoso.com/xyz         |//<!--nourl-->contoso.com </br> //<!--nourl-->contoso.com/xyz/allsubsites/ </br> //<!--nourl-->allsubdomains.contoso.com/xyz/allsubsites/ </br> //<!--nourl-->allsubdomains1.allsubdomains2.contoso.com/xyz/allsubsites/ </br> //<!--nourl-->allsubdomains1.allsubdomains2.contoso.com/xyz/allsubsites1/allsubsites2|
+
+
+### <a name="configure-sensitive-service-domains"></a>Konfigurer følsomme tjenestedomæner
+
+1. I Microsoft Purview-compliance-portal åbne **DLP-indstillinger for** >  slutpunkt til **forebyggelse af** >  datatab **Browser- og domænebegrænsninger for følsomme tjenestedomæner til følsomme data** > .
+1. Vælg **Tilføj en ny gruppe af følsomme tjenestedomæner**.
+1. Navngiv gruppen.
+1. Vælg den ønskede **matchtype** . Du kan vælge mellem **URL-adresse**, **IP-adresse**, **IP-adresseinterval**.
+1. Skriv den relevante værdi i **Føj nye tjenestedomæner til denne gruppe**. Du kan føje flere websteder til en gruppe og bruge jokertegn til at dække underdomæner.  Du kan f.eks. www.contoso.com for webstedet på øverste niveau eller *.contoso.com for corp.contoso.com, hr.contoso.com fin.contoso.com
+1. Vælg **Gem**.
+1. Vælg **Politikker**.
+1. Opret og område for en politik, der kun anvendes på **enheder**. Se [Opret, test og juster en DLP-politik](create-test-tune-dlp-policy.md) for at få flere oplysninger om, hvordan du opretter en politik.
+1. Opret en regel, der bruger **brugeren tilgås et følsomt websted fra Edge**, og handlingen **Overvåg eller begræns aktiviteter, når brugerne tilgår følsomme websteder i Microsoft Edge-browseren på Windows-enheder**.
+1. I handlingen skal du vælge **Tilføj eller fjern følsomme webstedsgrupper**.
+1. Vælg de **ønskede følsomme webstedsgrupper** .
+1. Vælg **Tilføj**.
+1. Vælg de brugeraktiviteter, du vil overvåge eller begrænse, og de handlinger, du DLP skal udføre som svar på disse aktiviteter.
+1. Afslut konfigurationen af reglen og politikken, og anvend den.
+
+
 ## <a name="see-also"></a>Se også
 
 - [Få mere at vide om forebyggelse af datatab ved slutpunkt](endpoint-dlp-learn-about.md)

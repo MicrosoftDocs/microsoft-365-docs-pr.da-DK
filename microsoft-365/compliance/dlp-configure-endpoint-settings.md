@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer centrale indstillinger for forebyggelse af datatab for slutpunkter (DLP).
-ms.openlocfilehash: 6265cb39c496a75ebc1bebed494a27798552417b
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: 91460c63b2286a8c2be4e5fe1aa94ea5ee31fec7
+ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66686223"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66882384"
 ---
 # <a name="configure-endpoint-data-loss-prevention-settings"></a>Konfigurer indstillinger for forebyggelse af datatab ved slutpunkt
 
@@ -257,6 +257,17 @@ Eksempel:
 | **CONTOSO.COM** |**Matcher det angivne domænenavn og et hvilket som helst underordnet websted**: <p>*://contoso.com<p>*:/ /contoso.com/ <p>*://contoso.com/anysubsite1 <p>*:/ /contoso.com/anysubsite1/anysubsite2 (osv.) <p>**Svarer ikke til underdomæner eller uspecificerede domæner**: <p>*://anysubdomain.contoso.com <p>*:/ /anysubdomain.contoso.com.AU |
 | ***.CONTOSO.COM** |**Matcher det angivne domænenavn, et hvilket som helst underdomæne og et hvilket som helst websted**: <p>*://contoso.com <p>*:/ /contoso.com/anysubsite <p>*://contoso.com/anysubsite1/anysubsite2 <p>*:/ /anysubdomain.contoso.com/ <p>*://anysubdomain.contoso.com/anysubsite/ <p>*:/ /anysubdomain1.anysubdomain2.contoso.com/anysubsite/ <p>*://anysubdomain1.anysubdomain2.contoso.com/anysubsite1/anysubsite2 (osv.) <p>**Svarer ikke til uspecificerede domæner** <p>*://anysubdomain.contoso.com.AU/ |
 | **`www.contoso.com`** |**Matcher det angivne domænenavn**: <p>`www.contoso.com` <p>**Svarer ikke til uspecificerede domæner eller underdomæner** <p>*://anysubdomain.contoso.com/, i dette tilfælde, skal du sætte selve domænenavnet FQDN `www.contoso.com`|
+
+#### <a name="sensitive-service-domains-preview"></a>Følsomme tjenestedomæner (prøveversion)
+
+Når du angiver et websted i følsomme tjenestedomæner, kan du overvåge, blokere med tilsidesættelse eller blokere brugere, når de forsøger at:
+
+- udskriv fra et websted
+- kopiér data fra et websted
+- gem et websted som lokale filer
+
+Hvert websted skal være angivet i en webstedsgruppe, og brugeren skal have adgang til webstedet via Microsoft Edge. Følsomme tjenestedomæner (prøveversion) bruges sammen med en DLP-politik for enheder. Se [Scenarie 6 Overvåg eller begræns brugeraktiviteter på følsomme tjenestedomæner (prøveversion)](endpoint-dlp-using.md#scenario-6-monitor-or-restrict-user-activities-on-sensitive-service-domains-preview) for at få flere oplysninger.
+
 
 ### <a name="additional-settings-for-endpoint-dlp"></a>Yderligere indstillinger for slutpunkt DLP
 

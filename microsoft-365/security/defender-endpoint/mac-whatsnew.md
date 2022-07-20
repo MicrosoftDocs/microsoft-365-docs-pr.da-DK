@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: 32145a10aa908bb5395f0129f307ac3837a92d42
-ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
+ms.openlocfilehash: e2c90fce172a1b7f9d3cbf9a16b105e56402ec49
+ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66798055"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66882623"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Nyheder i Microsoft Defender for Endpoint på Mac
 
@@ -37,7 +37,7 @@ Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operat
 - [Nyheder i Microsoft Defender for Endpoint på iOS](ios-whatsnew.md)</br>
 
 <details>
-  <summary>Jun-2022 (build: 101.71.18 | Version: 20.122052.17118.0)</summary>
+  <summary>Jul-2022 (build: 101.71.18 | Version: 20.122052.17118.0)</summary>
 
 &ensp;Udgivet: **7. jul 2022**<br/>
 &ensp;Publiceret: **7. jul 2022**<br/>

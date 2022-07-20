@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: DLP-politikkomponent og konfigurationsreference
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 0d49cb1287453cb815bf1fe1ea01b6312c26d879
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: ac809f5a976da1d6c83d36f24e93c3aacd997850
+ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66626573"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66882011"
 ---
 # <a name="data-loss-prevention-policy-reference"></a>Reference til politik til forebyggelse af datatab
 
@@ -309,6 +309,9 @@ De tilgængelige kontekstindstillinger ændres, afhængigt af hvilken placering 
 ##### <a name="conditions-devices-supports"></a>Betingelser, enheder understøtter
 
 - Indholdet indeholder
+- (eksempelvisning) Brugeren tilgåde et følsomt websted fra Edge. Se [Scenarie 6 Overvåg eller begræns brugeraktiviteter på følsomme tjenestedomæner (prøveversion)](endpoint-dlp-using.md#scenario-6-monitor-or-restrict-user-activities-on-sensitive-service-domains-preview) for at få flere oplysninger.
+- Filtypenavnet er
+- Filtypen er
 - Se [Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on)
 
 ##### <a name="conditions-microsoft-defender-for-cloud-apps-supports"></a>Betingelser Microsoft Defender for Cloud Apps understøtter
@@ -409,9 +412,11 @@ De handlinger, der er tilgængelige i en regel, afhænger af de valgte placering
 
 #### <a name="devices-actions"></a>Enhedshandlinger
 
+<!-- - Restrict access or encrypt the content in Microsoft 365 locations-->
+- (eksempelvisning) Overvåg eller begrænsede aktiviteter, når brugerne tilgår følsomme websteder i Microsoft Edge-browseren på Windows-enheder. Se [Scenarie 6 Overvåg eller begræns brugeraktiviteter på følsomme tjenestedomæner (prøveversion)](endpoint-dlp-using.md#scenario-6-monitor-or-restrict-user-activities-on-sensitive-service-domains-preview) for at få flere oplysninger.
 - Overvåg eller begræns aktiviteter på Windows-enheder
 
-Hvis du vil bruge disse indstillinger, skal du konfigurere indstillinger i **DLP-indstillinger** og i den politik, hvor du vil bruge dem. Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) for at få flere oplysninger.
+Hvis du vil bruge `Audit or restrict activities on Windows devices`, skal du konfigurere indstillinger i **DLP-indstillinger** og i den politik, du vil bruge dem i. Se [Begrænsede apps og appgrupper](dlp-configure-endpoint-settings.md#restricted-apps-and-app-groups) for at få flere oplysninger.
 
 Enhedens placering indeholder mange underaktiviteter (betingelser) og handlinger. Du kan få mere at vide under [Slutpunktsaktiviteter, som du kan overvåge og udføre handlinger på](endpoint-dlp-learn-about.md#endpoint-activities-you-can-monitor-and-take-action-on).
 

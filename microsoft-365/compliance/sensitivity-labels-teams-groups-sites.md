@@ -18,18 +18,18 @@ search.appverid:
 - MOE150
 - MET150
 description: Brug følsomhedsmærkater til at beskytte indhold på SharePoint- og Microsoft Teams-websteder og Microsoft 365-grupper.
-ms.openlocfilehash: 53278feccc7b2741453c20d37bbd995226a21dbe
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: 820ed3e8c629056165661c90ec9cd612222cdbbf
+ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66662534"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66882269"
 ---
 # <a name="use-sensitivity-labels-to-protect-content-in-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug følsomhedsmærkater til at beskytte indhold i Microsoft Teams, Microsoft 365-grupper og SharePoint-websteder
 
 >*[Microsoft 365-licensvejledning til sikkerhed & overholdelse af angivne standarder](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).*
 
-Ud over at bruge [følsomhedsmærkater](sensitivity-labels.md) til at klassificere og beskytte dokumenter og mails kan du også bruge følsomhedsmærkater til at beskytte indhold i følgende objektbeholdere: Microsoft Teams-websteder, Microsoft 365-grupper ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) og SharePoint-websteder. Til denne klassificering og beskyttelse på beholderniveau skal du bruge følgende mærkatindstillinger:
+Ud over at bruge [følsomhedsmærkater](sensitivity-labels.md) til at beskytte dokumenter og mails kan du også bruge følsomhedsmærkater til at beskytte indhold i følgende objektbeholdere: Microsoft Teams-websteder, Microsoft 365-grupper ([tidligere Office 365 grupper](https://techcommunity.microsoft.com/t5/microsoft-365-blog/office-365-groups-will-become-microsoft-365-groups/ba-p/1303601)) og SharePoint-websteder. Brug følgende navneindstillinger til denne beskyttelse på objektbeholderniveau:
 
 - Beskyttelse af personlige oplysninger (offentlige eller private) for teamswebsteder og Microsoft 365-grupper
 - Ekstern brugeradgang
@@ -42,9 +42,11 @@ Ud over at bruge [følsomhedsmærkater](sensitivity-labels.md) til at klassifice
 > [!IMPORTANT]
 > Indstillingerne for ikke-administrerede enheder og godkendelseskontekster fungerer sammen med betinget adgang til Azure Active Directory. Du skal konfigurere denne afhængige funktion, hvis du vil bruge en følsomhedsmærkat til disse indstillinger. Yderligere oplysninger er inkluderet i de efterfølgende instruktioner.
 
-Når du anvender denne følsomhedsmærkat på en understøttet objektbeholder, anvender mærkaten automatisk klassificeringen og de konfigurerede beskyttelsesindstillinger på webstedet eller gruppen.
+Når du anvender denne følsomhedsmærkat på en understøttet objektbeholder, anvender mærkaten automatisk følsomhedskategorien og konfigurerede beskyttelsesindstillinger på webstedet eller gruppen.
 
-Indholdet i disse objektbeholdere arver dog ikke mærkaterne til klassificeringen eller indstillingerne for filer og mails, f.eks. visuelle markeringer og kryptering. Så brugerne kan mærke deres dokumenter på SharePoint-websteder eller teamwebsteder, skal du sørge for, at du har [aktiveret følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+Indholdet i disse objektbeholdere nedarver dog ikke mærkaterne for følsomhedskategorien eller indstillingerne for filer og mails, f.eks. indholdsmarkeringer og kryptering. Så brugerne kan mærke deres dokumenter på SharePoint-websteder eller teamwebsteder, skal du sørge for, at du har [aktiveret følsomhedsmærkater for Office-filer i SharePoint og OneDrive](sensitivity-labels-sharepoint-onedrive-files.md).
+
+Objektbeholdernavne understøtter ikke visning af [andre sprog](create-sensitivity-labels.md#additional-label-settings-with-security--compliance-powershell) og viser kun det oprindelige sprog for navnet og beskrivelsen.
 
 ## <a name="using-sensitivity-labels-for-microsoft-teams-microsoft-365-groups-and-sharepoint-sites"></a>Brug af følsomhedsmærkater til Microsoft Teams, Microsoft 365-grupper og SharePoint-websteder
 

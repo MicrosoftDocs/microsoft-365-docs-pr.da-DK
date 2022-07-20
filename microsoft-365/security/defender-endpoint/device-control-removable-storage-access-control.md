@@ -15,12 +15,12 @@ ms.custom: admindeeplinkDEFENDER
 ms.topic: conceptual
 ms.technology: mde
 ms.date: 06/24/2022
-ms.openlocfilehash: d9ff97aa50a03c1a75f073328a250a9acc3faf54
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 1900487e4249c344981630d7a11aafd02862f863
+ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490747"
+ms.lasthandoff: 07/19/2022
+ms.locfileid: "66882113"
 ---
 # <a name="microsoft-defender-for-endpoint-device-control-removable-storage-access-control"></a>Access Control flytbare lagermedier Microsoft Defender for Endpoint enhedsstyring
 
@@ -155,6 +155,8 @@ I forbindelse med politikinstallation i Intune skal kontoen have tilladelser til
 - Global administrator
 
 ### <a name="deploying-removable-storage-access-control-by-using-intune-oma-uri"></a>Udrulning af Flytbare lagermedier Access Control ved hjælp af Intune OMA-URI
+
+Hvis du vil blokere en bestemt flytbar lagerklasse, men tillade bestemte medier, kan du bruge 'IncludedIdList a group through PrimaryId og ExcludedIDList a group through DeviceId/HardwareId/etc.'
 
 Gå til Microsoft Endpoint Manager Administration (<https://endpoint.microsoft.com/>) **> Enheder > Opret profil > Platform: Windows 10 og nyere, Profiltype: Skabeloner > Brugerdefineret**
 
