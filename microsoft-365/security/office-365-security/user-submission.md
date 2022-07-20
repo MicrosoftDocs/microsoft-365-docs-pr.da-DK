@@ -1,11 +1,11 @@
 ---
-title: Brugerrapporterede meddelelsesindstillinger
+title: Brugerrapporterede mailindstillinger for spam, phish, som skadelig mail
 f1.keywords:
 - NOCSH
-ms.author: dansimp
-author: dansimp
+ms.author: chrisda
+author: chrisda
 manager: dansimp
-ms.date: ''
+ms.date: 07/19/2022
 audience: ITPro
 ms.topic: how-to
 ms.localizationpriority: medium
@@ -15,15 +15,15 @@ ms.collection:
 - M365-security-compliance
 - m365initiative-defender-office365
 ms.custom: ''
-description: Administratorer kan få mere at vide om, hvordan de konfigurerer en postkasse til at indsamle spam og phishing-mails, der rapporteres af brugerne.
+description: Sådan konfigurerer du en postkasse til at indsamle spam og phishing-mail rapporteret af brugere. Opret en postkasse til meddelelser, som brugerne rapporterer som spam, phish, som ondsindet eller ikke ondsindet.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: c4faa6ce80a885ecea864cc2fa51be29553c4a3d
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 40a52e5e3db8a1e11087d4a8beb33b9ba1f3a3aa
+ms.sourcegitcommit: 08ad8636b029ffd19130e2da0de72f37f67e412e
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66636419"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66885526"
 ---
 # <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
@@ -34,20 +34,22 @@ ms.locfileid: "66636419"
 - [Microsoft Defender for Office 365 plan 1 og plan 2](defender-for-office-365.md)
 - [Microsoft 365 Defender](../defender/microsoft-365-defender.md)
 
-I Microsoft 365-organisationer med Exchange Online postkasser kan du angive en postkasse for at modtage meddelelser, som brugerne rapporterer som skadelige eller ikke skadelige. Når brugerne rapporterer meddelelser ved hjælp af de forskellige rapporteringsindstillinger, kan du bruge denne postkasse til at opfange meddelelser (kun sende til den brugerdefinerede postkasse) eller modtage kopier af meddelelser (sende til den brugerdefinerede postkasse og Microsoft). Denne funktion fungerer sammen med følgende indstillinger for meddelelsesrapportering:
+I Microsoft 365-organisationer med Exchange Online postkasser kan du sende mails til en postkasse, når brugerne rapporterer spam, phish, som skadelige eller endda ikke skadelige meddelelser. Når brugerne rapporterer mails ved hjælp af forskellige rapporteringsindstillinger, kan administratorer bruge denne postkasse til at opfange disse mails (kun sende til den brugerdefinerede postkasse) eller modtage kopier af meddelelser (sende til den brugerdefinerede postkasse og Microsoft).
+
+Denne funktion fungerer sammen med disse indstillinger for meddelelsesrapportering:
 
 - [Tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md)
 - [Tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md)
 - [Rapporteringsværktøjer fra tredjepart](#third-party-reporting-tools)
 
-Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i stedet for direkte til Microsoft giver dine administratorer mulighed for selektivt og manuelt at rapportere meddelelser til Microsoft ved hjælp [af Administration indsendelse](admin-submission.md). Disse indstillinger var tidligere kendt som politikken Brugerindsendelser.
+Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i stedet for direkte til Microsoft giver administratorer mulighed for selektivt og manuelt at rapportere mails til Microsoft ved hjælp af [Administration indsendelse](admin-submission.md). *Disse indstillinger var tidligere kendt som politikken Brugerindsendelser*.
 
   > [!NOTE]
   > Hvis rapportering er blevet [deaktiveret i Outlook på internettet](report-junk-email-and-phishing-scams-in-outlook-on-the-web-eop.md#disable-or-enable-junk-email-reporting-in-outlook-on-the-web), tilsidesætter aktivering af brugerrapporterede meddelelser denne indstilling og giver brugerne mulighed for at rapportere meddelelser i Outlook på internettet igen.
 
 ## <a name="custom-mailbox-prerequisites"></a>Forudsætninger for brugerdefineret postkasse
 
-Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så brugerrapporterede meddelelser går til din brugerdefinerede postkasse:
+Brug artiklerne nedenfor til at konfigurere forudsætninger for, at brugerrapporterede mails går til din brugerdefinerede postkasse:
 
 - [Identificer den brugerdefinerede postkasse som en SecOps-postkasse](configure-advanced-delivery.md#use-the-microsoft-365-defender-portal-to-configure-secops-mailboxes-in-the-advanced-delivery-policy).
 
@@ -55,7 +57,7 @@ Brug følgende artikler til at konfigurere de påkrævede forudsætninger, så b
   - Automatisk udrensning (ZAP) på nul timer for malware er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér automatisk tøm af malware på nul timer** er ikke valgt).
   - Den fælles indstilling for filtrering af vedhæftede filer er slået fra (afsnittet \>**Beskyttelsesindstillinger** **Aktivér filteret for fælles vedhæftede filer** er ikke valgt).
 
-Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de rapporterede meddelelser:
+**Hvis du har Microsoft Defender for Office 365**, skal du også konfigurere følgende indstillinger, så vores avancerede filtrering ikke påvirker de rapporterede mails:
 
 - Sørg for, at den brugerdefinerede postkasse ikke er en del af nogen [forudindstillede sikkerhedspolitikker](preset-security-policies.md#use-the-microsoft-365-defender-portal-to-modify-the-assignments-of-standard-and-strict-preset-security-policies)
 
@@ -63,7 +65,7 @@ Hvis du har Microsoft Defender for Office 365, skal du også konfigurere følgen
 
 - [Opret en politik for vedhæftede filer, der er tillid](set-up-safe-attachments-policies.md) til, for den brugerdefinerede postkasse, hvor scanning af vedhæftede filer, der er tillid til, herunder Dynamisk levering, er slået fra (sektionen **Sikre vedhæftede filer ukendt malwaresvar** > **Slået fra**).
 
-Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger, kan du bruge procedurerne i denne artikel til at konfigurere postkassen til brugerindsendelser.
+Når du har kontrolleret, at din postkasse opfylder forudsætningerne, kan du bruge resten af denne artikel til at konfigurere postkassen til brugerindsendelser.
 
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>Hvad har du brug for at vide, før du begynder?
 
@@ -82,7 +84,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
   - [Aktivér eller deaktiver adgang til Exchange Online PowerShell](/powershell/exchange/disable-access-to-exchange-online-powershell)
   - [Klientadgangsregler i Exchange Online](/exchange/clients-and-mobile-in-exchange-online/client-access-rules/client-access-rules)
 
-## <a name="use-the-microsoft-365-defender-portal-to-configure-the-user-submissions-mailbox"></a>Brug Microsoft 365 Defender-portalen til at konfigurere postkassen for brugerindsendelser
+## <a name="use-the-microsoft-365-defender-portal-to-configure-the-user-submissions-mailbox-for-emails"></a>Brug Microsoft 365 Defender-portalen til at konfigurere postkassen for brugerindsendelser for mails
 
 1. I Microsoft 365 Defender-portalen på <https://security.microsoft.com>skal du gå til **Politikker & regler** > **Trusselspolitikker** > **Brugerrapporterede meddelelsesindstillinger** i afsnittet **Andre**. Hvis du vil gå direkte til siden **Brugerindsendelser** , skal du bruge <https://security.microsoft.com/userSubmissionsReportMessage>.
 
@@ -130,7 +132,7 @@ Når du har kontrolleret, at postkassen opfylder alle relevante forudsætninger,
 
 3. Klik på **Bekræft**, når du er færdig. Klik på **Gendan** for at rydde disse værdier.
 
-## <a name="third-party-reporting-tools"></a>Rapporteringsværktøjer fra tredjepart
+## <a name="third-party-email-reporting-tools"></a>Værktøjer til rapportering af mail fra tredjepart
 
 Du kan konfigurere værktøjer til rapportering af meddelelser fra tredjepart for at sende rapporterede meddelelser til den brugerdefinerede postkasse. Det gør du ved at angive **knappen Meddelelse i Microsoft Outlook-rapport** til **Fra** og angive **Min organisations postkasse** til en Office 365 postkasse efter eget valg.
 
