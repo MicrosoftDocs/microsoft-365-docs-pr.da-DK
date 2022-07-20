@@ -11,29 +11,20 @@ f1_keywords:
 - O365E_BCSSetup4WindowsConfig
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- M365-subscription-management
-- M365-identity-device-management
+ms.date: 07/19/2022
 ms.custom:
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
-- OKR_SMB_M365
-- seo-marvel-mar
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-ROBOTS: NO INDEX, NO FOLLOW
-ms.assetid: 21e5551f-fa35-4f13-9418-f80d668b6a2b
 description: Få mere at vide om konfiguration af indstillingerne for standardenhedspolitikken, som alle Windows-enheder modtager, når de logger på deres arbejds- eller skolekonto.
-ms.openlocfilehash: a9fd78ef37aed3663572b7049ae150e85916e41b
-ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
+ms.openlocfilehash: f497dab832b9980225be2e689d2c980860a01454
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66607405"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894871"
 ---
 # <a name="secure-windows-devices"></a>Beskyt Windows-enheder
 

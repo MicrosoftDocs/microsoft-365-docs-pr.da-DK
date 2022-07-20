@@ -9,18 +9,19 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.reviewer: inbadian, shlomiakirav
+ms.date: 07/19/2022
+ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 - m365-initiative-defender-business
-ms.openlocfilehash: 2c86ff14326315596318e5fce11c7c26c5c22f85
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 847095a4dcfb1905cf3c95b9cbf393298b1c7c3d
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66630847"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894487"
 ---
 # <a name="review-remediation-actions-in-microsoft-365-business-premium"></a>Gennemse afhjælpningshandlinger i Microsoft 365 Business Premium
 

@@ -9,26 +9,22 @@ audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 description: En oversigt over, hvordan du konfigurerer og sikrer administrerede enheder fra sikkerhedstrusler og cyberangreb. Implementer beskyttelse af cybersikkerhedsforsvar og slutpunkter ved at tilmelde og onboarde alle enheder. Få mere at vide om, hvordan du konfigurerer enhedspolitikker og administrerer enhedsgrupper.
-ms.openlocfilehash: 119b54dd2a00e02fcef9a7caa0406638ec06a261
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 599ded6105f050cc1bd37c8214277f7a0f5ee091
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66858932"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894399"
 ---
 # <a name="set-up-and-secure-managed-devices"></a>Konfigurer og beskyt administrerede enheder
 

@@ -9,17 +9,18 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 044f81ddaa3ddf1cb0ddaf6c96e05f9d186e36ce
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: 0578aa2e672a0d485057ac983ed85d10828c952d
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66772264"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893969"
 ---
 # <a name="onboard-enrolled-devices-to-microsoft-defender-for-business"></a>Onboarde tilmeldte enheder til Microsoft Defender til virksomheder
 
@@ -71,13 +72,9 @@ Se [Tilmelding af enhed i Microsoft Intune](/mem/intune/enrollment/device-enroll
 
 ## <a name="what-about-servers"></a>Hvad med servere?
 
-Servere understøttes ikke som standard i Microsoft 365 Business Premium og Defender for Business. Muligheden for at onboarde en server, f.eks. et slutpunkt, der kører Windows Server eller Linux Server, er dog nu en prøveversion. Sørg for at gennemse kravene, før du onboarder en server:
+Servere understøttes som standard ikke i Microsoft 365 Business Premium og den separate version af Defender for Business. Muligheden **for at onboarde en server, f.eks. et slutpunkt, der kører Windows Server eller Linux Server, fås nu som prøveversion**! 
 
-- Du har en serverlicens til hver serverforekomst i enten Microsoft 365 Business Premium eller Defender for Business (separat).
-- Indstillingen **Prøveversionsfunktioner** er slået til. På Microsoft 365 Defender-portalen ([https://security.microsoft.com](https://security.microsoft.com)) skal du gå til **Indstillinger** > **Slutpunkter** > **Prøveversionsfunktioner til generelle** > **avancerede funktioner** > .
-- Håndhævelsesområdet for Windows Server er slået til. Gå til **Indstillinger** > **Slutpunkter** > **Administration af** >  konfiguration **Håndhævelsesområde**. Vælg **Brug MDE til at gennemtvinge sikkerhedskonfigurationsindstillinger fra MEM**, vælg  **Windows Server**, og vælg derefter **Gem**.
-
-Se fanen **Servere** i [Onboard devices to Microsoft Defender til virksomheder for at](../security/defender-business/mdb-onboard-devices.md) få detaljerede instruktioner.
+Se [Sådan får du Microsoft Defender til virksomheder servere (prøveversion)](../security/defender-business/get-defender-business-servers.md).
 
 ## <a name="run-a-detection-test-on-a-windows-device"></a>Kør en registreringstest på en Windows-enhed
 

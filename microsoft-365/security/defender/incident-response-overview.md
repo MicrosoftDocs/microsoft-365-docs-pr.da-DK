@@ -16,20 +16,17 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
-- m365solution-incidentresponse
-- m365solution-overview
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: a919e8893fff0486d7a9a3eb89be1822a73ce437
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 83df9dcec46f4e75f001a8851be4f9897cee2e8c
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603544"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893469"
 ---
 # <a name="investigate-and-respond-with-microsoft-365-defender"></a>Undersøg og reager med Microsoft 365 Defender
 

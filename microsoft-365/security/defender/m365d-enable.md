@@ -14,18 +14,20 @@ author: dansimp
 ms.localizationpriority: medium
 manager: dansimp
 audience: ITPro
-ms.collection: M365-security-compliance
+ms.collection:
+- M365-security-compliance
+- m365solution-getstarted
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 2a99dbaf50b582df4203fc9c8e1d04e0a3f6d807
-ms.sourcegitcommit: 3b8e009ea1ce928505b8fc3b8926021fb91155f3
+ms.openlocfilehash: 0fa1a47bb5a4a09c22649866bb6c5c6039dc2850
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/28/2022
-ms.locfileid: "64498634"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895025"
 ---
 # <a name="turn-on-microsoft-365-defender"></a>Slå Microsoft 365 Defender til
 

@@ -9,27 +9,22 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
-ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: En oversigt over, hvordan du oplærer dit team til at beskytte din mail mod malware, phishing og andre ondsindede cyberangreb ved hjælp af de cybersikkerhedsværktøjer, der følger med Microsoft 365 Business Premium.
-ms.openlocfilehash: 91e79290c3b930bf91da5108be0f29d94204300f
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 957927d766c3c5711bc7d8547afe65f9b05d1c40
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66858934"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894421"
 ---
 # <a name="protect-all-email"></a>Beskyt alle mails
 

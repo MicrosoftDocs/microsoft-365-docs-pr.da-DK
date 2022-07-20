@@ -9,28 +9,20 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.date: 07/19/2022
+ms.collection: ''
 ms.custom:
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
-- OKR_SMB_M365
-- seo-marvel-mar
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
-ms.assetid: 80bdae57-f8bc-4e40-a58c-956007117ecb
 description: Se, hvordan du bruger Microsoft 365 til virksomheder til at fjerne virksomhedsdata, som dine brugere har på deres enheder eller Windows-pc'er.
-ms.openlocfilehash: 082dbdc11a06a03962594c247dcd6738118a0667
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: a89aff7c18a8470647c03f391a82dc00a3966b09
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858843"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66892831"
 ---
 # <a name="remove-company-data-from-devices"></a>Fjern firmadata fra enheder
 

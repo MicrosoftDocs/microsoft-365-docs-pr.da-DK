@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Microsoft Purview Compliance Manager indeholder skabeloner til oprettelse af vurderinger, der er i overensstemmelse med nationale, regionale og branchemæssige bestemmelser, standarder og love.
-ms.openlocfilehash: bfac79126f167b6ec8faaacb0134f97aaea0fe4d
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 2870378d25a66661cdc720c8073e5bbab283790b
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66631199"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895091"
 ---
 # <a name="compliance-manager-templates-list"></a>Liste over skabeloner til Overholdelsesstyring
 
@@ -295,7 +295,8 @@ De skabeloner, der er angivet nedenfor, kan købes af din organisation.
 - Victorianske sikkerhedsstandarder for beskyttende data V2.0 (VPDSS 2.0)  
 - Information Management Standard for Australian Government – National Archives of Australia (NAA)  
 - China – Specifikation for beskyttelse af personlige oplysninger  
-- Den Kinesiske Folkerepubliks cybersikkerhedslov  
+- Den Kinesiske Folkerepubliks cybersikkerhedslov
+- Hong Kong - Code of Banking Practice og Payment Card
 - Bekendtgørelse om beskyttelse af personlige oplysninger (beskyttelse af personlige oplysninger) Hongkong  
 - Informationsteknologi i Indien (rimelig sikkerhedspraksis og procedurer og følsomme personoplysninger eller oplysninger) Regler
 - Indien - Information Technology Act  

@@ -9,27 +9,22 @@ audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
-ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Oversigt over opsætning for små og mellemstore virksomheder og kampagner. Sådan konfigurerer du cybersikkerhed og forhindrer cyberangreb.
-ms.openlocfilehash: 2b9619c49938d4c08acc3b84500b4c91d204b458
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 1e715c47c5c440dbbd5cf6d6445695f3352fedb9
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66858928"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66892699"
 ---
 # <a name="fortify-your-organization-with-microsoft-365-business-premium"></a>Fortificer din organisation med Microsoft 365 Business Premium
 

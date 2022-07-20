@@ -9,18 +9,19 @@ audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
 ms.custom: intro-get-started
-ms.openlocfilehash: f769d79baa2dc17abe179f09af3bdb6f4571440c
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: f20f0e918c7bb0d45a7e8319e9883373a112d7c5
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66771323"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893095"
 ---
 # <a name="set-up-microsoft-365-business-premium"></a>Konfigurer Microsoft 365 Business Premium
 

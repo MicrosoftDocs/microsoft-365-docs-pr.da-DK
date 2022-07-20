@@ -1,6 +1,6 @@
 ---
 title: Forbered din sikkerhedsholdning til din første hændelse
-description: Konfigurer din Microsoft 365 lejers sikkerhedsholdning for din første hændelse i Microsoft 365 Defender.
+description: Konfigurer din Microsoft 365-lejers sikkerhedsholdning for din første hændelse i Microsoft 365 Defender.
 keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
@@ -16,18 +16,18 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
+- m365solution-firstincident
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 0dbff9e88ed00dd8aa08fd64543266c3aef75d79
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 690e1c48a452cfa00f0ae8d4fd87849b1c2e79dc
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664078"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893513"
 ---
 # <a name="prepare-your-security-posture-for-your-first-incident"></a>Forbered din sikkerhedsholdning til din første hændelse
 
@@ -71,7 +71,7 @@ Hvis du vil kontrollere statussen for din softwarerettelse, skal du gå til side
 
 ## <a name="4-understand-emerging-threats"></a>4. Forstå nye trusler
 
-Brug [trusselsanalyser](threat-analytics.md) på Microsoft 365 Defender-portalen for at holde dig ajour med det aktuelle sikkerhedstrusselslandskab. Microsofts sikkerhedsforskere, der er eksperter i sikkerhed, opretter rapporter, der beskriver de nyeste cybertrusler i detaljer, så du kan forstå, hvordan de kan påvirke dit Microsoft 365 abonnement, dine enheder og dine brugere. Disse rapporter kan omfatte:
+Brug [trusselsanalyser](threat-analytics.md) på Microsoft 365 Defender-portalen for at holde dig ajour med det aktuelle sikkerhedstrusselslandskab. Microsofts sikkerhedsforskere, der er eksperter i sikkerhed, opretter rapporter, der beskriver de nyeste cybertrusler i detaljer, så du kan forstå, hvordan de kan påvirke dit Microsoft 365-abonnement, dine enheder og dine brugere. Disse rapporter kan omfatte:
 
 - Aktive trusselsaktører og deres kampagner
 - Populære og nye angrebsteknikker

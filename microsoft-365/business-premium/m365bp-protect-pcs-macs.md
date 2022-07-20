@@ -9,34 +9,30 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Beskyt ikke-administrerede eller byod-enheder (bring-your-own devices) mod cyberangreb med Microsoft 365 Business Premium. Sådan konfigurerer du cybersikkerhed til Windows-pc'er og Macs.
-ms.openlocfilehash: 033fdd41c8df09f983e1abc296bd0b33de20a61a
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: c6010661d11be2af064ddd3d5250f1cf9baacc09
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66773075"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894355"
 ---
 # <a name="protect-unmanaged-windows-pcs-and-macs-in-microsoft-365-business-premium"></a>Beskyt ikke-administrerede Windows-pc'er og Macs i Microsoft 365 Business Premium
 
 Dette mål fokuserer på at skabe beskyttelse for alle ikke-administrerede Windows 10 pc'er og Macs, der ikke er tilmeldt Microsoft Intune. Det er meget sandsynligt, at din lille virksomhed eller kampagne kan have medarbejdere, der medbringer deres egne enheder (BYOD), og disse enheder administreres ikke. BYOD omfatter personligt ejede telefoner, tablets og pc'er.
 
->[!NOTE]
->BYOD-brugere skal hver især installere og køre appen Firmaportal for at tilmelde disse enheder og modtage adgang til virksomhedsressourcer.
+> [!NOTE]
+> BYOD-brugere skal hver især installere og køre appen Firmaportal for at tilmelde disse enheder og modtage adgang til virksomhedsressourcer.
 
 Det er vigtigt, at du sikrer, at dine frontlinjebrugere følger disse retningslinjer, så minimumsikkerhedsfunktionerne er konfigureret på alle BYOD-enhederne.
 
@@ -86,4 +82,4 @@ Brug firewallindstillinger til at beskytte Din Mac mod uønsket kontakt, der sta
 
 ## <a name="next-mission"></a>Næste mission
 
-Okay, missionen er fuldført! Lad os nu arbejde på [at beskytte mailsystemet](m365bp-protect-email-overview.md) mod phishing og andre angreb.
+Okay, missionen er fuldført! Lad os nu arbejde på [at beskytte mailbrug](m365bp-protect-email-overview.md) mod phishing og andre angreb.

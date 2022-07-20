@@ -9,26 +9,19 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.date: 07/19/2022
 ms.custom:
 - MiniMaven
-- MSB365
-- OKR_SMB_M365
-- seo-marvel-mar
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
 description: Konfigurer funktioner til overholdelse af angivne standarder for at forhindre tab af data og holde dine og dine kunders følsomme oplysninger sikre.
-ms.openlocfilehash: db1993a99292f9b90a3b567007b96742b0f359b2
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: 0508bcfbae77ba9e5fc26abb36e200598f67b83f
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66858911"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894465"
 ---
 # <a name="set-up-compliance-features"></a>Konfigurer funktioner til overholdelse af angivne standarder
 

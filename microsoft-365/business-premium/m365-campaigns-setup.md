@@ -9,27 +9,23 @@ audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Oversigt over konfiguration for Microsoft 365 Business til kampagner eller andre virksomheder
-ms.openlocfilehash: 5e8669b92297688119e9262e0d2f14d1ecfae3a2
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: b22519c023b53a284611e7efe38f078bee70799f
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66858986"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893029"
 ---
 # <a name="setup-for-microsoft-365-business-for-campaigns"></a>Konfiguration af Microsoft 365 Business for Campaigns
 

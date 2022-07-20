@@ -9,28 +9,22 @@ ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
-- admindeeplinkEXCHANGE
 search.appverid:
 - BCS160
 - MET150
-ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: Få mere at vide om, hvordan du sender krypteret mail ved hjælp af Outlook.
-ms.openlocfilehash: e4a25cc59d0d92c1905507b1e5db1253f120849c
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 5e0698db0a17e24df358fc873b0a419b13c17dad
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489552"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893117"
 ---
 # <a name="encrypt-or-label-your-sensitive-email-in-microsoft-365"></a>Kryptér eller mærkér din følsomme mail i Microsoft 365
 

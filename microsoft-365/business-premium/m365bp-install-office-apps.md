@@ -9,27 +9,23 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Sådan installerer du Office på alle enheder i Microsoft 365 Business Premium.
-ms.openlocfilehash: b06edb2ee6e4427e61ba25f1149c3a2ee0fcf034
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 112e83a0473dc9c0e8019c2b0a63a04fb7b72f7c
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66858943"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894575"
 ---
 # <a name="install-office-apps-on-all-devices"></a>Installér Office apps på alle enheder
 
@@ -43,10 +39,10 @@ For alle medlemmer af organisationen kan du finde Microsoft Office-apps i menuen
 
 Få dem til at udføre følgende:
 
-1. Gå til office.com. Du skal muligvis logge på med din arbejdskonto.
+1. Gå til [https://office.com](https://office.com), og log på med din arbejdskonto.
 2. Vælg  **Installér Office**  >  **Microsoft 365-apps**  >  **Kør** , og vælg derefter  **Ja**.
 3. Office-apps er installeret. Processen kan tage flere minutter. Når den er fuldført, skal du vælge  **Luk**.
-4. Hvis du vil installere Microsoft Teams, skal du gå til siden office.com og vælge  **Teams**.
+4. Hvis du vil installere Microsoft Teams, skal du gå til [siden office.com](https://office.com) og derefter vælge  **Teams**.
 5. Hent Windows-appen, og vælg derefter  **Kør**. Teams viser en prompt, når installationen er fuldført.
 
 ## <a name="set-up-mobile-devices-for-microsoft-365-business-premium-users"></a>Konfigurer mobilenheder for Microsoft 365 Business Premium brugere

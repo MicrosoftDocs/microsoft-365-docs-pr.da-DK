@@ -15,20 +15,16 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
-- incidentresponse
-- m365solution-incidentresponse
-- m365solution-overview
 ms.topic: conceptual
 search.appverid:
 - MOE150
 ms.technology: m365d
-ms.openlocfilehash: 8138c07ab871ab1a6a8d89df980c914983bbb58e
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 441f9ce5824c1de82a5629e4c0ba9192ed89a529
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64666938"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895069"
 ---
 # <a name="investigate-incidents-in-microsoft-365-defender"></a>Undersøg hændelser i Microsoft 365 Defender
 
@@ -175,11 +171,11 @@ Microsoft 365 Defender undersøger automatisk alle hændelsers understøttede h�
 
 Hver af de analyserede enheder er markeret med en dom (Ondsindet, Mistænkelig, Ren) og en afhjælpningsstatus. Dette hjælper dig med at forstå afhjælpningsstatus for hele hændelsen, og hvilke næste trin der kan udføres.
 
-## <a name="graph-preview"></a>Graph (eksempelvisning)
+## <a name="graph-preview"></a>Graph (prøveversion)
 
-Fanen **Graph** viser det fulde omfang af angrebet, hvordan angrebet spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt angriberen gik. Den forbinder de forskellige mistænkelige enheder, der er en del af angrebet, med deres relaterede aktiver, f.eks. brugere, enheder og postkasser. 
+Under fanen **Graph** kan du se det fulde omfang af angrebet, hvordan angrebet spredte sig gennem dit netværk over tid, hvor det startede, og hvor langt angriberen gik. Den forbinder de forskellige mistænkelige enheder, der er en del af angrebet, med deres relaterede aktiver, f.eks. brugere, enheder og postkasser. 
 
-Fra fanen **Graph** kan du:
+Under fanen **Graph** kan du:
 
 1. Afspil beskederne og noderne på grafen, som de fandt sted over tid for at forstå kronologien af angrebet.
 
@@ -189,11 +185,11 @@ Fra fanen **Graph** kan du:
 
 2. Åbn en objektrude, så du kan gennemse enhedsoplysningerne og reagere på afhjælpningshandlinger, f.eks. slette en fil eller isolere en enhed.
  
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-entity-pane.png" alt-text="Objektruden på siden Graph på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-graph-entity-pane.png":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-entity-pane.png" alt-text="Objektruden på siden Graf på Microsoft 365 Defender-portalen" lightbox="../../media/investigate-incidents/incident-graph-entity-pane.png":::
 
 3. Fremhæv de beskeder, der er baseret på det objekt, de er relateret til.
  
-   :::image type="content" source="../../media/investigate-incidents/incident-graph-alert.png" alt-text="Fremhævning af en besked på siden Graph" lightbox="../../media/investigate-incidents/incident-graph-alert.png":::
+   :::image type="content" source="../../media/investigate-incidents/incident-graph-alert.png" alt-text="En fremhævning af en besked på grafsiden" lightbox="../../media/investigate-incidents/incident-graph-alert.png":::
 
 ## <a name="next-steps"></a>Næste trin
 

@@ -8,31 +8,23 @@ manager: dansimp
 audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
-ms.collection:
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.collection: ''
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.custom:
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 - OKR_SMB_M365
-- seo-marvel-mar
-- AdminSurgePortfolio
-- AdminTemplateSet
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-ms.assetid: be5b6d90-3344-4c5e-bf40-5733eb845beb
 description: Få mere at vide om, hvordan du bruger Windows Autopilot til at konfigurere nye Windows 10 enheder til din virksomhed, så de er klar til medarbejderbrug.
-ms.openlocfilehash: 4ab7925f751d987e9508732202908ad10c9d46b7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 72a35557d3ab70c5e11f91f366b9cbe003b0c4c6
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858847"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893249"
 ---
 # <a name="use-this-step-by-step-guide-to-add-autopilot-devices-and-profile"></a>Brug denne trinvise vejledning til at tilføje Autopilot-enheder og -profil
 

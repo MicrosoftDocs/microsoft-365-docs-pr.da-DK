@@ -9,24 +9,23 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan Microsoft 365 Business Premium hjælper din virksomhed med produktivitet og sikkerhed.
-ms.openlocfilehash: c8620bd687e297151fd6ccabac7f8d01a66457ad
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 9d4faf1f954b750d2710a946ad1632e4913809fe
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66631744"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66892787"
 ---
 # <a name="how-microsoft-365-business-premium-helps-your-business"></a>Sådan hjælper Microsoft 365 Business Premium din virksomhed
 

@@ -1,7 +1,7 @@
 ---
 title: Trin 2. Afhjælp din første hændelse
-description: Sådan kommer du i gang med at løse din første hændelse Microsoft 365 Defender.
-keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365, hændelsesrespons, cyberangreb
+description: Sådan kommer du i gang med at afhjælpe din første hændelse i Microsoft 365 Defender.
+keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identitet, identitet, postkasse, mail, 365, microsoft, m365, svar på hændelser, cyberangreb
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,18 +16,18 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
+- m365solution-firstincident
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: b6872fb13ba1a32f081b5fcc82fd590f2c196a6c
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: f55cdc31dbf8a74395a232340cc8d273e9927dc0
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64569551"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893535"
 ---
 # <a name="step-2-remediate-your-first-incident"></a>Trin 2. Afhjælp din første hændelse
 
@@ -36,62 +36,62 @@ ms.locfileid: "64569551"
 **Gælder for:**
 - Microsoft 365 Defender
 
-Microsoft 365 Defender indeholder ikke blot registrerings- og analysefunktioner, men indeholder også muligheder for at inddæmme og sprede malware. Indeholder trin til at reducere effekten af angrebene, mens det er muligt at sikre, at alle sporinger af hackeraktivitet fjernes fra netværket. Microsoft 365 Defender tilbyder adskillige afhjælpningshandlinger, der kan konfigureres til automatisk afhjælpning afhængigt af operativsystemet for de påvirkede enheder og angrebstypen.[](m365d-autoir.md)
+Microsoft 365 Defender leverer ikke kun opdagelses- og analysefunktioner, men leverer også opbevaring og udryddelse af malware. Opbevaring omfatter trin til at reducere virkningen af angrebet, mens udryddelse sikrer, at alle spor af hackeraktivitet fjernes fra netværket. Microsoft 365 Defender tilbyder flere afhjælpningshandlinger, der kan konfigureres til [automatisk afhjælpning](m365d-autoir.md), afhængigt af operativsystemet på berørte enheder og angrebstypen.
 
-Microsoft 365 Defender tilbyder flere afhjælpningshandlinger, som analytikere kan starte manuelt. Handlinger er opdelt i to kategorier, Handlinger på enheder og handlinger på filer. Nogle handlinger kan bruges til straks at stoppe truslen, mens andre handlinger hjælper med yderligere analyse af analyse.
+Microsoft 365 Defender tilbyder flere afhjælpningshandlinger, som analytikere kan starte manuelt. Handlinger er opdelt i to kategorier: Handlinger på enheder og handlinger på filer. Nogle handlinger kan bruges til straks at stoppe truslen, mens andre handlinger hjælper med yderligere retsmedicinske analyser.
 
 ## <a name="actions-on-devices"></a>Handlinger på enheder
 
-- **Isoler enheden** – Denne aktivitet blokerer straks al netværkstrafik (internet og intern) for at minimere malwares spredning og tillade, at analytikere fortsætter analyser, uden at en ondsindet agent kan fortsætte et angreb. Den eneste forbindelse, der er tilladt, er Microsoft Defender for Identity-tjenesteskyen, så Microsoft Defender for Identity fortsætte med at overvåge enheden. 
-- **Begræns** eksekvering af apps – Hvis du vil begrænse kørsel af et program, anvendes en politik for kodeintegritet, der kun tillader, at filer kan køres, hvis de er signeret af et certifikat, der er udstedt af Microsoft. Denne metode til begrænsning kan hjælpe med at forhindre en hacker i at styre kompromitterede enheder og udføre yderligere ondsindede aktiviteter.
-- **Kør antivirusscanning** – en Microsoft Defender Antivirus scanning kan køre sammen med andre antivirusløsninger, uanset om Defender Antivirus er den aktive antivirusløsning eller ej. Hvis et andet antivirusleverandørprodukt er den primære løsning til slutpunktsbeskyttelse, kan du køre Defender Antivirus i passiv tilstand.
-- **Initier automatiseret** undersøgelse – Du kan starte en ny, generel, automatisk undersøgelse af enheden. Mens en undersøgelse kører, føjes alle andre beskeder, der genereres fra enheden, til en igangværende automatisk undersøgelse, indtil undersøgelsen er afsluttet. Hvis den samme trussel kan ses på andre enheder, føjes disse enheder til undersøgelsen.
-- **Initier** live-svar – Direkte svar er en funktion, der giver dig øjeblikkelig adgang til en enhed ved hjælp af en ekstern shell-forbindelse. Dette giver dig mulighed for at udføre en dybdegående indsats og straks reagere på handlinger, der omgående skal indeholde identificerede trusler i realtid. Liverespons er designet til at forbedre undersøgelser ved at give dig mulighed for at indsamle analysere data, køre scripts, sende mistænkelige enheder til analyse, løse trusler og proaktivt lede efter nye trusler.
-- **Indsamle undersøgelsespakke** – Som en del af undersøgelsen eller svarprocessen kan du indsamle en undersøgelsespakke fra en enhed. Ved at indsamle undersøgelsespakken kan du identificere enhedens aktuelle tilstand og yderligere forstå de værktøjer og teknikker, der bruges af hackeren. 
-- **Kontakt en trusselsekspert** (tilgængelig både i Handlinger på enheder og filer) – Du kan kontakte en Microsoft-trusselsekspert for at få mere at vide om potentielt kompromitterede enheder eller enheder, der allerede er kompromitteret. Microsoft-trusselseksperter kan blive engageret direkte fra Microsoft 365 Defender for at få et rettidigt og nøjagtigt svar. 
+- **Isoler enheden** - Denne aktivitet blokerer straks al netværkstrafik (internet og intern) for at minimere spredningen af malware og give analytikere mulighed for at fortsætte analysen, uden at en ondsindet aktør kan fortsætte et angreb. Den eneste tilladte forbindelse er til Microsoft Defender for Identity-tjenesteskyen, så Microsoft Defender for Identity kan fortsætte med at overvåge enheden. 
+- **Begræns udførelse af apps** – Hvis du vil forhindre et program i at køre, anvendes der en kodeintegritetspolitik, der kun tillader, at filer køres, hvis de er signeret af et Certifikat, der er udstedt af Microsoft. Denne begrænsningsmetode kan hjælpe med at forhindre en hacker i at kontrollere kompromitterede enheder og udføre yderligere skadelige aktiviteter.
+- **Kør antivirusscanning** – En Microsoft Defender Antivirus-scanning kan køre sammen med andre antivirusløsninger, uanset om Defender Antivirus er den aktive antivirusløsning eller ej. Hvis et andet antivirusprogram er den primære løsning til beskyttelse af slutpunkter, kan du køre Defender Antivirus i passiv tilstand.
+- **Start en automatiseret undersøgelse** – Du kan starte en ny automatiseret undersøgelse til generelle formål på enheden. Mens der kører en undersøgelse, føjes alle andre beskeder, der genereres fra enheden, til en igangværende automatisk undersøgelse, indtil undersøgelsen er fuldført. Hvis den samme trussel ses på andre enheder, føjes disse enheder desuden til undersøgelsen.
+- **Initier live-svar** – Direkte svar er en funktion, der giver dig øjeblikkelig adgang til en enhed ved hjælp af en ekstern shellforbindelse. Dette giver dig mulighed for at udføre dybdegående undersøgelsesarbejde og reagere øjeblikkeligt for straks at indeholde identificerede trusler i realtid. Liverespons er designet til at forbedre undersøgelser ved at gøre det muligt for dig at indsamle retsmedicinske data, køre scripts, sende mistænkelige enheder til analyse, afhjælpe trusler og proaktivt jage efter nye trusler.
+- **Indsaml undersøgelsespakke** – Som en del af undersøgelses- eller svarprocessen kan du indsamle en undersøgelsespakke fra en enhed. Ved at indsamle undersøgelsespakken kan du identificere enhedens aktuelle tilstand og yderligere forstå de værktøjer og teknikker, der bruges af hackeren. 
+- **Kontakt en trusselsekspert** (tilgængelig i både handlinger på enheder og filer) – Du kan kontakte en Microsoft-trusselsekspert for at få mere indsigt i potentielt kompromitterede enheder eller enheder, der allerede er kompromitteret. Microsoft-trusselseksperter kan engageres direkte fra Microsoft 365 Defender for at få et rettidigt og nøjagtigt svar. 
 
 ## <a name="actions-on-files"></a>Handlinger på filer
 
-- **Stop- og karantænefil** – Denne handling omfatter at stoppe kørsel af processer, kvarte filer og slette permanente data, f.eks. registreringsdatabasenøgler. Denne handling træder i kraft på enheder med Windows 11 eller Windows 10 version 1703 eller nyere, hvor filen er blevet observeret inden for de seneste 30 dage. 
-- **Tilføj indikatorer for at blokere eller tillade** filer – Undgå yderligere overførsel af et angreb i organisationen ved at udelukke potentielt skadelige filer eller potentielt malware. Denne handling forhindrer filen i at blive læst, skrevet eller udført på enheder i organisationen.
-- **Download eller indsaml** fil – Denne handling giver analytikere mulighed for at downloade en fil i en adgangskodebeskyttet .zip arkivfil til yderligere analyse i organisationen.
-- **Dybdegående** analyse – Denne handling udfører en fil i et sikkert, fuldt instrumenteret skymiljø. Grundige analyseresultater viser filens aktiviteter, observerede funktionsmåder og tilknyttede artefakter, f.eks. afbrudte filer, ændringer i registreringsdatabasen og kommunikation med IP-adresser. 
+- **Stop- og sæt fil i karantæne** – Denne handling omfatter stop af kørende processer, quarantinering af filer og sletning af vedvarende data, f.eks. alle registreringsdatabasenøgler. Denne handling træder i kraft på enheder med Windows 11 eller Windows 10, version 1703 eller nyere, hvor filen blev observeret inden for de sidste 30 dage. 
+- **Tilføj indikatorer for at blokere eller tillade filer** – Undgå yderligere overførsel af et angreb i din organisation ved at forbyde potentielt skadelige filer eller mistanke om malware. Denne handling forhindrer, at filen læses, skrives eller udføres på enheder i din organisation.
+- **Download eller indsaml fil** – denne handling giver analytikere mulighed for at downloade en fil i en adgangskodebeskyttet .zip arkivfil til yderligere analyse af organisationen.
+- **Detaljeret analyse** – denne handling udfører en fil i et sikkert, fuldt instrumenteret cloudmiljø. Detaljerede analyseresultater viser filens aktiviteter, observerede funktionsmåder og tilknyttede artefakter, f.eks. mistede filer, ændringer i registreringsdatabasen og kommunikation med IP-adresser. 
 
-I eksemplet med [Registrer, triage og analysér](first-incident-analyze.md#analyze-your-first-incident) hændelser kan en analytiker afhjælpe denne hændelse med disse handlinger:
+I forlængelse af eksemplet i [Registrer, triage og analysér hændelser](first-incident-analyze.md#analyze-your-first-incident) kan en analytiker afhjælpe denne hændelse med disse handlinger:
 
-1. Nulstil adgangskoden til brugerkontoen med det samme
-2. Isoler enheden i Microsoft 365 Defender indtil dybdegående analyse er fuldført
+1. Nulstil straks adgangskoden til brugerkontoen
+2. Isoler enheden i Microsoft 365 Defender, indtil den dybe analyse er fuldført
 3. Kontrollér, at den skadelige fil blev sat i karantæne fra SharePoint
-4. Kontrollér, hvilke slutpunkter der er blevet påvirket af malware
-5. Genopbyg systemer
-6. Kontrollér, om der er Microsoft Defender for Cloud Apps beskeder for andre brugere
-7. Opret en brugerdefineret indikator i en Microsoft Defender for Endpoint at blokere en TOR IP-adresse
-8. Opret en styringshandling i Microsoft Defender for Cloud Apps for denne type besked, f.eks. dem, der er vist på følgende billede:
+4. Kontrollér, hvilke slutpunkter der blev påvirket af malware
+5. Byg systemer igen
+6. Søg efter lignende Microsoft Defender for Cloud Apps beskeder til andre brugere
+7. Opret en brugerdefineret indikator i Microsoft Defender for Endpoint for at blokere en Tor IP-adresse
+8. Opret en styringshandling i Microsoft Defender for Cloud Apps for denne type besked, f.eks. dem, der vises på følgende billede:
 
-   :::image type="content" source="../../media/first-incident-remediate/first-incident-mcas-governance.png" alt-text="Styringshandlinger i Microsoft Defender for Cloud Apps portalen" lightbox="../../media/first-incident-remediate/first-incident-mcas-governance.png":::
+   :::image type="content" source="../../media/first-incident-remediate/first-incident-mcas-governance.png" alt-text="Styringshandlinger på Microsoft Defender for Cloud Apps-portalen" lightbox="../../media/first-incident-remediate/first-incident-mcas-governance.png":::
 
-De fleste af afhjælpningshandlingerne kan anvendes og registreres i Microsoft 365 Defender.
+De fleste afhjælpningshandlinger kan anvendes og spores i Microsoft 365 Defender.
 
-## <a name="using-playbooks"></a>Brug af lærebøger
+## <a name="using-playbooks"></a>Brug af playbooks
 
-Desuden kan automatiseret afhjælpning oprettes ved hjælp af lærebøger. Microsoft har i øjeblikket [skabeloner til lærebøger på GitHub](https://github.com/microsoft/Microsoft-Cloud-App-Security/tree/master/Playbooks) der leverer lærebøger til følgende scenarier:
+Desuden kan automatiseret afhjælpning oprettes ved hjælp af playbooks. I øjeblikket har Microsoft [Playbook-skabeloner på GitHub](https://github.com/microsoft/Microsoft-Cloud-App-Security/tree/master/Playbooks) , der indeholder playbooks til følgende scenarier:
 
-- Fjern følsom fildeling, efter du har anmodet om brugervalidering
-- Automatisk triage beskeder om sjældne lande
-- Anmod om managerhandling, før du deaktiverer en konto
-- Deaktivere skadelige indbakkeregler
+- Fjern følsom fildeling efter anmodning om brugervalidering
+- Automatisk triage af sjældne landebeskeder
+- Anmodning om en overordnet handling, før du deaktiverer en konto
+- Deaktiver regler for skadelig indbakke
 
-Playbooks bruger Power Automate til at oprette brugerdefinerede automationsflows til at automatisere visse aktiviteter, når der er blevet udløst bestemte kriterier. Organisationer kan oprette lærebøger enten fra eksisterende skabeloner eller fra bunden. 
+Playbooks bruger Power Automate til at oprette brugerdefinerede automatiseringsflow for robotprocesser for at automatisere visse aktiviteter, når bestemte kriterier er blevet udløst. Organisationer kan oprette playbooks enten fra eksisterende skabeloner eller fra bunden. 
 
 Her er et eksempel.
  
-:::image type="content" source="../../media/first-incident-remediate/first-incident-power-automate.png" alt-text="Et Power Automate brugerdefineret proces automatiseringsflow" lightbox="../../media/first-incident-remediate/first-incident-power-automate.png"::: 
+:::image type="content" source="../../media/first-incident-remediate/first-incident-power-automate.png" alt-text="Et automatiseret flow for brugerdefineret robotproces i Power Automate" lightbox="../../media/first-incident-remediate/first-incident-power-automate.png"::: 
  
-Der kan også oprettes playbooks under gennemgang efter [hændelsen for](first-incident-post.md) at oprette afhjælpningshandlinger fra løste hændelser. 
+Der kan også oprettes playbooks under [gennemgang efter hændelser](first-incident-post.md) for at oprette afhjælpningshandlinger fra løste hændelser. 
 
 ## <a name="next-step"></a>Næste trin
 
-Få mere at vide [om, hvordan du udfører en vurdering efter hændelsen af en hændelse](first-incident-post.md).
+Få mere at vide om, hvordan [du udfører en gennemgang af en hændelse efter en hændelse](first-incident-post.md).
 
 ## <a name="see-also"></a>Se også
 

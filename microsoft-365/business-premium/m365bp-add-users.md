@@ -9,28 +9,21 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.date: 07/19/2022
+ms.collection: ''
 ms.custom:
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 - OKR_SMB_M365
-- seo-marvel-mar
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
-ms.assetid: 80bdae57-f8bc-4e40-a58c-956007117ecb
 description: Sådan føjer du en ny medarbejder eller bruger til organisationens netværk og interne systemer. Når en ny medarbejder tilmelder sig din virksomhed, skal du føje dem sikkert til netværket.
-ms.openlocfilehash: 08f1201a720050ad682faae87d572a1efe5794c7
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: d0137d9c7814191573e1c82c01b16db915bb280e
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66642625"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894178"
 ---
 # <a name="add-a-new-employee-in-microsoft-365-business-premium"></a>Tilføj en ny medarbejder i Microsoft 365 Business Premium
 

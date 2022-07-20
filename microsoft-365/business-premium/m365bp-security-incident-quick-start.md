@@ -9,28 +9,21 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+- m365solution-smb
 ms.custom:
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
-- OKR_SMB_M365
-- seo-marvel-mar
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
-ms.assetid: 80bdae57-f8bc-4e40-a58c-956007117ecb
 description: 'Et sæt forslag til, hvad du skal fokusere på i Defender-portalen, når det kommer til daglige, ugentlige eller månedlige handlinger. '
-ms.openlocfilehash: e97176eab4d846709fb51dbab0f6d6122e45b7f5
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: ab444aad5980af224b2005209dc5596fcb10f899
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66858940"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894071"
 ---
 # <a name="microsoft-365-business-premium-security-operations-guide"></a>vejledning til Microsoft 365 Business Premium sikkerhedshandlinger
 

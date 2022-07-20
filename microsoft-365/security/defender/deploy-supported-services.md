@@ -16,18 +16,18 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
+- m365solution-getstarted
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 4ac6186f3ec8ca7d4888a995b2352ec50529e4f1
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: cf2e95a4d129280537f1d7a9d7dcf1b76b492ead
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664892"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893765"
 ---
 # <a name="deploy-supported-services"></a>Udrul understøttede tjenester
 
@@ -72,8 +72,8 @@ I nedenstående tabel kan du se, hvordan hver understøttet tjeneste giver yderl
 
 | Tjeneste | Data (signaler & korrelerede oplysninger) | Afhjælpning & svarområde |
 | ------ | ------ | ------ |
-| Microsoft Defender for Endpoint |<ul><li>Slutpunkttilstande og råhændelser</li><li>Slutpunktsregistreringer og -beskeder, herunder antivirus, Slutpunktsregistrering og -svar, reduktion af angrebsoverflade</li><li>Oplysninger om filer og andre enheder, der er observeret på slutpunkter</li></ul> | Slutpunkter |
-|Microsoft Defender for Office 365 |<ul><li>Mail- og postkassetilstande og råhændelser</li><li>Registreringer af mails, vedhæftede filer og links</li></ul> | <ul><li>Postkasser</li><li>Microsoft 365 konti</li></ul> |
+| Microsoft Defender for Endpoint |<ul><li>Slutpunkttilstande og råhændelser</li><li>Slutpunktsregistreringer og -beskeder, herunder antivirus, EDR, reduktion af angrebsoverflade</li><li>Oplysninger om filer og andre enheder, der er observeret på slutpunkter</li></ul> | Slutpunkter |
+|Microsoft Defender for Office 365 |<ul><li>Mail- og postkassetilstande og råhændelser</li><li>Registreringer af mails, vedhæftede filer og links</li></ul> | <ul><li>Postkasser</li><li>Microsoft 365-konti</li></ul> |
 | Microsoft Defender for Identity |<ul><li>Active Directory-signaler, herunder godkendelseshændelser</li><li>Identitetsrelaterede adfærdsregistreringer</li></ul> | Identiteter |
 | Microsoft Defender for Cloud Apps |<ul><li>Registrering af ikke-registrerede cloudapps og -tjenester (shadow IT)</li><li>Eksponering af data i cloudapps</li><li>Trusselsaktivitet, der er knyttet til cloudapps</li></ul> | Cloudapps |
 
@@ -92,9 +92,9 @@ Når du har udrullet de understøttede tjenester, [skal du aktivere Microsoft 36
 
 ## <a name="related-topics"></a>Relaterede emner
 
-- [oversigt over Microsoft 365 Defender](microsoft-365-defender.md)
+- [Oversigt over Microsoft 365 Defender-portalen](microsoft-365-defender.md)
 - [Slå Microsoft 365 Defender til](m365d-enable.md)
-- [oversigt over Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md)
+- [Oversigt over Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md)
 - [oversigt over Microsoft Defender for Office 365](../office-365-security/defender-for-office-365.md)
-- [oversigt over Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)
-- [oversigt over Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp)
+- [Oversigt over Microsoft Defender for Cloud Apps](/cloud-app-security/what-is-cloud-app-security)
+- [Oversigt over Microsoft Defender for Identity](/azure-advanced-threat-protection/what-is-atp)

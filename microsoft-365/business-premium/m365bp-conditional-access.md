@@ -9,27 +9,23 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Få mere at vide om, hvordan sikkerhedsstandarder kan hjælpe med at beskytte din organisation mod identitetsrelaterede angreb ved at angive forudkonfigurerede sikkerhedsindstillinger for Microsoft 365 Business Premium.
-ms.openlocfilehash: 24f4cbc8feda3689a3a6f7ee49a876cd205939f3
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: ec7e132f2f7a8a98f5950682165c05dba83cbc8f
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66489162"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66892721"
 ---
 # <a name="security-defaults-and-multi-factor-authentication"></a>Sikkerhedsstandarder og multifaktorgodkendelse
 
@@ -39,8 +35,8 @@ Du kan få flere oplysninger om sikkerhedsstandarder og de politikker, de [genne
 
 Denne artikel indeholder oplysninger om:
 
-- [Sikkerhedsstandarder](#security-defaults) (egnet til de fleste virksomheder)
-- [Betinget adgang](#conditional-access) (til virksomheder med strengere sikkerhedskrav)
+- **[Sikkerhedsstandarder](#security-defaults)** (egnet til de fleste virksomheder)
+- **[Betinget adgang](#conditional-access)** (til virksomheder med strengere sikkerhedskrav)
 
 > [!NOTE]
 > Hvis du har brugt politikker for betinget adgang, skal du slå dem fra, før du bruger sikkerhedsstandarder. Du kan enten bruge sikkerhedsstandarder eller politikker for betinget adgang, men du kan ikke bruge begge på samme tid.

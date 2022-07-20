@@ -16,18 +16,18 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
+- m365solution-firstincident
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: c58bc4eb30c819ae0cbc1654173e8d9dc4ecb7a7
-ms.sourcegitcommit: 85ce5fd0698b6f00ea1ea189634588d00ea13508
+ms.openlocfilehash: 596966c7c1975ebb8f20b306be5e4ab0a34bd99e
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "64664914"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893633"
 ---
 # <a name="step-1-triage-and-analyze-your-first-incident"></a>Trin 1. Triage og analysér din første hændelse
 
@@ -44,7 +44,7 @@ Når en sikkerhedshændelse er registreret, Microsoft 365 Defender præsenterer 
 
 Microsoft 365 Defender modtager beskeder og hændelser fra flere Microsoft-sikkerhedsplatforme som registreringskilder for at oprette et holistisk billede og en kontekst med skadelig aktivitet. De mulige registreringskilder er:
 
-- [Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md) er en slutpunktsregistrering og -svar løsning (Slutpunktsregistrering og -svar), der bruger Microsoft Defender antivirus og cloudaktiveret avanceret trusselsbeskyttelse ved hjælp af Microsoft Security Graph. Defender for Endpoint er en samlet platform til forebyggende beskyttelse, registrering efter sikkerhedsbrud, automatiseret undersøgelse og svar. Den beskytter slutpunkter mod cybertrusler, registrerer avancerede angreb og brud på datasikkerheden, automatiserer sikkerhedshændelser og forbedrer sikkerhedsholdning.
+- [Microsoft Defender for Endpoint](../defender-endpoint/microsoft-defender-endpoint.md) er en EDR (endpoint detection and response solution), der bruger Microsoft Defender antivirus og cloudaktiveret avanceret trusselsbeskyttelse ved hjælp af Microsoft Security Graph. Defender for Endpoint er en samlet platform til forebyggende beskyttelse, registrering efter sikkerhedsbrud, automatiseret undersøgelse og svar. Den beskytter slutpunkter mod cybertrusler, registrerer avancerede angreb og brud på datasikkerheden, automatiserer sikkerhedshændelser og forbedrer sikkerhedsholdning.
 - [Microsoft Defender for Identity](/defender-for-identity/what-is) er en cloudbaseret sikkerhedsløsning, der bruger dine AD DS-signaler (Active Directory i det lokale miljø Domain Services) til at identificere, registrere og undersøge avancerede trusler, kompromitterede identiteter og skadelige insiderhandlinger, der er rettet mod din organisation.
 - [Microsoft Defender for Cloud Apps](/cloud-app-security/) fungerer som portvogter for at formidle adgang i realtid mellem dine virksomhedsbrugere og de cloudressourcer, de bruger, uanset hvor dine brugere er placeret, og uanset hvilken enhed de bruger.
 - [Microsoft Defender for Office 365](../office-365-security/overview.md) beskytter din organisation mod skadelige trusler i mails, links (URL-adresser) og samarbejdsværktøjer.
@@ -74,11 +74,11 @@ En tilgang til triage er beskrevet nedenfor:
 
     Et eksempel på, hvordan du kan udføre triage for dette sæt hændelser, er at prioritere hændelser, der påvirkede flere brugere og enheder. I dette eksempel kan du prioritere hændelses-id 6769, fordi det påvirkede det største antal enheder: syv enheder, seks brugere og to postkasser. Desuden ser hændelsen ud til at indeholde beskeder fra Microsoft Defender for Identity, som angiver en identitetsbaseret advarsel og mulig tyveri af legitimationsoplysninger.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-high-impact.png" alt-text="Siden Incidents** viser et eksempel på en hændelse med stor indvirkning på Microsoft 365 sikkerhedsportal" lightbox="../../media/first-incident-analyze/first-incident-analyze-high-impact.png":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-high-impact.png" alt-text="Siden Hændelser**, der viser et eksempel på en hændelse med stor indvirkning på Microsoft 365-sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-high-impact.png":::
 
 2. Vælg cirklen ud for navnet på hændelsen for at gennemse detaljerne. Der vises en siderude i højre side, som indeholder yderligere oplysninger, der kan hjælpe dig med at triage yderligere.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png" alt-text="Siden Hændelser, der viser et eksempel på en rude på hændelsessiden på Microsoft 365 sikkerhedsportal" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png" alt-text="Siden Hændelser, der viser et eksempel på en rude på hændelsessiden på Microsoft 365-sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout.png":::
 
    Hvis du f.eks. ser på, hvilke [MITRE ATT&CK-taktik](https://attack.mitre.org/) , som hackeren brugte baseret på kategorierne for hændelsen, kan du prioritere denne hændelse, fordi hackeren brugte stjålne legitimationsoplysninger, etablerede kommando og kontrol, udførte tværgående bevægelse og eksfiltrerede nogle data. Disse handlinger tyder på, at hackeren allerede er gået dybt ind i netværket og muligvis stjålet fortrolige oplysninger.
 
@@ -92,7 +92,7 @@ En tilgang til triage er beskrevet nedenfor:
 
    I dette eksempel blev 87 individuelle beskeder bestemt til at være en del af én sikkerhedshændelse. Du kan få vist alle beskederne for at få et hurtigt overblik over, hvordan angrebet udspillede sig.
 
-   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png" alt-text="Beskederne i en rude på hændelsessiden på Microsoft 365 sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png":::
+   :::image type="content" source="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png" alt-text="Beskederne i en rude på hændelsessiden på Microsoft 365-sikkerhedsportalen" lightbox="../../media/first-incident-analyze/first-incident-analyze-incident-flyout-alerts.png":::
 
 ## <a name="analyze-your-first-incident"></a>Analysér din første hændelse
 

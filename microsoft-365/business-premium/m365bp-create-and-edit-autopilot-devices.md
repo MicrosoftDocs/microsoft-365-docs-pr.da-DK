@@ -9,30 +9,22 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.date: 07/19/2022
+ms.collection: ''
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 - OKR_SMB_M365
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-ms.assetid: 0f7b1d7c-4086-4331-8534-45d7886f9f34
 description: Få mere at vide om, hvordan du uploader enheder ved hjælp af Autopilot i Microsoft 365 Business Premium. Du kan tildele en profil til en enhed eller en gruppe enheder.
-ms.openlocfilehash: 994eab29d4b04e2de21d3e42a4abc174270f67f7
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 9e02b985e5742331426210d6d3824dfa120a21d3
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858787"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894981"
 ---
 # <a name="create-and-edit-autopilot-devices"></a>Opret og rediger Autopilot-enheder
 

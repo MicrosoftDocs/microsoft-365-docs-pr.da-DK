@@ -9,17 +9,18 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-ms.openlocfilehash: 267845607ddff1edb02d9007796d0481b6d6c444
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: c36dd9b4f243964d93e44770d00de1a56975efb7
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858786"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893947"
 ---
 # <a name="work-with-a-microsoft-partner"></a>Arbejd sammen med en Microsoft-partner
 
@@ -36,7 +37,6 @@ Hvis du foretrækker at have en Microsoft-partner, der hjælper dig med at få o
 ## <a name="see-also"></a>Se også
 
 - [Konfigurer selvbetjeningsadgangskoder](../admin/add-users/let-users-reset-passwords.md)
-
 - [Konfigurer selvbetjent gruppeadministration](/azure/active-directory/enterprise-users/groups-self-service-management)
 
 ## <a name="next-objectives"></a>Næste mål

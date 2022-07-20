@@ -9,6 +9,7 @@ ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
 - M365-Campaigns
 - m365solution-smb
@@ -18,12 +19,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Del filer og videoer i din kampagne med Microsoft Teams og SharePoint. Microsoft 365 Business Premium omfatter Teams, som er en fantastisk måde at dele filer og videoer på en sikker måde.
-ms.openlocfilehash: a09edb2ae1865bbc9e574bc8c28dd6388f442a98
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: c00f458d1364a451a913ecc8deaf5a79dbf3650f
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66634869"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893139"
 ---
 # <a name="share-files-and-videos-in-a-safe-environment"></a>Del filer og videoer i et sikkert miljø
 
@@ -32,8 +33,6 @@ En anden ting, du skal være opmærksom på, er at sikre, at alle medlemmer af o
 ![Diagram over et Microsoft Teams-vindue, der viser fanen Filer og Hent link i menuen.](../media/m365-democracy-teams-sharefiles.png)
 
 Med filer i Microsoft Teams og SharePoint kan filer også arbejdes på og gennemses sammen, endda spore ændringer efter behov. I Teams deles filer i en virksomhed, øvelse eller kampagne. Hvis du har brug for at dele dem eksternt med personer uden for din organisation, kan du føje dem som gæster til et team eller sende dem et sikkert SharePoint-link.
-
-Du kan også bruge Microsoft Stream til at gemme og dele videoer internt. Disse videoer kan ikke ses af offentligheden, så de er ideelle til interne firma- eller kampagnebeskeder.
 
 ## <a name="best-practices"></a>Anbefalede fremgangsmåder
 

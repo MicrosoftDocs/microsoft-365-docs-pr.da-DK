@@ -11,30 +11,22 @@ f1.keywords:
 - BCS365_ZTDProfileSettings
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.date: 07/19/2022
+ms.collection: ''
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 - OKR_SMB_M365
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-ms.assetid: 99bfbf81-e719-4630-9b0f-c187edfa1f8a
 description: Autopilotprofiler hjælper dig med at styre, hvordan Windows installeres på brugerenheder. Profilerne indeholder standardindstillinger og valgfrie indstillinger, f.eks. spring Cortana-installationen over.
-ms.openlocfilehash: 387346c68ad9ff85c3f97e4d8ca8b0ccdb28dcbd
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 9fcec0d34a23a56943a1a17d7e7f74435910055e
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858831"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894717"
 ---
 # <a name="about-autopilot-profile-settings"></a>Om profilindstillinger for autopilot
 

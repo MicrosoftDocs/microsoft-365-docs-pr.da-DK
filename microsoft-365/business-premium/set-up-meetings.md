@@ -9,28 +9,23 @@ ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 description: Konfigurer onlinemøder med Microsoft Teams i Microsoft Business Premium.
-ms.openlocfilehash: 4273dee956f4952b4dc2b017c68334ae23e71c0d
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 78932280125ae7d3c6668907ca95944d32bc6e35
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66491775"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895113"
 ---
 # <a name="set-up-meetings-with-microsoft-teams"></a>Konfigurer møder med Microsoft Teams
 

@@ -9,14 +9,11 @@ ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
 - MiniMaven
 - MSB365
 search.appverid:
@@ -24,12 +21,12 @@ search.appverid:
 - MET150
 - MOE150
 description: Beskyt mod phishing og andre angreb med Microsoft 365 Business Premium.
-ms.openlocfilehash: eee5872e3fc9856cd6bc9d58f4fbdf91899f7c00
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 374e88fb1f329c0705bb9ebcc8044030fe4cc4e5
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858811"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66893227"
 ---
 # <a name="protect-yourself-against-phishing-and-other-attacks"></a>Beskyt dig selv mod phishing og andre angreb
 

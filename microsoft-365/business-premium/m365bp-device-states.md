@@ -9,30 +9,21 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
-ms.collection:
-- Adm_O365
-- M365-subscription-management
-- M365-identity-device-management
-- Adm_TOC
+ms.date: 07/19/2022
+ms.collection: ''
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
-- seo-marvel-mar
-- AdminSurgePortfolio
 search.appverid:
 - BCS160
 - MET150
 - MOE150
-ms.assetid: c3ac23c5-d4b4-4b1b-b7ce-ea759521bf8c
 description: Få mere at vide om de forskellige enhedstilstande på listen Enhedshandlinger i Administration startside i Microsoft 365 til virksomheder.
-ms.openlocfilehash: 07024ea6f4e37e32716c8af3e56f4481104ed975
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 8de91d71576bd9b6993583a0b30506431f9a02ac
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66858826"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894942"
 ---
 # <a name="device-states-in-microsoft-365-for-business"></a>Enhedstilstande i Microsoft 365 til virksomheder
 

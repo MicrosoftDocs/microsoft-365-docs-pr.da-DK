@@ -9,26 +9,22 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 description: Sådan konfigurerer du administrerede enheder
-ms.openlocfilehash: a5498fc89a135a90d192b2b7ddb7165527e13123
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: a4298bcdc284f1957a1afa73cbc7ae8e3f15e7d1
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66858998"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66895003"
 ---
 # <a name="set-up-managed-devices"></a>Konfigurer administrerede enheder
 

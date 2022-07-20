@@ -17,16 +17,25 @@ search.appverid:
 - MOE150
 - MET150
 description: Find ud af, hvad der er nyt i Compliance Manger, og hvad der kommer. Læs om opdaterede vurderinger, nye vurderingsskabeloner, nye handlinger m.m.
-ms.openlocfilehash: aab0ccefd6f139212e8e045eacd458e22f498f9b
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: be6527822798a518753897b5d104899077264ee3
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66638692"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66894333"
 ---
 # <a name="whats-new-in-microsoft-purview-compliance-manager"></a>Nyheder i Microsoft Purview Compliance Manager
 
 **I denne artikel:** Få mere at vide om de seneste opdateringer i Overholdelsesstyring.
+
+## <a name="july-2022"></a>Juli 2022
+
+Overholdelsesstyring har udgivet følgende nye vurderingsskabelon:
+
+- Hong Kong - Code of Banking Practice og Payment Card
+
+Se vores [komplette liste over vurderingsskabeloner](compliance-manager-templates-list.md).
+
 
 ## <a name="may-2022"></a>Maj 2022
 

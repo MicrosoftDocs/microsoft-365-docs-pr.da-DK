@@ -9,26 +9,22 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/19/2022
 ms.collection:
-- Adm_O365
-- M365-subscription-management
 - M365-Campaigns
 - m365solution-smb
 ms.custom:
-- Adm_O365
-- Core_O365Admin_Migration
 - MiniMaven
-- MSB365
 search.appverid:
 - BCS160
 - MET150
 description: En oversigt over administration af sikkerhedshændelser
-ms.openlocfilehash: 1b21adb5d173dff5bb9cfcda6e71faa9f2ff0bd4
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: bf748a87fcdbc3898caf6fb86c68a51823da5ba3
+ms.sourcegitcommit: c1eaea74c8ffce2f9f477c9469342e88e4a70c14
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66858938"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66892677"
 ---
 # <a name="security-incident-management"></a>Administration af sikkerhedshændelser
 
