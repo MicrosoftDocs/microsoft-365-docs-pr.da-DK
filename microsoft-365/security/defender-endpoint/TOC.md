@@ -138,6 +138,7 @@
 ###### [Fejlfinding af problemer med RHEL 6-installation](linux-support-rhel.md)
 ###### [Fejlfinding af problemer med ydeevnen](linux-support-perf.md)
 ###### [Fejlfinding af problemer med manglende hændelser](linux-support-events.md)
+###### [Fejlfinding af problemer med AuditD-ydeevnen](troubleshoot-auditd-performance-issues.md)
 
 ##### [Beskyttelse af personlige oplysninger](linux-privacy.md)
 ##### [Ressourcer](linux-resources.md)
