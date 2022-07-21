@@ -9,6 +9,7 @@ ms.pagetype: security
 author: dansimp
 ms.author: dansimp
 ms.localizationpriority: medium
+ms.date: 07/20/2022
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -17,12 +18,12 @@ ms.collection:
 ms.custom: admindeeplinkDEFENDER
 ms.topic: how-to
 ms.technology: mde
-ms.openlocfilehash: 122b216a07bdd70ab5619903ba049b4fb507179e
-ms.sourcegitcommit: 2aa5c026cc06ed39a9c1c2bcabd1f563bf5a1859
+ms.openlocfilehash: 696787189ca14b4609681fb77308c38be206e269
+ms.sourcegitcommit: 979343980f05ceb546ca0df23562504aaca34b88
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/09/2022
-ms.locfileid: "66695610"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912602"
 ---
 # <a name="review-remediation-actions-following-an-automated-investigation"></a>Gennemse afhjælpningshandlinger efter en automatiseret undersøgelse
 
@@ -126,8 +127,7 @@ Automatiseringsniveauer påvirker, om visse afhjælpningshandlinger udføres aut
 
 |Indstilling for enhedsgruppe|Automatiserede undersøgelsesresultater|Sådan gør du|
 |---|---|---|
-|**Fuld – afhjælp trusler automatisk**<br/>(anbefales)|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Der udføres automatisk relevante afhjælpningshandlinger.|[Gennemse fuldførte handlinger](#review-completed-actions)|
-|**Fuld – afhjælp trusler automatisk**|En mistænkelig *dom er nået* for et bevis. <p> Der udføres automatisk relevante afhjælpningshandlinger.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions)|
+|**Fuld – afhjælp trusler automatisk**<br/>(anbefales)|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Der udføres automatisk relevante afhjælpningshandlinger.|[Gennemse fuldførte handlinger](#review-completed-actions) |
 |**Semi – kræver godkendelse til enhver afhjælpning**|En dom af enten *Ondsindet* eller *Mistænkelig* er nået for et stykke af beviser. <p> Afhjælpningshandlinger afventer godkendelse for at fortsætte.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions)|
 |**Semi – kræver godkendelse til afhjælpning af kernemapper**|En dom af *Ondsindet* er nået for et stykke af beviser. <p> Hvis artefaktet er en fil eller eksekverbar og er i en operativsystemmappe, f.eks. Windows-mappen eller mappen Programfiler, afventer afhjælpningshandlinger godkendelse. <p> Hvis artefaktet *ikke* findes i en operativsystemmappe, udføres afhjælpningshandlinger automatisk.|<ol><li>[Godkend (eller afvis) ventende handlinger](#review-pending-actions)</li><li>[Gennemse fuldførte handlinger](#review-completed-actions)</li></ol>|
 |**Semi – kræver godkendelse til afhjælpning af kernemapper**|En mistænkelig *dom er nået* for et bevis. <p> Afhjælpningshandlinger afventer godkendelse.|[Godkend (eller afvis) ventende handlinger](#review-pending-actions).|

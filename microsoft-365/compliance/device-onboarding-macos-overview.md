@@ -14,12 +14,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om onboarding af macOS-enheder i overholdelsesløsninger
-ms.openlocfilehash: 59ccb78060c7749f5690015dc4bab948a88e5222
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: b697b805b8a4c65a0528054ca301f16d203e5a64
+ms.sourcegitcommit: 979343980f05ceb546ca0df23562504aaca34b88
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66630032"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912753"
 ---
 # <a name="onboard-macos-devices-into-microsoft-365-overview"></a>Oversigt over onboarding af macOS-enheder i Microsoft 365
 
@@ -67,7 +67,7 @@ Slutpunkt DLP understøtter disse browsere på macOS Catalina 10.15 eller nyere:
 
 Se [Licensvejledning til Microsoft 365 for at få oplysninger om beskyttelse af oplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
 
-## <a name="activities-that-can-be-restricted-on-macos"></a>Aktiviteter, der kan begrænses på macOS 
+## <a name="activities-that-can-be-audited-and-restricted-on-macos"></a>Aktiviteter, der kan overvåges og begrænses på macOS 
 
 Når en macOS-enhed er onboardet i Microsoft Purview-løsninger, kan du overvåge og begrænse disse handlinger med DLP-politikker (forebyggelse af datatab).
 

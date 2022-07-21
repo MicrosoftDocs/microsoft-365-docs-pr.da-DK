@@ -18,12 +18,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du konfigurerer DLP-politikker (forebyggelse af datatab) til at bruge placeringer til forebyggelse af datatab for Slutpunkt.
-ms.openlocfilehash: f58c7aec00a91ebc63b410abdd4c6342eef47a0e
-ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
+ms.openlocfilehash: 2fef9c2d89d741c70f3d2d903f41fa8a354d4a79
+ms.sourcegitcommit: 979343980f05ceb546ca0df23562504aaca34b88
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66881989"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912624"
 ---
 # <a name="using-endpoint-data-loss-prevention"></a>Brug forebyggelse af datatab ved slutpunkt
 
@@ -36,6 +36,13 @@ Vi har sammensat nogle scenarier, som du kan følge, for at hjælpe dig med at b
 >- [Kom i gang med DLP-standardpolitikken](get-started-with-the-default-dlp-policy.md)
 >- [Opret en DLP-politik ud fra en skabelon](create-a-dlp-policy-from-a-template.md)
 >- [Opret, test og finjuster en DLP-politik](create-test-tune-dlp-policy.md)
+
+
+## <a name="before-you-begin"></a>Før du begynder
+
+### <a name="skusubscriptions-licensing"></a>LICENSER TIL SKU/abonnementer
+
+Du kan finde komplette licensoplysninger under [Vejledning til Microsoft 365-licenser for at få oplysninger om beskyttelse af oplysninger](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection-data-loss-prevention-for-exchange-online-sharepoint-online-and-onedrive-for-business).
 
 ## <a name="scenario-1-create-a-policy-from-a-template-audit-only"></a>Scenarie 1: Opret en politik ud fra en skabelon, kun overvågning
 

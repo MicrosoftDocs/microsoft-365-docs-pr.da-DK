@@ -10,6 +10,7 @@ ms.pagetype: security
 author: dansimp
 ms.author: dansimp
 ms.localizationpriority: medium
+ms.date: 07/20/2022
 manager: dansimp
 audience: ITPro
 ms.collection:
@@ -18,12 +19,12 @@ ms.collection:
 ms.topic: conceptual
 ms.reviewer: ramarom, evaldm, isco, mabraitm, chriggs
 ms.custom: AIR
-ms.openlocfilehash: e36bcdd5851b64ec035eaf8e4e3961c14df5c535
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: fb7c4ee03c5391b12beb3d716b7817a880878af5
+ms.sourcegitcommit: 979343980f05ceb546ca0df23562504aaca34b88
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535818"
+ms.lasthandoff: 07/20/2022
+ms.locfileid: "66912570"
 ---
 # <a name="automation-levels-in-automated-investigation-and-remediation-capabilities"></a>Automatiseringsniveauer i automatiserede undersøgelses- og afhjælpningsfunktioner
 
@@ -46,7 +47,7 @@ Air-funktioner (automatiseret undersøgelse og afhjælpning) i Microsoft Defende
 
 |Automatiseringsniveau|Beskrivelse|
 |---|---|
-|**Fuld – afhjælp trusler automatisk** <br> (også kaldet *fuld automatisering*)|Med fuld automatisering udføres afhjælpningshandlinger automatisk. Alle afhjælpningshandlinger, der udføres, kan ses i [Løsningscenter](auto-investigation-action-center.md) under fanen **Oversigt** . Hvis det er nødvendigt, kan en afhjælpningshandling fortrydes. <p> **_Fuld automatisering anbefales_* og vælges som standard for lejere med Defender for Endpoint, der blev oprettet den 16. august 2020 eller senere, uden at der er defineret nogen enhedsgrupper endnu.*<p>*Fuld automatisering er som standard angivet i Defender for Business.*|
+|**Fuld – afhjælp trusler automatisk** <br> (også kaldet *fuld automatisering*)|Med fuld automatisering udføres afhjælpningshandlinger automatisk på enheder, der anses for at være skadelige. Alle afhjælpningshandlinger, der udføres, kan ses i [Løsningscenter](auto-investigation-action-center.md) under fanen **Oversigt** . Hvis det er nødvendigt, kan en afhjælpningshandling fortrydes. <p> **_Fuld automatisering anbefales_* og vælges som standard for lejere med Defender for Endpoint, der blev oprettet den 16. august 2020 eller senere, uden at der er defineret nogen enhedsgrupper endnu.*<p>*Fuld automatisering er som standard angivet i Defender for Business.*|
 |**Semi – kræver godkendelse til enhver afhjælpning** <br> (også kaldet *semiautomatisering*)|Med dette niveau af halvautomatisering kræves der godkendelse til *enhver* afhjælpningshandling. Disse ventende handlinger kan ses og godkendes i [Løsningscenter](auto-investigation-action-center.md) under fanen **Ventende** . <p> *Dette niveau for semiautomatisering er valgt som standard for lejere, der blev oprettet før den 16. august 2020 med Microsoft Defender for Endpoint, uden at der er defineret enhedsgrupper.*|
 |**Semi – kræver godkendelse til afhjælpning af kernemapper** <br> (også en type *semiautomatisering*)|Med dette niveau af semiautomatisering kræves der godkendelse til alle afhjælpningshandlinger, der kræves på filer eller eksekverbare filer, der findes i kernemapper. Kernemapper omfatter operativsystemmapper, f.eks **. Windows** (`\windows\*`). <p> Afhjælpningshandlinger kan udføres automatisk på filer eller eksekverbare filer, der findes i andre (ikke-kerne) mapper. <p> Ventende handlinger for filer eller eksekverbare filer i kernemapper kan vises og godkendes i [Løsningscenter](auto-investigation-action-center.md) under fanen **Ventende** . <p> Handlinger, der er udført på filer eller eksekverbare filer i andre mapper, kan ses i [Løsningscenter](auto-investigation-action-center.md) under fanen **Oversigt** .|
 |**Semi – kræver godkendelse til afhjælpning af mapper, der ikke er midlertidige** <br> (også en type *semiautomatisering*)|Med dette niveau af semiautomatisering kræves der godkendelse til eventuelle afhjælpningshandlinger, der er nødvendige for filer eller eksekverbare filer, der *ikke* findes i midlertidige mapper. <p> Midlertidige mapper kan indeholde følgende eksempler: <ul><li>`\users\*\appdata\local\temp\*`</li><li>`\documents and settings\*\local settings\temp\*`</li><li>`\documents and settings\*\local settings\temporary\*`</li><li>`\windows\temp\*`</li><li>`\users\*\downloads\*`</li><li>`\program files\`</li><li>`\program files (x86)\*`</li><li>`\documents and settings\*\users\*`</li></ul> <p> Afhjælpningshandlinger kan udføres automatisk på filer eller eksekverbare filer, der er i midlertidige mapper. <p> Ventende handlinger for filer eller eksekverbare filer, der ikke findes i midlertidige mapper, kan vises og godkendes i [Løsningscenter](auto-investigation-action-center.md) under fanen **Ventende** . <p> Handlinger, der er udført på filer eller eksekverbare filer i midlertidige mapper, kan vises og godkendes i [Løsningscenter](auto-investigation-action-center.md) under fanen **Oversigt** .|
