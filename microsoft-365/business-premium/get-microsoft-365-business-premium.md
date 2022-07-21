@@ -9,6 +9,7 @@ audience: Admin
 ms.topic: how-to
 ms.service: o365-administration
 ms.localizationpriority: high
+ms.date: 07/20/2022
 ms.collection:
 - Adm_O365
 - M365-subscription-management
@@ -23,19 +24,19 @@ search.appverid:
 - BCS160
 - MET150
 description: Få Microsoft 365 Business Premium, så du kan beskytte din virksomhed mod cybersikkerhedstrusler mod enheder, mail, data og kommunikation.
-ms.openlocfilehash: ad58a0578872cf7fcf38bec09cc383450c76a5ff
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 2307f6476ee2cf9c27b4b3785c29f35991d30d91
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66493736"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917920"
 ---
 # <a name="how-to-sign-up-for-microsoft-365-business-premium"></a>Sådan tilmelder du dig Microsoft 365 Business Premium
 
 Når du er klar til at tilmelde dig Microsoft 365 Business Premium, har du flere muligheder. Du kan:
 
 - [Prøv eller køb Microsoft 365 Business Premium på egen hånd](#sign-up-for-microsoft-365-business-premium-on-your-own)
-- [Arbejd med en løsningsudbyder](#work-with-a-microsoft-solution-provider-to-get-microsoft-365-business-premium)
+- [Arbejd sammen med en Microsoft-partner](#work-with-a-microsoft-partner-to-get-microsoft-365-business-premium)
 
 > [!TIP]
 > Hvis du leder efter Microsoft 365 til kampagner, skal du se [Sådan får du Microsoft 365 til kampagner](get-microsoft-365-campaigns.md).
@@ -48,17 +49,22 @@ Når du er klar til at tilmelde dig Microsoft 365 Business Premium, har du flere
 
 3. Når du har tilmeldt dig Microsoft 365 Business Premium, modtager du en mail med et link til at logge på og komme i gang. Fortsæt til [Konfigurer Microsoft 365 Business Premium](m365bp-setup.md).
 
-## <a name="work-with-a-microsoft-solution-provider-to-get-microsoft-365-business-premium"></a>Arbejd sammen med en Microsoft Solution Provider for at få Microsoft 365 Business Premium
+## <a name="work-with-a-microsoft-partner-to-get-microsoft-365-business-premium"></a>Arbejd sammen med en Microsoft-partner for at få Microsoft 365 Business Premium
 
 Microsoft har en liste over løsningsudbydere, der har tilladelse til at sælge tilbud, herunder Microsoft 365 Business Premium. Hvis du ikke allerede arbejder med en løsningsudbyder, kan du finde en ved at følge disse trin: 
 
-1. Gå til siden **Microsoft Solution Providers** ([https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers)).
- 
-2. I søgefeltet skal du angive din placering og virksomhedsstørrelse. 
+1. Gå til [Gennemse partnere](https://appsource.microsoft.com/marketplace/partner-dir).
 
-3. I feltet **Søg efter produkter, tjenester, færdigheder, brancher** skal du placere `Microsoft 365`og derefter vælge **Søg**.
+2. I ruden **Filtre** skal du angive søgekriterier, f.eks.:
 
-4. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer.
+   - Din placering
+   - Organisationens størrelse
+   - **Fokusområder**, f.eks **. sikkerhed** og/eller **trusselsbeskyttelse** 
+   - **Tjenester**, f.eks **. licensering** eller **administrerede tjenester (MSP)**
+
+   Så snart du har valgt et eller flere kriterier, opdateres listen over partnere.
+
+3. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer.
 
 ## <a name="next-steps"></a>Næste trin
 

@@ -12,13 +12,12 @@ search.appverid: MET150
 ms.collection: ''
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du installerer Microsoft Whiteboard på enheder, der kører Windows 10 eller nyere versioner.
-ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 2ce1ff5b07774d07b3b67404e0b04d42b44759ba
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 31341bc446313c54d95e14efdf569ba6e0b5263f
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66858890"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917183"
 ---
 # <a name="deploy-microsoft-whiteboard-on-windows-10-devices"></a>Installer Microsoft Whiteboard på Windows 10 enheder
 

@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Med Aktivitetsoversigt kan du se og filtrere på de handlinger, som brugerne foretager på dit navngivne indhold.
-ms.openlocfilehash: fc74e8c5e11834b14c6aa8a3f80d43e20c43ec11
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: c33ff2653eef6813caf9b9281903b7248af12359
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66642014"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917996"
 ---
 # <a name="get-started-with-activity-explorer"></a>Kom i gang med aktivitetsviser
 
@@ -99,7 +99,7 @@ Her er en liste over relevante rollegrupper, der findes som prøveversion. Du ka
 
 Aktivitetsoversigt indsamler aktivitetsoplysninger fra overvågningslogge på flere kilder til aktiviteter. Du kan finde flere detaljerede oplysninger om, hvilken mærkataktivitet der gør den til [Aktivitetsoversigt, under Mærkathændelser, der er tilgængelige i Aktivitetsoversigt](data-classification-activity-explorer-available-events.md).
 
-**Aktiviteter med følsomhedsmærkater** og **aktiviteter til opbevaringsmærkning** fra oprindelige Office-programmer, Azure Information Protection-tilføjelsesprogram, SharePoint Online, Exchange Online (kun følsomhedsmærkater) og OneDrive. Nogle eksempler er:
+**Aktiviteter med følsomhedsmærkater** og **aktiviteter til opbevaringsmærkning** fra oprindelige Office-programmer, Azure Information Protection (AIP) samlet mærkatklient og -scanner, SharePoint Online, Exchange Online (kun følsomhedsmærkater) og OneDrive. Nogle eksempler er:
 
 - Anvendt navn
 - Navnet er ændret (opgraderet, nedgraderet eller fjernet)

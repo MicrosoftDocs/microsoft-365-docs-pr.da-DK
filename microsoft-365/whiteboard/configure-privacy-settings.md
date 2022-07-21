@@ -12,13 +12,12 @@ search.appverid: MET150
 ms.collection: ''
 ms.localizationpriority: medium
 description: Få mere at vide om overholdelse af angivne standarder, og hvordan du konfigurerer indstillinger for beskyttelse af personlige oplysninger i Microsoft Whiteboard.
-ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a2708d3eda92f3d29ea9ad6ee15e518d32d93a22
-ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
+ms.openlocfilehash: 38c7d3fc80b825a8b701f84d729e9bb9a7cc1b63
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66882778"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917227"
 ---
 # <a name="configure-privacy-settings-in-microsoft-whiteboard"></a>Konfigurer indstillinger for beskyttelse af personlige oplysninger i Microsoft Whiteboard
 
@@ -31,7 +30,7 @@ Hvis du er Microsoft Whiteboard-administrator for din organisation, kan du styre
 
 - Om valgfri forbundne oplevelser i Whiteboard er tilgængelige for dine brugere.
 
-Hvis du vil konfigurere niveauet af diagnosticeringsdata, [skal du](/microsoft-365/admin/admin-overview/admin-center-overview?view=o365-worldwide) logge på Microsoft 365 Administration med din administratorkonto. På startsiden for Administration skal du gå til **Vis alle indstillinger for > > Organisationsindstillinger > Whiteboard**.
+Hvis du vil konfigurere niveauet af diagnosticeringsdata, [skal du](/microsoft-365/admin/admin-overview/admin-center-overview) logge på Microsoft 365 Administration med din administratorkonto. På startsiden for Administration skal du gå til **Vis alle indstillinger for > > Organisationsindstillinger > Whiteboard**.
 
 Hvis du vil konfigurere tilgængeligheden af valgfri forbundne oplevelser, skal du bruge [tjenesten Office-skypolitik](/deployoffice/admincenter/overview-office-cloud-policy-service) i [Microsoft 365 Apps Administration](https://config.office.com). Log på med din administratorkonto, og gå til **Tilpasning > Politikadministration**. Den politik, du vil konfigurere, er navngivet: **Tillad brugen af yderligere valgfri forbundne oplevelser i Office**.
 

@@ -17,12 +17,12 @@ ms.custom: ''
 description: Administratorer kan få mere at vide om, hvordan de bruger den avancerede leveringspolitik i Exchange Online Protection (EOP) til at identificere meddelelser, der ikke skal filtreres i bestemte understøttede scenarier (phishing-simuleringer fra tredjepart og meddelelser, der leveres til sikkerhedshandlinger (SecOps)-postkasser.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 109d711623d2a0355851414af3ef0cb1beadf6af
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: 9fbfa8f79698d053fe60388eec54ebe90f6501ff
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66490437"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917557"
 ---
 # <a name="configure-the-delivery-of-third-party-phishing-simulations-to-users-and-unfiltered-messages-to-secops-mailboxes"></a>Konfigurer levering af phishing-simuleringer fra tredjepart til brugere og ufiltrerede meddelelser til SecOps-postkasser
 
@@ -83,7 +83,7 @@ Meddelelser, der identificeres af den avancerede leveringspolitik, er ikke sikke
 
 2. På siden **Avanceret levering** skal du kontrollere, at fanen **SecOps-postkasse** er valgt, og derefter gøre et af følgende:
    - Klik på ![ikonet Rediger.](../../media/m365-cc-sc-edit-icon.png) **Rediger**.
-   - Hvis der ikke er konfigureret phishing-simuleringer, skal du klikke på **Tilføj**.
+   - Hvis der ikke er nogen konfigurerede SecOps-postkasser, skal du klikke på **Tilføj**.
 
 3. I pop op-vinduet **Rediger SecOps-postkasser**, der åbnes, skal du angive en eksisterende Exchange Online postkasse, som du vil angive som SecOps-postkasse, ved at gøre et af følgende:
    - Klik på feltet, lad listen over postkasser blive løst, og vælg derefter postkassen.
@@ -116,6 +116,7 @@ Posterne i SecOps-postkassen, som du har konfigureret, vises på fanen **SecOps-
      - Enkelt IP: f.eks. 192.168.1.1.
      - IP-interval: f.eks. 192.168.0.1-192.168.0.254.
      - CIDR IP: For eksempel 192.168.0.1/25.
+
    - **Url-adresser til simulering, der skal tillades**: Udvid denne indstilling, og angiv eventuelt bestemte URL-adresser, der er en del af din phishing-simuleringskampagne, som ikke skal blokeres eller detoneres, ved at klikke i feltet, angive en værdi og derefter trykke på Enter eller vælge den værdi, der vises under feltet. Du kan tilføje op til 10 poster. Du kan se syntaksformatet for [URL-adressen i URL-syntaksen for listen over tilladte/blokerede lejere](tenant-allow-block-list.md#url-syntax-for-the-tenant-allowblock-list). Disse URL-adresser ombrydes, når der klikkes, men de blokeres ikke.
 
    Hvis du vil fjerne en eksisterende værdi, skal du klikke på Fjern ![Fjern ikon.](../../media/m365-cc-sc-remove-selection-icon.png) ud for værdien.

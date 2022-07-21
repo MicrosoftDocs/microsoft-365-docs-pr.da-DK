@@ -19,12 +19,12 @@ ms.collection:
 recommendations: false
 description: Få mere at vide om, hvordan du føjer et politiktip til en DLP-politik (forebyggelse af datatab). Giv en bruger besked om, at brugeren arbejder med indhold, der er i konflikt med en DLP-politik.
 ms.custom: seo-marvel-apr2021
-ms.openlocfilehash: 04743bdabba4089a7cfdbb46fbb25d427927f6c0
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 074283fbdf22d4a7ed645539f706a7b292c20485
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66638339"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917271"
 ---
 # <a name="data-loss-prevention-policy-tips-reference"></a>Reference til politiktips til forebyggelse af datatab
 
@@ -404,4 +404,5 @@ Bemærk, at brugerdefinerede følsomme informationstyper også vil blive registr
 |**Tredjepartscloudapps**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen|Tip til politikker til forebyggelse af datatab understøttes ikke i tredjepartscloudapps|
 |**I det lokale miljø**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Ingen|Ingen||
 |**Word, Excel, PowerPoint Win32-klient**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Undersæt|Undersæt|Se [Support til Outlook 2013 og nyere og Office-apps på Desktop, der viser politiktips til kun nogle følsomme oplysningstyper](#outlook-2013-and-later-and-office-apps-on-desktop-support-showing-policy-tips-for-only-some-sensitive-information-types) for listen over understøttede typer følsomme oplysninger</br></br>Politiktips til WXP-klientapps fungerer for dokumenter, der er gemt på SharePoint Online eller OneDrive for Business-websteder for alle DLP-politikker, som har præcis nedenstående eller et undersæt af betingelser eller handlinger i DLP-politikken:</br> <ul><li>Indhold indeholder følsomme oplysningstyper</li><li>Adgangsområde (indhold deles internt/eksternt)</li><li>Giv brugeren besked (politiktip/brugermeddelelser)</li><li>Bloker alle</li><li>Hændelsesrapporter</li></ul></br> Hvis der findes en anden betingelse eller handling, vises DLP-politiktip for den pågældende politik ikke i skrivebordsappsene i Word, Excel eller PowerPoint.</br>Se [Politiktips i Excel, PowerPoint og Word for at](use-notifications-and-policy-tips.md#policy-tips-in-excel-powerpoint-and-word) få flere oplysninger|
+|**Power BI**|:::image type="icon" source="../media/crsmrk.png" border="false":::|Undersæt|Undersæt|Politikker til forebyggelse af datatab i Power BI er i offentlig prøveversion. </br></br> Politiktip og administratorbeskeder understøttes. |
 ||||||

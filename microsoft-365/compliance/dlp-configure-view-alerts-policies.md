@@ -21,12 +21,12 @@ ms.custom:
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
 description: Få mere at vide om, hvordan du definerer og administrerer beskeder for politikker til forebyggelse af datatab.
-ms.openlocfilehash: 60d5188b9288b1e131e36e145f7abb98a34d5ead
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: d4e520a236c3658106a8311df0beed7f6c54ac4e
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66627641"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66918018"
 ---
 # <a name="configure-and-view-alerts-for-data-loss-prevention-polices"></a>Konfigurer og få vist beskeder for politikker til forebyggelse af datatab
 
@@ -63,6 +63,7 @@ Kunder, der bruger [Slutpunkt DLP](endpoint-dlp-learn-about.md) , som er beretti
 
 - **Konfiguration af en enkelt hændelsesbesked**: Organisationer, der har et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, kan kun oprette beskedpolitikker, hvis en besked udløses, hver gang der forekommer en aktivitet.
 - **Samlet konfiguration af beskeder**: Hvis du vil konfigurere samlede politikker for beskeder baseret på en tærskel, skal du have en af følgende konfigurationer:
+  - Et A5-abonnement
   - Et E5- eller G5-abonnement
   - Et E1-, F1- eller G1-abonnement eller et E3- eller G3-abonnement, der indeholder en af følgende funktioner:
     - Office 365 Advanced Threat Protection Plan 2

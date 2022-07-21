@@ -19,12 +19,12 @@ ms.collection:
 search.appverid:
 - MET150
 description: 'Forebyggelse af datatab for slutpunkter udvider overvågningen af filaktiviteter og beskyttende handlinger for disse filer til slutpunkter. Filer er gjort synlige i løsningerne til overholdelse af angivne standarder '
-ms.openlocfilehash: d711a61c1c61df94311dfd409e94330bb8696d88
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 2adc24b4809689137ae067ce09cda8caebea2a0e
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66641740"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917139"
 ---
 # <a name="learn-about-endpoint-data-loss-prevention"></a>Få mere at vide om forebyggelse af datatab ved slutpunkt
 
@@ -42,7 +42,7 @@ Du kan bruge Microsoft Purview Forebyggelse af datatab (DLP) til at overvåge de
 
 Slutpunkt DLP giver dig mulighed for at overvåge og administrere følgende typer aktiviteter, som brugere foretager på følsomme elementer, der fysisk er gemt Windows 10, Windows 11 eller macOS-enheder.
 
-|Aktivitet |Beskrivelse  |Windows 10 1809 og nyere / Windows 11| macOS Catalina 10.15| Kan overvåges/begrænses|
+|Aktivitet |Beskrivelse  |Windows 10 1809 og nyere / Windows 11| macOS Catalina 10.15 og nyere | Kan overvåges/begrænses|
 |---------|---------|---------|---------|---------|
 |uploade til cloudtjenesten eller få adgang fra ikke-tilladte browsere    | Registrerer, når en bruger forsøger at overføre et element til et tjenestedomæne med begrænset adgang eller få adgang til et element via en browser.  Hvis de bruger en browser, der er angivet i DLP som en ikke-tilladt browser, blokeres uploadaktiviteten, og brugeren omdirigeres til at bruge Microsoft Edge. Microsoft Edge tillader eller blokerer derefter upload eller adgang baseret på konfigurationen af DLP-politikken         |Understøttes | Understøttes|kan overvåges og begrænses|
 |kopiér til en anden app    |Registrerer, når en bruger forsøger at kopiere oplysninger fra et beskyttet element og derefter indsætte dem i en anden app, i en anden proces eller et andet element. Kopiering og indsættelse af oplysninger i den samme app, proces eller element registreres ikke af denne aktivitet.|Understøttes|Understøttes         | kan overvåges og begrænses|

@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om, hvordan du eksporterer kildedata til præcise datamatchbaserede følsomme oplysninger.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 913870afeef443c5b346172099b0cd47db13e52e
-ms.sourcegitcommit: 9ba00298cfa9ae293e4a57650965fdb3e8ffe07b
+ms.openlocfilehash: 644c62dce3069899aba33737dd1e6452c81fee24
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "64760685"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66918062"
 ---
 # <a name="export-source-data-for-exact-data-match-based-sensitive-information-type"></a>Eksportér kildedata for at finde nøjagtigt datamatch baseret på følsom oplysningstype
 
@@ -33,7 +33,7 @@ Når dataene er blevet eksporteret i et af de understøttede formater, kan du fo
 
 ## <a name="defining-your-edm-sensitive-type"></a>Definition af din EDM-følsomme type
 
-Når du definerer din EDM-følsomme type, er en af de vigtigste beslutninger, hvilke felter der skal være primære felter. Primære felter skal følge et mønster, der kan registreres, og defineres som søgbare felter (kolonner) i EDM-skemaet. Sekundære felter behøver ikke at følge et mønster, da de sammenlignes med al den tekst, der omgiver, svarer til de primære felter.
+Når du definerer din EDM-følsomme type, er en af de vigtigste beslutninger at definere, hvilke felter der skal være primære felter. Primære felter skal følge et mønster, der kan registreres, og defineres som søgbare felter (kolonner) i EDM-skemaet. Sekundære felter behøver ikke at følge et mønster, da de sammenlignes med al den tekst, der omgiver, svarer til de primære felter.
 
 Brug disse regler som en hjælp til at bestemme, hvilke kolonner du skal bruge som primære felter:
 
@@ -53,7 +53,7 @@ Datafilen kan maksimalt indeholde:
 
 2. Strukturér de følsomme data i filen .csv eller .tsv, så den første række indeholder navnene på de felter, der bruges til EDM-baseret klassificering. I filen kan du have feltnavne, f.eks. "ssn", "fødselsdato", "fornavn", "efternavn". Kolonneoverskriftsnavne må ikke indeholde mellemrum eller understregningstegn. Eksempelfilen .csv, som vi bruger i denne artikel, hedder *f.eks.PatientRecords.csv*, og kolonnerne omfatter *PatientID*, *MRN*, *LastName*, *FirstName*, *SSN* med mere.
 
-3. Vær opmærksom på formatet af de følsomme datafelter. Felter, der kan indeholde kommaer i deres indhold, f.eks. en adresse, der indeholder værdien "Seattle,WA", fortolkes som to separate felter, når de fortolkes, hvis .csv format vælges. For at undgå dette skal du bruge formatet .tsv eller omgivet af kommaet, der indeholder værdier, med dobbelte anførselstegn i den følsomme datatabel. Hvis komma, der indeholder værdier, også indeholder mellemrum, skal du oprette et brugerdefineret SIT, der svarer til det tilsvarende format. For eksempel et SIT, der registrerer streng med flere ord med kommaer og mellemrum i den.
+3. Vær opmærksom på formatet af de følsomme datafelter. felter, der kan indeholde kommaer i deres indhold. En adresse, der indeholder værdien "Seattle,WA", fortolkes f.eks. som to separate felter, når den fortolkes, hvis formatet .csv vælges. For at undgå dette skal du bruge formatet .tsv eller omgivet af kommaet, der indeholder værdier, med dobbelte anførselstegn i den følsomme datatabel. Hvis komma, der indeholder værdier, også indeholder mellemrum, skal du oprette et brugerdefineret SIT, der svarer til det tilsvarende format. For eksempel et SIT, der registrerer streng med flere ord med kommaer og mellemrum i den.
 
 ## <a name="next-step"></a>Næste trin
 

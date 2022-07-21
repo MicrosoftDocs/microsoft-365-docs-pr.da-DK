@@ -16,12 +16,12 @@ audience: ITPro
 ms.collection: m365-security-compliance
 ms.topic: conceptual
 ms.technology: m365d
-ms.openlocfilehash: 37cea2e88afacb14285e10960fba81989ffb387f
-ms.sourcegitcommit: 1734c95ce72d9c8af695cb4b49b1e40d921a1fee
+ms.openlocfilehash: 67c7648238ecc3a46188b36f3ab61525739d53d4
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66686413"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917667"
 ---
 # <a name="run-the-client-analyzer-on-macos-and-linux"></a>Kør klientanalysen på macOS og Linux
 
@@ -69,7 +69,7 @@ ms.locfileid: "66686413"
 > 
 > - Desuden kræver værktøjet i øjeblikket, at Python version 3 eller nyere er installeret.
 >
-> - Hvis du kører på en computer, der ikke kan bruge Python 3 eller hente lxml-komponenten, kan du downloade en binær version af analysefunktionen, der ikke har nogen af kravene: [Binær XMDE-klientanalyse](https://aka.ms/XMDEClientAnalyzerBinary)
+> - Hvis du kører på en computer, der ikke kan bruge Python 3 eller hente lxml-komponenten, kan du downloade en binær version af analysefunktionen, der ikke har nogen af kravene: [Binær XMDE-klientanalyse](https://aka.ms/XMDEClientAnalyzerBinary). <br> Bemærk, at den binære fil i øjeblikket ikke er signeret. Hvis du vil tillade, at pakken kører på MacOS, skal du bruge syntaksen: "spctl --add /Path/To/Application.app".
 >
 > - Hvis enheden er bag en proxy, kan du blot overføre proxyserveren som en miljøvariabel til mde_support_tool.sh-scriptet. For eksempel: `https_proxy=https://myproxy.contoso.com:8080 ./mde_support_tool.sh"`
 

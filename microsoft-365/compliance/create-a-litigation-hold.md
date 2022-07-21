@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: v-tophillips
 author: v-tophillips
 manager: laurawi
-ms.date: ''
+ms.date: 07/20/2022
 audience: Admin
 ms.topic: article
 ms.service: O365-seccomp
@@ -17,16 +17,16 @@ ms.custom:
 - seo-marvel-mar2020
 - seo-marvel-apr2020
 - admindeeplinkCOMPLIANCE
-ms.openlocfilehash: ddc55ef097a02c4005e2dcae2ca19fd673cc4c62
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 4a1c7992952e10939aaa1029888455bb05fc4986
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66631067"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66918040"
 ---
 # <a name="create-a-litigation-hold"></a>Opret en retslig fastfrysning
 
-Du kan placere en postkasse i strid med procesførelse for at bevare alt postkasseindhold, herunder slettede elementer og de oprindelige versioner af ændrede elementer. Når du placerer en brugerpostkasse i stridsposition, bevares indholdet i brugerens arkivpostkasse (hvis den er aktiveret). Når du opretter en venteposition, kan du angive en varighed af venteposition (også kaldet en *tidsbaseret venteposition*), så slettede og ændrede elementer bevares i en bestemt periode og derefter slettes permanent fra postkassen. Eller du kan bare bevare indhold på ubestemt tid (kaldet en *uendelig venteposition*), eller indtil bevarelse af procesførelse er fjernet. Hvis du angiver en varighedsperiode for venteposition, beregnes den ud fra den dato, hvor der modtages en meddelelse, eller der oprettes et postkasseelement. 
+Du kan placere en postkasse i strid med procesførelse for at bevare alt postkasseindhold, herunder slettede elementer og de oprindelige versioner af ændrede elementer. Når du placerer en brugerpostkasse i stridsposition, bevares indholdet i brugerens arkivpostkasse (hvis den er aktiveret). Når du opretter en venteposition, kan du angive en varighed af venteposition (også kaldet en *tidsbaseret venteposition*), så slettede og ændrede elementer bevares i en bestemt periode og derefter slettes permanent fra postkassen. Eller du kan bare bevare indhold på ubestemt tid (kaldet en *uendelig venteposition*), eller indtil bevarelse af procesførelse er fjernet. Hvis du angiver en varighedsperiode for venteposition, beregnes den ud fra den dato, hvor der modtages en meddelelse, eller der oprettes et postkasseelement.
   
 Her er, hvad der sker, når du opretter en procesførelsesventeposition.
   
@@ -43,7 +43,7 @@ Her er, hvad der sker, når du opretter en procesførelsesventeposition.
 Hvis du vil placere en Exchange Online postkasse i stridsposition, skal den tildeles en Exchange Online Plan 2-licens. Hvis en postkasse tildeles en Exchange Online Plan 1-licens, skal du tildele den en separat Exchange Online-arkivering licens for at placere den i venteposition.
 
 > [!NOTE]
-> For Office 365 Education organisationer understøttes bevarelse af procesførelser i Office 365 A1 abonnementer, som omfatter en Exchange Online Plan 1-licens med supplerende funktioner. Du kan få flere oplysninger i afsnittet "Exchange Online funktioner" i [beskrivelsen af Office 365 Education-tjenesten](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#exchange-online-features).
+> For Office 365 Education organisationer understøttes bevarelse af procesførelse i Office 365 A1 abonnementer, som omfatter en Exchange Online Plan 2-licens med supplerende funktioner. Du kan få flere oplysninger i afsnittet "Exchange Online funktioner" i [beskrivelsen af Office 365 Education-tjenesten](/office365/servicedescriptions/office-365-platform-service-description/office-365-education#exchange-online-features).
 
 ## <a name="place-a-mailbox-on-litigation-hold"></a>Placer en postkasse i stridsposition
 

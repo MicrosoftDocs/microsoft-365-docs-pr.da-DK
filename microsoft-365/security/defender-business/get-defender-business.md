@@ -10,17 +10,18 @@ ms.topic: overview
 ms.prod: m365-security
 ms.technology: mdb
 ms.localizationpriority: medium
+ms.date: 07/20/2022
 ms.reviewer: shlomiakirav
 f1.keywords: NOCSH
 ms.collection:
 - SMB
 - m365-security-compliance
-ms.openlocfilehash: 2fd10eb56eec1c35015bff2f63163ee9394f8d42
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: 5f0c1f63223498995d04814434bbf4000e55d918
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66771301"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917879"
 ---
 # <a name="get-microsoft-defender-for-business"></a>Hent Microsoft Defender til virksomheder
 
@@ -30,7 +31,7 @@ Hvis du ikke allerede har Microsoft Defender til virksomheder, kan du vælge mel
 
 - [Prøv eller køb den separate version af Defender for Business](#try-or-buy-microsoft-defender-for-business).
 - [Hent Microsoft 365 Business Premium](#get-microsoft-365-business-premium), som nu omfatter Defender for Business.
-- [Arbejd sammen med en Microsoft-løsningsudbyder](#work-with-a-microsoft-solution-provider) , der kan hjælpe dig med at få alt konfigureret og konfigureret.
+- [Samarbejd med en Microsoft-partner](#work-with-a-microsoft-partner) , der kan hjælpe dig med at få alt konfigureret og konfigureret.
 
 Hvis du har tilmeldt dig en prøveversion, kan du [aktivere din prøveversion og tildele brugerlicenser](#how-to-activate-your-trial), når du har modtaget din acceptmail, og derefter fortsætte til dine [næste trin](#next-steps).
 
@@ -56,17 +57,22 @@ Hvis du har tilmeldt dig en prøveversion, kan du [aktivere din prøveversion og
 
 3. Når du har tilmeldt dig Microsoft 365 Business Premium, modtager du en mail med et link til at logge på og komme i gang. Fortsæt til [Konfigurer Microsoft 365 Business Premium](../../business-premium/m365bp-setup.md).
 
-## <a name="work-with-a-microsoft-solution-provider"></a>Arbejd med en Microsoft Solution Provider
+## <a name="work-with-a-microsoft-partner"></a>Arbejd sammen med en Microsoft-partner
 
 Microsoft har en liste over løsningsudbydere, der har tilladelse til at sælge tilbud, herunder Microsoft 365 Business Premium og Microsoft Defender til virksomheder. Benyt følgende fremgangsmåde for at finde en løsningsudbyder i dit område:
 
-1. Gå til siden **Microsoft Solution Providers** ([https://www.microsoft.com/solution-providers](https://www.microsoft.com/solution-providers)).
- 
-2. I søgefeltet skal du angive din placering og virksomhedsstørrelse. 
+1. Gå til [Gennemse partnere](https://appsource.microsoft.com/marketplace/partner-dir).
 
-3. I feltet **Søg efter produkter, tjenester, færdigheder, brancher** skal du placere `Microsoft 365`og derefter vælge **Søg**.
+2. I ruden **Filtre** skal du angive søgekriterier, f.eks.:
 
-4. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer. Din udbyder kan hjælpe dig med at tilmelde dig Defender for Business.
+   - Din placering
+   - Organisationens størrelse
+   - **Fokusområder**, f.eks **. sikkerhed** og/eller **trusselsbeskyttelse** 
+   - **Tjenester**, f.eks **. licensering** eller **administrerede tjenester (MSP)**
+
+   Så snart du har valgt et eller flere kriterier, opdateres listen over partnere.
+
+3. Gennemse listen over resultater. Vælg en udbyder for at få mere at vide om deres ekspertise og de tjenester, de leverer.
 
 ## <a name="how-to-activate-your-trial"></a>Sådan aktiverer du din prøveversion
 

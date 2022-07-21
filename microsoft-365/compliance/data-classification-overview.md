@@ -19,16 +19,16 @@ search.appverid:
 - MOE150
 - MET150
 description: Dashboardet til dataklassificering giver dig indsigt i, hvor mange følsomme data der er blevet fundet og klassificeret i din organisation.
-ms.openlocfilehash: 828a5c5d61c1b662f42e34ae95825dbc5994c816
-ms.sourcegitcommit: 019e8a62ab07a42d4ede4a87ccfaed527914412d
+ms.openlocfilehash: dccc33715b2a3cd489d7fd65fa47773952cf8727
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/08/2022
-ms.locfileid: "66689146"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917579"
 ---
 # <a name="learn-about-data-classification"></a>Om klassificering af data
 
-Som Microsoft 365-administrator eller overholdelsesadministrator kan du evaluere og derefter mærke indhold i din organisation for at styre, hvor det går hen, beskytte det, uanset hvor det er, og for at sikre, at det bevares og slettes i henhold til din organisations behov. Det gør du ved hjælp af [følsomhedsmærkater](sensitivity-labels.md), [opbevaringsmærkater](retention.md#retention-labels) og klassificering af følsomme oplysninger. Der er forskellige måder at gøre registrering, evaluering og mærkning, men det endelige resultat er, at du kan have meget stort antal dokumenter og e-mails, der er mærket og klassificeret med en eller begge disse mærkater. Når du har anvendt dine opbevaringsmærkater og følsomhedsmærkater, skal du se, hvordan mærkaterne bruges på tværs af din lejer, og hvad der udføres med disse elementer. Dataklassificeringssiden giver indblik i indholdets brødtekst, især:
+Som Microsoft 365-administrator eller overholdelsesadministrator kan du evaluere og derefter mærke indhold i din organisation for at styre, hvor det går hen, beskytte det, uanset hvor det er, og sikre, at det bevares og slettes i henhold til din organisations behov. Det gør du ved hjælp af [følsomhedsmærkater](sensitivity-labels.md), [opbevaringsmærkater](retention.md#retention-labels) og klassificering af følsomme oplysninger. Der er forskellige måder at gøre opdagelse, evaluering og mærkning, men det endelige resultat er, at du kan have et meget stort antal dokumenter og e-mails, der er mærket og klassificeret med en eller begge disse mærkater. Når du har anvendt dine opbevaringsmærkater og følsomhedsmærkater, skal du se, hvordan mærkaterne bruges på tværs af din lejer, og hvad der udføres med disse elementer. Dataklassificeringssiden giver indblik i indholdets brødtekst, især:
 
 - antallet af elementer, der er klassificeret som følsomme oplysninger, og hvilke klassificeringer der er
 - de mest anvendte følsomhedsmærkater i både Microsoft 365 og Azure Information Protection

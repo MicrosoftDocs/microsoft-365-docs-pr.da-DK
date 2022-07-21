@@ -12,13 +12,12 @@ search.appverid: MET150
 ms.collection: ''
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du administrerer deling for Microsoft Whiteboard i GCC High-miljøer.
-ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 3b16b55b1d8adc52318e8549a92ef703d68f548a
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: c2223c82a4b55e6391d384d115965f7a4a9c46c7
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66858891"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917161"
 ---
 # <a name="manage-sharing-for-microsoft-whiteboard-in-gcc-high-environments"></a>Administrer deling for Microsoft Whiteboard i GCC High-miljøer
 

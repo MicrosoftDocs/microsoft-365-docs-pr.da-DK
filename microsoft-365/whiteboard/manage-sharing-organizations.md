@@ -12,13 +12,12 @@ search.appverid: MET150
 ms.collection: ''
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du administrerer deling for Microsoft Whiteboard.
-ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 0d21c9e80e2f5f44a135e0f252eb90dfae408275
-ms.sourcegitcommit: bc35c7826e3403f259725ac72cca5bafd36aa56a
+ms.openlocfilehash: 22f5d80a914ce7b97765fca1e20f00a30732b820
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/30/2022
-ms.locfileid: "66858899"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917601"
 ---
 # <a name="manage-sharing-for-microsoft-whiteboard"></a>Administrer deling for Microsoft Whiteboard
 

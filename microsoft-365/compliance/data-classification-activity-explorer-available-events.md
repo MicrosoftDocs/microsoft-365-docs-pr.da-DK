@@ -1,5 +1,5 @@
 ---
-title: Navnehandlinger rapporteret i Aktivitetsstifinder
+title: Mærkningshandlinger, der er rapporteret i aktivitetsviser
 f1.keywords:
 - NOCSH
 ms.author: chrfox
@@ -17,169 +17,169 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: En liste over etiketaktiviteter, der er tilgængelige i Aktivitetsstifinder.
-ms.openlocfilehash: feed9d29deb94263d242967bdef38209cda660e1
-ms.sourcegitcommit: 1ef176c79a0e6dbb51834fe30807409d4e94847c
+description: En liste over navngivne aktiviteter, der er tilgængelige i Aktivitetsoversigt.
+ms.openlocfilehash: 27a6bb3f0fe4293d5904c7e1661ef1e422fbac5b
+ms.sourcegitcommit: 24827a509b3e78959ce67679646e572a0c996282
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 11/19/2021
-ms.locfileid: "63593848"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66917864"
 ---
-# <a name="labeling-activities-that-are-available-in-activity-explorer"></a>Etiketaktiviteter, der er tilgængelige i Aktivitetsstifinder
+# <a name="labeling-activities-that-are-available-in-activity-explorer"></a>Navngiver aktiviteter, der er tilgængelige i Aktivitetsoversigt
 
 ## <a name="sensitivity-label-applied"></a>Følsomhedsmærkat anvendt
 
-Denne hændelse genereres, hver gang et ikke-navnmærket dokument navnsendes, eller der sendes en mail med et følsomhedsmærkat.
+Denne hændelse genereres, hver gang et ikke-navngivet dokument mærkes, eller der sendes en mail med en følsomhedsmærkat.
 
-- Det registreres på tidspunktet for lagring i Office oprindelige programmer og webprogrammer.
-- De registreres på det tidspunkt, hvor de forekommer i tilføjelsesprogrammet Azure Information Protection.
-- Handlingerne Opgradering og nedgradering af navne kan også overvåges via *feltet Etikethændelsestype* og filter.
+- Den registreres på tidspunktet for lagring i oprindelige Office-programmer og webprogrammer.
+- Den registreres på tidspunktet for forekomsten af Azure Information Protection (AIP) unified labeling-klienten.
+- Handlinger for opgradering og nedgradering af mærkater kan også overvåges via feltet og filteret *for hændelsestypen Mærkat* .
 
-|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 | Word, Excel, PowerPoint|Ja |
 |Outlook| Ja | |
 |SharePoint online, OneDrive|Ja | |
 |Exchange        |Ja         | |
-|Samlet Azure Information Protection-klient (AIP) og en samlet AIP-scanner |Ja |Den nye *AIP-etikethandling* knyttes til en *etiket, der anvendes* i Aktivitetsstifinder   |
-|Microsoft-beskyttelse af oplysninger (MIP) SDK         |Ja|Den nye *AIP-etikethandling* knyttes til en *etiket, der anvendes* i Aktivitetsstifinder|
+|Azure Information Protection (AIP) unified client og AIP Unified Scanner |Ja |Den *nye AIP-etikethandling* er knyttet til *den mærkat, der anvendes* i Aktivitetsoversigt   |
+|Microsoft Information Protection SDK (MIP)         |Ja|Den *nye AIP-etikethandling* er knyttet til *den mærkat, der anvendes* i Aktivitetsoversigt|
 |RMS (Rights Management Service)         |Ikke relevant         | |
-|Power BI og internettet        | Nej| Handicapvenlige i Microsoft 365 overvågningslogfiler         |
-|Microsoft Defender til skyapps         |Nej|         |
+|Power BI Desktop og web        | Nej| Tilgængelig i Microsoft 365-overvågningslogge         |
+|Microsoft Defender for Cloud Apps         |Nej|         |
 
-## <a name="sensitivity-label-changed"></a>Følsomhedsmærkat ændret
+## <a name="sensitivity-label-changed"></a>Følsomhedsmærkaten er ændret
 
 Denne hændelse genereres, hver gang en følsomhedsmærkat opdateres i dokumentet eller mailen.
 
-- For AIP Unified-klienten, Unified Scanner- og MIP SDK-kilderne er  handlingshandlingen AIP-opgraderingsetiket og *nedgraderingsetiket* kort til navnet *Aktivitetsstifinder ændret*
+- For AIP Unified Client-, AIP Unified Scanner- og MIP SDK-kilderne er handlingstilknytningerne for *AIP-opgraderingsbeskrivelsen* og *-nedgraderingsmærkaten* *ændret til mærkaten* Aktivitetsoversigt
 
-- Det registreres ved lagringspunktet i Office oprindelige programmer og webprogrammer.
-- Det registreres på det tidspunkt, hvor det forekommer i Azure Information Protection Unified Client-tilføjelses- og scanner-håndhævelser
-- Handlingerne Opgradering og nedgradering af navne kan også overvåges via *feltet Etikethændelsestype* og filter. *Justeringsteksten* registreres også med undtagelse af SharePoint Online og OneDrive.
-- Følsomheds-mærkning udført Office oprindelige apps på Outlook indsamler den seneste handling, der blev genereret før fil gem/mail send-handlinger. Hvis f.eks. brugeren ændrer etiketten på en mail flere gange før afsendelse, registreres den sidste etiket, der blev fundet i mailen, når den sendes, i overvågningsloggen og rapporteres derefter i Aktivitetsstifinder.
+- Den registreres ved lagring i oprindelige Office-programmer og webprogrammer.
+- Den registreres på tidspunktet for forekomsten af AIP Unified Labeling Client- og Scanner Enforcements
+- Handlinger for opgradering og nedgradering af mærkater kan også overvåges via feltet og filteret *for hændelsestypen Mærkat* . *Justeringsteksten* registreres også med undtagelse af SharePoint Online og OneDrive.
+- Følsomhedsmærkater, der udføres i oprindelige Office-apps i Outlook, indsamler den seneste handling, der blev genereret, før handlingerne for fillagring/mailsending. Hvis brugeren f.eks. ændrer mærkat på en mail flere gange, før der sendes, registreres den sidste mærkat, der blev fundet i mailen, da den blev sendt, i overvågningsloggen og rapporteres derefter i Aktivitetsoversigt.
 
-|Kilde  |Rapporteret i Aktivitetsoversigt|Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt|Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Ja         |
 |Outlook         |Ja         |
 |SharePoint Online, OneDrive         |Ja         |
 |Exchange         |Ja         |
-|Samlet AIP-klient         |Ja         |
-|AIP-samlet scanner         |Ja         |
+|AIP Unified Client         |Ja         |
+|AIP unified scanner         |Ja         |
 |MIP SDK         |Ja         |
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Nej         |Handicapvenlige i Microsoft 365 overvågningslogfiler |
-|Microsoft Defender til skyapps     |Nej         |         |
+|Power BI Desktop og Web         |Nej         |Tilgængelig i Microsoft 365-overvågningslogge |
+|Microsoft Defender for Cloud Apps     |Nej         |         |
 
-## <a name="sensitivity-label-removed"></a>Følsomhedsmærkat fjernet
+## <a name="sensitivity-label-removed"></a>Følsomhedsmærkat er fjernet
 
 Denne hændelse genereres, hver gang en følsomhedsmærkat fjernes fra en fil eller et dokument.
 
-- Hændelsen registreres på tidspunktet for lagring i Office oprindelige programmer og webprogrammer.
-- De registreres på det tidspunkt, hvor de forekommer i tilføjelsesprogrammet Azure Information Protection.
-- Følsomhedsmærkater med Office Indbygget MIP-etiket på Outlook indsamler den seneste etikethændelse, der blev oprettet før filspare-/mail-afsendelseshandlinger.
+- Denne hændelse registreres på tidspunktet for lagring i oprindelige Office-programmer og webprogrammer.
+- Den registreres på tidspunktet for forekomsten af Azure Information Protection (AIP) unified labeling-klienten.
+- Følsomhedsmærkater med indbyggede Office-mærkater i Outlook indsamler den sidste navngivningshændelse, der blev genereret før handlinger til fillagring/mailsending.
 
-|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Ja         |
 |Outlook         |Ja         ||
 |SharePoint Online, OneDrive         |Ja         |
 |Exchange         |Ja         |
-|Samlet AIP-klient         |Ja         |Handlingen *Fjern etiket i* AIP er knyttet til den handling, *der fjernede navnet* i Aktivitetsstifinder|
-|AIP-samlet scanner         |Ja         |Handlingen *Fjern etiket i* AIP er knyttet til den handling, *der fjernede navnet* i Aktivitetsstifinder |
-|MIP SDK         |Ja         |Handlingen *Fjern etiket i* AIP er knyttet til den handling, *der fjernede navnet* i Aktivitetsstifinder |
+|AIP Unified Client         |Ja         |Handlingen *Fjern mærkat* i AIP er knyttet til den handling, der er *fjernet af mærkaten* i Aktivitetsoversigt|
+|AIP unified scanner         |Ja         |Handlingen *Fjern mærkat* i AIP er knyttet til den handling, der er *fjernet af mærkaten* i Aktivitetsoversigt |
+|MIP SDK         |Ja         |Handlingen *Fjern mærkat* i AIP er knyttet til den handling, der er *fjernet af mærkaten* i Aktivitetsoversigt |
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Nej         |Handicapvenlige i Microsoft 365 overvågningslogfiler |
-|Microsoft Defender til skyapps     |Nej         |         |
+|Power BI Desktop og Web         |Nej         |Tilgængelig i Microsoft 365-overvågningslogge |
+|Microsoft Defender for Cloud Apps     |Nej         |         |
 
-## <a name="sensitivity-label-file-read"></a>Følsomheds-etiketfil læst
+## <a name="sensitivity-label-file-read"></a>Fil med følsomhedsmærkat læst
 
-Denne hændelse genereres, hver gang en følsomhed, der er mærket eller et beskyttet dokument, åbnes.
+Denne hændelse genereres, hver gang et følsomhedsmærkat eller beskyttet dokument åbnes.
 
-|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Ja         |
 |Outlook         |Nej         |
 |SharePoint Online, OneDrive         |Nej         |
 |Exchange         |Nej         |
-|Samlet AIP-klient         |Ja         |*AIP-adgangshandlingen* er knyttet til *læsehandlingen for* filen i Aktivitetsstifinder|
-|AIP-samlet scanner         |Ja         |*AIP-adgangshandlingen* er knyttet til *læsehandlingen for* filen i Aktivitetsstifinder|
-|MIP SDK         |Ja         |*AIP-adgangshandlingen* er knyttet til *læsehandlingen for* filen i Aktivitetsstifinder|
-|RMS-tjeneste         |Ja         |*Adgangshandlingen* er knyttet til handlingen *Læsning af fil* i Aktivitetsstifinder |
-|Power BI og internettet         |Nej         |Handicapvenlige i Microsoft 365 overvågningslogfiler |
-|Microsoft Defender til skyapps     |Nej         |         |
+|AIP Unified Client         |Ja         |*AIP-adgangshandlingen* er knyttet til handlingen *Læs fil* i Aktivitetsoversigt|
+|AIP unified scanner         |Ja         |*AIP-adgangshandlingen* er knyttet til handlingen *Læs fil* i Aktivitetsoversigt|
+|MIP SDK         |Ja         |*AIP-adgangshandlingen* er knyttet til handlingen *Læs fil* i Aktivitetsoversigt|
+|RMS-tjeneste         |Ja         |*Adgangshandlingen* er knyttet til *handlingen Læs fil* i Aktivitetsoversigt |
+|Power BI Desktop og Web         |Nej         |Tilgængelig i Microsoft 365-overvågningslogge |
+|Microsoft Defender for Cloud Apps     |Nej         |         |
 
-## <a name="files-discovered"></a>Fundne filer
+## <a name="files-discovered"></a>Registrerede filer
 
-Denne hændelse genereres, hver gang der bliver fundet filer, når AIP-scanneren bruges til at scanne følsomme data på forskellige steder og finder filer.
+Denne hændelse genereres, hver gang filer registreres, når AIP-scanneren bruges til at scanne følsomme data på forskellige placeringer og finder filer.
 
-|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Ikke relevant         |
 |Outlook         |Ikke relevant         |
 |SharePoint Online, OneDrive         |Ikke relevant         |
 |Exchange         |Ikke relevant         |
-|Samlet AIP-klient         |Ikke relevant       |
-|AIP-samlet scanner         |Ja         |Handlingen *AIP-opdag* er knyttet til de filer *, der blev fundet* i Aktivitetsstifinder|
-|MIP SDK         |Ja         |Handlingen *AIP-opdag* er knyttet til den fil *, der blev fundet* i Aktivitetsstifinder|
+|AIP Unified Client         |Ikke relevant       |
+|AIP unified scanner         |Ja         |*AIP-registreringshandlingen* er knyttet til den *registrerede filhandling i Aktivitetsoversigt*|
+|MIP SDK         |Ja         |*AIP-registreringshandlingen* er knyttet til den *registrerede fil-handling i Aktivitetsoversigt*|
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Ikke relevant         |
-|Microsoft Defender til skyapps     |Ikke relevant         |         |
+|Power BI Desktop og Web         |Ikke relevant         |
+|Microsoft Defender for Cloud Apps     |Ikke relevant         |         |
 
-## <a name="sensitivity-label-file-renamed"></a>Følsomheds-etiketfil omdøbt
+## <a name="sensitivity-label-file-renamed"></a>Filen med følsomhedsmærkaten er omdøbt
 
-Denne hændelse genereres, hver gang et dokument med et følsomhedsmærkat omdøbes.
+Denne hændelse genereres, hver gang et dokument med en følsomhedsmærkat omdøbes.
 
-|Kilde  | Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  | Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Ja         |
 |Outlook         |Ikke relevant         |
 |SharePoint Online, OneDrive         |Nej        |
 |Exchange         |Ikke relevant         |
-|Samlet AIP-klient         |Nej         |
-|AIP-samlet scanner         |Nej         |
+|AIP Unified Client         |Nej         |
+|AIP unified scanner         |Nej         |
 |MIP SDK         |Nej         |
 |RMS-tjeneste         |Nej      |
-|Power BI og internettet         |Nej         |
-|Microsoft Defender til skyapps     |Nej         |         |
+|Power BI Desktop og Web         |Nej         |
+|Microsoft Defender for Cloud Apps     |Nej         |         |
 
-## <a name="file-removed"></a>Fil fjernet
+## <a name="file-removed"></a>Filen er fjernet
 
 Denne hændelse genereres, hver gang AIP-scanneren registrerer, at en tidligere scannet fil er blevet fjernet.
 
-|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Ikke relevant         |
 |Outlook         |Ikke relevant         |
 |SharePoint Online, OneDrive         |Ikke relevant           |
 |Exchange         |Ikke relevant         |
-|Samlet AIP-klient         |Ikke relevant            |
-|AIP-samlet scanner         |Ja         |
+|AIP Unified Client         |Ikke relevant            |
+|AIP unified scanner         |Ja         |
 |MIP SDK         |Ikke relevant            |
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Ikke relevant  |
-|Microsoft Defender til skyapps     |Ikke relevant        |         |
+|Power BI Desktop og Web         |Ikke relevant  |
+|Microsoft Defender for Cloud Apps     |Ikke relevant        |         |
 
 ### <a name="protection-applied"></a>Beskyttelse anvendt
 
-Denne hændelse genereres beskyttelse første gang føjes manuelt til et element, der ikke har en etiket.
+Denne hændelse genereres, første gang beskyttelsen føjes manuelt til et element, der ikke har en mærkat.
 
-|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk!  |
+|Kilde  |Rapporteret i Aktivitetsoversigt | Bemærk  |
 |---------|---------|---------|
 |Word, Excel, PowerPoint         |Nej         |
 |Outlook         |Nej         |
 |SharePoint Online, OneDrive         |Ikke relevant           |
 |Exchange         |Nej       |
-|Samlet AIP-klient         |Ja            |
-|AIP-samlet scanner         |Ikke relevant         |
+|AIP Unified Client         |Ja            |
+|AIP unified scanner         |Ikke relevant         |
 |MIP SDK         |Ja            |
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Ikke relevant            |
-|Microsoft Defender til skyapps     |Ikke relevant        |         |
+|Power BI Desktop og Web         |Ikke relevant            |
+|Microsoft Defender for Cloud Apps     |Ikke relevant        |         |
 
-## <a name="protection-changed"></a>Beskyttelse er ændret
+## <a name="protection-changed"></a>Beskyttelsen er ændret
 
-Denne hændelse genereres, hver gang beskyttelsen på et dokument uden navn ændres manuelt.
+Denne hændelse genereres, hver gang beskyttelsen af et ikke-navngivet dokument ændres manuelt.
 
 |Kilde  |Rapporteret i Aktivitetsoversigt |
 |---------|---------|
@@ -187,16 +187,16 @@ Denne hændelse genereres, hver gang beskyttelsen på et dokument uden navn ænd
 |Outlook         |Nej         |
 |SharePoint Online, OneDrive         |Ikke relevant           |
 |Exchange         |Nej       |
-|Samlet AIP-klient         |Ja            |
-|AIP-samlet scanner         |Ikke relevant         |
+|AIP Unified Client         |Ja            |
+|AIP unified scanner         |Ikke relevant         |
 |MIP SDK         |Ja            |
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Ikke relevant            |
-|Microsoft Defender til skyapps     |Ikke relevant        |
+|Power BI Desktop og Web         |Ikke relevant            |
+|Microsoft Defender for Cloud Apps     |Ikke relevant        |
 
-## <a name="protection-removed"></a>Beskyttelse er fjernet
+## <a name="protection-removed"></a>Beskyttelse fjernet
 
-Denne hændelse genereres, hver gang beskyttelsen på et dokument uden navn ændres manuelt.
+Denne hændelse genereres, hver gang beskyttelsen af et ikke-navngivet dokument ændres manuelt.
 
 |Kilde  |Rapporteret i Aktivitetsoversigt |
 |---------|---------|
@@ -204,16 +204,16 @@ Denne hændelse genereres, hver gang beskyttelsen på et dokument uden navn ænd
 |Outlook         |Nej         |
 |SharePoint Online, OneDrive         |Ikke relevant           |
 |Exchange         |Nej       |
-|Samlet AIP-klient         |Ja            |
-|AIP-samlet scanner         |Ikke relevant         |
+|AIP Unified Client         |Ja            |
+|AIP unified scanner         |Ikke relevant         |
 |MIP SDK         |Ja            |
 |RMS-tjeneste         |Ikke relevant         |
-|Power BI og internettet         |Ikke relevant            |
-|Microsoft Defender til skyapps     |Ikke relevant        |
+|Power BI Desktop og Web         |Ikke relevant            |
+|Microsoft Defender for Cloud Apps     |Ikke relevant        |
 
-## <a name="dlp-policy-matched"></a>DLP-politik matchet
+## <a name="dlp-policy-matched"></a>DLP-politik matcher
 
-Denne hændelse genereres, hver gang en DLP-politik matches på et dokument eller en mail.
+Denne hændelse genereres, hver gang en DLP-politik matches i et dokument eller en mail.
 
 |Kilde  |Rapporteret i Aktivitetsoversigt |
 |---------|---------|
@@ -223,38 +223,26 @@ Denne hændelse genereres, hver gang en DLP-politik matches på et dokument elle
 |Teams |Ja   |
 |Windows 10 enheder         |Ja |
 |MAC         |Nej     |
-|Lokalt miljø         |Nej|
-|Microsoft Defender til skyapps     |Nej        |
+|I det lokale miljø         |Nej|
+|Microsoft Defender for Cloud Apps     |Nej        |
 
-Hændelserne for Windows 10 (Slutpunkt DLP) er:
+Hændelserne for Windows 10 Enheder (Slutpunkt DLP) er:
 
 - Filen er slettet
-- Fil oprettet
+- Filen er oprettet
 - Fil, der er kopieret til Udklipsholder
 - Filen er ændret
-- Filen er læst
-- Fil udskrevet
-- Omdøbt fil
-- Fil, der er kopieret til netværksdeling
-- Fil åbnet ved ikke-tilladt app
+- Fillæsning
+- Udskrevet fil
+- Filen er omdøbt
+- Filen er kopieret til netværkssharet
+- Fil, der er åbnet af en ikke-tilladt app
 
 ## <a name="retention-label-applied"></a>Opbevaringsmærkat anvendt
 
-Denne hændelse genereres, hver gang et dokument uden navn navnmærkes, eller der sendes en mail med et opbevaringsetiket.
+Denne hændelse genereres, hver gang et ikke-navngivet dokument mærkes, eller der sendes en mail med en opbevaringsmærkat.
 
-- Det registreres på tidspunktet for lagring for et dokument og på tidspunktet for afsendelse af en mail.
-
-|Kilde  |Rapporteret i Aktivitetsoversigt |
-|---------|---------|
-|Exchange         |Nej       |
-|SharePoint Online|Ja          |
-|OneDrive |Ja|
-
-## <a name="retention-label-changed"></a>Opbevaringsnavn ændret
-
-Denne hændelse genereres, hver gang et navn opdateres i et dokument eller en mail.
-
-- Det registreres på tidspunktet for lagring for et dokument og på tidspunktet for afsendelse af en mail.
+- Den registreres på lagringstidspunktet for et dokument og på tidspunktet for afsendelse af en mail.
 
 |Kilde  |Rapporteret i Aktivitetsoversigt |
 |---------|---------|
@@ -262,11 +250,23 @@ Denne hændelse genereres, hver gang et navn opdateres i et dokument eller en ma
 |SharePoint Online|Ja          |
 |OneDrive |Ja|
 
-## <a name="retention-label-removed"></a>Opbevaringsmærkat fjernet
+## <a name="retention-label-changed"></a>Opbevaringsmærkat er ændret
 
-Denne hændelse genereres, hver gang et navn fjernes fra en fil eller et dokument.
+Denne hændelse genereres, hver gang en etiket opdateres i et dokument eller en mail.
 
-- Det registreres på tidspunktet for lagring for et dokument og på tidspunktet for afsendelse af en mail.
+- Den registreres på lagringstidspunktet for et dokument og på tidspunktet for afsendelse af en mail.
+
+|Kilde  |Rapporteret i Aktivitetsoversigt |
+|---------|---------|
+|Exchange         |Nej       |
+|SharePoint Online|Ja          |
+|OneDrive |Ja|
+
+## <a name="retention-label-removed"></a>Opbevaringsmærkat er fjernet
+
+Denne hændelse genereres, hver gang en etiket fjernes fra en fil eller et dokument.
+
+- Den registreres på lagringstidspunktet for et dokument og på tidspunktet for afsendelse af en mail.
 
 |Kilde  |Rapporteret i Aktivitetsoversigt |
 |---------|---------|
@@ -276,8 +276,8 @@ Denne hændelse genereres, hver gang et navn fjernes fra en fil eller et dokumen
 
 ## <a name="known-issues"></a>Kendte problemer
   
-- Når det anbefalede værktøjstip til etiketter vises for en slutbruger, registreres det ikke. Men hvis brugeren vælger at anvende den anbefalede etiket, vises etiketten under *Feltet Hvor anvendt* som *anbefalet*.
+- Når det anbefalede etiketværktøjstip vises for en slutbruger, registreres det ikke. Men hvis brugeren vælger at anvende den anbefalede mærkat, vises etiketten under feltet *Sådan anvendes* som *anbefalet*.
 
-- Justeringstekst er i øjeblikket ikke tilgængelig på følsomhedsmærkatens nedgradering SharePoint og OneDrive.
+- Justeringstekst er i øjeblikket ikke tilgængelig for nedgradering af følsomhedsmærkat fra SharePoint og OneDrive.
 
-- Følsomme oplysningstyper er i øjeblikket ikke tilgængelige for automatisk mærkning af aktiviteter fra Word, Excel, PowerPoint og Outlook samt SharePoint Online og OneDrive.
+- Følsomme oplysningstyper er i øjeblikket ikke tilgængelige til automatisk angivelse af oplysninger fra Word, Excel, PowerPoint og Outlook samt SharePoint Online og OneDrive.
