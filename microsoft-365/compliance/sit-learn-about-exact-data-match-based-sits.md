@@ -17,12 +17,12 @@ search.appverid:
 - MET150
 description: Få mere at vide om præcise datamatchbaserede følsomme oplysningstyper.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: 5d4a45e7ecdb143187b9d90fdedbaf1f235c7d52
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+ms.openlocfilehash: 25a48a13e66803dec592680c0ad0e9c01b611dc0
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66621991"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66949277"
 ---
 # <a name="learn-about-exact-data-match-based-sensitive-information-types"></a>Få mere at vide om nøjagtigt datamatch baseret på typer af følsomme oplysninger
 
@@ -97,7 +97,7 @@ Proximity – Antallet af tegn mellem primært og understøttende element
 
 ### <a name="primary-and-secondary-support-elements"></a>Primære og sekundære supportelementer
 
-Når du opretter et EDM SIT, definerer du et *primært elementfelt* i regelpakken. Primære felter er de elementer, som alt dit indhold søges efter, og som skal følge et defineret mønster for at kunne identificeres. Når det primære element findes i scannede elementer, søger EDM derefter efter de *sekundære* eller understøttende elementer, som ikke behøver at følge et mønster, og deres nærhed til det primære element. EDM kræver, at det primære element først kan findes via et eksisterende SIT. Se [Objektdefinitioner for følsomme oplysninger for](sensitive-information-type-entity-definitions.md) at få en komplet liste over de tilgængelige SIT'er. Du bliver nødt til at finde en af dem, der registrerer den klasse, du vil have din EDM SIT til at registrere. Hvis dit EDM SIT-skema f.eks. har det amerikanske cpr-nummer som det primære element, ville du knytte EDM-skemaet til det [amerikanske CPR-nummer (SSN)](sensitive-information-type-entity-definitions.md#us-social-security-number-ssn) SIT.
+Når du opretter et EDM SIT, definerer du et *primært elementfelt* i regelpakken. Primære felter er de elementer, som alt dit indhold søges efter, og som skal følge et defineret mønster for at kunne identificeres. Når det primære element findes i scannede elementer, søger EDM derefter efter de *sekundære* eller understøttende elementer, som ikke behøver at følge et mønster, og deres nærhed til det primære element. EDM kræver, at det primære element først kan findes via et eksisterende SIT. Se [Objektdefinitioner for følsomme oplysninger for](sensitive-information-type-entity-definitions.md) at få en komplet liste over de tilgængelige SIT'er. Du bliver nødt til at finde en af dem, der registrerer den klasse, du vil have din EDM SIT til at registrere. Hvis dit EDM SIT-skema f.eks. har det amerikanske cpr-nummer som det primære element, ville du knytte EDM-skemaet til det [amerikanske CPR-nummer (SSN)](sit-defn-us-social-security-number.md) SIT.
 
 ## <a name="how-matching-works"></a>Sådan fungerer matchende
 

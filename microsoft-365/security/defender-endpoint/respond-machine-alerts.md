@@ -14,12 +14,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: c104b7fefae6ad02c9fb46b7d21522c21a2f6895
-ms.sourcegitcommit: 133bf9097785309da45df6f374a712a48b33f8e9
+ms.openlocfilehash: fe312e24a6d6acf174739f2ef45358ed136ec939
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "66014587"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66942602"
 ---
 # <a name="take-response-actions-on-a-device"></a>Udfør svarhandlinger på en enhed
 
@@ -65,7 +65,7 @@ Svarhandlinger kører langs toppen af en bestemt enhedsside og omfatter:
 
 > [!IMPORTANT]
 > - Disse svarhandlinger er kun tilgængelige for enheder på Windows 10, version 1703 eller nyere, Windows 11, Windows Server 2019 og Windows Server 2022.
-> - For platforme, der ikke er Windows, er svarfunktioner (f.eks. enhedsisolation) afhængige af tredjepartsfunktionerne.
+> - For ikke-Windows-platforme er svarfunktioner (f.eks. enhedsisolation) afhængige af tredjepartsfunktionerne.
 > - For Microsofts førstepartsagenter skal du se linket "flere oplysninger" under hver funktion for at få vist minimumkrav til operativsystemet.
 
 ## <a name="manage-tags"></a>Administrer mærker
@@ -125,7 +125,7 @@ Pakken indeholder følgende mapper:
 |Planlagte opgaver|Indeholder en .CSV fil, der viser de planlagte opgaver, som kan bruges til at identificere rutiner, der udføres automatisk på en valgt enhed, for at søge efter mistænkelig kode, der er indstillet til at køre automatisk.|
 |Log over sikkerhedshændelser|Indeholder sikkerhedshændelsesloggen, som indeholder poster for logon- eller logoutaktivitet eller andre sikkerhedsrelaterede hændelser, der er angivet af systemets overvågningspolitik. <p><div class="alert"><b>BEMÆRK:</b> Åbn hændelseslogfilen ved hjælp af Logbog.</div>|
 |Tjenester|Indeholder en .CSV fil, der viser tjenester og deres tilstande.|
-|Windows SMB-sessioner (Server Message Block)|Viser delt adgang til filer, printere og serielle porte og diverse kommunikation mellem noder på et netværk. Dette kan hjælpe med at identificere dataudfiltrering eller tværgående bevægelse. <p> Indeholder filer til SMBInboundSessions og SMBOutboundSession. <p> <div class="alert"><b>BEMÆRK:</b> Hvis der ikke er nogen sessioner (indgående eller udgående), får du vist en tekstfil, der fortæller dig, at der ikke blev fundet nogen SMB-sessioner.</div>|
+|SMB-sessioner (Windows Server Message Block)|Viser delt adgang til filer, printere og serielle porte og diverse kommunikation mellem noder på et netværk. Dette kan hjælpe med at identificere dataudfiltrering eller tværgående bevægelse. <p> Indeholder filer til SMBInboundSessions og SMBOutboundSession. <p> <div class="alert"><b>BEMÆRK:</b> Hvis der ikke er nogen sessioner (indgående eller udgående), får du vist en tekstfil, der fortæller dig, at der ikke blev fundet nogen SMB-sessioner.</div>|
 |Systemoplysninger|Indeholder en SystemInformation.txt fil, der viser systemoplysninger, f.eks. operativsystemversion og netværkskort.|
 |Midlertidige mapper|Indeholder et sæt tekstfiler, der viser de filer, der er placeret i %Temp% for hver bruger i systemet. <p> Dette kan hjælpe med at spore mistænkelige filer, som en hacker kan have mistet på systemet. <p> <div class="alert"><b>BEMÆRK:</b> Hvis filen indeholder følgende meddelelse: "Systemet kan ikke finde den angivne sti", betyder det, at der ikke er nogen temp-mappe til denne bruger, og det kan skyldes, at brugeren ikke loggede på systemet.</div>|
 |Brugere og grupper|Indeholder en liste over filer, der hver især repræsenterer en gruppe og dens medlemmer.|
@@ -133,13 +133,13 @@ Pakken indeholder følgende mapper:
 |CollectionSummaryReport.xls|Denne fil er en oversigt over indsamlingen af undersøgelsespakken, den indeholder listen over datapunkter, den kommando, der bruges til at udtrække dataene, udførelsesstatussen og fejlkoden, hvis der er fejl. Du kan bruge denne rapport til at spore, om pakken indeholder alle de forventede data, og identificere, om der opstod fejl.|
 |
 
-## <a name="run-microsoft-defender-antivirus-scan-on-devices"></a>Kør Microsoft Defender Antivirus scanning på enheder
+## <a name="run-microsoft-defender-antivirus-scan-on-devices"></a>Kør Microsoft Defender Antivirus-scanning på enheder
 
 Som en del af undersøgelses- eller svarprocessen kan du fjernindsøge en antivirusscanning for at hjælpe med at identificere og afhjælpe malware, der kan være til stede på en kompromitteret enhed.
 
 > [!IMPORTANT]
 > - Denne handling understøttes ikke i øjeblikket for macOS og Linux. Brug direkte svar til at køre handlingen. Du kan få flere oplysninger om livesvar under [Undersøg enheder på enheder, der bruger liverespons](live-response.md)
-> - En Microsoft Defender Antivirus (Microsoft Defender AV) scanning kan køre sammen med andre antivirusløsninger, uanset om Microsoft Defender AV er den aktive antivirusløsning eller ej. Microsoft Defender AV kan være i passiv tilstand. Du kan få flere oplysninger under [Microsoft Defender Antivirus kompatibilitet](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility).
+> - En Microsoft Defender Antivirus-scanning (Microsoft Defender AV) kan køre sammen med andre antivirusløsninger, uanset om Microsoft Defender AV er den aktive antivirusløsning eller ej. Microsoft Defender AV kan være i passiv tilstand. Du kan få flere oplysninger under [Microsoft Defender Antivirus-kompatibilitet](/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-compatibility).
 
 Du har valgt **Kør antivirusscanning**, vælg den scanningstype, du vil køre (hurtig eller fuld), og tilføj en kommentar, før du bekræfter scanningen.
 
@@ -187,11 +187,11 @@ Afhængigt af alvorsgraden af angrebet og enhedens følsomhed kan det være en g
 > - Isolering af enheder fra netværket understøttes ikke i øjeblikket for enheder, der kører macOS eller Linux. Brug direkte svar til at køre handlingen. Du kan få flere oplysninger om live-svar under [Undersøg enheder på enheder, der bruger live-svar](live-response.md).
 > - Fuld isolation er tilgængelig for enheder, der kører Windows 11, Windows 10, version 1703 eller nyere, Windows Server 2022, Windows Server 2019 og Windows Server 2016.
 > - Selektiv isolation er tilgængelig for enheder, der kører Windows 10, version 1709 eller nyere og Windows 11.
-> - Når du isolerer en enhed, er det kun visse processer og destinationer, der er tilladt. Derfor kan enheder bag en fuld VPN-tunnel ikke nå den Microsoft Defender for Endpoint cloudtjeneste, når enheden er isoleret. Vi anbefaler, at du bruger en VPN til opdelt tunnelføring til Microsoft Defender for Endpoint og Microsoft Defender Antivirus skybaseret beskyttelsesrelateret trafik.
+> - Når du isolerer en enhed, er det kun visse processer og destinationer, der er tilladt. Derfor kan enheder bag en fuld VPN-tunnel ikke nå den Microsoft Defender for Endpoint cloudtjeneste, når enheden er isoleret. Vi anbefaler, at du bruger en split-tunneling VPN til Microsoft Defender for Endpoint og skybaseret trafik baseret på Microsoft Defender Antivirus.
 
 Denne enhedsisolationsfunktion afbryder forbindelsen mellem den kompromitterede enhed og netværket, samtidig med at forbindelsen til Defender for Endpoint-tjenesten bevares, og enheden overvåges fortsat.
 
-På Windows 10 version 1709 eller nyere har du større kontrol over netværkets isolationsniveau. Du kan også vælge at aktivere Outlook, Microsoft Teams og Skype for Business forbindelse (også kaldet "Selektiv isolation").
+På Windows 10 version 1709 eller nyere har du større kontrol over netværkets isolationsniveau. Du kan også vælge at aktivere Outlook, Microsoft Teams og Skype for Business forbindelse (også kaldet 'Selektiv isolation').
 
 > [!NOTE]
 > Du kan til enhver tid genoprette forbindelsen til netværket. Knappen på enhedssiden ændres til **"Release from isolation"**, og derefter skal du udføre de samme trin som at isolere enheden.
@@ -210,6 +210,9 @@ Når en enhed isoleres, vises følgende meddelelse for at informere brugeren om,
 :::image type="content" source="images/atp-notification-isolate.png" alt-text="En meddelelse om ingen netværksforbindelse" lightbox="images/atp-notification-isolate.png":::
 
 ## <a name="contain-devices-from-the-network"></a>Indeholder enheder fra netværket
+ 
+> [!NOTE]
+> Indeholder egenskaber er i øjeblikket en offentlig prøveversion. Hvis du vil vide mere om nye funktioner i Microsoft 365 Defender prøveversion og være blandt de første til at prøve kommende funktioner ved at aktivere prøveversionsoplevelsen, skal du se [Prøveversionsfunktioner i Micrsoft 365 Defender](../defender/preview.md).
 
 Når du har identificeret en ikke-administreret enhed, der er kompromitteret eller potentielt kompromitteret, kan det være en god idé at indeholde enheden fra netværket. Når du indeholder en enhed, blokerer enhver Microsoft Defender for Endpoint onboardede enhed indgående og udgående kommunikation med den pågældende enhed. Denne handling kan hjælpe med at forhindre, at tilstødende enheder kompromitteres, mens analytikeren af sikkerhedshandlinger finder, identificerer og afhjælper truslen på den kompromitterede enhed.
 
@@ -217,7 +220,7 @@ Når du har identificeret en ikke-administreret enhed, der er kompromitteret ell
 > Blokering af indgående og udgående kommunikation med en "indeholdt" enhed understøttes på onboardede Microsoft Defender for Endpoint Windows 10 og Windows Server 2019+ enheder.
 
 ### <a name="how-to-contain-a-device"></a>Sådan indeholder du en enhed
-
+ 
 1. Gå til siden **Enhedslager** , og vælg den enhed, der skal indeholdes.
 
 2. Vælg **Medtag enhed** i menuen Handlinger i enhedens pop op-vindue.

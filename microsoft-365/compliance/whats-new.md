@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 description: Uanset om det er tilføjelse af nye løsninger til Overholdelsescenter, opdatering af eksisterende funktioner baseret på din feedback eller udrulning af ny og opdateret dokumentation, hjælper Microsoft 365 dig med at holde styr på det stadigt foranderlige overholdelseslandskab. Find ud af, hvad vi har været op til denne måned.
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: fc553b60132da31dbcc6e131ddb29bcbfa99548b
-ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
+ms.openlocfilehash: 0b2a55b686c310fc8d864229655c6815e7afef38
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66756743"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66949145"
 ---
 # <a name="whats-new-in-microsoft-purview-risk-and-compliance-solutions"></a>Nyheder i Microsoft Purview-risiko- og overholdelsesløsninger
 
@@ -45,7 +45,7 @@ Uanset om det er tilføjelse af nye løsninger til [Microsoft Purview-compliance
 
 ### <a name="compliance-manager"></a>Overholdelsesstyring
 
-- [Microsoft Purview Compliance Manager-politikker for beskeder og beskeder](compliance-manager-alert-policies.md) – tilføjede tre ADD-roller, der har tilladelser til at oprette eller redigere politikker for beskeder.
+- [Microsoft Purview Compliance Manager-politikker for beskeder og beskeder](compliance-manager-alert-policies.md) – tilføjede tre AAD-roller, der har tilladelser til at oprette eller redigere politikker for beskeder.
 - [Configuration Analyzer til Microsoft Purview](compliance-manager-mcca.md) – nyt navn og opdaterede referencelinks til dette introduktionsværktøj til Overholdelsesstyring, der tidligere hed "Microsoft Compliance Configuration Analyzer".
 
 ### <a name="data-loss-prevention"></a>Forebyggelse af datatab

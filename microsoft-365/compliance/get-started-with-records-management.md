@@ -17,13 +17,13 @@ ms.custom: admindeeplinkCOMPLIANCE
 search.appverid:
 - MOE150
 - MET150
-description: Har du brug for en datastyringsløsning til Microsoft 365, der administrerer indhold af høj værdi til juridiske, forretningsmæssige eller lovmæssige forpligtelser, men ikke er sikker på, hvor du skal starte? Læs nogle praktiske retningslinjer for at komme i gang.
-ms.openlocfilehash: 1c64559500d2edc0d440f0632a39de616d89c434
-ms.sourcegitcommit: c29fc9d7477c3985d02d7a956a9f4b311c4d9c76
+description: Præskriptive trin til administratorer, licenskrav og almindelige scenarier, der administrerer indhold af høj værdi i Microsoft 365 til dine juridiske, forretningsmæssige eller lovmæssige forpligtelser.
+ms.openlocfilehash: f5387ce7ee2094113a12a7074449a05311a79083
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "66629667"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66944191"
 ---
 # <a name="get-started-with-records-management"></a>Kom i gang med datastyring
 

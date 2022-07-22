@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: da9e030d929f65c7ea5bd83010d2b7f49b1d90d9
-ms.sourcegitcommit: e624221597480295b799d56568c4f6f56d40b41d
+ms.openlocfilehash: 0414f85c9d461a2f676f9bc248a1ce065f7547d7
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/19/2022
-ms.locfileid: "65535586"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66949497"
 ---
 # <a name="create-indicators-for-files"></a>Opret indikatorer for filer
 
@@ -52,10 +52,10 @@ Det er vigtigt at forstå følgende forudsætninger, før du opretter indikatore
 
 - Antimalware-klientversionen skal være 4.18.1901.x eller nyere. Se [Månedlige platform- og programversioner](manage-updates-baselines-microsoft-defender-antivirus.md#monthly-platform-and-engine-versions)
 
-- Understøttes på enheder med Windows 10 version 1703 eller nyere, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 og Windows Server 2022.
+- Understøttes på enheder med Windows 10, version 1703 eller nyere, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 og Windows Server 2022.
     
    > [!NOTE]
-   > Windows Server 2016 og Windows Server 2012 R2 skal onboardes ved hjælp af vejledningen i [Onboard Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016), for at denne funktion kan fungere. Brugerdefinerede filindikatorer med handlingerne Allow, Block og Remediate er nu også tilgængelige i den [offentlige prøveversion for de forbedrede funktioner i antimalwareprogrammet til macOS og Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
+   > Windows Server 2016 og Windows Server 2012 R2 skal onboardes ved hjælp af vejledningen i [Indbyggede Windows-servere](configure-server-endpoints.md#windows-server-2012-r2-and-windows-server-2016) , for at denne funktion fungerer. Brugerdefinerede filindikatorer med handlingerne Allow, Block og Remediate er nu også tilgængelige i den [offentlige prøveversion for de forbedrede funktioner i antimalwareprogrammet til macOS og Linux](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/enhanced-antimalware-engine-capabilities-for-linux-and-macos/ba-p/3292003).
 
 - Hvis du vil starte blokering af filer, skal du først [aktivere funktionen "bloker eller tillad"](advanced-features.md) i Indstillinger.
 
@@ -92,7 +92,7 @@ Filer, der automatisk blokeres af en indikator, vises ikke i filens Løsningscen
 
 De aktuelt understøttede handlinger for fil-IOC tillader, overvåger og blokerer og afhjælper. Når du har valgt at blokere en fil, kan du vælge, om det er nødvendigt at udløse en besked. På denne måde kan du styre antallet af beskeder, der sendes til dine sikkerhedsteams, og sørge for, at der kun sendes påkrævede beskeder.
 
-I Microsoft 365 Defender skal du gå til **Indstillinger** >  **EndpointsIndicatorsAdd** >  >  **Ny filhash**.
+I Microsoft 365 Defender skal du gå til **Indstillinger** > **Slutpunkter** > **Indikatorer** > **Tilføj ny filhash**.
 
 Vælg at blokere og afhjælpe filen.
 
@@ -114,6 +114,8 @@ Vælg, om der skal oprettes en besked for filblokeringshændelsen, og definer be
 > - Hvis gruppepolitikken EnableFileHashComputation er deaktiveret, reduceres blokeringsnøjagtigheden af filen IoC. Aktivering kan dog `EnableFileHashComputation` påvirke enhedens ydeevne. Kopiering af store filer fra et netværksshare til din lokale enhed, især via en VPN-forbindelse, kan f.eks. have indflydelse på enhedens ydeevne.
 >
 > Du kan få flere oplysninger om gruppepolitikken EnableFileHashComputation under [Defender CSP](/windows/client-management/mdm/defender-csp).
+>
+> Du kan finde flere oplysninger om konfiguration af denne funktion på Defender for Endpoint på Linux og macOS under [Konfigurer funktionen til beregning af filhash på Linux](linux-preferences.md#configure-file-hash-computation-feature) og [funktionen Konfigurer filhashberegning på macOS](mac-preferences.md#configure-file-hash-computation-feature).
 
 ## <a name="public-preview-advanced-hunting-capabilities"></a>Offentlig prøveversion: Avancerede jagtegenskaber
 
@@ -148,7 +150,7 @@ Aktiviteten for svarhandlingen kan også ses på enhedens tidslinje.
 Konflikt i håndtering af certifikat- og fil-IoC-politik følger nedenstående rækkefølge:
 
 - Hvis filen ikke er tilladt af Windows Defender Programkontrolelement og AppLocker gennemtvinge tilstandspolitik/-politikker, skal du **blokere**
-- Ellers hvis filen er tilladt af Microsoft Defender Antivirus udeladelse, så **Tillad**
+- Ellers, hvis filen er tilladt af Microsoft Defender Antivirus-udeladelse, så **Tillad**
 - Ellers, hvis filen er blokeret eller advaret af en blok eller advar fil IoC, og derefter **Bloker/Advar**
 - Ellers, hvis filen er tilladt af en IoC-politik for tillad fil **, skal du**
 - Ellers, hvis filen er blokeret af ASR-regler, CFA, AV, SmartScreen og derefter **Bloker**
@@ -162,7 +164,7 @@ Hvis der er modstridende IoC-politikker med samme håndhævelsestype og mål, an
 > [!WARNING]
 > Politikkonflikthåndtering for filer og certifikater adskiller sig fra politikkonflikthåndtering for domæner/URL-adresser/IP-adresser.
 
-Threat og håndtering af sikkerhedsrisici blokerer sårbare programfunktioner bruger fil-IoCs til håndhævelse og følger ovenstående rækkefølge for konflikthåndtering.
+Trussels- og sårbarhedsstyringens bloker sårbare programfunktioner bruger fil-IOC'erne til håndhævelse og følger ovenstående rækkefølge for konflikthåndtering.
 
 ### <a name="examples"></a>Eksempler
 
@@ -176,7 +178,7 @@ Threat og håndtering af sikkerhedsrisici blokerer sårbare programfunktioner br
 |Regel for reduktion af angrebsoverflade|Bloker|Tillad|Tillad|
 |Windows Defender programkontrolelement|Tillad|Bloker|Tillad|
 |Windows Defender programkontrolelement|Bloker|Tillad|Bloker|
-|Microsoft Defender Antivirus udeladelse|Tillad|Bloker|Tillad|
+|Microsoft Defender Antivirus-udeladelse|Tillad|Bloker|Tillad|
 |
 
 ## <a name="see-also"></a>Se også

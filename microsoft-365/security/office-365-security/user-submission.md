@@ -18,12 +18,12 @@ ms.custom: ''
 description: Sådan konfigurerer du en postkasse til at indsamle spam og phishing-mail rapporteret af brugere. Opret en postkasse til meddelelser, som brugerne rapporterer som spam, phish, som ondsindet eller ikke ondsindet.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 40a52e5e3db8a1e11087d4a8beb33b9ba1f3a3aa
-ms.sourcegitcommit: 08ad8636b029ffd19130e2da0de72f37f67e412e
+ms.openlocfilehash: 02356f03f60e2bfc0c6c7de992fdc0c4331f3a4c
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/20/2022
-ms.locfileid: "66885526"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66942510"
 ---
 # <a name="user-reported-message-settings"></a>Brugerrapporterede meddelelsesindstillinger
 
@@ -40,7 +40,7 @@ Denne funktion fungerer sammen med disse indstillinger for meddelelsesrapporteri
 
 - [Tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md)
 - [Tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md)
-- [Rapporteringsværktøjer fra tredjepart](#third-party-reporting-tools)
+- [Rapporteringsværktøjer fra tredjepart](user-submission.md#third-party-email-reporting-tools)
 
 Levering af brugerrapporterede meddelelser til en brugerdefineret postkasse i stedet for direkte til Microsoft giver administratorer mulighed for selektivt og manuelt at rapportere mails til Microsoft ved hjælp af [Administration indsendelse](admin-submission.md). *Disse indstillinger var tidligere kendt som politikken Brugerindsendelser*.
 

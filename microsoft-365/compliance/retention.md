@@ -17,13 +17,13 @@ ms.collection:
 search.appverid:
 - MOE150
 - MET150
-description: Få mere at vide om opbevaringspolitikker og opbevaringsmærkater for at bevare det, du har brug for, og slette det, du ikke har brug for.
-ms.openlocfilehash: 2fd1d2e792a7b1d0635ff59ad5e63ce963e38ccc
-ms.sourcegitcommit: 9fdb5c5b9eaf0c8a8d62b579a5fb5a5dc2d29fa9
+description: Få mere at vide om politikker for opbevaring i Microsoft 365 og opbevaringsmærkater for at bevare det, du har brug for, og slette det, du ikke kan bruge til at administrere din organisations data.
+ms.openlocfilehash: 24750145bb1361ede8d7519a1d08c74baafdf10d
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/11/2022
-ms.locfileid: "66714525"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66949299"
 ---
 # <a name="learn-about-retention-policies-and-retention-labels"></a>Få mere at vide om opbevaringspolitikker og opbevaringsmærkater
 
@@ -292,13 +292,13 @@ Scenarie: Som standard slettes indhold i brugernes OneDrive-konti automatisk eft
 
 2. Du opretter og konfigurerer en opbevaringsmærkat, der bevarer indhold for evigt, og føjer dette til en mærkatpolitik, som du publicerer til alle OneDrive-konti. Du forklarer brugerne, hvordan de manuelt anvender denne mærkat på bestemte dokumenter, der skal udelukkes fra automatisk sletning, hvis de ikke ændres efter fem år.
 
-Eksempel på bevarelse af elementer i længere tid**
+#### <a name="example-to-retain-items-for-longer"></a>Eksempel på opbevaring af elementer i længere tid
 
 Scenarie: SharePoint-elementer bevares som standard automatisk og slettes derefter efter fem år, men dokumenter i bestemte biblioteker skal bevares i 10 år.
 
 1. Du opretter og konfigurerer en opbevaringspolitik, der automatisk bevarer og derefter sletter indhold efter fem år og anvender politikken på alle SharePoint- og Microsoft 365-grupper-instanser.
 
-2. Du opretter og konfigurerer en opbevaringsmærkat, der automatisk bevarer indhold i 10 år. Du publicerer dette navn til administratorer af SharePoint-websteder, så de kan anvende det som standardetiket, der nedarves af alle elementer i bestemte dokumentbiblioteker.
+2. Du opretter og konfigurerer en opbevaringsmærkat, der automatisk bevarer indhold i 10 år. Du føjer dette navn til en mærkatpolitik, som du publicerer til alle SharePoint- og Microsoft 365-grupper instanser, så SharePoint-administratorer derefter kan anvende den som en standardetiket, der nedarves af alle elementer i bestemte dokumentbiblioteker.
 
 #### <a name="example-to-delete-items-in-a-shorter-time-period"></a>Eksempel på sletning af elementer i en kortere tidsperiode
 

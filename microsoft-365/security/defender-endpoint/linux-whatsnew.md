@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: aa6255289ddffd7edb9025e36c69a49f4a3b855b
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: f927133a99e73af11c29690b1c51e3bda3a6d5a7
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603500"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66949431"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-linux"></a>Nyheder i Microsoft Defender for Endpoint på Linux
 
@@ -34,6 +34,28 @@ Denne artikel opdateres ofte for at fortælle dig, hvad der er nyt i de nyeste v
 
 - [Nyheder i Defender for Endpoint på macOS](mac-whatsnew.md)
 - [Nyheder i Defender for Endpoint på iOS](ios-whatsnew.md)
+
+<details>
+  <summary>Jul-2022 (build: 101.73.77 | Version: 30.122062.17377.0)</summary>
+
+&ensp;Udgivet: **21. juli 2022**<br/>
+&ensp;Publiceret: **21. juli 2022**<br/>
+&ensp;Build: **101.73.77**<br/>
+&ensp;Version: **30.122062.17377.0**<br/>
+&ensp;Programversion: **1.1.19200.3**<br/>
+&ensp;Signaturversion: **1.367.1011.0**<br/>
+
+
+**Nyheder**
+
+- Tilføjede en indstilling til [konfiguration af beregning af filhash](linux-preferences.md#configure-file-hash-computation-feature)
+- Fra dette build og frem har produktet som standard det nye antimalwareprogram
+- Forbedringer af ydeevnen i forbindelse med filkopieringshandlinger
+- Fejlrettelser
+</br>
+
+<br/><br/>
+</details>
 
 <details>
   <summary>Jun-2022 (build: 101.71.18 | Version: 30.122052.17118.0)</summary>

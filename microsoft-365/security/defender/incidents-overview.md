@@ -23,12 +23,12 @@ search.appverid:
 - MOE150
 - MET150
 ms.technology: m365d
-ms.openlocfilehash: c8fd4be82e9ff778db136db314faa6c100240856
-ms.sourcegitcommit: bfbe2574f487ced69e711b48ce140120bd99181b
+ms.openlocfilehash: d283876f8e68943d45ab2dbca4ef8455a5dce038
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "66607493"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66949056"
 ---
 # <a name="incident-response-with-microsoft-365-defender"></a>Svar på hændelse med Microsoft 365 Defender
 
@@ -145,7 +145,7 @@ Overvej disse trin for din egen arbejdsproces for svar på hændelser:
    - Tilbagekald den arbejdsproces, du brugte til at løse hændelsen, og opdater dine standardarbejdsprocesser, -processer, -politikker og -playbooks efter behov.
    - Find ud af, om der er behov for ændringer i sikkerhedskonfigurationen, og implementer dem.
 
-Hvis du ikke kender til sikkerhedsanalyser, kan du se [introduktionen til at besvare din første hændelse for at](incidents-overview.md) få flere oplysninger og gennemgå en eksempelhændelse.
+Hvis du ikke kender til sikkerhedsanalyse, kan du se [introduktionen til at besvare din første hændelse for at](incidents-overview.md) få flere oplysninger og gennemgå et eksempel på en hændelse.
 
 Du kan få flere oplysninger om svar på hændelser på tværs af Microsoft-produkter i [denne artikel](/security/compass/incident-response-overview).
 
@@ -188,9 +188,15 @@ Du kan få flere oplysninger om SecOps på tværs af Microsofts produkter i diss
 
 Du kan konfigurere Microsoft 365 Defender til at give dine medarbejdere besked med en mail om nye hændelser eller opdateringer til eksisterende hændelser. Du kan vælge at få meddelelser baseret på:
 
-- Hændelses alvorsgrad.
-- Enhedsgruppe.
-- Kun ved den første opdatering pr. hændelse.
+- Alvorsgrad af vigtig besked
+- Beskedkilder 
+- Enhedsgruppe
+
+**Vælg kun at modtage mailmeddelelser for en bestemt tjenestekilde**: Du kan nemt vælge bestemte tjenestekilder, som du vil modtage mailmeddelelser for.
+ 
+**Få mere granularitet med bestemte registreringskilder**: Du kan kun få meddelelser for en bestemt registreringskilde. 
+
+**Angiv alvorsgraden pr. registrering eller tjenestekilde**: Du kan vælge kun at få mailmeddelelser på bestemte forhold pr. kilde. Du kan f.eks. få besked om mellem- og højbeskeder for EDR og alle de forskellige funktioner for Microsoft Defender-eksperter.  
 
 Mailmeddelelsen indeholder vigtige oplysninger om hændelsen, f.eks. hændelsesnavn, alvorsgrad og kategorier. Du kan også gå direkte til hændelsen og starte din analyse med det samme. Du kan få flere oplysninger under [Undersøg hændelser](investigate-incidents.md).
 
@@ -204,17 +210,17 @@ På samme måde kan du, hvis din organisation bruger rollebaseret adgangskontrol
 
 Følg disse trin for at oprette en ny regel og tilpasse indstillingerne for mailmeddelelser.
 
-1. Vælg **Indstillinger > Microsoft 365 Defender > Mailmeddelelser om hændelse** i navigationsruden.
+1. Gå til [Microsoft 365 Defender](https://security.microsoft.com) i navigationsruden, og vælg **Indstillinger > Microsoft 365 Defender > Meddelelser om hændelsesmail**.
 2. Vælg **Tilføj element**.
 3. Skriv navnet på reglen og en beskrivelse på siden **Grundlæggende** , og vælg derefter **Næste**.
 4. Konfigurer på siden **Meddelelsesindstillinger** :
     - **Alvorsgrad af besked** – Vælg de beskeder, der udløser en hændelsesmeddelelse. Hvis du f.eks. kun vil have besked om hændelser med høj alvorsgrad, skal du vælge **Høj**.
     - **Område for enhedsgruppe** – Du kan angive alle enhedsgrupper eller vælge på listen over enhedsgrupper i din lejer.
-    - **Giv kun besked ved første forekomst pr. hændelse** – Vælg, hvis du kun vil have en meddelelse for den første besked, der svarer til dine andre valg. Senere opdateringer eller beskeder, der er relateret til hændelsen, sender ikke yderligere meddelelser.
+    - **Send kun én meddelelse pr. hændelse** – Vælg, om du vil have én meddelelse pr. hændelse.
     - **Medtag organisationsnavn i mailen** – Vælg, om organisationens navn skal vises i mailmeddelelsen.
     - **Medtag lejerspecifikt portallink** – Vælg, om du vil tilføje et link med lejer-id'et i mailmeddelelsen for at få adgang til en bestemt Microsoft 365-lejer.
 
-    :::image type="content" source="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png" alt-text="Siden Meddelelsesindstillinger for meddelelser om hændelsesmail på Microsoft 365 Defender-portalen." lightbox="../../media/get-incident-notifications/incidents-ss-email-notification-settings.png":::
+    :::image type="content" source="../../media/get-incident-notifications/incidents-email-notification-settings.png" alt-text="Skærmbillede af siden Meddelelsesindstillinger for meddelelser om hændelsesmail på Microsoft 365 Defender-portalen." lightbox="../../media/get-incident-notifications/incidents-email-notification-settings.png":::
 
 5. Vælg **Næste**. På siden **Modtagere** skal du tilføje de mailadresser, der skal modtage hændelsesmeddelelserne. Vælg **Tilføj** efter at have skrevet hver ny mailadresse. Hvis du vil teste meddelelser og sikre, at modtagerne modtager dem i indbakkerne, skal du vælge **Send testmail**.
 6. Vælg **Næste**. Gennemse indstillingerne for reglen på siden **Gennemse regel** , og vælg derefter **Opret regel**. Modtagerne begynder at modtage hændelsesmeddelelser via mail baseret på indstillingerne.
@@ -222,6 +228,8 @@ Følg disse trin for at oprette en ny regel og tilpasse indstillingerne for mail
 Hvis du vil redigere en eksisterende regel, skal du vælge den på listen over regler. I ruden med regelnavnet skal du vælge **Rediger regel** og foretage dine ændringer på siderne **Grundlæggende**, **Meddelelsesindstillinger** og **Modtagere** .
 
 Hvis du vil slette en regel, skal du vælge den på listen over regler. Vælg **Slet** i ruden med regelnavnet.
+
+Når du har fået meddelelsen, kan du gå direkte til hændelsen og starte din undersøgelse med det samme. Du kan få flere oplysninger om undersøgelse af hændelser [under Undersøg hændelser i Microsoft 365 Defender](investigate-incidents.md).
 
 ## <a name="training-for-security-analysts"></a>Oplæring af sikkerhedsanalytikere
 

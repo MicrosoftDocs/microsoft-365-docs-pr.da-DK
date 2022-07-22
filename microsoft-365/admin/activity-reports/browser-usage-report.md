@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - GEA150
 description: Få mere at vide om, hvordan du får en brugsrapport for Microsoft-browseren ved hjælp af dashboardet Microsoft 365-rapporter i Microsoft 365 Administration.
-ms.openlocfilehash: bd247e839c69726039fb80531444eb7b4b650346
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: 3eff031f4f621764a6713c34d3dbe8fc8009aced
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66662151"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66942051"
 ---
 # <a name="microsoft-365-reports-in-the-admin-center---microsoft-browser-usage"></a>Microsoft 365-rapporter i Administration – Brug af Microsoft-browser
 
@@ -51,7 +51,7 @@ I tabellen kan du se en opdeling af data på niveauet pr. bruger. Du kan tilføj
 |Element|Beskrivelse|
 |:-----|:-----|
 |**Brugernavn** | Mailadressen på den bruger, der oprettede forbindelse til Microsoft 365-tjenester ved hjælp af Microsoft Edge.|
-| **Brugt Microsoft Edge**| DDisplays et aksemærke, hvis Microsoft 365-tjenesterne bruger tilsluttet Microsoft Edge.|
+| **Brugt Microsoft Edge**| Viser et aksemærke, hvis brugeren af Microsoft 365-tjenesterne har oprettet forbindelse til Microsoft Edge.|
 
 Vælg ikonet **Vælg kolonner** for at tilføje eller fjerne kolonner fra rapporten.
 

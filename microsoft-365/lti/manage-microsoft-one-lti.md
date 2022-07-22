@@ -12,16 +12,16 @@ f1.keywords:
 ms.collection: M365-modern-desktop
 ms.localizationpriority: medium
 description: Få mere at vide om, hvordan du udfører vigtige microsoft LMS Gateway-administrationsopgaver, herunder visning, sletning, redigering og fejlfinding.
-ms.openlocfilehash: 769670a710e24d89dd3e201ac433ac8ccbcffd1a
-ms.sourcegitcommit: ebbe8713297675db5dcb3e0d9c3ae5e746b99196
+ms.openlocfilehash: 77f89927a7beb7cd045c2325bd805efdf45996a0
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/14/2022
-ms.locfileid: "66858519"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66944103"
 ---
 # <a name="manage-microsoft-lms-gateway-for-any-lms"></a>Administrer Microsoft LMS Gateway for alle LMS
 
-Microsoft LMS Gateway kan integreres med flere LMS-elementer, herunder Lærred, Blackboard og Moodle.
+Microsoft LMS Gateway kan integreres med flere LMS-elementer, herunder Lærred, Blackboard, Moodle og Brightspace.
 
 I denne artikel finder it-administratorer instruktioner til vigtige Administrationsopgaver for Microsoft LMS Gateway.
 
