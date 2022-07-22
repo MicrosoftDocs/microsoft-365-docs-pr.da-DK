@@ -14,17 +14,17 @@ search.appverid:
 - MOE150
 ms.collection:
 - M365-security-compliance
-- m365initiative-defender-office365
+- m365solution-mdo-migration
 ms.custom: migrationguides
 description: Udfør trinnene for at begynde at overføre fra en beskyttelsestjeneste eller enhed fra tredjepart for at Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 899cf3894936ac154e61ef56204294d526aab33e
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+ms.openlocfilehash: 9fc63db0c51c4e8478b426cc37002fbfcb23f6d1
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66772012"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969469"
 ---
 # <a name="migrate-to-microsoft-defender-for-office-365---phase-2-setup"></a>Overfør til Microsoft Defender for Office 365 - fase 2: Konfiguration
 
@@ -85,7 +85,7 @@ Du skal også bekræfte, at alle brugere i pilotprojektet har installeret en und
 
 - [Tilføjelsesprogrammet Rapportmeddelelse](enable-the-report-message-add-in.md)
 - [Tilføjelsesprogrammet Rapport phishing](enable-the-report-phish-add-in.md)
-- Understøttede rapporteringsværktøjer fra tredjepart som beskrevet [her](user-submission.md#third-party-reporting-tools).
+- Understøttede rapporteringsværktøjer fra tredjepart som beskrevet [her](user-submission.md#third-party-email-reporting-tools)
 
 Undervurder ikke vigtigheden af dette trin. Data fra brugerindsendelser giver dig den feedbackløkke, du skal bruge for at bekræfte en god, ensartet slutbrugeroplevelse før og efter migreringen. Denne feedback hjælper dig med at træffe velunderbyggede beslutninger om politikkonfiguration samt levere databaserede rapporter til din administration om, at migreringen gik problemfrit.
 

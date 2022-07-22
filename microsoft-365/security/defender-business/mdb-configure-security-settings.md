@@ -15,13 +15,13 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-- m365-initiative-defender-business
-ms.openlocfilehash: 3924b555902793fb2cd437a86147a6c57e257536
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+- m365solution-mdb-setup
+ms.openlocfilehash: 27c8d475f91381d9f7f1842ceffd729230158f51
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66772232"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969282"
 ---
 # <a name="view-and-edit-security-policies-and-settings-in-microsoft-defender-for-business"></a>Få vist og rediger sikkerhedspolitikker og -indstillinger i Microsoft Defender til virksomheder
 

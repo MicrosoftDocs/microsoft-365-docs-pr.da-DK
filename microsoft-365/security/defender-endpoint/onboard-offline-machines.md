@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 33b539018f479c1b023a656ab056ca892d27e526
-ms.sourcegitcommit: 5e5c2c1f7c321b5eb1c5b932c03bdd510005de13
+ms.openlocfilehash: 9c3dc16904672d32ab8399e693c2066b8e04c187
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66822175"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969808"
 ---
 # <a name="onboard-devices-without-internet-access-to-microsoft-defender-for-endpoint"></a>Onboarde enheder uden internetadgang til Microsoft Defender for Endpoint
 
@@ -55,12 +55,25 @@ Afhængigt af operativsystemet kan den proxy, der skal bruges til Microsoft Defe
 > - En OMS-gatewayserver kan ikke bruges som proxy for frakoblede Windows- eller Windows Server-enheder, når den er konfigureret via registreringsdatabasen 'TelemetryProxyServer' eller GPO.
 > - Til Windows eller Windows Server – selvom du kan bruge TelemetryProxyServer, skal den pege på en standardproxyenhed eller -apparat.
 
-- Konfigurer Azure Log Analytics (tidligere kaldet OMS Gateway), så den fungerer som proxy eller hub:
+- Konfigurer Azure Log Analytics (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
   - [Azure Log Analytics Agent](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
   - [Installér og konfigurer Microsoft Monitoring Agent (MMA)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) peg på Defender for Endpoint Workspace-nøglen & id
 
 [Onboard tidligere versioner af Windows](onboard-downlevel.md)
 
-### <a name="microsoft-defender-for-cloud"></a>Microsoft Defender for Cloud
+### <a name="azure-virtual-machines"></a>Virtuelle Azure-maskiner
 
-- Gennemse afsnittet forudsætninger i [Beskyt dine slutpunkter med Defender for Clouds integrerede EDR-løsning: Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows#prerequisites)
+- For de enheder, der kører den tidligere MMA-baserede løsning, skal du konfigurere Azure Log Analytics Gateway (tidligere kaldet OMS Gateway) til at fungere som proxy eller hub:
+    - [Azure Log Analytics Gateway](/azure/azure-monitor/platform/gateway#download-the-log-analytics-gateway)
+    - [Installér og konfigurer Microsoft Monitoring Agent (MMA)](onboard-downlevel.md#install-and-configure-microsoft-monitoring-agent-mma) peg på Defender for Endpoint Workspace-nøglen & id
+- Offline Azure VM'er i det samme netværk af OMS Gateway
+    - Konfigurer Azure Log Analytics IP som en proxy
+    - Azure Log Analytics Workspace Key & ID
+- Microsoft Defender for Cloud
+    - [Arbejdsområde til loganalyse for sikkerhedspolitik \>](/azure/security-center/security-center-wdatp#enable-windows-defender-atp-integration)
+    - [Trusselsregistrering \> Tillad Defender for Slutpunkt at få adgang til mine data](/azure/security-center/security-center-wdatp#enable-windows-defender-atp-integration)
+
+    Du kan få flere oplysninger under [Arbejde med sikkerhedspolitikker](/azure/security-center/tutorial-security-policy).
+
+> [!NOTE]
+> Alle klienter, der ikke har adgang til internettet, kan ikke onboardes til Microsoft Defender Endpoint. En klient skal enten have adgang til de påkrævede URL-adresser direkte, eller den skal have adgang via en proxy.

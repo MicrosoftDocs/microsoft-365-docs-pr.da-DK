@@ -18,13 +18,14 @@ ms.technology: mde
 ms.topic: article
 ms.collection:
 - M365-security-compliance
+- m365solution-asr-rules
 ms.date: 1/18/2022
-ms.openlocfilehash: 4e538a4e986ad0636c380ec2ba167249221ac3ec
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: b4617b6a0eeed7013f024c895afed12005ed95c3
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66602486"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66970138"
 ---
 # <a name="plan-attack-surface-reduction-asr-rules-deployment"></a>Planlæg udrulning af reduktion af angrebsoverflade (ASR)
 

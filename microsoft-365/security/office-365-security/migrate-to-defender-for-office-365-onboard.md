@@ -14,17 +14,17 @@ search.appverid:
 - MOE150
 ms.collection:
 - M365-security-compliance
-- m365initiative-defender-office365
+- m365solution-mdo-migration
 ms.custom: migrationguides
 description: Fuldfør trinnene til overførsel fra en beskyttelsestjeneste eller enhed fra tredjepart til Microsoft Defender for Office 365 beskyttelse.
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: b2358103b3ab6bfee34e88d23f4b3de0d774e34e
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: d9691eb3baebadee70d7467c2073497d04c6e12e
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66492120"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969392"
 ---
 # <a name="migrate-to-microsoft-defender-for-office-365---phase-3-onboard"></a>Migrer til Microsoft Defender for Office 365 – fase 3: Onboard
 

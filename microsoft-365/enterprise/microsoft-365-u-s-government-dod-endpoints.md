@@ -3,7 +3,7 @@ title: Office 365 US Government DOD-slutpunkter
 ms.author: kvice
 author: kelleyvice-msft
 manager: scotv
-ms.date: 06/01/2022
+ms.date: 06/29/2022
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -22,12 +22,12 @@ f1.keywords:
 description: Office 365 kræver forbindelse til internettet. Slutpunkterne nedenfor skal være tilgængelige for kunder, der kun bruger Office 365 amerikanske offentlige dod-planer.
 hideEdit: true
 ms.custom: seo-marvel-mar2020
-ms.openlocfilehash: cebd2c7e4ceefa52785c4c21163666d12091fe6c
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: ffcde8e6f2bf0ee424265d193c2819447d33d974
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66493459"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969899"
 ---
 # <a name="office-365-us-government-dod-endpoints"></a>Office 365 dod-slutpunkter for offentlige myndigheder i USA
 
@@ -42,7 +42,7 @@ Office 365 kræver forbindelse til internettet. Slutpunkterne nedenfor skal vær
 
 |Bemærkninger|Download|
 |---|---|
-|**Senest opdateret:** 01-06-2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/USGOVDoD?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** den komplette liste i [JSON-format](https://endpoints.office.com/endpoints/USGOVDoD?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|
+|**Senest opdateret:** 29-06-2022 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Abonnement på ændringslog](https://endpoints.office.com/version/USGOVDoD?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** den komplette liste i [JSON-format](https://endpoints.office.com/endpoints/USGOVDoD?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|
 |
 
 Start med [Administration af Office 365-slutpunkter](managing-office-365-endpoints.md) for at forstå vores anbefalinger til administration af netværksforbindelse ved hjælp af disse data. Slutpunktsdata opdateres efter behov i begyndelsen af hver måned med nye IP-adresser og URL-adresser, der er publiceret 30 dage før, de er aktive. Dette giver kunder, der endnu ikke har automatiserede opdateringer, mulighed for at fuldføre deres processer, før der kræves ny forbindelse. Slutpunkter kan også opdateres i løbet af måneden, hvis det er nødvendigt for at håndtere supporteskaleringer, sikkerhedshændelser eller andre øjeblikkelige driftskrav. De data, der vises på denne side nedenfor, er alle genereret fra de REST-baserede webtjenester. Hvis du bruger et script eller en netværksenhed til at få adgang til disse data, skal du gå direkte til [Webtjenesten](microsoft-365-ip-web-service.md).

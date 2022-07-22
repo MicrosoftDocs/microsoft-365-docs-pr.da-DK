@@ -15,13 +15,13 @@ f1.keywords: NOCSH
 ms.collection:
 - SMB
 - M365-security-compliance
-- m365-initiative-defender-business
-ms.openlocfilehash: 1114bebe4b57f89989b0e21a3d73a72fd1b3e99e
-ms.sourcegitcommit: fa90763559239c4c46c5e848939126763879d8e4
+- m365solution-mdb-setup
+ms.openlocfilehash: 1cb133a11bf0c59bcff117721badddc87e44a96c
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66772877"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66970072"
 ---
 # <a name="microsoft-defender-for-business-requirements"></a>krav til Microsoft Defender til virksomheder
 

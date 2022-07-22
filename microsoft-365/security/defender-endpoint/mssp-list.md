@@ -14,26 +14,26 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 9e149a883a24093c503bb1487870d2efe83592e0
-ms.sourcegitcommit: 35f167725bec5fd4fe131781a53d96b060cf232d
+ms.openlocfilehash: 0ef0cd210b405440c4dd16f9b8ea7a707d8f6197
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "65874024"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66970272"
 ---
 # <a name="supported-managed-security-service-providers"></a>Understøttede udbydere af administrerede sikkerhedstjenester
 
 **Gælder for:**
+
 - [Microsoft Defender for Endpoint Plan 1](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft Defender for Endpoint Plan 2](https://go.microsoft.com/fwlink/p/?linkid=2154037)
 - [Microsoft 365 Defender](https://go.microsoft.com/fwlink/?linkid=2118804)
 
 > Vil du opleve Microsoft Defender for Endpoint? [Tilmeld dig en gratis prøveversion.](https://signup.microsoft.com/create-account/signup?products=7f379fee-c4f9-4278-b0a1-e4c8c2fcdf7e&ru=https://aka.ms/MDEp2OpenTrial?ocid=docs-wdatp-exposedapis-abovefoldlink)
 
+Følgende udbydere af administrerede sikkerhedstjenester kan tilgås via portalen.
 
-Følgende udbydere af administrerede sikkerhedstjenester kan tilgås via portalen. 
-
-Logo |Partnernavn   | Beskrivelse 
+Logo |Partnernavn   | Beskrivelse
 :---|:---|:---
 ![Billede af Accenture-logo.](images/accenture-logo.png)|[MDR (Managed Detection & Response) accenture](https://go.microsoft.com/fwlink/?linkid=2164353) | Administrer, vedligehold og optimer globale cybersikkerhedshandlinger med udvidede funktioner, der registrerer, proaktivt jagter efter og reagerer på avancerede cyberangreb på tværs af både it- og OT-miljøer, der er placeret i cloudmiljøet og det lokale miljø.
 ![Billede af Aujas-logo.](images/aujas-logo.png) | [Aujas-administreret MDE-tjeneste](https://go.microsoft.com/fwlink/?linkid=2162429) | Aujas cybersikkerhed leverer 24*7 administrerede sikkerhedstjenester på tværs af hele virksomhedsspektret ved hjælp af Microsoft Defender for Endpoint gennem sine cyberforsvarscentre.
@@ -45,11 +45,11 @@ Logo |Partnernavn   | Beskrivelse
 ![Billede af CSIS Managed Detection & Response-logo.](images/csis-logo.png)| [CSIS Managed Detection & svar](https://go.microsoft.com/fwlink/?linkid=2091005) | 24/7 overvågning og analyse af sikkerhedsadvarsler, der giver virksomheder indsigt i, hvad, hvornår og hvordan sikkerhedshændelser har fundet sted
 ![Billede af CyberProof-logo.](images/cyberproof-logo.png) |[MDR (CyberProof Managed Detection & Response)](https://go.microsoft.com/fwlink/?linkid=2163964) | 24 x 7 administrerede tjenester til trusselsregistrering og svar er fuldt integreret med Microsoft Sentinel og Defender for Endpoint.
 ![Billede af Dell Technologies Advanced Threat Protection-logo.](images/dell-logo.png)| [Dell Technologies Advanced Threat Protection](https://go.microsoft.com/fwlink/?linkid=2091004) | Professionel overvågningstjeneste for skadelig adfærd og uregelmæssigheder med 24/7-funktionalitet
-![Billede af logoet DXC-Managed Endpoint Threat Detection og Response.](images/dxc-logo.png)| [DXC-Managed Endpoint Threat Detection and Response](https://go.microsoft.com/fwlink/?linkid=2090395) | Identificer slutpunktstrusler, der undgår traditionelle sikkerhedsforsvar og indeholder dem i timer eller minutter, ikke dage
+:::image type="content" source="images/dxc-logo.png" alt-text="Billede af logoet DXC-Managed Endpoint Threat Detection og Response.":::.| [DXC-Managed Endpoint Threat Detection and Response](https://go.microsoft.com/fwlink/?linkid=2090395) | Identificer slutpunktstrusler, der undgår traditionelle sikkerhedsforsvar og indeholder dem i timer eller minutter, ikke dage.
 ![Billede af eSentire-log.](images/esentire-logo.png) | [eSentire Administreret registrering og svar](https://go.microsoft.com/fwlink/?linkid=2154970) | 24x7 trusselsundersøgelser og svar via Microsoft Defender for Endpoint.
 ![Billede af udvis logo.](images/expel-logo.png)| [Udvis administreret registrering og svar for Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2162430) | Udvisning hjælper din sikkerhed med at holde op ved at registrere sikkerhedsrisici i Microsoft Defender for Endpoint.
 ![Billede af Mandiant-logo.](images/mandiant-logo.png) | [Mandiant MDR (Managed Defense) for Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2164352) | Befæste din Defender for Endpoint med 24/7 frontline MDR-intelligens og ekspertise fra Mandiant.
-![Billede af NTT Security-logo.](images/ntt-logo.png)| [NTT-sikkerhed](https://go.microsoft.com/fwlink/?linkid=2095320) | NTT's Slutpunktsregistrering og -svar Service leverer 24/7 sikkerhedsovervågning & svar på tværs af dit slutpunkt og netværk
+![Billede af NTT Security-logo.](images/ntt-logo.png)| [NTT-sikkerhed](https://go.microsoft.com/fwlink/?linkid=2095320) | NTT's EDR-tjeneste leverer 24/7 sikkerhedsovervågning & svar på tværs af dit slutpunkt og netværk
 ![Billede af OneVinn-logo.](images/onevinn-logo.png) | [Onevinn MDR](https://go.microsoft.com/fwlink/?linkid=2155203)| 24/7 Managed Detection and Response bygget på Microsoft 365 Defender og Microsoft Sentinel, beriget med Onevinns trusselsintelligens.
 ![Billede af Quorum Cyber-logo.](images/quorum-logo.png) | [Quorum Cyber](https://go.microsoft.com/fwlink/?linkid=2155202)| En banebrydende Threat Hunting & Security Engineering-tjeneste.
 ![Billede af logoet for Den Røde Kanariske Kanariske Øer.](images/redcanary-logo.png)| [Rød kanariefugl](https://go.microsoft.com/fwlink/?linkid=2103852) | Red Canary er en partner for sikkerhedshandlinger for moderne teams, MDR udrullet på få minutter
@@ -61,4 +61,5 @@ Logo |Partnernavn   | Beskrivelse
 ![Billede af ZTAP-logo (Nul tillid Analytics Platform).](images/ztap-logo.png)| [Nul tillid Analytics Platform (ZTAP)](https://go.microsoft.com/fwlink/?linkid=2090971) | Reducer dine beskeder med 99 %, og få adgang til en lang række sikkerhedsfunktioner fra mobilenheder
 
 ## <a name="related-topics"></a>Relaterede emner
+
 - [Konfigurer integration af administreret tjenestesikkerhedsprovider](configure-mssp-support.md)

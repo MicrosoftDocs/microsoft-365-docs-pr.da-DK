@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Oplysninger til it-administratorer om administration af følsomhedsmærkater i Office-apps til stationære computere, mobilenheder og internettet.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: f5f404df8d8cbf5d4ac755c17c2a6c07717d8360
-ms.sourcegitcommit: a209c9f86a7b4340a426c4cfed2d36a388c71124
+ms.openlocfilehash: 3161a26a8b22304e9343e9e16a1dd1e313d47df9
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "66797967"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66970094"
 ---
 # <a name="manage-sensitivity-labels-in-office-apps"></a>Administrer følsomhedsmærkater i Office apps
 
@@ -70,13 +70,14 @@ De angivne tal er det mindste antal Office-programversioner, der kræves for hve
 |[Markér indholdet](sensitivity-labels.md#what-sensitivity-labels-can-do)                                              | Aktuel kanal: 1910+ <br /><br> Månedlig Enterprise-kanal: 1910+ <br /><br> Semi-Annual Enterprise Channel: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Dynamiske markeringer med variabler](#dynamic-markings-with-variables)                                              | Aktuel kanal: 2010+ <br /><br> Månedlig Enterprise-kanal: 2010+ <br /><br> Semi-Annual Enterprise Channel: 2102+ | 16.42+     | 2.42+ | 16.0.13328+ | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Tildel tilladelser nu](encryption-sensitivity-labels.md#assign-permissions-now)                                 | Aktuel kanal: 1910+ <br /><br> Månedlig Enterprise-kanal: 1910+ <br /><br> Semi-Annual Enterprise Channel: 2002+ | 16.21+     | 2.21+ | 16.0.11231+ | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
-|[Lad brugere tildele tilladelser: <br /> – Spørg brugere](encryption-sensitivity-labels.md#let-users-assign-permissions)                     |Aktuel kanal: 2004+ <br /><br> Månedlig Enterprise-kanal: 2004+ <br /><br> Semi-Annual Enterprise Channel: 2008+ | 16.35+   | Under gennemgang   | Under gennemgang         | Under gennemgang                                                        |
+|[Lad brugere tildele tilladelser: <br /> – Bed brugerne om brugerdefinerede tilladelser (brugere og grupper)](encryption-sensitivity-labels.md#let-users-assign-permissions)                     |Aktuel kanal: 2004+ <br /><br> Månedlig Enterprise-kanal: 2004+ <br /><br> Semi-Annual Enterprise Channel: 2008+ | 16.35+   | Under gennemgang   | Under gennemgang         | Under gennemgang                                                        |
+|[Lad brugere tildele tilladelser: <br /> – Bed brugerne om brugerdefinerede tilladelser (brugere, grupper og organisationer)](encryption-sensitivity-labels.md#let-users-assign-permissions)                     |Prøveversion: Udrulning til [betakanal](https://office.com/insider)  | Under gennemgang   | Under gennemgang   | Under gennemgang         | Under gennemgang                                                        |
 |[Overvåg mærkatrelateret brugeraktivitet](#auditing-labeling-activities)                      | Aktuel kanal: 2011+ <br /><br> Månedlig Enterprise-kanal: 2011+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.43+ | 2.46+ | 16.0.13628+ | Ja |
 |[Kræv, at brugerne anvender en mærkat på deres mail og dokumenter](#require-users-to-apply-a-label-to-their-email-and-documents)   | Aktuel kanal: 2101+ <br /><br> Månedlig Enterprise-kanal: 2101+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.45+         | 2.47+ | 16.0.13628+ | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md)                                            
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af følsomme infotyper                    | Aktuel kanal: 2009+ <br /><br> Månedlig Enterprise-kanal: 2009+ <br /><br> Semi-Annual Enterprise Channel: 2102+ | 16.44+ | Under gennemgang | Under gennemgang | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Anvend automatisk en følsomhedsmærkat på indhold](apply-sensitivity-label-automatically.md) <br /> - Brug af klassificeringer, der kan oplæres                    | Aktuel kanal: 2105+ <br /><br> Månedlig Enterprise-kanal: 2105+ <br /><br> Semi-Annual Enterprise Channel: 2108+ | 16.49+ | Under gennemgang | Under gennemgang | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
 |[Understøttelse af samtidig redigering og Automatisk lagring](sensitivity-labels-coauthoring.md) af navngivne og krypterede dokumenter | Aktuel kanal: 2107+ <br /><br> Månedlig Enterprise-kanal: 2107+ <br /><br> Semi-Annual Enterprise-kanal: 2202+ |  16.51+ | Prøveversion: 2,58+, når du [tilmelder](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig | Prøveversion: 16.0.14931+ når du [tilmelder](sensitivity-labels-coauthoring.md#opt-in-to-the-preview-of-co-authoring-for-ios-and-android) dig | [Ja – tilvalg](sensitivity-labels-sharepoint-onedrive-files.md) |
-|[Understøttelse af PDF](#pdf-support)| Prøveversion: Udrulning til [betakanal](https://office.com/insider) |  Under gennemgang | Under gennemgang | Under gennemgang | Under gennemgang |
+|[Understøttelse af PDF](#pdf-support)| Prøveversion: [Betakanal](https://office.com/insider) |  Under gennemgang | Under gennemgang | Under gennemgang | Under gennemgang |
 
 
 ### <a name="sensitivity-label-capabilities-in-outlook"></a>Egenskaber for følsomhedsmærkat i Outlook

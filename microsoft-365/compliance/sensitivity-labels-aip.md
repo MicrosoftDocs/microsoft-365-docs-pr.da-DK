@@ -17,12 +17,12 @@ search.appverid:
 - MOE150
 - MET150
 description: Når du bruger Azure Information Protection (AIP) Unified Labeling-klienten, kan du forstå fordelene ved at bruge indbygget mærkat til Office-apps i stedet for AIP-tilføjelsesprogrammet.
-ms.openlocfilehash: 79d4ed4f81c3768ec85c17699257a18678ef82d1
-ms.sourcegitcommit: aa9e1bceb661df894f66d5dd5f4ab692c870fc71
+ms.openlocfilehash: 01f75905dc5fea76613393828d42f23ea1d3ff79
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "66756666"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66970160"
 ---
 # <a name="why-choose-built-in-labeling-over-the-aip-add-in-for-office-apps"></a>Hvorfor vælge indbygget mærkning via AIP-tilføjelsesprogrammet til Office-apps
 
@@ -110,7 +110,7 @@ Du kan også deaktivere eller fjerne **Tilføjelsesprogrammet Microsoft Azure In
 
 Uanset hvilken metode du vælger, træder ændringerne i kraft, når Office-apps genstartes.
 
-Hvis knappen **Følsomhed** ikke vises på Office-båndet, når du har foretaget disse ændringer, skal du kontrollere, om følsomhedsmærkater er [slået fra](sensitivity-labels-office-apps.md#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows).  Selvom dette ikke er standardkonfigurationen, kan en administrator eksplicit have angivet denne konfiguration ved hjælp af Gruppepolitik eller ved at redigere registreringsdatabasen direkte.
+Hvis knappen **Følsomhed** ikke vises på Office-båndet, når du har foretaget disse ændringer, skal du kontrollere, om følsomhedsmærkatering er slået [fra](sensitivity-labels-office-apps.md#if-you-need-to-turn-off-built-in-labeling-in-office-apps-on-windows). Selvom dette ikke er standardkonfigurationen, kan en administrator eksplicit have angivet denne konfiguration ved hjælp af Gruppepolitik eller ved at redigere registreringsdatabasen direkte.
 
 > [!NOTE]
 > Indbyggede mærkater kræver en abonnementsversion af Office-apps. Hvis du har separate versioner af Office, der nogle gange kaldes "Office Perpetual", anbefaler vi, at du opgraderer til Microsoft 365 Apps for Enterprise for at drage fordel af de [nyeste mærkatfunktioner](sensitivity-labels-office-apps.md#support-for-sensitivity-label-capabilities-in-apps).
@@ -150,7 +150,7 @@ Brug følgende oplysninger som en hjælp til at identificere, om du bruger en fu
 | **Kategori: Kryptering** | |
 |Administration definerede tilladelser | ![Understøttes.](../media/yes-icon.png) <br>[Få mere at vide](encryption-sensitivity-labels.md#assign-permissions-now) |
 |Brugerdefinerede tilladelser <br> - Videresend ikke til Outlook <br> – Brugerdefinerede bruger- og gruppetilladelser til Word, Excel, PowerPoint| ![Understøttes.](../media/yes-icon.png) <br>[Få mere at vide](encryption-sensitivity-labels.md#let-users-assign-permissions)|
-|Brugerdefinerede tilladelser <br> – Brugerdefinerede tilladelser for hele organisationen ved at angive domæner for Word, Excel, PowerPoint | I planlægning eller udvikling |
+|Brugerdefinerede tilladelser <br> – Brugerdefinerede tilladelser for hele organisationen ved at angive domæner for Word, Excel, PowerPoint | [Som prøveversion](encryption-sensitivity-labels.md#support-for-organization-wide-custom-permissions) |
 |Samtidig redigering og automatisk lagring | ![Understøttes.](../media/yes-icon.png) <br>[Få mere at vide](sensitivity-labels-coauthoring.md) |
 |Kryptering med dobbelt nøgle | I planlægning eller udvikling |
 |Tilbagekaldelse af dokument for brugere | Under gennemgang |

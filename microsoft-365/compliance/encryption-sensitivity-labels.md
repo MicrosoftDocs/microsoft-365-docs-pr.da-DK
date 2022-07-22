@@ -16,12 +16,12 @@ search.appverid:
 - MET150
 description: Konfigurer følsomhedsmærkater til kryptering, der beskytter dine data ved at begrænse adgang og brug.
 ms.custom: seo-marvel-apr2020
-ms.openlocfilehash: ef00ca10ca932322e51d71449e42f45842ce4c97
-ms.sourcegitcommit: 5014666778b2d48912c68c2e06992cdb43cfaee3
+ms.openlocfilehash: ab08f733be374710674bfae65f4a0b56e952a199
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/07/2022
-ms.locfileid: "66663786"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66970228"
 ---
 # <a name="restrict-access-to-content-by-using-sensitivity-labels-to-apply-encryption"></a>Begræns adgangen til indhold ved at bruge følsomhedsmærkater til at anvende kryptering
 
@@ -288,7 +288,7 @@ Du kan bruge følgende indstillinger til at lade brugerne tildele tilladelser, n
 
     Denne indstilling understøttes af Azure Information Protection Unified Labeling-klienten og af nogle apps, der bruger indbygget mærkning. For apps, der ikke understøtter denne funktion, vil mærkaten enten ikke være synlig for brugere, eller etiketten er synlig af hensyn til konsistens, men den kan ikke anvendes med en forklaringsmeddelelse til brugerne.
     
-    Hvis du vil kontrollere, hvilke apps der bruger indbygget mærkning, der understøtter denne indstilling, skal du bruge [tabel over funktioner til Word, Excel og PowerPoint](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) og rækken **Lad brugere tildele tilladelser: – Spørg brugere**.
+    Hvis du vil kontrollere, hvilke apps der bruger indbygget mærkat, der understøtter denne indstilling, skal du bruge [tabel over funktioner til Word, Excel og PowerPoint](sensitivity-labels-office-apps.md#sensitivity-label-capabilities-in-word-excel-and-powerpoint) og rækkerne for **Lad brugere tildele tilladelser**.
 
 Når indstillingerne understøttes, kan du bruge følgende tabel til at identificere, hvornår brugerne får vist følsomhedsmærkaten:
 
@@ -343,6 +343,16 @@ I forbindelse med indbygget mærkning og For Azure Information Protection Unifie
 
 > [!TIP]
 > Hvis brugerne havde kendskab til at konfigurere brugerdefinerede tilladelser med Azure Information Protection Unified-navngivningsklienten, før [samtidig redigering blev aktiveret](sensitivity-labels-coauthoring.md), kan det være nyttigt at gennemse tilknytningen af tilladelsesniveauer til individuelle brugsrettigheder: [Rettigheder, der er inkluderet i tilladelsesniveauer](/azure/information-protection/configure-usage-rights#rights-included-in-permissions-levels).
+
+#### <a name="support-for-organization-wide-custom-permissions"></a>Understøttelse af brugerdefinerede tilladelser for hele organisationen
+
+Brugerne udruller nu som prøveversion til indbygget mærkning i Windows og kan angive et domænenavn, der gælder for alle brugere i en organisation, der ejer domænet, og det er i Azure Active Directory. Denne funktion giver [paritet med Azure Information Protection Unified-mærkatklienten](sensitivity-labels-aip.md#feature-parity-for-built-in-labeling-and-the-aip-add-in-for-office-apps):
+
+![Opdateret dialogboks til understøttelse af brugerdefinerede tilladelser for hele organisationen.](../media/org-wide-custom-permissions-dialog.png)
+
+En bruger skriver f.eks. "@contoso.com" (eller "contoso.com") og giver læseadgang. Da Contoso Corporation ejer det contoso.com domæne, får alle brugere i domænet og alle andre domæner, som organisationen ejer i Azure Active Directory, læseadgang.
+
+Det er vigtigt at fortælle brugerne, at adgangen ikke kun er begrænset til brugerne i det angivne domæne. "@sales.contoso.com" vil f.eks. ikke begrænse adgangen til brugere i kun salgsunderdomænet, men også give adgang til brugere i det marketing.contoso.com domæne og endda brugere med et usammenhængende navneområde i den samme Azure Active Directory-lejer.
 
 ## <a name="example-configurations-for-the-encryption-settings"></a>Eksempelkonfigurationer for krypteringsindstillingerne
 

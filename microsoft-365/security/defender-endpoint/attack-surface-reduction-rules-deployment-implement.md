@@ -18,13 +18,14 @@ ms.technology: mde
 ms.topic: article
 ms.collection:
 - M365-security-compliance
+- m365solution-asr-rules
 ms.date: 1/18/2022
-ms.openlocfilehash: c3c693a46c3c22749a4e8ff2d572cef56bc06d9b
-ms.sourcegitcommit: e9692a40dfe1f8c2047699ae3301c114a01b0d3a
+ms.openlocfilehash: a1db97410de095314de6fb75acc5394ab18bc6c6
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66603742"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969699"
 ---
 # <a name="enable-attack-surface-reduction-asr-rules"></a>Aktiver regler for reduktion af angrebsoverflade
 

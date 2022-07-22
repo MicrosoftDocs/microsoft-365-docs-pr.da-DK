@@ -15,12 +15,12 @@ ms.collection:
 - m365-security-compliance
 ms.topic: reference
 ms.technology: mde
-ms.openlocfilehash: e2c90fce172a1b7f9d3cbf9a16b105e56402ec49
-ms.sourcegitcommit: 49c275f78664740988bbc4ca4b14d3ad758e1468
+ms.openlocfilehash: 3ea2822adabcd0a747d34fbdb8c6d8d2c944afdf
+ms.sourcegitcommit: 00948161a72d8cea8c2baba873743fc4a0e19f90
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "66882623"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "66969529"
 ---
 # <a name="whats-new-in-microsoft-defender-for-endpoint-on-mac"></a>Nyheder i Microsoft Defender for Endpoint på Mac
 
@@ -35,6 +35,27 @@ ms.locfileid: "66882623"
 Du kan få flere oplysninger om Microsoft Defender for Endpoint på andre operativsystemer: 
 - [Nyheder i Microsoft Defender for Endpoint på Linux](linux-whatsnew.md) 
 - [Nyheder i Microsoft Defender for Endpoint på iOS](ios-whatsnew.md)</br>
+
+<details>
+  <summary>Jul-2022 (build: 101.73.77 | Version: 20.122062.17377.0)</summary>
+
+&ensp;Udgivet: **21. jul 2022**<br/>
+&ensp;Publiceret: **21. jul 2022**<br/>
+&ensp;Build: **101.73.77**<br/>
+&ensp;Version: **20.122062.17377.0**<br/>
+&ensp;Programversion: **1.1.19200.3**<br/>
+&ensp;Signaturversion: **1.367.1011.0**<br/>
+
+**Nyheder**
+
+- Løste et problem, hvor udskrivningen ikke kunne fuldføres pga. netværksudvidelsen
+- Tilføjede en indstilling til [konfiguration af beregning af filhash](mac-preferences.md#configure-file-hash-computation-feature)
+- Fra dette build og frem har produktet som standard det nye antimalwareprogram
+- Forbedringer af ydeevnen i forbindelse med filkopieringshandlinger
+- Fejlrettelser
+
+<br/>
+</details>
 
 <details>
   <summary>Jul-2022 (build: 101.71.18 | Version: 20.122052.17118.0)</summary>
