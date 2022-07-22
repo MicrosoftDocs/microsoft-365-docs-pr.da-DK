@@ -322,7 +322,7 @@
               href: mfi-domain-mail-flow-status-insight.md
         - name: Rapportér meddelelser og filer til Microsoft
           items:
-            - name: Rapportér meddelelser og filer til Microsoft
+            - name: Hvordan kan jeg rapportere en mistænkelig mail eller fil til Microsoft
               href: report-junk-email-messages-to-microsoft.md
             - name: Administratorindsendelser
               href: admin-submission.md

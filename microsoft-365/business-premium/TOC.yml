@@ -108,12 +108,12 @@
       href: m365bp-maintain-environment.md
     - name: Vejledning til sikkerhedshandlinger
       href: m365bp-security-incident-quick-start.md
-    - name: Fjern brugere
-      href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Tilføj brugere
       href: m365bp-add-users.md
     - name: Nulstil adgangskoder
       href: m365bp-reset-passwords.md
+    - name: 'Fjern brugere, der har forladt'
+      href: ../admin/add-users/remove-former-employee.md?toc=/microsoft-365/business-premium/toc.json&bc=/microsoft-365/business-premium/breadcrumb/toc.json
     - name: Fjern data fra enheder
       href: m365bp-remove-company-data.md
     - name: Nulstil enheder til fabriksindstillingerne
