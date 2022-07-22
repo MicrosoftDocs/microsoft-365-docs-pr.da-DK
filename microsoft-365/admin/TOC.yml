@@ -364,6 +364,8 @@
           href: security-and-compliance/set-up-multi-factor-authentication.md
         - name: Administrer og overvåg prioritetskonti
           href: setup/priority-accounts.md
+        - name: Øg trusselsbeskyttelsen for Microsoft 365 til virksomheder
+          href: security-and-compliance/increase-threat-protection.md
         - name: Slå timeout for inaktiv session til
           href: manage/idle-session-timeout-web-apps.md
         - name: Aktivér moderne godkendelse for Office 2013

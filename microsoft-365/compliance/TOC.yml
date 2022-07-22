@@ -372,8 +372,614 @@
               href: sit-common-scenarios.md
         - name: Reference til type af følsomme oplysninger
           items:
-            - name: Enhedsdefinitioner for type af følsomme oplysninger
-              href: sensitive-information-type-entity-definitions.md
+            - name: Enhedsdefinitioner for type af alle følsomme oplysninger
+              items:
+                - name: Enhedsdefinitioner for type af følsomme oplysninger
+                  href: sensitive-information-type-entity-definitions.md
+                - name: 'ABA-/routing-nummer:'
+                  href: sit-defn-aba-routing.md
+                - name: Alle fulde navne
+                  href: sit-defn-all-full-names.md
+                - name: Alle medicinske vilkår og betingelser
+                  href: sit-defn-all-medical-terms-conditions.md
+                - name: Alle fysiske adresser
+                  href: sit-defn-all-physical-addresses.md
+                - name: Adgangsnøgle til klienthemmelighed til Amazon S3
+                  href: sit-defn-amazon-s3-client-secret-access-key.md
+                - name: Nationalt argentinsk id-nummer (DNI)
+                  href: sit-defn-argentina-national-identity-numbers.md
+                - name: Argentinsk entydig skatteregistreringsnøgle
+                  href: sit-defn-argentina-unique-tax-identification-key.md
+                - name: ASP.NET-maskinnøgle
+                  href: sit-defn-asp-net-machine-key.md
+                - name: Australsk bankkontonummer
+                  href: sit-defn-australia-bank-account-number.md
+                - name: Australsk virksomhedsnummer
+                  href: sit-defn-australia-business-number.md
+                - name: Australsk firmanummer
+                  href: sit-defn-australia-company-number.md
+                - name: Australsk kørekortnummer
+                  href: sit-defn-australia-drivers-license-number.md
+                - name: Australsk medicinsk id-nummer
+                  href: sit-defn-australia-medical-account-number.md
+                - name: Australsk pasnummer
+                  href: sit-defn-australia-passport-number.md
+                - name: Fysiske adresser i Australien
+                  href: sit-defn-australia-physical-addresses.md
+                - name: Australsk skattejournalnummer
+                  href: sit-defn-australia-tax-file-number.md
+                - name: Østrigsk kørekortnummer
+                  href: sit-defn-austria-drivers-license-number.md
+                - name: Østrigsk id-kort
+                  href: sit-defn-austria-identity-card.md
+                - name: Østrigsk pasnummer
+                  href: sit-defn-austria-passport-number.md
+                - name: Fysiske adresser i Østrig
+                  href: sit-defn-austria-physical-addresses.md
+                - name: Østrigsk personnummer
+                  href: sit-defn-austria-social-security-number.md
+                - name: Østrigsk skatteregistreringsnummer
+                  href: sit-defn-austria-tax-identification-number.md
+                - name: Østrigsk moms
+                  href: sit-defn-austria-value-added-tax.md
+                - name: Adgangstoken til Azure AD-klient
+                  href: sit-defn-azure-ad-client-access-token.md
+                - name: Klienthemmelighed til Azure AD
+                  href: sit-defn-azure-ad-client-secret.md
+                - name: Legitimationsoplysninger for bruger til Azure AD
+                  href: sit-defn-azure-ad-user-credentials.md
+                - name: Adgangskode til udrulning af Azure App Service
+                  href: sit-defn-azure-app-service-deployment-password.md
+                - name: Delt adgangsnøgle til Azure Batch
+                  href: sit-defn-azure-batch-shared-access-key.md
+                - name: Hemmelig nøgle til Azure Bot Framework
+                  href: sit-defn-azure-bot-framework-secret-key.md
+                - name: Apphemmelighed til Azure Bot Service
+                  href: sit-defn-azure-bot-service-app-secret.md
+                - name: API-nøgle til Azure Cognitive Search
+                  href: sit-defn-azure-cognitive-search-api-key.md
+                - name: Azure Cognitive Service-nøgle
+                  href: sit-defn-azure-cognitive-service-key.md
+                - name: Adgangsnøgle til Azure Container Registry
+                  href: sit-defn-azure-container-registry-access-key.md
+                - name: Adgangsnøgle til Azure COSMOS DB-konto
+                  href: sit-defn-azure-cosmos-db-account-access-key.md
+                - name: Personlig adgangstoken til Azure Databricks
+                  href: sit-defn-azure-databricks-personal-access-token.md
+                - name: Apphemmelighed til Azure DevOps
+                  href: sit-defn-azure-devops-app-secret.md
+                - name: Personlig adgangstoken til Azure DevOps
+                  href: sit-defn-azure-devops-personal-access-token.md
+                - name: Godkendelsesnøgle til Azure DocumentDB
+                  href: sit-defn-azure-document-db-auth-key.md
+                - name: Adgangsnøgle til Azure EventGrid
+                  href: sit-defn-azure-eventgrid-access-key.md
+                - name: Funktionsmaster- / API-nøgle til Azure
+                  href: sit-defn-azure-function-master-api-key.md
+                - name: Databaseforbindelsesstreng til Azure IAAS og forbindelsesstreng til Azure SQL
+                  href: sit-defn-azure-iaas-database-connection-string-azure-sql-connection-string.md
+                - name: Forbindelsesstreng til Azure IoT
+                  href: sit-defn-azure-iot-connection-string.md
+                - name: Delt adgangsnøgle til Azure IoT
+                  href: sit-defn-azure-iot-shared-access-key.md
+                - name: Delt adgangssignatur til Azure Logic-app
+                  href: sit-defn-azure-logic-app-shared-access-signature.md
+                - name: API-nøgle til webtjenesten Azure Machine Learning
+                  href: sit-defn-azure-machine-learning-web-service-api-key.md
+                - name: Abonnementsnøgle til Azure Maps
+                  href: sit-defn-azure-maps-subscription-key.md
+                - name: Adgangskode til Azure-publiceringsindstilling
+                  href: sit-defn-azure-publish-setting-password.md
+                - name: Forbindelsesstreng til Azure Redis Cache
+                  href: sit-defn-azure-redis-cache-connection-string.md
+                - name: Adgangskode til Azure Redis Cache-forbindelsesstreng
+                  href: sit-defn-azure-redis-cache-connection-string-password.md
+                - name: Azure SAS
+                  href: sit-defn-azure-sas.md
+                - name: Forbindelsesstreng til Azure Service Bus
+                  href: sit-defn-azure-service-bus-connection-string.md
+                - name: Delt adgangssignatur til Azure Service Bus
+                  href: sit-defn-azure-service-bus-shared-access-signature.md
+                - name: Delt adgangsnøgle/webhooktoken til Azure
+                  href: sit-defn-azure-shared-access-key-web-hook-token.md
+                - name: Adgangsnøgle til Azure SignalR
+                  href: sit-defn-azure-signalr-access-key.md
+                - name: Forbindelsesstreng til Azure SQL
+                  href: sit-defn-azure-sql-connection-string.md
+                - name: Adgangsnøgle til Azure Storage-konto
+                  href: sit-defn-azure-storage-account-access-key.md
+                - name: Nøgle til Azure Storage-konto
+                  href: sit-defn-azure-storage-account-key.md
+                - name: Nøgle til Azure Storage-konto (generisk)
+                  href: sit-defn-azure-storage-account-key-generic.md
+                - name: Delt adgangssignatur til Azure Storage-konto
+                  href: sit-defn-azure-storage-account-shared-access-signature.md
+                - name: Delt adgangssignatur for højrisikoressourcer til Azure Storage-konto
+                  href: sit-defn-azure-storage-account-shared-access-signature-high-risk-resources.md
+                - name: Abonnementsadministrationscertifikat for Azure
+                  href: sit-defn-azure-subscription-management-certificate.md
+                - name: Belgisk kørekortnummer
+                  href: sit-defn-belgium-drivers-license-number.md
+                - name: Belgisk nationalt nummer
+                  href: sit-defn-belgium-national-number.md
+                - name: Belgisk pasnummer
+                  href: sit-defn-belgium-passport-number.md
+                - name: Fysiske adresser i Belgien
+                  href: sit-defn-belgium-physical-addresses.md
+                - name: Belgisk momsnummer
+                  href: sit-defn-belgium-value-added-tax-number.md
+                - name: Betegnelser for blodprøver
+                  href: sit-defn-blood-test-terms.md
+                - name: Navne på varemærkemedicin
+                  href: sit-defn-brand-medication-names.md
+                - name: Brasiliansk CPF-nummer
+                  href: sit-defn-brazil-cpf-number.md
+                - name: Brasiliansk CNPJ-nummer (juridisk enhed)
+                  href: sit-defn-brazil-legal-entity-number.md
+                - name: Nationalt brasiliansk identifikationskort (RG)
+                  href: sit-defn-brazil-national-identification-card.md
+                - name: Fysiske adresser i Brasilien
+                  href: sit-defn-brazil-physical-addresses.md
+                - name: Bulgarsk kørekortnummer
+                  href: sit-defn-bulgaria-drivers-license-number.md
+                - name: Bulgarsk pasnummer
+                  href: sit-defn-bulgaria-passport-number.md
+                - name: Fysiske adresser Bulgarien
+                  href: sit-defn-bulgaria-physical-addresses.md
+                - name: Ensartet bulgarsk borgernummer
+                  href: sit-defn-bulgaria-uniform-civil-number.md
+                - name: Canadisk bankkontonummer
+                  href: sit-defn-canada-bank-account-number.md
+                - name: Canadisk kørekortnummer
+                  href: sit-defn-canada-drivers-license-number.md
+                - name: Canadisk sundhedsservicenummer
+                  href: sit-defn-canada-health-service-number.md
+                - name: Canadisk pasnummer
+                  href: sit-defn-canada-passport-number.md
+                - name: Canadisk PHIN-nummer (Personal Health Identification Number)
+                  href: sit-defn-canada-personal-health-identification-number.md
+                - name: Fysiske adresser i Canada
+                  href: sit-defn-canada-physical-addresses.md
+                - name: Canadisk socialforsikringsnummer
+                  href: sit-defn-canada-social-insurance-number.md
+                - name: Chilensk identitetskortnummer
+                  href: sit-defn-chile-identity-card-number.md
+                - name: Kinesisk identitetskortnummer (PRC)
+                  href: sit-defn-china-resident-identity-card-number.md
+                - name: Klienthemmelighed/API-nøgle
+                  href: sit-defn-client-secret-api-key.md
+                - name: Legitimationsoplysninger i URL-adresse
+                  href: sit-defn-credentials-in-url.md
+                - name: Kreditkortnummer
+                  href: sit-defn-credit-card-number.md
+                - name: Kroatisk kørekortnummer
+                  href: sit-defn-croatia-drivers-license-number.md
+                - name: Kroatisk identitetskortnummer
+                  href: sit-defn-croatia-identity-card-number.md
+                - name: Kroatisk pasnummer
+                  href: sit-defn-croatia-passport-number.md
+                - name: Kroatisk personnummer (OIB)
+                  href: sit-defn-croatia-personal-identification-number.md
+                - name: Fysiske adresser i Kroatien
+                  href: sit-defn-croatia-physical-addresses.md
+                - name: Cypriotisk kørekortnummer
+                  href: sit-defn-cyprus-drivers-license-number.md
+                - name: Cypriotisk identitetskort
+                  href: sit-defn-cyprus-identity-card.md
+                - name: Cypriotisk pasnummer
+                  href: sit-defn-cyprus-passport-number.md
+                - name: Fysiske adresser i Cypern
+                  href: sit-defn-cyprus-physical-addresses.md
+                - name: Cypriotisk skatteregistreringsnummer
+                  href: sit-defn-cyprus-tax-identification-number.md
+                - name: Tjekkisk kørekortnummer
+                  href: sit-defn-czech-drivers-license-number.md
+                - name: Tjekkisk pasnummer
+                  href: sit-defn-czech-passport-number.md
+                - name: Tjekkisk personnummer
+                  href: sit-defn-czech-personal-identity-number.md
+                - name: Fysiske adresser i Tjekkiet
+                  href: sit-defn-czech-republic-physical-addresses.md
+                - name: Dansk kørekortnummer
+                  href: sit-defn-denmark-drivers-license-number.md
+                - name: Dansk pasnummer
+                  href: sit-defn-denmark-passport-number.md
+                - name: Dansk personnummer
+                  href: sit-defn-denmark-personal-identification-number.md
+                - name: Fysiske adresser i Danmark
+                  href: sit-defn-denmark-physical-addresses.md
+                - name: Sygdomme
+                  href: sit-defn-diseases.md
+                - name: DEA-nummer (Drug Enforcement Agency)
+                  href: sit-defn-drug-enforcement-agency-number.md
+                - name: Estisk kørekortnummer
+                  href: sit-defn-estonia-drivers-license-number.md
+                - name: Estisk pasnummer
+                  href: sit-defn-estonia-passport-number.md
+                - name: Estisk personnummer
+                  href: sit-defn-estonia-personal-identification-code.md
+                - name: Fysiske adresser i Estland
+                  href: sit-defn-estonia-physical-addresses.md
+                - name: EU-debetkortnummer
+                  href: sit-defn-eu-debit-card-number.md
+                - name: EU-kørekortnummer
+                  href: sit-defn-eu-drivers-license-number.md
+                - name: Nationalt identifikationsnummer fra EU
+                  href: sit-defn-eu-national-identification-number.md
+                - name: EU-pasnummer
+                  href: sit-defn-eu-passport-number.md
+                - name: CPR-nummer eller tilsvarende identifikation i EU
+                  href: sit-defn-eu-social-security-number-equivalent-identification.md
+                - name: EU-skatteregistreringsnummer
+                  href: sit-defn-eu-tax-identification-number.md
+                - name: Finsk kørekortnummer
+                  href: sit-defn-finland-drivers-license-number.md
+                - name: Europæisk sygesikringsnummer fra Finland
+                  href: sit-defn-finland-european-health-insurance-number.md
+                - name: Nationalt finsk id
+                  href: sit-defn-finland-national-id.md
+                - name: Finsk pasnummer
+                  href: sit-defn-finland-passport-number.md
+                - name: Fysiske adresser i Finland
+                  href: sit-defn-finland-physical-addresses.md
+                - name: Fransk kørekortnummer
+                  href: sit-defn-france-drivers-license-number.md
+                - name: Fransk sygesikringsnummer
+                  href: sit-defn-france-health-insurance-number.md
+                - name: Fransk nationalt id-kort (CNI)
+                  href: sit-defn-france-national-id-card.md
+                - name: Fransk pasnummer
+                  href: sit-defn-france-passport-number.md
+                - name: Fysiske adresser i Frankrig
+                  href: sit-defn-france-physical-addresses.md
+                - name: Fransk CPR-nummer (INSEE)
+                  href: sit-defn-france-social-security-number.md
+                - name: Fransk skatteregistreringsnummer
+                  href: sit-defn-france-tax-identification-number.md
+                - name: Fransk momsnummer
+                  href: sit-defn-france-value-added-tax-number.md
+                - name: Generel adgangskode
+                  href: sit-defn-general-password.md
+                - name: Generel symmetrisk nøgle
+                  href: sit-defn-general-symmetric-key.md
+                - name: Navne på generisk medicin
+                  href: sit-defn-generic-medication-names.md
+                - name: Tysk kørekortnummer
+                  href: sit-defn-germany-drivers-license-number.md
+                - name: Tysk identitetskortnummer
+                  href: sit-defn-germany-identity-card-number.md
+                - name: Tysk pasnummer
+                  href: sit-defn-germany-passport-number.md
+                - name: Fysiske adresser i Tyskland
+                  href: sit-defn-germany-physical-addresses.md
+                - name: Tysk skatteregistreringsnummer
+                  href: sit-defn-germany-tax-identification-number.md
+                - name: Tysk momsnummer
+                  href: sit-defn-germany-value-added-tax-number.md
+                - name: Personlig adgangstoken til GitHub
+                  href: sit-defn-github-personal-access-token.md
+                - name: Google API-nøgle
+                  href: sit-defn-google-api-key.md
+                - name: Græsk kørekortnummer
+                  href: sit-defn-greece-drivers-license-number.md
+                - name: Nationalt græsk id-kort
+                  href: sit-defn-greece-national-id-card.md
+                - name: Græsk pasnummer
+                  href: sit-defn-greece-passport-number.md
+                - name: Fysiske adresser i Grækenland
+                  href: sit-defn-greece-physical-addresses.md
+                - name: Græsk CPR-nummer (AMKA)
+                  href: sit-defn-greece-social-security-number.md
+                - name: Græsk skatteregistreringsnummer
+                  href: sit-defn-greece-tax-identification-number.md
+                - name: HKID-nummer (Hongkong Identity Card)
+                  href: sit-defn-hong-kong-identity-card-number.md
+                - name: Http-godkendelsesheader
+                  href: sit-defn-http-authorization-header.md
+                - name: Ungarsk kørekortnummer
+                  href: sit-defn-hungary-drivers-license-number.md
+                - name: Ungarsk pasnummer
+                  href: sit-defn-hungary-passport-number.md
+                - name: Personligt ungarsk identifikationsnummer
+                  href: sit-defn-hungary-personal-identification-number.md
+                - name: Fysiske adresser i Ungarn
+                  href: sit-defn-hungary-physical-addresses.md
+                - name: Ungarsk CPR-nummer (TAJ)
+                  href: sit-defn-hungary-social-security-number.md
+                - name: Ungarsk skatteregistreringsnummer
+                  href: sit-defn-hungary-tax-identification-number.md
+                - name: Ungarsk momsnummer
+                  href: sit-defn-hungary-value-added-tax-number.md
+                - name: Fysiske adresser i Island
+                  href: sit-defn-iceland-physical-addresses.md
+                - name: 'Handicap, der er angivet i den amerikanske handicapevaluering under social sikring'
+                  href: sit-defn-impairments-us-disability-evaluation-under-social-security.md
+                - name: Indisk kørekortnummer
+                  href: sit-defn-india-drivers-license-number.md
+                - name: Indisk GST-nummer
+                  href: sit-defn-india-gst-number.md
+                - name: Indisk permanent kontonummer (PAN)
+                  href: sit-defn-india-permanent-account-number.md
+                - name: Indisk identifikationsnummer (Aadhaar)
+                  href: sit-defn-india-unique-identification-number.md
+                - name: Indisk id-kort til afstemning
+                  href: sit-defn-india-voter-id-card.md
+                - name: Indonesisk identitetskortnummer (KTP)
+                  href: sit-defn-indonesia-identity-card-number.md
+                - name: IBAN (International Banking Account Number)
+                  href: sit-defn-international-banking-account-number.md
+                - name: International klassificering af sygdomme (ICD-10-CM)
+                  href: sit-defn-international-classification-of-diseases-icd-10-cm.md
+                - name: International klassificering af sygdomme (ICD-9-CM)
+                  href: sit-defn-international-classification-of-diseases-icd-9-cm.md
+                - name: IP-adresse
+                  href: sit-defn-ip-address.md
+                - name: IP-adresse v4
+                  href: sit-defn-ip-address-v4.md
+                - name: IP-adresse v6
+                  href: sit-defn-ip-address-v6.md
+                - name: Irsk kørekortnummer
+                  href: sit-defn-ireland-drivers-license-number.md
+                - name: Irsk pasnummer
+                  href: sit-defn-ireland-passport-number.md
+                - name: Irsk PPS-nummer (Personal Public Service)
+                  href: sit-defn-ireland-personal-public-service-number.md
+                - name: Fysiske adresser i Irland
+                  href: sit-defn-ireland-physical-addresses.md
+                - name: Israelsk bankkontonummer
+                  href: sit-defn-israel-bank-account-number.md
+                - name: Nationalt israelsk identifikationsnummer
+                  href: sit-defn-israel-national-identification-number.md
+                - name: Italiensk kørekortnummer
+                  href: sit-defn-italy-drivers-license-number.md
+                - name: Italiensk skatteregistreringsnummer
+                  href: sit-defn-italy-fiscal-code.md
+                - name: Italiensk pasnummer
+                  href: sit-defn-italy-passport-number.md
+                - name: Fysiske adresser i Italien
+                  href: sit-defn-italy-physical-addresses.md
+                - name: Italiensk momsnummer
+                  href: sit-defn-italy-value-added-tax-number.md
+                - name: Japansk bankkontonummer
+                  href: sit-defn-japan-bank-account-number.md
+                - name: Japansk kørekortnummer
+                  href: sit-defn-japan-drivers-license-number.md
+                - name: Japansk Mit virksomhedsnummer
+                  href: sit-defn-japan-my-number-corporate.md
+                - name: 'Mit personlige nummer, Japan'
+                  href: sit-defn-japan-my-number-personal.md
+                - name: Japansk pasnummer
+                  href: sit-defn-japan-passport-number.md
+                - name: Japansk opholdskortnummer
+                  href: sit-defn-japan-residence-card-number.md
+                - name: Registreringsnummer for bopæl i Japan
+                  href: sit-defn-japan-resident-registration-number.md
+                - name: Japansk socialforsikringsnummer (SIN)
+                  href: sit-defn-japan-social-insurance-number.md
+                - name: Betingelser for laboratorieprøver
+                  href: sit-defn-lab-test-terms.md
+                - name: Lettisk kørekortnummer
+                  href: sit-defn-latvia-drivers-license-number.md
+                - name: Lettisk pasnummer
+                  href: sit-defn-latvia-passport-number.md
+                - name: Lettisk personnummer
+                  href: sit-defn-latvia-personal-code.md
+                - name: Fysiske adresser i Letland
+                  href: sit-defn-latvia-physical-addresses.md
+                - name: Fysiske adresser i Liechtenstein
+                  href: sit-defn-liechtenstein-physical-addresses.md
+                - name: 'Livsstile, der er relateret til sygdomstilstande'
+                  href: sit-defn-lifestyles-relate-to-medical-conditions.md
+                - name: Litauisk kørekortnummer
+                  href: sit-defn-lithuania-drivers-license-number.md
+                - name: Litauisk pasnummer
+                  href: sit-defn-lithuania-passport-number.md
+                - name: Litauisk personnummer
+                  href: sit-defn-lithuania-personal-code.md
+                - name: Fysiske adresser i Litauen
+                  href: sit-defn-lithuania-physical-addresses.md
+                - name: Luxemburgsk kørekortnummer
+                  href: sit-defn-luxemburg-drivers-license-number.md
+                - name: Nationalt luxemburgsk identifikationsummer (fysiske personer)
+                  href: sit-defn-luxemburg-national-identification-number-natural-persons.md
+                - name: Nationalt luxemburgsk identifikationsummer (ikke-fysiske personer)
+                  href: sit-defn-luxemburg-national-identification-number-non-natural-persons.md
+                - name: Luxemburgsk pasnummer
+                  href: sit-defn-luxemburg-passport-number.md
+                - name: Fysiske adresser i Luxembourg
+                  href: sit-defn-luxemburg-physical-addresses.md
+                - name: Malaysisk identifikationskortnummer
+                  href: sit-defn-malaysia-identification-card-number.md
+                - name: Maltesisk kørekortnummer
+                  href: sit-defn-malta-drivers-license-number.md
+                - name: Maltesisk identitetskortnummer
+                  href: sit-defn-malta-identity-card-number.md
+                - name: Maltesisk pasnummer
+                  href: sit-defn-malta-passport-number.md
+                - name: Fysiske adresser i Malta
+                  href: sit-defn-malta-physical-addresses.md
+                - name: Maltetisk skatteregistreringsnummer
+                  href: sit-defn-malta-tax-identification-number.md
+                - name: Medicinske specialer
+                  href: sit-defn-medical-specialities.md
+                - name: MBI-kort (Medicare Beneficiary Identifier)
+                  href: sit-defn-medicare-beneficiary-Identifier-card.md
+                - name: CURP (Mexico Unique Population Registry Code)
+                  href: sit-defn-mexico-unique-population-registry-code.md
+                - name: Nøgle til Microsoft Bing-kort
+                  href: sit-defn-microsoft-bing-maps-key.md
+                - name: Hollandsk borgerservicenummer (BSN)
+                  href: sit-defn-netherlands-citizens-service-number.md
+                - name: Hollandsk kørekortnummer
+                  href: sit-defn-netherlands-drivers-license-number.md
+                - name: Hollandsk pasnummer
+                  href: sit-defn-netherlands-passport-number.md
+                - name: Fysiske adresser i Holland
+                  href: sit-defn-netherlands-physical-addresses.md
+                - name: Hollandsk skatteregistreringsnummer
+                  href: sit-defn-netherlands-tax-identification-number.md
+                - name: Hollandsk momsnummer
+                  href: sit-defn-netherlands-value-added-tax-number.md
+                - name: New Zealandsk bankkontonummer
+                  href: sit-defn-new-zealand-bank-account-number.md
+                - name: New Zealandsk kørekortnummer
+                  href: sit-defn-new-zealand-drivers-license-number.md
+                - name: Indenlandsk New Zealandsk omsætningsnummer
+                  href: sit-defn-new-zealand-inland-revenue-number.md
+                - name: New Zealandsk sundhedsnummer
+                  href: sit-defn-new-zealand-ministry-of-health-number.md
+                - name: Fysiske adresser i New Zealand
+                  href: sit-defn-new-zealand-physical-addresses.md
+                - name: New Zealandsk socialt velfærdsnummer
+                  href: sit-defn-new-zealand-social-welfare-number.md
+                - name: Norsk id-nummer
+                  href: sit-defn-norway-identification-number.md
+                - name: Fysiske adresser i Norge
+                  href: sit-defn-norway-physical-addresses.md
+                - name: Filippinernes samlede flerfunktions-id-nummer
+                  href: sit-defn-philippines-unified-multi-purpose-identification-number.md
+                - name: Polsk kørekortnummer
+                  href: sit-defn-poland-drivers-license-number.md
+                - name: Polsk identitetskort
+                  href: sit-defn-poland-identity-card.md
+                - name: Nationalt polsk id (PESEL)
+                  href: sit-defn-poland-national-id.md
+                - name: Polsk pasnummer
+                  href: sit-defn-poland-passport-number.md
+                - name: Fysiske adresser i Polen
+                  href: sit-defn-poland-physical-addresses.md
+                - name: Polsk REGON-nummer
+                  href: sit-defn-poland-regon-number.md
+                - name: Polsk skatteregistreringsnummer
+                  href: sit-defn-poland-tax-identification-number.md
+                - name: Portugisisk borgerkortnummer
+                  href: sit-defn-portugal-citizen-card-number.md
+                - name: Portugisisk kørekortnummer
+                  href: sit-defn-portugal-drivers-license-number.md
+                - name: Portugisisk pasnummer
+                  href: sit-defn-portugal-passport-number.md
+                - name: Fysiske adresser i Portugal
+                  href: sit-defn-portugal-physical-addresses.md
+                - name: Portugisisk skatteregistreringsnummer
+                  href: sit-defn-portugal-tax-identification-number.md
+                - name: Rumænsk kørekortnummer
+                  href: sit-defn-romania-drivers-license-number.md
+                - name: Rumænsk pasnummer
+                  href: sit-defn-romania-passport-number.md
+                - name: Personlig rumænsk numerisk kode (CNP)
+                  href: sit-defn-romania-personal-numeric-code.md
+                - name: Fysiske adresser i Rumænien
+                  href: sit-defn-romania-physical-addresses.md
+                - name: 'Russisk pasnummer, indenlandsk'
+                  href: sit-defn-russia-passport-number-domestic.md
+                - name: 'Russisk pasnummer, internationalt'
+                  href: sit-defn-russia-passport-number-international.md
+                - name: Saudiarabisk nationalt id
+                  href: sit-defn-saudi-arabia-national-id.md
+                - name: Nationalt singaporeansk registreringsnummer (NRIC)
+                  href: sit-defn-singapore-national-registration-identity-card-number.md
+                - name: Slack-adgangstoken
+                  href: sit-defn-slack-access-token.md
+                - name: Slovakisk kørekortnummer
+                  href: sit-defn-slovakia-drivers-license-number.md
+                - name: Slovakisk pasnummer
+                  href: sit-defn-slovakia-passport-number.md
+                - name: Slovakisk personnummer
+                  href: sit-defn-slovakia-personal-number.md
+                - name: Fysiske adresser i Slovakiet
+                  href: sit-defn-slovakia-physical-addresses.md
+                - name: Slovensk kørekortnummer
+                  href: sit-defn-slovenia-drivers-license-number.md
+                - name: Slovensk pasnummer
+                  href: sit-defn-slovenia-passport-number.md
+                - name: Fysiske adresser i Slovenien
+                  href: sit-defn-slovenia-physical-addresses.md
+                - name: Slovensk skatteregistreringsnummer
+                  href: sit-defn-slovenia-tax-identification-number.md
+                - name: Unikt slovensk hovedborgernummer
+                  href: sit-defn-slovenia-unique-master-citizen-number.md
+                - name: Sydafrikansk identifikationsnummer
+                  href: sit-defn-south-africa-identification-number.md
+                - name: Sydkoreansk borgerregistreringsnummer
+                  href: sit-defn-south-korea-resident-registration-number.md
+                - name: Spansk DNI
+                  href: sit-defn-spain-dni.md
+                - name: Spansk kørekortnummer
+                  href: sit-defn-spain-drivers-license-number.md
+                - name: Spansk pasnummer
+                  href: sit-defn-spain-passport-number.md
+                - name: Fysiske adresser i Spanien
+                  href: sit-defn-spain-physical-addresses.md
+                - name: Spansk CPR-nummer (SSN)
+                  href: sit-defn-spain-social-security-number.md
+                - name: Spansk skatteregistreringsnummer
+                  href: sit-defn-spain-tax-identification-number.md
+                - name: SQL Server-forbindelsesstreng
+                  href: sit-defn-sql-server-connection-string.md
+                - name: Kirurgiske indgreb
+                  href: sit-defn-surgical-procedures.md
+                - name: Svensk kørekortnummer
+                  href: sit-defn-sweden-drivers-license-number.md
+                - name: Nationalt svensk id
+                  href: sit-defn-sweden-national-id.md
+                - name: Svensk pasnummer
+                  href: sit-defn-sweden-passport-number.md
+                - name: Fysiske adresser i Sverige
+                  href: sit-defn-sweden-physical-addresses.md
+                - name: Svensk skatteregistreringsnummer
+                  href: sit-defn-sweden-tax-identification-number.md
+                - name: 'SWIFT-kode:'
+                  href: sit-defn-swift-code.md
+                - name: Fysiske adresser i Schweiz
+                  href: sit-defn-switzerland-physical-addresses.md
+                - name: Schweizisk SSN AHV-nummer
+                  href: sit-defn-switzerland-ssn-ahv-number.md
+                - name: Nationalt taiwanesisk identifikationsnummer
+                  href: sit-defn-taiwan-national-identification-number.md
+                - name: Taiwanesisk pasnummer
+                  href: sit-defn-taiwan-passport-number.md
+                - name: Taiwanesisk borgercertifikat (ARC/TARC)
+                  href: sit-defn-taiwan-resident-certificate-number.md
+                - name: Thailandsk befolkningsidentifikationskode
+                  href: sit-defn-thai-population-identification-code.md
+                - name: Nationalt tyrkisk identifikationsnummer
+                  href: sit-defn-turkey-national-identification-number.md
+                - name: Fysiske adresser i Tyrkiet
+                  href: sit-defn-turkey-physical-addresses.md
+                - name: Typer af medicin
+                  href: sit-defn-types-of-medication.md
+                - name: Storbritannien kørekortnummer
+                  href: sit-defn-uk-drivers-license-number.md
+                - name: Storbritannien valgregistreringsnummer
+                  href: sit-defn-uk-electoral-roll-number.md
+                - name: Storbritannien nationalt sundhedsservicenummer
+                  href: sit-defn-uk-national-health-service-number.md
+                - name: Storbritannien nationalt forsikringsnummer (NINO)
+                  href: sit-defn-uk-national-insurance-number.md
+                - name: Storbritannien Fysiske adresser
+                  href: sit-defn-uk-physical-addresses.md
+                - name: Storbritannien Unikt britisk skattebetalerreferencenummer
+                  href: sit-defn-uk-unique-taxpayer-reference-number.md
+                - name: Amerikansk bankkontonummer
+                  href: sit-defn-us-bank-account-number.md
+                - name: Amerikansk kørekortnummer
+                  href: sit-defn-us-drivers-license-number.md
+                - name: Amerikansk ITIN-nummer (Individual Taxpayer Identification Number)
+                  href: sit-defn-us-individual-taxpayer-identification-number.md
+                - name: Fysiske adresser i USA
+                  href: sit-defn-us-physical-addresses.md
+                - name: Amerikansk CPR-nummer (Social Security Number – SSN)
+                  href: sit-defn-us-social-security-number.md
+                - name: USA/Storbritannien pasnummer
+                  href: sit-defn-us-uk-passport-number.md
+                - name: 'Ukrainsk pasnummer, indenlandsk'
+                  href: sit-defn-ukraine-passport-domestic.md
+                - name: 'Ukrainsk pasnummer, internationalt'
+                  href: sit-defn-ukraine-passport-international.md
+                - name: Legitimationsoplysninger til brugerlogon
+                  href: sit-defn-user-login-credentials.md
+                - name: Privat nøgle til X.509-certifikat
+                  href: sit-defn-x-509-certificate-private-key.md
             - name: Funktioner for type af følsomme oplysninger
               href: sit-functions.md
             - name: Reference til filtre for brugerdefinerede følsomme oplysninger

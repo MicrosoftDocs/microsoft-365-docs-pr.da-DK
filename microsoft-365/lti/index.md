@@ -11,14 +11,14 @@ ms.prod: microsoft-365-enterprise
 search.appverid: ''
 ms.collection:
 - M365-modern-desktop
-ms.localizationpriority: ''
+ms.localizationpriority: medium
 description: Få mere at vide om Microsoft LTI-apps (Learning Tools Interoperability), og hvordan de kan hjælpe undervisere, når de integrerer Microsoft-apps i deres LMS (Learning Management System).
-ms.openlocfilehash: 994abf0351a3694e1eeb534a328745691cb6a379
-ms.sourcegitcommit: a7c1acfb3d2cbba913e32493b16ebd8cbfeee456
+ms.openlocfilehash: 7431b9a48ae7f0fec7199583592a515a6aadd772
+ms.sourcegitcommit: 5aed330d8af523f0dffe5e392f1c79f047e38172
 ms.translationtype: HT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "66044285"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66943524"
 ---
 # <a name="integrating-microsoft-products-with-your-learning-management-system-lms"></a>Integration af Microsoft-produkter med dit Learning Management System (LMS)
 
@@ -82,6 +82,7 @@ Du kan se konfigurationstrin under:
 - [Microsoft Teams-møder med Lærred](teams-meetings-with-canvas.md).
 - [Microsoft Teams-møder med Moodle](teams-classes-meetings-with-moodle.md).
 - [Microsoft Teams-møder med Open LMS](open-lms-teams-classes-and-meetings.md).
+- [Microsoft Teams-møder med Desire2Learn Brightspace](teams-classes-meetings-with-brightspace.md).
 
 ### <a name="teams-classes-lti"></a>Teams-hold LTI
 
@@ -89,7 +90,8 @@ LTI-appen til Microsoft Teams-hold hjælper undervisere og studerende med at nav
 
 Du kan se konfigurationstrin under:
 
-- [Microsoft Teams Classes LTI med Canvas](teams-classes-with-canvas.md).
-- [Microsoft Teams Classes LTI med Blackboard](teams-classes-with-blackboard.md).
-- [Microsoft Teams Classes LTI med Moodle](teams-classes-meetings-with-moodle.md).
-- [Microsoft Teams Classes LTI med Open LMS](open-lms-teams-classes-and-meetings.md).
+- [Microsoft Teams-hold med lærred](teams-classes-with-canvas.md).
+- [Microsoft Teams-hold LTI med Blackboard](teams-classes-with-blackboard.md).
+- [Microsoft Teams-hold LTI med Moodle](teams-classes-meetings-with-moodle.md).
+- [Microsoft Teams-hold LTI med Open LMS](open-lms-teams-classes-and-meetings.md).
+- [Microsoft Teams-hold med Desire2Learn Brightspace](teams-classes-meetings-with-brightspace.md).
