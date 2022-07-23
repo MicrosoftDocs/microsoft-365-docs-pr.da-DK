@@ -18,12 +18,12 @@ description: Administratorer kan få mere at vide om de headerfelter, der føjes
 ms.custom: seo-marvel-apr2020
 ms.technology: mdo
 ms.prod: m365-security
-ms.openlocfilehash: 592a583b572c134dd4ecd33dd18f392f6e9b36ce
-ms.sourcegitcommit: d1b60ed9a11f5e6e35fbaf30ecaeb9dfd6dd197d
+ms.openlocfilehash: fa5b107853a67d31e184ca744bcb8d0631d11aea
+ms.sourcegitcommit: 0a67e239549752fcdbcff660189f34b51ec273f5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "66493059"
+ms.lasthandoff: 07/23/2022
+ms.locfileid: "66983933"
 ---
 # <a name="anti-spam-message-headers-in-microsoft-365"></a>Brevhoveder mod spam i Microsoft 365
 
@@ -63,7 +63,7 @@ De enkelte felter og værdier er beskrevet i følgende tabel.
 |Feltet|Beskrivelse|
 |---|---|
 |`ARC`|Protokollen `ARC` indeholder følgende felter: <ul><li>`AAR`: Registrerer indholdet af headeren **med godkendelsesresultater** fra DMARC.</li><li>`AMS`: Indeholder kryptografiske signaturer i meddelelsen.</li><li>`AS`: Indeholder kryptografiske signaturer i brevhovederne. Dette felt indeholder en kode for en kædevalidering, der kaldes `"cv="`, og som indeholder resultatet af kædevalideringen som **ingen**, **bestået** eller **mislykket**.</li></ul>|
-|`CAT:`|Kategorien beskyttelsespolitik, der anvendes på meddelelsen: <ul><li>`BULK`, masse</li><li>`DIMP`, repræsentation af domæne</li><li>`GIMP`: [Repræsentation baseret på postkasseintelligens](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>`HPHSH` eller `HPHISH`: Phishing med høj genkendelsessikkerhed</li><li>`HSPM`: Spam med høj genkendelsessikkerhed</li><li>`MALW`: Malware</li><li>`PHSH`, phishing</li><li>`SPM`, spam</li><li>`SPOOF`, spoofing</li><li>`UIMP`, bruger repræsentering</li><li>`AMP`: Antimalware</li><li>`SAP`: Sikre vedhæftede filer</li><li>`OSPM`, Udgående spam</li></ul> <p> En indgående meddelelse kan være markeret af flere former for beskyttelse og scanninger med flere registreringer. Politikker har forskellige prioriteter, og politikken med den højeste prioritet anvendes først. Du kan få flere oplysninger under [Hvilken politik gælder, når flere beskyttelsesmetoder og registreringsscanninger kører på din mail](how-policies-and-protections-are-combined.md).|
+|`CAT:`|Kategorien beskyttelsespolitik, der anvendes på meddelelsen: <ul><li>`BULK`, masse</li><li>`DIMP`, repræsentation af domæne</li><li>`GIMP`: [Repræsentation baseret på postkasseintelligens](set-up-anti-phishing-policies.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)</li><li>`HPHSH` eller `HPHISH`: Phishing med høj genkendelsessikkerhed</li><li>`HSPM`: Spam med høj genkendelsessikkerhed</li><li>`MALW`: Malware</li><li>`PHSH`, phishing</li><li>`SPM`, spam</li><li>`SPOOF`, spoofing</li><li>`UIMP`, bruger repræsentering</li><li>`AMP`: Antimalware</li><li>`SAP`: Sikre vedhæftede filer</li><li>`FTBP`: Politik for filtype til antimalware</li><li>`OSPM`, Udgående spam</li></ul> <p> En indgående meddelelse kan være markeret af flere former for beskyttelse og scanninger med flere registreringer. Politikker har forskellige prioriteter, og politikken med den højeste prioritet anvendes først. Du kan få flere oplysninger under [Hvilken politik gælder, når flere beskyttelsesmetoder og registreringsscanninger kører på din mail](how-policies-and-protections-are-combined.md).|
 |`CIP:[IP address]`|Den ip-adresse, der opretter forbindelse. Du kan bruge denne IP-adresse på listen over tilladte IP-adresser eller listen over IP-blokeringer. Du kan få flere oplysninger under [Konfigurer forbindelsesfiltrering](configure-the-connection-filter-policy.md).|
 |`CTRY`|Kildelandet i forhold til den forbindelses-IP-adresse, som muligvis ikke er det samme som den oprindelige afsender-IP-adresse.|
 |`H:[helostring]`|HELO- eller EHLO-strengen på forbindelsesmailserveren.|

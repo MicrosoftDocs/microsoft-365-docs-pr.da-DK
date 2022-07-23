@@ -15,12 +15,12 @@ audience: ITPro
 ms.collection: M365-security-compliance
 ms.topic: article
 ms.technology: mde
-ms.openlocfilehash: 72509f7480d54819fc29f40bab0e2bf65dcd8660
-ms.sourcegitcommit: 349f0f54b0397cdd7d8fbb9ef07f1b6654a32d6e
+ms.openlocfilehash: 4619b24d06af4cdb80916fb9eacbc52b2fa55c21
+ms.sourcegitcommit: 0a67e239549752fcdbcff660189f34b51ec273f5
 ms.translationtype: MT
 ms.contentlocale: da-DK
-ms.lasthandoff: 05/20/2022
-ms.locfileid: "65622026"
+ms.lasthandoff: 07/23/2022
+ms.locfileid: "66983955"
 ---
 # <a name="manage-indicators"></a>Administrer indikatorer
 
@@ -72,7 +72,7 @@ Beskrivelse|String| Beskrivelse af indikatoren. **Påkrævet**
 expirationTime|DateTimeOffset|Indikatorens udløbstid i følgende format YYYY-MM-DDTHH:MM:SS.0Z. Indikatoren slettes, hvis udløbstiden passerer, og det, der sker på udløbstidspunktet, sker ved sekundværdien (SS). **Valgfrit**
 Sværhedsgraden|Enum|Indikatorens alvorsgrad. De mulige værdier er: "Informational", "Low", "Medium" og "High". **Valgfrit**
 recommendedActions|String|Anbefalede handlinger for ti-indikatorbeskeder. **Valgfrit**
-rbacGroupNames|String|Kommasepareret liste over RBAC-gruppenavne, som indikatoren anvendes på. **Valgfrit**
+rbacGroups|String|Kommasepareret liste over RBAC-grupper, som indikatoren anvendes på. **Valgfrit**
 Kategori|String|Kategorien for beskeden. Eksempler omfatter: Udførelse og adgang til legitimationsoplysninger. **Valgfrit**
 mitretechniques|String|MITRE-teknikker kode/id (kommasepareret). Du kan få flere oplysninger under [Virksomhedstaktik](https://attack.mitre.org/tactics/enterprise/). **Valgfri** Det anbefales at tilføje en værdi i kategorien, når en MITRE-teknik.
 GenerateAlert|String|Angiver, om beskeden skal genereres. Mulige værdier er: Sand eller Falsk. **Valgfrit**
